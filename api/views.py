@@ -9,9 +9,9 @@ from api.serializers import QuestionSerializer
 @api_view(['GET'])
 def question_list(request):
     """
-    List all questions
+    List all questions (return them in a random order)
     """
-    questions = Question.objects.all()
+    questions = Question.objects.all().order_by("?")
     serializer = QuestionSerializer(questions, many=True)
     return Response(serializer.data)
 
@@ -25,6 +25,5 @@ def question_detail(request, pk):
         question = Question.objects.get(pk=pk)
     except Question.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
-
     serializer = QuestionSerializer(question)
     return Response(serializer.data)
