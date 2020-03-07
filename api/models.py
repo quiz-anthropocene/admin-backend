@@ -7,16 +7,16 @@ QUESTION_TYPES = [
 ]
 
 QUESTION_CATEGORIES = [
-    ("Action", "Leviers d'action"),
-    ("Biodiversité", "Biodiversité"),
-    ("Climat", "Climat"),
-    ("Consommation", "Consommation"),
-    ("Energie", "Energie"),
-    ("Histoire", "Histoire, Anthropologie"),
-    ("Pollution", "Pollution"),
-    ("Ressources", "Ressources (hors énergie)"),
-    ("Science", "Science"),
-    ("Autre", "Autre"),
+    ("action", "Leviers d'action"),
+    ("biodiversité", "Biodiversité"),
+    ("climat", "Climat"),
+    ("consommation", "Consommation"),
+    ("énergie", "Energie"),
+    ("histoire", "Histoire, Anthropologie"),
+    ("pollution", "Pollution"),
+    ("ressources", "Ressources (hors énergie)"),
+    ("science", "Science"),
+    ("autre", "Autre"),
 ]
 
 QUESTION_DIFFICULTY = [

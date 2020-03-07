@@ -2,13 +2,13 @@
   fields:
     text: "Ceci est un test éàü"
     type: QCM
-    category: Consommation
+    category: consommation
     difficulty: 1
     answer_option_a: La réponse A
     answer_option_b: Une super looooooooogue réponse
     answer_option_c: La réponse C
     answer_option_d: ''
-    answer_correct: C
+    answer_correct: c
     answer_explanation: "Cela repr\xE9sente 40% de la nourriture produite"
     answer_additional_links: https://www.planetoscope.com/agriculture-alimentation/1556-le-gaspillage-alimentaire-dans-le-monde.html
     created: 2020-03-07

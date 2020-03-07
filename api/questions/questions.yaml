@@ -4,7 +4,7 @@
     text: "Quelle quantité d'aliments jette-t-on chaque année dans le monde
       ?"
     type: QCM
-    category: Consommation
+    category: consommation
     difficulty: 1
     answer_option_a: 1,4 million de tonnes
     answer_option_b: 52 millions de tonnes
@@ -22,7 +22,7 @@
       qui les actionnent avec leur force musculaire. Combien nous en faudrait-il par
       personne en France pour soutenir notre niveau de vie actuel ?"
     type: QCM
-    category: Energie
+    category: énergie
     difficulty: 1
     answer_option_a: 20 esclaves
     answer_option_b: 100 esclaves
@@ -39,7 +39,7 @@
   fields:
     text: Qu'appelle t-on l'effet rebond ?
     type: QCM
-    category: Consommation
+    category: consommation
     difficulty: 1
     answer_option_a: "Le fait que la population d'une espèce se met augmenter à
       nouveau après avoir diminué faute de ressources"
@@ -60,7 +60,7 @@
     text: "A Porto Rico, sur les 35 dernières années, on a vu les populations
       d'insectes diminuer. De combien ?"
     type: QCM
-    category: "Biodiversité"
+    category: biodiversité
     difficulty: 1
     answer_option_a: 10%
     answer_option_b: 30%
@@ -78,9 +78,9 @@
     text: "Les hydrates de méthane sont une forme de glace au fond des océans.
       Ils peuvent devenir instables et libérer du méthane ..."
     type: QCM
-    category: Climat
+    category: climat
     difficulty: 1
-    answer_option_a: "Dès maintenant"
+    answer_option_a: Dès maintenant
     answer_option_b: "A partir de +1°C de hausse de la température de l'air"
     answer_option_c: "A partir de +2°C de hausse de la température de l'air"
     answer_option_d: "A partir de +5°C de hausse de la température de l'air"
