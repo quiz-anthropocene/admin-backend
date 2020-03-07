@@ -1,0 +1,16 @@
+- model: api.question
+  fields:
+    text: "La question. Idéalement en 1 phrase. Elle peut être longue, dans ce cas il est possible
+      d'aller à la ligne"
+    type: QCM
+    category: Une seule catégorie possible
+    difficulty: Chiffre entre 1 et 4
+    answer_option_a: Une courte réponse
+    answer_option_b: Une courte réponse
+    answer_option_c: Une courte réponse
+    answer_option_d: Une courte réponse
+    answer_correct: Lettre entre A et D
+    answer_explanation: "Une explication et/ou un commentaire à propos la réponse"
+    answer_additional_links: Un lien et/ou du texte additionel pour en savoir plus
+    created: Date au format YYYY-MM-DD
+    updated: Date au format YYYY-MM-DD
