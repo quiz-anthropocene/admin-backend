@@ -2,7 +2,7 @@
   <section>
     <div class="help">
       <i v-if="questions">Il y a actuellement {{ questions.length }} questions. </i>
-      <i><a href="#">Aidez-nous</a> à en rajouter plus !</i>
+      <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus !</i>
     </div>
     <br />
 
