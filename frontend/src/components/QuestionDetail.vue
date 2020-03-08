@@ -5,10 +5,10 @@
       <h2>
         <span>Question #{{ question.id }}</span>
         <span> | </span>
-        <span>Difficulté: <DifficultyBadge v-bind:difficulty="question.difficulty" /></span>
+        <span>Difficulté: <small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
       </h2>
       <h3>{{ question.text }}</h3>
-      <form v-on:submit="submitQuestion">
+      <form @submit.prevent="submitQuestion">
         <p :class="{ 'color-blue' : answerPicked === 'a' }">
           <input type="radio" id="one" value="a" v-model="answerPicked" :disabled="questionSubmitted">
           <label for="one">&nbsp;{{ question.answer_option_a }}</label>
@@ -37,19 +37,16 @@
       <h2 v-if="questionSuccess">C'est exact !</h2>
       <h2 v-if="!questionSuccess">Pas tout à fait...</h2>
       <h3 v-if="!questionSuccess">La réponse était: {{ question["answer_option_" + question["answer_correct"]] }}</h3>
-      <p>ℹ️{{ question.answer_explanation }}</p>
-      <p>🔗<a v-bind:href="question.answer_additional_links" target="_blank">{{ question.answer_additional_links }}</a></p>
+      <p>ℹ️&nbsp;{{ question.answer_explanation }}</p>
+      <p>🔗&nbsp;<a v-bind:href="question.answer_additional_links" target="_blank">{{ question.answer_additional_links }}</a></p>
     </div>
 
-    <br />
-
-    <div>
+    <div class="action">
       <router-link :to="{ name: 'home' }">
-        <button class="button">🏠Menu principal</button>
+        <button class="button">🏠&nbsp;Menu principal</button>
       </router-link>
-      
       <router-link :to="{ name: 'question-detail', params: { questionId: questionRandomNextId } }">
-        <button class="button">🔀Question au hasard</button>
+        <button class="button">🔀&nbsp;Question au hasard</button>
       </router-link>
     </div>
   </section>
@@ -148,5 +145,6 @@ export default {
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
+  overflow: hidden;
 }
 </style>

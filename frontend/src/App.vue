@@ -45,9 +45,10 @@ a.no-decoration {
 }
 
 .button {
-  /* margin: 1em 1em 0 0; */
-  margin-left: 1em;
-  margin-right: 1em;
+  margin: 1em 1em 0 1em;
+  /* margin-left: 1em;
+  margin-right: 1em; */
+  /* margin: 1em; */
   padding: 0.5em 2em;
   font-size: 1em;
   /* text-decoration: none; */
