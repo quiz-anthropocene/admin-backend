@@ -20,8 +20,7 @@ export default {
   .title {
     color: #005995;
   }
-  h1, h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  .title a:hover {
+    text-shadow: 0px 0px 1px #005995;
   }
 </style>

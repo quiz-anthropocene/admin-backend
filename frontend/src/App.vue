@@ -4,6 +4,8 @@
     <main>
       <router-view></router-view>
     </main>
+    <br />
+    <br />
   </div>
 </template>
 
@@ -32,8 +34,32 @@ html {
   margin: 0 auto;
 }
 
+h1, h2, h3, h4, p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
 a.no-decoration {
   color: inherit;
   text-decoration: inherit;
+}
+
+.button {
+  /* margin: 1em 1em 0 0; */
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: 0.5em 2em;
+  font-size: 1em;
+  /* text-decoration: none; */
+  /* background-color: white; */
+  /* border: 0; */
+  cursor: pointer;
+}
+
+.color-blue {
+  color: #005995;
+}
+.color-orange {
+  color: #F33F3F;
 }
 </style>

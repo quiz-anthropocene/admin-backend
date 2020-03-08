@@ -1,6 +1,6 @@
 <template>
   <div class="question-card">
-    <!-- <div class="question-card__header">coucou</div> -->
+    <!-- <div class="question-card__header"></div> -->
     <div class="question-card__content">
       <p>{{ question.text }}</p>
     </div>
