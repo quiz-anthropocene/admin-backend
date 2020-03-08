@@ -2,20 +2,18 @@
   <div id="app">
     <Header />
     <main>
-      <QuestionsAll />
+      <router-view></router-view>
     </main>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import QuestionsAll from './components/QuestionsAll.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    QuestionsAll,
   }
 }
 </script>
@@ -32,5 +30,10 @@ html {
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+a.no-decoration {
+  color: inherit;
+  text-decoration: inherit;
 }
 </style>

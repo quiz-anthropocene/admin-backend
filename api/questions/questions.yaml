@@ -10,7 +10,7 @@
     answer_option_b: 52 millions de tonnes
     answer_option_c: 143 millions de tonnes
     answer_option_d: 1,3 milliards de tonnes
-    answer_correct: D
+    answer_correct: d
     answer_explanation: "Cela représente 40% de la nourriture produite"
     answer_additional_links: https://www.planetoscope.com/agriculture-alimentation/1556-le-gaspillage-alimentaire-dans-le-monde.html
     created: 2020-03-07
@@ -28,7 +28,7 @@
     answer_option_b: 100 esclaves
     answer_option_c: 400 esclaves
     answer_option_d: 1000 esclaves
-    answer_correct: C
+    answer_correct: c
     answer_explanation: "On peut estimer qu'un homme consomme un ordre de grandeur
       de 5 kW/jour. Voir le calcul estimatif dans le l'article en référence."
     answer_additional_links: https://jancovici.com/transition-energetique/l-energie-et-nous/combien-suis-je-un-esclavagiste/
@@ -48,7 +48,7 @@
       une fois que le prix du marché a augmenté"
     answer_option_d: Le fait que plus une ressource devient efficace, plus nous en
       consommons au total
-    answer_correct: D
+    answer_correct: d
     answer_explanation: "Exemple: les voitures plus économes, qui n'ont pas réduit
       la consommation globale d'essence. On l'appelle aussi le paradoxe de Jevons."
     answer_additional_links: https://fr.wikipedia.org/wiki/Paradoxe_de_Jevons
@@ -66,7 +66,7 @@
     answer_option_b: 30%
     answer_option_c: 50%
     answer_option_d: 98%
-    answer_correct: D
+    answer_correct: d
     answer_explanation: "L’agriculture intensive est pointé du doigt comme
       la cause principale en particulier les pesticides"
     answer_additional_links: https://www.lemonde.fr/planete/article/2019/02/11/le-declin-des-insectes-une-menace-grandissante-pour-les-ecosystemes-naturels_5
@@ -84,7 +84,7 @@
     answer_option_b: "A partir de +1°C de hausse de la température de l'air"
     answer_option_c: "A partir de +2°C de hausse de la température de l'air"
     answer_option_d: "A partir de +5°C de hausse de la température de l'air"
-    answer_correct: C
+    answer_correct: c
     answer_explanation: ''
     answer_additional_links: https://jancovici.com/changement-climatique/risques/faut-il-redouter-les-hydrates-de-methane/
     created: 2020-03-07

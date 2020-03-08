@@ -1,11 +1,14 @@
 <template>
   <section>
-    <div class="help"><i>Il y a actuellement {{ questions.length }} questions. <a href="#">Aidez-nous</a> à en rajouter plus !</i></div>
+    <div class="help">
+      <i v-if="questions">Il y a actuellement {{ questions.length }} questions. </i>
+      <i><a href="#">Aidez-nous</a> à en rajouter plus !</i>
+    </div>
     <br />
 
     <!-- Filtre: catégorie -->
     <div>
-      <span class="category" v-for="category in categories" :key="category" :class="{ 'category-active' : category == category_selected }" @click="clickCategory(category)">{{ category }}</span>
+      <span class="category" v-for="category in categories" :key="category" :class="{ 'category-active' : category == categorySelected }" @click="clickCategory(category)">{{ category }}</span>
     </div>
 
     <br />
@@ -18,39 +21,44 @@
       {{ error }}
     </div>
 
+    <!-- Question List -->
     <div v-if="questions" class="row">
-      <div class="row-item" v-for="question in questions_displayed" :key="question">
-        <div class="question">{{ question.text }}</div>
+      <div class="row-item" v-for="question in questionsDisplayed" :key="question">
+        <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: question.id } }">
+          <QuestionCard v-bind:question="question" />
+        </router-link>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import QuestionCard from './QuestionCard.vue'
+
 export default {
-  name: 'QuestionsAll',
-  props: {
-    msg: String
+  name: 'QuestionList',
+  components: {
+    QuestionCard,
   },
 
   data () {
     return {
       categories: ['action', 'biodiversité', 'climat', 'consommation', 'énergie', 'histoire', 'pollution', 'ressources', 'science', 'autre'],
-      category_selected: null,
+      categorySelected: null,
       questions: null,
-      questions_displayed: null,
+      questionsDisplayed: null,
       loading: false,
       error: null,
     }
   },
 
   created () {
-    this.fetchData()
+    this.fetchQuestions()
   },
 
   methods: {
-    fetchData () {
-      this.error = this.questions = this.questions_displayed = null
+    fetchQuestions() {
+      this.error = this.questions = this.questionsDisplayed = null
       this.loading = true
       fetch("http://localhost:8000/api/questions")
         .then(response => {
@@ -58,21 +66,21 @@ export default {
           return response.json()
         })
         .then(data => {
-          this.questions = this.questions_displayed = data
+          this.questions = this.questionsDisplayed = data
         })
         .catch(err => {
           console.log(err)
         })
     },
     clickCategory(category) {
-      this.category_selected = (this.category_selected === category) ? null : category;
-      this.updateQuestionsDisplayed(this.category_selected);
+      this.categorySelected = (this.categorySelected === category) ? null : category;
+      this.updateQuestionsDisplayed(this.categorySelected);
     },
-    updateQuestionsDisplayed(category_selection) {
-      if (category_selection) {
-        this.questions_displayed = this.questions.filter(q => q.category === category_selection);
+    updateQuestionsDisplayed(categorySelection) {
+      if (categorySelection) {
+        this.questionsDisplayed = this.questions.filter(q => q.category === categorySelection);
       } else {
-        this.questions_displayed = this.questions;
+        this.questionsDisplayed = this.questions;
       }
     }
   }
@@ -97,7 +105,6 @@ export default {
 }
 
 .row {
-  display: -webkit-flex;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -106,7 +113,6 @@ export default {
   flex: 0 1 100%;
   height: 150px;
   margin-bottom: 10px;
-  overflow-y: hidden;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.1s;
   border: 2px solid #005995;
@@ -126,9 +132,5 @@ export default {
   .row-item {
     max-width: calc(33.33% - 1em);
   }
-}
-
-.question {
-  padding: 10px;
 }
 </style>
