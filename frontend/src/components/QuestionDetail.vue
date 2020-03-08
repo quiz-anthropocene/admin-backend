@@ -100,7 +100,7 @@ export default {
     fetchQuestion(questionId) {
       this.error = this.question = null;
       this.loading = true;
-      fetch(`http://localhost:8000/api/questions/${questionId}`)
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/${questionId}`)
         .then(response => {
           this.loading = false
           return response.json()
@@ -115,7 +115,7 @@ export default {
     fetchQuestionRandomNext(currentQuestionId) {
       const params = { current: currentQuestionId };
       const urlParams = new URLSearchParams(Object.entries(params));
-      fetch(`http://localhost:8000/api/questions/random?${urlParams}`)
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/random?${urlParams}`)
         .then(response => {
           this.loading = false
           return response.json()

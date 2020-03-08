@@ -1,10 +1,23 @@
 import random
+from django.http import HttpResponse
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 from api.models import Question
 from api.serializers import QuestionSerializer
+
+
+def api_home(request):
+    return HttpResponse("""
+        <p>Welcome to the 'Know Your Planet' API.</p>
+        <p>Available endpoints:</p>
+        <ul>
+            <li>GET /api/questions</li>
+            <li>GET /api/questions/:id</li>
+            <li>GET /api/questions/random</li>
+        </ul>
+    """)
 
 
 @api_view(['GET'])

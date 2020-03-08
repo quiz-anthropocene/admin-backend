@@ -60,7 +60,7 @@ export default {
     fetchQuestions() {
       this.error = this.questions = this.questionsDisplayed = null
       this.loading = true
-      fetch("http://localhost:8000/api/questions")
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions`)
         .then(response => {
           this.loading = false
           return response.json()
