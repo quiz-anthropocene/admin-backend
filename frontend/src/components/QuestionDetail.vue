@@ -14,7 +14,9 @@
       <h2>
         <span>Question #{{ question.id }}</span>
         <span> | </span>
-        <span>Difficulté: <small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
+        <span class="category-text">{{ question.category }}</span>
+        <span> | </span>
+        <span><small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
       </h2>
       <h3>{{ question.text }}</h3>
       <form @submit.prevent="submitQuestion">

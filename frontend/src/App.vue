@@ -63,4 +63,8 @@ a.no-decoration {
 .color-orange {
   color: #F33F3F;
 }
+
+.category-text {
+  color: #F33F3F;
+}
 </style>

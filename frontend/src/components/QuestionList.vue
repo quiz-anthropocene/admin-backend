@@ -9,7 +9,7 @@
 
     <!-- Filtre: catégorie -->
     <div>
-      <span class="category" v-for="category in categories" :key="category" :class="{ 'category-active' : category === categorySelected }" @click="clickCategory(category)" aria-haspopup="true">{{ category }}</span>
+      <span class="category" v-for="category in categories" :key="category" :class="{ 'category-active' : category === categorySelected }" @click="clickCategory(category)">{{ category }}</span>
     </div>
 
     <br />
