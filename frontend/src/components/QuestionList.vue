@@ -4,6 +4,7 @@
       <i v-if="questions">Il y a actuellement {{ questions.length }} questions. </i>
       <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus !</i>
     </div>
+
     <br />
 
     <!-- Filtre: catégorie -->
@@ -14,7 +15,7 @@
     <br />
 
     <div v-if="loading" class="loading">
-      Loading...
+      Chargement des questions...
     </div>
 
     <div v-if="error" class="error">
@@ -68,8 +69,9 @@ export default {
         .then(data => {
           this.questions = this.questionsDisplayed = data
         })
-        .catch(err => {
-          console.log(err)
+        .catch(error => {
+          console.log(error)
+          this.error = error;
         })
     },
     clickCategory(category) {

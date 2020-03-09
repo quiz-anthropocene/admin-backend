@@ -1,6 +1,15 @@
 <template>
   <section>
     <br />
+
+    <div v-if="loading" class="loading">
+      Chargement de la question...
+    </div>
+
+    <div v-if="error" class="error">
+      {{ error }}
+    </div>
+
     <div class="question" v-if="question">
       <h2>
         <span>Question #{{ question.id }}</span>
@@ -105,8 +114,9 @@ export default {
         .then(data => {
           this.question = data
         })
-        .catch(err => {
-          console.log(err)
+        .catch(error => {
+          console.log(error)
+          this.error = error;
         })
     },
     fetchQuestionRandomNext(currentQuestionId) {
@@ -120,8 +130,9 @@ export default {
         .then(data => {
           this.questionRandomNextId = data.id
         })
-        .catch(err => {
-          console.log(err)
+        .catch(error => {
+          console.log(error)
+          this.error = error;
         })
     },
     submitQuestion() {

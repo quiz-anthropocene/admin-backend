@@ -3,7 +3,7 @@
     <h1 class="title">
       <router-link class="no-decoration" :to="{ name: 'home' }">Know Your Planet</router-link>
     </h1>
-    <h2>Des questions/réponses pour mieux apréhender les limites de notre planète 🌍</h2>
+    <h2>Des questions/réponses pour mieux apréhender les limites de notre planète&nbsp;🌍</h2>
   </header>
 </template>
 
