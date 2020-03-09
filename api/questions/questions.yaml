@@ -186,3 +186,91 @@
     answer_additional_links: https://www.connaissancedesenergies.org/tribune-actualite-energies/les-reserves-de-petrole-ne-sepuiseront-j
     created: 2020-03-08
     updated: 2020-03-08
+- model: api.question
+  pk: 11
+  fields:
+    text: "Quel est le secteur le plus énergivore en France ?"
+    type: QCM
+    category: "énergie"
+    difficulty: 1
+    answer_option_a: Agriculture
+    answer_option_b: "Bâtiment"
+    answer_option_c: Industrie
+    answer_option_d: Transports
+    answer_correct: b
+    answer_explanation: "En 2015, le secteur des bâtiments a compté pour 45%
+      de la consommation finale (hors usages non énergétique)"
+    answer_additional_links: https://www.connaissancedesenergies.org/fiche-pedagogique/mix-energetique-de-la-france
+    created: 2020-03-09
+    updated: 2020-03-09
+- model: api.question
+  pk: 12
+  fields:
+    text: "Qu'est ce qui produit le plus d'énergie ?"
+    type: QCM
+    category: "énergie"
+    difficulty: 1
+    answer_option_a: "La combustion de 1L de pétrole"
+    answer_option_b: "La combustion de 1L de gaz à 200 bars"
+    answer_option_c: 50 m2 de panneaux solaires pendant 1h
+    answer_option_d: "Une éolienne de 5m de diamètre pendant 1h avec un vent
+      à 80km/h"
+    answer_correct: a
+    answer_explanation: "Le pétrole est une source d'énergie incroyablement
+      dense et pratique."
+    answer_additional_links: "https://www.youtube.com/watch?v=Nb2S7oge8TQ (à partir
+      de 1h00)"
+    created: 2020-03-09
+    updated: 2020-03-09
+- model: api.question
+  pk: 13
+  fields:
+    text: "Combien l'humanité consomme-t-elle de barils de pétrole en une année
+      ?"
+    type: QCM
+    category: "énergie"
+    difficulty: 1
+    answer_option_a: 39 millions
+    answer_option_b: 390 millions
+    answer_option_c: 3,9 milliards
+    answer_option_d: 39 milliards
+    answer_correct: d
+    answer_explanation: Ou encore, 100 millions de barils par jour, pour retenir l'ordre
+      de grandeur
+    answer_additional_links: https://www.planetoscope.com/Source-d-energie/229-consommation-mondiale-d-energie-en-tep-.html
+    created: 2020-03-09
+    updated: 2020-03-09
+- model: api.question
+  pk: 14
+  fields:
+    text: "Quelle serait la température de la Terre sans atmosphère et effet
+      de serre associé ?"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: "-50°"
+    answer_option_b: "-18°C"
+    answer_option_c: "0°"
+    answer_option_d: "15°"
+    answer_correct: b
+    answer_explanation: ''
+    answer_additional_links: Rapport du GIEC
+    created: 2020-03-09
+    updated: 2020-03-09
+- model: api.question
+  pk: 15
+  fields:
+    text: "Lequel de ces gaz n’est pas un gaz à effet de serre ?"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: Dioxyde d'Azote (NO2)
+    answer_option_b: Dioxyde de Carbone (CO2)
+    answer_option_c: Eau (H2O)
+    answer_option_d: "Oxygène (O2)"
+    answer_correct: d
+    answer_explanation: "Ces gaz ont pour caractéristique commune d'absorber une
+      partie des infrarouges émis par la surface de la Terre"
+    answer_additional_links: https://fr.wikipedia.org/wiki/Effet_de_serre#Les_gaz_%C3%A0_%C2%AB_effet_de_serre_%C2%BB
+    created: 2020-03-09
+    updated: 2020-03-09
