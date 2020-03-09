@@ -9,7 +9,7 @@
 
     <!-- Filtre: catégorie -->
     <div>
-      <span class="category" v-for="category in categories" :key="category" :class="{ 'category-active' : category === categorySelected }" @click="clickCategory(category)">{{ category }}</span>
+      <span class="category" v-for="category in categories" :key="category" :class="{ 'category-active' : category === categorySelected }" @click="clickCategory(category)" aria-haspopup="true">{{ category }}</span>
     </div>
 
     <br />
@@ -94,12 +94,9 @@ export default {
   display: inline-block;
   border: 1px solid #F33F3F;
   border-radius: 5px;
-  margin: 5px;
+  margin: 2.5px;
   padding: 5px;
   cursor: pointer;
-}
-.category:hover {
-  background-color: #f88787;
 }
 .category-active {
   background-color: #f88787;
@@ -121,9 +118,6 @@ export default {
   border-radius: 5px;
   cursor: pointer;
 }
-.row-item:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
 
 @media all and (min-width: 40em) {
   .row-item {
@@ -133,6 +127,15 @@ export default {
 @media all and (min-width: 60em) {
   .row-item {
     max-width: calc(33.33% - 1em);
+  }
+}
+
+@media(hover: hover) and (pointer: fine) {
+  .category:hover {
+    background-color: #f88787;
+  }
+  .row-item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 }
 </style>

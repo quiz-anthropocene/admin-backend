@@ -14,13 +14,16 @@ export default {
 </script>
 
 <style scoped>
-  header {
-    border: 10px solid #005995;
-  }
-  .title {
-    color: #005995;
-  }
+header {
+  border: 10px solid #005995;
+}
+.title {
+  color: #005995;
+}
+
+@media(hover: hover) and (pointer: fine) {
   .title a:hover {
     text-shadow: 0px 0px 1px #005995;
   }
+}
 </style>
