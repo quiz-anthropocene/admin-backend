@@ -13,7 +13,8 @@
     answer_correct: d
     answer_explanation: "Cela représente 40% de la nourriture produite"
     answer_additional_links: https://www.planetoscope.com/agriculture-alimentation/1556-le-gaspillage-alimentaire-dans-le-monde.html
-    author: "Matthieu M"
+    author: Matthieu M
+    publish: true
     created: 2020-03-07
     updated: 2020-03-07
 - model: api.question
@@ -33,7 +34,8 @@
     answer_explanation: "On peut estimer qu'un homme consomme un ordre de grandeur
       de 5 kW/jour. Voir le calcul estimatif dans l'article en référence."
     answer_additional_links: https://jancovici.com/transition-energetique/l-energie-et-nous/combien-suis-je-un-esclavagiste/
-    author: "Matthieu M"
+    author: Matthieu M
+    publish: true
     created: 2020-03-07
     updated: 2020-03-07
 - model: api.question
@@ -54,7 +56,8 @@
     answer_explanation: "Exemple: les voitures plus économes, qui n'ont pas réduit
       la consommation globale d'essence. On l'appelle aussi le paradoxe de Jevons."
     answer_additional_links: https://fr.wikipedia.org/wiki/Paradoxe_de_Jevons
-    author: "Matthieu M"
+    author: Matthieu M
+    publish: true
     created: 2020-03-07
     updated: 2020-03-07
 - model: api.question
@@ -73,7 +76,8 @@
     answer_explanation: "L’agriculture intensive est pointé du doigt comme
       la cause principale en particulier les pesticides"
     answer_additional_links: https://www.lemonde.fr/planete/article/2019/02/11/le-declin-des-insectes-une-menace-grandissante-pour-les-ecosystemes-naturels_5
-    author: "Matthieu M"
+    author: Matthieu M
+    publish: true
     created: 2020-03-07
     updated: 2020-03-07
 - model: api.question
@@ -91,7 +95,8 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: https://jancovici.com/changement-climatique/risques/faut-il-redouter-les-hydrates-de-methane/
-    author: "Matthieu M"
+    author: Matthieu M
+    publish: true
     created: 2020-03-07
     updated: 2020-03-07
 - model: api.question
@@ -112,7 +117,8 @@
       avait pas l'océan pour absorber l'essentiel du surplus d'énergie thermique
       dû à l'effet de serre"
     answer_additional_links: Rapport du GIEC
-    author: "Matthieu M"
+    author: Matthieu M
+    publish: true
     created: 2020-03-08
     updated: 2020-03-08
 - model: api.question
@@ -132,7 +138,8 @@
     answer_explanation: "Causes principales: perte et dégradation des habitats.
       Puis surexploitation, pollution, changement climatique"
     answer_additional_links: https://ipbes.net/news/Media-Release-Global-Assessment-Fr
-    author: "Matthieu M"
+    author: Matthieu M
+    publish: true
     created: 2020-03-08
     updated: 2020-03-08
 - model: api.question
@@ -151,9 +158,10 @@
     answer_explanation: "Même dans cette hypothèse de pensée, l'homme a d'ores
       et déjà induit des modifications irréversibles que la planète ne
       pourra pas revenir à son état antérieur. On ne parle ici que des durées
-      de résidences des gaz à effet de serre dans l'atmosphère. "
+      de résidences des gaz à effet de serre dans l'atmosphère."
     answer_additional_links: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
-    author: "Matthieu M"
+    author: Matthieu M
+    publish: true
     created: 2020-03-08
     updated: 2020-03-08
 - model: api.question
@@ -174,13 +182,14 @@
       sont en bois, sans incitation à l'économiser le béton. C'est pourtant
       l'une des industries les plus émettrices de gaz à effet de serre."
     answer_additional_links: https://blogs.alternatives-economiques.fr/gilles-raveaud/2015/04/02/la-chine-a-consomme-plus-de-ciment-en-3-ans-que-les-etats-unis-en-un-siecle
-    author: "Matthieu M"
+    author: Matthieu M
+    publish: true
     created: 2020-03-08
     updated: 2020-03-08
 - model: api.question
   pk: 10
   fields:
-    text: "On a quarante ans de pétrole devant nous"
+    text: "On a 40 ans de pétrole devant nous..."
     type: QCM
     category: "énergie"
     difficulty: 1
@@ -193,7 +202,8 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: https://www.connaissancedesenergies.org/tribune-actualite-energies/les-reserves-de-petrole-ne-sepuiseront-j
-    author: "Avenir Climatique (Quizz)"
+    author: Avenir Climatique (Quizz)
+    publish: true
     created: 2020-03-08
     updated: 2020-03-08
 - model: api.question
@@ -211,7 +221,8 @@
     answer_explanation: "En 2015, le secteur des bâtiments a compté pour 45%
       de la consommation finale (hors usages non énergétique)"
     answer_additional_links: https://www.connaissancedesenergies.org/fiche-pedagogique/mix-energetique-de-la-france
-    author: "Avenir Climatique (Quizz)"
+    author: Avenir Climatique (Quizz)
+    publish: true
     created: 2020-03-09
     updated: 2020-03-09
 - model: api.question
@@ -229,9 +240,9 @@
     answer_correct: a
     answer_explanation: "Le pétrole est une source d'énergie incroyablement
       dense et pratique."
-    answer_additional_links: "https://www.youtube.com/watch?v=Nb2S7oge8TQ (à partir
-      de 1h00)"
-    author: "Matthieu M"
+    answer_additional_links: https://www.youtube.com/watch?v=Nb2S7oge8TQ?t=3600
+    author: Avenir Climatique (Quizz)
+    publish: true
     created: 2020-03-09
     updated: 2020-03-09
 - model: api.question
@@ -250,7 +261,8 @@
     answer_explanation: Ou encore, 100 millions de barils par jour, pour retenir l'ordre
       de grandeur
     answer_additional_links: https://www.planetoscope.com/Source-d-energie/229-consommation-mondiale-d-energie-en-tep-.html
-    author: "Matthieu M"
+    author: Matthieu M
+    publish: true
     created: 2020-03-09
     updated: 2020-03-09
 - model: api.question
@@ -267,8 +279,9 @@
     answer_option_d: "15°"
     answer_correct: b
     answer_explanation: ''
-    answer_additional_links: Rapport du GIEC
-    author: "Matthieu M"
+    answer_additional_links: https://fr.wikipedia.org/wiki/Effet_de_serre#M%C3%A9canisme_sur_Terre
+    author: Avenir Climatique (Quizz)
+    publish: true
     created: 2020-03-09
     updated: 2020-03-09
 - model: api.question
@@ -286,6 +299,1367 @@
     answer_explanation: "Ces gaz ont pour caractéristique commune d'absorber une
       partie des infrarouges émis par la surface de la Terre"
     answer_additional_links: https://fr.wikipedia.org/wiki/Effet_de_serre#Les_gaz_%C3%A0_%C2%AB_effet_de_serre_%C2%BB
-    author: "Matthieu M"
+    author: Avenir Climatique (Quizz)
+    publish: true
     created: 2020-03-09
     updated: 2020-03-09
+- model: api.question
+  pk: 16
+  fields:
+    text: "Quelle est l'ordre de grandeur de l'évolution de la température moyenne
+      sur Terre depuis 1750 ?"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: "+0,1°C"
+    answer_option_b: "+0,5°C"
+    answer_option_c: "+1°C"
+    answer_option_d: "+2°C"
+    answer_correct: c
+    answer_explanation: "+1,1°C pour être exact"
+    answer_additional_links: http://www.meteofrance.fr/climat-passe-et-futur/le-rechauffement-observe-a-l-echelle-du-globe-et-en-france
+    author: Avenir Climatique (Quizz)
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 17
+  fields:
+    text: "A combien s’élèvent les émissions mondiales de gaz à effet
+      de serre en 2015 (en tonnes équivalent CO2) ?"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: 400 millions de tonnes
+    answer_option_b: 4 milliards de tonnes
+    answer_option_c: 40 milliards de tonnes
+    answer_option_d: 400 milliards de tonnes
+    answer_correct: c
+    answer_explanation: ''
+    answer_additional_links: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
+    author: Avenir Climatique (Quizz)
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 18
+  fields:
+    text: "En hiver, lequel de ces aliments émet le plus de CO2 par kg consommé
+      ?"
+    type: QCM
+    category: consommation
+    difficulty: 1
+    answer_option_a: Bananes de Martinique
+    answer_option_b: "Café de Colombie"
+    answer_option_c: Rutabaga
+    answer_option_d: Tomates espagnoles
+    answer_correct: d
+    answer_explanation: ''
+    answer_additional_links: ''
+    author: Avenir Climatique (Quizz)
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 19
+  fields:
+    text: "Laquelle de ces activités permet de réduire le plus son empreinte
+      carbone ?"
+    type: QCM
+    category: consommation
+    difficulty: 1
+    answer_option_a: "Baisser de 1°C la consigne de chauffage"
+    answer_option_b: "Eteindre systématiquement les lumières en quittant une
+      pièce"
+    answer_option_c: Faire un repas par semaine de moins sans viande
+    answer_option_d: "Reporter d’un an l’achat d’un nouveau smartphone"
+    answer_correct: a
+    answer_explanation: ''
+    answer_additional_links: ''
+    author: Avenir Climatique (Quizz)
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 20
+  fields:
+    text: "En 2018, quelle est la part de l'électricité par rapport à l'ensemble
+      de la consommations d'énergie dans le monde ?"
+    type: QCM
+    category: consommation
+    difficulty: 1
+    answer_option_a: 10%
+    answer_option_b: 20%
+    answer_option_c: 40%
+    answer_option_d: 50%
+    answer_correct: b
+    answer_explanation: ''
+    answer_additional_links: https://www.iea.org/geco/
+    author: Cyril R
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 21
+  fields:
+    text: "Quelle est la concentration actuelle de CO2 dans l'atmosphère ? (en
+      parties par million (ppm))"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: 280 ppm
+    answer_option_b: 315 ppm
+    answer_option_c: 415 ppm
+    answer_option_d: 480 ppm
+    answer_correct: c
+    answer_explanation: ''
+    answer_additional_links: ''
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 22
+  fields:
+    text: "Quelle quantité de carbone émet-on chaque année dans l'atmosphère
+      ?"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: "100 mégatonnes"
+    answer_option_b: 1 gigatonne
+    answer_option_c: 10 gigatonnes
+    answer_option_d: 400 gigatonnes
+    answer_correct: c
+    answer_explanation: ''
+    answer_additional_links: Rapport du GIEC
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 23
+  fields:
+    text: "Quelle proportion de nos émissions les puits de carbone naturels absorbent-ils
+      ?"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: 20%
+    answer_option_b: 50%
+    answer_option_c: 90%
+    answer_option_d: 95%
+    answer_correct: b
+    answer_explanation: ''
+    answer_additional_links: Rapport du GIEC
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 24
+  fields:
+    text: "Quel gaz est responsable du trou dans la couche d’ozone ?"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: "les chlorofluorocarbures (CFC, notamment les gaz aérosols)"
+    answer_option_b: Le dioxyde de carbone (CO2)
+    answer_option_c: "Le méthane (CH4)"
+    answer_option_d: Les particules fines
+    answer_correct: a
+    answer_explanation: "Les CFC sont une famille de gaz organiques composés d'atomes
+      de chlore, de carbone et de fluor. Les particules fines ne sont pas des gaz
+      mais des poussières fines."
+    answer_additional_links: https://fr.wikipedia.org/wiki/Destruction_de_la_couche_d%27ozone
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 25
+  fields:
+    text: "Quelle proportion des réserves connues de pétrole devrions-nous laisser
+      sous terre pour espérer contenir la hausse de température moyenne à
+      +2°C ?"
+    type: QCM
+    category: "énergie"
+    difficulty: 1
+    answer_option_a: 30%
+    answer_option_b: 50%
+    answer_option_c: 80%
+    answer_option_d: 99%
+    answer_correct: c
+    answer_explanation: ''
+    answer_additional_links: https://fr.wikipedia.org/wiki/Accord_de_Paris_sur_le_climat
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 26
+  fields:
+    text: "Lors de la dernière déglaciation, la terre s'est réchauffée
+      de 5°C. En combien d'années ?"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: 100 ans
+    answer_option_b: 1000 ans
+    answer_option_c: 10 000 ans
+    answer_option_d: 125 000 ans
+    answer_correct: c
+    answer_explanation: "+5°C, c'est la hausse qui nous attend d'ici 2100 si rien
+      de sérieux n'est fait pour s'y opposer. A ce rythme de réchauffement,
+      la flore ne pourra pas s'adapter suffisamment vite."
+    answer_additional_links: https://jancovici.com/changement-climatique/predire-lavenir/ou-nous-situons-nous-dans-lechelle-des-temperatures-par-rapport-au-passe/
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 27
+  fields:
+    text: "Le deuxième gaz à effet de serre anthropique (créé par l'homme)
+      est le méthane. Il est produit en majeure partie par..."
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: "La déforestation"
+    answer_option_b: La fonte du permafrost
+    answer_option_c: "Les réfrigérateurs"
+    answer_option_d: Les ruminants
+    answer_correct: d
+    answer_explanation: "Il y aussi les rizières et les fuites de gaz. La fonte
+      du permafrost avec le réchauffement pourrait dégager des quantités
+      astronomiques de méthane dans l'atmosphère."
+    answer_additional_links: https://jancovici.com/changement-climatique/risques/faut-il-redouter-les-hydrates-de-methane/
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 28
+  fields:
+    text: "L'acidification de l'océan est une conséquence..."
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: "des émissions de CO2"
+    answer_option_b: "de l'eutrophisation (manque d'oxygène)"
+    answer_option_c: "de la photosynthèse"
+    answer_option_d: "du réchauffement"
+    answer_correct: a
+    answer_explanation: ''
+    answer_additional_links: https://fr.wikipedia.org/wiki/Acidification_des_oc%C3%A9ans
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 29
+  fields:
+    text: Quel est l'effet des particules fines sur le climat ?
+    type: QCM
+    category: pollution
+    difficulty: 1
+    answer_option_a: Aucun
+    answer_option_b: "Elles détruisent la couche d'ozone"
+    answer_option_c: Elles le refroidissent
+    answer_option_d: "Elles le réchauffent"
+    answer_correct: c
+    answer_explanation: "Les aérosols sont des particules fines qui ont un pouvoir
+      masquant, comme les nuages"
+    answer_additional_links: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 30
+  fields:
+    text: La fonte de la banquise a un impact sur...
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: "el Niño"
+    answer_option_b: "l'albedo (la réflexion de l'énergie vers le ciel)"
+    answer_option_c: "l'acidification de l'océan"
+    answer_option_d: "la montée des eaux"
+    answer_correct: b
+    answer_explanation: ''
+    answer_additional_links: https://fr.wikipedia.org/wiki/Alb%C3%A9do#Climatologie
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 31
+  fields:
+    text: "Quelle est la conséquence de la dissolution du CO2 dans l'eau ?"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: "l'acidification des océans"
+    answer_option_b: "le réchauffement de l'eau"
+    answer_option_c: un ralentissement du Gulf Stream
+    answer_option_d: "une baisse de la fertilité des poissons"
+    answer_correct: a
+    answer_explanation: ''
+    answer_additional_links: https://fr.wikipedia.org/wiki/Acidification_des_oc%C3%A9ans
+    author: Avenir Climatique
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 32
+  fields:
+    text: "Parmi les trois éléments suivants, lequel ne fait pas monter le niveau
+      de l'océan ?"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: "La dilatation de l'eau sous l'effet du réchauffement climatique"
+    answer_option_b: La fonte des calottes glaciaires
+    answer_option_c: La fonte de la banquise
+    answer_option_d: La fonte des glaciers
+    answer_correct: c
+    answer_explanation: La banquise, qui flotte sur l'eau, ne fait pas monter l'eau
+      quand elle fond. Faites le test avec un pastis.
+    answer_additional_links: Rapport du GIEC
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 33
+  fields:
+    text: "Une augmentation de la température entraine-t-elle une augmentation
+      du CO2 ?"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: "Oui, par la chaleur latente des océans"
+    answer_option_b: "Oui, en raison du dégazage des océans"
+    answer_option_c: Oui, c'est l'effet albedo
+    answer_option_d: Non, pas de lien
+    answer_correct: b
+    answer_explanation: "Plus la température augmente et plus la solubilité
+      des gaz dans l’eau diminue, ce qui entraine une diminuation de l'oxygène
+      disponible pour la vie marine. L'effet albedo, c'est l'effet plus au moins miroir
+      des surfaces terrestres."
+    answer_additional_links: https://www.futura-sciences.com/planete/questions-reponses/eau-banquise-glacier-difference-1132/
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 34
+  fields:
+    text: "En termes d'émissions de GES, le secteur de l'agriculture et de l'usage
+      des sols représente..."
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: 15%
+    answer_option_b: 25%
+    answer_option_c: 35%
+    answer_option_d: 45%
+    answer_correct: b
+    answer_explanation: ''
+    answer_additional_links: Rapport du GIEC
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 35
+  fields:
+    text: "La fonte du permafrost libère..."
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: du CO2
+    answer_option_b: de l'eau
+    answer_option_c: "du méthane"
+    answer_option_d: du NO2
+    answer_correct: c
+    answer_explanation: ''
+    answer_additional_links: Rapport du GIEC
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 36
+  fields:
+    text: "Outre le changement climatique, le CO2 a aussi une influence inquiétante
+      sur..."
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: l'augmentation des cancers de la peau
+    answer_option_b: "l'acidité de l'océan"
+    answer_option_c: "la fréquence des événements météorologiques extrèmes"
+    answer_option_d: "la concentration d'oxygène dans l'air"
+    answer_correct: b
+    answer_explanation: ''
+    answer_additional_links: Rapport du GIEC
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 37
+  fields:
+    text: "Ce qui cause 80% de la déforestation, c'est..."
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: l'agriculture
+    answer_option_b: la construction
+    answer_option_c: l'industrie
+    answer_option_d: les transports
+    answer_correct: a
+    answer_explanation: ''
+    answer_additional_links: Rapport du GIEC
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 38
+  fields:
+    text: "Quelle est la quantité moyenne d'équivalent CO2 émise par un français
+      en une année (2018) ?"
+    type: QCM
+    category: consommation
+    difficulty: 1
+    answer_option_a: 320 kg
+    answer_option_b: 2,1 tonnes
+    answer_option_c: 11 tonnes
+    answer_option_d: 57 tonnes
+    answer_correct: c
+    answer_explanation: "Ceci inclut les émissions des pays où ont été
+      produits les produits consommés (émissions importées). 2,1 tonnes,
+      c'est l'objectif COP21 à l'horizon 2050"
+    answer_additional_links: https://www.hautconseilclimat.fr/rapport-2019/'
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 39
+  fields:
+    text: "En France, quelle part de la consommation annuelle de gaz représente
+      le biométhane injecté dans le réseau de distribution ?"
+    type: QCM
+    category: "énergie"
+    difficulty: 1
+    answer_option_a: Moins de 1%
+    answer_option_b: Entre 1% et 3%
+    answer_option_c: Entre 3% et 6%
+    answer_option_d: Entre 6% et 9%
+    answer_correct: a
+    answer_explanation: "La part est d'environ 0.15% avec, en 2018 714 GWH injectés
+      pour une consommation d'environ 470 TWH"
+    answer_additional_links: https://www.statistiques.developpement-durable.gouv.fr/tableau-de-bord-biomethane-injecte-dans-les-reseaux-de-gaz-quatrieme-trim
+    author: Avenir Climatique
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 40
+  fields:
+    text: "En France, quelle part de la consommation annuelle d'électricité
+      est issue du biogaz  ?"
+    type: QCM
+    category: "énergie"
+    difficulty: 1
+    answer_option_a: Moins de 1%
+    answer_option_b: Entre 1% et 3%
+    answer_option_c: Entre 3% et 6%
+    answer_option_d: Entre 6% et 9%
+    answer_correct: c
+    answer_explanation: 2.1 TWH (conso totale 474 TWH), soit 4.4%.
+    answer_additional_links: 'Bilan RTE 2018 (conso totale), Statinfo pour la part
+      du biogaz : https://www.statistiques.developpement-durable.gouv.fr'
+    author: Avenir Climatique
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 41
+  fields:
+    text: "Si la pêche se poursuit au rythme actuel, à quelle date les scientifiques
+      estiment-ils qu'il n'y aura plus de poisson à pêcher ?"
+    type: QCM
+    category: ressources
+    difficulty: 1
+    answer_option_a: '2025'
+    answer_option_b: '2048'
+    answer_option_c: '2100'
+    answer_option_d: Jamais, il en restera toujours assez pour s'en nourrir
+    answer_correct: b
+    answer_explanation: "Selon une étude canadienne, il n’y aura presque plus
+      d’espèces de poissons à consommer en 2048."
+    answer_additional_links: https://aquaculture-aquablog.blogspot.com/2017/10/surpeche-2048-plus-de-poisson-dans-les-oceans.html
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 42
+  fields:
+    text: "Pendant combien de temps une molécule de CO2 émise reste-t-elle dans
+      l'atmosphère avant d'être absorbée ?"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: 3 mois
+    answer_option_b: 1 an
+    answer_option_c: 10 ans
+    answer_option_d: 100 ans
+    answer_correct: d
+    answer_explanation: "C'est pourquoi les changements climatiques sont fondalement
+      irréversibles à l'échelle humaine"
+    answer_additional_links: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 43
+  fields:
+    text: "Un Français aura atteint l'émission annuelle de CO2 d'un Malien le..."
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: "17 février"
+    answer_option_b: 5 mai
+    answer_option_c: 27 juillet
+    answer_option_d: 30 octobre
+    answer_correct: b
+    answer_explanation: "L'empreinte écologique caractérise la surface de la
+      Terre utilisée par l'Homme pour pêcher, élever, cultiver, déboiser,
+      construire et brûler des énergies fossiles. La biocapacité, quant à
+      elle, représente la surface de la planète nécessaire pour faire face
+      à ces pressions. Si ça peut vous consoler, ce serait le 2 janvier si vous
+      étiez un Américain. En moyenne mondiale, le 1er août."
+    answer_additional_links: https://www.wwf.fr/jourdudepassement
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 44
+  fields:
+    text: "Quel sera l'impact d'une hausse de 2 °C de la température de l'air
+      (depuis le début de l'ère pré-industrielle) sur les massifs de coraux
+      ?"
+    type: QCM
+    category: "biodiversité"
+    difficulty: 1
+    answer_option_a: Pas d'effet observable
+    answer_option_b: "30% de réduction"
+    answer_option_c: "60% de réduction"
+    answer_option_d: "99% de réduction"
+    answer_correct: d
+    answer_explanation: ''
+    answer_additional_links: "Rapport IPBES-7 sur la bio-diversité, 2019"
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 45
+  fields:
+    text: "Chaque jour, quelle quantité de métaux lourds, solvants, boues toxiques
+      et autres déchets industriels est déversée dans les eaux du monde ?"
+    type: QCM
+    category: pollution
+    difficulty: 1
+    answer_option_a: 1000 tonnes
+    answer_option_b: 100 000 tonnes
+    answer_option_c: 1 million de tonnes
+    answer_option_d: 100 millions de tonnes
+    answer_correct: c
+    answer_explanation: ''
+    answer_additional_links: "Rapport IPBES-7 sur la bio-diversité, 2019"
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 46
+  fields:
+    text: "Selon le rapport du GIEC de 2018, le dégré de certitude qu'on a que
+      le dérèglement climatique est dû à l'augmentation des gaz à efforts
+      issus de l'activité humaine est de :"
+    type: QCM
+    category: climat
+    difficulty: 2
+    answer_option_a: 50%
+    answer_option_b: 80%
+    answer_option_c: 95%
+    answer_option_d: 100%
+    answer_correct: c
+    answer_explanation: ''
+    answer_additional_links: Rapport du GIEC octobre 2018
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 47
+  fields:
+    text: "C'est à la fin de l'été, en septembre, que la surface de la banquise
+      arctique est la plus réduite. Comment a évolué cette surface minimale
+      sur les 40 dernière années ?"
+    type: QCM
+    category: climat
+    difficulty: 2
+    answer_option_a: "Elle est restée globalement stable"
+    answer_option_b: "Elle a diminué de 10%"
+    answer_option_c: "Elle a diminué de moitié"
+    answer_option_d: "Elle a diminué de 90%"
+    answer_correct: c
+    answer_explanation: "La cause de cette fonte exceptionnelle au fil des années
+      est bien connue. La hausse des températures au niveau mondial depuis plusieurs
+      décennies ne cesse de s'accélérer, et se montre particulièrement
+      marquée  sur le secteur Arctique."
+    answer_additional_links: http://www.meteo-paris.com/actualites/banquise-arctique-fin-de-la-fonte-estivale-2e-etendue-la-plus-faible-22-septembre-2019.html
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 48
+  fields:
+    text: "Quand on dit +3 à +5°C d'augmentation de la température moyenne,
+      cela veut dire sur les terres émergées..."
+    type: QCM
+    category: climat
+    difficulty: 2
+    answer_option_a: "+1°C à +3°C"
+    answer_option_b: "+2°C à +5°C"
+    answer_option_c: "+6°C à +10°C"
+    answer_option_d: "+9°C à +15°C"
+    answer_correct: c
+    answer_explanation: ''
+    answer_additional_links: https://www.notre-planete.info/terre/climatologie_meteo/changement-climatique-donnees.php
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 49
+  fields:
+    text: "Le nombre de réfugiés climatique entre 2008 et 2016 est estimé
+      à 25 millions de personnes. A l'horizon 2050, l'ONU le prévoit de l'ordre
+      de..."
+    type: QCM
+    category: histoire
+    difficulty: 1
+    answer_option_a: 10 millions
+    answer_option_b: 50 millions
+    answer_option_c: 100 millions
+    answer_option_d: au moins 250 millions
+    answer_correct: d
+    answer_explanation: ''
+    answer_additional_links: https://www.lemonde.fr/idees/article/2018/03/27/defense-il-y-a-davantage-de-refugies-climatiques-que-de-refugies-lies-aux-conflits-dans-le-monde_5277061_3232.html
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 50
+  fields:
+    text: "L'érosion et l'épuisement des sols réduisent les surfaces arables.
+      De combien d'hectares par an ?"
+    type: QCM
+    category: consommation
+    difficulty: 2
+    answer_option_a: 100 000
+    answer_option_b: 1 million
+    answer_option_c: 10 millions
+    answer_option_d: 100 millions
+    answer_correct: c
+    answer_explanation: Soit la superficie de Los Angeles
+    answer_additional_links: https://www.planetoscope.com/sols/1175-disparition-de-surfaces-agricoles-dans-le-monde.html
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 51
+  fields:
+    text: "Du fait de l'urbanisation, combien d'hectares de terres arables disparaissent
+      chaque année ?"
+    type: QCM
+    category: histoire
+    difficulty: 2
+    answer_option_a: 200 000
+    answer_option_b: 2 millions
+    answer_option_c: 20 millions
+    answer_option_d: 200 millions
+    answer_correct: c
+    answer_explanation: Soit 50 terrains de football chaque minute
+    answer_additional_links: https://www.planetoscope.com/sols/1175-disparition-de-surfaces-agricoles-dans-le-monde.html
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 52
+  fields:
+    text: "La progression du désert dans le monde, c'est chaque année..."
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: 1 million de km2
+    answer_option_b: 12 millions de km2
+    answer_option_c: 120 millions de km2
+    answer_option_d: 1 milliard de km2
+    answer_correct: c
+    answer_explanation: Soit la surface du Nouveau Mexique
+    answer_additional_links: https://www.planetoscope.com/sols/273-avancee-des-deserts-dans-le-monde.html
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 53
+  fields:
+    text: "D'après l'ONU, le nombre de morts causés chaque année par la pollution
+      est de..."
+    type: QCM
+    category: pollution
+    difficulty: 1
+    answer_option_a: 100 000 morts
+    answer_option_b: 900 000 morts
+    answer_option_c: 9 millions de morts
+    answer_option_d: 90 millions de morts
+    answer_correct: c
+    answer_explanation: Principalement dues aux pollutions de l'eau de l'air (7 millions)
+    answer_additional_links: https://news.un.org/fr/story/2019/06/1044821
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 54
+  fields:
+    text: "Les particules fines en France causent chaque année..."
+    type: QCM
+    category: pollution
+    difficulty: 1
+    answer_option_a: "des crises d'asthme, mais pas de mortalité avérée"
+    answer_option_b: 1000 morts
+    answer_option_c: 5000 morts
+    answer_option_d: 48 000 morts
+    answer_correct: d
+    answer_explanation: "La pollution atmosphérique constitue la deuxième cause
+      de mortalité évitable en France, derrière le tabac, mais devant l'alcool"
+    answer_additional_links: https://www.lemonde.fr/les-decodeurs/article/2019/02/27/avec-48-000-morts-par-an-en-france-la-pollution-de-l-air-tue-plus-que-l-alcool_5429074_4355770.html
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 55
+  fields:
+    text: "Selon une enquête du Sénat de 2015, le coût de la pollution en
+      France, c'est chaque année..."
+    type: QCM
+    category: pollution
+    difficulty: 2
+    answer_option_a: 100 millions d'euros
+    answer_option_b: 1 milliards d'euros
+    answer_option_c: 10 milliards d'euros
+    answer_option_d: 100 milliards d'euros
+    answer_correct: c
+    answer_explanation: "L’évaluation inédite intègre non seulement
+      les dommages sanitaires de la pollution, mais également ses conséquences
+      sur les bâtiments, les écosystèmes et l’agriculture."
+    answer_additional_links: https://www.lemonde.fr/planete/article/2015/07/15/la-pollution-de-l-air-coute-chaque-annee-101-3-milliards-d-euros-a-la-france_4683432_3244.html
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 56
+  fields:
+    text: "Les déchets plastiques dans les océans, c'est chaque année..."
+    type: QCM
+    category: pollution
+    difficulty: 2
+    answer_option_a: 80 000 tonnes
+    answer_option_b: 800 000 tonnes
+    answer_option_c: 8 millions de tonnes
+    answer_option_d: 80 millions de tonnes
+    answer_correct: c
+    answer_explanation: "On estime que 80 % des déchets en mer proviennent des
+      terres émergées. Cette pollution provient surtout des déchets ménagers,
+      qui sont mal collectés, mal recyclés ou abandonnés dans la nature ou
+      sur les bords des routes. Ces déchets vont être portés par les vents,
+      poussés par les pluies pour emprunter le chemin des égouts, des rivières
+      et des fleuves, puis finir dans les océans. La négligence est la principale
+      cause de cette pollution, à laquelle il faut y ajouter les catastrophes naturelles,
+      comme les crues et les tsunamis."
+    answer_additional_links: https://www.theseacleaners.org/la-pollution-plastique-oceanique/
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 57
+  fields:
+    text: "Le 7ème continent', ce sont des vaste zones d'accumulations des déchets
+      plastique dans les océans. Leur surface est de l'ordre de..."
+    type: QCM
+    category: pollution
+    difficulty: 2
+    answer_option_a: la Corse
+    answer_option_b: 3x la France
+    answer_option_c: "le Brésil"
+    answer_option_d: la Russie
+    answer_correct: b
+    answer_explanation: "Ces vastes mouvements tourbillonnaires de sens anticyclonique
+      (c’est à dire contraire au sens de rotation terrestre) s’accompagnent
+      d’un lent flux convergent en surface, ce qui y concentre les particules
+      flottantes."
+    answer_additional_links: https://www.encyclopedie-environnement.org/eau/pollution-plastique-en-mer/
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 58
+  fields:
+    text: "Combien de sacs plastiques sont consommés chaque année dans le monde
+      ?"
+    type: QCM
+    category: pollution
+    difficulty: 2
+    answer_option_a: 100 millions
+    answer_option_b: 1 milliard
+    answer_option_c: 50 milliards
+    answer_option_d: 5000 milliards
+    answer_correct: d
+    answer_explanation: De plus en plus de pays les interdisent
+    answer_additional_links: https://www.novethic.fr/actualite/environnement/dechets/isr-rse/interdiction-des-sacs-plastiques-une-prise-de-conscience-mondiale-146197.html
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 59
+  fields:
+    text: "Entre 1970 et 2012, les populations de mammifères, d'oiseaux, de reptiles
+      et d'amphibiens ont reculé de..."
+    type: QCM
+    category: "biodiversité"
+    difficulty: 2
+    answer_option_a: 10%
+    answer_option_b: 30%
+    answer_option_c: 58%
+    answer_option_d: 75%
+    answer_correct: c
+    answer_explanation: Ainsi que 75% des insectes volants en Europe
+    answer_additional_links: https://www.futura-sciences.com/planete/actualites/developpement-durable-biodiversite-plus-60-animaux-sauvages-ont-disparu-depuis-1970-55431/
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 60
+  fields:
+    text: "Parmi les familles suivantes, quelle est celle dont la proportion d'espèces
+      menacées est la plus forte ?"
+    type: QCM
+    category: "biodiversité"
+    difficulty: 2
+    answer_option_a: Les amphibiens
+    answer_option_b: Les massifs de coraux
+    answer_option_c: Les oiseaux
+    answer_option_d: Les requins
+    answer_correct: a
+    answer_explanation: "Avec 40% de leurs espèces qui sont menacées"
+    answer_additional_links: IBPES
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 61
+  fields:
+    text: "On connaît la dernière grande extinction d'espèces, celle des
+      dinosaures il y a 65 millions d'année. Les scientifiques disent qu'une 6ème
+      extinction est en cours. A quelle vitesse les espèces disparaissent-elles
+      par rapport à celle des dinosaures ?"
+    type: QCM
+    category: "biodiversité"
+    difficulty: 2
+    answer_option_a: Une vitesse comparable
+    answer_option_b: 100 fois plus vite
+    answer_option_c: 1000 fois plus vite
+    answer_option_d: On ne sait pas
+    answer_correct: c
+    answer_explanation: "En l'espace d'un siècle, l'impact de l'humanité sur
+      la Terre risque d'être bien plus important que celui d'une astéroïde
+      il y a 65 millions d'années"
+    answer_additional_links: IBPES
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 62
+  fields:
+    text: "De combien d'habitants la population mondiale s'accroît-elle chaque
+      année ?"
+    type: QCM
+    category: histoire
+    difficulty: 1
+    answer_option_a: 10 millions
+    answer_option_b: 50 millions
+    answer_option_c: 89 millions
+    answer_option_d: 300 millions
+    answer_correct: c
+    answer_explanation: "150 millions de naissances, 60 millions de décès. Cela
+      fait 1% d'augmentation par an. Mais, avec l'augmentation du niveau de vie moyen,
+      cela veut dire bien plus de ressources consommées"
+    answer_additional_links: Chiffres ONU
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 63
+  fields:
+    text: "En 2050, quel est le ratio prévu entre retraités et actifs ?"
+    type: QCM
+    category: histoire
+    difficulty: 1
+    answer_option_a: 2 pour 1
+    answer_option_b: 1 pour 1
+    answer_option_c: 1 pour 2
+    answer_option_d: 1 pour 10
+    answer_correct: c
+    answer_explanation: Il est de 1 pour 11 au niveau mondial actuellement, mais augmente
+      rapidement
+    answer_additional_links: Chiffres ONU
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 64
+  fields:
+    text: "Entre 1500 et nos jours, la population mondiale a été multipliée
+      par 14. Et sa consommation d'énergie ?"
+    type: QCM
+    category: consommation
+    difficulty: 1
+    answer_option_a: Par 40
+    answer_option_b: Par 100
+    answer_option_c: Par 500
+    answer_option_d: Par 1000
+    answer_correct: b
+    answer_explanation: "Soit 10 fois plus vite. Mais ça s'accélère !"
+    answer_additional_links: "Yuval Noah Harari, Sapiens: une brève histoire de
+      l'humanité"
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 65
+  fields:
+    text: "Le phosphore, une ressource non-renouvelable, est essentiel pour l'agriculture.
+      A quelle date est estimé son pic de production (moment à partir duquel
+      sa production ne fera que décroître) ?"
+    type: QCM
+    category: ressources
+    difficulty: 2
+    answer_option_a: "Déjà passé"
+    answer_option_b: '2030'
+    answer_option_c: '2100'
+    answer_option_d: '2200'
+    answer_correct: b
+    answer_explanation: "82% des sols français dépendant actuellement des engrais
+      phosphatés. Or il n'existe aucun substitut naturel au phosphore. Le principal
+      exportateur mondial en est la Chine."
+    answer_additional_links: "Science et vie n°1136, mai 2012, interview de JC.
+      Fardeau, INRA"
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 66
+  fields:
+    text: "Quelle proportion du carbone est stockée dans la végétation et
+      les sols ?"
+    type: QCM
+    category: "énergie"
+    difficulty: 2
+    answer_option_a: 10%
+    answer_option_b: 20%
+    answer_option_c: 40%
+    answer_option_d: 70%
+    answer_correct: c
+    answer_explanation: "Quand on brûle du bois, ce carbone part dans l'atmosphère.
+      On peut craindre que la déforestation ne s'agrave une fois le pic des énergies
+      fossiles atteint."
+    answer_additional_links: https://reseauactionclimat.org/stockage-carbone-sol-rechauffement-climatique/
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 67
+  fields:
+    text: "Comment a évolué le nombre de poissons dans la faune océanique
+      en un siècle ?"
+    type: QCM
+    category: ressources
+    difficulty: 1
+    answer_option_a: "Il est resté globalement stable"
+    answer_option_b: "Il a décliné de 50%"
+    answer_option_c: "Il a décliné de 75%"
+    answer_option_d: "Il a décliné de 90%"
+    answer_correct: d
+    answer_explanation: "La raison en est bien sûr la surpêche"
+    answer_additional_links: https://www.encyclo-ecolo.com/P%C3%AAche_et_surp%C3%AAche
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 68
+  fields:
+    text: "A-t-on atteint le pic des découvertes de ressources de pétrole ?"
+    type: QCM
+    category: ressources
+    difficulty: 3
+    answer_option_a: Oui, en 1930
+    answer_option_b: Oui, en 1964
+    answer_option_c: Oui, en 2006
+    answer_option_d: Non, elles sont globalement en augmentation
+    answer_correct: b
+    answer_explanation: ''
+    answer_additional_links: https://jancovici.com/transition-energetique/petrole/a-quand-le-pic-de-production-mondial-pour-le-petrole/
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 69
+  fields:
+    text: "A-t-on atteint le pic de production de pétrole conventionnel (hors pétrole
+      de schiste et bitumineux) ?"
+    type: QCM
+    category: ressources
+    difficulty: 3
+    answer_option_a: Oui, en 1973
+    answer_option_b: Oui, en 2006
+    answer_option_c: "Non, il est estimé à 2045"
+    answer_option_d: "Non, il est trop loin pour pouvoir être estimé"
+    answer_correct: b
+    answer_explanation: "L'agence internationale de l'énergie a annoncé fin
+      2018 qu'elle s'attendait à un pic tous pétrole confondus à l'horizon
+      2025"
+    answer_additional_links: https://jancovici.com/transition-energetique/petrole/a-quand-le-pic-de-production-mondial-pour-le-petrole/
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 70
+  fields:
+    text: "Quelle est la proportion des énergies fossiles dans la consommation
+      mondiale ?"
+    type: QCM
+    category: "énergie"
+    difficulty: 2
+    answer_option_a: 40%
+    answer_option_b: 65%
+    answer_option_c: 85%
+    answer_option_d: 95%
+    answer_correct: c
+    answer_explanation: ''
+    answer_additional_links: https://www.connaissancedesenergies.org/fiche-pedagogique/chiffres-cles-production-d-energie
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 71
+  fields:
+    text: "L'empreinte carbone de la France correspond aux émissions sur le sol
+      français, celles de ses exportations et de ses importations. A combien s'élève-t-elle
+      par habitant en 2018 ?"
+    type: QCM
+    category: consommation
+    difficulty: 2
+    answer_option_a: 2 tonnes de CO2 par habitant
+    answer_option_b: 5 tonnes de CO2 par habitant
+    answer_option_c: 11 tonnes de CO2 par habitant
+    answer_option_d: 18 tonnes de CO2 par habitant
+    answer_correct: c
+    answer_explanation: "Elle est globalement stable depuis 2000. L'objectif de la
+      COP21 est de 2 tonnes par an par habitant au niveau mondial, soit une réduction
+      par un facteur 5 à 6."
+    answer_additional_links: https://www.hautconseilclimat.fr/wp-content/uploads/2019/09/hcc_rapport_annuel_grand_public_2019.pdf
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 72
+  fields:
+    text: "Entre l'industrie, l'agriculture, le bâtiment et les transports, quel
+      est le secteur qui émet le plus de gaz à effet de serre en France ?"
+    type: QCM
+    category: consommation
+    difficulty: 2
+    answer_option_a: L'agriculture
+    answer_option_b: "Le bâtiment"
+    answer_option_c: L'industrie
+    answer_option_d: Les transports
+    answer_correct: d
+    answer_explanation: "Transports 31%, Bâtiment 19%, Agriculture 19%, Industrie
+      18%"
+    answer_additional_links: https://www.hautconseilclimat.fr/wp-content/uploads/2019/09/hcc_rapport_annuel_grand_public_2019.pdf
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 73
+  fields:
+    text: "Le production d'énergie nucléaire contribue-t-elle à l'effet de
+      serre ?"
+    type: QCM
+    category: "énergie"
+    difficulty: 1
+    answer_option_a: Pas du tout
+    answer_option_b: "Très peu"
+    answer_option_c: Beaucoup
+    answer_option_d: Oui et non
+    answer_correct: b
+    answer_explanation: "Question polémique. Mais justement pas, du moins pour
+      la production d'électricité, car il n'y a pas de combustion, donc pas
+      de CO2 émis. Les seules émissions proviennent de la construction, de la
+      maintenance et du démantèlement. La méconnaissance des Français
+      sur ce point est flagrante, comme montré dans l'article donné en référence."
+    answer_additional_links: https://www.lemonde.fr/blog/huet/2018/04/11/nucleaire-et-climat-la-grande-tromperie/
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 74
+  fields:
+    text: "Si internet était un pays, en quelle position arriverait-il en termes
+      d'émission de gaz à effet de serre ?"
+    type: QCM
+    category: consommation
+    difficulty: 2
+    answer_option_a: "1ère"
+    answer_option_b: "3ème"
+    answer_option_c: "5ème"
+    answer_option_d: "10ème"
+    answer_correct: b
+    answer_explanation: "Après la Chine et les Etats-Unis"
+    answer_additional_links: https://mrmondialisation.org/le-cout-ecologique-dinternet-est-astronomique/
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 75
+  fields:
+    text: "Quelle proportion des gaz à effet de serre les 10% les plus riches de
+      la planète émettent-ils ?"
+    type: QCM
+    category: consommation
+    difficulty: 2
+    answer_option_a: 10%
+    answer_option_b: 30%
+    answer_option_c: 50%
+    answer_option_d: 90%
+    answer_correct: c
+    answer_explanation: "Que ce soit au niveau mondial ou en France, la quantité
+      de CO2 émise est étroitement liée au niveau de revenu des habitants,
+      selon les travaux des économistes Lucas Chancel et Thomas Piketty. C'est
+      encore plus marqué aux Etats-Unis et au Brésil."
+    answer_additional_links: https://www.liberation.fr/checknews/2019/11/06/est-il-vrai-qu-en-france-les-10-les-plus-riches-emettent-huit-fois-plus-de-co2-que-les-10-les-plus-p_1761604
+    author: Matthieu M
+    publish: false
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 76
+  fields:
+    text: "Prenons le poids de tout ce qui a été construit par l'homme. Divisons
+      le par le poids de toute la matière vivante sur terre. Combien obtient-on
+      ?"
+    type: QCM
+    category: histoire
+    difficulty: 2
+    answer_option_a: 7%
+    answer_option_b: 7 sur 100
+    answer_option_c: "1, à peu près autant"
+    answer_option_d: '7'
+    answer_correct: b
+    answer_explanation: "C'est ce qu'on appelle la technosphère. Elle a été
+      évaluée à 30 000 milliards  de tonnes. A comparer aux 4 000 milliards
+      du vivant."
+    answer_additional_links: https://www.futura-sciences.com/planete/actualites/environnement-pese-tout-ce-homme-pu-fabriquer-65435/
+    author: Matthieu M
+    publish: false
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 77
+  fields:
+    text: "Quelle proportion des gaz à effet de serre les 10% les plus pauvres
+      de la planète émettent-ils ?"
+    type: QCM
+    category: consommation
+    difficulty: 2
+    answer_option_a: 1%
+    answer_option_b: 10%
+    answer_option_c: 50%
+    answer_option_d: 80%
+    answer_correct: b
+    answer_explanation: "Que ce soit au niveau mondial ou en France, la quantité
+      de CO2 émise est étroitement liée au niveau de revenu des habitants,
+      selon les travaux des économistes Lucas Chancel et Thomas Piketty. C'est
+      encore plus marqué aux Etats-Unis et au Brésil."
+    answer_additional_links: https://www.liberation.fr/checknews/2019/11/06/est-il-vrai-qu-en-france-les-10-les-plus-riches-emettent-huit-fois-plus-de-co2-que-les-10-les-plus-p_1761604
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 78
+  fields:
+    text: "L'objectif de la COP21 à l'horizon 2050 est que chaque humain n'émette
+      pas plus que 2,1 tonnes d'équivalent CO2 par an. Imaginons que je ne fasse
+      strictement rien d'autre de l'année. Combien de vols Paris-New York aller-retour
+      pourais-je me permettre ?"
+    type: QCM
+    category: consommation
+    difficulty: 2
+    answer_option_a: "Même pas un"
+    answer_option_b: '1'
+    answer_option_c: '10'
+    answer_option_d: '50'
+    answer_correct: c
+    answer_explanation: Un A/R Paris-New York, c'est 1900 kg de CO2 par personne.
+    answer_additional_links: https://www.liberation.fr/checknews/2019/02/13/est-ce-qu-un-aller-retour-en-avion-a-bali-emet-autant-de-co2-qu-une-annee-de-vie-en-france_1708854
+    author: Matthieu M
+    publish: true
+    created: 2020-03-10
+    updated: 2020-03-10
+- model: api.question
+  pk: 79
+  fields:
+    text: "Qu'elle a été l'élévation du niveau des mers depuis 1900 ?"
+    type: QCM
+    category: climat
+    difficulty: 1
+    answer_option_a: "1 à 2 mm"
+    answer_option_b: "1 à 2 cm"
+    answer_option_c: "10 à 20 cm"
+    answer_option_d: "1 à 2 m"
+    answer_correct: c
+    answer_explanation: "Depuis 1900, il augmente de 1 à 3 mm par an. Depuis 1992,
+      c'est plutôt de l'ordre de 3 mm par an."
+    answer_additional_links: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
+    author: climat-en-questions.fr
+    publish: true
+    created: 2020-03-11
+    updated: 2020-03-11
+- model: api.question
+  pk: 80
+  fields:
+    text: "Quelle est la durée approximative d'une entrée en glaciation ?"
+    type: QCM
+    category: climat
+    difficulty: 2
+    answer_option_a: quelques semaines
+    answer_option_b: "quelques siècles"
+    answer_option_c: "quelques dizaines de milliers d'années"
+    answer_option_d: "quelques dizaines de millions d'années"
+    answer_correct: c
+    answer_explanation: "Contrairement à ce que l'on voit dans "L'âge de glace"
+      ou "Le jour d'après", une entrée en glaciation dure des milliers d'années."
+    answer_additional_links: https://fr.wikipedia.org/wiki/Glaciation
+    author: climat-en-questions.fr
+    publish: true
+    created: 2020-03-11
+    updated: 2020-03-11
+- model: api.question
+  pk: 81
+  fields:
+    text: "Quelle est la part des énergies fossiles dans le mix énergétique
+      mondiale ?"
+    type: QCM
+    category: "énergie"
+    difficulty: 2
+    answer_option_a: 40%
+    answer_option_b: 60%
+    answer_option_c: 80%
+    answer_option_d: 90%
+    answer_correct: c
+    answer_explanation: "Pétrole (33%), Charbon (27%), Gaz (23%)"
+    answer_additional_links: https://ourworldindata.org/grapher/energy-consumption-by-source-and-region
+    author: Avenir Climatique (Quizz)
+    publish: true
+    created: 2020-03-11
+    updated: 2020-03-11
+- model: api.question
+  pk: 82
+  fields:
+    text: "Négawatt est une association qui a publié un rapport qui détaille
+      une transition énergétique (en France) permettant de se passer de l'énergie
+      nucléaire et presque totalement des énergies fossiles à l'horizon 2050.
+      Dans quel sens faut-il appliquer la démarche Négawatt ?"
+    type: QCM
+    category: consommation
+    difficulty: 2
+    answer_option_a: "Efficacité > Renouvelables > Sobriété"
+    answer_option_b: "Efficacité > Sobriété > Renouvelables"
+    answer_option_c: "Renouvelables > Sobriété > Efficacité"
+    answer_option_d: "Sobriété > Efficacité > Renouvelables"
+    answer_correct: d
+    answer_explanation: ''
+    answer_additional_links: https://negawatt.org/La-demarche-negaWatt
+    author: Avenir Climatique (Quizz)
+    publish: true
+    created: 2020-03-11
+    updated: 2020-03-11
+- model: api.question
+  pk: 83
+  fields:
+    text: "Lequel de ces pays émets le plus de gaz à effet de serre par habitant
+      ?"
+    type: QCM
+    category: consommation
+    difficulty: 2
+    answer_option_a: L'Australie
+    answer_option_b: La Chine
+    answer_option_c: Les Etats-Unis
+    answer_option_d: La France
+    answer_correct: c
+    answer_explanation: ''
+    answer_additional_links: https://ourworldindata.org/grapher/co-emissions-per-capita?tab=chart
+    author: Avenir Climatique (Quizz)
+    publish: false
+    created: 2020-03-11
+    updated: 2020-03-11
