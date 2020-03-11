@@ -12,7 +12,10 @@
 
     <div class="question" v-if="question">
       <h2>
-        <span>Question #{{ question.id }}</span>
+        <span>
+          <span class="hidden-sm">Question&nbsp;</span>
+          <span class="color-blue">#{{ question.id }}</span>
+        </span>
         <span> | </span>
         <span class="category-text">{{ question.category }}</span>
         <span> | </span>
@@ -140,6 +143,24 @@ export default {
     submitQuestion() {
       this.questionSubmitted = true;
       this.questionSuccess = (this.answerPicked === this.question.answer_correct);
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/${this.$route.params.questionId}/stats`, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ answer_choice: this.answerPicked })
+      })
+        .then(response => {
+          this.loading = false
+          return response.json()
+        })
+        .then(data => {
+          console.log(data);
+        })
+        .catch(error => {
+          console.log(error)
+        })
     }
   }
 }

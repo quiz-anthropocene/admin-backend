@@ -67,4 +67,10 @@ a.no-decoration {
 .category-text {
   color: #F33F3F;
 }
+
+@media all and (max-width: 40em) {
+  .hidden-sm {
+    display: none;
+  }
+}
 </style>

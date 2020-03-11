@@ -1115,7 +1115,7 @@
 - model: api.question
   pk: 57
   fields:
-    text: "Le 7ème continent', ce sont des vaste zones d'accumulations des déchets
+    text: "Le 7ème continent, ce sont des vaste zones d'accumulations des déchets
       plastique dans les océans. Leur surface est de l'ordre de..."
     type: QCM
     category: pollution
