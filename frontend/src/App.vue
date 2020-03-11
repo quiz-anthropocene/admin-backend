@@ -57,6 +57,11 @@ a.no-decoration {
   cursor: pointer;
 }
 
+.small-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .color-blue {
   color: #005995;
 }
@@ -66,6 +71,10 @@ a.no-decoration {
 
 .category-text {
   color: #F33F3F;
+}
+
+.text-align-left {
+  text-align: left;
 }
 
 @media all and (max-width: 40em) {
