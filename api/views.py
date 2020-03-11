@@ -25,7 +25,7 @@ def question_list(request):
     """
     List all questions (return them in a random order)
     """
-    questions = Question.objects.all().order_by("?")
+    questions = Question.objects.exclude(publish=False).order_by("?")
 
     serializer = QuestionSerializer(questions, many=True)
     return Response(serializer.data)
@@ -51,7 +51,7 @@ def question_random(request):
     Retrieve a random question
     Optional query parameters: 'current'
     """
-    questions = Question.objects.all()
+    questions = Question.objects.exclude(publish=False)
     if request.GET.get("current"):
         questions = questions.exclude(pk=request.GET.get("current"))
 

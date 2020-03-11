@@ -5,3 +5,4 @@ db.sqlite3
 
 .env
 local_scripts
+local_data

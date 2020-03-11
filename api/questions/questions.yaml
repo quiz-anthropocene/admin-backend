@@ -13,6 +13,7 @@
     answer_correct: d
     answer_explanation: "Cela représente 40% de la nourriture produite"
     answer_additional_links: https://www.planetoscope.com/agriculture-alimentation/1556-le-gaspillage-alimentaire-dans-le-monde.html
+    author: "Matthieu M"
     created: 2020-03-07
     updated: 2020-03-07
 - model: api.question
@@ -32,6 +33,7 @@
     answer_explanation: "On peut estimer qu'un homme consomme un ordre de grandeur
       de 5 kW/jour. Voir le calcul estimatif dans l'article en référence."
     answer_additional_links: https://jancovici.com/transition-energetique/l-energie-et-nous/combien-suis-je-un-esclavagiste/
+    author: "Matthieu M"
     created: 2020-03-07
     updated: 2020-03-07
 - model: api.question
@@ -52,6 +54,7 @@
     answer_explanation: "Exemple: les voitures plus économes, qui n'ont pas réduit
       la consommation globale d'essence. On l'appelle aussi le paradoxe de Jevons."
     answer_additional_links: https://fr.wikipedia.org/wiki/Paradoxe_de_Jevons
+    author: "Matthieu M"
     created: 2020-03-07
     updated: 2020-03-07
 - model: api.question
@@ -70,6 +73,7 @@
     answer_explanation: "L’agriculture intensive est pointé du doigt comme
       la cause principale en particulier les pesticides"
     answer_additional_links: https://www.lemonde.fr/planete/article/2019/02/11/le-declin-des-insectes-une-menace-grandissante-pour-les-ecosystemes-naturels_5
+    author: "Matthieu M"
     created: 2020-03-07
     updated: 2020-03-07
 - model: api.question
@@ -87,6 +91,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: https://jancovici.com/changement-climatique/risques/faut-il-redouter-les-hydrates-de-methane/
+    author: "Matthieu M"
     created: 2020-03-07
     updated: 2020-03-07
 - model: api.question
@@ -107,6 +112,7 @@
       avait pas l'océan pour absorber l'essentiel du surplus d'énergie thermique
       dû à l'effet de serre"
     answer_additional_links: Rapport du GIEC
+    author: "Matthieu M"
     created: 2020-03-08
     updated: 2020-03-08
 - model: api.question
@@ -126,6 +132,7 @@
     answer_explanation: "Causes principales: perte et dégradation des habitats.
       Puis surexploitation, pollution, changement climatique"
     answer_additional_links: https://ipbes.net/news/Media-Release-Global-Assessment-Fr
+    author: "Matthieu M"
     created: 2020-03-08
     updated: 2020-03-08
 - model: api.question
@@ -146,6 +153,7 @@
       pourra pas revenir à son état antérieur. On ne parle ici que des durées
       de résidences des gaz à effet de serre dans l'atmosphère. "
     answer_additional_links: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
+    author: "Matthieu M"
     created: 2020-03-08
     updated: 2020-03-08
 - model: api.question
@@ -166,6 +174,7 @@
       sont en bois, sans incitation à l'économiser le béton. C'est pourtant
       l'une des industries les plus émettrices de gaz à effet de serre."
     answer_additional_links: https://blogs.alternatives-economiques.fr/gilles-raveaud/2015/04/02/la-chine-a-consomme-plus-de-ciment-en-3-ans-que-les-etats-unis-en-un-siecle
+    author: "Matthieu M"
     created: 2020-03-08
     updated: 2020-03-08
 - model: api.question
@@ -184,6 +193,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: https://www.connaissancedesenergies.org/tribune-actualite-energies/les-reserves-de-petrole-ne-sepuiseront-j
+    author: "Avenir Climatique (Quizz)"
     created: 2020-03-08
     updated: 2020-03-08
 - model: api.question
@@ -201,6 +211,7 @@
     answer_explanation: "En 2015, le secteur des bâtiments a compté pour 45%
       de la consommation finale (hors usages non énergétique)"
     answer_additional_links: https://www.connaissancedesenergies.org/fiche-pedagogique/mix-energetique-de-la-france
+    author: "Avenir Climatique (Quizz)"
     created: 2020-03-09
     updated: 2020-03-09
 - model: api.question
@@ -220,6 +231,7 @@
       dense et pratique."
     answer_additional_links: "https://www.youtube.com/watch?v=Nb2S7oge8TQ (à partir
       de 1h00)"
+    author: "Matthieu M"
     created: 2020-03-09
     updated: 2020-03-09
 - model: api.question
@@ -238,6 +250,7 @@
     answer_explanation: Ou encore, 100 millions de barils par jour, pour retenir l'ordre
       de grandeur
     answer_additional_links: https://www.planetoscope.com/Source-d-energie/229-consommation-mondiale-d-energie-en-tep-.html
+    author: "Matthieu M"
     created: 2020-03-09
     updated: 2020-03-09
 - model: api.question
@@ -255,6 +268,7 @@
     answer_correct: b
     answer_explanation: ''
     answer_additional_links: Rapport du GIEC
+    author: "Matthieu M"
     created: 2020-03-09
     updated: 2020-03-09
 - model: api.question
@@ -272,5 +286,6 @@
     answer_explanation: "Ces gaz ont pour caractéristique commune d'absorber une
       partie des infrarouges émis par la surface de la Terre"
     answer_additional_links: https://fr.wikipedia.org/wiki/Effet_de_serre#Les_gaz_%C3%A0_%C2%AB_effet_de_serre_%C2%BB
+    author: "Matthieu M"
     created: 2020-03-09
     updated: 2020-03-09
