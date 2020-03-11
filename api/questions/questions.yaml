@@ -1597,8 +1597,8 @@
     answer_option_c: "quelques dizaines de milliers d'années"
     answer_option_d: "quelques dizaines de millions d'années"
     answer_correct: c
-    answer_explanation: "Contrairement à ce que l'on voit dans "L'âge de glace"
-      ou "Le jour d'après", une entrée en glaciation dure des milliers d'années."
+    answer_explanation: "Contrairement à ce que l'on voit dans 'L'âge de glace'
+      ou 'Le jour d'après', une entrée en glaciation dure des milliers d'années."
     answer_additional_links: https://fr.wikipedia.org/wiki/Glaciation
     author: climat-en-questions.fr
     publish: true
