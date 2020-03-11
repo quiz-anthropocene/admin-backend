@@ -4,8 +4,8 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api.models import Question
-from api.serializers import QuestionSerializer
+from api.models import Question, QuestionStat
+from api.serializers import QuestionSerializer, QuestionStatSerializer
 
 
 def api_home(request):
@@ -43,6 +43,22 @@ def question_detail(request, pk):
 
     serializer = QuestionSerializer(question)
     return Response(serializer.data)
+
+
+@api_view(['POST'])
+def question_detail_stats(request, pk):
+    """
+    Update the question stats
+    """
+    try:
+        question = Question.objects.get(pk=pk)
+    except Question.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'POST':
+        question_stat = QuestionStat.objects.create(question=question, answer_choice=request.data['answer_choice'])
+        serializer = QuestionStatSerializer(question_stat)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
 @api_view(['GET'])

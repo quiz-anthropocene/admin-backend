@@ -44,6 +44,9 @@ class Question(models.Model):
     created = models.DateField()
     updated = models.DateField()
 
+    def __str__(self):
+        return f"{self.text}"
+
     @property
     def has_answer_explanation(self):
         return len(self.answer_explanation) > 0
@@ -52,6 +55,24 @@ class Question(models.Model):
     def has_answer_additional_links(self):
         return len(self.answer_additional_links) > 0
 
+    @property
+    def answer_count(self):
+        return QuestionStat.objects.filter(question=self.id).count()
+
+    @property
+    def answer_success_count(self):
+        return QuestionStat.objects.filter(question=self.id, answer_choice=self.answer_correct).count()
+
     # Admin
     has_answer_explanation.fget.short_description = "Explication"
     has_answer_additional_links.fget.short_description = "Lien(s)"
+    answer_count.fget.short_description = "# Rép"
+    answer_success_count.fget.short_description = "# Rép Corr"
+
+
+class QuestionStat(models.Model):
+    question = models.ForeignKey(
+        Question, null=True, on_delete=models.CASCADE, related_name="stats"
+    )
+    answer_choice = models.CharField(max_length=50, editable=False, help_text="La réponse choisie par l'internaute")
+    created = models.DateTimeField(auto_now=True, help_text="La date & heure de la réponse")
