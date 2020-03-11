@@ -43,3 +43,15 @@ class Question(models.Model):
     publish = models.BooleanField(default=False, blank=False, help_text="La question est prête à être publiée")
     created = models.DateField()
     updated = models.DateField()
+
+    @property
+    def has_answer_explanation(self):
+        return len(self.answer_explanation) > 0
+
+    @property
+    def has_answer_additional_links(self):
+        return len(self.answer_additional_links) > 0
+
+    # Admin
+    has_answer_explanation.fget.short_description = "Explication"
+    has_answer_additional_links.fget.short_description = "Lien(s)"
