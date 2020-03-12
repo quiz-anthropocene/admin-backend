@@ -10,15 +10,39 @@ Vue.use(VueRouter)
 Vue.config.productionTip = false
 
 const routes = [
-  { path: '/', name: 'home', component: QuestionList },
-  { path: '/questions', name: 'question-list', component: QuestionList },
-  { path: '/questions/:questionId', name: 'question-detail', component: QuestionDetail },
-  { path: '/a-propos', name: 'about', component: About },
+  {
+    path: '/', name: 'home', component: QuestionList
+  },
+  {
+    path: '/questions', name: 'question-list', component: QuestionList
+  },
+  {
+    path: '/questions/:questionId', name: 'question-detail', component: QuestionDetail,
+    meta: {
+      title: "Know Your Planet - Question "
+    }
+  },
+  {
+    path: '/a-propos', name: 'about', component: About,
+    meta: {
+      title: "Know Your Planet - A propos"
+    }
+  },
 ]
 
 const router = new VueRouter({
   routes
 })
+
+router.beforeEach((to, from, next) => {
+  const questionId = to.params.questionId;
+  if (to.meta.title) {
+    document.title = to.meta.title + (questionId ? `#${questionId}` : '');
+  } else {
+    document.title = 'Know Your Planet';
+  }
+  next();
+});
 
 new Vue({
   router,

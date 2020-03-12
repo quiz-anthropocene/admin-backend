@@ -14,16 +14,16 @@
       On est preneur de tous vos retours !
     </p>
     <p>
-      Le code de l'application, ainsi que les questions, sont visibles sur la page Github de l'application: <a href="https://github.com/raphodn/know-your-planet" target="_blank">ici</a>.
+      Le code de l'application, ainsi que les questions, sont visibles sur la page Github de l'application (<a href="https://github.com/raphodn/know-your-planet" target="_blank">ici</a>).
     </p>
     <p>
       Si vous avez des commentaires ou des suggestions, vous pouvez pour l'instant créer des <i>Issues</i> sur Github (en attendant que l'on ait créé d'autres moyens d'échanges).
     </p>
     <h3>Nous connaître</h3>
     <p>
-      Des <strong>bénévoles</strong> impliqués et concernés par les questions climat.
+      Juste quelques <strong>bénévoles</strong> impliqués et concernés par les questions climat.
     </p>
-    <h3>Aller plus loin</h3>
+    <h3>Vous souhaitez aller plus loin ?</h3>
     <a href="https://fresqueduclimat.org/" target="_blank">La Fresque du Climat</a><br>
     <a href="https://theshiftproject.org/" target="_blank">The Shift Project</a><br>
     <a href="https://avenirclimatique.org/" target="_blank">Avenir Climatique</a><br>

@@ -32,7 +32,7 @@ Mieux apréhender les limites de notre planète, à travers des questions simple
     ```
     git clone git@github.com:raphodn/know-your-planet.git
     ```
-- Installez les dépendances
+- Installez les dépendances du Backend
     ```
     pip install -r requirements.txt
     ```
@@ -44,14 +44,30 @@ Mieux apréhender les limites de notre planète, à travers des questions simple
     ```
     python manage.py loaddata api/questions/questions.yaml
     ```
+- Installez les dépendances du Frontend
+    ```
+    cd frontend
+    yarn install
+    ```
 
 ### Lancer l'application
+
+#### Lancer le Backend
 
 ```
 python manage.py runserver
 ```
 
-Elle sera accessible à l'url `http://localhost:8000`
+Le Backend sera accessible à l'url `http://localhost:8000`
+
+#### Lancer le Frontend
+
+```
+cd frontend
+yarn serve
+```
+
+Le Frontend sera accessible à l'url `http://localhost:8080`
 
 ### Accéder à la console admin
 
@@ -60,8 +76,23 @@ Créez d'abord un utilisateur admin
 python manage.py createsuperuser --username admin@email.com
 ```
 
-Connectez-vous sur `http://localhost:8000/admin`
+Connectez-vous ensuite sur `http://localhost:8000/admin`
+
+### Autres commandes utiles
+
+Exporter les questions de la base au format YAML
+```
+python manage.py dumpdata api.question --format=yaml --pretty > api/questions/questions.yaml
+```
 
 ## Qui sommes-nous ?
 
 A venir
+
+## Idées
+
+- Rajouter un bouton "Autre question dans la même catégorie"
+- Proposer à l'utilisateur un feedback rapide sur la question (👍, 👎, voire 💬)
+- Rajouter de nouveaux formats de questions: Vrai/Faux par exemple
+- Pouvoir mettre des images (ou plutôt des liens vers des images) dans la partie explication ou liens (ou un nouveau champs image ?)
+- Remise à plat des catégories au profit de tags ? (une question pourrait appartenir à plusieurs catégories)
