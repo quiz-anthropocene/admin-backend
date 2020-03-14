@@ -65,11 +65,13 @@ def question_detail_stats(request, pk):
 def question_random(request):
     """
     Retrieve a random question
-    Optional query parameters: 'current'
+    Optional query parameters: 'current' (question id), 'category' (string)
     """
     questions = Question.objects.exclude(publish=False)
     if request.GET.get("current"):
         questions = questions.exclude(pk=request.GET.get("current"))
+    if request.GET.get("category"):
+        questions = questions.filter(category=request.GET.get("category"))
 
     questions_ids = questions.values_list('id', flat=True)
     questions_random_id = random.sample(list(questions_ids), 1)

@@ -55,12 +55,20 @@
       <p>🔗&nbsp;<a v-bind:href="question.answer_additional_links" target="_blank">{{ question.answer_additional_links }}</a></p>
     </div>
 
-    <div class="action">
-      <router-link :to="{ name: 'home' }">
-        <button class="button">🏠&nbsp;Menu principal</button>
+    <div class="action" v-if="question">
+      <router-link :to="{ name: 'question-detail', params: { questionId: questionSameCategoryNextId } }">
+        <button class="button">⏩&nbsp;Autre question <span class="category-text">{{ question.category }}</span></button>
       </router-link>
       <router-link :to="{ name: 'question-detail', params: { questionId: questionRandomNextId } }">
         <button class="button">🔀&nbsp;Question au hasard</button>
+      </router-link>
+    </div>
+
+    <div class="home" v-if="question">
+      <br />
+      <router-link :to="{ name: 'home' }">
+        <!-- <button class="button">🏠&nbsp;Menu principal</button> -->
+        Retour au menu principal
       </router-link>
     </div>
   </section>
@@ -83,6 +91,7 @@ export default {
       answerPicked: '',
       questionSubmitted: false,
       questionSuccess: false,
+      questionSameCategoryNextId: null,
       questionRandomNextId: null,
       loading: false,
       error: null,
@@ -94,7 +103,7 @@ export default {
   },
 
   beforeRouteUpdate (to, from, next) {
-    this.init(this.questionRandomNextId);
+    this.init(to.params.questionId);
     next();
   },
 
@@ -106,7 +115,6 @@ export default {
       this.loading = false;
       this.error = null;
       this.fetchQuestion(currentQuestionId);
-      this.fetchQuestionRandomNext(currentQuestionId);
     },
     fetchQuestion(questionId) {
       this.error = this.question = null;
@@ -117,15 +125,20 @@ export default {
           return response.json()
         })
         .then(data => {
-          this.question = data
+          this.question = data;
+          this.fetchQuestionRandomNext(this.question.id, this.question.category);
+          this.fetchQuestionRandomNext(this.question.id);
         })
         .catch(error => {
           console.log(error)
           this.error = error;
         })
     },
-    fetchQuestionRandomNext(currentQuestionId) {
-      const params = { current: currentQuestionId };
+    fetchQuestionRandomNext(currentQuestionId, currentQuestionCategory = null) {
+      const params = { 'current': currentQuestionId };
+      if (currentQuestionCategory) {
+        params['category'] = currentQuestionCategory;
+      }
       const urlParams = new URLSearchParams(Object.entries(params));
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/random?${urlParams}`)
         .then(response => {
@@ -133,7 +146,11 @@ export default {
           return response.json()
         })
         .then(data => {
-          this.questionRandomNextId = data.id
+          if (currentQuestionCategory) {
+            this.questionSameCategoryNextId = data.id;
+          } else {
+            this.questionRandomNextId = data.id;
+          }
         })
         .catch(error => {
           console.log(error)
