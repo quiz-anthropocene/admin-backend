@@ -1,6 +1,6 @@
 # Know Your Planet 🌍
 
-Mieux apréhender les limites de notre planète, à travers des questions simples et sourcées.
+Mieux appréhender les limites de notre planète, à travers des questions simples et sourcées.
 
 ## But
 

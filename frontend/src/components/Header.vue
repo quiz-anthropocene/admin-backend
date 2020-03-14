@@ -3,7 +3,7 @@
     <h1 class="title">
       <router-link class="no-decoration" :to="{ name: 'home' }">Know Your Planet</router-link>
     </h1>
-    <h2>Des questions/réponses pour mieux apréhender les limites de notre planète&nbsp;🌍</h2>
+    <h2>Des questions/réponses pour mieux appréhender les limites de notre planète&nbsp;🌍</h2>
   </header>
 </template>
 
@@ -16,6 +16,8 @@ export default {
 <style scoped>
 header {
   border: 10px solid #005995;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .title {
   color: #005995;
