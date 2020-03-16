@@ -1,4 +1,5 @@
 import random
+from django.db.models import Count
 from django.http import HttpResponse
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -80,3 +81,21 @@ def question_random(request):
 
     serializer = QuestionSerializer(question_random)
     return Response(serializer.data)
+
+
+@api_view(['GET'])
+def question_stats(request):
+    """
+    Retrieve stats on all the questions
+    """
+    question_publish_stats = Question.objects.values("publish").annotate(count=Count("publish")).order_by("-count")
+    question_category_stats = Question.objects.values("category").annotate(count=Count("category")).order_by("-count")
+    # question_answer_stats = QuestionStat.objects.extra(select={'day': "to_char(created, 'YYYY-MM-DD')"}).values("day").annotate(Count("created"))
+    # question_answer_stats = QuestionStat.objects.extra(select={'day': "date(created)"}).values("day").annotate(count=Count("created")) #.order_by("day")
+    question_answer_count_stats = QuestionStat.objects.count()
+    return Response({
+        "publish": question_publish_stats,
+        "category": question_category_stats,
+        # "answer": question_answer_stats
+        "answer_count": question_answer_count_stats
+    })

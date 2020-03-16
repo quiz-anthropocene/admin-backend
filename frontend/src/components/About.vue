@@ -19,6 +19,10 @@
     <p>
       Si vous avez des commentaires ou des suggestions, vous pouvez pour l'instant créer des <i>Issues</i> sur Github (en attendant que l'on ait créé d'autres moyens d'échanges).
     </p>
+    <h3>Quelques chiffres</h3>
+    <p>
+      Voir la page <router-link :to="{ name: 'stats' }">Statistiques</router-link>.
+    </p>
     <h3>Nous connaître</h3>
     <p>
       Juste quelques <strong>bénévoles</strong> impliqués et concernés par les questions climat.
@@ -31,6 +35,14 @@
     <a href="https://www.lpo.fr/" target="_blank">La Ligue pour la Protection des Oiseaux (LPO)</a><br>
     <a href="https://www.hautconseilclimat.fr/" target="_blank">Le Haut conseil pour le climat</a><br>
     <a href="https://www.conventioncitoyennepourleclimat.fr/" target="_blank">La Convention Citoyenne pour le climat (CCC)</a><br>
+
+    <br />
+    <br />
+    <div class="home text-center">
+      <router-link :to="{ name: 'home' }">
+        Retour au menu principal
+      </router-link>
+    </div>
   </section>
 </template>
 

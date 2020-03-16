@@ -5,6 +5,7 @@ import App from './App.vue'
 import QuestionList from './components/QuestionList.vue'
 import QuestionDetail from './components/QuestionDetail.vue'
 import About from './components/About.vue'
+import Stats from './components/Stats.vue'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
@@ -28,6 +29,12 @@ const routes = [
       title: "Know Your Planet - A propos"
     }
   },
+  {
+    path: '/stats', name: 'stats', component: Stats,
+    meta: {
+      title: "Know Your Planet - Statistiques"
+    }
+  }
 ]
 
 const router = new VueRouter({

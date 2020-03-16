@@ -64,8 +64,9 @@
       </router-link>
     </div>
 
+    <br />
+    <br />
     <div class="home" v-if="question">
-      <br />
       <router-link :to="{ name: 'home' }">
         <!-- <button class="button">🏠&nbsp;Menu principal</button> -->
         Retour au menu principal
