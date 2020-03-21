@@ -62,15 +62,18 @@ a.no-decoration {
   margin: 0 auto;
 }
 
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+
 .color-blue {
   color: #005995;
 }
 .color-orange {
   color: #F33F3F;
 }
-
-.category-text {
-  color: #F33F3F;
+.color-red {
+  color: red;
 }
 
 .text-align-left {

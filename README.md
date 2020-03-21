@@ -91,7 +91,6 @@ A venir
 
 ## Idées
 
-- Rajouter un bouton "Autre question dans la même catégorie"
 - Proposer à l'utilisateur un feedback rapide sur la question (👍, 👎, voire 💬)
 - Rajouter de nouveaux formats de questions: Vrai/Faux par exemple
 - Pouvoir mettre des images (ou plutôt des liens vers des images) dans la partie explication ou liens (ou un nouveau champs image ?)
