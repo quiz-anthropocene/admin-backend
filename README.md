@@ -2,6 +2,27 @@
 
 Mieux appréhender les limites de notre planète, à travers des questions simples et sourcées.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [But](#but)
+- [Stack technique](#stack-technique)
+  - [Backend](#backend)
+  - [Frontend](#frontend)
+  - [DevOps](#devops)
+- [Infos supplémentaires](#infos-suppl%C3%A9mentaires)
+- [Lancer le projet en local](#lancer-le-projet-en-local)
+  - [Installer l'application](#installer-lapplication)
+  - [Lancer l'application](#lancer-lapplication)
+    - [Lancer le Backend](#lancer-le-backend)
+    - [Lancer le Frontend](#lancer-le-frontend)
+  - [Accéder à la console admin](#acc%C3%A9der-%C3%A0-la-console-admin)
+  - [Autres commandes utiles](#autres-commandes-utiles)
+- [Idées](#id%C3%A9es)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## But
 
 - Rassembler un ensemble de connaissances sous forme de questions (QCM uniquement pour l'instant)
@@ -11,17 +32,27 @@ Mieux appréhender les limites de notre planète, à travers des questions simpl
 - Une base de donnée facilement accessible et editable
 - Une application simple pour une prise en main rapide
 
+## Stack technique
+
+### Backend
+
+- Une backend en Python Django (API & console Admin)
+- Une base de donnée PostgreSQL (SQLite en local)
+- Un fichier YAML qui regroupe toutes les questions (facilement editable au sein de Github)
+
+### Frontend
+
+- Un frontend en Vue.js
+
+### DevOps
+
+- Le backend est hébergé sur Heroku
+- Le frontend est hébergé sur Netlify
+
 ## Infos supplémentaires
 
 - Les questions sont stockées au format YAML, dans le fichier `api/questions/questions.yaml`
 - Le code et les questions sont en open-source: venez nous aider !
-
-## Tech
-
-- Une API en Python (Django)
-- Une base de donnée SQLite (à faire évoluer)
-- Un fichier YAML qui regroupe toutes les questions (facilement editable au sein de Github)
-- Une console Admin (Django)
 
 ## Lancer le projet en local
 
@@ -85,13 +116,8 @@ Exporter les questions de la base au format YAML
 python manage.py dumpdata api.question --format=yaml --pretty > api/questions/questions.yaml
 ```
 
-## Qui sommes-nous ?
-
-A venir
-
 ## Idées
 
-- Rajouter un bouton "Autre question dans la même catégorie"
 - Proposer à l'utilisateur un feedback rapide sur la question (👍, 👎, voire 💬)
 - Rajouter de nouveaux formats de questions: Vrai/Faux par exemple
 - Pouvoir mettre des images (ou plutôt des liens vers des images) dans la partie explication ou liens (ou un nouveau champs image ?)

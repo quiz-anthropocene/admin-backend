@@ -6,6 +6,17 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Des pistes dans [README#idées](README#idées)
 
+## [0.3.0] - 2020-03-11
+
+### Ajouté
+
+- [Frontend] Une page Stats pour afficher quelques les chiffres basiques de l'application (nombre de questions, nombre de réponses, ...)
+- [Frontend] Un bouton "Autre question dans la même catégorie"
+
+### Modifié
+
+- [DevOps] Rajout de la commande loaddata au Procfile
+
 ## [0.2.0] - 2020-03-11
 
 ### Ajouté

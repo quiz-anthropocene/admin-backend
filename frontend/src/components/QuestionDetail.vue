@@ -17,7 +17,7 @@
           <span class="color-blue">#{{ question.id }}</span>
         </span>
         <span> | </span>
-        <span class="category-text">{{ question.category }}</span>
+        <span class="color-orange">{{ question.category }}</span>
         <span> | </span>
         <span><small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
       </h2>
@@ -57,7 +57,7 @@
 
     <div class="action" v-if="question">
       <router-link :to="{ name: 'question-detail', params: { questionId: questionSameCategoryNextId } }">
-        <button class="button">⏩&nbsp;Autre question <span class="category-text">{{ question.category }}</span></button>
+        <button class="button">⏩&nbsp;Autre question <span class="color-orange">{{ question.category }}</span></button>
       </router-link>
       <router-link :to="{ name: 'question-detail', params: { questionId: questionRandomNextId } }">
         <button class="button">🔀&nbsp;Question au hasard</button>
