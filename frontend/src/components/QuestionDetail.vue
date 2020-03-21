@@ -53,6 +53,10 @@
       <h3 v-if="!questionSuccess">La réponse était: {{ question["answer_option_" + question["answer_correct"]] }}</h3>
       <p>ℹ️&nbsp;{{ question.answer_explanation }}</p>
       <p>🔗&nbsp;<a v-bind:href="question.answer_additional_links" target="_blank">{{ question.answer_additional_links }}</a></p>
+      <p class="answer-image" v-if="question.answer_image_link">
+        🖼️&nbsp;<small>(cliquez sur l'image pour l'agrandir)</small><br />
+        <a v-bind:href="question.answer_image_link" target="_blank"><img v-bind:src="question.answer_image_link" alt="une image pour illustrer la réponse" /></a>
+      </p>
     </div>
 
     <div class="action" v-if="question">
@@ -198,5 +202,13 @@ export default {
   padding-left: 10px;
   padding-right: 10px;
   overflow: hidden;
+}
+.answer p.answer-image {
+  height: 300px;
+}
+.answer p.answer-image img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
 }
 </style>

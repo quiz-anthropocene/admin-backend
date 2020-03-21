@@ -13,6 +13,7 @@
     answer_correct: d
     answer_explanation: "Cela représente 40% de la nourriture produite"
     answer_additional_links: https://www.planetoscope.com/agriculture-alimentation/1556-le-gaspillage-alimentaire-dans-le-monde.html
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-07
@@ -34,6 +35,7 @@
     answer_explanation: "On peut estimer qu'un homme consomme un ordre de grandeur
       de 5 kW/jour. Voir le calcul estimatif dans l'article en référence."
     answer_additional_links: https://jancovici.com/transition-energetique/l-energie-et-nous/combien-suis-je-un-esclavagiste/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-07
@@ -56,6 +58,7 @@
     answer_explanation: "Exemple: les voitures plus économes, qui n'ont pas réduit
       la consommation globale d'essence. On l'appelle aussi le paradoxe de Jevons."
     answer_additional_links: https://fr.wikipedia.org/wiki/Paradoxe_de_Jevons
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-07
@@ -76,6 +79,7 @@
     answer_explanation: "L’agriculture intensive est pointé du doigt comme
       la cause principale en particulier les pesticides"
     answer_additional_links: https://www.lemonde.fr/planete/article/2019/02/11/le-declin-des-insectes-une-menace-grandissante-pour-les-ecosystemes-naturels_5
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-07
@@ -95,6 +99,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: https://jancovici.com/changement-climatique/risques/faut-il-redouter-les-hydrates-de-methane/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-07
@@ -117,6 +122,7 @@
       avait pas l'océan pour absorber l'essentiel du surplus d'énergie thermique
       dû à l'effet de serre"
     answer_additional_links: Rapport du GIEC
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-08
@@ -138,6 +144,7 @@
     answer_explanation: "Causes principales: perte et dégradation des habitats.
       Puis surexploitation, pollution, changement climatique"
     answer_additional_links: https://ipbes.net/news/Media-Release-Global-Assessment-Fr
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-08
@@ -160,6 +167,7 @@
       pourra pas revenir à son état antérieur. On ne parle ici que des durées
       de résidences des gaz à effet de serre dans l'atmosphère."
     answer_additional_links: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-08
@@ -182,6 +190,7 @@
       sont en bois, sans incitation à l'économiser le béton. C'est pourtant
       l'une des industries les plus émettrices de gaz à effet de serre."
     answer_additional_links: https://blogs.alternatives-economiques.fr/gilles-raveaud/2015/04/02/la-chine-a-consomme-plus-de-ciment-en-3-ans-que-les-etats-unis-en-un-siecle
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-08
@@ -202,6 +211,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: https://www.connaissancedesenergies.org/tribune-actualite-energies/les-reserves-de-petrole-ne-sepuiseront-j
+    answer_image_link: ''
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-08
@@ -221,6 +231,7 @@
     answer_explanation: "En 2015, le secteur des bâtiments a compté pour 45%
       de la consommation finale (hors usages non énergétique)"
     answer_additional_links: https://www.connaissancedesenergies.org/fiche-pedagogique/mix-energetique-de-la-france
+    answer_image_link: ''
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-09
@@ -241,6 +252,7 @@
     answer_explanation: "Le pétrole est une source d'énergie incroyablement
       dense et pratique."
     answer_additional_links: https://www.youtube.com/watch?v=Nb2S7oge8TQ?t=3600
+    answer_image_link: ''
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-09
@@ -261,6 +273,7 @@
     answer_explanation: Ou encore, 100 millions de barils par jour, pour retenir l'ordre
       de grandeur
     answer_additional_links: https://www.planetoscope.com/Source-d-energie/229-consommation-mondiale-d-energie-en-tep-.html
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-09
@@ -280,6 +293,7 @@
     answer_correct: b
     answer_explanation: ''
     answer_additional_links: https://fr.wikipedia.org/wiki/Effet_de_serre#M%C3%A9canisme_sur_Terre
+    answer_image_link: ''
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-09
@@ -299,6 +313,7 @@
     answer_explanation: "Ces gaz ont pour caractéristique commune d'absorber une
       partie des infrarouges émis par la surface de la Terre"
     answer_additional_links: https://fr.wikipedia.org/wiki/Effet_de_serre#Les_gaz_%C3%A0_%C2%AB_effet_de_serre_%C2%BB
+    answer_image_link: ''
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-09
@@ -318,6 +333,7 @@
     answer_correct: c
     answer_explanation: "+1,1°C pour être exact"
     answer_additional_links: http://www.meteofrance.fr/climat-passe-et-futur/le-rechauffement-observe-a-l-echelle-du-globe-et-en-france
+    answer_image_link: http://www.donnees.statistiques.developpement-durable.gouv.fr/lesessentiels/climat/images/effet-de-serre-2-b.jpg
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-10
@@ -337,6 +353,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
+    answer_image_link: ''
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-10
@@ -356,6 +373,7 @@
     answer_correct: d
     answer_explanation: ''
     answer_additional_links: ''
+    answer_image_link: ''
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-10
@@ -376,6 +394,7 @@
     answer_correct: a
     answer_explanation: ''
     answer_additional_links: ''
+    answer_image_link: ''
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-10
@@ -395,6 +414,7 @@
     answer_correct: b
     answer_explanation: ''
     answer_additional_links: https://www.iea.org/geco/
+    answer_image_link: ''
     author: Cyril R
     publish: true
     created: 2020-03-10
@@ -414,6 +434,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: ''
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -433,6 +454,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: Rapport du GIEC
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -452,6 +474,7 @@
     answer_correct: b
     answer_explanation: ''
     answer_additional_links: Rapport du GIEC
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -472,6 +495,7 @@
       de chlore, de carbone et de fluor. Les particules fines ne sont pas des gaz
       mais des poussières fines."
     answer_additional_links: https://fr.wikipedia.org/wiki/Destruction_de_la_couche_d%27ozone
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -492,6 +516,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: https://fr.wikipedia.org/wiki/Accord_de_Paris_sur_le_climat
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -513,6 +538,7 @@
       de sérieux n'est fait pour s'y opposer. A ce rythme de réchauffement,
       la flore ne pourra pas s'adapter suffisamment vite."
     answer_additional_links: https://jancovici.com/changement-climatique/predire-lavenir/ou-nous-situons-nous-dans-lechelle-des-temperatures-par-rapport-au-passe/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -534,6 +560,7 @@
       du permafrost avec le réchauffement pourrait dégager des quantités
       astronomiques de méthane dans l'atmosphère."
     answer_additional_links: https://jancovici.com/changement-climatique/risques/faut-il-redouter-les-hydrates-de-methane/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -552,6 +579,7 @@
     answer_correct: a
     answer_explanation: ''
     answer_additional_links: https://fr.wikipedia.org/wiki/Acidification_des_oc%C3%A9ans
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -571,6 +599,7 @@
     answer_explanation: "Les aérosols sont des particules fines qui ont un pouvoir
       masquant, comme les nuages"
     answer_additional_links: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -589,6 +618,7 @@
     answer_correct: b
     answer_explanation: ''
     answer_additional_links: https://fr.wikipedia.org/wiki/Alb%C3%A9do#Climatologie
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -607,6 +637,7 @@
     answer_correct: a
     answer_explanation: ''
     answer_additional_links: https://fr.wikipedia.org/wiki/Acidification_des_oc%C3%A9ans
+    answer_image_link: ''
     author: Avenir Climatique
     publish: true
     created: 2020-03-10
@@ -627,6 +658,7 @@
     answer_explanation: La banquise, qui flotte sur l'eau, ne fait pas monter l'eau
       quand elle fond. Faites le test avec un pastis.
     answer_additional_links: Rapport du GIEC
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -649,6 +681,7 @@
       disponible pour la vie marine. L'effet albedo, c'est l'effet plus au moins miroir
       des surfaces terrestres."
     answer_additional_links: https://www.futura-sciences.com/planete/questions-reponses/eau-banquise-glacier-difference-1132/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -668,6 +701,7 @@
     answer_correct: b
     answer_explanation: ''
     answer_additional_links: Rapport du GIEC
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -686,6 +720,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: Rapport du GIEC
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -705,6 +740,7 @@
     answer_correct: b
     answer_explanation: ''
     answer_additional_links: Rapport du GIEC
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -723,6 +759,7 @@
     answer_correct: a
     answer_explanation: ''
     answer_additional_links: Rapport du GIEC
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -744,6 +781,7 @@
       produits les produits consommés (émissions importées). 2,1 tonnes,
       c'est l'objectif COP21 à l'horizon 2050"
     answer_additional_links: https://www.hautconseilclimat.fr/rapport-2019/'
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -764,6 +802,7 @@
     answer_explanation: "La part est d'environ 0.15% avec, en 2018 714 GWH injectés
       pour une consommation d'environ 470 TWH"
     answer_additional_links: https://www.statistiques.developpement-durable.gouv.fr/tableau-de-bord-biomethane-injecte-dans-les-reseaux-de-gaz-quatrieme-trim
+    answer_image_link: ''
     author: Avenir Climatique
     publish: true
     created: 2020-03-10
@@ -784,6 +823,7 @@
     answer_explanation: 2.1 TWH (conso totale 474 TWH), soit 4.4%.
     answer_additional_links: 'Bilan RTE 2018 (conso totale), Statinfo pour la part
       du biogaz : https://www.statistiques.developpement-durable.gouv.fr'
+    answer_image_link: ''
     author: Avenir Climatique
     publish: true
     created: 2020-03-10
@@ -804,6 +844,7 @@
     answer_explanation: "Selon une étude canadienne, il n’y aura presque plus
       d’espèces de poissons à consommer en 2048."
     answer_additional_links: https://aquaculture-aquablog.blogspot.com/2017/10/surpeche-2048-plus-de-poisson-dans-les-oceans.html
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -824,6 +865,7 @@
     answer_explanation: "C'est pourquoi les changements climatiques sont fondalement
       irréversibles à l'échelle humaine"
     answer_additional_links: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -847,6 +889,7 @@
       à ces pressions. Si ça peut vous consoler, ce serait le 2 janvier si vous
       étiez un Américain. En moyenne mondiale, le 1er août."
     answer_additional_links: https://www.wwf.fr/jourdudepassement
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -867,6 +910,7 @@
     answer_correct: d
     answer_explanation: ''
     answer_additional_links: "Rapport IPBES-7 sur la bio-diversité, 2019"
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -886,6 +930,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: "Rapport IPBES-7 sur la bio-diversité, 2019"
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -906,6 +951,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: Rapport du GIEC octobre 2018
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -929,6 +975,7 @@
       décennies ne cesse de s'accélérer, et se montre particulièrement
       marquée  sur le secteur Arctique."
     answer_additional_links: http://www.meteo-paris.com/actualites/banquise-arctique-fin-de-la-fonte-estivale-2e-etendue-la-plus-faible-22-septembre-2019.html
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -948,6 +995,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: https://www.notre-planete.info/terre/climatologie_meteo/changement-climatique-donnees.php
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -968,6 +1016,7 @@
     answer_correct: d
     answer_explanation: ''
     answer_additional_links: https://www.lemonde.fr/idees/article/2018/03/27/defense-il-y-a-davantage-de-refugies-climatiques-que-de-refugies-lies-aux-conflits-dans-le-monde_5277061_3232.html
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -987,6 +1036,7 @@
     answer_correct: c
     answer_explanation: Soit la superficie de Los Angeles
     answer_additional_links: https://www.planetoscope.com/sols/1175-disparition-de-surfaces-agricoles-dans-le-monde.html
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1006,6 +1056,7 @@
     answer_correct: c
     answer_explanation: Soit 50 terrains de football chaque minute
     answer_additional_links: https://www.planetoscope.com/sols/1175-disparition-de-surfaces-agricoles-dans-le-monde.html
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1024,6 +1075,7 @@
     answer_correct: c
     answer_explanation: Soit la surface du Nouveau Mexique
     answer_additional_links: https://www.planetoscope.com/sols/273-avancee-des-deserts-dans-le-monde.html
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1043,6 +1095,7 @@
     answer_correct: c
     answer_explanation: Principalement dues aux pollutions de l'eau de l'air (7 millions)
     answer_additional_links: https://news.un.org/fr/story/2019/06/1044821
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1062,6 +1115,7 @@
     answer_explanation: "La pollution atmosphérique constitue la deuxième cause
       de mortalité évitable en France, derrière le tabac, mais devant l'alcool"
     answer_additional_links: https://www.lemonde.fr/les-decodeurs/article/2019/02/27/avec-48-000-morts-par-an-en-france-la-pollution-de-l-air-tue-plus-que-l-alcool_5429074_4355770.html
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1083,6 +1137,7 @@
       les dommages sanitaires de la pollution, mais également ses conséquences
       sur les bâtiments, les écosystèmes et l’agriculture."
     answer_additional_links: https://www.lemonde.fr/planete/article/2015/07/15/la-pollution-de-l-air-coute-chaque-annee-101-3-milliards-d-euros-a-la-france_4683432_3244.html
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1108,6 +1163,7 @@
       cause de cette pollution, à laquelle il faut y ajouter les catastrophes naturelles,
       comme les crues et les tsunamis."
     answer_additional_links: https://www.theseacleaners.org/la-pollution-plastique-oceanique/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1130,6 +1186,7 @@
       d’un lent flux convergent en surface, ce qui y concentre les particules
       flottantes."
     answer_additional_links: https://www.encyclopedie-environnement.org/eau/pollution-plastique-en-mer/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1149,6 +1206,7 @@
     answer_correct: d
     answer_explanation: De plus en plus de pays les interdisent
     answer_additional_links: https://www.novethic.fr/actualite/environnement/dechets/isr-rse/interdiction-des-sacs-plastiques-une-prise-de-conscience-mondiale-146197.html
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1168,6 +1226,7 @@
     answer_correct: c
     answer_explanation: Ainsi que 75% des insectes volants en Europe
     answer_additional_links: https://www.futura-sciences.com/planete/actualites/developpement-durable-biodiversite-plus-60-animaux-sauvages-ont-disparu-depuis-1970-55431/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1187,6 +1246,7 @@
     answer_correct: a
     answer_explanation: "Avec 40% de leurs espèces qui sont menacées"
     answer_additional_links: IBPES
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1210,6 +1270,7 @@
       la Terre risque d'être bien plus important que celui d'une astéroïde
       il y a 65 millions d'années"
     answer_additional_links: IBPES
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1231,6 +1292,7 @@
       fait 1% d'augmentation par an. Mais, avec l'augmentation du niveau de vie moyen,
       cela veut dire bien plus de ressources consommées"
     answer_additional_links: Chiffres ONU
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1250,6 +1312,7 @@
     answer_explanation: Il est de 1 pour 11 au niveau mondial actuellement, mais augmente
       rapidement
     answer_additional_links: Chiffres ONU
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1270,6 +1333,7 @@
     answer_explanation: "Soit 10 fois plus vite. Mais ça s'accélère !"
     answer_additional_links: "Yuval Noah Harari, Sapiens: une brève histoire de
       l'humanité"
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1293,6 +1357,7 @@
       exportateur mondial en est la Chine."
     answer_additional_links: "Science et vie n°1136, mai 2012, interview de JC.
       Fardeau, INRA"
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1314,6 +1379,7 @@
       On peut craindre que la déforestation ne s'agrave une fois le pic des énergies
       fossiles atteint."
     answer_additional_links: https://reseauactionclimat.org/stockage-carbone-sol-rechauffement-climatique/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1333,6 +1399,7 @@
     answer_correct: d
     answer_explanation: "La raison en est bien sûr la surpêche"
     answer_additional_links: https://www.encyclo-ecolo.com/P%C3%AAche_et_surp%C3%AAche
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1351,6 +1418,7 @@
     answer_correct: b
     answer_explanation: ''
     answer_additional_links: https://jancovici.com/transition-energetique/petrole/a-quand-le-pic-de-production-mondial-pour-le-petrole/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1372,6 +1440,7 @@
       2018 qu'elle s'attendait à un pic tous pétrole confondus à l'horizon
       2025"
     answer_additional_links: https://jancovici.com/transition-energetique/petrole/a-quand-le-pic-de-production-mondial-pour-le-petrole/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1391,6 +1460,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: https://www.connaissancedesenergies.org/fiche-pedagogique/chiffres-cles-production-d-energie
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1413,6 +1483,7 @@
       COP21 est de 2 tonnes par an par habitant au niveau mondial, soit une réduction
       par un facteur 5 à 6."
     answer_additional_links: https://www.hautconseilclimat.fr/wp-content/uploads/2019/09/hcc_rapport_annuel_grand_public_2019.pdf
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1433,6 +1504,7 @@
     answer_explanation: "Transports 31%, Bâtiment 19%, Agriculture 19%, Industrie
       18%"
     answer_additional_links: https://www.hautconseilclimat.fr/wp-content/uploads/2019/09/hcc_rapport_annuel_grand_public_2019.pdf
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1456,6 +1528,7 @@
       maintenance et du démantèlement. La méconnaissance des Français
       sur ce point est flagrante, comme montré dans l'article donné en référence."
     answer_additional_links: https://www.lemonde.fr/blog/huet/2018/04/11/nucleaire-et-climat-la-grande-tromperie/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1475,6 +1548,7 @@
     answer_correct: b
     answer_explanation: "Après la Chine et les Etats-Unis"
     answer_additional_links: https://mrmondialisation.org/le-cout-ecologique-dinternet-est-astronomique/
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1497,6 +1571,7 @@
       selon les travaux des économistes Lucas Chancel et Thomas Piketty. C'est
       encore plus marqué aux Etats-Unis et au Brésil."
     answer_additional_links: https://www.liberation.fr/checknews/2019/11/06/est-il-vrai-qu-en-france-les-10-les-plus-riches-emettent-huit-fois-plus-de-co2-que-les-10-les-plus-p_1761604
+    answer_image_link: ''
     author: Matthieu M
     publish: false
     created: 2020-03-10
@@ -1519,6 +1594,7 @@
       évaluée à 30 000 milliards  de tonnes. A comparer aux 4 000 milliards
       du vivant."
     answer_additional_links: https://www.futura-sciences.com/planete/actualites/environnement-pese-tout-ce-homme-pu-fabriquer-65435/
+    answer_image_link: ''
     author: Matthieu M
     publish: false
     created: 2020-03-10
@@ -1541,6 +1617,7 @@
       selon les travaux des économistes Lucas Chancel et Thomas Piketty. C'est
       encore plus marqué aux Etats-Unis et au Brésil."
     answer_additional_links: https://www.liberation.fr/checknews/2019/11/06/est-il-vrai-qu-en-france-les-10-les-plus-riches-emettent-huit-fois-plus-de-co2-que-les-10-les-plus-p_1761604
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1562,6 +1639,7 @@
     answer_correct: b
     answer_explanation: Un A/R Paris-New York, c'est 1900 kg de CO2 par personne.
     answer_additional_links: https://www.liberation.fr/checknews/2019/02/13/est-ce-qu-un-aller-retour-en-avion-a-bali-emet-autant-de-co2-qu-une-annee-de-vie-en-france_1708854
+    answer_image_link: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1581,6 +1659,7 @@
     answer_explanation: "Depuis 1900, il augmente de 1 à 3 mm par an. Depuis 1992,
       c'est plutôt de l'ordre de 3 mm par an."
     answer_additional_links: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
+    answer_image_link: ''
     author: climat-en-questions.fr
     publish: true
     created: 2020-03-11
@@ -1600,6 +1679,7 @@
     answer_explanation: "Contrairement à ce que l'on voit dans 'L'âge de glace'
       ou 'Le jour d'après', une entrée en glaciation dure des milliers d'années."
     answer_additional_links: https://fr.wikipedia.org/wiki/Glaciation
+    answer_image_link: ''
     author: climat-en-questions.fr
     publish: true
     created: 2020-03-11
@@ -1619,6 +1699,7 @@
     answer_correct: c
     answer_explanation: "Pétrole (33%), Charbon (27%), Gaz (23%)"
     answer_additional_links: https://ourworldindata.org/grapher/energy-consumption-by-source-and-region
+    answer_image_link: ''
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-11
@@ -1640,6 +1721,7 @@
     answer_correct: d
     answer_explanation: ''
     answer_additional_links: https://negawatt.org/La-demarche-negaWatt
+    answer_image_link: ''
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-11
@@ -1659,6 +1741,7 @@
     answer_correct: c
     answer_explanation: ''
     answer_additional_links: https://ourworldindata.org/grapher/co-emissions-per-capita?tab=chart
+    answer_image_link: ''
     author: Avenir Climatique (Quizz)
     publish: false
     created: 2020-03-11

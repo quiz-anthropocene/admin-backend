@@ -6,9 +6,9 @@ class QuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
         fields = [
-            'id', 'text', 'type', 'category', 'difficulty',
+            'id', 'text', 'type', 'category', 'difficulty', 'author',
             'answer_option_a', 'answer_option_b', 'answer_option_c', 'answer_option_d',
-            'answer_correct', 'answer_explanation', 'answer_additional_links',
+            'answer_correct', 'answer_explanation', 'answer_additional_links', 'answer_image_link',
             'created', 'updated'
         ]
 

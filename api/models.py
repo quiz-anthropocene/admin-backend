@@ -1,33 +1,30 @@
 from django.db import models
 
 
-QUESTION_TYPES = [
-    ("QCM", "Questionnaire à choix multiples (QCM)"),
-    ("VF", "Vrai ou Faux"),
-]
-
-QUESTION_CATEGORIES = [
-    ("action", "Leviers d'action"),
-    ("biodiversité", "Biodiversité"),
-    ("climat", "Climat"),
-    ("consommation", "Consommation"),
-    ("énergie", "Energie"),
-    ("histoire", "Histoire, Anthropologie"),
-    ("pollution", "Pollution"),
-    ("ressources", "Ressources (hors énergie)"),
-    ("science", "Science"),
-    ("autre", "Autre"),
-]
-
-QUESTION_DIFFICULTY = [
-    (1, "Facile"),
-    (2, "Moyen"),
-    (3, "Difficile"),
-    (4, "Expert")
-]
-
-
 class Question(models.Model):
+    QUESTION_TYPES = [
+        ("QCM", "Questionnaire à choix multiples (QCM)"),
+        ("VF", "Vrai ou Faux"),
+    ]
+    QUESTION_CATEGORIES = [
+        ("action", "Leviers d'action"),
+        ("biodiversité", "Biodiversité"),
+        ("climat", "Climat"),
+        ("consommation", "Consommation"),
+        ("énergie", "Energie"),
+        ("histoire", "Histoire, Anthropologie"),
+        ("pollution", "Pollution"),
+        ("ressources", "Ressources (hors énergie)"),
+        ("science", "Science"),
+        ("autre", "Autre"),
+    ]
+    QUESTION_DIFFICULTY = [
+        (1, "Facile"),
+        (2, "Moyen"),
+        (3, "Difficile"),
+        (4, "Expert")
+    ]
+
     text = models.TextField(blank=False, help_text="La question en 1 ou 2 phrases")
     type = models.CharField(max_length=50, choices=QUESTION_TYPES, blank=False)
     category = models.CharField(max_length=50, choices=QUESTION_CATEGORIES, blank=False)
@@ -39,6 +36,7 @@ class Question(models.Model):
     answer_correct = models.CharField(max_length=50, blank=False, help_text="a, b, c ou d")
     answer_explanation = models.TextField(blank=True, help_text="Un petit texte d'explication")
     answer_additional_links = models.TextField(blank=True, help_text="Un ou des liens pour aller plus loin")
+    answer_image_link = models.TextField(blank=True, help_text="Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée en bas de l'image)")
     author = models.CharField(max_length=50, blank=True, help_text="L'auteur de la question")
     publish = models.BooleanField(default=False, blank=False, help_text="La question est prête à être publiée")
     created = models.DateField()
@@ -56,6 +54,10 @@ class Question(models.Model):
         return len(self.answer_additional_links) > 0
 
     @property
+    def has_answer_image_link(self):
+        return len(self.answer_image_link) > 0
+
+    @property
     def answer_count(self):
         return QuestionStat.objects.filter(question=self.id).count()
 
@@ -66,6 +68,7 @@ class Question(models.Model):
     # Admin
     has_answer_explanation.fget.short_description = "Explication"
     has_answer_additional_links.fget.short_description = "Lien(s)"
+    has_answer_image_link.fget.short_description = "Image"
     answer_count.fget.short_description = "# Rép"
     answer_success_count.fget.short_description = "# Rép Corr"
 
