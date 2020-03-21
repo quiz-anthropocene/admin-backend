@@ -152,3 +152,8 @@ CSRF_COOKIE_SECURE = False if os.getenv("CSRF_COOKIE_SECURE") == "False" else Tr
 
 SECURE_SSL_REDIRECT = False if os.getenv("SECURE_SSL_REDIRECT") == "False" else True
 SECURE_HSTS_SECONDS = os.getenv("SECURE_HSTS_SECONDS")
+
+
+# Github API
+
+GITHUB_API_TOKEN = os.getenv("GITHUB_API_TOKEN")

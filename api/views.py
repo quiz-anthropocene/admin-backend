@@ -1,4 +1,8 @@
 import random
+import requests
+import json
+
+from django.conf import settings
 from django.db.models import Count
 from django.http import HttpResponse
 from rest_framework import status
@@ -50,6 +54,8 @@ def question_detail(request, pk):
 def question_detail_stats(request, pk):
     """
     Update the question stats
+    body parameters:
+    - 'answer_choice' (string)
     """
     try:
         question = Question.objects.get(pk=pk)
@@ -66,7 +72,9 @@ def question_detail_stats(request, pk):
 def question_random(request):
     """
     Retrieve a random question
-    Optional query parameters: 'current' (question id), 'category' (string)
+    query parameters:
+    - 'current' (question id) [optional]
+    - 'category' (string) [optional]
     """
     questions = Question.objects.exclude(publish=False)
     if request.GET.get("current"):
@@ -99,3 +107,42 @@ def question_stats(request):
         # "answer": question_answer_stats
         "answer_count": question_answer_count_stats
     })
+
+
+@api_view(['POST'])
+def question_contribute(request):
+    """
+    Contribute a new question
+    body params:
+    - 'question_text' (string) (string)
+    - 'additional_info' (string) [optional]
+    """
+    GITHUB_API_URL = "https://api.github.com/repos/raphodn/know-your-planet/issues"
+
+    # process data
+    contribution_issue_title = request.data['question_text'] if (len(request.data['question_text']) < 50) else (request.data['question_text'][0:47] + "...")
+    payload = {
+        "title": contribution_issue_title,
+        "body": f"<h2>La question</h2><p>{request.data['question_text']}</p><h2>Explications</h2><p>{request.data['additional_info']}</p>",
+        "labels": ["Contribution"]
+    }
+
+    # query github api
+    headers = {
+        "Authorization": f"token {settings.GITHUB_API_TOKEN}",
+        "Accept": "application/vnd.github.machine-man-preview"
+    }
+    response = requests.request("POST", GITHUB_API_URL, data=json.dumps(payload), headers=headers)
+    
+    # process response
+    response_data = response.json()
+    if response.status_code == 201:
+        return Response({
+            "status": status.HTTP_201_CREATED,
+            "github_issue_url": response_data["html_url"]
+        })
+    else:
+        return Response({
+            "status": status.HTTP_500_INTERNAL_SERVER_ERROR,
+            "message": response_data["message"]
+        })

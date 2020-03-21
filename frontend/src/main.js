@@ -6,6 +6,7 @@ import QuestionList from './components/QuestionList.vue'
 import QuestionDetail from './components/QuestionDetail.vue'
 import About from './components/About.vue'
 import Stats from './components/Stats.vue'
+import Contribute from './components/Contribute.vue'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
@@ -33,6 +34,12 @@ const routes = [
     path: '/stats', name: 'stats', component: Stats,
     meta: {
       title: "Know Your Planet - Statistiques"
+    }
+  },
+  {
+    path: '/contribuer', name: 'contribute', component: Contribute,
+    meta: {
+      title: "Know Your Planet - Contribuer"
     }
   }
 ]

@@ -19,6 +19,10 @@
     <p>
       Si vous avez des commentaires ou des suggestions, vous pouvez pour l'instant créer des <i>Issues</i> sur Github (en attendant que l'on ait créé d'autres moyens d'échanges).
     </p>
+    <h3>Contribuer</h3>
+    <p>
+      Une page <router-link :to="{ name: 'contribute' }">Contribution</router-link> vous permet de rajouter une question ou un sujet qui vous tiens à coeur.
+    </p>
     <h3>Quelques chiffres</h3>
     <p>
       Voir la page <router-link :to="{ name: 'stats' }">Statistiques</router-link>.
