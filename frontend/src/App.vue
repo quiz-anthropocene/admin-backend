@@ -44,16 +44,28 @@ a.no-decoration {
   text-decoration: inherit;
 }
 
+hr.custom-seperator {
+  border: 0 none;
+  height: 1px;
+  width: 50%;
+  color: #005995;
+  background-color: #005995;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.row-item {
+  flex: 0 1 100%;
+  margin-bottom: 10px;
+}
+
 .button {
   margin: 1em 1em 0 1em;
-  /* margin-left: 1em;
-  margin-right: 1em; */
-  /* margin: 1em; */
   padding: 0.5em 2em;
   font-size: 1em;
-  /* text-decoration: none; */
-  /* background-color: white; */
-  /* border: 0; */
   cursor: pointer;
 }
 
@@ -64,6 +76,9 @@ a.no-decoration {
 
 .margin-bottom-0 {
   margin-bottom: 0;
+}
+.margin-right-20 {
+  margin-right: 20px;
 }
 
 .color-blue {
@@ -80,9 +95,26 @@ a.no-decoration {
   text-align: left;
 }
 
+.small {
+  font-size: small;
+}
+
 @media all and (max-width: 40em) {
   .hidden-sm {
     display: none;
+  }
+}
+@media all and (min-width: 40em) {
+  .row-item {
+    max-width: calc(50% - 1em);
+  }
+  .visible-sm {
+    display: none;
+  }
+}
+@media all and (min-width: 60em) {
+  .row-item {
+    max-width: calc(33.33% - 1em);
   }
 }
 </style>

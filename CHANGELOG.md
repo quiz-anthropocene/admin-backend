@@ -10,8 +10,10 @@ Des pistes dans [README#idées](README#idées)
 
 ### Ajouté
 
+- [Backend] Ajout d'un champs `answer_image_link` dans le modèle Question
 - [Frontend] Une page Stats pour afficher quelques les chiffres basiques de l'application (nombre de questions, nombre de réponses, ...)
 - [Frontend] Un bouton "Autre question dans la même catégorie"
+- [Frontend] Affiche l'auteur et les statistiques de la question (dans la réponse)
 
 ### Modifié
 

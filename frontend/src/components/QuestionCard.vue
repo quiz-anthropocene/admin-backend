@@ -4,7 +4,7 @@
     <div class="question-card__content">
       <p>{{ question.text }}</p>
     </div>
-    <hr class="question-card__seperator">
+    <hr class="custom-seperator">
     <div class="question-card__extra">
       <span class="color-orange">{{ question.category }}</span>
       <DifficultyBadge class="question-card__extra__badge" v-bind:difficulty="question.difficulty" />
@@ -37,13 +37,6 @@ export default {
 }
 .question-card__content :last-child {
   margin-bottom: 0;
-}
-.question-card__seperator {
-  border: 0 none;
-  height: 1px;
-  width: 50%;
-  color: #005995;
-  background-color: #005995;
 }
 .question-card__extra {
   text-align: left;

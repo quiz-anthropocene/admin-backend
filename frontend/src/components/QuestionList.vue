@@ -24,7 +24,7 @@
 
     <!-- Question List -->
     <div v-if="questions" class="row">
-      <div class="row-item" v-for="question in questionsDisplayed" :key="question">
+      <div class="row-item row-item-question" v-for="question in questionsDisplayed" :key="question.id">
         <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: question.id } }">
           <QuestionCard v-bind:question="question" />
         </router-link>
@@ -103,15 +103,8 @@ export default {
   text-shadow: 0px 0px 1px black;
 }
 
-.row {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.row-item {
-  flex: 0 1 100%;
+.row-item-question {
   height: 150px;
-  margin-bottom: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.1s;
   border: 2px solid #005995;
@@ -119,22 +112,11 @@ export default {
   cursor: pointer;
 }
 
-@media all and (min-width: 40em) {
-  .row-item {
-    max-width: calc(50% - 1em);
-  }
-}
-@media all and (min-width: 60em) {
-  .row-item {
-    max-width: calc(33.33% - 1em);
-  }
-}
-
 @media(hover: hover) and (pointer: fine) {
   .category:hover {
     background-color: #f88787;
   }
-  .row-item:hover {
+  .row-item-question:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 }

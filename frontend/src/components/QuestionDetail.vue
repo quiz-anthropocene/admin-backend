@@ -10,7 +10,7 @@
       {{ error }}
     </div>
 
-    <div class="question" v-if="question">
+    <div v-if="question" class="question">
       <h2>
         <span>
           <span class="hidden-sm">Question&nbsp;</span>
@@ -47,19 +47,28 @@
 
     <br v-if="question && questionSubmitted" />
 
-    <div class="answer" v-if="question && questionSubmitted">
+    <div v-if="question && questionSubmitted" class="answer">
       <h2 v-if="questionSuccess">C'est exact !</h2>
       <h2 v-if="!questionSuccess">Pas tout à fait...</h2>
       <h3 v-if="!questionSuccess">La réponse était: {{ question["answer_option_" + question["answer_correct"]] }}</h3>
-      <p>ℹ️&nbsp;{{ question.answer_explanation }}</p>
-      <p>🔗&nbsp;<a v-bind:href="question.answer_additional_links" target="_blank">{{ question.answer_additional_links }}</a></p>
-      <p class="answer-image" v-if="question.answer_image_link">
+      <p title="Explication">
+        ℹ️&nbsp;{{ question.answer_explanation }}
+      </p>
+      <p title="Lien(s) pour aller plus loin">
+        🔗&nbsp;<a v-bind:href="question.answer_additional_links" target="_blank">{{ question.answer_additional_links }}</a>
+      </p>
+      <p v-if="question.answer_image_link" class="answer-image" title="Une image pour illustrer la réponse">
         🖼️&nbsp;<small>(cliquez sur l'image pour l'agrandir)</small><br />
         <a v-bind:href="question.answer_image_link" target="_blank"><img v-bind:src="question.answer_image_link" alt="une image pour illustrer la réponse" /></a>
       </p>
+      <hr class="custom-seperator" />
+      <div class="row small">
+        <div class="row-item" title="Auteur de la question">📝&nbsp;{{ question.author }}</div>
+        <div class="row-item" title="Statistiques de la question">📊&nbsp;{{ question.answer_success_count }} / {{ question.answer_count }} ({{ question.answer_success_rate }}%)</div>
+      </div>
     </div>
 
-    <div class="action" v-if="question">
+    <div v-if="question" class="action">
       <router-link :to="{ name: 'question-detail', params: { questionId: questionSameCategoryNextId } }">
         <button class="button">⏩&nbsp;Autre question <span class="color-orange">{{ question.category }}</span></button>
       </router-link>
@@ -70,7 +79,7 @@
 
     <br />
     <br />
-    <div class="home" v-if="question">
+    <div v-if="question" class="home">
       <router-link :to="{ name: 'home' }">
         <!-- <button class="button">🏠&nbsp;Menu principal</button> -->
         Retour au menu principal
@@ -164,7 +173,12 @@ export default {
     },
     submitQuestion() {
       this.questionSubmitted = true;
+      // TODO: validate answer in the backend
       this.questionSuccess = (this.answerPicked === this.question.answer_correct);
+      // TODO: increment question stats in the backend
+      this.question.answer_count += 1;
+      this.question.answer_success_count += (this.questionSuccess ? 1 : 0);
+      this.question.answer_success_rate = ((this.question.answer_success_count / this.question.answer_count) * 100).toFixed(0);
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/${this.$route.params.questionId}/stats`, {
         method: 'POST',
         headers: {
@@ -207,7 +221,7 @@ export default {
   height: 300px;
 }
 .answer p.answer-image img {
-  max-height: 100%;
+  max-height: 90%;
   max-width: 100%;
   margin: auto;
 }
