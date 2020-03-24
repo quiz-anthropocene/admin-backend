@@ -48,7 +48,7 @@
     <br v-if="question && questionSubmitted" />
 
     <div v-if="question && questionSubmitted" class="answer">
-      <h2 v-if="questionSuccess">C'est exact !</h2>
+      <h2 v-if="questionSuccess">{{ questionSuccess }} !</h2>
       <h2 v-if="!questionSuccess">Pas tout à fait...</h2>
       <h3 v-if="!questionSuccess">La réponse était: {{ question["answer_option_" + question["answer_correct"]] }}</h3>
       <p title="Explication">
@@ -100,7 +100,8 @@ export default {
       question: null,
       answerPicked: '',
       questionSubmitted: false,
-      questionSuccess: false,
+      questionSuccess: null,
+      questionSuccessMessageList: ["C'est exact", "En effet", "Bien vu", "Félicitations", "Bravo"],
       questionSameCategoryNextId: null,
       questionRandomNextId: null,
       loading: false,
@@ -121,7 +122,7 @@ export default {
     init(currentQuestionId) {
       this.answerPicked = '';
       this.questionSubmitted = false;
-      this.questionSuccess = false;
+      this.questionSuccess = null;
       this.loading = false;
       this.error = null;
       this.fetchQuestion(currentQuestionId);
@@ -170,7 +171,7 @@ export default {
     submitQuestion() {
       this.questionSubmitted = true;
       // TODO: validate answer in the backend
-      this.questionSuccess = (this.answerPicked === this.question.answer_correct);
+      this.questionSuccess = (this.answerPicked === this.question.answer_correct) ? this.questionSuccessMessageList[Math.floor(Math.random() * this.questionSuccessMessageList.length)] : null;
       // TODO: increment question stats in the backend
       this.question.answer_count += 1;
       this.question.answer_success_count += (this.questionSuccess ? 1 : 0);
