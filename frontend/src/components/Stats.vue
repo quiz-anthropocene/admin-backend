@@ -1,34 +1,40 @@
 <template>
   <section class="small-container text-align-left">
     <h2>Quelques statistiques</h2>
+    
     <h3>Questions</h3>
     <p>
       Il y a actuellement <strong>{{ questionPublishStats[0]["count"] }}</strong> questions publiées,
       et <strong>{{ questionPublishStats[1]["count"] }}</strong> en cours de rédaction/publication.
     </p>
-    <h3>Catégories</h3>
-    <i>Questions par catégories</i>
-    <ul>
-      <li v-for="categoryStat in questionCategoryStats" :key="categoryStat">{{ categoryStat["category"] }}: {{ categoryStat["count"] }}</li>
-    </ul>
-    <h3>Réponses</h3>
-    <p>L'application totalise <strong>{{ questionAnswerCountStats }}</strong> réponses (depuis la mise en ligne le Lundi 9 Mars).</p>
-    <h3>Contributions</h3>
-    <p><i>à venir</i></p>
 
     <br />
+    <h3>Catégories</h3>
+    Questions par catégories:
+    <ul>
+      <li v-for="categoryStat in questionCategoryStats" :key="categoryStat">{{ categoryStat["category"] }}: <strong>{{ categoryStat["count"] }}</strong></li>
+    </ul>
+
     <br />
-    <div class="home">
-      <router-link :to="{ name: 'home' }">
-        Retour au menu principal
-      </router-link>
-    </div>
+    <h3>Réponses</h3>
+    <p>L'application totalise <strong>{{ questionAnswerCountStats }}</strong> réponses (depuis la mise en ligne en Mars 2020).</p>
+    
+    <!-- <br />
+    <h3>Contributions</h3>
+    <p><i>à venir</i></p> -->
+
+    <HomeLink />
   </section>
 </template>
 
 <script>
+import HomeLink from './HomeLink.vue'
+
 export default {
   name: 'Stats',
+  components: {
+    HomeLink,
+  },
 
   data() {
     return {

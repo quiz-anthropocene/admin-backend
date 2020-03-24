@@ -64,7 +64,7 @@ hr.custom-seperator {
 
 .button {
   margin: 1em 1em 0 1em;
-  padding: 0.5em 2em;
+  padding: 0.5em 1em;
   font-size: 1em;
   cursor: pointer;
 }
@@ -79,6 +79,10 @@ hr.custom-seperator {
 }
 .margin-right-20 {
   margin-right: 20px;
+}
+.margin-top-bottom-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .color-blue {
@@ -99,12 +103,12 @@ hr.custom-seperator {
   font-size: small;
 }
 
-@media all and (max-width: 40em) {
+@media all and (max-width: 30em) {
   .hidden-sm {
     display: none;
   }
 }
-@media all and (min-width: 40em) {
+@media all and (min-width: 30em) {
   .row-item {
     max-width: calc(50% - 1em);
   }

@@ -62,13 +62,14 @@
         <a v-bind:href="question.answer_image_link" target="_blank"><img v-bind:src="question.answer_image_link" alt="une image pour illustrer la réponse" /></a>
       </p>
       <hr class="custom-seperator" />
-      <div class="row small">
-        <div class="row-item" title="Auteur de la question">📝&nbsp;{{ question.author }}</div>
-        <div class="row-item" title="Statistiques de la question">📊&nbsp;{{ question.answer_success_count }} / {{ question.answer_count }} ({{ question.answer_success_rate }}%)</div>
+      <div class="row margin-top-bottom-10 small">
+        <div title="Auteur de la question">📝&nbsp;Auteur:&nbsp;{{ question.author }}</div>
+        <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count }} / {{ question.answer_count }} ({{ question.answer_success_rate }}%)</div>
       </div>
     </div>
 
-    <div v-if="question" class="action">
+    <div v-if="question" class="action small">
+      <br />
       <router-link :to="{ name: 'question-detail', params: { questionId: questionSameCategoryNextId } }">
         <button class="button">⏩&nbsp;Autre question <span class="color-orange">{{ question.category }}</span></button>
       </router-link>
@@ -77,26 +78,21 @@
       </router-link>
     </div>
 
-    <br />
-    <br />
-    <div v-if="question" class="home">
-      <router-link :to="{ name: 'home' }">
-        <!-- <button class="button">🏠&nbsp;Menu principal</button> -->
-        Retour au menu principal
-      </router-link>
-    </div>
+    <HomeLink v-if="question" />
   </section>
 </template>
 
 <script>
 // import QuestionCard from './QuestionCard.vue'
 import DifficultyBadge from './DifficultyBadge.vue'
+import HomeLink from './HomeLink.vue'
 
 export default {
   name: 'QuestionDetail',
   components: {
     // QuestionCard,
     DifficultyBadge,
+    HomeLink,
   },
 
   data() {

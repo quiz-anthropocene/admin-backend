@@ -1,9 +1,9 @@
 <template>
   <section>
-    <div class="help">
+    <p class="help">
       <i v-if="questions">Il y a actuellement {{ questions.length }} questions. </i>
       <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus !</i>
-    </div>
+    </p>
 
     <br />
 
