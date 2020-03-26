@@ -231,7 +231,7 @@
     answer_explanation: "En 2015, le secteur des bâtiments a compté pour 45%
       de la consommation finale (hors usages non énergétique)"
     answer_additional_links: https://www.connaissancedesenergies.org/fiche-pedagogique/mix-energetique-de-la-france
-    answer_image_link: ''
+    answer_image_link: https://www.connaissancedesenergies.org/sites/default/files/album_images/consommation-finale-energie-secteur-france-2015_zoom.png
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-09
@@ -273,7 +273,7 @@
     answer_explanation: Ou encore, 100 millions de barils par jour, pour retenir l'ordre
       de grandeur
     answer_additional_links: https://www.planetoscope.com/Source-d-energie/229-consommation-mondiale-d-energie-en-tep-.html
-    answer_image_link: ''
+    answer_image_link: https://blogs.letemps.ch/laurent-horvath/wp-content/uploads/sites/45/2020/02/2020_02_Graph-Month.png
     author: Matthieu M
     publish: true
     created: 2020-03-09
@@ -293,7 +293,7 @@
     answer_correct: b
     answer_explanation: ''
     answer_additional_links: https://fr.wikipedia.org/wiki/Effet_de_serre#M%C3%A9canisme_sur_Terre
-    answer_image_link: ''
+    answer_image_link: https://media.kartable.fr/uploads/finalImages/final_5d9200915e1749.58742984.png
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-09
@@ -346,14 +346,14 @@
     type: QCM
     category: climat
     difficulty: 1
-    answer_option_a: 400 millions de tonnes
-    answer_option_b: 4 milliards de tonnes
-    answer_option_c: 40 milliards de tonnes
-    answer_option_d: 400 milliards de tonnes
+    answer_option_a: 350 millions de tonnes
+    answer_option_b: 3,5 milliards de tonnes
+    answer_option_c: 35 milliards de tonnes
+    answer_option_d: 350 milliards de tonnes
     answer_correct: c
-    answer_explanation: ''
+    answer_explanation: "Ce qui fait un peu plus de 4,5 tonnes équivalent CO2 par personne"
     answer_additional_links: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
-    answer_image_link: ''
+    answer_image_link: https://img.aws.la-croix.com/2018/12/07/1300988266/Emissions-carbone-monde_1_1399_1250.jpg
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-10
@@ -393,8 +393,8 @@
     answer_option_d: "Reporter d’un an l’achat d’un nouveau smartphone"
     answer_correct: a
     answer_explanation: ''
-    answer_additional_links: ''
-    answer_image_link: ''
+    answer_additional_links: https://jancovici.com/changement-climatique/agir-individuellement/effectuer-sa-ba-pour-agir-contre-le-changement-climatique-quelques-ordres-de-grandeur/
+    answer_image_link: https://pbs.twimg.com/media/DsBdo7AWwAARSX1.jpg
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-10
@@ -414,7 +414,7 @@
     answer_correct: b
     answer_explanation: ''
     answer_additional_links: https://www.iea.org/geco/
-    answer_image_link: ''
+    answer_image_link: http://stockage.univ-valenciennes.fr/EcoPEM/BoiteB/res/I_a.png
     author: Cyril R
     publish: true
     created: 2020-03-10
@@ -433,8 +433,8 @@
     answer_option_d: 480 ppm
     answer_correct: c
     answer_explanation: ''
-    answer_additional_links: ''
-    answer_image_link: ''
+    answer_additional_links: https://ourworldindata.org/grapher/global-co-concentration-ppm
+    answer_image_link: https://pbs.twimg.com/media/DchL6tsX4AA_kmn.jpg
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -453,8 +453,8 @@
     answer_option_d: 400 gigatonnes
     answer_correct: c
     answer_explanation: ''
-    answer_additional_links: Rapport du GIEC
-    answer_image_link: ''
+    answer_additional_links: https://www.lemonde.fr/blog/huet/2019/12/04/368-gigatonnes-de-co2-emis-en-2019/
+    answer_image_link: https://storage.googleapis.com/prd-blogs/2019/12/Emissions-1960-2019-monde-par-personne-et-pays-par-source.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -473,8 +473,8 @@
     answer_option_d: 95%
     answer_correct: b
     answer_explanation: ''
-    answer_additional_links: Rapport du GIEC
-    answer_image_link: ''
+    answer_additional_links: https://www.futura-sciences.com/planete/questions-reponses/rechauffement-climatique-puits-carbone-sont-ils-fonctionnent-ils-1212/
+    answer_image_link: https://www.icos-cp.eu/sites/default/files/inline-images/s45_Global_Sources_and_Sinks_newcm.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -538,7 +538,7 @@
       de sérieux n'est fait pour s'y opposer. A ce rythme de réchauffement,
       la flore ne pourra pas s'adapter suffisamment vite."
     answer_additional_links: https://jancovici.com/changement-climatique/predire-lavenir/ou-nous-situons-nous-dans-lechelle-des-temperatures-par-rapport-au-passe/
-    answer_image_link: ''
+    answer_image_link: http://img.over-blog.com/500x297/4/34/30/34/ere-glaciere.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -560,7 +560,7 @@
       du permafrost avec le réchauffement pourrait dégager des quantités
       astronomiques de méthane dans l'atmosphère."
     answer_additional_links: https://jancovici.com/changement-climatique/risques/faut-il-redouter-les-hydrates-de-methane/
-    answer_image_link: ''
+    answer_image_link: https://ourworldindata.org/grapher/exports/methane-emissions-by-sector-gg-coe.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -657,7 +657,7 @@
     answer_correct: c
     answer_explanation: La banquise, qui flotte sur l'eau, ne fait pas monter l'eau
       quand elle fond. Faites le test avec un pastis.
-    answer_additional_links: Rapport du GIEC
+    answer_additional_links: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
     answer_image_link: ''
     author: Matthieu M
     publish: true
@@ -689,7 +689,7 @@
 - model: api.question
   pk: 34
   fields:
-    text: "En termes d'émissions de GES, le secteur de l'agriculture et de l'usage
+    text: "En termes d'émissions mondiales de gaz à effet de serre, le secteur de l'agriculture et de l'usage
       des sols représente..."
     type: QCM
     category: climat
@@ -700,8 +700,8 @@
     answer_option_d: 45%
     answer_correct: b
     answer_explanation: ''
-    answer_additional_links: Rapport du GIEC
-    answer_image_link: ''
+    answer_additional_links: https://fr.wikipedia.org/wiki/Gaz_%C3%A0_effet_de_serre#Par_secteurs
+    answer_image_link: https://ourworldindata.org/grapher/exports/greenhouse-gas-emissions-by-sector.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -718,8 +718,8 @@
     answer_option_c: "du méthane"
     answer_option_d: du NO2
     answer_correct: c
-    answer_explanation: ''
-    answer_additional_links: Rapport du GIEC
+    answer_explanation: Le permafrost (ou pergélisol) est un terme géologique qui désigne un sol dont la température se maintient en dessous de 0°C pendant plus de deux ans consécutifs. Il représente 20% de la surface terrestre de la planète.
+    answer_additional_links: https://www.france24.com/fr/20180125-le-permafrost-cette-bombe-a-retardement-sous-larctique
     answer_image_link: ''
     author: Matthieu M
     publish: true
@@ -738,8 +738,8 @@
     answer_option_c: "la fréquence des événements météorologiques extrèmes"
     answer_option_d: "la concentration d'oxygène dans l'air"
     answer_correct: b
-    answer_explanation: ''
-    answer_additional_links: Rapport du GIEC
+    answer_explanation: "De nombreux organismes marins sont sensibles à cette baisse de pH : les coraux, les mollusques et certains planctons sont ainsi privés des ions carbonate nécessaires pour construire leurs coquilles et leurs squelettes."
+    answer_additional_links: https://www.lemonde.fr/biodiversite/article/2014/10/08/l-acidification-des-oceans-aura-d-importantes-consequences-pour-la-biodiversite_4502183_1652692.html
     answer_image_link: ''
     author: Matthieu M
     publish: true
@@ -757,9 +757,9 @@
     answer_option_c: l'industrie
     answer_option_d: les transports
     answer_correct: a
-    answer_explanation: ''
-    answer_additional_links: Rapport du GIEC
-    answer_image_link: ''
+    answer_explanation: "Les principales causes de déforestation sont l’agriculture (soja, huile de palme, ...) et l’élevage. Mais il y a aussi la construction de barrages hydroélectriques et d’infrastructures routières, l’industrie minière, les feux de forêt et le trafic de bois."
+    answer_additional_links: https://www.lemonde.fr/planete/article/2015/09/07/80-de-la-deforestation-est-due-a-l-agriculture_4747867_3244.html
+    answer_image_link: https://mongabay-images.s3.amazonaws.com/14/0911-report-chart.jpg
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -780,10 +780,10 @@
     answer_explanation: "Ceci inclut les émissions des pays où ont été
       produits les produits consommés (émissions importées). 2,1 tonnes,
       c'est l'objectif COP21 à l'horizon 2050"
-    answer_additional_links: https://www.hautconseilclimat.fr/rapport-2019/'
-    answer_image_link: ''
+    answer_additional_links: https://www.hautconseilclimat.fr/rapport-2019/
+    answer_image_link: https://www.connaissancedesenergies.org/sites/default/files/album_images/Empreinte-carbone-moyenne-france_zoom.png
     author: Matthieu M
-    publish: true
+    publish: false
     created: 2020-03-10
     updated: 2020-03-10
 - model: api.question
@@ -909,7 +909,7 @@
     answer_option_d: "99% de réduction"
     answer_correct: d
     answer_explanation: ''
-    answer_additional_links: "Rapport IPBES-7 sur la bio-diversité, 2019"
+    answer_additional_links: https://www.nationalgeographic.fr/environnement/les-recifs-coralliens-pourraient-disparaitre-avant-2050
     answer_image_link: ''
     author: Matthieu M
     publish: true
@@ -938,7 +938,7 @@
 - model: api.question
   pk: 46
   fields:
-    text: "Selon le rapport du GIEC de 2018, le dégré de certitude qu'on a que
+    text: "Selon le rapport du GIEC de 2014, le dégré de certitude qu'on a que
       le dérèglement climatique est dû à l'augmentation des gaz à efforts
       issus de l'activité humaine est de :"
     type: QCM
@@ -949,8 +949,8 @@
     answer_option_c: 95%
     answer_option_d: 100%
     answer_correct: c
-    answer_explanation: ''
-    answer_additional_links: Rapport du GIEC octobre 2018
+    answer_explanation: "Autrement dit 'extrêmement probable'. Cette probabilité était de 90 % dans le précédent rapport du Giec en 2007 et de 66 % dans celui de 2001."
+    answer_additional_links: "https://www.lemonde.fr/planete/article/2014/04/14/rechauffement-les-dix-points-marquants-du-rapport-du-giec_4399907_3244.html"
     answer_image_link: ''
     author: Matthieu M
     publish: true
@@ -993,9 +993,9 @@
     answer_option_c: "+6°C à +10°C"
     answer_option_d: "+9°C à +15°C"
     answer_correct: c
-    answer_explanation: ''
+    answer_explanation: "La surface de la Terre est recouverte à 70 % par les océans, les 30 % restants étant les terres émergées. Ces dernières se réchauffent en moyenne deux fois plus vite..."
     answer_additional_links: https://www.notre-planete.info/terre/climatologie_meteo/changement-climatique-donnees.php
-    answer_image_link: ''
+    answer_image_link: http://berkeleyearth.org/wp-content/uploads/2018/01/LandOcean2017-1024x582.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1083,7 +1083,7 @@
 - model: api.question
   pk: 53
   fields:
-    text: "D'après l'ONU, le nombre de morts causés chaque année par la pollution
+    text: "D'après l'ONU, le nombre de décès causés chaque année par la pollution
       est de..."
     type: QCM
     category: pollution
@@ -1093,9 +1093,9 @@
     answer_option_c: 9 millions de morts
     answer_option_d: 90 millions de morts
     answer_correct: c
-    answer_explanation: Principalement dues aux pollutions de l'eau de l'air (7 millions)
+    answer_explanation: Principalement dues aux pollutions de l'eau et de l'air (7 millions)
     answer_additional_links: https://news.un.org/fr/story/2019/06/1044821
-    answer_image_link: ''
+    answer_image_link: https://img.aws.la-croix.com/2017/10/20/1200885917/En-20015-9-millions-deces-prematures-etaient-pollution-monde_1_1398_584.jpg
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1114,8 +1114,8 @@
     answer_correct: d
     answer_explanation: "La pollution atmosphérique constitue la deuxième cause
       de mortalité évitable en France, derrière le tabac, mais devant l'alcool"
-    answer_additional_links: https://www.lemonde.fr/les-decodeurs/article/2019/02/27/avec-48-000-morts-par-an-en-france-la-pollution-de-l-air-tue-plus-que-l-alcool_5429074_4355770.html
-    answer_image_link: ''
+    answer_additional_links: https://www.futura-sciences.com/sante/actualites/vie-pollution-air-fleau-reduit-plus-esperance-vie-monde-63256/
+    answer_image_link: https://img.lemde.fr/2019/02/27/0/0/534/790/688/0/60/0/4fc8975_hhpqAspZg2YOSObK32N1qr8C.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1163,7 +1163,7 @@
       cause de cette pollution, à laquelle il faut y ajouter les catastrophes naturelles,
       comme les crues et les tsunamis."
     answer_additional_links: https://www.theseacleaners.org/la-pollution-plastique-oceanique/
-    answer_image_link: ''
+    answer_image_link: https://cdn.statcdn.com/Infographic/images/normal/15907.jpeg
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1186,7 +1186,7 @@
       d’un lent flux convergent en surface, ce qui y concentre les particules
       flottantes."
     answer_additional_links: https://www.encyclopedie-environnement.org/eau/pollution-plastique-en-mer/
-    answer_image_link: ''
+    answer_image_link: https://img.aws.la-croix.com/2019/04/09/1301014562/zones-dechets-plastique-oceans_1_1399_1027.jpg
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1206,7 +1206,7 @@
     answer_correct: d
     answer_explanation: De plus en plus de pays les interdisent
     answer_additional_links: https://www.novethic.fr/actualite/environnement/dechets/isr-rse/interdiction-des-sacs-plastiques-une-prise-de-conscience-mondiale-146197.html
-    answer_image_link: ''
+    answer_image_link: https://fingfx.thomsonreuters.com/gfx/rngs/GLOBAL-PLASTIC/010050KC19P/PLASTIC-BAN-01.jpg
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1245,8 +1245,8 @@
     answer_option_d: Les requins
     answer_correct: a
     answer_explanation: "Avec 40% de leurs espèces qui sont menacées"
-    answer_additional_links: IBPES
-    answer_image_link: ''
+    answer_additional_links: https://www.lemonde.fr/planete/article/2019/05/06/un-million-d-especes-en-danger-d-extinction_5458785_3244.html
+    answer_image_link: https://cdn.statcdn.com/Infographic/images/normal/17911.jpeg
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1269,8 +1269,8 @@
     answer_explanation: "En l'espace d'un siècle, l'impact de l'humanité sur
       la Terre risque d'être bien plus important que celui d'une astéroïde
       il y a 65 millions d'années"
-    answer_additional_links: IBPES
-    answer_image_link: ''
+    answer_additional_links: https://www.lemonde.fr/biodiversite/article/2017/07/10/la-sixieme-extinction-de-masse-des-animaux-s-accelere-de-maniere-dramatique_5158718_1652692.html
+    answer_image_link: https://img.lemde.fr/2017/07/11/0/0/534/506/688/0/60/0/c14438d_28208-scha86.bf4qk9be29.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1291,8 +1291,8 @@
     answer_explanation: "150 millions de naissances, 60 millions de décès. Cela
       fait 1% d'augmentation par an. Mais, avec l'augmentation du niveau de vie moyen,
       cela veut dire bien plus de ressources consommées"
-    answer_additional_links: Chiffres ONU
-    answer_image_link: ''
+    answer_additional_links: https://news.un.org/fr/story/2019/06/1045681
+    answer_image_link: https://cdn.radiofrance.fr/s3/cruiser-production/2015/07/dd013420-36df-11e5-9c4f-005056a87c89/838_ide-population-mondiale-20150730-01.webp
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1300,7 +1300,7 @@
 - model: api.question
   pk: 63
   fields:
-    text: "En 2050, quel est le ratio prévu entre retraités et actifs ?"
+    text: "En 2050, quel est le ratio mondiale prévu entre retraités et actifs ?"
     type: QCM
     category: histoire
     difficulty: 1
@@ -1311,8 +1311,8 @@
     answer_correct: c
     answer_explanation: Il est de 1 pour 11 au niveau mondial actuellement, mais augmente
       rapidement
-    answer_additional_links: Chiffres ONU
-    answer_image_link: ''
+    answer_additional_links: https://news.un.org/fr/story/2019/06/1045681
+    answer_image_link: https://ourworldindata.org/grapher/exports/dependency-age-groups-to-2100.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1331,9 +1331,8 @@
     answer_option_d: Par 1000
     answer_correct: b
     answer_explanation: "Soit 10 fois plus vite. Mais ça s'accélère !"
-    answer_additional_links: "Yuval Noah Harari, Sapiens: une brève histoire de
-      l'humanité"
-    answer_image_link: ''
+    answer_additional_links: https://fr.wikipedia.org/wiki/Ressources_et_consommation_%C3%A9nerg%C3%A9tiques_mondiales
+    answer_image_link: https://ourworldindata.org/grapher/exports/global-primary-energy.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1355,8 +1354,7 @@
     answer_explanation: "82% des sols français dépendant actuellement des engrais
       phosphatés. Or il n'existe aucun substitut naturel au phosphore. Le principal
       exportateur mondial en est la Chine."
-    answer_additional_links: "Science et vie n°1136, mai 2012, interview de JC.
-      Fardeau, INRA"
+    answer_additional_links: https://www.futura-sciences.com/planete/actualites/developpement-durable-phosphate-il-pollue-trop-mais-on-craint-penurie-34070/
     answer_image_link: ''
     author: Matthieu M
     publish: true
@@ -1440,7 +1438,7 @@
       2018 qu'elle s'attendait à un pic tous pétrole confondus à l'horizon
       2025"
     answer_additional_links: https://jancovici.com/transition-energetique/petrole/a-quand-le-pic-de-production-mondial-pour-le-petrole/
-    answer_image_link: ''
+    answer_image_link: https://www.researchgate.net/profile/Paul_Fenton6/publication/284183970/figure/fig4/AS:668520648044558@1536399151955/Production-at-todays-oil-fi-elds-has-already-started-to-decline-Source-UK-Energy.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1458,9 +1456,9 @@
     answer_option_c: 85%
     answer_option_d: 95%
     answer_correct: c
-    answer_explanation: ''
+    answer_explanation: "Pétrole (33%), Charbon (27%), Gaz (23%)"
     answer_additional_links: https://www.connaissancedesenergies.org/fiche-pedagogique/chiffres-cles-production-d-energie
-    answer_image_link: ''
+    answer_image_link: https://ourworldindata.org/grapher/exports/energy-consumption-by-source-and-region.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1483,7 +1481,7 @@
       COP21 est de 2 tonnes par an par habitant au niveau mondial, soit une réduction
       par un facteur 5 à 6."
     answer_additional_links: https://www.hautconseilclimat.fr/wp-content/uploads/2019/09/hcc_rapport_annuel_grand_public_2019.pdf
-    answer_image_link: ''
+    answer_image_link: https://www.connaissancedesenergies.org/sites/default/files/album_images/Empreinte-carbone-moyenne-france_zoom.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1504,7 +1502,7 @@
     answer_explanation: "Transports 31%, Bâtiment 19%, Agriculture 19%, Industrie
       18%"
     answer_additional_links: https://www.hautconseilclimat.fr/wp-content/uploads/2019/09/hcc_rapport_annuel_grand_public_2019.pdf
-    answer_image_link: ''
+    answer_image_link: http://www.carbone4.com/wp-content/uploads/2019/09/e7a118de-1838-4812-9073-15a01cf56c90.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1528,7 +1526,7 @@
       maintenance et du démantèlement. La méconnaissance des Français
       sur ce point est flagrante, comme montré dans l'article donné en référence."
     answer_additional_links: https://www.lemonde.fr/blog/huet/2018/04/11/nucleaire-et-climat-la-grande-tromperie/
-    answer_image_link: ''
+    answer_image_link: https://pbs.twimg.com/media/DuzZwawWsAEWb02.jpg
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1571,9 +1569,9 @@
       selon les travaux des économistes Lucas Chancel et Thomas Piketty. C'est
       encore plus marqué aux Etats-Unis et au Brésil."
     answer_additional_links: https://www.liberation.fr/checknews/2019/11/06/est-il-vrai-qu-en-france-les-10-les-plus-riches-emettent-huit-fois-plus-de-co2-que-les-10-les-plus-p_1761604
-    answer_image_link: ''
+    answer_image_link: https://images.theconversation.com/files/266321/original/file-20190328-139361-ydg7u5.jpeg
     author: Matthieu M
-    publish: false
+    publish: true
     created: 2020-03-10
     updated: 2020-03-10
 - model: api.question
@@ -1611,13 +1609,13 @@
     answer_option_b: 10%
     answer_option_c: 50%
     answer_option_d: 80%
-    answer_correct: b
+    answer_correct: c
     answer_explanation: "Que ce soit au niveau mondial ou en France, la quantité
       de CO2 émise est étroitement liée au niveau de revenu des habitants,
       selon les travaux des économistes Lucas Chancel et Thomas Piketty. C'est
       encore plus marqué aux Etats-Unis et au Brésil."
     answer_additional_links: https://www.liberation.fr/checknews/2019/11/06/est-il-vrai-qu-en-france-les-10-les-plus-riches-emettent-huit-fois-plus-de-co2-que-les-10-les-plus-p_1761604
-    answer_image_link: ''
+    answer_image_link: https://images.theconversation.com/files/266321/original/file-20190328-139361-ydg7u5.jpeg
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1633,13 +1631,13 @@
     category: consommation
     difficulty: 2
     answer_option_a: "Même pas un"
-    answer_option_b: '1'
-    answer_option_c: '10'
-    answer_option_d: '50'
+    answer_option_b: "1"
+    answer_option_c: "10"
+    answer_option_d: "50"
     answer_correct: b
     answer_explanation: Un A/R Paris-New York, c'est 1900 kg de CO2 par personne.
     answer_additional_links: https://www.liberation.fr/checknews/2019/02/13/est-ce-qu-un-aller-retour-en-avion-a-bali-emet-autant-de-co2-qu-une-annee-de-vie-en-france_1708854
-    answer_image_link: ''
+    answer_image_link: https://pbs.twimg.com/media/EMOnQq3WkAABCPD.png
     author: Matthieu M
     publish: true
     created: 2020-03-10
@@ -1659,7 +1657,7 @@
     answer_explanation: "Depuis 1900, il augmente de 1 à 3 mm par an. Depuis 1992,
       c'est plutôt de l'ordre de 3 mm par an."
     answer_additional_links: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
-    answer_image_link: ''
+    answer_image_link: https://cdn.radiofrance.fr/s3/cruiser-production/2020/02/e24440ab-1b03-42d3-858c-fdbc74f3e0ef/838_001_1km0ss_jpeg.jpg
     author: climat-en-questions.fr
     publish: true
     created: 2020-03-11
@@ -1679,7 +1677,7 @@
     answer_explanation: "Contrairement à ce que l'on voit dans 'L'âge de glace'
       ou 'Le jour d'après', une entrée en glaciation dure des milliers d'années."
     answer_additional_links: https://fr.wikipedia.org/wiki/Glaciation
-    answer_image_link: ''
+    answer_image_link: https://mothernature.com/wp-content/uploads/2017/08/paleoclimate-cycles-are-key-analogs-for-present-day-holocene-warm-period-1200x800_c.jpg
     author: climat-en-questions.fr
     publish: true
     created: 2020-03-11
@@ -1701,7 +1699,7 @@
     answer_additional_links: https://ourworldindata.org/grapher/energy-consumption-by-source-and-region
     answer_image_link: ''
     author: Avenir Climatique (Quizz)
-    publish: true
+    publish: false
     created: 2020-03-11
     updated: 2020-03-11
 - model: api.question
@@ -1721,7 +1719,7 @@
     answer_correct: d
     answer_explanation: ''
     answer_additional_links: https://negawatt.org/La-demarche-negaWatt
-    answer_image_link: ''
+    answer_image_link: https://www.letelegramme.fr/images/2018/03/02/energie-negawatt-le-bon-scenario_3841704_540x356p.jpg
     author: Avenir Climatique (Quizz)
     publish: true
     created: 2020-03-11
@@ -1734,15 +1732,15 @@
     type: QCM
     category: consommation
     difficulty: 2
-    answer_option_a: L'Australie
+    answer_option_a: La Russie
     answer_option_b: La Chine
     answer_option_c: Les Etats-Unis
     answer_option_d: La France
     answer_correct: c
-    answer_explanation: ''
+    answer_explanation: Ce sont les pays du golfe (Qatar, Koweit, Arabie Saoudite) qui arrivent en tête de ce classement.
     answer_additional_links: https://ourworldindata.org/grapher/co-emissions-per-capita?tab=chart
-    answer_image_link: ''
+    answer_image_link: https://s.brsimg.com/static-000/cache/i/content/images/e/5/9/e59d07745c97e38a630b9c264d377837-1024x658.jpg
     author: Avenir Climatique (Quizz)
-    publish: false
+    publish: true
     created: 2020-03-11
     updated: 2020-03-11
