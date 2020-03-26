@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import QuestionList from './components/QuestionList.vue'
 import QuestionDetail from './components/QuestionDetail.vue'
+import CategoryListPage from './components/CategoryListPage.vue'
+import CategoryDetailPage from './components/CategoryDetailPage.vue'
 import About from './components/About.vue'
 import Stats from './components/Stats.vue'
 
@@ -21,6 +23,18 @@ const routes = [
     path: '/questions/:questionId', name: 'question-detail', component: QuestionDetail,
     meta: {
       title: "Know Your Planet - Question "
+    }
+  },
+  {
+    path: '/categories', name: 'category-list', component: CategoryListPage,
+    meta: {
+      title: "Know Your Planet - Catégories"
+    }
+  },
+  {
+    path: '/categories/:categoryKey', name: 'category-detail', component: CategoryDetailPage,
+    meta: {
+      title: "Know Your Planet - Catégorie "
     }
   },
   {

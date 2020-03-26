@@ -1,6 +1,14 @@
 from django.db import models
 
 
+class QuestionQuerySet(models.QuerySet):
+    def published(self):
+        return self.exclude(publish=False)
+
+    def for_category(self, category):
+        return self.filter(category=category)
+
+
 class Question(models.Model):
     QUESTION_TYPES = [
         ("QCM", "Questionnaire à choix multiples (QCM)"),
@@ -41,6 +49,8 @@ class Question(models.Model):
     publish = models.BooleanField(default=False, blank=False, help_text="La question est prête à être publiée")
     created = models.DateField()
     updated = models.DateField()
+
+    objects = QuestionQuerySet.as_manager()
 
     def __str__(self):
         return f"{self.text}"

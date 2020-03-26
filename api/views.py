@@ -16,7 +16,10 @@ def api_home(request):
         <ul>
             <li>GET /api/questions</li>
             <li>GET /api/questions/:id</li>
+            <li>POST /api/questions/:id/stats</li>
             <li>GET /api/questions/random</li>
+            <li>GET /api/questions/stats</li>
+            <li>GET /api/categories</li>
         </ul>
     """)
 
@@ -25,8 +28,12 @@ def api_home(request):
 def question_list(request):
     """
     List all questions (return them in a random order)
+    Optional query parameters:
+    - 'category' (string)
     """
-    questions = Question.objects.exclude(publish=False).order_by("?")
+    questions = Question.objects.published().order_by("?")
+    if request.GET.get("category"):
+        questions = questions.for_category(request.GET.get("category"))
 
     serializer = QuestionSerializer(questions, many=True)
     return Response(serializer.data)
@@ -66,13 +73,15 @@ def question_detail_stats(request, pk):
 def question_random(request):
     """
     Retrieve a random question
-    Optional query parameters: 'current' (question id), 'category' (string)
+    Optional query parameters:
+    - 'current' (question id)
+    - 'category' (string)
     """
-    questions = Question.objects.exclude(publish=False)
+    questions = Question.objects.published()
     if request.GET.get("current"):
         questions = questions.exclude(pk=request.GET.get("current"))
     if request.GET.get("category"):
-        questions = questions.filter(category=request.GET.get("category"))
+        questions = questions.for_category(request.GET.get("category"))
 
     questions_ids = questions.values_list('id', flat=True)
     questions_random_id = random.sample(list(questions_ids), 1)
@@ -99,3 +108,19 @@ def question_stats(request):
         # "answer": question_answer_stats
         "answer_count": question_answer_count_stats
     })
+
+
+@api_view(['GET'])
+def category_list(request):
+    """
+    List all categories (with the number of questions per category)
+    """
+    category_list = list()
+    for category_tuple in Question.QUESTION_CATEGORIES:
+        category_question_count = Question.objects.published().for_category(category_tuple[0]).count()
+        category_list.append({
+            "key": category_tuple[0],
+            "name": category_tuple[1],
+            "question_count": category_question_count
+        })
+    return Response(category_list)
