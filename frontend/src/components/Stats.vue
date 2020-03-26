@@ -1,18 +1,20 @@
 <template>
-  <section class="small-container text-align-left">
+  <section class="text-align-left">
     <h2>Quelques statistiques</h2>
     
     <h3>Questions</h3>
     <p>
-      Il y a actuellement <strong>{{ questionPublishStats[0]["count"] }}</strong> questions publiées,
-      et <strong>{{ questionPublishStats[1]["count"] }}</strong> en cours de rédaction/publication.
+      Il y a actuellement <strong v-if="questionPublishStats">{{ questionPublishStats[0]["count"] }}</strong> questions publiées,
+      et <strong v-if="questionPublishStats">{{ questionPublishStats[1]["count"] }}</strong> en cours de rédaction/publication.
     </p>
 
     <br />
     <h3>Catégories</h3>
     Questions par catégories:
     <ul>
-      <li v-for="categoryStat in questionCategoryStats" :key="categoryStat">{{ categoryStat["category"] }}: <strong>{{ categoryStat["count"] }}</strong></li>
+      <li v-for="categoryStat in questionCategoryStats" :key="categoryStat.category">
+        {{ categoryStat["category"] }}: <strong>{{ categoryStat["count"] }}</strong>
+      </li>
     </ul>
 
     <br />

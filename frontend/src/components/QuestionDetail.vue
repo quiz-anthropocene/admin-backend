@@ -13,7 +13,7 @@
     <div v-if="question" class="question">
       <h2>
         <span>
-          <span class="hidden-sm">Question&nbsp;</span>
+          <span class="d-none d-sm-inline">Question&nbsp;</span>
           <span class="color-blue">#{{ question.id }}</span>
         </span>
         <span> | </span>
@@ -23,25 +23,25 @@
       </h2>
       <h3>{{ question.text }}</h3>
       <form @submit.prevent="submitQuestion">
-        <p :class="{ 'color-blue' : answerPicked === 'a' }">
-          <input type="radio" id="one" value="a" v-model="answerPicked" :disabled="questionSubmitted">
+        <div :class="{ 'color-blue' : answerPicked === 'a' }">
+          <input type="radio" id="one" value="a" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
           <label for="one">&nbsp;{{ question.answer_option_a }}</label>
-        </p>
-        <p :class="{ 'color-blue' : answerPicked === 'b' }">
-          <input type="radio" id="two" value="b" v-model="answerPicked" :disabled="questionSubmitted">
+        </div>
+        <div :class="{ 'color-blue' : answerPicked === 'b' }">
+          <input type="radio" id="two" value="b" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
           <label for="two">&nbsp;{{ question.answer_option_b }}</label>
-        </p>
-        <p :class="{ 'color-blue' : answerPicked === 'c' }">
-          <input type="radio" id="three" value="c" v-model="answerPicked" :disabled="questionSubmitted">
+        </div>
+        <div :class="{ 'color-blue' : answerPicked === 'c' }">
+          <input type="radio" id="three" value="c" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
           <label for="three">&nbsp;{{ question.answer_option_c }}</label>
-        </p>
-        <p :class="{ 'color-blue' : answerPicked === 'd' }">
-          <input type="radio" id="four" value="d" v-model="answerPicked" :disabled="questionSubmitted">
+        </div>
+        <div :class="{ 'color-blue' : answerPicked === 'd' }">
+          <input type="radio" id="four" value="d" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
           <label for="four">&nbsp;{{ question.answer_option_d }}</label>
-        </p>
-        <p>
-          <button type="submit" class="button" :disabled="questionSubmitted || !answerPicked">Valider</button>
-        </p>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-outline-primary" :disabled="questionSubmitted || !answerPicked">Valider</button>
+        </div>
       </form>
     </div>
 
@@ -58,7 +58,6 @@
         🔗&nbsp;<a v-bind:href="question.answer_additional_links" target="_blank">{{ question.answer_additional_links }}</a>
       </p>
       <p v-if="question.answer_image_link" class="answer-image" title="Une image pour illustrer la réponse">
-        🖼️&nbsp;<small>(cliquez sur l'image pour l'agrandir)</small><br />
         <a v-bind:href="question.answer_image_link" target="_blank"><img v-bind:src="question.answer_image_link" alt="une image pour illustrer la réponse" /></a>
       </p>
       <hr class="custom-seperator" />
@@ -71,10 +70,10 @@
     <div v-if="question" class="action small">
       <br />
       <router-link :to="{ name: 'question-detail', params: { questionId: questionSameCategoryNextId } }">
-        <button class="button">⏩&nbsp;Autre question <span class="color-orange">{{ question.category }}</span></button>
+        <button class="btn btn-outline-primary">⏩&nbsp;Autre question <span class="color-orange">{{ question.category }}</span></button>
       </router-link>
       <router-link :to="{ name: 'question-detail', params: { questionId: questionRandomNextId } }">
-        <button class="button">🔀&nbsp;Question au hasard</button>
+        <button class="btn btn-outline-primary">🔀&nbsp;Question au hasard</button>
       </router-link>
     </div>
 
@@ -203,8 +202,7 @@ export default {
 .question {
   border: 2px solid #005995;
   border-radius: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
 }
 
 .answer {

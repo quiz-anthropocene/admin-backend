@@ -16,6 +16,7 @@ export default {
 <style scoped>
 header {
   border: 10px solid #005995;
+  margin: 10px;
   padding-left: 10px;
   padding-right: 10px;
 }

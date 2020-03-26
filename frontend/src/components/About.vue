@@ -1,5 +1,5 @@
 <template>
-  <section class="small-container text-align-left">
+  <section class="text-align-left">
     <h2>A propos</h2>
     <p>
       Vous êtes un des premiers utilisateurs, merci d'être là !
@@ -15,7 +15,7 @@
       On est preneur de tous vos retours !
     </p>
     <p>
-      Le code de l'application, ainsi que les questions, sont visibles sur la page Github de l'application (<a href="https://github.com/raphodn/know-your-planet" target="_blank">ici</a>).
+      Le code de l'application, ainsi que les questions, sont visibles sur <a href="https://github.com/raphodn/know-your-planet" target="_blank">la page Github de l'application</a>.
     </p>
     <p>
       Si vous avez des commentaires ou des suggestions, vous pouvez pour l'instant créer des <i>Issues</i> sur Github (en attendant que l'on ait créé d'autres moyens d'échanges).
@@ -24,7 +24,7 @@
     <br />
     <h3>Quelques chiffres</h3>
     <p>
-      Voir la page <router-link :to="{ name: 'stats' }">Statistiques</router-link>.
+      Voir la page <router-link :to="{ name: 'stats' }">📊&nbsp;Statistiques</router-link>.
     </p>
 
     <br />

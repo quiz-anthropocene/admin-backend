@@ -1,11 +1,9 @@
 <template>
   <section>
-    <p class="help">
+    <div class="alert alert-warning">
       <i v-if="questions">Il y a actuellement {{ questions.length }} questions. </i>
       <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus !</i>
-    </p>
-
-    <br />
+    </div>
 
     <!-- Filtre: catégorie -->
     <div>
