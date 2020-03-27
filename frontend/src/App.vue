@@ -16,7 +16,7 @@ export default {
   name: 'App',
   components: {
     Header,
-  }
+  },
 }
 </script>
 
@@ -75,8 +75,8 @@ hr.custom-seperator {
   border: 0 none;
   height: 1px;
   width: 50%;
-  color: #005995;
-  background-color: #005995;
+  color: var(--primary);
+  background-color: var(--primary);
 }
 
 .row {

@@ -98,12 +98,12 @@
 </template>
 
 <script>
-// import QuestionCard from './QuestionCard.vue'
-import DifficultyBadge from './DifficultyBadge.vue'
-import HomeLink from './HomeLink.vue'
+// import QuestionCard from '../components/QuestionCard.vue'
+import DifficultyBadge from '../components/DifficultyBadge.vue'
+import HomeLink from '../components/HomeLink.vue'
 
 export default {
-  name: 'QuestionDetail',
+  name: 'Page',
   components: {
     // QuestionCard,
     DifficultyBadge,
@@ -216,13 +216,13 @@ export default {
 
 <style scoped>
 .question {
-  border: 2px solid #005995;
+  border: 2px solid var(--primary);
   border-radius: 5px;
   padding: 10px;
 }
 
 .answer {
-  border: 2px solid #F33F3F;
+  border: 2px solid var(--secondary);
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;

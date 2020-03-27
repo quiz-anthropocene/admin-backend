@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import HomeLink from './HomeLink.vue'
+import HomeLink from '../components/HomeLink.vue'
 
 export default {
   name: 'CategoryListPage',
@@ -67,7 +67,7 @@ export default {
 .category {
   width: 300px;
   display: inline-block;
-  border: 1px solid #F33F3F;
+  border: 1px solid var(--secondary);
   border-radius: 5px;
   margin: 2.5px;
   padding: 5px;

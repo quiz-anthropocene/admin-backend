@@ -37,11 +37,11 @@
 </template>
 
 <script>
-import QuestionCard from './QuestionCard.vue'
-import HomeLink from './HomeLink.vue'
+import QuestionCard from '../components/QuestionCard.vue'
+import HomeLink from '../components/HomeLink.vue'
 
 export default {
-  name: 'QuestionList',
+  name: 'QuestionListPage',
   components: {
     QuestionCard,
     HomeLink
@@ -97,7 +97,7 @@ export default {
 <style scoped>
 .category {
   display: inline-block;
-  border: 1px solid #F33F3F;
+  border: 1px solid var(--secondary);
   border-radius: 5px;
   margin: 2.5px;
   padding: 5px;
@@ -112,7 +112,7 @@ export default {
   height: 150px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.1s;
-  border: 2px solid #005995;
+  border: 2px solid var(--primary);
   border-radius: 5px;
   cursor: pointer;
 }

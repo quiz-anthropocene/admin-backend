@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import DifficultyBadge from './DifficultyBadge.vue'
+import DifficultyBadge from '../components/DifficultyBadge.vue'
 
 export default {
   name: 'QuestionCard',

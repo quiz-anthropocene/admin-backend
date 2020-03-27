@@ -68,7 +68,7 @@
 </template>
 
 <script>
-import HomeLink from './HomeLink.vue'
+import HomeLink from '../components/HomeLink.vue'
 
 export default {
   name: 'Contribute',
@@ -132,6 +132,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-</style>

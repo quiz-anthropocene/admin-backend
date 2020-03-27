@@ -61,10 +61,10 @@
 </template>
 
 <script>
-import HomeLink from './HomeLink.vue'
+import HomeLink from '../components/HomeLink.vue'
 
 export default {
-  name: 'About',
+  name: 'AboutPage',
   components: {
     HomeLink,
   }
