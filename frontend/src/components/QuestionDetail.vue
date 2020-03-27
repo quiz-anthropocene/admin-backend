@@ -108,7 +108,7 @@ export default {
     }
   },
 
-  created () {
+  mounted () {
     this.init(this.$route.params.questionId);
   },
 

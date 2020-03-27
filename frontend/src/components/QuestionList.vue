@@ -1,10 +1,7 @@
 <template>
   <section>
-    <div class="alert alert-warning">
-      <i v-if="questions">Il y a actuellement {{ questions.length }} questions. </i>
-      <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus !</i>
-    </div>
-
+    <br />
+    
     <!-- Filtre: catégorie -->
     <div>
       <span class="category" v-for="category in categories" :key="category" :class="{ 'category-active' : category === categorySelected }" @click="clickCategory(category)">{{ category }}</span>

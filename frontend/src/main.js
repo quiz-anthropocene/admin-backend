@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import App from './App.vue'
+import HomePage from './components/HomePage.vue'
 import QuestionList from './components/QuestionList.vue'
 import QuestionDetail from './components/QuestionDetail.vue'
 import CategoryListPage from './components/CategoryListPage.vue'
@@ -14,10 +15,13 @@ Vue.config.productionTip = false
 
 const routes = [
   {
-    path: '/', name: 'home', component: QuestionList
+    path: '/', name: 'home', component: HomePage
   },
   {
-    path: '/questions', name: 'question-list', component: QuestionList
+    path: '/questions', name: 'question-list', component: QuestionList,
+    meta: {
+      title: "Know Your Planet - Questions"
+    }
   },
   {
     path: '/questions/:questionId', name: 'question-detail', component: QuestionDetail,

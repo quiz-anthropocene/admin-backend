@@ -112,6 +112,10 @@ hr.custom-seperator {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.padding-top-bottom-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 
 .color-blue {
   color: #005995;

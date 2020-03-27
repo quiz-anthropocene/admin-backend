@@ -5,8 +5,8 @@
     <div>
       <router-link class="no-decoration" v-for="category in categories" :key="category.key" :to="{ name: 'category-detail', params: { categoryKey: category.key } }">
         <span class="category">
-          {{ category.name }}<br />
-          <small><strong>{{ category.question_count }}</strong> question<span v-if="category.question_count > 1">s</span></small>
+          <h3>{{ category.name }}</h3>
+          <p><strong>{{ category.question_count }}</strong> question<span v-if="category.question_count > 1">s</span></p>
         </span>
       </router-link>
     </div>
@@ -52,6 +52,7 @@ export default {
 
 <style scoped>
 .category {
+  width: 300px;
   display: inline-block;
   border: 1px solid #F33F3F;
   border-radius: 5px;
