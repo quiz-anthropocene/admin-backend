@@ -22,8 +22,8 @@
     <p>L'application totalise <strong>{{ questionAnswerCountStats }}</strong> réponses (depuis la mise en ligne en Mars 2020).</p>
     
     <br />
-    <br />
-    <div class="row text-center justify-content-end">
+    <hr />
+    <div class="row actions text-center justify-content-end">
       <div class="col-sm-4">
         <HomeLink />
       </div>

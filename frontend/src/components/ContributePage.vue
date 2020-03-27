@@ -48,8 +48,8 @@
     </div>
 
     <br />
-    <br />
-    <div class="row text-center justify-content-end">
+    <hr />
+    <div class="row actions text-center justify-content-end">
       <div class="col-sm">
         <div v-if="contributionSubmitted" @click="init()">
           ✍️&nbsp;Nouvelle contribution

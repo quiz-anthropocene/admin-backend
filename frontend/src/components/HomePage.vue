@@ -46,28 +46,31 @@
     </div>
 
     <div class="row justify-content-md-center">
-      <div class="col col-6">
+      <div class="col col-sm-6">
         <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: questionRandomNextId } }">
           <button class="btn btn-outline-primary btn-lg btn-block">🔀&nbsp;<strong>Question au hasard</strong></button>
         </router-link>
       </div>
     </div>
 
-    <br />
+    <hr />
 
-    <div class="row">
+    <div class="row actions">
       <div class="col-sm">
         <router-link :to="{ name: 'question-list' }">
           Toutes les questions
         </router-link>
+        <br />
       </div>
       <div class="col-sm">
         <router-link :to="{ name: 'category-list' }">
           Toutes les catégories
         </router-link>
+        <br />
       </div>
       <div class="col-sm">
         Tous les quizz <small>(à venir)</small>
+        <br />
       </div>
     </div>
   </section>

@@ -12,8 +12,8 @@
     </div>
 
     <br />
-    <br />
-    <div v-if="categories" class="row justify-content-end">
+    <hr v-if="categories" />
+    <div v-if="categories" class="row actions justify-content-end">
       <div class="col-sm-4">
         <HomeLink />
       </div>

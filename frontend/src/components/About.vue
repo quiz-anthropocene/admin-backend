@@ -51,8 +51,8 @@
     <a href="https://www.conventioncitoyennepourleclimat.fr/" target="_blank">La Convention Citoyenne pour le climat (CCC)</a><br>
 
     <br />
-    <br />
-    <div class="row text-center justify-content-end">
+    <hr />
+    <div class="row actions text-center justify-content-end">
       <div class="col-sm-4">
         <HomeLink />
       </div>

@@ -10,6 +10,15 @@
 <script>
 export default {
   name: 'Header',
+
+  mounted () {
+    console.log(this.$route);
+  },
+
+  beforeRouteUpdate (to, from, next) {
+    console.log(to, from)
+    next();
+  },
 }
 </script>
 

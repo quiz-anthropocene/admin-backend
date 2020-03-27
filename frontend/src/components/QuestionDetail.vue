@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <div v-if="question" class="action small">
+    <div v-if="question" class="small">
       <br />
       <router-link :to="{ name: 'question-detail', params: { questionId: questionSameCategoryNextId } }">
         <button class="btn btn-outline-primary">⏩&nbsp;Autre question <span class="text-secondary">{{ question.category }}</span></button>
@@ -78,8 +78,8 @@
     </div>
 
     <br />
-    <br />
-    <div v-if="question" class="row">
+    <hr v-if="question" />
+    <div v-if="question" class="row actions">
       <div class="col-sm">
         <router-link :to="{ name: 'contribute' }">
           ✍️&nbsp;Ajouter une question

@@ -31,15 +31,15 @@
     </div>
 
     <br />
-    <br />
-    <div v-if="questions" class="row">
+    <hr v-if="questions" />
+    <div v-if="questions" class="row actions">
       <div class="col-sm">
-        <router-link :to="{ name: 'contribute'  }">
+        <router-link :to="{ name: 'contribute' }">
           ✍️&nbsp;Ajouter une question <span class="text-secondary">{{ currentCategory }}</span>
         </router-link>
       </div>
       <div class="col-sm">
-        <router-link :to="{ name: 'category-list'  }">
+        <router-link :to="{ name: 'category-list' }">
           🏷️&nbsp;Toutes les catégories
         </router-link>
       </div>

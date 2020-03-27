@@ -90,18 +90,6 @@ hr.custom-seperator {
   margin-bottom: 10px;
 }
 
-/* .button {
-  margin: 1em 1em 0 1em;
-  padding: 0.5em 1em;
-  font-size: 1em;
-  cursor: pointer;
-} */
-
-// .small-container {
-//   max-width: 600px;
-//   margin: 0 auto;
-// }
-
 .margin-bottom-0 {
   margin-bottom: 0;
 }
@@ -117,9 +105,6 @@ hr.custom-seperator {
   padding-bottom: 15px;
 }
 
-.color-blue {
-  color: #005995;
-}
 .color-red {
   color: red;
 }
@@ -130,6 +115,10 @@ hr.custom-seperator {
 
 .small {
   font-size: small;
+}
+
+.actions .col-sm {
+  padding-bottom: 20px;
 }
 
 @media all and (min-width: 30em) {
