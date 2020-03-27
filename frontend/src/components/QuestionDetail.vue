@@ -17,7 +17,7 @@
           <span class="color-blue">#{{ question.id }}</span>
         </span>
         <span> | </span>
-        <span class="color-orange">{{ question.category }}</span>
+        <span class="text-secondary">{{ question.category }}</span>
         <span> | </span>
         <span><small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
       </h2>
@@ -70,14 +70,27 @@
     <div v-if="question" class="action small">
       <br />
       <router-link :to="{ name: 'question-detail', params: { questionId: questionSameCategoryNextId } }">
-        <button class="btn btn-outline-primary">⏩&nbsp;Autre question <span class="color-orange">{{ question.category }}</span></button>
+        <button class="btn btn-outline-primary">⏩&nbsp;Autre question <span class="text-secondary">{{ question.category }}</span></button>
       </router-link>
       <router-link :to="{ name: 'question-detail', params: { questionId: questionRandomNextId } }">
         <button class="btn btn-outline-primary">🔀&nbsp;Question au hasard</button>
       </router-link>
     </div>
 
-    <HomeLink v-if="question" />
+    <br />
+    <br />
+    <div v-if="question" class="row">
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+        <router-link :to="{ name: 'category-detail', params: { categoryKey: question.category }  }">
+          🏷️&nbsp;Toutes les questions <span class="text-secondary">{{ question.category }}</span>
+        </router-link>
+      </div>
+      <div class="col-sm">
+         <HomeLink />
+      </div>
+    </div>
   </section>
 </template>
 

@@ -43,6 +43,8 @@
     <a href="https://www.hautconseilclimat.fr/" target="_blank">Le Haut conseil pour le climat</a><br>
     <a href="https://www.conventioncitoyennepourleclimat.fr/" target="_blank">La Convention Citoyenne pour le climat (CCC)</a><br>
 
+    <br />
+    <br />
     <HomeLink />
   </section>
 </template>

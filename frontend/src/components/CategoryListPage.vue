@@ -10,12 +10,25 @@
         </span>
       </router-link>
     </div>
+
+    <br />
+    <br />
+    <div v-if="categories" class="row justify-content-end">
+      <div class="col-4">
+        <HomeLink />
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
+import HomeLink from './HomeLink.vue'
+
 export default {
   name: 'CategoryListPage',
+  components: {
+    HomeLink
+  },
 
   data () {
     return {

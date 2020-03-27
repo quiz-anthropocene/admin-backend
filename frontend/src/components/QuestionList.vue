@@ -25,16 +25,26 @@
         </router-link>
       </div>
     </div>
+
+    <br />
+    <br />
+    <div v-if="questions" class="row justify-content-end">
+      <div class="col-4">
+        <HomeLink />
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
 import QuestionCard from './QuestionCard.vue'
+import HomeLink from './HomeLink.vue'
 
 export default {
   name: 'QuestionList',
   components: {
     QuestionCard,
+    HomeLink
   },
 
   data () {

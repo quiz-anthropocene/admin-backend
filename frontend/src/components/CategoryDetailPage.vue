@@ -4,7 +4,7 @@
 
     <h2>
       <router-link class="no-decoration" :to="{ name: 'category-list' }">Catégorie:</router-link>&nbsp;
-      <span class="color-orange">{{ currentCategory }}</span>
+      <span class="text-secondary">{{ currentCategory }}</span>
     </h2>
 
     <br />
@@ -29,16 +29,33 @@
         </router-link>
       </div>
     </div>
+
+    <br />
+    <br />
+    <div v-if="questions" class="row">
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+        <router-link :to="{ name: 'category-list'  }">
+          🏷️&nbsp;Toutes les catégories
+        </router-link>
+      </div>
+      <div class="col-sm">
+        <HomeLink />
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
 import QuestionCard from './QuestionCard.vue'
+import HomeLink from './HomeLink.vue'
 
 export default {
   name: 'CategoryDetailPage',
   components: {
-    QuestionCard
+    QuestionCard,
+    HomeLink
   },
 
   data () {

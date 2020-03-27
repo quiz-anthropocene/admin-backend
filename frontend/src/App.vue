@@ -120,9 +120,6 @@ hr.custom-seperator {
 .color-blue {
   color: #005995;
 }
-.color-orange {
-  color: #F33F3F;
-}
 .color-red {
   color: red;
 }
