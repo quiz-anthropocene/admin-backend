@@ -1,12 +1,13 @@
 import random
 from django.db.models import Count
+from django.forms.models import model_to_dict
 from django.http import HttpResponse
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api.models import Question, QuestionStat
-from api.serializers import QuestionSerializer, QuestionStatSerializer
+from api.models import Question, QuestionStat, Contribution
+from api.serializers import QuestionSerializer, QuestionStatSerializer, ContributionSerializer
 
 
 def api_home(request):
@@ -124,3 +125,14 @@ def category_list(request):
             "question_count": category_question_count
         })
     return Response(category_list)
+
+
+@api_view(['POST'])
+def contribute(request):
+    """
+    Add a contribution
+    """
+    if request.method == 'POST':
+        contribution = Contribution.objects.create(text=request.data['question_text'], description=request.data['additional_info'])
+        serializer = ContributionSerializer(contribution)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)

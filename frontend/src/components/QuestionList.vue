@@ -29,7 +29,7 @@
     <br />
     <br />
     <div v-if="questions" class="row justify-content-end">
-      <div class="col-4">
+      <div class="col-sm-4">
         <HomeLink />
       </div>
     </div>

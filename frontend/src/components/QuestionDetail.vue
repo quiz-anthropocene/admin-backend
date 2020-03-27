@@ -81,6 +81,9 @@
     <br />
     <div v-if="question" class="row">
       <div class="col-sm">
+        <router-link :to="{ name: 'contribute' }">
+          ✍️&nbsp;Ajouter une question
+        </router-link>
       </div>
       <div class="col-sm">
         <router-link :to="{ name: 'category-detail', params: { categoryKey: question.category }  }">

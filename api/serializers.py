@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from api.models import Question, QuestionStat
+
+from api.models import Question, QuestionStat, Contribution
 
 
 class QuestionSerializer(serializers.ModelSerializer):
@@ -19,4 +20,11 @@ class QuestionStatSerializer(serializers.ModelSerializer):
         model = QuestionStat
         fields = [
             'question_id', 'answer_choice', 'created'
+        ]
+
+class ContributionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Contribution
+        fields = [
+            'text', 'description', 'created'
         ]

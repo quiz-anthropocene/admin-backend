@@ -89,3 +89,12 @@ class QuestionStat(models.Model):
     )
     answer_choice = models.CharField(max_length=50, editable=False, help_text="La réponse choisie par l'internaute")
     created = models.DateTimeField(auto_now=True, help_text="La date & heure de la réponse")
+
+
+class Contribution(models.Model):
+    text = models.TextField(blank=False)
+    description = models.TextField()
+    created = models.DateTimeField(auto_now=True, help_text="La date & heure de la contribution")
+
+    def __str__(self):
+        return f"{self.text}"

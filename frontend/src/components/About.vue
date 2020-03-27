@@ -5,20 +5,27 @@
       Vous êtes un des premiers utilisateurs, merci d'être là !
     </p>
     <p>
-      Ce site vient tout juste d'être lancé (Mars 2020), et a été développé sur un weekend par quelques passionés.<br>
+      Ce site vient tout juste d'être lancé (Mars 2020), et a été développé sur un weekend par quelques passionés.
       Il a pour but d'évoluer en fonctions des retours utilisateurs :)
     </p>
 
     <br />
-    <h3>Nous aider</h3>
+    <h3>Contribuer</h3>
     <p>
       On est preneur de tous vos retours !
     </p>
     <p>
+      Une page <router-link :to="{ name: 'contribute' }">✍️&nbsp;Contribution</router-link> vous permet de rajouter une question ou un sujet qui vous tiens à coeur.
+    </p>
+
+    <br />
+    <h3>Open source</h3>
+    <p>
       Le code de l'application, ainsi que les questions, sont visibles sur <a href="https://github.com/raphodn/know-your-planet" target="_blank">la page Github de l'application</a>.
+      Si vous avez des commentaires ou des suggestions, vous pouvez pour y créer des <i>Issues</i> 🙏
     </p>
     <p>
-      Si vous avez des commentaires ou des suggestions, vous pouvez pour l'instant créer des <i>Issues</i> sur Github (en attendant que l'on ait créé d'autres moyens d'échanges).
+      
     </p>
 
     <br />
@@ -45,7 +52,11 @@
 
     <br />
     <br />
-    <HomeLink />
+    <div class="row text-center justify-content-end">
+      <div class="col-sm-4">
+        <HomeLink />
+      </div>
+    </div>
   </section>
 </template>
 

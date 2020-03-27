@@ -21,11 +21,13 @@
     <h3>Réponses</h3>
     <p>L'application totalise <strong>{{ questionAnswerCountStats }}</strong> réponses (depuis la mise en ligne en Mars 2020).</p>
     
-    <!-- <br />
-    <h3>Contributions</h3>
-    <p><i>à venir</i></p> -->
-
-    <HomeLink />
+    <br />
+    <br />
+    <div class="row text-center justify-content-end">
+      <div class="col-sm-4">
+        <HomeLink />
+      </div>
+    </div>
   </section>
 </template>
 

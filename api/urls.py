@@ -10,4 +10,5 @@ urlpatterns = [
     path('questions/random', views.question_random),
     path('questions/stats', views.question_stats),
     path('categories', views.category_list),
+    path('contribute', views.contribute),
 ]

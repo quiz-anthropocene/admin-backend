@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from api.models import Question, QuestionStat
+from api.models import Question, QuestionStat, Contribution
 
 
 class QuestionAdmin(admin.ModelAdmin):
@@ -19,3 +19,4 @@ class QuestionStatAdmin(admin.ModelAdmin):
 
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(QuestionStat, QuestionStatAdmin)
+admin.site.register(Contribution)
