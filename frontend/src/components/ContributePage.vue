@@ -51,6 +51,9 @@
     <br />
     <div class="row text-center justify-content-end">
       <div class="col-sm">
+        <div v-if="contributionSubmitted" @click="init()">
+          ✍️&nbsp;Nouvelle contribution
+        </div>
       </div>
       <div class="col-sm">
         <router-link :to="{ name: 'about' }">
@@ -87,7 +90,21 @@ export default {
     }
   },
 
+  mounted () {
+    this.init();
+  },
+
   methods: {
+    init() {
+      this.contribution = {
+        question_text: "",
+        additional_info: ""
+      },
+      this.contributionSubmitted = false;
+      this.contributionResponse = null;
+      this.loading = false;
+      this.error = null;
+    },
     submitContribution() {
       this.contributionSubmitted = true;
       this.error = this.contributionResponse = null;
