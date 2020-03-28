@@ -6,7 +6,33 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Des pistes dans [README#idées](README#idées)
 
-## [0.3.0] - 2020-03-11
+## [0.5.0] - en cours
+
+### Ajouté
+
+### Modifié
+
+## [0.4.0] - 2020-03-27
+
+### Ajouté
+
+- [Backend] Un modèle `Contribution` pour stocker les contributions
+- [Backend] Une ressource API `/contribute` pour recevoir les contributions
+- [Frontend] Affiche un message légèrement aléatoire pour chaque réponse correcte
+- [Frontend] Une page Catégories avec la liste des catégories
+- [Frontend] Une page Catégorie avec la liste des questions pour la catégorie donnée
+- [Frontend] Ajout de la librarie CSS Bootstrap. Cleanup du CSS.
+- [Frontend] Ajout d'un footer avec des liens vers les autres pages
+- [Frontend] Page de contribution
+- [Frontend] Refactoring des components et du routing Vue.js
+- [Documentation] Framaboard
+
+### Modifié
+
+- [Data] Ajout d'un maximum d'images aux questions existantes
+- [Frontend] Refonte de la page principale
+
+## [0.3.0] - 2020-03-22
 
 ### Ajouté
 
@@ -17,14 +43,15 @@ Des pistes dans [README#idées](README#idées)
 
 ### Modifié
 
-- [DevOps] Rajout de la commande loaddata au Procfile
+- [DevOps] Ajout de la commande loaddata au Procfile
+- [Frontend] Typo dans la description de l'application
 
 ## [0.2.0] - 2020-03-11
 
 ### Ajouté
 
 - [Data] Ajout de toutes les questions (80+)
-- [Backend] Un modèle QuestionStats pour commencer à avoir des stats d'usage (nombre de réponses par question, nombre de réponses correctes par question, ...)
+- [Backend] Un modèle `QuestionStats` pour commencer à avoir des stats d'usage (nombre de réponses par question, nombre de réponses correctes par question, ...)
 - [Backend] Ajout d'un champs `author` dans le modèle Question
 - [Backend] Ajout d'un champs `publish` (boolean) dans le modèle Question
 - [Backend] Une ressource API `/questions/:id/stats` pour récupérer les résultats de chaque réponse
@@ -32,7 +59,7 @@ Des pistes dans [README#idées](README#idées)
 - [Frontend] Le titre de la page (i.e. le nom de l'onglet) est maintenant un peu dynamique
 - [Frontend] Ajout d'un favicon (i.e. le logo de l'onglet)
 - [DevOps] Ajout du projet à [Kaffeine](https://kaffeine.herokuapp.com/) pour eviter que l'app backend se mette en pause (car elle tourne sur le plan gratuit Heroku)
-- [Documentation] Rajout de la section `Idées` dans le README
+- [Documentation] Ajout de la section `Idées` dans le README
 
 ### Modifié
 
