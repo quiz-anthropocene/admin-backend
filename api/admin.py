@@ -49,6 +49,12 @@ class ExportMixin:
         
         return response
 
+    def export_all_question_as_yaml(self, request, queryset):
+        return self.export_as_yaml(request, Question.objects.all())
+
+    def export_all_questionstat_as_yaml(self, request, queryset):
+        return self.export_as_yaml(request, QuestionStat.objects.all())
+
     # def export_all_as_yaml(self, request):
     #     meta = self.model._meta
 
@@ -65,7 +71,8 @@ class ExportMixin:
     export_as_csv.short_description = "Export Selected (CSV)"
     export_as_json.short_description = "Export Selected (JSON)"
     export_as_yaml.short_description = "Export Selected (YAML)"
-    # export_all_as_yaml.short_description = "Export ALL (YAML)"
+    export_all_question_as_yaml.short_description = "Export All (YAML)"
+    export_all_questionstat_as_yaml.short_description = "Export All (YAML)"
 
 
 class QuestionAdmin(admin.ModelAdmin, ExportMixin):
@@ -76,15 +83,19 @@ class QuestionAdmin(admin.ModelAdmin, ExportMixin):
     )
     list_filter = ("category", "difficulty", "author", "publish",) # "type",
     ordering = ("id",)
-    actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
+    actions = ["export_as_csv", "export_as_json", "export_as_yaml", "export_all_question_as_yaml"]
 
 
 class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
     list_display = ("id", "question", "answer_choice", "created",)
     ordering = ("id",)
-    actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
+    actions = ["export_as_csv", "export_as_json", "export_as_yaml", "export_all_questionstat_as_yaml"]
 
     def changelist_view(self, request, extra_context=None):
+        """
+        show chart of answers per day
+        https://dev.to/danihodovic/integrating-chart-js-with-django-admin-1kjb
+        """
         # Aggregate answers per day
         if settings.DEBUG == True:
             chart_data_query = QuestionStat.objects.extra(select={'day': "date(created)"}) # sqlite
