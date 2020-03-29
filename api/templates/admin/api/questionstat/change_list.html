@@ -1,0 +1,75 @@
+{% extends "admin/change_list.html" %}
+
+{% load static %}
+
+<!-- Override extrahead to add Chart.js -->
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const ctx = document.getElementById('myChart').getContext('2d');
+  
+    // Sample data
+    const chartData = {{ chart_data | safe }};
+  
+    // Parse the dates to JS
+    chartData.forEach((d) => {
+      d.x = new Date(d.day);
+    });
+  
+    // Render the chart
+    const chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        datasets: [
+          {
+            label: 'answers',
+            data: chartData,
+            backgroundColor: 'rgba(220,20,20,0.5)',
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        scales: {
+          xAxes: [
+            {
+              type: 'time',
+              time: {
+                unit: 'day',
+                round: 'day',
+                tooltipFormat: 'ddd, D/MM',
+                displayFormats: {
+                  day: 'D/MM',
+                },
+              },
+            },
+          ],
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          ],
+        },
+      },
+    });
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+
+<h1>Custom message!</h1>
+
+<div style="width: 100%">
+  <canvas id="myChart" style="margin-bottom: 70px; width: 80%; height: 20%;"></canvas>
+</div>
+
+<!-- Render the rest of the ChangeList view by calling block.super -->
+{{ block.super }}
+
+{% endblock %}

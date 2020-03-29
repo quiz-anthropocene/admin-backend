@@ -671,7 +671,7 @@
       du CO2 ?"
     type: QCM
     category: climat
-    difficulty: 1
+    difficulty: 3
     answer_option_a: "Oui, par la chaleur latente des océans"
     answer_option_b: "Oui, en raison du dégazage des océans"
     answer_option_c: Oui, c'est l'effet albedo
@@ -694,7 +694,7 @@
       de l'agriculture et de l'usage des sols représente..."
     type: QCM
     category: climat
-    difficulty: 1
+    difficulty: 2
     answer_option_a: 15%
     answer_option_b: 25%
     answer_option_c: 35%
@@ -986,7 +986,7 @@
       décennies ne cesse de s'accélérer, et se montre particulièrement
       marquée  sur le secteur Arctique."
     answer_additional_links: http://www.meteo-paris.com/actualites/banquise-arctique-fin-de-la-fonte-estivale-2e-etendue-la-plus-faible-22-septembre-2019.html
-    answer_image_link: ''
+    answer_image_link: https://www.les-crises.fr/images/1300-climat/1357-banquise/arctique-1979-2011.png
     author: Matthieu M
     publish: true
     created: 2020-03-10

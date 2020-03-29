@@ -58,7 +58,9 @@
         🔗&nbsp;<a v-bind:href="question.answer_additional_links" target="_blank">{{ question.answer_additional_links }}</a>
       </p>
       <p v-if="question.answer_image_link" class="answer-image" title="Une image pour illustrer la réponse">
-        <a v-bind:href="question.answer_image_link" target="_blank"><img v-bind:src="question.answer_image_link" alt="une image pour illustrer la réponse" /></a>
+        <a v-bind:href="question.answer_image_link" target="_blank">
+          <img v-bind:src="question.answer_image_link" alt="une image pour illustrer la réponse" />
+        </a>
       </p>
       <hr class="custom-seperator" />
       <div class="row margin-top-bottom-10 small">
