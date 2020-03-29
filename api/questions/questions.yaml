@@ -351,7 +351,8 @@
     answer_option_c: 35 milliards de tonnes
     answer_option_d: 350 milliards de tonnes
     answer_correct: c
-    answer_explanation: "Ce qui fait un peu plus de 4,5 tonnes équivalent CO2 par personne"
+    answer_explanation: "Ce qui fait un peu plus de 4,5 tonnes équivalent CO2 par
+      personne"
     answer_additional_links: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
     answer_image_link: https://img.aws.la-croix.com/2018/12/07/1300988266/Emissions-carbone-monde_1_1399_1250.jpg
     author: Avenir Climatique (Quizz)
@@ -689,8 +690,8 @@
 - model: api.question
   pk: 34
   fields:
-    text: "En termes d'émissions mondiales de gaz à effet de serre, le secteur de l'agriculture et de l'usage
-      des sols représente..."
+    text: "En termes d'émissions mondiales de gaz à effet de serre, le secteur
+      de l'agriculture et de l'usage des sols représente..."
     type: QCM
     category: climat
     difficulty: 1
@@ -718,7 +719,10 @@
     answer_option_c: "du méthane"
     answer_option_d: du NO2
     answer_correct: c
-    answer_explanation: Le permafrost (ou pergélisol) est un terme géologique qui désigne un sol dont la température se maintient en dessous de 0°C pendant plus de deux ans consécutifs. Il représente 20% de la surface terrestre de la planète.
+    answer_explanation: "Le permafrost (ou pergélisol) est un terme géologique
+      qui désigne un sol dont la température se maintient en dessous de 0°C
+      pendant plus de deux ans consécutifs. Il représente 20% de la surface
+      terrestre de la planète."
     answer_additional_links: https://www.france24.com/fr/20180125-le-permafrost-cette-bombe-a-retardement-sous-larctique
     answer_image_link: ''
     author: Matthieu M
@@ -738,7 +742,9 @@
     answer_option_c: "la fréquence des événements météorologiques extrèmes"
     answer_option_d: "la concentration d'oxygène dans l'air"
     answer_correct: b
-    answer_explanation: "De nombreux organismes marins sont sensibles à cette baisse de pH : les coraux, les mollusques et certains planctons sont ainsi privés des ions carbonate nécessaires pour construire leurs coquilles et leurs squelettes."
+    answer_explanation: "De nombreux organismes marins sont sensibles à cette baisse
+      de pH : les coraux, les mollusques et certains planctons sont ainsi privés
+      des ions carbonate nécessaires pour construire leurs coquilles et leurs squelettes."
     answer_additional_links: https://www.lemonde.fr/biodiversite/article/2014/10/08/l-acidification-des-oceans-aura-d-importantes-consequences-pour-la-biodiversite_4502183_1652692.html
     answer_image_link: ''
     author: Matthieu M
@@ -757,7 +763,10 @@
     answer_option_c: l'industrie
     answer_option_d: les transports
     answer_correct: a
-    answer_explanation: "Les principales causes de déforestation sont l’agriculture (soja, huile de palme, ...) et l’élevage. Mais il y a aussi la construction de barrages hydroélectriques et d’infrastructures routières, l’industrie minière, les feux de forêt et le trafic de bois."
+    answer_explanation: "Les principales causes de déforestation sont l’agriculture
+      (soja, huile de palme, ...) et l’élevage. Mais il y a aussi la construction
+      de barrages hydroélectriques et d’infrastructures routières, l’industrie
+      minière, les feux de forêt et le trafic de bois."
     answer_additional_links: https://www.lemonde.fr/planete/article/2015/09/07/80-de-la-deforestation-est-due-a-l-agriculture_4747867_3244.html
     answer_image_link: https://mongabay-images.s3.amazonaws.com/14/0911-report-chart.jpg
     author: Matthieu M
@@ -949,8 +958,10 @@
     answer_option_c: 95%
     answer_option_d: 100%
     answer_correct: c
-    answer_explanation: "Autrement dit 'extrêmement probable'. Cette probabilité était de 90 % dans le précédent rapport du Giec en 2007 et de 66 % dans celui de 2001."
-    answer_additional_links: "https://www.lemonde.fr/planete/article/2014/04/14/rechauffement-les-dix-points-marquants-du-rapport-du-giec_4399907_3244.html"
+    answer_explanation: "Autrement dit 'extrêmement probable'. Cette probabilité
+      était de 90 % dans le précédent rapport du Giec en 2007 et de 66 %
+      dans celui de 2001."
+    answer_additional_links: https://www.lemonde.fr/planete/article/2014/04/14/rechauffement-les-dix-points-marquants-du-rapport-du-giec_4399907_3244.html
     answer_image_link: ''
     author: Matthieu M
     publish: true
@@ -993,7 +1004,9 @@
     answer_option_c: "+6°C à +10°C"
     answer_option_d: "+9°C à +15°C"
     answer_correct: c
-    answer_explanation: "La surface de la Terre est recouverte à 70 % par les océans, les 30 % restants étant les terres émergées. Ces dernières se réchauffent en moyenne deux fois plus vite..."
+    answer_explanation: "La surface de la Terre est recouverte à 70 % par les océans,
+      les 30 % restants étant les terres émergées. Ces dernières se réchauffent
+      en moyenne deux fois plus vite..."
     answer_additional_links: https://www.notre-planete.info/terre/climatologie_meteo/changement-climatique-donnees.php
     answer_image_link: http://berkeleyearth.org/wp-content/uploads/2018/01/LandOcean2017-1024x582.png
     author: Matthieu M
@@ -1083,8 +1096,8 @@
 - model: api.question
   pk: 53
   fields:
-    text: "D'après l'ONU, le nombre de décès causés chaque année par la pollution
-      est de..."
+    text: "D'après l'ONU, le nombre de décès causés chaque année par
+      la pollution est de..."
     type: QCM
     category: pollution
     difficulty: 1
@@ -1093,7 +1106,8 @@
     answer_option_c: 9 millions de morts
     answer_option_d: 90 millions de morts
     answer_correct: c
-    answer_explanation: Principalement dues aux pollutions de l'eau et de l'air (7 millions)
+    answer_explanation: Principalement dues aux pollutions de l'eau et de l'air (7
+      millions)
     answer_additional_links: https://news.un.org/fr/story/2019/06/1044821
     answer_image_link: https://img.aws.la-croix.com/2017/10/20/1200885917/En-20015-9-millions-deces-prematures-etaient-pollution-monde_1_1398_584.jpg
     author: Matthieu M
@@ -1300,7 +1314,8 @@
 - model: api.question
   pk: 63
   fields:
-    text: "En 2050, quel est le ratio mondiale prévu entre retraités et actifs ?"
+    text: "En 2050, quel est le ratio mondiale prévu entre retraités et actifs
+      ?"
     type: QCM
     category: histoire
     difficulty: 1
@@ -1631,9 +1646,9 @@
     category: consommation
     difficulty: 2
     answer_option_a: "Même pas un"
-    answer_option_b: "1"
-    answer_option_c: "10"
-    answer_option_d: "50"
+    answer_option_b: '1'
+    answer_option_c: '10'
+    answer_option_d: '50'
     answer_correct: b
     answer_explanation: Un A/R Paris-New York, c'est 1900 kg de CO2 par personne.
     answer_additional_links: https://www.liberation.fr/checknews/2019/02/13/est-ce-qu-un-aller-retour-en-avion-a-bali-emet-autant-de-co2-qu-une-annee-de-vie-en-france_1708854
@@ -1737,7 +1752,8 @@
     answer_option_c: Les Etats-Unis
     answer_option_d: La France
     answer_correct: c
-    answer_explanation: Ce sont les pays du golfe (Qatar, Koweit, Arabie Saoudite) qui arrivent en tête de ce classement.
+    answer_explanation: "Ce sont les pays du golfe (Qatar, Koweit, Arabie Saoudite)
+      qui arrivent en tête de ce classement."
     answer_additional_links: https://ourworldindata.org/grapher/co-emissions-per-capita?tab=chart
     answer_image_link: https://s.brsimg.com/static-000/cache/i/content/images/e/5/9/e59d07745c97e38a630b9c264d377837-1024x658.jpg
     author: Avenir Climatique (Quizz)
