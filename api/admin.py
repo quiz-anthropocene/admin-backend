@@ -4,13 +4,12 @@ from datetime import datetime
 # from io import StringIO
 
 from django.contrib import admin
+from django.conf import settings
 from django.http import HttpResponse
 from django.core import serializers
-from django.conf import settings
 from django.core.serializers.json import DjangoJSONEncoder
 from django.db.models import Count
-from django.db.models.functions import TruncDay
-from django.db.utils import OperationalError
+from django.utils.html import mark_safe
 # from django.core.management import call_command
 
 from api.models import Question, QuestionStat, Contribution
@@ -78,12 +77,33 @@ class ExportMixin:
 class QuestionAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
         "id", "text", "category", "difficulty", "author", "publish", # "type",
-        "has_answer_explanation", "has_answer_additional_links", "has_answer_image_link",
-        "answer_count", "answer_success_count",
+        "has_answer_explanation", "has_answer_additional_link", "has_answer_image_link",
+        "answer_count", "answer_success_count", "answer_success_rate",
     )
     list_filter = ("category", "difficulty", "author", "publish",) # "type",
-    ordering = ("id",)
+    ordering = ("id", ) # "answer_count", "answer_success_rate",
     actions = ["export_as_csv", "export_as_json", "export_as_yaml", "export_all_question_as_yaml"]
+    readonly_fields = ("show_answer_image", "answer_count", "answer_success_count", "answer_success_rate",)
+
+    def has_answer_explanation(self, instance):
+        return instance.has_answer_explanation
+    has_answer_explanation.short_description = "Explication"
+    has_answer_explanation.boolean = True
+
+    def has_answer_additional_link(self, instance):
+        return instance.has_answer_additional_link
+    has_answer_additional_link.short_description = "Lien(s)"
+    has_answer_additional_link.boolean = True
+
+    def has_answer_image_link(self, instance):
+        return instance.has_answer_image_link
+    has_answer_image_link.short_description = "Image"
+    has_answer_image_link.boolean = True
+
+    def show_answer_image(self, instance):
+        return mark_safe(f'<a href="{instance.answer_image_link}" target="_blank"><img src="{instance.answer_image_link}" height=300 /></a>')
+    show_answer_image.short_description = "L'image du champ 'Answer image link' (cliquer pour agrandir)"
+    show_answer_image.allow_tags = True
 
 
 class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):

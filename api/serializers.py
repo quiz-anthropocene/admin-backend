@@ -9,7 +9,7 @@ class QuestionSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'text', 'type', 'category', 'difficulty', 'author',
             'answer_option_a', 'answer_option_b', 'answer_option_c', 'answer_option_d',
-            'answer_correct', 'answer_explanation', 'answer_additional_links', 'answer_image_link',
+            'answer_correct', 'answer_explanation', 'answer_additional_link', 'answer_image_link',
             'answer_count', 'answer_success_count',
             'created', 'updated'
         ]

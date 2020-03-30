@@ -11,7 +11,7 @@
     answer_option_d: Une courte réponse
     answer_correct: Lettre minuscule entre a et d
     answer_explanation: "Une explication et/ou un commentaire à propos la réponse"
-    answer_additional_links: Un lien et/ou du texte additionel pour en savoir plus
+    answer_additional_link: Un lien pour aller plus loin
     answer_image_link: "Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée en bas de l'image)"
     created: Date au format YYYY-MM-DD
     updated: Date au format YYYY-MM-DD

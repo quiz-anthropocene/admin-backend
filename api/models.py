@@ -43,8 +43,8 @@ class Question(models.Model):
     answer_option_d = models.CharField(max_length=150, help_text="La réponse d")
     answer_correct = models.CharField(max_length=50, blank=False, help_text="a, b, c ou d")
     answer_explanation = models.TextField(blank=True, help_text="Un petit texte d'explication")
-    answer_additional_links = models.TextField(blank=True, help_text="Un ou des liens pour aller plus loin")
-    answer_image_link = models.TextField(blank=True, help_text="Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée en bas de l'image)")
+    answer_additional_link = models.URLField(max_length=500, blank=True, help_text="Un lien pour aller plus loin")
+    answer_image_link = models.URLField(max_length=500, blank=True, help_text="Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée en bas de l'image)")
     author = models.CharField(max_length=50, blank=True, help_text="L'auteur de la question")
     publish = models.BooleanField(default=False, blank=False, help_text="La question est prête à être publiée")
     created = models.DateField()
@@ -60,8 +60,8 @@ class Question(models.Model):
         return len(self.answer_explanation) > 0
 
     @property
-    def has_answer_additional_links(self):
-        return len(self.answer_additional_links) > 0
+    def has_answer_additional_link(self):
+        return len(self.answer_additional_link) > 0
 
     @property
     def has_answer_image_link(self):
@@ -75,12 +75,14 @@ class Question(models.Model):
     def answer_success_count(self):
         return QuestionStat.objects.filter(question=self.id, answer_choice=self.answer_correct).count()
 
+    @property
+    def answer_success_rate(self):
+        return 0 if (self.answer_count == 0) else int((self.answer_success_count / self.answer_count) * 100)
+
     # Admin
-    has_answer_explanation.fget.short_description = "Explication"
-    has_answer_additional_links.fget.short_description = "Lien(s)"
-    has_answer_image_link.fget.short_description = "Image"
     answer_count.fget.short_description = "# Rép"
     answer_success_count.fget.short_description = "# Rép Corr"
+    answer_success_rate.fget.short_description = "% Rép Corr"
 
 
 class QuestionStat(models.Model):

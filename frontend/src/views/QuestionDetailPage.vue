@@ -55,7 +55,7 @@
         ℹ️&nbsp;{{ question.answer_explanation }}
       </p>
       <p title="Lien(s) pour aller plus loin">
-        🔗&nbsp;<a v-bind:href="question.answer_additional_links" target="_blank">{{ question.answer_additional_links }}</a>
+        🔗&nbsp;<a v-bind:href="question.answer_additional_link" target="_blank">{{ question.answer_additional_link }}</a>
       </p>
       <p v-if="question.answer_image_link" class="answer-image" title="Une image pour illustrer la réponse">
         <a v-bind:href="question.answer_image_link" target="_blank">
