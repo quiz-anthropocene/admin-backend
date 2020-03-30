@@ -7,8 +7,6 @@
 
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <!-- <h1 class="display-4">Fluid jumbotron</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
         <div class="row">
           <div class="col-sm padding-top-bottom-15">
             <svg class="bi bi-clipboard-data text-primary" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -143,34 +141,7 @@ svg {
   transform: scale(1.03);
 }
 
-.category {
-  display: inline-block;
-  border: 1px solid var(--secondary);
-  border-radius: 5px;
-  margin: 2.5px;
-  padding: 5px;
-  cursor: pointer;
-}
-.category-active {
-  background-color: #f88787;
-  text-shadow: 0px 0px 1px black;
-}
-
-.row-item-question {
-  height: 150px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.1s;
-  border: 2px solid var(--primary);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-@media(hover: hover) and (pointer: fine) {
-  .category:hover {
-    background-color: #f88787;
-  }
-  .row-item-question:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+.btn-lg {
+  line-height: 3;
 }
 </style>

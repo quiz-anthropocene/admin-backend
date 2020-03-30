@@ -22,7 +22,7 @@
     <h3>Open source</h3>
     <p>
       Le code de l'application, ainsi que les questions, sont visibles sur <a href="https://github.com/raphodn/know-your-planet" target="_blank">la page Github de l'application</a>.
-      Si vous avez des commentaires ou des suggestions, vous pouvez pour y créer des <i>Issues</i> 🙏
+      Si vous avez des commentaires ou des suggestions, vous pouvez y créer des <i>Issues</i> 🙏
     </p>
     <p>
       
