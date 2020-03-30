@@ -49,10 +49,10 @@ class ExportMixin:
         return response
 
     def export_all_question_as_yaml(self, request, queryset):
-        return self.export_as_yaml(request, Question.objects.all())
+        return self.export_as_yaml(request, Question.objects.all().order_by("pk"))
 
     def export_all_questionstat_as_yaml(self, request, queryset):
-        return self.export_as_yaml(request, QuestionStat.objects.all())
+        return self.export_as_yaml(request, QuestionStat.objects.all().order_by("pk"))
 
     # def export_all_as_yaml(self, request):
     #     meta = self.model._meta
