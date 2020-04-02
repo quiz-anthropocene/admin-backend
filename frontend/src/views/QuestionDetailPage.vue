@@ -234,8 +234,14 @@ export default {
   height: 300px;
 }
 .answer p.answer-image img {
-  max-height: 90%;
+  max-height: 100%;
   max-width: 100%;
   margin: auto;
+}
+
+@media all and (min-width: 60em) {
+  .answer p.answer-image {
+    height: 500px;
+  }
 }
 </style>

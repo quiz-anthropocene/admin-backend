@@ -3,10 +3,8 @@
     <h2>Contribuer !</h2>
 
     <p>
-      Vous pensez qu'il manque une question ? Envoyez-nous votre idée en remplissant le petit formulaire ci-dessous 👇
-    </p>
-    <p>
-      Rappel des <span class="text-secondary">catégories</span>: <span v-for="category in categories" :key="category">{{ category }}, </span>...
+      Vous souhaitez rajouter une question ? Ou faire un commentaire sur le contenu existant ?<br />
+      Envoyez-nous ça en remplissant le petit formulaire ci-dessous 👇
     </p>
 
     <br />
@@ -14,23 +12,54 @@
     <br />
 
     <form @submit.prevent="submitContribution" v-if="!contributionSubmitted">
-      <h3 class="margin-bottom-0">
-        <label for="question_text">Votre question <span class="color-red">*</span></label>
-      </h3>
-      <div class="help">
-        <small><i>En 1 ou 2 phrases au maximum</i></small>
+      <div class="form-group">
+        <h3 class="margin-bottom-0">
+          <label for="contribution_type">Ma contribution est ...</label>
+        </h3>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" v-bind:value="true" v-model="contribution.is_question">
+          <label class="custom-control-label" for="customRadioInline1">Une question</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" v-bind:value="false" v-model="contribution.is_question">
+          <label class="custom-control-label" for="customRadioInline2">Un commentaire</label>
+        </div>
       </div>
-      <input type="text" id="question_text" class="form-control" cols="95" v-model="contribution.question_text" placeholder="Que signifie le sigle GIEC ?" required />
-      <h3 class="margin-bottom-0">
-        <label for="text">Informations supplémentaires <small>(optionnel)</small></label>
-      </h3>
-      <div class="help">
-        <small><i>La réponse et un peu d'explication, un lien pour aller plus loin, ...</i></small>
+      
+      <div class="form-group" v-if="contribution.is_question">
+        <h3 class="margin-bottom-0">
+          <label for="contribution_text">Votre question <span class="color-red">*</span></label>
+        </h3>
+        <div class="help">
+          <small><i>En 1 ou 2 phrases au maximum</i></small>
+        </div>
+        <input type="text" id="contribution_text" class="form-control" v-model="contribution.text" placeholder="Que signifie le sigle GIEC ?" required />
       </div>
-      <textarea id="additional_info" class="form-control" rows="5" cols="95" v-model="contribution.additional_info" placeholder="C'est le Groupe d'experts Intergouvernemental sur l'Evolution du Climat. Plus d'infos ici: https://www.ecologique-solidaire.gouv.fr/comprendre-giec"></textarea>
-      <p>
-        <button type="submit" class="btn btn-outline-primary" :disabled="!contribution.question_text">📩&nbsp;Envoyer !</button>
-      </p>
+      <div class="form-group" v-if="contribution.is_question">
+        <h3 class="margin-bottom-0">
+          <label for="text">Informations supplémentaires <small>(optionnel)</small></label>
+        </h3>
+        <div class="help">
+          <small><i>La réponse et un peu d'explication, un lien pour aller plus loin, ...</i></small>
+        </div>
+        <textarea id="additional_info" class="form-control" rows="5" v-model="contribution.additional_info" placeholder="C'est le Groupe d'experts Intergouvernemental sur l'Evolution du Climat. Plus d'infos ici: https://www.ecologique-solidaire.gouv.fr/comprendre-giec"></textarea>
+      </div>
+
+      <div class="form-group" v-if="!contribution.is_question">
+        <h3 class="margin-bottom-0">
+          <label for="contribution_text">Votre commentaire <span class="color-red">*</span></label>
+        </h3>
+        <div class="help">
+          <small><i>Lâchez-vous :)</i></small>
+        </div>
+        <textarea id="contribution_text" class="form-control"  rows="5" v-model="contribution.text" required></textarea>
+      </div>
+      
+      <div class="form-group">
+        <p>
+          <button type="submit" class="btn btn-outline-primary" :disabled="!contribution.text">📩&nbsp;Envoyer !</button>
+        </p>
+      </div>
     </form>
 
     <div v-if="contributionSubmitted && loading" class="loading">
@@ -52,7 +81,7 @@
     <div class="row actions text-center justify-content-end">
       <div class="col-sm">
         <div v-if="contributionSubmitted" @click="init()">
-          ✍️&nbsp;Nouvelle contribution
+          <a href="#">✍️&nbsp;Nouvelle contribution</a>
         </div>
       </div>
       <div class="col-sm">
@@ -80,7 +109,8 @@ export default {
     return {
       categories: ['action', 'biodiversité', 'climat', 'consommation', 'énergie', 'histoire', 'pollution', 'ressources', 'science', 'autre'],
       contribution: {
-        question_text: "",
+        is_question: true,
+        text: "",
         additional_info: ""
       },
       contributionSubmitted: false,
@@ -97,7 +127,8 @@ export default {
   methods: {
     init() {
       this.contribution = {
-        question_text: "",
+        is_question: true,
+        text: "",
         additional_info: ""
       },
       this.contributionSubmitted = false;

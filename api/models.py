@@ -94,8 +94,9 @@ class QuestionStat(models.Model):
 
 
 class Contribution(models.Model):
-    text = models.TextField(blank=False)
-    description = models.TextField()
+    text = models.TextField(blank=False, help_text="La contribution de l'utilisateur (une question ou un commentaire)")
+    description = models.TextField(help_text="Informations supplémentaires sur la contribution (réponse, lien, ...)")
+    is_question = models.BooleanField(default=True, help_text="La contribution est une question")
     created = models.DateTimeField(auto_now=True, help_text="La date & heure de la contribution")
 
     def __str__(self):

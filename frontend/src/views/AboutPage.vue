@@ -15,7 +15,7 @@
       On est preneur de tous vos retours !
     </p>
     <p>
-      Une page <router-link :to="{ name: 'contribute' }">✍️&nbsp;Contribution</router-link> vous permet de rajouter une question ou un sujet qui vous tiens à coeur.
+      Une page <router-link :to="{ name: 'contribute' }">✍️&nbsp;Contribution</router-link> vous permet de rajouter une question ou un sujet qui vous tiens à coeur. Vous pouvez aussi y laisser vos commentaires et remarques !
     </p>
 
     <br />

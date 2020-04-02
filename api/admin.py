@@ -137,6 +137,10 @@ class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
         return super().changelist_view(request, extra_context=extra_context)
 
 
+class ContributionAdmin(admin.ModelAdmin, ExportMixin):
+    list_display = ("id", "is_question", "text", "created",)
+
+
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(QuestionStat, QuestionStatAdmin)
-admin.site.register(Contribution)
+admin.site.register(Contribution, ContributionAdmin)
