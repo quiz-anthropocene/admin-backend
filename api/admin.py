@@ -4,6 +4,7 @@ from datetime import datetime
 # from io import StringIO
 
 from django.contrib import admin
+from django.contrib.admin.models import LogEntry
 from django.conf import settings
 from django.http import HttpResponse
 from django.core import serializers
@@ -141,6 +142,24 @@ class ContributionAdmin(admin.ModelAdmin, ExportMixin):
     list_display = ("id", "is_question", "text", "created",)
 
 
+class LogEntryAdmin(admin.ModelAdmin):
+    """
+    https://docs.djangoproject.com/en/3.0/ref/contrib/admin/#logentry-objects
+    """
+    list_display = ("object_repr", "content_type", "action_flag", "user", "action_time",)
+    ordering = ("-action_time",)
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(QuestionStat, QuestionStatAdmin)
 admin.site.register(Contribution, ContributionAdmin)
+admin.site.register(LogEntry, LogEntryAdmin)
