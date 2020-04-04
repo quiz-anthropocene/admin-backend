@@ -1615,7 +1615,7 @@
 - model: api.question
   pk: 77
   fields:
-    text: "Quelle proportion des gaz à effet de serre les 10% les plus pauvres
+    text: "Quelle proportion des gaz à effet de serre les 50% les plus pauvres
       de la planète émettent-ils ?"
     type: QCM
     category: consommation
@@ -1624,7 +1624,7 @@
     answer_option_b: 10%
     answer_option_c: 50%
     answer_option_d: 80%
-    answer_correct: c
+    answer_correct: b
     answer_explanation: "Que ce soit au niveau mondial ou en France, la quantité
       de CO2 émise est étroitement liée au niveau de revenu des habitants,
       selon les travaux des économistes Lucas Chancel et Thomas Piketty. C'est
