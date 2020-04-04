@@ -1233,8 +1233,8 @@
     type: QCM
     category: "biodiversité"
     difficulty: 2
-    answer_option_a: 10%
-    answer_option_b: 30%
+    answer_option_a: 12%
+    answer_option_b: 31%
     answer_option_c: 58%
     answer_option_d: 75%
     answer_correct: c
