@@ -1,6 +1,25 @@
 from rest_framework import serializers
 
-from api.models import Question, QuestionTag, QuestionStat, Contribution
+from api.models import Question, QuestionCategory, QuestionTag, QuestionStat, Contribution
+
+
+class QuestionCategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = QuestionCategory
+        fields = [
+            'id', 'name', 'description',
+            # 'question_count'
+        ]
+
+class QuestionCategoryStringSerializer(serializers.ModelSerializer):
+    def to_representation(self, value):
+        return value.name
+
+    class Meta:
+        model = QuestionCategory
+        fields = [
+            'name'
+        ]
 
 
 class QuestionTagSerializer(serializers.ModelSerializer):

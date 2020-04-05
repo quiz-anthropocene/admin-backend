@@ -1,6 +1,20 @@
 from django.db import models
 
 
+class QuestionCategory(models.Model):
+    name = models.CharField(max_length=50, blank=False, help_text="Le nom de la catégorie")
+    name_long = models.CharField(max_length=150, blank=False, help_text="Le nom allongé de la catégorie")
+    description = models.TextField(blank=True, help_text="Une description de la catégorie")
+    created = models.DateField(auto_now=True, help_text="La date & heure de la création de la catégorie")
+
+    def __str__(self):
+        return f"{self.name}"
+
+    # @property
+    # def question_count(self):
+    #     return self.questions.count()
+
+
 class QuestionTag(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du tag")
     description = models.TextField(blank=True, help_text="Une description du tag")
@@ -20,7 +34,6 @@ class QuestionQuerySet(models.QuerySet):
 
     def for_category(self, category):
         return self.filter(category=category)
-
 
 class Question(models.Model):
     QUESTION_TYPES = [
@@ -47,6 +60,7 @@ class Question(models.Model):
     text = models.TextField(blank=False, help_text="La question en 1 ou 2 phrases")
     type = models.CharField(max_length=50, choices=QUESTION_TYPES, blank=False, help_text="Le type de question (QCM, V/F, ...)")
     category = models.CharField(max_length=50, choices=QUESTION_CATEGORIES, blank=False, help_text="Une seule catégorie possible parmi la liste")
+    # category = models.ForeignKey(QuestionCategory, blank=True, null=True, on_delete=models.SET_NULL, help_text="Une seule catégorie possible")
     tags = models.ManyToManyField(QuestionTag, blank=True, related_name="questions", help_text="Un ou plusieurs tags rattaché à la question")
     difficulty = models.IntegerField(choices=QUESTION_DIFFICULTY, blank=False, help_text="Le niveau de difficulté de la question")
     answer_option_a = models.CharField(max_length=150, help_text="La réponse a")

@@ -1,0 +1,59 @@
+- model: api.questioncategory
+  pk: 1
+  fields:
+    name: climat
+    name_long: Climat
+    description: "Dérèglement climatique"
+    created: 2020-04-05
+- model: api.questioncategory
+  pk: 2
+  fields:
+    name: consommation
+    name_long: Consommation, Leviers d'action
+    description: Impact de nos modes de vie, notre consommation
+    created: 2020-04-05
+- model: api.questioncategory
+  pk: 3
+  fields:
+    name: pollution
+    name_long: Pollution
+    description: "Emissions de gaz, mer, déchets..."
+    created: 2020-04-05
+- model: api.questioncategory
+  pk: 4
+  fields:
+    name: "biodiversité"
+    name_long: "Biodiversité"
+    description: ''
+    created: 2020-04-05
+- model: api.questioncategory
+  pk: 5
+  fields:
+    name: "énergie"
+    name_long: Energie
+    description: ''
+    created: 2020-04-05
+- model: api.questioncategory
+  pk: 6
+  fields:
+    name: histoire
+    name_long: "Histoire, Anthropologie, Politique, Démographie"
+    description: ''
+    created: 2020-04-05
+- model: api.questioncategory
+  pk: 7
+  fields:
+    name: ressources
+    name_long: Ressources
+    description: "Sur la façon dont l'humanité puise dans les ressources de
+      la terre, renouvelables et non-renouvelables."
+    created: 2020-04-05
+- model: api.questioncategory
+  pk: 8
+  fields:
+    name: autres
+    name_long: Autres
+    description: "Tout ce qui ne rentre pas dans les catégories précédents.
+      Notamment des questions de culture générale. Ex: "qu'est-ce que l'ADEME
+      ?""
+    created: 2020-04-05

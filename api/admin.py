@@ -12,7 +12,7 @@ from django.db.models import Count
 from django.utils.html import mark_safe
 # from django.core.management import call_command
 
-from api.models import Question, QuestionTag, QuestionStat, Contribution
+from api.models import Question, QuestionCategory, QuestionTag, QuestionStat, Contribution
 
 
 class ExportMixin:
@@ -108,8 +108,15 @@ class QuestionAdmin(admin.ModelAdmin, ExportMixin):
     show_answer_image.allow_tags = True
 
 
-class QuestionTagAdmin(admin.ModelAdmin):
+class QuestionCategoryAdmin(admin.ModelAdmin, ExportMixin):
+    list_display = ("id", "name", "name_long",) # "question_count"
+    ordering = ("id", )
+    actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
+
+
+class QuestionTagAdmin(admin.ModelAdmin, ExportMixin):
     list_display = ("id", "name", "question_count",)
+    actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
 
 
 class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
@@ -145,6 +152,16 @@ class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
 
 class ContributionAdmin(admin.ModelAdmin, ExportMixin):
     list_display = ("id", "is_question", "text", "created",)
+    readonly_fields = ("text", "description",)
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    # def has_change_permission(self, request, obj=None):
+    #     return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 
 class LogEntryAdmin(admin.ModelAdmin):
@@ -165,6 +182,7 @@ class LogEntryAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Question, QuestionAdmin)
+admin.site.register(QuestionCategory, QuestionCategoryAdmin)
 admin.site.register(QuestionTag, QuestionTagAdmin)
 admin.site.register(QuestionStat, QuestionStatAdmin)
 admin.site.register(Contribution, ContributionAdmin)
