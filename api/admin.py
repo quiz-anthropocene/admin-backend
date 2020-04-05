@@ -45,6 +45,7 @@ class ExportMixin:
         response = HttpResponse(content_type="text/yaml")
         response['Content-Disposition'] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.yaml"
         
+        # TODO: escape \"
         response.write(serializers.serialize("yaml", queryset).encode().decode("unicode_escape").encode("utf-8"))
         
         return response

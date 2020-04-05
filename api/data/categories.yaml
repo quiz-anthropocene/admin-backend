@@ -54,6 +54,6 @@
     name: autres
     name_long: Autres
     description: "Tout ce qui ne rentre pas dans les catégories précédents.
-      Notamment des questions de culture générale. Ex: "qu'est-ce que l'ADEME
-      ?""
+      Notamment des questions de culture générale. Ex: \"qu'est-ce que l'ADEME
+      ?\""
     created: 2020-04-05

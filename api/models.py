@@ -60,7 +60,7 @@ class Question(models.Model):
     text = models.TextField(blank=False, help_text="La question en 1 ou 2 phrases")
     type = models.CharField(max_length=50, choices=QUESTION_TYPES, blank=False, help_text="Le type de question (QCM, V/F, ...)")
     category = models.CharField(max_length=50, choices=QUESTION_CATEGORIES, blank=False, help_text="Une seule catégorie possible parmi la liste")
-    # category = models.ForeignKey(QuestionCategory, blank=True, null=True, on_delete=models.SET_NULL, help_text="Une seule catégorie possible")
+    category_temp = models.ForeignKey(QuestionCategory, blank=True, null=True, on_delete=models.SET_NULL, help_text="Une seule catégorie possible")
     tags = models.ManyToManyField(QuestionTag, blank=True, related_name="questions", help_text="Un ou plusieurs tags rattaché à la question")
     difficulty = models.IntegerField(choices=QUESTION_DIFFICULTY, blank=False, help_text="Le niveau de difficulté de la question")
     answer_option_a = models.CharField(max_length=150, help_text="La réponse a")
