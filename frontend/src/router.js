@@ -35,7 +35,7 @@ const routes = [
     }
   },
   {
-    path: '/categories/:categoryKey', name: 'category-detail', component: CategoryDetailPage,
+    path: '/categories/:categoryName', name: 'category-detail', component: CategoryDetailPage,
     meta: {
       title: "Know Your Planet - Catégorie "
     }
@@ -69,8 +69,8 @@ router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     if (to.params.questionId) {
       document.title = to.meta.title + (to.params.questionId ? `#${to.params.questionId}` : '');
-    } else if (to.params.categoryKey) {
-      document.title = to.meta.title + (to.params.categoryKey ? `#${to.params.categoryKey}` : '');
+    } else if (to.params.categoryName) {
+      document.title = to.meta.title + (to.params.categoryName ? `#${to.params.categoryName}` : '');
     }
   } else {
     document.title = 'Know Your Planet';

@@ -99,7 +99,7 @@ def question_stats(request):
     Retrieve stats on all the questions
     """
     question_publish_stats = Question.objects.values("publish").annotate(count=Count("publish")).order_by("-count")
-    question_category_stats = Question.objects.values("category").annotate(count=Count("category")).order_by("-count")
+    question_category_stats = QuestionCategory.objects.values("name").annotate(count=Count("questions")).order_by("-count")
     # question_answer_stats = QuestionStat.objects.extra(select={'day': "to_char(created, 'YYYY-MM-DD')"}).values("day").annotate(Count("created"))
     # question_answer_stats = QuestionStat.objects.extra(select={'day': "date(created)"}).values("day").annotate(count=Count("created")) #.order_by("day")
     question_answer_count_stats = QuestionStat.objects.count()
@@ -109,22 +109,6 @@ def question_stats(request):
         # "answer": question_answer_stats
         "answer_count": question_answer_count_stats
     })
-
-
-@api_view(["GET"])
-def category_old_list(request):
-    """
-    List all categories (with the number of questions per category)
-    """
-    category_list = list()
-    for category_tuple in Question.QUESTION_CATEGORIES:
-        category_question_count = Question.objects.published().for_category(category_tuple[0]).count()
-        category_list.append({
-            "key": category_tuple[0],
-            "name": category_tuple[1],
-            "question_count": category_question_count
-        })
-    return Response(category_list)
 
 
 @api_view(["GET"])

@@ -110,7 +110,7 @@ class QuestionAdmin(admin.ModelAdmin, ExportMixin):
 
 
 class QuestionCategoryAdmin(admin.ModelAdmin, ExportMixin):
-    list_display = ("id", "name", "name_long",) # "question_count"
+    list_display = ("id", "name", "name_long", "question_count",)
     ordering = ("id", )
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
 

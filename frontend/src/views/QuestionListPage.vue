@@ -4,7 +4,7 @@
     
     <!-- Filtre: catégorie -->
     <div>
-      <span class="category" v-for="category in categories" :key="category" :class="{ 'category-active' : category === categorySelected }" @click="clickCategory(category)">{{ category }}</span>
+      <span class="category" v-for="category in categories" :key="category.name" :class="{ 'category-active' : category.name === categorySelected }" @click="clickCategory(category.name)">{{ category.name }}</span>
     </div>
 
     <br />
@@ -28,8 +28,20 @@
 
     <br />
     <hr v-if="questions" />
-    <div v-if="questions" class="row actions justify-content-end">
-      <div class="col-sm-4">
+    <div v-if="questions" class="row actions">
+      <div class="col-sm">
+        <router-link :to="{ name: 'category-list' }">
+          Toutes les catégories
+        </router-link>
+        <br />
+      </div>
+      <div class="col-sm">
+        <router-link :to="{ name: 'about' }">
+          ℹ️&nbsp;À propos de cette application
+        </router-link>
+        <br />
+      </div>
+      <div class="col-sm">
         <HomeLink />
       </div>
     </div>
@@ -49,7 +61,7 @@ export default {
 
   data () {
     return {
-      categories: ['action', 'biodiversité', 'climat', 'consommation', 'énergie', 'histoire', 'pollution', 'ressources', 'science', 'autre'],
+      categories: null,
       categorySelected: null,
       questions: null,
       questionsDisplayed: null,
@@ -59,10 +71,27 @@ export default {
   },
 
   created () {
+    this.fetchCategories()
     this.fetchQuestions()
   },
 
   methods: {
+    fetchCategories() {
+      this.error = this.categories = null;
+      this.loading = true;
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/categories`)
+        .then(response => {
+          this.loading = false
+          return response.json()
+        })
+        .then(data => {
+          this.categories = data;
+        })
+        .catch(error => {
+          console.log(error)
+          this.error = error;
+        })
+    },
     fetchQuestions() {
       this.error = this.questions = this.questionsDisplayed = null
       this.loading = true

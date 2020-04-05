@@ -5,15 +5,15 @@
     <h3>Questions</h3>
     <p>
       Il y a actuellement <strong v-if="questionPublishStats">{{ questionPublishStats[0]["count"] }}</strong> questions publiées,
-      et <strong v-if="questionPublishStats">{{ questionPublishStats[1]["count"] }}</strong> en cours de rédaction/publication.
+      et <strong v-if="questionPublishStats">{{ questionPublishStats[1]["count"] }}</strong> en cours de validation.
     </p>
 
     <br />
     <h3>Catégories</h3>
     Questions par catégories:
     <ul>
-      <li v-for="categoryStat in questionCategoryStats" :key="categoryStat.category">
-        {{ categoryStat["category"] }}: <strong>{{ categoryStat["count"] }}</strong>
+      <li v-for="categoryStat in questionCategoryStats" :key="categoryStat.name">
+        {{ categoryStat["name"] }}: <strong>{{ categoryStat["count"] }}</strong>
       </li>
     </ul>
 
@@ -23,8 +23,15 @@
     
     <br />
     <hr />
-    <div class="row actions text-center justify-content-end">
-      <div class="col-sm-4">
+    <div class="row actions text-center">
+      <div class="col-sm"></div>
+      <div class="col-sm">
+        <router-link :to="{ name: 'about' }">
+          ℹ️&nbsp;À propos de cette application
+        </router-link>
+        <br />
+      </div>
+      <div class="col-sm">
         <HomeLink />
       </div>
     </div>

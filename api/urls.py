@@ -9,8 +9,7 @@ urlpatterns = [
     path('questions/<int:pk>/stats', views.question_detail_stats),
     path('questions/random', views.question_random),
     path('questions/stats', views.question_stats),
-    path('categories', views.category_old_list),
-    path('categories/new', views.category_list),
+    path('categories', views.category_list),
     path('tags', views.tag_list),
     path('contribute', views.contribute),
 ]

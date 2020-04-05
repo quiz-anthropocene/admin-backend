@@ -8,7 +8,7 @@ class QuestionCategorySerializer(serializers.ModelSerializer):
         model = QuestionCategory
         fields = [
             'id', 'name', 'description',
-            # 'question_count'
+            'question_count'
         ]
 
 class QuestionCategoryStringSerializer(serializers.ModelSerializer):
@@ -42,8 +42,8 @@ class QuestionTagStringSerializer(serializers.ModelSerializer):
 
 
 class QuestionSerializer(serializers.ModelSerializer):
-    # tags = QuestionTagStringSerializer(many=True)
-    # tags = QuestionTagSerializer(many=True)
+    category = QuestionCategoryStringSerializer()
+    tags = QuestionTagStringSerializer(many=True)
 
     class Meta:
         model = Question

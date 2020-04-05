@@ -71,6 +71,16 @@
         <br />
       </div>
     </div>
+    
+    <hr />
+
+    <div class="row actions justify-content-end">
+      <div class="col-sm-4">
+        <router-link :to="{ name: 'about' }">
+          ℹ️&nbsp;À propos de cette application
+        </router-link>
+      </div>
+    </div>
   </section>
 </template>
 

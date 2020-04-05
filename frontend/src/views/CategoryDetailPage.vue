@@ -71,13 +71,13 @@ export default {
   },
 
   mounted () {
-    this.currentCategory = this.$route.params.categoryKey;
-    this.fetchCategoryQuestions(this.$route.params.categoryKey);
+    this.currentCategory = this.$route.params.categoryName;
+    this.fetchCategoryQuestions(this.$route.params.categoryName);
   },
 
   methods: {
-    fetchCategoryQuestions(currentCategoryKey) {
-      const params = { 'category': currentCategoryKey };
+    fetchCategoryQuestions(currentcategoryName) {
+      const params = { 'category': currentcategoryName };
       const urlParams = new URLSearchParams(Object.entries(params));
       this.error = this.questions = null;
       this.loading = true;

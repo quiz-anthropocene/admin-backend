@@ -6,11 +6,26 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Des pistes dans [README#idées](README#idées)
 
-## [0.5.0] - en cours
+## [0.6.0] - en cours
 
 ### Ajouté
 
 ### Modifié
+
+## [0.5.0] - 2020-04-05
+
+### Ajouté
+
+- [Admin] Fonctions d'export de la donnée (csv, json, yaml)
+- [Admin] Graph affichant le nombre de réponses par jour
+- [Backend] Un modèle `QuestionCategory` pour stocker les catégories (au lieu d'un champ)
+- [Backend] Un modèle `QuestionTag` pour stocker les tags
+
+### Modifié
+
+- [Backend] Le champ catégorie passe d'un CharField à une ForeignKey
+- [Backend] Utilisation de URLField pour les champ url de `Question`
+- [Frontend] Rajout d'une action 'commentaire' sur la page de contribution
 
 ## [0.4.0] - 2020-03-27
 
