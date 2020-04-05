@@ -4,7 +4,6 @@ from datetime import datetime
 # from io import StringIO
 
 from django.contrib import admin
-from django.contrib.admin.models import LogEntry
 from django.conf import settings
 from django.http import HttpResponse
 from django.core import serializers
@@ -13,7 +12,7 @@ from django.db.models import Count
 from django.utils.html import mark_safe
 # from django.core.management import call_command
 
-from api.models import Question, QuestionStat, Contribution
+from api.models import Question, QuestionTag, QuestionStat, Contribution
 
 
 class ExportMixin:
@@ -36,10 +35,11 @@ class ExportMixin:
     def export_as_json(self, request, queryset):
         response = HttpResponse(content_type="application/json")
         response['Content-Disposition'] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.json"
-        
-        response.write(serializers.serialize("json", queryset, ensure_ascii=False))
-        
+
+        response.write(serializers.serialize("json", list(queryset), ensure_ascii=False))
+
         return response
+
 
     def export_as_yaml(self, request, queryset):
         response = HttpResponse(content_type="text/yaml")
@@ -81,9 +81,10 @@ class QuestionAdmin(admin.ModelAdmin, ExportMixin):
         "has_answer_explanation", "has_answer_additional_link", "has_answer_image_link",
         "answer_count", "answer_success_count", "answer_success_rate",
     )
-    list_filter = ("category", "difficulty", "author", "publish",) # "type",
+    list_filter = ("category", "tags", "difficulty", "author", "publish",) # "type",
     ordering = ("id", ) # "answer_count", "answer_success_rate",
     actions = ["export_as_csv", "export_as_json", "export_as_yaml", "export_all_question_as_yaml"]
+    filter_horizontal = ("tags",)
     readonly_fields = ("show_answer_image", "answer_count", "answer_success_count", "answer_success_rate",)
 
     def has_answer_explanation(self, instance):
@@ -105,6 +106,10 @@ class QuestionAdmin(admin.ModelAdmin, ExportMixin):
         return mark_safe(f'<a href="{instance.answer_image_link}" target="_blank"><img src="{instance.answer_image_link}" height=300 /></a>')
     show_answer_image.short_description = "L'image du champ 'Answer image link' (cliquer pour agrandir)"
     show_answer_image.allow_tags = True
+
+
+class QuestionTagAdmin(admin.ModelAdmin):
+    list_display = ("id", "name", "question_count",)
 
 
 class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
@@ -160,6 +165,7 @@ class LogEntryAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Question, QuestionAdmin)
+admin.site.register(QuestionTag, QuestionTagAdmin)
 admin.site.register(QuestionStat, QuestionStatAdmin)
 admin.site.register(Contribution, ContributionAdmin)
-admin.site.register(LogEntry, LogEntryAdmin)
+admin.site.register(admin.models.LogEntry, LogEntryAdmin)

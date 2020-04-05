@@ -6,8 +6,8 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api.models import Question, QuestionStat, Contribution
-from api.serializers import QuestionSerializer, QuestionStatSerializer, ContributionSerializer
+from api.models import Question, QuestionTag, QuestionStat, Contribution
+from api.serializers import QuestionSerializer, QuestionTagSerializer, QuestionStatSerializer, ContributionSerializer
 
 
 def api_home(request):
@@ -125,6 +125,17 @@ def category_list(request):
             "question_count": category_question_count
         })
     return Response(category_list)
+
+
+@api_view(["GET"])
+def tag_list(request):
+    """
+    List all tags (with the number of questions per tag)
+    """
+    tags = QuestionTag.objects.all()
+
+    serializer = QuestionTagSerializer(tags, many=True)
+    return Response(serializer.data)
 
 
 @api_view(["POST"])

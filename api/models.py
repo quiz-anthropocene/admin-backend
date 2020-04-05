@@ -1,6 +1,19 @@
 from django.db import models
 
 
+class QuestionTag(models.Model):
+    name = models.CharField(max_length=50, blank=False, help_text="Le nom du tag")
+    description = models.TextField(blank=True, help_text="Une description du tag")
+    created = models.DateField(auto_now=True, help_text="La date & heure de la création du tag")
+
+    def __str__(self):
+        return f"{self.name}"
+
+    @property
+    def question_count(self):
+        return self.questions.count()
+
+
 class QuestionQuerySet(models.QuerySet):
     def published(self):
         return self.exclude(publish=False)
@@ -15,15 +28,13 @@ class Question(models.Model):
         ("VF", "Vrai ou Faux"),
     ]
     QUESTION_CATEGORIES = [
-        ("action", "Leviers d'action"),
         ("biodiversité", "Biodiversité"),
         ("climat", "Climat"),
-        ("consommation", "Consommation"),
+        ("consommation", "Consommation, Leviers d'action"),
         ("énergie", "Energie"),
-        ("histoire", "Histoire, Anthropologie"),
+        ("histoire", "Histoire, Anthropologie, Politique, Démographie"),
         ("pollution", "Pollution"),
         ("ressources", "Ressources (hors énergie)"),
-        ("science", "Science"),
         ("autre", "Autre"),
     ]
     QUESTION_DIFFICULTY = [
@@ -34,8 +45,9 @@ class Question(models.Model):
     ]
 
     text = models.TextField(blank=False, help_text="La question en 1 ou 2 phrases")
-    type = models.CharField(max_length=50, choices=QUESTION_TYPES, blank=False)
-    category = models.CharField(max_length=50, choices=QUESTION_CATEGORIES, blank=False)
+    type = models.CharField(max_length=50, choices=QUESTION_TYPES, blank=False, help_text="Le type de question (QCM, V/F, ...)")
+    category = models.CharField(max_length=50, choices=QUESTION_CATEGORIES, blank=False, help_text="Une seule catégorie possible parmi la liste")
+    tags = models.ManyToManyField(QuestionTag, blank=True, related_name="questions", help_text="Un ou plusieurs tags rattaché à la question")
     difficulty = models.IntegerField(choices=QUESTION_DIFFICULTY, blank=False, help_text="Le niveau de difficulté de la question")
     answer_option_a = models.CharField(max_length=150, help_text="La réponse a")
     answer_option_b = models.CharField(max_length=150, help_text="La réponse b")
@@ -45,6 +57,7 @@ class Question(models.Model):
     answer_explanation = models.TextField(blank=True, help_text="Un petit texte d'explication")
     answer_additional_link = models.URLField(max_length=500, blank=True, help_text="Un lien pour aller plus loin")
     answer_image_link = models.URLField(max_length=500, blank=True, help_text="Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée en bas de l'image)")
+    answer_extra_info = models.TextField(blank=True, help_text="Texte et liens explicatifs additionels, qui n'apparaissent pas dans l'interface")
     author = models.CharField(max_length=50, blank=True, help_text="L'auteur de la question")
     publish = models.BooleanField(default=False, blank=False, help_text="La question est prête à être publiée")
     created = models.DateField()

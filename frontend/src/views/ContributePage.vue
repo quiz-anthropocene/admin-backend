@@ -107,7 +107,6 @@ export default {
 
   data() {
     return {
-      categories: ['action', 'biodiversité', 'climat', 'consommation', 'énergie', 'histoire', 'pollution', 'ressources', 'science', 'autre'],
       contribution: {
         is_question: true,
         text: "",
