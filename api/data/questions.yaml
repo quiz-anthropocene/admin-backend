@@ -947,8 +947,8 @@
 - model: api.question
   pk: 46
   fields:
-    text: "Selon le rapport du GIEC de 2014, le dégré de certitude qu'on a que
-      le dérèglement climatique est dû à l'augmentation des gaz à efforts
+    text: "Selon le rapport du GIEC de 2014, le dégré de certitude que
+      le dérèglement climatique est dû à l'augmentation des gaz à effet de serre
       issus de l'activité humaine est de :"
     type: QCM
     category: climat
