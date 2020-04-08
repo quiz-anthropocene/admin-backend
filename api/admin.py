@@ -45,13 +45,19 @@ class ExportMixin:
         response = HttpResponse(content_type="text/yaml")
         response['Content-Disposition'] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.yaml"
         
-        # TODO: escape \"
+        # TODO: escape " (\")
         response.write(serializers.serialize("yaml", queryset).encode().decode("unicode_escape").encode("utf-8"))
         
         return response
 
     def export_all_question_as_yaml(self, request, queryset):
         return self.export_as_yaml(request, Question.objects.all().order_by("pk"))
+    
+    def export_all_questioncategory_as_yaml(self, request, queryset):
+        return self.export_as_yaml(request, QuestionCategory.objects.all().order_by("pk"))
+
+    def export_all_questiontag_as_yaml(self, request, queryset):
+        return self.export_as_yaml(request, QuestionTag.objects.all().order_by("pk"))
 
     def export_all_questionstat_as_yaml(self, request, queryset):
         return self.export_as_yaml(request, QuestionStat.objects.all().order_by("pk"))
@@ -73,6 +79,8 @@ class ExportMixin:
     export_as_json.short_description = "Export Selected (JSON)"
     export_as_yaml.short_description = "Export Selected (YAML)"
     export_all_question_as_yaml.short_description = "Export All (YAML)"
+    export_all_questioncategory_as_yaml.short_description = "Export All (YAML)"
+    export_all_questiontag_as_yaml.short_description = "Export All (YAML)"
     export_all_questionstat_as_yaml.short_description = "Export All (YAML)"
 
 
@@ -112,12 +120,13 @@ class QuestionAdmin(admin.ModelAdmin, ExportMixin):
 class QuestionCategoryAdmin(admin.ModelAdmin, ExportMixin):
     list_display = ("id", "name", "name_long", "question_count",)
     ordering = ("id", )
-    actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
+    actions = ["export_as_csv", "export_as_json", "export_as_yaml", "export_all_questioncategory_as_yaml"]
 
 
 class QuestionTagAdmin(admin.ModelAdmin, ExportMixin):
     list_display = ("id", "name", "question_count",)
-    actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
+    ordering = ("id", )
+    actions = ["export_as_csv", "export_as_json", "export_as_yaml", "export_all_questiontag_as_yaml"]
 
 
 class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):

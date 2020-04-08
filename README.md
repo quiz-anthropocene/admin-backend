@@ -36,9 +36,11 @@ Mieux appréhender les limites de notre planète, à travers des questions simpl
 
 ### Backend
 
-- Une backend en Python Django (API & console Admin)
-- Une base de donnée PostgreSQL (SQLite en local)
-- Un fichier YAML qui regroupe toutes les questions (facilement editable au sein de Github)
+- Une backend en Python Django
+  - API avec Django Rest Framework
+  - console Admin
+- Une base de donnée PostgreSQL
+- Un fichier YAML qui regroupe toutes les questions
 
 ### Frontend
 
@@ -46,12 +48,12 @@ Mieux appréhender les limites de notre planète, à travers des questions simpl
 
 ### DevOps
 
-- Le backend est hébergé sur Heroku
-- Le frontend est hébergé sur Netlify
+- Le backend est hébergé sur Heroku (free tier)
+- Le frontend est hébergé sur Netlify (free tier)
 
 ## Infos supplémentaires
 
-- Les questions sont stockées au format YAML, dans le fichier `api/questions/questions.yaml`
+- Les questions sont stockées au format YAML, dans le fichier `api/data/questions.yaml`
 - Le code et les questions sont en open-source: venez nous aider !
 
 ## Lancer le projet en local
@@ -73,7 +75,9 @@ Mieux appréhender les limites de notre planète, à travers des questions simpl
     ```
 - Chargez la base de donnée
     ```
-    python manage.py loaddata api/questions/questions.yaml
+    python manage.py loaddata api/data/categories.yaml
+    python manage.py loaddata api/data/tags.yaml
+    python manage.py loaddata api/data/questions.yaml
     ```
 - Installez les dépendances du Frontend
     ```
@@ -113,12 +117,13 @@ Connectez-vous ensuite sur `http://localhost:8000/admin`
 
 Exporter les questions de la base au format YAML
 ```
-python manage.py dumpdata api.question --format=yaml --pretty > api/questions/questions.yaml
+python manage.py dumpdata api.question --format=yaml --pretty > api/data/questions.yaml
 ```
 
 ## Idées
 
 - Proposer à l'utilisateur un feedback rapide sur la question (👍, 👎, voire 💬)
 - Rajouter de nouveaux formats de questions: Vrai/Faux par exemple
-- Pouvoir mettre des images (ou plutôt des liens vers des images) dans la partie explication ou liens (ou un nouveau champs image ?)
-- Remise à plat des catégories au profit de tags ? (une question pourrait appartenir à plusieurs catégories)
+- Mode quizz ("10 questions climat")
+- Pouvoir mieux filtrer les questions (catégorie, tags, difficulté)
+- ...
