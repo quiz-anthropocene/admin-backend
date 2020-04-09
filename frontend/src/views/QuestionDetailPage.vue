@@ -23,21 +23,11 @@
       </h2>
       <h3>{{ question.text }}</h3>
       <form @submit.prevent="submitQuestion">
-        <div :class="{ 'color-blue' : answerPicked === 'a' }">
-          <input type="radio" id="one" value="a" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
-          <label for="one">&nbsp;{{ question.answer_option_a }}</label>
-        </div>
-        <div :class="{ 'color-blue' : answerPicked === 'b' }">
-          <input type="radio" id="two" value="b" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
-          <label for="two">&nbsp;{{ question.answer_option_b }}</label>
-        </div>
-        <div :class="{ 'color-blue' : answerPicked === 'c' }">
-          <input type="radio" id="three" value="c" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
-          <label for="three">&nbsp;{{ question.answer_option_c }}</label>
-        </div>
-        <div :class="{ 'color-blue' : answerPicked === 'd' }">
-          <input type="radio" id="four" value="d" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
-          <label for="four">&nbsp;{{ question.answer_option_d }}</label>
+        <div v-for="answer_option_letter in answerChoices" :key="answer_option_letter" :class="{ 'color-blue' : answerPicked === answer_option_letter }">
+          <template v-if="question['answer_option_' + answer_option_letter]">
+            <input type="radio" v-bind:id="answer_option_letter" v-bind:value="answer_option_letter" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
+            <label v-bind:for="answer_option_letter">&nbsp;{{ question['answer_option_' + answer_option_letter] }}</label>
+          </template>
         </div>
         <div>
           <button type="submit" class="btn btn-outline-primary" :disabled="questionSubmitted || !answerPicked">Valider</button>
@@ -115,6 +105,7 @@ export default {
   data() {
     return {
       question: null,
+      answerChoices: [],
       answerPicked: '',
       questionSubmitted: false,
       questionSuccess: null,
@@ -154,6 +145,7 @@ export default {
         })
         .then(data => {
           this.question = data;
+          this.answerChoices = this.shuffleAnswers(['a', 'b', 'c', 'd'], this.question.has_ordered_answers);
           this.fetchQuestionRandomNext(this.question.id, this.question.category);
           this.fetchQuestionRandomNext(this.question.id);
         })
@@ -184,6 +176,20 @@ export default {
           console.log(error)
           this.error = error;
         })
+    },
+    shuffleAnswers(answers_array, has_ordered_answers) {
+      if (has_ordered_answers) {
+        return answers_array;
+      } else {
+        // https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb
+        for (let i = answers_array.length-1; i > 0; i--) {
+          const j = Math.round(Math.random() * i);
+          const temp = answers_array[i];
+          answers_array[i] = answers_array[j];
+          answers_array[j] = temp;
+        }
+        return answers_array;
+      }
     },
     submitQuestion() {
       this.questionSubmitted = true;
