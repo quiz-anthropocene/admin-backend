@@ -11,5 +11,6 @@ urlpatterns = [
     path('questions/stats', views.question_stats),
     path('categories', views.category_list),
     path('tags', views.tag_list),
+    path('authors', views.author_list),
     path('contribute', views.contribute),
 ]

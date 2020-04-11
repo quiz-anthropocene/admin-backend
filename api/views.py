@@ -21,6 +21,8 @@ def api_home(request):
             <li>GET /api/questions/random</li>
             <li>GET /api/questions/stats</li>
             <li>GET /api/categories</li>
+            <li>GET /api/tags</li>
+            <li>GET /api/authors</li>
         </ul>
     """)
 
@@ -32,12 +34,15 @@ def question_list(request):
     Optional query parameters:
     - 'category' (string)
     - 'tag' (string)
+    - 'author' (string)
     """
     questions = Question.objects.published().order_by("?")
     if request.GET.get("category"):
         questions = questions.for_category(request.GET.get("category"))
     if request.GET.get("tag"):
         questions = questions.for_tag(request.GET.get("tag"))
+    if request.GET.get("author"):
+        questions = questions.for_author(request.GET.get("author"))
 
     serializer = QuestionSerializer(questions, many=True)
     return Response(serializer.data)
@@ -80,12 +85,18 @@ def question_random(request):
     Optional query parameters:
     - 'current' (question id)
     - 'category' (string)
+    - 'tag' (string)
+    - 'author' (string)
     """
     questions = Question.objects.published()
     if request.GET.get("current"):
         questions = questions.exclude(pk=request.GET.get("current"))
     if request.GET.get("category"):
         questions = questions.for_category(request.GET.get("category"))
+    if request.GET.get("tag"):
+        questions = questions.for_tag(request.GET.get("tag"))
+    if request.GET.get("author"):
+        questions = questions.for_author(request.GET.get("author"))
 
     questions_ids = questions.values_list("id", flat=True)
     questions_random_id = random.sample(list(questions_ids), 1)
@@ -105,6 +116,7 @@ def question_stats(request):
     question_answer_count_stats = QuestionStat.objects.count()
     question_category_stats = QuestionCategory.objects.values("name").annotate(count=Count("questions")).order_by("-count")
     question_tag_stats = QuestionTag.objects.values("name").annotate(count=Count("questions")).order_by("-count")
+    question_author_stats = Question.objects.values("author").annotate(count=Count("author")).order_by("-count")
     # question_answer_stats = QuestionStat.objects.extra(select={'day': "to_char(created, 'YYYY-MM-DD')"}).values("day").annotate(Count("created"))
     # question_answer_stats = QuestionStat.objects.extra(select={'day': "date(created)"}).values("day").annotate(count=Count("created")) #.order_by("day")
     return Response({
@@ -112,6 +124,7 @@ def question_stats(request):
         "answer_count": question_answer_count_stats,
         "category": question_category_stats,
         "tag": question_tag_stats,
+        "author": question_author_stats,
         # "answer": question_answer_stats
     })
 
@@ -136,6 +149,16 @@ def tag_list(request):
 
     serializer = QuestionTagSerializer(tags, many=True)
     return Response(serializer.data)
+
+
+@api_view(["GET"])
+def author_list(request):
+    """
+    List all authors (with the number of questions per author)
+    """
+    authors = Question.objects.values("author").annotate(question_count=Count("author")).order_by("-question_count")
+
+    return Response(authors)
 
 
 @api_view(["POST"])

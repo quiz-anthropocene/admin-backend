@@ -31,6 +31,15 @@
         {{ tagStat["name"] }}: <strong>{{ tagStat["count"] }}</strong>
       </li>
     </ul>
+
+    <br />
+    <h3>Auteurs</h3>
+    Questions par auteurs:
+    <ul>
+      <li v-for="authorStat in questionAuthorStats" :key="authorStat.name">
+        {{ authorStat["author"] }}: <strong>{{ authorStat["count"] }}</strong>
+      </li>
+    </ul>
     
     <br />
     <hr />
@@ -64,6 +73,7 @@ export default {
       questionAnswerCountStats: null,
       questionCategoryStats: null,
       questionTagStats: null,
+      questionAuthorStats: null,
       // questionAnswerStats: null,
       loading: false,
       error: null,
@@ -88,6 +98,7 @@ export default {
           this.questionAnswerCountStats = data["answer_count"];
           this.questionCategoryStats = data["category"];
           this.questionTagStats = data["tag"];
+          this.questionAuthorStats = data["author"];
           // this.questionAnswerStats = data["answer"];
           
         })

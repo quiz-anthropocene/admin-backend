@@ -8,6 +8,8 @@ import CategoryListPage from './views/CategoryListPage.vue'
 import CategoryDetailPage from './views/CategoryDetailPage.vue'
 import TagListPage from './views/TagListPage.vue'
 import TagDetailPage from './views/TagDetailPage.vue'
+import AuthorListPage from './views/AuthorListPage.vue'
+import AuthorDetailPage from './views/AuthorDetailPage.vue'
 import AboutPage from './views/AboutPage.vue'
 import StatsPage from './views/StatsPage.vue'
 import ContributePage from './views/ContributePage.vue'
@@ -52,6 +54,18 @@ const routes = [
     path: '/tags/:tagName', name: 'tag-detail', component: TagDetailPage,
     meta: {
       title: "Know Your Planet - Tag "
+    }
+  },
+  {
+    path: '/auteurs', name: 'author-list', component: AuthorListPage,
+    meta: {
+      title: "Know Your Planet - Auteurs"
+    }
+  },
+  {
+    path: '/auteurs/:authorName', name: 'author-detail', component: AuthorDetailPage,
+    meta: {
+      title: "Know Your Planet - Auteur "
     }
   },
   {

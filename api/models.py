@@ -12,7 +12,7 @@ class QuestionCategory(models.Model):
 
     @property
     def question_count(self):
-        return self.questions.count()
+        return self.questions.count() # published() ?
 
 
 class QuestionTag(models.Model):
@@ -25,7 +25,7 @@ class QuestionTag(models.Model):
 
     @property
     def question_count(self):
-        return self.questions.count()
+        return self.questions.count() # published() ?
 
 
 class QuestionQuerySet(models.QuerySet):
@@ -37,6 +37,9 @@ class QuestionQuerySet(models.QuerySet):
 
     def for_tag(self, tag):
         return self.filter(tags__name=tag)
+
+    def for_author(self, author):
+        return self.filter(author=author)
 
 class Question(models.Model):
     QUESTION_TYPES = [

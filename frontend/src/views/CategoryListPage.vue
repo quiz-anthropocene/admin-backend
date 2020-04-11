@@ -3,7 +3,7 @@
     <br />
 
     <h2>
-      <router-link class="no-decoration" :to="{ name: 'tag-list' }">Toutes les catégories</router-link>&nbsp;
+      Toutes les catégories&nbsp;
       <span v-if="categories" class="text-secondary"><small>{{ categories.length }}</small></span>
     </h2>
 
