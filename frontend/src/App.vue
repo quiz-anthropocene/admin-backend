@@ -28,6 +28,7 @@ $theme-colors: (
   "primary": #005995,
   "secondary": #F33F3F
 );
+$tag-color: #f3993f;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -105,8 +106,25 @@ hr.custom-seperator {
   padding-bottom: 15px;
 }
 
+
+.color-tag {
+  color: $tag-color;
+}
 .color-red {
   color: red;
+}
+
+.text-underline-primary {
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+}
+.text-underline-secondary {
+  text-decoration: underline;
+  text-decoration-color: var(--secondary);
+}
+.text-underline-tag {
+  text-decoration: underline;
+  text-decoration-color: $tag-color;
 }
 
 .text-align-left {
@@ -121,6 +139,35 @@ hr.custom-seperator {
   padding-bottom: 20px;
 }
 
+
+/* Elements */
+
+.label {
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 2.5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.label-category {
+  border-color: var(--secondary);
+}
+.label-category--active {
+  background-color: #f88787;
+  text-shadow: 0px 0px 1px black;
+}
+.label-tag {
+  border-color: $tag-color;
+}
+.label-tag--active {
+  background-color: #f8bf87;
+  text-shadow: 0px 0px 1px black;
+}
+
+
+/* Media */
+
 @media all and (min-width: 30em) {
   .row-item {
     max-width: calc(50% - 1em);
@@ -129,6 +176,15 @@ hr.custom-seperator {
 @media all and (min-width: 60em) {
   .row-item {
     max-width: calc(33.33% - 1em);
+  }
+}
+
+@media(hover: hover) and (pointer: fine) {
+  .label-category:hover {
+    background-color: #f88787;
+  }
+  .label-tag:hover {
+    background-color: #f3993f;
   }
 }
 </style>

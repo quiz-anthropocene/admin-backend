@@ -6,6 +6,8 @@ import QuestionListPage from './views/QuestionListPage.vue'
 import QuestionDetailPage from './views/QuestionDetailPage.vue'
 import CategoryListPage from './views/CategoryListPage.vue'
 import CategoryDetailPage from './views/CategoryDetailPage.vue'
+import TagListPage from './views/TagListPage.vue'
+import TagDetailPage from './views/TagDetailPage.vue'
 import AboutPage from './views/AboutPage.vue'
 import StatsPage from './views/StatsPage.vue'
 import ContributePage from './views/ContributePage.vue'
@@ -41,6 +43,18 @@ const routes = [
     }
   },
   {
+    path: '/tags', name: 'tag-list', component: TagListPage,
+    meta: {
+      title: "Know Your Planet - Tags"
+    }
+  },
+  {
+    path: '/tags/:tagName', name: 'tag-detail', component: TagDetailPage,
+    meta: {
+      title: "Know Your Planet - Tag "
+    }
+  },
+  {
     path: '/a-propos', name: 'about', component: AboutPage,
     meta: {
       title: "Know Your Planet - A propos"
@@ -64,13 +78,18 @@ export const router = new VueRouter({
   routes
 })
 
+/**
+ * Update the page's title dynamically
+ */
 router.beforeEach((to, from, next) => {
-  console.log(to, from);
+  // console.log(to, from);
   if (to.meta.title) {
     if (to.params.questionId) {
       document.title = to.meta.title + (to.params.questionId ? `#${to.params.questionId}` : '');
     } else if (to.params.categoryName) {
       document.title = to.meta.title + (to.params.categoryName ? `#${to.params.categoryName}` : '');
+    } else if (to.params.tagName) {
+      document.title = to.meta.title + (to.params.tagName ? `#${to.params.tagName}` : '');
     }
   } else {
     document.title = 'Know Your Planet';

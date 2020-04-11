@@ -3,8 +3,8 @@
     <br />
 
     <h2>
-      <router-link class="no-decoration" :to="{ name: 'category-list' }">Catégorie:</router-link>&nbsp;
-      <span class="text-secondary">{{ currentCategory }}</span>
+      <router-link class="no-decoration" :to="{ name: 'tag-list' }">Tag:</router-link>&nbsp;
+      <span class="text-secondary">{{ currentTag }}</span>
     </h2>
 
     <br />
@@ -18,7 +18,7 @@
     </div>
 
     <div v-if="questions && questions.length === 0">
-      Pas de questions dans cette catégorie :(
+      Pas de questions pour ce tag :(
     </div>
 
     <!-- Question List -->
@@ -35,12 +35,12 @@
     <div v-if="questions" class="row actions">
       <div class="col-sm">
         <router-link :to="{ name: 'contribute' }">
-          ✍️&nbsp;Ajouter une question <span class="text-secondary">{{ currentCategory }}</span>
+          ✍️&nbsp;Ajouter une question <span class="text-secondary">{{ currentTag }}</span>
         </router-link>
       </div>
       <div class="col-sm">
-        <router-link :to="{ name: 'category-list' }">
-          📂&nbsp;Toutes les catégories
+        <router-link :to="{ name: 'tag-list' }">
+          🏷️&nbsp;Tous les tags
         </router-link>
       </div>
       <div class="col-sm">
@@ -55,7 +55,7 @@ import QuestionCard from '../components/QuestionCard.vue'
 import HomeLink from '../components/HomeLink.vue'
 
 export default {
-  name: 'CategoryDetailPage',
+  name: 'TagDetailPage',
   components: {
     QuestionCard,
     HomeLink
@@ -63,7 +63,7 @@ export default {
 
   data () {
     return {
-      currentCategory: null,
+      currentTag: null,
       questions: null,
       loading: false,
       error: null,
@@ -71,13 +71,13 @@ export default {
   },
 
   mounted () {
-    this.currentCategory = this.$route.params.categoryName;
-    this.fetchCategoryQuestions(this.$route.params.categoryName);
+    this.currentTag = this.$route.params.tagName;
+    this.fetchTagQuestions(this.$route.params.tagName);
   },
 
   methods: {
-    fetchCategoryQuestions(currentCategoryName) {
-      const params = { 'category': currentCategoryName };
+    fetchTagQuestions(currentTagName) {
+      const params = { 'tag': currentTagName };
       const urlParams = new URLSearchParams(Object.entries(params));
       this.error = this.questions = null;
       this.loading = true;

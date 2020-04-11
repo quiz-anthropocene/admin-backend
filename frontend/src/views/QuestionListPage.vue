@@ -3,8 +3,19 @@
     <br />
     
     <!-- Filtre: catégorie -->
-    <div>
-      <span class="category" v-for="category in categories" :key="category.name" :class="{ 'category-active' : category.name === categorySelected }" @click="clickCategory(category.name)">{{ category.name }}</span>
+    <div v-if="categories">
+      <span v-for="category in categories" :key="category.name" class="label label-category" :class="{ 'label-category--active' : category.name === categorySelected }" @click="clickCategory(category.name)">
+        {{ category.name }}
+      </span>
+    </div>
+
+    <br />
+    
+    <!-- Filtre: tag -->
+    <div v-if="tags">
+      <span v-for="tag in tags" :key="tag.name" class="label label-tag" :class="{ 'label-tag--active' : tag.name === tagSelected }" @click="clickTag(tag.name)">
+        {{ tag.name }}
+      </span>
     </div>
 
     <br />
@@ -31,13 +42,13 @@
     <div v-if="questions" class="row actions">
       <div class="col-sm">
         <router-link :to="{ name: 'category-list' }">
-          Toutes les catégories
+          📂&nbsp;Toutes les catégories
         </router-link>
         <br />
       </div>
       <div class="col-sm">
-        <router-link :to="{ name: 'about' }">
-          ℹ️&nbsp;À propos de cette application
+        <router-link :to="{ name: 'tag-list' }">
+          🏷️&nbsp;Tous les tags
         </router-link>
         <br />
       </div>
@@ -63,6 +74,8 @@ export default {
     return {
       categories: null,
       categorySelected: null,
+      tags: null,
+      tagSelected: null,
       questions: null,
       questionsDisplayed: null,
       loading: false,
@@ -72,6 +85,7 @@ export default {
 
   created () {
     this.fetchCategories()
+    this.fetchTags()
     this.fetchQuestions()
   },
 
@@ -86,6 +100,22 @@ export default {
         })
         .then(data => {
           this.categories = data;
+        })
+        .catch(error => {
+          console.log(error)
+          this.error = error;
+        })
+    },
+    fetchTags() {
+      this.error = this.tags = null;
+      this.loading = true;
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/tags`)
+        .then(response => {
+          this.loading = false
+          return response.json()
+        })
+        .then(data => {
+          this.tags = data;
         })
         .catch(error => {
           console.log(error)
@@ -110,13 +140,19 @@ export default {
     },
     clickCategory(category) {
       this.categorySelected = (this.categorySelected === category) ? null : category;
-      this.updateQuestionsDisplayed(this.categorySelected);
+      this.updateQuestionsDisplayed();
     },
-    updateQuestionsDisplayed(categorySelection) {
-      if (categorySelection) {
-        this.questionsDisplayed = this.questions.filter(q => q.category === categorySelection);
-      } else {
-        this.questionsDisplayed = this.questions;
+    clickTag(tag) {
+      this.tagSelected = (this.tagSelected === tag) ? null : tag;
+      this.updateQuestionsDisplayed();
+    },
+    updateQuestionsDisplayed() {
+      this.questionsDisplayed = this.questions;
+      if (this.categorySelected) {
+        this.questionsDisplayed = this.questionsDisplayed.filter(q => q.category === this.categorySelected);
+      }
+      if (this.tagSelected) {
+        this.questionsDisplayed = this.questionsDisplayed.filter(q => q.tags.includes(this.tagSelected));
       }
     }
   }
@@ -124,19 +160,6 @@ export default {
 </script>
 
 <style scoped>
-.category {
-  display: inline-block;
-  border: 1px solid var(--secondary);
-  border-radius: 5px;
-  margin: 2.5px;
-  padding: 5px;
-  cursor: pointer;
-}
-.category-active {
-  background-color: #f88787;
-  text-shadow: 0px 0px 1px black;
-}
-
 .row-item-question {
   height: 150px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -147,7 +170,7 @@ export default {
 }
 
 @media(hover: hover) and (pointer: fine) {
-  .category:hover {
+  .label-category:hover {
     background-color: #f88787;
   }
   .row-item-question:hover {

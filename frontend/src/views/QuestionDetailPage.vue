@@ -79,7 +79,7 @@
       </div>
       <div class="col-sm">
         <router-link :to="{ name: 'category-detail', params: { categoryName: question.category }  }">
-          🏷️&nbsp;Toutes les questions <span class="text-secondary">{{ question.category }}</span>
+          📂&nbsp;Toutes les questions <span class="text-secondary">{{ question.category }}</span>
         </router-link>
       </div>
       <div class="col-sm">

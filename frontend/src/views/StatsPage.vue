@@ -9,6 +9,12 @@
     </p>
 
     <br />
+    <h3>Réponses</h3>
+    <p>
+      L'application totalise <strong>{{ questionAnswerCountStats }}</strong> réponses (depuis la mise en ligne en Mars 2020).
+    </p>
+
+    <br />
     <h3>Catégories</h3>
     Questions par catégories:
     <ul>
@@ -18,8 +24,13 @@
     </ul>
 
     <br />
-    <h3>Réponses</h3>
-    <p>L'application totalise <strong>{{ questionAnswerCountStats }}</strong> réponses (depuis la mise en ligne en Mars 2020).</p>
+    <h3>Tags</h3>
+    Questions par tags:
+    <ul>
+      <li v-for="tagStat in questionTagStats" :key="tagStat.name">
+        {{ tagStat["name"] }}: <strong>{{ tagStat["count"] }}</strong>
+      </li>
+    </ul>
     
     <br />
     <hr />
@@ -50,9 +61,10 @@ export default {
   data() {
     return {
       questionPublishStats: null,
-      questionCategoryStats: null,
-      // questionAnswerStats: null,
       questionAnswerCountStats: null,
+      questionCategoryStats: null,
+      questionTagStats: null,
+      // questionAnswerStats: null,
       loading: false,
       error: null,
     }
@@ -73,9 +85,11 @@ export default {
         })
         .then(data => {
           this.questionPublishStats = data["publish"];
-          this.questionCategoryStats = data["category"];
-          // this.questionAnswerStats = data["answer"];
           this.questionAnswerCountStats = data["answer_count"];
+          this.questionCategoryStats = data["category"];
+          this.questionTagStats = data["tag"];
+          // this.questionAnswerStats = data["answer"];
+          
         })
         .catch(error => {
           console.log(error)

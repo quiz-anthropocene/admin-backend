@@ -35,6 +35,9 @@ class QuestionQuerySet(models.QuerySet):
     def for_category(self, category):
         return self.filter(category__name=category)
 
+    def for_tag(self, tag):
+        return self.filter(tags__name=tag)
+
 class Question(models.Model):
     QUESTION_TYPES = [
         ("QCM", "Questionnaire à choix multiples (QCM)"),

@@ -3,36 +3,36 @@
     <br />
 
     <h2>
-      <router-link class="no-decoration" :to="{ name: 'tag-list' }">Toutes les catégories</router-link>&nbsp;
-      <span v-if="categories" class="text-secondary"><small>{{ categories.length }}</small></span>
+      <router-link class="no-decoration" :to="{ name: 'tag-list' }">Tous les tags</router-link>&nbsp;
+      <span v-if="tags" class="text-secondary"><small>{{ tags.length }}</small></span>
     </h2>
 
     <br />
 
     <div v-if="loading" class="loading">
-      Chargement des catégories...
+      Chargement des tags...
     </div>
 
     <div v-if="error" class="error">
       {{ error }}
     </div>
 
-    <div v-if="categories && categories.length === 0">
-      Pas de catégories :(
+    <div v-if="tags && tags.length === 0">
+      Pas de tags :(
     </div>
 
-    <div v-if="categories && categories.length > 0">
-      <router-link class="no-decoration" v-for="category in categories" :key="category.name" :to="{ name: 'category-detail', params: { categoryName: category.name } }">
+    <div v-if="tags && tags.length > 0">
+      <router-link class="no-decoration" v-for="tag in tags" :key="tag.name" :to="{ name: 'tag-detail', params: { tagName: tag.name } }">
         <span class="category">
-          <h3>{{ category.name }}</h3>
-          <p><strong>{{ category.question_count }}</strong> question<span v-if="category.question_count > 1">s</span></p>
+          <h3>{{ tag.name }}</h3>
+          <p><strong>{{ tag.question_count }}</strong> question<span v-if="tag.question_count > 1">s</span></p>
         </span>
       </router-link>
     </div>
 
     <br />
-    <hr v-if="categories" />
-    <div v-if="categories" class="row actions">
+    <hr v-if="tags" />
+    <div v-if="tags" class="row actions">
       <div class="col-sm">
         <router-link :to="{ name: 'question-list' }">
           Toutes les questions
@@ -40,8 +40,8 @@
         <br />
       </div>
       <div class="col-sm">
-        <router-link :to="{ name: 'tag-list' }">
-          🏷️&nbsp;Tous les tags
+        <router-link :to="{ name: 'category-list' }">
+          📂&nbsp;Toutes les catégories
         </router-link>
         <br />
       </div>
@@ -56,34 +56,34 @@
 import HomeLink from '../components/HomeLink.vue'
 
 export default {
-  name: 'CategoryListPage',
+  name: 'TagListPage',
   components: {
     HomeLink
   },
 
   data () {
     return {
-      categories: null,
+      tags: null,
       loading: false,
       error: null,
     }
   },
 
   mounted () {
-    this.fetchCategories();
+    this.fetchTags();
   },
 
   methods: {
-    fetchCategories() {
-      this.error = this.categories = null;
+    fetchTags() {
+      this.error = this.tags = null;
       this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/categories`)
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/tags`)
         .then(response => {
           this.loading = false
           return response.json()
         })
         .then(data => {
-          this.categories = data;
+          this.tags = data;
         })
         .catch(error => {
           console.log(error)
@@ -98,7 +98,7 @@ export default {
 .category {
   width: 300px;
   display: inline-block;
-  border: 1px solid var(--secondary);
+  border: 1px solid #f3993f;
   border-radius: 5px;
   margin: 2.5px;
   padding: 5px;

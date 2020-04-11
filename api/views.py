@@ -31,10 +31,13 @@ def question_list(request):
     List all questions (return them in a random order)
     Optional query parameters:
     - 'category' (string)
+    - 'tag' (string)
     """
     questions = Question.objects.published().order_by("?")
     if request.GET.get("category"):
         questions = questions.for_category(request.GET.get("category"))
+    if request.GET.get("tag"):
+        questions = questions.for_tag(request.GET.get("tag"))
 
     serializer = QuestionSerializer(questions, many=True)
     return Response(serializer.data)
@@ -99,15 +102,17 @@ def question_stats(request):
     Retrieve stats on all the questions
     """
     question_publish_stats = Question.objects.values("publish").annotate(count=Count("publish")).order_by("-count")
+    question_answer_count_stats = QuestionStat.objects.count()
     question_category_stats = QuestionCategory.objects.values("name").annotate(count=Count("questions")).order_by("-count")
+    question_tag_stats = QuestionTag.objects.values("name").annotate(count=Count("questions")).order_by("-count")
     # question_answer_stats = QuestionStat.objects.extra(select={'day': "to_char(created, 'YYYY-MM-DD')"}).values("day").annotate(Count("created"))
     # question_answer_stats = QuestionStat.objects.extra(select={'day': "date(created)"}).values("day").annotate(count=Count("created")) #.order_by("day")
-    question_answer_count_stats = QuestionStat.objects.count()
     return Response({
         "publish": question_publish_stats,
+        "answer_count": question_answer_count_stats,
         "category": question_category_stats,
+        "tag": question_tag_stats,
         # "answer": question_answer_stats
-        "answer_count": question_answer_count_stats
     })
 
 
