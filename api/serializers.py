@@ -1,7 +1,11 @@
 from rest_framework import serializers
 
-from api.models import Question, QuestionCategory, QuestionTag, QuestionStat, Contribution
+from api.models import Question, QuestionCategory, QuestionTag, Quiz, QuestionStat, Contribution
 
+
+"""
+QUESTION CATEGORY
+"""
 
 class QuestionCategorySerializer(serializers.ModelSerializer):
     class Meta:
@@ -22,6 +26,10 @@ class QuestionCategoryStringSerializer(serializers.ModelSerializer):
         ]
 
 
+"""
+QUESTION TAG
+"""
+
 class QuestionTagSerializer(serializers.ModelSerializer):
     class Meta:
         model = QuestionTag
@@ -41,6 +49,10 @@ class QuestionTagStringSerializer(serializers.ModelSerializer):
         ]
 
 
+"""
+QUESTION
+"""
+
 class QuestionSerializer(serializers.ModelSerializer):
     category = QuestionCategoryStringSerializer()
     tags = QuestionTagStringSerializer(many=True)
@@ -57,12 +69,35 @@ class QuestionSerializer(serializers.ModelSerializer):
         ]
 
 
+"""
+QUIZ
+"""
+
+class QuizSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Quiz
+        fields = [
+            'id', 'name', 'description',
+            'question_count',
+            'created'
+        ]
+
+
+"""
+QUESTION STATS
+"""
+
 class QuestionStatSerializer(serializers.ModelSerializer):
     class Meta:
         model = QuestionStat
         fields = [
             'question_id', 'answer_choice', 'created'
         ]
+
+
+"""
+CONTRIBUTION
+"""
 
 class ContributionSerializer(serializers.ModelSerializer):
     class Meta:

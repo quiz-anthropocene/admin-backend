@@ -78,6 +78,7 @@ Mieux appréhender les limites de notre planète, à travers des questions simpl
     python manage.py loaddata api/data/categories.yaml
     python manage.py loaddata api/data/tags.yaml
     python manage.py loaddata api/data/questions.yaml
+    python manage.py loaddata api/data/quizzes.yaml
     ```
 - Installez les dépendances du Frontend
     ```

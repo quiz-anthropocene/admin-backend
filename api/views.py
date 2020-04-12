@@ -6,8 +6,8 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api.models import Question, QuestionCategory, QuestionTag, QuestionStat, Contribution
-from api.serializers import QuestionSerializer, QuestionCategorySerializer, QuestionTagSerializer, QuestionStatSerializer, ContributionSerializer
+from api.models import Question, QuestionCategory, QuestionTag, Quiz, QuestionStat, Contribution
+from api.serializers import QuestionSerializer, QuestionCategorySerializer, QuestionTagSerializer, QuizSerializer, QuestionStatSerializer, ContributionSerializer
 
 
 def api_home(request):
@@ -159,6 +159,17 @@ def author_list(request):
     authors = Question.objects.values("author").annotate(question_count=Count("author")).order_by("-question_count")
 
     return Response(authors)
+
+
+@api_view(["GET"])
+def quiz_list(request):
+    """
+    List all quizzes (with the number of questions per quiz)
+    """
+    quizzes = Quiz.objects.all()
+
+    serializer = QuizSerializer(quizzes, many=True)
+    return Response(serializer.data)
 
 
 @api_view(["POST"])

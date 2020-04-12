@@ -12,7 +12,7 @@ from django.db.models import Count
 from django.utils.html import mark_safe
 # from django.core.management import call_command
 
-from api.models import Question, QuestionCategory, QuestionTag, QuestionStat, Contribution
+from api.models import Question, QuestionCategory, QuestionTag, Quiz, QuestionStat, Contribution
 
 
 class ExportMixin:
@@ -129,6 +129,13 @@ class QuestionTagAdmin(admin.ModelAdmin, ExportMixin):
     actions = ["export_as_csv", "export_as_json", "export_as_yaml", "export_all_questiontag_as_yaml"]
 
 
+class QuizAdmin(admin.ModelAdmin, ExportMixin):
+    list_display = ("id", "name", "question_count", "categories", "tags",)
+    ordering = ("id", )
+    filter_horizontal = ("questions",)
+    actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
+
+
 class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
     list_display = ("id", "question", "answer_choice", "created",)
     ordering = ("id",)
@@ -194,6 +201,7 @@ class LogEntryAdmin(admin.ModelAdmin):
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(QuestionCategory, QuestionCategoryAdmin)
 admin.site.register(QuestionTag, QuestionTagAdmin)
+admin.site.register(Quiz, QuizAdmin)
 admin.site.register(QuestionStat, QuestionStatAdmin)
 admin.site.register(Contribution, ContributionAdmin)
 admin.site.register(admin.models.LogEntry, LogEntryAdmin)

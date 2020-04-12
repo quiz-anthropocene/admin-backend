@@ -1,0 +1,17 @@
+- model: api.quiz
+  pk: 1
+  fields:
+    name: "Chiffres clés"
+    description: ''
+    created: 2020-04-12
+    questions:
+    - 3
+    - 16
+    - 19
+    - 21
+    - 48
+    - 59
+    - 70
+    - 71
+    - 75
+    - 83

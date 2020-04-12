@@ -86,7 +86,7 @@ class Question(models.Model):
     objects = QuestionQuerySet.as_manager()
 
     def __str__(self):
-        return f"{self.text}"
+        return f"{self.id} - {self.category} - {self.text}"
 
     @property
     def has_answer_explanation(self):
@@ -116,6 +116,29 @@ class Question(models.Model):
     answer_count.fget.short_description = "# Rép"
     answer_success_count.fget.short_description = "# Rép Corr"
     answer_success_rate.fget.short_description = "% Rép Corr"
+
+
+class Quiz(models.Model):
+    name = models.CharField(max_length=50, blank=False, help_text="Le nom du quiz")
+    description = models.TextField(blank=True, help_text="Une description du quiz")
+    questions = models.ManyToManyField(Question, related_name="quizzes", help_text="Les questions du quiz")
+    created = models.DateField(auto_now=True, help_text="La date & heure de la création du quiz")
+
+    def __str__(self):
+        return f"{self.name}"
+
+    @property
+    def question_count(self):
+        return self.questions.count()
+
+    @property
+    def categories(self):
+        # self.questions.values("category__name").annotate(count=Count('category__name')).order_by("-count")
+        return list(self.questions.values_list("category__name", flat=True).distinct())
+
+    @property
+    def tags(self):
+        return list(self.questions.values_list("tags__name", flat=True).distinct())
 
 
 class QuestionStat(models.Model):

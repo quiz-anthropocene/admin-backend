@@ -12,5 +12,6 @@ urlpatterns = [
     path('categories', views.category_list),
     path('tags', views.tag_list),
     path('authors', views.author_list),
+    path('quizzes', views.quiz_list),
     path('contribute', views.contribute),
 ]
