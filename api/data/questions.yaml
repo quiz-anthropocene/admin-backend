@@ -62,7 +62,7 @@
     answer_option_d: Le fait que plus une ressource devient efficace, plus nous en
       consommons au total
     answer_correct: d
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "Exemple: les voitures plus économes, qui n'ont pas réduit
       la consommation globale d'essence. On l'appelle aussi le paradoxe de Jevons."
     answer_additional_link: https://fr.wikipedia.org/wiki/Paradoxe_de_Jevons
@@ -237,12 +237,12 @@
     answer_option_d: "D'ici-là, on aura trouvé une énergie aussi bien que
       le pétrole"
     answer_correct: c
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: ''
     answer_additional_link: https://www.connaissancedesenergies.org/tribune-actualite-energies/les-reserves-de-petrole-ne-sepuiseront-j
     answer_image_link: ''
     answer_extra_info: ''
-    author: Avenir Climatique (Quizz)
+    author: Avenir Climatique
     publish: true
     created: 2020-03-08
     updated: 2020-03-08
@@ -259,13 +259,13 @@
     answer_option_c: Industrie
     answer_option_d: Transports
     answer_correct: b
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "En 2015, le secteur des bâtiments a compté pour 45%
       de la consommation finale (hors usages non énergétique)"
     answer_additional_link: https://www.connaissancedesenergies.org/fiche-pedagogique/mix-energetique-de-la-france
     answer_image_link: https://www.connaissancedesenergies.org/sites/default/files/album_images/consommation-finale-energie-secteur-france-2015_zoom.png
     answer_extra_info: ''
-    author: Avenir Climatique (Quizz)
+    author: Avenir Climatique
     publish: true
     created: 2020-03-09
     updated: 2020-03-09
@@ -284,13 +284,13 @@
     answer_option_d: "Une éolienne de 5m de diamètre pendant 1h avec un vent
       à 80km/h"
     answer_correct: a
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "Le pétrole est une source d'énergie incroyablement
       dense et pratique."
     answer_additional_link: https://www.youtube.com/watch?v=Nb2S7oge8TQ?t=3600
     answer_image_link: ''
     answer_extra_info: ''
-    author: Avenir Climatique (Quizz)
+    author: Avenir Climatique
     publish: true
     created: 2020-03-09
     updated: 2020-03-09
@@ -337,7 +337,7 @@
     answer_additional_link: https://fr.wikipedia.org/wiki/Effet_de_serre#M%C3%A9canisme_sur_Terre
     answer_image_link: https://media.kartable.fr/uploads/finalImages/final_5d9200915e1749.58742984.png
     answer_extra_info: ''
-    author: Avenir Climatique (Quizz)
+    author: Avenir Climatique
     publish: true
     created: 2020-03-09
     updated: 2020-03-09
@@ -354,13 +354,13 @@
     answer_option_c: Eau (H2O)
     answer_option_d: "Oxygène (O2)"
     answer_correct: d
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "Ces gaz ont pour caractéristique commune d'absorber une
       partie des infrarouges émis par la surface de la Terre"
     answer_additional_link: https://fr.wikipedia.org/wiki/Effet_de_serre#Les_gaz_%C3%A0_%C2%AB_effet_de_serre_%C2%BB
     answer_image_link: ''
     answer_extra_info: ''
-    author: Avenir Climatique (Quizz)
+    author: Avenir Climatique
     publish: true
     created: 2020-03-09
     updated: 2020-03-09
@@ -383,7 +383,7 @@
     answer_additional_link: http://www.meteofrance.fr/climat-passe-et-futur/le-rechauffement-observe-a-l-echelle-du-globe-et-en-france
     answer_image_link: http://www.donnees.statistiques.developpement-durable.gouv.fr/lesessentiels/climat/images/effet-de-serre-2-b.jpg
     answer_extra_info: ''
-    author: Avenir Climatique (Quizz)
+    author: Avenir Climatique
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
@@ -407,7 +407,7 @@
     answer_additional_link: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
     answer_image_link: https://img.aws.la-croix.com/2018/12/07/1300988266/Emissions-carbone-monde_1_1399_1250.jpg
     answer_extra_info: ''
-    author: Avenir Climatique (Quizz)
+    author: Avenir Climatique
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
@@ -425,12 +425,12 @@
     answer_option_c: Rutabaga
     answer_option_d: Tomates espagnoles
     answer_correct: d
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: ''
     answer_additional_link: ''
     answer_image_link: ''
     answer_extra_info: ''
-    author: Avenir Climatique (Quizz)
+    author: Avenir Climatique
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
@@ -449,12 +449,12 @@
     answer_option_c: Faire un repas par semaine de moins sans viande
     answer_option_d: "Reporter d’un an l’achat d’un nouveau smartphone"
     answer_correct: a
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: ''
     answer_additional_link: https://jancovici.com/changement-climatique/agir-individuellement/effectuer-sa-ba-pour-agir-contre-le-changement-climatique-quelques-ordres-de-grandeur/
     answer_image_link: https://pbs.twimg.com/media/DsBdo7AWwAARSX1.jpg
     answer_extra_info: ''
-    author: Avenir Climatique (Quizz)
+    author: Avenir Climatique
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
@@ -563,7 +563,7 @@
     answer_option_c: "Le méthane (CH4)"
     answer_option_d: Les particules fines
     answer_correct: a
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "Les CFC sont une famille de gaz organiques composés d'atomes
       de chlore, de carbone et de fluor. Les particules fines ne sont pas des gaz
       mais des poussières fines."
@@ -637,7 +637,7 @@
     answer_option_c: "Les réfrigérateurs"
     answer_option_d: Les ruminants
     answer_correct: d
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "Il y aussi les rizières et les fuites de gaz. La fonte
       du permafrost avec le réchauffement pourrait dégager des quantités
       astronomiques de méthane dans l'atmosphère."
@@ -661,7 +661,7 @@
     answer_option_c: "de la photosynthèse"
     answer_option_d: "du réchauffement"
     answer_correct: a
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: ''
     answer_additional_link: https://fr.wikipedia.org/wiki/Acidification_des_oc%C3%A9ans
     answer_image_link: ''
@@ -683,7 +683,7 @@
     answer_option_c: Elles le refroidissent
     answer_option_d: "Elles le réchauffent"
     answer_correct: c
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "Les aérosols sont des particules fines qui ont un pouvoir
       masquant, comme les nuages"
     answer_additional_link: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
@@ -706,7 +706,7 @@
     answer_option_c: "l'acidification de l'océan"
     answer_option_d: "la montée des eaux"
     answer_correct: b
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: ''
     answer_additional_link: https://fr.wikipedia.org/wiki/Alb%C3%A9do#Climatologie
     answer_image_link: ''
@@ -728,7 +728,7 @@
     answer_option_c: un ralentissement du Gulf Stream
     answer_option_d: "une baisse de la fertilité des poissons"
     answer_correct: a
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: ''
     answer_additional_link: https://fr.wikipedia.org/wiki/Acidification_des_oc%C3%A9ans
     answer_image_link: ''
@@ -751,7 +751,7 @@
     answer_option_c: La fonte de la banquise
     answer_option_d: La fonte des glaciers
     answer_correct: c
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: La banquise, qui flotte sur l'eau, ne fait pas monter l'eau
       quand elle fond. Faites le test avec un pastis.
     answer_additional_link: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
@@ -775,7 +775,7 @@
     answer_option_c: Oui, c'est l'effet albedo
     answer_option_d: Non, pas de lien
     answer_correct: b
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "Plus la température augmente et plus la solubilité
       des gaz dans l’eau diminue, ce qui entraine une diminuation de l'oxygène
       disponible pour la vie marine. L'effet albedo, c'est l'effet plus au moins miroir
@@ -823,7 +823,7 @@
     answer_option_c: "du méthane"
     answer_option_d: du NO2
     answer_correct: c
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "Le permafrost (ou pergélisol) est un terme géologique
       qui désigne un sol dont la température se maintient en dessous de 0°C
       pendant plus de deux ans consécutifs. Il représente 20% de la surface
@@ -849,7 +849,7 @@
     answer_option_c: "la fréquence des événements météorologiques extrèmes"
     answer_option_d: "la concentration d'oxygène dans l'air"
     answer_correct: b
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "De nombreux organismes marins sont sensibles à cette baisse
       de pH : les coraux, les mollusques et certains planctons sont ainsi privés
       des ions carbonate nécessaires pour construire leurs coquilles et leurs squelettes."
@@ -873,7 +873,7 @@
     answer_option_c: l'industrie
     answer_option_d: les transports
     answer_correct: a
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "Les principales causes de déforestation sont l’agriculture
       (soja, huile de palme, ...) et l’élevage. Mais il y a aussi la construction
       de barrages hydroélectriques et d’infrastructures routières, l’industrie
@@ -1442,7 +1442,7 @@
     answer_option_c: Les oiseaux
     answer_option_d: Les requins
     answer_correct: a
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "Avec 40% de leurs espèces qui sont menacées"
     answer_additional_link: https://www.lemonde.fr/planete/article/2019/05/06/un-million-d-especes-en-danger-d-extinction_5458785_3244.html
     answer_image_link: https://cdn.statcdn.com/Infographic/images/normal/17911.jpeg
@@ -1735,7 +1735,7 @@
     answer_option_c: L'industrie
     answer_option_d: Les transports
     answer_correct: d
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "Transports 31%, Bâtiment 19%, Agriculture 19%, Industrie
       18%"
     answer_additional_link: https://www.hautconseilclimat.fr/wp-content/uploads/2019/09/hcc_rapport_annuel_grand_public_2019.pdf
@@ -1964,7 +1964,7 @@
     answer_additional_link: https://ourworldindata.org/grapher/energy-consumption-by-source-and-region
     answer_image_link: ''
     answer_extra_info: ''
-    author: Avenir Climatique (Quizz)
+    author: Avenir Climatique
     publish: false
     created: 2020-03-11
     updated: 2020-03-11
@@ -1984,12 +1984,12 @@
     answer_option_c: "Renouvelables > Sobriété > Efficacité"
     answer_option_d: "Sobriété > Efficacité > Renouvelables"
     answer_correct: d
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: ''
     answer_additional_link: https://negawatt.org/La-demarche-negaWatt
     answer_image_link: https://www.letelegramme.fr/images/2018/03/02/energie-negawatt-le-bon-scenario_3841704_540x356p.jpg
     answer_extra_info: ''
-    author: Avenir Climatique (Quizz)
+    author: Avenir Climatique
     publish: true
     created: 2020-03-11
     updated: 2020-03-11
@@ -2008,13 +2008,13 @@
     answer_option_c: Les Etats-Unis
     answer_option_d: La France
     answer_correct: c
-    has_ordered_answers: true
+    has_ordered_answers: false
     answer_explanation: "Ce sont les pays du golfe (Qatar, Koweit, Arabie Saoudite)
       qui arrivent en tête de ce classement."
     answer_additional_link: https://ourworldindata.org/grapher/co-emissions-per-capita?tab=chart
     answer_image_link: https://s.brsimg.com/static-000/cache/i/content/images/e/5/9/e59d07745c97e38a630b9c264d377837-1024x658.jpg
     answer_extra_info: ''
-    author: Avenir Climatique (Quizz)
+    author: Avenir Climatique
     publish: true
     created: 2020-03-11
     updated: 2020-03-11
