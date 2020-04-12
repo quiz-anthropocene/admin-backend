@@ -63,33 +63,22 @@ export default {
 
   data () {
     return {
-      tags: null,
+      // tags: null,
       loading: false,
       error: null,
     }
   },
 
+  computed: {
+    tags () {
+      return this.$store.state.tags;
+    },
+  },
+
   mounted () {
-    this.fetchTags();
   },
 
   methods: {
-    fetchTags() {
-      this.error = this.tags = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/tags`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.tags = data;
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
-    },
   }
 }
 </script>

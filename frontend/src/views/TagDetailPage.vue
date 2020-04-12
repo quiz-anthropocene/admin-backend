@@ -63,37 +63,26 @@ export default {
 
   data () {
     return {
-      currentTag: null,
-      questions: null,
+      // currentTag: null,
+      // questions: null,
       loading: false,
       error: null,
     }
   },
 
+  computed: {
+    currentTag () {
+      return this.$route.params.tagName;
+    },
+    questions () {
+      return this.$store.getters.getQuestionsByTagName(this.$route.params.tagName);
+    },
+  },
+
   mounted () {
-    this.currentTag = this.$route.params.tagName;
-    this.fetchTagQuestions(this.$route.params.tagName);
   },
 
   methods: {
-    fetchTagQuestions(currentTagName) {
-      const params = { 'tag': currentTagName };
-      const urlParams = new URLSearchParams(Object.entries(params));
-      this.error = this.questions = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions?${urlParams}`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.questions = data;
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
-    },
   }
 }
 </script>

@@ -17,6 +17,12 @@ export default {
   components: {
     Header,
   },
+
+  mounted: function () {
+    this.$store.dispatch('GET_QUESTION_LIST');
+    this.$store.dispatch('GET_CATEGORY_LIST');
+    this.$store.dispatch('GET_TAG_LIST');
+  }
 }
 </script>
 

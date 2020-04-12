@@ -63,33 +63,22 @@ export default {
 
   data () {
     return {
-      categories: null,
+      // categories: null,
       loading: false,
       error: null,
     }
   },
 
+  computed: {
+    categories () {
+      return this.$store.state.categories;
+    },
+  },
+
   mounted () {
-    this.fetchCategories();
   },
 
   methods: {
-    fetchCategories() {
-      this.error = this.categories = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/categories`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.categories = data;
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
-    },
   }
 }
 </script>

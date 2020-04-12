@@ -104,7 +104,7 @@ export default {
 
   data() {
     return {
-      question: null,
+      // question: null,
       answerChoices: [],
       answerPicked: '',
       questionSubmitted: false,
@@ -117,42 +117,37 @@ export default {
     }
   },
 
-  mounted () {
-    this.init(this.$route.params.questionId);
+  computed: {
+    // currentQuestionId () {
+    //   return this.$route.params.questionId;
+    // },
+    question () {
+      return this.$store.getters.getQuestionById(this.$route.params.questionId);
+    },
   },
 
-  beforeRouteUpdate (to, from, next) {
-    this.init(to.params.questionId);
-    next();
+  watch: {
+    // eslint-disable-next-line
+    question (newQuestion, oldQuestion) {
+      if (newQuestion) {
+        this.initQuestion();
+      }
+    }
+  },
+
+  mounted () {
   },
 
   methods: {
-    init(currentQuestionId) {
+    initQuestion() {
+      this.answerChoices = this.shuffleAnswers(['a', 'b', 'c', 'd'], this.question.has_ordered_answers);
       this.answerPicked = '';
       this.questionSubmitted = false;
       this.questionSuccess = null;
       this.loading = false;
       this.error = null;
-      this.fetchQuestion(currentQuestionId);
-    },
-    fetchQuestion(questionId) {
-      this.error = this.question = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/${questionId}`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.question = data;
-          this.answerChoices = this.shuffleAnswers(['a', 'b', 'c', 'd'], this.question.has_ordered_answers);
-          this.fetchQuestionRandomNext(this.question.id, this.question.category);
-          this.fetchQuestionRandomNext(this.question.id);
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
+      this.fetchQuestionRandomNext(this.question.id, this.question.category);
+      this.fetchQuestionRandomNext(this.question.id);
     },
     fetchQuestionRandomNext(currentQuestionId, currentQuestionCategory = null) {
       const params = { 'current': currentQuestionId };

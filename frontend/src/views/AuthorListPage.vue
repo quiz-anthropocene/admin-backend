@@ -63,33 +63,23 @@ export default {
 
   data () {
     return {
-      authors: null,
+      // authors: null,
       loading: false,
       error: null,
     }
   },
 
+  computed: {
+    authors () {
+      return this.$store.state.authors;
+    },
+  },
+
   mounted () {
-    this.fetchAuthors();
+    this.$store.dispatch('GET_AUTHOR_LIST');
   },
 
   methods: {
-    fetchAuthors() {
-      this.error = this.authors = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/authors`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.authors = data;
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
-    },
   }
 }
 </script>

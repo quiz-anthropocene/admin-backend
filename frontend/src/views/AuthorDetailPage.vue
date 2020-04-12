@@ -63,37 +63,26 @@ export default {
 
   data () {
     return {
-      currentAuthor: null,
-      questions: null,
+      // currentAuthor: null,
+      // questions: null,
       loading: false,
       error: null,
     }
   },
 
+  computed: {
+    currentAuthor () {
+      return this.$route.params.authorName;
+    },
+    questions () {
+      return this.$store.getters.getQuestionsByAuthorName(this.$route.params.authorName);
+    },
+  },
+
   mounted () {
-    this.currentAuthor = this.$route.params.authorName;
-    this.fetchAuthorQuestions(this.$route.params.authorName);
   },
 
   methods: {
-    fetchAuthorQuestions(currentAuthorName) {
-      const params = { 'author': currentAuthorName };
-      const urlParams = new URLSearchParams(Object.entries(params));
-      this.error = this.questions = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions?${urlParams}`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.questions = data;
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
-    },
   }
 }
 </script>
