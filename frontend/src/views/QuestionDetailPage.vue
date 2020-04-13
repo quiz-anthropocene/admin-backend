@@ -46,18 +46,18 @@
       </p>
       <hr class="custom-seperator" />
       <div class="row margin-top-bottom-10 small">
-        <div v-if="question.tags" title="Tag(s) de la question">🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.join(', ') }}</div>
+        <div v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.join(', ') }}</div>
         <div title="Auteur de la question">📝&nbsp;Auteur:&nbsp;{{ question.author }}</div>
         <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count }} / {{ question.answer_count }} ({{ question.answer_success_rate }}%)</div>
       </div>
     </div>
 
-    <div v-if="question" class="small">
+    <div v-if="question" class="small" :key="question.id"> <!-- INFO: :key is to force reload, avoid button to keep blur -->
       <br />
-      <router-link :to="{ name: 'question-detail', params: { questionId: questionSameCategoryNextId } }">
+      <router-link v-if="questionSameCategoryNextId" :to="{ name: 'question-detail', params: { questionId: questionSameCategoryNextId } }">
         <button class="btn btn-outline-primary">⏩&nbsp;Autre question <span class="text-secondary">{{ question.category }}</span></button>
       </router-link>
-      <router-link :to="{ name: 'question-detail', params: { questionId: questionRandomNextId } }">
+      <router-link v-if="questionRandomNextId" :to="{ name: 'question-detail', params: { questionId: questionRandomNextId } }">
         <button class="btn btn-outline-primary">🔀&nbsp;Question au hasard</button>
       </router-link>
     </div>
@@ -130,11 +130,11 @@ export default {
   },
 
   mounted () {
+    console.log("mounted")
   },
 
   methods: {
     initQuestion() {
-      console.log("initQuestion")
       this.answerChoices = this.shuffleAnswers(['a', 'b', 'c', 'd'], this.question.has_ordered_answers);
       this.answerPicked = '';
       this.questionSubmitted = false;

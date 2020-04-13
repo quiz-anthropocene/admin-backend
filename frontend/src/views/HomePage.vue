@@ -43,7 +43,7 @@
       </div>
     </div>
 
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-md-center" v-if="questionRandomNextId">
       <div class="col col-sm-6">
         <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: questionRandomNextId } }">
           <button class="btn btn-outline-primary btn-lg btn-block">🔀&nbsp;<strong>Question au hasard</strong></button>
@@ -127,7 +127,6 @@ export default {
         })
         .then(data => {
           this.questionRandomNextId = data.id;
-          console.log(this.questionRandomNextId)
         })
         .catch(error => {
           console.log(error)
