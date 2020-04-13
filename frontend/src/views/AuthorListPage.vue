@@ -9,14 +9,6 @@
 
     <br />
 
-    <div v-if="loading" class="loading">
-      Chargement des auteurs...
-    </div>
-
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-
     <div v-if="authors && authors.length === 0">
       Pas d'auteurs :(
     </div>
@@ -63,33 +55,21 @@ export default {
 
   data () {
     return {
-      authors: null,
-      loading: false,
-      error: null,
+      // authors: null,
     }
   },
 
+  computed: {
+    authors () {
+      return this.$store.state.authors;
+    },
+  },
+
   mounted () {
-    this.fetchAuthors();
+    this.$store.dispatch('GET_AUTHOR_LIST');
   },
 
   methods: {
-    fetchAuthors() {
-      this.error = this.authors = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/authors`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.authors = data;
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
-    },
   }
 }
 </script>

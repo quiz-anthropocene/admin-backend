@@ -9,14 +9,6 @@
 
     <br />
 
-    <div v-if="loading" class="loading">
-      Chargement des questions...
-    </div>
-
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-
     <div v-if="questions && questions.length === 0">
       Pas de questions dans cette catégorie :(
     </div>
@@ -63,37 +55,24 @@ export default {
 
   data () {
     return {
-      currentCategory: null,
-      questions: null,
-      loading: false,
-      error: null,
+      // currentCategory: null,
+      // questions: null,
     }
   },
 
+  computed: {
+    currentCategory () {
+      return this.$route.params.categoryName;
+    },
+    questions () {
+      return this.$store.getters.getQuestionsByCategoryName(this.$route.params.categoryName);
+    },
+  },
+
   mounted () {
-    this.currentCategory = this.$route.params.categoryName;
-    this.fetchCategoryQuestions(this.$route.params.categoryName);
   },
 
   methods: {
-    fetchCategoryQuestions(currentCategoryName) {
-      const params = { 'category': currentCategoryName };
-      const urlParams = new URLSearchParams(Object.entries(params));
-      this.error = this.questions = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions?${urlParams}`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.questions = data;
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
-    },
   }
 }
 </script>

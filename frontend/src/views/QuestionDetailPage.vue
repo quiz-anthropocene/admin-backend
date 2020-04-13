@@ -2,19 +2,11 @@
   <section>
     <br />
 
-    <div v-if="loading" class="loading">
-      Chargement de la question...
-    </div>
-
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-
     <div v-if="question" class="question">
       <h2>
         <span>
           <span class="d-none d-sm-inline">Question&nbsp;</span>
-          <span class="color-blue">#{{ question.id }}</span>
+          <span class="text-primary">#{{ question.id }}</span>
         </span>
         <span> | </span>
         <span class="text-secondary">{{ question.category }}</span>
@@ -23,7 +15,7 @@
       </h2>
       <h3>{{ question.text }}</h3>
       <form @submit.prevent="submitQuestion">
-        <div v-for="answer_option_letter in answerChoices" :key="answer_option_letter" :class="{ 'color-blue' : answerPicked === answer_option_letter }">
+        <div v-for="answer_option_letter in answerChoices" :key="answer_option_letter" :class="{ 'text-primary' : answerPicked === answer_option_letter }">
           <template v-if="question['answer_option_' + answer_option_letter]">
             <input type="radio" v-bind:id="answer_option_letter" v-bind:value="answer_option_letter" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
             <label v-bind:for="answer_option_letter">&nbsp;{{ question['answer_option_' + answer_option_letter] }}</label>
@@ -37,7 +29,7 @@
 
     <br v-if="question && questionSubmitted" />
 
-    <div v-if="question && questionSubmitted" class="answer">
+    <div v-if="question && questionSubmitted" class="answer" :class="questionSuccess ? 'answer-success' : 'answer-error'">
       <h2 v-if="questionSuccess">{{ questionSuccess }} !</h2>
       <h2 v-if="!questionSuccess">Pas tout à fait...</h2>
       <h3 v-if="!questionSuccess">La réponse était: {{ question["answer_option_" + question["answer_correct"]] }}</h3>
@@ -54,6 +46,7 @@
       </p>
       <hr class="custom-seperator" />
       <div class="row margin-top-bottom-10 small">
+        <div v-if="question.tags" title="Tag(s) de la question">🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.join(', ') }}</div>
         <div title="Auteur de la question">📝&nbsp;Auteur:&nbsp;{{ question.author }}</div>
         <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count }} / {{ question.answer_count }} ({{ question.answer_success_rate }}%)</div>
       </div>
@@ -104,7 +97,7 @@ export default {
 
   data() {
     return {
-      question: null,
+      // question: null,
       answerChoices: [],
       answerPicked: '',
       questionSubmitted: false,
@@ -112,47 +105,42 @@ export default {
       questionSuccessMessageList: ["C'est exact", "En effet", "Bien vu", "Félicitations", "Bravo"],
       questionSameCategoryNextId: null,
       questionRandomNextId: null,
-      loading: false,
-      error: null,
+    }
+  },
+
+  computed: {
+    // currentQuestionId () {
+    //   return this.$route.params.questionId;
+    // },
+    question () {
+      return this.$store.getters.getQuestionById(this.$route.params.questionId);
+    },
+  },
+
+  watch: {
+    question: {
+      immediate: true,
+      // eslint-disable-next-line
+      handler(newQuestion, oldQuestion) {
+        if (newQuestion) {
+          this.initQuestion();
+        }
+      }
     }
   },
 
   mounted () {
-    this.init(this.$route.params.questionId);
-  },
-
-  beforeRouteUpdate (to, from, next) {
-    this.init(to.params.questionId);
-    next();
   },
 
   methods: {
-    init(currentQuestionId) {
+    initQuestion() {
+      console.log("initQuestion")
+      this.answerChoices = this.shuffleAnswers(['a', 'b', 'c', 'd'], this.question.has_ordered_answers);
       this.answerPicked = '';
       this.questionSubmitted = false;
       this.questionSuccess = null;
-      this.loading = false;
-      this.error = null;
-      this.fetchQuestion(currentQuestionId);
-    },
-    fetchQuestion(questionId) {
-      this.error = this.question = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/${questionId}`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.question = data;
-          this.answerChoices = this.shuffleAnswers(['a', 'b', 'c', 'd'], this.question.has_ordered_answers);
-          this.fetchQuestionRandomNext(this.question.id, this.question.category);
-          this.fetchQuestionRandomNext(this.question.id);
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
+      this.fetchQuestionRandomNext(this.question.id, this.question.category);
+      this.fetchQuestionRandomNext(this.question.id);
     },
     fetchQuestionRandomNext(currentQuestionId, currentQuestionCategory = null) {
       const params = { 'current': currentQuestionId };
@@ -162,7 +150,6 @@ export default {
       const urlParams = new URLSearchParams(Object.entries(params));
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/random?${urlParams}`)
         .then(response => {
-          this.loading = false
           return response.json()
         })
         .then(data => {
@@ -174,7 +161,6 @@ export default {
         })
         .catch(error => {
           console.log(error)
-          this.error = error;
         })
     },
     shuffleAnswers(answers_array, has_ordered_answers) {
@@ -208,7 +194,6 @@ export default {
         body: JSON.stringify({ answer_choice: this.answerPicked })
       })
         .then(response => {
-          this.loading = false
           return response.json()
         })
         .then(data => {
@@ -230,11 +215,19 @@ export default {
 }
 
 .answer {
-  border: 2px solid var(--secondary);
+  border: 2px solid;
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
   overflow: hidden;
+}
+.answer-success {
+  border-color: green;
+  background-color: #f2f8f2;
+}
+.answer-error {
+  border-color: red;
+  background-color: #fff2f2;
 }
 .answer p.answer-image {
   height: 300px;

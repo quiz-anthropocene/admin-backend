@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="alert alert-warning">
+    <div class="alert alert-warning" role="alert">
       <i v-if="questionStats">Il y a actuellement {{ questionStats["publish"][0]["count"] }} questions. </i>
       <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus !</i>
     </div>
@@ -127,6 +127,7 @@ export default {
         })
         .then(data => {
           this.questionRandomNextId = data.id;
+          console.log(this.questionRandomNextId)
         })
         .catch(error => {
           console.log(error)

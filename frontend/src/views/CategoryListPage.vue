@@ -9,14 +9,6 @@
 
     <br />
 
-    <div v-if="loading" class="loading">
-      Chargement des catégories...
-    </div>
-
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-
     <div v-if="categories && categories.length === 0">
       Pas de catégories :(
     </div>
@@ -63,33 +55,20 @@ export default {
 
   data () {
     return {
-      categories: null,
-      loading: false,
-      error: null,
+      // categories: null,
     }
   },
 
+  computed: {
+    categories () {
+      return this.$store.state.categories;
+    },
+  },
+
   mounted () {
-    this.fetchCategories();
   },
 
   methods: {
-    fetchCategories() {
-      this.error = this.categories = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/categories`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.categories = data;
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
-    },
   }
 }
 </script>

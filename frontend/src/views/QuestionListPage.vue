@@ -20,14 +20,6 @@
 
     <br />
 
-    <div v-if="loading" class="loading">
-      Chargement des questions...
-    </div>
-
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-
     <!-- Question List -->
     <div v-if="questions" class="row">
       <div class="row-item row-item-question" v-for="question in questionsDisplayed" :key="question.id">
@@ -72,72 +64,39 @@ export default {
 
   data () {
     return {
-      categories: null,
-      categorySelected: null,
-      tags: null,
-      tagSelected: null,
-      questions: null,
+      // questions: null,
       questionsDisplayed: null,
-      loading: false,
-      error: null,
+      // categories: null,
+      categorySelected: null,
+      // tags: null,
+      tagSelected: null,
     }
   },
 
-  created () {
-    this.fetchCategories()
-    this.fetchTags()
-    this.fetchQuestions()
+  computed: {
+    questions () {
+      return this.$store.state.questions;
+    },
+    categories () {
+      return this.$store.state.categories;
+    },
+    tags () {
+      return this.$store.state.tags;
+    }
+  },
+
+  watch: {
+    // eslint-disable-next-line
+    questions (newQuestions, oldQuestions) {
+      this.questionsDisplayed = newQuestions;
+    }
+  },
+
+  mounted () {
+    this.questionsDisplayed = this.questions;
   },
 
   methods: {
-    fetchCategories() {
-      this.error = this.categories = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/categories`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.categories = data;
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
-    },
-    fetchTags() {
-      this.error = this.tags = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/tags`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.tags = data;
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
-    },
-    fetchQuestions() {
-      this.error = this.questions = this.questionsDisplayed = null
-      this.loading = true
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.questions = this.questionsDisplayed = data
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
-    },
     clickCategory(category) {
       this.categorySelected = (this.categorySelected === category) ? null : category;
       this.updateQuestionsDisplayed();
@@ -147,13 +106,10 @@ export default {
       this.updateQuestionsDisplayed();
     },
     updateQuestionsDisplayed() {
-      this.questionsDisplayed = this.questions;
-      if (this.categorySelected) {
-        this.questionsDisplayed = this.questionsDisplayed.filter(q => q.category === this.categorySelected);
-      }
-      if (this.tagSelected) {
-        this.questionsDisplayed = this.questionsDisplayed.filter(q => q.tags.includes(this.tagSelected));
-      }
+      this.questionsDisplayed = this.$store.getters.getQuestionsByFilter({
+        "categoryName": this.categorySelected,
+        "tagName": this.tagSelected
+      });
     }
   }
 }
