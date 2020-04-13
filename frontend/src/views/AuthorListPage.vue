@@ -9,14 +9,6 @@
 
     <br />
 
-    <div v-if="loading" class="loading">
-      Chargement des auteurs...
-    </div>
-
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-
     <div v-if="authors && authors.length === 0">
       Pas d'auteurs :(
     </div>
@@ -64,8 +56,6 @@ export default {
   data () {
     return {
       // authors: null,
-      loading: false,
-      error: null,
     }
   },
 

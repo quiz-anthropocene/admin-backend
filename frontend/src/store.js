@@ -5,6 +5,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
+    loading: true,
+    error: null,
     questions: [],
     categories: [],
     tags: [],
@@ -12,17 +14,21 @@ const store = new Vuex.Store({
   },
   actions: {
     GET_QUESTION_LIST: ({ commit }) => {
+      commit('UPDATE_LOADING_STATUS', true);
+      commit('UPDATE_ERROR', null);
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions`)
         .then(response => {
-          // this.loading = false
+          commit('UPDATE_LOADING_STATUS', false);
+          commit('UPDATE_ERROR', null);
           return response.json()
         })
         .then(data => {
           commit('SET_QUESTION_LIST', { list: data })
         })
         .catch(error => {
+          commit('UPDATE_LOADING_STATUS', false);
+          commit('UPDATE_ERROR', error);
           console.log(error)
-          // this.error = error;
         })
     },
     GET_CATEGORY_LIST: ({ commit }) => {
@@ -69,6 +75,12 @@ const store = new Vuex.Store({
     },
   },
   mutations: {
+    UPDATE_LOADING_STATUS: (state, value) => {
+      state.loading = value
+    },
+    UPDATE_ERROR: (state, value) => {
+      state.error = value
+    },
     SET_QUESTION_LIST: (state, { list }) => {
       state.questions = list
     },

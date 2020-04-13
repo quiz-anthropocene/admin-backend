@@ -9,14 +9,6 @@
 
     <br />
 
-    <div v-if="loading" class="loading">
-      Chargement des tags...
-    </div>
-
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-
     <div v-if="tags && tags.length === 0">
       Pas de tags :(
     </div>
@@ -64,8 +56,6 @@ export default {
   data () {
     return {
       // tags: null,
-      loading: false,
-      error: null,
     }
   },
 

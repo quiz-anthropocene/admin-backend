@@ -1,6 +1,13 @@
 <template>
   <div id="app">
     <Header />
+    <section>
+      <div v-if="loading" class="alert alert-primary" role="alert">Chargement...</div>
+      <div v-if="error" class="alert alert-danger" role="alert">
+        Erreur de connexion 🤔
+        <a href="#" @click="initData()">Réessayer</a>
+      </div>
+    </section>
     <main class="container-md">
       <router-view></router-view>
     </main>
@@ -18,10 +25,25 @@ export default {
     Header,
   },
 
+  computed: {
+    loading () {
+      return this.$store.state.loading;
+    },
+    error () {
+      return this.$store.state.error;
+    }
+  },
+
   mounted: function () {
-    this.$store.dispatch('GET_QUESTION_LIST');
-    this.$store.dispatch('GET_CATEGORY_LIST');
-    this.$store.dispatch('GET_TAG_LIST');
+    this.initData();
+  },
+
+  methods: {
+    initData () {
+      this.$store.dispatch('GET_QUESTION_LIST');
+      this.$store.dispatch('GET_CATEGORY_LIST');
+      this.$store.dispatch('GET_TAG_LIST');
+    }
   }
 }
 </script>
@@ -112,12 +134,14 @@ hr.custom-seperator {
   padding-bottom: 15px;
 }
 
-
-.color-tag {
-  color: $tag-color;
+.color-green {
+  color: green;
 }
 .color-red {
   color: red;
+}
+.color-tag {
+  color: $tag-color;
 }
 
 .text-underline-primary {

@@ -9,14 +9,6 @@
 
     <br />
 
-    <div v-if="loading" class="loading">
-      Chargement des questions...
-    </div>
-
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-
     <div v-if="questions && questions.length === 0">
       Pas de questions pour cet auteur :(
     </div>
@@ -65,8 +57,6 @@ export default {
     return {
       // currentAuthor: null,
       // questions: null,
-      loading: false,
-      error: null,
     }
   },
 

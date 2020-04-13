@@ -20,14 +20,6 @@
 
     <br />
 
-    <div v-if="loading" class="loading">
-      Chargement des questions...
-    </div>
-
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-
     <!-- Question List -->
     <div v-if="questions" class="row">
       <div class="row-item row-item-question" v-for="question in questionsDisplayed" :key="question.id">
@@ -78,8 +70,6 @@ export default {
       categorySelected: null,
       // tags: null,
       tagSelected: null,
-      loading: false,
-      error: null,
     }
   },
 

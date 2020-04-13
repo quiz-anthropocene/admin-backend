@@ -9,14 +9,6 @@
 
     <br />
 
-    <div v-if="loading" class="loading">
-      Chargement des catégories...
-    </div>
-
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-
     <div v-if="categories && categories.length === 0">
       Pas de catégories :(
     </div>
@@ -64,8 +56,6 @@ export default {
   data () {
     return {
       // categories: null,
-      loading: false,
-      error: null,
     }
   },
 
