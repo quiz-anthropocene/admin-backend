@@ -74,11 +74,26 @@ QUIZ
 """
 
 class QuizSerializer(serializers.ModelSerializer):
+    # questions = QuestionSerializer(many=True)
+
     class Meta:
         model = Quiz
         fields = [
             'id', 'name', 'description',
             'question_count',
+            'categories', 'tags',
+            'created'
+        ]
+
+class QuizFullSerializer(serializers.ModelSerializer):
+    questions = QuestionSerializer(many=True)
+
+    class Meta:
+        model = Quiz
+        fields = [
+            'id', 'name', 'description',
+            'questions', 'question_count',
+            'categories', 'tags',
             'created'
         ]
 

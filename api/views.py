@@ -7,7 +7,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 from api.models import Question, QuestionCategory, QuestionTag, Quiz, QuestionStat, Contribution
-from api.serializers import QuestionSerializer, QuestionCategorySerializer, QuestionTagSerializer, QuizSerializer, QuestionStatSerializer, ContributionSerializer
+from api.serializers import QuestionSerializer, QuestionCategorySerializer, QuestionTagSerializer, QuizSerializer, QuizFullSerializer, QuestionStatSerializer, ContributionSerializer
 
 
 def api_home(request):
@@ -23,6 +23,7 @@ def api_home(request):
             <li>GET /api/categories</li>
             <li>GET /api/tags</li>
             <li>GET /api/authors</li>
+            <li>GET /api/quizzes</li>
         </ul>
     """)
 
@@ -165,10 +166,14 @@ def author_list(request):
 def quiz_list(request):
     """
     List all quizzes (with the number of questions per quiz)
+    Optional query parameters:
+    - 'full' (string)
     """
     quizzes = Quiz.objects.all()
-
-    serializer = QuizSerializer(quizzes, many=True)
+    if request.GET.get("full"):
+        serializer = QuizFullSerializer(quizzes, many=True)
+    else:
+        serializer = QuizSerializer(quizzes, many=True)
     return Response(serializer.data)
 
 

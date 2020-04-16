@@ -8,6 +8,7 @@ const store = new Vuex.Store({
     loading: true,
     error: null,
     questions: [],
+    quizzes: [],
     categories: [],
     tags: [],
     authors: [],
@@ -29,6 +30,20 @@ const store = new Vuex.Store({
           commit('UPDATE_LOADING_STATUS', false);
           commit('UPDATE_ERROR', error);
           console.log(error)
+        })
+    },
+    GET_QUIZ_LIST: ({ commit }) => {
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/quizzes?full=true`)
+        .then(response => {
+          // this.loading = false
+          return response.json()
+        })
+        .then(data => {
+          commit('SET_QUIZ_LIST', { list: data })
+        })
+        .catch(error => {
+          console.log(error)
+          // this.error = error;
         })
     },
     GET_CATEGORY_LIST: ({ commit }) => {
@@ -84,6 +99,9 @@ const store = new Vuex.Store({
     SET_QUESTION_LIST: (state, { list }) => {
       state.questions = list
     },
+    SET_QUIZ_LIST: (state, { list }) => {
+      state.quizzes = list
+    },
     SET_CATEGORY_LIST: (state, { list }) => {
       state.categories = list
     },
@@ -110,7 +128,10 @@ const store = new Vuex.Store({
     getQuestionsByFilter: state => filter => {
       return state.questions.filter(q => (filter.categoryName ? (q.category === filter.categoryName) : true))
                             .filter(q => (filter.tagName ? q.tags.includes(filter.tagName) : true));
-    }
+    },
+    getQuizById: state => quizId => {
+      return state.quizzes.find(q => (q.id === parseInt(quizId)));
+    },
   }
 })
 

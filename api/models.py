@@ -122,6 +122,7 @@ class Quiz(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du quiz")
     description = models.TextField(blank=True, help_text="Une description du quiz")
     questions = models.ManyToManyField(Question, related_name="quizzes", help_text="Les questions du quiz")
+    author = models.CharField(max_length=50, blank=True, help_text="L'auteur du quiz")
     created = models.DateField(auto_now=True, help_text="La date & heure de la création du quiz")
 
     def __str__(self):
@@ -134,11 +135,19 @@ class Quiz(models.Model):
     @property
     def categories(self):
         # self.questions.values("category__name").annotate(count=Count('category__name')).order_by("-count")
-        return list(self.questions.values_list("category__name", flat=True).distinct())
+        return list(self.questions.order_by().values_list("category__name", flat=True).distinct()) # .sort()
+
+        # from collections import Counter
+        # counter = Counter(self.questions.values_list("category__name", flat=True))
+        # return sorted(counter, key=counter.get, reverse=True)
 
     @property
     def tags(self):
-        return list(self.questions.values_list("tags__name", flat=True).distinct())
+        return list(self.questions.order_by().values_list("tags__name", flat=True).distinct())
+
+    # @property
+    # def answer_count(self):
+    #     return QuestionStat.objects.filter(question=self.id).count()
 
 
 class QuestionStat(models.Model):
