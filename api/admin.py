@@ -12,7 +12,7 @@ from django.db.models import Count
 from django.utils.html import mark_safe
 # from django.core.management import call_command
 
-from api.models import Question, QuestionCategory, QuestionTag, Quiz, QuestionStat, Contribution
+from api.models import Question, QuestionCategory, QuestionTag, Quiz, QuestionStat, QuizStat, Contribution
 
 
 class ExportMixin:
@@ -130,14 +130,16 @@ class QuestionTagAdmin(admin.ModelAdmin, ExportMixin):
 
 
 class QuizAdmin(admin.ModelAdmin, ExportMixin):
-    list_display = ("id", "name", "question_count", "categories", "tags",)
+    list_display = ("id", "name", "question_count", "author", "categories", "tags", "answer_count",)
     ordering = ("id", )
     filter_horizontal = ("questions",)
+    readonly_fields = ("answer_count",)
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
 
 
 class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
-    list_display = ("id", "question", "answer_choice", "created",)
+    list_display = ("id", "question", "answer_choice", "source", "created",)
+    list_filter = ("source",)
     ordering = ("id",)
     actions = ["export_as_csv", "export_as_json", "export_as_yaml", "export_all_questionstat_as_yaml"]
 
@@ -165,6 +167,13 @@ class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)
+
+
+class QuizStatAdmin(admin.ModelAdmin, ExportMixin):
+    list_display = ("id", "quiz", "answer_success_count", "created",)
+    list_filter = ("quiz",)
+    ordering = ("id",)
+    actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
 
 
 class ContributionAdmin(admin.ModelAdmin, ExportMixin):
@@ -203,5 +212,6 @@ admin.site.register(QuestionCategory, QuestionCategoryAdmin)
 admin.site.register(QuestionTag, QuestionTagAdmin)
 admin.site.register(Quiz, QuizAdmin)
 admin.site.register(QuestionStat, QuestionStatAdmin)
+admin.site.register(QuizStat, QuizStatAdmin)
 admin.site.register(Contribution, ContributionAdmin)
 admin.site.register(admin.models.LogEntry, LogEntryAdmin)

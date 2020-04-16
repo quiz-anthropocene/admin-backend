@@ -28,7 +28,7 @@
     <!-- Quiz en cours -->
 
     <section v-if="quiz && (quizStep > 0) && quiz.questions[quizStep-1]">
-      <QuestionAnswerCards v-bind:question="quiz.questions[quizStep-1]" v-bind:context="{ question_number: quizStep+' / '+quiz.questions.length }" @answerSubmitted="answerSubmitted($event)" />
+      <QuestionAnswerCards v-bind:question="quiz.questions[quizStep-1]" v-bind:context="{ question_number: quizStep+' / '+quiz.questions.length, source: 'quiz' }" @answerSubmitted="answerSubmitted($event)" />
       <br />
       <button v-if="showNextButton && (quizStep < quiz.questions.length)" class="btn btn-outline-primary" @click="incrementStep()">⏩&nbsp;Question suivante</button>
       <button v-if="showNextButton && (quizStep === quiz.questions.length)" class="btn btn-outline-primary" @click="incrementStep()">⏩&nbsp;Voir vos résultats</button>
@@ -124,7 +124,26 @@ export default {
       this.showNextButton = true;
     },
     submitQuiz() {
-      console.log("done !", this.quiz.questions.filter(q => q['success']).length, "/", this.quiz.questions.length);
+      // stats
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/quizzes/${this.quiz.id}/stats`, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          answer_success_count: this.quiz.questions.filter(q => q['success']).length
+        })
+      })
+        .then(response => {
+          return response.json()
+        })
+        .then(data => {
+          console.log(data);
+        })
+        .catch(error => {
+          console.log(error)
+        })
     }
   }
 }

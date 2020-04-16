@@ -129,7 +129,10 @@ export default {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ answer_choice: this.answerPicked })
+        body: JSON.stringify({
+          answer_choice: this.answerPicked,
+          source: this.context.source
+        })
       })
         .then(response => {
           return response.json()

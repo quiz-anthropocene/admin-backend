@@ -6,8 +6,8 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api.models import Question, QuestionCategory, QuestionTag, Quiz, QuestionStat, Contribution
-from api.serializers import QuestionSerializer, QuestionCategorySerializer, QuestionTagSerializer, QuizSerializer, QuizFullSerializer, QuestionStatSerializer, ContributionSerializer
+from api.models import Question, QuestionCategory, QuestionTag, Quiz, QuestionStat, QuizStat, Contribution
+from api.serializers import QuestionSerializer, QuestionCategorySerializer, QuestionTagSerializer, QuizSerializer, QuizFullSerializer, QuestionStatSerializer, QuizStatSerializer, ContributionSerializer
 
 
 def api_home(request):
@@ -74,7 +74,7 @@ def question_detail_stats(request, pk):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == "POST":
-        question_stat = QuestionStat.objects.create(question=question, answer_choice=request.data["answer_choice"])
+        question_stat = QuestionStat.objects.create(question=question, answer_choice=request.data["answer_choice"], source=request.data["source"])
         serializer = QuestionStatSerializer(question_stat)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -175,6 +175,22 @@ def quiz_list(request):
     else:
         serializer = QuizSerializer(quizzes, many=True)
     return Response(serializer.data)
+
+
+@api_view(["POST"])
+def quiz_detail_stats(request, pk):
+    """
+    Update the quiz stats
+    """
+    try:
+        quiz = Quiz.objects.get(pk=pk)
+    except Quiz.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == "POST":
+        quiz_stat = QuizStat.objects.create(quiz=quiz, answer_success_count=request.data["answer_success_count"])
+        serializer = QuizStatSerializer(quiz_stat)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
 @api_view(["POST"])

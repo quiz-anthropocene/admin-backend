@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api.models import Question, QuestionCategory, QuestionTag, Quiz, QuestionStat, Contribution
+from api.models import Question, QuestionCategory, QuestionTag, Quiz, QuestionStat, QuizStat, Contribution
 
 
 """
@@ -106,7 +106,19 @@ class QuestionStatSerializer(serializers.ModelSerializer):
     class Meta:
         model = QuestionStat
         fields = [
-            'question_id', 'answer_choice', 'created'
+            'question_id', 'answer_choice', 'source', 'created'
+        ]
+
+
+"""
+QUIZ STATS
+"""
+
+class QuizStatSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = QuizStat
+        fields = [
+            'quiz_id', 'answer_success_count', 'created'
         ]
 
 

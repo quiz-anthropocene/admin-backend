@@ -13,5 +13,6 @@ urlpatterns = [
     path('tags', views.tag_list),
     path('authors', views.author_list),
     path('quizzes', views.quiz_list),
+    path('quizzes/<int:pk>/stats', views.quiz_detail_stats),
     path('contribute', views.contribute),
 ]
