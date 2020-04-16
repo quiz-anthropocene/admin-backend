@@ -43,6 +43,7 @@ export default {
       this.$store.dispatch('GET_QUESTION_LIST');
       this.$store.dispatch('GET_CATEGORY_LIST');
       this.$store.dispatch('GET_TAG_LIST');
+      this.$store.dispatch('GET_QUIZ_LIST');
     }
   }
 }
@@ -71,7 +72,7 @@ body {
   text-align: center;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, h5, h6, p {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -90,6 +91,13 @@ h3 {
 
 button {
   margin: 10px;
+}
+
+label {
+  display: inline; // solves failing &nbsp;
+}
+form > div {
+  margin-bottom: 10px; // chaging label to inline removes it's margin-bottom of 8px...
 }
 
 

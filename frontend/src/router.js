@@ -10,6 +10,8 @@ import TagListPage from './views/TagListPage.vue'
 import TagDetailPage from './views/TagDetailPage.vue'
 import AuthorListPage from './views/AuthorListPage.vue'
 import AuthorDetailPage from './views/AuthorDetailPage.vue'
+import QuizListPage from './views/QuizListPage.vue'
+import QuizDetailPage from './views/QuizDetailPage.vue'
 import AboutPage from './views/AboutPage.vue'
 import StatsPage from './views/StatsPage.vue'
 import ContributePage from './views/ContributePage.vue'
@@ -69,6 +71,18 @@ const routes = [
     }
   },
   {
+    path: '/quiz', name: 'quiz-list', component: QuizListPage,
+    meta: {
+      title: "Know Your Planet - Les Quiz"
+    }
+  },
+  {
+    path: '/quiz/:quizId', name: 'quiz-detail', component: QuizDetailPage,
+    meta: {
+      title: "Know Your Planet - Quiz "
+    }
+  },
+  {
     path: '/a-propos', name: 'about', component: AboutPage,
     meta: {
       title: "Know Your Planet - A propos"
@@ -100,6 +114,8 @@ router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     if (to.params.questionId) {
       document.title = to.meta.title + (to.params.questionId ? `#${to.params.questionId}` : '');
+    } else if (to.params.quizId) {
+      document.title = to.meta.title + (to.params.quizId ? `#${to.params.quizId}` : '');
     } else if (to.params.categoryName) {
       document.title = to.meta.title + (to.params.categoryName ? `#${to.params.categoryName}` : '');
     } else if (to.params.tagName) {

@@ -56,7 +56,7 @@
     <div class="row actions">
       <div class="col-sm">
         <router-link :to="{ name: 'question-list' }">
-          Toutes les questions
+          ❓&nbsp;Toutes les questions
         </router-link>
         <br />
       </div>
@@ -67,7 +67,9 @@
         <br />
       </div>
       <div class="col-sm">
-        Tous les quizz <small>(à venir)</small>
+        <router-link :to="{ name: 'quiz-list' }">
+          🕹️&nbsp;Tous les quiz
+        </router-link>
         <br />
       </div>
     </div>

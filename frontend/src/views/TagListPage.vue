@@ -27,7 +27,7 @@
     <div v-if="tags" class="row actions">
       <div class="col-sm">
         <router-link :to="{ name: 'question-list' }">
-          Toutes les questions
+          ❓&nbsp;Toutes les questions
         </router-link>
         <br />
       </div>

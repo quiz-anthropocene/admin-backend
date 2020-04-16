@@ -16,7 +16,7 @@
 import DifficultyBadge from '../components/DifficultyBadge.vue'
 
 export default {
-  name: 'QuestionCard',
+  name: 'QuestionPreviewCard',
   props: {
     question: Object
   },

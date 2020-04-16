@@ -17,7 +17,7 @@
     <div v-if="questions && questions.length > 0" class="row">
       <div class="row-item row-item-question" v-for="question in questions" :key="question.id">
         <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: question.id } }">
-          <QuestionCard v-bind:question="question" />
+          <QuestionPreviewCard v-bind:question="question" />
         </router-link>
       </div>
     </div>
@@ -43,13 +43,13 @@
 </template>
 
 <script>
-import QuestionCard from '../components/QuestionCard.vue'
+import QuestionPreviewCard from '../components/QuestionPreviewCard.vue'
 import HomeLink from '../components/HomeLink.vue'
 
 export default {
   name: 'CategoryDetailPage',
   components: {
-    QuestionCard,
+    QuestionPreviewCard,
     HomeLink
   },
 
