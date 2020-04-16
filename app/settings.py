@@ -139,6 +139,7 @@ STATICFILES_DIRS = (
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:8080",
     "https://know-your-planet.netlify.com",
+    "https://know-your-planet.netlify.app",
 ]
 
 
