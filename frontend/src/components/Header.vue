@@ -3,15 +3,23 @@
     <h1 class="text-primary">
       <router-link class="no-decoration" :to="{ name: 'home' }">Know Your Planet</router-link>
     </h1>
-    <h2>
+    <h2 class="d-none d-sm-block" :class="{ 'd-block': currentRoute === 'home' }">
       Des questions/réponses pour mieux appréhender les limites de notre planète&nbsp;🌍
-    </h2><!-- class="d-none d-sm-block" -->
+    </h2>
   </header>
 </template>
 
 <script>
 export default {
   name: 'Header',
+  props: {
+  },
+
+  computed: {
+    currentRoute () {
+      return this.$route.name;
+    }
+  }
 }
 </script>
 

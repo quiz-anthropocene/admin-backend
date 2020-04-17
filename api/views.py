@@ -146,7 +146,7 @@ def tag_list(request):
     """
     List all tags (with the number of questions per tag)
     """
-    tags = QuestionTag.objects.all()
+    tags = QuestionTag.objects.all().order_by("name")
 
     serializer = QuestionTagSerializer(tags, many=True)
     return Response(serializer.data)
