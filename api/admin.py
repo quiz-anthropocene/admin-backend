@@ -125,7 +125,7 @@ class QuestionCategoryAdmin(admin.ModelAdmin, ExportMixin):
 
 class QuestionTagAdmin(admin.ModelAdmin, ExportMixin):
     list_display = ("id", "name", "question_count",)
-    ordering = ("id", )
+    ordering = ("name", )
     actions = ["export_as_csv", "export_as_json", "export_as_yaml", "export_all_questiontag_as_yaml"]
 
 

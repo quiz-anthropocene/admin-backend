@@ -7,6 +7,11 @@ class QuestionCategory(models.Model):
     description = models.TextField(blank=True, help_text="Une description de la catégorie")
     created = models.DateField(auto_now=True, help_text="La date & heure de la création de la catégorie")
 
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['name'], name='unique category name')
+        ]
+
     def __str__(self):
         return f"{self.name}"
 
@@ -19,6 +24,11 @@ class QuestionTag(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du tag")
     description = models.TextField(blank=True, help_text="Une description du tag")
     created = models.DateField(auto_now=True, help_text="La date & heure de la création du tag")
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['name'], name='unique tag name')
+        ]
 
     def __str__(self):
         return f"{self.name}"

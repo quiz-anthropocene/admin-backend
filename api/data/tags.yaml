@@ -16,3 +16,275 @@
     name: "Actualité"
     description: ''
     created: 2020-04-08
+- model: api.questiontag
+  pk: 4
+  fields:
+    name: Gaspillage
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 5
+  fields:
+    name: Alimentation
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 6
+  fields:
+    name: Insectes
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 7
+  fields:
+    name: Extinction
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 8
+  fields:
+    name: "Hydroélectricité"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 9
+  fields:
+    name: "Océan"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 10
+  fields:
+    name: Chine
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 11
+  fields:
+    name: "Pétrole"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 12
+  fields:
+    name: "Atmosphère"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 13
+  fields:
+    name: CO2
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 14
+  fields:
+    name: Puits de carbone
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 15
+  fields:
+    name: "Méthane"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 16
+  fields:
+    name: Glace
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 17
+  fields:
+    name: Agriculture
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 18
+  fields:
+    name: Permafrost
+    description: "Le pergélisol (ou permafrost) est un sol gelé sur une grande
+      épaisseur qui peut fondre en surface durant l'été. Il est surtout présent
+      dans le nord de l'hémisphère Nord."
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 19
+  fields:
+    name: "Déforestation"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 20
+  fields:
+    name: "Fôret"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 21
+  fields:
+    name: "Pêche"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 22
+  fields:
+    name: GIEC
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 23
+  fields:
+    name: Migration
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 24
+  fields:
+    name: '2050'
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 25
+  fields:
+    name: "Désert"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 26
+  fields:
+    name: Plastique
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 27
+  fields:
+    name: "Démographie"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 28
+  fields:
+    name: "Économie"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 29
+  fields:
+    name: "Nucléaire"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 30
+  fields:
+    name: "Numérique"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 31
+  fields:
+    name: "Inégalités"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 32
+  fields:
+    name: "Anthropocène"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 33
+  fields:
+    name: Transport
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 34
+  fields:
+    name: Avion
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 35
+  fields:
+    name: Voiture
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 36
+  fields:
+    name: Recyclage
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 37
+  fields:
+    name: Eau
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 38
+  fields:
+    name: COP
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 39
+  fields:
+    name: "Électricité"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 40
+  fields:
+    name: Charbon
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 41
+  fields:
+    name: Gaz
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 42
+  fields:
+    name: Train
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 43
+  fields:
+    name: "Vélo"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 44
+  fields:
+    name: Renouvelable
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 45
+  fields:
+    name: "Éolien"
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 46
+  fields:
+    name: Solaire
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 47
+  fields:
+    name: Europe
+    description: ''
+    created: 2020-04-17
+- model: api.questiontag
+  pk: 48
+  fields:
+    name: Montagne
+    description: ''
+    created: 2020-04-17

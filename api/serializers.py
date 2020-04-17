@@ -79,7 +79,7 @@ class QuizSerializer(serializers.ModelSerializer):
     class Meta:
         model = Quiz
         fields = [
-            'id', 'name', 'description',
+            'id', 'name', 'description', 'author',
             'question_count',
             'categories', 'tags',
             'created'
@@ -91,7 +91,7 @@ class QuizFullSerializer(serializers.ModelSerializer):
     class Meta:
         model = Quiz
         fields = [
-            'id', 'name', 'description',
+            'id', 'name', 'description', 'author',
             'questions', 'question_count',
             'categories', 'tags',
             'created'
