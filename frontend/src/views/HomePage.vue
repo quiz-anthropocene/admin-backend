@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="alert alert-warning" role="alert">
-      <i v-if="questionStats">Il y a actuellement {{ questionStats["publish"][0]["count"] }} questions. </i>
+      <i v-if="questionStats">Il y a actuellement {{ questionStats["question_publish"][0]["count"] }} questions. </i>
       <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus !</i>
     </div>
 
@@ -43,8 +43,13 @@
       </div>
     </div>
 
-    <div class="row justify-content-md-center" v-if="questionRandomNextId">
-      <div class="col col-sm-6">
+    <div class="row justify-content-md-center">
+      <div class="col-sm-6">
+        <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
+          <button class="btn btn-outline-primary btn-lg btn-block">🕹&nbsp;<strong>Tous les quiz</strong></button>
+        </router-link>
+      </div>
+      <div class="col-sm-6" v-if="questionRandomNextId">
         <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: questionRandomNextId } }">
           <button class="btn btn-outline-primary btn-lg btn-block">🔀&nbsp;<strong>Question au hasard</strong></button>
         </router-link>

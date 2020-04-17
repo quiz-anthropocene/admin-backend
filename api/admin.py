@@ -130,7 +130,8 @@ class QuestionTagAdmin(admin.ModelAdmin, ExportMixin):
 
 
 class QuizAdmin(admin.ModelAdmin, ExportMixin):
-    list_display = ("id", "name", "question_count", "author", "categories", "tags", "answer_count",)
+    list_display = ("id", "name", "question_count", "author", "categories", "tags", "publish", "answer_count",)
+    list_filter = ("publish",)
     ordering = ("id", )
     filter_horizontal = ("questions",)
     readonly_fields = ("answer_count",)

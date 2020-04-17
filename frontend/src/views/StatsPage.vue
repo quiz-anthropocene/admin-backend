@@ -9,6 +9,12 @@
     </p>
 
     <br />
+    <h3>Quiz</h3>
+    <p>
+      <strong v-if="quizPublishStats">{{ quizPublishStats[0]["count"] }}</strong> quiz ont été créés.
+    </p>
+
+    <br />
     <h3>Réponses</h3>
     <p>
       L'application totalise <strong>{{ questionAnswerCountStats }}</strong> réponses (depuis la mise en ligne en Mars 2020).
@@ -94,7 +100,8 @@ export default {
           return response.json()
         })
         .then(data => {
-          this.questionPublishStats = data["publish"];
+          this.questionPublishStats = data["question_publish"];
+          this.quizPublishStats = data["quiz_publish"];
           this.questionAnswerCountStats = data["answer_count"];
           this.questionCategoryStats = data["category"];
           this.questionTagStats = data["tag"];

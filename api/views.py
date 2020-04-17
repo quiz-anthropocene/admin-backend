@@ -111,9 +111,10 @@ def question_random(request):
 @api_view(["GET"])
 def question_stats(request):
     """
-    Retrieve stats on all the questions
+    Retrieve stats on all the data
     """
     question_publish_stats = Question.objects.values("publish").annotate(count=Count("publish")).order_by("-count")
+    quiz_publish_stats = Quiz.objects.values("publish").annotate(count=Count("publish")).order_by("-count")
     question_answer_count_stats = QuestionStat.objects.count()
     question_category_stats = QuestionCategory.objects.values("name").annotate(count=Count("questions")).order_by("-count")
     question_tag_stats = QuestionTag.objects.values("name").annotate(count=Count("questions")).order_by("-count")
@@ -121,7 +122,8 @@ def question_stats(request):
     # question_answer_stats = QuestionStat.objects.extra(select={'day': "to_char(created, 'YYYY-MM-DD')"}).values("day").annotate(Count("created"))
     # question_answer_stats = QuestionStat.objects.extra(select={'day': "date(created)"}).values("day").annotate(count=Count("created")) #.order_by("day")
     return Response({
-        "publish": question_publish_stats,
+        "question_publish": question_publish_stats,
+        "quiz_publish": quiz_publish_stats,
         "answer_count": question_answer_count_stats,
         "category": question_category_stats,
         "tag": question_tag_stats,
@@ -167,9 +169,13 @@ def quiz_list(request):
     """
     List all quizzes (with the number of questions per quiz)
     Optional query parameters:
+    - 'author' (string)
     - 'full' (string)
     """
-    quizzes = Quiz.objects.all()
+    quizzes = Quiz.objects.published()
+    if request.GET.get("author"):
+        quizzes = quizzes.for_author(request.GET.get("author"))
+
     if request.GET.get("full"):
         serializer = QuizFullSerializer(quizzes, many=True)
     else:

@@ -128,19 +128,29 @@ class Question(models.Model):
     answer_success_rate.fget.short_description = "% Rép Corr"
 
 
+class QuizQuerySet(models.QuerySet):
+    def published(self):
+        return self.exclude(publish=False)
+
+    def for_author(self, author):
+        return self.filter(author=author)
+
 class Quiz(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du quiz")
     description = models.TextField(blank=True, help_text="Une description du quiz")
     questions = models.ManyToManyField(Question, related_name="quizzes", help_text="Les questions du quiz")
     author = models.CharField(max_length=50, blank=True, help_text="L'auteur du quiz")
+    publish = models.BooleanField(default=False, help_text="Le quiz est prêt à être publié")
     created = models.DateField(auto_now=True, help_text="La date & heure de la création du quiz")
+
+    objects = QuizQuerySet.as_manager()
 
     def __str__(self):
         return f"{self.name}"
 
     @property
     def question_count(self):
-        return self.questions.count()
+        return self.questions.count() # published() ?
 
     @property
     def categories(self):
