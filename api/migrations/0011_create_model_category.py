@@ -7,28 +7,60 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0010_auto_20200405_1131'),
+        ("api", "0010_auto_20200405_1131"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='QuestionCategory',
+            name="QuestionCategory",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(help_text='Le nom de la catégorie', max_length=50)),
-                ('name_long', models.CharField(help_text='Le nom allongé de la catégorie', max_length=150)),
-                ('description', models.TextField(blank=True, help_text='Une description de la catégorie')),
-                ('created', models.DateField(auto_now=True, help_text='La date & heure de la création de la catégorie')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "name",
+                    models.CharField(help_text="Le nom de la catégorie", max_length=50),
+                ),
+                (
+                    "name_long",
+                    models.CharField(
+                        help_text="Le nom allongé de la catégorie", max_length=150
+                    ),
+                ),
+                (
+                    "description",
+                    models.TextField(
+                        blank=True, help_text="Une description de la catégorie"
+                    ),
+                ),
+                (
+                    "created",
+                    models.DateField(
+                        auto_now=True,
+                        help_text="La date & heure de la création de la catégorie",
+                    ),
+                ),
             ],
         ),
         migrations.AlterField(
-            model_name='question',
-            name='tags',
-            field=models.ManyToManyField(blank=True, help_text='Un ou plusieurs tags rattaché à la question', related_name='questions', to='api.QuestionTag'),
+            model_name="question",
+            name="tags",
+            field=models.ManyToManyField(
+                blank=True,
+                help_text="Un ou plusieurs tags rattaché à la question",
+                related_name="questions",
+                to="api.QuestionTag",
+            ),
         ),
         migrations.AlterField(
-            model_name='questiontag',
-            name='description',
-            field=models.TextField(blank=True, help_text='Une description du tag'),
+            model_name="questiontag",
+            name="description",
+            field=models.TextField(blank=True, help_text="Une description du tag"),
         ),
     ]

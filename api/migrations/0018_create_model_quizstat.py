@@ -7,17 +7,44 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0017_quiz_author'),
+        ("api", "0017_quiz_author"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='QuizStat',
+            name="QuizStat",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('answer_success_count', models.IntegerField(editable=False, help_text="La nombre de réponses correctes trouvées par l'internaute")),
-                ('created', models.DateTimeField(auto_now=True, help_text='La date & heure de la réponse')),
-                ('quiz', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='stats', to='api.Quiz')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "answer_success_count",
+                    models.IntegerField(
+                        editable=False,
+                        help_text="La nombre de réponses correctes trouvées par l'internaute",
+                    ),
+                ),
+                (
+                    "created",
+                    models.DateTimeField(
+                        auto_now=True, help_text="La date & heure de la réponse"
+                    ),
+                ),
+                (
+                    "quiz",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="stats",
+                        to="api.Quiz",
+                    ),
+                ),
             ],
         ),
     ]

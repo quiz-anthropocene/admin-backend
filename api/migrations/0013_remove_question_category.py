@@ -6,12 +6,9 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0012_question_category_temp'),
+        ("api", "0012_question_category_temp"),
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='question',
-            name='category',
-        ),
+        migrations.RemoveField(model_name="question", name="category",),
     ]

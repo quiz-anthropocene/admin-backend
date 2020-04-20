@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0016_auto_20200412_1732'),
+        ("api", "0016_auto_20200412_1732"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='quiz',
-            name='author',
-            field=models.CharField(blank=True, help_text="L'auteur du quiz", max_length=50),
+            model_name="quiz",
+            name="author",
+            field=models.CharField(
+                blank=True, help_text="L'auteur du quiz", max_length=50
+            ),
         ),
     ]

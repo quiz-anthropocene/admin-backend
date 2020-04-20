@@ -6,33 +6,35 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0002_auto_20200308_1724'),
+        ("api", "0002_auto_20200308_1724"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='question',
-            name='author',
-            field=models.CharField(blank=True, help_text="L'auteur de la question", max_length=50),
+            model_name="question",
+            name="author",
+            field=models.CharField(
+                blank=True, help_text="L'auteur de la question", max_length=50
+            ),
         ),
         migrations.AlterField(
-            model_name='question',
-            name='answer_option_a',
-            field=models.CharField(help_text='La réponse a', max_length=150),
+            model_name="question",
+            name="answer_option_a",
+            field=models.CharField(help_text="La réponse a", max_length=150),
         ),
         migrations.AlterField(
-            model_name='question',
-            name='answer_option_b',
-            field=models.CharField(help_text='La réponse b', max_length=150),
+            model_name="question",
+            name="answer_option_b",
+            field=models.CharField(help_text="La réponse b", max_length=150),
         ),
         migrations.AlterField(
-            model_name='question',
-            name='answer_option_c',
-            field=models.CharField(help_text='La réponse c', max_length=150),
+            model_name="question",
+            name="answer_option_c",
+            field=models.CharField(help_text="La réponse c", max_length=150),
         ),
         migrations.AlterField(
-            model_name='question',
-            name='answer_option_d',
-            field=models.CharField(help_text='La réponse d', max_length=150),
+            model_name="question",
+            name="answer_option_d",
+            field=models.CharField(help_text="La réponse d", max_length=150),
         ),
     ]

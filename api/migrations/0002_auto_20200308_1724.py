@@ -6,23 +6,40 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0001_create_model_question'),
+        ("api", "0001_create_model_question"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='question',
-            name='answer_correct',
-            field=models.CharField(help_text='a, b, c ou d', max_length=50),
+            model_name="question",
+            name="answer_correct",
+            field=models.CharField(help_text="a, b, c ou d", max_length=50),
         ),
         migrations.AlterField(
-            model_name='question',
-            name='category',
-            field=models.CharField(choices=[('action', "Leviers d'action"), ('biodiversité', 'Biodiversité'), ('climat', 'Climat'), ('consommation', 'Consommation'), ('énergie', 'Energie'), ('histoire', 'Histoire, Anthropologie'), ('pollution', 'Pollution'), ('ressources', 'Ressources (hors énergie)'), ('science', 'Science'), ('autre', 'Autre')], max_length=50),
+            model_name="question",
+            name="category",
+            field=models.CharField(
+                choices=[
+                    ("action", "Leviers d'action"),
+                    ("biodiversité", "Biodiversité"),
+                    ("climat", "Climat"),
+                    ("consommation", "Consommation"),
+                    ("énergie", "Energie"),
+                    ("histoire", "Histoire, Anthropologie"),
+                    ("pollution", "Pollution"),
+                    ("ressources", "Ressources (hors énergie)"),
+                    ("science", "Science"),
+                    ("autre", "Autre"),
+                ],
+                max_length=50,
+            ),
         ),
         migrations.AlterField(
-            model_name='question',
-            name='difficulty',
-            field=models.IntegerField(choices=[(1, 'Facile'), (2, 'Moyen'), (3, 'Difficile'), (4, 'Expert')], help_text='Le niveau de difficulté de la question'),
+            model_name="question",
+            name="difficulty",
+            field=models.IntegerField(
+                choices=[(1, "Facile"), (2, "Moyen"), (3, "Difficile"), (4, "Expert")],
+                help_text="Le niveau de difficulté de la question",
+            ),
         ),
     ]

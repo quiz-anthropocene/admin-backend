@@ -6,13 +6,16 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0005_create_model_questionstat'),
+        ("api", "0005_create_model_questionstat"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='question',
-            name='answer_image_link',
-            field=models.TextField(blank=True, help_text="Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée en bas de l'image)"),
+            model_name="question",
+            name="answer_image_link",
+            field=models.TextField(
+                blank=True,
+                help_text="Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée en bas de l'image)",
+            ),
         ),
     ]

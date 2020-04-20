@@ -6,13 +6,19 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0018_create_model_quizstat'),
+        ("api", "0018_create_model_quizstat"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='questionstat',
-            name='source',
-            field=models.CharField(choices=[('question', 'Question'), ('quiz', 'Quiz')], default='question', editable=False, help_text='Le contexte dans lequel a été répondu la question', max_length=50),
+            model_name="questionstat",
+            name="source",
+            field=models.CharField(
+                choices=[("question", "Question"), ("quiz", "Quiz")],
+                default="question",
+                editable=False,
+                help_text="Le contexte dans lequel a été répondu la question",
+                max_length=50,
+            ),
         ),
     ]

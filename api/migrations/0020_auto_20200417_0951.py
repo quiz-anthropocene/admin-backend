@@ -6,16 +6,20 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0019_questionstat_source'),
+        ("api", "0019_questionstat_source"),
     ]
 
     operations = [
         migrations.AddConstraint(
-            model_name='questioncategory',
-            constraint=models.UniqueConstraint(fields=('name',), name='unique category name'),
+            model_name="questioncategory",
+            constraint=models.UniqueConstraint(
+                fields=("name",), name="unique category name"
+            ),
         ),
         migrations.AddConstraint(
-            model_name='questiontag',
-            constraint=models.UniqueConstraint(fields=('name',), name='unique tag name'),
+            model_name="questiontag",
+            constraint=models.UniqueConstraint(
+                fields=("name",), name="unique tag name"
+            ),
         ),
     ]

@@ -121,6 +121,15 @@ Exporter les questions de la base au format YAML
 python manage.py dumpdata api.question --format=yaml --pretty > api/data/questions.yaml
 ```
 
+### Contribuer
+
+TODO: fichier `CONTRIBUTION.md`
+
+Installer le pre-commit git hook
+```
+pre-commit install
+```
+
 ## Idées
 
 - Proposer à l'utilisateur un feedback rapide sur la question (👍, 👎, voire 💬)

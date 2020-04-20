@@ -1,17 +1,34 @@
 import random
 from django.db.models import Count
-from django.forms.models import model_to_dict
 from django.http import HttpResponse
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api.models import Question, QuestionCategory, QuestionTag, Quiz, QuestionStat, QuizStat, Contribution
-from api.serializers import QuestionSerializer, QuestionCategorySerializer, QuestionTagSerializer, QuizSerializer, QuizFullSerializer, QuestionStatSerializer, QuizStatSerializer, ContributionSerializer
+from api.models import (
+    Question,
+    QuestionCategory,
+    QuestionTag,
+    Quiz,
+    QuestionStat,
+    QuizStat,
+    Contribution,
+)
+from api.serializers import (
+    QuestionSerializer,
+    QuestionCategorySerializer,
+    QuestionTagSerializer,
+    QuizSerializer,
+    QuizFullSerializer,
+    QuestionStatSerializer,
+    QuizStatSerializer,
+    ContributionSerializer,
+)
 
 
 def api_home(request):
-    return HttpResponse("""
+    return HttpResponse(
+        """
         <p>Welcome to the 'Know Your Planet' API.</p>
         <p>Available endpoints:</p>
         <ul>
@@ -25,7 +42,8 @@ def api_home(request):
             <li>GET /api/authors</li>
             <li>GET /api/quizzes</li>
         </ul>
-    """)
+    """
+    )
 
 
 @api_view(["GET"])
@@ -74,7 +92,11 @@ def question_detail_stats(request, pk):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == "POST":
-        question_stat = QuestionStat.objects.create(question=question, answer_choice=request.data["answer_choice"], source=request.data["source"])
+        question_stat = QuestionStat.objects.create(
+            question=question,
+            answer_choice=request.data["answer_choice"],
+            source=request.data["source"],
+        )
         serializer = QuestionStatSerializer(question_stat)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -113,23 +135,44 @@ def question_stats(request):
     """
     Retrieve stats on all the data
     """
-    question_publish_stats = Question.objects.values("publish").annotate(count=Count("publish")).order_by("-count")
-    quiz_publish_stats = Quiz.objects.values("publish").annotate(count=Count("publish")).order_by("-count")
+    question_publish_stats = (
+        Question.objects.values("publish")
+        .annotate(count=Count("publish"))
+        .order_by("-count")
+    )
+    quiz_publish_stats = (
+        Quiz.objects.values("publish")
+        .annotate(count=Count("publish"))
+        .order_by("-count")
+    )
     question_answer_count_stats = QuestionStat.objects.count()
-    question_category_stats = QuestionCategory.objects.values("name").annotate(count=Count("questions")).order_by("-count")
-    question_tag_stats = QuestionTag.objects.values("name").annotate(count=Count("questions")).order_by("-count")
-    question_author_stats = Question.objects.values("author").annotate(count=Count("author")).order_by("-count")
-    # question_answer_stats = QuestionStat.objects.extra(select={'day': "to_char(created, 'YYYY-MM-DD')"}).values("day").annotate(Count("created"))
-    # question_answer_stats = QuestionStat.objects.extra(select={'day': "date(created)"}).values("day").annotate(count=Count("created")) #.order_by("day")
-    return Response({
-        "question_publish": question_publish_stats,
-        "quiz_publish": quiz_publish_stats,
-        "answer_count": question_answer_count_stats,
-        "category": question_category_stats,
-        "tag": question_tag_stats,
-        "author": question_author_stats,
-        # "answer": question_answer_stats
-    })
+    question_category_stats = (
+        QuestionCategory.objects.values("name")
+        .annotate(count=Count("questions"))
+        .order_by("-count")
+    )
+    question_tag_stats = (
+        QuestionTag.objects.values("name")
+        .annotate(count=Count("questions"))
+        .order_by("-count")
+    )
+    question_author_stats = (
+        Question.objects.values("author")
+        .annotate(count=Count("author"))
+        .order_by("-count")
+    )
+
+    return Response(
+        {
+            "question_publish": question_publish_stats,
+            "quiz_publish": quiz_publish_stats,
+            "answer_count": question_answer_count_stats,
+            "category": question_category_stats,
+            "tag": question_tag_stats,
+            "author": question_author_stats,
+            # "answer": question_answer_stats
+        }
+    )
 
 
 @api_view(["GET"])
@@ -159,7 +202,11 @@ def author_list(request):
     """
     List all authors (with the number of questions per author)
     """
-    authors = Question.objects.values("author").annotate(question_count=Count("author")).order_by("-question_count")
+    authors = (
+        Question.objects.values("author")
+        .annotate(question_count=Count("author"))
+        .order_by("-question_count")
+    )
 
     return Response(authors)
 
@@ -194,7 +241,9 @@ def quiz_detail_stats(request, pk):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == "POST":
-        quiz_stat = QuizStat.objects.create(quiz=quiz, answer_success_count=request.data["answer_success_count"])
+        quiz_stat = QuizStat.objects.create(
+            quiz=quiz, answer_success_count=request.data["answer_success_count"]
+        )
         serializer = QuizStatSerializer(quiz_stat)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -208,7 +257,7 @@ def contribute(request):
         contribution = Contribution.objects.create(
             is_question=request.data["is_question"],
             text=request.data["text"],
-            description=request.data["additional_info"]
+            description=request.data["additional_info"],
         )
         serializer = ContributionSerializer(contribution)
         return Response(serializer.data, status=status.HTTP_201_CREATED)

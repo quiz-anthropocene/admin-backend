@@ -1,6 +1,7 @@
 import csv
 import json
 from datetime import datetime
+
 # from io import StringIO
 
 from django.contrib import admin
@@ -10,9 +11,18 @@ from django.core import serializers
 from django.core.serializers.json import DjangoJSONEncoder
 from django.db.models import Count
 from django.utils.html import mark_safe
+
 # from django.core.management import call_command
 
-from api.models import Question, QuestionCategory, QuestionTag, Quiz, QuestionStat, QuizStat, Contribution
+from api.models import (
+    Question,
+    QuestionCategory,
+    QuestionTag,
+    Quiz,
+    QuestionStat,
+    QuizStat,
+    Contribution,
+)
 
 
 class ExportMixin:
@@ -20,41 +30,56 @@ class ExportMixin:
     Add export actions
     https://books.agiliq.com/projects/django-admin-cookbook/en/latest/export.html
     """
+
     def export_as_csv(self, request, queryset):
-        response = HttpResponse(content_type='text/csv')
-        response['Content-Disposition'] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.csv"
-        
+        response = HttpResponse(content_type="text/csv")
+        response[
+            "Content-Disposition"
+        ] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.csv"
+
         field_names = [field.name for field in self.model._meta.fields]
         writer = csv.writer(response)
         writer.writerow(field_names)
         for obj in queryset:
-            row = writer.writerow([getattr(obj, field) for field in field_names])
+            writer.writerow([getattr(obj, field) for field in field_names])
 
         return response
 
     def export_as_json(self, request, queryset):
         response = HttpResponse(content_type="application/json")
-        response['Content-Disposition'] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.json"
+        response[
+            "Content-Disposition"
+        ] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.json"
 
-        response.write(serializers.serialize("json", list(queryset), ensure_ascii=False))
+        response.write(
+            serializers.serialize("json", list(queryset), ensure_ascii=False)
+        )
 
         return response
 
-
     def export_as_yaml(self, request, queryset):
         response = HttpResponse(content_type="text/yaml")
-        response['Content-Disposition'] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.yaml"
-        
+        response[
+            "Content-Disposition"
+        ] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.yaml"
+
         # TODO: escape " (\")
-        response.write(serializers.serialize("yaml", queryset).encode().decode("unicode_escape").encode("utf-8"))
-        
+        response.write(
+            serializers.serialize("yaml", queryset)
+            .encode()
+            .decode("unicode_escape")
+            .encode("utf-8")
+        )
+
         return response
 
     def export_all_question_as_yaml(self, request, queryset):
         return self.export_as_yaml(request, Question.objects.all().order_by("pk"))
-    
+
     def export_all_questioncategory_as_yaml(self, request, queryset):
-        return self.export_as_yaml(request, QuestionCategory.objects.all().order_by("pk"))
+        return self.export_as_yaml(
+            request, QuestionCategory.objects.all().order_by("pk")
+        )
 
     def export_all_questiontag_as_yaml(self, request, queryset):
         return self.export_as_yaml(request, QuestionTag.objects.all().order_by("pk"))
@@ -86,63 +111,140 @@ class ExportMixin:
 
 class QuestionAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
-        "id", "text", "category", "difficulty", "author", "publish", # "type",
-        "has_answer_explanation", "has_answer_additional_link", "has_answer_image_link",
-        "answer_count", "answer_success_count", "answer_success_rate",
+        "id",
+        "text",
+        "category",
+        "difficulty",
+        "author",
+        "publish",  # "type",
+        "has_answer_explanation",
+        "has_answer_additional_link",
+        "has_answer_image_link",
+        "answer_count",
+        "answer_success_count",
+        "answer_success_rate",
     )
-    list_filter = ("category", "tags", "difficulty", "author", "publish",) # "type",
-    ordering = ("id", ) # "answer_count", "answer_success_rate",
-    actions = ["export_as_csv", "export_as_json", "export_as_yaml", "export_all_question_as_yaml"]
+    list_filter = (
+        "category",
+        "tags",
+        "difficulty",
+        "author",
+        "publish",
+    )  # "type",
+    ordering = ("id",)  # "answer_count", "answer_success_rate",
+    actions = [
+        "export_as_csv",
+        "export_as_json",
+        "export_as_yaml",
+        "export_all_question_as_yaml",
+    ]
     filter_horizontal = ("tags",)
-    readonly_fields = ("show_answer_image", "answer_count", "answer_success_count", "answer_success_rate",)
+    readonly_fields = (
+        "show_answer_image",
+        "answer_count",
+        "answer_success_count",
+        "answer_success_rate",
+    )
 
     def has_answer_explanation(self, instance):
         return instance.has_answer_explanation
+
     has_answer_explanation.short_description = "Explication"
     has_answer_explanation.boolean = True
 
     def has_answer_additional_link(self, instance):
         return instance.has_answer_additional_link
+
     has_answer_additional_link.short_description = "Lien(s)"
     has_answer_additional_link.boolean = True
 
     def has_answer_image_link(self, instance):
         return instance.has_answer_image_link
+
     has_answer_image_link.short_description = "Image"
     has_answer_image_link.boolean = True
 
     def show_answer_image(self, instance):
-        return mark_safe(f'<a href="{instance.answer_image_link}" target="_blank"><img src="{instance.answer_image_link}" height=300 /></a>')
-    show_answer_image.short_description = "L'image du champ 'Answer image link' (cliquer pour agrandir)"
+        if instance.answer_image_link:
+            return mark_safe(
+                f'<a href="{instance.answer_image_link}" target="_blank">'
+                f'<img src="{instance.answer_image_link}" height=300 />'
+                f"</a>"
+            )
+        else:
+            return mark_safe("<div>champ 'Answer image link' vide</div>")
+
+    show_answer_image.short_description = (
+        "L'image du champ 'Answer image link' (cliquer pour agrandir)"
+    )
     show_answer_image.allow_tags = True
 
 
 class QuestionCategoryAdmin(admin.ModelAdmin, ExportMixin):
-    list_display = ("id", "name", "name_long", "question_count",)
-    ordering = ("id", )
-    actions = ["export_as_csv", "export_as_json", "export_as_yaml", "export_all_questioncategory_as_yaml"]
+    list_display = (
+        "id",
+        "name",
+        "name_long",
+        "question_count",
+    )
+    ordering = ("id",)
+    actions = [
+        "export_as_csv",
+        "export_as_json",
+        "export_as_yaml",
+        "export_all_questioncategory_as_yaml",
+    ]
 
 
 class QuestionTagAdmin(admin.ModelAdmin, ExportMixin):
-    list_display = ("id", "name", "question_count",)
-    ordering = ("name", )
-    actions = ["export_as_csv", "export_as_json", "export_as_yaml", "export_all_questiontag_as_yaml"]
+    list_display = (
+        "id",
+        "name",
+        "question_count",
+    )
+    ordering = ("name",)
+    actions = [
+        "export_as_csv",
+        "export_as_json",
+        "export_as_yaml",
+        "export_all_questiontag_as_yaml",
+    ]
 
 
 class QuizAdmin(admin.ModelAdmin, ExportMixin):
-    list_display = ("id", "name", "question_count", "author", "categories", "tags", "publish", "answer_count",)
+    list_display = (
+        "id",
+        "name",
+        "question_count",
+        "author",
+        "categories",
+        "tags",
+        "publish",
+        "answer_count",
+    )
     list_filter = ("publish",)
-    ordering = ("id", )
+    ordering = ("id",)
     filter_horizontal = ("questions",)
     readonly_fields = ("answer_count",)
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
 
 
 class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
-    list_display = ("id", "question", "answer_choice", "source", "created",)
+    list_display = (
+        "id",
+        "question",
+        "answer_choice",
+        "source",
+        "created",
+    )
     list_filter = ("source",)
     ordering = ("id",)
-    actions = ["export_as_csv", "export_as_json", "export_as_yaml", "export_all_questionstat_as_yaml"]
+    actions = [
+        "export_as_csv",
+        "export_as_json",
+        "export_as_yaml",
+        "export_all_questionstat_as_yaml",
+    ]
 
     def changelist_view(self, request, extra_context=None):
         """
@@ -150,36 +252,57 @@ class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
         https://dev.to/danihodovic/integrating-chart-js-with-django-admin-1kjb
         """
         # Aggregate answers per day
-        if settings.DEBUG == True:
-            chart_data_query = QuestionStat.objects.extra(select={'day': "date(created)"}) # sqlite
+        if settings.DEBUG:  # sqlite
+            chart_data_query = QuestionStat.objects.extra(
+                select={"day": "date(created)"}
+            )
         else:
-            chart_data_query = QuestionStat.objects.extra(select={'day': "to_char(created, 'YYYY-MM-DD')"}) # postgresql
-        chart_data_query = chart_data_query.values("day").annotate(y=Count("created")).order_by("-day")
+            chart_data_query = QuestionStat.objects.extra(
+                select={"day": "to_char(created, 'YYYY-MM-DD')"}
+            )  # postgresql
+        chart_data_query = (
+            chart_data_query.values("day").annotate(y=Count("created")).order_by("-day")
+        )
 
         # get answers since today
-        if chart_data_query[0]['day'] != str(datetime.now().date()):
-            chart_data_list = [{ "day": str(datetime.now().date()), "y": 0 }] + list(chart_data_query)
+        if chart_data_query[0]["day"] != str(datetime.now().date()):
+            chart_data_list = [{"day": str(datetime.now().date()), "y": 0}] + list(
+                chart_data_query
+            )
         else:
             chart_data_list = list(chart_data_query)
 
         # Serialize and attach the chart data to the template context
         as_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
-        extra_context = extra_context or { "chart_data": as_json }
+        extra_context = extra_context or {"chart_data": as_json}
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)
 
 
 class QuizStatAdmin(admin.ModelAdmin, ExportMixin):
-    list_display = ("id", "quiz", "answer_success_count", "created",)
+    list_display = (
+        "id",
+        "quiz",
+        "answer_success_count",
+        "created",
+    )
     list_filter = ("quiz",)
     ordering = ("id",)
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
 
 
 class ContributionAdmin(admin.ModelAdmin, ExportMixin):
-    list_display = ("id", "is_question", "text", "created",)
-    readonly_fields = ("text", "description",)
+    list_display = (
+        "id",
+        "is_question",
+        "text",
+        "created",
+    )
+    readonly_fields = (
+        "text",
+        "description",
+    )
 
     def has_add_permission(self, request, obj=None):
         return False
@@ -195,7 +318,14 @@ class LogEntryAdmin(admin.ModelAdmin):
     """
     https://docs.djangoproject.com/en/3.0/ref/contrib/admin/#logentry-objects
     """
-    list_display = ("object_repr", "content_type", "action_flag", "user", "action_time",)
+
+    list_display = (
+        "object_repr",
+        "content_type",
+        "action_flag",
+        "user",
+        "action_time",
+    )
     ordering = ("-action_time",)
 
     def has_add_permission(self, request, obj=None):

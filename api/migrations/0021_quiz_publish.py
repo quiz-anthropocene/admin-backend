@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0020_auto_20200417_0951'),
+        ("api", "0020_auto_20200417_0951"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='quiz',
-            name='publish',
-            field=models.BooleanField(default=False, help_text='Le quiz est prêt à être publié'),
+            model_name="quiz",
+            name="publish",
+            field=models.BooleanField(
+                default=False, help_text="Le quiz est prêt à être publié"
+            ),
         ),
     ]

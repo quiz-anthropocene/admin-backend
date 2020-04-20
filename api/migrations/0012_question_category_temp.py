@@ -7,13 +7,19 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0011_create_model_category'),
+        ("api", "0011_create_model_category"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='question',
-            name='category_temp',
-            field=models.ForeignKey(blank=True, help_text='Une seule catégorie possible', null=True, on_delete=django.db.models.deletion.SET_NULL, to='api.QuestionCategory'),
+            model_name="question",
+            name="category_temp",
+            field=models.ForeignKey(
+                blank=True,
+                help_text="Une seule catégorie possible",
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to="api.QuestionCategory",
+            ),
         ),
     ]

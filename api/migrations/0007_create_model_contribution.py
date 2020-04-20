@@ -6,17 +6,30 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0006_question_answer_image'),
+        ("api", "0006_question_answer_image"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Contribution',
+            name="Contribution",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('text', models.TextField()),
-                ('description', models.TextField()),
-                ('created', models.DateTimeField(auto_now=True, help_text='La date & heure de la contribution')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("text", models.TextField()),
+                ("description", models.TextField()),
+                (
+                    "created",
+                    models.DateTimeField(
+                        auto_now=True, help_text="La date & heure de la contribution"
+                    ),
+                ),
             ],
         ),
     ]
