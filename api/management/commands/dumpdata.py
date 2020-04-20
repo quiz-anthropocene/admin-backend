@@ -4,8 +4,13 @@ from django.core.management.commands.dumpdata import Command as Dumpdata
 
 class Command(Dumpdata):
     """
-    Get readable data in the dumpdata output
-    https://djangosnippets.org/snippets/10625/
+    Get readable data in the dumpdata output https://djangosnippets.org/snippets/10625/
+
+    Usage example:
+    python manage.py dumpdata api.question --format=yaml --pretty > api/data/questions.yaml
+
+    TODO:
+    - yaml export doesn't escape " character
     """
 
     def add_arguments(self, parser):

@@ -253,6 +253,10 @@ class QuizStat(models.Model):
         auto_now=True, help_text="La date & heure de la réponse"
     )
 
+    @property
+    def question_count(self):
+        return self.quiz.question_count
+
 
 class Contribution(models.Model):
     text = models.TextField(

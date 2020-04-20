@@ -248,16 +248,18 @@ class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
         """
         show chart of answers per day
         https://dev.to/danihodovic/integrating-chart-js-with-django-admin-1kjb
+
+        Corresponding template in templates/admin/api/questionstat/change_list.html
         """
         # Aggregate answers per day
         if settings.DEBUG:  # sqlite
             chart_data_query = QuestionStat.objects.extra(
                 select={"day": "date(created)"}
             )
-        else:
+        else:  # postgresql
             chart_data_query = QuestionStat.objects.extra(
                 select={"day": "to_char(created, 'YYYY-MM-DD')"}
-            )  # postgresql
+            )
         chart_data_query = (
             chart_data_query.values("day").annotate(y=Count("created")).order_by("-day")
         )
@@ -282,12 +284,46 @@ class QuizStatAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
         "id",
         "quiz",
+        "question_count",
         "answer_success_count",
         "created",
     )
     list_filter = ("quiz",)
     ordering = ("id",)
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
+
+    def changelist_view(self, request, extra_context=None):
+        """
+        show chart of answers per day
+        https://dev.to/danihodovic/integrating-chart-js-with-django-admin-1kjb
+
+        Corresponding template in templates/admin/api/quizstat/change_list.html
+        """
+        # Aggregate answers per day
+        if settings.DEBUG:  # sqlite
+            chart_data_query = QuizStat.objects.extra(select={"day": "date(created)"})
+        else:  # postgresql
+            chart_data_query = QuizStat.objects.extra(
+                select={"day": "to_char(created, 'YYYY-MM-DD')"}
+            )
+        chart_data_query = (
+            chart_data_query.values("day").annotate(y=Count("created")).order_by("-day")
+        )
+
+        # get answers since today
+        if chart_data_query[0]["day"] != str(datetime.now().date()):
+            chart_data_list = [{"day": str(datetime.now().date()), "y": 0}] + list(
+                chart_data_query
+            )
+        else:
+            chart_data_list = list(chart_data_query)
+
+        # Serialize and attach the chart data to the template context
+        as_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
+        extra_context = extra_context or {"chart_data": as_json}
+
+        # Call the superclass changelist_view to render the page
+        return super().changelist_view(request, extra_context=extra_context)
 
 
 class ContributionAdmin(admin.ModelAdmin, ExportMixin):
@@ -323,6 +359,10 @@ class LogEntryAdmin(admin.ModelAdmin):
         "action_flag",
         "user",
         "action_time",
+    )
+    list_filter = (
+        "content_type",
+        "user",
     )
     ordering = ("-action_time",)
 
