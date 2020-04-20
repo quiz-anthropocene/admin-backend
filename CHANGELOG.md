@@ -6,11 +6,39 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Des pistes dans [README#idées](README#idées)
 
-## [0.6.0] - en cours
+## [0.7.0] - en cours
 
 ### Ajouté
 
+- [Admin] Graph affichant le nombre de réponses aux quizs par jour
+- [DevOps] Linting automatique du code backend avec `flake8`, `black` et un pre-commit git hook
+- [DevOps] Ajout d'un fichier `CONTRIBUTION.md`
+
 ### Modifié
+
+- [Backend] Renommé le modèle `QuestionCategory` en `Category`
+- [Backend] Renommé le modèle `QuestionTag` en `Tag`
+
+## [0.6.0] - 2020-04-17
+
+### Ajouté
+
+- [Backend] Un modèle `Quiz` pour stocker les quizs
+- [Backend] Un modèle `QuizStat` pour avoir des stats d'usage sur les quizs
+- [Frontend] Les choix des questions s'affichent dans le désordre (pour les questions qui le permettent)
+- [Frontend] Une page Tags avec la liste des tags
+- [Frontend] Une page Tag avec la liste des questions pour le tag donné
+- [Frontend] Une page Auteurs avec la liste des auteurs
+- [Frontend] Une page Auteur avec la liste des questions pour l'auteur donné
+- [Frontend] Une page Quizs avec la liste des quizs
+- [Frontend] Une page Quiz avec un premier workflow complet pour répondre aux questions les unes après les autres, et avoir un score/résultat à la fin
+
+### Modifié
+
+- [Frontend] Refactoring des appels api avec l'ajout de vuex. Loader global.
+- [Frontend] Amélioré l'affichage de la question, des choix et de la réponse (jeu de couleur, components, css, ...)
+- [Frontend] Cacher le sous-titre de l'application sur petits écrans
+- [DevOps] l'url netlify a changé de `know-your-planet.netlify.com` à `know-your-planet.netlify.app`
 
 ## [0.5.0] - 2020-04-05
 
