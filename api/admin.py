@@ -16,8 +16,8 @@ from django.utils.html import mark_safe
 
 from api.models import (
     Question,
-    QuestionCategory,
-    QuestionTag,
+    Category,
+    Tag,
     Quiz,
     QuestionStat,
     QuizStat,
@@ -77,12 +77,10 @@ class ExportMixin:
         return self.export_as_yaml(request, Question.objects.all().order_by("pk"))
 
     def export_all_questioncategory_as_yaml(self, request, queryset):
-        return self.export_as_yaml(
-            request, QuestionCategory.objects.all().order_by("pk")
-        )
+        return self.export_as_yaml(request, Category.objects.all().order_by("pk"))
 
     def export_all_questiontag_as_yaml(self, request, queryset):
-        return self.export_as_yaml(request, QuestionTag.objects.all().order_by("pk"))
+        return self.export_as_yaml(request, Tag.objects.all().order_by("pk"))
 
     def export_all_questionstat_as_yaml(self, request, queryset):
         return self.export_as_yaml(request, QuestionStat.objects.all().order_by("pk"))
@@ -180,7 +178,7 @@ class QuestionAdmin(admin.ModelAdmin, ExportMixin):
     show_answer_image.allow_tags = True
 
 
-class QuestionCategoryAdmin(admin.ModelAdmin, ExportMixin):
+class CategoryAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
         "id",
         "name",
@@ -196,7 +194,7 @@ class QuestionCategoryAdmin(admin.ModelAdmin, ExportMixin):
     ]
 
 
-class QuestionTagAdmin(admin.ModelAdmin, ExportMixin):
+class TagAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
         "id",
         "name",
@@ -339,8 +337,8 @@ class LogEntryAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Question, QuestionAdmin)
-admin.site.register(QuestionCategory, QuestionCategoryAdmin)
-admin.site.register(QuestionTag, QuestionTagAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Tag, TagAdmin)
 admin.site.register(Quiz, QuizAdmin)
 admin.site.register(QuestionStat, QuestionStatAdmin)
 admin.site.register(QuizStat, QuizStatAdmin)

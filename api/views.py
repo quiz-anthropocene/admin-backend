@@ -7,8 +7,8 @@ from rest_framework.response import Response
 
 from api.models import (
     Question,
-    QuestionCategory,
-    QuestionTag,
+    Category,
+    Tag,
     Quiz,
     QuestionStat,
     QuizStat,
@@ -16,8 +16,8 @@ from api.models import (
 )
 from api.serializers import (
     QuestionSerializer,
-    QuestionCategorySerializer,
-    QuestionTagSerializer,
+    CategorySerializer,
+    TagSerializer,
     QuizSerializer,
     QuizFullSerializer,
     QuestionStatSerializer,
@@ -147,14 +147,12 @@ def question_stats(request):
     )
     question_answer_count_stats = QuestionStat.objects.count()
     question_category_stats = (
-        QuestionCategory.objects.values("name")
+        Category.objects.values("name")
         .annotate(count=Count("questions"))
         .order_by("-count")
     )
     question_tag_stats = (
-        QuestionTag.objects.values("name")
-        .annotate(count=Count("questions"))
-        .order_by("-count")
+        Tag.objects.values("name").annotate(count=Count("questions")).order_by("-count")
     )
     question_author_stats = (
         Question.objects.values("author")
@@ -180,9 +178,9 @@ def category_list(request):
     """
     List all categories (with the number of questions per category)
     """
-    categories = QuestionCategory.objects.all()
+    categories = Category.objects.all()
 
-    serializer = QuestionCategorySerializer(categories, many=True)
+    serializer = CategorySerializer(categories, many=True)
     return Response(serializer.data)
 
 
@@ -191,9 +189,9 @@ def tag_list(request):
     """
     List all tags (with the number of questions per tag)
     """
-    tags = QuestionTag.objects.all().order_by("name")
+    tags = Tag.objects.all().order_by("name")
 
-    serializer = QuestionTagSerializer(tags, many=True)
+    serializer = TagSerializer(tags, many=True)
     return Response(serializer.data)
 
 

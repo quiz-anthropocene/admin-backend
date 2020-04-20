@@ -3,7 +3,7 @@ from django.db import models
 from api import constants
 
 
-class QuestionCategory(models.Model):
+class Category(models.Model):
     name = models.CharField(
         max_length=50, blank=False, help_text="Le nom de la catégorie"
     )
@@ -30,7 +30,7 @@ class QuestionCategory(models.Model):
         return self.questions.count()  # published() ?
 
 
-class QuestionTag(models.Model):
+class Tag(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du tag")
     description = models.TextField(blank=True, help_text="Une description du tag")
     created = models.DateField(
@@ -71,7 +71,7 @@ class Question(models.Model):
         help_text="Le type de question (QCM, V/F, ...)",
     )
     category = models.ForeignKey(
-        QuestionCategory,
+        Category,
         blank=False,
         null=True,
         on_delete=models.SET_NULL,
@@ -79,7 +79,7 @@ class Question(models.Model):
         help_text="Une seule catégorie possible",
     )
     tags = models.ManyToManyField(
-        QuestionTag,
+        Tag,
         blank=True,
         related_name="questions",
         help_text="Un ou plusieurs tags rattaché à la question",

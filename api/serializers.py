@@ -2,8 +2,8 @@ from rest_framework import serializers
 
 from api.models import (
     Question,
-    QuestionCategory,
-    QuestionTag,
+    Category,
+    Tag,
     Quiz,
     QuestionStat,
     QuizStat,
@@ -16,18 +16,18 @@ QUESTION CATEGORY
 """
 
 
-class QuestionCategorySerializer(serializers.ModelSerializer):
+class CategorySerializer(serializers.ModelSerializer):
     class Meta:
-        model = QuestionCategory
+        model = Category
         fields = ["id", "name", "description", "question_count"]
 
 
-class QuestionCategoryStringSerializer(serializers.ModelSerializer):
+class CategoryStringSerializer(serializers.ModelSerializer):
     def to_representation(self, value):
         return value.name
 
     class Meta:
-        model = QuestionCategory
+        model = Category
         fields = ["name"]
 
 
@@ -36,18 +36,18 @@ QUESTION TAG
 """
 
 
-class QuestionTagSerializer(serializers.ModelSerializer):
+class TagSerializer(serializers.ModelSerializer):
     class Meta:
-        model = QuestionTag
+        model = Tag
         fields = ["id", "name", "description", "question_count"]
 
 
-class QuestionTagStringSerializer(serializers.ModelSerializer):
+class TagStringSerializer(serializers.ModelSerializer):
     def to_representation(self, value):
         return value.name
 
     class Meta:
-        model = QuestionTag
+        model = Tag
         fields = ["name"]
 
 
@@ -57,8 +57,8 @@ QUESTION
 
 
 class QuestionSerializer(serializers.ModelSerializer):
-    category = QuestionCategoryStringSerializer()
-    tags = QuestionTagStringSerializer(many=True)
+    category = CategoryStringSerializer()
+    tags = TagStringSerializer(many=True)
 
     class Meta:
         model = Question

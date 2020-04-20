@@ -1,46 +1,46 @@
-- model: api.questioncategory
+- model: api.category
   pk: 1
   fields:
     name: Climat
     name_long: Climat
     description: "Dérèglement climatique"
     created: 2020-04-17
-- model: api.questioncategory
+- model: api.category
   pk: 2
   fields:
     name: Consommation
     name_long: Consommation, Leviers d'action
     description: Impact de nos modes de vie, notre consommation
     created: 2020-04-17
-- model: api.questioncategory
+- model: api.category
   pk: 3
   fields:
     name: Pollution
     name_long: Pollution
     description: "Emissions de gaz, mer, déchets..."
     created: 2020-04-17
-- model: api.questioncategory
+- model: api.category
   pk: 4
   fields:
     name: "Biodiversité"
     name_long: "Biodiversité"
     description: ''
     created: 2020-04-17
-- model: api.questioncategory
+- model: api.category
   pk: 5
   fields:
     name: "Énergie"
     name_long: "Énergie"
     description: ''
     created: 2020-04-17
-- model: api.questioncategory
+- model: api.category
   pk: 6
   fields:
     name: Histoire
     name_long: "Histoire, Anthropologie, Politique, Démographie"
     description: ''
     created: 2020-04-17
-- model: api.questioncategory
+- model: api.category
   pk: 7
   fields:
     name: Ressources
@@ -48,7 +48,7 @@
     description: "Sur la façon dont l'humanité puise dans les ressources de
       la terre, renouvelables et non-renouvelables."
     created: 2020-04-17
-- model: api.questioncategory
+- model: api.category
   pk: 8
   fields:
     name: Autres
