@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Avg
 
 from api import constants
 
@@ -135,6 +136,14 @@ class Question(models.Model):
         return f"{self.id} - {self.category} - {self.text}"
 
     @property
+    def tags_list(self):
+        return list(self.tags.values_list("name", flat=True))
+
+    @property
+    def tags_list_string(self):
+        return ", ".join(self.tags_list)
+
+    @property
     def has_answer_explanation(self):
         return len(self.answer_explanation) > 0
 
@@ -163,6 +172,7 @@ class Question(models.Model):
         )
 
     # Admin
+    tags_list_string.fget.short_description = "Tag(s)"
     answer_count.fget.short_description = "# Rép"
     answer_success_count.fget.short_description = "# Rép Corr"
     answer_success_rate.fget.short_description = "% Rép Corr"
@@ -200,7 +210,7 @@ class Quiz(models.Model):
         return self.questions.count()  # published() ?
 
     @property
-    def categories(self):
+    def categories_list(self):
         # self.questions.values("category__name").annotate(count=Count('category__name')).order_by("-count")
         return list(
             self.questions.order_by()
@@ -212,10 +222,15 @@ class Quiz(models.Model):
         # return sorted(counter, key=counter.get, reverse=True)
 
     @property
-    def tags(self):
+    def tags_list(self):
         return list(
             self.questions.order_by().values_list("tags__name", flat=True).distinct()
         )
+
+    @property
+    def difficulty_average(self):
+        difficulty_average = self.questions.aggregate(Avg("difficulty"))
+        return difficulty_average["difficulty__avg"] if difficulty_average else 0
 
     @property
     def answer_count(self):

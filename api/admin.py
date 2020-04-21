@@ -32,16 +32,32 @@ class ExportMixin:
     """
 
     def export_as_csv(self, request, queryset):
+        """
+        TODO: improve ManyToMany management (currently: hack to add tags)
+        """
         response = HttpResponse(content_type="text/csv")
         response[
             "Content-Disposition"
         ] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.csv"
 
+        # field_names = [field.name for field in self.model._meta.get_fields()]
         field_names = [field.name for field in self.model._meta.fields]
+
         writer = csv.writer(response)
-        writer.writerow(field_names)
+
+        if queryset.model.__name__ == "Question":
+            writer.writerow(field_names + ["tags"])
+        else:
+            writer.writerow(field_names)
+
         for obj in queryset:
-            writer.writerow([getattr(obj, field) for field in field_names])
+            if queryset.model.__name__ == "Question":
+                writer.writerow(
+                    [getattr(obj, field) for field in field_names]
+                    + [obj.tags_list_string]
+                )
+            else:
+                writer.writerow([getattr(obj, field) for field in field_names])
 
         return response
 
@@ -58,12 +74,14 @@ class ExportMixin:
         return response
 
     def export_as_yaml(self, request, queryset):
+        """
+        TODO: escape " (\")
+        """
         response = HttpResponse(content_type="text/yaml")
         response[
             "Content-Disposition"
         ] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.yaml"
 
-        # TODO: escape " (\")
         response.write(
             serializers.serialize("yaml", queryset)
             .encode()
@@ -112,6 +130,7 @@ class QuestionAdmin(admin.ModelAdmin, ExportMixin):
         "id",
         "text",
         "category",
+        "tags_list_string",
         "difficulty",
         "author",
         "publish",  # "type",
@@ -215,8 +234,9 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
         "name",
         "question_count",
         "author",
-        "categories",
-        "tags",
+        "categories_list",
+        "tags_list",
+        "difficulty_average",
         "publish",
         "answer_count",
     )

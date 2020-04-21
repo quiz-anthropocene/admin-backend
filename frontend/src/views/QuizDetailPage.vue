@@ -12,8 +12,9 @@
     </div>
 
     <div v-if="quiz" class="row margin-top-bottom-10 small">
-      <div v-if="quiz.categories && quiz.categories.length > 0" title="Catégorie(s) du quiz">🏷️&nbsp;Catégorie<span v-if="quiz.categories.length > 1">s</span>:&nbsp;{{ quiz.categories.join(', ') }}</div>
+      <div v-if="quiz.categories_list && quiz.categories_list.length > 0" title="Catégorie(s) du quiz">🏷️&nbsp;Catégorie<span v-if="quiz.categories_list.length > 1">s</span>:&nbsp;{{ quiz.categories_list.join(', ') }}</div>
       <!-- <div v-if="quiz.tags && quiz.tags.length > 0" title="Tag(s) du quiz">🏷️&nbsp;Tag<span v-if="quiz.tags.length > 1">s</span>:&nbsp;{{ quiz.tags.join(', ') }}</div> -->
+      <div title="Difficulté">&nbsp;Difficulté:&nbsp;{{ quiz.difficulty_average }}</div>
       <div title="Auteur du quiz">📝&nbsp;Auteur:&nbsp;{{ quiz.author }}</div>
       <!-- <div title="Date de création du quiz">📊&nbsp;Crée le:&nbsp;{{ new Date(quiz.created).toLocaleString() }}</div> -->
     </div>
