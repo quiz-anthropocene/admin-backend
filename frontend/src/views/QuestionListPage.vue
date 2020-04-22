@@ -5,7 +5,7 @@
     <!-- Filtre: catégorie -->
     <div v-if="categories">
       <span v-for="category in categories" :key="category.name" class="label label-category" :class="{ 'label-category--active' : category.name === categorySelected }" @click="clickCategory(category.name)">
-        {{ category.name }}
+        {{ category.name }} <small><i>{{ category.question_count }}</i></small>
       </span>
     </div>
 
@@ -14,7 +14,7 @@
     <!-- Filtre: tag -->
     <div v-if="tags">
       <span v-for="tag in tags" :key="tag.name" class="label label-tag" :class="{ 'label-tag--active' : tag.name === tagSelected }" @click="clickTag(tag.name)">
-        {{ tag.name }}
+        {{ tag.name }} <small><i>{{ tag.question_count }}</i></small>
       </span>
     </div>
 

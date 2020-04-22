@@ -4,7 +4,7 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 ## A venir
 
-Des pistes dans [README#idées](README#idées)
+Des pistes dans [README.md#idées](README.md#idées)
 
 ## [0.7.0] - en cours
 

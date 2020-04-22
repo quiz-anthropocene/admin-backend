@@ -28,7 +28,7 @@ class Category(models.Model):
 
     @property
     def question_count(self):
-        return self.questions.count()  # published() ?
+        return self.questions.published().count()
 
 
 class Tag(models.Model):
@@ -46,7 +46,7 @@ class Tag(models.Model):
 
     @property
     def question_count(self):
-        return self.questions.count()  # published() ?
+        return self.questions.published().count()
 
 
 class QuestionQuerySet(models.QuerySet):

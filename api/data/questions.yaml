@@ -20,7 +20,9 @@
     publish: true
     created: 2020-03-07
     updated: 2020-03-07
-    tags: []
+    tags:
+    - 4
+    - 5
 - model: api.question
   pk: 2
   fields:
@@ -54,10 +56,10 @@
     type: QCM
     category: 2
     difficulty: 1
-    answer_option_a: "Le fait que la population d'une espèce se met augmenter à
-      nouveau après avoir diminué faute de ressources"
+    answer_option_a: "Le fait que la population d'une espèce se met à augmenter
+      à nouveau après avoir diminué faute de ressources"
     answer_option_b: "La réflexion de la lumière sur la terre"
-    answer_option_c: "Le fait qu'un gisement dénergie fossile redevienne compétitif
+    answer_option_c: "Le fait qu'un gisement d'énergie fossile redevienne compétitif
       une fois que le prix du marché a augmenté"
     answer_option_d: Le fait que plus une ressource devient efficace, plus nous en
       consommons au total
@@ -96,7 +98,9 @@
     publish: true
     created: 2020-03-07
     updated: 2020-03-07
-    tags: []
+    tags:
+    - 6
+    - 7
 - model: api.question
   pk: 5
   fields:
@@ -123,11 +127,11 @@
 - model: api.question
   pk: 6
   fields:
-    text: "Quelle proportion de l'énergie solaire est absorbée par les océans
-      ?"
+    text: "L'effet de serre additionnel créé par l'homme emprisonne de l'énergie.
+      Quelle proportion de celle-ci se retrouve absorbée par les océans ?"
     type: QCM
     category: 1
-    difficulty: 1
+    difficulty: 2
     answer_option_a: 10%
     answer_option_b: 50%
     answer_option_c: 75%
@@ -138,14 +142,15 @@
       Imaginez un peu ce que serait la température de l'atmosphère s'il n'y
       avait pas l'océan pour absorber l'essentiel du surplus d'énergie thermique
       dû à l'effet de serre"
-    answer_additional_link: Rapport du GIEC
-    answer_image_link: ''
-    answer_extra_info: ''
+    answer_additional_link: https://ocean-climate.org/?p=4104
+    answer_image_link: https://i2.wp.com/www.ocean-climate.org/wp-content/uploads/2015/03/augmentation-effet-de-serre1.png
+    answer_extra_info: 'lien vers l''image ''situation actuelle'' seule: https://i1.wp.com/ocean-climate.org/wp-content/uploads/2015/03/FichesP%C3%87dagogiques_EffetDeSerre_02.jpg'
     author: Matthieu M
     publish: true
     created: 2020-03-08
     updated: 2020-03-08
-    tags: []
+    tags:
+    - 9
 - model: api.question
   pk: 7
   fields:
@@ -222,7 +227,8 @@
     publish: true
     created: 2020-03-08
     updated: 2020-03-08
-    tags: []
+    tags:
+    - 10
 - model: api.question
   pk: 10
   fields:
@@ -246,7 +252,8 @@
     publish: true
     created: 2020-03-08
     updated: 2020-03-08
-    tags: []
+    tags:
+    - 11
 - model: api.question
   pk: 11
   fields:
@@ -318,7 +325,9 @@
     publish: true
     created: 2020-03-09
     updated: 2020-03-09
-    tags: []
+    tags:
+    - 2
+    - 11
 - model: api.question
   pk: 14
   fields:
@@ -341,7 +350,8 @@
     publish: true
     created: 2020-03-09
     updated: 2020-03-09
-    tags: []
+    tags:
+    - 12
 - model: api.question
   pk: 15
   fields:
@@ -411,7 +421,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 2
 - model: api.question
   pk: 18
   fields:
@@ -458,7 +469,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 5
 - model: api.question
   pk: 20
   fields:
@@ -481,7 +493,9 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 2
+    - 39
 - model: api.question
   pk: 21
   fields:
@@ -504,7 +518,9 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 12
+    - 13
 - model: api.question
   pk: 22
   fields:
@@ -527,7 +543,9 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 12
+    - 13
 - model: api.question
   pk: 23
   fields:
@@ -550,7 +568,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 14
 - model: api.question
   pk: 24
   fields:
@@ -574,7 +593,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 12
 - model: api.question
   pk: 25
   fields:
@@ -593,12 +613,14 @@
     answer_explanation: ''
     answer_additional_link: https://fr.wikipedia.org/wiki/Accord_de_Paris_sur_le_climat
     answer_image_link: ''
-    answer_extra_info: ''
+    answer_extra_info: "https://www.lemonde.fr/planete/article/2015/01/07/pour-limiter-le-rechauffement-a-2-c-combien-de-petrole-gaz-et-charbon-en-moins_4550929_3244.html
+https://reporterre.net/Pour-eviter-le-rechauffement-il-faut-laisser-dans-le-sol-la-moitie-des-reserves"
     author: Matthieu M
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 11
 - model: api.question
   pk: 26
   fields:
@@ -648,7 +670,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 15
 - model: api.question
   pk: 28
   fields:
@@ -670,7 +693,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 9
 - model: api.question
   pk: 29
   fields:
@@ -693,7 +717,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 12
 - model: api.question
   pk: 30
   fields:
@@ -707,15 +732,24 @@
     answer_option_d: "la montée des eaux"
     answer_correct: b
     has_ordered_answers: false
-    answer_explanation: ''
+    answer_explanation: "La banquise joue un rôle essentiel : en réfléchissant
+      les rayons du soleil grâce à sa couleur – l’albedo, le pouvoir
+      réfléchissant de la banquise est de 95% -, elle isole les eaux froides
+      et maintient des températures basses. Du fait de la diminution de la surface
+      de la banquise, une plus grande quantité de rayons atteint directement l’eau
+      (flaques, océan) qui absorbe l’énergie solaire plus qu’elle
+      ne la réverbère. L’Océan se réchauffe davantage encore !"
     answer_additional_link: https://fr.wikipedia.org/wiki/Alb%C3%A9do#Climatologie
-    answer_image_link: ''
-    answer_extra_info: ''
+    answer_image_link: https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/3/7/f/37fe435a1d_34646_44141-1-meltpondscau.jpg
+    answer_extra_info: "https://www.lemonde.fr/blog/oceanclimat/2019/04/26/la-fonte-des-glaces-ou-comment-et-pourquoi/
+https://www.futura-sciences.com/planete/actualites/climatologie-impact-energetique-flaques-banquise-44141/"
     author: Matthieu M
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 9
+    - 16
 - model: api.question
   pk: 31
   fields:
@@ -729,15 +763,25 @@
     answer_option_d: "une baisse de la fertilité des poissons"
     answer_correct: a
     has_ordered_answers: false
-    answer_explanation: ''
+    answer_explanation: "Environ 30% du CO2 émis se dissout dans nos océans,
+      entrainant des réactions chimiques qui réduisent le pH de l’eau de
+      mer. Plus le pH diminue, plus les océans deviennent acides. Depuis la révolution
+      industrielle, le pH est passé de 8.2 à 8.1, et les chercheurs estiment
+      que cette valeur va diminuer encore de 0.3 avant la fin du siècle. Une baisse
+      de 0.1 ne paraît pas énorme, mais l’échelle du pH est logarithmique.
+      Par exemple, pH 4 est 10 fois plus acide que pH 5. La phrase « acidification
+      des océans » fait donc référence au processus de diminution du pH
+      causé par l’augmentation de l’absorption du CO2 par nos océans."
     answer_additional_link: https://fr.wikipedia.org/wiki/Acidification_des_oc%C3%A9ans
-    answer_image_link: ''
-    answer_extra_info: ''
+    answer_image_link: https://cdn.britannica.com/82/152182-050-719F9121/state-diagram-carbonates-conditions-oceans-2100.jpg
+    answer_extra_info: https://www.lemonde.fr/blog/oceanclimat/2015/11/18/tout-ce-quil-faut-savoir-sur-lacidification-des-oceans/
     author: Avenir Climatique
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 9
+    - 13
 - model: api.question
   pk: 32
   fields:
@@ -755,13 +799,15 @@
     answer_explanation: La banquise, qui flotte sur l'eau, ne fait pas monter l'eau
       quand elle fond. Faites le test avec un pastis.
     answer_additional_link: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
-    answer_image_link: ''
+    answer_image_link: https://sciencesdelavieetdelaterre93.files.wordpress.com/2018/08/18-bis-exp-fonte-glaces.jpg
     answer_extra_info: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 9
+    - 16
 - model: api.question
   pk: 33
   fields:
@@ -787,7 +833,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 13
 - model: api.question
   pk: 34
   fields:
@@ -810,7 +857,9 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 2
+    - 17
 - model: api.question
   pk: 35
   fields:
@@ -835,7 +884,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 18
 - model: api.question
   pk: 36
   fields:
@@ -854,13 +904,14 @@
       de pH : les coraux, les mollusques et certains planctons sont ainsi privés
       des ions carbonate nécessaires pour construire leurs coquilles et leurs squelettes."
     answer_additional_link: https://www.lemonde.fr/biodiversite/article/2014/10/08/l-acidification-des-oceans-aura-d-importantes-consequences-pour-la-biodiversite_4502183_1652692.html
-    answer_image_link: ''
+    answer_image_link: https://cdn.britannica.com/82/152182-050-719F9121/state-diagram-carbonates-conditions-oceans-2100.jpg
     answer_extra_info: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 13
 - model: api.question
   pk: 37
   fields:
@@ -885,7 +936,9 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 19
+    - 20
 - model: api.question
   pk: 38
   fields:
@@ -905,7 +958,7 @@
       c'est l'objectif COP21 à l'horizon 2050"
     answer_additional_link: https://www.hautconseilclimat.fr/rapport-2019/
     answer_image_link: https://www.connaissancedesenergies.org/sites/default/files/album_images/Empreinte-carbone-moyenne-france_zoom.png
-    answer_extra_info: ''
+    answer_extra_info: "retiré car doublon avec la 71"
     author: Matthieu M
     publish: false
     created: 2020-03-10
@@ -936,6 +989,7 @@
     updated: 2020-03-10
     tags:
     - 1
+    - 15
 - model: api.question
   pk: 40
   fields:
@@ -951,16 +1005,18 @@
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: 2.1 TWH (conso totale 474 TWH), soit 4.4%.
-    answer_additional_link: 'Bilan RTE 2018 (conso totale), Statinfo pour la part
-      du biogaz : https://www.statistiques.developpement-durable.gouv.fr'
-    answer_image_link: ''
-    answer_extra_info: ''
+    answer_additional_link: https://bilan-electrique-2019.rte-france.com/production-totale/
+    answer_image_link: https://www.connaissancedesenergies.org/sites/default/files/inline-images/production-electricite-france-2019.png
+    answer_extra_info: "https://www.statistiques.developpement-durable.gouv.fr/publicationweb/81
+https://www.actu-environnement.com/ae/news/biogaz-raccordement-electricite-recul-30222.php4"
     author: Avenir Climatique
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
     tags:
     - 1
+    - 15
+    - 39
 - model: api.question
   pk: 41
   fields:
@@ -984,12 +1040,14 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 9
+    - 21
 - model: api.question
   pk: 42
   fields:
-    text: "Pendant combien de temps une molécule de CO2 émise reste-t-elle dans
-      l'atmosphère avant d'être absorbée ?"
+    text: "Pendant combien de temps le CO2 émis reste t-il dans l'atmosphère
+      avant qu'il ne commence à être évacué ?"
     type: QCM
     category: 1
     difficulty: 1
@@ -999,7 +1057,7 @@
     answer_option_d: 100 ans
     answer_correct: d
     has_ordered_answers: true
-    answer_explanation: "C'est pourquoi les changements climatiques sont fondalement
+    answer_explanation: "C'est pourquoi les changements climatiques sont fondamentalement
       irréversibles à l'échelle humaine"
     answer_additional_link: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
     answer_image_link: ''
@@ -1008,11 +1066,14 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 12
+    - 13
 - model: api.question
   pk: 43
   fields:
-    text: "Un Français aura atteint l'émission annuelle de CO2 d'un Malien le..."
+    text: "Quel jour de l'année un Français atteint-il les émissions annuelles
+      de CO2 d'un Malien ?"
     type: QCM
     category: 1
     difficulty: 1
@@ -1026,16 +1087,17 @@
       Terre utilisée par l'Homme pour pêcher, élever, cultiver, déboiser,
       construire et brûler des énergies fossiles. La biocapacité, quant à
       elle, représente la surface de la planète nécessaire pour faire face
-      à ces pressions. Si ça peut vous consoler, ce serait le 2 janvier si vous
+      à ces pressions. Si ça peut vous consoler, ce serait le 14 mars si vous
       étiez un Américain. En moyenne mondiale, le 1er août."
     answer_additional_link: https://www.wwf.fr/jourdudepassement
-    answer_image_link: ''
+    answer_image_link: https://img.aws.la-croix.com/2018/08/01/1200959070/001-17y9ya-preview_2_1399_1504.jpg
     answer_extra_info: ''
     author: Matthieu M
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 1
 - model: api.question
   pk: 44
   fields:
@@ -1059,7 +1121,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 9
 - model: api.question
   pk: 45
   fields:
@@ -1075,14 +1138,16 @@
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: ''
-    answer_additional_link: "Rapport IPBES-7 sur la bio-diversité, 2019"
+    answer_additional_link: https://www.consoglobe.com/rapport-ipbes-05-2019-cg
     answer_image_link: ''
-    answer_extra_info: ''
+    answer_extra_info: https://ipbes.net/news/Media-Release-Global-Assessment-Fr
     author: Matthieu M
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 9
+    - 49
 - model: api.question
   pk: 46
   fields:
@@ -1108,7 +1173,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 22
 - model: api.question
   pk: 47
   fields:
@@ -1135,7 +1201,9 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 16
+    - 9
 - model: api.question
   pk: 48
   fields:
@@ -1184,7 +1252,9 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 24
+    - 23
 - model: api.question
   pk: 50
   fields:
@@ -1207,7 +1277,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 17
 - model: api.question
   pk: 51
   fields:
@@ -1230,7 +1301,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 17
 - model: api.question
   pk: 52
   fields:
@@ -1252,7 +1324,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 25
 - model: api.question
   pk: 53
   fields:
@@ -1276,7 +1349,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 2
 - model: api.question
   pk: 54
   fields:
@@ -1355,7 +1429,9 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 9
+    - 26
 - model: api.question
   pk: 57
   fields:
@@ -1381,7 +1457,9 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 9
+    - 26
 - model: api.question
   pk: 58
   fields:
@@ -1404,7 +1482,9 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 2
+    - 26
 - model: api.question
   pk: 59
   fields:
@@ -1428,7 +1508,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 7
 - model: api.question
   pk: 60
   fields:
@@ -1451,7 +1532,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 7
 - model: api.question
   pk: 61
   fields:
@@ -1503,12 +1585,15 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 2
+    - 27
 - model: api.question
   pk: 63
   fields:
-    text: "En 2050, quel est le ratio mondiale prévu entre retraités et actifs
-      ?"
+    text: "Le ratio entre le nombre de personnes retraitées et personnes en activité
+      est de 1 pour 11 à l'échelle mondiale actuellement. Quel est le ratio
+      prévu en 2050 ?"
     type: QCM
     category: 6
     difficulty: 1
@@ -1518,8 +1603,7 @@
     answer_option_d: 1 pour 10
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: Il est de 1 pour 11 au niveau mondial actuellement, mais augmente
-      rapidement
+    answer_explanation: Il augmente en effet rapidement
     answer_additional_link: https://news.un.org/fr/story/2019/06/1045681
     answer_image_link: https://ourworldindata.org/grapher/exports/dependency-age-groups-to-2100.png
     answer_extra_info: ''
@@ -1527,7 +1611,11 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 24
+    - 27
+    - 28
+    - 2
 - model: api.question
   pk: 64
   fields:
@@ -1550,7 +1638,9 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 2
+    - 27
 - model: api.question
   pk: 65
   fields:
@@ -1576,7 +1666,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 17
 - model: api.question
   pk: 66
   fields:
@@ -1601,7 +1692,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 14
 - model: api.question
   pk: 67
   fields:
@@ -1624,7 +1716,9 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 9
+    - 21
 - model: api.question
   pk: 68
   fields:
@@ -1646,7 +1740,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 11
 - model: api.question
   pk: 69
   fields:
@@ -1671,7 +1766,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 11
 - model: api.question
   pk: 70
   fields:
@@ -1694,7 +1790,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 2
 - model: api.question
   pk: 71
   fields:
@@ -1725,8 +1822,8 @@
 - model: api.question
   pk: 72
   fields:
-    text: "Entre l'industrie, l'agriculture, le bâtiment et les transports, quel
-      est le secteur qui émet le plus de gaz à effet de serre en France ?"
+    text: "En émissions sur le territoire nationale, quel est le secteur qui émet
+      le plus de gaz à effet de serre en France ?"
     type: QCM
     category: 2
     difficulty: 2
@@ -1737,7 +1834,9 @@
     answer_correct: d
     has_ordered_answers: false
     answer_explanation: "Transports 31%, Bâtiment 19%, Agriculture 19%, Industrie
-      18%"
+      18%. Si on parle en empreinte carbone (comprenant les émissions hors de France),
+      les transports n'arrivent qu'en 3e position derrière les biens de consommation
+      et l'agriculture."
     answer_additional_link: https://www.hautconseilclimat.fr/wp-content/uploads/2019/09/hcc_rapport_annuel_grand_public_2019.pdf
     answer_image_link: http://www.carbone4.com/wp-content/uploads/2019/09/e7a118de-1838-4812-9073-15a01cf56c90.png
     answer_extra_info: ''
@@ -1773,7 +1872,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 29
 - model: api.question
   pk: 74
   fields:
@@ -1796,7 +1896,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 30
 - model: api.question
   pk: 75
   fields:
@@ -1822,7 +1923,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 31
 - model: api.question
   pk: 76
   fields:
@@ -1848,7 +1950,8 @@
     publish: false
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 32
 - model: api.question
   pk: 77
   fields:
@@ -1874,7 +1977,8 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 31
 - model: api.question
   pk: 78
   fields:
@@ -1899,7 +2003,10 @@
     publish: true
     created: 2020-03-10
     updated: 2020-03-10
-    tags: []
+    tags:
+    - 24
+    - 33
+    - 34
 - model: api.question
   pk: 79
   fields:
@@ -1922,7 +2029,8 @@
     publish: true
     created: 2020-03-11
     updated: 2020-03-11
-    tags: []
+    tags:
+    - 9
 - model: api.question
   pk: 80
   fields:
@@ -1963,12 +2071,13 @@
     answer_explanation: "Pétrole (33%), Charbon (27%), Gaz (23%)"
     answer_additional_link: https://ourworldindata.org/grapher/energy-consumption-by-source-and-region
     answer_image_link: ''
-    answer_extra_info: ''
+    answer_extra_info: "retiré car doublon avec la question 70"
     author: Avenir Climatique
     publish: false
     created: 2020-03-11
     updated: 2020-03-11
-    tags: []
+    tags:
+    - 2
 - model: api.question
   pk: 82
   fields:
@@ -2018,4 +2127,5 @@
     publish: true
     created: 2020-03-11
     updated: 2020-03-11
-    tags: []
+    tags:
+    - 2
