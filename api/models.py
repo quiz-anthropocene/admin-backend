@@ -127,6 +127,15 @@ class Question(models.Model):
     publish = models.BooleanField(
         default=False, help_text="La question est prête à être publiée"
     )
+    validation_status = models.CharField(
+        max_length=150,
+        choices=zip(
+            constants.QUESTION_VALIDATION_STATUS_LIST,
+            constants.QUESTION_VALIDATION_STATUS_LIST,
+        ),
+        default=constants.QUESTION_VALIDATION_STATUS_NEW,
+        help_text="Le statut de la question dans le workflow de validation",
+    )
     created = models.DateField()
     updated = models.DateField()
 

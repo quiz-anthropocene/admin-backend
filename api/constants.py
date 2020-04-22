@@ -3,6 +3,14 @@ QUESTION_TYPES = [
     ("VF", "Vrai ou Faux"),
 ]
 
+QUESTION_VALIDATION_STATUS_NEW = "Nouvelle question"
+QUESTION_VALIDATION_STATUS_LIST = [
+    QUESTION_VALIDATION_STATUS_NEW,
+    "En cours de validation",
+    "Validée",
+    "Écartée",
+]
+
 # QUESTION_CATEGORIES = [
 #     ("biodiversité", "Biodiversité"),
 #     ("climat", "Climat"),
@@ -14,7 +22,13 @@ QUESTION_TYPES = [
 #     ("autre", "Autre"),
 # ]
 
-QUESTION_DIFFICULTY = [(1, "Facile"), (2, "Moyen"), (3, "Difficile"), (4, "Expert")]
+QUESTION_DIFFICULTY = [
+    (0, "Junior"),
+    (1, "Facile"),
+    (2, "Moyen"),
+    (3, "Difficile"),
+    (4, "Expert"),
+]
 
 QUESTION_SOUCE_QUESTION = "question"
 QUESTION_SOUCE_QUIZ = "quiz"

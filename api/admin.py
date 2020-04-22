@@ -33,7 +33,7 @@ class ExportMixin:
 
     def export_as_csv(self, request, queryset):
         """
-        TODO: improve ManyToMany management (currently: hack to add tags)
+        TODO: improve ManyToMany management (currently: hack to add tags to Question)
         """
         response = HttpResponse(content_type="text/csv")
         response[
@@ -129,11 +129,13 @@ class QuestionAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
         "id",
         "text",
+        "type",
         "category",
         "tags_list_string",
         "difficulty",
         "author",
-        "publish",  # "type",
+        "publish",
+        # "validation_status",
         "has_answer_explanation",
         "has_answer_additional_link",
         "has_answer_image_link",
@@ -142,12 +144,14 @@ class QuestionAdmin(admin.ModelAdmin, ExportMixin):
         "answer_success_rate",
     )
     list_filter = (
+        "type",
         "category",
         "tags",
         "difficulty",
         "author",
         "publish",
-    )  # "type",
+        "validation_status",
+    )
     ordering = ("id",)  # "answer_count", "answer_success_rate",
     actions = [
         "export_as_csv",
