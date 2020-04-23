@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "django_extensions",
+    "import_export",
     "api",
 ]
 

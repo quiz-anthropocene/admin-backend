@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 from django.db.models import Avg
 
@@ -87,6 +89,7 @@ class Question(models.Model):
     )
     difficulty = models.IntegerField(
         choices=constants.QUESTION_DIFFICULTY,
+        default=constants.QUESTION_DIFFICULTY_EASY,
         blank=False,
         help_text="Le niveau de difficulté de la question",
     )
@@ -124,6 +127,9 @@ class Question(models.Model):
     author = models.CharField(
         max_length=50, blank=True, help_text="L'auteur de la question"
     )
+    validator = models.CharField(
+        max_length=50, blank=True, help_text="La personne qui a validée la question"
+    )
     publish = models.BooleanField(
         default=False, help_text="La question est prête à être publiée"
     )
@@ -136,8 +142,8 @@ class Question(models.Model):
         default=constants.QUESTION_VALIDATION_STATUS_NEW,
         help_text="Le statut de la question dans le workflow de validation",
     )
-    created = models.DateField()
-    updated = models.DateField()
+    created = models.DateField(default=datetime.date.today)
+    updated = models.DateField(default=datetime.date.today)
 
     objects = QuestionQuerySet.as_manager()
 

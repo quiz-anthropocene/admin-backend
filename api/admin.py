@@ -12,6 +12,10 @@ from django.core.serializers.json import DjangoJSONEncoder
 from django.db.models import Count
 from django.utils.html import mark_safe
 
+from import_export import fields, resources
+from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
+from import_export.admin import ImportExportModelAdmin, DEFAULT_FORMATS
+
 # from django.core.management import call_command
 
 from api.models import (
@@ -125,7 +129,67 @@ class ExportMixin:
     export_all_questionstat_as_yaml.short_description = "Export All (YAML)"
 
 
-class QuestionAdmin(admin.ModelAdmin, ExportMixin):
+class QuestionResource(resources.ModelResource):
+    """
+    """
+
+    category = fields.Field(
+        column_name="category",
+        attribute="category",
+        widget=ForeignKeyWidget(Category, field="name"),
+    )
+    tags = fields.Field(
+        column_name="tags", attribute="tags", widget=ManyToManyWidget(Tag, field="name")
+    )
+
+    def before_import_row(self, row, **kwargs):
+        """
+        Notion.so adds a BOM identifier before each line
+        And setting from_encoding = 'utf-8-sig' in the QuestionAdmin does not work
+        So we need to fix the 'id' column
+        """
+        if "id" not in row:
+            row["id"] = row["\ufeffid"]
+
+    def import_obj(self, instance, row, dry_run):
+        """
+        Manually manage M2M column
+        - tags: get the row's comma-seperated tags, get their ids, check if they are
+        different than the instance, and finally set them to the instance
+        """
+        self._m2m_updated = True
+        if instance.id:
+            tags = row.get("tags")
+            tag_ids = []
+            if tags != "":
+                tags_split = tags.split(",")
+                # Tag.objects.filter(name__in=tags_split) # ignores new tags
+                for tag_string in tags_split:
+                    # tag, created = Tag.objects.get_or_create(name=tag_string)
+                    tag = Tag.objects.get(name=tag_string.strip())
+                    tag_ids.append(tag.id)
+                tag_ids.sort()
+            if list(instance.tags.values_list("id", flat=True)) != tag_ids:
+                instance.tags.set(tag_ids)
+                self._m2m_updated = True
+        super(QuestionResource, self).import_obj(instance, row, dry_run)
+
+    def skip_row(self, instance, original):
+        """
+        Highlight row if M2M column was updated
+        """
+        if self._m2m_updated:
+            return False
+        return super(QuestionResource, self).skip_row(instance, original)
+
+    class Meta:
+        model = Question
+        skip_unchanged = True
+        report_skipped = True
+
+
+class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
+    resource_class = QuestionResource
     list_display = (
         "id",
         "text",
@@ -166,6 +230,14 @@ class QuestionAdmin(admin.ModelAdmin, ExportMixin):
         "answer_success_count",
         "answer_success_rate",
     )
+
+    # from_encoding = 'utf-8-sig'
+    def get_import_formats(self):
+        """
+        Restrict import formats to csv only
+        """
+        formats = DEFAULT_FORMATS[:1]
+        return [f for f in formats if f().can_import()]
 
     def has_answer_explanation(self, instance):
         return instance.has_answer_explanation

@@ -22,9 +22,10 @@ QUESTION_VALIDATION_STATUS_LIST = [
 #     ("autre", "Autre"),
 # ]
 
+QUESTION_DIFFICULTY_EASY = 1
 QUESTION_DIFFICULTY = [
     (0, "Junior"),
-    (1, "Facile"),
+    (QUESTION_DIFFICULTY_EASY, "Facile"),
     (2, "Moyen"),
     (3, "Difficile"),
     (4, "Expert"),
