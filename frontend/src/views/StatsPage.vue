@@ -4,8 +4,8 @@
     
     <h3>Questions</h3>
     <p>
-      Il y a actuellement <strong v-if="questionPublishStats">{{ questionPublishStats[0]["count"] }}</strong> questions publiées,
-      et <strong v-if="questionPublishStats">{{ questionPublishStats[1]["count"] }}</strong> en cours de validation.
+      Il y a actuellement <strong v-if="questionPublishCount">{{ questionPublishCount }}</strong> questions publiées,
+      et <strong v-if="questionValidationStatusInProgressCount">{{ questionValidationStatusInProgressCount }}</strong> en cours de validation.
     </p>
 
     <br />
@@ -75,7 +75,8 @@ export default {
 
   data() {
     return {
-      questionPublishStats: null,
+      questionPublishCount: null,
+      questionValidationStatusInProgressCount: null,
       questionAnswerCountStats: null,
       questionCategoryStats: null,
       questionTagStats: null,
@@ -100,7 +101,8 @@ export default {
           return response.json()
         })
         .then(data => {
-          this.questionPublishStats = data["question_publish"];
+          this.questionPublishCount = data["question_publish_count"];
+          this.questionValidationStatusInProgressCount = data["question_validation_status_in_progress_count"];
           this.quizPublishStats = data["quiz_publish"];
           this.questionAnswerCountStats = data["answer_count"];
           this.questionCategoryStats = data["category"];

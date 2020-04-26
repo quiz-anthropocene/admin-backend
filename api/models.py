@@ -72,6 +72,9 @@ class QuestionQuerySet(models.QuerySet):
     def published(self):
         return self.exclude(publish=False)
 
+    def for_validation_status(self, validation_status):
+        return self.filter(validation_status=validation_status)
+
     def for_category(self, category):
         return self.filter(category__name=category)
 

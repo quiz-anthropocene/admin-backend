@@ -144,12 +144,16 @@ class QuestionResource(resources.ModelResource):
 
     def before_import_row(self, row, **kwargs):
         """
-        Notion.so adds a BOM identifier before each line
+        - Notion.so adds a BOM identifier before each line
         And setting from_encoding = 'utf-8-sig' in the QuestionAdmin does not work
         So we need to fix the 'id' column
+        - Issue with BooleanFields because Notion exports Yes/No
         """
         if "id" not in row:
             row["id"] = row["\ufeffid"]
+        BOOLEAN_FIELDS = ["has_ordered_answers", "publish"]
+        for boolean_field in BOOLEAN_FIELDS:
+            row[boolean_field] = True if (row[boolean_field] == "Yes") else False
 
     def import_obj(self, instance, row, dry_run):
         """

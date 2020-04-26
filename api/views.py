@@ -6,6 +6,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+from api import constants
 from api.models import (
     Question,
     Category,
@@ -136,17 +137,21 @@ def question_stats(request):
     """
     Retrieve stats on all the data
     """
-    question_publish_stats = (
-        Question.objects.values("publish")
-        .annotate(count=Count("publish"))
-        .order_by("-count")
-    )
+    # question_publish_stats = (
+    #     Question.objects.values("publish")
+    #     .annotate(count=Count("publish"))
+    #     .order_by("-count")
+    # )
+    question_publish_count = Question.objects.published().count()
+    question_validation_status_in_progress_count = Question.objects.for_validation_status(
+        constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS
+    ).count()
     quiz_publish_stats = (
         Quiz.objects.values("publish")
         .annotate(count=Count("publish"))
         .order_by("-count")
     )
-    question_answer_count_stats = QuestionStat.objects.count()
+    question_answer_count = QuestionStat.objects.count()
     question_category_stats = (
         Category.objects.values("name")
         .annotate(count=Count("questions"))
@@ -163,9 +168,10 @@ def question_stats(request):
 
     return Response(
         {
-            "question_publish": question_publish_stats,
+            "question_publish_count": question_publish_count,
+            "question_validation_status_in_progress_count": question_validation_status_in_progress_count,  # noqa
             "quiz_publish": quiz_publish_stats,
-            "answer_count": question_answer_count_stats,
+            "answer_count": question_answer_count,
             "category": question_category_stats,
             "tag": question_tag_stats,
             "author": question_author_stats,
