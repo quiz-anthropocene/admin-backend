@@ -34,12 +34,15 @@
       <p title="Explication">
         ℹ️&nbsp;{{ question.answer_explanation }}
       </p>
-      <p title="Lien(s) pour aller plus loin">
-        🔗&nbsp;<a v-bind:href="question.answer_additional_link" target="_blank">{{ question.answer_additional_link }}</a>
+      <p v-if="question.answer_accessible_url" title="Lien accessible pour aller plus loin">
+        🔗&nbsp;<a v-bind:href="question.answer_accessible_url" target="_blank">{{ question.answer_accessible_url }}</a>
       </p>
-      <p v-if="question.answer_image_link" class="answer-image" title="Une image pour illustrer la réponse">
-        <a v-bind:href="question.answer_image_link" target="_blank">
-          <img v-bind:src="question.answer_image_link" alt="une image pour illustrer la réponse" />
+      <p v-if="question.answer_scientific_url" title="Lien scientifique pour creuser la source">
+        🔗🧬&nbsp;<a v-bind:href="question.answer_scientific_url" target="_blank">{{ question.answer_scientific_url }}</a>
+      </p>
+      <p v-if="question.answer_image_url" class="answer-image" title="Une image pour illustrer la réponse">
+        <a v-bind:href="question.answer_image_url" target="_blank">
+          <img v-bind:src="question.answer_image_url" alt="une image pour illustrer la réponse" />
         </a>
       </p>
       <hr class="custom-seperator" />

@@ -154,21 +154,19 @@ class QuestionResource(resources.ModelResource):
     def import_obj(self, instance, row, dry_run):
         """
         Manually manage M2M column
-        - tags: get the row's comma-seperated tags, get their ids, check if they are
-        different than the instance, and finally set them to the instance
+        - tags in an existing instance: get the row's comma-seperated tags, get their ids,
+        check if they are different than the instance, and finally set them to the instance
+        - tags in a new instance: check that the tags exist
         """
-        self._m2m_updated = True
+        self._m2m_updated = False
+        # get tag_ids
+        tag_ids = []
+        tags = row.get("tags")
+        if tags:
+            tags_split = tags.split(",")
+            tag_ids = Tag.objects.get_ids_from_name_list(tags_split)
+        # compare
         if instance.id:
-            tags = row.get("tags")
-            tag_ids = []
-            if tags != "":
-                tags_split = tags.split(",")
-                # Tag.objects.filter(name__in=tags_split) # ignores new tags
-                for tag_string in tags_split:
-                    # tag, created = Tag.objects.get_or_create(name=tag_string)
-                    tag = Tag.objects.get(name=tag_string.strip())
-                    tag_ids.append(tag.id)
-                tag_ids.sort()
             if list(instance.tags.values_list("id", flat=True)) != tag_ids:
                 instance.tags.set(tag_ids)
                 self._m2m_updated = True
@@ -201,8 +199,9 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
         "publish",
         # "validation_status",
         "has_answer_explanation",
-        "has_answer_additional_link",
-        "has_answer_image_link",
+        "has_answer_accessible_url",
+        # "has_answer_scientific_url",
+        "has_answer_image_url",
         "answer_count",
         "answer_success_count",
         "answer_success_rate",
@@ -245,23 +244,23 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
     has_answer_explanation.short_description = "Explication"
     has_answer_explanation.boolean = True
 
-    def has_answer_additional_link(self, instance):
-        return instance.has_answer_additional_link
+    def has_answer_accessible_url(self, instance):
+        return instance.has_answer_accessible_url
 
-    has_answer_additional_link.short_description = "Lien(s)"
-    has_answer_additional_link.boolean = True
+    has_answer_accessible_url.short_description = "Lien"
+    has_answer_accessible_url.boolean = True
 
-    def has_answer_image_link(self, instance):
-        return instance.has_answer_image_link
+    def has_answer_image_url(self, instance):
+        return instance.has_answer_image_url
 
-    has_answer_image_link.short_description = "Image"
-    has_answer_image_link.boolean = True
+    has_answer_image_url.short_description = "Image"
+    has_answer_image_url.boolean = True
 
     def show_answer_image(self, instance):
-        if instance.answer_image_link:
+        if instance.answer_image_url:
             return mark_safe(
-                f'<a href="{instance.answer_image_link}" target="_blank">'
-                f'<img src="{instance.answer_image_link}" height=300 />'
+                f'<a href="{instance.answer_image_url}" target="_blank">'
+                f'<img src="{instance.answer_image_url}" height=300 />'
                 f"</a>"
             )
         else:

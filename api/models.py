@@ -17,7 +17,7 @@ class Category(models.Model):
         blank=True, help_text="Une description de la catégorie"
     )
     created = models.DateField(
-        auto_now=True, help_text="La date & heure de la création de la catégorie"
+        auto_now_add=True, help_text="La date & heure de la création de la catégorie"
     )
 
     class Meta:
@@ -33,12 +33,29 @@ class Category(models.Model):
         return self.questions.published().count()
 
 
+class TagManager(models.Manager):
+    def get_ids_from_name_list(self, tag_name_list: list):
+        tag_ids = []
+        # Tag.objects.filter(name__in=tags_split) # ignores new tags
+        for tag_name in tag_name_list:
+            # tag, created = Tag.objects.get_or_create(name=tag_string)
+            try:
+                tag = Tag.objects.get(name=tag_name.strip())
+            except Exception as e:
+                raise type(e)(f"{tag_name}")
+            tag_ids.append(tag.id)
+        tag_ids.sort()
+        return tag_ids
+
+
 class Tag(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du tag")
     description = models.TextField(blank=True, help_text="Une description du tag")
     created = models.DateField(
-        auto_now=True, help_text="La date & heure de la création du tag"
+        auto_now_add=True, help_text="La date & heure de la création du tag"
     )
+
+    objects = TagManager()
 
     class Meta:
         constraints = [models.UniqueConstraint(fields=["name"], name="unique tag name")]
@@ -110,10 +127,15 @@ class Question(models.Model):
     answer_explanation = models.TextField(
         blank=True, help_text="Un petit texte d'explication"
     )
-    answer_additional_link = models.URLField(
+    answer_accessible_url = models.URLField(
         max_length=500, blank=True, help_text="Un lien pour aller plus loin"
     )
-    answer_image_link = models.URLField(
+    answer_scientific_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="La source scientifique du chiffre (rapport)",
+    )
+    answer_image_url = models.URLField(
         max_length=500,
         blank=True,
         help_text="Un lien vers une image pour illustrer la réponse "
@@ -143,7 +165,7 @@ class Question(models.Model):
         help_text="Le statut de la question dans le workflow de validation",
     )
     created = models.DateField(default=datetime.date.today)
-    updated = models.DateField(default=datetime.date.today)
+    updated = models.DateField(auto_now=True)
 
     objects = QuestionQuerySet.as_manager()
 
@@ -163,12 +185,16 @@ class Question(models.Model):
         return len(self.answer_explanation) > 0
 
     @property
-    def has_answer_additional_link(self):
-        return len(self.answer_additional_link) > 0
+    def has_answer_accessible_url(self):
+        return len(self.answer_accessible_url) > 0
 
     @property
-    def has_answer_image_link(self):
-        return len(self.answer_image_link) > 0
+    def has_answer_scientific_url(self):
+        return len(self.answer_scientific_url) > 0
+
+    @property
+    def has_answer_image_url(self):
+        return len(self.answer_image_url) > 0
 
     @property
     def answer_count(self):
@@ -212,7 +238,7 @@ class Quiz(models.Model):
         default=False, help_text="Le quiz est prêt à être publié"
     )
     created = models.DateField(
-        auto_now=True, help_text="La date & heure de la création du quiz"
+        auto_now_add=True, help_text="La date & heure de la création du quiz"
     )
 
     objects = QuizQuerySet.as_manager()
@@ -267,7 +293,7 @@ class QuestionStat(models.Model):
         help_text="Le contexte dans lequel a été répondu la question",
     )
     created = models.DateTimeField(
-        auto_now=True, help_text="La date & heure de la réponse"
+        auto_now_add=True, help_text="La date & heure de la réponse"
     )
 
 
@@ -280,7 +306,7 @@ class QuizStat(models.Model):
         help_text="La nombre de réponses correctes trouvées par l'internaute",
     )
     created = models.DateTimeField(
-        auto_now=True, help_text="La date & heure de la réponse"
+        auto_now_add=True, help_text="La date & heure de la réponse"
     )
 
     @property
@@ -300,7 +326,7 @@ class Contribution(models.Model):
         default=True, help_text="La contribution est une question"
     )
     created = models.DateTimeField(
-        auto_now=True, help_text="La date & heure de la contribution"
+        auto_now_add=True, help_text="La date & heure de la contribution"
     )
 
     def __str__(self):
