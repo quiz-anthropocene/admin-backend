@@ -43,6 +43,8 @@ export default {
       this.$store.dispatch('GET_QUESTION_LIST');
       this.$store.dispatch('GET_CATEGORY_LIST');
       this.$store.dispatch('GET_TAG_LIST');
+      this.$store.dispatch('GET_AUTHOR_LIST');
+      this.$store.dispatch('GET_DIFFICULTY_LIST');
       this.$store.dispatch('GET_QUIZ_LIST');
     }
   }

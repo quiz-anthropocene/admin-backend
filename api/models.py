@@ -84,6 +84,9 @@ class QuestionQuerySet(models.QuerySet):
     def for_author(self, author):
         return self.filter(author=author)
 
+    def for_difficulty(self, difficulty):
+        return self.filter(difficulty=difficulty)
+
 
 class Question(models.Model):
     text = models.TextField(blank=False, help_text="La question en 1 ou 2 phrases")

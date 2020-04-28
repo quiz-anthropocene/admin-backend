@@ -12,6 +12,7 @@ const store = new Vuex.Store({
     categories: [],
     tags: [],
     authors: [],
+    difficultyLevels: [],
   },
   actions: {
     GET_QUESTION_LIST: ({ commit }) => {
@@ -88,6 +89,20 @@ const store = new Vuex.Store({
           // this.error = error;
         })
     },
+    GET_DIFFICULTY_LIST: ({ commit }) => {
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/difficulty-levels`)
+        .then(response => {
+          // this.loading = false
+          return response.json()
+        })
+        .then(data => {
+          commit('SET_DIFFICULTY_LEVEL_LIST', { list: data })
+        })
+        .catch(error => {
+          console.log(error)
+          // this.error = error;
+        })
+    },
   },
   mutations: {
     UPDATE_LOADING_STATUS: (state, value) => {
@@ -98,6 +113,8 @@ const store = new Vuex.Store({
     },
     SET_QUESTION_LIST: (state, { list }) => {
       state.questions = list
+      // TODO: state.authors & question_count
+      // TODO: state.difficulty & question_count
     },
     SET_QUIZ_LIST: (state, { list }) => {
       state.quizzes = list
@@ -110,6 +127,9 @@ const store = new Vuex.Store({
     },
     SET_AUTHOR_LIST: (state, { list }) => {
       state.authors = list
+    },
+    SET_DIFFICULTY_LEVEL_LIST: (state, { list }) => {
+      state.difficultyLevels = list
     }
   },
   getters: {
@@ -127,7 +147,9 @@ const store = new Vuex.Store({
     },
     getQuestionsByFilter: state => filter => {
       return state.questions.filter(q => (filter.categoryName ? (q.category === filter.categoryName) : true))
-                            .filter(q => (filter.tagName ? q.tags.includes(filter.tagName) : true));
+                            .filter(q => (filter.tagName ? q.tags.includes(filter.tagName) : true))
+                            .filter(q => (filter.authorName ? (q.author === filter.authorName) : true))
+                            .filter(q => (filter.difficulty ? (q.difficulty === filter.difficulty) : true));
     },
     getQuizById: state => quizId => {
       return state.quizzes.find(q => (q.id === parseInt(quizId)));

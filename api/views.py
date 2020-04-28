@@ -1,6 +1,6 @@
 import random
 
-from django.db.models import Count
+from django.db.models import Count, F
 from django.http import HttpResponse
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -51,7 +51,7 @@ def api_home(request):
 @api_view(["GET"])
 def question_list(request):
     """
-    List all questions (return them in a random order)
+    List all published questions (return them in a random order)
     Optional query parameters:
     - 'category' (string)
     - 'tag' (string)
@@ -143,41 +143,8 @@ def question_stats(request):
     #     .order_by("-count")
     # )
     question_publish_count = Question.objects.published().count()
-    question_validation_status_in_progress_count = Question.objects.for_validation_status(
-        constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS
-    ).count()
-    quiz_publish_stats = (
-        Quiz.objects.values("publish")
-        .annotate(count=Count("publish"))
-        .order_by("-count")
-    )
-    question_answer_count = QuestionStat.objects.count()
-    question_category_stats = (
-        Category.objects.values("name")
-        .annotate(count=Count("questions"))
-        .order_by("-count")
-    )
-    question_tag_stats = (
-        Tag.objects.values("name").annotate(count=Count("questions")).order_by("-count")
-    )
-    question_author_stats = (
-        Question.objects.values("author")
-        .annotate(count=Count("author"))
-        .order_by("-count")
-    )
 
-    return Response(
-        {
-            "question_publish_count": question_publish_count,
-            "question_validation_status_in_progress_count": question_validation_status_in_progress_count,  # noqa
-            "quiz_publish": quiz_publish_stats,
-            "answer_count": question_answer_count,
-            "category": question_category_stats,
-            "tag": question_tag_stats,
-            "author": question_author_stats,
-            # "answer": question_answer_stats
-        }
-    )
+    return Response(question_publish_count)
 
 
 @api_view(["GET"])
@@ -208,12 +175,44 @@ def author_list(request):
     List all authors (with the number of questions per author)
     """
     authors = (
-        Question.objects.values("author")
+        Question.objects.published()
+        .values(name=F("author"))
         .annotate(question_count=Count("author"))
         .order_by("-question_count")
     )
 
     return Response(authors)
+
+
+@api_view(["GET"])
+def difficulty_list(request):
+    """
+    List all difficulty levels (with the number of questions per difficulty)
+    """
+    difficulty_levels_query = (
+        Question.objects.published()
+        .values(value=F("difficulty"))
+        .annotate(question_count=Count("difficulty"))
+    )
+
+    difficulty_levels = []
+    for x, y in constants.QUESTION_DIFFICULTY:
+        difficulty_levels.append(
+            {
+                "name": y,
+                "value": x,
+                "question_count": next(
+                    (
+                        item["question_count"]
+                        for item in difficulty_levels_query
+                        if item["value"] == x
+                    ),
+                    0,
+                ),  # noqa
+            }
+        )
+
+    return Response(difficulty_levels)
 
 
 @api_view(["GET"])
@@ -266,3 +265,51 @@ def contribute(request):
         )
         serializer = ContributionSerializer(contribution)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+@api_view(["GET"])
+def stats(request):
+    """
+    Retrieve stats on all the data
+    """
+    # question_publish_stats = (
+    #     Question.objects.values("publish")
+    #     .annotate(count=Count("publish"))
+    #     .order_by("-count")
+    # )
+    question_publish_count = Question.objects.published().count()
+    question_validation_status_in_progress_count = Question.objects.for_validation_status(
+        constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS
+    ).count()
+    quiz_publish_stats = (
+        Quiz.objects.values("publish")
+        .annotate(count=Count("publish"))
+        .order_by("-count")
+    )
+    question_answer_count = QuestionStat.objects.count()
+    question_category_stats = (
+        Category.objects.values("name")
+        .annotate(count=Count("questions"))
+        .order_by("-count")
+    )
+    question_tag_stats = (
+        Tag.objects.values("name").annotate(count=Count("questions")).order_by("-count")
+    )
+    question_author_stats = (
+        Question.objects.values(name=F("author"))
+        .annotate(count=Count("author"))
+        .order_by("-count")
+    )
+
+    return Response(
+        {
+            "question_publish_count": question_publish_count,
+            "question_validation_status_in_progress_count": question_validation_status_in_progress_count,  # noqa
+            "quiz_publish": quiz_publish_stats,
+            "answer_count": question_answer_count,
+            "category": question_category_stats,
+            "tag": question_tag_stats,
+            "author": question_author_stats,
+            # "answer": question_answer_stats
+        }
+    )

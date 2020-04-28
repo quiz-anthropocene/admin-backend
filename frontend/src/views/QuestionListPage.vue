@@ -20,6 +20,24 @@
 
     <br />
 
+    <!-- Filtre: author -->
+    <div v-if="authors">
+      <span v-for="author in authors" :key="author.name" class="label label-tag" :class="{ 'label-tag--active' : author.name === authorSelected }" @click="clickAuthor(author.name)">
+        {{ author.name }} <small><i>{{ author.question_count }}</i></small>
+      </span>
+    </div>
+
+    <br />
+
+    <!-- Filtre: difficulty -->
+    <div v-if="difficultyLevels">
+      <span v-for="difficulty in difficultyLevels" :key="difficulty.name" class="label label-tag" :class="{ 'label-tag--active' : difficulty.value === difficultySelected }" @click="clickDifficulty(difficulty.value)">
+        <small><DifficultyBadge v-bind:difficulty="difficulty.value" /></small> <small><i>{{ difficulty.question_count }}</i></small>
+      </span>
+    </div>
+
+    <br />
+
     <!-- Question List -->
     <div v-if="questions" class="row">
       <div class="row-item row-item-question" v-for="question in questionsDisplayed" :key="question.id">
@@ -53,12 +71,14 @@
 
 <script>
 import QuestionPreviewCard from '../components/QuestionPreviewCard.vue'
+import DifficultyBadge from '../components/DifficultyBadge.vue'
 import HomeLink from '../components/HomeLink.vue'
 
 export default {
   name: 'QuestionListPage',
   components: {
     QuestionPreviewCard,
+    DifficultyBadge,
     HomeLink
   },
 
@@ -70,6 +90,10 @@ export default {
       categorySelected: null,
       // tags: null,
       tagSelected: null,
+      // authors: null
+      authorSelected: null,
+      // difficultyLevels: null
+      difficultySelected: null,
     }
   },
 
@@ -82,6 +106,12 @@ export default {
     },
     tags () {
       return this.$store.state.tags;
+    },
+    authors () {
+      return this.$store.state.authors;
+    },
+    difficultyLevels () {
+      return this.$store.state.difficultyLevels;
     }
   },
 
@@ -105,10 +135,20 @@ export default {
       this.tagSelected = (this.tagSelected === tag) ? null : tag;
       this.updateQuestionsDisplayed();
     },
+    clickAuthor(author) {
+      this.authorSelected = (this.authorSelected === author) ? null : author;
+      this.updateQuestionsDisplayed();
+    },
+    clickDifficulty(difficulty) {
+      this.difficultySelected = (this.difficultySelected === difficulty) ? null : difficulty;
+      this.updateQuestionsDisplayed();
+    },
     updateQuestionsDisplayed() {
       this.questionsDisplayed = this.$store.getters.getQuestionsByFilter({
         "categoryName": this.categorySelected,
-        "tagName": this.tagSelected
+        "tagName": this.tagSelected,
+        "authorName": this.authorSelected,
+        "difficulty": this.difficultySelected
       });
     }
   }

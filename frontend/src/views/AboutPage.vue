@@ -22,7 +22,7 @@
     <h3>Open source</h3>
     <p>
       Le code de l'application, ainsi que les questions, sont visibles sur <a href="https://github.com/raphodn/know-your-planet" target="_blank">la page Github de l'application</a>.
-      Si vous avez des commentaires ou des suggestions, vous pouvez y créer des <i>Issues</i> 🙏
+      Si vous avez des commentaires ou des suggestions sur l'application, vous pouvez y créer des <i>Issues</i> 🙏
     </p>
     <p>
       
@@ -42,13 +42,17 @@
 
     <br />
     <h3>Vous souhaitez aller plus loin ?</h3>
-    <a href="https://fresqueduclimat.org/" target="_blank">La Fresque du Climat</a><br>
-    <a href="https://theshiftproject.org/" target="_blank">The Shift Project</a><br>
-    <a href="https://avenirclimatique.org/" target="_blank">Avenir Climatique</a><br>
-    <a href="http://adrastia.org/" target="_blank">Adrastia</a><br>
-    <a href="https://www.lpo.fr/" target="_blank">La Ligue pour la Protection des Oiseaux (LPO)</a><br>
-    <a href="https://www.hautconseilclimat.fr/" target="_blank">Le Haut conseil pour le climat</a><br>
-    <a href="https://www.conventioncitoyennepourleclimat.fr/" target="_blank">La Convention Citoyenne pour le climat (CCC)</a><br>
+    <a href="https://fresqueduclimat.org/" target="_blank">La Fresque du Climat</a><br />
+    <a href="https://theshiftproject.org/" target="_blank">The Shift Project</a><br />
+    <a href="https://avenirclimatique.org/" target="_blank">Avenir Climatique</a><br />
+    <a href="http://adrastia.org/" target="_blank">Adrastia</a><br />
+    <a href="https://citoyenspourleclimat.org/" target="_blank">Citoyens pour le climat (CPLC)</a><br />
+    <a href="https://extinctionrebellion.fr/" target="_blank">Extinction Rebellion (XR)</a><br />
+    <a href="https://www.lpo.fr/" target="_blank">La Ligue pour la Protection des Oiseaux (LPO)</a><br />
+
+    <h6>Mais aussi...</h6>
+    <a href="https://www.hautconseilclimat.fr/" target="_blank">Le Haut conseil pour le climat</a><br />
+    <a href="https://www.conventioncitoyennepourleclimat.fr/" target="_blank">La Convention Citoyenne pour le climat (CCC)</a><br />
 
     <br />
     <hr />

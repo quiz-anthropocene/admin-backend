@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="alert alert-warning" role="alert">
-      <i v-if="questionStats">Il y a actuellement {{ questionStats["question_publish"][0]["count"] }} questions. </i>
+      <i v-if="questionCount">Il y a actuellement {{ questionCount }} questions. </i>
       <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus !</i>
     </div>
 
@@ -97,7 +97,7 @@ export default {
 
   data () {
     return {
-      questionStats: null,
+      questionCount: null,
       questionRandomNextId: null,
       loading: false,
       error: null,
@@ -111,15 +111,15 @@ export default {
 
   methods: {
     fetchQuestionStats() {
-      this.error = this.questionStats = null
+      this.error = this.questionCount = null
       this.loading = true
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/stats`)
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/count`)
         .then(response => {
           this.loading = false
           return response.json()
         })
         .then(data => {
-          this.questionStats = data
+          this.questionCount = data
         })
         .catch(error => {
           console.log(error)

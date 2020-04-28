@@ -14,9 +14,9 @@
     </div>
 
     <div v-if="authors && authors.length > 0">
-      <router-link class="no-decoration" v-for="author in authors" :key="author.author" :to="{ name: 'author-detail', params: { authorName: author.author } }">
+      <router-link class="no-decoration" v-for="author in authors" :key="author.name" :to="{ name: 'author-detail', params: { authorName: author.name } }">
         <span class="category">
-          <h3>{{ author.author }}</h3>
+          <h3>{{ author.name }}</h3>
           <p><strong>{{ author.question_count }}</strong> question<span v-if="author.question_count > 1">s</span></p>
         </span>
       </router-link>
@@ -66,7 +66,6 @@ export default {
   },
 
   mounted () {
-    this.$store.dispatch('GET_AUTHOR_LIST');
   },
 
   methods: {
