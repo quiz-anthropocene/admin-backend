@@ -9,6 +9,7 @@ django-import-export==2.0.2
 djangorestframework==3.11.0
 flake8==3.7.9
 gunicorn==20.0.4
+notion==0.0.25
 pre-commit==2.2.0
 psycopg2==2.8.4
 python-dotenv==0.12.0

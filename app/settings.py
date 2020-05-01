@@ -145,3 +145,9 @@ CSRF_COOKIE_SECURE = False if os.getenv("CSRF_COOKIE_SECURE") == "False" else Tr
 
 SECURE_SSL_REDIRECT = False if os.getenv("SECURE_SSL_REDIRECT") == "False" else True
 SECURE_HSTS_SECONDS = os.getenv("SECURE_HSTS_SECONDS")
+
+
+# Notion.so
+
+TOKEN_V2 = os.getenv("TOKEN_V2")
+CONTRIBUTION_TABLE_URL = os.getenv("CONTRIBUTION_TABLE_URL")

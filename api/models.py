@@ -92,7 +92,7 @@ class Question(models.Model):
     text = models.TextField(blank=False, help_text="La question en 1 ou 2 phrases")
     type = models.CharField(
         max_length=50,
-        choices=constants.QUESTION_TYPES,
+        choices=constants.QUESTION_TYPE_CHOICES,
         blank=False,
         help_text="Le type de question (QCM, V/F, ...)",
     )
@@ -111,7 +111,7 @@ class Question(models.Model):
         help_text="Un ou plusieurs tags rattaché à la question",
     )
     difficulty = models.IntegerField(
-        choices=constants.QUESTION_DIFFICULTY,
+        choices=constants.QUESTION_DIFFICULTY_CHOICES,
         default=constants.QUESTION_DIFFICULTY_EASY,
         blank=False,
         help_text="Le niveau de difficulté de la question",
@@ -293,8 +293,8 @@ class QuestionStat(models.Model):
     )
     source = models.CharField(
         max_length=50,
-        choices=constants.QUESTION_SOUCE_CHOICES,
-        default=constants.QUESTION_SOUCE_QUESTION,
+        choices=constants.QUESTION_SOURCE_CHOICES,
+        default=constants.QUESTION_SOURCE_QUESTION,
         editable=False,
         help_text="Le contexte dans lequel a été répondu la question",
     )
@@ -328,8 +328,13 @@ class Contribution(models.Model):
     description = models.TextField(
         help_text="Informations supplémentaires sur la contribution (réponse, lien, ...)"
     )
-    is_question = models.BooleanField(
-        default=True, help_text="La contribution est une question"
+    type = models.CharField(
+        max_length=150,
+        choices=zip(
+            constants.CONTRIBUTION_TYPE_LIST, constants.CONTRIBUTION_TYPE_LIST,
+        ),
+        blank=True,
+        help_text="Le type de contribution",
     )
     created = models.DateTimeField(
         auto_now_add=True, help_text="La date & heure de la contribution"

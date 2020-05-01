@@ -1,4 +1,4 @@
-QUESTION_TYPES = [
+QUESTION_TYPE_CHOICES = [
     ("QCM", "Questionnaire à choix multiples (QCM)"),
     ("VF", "Vrai ou Faux"),
 ]
@@ -14,7 +14,7 @@ QUESTION_VALIDATION_STATUS_LIST = [
     QUESTION_VALIDATION_STATUS_REMOVED,
 ]
 
-# QUESTION_CATEGORIES = [
+# QUESTION_CATEGORY_CHOICES = [
 #     ("biodiversité", "Biodiversité"),
 #     ("climat", "Climat"),
 #     ("consommation", "Consommation, Leviers d'action"),
@@ -26,7 +26,7 @@ QUESTION_VALIDATION_STATUS_LIST = [
 # ]
 
 QUESTION_DIFFICULTY_EASY = 1
-QUESTION_DIFFICULTY = [
+QUESTION_DIFFICULTY_CHOICES = [
     (0, "Junior"),
     (QUESTION_DIFFICULTY_EASY, "Facile"),
     (2, "Moyen"),
@@ -34,9 +34,15 @@ QUESTION_DIFFICULTY = [
     (4, "Expert"),
 ]
 
-QUESTION_SOUCE_QUESTION = "question"
-QUESTION_SOUCE_QUIZ = "quiz"
-QUESTION_SOUCE_CHOICES = [
-    (QUESTION_SOUCE_QUESTION, "Question"),
-    (QUESTION_SOUCE_QUIZ, "Quiz"),
+QUESTION_SOURCE_QUESTION = "question"
+QUESTION_SOURCE_QUIZ = "quiz"
+QUESTION_SOURCE_CHOICES = [
+    (QUESTION_SOURCE_QUESTION, "Question"),
+    (QUESTION_SOURCE_QUIZ, "Quiz"),
+]
+
+CONTRIBUTION_TYPE_LIST = [
+    "nouvelle question",
+    "commentaire application",
+    "commentaire question",
 ]

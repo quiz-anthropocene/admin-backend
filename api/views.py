@@ -6,7 +6,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api import constants
+from api import constants, utilities_notion
 from api.models import (
     Question,
     Category,
@@ -99,6 +99,7 @@ def question_detail_stats(request, pk):
             answer_choice=request.data["answer_choice"],
             source=request.data["source"],
         )
+
         serializer = QuestionStatSerializer(question_stat)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -196,7 +197,7 @@ def difficulty_list(request):
     )
 
     difficulty_levels = []
-    for x, y in constants.QUESTION_DIFFICULTY:
+    for x, y in constants.QUESTION_DIFFICULTY_CHOICES:
         difficulty_levels.append(
             {
                 "name": y,
@@ -231,6 +232,7 @@ def quiz_list(request):
         serializer = QuizFullSerializer(quizzes, many=True)
     else:
         serializer = QuizSerializer(quizzes, many=True)
+
     return Response(serializer.data)
 
 
@@ -248,6 +250,7 @@ def quiz_detail_stats(request, pk):
         quiz_stat = QuizStat.objects.create(
             quiz=quiz, answer_success_count=request.data["answer_success_count"]
         )
+
         serializer = QuizStatSerializer(quiz_stat)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -259,10 +262,20 @@ def contribute(request):
     """
     if request.method == "POST":
         contribution = Contribution.objects.create(
-            is_question=request.data["is_question"],
             text=request.data["text"],
-            description=request.data["additional_info"],
+            description=request.data["description"],
+            type=request.data["type"],
         )
+
+        try:
+            utilities_notion.add_contribution_row(
+                contribution_text=contribution.text,
+                contribution_description=contribution.description,
+                contribution_type=contribution.type,
+            )
+        except Exception as e:
+            Contribution.objects.create(text=e)
+
         serializer = ContributionSerializer(contribution)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 

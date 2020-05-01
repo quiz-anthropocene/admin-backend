@@ -50,7 +50,39 @@
         <div v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.join(', ') }}</div>
         <div title="Auteur de la question">📝&nbsp;Auteur:&nbsp;{{ question.author }}</div>
         <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count }} / {{ question.answer_count }} ({{ question.answer_success_rate }}%)</div>
+        <button class="btn btn-sm btn-feedback" title="Votre avis sur la question" @click="showContributionForm = true">💬&nbsp;Suggérer une modification</button>
       </div>
+      <template v-if="showContributionForm">
+        <hr class="custom-seperator" />
+        <form @submit.prevent="submitContribution" v-if="!contributionSubmitted">
+          <h3 class="margin-bottom-0">
+            <label for="contribution_text">Votre suggestion ou commentaire sur la question <span class="color-red">*</span></label>
+          </h3>
+          <div class="row">
+            <div class="col">
+              <textarea id="contribution_text" class="form-control" rows="2" v-model="contribution.text" required></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button type="submit" class="btn btn-outline-primary btn-sm" :disabled="!contribution.text">📩&nbsp;Envoyer !</button>
+            </div>
+          </div>
+        </form>
+        <div v-if="contributionSubmitted && loading" class="loading">
+          Envoi de votre suggestion...
+        </div>
+
+        <div v-if="contributionSubmitted && error" class="error">
+          <h3>Il y a eu une erreur 😢</h3>
+          {{ error }}
+        </div>
+
+        <div v-if="contributionSubmitted && contributionResponse">
+          <h3>Merci beaucoup 💯</h3>
+          <p>On fera de notre mieux pour prendre en compte votre suggestion.</p>
+        </div>
+      </template>
     </div>
   </section>
 </template>
@@ -76,6 +108,17 @@ export default {
       questionSubmitted: false,
       questionSuccess: null,
       questionSuccessMessageList: ["C'est exact", "En effet", "Bien vu", "Félicitations", "Bravo"],
+      // contribution
+      contribution: {
+        text: "",
+        description: `Question #${this.question.id} - ${this.question.category} - ${this.question.text}`,
+        type: "commentaire question"
+      },
+      showContributionForm: false,
+      contributionSubmitted: false,
+      contributionResponse: null,
+      loading: false,
+      error: null,
     }
   },
 
@@ -86,6 +129,7 @@ export default {
       handler(newQuestion, oldQuestion) {
         if (newQuestion) {
           this.initQuestion();
+          this.initContribution();
         }
       }
     }
@@ -100,6 +144,18 @@ export default {
       this.answerPicked = '';
       this.questionSubmitted = false;
       this.questionSuccess = null;
+    },
+    initContribution() {
+      this.contribution = {
+        text: "",
+        description: `Question #${this.question.id} - ${this.question.category} - ${this.question.text}`,
+        type: "commentaire question"
+      }
+      this.showContributionForm = false;
+      this.contributionSubmitted = false;
+      this.contributionResponse = null;
+      this.loading = false;
+      this.error = null;
     },
     shuffleAnswers(answers_array, has_ordered_answers) {
       if (has_ordered_answers) {
@@ -146,6 +202,30 @@ export default {
         .catch(error => {
           console.log(error)
         })
+    },
+    submitContribution() {
+      this.contributionSubmitted = true;
+      this.error = this.contributionResponse = null;
+      this.loading = true;
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/contribute`, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(this.contribution)
+      })
+        .then(response => {
+          this.loading = false
+          return response.json()
+        })
+        .then(data => {
+          this.contributionResponse = data;
+        })
+        .catch(error => {
+          console.log(error)
+          this.error = error;
+        })
     }
   }
 }
@@ -180,6 +260,12 @@ export default {
   max-height: 100%;
   max-width: 100%;
   margin: auto;
+}
+
+.btn-feedback {
+  margin: 0;
+  padding: 0;
+  font-size: small;
 }
 
 @media all and (min-width: 60em) {

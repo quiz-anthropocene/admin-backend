@@ -428,8 +428,8 @@ class QuizStatAdmin(admin.ModelAdmin, ExportMixin):
 class ContributionAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
         "id",
-        "is_question",
         "text",
+        "type",
         "created",
     )
     readonly_fields = (

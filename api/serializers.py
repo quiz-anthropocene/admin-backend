@@ -159,4 +159,4 @@ CONTRIBUTION
 class ContributionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contribution
-        fields = ["text", "description", "created"]
+        fields = ["text", "description", "type", "created"]

@@ -17,16 +17,16 @@
           <label for="contribution_type">Ma contribution est ...</label>
         </h3>
         <div class="custom-control custom-radio custom-control-inline">
-          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" v-bind:value="true" v-model="contribution.is_question">
-          <label class="custom-control-label" for="customRadioInline1">Une question</label>
+          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" value="nouvelle question" v-model="contribution.type">
+          <label class="custom-control-label" for="customRadioInline1">Une nouvelle question</label>
         </div>
         <div class="custom-control custom-radio custom-control-inline">
-          <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" v-bind:value="false" v-model="contribution.is_question">
-          <label class="custom-control-label" for="customRadioInline2">Un commentaire</label>
+          <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="commentaire application" v-model="contribution.type">
+          <label class="custom-control-label" for="customRadioInline2">Un commentaire sur l'application</label>
         </div>
       </div>
       
-      <div class="form-group" v-if="contribution.is_question">
+      <div class="form-group" v-if="contribution.type === 'nouvelle question'">
         <h3 class="margin-bottom-0">
           <label for="contribution_text">Votre question <span class="color-red">*</span></label>
         </h3>
@@ -35,24 +35,24 @@
         </div>
         <input type="text" id="contribution_text" class="form-control" v-model="contribution.text" placeholder="Que signifie le sigle GIEC ?" required />
       </div>
-      <div class="form-group" v-if="contribution.is_question">
+      <div class="form-group" v-if="contribution.type === 'nouvelle question'">
         <h3 class="margin-bottom-0">
           <label for="text">Informations supplémentaires <small>(optionnel)</small></label>
         </h3>
         <div class="help">
           <small><i>La réponse et un peu d'explication, un lien pour aller plus loin, ...</i></small>
         </div>
-        <textarea id="additional_info" class="form-control" rows="5" v-model="contribution.additional_info" placeholder="C'est le Groupe d'experts Intergouvernemental sur l'Evolution du Climat. Plus d'infos ici: https://www.ecologique-solidaire.gouv.fr/comprendre-giec"></textarea>
+        <textarea id="description" class="form-control" rows="5" v-model="contribution.description" placeholder="C'est le Groupe d'experts Intergouvernemental sur l'Evolution du Climat. Plus d'infos ici: https://www.ecologique-solidaire.gouv.fr/comprendre-giec"></textarea>
       </div>
 
-      <div class="form-group" v-if="!contribution.is_question">
+      <div class="form-group" v-if="contribution.type !== 'nouvelle question'">
         <h3 class="margin-bottom-0">
           <label for="contribution_text">Votre commentaire <span class="color-red">*</span></label>
         </h3>
         <div class="help">
           <small><i>Lâchez-vous :)</i></small>
         </div>
-        <textarea id="contribution_text" class="form-control"  rows="5" v-model="contribution.text" required></textarea>
+        <textarea id="contribution_text" class="form-control" rows="5" v-model="contribution.text" required></textarea>
       </div>
       
       <div class="form-group">
@@ -108,9 +108,9 @@ export default {
   data() {
     return {
       contribution: {
-        is_question: true,
         text: "",
-        additional_info: ""
+        description: "",
+        type: "nouvelle question"
       },
       contributionSubmitted: false,
       contributionResponse: null,
@@ -126,9 +126,9 @@ export default {
   methods: {
     init() {
       this.contribution = {
-        is_question: true,
         text: "",
-        additional_info: ""
+        description: "",
+        type: "nouvelle question"
       },
       this.contributionSubmitted = false;
       this.contributionResponse = null;
