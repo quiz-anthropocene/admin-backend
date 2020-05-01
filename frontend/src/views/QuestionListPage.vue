@@ -22,7 +22,7 @@
 
     <!-- Filtre: author -->
     <div v-if="authors">
-      <span v-for="author in authors" :key="author.name" class="label label-tag" :class="{ 'label-tag--active' : author.name === authorSelected }" @click="clickAuthor(author.name)">
+      <span v-for="author in authors" :key="author.name" class="label label-author" :class="{ 'label-author--active' : author.name === authorSelected }" @click="clickAuthor(author.name)">
         {{ author.name }} <small><i>{{ author.question_count }}</i></small>
       </span>
     </div>
@@ -31,7 +31,7 @@
 
     <!-- Filtre: difficulty -->
     <div v-if="difficultyLevels">
-      <span v-for="difficulty in difficultyLevels" :key="difficulty.name" class="label label-tag" :class="{ 'label-tag--active' : difficulty.value === difficultySelected }" @click="clickDifficulty(difficulty.value)">
+      <span v-for="difficulty in difficultyLevels" :key="difficulty.name" class="label label-difficulty" :class="{ 'label-difficulty--active' : difficulty.value === difficultySelected }" @click="clickDifficulty(difficulty.value)">
         <small><DifficultyBadge v-bind:difficulty="difficulty.value" /></small> <small><i>{{ difficulty.question_count }}</i></small>
       </span>
     </div>
@@ -166,9 +166,6 @@ export default {
 }
 
 @media(hover: hover) and (pointer: fine) {
-  .label-category:hover {
-    background-color: #f88787;
-  }
   .row-item-question:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }

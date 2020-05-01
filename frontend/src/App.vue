@@ -55,11 +55,18 @@ export default {
 
 /* Override bootstrap.min.css */
 
-$theme-colors: (
+$theme-colors: ( // shift colors
   "primary": #005995,
   "secondary": #F33F3F
 );
+$category-color: var(--secondary);
+$category-color-active: #f88787; // last Monochromatic Color
 $tag-color: #f3993f;
+$tag-color-active: #f8bf87; // last Monochromatic Color
+$author-color: #f33f99;
+$author-color-active: #f887bf; // last Monochromatic Color
+$difficulty-color: 	#ffd700; // 'gold'
+$difficulty-color-active: #ffe34d; // last Monochromatic Color
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -191,17 +198,31 @@ hr.custom-seperator {
   cursor: pointer;
 }
 .label-category {
-  border-color: var(--secondary);
+  border-color: $category-color;
 }
 .label-category--active {
-  background-color: #f88787;
+  background-color: $category-color-active;
   text-shadow: 0px 0px 1px black;
 }
 .label-tag {
   border-color: $tag-color;
 }
 .label-tag--active {
-  background-color: #f8bf87;
+  background-color: $tag-color-active;
+  text-shadow: 0px 0px 1px black;
+}
+.label-author {
+  border-color: $author-color;
+}
+.label-author--active {
+  background-color: $author-color-active;
+  text-shadow: 0px 0px 1px black;
+}
+.label-difficulty {
+  border-color: $difficulty-color;
+}
+.label-difficulty--active {
+  background-color: $difficulty-color-active;
   text-shadow: 0px 0px 1px black;
 }
 
@@ -221,10 +242,16 @@ hr.custom-seperator {
 
 @media(hover: hover) and (pointer: fine) {
   .label-category:hover {
-    background-color: #f88787;
+    background-color: $category-color-active;
   }
   .label-tag:hover {
-    background-color: #f3993f;
+    background-color: $tag-color-active;
+  }
+  .label-author:hover {
+    background-color: $author-color-active;
+  }
+  .label-difficulty:hover {
+    background-color: $difficulty-color-active;
   }
 }
 </style>
