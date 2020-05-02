@@ -63,7 +63,7 @@
     <div v-if="quiz && (quizStep > quiz.questions.length)" class="row actions">
       <div class="col-sm">
         <router-link :to="{ name: 'contribute' }">
-          ✍️&nbsp;Ajouter une question
+          ✍️&nbsp;Contribuer
         </router-link>
       </div>
       <div class="col-sm">
@@ -102,7 +102,7 @@ export default {
 
   computed: {
     quiz () {
-      return this.$store.getters.getQuizById(this.$route.params.quizId);
+      return this.$store.getters.getQuizById(parseInt(this.$route.params.quizId));
     },
   },
 

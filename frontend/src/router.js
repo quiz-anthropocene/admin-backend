@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import HomePage from './views/HomePage.vue'
+import QuestionPage from './views/QuestionPage.vue'
 import QuestionListPage from './views/QuestionListPage.vue'
 import QuestionDetailPage from './views/QuestionDetailPage.vue'
 import CategoryListPage from './views/CategoryListPage.vue'
@@ -23,16 +24,21 @@ const routes = [
     path: '/', name: 'home', component: HomePage
   },
   {
-    path: '/questions', name: 'question-list', component: QuestionListPage,
-    meta: {
-      title: "Know Your Planet - Questions"
-    }
-  },
-  {
-    path: '/questions/:questionId', name: 'question-detail', component: QuestionDetailPage,
-    meta: {
-      title: "Know Your Planet - Question "
-    }
+    path: '/questions', component: QuestionPage,
+    children: [
+      {
+        path: '', name: 'question-list', component: QuestionListPage,
+        meta: {
+          title: "Know Your Planet - Questions"
+        }
+      },
+      {
+        path: '/:questionId', name: 'question-detail', component: QuestionDetailPage,
+        meta: {
+          title: "Know Your Planet - Question "
+        }
+      }
+    ]
   },
   {
     path: '/categories', name: 'category-list', component: CategoryListPage,

@@ -3,7 +3,6 @@
     <div v-if="question" class="question">
       <h2>
         <span>
-          <!-- <span class="d-none d-sm-inline">Question&nbsp;</span> -->
           <span class="text-primary">#{{ context.question_number }}</span>
         </span>
         <span> | </span>
@@ -120,6 +119,9 @@ export default {
       loading: false,
       error: null,
     }
+  },
+
+  computed: {
   },
 
   watch: {

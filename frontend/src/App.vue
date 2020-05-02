@@ -59,6 +59,7 @@ $theme-colors: ( // shift colors
   "primary": #005995,
   "secondary": #F33F3F
 );
+$primary-color--active: #7dcaff;
 $category-color: var(--secondary);
 $category-color-active: #f88787; // last Monochromatic Color
 $tag-color: #f3993f;
@@ -196,6 +197,18 @@ hr.custom-seperator {
   margin: 2.5px;
   padding: 5px;
   cursor: pointer;
+}
+.label--active {
+  background-color: $primary-color--active;
+  text-shadow: 0px 0px 1px black;
+}
+.label-hidden {
+  display: inline-block;
+  border: 1px transparent;
+  border-radius: 5px;
+  margin: 2.5px;
+  padding: 5px;
+  // cursor: pointer;
 }
 .label-category {
   border-color: $category-color;
