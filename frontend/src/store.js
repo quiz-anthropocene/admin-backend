@@ -7,7 +7,7 @@ const store = new Vuex.Store({
   state: {
     loading: true,
     error: null,
-    questions: [],
+    questions: [], // received in random order
     questionsDisplayed: [],
     quizzes: [],
     categories: [],
@@ -126,6 +126,7 @@ const store = new Vuex.Store({
     },
     SET_QUESTION_LIST: (state, { list }) => {
       state.questions = list
+      state.questionsDisplayed = list
       // TODO: state.authors & question_count
       // TODO: state.difficulty & question_count
     },
@@ -153,12 +154,11 @@ const store = new Vuex.Store({
         .filter(q => (filterObject["tag"] ? q.tags.includes(filterObject.tag) : true))
         .filter(q => (filterObject["author"] ? (q.author === filterObject.author) : true))
         .filter(q => (filterObject["difficulty"] ? (q.difficulty === filterObject.difficulty) : true));
-      console.log(filterObject, state.questionsDisplayed);
     },
   },
   getters: {
     getQuestionById: state => questionId => {
-      return state.questions.find(q => (q.id === parseInt(questionId)));
+      return state.questions.find(q => (q.id === questionId));
     },
     getQuestionsByCategoryName: state => categoryName => {
       return state.questions.filter(q => (q.category === categoryName));
@@ -175,8 +175,15 @@ const store = new Vuex.Store({
                             .filter(q => (filter.authorName ? (q.author === filter.authorName) : true))
                             .filter(q => (filter.difficulty ? (q.difficulty === filter.difficulty) : true));
     },
+    getCurrentQuestionIndex: state => currentQuestionId => {
+      return state.questionsDisplayed.findIndex(q => q.id === currentQuestionId);
+    },
+    getNextQuestionByFilter: state => currentQuestionId => {
+      const currentQuestionIndex = currentQuestionId ? state.questionsDisplayed.findIndex(q => q.id === currentQuestionId) : state.questionsDisplayed[0];
+      return state.questionsDisplayed[currentQuestionIndex + 1] ? state.questionsDisplayed[currentQuestionIndex + 1] : state.questionsDisplayed[0];
+    },
     getQuizById: state => quizId => {
-      return state.quizzes.find(q => (q.id === parseInt(quizId)));
+      return state.quizzes.find(q => (q.id === quizId));
     },
   }
 })

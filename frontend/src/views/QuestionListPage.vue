@@ -1,9 +1,7 @@
 <template>
   <section>
-    <br />
-
     <!-- Question List -->
-    <div v-if="questions" class="row">
+    <div v-if="questionsDisplayed" class="row">
       <div class="row-item row-item-question" v-for="question in questionsDisplayed" :key="question.id">
         <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: question.id } }">
           <QuestionPreviewCard v-bind:question="question" />
@@ -12,18 +10,12 @@
     </div>
 
     <br />
-    <hr v-if="questions" />
-    <div v-if="questions" class="row actions">
+    <hr v-if="questionsDisplayed" />
+    <div v-if="questionsDisplayed" class="row actions">
       <div class="col-sm">
-        <router-link :to="{ name: 'category-list' }">
-          📂&nbsp;Toutes les catégories
-        </router-link>
         <br />
       </div>
       <div class="col-sm">
-        <router-link :to="{ name: 'tag-list' }">
-          🏷️&nbsp;Tous les tags
-        </router-link>
         <br />
       </div>
       <div class="col-sm">
@@ -46,38 +38,14 @@ export default {
 
   data () {
     return {
-      // questions: null,
-      questionsDisplayed: null,
     }
   },
 
   computed: {
-    questions () {
+    questionsDisplayed () {
       return this.$store.state.questionsDisplayed;
     },
   },
-
-  watch: {
-    // eslint-disable-next-line
-    questions (newQuestions, oldQuestions) {
-      this.questionsDisplayed = newQuestions;
-    }
-  },
-
-  mounted () {
-    this.questionsDisplayed = this.questions;
-  },
-
-  methods: {
-    // updateQuestionsDisplayed() {
-    //   this.questionsDisplayed = this.$store.getters.getQuestionsByFilter({
-    //     "categoryName": this.categorySelected,
-    //     "tagName": this.tagSelected,
-    //     "authorName": this.authorSelected,
-    //     "difficulty": this.difficultySelected
-    //   });
-    // }
-  }
 }
 </script>
 

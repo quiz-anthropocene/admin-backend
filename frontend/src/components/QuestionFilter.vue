@@ -3,7 +3,7 @@
     <div class="filter-box--header text-align-left" @click="toggleFilterBox()">
       <span class="label-hidden">
         <span>⚙️&nbsp;Filtres&nbsp;</span>
-        <span v-if="!showFilterBox">▲</span>
+        <span v-if="!showFilterBox">▲</span> <!-- ► -->
         <span v-if="showFilterBox">▼</span>
       </span>
       <span v-for="(value, key) in questionFilters" :key="key">
@@ -12,7 +12,7 @@
         <span v-if="(key === 'author') && value" class="label label-author">{{ value }}</span>
         <span v-if="(key === 'difficulty') && value" class="label label-difficulty">{{ value }}</span>
       </span>
-      <span class="label-hidden" style="float:right">{{ questionsDisplayedCount }} Questions</span>
+      <span class="label-hidden" style="float:right"><strong>{{ questionsDisplayedCount }}</strong> Questions</span>
     </div>
     <section v-if="showFilterBox" class="filter-box--content">
 
@@ -75,25 +75,12 @@ export default {
 
   data () {
     return {
-      // questionFilters: {
-      //   "category": null,
-      //   "tag": null,
-      //   "author": null,
-      //   "difficulty": null
-      // },
       tempQuestionFilters: {},
       showFilterBox: false,
-      // categories: null,
-      // tags: null,
-      // authors: null
-      // difficultyLevels: null
     }
   },
 
   computed: {
-    // currentRoute () {
-    //   return this.$route.name;
-    // },
     categories () {
       return this.$store.state.categories;
     },
@@ -115,18 +102,6 @@ export default {
   },
 
   methods: {
-    clickCategory(category) {
-      this.tempQuestionFilters["category"] = (this.tempQuestionFilters["category"] === category) ? null : category;
-    },
-    clickTag(tag) {
-      this.tagSelected = (this.tagSelected === tag) ? null : tag;
-    },
-    clickAuthor(author) {
-      this.authorSelected = (this.authorSelected === author) ? null : author;
-    },
-    clickDifficulty(difficulty) {
-      this.difficultySelected = (this.difficultySelected === difficulty) ? null : difficulty;
-    },
     toggleFilterBox() {
       this.showFilterBox = !this.showFilterBox;
       this.tempQuestionFilters = {...this.questionFilters};
@@ -148,14 +123,6 @@ export default {
       this.showFilterBox = !this.showFilterBox;
       this.$store.dispatch('UPDATE_QUESTION_FILTERS', this.tempQuestionFilters);
     }
-    // updateQuestionsDisplayed() {
-    //   this.questionsDisplayed = this.$store.getters.getQuestionsByFilter({
-    //     "categoryName": this.categorySelected,
-    //     "tagName": this.tagSelected,
-    //     "authorName": this.authorSelected,
-    //     "difficulty": this.difficultySelected
-    //   });
-    // }
   }
 }
 </script>
@@ -170,5 +137,9 @@ export default {
 }
 .filter-box--header {
   cursor: pointer;
+}
+.filter-box--content {
+  max-height: 500px;
+  overflow-y: scroll;
 }
 </style>

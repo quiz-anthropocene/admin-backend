@@ -37,9 +37,6 @@
         <br />
       </div>
       <div class="col-sm">
-        <router-link :to="{ name: 'category-list' }">
-          📂&nbsp;Toutes les catégories
-        </router-link>
         <br />
       </div>
       <div class="col-sm">

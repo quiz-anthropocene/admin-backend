@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="alert alert-warning" role="alert">
-      <i v-if="questionCount">Il y a actuellement {{ questionCount }} questions. </i>
+      <i v-if="questionsCount">Il y a actuellement {{ questionsCount }} questions. </i>
       <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus !</i>
     </div>
 
@@ -44,13 +44,13 @@
     </div>
 
     <div class="row justify-content-md-center">
-      <div class="col-sm-6">
+      <div class="col-sm-6" v-if="questionsCount">
         <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
           <button class="btn btn-outline-primary btn-lg btn-block">🕹&nbsp;<strong>Tous les quiz</strong></button>
         </router-link>
       </div>
-      <div class="col-sm-6" v-if="questionRandomNextId">
-        <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: questionRandomNextId } }">
+      <div class="col-sm-6" v-if="questionSameFilterNextId">
+        <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: questionSameFilterNextId } }">
           <button class="btn btn-outline-primary btn-lg btn-block">🔀&nbsp;<strong>Question au hasard</strong></button>
         </router-link>
       </div>
@@ -66,23 +66,8 @@
         <br />
       </div>
       <div class="col-sm">
-        <router-link :to="{ name: 'category-list' }">
-          📂&nbsp;Toutes les catégories
-        </router-link>
-        <br />
       </div>
       <div class="col-sm">
-        <router-link :to="{ name: 'quiz-list' }">
-          🕹️&nbsp;Tous les quiz
-        </router-link>
-        <br />
-      </div>
-    </div>
-    
-    <hr />
-
-    <div class="row actions justify-content-end">
-      <div class="col-sm-4">
         <router-link :to="{ name: 'about' }">
           ℹ️&nbsp;À propos de cette application
         </router-link>
@@ -97,49 +82,32 @@ export default {
 
   data () {
     return {
-      questionCount: null,
-      questionRandomNextId: null,
-      loading: false,
-      error: null,
+      questionSameFilterNextId: null,
+    }
+  },
+
+  computed: {
+    questionsCount () {
+      return this.$store.state.questions.length;
+    }
+  },
+
+  watch: {
+    questionsCount: {
+      immediate: true,
+      // eslint-disable-next-line
+      handler(newQuestionsCount, oldQuestionsCount) {
+        if (newQuestionsCount) {
+          this.questionSameFilterNextId = this.$store.getters.getNextQuestionByFilter().id;
+        }
+      }
     }
   },
 
   mounted () {
-    this.fetchQuestionStats();
-    this.fetchQuestionRandomNext();
   },
 
   methods: {
-    fetchQuestionStats() {
-      this.error = this.questionCount = null
-      this.loading = true
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/count`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.questionCount = data
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
-    },
-    fetchQuestionRandomNext() {
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/random?`)
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.questionRandomNextId = data.id;
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
-    },
   }
 }
 </script>
