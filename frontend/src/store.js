@@ -8,11 +8,18 @@ const store = new Vuex.Store({
     loading: true,
     error: null,
     questions: [],
+    questionsDisplayed: [],
     quizzes: [],
     categories: [],
     tags: [],
     authors: [],
     difficultyLevels: [],
+    questionFilters: {
+      "category": null,
+      "tag": null,
+      "author": null,
+      "difficulty": null
+    },
   },
   actions: {
     GET_QUESTION_LIST: ({ commit }) => {
@@ -26,6 +33,7 @@ const store = new Vuex.Store({
         })
         .then(data => {
           commit('SET_QUESTION_LIST', { list: data })
+          // commit('UPDATE_QUESTIONS_DISPLAYED')
         })
         .catch(error => {
           commit('UPDATE_LOADING_STATUS', false);
@@ -103,6 +111,11 @@ const store = new Vuex.Store({
           // this.error = error;
         })
     },
+    UPDATE_QUESTION_FILTERS: ({ commit, state }, filterObject) => {
+      const currentQuestionFilters = filterObject ? filterObject : state.questionFilters;
+      commit('UPDATE_QUESTION_FILTERS', { filterObject: currentQuestionFilters })
+      commit('UPDATE_QUESTIONS_DISPLAYED', { filterObject: currentQuestionFilters })
+    },
   },
   mutations: {
     UPDATE_LOADING_STATUS: (state, value) => {
@@ -130,7 +143,18 @@ const store = new Vuex.Store({
     },
     SET_DIFFICULTY_LEVEL_LIST: (state, { list }) => {
       state.difficultyLevels = list
-    }
+    },
+    UPDATE_QUESTION_FILTERS: (state, { filterObject }) => {
+      state.questionFilters = filterObject
+    },
+    UPDATE_QUESTIONS_DISPLAYED: (state, { filterObject }) => {
+      state.questionsDisplayed = state.questions
+        .filter(q => (filterObject["category"] ? (q.category === filterObject.category) : true))
+        .filter(q => (filterObject["tag"] ? q.tags.includes(filterObject.tag) : true))
+        .filter(q => (filterObject["author"] ? (q.author === filterObject.author) : true))
+        .filter(q => (filterObject["difficulty"] ? (q.difficulty === filterObject.difficulty) : true));
+      console.log(filterObject, state.questionsDisplayed);
+    },
   },
   getters: {
     getQuestionById: state => questionId => {

@@ -1,7 +1,5 @@
 <template>
   <section>
-    <br />
-
     <QuestionAnswerCards v-if="question" v-bind:question="question" v-bind:context="{ question_number: question.id, source: 'question' }" @answerSubmitted="answerSubmitted($event)" />
 
     <div v-if="question" class="small" :key="question.id"> <!-- INFO: :key is to force reload, avoid button staying blur -->
