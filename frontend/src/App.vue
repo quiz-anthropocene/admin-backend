@@ -11,18 +11,19 @@
     <main class="container-md">
       <router-view></router-view>
     </main>
-    <br />
-    <br />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
+    Footer,
   },
 
   computed: {
@@ -100,7 +101,7 @@ h3 {
 }
 
 button {
-  margin: 10px;
+  margin: 0;
 }
 
 label {
@@ -137,11 +138,14 @@ hr.custom-seperator {
   margin-bottom: 10px;
 }
 
+.margin-0 {
+  margin: 0;
+}
 .margin-bottom-0 {
   margin-bottom: 0;
 }
-.margin-right-20 {
-  margin-right: 20px;
+.margin-5 {
+  margin: 5px;
 }
 .margin-top-bottom-10 {
   margin-top: 10px;
@@ -187,10 +191,6 @@ hr.custom-seperator {
 
 .small {
   font-size: small;
-}
-
-.actions .col-sm {
-  padding-bottom: 20px;
 }
 
 

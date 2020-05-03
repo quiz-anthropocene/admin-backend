@@ -46,31 +46,14 @@
         {{ authorStat.name }}: <strong>{{ authorStat.count }}</strong>
       </li>
     </ul>
-    
-    <br />
-    <hr />
-    <div class="row actions text-center">
-      <div class="col-sm"></div>
-      <div class="col-sm">
-        <router-link :to="{ name: 'about' }">
-          ℹ️&nbsp;À propos de cette application
-        </router-link>
-        <br />
-      </div>
-      <div class="col-sm">
-        <HomeLink />
-      </div>
-    </div>
+
   </section>
 </template>
 
 <script>
-import HomeLink from '../components/HomeLink.vue'
-
 export default {
   name: 'StatsPage',
   components: {
-    HomeLink,
   },
 
   data() {

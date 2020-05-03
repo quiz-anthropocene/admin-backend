@@ -21,36 +21,13 @@
         </span>
       </router-link>
     </div>
-
-    <br />
-    <hr v-if="authors" />
-    <div v-if="authors" class="row actions">
-      <div class="col-sm">
-        <router-link :to="{ name: 'question-list' }">
-          ❓&nbsp;Toutes les questions
-        </router-link>
-        <br />
-      </div>
-      <div class="col-sm">
-        <router-link :to="{ name: 'category-list' }">
-          📂&nbsp;Toutes les catégories
-        </router-link>
-        <br />
-      </div>
-      <div class="col-sm">
-        <HomeLink />
-      </div>
-    </div>
   </section>
 </template>
 
 <script>
-import HomeLink from '../components/HomeLink.vue'
-
 export default {
   name: 'AuthorListPage',
   components: {
-    HomeLink
   },
 
   data () {

@@ -61,9 +61,9 @@
 
     <!-- Action Buttons -->
     <section v-if="showFilterBox" class="filter-box--action">
-      <button class="btn btn-outline-secondary" @click="clearQuestionFilters()">Réinitialiser</button>
-      <button class="btn btn-outline-dark" @click="toggleFilterBox()">Annuler</button>
-      <button class="btn" :class="JSON.stringify(questionFilters) === JSON.stringify(tempQuestionFilters) ? 'btn-outline-primary' : 'btn-primary'" @click="updateQuestionFilters()">Mettre à jour les filtres !</button>
+      <button class="btn btn-outline-secondary margin-5" @click="clearQuestionFilters()">Réinitialiser</button>
+      <button class="btn btn-outline-dark margin-5" @click="toggleFilterBox()">Annuler</button>
+      <button class="btn margin-5" :class="JSON.stringify(questionFilters) === JSON.stringify(tempQuestionFilters) ? 'btn-outline-primary' : 'btn-primary'" @click="updateQuestionFilters()">Mettre à jour les filtres !</button>
     </section>
 
   </section>

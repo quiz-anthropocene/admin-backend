@@ -26,33 +26,13 @@
           </router-link>
         </div> -->
     </div>
-
-    <br />
-    <hr v-if="quizzes" />
-    <div v-if="quizzes" class="row actions">
-      <div class="col-sm">
-        <router-link :to="{ name: 'question-list' }">
-          ❓&nbsp;Toutes les questions
-        </router-link>
-        <br />
-      </div>
-      <div class="col-sm">
-        <br />
-      </div>
-      <div class="col-sm">
-        <HomeLink />
-      </div>
-    </div>
   </section>
 </template>
 
 <script>
-import HomeLink from '../components/HomeLink.vue'
-
 export default {
   name: 'QuizListPage',
   components: {
-    HomeLink
   },
 
   data () {

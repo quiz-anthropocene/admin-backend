@@ -43,33 +43,24 @@
       </div>
     </div>
 
+    <br />
+
     <div class="row justify-content-md-center">
-      <div class="col-sm-6" v-if="questionsCount">
+      <div class="col-sm-4" v-if="questionsCount">
         <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
-          <button class="btn btn-outline-primary btn-lg btn-block">🕹&nbsp;<strong>Tous les quiz</strong></button>
+          <button class="btn btn-outline-primary btn-lg btn-block">
+            🕹&nbsp;<strong>Tous les quiz</strong>
+          </button>
         </router-link>
       </div>
-      <div class="col-sm-6" v-if="questionSameFilterNextId">
+      <div class="col-sm-4" v-if="questionSameFilterNextId">
         <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: questionSameFilterNextId } }">
-          <button class="btn btn-outline-primary btn-lg btn-block">🔀&nbsp;<strong>Question au hasard</strong></button>
+          <button class="btn btn-outline-primary btn-lg btn-block">🔀&nbsp;<strong>Une question au hasard</strong></button>
         </router-link>
       </div>
-    </div>
-
-    <hr />
-
-    <div class="row actions">
-      <div class="col-sm">
-        <router-link :to="{ name: 'question-list' }">
-          ❓&nbsp;Toutes les questions
-        </router-link>
-        <br />
-      </div>
-      <div class="col-sm">
-      </div>
-      <div class="col-sm">
-        <router-link :to="{ name: 'about' }">
-          ℹ️&nbsp;À propos de cette application
+      <div class="col-sm-4" v-if="questionsCount">
+        <router-link class="no-decoration" :to="{ name: 'question-list' }">
+          <button class="btn btn-outline-primary btn-lg btn-block">❓&nbsp;<strong>Toutes les questions</strong></button>
         </router-link>
       </div>
     </div>
@@ -124,6 +115,10 @@ svg {
 }
 .jumbotron .row .col:hover {
   transform: scale(1.03);
+}
+
+.row > .col-sm-4 {
+  padding-bottom: 20px;
 }
 
 .btn-lg {

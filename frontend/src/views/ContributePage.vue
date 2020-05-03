@@ -74,35 +74,17 @@
     <div v-if="contributionSubmitted && contributionResponse">
       <h3>Merci beaucoup 💯</h3>
       <p>On fera de notre mieux pour prendre en compte votre contribution.</p>
-    </div>
-
-    <br />
-    <hr />
-    <div class="row actions text-center justify-content-end">
-      <div class="col-sm">
-        <div v-if="contributionSubmitted" @click="init()">
-          <a href="#">✍️&nbsp;Nouvelle contribution</a>
-        </div>
-      </div>
-      <div class="col-sm">
-        <router-link :to="{ name: 'about' }">
-          ℹ️&nbsp;À propos de cette application
-        </router-link>
-      </div>
-      <div class="col-sm">
-        <HomeLink />
+      <div v-if="contributionSubmitted" @click="init()">
+        <a href="#">✍️&nbsp;Nouvelle contribution</a>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import HomeLink from '../components/HomeLink.vue'
-
 export default {
   name: 'Contribute',
   components: {
-    HomeLink
   },
 
   data() {

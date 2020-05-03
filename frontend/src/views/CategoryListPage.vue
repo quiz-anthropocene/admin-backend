@@ -21,36 +21,13 @@
         </span>
       </router-link>
     </div>
-
-    <br />
-    <hr v-if="categories" />
-    <div v-if="categories" class="row actions">
-      <div class="col-sm">
-        <router-link :to="{ name: 'question-list' }">
-          ❓&nbsp;Toutes les questions
-        </router-link>
-        <br />
-      </div>
-      <div class="col-sm">
-        <router-link :to="{ name: 'tag-list' }">
-          🏷️&nbsp;Tous les tags
-        </router-link>
-        <br />
-      </div>
-      <div class="col-sm">
-        <HomeLink />
-      </div>
-    </div>
   </section>
 </template>
 
 <script>
-import HomeLink from '../components/HomeLink.vue'
-
 export default {
   name: 'CategoryListPage',
   components: {
-    HomeLink
   },
 
   data () {

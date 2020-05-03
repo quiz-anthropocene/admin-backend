@@ -8,32 +8,16 @@
         </router-link>
       </div>
     </div>
-
-    <br />
-    <hr v-if="questionsDisplayed" />
-    <div v-if="questionsDisplayed" class="row actions">
-      <div class="col-sm">
-        <br />
-      </div>
-      <div class="col-sm">
-        <br />
-      </div>
-      <div class="col-sm">
-        <HomeLink />
-      </div>
-    </div>
   </section>
 </template>
 
 <script>
 import QuestionPreviewCard from '../components/QuestionPreviewCard.vue'
-import HomeLink from '../components/HomeLink.vue'
 
 export default {
   name: 'QuestionListPage',
   components: {
     QuestionPreviewCard,
-    HomeLink
   },
 
   data () {

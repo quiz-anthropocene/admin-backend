@@ -30,7 +30,6 @@
 
     <section v-if="quiz && (quizStep > 0) && quiz.questions[quizStep-1]">
       <QuestionAnswerCards v-bind:question="quiz.questions[quizStep-1]" v-bind:context="{ question_number: quizStep+' / '+quiz.questions.length, source: 'quiz' }" @answerSubmitted="answerSubmitted($event)" />
-      <br />
       <button v-if="showNextButton && (quizStep < quiz.questions.length)" class="btn btn-outline-primary" @click="incrementStep()">⏩&nbsp;Question suivante</button>
       <button v-if="showNextButton && (quizStep === quiz.questions.length)" class="btn btn-outline-primary" @click="incrementStep()">⏩&nbsp;Voir vos résultats</button>
     </section>
@@ -57,38 +56,18 @@
         </div>
       </div>
     </section>
-
-    <br />
-    <hr v-if="quiz && (quizStep > quiz.questions.length)" />
-    <div v-if="quiz && (quizStep > quiz.questions.length)" class="row actions">
-      <div class="col-sm">
-        <router-link :to="{ name: 'contribute' }">
-          ✍️&nbsp;Contribuer
-        </router-link>
-      </div>
-      <div class="col-sm">
-        <router-link :to="{ name: 'quiz-list' }">
-          🕹️&nbsp;Tous les quiz
-        </router-link>
-      </div>
-      <div class="col-sm">
-        <HomeLink />
-      </div>
-    </div>
   </section>
 </template>
 
 <script>
 import QuestionAnswerCards from '../components/QuestionAnswerCards.vue'
 import QuestionPreviewCard from '../components/QuestionPreviewCard.vue'
-import HomeLink from '../components/HomeLink.vue'
 
 export default {
   name: 'QuizDetailPage',
   components: {
     QuestionAnswerCards,
     QuestionPreviewCard,
-    HomeLink
   },
 
   data () {

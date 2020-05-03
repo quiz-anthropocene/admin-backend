@@ -8,36 +8,16 @@
         <button class="btn" :class="emphasisNextButton ? 'btn-primary' : 'btn-outline-primary'">⏩&nbsp;Question suivante</button>
       </router-link>
     </div>
-
-    <br />
-    <hr v-if="question" />
-    <div v-if="question" class="row actions">
-      <div class="col-sm">
-        <router-link :to="{ name: 'contribute' }">
-          ✍️&nbsp;Contribuer
-        </router-link>
-      </div>
-      <div class="col-sm">
-        <router-link :to="{ name: 'question-list' }">
-          ❓&nbsp;Toutes les questions
-        </router-link>
-      </div>
-      <div class="col-sm">
-         <HomeLink />
-      </div>
-    </div>
   </section>
 </template>
 
 <script>
 import QuestionAnswerCards from '../components/QuestionAnswerCards.vue'
-import HomeLink from '../components/HomeLink.vue'
 
 export default {
   name: 'Page',
   components: {
     QuestionAnswerCards,
-    HomeLink,
   },
 
   data() {

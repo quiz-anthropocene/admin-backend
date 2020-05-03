@@ -21,36 +21,16 @@
         </router-link>
       </div>
     </div>
-
-    <br />
-    <hr v-if="questions" />
-    <div v-if="questions" class="row actions">
-      <div class="col-sm">
-        <router-link :to="{ name: 'contribute' }">
-          ✍️&nbsp;Ajouter une question <span class="text-secondary">{{ currentCategory }}</span>
-        </router-link>
-      </div>
-      <div class="col-sm">
-        <router-link :to="{ name: 'category-list' }">
-          📂&nbsp;Toutes les catégories
-        </router-link>
-      </div>
-      <div class="col-sm">
-        <HomeLink />
-      </div>
-    </div>
   </section>
 </template>
 
 <script>
 import QuestionPreviewCard from '../components/QuestionPreviewCard.vue'
-import HomeLink from '../components/HomeLink.vue'
 
 export default {
   name: 'CategoryDetailPage',
   components: {
     QuestionPreviewCard,
-    HomeLink
   },
 
   data () {
