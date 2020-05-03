@@ -1,7 +1,9 @@
 <template>
   <section class="filter-box">
-    <div class="filter-box--header text-align-left" @click="toggleFilterBox()">
-      <span class="label-hidden">
+
+    <!-- Header -->
+    <div class="filter-box--header" :class="{ 'padding-bottom-10': showFilterBox }" @click="toggleFilterBox()">
+      <span class="label label-hidden">
         <span>⚙️&nbsp;Filtres&nbsp;</span>
         <span v-if="!showFilterBox">▲</span> <!-- ► -->
         <span v-if="showFilterBox">▼</span>
@@ -12,11 +14,13 @@
         <span v-if="(key === 'author') && value" class="label label-author">{{ value }}</span>
         <span v-if="(key === 'difficulty') && value" class="label label-difficulty">{{ value }}</span>
       </span>
-      <span class="label-hidden" style="float:right"><strong>{{ questionsDisplayedCount }}</strong> Questions</span>
+      <span class="label label-hidden" style="float:right"><strong>{{ questionsDisplayedCount }}</strong> Questions</span>
     </div>
+
+    <!-- Content -->
     <section v-if="showFilterBox" class="filter-box--content">
 
-      <hr class="custom-seperator" />
+      <!-- <hr class="custom-seperator" /> -->
 
       <div v-if="categories">
         <h3>Catégories</h3>
@@ -51,11 +55,14 @@
           <small><DifficultyBadge v-bind:difficulty="difficulty.value" /></small> <small><i>{{ difficulty.question_count }}</i></small>
         </span>
       </div>
+      
+      <br />
+    </section>
 
-      <hr class="custom-seperator" />
-
+    <!-- Action Buttons -->
+    <section v-if="showFilterBox" class="filter-box--action">
       <button class="btn btn-outline-secondary" @click="clearQuestionFilters()">Réinitialiser</button>
-      <button class="btn btn-outline-secondary" @click="toggleFilterBox()">Annuler</button>
+      <button class="btn btn-outline-dark" @click="toggleFilterBox()">Annuler</button>
       <button class="btn" :class="JSON.stringify(questionFilters) === JSON.stringify(tempQuestionFilters) ? 'btn-outline-primary' : 'btn-primary'" @click="updateQuestionFilters()">Mettre à jour les filtres !</button>
     </section>
 
@@ -135,11 +142,17 @@ export default {
   margin: 10px 0px;
   padding: 10px;
 }
-.filter-box--header {
+
+.filter-box > .filter-box--header {
+  text-align: left;
   cursor: pointer;
 }
-.filter-box--content {
+.filter-box > .filter-box--content {
+  background-color: white;
   max-height: 500px;
   overflow-y: scroll;
+}
+.filter-box > .filter-box--action {
+  padding-top: 10px;
 }
 </style>

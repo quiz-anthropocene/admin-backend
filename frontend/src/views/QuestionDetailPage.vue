@@ -3,9 +3,9 @@
     <QuestionAnswerCards v-if="question && questionsDisplayedCount" v-bind:question="question" v-bind:context="{ question_number: (questionIndex+1)+' / '+questionsDisplayedCount, source: 'question' }" @answerSubmitted="answerSubmitted($event)" />
 
     <div v-if="question" class="small" :key="question.id"> <!-- INFO: :key is to force reload, avoid button staying blur -->
-      <br />
+      <!-- <br /> -->
       <router-link v-if="questionSameFilterNextId" :to="{ name: 'question-detail', params: { questionId: questionSameFilterNextId } }">
-        <button class="btn btn-outline-primary">⏩&nbsp;Question suivante</button>
+        <button class="btn" :class="emphasisNextButton ? 'btn-primary' : 'btn-outline-primary'">⏩&nbsp;Question suivante</button>
       </router-link>
     </div>
 
@@ -42,6 +42,7 @@ export default {
 
   data() {
     return {
+      emphasisNextButton: false,
       questionSameFilterNextId: null,
     }
   },
@@ -67,6 +68,7 @@ export default {
       // eslint-disable-next-line
       handler(newQuestion, oldQuestion) {
         if (newQuestion) {
+          this.emphasisNextButton = false;
           this.questionSameFilterNextId = this.$store.getters.getNextQuestionByFilter(newQuestion.id).id;
         }
       }
@@ -75,7 +77,6 @@ export default {
     questionFilters (newQuestionFilters, oldQuestionFilters) {
       if (newQuestionFilters) {
         const _nextQuestion = this.$store.getters.getNextQuestionByFilter();
-        console.log("questionfilter watch", _nextQuestion)
         this.$router.push({ name: 'question-detail', params: { questionId: _nextQuestion.id } });
       }
     }
@@ -85,6 +86,10 @@ export default {
   },
 
   methods: {
+    // eslint-disable-next-line
+    answerSubmitted(data) {
+      this.emphasisNextButton = true; // !this.emphasisNextButton;
+    }
   }
 }
 </script>

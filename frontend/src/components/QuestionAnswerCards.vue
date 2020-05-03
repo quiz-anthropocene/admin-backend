@@ -1,5 +1,7 @@
 <template>
   <section>
+
+    <!-- Question -->
     <div v-if="question" class="question">
       <h2>
         <span>
@@ -19,13 +21,14 @@
           </template>
         </div>
         <div>
-          <button v-if="!questionSubmitted" type="submit" class="btn btn-outline-primary" :disabled="!answerPicked">Valider</button>
+          <button v-if="!questionSubmitted" type="submit" class="btn" :class="answerPicked ? 'btn-primary' : 'btn-outline-primary'" :disabled="!answerPicked">Valider</button>
         </div>
       </form>
     </div>
 
-    <br v-if="question && questionSubmitted" />
+    <!-- <br v-if="question && questionSubmitted" /> -->
 
+    <!-- Answer -->
     <div v-if="question && questionSubmitted" class="answer" :class="questionSuccess ? 'answer-success' : 'answer-error'">
       <h2 v-if="questionSuccess">{{ questionSuccess }} !</h2>
       <h2 v-if="!questionSuccess">Pas tout à fait...</h2>
@@ -44,13 +47,18 @@
           <img v-bind:src="question.answer_image_url" alt="une image pour illustrer la réponse" />
         </a>
       </p>
+
       <hr class="custom-seperator" />
+      
+      <!-- Extra info -->
       <div class="row margin-top-bottom-10 small">
         <div v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.join(', ') }}</div>
         <div title="Auteur de la question">📝&nbsp;Auteur:&nbsp;{{ question.author }}</div>
         <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count }} / {{ question.answer_count }} ({{ question.answer_success_rate }}%)</div>
         <button class="btn btn-sm btn-feedback" title="Votre avis sur la question" @click="showContributionForm = true">💬&nbsp;Suggérer une modification</button>
       </div>
+
+      <!-- Contribution form -->
       <template v-if="showContributionForm">
         <hr class="custom-seperator" />
         <form @submit.prevent="submitContribution" v-if="!contributionSubmitted">
@@ -64,7 +72,7 @@
           </div>
           <div class="row">
             <div class="col">
-              <button type="submit" class="btn btn-outline-primary btn-sm" :disabled="!contribution.text">📩&nbsp;Envoyer !</button>
+              <button type="submit" class="btn btn-sm" :class="contribution.text ? 'btn-primary' : 'btn-outline-primary'" :disabled="!contribution.text">📩&nbsp;Envoyer !</button>
             </div>
           </div>
         </form>
@@ -82,6 +90,7 @@
           <p>On fera de notre mieux pour prendre en compte votre suggestion.</p>
         </div>
       </template>
+
     </div>
   </section>
 </template>
@@ -237,14 +246,15 @@ export default {
 .question {
   border: 2px solid var(--primary);
   border-radius: 5px;
+  margin: 10px 0px;
   padding: 10px;
 }
 
 .answer {
   border: 2px solid;
   border-radius: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin: 10px 0px;
+  padding: 10px;
   overflow: hidden;
 }
 .answer-success {

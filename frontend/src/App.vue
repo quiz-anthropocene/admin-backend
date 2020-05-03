@@ -151,6 +151,12 @@ hr.custom-seperator {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.padding-top-10 {
+  padding-top: 10px;
+}
+.padding-bottom-10 {
+  padding-bottom: 10px;
+}
 
 .color-green {
   color: green;
@@ -193,9 +199,9 @@ hr.custom-seperator {
 .label {
   display: inline-block;
   border: 1px solid;
-  border-radius: 5px;
+  border-radius: 15px;
   margin: 2.5px;
-  padding: 5px;
+  padding: 2.5px 5px;
   cursor: pointer;
 }
 .label--active {
@@ -203,12 +209,8 @@ hr.custom-seperator {
   text-shadow: 0px 0px 1px black;
 }
 .label-hidden {
-  display: inline-block;
   border: 1px transparent;
-  border-radius: 5px;
-  margin: 2.5px;
-  padding: 5px;
-  // cursor: pointer;
+  cursor: auto;
 }
 .label-category {
   border-color: $category-color;

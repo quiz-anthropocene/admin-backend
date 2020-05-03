@@ -26,6 +26,7 @@ export default {
 <style scoped>
 header {
   border: 10px solid var(--primary);
+  border-radius: 5px;
   margin: 10px;
   padding-left: 10px;
   padding-right: 10px;

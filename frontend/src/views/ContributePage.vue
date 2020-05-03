@@ -57,7 +57,7 @@
       
       <div class="form-group">
         <p>
-          <button type="submit" class="btn btn-outline-primary" :disabled="!contribution.text">📩&nbsp;Envoyer !</button>
+          <button type="submit" class="btn" :class="contribution.text ? 'btn-primary' : 'btn-outline-primary'" :disabled="!contribution.text">📩&nbsp;Envoyer !</button>
         </p>
       </div>
     </form>

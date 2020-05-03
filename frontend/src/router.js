@@ -16,6 +16,7 @@ import QuizDetailPage from './views/QuizDetailPage.vue'
 import AboutPage from './views/AboutPage.vue'
 import StatsPage from './views/StatsPage.vue'
 import ContributePage from './views/ContributePage.vue'
+import NotFoundPage from './views/NotFoundPage.vue'
 
 Vue.use(VueRouter)
 
@@ -33,7 +34,7 @@ const routes = [
         }
       },
       {
-        path: '/:questionId', name: 'question-detail', component: QuestionDetailPage,
+        path: ':questionId', name: 'question-detail', component: QuestionDetailPage,
         meta: {
           title: "Know Your Planet - Question "
         }
@@ -104,6 +105,13 @@ const routes = [
     path: '/contribuer', name: 'contribute', component: ContributePage,
     meta: {
       title: "Know Your Planet - Contribuer"
+    }
+  },
+  {
+    // will match everything
+    path: '*', name: '404', component: NotFoundPage,
+    meta: {
+      title: "Know Your Planet - 404"
     }
   }
 ]
