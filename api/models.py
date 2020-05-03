@@ -240,6 +240,11 @@ class Quiz(models.Model):
         Question, related_name="quizzes", help_text="Les questions du quiz"
     )
     author = models.CharField(max_length=50, blank=True, help_text="L'auteur du quiz")
+    image_background_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="Un lien vers une image pour illustrer le quiz",
+    )
     publish = models.BooleanField(
         default=False, help_text="Le quiz est prêt à être publié"
     )

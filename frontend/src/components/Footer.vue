@@ -17,10 +17,16 @@
             ℹ️&nbsp;À propos de cette application
           </router-link>
         </div>
-        <div class="col-sm">
+        <div class="col-sm" v-if="currentRoute !== 'quiz-detail'">
           <router-link :to="{ name: 'contribute' }">
             ✍️&nbsp;Contribuer
           </router-link>
+        </div>
+        <div class="col-sm" v-if="currentRoute === 'quiz-detail'">
+          <router-link :to="{ name: 'quiz-list' }">
+            🕹&nbsp;Tous les quiz
+          </router-link>
+          <br />
         </div>
       </div>
     </section>
