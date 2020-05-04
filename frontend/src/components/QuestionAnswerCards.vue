@@ -68,11 +68,9 @@
           <div class="row">
             <div class="col">
               <textarea id="contribution_text" class="form-control" rows="2" v-model="contribution.text" required></textarea>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <button type="submit" class="btn btn-sm" :class="contribution.text ? 'btn-primary' : 'btn-outline-primary'" :disabled="!contribution.text">📩&nbsp;Envoyer !</button>
+              <p>
+                <button type="submit" class="btn btn-sm" :class="contribution.text ? 'btn-primary' : 'btn-outline-primary'" :disabled="!contribution.text">📩&nbsp;Envoyer !</button>
+              </p>
             </div>
           </div>
         </form>
