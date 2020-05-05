@@ -1,5 +1,3 @@
-import datetime
-
 from django.db import models
 from django.db.models import Avg
 
@@ -17,7 +15,7 @@ class Category(models.Model):
         blank=True, help_text="Une description de la catégorie"
     )
     created = models.DateField(
-        auto_now_add=True, help_text="La date & heure de la création de la catégorie"
+        auto_now_add=True, help_text="La date de création de la catégorie"
     )
 
     class Meta:
@@ -52,7 +50,7 @@ class Tag(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du tag")
     description = models.TextField(blank=True, help_text="Une description du tag")
     created = models.DateField(
-        auto_now_add=True, help_text="La date & heure de la création du tag"
+        auto_now_add=True, help_text="La date de création du tag"
     )
 
     objects = TagManager()
@@ -170,7 +168,12 @@ class Question(models.Model):
         default=constants.QUESTION_VALIDATION_STATUS_NEW,
         help_text="Le statut de la question dans le workflow de validation",
     )
-    created = models.DateField(default=datetime.date.today)
+    added = models.DateField(
+        blank=True, null=True, help_text="La date d'ajout de la question"
+    )
+    created = models.DateField(
+        auto_now_add=True, help_text="La date de création de la question"
+    )
     updated = models.DateField(auto_now=True)
 
     objects = QuestionQuerySet.as_manager()
@@ -249,7 +252,7 @@ class Quiz(models.Model):
         default=False, help_text="Le quiz est prêt à être publié"
     )
     created = models.DateField(
-        auto_now_add=True, help_text="La date & heure de la création du quiz"
+        auto_now_add=True, help_text="La date de création du quiz"
     )
 
     objects = QuizQuerySet.as_manager()

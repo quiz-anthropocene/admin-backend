@@ -82,6 +82,7 @@ class QuestionSerializer(serializers.ModelSerializer):
             "answer_image_url",
             "answer_count",
             "answer_success_count",
+            "added",
             "created",
             "updated",
         ]
