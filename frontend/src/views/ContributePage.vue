@@ -33,7 +33,7 @@
         <div class="help">
           <small><i>En 1 ou 2 phrases au maximum</i></small>
         </div>
-        <input type="text" id="contribution_text" class="form-control" v-model="contribution.text" placeholder="Que signifie le sigle GIEC ?" required />
+        <input type="text" id="contribution_text" class="form-control" v-model="contribution.text" required />
       </div>
       <div class="form-group" v-if="contribution.type === 'nouvelle question'">
         <h3 class="margin-bottom-0">
@@ -42,12 +42,12 @@
         <div class="help">
           <small><i>La réponse et un peu d'explication, un lien pour aller plus loin, ...</i></small>
         </div>
-        <textarea id="description" class="form-control" rows="5" v-model="contribution.description" placeholder="C'est le Groupe d'experts Intergouvernemental sur l'Evolution du Climat. Plus d'infos ici: https://www.ecologique-solidaire.gouv.fr/comprendre-giec"></textarea>
+        <textarea id="description" class="form-control" rows="5" v-model="contribution.description"></textarea>
       </div>
 
       <div class="form-group" v-if="contribution.type !== 'nouvelle question'">
         <h3 class="margin-bottom-0">
-          <label for="contribution_text">Votre commentaire <span class="color-red">*</span></label>
+          <label for="contribution_text">Votre commentaire (bug, amélioration, ...) <span class="color-red">*</span></label>
         </h3>
         <div class="help">
           <small><i>Lâchez-vous :)</i></small>

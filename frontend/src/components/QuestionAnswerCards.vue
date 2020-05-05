@@ -65,6 +65,9 @@
           <h3 class="margin-bottom-0">
             <label for="contribution_text">Votre suggestion ou commentaire sur la question <span class="color-red">*</span></label>
           </h3>
+          <p v-if="!question.answer_explanation || !question.answer_accessible_url || !question.answer_image_url"><i>
+            (donnée(s) manquante à cette question: <span v-if="!question.answer_explanation">une explication, </span><span v-if="!question.answer_accessible_url">un lien, </span><span v-if="!question.answer_image_url">une image</span>)
+          </i></p>
           <div class="row">
             <div class="col">
               <textarea id="contribution_text" class="form-control" rows="2" v-model="contribution.text" required></textarea>
