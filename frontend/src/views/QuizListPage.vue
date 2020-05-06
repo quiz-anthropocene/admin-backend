@@ -20,8 +20,10 @@
           <div class="card-body">
             <h2>{{ quiz.name }}</h2>
             <p><strong>{{ quiz.question_count }}</strong> question<span v-if="quiz.question_count > 1">s</span></p>
+            <hr />
             <div class="row small">
               <div v-if="quiz.categories_list && quiz.categories_list.length > 0" title="Catégorie(s) du quiz">
+                📂
                 <span v-for="(category, index) in quiz.categories_list" :key="category">
                   <span v-if="index < 3" class="label label-category">{{ category }}</span>
                 </span>
@@ -74,8 +76,5 @@ export default {
 .card:hover {
   box-shadow: 0px 0px 5px 5px #dfdfdf;
   transition: 0.2s;
-}
-.card-body {
-  padding: 10px;
 }
 </style>

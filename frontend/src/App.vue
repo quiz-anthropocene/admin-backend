@@ -111,12 +111,23 @@ form > div {
   margin-bottom: 10px; // chaging label to inline removes it's margin-bottom of 8px...
 }
 
+.card-body {
+  padding: 10px;
+}
+
 
 /* Global css */
 
 a.no-decoration {
   color: inherit;
   text-decoration: inherit;
+}
+.fake-link {
+  color: #005995;
+}
+.fake-link:hover {
+  color: #002b49;
+  text-decoration: underline;
 }
 
 hr.custom-seperator {
@@ -202,7 +213,6 @@ hr.custom-seperator {
   border-radius: 15px;
   margin: 2.5px;
   padding: 2.5px 5px;
-  cursor: pointer;
 }
 .label--active {
   background-color: $primary-color--active;
@@ -210,7 +220,7 @@ hr.custom-seperator {
 }
 .label-hidden {
   border: 1px transparent;
-  cursor: auto;
+  // cursor: auto;
 }
 .label-category {
   border-color: $category-color;
@@ -256,17 +266,21 @@ hr.custom-seperator {
 }
 
 @media(hover: hover) and (pointer: fine) {
-  .label-category:hover {
+  .label-category--with-hover:hover {
     background-color: $category-color-active;
+    cursor: pointer;
   }
-  .label-tag:hover {
+  .label-tag--with-hover:hover {
     background-color: $tag-color-active;
+    cursor: pointer;
   }
-  .label-author:hover {
+  .label-author--with-hover:hover {
     background-color: $author-color-active;
+    cursor: pointer;
   }
-  .label-difficulty:hover {
+  .label-difficulty--with-hover:hover {
     background-color: $difficulty-color-active;
+    cursor: pointer;
   }
 }
 </style>

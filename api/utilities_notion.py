@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import datetime  # , date
 
 import notion
 from notion.client import NotionClient
@@ -59,5 +59,6 @@ def add_contribution_row(
     row.type = contribution_type
     row.text = contribution_text
     row.description = contribution_description
-    row.created = notion.collection.NotionDate(date.today())
+    # row.created = notion.collection.NotionDate(date.today())
+    row.created = notion.collection.NotionDate(datetime.now())
     return row

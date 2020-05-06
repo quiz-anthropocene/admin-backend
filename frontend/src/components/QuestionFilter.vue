@@ -23,8 +23,8 @@
       <!-- <hr class="custom-seperator" /> -->
 
       <div v-if="categories">
-        <h3>Catégories</h3>
-        <span v-for="category in categories" :key="category.name" class="label label-category" :class="{ 'label-category--active' : category.name === tempQuestionFilters['category'] }" @click="updateTempQuestionFilter('category', category.name)">
+        <h3>📂&nbsp;Catégories</h3>
+        <span v-for="category in categories" :key="category.name" class="label label-category label-category--with-hover" :class="{ 'label-category--active' : category.name === tempQuestionFilters['category'] }" @click="updateTempQuestionFilter('category', category.name)">
           {{ category.name }} <small><i>{{ category.question_count }}</i></small>
         </span>
       </div>
@@ -32,8 +32,8 @@
       <hr class="custom-seperator" />
 
       <div v-if="tags">
-        <h3>Tags</h3>
-        <span v-for="tag in tags" :key="tag.name" class="label label-tag" :class="{ 'label-tag--active' : tag.name === tempQuestionFilters['tag'] }" @click="updateTempQuestionFilter('tag', tag.name)">
+        <h3>🏷️&nbsp;Tags</h3>
+        <span v-for="tag in tags" :key="tag.name" class="label label-tag label-tag--with-hover" :class="{ 'label-tag--active' : tag.name === tempQuestionFilters['tag'] }" @click="updateTempQuestionFilter('tag', tag.name)">
           {{ tag.name }} <small><i>{{ tag.question_count }}</i></small>
         </span>
       </div>
@@ -41,8 +41,8 @@
       <hr class="custom-seperator" />
 
       <div v-if="authors">
-        <h3>Auteurs</h3>
-        <span v-for="author in authors" :key="author.name" class="label label-author" :class="{ 'label-author--active' : author.name === tempQuestionFilters['author'] }" @click="updateTempQuestionFilter('author', author.name)">
+        <h3>📝&nbsp;Auteurs</h3>
+        <span v-for="author in authors" :key="author.name" class="label label-author label-author--with-hover" :class="{ 'label-author--active' : author.name === tempQuestionFilters['author'] }" @click="updateTempQuestionFilter('author', author.name)">
           {{ author.name }} <small><i>{{ author.question_count }}</i></small>
         </span>
       </div>
@@ -50,8 +50,8 @@
       <hr class="custom-seperator" />
 
       <div v-if="difficultyLevels">
-        <h3>Difficultés</h3>
-        <span v-for="difficulty in difficultyLevels" :key="difficulty.name" class="label label-difficulty" :class="{ 'label-difficulty--active' : difficulty.value === tempQuestionFilters['difficulty'] }" @click="updateTempQuestionFilter('difficulty', difficulty.value)">
+        <h3>🏆&nbsp;Difficultés</h3>
+        <span v-for="difficulty in difficultyLevels" :key="difficulty.name" class="label label-difficulty label-difficulty--with-hover" :class="{ 'label-difficulty--active' : difficulty.value === tempQuestionFilters['difficulty'] }" @click="updateTempQuestionFilter('difficulty', difficulty.value)">
           <small><DifficultyBadge v-bind:difficulty="difficulty.value" /></small> <small><i>{{ difficulty.question_count }}</i></small>
         </span>
       </div>

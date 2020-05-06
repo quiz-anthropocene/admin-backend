@@ -122,6 +122,6 @@ svg {
 }
 
 .btn-lg {
-  line-height: 3;
+  min-height: 75px;
 }
 </style>

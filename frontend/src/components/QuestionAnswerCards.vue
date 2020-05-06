@@ -55,7 +55,7 @@
         <div v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.join(', ') }}</div>
         <div title="Auteur de la question">📝&nbsp;Auteur:&nbsp;{{ question.author }}</div>
         <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count }} / {{ question.answer_count }} ({{ question.answer_success_rate }}%)</div>
-        <button class="btn btn-sm btn-feedback" title="Votre avis sur la question" @click="showContributionForm = true">💬&nbsp;Suggérer une modification</button>
+        <button class="btn btn-sm btn-feedback" title="Votre avis sur la question" @click="showContributionForm = true">💬&nbsp;<span class="fake-link">Suggérer une modification</span></button>
       </div>
 
       <!-- Contribution form -->
