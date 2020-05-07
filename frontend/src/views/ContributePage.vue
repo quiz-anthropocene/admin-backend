@@ -47,10 +47,10 @@
 
       <div class="form-group" v-if="contribution.type !== 'nouvelle question'">
         <h3 class="margin-bottom-0">
-          <label for="contribution_text">Votre commentaire (bug, amélioration, ...) <span class="color-red">*</span></label>
+          <label for="contribution_text">Votre commentaire <span class="color-red">*</span></label>
         </h3>
         <div class="help">
-          <small><i>Lâchez-vous :)</i></small>
+          <small><i>bug, amélioration, nom de l'application,... Lâchez-vous :)</i></small>
         </div>
         <textarea id="contribution_text" class="form-control" rows="5" v-model="contribution.text" required></textarea>
       </div>
