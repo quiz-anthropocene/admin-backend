@@ -1,10 +1,10 @@
 from django.urls import path
 from api import views
 
-
+app_name = "api"
 urlpatterns = [
-    path("", views.api_home),
-    path("questions/", views.question_list),
+    path("", views.api_home, name='index'),
+    path("questions/", views.question_list, name="question_list"),
     path("questions/<int:pk>/", views.question_detail),
     path("questions/<int:pk>/stats", views.question_detail_stats),
     path("questions/random", views.question_random),
