@@ -16,6 +16,7 @@
     answer_accessible_url: Un lien pour aller plus loin
     answer_scientific_url: La source scientifique du chiffre (rapport)
     answer_image_url: "Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée en bas de l'image)"
+    answer_image_explanation: "Une légende pour l'image qui illustre la réponse"
     answer_extra_info: "Texte et liens explicatifs additionels, qui n'apparaissent pas dans l'interface"
     author: "L'auteur de la question"
     publish: "La question est prête à être publiée"

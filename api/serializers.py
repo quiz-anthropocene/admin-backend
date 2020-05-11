@@ -80,6 +80,7 @@ class QuestionSerializer(serializers.ModelSerializer):
             "answer_accessible_url",
             "answer_scientific_url",
             "answer_image_url",
+            "answer_image_explanation",
             "answer_count",
             "answer_success_count",
             "added",

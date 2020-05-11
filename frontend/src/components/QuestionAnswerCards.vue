@@ -46,6 +46,7 @@
         <a v-bind:href="question.answer_image_url" target="_blank">
           <img v-bind:src="question.answer_image_url" alt="une image pour illustrer la réponse" />
         </a>
+        <small v-if="question.answer_image_explanation"><i>{{ question.answer_image_explanation }}</i></small>
       </p>
 
       <hr class="custom-seperator" />

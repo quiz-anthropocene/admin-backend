@@ -145,6 +145,9 @@ class Question(models.Model):
         help_text="Un lien vers une image pour illustrer la réponse "
         "(idéalement avec la source indiquée en bas de l'image)",
     )
+    answer_image_explanation = models.TextField(
+        blank=True, help_text="Une légende pour l'image qui illustre la réponse"
+    )
     answer_extra_info = models.TextField(
         blank=True,
         help_text="Texte et liens explicatifs additionels, qui n'apparaissent pas "

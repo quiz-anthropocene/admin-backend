@@ -264,7 +264,7 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
         if instance.answer_image_url:
             return mark_safe(
                 f'<a href="{instance.answer_image_url}" target="_blank">'
-                f'<img src="{instance.answer_image_url}" height=300 />'
+                f'<img src="{instance.answer_image_url}" title="{instance.answer_image_explanation}" height=300 />'  # noqa
                 f"</a>"
             )
         else:
