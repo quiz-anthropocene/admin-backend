@@ -1,0 +1,8 @@
+[run]
+source=
+    .
+omit=
+    /usr/*
+[report]
+#skip_covered=True
+#exclude_lines=

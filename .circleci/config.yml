@@ -1,0 +1,26 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@0.2.1
+
+jobs:
+  build-and-test:
+    resource_class: small
+    executor: python/default
+    steps:
+      - checkout
+      - python/load-cache
+      - python/install-deps
+      - python/save-cache
+      - run:
+          name: Test
+          command: | 
+            python -m flake8
+            cp .env.example .env
+            python manage.py test
+
+workflows:
+  main:
+    jobs:
+      - build-and-test
+
