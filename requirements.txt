@@ -1,6 +1,7 @@
 asgiref==3.2.3
 black==19.10b0
 certifi==2019.11.28
+coverage==5.1
 dj-database-url==0.5.0
 Django==3.0.4
 django-cors-headers==3.2.1

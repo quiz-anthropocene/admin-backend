@@ -7,12 +7,22 @@ Merci d'être là et de vouloir contribuer :)
 
 
 - [Comment aider ?](#comment-aider-)
-- [Rajouter ou modifier des questions](#rajouter-ou-modifier-des-questions)
-- [Proposer des améliorations de l'application](#proposer-des-am%C3%A9liorations-de-lapplication)
-- [Aider au développement de l'application](#aider-au-d%C3%A9veloppement-de-lapplication)
+  - [Rajouter ou modifier des questions](#rajouter-ou-modifier-des-questions)
+  - [Proposer des améliorations de l'application](#proposer-des-am%C3%A9liorations-de-lapplication)
+  - [Aider au développement de l'application](#aider-au-d%C3%A9veloppement-de-lapplication)
 - [Informations supplémentaires](#informations-suppl%C3%A9mentaires)
   - [Stack technique](#stack-technique)
+    - [Backend](#backend)
+    - [Frontend](#frontend)
+    - [DevOps](#devops)
   - [Lancer le projet en local](#lancer-le-projet-en-local)
+    - [Installer l'application](#installer-lapplication)
+    - [Lancer l'application](#lancer-lapplication)
+      - [Lancer le Backend](#lancer-le-backend)
+      - [Lancer le Frontend](#lancer-le-frontend)
+    - [Accéder à la console admin](#acc%C3%A9der-%C3%A0-la-console-admin)
+  - [Lancer les tests](#lancer-les-tests)
+  - [Autres commandes utiles](#autres-commandes-utiles)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -28,7 +38,7 @@ Il y a plusieurs aspects du projet qui ont besoin d'aide:
     - Faire des propositions d'améliorations (grâce aux Issues Github)
     - Aider à développer l'application (grâce aux Issues et Pull Requests Github)
 
-## Rajouter ou modifier des questions
+### Rajouter ou modifier des questions
 
 Un export de toutes les questions de la base de donnée de l'application peuvent être vues dans le fichier `api/data/questions.yaml` (Rappel: ce n'est pas la source de la base de donnée, seulement un export).
 
@@ -36,7 +46,7 @@ Vous pouvez proposer de nouvelles questions via la page [Contribution](https://k
 
 Coté validation des questions, toutes les questions (finalisées ou en cours de création) sont actuellement dans un fichier partagé (type Google Sheet), que l'on synchronise régulièrement avec la base de donnée.
 
-## Proposer des améliorations de l'application
+### Proposer des améliorations de l'application
 
 Vous avez vu un bug ? Vous trouvez l'app contre-intuitive, ou simplement avez une idée pour rendre le design plus beau/propre ?
 
@@ -44,9 +54,11 @@ Il y a deux options pour remonter ces informations:
 - via la page [Contribution](https://know-your-planet.netlify.app/#/contribuer) de l'application
 - ou créer une Issue dans l'interface Github du projet ([ici](https://github.com/raphodn/know-your-planet/issues))
 
-## Aider au développement de l'application
+### Aider au développement de l'application
 
-La stack technique est détaillée un peu plus bas.
+_La stack technique est détaillée un peu plus bas._
+
+Relecture de code, documentation, rajouter des tests, ajouter une fonctionnalité, etc
 
 Si vous souhaitez ajouter une fonctionnalité:
 - commentez l'Issue en question pour donner votre point de vue (ou créez l'Issue si elle n'existe pas encore), et on discutera ensemble de la meilleur façon de procéder
@@ -135,7 +147,22 @@ python manage.py createsuperuser --username admin@email.com
 
 Lancez le backend, et connectez-vous sur `http://localhost:8000/admin`
 
-#### Autres commandes utiles
+### Lancer les tests
+
+```
+python manage.py test
+```
+
+Coverage
+```
+coverage run manage.py test
+
+// report
+coverage report
+coverage html
+```
+
+### Autres commandes utiles
 
 Exporter les questions de la base au format YAML
 ```
