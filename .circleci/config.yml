@@ -16,7 +16,6 @@ jobs:
           name: Test
           command: | 
             python -m flake8
-            cp .env.example .env
             python manage.py test
 
 workflows:
