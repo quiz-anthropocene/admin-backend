@@ -30,13 +30,5 @@ Python Django & Vue.js (plus de détails [ici](CONTRIBUTION.md#stack-technique))
 
 Le code et les questions sont en open-source: venez nous aider !
 
-Lire [CONTRIBUTION.md](CONTRIBUTION.md)
-
-## Idées
-
-Voir les [Issues](https://github.com/raphodn/know-your-planet/issues) (ainsi que le [board](https://github.com/raphodn/know-your-planet/projects/1) Github)
-
-- Proposer à l'utilisateur un feedback rapide sur la question (👍, 👎, voire 💬)
-- Rajouter de nouveaux formats de questions: Vrai/Faux par exemple
-- Pouvoir mieux filtrer les questions (catégorie, tags, difficulté)
-- ...
+- Lire [CONTRIBUTION.md](CONTRIBUTION.md)
+- Voir les [Issues](https://github.com/raphodn/know-your-planet/issues) (ainsi que le [board](https://github.com/raphodn/know-your-planet/projects/1) Github)

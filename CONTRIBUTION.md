@@ -30,19 +30,19 @@ Il y a plusieurs aspects du projet qui ont besoin d'aide:
 
 ## Rajouter ou modifier des questions
 
-Toutes les questions de la base de donnée de l'application peuvent être vues dans le fichier `api/data/questions.yaml`
+Un export de toutes les questions de la base de donnée de l'application peuvent être vues dans le fichier `api/data/questions.yaml` (Rappel: ce n'est pas la source de la base de donnée, seulement un export).
 
-*Mais* ce n'est pas la source de la base de donnée, seulement un export.
+Vous pouvez proposer de nouvelles questions via la page [Contribution](https://know-your-planet.netlify.app/#/contribuer) de l'application.
 
-Toutes les questions (finalisées ou en cours de création) sont dans actuellement dans un fichier Google Sheet, que l'on synchronise régulièrement avec la base de donnée.
-
-Faites-moi signe si vous voulez avoir accès à ce Google Sheet (libre accès).
+Coté validation des questions, toutes les questions (finalisées ou en cours de création) sont actuellement dans un fichier partagé (type Google Sheet), que l'on synchronise régulièrement avec la base de donnée.
 
 ## Proposer des améliorations de l'application
 
 Vous avez vu un bug ? Vous trouvez l'app contre-intuitive, ou simplement avez une idée pour rendre le design plus beau/propre ?
 
-Il suffit de créer une Issue dans l'interface Github du projet ([ici](https://github.com/raphodn/know-your-planet/issues)) :)
+Il y a deux options pour remonter ces informations:
+- via la page [Contribution](https://know-your-planet.netlify.app/#/contribuer) de l'application
+- ou créer une Issue dans l'interface Github du projet ([ici](https://github.com/raphodn/know-your-planet/issues))
 
 ## Aider au développement de l'application
 
@@ -58,7 +58,7 @@ Si vous souhaitez ajouter une fonctionnalité:
 
 #### Backend
 
-- Une backend en Python Django
+- Une backend en Python Django:
   - API avec Django Rest Framework
   - console Admin
 - Une base de donnée PostgreSQL
@@ -76,8 +76,8 @@ Si vous souhaitez ajouter une fonctionnalité:
 
 #### Installer l'application
 
-- Vous devez avoir Python 3.7 installé sur votre machine
-- Clonez le code en local
+- Vous devez avoir Python 3.7 installé sur votre machine (environment virtuel (`venv` par exemple) recommandé)
+- Clonez le code en local (vous pouvez aussi Fork le projet si vous prévoyez d'y apporter des modifications et effectuer une PR)
     ```
     git clone git@github.com:raphodn/know-your-planet.git
     ```
@@ -133,7 +133,7 @@ Créez d'abord un utilisateur admin
 python manage.py createsuperuser --username admin@email.com
 ```
 
-Connectez-vous ensuite sur `http://localhost:8000/admin`
+Lancez le backend, et connectez-vous sur `http://localhost:8000/admin`
 
 #### Autres commandes utiles
 
