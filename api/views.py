@@ -134,7 +134,7 @@ def question_random(request):
 
 
 @api_view(["GET"])
-def question_stats(request):
+def question_count(request):
     """
     Retrieve stats on all the data
     """
@@ -182,7 +182,7 @@ def author_list(request):
         .order_by("-question_count")
     )
 
-    return Response(authors)
+    return Response(list(authors))
 
 
 @api_view(["GET"])
