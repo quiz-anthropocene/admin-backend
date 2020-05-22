@@ -49,19 +49,32 @@
         <small v-if="question.answer_image_explanation"><i>{{ question.answer_image_explanation }}</i></small>
       </p>
 
-      <hr class="custom-seperator" />
-      
+      <!-- <div class="separator-with-text"></div> -->
+      <hr class="custom-separator" />
+
       <!-- Extra info -->
       <div class="row margin-top-bottom-10 small">
         <div v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.join(', ') }}</div>
         <div title="Auteur de la question">📝&nbsp;Auteur:&nbsp;{{ question.author }}</div>
         <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count }} / {{ question.answer_count }} ({{ question.answer_success_rate }}%)</div>
-        <button class="btn btn-sm btn-feedback" title="Votre avis sur la question" @click="showContributionForm = true">💬&nbsp;<span class="fake-link">Suggérer une modification</span></button>
+      </div>
+
+    </div>
+
+    <div v-if="question && questionSubmitted" class="card-feedback small">
+      <h3>Votre avis compte !</h3>
+      <!-- Option to hide card ? -->
+
+      <div class="row margin-top-bottom-10">
+        <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light small" title="J'ai aimé cette question" @click="submitFeedback('like')" :disabled="feedbackSubmitted">👍<span class="fake-link"></span></button>
+        <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light small" title="Je n'ai pas aimé cette question" @click="submitFeedback('dislike')" :disabled="feedbackSubmitted">👎<span class="fake-link"></span></button>
+        <div v-if="feedbackSubmitted">Merci 💯</div>
+        <button class="btn btn-sm btn-primary-light small" title="Votre avis sur la question" @click="showContributionForm = true">💬&nbsp;<span class="fake-link">Suggérer une modification</span></button>
       </div>
 
       <!-- Contribution form -->
       <template v-if="showContributionForm">
-        <hr class="custom-seperator" />
+        <hr class="custom-separator" />
         <form @submit.prevent="submitContribution" v-if="!contributionSubmitted">
           <h3 class="margin-bottom-0">
             <label for="contribution_text">Votre suggestion ou commentaire sur la question <span class="color-red">*</span></label>
@@ -79,12 +92,12 @@
           </div>
         </form>
         <div v-if="contributionSubmitted && loading" class="loading">
-          Envoi de votre suggestion...
+          <p>Envoi de votre suggestion...</p>
         </div>
 
         <div v-if="contributionSubmitted && error" class="error">
           <h3>Il y a eu une erreur 😢</h3>
-          {{ error }}
+          <p>{{ error }}</p>
         </div>
 
         <div v-if="contributionSubmitted && contributionResponse">
@@ -125,6 +138,7 @@ export default {
         type: "commentaire question"
       },
       showContributionForm: false,
+      feedbackSubmitted: false,
       contributionSubmitted: false,
       contributionResponse: null,
       loading: false,
@@ -202,19 +216,44 @@ export default {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          answer_choice: this.answerPicked,
+          choice: this.answerPicked,
           source: this.context.source
         })
       })
-        .then(response => {
-          return response.json()
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.log(error)
+      })
+    },
+    submitFeedback(feedback_choice) {
+      this.feedbackSubmitted = feedback_choice;
+      this.error = null;
+      this.loading = true;
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/${this.question.id}/feedbacks`, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          choice: feedback_choice,
+          source: this.context.source
         })
-        .then(data => {
-          console.log(data);
-        })
-        .catch(error => {
-          console.log(error)
-        })
+      })
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.log(error)
+      })
     },
     submitContribution() {
       this.contributionSubmitted = true;
@@ -228,17 +267,17 @@ export default {
         },
         body: JSON.stringify(this.contribution)
       })
-        .then(response => {
-          this.loading = false
-          return response.json()
-        })
-        .then(data => {
-          this.contributionResponse = data;
-        })
-        .catch(error => {
-          console.log(error)
-          this.error = error;
-        })
+      .then(response => {
+        this.loading = false
+        return response.json()
+      })
+      .then(data => {
+        this.contributionResponse = data;
+      })
+      .catch(error => {
+        console.log(error)
+        this.error = error;
+      })
     }
   }
 }
@@ -274,6 +313,13 @@ export default {
   max-height: 100%;
   max-width: 100%;
   margin: auto;
+}
+
+.card-feedback {
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  margin: 10px 0px;
+  background-color: #F8F8F8;
 }
 
 .btn-feedback {

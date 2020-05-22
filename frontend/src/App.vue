@@ -130,14 +130,6 @@ a.no-decoration {
   text-decoration: underline;
 }
 
-hr.custom-seperator {
-  border: 0 none;
-  height: 1px;
-  width: 50%;
-  color: var(--primary);
-  background-color: var(--primary);
-}
-
 .row {
   display: flex;
   justify-content: space-around;
@@ -204,6 +196,11 @@ hr.custom-seperator {
   font-size: small;
 }
 
+.btn-primary-light {
+  color: #fff;
+  background-color: rgba(0, 89, 149, 0.03); // var(--primary);
+}
+
 
 /* Elements */
 
@@ -249,6 +246,33 @@ hr.custom-seperator {
 .label-difficulty--active {
   background-color: $difficulty-color-active;
   text-shadow: 0px 0px 1px black;
+}
+
+
+hr.custom-separator {
+  border: 0 none;
+  height: 1px;
+  width: 50%;
+  color: var(--primary);
+  background-color: var(--primary);
+}
+
+.separator-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.separator-with-text::before,
+.separator-with-text::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--primary);
+}
+.separator-with-text::before {
+  margin-right: 0.5em;
+}
+.separator-with-text::after {
+  margin-left: 0.5em;
 }
 
 

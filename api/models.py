@@ -171,6 +171,12 @@ class Question(models.Model):
         default=constants.QUESTION_VALIDATION_STATUS_NEW,
         help_text="Le statut de la question dans le workflow de validation",
     )
+    # stats
+    like_count = models.PositiveIntegerField(default=0, help_text="Le nombre de likes")
+    dislike_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de dislikes"
+    )
+    # timestamps
     added = models.DateField(
         blank=True, null=True, help_text="La date d'ajout de la question"
     )
@@ -209,12 +215,20 @@ class Question(models.Model):
         return len(self.answer_image_url) > 0
 
     @property
+    def like_count_agg(self):
+        return self.feedbacks.liked().count()
+
+    @property
+    def dislike_count_agg(self):
+        return self.feedbacks.disliked().count()
+
+    @property
     def answer_count(self):
         return self.stats.count()
 
     @property
     def answer_success_count(self):
-        return self.stats.filter(answer_choice=self.answer_correct).count()
+        return self.stats.filter(choice=self.answer_correct).count()
 
     @property
     def answer_success_rate(self):
@@ -226,9 +240,63 @@ class Question(models.Model):
 
     # Admin
     tags_list_string.fget.short_description = "Tag(s)"
+    like_count_agg.fget.short_description = "# Like"
+    dislike_count_agg.fget.short_description = "# Dislike"
     answer_count.fget.short_description = "# Rép"
     answer_success_count.fget.short_description = "# Rép Corr"
     answer_success_rate.fget.short_description = "% Rép Corr"
+
+
+class QuestionFeedbackQuerySet(models.QuerySet):
+    def liked(self):
+        return self.filter(choice=constants.QUESTION_FEEDBACK_LIKE)
+
+    def disliked(self):
+        return self.filter(choice=constants.QUESTION_FEEDBACK_DISLIKE)
+
+
+class QuestionFeedback(models.Model):
+    question = models.ForeignKey(
+        Question, null=True, on_delete=models.CASCADE, related_name="feedbacks"
+    )
+    choice = models.CharField(
+        max_length=50,
+        choices=constants.QUESTION_FEEDBACK_CHOICES,
+        default=constants.QUESTION_FEEDBACK_LIKE,
+        editable=False,
+        help_text="L'avis laissé sur la question",
+    )
+    source = models.CharField(
+        max_length=50,
+        choices=constants.QUESTION_SOURCE_CHOICES,
+        default=constants.QUESTION_SOURCE_QUESTION,
+        editable=False,
+        help_text="Le contexte dans lequel a été envoyé le feedback",
+    )
+    created = models.DateTimeField(
+        auto_now_add=True, help_text="La date & heure de la réponse"
+    )
+
+    objects = QuestionFeedbackQuerySet.as_manager()
+
+
+class QuestionStat(models.Model):
+    question = models.ForeignKey(
+        Question, null=True, on_delete=models.CASCADE, related_name="stats"
+    )
+    choice = models.CharField(
+        max_length=50, editable=False, help_text="La réponse choisie par l'internaute"
+    )
+    source = models.CharField(
+        max_length=50,
+        choices=constants.QUESTION_SOURCE_CHOICES,
+        default=constants.QUESTION_SOURCE_QUESTION,
+        editable=False,
+        help_text="Le contexte dans lequel a été répondu la question",
+    )
+    created = models.DateTimeField(
+        auto_now_add=True, help_text="La date & heure de la réponse"
+    )
 
 
 class QuizQuerySet(models.QuerySet):
@@ -293,25 +361,6 @@ class Quiz(models.Model):
     @property
     def answer_count(self):
         return self.stats.count()
-
-
-class QuestionStat(models.Model):
-    question = models.ForeignKey(
-        Question, null=True, on_delete=models.CASCADE, related_name="stats"
-    )
-    answer_choice = models.CharField(
-        max_length=50, editable=False, help_text="La réponse choisie par l'internaute"
-    )
-    source = models.CharField(
-        max_length=50,
-        choices=constants.QUESTION_SOURCE_CHOICES,
-        default=constants.QUESTION_SOURCE_QUESTION,
-        editable=False,
-        help_text="Le contexte dans lequel a été répondu la question",
-    )
-    created = models.DateTimeField(
-        auto_now_add=True, help_text="La date & heure de la réponse"
-    )
 
 
 class QuizStat(models.Model):

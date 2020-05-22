@@ -12,6 +12,7 @@ from api.models import (
     Category,
     Tag,
     Quiz,
+    QuestionFeedback,
     QuestionStat,
     QuizStat,
     Contribution,
@@ -22,6 +23,7 @@ from api.serializers import (
     TagSerializer,
     QuizSerializer,
     QuizFullSerializer,
+    QuestionFeedbackSerializer,
     QuestionStatSerializer,
     QuizStatSerializer,
     ContributionSerializer,
@@ -84,6 +86,27 @@ def question_detail(request, pk):
 
 
 @api_view(["POST"])
+def question_detail_feedbacks(request, pk):
+    """
+    Update the question feedbacks
+    """
+    try:
+        question = Question.objects.get(pk=pk)
+    except Question.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == "POST":
+        question_feedback = QuestionFeedback.objects.create(
+            question=question,
+            choice=request.data["choice"],
+            source=request.data["source"],
+        )
+
+        serializer = QuestionFeedbackSerializer(question_feedback)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+@api_view(["POST"])
 def question_detail_stats(request, pk):
     """
     Update the question stats
@@ -96,7 +119,7 @@ def question_detail_stats(request, pk):
     if request.method == "POST":
         question_stat = QuestionStat.objects.create(
             question=question,
-            answer_choice=request.data["answer_choice"],
+            choice=request.data["choice"],
             source=request.data["source"],
         )
 

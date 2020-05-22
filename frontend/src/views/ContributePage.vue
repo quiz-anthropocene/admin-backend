@@ -8,7 +8,7 @@
     </p>
 
     <br />
-    <hr class="custom-seperator" />
+    <hr class="custom-separator" />
     <br />
 
     <form @submit.prevent="submitContribution" v-if="!contributionSubmitted">

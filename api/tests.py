@@ -14,7 +14,7 @@ class ApiTest(TestCase):
             publish=False, author="author 1"
         )
         cls.question_2 = models.Question.objects.create(
-            publish=True, author="author 2", category=cls.category_1
+            publish=True, author="author 2", category=cls.category_1, answer_correct="a"
         )
         cls.question_2.tags.set([cls.tag_2, cls.tag_1])
         cls.question_3 = models.Question.objects.create(publish=True, author="author 3")
@@ -121,3 +121,59 @@ class ApiTest(TestCase):
         self.assertIsInstance(response.data, list)
         self.assertEqual(len(response.data), 1)  # 1 quiz not published
         self.assertEqual(len(response.data[0]["questions"]), 2)
+
+    def test_question_feedback(self):
+        response = self.client.post(
+            reverse("api:question_detail_feedbacks", args=[self.question_2.id]),
+            data={
+                "question": self.question_2.id,
+                "choice": "like",
+                "source": "question",
+            },
+        )
+        self.assertEqual(response.status_code, 201)
+        self.assertIsInstance(response.data, dict)
+        self.assertEqual(response.data["choice"], "like")
+        self.assertEqual(self.question_2.feedbacks.count(), 1)
+        self.assertEqual(self.question_2.like_count_agg, 1)
+        self.assertEqual(self.question_2.dislike_count_agg, 0)
+
+        response = self.client.post(
+            reverse("api:question_detail_feedbacks", args=[self.question_2.id]),
+            data={
+                "question": self.question_2.id,
+                "choice": "dislike",
+                "source": "question",
+            },
+        )
+        self.assertEqual(response.status_code, 201)
+        self.assertIsInstance(response.data, dict)
+        self.assertEqual(response.data["choice"], "dislike")
+        self.assertEqual(self.question_2.feedbacks.count(), 2)
+        self.assertEqual(self.question_2.like_count_agg, 1)
+        self.assertEqual(self.question_2.dislike_count_agg, 1)
+
+    def test_question_stats(self):
+        response = self.client.post(
+            reverse("api:question_detail_stats", args=[self.question_2.id]),
+            data={"question": self.question_2.id, "choice": "a", "source": "question"},
+        )
+        self.assertEqual(response.status_code, 201)
+        self.assertIsInstance(response.data, dict)
+        self.assertEqual(response.data["choice"], "a")
+        self.assertEqual(self.question_2.stats.count(), 1)
+        self.assertEqual(self.question_2.answer_count, 1)
+        self.assertEqual(self.question_2.answer_success_count, 1)
+        self.assertEqual(self.question_2.answer_success_rate, 100)
+
+        response = self.client.post(
+            reverse("api:question_detail_stats", args=[self.question_2.id]),
+            data={"question": self.question_2.id, "choice": "b", "source": "question"},
+        )
+        self.assertEqual(response.status_code, 201)
+        self.assertIsInstance(response.data, dict)
+        self.assertEqual(response.data["choice"], "b")
+        self.assertEqual(self.question_2.stats.count(), 2)
+        self.assertEqual(self.question_2.answer_count, 2)
+        self.assertEqual(self.question_2.answer_success_count, 1)
+        self.assertEqual(self.question_2.answer_success_rate, 50)

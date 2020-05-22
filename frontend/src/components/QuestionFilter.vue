@@ -20,7 +20,7 @@
     <!-- Content -->
     <section v-if="showFilterBox" class="filter-box--content">
 
-      <!-- <hr class="custom-seperator" /> -->
+      <!-- <hr class="custom-separator" /> -->
 
       <div v-if="categories">
         <h3>📂&nbsp;Catégories</h3>
@@ -29,7 +29,7 @@
         </span>
       </div>
 
-      <hr class="custom-seperator" />
+      <hr class="custom-separator" />
 
       <div v-if="tags">
         <h3>🏷️&nbsp;Tags</h3>
@@ -38,7 +38,7 @@
         </span>
       </div>
 
-      <hr class="custom-seperator" />
+      <hr class="custom-separator" />
 
       <div v-if="authors">
         <h3>📝&nbsp;Auteurs</h3>
@@ -47,7 +47,7 @@
         </span>
       </div>
 
-      <hr class="custom-seperator" />
+      <hr class="custom-separator" />
 
       <div v-if="difficultyLevels">
         <h3>🏆&nbsp;Difficultés</h3>

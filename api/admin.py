@@ -232,6 +232,8 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
         "answer_count",
         "answer_success_count",
         "answer_success_rate",
+        "like_count_agg",
+        "dislike_count_agg",
     )
 
     # from_encoding = 'utf-8-sig'
@@ -330,7 +332,7 @@ class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
         "id",
         "question",
-        "answer_choice",
+        "choice",
         "source",
         "created",
     )

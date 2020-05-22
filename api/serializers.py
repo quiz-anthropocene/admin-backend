@@ -5,6 +5,7 @@ from api.models import (
     Category,
     Tag,
     Quiz,
+    QuestionFeedback,
     QuestionStat,
     QuizStat,
     Contribution,
@@ -90,6 +91,28 @@ class QuestionSerializer(serializers.ModelSerializer):
 
 
 """
+QUESTION FEEDBACKS
+"""
+
+
+class QuestionFeedbackSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = QuestionFeedback
+        fields = ["question_id", "choice", "source", "created"]
+
+
+"""
+QUESTION STATS
+"""
+
+
+class QuestionStatSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = QuestionStat
+        fields = ["question_id", "choice", "source", "created"]
+
+
+"""
 QUIZ
 """
 
@@ -131,17 +154,6 @@ class QuizFullSerializer(serializers.ModelSerializer):
             "difficulty_average",
             "created",
         ]
-
-
-"""
-QUESTION STATS
-"""
-
-
-class QuestionStatSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = QuestionStat
-        fields = ["question_id", "answer_choice", "source", "created"]
 
 
 """

@@ -7,6 +7,11 @@ urlpatterns = [
     path("questions/", views.question_list, name="question_list"),
     path("questions/<int:pk>/", views.question_detail, name="question_detail"),
     path(
+        "questions/<int:pk>/feedbacks",
+        views.question_detail_feedbacks,
+        name="question_detail_feedbacks",
+    ),
+    path(
         "questions/<int:pk>/stats",
         views.question_detail_stats,
         name="question_detail_stats",
