@@ -466,5 +466,10 @@ class DailyStat(models.Model):
 
     objects = DailyStatManager()
 
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=["date"], name="unique stat date")
+        ]
+
     def __str__(self):
         return f"{self.date}"
