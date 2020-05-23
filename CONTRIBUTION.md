@@ -102,6 +102,13 @@ Si vous souhaitez ajouter une fonctionnalité:
     pre-commit install
     ```
 - Dupliquer le fichier `.env.example` et le renommer en `.env`
+- Installez [PostgreSQL](https://www.postgresql.org)
+- Créez la base de donnée
+    ```
+    psql -c "CREATE USER know_your_planet_team"
+    psql -c "CREATE DATABASE know_your_planet OWNER know_your_planet_team"
+    psql -c "ALTER USER know_your_planet_team CREATEDB"
+    ```
 - Lancez les migrations
     ```
     python manage.py migrate

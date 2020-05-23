@@ -206,8 +206,8 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
         "has_answer_accessible_url",
         # "has_answer_scientific_url",
         "has_answer_image_url",
-        "answer_count",
-        "answer_success_count",
+        "answer_count_agg",
+        "answer_success_count_agg",
         "answer_success_rate",
     )
     list_filter = (
@@ -219,7 +219,7 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
         "publish",
         "validation_status",
     )
-    ordering = ("id",)  # "answer_count", "answer_success_rate",
+    ordering = ("id",)  # "answer_count_agg", "answer_success_rate",
     actions = [
         "export_as_csv",
         "export_as_json",
@@ -229,8 +229,8 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
     filter_horizontal = ("tags",)
     readonly_fields = (
         "show_answer_image",
-        "answer_count",
-        "answer_success_count",
+        "answer_count_agg",
+        "answer_success_count_agg",
         "answer_success_rate",
         "like_count_agg",
         "dislike_count_agg",
@@ -319,12 +319,12 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
         "tags_list",
         "difficulty_average",
         "publish",
-        "answer_count",
+        "answer_count_agg",
     )
     list_filter = ("publish",)
     ordering = ("id",)
     filter_horizontal = ("questions",)
-    readonly_fields = ("answer_count",)
+    readonly_fields = ("answer_count_agg",)
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
 
 
