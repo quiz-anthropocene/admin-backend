@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from api.models import Question, QuestionStat, QuestionFeedback
+from api.models import Question, QuestionStat, QuestionFeedback, DailyStat
 
 
 class QuestionModelTest(TestCase):
@@ -28,3 +28,24 @@ class QuestionModelTest(TestCase):
         self.assertEqual(self.question_1.dislike_count, 0)
         self.assertEqual(self.question_1.like_count_agg, 2)
         self.assertEqual(self.question_1.dislike_count_agg, 1)
+
+
+class DailyStatModelTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.question_1 = Question.objects.create(
+            answer_correct="a", answer_count=5, answer_success_count=2, like_count=2
+        )
+        QuestionStat.objects.create(
+            question_id=cls.question_1.id, choice="a", source="question"
+        )
+        DailyStat.objects.create(
+            date="2020-04-30", question_answer_count=10, question_feedback_count=5
+        )
+        DailyStat.objects.create(
+            date="2020-04-29", question_answer_count=2, question_feedback_count=1
+        )
+
+    def test_question_answer_count_count(self):
+        self.assertEqual(DailyStat.objects.overall_question_answer_count(), 12)
+        self.assertEqual(DailyStat.objects.overall_question_feedback_count(), 6)

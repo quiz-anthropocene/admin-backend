@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models import Avg
+from django.db.models import Avg, Sum
 from django.contrib.postgres.fields import JSONField
 
 from api import constants
@@ -414,6 +414,31 @@ class Contribution(models.Model):
         return f"{self.text}"
 
 
+class DailyStatManager(models.Manager):
+    def overall_question_answer_count(self):
+        return self.aggregate(Sum("question_answer_count"))[
+            "question_answer_count__sum"
+        ]
+
+    def overall_question_answer_from_quiz_count(self):
+        return self.aggregate(Sum("question_answer_from_quiz_count"))[
+            "question_answer_from_quiz_count__sum"
+        ]
+
+    def overall_quiz_answer_count(self):
+        return self.aggregate(Sum("quiz_answer_count"))["quiz_answer_count__sum"]
+
+    def overall_question_feedback_count(self):
+        return self.aggregate(Sum("question_feedback_count"))[
+            "question_feedback_count__sum"
+        ]
+
+    def overall_question_feedback_from_quiz_count(self):
+        return self.aggregate(Sum("question_feedback_from_quiz_count"))[
+            "question_feedback_from_quiz_count__sum"
+        ]
+
+
 class DailyStat(models.Model):
     date = models.DateField(help_text="Le jour de la statistique")
     question_answer_count = models.PositiveIntegerField(
@@ -438,3 +463,8 @@ class DailyStat(models.Model):
     created = models.DateTimeField(
         auto_now_add=True, help_text="La date & heure de la stat journalière"
     )
+
+    objects = DailyStatManager()
+
+    def __str__(self):
+        return f"{self.date}"

@@ -24,7 +24,9 @@ from api.models import (
     Tag,
     Quiz,
     QuestionStat,
+    QuestionFeedback,
     QuizStat,
+    DailyStat,
     Contribution,
 )
 
@@ -366,7 +368,9 @@ class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
         )
 
         # get answers since today
-        if chart_data_query[0]["day"] != str(datetime.now().date()):
+        if len(chart_data_query) and (
+            str(chart_data_query[0]["day"]) != str(datetime.now().date())
+        ):
             chart_data_list = [{"day": str(datetime.now().date()), "y": 0}] + list(
                 chart_data_query
             )
@@ -379,6 +383,24 @@ class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)
+
+
+class QuestionFeedbackAdmin(admin.ModelAdmin, ExportMixin):
+    list_display = (
+        "id",
+        "question",
+        "choice",
+        "source",
+        "created",
+    )
+    list_filter = ("source",)
+    ordering = ("id",)
+    actions = [
+        "export_as_csv",
+        "export_as_json",
+        "export_as_yaml",
+        # "export_all_questionstat_as_yaml",
+    ]
 
 
 class QuizStatAdmin(admin.ModelAdmin, ExportMixin):
@@ -412,7 +434,9 @@ class QuizStatAdmin(admin.ModelAdmin, ExportMixin):
         )
 
         # get answers since today
-        if chart_data_query[0]["day"] != str(datetime.now().date()):
+        if len(chart_data_query) and (
+            str(chart_data_query[0]["day"]) != str(datetime.now().date())
+        ):
             chart_data_list = [{"day": str(datetime.now().date()), "y": 0}] + list(
                 chart_data_query
             )
@@ -421,6 +445,60 @@ class QuizStatAdmin(admin.ModelAdmin, ExportMixin):
 
         # Serialize and attach the chart data to the template context
         as_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
+        extra_context = extra_context or {"chart_data": as_json}
+
+        # Call the superclass changelist_view to render the page
+        return super().changelist_view(request, extra_context=extra_context)
+
+
+class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
+    list_display = (
+        "id",
+        "date",
+        "question_answer_count",
+        "quiz_answer_count",
+        "question_feedback_count",
+        "created",
+    )
+    list_filter = ("date",)
+    ordering = ("id",)
+    readonly_fields = (
+        "date",
+        "question_answer_count",
+        "question_answer_from_quiz_count",
+        "quiz_answer_count",
+        "question_feedback_count",
+        "question_feedback_from_quiz_count",
+        "hour_split",
+        "created",
+    )
+    actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
+
+    def changelist_view(self, request, extra_context=None):
+        """
+        show chart of answers per day
+        https://dev.to/danihodovic/integrating-chart-js-with-django-admin-1kjb
+
+        Corresponding template in templates/admin/api/dailystat/change_list.html
+        """
+        # Aggregate answers per day
+        # chart_data_query = DailyStat.objects.extra(select={"day": "date(date)"}) # sqlite
+        chart_data_query = (
+            DailyStat.objects.extra(
+                select={
+                    "day": "to_char(date, 'YYYY-MM-DD')",
+                    "y": "question_answer_count",
+                }
+            )
+            .values("day", "y")
+            .order_by("-day")
+        )
+
+        chart_data_list = list(chart_data_query)
+
+        # Serialize and attach the chart data to the template context
+        as_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
+        print(as_json)
         extra_context = extra_context or {"chart_data": as_json}
 
         # Call the superclass changelist_view to render the page
@@ -482,6 +560,8 @@ admin.site.register(Category, CategoryAdmin)
 admin.site.register(Tag, TagAdmin)
 admin.site.register(Quiz, QuizAdmin)
 admin.site.register(QuestionStat, QuestionStatAdmin)
+admin.site.register(QuestionFeedback, QuestionFeedbackAdmin)
 admin.site.register(QuizStat, QuizStatAdmin)
+admin.site.register(DailyStat, DailyStatAdmin)
 admin.site.register(Contribution, ContributionAdmin)
 admin.site.register(admin.models.LogEntry, LogEntryAdmin)
