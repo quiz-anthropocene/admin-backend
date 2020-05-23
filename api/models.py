@@ -358,10 +358,18 @@ class Quiz(models.Model):
         # return sorted(counter, key=counter.get, reverse=True)
 
     @property
+    def categories_list_string(self):
+        return ", ".join(self.categories_list)
+
+    @property
     def tags_list(self):
         return list(
             self.questions.order_by().values_list("tags__name", flat=True).distinct()
         )
+
+    @property
+    def tags_list_string(self):
+        return ", ".join(self.tags_list)
 
     @property
     def difficulty_average(self):
@@ -371,6 +379,12 @@ class Quiz(models.Model):
     @property
     def answer_count_agg(self):
         return self.stats.count()
+
+    # Admin
+    categories_list_string.fget.short_description = "Catégorie(s)"
+    tags_list_string.fget.short_description = "Tag(s)"
+    difficulty_average.fget.short_description = "Difficulté moyenne"
+    answer_count_agg.fget.short_description = "# Rép"
 
 
 class QuizStat(models.Model):

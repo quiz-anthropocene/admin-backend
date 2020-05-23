@@ -326,7 +326,13 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
     list_filter = ("publish",)
     ordering = ("id",)
     filter_horizontal = ("questions",)
-    readonly_fields = ("answer_count_agg",)
+    readonly_fields = (
+        "question_count",
+        "categories_list_string",
+        "tags_list_string",
+        "difficulty_average",
+        "answer_count_agg",
+    )
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
 
 

@@ -99,6 +99,10 @@ h3 {
   font-size: 1.17em;
   font-weight: 700;
 }
+h4 {
+  font-size: 1em;
+  font-weight: 700;
+}
 
 button {
   margin: 0;
@@ -123,11 +127,12 @@ a.no-decoration {
   text-decoration: inherit;
 }
 .fake-link {
-  color: #005995;
+  cursor: pointer;
+  color: #005995 !important;
 }
 .fake-link:hover {
-  color: #002b49;
-  text-decoration: underline;
+  color: #002b49 !important;
+  text-decoration: underline !important;
 }
 
 .row {
@@ -144,14 +149,25 @@ a.no-decoration {
 .margin-0 {
   margin: 0;
 }
-.margin-bottom-0 {
-  margin-bottom: 0;
-}
 .margin-5 {
   margin: 5px;
 }
 .margin-top-bottom-10 {
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+.margin-left-right-5 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.margin-left-right-10 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+.margin-bottom-10 {
   margin-bottom: 10px;
 }
 .padding-top-bottom-15 {
@@ -163,6 +179,10 @@ a.no-decoration {
 }
 .padding-bottom-10 {
   padding-bottom: 10px;
+}
+.padding-left-right-10 {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .color-green {

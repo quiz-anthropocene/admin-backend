@@ -5,8 +5,8 @@
     <div class="filter-box--header" :class="{ 'padding-bottom-10': showFilterBox }" @click="toggleFilterBox()">
       <span class="label label-hidden">
         <span>⚙️&nbsp;Filtres&nbsp;</span>
-        <span v-if="!showFilterBox">▲</span> <!-- ► -->
-        <span v-if="showFilterBox">▼</span>
+        <span v-if="!showFilterBox">▸</span> <!-- ▲ ► -->
+        <span v-if="showFilterBox">▾</span> <!-- ▼ -->
       </span>
       <span v-for="(value, key) in questionFilters" :key="key">
         <span v-if="(key === 'category') && value" class="label label-category">{{ value }}</span>

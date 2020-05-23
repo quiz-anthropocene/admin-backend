@@ -52,6 +52,7 @@ CONTRIBUTION_TYPE_LIST = [
     "nouvelle question",
     "commentaire application",
     "commentaire question",
+    "commentaire quiz",
 ]
 
 DEFAULT_DAILY_STAT_HOUR_SPLIT = {

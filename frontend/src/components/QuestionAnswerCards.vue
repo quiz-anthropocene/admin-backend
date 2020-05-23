@@ -46,8 +46,8 @@
         <a v-bind:href="question.answer_image_url" target="_blank">
           <img v-bind:src="question.answer_image_url" alt="une image pour illustrer la réponse" />
         </a>
-        <small v-if="question.answer_image_explanation"><i>{{ question.answer_image_explanation }}</i></small>
       </p>
+      <p v-if="question.answer_image_explanation" class="answer-image-explanation" title="Légende de l'image">Légende: {{ question.answer_image_explanation }}</p>
 
       <!-- <div class="separator-with-text"></div> -->
       <hr class="custom-separator" />
@@ -61,57 +61,13 @@
 
     </div>
 
-    <div v-if="question && questionSubmitted" class="card-feedback small">
-      <h3>Votre avis compte !</h3>
-      <!-- Option to hide card ? -->
-
-      <div class="row margin-top-bottom-10">
-        <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light small" title="J'ai aimé cette question" @click="submitFeedback('like')" :disabled="feedbackSubmitted">👍<span class="fake-link"></span></button>
-        <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light small" title="Je n'ai pas aimé cette question" @click="submitFeedback('dislike')" :disabled="feedbackSubmitted">👎<span class="fake-link"></span></button>
-        <div v-if="feedbackSubmitted">Merci 💯</div>
-        <button class="btn btn-sm btn-primary-light small" title="Votre avis sur la question" @click="showContributionForm = true">💬&nbsp;<span class="fake-link">Suggérer une modification</span></button>
-      </div>
-
-      <!-- Contribution form -->
-      <template v-if="showContributionForm">
-        <hr class="custom-separator" />
-        <form @submit.prevent="submitContribution" v-if="!contributionSubmitted">
-          <h3 class="margin-bottom-0">
-            <label for="contribution_text">Votre suggestion ou commentaire sur la question <span class="color-red">*</span></label>
-          </h3>
-          <p v-if="!question.answer_explanation || !question.answer_accessible_url || !question.answer_image_url"><i>
-            (donnée(s) manquante à cette question: <span v-if="!question.answer_explanation">une explication, </span><span v-if="!question.answer_accessible_url">un lien, </span><span v-if="!question.answer_image_url">une image</span>)
-          </i></p>
-          <div class="row">
-            <div class="col">
-              <textarea id="contribution_text" class="form-control" rows="2" v-model="contribution.text" required></textarea>
-              <p>
-                <button type="submit" class="btn btn-sm" :class="contribution.text ? 'btn-primary' : 'btn-outline-primary'" :disabled="!contribution.text">📩&nbsp;Envoyer !</button>
-              </p>
-            </div>
-          </div>
-        </form>
-        <div v-if="contributionSubmitted && loading" class="loading">
-          <p>Envoi de votre suggestion...</p>
-        </div>
-
-        <div v-if="contributionSubmitted && error" class="error">
-          <h3>Il y a eu une erreur 😢</h3>
-          <p>{{ error }}</p>
-        </div>
-
-        <div v-if="contributionSubmitted && contributionResponse">
-          <h3>Merci beaucoup 💯</h3>
-          <p>On fera de notre mieux pour prendre en compte votre suggestion.</p>
-        </div>
-      </template>
-
-    </div>
+    <FeedbackCard v-if="question && questionSubmitted" v-bind:context="{ source: 'question', item: question }" />
   </section>
 </template>
 
 <script>
 import DifficultyBadge from '../components/DifficultyBadge.vue'
+import FeedbackCard from '../components/FeedbackCard.vue'
 
 export default {
   name: 'QuestionAnswerCards',
@@ -120,7 +76,8 @@ export default {
     context: Object
   },
   components: {
-    DifficultyBadge
+    DifficultyBadge,
+    FeedbackCard
   },
 
   data() {
@@ -131,18 +88,6 @@ export default {
       questionSubmitted: false,
       questionSuccess: null,
       questionSuccessMessageList: ["C'est exact", "En effet", "Bien vu", "Félicitations", "Bravo"],
-      // contribution
-      contribution: {
-        text: "",
-        description: `Question #${this.question.id} - ${this.question.category} - ${this.question.text}`,
-        type: "commentaire question"
-      },
-      showContributionForm: false,
-      feedbackSubmitted: false,
-      contributionSubmitted: false,
-      contributionResponse: null,
-      loading: false,
-      error: null,
     }
   },
 
@@ -171,6 +116,7 @@ export default {
       this.answerPicked = '';
       this.questionSubmitted = false;
       this.questionSuccess = null;
+      // this.feedbackSubmitted = false;
     },
     initContribution() {
       this.contribution = {
@@ -223,60 +169,12 @@ export default {
       .then(response => {
         return response.json()
       })
+      // eslint-disable-next-line
       .then(data => {
-        console.log(data);
+        // console.log(data);
       })
       .catch(error => {
         console.log(error)
-      })
-    },
-    submitFeedback(feedback_choice) {
-      this.feedbackSubmitted = feedback_choice;
-      this.error = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/${this.question.id}/feedbacks`, {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          choice: feedback_choice,
-          source: this.context.source
-        })
-      })
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        console.log(data);
-      })
-      .catch(error => {
-        console.log(error)
-      })
-    },
-    submitContribution() {
-      this.contributionSubmitted = true;
-      this.error = this.contributionResponse = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/contribute`, {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(this.contribution)
-      })
-      .then(response => {
-        this.loading = false
-        return response.json()
-      })
-      .then(data => {
-        this.contributionResponse = data;
-      })
-      .catch(error => {
-        console.log(error)
-        this.error = error;
       })
     }
   }
@@ -314,17 +212,8 @@ export default {
   max-width: 100%;
   margin: auto;
 }
-
-.card-feedback {
-  border: 1px solid var(--primary);
-  border-radius: 5px;
-  margin: 10px 0px;
-  background-color: #F8F8F8;
-}
-
-.btn-feedback {
-  margin: 0;
-  padding: 0;
+.answer-image-explanation {
+  font-style: italic;
   font-size: small;
 }
 

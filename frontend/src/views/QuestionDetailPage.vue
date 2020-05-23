@@ -1,6 +1,6 @@
 <template>
   <section>
-    <QuestionAnswerCards v-if="question && questionsDisplayedCount" v-bind:question="question" v-bind:context="{ question_number: (questionIndex+1)+' / '+questionsDisplayedCount, source: 'question' }" @answerSubmitted="answerSubmitted($event)" />
+    <QuestionAnswerCards v-if="question && questionsDisplayedCount" v-bind:question="question" v-bind:context="{ question_number: (questionIndex+1)+' / '+questionsDisplayedCount, source: 'question' }" @answerSubmitted="onAnswerSubmitted" />
 
     <div v-if="question" class="small" :key="question.id"> <!-- INFO: :key is to force reload, avoid button staying blur -->
       <!-- <br /> -->
@@ -67,7 +67,7 @@ export default {
 
   methods: {
     // eslint-disable-next-line
-    answerSubmitted(data) {
+    onAnswerSubmitted(data) {
       this.emphasisNextButton = true; // !this.emphasisNextButton;
     }
   }
