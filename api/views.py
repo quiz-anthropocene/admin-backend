@@ -16,6 +16,7 @@ from api.models import (
     QuestionStat,
     QuizStat,
     Contribution,
+    DailyStat,
 )
 from api.serializers import (
     QuestionSerializer,
@@ -322,7 +323,9 @@ def stats(request):
         .annotate(count=Count("publish"))
         .order_by("-count")
     )
-    question_answer_count = QuestionStat.objects.count()
+    question_answer_count = (
+        QuestionStat.objects.count() + DailyStat.objects.overall_question_answer_count()
+    )
     question_category_stats = (
         Category.objects.values("name")
         .annotate(count=Count("questions"))

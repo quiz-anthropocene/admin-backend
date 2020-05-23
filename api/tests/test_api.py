@@ -1,28 +1,34 @@
 from django.test import TestCase
 from django.urls import reverse
 
-from api import models
+from api.models import Question, Tag, Category, Quiz
 
 
 class ApiTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.category_1 = models.Category.objects.create(name="Cat 1")
-        cls.tag_1 = models.Tag.objects.create(name="Tag 1")
-        cls.tag_2 = models.Tag.objects.create(name="Tag 2")
-        cls.question_1 = models.Question.objects.create(
-            publish=False, author="author 1"
+        cls.category_1 = Category.objects.create(name="Cat 1")
+        cls.tag_1 = Tag.objects.create(name="Tag 1")
+        cls.tag_2 = Tag.objects.create(name="Tag 2")
+        cls.question_1 = Question.objects.create(
+            text="Q 1", publish=False, author="author 1"
         )
-        cls.question_2 = models.Question.objects.create(
-            publish=True, author="author 2", category=cls.category_1, answer_correct="a"
+        cls.question_2 = Question.objects.create(
+            text="Q 2",
+            publish=True,
+            author="author 2",
+            category=cls.category_1,
+            answer_correct="a",
         )
         cls.question_2.tags.set([cls.tag_2, cls.tag_1])
-        cls.question_3 = models.Question.objects.create(publish=True, author="author 3")
+        cls.question_3 = Question.objects.create(
+            text="Q 3", publish=True, author="author 3"
+        )
         cls.question_3.tags.add(cls.tag_2)
         cls.question_3.save()
-        cls.quiz_1 = models.Quiz.objects.create(name="quiz 1", publish=False)
+        cls.quiz_1 = Quiz.objects.create(name="quiz 1", publish=False)
         cls.quiz_1.questions.set([cls.question_1.id])
-        cls.quiz_2 = models.Quiz.objects.create(name="quiz 2", publish=True)
+        cls.quiz_2 = Quiz.objects.create(name="quiz 2", publish=True)
         cls.quiz_2.questions.set([cls.question_2.id, cls.question_3.id])
 
     def test_root(self):
@@ -162,8 +168,8 @@ class ApiTest(TestCase):
         self.assertIsInstance(response.data, dict)
         self.assertEqual(response.data["choice"], "a")
         self.assertEqual(self.question_2.stats.count(), 1)
-        self.assertEqual(self.question_2.answer_count, 1)
-        self.assertEqual(self.question_2.answer_success_count, 1)
+        self.assertEqual(self.question_2.answer_count_agg, 1)
+        self.assertEqual(self.question_2.answer_success_count_agg, 1)
         self.assertEqual(self.question_2.answer_success_rate, 100)
 
         response = self.client.post(
@@ -174,6 +180,6 @@ class ApiTest(TestCase):
         self.assertIsInstance(response.data, dict)
         self.assertEqual(response.data["choice"], "b")
         self.assertEqual(self.question_2.stats.count(), 2)
-        self.assertEqual(self.question_2.answer_count, 2)
-        self.assertEqual(self.question_2.answer_success_count, 1)
+        self.assertEqual(self.question_2.answer_count_agg, 2)
+        self.assertEqual(self.question_2.answer_success_count_agg, 1)
         self.assertEqual(self.question_2.answer_success_rate, 50)

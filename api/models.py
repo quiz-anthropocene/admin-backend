@@ -1,5 +1,6 @@
 from django.db import models
-from django.db.models import Avg
+from django.db.models import Avg, Sum
+from django.contrib.postgres.fields import JSONField
 
 from api import constants
 
@@ -172,6 +173,12 @@ class Question(models.Model):
         help_text="Le statut de la question dans le workflow de validation",
     )
     # stats
+    answer_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de réponses"
+    )
+    answer_success_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de réponses correctes"
+    )
     like_count = models.PositiveIntegerField(default=0, help_text="Le nombre de likes")
     dislike_count = models.PositiveIntegerField(
         default=0, help_text="Le nombre de dislikes"
@@ -216,35 +223,57 @@ class Question(models.Model):
 
     @property
     def like_count_agg(self):
-        return self.feedbacks.liked().count()
+        return self.like_count + self.feedbacks.liked().count()
 
     @property
     def dislike_count_agg(self):
-        return self.feedbacks.disliked().count()
+        return self.dislike_count + self.feedbacks.disliked().count()
 
     @property
-    def answer_count(self):
-        return self.stats.count()
+    def answer_count_agg(self):
+        return self.answer_count + self.stats.count()
 
     @property
-    def answer_success_count(self):
-        return self.stats.filter(choice=self.answer_correct).count()
+    def answer_success_count_agg(self):
+        return (
+            self.answer_success_count
+            + self.stats.filter(choice=self.answer_correct).count()
+        )
 
     @property
     def answer_success_rate(self):
         return (
             0
-            if (self.answer_count == 0)
-            else int((self.answer_success_count / self.answer_count) * 100)
+            if (self.answer_count_agg == 0)
+            else int((self.answer_success_count_agg / self.answer_count_agg) * 100)
         )
 
     # Admin
     tags_list_string.fget.short_description = "Tag(s)"
+    answer_count_agg.fget.short_description = "# Rép"
+    answer_success_count_agg.fget.short_description = "# Rép Corr"
+    answer_success_rate.fget.short_description = "% Rép Corr"
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"
-    answer_count.fget.short_description = "# Rép"
-    answer_success_count.fget.short_description = "# Rép Corr"
-    answer_success_rate.fget.short_description = "% Rép Corr"
+
+
+class QuestionStat(models.Model):
+    question = models.ForeignKey(
+        Question, null=True, on_delete=models.CASCADE, related_name="stats"
+    )
+    choice = models.CharField(
+        max_length=50, editable=False, help_text="La réponse choisie par l'internaute"
+    )
+    source = models.CharField(
+        max_length=50,
+        choices=constants.QUESTION_SOURCE_CHOICES,
+        default=constants.QUESTION_SOURCE_QUESTION,
+        editable=False,
+        help_text="Le contexte dans lequel a été répondu la question",
+    )
+    created = models.DateTimeField(
+        auto_now_add=True, help_text="La date & heure de la réponse"
+    )
 
 
 class QuestionFeedbackQuerySet(models.QuerySet):
@@ -278,25 +307,6 @@ class QuestionFeedback(models.Model):
     )
 
     objects = QuestionFeedbackQuerySet.as_manager()
-
-
-class QuestionStat(models.Model):
-    question = models.ForeignKey(
-        Question, null=True, on_delete=models.CASCADE, related_name="stats"
-    )
-    choice = models.CharField(
-        max_length=50, editable=False, help_text="La réponse choisie par l'internaute"
-    )
-    source = models.CharField(
-        max_length=50,
-        choices=constants.QUESTION_SOURCE_CHOICES,
-        default=constants.QUESTION_SOURCE_QUESTION,
-        editable=False,
-        help_text="Le contexte dans lequel a été répondu la question",
-    )
-    created = models.DateTimeField(
-        auto_now_add=True, help_text="La date & heure de la réponse"
-    )
 
 
 class QuizQuerySet(models.QuerySet):
@@ -359,7 +369,7 @@ class Quiz(models.Model):
         return difficulty_average["difficulty__avg"] if difficulty_average else 0
 
     @property
-    def answer_count(self):
+    def answer_count_agg(self):
         return self.stats.count()
 
 
@@ -402,3 +412,64 @@ class Contribution(models.Model):
 
     def __str__(self):
         return f"{self.text}"
+
+
+class DailyStatManager(models.Manager):
+    def overall_question_answer_count(self):
+        return self.aggregate(Sum("question_answer_count"))[
+            "question_answer_count__sum"
+        ]
+
+    def overall_question_answer_from_quiz_count(self):
+        return self.aggregate(Sum("question_answer_from_quiz_count"))[
+            "question_answer_from_quiz_count__sum"
+        ]
+
+    def overall_quiz_answer_count(self):
+        return self.aggregate(Sum("quiz_answer_count"))["quiz_answer_count__sum"]
+
+    def overall_question_feedback_count(self):
+        return self.aggregate(Sum("question_feedback_count"))[
+            "question_feedback_count__sum"
+        ]
+
+    def overall_question_feedback_from_quiz_count(self):
+        return self.aggregate(Sum("question_feedback_from_quiz_count"))[
+            "question_feedback_from_quiz_count__sum"
+        ]
+
+
+class DailyStat(models.Model):
+    date = models.DateField(help_text="Le jour de la statistique")
+    question_answer_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de questions répondues"
+    )
+    question_answer_from_quiz_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de questions répondues au sein de quizs"
+    )
+    quiz_answer_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de quizs répondus"
+    )
+    question_feedback_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de feedbacks aux questions"
+    )
+    question_feedback_from_quiz_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de feedbacks aux questions au sein de quizs"
+    )
+    hour_split = JSONField(
+        default=constants.daily_stat_hour_split_jsonfield_default_value,
+        help_text="Les statistiques par heure",
+    )
+    created = models.DateTimeField(
+        auto_now_add=True, help_text="La date & heure de la stat journalière"
+    )
+
+    objects = DailyStatManager()
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=["date"], name="unique stat date")
+        ]
+
+    def __str__(self):
+        return f"{self.date}"
