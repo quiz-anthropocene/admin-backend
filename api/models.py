@@ -123,7 +123,14 @@ class Question(models.Model):
     answer_option_d = models.CharField(
         max_length=150, blank=True, help_text="La réponse d"
     )
-    answer_correct = models.CharField(max_length=50, help_text="a, b, c ou d")
+    answer_correct = models.CharField(
+        max_length=50,
+        choices=zip(
+            constants.QUESTION_ANSWER_CHOICE_LIST,
+            constants.QUESTION_ANSWER_CHOICE_LIST,
+        ),
+        help_text="a, b, c ou d",
+    )
     has_ordered_answers = models.BooleanField(
         default=True,
         help_text="Les choix de réponse sont dans un ordre figé, "
@@ -257,12 +264,18 @@ class Question(models.Model):
     dislike_count_agg.fget.short_description = "# Dislike"
 
 
-class QuestionStat(models.Model):
+class QuestionAnswerEvent(models.Model):
     question = models.ForeignKey(
         Question, null=True, on_delete=models.CASCADE, related_name="stats"
     )
     choice = models.CharField(
-        max_length=50, editable=False, help_text="La réponse choisie par l'internaute"
+        max_length=50,
+        choices=zip(
+            constants.QUESTION_ANSWER_CHOICE_LIST,
+            constants.QUESTION_ANSWER_CHOICE_LIST,
+        ),
+        editable=False,
+        help_text="La réponse choisie par l'internaute",
     )
     source = models.CharField(
         max_length=50,
@@ -276,22 +289,22 @@ class QuestionStat(models.Model):
     )
 
 
-class QuestionFeedbackQuerySet(models.QuerySet):
+class QuestionFeedbackEventQuerySet(models.QuerySet):
     def liked(self):
-        return self.filter(choice=constants.QUESTION_FEEDBACK_LIKE)
+        return self.filter(choice=constants.FEEDBACK_LIKE)
 
     def disliked(self):
-        return self.filter(choice=constants.QUESTION_FEEDBACK_DISLIKE)
+        return self.filter(choice=constants.FEEDBACK_DISLIKE)
 
 
-class QuestionFeedback(models.Model):
+class QuestionFeedbackEvent(models.Model):
     question = models.ForeignKey(
         Question, null=True, on_delete=models.CASCADE, related_name="feedbacks"
     )
     choice = models.CharField(
         max_length=50,
-        choices=constants.QUESTION_FEEDBACK_CHOICES,
-        default=constants.QUESTION_FEEDBACK_LIKE,
+        choices=constants.FEEDBACK_CHOICES,
+        default=constants.FEEDBACK_LIKE,
         editable=False,
         help_text="L'avis laissé sur la question",
     )
@@ -300,13 +313,13 @@ class QuestionFeedback(models.Model):
         choices=constants.QUESTION_SOURCE_CHOICES,
         default=constants.QUESTION_SOURCE_QUESTION,
         editable=False,
-        help_text="Le contexte dans lequel a été envoyé le feedback",
+        help_text="Le contexte dans lequel a été envoyé l'avis",
     )
     created = models.DateTimeField(
-        auto_now_add=True, help_text="La date & heure de la réponse"
+        auto_now_add=True, help_text="La date & heure de l'avis"
     )
 
-    objects = QuestionFeedbackQuerySet.as_manager()
+    objects = QuestionFeedbackEventQuerySet.as_manager()
 
 
 class QuizQuerySet(models.QuerySet):
@@ -332,6 +345,11 @@ class Quiz(models.Model):
     publish = models.BooleanField(
         default=False, help_text="Le quiz est prêt à être publié"
     )
+    like_count = models.PositiveIntegerField(default=0, help_text="Le nombre de likes")
+    dislike_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de dislikes"
+    )
+    # timestamps
     created = models.DateField(
         auto_now_add=True, help_text="La date de création du quiz"
     )
@@ -377,6 +395,14 @@ class Quiz(models.Model):
         return difficulty_average["difficulty__avg"] if difficulty_average else 0
 
     @property
+    def like_count_agg(self):
+        return self.like_count + self.feedbacks.liked().count()
+
+    @property
+    def dislike_count_agg(self):
+        return self.dislike_count + self.feedbacks.disliked().count()
+
+    @property
     def answer_count_agg(self):
         return self.stats.count()
 
@@ -385,9 +411,11 @@ class Quiz(models.Model):
     tags_list_string.fget.short_description = "Tag(s)"
     difficulty_average.fget.short_description = "Difficulté moyenne"
     answer_count_agg.fget.short_description = "# Rép"
+    like_count_agg.fget.short_description = "# Like"
+    dislike_count_agg.fget.short_description = "# Dislike"
 
 
-class QuizStat(models.Model):
+class QuizAnswerEvent(models.Model):
     quiz = models.ForeignKey(
         Quiz, null=True, on_delete=models.CASCADE, related_name="stats"
     )
@@ -402,6 +430,32 @@ class QuizStat(models.Model):
     @property
     def question_count(self):
         return self.quiz.question_count
+
+
+class QuizFeedbackEventQuerySet(models.QuerySet):
+    def liked(self):
+        return self.filter(choice=constants.FEEDBACK_LIKE)
+
+    def disliked(self):
+        return self.filter(choice=constants.FEEDBACK_DISLIKE)
+
+
+class QuizFeedbackEvent(models.Model):
+    quiz = models.ForeignKey(
+        Quiz, null=True, on_delete=models.CASCADE, related_name="feedbacks"
+    )
+    choice = models.CharField(
+        max_length=50,
+        choices=constants.FEEDBACK_CHOICES,
+        default=constants.FEEDBACK_LIKE,
+        editable=False,
+        help_text="L'avis laissé sur le quiz",
+    )
+    created = models.DateTimeField(
+        auto_now_add=True, help_text="La date & heure de l'avis"
+    )
+
+    objects = QuizFeedbackEventQuerySet.as_manager()
 
 
 class Contribution(models.Model):
@@ -469,6 +523,9 @@ class DailyStat(models.Model):
     )
     question_feedback_from_quiz_count = models.PositiveIntegerField(
         default=0, help_text="Le nombre de feedbacks aux questions au sein de quizs"
+    )
+    quiz_feedback_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de feedbacks aux quizs"
     )
     hour_split = JSONField(
         default=constants.daily_stat_hour_split_jsonfield_default_value,

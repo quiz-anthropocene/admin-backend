@@ -12,9 +12,10 @@ from api.models import (
     Category,
     Tag,
     Quiz,
-    QuestionFeedback,
-    QuestionStat,
-    QuizStat,
+    QuestionAnswerEvent,
+    QuestionFeedbackEvent,
+    QuizAnswerEvent,
+    QuizFeedbackEvent,
     Contribution,
     DailyStat,
 )
@@ -24,9 +25,10 @@ from api.serializers import (
     TagSerializer,
     QuizSerializer,
     QuizFullSerializer,
-    QuestionFeedbackSerializer,
-    QuestionStatSerializer,
-    QuizStatSerializer,
+    QuestionAnswerEventSerializer,
+    QuestionFeedbackEventSerializer,
+    QuizAnswerEventSerializer,
+    QuizFeedbackEventSerializer,
     ContributionSerializer,
 )
 
@@ -87,9 +89,9 @@ def question_detail(request, pk):
 
 
 @api_view(["POST"])
-def question_detail_feedbacks(request, pk):
+def question_detail_answer_event(request, pk):
     """
-    Update the question feedbacks
+    Create a question answer event
     """
     try:
         question = Question.objects.get(pk=pk)
@@ -97,20 +99,20 @@ def question_detail_feedbacks(request, pk):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == "POST":
-        question_feedback = QuestionFeedback.objects.create(
+        question_answer_event = QuestionAnswerEvent.objects.create(
             question=question,
             choice=request.data["choice"],
             source=request.data["source"],
         )
 
-        serializer = QuestionFeedbackSerializer(question_feedback)
+        serializer = QuestionAnswerEventSerializer(question_answer_event)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
 @api_view(["POST"])
-def question_detail_stats(request, pk):
+def question_detail_feedback_event(request, pk):
     """
-    Update the question stats
+    Create a question feedback event
     """
     try:
         question = Question.objects.get(pk=pk)
@@ -118,13 +120,13 @@ def question_detail_stats(request, pk):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == "POST":
-        question_stat = QuestionStat.objects.create(
+        question_feedback_event = QuestionFeedbackEvent.objects.create(
             question=question,
             choice=request.data["choice"],
             source=request.data["source"],
         )
 
-        serializer = QuestionStatSerializer(question_stat)
+        serializer = QuestionFeedbackEventSerializer(question_feedback_event)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
@@ -210,7 +212,7 @@ def author_list(request):
 
 
 @api_view(["GET"])
-def difficulty_list(request):
+def difficulty_level_list(request):
     """
     List all difficulty levels (with the number of questions per difficulty)
     """
@@ -261,9 +263,9 @@ def quiz_list(request):
 
 
 @api_view(["POST"])
-def quiz_detail_stats(request, pk):
+def quiz_detail_answer_event(request, pk):
     """
-    Update the quiz stats
+    Update the quiz answer event
     """
     try:
         quiz = Quiz.objects.get(pk=pk)
@@ -271,11 +273,30 @@ def quiz_detail_stats(request, pk):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == "POST":
-        quiz_stat = QuizStat.objects.create(
+        quiz_answer_event = QuizAnswerEvent.objects.create(
             quiz=quiz, answer_success_count=request.data["answer_success_count"]
         )
 
-        serializer = QuizStatSerializer(quiz_stat)
+        serializer = QuizAnswerEventSerializer(quiz_answer_event)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+@api_view(["POST"])
+def quiz_detail_feedback_event(request, pk):
+    """
+    Create a quiz feedback event
+    """
+    try:
+        quiz = Quiz.objects.get(pk=pk)
+    except Quiz.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == "POST":
+        quiz_feedback_event = QuizFeedbackEvent.objects.create(
+            quiz=quiz, choice=request.data["choice"],
+        )
+
+        serializer = QuizFeedbackEventSerializer(quiz_feedback_event)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
@@ -324,7 +345,8 @@ def stats(request):
         .order_by("-count")
     )
     question_answer_count = (
-        QuestionStat.objects.count() + DailyStat.objects.overall_question_answer_count()
+        QuestionAnswerEvent.objects.count()
+        + DailyStat.objects.overall_question_answer_count()
     )
     question_category_stats = (
         Category.objects.values("name")

@@ -155,7 +155,7 @@ export default {
       // tell parent component
       this.$emit('answerSubmitted', { question_id: this.question.id, success: this.questionSuccess });
       // stats
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/${this.question.id}/stats`, {
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/${this.question.id}/answer-events`, {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

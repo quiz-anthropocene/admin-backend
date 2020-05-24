@@ -6,7 +6,7 @@ from django.core import management
 from django.test import TestCase
 
 from api import constants
-from api.models import Question, QuestionStat, QuestionFeedback, DailyStat
+from api.models import Question, QuestionAnswerEvent, QuestionFeedbackEvent, DailyStat
 
 
 class CleanupQuestionStatsCommandTest(TestCase):
@@ -14,22 +14,22 @@ class CleanupQuestionStatsCommandTest(TestCase):
     def setUpTestData(cls):
         cls.question_1 = Question.objects.create(answer_correct="a")
         cls.question_2 = Question.objects.create(answer_correct="b")
-        QuestionStat.objects.create(
+        QuestionAnswerEvent.objects.create(
             question_id=cls.question_1.id, choice="a", source="question"
         )
-        QuestionStat.objects.create(
+        QuestionAnswerEvent.objects.create(
             question_id=cls.question_1.id, choice="b", source="question"
         )
-        QuestionStat.objects.create(
+        QuestionAnswerEvent.objects.create(
             question_id=cls.question_1.id, choice="c", source="quiz"
         )
-        QuestionFeedback.objects.create(
+        QuestionFeedbackEvent.objects.create(
             question_id=cls.question_1.id, choice="like", source="question"
         )
-        QuestionFeedback.objects.create(
+        QuestionFeedbackEvent.objects.create(
             question_id=cls.question_1.id, choice="dislike", source="question"
         )
-        QuestionFeedback.objects.create(
+        QuestionFeedbackEvent.objects.create(
             question_id=cls.question_1.id, choice="like", source="quiz"
         )
         DailyStat.objects.create(
@@ -39,30 +39,30 @@ class CleanupQuestionStatsCommandTest(TestCase):
             hour_split=constants.DEFAULT_DAILY_STAT_HOUR_SPLIT,
         )
         with freeze_time("2020-04-30 12:30:00"):
-            QuestionStat.objects.create(
+            QuestionAnswerEvent.objects.create(
                 question_id=cls.question_1.id, choice="a", source="question"
             )
-            QuestionStat.objects.create(
+            QuestionAnswerEvent.objects.create(
                 question_id=cls.question_1.id, choice="b", source="question"
             )
-            QuestionStat.objects.create(
+            QuestionAnswerEvent.objects.create(
                 question_id=cls.question_1.id, choice="c", source="quiz"
             )
-            QuestionFeedback.objects.create(
+            QuestionFeedbackEvent.objects.create(
                 question_id=cls.question_1.id, choice="like", source="question"
             )
-            QuestionFeedback.objects.create(
+            QuestionFeedbackEvent.objects.create(
                 question_id=cls.question_1.id, choice="dislike", source="question"
             )
-            QuestionFeedback.objects.create(
+            QuestionFeedbackEvent.objects.create(
                 question_id=cls.question_1.id, choice="like", source="quiz"
             )
 
     def test_question_updates(self):
-        self.assertEqual(QuestionStat.objects.count(), 6)
-        self.assertEqual(QuestionFeedback.objects.count(), 6)
+        self.assertEqual(QuestionAnswerEvent.objects.count(), 6)
+        self.assertEqual(QuestionFeedbackEvent.objects.count(), 6)
 
-        management.call_command("cleanup_question_stats")
+        management.call_command("cleanup_app_stats")
 
         question_1_updated = Question.objects.get(pk=self.question_1.id)
         daily_stat_today = DailyStat.objects.get(date=datetime.utcnow().date())
@@ -71,12 +71,12 @@ class CleanupQuestionStatsCommandTest(TestCase):
         # question answer stats
         self.assertEqual(question_1_updated.answer_count, 6)
         self.assertEqual(question_1_updated.answer_success_count, 2)
-        self.assertEqual(QuestionStat.objects.count(), 0)
+        self.assertEqual(QuestionAnswerEvent.objects.count(), 0)
 
         # question feedback stats
         self.assertEqual(question_1_updated.like_count, 4)
         self.assertEqual(question_1_updated.dislike_count, 2)
-        self.assertEqual(QuestionFeedback.objects.count(), 0)
+        self.assertEqual(QuestionFeedbackEvent.objects.count(), 0)
 
         # daily stats today
         self.assertEqual(daily_stat_today.question_answer_count, 3)

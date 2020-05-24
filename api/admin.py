@@ -5,7 +5,6 @@ from datetime import datetime
 # from io import StringIO
 
 from django.contrib import admin
-from django.conf import settings
 from django.http import HttpResponse
 from django.core import serializers
 from django.core.serializers.json import DjangoJSONEncoder
@@ -23,9 +22,10 @@ from api.models import (
     Category,
     Tag,
     Quiz,
-    QuestionStat,
-    QuestionFeedback,
-    QuizStat,
+    QuestionAnswerEvent,
+    QuestionFeedbackEvent,
+    QuizAnswerEvent,
+    QuizFeedbackEvent,
     DailyStat,
     Contribution,
 )
@@ -106,8 +106,10 @@ class ExportMixin:
     def export_all_questiontag_as_yaml(self, request, queryset):
         return self.export_as_yaml(request, Tag.objects.all().order_by("pk"))
 
-    def export_all_questionstat_as_yaml(self, request, queryset):
-        return self.export_as_yaml(request, QuestionStat.objects.all().order_by("pk"))
+    def export_all_questionanswerevent_as_yaml(self, request, queryset):
+        return self.export_as_yaml(
+            request, QuestionAnswerEvent.objects.all().order_by("pk")
+        )
 
     # def export_all_as_yaml(self, request):
     #     meta = self.model._meta
@@ -128,7 +130,7 @@ class ExportMixin:
     export_all_question_as_yaml.short_description = "Export All (YAML)"
     export_all_questioncategory_as_yaml.short_description = "Export All (YAML)"
     export_all_questiontag_as_yaml.short_description = "Export All (YAML)"
-    export_all_questionstat_as_yaml.short_description = "Export All (YAML)"
+    export_all_questionanswerevent_as_yaml.short_description = "Export All (YAML)"
 
 
 class QuestionResource(resources.ModelResource):
@@ -332,11 +334,13 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
         "tags_list_string",
         "difficulty_average",
         "answer_count_agg",
+        "like_count_agg",
+        "dislike_count_agg",
     )
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
 
 
-class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
+class QuestionAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
         "id",
         "question",
@@ -350,27 +354,30 @@ class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
         "export_as_csv",
         "export_as_json",
         "export_as_yaml",
-        "export_all_questionstat_as_yaml",
+        "export_all_questionanswerevent_as_yaml",
     ]
+
+    def get_readonly_fields(self, request, obj=None):
+        return [f.name for f in obj._meta.fields]
+
+    def has_change_permission(self, request, obj=None):
+        return False
 
     def changelist_view(self, request, extra_context=None):
         """
         show chart of answers per day
         https://dev.to/danihodovic/integrating-chart-js-with-django-admin-1kjb
 
-        Corresponding template in templates/admin/api/questionstat/change_list.html
+        Corresponding template in templates/admin/api/questionanswerevent/change_list.html
         """
         # Aggregate answers per day
-        if settings.DEBUG:  # sqlite
-            chart_data_query = QuestionStat.objects.extra(
-                select={"day": "date(created)"}
-            )
-        else:  # postgresql
-            chart_data_query = QuestionStat.objects.extra(
+        chart_data_query = (
+            QuestionAnswerEvent.objects.extra(
                 select={"day": "to_char(created, 'YYYY-MM-DD')"}
             )
-        chart_data_query = (
-            chart_data_query.values("day").annotate(y=Count("created")).order_by("-day")
+            .values("day")
+            .annotate(y=Count("created"))
+            .order_by("-day")
         )
 
         # get answers since today
@@ -391,7 +398,7 @@ class QuestionStatAdmin(admin.ModelAdmin, ExportMixin):
         return super().changelist_view(request, extra_context=extra_context)
 
 
-class QuestionFeedbackAdmin(admin.ModelAdmin, ExportMixin):
+class QuestionFeedbackEventAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
         "id",
         "question",
@@ -405,11 +412,17 @@ class QuestionFeedbackAdmin(admin.ModelAdmin, ExportMixin):
         "export_as_csv",
         "export_as_json",
         "export_as_yaml",
-        # "export_all_questionstat_as_yaml",
+        # "export_all_questionanswerevent_as_yaml",
     ]
 
+    def get_readonly_fields(self, request, obj=None):
+        return [f.name for f in obj._meta.fields]
 
-class QuizStatAdmin(admin.ModelAdmin, ExportMixin):
+    def has_change_permission(self, request, obj=None):
+        return False
+
+
+class QuizAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
         "id",
         "quiz",
@@ -421,22 +434,28 @@ class QuizStatAdmin(admin.ModelAdmin, ExportMixin):
     ordering = ("id",)
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
 
+    def get_readonly_fields(self, request, obj=None):
+        return [f.name for f in obj._meta.fields] + ["question_count"]
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
     def changelist_view(self, request, extra_context=None):
         """
         show chart of answers per day
         https://dev.to/danihodovic/integrating-chart-js-with-django-admin-1kjb
 
-        Corresponding template in templates/admin/api/quizstat/change_list.html
+        Corresponding template in templates/admin/api/quizanswerevent/change_list.html
         """
         # Aggregate answers per day
-        if settings.DEBUG:  # sqlite
-            chart_data_query = QuizStat.objects.extra(select={"day": "date(created)"})
-        else:  # postgresql
-            chart_data_query = QuizStat.objects.extra(
+        # chart_data_query = QuizAnswerEvent.objects.extra(select={"day": "date(created)"}) # sqlite
+        chart_data_query = (
+            QuizAnswerEvent.objects.extra(
                 select={"day": "to_char(created, 'YYYY-MM-DD')"}
             )
-        chart_data_query = (
-            chart_data_query.values("day").annotate(y=Count("created")).order_by("-day")
+            .values("day")
+            .annotate(y=Count("created"))
+            .order_by("-day")
         )
 
         # get answers since today
@@ -455,6 +474,29 @@ class QuizStatAdmin(admin.ModelAdmin, ExportMixin):
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)
+
+
+class QuizFeedbackEventAdmin(admin.ModelAdmin, ExportMixin):
+    list_display = (
+        "id",
+        "quiz",
+        "choice",
+        "created",
+    )
+    # list_filter = ("source",)
+    ordering = ("id",)
+    actions = [
+        "export_as_csv",
+        "export_as_json",
+        "export_as_yaml",
+        # "export_all_questionanswerevent_as_yaml",
+    ]
+
+    def get_readonly_fields(self, request, obj=None):
+        return [f.name for f in obj._meta.fields]
+
+    def has_change_permission(self, request, obj=None):
+        return False
 
 
 class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
@@ -468,17 +510,13 @@ class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
     )
     list_filter = ("date",)
     ordering = ("id",)
-    readonly_fields = (
-        "date",
-        "question_answer_count",
-        "question_answer_from_quiz_count",
-        "quiz_answer_count",
-        "question_feedback_count",
-        "question_feedback_from_quiz_count",
-        "hour_split",
-        "created",
-    )
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
+
+    def get_readonly_fields(self, request, obj=None):
+        return [f.name for f in obj._meta.fields]
+
+    def has_change_permission(self, request, obj=None):
+        return False
 
     def changelist_view(self, request, extra_context=None):
         """
@@ -565,9 +603,10 @@ admin.site.register(Question, QuestionAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Tag, TagAdmin)
 admin.site.register(Quiz, QuizAdmin)
-admin.site.register(QuestionStat, QuestionStatAdmin)
-admin.site.register(QuestionFeedback, QuestionFeedbackAdmin)
-admin.site.register(QuizStat, QuizStatAdmin)
+admin.site.register(QuestionAnswerEvent, QuestionAnswerEventAdmin)
+admin.site.register(QuestionFeedbackEvent, QuestionFeedbackEventAdmin)
+admin.site.register(QuizAnswerEvent, QuizAnswerEventAdmin)
+admin.site.register(QuizFeedbackEvent, QuizFeedbackEventAdmin)
 admin.site.register(DailyStat, DailyStatAdmin)
 admin.site.register(Contribution, ContributionAdmin)
 admin.site.register(admin.models.LogEntry, LogEntryAdmin)

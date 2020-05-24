@@ -73,7 +73,7 @@ export default {
       this.feedbackSubmitted = feedback_choice;
       this.error = null;
       this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/${this.context.item.id}/feedbacks`, {
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/${(this.context.source === 'question') ? 'questions' : 'quizzes'}/${this.context.item.id}/feedback-events`, {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -81,7 +81,7 @@ export default {
         },
         body: JSON.stringify({
           choice: feedback_choice,
-          source: this.context.source
+          source: this.context.source // only for 'questions'
         })
       })
       .then(response => {

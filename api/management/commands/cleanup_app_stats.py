@@ -4,19 +4,19 @@ from django.core.management import BaseCommand
 
 from api.models import (
     Question,
-    QuestionStat,
-    QuestionFeedback,
+    QuestionAnswerEvent,
+    QuestionFeedbackEvent,
     DailyStat,
 )
 
 
-def cleanup_question_stats():
+def cleanup_question_answer_events():
     """
-    cleanup QuestionStat
+    cleanup QuestionAnswerEvent
     """
-    print("===== starting QuestionStat cleanup")
+    print("===== starting QuestionAnswerEvent cleanup")
 
-    question_stats = QuestionStat.objects.all()
+    question_stats = QuestionAnswerEvent.objects.all()
     question_stats_df = pd.DataFrame.from_records(question_stats.values())
     print(f"{question_stats_df.shape[0]} items")
 
@@ -91,16 +91,16 @@ def cleanup_question_stats():
 
         # delete all processed question_stats
         question_stats.delete()
-        print("QuestionStat deleted")
+        print("QuestionAnswerEvent deleted")
 
 
-def cleanup_question_feedbacks():
+def cleanup_question_feedback_events():
     """
-    cleanup QuestionFeedback
+    cleanup QuestionFeedbackEvent
     """
-    print("===== starting QuestionFeedback cleanup")
+    print("===== starting QuestionFeedbackEvent cleanup")
 
-    question_feedbacks = QuestionFeedback.objects.all()
+    question_feedbacks = QuestionFeedbackEvent.objects.all()
     question_feedbacks_df = pd.DataFrame.from_records(question_feedbacks.values())
     print(f"{question_feedbacks_df.shape[0]} items")
 
@@ -181,29 +181,39 @@ def cleanup_question_feedbacks():
 
         # delete all processed question_feedbacks
         question_feedbacks.delete()
-        print("QuestionFeedback deleted")
+        print("QuestionFeedbackEvent deleted")
 
 
-def cleanup_quiz_stats():
+def cleanup_quiz_answer_events():
     """
-    cleanup QuizStat
+    cleanup QuizAnswerEvent
 
     TODO: how to keep score ?
     """
     pass
 
 
+def cleanup_quiz_feedback_events():
+    """
+    cleanup QuizFeedbackEvent
+
+    TODO: 'quiz_feedback_count' field was added, need to update past instances
+    """
+    pass
+
+
 class Command(BaseCommand):
     """
-    python manage.py cleanup_question_stats
+    python manage.py cleanup_app_stats
     """
 
-    help = """Group and clean question stats"""
+    help = """Group and clean application stats"""
 
     def handle(self, *args, **kwargs):
-        cleanup_question_stats()
-        cleanup_question_feedbacks()
-        # cleanup_quiz_stats()
+        cleanup_question_answer_events()
+        cleanup_question_feedback_events()
+        # cleanup_quiz_answer_events()
+        # cleanup_quiz_feedback_events()
 
 
 """

@@ -5,9 +5,10 @@ from api.models import (
     Category,
     Tag,
     Quiz,
-    QuestionFeedback,
-    QuestionStat,
-    QuizStat,
+    QuestionAnswerEvent,
+    QuestionFeedbackEvent,
+    QuizAnswerEvent,
+    QuizFeedbackEvent,
     Contribution,
 )
 
@@ -91,24 +92,24 @@ class QuestionSerializer(serializers.ModelSerializer):
 
 
 """
-QUESTION FEEDBACKS
+QUESTION ANSWER EVENT
 """
 
 
-class QuestionFeedbackSerializer(serializers.ModelSerializer):
+class QuestionAnswerEventSerializer(serializers.ModelSerializer):
     class Meta:
-        model = QuestionFeedback
+        model = QuestionAnswerEvent
         fields = ["question_id", "choice", "source", "created"]
 
 
 """
-QUESTION STATS
+QUESTION FEEDBACK EVENT
 """
 
 
-class QuestionStatSerializer(serializers.ModelSerializer):
+class QuestionFeedbackEventSerializer(serializers.ModelSerializer):
     class Meta:
-        model = QuestionStat
+        model = QuestionFeedbackEvent
         fields = ["question_id", "choice", "source", "created"]
 
 
@@ -157,14 +158,25 @@ class QuizFullSerializer(serializers.ModelSerializer):
 
 
 """
-QUIZ STATS
+QUIZ ANSWER EVENT
 """
 
 
-class QuizStatSerializer(serializers.ModelSerializer):
+class QuizAnswerEventSerializer(serializers.ModelSerializer):
     class Meta:
-        model = QuizStat
+        model = QuizAnswerEvent
         fields = ["quiz_id", "answer_success_count", "created"]
+
+
+"""
+QUIZ FEEDBACK EVENT
+"""
+
+
+class QuizFeedbackEventSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = QuizFeedbackEvent
+        fields = ["quiz_id", "choice", "created"]
 
 
 """

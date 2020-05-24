@@ -34,11 +34,13 @@ QUESTION_DIFFICULTY_CHOICES = [
     (4, "Expert"),
 ]
 
-QUESTION_FEEDBACK_LIKE = "like"
-QUESTION_FEEDBACK_DISLIKE = "dislike"
-QUESTION_FEEDBACK_CHOICES = [
-    (QUESTION_FEEDBACK_LIKE, "Positif"),
-    (QUESTION_FEEDBACK_DISLIKE, "Négatif"),
+QUESTION_ANSWER_CHOICE_LIST = ["a", "b", "c", "d"]
+
+FEEDBACK_LIKE = "like"
+FEEDBACK_DISLIKE = "dislike"
+FEEDBACK_CHOICES = [
+    (FEEDBACK_LIKE, "Positif"),
+    (FEEDBACK_DISLIKE, "Négatif"),
 ]
 
 QUESTION_SOURCE_QUESTION = "question"
@@ -56,174 +58,15 @@ CONTRIBUTION_TYPE_LIST = [
 ]
 
 DEFAULT_DAILY_STAT_HOUR_SPLIT = {
-    "0": {
+    str(h): {
         "question_answer_count": 0,
         "question_answer_from_quiz_count": 0,
         "quiz_answer_count": 0,
         "question_feedback_count": 0,
         "question_feedback_from_quiz_count": 0,
-    },
-    "1": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "2": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "3": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "4": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "5": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "6": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "7": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "8": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "9": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "10": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "11": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "12": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "13": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "14": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "15": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "16": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "17": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "18": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "19": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "20": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "21": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "22": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
-    "23": {
-        "question_answer_count": 0,
-        "question_answer_from_quiz_count": 0,
-        "quiz_answer_count": 0,
-        "question_feedback_count": 0,
-        "question_feedback_from_quiz_count": 0,
-    },
+        "quiz_feedback_count": 0,
+    }
+    for h in range(24)  # '0' à '23'
 }
 
 
