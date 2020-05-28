@@ -115,6 +115,10 @@ form > div {
   margin-bottom: 10px; // chaging label to inline removes it's margin-bottom of 8px...
 }
 
+.card-img-top {
+  height: 10vw;
+  object-fit: cover;
+}
 .card-body {
   padding: 10px;
 }
