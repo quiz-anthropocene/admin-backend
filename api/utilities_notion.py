@@ -12,40 +12,34 @@ Notion: connection
 
 def get_notion_client():
     # try:
-    #     client = NotionClient(token_v2=settings.TOKEN_V2)
+    #     client = NotionClient(token_v2=settings.NOTION_TOKEN_V2)
     # except Exception as e:
     #     # usually: 401 Client Error: Unauthorized for url: https://www.notion.so/api/v3/loadUserContent # noqa
     #     print(e)
     #     raise
-    client = NotionClient(token_v2=settings.TOKEN_V2)
+    client = NotionClient(token_v2=settings.NOTION_TOKEN_V2)
     return client
 
 
 """
-Notion: get table
+Notion: Contribution page
+- get table
+- get current rows
+- add row
 """
 
 
 def get_contribution_table(notion_client):
-    # page = client.get_block(settings.CONTRIBUTION_PAGE_URL)
-    table = notion_client.get_collection_view(settings.CONTRIBUTION_TABLE_URL)
+    # page = client.get_block(settings.NOTION_CONTRIBUTION_PAGE_URL)
+    table = notion_client.get_collection_view(settings.NOTION_CONTRIBUTION_TABLE_URL)
     return table
 
-
-"""
-Notion: get current rows
-"""
 
 # get rows
 # for row in table.collection.get_rows():
 #     print(row, row.created)
 #     if row.created:
 #         print(row.created.start)
-
-
-"""
-Notion: add row
-"""
 
 
 def add_contribution_row(
@@ -61,4 +55,33 @@ def add_contribution_row(
     row.description = contribution_description
     # row.created = notion.collection.NotionDate(date.today())
     row.created = notion.collection.NotionDate(datetime.now())
+    return row
+
+
+"""
+Notion: Import stats page
+- get table
+- add row
+"""
+
+
+def get_import_stats_table(notion_client):
+    # page = client.get_block(settings.NOTION_IMPORT_STATS_PAGE_URL)
+    table = notion_client.get_collection_view(
+        settings.NOTION_IMPORT_STATS_TABLE_URL + "coucou"
+    )
+    return table
+
+
+def add_import_stats_row(total, new, update):
+    # init
+    notion_client = get_notion_client()
+    import_stats_table = get_import_stats_table(notion_client)
+    # add row
+    row = import_stats_table.collection.add_row()
+    row.action = "import"
+    row.question_total = total
+    row.question_new = new
+    row.question_update = update
+    row.date = notion.collection.NotionDate(datetime.now())
     return row

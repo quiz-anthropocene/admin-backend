@@ -4,8 +4,9 @@ from datetime import datetime
 
 # from io import StringIO
 
-from django.contrib import admin
 from django.http import HttpResponse
+from django.conf import settings
+from django.contrib import admin
 from django.core import serializers
 from django.core.serializers.json import DjangoJSONEncoder
 from django.db.models import Count
@@ -17,6 +18,7 @@ from import_export.admin import ImportExportModelAdmin, DEFAULT_FORMATS
 
 # from django.core.management import call_command
 
+from api import utilities_notion
 from api.models import (
     Question,
     Category,
@@ -188,6 +190,20 @@ class QuestionResource(resources.ModelResource):
             return False
         return super(QuestionResource, self).skip_row(instance, original)
 
+    def after_import(self, dataset, result, using_transactions, dry_run, **kwargs):
+        # result.totals: OrderedDict, keys: 'new', 'update', 'delete', 'skip', 'error', 'invalid'
+        if (
+            not settings.DEBUG
+            and not dry_run
+            and not (result.totals["error"] or result.totals["invalid"])
+        ):  # noqa
+            utilities_notion.add_import_stats_row(
+                result.total_rows, result.totals["new"], result.totals["update"]
+            )
+        super(QuestionResource, self).after_import(
+            dataset, result, using_transactions, dry_run, **kwargs
+        )
+
     class Meta:
         model = Question
         skip_unchanged = True
@@ -236,6 +252,8 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
         "answer_count_agg",
         "answer_success_count_agg",
         "answer_success_rate",
+        "like_count",
+        "dislike_count",
         "like_count_agg",
         "dislike_count_agg",
     )
@@ -334,6 +352,8 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
         "tags_list_string",
         "difficulty_average",
         "answer_count_agg",
+        "like_count",
+        "dislike_count",
         "like_count_agg",
         "dislike_count_agg",
     )
