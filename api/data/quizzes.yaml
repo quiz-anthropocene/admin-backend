@@ -4,15 +4,42 @@
     name: "Chiffres clés"
     description: ''
     author: know your planet
-    created: 2020-04-16
+    image_background_url: https://www.climatecentral.org/uploads/general/show-your-stripes-header-1000x169.jpg
+    publish: true
+    like_count: 0
+    dislike_count: 0
+    created: 2020-04-17
     questions:
     - 3
-    - 16
-    - 19
-    - 21
-    - 48
-    - 59
     - 70
     - 71
     - 75
+    - 16
+    - 48
+    - 19
     - 83
+    - 21
+    - 59
+- model: api.quiz
+  pk: 2
+  fields:
+    name: "L'énergie en France 🇫🇷"
+    description: "Un aperçu rapide de la production et consommation d'énergie
+      en France"
+    author: know your planet
+    image_background_url: https://www.edf.fr/sites/default/files/mediatheque/2018/nucleaire/energie-a-z_nucleaire_prod-regions_2018.png
+    publish: true
+    like_count: 0
+    dislike_count: 0
+    created: 2020-05-25
+    questions:
+    - 259
+    - 132
+    - 135
+    - 104
+    - 11
+    - 307
+    - 184
+    - 254
+    - 210
+    - 410

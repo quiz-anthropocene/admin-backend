@@ -49,7 +49,7 @@
 - model: api.tag
   pk: 9
   fields:
-    name: "Océan"
+    name: "Océans"
     description: ''
     created: 2020-04-17
 - model: api.tag
@@ -117,7 +117,7 @@
 - model: api.tag
   pk: 20
   fields:
-    name: "Fôret"
+    name: "Fôrets"
     description: ''
     created: 2020-04-17
 - model: api.tag
@@ -288,3 +288,267 @@
     name: Montagne
     description: ''
     created: 2020-04-17
+- model: api.tag
+  pk: 49
+  fields:
+    name: IPBES
+    description: ''
+    created: 2020-04-22
+- model: api.tag
+  pk: 50
+  fields:
+    name: "Culture générale"
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 51
+  fields:
+    name: "Température"
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 52
+  fields:
+    name: "Bétail"
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 53
+  fields:
+    name: "Bâtiment"
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 54
+  fields:
+    name: Sport
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 55
+  fields:
+    name: ACV
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 56
+  fields:
+    name: Entreprise
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 57
+  fields:
+    name: Ciment
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 58
+  fields:
+    name: "Hydroéléctricité"
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 59
+  fields:
+    name: Maritime
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 60
+  fields:
+    name: "Voiture électrique"
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 61
+  fields:
+    name: '2100'
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 62
+  fields:
+    name: Stockage
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 63
+  fields:
+    name: Incendies
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 64
+  fields:
+    name: "Météo"
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 65
+  fields:
+    name: Moyen-Orient
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 66
+  fields:
+    name: Volcans
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 67
+  fields:
+    name: Chauffage
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 68
+  fields:
+    name: Soleil
+    description: ''
+    created: 2020-04-26
+- model: api.tag
+  pk: 69
+  fields:
+    name: "Montée des eaux"
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 70
+  fields:
+    name: Biogaz
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 71
+  fields:
+    name: "Hydrogène"
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 72
+  fields:
+    name: Empreinte carbone
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 73
+  fields:
+    name: Mines
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 74
+  fields:
+    name: Inondations
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 75
+  fields:
+    name: Risques
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 76
+  fields:
+    name: "Espèces invasives"
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 77
+  fields:
+    name: Biocarburant
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 78
+  fields:
+    name: Canada
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 79
+  fields:
+    name: Adaptation
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 80
+  fields:
+    name: "États-Unis"
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 81
+  fields:
+    name: Records
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 82
+  fields:
+    name: Afrique
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 83
+  fields:
+    name: Banquise
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 84
+  fields:
+    name: Inde
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 85
+  fields:
+    name: Taxes
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 86
+  fields:
+    name: Acier
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 87
+  fields:
+    name: "Géothermie"
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 88
+  fields:
+    name: Textile
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 89
+  fields:
+    name: Viande
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 90
+  fields:
+    name: Enfants
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 91
+  fields:
+    name: Australie
+    description: ''
+    created: 2020-05-20
+- model: api.tag
+  pk: 92
+  fields:
+    name: Covid-19
+    description: ''
+    created: 2020-05-28
