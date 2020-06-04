@@ -91,9 +91,6 @@ export default {
     }
   },
 
-  computed: {
-  },
-
   watch: {
     question: {
       immediate: true,

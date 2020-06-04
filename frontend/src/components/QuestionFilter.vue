@@ -92,7 +92,7 @@ export default {
       return this.$store.state.categories;
     },
     tags () {
-      return this.$store.state.tags;
+      return this.$store.state.tags.filter(t => t.question_count);
     },
     authors () {
       return this.$store.state.authors;

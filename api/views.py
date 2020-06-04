@@ -339,38 +339,16 @@ def stats(request):
     question_validation_status_in_progress_count = Question.objects.for_validation_status(
         constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS
     ).count()
-    quiz_publish_stats = (
-        Quiz.objects.values("publish")
-        .annotate(count=Count("publish"))
-        .order_by("-count")
-    )
     question_answer_count = (
         QuestionAnswerEvent.objects.count()
         + DailyStat.objects.overall_question_answer_count()
-    )
-    question_category_stats = (
-        Category.objects.values("name")
-        .annotate(count=Count("questions"))
-        .order_by("-count")
-    )
-    question_tag_stats = (
-        Tag.objects.values("name").annotate(count=Count("questions")).order_by("-count")
-    )
-    question_author_stats = (
-        Question.objects.values(name=F("author"))
-        .annotate(count=Count("author"))
-        .order_by("-count")
     )
 
     return Response(
         {
             "question_publish_count": question_publish_count,
             "question_validation_status_in_progress_count": question_validation_status_in_progress_count,  # noqa
-            "quiz_publish": quiz_publish_stats,
             "answer_count": question_answer_count,
-            "category": question_category_stats,
-            "tag": question_tag_stats,
-            "author": question_author_stats,
             # "answer": question_answer_stats
         }
     )

@@ -5,13 +5,13 @@
     <h3>❓&nbsp;Questions</h3>
     <p>
       Il y a actuellement <strong v-if="questionPublishCount">{{ questionPublishCount }}</strong> questions publiées,
-      et <strong v-if="questionValidationStatusInProgressCount">{{ questionValidationStatusInProgressCount }}</strong> en cours de validation.
+      et <strong>{{ questionValidationStatusInProgressCount ? questionValidationStatusInProgressCount : 0 }}</strong> en cours de validation.
     </p>
 
     <br />
     <h3>🕹️&nbsp;Quiz</h3>
     <p>
-      <strong v-if="quizPublishStats">{{ quizPublishStats[0]["count"] }}</strong> quiz ont été créés.
+      <strong>{{ quiz_count ? quiz_count : 0 }}</strong> quiz ont été créés.
     </p>
 
     <br />
@@ -24,8 +24,8 @@
     <h3>📂&nbsp;Catégories</h3>
     Questions par catégories:
     <ul>
-      <li v-for="categoryStat in questionCategoryStats" :key="categoryStat.name">
-        {{ categoryStat.name }}: <strong>{{ categoryStat.count }}</strong>
+      <li v-for="category in categories" :key="category.name">
+        {{ category.name }}: <strong>{{ category.question_count }}</strong>
       </li>
     </ul>
 
@@ -33,8 +33,8 @@
     <h3>🏷️&nbsp;Tags</h3>
     Questions par tags:
     <ul>
-      <li v-for="tagStat in questionTagStats" :key="tagStat.name">
-        {{ tagStat.name }}: <strong>{{ tagStat.count }}</strong>
+      <li v-for="tag in tags" :key="tag.name">
+        {{ tag.name }}: <strong>{{ tag.question_count }}</strong>
       </li>
     </ul>
 
@@ -42,8 +42,8 @@
     <h3>✍️&nbsp;Auteurs</h3>
     Questions par auteurs:
     <ul>
-      <li v-for="authorStat in questionAuthorStats" :key="authorStat.name">
-        {{ authorStat.name }}: <strong>{{ authorStat.count }}</strong>
+      <li v-for="author in authors" :key="author.name">
+        {{ author.name }}: <strong>{{ author.question_count }}</strong>
       </li>
     </ul>
 
@@ -71,6 +71,27 @@ export default {
     }
   },
 
+  computed: {
+    quiz_count () {
+      return this.$store.state.quizzes.length;
+    },
+    categories () {
+      return this.$store.state.categories
+        .filter(c => c.question_count)
+        .sort((a, b) => b.question_count - a.question_count);
+    },
+    tags () {
+      return this.$store.state.tags
+        .filter(t => t.question_count)
+        .sort((a, b) => b.question_count - a.question_count);
+    },
+    authors () {
+      return this.$store.state.authors
+        .filter(a => a.question_count)
+        .sort((a, b) => b.question_count - a.question_count);
+    },
+  },
+
   mounted () {
     this.fetchQuestionStats();
   },
@@ -87,11 +108,7 @@ export default {
         .then(data => {
           this.questionPublishCount = data["question_publish_count"];
           this.questionValidationStatusInProgressCount = data["question_validation_status_in_progress_count"];
-          this.quizPublishStats = data["quiz_publish"];
           this.questionAnswerCountStats = data["answer_count"];
-          this.questionCategoryStats = data["category"];
-          this.questionTagStats = data["tag"];
-          this.questionAuthorStats = data["author"];
           // this.questionAnswerStats = data["answer"];
           
         })

@@ -5,10 +5,10 @@
       <!-- Option to hide card ? -->
 
       <div>
-        <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light margin-left-right-10 small" title="J'ai aimé cette question" @click="submitFeedback('like')" :disabled="feedbackSubmitted">👍<span class="fake-link"></span></button>
-        <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Je n'ai pas aimé cette question" @click="submitFeedback('dislike')" :disabled="feedbackSubmitted">👎<span class="fake-link"></span></button>
+        <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light margin-left-right-10 small" title="J'ai aimé" @click="submitFeedback('like')" :disabled="feedbackSubmitted">👍<span class="fake-link"></span></button>
+        <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Je n'ai pas aimé" @click="submitFeedback('dislike')" :disabled="feedbackSubmitted">👎<span class="fake-link"></span></button>
         <span v-if="feedbackSubmitted" class="margin-left-right-10">Merci 💯</span>
-        <button class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Votre avis sur la question" @click="showContributionForm = true">💬&nbsp;<span class="fake-link">Suggérer une modification</span></button>
+        <button class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Votre avis" @click="showContributionForm = true">💬&nbsp;<span class="fake-link">Suggérer une modification</span></button>
       </div>
     </div>
 
