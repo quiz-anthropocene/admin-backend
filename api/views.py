@@ -62,7 +62,13 @@ def question_list(request):
     - 'tag' (string)
     - 'author' (string)
     """
-    questions = Question.objects.published().order_by("?")
+    # get only the published questions
+    questions = Question.objects.published()
+
+    # order by difficulty, then random inside
+    questions = questions.order_by("difficulty", "?")
+
+    # filters
     if request.GET.get("category"):
         questions = questions.for_category(request.GET.get("category"))
     if request.GET.get("tag"):
