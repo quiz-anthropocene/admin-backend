@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import QuestionAnswerCards from '../components/QuestionAnswerCards.vue'
+import QuestionAnswerCards from '../components/QuestionAnswerCards.vue';
 
 export default {
   name: 'Page',
@@ -24,20 +24,20 @@ export default {
     return {
       emphasisNextButton: false,
       questionSameFilterNextId: null,
-    }
+    };
   },
 
   computed: {
-    question () {
-      return this.$store.getters.getQuestionById(parseInt(this.$route.params.questionId));
+    question() {
+      return this.$store.getters.getQuestionById(parseInt(this.$route.params.questionId, 10));
     },
-    questionIndex () {
-      return this.$store.getters.getCurrentQuestionIndex(parseInt(this.$route.params.questionId));
+    questionIndex() {
+      return this.$store.getters.getCurrentQuestionIndex(parseInt(this.$route.params.questionId, 10));
     },
-    questionFilters () {
+    questionFilters() {
       return this.$store.state.questionFilters;
     },
-    questionsDisplayedCount () {
+    questionsDisplayedCount() {
       return this.$store.state.questionsDisplayed.length;
     },
   },
@@ -51,27 +51,27 @@ export default {
           this.emphasisNextButton = false;
           this.questionSameFilterNextId = this.$store.getters.getNextQuestionByFilter(newQuestion.id).id;
         }
-      }
+      },
     },
     // eslint-disable-next-line
     questionFilters (newQuestionFilters, oldQuestionFilters) {
       if (newQuestionFilters) {
-        const _nextQuestion = this.$store.getters.getNextQuestionByFilter();
-        this.$router.push({ name: 'question-detail', params: { questionId: _nextQuestion.id } });
+        const nextQuestion = this.$store.getters.getNextQuestionByFilter();
+        this.$router.push({ name: 'question-detail', params: { questionId: nextQuestion.id } });
       }
-    }
+    },
   },
 
-  mounted () {
+  mounted() {
   },
 
   methods: {
     // eslint-disable-next-line
     onAnswerSubmitted(data) {
       this.emphasisNextButton = true; // !this.emphasisNextButton;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>

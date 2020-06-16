@@ -53,47 +53,45 @@
 export default {
   name: 'FeedbackCard',
   props: {
-    context: Object
+    context: Object,
   },
 
   data() {
     return {
-      contribution_text: "",
+      contribution_text: '',
       showContributionForm: false,
       feedbackSubmitted: false,
       contributionSubmitted: false,
       contributionResponse: null,
       loading: false,
       error: null,
-    }
+    };
   },
 
   methods: {
-    submitFeedback(feedback_choice) {
-      this.feedbackSubmitted = feedback_choice;
+    submitFeedback(feedbackChoice) {
+      this.feedbackSubmitted = feedbackChoice;
       this.error = null;
       this.loading = true;
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/${(this.context.source === 'question') ? 'questions' : 'quizzes'}/${this.context.item.id}/feedback-events`, {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          choice: feedback_choice,
-          source: this.context.source // only for 'questions'
-        })
+          choice: feedbackChoice,
+          source: this.context.source, // only for 'questions'
+        }),
       })
-      .then(response => {
-        return response.json()
-      })
+        .then((response) => response.json())
       // eslint-disable-next-line
       .then(data => {
         // console.log(data);
-      })
-      .catch(error => {
-        console.log(error)
-      })
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
     submitContribution() {
       this.contributionSubmitted = true;
@@ -102,29 +100,29 @@ export default {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/contribute`, {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           text: this.contribution_text,
           description: (this.context.source === 'question') ? `Question #${this.context.item.id} - ${this.context.item.category} - ${this.context.item.text}` : `Quiz #${this.context.item.id} - ${this.context.item.name}`,
-          type: `commentaire ${this.context.source}`
+          type: `commentaire ${this.context.source}`,
+        }),
+      })
+        .then((response) => {
+          this.loading = false;
+          return response.json();
         })
-      })
-      .then(response => {
-        this.loading = false
-        return response.json()
-      })
-      .then(data => {
-        this.contributionResponse = data;
-      })
-      .catch(error => {
-        console.log(error)
-        this.error = error;
-      })
-    }
-  }
-}
+        .then((data) => {
+          this.contributionResponse = data;
+        })
+        .catch((error) => {
+          console.log(error);
+          this.error = error;
+        });
+    },
+  },
+};
 </script>
 
 <style scoped>

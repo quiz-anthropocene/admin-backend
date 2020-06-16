@@ -32,7 +32,6 @@
       <button class="btn btn-primary margin-5" @click="incrementStep()">⏩&nbsp;Commencer le quiz !</button>
     </section>
 
-
     <!-- Quiz en cours -->
 
     <section v-if="quiz && (quizStep > 0) && quiz.questions[quizStep-1]">
@@ -40,7 +39,6 @@
       <button v-if="showNextButton && (quizStep < quiz.questions.length)" class="btn" :class="emphasisNextButton ? 'btn-primary' : 'btn-outline-primary'" @click="incrementStep()">⏩&nbsp;Question suivante</button>
       <button v-if="showNextButton && (quizStep === quiz.questions.length)" class="btn btn-primary" @click="incrementStep()">⏩&nbsp;Voir vos résultats</button>
     </section>
-
 
     <!-- Quiz terminé -->
 
@@ -70,9 +68,9 @@
 </template>
 
 <script>
-import QuestionAnswerCards from '../components/QuestionAnswerCards.vue'
-import QuestionPreviewCard from '../components/QuestionPreviewCard.vue'
-import FeedbackCard from '../components/FeedbackCard.vue'
+import QuestionAnswerCards from '../components/QuestionAnswerCards.vue';
+import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
+import FeedbackCard from '../components/FeedbackCard.vue';
 
 export default {
   name: 'QuizDetailPage',
@@ -82,27 +80,27 @@ export default {
     FeedbackCard,
   },
 
-  data () {
+  data() {
     return {
       // quiz: null,
       quizStep: 0,
       showNextButton: true,
       emphasisNextButton: false,
       showQuizQuestions: false,
-    }
+    };
   },
 
   computed: {
-    quiz () {
-      return this.$store.getters.getQuizById(parseInt(this.$route.params.quizId));
+    quiz() {
+      return this.$store.getters.getQuizById(parseInt(this.$route.params.quizId, 10));
     },
   },
 
-  mounted () {
+  mounted() {
   },
 
   methods: {
-    incrementStep () {
+    incrementStep() {
       // increment quiz step
       this.quizStep += 1;
       this.showNextButton = false;
@@ -113,7 +111,7 @@ export default {
       }
     },
     onAnswerSubmitted(data) {
-      this.quiz.questions[this.quizStep-1]['success'] = data['success'];
+      this.quiz.questions[this.quizStep - 1].success = data.success;
       this.showNextButton = true;
       this.emphasisNextButton = true;
     },
@@ -122,26 +120,24 @@ export default {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/quizzes/${this.quiz.id}/answer-events`, {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          answer_success_count: this.quiz.questions.filter(q => q['success']).length
-        })
+          answer_success_count: this.quiz.questions.filter((q) => q.success).length,
+        }),
       })
-        .then(response => {
-          return response.json()
-        })
+        .then((response) => response.json())
         // eslint-disable-next-line
         .then(data => {
           // console.log(data);
         })
-        .catch(error => {
-          console.log(error)
-        })
-    }
-  }
-}
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+};
 </script>
 
 <style scoped>

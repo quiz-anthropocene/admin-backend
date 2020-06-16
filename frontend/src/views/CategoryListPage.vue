@@ -30,24 +30,24 @@ export default {
   components: {
   },
 
-  data () {
+  data() {
     return {
       // categories: null,
-    }
+    };
   },
 
   computed: {
-    categories () {
+    categories() {
       return this.$store.state.categories;
     },
   },
 
-  mounted () {
+  mounted() {
   },
 
   methods: {
-  }
-}
+  },
+};
 </script>
 
 <style scoped>

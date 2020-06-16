@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import QuestionPreviewCard from '../components/QuestionPreviewCard.vue'
+import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 
 export default {
   name: 'QuestionListPage',
@@ -20,17 +20,17 @@ export default {
     QuestionPreviewCard,
   },
 
-  data () {
+  data() {
     return {
-    }
+    };
   },
 
   computed: {
-    questionsDisplayed () {
+    questionsDisplayed() {
       return this.$store.state.questionsDisplayed;
     },
   },
-}
+};
 </script>
 
 <style scoped>

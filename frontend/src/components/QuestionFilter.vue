@@ -55,7 +55,7 @@
           <small><DifficultyBadge v-bind:difficulty="difficulty.value" /></small> <small><i>{{ difficulty.question_count }}</i></small>
         </span>
       </div>
-      
+
       <br />
     </section>
 
@@ -70,48 +70,48 @@
 </template>
 
 <script>
-import DifficultyBadge from '../components/DifficultyBadge.vue'
+import DifficultyBadge from './DifficultyBadge.vue';
 
 export default {
   name: 'QuestionFilter',
   props: {
   },
   components: {
-    DifficultyBadge
+    DifficultyBadge,
   },
 
-  data () {
+  data() {
     return {
       tempQuestionFilters: {},
       showFilterBox: false,
-    }
+    };
   },
 
   computed: {
-    categories () {
+    categories() {
       return this.$store.state.categories;
     },
-    tags () {
-      return this.$store.state.tags.filter(t => t.question_count);
+    tags() {
+      return this.$store.state.tags.filter((t) => t.question_count);
     },
-    authors () {
+    authors() {
       return this.$store.state.authors;
     },
-    difficultyLevels () {
+    difficultyLevels() {
       return this.$store.state.difficultyLevels;
     },
-    questionFilters () {
+    questionFilters() {
       return this.$store.state.questionFilters;
     },
-    questionsDisplayedCount () {
+    questionsDisplayedCount() {
       return this.$store.state.questionsDisplayed.length;
-    }
+    },
   },
 
   methods: {
     toggleFilterBox() {
       this.showFilterBox = !this.showFilterBox;
-      this.tempQuestionFilters = {...this.questionFilters};
+      this.tempQuestionFilters = { ...this.questionFilters };
     },
     updateTempQuestionFilter(key, value) {
       this.tempQuestionFilters[key] = (this.tempQuestionFilters[key] === value) ? null : value;
@@ -119,19 +119,19 @@ export default {
     clearQuestionFilters() {
       this.showFilterBox = !this.showFilterBox;
       this.tempQuestionFilters = {
-        "category": null,
-        "tag": null,
-        "author": null,
-        "difficulty": null,
-      }
+        category: null,
+        tag: null,
+        author: null,
+        difficulty: null,
+      };
       this.$store.dispatch('UPDATE_QUESTION_FILTERS', this.tempQuestionFilters);
     },
     updateQuestionFilters() {
       this.showFilterBox = !this.showFilterBox;
       this.$store.dispatch('UPDATE_QUESTION_FILTERS', this.tempQuestionFilters);
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>

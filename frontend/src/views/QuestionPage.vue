@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import QuestionFilter from '../components/QuestionFilter.vue'
+import QuestionFilter from '../components/QuestionFilter.vue';
 
 export default {
   name: 'QuestionPage',
@@ -14,13 +14,13 @@ export default {
     QuestionFilter,
   },
 
-  data () {
+  data() {
     return {
-    }
+    };
   },
 
   computed: {
-    questions () {
+    questions() {
       return this.$store.state.questions;
     },
   },
@@ -29,15 +29,15 @@ export default {
     // eslint-disable-next-line
     questions (newQuestions, oldQuestions) {
       this.$store.dispatch('UPDATE_QUESTION_FILTERS');
-    }
+    },
   },
 
-  mounted () {
+  mounted() {
     if (this.questions) {
       this.$store.dispatch('UPDATE_QUESTION_FILTERS');
     }
   },
-}
+};
 </script>
 
 <style scoped>

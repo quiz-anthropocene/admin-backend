@@ -66,18 +66,18 @@
 </template>
 
 <script>
-import DifficultyBadge from '../components/DifficultyBadge.vue'
-import FeedbackCard from '../components/FeedbackCard.vue'
+import DifficultyBadge from './DifficultyBadge.vue';
+import FeedbackCard from './FeedbackCard.vue';
 
 export default {
   name: 'QuestionAnswerCards',
   props: {
     question: Object,
-    context: Object
+    context: Object,
   },
   components: {
     DifficultyBadge,
-    FeedbackCard
+    FeedbackCard,
   },
 
   data() {
@@ -87,8 +87,8 @@ export default {
       answerPicked: '',
       questionSubmitted: false,
       questionSuccess: null,
-      questionSuccessMessageList: ["C'est exact", "En effet", "Bien vu", "Félicitations", "Bravo"],
-    }
+      questionSuccessMessageList: ["C'est exact", 'En effet', 'Bien vu', 'Félicitations', 'Bravo'],
+    };
   },
 
   watch: {
@@ -100,11 +100,11 @@ export default {
           this.initQuestion();
           this.initContribution();
         }
-      }
-    }
+      },
+    },
   },
 
-  mounted () {
+  mounted() {
   },
 
   methods: {
@@ -117,29 +117,28 @@ export default {
     },
     initContribution() {
       this.contribution = {
-        text: "",
+        text: '',
         description: `Question #${this.question.id} - ${this.question.category} - ${this.question.text}`,
-        type: "commentaire question"
-      }
+        type: 'commentaire question',
+      };
       this.showContributionForm = false;
       this.contributionSubmitted = false;
       this.contributionResponse = null;
       this.loading = false;
       this.error = null;
     },
-    shuffleAnswers(answers_array, has_ordered_answers) {
-      if (has_ordered_answers) {
-        return answers_array;
-      } else {
-        // https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb
-        for (let i = answers_array.length-1; i > 0; i--) {
-          const j = Math.round(Math.random() * i);
-          const temp = answers_array[i];
-          answers_array[i] = answers_array[j];
-          answers_array[j] = temp;
-        }
-        return answers_array;
+    shuffleAnswers(answersArray, hasOrderedAnswers) {
+      if (hasOrderedAnswers) {
+        return answersArray;
       }
+      // https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb
+      for (let i = answersArray.length - 1; i > 0; i--) {
+        const j = Math.round(Math.random() * i);
+        const temp = answersArray[i];
+        answersArray[i] = answersArray[j];
+        answersArray[j] = temp;
+      }
+      return answersArray;
     },
     submitAnswer() {
       this.questionSubmitted = true;
@@ -155,27 +154,25 @@ export default {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/${this.question.id}/answer-events`, {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           choice: this.answerPicked,
-          source: this.context.source
-        })
+          source: this.context.source,
+        }),
       })
-      .then(response => {
-        return response.json()
-      })
+        .then((response) => response.json())
       // eslint-disable-next-line
       .then(data => {
         // console.log(data);
-      })
-      .catch(error => {
-        console.log(error)
-      })
-    }
-  }
-}
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+};
 </script>
 
 <style scoped>

@@ -1,7 +1,7 @@
 <template>
   <section class="text-align-left">
     <h2>Quelques statistiques</h2>
-    
+
     <h3>❓&nbsp;Questions</h3>
     <p>
       Il y a actuellement <strong v-if="questionPublishCount">{{ questionPublishCount }}</strong> questions publiées,
@@ -68,31 +68,31 @@ export default {
       // questionAnswerStats: null,
       loading: false,
       error: null,
-    }
+    };
   },
 
   computed: {
-    quiz_count () {
+    quiz_count() {
       return this.$store.state.quizzes.length;
     },
-    categories () {
+    categories() {
       return this.$store.state.categories
-        .filter(c => c.question_count)
+        .filter((c) => c.question_count)
         .sort((a, b) => b.question_count - a.question_count);
     },
-    tags () {
+    tags() {
       return this.$store.state.tags
-        .filter(t => t.question_count)
+        .filter((t) => t.question_count)
         .sort((a, b) => b.question_count - a.question_count);
     },
-    authors () {
+    authors() {
       return this.$store.state.authors
-        .filter(a => a.question_count)
+        .filter((a) => a.question_count)
         .sort((a, b) => b.question_count - a.question_count);
     },
   },
 
-  mounted () {
+  mounted() {
     this.fetchQuestionStats();
   },
 
@@ -101,23 +101,22 @@ export default {
       this.error = this.question = null;
       this.loading = true;
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/stats`)
-        .then(response => {
-          this.loading = false
-          return response.json()
+        .then((response) => {
+          this.loading = false;
+          return response.json();
         })
-        .then(data => {
-          this.questionPublishCount = data["question_publish_count"];
-          this.questionValidationStatusInProgressCount = data["question_validation_status_in_progress_count"];
-          this.questionAnswerCountStats = data["answer_count"];
+        .then((data) => {
+          this.questionPublishCount = data.question_publish_count;
+          this.questionValidationStatusInProgressCount = data.question_validation_status_in_progress_count;
+          this.questionAnswerCountStats = data.answer_count;
           // this.questionAnswerStats = data["answer"];
-          
         })
-        .catch(error => {
-          console.log(error)
+        .catch((error) => {
+          console.log(error);
           this.error = error;
-        })
+        });
     },
 
-  }
-}
+  },
+};
 </script>

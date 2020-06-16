@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import QuestionPreviewCard from '../components/QuestionPreviewCard.vue'
+import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 
 export default {
   name: 'CategoryDetailPage',
@@ -33,28 +33,28 @@ export default {
     QuestionPreviewCard,
   },
 
-  data () {
+  data() {
     return {
       // currentCategory: null,
       // questions: null,
-    }
+    };
   },
 
   computed: {
-    currentCategory () {
+    currentCategory() {
       return this.$route.params.categoryName;
     },
-    questions () {
+    questions() {
       return this.$store.getters.getQuestionsByCategoryName(this.$route.params.categoryName);
     },
   },
 
-  mounted () {
+  mounted() {
   },
 
   methods: {
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
