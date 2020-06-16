@@ -133,6 +133,10 @@ CORS_ORIGIN_WHITELIST = [
     "https://know-your-planet.netlify.app",
 ]
 
+CORS_ORIGIN_REGEX_WHITELIST = [
+    r"^https:\/\/deploy-preview-\w+--know-your-planet\.netlify\.app$",
+]
+
 
 # Cookie security
 
