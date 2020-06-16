@@ -1,0 +1,2 @@
+# https://docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file
+/api/* http://know-your-planet.herokuapp.com/api
