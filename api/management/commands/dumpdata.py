@@ -7,7 +7,7 @@ class Command(Dumpdata):
     Get readable data in the dumpdata output https://djangosnippets.org/snippets/10625/
 
     Usage example:
-    python manage.py dumpdata api.question --format=yaml --pretty > api/data/questions.yaml
+    python manage.py dumpdata api.question --format=yaml --pretty > data/questions.yaml
 
     TODO:
     - yaml export doesn't escape " character

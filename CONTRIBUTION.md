@@ -40,7 +40,7 @@ Il y a plusieurs aspects du projet qui ont besoin d'aide:
 
 ### Rajouter ou modifier des questions
 
-Un export de toutes les questions de la base de donnée de l'application peuvent être vues dans le fichier `api/data/questions.yaml` (Rappel: ce n'est pas la source de la base de donnée, seulement un export).
+Un export de toutes les questions de la base de donnée de l'application peuvent être vues dans le fichier `data/questions.yaml` (Rappel: ce n'est pas la source de la base de donnée, seulement un export).
 
 Vous pouvez proposer de nouvelles questions via la page [Contribution](https://know-your-planet.netlify.app/#/contribuer) de l'application.
 
@@ -115,10 +115,10 @@ Si vous souhaitez ajouter une fonctionnalité:
     ```
 - Chargez la base de donnée
     ```
-    python manage.py loaddata api/data/categories.yaml
-    python manage.py loaddata api/data/tags.yaml
-    python manage.py loaddata api/data/questions.yaml
-    python manage.py loaddata api/data/quizzes.yaml
+    python manage.py loaddata data/categories.yaml
+    python manage.py loaddata data/tags.yaml
+    python manage.py loaddata data/questions.yaml
+    python manage.py loaddata data/quizzes.yaml
     ```
 - Installez les dépendances du Frontend
     ```
@@ -173,5 +173,5 @@ coverage html
 
 Exporter les questions de la base au format YAML
 ```
-python manage.py dumpdata api.question --format=yaml --pretty > api/data/questions.yaml
+python manage.py dumpdata api.question --format=yaml --pretty > data/questions.yaml
 ```

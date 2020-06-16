@@ -5,10 +5,10 @@ from api.models import Category, Tag, Question, Quiz
 
 class FixturesTest(TestCase):
     fixtures = [
-        "api/data/categories.yaml",
-        "api/data/tags.yaml",
-        "api/data/questions.yaml",
-        "api/data/quizzes.yaml",
+        "data/categories.yaml",
+        "data/tags.yaml",
+        "data/questions.yaml",
+        "data/quizzes.yaml",
     ]
 
     def test_fixtures_load_successfully(self):
