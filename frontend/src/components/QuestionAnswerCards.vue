@@ -12,15 +12,23 @@
         <span> | </span>
         <span><small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
       </h2>
-      <h3>{{ question.text }}</h3>
       <form @submit.prevent="submitAnswer">
-        <div v-for="answer_option_letter in answerChoices" :key="answer_option_letter" :class="{ 'text-primary' : answerPicked === answer_option_letter }">
-          <template v-if="question['answer_option_' + answer_option_letter]">
-            <input type="radio" v-bind:id="answer_option_letter" v-bind:value="answer_option_letter" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
-            <label v-bind:for="answer_option_letter">&nbsp;{{ question['answer_option_' + answer_option_letter] }}</label>
-          </template>
+        <div class="row no-gutters justify-content-center">
+          <div class="col-md-10 col-lg-8">
+            <h3>{{ question.text }}</h3>
+          </div>
         </div>
-        <div>
+        <div class="row text-align-left">
+          <div class="col-sm-auto">
+            <div class="form-group" v-for="answer_option_letter in answerChoices" :key="answer_option_letter" :class="{ 'text-primary' : answer_option_letter === answerPicked, 'text-danger': (questionSubmitted && (answer_option_letter !== answerPicked) && (answer_option_letter === question['answer_correct'])) }">
+              <template v-if="question['answer_option_' + answer_option_letter]">
+                <input type="radio" v-bind:id="answer_option_letter" v-bind:value="answer_option_letter" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
+                <label v-bind:for="answer_option_letter">&nbsp;{{ question['answer_option_' + answer_option_letter] }}</label>
+              </template>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
           <button v-if="!questionSubmitted" type="submit" class="btn" :class="answerPicked ? 'btn-primary' : 'btn-outline-primary'" :disabled="!answerPicked">Valider</button>
         </div>
       </form>
@@ -33,15 +41,23 @@
       <h2 v-if="questionSuccess">{{ questionSuccess }} !</h2>
       <h2 v-if="!questionSuccess">Pas tout à fait...</h2>
       <h3 v-if="!questionSuccess">La réponse était: {{ question["answer_option_" + question["answer_correct"]] }}</h3>
-      <p title="Explication">
-        ℹ️&nbsp;{{ question.answer_explanation }}
-      </p>
-      <p v-if="question.answer_accessible_url" title="Lien accessible pour aller plus loin">
-        🔗&nbsp;<a v-bind:href="question.answer_accessible_url" target="_blank">{{ question.answer_accessible_url }}</a>
-      </p>
-      <p v-if="question.answer_scientific_url" title="Lien scientifique pour creuser la source">
-        🔗🧬&nbsp;<a v-bind:href="question.answer_scientific_url" target="_blank">{{ question.answer_scientific_url }}</a>
-      </p>
+      <div class="row no-gutters text-align-left">
+        <div class="col-sm-auto">
+          <p title="Explication">
+            ℹ️&nbsp;{{ question.answer_explanation }}
+          </p>
+        </div>
+      </div>
+      <div class="row no-gutters text-align-left">
+        <div class="col-sm-auto">
+          <p class="answer-link" v-if="question.answer_accessible_url" title="Lien accessible pour aller plus loin">
+            🔗&nbsp;<a v-bind:href="question.answer_accessible_url" target="_blank" v-bind:title="question.answer_accessible_url">{{ question.answer_accessible_url }}</a>
+          </p>
+          <p class="answer-link" v-if="question.answer_scientific_url" title="Lien scientifique pour creuser la source">
+            🔗🧬&nbsp;<a v-bind:href="question.answer_scientific_url" target="_blank" v-bind:title="question.answer_scientific_url">{{ question.answer_scientific_url }}</a>
+          </p>
+        </div>
+      </div>
       <p v-if="question.answer_image_url" class="answer-image" title="Une image pour illustrer la réponse">
         <a v-bind:href="question.answer_image_url" target="_blank">
           <img v-bind:src="question.answer_image_url" alt="une image pour illustrer la réponse" />
@@ -183,6 +199,12 @@ export default {
   padding: 10px;
 }
 
+div.answer-choices {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
 .answer {
   border: 2px solid;
   border-radius: 5px;
@@ -198,10 +220,16 @@ export default {
   border-color: red;
   background-color: #fff2f2;
 }
+.answer p.answer-link {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
 .answer p.answer-image {
   height: 300px;
 }
 .answer p.answer-image img {
+  background-color: white;
   max-height: 100%;
   max-width: 100%;
   margin: auto;

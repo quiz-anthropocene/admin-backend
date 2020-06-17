@@ -111,8 +111,8 @@ button {
 label {
   display: inline; // solves failing &nbsp;
 }
-form > div {
-  margin-bottom: 10px; // chaging label to inline removes it's margin-bottom of 8px...
+form .form-group {
+  margin-bottom: 10px; // changing label to inline removes it's margin-bottom of 8px...
 }
 
 .card-img-top {
@@ -182,6 +182,10 @@ a.no-decoration {
 }
 .padding-bottom-10 {
   padding-bottom: 10px;
+}
+.padding-left-right-0 {
+  padding-left: 0;
+  padding-right: 0;
 }
 .padding-left-right-10 {
   padding-left: 10px;
