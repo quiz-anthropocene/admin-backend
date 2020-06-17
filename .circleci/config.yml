@@ -2,9 +2,10 @@ version: 2.1
 
 orbs:
   python: circleci/python@0.2.1
+  node: circleci/node@3.0.0
 
 jobs:
-  build-and-test:
+  backend-test:
     docker:
       - image: circleci/python:3.7.2-stretch-browsers
       - image: circleci/postgres:9.6.7
@@ -26,8 +27,25 @@ jobs:
           command: | 
             python -m flake8
             python manage.py test
+  
+  frontend-lint:
+    docker:
+      - image: circleci/node:13
+
+    resource_class: small
+
+    steps:
+      - checkout
+      - node/install-packages:
+          app-dir: ~/project/frontend
+          pkg-manager: yarn
+      - run:
+          name: Run ESlint
+          working_directory: ~/project/frontend
+          command: yarn lint
 
 workflows:
   main:
     jobs:
-      - build-and-test
+      - backend-test
+      - frontend-lint

@@ -71,16 +71,16 @@
 export default {
   name: 'HomePage',
 
-  data () {
+  data() {
     return {
       questionSameFilterNextId: null,
-    }
+    };
   },
 
   computed: {
-    questionsCount () {
+    questionsCount() {
       return this.$store.state.questions.length;
-    }
+    },
   },
 
   watch: {
@@ -91,16 +91,16 @@ export default {
         if (newQuestionsCount) {
           this.questionSameFilterNextId = this.$store.getters.getNextQuestionByFilter().id;
         }
-      }
-    }
+      },
+    },
   },
 
-  mounted () {
+  mounted() {
   },
 
   methods: {
-  }
-}
+  },
+};
 </script>
 
 <style scoped>

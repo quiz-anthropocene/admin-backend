@@ -1,0 +1,19 @@
+root: true
+
+env:
+  node: true
+
+extends:
+  - plugin:vue/essential
+  - eslint:recommended
+  - airbnb-base
+
+parserOptions:
+  parser: babel-eslint
+
+rules:
+  no-console: 0 # 1
+  max-len: 0
+  no-param-reassign: ["error", { "props": false }]
+  no-plusplus: ["error", { "allowForLoopAfterthoughts": true }]
+  no-multi-assign: 0

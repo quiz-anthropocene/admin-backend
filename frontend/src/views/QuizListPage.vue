@@ -48,24 +48,24 @@ export default {
   components: {
   },
 
-  data () {
+  data() {
     return {
       // quizzes: null,
-    }
+    };
   },
 
   computed: {
-    quizzes () {
+    quizzes() {
       return this.$store.state.quizzes;
     },
   },
 
-  mounted () {
+  mounted() {
   },
 
   methods: {
-  }
-}
+  },
+};
 </script>
 
 <style scoped>

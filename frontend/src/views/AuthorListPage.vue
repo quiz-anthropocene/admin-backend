@@ -30,24 +30,24 @@ export default {
   components: {
   },
 
-  data () {
+  data() {
     return {
       // authors: null,
-    }
+    };
   },
 
   computed: {
-    authors () {
+    authors() {
       return this.$store.state.authors;
     },
   },
 
-  mounted () {
+  mounted() {
   },
 
   methods: {
-  }
-}
+  },
+};
 </script>
 
 <style scoped>

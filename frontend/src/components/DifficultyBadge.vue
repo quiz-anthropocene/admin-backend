@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       difficultyTitle: `Difficulté ${this.difficulty}/4`,
-    }
+    };
   },
-}
+};
 </script>

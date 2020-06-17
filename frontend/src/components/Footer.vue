@@ -34,22 +34,22 @@
 </template>
 
 <script>
-import HomeLink from '../components/HomeLink.vue'
+import HomeLink from './HomeLink.vue';
 
 export default {
   name: 'Footer',
   components: {
-    HomeLink
+    HomeLink,
   },
   props: {
   },
 
   computed: {
-    currentRoute () {
+    currentRoute() {
       return this.$route.name;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>

@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
@@ -27,29 +27,29 @@ export default {
   },
 
   computed: {
-    loading () {
+    loading() {
       return this.$store.state.loading;
     },
-    error () {
+    error() {
       return this.$store.state.error;
-    }
+    },
   },
 
-  mounted: function () {
+  mounted() {
     this.initData();
   },
 
   methods: {
-    initData () {
+    initData() {
       this.$store.dispatch('GET_QUESTION_LIST');
       this.$store.dispatch('GET_CATEGORY_LIST');
       this.$store.dispatch('GET_TAG_LIST');
       this.$store.dispatch('GET_AUTHOR_LIST');
       this.$store.dispatch('GET_DIFFICULTY_LIST');
       this.$store.dispatch('GET_QUIZ_LIST');
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -67,7 +67,7 @@ $tag-color: #f3993f;
 $tag-color-active: #f8bf87; // last Monochromatic Color
 $author-color: #f33f99;
 $author-color-active: #f887bf; // last Monochromatic Color
-$difficulty-color: 	#ffd700; // 'gold'
+$difficulty-color: #ffd700; // 'gold'
 $difficulty-color-active: #ffe34d; // last Monochromatic Color
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -122,7 +122,6 @@ form > div {
 .card-body {
   padding: 10px;
 }
-
 
 /* Global css */
 
@@ -225,7 +224,6 @@ a.no-decoration {
   background-color: rgba(0, 89, 149, 0.03); // var(--primary);
 }
 
-
 /* Elements */
 
 .label {
@@ -272,7 +270,6 @@ a.no-decoration {
   text-shadow: 0px 0px 1px black;
 }
 
-
 hr.custom-separator {
   border: 0 none;
   height: 1px;
@@ -298,7 +295,6 @@ hr.custom-separator {
 .separator-with-text::after {
   margin-left: 0.5em;
 }
-
 
 /* Media */
 

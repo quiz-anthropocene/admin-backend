@@ -8,6 +8,6 @@
 export default {
   name: 'NotFoundPage',
   components: {
-  }
-}
+  },
+};
 </script>

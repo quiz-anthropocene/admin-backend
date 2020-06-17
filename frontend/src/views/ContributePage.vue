@@ -25,7 +25,7 @@
           <label class="custom-control-label" for="customRadioInline2">Un commentaire sur l'application</label>
         </div>
       </div>
-      
+
       <div class="form-group" v-if="contribution.type === 'nouvelle question'">
         <h3 class="margin-bottom-0">
           <label for="contribution_text">Votre question <span class="color-red">*</span></label>
@@ -54,7 +54,7 @@
         </div>
         <textarea id="contribution_text" class="form-control" rows="5" v-model="contribution.text" required></textarea>
       </div>
-      
+
       <div class="form-group">
         <p>
           <button type="submit" class="btn" :class="contribution.text ? 'btn-primary' : 'btn-outline-primary'" :disabled="!contribution.text">📩&nbsp;Envoyer !</button>
@@ -90,28 +90,28 @@ export default {
   data() {
     return {
       contribution: {
-        text: "",
-        description: "",
-        type: "nouvelle question"
+        text: '',
+        description: '',
+        type: 'nouvelle question',
       },
       contributionSubmitted: false,
       contributionResponse: null,
       loading: false,
       error: null,
-    }
+    };
   },
 
-  mounted () {
+  mounted() {
     this.init();
   },
 
   methods: {
     init() {
       this.contribution = {
-        text: "",
-        description: "",
-        type: "nouvelle question"
-      },
+        text: '',
+        description: '',
+        type: 'nouvelle question',
+      };
       this.contributionSubmitted = false;
       this.contributionResponse = null;
       this.loading = false;
@@ -124,23 +124,23 @@ export default {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/contribute`, {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(this.contribution)
+        body: JSON.stringify(this.contribution),
       })
-        .then(response => {
-          this.loading = false
-          return response.json()
+        .then((response) => {
+          this.loading = false;
+          return response.json();
         })
-        .then(data => {
+        .then((data) => {
           this.contributionResponse = data;
         })
-        .catch(error => {
-          console.log(error)
+        .catch((error) => {
+          console.log(error);
           this.error = error;
-        })
-    }
-  }
-}
+        });
+    },
+  },
+};
 </script>

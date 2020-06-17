@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import QuestionPreviewCard from '../components/QuestionPreviewCard.vue'
+import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 
 export default {
   name: 'AuthorDetailPage',
@@ -33,28 +33,28 @@ export default {
     QuestionPreviewCard,
   },
 
-  data () {
+  data() {
     return {
       // currentAuthor: null,
       // questions: null,
-    }
+    };
   },
 
   computed: {
-    currentAuthor () {
+    currentAuthor() {
       return this.$route.params.authorName;
     },
-    questions () {
+    questions() {
       return this.$store.getters.getQuestionsByAuthorName(this.$route.params.authorName);
     },
   },
 
-  mounted () {
+  mounted() {
   },
 
   methods: {
-  }
-}
+  },
+};
 </script>
 
 <style scoped>

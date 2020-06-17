@@ -30,24 +30,24 @@ export default {
   components: {
   },
 
-  data () {
+  data() {
     return {
       // tags: null,
-    }
+    };
   },
 
   computed: {
-    tags () {
+    tags() {
       return this.$store.state.tags;
     },
   },
 
-  mounted () {
+  mounted() {
   },
 
   methods: {
-  }
-}
+  },
+};
 </script>
 
 <style scoped>

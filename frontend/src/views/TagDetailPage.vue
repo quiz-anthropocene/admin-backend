@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import QuestionPreviewCard from '../components/QuestionPreviewCard.vue'
+import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 
 export default {
   name: 'TagDetailPage',
@@ -33,28 +33,28 @@ export default {
     QuestionPreviewCard,
   },
 
-  data () {
+  data() {
     return {
       // currentTag: null,
       // questions: null,
-    }
+    };
   },
 
   computed: {
-    currentTag () {
+    currentTag() {
       return this.$route.params.tagName;
     },
-    questions () {
+    questions() {
       return this.$store.getters.getQuestionsByTagName(this.$route.params.tagName);
     },
   },
 
-  mounted () {
+  mounted() {
   },
 
   methods: {
-  }
-}
+  },
+};
 </script>
 
 <style scoped>

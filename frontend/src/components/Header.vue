@@ -16,11 +16,11 @@ export default {
   },
 
   computed: {
-    currentRoute () {
+    currentRoute() {
       return this.$route.name;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>

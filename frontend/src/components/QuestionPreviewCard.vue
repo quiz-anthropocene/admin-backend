@@ -13,17 +13,17 @@
 </template>
 
 <script>
-import DifficultyBadge from '../components/DifficultyBadge.vue'
+import DifficultyBadge from './DifficultyBadge.vue';
 
 export default {
   name: 'QuestionPreviewCard',
   props: {
-    question: Object
+    question: Object,
   },
   components: {
-    DifficultyBadge
-  }
-}
+    DifficultyBadge,
+  },
+};
 </script>
 
 <style scoped>

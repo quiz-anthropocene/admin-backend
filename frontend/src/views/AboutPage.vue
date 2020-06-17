@@ -2,7 +2,7 @@
 
   <section class="text-align-left">
     <h2>A propos</h2>
-    
+
     <section class="alert alert-primary" role="alert">
       Vous êtes un des premiers utilisateurs, merci d'être là !
       Ce site vient tout juste d'être lancé (Mars 2020), et a été développé par quelques passionés.
@@ -40,7 +40,7 @@
       Si vous avez des commentaires ou des suggestions sur l'application, vous pouvez y créer des <i>Issues</i> 🙏
     </p>
     <p>
-      
+
     </p>
 
     <br />
@@ -75,6 +75,6 @@
 export default {
   name: 'AboutPage',
   components: {
-  }
-}
+  },
+};
 </script>
