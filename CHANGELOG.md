@@ -12,7 +12,7 @@ Des pistes dans [README.md#idées](README.md#idées)
 
 - [Admin] Graph affichant le nombre de réponses aux quizs par jour
 - [DevOps] Linting automatique du code backend avec `flake8`, `black` et un pre-commit git hook
-- [DevOps] Ajout d'un fichier `CONTRIBUTION.md`
+- [DevOps] Ajout d'un fichier `CONTRIBUTING.md`
 
 ### Modifié
 

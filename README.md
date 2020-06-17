@@ -24,11 +24,11 @@ Mieux appréhender les limites de notre planète, à travers des questions simpl
 
 ## Stack technique
 
-Python Django & Vue.js (plus de détails [ici](CONTRIBUTION.md#stack-technique)).
+Python Django & Vue.js (plus de détails [ici](CONTRIBUTING.md#stack-technique)).
 
 ## Contribuer
 
 Le code et les questions sont en open-source: venez nous aider !
 
-- Lire [CONTRIBUTION.md](CONTRIBUTION.md)
+- Lire [CONTRIBUTING.md](CONTRIBUTING.md)
 - Voir les [Issues](https://github.com/raphodn/know-your-planet/issues) (ainsi que le [board](https://github.com/raphodn/know-your-planet/projects/1) Github)

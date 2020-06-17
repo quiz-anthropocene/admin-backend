@@ -22,6 +22,8 @@ Merci d'être là et de vouloir contribuer :)
       - [Lancer le Frontend](#lancer-le-frontend)
     - [Accéder à la console admin](#acc%C3%A9der-%C3%A0-la-console-admin)
   - [Lancer les tests](#lancer-les-tests)
+    - [Lancer les tests du backend](#lancer-les-tests-du-backend)
+    - [Lancer les tests du frontend](#lancer-les-tests-du-frontend)
   - [Autres commandes utiles](#autres-commandes-utiles)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -42,7 +44,7 @@ Il y a plusieurs aspects du projet qui ont besoin d'aide:
 
 Un export de toutes les questions de la base de donnée de l'application peuvent être vues dans le fichier `data/questions.yaml` (Rappel: ce n'est pas la source de la base de donnée, seulement un export).
 
-Vous pouvez proposer de nouvelles questions via la page [Contribution](https://know-your-planet.netlify.app/#/contribuer) de l'application.
+Vous pouvez proposer de nouvelles questions via la page [Contribuer](https://know-your-planet.netlify.app/#/contribuer) de l'application.
 
 Coté validation des questions, toutes les questions (finalisées ou en cours de création) sont actuellement dans un fichier partagé (type Google Sheet), que l'on synchronise régulièrement avec la base de donnée.
 
@@ -51,14 +53,14 @@ Coté validation des questions, toutes les questions (finalisées ou en cours de
 Vous avez vu un bug ? Vous trouvez l'app contre-intuitive, ou simplement avez une idée pour rendre le design plus beau/propre ?
 
 Il y a deux options pour remonter ces informations:
-- via la page [Contribution](https://know-your-planet.netlify.app/#/contribuer) de l'application
+- via la page [Contribuer](https://know-your-planet.netlify.app/#/contribuer) de l'application
 - ou créer une Issue dans l'interface Github du projet ([ici](https://github.com/raphodn/know-your-planet/issues))
 
 ### Aider au développement de l'application
 
 _La stack technique est détaillée un peu plus bas._
 
-Relecture de code, documentation, rajouter des tests, ajouter une fonctionnalité, etc
+Relecture de code, documentation, rajouter des tests, design, ajouter une fonctionnalité, etc
 
 Si vous souhaitez ajouter une fonctionnalité:
 - commentez l'Issue en question pour donner votre point de vue (ou créez l'Issue si elle n'existe pas encore), et on discutera ensemble de la meilleur façon de procéder
@@ -78,11 +80,13 @@ Si vous souhaitez ajouter une fonctionnalité:
 #### Frontend
 
 - Un frontend en Vue.js
+- Bootstrap 4
 
 #### DevOps
 
 - Le backend est hébergé sur Heroku (free tier)
 - Le frontend est hébergé sur Netlify (free tier)
+- CI/CD avec CircleCI
 
 ### Lancer le projet en local
 
@@ -96,10 +100,6 @@ Si vous souhaitez ajouter une fonctionnalité:
 - Installez les dépendances du Backend
     ```
     pip install -r requirements.txt
-    ```
-- Installer le pre-commit git hook
-    ```
-    pre-commit install
     ```
 - Dupliquer le fichier `.env.example` et le renommer en `.env`
 - Installez [PostgreSQL](https://www.postgresql.org)
@@ -124,6 +124,10 @@ Si vous souhaitez ajouter une fonctionnalité:
     ```
     cd frontend
     yarn install
+    ```
+- Installer le pre-commit git hook
+    ```
+    pre-commit install
     ```
 
 #### Lancer l'application
@@ -156,6 +160,9 @@ Lancez le backend, et connectez-vous sur `http://localhost:8000/admin`
 
 ### Lancer les tests
 
+#### Lancer les tests du backend
+
+Tests
 ```
 python manage.py test
 ```
@@ -167,6 +174,17 @@ coverage run manage.py test
 // report
 coverage report
 coverage html
+```
+
+Linting avec black et flake8 (pre-commit hook)
+
+#### Lancer les tests du frontend
+
+Aucun tests pour l'instant :)
+
+Linting
+```
+yarn lint
 ```
 
 ### Autres commandes utiles
