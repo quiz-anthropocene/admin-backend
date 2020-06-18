@@ -43,10 +43,7 @@ const store = new Vuex.Store({
     },
     GET_QUIZ_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/quizzes?full=true`)
-        .then((response) => {
-          // this.loading = false
-          response.json();
-        })
+        .then((response) => response.json())
         .then((data) => {
           commit('SET_QUIZ_LIST', { list: data });
         })
@@ -57,10 +54,7 @@ const store = new Vuex.Store({
     },
     GET_CATEGORY_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/categories`)
-        .then((response) => {
-          // this.loading = false
-          response.json();
-        })
+        .then((response) => response.json())
         .then((data) => {
           commit('SET_CATEGORY_LIST', { list: data });
         })
@@ -71,10 +65,7 @@ const store = new Vuex.Store({
     },
     GET_TAG_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/tags`)
-        .then((response) => {
-          // this.loading = false
-          response.json();
-        })
+        .then((response) => response.json())
         .then((data) => {
           commit('SET_TAG_LIST', { list: data });
         })
@@ -85,10 +76,7 @@ const store = new Vuex.Store({
     },
     GET_AUTHOR_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/authors`)
-        .then((response) => {
-          // this.loading = false
-          response.json();
-        })
+        .then((response) => response.json())
         .then((data) => {
           commit('SET_AUTHOR_LIST', { list: data });
         })
@@ -99,10 +87,7 @@ const store = new Vuex.Store({
     },
     GET_DIFFICULTY_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/difficulty-levels`)
-        .then((response) => {
-          // this.loading = false
-          response.json();
-        })
+        .then((response) => response.json())
         .then((data) => {
           commit('SET_DIFFICULTY_LEVEL_LIST', { list: data });
         })
