@@ -89,6 +89,7 @@ class QuestionQuerySet(models.QuerySet):
 
 class Question(models.Model):
     text = models.TextField(blank=False, help_text="La question en 1 ou 2 phrases")
+    hint = models.TextField(blank=True, help_text="Un indice (optionnel)")
     type = models.CharField(
         max_length=50,
         choices=constants.QUESTION_TYPE_CHOICES,
@@ -211,6 +212,10 @@ class Question(models.Model):
     @property
     def tags_list_string(self):
         return ", ".join(self.tags_list)
+
+    @property
+    def has_hint(self):
+        return len(self.hint) > 0
 
     @property
     def has_answer_explanation(self):

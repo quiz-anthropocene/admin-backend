@@ -3,6 +3,7 @@
   fields:
     text: "Quelle quantité d'aliments jette-t-on chaque année dans le monde
       ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -39,6 +40,7 @@
     text: "Supposons que toutes nos machines soient remplacées par des esclaves
       qui les actionnent avec leur force musculaire. Combien nous en faudrait-il par
       personne en France pour soutenir notre niveau de vie actuel ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -72,6 +74,7 @@
   pk: 3
   fields:
     text: Qu'appelle t-on l'effet rebond ?
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -112,6 +115,7 @@
   fields:
     text: "A Porto Rico, sur les 35 dernières années, quelle a été l'évolution
       de la population des insectes ?"
+    hint: ''
     type: QCM
     category: 4
     difficulty: 3
@@ -148,6 +152,7 @@
   fields:
     text: "Les hydrates de méthane sont une forme de glace au fond des océans.
       Ils peuvent devenir instables et libérer du méthane..."
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -181,6 +186,7 @@
   fields:
     text: "L'effet de serre additionnel créé par l'homme emprisonne de l'énergie.
       Quelle proportion de celle-ci se retrouve absorbée par les océans ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -217,6 +223,7 @@
   fields:
     text: "Des scientifiques ont suivi les populations de 30,000 espèces de vertébrés
       sur 40 ans. Qu'ont-ils observé ?"
+    hint: ''
     type: QCM
     category: 4
     difficulty: 0
@@ -254,6 +261,7 @@
   fields:
     text: "Si on arrêtait aujourd'hui toutes nos émissions de gaz à effet
       de serre, combien de temps faudrait-il à la Terre pour les absorber ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -290,6 +298,7 @@
   fields:
     text: "Entre 2011 et 2013, la Chine a consommé de béton ce que les Etats-Unis
       en ont consommé en..."
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -325,6 +334,7 @@
   pk: 10
   fields:
     text: "« On a 40 ans de pétrole devant nous ! »"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -360,6 +370,7 @@
   pk: 11
   fields:
     text: "Quel est le secteur le plus énergivore en France ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -397,6 +408,7 @@
   pk: 12
   fields:
     text: "Qu'est ce qui produit le plus d'énergie ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -434,6 +446,7 @@
   fields:
     text: "Combien l'humanité consomme-t-elle de barils de pétrole en une année
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 4
@@ -469,6 +482,7 @@
   fields:
     text: "Quelle serait la température de la Terre sans atmosphère et effet
       de serre associé ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -504,6 +518,7 @@
   pk: 15
   fields:
     text: "Lequel de ces gaz n’est pas un gaz à effet de serre ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -540,6 +555,7 @@
   fields:
     text: "Quelle a été l'évolution de la température moyenne sur Terre
       depuis 1750 ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -573,6 +589,7 @@
   fields:
     text: "A combien se sont élevées les émissions mondiales de gaz à
       effet de serre en 2015 ? (en équivalent CO2)"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -607,6 +624,7 @@
   fields:
     text: "En hiver, lequel de ces aliments émet le plus de CO2 par kg consommé
       (en France) ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -640,6 +658,7 @@
   fields:
     text: "Lequel de ces gestes permet de réduire le plus son empreinte carbone
       ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -676,6 +695,7 @@
   fields:
     text: "En 2018, quelle est la part de l'électricité par rapport à l'ensemble
       de la consommation d'énergie dans le monde ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -711,6 +731,7 @@
     text: "En 1850, la concentration de CO2 dans l'atmosphère s'élevait à
       280 ppm (parties par million, 1% = 10,000 ppm). Quelle est sa concentration
       actuelle (en 2019) ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -751,6 +772,7 @@
   fields:
     text: "Quelle quantité de carbone émet-on chaque année dans l'atmosphère
       ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -793,6 +815,7 @@
   fields:
     text: "Quelle proportion de nos émissions les puits de carbone naturels absorbent-ils
       ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -826,6 +849,7 @@
   pk: 24
   fields:
     text: "Quels gaz sont la cause du trou dans la couche d’ozone ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -862,6 +886,7 @@
     text: "Quelle proportion des réserves connues de charbon devrions-nous laisser
       sous terre pour espérer contenir la hausse de température moyenne à
       +2°C ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -908,6 +933,7 @@ autres
   fields:
     text: "Lors de la dernière déglaciation, la Terre s'est réchauffée
       de 5°C. En combien d'années ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -943,6 +969,7 @@ autres
   fields:
     text: "Le deuxième gaz à effet de serre anthropique (créé par l'homme)
       est le méthane. Il est produit en majeure partie par..."
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -977,6 +1004,7 @@ autres
   pk: 28
   fields:
     text: "L'acidification de l'océan est une conséquence..."
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -1016,6 +1044,7 @@ autres
   pk: 29
   fields:
     text: Quel est l'effet des particules fines sur le climat ?
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -1054,6 +1083,7 @@ autres
   pk: 30
   fields:
     text: La fonte de la banquise a un impact sur...
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -1095,6 +1125,7 @@ autres
   pk: 31
   fields:
     text: "Quelle est la conséquence de la dissolution du CO2 dans l'eau ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -1137,6 +1168,7 @@ autres
   fields:
     text: "Parmi les éléments suivants, lequel ne fait pas monter le niveau
       de l'océan ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -1173,6 +1205,7 @@ autres
   fields:
     text: "Une augmentation de la température entraîne-t-elle une augmentation
       du CO2 ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -1210,6 +1243,7 @@ autres
   fields:
     text: "En termes d'émissions mondiales de gaz à effet de serre, le secteur
       de l'agriculture et de l'usage des sols représente..."
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -1248,6 +1282,7 @@ autres
       un sol dont la température se maintient en dessous de 0°C. Il couvre 20%
       de la surface terrestre de la planète. Que libère-t-il en dégelant
       sous l'effet du réchauffement climatique ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -1284,6 +1319,7 @@ autres
   fields:
     text: "Outre le changement climatique, les émissions de CO2 ont aussi une influence
       inquiétante sur..."
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -1318,6 +1354,7 @@ autres
   pk: 37
   fields:
     text: "Ce qui cause 80% de la déforestation, c'est..."
+    hint: ''
     type: QCM
     category: 1
     difficulty: 0
@@ -1355,6 +1392,7 @@ autres
   fields:
     text: "Quelle est la quantité moyenne d'équivalent CO2 émise par un français
       en une année (2018) ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -1392,6 +1430,7 @@ autres
   fields:
     text: "En France, quelle part de la consommation annuelle de gaz représente
       le biométhane injecté dans le réseau de distribution ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -1429,6 +1468,7 @@ autres
   fields:
     text: "En France, quelle part de la consommation annuelle d'électricité
       est issue du biogaz  ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 4
@@ -1468,6 +1508,7 @@ autres
   fields:
     text: "Si la pêche se poursuit au rythme actuel, à quelle date les scientifiques
       estiment-ils qu'il n'y aura plus de poisson à pêcher dans les mers ?"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 2
@@ -1504,6 +1545,7 @@ autres
   fields:
     text: "Pendant combien de temps le CO2 émis reste t-il dans l'atmosphère
       avant qu'il ne commence à être évacué ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -1539,6 +1581,7 @@ autres
   fields:
     text: "Quel jour de l'année un Français atteint-il les émissions annuelles
       de CO2 d'un Malien ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -1578,6 +1621,7 @@ autres
     text: "Quel sera l'impact d'une hausse de 2 °C de la température de l'air
       (depuis le début de l'ère pré-industrielle) sur les massifs de coraux
       ?"
+    hint: ''
     type: QCM
     category: 4
     difficulty: 2
@@ -1617,6 +1661,7 @@ autres
   fields:
     text: "Chaque jour, quelle quantité de métaux lourds, solvants, boues toxiques
       et autres déchets industriels est déversée dans les eaux du monde ?"
+    hint: ''
     type: QCM
     category: 3
     difficulty: 3
@@ -1658,6 +1703,7 @@ autres
     text: "Selon le rapport du GIEC de 2014, le degré de certitude qu'on a que
       le dérèglement climatique est dû à l'augmentation des gaz à effet
       de serre issus de l'activité humaine est de..."
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -1694,6 +1740,7 @@ autres
     text: "C'est à la fin de l'été, en septembre, que la surface de la banquise
       arctique est la plus réduite. Comment a évolué cette surface minimale
       sur les 40 dernière années ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -1731,6 +1778,7 @@ autres
   fields:
     text: "Quand on dit que la température moyenne augmentera de +3 à +5°C
       d'ici 2100, cela veut dire sur les terres émergées..."
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -1768,6 +1816,7 @@ autres
       pour des raisons environnementales. Entre 2008 et 2016, leur nombre est estimé
       à 25 millions de personnes. A combien les experts du GIEC l'estiment-ils
       à l'horizon 2050 ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 3
@@ -1804,6 +1853,7 @@ autres
   fields:
     text: "L'érosion et l'épuisement des sols réduisent les surfaces arables.
       De combien d'hectares par an ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -1837,6 +1887,7 @@ autres
   fields:
     text: Combien d'hectares de terres arables disparaissent chaque minute du fait
       de l'urbanisation ?
+    hint: ''
     type: QCM
     category: 6
     difficulty: 2
@@ -1869,6 +1920,7 @@ autres
   pk: 52
   fields:
     text: "La progression du désert dans le monde, c'est chaque année..."
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -1902,6 +1954,7 @@ autres
   fields:
     text: "D'après l'ONU, le nombre de décès causés chaque année par
       la pollution est de..."
+    hint: ''
     type: QCM
     category: 3
     difficulty: 3
@@ -1935,6 +1988,7 @@ autres
   pk: 54
   fields:
     text: "Les particules fines en France causent chaque année..."
+    hint: ''
     type: QCM
     category: 3
     difficulty: 1
@@ -1969,6 +2023,7 @@ autres
   fields:
     text: "Selon une enquête du Sénat de 2015, le coût de la pollution en
       France, c'est chaque année..."
+    hint: ''
     type: QCM
     category: 3
     difficulty: 4
@@ -2003,6 +2058,7 @@ autres
   pk: 56
   fields:
     text: "Les déchets plastiques dans les océans, c'est chaque année..."
+    hint: ''
     type: QCM
     category: 3
     difficulty: 4
@@ -2044,6 +2100,7 @@ autres
   fields:
     text: "Le 7ème continent, ce sont de vastes zones d'accumulations des déchets
       plastiques dans les océans. Leur surface est de l'ordre de..."
+    hint: ''
     type: QCM
     category: 3
     difficulty: 4
@@ -2081,6 +2138,7 @@ autres
   fields:
     text: "Combien de sacs plastiques sont consommés chaque année dans le monde
       ?"
+    hint: ''
     type: QCM
     category: 3
     difficulty: 4
@@ -2115,6 +2173,7 @@ autres
   fields:
     text: "Entre 1970 et 2012, les populations de mammifères, d'oiseaux, de reptiles
       et d'amphibiens ont reculé d'environ..."
+    hint: ''
     type: QCM
     category: 4
     difficulty: 3
@@ -2149,6 +2208,7 @@ autres
   fields:
     text: "Parmi les familles suivantes, quelle est celle dont la proportion d'espèces
       menacées est la plus forte ?"
+    hint: ''
     type: QCM
     category: 4
     difficulty: 4
@@ -2184,6 +2244,7 @@ autres
       dinosaures il y a 65 millions d'année. Les scientifiques disent qu'une 6ème
       extinction est en cours. A quelle vitesse les espèces disparaissent-elles
       par rapport à avant la révolution industrielle ?"
+    hint: ''
     type: QCM
     category: 4
     difficulty: 2
@@ -2219,6 +2280,7 @@ autres
   fields:
     text: "De combien d'habitants la population mondiale s'accroît-elle chaque
       année ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 3
@@ -2256,6 +2318,7 @@ autres
     text: "Le ratio entre le nombre de personnes retraitées et personnes en activité
       est de 1 pour 11 à l'échelle mondiale actuellement. Quel est le ratio
       prévu en 2050 ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 3
@@ -2292,6 +2355,7 @@ autres
   fields:
     text: "Entre 1500 et nos jours, la population mondiale a été multipliée
       par 14. Et sa consommation d'énergie ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -2327,6 +2391,7 @@ autres
     text: "Le phosphore, une ressource non-renouvelable, est essentiel pour l'agriculture.
       À quelle date est estimé son pic de production (moment à partir duquel
       sa production ne fera que décroître) ?"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 2
@@ -2362,6 +2427,7 @@ autres
   fields:
     text: "Quelle proportion du carbone est stockée dans la végétation et
       les sols ?"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 2
@@ -2397,6 +2463,7 @@ autres
   fields:
     text: "Comment a évolué le nombre de poissons dans la faune océanique
       en un siècle ?"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 2
@@ -2430,6 +2497,7 @@ autres
   pk: 68
   fields:
     text: "A-t-on atteint le pic des découvertes de ressources de pétrole ?"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 3
@@ -2467,6 +2535,7 @@ autres
   fields:
     text: "A-t-on atteint le pic de production de pétrole conventionnel (c'est
       à dire hors pétrole de schiste et pétrole bitumineux) ?"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 3
@@ -2502,6 +2571,7 @@ autres
   fields:
     text: "Quelle est la proportion de l'utilisation des énergies fossiles dans
       la consommation mondiale ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -2536,6 +2606,7 @@ autres
     text: "L'empreinte carbone de la France correspond aux émissions sur le sol
       français, celles de ses exportations et de ses importations. A combien s'élève-t-elle
       en moyenne par habitant en 2018, en équivalent CO2 ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 4
@@ -2574,6 +2645,7 @@ autres
   fields:
     text: "En émissions sur le territoire national, lequel de ces secteurs émet
       le plus de gaz à effet de serre en France ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -2610,6 +2682,7 @@ autres
   fields:
     text: "La production d'énergie nucléaire contribue-t-elle à l'effet de
       serre ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -2647,6 +2720,7 @@ autres
   fields:
     text: "Si Internet était un pays, en quelle position arriverait-il en termes
       d'émission de gaz à effet de serre ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -2680,6 +2754,7 @@ autres
   fields:
     text: "Quelle proportion des gaz à effet de serre les 10% les plus riches de
       la planète émettent-ils ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 2
@@ -2716,6 +2791,7 @@ autres
   fields:
     text: "Si on compare le poids de tout ce qui a été construit par l'homme
       avec le poids de toute la matière vivante sur terre, cela donne..."
+    hint: ''
     type: QCM
     category: 6
     difficulty: 3
@@ -2751,6 +2827,7 @@ autres
   fields:
     text: "Quelle proportion des gaz à effet de serre les 50% les plus pauvres
       de la planète émettent-ils ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -2789,6 +2866,7 @@ autres
       pas plus que 2,1 tonnes d'équivalent CO2 par an. Imaginons que je ne fasse
       strictement rien d'autre de l'année. Combien de vols Paris-New York aller-retour
       pourais-je me permettre ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -2823,6 +2901,7 @@ autres
   pk: 79
   fields:
     text: "De combien s'est élevé le niveau moyen des mers depuis 1900 ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 0
@@ -2857,6 +2936,7 @@ autres
   pk: 80
   fields:
     text: "Quelle est la durée approximative d'une entrée en glaciation ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -2894,6 +2974,7 @@ autres
   fields:
     text: "Quelle est la part des énergies fossiles dans la consommation d'énergie
       dans le monde ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -2933,6 +3014,7 @@ autres
       à la France de se passer de l'énergie nucléaire et presque totalement
       des énergies fossiles à l'horizon 2050, basée sur 3 mots-clefs. Dans
       quel ordre les préconise-t-elle ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -2973,6 +3055,7 @@ autres
   pk: 83
   fields:
     text: "Lequel de ces pays émet le plus de CO2 par habitant ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -3012,6 +3095,7 @@ autres
   fields:
     text: "Quelle proportion des émissions françaises de gaz à effet de serre
       les forêts française absorbent-elles ? "
+    hint: ''
     type: QCM
     category: 4
     difficulty: 2
@@ -3047,6 +3131,7 @@ autres
   fields:
     text: "Combien d'hectares (10,000 m2) la forêt française metropolitaine
       couvre-t-elle ?"
+    hint: ''
     type: QCM
     category: 4
     difficulty: 3
@@ -3083,6 +3168,7 @@ autres
   fields:
     text: "Quel pourcentage de la France métropolitaine la forêt française
       métropolitaine couvre-t-elle ?"
+    hint: ''
     type: QCM
     category: 4
     difficulty: 3
@@ -3120,6 +3206,7 @@ autres
     text: "Comment s'appelle l'instance consultative indépendante française
       en charge d'évaluer la mise en œuvre des politiques et mesures publiques
       pour réduire les émissions de gaz à effet de serre ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 1
@@ -3156,6 +3243,7 @@ autres
   pk: 88
   fields:
     text: "Qu'est-ce que la Stratégie Nationale Bas-Carbone ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 1
@@ -3191,6 +3279,7 @@ autres
   pk: 89
   fields:
     text: Qu'est-ce que la Convention Citoyenne pour le Climat ?
+    hint: ''
     type: QCM
     category: 6
     difficulty: 1
@@ -3225,6 +3314,7 @@ autres
   pk: 90
   fields:
     text: Qu'est-ce que l'ADEME ?
+    hint: ''
     type: QCM
     category: 6
     difficulty: 1
@@ -3259,6 +3349,7 @@ autres
   fields:
     text: "Quelle est la part du numérique dans la consommation électrique dans
       le monde ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -3299,6 +3390,7 @@ autres
       strictement rien d'autre de l'année. Combien de kilomètres pourrais-je
       parcourir avec une voiture diesel consommant 6 L/100km pour rester dans ce budget
       ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -3335,6 +3427,7 @@ autres
   fields:
     text: "Quelle quantité de matières est extraite du sol pour la fabrication
       d'un smartphone ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -3374,6 +3467,7 @@ autres
   fields:
     text: "Sur les 5 milliards de gobelets utilisés annuellement en France, quel
       pourcentage est recyclé ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -3410,6 +3504,7 @@ autres
   fields:
     text: "Avignon est la ville de France avec le plus haut niveau d'autonomie alimentaire.
       A combien s'élève-t-elle ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -3447,6 +3542,7 @@ autres
   pk: 96
   fields:
     text: "Quelle quantité d'aliments jette-t-on chaque année en France ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -3483,6 +3579,7 @@ autres
   fields:
     text: "Si la Terre était un ballon de basket, la quantité d'eau potable
       correspondrait au volume de..."
+    hint: ''
     type: QCM
     category: 7
     difficulty: 2
@@ -3521,6 +3618,7 @@ autres
       des microparticules de plastique, trop petites pour être filtrées. Quelle
       quantité de micro-plastiques finit sa course dans les océans tous les
       ans ?"
+    hint: ''
     type: QCM
     category: 3
     difficulty: 3
@@ -3555,6 +3653,7 @@ autres
   fields:
     text: "Quelle est la méthode la plus répandue de stockage d'électricité
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -3596,6 +3695,7 @@ autres
   fields:
     text: "La COP21 a eu lieu en 2015 à Paris. Quand et où a eu lieu la première
       COP ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 2
@@ -3635,6 +3735,7 @@ autres
   fields:
     text: "Dans le cadre du système européen de quotas d'émission, à combien
       environ se chiffrait la tonne de CO2 en 2019 ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 3
@@ -3672,6 +3773,7 @@ autres
   fields:
     text: "Vrai ou faux ? Un SUV émet plus de gaz à effet de serre qu'un chien
       de compagnie"
+    hint: ''
     type: VF
     category: 1
     difficulty: 1
@@ -3710,6 +3812,7 @@ autres
   fields:
     text: "En 2016, quel était l'approvisionnement mondial d'énergie primaire
       ? (1 Gtep = 1 milliard de tonnes équivalent pétrole)"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -3744,6 +3847,7 @@ autres
   fields:
     text: "En France en 2017, quelle est la part de l'électricité dans la consommation
       d'énergie ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -3779,6 +3883,7 @@ autres
   fields:
     text: "En quelle année a été créé le GIEC (groupe d’experts
       intergouvernemental sur l’évolution du climat) ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 2
@@ -3813,6 +3918,7 @@ autres
   pk: 106
   fields:
     text: "Quelle est la première source d'énergie primaire dans le monde ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -3849,6 +3955,7 @@ autres
   fields:
     text: "Qu'est-ce qui libère le plus d'énergie lors de sa combustion/explosion
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -3893,6 +4000,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   pk: 108
   fields:
     text: "Quelle est la consommation en carburant d’un char Leclerc ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -3928,6 +4036,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "Parmi ces unités, laquelle n’est PAS une unité de mesure de
       l’énergie ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 2
@@ -3966,6 +4075,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "En quelle année a été décidé l’objectif de limiter
       le réchauffement climatique à +2°C ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 3
@@ -4000,6 +4110,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "Dans le monde, quelle est la part des usages non énergétiques du
       pétrole (plastiques, huiles, solvants, goudrons, ...) ?"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 3
@@ -4034,6 +4145,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   pk: 112
   fields:
     text: "Qu’est-ce qui fournit le plus d’énergie ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -4075,6 +4187,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   pk: 113
   fields:
     text: "Quel est le volume d'un baril de pétrole ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -4110,6 +4223,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: Quelle est la consommation annuelle de carburants routiers en France (tous
       types confondus) ?
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -4145,6 +4259,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "Combien de pays sont membres de l'OPEP (Organisation des Pays Exportateurs
       de Pétrole) ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -4179,6 +4294,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   pk: 116
   fields:
     text: "Quel était le premier producteur mondial de pétrole en 2017 ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -4215,6 +4331,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "En 2017, quel pays est le premier fournisseur de la France en pétrole
       brut ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 4
@@ -4251,6 +4368,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
     text: "Quelle était la concentration en CO2 dans l'atmosphère à l'ère
       pré-industrielle (dans les années 1750)  (en ppm, parties par millions,
       soit en dix-millièmes de %) ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -4287,6 +4405,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   pk: 119
   fields:
     text: Quelle est la principale utilisation du charbon en France (en 2018) ?
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -4322,6 +4441,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "En 2017 en France, quelle était la part des voitures électriques
       dans l'immatriculation des voitures neuves ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -4360,6 +4480,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
     text: "Quelle est la taille des données et modèles climatiques qui ont été
       utilisés par le GIEC dans leur dernier rapport d’évaluation en 2014
       (en GigaOctets) ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -4394,6 +4515,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: Dans la Guerre des Etoiles, quelle serait la puissance d'un sabre laser
       de Jedi ?
+    hint: ''
     type: QCM
     category: 8
     difficulty: 2
@@ -4429,6 +4551,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
     text: "Le protocole de Kyoto de 1992 (+amendement de Doha) fixe la liste des gaz
       à effet de serre qui doivent être inventoriés chaque année. Combien
       de gaz à effet de serre sont dans cette liste ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -4461,6 +4584,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   pk: 124
   fields:
     text: "En France, quel est le secteur qui consomme le plus d’énergie ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -4496,6 +4620,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: Quelle est la consommation moyenne de carburant d'un poids lourd en France
       ?
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -4531,6 +4656,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "En France, quel est la proportion de voies ferrées qui sont électrifiées
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -4567,6 +4693,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "La consommation d'électricité de l'Île-de-France correspond à
       la production duquel de ces quatre pays ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -4606,6 +4733,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   pk: 128
   fields:
     text: Quel est le premier fournisseur de gaz de la France ?
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -4643,6 +4771,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
     text: "Sur la trajectoire actuelle d'émission, en quelle année les modèles
       du GIEC prévoient-ils que nous atteindrons +1,5°C de réchauffement
       par rapport au niveau préindustriel ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -4678,6 +4807,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: Quelle est la perte de masse annuelle de la calotte glaciaire du Groenland
       ?
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -4713,6 +4843,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "La caractéristique des gaz à effet de serre est d’absorber un
       type de rayonnement. Lequel ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -4749,6 +4880,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "Quelle est la production française de pétrole (en 2017, métropole)
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -4785,6 +4917,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "Quel est en France la part des poids lourds (>5t) dans le parc des véhicules
       routiers ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -4820,6 +4953,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "Combien de litres de kérosène consomme un avion de ligne pour relier
       Marseille à Paris ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -4854,6 +4988,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "Quelle est la 1ère source d'énergie renouvelable consommée en
       France ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -4889,6 +5024,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "Dans les transports intérieurs de voyageurs en France, quelle est la
       part du transport ferré (train+métro+RER) ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -4929,6 +5065,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
     text: "Les gaz à effet de serre réchauffent la planète en créant un
       surplus énergétique. Quelle part de cette énergie est absorbée par
       l'atmosphère ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -4964,6 +5101,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "Depuis sa création en 1988, combien de rapports d'évaluation ont
       été publiés par le GIEC ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 2
@@ -5000,6 +5138,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "Quel est le gaz qui contribue le plus à l’effet de serre de la
       terre ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -5037,6 +5176,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "Lequel de ces pays a le réseau routier le plus dense (en km de route
       par habitant) ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -5070,6 +5210,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   pk: 141
   fields:
     text: "Quelle est la première énergie utilisée en Suède ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -5105,6 +5246,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
   fields:
     text: "En France, quelle est la part des forêts et des milieux semi-naturels
       (arbustes, herbes) dans le territoire métropolitain ?"
+    hint: ''
     type: QCM
     category: 4
     difficulty: 3
@@ -5141,6 +5283,7 @@ Cependant, le TNT est beaucoup plus puissant car il libère
     text: "En 2018, la concentration de CO2 dans l’atmosphère a dépassé
       les 410 ppm (parties par million). Quand cela s’est-il produit pour la
       dernière fois ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -5183,6 +5326,7 @@ Image
   fields:
     text: "Le pipeline Nord Stream est un gazoduc de 1200km reliant la Russie à
       l'Allemagne. Quelle est sa capacité annuelle ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -5218,6 +5362,7 @@ Image
   fields:
     text: "Combien de publications scientifiques sont référencées dans le
       dernier rapport d’évaluation du GIEC de 2014 ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -5254,6 +5399,7 @@ Image
     text: "En France, combien y a-t’il d’installations de remontées mécaniques
       (télésièges, téléskis, téléphériques, télécabines)
       ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -5289,6 +5435,7 @@ Image
   fields:
     text: "Quelle est la puissance totale de la dernière génération de Formule
       1 (V6 de 1,6 L hybride avec turbo) ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 2
@@ -5322,6 +5469,7 @@ Image
   pk: 148
   fields:
     text: "Quelle est la première énergie utilisée au Moyen-Orient ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -5355,6 +5503,7 @@ Image
   pk: 149
   fields:
     text: Quel pays est le premier producteur mondial de gaz ?
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -5390,6 +5539,7 @@ Image
   fields:
     text: "Prenons 1 kg des quatre aliments suivants. Lequel a généré le
       plus de gaz à effet de serre ? (en kg CO2eq)"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -5429,6 +5579,7 @@ Image
     text: "Quel est le potentiel de réchauffement global sur 100 ans du gaz hexafluorure
       de soufre (formule SF6) utilisé dans l’industrie comparé à celui
       du CO2 ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -5467,6 +5618,7 @@ Image
   fields:
     text: "En France, quelle a été l’année la plus chaude depuis le
       début du 20ème siècle ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -5503,6 +5655,7 @@ Image
   fields:
     text: "Quelle est la part du pétrole et gaz (en tonnage) dans le commerce maritime
       international ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -5540,6 +5693,7 @@ Image
   fields:
     text: "En 2017, quel pays a construit et mis à l’eau le plus de navires
       pétroliers ? (en tonnage)"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -5579,6 +5733,7 @@ Image
     text: "Le détroit d’Ormuz est le plus important passage de tankers au
       monde. Quelle quantité de pétrole transite chaque jour par ce détroit
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -5623,6 +5778,7 @@ Image
     text: "Les pétroliers de classe ULCC (Ultra Large Crude Carrier) ont une capacité
       de transport supérieure à 320 000 tonnes. Quelle est leur consommation
       moyenne de carburant ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -5662,6 +5818,7 @@ Image
   fields:
     text: "Quel pétrolier a été à l’origine de la plus importante
       marée noire causée par un navire ? (en tonnes déversées)"
+    hint: ''
     type: QCM
     category: 3
     difficulty: 3
@@ -5707,6 +5864,7 @@ Image
     text: "Si l’hydroélectricité chinoise était un pays, quel serait
       sa place dans le classement mondial de la production d’électricité
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -5744,6 +5902,7 @@ Image
   fields:
     text: "En quelle année les émissions de CO2 par habitant en Chine ont dépassé
       celles en France ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -5781,6 +5940,7 @@ Image
     text: "La France est le 10ème producteur d’électricité mondial,
       avec environ 550 TWh par an. Entre 2005 et 2015, combien de France la Chine
       a-t-elle ajouté à sa production électrique ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -5817,6 +5977,7 @@ Image
   pk: 161
   fields:
     text: Quelle est la part de la Chine dans la production mondiale de charbon ?
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -5857,6 +6018,7 @@ image
     text: "En 2016, si on devait comparer les pertes par transformations du système
       énergétique chinois à la consommation totale d'un autre pays, lequel
       serait-ce ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -5893,6 +6055,7 @@ image
   fields:
     text: "Combien de CO2 a été économisé grâce aux télépéages
       à 30 km/h sur les autoroutes ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -5927,6 +6090,7 @@ image
   pk: 164
   fields:
     text: Quel est le premier pays importateur net de gaz au monde ?
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -5963,6 +6127,7 @@ image
   fields:
     text: "Quel pays en Europe émet le moins de gaz à effet de serre par habitant
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -5996,6 +6161,7 @@ image
   fields:
     text: "Dans le monde, combien y a-t-il de régions possédant des glaciers
       ? (exemple : les Alpes = 1 région)"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -6031,6 +6197,7 @@ image
   fields:
     text: "En quelle année a été créé le premier réseau de stations
       météo en France ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 2
@@ -6067,6 +6234,7 @@ image
   fields:
     text: "Quelles ont été les émissions de gaz à effet de serre de The
       Walt Disney Company en 2018 ? (émissions directes + indirectes)"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -6102,6 +6270,7 @@ image
   fields:
     text: "En France, à combien est estimée la séquestration de carbone dans
       la biomasse des forêts ? (en millions de tonnes CO2 équivalent)"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -6146,6 +6315,7 @@ et foresterie (UTCATF, voir
   fields:
     text: Quel pays est le premier producteur mondial de lignite ? (la lignite est
       un type de charbon humide avec un faible pouvoir calorifique)
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -6186,6 +6356,7 @@ et foresterie (UTCATF, voir
   fields:
     text: "En quelle année a eu lieu le pic de production de pétrole au Royaume-Uni
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -6221,6 +6392,7 @@ et foresterie (UTCATF, voir
   fields:
     text: "Quel pays en Europe émet le plus de gaz à effet de serre dans l’agriculture
       ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -6258,6 +6430,7 @@ et foresterie (UTCATF, voir
   fields:
     text: "Quel pays possède les plus grandes réserves prouvées de gaz au
       monde ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -6294,6 +6467,7 @@ et foresterie (UTCATF, voir
   fields:
     text: "En France, quelle est la contribution des industries de l’énergie
       au PIB ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 3
@@ -6329,6 +6503,7 @@ et foresterie (UTCATF, voir
   fields:
     text: "En moyenne annuelle, quel pays émet autant de CO2 que les éruptions
       volcaniques mondiales ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -6366,6 +6541,7 @@ et foresterie (UTCATF, voir
   fields:
     text: "Quelle est la part du méthane dans les émissions françaises de
       gaz à effet de serre ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -6401,6 +6577,7 @@ et foresterie (UTCATF, voir
   fields:
     text: "Quelle est la quantité de gaz à effet de serre émise pour la production
       d’un œuf ? (moyenne française pour un œuf moyen-gros de 60g)"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -6438,6 +6615,7 @@ et foresterie (UTCATF, voir
     text: "Il y a 9 ans, la plateforme pétrolière Deepwater Horizon coulait
       dans le golfe du Mexique après 2 jours d’incendie. Quelle était la
       profondeur totale de son forage (à partir du niveau de la mer) ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -6473,6 +6651,7 @@ et foresterie (UTCATF, voir
   fields:
     text: "Combien y a-t-il de véhicules à moteur en circulation dans l’Union
       Européenne ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -6509,6 +6688,7 @@ et foresterie (UTCATF, voir
     text: "Dans les émissions mondiales de gaz à effet de serre liées aux
       transports, quelle est la part de l'aviation (vols internationaux et domestiques)
       ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -6545,6 +6725,7 @@ et foresterie (UTCATF, voir
     text: "L’albédo est le pouvoir réfléchissant d'une surface, et varie
       de 0 (corps noir parfait) à 1 (miroir parfait). Quel est l’albédo
       moyen de la terre ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -6580,6 +6761,7 @@ et foresterie (UTCATF, voir
   fields:
     text: "A quelle altitude commence la région de l’atmosphère appelée
       troposphère ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -6613,6 +6795,7 @@ et foresterie (UTCATF, voir
   pk: 183
   fields:
     text: Quelle est la part de la Chine dans la production mondiale de ciment ?
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -6648,6 +6831,7 @@ et foresterie (UTCATF, voir
   fields:
     text: "En France, quelle est la part des dépenses relatives à l'énergie
       dans la consommation des ménages ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -6683,6 +6867,7 @@ et foresterie (UTCATF, voir
   fields:
     text: "L’activité solaire varie de façon cyclique. Quelle est la durée
       (période) de ces cycles ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 2
@@ -6722,6 +6907,7 @@ Notez l’échelle
     text: "Il vous faudra environ 7 secondes pour lire cette question. Pendant ce
       laps de temps, quelle quantité de CO2 aura été émise par les activités
       humaines ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -6756,6 +6942,7 @@ Notez l’échelle
   pk: 187
   fields:
     text: "Combien y a-t-il d’arbres en Amazonie ?"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 4
@@ -6790,6 +6977,7 @@ Notez l’échelle
   fields:
     text: "Parmi ces modèles météo, lequel n’est PAS utilisé par
       Météo France ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -6826,6 +7014,7 @@ Notez l’échelle
   pk: 189
   fields:
     text: Parmi ces pays, lequel a le plus de voitures par habitant ?
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -6863,6 +7052,7 @@ Notez l’échelle
   fields:
     text: "La concentration en CO2 dans l’atmosphère se mesure en ppm (partie
       par million). À quelle quantité de CO2 équivaut 1 ppm ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -6901,6 +7091,7 @@ Notez l’échelle
   fields:
     text: "Le kilowatt-heure (kWh) est une unité d’énergie. Combien vaut-il
       de joules ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 2
@@ -6935,6 +7126,7 @@ Notez l’échelle
     text: "Le dernier rapport du GIEC utilise 4 profils RCP (Representative Concentration
       Pathways) pour réaliser des projections climatiques : RCP 2.6, RCP 4.5, RCP
       6.0 et RCP 8.5. Que signifie le chiffre du scénario ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -6973,6 +7165,7 @@ Notez l’échelle
     text: "Le scientifique américain Charles David Keeling est célèbre pour
       ses mesures du CO2 atmosphérique depuis l’observatoire du Mauna Loa
       à Hawaï. En quelle année ces mesures ont commencé ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -7010,6 +7203,7 @@ Notez l’échelle
     text: "Si la tendance actuelle des émissions se poursuit, de combien sera l’élévation
       moyenne du niveau de la mer en 2100 par rapport à l’ère pré-industrielle
       ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 1
@@ -7051,6 +7245,7 @@ Notez l’échelle
   fields:
     text: "Quelle est la concentration actuelle en méthane dans l’atmosphère
       ? (en ppb : partie par milliard)"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -7088,6 +7283,7 @@ Notez l’échelle
     text: "Quelles sont les émissions de gaz à effet de serre de l'entreprise
       Total ? (émissions directes, en millions de tonnes équivalent CO2, année
       2013)"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -7121,6 +7317,7 @@ Notez l’échelle
   fields:
     text: "Quelle quantité d’énergie ingurgite chaque jour l’acteur
       Hafþór Júlíus Björnsson, alias La Montagne ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -7162,6 +7359,7 @@ Notez l’échelle
   fields:
     text: "Quelle est la puissance de la plus grande centrale électrique du monde
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -7198,6 +7396,7 @@ Notez l’échelle
   fields:
     text: "Lequel de ces personnages n’a PAS donné son nom à une unité
       de mesure ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 1
@@ -7232,6 +7431,7 @@ Notez l’échelle
   fields:
     text: "Quel % de la surface de la France métropolitaine est occupé par des
       territoires agricoles ?"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 2
@@ -7268,6 +7468,7 @@ Notez l’échelle
   fields:
     text: "Quelles sont les émissions de gaz à effet de serre d’un tweet
       ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -7302,6 +7503,7 @@ Notez l’échelle
   fields:
     text: "Quelles sont les émissions de gaz à effet de serre liées à
       la fabrication et distribution d’une balle de tennis ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -7336,6 +7538,7 @@ Notez l’échelle
   fields:
     text: "Quelle phase du cycle de vie d’une raquette de tennis est la plus
       émettrice de gaz à effet de serre ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -7372,6 +7575,7 @@ Notez l’échelle
   fields:
     text: "Quelle est l’énergie cinétique d’une balle de tennis lancée
       à 200 km/h ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -7407,6 +7611,7 @@ Notez l’échelle
   fields:
     text: "Quel gaz à effet de serre a été utilisé pour pressuriser les
       balles de tennis ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 2
@@ -7442,6 +7647,7 @@ Notez l’échelle
   fields:
     text: "Quelle quantité d’énergie est consommée lors de la fabrication
       d’une raquette de tennis ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -7475,6 +7681,7 @@ Notez l’échelle
   pk: 207
   fields:
     text: "Quelle est la superficie forestière mondiale ?"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 2
@@ -7509,6 +7716,7 @@ Notez l’échelle
   pk: 208
   fields:
     text: Combien y a-t-il de gares ferroviaires pour voyageurs en France ?
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -7546,6 +7754,7 @@ Notez l’échelle
   fields:
     text: "Parmi ces carburants, lequel émet le plus de CO2 lors de sa combustion
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -7579,6 +7788,7 @@ Notez l’échelle
   fields:
     text: "Quelle est la principale énergie de chauffage des logements en France
       ? (en nombre de logements)"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -7615,6 +7825,7 @@ Notez l’échelle
   fields:
     text: "En France, quelle est la part des tracteurs et engins à moteur dans
       la consommation d’énergie de l’agriculture ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -7650,6 +7861,7 @@ Notez l’échelle
   fields:
     text: "En quelle année la Norvège a passé son pic de production de pétrole
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -7685,6 +7897,7 @@ Notez l’échelle
   fields:
     text: "Quelle est la taille du cheptel bovin français ? (tous bovins confondus,
       en nombre de têtes)"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 3
@@ -7719,6 +7932,7 @@ Notez l’échelle
   pk: 214
   fields:
     text: "Quelle est la première énergie utilisée en Allemagne ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -7752,6 +7966,7 @@ Notez l’échelle
   fields:
     text: "Quelle activité du groupe LVMH génère le plus de gaz à effet
       de serre ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -7786,6 +8001,7 @@ Notez l’échelle
   fields:
     text: "La température maximale relevée en France métropolitaine est de
       44,1°C. En quelle année était-ce ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 2
@@ -7825,6 +8041,7 @@ Notez l’échelle
   fields:
     text: "Combien de litres de pétrole sont produits chaque jour dans le monde
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -7862,6 +8079,7 @@ Notez l’échelle
     text: "Quelles sont les émissions pour la production en Europe d’un litre
       de boisson de la marque Coca-Cola (emballage, transport et ingrédients inclus)
       ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -7896,6 +8114,7 @@ Notez l’échelle
   pk: 219
   fields:
     text: "En quelle année a été publié le premier rapport du GIEC ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -7932,6 +8151,7 @@ Notez l’échelle
   fields:
     text: "Pour atteindre la neutralité carbone en France en 2050, de combien devons-nous
       baisser nos émissions, en partant de l’année 2017 ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -7970,6 +8190,7 @@ Notez l’échelle
   fields:
     text: "Quelle proportion des communes françaises sont classées à risque
       feux de forêts ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 2
@@ -8004,6 +8225,7 @@ Notez l’échelle
   pk: 222
   fields:
     text: "Qu'est-ce qui cause les glaciations et les déglaciations ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -8038,6 +8260,7 @@ Notez l’échelle
     text: "L'augmentation de l'effet de serre se traduit par un surcroît d'énergie
       capturée. Quelle proportion du déséquilibre énergétique l'atmosphère
       absorbe-t-elle ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -8071,6 +8294,7 @@ Notez l’échelle
   fields:
     text: "Quelle est la proportion de l'hydraulique dans la production d'électricité
       mondiale en 2015 ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -8110,6 +8334,7 @@ Notez l’échelle
       humain (IDH), et la maîtrise de l'empreinte écologique. Lequel des pays
       suivants était le seul à combiner un IDH décent (du niveau de la Russie)
       avec une empreinte soutenable ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 3
@@ -8147,6 +8372,7 @@ Notez l’échelle
   fields:
     text: "Le 25 juillet 2019, le record de trafic aérien a été battu. Combien
       d'avions ont volé ce jour-là ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -8187,6 +8413,7 @@ Notez l’échelle
   fields:
     text: Quel est la part en tonnage du transport maritime dans le commerce mondial
       ?
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -8225,6 +8452,7 @@ Notez l’échelle
   pk: 228
   fields:
     text: "En 2018, combien y-a-t-il eu de passagers aériens dans le monde ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -8265,6 +8493,7 @@ Notez l’échelle
       de catastrophes naturelles ou de conflits. En 2019, ce chiffre était de 33
       millions. Quelle proportion de ces déplacements sont dus aux catastrophes
       naturelles ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 2
@@ -8304,6 +8533,7 @@ Notez l’échelle
   pk: 230
   fields:
     text: Quel est le rendement moyen d'un moteur thermique ?
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -8340,6 +8570,7 @@ Notez l’échelle
   pk: 231
   fields:
     text: "Le GIEC a reçu un prix Nobel de la paix. Vrai ou Faux ?"
+    hint: ''
     type: VF
     category: 6
     difficulty: 1
@@ -8380,6 +8611,7 @@ Notez l’échelle
   fields:
     text: "Quelle personnalité française a dit en 2017 « Pas besoin de faire
       de catastrophisme : la situation est catastrophique » ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 2
@@ -8415,6 +8647,7 @@ Notez l’échelle
   fields:
     text: "Quelle est la part du méthane anthropique (créé par l'homme) provenant
       de la culture du riz ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -8455,6 +8688,7 @@ Notez l’échelle
   fields:
     text: "Quel pays en Europe émet le plus de gaz à effet de serre par habitant
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -8489,6 +8723,7 @@ Notez l’échelle
   fields:
     text: "Quel est le pays de l'Union Européenne qui émet le plus de gaz à
       effet de serre ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -8525,6 +8760,7 @@ Notez l’échelle
       sur les émissions de CO2 liées à l'énergie. La moyenne mondiale
       annuelle par habitant est estimée à 4,37 tonnes de CO2. La moyenne française
       se situe en dessous de ce chiffre. Vrai ou Faux ?"
+    hint: ''
     type: VF
     category: 5
     difficulty: 2
@@ -8559,6 +8795,7 @@ Notez l’échelle
   pk: 237
   fields:
     text: "Quelle est la profondeur moyenne des océans ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -8593,6 +8830,7 @@ Notez l’échelle
   pk: 238
   fields:
     text: "Quelle est la première énergie utilisée aux Pays-Bas ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -8627,6 +8865,7 @@ Notez l’échelle
   pk: 239
   fields:
     text: "Combien y a-t-il de genres différents de nuages ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -8664,6 +8903,7 @@ Notez l’échelle
     text: "Quel est le pourcentage de la population de France métropolitaine qui
       réside à moins de 10km (à vol d’oiseau) d’une gare ferroviaire
       ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 2
@@ -8703,6 +8943,7 @@ Notez l’échelle
   fields:
     text: "En France, sur les dix hivers les plus froids depuis 1900, combien ont
       eu lieu ces 50 dernières années ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -8738,6 +8979,7 @@ Notez l’échelle
   fields:
     text: "Quel est le pays qui produit le plus d’électricité à partir
       des énergies marines (houle, courants, marées, ...) ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -8774,6 +9016,7 @@ Notez l’échelle
   fields:
     text: "Combien faut-il de Burkinabés pour émettre autant de CO2 qu’un
       Français (en moyenne) ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -8811,6 +9054,7 @@ Notez l’échelle
   fields:
     text: "Quelle est la vitesse de circulation qui démarque une ligne ferroviaire
       classique d’une ligne à grande vitesse ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 2
@@ -8847,6 +9091,7 @@ Notez l’échelle
   fields:
     text: "En quelle année l'Algérie a passé son pic de production de pétrole
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -8883,6 +9128,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "Les Etats-Unis représentent 4,5% de la population mondiale. Quelle est
       leur part dans la consommation mondiale d’essence automobile ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -8920,6 +9166,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "Quelle est la puissance moyenne fournie par un cycliste lors d’une
       épreuve du Tour de France ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -8957,6 +9204,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "Si l’Union Européenne était un pays, quel serait son classement
       dans les émissions de CO2 mondiales ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -8992,6 +9240,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "En quelle année a été créé l’Organisation des Pays
       Exportateurs de Pétrole (OPEP) ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -9027,6 +9276,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "A quelle quantité de TNT  l'énergie contenue dans un réservoir
       de 50 litres d'essence équivaut-elle ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -9063,6 +9313,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "Quelle quantité de gaz à effet de serre est émise pour obtenir
       1 kg de saucisses de porc en magasin ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -9103,6 +9354,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "Quelle est la part de la France dans les émissions de gaz à effet
       de serre de l’Union Européenne ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -9141,6 +9393,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
     text: "L’état américain du Wyoming compte 570 000 habitants (agglomération
       de Montpellier environ). Si c’était un pays, quel serait son classement
       dans la production mondiale de charbon ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -9178,6 +9431,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "En moyenne, combien un français consomme-t-il de litres de pétrole
       en une année ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -9214,6 +9468,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "Quelle est la première énergie utilisée en Suisse ? (énergie
       utilisée = énergie primaire)"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -9248,6 +9503,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "Par rapport à il y a 40 ans, combien de jours plus tôt ont lieu les
       vendanges des vignobles français ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -9285,6 +9541,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "Si tous les habitants de la planète émettaient autant de CO2 que
       les Canadiens, à combien seraient les émissions mondiales\_?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -9321,6 +9578,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "Sur les 45 dernières années en France, quelle a été la progression
       vers le nord de la chenille processionnaire du pin ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -9358,6 +9616,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "Quelle quantité de charbon a été consommée en France en 2017
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -9396,6 +9655,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "En 2017, combien de passagers ont été transportés en France par
       les TGV, Intercités et TER ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -9433,6 +9693,7 @@ https://twitter.com/laydgeur/status/1149412744766132225"
   fields:
     text: "Combien de km faut-il rouler en voiture diesel pour émettre 1 kg de
       CO2 ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -9475,6 +9736,7 @@ https://twitter.com/laydgeur/status/1157382377083154433"
   fields:
     text: "En quelle année les émissions de CO2 de la Chine ont-elles dépassé
       celles des États-Unis ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -9512,6 +9774,7 @@ https://twitter.com/laydgeur/status/1157382377083154433"
   fields:
     text: "Quel est le premier moyen de production électrique dans l’Union
       Européenne ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -9548,6 +9811,7 @@ https://twitter.com/laydgeur/status/1157382377083154433"
     text: "D'après le gouvernement, quel pourcentage de la population française
       est exposée de manière forte ou très forte aux risques climatiques
       ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -9584,6 +9848,7 @@ https://twitter.com/laydgeur/status/1157382377083154433"
   fields:
     text: "En France, quelle est la part des produits pétroliers qui est utilisée
       pour des usages non énergétiques ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -9620,6 +9885,7 @@ https://twitter.com/laydgeur/status/1157382377083154433"
   fields:
     text: "Laquelle de ces régions du monde émet le plus de CO2 par habitant
       ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 4
@@ -9657,6 +9923,7 @@ https://twitter.com/laydgeur/status/1157382377083154433"
   fields:
     text: "Quel est le premier pays producteur d’électricité d’origine
       géothermique dans l’Union Européenne ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -9693,6 +9960,7 @@ https://twitter.com/laydgeur/status/1157382377083154433"
   pk: 268
   fields:
     text: "Quel est le premier pays producteur de pétrole en Afrique ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -9729,6 +9997,7 @@ https://twitter.com/laydgeur/status/1157382377083154433"
   fields:
     text: "Parmi ces classements, dans lequel la Chine n’est PAS la première
       mondiale ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -9764,6 +10033,7 @@ https://twitter.com/laydgeur/status/1157382377083154433"
   fields:
     text: "En quelle année a fermé la dernière mine de charbon en France
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -9799,6 +10069,7 @@ https://twitter.com/laydgeur/status/1157382377083154433"
   pk: 271
   fields:
     text: Combien de pays sont membres du GIEC ?
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -9834,6 +10105,7 @@ https://twitter.com/laydgeur/status/1157382377083154433"
   fields:
     text: "Quelle est la première énergie renouvelable consommée en France
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -9871,6 +10143,7 @@ https://twitter.com/laydgeur/status/1166071796682149888"
   fields:
     text: "Il est 21h. Quelle quantité de gaz à effet de serre la France a émis
       depuis aujourd’hui minuit ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 4
@@ -9907,6 +10180,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Quel pays Européen possède le plus d’unités de production
       de biogaz ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -9945,6 +10219,7 @@ Donc en France en seulement 21h, 1 million
     text: "MétéoFrance utilise des modèles de prévisions qui découpent
       la France en mailles pour effectuer des calculs. Quelle est la taille des mailles
       du modèle le plus précis ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -9979,6 +10254,7 @@ Donc en France en seulement 21h, 1 million
   pk: 276
   fields:
     text: "Quel est le premier fournisseur de pétrole des Etats-Unis ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -10017,6 +10293,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Quelle est la part des énergies fossiles dans la production électrique
       mondiale ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -10056,6 +10333,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Si les voitures, pick-ups et camionnettes des Etats-Unis étaient un
       pays, quel serait son classement dans les émissions de CO2 mondiales ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -10094,6 +10372,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "En 2017, combien de personnes dans le monde n’ont pas accès à
       l’électricité ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -10131,6 +10410,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "En France, combien y a-t-il d’installations de production d’hydroélectricité
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -10168,6 +10448,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Quel pays a la plus grande proportion d’énergies renouvelables
       dans son mix énergétique ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -10205,6 +10486,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Quelle est la première source d'émission de méthane dans l'atmosphère
       au niveau mondial ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -10242,6 +10524,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Combien de pays sont membres de l'Agence Internationale de l’Énergie
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -10276,6 +10559,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Combien de litres de fioul domestique sont vendus chaque année en France
       ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -10317,6 +10601,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "En quelle année a été mis en service le premier puits de pétrole
       du Qatar ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -10351,6 +10636,7 @@ Donc en France en seulement 21h, 1 million
   pk: 286
   fields:
     text: "Quel est le métro le plus utilisé dans le monde ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 2
@@ -10387,6 +10673,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Quelle est la première utilisation de l’hydrogène dans le monde
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -10423,6 +10710,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Quelle est la première source d’énergie utilisée en Australie
       ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -10459,6 +10747,7 @@ Donc en France en seulement 21h, 1 million
     text: "Le stock hydraulique représente l’énergie potentielle de l’eau
       retenue dans les barrages de montagne. A quelle période de l’année
       est-il au minimum en France ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -10497,6 +10786,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Depuis combien d’années les émissions totales de CO2 de l’Inde
       ont dépassé celles de la France ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -10533,6 +10823,7 @@ Donc en France en seulement 21h, 1 million
   pk: 291
   fields:
     text: "Combien y a-t-il de mines de charbon actives aux États-Unis ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -10570,6 +10861,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Dans le monde, quelle part du trafic ferroviaire de passagers est électrifié
       ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -10607,6 +10899,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Combien y avait-il de véhicules électriques en circulation dans le
       monde en 2017 ? (en incluant les hybrides rechargeables)"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -10647,6 +10940,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Dans le monde, combien de personnes vivent dans des zones à moins de
       10m au dessus du niveau de la mer ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -10688,6 +10982,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Quelle est la première utilisation du bois récolté en France métropolitaine
       ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -10726,6 +11021,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Quelle est la distance moyenne que parcourent les voitures sur le réseau
       autoroutier concédé français ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -10761,6 +11057,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "En 2018 dans l’Union Européenne, quel pays a produit le plus d’hydroélectricité
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -10798,6 +11095,7 @@ Donc en France en seulement 21h, 1 million
   pk: 298
   fields:
     text: "Combien y a-t-il de bateaux de pêche en France métropolitaine ?"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 3
@@ -10835,6 +11133,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Combien de pays émettent plus de CO2 que l’ensemble du continent
       africain et ses 1,2 milliards d’habitants ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -10873,6 +11172,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Lors de quel mois de l'année la concentration en CO2 dans l'atmosphère
       est la plus élevée ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -10910,6 +11210,7 @@ Donc en France en seulement 21h, 1 million
     text: "Le programme de forage EPICA en Antarctique a permis de récupérer
       des bulles d’air datant d’il y a 800 000 ans. À quelle profondeur
       se trouvaient-elles ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -10945,6 +11246,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Quel pays dans le monde produit le plus d’électricité avec du
       solaire à concentration ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -10982,6 +11284,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "Depuis l'an 2000, combien y a-t-il eu d'années pendant lesquelles les
       émissions mondiales de CO2 ont baissé ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -11021,6 +11324,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "En quelle année la France a passé son pic de production de pétrole
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -11058,6 +11362,7 @@ Donc en France en seulement 21h, 1 million
     text: "Le Groenland perd des milliards de tonnes de glace chaque année. Si
       toute cette eau était disposée sur la ville de Paris, quelle en serait
       la hauteur ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -11094,6 +11399,7 @@ Donc en France en seulement 21h, 1 million
     text: "Le Glacier d’Ossoue dans le massif du Vignemale est le 2ème plus
       grand glacier des Pyrénées. En un siècle, quel proportion de sa surface
       a été perdue ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -11133,6 +11439,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "En 2019, combien y avait-t-il d’éoliennes installées en France
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -11172,6 +11479,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "En quelle année a été inauguré la première ligne de chemin
       fer voyageurs en France ?"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -11209,6 +11517,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "En quelle année la France a passé son pic de production de charbon
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -11244,6 +11553,7 @@ Donc en France en seulement 21h, 1 million
   fields:
     text: "De quelle année date la première création d’un ministère
       dédié à l’environnement en France ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 2
@@ -11279,6 +11589,7 @@ Donc en France en seulement 21h, 1 million
   pk: 311
   fields:
     text: Quel est le premier pays importateur de gaz dans le monde ?
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -11317,6 +11628,7 @@ https://twitter.com/laydgeur/status/1185279458799960071"
   pk: 312
   fields:
     text: Combien y a-t-il de stations-service en France ?
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -11355,6 +11667,7 @@ https://twitter.com/laydgeur/status/1185279458799960071"
     text: "Si l’état américain du Texas (30 millions d’habitants)
       était un pays, quel serait son classement dans les émissions de CO2 mondiales
       ? (la France est 18ème)"
+    hint: ''
     type: QCM
     category: 8
     difficulty: 2
@@ -11393,6 +11706,7 @@ https://twitter.com/laydgeur/status/1185279458799960071"
   pk: 314
   fields:
     text: Quel est le secteur qui consomme le plus de gaz naturel en France ?
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -11430,6 +11744,7 @@ https://twitter.com/laydgeur/status/1185279458799960071"
   fields:
     text: "Dans le monde, combien d’enfants vivent dans des zones inondées
       au moins une fois par an ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -11468,6 +11783,7 @@ https://twitter.com/laydgeur/status/1185279458799960071"
     text: "Quelle est la dernière année où les émissions des Français
       ont été inférieures à 2 tonnes de CO2 par habitant ? (2 tonnes par
       an et par habitant, c'est l'objectif de l’accord de Paris)"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 4
@@ -11506,6 +11822,7 @@ https://twitter.com/laydgeur/status/1185279458799960071"
   fields:
     text: Dans quelle ville se trouvent les plus anciennes mesures du niveau de la
       mer en France ?
+    hint: ''
     type: QCM
     category: 6
     difficulty: 3
@@ -11545,6 +11862,7 @@ https://twitter.com/laydgeur/status/1185279458799960071"
   fields:
     text: "Entre 2008 et 2018, de combien a varié le parc français de voitures
       ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -11585,6 +11903,7 @@ https://twitter.com/laydgeur/status/1189284112013647872"
   fields:
     text: "Quel pays de l'Union Européenne possède le plus de bus/cars en circulation
       ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -11621,6 +11940,7 @@ https://twitter.com/laydgeur/status/1189284112013647872"
   fields:
     text: "En quelle année les Pays-Bas ont-ils passé leur pic de production
       de gaz ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -11660,6 +11980,7 @@ https://twitter.com/laydgeur/status/1190014156746952704"
   fields:
     text: "Dans le monde, quel pays émet le plus de CO2 dû au charbon par habitant
       ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 4
@@ -11696,6 +12017,7 @@ https://twitter.com/laydgeur/status/1190014156746952704"
   pk: 322
   fields:
     text: "Dans quel pays se trouve la ville d’Uranium City ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -11734,6 +12056,7 @@ https://twitter.com/laydgeur/status/1190014156746952704"
   fields:
     text: "Quelle est la part des énergies fossiles dans le mix énergétique
       de l’Union Européenne ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -11769,6 +12092,7 @@ https://twitter.com/laydgeur/status/1190014156746952704"
   fields:
     text: "Parmi les 10 plus gros émetteurs de CO2 dans le monde, combien y a-t'il
       de pays de l'Union Européenne ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -11806,6 +12130,7 @@ https://twitter.com/laydgeur/status/1190014156746952704"
   fields:
     text: "Combien y a-t-il de puits de pétrole et de gaz en activité aux États-Unis
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -11843,6 +12168,7 @@ https://twitter.com/laydgeur/status/1190014156746952704"
   fields:
     text: "En moyenne, combien y a-t-il de nouvelles voitures immatriculées en
       France chaque jour ? (toutes catégories confondues)"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -11879,6 +12205,7 @@ https://twitter.com/laydgeur/status/1190014156746952704"
   fields:
     text: "En quelle année a été installée la première éolienne
       raccordée au réseau électrique français ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -11919,6 +12246,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "Quelle est la consommation moyenne de carburant par passager sur les avions
       d’Air France-KLM ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -11954,6 +12282,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "En quelle année le pétrole est-il devenu la première énergie
       consommée aux Etats-Unis ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -11989,6 +12318,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "Dans le monde, combien de personnes habitent dans des zones côtières
       ? (< 100 km de la mer)"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 2
@@ -12026,6 +12356,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "Parmi les 28 pays de l'Union Européenne, combien ont une dépendance
       sur leurs importations de gaz supérieure à 90% ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -12061,6 +12392,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "Dans l’Union Européenne, quel pays possède le plus de véhicules
       par habitant ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -12097,6 +12429,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "Les foraminifères sont très utilisés pour connaître et étudier
       les climats passés. Qu’est-ce que les foraminifères ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -12130,6 +12463,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   pk: 334
   fields:
     text: Quel est le premier pays producteur de biocarburants dans le monde ?
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -12172,6 +12506,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "Parmi ces boissons, laquelle émet le plus de CO2eq jusqu'à son arrivée
       au magasin ? (ingrédient uniquement, hors emballage)"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -12205,6 +12540,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   pk: 336
   fields:
     text: "Combien y a-t-il de raffineries en France métropolitaine ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -12241,6 +12577,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "Combien de groupes de recherche français développent des modèles
       climatiques utilisés dans les rapports du GIEC ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -12276,6 +12613,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "Quel pays est le plus gros exportateur d’électricité dans le
       monde ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -12313,6 +12651,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "Parmi ces 4 pays de l'Union Européenne, lequel est producteur de pétrole
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -12349,6 +12688,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "La Canada est le 2ème plus grand pays du monde. Quel % des forêts
       mondiales contient-il ?"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 3
@@ -12386,6 +12726,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
     text: "Les Etats-Unis, l’Arabie Saoudite et la Russie sont les 3 premiers
       producteurs de pétrole dans le monde. Ensemble, quelle est leur part dans
       la production mondiale ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -12421,6 +12762,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "Parmi ces produits pétroliers raffinés, lequel est le plus léger
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -12457,6 +12799,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "Quelle part du CO2 d'origine humaine est absorbée par les océans
       ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -12498,6 +12841,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   pk: 344
   fields:
     text: Quel pays est le premier exportateur mondial de charbon ?
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -12539,6 +12883,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
     text: "Si tous les terriens émettaient autant de CO2 par habitant que les Français,
       de combien varieraient les émissions mondiales ? (Elles s'élevaient à
       36,5 milliards de tonnes de CO2 en 2018)"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -12577,6 +12922,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "Quelles sont les émissions moyennes de CO2 par passager d’un TER
       roulant au gazole ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -12615,6 +12961,7 @@ https://twitter.com/laydgeur/status/1196690802883383296"
   fields:
     text: "Dans les 50 millions de tonnes de CO2 émis en France par le secteur
       résidentiel, quelle est la part causée par le gaz ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -12653,6 +13000,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "Quel est le premier pays de l’Union Européenne à avoir adopté
       une stratégie nationale d’adaptation au changement climatique ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 4
@@ -12690,6 +13038,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "La compagnie pétrolière Shell est la plus grande entreprise énergétique
       au monde. Dans quel pays se trouve leur plus grande station service ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -12728,6 +13077,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "Le cheptel bovin est le premier  émetteur de gaz à effet de serre
       issu de l'agriculture en France. Quel en est le deuxième ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -12765,6 +13115,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "Entre la première question de ce quiz le 7 janvier et aujourd’hui,
       combien de CO2 a été émis dans le monde ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -12802,6 +13153,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "Quelle est la part des pays de l'OPEP (Organisation des Pays Exportateurs
       de Pétrole) dans la production mondiale de pétrole ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -12839,6 +13191,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "Les États-Unis sont le 3ème producteur mondial de charbon. Combien
       ont-ils d’années de réserves ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -12879,6 +13232,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "Quels sont les pays dans le monde qui s’échangent le plus de gaz
       ? (par pipeline ou méthanier)"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -12914,6 +13268,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "Parmi ces 4 sources d’émissions de CO2, laquelle a le plus augmenté
       au cours de 2019 ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -12951,6 +13306,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "Au niveau mondial, quelle est la place de 2019 dans le classement des années
       les plus chaudes depuis le début des observations ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -12989,6 +13345,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "Quelle est la région française qui fournit le plus de bois ? (tous
       bois confondus)"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 3
@@ -13025,6 +13382,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "En combien de jours un Américain émet autant de CO2 qu'un Éthiopien
       émet en l'espace d'un an ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -13064,6 +13422,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "Quelle est la puissance installée de tous les moyens de production électrique
       en service dans le monde ? (France = 130 GW)"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -13101,6 +13460,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "Dans le monde, combien de pays produisent plus d'électricité que
       les centrales à gaz des États-Unis ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 4
@@ -13140,6 +13500,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "En 40 ans, quelle a été la diminution de la surface de la banquise
       arctique estivale ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -13178,6 +13539,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "Dans le monde, quelle est la part du charbon dans les émissions de gaz
       à effet de serre dues à l'homme ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -13215,6 +13577,7 @@ https://twitter.com/laydgeur/status/1206678650722160640"
   fields:
     text: "Si l'aviation commerciale mondiale (passagers + fret) était un pays,
       quelle serait son classement dans les émissions de CO2 ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -13253,6 +13616,7 @@ https://twitter.com/laydgeur/status/1219734466240950273"
   pk: 364
   fields:
     text: "Parmi ces régions du globe, laquelle émet le plus de CO2 ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -13289,6 +13653,7 @@ https://twitter.com/laydgeur/status/1219734466240950273"
   fields:
     text: Quelle est l'occupation moyenne des trains de voyageurs en Inde ? (moyenne
       France = 240 passagers/train)
+    hint: ''
     type: QCM
     category: 8
     difficulty: 3
@@ -13326,6 +13691,7 @@ https://twitter.com/laydgeur/status/1219734466240950273"
   fields:
     text: "En 2019, combien y avait-il de centrales à charbon en construction dans
       le monde\_?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -13364,6 +13730,7 @@ https://twitter.com/laydgeur/status/1219734466240950273"
   fields:
     text: "Sur les 54 pays du continent africain, combien émettent plus de CO2
       que la France ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -13404,6 +13771,7 @@ https://twitter.com/laydgeur/status/1219734466240950273"
     text: "Quelle est la quantité moyenne de gaz à effet de serre émis pour
       chaque produit vendu chez Décathlon ? (tous produits confondus, sur tout
       le cycle de vie)"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -13442,6 +13810,7 @@ https://twitter.com/laydgeur/status/1219734466240950273"
   fields:
     text: "En quelle année la concentration en CO2 dans l'atmosphère est devenue
       la plus élevée depuis au moins 800 000 ans ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -13482,6 +13851,7 @@ https://twitter.com/laydgeur/status/1219734466240950273"
   fields:
     text: "Dans le monde, combien de pays émettent PLUS de CO2 que le secteur des
       transports en France ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -13521,6 +13891,7 @@ https://twitter.com/laydgeur/status/1219734466240950273"
   fields:
     text: "Quelle est la hausse de la température moyenne mondiale sur les terres
       depuis la période 1850-1900 ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -13559,6 +13930,7 @@ https://twitter.com/laydgeur/status/1219734466240950273"
   fields:
     text: "En quelle année le Royaume-Uni a-t-il définitivement perdu son titre
       de 1er émetteur de CO2 mondial ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -13597,6 +13969,7 @@ https://twitter.com/laydgeur/status/1224453105799946253"
   pk: 373
   fields:
     text: "Quelle est la première utilisation du gaz au Royaume-Uni ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -13636,6 +14009,7 @@ https://twitter.com/laydgeur/status/1224791510161465345"
     text: "La catastrophe de Piper Alpha en 1988 a conduit à une baisse de 30%
       de la production de pétrole du Royaume-Uni pendant 5 ans. Sur quelle installation
       a eu lieu cette catastrophe ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -13674,6 +14048,7 @@ https://twitter.com/laydgeur/status/1225157173052768256"
   fields:
     text: "Depuis la mise en place d'une taxe carbone (prix plancher) en 2013 au Royaume-Uni,
       quelle a été la baisse de la production électrique au charbon ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -13713,6 +14088,7 @@ https://twitter.com/laydgeur/status/1225722941742161921"
   fields:
     text: "Lequel de ces pics de production n’a PAS été passé par le
       Royaume-Uni ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -13752,6 +14128,7 @@ https://twitter.com/laydgeur/status/1226134940548505600"
   fields:
     text: "Dans le monde, combien de pays émettent plus d’un milliard de tonnes
       de CO2 chaque année ? (France = 340 millions de tonnes)"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -13788,6 +14165,7 @@ https://twitter.com/laydgeur/status/1226134940548505600"
   fields:
     text: "En moyenne mondiale, quelle quantité de CO2 est émise pour produire
       une tonne d’acier ?"
+    hint: ''
     type: QCM
     category: 7
     difficulty: 4
@@ -13824,6 +14202,7 @@ https://twitter.com/laydgeur/status/1226134940548505600"
   fields:
     text: "En attendant que l’Anthropocène ne devienne officielle, dans quelle
       époque géologique sommes-nous actuellement ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 1
@@ -13859,6 +14238,7 @@ https://twitter.com/laydgeur/status/1226134940548505600"
   fields:
     text: "En quelle année a fermé la dernière mine d’uranium en France
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -13896,6 +14276,7 @@ https://twitter.com/laydgeur/status/1226134940548505600"
   fields:
     text: "Dans le monde, quelle est la puissance moyenne d’un réacteur nucléaire
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -13933,6 +14314,7 @@ https://twitter.com/laydgeur/status/1226134940548505600"
   fields:
     text: "Lors de la mise en service de Fessenheim en 1978, quelle était la part
       des fossiles dans le mix électrique français ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -13972,6 +14354,7 @@ https://twitter.com/laydgeur/status/1229511853577035777"
   fields:
     text: "En combien de temps ont été construit chacun des réacteurs de
       la centrale de Fessenheim ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -14012,6 +14395,7 @@ https://twitter.com/laydgeur/status/1229863134619480071"
     text: "La centrale de Fessenheim produit en moyenne 10.5 TWh d'électricité
       par an. Quelles sont les émissions évitées par rapport à une centrale
       à gaz ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 4
@@ -14052,6 +14436,7 @@ https://twitter.com/laydgeur/status/1230445450551058432"
   fields:
     text: "Quelle est l’appréciation de l’Autorité de Sûreté
       Nucléaire (ASN) sur la centrale de Fessenheim ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -14090,6 +14475,7 @@ https://twitter.com/laydgeur/status/1230762664126631937"
   pk: 386
   fields:
     text: "Combien a couté la construction de la centrale de Fessenheim ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -14127,6 +14513,7 @@ https://twitter.com/laydgeur/status/1231201782510096392"
   pk: 387
   fields:
     text: "Lequel de ces pays émet le plus de CO2 ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 4
@@ -14166,6 +14553,7 @@ https://twitter.com/laydgeur/status/1231201782510096392"
   fields:
     text: "Les stomates sont très utilisés pour connaître et étudier les
       climats passés. Qu’est-ce que les stomates ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -14200,6 +14588,7 @@ https://twitter.com/laydgeur/status/1231201782510096392"
   fields:
     text: "Quel pays a des émissions annuelles de CO2 équivalentes à celles
       du monde entier pendant une journée ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -14237,6 +14626,7 @@ https://twitter.com/laydgeur/status/1231201782510096392"
   fields:
     text: "Quelle est l’apport énergétique journalier recommandé pour
       un homme ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -14273,6 +14663,7 @@ https://twitter.com/laydgeur/status/1231201782510096392"
   fields:
     text: "Si la production de ciment était un pays, quelle serait son classement
       en termes d'émissions de CO2 ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -14310,6 +14701,7 @@ https://twitter.com/laydgeur/status/1231201782510096392"
   fields:
     text: "A combien s'élève l'empreinte carbone totale (fabrication, utilisation,
       rebus) d'un Iphone 11 ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 1
@@ -14351,6 +14743,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   fields:
     text: "En France, quel secteur dépasse 30% du total des émissions de gaz
       à effet de serre ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -14387,6 +14780,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   fields:
     text: "Quel pays dans le monde produit le plus d’électricité par géothermie
       ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -14424,6 +14818,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   pk: 395
   fields:
     text: "Quelle est la première énergie utilisée au Danemark ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -14460,6 +14855,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   fields:
     text: "En quelle année a été mis en production le premier puits de pétrole
       du Venezuela ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -14496,6 +14892,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
     text: "Lequel de ces pays n’a jamais ratifié le protocole de Kyoto portant
       sur des engagements à réduire les émissions de gaz à effet de serre
       ?"
+    hint: ''
     type: QCM
     category: 6
     difficulty: 2
@@ -14535,6 +14932,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   pk: 398
   fields:
     text: "Quelle est la première énergie utilisée en Italie ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -14571,6 +14969,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   fields:
     text: "En 2019, sur les 31 jours où la France a consommé le moins d’électricité,
       combien étaient en juillet ?"
+    hint: ''
     type: QCM
     category: 2
     difficulty: 3
@@ -14608,6 +15007,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   fields:
     text: "En quelle année ont commencé les premiers forages profonds dans la
       station russe de Vostok en Antarctique ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -14643,6 +15043,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   fields:
     text: "En France, parmi ces 4 catégories, laquelle émet le plus de gaz à
       effet de serre ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -14680,6 +15081,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   pk: 402
   fields:
     text: Combien en moyenne utilise-t-on de litres d'eau pour fabriquer un jean  ?
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -14717,6 +15119,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
     text: "Si rien n'est fait pour atténuer le changement climatique, combien d'humains
       risquent de vivre d'ici 50 ans dans des zone plus chaudes que le Sahara actuellement
       ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
@@ -14757,6 +15160,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   fields:
     text: "A combien de jours de consommation intérieure les stocks stratégiques
       pétroliers correspondent-ils en France ? "
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -14797,6 +15201,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   fields:
     text: "Quel est le potentiel de réchauffement global sur 100 ans du méthane
       (CH4) comparé à celui du CO2 ?"
+    hint: ''
     type: QCM
     category: 1
     difficulty: 1
@@ -14836,6 +15241,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   fields:
     text: "Vrai ou Faux ? Les 5 dernières années (2015 à 2019) ont été
       les plus chaudes jamais observées."
+    hint: ''
     type: VF
     category: 1
     difficulty: 1
@@ -14878,6 +15284,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   fields:
     text: "Si l'océan était un pays, quel serait son classement en termes de
       PIB ?"
+    hint: ''
     type: QCM
     category: 4
     difficulty: 3
@@ -14915,6 +15322,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   pk: 408
   fields:
     text: "Quel pays dans le monde a le plus grand parc nucléaire ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -14960,6 +15368,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   fields:
     text: "La France est le premier pays au monde en terme de part du nucléaire
       dans le mix électrique. Qui est deuxième dans ce classement ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 3
@@ -14997,6 +15406,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   fields:
     text: "En France, quelle a été la part du nucléaire dans la production
       d'électricité en 2019 ?"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 1
@@ -15037,6 +15447,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
     text: "Quel pays de l'Union Européenne a la plus forte intensité carbone
       pour sa production d'électricité ? (intensité carbone = émissions
       de CO2 par unité d’énergie électricité produite)"
+    hint: ''
     type: QCM
     category: 5
     difficulty: 2
@@ -15088,6 +15499,7 @@ https://twitter.com/laydgeur/status/1234583035296845825"
   fields:
     text: "Au plus fort de la crise du Covid, les émissions quotidiennes mondiales
       auront été similaires à celles observées en ..."
+    hint: ''
     type: QCM
     category: 1
     difficulty: 2
