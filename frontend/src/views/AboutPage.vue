@@ -53,18 +53,8 @@
     </p>
 
     <br />
-    <h3>Vous souhaitez aller plus loin ?</h3>
-    <a href="https://fresqueduclimat.org/" target="_blank">La Fresque du Climat</a><br />
-    <a href="https://theshiftproject.org/" target="_blank">The Shift Project</a><br />
-    <a href="https://avenirclimatique.org/" target="_blank">Avenir Climatique</a><br />
-    <a href="http://adrastia.org/" target="_blank">Adrastia</a><br />
-    <a href="https://citoyenspourleclimat.org/" target="_blank">Citoyens pour le climat (CPLC)</a><br />
-    <a href="https://extinctionrebellion.fr/" target="_blank">Extinction Rebellion (XR)</a><br />
-    <a href="https://www.lpo.fr/" target="_blank">La Ligue pour la Protection des Oiseaux (LPO)</a><br />
+    <h3>Vous souhaitez <router-link :to="{ name: 'ressources' }">aller plus loin ?</router-link></h3>
 
-    <h6>Mais aussi...</h6>
-    <a href="https://www.hautconseilclimat.fr/" target="_blank">Le Haut conseil pour le climat</a><br />
-    <a href="https://www.conventioncitoyennepourleclimat.fr/" target="_blank">La Convention Citoyenne pour le climat (CCC)</a><br />
   </section>
 </template>
 

@@ -9,6 +9,7 @@ import QuestionDetailPage from './views/QuestionDetailPage.vue';
 import QuizListPage from './views/QuizListPage.vue';
 import QuizDetailPage from './views/QuizDetailPage.vue';
 import AboutPage from './views/AboutPage.vue';
+import RessourcesPage from './views/RessourcesPage.vue';
 import StatsPage from './views/StatsPage.vue';
 import GlossaryPage from './views/GlossaryPage.vue';
 import ContributePage from './views/ContributePage.vue';
@@ -51,6 +52,14 @@ const routes = [
     path: '/a-propos',
     name: 'about',
     component: AboutPage,
+  },
+  {
+    path: '/ressources',
+    name: 'ressources',
+    component: RessourcesPage,
+    meta: {
+      title: 'Know Your Planet - Ressources',
+    },
   },
   {
     path: '/stats',
