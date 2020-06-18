@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("api", "0036_improve_model_stats"),
+        ("api", "0037_create_model_glossary"),
     ]
 
     operations = [
