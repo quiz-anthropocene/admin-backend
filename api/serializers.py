@@ -10,6 +10,7 @@ from api.models import (
     QuizAnswerEvent,
     QuizFeedbackEvent,
     Contribution,
+    Glossary,
 )
 
 
@@ -188,3 +189,22 @@ class ContributionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contribution
         fields = ["text", "description", "type", "created"]
+
+
+"""
+GLOSSARY
+"""
+
+
+class GlossarySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Glossary
+        fields = [
+            "name",
+            "name_alternatives",
+            "definition_short",
+            "description",
+            "description_accessible_url",
+            "added",
+            "created",
+        ]
