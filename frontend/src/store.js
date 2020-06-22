@@ -3,6 +3,28 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
+const jsyaml = require('js-yaml');
+
+/**
+ * goal: process raw yaml files
+ * input: text file (with 'pk' & 'fields' fields)
+ * output: json object
+ */
+function processYamlData(data) {
+  const yamlData = jsyaml.load(data); // safeLoad + try/catch
+  console.log(jsyaml.load(data));
+  yamlData.map((el) => {
+    // move 'fields' key up
+    // Object.keys(el.fields).forEach((f) => { el[f] = el.fields[f]; });
+    const elmerged = { ...el, ...el.fields };
+    delete el.fields;
+    // add 'id' key
+    elmerged.id = el.pk;
+    return elmerged;
+  });
+  return yamlData;
+}
+
 const store = new Vuex.Store({
   state: {
     loading: true,
@@ -42,6 +64,25 @@ const store = new Vuex.Store({
           console.log(error);
         });
     },
+    GET_QUESTION_LIST_FROM_YAML: ({ commit }) => {
+      commit('UPDATE_LOADING_STATUS', true);
+      commit('UPDATE_ERROR', null);
+      fetch('https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/questions.yaml')
+        .then((response) => {
+          commit('UPDATE_LOADING_STATUS', false);
+          commit('UPDATE_ERROR', null);
+          response.text();
+        })
+        .then((data) => {
+          commit('SET_QUESTION_LIST', { list: processYamlData(data) }); // filter
+        })
+        .catch((error) => {
+          commit('UPDATE_LOADING_STATUS', false);
+          commit('UPDATE_ERROR', error);
+          console.log(error);
+          // this.error = error;
+        });
+    },
     GET_QUIZ_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/quizzes`)
         .then((response) => response.json())
@@ -53,11 +94,36 @@ const store = new Vuex.Store({
           // this.error = error;
         });
     },
+    GET_QUIZ_LIST_FROM_YAML: ({ commit }) => {
+      fetch('https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/quizzes.yaml')
+        .then((response) => response.text())
+        .then((data) => {
+          commit('SET_QUIZ_LIST', { list: processYamlData(data) }); // full ?
+        })
+        .catch((error) => {
+          console.log(error);
+          // this.error = error;
+        });
+    },
     GET_CATEGORY_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/categories`)
-        .then((response) => response.json())
+        .then((response) => {
+          console.log(response);
+          response.json();
+        })
         .then((data) => {
           commit('SET_CATEGORY_LIST', { list: data });
+        })
+        .catch((error) => {
+          console.log(error);
+          // this.error = error;
+        });
+    },
+    GET_CATEGORY_LIST_FROM_YAML: ({ commit }) => {
+      fetch('https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/categories.yaml')
+        .then((response) => response.text())
+        .then((data) => {
+          commit('SET_CATEGORY_LIST', { list: processYamlData(data) });
         })
         .catch((error) => {
           console.log(error);
@@ -69,6 +135,17 @@ const store = new Vuex.Store({
         .then((response) => response.json())
         .then((data) => {
           commit('SET_TAG_LIST', { list: data });
+        })
+        .catch((error) => {
+          console.log(error);
+          // this.error = error;
+        });
+    },
+    GET_TAG_LIST_FROM_YAML: ({ commit }) => {
+      fetch('https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/tags.yaml')
+        .then((response) => response.text())
+        .then((data) => {
+          commit('SET_TAG_LIST', { list: processYamlData(data) });
         })
         .catch((error) => {
           console.log(error);
@@ -102,6 +179,17 @@ const store = new Vuex.Store({
         .then((response) => response.json())
         .then((data) => {
           commit('SET_GLOSSARY_LIST', { list: data });
+        })
+        .catch((error) => {
+          console.log(error);
+          // this.error = error;
+        });
+    },
+    GET_GLOSSARY_LIST_FROM_YAML: ({ commit }) => {
+      fetch('https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/glossary.yaml')
+        .then((response) => response.text())
+        .then((data) => {
+          commit('SET_GLOSSARY_LIST', { list: processYamlData(data) });
         })
         .catch((error) => {
           console.log(error);

@@ -65,13 +65,23 @@ export default {
 
   methods: {
     initData() {
-      this.$store.dispatch('GET_QUESTION_LIST');
-      this.$store.dispatch('GET_CATEGORY_LIST');
-      this.$store.dispatch('GET_TAG_LIST');
-      this.$store.dispatch('GET_AUTHOR_LIST');
-      this.$store.dispatch('GET_DIFFICULTY_LIST');
-      this.$store.dispatch('GET_QUIZ_LIST');
-      this.$store.dispatch('GET_GLOSSARY_LIST');
+      console.log(process.env.VUE_APP_CONTEXT);
+      if (process.env.VUE_APP_CONTEXT === 'deploy-preview' || process.env.CONTEXT === 'deploy-preview') {
+        this.$store.dispatch('GET_QUESTION_LIST_FROM_YAML'); // 'GET_QUESTION_LIST' if parsing errror
+        this.$store.dispatch('GET_CATEGORY_LIST_FROM_YAML');
+        this.$store.dispatch('GET_TAG_LIST_FROM_YAML');
+        this.$store.dispatch('GET_QUIZ_LIST_FROM_YAML');
+        this.$store.dispatch('GET_GLOSSARY_LIST_FROM_YAML');
+        // TODO: author, difficulty
+      } else {
+        this.$store.dispatch('GET_QUESTION_LIST');
+        this.$store.dispatch('GET_CATEGORY_LIST');
+        this.$store.dispatch('GET_TAG_LIST');
+        this.$store.dispatch('GET_AUTHOR_LIST');
+        this.$store.dispatch('GET_DIFFICULTY_LIST');
+        this.$store.dispatch('GET_QUIZ_LIST');
+        this.$store.dispatch('GET_GLOSSARY_LIST');
+      }
     },
   },
 };
