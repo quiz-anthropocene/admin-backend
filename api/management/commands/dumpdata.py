@@ -4,6 +4,9 @@ from django.core.management.commands.dumpdata import Command as Dumpdata
 
 class Command(Dumpdata):
     """
+    https://docs.djangoproject.com/en/3.0/ref/django-admin/#dumpdata
+    https://github.com/django/django/blob/master/django/core/management/commands/dumpdata.py
+
     Get readable data in the dumpdata output https://djangosnippets.org/snippets/10625/
 
     Usage example:

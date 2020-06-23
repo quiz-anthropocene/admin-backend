@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from api.models import Category, Tag, Question, Quiz
+from api.models import Category, Tag, Question, Quiz, Glossary
 
 
 class FixturesTest(TestCase):
@@ -9,6 +9,7 @@ class FixturesTest(TestCase):
         "data/tags.yaml",
         "data/questions.yaml",
         "data/quizzes.yaml",
+        "data/glossary.yaml",
     ]
 
     def test_fixtures_load_successfully(self):
@@ -16,3 +17,4 @@ class FixturesTest(TestCase):
         self.assertTrue(Tag.objects.count())
         self.assertTrue(Question.objects.count())
         self.assertTrue(Quiz.objects.count())
+        self.assertTrue(Glossary.objects.count())
