@@ -174,6 +174,9 @@ a.no-decoration {
 .margin-bottom-10 {
   margin-bottom: 10px;
 }
+.padding-10 {
+  padding: 10px;
+}
 .padding-top-bottom-15 {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -218,6 +221,10 @@ a.no-decoration {
 
 .text-align-left {
   text-align: left;
+}
+
+span.no-wrap {
+  white-space: nowrap;
 }
 
 .small {

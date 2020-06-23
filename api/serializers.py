@@ -68,6 +68,7 @@ class QuestionSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "text",
+            "hint",
             "type",
             "difficulty",
             "author",

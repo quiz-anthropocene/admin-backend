@@ -28,8 +28,21 @@
             </div>
           </div>
         </div>
-        <div class="form-group">
-          <button v-if="!questionSubmitted" type="submit" class="btn" :class="answerPicked ? 'btn-primary' : 'btn-outline-primary'" :disabled="!answerPicked">Valider</button>
+        <div v-if="question.hint && showQuestionHint" class="row no-gutters text-align-left">
+          <div class="col-md-10 col-lg-8">
+            <div class="alert alert-warning-custom text-align-left margin-bottom-10 padding-10">💡{{ question.hint }}</div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-4">
+            <button v-if="question.hint && !showQuestionHint" class="btn btn-sm btn-outline-warning" @click="showQuestionHint=!showQuestionHint">💡un indice</button>
+          </div>
+          <div class="col-4">
+            <div class="form-group">
+              <button v-if="!questionSubmitted" type="submit" class="btn" :class="answerPicked ? 'btn-primary' : 'btn-outline-primary'" :disabled="!answerPicked">Valider</button>
+            </div>
+          </div>
+          <div class="col-4"></div>
         </div>
       </form>
     </div>
@@ -99,6 +112,7 @@ export default {
   data() {
     return {
       // question: null,
+      showQuestionHint: false,
       answerChoices: [],
       answerPicked: '',
       questionSubmitted: false,
@@ -125,6 +139,7 @@ export default {
 
   methods: {
     initQuestion() {
+      this.showQuestionHint = false;
       this.answerChoices = this.shuffleAnswers(['a', 'b', 'c', 'd'], this.question.has_ordered_answers);
       this.answerPicked = '';
       this.questionSubmitted = false;
@@ -199,10 +214,15 @@ export default {
   padding: 10px;
 }
 
-div.answer-choices {
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: left;
+/* hint */
+.alert-warning-custom {
+  color: var(--primary);
+  background-color: inherit;
+  border-color: var(--warning);
+}
+button.btn-outline-warning {
+  color: var(--primary);
+  margin-top: 4px; /* vertical center with submit button */
 }
 
 .answer {
