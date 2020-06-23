@@ -259,7 +259,7 @@ def quiz_list(request):
     - 'author' (string)
     - 'full' (string)
     """
-    quizzes = Quiz.objects.published()
+    quizzes = Quiz.objects.published().order_by("id")
     if request.GET.get("author"):
         quizzes = quizzes.for_author(request.GET.get("author"))
 

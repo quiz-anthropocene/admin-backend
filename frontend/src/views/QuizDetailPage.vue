@@ -7,6 +7,7 @@
 
       <div class="card-body">
         <h2>{{ quiz.name }}</h2>
+        <p v-if="(quizStep === 0) || (quizStep > quiz.questions.length)">{{ quiz.description }}</p>
 
         <hr v-if="(quizStep === 0) || (quizStep > quiz.questions.length)" />
 
