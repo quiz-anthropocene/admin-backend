@@ -17,6 +17,7 @@ from api.models import (
     QuizAnswerEvent,
     QuizFeedbackEvent,
     Contribution,
+    Glossary,
     DailyStat,
 )
 from api.serializers import (
@@ -30,6 +31,7 @@ from api.serializers import (
     QuizAnswerEventSerializer,
     QuizFeedbackEventSerializer,
     ContributionSerializer,
+    GlossarySerializer,
 )
 
 
@@ -48,6 +50,7 @@ def api_home(request):
             <li>GET /api/tags</li>
             <li>GET /api/authors</li>
             <li>GET /api/quizzes</li>
+            <li>GET /api/glossary</li>
         </ul>
     """
     )
@@ -329,6 +332,17 @@ def contribute(request):
 
         serializer = ContributionSerializer(contribution)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+@api_view(["GET"])
+def glossary_list(request):
+    """
+    List all glossary entries
+    """
+    glossary = Glossary.objects.all().order_by("name")
+
+    serializer = GlossarySerializer(glossary, many=True)
+    return Response(serializer.data)
 
 
 @api_view(["GET"])

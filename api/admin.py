@@ -30,6 +30,7 @@ from api.models import (
     QuizFeedbackEvent,
     DailyStat,
     Contribution,
+    Glossary,
 )
 
 
@@ -591,6 +592,24 @@ class ContributionAdmin(admin.ModelAdmin, ExportMixin):
         return False
 
 
+class GlossaryAdmin(admin.ModelAdmin, ExportMixin):
+    list_display = (
+        "id",
+        "name",
+        "definition_short",
+        "created",
+    )
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    # def has_change_permission(self, request, obj=None):
+    #     return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
 class LogEntryAdmin(admin.ModelAdmin):
     """
     https://docs.djangoproject.com/en/3.0/ref/contrib/admin/#logentry-objects
@@ -629,4 +648,5 @@ admin.site.register(QuizAnswerEvent, QuizAnswerEventAdmin)
 admin.site.register(QuizFeedbackEvent, QuizFeedbackEventAdmin)
 admin.site.register(DailyStat, DailyStatAdmin)
 admin.site.register(Contribution, ContributionAdmin)
+admin.site.register(Glossary, GlossaryAdmin)
 admin.site.register(admin.models.LogEntry, LogEntryAdmin)

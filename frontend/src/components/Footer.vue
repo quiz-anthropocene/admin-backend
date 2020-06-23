@@ -9,14 +9,22 @@
           </router-link>
           <br />
         </div> -->
+        <!-- Left link -->
         <div class="col-sm">
           <HomeLink />
         </div>
-        <div class="col-sm">
+        <!-- Center link -->
+        <div class="col-sm" v-if="currentRoute !== 'about'">
           <router-link :to="{ name: 'about' }">
             ℹ️&nbsp;À propos de cette application
           </router-link>
         </div>
+        <div class="col-sm" v-if="currentRoute === 'about'">
+          <router-link :to="{ name: 'glossary' }">
+            📓&nbsp;Glossaire
+          </router-link>
+        </div>
+        <!-- Right link -->
         <div class="col-sm" v-if="currentRoute !== 'quiz-detail'">
           <router-link :to="{ name: 'contribute' }">
             ✍️&nbsp;Contribuer

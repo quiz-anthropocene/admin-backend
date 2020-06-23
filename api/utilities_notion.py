@@ -1,6 +1,6 @@
 from datetime import datetime  # , date
 
-import notion
+import notion  # https://github.com/jamalex/notion-py
 from notion.client import NotionClient
 
 from django.conf import settings
@@ -85,3 +85,18 @@ def add_import_stats_row(total, new, update):
     row.question_update = update
     row.date = notion.collection.NotionDate(datetime.now())
     return row
+
+
+"""
+Notion: Glossary page
+- get table
+- get current rows
+- add row
+"""
+
+
+def get_glossary_table():
+    notion_client = get_notion_client()
+    # page = client.get_block(settings.NOTION_GLOSSARY_PAGE_URL)
+    table = notion_client.get_collection_view(settings.NOTION_GLOSSARY_TABLE_URL)
+    return table
