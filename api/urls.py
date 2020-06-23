@@ -36,5 +36,6 @@ urlpatterns = [
         name="quiz_detail_answer_event",
     ),
     path("contribute", views.contribute, name="contribute_create"),
+    path("glossary", views.glossary_list, name="glossary_list"),
     path("stats", views.stats, name="stats"),
 ]

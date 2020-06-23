@@ -15,6 +15,7 @@ import QuizListPage from './views/QuizListPage.vue';
 import QuizDetailPage from './views/QuizDetailPage.vue';
 import AboutPage from './views/AboutPage.vue';
 import StatsPage from './views/StatsPage.vue';
+import GlossaryPage from './views/GlossaryPage.vue';
 import ContributePage from './views/ContributePage.vue';
 import NotFoundPage from './views/NotFoundPage.vue';
 
@@ -124,6 +125,14 @@ const routes = [
     component: StatsPage,
     meta: {
       title: 'Know Your Planet - Statistiques',
+    },
+  },
+  {
+    path: '/glossaire',
+    name: 'glossary',
+    component: GlossaryPage,
+    meta: {
+      title: 'Know Your Planet - Glossaire',
     },
   },
   {

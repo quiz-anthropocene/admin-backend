@@ -2,7 +2,7 @@
   pk: 1
   fields:
     name: CO2e
-    name_alternatives: eqCO2, éq. CO2, CO2e, CO2-eq, CO2eq
+    name_alternatives: eqCO2, éq. CO2, CO2-eq, CO2eq
     definition_short: équivalent CO2
     description: L'équivalent CO2 est, pour un gaz à effet de serre, la quantité de
       dioxyde de carbone (CO2) qui provoquerait le même forçage radiatif que ce gaz,
@@ -17,7 +17,7 @@
   pk: 2
   fields:
     name: ADEME
-    name_alternatives: Ademe
+    name_alternatives: ''
     definition_short: Agence de l'environnement et de la maîtrise de l'énergie
     description: ''
     description_accessible_url: https://fr.wikipedia.org/wiki/Agence_de_l'environnement_et_de_la_ma%C3%AEtrise_de_l'%C3%A9nergie
@@ -39,7 +39,7 @@
   pk: 4
   fields:
     name: GW
-    name_alternatives: Gw
+    name_alternatives: ''
     definition_short: Gigawatt
     description: Le gigawatt (GW) est une unité de puissance, correspondant à 1 milliard
       de watts
@@ -51,7 +51,7 @@
   pk: 5
   fields:
     name: GES
-    name_alternatives: ges
+    name_alternatives: ''
     definition_short: Gaz à Effet de Serre
     description: GES signifie gaz à effet de serre (vapeur d’eau, CO2, méthane, protoxyde
       d’azote, CFC, HFC, ...)

@@ -14,6 +14,7 @@ const store = new Vuex.Store({
     tags: [],
     authors: [],
     difficultyLevels: [],
+    glossary: [],
     questionFilters: {
       category: null,
       tag: null,
@@ -96,6 +97,17 @@ const store = new Vuex.Store({
           // this.error = error;
         });
     },
+    GET_GLOSSARY_LIST: ({ commit }) => {
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/glossary`)
+        .then((response) => response.json())
+        .then((data) => {
+          commit('SET_GLOSSARY_LIST', { list: data });
+        })
+        .catch((error) => {
+          console.log(error);
+          // this.error = error;
+        });
+    },
     UPDATE_QUESTION_FILTERS: ({ commit, state }, filterObject) => {
       const currentQuestionFilters = filterObject || state.questionFilters;
       commit('UPDATE_QUESTION_FILTERS', { filterObject: currentQuestionFilters });
@@ -129,6 +141,9 @@ const store = new Vuex.Store({
     },
     SET_DIFFICULTY_LEVEL_LIST: (state, { list }) => {
       state.difficultyLevels = list;
+    },
+    SET_GLOSSARY_LIST: (state, { list }) => {
+      state.glossary = list;
     },
     UPDATE_QUESTION_FILTERS: (state, { filterObject }) => {
       state.questionFilters = filterObject;

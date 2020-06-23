@@ -1,5 +1,4 @@
 <template>
-
   <section class="text-align-left">
     <h2>A propos</h2>
 
@@ -10,7 +9,6 @@
     </section>
 
     <h3>Pourquoi cette application ?</h3>
-
     <p>
       Le but est de rassembler un ensemble de connaissances - sur l'énérgie, le climat, et plus largement la crise climatique - sous forme de questions.
     </p>
