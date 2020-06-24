@@ -13,11 +13,13 @@
         <span><small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
       </h2>
       <form @submit.prevent="submitAnswer">
+        <!-- Question text -->
         <div class="row no-gutters justify-content-center">
           <div class="col-md-10 col-lg-8">
             <h3>{{ question.text }}</h3>
           </div>
         </div>
+        <!-- Question answer choices -->
         <div class="row text-align-left">
           <div class="col-sm-auto">
             <div class="form-group" v-for="answer_option_letter in answerChoices" :key="answer_option_letter" :class="{ 'text-primary' : answer_option_letter === answerPicked, 'text-danger': (questionSubmitted && (answer_option_letter !== answerPicked) && (answer_option_letter === question['answer_correct'])) }">
@@ -28,6 +30,7 @@
             </div>
           </div>
         </div>
+        <!-- Question hint & form submit -->
         <div v-if="question.hint && showQuestionHint" class="row no-gutters text-align-left">
           <div class="col-md-10 col-lg-8">
             <div class="alert alert-warning-custom text-align-left margin-bottom-10 padding-10">💡{{ question.hint }}</div>
@@ -57,7 +60,10 @@
       <div class="row no-gutters text-align-left">
         <div class="col-sm-auto">
           <p title="Explication">
-            ℹ️&nbsp;{{ question.answer_explanation }}
+            <span>ℹ️&nbsp;</span>
+            <template v-for="answer_explanation_line in question.answer_explanation.split('\n')">
+              <span :key="answer_explanation_line">{{ answer_explanation_line }}<br /></span>
+            </template>
           </p>
         </div>
       </div>
