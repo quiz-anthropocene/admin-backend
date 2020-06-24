@@ -1,5 +1,6 @@
 QUESTION_TYPE_CHOICES = [
-    ("QCM", "Questionnaire à choix multiples (QCM)"),
+    ("QCM", "Questionnaire à choix multiples"),
+    ("QCM-RM", "Questionnaire à choix multiples avec réponses multiples"),
     ("VF", "Vrai ou Faux"),
 ]
 
