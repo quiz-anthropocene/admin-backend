@@ -24,7 +24,10 @@ Mieux appréhender les limites de notre planète, à travers des questions simpl
 
 ## Stack technique
 
-Python Django & Vue.js (plus de détails [ici](CONTRIBUTING.md#stack-technique)).
+- Backend: Python Django, Heroku
+- Frontend: Vue.js, [![Netlify Status](https://api.netlify.com/api/v1/badges/fda65ff6-86b3-4a33-81bd-708699135c63/deploy-status)](https://app.netlify.com/sites/know-your-planet/deploys)
+
+Plus de détails [ici](CONTRIBUTING.md#stack-technique)
 
 ## Contribuer
 

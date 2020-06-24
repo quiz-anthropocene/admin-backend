@@ -92,10 +92,7 @@ class ExportMixin:
         ] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.yaml"
 
         response.write(
-            serializers.serialize("yaml", queryset)
-            .encode()
-            .decode("unicode_escape")
-            .encode("utf-8")
+            serializers.serialize("yaml", list(queryset), allow_unicode=True)
         )
 
         return response
@@ -158,6 +155,10 @@ class QuestionResource(resources.ModelResource):
         """
         if "id" not in row:
             row["id"] = row["\ufeffid"]
+        if row["added"] == "":
+            row["added"] = datetime.strptime(
+                row["Created time"], "%b %d, %Y %I:%M %p"
+            ).date()
         BOOLEAN_FIELDS = ["has_ordered_answers", "publish"]
         for boolean_field in BOOLEAN_FIELDS:
             row[boolean_field] = True if (row[boolean_field] == "Yes") else False
