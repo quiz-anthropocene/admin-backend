@@ -552,3 +552,99 @@
     name: Covid-19
     description: ''
     created: 2020-05-28
+- model: api.tag
+  pk: 93
+  fields:
+    name: Effet de serre
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 94
+  fields:
+    name: Particules
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 95
+  fields:
+    name: "Gaz à effet de serre"
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 96
+  fields:
+    name: Spatial
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 97
+  fields:
+    name: Catastrophes
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 98
+  fields:
+    name: Carburant
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 99
+  fields:
+    name: Emploi
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 100
+  fields:
+    name: "Énergies marines"
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 101
+  fields:
+    name: Biomasse
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 102
+  fields:
+    name: Chaleur
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 103
+  fields:
+    name: "Élevage"
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 104
+  fields:
+    name: Terres rares
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 105
+  fields:
+    name: Habillement
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 106
+  fields:
+    name: "Néandertal"
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 107
+  fields:
+    name: Chasseurs-cueilleurs
+    description: ''
+    created: 2020-06-24
+- model: api.tag
+  pk: 108
+  fields:
+    name: Homo Sapiens
+    description: ''
+    created: 2020-06-24
