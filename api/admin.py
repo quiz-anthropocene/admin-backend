@@ -294,10 +294,10 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
                 f"</a>"
             )
         else:
-            return mark_safe("<div>champ 'Answer image link' vide</div>")
+            return mark_safe("<div>champ 'Answer image url' vide</div>")
 
     show_answer_image.short_description = (
-        "L'image du champ 'Answer image link' (cliquer pour agrandir)"
+        "L'image du champ 'Answer image url' (cliquer pour agrandir)"
     )
     show_answer_image.allow_tags = True
 
@@ -349,6 +349,7 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
     ordering = ("id",)
     filter_horizontal = ("questions",)
     readonly_fields = (
+        "show_image_background",
         "question_count",
         "categories_list_string",
         "tags_list_string",
@@ -360,6 +361,21 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
         "dislike_count_agg",
     )
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
+
+    def show_image_background(self, instance):
+        if instance.image_background_url:
+            return mark_safe(
+                f'<a href="{instance.image_background_url}" target="_blank">'
+                f'<img src="{instance.image_background_url}" title="{instance.image_background_url}" height=300 />'  # noqa
+                f"</a>"
+            )
+        else:
+            return mark_safe("<div>champ 'Quiz image background url' vide</div>")
+
+    show_image_background.short_description = (
+        "L'image du champ 'Quiz image background url' (cliquer pour agrandir)"
+    )
+    show_image_background.allow_tags = True
 
 
 class QuestionAnswerEventAdmin(admin.ModelAdmin, ExportMixin):

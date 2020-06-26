@@ -7,7 +7,7 @@
 
       <div class="card-body">
         <h2>{{ quiz.name }}</h2>
-        
+
         <section v-if="(quizStep === 0) || (quizStep > quiz.questions.length)">
           <p>{{ quiz.description }}</p>
 
