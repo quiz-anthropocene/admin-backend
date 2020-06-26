@@ -7,30 +7,33 @@
 
       <div class="card-body">
         <h2>{{ quiz.name }}</h2>
-        <p v-if="(quizStep === 0) || (quizStep > quiz.questions.length)">{{ quiz.description }}</p>
+        
+        <section v-if="(quizStep === 0) || (quizStep > quiz.questions.length)">
+          <p>{{ quiz.description }}</p>
 
-        <hr v-if="(quizStep === 0) || (quizStep > quiz.questions.length)" />
+          <hr />
 
-        <div v-if="(quizStep === 0) || (quizStep > quiz.questions.length)" class="row small">
-          <div class="margin-left-right-5" title="Nombre de question">❓&nbsp;Questions:&nbsp;<span class="label label-hidden">{{ quiz.questions.length }}</span></div>
-          <!-- <div v-if="quiz.categories_list && quiz.categories_list.length > 0" title="Catégorie(s) du quiz">📂&nbsp;Catégorie<span v-if="quiz.categories_list.length > 1">s</span>:&nbsp;{{ quiz.categories_list.join(', ') }}</div> -->
-          <div v-if="quiz.categories_list && quiz.categories_list.length > 0" class="margin-left-right-5" title="Catégorie(s) du quiz">
-            📂
-            <span v-for="(category, index) in quiz.categories_list" :key="category">
-              <span v-if="index < 3" class="label label-category">{{ category }}</span>
-            </span>
+          <div class="row small">
+            <div class="margin-left-right-5" title="Nombre de question">❓&nbsp;Questions:&nbsp;<span class="label label-hidden"><strong>{{ quiz.questions.length }}</strong></span></div>
+            <!-- <div v-if="quiz.categories_list && quiz.categories_list.length > 0" title="Catégorie(s) du quiz">📂&nbsp;Catégorie<span v-if="quiz.categories_list.length > 1">s</span>:&nbsp;{{ quiz.categories_list.join(', ') }}</div> -->
+            <div v-if="quiz.categories_list && quiz.categories_list.length > 0" class="margin-left-right-5" title="Catégorie(s) du quiz">
+              📂
+              <span v-for="(category, index) in quiz.categories_list" :key="category">
+                <span v-if="index < 3" class="label label-category">{{ category }}</span>
+              </span>
+            </div>
+            <!-- <div v-if="quiz.tags && quiz.tags.length > 0" title="Tag(s) du quiz">🏷️&nbsp;Tag<span v-if="quiz.tags.length > 1">s</span>:&nbsp;{{ quiz.tags.join(', ') }}</div> -->
+            <div class="margin-left-right-5" title="Difficulté">🏆&nbsp;Difficulté:&nbsp;<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }}</strong></span></div>
+            <div class="margin-left-right-5" title="Auteur du quiz">📝&nbsp;Auteur:&nbsp;<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span></div>
+            <!-- <div title="Date de création du quiz">📊&nbsp;Crée le:&nbsp;{{ new Date(quiz.created).toLocaleString() }}</div> -->
           </div>
-          <!-- <div v-if="quiz.tags && quiz.tags.length > 0" title="Tag(s) du quiz">🏷️&nbsp;Tag<span v-if="quiz.tags.length > 1">s</span>:&nbsp;{{ quiz.tags.join(', ') }}</div> -->
-          <div class="margin-left-right-5" title="Difficulté">🏆&nbsp;Difficulté:&nbsp;<span class="label label-difficulty">{{ quiz.difficulty_average }}</span></div>
-          <div class="margin-left-right-5" title="Auteur du quiz">📝&nbsp;Auteur:&nbsp;<span class="label label-hidden">{{ quiz.author }}</span></div>
-          <!-- <div title="Date de création du quiz">📊&nbsp;Crée le:&nbsp;{{ new Date(quiz.created).toLocaleString() }}</div> -->
-        </div>
+        </section>
       </div>
     </div>
 
     <section v-if="quiz && quizStep === 0">
       <br />
-      <button class="btn btn-primary margin-5" @click="incrementStep()">⏩&nbsp;Commencer le quiz !</button>
+      <button class="btn btn-lg btn-primary margin-5" @click="incrementStep()">⏩&nbsp;Commencer le quiz !</button>
     </section>
 
     <!-- Quiz en cours -->
