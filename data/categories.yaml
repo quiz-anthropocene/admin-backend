@@ -3,7 +3,7 @@
   fields:
     name: Climat
     name_long: Climat
-    description: "Dérèglement climatique"
+    description: Dérèglement climatique
     created: 2020-04-17
 - model: api.category
   pk: 2
@@ -17,27 +17,27 @@
   fields:
     name: Pollution
     name_long: Pollution
-    description: "Emissions de gaz, mer, déchets..."
+    description: Emissions de gaz, mer, déchets...
     created: 2020-04-17
 - model: api.category
   pk: 4
   fields:
-    name: "Biodiversité"
-    name_long: "Biodiversité"
+    name: Biodiversité
+    name_long: Biodiversité
     description: ''
     created: 2020-04-17
 - model: api.category
   pk: 5
   fields:
-    name: "Énergie"
-    name_long: "Énergie"
+    name: Énergie
+    name_long: Énergie
     description: ''
     created: 2020-04-17
 - model: api.category
   pk: 6
   fields:
     name: Histoire & Politique
-    name_long: "Histoire, Anthropologie, Politique, Démographie"
+    name_long: Histoire, Anthropologie, Politique, Démographie
     description: ''
     created: 2020-04-24
 - model: api.category
@@ -45,15 +45,14 @@
   fields:
     name: Ressources
     name_long: Ressources
-    description: "Sur la façon dont l'humanité puise dans les ressources de
-      la terre, renouvelables et non-renouvelables."
+    description: Sur la façon dont l'humanité puise dans les ressources de la terre,
+      renouvelables et non-renouvelables.
     created: 2020-04-17
 - model: api.category
   pk: 8
   fields:
     name: Autres
     name_long: Autres
-    description: "Tout ce qui ne rentre pas dans les catégories précédents.
-      Notamment des questions de culture générale. Ex: « qu'est-ce que l'ADEME
-      ? »"
+    description: 'Tout ce qui ne rentre pas dans les catégories précédents. Notamment
+      des questions de culture générale. Ex: « qu''est-ce que l''ADEME ? »'
     created: 2020-04-17

@@ -13,7 +13,7 @@
 - model: api.tag
   pk: 3
   fields:
-    name: "Actualité"
+    name: Actualité
     description: ''
     created: 2020-04-08
 - model: api.tag
@@ -43,13 +43,13 @@
 - model: api.tag
   pk: 8
   fields:
-    name: "Hydroélectricité"
+    name: Hydroélectricité
     description: ''
     created: 2020-04-17
 - model: api.tag
   pk: 9
   fields:
-    name: "Océans"
+    name: Océans
     description: ''
     created: 2020-04-17
 - model: api.tag
@@ -61,13 +61,13 @@
 - model: api.tag
   pk: 11
   fields:
-    name: "Pétrole"
+    name: Pétrole
     description: ''
     created: 2020-04-17
 - model: api.tag
   pk: 12
   fields:
-    name: "Atmosphère"
+    name: Atmosphère
     description: ''
     created: 2020-04-17
 - model: api.tag
@@ -85,7 +85,7 @@
 - model: api.tag
   pk: 15
   fields:
-    name: "Méthane"
+    name: Méthane
     description: ''
     created: 2020-04-17
 - model: api.tag
@@ -104,26 +104,26 @@
   pk: 18
   fields:
     name: Permafrost
-    description: "Le pergélisol (ou permafrost) est un sol gelé sur une grande
-      épaisseur qui peut fondre en surface durant l'été. Il est surtout présent
-      dans le nord de l'hémisphère Nord."
+    description: Le pergélisol (ou permafrost) est un sol gelé sur une grande épaisseur
+      qui peut fondre en surface durant l'été. Il est surtout présent dans le nord
+      de l'hémisphère Nord.
     created: 2020-04-17
 - model: api.tag
   pk: 19
   fields:
-    name: "Déforestation"
+    name: Déforestation
     description: ''
     created: 2020-04-17
 - model: api.tag
   pk: 20
   fields:
-    name: "Fôrets"
+    name: Fôrets
     description: ''
     created: 2020-04-17
 - model: api.tag
   pk: 21
   fields:
-    name: "Pêche"
+    name: Pêche
     description: ''
     created: 2020-04-17
 - model: api.tag
@@ -147,7 +147,7 @@
 - model: api.tag
   pk: 25
   fields:
-    name: "Désert"
+    name: Désert
     description: ''
     created: 2020-04-17
 - model: api.tag
@@ -159,37 +159,37 @@
 - model: api.tag
   pk: 27
   fields:
-    name: "Démographie"
+    name: Démographie
     description: ''
     created: 2020-04-17
 - model: api.tag
   pk: 28
   fields:
-    name: "Économie"
+    name: Économie
     description: ''
     created: 2020-04-17
 - model: api.tag
   pk: 29
   fields:
-    name: "Nucléaire"
+    name: Nucléaire
     description: ''
     created: 2020-04-17
 - model: api.tag
   pk: 30
   fields:
-    name: "Numérique"
+    name: Numérique
     description: ''
     created: 2020-04-17
 - model: api.tag
   pk: 31
   fields:
-    name: "Inégalités"
+    name: Inégalités
     description: ''
     created: 2020-04-17
 - model: api.tag
   pk: 32
   fields:
-    name: "Anthropocène"
+    name: Anthropocène
     description: ''
     created: 2020-04-17
 - model: api.tag
@@ -231,7 +231,7 @@
 - model: api.tag
   pk: 39
   fields:
-    name: "Électricité"
+    name: Électricité
     description: ''
     created: 2020-04-17
 - model: api.tag
@@ -255,7 +255,7 @@
 - model: api.tag
   pk: 43
   fields:
-    name: "Vélo"
+    name: Vélo
     description: ''
     created: 2020-04-17
 - model: api.tag
@@ -267,7 +267,7 @@
 - model: api.tag
   pk: 45
   fields:
-    name: "Éolien"
+    name: Éolien
     description: ''
     created: 2020-04-17
 - model: api.tag
@@ -297,25 +297,25 @@
 - model: api.tag
   pk: 50
   fields:
-    name: "Culture générale"
+    name: Culture générale
     description: ''
     created: 2020-04-26
 - model: api.tag
   pk: 51
   fields:
-    name: "Température"
+    name: Température
     description: ''
     created: 2020-04-26
 - model: api.tag
   pk: 52
   fields:
-    name: "Bétail"
+    name: Bétail
     description: ''
     created: 2020-04-26
 - model: api.tag
   pk: 53
   fields:
-    name: "Bâtiment"
+    name: Bâtiment
     description: ''
     created: 2020-04-26
 - model: api.tag
@@ -345,7 +345,7 @@
 - model: api.tag
   pk: 58
   fields:
-    name: "Hydroéléctricité"
+    name: Hydroéléctricité
     description: ''
     created: 2020-04-26
 - model: api.tag
@@ -357,7 +357,7 @@
 - model: api.tag
   pk: 60
   fields:
-    name: "Voiture électrique"
+    name: Voiture électrique
     description: ''
     created: 2020-04-26
 - model: api.tag
@@ -381,7 +381,7 @@
 - model: api.tag
   pk: 64
   fields:
-    name: "Météo"
+    name: Météo
     description: ''
     created: 2020-04-26
 - model: api.tag
@@ -411,7 +411,7 @@
 - model: api.tag
   pk: 69
   fields:
-    name: "Montée des eaux"
+    name: Montée des eaux
     description: ''
     created: 2020-05-20
 - model: api.tag
@@ -423,7 +423,7 @@
 - model: api.tag
   pk: 71
   fields:
-    name: "Hydrogène"
+    name: Hydrogène
     description: ''
     created: 2020-05-20
 - model: api.tag
@@ -453,7 +453,7 @@
 - model: api.tag
   pk: 76
   fields:
-    name: "Espèces invasives"
+    name: Espèces invasives
     description: ''
     created: 2020-05-20
 - model: api.tag
@@ -477,7 +477,7 @@
 - model: api.tag
   pk: 80
   fields:
-    name: "États-Unis"
+    name: États-Unis
     description: ''
     created: 2020-05-20
 - model: api.tag
@@ -519,7 +519,7 @@
 - model: api.tag
   pk: 87
   fields:
-    name: "Géothermie"
+    name: Géothermie
     description: ''
     created: 2020-05-20
 - model: api.tag
@@ -555,67 +555,67 @@
 - model: api.tag
   pk: 93
   fields:
-    name: Effet de serre
+    name: Catastrophes
     description: ''
-    created: 2020-06-24
+    created: 2020-06-17
 - model: api.tag
   pk: 94
   fields:
-    name: Particules
+    name: Énergies marines
     description: ''
-    created: 2020-06-24
+    created: 2020-06-17
 - model: api.tag
   pk: 95
   fields:
-    name: "Gaz à effet de serre"
+    name: Biomasse
     description: ''
-    created: 2020-06-24
+    created: 2020-06-17
 - model: api.tag
   pk: 96
   fields:
-    name: Spatial
+    name: Chaleur
     description: ''
-    created: 2020-06-24
+    created: 2020-06-17
 - model: api.tag
   pk: 97
   fields:
-    name: Catastrophes
+    name: Élevage
     description: ''
-    created: 2020-06-24
+    created: 2020-06-17
 - model: api.tag
   pk: 98
   fields:
-    name: Carburant
+    name: Effet de serre
     description: ''
     created: 2020-06-24
 - model: api.tag
   pk: 99
   fields:
-    name: Emploi
+    name: Particules
     description: ''
     created: 2020-06-24
 - model: api.tag
   pk: 100
   fields:
-    name: "Énergies marines"
+    name: Gaz à effet de serre
     description: ''
     created: 2020-06-24
 - model: api.tag
   pk: 101
   fields:
-    name: Biomasse
+    name: Spatial
     description: ''
     created: 2020-06-24
 - model: api.tag
   pk: 102
   fields:
-    name: Chaleur
+    name: Carburant
     description: ''
     created: 2020-06-24
 - model: api.tag
   pk: 103
   fields:
-    name: "Élevage"
+    name: Emploi
     description: ''
     created: 2020-06-24
 - model: api.tag
@@ -633,7 +633,7 @@
 - model: api.tag
   pk: 106
   fields:
-    name: "Néandertal"
+    name: Néandertal
     description: ''
     created: 2020-06-24
 - model: api.tag
@@ -648,3 +648,39 @@
     name: Homo Sapiens
     description: ''
     created: 2020-06-24
+- model: api.tag
+  pk: 109
+  fields:
+    name: Anthropologie
+    description: ''
+    created: 2020-06-25
+- model: api.tag
+  pk: 110
+  fields:
+    name: Commerce
+    description: ''
+    created: 2020-06-25
+- model: api.tag
+  pk: 111
+  fields:
+    name: Cerveau
+    description: ''
+    created: 2020-06-25
+- model: api.tag
+  pk: 112
+  fields:
+    name: Culture
+    description: ''
+    created: 2020-06-25
+- model: api.tag
+  pk: 113
+  fields:
+    name: Évolution
+    description: ''
+    created: 2020-06-25
+- model: api.tag
+  pk: 114
+  fields:
+    name: Feu
+    description: ''
+    created: 2020-06-25
