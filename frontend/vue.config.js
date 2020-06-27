@@ -14,6 +14,9 @@ module.exports = {
           staticDir: path.join(__dirname, 'dist'),
           // Required - Routes to render.
           routes: [ '/', '/a-propos', '/contribuer', '/glossaire'],
+          // Optional - default None
+          // renderAfterTime: 5000, // 5 seconds
+          // renderAfterDocumentEvent: 'custom-render-trigger'
         }),
       ]
     }

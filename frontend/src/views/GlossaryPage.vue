@@ -3,14 +3,14 @@
     <h2>Glossaire</h2>
 
     <hr />
-    <section v-for="glossary_item in glossary" :key="glossary_item.name">
+    <section v-for="glossary_item in glossary" :key="glossary_item.fields.name">
       <h3>
-        {{ glossary_item.name }}
+        {{ glossary_item.fields.name }}
         <small><i>{{ glossary_item.definition_short }}</i></small>
       </h3>
-      <p>{{ glossary_item.description }}</p>
-      <p>🔗&nbsp;<a v-bind:href="glossary_item.description_accessible_url" target="_blank" v-bind:title="glossary_item.description_accessible_url">{{ glossary_item.description_accessible_url }}</a></p>
-      <p v-if="glossary_item.name_alternatives"><small>Similaire : {{ glossary_item.name_alternatives }}</small></p>
+      <p>{{ glossary_item.fields.description }}</p>
+      <p>🔗&nbsp;<a v-bind:href="glossary_item.fields.description_accessible_url" target="_blank" v-bind:title="glossary_item.fields.description_accessible_url">{{ glossary_item.fields.description_accessible_url }}</a></p>
+      <p v-if="glossary_item.fields.name_alternatives"><small>Similaire : {{ glossary_item.fields.name_alternatives }}</small></p>
       <hr />
     </section>
 
@@ -23,6 +23,8 @@
 </template>
 
 <script>
+// import GlossaryYamlData from '../data/glossary.yaml';
+
 export default {
   name: 'GlossaryPage',
   metaInfo: {
@@ -31,8 +33,13 @@ export default {
   components: {
   },
 
+  mounted() {
+    this.$store.dispatch('GET_GLOSSARY_LIST_FROM_LOCAL_YAML');
+  },
+
   data() {
     return {
+      // glossary: GlossaryYamlData
       // glossary: null,
     };
   },
