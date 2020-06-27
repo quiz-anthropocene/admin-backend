@@ -16,6 +16,9 @@ import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 
 export default {
   name: 'QuestionListPage',
+  metaInfo: {
+    title: 'Questions',
+  },
   components: {
     QuestionPreviewCard,
   },

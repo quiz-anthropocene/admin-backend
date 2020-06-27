@@ -53,6 +53,9 @@
 <script>
 export default {
   name: 'StatsPage',
+  metaInfo: {
+    title: 'Statistiques',
+  },
   components: {
   },
 

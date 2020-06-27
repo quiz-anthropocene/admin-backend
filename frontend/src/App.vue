@@ -21,6 +21,30 @@ import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
+  metaInfo: {
+    // title: 'Know Your Planet',
+    titleTemplate: (titleChunk) => {
+      return titleChunk ? `${titleChunk} | Know Your Planet` : 'Know Your Planet';
+    },
+    meta: [
+      {
+        property: 'og:title',
+        vmid: 'og:title',
+        // content: 'Know Your Planet',
+        template: (chunk) => {
+          return chunk ? `${chunk} | Know Your Planet` : 'Know Your Planet';
+        },
+      },
+      {
+        property: 'twitter:title',
+        vmid: 'twitter:title',
+        // content: 'Know Your Planet',
+        template: (chunk) => {
+          return chunk ? `${chunk} | Know Your Planet` : 'Know Your Planet';
+        },
+      },
+    ],
+  },
   components: {
     Header,
     Footer,

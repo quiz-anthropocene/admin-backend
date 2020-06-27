@@ -15,7 +15,7 @@
 import QuestionAnswerCards from '../components/QuestionAnswerCards.vue';
 
 export default {
-  name: 'Page',
+  name: 'QuestionDetailPage',
   components: {
     QuestionAnswerCards,
   },
@@ -40,6 +40,15 @@ export default {
     questionsDisplayedCount() {
       return this.$store.state.questionsDisplayed.length;
     },
+  },
+
+  metaInfo() {
+    return {
+      title: `Question #${this.$route.params.questionId}`,
+      meta: [
+        // { name: 'description', content: (this.question ? this.question.text : '') }
+      ],
+    };
   },
 
   watch: {

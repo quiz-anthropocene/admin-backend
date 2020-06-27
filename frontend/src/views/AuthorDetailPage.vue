@@ -29,6 +29,11 @@ import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 
 export default {
   name: 'AuthorDetailPage',
+  metaInfo() {
+    return {
+      title: `${this.$route.params.authorName} | Auteur`,
+    };
+  },
   components: {
     QuestionPreviewCard,
   },

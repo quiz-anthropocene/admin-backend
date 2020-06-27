@@ -84,6 +84,9 @@
 <script>
 export default {
   name: 'Contribute',
+  metaInfo: {
+    title: 'Contribuer',
+  },
   components: {
   },
 

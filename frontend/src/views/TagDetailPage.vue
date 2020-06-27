@@ -29,6 +29,11 @@ import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 
 export default {
   name: 'TagDetailPage',
+  metaInfo() {
+    return {
+      title: `${this.$route.params.tagName} | Tag`,
+    };
+  },
   components: {
     QuestionPreviewCard,
   },

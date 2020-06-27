@@ -28,7 +28,7 @@
       On est preneur de tous vos retours !
     </p>
     <p>
-      Une page <router-link :to="{ name: 'contribute' }">✍️&nbsp;Contribution</router-link> vous permet de rajouter une question ou un sujet qui vous tiens à coeur. Vous pouvez aussi y laisser vos commentaires et remarques !
+      Une page <router-link :to="{ name: 'contribute' }">✍️&nbsp;Contribuer</router-link> vous permet de rajouter une question ou un sujet qui vous tiens à coeur. Vous pouvez aussi y laisser vos commentaires et remarques !
     </p>
 
     <br />
@@ -72,6 +72,13 @@
 <script>
 export default {
   name: 'AboutPage',
+  metaInfo: {
+    title: 'A Propos',
+    meta: [
+      { property: 'og:title', vmid: 'og:title', content: 'A Propos' },
+      { property: 'twitter:title', vmid: 'twitter:title', content: 'A Propos' },
+    ],
+  },
   components: {
   },
 };

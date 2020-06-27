@@ -17,3 +17,4 @@ rules:
   no-param-reassign: ["error", { "props": false }]
   no-plusplus: ["error", { "allowForLoopAfterthoughts": true }]
   no-multi-assign: 0
+  arrow-body-style: 0

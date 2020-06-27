@@ -45,6 +45,9 @@
 <script>
 export default {
   name: 'QuizListPage',
+  metaInfo: {
+    title: 'Les Quiz',
+  },
   components: {
   },
 

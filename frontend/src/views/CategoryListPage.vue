@@ -27,6 +27,9 @@
 <script>
 export default {
   name: 'CategoryListPage',
+  metaInfo: {
+    title: 'Catégories',
+  },
   components: {
   },
 

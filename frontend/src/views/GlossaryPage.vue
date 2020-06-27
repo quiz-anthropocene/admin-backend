@@ -25,6 +25,9 @@
 <script>
 export default {
   name: 'GlossaryPage',
+  metaInfo: {
+    title: 'Glossaire',
+  },
   components: {
   },
 

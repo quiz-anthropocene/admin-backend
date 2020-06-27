@@ -78,6 +78,14 @@ import FeedbackCard from '../components/FeedbackCard.vue';
 
 export default {
   name: 'QuizDetailPage',
+  metaInfo() {
+    return {
+      title: `Quiz #${this.$route.params.quizId}`,
+      meta: [
+        { name: 'description', content: this.quiz.name },
+      ],
+    };
+  },
   components: {
     QuestionAnswerCards,
     QuestionPreviewCard,

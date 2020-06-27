@@ -27,6 +27,9 @@
 <script>
 export default {
   name: 'TagListPage',
+  metaInfo: {
+    title: 'Tags',
+  },
   components: {
   },
 

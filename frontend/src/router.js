@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VueMeta from 'vue-meta';
 
 import HomePage from './views/HomePage.vue';
 import QuestionPage from './views/QuestionPage.vue';
@@ -20,6 +21,7 @@ import ContributePage from './views/ContributePage.vue';
 import NotFoundPage from './views/NotFoundPage.vue';
 
 Vue.use(VueRouter);
+Vue.use(VueMeta);
 
 const routes = [
   {
@@ -33,17 +35,11 @@ const routes = [
         path: '',
         name: 'question-list',
         component: QuestionListPage,
-        meta: {
-          title: 'Know Your Planet - Questions',
-        },
       },
       {
         path: ':questionId',
         name: 'question-detail',
         component: QuestionDetailPage,
-        meta: {
-          title: 'Know Your Planet - Question ',
-        },
       },
     ],
   },
@@ -51,133 +47,73 @@ const routes = [
     path: '/categories',
     name: 'category-list',
     component: CategoryListPage,
-    meta: {
-      title: 'Know Your Planet - Catégories',
-    },
   },
   {
     path: '/categories/:categoryName',
     name: 'category-detail',
     component: CategoryDetailPage,
-    meta: {
-      title: 'Know Your Planet - Catégorie ',
-    },
   },
   {
     path: '/tags',
     name: 'tag-list',
     component: TagListPage,
-    meta: {
-      title: 'Know Your Planet - Tags',
-    },
   },
   {
     path: '/tags/:tagName',
     name: 'tag-detail',
     component: TagDetailPage,
-    meta: {
-      title: 'Know Your Planet - Tag ',
-    },
   },
   {
     path: '/auteurs',
     name: 'author-list',
     component: AuthorListPage,
-    meta: {
-      title: 'Know Your Planet - Auteurs',
-    },
   },
   {
     path: '/auteurs/:authorName',
     name: 'author-detail',
     component: AuthorDetailPage,
-    meta: {
-      title: 'Know Your Planet - Auteur ',
-    },
   },
   {
     path: '/quiz',
     name: 'quiz-list',
     component: QuizListPage,
-    meta: {
-      title: 'Know Your Planet - Les Quiz',
-    },
   },
   {
     path: '/quiz/:quizId',
     name: 'quiz-detail',
     component: QuizDetailPage,
-    meta: {
-      title: 'Know Your Planet - Quiz ',
-    },
   },
   {
     path: '/a-propos',
     name: 'about',
     component: AboutPage,
-    meta: {
-      title: 'Know Your Planet - A propos',
-    },
   },
   {
     path: '/stats',
     name: 'stats',
     component: StatsPage,
-    meta: {
-      title: 'Know Your Planet - Statistiques',
-    },
   },
   {
     path: '/glossaire',
     name: 'glossary',
     component: GlossaryPage,
-    meta: {
-      title: 'Know Your Planet - Glossaire',
-    },
   },
   {
     path: '/contribuer',
     name: 'contribute',
     component: ContributePage,
-    meta: {
-      title: 'Know Your Planet - Contribuer',
-    },
   },
   {
     // will match everything
     path: '*',
     name: '404',
     component: NotFoundPage,
-    meta: {
-      title: 'Know Your Planet - 404',
-    },
   },
 ];
 
 const router = new VueRouter({
   mode: 'history',
   routes,
-});
-
-/**
- * Update the page's title dynamically
- */
-router.beforeEach((to, from, next) => {
-  // console.log(to, from);
-  if (to.meta.title) {
-    if (to.params.questionId) {
-      document.title = to.meta.title + (to.params.questionId ? `#${to.params.questionId}` : '');
-    } else if (to.params.quizId) {
-      document.title = to.meta.title + (to.params.quizId ? `#${to.params.quizId}` : '');
-    } else if (to.params.categoryName) {
-      document.title = to.meta.title + (to.params.categoryName ? `#${to.params.categoryName}` : '');
-    } else if (to.params.tagName) {
-      document.title = to.meta.title + (to.params.tagName ? `#${to.params.tagName}` : '');
-    }
-  } else {
-    document.title = 'Know Your Planet';
-  }
-  next();
 });
 
 export default router;

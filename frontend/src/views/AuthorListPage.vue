@@ -27,6 +27,9 @@
 <script>
 export default {
   name: 'AuthorListPage',
+  metaInfo: {
+    title: 'Auteurs',
+  },
   components: {
   },
 

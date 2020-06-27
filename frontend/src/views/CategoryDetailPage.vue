@@ -29,6 +29,11 @@ import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 
 export default {
   name: 'CategoryDetailPage',
+  metaInfo() {
+    return {
+      title: `${this.$route.params.categoryName} | Catégorie`,
+    };
+  },
   components: {
     QuestionPreviewCard,
   },

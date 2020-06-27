@@ -7,6 +7,9 @@
 <script>
 export default {
   name: 'NotFoundPage',
+  metaInfo: {
+    title: '404',
+  },
   components: {
   },
 };
