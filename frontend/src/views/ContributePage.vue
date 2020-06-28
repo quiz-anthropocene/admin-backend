@@ -86,6 +86,10 @@ export default {
   name: 'Contribute',
   metaInfo: {
     title: 'Contribuer',
+    meta: [
+      { property: 'og:title', vmid: 'og:title', content: 'Contribuer' },
+      { property: 'twitter:title', vmid: 'twitter:title', content: 'Contribuer' },
+    ],
   },
   components: {
   },

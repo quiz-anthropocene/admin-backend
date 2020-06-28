@@ -29,12 +29,17 @@ export default {
   name: 'GlossaryPage',
   metaInfo: {
     title: 'Glossaire',
+    meta: [
+      { property: 'og:title', vmid: 'og:title', content: 'Glossaire' },
+      { property: 'twitter:title', vmid: 'twitter:title', content: 'Glossaire' },
+    ],
   },
   components: {
   },
 
   mounted() {
     // this.$store.dispatch('GET_GLOSSARY_LIST_FROM_LOCAL_YAML');
+    console.log('mounted', this.glossary);
   },
 
   data() {

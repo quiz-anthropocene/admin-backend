@@ -55,6 +55,10 @@ export default {
   name: 'StatsPage',
   metaInfo: {
     title: 'Statistiques',
+    meta: [
+      { property: 'og:title', vmid: 'og:title', content: 'Statistiques' },
+      { property: 'twitter:title', vmid: 'twitter:title', content: 'Statistiques' },
+    ],
   },
   components: {
   },

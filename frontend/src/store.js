@@ -6,6 +6,7 @@ import tagsYamlData from '../../data/tags.yaml';
 import questionsYamlData from '../../data/questions.yaml';
 import quizzesYamlData from '../../data/quizzes.yaml';
 import glossaryYamlData from '../../data/glossary.yaml';
+console.log(glossaryYamlData);
 
 Vue.use(Vuex);
 
@@ -44,7 +45,7 @@ function processYamlFile(dataYaml) {
 
 const store = new Vuex.Store({
   state: {
-    loading: true,
+    loading: false,
     error: null,
     questions: [], // received in random order
     questionsDisplayed: [],
