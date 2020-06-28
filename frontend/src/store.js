@@ -1,26 +1,34 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
+import categoriesYamlData from '../../data/categories.yaml';
+import tagsYamlData from '../../data/tags.yaml';
+import questionsYamlData from '../../data/questions.yaml';
+import quizzesYamlData from '../../data/quizzes.yaml';
 import glossaryYamlData from '../../data/glossary.yaml';
 
 Vue.use(Vuex);
 
 const jsyaml = require('js-yaml');
 
+/**
+ * goal: flatten json list of "django models"
+ * input: array of objects, with 'pk' and 'fields' fields
+ * output: array of objects with 'fields' object moved up
+ */
 function processModelList(data) {
-  const dataFix = JSON.parse(JSON.stringify(data)); // fix for local imports ?
-  console.log('processModelList', data);
-  dataFix.map((el) => {
+  data.map((el) => {
     // move 'fields' key up
     // Object.keys(el.fields).forEach((f) => { el[f] = el.fields[f]; });
-    const elmerged = { ...el, ...el.fields };
-    delete el.fields;
-    // add 'id' key
-    elmerged.id = el.pk;
-    return elmerged;
+    // const elmerged = { ...el, ...el.fields };
+    // delete el.fields;
+    // // add 'id' key
+    // elmerged.id = el.pk;
+    // return elmerged; // issues returns list of {__ob__: Observer}
+    Object.assign(el, el.fields);
+    return el;
   });
-  console.log('dataFix', dataFix);
-  return dataFix;
+  return data;
 }
 
 /**
@@ -74,25 +82,10 @@ const store = new Vuex.Store({
           console.log(error);
         });
     },
-    GET_QUESTION_LIST_FROM_YAML: ({ commit }) => {
-      commit('UPDATE_LOADING_STATUS', true);
+    GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('UPDATE_LOADING_STATUS', false);
       commit('UPDATE_ERROR', null);
-      fetch('https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/questions.yaml')
-        .then((response) => {
-          commit('UPDATE_LOADING_STATUS', false);
-          commit('UPDATE_ERROR', null);
-          response.text();
-        })
-        .then((dataYaml) => {
-          commit('SET_QUESTION_LIST', { list: processYamlFile(dataYaml) }); // filter
-          // document.dispatchEvent(new Event('custom-render-trigger'));
-        })
-        .catch((error) => {
-          commit('UPDATE_LOADING_STATUS', false);
-          commit('UPDATE_ERROR', error);
-          console.log(error);
-          // this.error = error;
-        });
+      commit('SET_QUESTION_LIST', { list: processModelList(questionsYamlData) }); // filter
     },
     GET_QUIZ_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/quizzes`)
@@ -105,16 +98,8 @@ const store = new Vuex.Store({
           // this.error = error;
         });
     },
-    GET_QUIZ_LIST_FROM_YAML: ({ commit }) => {
-      fetch('https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/quizzes.yaml')
-        .then((response) => response.text())
-        .then((dataYaml) => {
-          commit('SET_QUIZ_LIST', { list: processYamlFile(dataYaml) }); // full ?
-        })
-        .catch((error) => {
-          console.log(error);
-          // this.error = error;
-        });
+    GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_QUIZ_LIST', { list: processModelList(quizzesYamlData) }); // full ?
     },
     GET_CATEGORY_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/categories`)
@@ -130,16 +115,8 @@ const store = new Vuex.Store({
           // this.error = error;
         });
     },
-    GET_CATEGORY_LIST_FROM_YAML: ({ commit }) => {
-      fetch('https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/categories.yaml')
-        .then((response) => response.text())
-        .then((dataYaml) => {
-          commit('SET_CATEGORY_LIST', { list: processYamlFile(dataYaml) });
-        })
-        .catch((error) => {
-          console.log(error);
-          // this.error = error;
-        });
+    GET_CATEGORY_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_CATEGORY_LIST', { list: processModelList(categoriesYamlData) });
     },
     GET_TAG_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/tags`)
@@ -152,16 +129,8 @@ const store = new Vuex.Store({
           // this.error = error;
         });
     },
-    GET_TAG_LIST_FROM_YAML: ({ commit }) => {
-      fetch('https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/tags.yaml')
-        .then((response) => response.text())
-        .then((dataYaml) => {
-          commit('SET_TAG_LIST', { list: processYamlFile(dataYaml) });
-        })
-        .catch((error) => {
-          console.log(error);
-          // this.error = error;
-        });
+    GET_TAG_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_TAG_LIST', { list: processModelList(tagsYamlData) });
     },
     GET_AUTHOR_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/authors`)
@@ -201,7 +170,6 @@ const store = new Vuex.Store({
         .then((response) => response.text())
         .then((dataYaml) => {
           commit('SET_GLOSSARY_LIST', { list: processYamlFile(dataYaml) });
-          // document.dispatchEvent(new Event('custom-render-trigger'));
         })
         .catch((error) => {
           console.log(error);
@@ -209,9 +177,7 @@ const store = new Vuex.Store({
         });
     },
     GET_GLOSSARY_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      // console.log("GET_GLOSSARY_LIST_FROM_LOCAL_YAML", glossaryYamlData, data)
-      // commit('SET_GLOSSARY_LIST', { list: processModelList(glossaryYamlData) });
-      commit('SET_GLOSSARY_LIST', { list: glossaryYamlData });
+      commit('SET_GLOSSARY_LIST', { list: processModelList(glossaryYamlData) });
     },
     UPDATE_QUESTION_FILTERS: ({ commit, state }, filterObject) => {
       const currentQuestionFilters = filterObject || state.questionFilters;
