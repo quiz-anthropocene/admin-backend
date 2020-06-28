@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import glossaryYamlData from './data/glossary.yaml';
+import glossaryYamlData from '../../data/glossary.yaml';
 
 Vue.use(Vuex);
 
