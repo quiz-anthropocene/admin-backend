@@ -191,5 +191,5 @@ yarn lint
 
 Exporter les questions de la base au format YAML
 ```
-python manage.py dumpdata api.question --format=yaml --pretty > data/questions.yaml
+python manage.py dumpdata api.question --format=yaml-pretty --output=data/questions.yaml
 ```
