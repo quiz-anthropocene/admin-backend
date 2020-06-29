@@ -79,10 +79,17 @@ import FeedbackCard from '../components/FeedbackCard.vue';
 export default {
   name: 'QuizDetailPage',
   metaInfo() {
+    const quizName = this.quiz ? this.quiz.name : 'quiz name placeholder';
+    const quizDescription = this.quiz && this.quiz.description ? this.quiz.description : 'quiz description placeholder';
+    const quizImage = this.quiz ? this.quiz.image_background_url : '';
     return {
       title: `Quiz #${this.$route.params.quizId}`,
       meta: [
-        { name: 'description', content: this.quiz.name },
+        { name: 'description', content: quizDescription },
+        { property: 'og:title', vmid: 'og:title', content: `Quiz #${this.$route.params.quizId} - ${quizName}` },
+        { property: 'og:image', vmid: 'og:image', content: quizImage },
+        { property: 'twitter:title', vmid: 'twitter:title', content: `Quiz #${this.$route.params.quizId} - ${quizName}` },
+        { property: 'twitter:image', vmid: 'twitter:image', content: quizImage },
       ],
     };
   },
@@ -104,7 +111,7 @@ export default {
 
   computed: {
     quiz() {
-      return this.$store.getters.getQuizById(parseInt(this.$route.params.quizId, 10));
+      return this.$store.getters.getQuizById(parseInt(this.$route.params.quizId, 10), true);
     },
   },
 

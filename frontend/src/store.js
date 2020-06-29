@@ -43,7 +43,7 @@ const store = new Vuex.Store({
         });
     },
     GET_QUIZ_LIST: ({ commit }) => {
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/quizzes?full=true`)
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/quizzes`)
         .then((response) => response.json())
         .then((data) => {
           commit('SET_QUIZ_LIST', { list: data });
@@ -158,6 +158,7 @@ const store = new Vuex.Store({
   },
   getters: {
     getQuestionById: (state) => (questionId) => state.questions.find((q) => (q.id === questionId)),
+    getQuestionByIdList: (state) => (questionIdList) => state.questions.filter((q) => (questionIdList.includes(q.id))),
     getQuestionsByCategoryName: (state) => (categoryName) => state.questions.filter((q) => (q.category === categoryName)),
     getQuestionsByTagName: (state) => (tagName) => state.questions.filter((q) => q.tags.includes(tagName)),
     getQuestionsByAuthorName: (state) => (authorName) => state.questions.filter((q) => q.author === authorName),
@@ -170,7 +171,17 @@ const store = new Vuex.Store({
       const currentQuestionIndex = currentQuestionId ? state.questionsDisplayed.findIndex((q) => q.id === currentQuestionId) : state.questionsDisplayed[0];
       return state.questionsDisplayed[currentQuestionIndex + 1] ? state.questionsDisplayed[currentQuestionIndex + 1] : state.questionsDisplayed[0];
     },
-    getQuizById: (state) => (quizId) => state.quizzes.find((q) => (q.id === quizId)),
+    getQuizById: (state, getters) => (quizId, full = false) => {
+      const quiz = state.quizzes.find((q) => (q.id === quizId));
+      if (quiz && full) {
+        // replace the quiz's list of question ids with a list of question objects
+        const quizQuestionsListFull = getters.getQuestionByIdList(quiz.questions);
+        if (quizQuestionsListFull.length === quiz.questions.length) {
+          quiz.questions = quizQuestionsListFull;
+        }
+      }
+      return quiz;
+    },
   },
 });
 

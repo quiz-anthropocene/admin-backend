@@ -131,6 +131,7 @@ class QuizSerializer(serializers.ModelSerializer):
             "description",
             "author",
             "image_background_url",
+            "questions",
             "question_count",
             "categories_list",
             "tags_list",
