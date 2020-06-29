@@ -6,6 +6,7 @@ import tagsYamlData from '../../data/tags.yaml';
 import questionsYamlData from '../../data/questions.yaml';
 import quizzesYamlData from '../../data/quizzes.yaml';
 import glossaryYamlData from '../../data/glossary.yaml';
+
 console.log(glossaryYamlData);
 
 Vue.use(Vuex);
@@ -18,18 +19,18 @@ const jsyaml = require('js-yaml');
  * output: array of objects with 'fields' object moved up
  */
 function processModelList(data) {
-  data.map((el) => {
-    // move 'fields' key up
-    // Object.keys(el.fields).forEach((f) => { el[f] = el.fields[f]; });
-    // const elmerged = { ...el, ...el.fields };
-    // delete el.fields;
-    // // add 'id' key
-    // elmerged.id = el.pk;
-    // return elmerged; // issues returns list of {__ob__: Observer}
-    Object.assign(el, el.fields);
-    return el;
-  });
-  return data;
+  return data.filter((el) => el.fields.publish === true)
+    .map((el) => {
+      // move 'fields' key up
+      // Object.keys(el.fields).forEach((f) => { el[f] = el.fields[f]; });
+      // const elmerged = { ...el, ...el.fields };
+      // delete el.fields;
+      // // add 'id' key
+      // elmerged.id = el.pk;
+      // return elmerged; // issues returns list of {__ob__: Observer}
+      Object.assign(el, { id: el.pk }, el.fields);
+      return el;
+    });
 }
 
 /**

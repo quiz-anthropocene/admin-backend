@@ -65,8 +65,10 @@ export default {
 
   methods: {
     initData() {
-      console.log(process.env.VUE_APP_CONTEXT);
-      if (process.env.VUE_APP_CONTEXT === 'deploy-preview' || process.env.CONTEXT === 'deploy-preview') {
+      console.log(process.env.VUE_APP_CONTEXT, process.env.CONTEXT);
+      console.log(process.env);
+      console.log(window.location);
+      if (window.location.hostname.startsWith('deploy-preview')) {
         this.$store.dispatch('GET_CATEGORY_LIST_FROM_LOCAL_YAML');
         this.$store.dispatch('GET_TAG_LIST_FROM_LOCAL_YAML');
         this.$store.dispatch('GET_QUESTION_LIST_FROM_LOCAL_YAML'); // 'GET_QUESTION_LIST' if parsing errror
