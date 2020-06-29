@@ -19,29 +19,35 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         question_id = options["question_id"]
         question = Question.objects.get(pk=question_id)
-        print(question)
 
-        # Reset question stats
-        print("Reset question stats")
-        print("- answer_count: was", question.answer_count, "--> now 0")
-        question.answer_count = 0
-        print("- answer_success_count: was", question.answer_success_count, "--> now 0")
-        question.answer_success_count = 0
-        print("- like_count: was", question.like_count, "--> now 0")
-        question.like_count = 0
-        print("- dislike_count: was", question.dislike_count, "--> now 0")
-        question.dislike_count = 0
-        question.save()
+        print("===", question)
+        print(question.__dict__)
 
-        # Reset question answer events : QuestionAnswerEvent
-        print("Reset question answer stats & feedbacks")
+        # question stats
+        print("=== basic stats")
+        print("- answer_count:", question.answer_count)
+        print("- answer_success_count:", question.answer_success_count)
+        print("- like_count: was", question.like_count)
+        print("- dislike_count: was", question.dislike_count)
+
+        # question answer events : QuestionAnswerEvent
+        print("=== answer stats & feedbacks")
         question_event_stats = question.stats
-        print("- answer stats: found", question_event_stats.count(), "--> now 0")
-        question_event_stats.all().delete()
-        question_event_feedbacks = question.feedbacks
-        print(
-            "- question feedbacks: found", question_event_feedbacks.count(), "--> now 0"
-        )
-        question_event_feedbacks.all().delete()
+        print("- answer stats: found", question_event_stats.count())
 
-        print("Done")
+        question_event_feedbacks = question.feedbacks
+        print("- question feedbacks: found", question_event_feedbacks.count())
+
+        # reset stats
+        answer = input("Are you sure you want to reset these stats ? (Y/n)")
+        if answer == "Y":
+            question.answer_count = 0
+            question.answer_success_count = 0
+            question.like_count = 0
+            question.dislike_count = 0
+            question.save()
+
+            question_event_stats.all().delete()
+            question_event_feedbacks.all().delete()
+
+            print("Done")

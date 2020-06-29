@@ -209,7 +209,7 @@ class QuestionResource(resources.ModelResource):
     class Meta:
         model = Question
         skip_unchanged = True
-        report_skipped = True
+        report_skipped = False
 
 
 class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
