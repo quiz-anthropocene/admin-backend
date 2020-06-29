@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 var PrerenderSpaPlugin = require('prerender-spa-plugin');
 var path = require('path');
 

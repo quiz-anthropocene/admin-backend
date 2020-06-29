@@ -11,6 +11,7 @@ extends:
 parserOptions:
   parser: babel-eslint
 
+# off (1), warn (1), error (2)
 rules:
   no-console: 0 # 1
   max-len: 0
