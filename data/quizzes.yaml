@@ -1,10 +1,10 @@
 - model: api.quiz
   pk: 1
   fields:
-    name: "Chiffres clés"
+    name: Chiffres clés
     description: ''
     author: know your planet
-    image_background_url: https://www.climatecentral.org/uploads/general/show-your-stripes-header-1000x169.jpg
+    image_background_url: https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png
     publish: true
     like_count: 0
     dislike_count: 0
@@ -23,11 +23,10 @@
 - model: api.quiz
   pk: 2
   fields:
-    name: "L'énergie en France 🇫🇷"
-    description: "Un aperçu rapide de la production et consommation d'énergie
-      en France"
+    name: "L'énergie en France \U0001F1EB\U0001F1F7"
+    description: Un aperçu rapide de la production et consommation d'énergie en France
     author: know your planet
-    image_background_url: https://www.edf.fr/sites/default/files/mediatheque/2018/nucleaire/energie-a-z_nucleaire_prod-regions_2018.png
+    image_background_url: https://i3.wp.com/fee.asso.fr/wp-content/uploads/2015/09/Carte-de-France-eolien-2015.jpg
     publish: true
     like_count: 0
     dislike_count: 0
@@ -43,3 +42,34 @@
     - 254
     - 210
     - 410
+- model: api.quiz
+  pk: 3
+  fields:
+    name: Le quiz de Vincent Mignerot
+    description: "Vincent Mignerot est  essayiste et conférencier. Il développe une
+      théorie écologique de l’esprit et se questionne sur la singularité de l'humanité
+      dans son contexte évolutif. Ses travaux vont de la théorie (Essai Sur la Raison
+      de Tout, Éditions SoLo, 2015) à l’étude de la perception humaine (Heuraesthesia:
+      When Synaesthesia Fertilizes the Mind, CNRS, 2016). Il est le fondateur de l’association
+      Adrastia, qui s’inquiète du risque d’effondrement de la société thermo-industrielle
+      et du groupe Facebook Transition 2030, qui compte plus de 25,000 membres. https://vincent-mignerot.fr/\r\nVincent
+      nous a concocté un quiz teinté d'anthropologie qui va nous faire revenir quelques
+      millénaires en arrière !"
+    author: Vincent Mignerot
+    image_background_url: https://vincent-mignerot.fr/wp-content/uploads/2019/08/Vincent-Mignerot.jpg
+    publish: true
+    like_count: 0
+    dislike_count: 0
+    created: 2020-06-26
+    questions:
+    - 545
+    - 546
+    - 547
+    - 548
+    - 549
+    - 550
+    - 551
+    - 552
+    - 553
+    - 554
+    - 555

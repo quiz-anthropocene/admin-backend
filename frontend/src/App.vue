@@ -28,11 +28,46 @@ export default {
     },
     meta: [
       {
+        property: 'description',
+        vmid: 'description',
+        template: (chunk) => {
+          return chunk || 'Des questions/réponses pour mieux appréhender les limites de notre planète';
+        },
+      },
+      {
+        property: 'og:url',
+        vmid: 'og:url',
+        template: (chunk) => {
+          return chunk || 'https://know-your-planet.netlify.app';
+        },
+      },
+      {
         property: 'og:title',
         vmid: 'og:title',
         // content: 'Know Your Planet',
         template: (chunk) => {
           return chunk ? `${chunk} | Know Your Planet` : 'Know Your Planet';
+        },
+      },
+      {
+        property: 'og:description',
+        vmid: 'og:description',
+        template: (chunk) => {
+          return chunk || 'Des questions/réponses pour mieux appréhender les limites de notre planète';
+        },
+      },
+      {
+        property: 'og:image',
+        vmid: 'og:image',
+        template: (chunk) => {
+          return chunk || `${process.env.BASE_URL}summary_large_image.png`;
+        },
+      },
+      {
+        property: 'twitter:url',
+        vmid: 'twitter:url',
+        template: (chunk) => {
+          return chunk || 'https://know-your-planet.netlify.app';
         },
       },
       {
@@ -43,7 +78,22 @@ export default {
           return chunk ? `${chunk} | Know Your Planet` : 'Know Your Planet';
         },
       },
+      {
+        property: 'twitter:description',
+        vmid: 'twitter:description',
+        template: (chunk) => {
+          return chunk || 'Des questions/réponses pour mieux appréhender les limites de notre planète';
+        },
+      },
+      {
+        property: 'twitter:image',
+        vmid: 'twitter:image',
+        template: (chunk) => {
+          return chunk || `${process.env.BASE_URL}summary_large_image.png`;
+        },
+      },
     ],
+
   },
   components: {
     Header,
@@ -68,6 +118,7 @@ export default {
       console.log(process.env.VUE_APP_CONTEXT, process.env.CONTEXT);
       console.log(process.env);
       console.log(window.location);
+      // if (true) {
       if (window.location.hostname.startsWith('deploy-preview')) {
         this.$store.dispatch('GET_CATEGORY_LIST_FROM_LOCAL_YAML');
         this.$store.dispatch('GET_TAG_LIST_FROM_LOCAL_YAML');
