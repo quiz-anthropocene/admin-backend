@@ -22,6 +22,7 @@ from api.models import (
 )
 from api.serializers import (
     QuestionSerializer,
+    QuestionFullStringSerializer,
     CategorySerializer,
     TagSerializer,
     QuizSerializer,
@@ -79,7 +80,11 @@ def question_list(request):
     if request.GET.get("author"):
         questions = questions.for_author(request.GET.get("author"))
 
-    serializer = QuestionSerializer(questions, many=True)
+    if request.GET.get("full"):
+        serializer = QuestionFullStringSerializer(questions, many=True)
+    else:
+        serializer = QuestionSerializer(questions, many=True)
+
     return Response(serializer.data)
 
 
@@ -93,7 +98,11 @@ def question_detail(request, pk):
     except Question.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
-    serializer = QuestionSerializer(question)
+    if request.GET.get("full"):
+        serializer = QuestionFullStringSerializer(question)
+    else:
+        serializer = QuestionSerializer(question)
+
     return Response(serializer.data)
 
 
@@ -164,7 +173,11 @@ def question_random(request):
 
     question_random = Question.objects.get(pk=questions_random_id[0])
 
-    serializer = QuestionSerializer(question_random)
+    if request.GET.get("full"):
+        serializer = QuestionFullStringSerializer(question_random)
+    else:
+        serializer = QuestionSerializer(question_random)
+
     return Response(serializer.data)
 
 

@@ -7,8 +7,6 @@ import questionsYamlData from '../../data/questions.yaml';
 import quizzesYamlData from '../../data/quizzes.yaml';
 import glossaryYamlData from '../../data/glossary.yaml';
 
-console.log(glossaryYamlData);
-
 Vue.use(Vuex);
 
 const jsyaml = require('js-yaml');
@@ -19,18 +17,10 @@ const jsyaml = require('js-yaml');
  * output: array of objects with 'fields' object moved up
  */
 function processModelList(data) {
-  return data.filter((el) => el.fields.publish === true)
-    .map((el) => {
-      // move 'fields' key up
-      // Object.keys(el.fields).forEach((f) => { el[f] = el.fields[f]; });
-      // const elmerged = { ...el, ...el.fields };
-      // delete el.fields;
-      // // add 'id' key
-      // elmerged.id = el.pk;
-      // return elmerged; // issues returns list of {__ob__: Observer}
-      Object.assign(el, { id: el.pk }, el.fields);
-      return el;
-    });
+  return data.map((el) => {
+    Object.assign(el, { id: el.pk }, el.fields);
+    return el;
+  });
 }
 
 /**
@@ -67,7 +57,7 @@ const store = new Vuex.Store({
     GET_QUESTION_LIST: ({ commit }) => {
       commit('UPDATE_LOADING_STATUS', true);
       commit('UPDATE_ERROR', null);
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions`)
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions?full=true`)
         .then((response) => {
           commit('UPDATE_LOADING_STATUS', false);
           commit('UPDATE_ERROR', null);
@@ -84,10 +74,15 @@ const store = new Vuex.Store({
           console.log(error);
         });
     },
-    GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      commit('UPDATE_LOADING_STATUS', false);
-      commit('UPDATE_ERROR', null);
-      commit('SET_QUESTION_LIST', { list: processModelList(questionsYamlData) }); // filter
+    GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit, getters }) => {
+      const questionsPublished = processModelList(questionsYamlData).filter((el) => el.publish === true);
+      questionsPublished.map((q) => {
+        const questionCategory = getters.getCategoryById(q.category);
+        const questionTags = getters.getTagsByIdList(q.tags);
+        Object.assign(q, { category: questionCategory }, { tags: questionTags });
+        return q;
+      });
+      commit('SET_QUESTION_LIST', { list: questionsPublished }); // TODO: random order
     },
     GET_QUIZ_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/quizzes`)
@@ -100,8 +95,14 @@ const store = new Vuex.Store({
           // this.error = error;
         });
     },
-    GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      commit('SET_QUIZ_LIST', { list: processModelList(quizzesYamlData) }); // full ?
+    GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit, getters }) => {
+      const quizPublished = processModelList(quizzesYamlData).filter((el) => el.publish === true);
+      quizPublished.map((q) => {
+        const quizQuestions = getters.getQuestionsByIdList(q.questions);
+        Object.assign(q, { questions: quizQuestions });
+        return q;
+      });
+      commit('SET_QUIZ_LIST', { list: quizPublished });
     },
     GET_CATEGORY_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/categories`)
@@ -230,8 +231,11 @@ const store = new Vuex.Store({
     },
   },
   getters: {
+    getCategoryById: (state) => (categoryId) => state.categories.find((c) => (c.id === categoryId)),
+    getTagById: (state) => (tagId) => state.tags.find((t) => (t.id === tagId)),
+    getTagsByIdList: (state) => (tagIdList) => state.tags.filter((t) => tagIdList.includes(t.id)),
     getQuestionById: (state) => (questionId) => state.questions.find((q) => (q.id === questionId)),
-    getQuestionByIdList: (state) => (questionIdList) => state.questions.filter((q) => (questionIdList.includes(q.id))),
+    getQuestionsByIdList: (state) => (questionIdList) => state.questions.filter((q) => questionIdList.includes(q.id)),
     getQuestionsByCategoryName: (state) => (categoryName) => state.questions.filter((q) => (q.category === categoryName)),
     getQuestionsByTagName: (state) => (tagName) => state.questions.filter((q) => q.tags.includes(tagName)),
     getQuestionsByAuthorName: (state) => (authorName) => state.questions.filter((q) => q.author === authorName),
@@ -244,17 +248,7 @@ const store = new Vuex.Store({
       const currentQuestionIndex = currentQuestionId ? state.questionsDisplayed.findIndex((q) => q.id === currentQuestionId) : state.questionsDisplayed[0];
       return state.questionsDisplayed[currentQuestionIndex + 1] ? state.questionsDisplayed[currentQuestionIndex + 1] : state.questionsDisplayed[0];
     },
-    getQuizById: (state, getters) => (quizId, full = false) => {
-      const quiz = state.quizzes.find((q) => (q.id === quizId));
-      if (quiz && full) {
-        // replace the quiz's list of question ids with a list of question objects
-        const quizQuestionsListFull = getters.getQuestionByIdList(quiz.questions);
-        if (quizQuestionsListFull.length === quiz.questions.length) {
-          quiz.questions = quizQuestionsListFull;
-        }
-      }
-      return quiz;
-    },
+    getQuizById: (state) => (quizId) => state.quizzes.find((q) => (q.id === quizId)),
   },
 });
 

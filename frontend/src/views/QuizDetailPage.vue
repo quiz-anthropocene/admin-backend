@@ -116,7 +116,7 @@ export default {
 
   computed: {
     quiz() {
-      return this.$store.getters.getQuizById(parseInt(this.$route.params.quizId, 10), true);
+      return this.$store.getters.getQuizById(parseInt(this.$route.params.quizId, 10));
     },
   },
 

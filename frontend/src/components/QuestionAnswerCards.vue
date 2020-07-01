@@ -8,7 +8,7 @@
           <span class="text-primary">#{{ context.question_number }}</span>
         </span>
         <span> | </span>
-        <span class="text-secondary">{{ question.category }}</span>
+        <span class="text-secondary">{{ question.category.name }}</span>
         <span> | </span>
         <span><small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
       </h2>
@@ -125,6 +125,9 @@ export default {
       questionSuccess: null,
       questionSuccessMessageList: ["C'est exact", 'En effet', 'Bien vu', 'Félicitations', 'Bravo'],
     };
+  },
+
+  computed: {
   },
 
   watch: {
