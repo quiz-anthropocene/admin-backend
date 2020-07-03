@@ -2,10 +2,13 @@
   <div id="app">
     <Header />
     <section>
-      <div v-if="loading" class="alert alert-primary" role="alert">Chargement...</div>
+      <div v-show="loading" class="alert alert-primary" role="alert">Chargement...</div>
       <div v-if="error" class="alert alert-danger" role="alert">
         Erreur de connexion 🤔
         <a href="#" @click="initData()">Réessayer</a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="dismissAlert()">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
     </section>
     <main class="container-md">
@@ -115,14 +118,12 @@ export default {
 
   methods: {
     initData() {
-      // if (true) {
-      if (window.location.hostname.startsWith('deploy-preview')) {
+      if (process.env.VUE_APP_LOCAL_MODE === 'yaml' || window.location.hostname.startsWith('deploy-preview')) {
         this.$store.dispatch('GET_CATEGORY_LIST_FROM_LOCAL_YAML');
         this.$store.dispatch('GET_TAG_LIST_FROM_LOCAL_YAML');
         this.$store.dispatch('GET_QUESTION_LIST_FROM_LOCAL_YAML');
         this.$store.dispatch('GET_QUIZ_LIST_FROM_LOCAL_YAML');
         this.$store.dispatch('GET_GLOSSARY_LIST_FROM_LOCAL_YAML');
-        // TODO: author, difficulty
       } else {
         // this.$store.dispatch('GET_QUESTION_LIST');
         // this.$store.dispatch('GET_CATEGORY_LIST');
@@ -132,6 +133,9 @@ export default {
         // this.$store.dispatch('GET_QUIZ_LIST');
         // this.$store.dispatch('GET_GLOSSARY_LIST');
       }
+    },
+    dismissAlert() {
+      this.$store.dispatch('RESET_LOADING_STATUS');
     },
   },
 };

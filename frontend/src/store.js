@@ -41,20 +41,26 @@ const store = new Vuex.Store({
     error: null,
     questions: [], // received in random order
     questionsDisplayed: [],
-    quizzes: [],
-    categories: [],
-    tags: [],
-    authors: [],
-    difficultyLevels: [],
-    glossary: [],
+    questionsPendingValidation: [],
     questionFilters: {
       category: null,
       tag: null,
       author: null,
       difficulty: null,
     },
+    quizzes: [],
+    categories: [],
+    tags: [],
+    authors: [],
+    difficultyLevels: [],
+    glossary: [],
+    stats: {},
   },
   actions: {
+    RESET_LOADING_STATUS: ({ commit }) => {
+      commit('UPDATE_LOADING_STATUS', false);
+      commit('UPDATE_ERROR', null);
+    },
     GET_QUESTION_LIST: ({ commit }) => {
       commit('UPDATE_LOADING_STATUS', true);
       commit('UPDATE_ERROR', null);
@@ -65,7 +71,7 @@ const store = new Vuex.Store({
           return response.json();
         })
         .then((dataJson) => {
-          commit('SET_QUESTION_LIST', { list: dataJson });
+          commit('SET_QUESTION_PUBLISHED_LIST', { list: dataJson });
           // commit('UPDATE_QUESTIONS_DISPLAYED')
           // document.dispatchEvent(new Event('custom-render-trigger'));
         })
@@ -76,14 +82,20 @@ const store = new Vuex.Store({
         });
     },
     GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
-      const questionsPublished = processModelList(questionsYamlData).filter((el) => el.publish === true);
+      // questions
+      const questionsPublished = processModelList(questionsYamlData)
+        .filter((el) => el.publish === true)
+        .sort(() => Math.random() - 0.5) // random order
+        .sort((a, b) => a.difficulty - b.difficulty); // order by difficulty (easiest to hardest)
+      const questionsPendingValidation = processModelList(questionsYamlData).filter((el) => el.validation_status === 'A valider');
       questionsPublished.map((q) => {
         const questionCategory = getters.getCategoryById(q.category);
         const questionTags = getters.getTagsByIdList(q.tags);
         Object.assign(q, { category: questionCategory }, { tags: questionTags });
         return q;
       });
-      commit('SET_QUESTION_LIST', { list: questionsPublished }); // TODO: random order
+      commit('SET_QUESTION_PUBLISHED_LIST', { list: questionsPublished }); // TODO: random order
+      commit('SET_QUESTION_PENDING_VALIDATION_LIST', { list: questionsPendingValidation });
 
       // update categories: add question_count
       state.categories.forEach((c) => {
@@ -164,7 +176,8 @@ const store = new Vuex.Store({
         });
     },
     GET_TAG_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      commit('SET_TAG_LIST', { list: processModelList(tagsYamlData).sort((a, b) => a.name.localeCompare(b.name)) });
+      const tagsSorted = processModelList(tagsYamlData).sort((a, b) => a.name.localeCompare(b.name));
+      commit('SET_TAG_LIST', { list: tagsSorted });
     },
     GET_AUTHOR_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/authors`)
@@ -217,7 +230,25 @@ const store = new Vuex.Store({
       const currentQuestionFilters = filterObject || state.questionFilters;
       const questionsDisplayed = getters.getQuestionsByFilter(currentQuestionFilters);
       commit('SET_QUESTION_FILTERS', { object: currentQuestionFilters });
-      commit('SET_QUESTIONS_DISPLAYED', { list: questionsDisplayed });
+      commit('SET_QUESTIONS_DISPLAYED_LIST', { list: questionsDisplayed });
+    },
+    GET_STATS: ({ commit }) => {
+      commit('UPDATE_LOADING_STATUS', true);
+      commit('UPDATE_ERROR', null);
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/stats`)
+        .then((response) => {
+          commit('UPDATE_LOADING_STATUS', false);
+          commit('UPDATE_ERROR', null);
+          return response.json();
+        })
+        .then((dataJson) => {
+          commit('SET_STATS', { object: dataJson });
+        })
+        .catch((error) => {
+          commit('UPDATE_LOADING_STATUS', false);
+          commit('UPDATE_ERROR', error);
+          console.log(error);
+        });
     },
   },
   mutations: {
@@ -227,11 +258,12 @@ const store = new Vuex.Store({
     UPDATE_ERROR: (state, value) => {
       state.error = value;
     },
-    SET_QUESTION_LIST: (state, { list }) => {
+    SET_QUESTION_PUBLISHED_LIST: (state, { list }) => {
       state.questions = list;
       state.questionsDisplayed = list;
-      // TODO: state.authors & question_count
-      // TODO: state.difficulty & question_count
+    },
+    SET_QUESTION_PENDING_VALIDATION_LIST: (state, { list }) => {
+      state.questionsPendingValidation = list;
     },
     SET_QUIZ_LIST: (state, { list }) => {
       state.quizzes = list;
@@ -254,8 +286,11 @@ const store = new Vuex.Store({
     SET_QUESTION_FILTERS: (state, { object }) => {
       state.questionFilters = object;
     },
-    SET_QUESTIONS_DISPLAYED: (state, { list }) => {
+    SET_QUESTIONS_DISPLAYED_LIST: (state, { list }) => {
       state.questionsDisplayed = list;
+    },
+    SET_STATS: (state, { object }) => {
+      state.stats = object;
     },
   },
   getters: {
