@@ -46,7 +46,11 @@
 export default {
   name: 'QuizListPage',
   metaInfo: {
-    title: 'Les Quiz',
+    title: 'Tous les quiz',
+    meta: [
+      { property: 'og:title', vmid: 'og:title', content: 'Tous les quiz' },
+      { property: 'twitter:title', vmid: 'twitter:title', content: 'Tous les quiz' },
+    ],
   },
   components: {
   },

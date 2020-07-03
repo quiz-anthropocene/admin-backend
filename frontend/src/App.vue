@@ -41,7 +41,7 @@ export default {
         property: 'og:url',
         vmid: 'og:url',
         template: (chunk) => {
-          return chunk || 'https://know-your-planet.netlify.app';
+          return chunk ? `https://know-your-planet.netlify.app${chunk}` : 'https://know-your-planet.netlify.app';
         },
       },
       {
@@ -70,7 +70,7 @@ export default {
         property: 'twitter:url',
         vmid: 'twitter:url',
         template: (chunk) => {
-          return chunk || 'https://know-your-planet.netlify.app';
+          return chunk ? `https://know-your-planet.netlify.app${chunk}` : 'https://know-your-planet.netlify.app';
         },
       },
       {

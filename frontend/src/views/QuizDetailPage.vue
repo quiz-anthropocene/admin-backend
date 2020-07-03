@@ -79,22 +79,22 @@ import FeedbackCard from '../components/FeedbackCard.vue';
 export default {
   name: 'QuizDetailPage',
   metaInfo() {
-    const quizUrl = `https://know-your-planet.netlify.app/quiz/${this.$route.params.quizId}`;
-    const quizName = this.quiz ? this.quiz.name : 'quiz name placeholder';
-    const quizDescription = this.quiz && this.quiz.description ? this.quiz.description : 'quiz description placeholder';
-    const quizImageUrl = this.quiz ? this.quiz.image_background_url : null;
+    // const url = `/quiz/${this.$route.params.quizId}`;
+    const title = this.quiz && this.quiz.name ? `Quiz #${this.$route.params.quizId} - ${this.quiz.name}` : `Quiz #${this.$route.params.quizId}`;
+    const description = this.quiz && this.quiz.description ? this.quiz.description : 'Le quiz n’a pas de description';
+    const imageUrl = this.quiz && this.quiz.image_background_url ? this.quiz.image_background_url : 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png';
     return {
-      title: `Quiz #${this.$route.params.quizId}`,
+      title,
       meta: [
-        { name: 'description', vmid: 'description', content: quizDescription },
-        { name: 'og:url', vmid: 'og:url', content: quizUrl },
-        { property: 'og:title', vmid: 'og:title', content: `Quiz #${this.$route.params.quizId} - ${quizName}` },
-        { name: 'og:description', vmid: 'og:description', content: quizDescription },
-        { property: 'og:image', vmid: 'og:image', content: quizImageUrl },
-        { name: 'twitter:url', vmid: 'twitter:url', content: quizUrl },
-        { property: 'twitter:title', vmid: 'twitter:title', content: `Quiz #${this.$route.params.quizId} - ${quizName}` },
-        { name: 'twitter:description', vmid: 'twitter:description', content: quizDescription },
-        { property: 'twitter:image', vmid: 'twitter:image', content: quizImageUrl },
+        { name: 'description', vmid: 'description', content: description },
+        // { name: 'og:url', vmid: 'og:url', content: url },
+        { property: 'og:title', vmid: 'og:title', content: title },
+        { name: 'og:description', vmid: 'og:description', content: description },
+        { property: 'og:image', vmid: 'og:image', content: imageUrl },
+        // { name: 'twitter:url', vmid: 'twitter:url', content: url },
+        { property: 'twitter:title', vmid: 'twitter:title', content: title },
+        { name: 'twitter:description', vmid: 'twitter:description', content: description },
+        { property: 'twitter:image', vmid: 'twitter:image', content: imageUrl },
       ],
     };
   },

@@ -16,10 +16,10 @@ module.exports = {
           routes: [
             '/',
             '/a-propos', '/contribuer', '/glossaire',
-            '/quiz',
+            // '/quiz',
           ],
           // Optional - default None
-          renderAfterTime: 5000, // 5 seconds
+          // renderAfterTime: 5000, // 5 seconds
           // renderAfterDocumentEvent: 'custom-render-trigger'
         }),
       ],
