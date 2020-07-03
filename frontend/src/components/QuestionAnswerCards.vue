@@ -158,7 +158,7 @@ export default {
     initContribution() {
       this.contribution = {
         text: '',
-        description: `Question #${this.question.id} - ${this.question.category} - ${this.question.text}`,
+        description: `Question #${this.question.id} - ${this.question.category.name} - ${this.question.text}`,
         type: 'commentaire question',
       };
       this.showContributionForm = false;

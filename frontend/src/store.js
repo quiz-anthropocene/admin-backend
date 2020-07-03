@@ -6,6 +6,7 @@ import tagsYamlData from '../../data/tags.yaml';
 import questionsYamlData from '../../data/questions.yaml';
 import quizzesYamlData from '../../data/quizzes.yaml';
 import glossaryYamlData from '../../data/glossary.yaml';
+import difficultyLevelsYamlData from '../../data/difficulty-levels.yaml';
 
 Vue.use(Vuex);
 
@@ -74,7 +75,7 @@ const store = new Vuex.Store({
           console.log(error);
         });
     },
-    GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit, getters }) => {
+    GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
       const questionsPublished = processModelList(questionsYamlData).filter((el) => el.publish === true);
       questionsPublished.map((q) => {
         const questionCategory = getters.getCategoryById(q.category);
@@ -83,6 +84,36 @@ const store = new Vuex.Store({
         return q;
       });
       commit('SET_QUESTION_LIST', { list: questionsPublished }); // TODO: random order
+
+      // update categories: add question_count
+      state.categories.forEach((c) => {
+        c.question_count = questionsPublished.filter((q) => q.category.name === c.name).length;
+      });
+
+      // update tags: add question_count
+      state.tags.forEach((t) => {
+        t.question_count = questionsPublished.filter((q) => q.tags.map((qt) => qt.id).includes(t.id)).length;
+      });
+
+      // create authors list: add question_count
+      // TODO: use map/reduce instead
+      const authors = [];
+      questionsPublished.forEach((q) => {
+        const authorListIndex = authors.map((a) => a.name).indexOf(q.author);
+        if (authorListIndex >= 0) {
+          authors[authorListIndex].question_count += 1;
+        } else {
+          authors.push({ name: q.author, question_count: 1 });
+        }
+      });
+      commit('SET_AUTHOR_LIST', { list: authors });
+
+      // create difficulty list: add question_count
+      const difficultyLevels = difficultyLevelsYamlData;
+      difficultyLevels.forEach((dl) => {
+        dl.question_count = questionsPublished.filter((q) => q.difficulty === dl.value).length;
+      });
+      commit('SET_DIFFICULTY_LEVEL_LIST', { list: difficultyLevels });
     },
     GET_QUIZ_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/quizzes`)
@@ -133,7 +164,7 @@ const store = new Vuex.Store({
         });
     },
     GET_TAG_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      commit('SET_TAG_LIST', { list: processModelList(tagsYamlData) });
+      commit('SET_TAG_LIST', { list: processModelList(tagsYamlData).sort((a, b) => a.name.localeCompare(b.name)) });
     },
     GET_AUTHOR_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/authors`)
@@ -182,10 +213,11 @@ const store = new Vuex.Store({
     GET_GLOSSARY_LIST_FROM_LOCAL_YAML: ({ commit }) => {
       commit('SET_GLOSSARY_LIST', { list: processModelList(glossaryYamlData) });
     },
-    UPDATE_QUESTION_FILTERS: ({ commit, state }, filterObject) => {
+    UPDATE_QUESTION_FILTERS: ({ commit, state, getters }, filterObject) => {
       const currentQuestionFilters = filterObject || state.questionFilters;
-      commit('UPDATE_QUESTION_FILTERS', { filterObject: currentQuestionFilters });
-      commit('UPDATE_QUESTIONS_DISPLAYED', { filterObject: currentQuestionFilters });
+      const questionsDisplayed = getters.getQuestionsByFilter(currentQuestionFilters);
+      commit('SET_QUESTION_FILTERS', { object: currentQuestionFilters });
+      commit('SET_QUESTIONS_DISPLAYED', { list: questionsDisplayed });
     },
   },
   mutations: {
@@ -219,15 +251,11 @@ const store = new Vuex.Store({
     SET_GLOSSARY_LIST: (state, { list }) => {
       state.glossary = list;
     },
-    UPDATE_QUESTION_FILTERS: (state, { filterObject }) => {
-      state.questionFilters = filterObject;
+    SET_QUESTION_FILTERS: (state, { object }) => {
+      state.questionFilters = object;
     },
-    UPDATE_QUESTIONS_DISPLAYED: (state, { filterObject }) => {
-      state.questionsDisplayed = state.questions
-        .filter((q) => (filterObject.category ? (q.category === filterObject.category) : true))
-        .filter((q) => (filterObject.tag ? q.tags.includes(filterObject.tag) : true))
-        .filter((q) => (filterObject.author ? (q.author === filterObject.author) : true))
-        .filter((q) => (filterObject.difficulty ? (q.difficulty === filterObject.difficulty) : true));
+    SET_QUESTIONS_DISPLAYED: (state, { list }) => {
+      state.questionsDisplayed = list;
     },
   },
   getters: {
@@ -236,12 +264,12 @@ const store = new Vuex.Store({
     getTagsByIdList: (state) => (tagIdList) => state.tags.filter((t) => tagIdList.includes(t.id)),
     getQuestionById: (state) => (questionId) => state.questions.find((q) => (q.id === questionId)),
     getQuestionsByIdList: (state) => (questionIdList) => state.questions.filter((q) => questionIdList.includes(q.id)),
-    getQuestionsByCategoryName: (state) => (categoryName) => state.questions.filter((q) => (q.category === categoryName)),
-    getQuestionsByTagName: (state) => (tagName) => state.questions.filter((q) => q.tags.includes(tagName)),
+    getQuestionsByCategoryName: (state) => (categoryName) => state.questions.filter((q) => (q.category.name === categoryName)),
+    getQuestionsByTagName: (state) => (tagName) => state.questions.filter((q) => q.tags.map((qt) => qt.name).includes(tagName)),
     getQuestionsByAuthorName: (state) => (authorName) => state.questions.filter((q) => q.author === authorName),
-    getQuestionsByFilter: (state) => (filter) => state.questions.filter((q) => (filter.categoryName ? (q.category === filter.categoryName) : true))
-      .filter((q) => (filter.tagName ? q.tags.includes(filter.tagName) : true))
-      .filter((q) => (filter.authorName ? (q.author === filter.authorName) : true))
+    getQuestionsByFilter: (state) => (filter) => state.questions.filter((q) => (filter.category ? (q.category.name === filter.category) : true))
+      .filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
+      .filter((q) => (filter.author ? (q.author === filter.author) : true))
       .filter((q) => (filter.difficulty ? (q.difficulty === filter.difficulty) : true)),
     getCurrentQuestionIndex: (state) => (currentQuestionId) => state.questionsDisplayed.findIndex((q) => q.id === currentQuestionId),
     getNextQuestionByFilter: (state) => (currentQuestionId) => {

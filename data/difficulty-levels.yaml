@@ -1,0 +1,15 @@
+- name: Junior
+  value: 0
+  emoji: 🧸
+- name: Facile
+  value: 1
+  emoji: 🏆
+- name: Moyen
+  value: 2
+  emoji: 🏆🏆
+- name: Difficile
+  value: 3
+  emoji: 🏆🏆🏆
+- name: Expert
+  value: 4
+  emoji: 🏆🏆🏆🏆

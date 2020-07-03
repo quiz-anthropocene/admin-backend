@@ -6,7 +6,7 @@
     </div>
     <hr class="custom-separator">
     <div class="question-card__extra">
-      <span class="text-secondary">{{ question.category }}</span>
+      <span class="text-secondary">{{ question.category.name }}</span>
       <DifficultyBadge class="question-card__extra__badge" v-bind:difficulty="question.difficulty" />
     </div>
   </div>

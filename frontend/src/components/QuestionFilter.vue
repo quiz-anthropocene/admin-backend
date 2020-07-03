@@ -92,10 +92,12 @@ export default {
       return this.$store.state.categories;
     },
     tags() {
-      return this.$store.state.tags.filter((t) => t.question_count);
+      // .slice makes a copy of the array, instead of mutating the orginal
+      return this.$store.state.tags.slice(0).filter((t) => t.question_count);
     },
     authors() {
-      return this.$store.state.authors;
+      // .slice makes a copy of the array, instead of mutating the orginal
+      return this.$store.state.authors.slice(0).sort((a, b) => b.question_count - a.question_count);
     },
     difficultyLevels() {
       return this.$store.state.difficultyLevels;
