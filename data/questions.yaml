@@ -1115,7 +1115,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 16
     - 9
@@ -1157,7 +1157,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 13
     - 9
@@ -1193,7 +1193,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 16
     - 9
@@ -1201,8 +1201,8 @@
 - model: api.question
   pk: 33
   fields:
-    text: Une augmentation de la température entraîne-t-elle une augmentation du CO2
-      ?
+    text: Est-ce qu'une augmentation de la température peut entrainer une augmentation
+      du CO2 dans l'atmosphère ?
     hint: ''
     type: QCM
     category: 1
@@ -1219,11 +1219,11 @@
       terrestres du rayonnement solaire.
     answer_accessible_url: https://www.futura-sciences.com/planete/questions-reponses/eau-banquise-glacier-difference-1132/
     answer_scientific_url: ''
-    answer_image_url: ''
+    answer_image_url: https://www.mercator-ocean.fr/wp-content/uploads/2019/04/ocean_vert.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Matthieu Massart
-    validator: ''
+    validator: laydgeur
     publish: true
     validation_status: Validée
     answer_count: 46
@@ -1232,7 +1232,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-24
+    updated: 2020-07-04
     tags:
     - 13
     - 51
@@ -1533,7 +1533,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 21
     - 9
@@ -1650,7 +1650,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 51
     - 9
@@ -1690,7 +1690,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 49
     - 9
@@ -1765,7 +1765,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 16
     - 9
@@ -2086,7 +2086,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 26
     - 9
@@ -2123,7 +2123,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 26
     - 9
@@ -2482,7 +2482,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 21
     - 9
@@ -3115,16 +3115,16 @@
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Raphael Odini
-    validator: ''
-    publish: false
-    validation_status: A valider
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
     answer_count: 0
     answer_success_count: 0
     like_count: 0
     dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
-    updated: 2020-06-24
+    updated: 2020-07-04
     tags:
     - 1
     - 13
@@ -3215,15 +3215,17 @@
     answer_option_b: L'ADEME
     answer_option_c: Le Ministère de la Transition écologique et solidaire
     answer_option_d: La Convention Citoyenne pour le Climat
-    answer_correct: d
+    answer_correct: a
     has_ordered_answers: false
     answer_explanation: Il est présidé par la climatologue franco-canadienne Corinne
       Le Quéré et composé de dix membres choisis pour leur expertise dans les domaines
       de la science du climat, de l’économie, de l’agronomie et de la transition énergétique.
     answer_accessible_url: https://www.hautconseilclimat.fr/
     answer_scientific_url: ''
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_image_url: http://blog.troude.com/wp-content/uploads/2018/11/20181126-Montage-Haut-Conseil-pour-le-Climat-768x562.jpg
+    answer_image_explanation: Les membres du Haut Conseil pour le Climat (Valérie
+      Masson-Delmotte, Jean-Marc Jancovici, Corinne Le Quere, Pascal Canfin, Laurence
+      Tubiana, Pierre Larrouturou, etc)
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
@@ -3235,7 +3237,7 @@
     dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
-    updated: 2020-06-25
+    updated: 2020-06-29
     tags:
     - 1
     - 50
@@ -5841,7 +5843,7 @@
     dislike_count: 0
     added: 2019-03-22
     created: 2020-04-26
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 11
     - 33
@@ -7210,7 +7212,7 @@
     dislike_count: 0
     added: 2019-05-22
     created: 2020-04-26
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 61
     - 9
@@ -8787,7 +8789,7 @@
     dislike_count: 0
     added: 2019-07-01
     created: 2020-05-07
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 50
     - 9
@@ -12755,7 +12757,7 @@
     dislike_count: 0
     added: 2019-12-10
     created: 2020-05-20
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 13
     - 9
@@ -16434,16 +16436,16 @@
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Citoyens Pour le Climat
-    validator: ''
-    publish: false
-    validation_status: A valider
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
     answer_count: 0
     answer_success_count: 0
     like_count: 0
     dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-04
     tags:
     - 1
     - 31
@@ -17399,16 +17401,16 @@
     answer_image_explanation: 'Source : http://www.photovoltaique.guidenr.fr/'
     answer_extra_info: ''
     author: Citoyens Pour le Climat
-    validator: ''
-    publish: false
-    validation_status: A valider
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
     answer_count: 0
     answer_success_count: 0
     like_count: 0
     dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-04
     tags:
     - 44
     - 46
@@ -17633,7 +17635,7 @@
     dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 26
     - 9
@@ -17668,7 +17670,7 @@
     dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 26
     - 9
@@ -18781,7 +18783,7 @@
     dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 16
     - 9
@@ -19061,7 +19063,7 @@
     dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 16
     - 9
@@ -20262,8 +20264,8 @@
 - model: api.question
   pk: 546
   fields:
-    text: Quelle est la capacité physique acquise par le genre Homo qui a pu lui apporter
-      le plus d'avantages pour la chasse ?
+    text: Laquelle de ces capacités physiques acquises par le genre Homo a pu lui
+      apporter le plus d'avantages pour la chasse ?
     hint: ''
     type: QCM
     category: 8
@@ -20275,7 +20277,7 @@
     answer_correct: c
     has_ordered_answers: false
     answer_explanation: Cette qualité aurait pu aider en permettant la pratique de
-      la chasse à l’épuisement.
+      la chasse du gibier jusqu'à l’épuisement.
     answer_accessible_url: https://anthropogoniques.com/accueil/adaptations-a-la-course-dendurance/
     answer_scientific_url: https://www.nature.com/articles/nature03052
     answer_image_url: ''
@@ -20291,14 +20293,14 @@
     dislike_count: 0
     added: 2020-06-22
     created: 2020-06-24
-    updated: 2020-06-25
+    updated: 2020-06-29
     tags:
     - 108
 - model: api.question
   pk: 547
   fields:
-    text: L’Anthropocène marque le début des impacts humains planétaires. Depuis quand
-      l’humain transforme-t-il son environnement localement ?
+    text: L’Anthropocène marque le début des impacts humains à l'échelle planétaire.
+      Depuis quand l’humain transforme-t-il son environnement à l'échelle locale ?
     hint: ''
     type: QCM
     category: 4
@@ -20327,7 +20329,7 @@
     dislike_count: 0
     added: 2020-06-22
     created: 2020-06-24
-    updated: 2020-06-25
+    updated: 2020-06-29
     tags:
     - 32
 - model: api.question
@@ -20377,7 +20379,7 @@
     answer_option_a: Une plus grande capacité à porter des charges
     answer_option_b: Une plus grande performance pour lancer des objets
     answer_option_c: Sa morphologie a augmenté l'habileté manuelle
-    answer_option_d: La capacité à faire du feu
+    answer_option_d: La capacité à grimper aux arbres pour échapper aux proies.
     answer_correct: b
     has_ordered_answers: false
     answer_explanation: La capacité de lancer loin et à grande vitesse dans le genre
@@ -20391,7 +20393,7 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: false
+    publish: true
     validation_status: Validée
     answer_count: 0
     answer_success_count: 0
@@ -20399,7 +20401,7 @@
     dislike_count: 0
     added: 2020-06-25
     created: 2020-06-25
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 109
     - 113
@@ -20407,7 +20409,7 @@
   pk: 550
   fields:
     text: Quelle est la principale modification du corps humain consécutive à une
-      alimentation progressivement plus carnée chez nos ancêtres chasseurs-cueilleurs
+      alimentation de plus en plus riche en viande chez nos ancêtres chasseurs-cueilleurs
       ?
     hint: ''
     type: QCM
@@ -20415,7 +20417,7 @@
     difficulty: 3
     answer_option_a: Un plus gros cerveau
     answer_option_b: Un système digestif plus petit
-    answer_option_c: Développement de canines plus tranchantes
+    answer_option_c: Des canines plus tranchantes
     answer_option_d: De plus gros muscles
     answer_correct: b
     has_ordered_answers: false
@@ -20431,7 +20433,7 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: false
+    publish: true
     validation_status: Validée
     answer_count: 0
     answer_success_count: 0
@@ -20439,18 +20441,19 @@
     dislike_count: 0
     added: 2020-06-25
     created: 2020-06-25
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 109
     - 113
 - model: api.question
   pk: 551
   fields:
-    text: Les échanges longue distance sont-ils une spécificité de la modernité ?
+    text: 'Vrai ou faux : les échanges longue distance sont-ils une spécificité de
+      la modernité ?'
     hint: ''
     type: VF
     category: 2
-    difficulty: 2
+    difficulty: 1
     answer_option_a: Vrai
     answer_option_b: Faux
     answer_option_c: ''
@@ -20468,7 +20471,7 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: false
+    publish: true
     validation_status: Validée
     answer_count: 0
     answer_success_count: 0
@@ -20476,21 +20479,21 @@
     dislike_count: 0
     added: 2020-06-25
     created: 2020-06-25
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 110
     - 112
 - model: api.question
   pk: 552
   fields:
-    text: L'espérance de vie est-elle plus grande dans les sociétés industrielles
-      que chez les chasseurs-cueilleurs ?
+    text: La longévité est-elle plus grande dans les sociétés industrielles que chez
+      les chasseurs-cueilleurs ?
     hint: ''
     type: QCM
     category: 8
     difficulty: 2
-    answer_option_a: Chez les chasseurs-cueilleurs ?
-    answer_option_b: Dans les sociétés modernes ?
+    answer_option_a: Chez les chasseurs-cueilleurs
+    answer_option_b: Dans les sociétés modernes
     answer_option_c: La longévité possible est sensiblement la même dans le deux cas
       ?
     answer_option_d: ''
@@ -20506,23 +20509,23 @@
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Vincent Mignerot
-    validator: ''
-    publish: false
-    validation_status: Nouvelle question
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
     answer_count: 0
     answer_success_count: 0
     like_count: 0
     dislike_count: 0
     added: 2020-06-25
     created: 2020-06-25
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 109
 - model: api.question
   pk: 553
   fields:
-    text: La maîtrise du feu a-t-elle joué un rôle sur l'augmentation de la taille
-      du cerveau humain ?
+    text: 'Vrai ou faux : la maîtrise du feu a-t-elle joué un rôle sur l''augmentation
+      de la taille du cerveau humain ?'
     hint: ''
     type: VF
     category: 5
@@ -20544,15 +20547,15 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: false
-    validation_status: Nouvelle question
+    publish: true
+    validation_status: Validée
     answer_count: 0
     answer_success_count: 0
     like_count: 0
     dislike_count: 0
     added: 2020-06-25
     created: 2020-06-25
-    updated: 2020-06-25
+    updated: 2020-07-04
     tags:
     - 109
     - 111
@@ -20631,3 +20634,394 @@
     tags:
     - 106
     - 108
+- model: api.question
+  pk: 556
+  fields:
+    text: Entre les années 2000 et 2017, les énergies renouvelables ont été développées
+      - notamment le photovoltaïque - pour éviter la consommation de charbon. Comment
+      ont évolué leurs production supplémentaires relatives ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 3
+    answer_option_a: Pour une unité supplémentaire d'énergie photovoltaïque il a été
+      ajouté 14 unités d'énergie à base charbon.
+    answer_option_b: Pour une unité supplémentaire de charbon il a été ajouté 14 fois
+      plus de photovoltaïque.
+    answer_option_c: Pour une unité supplémentaire de photovoltaïque, il a été ajouté
+      une unité de charbon
+    answer_option_d: Pour une unité supplémentaire de photovoltaïque, il a été supprimé
+      une unité de charbon
+    answer_correct: a
+    has_ordered_answers: false
+    answer_explanation: 'L''histoire de l''énergie n''a jamais observé de réelle substitution
+      : toutes les énergies s''additionnent les unes aux autres. À ce jour, la croissance
+      des énergies renouvelables reste inférieure à la croissance de la production
+      d''énergie par le charbon. Pour l''éolien, le rapport est de 1 à 6 par rapport
+      aux unités supplémentaires de charbon.'
+    answer_accessible_url: https://www.youtube.com/watch?v=xgy0rW0oaFI&t=6333s
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: Voir vidéo autour de 1h16'
+    answer_extra_info: https://youtu.be/xgy0rW0oaFI
+    author: Vincent Mignerot
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
+    answer_count: 0
+    answer_success_count: 0
+    like_count: 0
+    dislike_count: 0
+    added: 2020-06-26
+    created: 2020-06-29
+    updated: 2020-07-04
+    tags:
+    - 40
+    - 44
+    - 46
+- model: api.question
+  pk: 557
+  fields:
+    text: Qui a découvert la radioactivité en 1896 ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 2
+    answer_option_a: Albert Einstein
+    answer_option_b: Pierre et Marie Curie
+    answer_option_c: Henri Becquerel
+    answer_option_d: ''
+    answer_correct: c
+    has_ordered_answers: false
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: EDF
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    answer_count: 0
+    answer_success_count: 0
+    like_count: 0
+    dislike_count: 0
+    added: 2020-06-30
+    created: 2020-07-04
+    updated: 2020-07-04
+    tags:
+    - 29
+- model: api.question
+  pk: 558
+  fields:
+    text: Quelle est l'unité de mesure de la radioactivité ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 1
+    answer_option_a: Le Bescherelle
+    answer_option_b: Le Becquerel
+    answer_option_c: La Sauterelle
+    answer_option_d: ''
+    answer_correct: b
+    has_ordered_answers: false
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: EDF
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    answer_count: 0
+    answer_success_count: 0
+    like_count: 0
+    dislike_count: 0
+    added: 2020-06-30
+    created: 2020-07-04
+    updated: 2020-07-04
+    tags:
+    - 29
+    - 50
+- model: api.question
+  pk: 559
+  fields:
+    text: Quel minerai radioactif, contenu dans le sous-sol de la Terre, permet de
+      produire l'énergie nucléaire ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 1
+    answer_option_a: L'uranium
+    answer_option_b: Le plutonium
+    answer_option_c: L'irridium
+    answer_option_d: ''
+    answer_correct: a
+    has_ordered_answers: false
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: EDF
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    answer_count: 0
+    answer_success_count: 0
+    like_count: 0
+    dislike_count: 0
+    added: 2020-06-30
+    created: 2020-07-04
+    updated: 2020-07-04
+    tags:
+    - 29
+- model: api.question
+  pk: 560
+  fields:
+    text: Par quelle technique produit-on de l'électricité dans une centrale nucléaire
+      ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 2
+    answer_option_a: La fusion des atomes d'uranium
+    answer_option_b: La scission des atomes d'uranium
+    answer_option_c: La fission des atomes d'uranium
+    answer_option_d: ''
+    answer_correct: c
+    has_ordered_answers: false
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: EDF
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    answer_count: 0
+    answer_success_count: 0
+    like_count: 0
+    dislike_count: 0
+    added: 2020-06-30
+    created: 2020-07-04
+    updated: 2020-07-04
+    tags:
+    - 29
+- model: api.question
+  pk: 561
+  fields:
+    text: Combien pèse une pastille d'uranium ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 4
+    answer_option_a: 7 grammes
+    answer_option_b: 108 grammes
+    answer_option_c: 1,2 kilogrammes
+    answer_option_d: ''
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: EDF
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    answer_count: 0
+    answer_success_count: 0
+    like_count: 0
+    dislike_count: 0
+    added: 2020-06-30
+    created: 2020-07-04
+    updated: 2020-07-04
+    tags:
+    - 29
+- model: api.question
+  pk: 562
+  fields:
+    text: Comment s'appellent les tubes en métal dans lesquels sont enfilées les pastilles
+      d'uranium ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 3
+    answer_option_a: Les mats
+    answer_option_b: Les crayons
+    answer_option_c: Les tubas
+    answer_option_d: ''
+    answer_correct: b
+    has_ordered_answers: false
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: EDF
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    answer_count: 0
+    answer_success_count: 0
+    like_count: 0
+    dislike_count: 0
+    added: 2020-06-30
+    created: 2020-07-04
+    updated: 2020-07-04
+    tags:
+    - 29
+- model: api.question
+  pk: 563
+  fields:
+    text: Quelle roche naturelle a été choisie en France pour le stockage des déchets
+      radioactifs ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 3
+    answer_option_a: Le granit
+    answer_option_b: Le grès
+    answer_option_c: L'argile
+    answer_option_d: ''
+    answer_correct: c
+    has_ordered_answers: false
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: EDF
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    answer_count: 0
+    answer_success_count: 0
+    like_count: 0
+    dislike_count: 0
+    added: 2020-06-30
+    created: 2020-07-04
+    updated: 2020-07-04
+    tags:
+    - 29
+- model: api.question
+  pk: 564
+  fields:
+    text: Quelle est la place du nucléaire dans la production française d'électricité
+      ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 1
+    answer_option_a: 1ère place
+    answer_option_b: 2ème place
+    answer_option_c: 3ème place
+    answer_option_d: ''
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: EDF
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    answer_count: 0
+    answer_success_count: 0
+    like_count: 0
+    dislike_count: 0
+    added: 2020-06-30
+    created: 2020-07-04
+    updated: 2020-07-04
+    tags:
+    - 1
+    - 29
+    - 39
+- model: api.question
+  pk: 565
+  fields:
+    text: Quel organisme s'assure en France du respect des exigences de sûreté nucléaire
+      ?
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 3
+    answer_option_a: L'ADEME
+    answer_option_b: L'ANDRA
+    answer_option_c: L'ASN
+    answer_option_d: ''
+    answer_correct: c
+    has_ordered_answers: false
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: EDF
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    answer_count: 0
+    answer_success_count: 0
+    like_count: 0
+    dislike_count: 0
+    added: 2020-06-30
+    created: 2020-07-04
+    updated: 2020-07-04
+    tags:
+    - 29
+- model: api.question
+  pk: 566
+  fields:
+    text: Dans le monde, combien y a-t-il de réacteurs nucléaires âgés de plus de
+      50 ans ?
+    hint: Plusieurs réacteurs nucléaires ont été mis en service avant 1970 et fonctionnent
+      encore aujourd’hui.
+    type: QCM
+    category: 5
+    difficulty: 3
+    answer_option_a: '0'
+    answer_option_b: '1'
+    answer_option_c: '5'
+    answer_option_d: '10'
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: 'Cinq réacteurs sont exploités depuis plus de 50 ans dans
+      le monde (tous connectés au réseau électrique en 1969) : Beznau 1 en Suisse,
+      Tarapur 1 et 2 en Inde, Nine Mile Point 1 et Ginna aux États-Unis.'
+    answer_accessible_url: https://www.connaissancedesenergies.org/questions-sur-le-nucleaire-apres-la-fermeture-de-fessenheim-200630
+    answer_scientific_url: ''
+    answer_image_url: https://www.ensi.ch/fr/wp-content/uploads/sites/4/2014/05/kernkraftwerk_beznau_ensi-1.jpg
+    answer_image_explanation: Centrale nucléaire de Beznau en suisse, donc le réacteur
+      n°1 d’une puissance de 365 MW est le plus ancien réacteur nucléaire en service
+      dans le monde
+    answer_extra_info: ''
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    answer_count: 0
+    answer_success_count: 0
+    like_count: 0
+    dislike_count: 0
+    added: 2020-07-04
+    created: 2020-07-04
+    updated: 2020-07-04
+    tags:
+    - 2
+    - 29

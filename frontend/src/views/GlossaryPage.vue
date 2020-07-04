@@ -23,8 +23,6 @@
 </template>
 
 <script>
-// import GlossaryYamlData from '../data/glossary.yaml';
-
 export default {
   name: 'GlossaryPage',
   metaInfo: {
@@ -38,13 +36,10 @@ export default {
   },
 
   mounted() {
-    // this.$store.dispatch('GET_GLOSSARY_LIST_FROM_LOCAL_YAML');
-    console.log('mounted', this.glossary);
   },
 
   data() {
     return {
-      // glossary: GlossaryYamlData
       // glossary: null,
     };
   },

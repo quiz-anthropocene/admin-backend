@@ -88,6 +88,7 @@ const store = new Vuex.Store({
         .sort(() => Math.random() - 0.5) // random order
         .sort((a, b) => a.difficulty - b.difficulty); // order by difficulty (easiest to hardest)
       const questionsPendingValidation = processModelList(questionsYamlData).filter((el) => el.validation_status === 'A valider');
+      // questions: get category & tags objects
       questionsPublished.map((q) => {
         const questionCategory = getters.getCategoryById(q.category);
         const questionTags = getters.getTagsByIdList(q.tags);
@@ -140,9 +141,11 @@ const store = new Vuex.Store({
     },
     GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit, getters }) => {
       const quizPublished = processModelList(quizzesYamlData).filter((el) => el.publish === true);
+      // quiz: get question objects & difficulty average
       quizPublished.map((q) => {
         const quizQuestions = getters.getQuestionsByIdList(q.questions);
-        Object.assign(q, { questions: quizQuestions });
+        const quizDifficultyAverage = quizQuestions.map((qq) => qq.difficulty).reduce((prev, curr) => prev + curr, 0) / quizQuestions.length;
+        Object.assign(q, { questions: quizQuestions }, { difficulty_average: quizDifficultyAverage });
         return q;
       });
       commit('SET_QUIZ_LIST', { list: quizPublished });
