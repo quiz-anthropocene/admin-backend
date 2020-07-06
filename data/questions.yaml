@@ -3973,7 +3973,7 @@
     answer_option_c: ''
     answer_option_d: ''
     answer_correct: b
-    has_ordered_answers: false
+    has_ordered_answers: true
     answer_explanation: "42 Gigajoules à la combustion, contre 4 Gigaloules pour l’explosion
       d’une tonne de TNT. Cette différence s'explique par deux raisons :\n - la détonation
       du TNT se fait sans oxygène et n’est pas complète ce qui donne une énergie relativement
@@ -19361,7 +19361,7 @@
     answer_option_b: 630 pages
     answer_option_c: 1230 pages
     answer_option_d: 2630 pages
-    answer_correct: ''
+    answer_correct: b
     has_ordered_answers: true
     answer_explanation: Le rapport complet comporte 630 pages tout compris (pages
       de garde, préface, résumé pour décideur, résumé technique, chapitres complets,
@@ -20459,7 +20459,7 @@
     answer_option_c: ''
     answer_option_d: ''
     answer_correct: b
-    has_ordered_answers: false
+    has_ordered_answers: true
     answer_explanation: À l'époque Gravettienne (30 000 à 22 000 ans avant aujourd'hui),
       des objets (des statuettes notamment) étaient échangés sur des distances de
       1800 kms à vol d'oiseau. Des liens commerciaux et culturels existaient entre
@@ -20530,12 +20530,12 @@
     type: VF
     category: 5
     difficulty: 3
-    answer_option_a: Oui
-    answer_option_b: Non
+    answer_option_a: Vrai
+    answer_option_b: Faux
     answer_option_c: ''
     answer_option_d: ''
     answer_correct: b
-    has_ordered_answers: false
+    has_ordered_answers: true
     answer_explanation: Selon les dernières études en date, la cuisson des aliments
       ne rend pas compte du volume cérébral des homininés. Le nombre de neurones dans
       le cerveau de l'homininé varie beaucoup plus en fonction de l'efficacité de

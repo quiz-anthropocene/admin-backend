@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models import Avg, Sum
 from django.contrib.postgres.fields import JSONField
+from django.core.exceptions import ValidationError
 
 from api import constants
 
@@ -267,6 +268,57 @@ class Question(models.Model):
     answer_success_rate.fget.short_description = "% Rép Corr"
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"
+
+
+def question_validate_fields(sender, instance, **kwargs):
+    """
+    Method to validate Question fields. Why ?
+    - ModelFields with choices are validated only in forms, but not during loaddata (and test fixtures) # noqa
+    - https://zindilis.com/blog/2017/05/04/django-backend-validation-of-choices.html
+    - https://adamj.eu/tech/2020/01/22/djangos-field-choices-dont-constrain-your-data/
+    """
+    # only run on soon-to-be and validated questions
+    if getattr(instance, "validation_status") not in [
+        constants.QUESTION_VALIDATION_STATUS_NEW,
+        constants.QUESTION_VALIDATION_STATUS_REMOVED,
+    ]:
+        # > relation fields: "category" & "tags" ? no need
+        # checks will be done automatically to validate the existence of the foreign key.
+        # > choice fields
+        question_choice_fields = [
+            ("type", "QUESTION_TYPE_CHOICE_LIST"),
+            ("difficulty", "QUESTION_DIFFICULTY_CHOICE_LIST"),
+            ("answer_correct", "QUESTION_ANSWER_CHOICE_LIST"),
+            ("validation_status", "QUESTION_VALIDATION_STATUS_LIST"),
+        ]
+        for choice_field in question_choice_fields:
+            if getattr(instance, choice_field[0]) not in getattr(
+                constants, choice_field[1]
+            ):  # noqa
+                raise ValidationError(
+                    f"Question pre_save error. Field {choice_field[0]}. "
+                    f"Value given: '{getattr(instance, choice_field[0])}'. "
+                    f"Question: {instance}"
+                )
+        # > other rules
+        # - Vrai/Faux question must have answer_correct equal to 'a' or 'b'
+        # - Vrai/Faux question must have has_ordered_answers checked
+        if getattr(instance, "type") == constants.QUESTION_TYPE_VF:
+            if getattr(instance, "answer_correct") not in ["a", "b"]:
+                raise ValidationError(
+                    f"Question pre_save error. Type VF & Field answer_correct. "
+                    f"Value given: '{getattr(instance, 'answer_correct')}'. "
+                    f"Question: {instance}"
+                )
+            if not getattr(instance, "has_ordered_answers"):
+                raise ValidationError(
+                    f"Question pre_save error. Type VF & Field has_ordered_answers. "
+                    f"Value given: '{getattr(instance, 'has_ordered_answers')}'. "
+                    f"Question: {instance}"
+                )
+
+
+models.signals.pre_save.connect(question_validate_fields, sender=Question)
 
 
 class QuestionAnswerEvent(models.Model):
