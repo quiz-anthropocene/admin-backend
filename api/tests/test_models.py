@@ -81,3 +81,4 @@ class DailyStatModelTest(TestCase):
     def test_question_answer_count_count(self):
         self.assertEqual(DailyStat.objects.overall_question_answer_count(), 12)
         self.assertEqual(DailyStat.objects.overall_question_feedback_count(), 6)
+        self.assertEqual(DailyStat.objects.overall_quiz_answer_count(), 0)

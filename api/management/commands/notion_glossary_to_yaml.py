@@ -55,7 +55,8 @@ class Command(BaseCommand):
                 glossary_item_base["fields"] = glossary_item_fields
                 glossary_list.append(glossary_item_base)
         # --- write to file
-        with open("data/glossary.yaml", "w") as file:
+        with open("data/glossary-temp.yaml", "w") as file:
+            print(glossary_list)
             yaml.safe_dump(
                 glossary_list, file, allow_unicode=True, sort_keys=False
             )  # , explicit_start=False, explicit_end=False

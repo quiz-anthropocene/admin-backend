@@ -27,8 +27,15 @@ export default {
   name: 'GlossaryPage',
   metaInfo: {
     title: 'Glossaire',
+    meta: [
+      { property: 'og:title', vmid: 'og:title', content: 'Glossaire' },
+      { property: 'twitter:title', vmid: 'twitter:title', content: 'Glossaire' },
+    ],
   },
   components: {
+  },
+
+  mounted() {
   },
 
   data() {

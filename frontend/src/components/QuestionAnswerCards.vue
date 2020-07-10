@@ -8,7 +8,7 @@
           <span class="text-primary">#{{ context.question_number }}</span>
         </span>
         <span> | </span>
-        <span class="text-secondary">{{ question.category }}</span>
+        <span class="text-secondary">{{ question.category.name }}</span>
         <span> | </span>
         <span><small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
       </h2>
@@ -89,9 +89,9 @@
 
       <!-- Extra info -->
       <div class="row margin-top-bottom-10 small">
-        <div v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.join(', ') }}</div>
+        <div v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.map(t => t.name).join(', ') }}</div>
         <div title="Auteur de la question">📝&nbsp;Auteur:&nbsp;{{ question.author }}</div>
-        <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count_agg }} / {{ question.answer_count_agg }} ({{ question.answer_success_rate }}%)</div>
+        <!-- <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count_agg }} / {{ question.answer_count_agg }} ({{ question.answer_success_rate }}%)</div> -->
       </div>
 
     </div>
@@ -127,6 +127,9 @@ export default {
     };
   },
 
+  computed: {
+  },
+
   watch: {
     question: {
       immediate: true,
@@ -155,7 +158,7 @@ export default {
     initContribution() {
       this.contribution = {
         text: '',
-        description: `Question #${this.question.id} - ${this.question.category} - ${this.question.text}`,
+        description: `Question #${this.question.id} - ${this.question.category.name} - ${this.question.text}`,
         type: 'commentaire question',
       };
       this.showContributionForm = false;

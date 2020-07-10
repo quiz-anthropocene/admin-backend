@@ -84,7 +84,7 @@ class ExportMixin:
 
     def export_as_yaml(self, request, queryset):
         """
-        TODO: escape " (\")
+        TODO: escape characters " (\") and - (\\-)
         """
         response = HttpResponse(content_type="text/yaml")
         response[

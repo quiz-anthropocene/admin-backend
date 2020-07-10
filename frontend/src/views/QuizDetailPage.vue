@@ -3,7 +3,7 @@
 
     <!-- Quiz header -->
     <div v-if="quiz" class="card">
-      <img v-bind:src="quiz.image_background_url || 'https://www.climatecentral.org/uploads/general/show-your-stripes-header-1000x169.jpg'" class="image-background" :class="(quizStep === 0) ? 'height-200' : 'height-50'">
+      <img v-bind:src="quiz.image_background_url || 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png'" class="image-background" :class="(quizStep === 0) ? 'height-200' : 'height-50'">
 
       <div class="card-body">
         <h2>{{ quiz.name }}</h2>
@@ -79,17 +79,22 @@ import FeedbackCard from '../components/FeedbackCard.vue';
 export default {
   name: 'QuizDetailPage',
   metaInfo() {
-    const quizName = this.quiz ? this.quiz.name : 'quiz name placeholder';
-    const quizDescription = this.quiz && this.quiz.description ? this.quiz.description : 'quiz description placeholder';
-    const quizImage = this.quiz ? this.quiz.image_background_url : '';
+    // const url = `/quiz/${this.$route.params.quizId}`;
+    const title = this.quiz && this.quiz.name ? `Quiz #${this.$route.params.quizId} - ${this.quiz.name}` : `Quiz #${this.$route.params.quizId}`;
+    const description = this.quiz && this.quiz.description ? this.quiz.description : 'Le quiz n’a pas de description';
+    const imageUrl = this.quiz && this.quiz.image_background_url ? this.quiz.image_background_url : 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png';
     return {
-      title: `Quiz #${this.$route.params.quizId}`,
+      title,
       meta: [
-        { name: 'description', content: quizDescription },
-        { property: 'og:title', vmid: 'og:title', content: `Quiz #${this.$route.params.quizId} - ${quizName}` },
-        { property: 'og:image', vmid: 'og:image', content: quizImage },
-        { property: 'twitter:title', vmid: 'twitter:title', content: `Quiz #${this.$route.params.quizId} - ${quizName}` },
-        { property: 'twitter:image', vmid: 'twitter:image', content: quizImage },
+        { name: 'description', vmid: 'description', content: description },
+        // { name: 'og:url', vmid: 'og:url', content: url },
+        { property: 'og:title', vmid: 'og:title', content: title },
+        { name: 'og:description', vmid: 'og:description', content: description },
+        { property: 'og:image', vmid: 'og:image', content: imageUrl },
+        // { name: 'twitter:url', vmid: 'twitter:url', content: url },
+        { property: 'twitter:title', vmid: 'twitter:title', content: title },
+        { name: 'twitter:description', vmid: 'twitter:description', content: description },
+        { property: 'twitter:image', vmid: 'twitter:image', content: imageUrl },
       ],
     };
   },
@@ -111,7 +116,7 @@ export default {
 
   computed: {
     quiz() {
-      return this.$store.getters.getQuizById(parseInt(this.$route.params.quizId, 10), true);
+      return this.$store.getters.getQuizById(parseInt(this.$route.params.quizId, 10));
     },
   },
 

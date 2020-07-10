@@ -9,8 +9,9 @@
     "test": "echo \"no tests yet\" && exit 0"
   },
   "dependencies": {
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "core-js": "^3.6.4",
+    "js-yaml": "^3.14.0",
     "vue": "^2.6.11",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.1.6",
@@ -28,6 +29,7 @@
     "prerender-spa-plugin": "^3.4.0",
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
+    "vue-cli-plugin-yaml": "^1.0.2",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [

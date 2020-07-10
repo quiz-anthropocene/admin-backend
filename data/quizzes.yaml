@@ -1,10 +1,10 @@
 - model: api.quiz
   pk: 1
   fields:
-    name: "Chiffres clés"
+    name: Chiffres clés
     description: ''
     author: know your planet
-    image_background_url: https://www.climatecentral.org/uploads/general/show-your-stripes-header-1000x169.jpg
+    image_background_url: https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png
     publish: true
     like_count: 0
     dislike_count: 0
@@ -23,11 +23,10 @@
 - model: api.quiz
   pk: 2
   fields:
-    name: "L'énergie en France 🇫🇷"
-    description: "Un aperçu rapide de la production et consommation d'énergie
-      en France"
+    name: "L'énergie en France \U0001F1EB\U0001F1F7"
+    description: Un aperçu rapide de la production et consommation d'énergie en France
     author: know your planet
-    image_background_url: https://www.edf.fr/sites/default/files/mediatheque/2018/nucleaire/energie-a-z_nucleaire_prod-regions_2018.png
+    image_background_url: https://i3.wp.com/fee.asso.fr/wp-content/uploads/2015/09/Carte-de-France-eolien-2015.jpg
     publish: true
     like_count: 0
     dislike_count: 0
@@ -43,3 +42,154 @@
     - 254
     - 210
     - 410
+- model: api.quiz
+  pk: 3
+  fields:
+    name: Le quiz de Vincent Mignerot
+    description: "Vincent Mignerot est  essayiste et conférencier. Il développe une
+      théorie écologique de l’esprit et se questionne sur la singularité de l'humanité
+      dans son contexte évolutif. Ses travaux vont de la théorie (Essai Sur la Raison
+      de Tout, Éditions SoLo, 2015) à l’étude de la perception humaine (Heuraesthesia:
+      When Synaesthesia Fertilizes the Mind, CNRS, 2016). Il est le fondateur de l’association
+      Adrastia, qui s’inquiète du risque d’effondrement de la société thermo-industrielle
+      et du groupe Facebook Transition 2030, qui compte plus de 25,000 membres. https://vincent-mignerot.fr/\r\nVincent
+      nous a concocté un quiz teinté d'anthropologie qui va nous faire revenir quelques
+      millénaires en arrière !"
+    author: Vincent Mignerot
+    image_background_url: https://vincent-mignerot.fr/wp-content/uploads/2019/08/Vincent-Mignerot.jpg
+    publish: true
+    like_count: 0
+    dislike_count: 0
+    created: 2020-06-26
+    questions:
+    - 545
+    - 546
+    - 549
+    - 550
+    - 551
+    - 552
+    - 553
+    - 555
+- model: api.quiz
+  pk: 4
+  fields:
+    name: Les pics de ressources
+    description: L'extraction de toute ressource finie passe par un maximum, après
+      lequel elle ne peut que décroître pour finalement tomber à 0. C'est le thème
+      qu'explore ce quiz sur les différentes ressources non-renouvelables dont nous
+      faisons usage.
+    author: Matthieu Massart
+    image_background_url: https://upload.wikimedia.org/wikipedia/commons/f/fe/GlobalPeakOil.png
+    publish: true
+    like_count: 0
+    dislike_count: 0
+    created: 2020-07-08
+    questions:
+    - 65
+    - 68
+    - 69
+    - 171
+    - 212
+    - 245
+- model: api.quiz
+  pk: 5
+  fields:
+    name: Mon empreinte carbone
+    description: L'empreinte carbone d’une activité humaine est une mesure des émissions
+      de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent lui
+      être imputées. Connaissez-vous votre empreinte ? Voyons-voir ça.
+    author: Matthieu Massart
+    image_background_url: https://s.yimg.com/ny/api/res/1.2/a31o40uD_8JxPnCly5hr3A--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/fr-FR/bababam_387/7e590cee0c8b2425df40de379e0c4657
+    publish: true
+    like_count: 0
+    dislike_count: 0
+    created: 2020-07-08
+    questions:
+    - 261
+    - 102
+    - 358
+    - 43
+    - 236
+    - 78
+    - 335
+    - 19
+    - 243
+    - 150
+    - 345
+    - 251
+- model: api.quiz
+  pk: 6
+  fields:
+    name: Bienvenue en anthropocène
+    description: L'Anthropocène est un terme proposé par des scientifiques pour désigner
+      une nouvelle ère géologique, dans laquelle l'influence de l'être humain sur
+      la biosphère a atteint un tel niveau qu'elle est devenue une force géologique
+      majeure capable de marquer la lithosphère. La période la plus récente de l'anthropocène
+      est parfois dite la grande accélération, car de nombreux indicateurs y présentent
+      des courbes de type exponentiel. Ce quiz fait un tour d'horizon de l'emprise
+      inédite de l'homme sur la planète qu'il occupe.
+    author: Matthieu Massart
+    image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
+    publish: true
+    like_count: 0
+    dislike_count: 0
+    created: 2020-07-08
+    questions:
+    - 1
+    - 2
+    - 4
+    - 7
+    - 9
+    - 13
+    - 403
+    - 25
+    - 294
+    - 41
+    - 44
+    - 45
+    - 47
+    - 49
+    - 51
+    - 67
+    - 77
+    - 78
+    - 79
+    - 80
+    - 96
+    - 225
+    - 366
+    - 494
+- model: api.quiz
+  pk: 7
+  fields:
+    name: Tout sur le pétrole
+    description: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
+      à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
+    author: Matthieu Massart
+    image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
+    publish: true
+    like_count: 0
+    dislike_count: 0
+    created: 2020-07-09
+    questions:
+    - 12
+    - 13
+    - 153
+    - 155
+    - 156
+    - 171
+    - 179
+    - 212
+    - 217
+    - 230
+    - 106
+    - 107
+    - 494
+    - 111
+    - 112
+    - 113
+    - 114
+    - 115
+    - 116
+    - 117
+    - 245

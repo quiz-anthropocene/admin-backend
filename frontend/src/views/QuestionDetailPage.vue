@@ -16,6 +16,20 @@ import QuestionAnswerCards from '../components/QuestionAnswerCards.vue';
 
 export default {
   name: 'QuestionDetailPage',
+  metaInfo() {
+    const title = this.question ? `Question #${this.$route.params.questionId} - ${this.question.category.name}` : null;
+    const description = this.question && this.question.text ? this.question.text : null;
+    return {
+      title,
+      meta: [
+        { name: 'description', vmid: 'description', content: description },
+        { property: 'og:title', vmid: 'og:title', content: title },
+        { name: 'og:description', vmid: 'og:description', content: description },
+        { property: 'twitter:title', vmid: 'twitter:title', content: title },
+        { name: 'twitter:description', vmid: 'twitter:description', content: description },
+      ],
+    };
+  },
   components: {
     QuestionAnswerCards,
   },
@@ -40,15 +54,6 @@ export default {
     questionsDisplayedCount() {
       return this.$store.state.questionsDisplayed.length;
     },
-  },
-
-  metaInfo() {
-    return {
-      title: `Question #${this.$route.params.questionId}`,
-      meta: [
-        // { name: 'description', content: (this.question ? this.question.text : '') }
-      ],
-    };
   },
 
   watch: {

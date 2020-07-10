@@ -74,9 +74,35 @@ class ApiTest(TestCase):
         )
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data, dict)
+        self.assertIsInstance(response.data["category"], int)
+        self.assertEqual(response.data["category"], self.category_1.id)
+        self.assertEqual(len(response.data["tags"]), 2)
+        self.assertIsInstance(response.data["tags"][0], int)
+        self.assertEqual(response.data["tags"][0], self.tag_1.id)
+
+    def test_question_detail_full_string(self):
+        response = self.client.get(
+            reverse("api:question_detail", args=[self.question_2.id]) + "?full=true"
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertIsInstance(response.data, dict)
+        self.assertIsInstance(response.data["category"], str)
         self.assertEqual(response.data["category"], self.category_1.name)
         self.assertEqual(len(response.data["tags"]), 2)
+        self.assertIsInstance(response.data["tags"][0], str)
         self.assertEqual(response.data["tags"][0], self.tag_1.name)
+
+    # def test_question_detail_full_object(self):
+    #     response = self.client.get(
+    #         reverse("api:question_detail", args=[self.question_2.id]) + "?full=object"
+    #     )
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertIsInstance(response.data, dict)
+    #     self.assertIsInstance(response.data["category"]["name"], dict)
+    #     self.assertEqual(response.data["category"], self.category_1.name)
+    #     self.assertEqual(len(response.data["tags"]), 2)
+    #     self.assertIsInstance(response.data["tags"][0]["name"], dict)
+    #     self.assertEqual(response.data["tags"][0], self.tag_1.name)
 
     def test_question_random(self):
         response = self.client.get(reverse("api:question_random"))

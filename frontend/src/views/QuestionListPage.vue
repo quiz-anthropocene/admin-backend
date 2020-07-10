@@ -17,7 +17,11 @@ import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 export default {
   name: 'QuestionListPage',
   metaInfo: {
-    title: 'Questions',
+    title: 'Toutes les questions',
+    meta: [
+      { property: 'og:title', vmid: 'og:title', content: 'Toutes les questions' },
+      { property: 'twitter:title', vmid: 'twitter:title', content: 'Toutes les questions' },
+    ],
   },
   components: {
     QuestionPreviewCard,

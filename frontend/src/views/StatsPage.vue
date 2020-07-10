@@ -4,20 +4,20 @@
 
     <h3>❓&nbsp;Questions</h3>
     <p>
-      Il y a actuellement <strong v-if="questionPublishCount">{{ questionPublishCount }}</strong> questions publiées,
-      et <strong>{{ questionValidationStatusInProgressCount ? questionValidationStatusInProgressCount : 0 }}</strong> en cours de validation.
+      Il y a actuellement <strong>{{ question_count }}</strong> questions publiées,
+      et <strong>{{ question_pending_validation_count }}</strong> en cours de validation.
     </p>
 
     <br />
     <h3>🕹️&nbsp;Quiz</h3>
     <p>
-      <strong>{{ quiz_count ? quiz_count : 0 }}</strong> quiz ont été créés.
+      <strong>{{ quiz_count ? quiz_count : 0 }}</strong> quiz ont été publiés.
     </p>
 
     <br />
     <h3>🔗&nbsp;Réponses</h3>
     <p>
-      L'application totalise <strong>{{ questionAnswerCountStats }}</strong> réponses (depuis la mise en ligne en Mars 2020).
+      L'application totalise <strong>{{ stats.answer_count }}</strong> réponses (depuis la mise en ligne en Mars 2020).
     </p>
 
     <br />
@@ -55,26 +55,27 @@ export default {
   name: 'StatsPage',
   metaInfo: {
     title: 'Statistiques',
+    meta: [
+      { property: 'og:title', vmid: 'og:title', content: 'Statistiques' },
+      { property: 'twitter:title', vmid: 'twitter:title', content: 'Statistiques' },
+    ],
   },
   components: {
   },
 
   data() {
     return {
-      questionPublishCount: null,
-      questionValidationStatusInProgressCount: null,
-      quizPublishStats: null,
-      questionAnswerCountStats: null,
-      questionCategoryStats: null,
-      questionTagStats: null,
-      questionAuthorStats: null,
-      // questionAnswerStats: null,
-      loading: false,
-      error: null,
+      //
     };
   },
 
   computed: {
+    question_count() {
+      return this.$store.state.questions.length;
+    },
+    question_pending_validation_count() {
+      return this.$store.state.questionsPendingValidation.length;
+    },
     quiz_count() {
       return this.$store.state.quizzes.length;
     },
@@ -93,6 +94,9 @@ export default {
         .filter((a) => a.question_count)
         .sort((a, b) => b.question_count - a.question_count);
     },
+    stats() {
+      return this.$store.state.stats;
+    },
   },
 
   mounted() {
@@ -101,23 +105,7 @@ export default {
 
   methods: {
     fetchQuestionStats() {
-      this.error = this.question = null;
-      this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/stats`)
-        .then((response) => {
-          this.loading = false;
-          return response.json();
-        })
-        .then((data) => {
-          this.questionPublishCount = data.question_publish_count;
-          this.questionValidationStatusInProgressCount = data.question_validation_status_in_progress_count;
-          this.questionAnswerCountStats = data.answer_count;
-          // this.questionAnswerStats = data["answer"];
-        })
-        .catch((error) => {
-          console.log(error);
-          this.error = error;
-        });
+      this.$store.dispatch('GET_STATS');
     },
 
   },
