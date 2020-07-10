@@ -89,9 +89,9 @@
 
       <!-- Extra info -->
       <div class="row margin-top-bottom-10 small">
-        <div v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.join(', ') }}</div>
+        <div v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.map(t => t.name).join(', ') }}</div>
         <div title="Auteur de la question">📝&nbsp;Auteur:&nbsp;{{ question.author }}</div>
-        <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count_agg }} / {{ question.answer_count_agg }} ({{ question.answer_success_rate }}%)</div>
+        <!-- <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count_agg }} / {{ question.answer_count_agg }} ({{ question.answer_success_rate }}%)</div> -->
       </div>
 
     </div>
