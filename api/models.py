@@ -474,6 +474,33 @@ class Quiz(models.Model):
     dislike_count_agg.fget.short_description = "# Dislike"
 
 
+def quiz_validate_m2m_fields(sender, **kwargs):
+    """
+    Method to validate Quiz fields. Why ?
+    see question_validate_fields
+    """
+    # only run on published quizzes
+    if getattr(kwargs["instance"], "publish"):
+        # > relation fields: check that the quiz's questions are published
+        if kwargs["instance"] and kwargs["action"] == "pre_add":
+            qlist = (
+                Question.objects.filter(pk__in=kwargs["pk_set"])
+                .published()
+                .values_list("id", flat=True)
+            )
+            if len(kwargs["pk_set"]) != len(list(qlist)):
+                raise ValidationError(
+                    f"Quiz pre_save_m2m error. Relation questions. "
+                    f"Questions count: {len(kwargs['pk_set'])}. Questions published count: {len(list(qlist))}. "  # noqa
+                    f"Unpublished questions: {[el for el in kwargs['pk_set'] if el not in list(qlist)]}"  # noqa
+                )
+
+
+models.signals.m2m_changed.connect(
+    quiz_validate_m2m_fields, sender=Quiz.questions.through
+)
+
+
 class QuizAnswerEvent(models.Model):
     quiz = models.ForeignKey(
         Quiz, null=True, on_delete=models.CASCADE, related_name="stats"
