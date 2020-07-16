@@ -1115,7 +1115,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 16
     - 9
@@ -1157,7 +1157,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 13
     - 9
@@ -1193,7 +1193,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 16
     - 9
@@ -1533,7 +1533,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 21
     - 9
@@ -1650,7 +1650,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 51
     - 9
@@ -1690,7 +1690,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 49
     - 9
@@ -1765,7 +1765,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 16
     - 9
@@ -2086,7 +2086,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 26
     - 9
@@ -2123,7 +2123,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 26
     - 9
@@ -2482,7 +2482,7 @@
     dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 21
     - 9
@@ -3937,10 +3937,9 @@
     answer_option_d: Pétrole
     answer_correct: d
     has_ordered_answers: false
-    answer_explanation: la 1ère énergie utilisée dans le monde est... le pétrole !
-      4,4 milliards de tonnes en 2016, 32% du total. Contre 3,7 milliards de tonne
-      équivalent pétrole pour le charbon et 3 Mds pour le gaz. Le nucléaire est loin
-      derrière avec 0,7 Mds.
+    answer_explanation: On a consommé 4,4 milliards de tonnes en 2016, soit 32% du
+      total. Contre 3,7 milliards de tonne équivalent pétrole pour le charbon et 3
+      milliairds pour le gaz. Le nucléaire est loin derrière avec 0,7 milliards.
     answer_accessible_url: ''
     answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
     answer_image_url: https://ourworldindata.org/grapher/exports/energy-consumption-by-source-and-region.png
@@ -3956,7 +3955,7 @@
     dislike_count: 0
     added: 2019-01-10
     created: 2019-01-10
-    updated: 2020-05-28
+    updated: 2020-07-16
     tags:
     - 2
 - model: api.question
@@ -4269,16 +4268,16 @@
     difficulty: 3
     answer_option_a: '5'
     answer_option_b: '9'
-    answer_option_c: '14'
-    answer_option_d: '22'
-    answer_correct: b
+    answer_option_c: '13'
+    answer_option_d: '21'
+    answer_correct: c
     has_ordered_answers: true
-    answer_explanation: Fondé en 1960 par 5 pays, l'OPEP compte 14 membres depuis
-      janvier 2019 et la sortie du Qatar
+    answer_explanation: Fondé en 1960 par 5 pays, l'OPEP compte 13 membres depuis
+      janvier 2020 et le retrait de l’Equateur
     answer_accessible_url: https://www.opec.org/opec_web/en/about_us/25.htm
     answer_scientific_url: ''
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/OPEC.svg/langfr-2880px-OPEC.svg.png
+    answer_image_explanation: Pays membres de l’OPEP
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
@@ -4290,7 +4289,7 @@
     dislike_count: 0
     added: 2019-01-23
     created: 2019-01-23
-    updated: 2020-06-25
+    updated: 2020-07-16
     tags:
     - 11
     - 50
@@ -5843,7 +5842,7 @@
     dislike_count: 0
     added: 2019-03-22
     created: 2020-04-26
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 11
     - 33
@@ -7212,7 +7211,7 @@
     dislike_count: 0
     added: 2019-05-22
     created: 2020-04-26
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 61
     - 9
@@ -8789,7 +8788,7 @@
     dislike_count: 0
     added: 2019-07-01
     created: 2020-05-07
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 50
     - 9
@@ -9464,8 +9463,8 @@
 - model: api.question
   pk: 256
   fields:
-    text: Par rapport à il y a 40 ans, combien de jours plus tôt ont lieu les vendanges
-      des vignobles français ?
+    text: Par rapport à il y a 40 ans, de combien de jours les vendanges se sont-elles
+      avancées en France ?
     hint: ''
     type: QCM
     category: 1
@@ -9494,7 +9493,7 @@
     dislike_count: 0
     added: 2019-07-27
     created: 2020-05-20
-    updated: 2020-05-23
+    updated: 2020-07-16
     tags:
     - 1
     - 17
@@ -12758,7 +12757,7 @@
     dislike_count: 0
     added: 2019-12-10
     created: 2020-05-20
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 13
     - 9
@@ -13415,7 +13414,7 @@
   pk: 361
   fields:
     text: En 40 ans, quelle a été la diminution de la surface de la banquise arctique
-      estivale ?
+      (mesurée à la fin de l'été) ?
     hint: ''
     type: QCM
     category: 1
@@ -13446,7 +13445,7 @@
     dislike_count: 0
     added: 2020-01-17
     created: 2020-05-20
-    updated: 2020-05-23
+    updated: 2020-07-16
     tags:
     - 16
     - 83
@@ -17037,16 +17036,16 @@
     answer_image_explanation: 'Source : http://www.lachainemeteo.com/'
     answer_extra_info: ''
     author: Citoyens Pour le Climat
-    validator: ''
+    validator: Matthieu Massart
     publish: false
-    validation_status: A valider
+    validation_status: Validée
     answer_count: 0
     answer_success_count: 0
     like_count: 0
     dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-16
     tags:
     - 64
 - model: api.question
@@ -17639,7 +17638,7 @@
     dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 26
     - 9
@@ -17674,7 +17673,7 @@
     dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 26
     - 9
@@ -18787,7 +18786,7 @@
     dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 16
     - 9
@@ -19067,7 +19066,7 @@
     dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-16
     tags:
     - 16
     - 9
@@ -19339,16 +19338,16 @@
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
-    validator: ''
-    publish: false
-    validation_status: A valider
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
     answer_count: 0
     answer_success_count: 0
     like_count: 0
     dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-16
     tags:
     - 1
     - 101
@@ -19701,7 +19700,7 @@
 - model: api.question
   pk: 531
   fields:
-    text: A quel indicateur l'empreinte carbone est-il le mieux corrélé ?
+    text: Auquel de ces indicateurs l'empreinte carbone est-il le mieux corrélé ?
     hint: ''
     type: QCM
     category: 2
@@ -19728,7 +19727,7 @@
     dislike_count: 0
     added: 2020-06-18
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-16
     tags:
     - 2
     - 31
@@ -20498,8 +20497,8 @@
     difficulty: 2
     answer_option_a: Chez les chasseurs-cueilleurs
     answer_option_b: Dans les sociétés modernes
-    answer_option_c: La longévité possible est sensiblement la même dans le deux cas
-      ?
+    answer_option_c: La longévité possible est sensiblement la même dans les deux
+      cas
     answer_option_d: ''
     answer_correct: c
     has_ordered_answers: false
@@ -20522,7 +20521,7 @@
     dislike_count: 0
     added: 2020-06-25
     created: 2020-06-25
-    updated: 2020-07-04
+    updated: 2020-07-16
     tags:
     - 109
 - model: api.question
@@ -20641,9 +20640,9 @@
 - model: api.question
   pk: 556
   fields:
-    text: Entre les années 2000 et 2017, les énergies renouvelables ont été développées
-      - notamment le photovoltaïque - pour éviter la consommation de charbon. Comment
-      ont évolué leurs production supplémentaires relatives ?
+    text: On développe les énergies renouvelables, notamment le photovoltaïque, pour
+      éviter la consommation de charbon. Comment se comparent les capacités supplémentaire
+      de production de l'un et de l'autre sur la période 2000-2017 ?
     hint: ''
     type: QCM
     category: 5
@@ -20678,7 +20677,7 @@
     dislike_count: 0
     added: 2020-06-26
     created: 2020-06-29
-    updated: 2020-07-04
+    updated: 2020-07-16
     tags:
     - 40
     - 44
