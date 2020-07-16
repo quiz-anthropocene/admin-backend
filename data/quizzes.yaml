@@ -193,3 +193,98 @@
     - 116
     - 117
     - 245
+- model: api.quiz
+  pk: 8
+  fields:
+    name: Autour de la Fresque du Climat
+    description: "La Fresque du Climat, c’est un atelier ludique, participatif et
+      créatif sur le changement climatique. Il est basé sur l’intelligence collective
+      et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
+      du climat et les conséquences de son dérèglement. L’objectif de l’association
+      qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
+      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
+      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat."
+    author: Matthieu Massart
+    image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
+    publish: true
+    like_count: 0
+    dislike_count: 0
+    created: 2020-07-14
+    questions:
+    - 35
+    - 42
+    - 8
+    - 22
+    - 118
+    - 14
+    - 17
+    - 29
+    - 80
+    - 137
+    - 139
+    - 151
+    - 6
+    - 15
+    - 26
+    - 27
+    - 28
+    - 23
+    - 33
+    - 34
+    - 37
+    - 36
+    - 50
+    - 66
+    - 79
+    - 196
+    - 180
+    - 129
+    - 131
+    - 130
+    - 369
+    - 30
+    - 362
+    - 305
+    - 282
+    - 294
+    - 315
+    - 176
+    - 306
+    - 194
+    - 31
+    - 32
+    - 469
+    - 460
+    - 459
+    - 143
+    - 453
+    - 361
+    - 415
+    - 343
+    - 403
+    - 436
+    - 405
+- model: api.quiz
+  pk: 9
+  fields:
+    name: Pollutions
+    description: Il n'est de mystère de personne que nos modes de vie génèrent tout
+      un tas de pollution. En connaissez-vous la variété et l'ampleur ? C'est ce que
+      ce quiz se propose d'explorer.
+    author: Matthieu Massart
+    image_background_url: https://static.latribune.fr/full_width/1201312/plastique-a-jakarta.jpg
+    publish: true
+    like_count: 0
+    dislike_count: 0
+    created: 2020-07-14
+    questions:
+    - 98
+    - 58
+    - 45
+    - 53
+    - 54
+    - 55
+    - 24
+    - 57
+    - 56
+    - 157
