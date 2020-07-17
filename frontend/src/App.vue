@@ -125,13 +125,13 @@ export default {
       this.$store.dispatch('GET_QUIZ_LIST_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_GLOSSARY_LIST_FROM_LOCAL_YAML');
       // } else {
-        // this.$store.dispatch('GET_QUESTION_LIST');
-        // this.$store.dispatch('GET_CATEGORY_LIST');
-        // this.$store.dispatch('GET_TAG_LIST');
-        // this.$store.dispatch('GET_AUTHOR_LIST');
-        // this.$store.dispatch('GET_DIFFICULTY_LIST');
-        // this.$store.dispatch('GET_QUIZ_LIST');
-        // this.$store.dispatch('GET_GLOSSARY_LIST');
+      // this.$store.dispatch('GET_QUESTION_LIST');
+      // this.$store.dispatch('GET_CATEGORY_LIST');
+      // this.$store.dispatch('GET_TAG_LIST');
+      // this.$store.dispatch('GET_AUTHOR_LIST');
+      // this.$store.dispatch('GET_DIFFICULTY_LIST');
+      // this.$store.dispatch('GET_QUIZ_LIST');
+      // this.$store.dispatch('GET_GLOSSARY_LIST');
       // }
     },
     dismissAlert() {

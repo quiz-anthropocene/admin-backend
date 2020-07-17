@@ -2,6 +2,8 @@
   <section class="text-align-left">
     <h2>Quelques statistiques</h2>
 
+    <p class="text-muted">Mise à jour : 17 Juillet 2020</p>
+
     <h3>❓&nbsp;Questions</h3>
     <p>
       Il y a actuellement <strong>{{ question_count }}</strong> questions publiées,
