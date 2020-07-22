@@ -4,8 +4,8 @@ from api import views
 app_name = "api"
 urlpatterns = [
     path("", views.api_home, name="index"),
-    path("questions/", views.question_list, name="question_list"),
-    path("questions/<int:pk>/", views.question_detail, name="question_detail"),
+    path("questions", views.question_list, name="question_list"),
+    path("questions/<int:pk>", views.question_detail, name="question_detail"),
     path(
         "questions/<int:pk>/feedback-events",
         views.question_detail_feedback_event,

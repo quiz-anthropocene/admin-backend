@@ -2,6 +2,7 @@ from django.test import TestCase
 
 from api.models import (
     Question,
+    QuestionAggStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
     Quiz,
@@ -14,9 +15,11 @@ from api.models import (
 class QuestionModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.question_1 = Question.objects.create(
-            answer_correct="a", answer_count=5, answer_success_count=2, like_count=2
-        )
+        cls.question_1 = Question.objects.create(answer_correct="a")
+        cls.question_1.agg_stats.answer_count = 5
+        cls.question_1.agg_stats.answer_success_count = 2
+        cls.question_1.agg_stats.like_count = 2
+        cls.question_1.agg_stats.save()
         QuestionAnswerEvent.objects.create(
             question_id=cls.question_1.id, choice="a", source="question"
         )
@@ -24,16 +27,18 @@ class QuestionModelTest(TestCase):
             question_id=cls.question_1.id, choice="dislike", source="quiz"
         )
 
+    def test_question_agg_stat_created(self):
+        self.assertEqual(Question.objects.count(), 1)
+        self.assertEqual(QuestionAggStat.objects.count(), 1)
+        question_agg_stat = QuestionAggStat.objects.first()
+        self.assertEqual(question_agg_stat.question_id, self.question_1.id)
+
     def test_answer_count(self):
-        self.assertEqual(self.question_1.answer_count, 5)
-        self.assertEqual(self.question_1.answer_success_count, 2)
         self.assertEqual(self.question_1.answer_count_agg, 6)
         self.assertEqual(self.question_1.answer_success_count_agg, 3)
         self.assertEqual(self.question_1.answer_success_rate, 50)
 
     def test_feedback_count(self):
-        self.assertEqual(self.question_1.like_count, 2)
-        self.assertEqual(self.question_1.dislike_count, 0)
         self.assertEqual(self.question_1.like_count_agg, 2)
         self.assertEqual(self.question_1.dislike_count_agg, 1)
 
@@ -41,9 +46,7 @@ class QuestionModelTest(TestCase):
 class QuizModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.question_1 = Question.objects.create(
-            answer_correct="a", answer_count=5, answer_success_count=2, like_count=2
-        )
+        cls.question_1 = Question.objects.create(answer_correct="a")
         cls.quiz_1 = Quiz.objects.create(like_count=2)
         cls.quiz_1.questions.set([cls.question_1.id])
         QuestionAnswerEvent.objects.create(
@@ -65,9 +68,7 @@ class QuizModelTest(TestCase):
 class DailyStatModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.question_1 = Question.objects.create(
-            answer_correct="a", answer_count=5, answer_success_count=2, like_count=2
-        )
+        cls.question_1 = Question.objects.create(answer_correct="a")
         QuestionAnswerEvent.objects.create(
             question_id=cls.question_1.id, choice="a", source="question"
         )

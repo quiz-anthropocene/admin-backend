@@ -42,11 +42,13 @@ Il y a plusieurs aspects du projet qui ont besoin d'aide:
 
 ### Rajouter ou modifier des questions
 
+Toutes les questions (finalisées ou en cours de création) sont actuellement dans un fichier partagé (type Google Sheet), que l'on synchronise régulièrement avec la base de donnée.
+
 Un export de toutes les questions de la base de donnée de l'application peuvent être vues dans le fichier `data/questions.yaml` (Rappel: ce n'est pas la source de la base de donnée, seulement un export).
 
 Vous pouvez proposer de nouvelles questions via la page [Contribuer](https://know-your-planet.netlify.app/#/contribuer) de l'application.
 
-Coté validation des questions, toutes les questions (finalisées ou en cours de création) sont actuellement dans un fichier partagé (type Google Sheet), que l'on synchronise régulièrement avec la base de donnée.
+La validation des questions se fait ensuite dans le fichier partagé.
 
 ### Proposer des améliorations de l'application
 
@@ -77,10 +79,14 @@ Si vous souhaitez ajouter une fonctionnalité:
   - console Admin
 - Une base de donnée PostgreSQL
 
+Le backend sert pour valider la donnée, ainsi que comme endpoint pour les stats.
+
 #### Frontend
 
 - Un frontend en Vue.js
 - Bootstrap 4
+
+La donnée est lue directement depuis les fichiers yaml dans le dossier `/data`.
 
 #### DevOps
 
@@ -132,7 +138,7 @@ Si vous souhaitez ajouter une fonctionnalité:
 
 #### Lancer l'application
 
-##### Lancer le Backend
+##### Lancer le Backend (optionnel)
 
 ```
 python manage.py runserver
@@ -192,4 +198,14 @@ yarn lint
 Exporter les questions de la base au format YAML
 ```
 python manage.py dumpdata api.question --format=yaml-pretty --output=data/questions.yaml
+```
+
+Importer les questions dans la base
+```
+python manage.py loaddata data/questions.yaml
+```
+
+Réinitialiser les stats d'une question
+```
+python manage.py reset_question_stats <question_id>
 ```

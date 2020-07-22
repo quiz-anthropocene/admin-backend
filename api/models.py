@@ -235,21 +235,13 @@ class Question(models.Model):
         return len(self.answer_image_url) > 0
 
     @property
-    def like_count_agg(self):
-        return self.like_count + self.feedbacks.liked().count()
-
-    @property
-    def dislike_count_agg(self):
-        return self.dislike_count + self.feedbacks.disliked().count()
-
-    @property
     def answer_count_agg(self):
-        return self.answer_count + self.stats.count()
+        return self.agg_stats.answer_count + self.stats.count()
 
     @property
     def answer_success_count_agg(self):
         return (
-            self.answer_success_count
+            self.agg_stats.answer_success_count
             + self.stats.filter(choice=self.answer_correct).count()
         )
 
@@ -260,6 +252,14 @@ class Question(models.Model):
             if (self.answer_count_agg == 0)
             else int((self.answer_success_count_agg / self.answer_count_agg) * 100)
         )
+
+    @property
+    def like_count_agg(self):
+        return self.agg_stats.like_count + self.feedbacks.liked().count()
+
+    @property
+    def dislike_count_agg(self):
+        return self.agg_stats.dislike_count + self.feedbacks.disliked().count()
 
     # Admin
     tags_list_string.fget.short_description = "Tag(s)"
@@ -318,7 +318,30 @@ def question_validate_fields(sender, instance, **kwargs):
                 )
 
 
+def question_create_agg_stat_instance(sender, instance, created, **kwargs):
+    if created:
+        if not hasattr(instance, "agg_stats"):
+            QuestionAggStat.objects.create(question=instance)
+
+
 models.signals.pre_save.connect(question_validate_fields, sender=Question)
+models.signals.post_save.connect(question_create_agg_stat_instance, sender=Question)
+
+
+class QuestionAggStat(models.Model):
+    question = models.OneToOneField(
+        Question, on_delete=models.CASCADE, primary_key=True, related_name="agg_stats"
+    )
+    answer_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de réponses"
+    )
+    answer_success_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de réponses correctes"
+    )
+    like_count = models.PositiveIntegerField(default=0, help_text="Le nombre de likes")
+    dislike_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de dislikes"
+    )
 
 
 class QuestionAnswerEvent(models.Model):

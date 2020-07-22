@@ -9,7 +9,6 @@ Mieux appréhender les limites de notre planète, à travers des questions simpl
 - [But](#but)
 - [Stack technique](#stack-technique)
 - [Contribuer](#contribuer)
-- [Idées](#id%C3%A9es)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
