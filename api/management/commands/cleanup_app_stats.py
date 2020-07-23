@@ -38,11 +38,11 @@ def cleanup_question_answer_events():
             question_id_answer_correct_count = question_id_df[
                 question_id_df["choice"] == question.answer_correct
             ].shape[0]
-            # update question
-            question.answer_count += question_id_answer_count
-            question.answer_success_count += question_id_answer_correct_count
-            # save question
-            question.save()
+            # update question agg_stats
+            question.agg_stats.answer_count += question_id_answer_count
+            question.agg_stats.answer_success_count += question_id_answer_correct_count
+            # save question agg_stats
+            question.agg_stats.save()
 
         # aggregate by day / hour
         question_stats_df["created_date"] = [
@@ -124,11 +124,11 @@ def cleanup_question_feedback_events():
             question_id_dislike_count = question_id_df[
                 question_id_df["choice"] == "dislike"
             ].shape[0]
-            # update question
-            question.like_count += question_id_like_count
-            question.dislike_count += question_id_dislike_count
-            # save question
-            question.save()
+            # update question agg_stats
+            question.agg_stats.like_count += question_id_like_count
+            question.agg_stats.dislike_count += question_id_dislike_count
+            # save question agg_stats
+            question.agg_stats.save()
 
         # aggregate by day / hour
         question_feedbacks_df["created_date"] = [

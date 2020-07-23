@@ -1,12 +1,13 @@
 from rest_framework import serializers
 
 from api.models import (
-    Question,
     Category,
     Tag,
-    Quiz,
+    Question,
+    QuestionAggStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
+    Quiz,
     QuizAnswerEvent,
     QuizFeedbackEvent,
     Contribution,
@@ -111,6 +112,23 @@ class QuestionFullObjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
         fields = QUESTION_FIELDS
+
+
+"""
+QUESTION AGG STATS
+"""
+
+
+class QuestionAggStatSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = QuestionAggStat
+        fields = [
+            "question_id",
+            "answer_count",
+            "answer_success_count",
+            "like_count",
+            "dislike_count",
+        ]
 
 
 """

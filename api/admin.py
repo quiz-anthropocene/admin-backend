@@ -255,8 +255,6 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
         "answer_count_agg",
         "answer_success_count_agg",
         "answer_success_rate",
-        "like_count",
-        "dislike_count",
         "like_count_agg",
         "dislike_count_agg",
     )
@@ -356,8 +354,6 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
         "tags_list_string",
         "difficulty_average",
         "answer_count_agg",
-        "like_count",
-        "dislike_count",
         "like_count_agg",
         "dislike_count_agg",
     )

@@ -181,17 +181,6 @@ class Question(models.Model):
         default=constants.QUESTION_VALIDATION_STATUS_NEW,
         help_text="Le statut de la question dans le workflow de validation",
     )
-    # stats
-    answer_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de réponses"
-    )
-    answer_success_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de réponses correctes"
-    )
-    like_count = models.PositiveIntegerField(default=0, help_text="Le nombre de likes")
-    dislike_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de dislikes"
-    )
     # timestamps
     added = models.DateField(
         blank=True, null=True, help_text="La date d'ajout de la question"
@@ -277,6 +266,13 @@ def question_validate_fields(sender, instance, **kwargs):
     - https://zindilis.com/blog/2017/05/04/django-backend-validation-of-choices.html
     - https://adamj.eu/tech/2020/01/22/djangos-field-choices-dont-constrain-your-data/
     """
+    # if from fixtures, check that there is an id
+    if kwargs.get("raw") and not getattr(instance, "id"):
+        raise ValidationError(
+            f"Question pre_save error. Field id. "
+            f"Value given: 'empty'. "
+            f"Question: {instance}"
+        )
     # only run on soon-to-be and validated questions
     if getattr(instance, "validation_status") not in [
         constants.QUESTION_VALIDATION_STATUS_NEW,
@@ -478,11 +474,11 @@ class Quiz(models.Model):
 
     @property
     def like_count_agg(self):
-        return self.like_count + self.feedbacks.liked().count()
+        return self.feedbacks.liked().count()
 
     @property
     def dislike_count_agg(self):
-        return self.dislike_count + self.feedbacks.disliked().count()
+        return self.feedbacks.disliked().count()
 
     @property
     def answer_count_agg(self):

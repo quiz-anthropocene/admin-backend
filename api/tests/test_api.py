@@ -104,6 +104,14 @@ class ApiTest(TestCase):
     #     self.assertIsInstance(response.data["tags"][0]["name"], dict)
     #     self.assertEqual(response.data["tags"][0], self.tag_1.name)
 
+    def test_question_stats(self):
+        response = self.client.get(
+            reverse("api:question_stats", args=[self.question_2.id])
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertIsInstance(response.data, dict)
+        self.assertEqual(response.data["question_id"], self.question_2.id)
+
     def test_question_random(self):
         response = self.client.get(reverse("api:question_random"))
         self.assertEqual(response.status_code, 200)

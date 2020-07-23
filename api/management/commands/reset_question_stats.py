@@ -24,28 +24,27 @@ class Command(BaseCommand):
         print(question.__dict__)
 
         # question stats
-        print("=== basic stats")
-        print("- answer_count:", question.answer_count)
-        print("- answer_success_count:", question.answer_success_count)
-        print("- like_count: was", question.like_count)
-        print("- dislike_count: was", question.dislike_count)
+        print("=== basic stats (QuestionAggStat)")
+        print("- answer_count:", question.agg_stats.answer_count)
+        print("- answer_success_count:", question.agg_stats.answer_success_count)
+        print("- like_count: was", question.agg_stats.like_count)
+        print("- dislike_count: was", question.agg_stats.dislike_count)
 
         # question answer events : QuestionAnswerEvent
-        print("=== answer stats & feedbacks")
+        print("=== answer stats & feedbacks (QuestionAnswerEvent)")
         question_event_stats = question.stats
         print("- answer stats: found", question_event_stats.count())
-
         question_event_feedbacks = question.feedbacks
         print("- question feedbacks: found", question_event_feedbacks.count())
 
         # reset stats
         answer = input("Are you sure you want to reset these stats ? (Y/n)")
         if answer == "Y":
-            question.answer_count = 0
-            question.answer_success_count = 0
-            question.like_count = 0
-            question.dislike_count = 0
-            question.save()
+            question.agg_stats.answer_count = 0
+            question.agg_stats.answer_success_count = 0
+            question.agg_stats.like_count = 0
+            question.agg_stats.dislike_count = 0
+            question.agg_stats.save()
 
             question_event_stats.all().delete()
             question_event_feedbacks.all().delete()

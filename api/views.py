@@ -8,12 +8,12 @@ from rest_framework.response import Response
 
 from api import constants, utilities_notion
 from api.models import (
-    Question,
     Category,
     Tag,
-    Quiz,
+    Question,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
+    Quiz,
     QuizAnswerEvent,
     QuizFeedbackEvent,
     Contribution,
@@ -27,6 +27,7 @@ from api.serializers import (
     TagSerializer,
     QuizSerializer,
     QuizFullSerializer,
+    QuestionAggStatSerializer,
     QuestionAnswerEventSerializer,
     QuestionFeedbackEventSerializer,
     QuizAnswerEventSerializer,
@@ -102,6 +103,21 @@ def question_detail(request, pk):
         serializer = QuestionFullStringSerializer(question)
     else:
         serializer = QuestionSerializer(question)
+
+    return Response(serializer.data)
+
+
+@api_view(["GET"])
+def question_stats(request, pk):
+    """
+    Retrieve a question's stats
+    """
+    try:
+        question = Question.objects.get(pk=pk)
+    except Question.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    serializer = QuestionAggStatSerializer(question.agg_stats)
 
     return Response(serializer.data)
 

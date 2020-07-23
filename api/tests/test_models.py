@@ -47,7 +47,7 @@ class QuizModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.question_1 = Question.objects.create(answer_correct="a")
-        cls.quiz_1 = Quiz.objects.create(like_count=2)
+        cls.quiz_1 = Quiz.objects.create(name="quiz 1")
         cls.quiz_1.questions.set([cls.question_1.id])
         QuestionAnswerEvent.objects.create(
             question_id=cls.question_1.id, choice="a", source="question"
@@ -59,9 +59,7 @@ class QuizModelTest(TestCase):
         self.assertEqual(self.quiz_1.answer_count_agg, 1)
 
     def test_feedback_count(self):
-        self.assertEqual(self.quiz_1.like_count, 2)
-        self.assertEqual(self.quiz_1.dislike_count, 0)
-        self.assertEqual(self.quiz_1.like_count_agg, 2)
+        self.assertEqual(self.quiz_1.like_count_agg, 0)
         self.assertEqual(self.quiz_1.dislike_count_agg, 1)
 
 

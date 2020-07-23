@@ -13,7 +13,8 @@ class CleanupQuestionStatsCommandTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.question_1 = Question.objects.create(answer_correct="a")
-        cls.question_2 = Question.objects.create(answer_correct="b")
+        cls.question_1.agg_stats.answer_count = 2
+        cls.question_1.agg_stats.save()
         QuestionAnswerEvent.objects.create(
             question_id=cls.question_1.id, choice="a", source="question"
         )
@@ -69,13 +70,13 @@ class CleanupQuestionStatsCommandTest(TestCase):
         daily_stat_freeze_time = DailyStat.objects.get(date="2020-04-30")
 
         # question answer stats
-        self.assertEqual(question_1_updated.answer_count, 6)
-        self.assertEqual(question_1_updated.answer_success_count, 2)
+        self.assertEqual(question_1_updated.agg_stats.answer_count, 2 + 6)
+        self.assertEqual(question_1_updated.agg_stats.answer_success_count, 2)
         self.assertEqual(QuestionAnswerEvent.objects.count(), 0)
 
         # question feedback stats
-        self.assertEqual(question_1_updated.like_count, 4)
-        self.assertEqual(question_1_updated.dislike_count, 2)
+        self.assertEqual(question_1_updated.agg_stats.like_count, 4)
+        self.assertEqual(question_1_updated.agg_stats.dislike_count, 2)
         self.assertEqual(QuestionFeedbackEvent.objects.count(), 0)
 
         # daily stats today

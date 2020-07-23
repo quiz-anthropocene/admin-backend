@@ -22,13 +22,9 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 48
-    answer_success_count: 28
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-07
     created: 2020-03-07
-    updated: 2020-05-23
+    updated: 2020-07-10
     tags:
     - 2
     - 4
@@ -37,8 +33,8 @@
   pk: 2
   fields:
     text: Supposons que toutes nos machines soient remplacées par des esclaves qui
-      les actionnent avec leur force musculaire. Combien nous en faudrait-il par personne
-      en France pour soutenir notre niveau de vie actuel ?
+      les feraient fonctionner avec leur seule force musculaire. Combien nous en faudrait-il
+      par personne en France pour soutenir notre niveau de vie actuel ?
     hint: ''
     type: QCM
     category: 5
@@ -60,13 +56,9 @@
     validator: Pascal Esposito
     publish: true
     validation_status: Validée
-    answer_count: 41
-    answer_success_count: 25
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-07
     created: 2020-03-07
-    updated: 2020-05-23
+    updated: 2020-07-23
     tags:
     - 1
 - model: api.question
@@ -88,7 +80,7 @@
     has_ordered_answers: false
     answer_explanation: 'Exemple: les voitures sont de plus en plus économes, mais
       la consommation globale d’essence ne fait qu’augmenter, par effet d’aubaine.
-      On l’appelle aussi le paradoxe de Jevons.'
+      Idem pour la 5G.'
     answer_accessible_url: https://www.youtube.com/watch?v=b4kPjnBRZ-E
     answer_scientific_url: https://mrmondialisation.org/le-paradoxe-de-jevons-ou-pourquoi-il-nexiste-pas-de-croissance-verte/
     answer_image_url: https://images.theconversation.com/files/297327/original/file-20191016-98644-c9y1zz.png
@@ -100,13 +92,9 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 108
-    answer_success_count: 61
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-07
     created: 2020-03-07
-    updated: 2020-06-24
+    updated: 2020-07-23
     tags:
     - 50
 - model: api.question
@@ -141,10 +129,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 51
-    answer_success_count: 23
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-07
     created: 2020-03-07
     updated: 2020-06-25
@@ -176,10 +160,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 54
-    answer_success_count: 29
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-07
     created: 2020-03-07
     updated: 2020-05-23
@@ -212,16 +192,12 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 39
-    answer_success_count: 4
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-08
     created: 2020-03-08
-    updated: 2020-06-24
+    updated: 2020-07-10
     tags:
     - 9
-    - 98
+    - 93
 - model: api.question
   pk: 7
   fields:
@@ -251,10 +227,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 39
-    answer_success_count: 32
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-08
     created: 2020-03-08
     updated: 2020-06-25
@@ -288,10 +260,6 @@
     validator: Pascal Esposito
     publish: true
     validation_status: Validée
-    answer_count: 48
-    answer_success_count: 22
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-08
     created: 2020-03-08
     updated: 2020-05-23
@@ -325,10 +293,6 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 42
-    answer_success_count: 3
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-08
     created: 2020-03-08
     updated: 2020-06-24
@@ -360,10 +324,6 @@
     validator: ''
     publish: true
     validation_status: Écartée
-    answer_count: 37
-    answer_success_count: 27
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-08
     created: 2020-03-08
     updated: 2020-06-24
@@ -397,10 +357,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 39
-    answer_success_count: 9
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-09
     created: 2020-03-09
     updated: 2020-05-23
@@ -432,10 +388,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 46
-    answer_success_count: 36
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-09
     created: 2020-03-09
     updated: 2020-06-24
@@ -466,10 +418,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 52
-    answer_success_count: 22
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-09
     created: 2020-03-09
     updated: 2020-05-23
@@ -503,10 +451,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 38
-    answer_success_count: 17
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-09
     created: 2020-03-09
     updated: 2020-05-23
@@ -539,10 +483,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 45
-    answer_success_count: 26
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-09
     created: 2020-03-09
     updated: 2020-05-28
@@ -573,10 +513,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 104
-    answer_success_count: 66
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -607,10 +543,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 36
-    answer_success_count: 25
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-28
@@ -641,10 +573,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 28
-    answer_success_count: 16
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-28
@@ -678,10 +606,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -713,10 +637,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 29
-    answer_success_count: 13
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -754,10 +674,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 90
-    answer_success_count: 71
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-28
@@ -795,10 +711,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 40
-    answer_success_count: 19
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -831,10 +743,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 55
-    answer_success_count: 30
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -866,10 +774,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 33
-    answer_success_count: 24
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -913,10 +817,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 44
-    answer_success_count: 26
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-25
@@ -952,10 +852,6 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 54
-    answer_success_count: 33
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -988,10 +884,6 @@
     validator: Pascal Esposito
     publish: true
     validation_status: Validée
-    answer_count: 50
-    answer_success_count: 37
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -1027,10 +919,6 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 35
-    answer_success_count: 18
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -1065,16 +953,12 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 39
-    answer_success_count: 17
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-24
+    updated: 2020-07-10
     tags:
     - 12
-    - 99
+    - 94
 - model: api.question
   pk: 30
   fields:
@@ -1109,16 +993,12 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 44
-    answer_success_count: 21
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 16
     - 9
+    - 16
 - model: api.question
   pk: 31
   fields:
@@ -1151,16 +1031,12 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 39
-    answer_success_count: 33
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 13
     - 9
+    - 13
 - model: api.question
   pk: 32
   fields:
@@ -1187,16 +1063,12 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 43
-    answer_success_count: 23
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 16
     - 9
+    - 16
     - 69
 - model: api.question
   pk: 33
@@ -1226,10 +1098,6 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 46
-    answer_success_count: 26
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-07-04
@@ -1263,10 +1131,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 40
-    answer_success_count: 13
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -1302,10 +1166,6 @@
     validator: ''
     publish: true
     validation_status: Validée
-    answer_count: 51
-    answer_success_count: 37
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-25
@@ -1339,10 +1199,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 53
-    answer_success_count: 39
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -1375,10 +1231,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 44
-    answer_success_count: 37
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -1412,10 +1264,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 12
-    answer_success_count: 11
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -1448,10 +1296,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 31
-    answer_success_count: 10
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-25
@@ -1488,19 +1332,15 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 39
-    answer_success_count: 11
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-25
+    updated: 2020-07-10
     tags:
     - 1
     - 15
     - 39
     - 70
-    - 95
+    - 101
 - model: api.question
   pk: 41
   fields:
@@ -1527,16 +1367,12 @@
     validator: ''
     publish: true
     validation_status: Validée
-    answer_count: 44
-    answer_success_count: 31
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 21
     - 9
+    - 21
 - model: api.question
   pk: 42
   fields:
@@ -1566,10 +1402,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 51
-    answer_success_count: 18
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-25
@@ -1606,10 +1438,6 @@
     validator: Pascal Esposito
     publish: true
     validation_status: Validée
-    answer_count: 58
-    answer_success_count: 20
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -1644,16 +1472,12 @@
     validator: ''
     publish: true
     validation_status: Validée
-    answer_count: 43
-    answer_success_count: 24
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 51
     - 9
+    - 51
 - model: api.question
   pk: 45
   fields:
@@ -1684,16 +1508,12 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 37
-    answer_success_count: 23
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 49
     - 9
+    - 49
 - model: api.question
   pk: 46
   fields:
@@ -1721,10 +1541,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 41
-    answer_success_count: 25
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -1759,16 +1575,12 @@
     validator: Pascal Esposito
     publish: true
     validation_status: Validée
-    answer_count: 40
-    answer_success_count: 26
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 16
     - 9
+    - 16
 - model: api.question
   pk: 48
   fields:
@@ -1796,10 +1608,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 91
-    answer_success_count: 69
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -1834,10 +1642,6 @@
     validator: ''
     publish: true
     validation_status: Validée
-    answer_count: 39
-    answer_success_count: 22
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -1869,10 +1673,6 @@
     validator: ''
     publish: true
     validation_status: Validée
-    answer_count: 39
-    answer_success_count: 22
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -1903,10 +1703,6 @@
     validator: ''
     publish: true
     validation_status: Validée
-    answer_count: 38
-    answer_success_count: 23
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -1936,10 +1732,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 61
-    answer_success_count: 30
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -1971,10 +1763,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 31
-    answer_success_count: 18
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -2005,10 +1793,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 35
-    answer_success_count: 26
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -2041,10 +1825,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 45
-    answer_success_count: 30
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -2080,16 +1860,12 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 46
-    answer_success_count: 22
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 26
     - 9
+    - 26
 - model: api.question
   pk: 57
   fields:
@@ -2117,16 +1893,12 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 36
-    answer_success_count: 23
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 26
     - 9
+    - 26
 - model: api.question
   pk: 58
   fields:
@@ -2151,10 +1923,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 44
-    answer_success_count: 13
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -2187,10 +1955,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 98
-    answer_success_count: 62
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -2221,10 +1985,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 44
-    answer_success_count: 14
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -2259,10 +2019,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 49
-    answer_success_count: 29
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -2295,10 +2051,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 48
-    answer_success_count: 23
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -2331,10 +2083,6 @@
     validator: ''
     publish: true
     validation_status: Validée
-    answer_count: 35
-    answer_success_count: 19
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-28
@@ -2368,10 +2116,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 53
-    answer_success_count: 6
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -2406,10 +2150,6 @@
     validator: ''
     publish: true
     validation_status: Validée
-    answer_count: 43
-    answer_success_count: 24
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -2442,10 +2182,6 @@
     validator: ''
     publish: true
     validation_status: Validée
-    answer_count: 37
-    answer_success_count: 19
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -2476,16 +2212,12 @@
     validator: ''
     publish: true
     validation_status: Validée
-    answer_count: 40
-    answer_success_count: 18
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 21
     - 9
+    - 21
 - model: api.question
   pk: 68
   fields:
@@ -2513,10 +2245,6 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 45
-    answer_success_count: 17
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -2548,10 +2276,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 41
-    answer_success_count: 34
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -2581,10 +2305,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 110
-    answer_success_count: 81
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -2621,10 +2341,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 92
-    answer_success_count: 62
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -2658,10 +2374,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 36
-    answer_success_count: 20
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -2695,10 +2407,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 40
-    answer_success_count: 23
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -2736,10 +2444,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 51
-    answer_success_count: 24
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-25
@@ -2775,10 +2479,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 84
-    answer_success_count: 50
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-05-23
@@ -2812,10 +2512,6 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -2824,8 +2520,8 @@
 - model: api.question
   pk: 77
   fields:
-    text: Quelle proportion des gaz à effet de serre les 50% les plus pauvres de la
-      planète émettent-ils ?
+    text: Quelle est la contribution aux émissions de gaz à effet de serre de la moitié
+      la plus pauvre de la population mondiale ?
     hint: ''
     type: QCM
     category: 2
@@ -2849,13 +2545,9 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 47
-    answer_success_count: 17
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-05-23
+    updated: 2020-07-23
     tags:
     - 31
 - model: api.question
@@ -2885,10 +2577,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 42
-    answer_success_count: 21
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-06-24
@@ -2899,7 +2587,7 @@
 - model: api.question
   pk: 79
   fields:
-    text: De combien s'est élevé le niveau moyen des mers depuis 1900 ?
+    text: De combien s'est élevé le niveau moyen des océans depuis 1900 ?
     hint: ''
     type: QCM
     category: 1
@@ -2921,13 +2609,9 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 54
-    answer_success_count: 25
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-11
     created: 2020-03-11
-    updated: 2020-05-23
+    updated: 2020-07-23
     tags:
     - 9
     - 69
@@ -2959,10 +2643,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 48
-    answer_success_count: 30
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-11
     created: 2020-03-11
     updated: 2020-06-24
@@ -2993,10 +2673,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 4
-    answer_success_count: 3
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-11
     created: 2020-03-11
     updated: 2020-05-28
@@ -3037,10 +2713,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 34
-    answer_success_count: 23
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-11
     created: 2020-03-11
     updated: 2020-05-23
@@ -3079,10 +2751,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 81
-    answer_success_count: 56
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-11
     created: 2020-03-11
     updated: 2020-05-28
@@ -3118,10 +2786,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-07-04
@@ -3155,10 +2819,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -3191,10 +2851,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -3231,10 +2887,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-29
@@ -3275,10 +2927,6 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-25
@@ -3311,10 +2959,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -3348,10 +2992,6 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-25
@@ -3386,10 +3026,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 9
-    answer_success_count: 5
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -3424,10 +3060,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 2
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -3464,10 +3096,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -3501,10 +3129,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 6
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -3540,10 +3164,6 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -3575,10 +3195,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 9
-    answer_success_count: 6
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -3614,10 +3230,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 9
-    answer_success_count: 6
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -3650,10 +3262,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -3689,10 +3297,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 3
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -3729,10 +3333,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-25
@@ -3765,10 +3365,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 11
-    answer_success_count: 6
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -3804,10 +3400,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-11
     created: 2020-04-26
     updated: 2020-07-10
@@ -3840,10 +3432,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 6
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-07
     created: 2019-01-07
     updated: 2020-05-28
@@ -3877,10 +3465,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 6
-    answer_success_count: 2
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-08
     created: 2019-01-08
     updated: 2020-06-24
@@ -3913,10 +3497,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-09
     created: 2019-01-09
     updated: 2020-06-25
@@ -3949,13 +3529,9 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 4
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-10
     created: 2019-01-10
-    updated: 2020-07-16
+    updated: 2020-07-23
     tags:
     - 2
 - model: api.question
@@ -3990,10 +3566,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-11
     created: 2019-01-11
     updated: 2020-07-10
@@ -4026,10 +3598,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-14
     created: 2019-01-14
     updated: 2020-05-05
@@ -4063,10 +3631,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-15
     created: 2019-01-15
     updated: 2020-05-05
@@ -4098,10 +3662,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-16
     created: 2019-01-16
     updated: 2020-05-23
@@ -4132,10 +3692,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 9
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-17
     created: 2019-01-17
     updated: 2020-06-24
@@ -4176,10 +3732,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 6
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-18
     created: 2019-01-18
     updated: 2020-06-24
@@ -4211,10 +3763,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-21
     created: 2019-01-21
     updated: 2020-06-25
@@ -4247,10 +3795,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 13
-    answer_success_count: 6
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-22
     created: 2019-01-22
     updated: 2020-05-23
@@ -4283,13 +3827,9 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-23
     created: 2019-01-23
-    updated: 2020-07-16
+    updated: 2020-07-23
     tags:
     - 11
     - 50
@@ -4319,10 +3859,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 7
-    answer_success_count: 3
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-24
     created: 2019-01-24
     updated: 2020-05-23
@@ -4355,10 +3891,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-25
     created: 2019-01-25
     updated: 2020-06-25
@@ -4393,10 +3925,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 9
-    answer_success_count: 4
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-28
     created: 2019-01-28
     updated: 2020-05-23
@@ -4428,10 +3956,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 7
-    answer_success_count: 5
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-30
     created: 2019-01-30
     updated: 2020-05-23
@@ -4464,10 +3988,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 8
-    answer_success_count: 3
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-30
     created: 2019-01-30
     updated: 2020-06-25
@@ -4502,10 +4022,6 @@
     validator: Matthieu Massart
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-01-31
     created: 2019-01-31
     updated: 2020-05-05
@@ -4538,10 +4054,6 @@
     validator: Matthieu Massart
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-01
     created: 2019-02-01
     updated: 2020-05-20
@@ -4572,10 +4084,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-04
     created: 2019-02-04
     updated: 2020-06-25
@@ -4606,10 +4114,6 @@
     validator: Matthieu Massart
     publish: false
     validation_status: Écartée
-    answer_count: 6
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-06
     created: 2019-02-06
     updated: 2020-05-23
@@ -4641,10 +4145,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-06
     created: 2019-02-06
     updated: 2020-06-25
@@ -4677,10 +4177,6 @@
     validator: Matthieu Massart
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-07
     created: 2019-02-07
     updated: 2020-05-05
@@ -4719,10 +4215,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 7
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-08
     created: 2019-02-08
     updated: 2020-05-23
@@ -4755,10 +4247,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-11
     created: 2019-02-11
     updated: 2020-06-25
@@ -4792,10 +4280,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 3
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-12
     created: 2019-02-12
     updated: 2020-05-23
@@ -4829,10 +4313,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 2
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-13
     created: 2019-02-13
     updated: 2020-05-23
@@ -4865,10 +4345,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 8
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-14
     created: 2019-02-14
     updated: 2020-05-23
@@ -4900,10 +4376,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-15
     created: 2019-02-15
     updated: 2020-06-24
@@ -4936,10 +4408,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -4971,10 +4439,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 7
-    answer_success_count: 3
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-19
     created: 2020-04-26
     updated: 2020-05-23
@@ -5012,10 +4476,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 9
-    answer_success_count: 2
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-21
     created: 2020-04-26
     updated: 2020-06-24
@@ -5051,10 +4511,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 7
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-21
     created: 2020-04-26
     updated: 2020-05-23
@@ -5089,10 +4545,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 3
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-22
     created: 2020-04-26
     updated: 2020-05-23
@@ -5126,10 +4578,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-25
     created: 2020-04-26
     updated: 2020-06-25
@@ -5162,10 +4610,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 9
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-26
     created: 2020-04-26
     updated: 2020-05-23
@@ -5197,10 +4641,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-02-27
     created: 2020-04-26
     updated: 2020-05-10
@@ -5232,10 +4672,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-01
     created: 2020-04-26
     updated: 2020-06-25
@@ -5267,10 +4703,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-01
     created: 2020-04-26
     updated: 2020-05-10
@@ -5310,10 +4742,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 11
-    answer_success_count: 7
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-04
     created: 2020-04-26
     updated: 2020-05-23
@@ -5346,10 +4774,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-05
     created: 2020-04-26
     updated: 2020-05-10
@@ -5383,10 +4807,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-06
     created: 2020-04-26
     updated: 2020-06-25
@@ -5418,10 +4838,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-07
     created: 2020-04-26
     updated: 2020-05-10
@@ -5454,10 +4870,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-08
     created: 2020-04-26
     updated: 2020-05-07
@@ -5488,10 +4900,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-11
     created: 2020-04-26
     updated: 2020-05-10
@@ -5522,10 +4930,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-13
     created: 2020-04-26
     updated: 2020-06-25
@@ -5560,10 +4964,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 5
-    answer_success_count: 3
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-13
     created: 2020-04-26
     updated: 2020-06-24
@@ -5598,10 +4998,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 8
-    answer_success_count: 2
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-15
     created: 2020-04-26
     updated: 2020-05-23
@@ -5633,10 +5029,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 7
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-15
     created: 2020-04-26
     updated: 2020-06-24
@@ -5668,10 +5060,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 7
-    answer_success_count: 3
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-18
     created: 2020-04-26
     updated: 2020-06-24
@@ -5708,10 +5096,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-19
     created: 2020-04-26
     updated: 2020-05-10
@@ -5750,10 +5134,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-20
     created: 2020-04-26
     updated: 2020-06-25
@@ -5792,10 +5172,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-21
     created: 2020-04-26
     updated: 2020-06-25
@@ -5836,19 +5212,15 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 4
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-22
     created: 2020-04-26
-    updated: 2020-07-16
+    updated: 2020-07-10
     tags:
+    - 9
     - 11
     - 33
     - 59
-    - 9
-    - 93
+    - 97
 - model: api.question
   pk: 158
   fields:
@@ -5876,10 +5248,6 @@
     validator: Matthieu Massart
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-26
     created: 2020-04-26
     updated: 2020-06-24
@@ -5914,10 +5282,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-26
     created: 2020-04-26
     updated: 2020-05-10
@@ -5952,10 +5316,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-27
     created: 2020-04-26
     updated: 2020-06-25
@@ -5992,10 +5352,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 2
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-28
     created: 2020-04-26
     updated: 2020-05-23
@@ -6030,10 +5386,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 2
-    like_count: 0
-    dislike_count: 0
     added: 2019-03-30
     created: 2020-04-26
     updated: 2020-05-23
@@ -6066,10 +5418,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-01
     created: 2020-04-26
     updated: 2020-05-10
@@ -6101,10 +5449,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-02
     created: 2020-04-26
     updated: 2020-05-10
@@ -6135,10 +5479,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 3
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-03
     created: 2020-04-26
     updated: 2020-05-23
@@ -6170,10 +5510,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-05
     created: 2020-04-26
     updated: 2020-05-10
@@ -6206,10 +5542,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-05
     created: 2020-04-26
     updated: 2020-05-07
@@ -6244,10 +5576,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-08
     created: 2020-04-26
     updated: 2020-05-10
@@ -6282,10 +5610,6 @@
     validator: Matthieu Massart
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-09
     created: 2020-04-26
     updated: 2020-06-24
@@ -6324,10 +5648,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-10
     created: 2020-04-26
     updated: 2020-06-24
@@ -6360,10 +5680,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 9
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-11
     created: 2020-04-26
     updated: 2020-05-23
@@ -6398,10 +5714,6 @@
     validator: Matthieu Massart
     publish: false
     validation_status: Écartée
-    answer_count: 14
-    answer_success_count: 12
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-12
     created: 2020-04-26
     updated: 2020-05-23
@@ -6434,10 +5746,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 6
-    answer_success_count: 2
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-17
     created: 2020-04-26
     updated: 2020-05-23
@@ -6471,10 +5779,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-17
     created: 2020-04-26
     updated: 2020-05-10
@@ -6508,10 +5812,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-18
     created: 2020-04-26
     updated: 2020-05-07
@@ -6544,10 +5844,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 11
-    answer_success_count: 6
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-18
     created: 2020-04-26
     updated: 2020-06-24
@@ -6581,10 +5877,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-22
     created: 2020-04-26
     updated: 2020-05-07
@@ -6618,10 +5910,6 @@
     validator: Matthieu Massart
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-23
     created: 2020-04-26
     updated: 2020-06-24
@@ -6652,10 +5940,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 11
-    answer_success_count: 4
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-24
     created: 2020-04-26
     updated: 2020-05-23
@@ -6689,10 +5973,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 7
-    answer_success_count: 2
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-25
     created: 2020-04-26
     updated: 2020-05-23
@@ -6726,10 +6006,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-26
     created: 2020-04-26
     updated: 2020-05-07
@@ -6761,10 +6037,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-29
     created: 2020-04-26
     updated: 2020-05-10
@@ -6795,10 +6067,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-04-30
     created: 2020-04-26
     updated: 2020-05-10
@@ -6831,10 +6099,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 5
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-01
     created: 2020-04-26
     updated: 2020-06-24
@@ -6871,10 +6135,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-02
     created: 2020-04-26
     updated: 2020-06-24
@@ -6908,10 +6168,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 11
-    answer_success_count: 2
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-03
     created: 2020-04-26
     updated: 2020-05-23
@@ -6942,10 +6198,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-13
     created: 2020-04-26
     updated: 2020-05-20
@@ -6978,10 +6230,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-14
     created: 2020-04-26
     updated: 2020-05-10
@@ -7014,10 +6262,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-15
     created: 2020-04-26
     updated: 2020-05-10
@@ -7055,10 +6299,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-16
     created: 2020-04-26
     updated: 2020-05-10
@@ -7089,10 +6329,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-17
     created: 2020-04-26
     updated: 2020-05-07
@@ -7126,10 +6362,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-20
     created: 2020-04-26
     updated: 2020-05-10
@@ -7164,10 +6396,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-21
     created: 2020-04-26
     updated: 2020-05-10
@@ -7205,16 +6433,12 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 9
-    answer_success_count: 3
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-22
     created: 2020-04-26
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 61
     - 9
+    - 61
     - 69
 - model: api.question
   pk: 195
@@ -7243,10 +6467,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-23
     created: 2020-04-26
     updated: 2020-05-23
@@ -7278,10 +6498,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 8
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-24
     created: 2020-04-26
     updated: 2020-05-23
@@ -7321,10 +6537,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-27
     created: 2020-04-26
     updated: 2020-05-10
@@ -7355,10 +6567,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-28
     created: 2020-04-26
     updated: 2020-05-10
@@ -7389,10 +6597,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-29
     created: 2020-04-26
     updated: 2020-05-10
@@ -7425,10 +6629,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-30
     created: 2020-04-26
     updated: 2020-05-10
@@ -7460,10 +6660,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-05-31
     created: 2020-04-26
     updated: 2020-05-10
@@ -7495,10 +6691,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-03
     created: 2020-04-26
     updated: 2020-05-10
@@ -7531,10 +6723,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-04
     created: 2020-04-26
     updated: 2020-05-10
@@ -7567,10 +6755,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-05
     created: 2020-04-26
     updated: 2020-05-10
@@ -7603,10 +6787,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-06
     created: 2020-04-26
     updated: 2020-05-10
@@ -7638,10 +6818,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-07
     created: 2020-04-26
     updated: 2020-05-10
@@ -7672,10 +6848,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-10
     created: 2020-04-26
     updated: 2020-05-10
@@ -7707,10 +6879,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-11
     created: 2020-04-26
     updated: 2020-05-10
@@ -7742,10 +6910,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-12
     created: 2020-04-26
     updated: 2020-05-10
@@ -7776,10 +6940,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-13
     created: 2020-04-26
     updated: 2020-06-24
@@ -7813,10 +6973,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-15
     created: 2020-04-26
     updated: 2020-05-10
@@ -7848,10 +7004,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 12
-    answer_success_count: 5
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-17
     created: 2020-04-26
     updated: 2020-05-23
@@ -7883,10 +7035,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-18
     created: 2020-04-26
     updated: 2020-05-10
@@ -7918,10 +7066,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-19
     created: 2020-04-26
     updated: 2020-05-10
@@ -7952,10 +7096,6 @@
     validator: Matthieu Massart
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-20
     created: 2020-04-26
     updated: 2020-05-10
@@ -7989,10 +7129,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-21
     created: 2020-04-26
     updated: 2020-05-20
@@ -8027,10 +7163,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 2
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-24
     created: 2020-04-26
     updated: 2020-06-24
@@ -8063,10 +7195,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-25
     created: 2020-04-26
     updated: 2020-05-10
@@ -8099,10 +7227,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-26
     created: 2020-04-26
     updated: 2020-05-20
@@ -8138,10 +7262,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 7
-    answer_success_count: 2
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-27
     created: 2020-04-26
     updated: 2020-05-23
@@ -8173,10 +7293,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 10
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-06-29
     created: 2020-04-26
     updated: 2020-05-23
@@ -8213,10 +7329,6 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-25
@@ -8247,10 +7359,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -8282,10 +7390,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 9
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-25
     created: 2020-04-26
     updated: 2020-06-24
@@ -8325,10 +7429,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 2
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-27
     created: 2020-05-05
     updated: 2020-06-24
@@ -8363,10 +7463,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-27
     created: 2020-05-05
     updated: 2020-05-23
@@ -8405,10 +7501,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 2
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-27
     created: 2020-05-05
     updated: 2020-05-23
@@ -8441,10 +7533,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-28
     created: 2020-05-05
     updated: 2020-05-23
@@ -8484,10 +7572,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 3
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2020-04-29
     created: 2020-05-05
     updated: 2020-05-23
@@ -8523,10 +7607,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-07
     created: 2020-05-07
     updated: 2020-06-24
@@ -8564,10 +7644,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-08
     created: 2020-05-05
     updated: 2020-06-24
@@ -8599,10 +7675,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-08
     created: 2020-05-05
     updated: 2020-05-20
@@ -8639,10 +7711,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-10
     created: 2020-05-10
     updated: 2020-06-24
@@ -8674,10 +7742,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-10
     created: 2020-05-10
     updated: 2020-05-23
@@ -8709,10 +7773,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-10
     created: 2020-05-10
     updated: 2020-05-20
@@ -8747,10 +7807,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-10
     created: 2020-05-10
     updated: 2020-07-10
@@ -8782,16 +7838,12 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-01
     created: 2020-05-07
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 50
     - 9
+    - 50
 - model: api.question
   pk: 238
   fields:
@@ -8818,10 +7870,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 2
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-02
     created: 2020-05-07
     updated: 2020-05-23
@@ -8853,10 +7901,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-03
     created: 2020-05-20
     updated: 2020-05-20
@@ -8892,10 +7936,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-05
     created: 2020-05-20
     updated: 2020-06-24
@@ -8929,10 +7969,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-05
     created: 2020-05-20
     updated: 2020-05-23
@@ -8966,10 +8002,6 @@
     validator: Matthieu Massart
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-08
     created: 2020-05-20
     updated: 2020-05-20
@@ -9003,10 +8035,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 2
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-09
     created: 2020-05-20
     updated: 2020-07-10
@@ -9041,10 +8069,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-10
     created: 2020-05-20
     updated: 2020-05-20
@@ -9079,10 +8103,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-11
     created: 2020-05-20
     updated: 2020-05-28
@@ -9115,10 +8135,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-12
     created: 2020-05-20
     updated: 2020-05-23
@@ -9153,10 +8169,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-16
     created: 2020-05-20
     updated: 2020-05-20
@@ -9189,10 +8201,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-16
     created: 2020-05-20
     updated: 2020-05-23
@@ -9225,10 +8233,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-17
     created: 2020-05-20
     updated: 2020-05-28
@@ -9263,10 +8267,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-18
     created: 2020-05-20
     updated: 2020-06-24
@@ -9302,10 +8302,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-19
     created: 2020-05-20
     updated: 2020-06-25
@@ -9340,10 +8336,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-22
     created: 2020-05-20
     updated: 2020-05-20
@@ -9378,10 +8370,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-23
     created: 2020-05-20
     updated: 2020-05-20
@@ -9415,10 +8403,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-24
     created: 2020-05-20
     updated: 2020-05-20
@@ -9451,10 +8435,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-26
     created: 2020-05-20
     updated: 2020-05-20
@@ -9487,13 +8467,9 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-27
     created: 2020-05-20
-    updated: 2020-07-16
+    updated: 2020-07-23
     tags:
     - 1
     - 17
@@ -9525,10 +8501,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-29
     created: 2020-05-20
     updated: 2020-05-20
@@ -9561,10 +8533,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-30
     created: 2020-05-20
     updated: 2020-05-23
@@ -9601,10 +8569,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-07-31
     created: 2020-05-20
     updated: 2020-06-24
@@ -9638,10 +8602,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-01
     created: 2020-05-20
     updated: 2020-05-20
@@ -9682,10 +8642,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 2
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-02
     created: 2020-05-20
     updated: 2020-05-23
@@ -9719,10 +8675,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-12
     created: 2020-05-20
     updated: 2020-06-24
@@ -9757,10 +8709,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-13
     created: 2020-05-20
     updated: 2020-05-20
@@ -9794,10 +8742,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-15
     created: 2020-05-20
     updated: 2020-05-20
@@ -9831,10 +8775,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-16
     created: 2020-05-20
     updated: 2020-05-20
@@ -9866,10 +8806,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-17
     created: 2020-05-20
     updated: 2020-05-23
@@ -9904,10 +8840,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-19
     created: 2020-05-20
     updated: 2020-05-20
@@ -9940,10 +8872,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-20
     created: 2020-05-20
     updated: 2020-05-20
@@ -9976,10 +8904,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-21
     created: 2020-05-20
     updated: 2020-05-20
@@ -10010,10 +8934,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-23
     created: 2020-05-20
     updated: 2020-06-24
@@ -10046,10 +8966,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-24
     created: 2020-05-20
     updated: 2020-05-20
@@ -10084,10 +9000,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-26
     created: 2020-05-20
     updated: 2020-05-20
@@ -10123,10 +9035,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-27
     created: 2020-05-20
     updated: 2020-05-20
@@ -10158,10 +9066,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-28
     created: 2020-05-20
     updated: 2020-05-20
@@ -10196,10 +9100,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-29
     created: 2020-05-20
     updated: 2020-05-20
@@ -10234,10 +9134,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-08-31
     created: 2020-05-20
     updated: 2020-05-20
@@ -10274,10 +9170,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-02
     created: 2020-05-20
     updated: 2020-05-20
@@ -10311,10 +9203,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-03
     created: 2020-05-20
     updated: 2020-05-20
@@ -10350,10 +9238,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-04
     created: 2020-05-20
     updated: 2020-05-20
@@ -10388,10 +9272,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-05
     created: 2020-05-20
     updated: 2020-06-24
@@ -10426,10 +9306,6 @@
     validator: Matthieu Massart
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-06
     created: 2020-05-20
     updated: 2020-05-20
@@ -10463,10 +9339,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-09
     created: 2020-05-20
     updated: 2020-05-23
@@ -10497,10 +9369,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-10
     created: 2020-05-20
     updated: 2020-05-20
@@ -10536,10 +9404,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 3
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-12
     created: 2020-05-20
     updated: 2020-05-23
@@ -10573,10 +9437,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-12
     created: 2020-05-20
     updated: 2020-05-20
@@ -10609,10 +9469,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-13
     created: 2020-05-20
     updated: 2020-05-20
@@ -10645,10 +9501,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-16
     created: 2020-05-20
     updated: 2020-05-20
@@ -10681,10 +9533,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-17
     created: 2020-05-20
     updated: 2020-05-20
@@ -10720,10 +9568,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-18
     created: 2020-05-20
     updated: 2020-06-24
@@ -10757,10 +9601,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-19
     created: 2020-05-20
     updated: 2020-05-20
@@ -10794,10 +9634,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 3
-    answer_success_count: 3
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-20
     created: 2020-05-20
     updated: 2020-05-23
@@ -10831,10 +9667,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-23
     created: 2020-05-20
     updated: 2020-05-20
@@ -10873,10 +9705,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-24
     created: 2020-05-20
     updated: 2020-05-20
@@ -10915,10 +9743,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-25
     created: 2020-05-20
     updated: 2020-05-23
@@ -10955,10 +9779,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-26
     created: 2020-05-20
     updated: 2020-05-20
@@ -10991,10 +9811,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-27
     created: 2020-05-20
     updated: 2020-05-20
@@ -11028,10 +9844,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-09-30
     created: 2020-05-20
     updated: 2020-06-24
@@ -11067,10 +9879,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-01
     created: 2020-05-20
     updated: 2020-05-20
@@ -11103,10 +9911,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-02
     created: 2020-05-20
     updated: 2020-05-20
@@ -11142,10 +9946,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-03
     created: 2020-05-20
     updated: 2020-05-20
@@ -11179,10 +9979,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-04
     created: 2020-05-20
     updated: 2020-06-24
@@ -11214,10 +10010,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-07
     created: 2020-05-20
     updated: 2020-05-20
@@ -11255,10 +10047,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-08
     created: 2020-05-20
     updated: 2020-06-24
@@ -11291,10 +10079,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-09
     created: 2020-05-20
     updated: 2020-05-20
@@ -11329,10 +10113,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-11
     created: 2020-05-20
     updated: 2020-05-20
@@ -11368,10 +10148,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-12
     created: 2020-05-20
     updated: 2020-05-20
@@ -11406,10 +10182,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-14
     created: 2020-05-20
     updated: 2020-05-28
@@ -11444,10 +10216,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-15
     created: 2020-05-20
     updated: 2020-05-20
@@ -11480,10 +10248,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-17
     created: 2020-05-20
     updated: 2020-05-20
@@ -11518,10 +10282,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-18
     created: 2020-05-20
     updated: 2020-05-23
@@ -11557,10 +10317,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-18
     created: 2020-05-20
     updated: 2020-05-20
@@ -11593,10 +10349,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-21
     created: 2020-05-20
     updated: 2020-05-20
@@ -11632,10 +10384,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-23
     created: 2020-05-20
     updated: 2020-05-20
@@ -11670,10 +10418,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-23
     created: 2020-05-20
     updated: 2020-05-20
@@ -11706,10 +10450,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-25
     created: 2020-05-20
     updated: 2020-05-20
@@ -11745,10 +10485,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 2
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-26
     created: 2020-05-20
     updated: 2020-05-23
@@ -11786,10 +10522,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-28
     created: 2020-05-20
     updated: 2020-05-20
@@ -11823,10 +10555,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-29
     created: 2020-05-20
     updated: 2020-05-20
@@ -11860,10 +10588,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-30
     created: 2020-05-20
     updated: 2020-05-20
@@ -11898,10 +10622,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-10-31
     created: 2020-05-20
     updated: 2020-05-20
@@ -11935,10 +10655,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-02
     created: 2020-05-20
     updated: 2020-05-20
@@ -11972,10 +10688,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-11
     created: 2020-05-20
     updated: 2020-05-20
@@ -12010,10 +10722,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-12
     created: 2020-05-20
     updated: 2020-05-20
@@ -12046,10 +10754,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-13
     created: 2020-05-20
     updated: 2020-05-20
@@ -12084,10 +10788,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-15
     created: 2020-05-20
     updated: 2020-05-20
@@ -12122,10 +10822,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-15
     created: 2020-05-20
     updated: 2020-05-20
@@ -12162,10 +10858,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-19
     created: 2020-05-20
     updated: 2020-05-20
@@ -12199,10 +10891,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-19
     created: 2020-05-20
     updated: 2020-05-20
@@ -12234,10 +10922,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-21
     created: 2020-05-20
     updated: 2020-05-20
@@ -12270,10 +10954,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-22
     created: 2020-05-20
     updated: 2020-05-20
@@ -12307,10 +10987,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-23
     created: 2020-05-20
     updated: 2020-05-28
@@ -12344,10 +11020,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-25
     created: 2020-05-20
     updated: 2020-05-20
@@ -12381,10 +11053,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-27
     created: 2020-05-20
     updated: 2020-05-20
@@ -12421,10 +11089,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-28
     created: 2020-05-20
     updated: 2020-05-20
@@ -12457,10 +11121,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-29
     created: 2020-05-20
     updated: 2020-05-23
@@ -12491,10 +11151,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-11-30
     created: 2020-05-20
     updated: 2020-05-20
@@ -12527,10 +11183,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-02
     created: 2020-05-20
     updated: 2020-05-20
@@ -12563,10 +11215,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-03
     created: 2020-05-20
     updated: 2020-05-20
@@ -12600,10 +11248,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-04
     created: 2020-05-20
     updated: 2020-05-20
@@ -12636,10 +11280,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-06
     created: 2020-05-20
     updated: 2020-05-20
@@ -12674,10 +11314,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-07
     created: 2020-05-20
     updated: 2020-05-20
@@ -12709,10 +11345,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-09
     created: 2020-05-20
     updated: 2020-05-20
@@ -12751,16 +11383,12 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 2
-    answer_success_count: 2
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-10
     created: 2020-05-20
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 13
     - 9
+    - 13
 - model: api.question
   pk: 344
   fields:
@@ -12790,10 +11418,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-11
     created: 2020-05-20
     updated: 2020-05-28
@@ -12828,10 +11452,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-12
     created: 2020-05-20
     updated: 2020-05-20
@@ -12867,10 +11487,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-13
     created: 2020-05-20
     updated: 2020-05-20
@@ -12908,10 +11524,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-16
     created: 2020-05-20
     updated: 2020-06-24
@@ -12946,10 +11558,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-17
     created: 2020-05-20
     updated: 2020-05-23
@@ -12983,10 +11591,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-18
     created: 2020-05-20
     updated: 2020-05-20
@@ -13021,10 +11625,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 2
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-20
     created: 2020-05-20
     updated: 2020-05-23
@@ -13059,10 +11659,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2019-12-21
     created: 2020-05-20
     updated: 2020-05-20
@@ -13096,10 +11692,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-06
     created: 2020-05-20
     updated: 2020-05-20
@@ -13136,10 +11728,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-07
     created: 2020-05-20
     updated: 2020-05-20
@@ -13172,10 +11760,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-08
     created: 2020-05-20
     updated: 2020-05-20
@@ -13210,10 +11794,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 2
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-09
     created: 2020-05-20
     updated: 2020-05-23
@@ -13247,10 +11827,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 3
-    answer_success_count: 2
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-11
     created: 2020-05-20
     updated: 2020-05-23
@@ -13284,10 +11860,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-13
     created: 2020-05-20
     updated: 2020-05-20
@@ -13321,10 +11893,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-14
     created: 2020-05-20
     updated: 2020-07-10
@@ -13361,10 +11929,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-15
     created: 2020-05-20
     updated: 2020-05-20
@@ -13398,10 +11962,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-17
     created: 2020-05-20
     updated: 2020-05-20
@@ -13439,13 +11999,9 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-17
     created: 2020-05-20
-    updated: 2020-07-16
+    updated: 2020-07-23
     tags:
     - 16
     - 83
@@ -13476,10 +12032,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 2
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-20
     created: 2020-05-20
     updated: 2020-05-23
@@ -13517,10 +12069,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-21
     created: 2020-05-20
     updated: 2020-05-20
@@ -13554,10 +12102,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-22
     created: 2020-05-20
     updated: 2020-06-24
@@ -13591,10 +12135,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-23
     created: 2020-05-20
     updated: 2020-05-20
@@ -13629,10 +12169,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-25
     created: 2020-05-20
     updated: 2020-05-20
@@ -13667,10 +12203,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-27
     created: 2020-05-20
     updated: 2020-05-20
@@ -13708,10 +12240,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-28
     created: 2020-05-20
     updated: 2020-05-20
@@ -13750,10 +12278,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-29
     created: 2020-05-20
     updated: 2020-05-20
@@ -13786,10 +12310,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-31
     created: 2020-05-20
     updated: 2020-05-20
@@ -13829,10 +12349,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-01-31
     created: 2020-05-20
     updated: 2020-05-20
@@ -13868,10 +12384,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-03
     created: 2020-05-20
     updated: 2020-05-20
@@ -13907,10 +12419,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-04
     created: 2020-05-20
     updated: 2020-05-20
@@ -13948,10 +12456,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-05
     created: 2020-05-20
     updated: 2020-05-20
@@ -13988,10 +12492,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-07
     created: 2020-05-20
     updated: 2020-05-20
@@ -14030,10 +12530,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-08
     created: 2020-05-20
     updated: 2020-05-20
@@ -14066,10 +12562,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-10
     created: 2020-05-20
     updated: 2020-05-20
@@ -14102,10 +12594,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-11
     created: 2020-05-20
     updated: 2020-05-20
@@ -14140,10 +12628,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-12
     created: 2020-05-20
     updated: 2020-05-20
@@ -14175,10 +12659,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-13
     created: 2020-05-20
     updated: 2020-05-20
@@ -14212,10 +12692,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-15
     created: 2020-05-20
     updated: 2020-05-20
@@ -14252,10 +12728,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-17
     created: 2020-05-20
     updated: 2020-05-20
@@ -14292,10 +12764,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-18
     created: 2020-05-20
     updated: 2020-05-20
@@ -14332,10 +12800,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-20
     created: 2020-05-20
     updated: 2020-05-20
@@ -14373,10 +12837,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-21
     created: 2020-05-20
     updated: 2020-05-20
@@ -14412,10 +12872,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-22
     created: 2020-05-20
     updated: 2020-05-20
@@ -14450,10 +12906,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-24
     created: 2020-05-20
     updated: 2020-05-23
@@ -14488,10 +12940,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-26
     created: 2020-05-20
     updated: 2020-05-20
@@ -14524,10 +12972,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-27
     created: 2020-05-20
     updated: 2020-05-20
@@ -14561,10 +13005,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-28
     created: 2020-05-20
     updated: 2020-05-20
@@ -14597,10 +13037,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 2
-    answer_success_count: 2
-    like_count: 0
-    dislike_count: 0
     added: 2020-02-29
     created: 2020-05-20
     updated: 2020-05-23
@@ -14640,10 +13076,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-02
     created: 2020-05-20
     updated: 2020-06-24
@@ -14678,10 +13110,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-03
     created: 2020-05-20
     updated: 2020-06-24
@@ -14714,10 +13142,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-06
     created: 2020-05-20
     updated: 2020-05-20
@@ -14751,10 +13175,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-06
     created: 2020-05-20
     updated: 2020-05-20
@@ -14787,10 +13207,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-08
     created: 2020-05-20
     updated: 2020-05-20
@@ -14826,10 +13242,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 1
-    answer_success_count: 1
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-09
     created: 2020-05-20
     updated: 2020-06-24
@@ -14863,10 +13275,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-10
     created: 2020-05-20
     updated: 2020-05-20
@@ -14900,10 +13308,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-11
     created: 2020-05-20
     updated: 2020-05-20
@@ -14937,10 +13341,6 @@
     validator: Raphael Odini
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-13
     created: 2020-05-20
     updated: 2020-05-20
@@ -14973,10 +13373,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-03-14
     created: 2020-05-20
     updated: 2020-06-25
@@ -15015,10 +13411,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-12
     created: 2020-05-20
     updated: 2020-06-24
@@ -15036,11 +13428,11 @@
     type: QCM
     category: 1
     difficulty: 2
-    answer_option_a: 500 millions
+    answer_option_a: 200 millions
     answer_option_b: 1 milliard
     answer_option_c: 3,5 milliards
-    answer_option_d: 5 milliards
-    answer_correct: b
+    answer_option_d: 7 milliards
+    answer_correct: c
     has_ordered_answers: true
     answer_explanation: Ces 3,5 milliards de personnes sortiraient alors de la « niche
       climatique » dans laquelle les humains ont prospéré depuis six mille ans. Voilà
@@ -15057,13 +13449,9 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-18
     created: 2020-05-20
-    updated: 2020-06-24
+    updated: 2020-07-23
     tags:
     - 23
     - 51
@@ -15097,10 +13485,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-20
     created: 2020-05-20
     updated: 2020-06-24
@@ -15137,10 +13521,6 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-20
     created: 2020-05-20
     updated: 2020-06-25
@@ -15179,10 +13559,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-20
     created: 2020-05-23
     updated: 2020-06-24
@@ -15218,10 +13594,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-21
     created: 2020-05-23
     updated: 2020-05-28
@@ -15261,10 +13633,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-25
     created: 2020-05-28
     updated: 2020-06-24
@@ -15300,10 +13668,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-25
     created: 2020-05-28
     updated: 2020-05-28
@@ -15339,10 +13703,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-25
     created: 2020-05-28
     updated: 2020-06-24
@@ -15389,10 +13749,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-25
     created: 2020-05-28
     updated: 2020-05-28
@@ -15436,10 +13792,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-05-25
     created: 2020-05-28
     updated: 2020-06-24
@@ -15473,10 +13825,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -15508,10 +13856,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -15546,15 +13890,11 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-10
     tags:
-    - 98
+    - 93
 - model: api.question
   pk: 416
   fields:
@@ -15580,10 +13920,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -15619,10 +13955,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -15657,10 +13989,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-25
@@ -15691,10 +14019,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -15726,10 +14050,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -15759,10 +14079,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -15793,10 +14109,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -15827,10 +14139,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -15861,10 +14169,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -15898,10 +14202,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-25
@@ -15936,10 +14236,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-25
@@ -15975,10 +14271,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-25
@@ -16014,10 +14306,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16048,10 +14336,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16083,10 +14367,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16116,10 +14396,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16149,10 +14425,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16183,10 +14455,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16219,10 +14487,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16253,10 +14517,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16291,10 +14551,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-25
@@ -16328,10 +14584,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-25
@@ -16364,16 +14616,12 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-07-10
     tags:
     - 10
-    - 100
+    - 95
 - model: api.question
   pk: 439
   fields:
@@ -16403,10 +14651,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-25
@@ -16441,10 +14685,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-07-04
@@ -16479,10 +14719,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-25
@@ -16516,10 +14752,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16549,10 +14781,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16584,10 +14812,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16620,10 +14844,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16657,10 +14877,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16693,10 +14909,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16726,10 +14938,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16760,15 +14968,11 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-07-10
     tags:
-    - 100
+    - 95
 - model: api.question
   pk: 450
   fields:
@@ -16794,10 +14998,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -16828,10 +15028,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -16866,16 +15062,12 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-10
     tags:
     - 12
-    - 99
+    - 94
 - model: api.question
   pk: 453
   fields:
@@ -16904,10 +15096,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-25
@@ -16938,14 +15126,11 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-07-10
-    tags: []
+    updated: 2020-07-23
+    tags:
+    - 16
 - model: api.question
   pk: 455
   fields:
@@ -16972,10 +15157,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17004,10 +15185,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17039,13 +15216,9 @@
     validator: Matthieu Massart
     publish: false
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-07-16
+    updated: 2020-07-23
     tags:
     - 64
 - model: api.question
@@ -17074,10 +15247,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17112,16 +15281,12 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-06-25
+    updated: 2020-07-10
     tags:
     - 66
-    - 99
+    - 94
 - model: api.question
   pk: 460
   fields:
@@ -17150,16 +15315,12 @@
     validator: Lucia Romanita
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-06-25
+    updated: 2020-07-10
     tags:
     - 24
-    - 93
+    - 97
 - model: api.question
   pk: 461
   fields:
@@ -17188,10 +15349,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17224,10 +15381,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17258,10 +15411,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17295,10 +15444,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-25
@@ -17333,10 +15478,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-25
@@ -17368,10 +15509,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17407,10 +15544,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-07-04
@@ -17441,10 +15574,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17481,18 +15610,14 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-06-25
+    updated: 2020-07-10
     tags:
     - 1
     - 39
     - 44
-    - 94
+    - 100
 - model: api.question
   pk: 470
   fields:
@@ -17518,10 +15643,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17558,10 +15679,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17595,10 +15712,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17632,16 +15745,12 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 26
     - 9
+    - 26
 - model: api.question
   pk: 474
   fields:
@@ -17667,16 +15776,12 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 26
     - 9
+    - 26
 - model: api.question
   pk: 475
   fields:
@@ -17707,10 +15812,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17747,10 +15848,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17784,10 +15881,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -17817,16 +15910,12 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-06-25
+    updated: 2020-07-10
     tags:
     - 17
-    - 97
+    - 103
 - model: api.question
   pk: 479
   fields:
@@ -17854,10 +15943,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-25
@@ -17888,10 +15973,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-14
     created: 2020-06-24
     updated: 2020-06-24
@@ -17925,10 +16006,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-14
     created: 2020-06-24
     updated: 2020-06-24
@@ -17961,10 +16038,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-14
     created: 2020-06-24
     updated: 2020-06-24
@@ -18000,10 +16073,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-14
     created: 2020-06-24
     updated: 2020-06-25
@@ -18039,16 +16108,12 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-14
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-10
     tags:
     - 87
-    - 96
+    - 102
 - model: api.question
   pk: 485
   fields:
@@ -18076,10 +16141,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-14
     created: 2020-06-24
     updated: 2020-06-24
@@ -18113,16 +16174,12 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-14
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-10
     tags:
     - 39
-    - 95
+    - 101
 - model: api.question
   pk: 487
   fields:
@@ -18151,10 +16208,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-14
     created: 2020-06-24
     updated: 2020-06-24
@@ -18186,15 +16239,11 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-14
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-10
     tags:
-    - 94
+    - 100
 - model: api.question
   pk: 489
   fields:
@@ -18220,16 +16269,12 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-14
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-10
     tags:
     - 39
-    - 94
+    - 100
 - model: api.question
   pk: 490
   fields:
@@ -18258,10 +16303,6 @@
     validator: laydgeur
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-16
     created: 2020-06-24
     updated: 2020-06-25
@@ -18298,10 +16339,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-25
@@ -18337,10 +16374,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18380,10 +16413,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-25
@@ -18418,10 +16447,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-25
@@ -18453,10 +16478,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18487,10 +16508,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18523,10 +16540,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18558,10 +16571,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18592,10 +16601,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18630,10 +16635,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18670,10 +16671,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18706,10 +16703,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18743,10 +16736,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18780,16 +16769,12 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 16
     - 9
+    - 16
 - model: api.question
   pk: 505
   fields:
@@ -18815,10 +16800,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18850,10 +16831,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18885,10 +16862,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18918,17 +16891,13 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-10
     tags:
     - 1
     - 44
-    - 103
+    - 99
 - model: api.question
   pk: 509
   fields:
@@ -18954,10 +16923,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -18991,17 +16956,13 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-10
     tags:
     - 1
     - 33
-    - 102
+    - 98
 - model: api.question
   pk: 511
   fields:
@@ -19027,10 +16988,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19060,16 +17017,12 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-07-16
+    updated: 2020-07-04
     tags:
-    - 16
     - 9
+    - 16
 - model: api.question
   pk: 513
   fields:
@@ -19094,16 +17047,12 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-10
     tags:
     - 12
-    - 98
+    - 93
 - model: api.question
   pk: 514
   fields:
@@ -19129,10 +17078,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19163,10 +17108,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19197,10 +17138,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19230,10 +17167,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19264,10 +17197,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19298,10 +17227,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19341,16 +17266,12 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-07-16
+    updated: 2020-07-23
     tags:
     - 1
-    - 101
+    - 96
 - model: api.question
   pk: 521
   fields:
@@ -19378,10 +17299,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-07-10
@@ -19412,10 +17329,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19445,10 +17358,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19479,15 +17388,11 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-10
     tags:
-    - 100
+    - 95
 - model: api.question
   pk: 525
   fields:
@@ -19513,10 +17418,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19546,10 +17447,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19582,10 +17479,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19617,10 +17510,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19652,10 +17541,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -19687,10 +17572,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-18
     created: 2020-06-24
     updated: 2020-06-24
@@ -19721,13 +17602,9 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-18
     created: 2020-06-24
-    updated: 2020-07-16
+    updated: 2020-07-23
     tags:
     - 2
     - 31
@@ -19759,10 +17636,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-19
     created: 2020-06-24
     updated: 2020-06-24
@@ -19797,10 +17670,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-19
     created: 2020-06-24
     updated: 2020-06-25
@@ -19844,10 +17713,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-19
     created: 2020-06-24
     updated: 2020-06-25
@@ -19880,10 +17745,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-20
     created: 2020-06-24
     updated: 2020-06-24
@@ -19918,10 +17779,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-20
     created: 2020-06-24
     updated: 2020-06-24
@@ -19957,10 +17814,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-20
     created: 2020-06-24
     updated: 2020-06-24
@@ -19996,10 +17849,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-20
     created: 2020-06-24
     updated: 2020-06-24
@@ -20034,10 +17883,6 @@
     validator: Raphael Odini
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-20
     created: 2020-06-24
     updated: 2020-06-25
@@ -20070,10 +17915,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-20
     created: 2020-06-24
     updated: 2020-06-24
@@ -20111,15 +17952,11 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-20
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-10
     tags:
-    - 98
+    - 93
 - model: api.question
   pk: 542
   fields:
@@ -20145,10 +17982,6 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-20
     created: 2020-06-24
     updated: 2020-06-24
@@ -20159,8 +17992,8 @@
 - model: api.question
   pk: 543
   fields:
-    text: Entre 1990 et 1995, de combien ont baissé les émissions de CO2 de la Russie
-      ?
+    text: Entre 1990 et 1995 (effondrement de l'Union Soviétique), de combien ont
+      baissé les émissions de CO2 de la Russie ?
     hint: ''
     type: ''
     category: null
@@ -20181,13 +18014,9 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-20
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-07-23
     tags: []
 - model: api.question
   pk: 544
@@ -20217,16 +18046,12 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-20
     created: 2020-06-24
-    updated: 2020-06-25
+    updated: 2020-07-10
     tags:
     - 1
-    - 100
+    - 95
 - model: api.question
   pk: 545
   fields:
@@ -20254,10 +18079,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-22
     created: 2020-06-24
     updated: 2020-06-25
@@ -20290,10 +18111,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-22
     created: 2020-06-24
     updated: 2020-06-29
@@ -20326,10 +18143,6 @@
     validator: Matthieu Massart
     publish: false
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-22
     created: 2020-06-24
     updated: 2020-07-10
@@ -20361,10 +18174,6 @@
     validator: Matthieu Massart
     publish: false
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-22
     created: 2020-06-24
     updated: 2020-07-10
@@ -20398,10 +18207,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-25
     created: 2020-06-25
     updated: 2020-07-04
@@ -20438,10 +18243,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-25
     created: 2020-06-25
     updated: 2020-07-04
@@ -20476,10 +18277,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-25
     created: 2020-06-25
     updated: 2020-07-10
@@ -20515,13 +18312,9 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-25
     created: 2020-06-25
-    updated: 2020-07-16
+    updated: 2020-07-23
     tags:
     - 109
 - model: api.question
@@ -20552,10 +18345,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-25
     created: 2020-06-25
     updated: 2020-07-10
@@ -20588,10 +18377,6 @@
     validator: ''
     publish: false
     validation_status: Écartée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-22
     created: 2020-06-25
     updated: 2020-06-25
@@ -20627,10 +18412,6 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-22
     created: 2020-06-25
     updated: 2020-07-10
@@ -20671,13 +18452,9 @@
     validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-26
     created: 2020-06-29
-    updated: 2020-07-16
+    updated: 2020-07-23
     tags:
     - 40
     - 44
@@ -20706,10 +18483,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-30
     created: 2020-07-04
     updated: 2020-07-04
@@ -20739,10 +18512,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-30
     created: 2020-07-04
     updated: 2020-07-04
@@ -20774,10 +18543,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-30
     created: 2020-07-04
     updated: 2020-07-04
@@ -20808,10 +18573,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-30
     created: 2020-07-04
     updated: 2020-07-04
@@ -20841,10 +18602,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-30
     created: 2020-07-04
     updated: 2020-07-04
@@ -20875,10 +18632,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-30
     created: 2020-07-04
     updated: 2020-07-04
@@ -20909,10 +18662,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-30
     created: 2020-07-04
     updated: 2020-07-04
@@ -20943,10 +18692,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-30
     created: 2020-07-04
     updated: 2020-07-04
@@ -20979,10 +18724,6 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-06-30
     created: 2020-07-04
     updated: 2020-07-04
@@ -21018,13 +18759,43 @@
     validator: ''
     publish: false
     validation_status: A valider
-    answer_count: 0
-    answer_success_count: 0
-    like_count: 0
-    dislike_count: 0
     added: 2020-07-04
     created: 2020-07-04
     updated: 2020-07-04
     tags:
     - 2
     - 29
+- model: api.question
+  pk: 567
+  fields:
+    text: 'Vrai ou faux : le lavage de vos vêtements rejette plus de micro-plastiques
+      que votre voiture'
+    hint: ''
+    type: VF
+    category: 3
+    difficulty: 3
+    answer_option_a: Vrai
+    answer_option_b: Faux
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: Quand nous roulons, l’abrasion des pneus et l’usure des plaquettes
+      de freins provoquent des émissions de microparticules de plastique, évaluées
+      à 200,000 tonnes par an à l'échelle mondiale. Cela peut aller jusqu'à 4kg par
+      pneu. Ces particules se retrouvent dans les océans, les organismes marins, et
+      contribuent à la fonte des calottes glaciaires.
+    answer_accessible_url: https://usbeketrica.com/article/les-pneus-des-voitures-rejettent-des-microplastiques-transportes-jusqu-aux-oceans
+    answer_scientific_url: https://static.usbeketrica.com/images/thumb_840xh/5f10743fbc5ad.jpg
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Matthieu Massart
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-20
+    created: 2020-07-23
+    updated: 2020-07-23
+    tags:
+    - 26
