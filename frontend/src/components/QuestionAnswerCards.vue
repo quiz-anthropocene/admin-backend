@@ -221,6 +221,7 @@ export default {
   border-radius: 5px;
   margin: 10px 0px;
   padding: 10px;
+  background-color: white;
 }
 
 /* hint */

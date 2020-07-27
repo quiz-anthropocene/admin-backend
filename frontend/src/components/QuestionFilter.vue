@@ -3,18 +3,24 @@
 
     <!-- Header -->
     <div class="filter-box--header" :class="{ 'padding-bottom-10': showFilterBox }" @click="toggleFilterBox()">
-      <span class="label label-hidden">
-        <span>⚙️&nbsp;Filtres&nbsp;</span>
-        <span v-if="!showFilterBox">▸</span> <!-- ▲ ► -->
-        <span v-if="showFilterBox">▾</span> <!-- ▼ -->
-      </span>
-      <span v-for="(value, key) in questionFilters" :key="key">
-        <span v-if="(key === 'category') && value" class="label label-category">{{ value }}</span>
-        <span v-if="(key === 'tag') && value" class="label label-tag">{{ value }}</span>
-        <span v-if="(key === 'author') && value" class="label label-author">{{ value }}</span>
-        <span v-if="(key === 'difficulty') && value" class="label label-difficulty">{{ value }}</span>
-      </span>
-      <span class="label label-hidden" style="float:right"><strong>{{ questionsDisplayedCount }}</strong> Questions</span>
+      <div class="row no-gutters">
+        <div class="col-sm-8">
+          <span class="label label-hidden">
+            <span>⚙️&nbsp;Filtres&nbsp;</span>
+            <span v-if="!showFilterBox">▸</span> <!-- ▲ ► -->
+            <span v-if="showFilterBox">▾</span> <!-- ▼ -->
+          </span>
+          <span v-for="(value, key) in questionFilters" :key="key">
+            <span v-if="(key === 'category') && value" class="label label-category">{{ value }}</span>
+            <span v-if="(key === 'tag') && value" class="label label-tag">{{ value }}</span>
+            <span v-if="(key === 'author') && value" class="label label-author">{{ value }}</span>
+            <span v-if="(key === 'difficulty') && value" class="label label-difficulty"><DifficultyBadge v-bind:difficulty="value" /></span>
+          </span>
+        </div>
+        <div class="col-sm-4 text-align-right">
+          <span class="label label-hidden"><strong>{{ questionsDisplayedCount }}</strong> Questions</span>
+        </div>
+      </div>
     </div>
 
     <!-- Content -->
@@ -138,20 +144,20 @@ export default {
 
 <style scoped>
 .filter-box {
-  /* border: 1px solid var(--primary); */
   box-shadow: 0px 0px 5px 5px #dfdfdf;
   border-radius: 5px;
   margin: 10px 0px;
   padding: 10px;
+  max-height: 80vh;
+  overflow: auto;
 }
-
 .filter-box > .filter-box--header {
   text-align: left;
   cursor: pointer;
 }
 .filter-box > .filter-box--content {
   background-color: white;
-  max-height: 500px;
+  max-height: 50vh;
   overflow-y: scroll;
 }
 .filter-box > .filter-box--action {

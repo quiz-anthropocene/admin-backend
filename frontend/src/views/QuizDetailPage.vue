@@ -23,7 +23,7 @@
               </span>
             </div>
             <!-- <div v-if="quiz.tags && quiz.tags.length > 0" title="Tag(s) du quiz">🏷️&nbsp;Tag<span v-if="quiz.tags.length > 1">s</span>:&nbsp;{{ quiz.tags.join(', ') }}</div> -->
-            <div class="margin-left-right-5" title="Difficulté">🏆&nbsp;Difficulté:&nbsp;<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }}</strong></span></div>
+            <div class="margin-left-right-5" title="Difficulté">🏆&nbsp;Difficulté:&nbsp;<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }} / 4</strong></span></div>
             <div class="margin-left-right-5" title="Auteur du quiz">📝&nbsp;Auteur:&nbsp;<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span></div>
             <!-- <div title="Date de création du quiz">📊&nbsp;Crée le:&nbsp;{{ new Date(quiz.created).toLocaleString() }}</div> -->
           </div>

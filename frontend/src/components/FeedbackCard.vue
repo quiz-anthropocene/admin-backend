@@ -130,7 +130,7 @@ export default {
   border: 1px solid var(--primary);
   border-radius: 5px;
   margin: 10px 0px;
-  background-color: #F8F8F8;
+  background-color: white;
 }
 
 .btn-feedback {

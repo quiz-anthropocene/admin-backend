@@ -44,6 +44,16 @@ const routes = [
     ],
   },
   {
+    path: '/quiz',
+    name: 'quiz-list',
+    component: QuizListPage,
+  },
+  {
+    path: '/quiz/:quizId',
+    name: 'quiz-detail',
+    component: QuizDetailPage,
+  },
+  {
     path: '/categories',
     name: 'category-list',
     component: CategoryListPage,
@@ -72,16 +82,6 @@ const routes = [
     path: '/auteurs/:authorName',
     name: 'author-detail',
     component: AuthorDetailPage,
-  },
-  {
-    path: '/quiz',
-    name: 'quiz-list',
-    component: QuizListPage,
-  },
-  {
-    path: '/quiz/:quizId',
-    name: 'quiz-detail',
-    component: QuizDetailPage,
   },
   {
     path: '/a-propos',

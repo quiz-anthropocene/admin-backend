@@ -310,6 +310,9 @@ a.no-decoration {
 .text-align-left {
   text-align: left;
 }
+.text-align-right {
+  text-align: right;
+}
 
 span.no-wrap {
   white-space: nowrap;

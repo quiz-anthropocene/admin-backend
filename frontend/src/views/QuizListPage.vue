@@ -1,13 +1,13 @@
 <template>
   <section>
-    <br />
-
-    <h2>
-      Tous les quiz&nbsp;
-      <span v-if="quizzes" class="text-secondary"><small>{{ quizzes.length }}</small></span>
-    </h2>
-
-    <br />
+    <!-- Header -->
+    <section class="filter-box">
+      <div class="filter-box--header">
+        <div class="text-align-right">
+          <span class="label label-hidden"><strong>{{ quizzes.length }}</strong> Quiz</span>
+        </div>
+      </div>
+    </section>
 
     <div v-if="quizzes && quizzes.length === 0">
       Pas de quiz :(
@@ -76,6 +76,19 @@ export default {
 </script>
 
 <style scoped>
+.filter-box {
+  box-shadow: 0px 0px 5px 5px #dfdfdf;
+  border-radius: 5px;
+  margin: 10px 0px;
+  padding: 10px;
+  max-height: 80vh;
+  overflow: auto;
+}
+.filter-box > .filter-box--header {
+  text-align: left;
+  cursor: pointer;
+}
+
 .row > .col-sm-6 {
   padding-bottom: 20px;
 }
