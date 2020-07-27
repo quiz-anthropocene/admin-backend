@@ -395,7 +395,13 @@ class QuestionAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
     def get_readonly_fields(self, request, obj=None):
         return [f.name for f in obj._meta.fields]
 
+    def has_add_permission(self, request, obj=None):
+        return False
+
     def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
         return False
 
     def changelist_view(self, request, extra_context=None):
@@ -453,7 +459,35 @@ class QuestionFeedbackEventAdmin(admin.ModelAdmin, ExportMixin):
     def get_readonly_fields(self, request, obj=None):
         return [f.name for f in obj._meta.fields]
 
+    def has_add_permission(self, request, obj=None):
+        return False
+
     def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
+class QuestionAggStatAdmin(admin.ModelAdmin, ExportMixin):
+    list_display = (
+        "question_id",
+        "answer_count",
+        "answer_success_count",
+        "like_count",
+        "dislike_count",
+    )
+
+    def get_readonly_fields(self, request, obj=None):
+        return [f.name for f in obj._meta.fields]
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
         return False
 
 
@@ -472,7 +506,13 @@ class QuizAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
     def get_readonly_fields(self, request, obj=None):
         return [f.name for f in obj._meta.fields] + ["question_count"]
 
+    def has_add_permission(self, request, obj=None):
+        return False
+
     def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
         return False
 
     def changelist_view(self, request, extra_context=None):
@@ -511,28 +551,6 @@ class QuizAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
         return super().changelist_view(request, extra_context=extra_context)
 
 
-class QuestionAggStatAdmin(admin.ModelAdmin, ExportMixin):
-    list_display = (
-        "question_id",
-        "answer_count",
-        "answer_success_count",
-        "like_count",
-        "dislike_count",
-    )
-
-    def get_readonly_fields(self, request, obj=None):
-        return [f.name for f in obj._meta.fields]
-
-    def has_add_permission(self, request, obj=None):
-        return False
-
-    def has_change_permission(self, request, obj=None):
-        return False
-
-    def has_delete_permission(self, request, obj=None):
-        return False
-
-
 class QuizFeedbackEventAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
         "id",
@@ -552,7 +570,13 @@ class QuizFeedbackEventAdmin(admin.ModelAdmin, ExportMixin):
     def get_readonly_fields(self, request, obj=None):
         return [f.name for f in obj._meta.fields]
 
+    def has_add_permission(self, request, obj=None):
+        return False
+
     def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
         return False
 
 
@@ -572,7 +596,13 @@ class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
     def get_readonly_fields(self, request, obj=None):
         return [f.name for f in obj._meta.fields]
 
+    def has_add_permission(self, request, obj=None):
+        return False
+
     def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
         return False
 
     def changelist_view(self, request, extra_context=None):
@@ -621,8 +651,8 @@ class ContributionAdmin(admin.ModelAdmin, ExportMixin):
     def has_add_permission(self, request, obj=None):
         return False
 
-    # def has_change_permission(self, request, obj=None):
-    #     return False
+    def has_change_permission(self, request, obj=None):
+        return False
 
     def has_delete_permission(self, request, obj=None):
         return False
@@ -639,8 +669,8 @@ class GlossaryAdmin(admin.ModelAdmin, ExportMixin):
     def has_add_permission(self, request, obj=None):
         return False
 
-    # def has_change_permission(self, request, obj=None):
-    #     return False
+    def has_change_permission(self, request, obj=None):
+        return False
 
     def has_delete_permission(self, request, obj=None):
         return False

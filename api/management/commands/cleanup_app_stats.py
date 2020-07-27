@@ -18,7 +18,7 @@ def cleanup_question_answer_events():
 
     question_stats = QuestionAnswerEvent.objects.all()
     question_stats_df = pd.DataFrame.from_records(question_stats.values())
-    print(f"{question_stats_df.shape[0]} items")
+    print(f"{question_stats_df.shape[0]} new answers")
 
     if question_stats_df.shape[0]:
         # aggregate by question_id
@@ -102,7 +102,7 @@ def cleanup_question_feedback_events():
 
     question_feedbacks = QuestionFeedbackEvent.objects.all()
     question_feedbacks_df = pd.DataFrame.from_records(question_feedbacks.values())
-    print(f"{question_feedbacks_df.shape[0]} items")
+    print(f"{question_feedbacks_df.shape[0]} new feedbacks")
 
     if question_feedbacks_df.shape[0]:
         # aggregate by question_id

@@ -4,6 +4,7 @@
 
     <p class="text-muted">Mise à jour : 17 Juillet 2020</p>
 
+    <br />
     <h3>❓&nbsp;Questions</h3>
     <p>
       Il y a actuellement <strong>{{ question_count }}</strong> questions publiées,
@@ -19,7 +20,7 @@
     <br />
     <h3>🔗&nbsp;Réponses</h3>
     <p>
-      L'application totalise <strong>{{ stats.answer_count }}</strong> réponses (depuis la mise en ligne en Mars 2020).
+      L'application totalise <strong v-if="stats.total">{{ stats.total.question_answer_count }}</strong> réponses (depuis la mise en ligne en Mars 2020).
     </p>
 
     <br />

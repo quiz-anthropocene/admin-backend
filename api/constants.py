@@ -45,13 +45,6 @@ QUESTION_SOURCE_CHOICES = [
     (QUESTION_SOURCE_QUIZ, "Quiz"),
 ]
 
-CONTRIBUTION_TYPE_LIST = [
-    "nouvelle question",
-    "commentaire application",
-    "commentaire question",
-    "commentaire quiz",
-]
-
 DEFAULT_DAILY_STAT_HOUR_SPLIT = {
     str(h): {
         "question_answer_count": 0,
@@ -63,6 +56,15 @@ DEFAULT_DAILY_STAT_HOUR_SPLIT = {
     }
     for h in range(24)  # '0' à '23'
 }
+
+AGGREGATION_SCALE_CHOICE_LIST = ["total", "month", "week"]
+
+CONTRIBUTION_TYPE_LIST = [
+    "nouvelle question",
+    "commentaire application",
+    "commentaire question",
+    "commentaire quiz",
+]
 
 
 def daily_stat_hour_split_jsonfield_default_value():

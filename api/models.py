@@ -340,6 +340,11 @@ class QuestionAggStat(models.Model):
     )
 
 
+class QuestionAnswerEventQuerySet(models.QuerySet):
+    def from_quiz(self):
+        return self.filter(source=constants.QUESTION_SOURCE_QUIZ)
+
+
 class QuestionAnswerEvent(models.Model):
     question = models.ForeignKey(
         Question, null=True, on_delete=models.CASCADE, related_name="stats"
@@ -364,6 +369,8 @@ class QuestionAnswerEvent(models.Model):
         auto_now_add=True, help_text="La date & heure de la réponse"
     )
 
+    objects = QuestionAnswerEventQuerySet.as_manager()
+
 
 class QuestionFeedbackEventQuerySet(models.QuerySet):
     def liked(self):
@@ -371,6 +378,9 @@ class QuestionFeedbackEventQuerySet(models.QuerySet):
 
     def disliked(self):
         return self.filter(choice=constants.FEEDBACK_DISLIKE)
+
+    def from_quiz(self):
+        return self.filter(source=constants.QUESTION_SOURCE_QUIZ)
 
 
 class QuestionFeedbackEvent(models.Model):
@@ -563,6 +573,63 @@ class QuizFeedbackEvent(models.Model):
     objects = QuizFeedbackEventQuerySet.as_manager()
 
 
+class DailyStatManager(models.Manager):
+    def agg_count(self, field, scale="total", week_or_month_iso_number=None):
+        queryset = self
+        # scale
+        if scale not in constants.AGGREGATION_SCALE_CHOICE_LIST:
+            raise ValueError(
+                f"DailyStat agg: must be one of {constants.AGGREGATION_SCALE_CHOICE_LIST}"
+            )
+        if scale == "month":
+            queryset = queryset.filter(date__month=week_or_month_iso_number)
+        elif scale == "week":
+            queryset = queryset.filter(date__week=week_or_month_iso_number)
+        # field
+        queryset = queryset.aggregate(Sum(field))[field + "__sum"]
+        # returns None if aggregation is done on an empty queryset
+        return queryset or 0
+
+
+class DailyStat(models.Model):
+    date = models.DateField(help_text="Le jour de la statistique")
+    question_answer_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de questions répondues"
+    )
+    question_answer_from_quiz_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de questions répondues au sein de quizs"
+    )
+    quiz_answer_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de quizs répondus"
+    )
+    question_feedback_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de feedbacks aux questions"
+    )
+    question_feedback_from_quiz_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de feedbacks aux questions au sein de quizs"
+    )
+    quiz_feedback_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de feedbacks aux quizs"
+    )
+    hour_split = JSONField(
+        default=constants.daily_stat_hour_split_jsonfield_default_value,
+        help_text="Les statistiques par heure",
+    )
+    created = models.DateTimeField(
+        auto_now_add=True, help_text="La date & heure de la stat journalière"
+    )
+
+    objects = DailyStatManager()
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=["date"], name="unique stat date")
+        ]
+
+    def __str__(self):
+        return f"{self.date}"
+
+
 class Contribution(models.Model):
     text = models.TextField(
         blank=False,
@@ -615,67 +682,3 @@ class Glossary(models.Model):
 
     def __str__(self):
         return f"{self.name}"
-
-
-class DailyStatManager(models.Manager):
-    def overall_question_answer_count(self):
-        return self.aggregate(Sum("question_answer_count"))[
-            "question_answer_count__sum"
-        ]
-
-    def overall_question_answer_from_quiz_count(self):
-        return self.aggregate(Sum("question_answer_from_quiz_count"))[
-            "question_answer_from_quiz_count__sum"
-        ]
-
-    def overall_quiz_answer_count(self):
-        return self.aggregate(Sum("quiz_answer_count"))["quiz_answer_count__sum"]
-
-    def overall_question_feedback_count(self):
-        return self.aggregate(Sum("question_feedback_count"))[
-            "question_feedback_count__sum"
-        ]
-
-    def overall_question_feedback_from_quiz_count(self):
-        return self.aggregate(Sum("question_feedback_from_quiz_count"))[
-            "question_feedback_from_quiz_count__sum"
-        ]
-
-
-class DailyStat(models.Model):
-    date = models.DateField(help_text="Le jour de la statistique")
-    question_answer_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de questions répondues"
-    )
-    question_answer_from_quiz_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de questions répondues au sein de quizs"
-    )
-    quiz_answer_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de quizs répondus"
-    )
-    question_feedback_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de feedbacks aux questions"
-    )
-    question_feedback_from_quiz_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de feedbacks aux questions au sein de quizs"
-    )
-    quiz_feedback_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de feedbacks aux quizs"
-    )
-    hour_split = JSONField(
-        default=constants.daily_stat_hour_split_jsonfield_default_value,
-        help_text="Les statistiques par heure",
-    )
-    created = models.DateTimeField(
-        auto_now_add=True, help_text="La date & heure de la stat journalière"
-    )
-
-    objects = DailyStatManager()
-
-    class Meta:
-        constraints = [
-            models.UniqueConstraint(fields=["date"], name="unique stat date")
-        ]
-
-    def __str__(self):
-        return f"{self.date}"

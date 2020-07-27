@@ -1,4 +1,5 @@
 import random
+import datetime
 
 from django.db.models import Count, F
 from django.http import HttpResponse
@@ -384,20 +385,84 @@ def stats(request):
     #     .annotate(count=Count("publish"))
     #     .order_by("-count")
     # )
+    # publish / in validation
     question_publish_count = Question.objects.published().count()
     question_validation_status_in_progress_count = Question.objects.for_validation_status(
         constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS
     ).count()
-    question_answer_count = (
-        QuestionAnswerEvent.objects.count()
-        + DailyStat.objects.overall_question_answer_count()
+    # total question/quiz answer/feedback count
+    question_answer_count = QuestionAnswerEvent.objects.count() + DailyStat.objects.agg_count(
+        "question_answer_count"
+    )
+    question_answer_from_quiz_count = QuestionAnswerEvent.objects.from_quiz().count() + DailyStat.objects.agg_count(  # noqa
+        "question_answer_from_quiz_count"
+    )
+    quiz_answer_count = QuizAnswerEvent.objects.count() + DailyStat.objects.agg_count(
+        "quiz_answer_count"
+    )
+    question_feedback_count = QuestionFeedbackEvent.objects.count() + DailyStat.objects.agg_count(
+        "question_feedback_count"
+    )
+    question_feedback_from_quiz_count = QuestionFeedbackEvent.objects.from_quiz().count() + DailyStat.objects.agg_count(  # noqa
+        "question_feedback_from_quiz_count"
+    )
+    quiz_feedback_count = QuizFeedbackEvent.objects.count() + DailyStat.objects.agg_count(
+        "quiz_feedback_count"
+    )
+    # current month
+    current_month_iso_number = datetime.date.today().month
+    question_answer_count_current_month = QuestionAnswerEvent.objects.filter(
+        created__date__month=current_month_iso_number
+    ).count() + DailyStat.objects.agg_count(
+        "question_answer_count",
+        scale="month",
+        week_or_month_iso_number=current_month_iso_number,
+    )
+    quiz_answer_count_current_month = QuizAnswerEvent.objects.filter(
+        created__date__month=current_month_iso_number
+    ).count() + DailyStat.objects.agg_count(
+        "quiz_answer_count",
+        scale="month",
+        week_or_month_iso_number=current_month_iso_number,
+    )
+    # current week
+    current_week_iso_number = datetime.date.today().isocalendar()[1]
+    question_answer_count_current_week = QuestionAnswerEvent.objects.filter(
+        created__date__week=current_week_iso_number
+    ).count() + DailyStat.objects.agg_count(
+        "question_answer_count",
+        scale="week",
+        week_or_month_iso_number=current_week_iso_number,
+    )
+    quiz_answer_count_current_week = QuizAnswerEvent.objects.filter(
+        created__date__week=current_week_iso_number
+    ).count() + DailyStat.objects.agg_count(
+        "quiz_answer_count",
+        scale="week",
+        week_or_month_iso_number=current_week_iso_number,
     )
 
     return Response(
         {
             "question_publish_count": question_publish_count,
             "question_validation_status_in_progress_count": question_validation_status_in_progress_count,  # noqa
-            "answer_count": question_answer_count,
-            # "answer": question_answer_stats
+            "total": {
+                "question_answer_count": question_answer_count,
+                "question_answer_from_quiz_count": question_answer_from_quiz_count,
+                "quiz_answer_count": quiz_answer_count,
+                "question_feedback_count": question_feedback_count,
+                "question_feedback_from_quiz_count": question_feedback_from_quiz_count,
+                "quiz_feedback_count": quiz_feedback_count,
+            },
+            "current_month": {
+                "month_iso_number": current_month_iso_number,
+                "question_answer_count": question_answer_count_current_month,
+                "quiz_answer_count": quiz_answer_count_current_month,
+            },
+            "current_week": {
+                "week_iso_number": current_week_iso_number,
+                "question_answer_count": question_answer_count_current_week,
+                "quiz_answer_count": quiz_answer_count_current_week,
+            },
         }
     )

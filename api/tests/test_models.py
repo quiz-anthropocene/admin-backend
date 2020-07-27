@@ -74,10 +74,28 @@ class DailyStatModelTest(TestCase):
             date="2020-04-30", question_answer_count=10, question_feedback_count=5
         )
         DailyStat.objects.create(
-            date="2020-04-29", question_answer_count=2, question_feedback_count=1
+            date="2020-05-01", question_answer_count=2, question_feedback_count=1
         )
 
     def test_question_answer_count_count(self):
-        self.assertEqual(DailyStat.objects.overall_question_answer_count(), 12)
-        self.assertEqual(DailyStat.objects.overall_question_feedback_count(), 6)
-        self.assertEqual(DailyStat.objects.overall_quiz_answer_count(), 0)
+        self.assertEqual(DailyStat.objects.agg_count("question_answer_count"), 12)
+        self.assertEqual(DailyStat.objects.agg_count("question_feedback_count"), 6)
+        self.assertEqual(DailyStat.objects.agg_count("quiz_answer_count"), 0)
+        self.assertEqual(
+            DailyStat.objects.agg_count(
+                "question_answer_count", scale="week", week_or_month_iso_number=18
+            ),
+            12,
+        )
+        self.assertEqual(
+            DailyStat.objects.agg_count(
+                "question_answer_count", scale="month", week_or_month_iso_number=4
+            ),
+            10,
+        )
+        self.assertEqual(
+            DailyStat.objects.agg_count(
+                "question_feedback_count", scale="month", week_or_month_iso_number=5
+            ),
+            1,
+        )
