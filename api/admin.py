@@ -373,6 +373,43 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
     )
     show_image_background.allow_tags = True
 
+    def changelist_view(self, request, extra_context=None):
+        """
+        show chart of answers per day
+        https://dev.to/danihodovic/integrating-chart-js-with-django-admin-1kjb
+
+        Corresponding template in templates/admin/api/quiz/change_list.html
+        """
+        # custom form
+        current_quiz_id = int(request.POST.get("quiz_id", Quiz.objects.first().id))
+
+        # Aggregate answers per day
+        # chart_data_query = QuizAnswerEvent.objects.extra(select={"day": "date(created)"}) # sqlite
+        chart_data_query = QuizAnswerEvent.objects.for_quiz(
+            quiz_id=current_quiz_id
+        ).agg_timeseries()
+
+        # get answers since today
+        if len(chart_data_query) and (
+            str(chart_data_query[0]["day"]) != str(datetime.now().date())
+        ):
+            chart_data_list = [{"day": str(datetime.now().date()), "y": 0}] + list(
+                chart_data_query
+            )
+        else:
+            chart_data_list = list(chart_data_query)
+
+        # Serialize and attach the chart data to the template context
+        chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
+        extra_context = extra_context or {
+            "chart_data": chart_data_json,
+            "current_quiz_id": current_quiz_id,
+            "quiz_list": Quiz.objects.all(),
+        }
+
+        # Call the superclass changelist_view to render the page
+        return super().changelist_view(request, extra_context=extra_context)
+
 
 class QuestionAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
@@ -605,7 +642,6 @@ class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
 
         # Serialize and attach the chart data to the template context
         chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
-        print(chart_data_json)
         extra_context = extra_context or {"chart_data": chart_data_json}
 
         # Call the superclass changelist_view to render the page

@@ -485,12 +485,12 @@ def stats_dashboard(request):
     )
 
     quiz_answer_count_query = DailyStat.objects.agg_timeseries("quiz_answer_count")
-    quiz_answer_event_count_query = (
-        QuestionAnswerEvent.objects.from_quiz().agg_timeseries()
-    )
+    quiz_answer_event_count_query = QuizAnswerEvent.objects.agg_timeseries()
     quiz_answer_count_list = list(quiz_answer_count_query) + list(
         quiz_answer_event_count_query
     )
+    print(list(quiz_answer_count_query))
+    print(list(quiz_answer_event_count_query))
     quiz_answer_count_json = json.dumps(quiz_answer_count_list, cls=DjangoJSONEncoder)
 
     return render(
