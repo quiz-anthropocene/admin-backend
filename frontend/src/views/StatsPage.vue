@@ -25,26 +25,43 @@
 
     <br />
     <h3>📂&nbsp;Catégories</h3>
+    <p><i>cliquez sur une catégorie pour voir les questions associées</i></p>
     <p>
-      <FilterLabel v-for="category in categories" :key="category.name" filterType="category" v-bind:filterObject="category" />
+      <span v-for="category in categories" :key="category.name">
+        <router-link class="no-decoration" :to="{ name: 'question-list', query: { category: category.name } }">
+          <FilterLabel filterType="category" v-bind:filterObject="category" />
+        </router-link>
+      </span>
     </p>
 
     <br />
     <h3>🏷️&nbsp;Tags</h3>
     <p>
-      <FilterLabel v-for="tag in tags" :key="tag.name" filterType="tag" v-bind:filterObject="tag" />
+      <span v-for="tag in tags" :key="tag.name">
+        <router-link class="no-decoration" :to="{ name: 'question-list', query: { tag: tag.name } }">
+          <FilterLabel :key="tag.name" filterType="tag" v-bind:filterObject="tag" />
+        </router-link>
+      </span>
     </p>
 
     <br />
     <h3>✍️&nbsp;Auteurs</h3>
     <p>
-      <FilterLabel v-for="author in authors" :key="author.name" filterType="author" v-bind:filterObject="author" />
+      <span v-for="author in authors" :key="author.name">
+        <router-link class="no-decoration" :to="{ name: 'question-list', query: { author: author.name } }">
+          <FilterLabel :key="author.name" filterType="author" v-bind:filterObject="author" />
+        </router-link>
+      </span>
     </p>
 
     <br />
     <h3>🏆&nbsp;Difficulté</h3>
     <p>
-      <FilterLabel v-for="difficulty in difficultyLevels" :key="difficulty.name" filterType="difficulty" v-bind:filterObject="difficulty" />
+      <span v-for="difficulty in difficultyLevels" :key="difficulty.name">
+        <router-link class="no-decoration" :to="{ name: 'question-list', query: { difficulty: difficulty.value } }">
+          <FilterLabel :key="difficulty.name" filterType="difficulty" v-bind:filterObject="difficulty" />
+        </router-link>
+      </span>
     </p>
 
   </section>

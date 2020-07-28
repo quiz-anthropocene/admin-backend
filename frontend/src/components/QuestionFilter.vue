@@ -11,10 +11,10 @@
             <span v-if="showFilterBox">▾</span> <!-- ▼ -->
           </span>
           <span v-for="(value, key) in questionFilters" :key="key">
-            <span v-if="(key === 'category') && value" class="label label-category">{{ value }}</span>
-            <span v-if="(key === 'tag') && value" class="label label-tag">{{ value }}</span>
-            <span v-if="(key === 'author') && value" class="label label-author">{{ value }}</span>
-            <span v-if="(key === 'difficulty') && (value !== null)" class="label label-difficulty"><DifficultyBadge v-bind:difficulty="value" /></span>
+            <span v-if="(key === 'category') && value" class="label label-category">📂{{ value }}</span>
+            <span v-if="(key === 'tag') && value" class="label label-tag">🏷️{{ value }}</span>
+            <span v-if="(key === 'author') && value" class="label label-author">📝{{ value }}</span>
+            <span v-if="(key === 'difficulty') && Number.isInteger(value)" class="label label-difficulty"><DifficultyBadge v-bind:difficulty="value" /></span>
           </span>
         </div>
         <div class="col-sm-4 text-align-right">
@@ -86,7 +86,12 @@ export default {
 
   data() {
     return {
-      tempQuestionFilters: {},
+      tempQuestionFilters: {
+        category: null,
+        tag: null,
+        author: null,
+        difficulty: null,
+      },
       showFilterBox: false,
     };
   },
@@ -114,27 +119,36 @@ export default {
     },
   },
 
+  mounted() {
+    if (Object.keys(this.$route.query).length) {
+      Object.keys(this.$route.query).forEach((key) => {
+        if (this.$route.query[key] !== null) {
+          this.tempQuestionFilters[key] = this.$route.query[key];
+        }
+      });
+      this.updateQuestionFilters();
+    }
+  },
+
   methods: {
     toggleFilterBox() {
       this.showFilterBox = !this.showFilterBox;
       this.tempQuestionFilters = { ...this.questionFilters };
     },
     updateTempQuestionFilter(data) {
-      console.log(data, this.tempQuestionFilters);
       this.tempQuestionFilters[data.key] = (this.tempQuestionFilters[data.key] === data.value) ? null : data.value;
     },
     clearQuestionFilters() {
-      this.showFilterBox = !this.showFilterBox;
       this.tempQuestionFilters = {
         category: null,
         tag: null,
         author: null,
         difficulty: null,
       };
-      this.$store.dispatch('UPDATE_QUESTION_FILTERS', this.tempQuestionFilters);
+      this.updateQuestionFilters();
     },
     updateQuestionFilters() {
-      this.showFilterBox = !this.showFilterBox;
+      this.showFilterBox = false;
       this.$store.dispatch('UPDATE_QUESTION_FILTERS', this.tempQuestionFilters);
     },
   },

@@ -61,6 +61,9 @@ const store = new Vuex.Store({
       commit('UPDATE_LOADING_STATUS', false);
       commit('UPDATE_ERROR', null);
     },
+    /**
+     * Get questions
+     */
     GET_QUESTION_LIST: ({ commit }) => {
       commit('UPDATE_LOADING_STATUS', true);
       commit('UPDATE_ERROR', null);
@@ -128,6 +131,9 @@ const store = new Vuex.Store({
       });
       commit('SET_DIFFICULTY_LEVEL_LIST', { list: difficultyLevels });
     },
+    /**
+     * Get quizzes
+     */
     GET_QUIZ_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/quizzes`)
         .then((response) => response.json())
@@ -150,6 +156,9 @@ const store = new Vuex.Store({
       });
       commit('SET_QUIZ_LIST', { list: quizPublished });
     },
+    /**
+     * Get categories
+     */
     GET_CATEGORY_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/categories`)
         .then((response) => {
@@ -167,6 +176,9 @@ const store = new Vuex.Store({
     GET_CATEGORY_LIST_FROM_LOCAL_YAML: ({ commit }) => {
       commit('SET_CATEGORY_LIST', { list: processModelList(categoriesYamlData) });
     },
+    /**
+     * Get tags
+     */
     GET_TAG_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/tags`)
         .then((response) => response.json())
@@ -182,6 +194,9 @@ const store = new Vuex.Store({
       const tagsSorted = processModelList(tagsYamlData).sort((a, b) => a.name.localeCompare(b.name));
       commit('SET_TAG_LIST', { list: tagsSorted });
     },
+    /**
+     * Get authors
+     */
     GET_AUTHOR_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/authors`)
         .then((response) => response.json())
@@ -193,6 +208,9 @@ const store = new Vuex.Store({
           // this.error = error;
         });
     },
+    /**
+     * Get difficulty list
+     */
     GET_DIFFICULTY_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/difficulty-levels`)
         .then((response) => response.json())
@@ -204,6 +222,9 @@ const store = new Vuex.Store({
           // this.error = error;
         });
     },
+    /**
+     * Get glossary
+     */
     GET_GLOSSARY_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/glossary`)
         .then((response) => response.json())
@@ -229,12 +250,9 @@ const store = new Vuex.Store({
     GET_GLOSSARY_LIST_FROM_LOCAL_YAML: ({ commit }) => {
       commit('SET_GLOSSARY_LIST', { list: processModelList(glossaryYamlData) });
     },
-    UPDATE_QUESTION_FILTERS: ({ commit, state, getters }, filterObject) => {
-      const currentQuestionFilters = filterObject || state.questionFilters;
-      const questionsDisplayed = getters.getQuestionsByFilter(currentQuestionFilters);
-      commit('SET_QUESTION_FILTERS', { object: currentQuestionFilters });
-      commit('SET_QUESTIONS_DISPLAYED_LIST', { list: questionsDisplayed });
-    },
+    /**
+     * Get stats
+     */
     GET_STATS: ({ commit }) => {
       commit('UPDATE_LOADING_STATUS', true);
       commit('UPDATE_ERROR', null);
@@ -252,6 +270,15 @@ const store = new Vuex.Store({
           commit('UPDATE_ERROR', error);
           console.log(error);
         });
+    },
+    /**
+     * Update question filters
+     */
+    UPDATE_QUESTION_FILTERS: ({ commit, state, getters }, filterObject) => {
+      const currentQuestionFilters = filterObject || state.questionFilters;
+      const questionsDisplayed = getters.getQuestionsByFilter(currentQuestionFilters);
+      commit('SET_QUESTION_FILTERS', { object: currentQuestionFilters });
+      commit('SET_QUESTIONS_DISPLAYED_LIST', { list: questionsDisplayed });
     },
   },
   mutations: {
@@ -308,7 +335,7 @@ const store = new Vuex.Store({
     getQuestionsByFilter: (state) => (filter) => state.questions.filter((q) => (filter.category ? (q.category.name === filter.category) : true))
       .filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
       .filter((q) => (filter.author ? (q.author === filter.author) : true))
-      .filter((q) => (filter.difficulty !== null ? (q.difficulty === filter.difficulty) : true)),
+      .filter((q) => (Number.isInteger(filter.difficulty) ? (q.difficulty === filter.difficulty) : true)),
     getCurrentQuestionIndex: (state) => (currentQuestionId) => state.questionsDisplayed.findIndex((q) => q.id === currentQuestionId),
     getNextQuestionByFilter: (state) => (currentQuestionId) => {
       const currentQuestionIndex = currentQuestionId ? state.questionsDisplayed.findIndex((q) => q.id === currentQuestionId) : state.questionsDisplayed[0];
