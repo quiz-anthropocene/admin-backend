@@ -14,7 +14,7 @@
             <span v-if="(key === 'category') && value" class="label label-category">{{ value }}</span>
             <span v-if="(key === 'tag') && value" class="label label-tag">{{ value }}</span>
             <span v-if="(key === 'author') && value" class="label label-author">{{ value }}</span>
-            <span v-if="(key === 'difficulty') && value" class="label label-difficulty"><DifficultyBadge v-bind:difficulty="value" /></span>
+            <span v-if="(key === 'difficulty') && (value !== null)" class="label label-difficulty"><DifficultyBadge v-bind:difficulty="value" /></span>
           </span>
         </div>
         <div class="col-sm-4 text-align-right">
@@ -30,36 +30,32 @@
 
       <div v-if="categories">
         <h3>📂&nbsp;Catégories</h3>
-        <span v-for="category in categories" :key="category.name" class="label label-category label-category--with-hover" :class="{ 'label-category--active' : category.name === tempQuestionFilters['category'] }" @click="updateTempQuestionFilter('category', category.name)">
-          {{ category.name }} <small><i>{{ category.question_count }}</i></small>
-        </span>
+        <FilterLabel v-for="category in categories" :key="category.name" @filterLabelClicked="updateTempQuestionFilter"
+          filterType="category" v-bind:filterObject="category" v-bind:customClass="(category.name === tempQuestionFilters['category']) ? 'label-category--active' : ''" />
       </div>
 
       <hr class="custom-separator" />
 
       <div v-if="tags">
         <h3>🏷️&nbsp;Tags</h3>
-        <span v-for="tag in tags" :key="tag.name" class="label label-tag label-tag--with-hover" :class="{ 'label-tag--active' : tag.name === tempQuestionFilters['tag'] }" @click="updateTempQuestionFilter('tag', tag.name)">
-          {{ tag.name }} <small><i>{{ tag.question_count }}</i></small>
-        </span>
+        <FilterLabel v-for="tag in tags" :key="tag.name" @filterLabelClicked="updateTempQuestionFilter"
+          filterType="tag" v-bind:filterObject="tag" v-bind:customClass="(tag.name === tempQuestionFilters['tag']) ? 'label-tag--active' : ''" />
       </div>
 
       <hr class="custom-separator" />
 
       <div v-if="authors">
         <h3>📝&nbsp;Auteurs</h3>
-        <span v-for="author in authors" :key="author.name" class="label label-author label-author--with-hover" :class="{ 'label-author--active' : author.name === tempQuestionFilters['author'] }" @click="updateTempQuestionFilter('author', author.name)">
-          {{ author.name }} <small><i>{{ author.question_count }}</i></small>
-        </span>
+        <FilterLabel v-for="author in authors" :key="author.name" @filterLabelClicked="updateTempQuestionFilter"
+          filterType="author" v-bind:filterObject="author" v-bind:customClass="(author.name === tempQuestionFilters['author']) ? 'label-author--active' : ''" />
       </div>
 
       <hr class="custom-separator" />
 
       <div v-if="difficultyLevels">
         <h3>🏆&nbsp;Difficultés</h3>
-        <span v-for="difficulty in difficultyLevels" :key="difficulty.name" class="label label-difficulty label-difficulty--with-hover" :class="{ 'label-difficulty--active' : difficulty.value === tempQuestionFilters['difficulty'] }" @click="updateTempQuestionFilter('difficulty', difficulty.value)">
-          <small><DifficultyBadge v-bind:difficulty="difficulty.value" /></small> <small><i>{{ difficulty.question_count }}</i></small>
-        </span>
+        <FilterLabel v-for="difficulty in difficultyLevels" :key="difficulty.name" @filterLabelClicked="updateTempQuestionFilter"
+          filterType="difficulty" v-bind:filterObject="difficulty" v-bind:customClass="(difficulty.value === tempQuestionFilters['difficulty']) ? 'label-difficulty--active' : ''" />
       </div>
 
       <br />
@@ -76,6 +72,7 @@
 </template>
 
 <script>
+import FilterLabel from './FilterLabel.vue';
 import DifficultyBadge from './DifficultyBadge.vue';
 
 export default {
@@ -83,6 +80,7 @@ export default {
   props: {
   },
   components: {
+    FilterLabel,
     DifficultyBadge,
   },
 
@@ -121,8 +119,9 @@ export default {
       this.showFilterBox = !this.showFilterBox;
       this.tempQuestionFilters = { ...this.questionFilters };
     },
-    updateTempQuestionFilter(key, value) {
-      this.tempQuestionFilters[key] = (this.tempQuestionFilters[key] === value) ? null : value;
+    updateTempQuestionFilter(data) {
+      console.log(data, this.tempQuestionFilters);
+      this.tempQuestionFilters[data.key] = (this.tempQuestionFilters[data.key] === data.value) ? null : data.value;
     },
     clearQuestionFilters() {
       this.showFilterBox = !this.showFilterBox;

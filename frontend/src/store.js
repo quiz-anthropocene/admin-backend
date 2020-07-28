@@ -308,7 +308,7 @@ const store = new Vuex.Store({
     getQuestionsByFilter: (state) => (filter) => state.questions.filter((q) => (filter.category ? (q.category.name === filter.category) : true))
       .filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
       .filter((q) => (filter.author ? (q.author === filter.author) : true))
-      .filter((q) => (filter.difficulty ? (q.difficulty === filter.difficulty) : true)),
+      .filter((q) => (filter.difficulty !== null ? (q.difficulty === filter.difficulty) : true)),
     getCurrentQuestionIndex: (state) => (currentQuestionId) => state.questionsDisplayed.findIndex((q) => q.id === currentQuestionId),
     getNextQuestionByFilter: (state) => (currentQuestionId) => {
       const currentQuestionIndex = currentQuestionId ? state.questionsDisplayed.findIndex((q) => q.id === currentQuestionId) : state.questionsDisplayed[0];

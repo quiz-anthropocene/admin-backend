@@ -25,35 +25,34 @@
 
     <br />
     <h3>📂&nbsp;Catégories</h3>
-    Questions par catégories:
-    <ul>
-      <li v-for="category in categories" :key="category.name">
-        {{ category.name }}: <strong>{{ category.question_count }}</strong>
-      </li>
-    </ul>
+    <p>
+      <FilterLabel v-for="category in categories" :key="category.name" filterType="category" v-bind:filterObject="category" />
+    </p>
 
     <br />
     <h3>🏷️&nbsp;Tags</h3>
-    Questions par tags:
-    <ul>
-      <li v-for="tag in tags" :key="tag.name">
-        {{ tag.name }}: <strong>{{ tag.question_count }}</strong>
-      </li>
-    </ul>
+    <p>
+      <FilterLabel v-for="tag in tags" :key="tag.name" filterType="tag" v-bind:filterObject="tag" />
+    </p>
 
     <br />
     <h3>✍️&nbsp;Auteurs</h3>
-    Questions par auteurs:
-    <ul>
-      <li v-for="author in authors" :key="author.name">
-        {{ author.name }}: <strong>{{ author.question_count }}</strong>
-      </li>
-    </ul>
+    <p>
+      <FilterLabel v-for="author in authors" :key="author.name" filterType="author" v-bind:filterObject="author" />
+    </p>
+
+    <br />
+    <h3>🏆&nbsp;Difficulté</h3>
+    <p>
+      <FilterLabel v-for="difficulty in difficultyLevels" :key="difficulty.name" filterType="difficulty" v-bind:filterObject="difficulty" />
+    </p>
 
   </section>
 </template>
 
 <script>
+import FilterLabel from '../components/FilterLabel.vue';
+
 export default {
   name: 'StatsPage',
   metaInfo: {
@@ -64,6 +63,7 @@ export default {
     ],
   },
   components: {
+    FilterLabel,
   },
 
   data() {
@@ -96,6 +96,9 @@ export default {
       return this.$store.state.authors
         .filter((a) => a.question_count)
         .sort((a, b) => b.question_count - a.question_count);
+    },
+    difficultyLevels() {
+      return this.$store.state.difficultyLevels;
     },
     stats() {
       return this.$store.state.stats;
