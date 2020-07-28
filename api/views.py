@@ -473,21 +473,10 @@ def stats(request):
 
 @api_view(["GET"])
 def stats_dashboard(request):
-    question_answer_count_query = (
-        DailyStat.objects.extra(
-            select={"day": "to_char(date, 'YYYY-MM-DD')", "y": "question_answer_count"}
-        )
-        .values("day", "y")
-        .order_by("-day")
+    question_answer_count_query = DailyStat.objects.agg_timeseries(
+        "question_answer_count"
     )
-    question_answer_event_count_query = (
-        QuestionAnswerEvent.objects.extra(
-            select={"day": "to_char(created, 'YYYY-MM-DD')"}
-        )
-        .values("day")
-        .annotate(y=Count("created"))
-        .order_by("-day")
-    )
+    question_answer_event_count_query = QuestionAnswerEvent.objects.agg_timeseries()
     question_answer_count_list = list(question_answer_count_query) + list(
         question_answer_event_count_query
     )
@@ -495,18 +484,9 @@ def stats_dashboard(request):
         question_answer_count_list, cls=DjangoJSONEncoder
     )
 
-    quiz_answer_count_query = (
-        DailyStat.objects.extra(
-            select={"day": "to_char(date, 'YYYY-MM-DD')", "y": "quiz_answer_count"}
-        )
-        .values("day", "y")
-        .order_by("-day")
-    )
+    quiz_answer_count_query = DailyStat.objects.agg_timeseries("quiz_answer_count")
     quiz_answer_event_count_query = (
-        QuizAnswerEvent.objects.extra(select={"day": "to_char(created, 'YYYY-MM-DD')"})
-        .values("day")
-        .annotate(y=Count("created"))
-        .order_by("-day")
+        QuestionAnswerEvent.objects.from_quiz().agg_timeseries()
     )
     quiz_answer_count_list = list(quiz_answer_count_query) + list(
         quiz_answer_event_count_query

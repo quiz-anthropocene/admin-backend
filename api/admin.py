@@ -9,7 +9,6 @@ from django.conf import settings
 from django.contrib import admin
 from django.core import serializers
 from django.core.serializers.json import DjangoJSONEncoder
-from django.db.models import Count
 from django.utils.html import mark_safe
 
 from import_export import fields, resources
@@ -412,14 +411,7 @@ class QuestionAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
         Corresponding template in templates/admin/api/questionanswerevent/change_list.html
         """
         # Aggregate answers per day
-        chart_data_query = (
-            QuestionAnswerEvent.objects.extra(
-                select={"day": "to_char(created, 'YYYY-MM-DD')"}
-            )
-            .values("day")
-            .annotate(y=Count("created"))
-            .order_by("-day")
-        )
+        chart_data_query = QuestionAnswerEvent.objects.agg_timeseries()
 
         # get answers since today
         if len(chart_data_query) and (
@@ -432,8 +424,8 @@ class QuestionAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
             chart_data_list = list(chart_data_query)
 
         # Serialize and attach the chart data to the template context
-        as_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
-        extra_context = extra_context or {"chart_data": as_json}
+        chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
+        extra_context = extra_context or {"chart_data": chart_data_json}
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)
@@ -524,14 +516,7 @@ class QuizAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
         """
         # Aggregate answers per day
         # chart_data_query = QuizAnswerEvent.objects.extra(select={"day": "date(created)"}) # sqlite
-        chart_data_query = (
-            QuizAnswerEvent.objects.extra(
-                select={"day": "to_char(created, 'YYYY-MM-DD')"}
-            )
-            .values("day")
-            .annotate(y=Count("created"))
-            .order_by("-day")
-        )
+        chart_data_query = QuizAnswerEvent.objects.agg_timeseries()
 
         # get answers since today
         if len(chart_data_query) and (
@@ -544,8 +529,8 @@ class QuizAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
             chart_data_list = list(chart_data_query)
 
         # Serialize and attach the chart data to the template context
-        as_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
-        extra_context = extra_context or {"chart_data": as_json}
+        chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
+        extra_context = extra_context or {"chart_data": chart_data_json}
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)
@@ -614,23 +599,14 @@ class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
         """
         # Aggregate answers per day
         # chart_data_query = DailyStat.objects.extra(select={"day": "date(date)"}) # sqlite
-        chart_data_query = (
-            DailyStat.objects.extra(
-                select={
-                    "day": "to_char(date, 'YYYY-MM-DD')",
-                    "y": "question_answer_count",
-                }
-            )
-            .values("day", "y")
-            .order_by("-day")
-        )
+        chart_data_query = DailyStat.objects.agg_timeseries("question_answer_count")
 
         chart_data_list = list(chart_data_query)
 
         # Serialize and attach the chart data to the template context
-        as_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
-        print(as_json)
-        extra_context = extra_context or {"chart_data": as_json}
+        chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
+        print(chart_data_json)
+        extra_context = extra_context or {"chart_data": chart_data_json}
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)
