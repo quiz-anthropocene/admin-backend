@@ -7,6 +7,9 @@
           <QuestionPreviewCard v-bind:question="question" />
         </router-link>
       </div>
+      <p v-if="questionsDisplayed.length === 0">
+        Aucune question trouvée avec les filtres selectionnés.
+      </p>
     </div>
   </section>
 </template>

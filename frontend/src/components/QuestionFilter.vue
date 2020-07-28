@@ -4,9 +4,9 @@
     <!-- Header -->
     <div class="filter-box--header" :class="{ 'padding-bottom-10': showFilterBox }" @click="toggleFilterBox()">
       <div class="row no-gutters">
-        <div class="col-sm-8">
+        <div class="col-8">
           <span class="label label-hidden">
-            <span>⚙️&nbsp;Filtres&nbsp;</span>
+            <span>⚙️Filtres&nbsp;</span>
             <span v-if="!showFilterBox">▸</span> <!-- ▲ ► -->
             <span v-if="showFilterBox">▾</span> <!-- ▼ -->
           </span>
@@ -17,7 +17,7 @@
             <span v-if="(key === 'difficulty') && Number.isInteger(value)" class="label label-difficulty"><DifficultyBadge v-bind:difficulty="value" /></span>
           </span>
         </div>
-        <div class="col-sm-4 text-align-right">
+        <div class="col-4 text-align-right">
           <span class="label label-hidden"><strong>{{ questionsDisplayedCount }}</strong> Questions</span>
         </div>
       </div>
@@ -161,8 +161,8 @@ export default {
   border-radius: 5px;
   margin: 10px 0px;
   padding: 10px;
-  max-height: 80vh;
-  overflow: auto;
+  /* max-height: 85vh;
+  overflow: auto; */
 }
 .filter-box > .filter-box--header {
   text-align: left;
@@ -170,7 +170,7 @@ export default {
 }
 .filter-box > .filter-box--content {
   background-color: white;
-  max-height: 50vh;
+  max-height: 65vh;
   overflow-y: scroll;
 }
 .filter-box > .filter-box--action {

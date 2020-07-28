@@ -71,7 +71,11 @@ export default {
     questionFilters (newQuestionFilters, oldQuestionFilters) {
       if (newQuestionFilters) {
         const nextQuestion = this.$store.getters.getNextQuestionByFilter();
-        this.$router.push({ name: 'question-detail', params: { questionId: nextQuestion.id } });
+        if (nextQuestion) {
+          this.$router.push({ name: 'question-detail', params: { questionId: nextQuestion.id } });
+        } else {
+          this.$router.push({ name: 'question-list' });
+        }
       }
     },
   },
