@@ -1,14 +1,14 @@
 <template>
-  <section class="filter-box">
+  <section class="filter-box" :class="{ 'background-color-dark-grey': showFilterBox }">
 
     <!-- Header -->
-    <div class="filter-box--header" :class="{ 'padding-bottom-10': showFilterBox }" @click="toggleFilterBox()">
+    <div class="filter-box--header" :class="{ 'padding-bottom-5': showFilterBox }" @click="toggleFilterBox()">
       <div class="row no-gutters">
         <div class="col-8">
           <span class="label label-hidden">
-            <span>⚙️Filtres&nbsp;</span>
-            <span v-if="!showFilterBox">▸</span> <!-- ▲ ► -->
-            <span v-if="showFilterBox">▾</span> <!-- ▼ -->
+            <span>⚙️&nbsp;<strong>Filtres</strong></span>
+            <span v-if="!showFilterBox">&nbsp;▸</span> <!-- ▲ ► -->
+            <span v-if="showFilterBox">&nbsp;▾</span> <!-- ▼ -->
           </span>
           <span v-for="(value, key) in questionFilters" :key="key">
             <span v-if="(key === 'category') && value" class="label label-category">📂{{ value }}</span>
@@ -157,12 +157,11 @@ export default {
 
 <style scoped>
 .filter-box {
-  box-shadow: 0px 0px 5px 5px #dfdfdf;
+  /* background-color: #ebebeb; */
+  box-shadow: 0px 0px 5px 5px #c5c5c5;
   border-radius: 5px;
   margin: 10px 0px;
-  padding: 10px;
-  /* max-height: 85vh;
-  overflow: auto; */
+  padding: 5px;
 }
 .filter-box > .filter-box--header {
   text-align: left;
@@ -170,10 +169,11 @@ export default {
 }
 .filter-box > .filter-box--content {
   background-color: white;
-  max-height: 65vh;
+  /* max-height: 65vh; */
+  max-height: 50vh;
   overflow-y: scroll;
 }
 .filter-box > .filter-box--action {
-  padding-top: 10px;
+  padding-top: 5px;
 }
 </style>

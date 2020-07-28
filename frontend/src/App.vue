@@ -272,6 +272,9 @@ a.no-decoration {
 .padding-top-10 {
   padding-top: 10px;
 }
+.padding-bottom-5 {
+  padding-bottom: 5px;
+}
 .padding-bottom-10 {
   padding-bottom: 10px;
 }
@@ -292,6 +295,10 @@ a.no-decoration {
 }
 .color-tag {
   color: $tag-color;
+}
+
+.background-color-dark-grey {
+  background-color: #ebebeb;
 }
 
 .text-underline-primary {
@@ -342,6 +349,7 @@ span.no-wrap {
 }
 .label-hidden {
   border: 1px transparent;
+  padding: 2.5px;
   // cursor: auto;
 }
 .label-category {

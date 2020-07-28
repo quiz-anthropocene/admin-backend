@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="alert alert-warning" role="alert">
-      <i v-if="questionsCount">Il y a actuellement {{ questionsCount }} questions. </i>
+      <i v-if="questionsCount">Il y a actuellement {{ questionsCount }} questions et {{ quizCount }} quiz. </i>
       <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus !</i>
     </div>
 
@@ -26,7 +26,6 @@
             </svg>
             <h3>
               Explorer et filtrer grâce aux <span class="text-secondary">catégories</span> & <span class="color-tag">tags</span>
-              <!-- <small>(tags à venir)</small> -->
             </h3>
           </div>
           <div class="col-sm padding-top-bottom-15">
@@ -46,19 +45,19 @@
     <br />
 
     <div class="row justify-content-md-center">
-      <div class="col-sm-4" v-if="questionsCount">
+      <div class="col-sm-6" v-if="questionsCount">
         <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
           <button class="btn btn-outline-primary btn-lg btn-block">
             🕹&nbsp;<strong>Tous les quiz</strong>
           </button>
         </router-link>
       </div>
-      <div class="col-sm-4" v-if="questionSameFilterNextId">
+      <!-- <div class="col-sm-4" v-if="questionSameFilterNextId">
         <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: questionSameFilterNextId } }">
           <button class="btn btn-outline-primary btn-lg btn-block">🔀&nbsp;<strong>Une question au hasard</strong></button>
         </router-link>
-      </div>
-      <div class="col-sm-4" v-if="questionsCount">
+      </div> -->
+      <div class="col-sm-6" v-if="questionsCount">
         <router-link class="no-decoration" :to="{ name: 'question-list' }">
           <button class="btn btn-outline-primary btn-lg btn-block">❓&nbsp;<strong>Toutes les questions</strong></button>
         </router-link>
@@ -78,6 +77,9 @@ export default {
   },
 
   computed: {
+    quizCount() {
+      return this.$store.state.quizzes.length;
+    },
     questionsCount() {
       return this.$store.state.questions.length;
     },
@@ -117,7 +119,7 @@ svg {
   transform: scale(1.03);
 }
 
-.row > .col-sm-4 {
+.row > .col-sm-6 {
   padding-bottom: 20px;
 }
 

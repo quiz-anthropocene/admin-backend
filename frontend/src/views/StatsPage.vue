@@ -55,7 +55,7 @@
     </p>
 
     <br />
-    <h3>🏆&nbsp;Difficulté</h3>
+    <h3>🏆&nbsp;Niveaux de difficulté</h3>
     <p>
       <span v-for="difficulty in difficultyLevels" :key="difficulty.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { difficulty: difficulty.value } }">
