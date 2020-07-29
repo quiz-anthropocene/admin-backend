@@ -57,7 +57,8 @@ DEFAULT_DAILY_STAT_HOUR_SPLIT = {
     for h in range(24)  # '0' à '23'
 }
 
-AGGREGATION_SCALE_CHOICE_LIST = ["total", "month", "week"]
+AGGREGATION_SINCE_CHOICE_LIST = ["total", "month", "week"]
+AGGREGATION_SCALE_CHOICE_LIST = ["day", "week", "month"]
 
 CONTRIBUTION_TYPE_LIST = [
     "nouvelle question",

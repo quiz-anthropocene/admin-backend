@@ -83,19 +83,19 @@ class DailyStatModelTest(TestCase):
         self.assertEqual(DailyStat.objects.agg_count("quiz_answer_count"), 0)
         self.assertEqual(
             DailyStat.objects.agg_count(
-                "question_answer_count", scale="week", week_or_month_iso_number=18
+                "question_answer_count", since="week", week_or_month_iso_number=18
             ),
             12,
         )
         self.assertEqual(
             DailyStat.objects.agg_count(
-                "question_answer_count", scale="month", week_or_month_iso_number=4
+                "question_answer_count", since="month", week_or_month_iso_number=4
             ),
             10,
         )
         self.assertEqual(
             DailyStat.objects.agg_count(
-                "question_feedback_count", scale="month", week_or_month_iso_number=5
+                "question_feedback_count", since="month", week_or_month_iso_number=5
             ),
             1,
         )

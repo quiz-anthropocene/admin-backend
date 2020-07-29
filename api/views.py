@@ -418,14 +418,14 @@ def stats(request):
         created__date__month=current_month_iso_number
     ).count() + DailyStat.objects.agg_count(
         "question_answer_count",
-        scale="month",
+        since="month",
         week_or_month_iso_number=current_month_iso_number,
     )
     quiz_answer_count_current_month = QuizAnswerEvent.objects.filter(
         created__date__month=current_month_iso_number
     ).count() + DailyStat.objects.agg_count(
         "quiz_answer_count",
-        scale="month",
+        since="month",
         week_or_month_iso_number=current_month_iso_number,
     )
     # current week
@@ -434,14 +434,14 @@ def stats(request):
         created__date__week=current_week_iso_number
     ).count() + DailyStat.objects.agg_count(
         "question_answer_count",
-        scale="week",
+        since="week",
         week_or_month_iso_number=current_week_iso_number,
     )
     quiz_answer_count_current_week = QuizAnswerEvent.objects.filter(
         created__date__week=current_week_iso_number
     ).count() + DailyStat.objects.agg_count(
         "quiz_answer_count",
-        scale="week",
+        since="week",
         week_or_month_iso_number=current_week_iso_number,
     )
 
@@ -474,7 +474,7 @@ def stats(request):
 @api_view(["GET"])
 def stats_dashboard(request):
     question_answer_count_query = DailyStat.objects.agg_timeseries(
-        "question_answer_count"
+        "question_answer_count", scale="day"
     )
     question_answer_event_count_query = QuestionAnswerEvent.objects.agg_timeseries()
     question_answer_count_list = list(question_answer_count_query) + list(
@@ -489,8 +489,6 @@ def stats_dashboard(request):
     quiz_answer_count_list = list(quiz_answer_count_query) + list(
         quiz_answer_event_count_query
     )
-    print(list(quiz_answer_count_query))
-    print(list(quiz_answer_event_count_query))
     quiz_answer_count_json = json.dumps(quiz_answer_count_list, cls=DjangoJSONEncoder)
 
     return render(

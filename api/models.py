@@ -1,3 +1,5 @@
+from datetime import datetime, timedelta
+
 from django.db import models
 from django.db.models import Avg, Sum, Count
 from django.contrib.postgres.fields import JSONField
@@ -353,7 +355,7 @@ class QuestionAnswerEventQuerySet(models.QuerySet):
             queryset.extra(select={"day": "to_char(created, 'YYYY-MM-DD')"})
             .values("day")
             .annotate(y=Count("created"))
-            .order_by("-day")
+            .order_by("day")
         )
         return queryset
 
@@ -556,7 +558,7 @@ class QuizAnswerEventQuerySet(models.QuerySet):
             queryset.extra(select={"day": "to_char(created, 'YYYY-MM-DD')"})
             .values("day")
             .annotate(y=Count("created"))
-            .order_by("-day")
+            .order_by("day")
         )
         return queryset
 
@@ -613,14 +615,14 @@ class DailyStatManager(models.Manager):
     def agg_count(
         self,
         field="question_answer_count",
-        scale="total",
+        scale="total",  # since
         week_or_month_iso_number=None,
     ):
         queryset = self
         # scale
-        if scale not in constants.AGGREGATION_SCALE_CHOICE_LIST:
+        if scale not in constants.AGGREGATION_SINCE_CHOICE_LIST:
             raise ValueError(
-                f"DailyStat agg: must be one of {constants.AGGREGATION_SCALE_CHOICE_LIST}"
+                f"DailyStat agg_count: must be one of {constants.AGGREGATION_SINCE_CHOICE_LIST}"
             )
         if scale == "month":
             queryset = queryset.filter(date__month=week_or_month_iso_number)
@@ -631,13 +633,56 @@ class DailyStatManager(models.Manager):
         # returns None if aggregation is done on an empty queryset
         return queryset or 0
 
-    def agg_timeseries(self, field="question_answer_count"):
+    def agg_timeseries(self, field="question_answer_count", scale="day"):
         queryset = self
-        queryset = (
-            queryset.extra(select={"day": "to_char(date, 'YYYY-MM-DD')", "y": field})
-            .values("day", "y")
-            .order_by("-day")
-        )
+        # scale
+        if scale not in constants.AGGREGATION_SCALE_CHOICE_LIST:
+            raise ValueError(
+                f"DailyStat agg_timeseries: must be one of {constants.AGGREGATION_SCALE_CHOICE_LIST}"  # noqa
+            )
+        if scale in ["day", "week"]:
+            queryset = (
+                queryset.extra(
+                    select={"day": "to_char(date, 'YYYY-MM-DD')", "y": field}
+                )
+                .values("day", "y")
+                .order_by("day")
+            )
+            if scale == "week":
+                # need to group by start-of-week dates
+                queryset_grouped_by_week = []
+                for elem in queryset:
+                    elem_date = datetime.strptime(elem["day"], "%Y-%m-%d")
+                    elem_week_start_date = elem_date - timedelta(
+                        days=elem_date.weekday()
+                    )
+                    elem_week_start_date_str = elem_week_start_date.strftime("%Y-%m-%d")
+                    elem_week_start_date_index = next(
+                        (
+                            index
+                            for (index, d) in enumerate(queryset_grouped_by_week)
+                            if d["day"] == elem_week_start_date_str
+                        ),
+                        None,
+                    )
+                    if elem_week_start_date_index is None:
+                        queryset_grouped_by_week.append(
+                            {"day": elem_week_start_date_str, "y": elem["y"]}
+                        )
+                    else:
+                        queryset_grouped_by_week[elem_week_start_date_index][
+                            "y"
+                        ] += elem["y"]
+                return queryset_grouped_by_week
+
+        if scale == "month":
+            queryset = (
+                queryset.extra(select={"day": "to_char(date, 'YYYY-MM-01')"})
+                .values("day")
+                .annotate(y=Count(field))
+                .order_by("day")
+            )
+
         return queryset
 
 

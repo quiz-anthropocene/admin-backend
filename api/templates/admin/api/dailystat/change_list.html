@@ -38,12 +38,13 @@
             {
               type: 'time',
               time: {
-                unit: 'day',
+                unit: '{{ current_scale | safe }}', // 'day',
                 round: 'day',
                 tooltipFormat: 'ddd, D/MM',
                 displayFormats: {
                   day: 'D/MM',
                 },
+                isoWeekday: true
               },
             },
           ],
@@ -51,6 +52,7 @@
             {
               ticks: {
                 beginAtZero: true,
+                precision: 0
               },
             },
           ],
@@ -63,6 +65,15 @@
 {% endblock %}
 
 {% block content %}
+<form method="POST">
+  {% csrf_token %}
+  <select name="scale" id="id_scale">
+    {% for scale_option in scale_choice_list %}
+      <option value="{{ scale_option }}" {% if current_scale == scale_option %}selected{% endif %}>{{ scale_option }}</option>
+    {% endfor %}
+  </select>
+  <input type="submit" value="Aggregate">
+</form>
 <div style="width: 100%">
   <canvas id="myChart" style="margin-bottom: 70px; width: 80%; height: 20%;"></canvas>
 </div>

@@ -17,6 +17,7 @@ from import_export.admin import ImportExportModelAdmin, DEFAULT_FORMATS
 
 # from django.core.management import call_command
 
+from api import constants
 from api import utilities_notion
 from api.models import (
     Question,
@@ -382,6 +383,9 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
         """
         # custom form
         current_quiz_id = int(request.POST.get("quiz_id", Quiz.objects.first().id))
+        current_scale = str(
+            request.POST.get("scale", constants.AGGREGATION_SCALE_CHOICE_LIST[0])
+        )
 
         # Aggregate answers per day
         # chart_data_query = QuizAnswerEvent.objects.extra(select={"day": "date(created)"}) # sqlite
@@ -389,22 +393,22 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
             quiz_id=current_quiz_id
         ).agg_timeseries()
 
+        chart_data_list = list(chart_data_query)
+
         # get answers since today
-        if len(chart_data_query) and (
-            str(chart_data_query[0]["day"]) != str(datetime.now().date())
+        if len(chart_data_list) and (
+            str(chart_data_list[-1]["day"]) != str(datetime.now().date())
         ):
-            chart_data_list = [{"day": str(datetime.now().date()), "y": 0}] + list(
-                chart_data_query
-            )
-        else:
-            chart_data_list = list(chart_data_query)
+            chart_data_list += [{"day": str(datetime.now().date()), "y": 0}]
 
         # Serialize and attach the chart data to the template context
         chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
         extra_context = extra_context or {
             "chart_data": chart_data_json,
             "current_quiz_id": current_quiz_id,
-            "quiz_list": Quiz.objects.all(),
+            "scale_choice_list": constants.AGGREGATION_SCALE_CHOICE_LIST,
+            "current_scale": current_scale,
+            "quiz_list": Quiz.objects.all().order_by("id"),
         }
 
         # Call the superclass changelist_view to render the page
@@ -450,15 +454,13 @@ class QuestionAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
         # Aggregate answers per day
         chart_data_query = QuestionAnswerEvent.objects.agg_timeseries()
 
+        chart_data_list = list(chart_data_query)
+
         # get answers since today
-        if len(chart_data_query) and (
-            str(chart_data_query[0]["day"]) != str(datetime.now().date())
+        if len(chart_data_list) and (
+            str(chart_data_list[-1]["day"]) != str(datetime.now().date())
         ):
-            chart_data_list = [{"day": str(datetime.now().date()), "y": 0}] + list(
-                chart_data_query
-            )
-        else:
-            chart_data_list = list(chart_data_query)
+            chart_data_list += [{"day": str(datetime.now().date()), "y": 0}]
 
         # Serialize and attach the chart data to the template context
         chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
@@ -555,15 +557,13 @@ class QuizAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
         # chart_data_query = QuizAnswerEvent.objects.extra(select={"day": "date(created)"}) # sqlite
         chart_data_query = QuizAnswerEvent.objects.agg_timeseries()
 
+        chart_data_list = list(chart_data_query)
+
         # get answers since today
-        if len(chart_data_query) and (
-            str(chart_data_query[0]["day"]) != str(datetime.now().date())
+        if len(chart_data_list) and (
+            str(chart_data_list[-1]["day"]) != str(datetime.now().date())
         ):
-            chart_data_list = [{"day": str(datetime.now().date()), "y": 0}] + list(
-                chart_data_query
-            )
-        else:
-            chart_data_list = list(chart_data_query)
+            chart_data_list += [{"day": str(datetime.now().date()), "y": 0}]
 
         # Serialize and attach the chart data to the template context
         chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
@@ -634,15 +634,29 @@ class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
 
         Corresponding template in templates/admin/api/dailystat/change_list.html
         """
+        # custom form
+        current_scale = str(
+            request.POST.get("scale", constants.AGGREGATION_SCALE_CHOICE_LIST[0])
+        )
+
         # Aggregate answers per day
         # chart_data_query = DailyStat.objects.extra(select={"day": "date(date)"}) # sqlite
-        chart_data_query = DailyStat.objects.agg_timeseries("question_answer_count")
+        chart_data_query = DailyStat.objects.agg_timeseries(
+            "question_answer_count", scale=current_scale
+        )
 
         chart_data_list = list(chart_data_query)
 
+        # get answers since today ?
+        # no, need to run script to populate the values
+
         # Serialize and attach the chart data to the template context
         chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
-        extra_context = extra_context or {"chart_data": chart_data_json}
+        extra_context = extra_context or {
+            "chart_data": chart_data_json,
+            "scale_choice_list": constants.AGGREGATION_SCALE_CHOICE_LIST,
+            "current_scale": current_scale,
+        }
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)

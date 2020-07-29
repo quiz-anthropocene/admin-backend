@@ -44,6 +44,7 @@
                 displayFormats: {
                   day: 'D/MM',
                 },
+                isoWeekday: true
               },
             },
           ],
@@ -51,6 +52,7 @@
             {
               ticks: {
                 beginAtZero: true,
+                precision: 0
               },
             },
           ],
@@ -65,11 +67,16 @@
 {% block content %}
 <form method="POST">
   {% csrf_token %}
-  <select name="quiz_id" if="id_quiz_id">
+  <select name="quiz_id" id="id_quiz_id">
     {% for quiz in quiz_list %}
-    <option value="{{ quiz.id }}" {% if current_quiz_id == quiz.id %}selected{% endif %}>{{ quiz.id }} - {{ quiz.name }}</option>
+      <option value="{{ quiz.id }}" {% if current_quiz_id == quiz.id %}selected{% endif %}>{{ quiz.id }} - {{ quiz.name }}</option>
     {% endfor %}
   </select>
+  <!-- <select name="scale" id="id_scale">
+    {% for scale_option in scale_choice_list %}
+      <option value="{{ scale_option }}" {% if current_scale == scale_option %}selected{% endif %}>{{ scale_option }}</option>
+    {% endfor %}
+  </select> -->
   <input type="submit" value="Voir les statistiques du quiz">
 </form>
 <div style="width: 100%">

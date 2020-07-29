@@ -27,12 +27,13 @@
           {
             type: 'time',
             time: {
-              unit: 'day',
-              round: 'day',
-              tooltipFormat: 'ddd, D/MM',
+              unit: 'day', // 'month', 'month'
+              round: 'day', // 'month'
+              tooltipFormat: 'ddd, D/MM', // 'MMM'
               displayFormats: {
                 day: 'D/MM',
               },
+              isoWeekday: true
             },
           },
         ],
