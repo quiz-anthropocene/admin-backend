@@ -386,6 +386,9 @@ class QuestionAnswerEvent(models.Model):
 
 
 class QuestionFeedbackEventQuerySet(models.QuerySet):
+    def for_question(self, question_id):
+        return self.filter(question=question_id)
+
     def liked(self):
         return self.filter(choice=constants.FEEDBACK_LIKE)
 
@@ -578,6 +581,9 @@ class QuizAnswerEvent(models.Model):
 
 
 class QuizFeedbackEventQuerySet(models.QuerySet):
+    def for_quiz(self, quiz_id):
+        return self.filter(quiz=quiz_id)
+
     def liked(self):
         return self.filter(choice=constants.FEEDBACK_LIKE)
 

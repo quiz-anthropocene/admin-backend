@@ -9,7 +9,7 @@ from api import constants
 from api.models import Question, QuestionAnswerEvent, QuestionFeedbackEvent, DailyStat
 
 
-class CleanupQuestionStatsCommandTest(TestCase):
+class CleanupAppStatsCommandTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.question_1 = Question.objects.create(answer_correct="a")
