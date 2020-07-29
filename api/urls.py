@@ -39,4 +39,5 @@ urlpatterns = [
     path("contribute", views.contribute, name="contribute_create"),
     path("glossary", views.glossary_list, name="glossary_list"),
     path("stats", views.stats, name="stats"),
+    path("stats-dashboard", views.stats_dashboard, name="stats-dashboard"),
 ]

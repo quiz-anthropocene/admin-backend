@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models import Avg, Sum
+from django.db.models import Avg, Sum, Count
 from django.contrib.postgres.fields import JSONField
 from django.core.exceptions import ValidationError
 
@@ -341,8 +341,21 @@ class QuestionAggStat(models.Model):
 
 
 class QuestionAnswerEventQuerySet(models.QuerySet):
+    def for_question(self, question_id):
+        return self.filter(question=question_id)
+
     def from_quiz(self):
         return self.filter(source=constants.QUESTION_SOURCE_QUIZ)
+
+    def agg_timeseries(self):
+        queryset = self
+        queryset = (
+            queryset.extra(select={"day": "to_char(created, 'YYYY-MM-DD')"})
+            .values("day")
+            .annotate(y=Count("created"))
+            .order_by("-day")
+        )
+        return queryset
 
 
 class QuestionAnswerEvent(models.Model):
@@ -530,6 +543,21 @@ models.signals.m2m_changed.connect(
 )
 
 
+class QuizAnswerEventQuerySet(models.QuerySet):
+    def for_quiz(self, quiz_id):
+        return self.filter(quiz=quiz_id)
+
+    def agg_timeseries(self):
+        queryset = self
+        queryset = (
+            queryset.extra(select={"day": "to_char(created, 'YYYY-MM-DD')"})
+            .values("day")
+            .annotate(y=Count("created"))
+            .order_by("-day")
+        )
+        return queryset
+
+
 class QuizAnswerEvent(models.Model):
     quiz = models.ForeignKey(
         Quiz, null=True, on_delete=models.CASCADE, related_name="stats"
@@ -541,6 +569,8 @@ class QuizAnswerEvent(models.Model):
     created = models.DateTimeField(
         auto_now_add=True, help_text="La date & heure de la réponse"
     )
+
+    objects = QuizAnswerEventQuerySet.as_manager()
 
     @property
     def question_count(self):
@@ -574,7 +604,12 @@ class QuizFeedbackEvent(models.Model):
 
 
 class DailyStatManager(models.Manager):
-    def agg_count(self, field, scale="total", week_or_month_iso_number=None):
+    def agg_count(
+        self,
+        field="question_answer_count",
+        scale="total",
+        week_or_month_iso_number=None,
+    ):
         queryset = self
         # scale
         if scale not in constants.AGGREGATION_SCALE_CHOICE_LIST:
@@ -589,6 +624,15 @@ class DailyStatManager(models.Manager):
         queryset = queryset.aggregate(Sum(field))[field + "__sum"]
         # returns None if aggregation is done on an empty queryset
         return queryset or 0
+
+    def agg_timeseries(self, field="question_answer_count"):
+        queryset = self
+        queryset = (
+            queryset.extra(select={"day": "to_char(date, 'YYYY-MM-DD')", "y": field})
+            .values("day", "y")
+            .order_by("-day")
+        )
+        return queryset
 
 
 class DailyStat(models.Model):

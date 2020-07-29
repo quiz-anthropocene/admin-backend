@@ -1,8 +1,11 @@
+import json
 import random
 import datetime
 
+from django.core.serializers.json import DjangoJSONEncoder
 from django.db.models import Count, F
 from django.http import HttpResponse
+from django.shortcuts import render
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -465,4 +468,36 @@ def stats(request):
                 "quiz_answer_count": quiz_answer_count_current_week,
             },
         }
+    )
+
+
+@api_view(["GET"])
+def stats_dashboard(request):
+    question_answer_count_query = DailyStat.objects.agg_timeseries(
+        "question_answer_count"
+    )
+    question_answer_event_count_query = QuestionAnswerEvent.objects.agg_timeseries()
+    question_answer_count_list = list(question_answer_count_query) + list(
+        question_answer_event_count_query
+    )
+    question_answer_count_json = json.dumps(
+        question_answer_count_list, cls=DjangoJSONEncoder
+    )
+
+    quiz_answer_count_query = DailyStat.objects.agg_timeseries("quiz_answer_count")
+    quiz_answer_event_count_query = QuizAnswerEvent.objects.agg_timeseries()
+    quiz_answer_count_list = list(quiz_answer_count_query) + list(
+        quiz_answer_event_count_query
+    )
+    print(list(quiz_answer_count_query))
+    print(list(quiz_answer_event_count_query))
+    quiz_answer_count_json = json.dumps(quiz_answer_count_list, cls=DjangoJSONEncoder)
+
+    return render(
+        request,
+        "stats_dashboard.html",
+        {
+            "question_answer_count_json": question_answer_count_json,
+            "quiz_answer_count_json": quiz_answer_count_json,
+        },
     )
