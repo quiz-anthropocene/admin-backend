@@ -2,7 +2,7 @@
   pk: 1
   fields:
     name: Chiffres clés
-    description: ''
+    description: Quelques chiffres pour se mettre en jambes.
     author: know your planet
     image_background_url: https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png
     publish: true
@@ -22,7 +22,8 @@
   pk: 2
   fields:
     name: "L'énergie en France \U0001F1EB\U0001F1F7"
-    description: Un aperçu rapide de la production et consommation d'énergie en France
+    description: Un aperçu rapide de la production et de la consommation d'énergie
+      en France.
     author: know your planet
     image_background_url: https://i3.wp.com/fee.asso.fr/wp-content/uploads/2015/09/Carte-de-France-eolien-2015.jpg
     publish: true
@@ -64,6 +65,7 @@
     - 552
     - 553
     - 555
+    - 556
 - model: api.quiz
   pk: 4
   fields:
@@ -91,11 +93,10 @@
       de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent lui
       être imputées. Connaissez-vous votre empreinte ? Voyons-voir ça.
     author: Matthieu Massart
-    image_background_url: https://s.yimg.com/ny/api/res/1.2/a31o40uD_8JxPnCly5hr3A--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/fr-FR/bababam_387/7e590cee0c8b2425df40de379e0c4657
+    image_background_url: https://www.google.fr/url?sa=i&url=https%3A%2F%2Fleshorizons.net%2Fempreinte-carbone%2F&psig=AOvVaw2FM1KmHWv_txtnDhuBmU2p&ust=1596112724478000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJi0g7O98uoCFQAAAAAdAAAAABAJ
     publish: true
     created: 2020-07-08
     questions:
-    - 261
     - 102
     - 358
     - 43
@@ -105,12 +106,11 @@
     - 19
     - 243
     - 150
-    - 345
     - 251
 - model: api.quiz
   pk: 6
   fields:
-    name: Bienvenue en anthropocène
+    name: Bienvenue en anthropocène - Partie 1
     description: L'Anthropocène est un terme proposé par des scientifiques pour désigner
       une nouvelle ère géologique, dans laquelle l'influence de l'être humain sur
       la biosphère a atteint un tel niveau qu'elle est devenue une force géologique
@@ -123,138 +123,81 @@
     publish: true
     created: 2020-07-08
     questions:
-    - 1
     - 2
     - 4
     - 7
     - 9
     - 13
-    - 403
-    - 25
-    - 294
     - 41
     - 44
     - 45
     - 47
     - 49
-    - 51
-    - 67
-    - 77
-    - 78
-    - 79
-    - 80
-    - 96
-    - 225
-    - 366
-    - 494
 - model: api.quiz
   pk: 7
   fields:
-    name: Tout sur le pétrole
+    name: Tout sur le pétrole - Partie 1
     description: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
-      à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
+      à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
     author: Matthieu Massart
     image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
     publish: true
     created: 2020-07-09
     questions:
-    - 12
     - 13
-    - 153
-    - 155
-    - 156
-    - 171
-    - 179
-    - 212
-    - 217
-    - 230
     - 106
     - 107
-    - 494
     - 111
     - 112
     - 113
     - 114
     - 115
-    - 116
-    - 117
-    - 245
 - model: api.quiz
   pk: 8
   fields:
-    name: Autour de la Fresque du Climat
+    name: Fresque du Climat - Lot 1
     description: "La Fresque du Climat, c’est un atelier ludique, participatif et
       créatif sur le changement climatique. Il est basé sur l’intelligence collective
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
       du climat et les conséquences de son dérèglement. L’objectif de l’association
       qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
       d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
-      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat."
+      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat.
+      Lot de carte n°1"
     author: Matthieu Massart
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: true
     created: 2020-07-14
     questions:
-    - 35
-    - 42
+    - 129
+    - 6
     - 8
-    - 22
-    - 118
-    - 14
-    - 17
-    - 29
-    - 80
     - 137
     - 139
-    - 151
-    - 6
-    - 15
-    - 26
-    - 27
-    - 28
-    - 23
-    - 33
-    - 34
-    - 37
-    - 36
-    - 50
-    - 66
-    - 79
-    - 196
-    - 180
-    - 129
-    - 131
-    - 130
-    - 369
+    - 14
+    - 17
+    - 22
     - 30
-    - 362
-    - 305
-    - 282
-    - 294
-    - 315
-    - 176
-    - 306
-    - 194
     - 31
     - 32
-    - 469
-    - 460
-    - 459
-    - 143
-    - 453
-    - 361
+    - 33
     - 415
-    - 343
-    - 403
+    - 176
+    - 180
     - 436
-    - 405
+    - 194
+    - 79
+    - 80
+    - 369
+    - 361
+    - 294
+    - 362
 - model: api.quiz
   pk: 9
   fields:
     name: Pollutions
-    description: Il n'est de mystère de personne que nos modes de vie génèrent tout
-      un tas de pollution. En connaissez-vous la variété et l'ampleur ? C'est ce que
-      ce quiz se propose d'explorer.
+    description: Nos modes de vie génèrent des pollutions diverses. En connaissez-vous
+      la variété et l'ampleur ? C'est ce que ce quiz se propose d'explorer.
     author: Matthieu Massart
     image_background_url: https://static.latribune.fr/full_width/1201312/plastique-a-jakarta.jpg
     publish: true
@@ -270,3 +213,168 @@
     - 57
     - 56
     - 157
+- model: api.quiz
+  pk: 10
+  fields:
+    name: Tout sur le pétrole - Partie 2
+    description: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
+      à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
+    author: Matthieu Massart
+    image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
+    publish: false
+    created: 2020-07-29
+    questions:
+    - 156
+    - 179
+    - 230
+    - 246
+    - 155
+    - 12
+    - 494
+- model: api.quiz
+  pk: 11
+  fields:
+    name: Fresque du climat - Lot 2
+    description: "La Fresque du Climat, c’est un atelier ludique, participatif et
+      créatif sur le changement climatique. Il est basé sur l’intelligence collective
+      et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
+      du climat et les conséquences de son dérèglement. L’objectif de l’association
+      qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
+      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
+      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat.
+      Lot de carte n°2."
+    author: Matthieu Massart
+    image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
+    publish: true
+    created: 2020-07-29
+    questions:
+    - 66
+    - 6
+    - 8
+    - 15
+    - 143
+    - 405
+    - 23
+    - 343
+    - 282
+    - 26
+    - 27
+    - 28
+    - 31
+    - 34
+    - 36
+    - 37
+    - 42
+    - 47
+    - 48
+    - 118
+- model: api.quiz
+  pk: 12
+  fields:
+    name: Fresque du climat - Lot 3
+    description: "La Fresque du Climat, c’est un atelier ludique, participatif et
+      créatif sur le changement climatique. Il est basé sur l’intelligence collective
+      et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
+      du climat et les conséquences de son dérèglement. L’objectif de l’association
+      qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
+      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
+      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat.
+      Lot de carte n°3."
+    author: Matthieu Massart
+    image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
+    publish: true
+    created: 2020-07-29
+    questions:
+    - 305
+    - 130
+    - 131
+    - 306
+    - 459
+    - 29
+- model: api.quiz
+  pk: 13
+  fields:
+    name: Fresque du climat - Lot 4
+    description: "La Fresque du Climat, c’est un atelier ludique, participatif et
+      créatif sur le changement climatique. Il est basé sur l’intelligence collective
+      et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
+      du climat et les conséquences de son dérèglement. L’objectif de l’association
+      qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
+      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
+      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat.
+      Lot de carte n°4."
+    author: Matthieu Massart
+    image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
+    publish: false
+    created: 2020-07-29
+    questions:
+    - 315
+- model: api.quiz
+  pk: 14
+  fields:
+    name: Fresque du climat - Lot 5
+    description: "La Fresque du Climat, c’est un atelier ludique, participatif et
+      créatif sur le changement climatique. Il est basé sur l’intelligence collective
+      et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
+      du climat et les conséquences de son dérèglement. L’objectif de l’association
+      qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
+      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
+      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat.
+      Lot de carte n°5."
+    author: Matthieu Massart
+    image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
+    publish: false
+    created: 2020-07-29
+    questions:
+    - 35
+    - 403
+- model: api.quiz
+  pk: 15
+  fields:
+    name: Fresque du climat - Expert
+    description: "La Fresque du Climat, c’est un atelier ludique, participatif et
+      créatif sur le changement climatique. Il est basé sur l’intelligence collective
+      et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
+      du climat et les conséquences de son dérèglement. L’objectif de l’association
+      qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
+      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
+      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat
+      - questions non liées aux 42 cartes du jeu."
+    author: Matthieu Massart
+    image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
+    publish: true
+    created: 2020-07-29
+    questions:
+    - 33
+    - 180
+    - 453
+    - 362
+    - 460
+    - 222
+    - 46
+- model: api.quiz
+  pk: 16
+  fields:
+    name: Bienvenue en anthropocène - Partie 2
+    description: L'Anthropocène est un terme proposé par des scientifiques pour désigner
+      une nouvelle ère géologique, dans laquelle l'influence de l'être humain sur
+      la biosphère a atteint un tel niveau qu'elle est devenue une force géologique
+      majeure capable de marquer la lithosphère. La période la plus récente de l'anthropocène
+      est parfois dite la grande accélération, car de nombreux indicateurs y présentent
+      des courbes de type exponentiel. Ce quiz fait un tour d'horizon de l'emprise
+      inédite de l'homme sur la planète qu'il occupe.
+    author: Matthieu Massart
+    image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
+    publish: true
+    created: 2020-07-29
+    questions:
+    - 96
+    - 225
+    - 67
+    - 294
+    - 77
+    - 78
+    - 79
+    - 494
+    - 51
+    - 403
