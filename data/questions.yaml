@@ -194,10 +194,10 @@
     validation_status: Validée
     added: 2020-03-08
     created: 2020-03-08
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 9
-    - 93
+    - 98
 - model: api.question
   pk: 7
   fields:
@@ -247,10 +247,11 @@
     answer_option_d: 100 000 ans
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: Même dans cette hypothèse de pensée irréaliste, l'homme a
-      d'ores et déjà induit des modifications irréversibles et la planète ne pourra
-      pas revenir à son état antérieur. On ne parle ici que des durées de résidences
-      des gaz à effet de serre dans l'atmosphère.
+    answer_explanation: Même dans cet exercice de pensée irréaliste, l'homme a d'ores
+      et déjà induit des modifications irréversibles et la planète ne pourra pas revenir
+      à son état antérieur. On ne parle ici que des durées de résidence des gaz à
+      effet de serre dans l'atmosphère. Dans le jeu La Fresque du Climat, voir la
+      carte n°11.
     answer_accessible_url: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
     answer_scientific_url: ''
     answer_image_url: ''
@@ -262,9 +263,11 @@
     validation_status: Validée
     added: 2020-03-08
     created: 2020-03-08
-    updated: 2020-05-23
+    updated: 2020-07-30
     tags:
     - 13
+    - 142
+    - 153
 - model: api.question
   pk: 9
   fields:
@@ -441,7 +444,8 @@
     has_ordered_answers: true
     answer_explanation: L'effet de serre est un phénomène naturel et nécessaire à
       la vie humaine. C'est l'effet de serre additionnel généré par les émissions
-      d'origine humaine qui sont la cause d'un dérèglement climatique.
+      d'origine humaine qui sont la cause d'un dérèglement climatique. Dans le jeu
+      La Fresque du Climat, voir la carte n°13.
     answer_accessible_url: https://fr.wikipedia.org/wiki/Effet_de_serre
     answer_scientific_url: ''
     answer_image_url: https://media.kartable.fr/uploads/finalImages/final_5d9200915e1749.58742984.png
@@ -453,9 +457,11 @@
     validation_status: Validée
     added: 2020-03-09
     created: 2020-03-09
-    updated: 2020-05-23
+    updated: 2020-07-30
     tags:
     - 12
+    - 142
+    - 155
 - model: api.question
   pk: 15
   fields:
@@ -470,8 +476,10 @@
     answer_option_d: Oxygène (O2)
     answer_correct: d
     has_ordered_answers: false
-    answer_explanation: Ces gaz ont pour caractéristique commune d'absorber une partie
-      des infrarouges émis par la surface de la Terre
+    answer_explanation: Ces gaz ont pour caractéristique d'absorber une partie des
+      rayonnements infrarouges émis par la surface de la Terre, et donc d'emmagasiner
+      de l'énergie au lieu qu'elle reparte vers l'espace. Dans le jeu La Fresque du
+      Climat, voir la carte n°9.
     answer_accessible_url: https://fr.wikipedia.org/wiki/Effet_de_serre#Les_gaz_%C3%A0_%C2%AB_effet_de_serre_%C2%BB
     answer_scientific_url: ''
     answer_image_url: https://www.conventioncitoyennepourleclimat.fr/wp-content/uploads/2019/12/122019-CCC-insta-effetdeserre.png
@@ -485,9 +493,11 @@
     validation_status: Validée
     added: 2020-03-09
     created: 2020-03-09
-    updated: 2020-05-28
+    updated: 2020-07-30
     tags:
     - 12
+    - 142
+    - 151
 - model: api.question
   pk: 16
   fields:
@@ -503,7 +513,11 @@
     answer_option_d: +2°C
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: +1,1°C pour être exact. Voir carte 21.
+    answer_explanation: +1,1°C pour être exact. Selon les scénarios du GIEC, elle
+      aura augmenté de 2°C à 5°C d'ici 2100. Or, lors de la dernière période glaciaire
+      il a 20,000 ans, elle était seulement 5°C plus basse qu'aujourd'hui...et la
+      déglaciation a duré 10,000 ans. Dans le jeu La Fresque du Climat, voir la carte
+      n°21.
     answer_accessible_url: http://www.meteofrance.fr/climat-passe-et-futur/le-rechauffement-observe-a-l-echelle-du-globe-et-en-france
     answer_scientific_url: ''
     answer_image_url: https://github.com/raphodn/know-your-planet/raw/master/api/static/images/questions/16_evolution-temperature.jpg
@@ -518,6 +532,8 @@
     updated: 2020-07-30
     tags:
     - 51
+    - 142
+    - 163
 - model: api.question
   pk: 17
   fields:
@@ -534,7 +550,7 @@
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: Ce qui fait un peu plus de 4,5 tonnes équivalent CO2 par personne.
-      Voir cartes 5 et 7.
+      Dans le jeu La Fresque du Climat, voir les cartes n°5 et n°7.
     answer_accessible_url: ''
     answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
     answer_image_url: https://img.aws.la-croix.com/2018/12/07/1300988266/Emissions-carbone-monde_1_1399_1250.jpg
@@ -549,6 +565,9 @@
     updated: 2020-07-30
     tags:
     - 2
+    - 142
+    - 147
+    - 149
 - model: api.question
   pk: 18
   fields:
@@ -662,7 +681,8 @@
     has_ordered_answers: true
     answer_explanation: C'est cette augmentation de la concentration en CO2 dans l'atmosphère
       qui, combinée avec d'autres gaz à effet de serre comme le méthane et le protoxyde
-      d'azote, génère un effet de serre additionnel qui dérègle le climat.
+      d'azote, génère un effet de serre additionnel qui dérègle le climat. Dans le
+      jeu La Fresque du Climat, voir la carte n°11.
     answer_accessible_url: https://www.lesechos.fr/monde/enjeux-internationaux/cop-25-les-six-chiffres-qui-ont-fait-mal-a-la-planete-en-2019-1151161
     answer_scientific_url: https://scripps.ucsd.edu/programs/keelingcurve/
     answer_image_url: https://pbs.twimg.com/media/DchL6tsX4AA_kmn.jpg
@@ -677,10 +697,12 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-05-28
+    updated: 2020-07-30
     tags:
     - 12
     - 13
+    - 142
+    - 153
 - model: api.question
   pk: 22
   fields:
@@ -702,8 +724,8 @@
       des émissions en hausse et boostées par les feux de forêts en Amazonie et en
       Indonésie. Soit un total de 43 milliards de tonnes de dioxyde de carbone. En
       conséquence, la concentration de l’atmosphère en CO2 devrait passer de 407,4
-      parties par million en 2018 à 410 ppm en 2019 (moyenne de l’année). Voir cartes
-      5 et 7.
+      parties par million en 2018 à 410 ppm en 2019 (moyenne de l’année). Dans le
+      jeu La Fresque du Climat, voir les cartes n°5 et n°7.
     answer_accessible_url: https://www.lemonde.fr/blog/huet/2019/12/04/368-gigatonnes-de-co2-emis-en-2019/
     answer_scientific_url: ''
     answer_image_url: https://storage.googleapis.com/prd-blogs/2019/12/Emissions-1960-2019-monde-par-personne-et-pays-par-source.png
@@ -719,6 +741,9 @@
     tags:
     - 12
     - 13
+    - 142
+    - 147
+    - 149
 - model: api.question
   pk: 23
   fields:
@@ -735,7 +760,8 @@
     answer_correct: b
     has_ordered_answers: true
     answer_explanation: La biosphère (végétation) absorbe environ 30% de nos émissions
-      de gaz à effet de serre, et l'océan un peu moins de 25%. Voir carte 12.
+      de gaz à effet de serre, et l'océan un peu moins de 25%. Dans le jeu La Fresque
+      du Climat, voir la carte n°12.
     answer_accessible_url: https://www.futura-sciences.com/planete/questions-reponses/rechauffement-climatique-puits-carbone-sont-ils-fonctionnent-ils-1212/
     answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/19/files/GCP_CarbonBudget_2019.pdf
     answer_image_url: https://www.icos-cp.eu/sites/default/files/inline-images/s45_Global_Sources_and_Sinks_newcm.png
@@ -750,6 +776,8 @@
     updated: 2020-07-30
     tags:
     - 14
+    - 142
+    - 154
 - model: api.question
   pk: 24
   fields:
@@ -844,7 +872,7 @@
       de sérieux n'est fait pour s'y opposer. A ce rythme de réchauffement, la flore
       ne pourra pas s'adapter suffisamment vite. Et encore, on ne parle que de moyennes,
       pas de températures extrêmes. Les hausses seront très variables selon les régions
-      du globe. Lié à la carte 21.
+      du globe. Dans le jeu La Fresque du Climat, voir la carte n°21.
     answer_accessible_url: https://jancovici.com/changement-climatique/predire-lavenir/ou-nous-situons-nous-dans-lechelle-des-temperatures-par-rapport-au-passe/
     answer_scientific_url: https://www.nature.com/articles/nature10915
     answer_image_url: http://img.over-blog.com/500x297/4/34/30/34/ere-glaciere.png
@@ -858,7 +886,10 @@
     created: 2020-03-10
     updated: 2020-07-30
     tags:
+    - 24
     - 51
+    - 142
+    - 163
 - model: api.question
   pk: 27
   fields:
@@ -876,7 +907,8 @@
     has_ordered_answers: false
     answer_explanation: Il y aussi les rizières et les fuites de gaz. La fonte du
       permafrost avec le réchauffement pourrait dégager des quantités astronomiques
-      de méthane dans l'atmosphère. Voir carte 9.
+      de méthane dans l'atmosphère. Dans le jeu La Fresque du Climat, voir la carte
+      n°9.
     answer_accessible_url: https://jancovici.com/changement-climatique/risques/faut-il-redouter-les-hydrates-de-methane/
     answer_scientific_url: ''
     answer_image_url: https://ourworldindata.org/grapher/exports/methane-emissions-by-sector-gg-coe.png
@@ -891,6 +923,8 @@
     updated: 2020-07-30
     tags:
     - 15
+    - 142
+    - 166
 - model: api.question
   pk: 28
   fields:
@@ -911,7 +945,7 @@
       (1800). Mais certains modèles de prédiction prévoient une augmentation de 150
       % de l’acidité d’ici à 2100. Le rythme actuel de l’acidification de l’océan
       est donc dix fois plus rapide qu’à aucune autre période des 55 millions d’années
-      qui nous ont précédés. Voir carte 24.
+      qui nous ont précédés. Dans le jeu La Fresque du Climat, voir la carte n°24.
     answer_accessible_url: https://fr.wikipedia.org/wiki/Acidification_des_oc%C3%A9ans
     answer_scientific_url: https://ocean-climate.org/?page_id=4538
     answer_image_url: https://i2.wp.com/ocean-climate.org/wp-content/uploads/2015/03/acidification-des-oceans.png
@@ -926,6 +960,8 @@
     updated: 2020-07-30
     tags:
     - 9
+    - 142
+    - 166
 - model: api.question
   pk: 29
   fields:
@@ -943,7 +979,7 @@
     answer_explanation: Les aérosols sont des particules fines qui ont un pouvoir
       réfléchissant, comme les nuages. Sans eux, le climat se réchaufferait de 0,5
       à 1,1°C. C'est ce qui arrivera lorsqu'on arrêtera de brûler des énergies fossiles.
-      Voir carte n°10.
+      Dans le jeu La Fresque du Climat, voir la carte n°10.
     answer_accessible_url: https://dr-petrole-mr-carbone.com/quand-la-depollution-de-lair-aggrave-le-rechauffement/
     answer_scientific_url: ''
     answer_image_url: https://sciencepost.fr/wp-content/uploads/2018/04/F2.large_.jpg
@@ -961,7 +997,9 @@
     updated: 2020-07-30
     tags:
     - 12
-    - 94
+    - 99
+    - 142
+    - 152
 - model: api.question
   pk: 30
   fields:
@@ -982,7 +1020,7 @@
       basses. Du fait de la diminution de la surface de la banquise, une plus grande
       quantité de rayons atteint directement l’eau (flaques, océan) qui absorbe l’énergie
       solaire plus qu’elle ne la réverbère. L’Océan se réchauffe davantage encore
-      ! Voir la carte n°18.'
+      ! Dans le jeu La Fresque du Climat, voir la carte n°18.'
     answer_accessible_url: https://fr.wikipedia.org/wiki/Alb%C3%A9do#Climatologie
     answer_scientific_url: ''
     answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/3/7/f/37fe435a1d_34646_44141-1-meltpondscau.jpg
@@ -1000,8 +1038,10 @@
     created: 2020-03-10
     updated: 2020-07-30
     tags:
-    - 9
     - 16
+    - 9
+    - 142
+    - 160
 - model: api.question
   pk: 31
   fields:
@@ -1017,14 +1057,10 @@
     answer_correct: a
     has_ordered_answers: false
     answer_explanation: Environ 30% du CO2 émis se dissout dans nos océans, entrainant
-      des réactions chimiques qui réduisent le pH de l’eau de mer. Plus le pH diminue,
-      plus les océans deviennent acides. Depuis la révolution industrielle, le pH
-      est passé de 8.2 à 8.1, et les chercheurs estiment que cette valeur va diminuer
-      encore de 0.3 avant la fin du siècle. Une baisse de 0.1 ne paraît pas énorme,
-      mais l’échelle du pH est logarithmique. Par exemple, pH 4 est 10 fois plus acide
-      que pH 5. La phrase « acidification des océans » fait donc référence au processus
-      de diminution du pH causé par l’augmentation de l’absorption du CO2 par nos
-      océans. Voir carte n°24.
+      des réactions chimiques qui acidifient les océans.  Depuis la révolution industrielle,
+      le pH est passé de 8.2 à 8.1, et les chercheurs estiment que cette valeur va
+      diminuer encore de 0.3 avant la fin du siècle. Dans le jeu La Fresque du Climat,
+      voir la carte n°24.
     answer_accessible_url: https://fr.wikipedia.org/wiki/Acidification_des_oc%C3%A9ans
     answer_scientific_url: ''
     answer_image_url: https://cdn.britannica.com/82/152182-050-719F9121/state-diagram-carbonates-conditions-oceans-2100.jpg
@@ -1038,8 +1074,10 @@
     created: 2020-03-10
     updated: 2020-07-30
     tags:
-    - 9
     - 13
+    - 9
+    - 142
+    - 166
 - model: api.question
   pk: 32
   fields:
@@ -1056,7 +1094,8 @@
     answer_correct: c
     has_ordered_answers: false
     answer_explanation: La banquise, qui flotte sur l'eau, ne fait pas monter l'eau
-      quand elle fond. Faites le test avec un pastis. Voir carte 18.
+      quand elle fond. Faites le test avec un pastis. Dans le jeu La Fresque du Climat,
+      voir la carte n°18.
     answer_accessible_url: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
     answer_scientific_url: ''
     answer_image_url: https://sciencesdelavieetdelaterre93.files.wordpress.com/2018/08/18-bis-exp-fonte-glaces.jpg
@@ -1070,9 +1109,11 @@
     created: 2020-03-10
     updated: 2020-07-30
     tags:
-    - 9
     - 16
+    - 9
     - 69
+    - 142
+    - 160
 - model: api.question
   pk: 33
   fields:
@@ -1124,8 +1165,8 @@
     has_ordered_answers: true
     answer_explanation: Environ la moitié de ces émissions es due à l'agriculture
       et l'élevage (engrais, bovins, déjections, culture du riz), l'autre moitié est
-      due à la déforestation et au changement d'utilisation des terres. Voir carte
-      8.
+      due à la déforestation et au changement d'utilisation des terres. Dans le jeu
+      La Fresque du Climat, voir la carte n°8.
     answer_accessible_url: https://fr.wikipedia.org/wiki/Gaz_%C3%A0_effet_de_serre#Par_secteurs
     answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/sites/4/2019/11/03_Technical-Summary-TS.pdf
     answer_image_url: https://ourworldindata.org/grapher/exports/greenhouse-gas-emissions-by-sector.png
@@ -1141,6 +1182,8 @@
     tags:
     - 2
     - 17
+    - 142
+    - 150
 - model: api.question
   pk: 35
   fields:
@@ -1160,7 +1203,8 @@
     has_ordered_answers: false
     answer_explanation: La libération en grande quantité de ce méthane emprisonné
       aurait un effet dévastateur sur le climat de la planète. Le permafrost est souvent
-      désigné comme une potentielle bombe climatique. Il libère aussi du CO2.
+      désigné comme une potentielle bombe climatique. Il libère aussi du CO2. Dans
+      le jeu La Fresque du Climat, voir la carte n°41.
     answer_accessible_url: https://www.france24.com/fr/20180125-le-permafrost-cette-bombe-a-retardement-sous-larctique
     answer_scientific_url: https://www.nature.com/articles/480032a
     answer_image_url: https://cdn.radiofrance.fr/s3/cruiser-production/2018/12/1bbcc05b-aed7-4c77-9f95-62107f3bcfe7/838_001_1bc9tr_jpeg.jpg
@@ -1172,10 +1216,12 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-25
+    updated: 2020-07-30
     tags:
     - 18
     - 51
+    - 142
+    - 183
 - model: api.question
   pk: 36
   fields:
@@ -1194,7 +1240,7 @@
     answer_explanation: 'De nombreux organismes marins sont sensibles à cette baisse
       de pH : les coraux, les mollusques et certains planctons sont ainsi privés des
       ions carbonate nécessaires pour construire leurs coquilles et leurs squelettes.
-      Carte n°24.'
+      Dans le jeu La Fresque du Climat, voir la carte n°24.'
     answer_accessible_url: https://www.lemonde.fr/biodiversite/article/2014/10/08/l-acidification-des-oceans-aura-d-importantes-consequences-pour-la-biodiversite_4502183_1652692.html
     answer_scientific_url: ''
     answer_image_url: https://cdn.britannica.com/82/152182-050-719F9121/state-diagram-carbonates-conditions-oceans-2100.jpg
@@ -1209,6 +1255,8 @@
     updated: 2020-07-30
     tags:
     - 13
+    - 142
+    - 166
 - model: api.question
   pk: 37
   fields:
@@ -1226,7 +1274,8 @@
     answer_explanation: Les principales causes de déforestation sont l’agriculture
       (soja, huile de palme, ...) et l’élevage. Mais il y a aussi la construction
       de barrages hydroélectriques et d’infrastructures routières, l’industrie minière,
-      les feux de forêt et le trafic de bois. Voir carte 6.
+      les feux de forêt et le trafic de bois. Dans le jeu La Fresque du Climat, voir
+      la carte n°6.
     answer_accessible_url: https://www.lemonde.fr/planete/article/2015/09/07/80-de-la-deforestation-est-due-a-l-agriculture_4747867_3244.html
     answer_scientific_url: ''
     answer_image_url: https://mongabay-images.s3.amazonaws.com/14/0911-report-chart.jpg
@@ -1242,6 +1291,8 @@
     tags:
     - 19
     - 20
+    - 142
+    - 148
 - model: api.question
   pk: 38
   fields:
@@ -1339,13 +1390,13 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 1
     - 15
     - 39
     - 70
-    - 101
+    - 95
 - model: api.question
   pk: 41
   fields:
@@ -1374,10 +1425,10 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-04
+    updated: 2020-07-30
     tags:
-    - 9
     - 21
+    - 9
 - model: api.question
   pk: 42
   fields:
@@ -1395,7 +1446,8 @@
     has_ordered_answers: true
     answer_explanation: La durée de vie d'une particule de CO2 dans l'atmosphère est
       de 100 ans. C'est pourquoi les changements climatiques sont fondamentalement
-      irréversibles à l'échelle humaine. Voir carte 11.
+      irréversibles à l'échelle humaine. Dans le jeu La Fresque du Climat, voir la
+      carte n°11.
     answer_accessible_url: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
     answer_scientific_url: https://fr.wikipedia.org/wiki/Potentiel_de_r%C3%A9chauffement_global
     answer_image_url: https://jancovici.com/wp-content/uploads/2016/04/gaz_graph7.png
@@ -1413,6 +1465,8 @@
     tags:
     - 12
     - 13
+    - 142
+    - 153
 - model: api.question
   pk: 43
   fields:
@@ -1479,10 +1533,10 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-04
+    updated: 2020-07-30
     tags:
-    - 9
     - 51
+    - 9
 - model: api.question
   pk: 45
   fields:
@@ -1516,8 +1570,8 @@
     created: 2020-03-10
     updated: 2020-07-30
     tags:
-    - 9
     - 49
+    - 9
 - model: api.question
   pk: 46
   fields:
@@ -1569,7 +1623,7 @@
     answer_explanation: La cause de cette fonte exceptionnelle au fil des années est
       bien connue. La hausse des températures au niveau mondial depuis plusieurs décennies
       ne cesse de s'accélérer, et se montre particulièrement marquée  sur le secteur
-      Arctique. Voir carte n°18.
+      Arctique. Dans le jeu La Fresque du Climat, voir la carte n°18.
     answer_accessible_url: http://www.meteo-paris.com/actualites/banquise-arctique-fin-de-la-fonte-estivale-2e-etendue-la-plus-faible-22-septembre-2019.html
     answer_scientific_url: ''
     answer_image_url: https://www.les-crises.fr/images/1300-climat/1357-banquise/arctique-1979-2011.png
@@ -1583,8 +1637,10 @@
     created: 2020-03-10
     updated: 2020-07-30
     tags:
-    - 9
     - 16
+    - 9
+    - 142
+    - 160
 - model: api.question
   pk: 48
   fields:
@@ -1601,8 +1657,8 @@
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: La surface de la Terre est recouverte à 70 % par les océans,
-      les 30 % restants étant les terres émergées. Ces dernières se réchauffent en
-      moyenne deux fois plus vite. Lié à la carte 21.
+      les 30 % restants étant les terres Dans le jeu La Fresque du Climat, voir la
+      carte n°21.
     answer_accessible_url: https://www.notre-planete.info/terre/climatologie_meteo/changement-climatique-donnees.php
     answer_scientific_url: ''
     answer_image_url: http://berkeleyearth.org/wp-content/uploads/2018/01/LandOcean2017-1024x582.png
@@ -1617,6 +1673,8 @@
     updated: 2020-07-30
     tags:
     - 51
+    - 142
+    - 163
 - model: api.question
   pk: 49
   fields:
@@ -1636,7 +1694,8 @@
     has_ordered_answers: true
     answer_explanation: En 2010, il y avait autant de déplacés pour des raisons de
       guerre que pour de raisons environnementales (22 millions). D’autres rapports
-      évoquent même le chiffre de un milliard à l'horizon 2050. Voir carte n°39.
+      évoquent même le chiffre de un milliard à l'horizon 2050. Dans le jeu La Fresque
+      du Climat, voir la carte n°39.
     answer_accessible_url: https://www.lemonde.fr/idees/article/2018/03/27/defense-il-y-a-davantage-de-refugies-climatiques-que-de-refugies-lies-aux-conflits-dans-le-monde_5277061_3232.html
     answer_scientific_url: ''
     answer_image_url: https://www.lejournalinternational.fr/photo/art/grande/8880632-14068125.jpg
@@ -1652,6 +1711,8 @@
     tags:
     - 23
     - 24
+    - 142
+    - 181
 - model: api.question
   pk: 50
   fields:
@@ -1726,7 +1787,8 @@
     answer_option_d: 1 200 000 km2
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: Soit 20% de la superficie de la France métropolitaine
+    answer_explanation: Soit 20% de la superficie de la France métropolitaine. Dans
+      le jeu La Fresque du Climat, voir la carte n°30.
     answer_accessible_url: https://www.planetoscope.com/sols/273-avancee-des-deserts-dans-le-monde.html
     answer_scientific_url: ''
     answer_image_url: ''
@@ -1738,9 +1800,11 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-24
+    updated: 2020-07-30
     tags:
     - 25
+    - 142
+    - 172
 - model: api.question
   pk: 53
   fields:
@@ -1866,10 +1930,10 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-04
+    updated: 2020-07-30
     tags:
-    - 9
     - 26
+    - 9
 - model: api.question
   pk: 57
   fields:
@@ -1899,10 +1963,10 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-04
+    updated: 2020-07-30
     tags:
-    - 9
     - 26
+    - 9
 - model: api.question
   pk: 58
   fields:
@@ -2176,7 +2240,7 @@
     has_ordered_answers: true
     answer_explanation: Quand on brûle du bois, ce carbone part dans l'atmosphère.
       On peut craindre que la déforestation ne s'agrave une fois le pic des énergies
-      fossiles atteint. Carte n°12.
+      fossiles atteint. Dans le jeu La Fresque du Climat, voir la carte n°12.
     answer_accessible_url: https://reseauactionclimat.org/stockage-carbone-sol-rechauffement-climatique/
     answer_scientific_url: ''
     answer_image_url: ''
@@ -2191,6 +2255,8 @@
     updated: 2020-07-30
     tags:
     - 14
+    - 142
+    - 154
 - model: api.question
   pk: 67
   fields:
@@ -2218,10 +2284,10 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-04
+    updated: 2020-07-30
     tags:
-    - 9
     - 21
+    - 9
 - model: api.question
   pk: 68
   fields:
@@ -2607,7 +2673,8 @@
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: Depuis 1900, il augmente de 1 à 3 mm par an. Depuis 1992,
-      c'est plutôt de l'ordre de 3 mm par an. Voir carte n°22.
+      c'est plutôt de l'ordre de 3 mm par an. Dans le jeu La Fresque du Climat, voir
+      la carte n°22
     answer_accessible_url: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
     answer_scientific_url: ''
     answer_image_url: https://cdn.radiofrance.fr/s3/cruiser-production/2020/02/e24440ab-1b03-42d3-858c-fdbc74f3e0ef/838_001_1km0ss_jpeg.jpg
@@ -2623,6 +2690,8 @@
     tags:
     - 9
     - 69
+    - 142
+    - 164
 - model: api.question
   pk: 80
   fields:
@@ -2641,7 +2710,8 @@
       'Le jour d'après', une entrée en glaciation dure des milliers d'années. La dernière
       sortie d'un age glaciaire, qui a fait prendre 5°C supplémentaire, a pris 10,000
       ans. Du fait du réchauffement anthropique, les scientifiques du GIEC entrevoient
-      un réchauffement moyen de l'ordre de 5°C...en 100 ans. Voir carte n°21.
+      un réchauffement moyen de l'ordre de 5°C...en 100 ans. Dans le jeu La Fresque
+      du Climat, voir la carte n°21.
     answer_accessible_url: https://fr.wikipedia.org/wiki/Glaciation
     answer_scientific_url: ''
     answer_image_url: https://mothernature.com/wp-content/uploads/2017/08/paleoclimate-cycles-are-key-analogs-for-present-day-holocene-warm-period-1200x800_c.jpg
@@ -2656,6 +2726,8 @@
     updated: 2020-07-30
     tags:
     - 16
+    - 142
+    - 163
 - model: api.question
   pk: 81
   fields:
@@ -3918,7 +3990,8 @@
     has_ordered_answers: true
     answer_explanation: La concentration en CO2 dans l’atmosphère (en vert) est restée
       remarquablement stable durant les deux derniers millénaires, aux alentours de
-      280ppm, jusqu’au début de l’ère industrielle vers 1750-1800. Voir carte n°11.
+      280ppm, jusqu’au début de l’ère industrielle vers 1750-1800. Dans le jeu La
+      Fresque du Climat, voir la carte n°11.
     answer_accessible_url: ''
     answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter06_FINAL.pdf
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r016.jpg
@@ -3934,6 +4007,8 @@
     tags:
     - 12
     - 13
+    - 142
+    - 153
 - model: api.question
   pk: 119
   fields:
@@ -4273,7 +4348,8 @@
     answer_correct: b
     has_ordered_answers: true
     answer_explanation: Sur la trajectoire actuelle, la température moyenne de la
-      planète atteindra +1,5°C en 2040. Carte n°21.
+      planète atteindra +1,5°C en 2040. Dans le jeu La Fresque du Climat, voir la
+      carte n°21.
     answer_accessible_url: ''
     answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/sites/2/2019/02/SR15_Chapter1_Low_Res.pdf
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r027.jpg
@@ -4289,6 +4365,8 @@
     tags:
     - 22
     - 51
+    - 142
+    - 163
 - model: api.question
   pk: 130
   fields:
@@ -4306,7 +4384,7 @@
     has_ordered_answers: true
     answer_explanation: D’après les mesures de la mission Gravity Recovery and Climate
       Experiment (GRACE) de la NASA, le Groenland perd chaque année plus de 285 milliards
-      de tonnes de glace. Voir carte n°19.
+      de tonnes de glace. Dans le jeu La Fresque du Climat, voir la carte n°19.
     answer_accessible_url: https://climate.nasa.gov/vital-signs/ice-sheets/
     answer_scientific_url: ''
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r028.jpg
@@ -4321,6 +4399,8 @@
     updated: 2020-07-30
     tags:
     - 16
+    - 142
+    - 161
 - model: api.question
   pk: 131
   fields:
@@ -4339,7 +4419,7 @@
     answer_explanation: 'Les gaz à effet de serre absorbent le rayonnement infrarouge
       émis par la terre, puis ré-émettent cette chaleur dans toutes les directions,
       y compris à nouveau vers la terre : c’est ce qu’on appelle le forçage radiatif.
-      Carte n°13.'
+      Dans le jeu La Fresque du Climat, voir la carte n°13.'
     answer_accessible_url: https://fr.m.wikipedia.org/wiki/Effet_de_serre
     answer_scientific_url: ''
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r029.jpg
@@ -4354,6 +4434,8 @@
     updated: 2020-07-30
     tags:
     - 12
+    - 142
+    - 155
 - model: api.question
   pk: 132
   fields:
@@ -4537,9 +4619,10 @@
     answer_option_d: 20 %
     answer_correct: a
     has_ordered_answers: true
-    answer_explanation: 1% seulement, du fait de la faible capacité calorifique de
-      l'air. Et heureusement, sinon nous serions tous morts depuis longtemps ! 93%
-      de cette énergie est absorbée par les océans. Carte n°14.
+    answer_explanation: Cela tient à la la faible capacité calorifique de l'air. Et
+      heureusement, sinon nous serions tous morts depuis longtemps ! 93% de cette
+      énergie est absorbée par les océans. Dans le jeu La Fresque du Climat, voir
+      la carte n°14.
     answer_accessible_url: ''
     answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter03_FINAL.pdf
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r035.png
@@ -4554,6 +4637,8 @@
     updated: 2020-07-30
     tags:
     - 12
+    - 142
+    - 156
 - model: api.question
   pk: 138
   fields:
@@ -4604,7 +4689,8 @@
     answer_explanation: Environ 2-3 fois plus que le CO2. Mais, à la différence (fondamentale)
       du CO2, les émissions de vapeur d’eau ne restent que quelques jours dans l’atmosphère
       avant de condenser et de précipiter, de sorte que la concentration de la vapeur
-      d'eau dans l'atmosphère reste stable. Carte n°13.
+      d'eau dans l'atmosphère reste stable. Dans le jeu La Fresque du Climat, voir
+      la carte n°13.
     answer_accessible_url: ''
     answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter08_FINAL.pdf
     answer_image_url: http://idata.over-blog.com/2/72/04/81/GES-dans-atmosphere.jpg
@@ -4619,6 +4705,8 @@
     updated: 2020-07-30
     tags:
     - 12
+    - 142
+    - 155
 - model: api.question
   pk: 140
   fields:
@@ -4730,7 +4818,7 @@
     has_ordered_answers: true
     answer_explanation: C'était à l'époque géologique du Pliocène. Les températures
       mondiales étaient 3 à 4 °C plus élevées qu’aujourd’hui et le niveau de la mer
-      15 à 20 mètres plus haut. Carte n°11.
+      15 à 20 mètres plus haut. Dans le jeu La Fresque du Climat, voir la carte n°11.
     answer_accessible_url: https://www.nouvelobs.com/planete/20190406.OBS11209/le-taux-de-co2-dans-l-atmosphere-est-au-plus-haut-depuis-3-millions-d-annees.html
     answer_scientific_url: https://www.nature.com/articles/ncomms14845
     answer_image_url: https://files.secure.website/wscfus/9167827/4542986/co2-400-m-years-400-ppm-20-m.png
@@ -4752,6 +4840,8 @@
     tags:
     - 12
     - 13
+    - 142
+    - 153
 - model: api.question
   pk: 144
   fields:
@@ -5218,13 +5308,13 @@
     validation_status: Validée
     added: 2019-03-22
     created: 2020-04-26
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
-    - 9
     - 11
     - 33
     - 59
-    - 97
+    - 9
+    - 93
 - model: api.question
   pk: 158
   fields:
@@ -6356,7 +6446,7 @@
     has_ordered_answers: false
     answer_explanation: Le forçage radiatif exprimé en W/m2 représente le déséquilibre
       dans le bilan radiatif de la Terre, en immense majorité causé par les activités
-      humaines.
+      humaines. Dans le jeu La Fresque du Climat, voir la carte n°15.
     answer_accessible_url: ''
     answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2017/09/WG1AR5_Chapter01_FINAL.pdf
     answer_image_url: https://globalclimat.files.wordpress.com/2015/12/time_tas_world_mon1_ave12_ref1986-2005_1900-2100_cmip5one_rcp26_rcp45_rcp60_rcp85.png
@@ -6368,11 +6458,13 @@
     validation_status: Écartée
     added: 2019-05-20
     created: 2020-04-26
-    updated: 2020-05-10
+    updated: 2020-07-30
     tags:
     - 22
     - 50
     - 61
+    - 142
+    - 157
 - model: api.question
   pk: 193
   fields:
@@ -6409,8 +6501,9 @@
 - model: api.question
   pk: 194
   fields:
-    text: Si la tendance actuelle des émissions se poursuit, de combien sera l’élévation
-      moyenne du niveau de la mer en 2100 par rapport à l’ère pré-industrielle ?
+    text: Si la tendance actuelle des émissions se poursuit, à combien estime-t-on
+      l'élévation du niveau de la mer en 2100 par rapport à l’ère pré-industrielle
+      ?
     hint: ''
     type: QCM
     category: 6
@@ -6423,7 +6516,8 @@
     has_ordered_answers: true
     answer_explanation: Le niveau de la mer a augmenté d’environ 30 cm depuis l’ère
       pré-industrielle, et selon les projections du scénario tendanciel (RCP8.5) le
-      niveau augmentera encore d’environ 70 cm d’ici 2100. Carte n°22.
+      niveau augmentera encore d’environ 70 cm d’ici 2100. Dans le jeu La Fresque
+      du Climat, voir la carte n°22.
     answer_accessible_url: https://information.tv5monde.com/info/elevation-des-oceans-un-nouveau-rapport-du-giec-tres-inquietant-318597
     answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter13_FINAL.pdf
     answer_image_url: https://image.slidesharecdn.com/wgiar5presentation-141209074339-conversion-gate01/95/fifth-assessment-report-working-group-i-20-638.jpg
@@ -6441,9 +6535,11 @@
     created: 2020-04-26
     updated: 2020-07-30
     tags:
-    - 9
     - 61
+    - 9
     - 69
+    - 142
+    - 164
 - model: api.question
   pk: 195
   fields:
@@ -7567,6 +7663,7 @@
       les conflits et violences entraînent des déplacements de plus longue durée.
       Au total, le nombre de déplacés internes fin 2019 est de 50,8 millions (un record),
       soit deux fois plus que le nombre de réfugiés (déplacés traversant une frontière).
+      Dans le jeu La Fresque du Climat, voir la carte n°39.
     answer_accessible_url: https://www.francetvinfo.fr/meteo/climat/catastrophes-naturelles-guerres-le-nombre-de-personnes-deplacees-dans-leur-propre-pays-a-atteint-un-record-en-2019_3938315.html
     answer_scientific_url: https://www.internal-displacement.org/global-report/grid2019/french.html
     answer_image_url: https://www.internal-displacement.org/global-report/grid2020/img/2020/versions/GRID2020_NDs-dl.png
@@ -7578,10 +7675,12 @@
     validation_status: Validée
     added: 2020-04-29
     created: 2020-05-05
-    updated: 2020-05-23
+    updated: 2020-07-30
     tags:
     - 2
     - 23
+    - 142
+    - 181
 - model: api.question
   pk: 230
   fields:
@@ -7705,7 +7804,8 @@
       réchauffant très supérieur à celui du dioxyde de carbone. Le méthane est produit
       lorsque les sols sont constamment immergés par des organismes qui se développent
       dans cet environnement. Le N2O, lui, est généré lorsque le sol est immergé puis
-      asséché de façon intermittente, une technique pratiquée par une partie des riziculteurs.'
+      asséché de façon intermittente, une technique pratiquée par une partie des riziculteurs.
+      Dans le jeu La Fresque du Climat, voir la carte n°9.'
     answer_accessible_url: https://lejournal.cnrs.fr/articles/le-methane-en-augmentation-dans-latmosphere
     answer_scientific_url: http://www.globalcarbonatlas.org/en/CH4-emissions
     answer_image_url: https://www.cade-environnement.org/files/2017/01/Capture-m%C3%A9thane.png
@@ -7717,10 +7817,12 @@
     validation_status: Validée
     added: 2020-05-10
     created: 2020-05-10
-    updated: 2020-06-24
+    updated: 2020-07-30
     tags:
     - 15
     - 17
+    - 142
+    - 151
 - model: api.question
   pk: 234
   fields:
@@ -7844,10 +7946,10 @@
     validation_status: Écartée
     added: 2019-07-01
     created: 2020-05-07
-    updated: 2020-07-04
+    updated: 2020-07-30
     tags:
-    - 9
     - 50
+    - 9
 - model: api.question
   pk: 238
   fields:
@@ -9334,7 +9436,7 @@
     answer_explanation: La première source de méthane dans le monde est les marécages
       (plus précisément les zones humides). Les sources naturelles ne comptent que
       pour 40% des émissions de méthane, tout le reste est d’origine anthropique (humaine).
-      Carte n°9.
+      Dans le jeu La Fresque du Climat, voir la carte n°9.
     answer_accessible_url: ''
     answer_scientific_url: https://www.iea.org/reports/methane-tracker-2020
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r166.jpg
@@ -9350,6 +9452,8 @@
     tags:
     - 2
     - 15
+    - 142
+    - 151
 - model: api.question
   pk: 283
   fields:
@@ -9720,8 +9824,8 @@
 - model: api.question
   pk: 294
   fields:
-    text: Dans le monde, combien de personnes vivent dans des zones à moins de 10m
-      au dessus du niveau de la mer ?
+    text: Dans le monde, combien de personnes vivent dans des zones à moins de 10
+      mètres au dessus du niveau de la mer ?
     hint: ''
     type: QCM
     category: 1
@@ -9735,7 +9839,8 @@
     answer_explanation: Dans le monde, environ 680 millions de personnes vivent dans
       des zones à moins de 10m au dessus du niveau de la mer. Ce sont les premières
       exposées à la montée des eaux et à la montée en fréquence et intensité des phénomènes
-      météorologiques extrêmes. Lié à la carte n°22.
+      météorologiques extrêmes. Dans le jeu La Fresque du Climat, c'est lié à la carte
+      n°5.
     answer_accessible_url: ''
     answer_scientific_url: https://www.ipcc.ch/srocc/download#chapter1
     answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/7/5/4/7540dfa366_82076_cop21-l-impact-du-rechauffement-mer.jpg
@@ -9755,6 +9860,8 @@
     - 2
     - 69
     - 74
+    - 142
+    - 147
 - model: api.question
   pk: 295
   fields:
@@ -10108,7 +10215,8 @@
     has_ordered_answers: true
     answer_explanation: Si toute la glace que perd le Groenland chaque année, soit
       250 milliards de tonnes en 2019, était disposée sur la ville de Paris, elle
-      serait recouverte par 2,4 km d’eau. Carte n°19.
+      serait recouverte par 2,4 km d’eau. Dans le jeu La Fresque du Climat, voir la
+      carte n°19.
     answer_accessible_url: ''
     answer_scientific_url: https://www.ipcc.ch/srocc/download#chapter3
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r189.jpg
@@ -10123,6 +10231,8 @@
     updated: 2020-07-30
     tags:
     - 16
+    - 142
+    - 161
 - model: api.question
   pk: 306
   fields:
@@ -10140,7 +10250,7 @@
     has_ordered_answers: true
     answer_explanation: En un siècle, le glacier d’Ossoue dans les Pyrénées a perdu
       60% de sa surface, avec une accélération extrêmement forte depuis le début des
-      années 1990. Lié à la carte n°16.
+      années 1990. Dans le jeu La Fresque du Climat, c'est lié à la carte n°16.
     answer_accessible_url: ''
     answer_scientific_url: https://www.ecologique-solidaire.gouv.fr/sites/default/files/ONERC_FichesIndicateur_Glacier.pdf
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r190b.jpg
@@ -10159,6 +10269,8 @@
     tags:
     - 1
     - 16
+    - 142
+    - 158
 - model: api.question
   pk: 307
   fields:
@@ -10445,8 +10557,8 @@
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: Dans le monde, il y a plus de 500 millions d’enfants qui vivent
-      dans des zones extrêmement inondables (= inondées plus d’une fois par an). Cartes
-      26 et 33.
+      dans des zones extrêmement inondables (= inondées plus d’une fois par an). Dans
+      le jeu La Fresque du Climat, voir les cartes n°26 et n°33.
     answer_accessible_url: ''
     answer_scientific_url: https://www.unicef.org/publications/files/Unless_we_act_now_The_impact_of_climate_change_on_children.pdf
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r199.jpg
@@ -10463,6 +10575,9 @@
     - 2
     - 74
     - 90
+    - 142
+    - 168
+    - 175
 - model: api.question
   pk: 316
   fields:
@@ -11372,7 +11487,7 @@
     answer_correct: b
     has_ordered_answers: true
     answer_explanation: Environ 25% du CO2 d’origine anthropique est absorbé par les
-      océans (20-30%). Carte n°12.
+      océans (20-30%). Dans le jeu La Fresque du Climat, voir la carte n°12.
     answer_accessible_url: ''
     answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/sites/3/2019/11/09_SROCC_Ch05_FINAL-1.pdf#page450
     answer_image_url: https://fr.boell.org/sites/default/files/uploads/2018/05/p25_ouvaleco2.png
@@ -11393,8 +11508,10 @@
     created: 2020-05-20
     updated: 2020-07-30
     tags:
-    - 9
     - 13
+    - 9
+    - 142
+    - 154
 - model: api.question
   pk: 344
   fields:
@@ -11566,10 +11683,11 @@
     validation_status: Validée
     added: 2019-12-17
     created: 2020-05-20
-    updated: 2020-05-23
+    updated: 2020-07-30
     tags:
     - 47
     - 79
+    - 142
 - model: api.question
   pk: 349
   fields:
@@ -11995,7 +12113,7 @@
       3 millions de km2, l’équivalent de la superficie de l’Inde (ou environ 4 fois
       la superficie de la France). A l’été 2019 elle ne s’étendait plus que sur 4
       millions de km2. L'Antarctique a elle perdu la même superficie sur les 3 dernières
-      années seulement. Voir carte n°18.
+      années seulement. Dans le jeu La Fresque du Climat, voir la carte n°18.
     answer_accessible_url: https://www.numerama.com/sciences/530703-lantarctique-a-perdu-autant-detendue-de-banquise-en-3-ans-que-larctique-en-35-ans.html
     answer_scientific_url: https://seaice.uni-bremen.de/sea-ice-concentration/amsre-amsr2/time-series/
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r245.jpg
@@ -12011,6 +12129,8 @@
     tags:
     - 16
     - 83
+    - 142
+    - 160
 - model: api.question
   pk: 362
   fields:
@@ -12270,7 +12390,8 @@
     has_ordered_answers: true
     answer_explanation: La concentration en CO2 dans l'atmosphère est devenue en 1908
       la plus élevée depuis au moins 800 000 ans, peu avant d'atteindre les 300 ppm.
-      La plus haute valeur mesurée jusqu'alors était en -311 000 av JC. Carte n°21
+      La plus haute valeur mesurée jusqu'alors était en -311 000 av JC. Dans le jeu
+      La Fresque du Climat, voir la carte n°21.
     answer_accessible_url: https://www.konbini.com/fr/techetinnovation/lhumanite-na-jamais-connu-atmosphere-chargee-co2/
     answer_scientific_url: https://www.ncdc.noaa.gov/paleo-search/?dataTypeId=7
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r253.jpg
@@ -12289,6 +12410,8 @@
     updated: 2020-07-30
     tags:
     - 13
+    - 142
+    - 163
 - model: api.question
   pk: 370
   fields:
@@ -13445,7 +13568,8 @@
       les conclusions d’une étude publiée lundi 4 mai dans la revue américaine Proceedings
       of the National Academy of Sciences, qui met en lumière les risques maximaux
       auxquels le monde pourrait être soumis dans les prochaines décennies à moins
-      que nous ne parvenions à inverser la tendance. Voir carte n°39.
+      que nous ne parvenions à inverser la tendance. Dans le jeu La Fresque du Climat,
+      voir la carte n°39.
     answer_accessible_url: https://www.lemonde.fr/planete/article/2020/05/04/d-ici-a-2070-un-tiers-de-l-humanite-pourrait-vivre-dans-des-endroits-aussi-chauds-que-le-sahara_6038639_3244.html?utm_source=PaidSocial&utm_medium=Facebook&utm_campaign=Fidelisation_Article&xtor=CS2-33281034-%5BFB%5D-%5Bteaser%5D-%5Babos%5D
     answer_scientific_url: https://www.pnas.org/content/early/2020/04/28/1910114117
     answer_image_url: https://upload.wikimedia.org/wikipedia/commons/c/c0/Solitaire-Carcasse_de_voiture_%285%29.jpg
@@ -13459,8 +13583,11 @@
     created: 2020-05-20
     updated: 2020-07-30
     tags:
+    - 5
     - 23
     - 51
+    - 142
+    - 181
 - model: api.question
   pk: 404
   fields:
@@ -13503,7 +13630,7 @@
     text: Quel est le potentiel de réchauffement global sur 100 ans du méthane (CH4)
       comparé à celui du CO2 ?
     hint: Le méthane a un pouvoir réchauffant très supérieur à celui du CO2, même
-      s’il persiste moins longtemps dans l’atmosphère. Voir carte n°9
+      s’il persiste moins longtemps dans l’atmosphère.
     type: QCM
     category: 1
     difficulty: 2
@@ -13517,7 +13644,8 @@
       de 28. C'est à dire que 1kg de méthane a le même pouvoir réchauffant que 28kg
       de CO2. Le GIEC se sert des valeurs de PRG afin de convertir les diverses émissions
       de gaz à effet de serre en unités comparables d’équivalent CO2 (CO2eq), lors
-      des calculs globaux de sources et de puits.
+      des calculs globaux de sources et de puits. Dans le jeu La Fresque du Climat,
+      voir la carte n°9.
     answer_accessible_url: https://www.connaissancedesenergies.org/gaz-effet-de-serre-quest-ce-que-l-equivalent-co2-170807
     answer_scientific_url: https://www.bilans-ges.ademe.fr/documentation/UPLOAD_DOC_FR/index.htm?prg.htm
     answer_image_url: https://ravijen.fr/wp-content/uploads/2018/09/tableau-PRG.jpg
@@ -13534,6 +13662,8 @@
     - 12
     - 13
     - 15
+    - 142
+    - 151
 - model: api.question
   pk: 406
   fields:
@@ -13875,7 +14005,8 @@
     hint: L’effet de serre permet de maintenir sur terre une température permettant
       d’avoir de l’eau liquide. La température moyenne sur terre est de 15°. Sans
       effet de serre, elle serait de -18°C. C'est l'effet de serre additionnel créé
-      par l'homme qui est problématique. Voir carte n°13.
+      par l'homme qui est problématique. Dans le jeu La Fresque du Climat, voir la
+      carte n°13.
     type: QCM
     category: 1
     difficulty: 1
@@ -13901,7 +14032,9 @@
     created: 2020-06-24
     updated: 2020-07-30
     tags:
-    - 93
+    - 98
+    - 142
+    - 155
 - model: api.question
   pk: 416
   fields:
@@ -14211,9 +14344,10 @@
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
-    updated: 2020-06-25
+    updated: 2020-07-30
     tags:
     - 22
+    - 142
 - model: api.question
   pk: 426
   fields:
@@ -14535,7 +14669,7 @@
     text: D'ici quelle année les émissions mondiales de CO2 doivent-elles tomber à
       zéro pour limiter le réchauffement climatique à +1.5°C ?
     hint: Pour limiter le réchauffement à +2°C, les émissions mondiales doivent être
-      à zéro en 2060-2070. Voir carte n°5
+      à zéro en 2060-2070. Dans le jeu La Fresque du Climat, voir la carte n°5.
     type: QCM
     category: 1
     difficulty: 2
@@ -14565,6 +14699,8 @@
     - 13
     - 24
     - 51
+    - 142
+    - 147
 - model: api.question
   pk: 437
   fields:
@@ -14625,10 +14761,10 @@
     validation_status: Brouillon
     added: 2020-06-04
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 10
-    - 95
+    - 100
 - model: api.question
   pk: 439
   fields:
@@ -14977,9 +15113,9 @@
     validation_status: Brouillon
     added: 2020-06-04
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
-    - 95
+    - 100
 - model: api.question
   pk: 450
   fields:
@@ -15071,10 +15207,10 @@
     validation_status: Écartée
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 12
-    - 94
+    - 99
 - model: api.question
   pk: 453
   fields:
@@ -15265,7 +15401,7 @@
   fields:
     text: 'Les éruptions volcaniques refroidissent le climat : vrai ou faux ?'
     hint: Des éruptions volcaniques majeures sont possiblement la cause de l'extinction
-      des dinosaures. Voir la carte n°14.
+      des dinosaures. Dans le jeu La Fresque du Climat, voir la carte n°14.
     type: VF
     category: 1
     difficulty: 1
@@ -15293,7 +15429,9 @@
     updated: 2020-07-30
     tags:
     - 66
-    - 94
+    - 99
+    - 142
+    - 156
 - model: api.question
   pk: 460
   fields:
@@ -15324,10 +15462,10 @@
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 24
-    - 97
+    - 93
 - model: api.question
   pk: 461
   fields:
@@ -15619,12 +15757,12 @@
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 1
     - 39
     - 44
-    - 100
+    - 94
 - model: api.question
   pk: 470
   fields:
@@ -15754,10 +15892,10 @@
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-07-04
+    updated: 2020-07-30
     tags:
-    - 9
     - 26
+    - 9
 - model: api.question
   pk: 474
   fields:
@@ -15785,10 +15923,10 @@
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-07-04
+    updated: 2020-07-30
     tags:
-    - 9
     - 26
+    - 9
 - model: api.question
   pk: 475
   fields:
@@ -15919,10 +16057,10 @@
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 17
-    - 103
+    - 97
 - model: api.question
   pk: 479
   fields:
@@ -16117,10 +16255,10 @@
     validation_status: A valider
     added: 2020-06-14
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 87
-    - 102
+    - 96
 - model: api.question
   pk: 485
   fields:
@@ -16183,10 +16321,10 @@
     validation_status: A valider
     added: 2020-06-14
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 39
-    - 101
+    - 95
 - model: api.question
   pk: 487
   fields:
@@ -16248,9 +16386,9 @@
     validation_status: A valider
     added: 2020-06-14
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
-    - 100
+    - 94
 - model: api.question
   pk: 489
   fields:
@@ -16278,10 +16416,10 @@
     validation_status: A valider
     added: 2020-06-14
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 39
-    - 100
+    - 94
 - model: api.question
   pk: 490
   fields:
@@ -16778,10 +16916,10 @@
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-07-04
+    updated: 2020-07-30
     tags:
-    - 9
     - 16
+    - 9
 - model: api.question
   pk: 505
   fields:
@@ -16900,11 +17038,11 @@
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 1
     - 44
-    - 99
+    - 103
 - model: api.question
   pk: 509
   fields:
@@ -16965,11 +17103,11 @@
     validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 1
     - 33
-    - 98
+    - 102
 - model: api.question
   pk: 511
   fields:
@@ -17026,10 +17164,10 @@
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-07-04
+    updated: 2020-07-30
     tags:
-    - 9
     - 16
+    - 9
 - model: api.question
   pk: 513
   fields:
@@ -17056,10 +17194,10 @@
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 12
-    - 93
+    - 98
 - model: api.question
   pk: 514
   fields:
@@ -17275,10 +17413,10 @@
     validation_status: Validée
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-07-23
+    updated: 2020-07-30
     tags:
     - 1
-    - 96
+    - 101
 - model: api.question
   pk: 521
   fields:
@@ -17397,9 +17535,9 @@
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
-    - 95
+    - 100
 - model: api.question
   pk: 525
   fields:
@@ -17961,9 +18099,9 @@
     validation_status: A valider
     added: 2020-06-20
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
-    - 93
+    - 98
 - model: api.question
   pk: 542
   fields:
@@ -18055,10 +18193,10 @@
     validation_status: Validée
     added: 2020-06-20
     created: 2020-06-24
-    updated: 2020-07-10
+    updated: 2020-07-30
     tags:
     - 1
-    - 95
+    - 100
 - model: api.question
   pk: 545
   fields:
