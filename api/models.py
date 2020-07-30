@@ -448,12 +448,6 @@ class Quiz(models.Model):
     publish = models.BooleanField(
         default=False, help_text="Le quiz est prêt à être publié"
     )
-    # stats
-    # answer_count
-    like_count = models.PositiveIntegerField(default=0, help_text="Le nombre de likes")
-    dislike_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de dislikes"
-    )
     # timestamps
     created = models.DateField(
         auto_now_add=True, help_text="La date de création du quiz"

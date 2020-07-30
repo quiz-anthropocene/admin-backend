@@ -345,7 +345,7 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
         "answer_count_agg",
     )
     list_filter = ("publish",)
-    ordering = ("id",)
+    ordering = ("name",)
     filter_horizontal = ("questions",)
     readonly_fields = (
         "show_image_background",
