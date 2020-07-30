@@ -161,9 +161,8 @@
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
       du climat et les conséquences de son dérèglement. L’objectif de l’association
       qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
-      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
-      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat.
-      Lot de carte n°1"
+      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le premier
+      lot de cartes distribué lors d'un atelier de la Fresque."
     author: Matthieu Massart
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: true
@@ -192,6 +191,7 @@
     - 361
     - 294
     - 362
+    - 13
 - model: api.quiz
   pk: 9
   fields:
@@ -221,7 +221,7 @@
       à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
     author: Matthieu Massart
     image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
-    publish: false
+    publish: true
     created: 2020-07-29
     questions:
     - 156
@@ -240,9 +240,8 @@
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
       du climat et les conséquences de son dérèglement. L’objectif de l’association
       qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
-      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
-      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat.
-      Lot de carte n°2."
+      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le deuxième
+      lot de cartes qui est distribué lors d'un atelier de la Fresque."
     author: Matthieu Massart
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: true
@@ -268,6 +267,10 @@
     - 47
     - 48
     - 118
+    - 16
+    - 32
+    - 14
+    - 21
 - model: api.quiz
   pk: 12
   fields:
@@ -277,9 +280,8 @@
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
       du climat et les conséquences de son dérèglement. L’objectif de l’association
       qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
-      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
-      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat.
-      Lot de carte n°3."
+      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur les cartes
+      du 3ème lot distribué lors d'une Fresque."
     author: Matthieu Massart
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: true
@@ -300,15 +302,15 @@
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
       du climat et les conséquences de son dérèglement. L’objectif de l’association
       qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
-      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
-      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat.
-      Lot de carte n°4."
+      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur les cartes
+      du 4ème lot distribué lors d'une fresque."
     author: Matthieu Massart
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: false
     created: 2020-07-29
     questions:
     - 315
+    - 52
 - model: api.quiz
   pk: 14
   fields:
@@ -318,9 +320,8 @@
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
       du climat et les conséquences de son dérèglement. L’objectif de l’association
       qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
-      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
-      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat.
-      Lot de carte n°5."
+      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le cinquième
+      et dernier lot de cartes distribué lors d'une Fresque."
     author: Matthieu Massart
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: false
@@ -328,10 +329,11 @@
     questions:
     - 35
     - 403
+    - 229
 - model: api.quiz
   pk: 15
   fields:
-    name: Fresque du Climat - Mode Expert
+    name: Fresque du Climat - pour aller au-delà
     description: "La Fresque du Climat, c’est un atelier ludique, participatif et
       créatif sur le changement climatique. Il est basé sur l’intelligence collective
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
@@ -352,6 +354,8 @@
     - 460
     - 222
     - 46
+    - 425
+    - 348
 - model: api.quiz
   pk: 16
   fields:

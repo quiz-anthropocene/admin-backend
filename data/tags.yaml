@@ -684,3 +684,261 @@
     name: Feu
     description: ''
     created: 2020-06-25
+- model: api.tag
+  pk: 142
+  fields:
+    name: Fresque du Climat
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 143
+  fields:
+    name: 'Fresque du Climat : carte n°1'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 144
+  fields:
+    name: 'Fresque du Climat : carte n°2'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 145
+  fields:
+    name: 'Fresque du Climat : carte n°3'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 146
+  fields:
+    name: 'Fresque du Climat : carte n°4'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 147
+  fields:
+    name: 'Fresque du Climat : carte n°5'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 148
+  fields:
+    name: 'Fresque du Climat : carte n°6'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 149
+  fields:
+    name: 'Fresque du Climat : carte n°7'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 150
+  fields:
+    name: 'Fresque du Climat : carte n°8'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 151
+  fields:
+    name: 'Fresque du Climat : carte n°9'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 152
+  fields:
+    name: 'Fresque du Climat : carte n°10'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 153
+  fields:
+    name: 'Fresque du Climat : carte n°11'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 154
+  fields:
+    name: 'Fresque du Climat : carte n°12'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 155
+  fields:
+    name: 'Fresque du Climat : carte n°13'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 156
+  fields:
+    name: 'Fresque du Climat : carte n°14'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 157
+  fields:
+    name: 'Fresque du Climat : carte n°15'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 158
+  fields:
+    name: 'Fresque du Climat : carte n°16'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 159
+  fields:
+    name: 'Fresque du Climat : carte n°17'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 160
+  fields:
+    name: 'Fresque du Climat : carte n°18'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 161
+  fields:
+    name: 'Fresque du Climat : carte n°19'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 162
+  fields:
+    name: 'Fresque du Climat : carte n°20'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 163
+  fields:
+    name: 'Fresque du Climat : carte n°21'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 164
+  fields:
+    name: 'Fresque du Climat : carte n°22'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 165
+  fields:
+    name: 'Fresque du Climat : carte n°23'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 166
+  fields:
+    name: 'Fresque du Climat : carte n°24'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 167
+  fields:
+    name: 'Fresque du Climat : carte n°25'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 168
+  fields:
+    name: 'Fresque du Climat : carte n°26'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 169
+  fields:
+    name: 'Fresque du Climat : carte n°27'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 170
+  fields:
+    name: 'Fresque du Climat : carte n°28'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 171
+  fields:
+    name: 'Fresque du Climat : carte n°29'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 172
+  fields:
+    name: 'Fresque du Climat : carte n°30'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 173
+  fields:
+    name: 'Fresque du Climat : carte n°31'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 174
+  fields:
+    name: 'Fresque du Climat : carte n°32'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 175
+  fields:
+    name: 'Fresque du Climat : carte n°33'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 176
+  fields:
+    name: 'Fresque du Climat : carte n°34'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 177
+  fields:
+    name: 'Fresque du Climat : carte n°35'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 178
+  fields:
+    name: 'Fresque du Climat : carte n°36'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 179
+  fields:
+    name: 'Fresque du Climat : carte n°37'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 180
+  fields:
+    name: 'Fresque du Climat : carte n°38'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 181
+  fields:
+    name: 'Fresque du Climat : carte n°39'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 182
+  fields:
+    name: 'Fresque du Climat : carte n°40'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 183
+  fields:
+    name: 'Fresque du Climat : carte n°41'
+    description: ''
+    created: 2020-07-30
+- model: api.tag
+  pk: 184
+  fields:
+    name: 'Fresque du Climat : carte n°42'
+    description: ''
+    created: 2020-07-30
