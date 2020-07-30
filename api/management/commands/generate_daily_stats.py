@@ -14,7 +14,7 @@ def cleanup_question_answer_events():
     """
     cleanup QuestionAnswerEvent
     """
-    print("===== starting QuestionAnswerEvent cleanup")
+    print("=== starting QuestionAnswerEvent cleanup")
 
     question_stats = QuestionAnswerEvent.objects.all()
     question_stats_df = pd.DataFrame.from_records(question_stats.values())
@@ -98,7 +98,7 @@ def cleanup_question_feedback_events():
     """
     cleanup QuestionFeedbackEvent
     """
-    print("===== starting QuestionFeedbackEvent cleanup")
+    print("=== starting QuestionFeedbackEvent cleanup")
 
     question_feedbacks = QuestionFeedbackEvent.objects.all()
     question_feedbacks_df = pd.DataFrame.from_records(question_feedbacks.values())
@@ -204,12 +204,14 @@ def cleanup_quiz_feedback_events():
 
 class Command(BaseCommand):
     """
-    python manage.py cleanup_app_stats
+    python manage.py generate_daily_stats
     """
 
-    help = """Group and clean application stats"""
+    help = """Generate Daily stats and clean (Question) Event stats"""
 
     def handle(self, *args, **kwargs):
+        print("=== generate_daily_stats running")
+        print("it will only run on QuestionAnswerEvent & QuestionFeedbackEvent")
         cleanup_question_answer_events()
         cleanup_question_feedback_events()
         # cleanup_quiz_answer_events()

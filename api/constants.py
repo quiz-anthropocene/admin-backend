@@ -59,9 +59,9 @@ DEFAULT_DAILY_STAT_HOUR_SPLIT = {
 
 AGGREGATION_FIELD_CHOICE_LIST = [
     "question_answer_count",
-    "quiz_answer_count",
+    # "quiz_answer_count",
     "question_feedback_count",
-    "quiz_feedback_count",
+    # "quiz_feedback_count",
 ]
 AGGREGATION_QUIZ_FIELD_CHOICE_LIST = ["quiz_answer_count", "quiz_feedback_count"]
 AGGREGATION_SCALE_CHOICE_LIST = ["day", "week", "month"]

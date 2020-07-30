@@ -65,11 +65,25 @@
 {% endblock %}
 
 {% block content %}
-<p><i>
-  Les DailyStats sont générées à partir stats d'usage stockées dans QuestionAnswerEvent, QuestionFeedbackEvent, QuizAnswerEvent et QuizFeedbackEvent.<br />
-  Un script lancé manuellement permet d'aggréger ces chiffres.<br />
-  Dernière date de lancement du script : {{ daily_stat_last_date | date }}
-</i></p>
+<p>
+  Les DailyStats sont générées à partir des stats d'usage stockées dans QuestionAnswerEvent, QuestionFeedbackEvent, <strike>QuizAnswerEvent et QuizFeedbackEvent</strike>.<br />
+</p>
+<p>
+  Un script, lancé manuellement, permet d'aggréger ces chiffres.<br />
+  Dernière date de lancement du script : <strong>{{ daily_stat_last_date | date }}</strong>
+</p>
+<p>
+  Pour lancer le script, cliquer sur le bouton ci-dessous. 👇<br />
+  ⚠️ Veuillez patienter, cela peut prendre du temps.
+</p>
+<form method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="run_daily_stat_script" value="1" />
+  <input type="submit" value="Lancer le script">
+</form>
+
+<hr style="margin-top:20px;margin-bottom:20px" />
+
 <form method="POST">
   {% csrf_token %}
   <select name="field" id="id_field">
@@ -84,6 +98,7 @@
   </select>
   <input type="submit" value="Voir les statistiques">
 </form>
+
 <div style="width: 100%">
   <canvas id="myChart" style="margin-bottom: 70px; width: 80%; height: 20%;"></canvas>
 </div>

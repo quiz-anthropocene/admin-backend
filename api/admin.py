@@ -7,7 +7,7 @@ from datetime import datetime
 from django.http import HttpResponse
 from django.conf import settings
 from django.contrib import admin
-from django.core import serializers
+from django.core import serializers, management
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.html import mark_safe
 
@@ -645,6 +645,9 @@ class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
 
         Corresponding template in templates/admin/api/dailystat/change_list.html
         """
+        if request.POST.get("run_daily_stat_script", False):
+            management.call_command("generate_daily_stats")
+
         # custom form
         current_field = str(
             request.POST.get("field", constants.AGGREGATION_FIELD_CHOICE_LIST[0])
@@ -663,7 +666,10 @@ class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
 
         # get answers since today ?
         # no, need to run script to populate the values
-        daily_stat_last_date = DailyStat.objects.last().date
+        daily_stat_last = DailyStat.objects.last()
+        daily_stat_last_date = (
+            daily_stat_last.date if daily_stat_last else datetime(1970, 1, 1)
+        )
 
         # Serialize and attach the chart data to the template context
         chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)

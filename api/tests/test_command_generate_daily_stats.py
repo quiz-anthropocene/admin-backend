@@ -63,7 +63,7 @@ class CleanupAppStatsCommandTest(TestCase):
         self.assertEqual(QuestionAnswerEvent.objects.count(), 6)
         self.assertEqual(QuestionFeedbackEvent.objects.count(), 6)
 
-        management.call_command("cleanup_app_stats")
+        management.call_command("generate_daily_stats")
 
         question_1_updated = Question.objects.get(pk=self.question_1.id)
         daily_stat_today = DailyStat.objects.get(date=datetime.utcnow().date())
