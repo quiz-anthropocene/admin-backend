@@ -25,7 +25,7 @@
       data: {
         datasets: [
           {
-            label: 'quiz_answers',
+            label: '{{ current_field | safe }}', // 'quiz_answers',
             data: chartData,
             backgroundColor: 'rgba(220,20,20,0.5)',
           },
@@ -68,15 +68,20 @@
 <form method="POST">
   {% csrf_token %}
   <select name="quiz_id" id="id_quiz_id">
-    {% for quiz in quiz_list %}
+    {% for quiz in quiz_choice_list %}
       <option value="{{ quiz.id }}" {% if current_quiz_id == quiz.id %}selected{% endif %}>{{ quiz.id }} - {{ quiz.name }}</option>
     {% endfor %}
   </select>
-  <!-- <select name="scale" id="id_scale">
+  <select name="field" id="id_field">
+    {% for field_option in field_choice_list %}
+      <option value="{{ field_option }}" {% if current_field == field_option %}selected{% endif %}>{{ field_option }}</option>
+    {% endfor %}
+  </select>
+  <select name="scale" id="id_scale">
     {% for scale_option in scale_choice_list %}
       <option value="{{ scale_option }}" {% if current_scale == scale_option %}selected{% endif %}>{{ scale_option }}</option>
     {% endfor %}
-  </select> -->
+  </select>
   <input type="submit" value="Voir les statistiques du quiz">
 </form>
 <div style="width: 100%">

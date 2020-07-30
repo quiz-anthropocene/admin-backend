@@ -57,8 +57,15 @@ DEFAULT_DAILY_STAT_HOUR_SPLIT = {
     for h in range(24)  # '0' à '23'
 }
 
-AGGREGATION_SINCE_CHOICE_LIST = ["total", "month", "week"]
+AGGREGATION_FIELD_CHOICE_LIST = [
+    "question_answer_count",
+    "quiz_answer_count",
+    "question_feedback_count",
+    "quiz_feedback_count",
+]
+AGGREGATION_QUIZ_FIELD_CHOICE_LIST = ["quiz_answer_count", "quiz_feedback_count"]
 AGGREGATION_SCALE_CHOICE_LIST = ["day", "week", "month"]
+AGGREGATION_SINCE_CHOICE_LIST = ["total", "month", "week"]
 
 CONTRIBUTION_TYPE_LIST = [
     "nouvelle question",

@@ -383,15 +383,23 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
         """
         # custom form
         current_quiz_id = int(request.POST.get("quiz_id", Quiz.objects.first().id))
+        current_field = str(
+            request.POST.get("field", constants.AGGREGATION_QUIZ_FIELD_CHOICE_LIST[0])
+        )
         current_scale = str(
             request.POST.get("scale", constants.AGGREGATION_SCALE_CHOICE_LIST[0])
         )
 
         # Aggregate answers per day
         # chart_data_query = QuizAnswerEvent.objects.extra(select={"day": "date(created)"}) # sqlite
-        chart_data_query = QuizAnswerEvent.objects.for_quiz(
+        chart_data_model = (
+            QuizAnswerEvent
+            if current_field == constants.AGGREGATION_QUIZ_FIELD_CHOICE_LIST[0]
+            else QuizFeedbackEvent
+        )
+        chart_data_query = chart_data_model.objects.for_quiz(
             quiz_id=current_quiz_id
-        ).agg_timeseries()
+        ).agg_timeseries(scale=current_scale)
 
         chart_data_list = list(chart_data_query)
 
@@ -405,10 +413,12 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
         chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
         extra_context = extra_context or {
             "chart_data": chart_data_json,
+            "quiz_choice_list": Quiz.objects.all().order_by("id"),
             "current_quiz_id": current_quiz_id,
+            "field_choice_list": constants.AGGREGATION_QUIZ_FIELD_CHOICE_LIST,
+            "current_field": current_field,
             "scale_choice_list": constants.AGGREGATION_SCALE_CHOICE_LIST,
             "current_scale": current_scale,
-            "quiz_list": Quiz.objects.all().order_by("id"),
         }
 
         # Call the superclass changelist_view to render the page
@@ -609,6 +619,7 @@ class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
         "question_answer_count",
         "quiz_answer_count",
         "question_feedback_count",
+        "quiz_feedback_count",
         "created",
     )
     list_filter = ("date",)
@@ -635,6 +646,9 @@ class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
         Corresponding template in templates/admin/api/dailystat/change_list.html
         """
         # custom form
+        current_field = str(
+            request.POST.get("field", constants.AGGREGATION_FIELD_CHOICE_LIST[0])
+        )
         current_scale = str(
             request.POST.get("scale", constants.AGGREGATION_SCALE_CHOICE_LIST[0])
         )
@@ -642,18 +656,22 @@ class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
         # Aggregate answers per day
         # chart_data_query = DailyStat.objects.extra(select={"day": "date(date)"}) # sqlite
         chart_data_query = DailyStat.objects.agg_timeseries(
-            "question_answer_count", scale=current_scale
+            current_field, scale=current_scale
         )
 
         chart_data_list = list(chart_data_query)
 
         # get answers since today ?
         # no, need to run script to populate the values
+        daily_stat_last_date = DailyStat.objects.last().date
 
         # Serialize and attach the chart data to the template context
         chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
         extra_context = extra_context or {
             "chart_data": chart_data_json,
+            "daily_stat_last_date": daily_stat_last_date,
+            "field_choice_list": constants.AGGREGATION_FIELD_CHOICE_LIST,
+            "current_field": current_field,
             "scale_choice_list": constants.AGGREGATION_SCALE_CHOICE_LIST,
             "current_scale": current_scale,
         }

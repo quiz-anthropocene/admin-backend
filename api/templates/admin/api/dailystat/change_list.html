@@ -25,7 +25,7 @@
       data: {
         datasets: [
           {
-            label: 'question_answers',
+            label: '{{ current_field | safe }}', // 'answers_count'
             data: chartData,
             backgroundColor: 'rgba(220,20,20,0.5)',
           },
@@ -65,14 +65,24 @@
 {% endblock %}
 
 {% block content %}
+<p><i>
+  Les DailyStats sont générées à partir stats d'usage stockées dans QuestionAnswerEvent, QuestionFeedbackEvent, QuizAnswerEvent et QuizFeedbackEvent.<br />
+  Un script lancé manuellement permet d'aggréger ces chiffres.<br />
+  Dernière date de lancement du script : {{ daily_stat_last_date | date }}
+</i></p>
 <form method="POST">
   {% csrf_token %}
+  <select name="field" id="id_field">
+    {% for field_option in field_choice_list %}
+      <option value="{{ field_option }}" {% if current_field == field_option %}selected{% endif %}>{{ field_option }}</option>
+    {% endfor %}
+  </select>
   <select name="scale" id="id_scale">
     {% for scale_option in scale_choice_list %}
       <option value="{{ scale_option }}" {% if current_scale == scale_option %}selected{% endif %}>{{ scale_option }}</option>
     {% endfor %}
   </select>
-  <input type="submit" value="Aggregate">
+  <input type="submit" value="Voir les statistiques">
 </form>
 <div style="width: 100%">
   <canvas id="myChart" style="margin-bottom: 70px; width: 80%; height: 20%;"></canvas>

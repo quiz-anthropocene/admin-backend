@@ -1,11 +1,10 @@
-from datetime import datetime, timedelta
-
 from django.db import models
 from django.db.models import Avg, Sum, Count
 from django.contrib.postgres.fields import JSONField
 from django.core.exceptions import ValidationError
 
 from api import constants
+from api import utilities
 
 
 class Category(models.Model):
@@ -552,14 +551,27 @@ class QuizAnswerEventQuerySet(models.QuerySet):
     def for_quiz(self, quiz_id):
         return self.filter(quiz=quiz_id)
 
-    def agg_timeseries(self):
+    def agg_timeseries(self, scale="day"):
         queryset = self
-        queryset = (
-            queryset.extra(select={"day": "to_char(created, 'YYYY-MM-DD')"})
-            .values("day")
-            .annotate(y=Count("created"))
-            .order_by("day")
-        )
+        # scale
+        if scale in ["day", "week"]:
+            queryset = (
+                queryset.extra(select={"day": "to_char(created, 'YYYY-MM-DD')"})
+                .values("day")
+                .annotate(y=Count("created"))
+                .order_by("day")
+            )
+            if scale == "week":
+                return utilities.aggregate_timeseries_by_week(queryset)
+
+        if scale == "month":
+            queryset = (
+                queryset.extra(select={"day": "to_char(created, 'YYYY-MM-01')"})
+                .values("day")
+                .annotate(y=Count("created"))
+                .order_by("day")
+            )
+
         return queryset
 
 
@@ -583,14 +595,37 @@ class QuizAnswerEvent(models.Model):
 
 
 class QuizFeedbackEventQuerySet(models.QuerySet):
-    def for_quiz(self, quiz_id):
-        return self.filter(quiz=quiz_id)
-
     def liked(self):
         return self.filter(choice=constants.FEEDBACK_LIKE)
 
     def disliked(self):
         return self.filter(choice=constants.FEEDBACK_DISLIKE)
+
+    def for_quiz(self, quiz_id):
+        return self.filter(quiz=quiz_id)
+
+    def agg_timeseries(self, scale="day"):
+        queryset = self
+        # scale
+        if scale in ["day", "week"]:
+            queryset = (
+                queryset.extra(select={"day": "to_char(created, 'YYYY-MM-DD')"})
+                .values("day")
+                .annotate(y=Count("created"))
+                .order_by("day")
+            )
+            if scale == "week":
+                return utilities.aggregate_timeseries_by_week(queryset)
+
+        if scale == "month":
+            queryset = (
+                queryset.extra(select={"day": "to_char(created, 'YYYY-MM-01')"})
+                .values("day")
+                .annotate(y=Count("created"))
+                .order_by("day")
+            )
+
+        return queryset
 
 
 class QuizFeedbackEvent(models.Model):
@@ -615,18 +650,18 @@ class DailyStatManager(models.Manager):
     def agg_count(
         self,
         field="question_answer_count",
-        scale="total",  # since
+        since="total",
         week_or_month_iso_number=None,
     ):
         queryset = self
-        # scale
-        if scale not in constants.AGGREGATION_SINCE_CHOICE_LIST:
+        # since
+        if since not in constants.AGGREGATION_SINCE_CHOICE_LIST:
             raise ValueError(
                 f"DailyStat agg_count: must be one of {constants.AGGREGATION_SINCE_CHOICE_LIST}"
             )
-        if scale == "month":
+        if since == "month":
             queryset = queryset.filter(date__month=week_or_month_iso_number)
-        elif scale == "week":
+        elif since == "week":
             queryset = queryset.filter(date__week=week_or_month_iso_number)
         # field
         queryset = queryset.aggregate(Sum(field))[field + "__sum"]
@@ -649,31 +684,7 @@ class DailyStatManager(models.Manager):
                 .order_by("day")
             )
             if scale == "week":
-                # need to group by start-of-week dates
-                queryset_grouped_by_week = []
-                for elem in queryset:
-                    elem_date = datetime.strptime(elem["day"], "%Y-%m-%d")
-                    elem_week_start_date = elem_date - timedelta(
-                        days=elem_date.weekday()
-                    )
-                    elem_week_start_date_str = elem_week_start_date.strftime("%Y-%m-%d")
-                    elem_week_start_date_index = next(
-                        (
-                            index
-                            for (index, d) in enumerate(queryset_grouped_by_week)
-                            if d["day"] == elem_week_start_date_str
-                        ),
-                        None,
-                    )
-                    if elem_week_start_date_index is None:
-                        queryset_grouped_by_week.append(
-                            {"day": elem_week_start_date_str, "y": elem["y"]}
-                        )
-                    else:
-                        queryset_grouped_by_week[elem_week_start_date_index][
-                            "y"
-                        ] += elem["y"]
-                return queryset_grouped_by_week
+                return utilities.aggregate_timeseries_by_week(queryset)
 
         if scale == "month":
             queryset = (
