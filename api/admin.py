@@ -269,6 +269,15 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
         "dislike_count_agg",
     )
 
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    # def has_change_permission(self, request, obj=None):
+    #     return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
     # from_encoding = 'utf-8-sig'
     def get_import_formats(self):
         """
@@ -632,9 +641,9 @@ class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
         "id",
         "date",
         "question_answer_count",
-        "quiz_answer_count",
+        # "quiz_answer_count",
         "question_feedback_count",
-        "quiz_feedback_count",
+        # "quiz_feedback_count",
         "created",
     )
     list_filter = ("date",)
