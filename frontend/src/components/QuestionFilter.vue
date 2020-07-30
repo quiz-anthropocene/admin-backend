@@ -18,7 +18,11 @@
           </span>
         </div>
         <div class="col-4 text-align-right">
-          <span class="label label-hidden"><strong>{{ questionsDisplayedCount }}</strong> Questions</span>
+          <span v-on:click.stop>
+            <router-link class="no-decoration" :to="{ name: 'question-list' }" @click.native.prevent="clicked">
+              <span class="label label-hidden"><strong>{{ questionsDisplayedCount }}</strong> Questions</span>
+            </router-link>
+          </span>
         </div>
       </div>
     </div>
@@ -101,12 +105,14 @@ export default {
       return this.$store.state.categories;
     },
     tags() {
-      // .slice makes a copy of the array, instead of mutating the orginal
-      return this.$store.state.tags.slice(0).filter((t) => t.question_count);
+      return this.$store.state.tags
+        .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
+        .filter((t) => t.question_count);
     },
     authors() {
-      // .slice makes a copy of the array, instead of mutating the orginal
-      return this.$store.state.authors.slice(0).sort((a, b) => b.question_count - a.question_count);
+      return this.$store.state.authors
+        .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
+        .sort((a, b) => b.question_count - a.question_count);
     },
     difficultyLevels() {
       return this.$store.state.difficultyLevels;

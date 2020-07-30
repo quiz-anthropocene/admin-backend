@@ -63,7 +63,9 @@ export default {
 
   computed: {
     quizzes() {
-      return this.$store.state.quizzes;
+      return this.$store.state.quizzes
+        .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
+        .sort((a, b) => a.name.localeCompare(b.name));
     },
   },
 
@@ -77,12 +79,10 @@ export default {
 
 <style scoped>
 .filter-box {
-  box-shadow: 0px 0px 5px 5px #dfdfdf;
+  box-shadow: 0px 0px 5px 5px #c5c5c5;
   border-radius: 5px;
   margin: 10px 0px;
-  padding: 10px;
-  max-height: 80vh;
-  overflow: auto;
+  padding: 5px;
 }
 .filter-box > .filter-box--header {
   text-align: left;
