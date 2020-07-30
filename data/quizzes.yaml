@@ -93,7 +93,7 @@
       de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent lui
       être imputées. Connaissez-vous votre empreinte ? Voyons-voir ça.
     author: Matthieu Massart
-    image_background_url: https://www.google.fr/url?sa=i&url=https%3A%2F%2Fleshorizons.net%2Fempreinte-carbone%2F&psig=AOvVaw2FM1KmHWv_txtnDhuBmU2p&ust=1596112724478000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJi0g7O98uoCFQAAAAAdAAAAABAJ
+    image_background_url: https://leshorizons.net/wp-content/uploads/2019/04/d%C3%A9finition-de-lempreinte-carbone-1020x512.jpg
     publish: true
     created: 2020-07-08
     questions:
@@ -234,7 +234,7 @@
 - model: api.quiz
   pk: 11
   fields:
-    name: Fresque du climat - Lot 2
+    name: Fresque du Climat - Lot 2
     description: "La Fresque du Climat, c’est un atelier ludique, participatif et
       créatif sur le changement climatique. Il est basé sur l’intelligence collective
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
@@ -271,7 +271,7 @@
 - model: api.quiz
   pk: 12
   fields:
-    name: Fresque du climat - Lot 3
+    name: Fresque du Climat - Lot 3
     description: "La Fresque du Climat, c’est un atelier ludique, participatif et
       créatif sur le changement climatique. Il est basé sur l’intelligence collective
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
@@ -294,7 +294,7 @@
 - model: api.quiz
   pk: 13
   fields:
-    name: Fresque du climat - Lot 4
+    name: Fresque du Climat - Lot 4
     description: "La Fresque du Climat, c’est un atelier ludique, participatif et
       créatif sur le changement climatique. Il est basé sur l’intelligence collective
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
@@ -312,7 +312,7 @@
 - model: api.quiz
   pk: 14
   fields:
-    name: Fresque du climat - Lot 5
+    name: Fresque du Climat - Lot 5
     description: "La Fresque du Climat, c’est un atelier ludique, participatif et
       créatif sur le changement climatique. Il est basé sur l’intelligence collective
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
@@ -331,7 +331,7 @@
 - model: api.quiz
   pk: 15
   fields:
-    name: Fresque du climat - Expert
+    name: Fresque du Climat - Mode Expert
     description: "La Fresque du Climat, c’est un atelier ludique, participatif et
       créatif sur le changement climatique. Il est basé sur l’intelligence collective
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
