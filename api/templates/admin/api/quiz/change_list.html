@@ -67,16 +67,19 @@
 {% block content %}
 <form method="POST">
   {% csrf_token %}
+  <label for ="id_field">quiz</label>
   <select name="quiz_id" id="id_quiz_id">
     {% for quiz in quiz_choice_list %}
       <option value="{{ quiz.id }}" {% if current_quiz_id == quiz.id %}selected{% endif %}>{{ quiz.id }} - {{ quiz.name }}</option>
     {% endfor %}
   </select>
+  <label for ="id_field">champ</label>
   <select name="field" id="id_field">
     {% for field_option in field_choice_list %}
       <option value="{{ field_option }}" {% if current_field == field_option %}selected{% endif %}>{{ field_option }}</option>
     {% endfor %}
   </select>
+  <label for ="id_field">par</label>
   <select name="scale" id="id_scale">
     {% for scale_option in scale_choice_list %}
       <option value="{{ scale_option }}" {% if current_scale == scale_option %}selected{% endif %}>{{ scale_option }}</option>
