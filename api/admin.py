@@ -101,16 +101,24 @@ class ExportMixin:
     def export_all_question_as_yaml(self, request, queryset):
         return self.export_as_yaml(request, Question.objects.all().order_by("pk"))
 
-    def export_all_questioncategory_as_yaml(self, request, queryset):
-        return self.export_as_yaml(request, Category.objects.all().order_by("pk"))
-
-    def export_all_questiontag_as_yaml(self, request, queryset):
-        return self.export_as_yaml(request, Tag.objects.all().order_by("pk"))
-
     def export_all_questionanswerevent_as_yaml(self, request, queryset):
         return self.export_as_yaml(
             request, QuestionAnswerEvent.objects.all().order_by("pk")
         )
+
+    def export_all_questionfeedbackevent_as_yaml(self, request, queryset):
+        return self.export_as_yaml(
+            request, QuestionFeedbackEvent.objects.all().order_by("pk")
+        )
+
+    def export_all_quiz_as_yaml(self, request, queryset):
+        return self.export_as_yaml(request, Quiz.objects.all().order_by("pk"))
+
+    def export_all_category_as_yaml(self, request, queryset):
+        return self.export_as_yaml(request, Category.objects.all().order_by("pk"))
+
+    def export_all_tag_as_yaml(self, request, queryset):
+        return self.export_as_yaml(request, Tag.objects.all().order_by("pk"))
 
     # def export_all_as_yaml(self, request):
     #     meta = self.model._meta
@@ -129,9 +137,11 @@ class ExportMixin:
     export_as_json.short_description = "Export Selected (JSON)"
     export_as_yaml.short_description = "Export Selected (YAML)"
     export_all_question_as_yaml.short_description = "Export All (YAML)"
-    export_all_questioncategory_as_yaml.short_description = "Export All (YAML)"
-    export_all_questiontag_as_yaml.short_description = "Export All (YAML)"
     export_all_questionanswerevent_as_yaml.short_description = "Export All (YAML)"
+    export_all_questionfeedbackevent_as_yaml.short_description = "Export All (YAML)"
+    export_all_quiz_as_yaml.short_description = "Export All (YAML)"
+    export_all_category_as_yaml.short_description = "Export All (YAML)"
+    export_all_tag_as_yaml.short_description = "Export All (YAML)"
 
 
 class QuestionResource(resources.ModelResource):
@@ -313,7 +323,7 @@ class CategoryAdmin(admin.ModelAdmin, ExportMixin):
         "export_as_csv",
         "export_as_json",
         "export_as_yaml",
-        "export_all_questioncategory_as_yaml",
+        "export_all_category_as_yaml",
     ]
 
 
@@ -328,7 +338,7 @@ class TagAdmin(admin.ModelAdmin, ExportMixin):
         "export_as_csv",
         "export_as_json",
         "export_as_yaml",
-        "export_all_questiontag_as_yaml",
+        "export_all_tag_as_yaml",
     ]
 
 
@@ -357,7 +367,12 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
         "like_count_agg",
         "dislike_count_agg",
     )
-    actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
+    actions = [
+        "export_as_csv",
+        "export_as_json",
+        "export_as_yaml",
+        "export_all_quiz_as_yaml",
+    ]
 
     def show_image_background(self, instance):
         if instance.image_background_url:
@@ -494,7 +509,7 @@ class QuestionFeedbackEventAdmin(admin.ModelAdmin, ExportMixin):
         "export_as_csv",
         "export_as_json",
         "export_as_yaml",
-        # "export_all_questionanswerevent_as_yaml",
+        "export_all_questionfeedbackevent_as_yaml",
     ]
 
     def get_readonly_fields(self, request, obj=None):
