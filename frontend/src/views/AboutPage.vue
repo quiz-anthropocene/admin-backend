@@ -19,7 +19,8 @@
     </p>
 
     <p>
-      Ces questions peuvent aussi servir à se former pour mieux maitriser les chiffres / ordres de grandeurs. Les usages peuvent être multiples (conférences, formations, quiz, jeu...).
+      Ces questions peuvent aussi servir à se former pour mieux maitriser les chiffres / ordres de grandeurs.
+      Les usages peuvent être multiples (conférences, formations, quiz, jeu...).
     </p>
 
     <br />
@@ -28,7 +29,8 @@
       On est preneur de tous vos retours !
     </p>
     <p>
-      Une page <router-link :to="{ name: 'contribute' }">✍️&nbsp;Contribuer</router-link> vous permet de rajouter une question ou un sujet qui vous tiens à coeur. Vous pouvez aussi y laisser vos commentaires et remarques !
+      Une page <router-link :to="{ name: 'contribute' }">✍️&nbsp;Contribuer</router-link> vous permet de rajouter une question ou un sujet qui vous tiens à coeur.
+      Vous pouvez aussi y laisser vos commentaires et remarques !
     </p>
 
     <br />
@@ -36,9 +38,6 @@
     <p>
       Le code de l'application est visible sur <a href="https://github.com/raphodn/know-your-planet" target="_blank">la page Github de l'application</a>.
       Si vous avez des commentaires ou des suggestions sur l'application, vous pouvez y créer des <i>Issues</i> 🙏
-    </p>
-    <p>
-
     </p>
 
     <br />

@@ -105,7 +105,7 @@ export default {
         },
         body: JSON.stringify({
           text: this.contribution_text,
-          description: (this.context.source === 'question') ? `Question #${this.context.item.id} - ${this.context.item.category} - ${this.context.item.text}` : `Quiz #${this.context.item.id} - ${this.context.item.name}`,
+          description: (this.context.source === 'question') ? `Question #${this.context.item.id} - ${this.context.item.category.name} - ${this.context.item.text}` : `Quiz #${this.context.item.id} - ${this.context.item.name}`,
           type: `commentaire ${this.context.source}`,
         }),
       })
