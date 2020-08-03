@@ -170,9 +170,10 @@ class QuizSerializer(serializers.ModelSerializer):
             "author",
             "image_background_url",
             "questions",
+            "tags",
             "question_count",
-            "categories_list",
-            "tags_list",
+            "questions_categories_list",
+            "questions_tags_list",
             "difficulty_average",
             "created",
         ]
@@ -180,6 +181,7 @@ class QuizSerializer(serializers.ModelSerializer):
 
 class QuizFullSerializer(serializers.ModelSerializer):
     questions = QuestionSerializer(many=True)
+    tags = TagSerializer(many=True)
 
     class Meta:
         model = Quiz
@@ -190,9 +192,10 @@ class QuizFullSerializer(serializers.ModelSerializer):
             "author",
             "image_background_url",
             "questions",
+            "tags",
             "question_count",
-            "categories_list",
-            "tags_list",
+            "questions_categories_list",
+            "questions_tags_list",
             "difficulty_average",
             "created",
         ]
