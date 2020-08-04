@@ -123,7 +123,8 @@ export default {
       this.$store.dispatch('GET_TAG_LIST_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_QUESTION_LIST_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_QUIZ_LIST_FROM_LOCAL_YAML');
-      this.$store.dispatch('GET_GLOSSARY_LIST_FROM_LOCAL_YAML');
+      this.$store.dispatch('GET_RESSOURCES_GLOSSAIRE_LIST_FROM_LOCAL_YAML');
+      this.$store.dispatch('GET_RESSOURCES_SOUTIENS_LIST_FROM_LOCAL_YAML');
       // } else {
       // this.$store.dispatch('GET_QUESTION_LIST');
       // this.$store.dispatch('GET_CATEGORY_LIST');
@@ -213,6 +214,12 @@ form .form-group {
 }
 
 /* Global css */
+
+/* adds a 'opens in new tab' icon */
+a[target="_blank"]::after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0 3px 0 5px;
+}
 
 a.no-decoration {
   color: inherit;

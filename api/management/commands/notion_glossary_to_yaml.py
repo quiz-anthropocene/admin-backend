@@ -56,7 +56,8 @@ class Command(BaseCommand):
                 glossary_list.append(glossary_item_base)
         # --- write to file
         with open(
-            f"data/glossary{'-flat' if kwargs.get('flat') else ''}.yaml", "w"
+            f"data/ressources-glossaire{'_flat' if kwargs.get('flat') else ''}.yaml",
+            "w",
         ) as file:
             print(glossary_list)
             yaml.safe_dump(

@@ -16,7 +16,7 @@
     <div v-if="quizzes && quizzes.length > 0" class="row">
       <div class="col-sm-6" v-for="quiz in quizzes" :key="quiz.id">
         <router-link class="card no-decoration" :to="{ name: 'quiz-detail', params: { quizId: quiz.id } }">
-          <img v-bind:src="quiz.image_background_url || 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png'" class="card-img-top" alt="Une image pour illustrer le quiz">
+          <img class="card-img-top" v-bind:src="quiz.image_background_url || 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png'" alt="Une image pour illustrer le quiz">
           <div class="card-body">
             <h2 class="card-title">{{ quiz.name }}</h2>
             <p class="card-subtitle"><strong>{{ quiz.questions.length }}</strong> question<span v-if="quiz.questions.length > 1">s</span></p>
