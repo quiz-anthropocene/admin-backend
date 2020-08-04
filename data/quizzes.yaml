@@ -18,6 +18,7 @@
     - 83
     - 21
     - 59
+    tags: []
 - model: api.quiz
   pk: 2
   fields:
@@ -39,6 +40,7 @@
     - 254
     - 210
     - 410
+    tags: []
 - model: api.quiz
   pk: 3
   fields:
@@ -66,6 +68,8 @@
     - 553
     - 555
     - 556
+    tags:
+    - 185
 - model: api.quiz
   pk: 4
   fields:
@@ -85,6 +89,7 @@
     - 171
     - 212
     - 245
+    tags: []
 - model: api.quiz
   pk: 5
   fields:
@@ -107,6 +112,7 @@
     - 243
     - 150
     - 251
+    tags: []
 - model: api.quiz
   pk: 6
   fields:
@@ -133,6 +139,7 @@
     - 45
     - 47
     - 49
+    tags: []
 - model: api.quiz
   pk: 7
   fields:
@@ -152,6 +159,7 @@
     - 113
     - 114
     - 115
+    tags: []
 - model: api.quiz
   pk: 8
   fields:
@@ -192,6 +200,8 @@
     - 294
     - 362
     - 13
+    tags:
+    - 142
 - model: api.quiz
   pk: 9
   fields:
@@ -213,6 +223,7 @@
     - 57
     - 56
     - 157
+    tags: []
 - model: api.quiz
   pk: 10
   fields:
@@ -231,6 +242,7 @@
     - 155
     - 12
     - 494
+    tags: []
 - model: api.quiz
   pk: 11
   fields:
@@ -271,6 +283,8 @@
     - 32
     - 14
     - 21
+    tags:
+    - 142
 - model: api.quiz
   pk: 12
   fields:
@@ -293,6 +307,8 @@
     - 306
     - 459
     - 29
+    tags:
+    - 142
 - model: api.quiz
   pk: 13
   fields:
@@ -311,6 +327,8 @@
     questions:
     - 315
     - 52
+    tags:
+    - 142
 - model: api.quiz
   pk: 14
   fields:
@@ -330,6 +348,8 @@
     - 35
     - 403
     - 229
+    tags:
+    - 142
 - model: api.quiz
   pk: 15
   fields:
@@ -356,6 +376,8 @@
     - 46
     - 425
     - 348
+    tags:
+    - 142
 - model: api.quiz
   pk: 16
   fields:
@@ -382,3 +404,27 @@
     - 494
     - 51
     - 403
+    tags: []
+- model: api.quiz
+  pk: 17
+  fields:
+    name: Anéantissement de la biodiversité
+    description: Quel est l'impact de l'homme sur les autres espèces ? Un premier
+      aperçu via, ces quelques questions.
+    author: Matthieu Massart
+    image_background_url: https://images.sudouest.fr/2019/04/25/5cc1b08b66a4bd2c135ac1f5/widescreen/1000x500/l-extinction-des-dinosaures.jpg?v1
+    publish: true
+    created: 2020-08-04
+    questions:
+    - 67
+    - 4
+    - 7
+    - 41
+    - 44
+    - 59
+    - 60
+    - 61
+    tags:
+    - 6
+    - 49
+    - 76

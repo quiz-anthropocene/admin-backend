@@ -6,25 +6,36 @@
       <img v-bind:src="quiz.image_background_url || 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png'" class="image-background" :class="(quizStep === 0) ? 'height-200' : 'height-50'">
 
       <div class="card-body">
-        <h2>{{ quiz.name }}</h2>
+        <h2 class="card-title"><span v-if="quizStep > 0">Quiz : </span>{{ quiz.name }}</h2>
 
         <section v-if="(quizStep === 0) || (quizStep > quiz.questions.length)">
-          <p>{{ quiz.description }}</p>
+          <p class="card-subtitle">{{ quiz.description }}</p>
 
-          <hr />
+          <hr class="margin-top-bottom-10" />
 
           <div class="row small">
-            <div class="margin-left-right-5" title="Nombre de question">❓&nbsp;Questions:&nbsp;<span class="label label-hidden"><strong>{{ quiz.questions.length }}</strong></span></div>
+            <div class="margin-left-right-5" title="Nombre de question">
+              ❓&nbsp;Questions:&nbsp;<span class="label label-hidden"><strong>{{ quiz.questions.length }}</strong></span>
+            </div>
             <!-- <div v-if="quiz.categories_list && quiz.categories_list.length > 0" title="Catégorie(s) du quiz">📂&nbsp;Catégorie<span v-if="quiz.categories_list.length > 1">s</span>:&nbsp;{{ quiz.categories_list.join(', ') }}</div> -->
-            <div v-if="quiz.categories_list && quiz.categories_list.length > 0" class="margin-left-right-5" title="Catégorie(s) du quiz">
+            <!-- <div v-if="quiz.categories_list && quiz.categories_list.length > 0" class="margin-left-right-5" title="Catégorie(s) du quiz">
               📂
               <span v-for="(category, index) in quiz.categories_list" :key="category">
                 <span v-if="index < 3" class="label label-category">{{ category }}</span>
               </span>
+            </div> -->
+            <div v-if="quiz.tags && quiz.tags.length > 0" title="Tag(s) du quiz">
+              <!-- 🏷️&nbsp;Tag<span v-if="quiz.tags.length > 1">s</span>: -->
+              🏷️&nbsp;<span v-for="(tag, index) in quiz.tags" :key="tag.id">
+                <span v-if="index < 3" class="label label-tag">{{ tag.name }}</span>
+              </span>
             </div>
-            <!-- <div v-if="quiz.tags && quiz.tags.length > 0" title="Tag(s) du quiz">🏷️&nbsp;Tag<span v-if="quiz.tags.length > 1">s</span>:&nbsp;{{ quiz.tags.join(', ') }}</div> -->
-            <div class="margin-left-right-5" title="Difficulté">🏆&nbsp;Difficulté:&nbsp;<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }} / 4</strong></span></div>
-            <div class="margin-left-right-5" title="Auteur du quiz">📝&nbsp;Auteur:&nbsp;<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span></div>
+            <div class="margin-left-right-5" title="Difficulté">
+              🏆&nbsp;Difficulté:&nbsp;<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }} / 4</strong></span>
+            </div>
+            <div class="margin-left-right-5" title="Auteur du quiz">
+              📝&nbsp;Auteur:&nbsp;<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>
+            </div>
             <!-- <div title="Date de création du quiz">📊&nbsp;Crée le:&nbsp;{{ new Date(quiz.created).toLocaleString() }}</div> -->
           </div>
         </section>
@@ -41,19 +52,18 @@
     <section v-if="quiz && (quizStep > 0) && quiz.questions[quizStep-1]">
       <QuestionAnswerCards v-bind:question="quiz.questions[quizStep-1]" v-bind:context="{ question_number: quizStep+' / '+quiz.questions.length, source: 'quiz' }" @answerSubmitted="onAnswerSubmitted" />
       <button v-if="showNextButton && (quizStep < quiz.questions.length)" class="btn" :class="emphasisNextButton ? 'btn-primary' : 'btn-outline-primary'" @click="incrementStep()">⏩&nbsp;Question suivante</button>
-      <button v-if="showNextButton && (quizStep === quiz.questions.length)" class="btn btn-primary" @click="incrementStep()">⏩&nbsp;Voir vos résultats</button>
+      <button v-if="showNextButton && (quizStep === quiz.questions.length)" class="btn btn-lg btn-primary" @click="incrementStep()">⏩&nbsp;C'est fini ! Voir vos résultats</button>
     </section>
 
     <!-- Quiz terminé -->
 
     <section v-if="quiz && (quizStep > quiz.questions.length)" class="question">
-      <h2>C'est terminé pour ce quiz !</h2>
-      <h3>Vos résultats: {{ quiz.questions.filter(q => q['success']).length }} / {{ quiz.questions.length }}</h3>
+      <h2>Votre résultat : <small>{{ quiz.questions.filter(q => q['success']).length }} / {{ quiz.questions.length }}</small></h2>
 
       <hr />
 
       <div class="margin-bottom-10">
-        <a class="fake-link" @click="showQuizQuestions = !showQuizQuestions">Afficher les questions</a>
+        <a class="fake-link" @click="showQuizQuestions = !showQuizQuestions">Afficher le détails des questions</a>
         <span v-if="!showQuizQuestions">&nbsp;▸</span>
         <span v-if="showQuizQuestions">&nbsp;▾</span>
       </div>

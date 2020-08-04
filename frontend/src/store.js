@@ -98,7 +98,7 @@ const store = new Vuex.Store({
         Object.assign(q, { category: questionCategory }, { tags: questionTags });
         return q;
       });
-      commit('SET_QUESTION_PUBLISHED_LIST', { list: questionsPublished }); // TODO: random order
+      commit('SET_QUESTION_PUBLISHED_LIST', { list: questionsPublished });
       commit('SET_QUESTION_PENDING_VALIDATION_LIST', { list: questionsPendingValidation });
 
       // update categories: add question_count
@@ -147,11 +147,12 @@ const store = new Vuex.Store({
     },
     GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit, getters }) => {
       const quizPublished = processModelList(quizzesYamlData).filter((el) => el.publish === true);
-      // quiz: get question objects & difficulty average
+      // quiz: get question objects, tag objects & difficulty average
       quizPublished.map((q) => {
-        const quizQuestions = getters.getQuestionsByIdList(q.questions);
+        const quizQuestions = getters.getQuestionsByIdList(q.questions).sort(() => Math.random() - 0.5); // random order
+        const quizTags = getters.getTagsByIdList(q.tags);
         const quizDifficultyAverage = quizQuestions.map((qq) => qq.difficulty).reduce((prev, curr) => prev + curr, 0) / quizQuestions.length;
-        Object.assign(q, { questions: quizQuestions }, { difficulty_average: quizDifficultyAverage });
+        Object.assign(q, { questions: quizQuestions }, { tags: quizTags }, { difficulty_average: quizDifficultyAverage });
         return q;
       });
       commit('SET_QUIZ_LIST', { list: quizPublished });

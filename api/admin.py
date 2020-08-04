@@ -364,7 +364,10 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
     )
     list_filter = ("publish",)
     ordering = ("name",)
-    filter_horizontal = ("questions",)
+    filter_horizontal = (
+        "questions",
+        "tags",
+    )
     readonly_fields = (
         "show_image_background",
         "question_count",

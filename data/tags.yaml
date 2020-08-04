@@ -942,3 +942,9 @@
     name: 'Fresque du Climat : carte n°42'
     description: ''
     created: 2020-07-30
+- model: api.tag
+  pk: 185
+  fields:
+    name: Adrastia
+    description: ''
+    created: 2020-08-04

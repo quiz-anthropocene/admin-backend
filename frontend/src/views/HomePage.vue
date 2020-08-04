@@ -47,7 +47,7 @@
     <div class="row justify-content-md-center">
       <div class="col-sm-6" v-if="questionsCount">
         <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
-          <button class="btn btn-outline-primary btn-lg btn-block">
+          <button class="btn btn-primary btn-lg btn-block">
             🕹&nbsp;<strong>Tous les quiz</strong>
           </button>
         </router-link>
