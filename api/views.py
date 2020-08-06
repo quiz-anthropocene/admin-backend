@@ -165,7 +165,16 @@ def question_detail_feedback_event(request, pk):
         )
 
         serializer = QuestionFeedbackEventSerializer(question_feedback_event)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+        # enrich with the agg stats
+        question_feedback_count = {
+            "like_count_agg": question.like_count_agg,
+            "dislike_count_agg": question.dislike_count_agg,
+        }
+        return Response(
+            {**serializer.data, **question_feedback_count},
+            status=status.HTTP_201_CREATED,
+        )
 
 
 @api_view(["GET"])
@@ -335,11 +344,19 @@ def quiz_detail_feedback_event(request, pk):
 
     if request.method == "POST":
         quiz_feedback_event = QuizFeedbackEvent.objects.create(
-            quiz=quiz, choice=request.data["choice"],
+            quiz=quiz, choice=request.data["choice"]
         )
 
         serializer = QuizFeedbackEventSerializer(quiz_feedback_event)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+        # enrich with the agg stats
+        quiz_feedback_count = {
+            "like_count_agg": quiz.like_count_agg,
+            "dislike_count_agg": quiz.dislike_count_agg,
+        }
+        return Response(
+            {**serializer.data, **quiz_feedback_count}, status=status.HTTP_201_CREATED
+        )
 
 
 @api_view(["POST"])

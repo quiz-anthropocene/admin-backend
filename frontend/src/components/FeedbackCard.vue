@@ -8,7 +8,11 @@
       <div class="col-sm">
         <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light margin-left-right-10 small" title="J'ai aimé" @click="submitFeedback('like')" :disabled="feedbackSubmitted">👍<span class="fake-link"></span></button>
         <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Je n'ai pas aimé" @click="submitFeedback('dislike')" :disabled="feedbackSubmitted">👎<span class="fake-link"></span></button>
-        <span v-if="feedbackSubmitted" class="margin-left-right-10">Merci 💯</span>
+        <span v-if="feedbackSubmitted" class="margin-left-right-10">
+          Merci 💯
+          <span v-if="feedbackResponse" class="margin-left-right-10">
+            <strong>{{ feedbackResponse.like_count_agg }}</strong>&nbsp;👍&nbsp;&nbsp;<strong>{{ feedbackResponse.dislike_count_agg }}</strong>&nbsp;👎&nbsp;</span>
+        </span>
         <button class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Votre avis" @click="showContributionForm = true">💬&nbsp;<span class="fake-link">Suggérer une modification</span></button>
       </div>
     </div>
@@ -68,6 +72,7 @@ export default {
       contribution_text: '',
       showContributionForm: false,
       feedbackSubmitted: false,
+      feedbackResponse: null,
       contributionSubmitted: false,
       contributionResponse: null,
       loading: false,
@@ -78,7 +83,7 @@ export default {
   methods: {
     submitFeedback(feedbackChoice) {
       this.feedbackSubmitted = feedbackChoice;
-      this.error = null;
+      this.error = this.feedbackResponse = null;
       this.loading = true;
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/${(this.context.source === 'question') ? 'questions' : 'quizzes'}/${this.context.item.id}/feedback-events`, {
         method: 'POST',
@@ -87,17 +92,18 @@ export default {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          choice: feedbackChoice,
-          source: this.context.source, // only for 'questions'
+          choice: feedbackChoice, // 'like' or 'dislike'
+          source: this.context.source, // only for 'api/questions/'
         }),
       })
         .then((response) => response.json())
-      // eslint-disable-next-line
-      .then(data => {
-        // console.log(data);
+        // eslint-disable-next-line
+        .then(data => {
+          this.feedbackResponse = data;
         })
         .catch((error) => {
           console.log(error);
+          this.error = error;
         });
     },
     submitContribution() {
