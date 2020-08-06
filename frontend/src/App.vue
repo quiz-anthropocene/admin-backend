@@ -226,16 +226,8 @@ a.no-decoration {
   color: #002b49 !important;
   text-decoration: underline !important;
 }
-
-.row {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 0;
-}
-.row-item {
-  flex: 0 1 100%;
-  margin-bottom: 10px;
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .margin-0 {
@@ -408,17 +400,6 @@ hr.custom-separator {
 }
 
 /* Media */
-
-@media all and (min-width: 30em) {
-  .row-item {
-    max-width: calc(50% - 1em);
-  }
-}
-@media all and (min-width: 60em) {
-  .row-item {
-    max-width: calc(33.33% - 1em);
-  }
-}
 
 @media(hover: hover) and (pointer: fine) {
   .label-category--with-hover:hover {

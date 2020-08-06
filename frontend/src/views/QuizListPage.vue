@@ -20,22 +20,23 @@
           <div class="card-body">
             <h2 class="card-title">{{ quiz.name }}</h2>
             <p class="card-subtitle"><strong>{{ quiz.questions.length }}</strong> question<span v-if="quiz.questions.length > 1">s</span></p>
-            <hr class="margin-top-bottom-10" />
-            <div class="row small">
-              <!-- <div v-if="quiz.categories_list && quiz.categories_list.length > 0" title="Catégorie(s) du quiz">
-                📂
-                <span v-for="(category, index) in quiz.categories_list" :key="category">
-                  <span v-if="index < 3" class="label label-category">{{ category }}</span>
-                </span>
-              </div> -->
-              <div v-if="quiz.tags && quiz.tags.length > 0" title="Tag(s) du quiz">
-                <!-- 🏷️&nbsp;Tag<span v-if="quiz.tags.length > 1">s</span>: -->
-                🏷️&nbsp;<span v-for="(tag, index) in quiz.tags" :key="tag">
-                  <span v-if="index < 3" class="label label-tag">{{ tag.name }}</span>
-                </span>
+            <section class="d-none d-md-block">
+              <hr class="margin-top-bottom-10" />
+              <div class="small">
+                <div class="label label-hidden">📝&nbsp;Auteur:&nbsp;<strong>{{ quiz.author }}</strong></div>
+                <!-- <div v-if="quiz.categories_list && quiz.categories_list.length > 0" title="Catégorie(s) du quiz">
+                  📂
+                  <span v-for="(category, index) in quiz.categories_list" :key="category">
+                    <span v-if="index < 3" class="label label-category">{{ category }}</span>
+                  </span>
+                </div> -->
+                <!-- <div v-if="quiz.tags && quiz.tags.length > 0" title="Tag(s) du quiz">
+                  🏷️&nbsp;<span v-for="(tag, index) in quiz.tags" :key="tag">
+                    <span v-if="index < 3" class="label label-tag">{{ tag.name }}</span>
+                  </span>
+                </div> -->
               </div>
-              <div class="label label-hidden">📝&nbsp;Auteur:&nbsp;<strong>{{ quiz.author }}</strong></div>
-            </div>
+            </section>
           </div>
         </router-link>
       </div>
@@ -96,7 +97,7 @@ export default {
 }
 
 .row > .col-sm-6 {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .card:hover {

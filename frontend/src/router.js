@@ -6,12 +6,6 @@ import HomePage from './views/HomePage.vue';
 import QuestionPage from './views/QuestionPage.vue';
 import QuestionListPage from './views/QuestionListPage.vue';
 import QuestionDetailPage from './views/QuestionDetailPage.vue';
-import CategoryListPage from './views/CategoryListPage.vue';
-import CategoryDetailPage from './views/CategoryDetailPage.vue';
-import TagListPage from './views/TagListPage.vue';
-import TagDetailPage from './views/TagDetailPage.vue';
-import AuthorListPage from './views/AuthorListPage.vue';
-import AuthorDetailPage from './views/AuthorDetailPage.vue';
 import QuizListPage from './views/QuizListPage.vue';
 import QuizDetailPage from './views/QuizDetailPage.vue';
 import AboutPage from './views/AboutPage.vue';
@@ -52,36 +46,6 @@ const routes = [
     path: '/quiz/:quizId',
     name: 'quiz-detail',
     component: QuizDetailPage,
-  },
-  {
-    path: '/categories',
-    name: 'category-list',
-    component: CategoryListPage,
-  },
-  {
-    path: '/categories/:categoryName',
-    name: 'category-detail',
-    component: CategoryDetailPage,
-  },
-  {
-    path: '/tags',
-    name: 'tag-list',
-    component: TagListPage,
-  },
-  {
-    path: '/tags/:tagName',
-    name: 'tag-detail',
-    component: TagDetailPage,
-  },
-  {
-    path: '/auteurs',
-    name: 'author-list',
-    component: AuthorListPage,
-  },
-  {
-    path: '/auteurs/:authorName',
-    name: 'author-detail',
-    component: AuthorDetailPage,
   },
   {
     path: '/a-propos',

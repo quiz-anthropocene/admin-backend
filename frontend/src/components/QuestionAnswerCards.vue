@@ -20,8 +20,8 @@
           </div>
         </div>
         <!-- Question answer choices -->
-        <div class="row text-align-left">
-          <div class="col-sm-auto">
+        <div class="row justify-content-center">
+          <div class="col-sm-auto text-align-left">
             <div class="form-group" v-for="answer_option_letter in answerChoices" :key="answer_option_letter" :class="{ 'text-primary' : answer_option_letter === answerPicked, 'text-danger': (questionSubmitted && (answer_option_letter !== answerPicked) && (answer_option_letter === question['answer_correct'])) }">
               <template v-if="question['answer_option_' + answer_option_letter]">
                 <input type="radio" v-bind:id="answer_option_letter" v-bind:value="answer_option_letter" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
@@ -85,17 +85,19 @@
       <p v-if="question.answer_image_explanation" class="answer-image-explanation" title="Légende de l'image">Légende: {{ question.answer_image_explanation }}</p>
 
       <!-- <div class="separator-with-text"></div> -->
-      <hr class="custom-separator" />
+      <hr class="margin-top-bottom-10" />
 
       <!-- Extra info -->
-      <div class="row margin-top-bottom-10 small">
-        <div v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">
+      <div class="row no-gutters small">
+        <div class="col" v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">
           <!-- 🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.map(t => t.name).join(', ') }} -->
-          🏷️&nbsp;<span v-for="tag in question.tags" :key="tag">
+          🏷️&nbsp;<span v-for="tag in question.tags" :key="tag.id">
             <span class="label label-tag">{{ tag.name }}</span>
           </span>
         </div>
-        <div class="label label-hidden" title="Auteur de la question">📝&nbsp;Auteur:&nbsp;{{ question.author }}</div>
+        <div  class="col">
+          <div class="label label-hidden" title="Auteur de la question">📝&nbsp;Auteur:&nbsp;{{ question.author }}</div>
+        </div>
         <!-- <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count_agg }} / {{ question.answer_count_agg }} ({{ question.answer_success_rate }}%)</div> -->
       </div>
 

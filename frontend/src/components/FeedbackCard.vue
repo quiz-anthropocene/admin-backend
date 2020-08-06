@@ -1,10 +1,11 @@
 <template>
   <section class="card-feedback small">
-    <div class="row margin-top-bottom-10">
-      <h3 class="margin-5">Votre avis sur {{ (context.source) === 'question' ? 'cette' : 'ce' }} {{ context.source }} ?</h3>
-      <!-- Option to hide card ? -->
+    <div class="row no-gutters margin-top-bottom-10">
+      <div class="col-sm">
+        <h3 class="margin-5">Votre avis sur {{ (context.source) === 'question' ? 'cette' : 'ce' }} {{ context.source }} ?</h3>
+      </div>
 
-      <div>
+      <div class="col-sm">
         <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light margin-left-right-10 small" title="J'ai aimé" @click="submitFeedback('like')" :disabled="feedbackSubmitted">👍<span class="fake-link"></span></button>
         <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Je n'ai pas aimé" @click="submitFeedback('dislike')" :disabled="feedbackSubmitted">👎<span class="fake-link"></span></button>
         <span v-if="feedbackSubmitted" class="margin-left-right-10">Merci 💯</span>
@@ -19,8 +20,14 @@
         <h3 class="margin-bottom-0">
           <label for="contribution_text">Votre suggestion, commentaire, ... <span class="color-red">*</span></label>
         </h3>
-        <p v-if="(context.source) === 'question' && (!context.item.answer_explanation || !context.item.answer_accessible_url || !context.item.answer_image_url)">
-          <i>(donnée(s) manquante à cette question: <span v-if="!context.item.answer_explanation">une explication, </span><span v-if="!context.item.answer_accessible_url">un lien, </span><span v-if="!context.item.answer_image_url">une image</span>)</i>
+        <p v-if="(context.source) === 'question' && (!context.item.answer_explanation || !context.item.answer_accessible_url || !context.item.answer_scientific_url || !context.item.answer_image_url)">
+          <i>
+            cette question n'est pas 100% complète. Il manque :
+            <span v-if="!context.item.answer_explanation">&nbsp;ℹ️&nbsp;une explication</span>
+            <span v-if="!context.item.answer_accessible_url">&nbsp;🔗&nbsp;un lien accessible</span>
+            <span v-if="!context.item.answer_scientific_url">&nbsp;🔗🧬&nbsp;un lien scientifique</span>
+            <span v-if="!context.item.answer_image_url">&nbsp;🖼️&nbsp;une image</span>
+          </i>
         </p>
         <div class="row">
           <div class="col">
@@ -130,6 +137,9 @@ export default {
   border: 1px solid var(--primary);
   border-radius: 5px;
   margin: 10px 0px;
+  /* padding: 10px; */
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: white;
 }
 

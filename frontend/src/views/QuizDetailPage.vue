@@ -13,30 +13,25 @@
 
           <hr class="margin-top-bottom-10" />
 
-          <div class="row small">
-            <div class="margin-left-right-5" title="Nombre de question">
-              ❓&nbsp;Questions:&nbsp;<span class="label label-hidden"><strong>{{ quiz.questions.length }}</strong></span>
+          <div class="row no-gutters small">
+            <div class="col" title="Nombre de question">
+              ❓&nbsp;<span class="label label-hidden"><strong>{{ quiz.questions.length }}</strong></span>Questions
             </div>
-            <!-- <div v-if="quiz.categories_list && quiz.categories_list.length > 0" title="Catégorie(s) du quiz">📂&nbsp;Catégorie<span v-if="quiz.categories_list.length > 1">s</span>:&nbsp;{{ quiz.categories_list.join(', ') }}</div> -->
-            <!-- <div v-if="quiz.categories_list && quiz.categories_list.length > 0" class="margin-left-right-5" title="Catégorie(s) du quiz">
-              📂
-              <span v-for="(category, index) in quiz.categories_list" :key="category">
-                <span v-if="index < 3" class="label label-category">{{ category }}</span>
-              </span>
-            </div> -->
-            <div v-if="quiz.tags && quiz.tags.length > 0" title="Tag(s) du quiz">
-              <!-- 🏷️&nbsp;Tag<span v-if="quiz.tags.length > 1">s</span>: -->
-              🏷️&nbsp;<span v-for="(tag, index) in quiz.tags" :key="tag.id">
-                <span v-if="index < 3" class="label label-tag">{{ tag.name }}</span>
-              </span>
+            <div class="col" title="Difficulté">
+              🏆&nbsp;Difficulté<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }} / 4</strong></span>
             </div>
-            <div class="margin-left-right-5" title="Difficulté">
-              🏆&nbsp;Difficulté:&nbsp;<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }} / 4</strong></span>
+            <div class="col" title="Auteur du quiz">
+              📝&nbsp;Auteur<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>
             </div>
-            <div class="margin-left-right-5" title="Auteur du quiz">
-              📝&nbsp;Auteur:&nbsp;<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>
-            </div>
-            <!-- <div title="Date de création du quiz">📊&nbsp;Crée le:&nbsp;{{ new Date(quiz.created).toLocaleString() }}</div> -->
+            <!-- <span title="Date de création du quiz">📊&nbsp;Crée le:&nbsp;{{ new Date(quiz.created).toLocaleString() }}</span> -->
+          </div>
+
+          <hr v-if="quiz.tags && quiz.tags.length > 0" class="margin-top-bottom-10" />
+
+          <div v-if="quiz.tags && quiz.tags.length > 0" class="small" title="Tag(s) du quiz">
+            🏷️&nbsp;<span v-for="(tag, index) in quiz.tags" :key="tag.id">
+              <span v-if="index < 3" class="label label-tag">{{ tag.name }}</span>
+            </span>
           </div>
         </section>
       </div>
@@ -58,24 +53,31 @@
     <!-- Quiz terminé -->
 
     <section v-if="quiz && (quizStep > quiz.questions.length)" class="question">
-      <h2>Votre résultat : <small>{{ quiz.questions.filter(q => q['success']).length }} / {{ quiz.questions.length }}</small></h2>
+      <h2>Votre résultat : <strong>{{ quiz.questions.filter(q => q['success']).length }} / {{ quiz.questions.length }}</strong></h2>
 
-      <hr />
-
-      <div class="margin-bottom-10">
-        <a class="fake-link" @click="showQuizQuestions = !showQuizQuestions">Afficher le détails des questions</a>
-        <span v-if="!showQuizQuestions">&nbsp;▸</span>
-        <span v-if="showQuizQuestions">&nbsp;▾</span>
+      <div class="row">
+        <div class="col">
+          <a class="fake-link" @click="showQuizQuestions = !showQuizQuestions">Afficher le détails de vos réponses</a>
+          <span v-if="!showQuizQuestions">&nbsp;▸</span>
+          <span v-if="showQuizQuestions">&nbsp;▾</span>
+        </div>
       </div>
 
+      <hr v-if="showQuizQuestions" />
+
       <div v-if="showQuizQuestions" class="row">
-        <div class="row-item row-item-question" v-for="question in quiz.questions" :key="question.id" :class="question.success ? 'answer-success' : 'answer-error'">
+        <div class="col-lg-4 col-sm-6" v-for="question in quiz.questions" :key="question.id"><!-- :class="question.success ? 'answer-success' : 'answer-error'" -->
           <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: question.id } }">
-            <QuestionPreviewCard v-bind:question="question" />
+            <QuestionPreviewCard v-bind:question="question" v-bind:customClass="question.success ? 'answer-success' : 'answer-error'" />
           </router-link>
         </div>
       </div>
     </section>
+
+    <div v-if="quiz && (quizStep > quiz.questions.length)" class="alert alert-primary margin-0" role="alert">
+      Partager le quiz : <strong id="quiz-share-url">{{ quizShareUrl }}</strong>
+      <!-- <a class="fake-link float-right" @click="copyQuizShareUrlToClipboard()">📋&nbsp;Copier</a> -->
+    </div>
 
     <FeedbackCard v-if="quiz && (quizStep > quiz.questions.length)" v-bind:context="{ source: 'quiz', item: quiz }" />
   </section>
@@ -128,6 +130,9 @@ export default {
     quiz() {
       return this.$store.getters.getQuizById(parseInt(this.$route.params.quizId, 10));
     },
+    quizShareUrl() {
+      return window.location.origin + this.$route.path;
+    },
   },
 
   mounted() {
@@ -170,6 +175,13 @@ export default {
           console.log(error);
         });
     },
+    // copyQuizShareUrlToClipboard() {
+    //   let quizShareUrlElement = document.querySelector('#quiz-share-url');
+    //   console.log(quizShareUrlElement, quizShareUrlElement.text)
+    //   // quizShareUrlElement.setAttribute('type', 'text');
+    //   quizShareUrlElement.innerText.select();
+    //   document.execCommand('copy');
+    // }
   },
 };
 </script>
@@ -194,22 +206,10 @@ export default {
 .height-50 {
   height: 50px;
 }
-.row-item-question {
-  height: 150px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.1s;
-  border: 2px solid var(--primary);
-  border-radius: 5px;
-  overflow: hidden;
-  cursor: pointer;
-}
-.answer-success {
-  border-color: green;
-  background-color: #f2f8f2;
-}
-.answer-error {
-  border-color: red;
-  background-color: #fff2f2;
+
+.row > .col-lg-4,
+.row > .col-sm-6 {
+  padding-bottom: 15px;
 }
 
 @media(hover: hover) and (pointer: fine) {

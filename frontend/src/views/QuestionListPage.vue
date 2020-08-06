@@ -2,7 +2,7 @@
   <section>
     <!-- Question List -->
     <div v-if="questionsDisplayed" class="row">
-      <div class="row-item row-item-question" v-for="question in questionsDisplayed" :key="question.id">
+      <div class="col-lg-4 col-sm-6" v-for="question in questionsDisplayed" :key="question.id">
         <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: question.id } }">
           <QuestionPreviewCard v-bind:question="question" />
         </router-link>
@@ -44,18 +44,8 @@ export default {
 </script>
 
 <style scoped>
-.row-item-question {
-  height: 150px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.1s;
-  border: 2px solid var(--primary);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-@media(hover: hover) and (pointer: fine) {
-  .row-item-question:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+.row > .col-lg-4,
+.row > .col-sm-6 {
+  padding-bottom: 15px;
 }
 </style>
