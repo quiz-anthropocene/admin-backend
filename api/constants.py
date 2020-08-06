@@ -72,6 +72,7 @@ CONTRIBUTION_TYPE_LIST = [
     "commentaire application",
     "commentaire question",
     "commentaire quiz",
+    "nom application",
 ]
 
 

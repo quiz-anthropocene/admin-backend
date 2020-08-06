@@ -30,8 +30,6 @@
     <!-- Content -->
     <section v-if="showFilterBox" class="filter-box--content">
 
-      <!-- <hr class="custom-separator" /> -->
-
       <div v-if="categories">
         <h3>📂&nbsp;Catégories</h3>
         <FilterLabel v-for="category in categories" :key="category.name" @filterLabelClicked="updateTempQuestionFilter"

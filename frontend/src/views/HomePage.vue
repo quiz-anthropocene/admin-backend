@@ -1,8 +1,10 @@
 <template>
   <section>
     <div class="alert alert-warning" role="alert">
-      <i v-if="questionsCount">Il y a actuellement {{ questionsCount }} questions et {{ quizCount }} quiz. </i>
-      <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus !</i>
+      <i v-if="questionsCount">Il y a actuellement <strong>{{ questionsCount }} questions</strong> et <strong>{{ quizCount }} quiz</strong>. </i>
+      <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus ! </i>
+      <br />
+      <i>On cherche aussi un <strong>nom</strong> pour l'application, <router-link :to="{ name: 'contribute', query: { type: 'nom application' } }">proposez-nous le votre</router-link> :)</i>
     </div>
 
     <div class="jumbotron jumbotron-fluid">

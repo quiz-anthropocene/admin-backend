@@ -21,8 +21,12 @@
           <label class="custom-control-label" for="customRadioInline1">Une nouvelle question</label>
         </div>
         <div class="custom-control custom-radio custom-control-inline">
-          <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="commentaire application" v-model="contribution.type">
+          <input type="radio" id="customRadioInline2" name="customRadioInline2" class="custom-control-input" value="commentaire application" v-model="contribution.type">
           <label class="custom-control-label" for="customRadioInline2">Un commentaire sur l'application</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input" value="nom application" v-model="contribution.type">
+          <label class="custom-control-label" for="customRadioInline3">Un nom d'application</label>
         </div>
       </div>
 
@@ -45,14 +49,21 @@
         <textarea id="description" class="form-control" rows="5" v-model="contribution.description"></textarea>
       </div>
 
-      <div class="form-group" v-if="contribution.type !== 'nouvelle question'">
+      <div class="form-group" v-if="contribution.type === 'commentaire application'">
         <h3 class="margin-bottom-0">
           <label for="contribution_text">Votre commentaire <span class="color-red">*</span></label>
         </h3>
         <div class="help">
-          <small><i>bug, amélioration, nom de l'application,... Lâchez-vous :)</i></small>
+          <small><i>bug, amélioration, ... Lâchez-vous :)</i></small>
         </div>
         <textarea id="contribution_text" class="form-control" rows="5" v-model="contribution.text" required></textarea>
+      </div>
+
+      <div class="form-group" v-if="contribution.type === 'nom application'">
+        <h3 class="margin-bottom-0">
+          <label for="contribution_text">Votre idée <span class="color-red">*</span></label>
+        </h3>
+        <textarea id="contribution_text" class="form-control" rows="2" v-model="contribution.text" required></textarea>
       </div>
 
       <div class="form-group">
@@ -109,15 +120,19 @@ export default {
   },
 
   mounted() {
-    this.init();
+    if (this.$route.query['type']) {
+      this.init(this.$route.query['type']);
+    } else {
+      this.init();
+    }
   },
 
   methods: {
-    init() {
+    init(typeFromQuery) {
       this.contribution = {
         text: '',
         description: '',
-        type: 'nouvelle question',
+        type: typeFromQuery || 'nouvelle question',
       };
       this.contributionSubmitted = false;
       this.contributionResponse = null;
