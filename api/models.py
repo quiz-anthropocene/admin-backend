@@ -435,7 +435,11 @@ class QuizQuerySet(models.QuerySet):
 
 class Quiz(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du quiz")
-    description = models.TextField(blank=True, help_text="Une description du quiz")
+    introduction = models.TextField(blank=True, help_text="Une description du quiz")
+    conclusion = models.TextField(
+        blank=True,
+        help_text="Une conclusion du quiz et des pistes pour aller plus loin",
+    )
     questions = models.ManyToManyField(
         Question, related_name="quizzes", help_text="Les questions du quiz"
     )

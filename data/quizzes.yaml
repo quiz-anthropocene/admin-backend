@@ -2,7 +2,8 @@
   pk: 1
   fields:
     name: Chiffres clés
-    description: Quelques chiffres pour se mettre en jambes.
+    introduction: Quelques chiffres pour se mettre en jambes.
+    conclusion: ''
     author: know your planet
     image_background_url: https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png
     publish: true
@@ -23,8 +24,9 @@
   pk: 2
   fields:
     name: "L'énergie en France \U0001F1EB\U0001F1F7"
-    description: Un aperçu rapide de la production et de la consommation d'énergie
+    introduction: Un aperçu rapide de la production et de la consommation d'énergie
       en France.
+    conclusion: ''
     author: know your planet
     image_background_url: https://i3.wp.com/fee.asso.fr/wp-content/uploads/2015/09/Carte-de-France-eolien-2015.jpg
     publish: true
@@ -45,7 +47,7 @@
   pk: 3
   fields:
     name: Le quiz de Vincent Mignerot
-    description: "Vincent Mignerot est  essayiste et conférencier. Il développe une
+    introduction: "Vincent Mignerot est  essayiste et conférencier. Il développe une
       théorie écologique de l’esprit et se questionne sur la singularité de l'humanité
       dans son contexte évolutif. Ses travaux vont de la théorie (Essai Sur la Raison
       de Tout, Éditions SoLo, 2015) à l’étude de la perception humaine (Heuraesthesia:
@@ -54,6 +56,7 @@
       et du groupe Facebook Transition 2030, qui compte plus de 25,000 membres. https://vincent-mignerot.fr/\r\nVincent
       nous a concocté un quiz teinté d'anthropologie qui va nous faire revenir quelques
       millénaires en arrière !"
+    conclusion: ''
     author: Vincent Mignerot
     image_background_url: https://vincent-mignerot.fr/wp-content/uploads/2019/08/Vincent-Mignerot.jpg
     publish: true
@@ -74,10 +77,11 @@
   pk: 4
   fields:
     name: Les pics de ressources
-    description: L'extraction de toute ressource finie passe par un maximum, après
+    introduction: L'extraction de toute ressource finie passe par un maximum, après
       lequel elle ne peut que décroître pour finalement tomber à 0. C'est le thème
       qu'explore ce quiz sur les différentes ressources non-renouvelables dont nous
       faisons usage.
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://upload.wikimedia.org/wikipedia/commons/f/fe/GlobalPeakOil.png
     publish: true
@@ -94,9 +98,10 @@
   pk: 5
   fields:
     name: Mon empreinte carbone
-    description: L'empreinte carbone d’une activité humaine est une mesure des émissions
+    introduction: L'empreinte carbone d’une activité humaine est une mesure des émissions
       de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent lui
       être imputées. Connaissez-vous votre empreinte ? Voyons-voir ça.
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://leshorizons.net/wp-content/uploads/2019/04/d%C3%A9finition-de-lempreinte-carbone-1020x512.jpg
     publish: true
@@ -117,13 +122,14 @@
   pk: 6
   fields:
     name: Bienvenue en anthropocène - Partie 1
-    description: L'Anthropocène est un terme proposé par des scientifiques pour désigner
+    introduction: L'Anthropocène est un terme proposé par des scientifiques pour désigner
       une nouvelle ère géologique, dans laquelle l'influence de l'être humain sur
       la biosphère a atteint un tel niveau qu'elle est devenue une force géologique
       majeure capable de marquer la lithosphère. La période la plus récente de l'anthropocène
       est parfois dite la grande accélération, car de nombreux indicateurs y présentent
       des courbes de type exponentiel. Ce quiz fait un tour d'horizon de l'emprise
       inédite de l'homme sur la planète qu'il occupe.
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
     publish: true
@@ -144,8 +150,9 @@
   pk: 7
   fields:
     name: Tout sur le pétrole - Partie 1
-    description: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
+    introduction: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
       à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
     publish: true
@@ -164,13 +171,14 @@
   pk: 8
   fields:
     name: Fresque du Climat - Lot 1
-    description: "La Fresque du Climat, c’est un atelier ludique, participatif et
+    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et
       créatif sur le changement climatique. Il est basé sur l’intelligence collective
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
       du climat et les conséquences de son dérèglement. L’objectif de l’association
       qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
       d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le premier
       lot de cartes distribué lors d'un atelier de la Fresque."
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: true
@@ -206,8 +214,9 @@
   pk: 9
   fields:
     name: Pollutions
-    description: Nos modes de vie génèrent des pollutions diverses. En connaissez-vous
+    introduction: Nos modes de vie génèrent des pollutions diverses. En connaissez-vous
       la variété et l'ampleur ? C'est ce que ce quiz se propose d'explorer.
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://static.latribune.fr/full_width/1201312/plastique-a-jakarta.jpg
     publish: true
@@ -228,8 +237,9 @@
   pk: 10
   fields:
     name: Tout sur le pétrole - Partie 2
-    description: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
+    introduction: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
       à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
     publish: true
@@ -247,13 +257,14 @@
   pk: 11
   fields:
     name: Fresque du Climat - Lot 2
-    description: "La Fresque du Climat, c’est un atelier ludique, participatif et
+    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et
       créatif sur le changement climatique. Il est basé sur l’intelligence collective
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
       du climat et les conséquences de son dérèglement. L’objectif de l’association
       qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
       d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le deuxième
       lot de cartes qui est distribué lors d'un atelier de la Fresque."
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: true
@@ -289,13 +300,14 @@
   pk: 12
   fields:
     name: Fresque du Climat - Lot 3
-    description: "La Fresque du Climat, c’est un atelier ludique, participatif et
+    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et
       créatif sur le changement climatique. Il est basé sur l’intelligence collective
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
       du climat et les conséquences de son dérèglement. L’objectif de l’association
       qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
       d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur les cartes
       du 3ème lot distribué lors d'une Fresque."
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: true
@@ -313,13 +325,14 @@
   pk: 13
   fields:
     name: Fresque du Climat - Lot 4
-    description: "La Fresque du Climat, c’est un atelier ludique, participatif et
+    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et
       créatif sur le changement climatique. Il est basé sur l’intelligence collective
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
       du climat et les conséquences de son dérèglement. L’objectif de l’association
       qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
       d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur les cartes
       du 4ème lot distribué lors d'une fresque."
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: false
@@ -333,13 +346,14 @@
   pk: 14
   fields:
     name: Fresque du Climat - Lot 5
-    description: "La Fresque du Climat, c’est un atelier ludique, participatif et
+    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et
       créatif sur le changement climatique. Il est basé sur l’intelligence collective
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
       du climat et les conséquences de son dérèglement. L’objectif de l’association
       qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
       d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le cinquième
       et dernier lot de cartes distribué lors d'une Fresque."
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: false
@@ -354,7 +368,7 @@
   pk: 15
   fields:
     name: Fresque du Climat - pour aller au-delà
-    description: "La Fresque du Climat, c’est un atelier ludique, participatif et
+    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et
       créatif sur le changement climatique. Il est basé sur l’intelligence collective
       et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
       du climat et les conséquences de son dérèglement. L’objectif de l’association
@@ -362,6 +376,7 @@
       d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
       vos connaissances et parfois d'aller plus loin autour du dérèglement du climat
       - questions non liées aux 42 cartes du jeu."
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: true
@@ -382,13 +397,14 @@
   pk: 16
   fields:
     name: Bienvenue en anthropocène - Partie 2
-    description: L'Anthropocène est un terme proposé par des scientifiques pour désigner
+    introduction: L'Anthropocène est un terme proposé par des scientifiques pour désigner
       une nouvelle ère géologique, dans laquelle l'influence de l'être humain sur
       la biosphère a atteint un tel niveau qu'elle est devenue une force géologique
       majeure capable de marquer la lithosphère. La période la plus récente de l'anthropocène
       est parfois dite la grande accélération, car de nombreux indicateurs y présentent
       des courbes de type exponentiel. Ce quiz fait un tour d'horizon de l'emprise
       inédite de l'homme sur la planète qu'il occupe.
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
     publish: true
@@ -409,8 +425,9 @@
   pk: 17
   fields:
     name: Anéantissement de la biodiversité
-    description: Quel est l'impact de l'homme sur les autres espèces ? Un premier
+    introduction: Quel est l'impact de l'homme sur les autres espèces ? Un premier
       aperçu via, ces quelques questions.
+    conclusion: ''
     author: Matthieu Massart
     image_background_url: https://images.sudouest.fr/2019/04/25/5cc1b08b66a4bd2c135ac1f5/widescreen/1000x500/l-extinction-des-dinosaures.jpg?v1
     publish: true

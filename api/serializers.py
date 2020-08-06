@@ -166,7 +166,8 @@ class QuizSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "name",
-            "description",
+            "introduction",
+            "conclusion",
             "author",
             "image_background_url",
             "questions",
@@ -188,7 +189,8 @@ class QuizFullSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "name",
-            "description",
+            "introduction",
+            "conclusion",
             "author",
             "image_background_url",
             "questions",
