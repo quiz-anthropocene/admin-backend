@@ -120,8 +120,8 @@ export default {
   },
 
   mounted() {
-    if (this.$route.query['type']) {
-      this.init(this.$route.query['type']);
+    if (this.$route.query.type) {
+      this.init(this.$route.query.type);
     } else {
       this.init();
     }

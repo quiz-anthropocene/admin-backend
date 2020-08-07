@@ -9,7 +9,7 @@
         <h2 class="card-title"><span v-if="quizStep > 0">Quiz : </span>{{ quiz.name }}</h2>
 
         <section v-if="(quizStep === 0) || (quizStep > quiz.questions.length)">
-          <p class="card-subtitle">{{ quiz.description }}</p>
+          <p class="card-subtitle">{{ quiz.introduction }}</p>
 
           <hr class="margin-top-bottom-10" />
 
@@ -55,6 +55,8 @@
     <section v-if="quiz && (quizStep > quiz.questions.length)" class="question">
       <h2>Votre résultat : <strong>{{ quiz.questions.filter(q => q['success']).length }} / {{ quiz.questions.length }}</strong></h2>
 
+      <p v-if="quiz.conclusion">{{ quiz.conclusion }}</p>
+
       <div class="row">
         <div class="col">
           <a class="fake-link" @click="showQuizQuestions = !showQuizQuestions">Afficher le détails de vos réponses</a>
@@ -93,7 +95,7 @@ export default {
   metaInfo() {
     // const url = `/quiz/${this.$route.params.quizId}`;
     const title = this.quiz && this.quiz.name ? `Quiz #${this.$route.params.quizId} - ${this.quiz.name}` : `Quiz #${this.$route.params.quizId}`;
-    const description = this.quiz && this.quiz.description ? this.quiz.description : 'Le quiz n’a pas de description';
+    const description = this.quiz && this.quiz.introduction ? this.quiz.introduction : 'Le quiz n’a pas de description';
     const imageUrl = this.quiz && this.quiz.image_background_url ? this.quiz.image_background_url : 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png';
     return {
       title,
