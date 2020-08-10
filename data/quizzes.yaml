@@ -117,18 +117,19 @@
     - 243
     - 150
     - 251
+    - 440
+    - 402
     tags: []
 - model: api.quiz
   pk: 6
   fields:
-    name: Bienvenue en anthropocène - Partie 1
-    introduction: L'Anthropocène est un terme proposé par des scientifiques pour désigner
-      une nouvelle ère géologique, dans laquelle l'influence de l'être humain sur
-      la biosphère a atteint un tel niveau qu'elle est devenue une force géologique
-      majeure capable de marquer la lithosphère. La période la plus récente de l'anthropocène
-      est parfois dite la grande accélération, car de nombreux indicateurs y présentent
-      des courbes de type exponentiel. Ce quiz fait un tour d'horizon de l'emprise
-      inédite de l'homme sur la planète qu'il occupe.
+    name: Bienvenue en Anthropocène - Partie 1
+    introduction: L'Anthropocène, c'est un terme proposé par des scientifiques pour
+      désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où
+      l'homme est devenu une force géologique majeure. La période la plus récente
+      de l'anthropocène est parfois dite la grande accélération, car de nombreux indicateurs
+      y présentent des courbes de type exponentiel. Ce quiz fait un tour d'horizon
+      de l'emprise inédite de l'homme sur la planète qu'il occupe.
     conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
@@ -149,7 +150,7 @@
 - model: api.quiz
   pk: 7
   fields:
-    name: Tout sur le pétrole - Partie 1
+    name: Tout sur le Pétrole - Partie 1
     introduction: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
       à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
     conclusion: ''
@@ -188,7 +189,6 @@
     - 6
     - 8
     - 137
-    - 139
     - 14
     - 17
     - 22
@@ -198,15 +198,12 @@
     - 33
     - 415
     - 176
-    - 180
     - 436
     - 194
     - 79
     - 80
     - 369
     - 361
-    - 294
-    - 362
     - 13
     tags:
     - 142
@@ -236,7 +233,7 @@
 - model: api.quiz
   pk: 10
   fields:
-    name: Tout sur le pétrole - Partie 2
+    name: Tout sur le Pétrole - Partie 2
     introduction: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
       à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
     conclusion: ''
@@ -252,6 +249,7 @@
     - 155
     - 12
     - 494
+    - 20
     tags: []
 - model: api.quiz
   pk: 11
@@ -340,6 +338,7 @@
     questions:
     - 315
     - 52
+    - 294
     tags:
     - 142
 - model: api.quiz
@@ -391,19 +390,20 @@
     - 46
     - 425
     - 348
+    - 139
+    - 264
     tags:
     - 142
 - model: api.quiz
   pk: 16
   fields:
-    name: Bienvenue en anthropocène - Partie 2
-    introduction: L'Anthropocène est un terme proposé par des scientifiques pour désigner
-      une nouvelle ère géologique, dans laquelle l'influence de l'être humain sur
-      la biosphère a atteint un tel niveau qu'elle est devenue une force géologique
-      majeure capable de marquer la lithosphère. La période la plus récente de l'anthropocène
-      est parfois dite la grande accélération, car de nombreux indicateurs y présentent
-      des courbes de type exponentiel. Ce quiz fait un tour d'horizon de l'emprise
-      inédite de l'homme sur la planète qu'il occupe.
+    name: Bienvenue en Anthropocène - Partie 2
+    introduction: L'Anthropocène, c'est un terme proposé par des scientifiques pour
+      désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où
+      l'homme est devenu une force géologique majeure. La période la plus récente
+      de l'anthropocène est parfois dite la grande accélération, car de nombreux indicateurs
+      y présentent des courbes de type exponentiel. Ce quiz fait un tour d'horizon
+      de l'emprise inédite de l'homme sur la planète qu'il occupe.
     conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
