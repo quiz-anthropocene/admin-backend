@@ -50,6 +50,10 @@ const store = new Vuex.Store({
       difficulty: null,
     },
     quizzes: [],
+    quizzesDisplayed: [],
+    quizFilters: {
+      tag: null,
+    },
     categories: [],
     tags: [],
     authors: [],
@@ -287,13 +291,19 @@ const store = new Vuex.Store({
         });
     },
     /**
-     * Update question filters
+     * Update question & quiz filters
      */
     UPDATE_QUESTION_FILTERS: ({ commit, state, getters }, filterObject) => {
       const currentQuestionFilters = filterObject || state.questionFilters;
       const questionsDisplayed = getters.getQuestionsByFilter(currentQuestionFilters);
       commit('SET_QUESTION_FILTERS', { object: currentQuestionFilters });
       commit('SET_QUESTIONS_DISPLAYED_LIST', { list: questionsDisplayed });
+    },
+    UPDATE_QUIZ_FILTERS: ({ commit, state, getters }, filterObject) => {
+      const currentQuizFilters = filterObject || state.quizFilters;
+      const quizzesDisplayed = getters.getQuizzesByFilter(currentQuizFilters);
+      commit('SET_QUIZ_FILTERS', { object: currentQuizFilters });
+      commit('SET_QUIZZES_DISPLAYED_LIST', { list: quizzesDisplayed });
     },
   },
   mutations: {
@@ -334,8 +344,14 @@ const store = new Vuex.Store({
     SET_QUESTION_FILTERS: (state, { object }) => {
       state.questionFilters = object;
     },
+    SET_QUIZ_FILTERS: (state, { object }) => {
+      state.quizFilters = object;
+    },
     SET_QUESTIONS_DISPLAYED_LIST: (state, { list }) => {
       state.questionsDisplayed = list;
+    },
+    SET_QUIZZES_DISPLAYED_LIST: (state, { list }) => {
+      state.quizzesDisplayed = list;
     },
     SET_STATS: (state, { object }) => {
       state.stats = object;
@@ -360,6 +376,7 @@ const store = new Vuex.Store({
       return state.questionsDisplayed[currentQuestionIndex + 1] ? state.questionsDisplayed[currentQuestionIndex + 1] : state.questionsDisplayed[0];
     },
     getQuizById: (state) => (quizId) => state.quizzes.find((q) => (q.id === quizId)),
+    getQuizzesByFilter: (state) => (filter) => state.quizzes.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true)),
   },
 });
 
