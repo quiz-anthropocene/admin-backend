@@ -16,7 +16,7 @@
         <!-- Question text -->
         <div class="row no-gutters justify-content-center">
           <div class="col-md-10 col-lg-8">
-            <h3 v-html="$options.filters.abbr(question.text, glossary)"></h3>
+            <h3 v-html="$options.filters.abbr(question.text, glossaire)"></h3>
           </div>
         </div>
         <!-- Question answer choices -->
@@ -135,8 +135,8 @@ export default {
   },
 
   computed: {
-    glossary() {
-      return this.$store.state.glossary;
+    glossaire() {
+      return this.$store.state.ressources.glossaire;
     },
   },
 
