@@ -3,7 +3,15 @@
   <section class="text-align-left">
     <h2>Ressources pour aller plus loin</h2>
 
-    <h3>Les associations et les personnes qui participent de près ou de loin au projet</h3>
+    <ol>
+      <li><a href="#ressources-soutiens">Les associations et les personnes qui participent de près ou de loin au projet</a></li>
+      <li><a href="#ressources-documentation">Des ressources qui nous ont été utiles pour trouver de nouvelles questions</a></li>
+      <li><a href="#ressources-autres-apps">Des projets et jeux similaires</a></li>
+      <li><a href="#ressources-autres-liens">Les associations et les personnes qui participent de près ou de loin au projet</a></li>
+      <li><a href="#ressources-glossaire">Un glossaire</a></li>
+    </ol>
+
+    <h3 id="ressources-soutiens">Les associations et les personnes qui participent de près ou de loin au projet</h3>
     <!-- <a href="https://fresqueduclimat.org/" target="_blank">La Fresque du Climat</a><br />
     <a href="https://avenirclimatique.org/" target="_blank">Avenir Climatique</a><br />
     <a href="http://adrastia.org/" target="_blank">Adrastia</a><br />
@@ -37,12 +45,12 @@
     </div>
 
     <br />
-    <h3>Des ressources qui nous ont été utiles pour trouver de nouvelles questions</h3>
+    <h3 id="ressources-documentation">Des ressources qui nous ont été utiles pour trouver de nouvelles questions</h3>
 
     <p>à venir</p>
 
     <br />
-    <h3>Des projets et jeux similaires</h3>
+    <h3 id="ressources-autres-apps">Des projets et jeux similaires</h3>
 
     <p>D'autres applications existent pour en apprendre plus sur la crise climatique de manière ludique.</p>
 
@@ -68,7 +76,7 @@
     </div>
 
     <br />
-    <h3>D'autres associations et liens qui peuvent vous être utiles</h3>
+    <h3 id="ressources-autres-liens">D'autres associations et liens qui peuvent vous être utiles</h3>
     <a href="https://theshiftproject.org/" target="_blank">The Shift Project</a><br />
     <a href="https://extinctionrebellion.fr/" target="_blank">Extinction Rebellion (XR)</a><br />
     <a href="https://www.lpo.fr/" target="_blank">La Ligue pour la Protection des Oiseaux (LPO)</a><br />
@@ -78,6 +86,13 @@
     <h4>Ca bouge aussi coté politique</h4>
     <a href="https://www.hautconseilclimat.fr/" target="_blank">Le Haut conseil pour le climat</a><br />
     <a href="https://www.conventioncitoyennepourleclimat.fr/" target="_blank">La Convention Citoyenne pour le climat (CCC)</a><br />
+
+    <br />
+    <h3 id="ressources-glossaire">Un glossaire</h3>
+
+    <p>
+      Voir <router-link :to="{ name: 'glossary' }">cette page</router-link>
+    </p>
 
   </section>
 </template>
@@ -121,9 +136,6 @@ export default {
 <style scoped>
 .card {
   margin-bottom: 15px;
-}
-ul > li {
-  padding-bottom: 15px;
 }
 
 .card-img-top {

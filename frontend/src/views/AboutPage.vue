@@ -54,6 +54,10 @@
 
     <br />
     <h3>Vous souhaitez <router-link :to="{ name: 'ressources' }">aller plus loin ?</router-link></h3>
+    <p>
+      On a créé une page <router-link :to="{ name: 'ressources' }">📚&nbsp;Ressources</router-link> pour mettre
+      plein d'informations additionnelles (des assos, d'autres projets, de la lecture, etc).
+    </p>
 
   </section>
 </template>

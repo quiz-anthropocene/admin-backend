@@ -20,8 +20,11 @@
           </router-link>
         </div>
         <div class="col-sm" v-if="currentRoute === 'about'">
-          <router-link :to="{ name: 'glossary' }">
+          <!-- <router-link :to="{ name: 'glossary' }">
             📓&nbsp;Glossaire
+          </router-link> -->
+          <router-link :to="{ name: 'ressources' }">
+            📚&nbsp;Ressources
           </router-link>
         </div>
         <!-- Right link -->
