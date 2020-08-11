@@ -9,7 +9,7 @@ class FixturesTest(TestCase):
         "data/tags.yaml",
         "data/questions.yaml",
         "data/quizzes.yaml",
-        "data/glossary.yaml",
+        "data/ressources-glossaire.yaml",
     ]
 
     def test_fixtures_load_successfully(self):
