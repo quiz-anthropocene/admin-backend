@@ -8,6 +8,7 @@ import quizzesYamlData from '../../data/quizzes.yaml';
 import difficultyLevelsYamlData from '../../data/difficulty-levels.yaml';
 import ressourcesGlossaireYamlData from '../../data/ressources-glossaire.yaml';
 import ressourcesSoutiensYamlData from '../../data/ressources-soutiens.yaml';
+import ressourcesAutresAppsYamlData from '../../data/ressources-autres-apps.yaml';
 
 Vue.use(Vuex);
 
@@ -61,6 +62,7 @@ const store = new Vuex.Store({
     ressources: {
       glossaire: [],
       soutiens: [],
+      autresApps: [],
     },
     stats: {},
   },
@@ -269,6 +271,9 @@ const store = new Vuex.Store({
       });
       commit('SET_RESSOURCES_SOUTIENS_LIST', { list: soutiens });
     },
+    GET_RESSOURCES_AUTRES_APPS_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_RESSOURCES_AUTRES_APPS_LIST', { list: processModelList(ressourcesAutresAppsYamlData) });
+    },
     /**
      * Get stats
      */
@@ -340,6 +345,9 @@ const store = new Vuex.Store({
     },
     SET_RESSOURCES_SOUTIENS_LIST: (state, { list }) => {
       state.ressources.soutiens = list;
+    },
+    SET_RESSOURCES_AUTRES_APPS_LIST: (state, { list }) => {
+      state.ressources.autresApps = list;
     },
     SET_QUESTION_FILTERS: (state, { object }) => {
       state.questionFilters = object;

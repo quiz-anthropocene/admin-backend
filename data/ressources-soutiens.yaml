@@ -1,37 +1,32 @@
-- pk: 1
-  name: La Fresque du Climat
+- name: La Fresque du Climat
   description: Un atelier d’intelligence collective qui permet de mieux comprendre les composantes du dérèglement climatique et son caractère systémique.
   description_url: http://adrastia.org/
   description_details: Le point de départ du projet. Permettre aux gens de prendre conscience de l’ampleur du problème, sans avoir à assister à un atelier en présentiel (ou alors après un atelier pour approfondir).
   image_url: http://fresqueduclimat.org/wp-content/uploads/2020/06/cropped-logo-FR-couleur-complet-500-300.png
   quiz_tag: 142
   added: 2020-06-01
-- pk: 2
-  name: Adrastia
+- name: Adrastia
   description: 'Adrastia vient du grec ancien Adrasteia : « auquel on ne peut échapper ».. Adrastia a pour objectif d’anticiper et préparer le déclin de la civilisation thermo-industrielle de façon honnête, responsable et digne.'
   description_url: http://adrastia.org/
   description_details: Pour toucher les questions de société, d’anthropocène et d’effondrements actuels et futurs.
   image_url: http://adrastia.org/wp-content/uploads/2017/07/Site.4.png
   quiz_tag: 185
   added: 2020-06-01
-- pk: 3
-  name: '@laydgeur'
+- name: '@laydgeur'
   description: 'Un twittos connu sur les sujets climats grâce entre autre à ses quizs quotidiens #QuizzEnergieClimat.'
   description_url: https://twitter.com/laydgeur
   description_details: ''
   image_url: https://pbs.twimg.com/profile_images/613449259766149120/ayYusf5b_400x400.jpg
   quiz_tag: 
   added: 2020-06-01
-- pk: 4
-  name: Avenir Climatique
+- name: Avenir Climatique
   description: ''
   description_url: https://avenirclimatique.org/
   description_details: ''
   image_url: https://avenirclimatique.org/wp-content/themes/JointsWP-master/library/images/logo_AC_simple_100px.png
   quiz_tag: 
   added: 2020-06-01
-- pk: 5
-  name: Citoyens pour le Climat
+- name: Citoyens pour le Climat
   description: ''
   description_url: https://citoyenspourleclimat.org/
   description_details: Contenu réalisé en partenariat avec l’association.
