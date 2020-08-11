@@ -1,0 +1,15 @@
+- name: Mission Climat
+  description: Votre mission, si vous l'acceptez, est de proposer un scénario climat 2030 pour la France, permettant de limiter les impacts du dérèglement climatique à un niveau soutenable. Pour ce faire, vous avez à votre disposition quelques paramètres, un modèle de calcul et un joli tableau de bord.
+  description_url: http://mission-climat.io/
+  img_url: http://mission-climat.io/images/baisse-carbone.png
+  added: 2020-08-10
+- name: Futur.eco
+  description: Découvre l'impact de chaque geste du quotidien !
+  description_url: https://futur.eco/
+  img_url: https://futur.eco/images/logo.svg
+  added: 2020-08-10
+- name: Les quizs de la NASA
+  description: Test tes connaissances sur le climat avec ces quizs en anglais.
+  description_url: https://climate.nasa.gov/climate_resource_center/interactives/quizzes
+  img_url: https://pbs.twimg.com/profile_images/1276204806101626880/HdVRngaW_400x400.jpg
+  added: 2020-08-10

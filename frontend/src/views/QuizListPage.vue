@@ -1,22 +1,16 @@
 <template>
   <section>
     <!-- Header -->
-    <section class="filter-box">
-      <div class="filter-box--header">
-        <div class="text-align-right">
-          <span class="label label-hidden"><strong>{{ quizzes.length }}</strong> Quiz</span>
-        </div>
-      </div>
-    </section>
+    <QuizFilter />
 
-    <div v-if="quizzes && quizzes.length === 0">
+    <div v-if="quizzesDisplayed && quizzesDisplayed.length === 0">
       Pas de quiz :(
     </div>
 
-    <div v-if="quizzes && quizzes.length > 0" class="row">
-      <div class="col-sm-6" v-for="quiz in quizzes" :key="quiz.id">
+    <div v-if="quizzesDisplayed && quizzesDisplayed.length > 0" class="row">
+      <div class="col-sm-6" v-for="quiz in quizzesDisplayed" :key="quiz.id">
         <router-link class="card no-decoration" :to="{ name: 'quiz-detail', params: { quizId: quiz.id } }">
-          <img v-bind:src="quiz.image_background_url || 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png'" class="card-img-top" alt="Une image pour illustrer le quiz">
+          <img class="card-img-top" v-bind:src="quiz.image_background_url || 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png'" alt="Une image pour illustrer le quiz">
           <div class="card-body">
             <h2 class="card-title">{{ quiz.name }}</h2>
             <p class="card-subtitle"><strong>{{ quiz.questions.length }}</strong> question<span v-if="quiz.questions.length > 1">s</span></p>
@@ -50,6 +44,8 @@
 </template>
 
 <script>
+import QuizFilter from '../components/QuizFilter.vue';
+
 export default {
   name: 'QuizListPage',
   metaInfo: {
@@ -60,6 +56,7 @@ export default {
     ],
   },
   components: {
+    QuizFilter,
   },
 
   data() {
@@ -70,13 +67,26 @@ export default {
 
   computed: {
     quizzes() {
-      return this.$store.state.quizzes
+      return this.$store.state.quizzes;
+    },
+    quizzesDisplayed() {
+      return this.$store.state.quizzesDisplayed
         .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
         .sort((a, b) => a.name.localeCompare(b.name));
     },
   },
 
+  watch: {
+    // eslint-disable-next-line
+    quizzes (newQuizzes, oldQuizzes) {
+      this.$store.dispatch('UPDATE_QUIZ_FILTERS');
+    },
+  },
+
   mounted() {
+    if (this.quizzes) {
+      this.$store.dispatch('UPDATE_QUIZ_FILTERS');
+    }
   },
 
   methods: {
@@ -85,17 +95,6 @@ export default {
 </script>
 
 <style scoped>
-.filter-box {
-  box-shadow: 0px 0px 5px 5px #c5c5c5;
-  border-radius: 5px;
-  margin: 10px 0px;
-  padding: 5px;
-}
-.filter-box > .filter-box--header {
-  text-align: left;
-  cursor: pointer;
-}
-
 .row > .col-sm-6 {
   padding-bottom: 15px;
 }

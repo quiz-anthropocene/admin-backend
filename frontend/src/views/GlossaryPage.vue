@@ -4,13 +4,13 @@
 
     <hr />
 
-    <section v-for="glossary_item in glossary" :key="glossary_item.name">
+    <section v-for="glossary_item in glossaire" :key="glossary_item.name">
       <h3>
         {{ glossary_item.name }}
         <small><i>{{ glossary_item.definition_short }}</i></small>
       </h3>
       <p>{{ glossary_item.description }}</p>
-      <p class="glossary-link">
+      <p class="glossary-link" v-if="glossary_item.description_accessible_url">
         🔗&nbsp;<a v-bind:href="glossary_item.description_accessible_url" target="_blank" v-bind:title="glossary_item.description_accessible_url">{{ glossary_item.description_accessible_url }}</a>
       </p>
       <p v-if="glossary_item.name_alternatives">
@@ -46,13 +46,13 @@ export default {
 
   data() {
     return {
-      // glossary: null,
+      // glossaire: null,
     };
   },
 
   computed: {
-    glossary() {
-      return this.$store.state.glossary;
+    glossaire() {
+      return this.$store.state.ressources.glossaire;
     },
   },
 };

@@ -5,8 +5,10 @@ import categoriesYamlData from '../../data/categories.yaml';
 import tagsYamlData from '../../data/tags.yaml';
 import questionsYamlData from '../../data/questions.yaml';
 import quizzesYamlData from '../../data/quizzes.yaml';
-import glossaryYamlData from '../../data/glossary.yaml';
 import difficultyLevelsYamlData from '../../data/difficulty-levels.yaml';
+import ressourcesGlossaireYamlData from '../../data/ressources-glossaire.yaml';
+import ressourcesSoutiensYamlData from '../../data/ressources-soutiens.yaml';
+import ressourcesAutresAppsYamlData from '../../data/ressources-autres-apps.yaml';
 
 Vue.use(Vuex);
 
@@ -49,11 +51,19 @@ const store = new Vuex.Store({
       difficulty: null,
     },
     quizzes: [],
+    quizzesDisplayed: [],
+    quizFilters: {
+      tag: null,
+    },
     categories: [],
     tags: [],
     authors: [],
     difficultyLevels: [],
-    glossary: [],
+    ressources: {
+      glossaire: [],
+      soutiens: [],
+      autresApps: [],
+    },
     stats: {},
   },
   actions: {
@@ -224,32 +234,45 @@ const store = new Vuex.Store({
         });
     },
     /**
-     * Get glossary
+     * Get ressources: glossaire, soutiens, ...
      */
     GET_GLOSSARY_LIST: ({ commit }) => {
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/glossary`)
         .then((response) => response.json())
         .then((dataJson) => {
-          commit('SET_GLOSSARY_LIST', { list: dataJson });
+          commit('SET_RESSOURCES_GLOSSAIRE_LIST', { list: dataJson });
         })
         .catch((error) => {
           console.log(error);
           // this.error = error;
         });
     },
-    GET_GLOSSARY_LIST_FROM_YAML: ({ commit }) => {
-      fetch('https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/glossary.yaml')
+    GET_RESSOURCES_GLOSSAIRE_LIST_FROM_YAML: ({ commit }) => {
+      fetch('https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/ressources-glossaire.yaml')
         .then((response) => response.text())
         .then((dataYaml) => {
-          commit('SET_GLOSSARY_LIST', { list: processYamlFile(dataYaml) });
+          commit('SET_RESSOURCES_GLOSSAIRE_LIST', { list: processYamlFile(dataYaml) });
         })
         .catch((error) => {
           console.log(error);
           // this.error = error;
         });
     },
-    GET_GLOSSARY_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      commit('SET_GLOSSARY_LIST', { list: processModelList(glossaryYamlData) });
+    GET_RESSOURCES_GLOSSAIRE_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_RESSOURCES_GLOSSAIRE_LIST', { list: processModelList(ressourcesGlossaireYamlData) });
+    },
+    GET_RESSOURCES_SOUTIENS_LIST_FROM_LOCAL_YAML: ({ commit, getters }) => {
+      const soutiens = processModelList(ressourcesSoutiensYamlData);
+      // soutiens: get quiz_tag object
+      soutiens.map((s) => {
+        const soutienQuizTag = getters.getTagById(s.quiz_tag);
+        Object.assign(s, { quiz_tag: soutienQuizTag });
+        return s;
+      });
+      commit('SET_RESSOURCES_SOUTIENS_LIST', { list: soutiens });
+    },
+    GET_RESSOURCES_AUTRES_APPS_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_RESSOURCES_AUTRES_APPS_LIST', { list: processModelList(ressourcesAutresAppsYamlData) });
     },
     /**
      * Get stats
@@ -273,13 +296,19 @@ const store = new Vuex.Store({
         });
     },
     /**
-     * Update question filters
+     * Update question & quiz filters
      */
     UPDATE_QUESTION_FILTERS: ({ commit, state, getters }, filterObject) => {
       const currentQuestionFilters = filterObject || state.questionFilters;
       const questionsDisplayed = getters.getQuestionsByFilter(currentQuestionFilters);
       commit('SET_QUESTION_FILTERS', { object: currentQuestionFilters });
       commit('SET_QUESTIONS_DISPLAYED_LIST', { list: questionsDisplayed });
+    },
+    UPDATE_QUIZ_FILTERS: ({ commit, state, getters }, filterObject) => {
+      const currentQuizFilters = filterObject || state.quizFilters;
+      const quizzesDisplayed = getters.getQuizzesByFilter(currentQuizFilters);
+      commit('SET_QUIZ_FILTERS', { object: currentQuizFilters });
+      commit('SET_QUIZZES_DISPLAYED_LIST', { list: quizzesDisplayed });
     },
   },
   mutations: {
@@ -311,14 +340,26 @@ const store = new Vuex.Store({
     SET_DIFFICULTY_LEVEL_LIST: (state, { list }) => {
       state.difficultyLevels = list;
     },
-    SET_GLOSSARY_LIST: (state, { list }) => {
-      state.glossary = list;
+    SET_RESSOURCES_GLOSSAIRE_LIST: (state, { list }) => {
+      state.ressources.glossaire = list;
+    },
+    SET_RESSOURCES_SOUTIENS_LIST: (state, { list }) => {
+      state.ressources.soutiens = list;
+    },
+    SET_RESSOURCES_AUTRES_APPS_LIST: (state, { list }) => {
+      state.ressources.autresApps = list;
     },
     SET_QUESTION_FILTERS: (state, { object }) => {
       state.questionFilters = object;
     },
+    SET_QUIZ_FILTERS: (state, { object }) => {
+      state.quizFilters = object;
+    },
     SET_QUESTIONS_DISPLAYED_LIST: (state, { list }) => {
       state.questionsDisplayed = list;
+    },
+    SET_QUIZZES_DISPLAYED_LIST: (state, { list }) => {
+      state.quizzesDisplayed = list;
     },
     SET_STATS: (state, { object }) => {
       state.stats = object;
@@ -343,6 +384,7 @@ const store = new Vuex.Store({
       return state.questionsDisplayed[currentQuestionIndex + 1] ? state.questionsDisplayed[currentQuestionIndex + 1] : state.questionsDisplayed[0];
     },
     getQuizById: (state) => (quizId) => state.quizzes.find((q) => (q.id === quizId)),
+    getQuizzesByFilter: (state) => (filter) => state.quizzes.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true)),
   },
 });
 

@@ -65,6 +65,17 @@
         </router-link>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-sm-6 offset-sm-3" v-if="questionsCount">
+        <router-link class="no-decoration" :to="{ name: 'ressources' }">
+          <button class="btn btn-outline-secondary btn-lg btn-block">
+            📚&nbsp;<strong>Ressources</strong>
+          </button>
+        </router-link>
+      </div>
+    </div>
+
   </section>
 </template>
 
