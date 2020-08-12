@@ -28,7 +28,7 @@ jobs:
             python -m flake8
             python manage.py test
   
-  frontend-lint:
+  frontend-test:
     docker:
       - image: circleci/node:13
 
@@ -43,9 +43,13 @@ jobs:
           name: Run ESlint
           working_directory: ~/project/frontend
           command: yarn lint
+      - run:
+          name: Run Test E2E (Nightwatch)
+          working_directory: ~/project/frontend
+          command: yarn test:e2e
 
 workflows:
   main:
     jobs:
       - backend-test
-      - frontend-lint
+      - frontend-test
