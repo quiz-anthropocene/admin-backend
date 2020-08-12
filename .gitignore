@@ -20,6 +20,8 @@ staticfiles
 # Tests
 .coverage
 htmlcov
+frontend/chromedriver.log
+frontend/geckodriver.log
 
 # Local stuff
 local_scripts
