@@ -22,6 +22,7 @@ staticfiles
 htmlcov
 frontend/chromedriver.log
 frontend/geckodriver.log
+frontend/tests/e2e/reports/**
 
 # Local stuff
 local_scripts

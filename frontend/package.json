@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test": "echo \"no tests yet\" && exit 0",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test:e2e": "vue-cli-service test:e2e --headless --no-sandbox --disable-gpu"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
