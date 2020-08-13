@@ -37,10 +37,10 @@
       </div>
     </div>
 
-    <section v-if="quiz && quizStep === 0">
+    <div v-if="quiz && quizStep === 0" class="quiz-start">
       <br />
       <button class="btn btn-lg btn-primary margin-5" @click="incrementStep()">⏩&nbsp;Commencer le quiz !</button>
-    </section>
+    </div>
 
     <!-- Quiz en cours -->
 

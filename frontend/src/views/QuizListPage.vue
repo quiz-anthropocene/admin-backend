@@ -7,7 +7,7 @@
       Pas de quiz :(
     </div>
 
-    <div v-if="quizzesDisplayed && quizzesDisplayed.length > 0" class="row">
+    <div v-if="quizzesDisplayed && quizzesDisplayed.length > 0" id="quiz-list" class="row">
       <div class="col-sm-6" v-for="quiz in quizzesDisplayed" :key="quiz.id">
         <router-link class="card no-decoration" :to="{ name: 'quiz-detail', params: { quizId: quiz.id } }">
           <img class="card-img-top" v-bind:src="quiz.image_background_url || 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png'" alt="Une image pour illustrer le quiz">

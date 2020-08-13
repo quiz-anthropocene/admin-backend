@@ -1,8 +1,9 @@
 version: 2.1
 
 orbs:
-  python: circleci/python@0.2.1
-  node: circleci/node@3.0.0
+  python: circleci/python@0.3.2
+  node: circleci/node@4.0.0
+  circleci: circleci/circleci-images@0.7.0
 
 jobs:
   backend-test:
@@ -28,9 +29,10 @@ jobs:
             python -m flake8
             python manage.py test
   
-  frontend-lint:
+  frontend-test:
     docker:
       - image: circleci/node:13
+      # - image: circleci/node:13-browsers
 
     resource_class: small
 
@@ -43,9 +45,15 @@ jobs:
           name: Run ESlint
           working_directory: ~/project/frontend
           command: yarn lint
+      - circleci/install-chrome
+      # - circleci/install-chromedriver
+      - run:
+          name: Run Test E2E (Nightwatch)
+          working_directory: ~/project/frontend
+          command: yarn test:e2e
 
 workflows:
   main:
     jobs:
       - backend-test
-      - frontend-lint
+      - frontend-test

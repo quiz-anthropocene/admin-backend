@@ -1,5 +1,5 @@
 <template>
-  <section class="card-feedback small">
+  <section class="feedback-card small">
     <div class="row no-gutters margin-top-bottom-10">
       <div class="col-sm">
         <h3 class="margin-5">Votre avis sur {{ (context.source) === 'question' ? 'cette' : 'ce' }} {{ context.source }} ?</h3>
@@ -139,7 +139,7 @@ export default {
 </script>
 
 <style scoped>
-.card-feedback {
+.feedback-card {
   border: 1px solid var(--primary);
   border-radius: 5px;
   margin: 10px 0px;
