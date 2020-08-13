@@ -27,7 +27,7 @@ module.exports = {
       .end();
   },
 
-  'user can select a random question': (browser) => {
+  'user can select a random question and answer it': (browser) => {
     browser
       // home page
       .openHomepage()
@@ -46,6 +46,13 @@ module.exports = {
       .assert.elementPresent('.question')
       .assert.not.elementPresent('.answer')
       .assert.elementPresent('.question h2')
+      .assert.containsText('div[class*="question-next"] button', 'Question suivante')
+      // question detail page : answer question
+      .answerQuestion()
+      // .waitForElementVisible('div[class*="answer"]')
+      .assert.elementPresent('.answer')
+      .assert.elementPresent('section[class*="feedback-card"]')
+      .assert.containsText('div[class*="question-next"] button', 'Question suivante')
       .end();
   },
 };
