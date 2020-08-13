@@ -6,25 +6,27 @@
 //   https://nightwatchjs.org/guide/working-with-page-objects/
 /// /////////////////////////////////////////////////////////////
 
-// module.exports = {
-//   beforeEach: (browser) => browser.init(),
+module.exports = {
+  '@disabled': true,
 
-//   'e2e tests using page objects': (browser) => {
-//     const homepage = browser.page.homepage();
-//     homepage.waitForElementVisible('@appContainer');
+  beforeEach: (browser) => browser.init(),
 
-//     const { app } = homepage.section;
-//     app.assert.elementCount('@logo', 1);
-//     app.expect.section('@welcome').to.be.visible;
-//     app.expect.section('@headline').text.to.match(/^Welcome to Your Vue\.js (.*)App$/);
+  'e2e tests using page objects': (browser) => {
+    const homepage = browser.page.homepage();
+    homepage.waitForElementVisible('@appContainer');
 
-//     browser.end();
-//   },
+    const { app } = homepage.section;
+    app.assert.elementCount('@logo', 1);
+    app.expect.section('@welcome').to.be.visible;
+    app.expect.section('@headline').text.to.match(/^Welcome to Your Vue\.js (.*)App$/);
 
-//   'verify if string "e2e-nightwatch" is within the cli plugin links': (browser) => {
-//     const homepage = browser.page.homepage();
-//     const welcomeSection = homepage.section.app.section.welcome;
+    browser.end();
+  },
 
-//     welcomeSection.expect.element('@cliPluginLinks').text.to.contain('e2e-nightwatch');
-//   },
-// };
+  'verify if string "e2e-nightwatch" is within the cli plugin links': (browser) => {
+    const homepage = browser.page.homepage();
+    const welcomeSection = homepage.section.app.section.welcome;
+
+    welcomeSection.expect.element('@cliPluginLinks').text.to.contain('e2e-nightwatch');
+  },
+};

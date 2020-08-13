@@ -1,7 +1,7 @@
 <template>
   <section>
     <!-- Question List -->
-    <div v-if="questionsDisplayed" class="row">
+    <div v-if="questionsDisplayed" id="question-list" class="row">
       <div class="col-lg-4 col-sm-6" v-for="question in questionsDisplayed" :key="question.id">
         <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: question.id } }">
           <QuestionPreviewCard v-bind:question="question" />

@@ -22,7 +22,7 @@
       l'énergie, les ressources, le climat, les questions d'effondrement, les actions possibles, etc
     </p>
 
-    <div class="row">
+    <div v-if="soutiens" id="ressources-soutiens-list" class="row">
       <div class="col-sm-6" v-for="soutien_item in soutiens" :key="soutien_item.name">
         <div class="card">
           <img class="card-img-top" v-bind:src="soutien_item.image_url">
