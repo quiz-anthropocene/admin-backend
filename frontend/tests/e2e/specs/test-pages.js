@@ -2,6 +2,7 @@
 // https://nightwatchjs.org/guide
 
 module.exports = {
+  // '@disabled': true,
   // 'default e2e tests': (browser) => {
   //   browser
   //     .init()
@@ -65,10 +66,8 @@ module.exports = {
       .openUrl('quiz/1/')
       .assert.elementPresent('header')
       .assert.elementPresent('footer')
-      .useXpath()
-      .assert.containsText('(//main//h2)[1]', 'Chiffres clés')
-      .assert.containsText('(//main//button)[1]', 'Commencer le quiz')
-      .useCss()
+      .assert.containsText('.card h2', 'Chiffres clés')
+      .assert.containsText('div[class*="quiz-start"] button', 'Commencer le quiz')
       .end();
   },
 
@@ -87,11 +86,12 @@ module.exports = {
       .openUrl('questions/1/')
       .assert.elementPresent('header')
       .assert.elementPresent('footer')
-      .useXpath()
-      .assert.containsText('(//main//h3)[1]', "Quelle quantité d'aliments jette-t-on chaque année dans le monde ?")
-      .assert.containsText('(//main//button)[1]', 'Valider')
-      .assert.containsText('(//main//button)[2]', 'Question suivante')
-      .useCss()
+      .assert.elementPresent('.question')
+      .assert.not.elementPresent('.answer')
+      .assert.elementPresent('.question h2')
+      .assert.containsText('.question h3', "Quelle quantité d'aliments jette-t-on chaque année dans le monde ?")
+      .assert.containsText('button[type="submit"]', 'Valider')
+      .assert.containsText('div[class*="question-next"] button', 'Question suivante')
       .end();
   },
 };
