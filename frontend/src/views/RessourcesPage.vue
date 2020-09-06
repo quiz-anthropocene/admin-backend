@@ -98,16 +98,18 @@
 </template>
 
 <script>
+import { metaTagsGenerator } from '../utils';
 import FilterLabel from '../components/FilterLabel.vue';
 
 export default {
   name: 'RessourcesPage',
-  metaInfo: {
-    title: 'Ressources',
-    meta: [
-      { property: 'og:title', vmid: 'og:title', content: 'Ressources' },
-      { property: 'twitter:title', vmid: 'twitter:title', content: 'Ressources' },
-    ],
+  metaInfo() {
+    const title = 'Ressources';
+    const description = 'Du contenu pour aller plus loin';
+    return {
+      title,
+      meta: metaTagsGenerator(title, description),
+    };
   },
   components: {
     FilterLabel,

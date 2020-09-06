@@ -15,16 +15,16 @@
 </template>
 
 <script>
+import { metaTagsGenerator } from '../utils';
 import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 
 export default {
   name: 'QuestionListPage',
-  metaInfo: {
-    title: 'Toutes les questions',
-    meta: [
-      { property: 'og:title', vmid: 'og:title', content: 'Toutes les questions' },
-      { property: 'twitter:title', vmid: 'twitter:title', content: 'Toutes les questions' },
-    ],
+  metaInfo() {
+    const title = 'Toutes les questions';
+    return {
+      meta: metaTagsGenerator(title),
+    };
   },
   components: {
     QuestionPreviewCard,

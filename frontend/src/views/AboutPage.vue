@@ -63,14 +63,17 @@
 </template>
 
 <script>
+import { metaTagsGenerator } from '../utils';
+
 export default {
   name: 'AboutPage',
-  metaInfo: {
-    title: 'A Propos',
-    meta: [
-      { property: 'og:title', vmid: 'og:title', content: 'A Propos' },
-      { property: 'twitter:title', vmid: 'twitter:title', content: 'A Propos' },
-    ],
+  metaInfo() {
+    const title = 'A Propos';
+    const description = 'Des informations sur cette application';
+    return {
+      title,
+      meta: metaTagsGenerator(title, description),
+    };
   },
   components: {
   },

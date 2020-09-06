@@ -86,6 +86,7 @@
 </template>
 
 <script>
+import { metaTagsGenerator } from '../utils';
 import QuestionAnswerCards from '../components/QuestionAnswerCards.vue';
 import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 import FeedbackCard from '../components/FeedbackCard.vue';
@@ -99,17 +100,7 @@ export default {
     const imageUrl = this.quiz && this.quiz.image_background_url ? this.quiz.image_background_url : 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png';
     return {
       title,
-      meta: [
-        { name: 'description', vmid: 'description', content: description },
-        // { name: 'og:url', vmid: 'og:url', content: url },
-        { property: 'og:title', vmid: 'og:title', content: title },
-        { name: 'og:description', vmid: 'og:description', content: description },
-        { property: 'og:image', vmid: 'og:image', content: imageUrl },
-        // { name: 'twitter:url', vmid: 'twitter:url', content: url },
-        { property: 'twitter:title', vmid: 'twitter:title', content: title },
-        { name: 'twitter:description', vmid: 'twitter:description', content: description },
-        { property: 'twitter:image', vmid: 'twitter:image', content: imageUrl },
-      ],
+      meta: metaTagsGenerator(title, description, imageUrl),
     };
   },
   components: {

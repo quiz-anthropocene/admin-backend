@@ -68,16 +68,16 @@
 </template>
 
 <script>
+import { metaTagsGenerator } from '../utils';
 import FilterLabel from '../components/FilterLabel.vue';
 
 export default {
   name: 'StatsPage',
-  metaInfo: {
-    title: 'Statistiques',
-    meta: [
-      { property: 'og:title', vmid: 'og:title', content: 'Statistiques' },
-      { property: 'twitter:title', vmid: 'twitter:title', content: 'Statistiques' },
-    ],
+  metaInfo() {
+    const title = 'Statistiques';
+    return {
+      meta: metaTagsGenerator(title),
+    };
   },
   components: {
     FilterLabel,

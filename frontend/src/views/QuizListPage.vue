@@ -44,16 +44,16 @@
 </template>
 
 <script>
+import { metaTagsGenerator } from '../utils';
 import QuizFilter from '../components/QuizFilter.vue';
 
 export default {
   name: 'QuizListPage',
-  metaInfo: {
-    title: 'Tous les quiz',
-    meta: [
-      { property: 'og:title', vmid: 'og:title', content: 'Tous les quiz' },
-      { property: 'twitter:title', vmid: 'twitter:title', content: 'Tous les quiz' },
-    ],
+  metaInfo() {
+    const title = 'Tous les quiz';
+    return {
+      meta: metaTagsGenerator(title),
+    };
   },
   components: {
     QuizFilter,

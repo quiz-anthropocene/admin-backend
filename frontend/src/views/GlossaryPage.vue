@@ -29,14 +29,15 @@
 </template>
 
 <script>
+import { metaTagsGenerator } from '../utils';
+
 export default {
   name: 'GlossaryPage',
-  metaInfo: {
-    title: 'Glossaire',
-    meta: [
-      { property: 'og:title', vmid: 'og:title', content: 'Glossaire' },
-      { property: 'twitter:title', vmid: 'twitter:title', content: 'Glossaire' },
-    ],
+  metaInfo() {
+    const title = 'Glossaire';
+    return {
+      meta: metaTagsGenerator(title),
+    };
   },
   components: {
   },

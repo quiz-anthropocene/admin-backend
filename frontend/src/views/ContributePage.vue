@@ -93,14 +93,17 @@
 </template>
 
 <script>
+import { metaTagsGenerator } from '../utils';
+
 export default {
   name: 'Contribute',
-  metaInfo: {
-    title: 'Contribuer',
-    meta: [
-      { property: 'og:title', vmid: 'og:title', content: 'Contribuer' },
-      { property: 'twitter:title', vmid: 'twitter:title', content: 'Contribuer' },
-    ],
+  metaInfo() {
+    const title = 'Contribuer';
+    const description = 'Contribuer à l\'application pour la faire grandir !';
+    return {
+      title,
+      meta: metaTagsGenerator(title, description),
+    };
   },
   components: {
   },
