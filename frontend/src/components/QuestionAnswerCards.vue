@@ -51,6 +51,7 @@
     </div>
 
     <!-- <br v-if="question && questionSubmitted" /> -->
+    <div v-if="question && questionSubmitted" id="scroll-to-answer" style="height:1px"></div>
 
     <!-- Answer -->
     <div v-if="question && questionSubmitted" class="answer" :class="questionSuccess ? 'answer-success' : 'answer-error'">
@@ -200,6 +201,12 @@ export default {
       this.question.answer_success_rate = ((this.question.answer_success_count_agg / this.question.answer_count_agg) * 100).toFixed(0);
       // tell parent component
       this.$emit('answerSubmitted', { question_id: this.question.id, success: this.questionSuccess });
+      // scroll to answer
+      setTimeout(() => {
+        // why scroll to this div and not to 'answer' directly ? To have a slight top margin
+        // document.getElementsByClassName('answer')[0].scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('scroll-to-answer').scrollIntoView({ behavior: 'smooth' });
+      }, 25);
       // stats
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions/${this.question.id}/answer-events`, {
         method: 'POST',
@@ -249,6 +256,7 @@ button.btn-outline-warning {
   border: 2px solid;
   border-radius: 5px;
   margin: 10px 0px;
+  scroll-margin: 10px;
   padding: 10px;
   overflow: hidden;
 }
