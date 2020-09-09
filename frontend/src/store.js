@@ -263,10 +263,10 @@ const store = new Vuex.Store({
     },
     GET_RESSOURCES_SOUTIENS_LIST_FROM_LOCAL_YAML: ({ commit, getters }) => {
       const soutiens = processModelList(ressourcesSoutiensYamlData);
-      // soutiens: get quiz_tag object
+      // soutiens: get question_author and/or quiz_tag object
       soutiens.map((s) => {
         const soutienQuizTag = getters.getTagById(s.quiz_tag);
-        Object.assign(s, { quiz_tag: soutienQuizTag });
+        Object.assign(s, { question_author: s.question_author, quiz_tag: soutienQuizTag });
         return s;
       });
       commit('SET_RESSOURCES_SOUTIENS_LIST', { list: soutiens });

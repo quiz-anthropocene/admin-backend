@@ -35,9 +35,12 @@
               🚀&nbsp;{{ soutien_item.description_details }}
             </p>
           </div>
-          <div class="card-footer" v-if="soutien_item.quiz_tag">
-            <router-link class="no-decoration" :to="{ name: 'quiz-list', query: { tag: soutien_item.quiz_tag.name } }">
-              <a>Voir les quizs : <FilterLabel filterType="tag" v-bind:filterObject="{ name: soutien_item.quiz_tag.name }"></FilterLabel></a>
+          <div class="card-footer">
+            <router-link v-if="soutien_item.quiz_tag" class="no-decoration" :to="{ name: 'quiz-list', query: { tag: soutien_item.quiz_tag.name } }">
+              <a>Voir les quizs <FilterLabel filterType="tag" v-bind:filterObject="{ name: soutien_item.quiz_tag.name }"></FilterLabel></a>
+            </router-link>
+            <router-link v-if="soutien_item.question_author" class="no-decoration" :to="{ name: 'question-list', query: { author: soutien_item.question_author } }">
+              <a>Voir les questions de <FilterLabel filterType="author" v-bind:filterObject="{ name: soutien_item.question_author }"></FilterLabel></a>
             </router-link>
           </div>
         </div>
