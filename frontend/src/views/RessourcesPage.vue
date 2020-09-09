@@ -7,7 +7,7 @@
       <li><a href="#ressources-soutiens">Les associations et les personnes qui participent de près ou de loin au projet</a></li>
       <li><a href="#ressources-documentation">Des ressources qui nous ont été utiles pour trouver de nouvelles questions</a></li>
       <li><a href="#ressources-autres-apps">Des projets et jeux similaires</a></li>
-      <li><a href="#ressources-autres-liens">Les associations et les personnes qui participent de près ou de loin au projet</a></li>
+      <li><a href="#ressources-autres-liens">D'autres associations et liens qui peuvent vous être utiles</a></li>
       <li><a href="#ressources-glossaire">Un glossaire</a></li>
     </ol>
 
@@ -50,7 +50,14 @@
     <br />
     <h3 id="ressources-documentation">Des ressources qui nous ont été utiles pour trouver de nouvelles questions</h3>
 
-    <p>à venir</p>
+    <p>
+      <strong>à venir !</strong>
+    </p>
+
+    <p>
+      Vous trouverez une liste supplémentaire de ressources sur le site
+      <a href="https://www.cerise-environnement.com/" target="_blank">CeRISE</a> (Centre de Ressources et d'Informations pour le Secondaire sur l'Environnement).
+    </p>
 
     <br />
     <h3 id="ressources-autres-apps">Des projets et jeux similaires</h3>
