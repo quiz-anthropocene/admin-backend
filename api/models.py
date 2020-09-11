@@ -118,13 +118,13 @@ class Question(models.Model):
         blank=False,
         help_text="Le niveau de difficulté de la question",
     )
-    answer_option_a = models.CharField(max_length=150, help_text="La réponse a")
-    answer_option_b = models.CharField(max_length=150, help_text="La réponse b")
+    answer_option_a = models.CharField(max_length=500, help_text="La réponse a")
+    answer_option_b = models.CharField(max_length=500, help_text="La réponse b")
     answer_option_c = models.CharField(
-        max_length=150, blank=True, help_text="La réponse c"
+        max_length=500, blank=True, help_text="La réponse c"
     )
     answer_option_d = models.CharField(
-        max_length=150, blank=True, help_text="La réponse d"
+        max_length=500, blank=True, help_text="La réponse d"
     )
     answer_correct = models.CharField(
         max_length=50,
