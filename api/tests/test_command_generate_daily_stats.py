@@ -7,12 +7,13 @@ from django.test import TestCase
 
 from api import constants
 from api.models import Question, QuestionAnswerEvent, QuestionFeedbackEvent, DailyStat
+from api.tests.factories import QuestionFactory
 
 
 class CleanupAppStatsCommandTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.question_1 = Question.objects.create(answer_correct="a")
+        cls.question_1 = QuestionFactory(answer_correct="a")
         cls.question_1.agg_stats.answer_count = 2
         cls.question_1.agg_stats.save()
         QuestionAnswerEvent.objects.create(

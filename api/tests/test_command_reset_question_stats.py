@@ -9,13 +9,14 @@ from api.models import (
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
 )
+from api.tests.factories import QuestionFactory
 
 
 class CleanupQuestionStatsCommandTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         # question_1
-        cls.question_1 = Question.objects.create(answer_correct="a")
+        cls.question_1 = QuestionFactory(answer_correct="a")
         cls.question_1.agg_stats.answer_count = 1
         cls.question_1.agg_stats.answer_success_count = 2
         cls.question_1.agg_stats.like_count = 3
@@ -40,7 +41,7 @@ class CleanupQuestionStatsCommandTest(TestCase):
             question_id=cls.question_1.id, choice="like", source="quiz"
         )
         # question_2
-        cls.question_2 = Question.objects.create(answer_correct="b")
+        cls.question_2 = QuestionFactory(answer_correct="b")
         cls.question_2.agg_stats.answer_count = 1
         cls.question_2.agg_stats.save()
         QuestionAnswerEvent.objects.create(
