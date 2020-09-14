@@ -56,4 +56,4 @@ workflows:
   main:
     jobs:
       - backend-test
-      - frontend-test
+      # - frontend-test
