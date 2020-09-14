@@ -1029,7 +1029,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 16
     - 9
@@ -1064,7 +1064,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 13
     - 9
@@ -1098,7 +1098,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 16
     - 9
@@ -1414,7 +1414,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 21
     - 9
@@ -1521,7 +1521,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 51
     - 9
@@ -1556,7 +1556,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 49
     - 9
@@ -1623,7 +1623,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 16
     - 9
@@ -1915,7 +1915,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 26
     - 9
@@ -1948,7 +1948,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 26
     - 9
@@ -2271,14 +2271,16 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 21
     - 9
 - model: api.question
   pk: 68
   fields:
-    text: A-t-on atteint le pic des découvertes de ressources de pétrole ?
+    text: Les découvertes de pétrole, ce sont des ressources de pétrole nouvellement
+      découvertes et économiquement viables. A-t-on atteint le pic des découvertes
+      de pétrole ?
     hint: ''
     type: QCM
     category: 7
@@ -2286,7 +2288,7 @@
     answer_option_a: Oui, en 1930
     answer_option_b: Oui, en 1964
     answer_option_c: Oui, en 2006
-    answer_option_d: Non, elles sont globalement en augmentation
+    answer_option_d: Non, elles sont continuellement en augmentation
     answer_correct: b
     has_ordered_answers: true
     answer_explanation: Les découvertes de pétrole en réserve « 2P » (prouvées + probables,
@@ -2304,7 +2306,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-24
+    updated: 2020-09-14
     tags:
     - 11
 - model: api.question
@@ -4176,10 +4178,10 @@
     author: laydgeur
     validator: Matthieu Massart
     publish: false
-    validation_status: Écartée
+    validation_status: Validée
     added: 2019-02-06
     created: 2019-02-06
-    updated: 2020-05-23
+    updated: 2020-09-14
     tags:
     - 1
 - model: api.question
@@ -5289,7 +5291,7 @@
     validation_status: Validée
     added: 2019-03-22
     created: 2020-04-26
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 11
     - 33
@@ -5684,10 +5686,10 @@
     author: laydgeur
     validator: Matthieu Massart
     publish: false
-    validation_status: Écartée
+    validation_status: A valider
     added: 2019-04-09
     created: 2020-04-26
-    updated: 2020-06-24
+    updated: 2020-09-14
     tags:
     - 1
     - 14
@@ -5984,10 +5986,10 @@
     author: laydgeur
     validator: Matthieu Massart
     publish: false
-    validation_status: Écartée
+    validation_status: Validée
     added: 2019-04-23
     created: 2020-04-26
-    updated: 2020-06-24
+    updated: 2020-09-14
     tags:
     - 11
 - model: api.question
@@ -6513,7 +6515,7 @@
     validation_status: Validée
     added: 2019-05-22
     created: 2020-04-26
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 61
     - 9
@@ -7924,7 +7926,7 @@
     validation_status: Écartée
     added: 2019-07-01
     created: 2020-05-07
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 50
     - 9
@@ -11480,7 +11482,7 @@
     validation_status: Validée
     added: 2019-12-10
     created: 2020-05-20
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 13
     - 9
@@ -15863,7 +15865,7 @@
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 26
     - 9
@@ -15894,7 +15896,7 @@
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 26
     - 9
@@ -16886,7 +16888,7 @@
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 16
     - 9
@@ -17134,7 +17136,7 @@
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 16
     - 9
@@ -17961,12 +17963,12 @@
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
-    validator: ''
+    validator: Lucia Romanita
     publish: false
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-06-20
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-09-14
     tags:
     - 1
     - 2
@@ -18089,17 +18091,17 @@
     answer_explanation: Le maximum d'émissions de CO2 de la France a été émis en 1979,
       avec 530 millions de tonnes de CO2.
     answer_accessible_url: ''
-    answer_scientific_url: http://www.globalcarbonatlas.org/fr/CO2-emissions
+    answer_scientific_url: https://ourworldindata.org/co2/country/france?country=~FRA
     answer_image_url: ''
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
-    validator: ''
+    validator: Lucia Romanita
     publish: false
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-06-20
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-09-14
     tags:
     - 1
     - 13
@@ -18545,14 +18547,14 @@
     type: QCM
     category: 5
     difficulty: 3
-    answer_option_a: Pour une unité supplémentaire d'énergie photovoltaïque il a été
-      ajouté 14 unités d'énergie à base charbon.
+    answer_option_a: Pour une unité supplémentaire de d'énergie photovoltaïque il
+      a été ajouté 14 unités d'énergie à base de charbon.
     answer_option_b: Pour une unité supplémentaire de charbon il a été ajouté 14 fois
-      plus de photovoltaïque.
-    answer_option_c: Pour une unité supplémentaire de photovoltaïque, il a été ajouté
-      une unité de charbon
-    answer_option_d: Pour une unité supplémentaire de photovoltaïque, il a été supprimé
-      une unité de charbon
+      plus d'énergie photovoltaïque.
+    answer_option_c: Pour une unité supplémentaire d'énergie photovoltaïque, il a
+      été ajouté une unité d'énergie à base de charbon
+    answer_option_d: Pour une unité supplémentaire d'énergie photovoltaïque, il a
+      été supprimé une unité d'énergie à base de charbon
     answer_correct: a
     has_ordered_answers: false
     answer_explanation: 'L''histoire de l''énergie n''a jamais observé de réelle substitution
@@ -18571,7 +18573,7 @@
     validation_status: Validée
     added: 2020-06-26
     created: 2020-06-29
-    updated: 2020-07-23
+    updated: 2020-09-14
     tags:
     - 40
     - 44
@@ -18873,12 +18875,12 @@
       dans le monde
     answer_extra_info: ''
     author: laydgeur
-    validator: ''
+    validator: Lucia Romanita
     publish: false
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-07-04
     created: 2020-07-04
-    updated: 2020-07-04
+    updated: 2020-09-14
     tags:
     - 2
     - 29
@@ -18920,7 +18922,8 @@
   pk: 568
   fields:
     text: Selon le rapport 2019 du GIEC, quelle proportion de la population mondiale
-      va se trouver 'dans un péril vital' si la température moyenne augmente de +2°
+      va se trouver une situation de 'péril vital' si la température moyenne augmente
+      de 2° ?
     hint: ''
     type: ''
     category: null
@@ -18943,13 +18946,13 @@
     validation_status: Brouillon
     added: 2020-08-05
     created: 2020-08-10
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags: []
 - model: api.question
   pk: 569
   fields:
     text: En France, combien de tonnes d'aliments consommables partent à la poubelle
-      tout les ans ?
+      tous les ans ?
     hint: ''
     type: ''
     category: 2
@@ -18958,8 +18961,8 @@
     answer_option_b: 100,000 tonnes
     answer_option_c: 1 million de tonnes
     answer_option_d: 10 millions de tonnes
-    answer_correct: ''
-    has_ordered_answers: false
+    answer_correct: d
+    has_ordered_answers: true
     answer_explanation: ''
     answer_accessible_url: https://www.lemonde.fr/les-decodeurs/article/2018/06/07/le-gaspillage-alimentaire-en-france-en-chiffres_5311079_4355770.html
     answer_scientific_url: ''
@@ -18972,7 +18975,478 @@
     validation_status: Brouillon
     added: 2020-08-05
     created: 2020-08-10
-    updated: 2020-08-10
+    updated: 2020-09-14
     tags:
     - 1
     - 5
+- model: api.question
+  pk: 570
+  fields:
+    text: Quelle surface arable est perdue chaque jour du fait de la salinisation
+      ?
+    hint: ''
+    type: QCM
+    category: 7
+    difficulty: 3
+    answer_option_a: 200 terrains de football
+    answer_option_b: 2,000 terrains de football
+    answer_option_c: 20,000 terrains de football
+    answer_option_d: 200,000 terrains de football
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: Deux mille hectares de terres perdus par jour, 20 milliards
+      de francs d'euros de pertes pour les cultivateurs, 20% des surfaces de culture
+      menacées… La facture du sel dans les sols agricoles est… salée, selon une étude
+      publiée fin octobre par des chercheurs de l’ONU. La salinisation des sols est
+      souvent le fait de mauvaises pratiques d’irrigation. Un apport d’eau insuffisant
+      conduit le sel qu’elle contient à s’installer dans le sol. L'étude préconise
+      une action énergique pour stopper l'hémorragie.
+    answer_accessible_url: https://www.letemps.ch/sciences/terres-agricoles-menacees-sel
+    answer_scientific_url: https://macsphere.mcmaster.ca/handle/11375/15697
+    answer_image_url: https://assets.letemps.ch/sites/default/files/media/2014/12/18/07c018f6-86da-11e4-9cd5-59e213f8caa2.jpg
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Matthieu Massart
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-08-28
+    created: 2020-09-14
+    updated: 2020-09-14
+    tags:
+    - 190
+- model: api.question
+  pk: 571
+  fields:
+    text: La première domestication animale, bien avant le néolithique (-6,000 ans),
+      a été celle du chien. Mais comment nos ancêtres ont-ils réussi à transformer
+      des loups gris en caniches et chihuahuas en 15 000 ans de sélection seulement
+      ?
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 1
+    answer_option_a: En comprimant les chiots durant leur croissance, pour qu’ils
+      ne soient pas trop gros, jusqu’à créer une nouvelle espèce
+    answer_option_b: En sélectionnant dans les portées les petits porteurs de caractères
+      juvéniles, jusqu’à obtenir un être docile car maintenu en enfance
+    answer_option_c: En affamant les loups jusqu’à ce que leur taille se réduise,
+      caractère transmis par épigénétique aux générations suivantes
+    answer_option_d: En brisant les os des chiots à leur naissance, ceux qui survivaient
+      transmettant des malformations à leur descendance par imitation
+    answer_correct: b
+    has_ordered_answers: false
+    answer_explanation: 'Ce processus a pu être reproduit sur quelques générations
+      sur des renards, voir l''article donné en lien (en anglais). Pour une évocation
+      plus générale de la domestication du chien : Homo Canis, Une histoire des chiens
+      et de l’humanité, Laurent Testot, Paris, Payot, 2018.'
+    answer_accessible_url: https://www.science-et-vie.com/questions-reponses/comment-le-loup-est-il-devenu-chien-50850
+    answer_scientific_url: http://www.terrierman.com/russianfoxfarmstudy.pdf
+    answer_image_url: https://www.sciencesetavenir.fr/assets/img/2015/02/23/cover-r4x3w1000-57e155beab460-domestication-du-chien.jpg
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Laurent Testot
+    validator: Matthieu Massart
+    publish: false
+    validation_status: Validée
+    added: 2020-09-08
+    created: 2020-09-14
+    updated: 2020-09-14
+    tags:
+    - 107
+    - 189
+- model: api.question
+  pk: 572
+  fields:
+    text: Le brûlis parcellaire consiste à brûler régulièrement les milieux pour favoriser
+      la croissance de végétaux comestibles et la présence du petit gibier. Depuis
+      combien de temps est-il attesté aujourd’hui que les Aborigènes australiens se
+      livrent à l’écobuage ?
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 4
+    answer_option_a: 5 000 ans, à l’arrivée du dingo sur le sous-continent
+    answer_option_b: 40 000 ans, à la disparition de la mégafaune d’Australie
+    answer_option_c: 70 000 ans, au débarquement des humains en Australie
+    answer_option_d: 300 000 ans, depuis que les humains ont la maîtrise du feu
+    answer_correct: b
+    has_ordered_answers: false
+    answer_explanation: "Après une perte de biodiversité, les écosystèmes s’adaptent
+      à un brûlis parcellaire. Si la pratique est maintenue longtemps (comme en Australie,
+      en Afrique australe ou dans les Amériques), les écosystèmes ont besoin de cette
+      intervention de l'homme pour se maintenir.En Australie, le brûlis parcellaire
+      s’est interrompu aux 19ème et 20ème siècles suite au génocide subi par les Aborigènes
+      face aux colons. Comme d’autres pratiques autochtones, il est aujourd’hui redécouvert
+      pour lutter contre les méga-feux. \n\nPour la datation de l’écobuage aborigène
+      et son utilité écosystémique, David A. Burney, Timothy F. Flannery, « Fifty
+      millennia of catastrophic extinctions after human contact », Trends in Ecology
+      and Evolution, 1er juillet 2005, vol. 20, n° 7, 395-401, https://doi.org/10.1016/j.tree.2005.04.022
+      (accès payant). \nPour la maintenance des écosystèmes australiens par le brûlis
+      aborigène, Stefani A. Crabtree et al., « Subsistence Transitions and the Simplification
+      of Ecological Networks in the Western Desert of Australia », Human Ecology,
+      47, 165-177, 8 février 2019, https://doi.org/10.1007/s10745-019-0053-z, consultable
+      sur https://www.researchgate.net/publication/330976086_Subsistence_Transitions_and_the_Simplification_of_Ecological_Networks_in_the_Western_Desert_of_Australia).
+      \nPour une description du rôle du feu dans notre histoire évolutive, Stephen
+      J. Pyne, World Fire. The Culture of Fire on Earth, New York, Henry Holt and
+      Company, 1995 ; Juli G. Pausas, Jon E. Keeley, « A Burning Story: The Role of
+      Fire in the History of Life », BioScience, 1er juillet 2009, vol. 59, n° 7,
+      593-601, https://doi.org/10.1525/bio.2009.59.7.10, consultable sur https://academic.oup.com/bioscience/article/59/7/593/334816."
+    answer_accessible_url: ''
+    answer_scientific_url: https://academic.oup.com/bioscience/article/59/7/593/334816
+    answer_image_url: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.aboriginalsignature.com%2Fglossaire-art-aborigene&psig=AOvVaw32zHNMmfTnNgx5X0yvbeSl&ust=1599644337872000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCfk92h2esCFQAAAAAdAAAAABAD
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Laurent Testot
+    validator: Matthieu Massart
+    publish: false
+    validation_status: Validée
+    added: 2020-09-08
+    created: 2020-09-14
+    updated: 2020-09-14
+    tags:
+    - 63
+    - 107
+- model: api.question
+  pk: 573
+  fields:
+    text: Le refroidissement climatique connu sous le nom de Petit Âge Glaciaire (PAG)
+      a été causé notamment par plusieurs méga-explosions volcaniques, depuis la fin
+      du 13ème siècle jusqu'au début du 19ème. Les plus importantes identifiées à
+      ce jour ont eu lieu en 1257, 1452, 1600, 1815… Mais dans quel ordre ?
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 4
+    answer_option_a: Samalas (Indonésie), Kuwae (Vanuatu), Huaynaputina (Pérou), Tambora
+      (Indonésie
+    answer_option_b: Kuwae (Vanuatu), Huaynaputina (Pérou), Samalas (Indonésie), Tambora
+      (Indonésie)
+    answer_option_c: Huaynaputina (Pérou), Samalas (Indonésie), Tambora (Indonésie),
+      Kuwae (Vanuatu)
+    answer_option_d: Huaynaputina (Pérou), Samalas (Indonésie), Kuwae (Vanuatu), Tambora
+      (Indonésie)
+    answer_correct: a
+    has_ordered_answers: false
+    answer_explanation: 'Pour le Samalas, http://www.ipgp.fr/fr/eruption-volcan-samalas-1257
+      ; pour le Kuwae, Patrick Boucheron (dir.), « Introduction », Histoire du monde
+      au XVe siècle, dirigé par P. Boucheron, coordonné par Julien Loiseau, Pierre
+      Monnet et Yann Potin, Fayard, 2009 ; pour le Huaynaputina, Sam White, chapter
+      5 - The Little Ice Age in the Near East, DOI: https://doi.org/10.1017/CBO9780511844058.009
+      ; pour le Tambora, Gillen d’Arcy Wood, 1816, l’année sans été, traduit de l’anglais
+      par Philippe Pignarre, Paris, La Découverte, 2016 ; William K. Klingaman, Nicholas
+      P. Klingaman, The Year Without Summer. 1816 and the Volcano That Darkened the
+      World and Changed History, New York, St Martin’s Press, 2013.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://doi.org/10.1017/CBO9780511844058.009
+    answer_image_url: https://www.google.com/url?sa=i&url=https%3A%2F%2Fhypothetical-events.fandom.com%2Fwiki%2F8736_mega-eruption_of_Lake_Taupo&psig=AOvVaw09FcZ-dwySMLOWHqNE5Opn&ust=1599644954979000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjRqv2j2esCFQAAAAAdAAAAABAE
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Laurent Testot
+    validator: Matthieu Massart
+    publish: false
+    validation_status: A valider
+    added: 2020-09-08
+    created: 2020-09-14
+    updated: 2020-09-14
+    tags:
+    - 142
+- model: api.question
+  pk: 574
+  fields:
+    text: Depuis quand l'humain utilise-t-il des céréales pour son alimentation ?
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 3
+    answer_option_a: Depuis l'apparition de l'agriculture (-10 000 ans)
+    answer_option_b: Depuis que le genre Homo maîtrise le feu (au moins 450 000 ans)
+    answer_option_c: Depuis le Paléolithique supérieur (-45 000 à -12 000 ans)
+    answer_option_d: Depuis l'invention du moulin pour produire de la farine
+    answer_correct: c
+    has_ordered_answers: false
+    answer_explanation: La transformation des aliments végétaux, et peut-être la production
+      de farine semble avoir été une pratique courante, répandue dans toute l'Europe
+      il y a au moins 30 000 ans.
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.pnas.org/content/107/44/18815
+    answer_image_url: https://qph.fs.quoracdn.net/main-qimg-8fa02c6af750c8cfe1540a91d9d7aff5
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Vincent Mignerot
+    validator: Matthieu Massart
+    publish: false
+    validation_status: Validée
+    added: 2020-09-08
+    created: 2020-09-14
+    updated: 2020-09-14
+    tags:
+    - 5
+    - 17
+    - 32
+    - 109
+- model: api.question
+  pk: 575
+  fields:
+    text: 'Vrai ou faux : la taille d''une société est liée aux croyances religieuses
+      ?'
+    hint: ''
+    type: VF
+    category: 6
+    difficulty: 2
+    answer_option_a: Vrai
+    answer_option_b: Faux
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: a
+    has_ordered_answers: false
+    answer_explanation: Selon certaines études, la taille d'une société serait liée
+      à la nature de ses divinités. Plus une civilisation serait grande et structurée,
+      plus elle vénèrerait un Dieu puissant, moralisateur et vengeur.
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/cultural-evolution-of-prosocial-religions/01B053B0294890F8CFACFB808FE2A0EF#
+    answer_image_url: https://ibb.co/cT1nv9V
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Vincent Mignerot
+    validator: Matthieu Massart
+    publish: false
+    validation_status: Brouillon
+    added: 2020-09-08
+    created: 2020-09-14
+    updated: 2020-09-14
+    tags:
+    - 27
+    - 188
+- model: api.question
+  pk: 576
+  fields:
+    text: En 1492, Christophe Colomb accoste en Amérique. Ce faisant, il initie un
+      processus qu'on a appelé 'échange colombien'. De quel échange parle-t-on ?
+    hint: ''
+    type: QCM-RM
+    category: 6
+    difficulty: 4
+    answer_option_a: 'Microbe contre nourriture : les européens apportent leurs maladies
+      aux Amérindiens, ce qui leur permet une victoire facile, et ils acquièrent des
+      plantes au rendement agronomique extraordinaire, telles le maïs, la pomme de
+      terre et le manioc'
+    answer_option_b: 'Fusils contre peaux de castor : en Amérique du Nord, les colons
+      échangent des armes et des outils contre des fourrures, ébauchant certains des
+      premiers réseaux du capitalisme mondialisé'
+    answer_option_c: 'Vers de terre contre tabac : fasciné par le tabac, les Européens
+      en assurent la diffusion sur la planète entière, et au fil de ce commerce, acclimatent
+      involontairement les lombrics européens aux actuels États-Unis et Canada – ces
+      terres restées vierges de vers de terre depuis la dernière glaciation voient
+      leurs écosystèmes complètement bouleversés'
+    answer_option_d: 'Chevaux contre défaites : passé le choc de la conquête, des
+      Amérindiens se regroupent et créent la confédération comanche, basée sur la
+      mobilité des chevaux venus d’Europe. La comencheria impose sa loi aux Espagnols
+      basés au Mexique, jusqu’à sa désintégration face aux États-Unis dans les années
+      1850'
+    answer_correct: abcd
+    has_ordered_answers: false
+    answer_explanation: 'Les quatre sont vraies ! L’échange colombien (aussi appelé
+      le grand échange)  constitue l''un des événements les plus importants de l''histoire
+      de l''écologie, de l''agriculture et de la culture. L''expression désigne les
+      nombreux échanges de biens agricoles, de bétail, de populations humaines et
+      de micro-organismes (en particulier ceux responsables de maladies infectieuses),
+      à partir de 1492, entre l''Ancien et le Nouveau Monde. Beaucoup de choses furent
+      échangées entre les deux hémisphères, ce qui bouleversa les patrimoines biologiques
+      et culturels de part et d''autre.
+
+
+      Voir Alfred W. Crosby Jr, The Colombian Exchange. Biological and Cultural Consequences
+      of 1492, « 30th Anniversary edition », Londres, Praeger, 2003. Charles C. Mann,
+      1493. Comment la découverte de l’Amérique a transformé le monde, traduit de
+      l’anglais par Marina Boraso, Paris, Albin Michel, 2013 ; Pekka Hämäläinen, L’Empire
+      comanche, traduit de l’anglais par Frédéric Cotton, Toulouse, Anacharsis, 2012
+      (rééd. 2016). Cataclysmes pour une synthèse.'
+    answer_accessible_url: https://fr.wikipedia.org/wiki/%C3%89change_colombien
+    answer_scientific_url: ''
+    answer_image_url: https://upload.wikimedia.org/wikipedia/commons/e/eb/Intikawan_Amantani.jpg
+    answer_image_explanation: Culture en terrasses sur l'île de Taquile, où sont cultivés
+      des aliments de base andéens, tels que le quinoa, la pomme de terre et le blé.
+      Ce dernier est une importation européenne.
+    answer_extra_info: ''
+    author: Laurent Testot
+    validator: Matthieu Massart
+    publish: false
+    validation_status: Brouillon
+    added: 2020-09-08
+    created: 2020-09-14
+    updated: 2020-09-14
+    tags:
+    - 187
+- model: api.question
+  pk: 577
+  fields:
+    text: En 1856, le savant Carrington documente un phénomène exceptionnel, susceptible
+      de détruire les circuits électriques et électroniques. Quelle est donc cette
+      menace hors-norme, dite 'événement de Carrington', qui planerait toujours sur
+      nos têtes ?
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 1
+    answer_option_a: L’explosion d’une supernova
+    answer_option_b: Une éruption magnétique terrestre
+    answer_option_c: Une éruption magnétique solaire
+    answer_option_d: Une mégabombe magnétique
+    answer_correct: c
+    has_ordered_answers: false
+    answer_explanation: Heureusement, à cette date-là, seuls des télégraphes furent
+      mis hors service !
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Laurent Testot
+    validator: Matthieu Massart
+    publish: false
+    validation_status: Brouillon
+    added: 2020-09-08
+    created: 2020-09-14
+    updated: 2020-09-14
+    tags: []
+- model: api.question
+  pk: 578
+  fields:
+    text: 'Quel pays a inventé : l’imprimerie, le papier, la poudre à canon et la
+      boussole ?'
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 0
+    answer_option_a: L'Inde
+    answer_option_b: L'Angleterre
+    answer_option_c: L'Egypte
+    answer_option_d: La Chine
+    answer_correct: d
+    has_ordered_answers: false
+    answer_explanation: "Et c'est ce qui lui permit de demeurer la première puissance
+      mondiale du 10e au 18e siècle. \nVoir Laurent Testot, La Nouvelle Histoire du
+      Monde, Auxerre, Sciences Humaines Éditions 2019."
+    answer_accessible_url: https://fr.wikipedia.org/wiki/Quatre_grandes_inventions_de_la_Chine_antique
+    answer_scientific_url: ''
+    answer_image_url: https://upload.wikimedia.org/wikipedia/commons/5/53/Model_Si_Nan_of_Han_Dynasty.jpg
+    answer_image_explanation: Maquette d'une cuiller indiquant le sud
+    answer_extra_info: ''
+    author: Laurent Testot
+    validator: Matthieu Massart
+    publish: false
+    validation_status: Brouillon
+    added: 2020-09-08
+    created: 2020-09-14
+    updated: 2020-09-14
+    tags: []
+- model: api.question
+  pk: 579
+  fields:
+    text: Les animaux et les humains ont longtemps fourni à l’humanité l’essentiel
+      de l’énergie mécanique disponible. Les hydrocarbures (charbon puis pétrole)
+      ont ensuite pris le relais. À partir de quelle date  consomme-t-on à l’échelle
+      mondiale plus d’énergie fossile que d’énergie musculaire ?
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 2
+    answer_option_a: Vers 1800, c'est à dire quand James Watt parvient à faire fonctionner
+      500 de ses machines à vapeur
+    answer_option_b: Vers 1860, quand la France et l’Angleterre signent un accord
+      de libre-échange, inaugurant la diffusion de l’idéologie libérale
+    answer_option_c: Vers 1885, quand les pays d’Europe occidentale sont suffisamment
+      industrialisés pour se partager l’Afrique sans demander leur avis aux Africains
+    answer_option_d: Vers 1910, quand les industries métallurgiques d’Occident prennent
+      leur essor, prêtes pour la Première Guerre mondiale
+    answer_correct: d
+    has_ordered_answers: false
+    answer_explanation: Vaclav Smil, Energy and Civilization. A History, Cambridge,
+      The MIT Press, 2017.
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Laurent Testot
+    validator: Matthieu Massart
+    publish: false
+    validation_status: Brouillon
+    added: 2020-09-08
+    created: 2020-09-14
+    updated: 2020-09-14
+    tags:
+    - 11
+    - 40
+- model: api.question
+  pk: 580
+  fields:
+    text: J'ai inventé un processus permettant de transformer le pétrole en essence.
+      J'ai aussi mis au point la synthèse de l’ammoniac, un processus qui va permettre
+      la fabrication d’engrais azotés. Qui suis-je ?
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 3
+    answer_option_a: Thomas Midgley Jr
+    answer_option_b: Fritz Haber
+    answer_option_c: Albert Einstein
+    answer_option_d: Otto von Guericke
+    answer_correct: b
+    has_ordered_answers: false
+    answer_explanation: 'La première application de son invention a été que l''Allemagne
+      a pu produire des explosifs pendant la Première Guerre mondiale. Mais avec l''invention
+      de ce procédé, Fritz Haber a apporté une contribution décisive au développement
+      des industries automobiles et agricoles, bouleversant la biosphère à un degré
+      inégalé.
+
+
+      Voir John R. McNeill, Du nouveau sous le Soleil. Une histoire de l’environnement
+      mondial au XXe siècle, traduit de l’anglais par Philippe Beaugrand, Seyssel,
+      Champ Vallon, 2010.'
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Laurent Testot
+    validator: Matthieu Massart
+    publish: false
+    validation_status: Brouillon
+    added: 2020-09-08
+    created: 2020-09-14
+    updated: 2020-09-14
+    tags:
+    - 186
+- model: api.question
+  pk: 581
+  fields:
+    text: Je suis biologiste. Après avoir constaté qu’une rivière chimiquement polluée
+      abritait une proportion anormalement élevée de poissons femelles, j'ai mis en
+      lumière et théorisé les effets des perturbateurs endocriniens. Qui suis-je ?
+    hint: ''
+    type: QCM
+    category: 3
+    difficulty: 4
+    answer_option_a: Rachel Carson
+    answer_option_b: Rosalind Franklin
+    answer_option_c: Joan Evelyn
+    answer_option_d: Theo Colborn
+    answer_correct: d
+    has_ordered_answers: false
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Laurent Testot
+    validator: Matthieu Massart
+    publish: false
+    validation_status: Brouillon
+    added: 2020-09-08
+    created: 2020-09-14
+    updated: 2020-09-14
+    tags:
+    - 191
