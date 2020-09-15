@@ -1,9 +1,12 @@
 version: 2.1
 
 orbs:
+  # https://circleci.com/orbs/registry/orb/circleci/python
   python: circleci/python@0.3.2
+  # https://circleci.com/orbs/registry/orb/circleci/node
   node: circleci/node@4.0.0
-  circleci: circleci/circleci-images@0.7.0
+  # https://circleci.com/orbs/registry/orb/circleci/browser-tools
+  circleci-browser-tools: circleci/browser-tools@1.0.1
 
 jobs:
   backend-test:
@@ -45,7 +48,7 @@ jobs:
           name: Run ESlint
           working_directory: ~/project/frontend
           command: yarn lint
-      - circleci/install-chrome
+      - circleci-browser-tools/install-chrome
       # - circleci/install-chromedriver
       - run:
           name: Run Test E2E (Nightwatch)
@@ -56,4 +59,4 @@ workflows:
   main:
     jobs:
       - backend-test
-      # - frontend-test
+      - frontend-test
