@@ -29,7 +29,23 @@ QUESTION_DIFFICULTY_CHOICES = [
 ]
 QUESTION_DIFFICULTY_CHOICE_LIST = [c[0] for c in QUESTION_DIFFICULTY_CHOICES]
 
-QUESTION_ANSWER_CHOICE_LIST = ["a", "b", "c", "d"]
+QUESTION_ANSWER_CHOICE_LIST = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "ab",
+    "ac",
+    "ad",
+    "bc",
+    "bd",
+    "cd",
+    "abc",
+    "abd",
+    "acd",
+    "bcd",
+    "abcd",
+]
 
 FEEDBACK_LIKE = "like"
 FEEDBACK_DISLIKE = "dislike"

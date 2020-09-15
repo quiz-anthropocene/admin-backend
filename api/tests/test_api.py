@@ -1,7 +1,8 @@
 from django.test import TestCase
 from django.urls import reverse
 
-from api.models import Question, Tag, Category, Quiz
+from api.models import Tag, Category, Quiz
+from api.tests.factories import QuestionFactory
 
 
 class ApiTest(TestCase):
@@ -10,10 +11,8 @@ class ApiTest(TestCase):
         cls.category_1 = Category.objects.create(name="Cat 1")
         cls.tag_1 = Tag.objects.create(name="Tag 1")
         cls.tag_2 = Tag.objects.create(name="Tag 2")
-        cls.question_1 = Question.objects.create(
-            text="Q 1", publish=False, author="author 1"
-        )
-        cls.question_2 = Question.objects.create(
+        cls.question_1 = QuestionFactory(text="Q 1", publish=False, author="author 1")
+        cls.question_2 = QuestionFactory(
             text="Q 2",
             publish=True,
             author="author 2",
@@ -21,9 +20,7 @@ class ApiTest(TestCase):
             answer_correct="a",
         )
         cls.question_2.tags.set([cls.tag_2, cls.tag_1])
-        cls.question_3 = Question.objects.create(
-            text="Q 3", publish=True, author="author 3"
-        )
+        cls.question_3 = QuestionFactory(text="Q 3", publish=True, author="author 3")
         cls.question_3.tags.add(cls.tag_2)
         cls.question_3.save()
         cls.quiz_1 = Quiz.objects.create(name="quiz 1", publish=False)

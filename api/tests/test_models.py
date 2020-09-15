@@ -1,5 +1,7 @@
 from django.test import TestCase
+from django.core.exceptions import ValidationError
 
+from api import constants
 from api.models import (
     Question,
     QuestionAggStat,
@@ -10,12 +12,13 @@ from api.models import (
     QuizFeedbackEvent,
     DailyStat,
 )
+from api.tests.factories import QuestionFactory
 
 
 class QuestionModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.question_1 = Question.objects.create(answer_correct="a")
+        cls.question_1 = QuestionFactory(answer_correct="a")
         cls.question_1.agg_stats.answer_count = 5
         cls.question_1.agg_stats.answer_success_count = 2
         cls.question_1.agg_stats.like_count = 2
@@ -26,10 +29,25 @@ class QuestionModelTest(TestCase):
         QuestionFeedbackEvent.objects.create(
             question_id=cls.question_1.id, choice="dislike", source="quiz"
         )
+        cls.question_rm_1 = QuestionFactory(
+            type=constants.QUESTION_TYPE_QCM_RM, answer_correct="ab"
+        )
+        cls.question_rm_2 = QuestionFactory(
+            type=constants.QUESTION_TYPE_QCM_RM, answer_correct="abc"
+        )
+        cls.question_rm_3 = QuestionFactory(
+            type=constants.QUESTION_TYPE_QCM_RM, answer_correct="abcd"
+        )
+        QuestionAnswerEvent.objects.create(
+            question_id=cls.question_rm_1.id, choice="cd", source="question"
+        )
+        cls.question_vf = QuestionFactory(
+            type=constants.QUESTION_TYPE_VF, answer_correct="b"
+        )
 
     def test_question_agg_stat_created(self):
-        self.assertEqual(Question.objects.count(), 1)
-        self.assertEqual(QuestionAggStat.objects.count(), 1)
+        self.assertEqual(Question.objects.count(), 1 + 3 + 1)
+        self.assertEqual(QuestionAggStat.objects.count(), 1 + 3 + 1)
         question_agg_stat = QuestionAggStat.objects.first()
         self.assertEqual(question_agg_stat.question_id, self.question_1.id)
 
@@ -42,11 +60,64 @@ class QuestionModelTest(TestCase):
         self.assertEqual(self.question_1.like_count_agg, 2)
         self.assertEqual(self.question_1.dislike_count_agg, 1)
 
+    def test_wrong_data(self):
+        self.assertRaises(ValidationError, QuestionFactory, answer_correct="")
+        self.assertRaises(ValidationError, QuestionFactory, answer_correct="ab")
+        self.assertRaises(ValidationError, QuestionFactory, answer_correct="aa")
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_QCM_RM,
+            answer_correct="",
+        )
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_QCM_RM,
+            answer_correct="a",
+        )
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_QCM_RM,
+            answer_correct="ba",
+        )
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_QCM_RM,
+            answer_correct="aab",
+        )
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_QCM_RM,
+            answer_correct="abcde",
+        )
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_VF,
+            answer_correct="",
+        )
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_VF,
+            answer_correct="c",
+        )
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_VF,
+            answer_correct="ab",
+        )
+
 
 class QuizModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.question_1 = Question.objects.create(answer_correct="a")
+        cls.question_1 = QuestionFactory(answer_correct="a")
         cls.quiz_1 = Quiz.objects.create(name="quiz 1")
         cls.quiz_1.questions.set([cls.question_1.id])
         QuestionAnswerEvent.objects.create(
@@ -66,7 +137,7 @@ class QuizModelTest(TestCase):
 class DailyStatModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.question_1 = Question.objects.create(answer_correct="a")
+        cls.question_1 = QuestionFactory(answer_correct="a")
         QuestionAnswerEvent.objects.create(
             question_id=cls.question_1.id, choice="a", source="question"
         )

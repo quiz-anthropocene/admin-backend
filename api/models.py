@@ -132,7 +132,7 @@ class Question(models.Model):
             constants.QUESTION_ANSWER_CHOICE_LIST,
             constants.QUESTION_ANSWER_CHOICE_LIST,
         ),
-        help_text="a, b, c ou d",
+        help_text="a, b, c ou d. ab, acd, abcd, etc si plusieurs réponses.",
     )
     has_ordered_answers = models.BooleanField(
         default=True,
@@ -266,15 +266,17 @@ def question_validate_fields(sender, instance, **kwargs):
     - ModelFields with choices are validated only in forms, but not during loaddata (and test fixtures) # noqa
     - https://zindilis.com/blog/2017/05/04/django-backend-validation-of-choices.html
     - https://adamj.eu/tech/2020/01/22/djangos-field-choices-dont-constrain-your-data/
+
+    TODO: call these validation rules in the admin QuestionForm (and display clean errors in the admin, vs 500)
     """
-    # if from fixtures, check that there is an id
+    # > if from fixtures, check that there is an id
     if kwargs.get("raw") and not getattr(instance, "id"):
         raise ValidationError(
             f"Question pre_save error. Field id. "
             f"Value given: 'empty'. "
             f"Question: {instance}"
         )
-    # only run on soon-to-be and validated questions
+    # > only run on soon-to-be and validated questions
     if getattr(instance, "validation_status") not in [
         constants.QUESTION_VALIDATION_STATUS_NEW,
         constants.QUESTION_VALIDATION_STATUS_REMOVED,
@@ -298,19 +300,37 @@ def question_validate_fields(sender, instance, **kwargs):
                     f"Question: {instance}"
                 )
         # > other rules
+        # - QCM question must have len(answer_correct) equal to 1 ('a', 'b', 'c' or 'd')
+        # - QCM-RM question must have len(answer_correct) larger than 1 and lower than 5
         # - Vrai/Faux question must have answer_correct equal to 'a' or 'b'
         # - Vrai/Faux question must have has_ordered_answers checked
+        if getattr(instance, "type") == constants.QUESTION_TYPE_QCM:
+            if len(getattr(instance, "answer_correct")) != 1:
+                raise ValidationError(
+                    f"Question pre_save error. Type QCM & Field answer_correct. "
+                    f"Value given: '{getattr(instance, 'answer_correct')}' length is higher than 1. "  # noqa
+                    f"Question: {instance}"
+                )
+        if getattr(instance, "type") == constants.QUESTION_TYPE_QCM_RM:
+            if (len(getattr(instance, "answer_correct")) < 2) or (
+                len(getattr(instance, "answer_correct")) > 4
+            ):
+                raise ValidationError(
+                    f"Question pre_save error. Type QCM-RM & Field answer_correct. "
+                    f"Value given: '{getattr(instance, 'answer_correct')}' length is lower than 2 or higher than 4. "  # noqa
+                    f"Question: {instance}"
+                )
         if getattr(instance, "type") == constants.QUESTION_TYPE_VF:
             if getattr(instance, "answer_correct") not in ["a", "b"]:
                 raise ValidationError(
                     f"Question pre_save error. Type VF & Field answer_correct. "
-                    f"Value given: '{getattr(instance, 'answer_correct')}'. "
+                    f"Value given: '{getattr(instance, 'answer_correct')}' must be 'a' or 'b'. "
                     f"Question: {instance}"
                 )
             if not getattr(instance, "has_ordered_answers"):
                 raise ValidationError(
                     f"Question pre_save error. Type VF & Field has_ordered_answers. "
-                    f"Value given: '{getattr(instance, 'has_ordered_answers')}'. "
+                    f"Value given: '{getattr(instance, 'has_ordered_answers')}' must be true. "
                     f"Question: {instance}"
                 )
 
