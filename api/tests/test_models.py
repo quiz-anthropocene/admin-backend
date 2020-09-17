@@ -60,10 +60,20 @@ class QuestionModelTest(TestCase):
         self.assertEqual(self.question_1.like_count_agg, 2)
         self.assertEqual(self.question_1.dislike_count_agg, 1)
 
-    def test_wrong_data(self):
+    def test_question_must_have_correct_choice_fields(self):
+        self.assertRaises(ValidationError, QuestionFactory, type="Coucou")
+        self.assertRaises(ValidationError, QuestionFactory, difficulty=42)
+        self.assertRaises(
+            ValidationError, QuestionFactory, answer_correct="La réponse D"
+        )
+        self.assertRaises(ValidationError, QuestionFactory, validation_status="TBD")
+
+    def test_question_qcm_must_have_one_answer(self):
         self.assertRaises(ValidationError, QuestionFactory, answer_correct="")
         self.assertRaises(ValidationError, QuestionFactory, answer_correct="ab")
         self.assertRaises(ValidationError, QuestionFactory, answer_correct="aa")
+
+    def test_question_qcm_rm_must_have_at_least_two_answers(self):
         self.assertRaises(
             ValidationError,
             QuestionFactory,
@@ -94,6 +104,8 @@ class QuestionModelTest(TestCase):
             type=constants.QUESTION_TYPE_QCM_RM,
             answer_correct="abcde",
         )
+
+    def test_question_vf_must_have_specific_answer(self):
         self.assertRaises(
             ValidationError,
             QuestionFactory,

@@ -1,26 +1,30 @@
 from django.test import TestCase
 from django.urls import reverse
 
-from api.models import Tag, Category, Quiz
-from api.tests.factories import QuestionFactory
+from api.models import Quiz
+from api.tests.factories import CategoryFactory, TagFactory, QuestionFactory
 
 
 class ApiTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.category_1 = Category.objects.create(name="Cat 1")
-        cls.tag_1 = Tag.objects.create(name="Tag 1")
-        cls.tag_2 = Tag.objects.create(name="Tag 2")
-        cls.question_1 = QuestionFactory(text="Q 1", publish=False, author="author 1")
+        cls.category_1 = CategoryFactory(name="Cat 1")
+        cls.tag_1 = TagFactory(name="Tag 1")
+        cls.tag_2 = TagFactory(name="Tag 2")
+        cls.question_1 = QuestionFactory(
+            text="Q 1", category=cls.category_1, publish=False, author="author 1"
+        )
         cls.question_2 = QuestionFactory(
             text="Q 2",
-            publish=True,
-            author="author 2",
             category=cls.category_1,
             answer_correct="a",
+            author="author 2",
+            publish=True,
         )
         cls.question_2.tags.set([cls.tag_2, cls.tag_1])
-        cls.question_3 = QuestionFactory(text="Q 3", publish=True, author="author 3")
+        cls.question_3 = QuestionFactory(
+            text="Q 3", category=cls.category_1, author="author 3", publish=True
+        )
         cls.question_3.tags.add(cls.tag_2)
         cls.question_3.save()
         cls.quiz_1 = Quiz.objects.create(name="quiz 1", publish=False)
@@ -63,7 +67,7 @@ class ApiTest(TestCase):
             reverse("api:question_list"), {"category": self.category_1.name}
         )
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 1)
+        self.assertEqual(len(response.data), 2)  # 1 question not published
 
     def test_question_detail(self):
         response = self.client.get(

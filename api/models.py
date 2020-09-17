@@ -196,6 +196,10 @@ class Question(models.Model):
     def __str__(self):
         return f"{self.id} - {self.category} - {self.text}"
 
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super(Question, self).save(*args, **kwargs)
+
     @property
     def tags_list(self):
         return list(self.tags.values_list("name", flat=True))
@@ -259,80 +263,88 @@ class Question(models.Model):
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"
 
+    # def question_validate_fields(sender, instance, **kwargs):
+    def clean(self):
+        """
+        Method to validate Question fields. Why ?
+        - ModelFields with choices are validated only in forms, but not during loaddata (and test fixtures) # noqa
+        - https://zindilis.com/blog/2017/05/04/django-backend-validation-of-choices.html
+        - https://adamj.eu/tech/2020/01/22/djangos-field-choices-dont-constrain-your-data/
+
+        TODO: call these validation rules in the admin QuestionForm (and display clean errors in the admin, vs 500)
+        """
+        # > only run on soon-to-be and validated questions
+        if getattr(self, "validation_status") not in [
+            constants.QUESTION_VALIDATION_STATUS_NEW,
+            constants.QUESTION_VALIDATION_STATUS_REMOVED,
+        ]:
+            # > relation fields: "category" & "tags" ? no need
+            # checks will be done automatically to validate the existence of the foreign key.
+            # > choice fields
+            question_choice_fields = [
+                ("type", "QUESTION_TYPE_CHOICE_LIST"),
+                ("difficulty", "QUESTION_DIFFICULTY_CHOICE_LIST"),
+                ("answer_correct", "QUESTION_ANSWER_CHOICE_LIST"),
+                ("validation_status", "QUESTION_VALIDATION_STATUS_LIST"),
+            ]
+            for choice_field in question_choice_fields:
+                if getattr(self, choice_field[0]) not in getattr(
+                    constants, choice_field[1]
+                ):  # noqa
+                    raise ValidationError(
+                        f"Question field: {choice_field[0]}. "
+                        f"Value given: '{getattr(self, choice_field[0])}'. "
+                        f"Question: {self}"
+                    )
+            # > other rules
+            # - QCM question must have len(answer_correct) equal to 1 ('a', 'b', 'c' or 'd')
+            # - QCM-RM question must have len(answer_correct) larger than 1 and lower than 5
+            # - Vrai/Faux question must have answer_correct equal to 'a' or 'b'
+            # - Vrai/Faux question must have has_ordered_answers checked
+            if getattr(self, "type") == constants.QUESTION_TYPE_QCM:
+                if len(getattr(self, "answer_correct")) != 1:
+                    raise ValidationError(
+                        f"Question field: type (QCM) & answer_correct. "
+                        f"Value given: '{getattr(self, 'answer_correct')}' length is higher than 1. "  # noqa
+                        f"Question: {self}"
+                    )
+            if getattr(self, "type") == constants.QUESTION_TYPE_QCM_RM:
+                if (len(getattr(self, "answer_correct")) < 2) or (
+                    len(getattr(self, "answer_correct")) > 4
+                ):
+                    raise ValidationError(
+                        f"Question field: type (QCM-RM) & answer_correct. "
+                        f"Value given: '{getattr(self, 'answer_correct')}' length is lower than 2 or higher than 4. "  # noqa
+                        f"Question: {self}"
+                    )
+            if getattr(self, "type") == constants.QUESTION_TYPE_VF:
+                if getattr(self, "answer_correct") not in ["a", "b"]:
+                    raise ValidationError(
+                        f"Question field: type (VF) & answer_correct. "
+                        f"Value given: '{getattr(self, 'answer_correct')}' must be 'a' or 'b'. "
+                        f"Question: {self}"
+                    )
+                if not getattr(self, "has_ordered_answers"):
+                    raise ValidationError(
+                        f"Question field: type (VF) & has_ordered_answers. "
+                        f"Value given: '{getattr(self, 'has_ordered_answers')}' must be true. "
+                        f"Question: {self}"
+                    )
+
 
 def question_validate_fields(sender, instance, **kwargs):
     """
-    Method to validate Question fields. Why ?
-    - ModelFields with choices are validated only in forms, but not during loaddata (and test fixtures) # noqa
-    - https://zindilis.com/blog/2017/05/04/django-backend-validation-of-choices.html
-    - https://adamj.eu/tech/2020/01/22/djangos-field-choices-dont-constrain-your-data/
-
-    TODO: call these validation rules in the admin QuestionForm (and display clean errors in the admin, vs 500)
+    Validation for fixtures
+    The rest of the Question model validation is done in the save() --> full_clean() call
     """
     # > if from fixtures, check that there is an id
     if kwargs.get("raw") and not getattr(instance, "id"):
-        raise ValidationError(
-            f"Question pre_save error. Field id. "
-            f"Value given: 'empty'. "
-            f"Question: {instance}"
-        )
-    # > only run on soon-to-be and validated questions
-    if getattr(instance, "validation_status") not in [
-        constants.QUESTION_VALIDATION_STATUS_NEW,
-        constants.QUESTION_VALIDATION_STATUS_REMOVED,
-    ]:
-        # > relation fields: "category" & "tags" ? no need
-        # checks will be done automatically to validate the existence of the foreign key.
-        # > choice fields
-        question_choice_fields = [
-            ("type", "QUESTION_TYPE_CHOICE_LIST"),
-            ("difficulty", "QUESTION_DIFFICULTY_CHOICE_LIST"),
-            ("answer_correct", "QUESTION_ANSWER_CHOICE_LIST"),
-            ("validation_status", "QUESTION_VALIDATION_STATUS_LIST"),
-        ]
-        for choice_field in question_choice_fields:
-            if getattr(instance, choice_field[0]) not in getattr(
-                constants, choice_field[1]
-            ):  # noqa
-                raise ValidationError(
-                    f"Question pre_save error. Field {choice_field[0]}. "
-                    f"Value given: '{getattr(instance, choice_field[0])}'. "
-                    f"Question: {instance}"
-                )
-        # > other rules
-        # - QCM question must have len(answer_correct) equal to 1 ('a', 'b', 'c' or 'd')
-        # - QCM-RM question must have len(answer_correct) larger than 1 and lower than 5
-        # - Vrai/Faux question must have answer_correct equal to 'a' or 'b'
-        # - Vrai/Faux question must have has_ordered_answers checked
-        if getattr(instance, "type") == constants.QUESTION_TYPE_QCM:
-            if len(getattr(instance, "answer_correct")) != 1:
-                raise ValidationError(
-                    f"Question pre_save error. Type QCM & Field answer_correct. "
-                    f"Value given: '{getattr(instance, 'answer_correct')}' length is higher than 1. "  # noqa
-                    f"Question: {instance}"
-                )
-        if getattr(instance, "type") == constants.QUESTION_TYPE_QCM_RM:
-            if (len(getattr(instance, "answer_correct")) < 2) or (
-                len(getattr(instance, "answer_correct")) > 4
-            ):
-                raise ValidationError(
-                    f"Question pre_save error. Type QCM-RM & Field answer_correct. "
-                    f"Value given: '{getattr(instance, 'answer_correct')}' length is lower than 2 or higher than 4. "  # noqa
-                    f"Question: {instance}"
-                )
-        if getattr(instance, "type") == constants.QUESTION_TYPE_VF:
-            if getattr(instance, "answer_correct") not in ["a", "b"]:
-                raise ValidationError(
-                    f"Question pre_save error. Type VF & Field answer_correct. "
-                    f"Value given: '{getattr(instance, 'answer_correct')}' must be 'a' or 'b'. "
-                    f"Question: {instance}"
-                )
-            if not getattr(instance, "has_ordered_answers"):
-                raise ValidationError(
-                    f"Question pre_save error. Type VF & Field has_ordered_answers. "
-                    f"Value given: '{getattr(instance, 'has_ordered_answers')}' must be true. "
-                    f"Question: {instance}"
-                )
+        if not getattr(instance, "id"):
+            raise ValidationError(
+                f"Question field: id. "
+                f"Value given: 'empty'. "
+                f"Question: {instance}"
+            )
 
 
 def question_create_agg_stat_instance(sender, instance, created, **kwargs):
