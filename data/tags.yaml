@@ -984,3 +984,9 @@
     name: Perturbateurs endocriniens
     description: ''
     created: 2020-09-14
+- model: api.tag
+  pk: 192
+  fields:
+    name: Cygne noir
+    description: ''
+    created: 2020-09-18
