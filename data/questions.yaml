@@ -32,22 +32,23 @@
 - model: api.question
   pk: 2
   fields:
-    text: 'Calcul d''ordre de grandeur : supposons une seconde que toutes nos machines
-      soient remplacées par des serviteurs humains qui les feraient fonctionner avec
-      leur seule force musculaire. Combien nous en faudrait-il par personne en France
-      pour soutenir notre niveau de vie actuel ?'
+    text: 'Calcul d''ordre de grandeur : supposons un instant que toutes nos machines
+      soient remplacées par des serviteurs humains, qui les feraient fonctionner avec
+      la seule force de leurs muscles 8h par jour. Combien faudrait-il de tels serviteurs
+      par personne en France pour soutenir notre niveau de vie actuel ?'
     hint: ''
     type: QCM
     category: 5
     difficulty: 3
-    answer_option_a: 20 esclaves
-    answer_option_b: 100 esclaves
-    answer_option_c: 400 esclaves
-    answer_option_d: 1000 esclaves
+    answer_option_a: '20'
+    answer_option_b: '100'
+    answer_option_c: '400'
+    answer_option_d: '1000'
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: On peut estimer qu'un homme peut fournir un ordre de grandeur
-      de 5 kWh/jour. Voir le calcul estimatif dans l'article en référence.
+      de 5 kWh/jour. Voir le calcul estimatif dans l'article en référence. Jean-Marc
+      Jancovici a popularisé pour illustrer ces chiffres la notion "d'esclave énergétique"
     answer_accessible_url: https://jancovici.com/transition-energetique/l-energie-et-nous/combien-suis-je-un-esclavagiste/
     answer_scientific_url: ''
     answer_image_url: https://jancovici.com/wp-content/uploads/2016/04/Combien-suis-je-un-esclavagiste-1200x540.jpg
@@ -59,7 +60,7 @@
     validation_status: Validée
     added: 2020-03-07
     created: 2020-03-07
-    updated: 2020-08-10
+    updated: 2020-09-18
     tags:
     - 1
 - model: api.question
@@ -238,7 +239,7 @@
   pk: 8
   fields:
     text: Si on arrêtait aujourd'hui toutes nos émissions de gaz à effet de serre,
-      combien de temps faudrait-il à la Terre pour les absorber ?
+      combien de temps revenir au niveau antérieur à la révolution industrielle ?
     hint: ''
     type: QCM
     category: 1
@@ -264,7 +265,7 @@
     validation_status: Validée
     added: 2020-03-08
     created: 2020-03-08
-    updated: 2020-08-10
+    updated: 2020-09-18
     tags:
     - 13
     - 142
@@ -1029,7 +1030,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 16
     - 9
@@ -1064,7 +1065,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 13
     - 9
@@ -1098,7 +1099,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 16
     - 9
@@ -1414,7 +1415,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 21
     - 9
@@ -1521,7 +1522,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 51
     - 9
@@ -1556,7 +1557,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 49
     - 9
@@ -1623,7 +1624,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 16
     - 9
@@ -1915,7 +1916,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 26
     - 9
@@ -1948,7 +1949,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 26
     - 9
@@ -1997,7 +1998,7 @@
     answer_option_d: 75%
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: 58% pour être exacte (rapport 'Planète vivante' du WWF). Ainsi
+    answer_explanation: 58% pour être exact (rapport 'Planète vivante' du WWF). Ainsi
       que 75% des insectes volants en Europe.
     answer_accessible_url: https://www.futura-sciences.com/planete/actualites/developpement-durable-biodiversite-plus-60-animaux-sauvages-ont-disparu-depuis-1970-55431/
     answer_scientific_url: https://www.wwf.fr/rapport-planete-vivante-2018
@@ -2010,7 +2011,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-05-23
+    updated: 2020-09-18
     tags:
     - 7
 - model: api.question
@@ -2213,8 +2214,8 @@
 - model: api.question
   pk: 66
   fields:
-    text: Quelle proportion du carbone d'origine anthropique est stockée dans la végétation
-      et les sols ?
+    text: Quelle proportion du carbone dégagé par l'activité humaine est stockée dans
+      la végétation et les sols ?
     hint: ''
     type: QCM
     category: 1
@@ -2239,7 +2240,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-08-10
+    updated: 2020-09-18
     tags:
     - 14
     - 142
@@ -2271,7 +2272,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 21
     - 9
@@ -2343,7 +2344,8 @@
 - model: api.question
   pk: 70
   fields:
-    text: Quelle est la part des énergies fossiles dans la consommation mondiale ?
+    text: 'Dans la consommation d''énergie mondiale, quelle est la  part des énergies
+      fossiles ? '
     hint: ''
     type: QCM
     category: 5
@@ -2366,7 +2368,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-06-24
+    updated: 2020-09-18
     tags:
     - 2
 - model: api.question
@@ -2620,7 +2622,7 @@
     type: QCM
     category: 2
     difficulty: 2
-    answer_option_a: Même pas un
+    answer_option_a: '1'
     answer_option_b: '2'
     answer_option_c: '10'
     answer_option_d: '50'
@@ -2642,7 +2644,7 @@
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
-    updated: 2020-07-30
+    updated: 2020-09-18
     tags:
     - 24
     - 33
@@ -5291,7 +5293,7 @@
     validation_status: Validée
     added: 2019-03-22
     created: 2020-04-26
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 11
     - 33
@@ -5734,8 +5736,9 @@
 - model: api.question
   pk: 171
   fields:
-    text: En quelle année a eu lieu le pic de production de pétrole au Royaume-Uni
-      ?
+    text: Le pic pétrolier désigne le moment où l'extraction de pétrole atteint son
+      niveau maximal avant de décroître inexorablement. En quelle année a eu lieu
+      ce pic au Royaume-Uni ?
     hint: ''
     type: QCM
     category: 5
@@ -5759,7 +5762,7 @@
     validation_status: Validée
     added: 2019-04-11
     created: 2020-04-26
-    updated: 2020-05-23
+    updated: 2020-09-18
     tags:
     - 11
     - 47
@@ -6515,7 +6518,7 @@
     validation_status: Validée
     added: 2019-05-22
     created: 2020-04-26
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 61
     - 9
@@ -7926,7 +7929,7 @@
     validation_status: Écartée
     added: 2019-07-01
     created: 2020-05-07
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 50
     - 9
@@ -11482,7 +11485,7 @@
     validation_status: Validée
     added: 2019-12-10
     created: 2020-05-20
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 13
     - 9
@@ -14794,7 +14797,7 @@
       planètes, et l’Europe de l’ouest 3 planètes.
     answer_accessible_url: ''
     answer_scientific_url: https://data.footprintnetwork.org/?_ga=2.214287760.68485461.1592040579-1962221666.1592040579#/compareCountries?type=earth&cn=1021,1006,1018,2002,1012&yr=2016
-    answer_image_url: image chez laydgeur
+    answer_image_url: https://le-cartographe.net/images/stories/emp_eco_l.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Citoyens Pour le Climat
@@ -14803,7 +14806,7 @@
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
-    updated: 2020-08-10
+    updated: 2020-09-18
     tags:
     - 1
     - 31
@@ -15865,7 +15868,7 @@
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 26
     - 9
@@ -15896,7 +15899,7 @@
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 26
     - 9
@@ -16888,7 +16891,7 @@
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 16
     - 9
@@ -17136,7 +17139,7 @@
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 16
     - 9
@@ -18925,8 +18928,8 @@
       va se trouver une situation de 'péril vital' si la température moyenne augmente
       de 2° ?
     hint: ''
-    type: ''
-    category: null
+    type: QCM
+    category: 1
     difficulty: 1
     answer_option_a: 8%
     answer_option_b: 18%
@@ -18946,7 +18949,7 @@
     validation_status: Brouillon
     added: 2020-08-05
     created: 2020-08-10
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags: []
 - model: api.question
   pk: 569
@@ -18954,9 +18957,9 @@
     text: En France, combien de tonnes d'aliments consommables partent à la poubelle
       tous les ans ?
     hint: ''
-    type: ''
+    type: QCM
     category: 2
-    difficulty: 1
+    difficulty: 3
     answer_option_a: 10,000 tonnes
     answer_option_b: 100,000 tonnes
     answer_option_c: 1 million de tonnes
@@ -18975,7 +18978,7 @@
     validation_status: Brouillon
     added: 2020-08-05
     created: 2020-08-10
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 1
     - 5
@@ -19060,8 +19063,7 @@
   fields:
     text: Le brûlis parcellaire consiste à brûler régulièrement les milieux pour favoriser
       la croissance de végétaux comestibles et la présence du petit gibier. Depuis
-      combien de temps est-il attesté aujourd’hui que les Aborigènes australiens se
-      livrent à l’écobuage ?
+      combien de temps les Aborigènes australiens le pratiquent-ils ?
     hint: ''
     type: QCM
     category: 6
@@ -19072,26 +19074,13 @@
     answer_option_d: 300 000 ans, depuis que les humains ont la maîtrise du feu
     answer_correct: b
     has_ordered_answers: false
-    answer_explanation: "Après une perte de biodiversité, les écosystèmes s’adaptent
+    answer_explanation: 'Après une perte de biodiversité, les écosystèmes s’adaptent
       à un brûlis parcellaire. Si la pratique est maintenue longtemps (comme en Australie,
       en Afrique australe ou dans les Amériques), les écosystèmes ont besoin de cette
-      intervention de l'homme pour se maintenir.En Australie, le brûlis parcellaire
+      intervention de l''homme pour se maintenir. En Australie, le brûlis parcellaire
       s’est interrompu aux 19ème et 20ème siècles suite au génocide subi par les Aborigènes
       face aux colons. Comme d’autres pratiques autochtones, il est aujourd’hui redécouvert
-      pour lutter contre les méga-feux. \n\nPour la datation de l’écobuage aborigène
-      et son utilité écosystémique, David A. Burney, Timothy F. Flannery, « Fifty
-      millennia of catastrophic extinctions after human contact », Trends in Ecology
-      and Evolution, 1er juillet 2005, vol. 20, n° 7, 395-401, https://doi.org/10.1016/j.tree.2005.04.022
-      (accès payant). \nPour la maintenance des écosystèmes australiens par le brûlis
-      aborigène, Stefani A. Crabtree et al., « Subsistence Transitions and the Simplification
-      of Ecological Networks in the Western Desert of Australia », Human Ecology,
-      47, 165-177, 8 février 2019, https://doi.org/10.1007/s10745-019-0053-z, consultable
-      sur https://www.researchgate.net/publication/330976086_Subsistence_Transitions_and_the_Simplification_of_Ecological_Networks_in_the_Western_Desert_of_Australia).
-      \nPour une description du rôle du feu dans notre histoire évolutive, Stephen
-      J. Pyne, World Fire. The Culture of Fire on Earth, New York, Henry Holt and
-      Company, 1995 ; Juli G. Pausas, Jon E. Keeley, « A Burning Story: The Role of
-      Fire in the History of Life », BioScience, 1er juillet 2009, vol. 59, n° 7,
-      593-601, https://doi.org/10.1525/bio.2009.59.7.10, consultable sur https://academic.oup.com/bioscience/article/59/7/593/334816."
+      pour lutter contre les méga-feux. '
     answer_accessible_url: ''
     answer_scientific_url: https://academic.oup.com/bioscience/article/59/7/593/334816
     answer_image_url: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.aboriginalsignature.com%2Fglossaire-art-aborigene&psig=AOvVaw32zHNMmfTnNgx5X0yvbeSl&ust=1599644337872000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCfk92h2esCFQAAAAAdAAAAABAD
@@ -19103,16 +19092,16 @@
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 63
     - 107
 - model: api.question
   pk: 573
   fields:
-    text: Le refroidissement climatique connu sous le nom de Petit Âge Glaciaire (PAG)
-      a été causé notamment par plusieurs méga-explosions volcaniques, depuis la fin
-      du 13ème siècle jusqu'au début du 19ème. Les plus importantes identifiées à
+    text: Le refroidissement climatique connu sous le nom de Petit Âge Glaciaire a
+      été causé notamment par plusieurs méga-explosions volcaniques, depuis la fin
+      du 13ème jusqu'au début du 19ème siècle. Les plus importantes identifiées à
       ce jour ont eu lieu en 1257, 1452, 1600, 1815… Mais dans quel ordre ?
     hint: ''
     type: QCM
@@ -19148,7 +19137,7 @@
     validation_status: A valider
     added: 2020-09-08
     created: 2020-09-14
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 142
 - model: api.question
@@ -19199,7 +19188,7 @@
     answer_option_c: ''
     answer_option_d: ''
     answer_correct: a
-    has_ordered_answers: false
+    has_ordered_answers: true
     answer_explanation: Selon certaines études, la taille d'une société serait liée
       à la nature de ses divinités. Plus une civilisation serait grande et structurée,
       plus elle vénèrerait un Dieu puissant, moralisateur et vengeur.
@@ -19211,18 +19200,18 @@
     author: Vincent Mignerot
     validator: Matthieu Massart
     publish: false
-    validation_status: Brouillon
+    validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 27
     - 188
 - model: api.question
   pk: 576
   fields:
-    text: En 1492, Christophe Colomb accoste en Amérique. Ce faisant, il initie un
-      processus qu'on a appelé 'échange colombien'. De quel échange parle-t-on ?
+    text: 'En 1492, Christophe Colomb accoste en Amérique. Ce faisant, il initie un
+      processus qu''on a appelé ''échange colombien''. C''est à dire : '
     hint: ''
     type: QCM-RM
     category: 6
@@ -19246,24 +19235,16 @@
       1850'
     answer_correct: abcd
     has_ordered_answers: false
-    answer_explanation: 'Les quatre sont vraies ! L’échange colombien (aussi appelé
-      le grand échange)  constitue l''un des événements les plus importants de l''histoire
-      de l''écologie, de l''agriculture et de la culture. L''expression désigne les
-      nombreux échanges de biens agricoles, de bétail, de populations humaines et
-      de micro-organismes (en particulier ceux responsables de maladies infectieuses),
-      à partir de 1492, entre l''Ancien et le Nouveau Monde. Beaucoup de choses furent
-      échangées entre les deux hémisphères, ce qui bouleversa les patrimoines biologiques
-      et culturels de part et d''autre.
-
-
-      Voir Alfred W. Crosby Jr, The Colombian Exchange. Biological and Cultural Consequences
-      of 1492, « 30th Anniversary edition », Londres, Praeger, 2003. Charles C. Mann,
-      1493. Comment la découverte de l’Amérique a transformé le monde, traduit de
-      l’anglais par Marina Boraso, Paris, Albin Michel, 2013 ; Pekka Hämäläinen, L’Empire
-      comanche, traduit de l’anglais par Frédéric Cotton, Toulouse, Anacharsis, 2012
-      (rééd. 2016). Cataclysmes pour une synthèse.'
+    answer_explanation: Les quatre sont vraies ! L’échange colombien (aussi appelé
+      le grand échange)  constitue l'un des événements les plus importants de l'histoire
+      de l'écologie, de l'agriculture et de la culture. L'expression désigne les nombreux
+      échanges de biens agricoles, de bétail, de populations humaines et de micro-organismes
+      (en particulier ceux responsables de maladies infectieuses), à partir de 1492,
+      entre l'Ancien et le Nouveau Monde. Beaucoup de choses furent échangées entre
+      les deux hémisphères, ce qui bouleversa les patrimoines biologiques et culturels
+      de part et d'autre.
     answer_accessible_url: https://fr.wikipedia.org/wiki/%C3%89change_colombien
-    answer_scientific_url: ''
+    answer_scientific_url: https://www.payot-rivages.fr/payot/livre/cataclysmes-9782228917582
     answer_image_url: https://upload.wikimedia.org/wikipedia/commons/e/eb/Intikawan_Amantani.jpg
     answer_image_explanation: Culture en terrasses sur l'île de Taquile, où sont cultivés
       des aliments de base andéens, tels que le quinoa, la pomme de terre et le blé.
@@ -19272,10 +19253,10 @@
     author: Laurent Testot
     validator: Matthieu Massart
     publish: false
-    validation_status: Brouillon
+    validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 187
 - model: api.question
@@ -19297,19 +19278,20 @@
     has_ordered_answers: false
     answer_explanation: Heureusement, à cette date-là, seuls des télégraphes furent
       mis hors service !
-    answer_accessible_url: ''
+    answer_accessible_url: https://www.nationalgeographic.fr/espace/et-si-la-plus-grande-tempete-solaire-jamais-enregistree-etait-venir
     answer_scientific_url: ''
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_image_url: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.maxisciences.com%2Feruption-solaire%2Feruption-solaire-quelles-seraient-les-consequences-d-une-tempete-solaire-massive-dans-le-monde-actuel_art41016.html&psig=AOvVaw19hsUFfV1WjTCPmf65sSTe&ust=1600340947524000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjQsePE7esCFQAAAAAdAAAAABAO
+    answer_image_explanation: Eruption solaire massive
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
     publish: false
-    validation_status: Brouillon
+    validation_status: A valider
     added: 2020-09-08
     created: 2020-09-14
-    updated: 2020-09-14
-    tags: []
+    updated: 2020-09-18
+    tags:
+    - 192
 - model: api.question
   pk: 578
   fields:
@@ -19326,28 +19308,27 @@
     answer_correct: d
     has_ordered_answers: false
     answer_explanation: "Et c'est ce qui lui permit de demeurer la première puissance
-      mondiale du 10e au 18e siècle. \nVoir Laurent Testot, La Nouvelle Histoire du
-      Monde, Auxerre, Sciences Humaines Éditions 2019."
+      mondiale du 10e au 18e siècle. \n"
     answer_accessible_url: https://fr.wikipedia.org/wiki/Quatre_grandes_inventions_de_la_Chine_antique
-    answer_scientific_url: ''
+    answer_scientific_url: https://editions.scienceshumaines.com/la-nouvelle-histoire-du-monde_fr-736.htm
     answer_image_url: https://upload.wikimedia.org/wikipedia/commons/5/53/Model_Si_Nan_of_Han_Dynasty.jpg
     answer_image_explanation: Maquette d'une cuiller indiquant le sud
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
     publish: false
-    validation_status: Brouillon
+    validation_status: A valider
     added: 2020-09-08
     created: 2020-09-14
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags: []
 - model: api.question
   pk: 579
   fields:
     text: Les animaux et les humains ont longtemps fourni à l’humanité l’essentiel
-      de l’énergie mécanique disponible. Les hydrocarbures (charbon puis pétrole)
-      ont ensuite pris le relais. À partir de quelle date  consomme-t-on à l’échelle
-      mondiale plus d’énergie fossile que d’énergie musculaire ?
+      de l’énergie mécanique disponible. Le charbon puis le pétrole ont pris le relais.
+      À partir de quelle date  consomme-t-on à l’échelle mondiale plus d’énergie fossile
+      que d’énergie musculaire ?
     hint: ''
     type: QCM
     category: 6
@@ -19362,20 +19343,22 @@
       leur essor, prêtes pour la Première Guerre mondiale
     answer_correct: d
     has_ordered_answers: false
-    answer_explanation: Vaclav Smil, Energy and Civilization. A History, Cambridge,
-      The MIT Press, 2017.
-    answer_accessible_url: ''
-    answer_scientific_url: ''
+    answer_explanation: Vaclav Smil estime qu’il a fallu plus de cent ans pour que
+      le charbon contribue à hauteur de 25 % à l’approvisionnement mondial en énergie,
+      alors que le pétrole a atteint ce chiffre en 80 ans. Des délais assez longs
+      finalement.
+    answer_accessible_url: https://www.geostrategia.fr/la-transition-energetique-un-enjeu-pour-la-planete/
+    answer_scientific_url: https://mitpress.mit.edu/books/energy-and-civilization
     answer_image_url: ''
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
     publish: false
-    validation_status: Brouillon
+    validation_status: A valider
     added: 2020-09-08
     created: 2020-09-14
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 11
     - 40
@@ -19388,35 +19371,30 @@
     hint: ''
     type: QCM
     category: 6
-    difficulty: 3
+    difficulty: 4
     answer_option_a: Thomas Midgley Jr
     answer_option_b: Fritz Haber
     answer_option_c: Albert Einstein
     answer_option_d: Otto von Guericke
     answer_correct: b
     has_ordered_answers: false
-    answer_explanation: 'La première application de son invention a été que l''Allemagne
-      a pu produire des explosifs pendant la Première Guerre mondiale. Mais avec l''invention
+    answer_explanation: La première application de son invention a été que l'Allemagne
+      a pu produire des explosifs pendant la Première Guerre mondiale. Mais avec l'invention
       de ce procédé, Fritz Haber a apporté une contribution décisive au développement
       des industries automobiles et agricoles, bouleversant la biosphère à un degré
       inégalé.
-
-
-      Voir John R. McNeill, Du nouveau sous le Soleil. Une histoire de l’environnement
-      mondial au XXe siècle, traduit de l’anglais par Philippe Beaugrand, Seyssel,
-      Champ Vallon, 2010.'
-    answer_accessible_url: ''
-    answer_scientific_url: ''
-    answer_image_url: ''
+    answer_accessible_url: https://www.monde-diplomatique.fr/2018/12/AUBERT/59315
+    answer_scientific_url: https://journals.openedition.org/etudesrurales/9545
+    answer_image_url: https://www.agro.basf.ch/de/Pictures/images2_pictures/startseite_pictures/geschichte_pictures/cheval_1540x866.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
     publish: false
-    validation_status: Brouillon
+    validation_status: A valider
     added: 2020-09-08
     created: 2020-09-14
-    updated: 2020-09-14
+    updated: 2020-09-18
     tags:
     - 186
 - model: api.question
@@ -19450,3 +19428,38 @@
     updated: 2020-09-14
     tags:
     - 191
+- model: api.question
+  pk: 582
+  fields:
+    text: Peut-on faire griller une tartine dans un grille-pain standard connecté
+      à un vélo qui produirait de l'électricité ?
+    hint: ''
+    type: VF
+    category: 2
+    difficulty: 1
+    answer_option_a: Vrai
+    answer_option_b: Faux
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: A moins d'être un champion olympique de cyclisme et de produire
+      un effort violent et court ! Autrement dit, les publicités qui vous promettent
+      d'alimenter un foyer avec un appareil sur lequel vous pédaleriez quelques heures
+      par jour est un mythe.
+    answer_accessible_url: https://www.youtube.com/watch?v=S4O5voOCqAQ
+    answer_scientific_url: ''
+    answer_image_url: https://imgix.bustle.com/rehost/2016/9/13/6029141b-a962-4ed0-b403-27d0abdbb1a5.png?w=800&auto=format%2Ccompress&cs=srgb&q=70&fit=crop&crop=faces
+    answer_image_explanation: Défi lancé à Robert Förstemann, champion du monde de
+      sprint et cycliste olympique capable de développer 700 watts, de faire fonctionner
+      un simple grille-pain
+    answer_extra_info: ''
+    author: Contributeur anonyme
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-09-16
+    created: 2020-09-18
+    updated: 2020-09-18
+    tags:
+    - 39
