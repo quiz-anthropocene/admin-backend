@@ -33,3 +33,6 @@ def aggregate_timeseries_by_week(timeseries):
             timeseries_grouped_by_week[elem_week_start_date_index]["y"] += elem["y"]
     # return
     return timeseries_grouped_by_week
+
+
+# def add_validation_error()

@@ -100,7 +100,7 @@ class Question(models.Model):
     )
     category = models.ForeignKey(
         Category,
-        blank=False,
+        blank=True,
         null=True,
         on_delete=models.SET_NULL,
         related_name="questions",
@@ -118,8 +118,12 @@ class Question(models.Model):
         blank=False,
         help_text="Le niveau de difficulté de la question",
     )
-    answer_option_a = models.CharField(max_length=500, help_text="La réponse a")
-    answer_option_b = models.CharField(max_length=500, help_text="La réponse b")
+    answer_option_a = models.CharField(
+        max_length=500, blank=True, help_text="La réponse a"
+    )
+    answer_option_b = models.CharField(
+        max_length=500, blank=True, help_text="La réponse b"
+    )
     answer_option_c = models.CharField(
         max_length=500, blank=True, help_text="La réponse c"
     )
@@ -132,6 +136,7 @@ class Question(models.Model):
             constants.QUESTION_ANSWER_CHOICE_LIST,
             constants.QUESTION_ANSWER_CHOICE_LIST,
         ),
+        blank=True,
         help_text="a, b, c ou d. ab, acd, abcd, etc si plusieurs réponses.",
     )
     has_ordered_answers = models.BooleanField(
@@ -265,22 +270,29 @@ class Question(models.Model):
 
     # def question_validate_fields(sender, instance, **kwargs):
     def clean(self):
+        # dict to store all ValidationErrors
+        # TODO: return list if multiple ValidationErrors on the same field
+        # TODO: validation in french ?
+        validation_errors = dict()
         """
         Method to validate Question fields. Why ?
         - ModelFields with choices are validated only in forms, but not during loaddata (and test fixtures) # noqa
         - https://zindilis.com/blog/2017/05/04/django-backend-validation-of-choices.html
         - https://adamj.eu/tech/2020/01/22/djangos-field-choices-dont-constrain-your-data/
-
-        TODO: call these validation rules in the admin QuestionForm (and display clean errors in the admin, vs 500)
         """
-        # > only run on soon-to-be and validated questions
-        if getattr(self, "validation_status") not in [
-            constants.QUESTION_VALIDATION_STATUS_NEW,
-            constants.QUESTION_VALIDATION_STATUS_REMOVED,
-        ]:
+        # > only run on validated questions
+        if (
+            getattr(self, "validation_status")
+            == constants.QUESTION_VALIDATION_STATUS_OK
+        ):
+            # > category rules
+            if getattr(self, "category") is None:
+                validation_errors[
+                    "category"
+                ] = f"Value given: '{getattr(self, 'category')}' is not a valid category. Question: {self}"  # noqa
             # > relation fields: "category" & "tags" ? no need
             # checks will be done automatically to validate the existence of the foreign key.
-            # > choice fields
+            # > fields with choices rules
             question_choice_fields = [
                 ("type", "QUESTION_TYPE_CHOICE_LIST"),
                 ("difficulty", "QUESTION_DIFFICULTY_CHOICE_LIST"),
@@ -290,46 +302,40 @@ class Question(models.Model):
             for choice_field in question_choice_fields:
                 if getattr(self, choice_field[0]) not in getattr(
                     constants, choice_field[1]
-                ):  # noqa
-                    raise ValidationError(
-                        f"Question field: {choice_field[0]}. "
-                        f"Value given: '{getattr(self, choice_field[0])}'. "
-                        f"Question: {self}"
-                    )
-            # > other rules
+                ):
+                    validation_errors[
+                        choice_field[0]
+                    ] = f"Value given: '{getattr(self, choice_field[0])}' is wrong. Because not in the choices. Question: {self}"  # noqa
+            # > type 'QCM' rules
             # - QCM question must have len(answer_correct) equal to 1 ('a', 'b', 'c' or 'd')
-            # - QCM-RM question must have len(answer_correct) larger than 1 and lower than 5
-            # - Vrai/Faux question must have answer_correct equal to 'a' or 'b'
-            # - Vrai/Faux question must have has_ordered_answers checked
             if getattr(self, "type") == constants.QUESTION_TYPE_QCM:
                 if len(getattr(self, "answer_correct")) != 1:
-                    raise ValidationError(
-                        f"Question field: type (QCM) & answer_correct. "
-                        f"Value given: '{getattr(self, 'answer_correct')}' length is higher than 1. "  # noqa
-                        f"Question: {self}"
-                    )
+                    validation_errors[
+                        "answer_correct"
+                    ] = f"Value given: '{getattr(self, 'answer_correct')}' length should be equal to 1. Because type 'QCM'. Question: {self}"  # noqa
+            # > type 'QCM-RM' rules
+            # - QCM-RM question must have len(answer_correct) larger than 1 and lower than 5
             if getattr(self, "type") == constants.QUESTION_TYPE_QCM_RM:
                 if (len(getattr(self, "answer_correct")) < 2) or (
                     len(getattr(self, "answer_correct")) > 4
                 ):
-                    raise ValidationError(
-                        f"Question field: type (QCM-RM) & answer_correct. "
-                        f"Value given: '{getattr(self, 'answer_correct')}' length is lower than 2 or higher than 4. "  # noqa
-                        f"Question: {self}"
-                    )
+                    validation_errors[
+                        "answer_correct"
+                    ] = f"Value given: '{getattr(self, 'answer_correct')}' length should be equal to 2, 3 or 4. Because type 'QCM-RM'. Question: {self}"  # noqa
+            # type 'VF' rules
+            # - Vrai/Faux question must have answer_correct equal to 'a' or 'b'
+            # - Vrai/Faux question must have has_ordered_answers checked
             if getattr(self, "type") == constants.QUESTION_TYPE_VF:
                 if getattr(self, "answer_correct") not in ["a", "b"]:
-                    raise ValidationError(
-                        f"Question field: type (VF) & answer_correct. "
-                        f"Value given: '{getattr(self, 'answer_correct')}' must be 'a' or 'b'. "
-                        f"Question: {self}"
-                    )
+                    validation_errors[
+                        "answer_correct"
+                    ] = f"Value given: '{getattr(self, 'answer_correct')}' should be 'a' or 'b'. Because type 'VF'. Question: {self}"  # noqa
                 if not getattr(self, "has_ordered_answers"):
-                    raise ValidationError(
-                        f"Question field: type (VF) & has_ordered_answers. "
-                        f"Value given: '{getattr(self, 'has_ordered_answers')}' must be true. "
-                        f"Question: {self}"
-                    )
+                    validation_errors[
+                        "has_ordered_answers"
+                    ] = f"Value given: '{getattr(self, 'has_ordered_answers')}' must be true. Because type 'VF'. Question: {self}"  # noqa
+        if bool(validation_errors):
+            raise ValidationError(validation_errors)
 
 
 def question_validate_fields(sender, instance, **kwargs):
@@ -338,13 +344,12 @@ def question_validate_fields(sender, instance, **kwargs):
     The rest of the Question model validation is done in the save() --> full_clean() call
     """
     # > if from fixtures, check that there is an id
+    if kwargs.get("raw"):
+        Question.clean(instance)
     if kwargs.get("raw") and not getattr(instance, "id"):
-        if not getattr(instance, "id"):
-            raise ValidationError(
-                f"Question field: id. "
-                f"Value given: 'empty'. "
-                f"Question: {instance}"
-            )
+        raise ValidationError(
+            f"Question field: id. " f"Value given: 'empty'. " f"Question: {instance}"
+        )
 
 
 def question_create_agg_stat_instance(sender, instance, created, **kwargs):

@@ -16,5 +16,6 @@ class FixturesTest(TestCase):
         self.assertTrue(Category.objects.count())
         self.assertTrue(Tag.objects.count())
         self.assertTrue(Question.objects.count())
+        print("fixture question count", Question.objects.count())
         self.assertTrue(Quiz.objects.count())
         self.assertTrue(Glossary.objects.count())
