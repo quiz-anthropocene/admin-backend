@@ -271,8 +271,6 @@ class Question(models.Model):
     # def question_validate_fields(sender, instance, **kwargs):
     def clean(self):
         # dict to store all ValidationErrors
-        # TODO: return list if multiple ValidationErrors on the same field
-        # TODO: validation in french ?
         validation_errors = dict()
         """
         Method to validate Question fields. Why ?
@@ -287,9 +285,10 @@ class Question(models.Model):
         ):
             # > category rules
             if getattr(self, "category") is None:
-                validation_errors[
-                    "category"
-                ] = f"Value given: '{getattr(self, 'category')}' is not a valid category. Question: {self}"  # noqa
+                error_message = f"Valeur: '{getattr(self, 'category')}' n'est pas une catégorie valide. Question: {self}"  # noqa
+                validation_errors = utilities.add_validation_error(
+                    validation_errors, "category", error_message
+                )
             # > relation fields: "category" & "tags" ? no need
             # checks will be done automatically to validate the existence of the foreign key.
             # > fields with choices rules
@@ -303,37 +302,42 @@ class Question(models.Model):
                 if getattr(self, choice_field[0]) not in getattr(
                     constants, choice_field[1]
                 ):
-                    validation_errors[
-                        choice_field[0]
-                    ] = f"Value given: '{getattr(self, choice_field[0])}' is wrong. Because not in the choices. Question: {self}"  # noqa
+                    error_message = f"Valeur: '{getattr(self, choice_field[0])}' n'est pas bonne. Car pas dans les choix proposés. Question: {self}"  # noqa
+                    validation_errors = utilities.add_validation_error(
+                        validation_errors, choice_field[0], error_message
+                    )
             # > type 'QCM' rules
             # - QCM question must have len(answer_correct) equal to 1 ('a', 'b', 'c' or 'd')
             if getattr(self, "type") == constants.QUESTION_TYPE_QCM:
                 if len(getattr(self, "answer_correct")) != 1:
-                    validation_errors[
-                        "answer_correct"
-                    ] = f"Value given: '{getattr(self, 'answer_correct')}' length should be equal to 1. Because type 'QCM'. Question: {self}"  # noqa
+                    error_message = f"Valeur: '{getattr(self, 'answer_correct')}' doit être 'a', 'b', 'c' ou 'd'. Car type 'QCM'. Question: {self}"  # noqa
+                    validation_errors = utilities.add_validation_error(
+                        validation_errors, "answer_correct", error_message
+                    )
             # > type 'QCM-RM' rules
             # - QCM-RM question must have len(answer_correct) larger than 1 and lower than 5
             if getattr(self, "type") == constants.QUESTION_TYPE_QCM_RM:
                 if (len(getattr(self, "answer_correct")) < 2) or (
                     len(getattr(self, "answer_correct")) > 4
                 ):
-                    validation_errors[
-                        "answer_correct"
-                    ] = f"Value given: '{getattr(self, 'answer_correct')}' length should be equal to 2, 3 or 4. Because type 'QCM-RM'. Question: {self}"  # noqa
+                    error_message = f"Valeur: '{getattr(self, 'answer_correct')}' longueur doit être égale à 2, 3 or 4 ('ab' ... 'abcd'). Car type 'QCM-RM'. Question: {self}"  # noqa
+                    validation_errors = utilities.add_validation_error(
+                        validation_errors, "answer_correct", error_message
+                    )
             # type 'VF' rules
             # - Vrai/Faux question must have answer_correct equal to 'a' or 'b'
             # - Vrai/Faux question must have has_ordered_answers checked
             if getattr(self, "type") == constants.QUESTION_TYPE_VF:
                 if getattr(self, "answer_correct") not in ["a", "b"]:
-                    validation_errors[
-                        "answer_correct"
-                    ] = f"Value given: '{getattr(self, 'answer_correct')}' should be 'a' or 'b'. Because type 'VF'. Question: {self}"  # noqa
+                    error_message = f"Valeur: '{getattr(self, 'answer_correct')}' doit être 'a' ou 'b'. Car type 'VF'. Question: {self}"  # noqa
+                    validation_errors = utilities.add_validation_error(
+                        validation_errors, "answer_correct", error_message
+                    )
                 if not getattr(self, "has_ordered_answers"):
-                    validation_errors[
-                        "has_ordered_answers"
-                    ] = f"Value given: '{getattr(self, 'has_ordered_answers')}' must be true. Because type 'VF'. Question: {self}"  # noqa
+                    error_message = f"Valeur: '{getattr(self, 'has_ordered_answers')}' doit être True. Car type 'VF'. Question: {self}"  # noqa
+                    validation_errors = utilities.add_validation_error(
+                        validation_errors, "has_ordered_answers", error_message
+                    )
         if bool(validation_errors):
             raise ValidationError(validation_errors)
 
@@ -343,13 +347,11 @@ def question_validate_fields(sender, instance, **kwargs):
     Validation for fixtures
     The rest of the Question model validation is done in the save() --> full_clean() call
     """
-    # > if from fixtures, check that there is an id
+    # > if from fixtures, run clean & check that there is an id
     if kwargs.get("raw"):
         Question.clean(instance)
     if kwargs.get("raw") and not getattr(instance, "id"):
-        raise ValidationError(
-            f"Question field: id. " f"Value given: 'empty'. " f"Question: {instance}"
-        )
+        raise ValidationError({"id": f"Valeur: 'empty'. " f"Question: {instance}"})
 
 
 def question_create_agg_stat_instance(sender, instance, created, **kwargs):
@@ -505,6 +507,10 @@ class Quiz(models.Model):
     def __str__(self):
         return f"{self.name}"
 
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super(Quiz, self).save(*args, **kwargs)
+
     @property
     def question_count(self):
         return self.questions.count()  # published() ?
@@ -569,29 +575,77 @@ class Quiz(models.Model):
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"
 
-
-def quiz_validate_m2m_fields(sender, **kwargs):
-    """
-    Method to validate Quiz fields. Why ?
-    see question_validate_fields
-    """
-    # only run on published quizzes
-    if getattr(kwargs["instance"], "publish"):
-        # > relation fields: check that the quiz's questions are published
-        if kwargs["instance"] and kwargs["action"] == "pre_add":
-            qlist = (
-                Question.objects.filter(pk__in=kwargs["pk_set"])
+    def clean(self):
+        # > only run on existing and published quizzes (Quiz query won't work on new quizzes)
+        if getattr(self, "id") and getattr(self, "publish"):
+            # > questions rules (only works for *existing* quiz questions, see quiz_validate_m2m_fields for new questions)  # noqa
+            quiz_questions = Quiz.objects.get(pk=self.id).questions
+            # - must have at least 1 question
+            if quiz_questions.count() < 1:
+                raise ValidationError(
+                    {
+                        "questions": f"Un quiz 'published' doit comporter au moins 1 question. "
+                        f"Quiz: {self}"
+                    }
+                )
+            # - questions must be published
+            quiz_questions_ids = quiz_questions.values_list("id", flat=True)
+            quiz_questions_published_ids = (
+                Question.objects.filter(pk__in=quiz_questions_ids)
                 .published()
                 .values_list("id", flat=True)
             )
-            if len(kwargs["pk_set"]) != len(list(qlist)):
+            if len(list(quiz_questions_ids)) != len(list(quiz_questions_published_ids)):
                 raise ValidationError(
-                    f"Quiz pre_save_m2m error. Relation questions. "
-                    f"Questions count: {len(kwargs['pk_set'])}. Questions published count: {len(list(qlist))}. "  # noqa
-                    f"Unpublished questions: {[el for el in kwargs['pk_set'] if el not in list(qlist)]}"  # noqa
+                    {
+                        "questions": f"Toutes les questions doivent être 'published'. "
+                        f"Unpublished questions: {[el for el in list(quiz_questions_ids) if el not in list(quiz_questions_published_ids)]}. "  # noqa
+                        f"Quiz: {self}"
+                    }
                 )
 
 
+def quiz_validate_fields(sender, instance, **kwargs):
+    """
+    Validation for fixtures
+    The rest of the Quiz model validation is done in the save() --> full_clean() call
+    """
+    # > if from fixtures, run clean & check that there is an id
+    # if kwargs.get("raw"):
+    #     Quiz.clean(instance) # won't work because Quiz doesn't exist yet, our custom clean() will fail  # noqa
+    if kwargs.get("raw") and not getattr(instance, "id"):
+        raise ValidationError({"id": f"Valeur: 'empty'. " f"Quiz: {instance}"})
+
+
+def quiz_validate_m2m_fields(sender, **kwargs):
+    """
+    Method to validate *new* Quiz m2m fields.
+    see question_validate_fields
+    """
+    # only run on published quizzes
+    if (
+        getattr(kwargs["instance"], "publish")
+        and kwargs["instance"]
+        and (kwargs["action"] == "pre_add")
+    ):
+        # > relation fields: check that the quiz's questions are published
+        qlist = (
+            Question.objects.filter(pk__in=kwargs["pk_set"])
+            .published()
+            .values_list("id", flat=True)
+        )
+        if len(kwargs["pk_set"]) != len(list(qlist)):
+            raise ValidationError(
+                {
+                    "questions": f"Quiz pre_save_m2m error. "
+                    # f"Questions count: {len(kwargs['pk_set'])}. Questions published count: {len(list(qlist))}. "  # noqa
+                    f"Toutes les questions doivent être 'published'. "
+                    f"Unpublished questions: {[el for el in kwargs['pk_set'] if el not in list(qlist)]}"  # noqa
+                }
+            )
+
+
+models.signals.pre_save.connect(quiz_validate_fields, sender=Quiz)
 models.signals.m2m_changed.connect(
     quiz_validate_m2m_fields, sender=Quiz.questions.through
 )

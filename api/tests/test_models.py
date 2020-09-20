@@ -7,12 +7,11 @@ from api.models import (
     QuestionAggStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
-    Quiz,
     QuizAnswerEvent,
     QuizFeedbackEvent,
     DailyStat,
 )
-from api.tests.factories import QuestionFactory
+from api.tests.factories import QuestionFactory, QuizFactory
 
 
 class QuestionModelTest(TestCase):
@@ -60,7 +59,10 @@ class QuestionModelTest(TestCase):
         self.assertEqual(self.question_1.like_count_agg, 2)
         self.assertEqual(self.question_1.dislike_count_agg, 1)
 
-    def test_question_must_have_correct_choice_fields(self):
+    def test_validated_question_must_have_category(self):
+        self.assertRaises(ValidationError, QuestionFactory, category=None)
+
+    def test_validated_question_must_have_correct_choice_fields(self):
         self.assertRaises(ValidationError, QuestionFactory, type="Coucou")
         self.assertRaises(ValidationError, QuestionFactory, difficulty=42)
         self.assertRaises(
@@ -68,12 +70,12 @@ class QuestionModelTest(TestCase):
         )
         self.assertRaises(ValidationError, QuestionFactory, validation_status="TBD")
 
-    def test_question_qcm_must_have_one_answer(self):
+    def test_validated_question_qcm_must_have_one_answer(self):
         self.assertRaises(ValidationError, QuestionFactory, answer_correct="")
         self.assertRaises(ValidationError, QuestionFactory, answer_correct="ab")
         self.assertRaises(ValidationError, QuestionFactory, answer_correct="aa")
 
-    def test_question_qcm_rm_must_have_at_least_two_answers(self):
+    def test_validated_question_qcm_rm_must_have_at_least_two_answers(self):
         self.assertRaises(
             ValidationError,
             QuestionFactory,
@@ -105,7 +107,7 @@ class QuestionModelTest(TestCase):
             answer_correct="abcde",
         )
 
-    def test_question_vf_must_have_specific_answer(self):
+    def test_validated_question_vf_must_have_specific_answer(self):
         self.assertRaises(
             ValidationError,
             QuestionFactory,
@@ -125,12 +127,20 @@ class QuestionModelTest(TestCase):
             answer_correct="ab",
         )
 
+    def test_validated_question_vf_must_have_ordered_answers(self):
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_VF,
+            has_ordered_answers=False,
+        )
+
 
 class QuizModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.question_1 = QuestionFactory(answer_correct="a")
-        cls.quiz_1 = Quiz.objects.create(name="quiz 1")
+        cls.quiz_1 = QuizFactory(name="quiz 1")
         cls.quiz_1.questions.set([cls.question_1.id])
         QuestionAnswerEvent.objects.create(
             question_id=cls.question_1.id, choice="a", source="question"
@@ -144,6 +154,29 @@ class QuizModelTest(TestCase):
     def test_feedback_count(self):
         self.assertEqual(self.quiz_1.like_count_agg, 0)
         self.assertEqual(self.quiz_1.dislike_count_agg, 1)
+
+    def test_published_quiz_must_have_at_least_one_question(self):
+        self.quiz_not_published = QuizFactory(name="quiz not published")
+        self.quiz_not_published.publish = True
+        self.assertRaises(
+            ValidationError, self.quiz_not_published.save, update_fields=["publish"]
+        )
+
+    def test_published_quiz_must_have_published_questions(self):
+        self.question_published = QuestionFactory(answer_correct="a")
+        self.question_not_published = QuestionFactory(answer_correct="a", publish=False)
+        self.quiz_published = QuizFactory(name="quiz published", publish=True)
+        self.quiz_not_published = QuizFactory(name="quiz not published")
+        # pass
+        self.quiz_not_published.questions.set(
+            [self.question_published, self.question_not_published]
+        )
+        # fail
+        self.assertRaises(
+            ValidationError,
+            self.quiz_published.questions.set,
+            [self.question_published, self.question_not_published],
+        )
 
 
 class DailyStatModelTest(TestCase):

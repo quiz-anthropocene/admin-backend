@@ -35,4 +35,12 @@ def aggregate_timeseries_by_week(timeseries):
     return timeseries_grouped_by_week
 
 
-# def add_validation_error()
+def add_validation_error(dict, key, value):
+    if key not in dict:
+        dict[key] = value
+    else:
+        if type(dict[key]) == list:
+            dict[key] += [value]
+        if type(dict[key]) == str:
+            dict[key] = [dict[key], value]
+    return dict

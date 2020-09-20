@@ -3,14 +3,15 @@ import time
 from django.core import management
 from django.test import TestCase
 
-from api.models import Quiz, QuizAnswerEvent, QuizFeedbackEvent
+from api.models import QuizAnswerEvent, QuizFeedbackEvent
+from api.tests.factories import QuizFactory
 
 
 class CleanupQuizStatsCommandTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         # quiz_1
-        cls.quiz_1 = Quiz.objects.create(name="quiz 1")
+        cls.quiz_1 = QuizFactory(name="quiz 1")
         QuizAnswerEvent.objects.create(quiz_id=cls.quiz_1.id, answer_success_count=1)
         QuizAnswerEvent.objects.create(quiz_id=cls.quiz_1.id, answer_success_count=2)
         QuizAnswerEvent.objects.create(quiz_id=cls.quiz_1.id, answer_success_count=3)
@@ -18,7 +19,7 @@ class CleanupQuizStatsCommandTest(TestCase):
         QuizFeedbackEvent.objects.create(quiz_id=cls.quiz_1.id, choice="dislike")
         QuizFeedbackEvent.objects.create(quiz_id=cls.quiz_1.id, choice="like")
         # quiz_2
-        cls.quiz_2 = Quiz.objects.create(name="quiz 2")
+        cls.quiz_2 = QuizFactory(name="quiz 2")
         QuizAnswerEvent.objects.create(quiz_id=cls.quiz_2.id, answer_success_count=1)
         QuizFeedbackEvent.objects.create(quiz_id=cls.quiz_2.id, choice="like")
 
