@@ -131,6 +131,7 @@ CORS_ORIGIN_WHITELIST = [
     "http://localhost:8080",
     "https://know-your-planet.netlify.com",
     "https://know-your-planet.netlify.app",
+    "https://quiztaplanete.fr",
 ]
 
 CORS_ORIGIN_REGEX_WHITELIST = [
@@ -149,6 +150,14 @@ CSRF_COOKIE_SECURE = False if os.getenv("CSRF_COOKIE_SECURE") == "False" else Tr
 
 SECURE_SSL_REDIRECT = False if os.getenv("SECURE_SSL_REDIRECT") == "False" else True
 SECURE_HSTS_SECONDS = os.getenv("SECURE_HSTS_SECONDS")
+
+
+# Shell Plus
+
+SHELL_PLUS_IMPORTS = [
+    "from datetime import datetime, timedelta",
+    "from api import utilities_notion",
+]
 
 
 # Notion.so
