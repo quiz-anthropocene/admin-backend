@@ -95,6 +95,7 @@ class Question(models.Model):
     type = models.CharField(
         max_length=50,
         choices=constants.QUESTION_TYPE_CHOICES,
+        default=constants.QUESTION_TYPE_QCM,
         blank=False,
         help_text="Le type de question (QCM, V/F, ...)",
     )

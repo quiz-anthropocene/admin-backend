@@ -22,6 +22,20 @@ def get_notion_client():
 
 
 """
+Notion: Questions page
+- get table
+- get current rows
+"""
+
+
+def get_questions_table():
+    notion_client = get_notion_client()
+    # page = client.get_block(settings.NOTION_QUESTIONS_PAGE_URL)
+    table = notion_client.get_collection_view(settings.NOTION_QUESTIONS_TABLE_URL)
+    return table
+
+
+"""
 Notion: Contribution page
 - get table
 - get current rows

@@ -1,7 +1,9 @@
 import json
 import random
 import datetime
+from io import StringIO
 
+from django.core import management
 from django.core.serializers.json import DjangoJSONEncoder
 from django.db.models import Count, F
 from django.http import HttpResponse
@@ -485,6 +487,23 @@ def stats(request):
                 "quiz_answer_count": quiz_answer_count_current_week,
             },
         }
+    )
+
+
+@api_view(["GET", "POST"])
+def notion_questions(request):
+    notion_questions_validation = []
+
+    if request.POST.get("run_notion_questions_validate_script", False):
+        out = StringIO()
+        management.call_command("notion_questions_validate", stdout=out)
+        notion_questions_validation = out.getvalue()
+        notion_questions_validation = notion_questions_validation.split("\n")
+
+    return render(
+        request,
+        "notion_questions.html",
+        {"notion_questions_validation": notion_questions_validation},
     )
 
 

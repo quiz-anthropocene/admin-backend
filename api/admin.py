@@ -671,7 +671,7 @@ class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
 
         Corresponding template in templates/admin/api/dailystat/change_list.html
         """
-        if request.POST.get("run_daily_stat_script", False):
+        if request.POST.get("run_generate_daily_stats_script", False):
             management.call_command("generate_daily_stats")
 
         # custom form
