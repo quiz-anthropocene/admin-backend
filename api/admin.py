@@ -162,17 +162,28 @@ class QuestionResource(resources.ModelResource):
         - Notion.so adds a BOM identifier before each line
         And setting from_encoding = 'utf-8-sig' in the QuestionAdmin does not work
         So we need to fix the 'id' column
+        - added timestamp
         - Issue with BooleanFields because Notion exports Yes/No
+        - Fill 'publish' field
         """
+        # 'id' field
         if "id" not in row:
             row["id"] = row["\ufeffid"]
+        # 'added' field
         if row["added"] == "":
             row["added"] = datetime.strptime(
                 row["Created time"], "%b %d, %Y %I:%M %p"
             ).date()
-        BOOLEAN_FIELDS = ["has_ordered_answers", "publish"]
+        # boolean fields
+        BOOLEAN_FIELDS = ["has_ordered_answers"]  # "publish"
         for boolean_field in BOOLEAN_FIELDS:
             row[boolean_field] = True if (row[boolean_field] == "Yes") else False
+        # 'publish' field
+        row["publish"] = (
+            True
+            if (row["validation_status"] == constants.QUESTION_VALIDATION_STATUS_OK)
+            else False
+        )
 
     def import_obj(self, instance, row, dry_run):
         """

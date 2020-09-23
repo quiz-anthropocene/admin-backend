@@ -339,6 +339,12 @@ class Question(models.Model):
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "has_ordered_answers", error_message
                     )
+            # publish rules
+            if not getattr(self, "publish"):
+                error_message = f"Valeur: '{getattr(self, 'publish')}' doit être True. Car status 'Validée'. Question: {self}"  # noqa
+                validation_errors = utilities.add_validation_error(
+                    validation_errors, "publish", error_message
+                )
         if bool(validation_errors):
             raise ValidationError(validation_errors)
 
@@ -640,7 +646,7 @@ def quiz_validate_m2m_fields(sender, **kwargs):
                 {
                     "questions": f"Quiz pre_save_m2m error. "
                     # f"Questions count: {len(kwargs['pk_set'])}. Questions published count: {len(list(qlist))}. "  # noqa
-                    f"Toutes les questions doivent être 'published'. "
+                    f"Toutes les questions doivent être 'published' (c'est à dire status 'Validée'). "  # noqa
                     f"Unpublished questions: {[el for el in kwargs['pk_set'] if el not in list(qlist)]}"  # noqa
                 }
             )

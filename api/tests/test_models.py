@@ -135,6 +135,11 @@ class QuestionModelTest(TestCase):
             has_ordered_answers=False,
         )
 
+    def test_validated_question_must_have_publish(self):
+        self.assertRaises(
+            ValidationError, QuestionFactory, publish=False,
+        )
+
 
 class QuizModelTest(TestCase):
     @classmethod
@@ -164,7 +169,11 @@ class QuizModelTest(TestCase):
 
     def test_published_quiz_must_have_published_questions(self):
         self.question_published = QuestionFactory(answer_correct="a")
-        self.question_not_published = QuestionFactory(answer_correct="a", publish=False)
+        self.question_not_published = QuestionFactory(
+            answer_correct="a",
+            validation_status=constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS,
+            publish=False,
+        )
         self.quiz_published = QuizFactory(name="quiz published", publish=True)
         self.quiz_not_published = QuizFactory(name="quiz not published")
         # pass

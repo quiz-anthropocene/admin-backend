@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
+from api import constants
 from api.tests.factories import (
     CategoryFactory,
     TagFactory,
@@ -16,7 +17,11 @@ class ApiTest(TestCase):
         cls.tag_1 = TagFactory(name="Tag 1")
         cls.tag_2 = TagFactory(name="Tag 2")
         cls.question_1 = QuestionFactory(
-            text="Q 1", category=cls.category_1, author="author 1", publish=False
+            text="Q 1",
+            category=cls.category_1,
+            author="author 1",
+            validation_status=constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS,
+            publish=False,
         )
         cls.question_2 = QuestionFactory(
             text="Q 2",
