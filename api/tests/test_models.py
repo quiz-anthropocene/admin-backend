@@ -135,10 +135,10 @@ class QuestionModelTest(TestCase):
             has_ordered_answers=False,
         )
 
-    def test_validated_question_must_have_publish(self):
-        self.assertRaises(
-            ValidationError, QuestionFactory, publish=False,
-        )
+    # def test_validated_question_must_have_publish(self):
+    #     self.assertRaises(
+    #         ValidationError, QuestionFactory, publish=False,
+    #     )
 
 
 class QuizModelTest(TestCase):

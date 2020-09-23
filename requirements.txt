@@ -1,4 +1,4 @@
-Django==3.0.7
+Django==3.1.1
 
 asgiref==3.2.3
 black==19.10b0
@@ -6,14 +6,15 @@ certifi==2019.11.28
 coverage==5.1
 dj-database-url==0.5.0
 django-cors-headers==3.2.1
-django-extensions==2.2.9
+django-extensions==3.0.1
 django-import-export==2.0.2
 djangorestframework==3.11.0
 factory-boy==3.0.1
-flake8==3.7.9
+flake8==3.8.3
 freezegun==0.3.15
 gunicorn==20.0.4
-notion==0.0.25
+# notion==0.0.25
+git+git://github.com/jamalex/notion-py
 pandas==1.0.3
 pre-commit==2.2.0
 psycopg2==2.8.4

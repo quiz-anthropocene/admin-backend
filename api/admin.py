@@ -272,6 +272,7 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
     ]
     filter_horizontal = ("tags",)
     readonly_fields = (
+        "publish",  # True if status 'Validée'
         "show_answer_image",
         "answer_count_agg",
         "answer_success_count_agg",
@@ -330,6 +331,8 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
     )
     show_answer_image.allow_tags = True
 
+    # TODO: cannot have a custom changelist_view. seems to be overridden by django-import-export.
+
 
 class CategoryAdmin(admin.ModelAdmin, ExportMixin):
     list_display = (
@@ -352,6 +355,7 @@ class TagAdmin(admin.ModelAdmin, ExportMixin):
         "id",
         "name",
         "question_count",
+        "quiz_count",
     )
     ordering = ("name",)
     actions = [

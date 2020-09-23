@@ -1,6 +1,5 @@
 from django.db import models
 from django.db.models import Avg, Sum, Count
-from django.contrib.postgres.fields import JSONField
 from django.core.exceptions import ValidationError
 
 from api import constants
@@ -32,6 +31,9 @@ class Category(models.Model):
     @property
     def question_count(self):
         return self.questions.published().count()
+
+    # Admin
+    question_count.fget.short_description = "Questions (publiées)"
 
 
 class TagManager(models.Manager):
@@ -67,6 +69,14 @@ class Tag(models.Model):
     @property
     def question_count(self):
         return self.questions.published().count()
+
+    @property
+    def quiz_count(self):
+        return self.quizzes.published().count()
+
+    # Admin
+    question_count.fget.short_description = "Questions (publiées)"
+    quiz_count.fget.short_description = "Quizs (publiés)"
 
 
 class QuestionQuerySet(models.QuerySet):
@@ -280,13 +290,10 @@ class Question(models.Model):
         - https://adamj.eu/tech/2020/01/22/djangos-field-choices-dont-constrain-your-data/
         """
         # > only run on validated questions
-        if (
-            getattr(self, "validation_status")
-            == constants.QUESTION_VALIDATION_STATUS_OK
-        ):
+        if self.validation_status == constants.QUESTION_VALIDATION_STATUS_OK:
             # > category rules
-            if getattr(self, "category") is None:
-                error_message = f"Valeur: '{getattr(self, 'category')}' n'est pas une catégorie valide. Question: {self}"  # noqa
+            if self.category is None:
+                error_message = f"Valeur: '{self.category}' n'est pas une catégorie valide. Question: {self}"  # noqa
                 validation_errors = utilities.add_validation_error(
                     validation_errors, "category", error_message
                 )
@@ -309,42 +316,41 @@ class Question(models.Model):
                     )
             # > type 'QCM' rules
             # - QCM question must have len(answer_correct) equal to 1 ('a', 'b', 'c' or 'd')
-            if getattr(self, "type") == constants.QUESTION_TYPE_QCM:
-                if len(getattr(self, "answer_correct")) != 1:
-                    error_message = f"Valeur: '{getattr(self, 'answer_correct')}' doit être 'a', 'b', 'c' ou 'd'. Car type 'QCM'. Question: {self}"  # noqa
+            if self.type == constants.QUESTION_TYPE_QCM:
+                if len(self.answer_correct) != 1:
+                    error_message = f"Valeur: '{self.answer_correct}' doit être 'a', 'b', 'c' ou 'd'. Car type 'QCM'. Question: {self}"  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "answer_correct", error_message
                     )
             # > type 'QCM-RM' rules
             # - QCM-RM question must have len(answer_correct) larger than 1 and lower than 5
-            if getattr(self, "type") == constants.QUESTION_TYPE_QCM_RM:
-                if (len(getattr(self, "answer_correct")) < 2) or (
-                    len(getattr(self, "answer_correct")) > 4
-                ):
-                    error_message = f"Valeur: '{getattr(self, 'answer_correct')}' longueur doit être égale à 2, 3 or 4 ('ab' ... 'abcd'). Car type 'QCM-RM'. Question: {self}"  # noqa
+            if self.type == constants.QUESTION_TYPE_QCM_RM:
+                if (len(self.answer_correct) < 2) or (len(self.answer_correct) > 4):
+                    error_message = f"Valeur: '{self.answer_correct}' longueur doit être égale à 2, 3 or 4 ('ab' ... 'abcd'). Car type 'QCM-RM'. Question: {self}"  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "answer_correct", error_message
                     )
             # type 'VF' rules
             # - Vrai/Faux question must have answer_correct equal to 'a' or 'b'
             # - Vrai/Faux question must have has_ordered_answers checked
-            if getattr(self, "type") == constants.QUESTION_TYPE_VF:
-                if getattr(self, "answer_correct") not in ["a", "b"]:
-                    error_message = f"Valeur: '{getattr(self, 'answer_correct')}' doit être 'a' ou 'b'. Car type 'VF'. Question: {self}"  # noqa
+            if self.type == constants.QUESTION_TYPE_VF:
+                if self.answer_correct not in ["a", "b"]:
+                    error_message = f"Valeur: '{self.answer_correct}' doit être 'a' ou 'b'. Car type 'VF'. Question: {self}"  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "answer_correct", error_message
                     )
                 if not getattr(self, "has_ordered_answers"):
-                    error_message = f"Valeur: '{getattr(self, 'has_ordered_answers')}' doit être True. Car type 'VF'. Question: {self}"  # noqa
+                    error_message = f"Valeur: '{self.has_ordered_answers}' doit être True. Car type 'VF'. Question: {self}"  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "has_ordered_answers", error_message
                     )
             # publish rules
-            if not getattr(self, "publish"):
-                error_message = f"Valeur: '{getattr(self, 'publish')}' doit être True. Car status 'Validée'. Question: {self}"  # noqa
-                validation_errors = utilities.add_validation_error(
-                    validation_errors, "publish", error_message
-                )
+            self.publish = True
+            # if not getattr(self, "publish"):
+            #     error_message = f"Valeur: '{getattr(self, 'publish')}' doit être True. Car status 'Validée'. Question: {self}"  # noqa
+            #     validation_errors = utilities.add_validation_error(
+            #         validation_errors, "publish", error_message
+            #     )
         if bool(validation_errors):
             raise ValidationError(validation_errors)
 
@@ -828,7 +834,7 @@ class DailyStat(models.Model):
     quiz_feedback_count = models.PositiveIntegerField(
         default=0, help_text="Le nombre de feedbacks aux quizs"
     )
-    hour_split = JSONField(
+    hour_split = models.JSONField(
         default=constants.daily_stat_hour_split_jsonfield_default_value,
         help_text="Les statistiques par heure",
     )

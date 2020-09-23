@@ -152,6 +152,11 @@ SECURE_SSL_REDIRECT = False if os.getenv("SECURE_SSL_REDIRECT") == "False" else 
 SECURE_HSTS_SECONDS = os.getenv("SECURE_HSTS_SECONDS")
 
 
+# Django Import Export
+
+IMPORT_EXPORT_SKIP_ADMIN_LOG = True
+
+
 # Shell Plus
 
 SHELL_PLUS_IMPORTS = [

@@ -31,20 +31,23 @@ class Command(BaseCommand):
                     # cleanup dates
                     if type(notion_question_property) == notion.collection.NotionDate:
                         notion_question_property = notion_question_property.start
-                    # skip empty values
+                    # skip empty values (se baser sur les defaults plutot)
                     if notion_question_property not in ["", None, [], [""]]:
                         notion_question_dict[
                             question_field.name
                         ] = notion_question_property
-                except Exception as e:
-                    print(e)
+                except:  # noqa
                     pass
 
             # cleanup
             # - avoid id unique rule
             # - check category exists
             # - check tags exist (then delete them)
-            if "id" in notion_question_dict:
+            if "id" not in notion_question_dict:
+                validation_errors.append(
+                    ValidationError({"id": "Question sans id. vide ?"})
+                )
+            else:
                 notion_question_dict["id"] += 10000
             if "category" in notion_question_dict:
                 # error if unknown category : api.models.DoesNotExist: Category matching query does not exist.  # noqa
@@ -88,4 +91,7 @@ class Command(BaseCommand):
         # done
         print(validation_errors)
         # self.stdout.write(validation_errors)
-        self.stdout.write("\n".join([str(error) for error in validation_errors]))
+        if len(validation_errors):
+            self.stdout.write("\n".join([str(error) for error in validation_errors]))
+        else:
+            self.stdout.write("pas d'erreurs")
