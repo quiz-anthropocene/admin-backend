@@ -1,6 +1,7 @@
 import notion
 import collections
 
+from django.conf import settings
 from django.core.management import BaseCommand
 from django.core.exceptions import ValidationError
 
@@ -13,7 +14,7 @@ class Command(BaseCommand):
     Usage:
     - python manage.py notion_questions_import
 
-    TODO: check id duplicates before
+    TODO: optimise db queries and avoid Category & Tag calls ?
     """
 
     def handle(self, *args, **kwargs):
@@ -212,7 +213,7 @@ class Command(BaseCommand):
                     validation_errors.append(e)
 
         # done
-        questions_notion_info = f"Questions dans Notion : {len(notion_questions_list)}"
+        questions_notion_count = f"Questions dans Notion : {len(notion_questions_list)}"
         questions_ids_duplicate_message = f"ids 'en double' : {', '.join([str(question_id) for question_id in questions_ids_duplicate])}"  # noqa
         questions_ids_missing_message = f"ids 'manquants' : {', '.join([str(question_id) for question_id in questions_ids_missing])}"  # noqa
 
@@ -231,11 +232,18 @@ class Command(BaseCommand):
             else "aucune"
         )
 
+        if not settings.DEBUG:
+            utilities_notion.add_import_stats_row(
+                len(notion_questions_list),
+                len(questions_created),
+                len(questions_updated),
+            )
+
         self.stdout.write(
             "\n".join(
                 [
                     ">>> Info sur les questions",
-                    questions_notion_info,
+                    questions_notion_count,
                     questions_ids_duplicate_message,
                     questions_ids_missing_message,
                     "",
