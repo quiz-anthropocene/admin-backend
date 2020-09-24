@@ -66,6 +66,7 @@
 {% endblock %}
 
 {% block content %}
+<h1>Statistiques par quiz</h1>
 <form method="POST">
   {% csrf_token %}
   <label for ="id_field">quiz</label>
@@ -93,14 +94,22 @@
   <canvas id="myChart" style="margin-bottom: 70px; width: 80%; height: 20%;"></canvas>
 </div>
 
+<h3>Aide</h3>
+<ul>
+  <li><strong>quiz_answer_count</strong> : Nombre de fois que le quiz a été complété</li>
+  <li><strong>quiz_feedback_count</strong> : Nombre de réactions envoyées à la fin du quiz (👍 ou 👎)</li>
+</ul>
+
 <hr style="margin-top:20px;margin-bottom:20px" />
 
 <div style="padding:1rem;margin-bottom:1rem;background-color:#fff3cd">
   ⚠️ Rappel : Actuellement les quizs sont créés dans cet interface administrateur.<br>
-  Mais ils n'apparaîtront pas dans l'interface de l'application tout de suite !<br>
+  <strong>Mais ils n'apparaîtront pas tout de suite dans l'interface de l'application !</strong><br>
   Il faut les exporter au format YAML, et les rajouter dans le dossier /data/quizzes.yaml du code de l'application.<br>
   Plus de détails sur la procédure *actuelle* <a href="https://github.com/raphodn/know-your-planet/wiki/Import-de-la-donn%C3%A9e">ici</a>.
 </div>
+
+<hr style="margin-top:20px;margin-bottom:20px" />
 
 <!-- Render the rest of the ChangeList view by calling block.super -->
 {% block content_title %}{{ block.super }}{% endblock %}

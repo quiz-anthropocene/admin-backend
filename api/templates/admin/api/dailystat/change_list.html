@@ -5,6 +5,26 @@
 <!-- Override extrahead to add Chart.js -->
 {% block extrahead %}
 {{ block.super }}
+<style>
+  .loading {
+    height: 0;
+    width: 0;
+    padding: 5px;
+    border: 6px solid #ccc;
+    border-right-color: #888;
+    border-radius: 22px;
+    -webkit-animation: rotate 1s infinite linear;
+    /* left, top and position just for the demo! */
+  }
+
+  @-webkit-keyframes rotate {
+    /* 100% keyframe for  clockwise. 
+      use 0% instead for anticlockwise */
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+</style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.bundle.min.js"></script>
 <script>
@@ -61,30 +81,16 @@
     });
     // remove first h1
     document.getElementsByTagName("h1")[1].remove();
+    // add click listener
+    document.getElementById("action-button").addEventListener("click", function() {
+      document.getElementById("spinner").style.display = "inline-block";
+    });
   });
 </script>
 {% endblock %}
 
 {% block content %}
-<p>
-  Les DailyStats sont générées à partir des stats d'usage stockées dans QuestionAnswerEvent, QuestionFeedbackEvent, <strike>QuizAnswerEvent et QuizFeedbackEvent</strike>.<br />
-</p>
-<p>
-  Un script, lancé manuellement, permet d'aggréger ces chiffres.<br />
-  Dernière date de lancement du script : <strong>{{ daily_stat_last_date | date }}</strong>
-</p>
-<p>
-  Pour lancer le script, cliquer sur le bouton ci-dessous. 👇<br />
-  ⚠️ Veuillez patienter, cela peut prendre du temps.
-</p>
-<form method="POST">
-  {% csrf_token %}
-  <input type="hidden" name="run_generate_daily_stats_script" value="1" />
-  <input type="submit" value="Lancer le script">
-</form>
-
-<hr style="margin-top:20px;margin-bottom:20px" />
-
+<h1>Statistiques d'usage</h1>
 <form method="POST">
   {% csrf_token %}
   <label for ="id_field">champ</label>
@@ -105,6 +111,39 @@
 <div style="width: 100%">
   <canvas id="myChart" style="margin-bottom: 70px; width: 80%; height: 20%;"></canvas>
 </div>
+
+<h3>Aide</h3>
+<ul>
+  <li><strong>question_answer_count</strong> : Nombre de questions répondues (à la fois au sein d'un quiz ou individuellement)</li>
+  <li><strong>question_feedback_count</strong> : Nombre de réactions envoyées (👍 ou 👎)</li>
+  <li>vous souhaitez voir le nombre de quizs répondus (complétés) ? Voir la page d'admin Quizs</li>
+  <li>vous souhaitez voir le nombre de réponses ou de feedbacks ou le taux de réussite par question ? Voir la page d'admin Questions</li>
+</ul>
+
+<hr style="margin-top:20px;margin-bottom:20px" />
+
+<h1>Mettre à jour les statistiques d'usage</h1>
+<p>
+  Les DailyStats sont générées à partir des statistiques d'usage stockées dans
+  QuestionAnswerEvent, QuestionFeedbackEvent, <strike>QuizAnswerEvent et QuizFeedbackEvent</strike>.<br />
+</p>
+<p>
+  Un script, lancé manuellement, permet d'aggréger ces chiffres.
+  Dernière date de lancement du script : <strong>{{ daily_stat_last_date | date }}</strong>
+</p>
+<p>
+  Pour lancer le script, cliquer sur le bouton ci-dessous. 👇
+</p>
+<form method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="run_generate_daily_stats_script" value="1" />
+  <input id="action-button" type="submit" value="Lancer le script">
+  <span id="spinner" class="loading" role="status" style="display:none"></span>
+  <br />
+  <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
+</form>
+
+<hr style="margin-top:20px;margin-bottom:20px" />
 
 <!-- Render the rest of the ChangeList view by calling block.super -->
 {% block content_title %}{{ block.super }}{% endblock %}

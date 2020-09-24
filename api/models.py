@@ -293,7 +293,7 @@ class Question(models.Model):
         if self.validation_status == constants.QUESTION_VALIDATION_STATUS_OK:
             # > category rules
             if self.category is None:
-                error_message = f"Valeur: '{self.category}' n'est pas une catégorie valide. Question: {self}"  # noqa
+                error_message = f"Valeur : '{self.category}' n'est pas une catégorie valide. Question {self.id}"  # noqa
                 validation_errors = utilities.add_validation_error(
                     validation_errors, "category", error_message
                 )
@@ -310,7 +310,7 @@ class Question(models.Model):
                 if getattr(self, choice_field[0]) not in getattr(
                     constants, choice_field[1]
                 ):
-                    error_message = f"Valeur: '{getattr(self, choice_field[0])}' n'est pas bonne. Car pas dans les choix proposés. Question: {self}"  # noqa
+                    error_message = f"Valeur : '{getattr(self, choice_field[0])}' n'est pas bonne. Car pas dans les choix proposés. Question {self.id}"  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, choice_field[0], error_message
                     )
@@ -318,7 +318,7 @@ class Question(models.Model):
             # - QCM question must have len(answer_correct) equal to 1 ('a', 'b', 'c' or 'd')
             if self.type == constants.QUESTION_TYPE_QCM:
                 if len(self.answer_correct) != 1:
-                    error_message = f"Valeur: '{self.answer_correct}' doit être 'a', 'b', 'c' ou 'd'. Car type 'QCM'. Question: {self}"  # noqa
+                    error_message = f"Valeur : '{self.answer_correct}' doit être 'a', 'b', 'c' ou 'd'. Car type 'QCM'. Question {self.id}"  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "answer_correct", error_message
                     )
@@ -326,7 +326,7 @@ class Question(models.Model):
             # - QCM-RM question must have len(answer_correct) larger than 1 and lower than 5
             if self.type == constants.QUESTION_TYPE_QCM_RM:
                 if (len(self.answer_correct) < 2) or (len(self.answer_correct) > 4):
-                    error_message = f"Valeur: '{self.answer_correct}' longueur doit être égale à 2, 3 or 4 ('ab' ... 'abcd'). Car type 'QCM-RM'. Question: {self}"  # noqa
+                    error_message = f"Valeur : '{self.answer_correct}' longueur doit être égale à 2, 3 or 4 ('ab' ... 'abcd'). Car type 'QCM-RM'. Question {self.id}"  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "answer_correct", error_message
                     )
@@ -335,19 +335,19 @@ class Question(models.Model):
             # - Vrai/Faux question must have has_ordered_answers checked
             if self.type == constants.QUESTION_TYPE_VF:
                 if self.answer_correct not in ["a", "b"]:
-                    error_message = f"Valeur: '{self.answer_correct}' doit être 'a' ou 'b'. Car type 'VF'. Question: {self}"  # noqa
+                    error_message = f"Valeur : '{self.answer_correct}' doit être 'a' ou 'b'. Car type 'VF'. Question {self.id}"  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "answer_correct", error_message
                     )
                 if not getattr(self, "has_ordered_answers"):
-                    error_message = f"Valeur: '{self.has_ordered_answers}' doit être True. Car type 'VF'. Question: {self}"  # noqa
+                    error_message = f"Valeur : '{self.has_ordered_answers}' doit être True. Car type 'VF'. Question {self.id}"  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "has_ordered_answers", error_message
                     )
             # publish rules
             self.publish = True
             # if not getattr(self, "publish"):
-            #     error_message = f"Valeur: '{getattr(self, 'publish')}' doit être True. Car status 'Validée'. Question: {self}"  # noqa
+            #     error_message = f"Valeur : '{getattr(self, 'publish')}' doit être True. Car status 'Validée'. Question {self.id}"  # noqa
             #     validation_errors = utilities.add_validation_error(
             #         validation_errors, "publish", error_message
             #     )
@@ -364,7 +364,7 @@ def question_validate_fields(sender, instance, **kwargs):
     if kwargs.get("raw"):
         Question.clean(instance)
     if kwargs.get("raw") and not getattr(instance, "id"):
-        raise ValidationError({"id": f"Valeur: 'empty'. " f"Question: {instance}"})
+        raise ValidationError({"id": f"Valeur : 'empty'. " f"Question : {instance.id}"})
 
 
 def question_create_agg_stat_instance(sender, instance, created, **kwargs):
@@ -598,7 +598,7 @@ class Quiz(models.Model):
                 raise ValidationError(
                     {
                         "questions": f"Un quiz 'published' doit comporter au moins 1 question. "
-                        f"Quiz: {self}"
+                        f"Quiz {self.id}"
                     }
                 )
             # - questions must be published
@@ -612,8 +612,8 @@ class Quiz(models.Model):
                 raise ValidationError(
                     {
                         "questions": f"Toutes les questions doivent être 'published'. "
-                        f"Unpublished questions: {[el for el in list(quiz_questions_ids) if el not in list(quiz_questions_published_ids)]}. "  # noqa
-                        f"Quiz: {self}"
+                        f"Unpublished questions : {[el for el in list(quiz_questions_ids) if el not in list(quiz_questions_published_ids)]}. "  # noqa
+                        f"Quiz {self.id}"
                     }
                 )
 
@@ -627,7 +627,7 @@ def quiz_validate_fields(sender, instance, **kwargs):
     # if kwargs.get("raw"):
     #     Quiz.clean(instance) # won't work because Quiz doesn't exist yet, our custom clean() will fail  # noqa
     if kwargs.get("raw") and not getattr(instance, "id"):
-        raise ValidationError({"id": f"Valeur: 'empty'. " f"Quiz: {instance}"})
+        raise ValidationError({"id": f"Valeur : 'empty'. " f"Quiz: {instance}"})
 
 
 def quiz_validate_m2m_fields(sender, **kwargs):

@@ -1,5 +1,6 @@
 import csv
 import json
+from io import StringIO
 from datetime import datetime
 
 # from io import StringIO
@@ -7,13 +8,14 @@ from datetime import datetime
 from django.http import HttpResponse
 from django.conf import settings
 from django.contrib import admin
+from django.contrib.admin import AdminSite
 from django.core import serializers, management
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.html import mark_safe
 
 from import_export import fields, resources
 from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
-from import_export.admin import ImportExportModelAdmin, DEFAULT_FORMATS
+from import_export.admin import ImportMixin, DEFAULT_FORMATS
 
 # from django.core.management import call_command
 
@@ -234,7 +236,7 @@ class QuestionResource(resources.ModelResource):
         report_skipped = False
 
 
-class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
+class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
     resource_class = QuestionResource
     list_display = (
         "id",
@@ -280,6 +282,8 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
         "like_count_agg",
         "dislike_count_agg",
     )
+
+    change_list_template = "admin/api/question/change_list_with_import.html"
 
     def has_add_permission(self, request, obj=None):
         return False
@@ -331,10 +335,28 @@ class QuestionAdmin(ImportExportModelAdmin, admin.ModelAdmin, ExportMixin):
     )
     show_answer_image.allow_tags = True
 
-    # TODO: cannot have a custom changelist_view. seems to be overridden by django-import-export.
+    def changelist_view(self, request, extra_context=None):
+        """
+        Corresponding template in templates/admin/api/question/change_list_with_import.html
+        """
+
+        notion_questions_validation = []
+
+        if request.POST.get("run_notion_questions_import_script", False):
+            out = StringIO()
+            management.call_command("notion_questions_import", stdout=out)
+            notion_questions_validation = out.getvalue()
+            notion_questions_validation = notion_questions_validation.split("\n")
+
+        extra_context = extra_context or {
+            "notion_questions_validation": notion_questions_validation
+        }
+
+        # Call the superclass changelist_view to render the page
+        return super().changelist_view(request, extra_context=extra_context)
 
 
-class CategoryAdmin(admin.ModelAdmin, ExportMixin):
+class CategoryAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "name",
@@ -350,7 +372,7 @@ class CategoryAdmin(admin.ModelAdmin, ExportMixin):
     ]
 
 
-class TagAdmin(admin.ModelAdmin, ExportMixin):
+class TagAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "name",
@@ -366,7 +388,7 @@ class TagAdmin(admin.ModelAdmin, ExportMixin):
     ]
 
 
-class QuizAdmin(admin.ModelAdmin, ExportMixin):
+class QuizAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "name",
@@ -466,7 +488,7 @@ class QuizAdmin(admin.ModelAdmin, ExportMixin):
         return super().changelist_view(request, extra_context=extra_context)
 
 
-class QuestionAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
+class QuestionAnswerEventAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "question",
@@ -521,7 +543,7 @@ class QuestionAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
         return super().changelist_view(request, extra_context=extra_context)
 
 
-class QuestionFeedbackEventAdmin(admin.ModelAdmin, ExportMixin):
+class QuestionFeedbackEventAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "question",
@@ -551,7 +573,7 @@ class QuestionFeedbackEventAdmin(admin.ModelAdmin, ExportMixin):
         return False
 
 
-class QuestionAggStatAdmin(admin.ModelAdmin, ExportMixin):
+class QuestionAggStatAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "question_id",
         "answer_count",
@@ -573,7 +595,7 @@ class QuestionAggStatAdmin(admin.ModelAdmin, ExportMixin):
         return False
 
 
-class QuizAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
+class QuizAnswerEventAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "quiz",
@@ -624,7 +646,7 @@ class QuizAnswerEventAdmin(admin.ModelAdmin, ExportMixin):
         return super().changelist_view(request, extra_context=extra_context)
 
 
-class QuizFeedbackEventAdmin(admin.ModelAdmin, ExportMixin):
+class QuizFeedbackEventAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "quiz",
@@ -653,7 +675,7 @@ class QuizFeedbackEventAdmin(admin.ModelAdmin, ExportMixin):
         return False
 
 
-class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
+class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "date",
@@ -727,7 +749,7 @@ class DailyStatAdmin(admin.ModelAdmin, ExportMixin):
         return super().changelist_view(request, extra_context=extra_context)
 
 
-class ContributionAdmin(admin.ModelAdmin, ExportMixin):
+class ContributionAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "text",
@@ -749,7 +771,7 @@ class ContributionAdmin(admin.ModelAdmin, ExportMixin):
         return False
 
 
-class GlossaryAdmin(admin.ModelAdmin, ExportMixin):
+class GlossaryAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "name",
@@ -795,16 +817,23 @@ class LogEntryAdmin(admin.ModelAdmin):
         return False
 
 
-admin.site.register(Question, QuestionAdmin)
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(Tag, TagAdmin)
-admin.site.register(Quiz, QuizAdmin)
-admin.site.register(QuestionAnswerEvent, QuestionAnswerEventAdmin)
-admin.site.register(QuestionFeedbackEvent, QuestionFeedbackEventAdmin)
-admin.site.register(QuestionAggStat, QuestionAggStatAdmin)
-admin.site.register(QuizAnswerEvent, QuizAnswerEventAdmin)
-admin.site.register(QuizFeedbackEvent, QuizFeedbackEventAdmin)
-admin.site.register(DailyStat, DailyStatAdmin)
-admin.site.register(Contribution, ContributionAdmin)
-admin.site.register(Glossary, GlossaryAdmin)
-admin.site.register(admin.models.LogEntry, LogEntryAdmin)
+class MyAdminSite(AdminSite):
+    site_header = "Know Your Planet administration"
+    enable_nav_sidebar = False
+
+
+admin_site = MyAdminSite(name="myadmin")
+
+admin_site.register(Question, QuestionAdmin)
+admin_site.register(Category, CategoryAdmin)
+admin_site.register(Tag, TagAdmin)
+admin_site.register(Quiz, QuizAdmin)
+admin_site.register(QuestionAnswerEvent, QuestionAnswerEventAdmin)
+admin_site.register(QuestionFeedbackEvent, QuestionFeedbackEventAdmin)
+admin_site.register(QuestionAggStat, QuestionAggStatAdmin)
+admin_site.register(QuizAnswerEvent, QuizAnswerEventAdmin)
+admin_site.register(QuizFeedbackEvent, QuizFeedbackEventAdmin)
+admin_site.register(DailyStat, DailyStatAdmin)
+admin_site.register(Contribution, ContributionAdmin)
+admin_site.register(Glossary, GlossaryAdmin)
+admin_site.register(admin.models.LogEntry, LogEntryAdmin)
