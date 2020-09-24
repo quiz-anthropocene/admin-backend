@@ -4,18 +4,72 @@
 
 {% block extrahead %}
 {{ block.super }}
+<style>
+  .loading {
+    height: 0;
+    width: 0;
+    padding: 5px;
+    border: 6px solid #ccc;
+    border-right-color: #888;
+    border-radius: 22px;
+    -webkit-animation: rotate 1s infinite linear;
+    /* left, top and position just for the demo! */
+  }
+
+  @-webkit-keyframes rotate {
+    /* 100% keyframe for  clockwise. 
+      use 0% instead for anticlockwise */
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+</style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // remove first h1
     document.getElementsByTagName("h1")[1].remove();
+    // add click listener
+    document.getElementById("action-button").addEventListener("click", function() {
+      document.getElementById("spinner").style.display = "inline-block";
+      document.getElementById("error-section").style.display = "none";
+    });
   });
 </script>
 {% endblock %}
 
 {% block content %}
+<h1>Importer les questions depuis Notion</h1>
+<p>
+  Les questions sont créés et validées dans Notion, avant d'être importés dans l'admin (afin d'y créer les quizs).
+</p>
+<form method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="run_notion_questions_import_script" value="1" />
+  <input id="action-button" type="submit" value="Lancer l'import">
+  <span id="spinner" class="loading" role="status" style="display:none"></span>
+  <br />
+  <i>⚠️ Veuillez patienter, cela peut prendre du temps (1 à 2 minutes)</i>
+</form>
+
+{% if notion_questions_validation %}
+<section id="error-section">
+  <hr style="margin-top:20px;margin-bottom:20px" />
+  <h4>Résultats : </h4>
+  {% if notion_questions_validation %}
+    <ul>
+    {% for error in notion_questions_validation %}
+      <li>{{ error }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+</section>
+{% endif %}
+
+<hr style="margin-top:20px;margin-bottom:20px" />
+
 <div style="padding:1rem;margin-bottom:1rem;background-color:#fff3cd">
-  ⚠️ Rappel : Actuellement les quizs sont créés dans cet interface administrateur.<br>
-  Mais ils n'apparaîtront pas dans l'interface de l'application tout de suite !<br>
+  ⚠️ Rappel : Actuellement les questions ne sont pas créés dans cet interface administrateur, mais dans l'application Notion (<a href="https://www.notion.so/quizplanete/d3a8e7d8c3bd41f89636302440b9629a?v=97c85b2c9c71456f919519478c6a57db" target=_blank>ici</a>).<br>
+  <strong>Une fois importées ici, elles n'apparaîtront pas pour autant tout de suite dans l'interface de l'application !</strong><br>
   Il faut les exporter au format YAML, et les rajouter dans le dossier /data/questions.yaml du code de l'application.<br>
   Plus de détails sur la procédure *actuelle* <a href="https://github.com/raphodn/know-your-planet/wiki/Import-de-la-donn%C3%A9e">ici</a>.
 </div>

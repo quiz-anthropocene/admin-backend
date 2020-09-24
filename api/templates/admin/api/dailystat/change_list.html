@@ -5,6 +5,26 @@
 <!-- Override extrahead to add Chart.js -->
 {% block extrahead %}
 {{ block.super }}
+<style>
+  .loading {
+    height: 0;
+    width: 0;
+    padding: 5px;
+    border: 6px solid #ccc;
+    border-right-color: #888;
+    border-radius: 22px;
+    -webkit-animation: rotate 1s infinite linear;
+    /* left, top and position just for the demo! */
+  }
+
+  @-webkit-keyframes rotate {
+    /* 100% keyframe for  clockwise. 
+      use 0% instead for anticlockwise */
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+</style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.bundle.min.js"></script>
 <script>
@@ -61,6 +81,10 @@
     });
     // remove first h1
     document.getElementsByTagName("h1")[1].remove();
+    // add click listener
+    document.getElementById("action-button").addEventListener("click", function() {
+      document.getElementById("spinner").style.display = "inline-block";
+    });
   });
 </script>
 {% endblock %}
@@ -113,8 +137,10 @@
 <form method="POST">
   {% csrf_token %}
   <input type="hidden" name="run_generate_daily_stats_script" value="1" />
-  <input type="submit" value="Lancer le script"><br />
-  <i>⚠️ Veuillez patienter, cela peut prendre du temps.</i>
+  <input id="action-button" type="submit" value="Lancer le script">
+  <span id="spinner" class="loading" role="status" style="display:none"></span>
+  <br />
+  <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
 </form>
 
 <hr style="margin-top:20px;margin-bottom:20px" />

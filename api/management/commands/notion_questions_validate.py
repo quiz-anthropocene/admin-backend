@@ -22,7 +22,7 @@ class Command(BaseCommand):
         for notion_question_row in notion_questions_list:
             notion_question_dict = dict()
 
-            # fill dict with row
+            # fill dict with notion_question_row
             for question_field in Question._meta.get_fields():
                 try:
                     notion_question_property = notion_question_row.get_property(

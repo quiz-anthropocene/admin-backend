@@ -1,5 +1,6 @@
 import csv
 import json
+from io import StringIO
 from datetime import datetime
 
 # from io import StringIO
@@ -339,7 +340,17 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         Corresponding template in templates/admin/api/question/change_list_with_import.html
         """
 
-        extra_context = extra_context or {}
+        notion_questions_validation = []
+
+        if request.POST.get("run_notion_questions_import_script", False):
+            out = StringIO()
+            management.call_command("notion_questions_import", stdout=out)
+            notion_questions_validation = out.getvalue()
+            notion_questions_validation = notion_questions_validation.split("\n")
+
+        extra_context = extra_context or {
+            "notion_questions_validation": notion_questions_validation
+        }
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)
