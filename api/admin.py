@@ -346,7 +346,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
             out = StringIO()
             management.call_command("notion_questions_import", stdout=out)
             notion_questions_validation = out.getvalue()
-            notion_questions_validation = notion_questions_validation.split("\n")
+            notion_questions_validation = notion_questions_validation.split("|||")
 
         extra_context = extra_context or {
             "notion_questions_validation": notion_questions_validation
