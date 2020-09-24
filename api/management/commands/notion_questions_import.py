@@ -74,13 +74,18 @@ class Command(BaseCommand):
 
             # cleanup fields
             # - check id exists
+            # - field type --> "" if None
             # - field difficulty to int
-            # - field added --> created time if none --> to date
-            # - field validator --> "" if none
+            # - field added --> created time if None --> to date
+            # - field validator --> "" if None
             if notion_question_dict["id"] is None:
                 question_validation_errors.append(
                     ValidationError({"id": "Question sans id. vide ?"})
                 )
+            else:
+                print(notion_question_dict["id"], notion_question_dict["type"])
+            if notion_question_dict["type"] is None:
+                notion_question_dict["type"] = ""
             if type(notion_question_dict["difficulty"]) == str:
                 notion_question_dict["difficulty"] = int(
                     notion_question_dict["difficulty"]
@@ -204,7 +209,7 @@ class Command(BaseCommand):
                         # tag field
                         if db_question.tags.count() != len(notion_question_tag_objects):
                             # track changes
-                            db_question_tag_update_message = f"Question {db_question.id} : champ 'tags' : {list(db_question.tags.values_list('name', flat=True))} --> {list(notion_question_tag_objects.values_list('name', flat=True))}"  # noqa
+                            db_question_tag_update_message = f"Question {db_question.id} : champ 'tags' : {list(db_question.tags.values_list('name', flat=True))} --> {notion_question_tag_objects if (type(notion_question_tag_objects) == list) else list(notion_question_tag_objects.values_list('name', flat=True))}"  # noqa
                             questions_updates.append(db_question_tag_update_message)
                             questions_updated.add(db_question.id)
                             # update tags
