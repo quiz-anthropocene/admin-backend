@@ -13,15 +13,14 @@
 {% endblock %}
 
 {% block content %}
-
-<!-- <hr style="margin-top:20px;margin-bottom:20px" /> -->
-
 <div style="padding:1rem;margin-bottom:1rem;background-color:#fff3cd">
   ⚠️ Rappel : Actuellement les catégories sont créés dans cet interface administrateur.<br>
   Mais ils n'apparaîtront pas dans l'interface de l'application tout de suite !<br>
   Il faut les exporter au format YAML, et les rajouter dans le dossier /data/categories.yaml du code de l'application.<br>
   Plus de détails sur la procédure *actuelle* <a href="https://github.com/raphodn/know-your-planet/wiki/Import-de-la-donn%C3%A9e">ici</a>.
 </div>
+
+<hr style="margin-top:20px;margin-bottom:20px" />
 
 <!-- Render the rest of the ChangeList view by calling block.super -->
 {% block content_title %}{{ block.super }}{% endblock %}

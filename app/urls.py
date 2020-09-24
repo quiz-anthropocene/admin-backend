@@ -1,11 +1,11 @@
-from django.contrib import admin
 from django.urls import path, include
 
 from app import views
+from api.admin import admin_site
 
 
 urlpatterns = [
     path("", views.app_home),
-    path("admin/", admin.site.urls),
+    path("admin/", admin_site.urls),
     path("api/", include("api.urls")),
 ]

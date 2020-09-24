@@ -2,10 +2,17 @@
 
 {% load static %}
 
+{% block extrahead %}
+{{ block.super }}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // remove first h1
+    document.getElementsByTagName("h1")[1].remove();
+  });
+</script>
+{% endblock %}
+
 {% block content %}
-
-<hr style="margin-top:20px;margin-bottom:20px" />
-
 <div style="padding:1rem;margin-bottom:1rem;background-color:#fff3cd">
   ⚠️ Rappel : Actuellement les quizs sont créés dans cet interface administrateur.<br>
   Mais ils n'apparaîtront pas dans l'interface de l'application tout de suite !<br>
@@ -13,7 +20,15 @@
   Plus de détails sur la procédure *actuelle* <a href="https://github.com/raphodn/know-your-planet/wiki/Import-de-la-donn%C3%A9e">ici</a>.
 </div>
 
+<hr style="margin-top:20px;margin-bottom:20px" />
+
 <!-- Render the rest of the ChangeList view by calling block.super -->
 {% block content_title %}{{ block.super }}{% endblock %}
 {{ block.super }}
+{% endblock %}
+
+<!-- django-import-export : https://github.com/django-import-export/django-import-export/blob/master/import_export/templates/admin/import_export/change_list_import.html -->
+{% block object-tools-items %}
+  {% include "admin/import_export/change_list_import_item.html" %}
+  {{ block.super }}
 {% endblock %}

@@ -66,25 +66,7 @@
 {% endblock %}
 
 {% block content %}
-<p>
-  Les DailyStats sont générées à partir des stats d'usage stockées dans QuestionAnswerEvent, QuestionFeedbackEvent, <strike>QuizAnswerEvent et QuizFeedbackEvent</strike>.<br />
-</p>
-<p>
-  Un script, lancé manuellement, permet d'aggréger ces chiffres.<br />
-  Dernière date de lancement du script : <strong>{{ daily_stat_last_date | date }}</strong>
-</p>
-<p>
-  Pour lancer le script, cliquer sur le bouton ci-dessous. 👇<br />
-  ⚠️ Veuillez patienter, cela peut prendre du temps.
-</p>
-<form method="POST">
-  {% csrf_token %}
-  <input type="hidden" name="run_generate_daily_stats_script" value="1" />
-  <input type="submit" value="Lancer le script">
-</form>
-
-<hr style="margin-top:20px;margin-bottom:20px" />
-
+<h1>Statistiques d'usage</h1>
 <form method="POST">
   {% csrf_token %}
   <label for ="id_field">champ</label>
@@ -105,6 +87,37 @@
 <div style="width: 100%">
   <canvas id="myChart" style="margin-bottom: 70px; width: 80%; height: 20%;"></canvas>
 </div>
+
+<h3>Aide</h3>
+<ul>
+  <li><strong>question_answer_count</strong> : Nombre de questions répondues (à la fois au sein d'un quiz ou individuellement)</li>
+  <li><strong>question_feedback_count</strong> : Nombre de réactions envoyées (👍 ou 👎)</li>
+  <li>vous souhaitez voir le nombre de quizs répondus (complétés) ? Voir la page d'admin Quizs</li>
+  <li>vous souhaitez voir le nombre de réponses ou de feedbacks ou le taux de réussite par question ? Voir la page d'admin Questions</li>
+</ul>
+
+<hr style="margin-top:20px;margin-bottom:20px" />
+
+<h1>Mettre à jour les statistiques d'usage</h1>
+<p>
+  Les DailyStats sont générées à partir des statistiques d'usage stockées dans
+  QuestionAnswerEvent, QuestionFeedbackEvent, <strike>QuizAnswerEvent et QuizFeedbackEvent</strike>.<br />
+</p>
+<p>
+  Un script, lancé manuellement, permet d'aggréger ces chiffres.
+  Dernière date de lancement du script : <strong>{{ daily_stat_last_date | date }}</strong>
+</p>
+<p>
+  Pour lancer le script, cliquer sur le bouton ci-dessous. 👇
+</p>
+<form method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="run_generate_daily_stats_script" value="1" />
+  <input type="submit" value="Lancer le script"><br />
+  <i>⚠️ Veuillez patienter, cela peut prendre du temps.</i>
+</form>
+
+<hr style="margin-top:20px;margin-bottom:20px" />
 
 <!-- Render the rest of the ChangeList view by calling block.super -->
 {% block content_title %}{{ block.super }}{% endblock %}
