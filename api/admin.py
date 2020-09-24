@@ -344,7 +344,8 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
 
         if request.POST.get("run_notion_questions_import_script", False):
             out = StringIO()
-            management.call_command("notion_questions_import", stdout=out)
+            scope = request.POST.get("run_notion_questions_import_script")
+            management.call_command("notion_questions_import", scope, stdout=out)
             notion_questions_validation = out.getvalue()
             notion_questions_validation = notion_questions_validation.split("|||")
 

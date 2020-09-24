@@ -16,11 +16,20 @@ class Command(BaseCommand):
     """
     Usage:
     - python manage.py notion_questions_import
+    - python manage.py notion_questions_import 1
 
     TODO: optimise db queries and avoid Category & Tag calls ?
+
+    Help : ||| ? delimeter to show lists (string split) in the template
     """
 
-    def handle(self, *args, **kwargs):
+    def add_arguments(self, parser):
+        parser.add_argument(
+            "scope", type=int, help="0 = all, 1 = first X, 2 = second X"
+        )
+
+    def handle(self, *args, **options):
+        scope = options["scope"]
         notion_questions_list = []
         questions_ids_duplicate = []
         questions_ids_missing = []
@@ -66,7 +75,17 @@ class Command(BaseCommand):
         print("--- question ids : %s seconds ---" % (time.time() - start_time))
         start_time = time.time()
 
-        for notion_question_row in notion_questions_list:
+        # reduce scope because of timeouts on Heroku (30 seconds)
+        if scope == 1:
+            notion_questions_list_scope = notion_questions_list[:200]
+        elif scope == 2:
+            notion_questions_list_scope = notion_questions_list[200:400]
+        elif scope == 3:
+            notion_questions_list_scope = notion_questions_list[400:]
+        else:
+            notion_questions_list_scope = notion_questions_list
+
+        for notion_question_row in notion_questions_list_scope:
             notion_question_dict = dict()
             notion_question_tag_objects = []
             question_validation_errors = []
@@ -247,16 +266,24 @@ class Command(BaseCommand):
         start_time = time.time()
 
         # done
-        questions_notion_count = f"Questions dans Notion : {len(notion_questions_list)}"
+        questions_notion_count = (
+            f"Nombre de questions dans Notion : {len(notion_questions_list)}"
+        )
+        questions_scope_count = f"Nombre de questions prises en compte ici (scope réduit ?) : {len(notion_questions_list_scope)}"  # noqa
         questions_ids_duplicate_message = f"ids 'en double' : {', '.join([str(question_id) for question_id in questions_ids_duplicate])}"  # noqa
         questions_ids_missing_message = f"ids 'manquants' : {', '.join([str(question_id) for question_id in questions_ids_missing])}"  # noqa
 
-        questions_created_message = f"Questions ajoutées : {len(questions_created)}"
+        questions_created_message = (
+            f"Nombre de questions ajoutées : {len(questions_created)}"
+        )
         if len(questions_created):
             questions_created_message += f" : {', '.join([str(question_id) for question_id in questions_created])}"  # noqa
 
-        questions_updated_message = f"Questions modifiées : {len(questions_updated)}"
-        questions_updates_message = "|||".join(questions_updates)
+        questions_updated_message = (
+            f"Nombre de questions modifiées : {len(questions_updated)}"
+        )
+        if len(questions_updates):
+            questions_updated_message += "|||" + "|||".join(questions_updates)
 
         validation_errors_message = (
             f"Erreurs : {len(validation_errors)}"
@@ -283,6 +310,7 @@ class Command(BaseCommand):
                 [
                     ">>> Info sur les questions",
                     questions_notion_count,
+                    questions_scope_count,
                     questions_ids_duplicate_message,
                     questions_ids_missing_message,
                     "",
@@ -291,7 +319,6 @@ class Command(BaseCommand):
                     "",
                     ">>> Info sur les questions modifiées",
                     questions_updated_message,
-                    questions_updates_message,
                     "",
                     ">>> Erreurs lors de l'import",
                     validation_errors_message,

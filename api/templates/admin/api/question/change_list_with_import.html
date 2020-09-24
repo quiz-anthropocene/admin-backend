@@ -29,10 +29,13 @@
     // remove first h1
     document.getElementsByTagName("h1")[1].remove();
     // add click listener
-    document.getElementById("action-button").addEventListener("click", function() {
-      document.getElementById("spinner").style.display = "inline-block";
-      document.getElementById("error-section").style.display = "none";
-    });
+    const elements = document.getElementsByClassName("action-button");
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].addEventListener("click", function() {
+        document.getElementById("spinner").style.display = "inline-block";
+        document.getElementById("error-section").style.display = "none";
+      });
+    }
   });
 </script>
 {% endblock %}
@@ -42,26 +45,38 @@
 <p>
   Les questions sont créés et validées dans Notion, avant d'être importés dans l'admin (afin d'y créer les quizs).
 </p>
+<p>
+  Pourquoi plusieurs boutons ? L'import est séparé en plusieurs actions car il prend trop de temps sinon (et fait parfois planter le serveur).
+</p>
 <form method="POST">
   {% csrf_token %}
   <input type="hidden" name="run_notion_questions_import_script" value="1" />
-  <input id="action-button" type="submit" value="Lancer l'import">
-  <span id="spinner" class="loading" role="status" style="display:none"></span>
-  <br />
-  <i>⚠️ Veuillez patienter, cela peut prendre du temps (1 à 2 minutes)</i>
+  <input class="action-button" type="submit" value="Lancer l'import des questions 1 à 200">
 </form>
+<form method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="run_notion_questions_import_script" value="2" />
+  <input class="action-button" type="submit" value="Lancer l'import des questions 200 à 400">
+</form>
+<form method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="run_notion_questions_import_script" value="3" />
+  <input class="action-button" type="submit" value="Lancer l'import des questions 400 à ...">
+</form>
+
+<i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
+
+<div id="spinner" class="loading" role="status" style="display:none"></div>
 
 {% if notion_questions_validation %}
 <section id="error-section">
   <hr style="margin-top:20px;margin-bottom:20px" />
   <h4>Résultats : </h4>
-  {% if notion_questions_validation %}
-    <ul>
-    {% for error in notion_questions_validation %}
-      <li>{{ error }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
+  <ul>
+  {% for error in notion_questions_validation %}
+    <li>{{ error }}</li>
+  {% endfor %}
+  </ul>
 </section>
 {% endif %}
 
