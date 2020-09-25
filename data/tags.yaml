@@ -990,3 +990,9 @@
     name: Cygne noir
     description: ''
     created: 2020-09-18
+- model: api.tag
+  pk: 193
+  fields:
+    name: Coraux
+    description: ''
+    created: 2020-09-22
