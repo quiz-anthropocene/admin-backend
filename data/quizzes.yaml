@@ -58,7 +58,7 @@
       millénaires en arrière !"
     conclusion: ''
     author: Vincent Mignerot
-    image_background_url: https://vincent-mignerot.fr/wp-content/uploads/2019/08/Vincent-Mignerot.jpg
+    image_background_url: https://ssl.c.photoshelter.com/img-get/I0000mmApiLjmiOw/s/750/750/GPE-5756.jpg
     publish: true
     created: 2020-06-26
     questions:
@@ -70,7 +70,10 @@
     - 552
     - 553
     - 555
-    - 556
+    - 574
+    - 575
+    - 548
+    - 547
     tags:
     - 185
 - model: api.quiz
@@ -445,3 +448,31 @@
     - 6
     - 49
     - 76
+- model: api.quiz
+  pk: 18
+  fields:
+    name: Le quiz de Laurent Testot
+    introduction: 'Journaliste scientifique, conférencier et essayiste, Laurent Testot
+      est spécialiste de l''histoire globale. Son essai Cataclysmes - une histoire
+      environnementale de l’humanité, primé par l’Académie Française, retrace l’histoire
+      des interactions entre l''humain et la planète sur le temps long. Il est aussi
+      l’auteur de Homo Canis - une histoire des chiens et de l’humanité et : La Nouvelle
+      Histoire du Monde. Il a récemment dirigé, avec Laurent Aillet, l''ouvrage Collapsus
+      - changer ou disparaître ? Le vrai bilan sur notre planète. Voici la sélection
+      de questions que Laurent nous a préparées à partir de ses publications.'
+    conclusion: ''
+    author: Laurent Testot
+    image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
+    publish: false
+    created: 2020-09-23
+    questions:
+    - 577
+    - 578
+    - 579
+    - 580
+    - 573
+    - 576
+    - 571
+    - 572
+    tags:
+    - 185
