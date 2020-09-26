@@ -33,7 +33,7 @@
     for (var i = 0; i < elements.length; i++) {
       elements[i].addEventListener("click", function() {
         document.getElementById("spinner").style.display = "inline-block";
-        document.getElementById("error-section").style.display = "none";
+        document.getElementById("result-section").style.display = "none";
       });
     }
   });
@@ -50,17 +50,17 @@
 </p>
 <form method="POST">
   {% csrf_token %}
-  <input type="hidden" name="run_notion_questions_import_script" value="1" />
+  <input type="hidden" name="run_import_questions_from_notion_script" value="1" />
   <input class="action-button" type="submit" value="Lancer l'import des questions 1 à 200">
 </form>
 <form method="POST">
   {% csrf_token %}
-  <input type="hidden" name="run_notion_questions_import_script" value="2" />
+  <input type="hidden" name="run_import_questions_from_notion_script" value="2" />
   <input class="action-button" type="submit" value="Lancer l'import des questions 200 à 400">
 </form>
 <form method="POST">
   {% csrf_token %}
-  <input type="hidden" name="run_notion_questions_import_script" value="3" />
+  <input type="hidden" name="run_import_questions_from_notion_script" value="3" />
   <input class="action-button" type="submit" value="Lancer l'import des questions 400 à ...">
 </form>
 
@@ -69,12 +69,12 @@
 <div id="spinner" class="loading" role="status" style="display:none"></div>
 
 {% if notion_questions_validation %}
-<section id="error-section">
+<section id="result-section">
   <hr style="margin-top:20px;margin-bottom:20px" />
   <h4>Résultats : </h4>
   <ul>
-  {% for error in notion_questions_validation %}
-    <li>{{ error }}</li>
+  {% for result in notion_questions_validation %}
+    <li>{{ result }}</li>
   {% endfor %}
   </ul>
 </section>

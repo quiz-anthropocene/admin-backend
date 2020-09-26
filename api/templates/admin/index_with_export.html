@@ -1,0 +1,75 @@
+<!-- https://github.com/django/django/blob/master/django/contrib/admin/templates/admin/index.html -->
+{% extends "admin/index.html" %}
+
+{% load static %}
+
+{% block extrastyle %}
+{{ block.super }}
+<style>
+  .loading {
+    height: 0;
+    width: 0;
+    padding: 5px;
+    border: 6px solid #ccc;
+    border-right-color: #888;
+    border-radius: 22px;
+    -webkit-animation: rotate 1s infinite linear;
+    /* left, top and position just for the demo! */
+  }
+
+  @-webkit-keyframes rotate {
+    /* 100% keyframe for  clockwise. 
+      use 0% instead for anticlockwise */
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // add click listener
+    document.getElementById("action-button").addEventListener("click", function() {
+      document.getElementById("spinner").style.display = "inline-block";
+      document.getElementById("result-section").style.display = "none";
+    });
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+<!-- {{ block.super }} -->
+<div id="content-main">
+  {% include "admin/app_list.html" with app_list=app_list show_changelinks=True %}
+
+  <hr style="margin-top:20px;margin-bottom:20px" />
+
+  <h1>Exporter la donnée vers Github</h1>
+
+  <p>
+    Une fois les questions importées depuis Notion, et les quizs et/ou tags créés, il est temps de mettre à jour l'application.
+  </p>
+
+  <p>
+    Ce script va exporter toutes les questions, quizzes et tags au format YAML, et créer une Pull Request Github.
+  </p>
+
+  <form method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="run_export_data_to_github_script" value="1" />
+    <input class="action-button" type="submit" value="Lancer l'export de la donnée">
+  </form>
+
+  <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
+
+  <div id="spinner" class="loading" role="status" style="display:none"></div>
+
+  {% if export_message %}
+    <section id="result-section">
+      <hr style="margin-top:20px;margin-bottom:20px" />
+      <h4>Résultats : </h4>
+      <div>{{ export_message | safe }}</div>
+    </section>
+  {% endif %}
+</div>
+
+{% endblock %}

@@ -9,7 +9,7 @@ from django.http import HttpResponse
 from django.conf import settings
 from django.contrib import admin
 from django.contrib.admin import AdminSite
-from django.core import serializers, management
+from django.core import management
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.html import mark_safe
 
@@ -20,7 +20,7 @@ from import_export.admin import ImportMixin, DEFAULT_FORMATS
 # from django.core.management import call_command
 
 from api import constants
-from api import utilities_notion
+from api import utilities, utilities_notion
 from api.models import (
     Question,
     Category,
@@ -79,9 +79,7 @@ class ExportMixin:
             "Content-Disposition"
         ] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.json"
 
-        response.write(
-            serializers.serialize("json", list(queryset), ensure_ascii=False)
-        )
+        response.write(utilities.serialize_queryset_to_json(queryset))
 
         return response
 
@@ -94,9 +92,7 @@ class ExportMixin:
             "Content-Disposition"
         ] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.yaml"
 
-        response.write(
-            serializers.serialize("yaml", list(queryset), allow_unicode=True)
-        )
+        response.write(utilities.serialize_queryset_to_yaml(queryset))
 
         return response
 
@@ -342,10 +338,10 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
 
         notion_questions_validation = []
 
-        if request.POST.get("run_notion_questions_import_script", False):
+        if request.POST.get("run_import_questions_from_notion_script", False):
             out = StringIO()
-            scope = request.POST.get("run_notion_questions_import_script")
-            management.call_command("notion_questions_import", scope, stdout=out)
+            scope = request.POST.get("run_import_questions_from_notion_script")
+            management.call_command("import_questions_from_notion", scope, stdout=out)
             notion_questions_validation = out.getvalue()
             notion_questions_validation = notion_questions_validation.split("|||")
 
@@ -821,6 +817,29 @@ class LogEntryAdmin(admin.ModelAdmin):
 class MyAdminSite(AdminSite):
     site_header = "Know Your Planet administration"
     enable_nav_sidebar = False
+    index_template = "admin/index_with_export.html"
+
+    def index(self, request, extra_context=None):
+        """
+        Corresponding template in templates/admin/api/index_with_export.html
+        """
+
+        export_message = ""
+
+        if request.POST.get("run_export_data_to_github_script", False):
+            out = StringIO()
+            request.POST.get("run_export_data_to_github_script")
+            management.call_command("export_data_to_github", stdout=out)
+            if "https" not in out.getvalue():
+                export_message = f"Erreur survenue. {out.getvalue()}"
+            else:
+                export_message = f"La Pull Request a été créé ! Elle est visible ici : <a href='{out.getvalue()}' target='_blank'>{out.getvalue()}</a>"  # noqa
+            print(export_message)
+
+        extra_context = extra_context or {"export_message": export_message}
+
+        # Call the superclass index to render the page
+        return super().index(request, extra_context=extra_context)
 
 
 admin_site = MyAdminSite(name="myadmin")

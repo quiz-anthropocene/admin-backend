@@ -165,6 +165,11 @@ SHELL_PLUS_IMPORTS = [
 ]
 
 
+# Github
+
+GITHUB_ACCESS_TOKEN = os.getenv("GITHUB_ACCESS_TOKEN")
+
+
 # Notion.so
 
 NOTION_TOKEN_V2 = os.getenv("NOTION_TOKEN_V2")

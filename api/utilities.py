@@ -1,5 +1,28 @@
 from datetime import datetime, timedelta
 
+from django.apps import apps
+from django.core import serializers
+
+
+def serialize_queryset_to_yaml(queryset):
+    return serializers.serialize("yaml", list(queryset), allow_unicode=True)
+
+
+def serialize_model_to_yaml(model_label):
+    model = apps.get_app_config("api").get_model(model_label)
+    queryset = model.objects.all().order_by("pk")
+    return serialize_queryset_to_yaml(queryset)
+
+
+def serialize_queryset_to_json(queryset):
+    return serializers.serialize("json", list(queryset), ensure_ascii=False)
+
+
+def serialize_model_to_json(model_label):
+    model = apps.get_app_config("api").get_model(model_label)
+    queryset = model.objects.all().order_by("pk")
+    return serialize_queryset_to_json(queryset)
+
 
 def aggregate_timeseries_by_week(timeseries):
     """
