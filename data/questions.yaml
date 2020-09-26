@@ -125,6 +125,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'article avec vidéo Brut : https://www.francetvinfo.fr/economie/emploi/metiers/agriculture/video-a-porto-rico-la-disparition-drastique-des-insectes-inquiete-les-scientifiques_3149365.html
 
+
       remise en question du rapport ici : https://www.pnas.org/content/116/25/12143'
     author: Matthieu Massart
     validator: Raphael Odini
@@ -197,8 +198,8 @@
     created: 2020-03-08
     updated: 2020-08-10
     tags:
-    - 9
     - 98
+    - 9
 - model: api.question
   pk: 7
   fields:
@@ -266,9 +267,9 @@
     created: 2020-03-08
     updated: 2020-09-18
     tags:
-    - 13
     - 142
     - 153
+    - 13
 - model: api.question
   pk: 9
   fields:
@@ -301,8 +302,8 @@
     created: 2020-03-08
     updated: 2020-06-24
     tags:
-    - 10
     - 57
+    - 10
 - model: api.question
   pk: 10
   fields:
@@ -460,8 +461,8 @@
     created: 2020-03-09
     updated: 2020-08-10
     tags:
-    - 12
     - 142
+    - 12
     - 155
 - model: api.question
   pk: 15
@@ -495,9 +496,9 @@
     created: 2020-03-09
     updated: 2020-08-10
     tags:
-    - 12
     - 142
     - 151
+    - 12
 - model: api.question
   pk: 16
   fields:
@@ -562,10 +563,10 @@
     created: 2020-03-10
     updated: 2020-08-10
     tags:
-    - 2
     - 142
     - 147
     - 149
+    - 2
 - model: api.question
   pk: 18
   fields:
@@ -659,8 +660,8 @@
     created: 2020-03-10
     updated: 2020-05-23
     tags:
-    - 2
     - 39
+    - 2
 - model: api.question
   pk: 21
   fields:
@@ -686,6 +687,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'https://ourworldindata.org/grapher/global-co-concentration-ppm
 
+
       https://dr-petrole-mr-carbone.com/concentration-record-de-co2-la-barre-des-415-ppm-franchie-a-mauna-loa/'
     author: Matthieu Massart
     validator: Raphael Odini
@@ -695,10 +697,10 @@
     created: 2020-03-10
     updated: 2020-08-10
     tags:
-    - 12
-    - 13
     - 142
     - 153
+    - 12
+    - 13
 - model: api.question
   pk: 22
   fields:
@@ -734,11 +736,11 @@
     created: 2020-03-10
     updated: 2020-08-10
     tags:
-    - 12
-    - 13
     - 142
     - 147
     - 149
+    - 12
+    - 13
 - model: api.question
   pk: 23
   fields:
@@ -769,9 +771,9 @@
     created: 2020-03-10
     updated: 2020-08-10
     tags:
-    - 14
     - 142
     - 154
+    - 14
 - model: api.question
   pk: 24
   fields:
@@ -915,8 +917,8 @@
     created: 2020-03-10
     updated: 2020-08-10
     tags:
-    - 15
     - 142
+    - 15
     - 166
 - model: api.question
   pk: 28
@@ -952,8 +954,8 @@
     created: 2020-03-10
     updated: 2020-08-10
     tags:
-    - 9
     - 142
+    - 9
     - 166
 - model: api.question
   pk: 29
@@ -988,10 +990,10 @@
     created: 2020-03-10
     updated: 2020-08-10
     tags:
-    - 12
     - 99
     - 142
     - 152
+    - 12
 - model: api.question
   pk: 30
   fields:
@@ -1030,9 +1032,9 @@
     created: 2020-03-10
     updated: 2020-09-18
     tags:
-    - 16
-    - 9
     - 142
+    - 9
+    - 16
     - 160
 - model: api.question
   pk: 31
@@ -1065,9 +1067,9 @@
     created: 2020-03-10
     updated: 2020-09-18
     tags:
-    - 13
-    - 9
     - 142
+    - 9
+    - 13
     - 166
 - model: api.question
   pk: 32
@@ -1099,10 +1101,10 @@
     created: 2020-03-10
     updated: 2020-09-18
     tags:
-    - 16
-    - 9
     - 69
     - 142
+    - 9
+    - 16
     - 160
 - model: api.question
   pk: 33
@@ -1136,8 +1138,8 @@
     created: 2020-03-10
     updated: 2020-07-04
     tags:
-    - 13
     - 51
+    - 13
 - model: api.question
   pk: 34
   fields:
@@ -1169,10 +1171,10 @@
     created: 2020-03-10
     updated: 2020-08-10
     tags:
-    - 2
-    - 17
     - 142
     - 150
+    - 2
+    - 17
 - model: api.question
   pk: 35
   fields:
@@ -1207,9 +1209,9 @@
     created: 2020-03-10
     updated: 2020-08-10
     tags:
-    - 18
     - 51
     - 142
+    - 18
     - 183
 - model: api.question
   pk: 36
@@ -1242,8 +1244,8 @@
     created: 2020-03-10
     updated: 2020-08-10
     tags:
-    - 13
     - 142
+    - 13
     - 166
 - model: api.question
   pk: 37
@@ -1277,10 +1279,10 @@
     created: 2020-03-10
     updated: 2020-08-10
     tags:
-    - 19
-    - 20
     - 142
     - 148
+    - 19
+    - 20
 - model: api.question
   pk: 38
   fields:
@@ -1345,9 +1347,9 @@
     updated: 2020-06-25
     tags:
     - 1
-    - 15
     - 41
     - 70
+    - 15
 - model: api.question
   pk: 40
   fields:
@@ -1369,9 +1371,7 @@
     answer_scientific_url: ''
     answer_image_url: https://www.connaissancedesenergies.org/sites/default/files/inline-images/production-electricite-france-2019.png
     answer_image_explanation: ''
-    answer_extra_info: 'https://www.statistiques.developpement-durable.gouv.fr/tableau-de-bord-biogaz-pour-la-production-delectricite-premier-trimestre-2020
-
-      https://www.actu-environnement.com/ae/news/biogaz-raccordement-electricite-recul-30222.php4'
+    answer_extra_info: "https://www.statistiques.developpement-durable.gouv.fr/tableau-de-bord-biogaz-pour-la-production-delectricite-premier-trimestre-2020\r\nhttps://www.actu-environnement.com/ae/news/biogaz-raccordement-electricite-recul-30222.php4"
     author: Avenir Climatique
     validator: Matthieu Massart
     publish: true
@@ -1381,10 +1381,10 @@
     updated: 2020-07-30
     tags:
     - 1
-    - 15
     - 39
     - 70
     - 95
+    - 15
 - model: api.question
   pk: 41
   fields:
@@ -1415,8 +1415,8 @@
     created: 2020-03-10
     updated: 2020-09-18
     tags:
-    - 21
     - 9
+    - 21
 - model: api.question
   pk: 42
   fields:
@@ -1450,10 +1450,10 @@
     created: 2020-03-10
     updated: 2020-08-10
     tags:
-    - 12
-    - 13
     - 142
     - 153
+    - 12
+    - 13
 - model: api.question
   pk: 43
   fields:
@@ -1625,9 +1625,9 @@
     created: 2020-03-10
     updated: 2020-09-18
     tags:
-    - 16
-    - 9
     - 142
+    - 9
+    - 16
     - 160
 - model: api.question
   pk: 48
@@ -1980,8 +1980,8 @@
     created: 2020-03-10
     updated: 2020-05-23
     tags:
-    - 2
     - 26
+    - 2
 - model: api.question
   pk: 59
   fields:
@@ -2108,8 +2108,8 @@
     created: 2020-03-10
     updated: 2020-05-23
     tags:
-    - 2
     - 27
+    - 2
 - model: api.question
   pk: 63
   fields:
@@ -2140,10 +2140,10 @@
     created: 2020-03-10
     updated: 2020-05-28
     tags:
-    - 2
     - 24
     - 27
     - 28
+    - 2
 - model: api.question
   pk: 64
   fields:
@@ -2173,8 +2173,8 @@
     created: 2020-03-10
     updated: 2020-05-23
     tags:
-    - 2
     - 27
+    - 2
 - model: api.question
   pk: 65
   fields:
@@ -2241,9 +2241,9 @@
     created: 2020-03-10
     updated: 2020-09-18
     tags:
-    - 14
     - 142
     - 154
+    - 14
 - model: api.question
   pk: 67
   fields:
@@ -2273,8 +2273,8 @@
     created: 2020-03-10
     updated: 2020-09-18
     tags:
-    - 21
     - 9
+    - 21
 - model: api.question
   pk: 68
   fields:
@@ -2498,6 +2498,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'graphique pollution mails : https://www.leparisien.fr/resizer/r6wWjvmpV910kaFMATZjfE2L_4Q=/800x512/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/JW6W6ZUMZPZXPL6ZFWWDD5ISMM.jpg
 
+
       https://mrmondialisation.org/le-cout-ecologique-dinternet-est-astronomique/'
     author: Matthieu Massart
     validator: Raphael Odini
@@ -2507,9 +2508,9 @@
     created: 2020-03-10
     updated: 2020-06-25
     tags:
-    - 2
     - 30
     - 39
+    - 2
 - model: api.question
   pk: 75
   fields:
@@ -2634,6 +2635,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'https://bonpote.com/pourquoi-arreter-lavion-ne-devrait-plus-etre-un-debat/
 
+
       image alternative (guardian): https://pbs.twimg.com/media/EMOnQq3WkAABCPD.png'
     author: Matthieu Massart
     validator: Raphael Odini
@@ -2675,9 +2677,9 @@
     created: 2020-03-11
     updated: 2020-08-10
     tags:
-    - 9
     - 69
     - 142
+    - 9
     - 164
 - model: api.question
   pk: 80
@@ -2711,8 +2713,8 @@
     created: 2020-03-11
     updated: 2020-08-10
     tags:
-    - 16
     - 142
+    - 16
     - 163
 - model: api.question
   pk: 81
@@ -2743,11 +2745,11 @@
     created: 2020-03-11
     updated: 2020-05-28
     tags:
+    - 40
+    - 41
     - 2
     - 11
     - 19
-    - 40
-    - 41
 - model: api.question
   pk: 82
   fields:
@@ -2811,6 +2813,7 @@
     answer_image_explanation: On parle ici d'émissions sur le territoire et non d'empreinte
       carbone
     answer_extra_info: 'image alternative: https://assets.weforum.org/editor/large_n5aoy13DQXewrirrpQi5-q8pcyN3z0NhMDLT6B_TEXE.jpg
+
 
       https://ourworldindata.org/grapher/co-emissions-per-capita?tab=chart'
     author: Avenir Climatique
@@ -3435,9 +3438,9 @@
     created: 2020-04-26
     updated: 2020-06-24
     tags:
-    - 13
     - 47
     - 85
+    - 13
 - model: api.question
   pk: 102
   fields:
@@ -3636,8 +3639,8 @@
     created: 2019-01-11
     updated: 2020-07-10
     tags:
-    - 11
     - 50
+    - 11
 - model: api.question
   pk: 108
   fields:
@@ -3762,8 +3765,8 @@
     created: 2019-01-17
     updated: 2020-06-24
     tags:
-    - 11
     - 26
+    - 11
 - model: api.question
   pk: 112
   fields:
@@ -3797,8 +3800,8 @@
     created: 2019-01-18
     updated: 2020-07-30
     tags:
-    - 11
     - 50
+    - 11
 - model: api.question
   pk: 113
   fields:
@@ -3828,8 +3831,8 @@
     created: 2019-01-21
     updated: 2020-06-25
     tags:
-    - 11
     - 50
+    - 11
 - model: api.question
   pk: 114
   fields:
@@ -3892,8 +3895,8 @@
     created: 2019-01-23
     updated: 2020-07-23
     tags:
-    - 11
     - 50
+    - 11
 - model: api.question
   pk: 116
   fields:
@@ -3990,10 +3993,10 @@
     created: 2019-01-28
     updated: 2020-08-10
     tags:
-    - 12
-    - 13
     - 142
     - 153
+    - 12
+    - 13
 - model: api.question
   pk: 119
   fields:
@@ -4271,9 +4274,10 @@
     answer_image_explanation: ''
     answer_extra_info: 'autre image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r025b.jpg
 
+
       Source Fr : https://www.rte-france.com/fr/eco2mix/donnees-en-energie Source
       autres pays : https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy
-      supply&indicator=Total primary energy supply (TPES) by source'
+      supply&indicator=Total primary energy supply (TPES) by source%20by%20source)'
     author: laydgeur
     validator: Matthieu Massart
     publish: true
@@ -4382,8 +4386,8 @@
     created: 2019-02-13
     updated: 2020-08-10
     tags:
-    - 16
     - 142
+    - 16
     - 161
 - model: api.question
   pk: 131
@@ -4416,8 +4420,8 @@
     created: 2019-02-14
     updated: 2020-08-10
     tags:
-    - 12
     - 142
+    - 12
     - 155
 - model: api.question
   pk: 132
@@ -4539,6 +4543,7 @@
 
       https://twitter.com/laydgeur/status/1166071796682149888
 
+
       https://www.linkedin.com/feed/update/urn:li:activity:6531245430238519296/'
     author: laydgeur
     validator: Matthieu Massart
@@ -4617,8 +4622,8 @@
     created: 2020-04-26
     updated: 2020-08-10
     tags:
-    - 12
     - 142
+    - 12
     - 156
 - model: api.question
   pk: 138
@@ -4684,8 +4689,8 @@
     created: 2020-04-26
     updated: 2020-08-10
     tags:
-    - 12
     - 142
+    - 12
     - 155
 - model: api.question
   pk: 140
@@ -4805,7 +4810,9 @@
     answer_image_explanation: ''
     answer_extra_info: 'Réponse initiale: Il y a 20 millions d’années.
 
+
       Image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r041.jpg
+
 
       Image alternative: http://www.illustratedcuriosity.com/files/media/39990/wmo.jpg'
     author: laydgeur
@@ -4816,10 +4823,10 @@
     created: 2020-04-26
     updated: 2020-08-10
     tags:
-    - 12
-    - 13
     - 142
     - 153
+    - 12
+    - 13
 - model: api.question
   pk: 144
   fields:
@@ -5006,8 +5013,8 @@
     created: 2020-04-26
     updated: 2020-06-25
     tags:
-    - 2
     - 41
+    - 2
 - model: api.question
   pk: 150
   fields:
@@ -5136,11 +5143,11 @@
     created: 2020-04-26
     updated: 2020-06-24
     tags:
-    - 11
     - 33
     - 41
     - 59
     - 86
+    - 11
 - model: api.question
   pk: 154
   fields:
@@ -5172,9 +5179,9 @@
     created: 2020-04-26
     updated: 2020-05-10
     tags:
-    - 11
     - 33
     - 59
+    - 11
 - model: api.question
   pk: 155
   fields:
@@ -5210,10 +5217,10 @@
     created: 2020-04-26
     updated: 2020-06-25
     tags:
-    - 11
     - 33
     - 59
     - 65
+    - 11
 - model: api.question
   pk: 156
   fields:
@@ -5248,9 +5255,9 @@
     created: 2020-04-26
     updated: 2020-06-25
     tags:
-    - 11
     - 33
     - 59
+    - 11
 - model: api.question
   pk: 157
   fields:
@@ -5288,11 +5295,11 @@
     created: 2020-04-26
     updated: 2020-09-18
     tags:
-    - 11
     - 33
     - 59
-    - 9
     - 93
+    - 9
+    - 11
 - model: api.question
   pk: 158
   fields:
@@ -5324,9 +5331,9 @@
     created: 2020-04-26
     updated: 2020-06-24
     tags:
+    - 39
     - 8
     - 10
-    - 39
 - model: api.question
   pk: 159
   fields:
@@ -5393,8 +5400,8 @@
     updated: 2020-06-25
     tags:
     - 1
-    - 10
     - 39
+    - 10
 - model: api.question
   pk: 161
   fields:
@@ -5428,8 +5435,8 @@
     created: 2020-04-26
     updated: 2020-05-23
     tags:
-    - 10
     - 40
+    - 10
 - model: api.question
   pk: 162
   fields:
@@ -5525,8 +5532,8 @@
     created: 2020-04-26
     updated: 2020-05-10
     tags:
-    - 2
     - 41
+    - 2
 - model: api.question
   pk: 165
   fields:
@@ -5587,8 +5594,8 @@
     created: 2020-04-26
     updated: 2020-05-10
     tags:
-    - 16
     - 48
+    - 16
 - model: api.question
   pk: 167
   fields:
@@ -5725,8 +5732,8 @@
     created: 2020-04-26
     updated: 2020-06-24
     tags:
-    - 2
     - 40
+    - 2
 - model: api.question
   pk: 171
   fields:
@@ -5758,8 +5765,8 @@
     created: 2020-04-26
     updated: 2020-09-18
     tags:
-    - 11
     - 47
+    - 11
 - model: api.question
   pk: 172
   fields:
@@ -5792,8 +5799,8 @@
     created: 2020-04-26
     updated: 2020-05-23
     tags:
-    - 17
     - 47
+    - 17
 - model: api.question
   pk: 173
   fields:
@@ -5824,8 +5831,8 @@
     created: 2020-04-26
     updated: 2020-05-23
     tags:
-    - 2
     - 41
+    - 2
 - model: api.question
   pk: 174
   fields:
@@ -5890,8 +5897,8 @@
     created: 2020-04-26
     updated: 2020-05-07
     tags:
-    - 2
     - 66
+    - 2
 - model: api.question
   pk: 176
   fields:
@@ -6145,8 +6152,8 @@
     created: 2020-04-26
     updated: 2020-05-10
     tags:
-    - 10
     - 57
+    - 10
 - model: api.question
   pk: 184
   fields:
@@ -6340,9 +6347,9 @@
     created: 2020-04-26
     updated: 2020-05-10
     tags:
-    - 2
     - 33
     - 35
+    - 2
 - model: api.question
   pk: 190
   fields:
@@ -6515,9 +6522,9 @@
     updated: 2020-09-18
     tags:
     - 61
-    - 9
     - 69
     - 142
+    - 9
     - 164
 - model: api.question
   pk: 195
@@ -7087,8 +7094,8 @@
     created: 2020-04-26
     updated: 2020-05-23
     tags:
-    - 11
     - 47
+    - 11
 - model: api.question
   pk: 213
   fields:
@@ -7119,8 +7126,8 @@
     updated: 2020-05-10
     tags:
     - 1
-    - 17
     - 52
+    - 17
 - model: api.question
   pk: 214
   fields:
@@ -7377,8 +7384,8 @@
     updated: 2020-05-23
     tags:
     - 1
-    - 20
     - 63
+    - 20
 - model: api.question
   pk: 222
   fields:
@@ -7473,9 +7480,9 @@
     created: 2020-04-26
     updated: 2020-06-24
     tags:
+    - 39
     - 2
     - 8
-    - 39
 - model: api.question
   pk: 225
   fields:
@@ -7546,10 +7553,10 @@
     created: 2020-05-05
     updated: 2020-05-23
     tags:
-    - 2
     - 33
     - 34
     - 81
+    - 2
 - model: api.question
   pk: 227
   fields:
@@ -7616,9 +7623,9 @@
     created: 2020-05-05
     updated: 2020-05-23
     tags:
-    - 2
     - 33
     - 34
+    - 2
 - model: api.question
   pk: 229
   fields:
@@ -7655,9 +7662,9 @@
     created: 2020-05-05
     updated: 2020-08-10
     tags:
-    - 2
     - 23
     - 142
+    - 2
     - 181
 - model: api.question
   pk: 230
@@ -7796,10 +7803,10 @@
     created: 2020-05-10
     updated: 2020-08-10
     tags:
-    - 15
-    - 17
     - 142
     - 151
+    - 15
+    - 17
 - model: api.question
   pk: 234
   fields:
@@ -7988,8 +7995,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 12
     - 50
+    - 12
 - model: api.question
   pk: 240
   fields:
@@ -8012,6 +8019,7 @@
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r124.jpg
     answer_image_explanation: ''
     answer_extra_info: 'https://twitter.com/laydgeur/status/1147012562485219328
+
 
       https://twitter.com/MidesMap/status/1261174522369249282'
     author: laydgeur
@@ -8088,8 +8096,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
+    - 2
 - model: api.question
   pk: 243
   fields:
@@ -8178,6 +8186,7 @@
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r129.jpg
     answer_image_explanation: ''
     answer_extra_info: 'Réponse pas raccord avec les choix de la question
+
 
       https://twitter.com/laydgeur/status/1149412744766132225'
     author: laydgeur
@@ -8286,8 +8295,8 @@
     created: 2020-05-20
     updated: 2020-05-23
     tags:
-    - 13
     - 47
+    - 13
 - model: api.question
   pk: 249
   fields:
@@ -8318,8 +8327,8 @@
     created: 2020-05-20
     updated: 2020-05-28
     tags:
-    - 11
     - 50
+    - 11
 - model: api.question
   pk: 250
   fields:
@@ -8375,6 +8384,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'id: 135
 
+
       https://twitter.com/laydgeur/status/1152311385189208065'
     author: laydgeur
     validator: Matthieu Massart
@@ -8384,9 +8394,9 @@
     created: 2020-05-20
     updated: 2020-06-25
     tags:
-    - 5
     - 72
     - 89
+    - 5
 - model: api.question
   pk: 252
   fields:
@@ -8550,8 +8560,8 @@
     updated: 2020-07-23
     tags:
     - 1
-    - 17
     - 51
+    - 17
 - model: api.question
   pk: 257
   fields:
@@ -8583,8 +8593,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 72
+    - 2
 - model: api.question
   pk: 258
   fields:
@@ -8616,8 +8626,8 @@
     updated: 2020-05-23
     tags:
     - 1
-    - 20
     - 76
+    - 20
 - model: api.question
   pk: 259
   fields:
@@ -8640,6 +8650,7 @@
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r143.jpg
     answer_image_explanation: ''
     answer_extra_info: 'https://twitter.com/laydgeur/status/1156643243368603648
+
 
       https://www.bilans-ges.ademe.fr/documentation/UPLOAD_DOC_FR/index.htm?pci_et_masse_volumique.htm'
     author: laydgeur
@@ -8713,6 +8724,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'Modifiées les choix pour être raccord avec la réponse
 
+
       https://twitter.com/laydgeur/status/1157382377083154433'
     author: laydgeur
     validator: Matthieu Massart
@@ -8722,9 +8734,9 @@
     created: 2020-05-20
     updated: 2020-05-23
     tags:
+    - 35
     - 11
     - 13
-    - 35
 - model: api.question
   pk: 262
   fields:
@@ -8755,10 +8767,10 @@
     created: 2020-05-20
     updated: 2020-06-24
     tags:
-    - 10
-    - 13
     - 72
     - 80
+    - 10
+    - 13
 - model: api.question
   pk: 263
   fields:
@@ -8886,9 +8898,9 @@
     created: 2020-05-20
     updated: 2020-05-23
     tags:
+    - 72
     - 2
     - 13
-    - 72
 - model: api.question
   pk: 267
   fields:
@@ -8952,8 +8964,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 11
     - 82
+    - 11
 - model: api.question
   pk: 269
   fields:
@@ -9046,8 +9058,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 22
+    - 2
 - model: api.question
   pk: 272
   fields:
@@ -9069,6 +9081,7 @@
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r156.jpg
     answer_image_explanation: ''
     answer_extra_info: 'En doublon avec la n°33
+
 
       https://twitter.com/laydgeur/status/1166071796682149888'
     author: laydgeur
@@ -9145,9 +9158,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 15
     - 47
     - 70
+    - 15
 - model: api.question
   pk: 275
   fields:
@@ -9203,6 +9216,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r160.jpg
 
+
       https://twitter.com/laydgeur/status/1167853448408309760'
     author: laydgeur
     validator: Raphael Odini
@@ -9212,8 +9226,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 11
     - 80
+    - 11
 - model: api.question
   pk: 277
   fields:
@@ -9238,6 +9252,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r161.jpg
 
+
       https://twitter.com/laydgeur/status/1168598181262897152'
     author: laydgeur
     validator: Raphael Odini
@@ -9247,8 +9262,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
+    - 2
 - model: api.question
   pk: 278
   fields:
@@ -9280,10 +9295,10 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 13
     - 33
     - 35
     - 80
+    - 13
 - model: api.question
   pk: 279
   fields:
@@ -9315,9 +9330,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 31
     - 39
+    - 2
 - model: api.question
   pk: 280
   fields:
@@ -9350,8 +9365,8 @@
     updated: 2020-06-24
     tags:
     - 1
-    - 8
     - 39
+    - 8
 - model: api.question
   pk: 281
   fields:
@@ -9383,8 +9398,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 44
+    - 2
 - model: api.question
   pk: 282
   fields:
@@ -9416,10 +9431,10 @@
     created: 2020-05-20
     updated: 2020-08-10
     tags:
-    - 2
-    - 15
     - 142
     - 151
+    - 2
+    - 15
 - model: api.question
   pk: 283
   fields:
@@ -9473,6 +9488,7 @@
     answer_image_explanation: 1L de fioul = 0,88 kg
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r168.jpg
 
+
       https://twitter.com/laydgeur/status/1172033463958085633'
     author: laydgeur
     validator: Matthieu Massart
@@ -9483,8 +9499,8 @@
     updated: 2020-05-23
     tags:
     - 1
-    - 11
     - 67
+    - 11
 - model: api.question
   pk: 285
   fields:
@@ -9515,8 +9531,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 11
     - 65
+    - 11
 - model: api.question
   pk: 286
   fields:
@@ -9547,8 +9563,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 33
+    - 2
 - model: api.question
   pk: 287
   fields:
@@ -9579,8 +9595,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 71
+    - 2
 - model: api.question
   pk: 288
   fields:
@@ -9636,6 +9652,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'image alternative: http://blog.formatis.pro/wp-content/uploads/2018/11/sae18_9.png
 
+
       https://twitter.com/laydgeur/status/1174405954026295296'
     author: laydgeur
     validator: Raphael Odini
@@ -9679,8 +9696,8 @@
     updated: 2020-05-20
     tags:
     - 1
-    - 13
     - 84
+    - 13
 - model: api.question
   pk: 291
   fields:
@@ -9744,10 +9761,10 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 33
     - 39
     - 42
+    - 2
 - model: api.question
   pk: 293
   fields:
@@ -9772,6 +9789,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'image alternative: https://www.avcesar.com/source/actualites/00/00/61/8D/belle-tenue-de-route-pour-la-voiture-electrique_07043834.jpg
 
+
       https://twitter.com/laydgeur/status/1176586995147137028'
     author: laydgeur
     validator: Raphael Odini
@@ -9781,9 +9799,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 35
     - 60
+    - 2
 - model: api.question
   pk: 294
   fields:
@@ -9809,6 +9827,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r178.jpg
 
+
       https://twitter.com/laydgeur/status/1176947315720040448'
     author: laydgeur
     validator: Matthieu Massart
@@ -9818,11 +9837,11 @@
     created: 2020-05-20
     updated: 2020-08-10
     tags:
-    - 2
     - 69
     - 74
     - 142
     - 147
+    - 2
 - model: api.question
   pk: 295
   fields:
@@ -9845,6 +9864,7 @@
     answer_image_url: https://i.pinimg.com/originals/03/1a/13/031a13494a4dfc1685fec2bc28598ae5.jpg
     answer_image_explanation: ''
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r179.jpg
+
 
       https://twitter.com/laydgeur/status/1177310853114318854'
     author: laydgeur
@@ -9918,10 +9938,10 @@
     created: 2020-05-20
     updated: 2020-06-24
     tags:
-    - 8
     - 39
     - 44
     - 47
+    - 8
 - model: api.question
   pk: 298
   fields:
@@ -9942,6 +9962,7 @@
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r182.jpg
     answer_image_explanation: ''
     answer_extra_info: 'image alternative: https://wwz.ifremer.fr/var/storage/images/_aliases/content_embed_page/medias-ifremer/medias-peche/cartes/flottilles-regionales/flottilles_2012/1090163-1-fre-FR/flottilles_2012.png
+
 
       https://twitter.com/laydgeur/status/1179111646964387840'
     author: laydgeur
@@ -9984,11 +10005,11 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
-    - 13
     - 31
     - 72
     - 82
+    - 2
+    - 13
 - model: api.question
   pk: 300
   fields:
@@ -10083,9 +10104,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
     - 46
+    - 2
 - model: api.question
   pk: 303
   fields:
@@ -10120,8 +10141,8 @@
     created: 2020-05-20
     updated: 2020-06-24
     tags:
-    - 13
     - 38
+    - 13
 - model: api.question
   pk: 304
   fields:
@@ -10186,8 +10207,8 @@
     created: 2020-05-20
     updated: 2020-08-10
     tags:
-    - 16
     - 142
+    - 16
     - 161
 - model: api.question
   pk: 306
@@ -10213,6 +10234,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r190a.jpg
 
+
       https://twitter.com/laydgeur/status/1182944388009418752'
     author: laydgeur
     validator: Raphael Odini
@@ -10223,8 +10245,8 @@
     updated: 2020-08-10
     tags:
     - 1
-    - 16
     - 142
+    - 16
     - 158
 - model: api.question
   pk: 307
@@ -10247,6 +10269,7 @@
     answer_image_url: https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_in_line/2019/10/11/node_650356/41134233/public/2019/10/11/B9721211682Z.1_20191011162352_000%2BGIPELTPVL.1-0.jpg
     answer_image_explanation: ''
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r191.jpg
+
 
       https://twitter.com/laydgeur/status/1183823706918924288'
     author: laydgeur
@@ -10382,6 +10405,7 @@
       la source, affiner la question (volume, énergie) et mettre à jour avec une source
       plus récente.
 
+
       https://twitter.com/laydgeur/status/1185279458799960071'
     author: laydgeur
     validator: Raphael Odini
@@ -10391,8 +10415,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 41
+    - 2
 - model: api.question
   pk: 312
   fields:
@@ -10458,10 +10482,10 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 13
     - 31
     - 72
     - 80
+    - 13
 - model: api.question
   pk: 314
   fields:
@@ -10524,10 +10548,10 @@
     created: 2020-05-20
     updated: 2020-08-10
     tags:
-    - 2
     - 74
     - 90
     - 142
+    - 2
     - 168
     - 175
 - model: api.question
@@ -10563,9 +10587,9 @@
     updated: 2020-05-23
     tags:
     - 1
-    - 13
     - 38
     - 72
+    - 13
 - model: api.question
   pk: 317
   fields:
@@ -10589,6 +10613,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r201a.jpg
 
+
       https://twitter.com/laydgeur/status/1188914665750978561'
     author: laydgeur
     validator: ''
@@ -10599,8 +10624,8 @@
     updated: 2020-05-20
     tags:
     - 1
-    - 9
     - 69
+    - 9
 - model: api.question
   pk: 318
   fields:
@@ -10621,8 +10646,8 @@
     answer_scientific_url: https://ccfa.fr/brochure-analyse-statistiques/
     answer_image_url: ''
     answer_image_explanation: ''
-    answer_extra_info: "certains articles parlent de 38 millions \U0001F914\nimage
-      alternative: https://arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/OBZGE2QFO2MD2UALAMSONWIKC4.jpg\nhttps://twitter.com/laydgeur/status/1189284112013647872"
+    answer_extra_info: "certains articles parlent de 38 millions \U0001F914\n\nimage
+      alternative: https://arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/OBZGE2QFO2MD2UALAMSONWIKC4.jpg\n\nhttps://twitter.com/laydgeur/status/1189284112013647872"
     author: laydgeur
     validator: ''
     publish: false
@@ -10689,7 +10714,7 @@
     answer_scientific_url: https://www.nlog.nl/sites/default/files/2019-09/annual_review_natural_resources_and_geothermal_energy_in_the_netherlands_2018.pdf#page92
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r204.jpg
     answer_image_explanation: ''
-    answer_extra_info: "pic vs plateau \U0001F914\nhttps://twitter.com/laydgeur/status/1190014156746952704"
+    answer_extra_info: "pic vs plateau \U0001F914\n\nhttps://twitter.com/laydgeur/status/1190014156746952704"
     author: laydgeur
     validator: ''
     publish: false
@@ -10731,9 +10756,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 40
     - 72
+    - 2
 - model: api.question
   pk: 322
   fields:
@@ -10764,9 +10789,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 29
     - 73
+    - 2
 - model: api.question
   pk: 323
   fields:
@@ -10830,9 +10855,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 47
     - 72
+    - 2
 - model: api.question
   pk: 325
   fields:
@@ -10864,9 +10889,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 11
     - 41
     - 80
+    - 11
 - model: api.question
   pk: 326
   fields:
@@ -10923,6 +10948,7 @@
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r211.jpg
     answer_image_explanation: ''
     answer_extra_info: 'Autre source avec éolienne expérimentale plus tôt : http://eolienne.cavey.org/fr/production.php
+
 
       https://twitter.com/laydgeur/status/1196690802883383296'
     author: laydgeur
@@ -10997,8 +11023,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 11
     - 80
+    - 11
 - model: api.question
   pk: 330
   fields:
@@ -11029,9 +11055,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
+    - 69
     - 2
     - 9
-    - 69
 - model: api.question
   pk: 331
   fields:
@@ -11151,7 +11177,9 @@
     answer_image_explanation: ''
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r218.jpg
 
+
       image alternative: https://images.ladepeche.fr/api/v1/images/view/5c17793c8fe56f189029116f/large/image.jpg
+
 
       https://twitter.com/laydgeur/status/1199937907831783424'
     author: laydgeur
@@ -11162,8 +11190,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 77
+    - 2
 - model: api.question
   pk: 335
   fields:
@@ -11288,8 +11316,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
+    - 2
 - model: api.question
   pk: 339
   fields:
@@ -11321,8 +11349,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 11
     - 47
+    - 11
 - model: api.question
   pk: 340
   fields:
@@ -11353,9 +11381,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
+    - 78
     - 2
     - 20
-    - 78
 - model: api.question
   pk: 341
   fields:
@@ -11418,8 +11446,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 11
     - 50
+    - 11
 - model: api.question
   pk: 343
   fields:
@@ -11446,6 +11474,7 @@
 
       - https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r227b.jpg
 
+
       https://twitter.com/laydgeur/status/1204505503704989704'
     author: laydgeur
     validator: Raphael Odini
@@ -11455,10 +11484,10 @@
     created: 2020-05-20
     updated: 2020-09-18
     tags:
-    - 13
-    - 9
     - 142
     - 154
+    - 9
+    - 13
 - model: api.question
   pk: 344
   fields:
@@ -11492,8 +11521,8 @@
     created: 2020-05-20
     updated: 2020-05-28
     tags:
-    - 2
     - 40
+    - 2
 - model: api.question
   pk: 345
   fields:
@@ -11527,9 +11556,9 @@
     updated: 2020-05-20
     tags:
     - 1
+    - 72
     - 2
     - 13
-    - 72
 - model: api.question
   pk: 346
   fields:
@@ -11562,9 +11591,9 @@
     updated: 2020-05-20
     tags:
     - 1
-    - 13
     - 33
     - 42
+    - 13
 - model: api.question
   pk: 347
   fields:
@@ -11587,6 +11616,7 @@
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r231.jpg
     answer_image_explanation: ''
     answer_extra_info: 'Attention la biomasse n’est pas comptée…
+
 
       https://twitter.com/laydgeur/status/1206678650722160640'
     author: laydgeur
@@ -11665,9 +11695,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
+    - 56
     - 2
     - 11
-    - 56
 - model: api.question
   pk: 350
   fields:
@@ -11700,8 +11730,8 @@
     updated: 2020-05-23
     tags:
     - 1
-    - 13
     - 52
+    - 13
 - model: api.question
   pk: 351
   fields:
@@ -11792,6 +11822,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'image alternative: https://cdn.radiofrance.fr/s3/cruiser-production/2018/11/13238c20-fd37-4844-9ca8-a7c984b6a4ac/838_visactu-donald-trump-souhaite-assouplir-les-normes-anti-pollution-des-centrales-a-charbon-1656610eb99.jpg
 
+
       https://twitter.com/laydgeur/status/1214647943493562371'
     author: laydgeur
     validator: Raphael Odini
@@ -11833,8 +11864,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 41
+    - 2
 - model: api.question
   pk: 355
   fields:
@@ -11867,8 +11898,8 @@
     created: 2020-05-20
     updated: 2020-05-23
     tags:
-    - 13
     - 72
+    - 13
 - model: api.question
   pk: 356
   fields:
@@ -11966,11 +11997,11 @@
     created: 2020-05-20
     updated: 2020-07-10
     tags:
-    - 13
     - 31
     - 72
     - 80
     - 82
+    - 13
 - model: api.question
   pk: 359
   fields:
@@ -12002,8 +12033,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
+    - 2
 - model: api.question
   pk: 360
   fields:
@@ -12035,10 +12066,10 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
     - 41
     - 80
+    - 2
 - model: api.question
   pk: 361
   fields:
@@ -12072,9 +12103,9 @@
     created: 2020-05-20
     updated: 2020-08-10
     tags:
-    - 16
     - 83
     - 142
+    - 16
     - 160
 - model: api.question
   pk: 362
@@ -12107,9 +12138,9 @@
     created: 2020-05-20
     updated: 2020-05-23
     tags:
+    - 40
     - 2
     - 13
-    - 40
 - model: api.question
   pk: 363
   fields:
@@ -12134,6 +12165,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'lien alternatif (article abonné): https://www.lemonde.fr/planete/article/2019/09/20/ce-qu-il-faut-savoir-sur-la-pollution-generee-par-le-trafic-aerien_6012443_3244.html
 
+
       https://twitter.com/laydgeur/status/1219734466240950273'
     author: laydgeur
     validator: Matthieu Massart
@@ -12143,9 +12175,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
+    - 34
     - 2
     - 13
-    - 34
 - model: api.question
   pk: 364
   fields:
@@ -12243,9 +12275,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
     - 40
+    - 2
 - model: api.question
   pk: 367
   fields:
@@ -12278,10 +12310,10 @@
     updated: 2020-05-20
     tags:
     - 1
-    - 13
     - 31
     - 72
     - 82
+    - 13
 - model: api.question
   pk: 368
   fields:
@@ -12342,6 +12374,7 @@
     answer_extra_info: 'Parfois les articles mentionnent 800 000 ans avec la barre
       de 400 ppm et non 300 ppm.
 
+
       https://twitter.com/laydgeur/status/1222623070432702464'
     author: laydgeur
     validator: Raphael Odini
@@ -12351,8 +12384,8 @@
     created: 2020-05-20
     updated: 2020-08-10
     tags:
-    - 13
     - 142
+    - 13
     - 163
 - model: api.question
   pk: 370
@@ -12386,10 +12419,10 @@
     updated: 2020-05-20
     tags:
     - 1
-    - 2
-    - 13
     - 33
     - 72
+    - 2
+    - 13
 - model: api.question
   pk: 371
   fields:
@@ -12413,6 +12446,7 @@
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r255.jpg
     answer_image_explanation: ''
     answer_extra_info: 'doublon avec une question existante.
+
 
       https://twitter.com/laydgeur/status/1223349337251557376'
     author: laydgeur
@@ -12448,6 +12482,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'Semaine spéciale Royaume-Uni (brexit)
 
+
       https://twitter.com/laydgeur/status/1224453105799946253'
     author: laydgeur
     validator: Raphael Odini
@@ -12481,6 +12516,7 @@
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r257.jpg
     answer_image_explanation: ''
     answer_extra_info: 'Semaine spéciale Royaume-Uni (brexit)
+
 
       https://twitter.com/laydgeur/status/1224791510161465345'
     author: laydgeur
@@ -12518,6 +12554,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'Semaine spéciale Royaume-Uni (brexit)
 
+
       https://twitter.com/laydgeur/status/1225157173052768256'
     author: laydgeur
     validator: ''
@@ -12527,8 +12564,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 11
     - 47
+    - 11
 - model: api.question
   pk: 375
   fields:
@@ -12552,6 +12589,7 @@
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r259.jpg
     answer_image_explanation: ''
     answer_extra_info: 'Semaine spéciale Royaume-Uni (brexit)
+
 
       https://twitter.com/laydgeur/status/1225722941742161921'
     author: laydgeur
@@ -12587,7 +12625,9 @@
     answer_image_explanation: ''
     answer_extra_info: 'Semaine spéciale Royaume-Uni (brexit)
 
+
       autre source: http://rutledge.caltech.edu/
+
 
       https://twitter.com/laydgeur/status/1226134940548505600'
     author: laydgeur
@@ -12630,8 +12670,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 72
+    - 2
 - model: api.question
   pk: 378
   fields:
@@ -12662,9 +12702,9 @@
     created: 2020-05-20
     updated: 2020-07-30
     tags:
-    - 13
     - 72
     - 86
+    - 13
 - model: api.question
   pk: 379
   fields:
@@ -12786,6 +12826,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'Semaine spéciale centrale nucléaire de Fessenheim
 
+
       https://twitter.com/laydgeur/status/1229511853577035777'
     author: laydgeur
     validator: Raphael Odini
@@ -12821,6 +12862,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'Semaine spéciale centrale nucléaire de Fessenheim
 
+
       https://twitter.com/laydgeur/status/1229863134619480071'
     author: laydgeur
     validator: Raphael Odini
@@ -12855,6 +12897,7 @@
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r268.png
     answer_image_explanation: ''
     answer_extra_info: 'Semaine spéciale centrale nucléaire de Fessenheim
+
 
       https://twitter.com/laydgeur/status/1230445450551058432'
     author: laydgeur
@@ -12892,6 +12935,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'Semaine spéciale centrale nucléaire de Fessenheim
 
+
       https://twitter.com/laydgeur/status/1230762664126631937'
     author: laydgeur
     validator: Raphael Odini
@@ -12926,6 +12970,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'Semaine spéciale centrale nucléaire de Fessenheim
 
+
       https://twitter.com/laydgeur/status/1231201782510096392'
     author: laydgeur
     validator: ''
@@ -12959,6 +13004,7 @@
     answer_image_explanation: chiffres de 2015
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r271.png
 
+
       https://twitter.com/laydgeur/status/1232045258281799681'
     author: laydgeur
     validator: Matthieu Massart
@@ -12968,9 +13014,9 @@
     created: 2020-05-20
     updated: 2020-05-23
     tags:
+    - 72
     - 2
     - 13
-    - 72
 - model: api.question
   pk: 388
   fields:
@@ -13034,8 +13080,8 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 72
+    - 2
 - model: api.question
   pk: 390
   fields:
@@ -13099,9 +13145,9 @@
     created: 2020-05-20
     updated: 2020-05-23
     tags:
-    - 13
     - 57
     - 72
+    - 13
 - model: api.question
   pk: 392
   fields:
@@ -13127,6 +13173,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'Réponses modifiées pour permettre de mémoriser l’ordre de
       grandeur de l’empreinte carbone d’un smartphone: ~100 kg CO2eq
+
 
       https://twitter.com/laydgeur/status/1234583035296845825'
     author: laydgeur
@@ -13203,9 +13250,9 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
     - 87
+    - 2
 - model: api.question
   pk: 395
   fields:
@@ -13303,9 +13350,9 @@
     created: 2020-05-20
     updated: 2020-06-24
     tags:
+    - 38
     - 2
     - 13
-    - 38
 - model: api.question
   pk: 398
   fields:
@@ -13435,8 +13482,8 @@
     updated: 2020-06-25
     tags:
     - 1
-    - 13
     - 72
+    - 13
 - model: api.question
   pk: 402
   fields:
@@ -13462,6 +13509,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'lien de la contribution originale: lesamisdubarrage.over-blog.fr/2016/11/savez-vous-quelle-quantite-d-eau-est-necessaire-pour-fabriquer-un-jean-il-en-faut-10-000-litres-10-000-litres-d-eau-d-un-bout-a-l-au
 
+
       autre lien: https://www.brut.media/fr/international/jamy-retrace-l-itineraire-d-un-jean-b814f446-992d-4282-8d98-5e79f2ed02ca'
     author: Contributeur anonyme
     validator: Matthieu Massart
@@ -13471,9 +13519,9 @@
     created: 2020-05-20
     updated: 2020-06-24
     tags:
-    - 2
     - 37
     - 105
+    - 2
 - model: api.question
   pk: 403
   fields:
@@ -13509,10 +13557,10 @@
     created: 2020-05-20
     updated: 2020-08-10
     tags:
-    - 5
     - 23
     - 51
     - 142
+    - 5
     - 181
 - model: api.question
   pk: 404
@@ -13584,11 +13632,11 @@
     created: 2020-05-20
     updated: 2020-08-10
     tags:
+    - 142
+    - 151
     - 12
     - 13
     - 15
-    - 142
-    - 151
 - model: api.question
   pk: 406
   fields:
@@ -13801,7 +13849,9 @@
     answer_image_explanation: Chiffres de 2019, et évolution par rapport à 2018
     answer_extra_info: 'image alternative: http://huet.blog.lemonde.fr/files/2019/05/le-bon-graphique.jpg
 
+
       https://www.lemonde.fr/blog/huet/2019/05/06/electricite-et-co2-le-tableau-europeen/
+
 
       https://www.connaissancedesenergies.org/une-carte-pour-suivre-lintensite-carbone-de-la-consommation-electrique-170613'
     author: Raphael Odini
@@ -13812,9 +13862,9 @@
     created: 2020-05-28
     updated: 2020-05-28
     tags:
-    - 13
     - 39
     - 47
+    - 13
 - model: api.question
   pk: 412
   fields:
@@ -13855,9 +13905,9 @@
     created: 2020-05-28
     updated: 2020-06-24
     tags:
+    - 92
     - 3
     - 13
-    - 92
 - model: api.question
   pk: 413
   fields:
@@ -13888,9 +13938,9 @@
     created: 2020-06-24
     updated: 2020-06-24
     tags:
-    - 2
     - 38
     - 51
+    - 2
 - model: api.question
   pk: 414
   fields:
@@ -14016,7 +14066,7 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
+    publish: true
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
@@ -14619,11 +14669,11 @@
     created: 2020-06-24
     updated: 2020-07-30
     tags:
-    - 13
     - 24
     - 51
     - 142
     - 147
+    - 13
 - model: api.question
   pk: 437
   fields:
@@ -14686,8 +14736,8 @@
     created: 2020-06-24
     updated: 2020-07-30
     tags:
-    - 10
     - 100
+    - 10
 - model: api.question
   pk: 439
   fields:
@@ -14789,10 +14839,10 @@
     created: 2020-06-24
     updated: 2020-06-25
     tags:
-    - 13
     - 31
     - 80
     - 84
+    - 13
 - model: api.question
   pk: 442
   fields:
@@ -14883,8 +14933,8 @@
     updated: 2020-06-24
     tags:
     - 1
-    - 5
     - 72
+    - 5
 - model: api.question
   pk: 445
   fields:
@@ -15132,8 +15182,8 @@
     created: 2020-06-24
     updated: 2020-07-30
     tags:
-    - 12
     - 99
+    - 12
 - model: api.question
   pk: 453
   fields:
@@ -15550,9 +15600,9 @@
     created: 2020-06-24
     updated: 2020-06-25
     tags:
-    - 2
     - 29
     - 39
+    - 2
 - model: api.question
   pk: 466
   fields:
@@ -15981,8 +16031,8 @@
     created: 2020-06-24
     updated: 2020-07-30
     tags:
-    - 17
     - 97
+    - 17
 - model: api.question
   pk: 479
   fields:
@@ -16014,8 +16064,8 @@
     created: 2020-06-24
     updated: 2020-06-25
     tags:
-    - 5
     - 89
+    - 5
 - model: api.question
   pk: 480
   fields:
@@ -16144,9 +16194,9 @@
     created: 2020-06-24
     updated: 2020-06-25
     tags:
-    - 8
     - 39
     - 47
+    - 8
 - model: api.question
   pk: 484
   fields:
@@ -16446,9 +16496,9 @@
     updated: 2020-06-24
     tags:
     - 1
-    - 13
     - 33
     - 53
+    - 13
 - model: api.question
   pk: 493
   fields:
@@ -16706,9 +16756,9 @@
     created: 2020-06-24
     updated: 2020-06-24
     tags:
+    - 40
     - 10
     - 13
-    - 40
 - model: api.question
   pk: 501
   fields:
@@ -16807,10 +16857,10 @@
     created: 2020-06-24
     updated: 2020-06-24
     tags:
-    - 2
-    - 13
     - 80
     - 81
+    - 2
+    - 13
 - model: api.question
   pk: 504
   fields:
@@ -16840,8 +16890,8 @@
     created: 2020-06-24
     updated: 2020-09-18
     tags:
-    - 16
     - 9
+    - 16
 - model: api.question
   pk: 505
   fields:
@@ -16902,8 +16952,8 @@
     created: 2020-06-24
     updated: 2020-06-24
     tags:
-    - 11
     - 65
+    - 11
 - model: api.question
   pk: 507
   fields:
@@ -16995,8 +17045,8 @@
     updated: 2020-06-24
     tags:
     - 1
-    - 11
     - 33
+    - 11
 - model: api.question
   pk: 510
   fields:
@@ -17088,8 +17138,8 @@
     created: 2020-06-24
     updated: 2020-09-18
     tags:
-    - 16
     - 9
+    - 16
 - model: api.question
   pk: 513
   fields:
@@ -17118,8 +17168,8 @@
     created: 2020-06-24
     updated: 2020-07-30
     tags:
-    - 12
     - 98
+    - 12
 - model: api.question
   pk: 514
   fields:
@@ -17581,9 +17631,9 @@
     created: 2020-06-24
     updated: 2020-06-24
     tags:
-    - 11
     - 59
     - 92
+    - 11
 - model: api.question
   pk: 529
   fields:
@@ -17673,9 +17723,9 @@
     created: 2020-06-24
     updated: 2020-07-23
     tags:
-    - 2
     - 31
     - 72
+    - 2
 - model: api.question
   pk: 532
   fields:
@@ -17707,9 +17757,9 @@
     created: 2020-06-24
     updated: 2020-06-24
     tags:
+    - 40
     - 10
     - 13
-    - 40
 - model: api.question
   pk: 533
   fields:
@@ -17741,11 +17791,11 @@
     created: 2020-06-24
     updated: 2020-06-25
     tags:
-    - 13
     - 33
     - 35
     - 80
     - 82
+    - 13
 - model: api.question
   pk: 534
   fields:
@@ -17850,9 +17900,9 @@
     created: 2020-06-24
     updated: 2020-06-24
     tags:
+    - 80
     - 2
     - 13
-    - 80
 - model: api.question
   pk: 537
   fields:
@@ -17885,10 +17935,10 @@
     created: 2020-06-24
     updated: 2020-06-24
     tags:
+    - 81
     - 2
     - 10
     - 13
-    - 81
 - model: api.question
   pk: 538
   fields:
@@ -17954,9 +18004,9 @@
     created: 2020-06-24
     updated: 2020-06-25
     tags:
-    - 13
     - 80
     - 81
+    - 13
 - model: api.question
   pk: 540
   fields:
@@ -17986,9 +18036,9 @@
     created: 2020-06-24
     updated: 2020-06-24
     tags:
+    - 81
     - 10
     - 13
-    - 81
 - model: api.question
   pk: 541
   fields:
@@ -18054,8 +18104,8 @@
     updated: 2020-09-14
     tags:
     - 1
-    - 13
     - 81
+    - 13
 - model: api.question
   pk: 543
   fields:
@@ -18150,8 +18200,8 @@
     created: 2020-06-24
     updated: 2020-06-25
     tags:
-    - 17
     - 107
+    - 17
 - model: api.question
   pk: 546
   fields:
@@ -18450,9 +18500,9 @@
     created: 2020-06-25
     updated: 2020-06-25
     tags:
-    - 10
     - 53
     - 57
+    - 10
 - model: api.question
   pk: 555
   fields:
@@ -18832,8 +18882,8 @@
     created: 2020-07-04
     updated: 2020-09-14
     tags:
-    - 2
     - 29
+    - 2
 - model: api.question
   pk: 567
   fields:
@@ -18863,7 +18913,7 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: false
+    publish: true
     validation_status: Validée
     added: 2020-07-20
     created: 2020-07-23
@@ -19067,23 +19117,19 @@
       (Indonésie)
     answer_correct: a
     has_ordered_answers: false
-    answer_explanation: '
+    answer_explanation: '- Pour le Samalas, http://www.ipgp.fr/fr/eruption-volcan-samalas-1257
 
-      Pour le Samalas, http://www.ipgp.fr/fr/eruption-volcan-samalas-1257
-
-      pour le Kuwae, Patrick Boucheron (dir.), « Introduction », Histoire du monde
+      - pour le Kuwae, Patrick Boucheron (dir.), « Introduction », Histoire du monde
       au XVe siècle, dirigé par P. Boucheron, coordonné par Julien Loiseau, Pierre
       Monnet et Yann Potin, Fayard, 2009
 
-      pour le Huaynaputina, Sam White, chapter 5 - The Little Ice Age in the Near
+      - pour le Huaynaputina, Sam White, chapter 5 - The Little Ice Age in the Near
       East, DOI: https://doi.org/10.1017/CBO9780511844058.009
 
-      pour le Tambora, Gillen d’Arcy Wood, 1816, l’année sans été, traduit de l’anglais
+      - pour le Tambora, Gillen d’Arcy Wood, 1816, l’année sans été, traduit de l’anglais
       par Philippe Pignarre, Paris, La Découverte, 2016 ; William K. Klingaman, Nicholas
       P. Klingaman, The Year Without Summer. 1816 and the Volcano That Darkened the
-      World and Changed History, New York, St Martin’s Press, 2013.
-
-'
+      World and Changed History, New York, St Martin’s Press, 2013.'
     answer_accessible_url: ''
     answer_scientific_url: https://doi.org/10.1017/CBO9780511844058.009
     answer_image_url: https://i.dailymail.co.uk/i/pix/2015/04/15/10/27975FAA00000578-0-The_map_above_shows_major_volcanic_eruptions_from_the_past_2_000-a-17_1429091055374.jpg
@@ -19091,7 +19137,7 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: false
+    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19129,10 +19175,10 @@
     created: 2020-09-14
     updated: 2020-09-14
     tags:
-    - 5
-    - 17
     - 32
     - 109
+    - 5
+    - 17
 - model: api.question
   pk: 575
   fields:
@@ -19246,7 +19292,7 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: false
+    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19277,7 +19323,7 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: false
+    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19315,14 +19361,14 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: false
+    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
     updated: 2020-09-18
     tags:
-    - 11
     - 40
+    - 11
 - model: api.question
   pk: 580
   fields:
@@ -19350,7 +19396,7 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: false
+    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19416,7 +19462,7 @@
     answer_extra_info: ''
     author: Contributeur anonyme
     validator: Raphael Odini
-    publish: false
+    publish: true
     validation_status: Validée
     added: 2020-09-16
     created: 2020-09-18
@@ -19603,8 +19649,8 @@
     created: 2020-09-22
     updated: 2020-09-22
     tags:
-    - 9
     - 193
+    - 9
 - model: api.question
   pk: 589
   fields:

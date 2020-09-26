@@ -1,8 +1,7 @@
+import re
 import time
 import notion
 import collections
-import markdown
-from bs4 import BeautifulSoup
 
 from django.conf import settings
 from django.core.management import BaseCommand
@@ -111,7 +110,7 @@ class Command(BaseCommand):
             # - field difficulty to int
             # - field added --> created time if None --> to date
             # - field validator --> "" if None
-            # - fields answer_explanation & answer_extra_info clean markdown urls
+            # - fields answer_explanation & answer_extra_info --> clean markdown [links](links)
             if notion_question_dict["id"] is None:
                 question_validation_errors.append(
                     ValidationError({"id": "Question sans id. vide ?"})
@@ -133,13 +132,17 @@ class Command(BaseCommand):
             if notion_question_dict["validator"] is None:
                 notion_question_dict["validator"] = ""
             if "http" in notion_question_dict["answer_explanation"]:
-                html = markdown.markdown(notion_question_dict["answer_explanation"])
-                soup = BeautifulSoup(html, "html.parser")
-                notion_question_dict["answer_explanation"] = soup.get_text()
+                notion_question_dict["answer_explanation"] = re.sub(
+                    r"\[(.*?)\]\((.+?)\)",
+                    r"\1",
+                    notion_question_dict["answer_explanation"],
+                )
             if "http" in notion_question_dict["answer_extra_info"]:
-                html = markdown.markdown(notion_question_dict["answer_extra_info"])
-                soup = BeautifulSoup(html, "html.parser")
-                notion_question_dict["answer_extra_info"] = soup.get_text()
+                notion_question_dict["answer_extra_info"] = re.sub(
+                    r"\[(.*?)\]\((.+?)\)",
+                    r"\1",
+                    notion_question_dict["answer_extra_info"],
+                )
 
             # cleanup relation category
             # - check category exists
