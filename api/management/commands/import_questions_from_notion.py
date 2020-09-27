@@ -1,4 +1,3 @@
-import re
 import time
 import notion
 import collections
@@ -14,8 +13,8 @@ from api.models import Question, Category, Tag
 class Command(BaseCommand):
     """
     Usage:
-    - python manage.py notion_questions_import
-    - python manage.py notion_questions_import 1
+    - python manage.py import_questions_from_notion
+    - python manage.py import_questions_from_notion 1
 
     TODO: optimise db queries and avoid Category & Tag calls ?
 
@@ -42,8 +41,7 @@ class Command(BaseCommand):
         start_time = time.time()
 
         try:
-            notion_questions_table = utilities_notion.get_questions_table()
-            notion_questions_list = notion_questions_table.collection.get_rows()
+            notion_questions_list = utilities_notion.get_questions_table_rows()
         except:  # noqa
             self.stdout.write("Erreur accès Notion. token_v2 expiré ?")
             return
@@ -132,16 +130,16 @@ class Command(BaseCommand):
             if notion_question_dict["validator"] is None:
                 notion_question_dict["validator"] = ""
             if "http" in notion_question_dict["answer_explanation"]:
-                notion_question_dict["answer_explanation"] = re.sub(
-                    r"\[(.*?)\]\((.+?)\)",
-                    r"\1",
-                    notion_question_dict["answer_explanation"],
+                notion_question_dict[
+                    "answer_explanation"
+                ] = utilities_notion.clean_markdown_links(
+                    notion_question_dict["answer_explanation"]
                 )
             if "http" in notion_question_dict["answer_extra_info"]:
-                notion_question_dict["answer_extra_info"] = re.sub(
-                    r"\[(.*?)\]\((.+?)\)",
-                    r"\1",
-                    notion_question_dict["answer_extra_info"],
+                notion_question_dict[
+                    "answer_extra_info"
+                ] = utilities_notion.clean_markdown_links(
+                    notion_question_dict["answer_extra_info"]
                 )
 
             # cleanup relation category

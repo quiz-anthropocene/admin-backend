@@ -21,6 +21,7 @@ class Category(models.Model):
     )
 
     class Meta:
+        ordering = ["pk"]
         constraints = [
             models.UniqueConstraint(fields=["name"], name="unique category name")
         ]
@@ -61,6 +62,7 @@ class Tag(models.Model):
     objects = TagManager()
 
     class Meta:
+        ordering = ["pk"]
         constraints = [models.UniqueConstraint(fields=["name"], name="unique tag name")]
 
     def __str__(self):
@@ -208,6 +210,9 @@ class Question(models.Model):
     updated = models.DateField(auto_now=True)
 
     objects = QuestionQuerySet.as_manager()
+
+    class Meta:
+        ordering = ["pk"]
 
     def __str__(self):
         return f"{self.id} - {self.category} - {self.text}"
@@ -516,6 +521,9 @@ class Quiz(models.Model):
     )
 
     objects = QuizQuerySet.as_manager()
+
+    class Meta:
+        ordering = ["pk"]
 
     def __str__(self):
         return f"{self.name}"

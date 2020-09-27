@@ -10,7 +10,7 @@ from api.models import Question, Category, Tag
 class Command(BaseCommand):
     """
     Usage:
-    - python manage.py notion_questions_validate
+    - python manage.py validate_questions_in_notion
     """
 
     def handle(self, *args, **kwargs):

@@ -1,3 +1,4 @@
+import re
 from datetime import datetime  # , date
 
 import notion  # https://github.com/jamalex/notion-py
@@ -5,12 +6,11 @@ from notion.client import NotionClient
 
 from django.conf import settings
 
-"""
-Notion: connection
-"""
-
 
 def get_notion_client():
+    """
+    Connection
+    """
     # try:
     #     client = NotionClient(token_v2=settings.NOTION_TOKEN_V2)
     # except Exception as e:
@@ -21,47 +21,43 @@ def get_notion_client():
     return client
 
 
-"""
-Notion: Questions page
-- get table
-- get current rows
-"""
-
-
 def get_questions_table():
+    """
+    Questions page: get table
+    """
     notion_client = get_notion_client()
     # page = client.get_block(settings.NOTION_QUESTIONS_PAGE_URL)
     table = notion_client.get_collection_view(settings.NOTION_QUESTIONS_TABLE_URL)
     return table
 
 
-"""
-Notion: Contribution page
-- get table
-- get current rows
-- add row
-"""
+def get_questions_table_rows():
+    """
+    Questions page: get current rows
+    """
+    questions_table = get_questions_table()
+    rows = questions_table.collection.get_rows()
+    return rows
 
 
-def get_contribution_table(notion_client):
+def get_contribution_table():
+    """
+    Contribution page: get table
+    """
+    notion_client = get_notion_client()
     # page = client.get_block(settings.NOTION_CONTRIBUTION_PAGE_URL)
     table = notion_client.get_collection_view(settings.NOTION_CONTRIBUTION_TABLE_URL)
     return table
 
 
-# get rows
-# for row in table.collection.get_rows():
-#     print(row, row.created)
-#     if row.created:
-#         print(row.created.start)
-
-
 def add_contribution_row(
     contribution_text: str, contribution_description: str, contribution_type: str
 ):
+    """
+    Contribution page: add row
+    """
     # init
-    notion_client = get_notion_client()
-    contribution_table = get_contribution_table(notion_client)
+    contribution_table = get_contribution_table()
     # add row
     row = contribution_table.collection.add_row()
     row.type = contribution_type
@@ -72,14 +68,11 @@ def add_contribution_row(
     return row
 
 
-"""
-Notion: Import stats page
-- get table
-- add row
-"""
-
-
-def get_import_stats_table(notion_client):
+def get_import_stats_table():
+    """
+    Import stats page: get table
+    """
+    notion_client = get_notion_client()
     # page = client.get_block(settings.NOTION_IMPORT_STATS_PAGE_URL)
     table = notion_client.get_collection_view(
         settings.NOTION_IMPORT_STATS_TABLE_URL + "coucou"
@@ -88,9 +81,11 @@ def get_import_stats_table(notion_client):
 
 
 def add_import_stats_row(total, new, update):
+    """
+    Import stats page: add row
+    """
     # init
-    notion_client = get_notion_client()
-    import_stats_table = get_import_stats_table(notion_client)
+    import_stats_table = get_import_stats_table()
     # add row
     row = import_stats_table.collection.add_row()
     row.action = "import"
@@ -101,16 +96,20 @@ def add_import_stats_row(total, new, update):
     return row
 
 
-"""
-Notion: Glossary page
-- get table
-- get current rows
-- add row
-"""
-
-
 def get_glossary_table():
+    """
+   Glossary page: get table
+    """
     notion_client = get_notion_client()
     # page = client.get_block(settings.NOTION_GLOSSARY_PAGE_URL)
     table = notion_client.get_collection_view(settings.NOTION_GLOSSARY_TABLE_URL)
     return table
+
+
+def clean_markdown_links(string_with_markdown):
+    """
+    Clean strings with markdown links
+    "string with [http://link](http://link)" --> "string with http://link"
+    https://stackoverflow.com/a/32382747
+    """
+    return re.sub(r"\[(.*?)\]\((.+?)\)", r"\1", string_with_markdown)

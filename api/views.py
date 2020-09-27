@@ -494,9 +494,9 @@ def stats(request):
 def notion_questions(request):
     notion_questions_validation = []
 
-    if request.POST.get("run_notion_questions_validate_script", False):
+    if request.POST.get("run_validate_questions_in_notion_script", False):
         out = StringIO()
-        management.call_command("notion_questions_validate", stdout=out)
+        management.call_command("validate_questions_in_notion", stdout=out)
         notion_questions_validation = out.getvalue()
         notion_questions_validation = notion_questions_validation.split("\n")
 
