@@ -10,15 +10,15 @@
     created: 2020-04-17
     questions:
     - 3
+    - 16
+    - 19
+    - 21
+    - 48
+    - 59
     - 70
     - 71
     - 75
-    - 16
-    - 48
-    - 19
     - 83
-    - 21
-    - 59
     tags: []
 - model: api.quiz
   pk: 2
@@ -32,15 +32,15 @@
     publish: true
     created: 2020-05-25
     questions:
-    - 259
+    - 11
+    - 104
     - 132
     - 135
-    - 104
-    - 11
-    - 307
     - 184
-    - 254
     - 210
+    - 254
+    - 259
+    - 307
     - 410
     tags: []
 - model: api.quiz
@@ -58,7 +58,7 @@
       millénaires en arrière !"
     conclusion: ''
     author: Vincent Mignerot
-    image_background_url: https://ssl.c.photoshelter.com/img-get/I0000mmApiLjmiOw/s/750/750/GPE-5756.jpg
+    image_background_url: https://vincent-mignerot.fr/wp-content/uploads/2019/08/Vincent-Mignerot.jpg
     publish: true
     created: 2020-06-26
     questions:
@@ -70,10 +70,7 @@
     - 552
     - 553
     - 555
-    - 574
-    - 575
-    - 548
-    - 547
+    - 556
     tags:
     - 185
 - model: api.quiz
@@ -110,29 +107,28 @@
     publish: true
     created: 2020-07-08
     questions:
-    - 102
-    - 358
-    - 43
-    - 236
-    - 78
-    - 335
     - 19
-    - 243
+    - 43
+    - 78
+    - 102
     - 150
+    - 236
+    - 243
     - 251
-    - 440
-    - 402
+    - 335
+    - 358
     tags: []
 - model: api.quiz
   pk: 6
   fields:
-    name: Bienvenue en Anthropocène - Partie 1
-    introduction: L'Anthropocène, c'est un terme proposé par des scientifiques pour
-      désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où
-      l'homme est devenu une force géologique majeure. La période la plus récente
-      de l'anthropocène est parfois dite la grande accélération, car de nombreux indicateurs
-      y présentent des courbes de type exponentiel. Ce quiz fait un tour d'horizon
-      de l'emprise inédite de l'homme sur la planète qu'il occupe.
+    name: Bienvenue en anthropocène - Partie 1
+    introduction: L'Anthropocène est un terme proposé par des scientifiques pour désigner
+      une nouvelle ère géologique, dans laquelle l'influence de l'être humain sur
+      la biosphère a atteint un tel niveau qu'elle est devenue une force géologique
+      majeure capable de marquer la lithosphère. La période la plus récente de l'anthropocène
+      est parfois dite la grande accélération, car de nombreux indicateurs y présentent
+      des courbes de type exponentiel. Ce quiz fait un tour d'horizon de l'emprise
+      inédite de l'homme sur la planète qu'il occupe.
     conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
@@ -153,7 +149,7 @@
 - model: api.quiz
   pk: 7
   fields:
-    name: Tout sur le Pétrole - Partie 1
+    name: Tout sur le pétrole - Partie 1
     introduction: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
       à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
     conclusion: ''
@@ -188,10 +184,9 @@
     publish: true
     created: 2020-07-14
     questions:
-    - 129
     - 6
     - 8
-    - 137
+    - 13
     - 14
     - 17
     - 22
@@ -199,15 +194,20 @@
     - 31
     - 32
     - 33
-    - 415
-    - 176
-    - 436
-    - 194
     - 79
     - 80
-    - 369
+    - 129
+    - 137
+    - 139
+    - 176
+    - 180
+    - 194
+    - 294
     - 361
-    - 13
+    - 362
+    - 369
+    - 415
+    - 436
     tags:
     - 142
 - model: api.quiz
@@ -222,21 +222,21 @@
     publish: true
     created: 2020-07-14
     questions:
-    - 98
-    - 58
+    - 24
     - 45
     - 53
     - 54
     - 55
-    - 24
-    - 57
     - 56
+    - 57
+    - 58
+    - 98
     - 157
     tags: []
 - model: api.quiz
   pk: 10
   fields:
-    name: Tout sur le Pétrole - Partie 2
+    name: Tout sur le pétrole - Partie 2
     introduction: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
       à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
     conclusion: ''
@@ -245,14 +245,13 @@
     publish: true
     created: 2020-07-29
     questions:
+    - 12
+    - 155
     - 156
     - 179
     - 230
     - 246
-    - 155
-    - 12
     - 494
-    - 20
     tags: []
 - model: api.quiz
   pk: 11
@@ -271,30 +270,30 @@
     publish: true
     created: 2020-07-29
     questions:
-    - 66
     - 6
     - 8
+    - 14
     - 15
-    - 143
-    - 405
+    - 16
+    - 21
     - 23
-    - 343
-    - 282
     - 26
     - 27
     - 28
     - 31
+    - 32
     - 34
     - 36
     - 37
     - 42
     - 47
     - 48
+    - 66
     - 118
-    - 16
-    - 32
-    - 14
-    - 21
+    - 143
+    - 282
+    - 343
+    - 405
     tags:
     - 142
 - model: api.quiz
@@ -314,12 +313,12 @@
     publish: true
     created: 2020-07-29
     questions:
-    - 305
+    - 29
     - 130
     - 131
+    - 305
     - 306
     - 459
-    - 29
     tags:
     - 142
 - model: api.quiz
@@ -339,9 +338,9 @@
     publish: false
     created: 2020-07-29
     questions:
-    - 315
+    - 5
     - 52
-    - 294
+    - 315
     tags:
     - 142
 - model: api.quiz
@@ -362,8 +361,8 @@
     created: 2020-07-29
     questions:
     - 35
-    - 403
     - 229
+    - 403
     tags:
     - 142
 - model: api.quiz
@@ -385,44 +384,43 @@
     created: 2020-07-29
     questions:
     - 33
-    - 180
-    - 453
-    - 362
-    - 460
-    - 222
     - 46
-    - 425
+    - 180
+    - 222
     - 348
-    - 139
-    - 264
+    - 362
+    - 425
+    - 453
+    - 460
     tags:
     - 142
 - model: api.quiz
   pk: 16
   fields:
-    name: Bienvenue en Anthropocène - Partie 2
-    introduction: L'Anthropocène, c'est un terme proposé par des scientifiques pour
-      désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où
-      l'homme est devenu une force géologique majeure. La période la plus récente
-      de l'anthropocène est parfois dite la grande accélération, car de nombreux indicateurs
-      y présentent des courbes de type exponentiel. Ce quiz fait un tour d'horizon
-      de l'emprise inédite de l'homme sur la planète qu'il occupe.
+    name: Bienvenue en anthropocène - Partie 2
+    introduction: L'Anthropocène est un terme proposé par des scientifiques pour désigner
+      une nouvelle ère géologique, dans laquelle l'influence de l'être humain sur
+      la biosphère a atteint un tel niveau qu'elle est devenue une force géologique
+      majeure capable de marquer la lithosphère. La période la plus récente de l'anthropocène
+      est parfois dite la grande accélération, car de nombreux indicateurs y présentent
+      des courbes de type exponentiel. Ce quiz fait un tour d'horizon de l'emprise
+      inédite de l'homme sur la planète qu'il occupe.
     conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
     publish: true
     created: 2020-07-29
     questions:
-    - 96
-    - 225
+    - 51
     - 67
-    - 294
     - 77
     - 78
     - 79
-    - 494
-    - 51
+    - 96
+    - 225
+    - 294
     - 403
+    - 494
     tags: []
 - model: api.quiz
   pk: 17
@@ -436,7 +434,6 @@
     publish: true
     created: 2020-08-04
     questions:
-    - 67
     - 4
     - 7
     - 41
@@ -444,35 +441,8 @@
     - 59
     - 60
     - 61
+    - 67
     tags:
     - 6
     - 49
     - 76
-- model: api.quiz
-  pk: 18
-  fields:
-    name: Le quiz de Laurent Testot
-    introduction: 'Journaliste scientifique, conférencier et essayiste, Laurent Testot
-      est spécialiste de l''histoire globale. Son essai Cataclysmes - une histoire
-      environnementale de l’humanité, primé par l’Académie Française, retrace l’histoire
-      des interactions entre l''humain et la planète sur le temps long. Il est aussi
-      l’auteur de Homo Canis - une histoire des chiens et de l’humanité et : La Nouvelle
-      Histoire du Monde. Il a récemment dirigé, avec Laurent Aillet, l''ouvrage Collapsus
-      - changer ou disparaître ? Le vrai bilan sur notre planète. Voici la sélection
-      de questions que Laurent nous a préparées à partir de ses publications.'
-    conclusion: ''
-    author: Laurent Testot
-    image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
-    publish: false
-    created: 2020-09-23
-    questions:
-    - 577
-    - 578
-    - 579
-    - 580
-    - 573
-    - 576
-    - 571
-    - 572
-    tags:
-    - 185
