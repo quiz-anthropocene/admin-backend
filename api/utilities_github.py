@@ -32,6 +32,29 @@ def create_branch(branch_name):
     return branch
 
 
+def get_file(file_path, branch_name="master"):
+    print("in get_file", file_path)
+    repo = get_repo()
+    try:
+        contents = repo.get_contents(file_path, ref=branch_name)
+    except github.GithubException as e:
+        # 404 {"message": "Not Found", "documentation_url": "https://docs.github.com/rest/reference/repos#get-repository-content"}  # noqa
+        raise e
+    print(contents)
+    return contents
+
+
+def update_file(file_path, commit_message, file_content, branch_name):
+    print("in update_file", file_path)
+    repo = get_repo()
+    contents = repo.get_contents(file_path, ref=branch_name)
+    res = repo.update_file(
+        file_path, commit_message, file_content, contents.sha, branch=branch_name,
+    )
+    print(res)
+    return res
+
+
 def create_file(file_path, commit_message, file_content, branch_name):
     print("in create_file", file_path)
     repo = get_repo()
@@ -44,14 +67,11 @@ def create_file(file_path, commit_message, file_content, branch_name):
         if (
             e.data["message"] == 'Invalid request.\n\n"sha" wasn\'t supplied.'
         ):  # trying to update an existing file # noqa
-            print("in create_file > update_file")
-            contents = repo.get_contents(file_path, ref=branch_name)
-            res = repo.update_file(
-                file_path,
-                commit_message,
-                file_content,
-                contents.sha,
-                branch=branch_name,
+            res = update_file(
+                file_path=file_path,
+                commit_message=commit_message,
+                file_content=file_content,
+                branch_name=branch_name,
             )
         else:
             raise e

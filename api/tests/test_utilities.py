@@ -1,9 +1,9 @@
 from django.test import TestCase
 
-from api import utilities_notion
+from api import utilities
 
 
-class UtilitiesNotionTest(TestCase):
+class UtilitiesTest(TestCase):
     def test_clean_markdown_links(self):
         string_with_markdown_links_list = [
             (
@@ -38,6 +38,17 @@ class UtilitiesNotionTest(TestCase):
         ]
         for string_with_markdown_links in string_with_markdown_links_list:
             self.assertEqual(
-                utilities_notion.clean_markdown_links(string_with_markdown_links[0]),
+                utilities.clean_markdown_links(string_with_markdown_links[0]),
                 string_with_markdown_links[1],
             )
+
+    def test_update_frontend_last_updated_datetime(self):
+        new_datetime = "2020-09-29 14:30:55"
+        old_file_content = "export default {\n  TEST: 123,\n  ANOTHER_TEST: 'coucou',\n  DATA_LAST_UPDATED_DATETIME: '2020-09-28 12:00:00',\n  THIRD: 'four',\n};\n"  # noqa
+        new_file_content = "export default {\n  TEST: 123,\n  ANOTHER_TEST: 'coucou',\n  DATA_LAST_UPDATED_DATETIME: '2020-09-29 14:30:55',\n  THIRD: 'four',\n};\n"  # noqa
+        self.assertEqual(
+            utilities.update_frontend_last_updated_datetime(
+                old_file_content, new_datetime
+            ),
+            new_file_content,
+        )

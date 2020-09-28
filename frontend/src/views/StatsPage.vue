@@ -2,7 +2,7 @@
   <section class="text-align-left">
     <h2>Quelques statistiques</h2>
 
-    <p class="text-muted">Mise à jour : 28 Septembre 2020</p>
+    <p class="text-muted">Mise à jour : {{  }}</p>
 
     <br />
     <h3>❓&nbsp;Questions</h3>
@@ -68,6 +68,7 @@
 </template>
 
 <script>
+import constants from '../constants';
 import { metaTagsGenerator } from '../utils';
 import FilterLabel from '../components/FilterLabel.vue';
 
@@ -90,6 +91,9 @@ export default {
   },
 
   computed: {
+    data_last_updated() {
+      return new Date(constants.DATA_LAST_UPDATED_DATETIME).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
+    },
     question_count() {
       return this.$store.state.questions.length;
     },

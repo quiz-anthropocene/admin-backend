@@ -1,4 +1,3 @@
-import re
 from datetime import datetime  # , date
 
 import notion  # https://github.com/jamalex/notion-py
@@ -104,12 +103,3 @@ def get_glossary_table():
     # page = client.get_block(settings.NOTION_GLOSSARY_PAGE_URL)
     table = notion_client.get_collection_view(settings.NOTION_GLOSSARY_TABLE_URL)
     return table
-
-
-def clean_markdown_links(string_with_markdown):
-    """
-    Clean strings with markdown links
-    "string with [http://link](http://link)" --> "string with http://link"
-    https://stackoverflow.com/a/32382747
-    """
-    return re.sub(r"\[(.*?)\]\((.+?)\)", r"\1", string_with_markdown)

@@ -17,14 +17,20 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         # init
-        current_date_string = datetime.now().strftime("%Y-%m-%d")  # YYYY-MM-DD
+        current_datetime = datetime.now()
+        current_datetime_string = current_datetime.strftime(
+            "%Y-%m-%d %H:%M:%S"
+        )  # YYYY-MM-DD HH:MM:SS
+        current_date_string = current_datetime.strftime("%Y-%m-%d")  # YYYY-MM-DD
         data_update_branch_name = f"data-update-{current_date_string}"
         data_update_pull_request_name = f"Data: update ({current_date_string})"
 
         # create branch
         utilities_github.create_branch(data_update_branch_name)
 
-        # update & commit data files
+        # update & commit files
+        # data/questions.yaml, data/quizzes.yaml, data/tags.yaml
+        # frontend/src/constants.js
         questions_yaml = utilities.serialize_model_to_yaml(model_label="question")
         utilities_github.create_file(
             file_path="data/questions.yaml",
@@ -44,6 +50,18 @@ class Command(BaseCommand):
             file_path="data/tags.yaml",
             commit_message="update tags",
             file_content=tags_yaml,
+            branch_name=data_update_branch_name,
+        )
+        old_frontend_constants_file_content = utilities_github.get_file(
+            file_path="frontend/src/constants.js", branch_name=data_update_branch_name
+        )
+        new_frontend_constants_file_content = utilities.update_frontend_last_updated_datetime(
+            old_frontend_constants_file_content, current_datetime_string
+        )
+        utilities_github.update_file(
+            file_path="frontend/src/constants.js",
+            commit_message="update frontend constants (last_updated datetime)",
+            file_content=new_frontend_constants_file_content,
             branch_name=data_update_branch_name,
         )
 

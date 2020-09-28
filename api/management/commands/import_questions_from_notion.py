@@ -6,7 +6,7 @@ from django.conf import settings
 from django.core.management import BaseCommand
 from django.core.exceptions import ValidationError
 
-from api import utilities_notion
+from api import utilities, utilities_notion
 from api.models import Question, Category, Tag
 
 
@@ -132,13 +132,13 @@ class Command(BaseCommand):
             if "http" in notion_question_dict["answer_explanation"]:
                 notion_question_dict[
                     "answer_explanation"
-                ] = utilities_notion.clean_markdown_links(
+                ] = utilities.clean_markdown_links(
                     notion_question_dict["answer_explanation"]
                 )
             if "http" in notion_question_dict["answer_extra_info"]:
                 notion_question_dict[
                     "answer_extra_info"
-                ] = utilities_notion.clean_markdown_links(
+                ] = utilities.clean_markdown_links(
                     notion_question_dict["answer_extra_info"]
                 )
 
