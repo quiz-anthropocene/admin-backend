@@ -60,7 +60,11 @@ def create_file(file_path, commit_message, file_content, branch_name):
 
 
 def create_pull_request(
-    pull_request_title, pull_request_message, branch_name, review_request=False
+    pull_request_title,
+    pull_request_message,
+    branch_name,
+    pull_request_labels="automerge",
+    review_request=False,
 ):
     print("in create_pull_request", pull_request_title)
     repo = get_repo()
@@ -86,6 +90,8 @@ def create_pull_request(
                     pull_request = repo.get_pull(open_pull_request.number)
         else:
             raise e
+    if pull_request_labels:
+        pull_request.add_to_labels(pull_request_labels)
     # if review_request:
     #     pull_request.create_review_request(reviewers=["raphodn"])
     print(pull_request)

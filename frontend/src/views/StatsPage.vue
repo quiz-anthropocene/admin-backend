@@ -2,7 +2,7 @@
   <section class="text-align-left">
     <h2>Quelques statistiques</h2>
 
-    <p class="text-muted">Mise à jour : 30 Juillet 2020</p>
+    <p class="text-muted">Mise à jour : 28 Septembre 2020</p>
 
     <br />
     <h3>❓&nbsp;Questions</h3>
