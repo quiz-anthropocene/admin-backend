@@ -110,8 +110,8 @@ def create_pull_request(
                     pull_request = repo.get_pull(open_pull_request.number)
         else:
             raise e
-    # if pull_request_labels:
-    #     pull_request.add_to_labels(pull_request_labels)
+    if pull_request_labels:
+        pull_request.add_to_labels(pull_request_labels)
     # if review_request:
     #     pull_request.create_review_request(reviewers=["raphodn"])
     print(pull_request)
