@@ -1,3 +1,1 @@
-export default {
-  DATA_LAST_UPDATED_DATETIME: '2020-09-28 12:00:00',
-};
+b"export default {\n  DATA_LAST_UPDATED_DATETIME: '2020-09-28 20:06:19',\n};\n"
