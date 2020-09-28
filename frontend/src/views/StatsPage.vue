@@ -2,7 +2,7 @@
   <section class="text-align-left">
     <h2>Quelques statistiques</h2>
 
-    <p class="text-muted">Mise à jour : {{  }}</p>
+    <p class="text-muted">Mise à jour : {{ data_last_updated }}</p>
 
     <br />
     <h3>❓&nbsp;Questions</h3>
