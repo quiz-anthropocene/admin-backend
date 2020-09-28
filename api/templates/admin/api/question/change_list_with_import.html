@@ -4,26 +4,7 @@
 
 {% block extrahead %}
 {{ block.super }}
-<style>
-  .loading {
-    height: 0;
-    width: 0;
-    padding: 5px;
-    border: 6px solid #ccc;
-    border-right-color: #888;
-    border-radius: 22px;
-    -webkit-animation: rotate 1s infinite linear;
-    /* left, top and position just for the demo! */
-  }
-
-  @-webkit-keyframes rotate {
-    /* 100% keyframe for  clockwise. 
-      use 0% instead for anticlockwise */
-    100% {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-</style>
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin/extra.css' %}">
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // remove first h1
@@ -32,7 +13,7 @@
     const elements = document.getElementsByClassName("action-button");
     for (var i = 0; i < elements.length; i++) {
       elements[i].addEventListener("click", function() {
-        document.getElementById("spinner").style.display = "inline-block";
+        document.getElementById("spinner").style.display = "block";
         document.getElementById("result-section").style.display = "none";
       });
     }
@@ -42,31 +23,31 @@
 
 {% block content %}
 <h1>Importer les questions depuis Notion</h1>
-<p>
-  Les questions sont créés et validées dans Notion, avant d'être importés dans l'admin (afin d'y créer les quizs).
-</p>
-<p>
-  Pourquoi plusieurs boutons ? L'import est séparé en plusieurs actions car il prend trop de temps sinon (et fait parfois planter le serveur).
-</p>
-<form method="POST">
-  {% csrf_token %}
-  <input type="hidden" name="run_import_questions_from_notion_script" value="1" />
-  <input class="action-button" type="submit" value="Lancer l'import des questions 1 à 200">
-</form>
-<form method="POST">
-  {% csrf_token %}
-  <input type="hidden" name="run_import_questions_from_notion_script" value="2" />
-  <input class="action-button" type="submit" value="Lancer l'import des questions 200 à 400">
-</form>
-<form method="POST">
-  {% csrf_token %}
-  <input type="hidden" name="run_import_questions_from_notion_script" value="3" />
-  <input class="action-button" type="submit" value="Lancer l'import des questions 400 à ...">
-</form>
-
-<i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
-
-<div id="spinner" class="loading" role="status" style="display:none"></div>
+<section class="action-text">
+  <p>
+    Les questions sont créés et validées dans Notion, avant d'être importés dans l'admin (afin d'y créer les quizs).
+  </p>
+  <p>
+    Pourquoi plusieurs boutons ? L'import est séparé en plusieurs actions car il prend trop de temps sinon (et fait parfois planter le serveur).
+  </p>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="run_import_questions_from_notion_script" value="1" />
+    <input class="action-button" type="submit" value="Lancer l'import des questions 1 à 200">
+  </form>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="run_import_questions_from_notion_script" value="2" />
+    <input class="action-button" type="submit" value="Lancer l'import des questions 200 à 400">
+  </form>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="run_import_questions_from_notion_script" value="3" />
+    <input class="action-button" type="submit" value="Lancer l'import des questions 400 à ...">
+  </form>
+  <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
+  <div id="spinner" class="loading" role="status" style="display:none"></div>
+</section>
 
 {% if notion_questions_validation %}
 <section id="result-section">

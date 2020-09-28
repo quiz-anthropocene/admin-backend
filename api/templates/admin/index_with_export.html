@@ -3,33 +3,14 @@
 
 {% load static %}
 
-{% block extrastyle %}
+{% block extrahead %}
 {{ block.super }}
-<style>
-  .loading {
-    height: 0;
-    width: 0;
-    padding: 5px;
-    border: 6px solid #ccc;
-    border-right-color: #888;
-    border-radius: 22px;
-    -webkit-animation: rotate 1s infinite linear;
-    /* left, top and position just for the demo! */
-  }
-
-  @-webkit-keyframes rotate {
-    /* 100% keyframe for  clockwise. 
-      use 0% instead for anticlockwise */
-    100% {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-</style>
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin/extra.css' %}">
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // add click listener
     document.getElementById("action-button").addEventListener("click", function() {
-      document.getElementById("spinner").style.display = "inline-block";
+      document.getElementById("spinner").style.display = "block";
       document.getElementById("result-section").style.display = "none";
     });
   });
@@ -44,24 +25,23 @@
   <hr style="margin-top:20px;margin-bottom:20px" />
 
   <h1>Exporter la donnée vers Github</h1>
+  <section class="action-text">
+    <p>
+      Une fois les questions importées depuis Notion, et les quizs et/ou tags créés, il est temps de mettre à jour l'application.
+    </p>
+    <p>
+      Ce script va exporter toutes les questions, quizzes et tags au format YAML, et créer une Pull Request Github.
+    </p>
+    <form method="POST">
+      {% csrf_token %}
+      <input type="hidden" name="run_export_data_to_github_script" value="1" />
+      <input id="action-button" type="submit" value="Lancer l'export de la donnée">
+    </form>
 
-  <p>
-    Une fois les questions importées depuis Notion, et les quizs et/ou tags créés, il est temps de mettre à jour l'application.
-  </p>
+    <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
 
-  <p>
-    Ce script va exporter toutes les questions, quizzes et tags au format YAML, et créer une Pull Request Github.
-  </p>
-
-  <form method="POST">
-    {% csrf_token %}
-    <input type="hidden" name="run_export_data_to_github_script" value="1" />
-    <input class="action-button" type="submit" value="Lancer l'export de la donnée">
-  </form>
-
-  <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
-
-  <div id="spinner" class="loading" role="status" style="display:none"></div>
+    <div id="spinner" class="loading" role="status" style="display:none"></div>
+  </section>
 
   {% if export_message %}
     <section id="result-section">

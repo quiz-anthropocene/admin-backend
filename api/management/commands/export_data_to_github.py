@@ -18,7 +18,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         # init
         current_date_string = datetime.now().strftime("%Y-%m-%d")  # YYYY-MM-DD
-        data_update_branch_name = f"data-update-{current_date_string}-test-2"
+        data_update_branch_name = f"data-update-{current_date_string}"
         data_update_pull_request_name = f"Data: update ({current_date_string})"
 
         # create branch
@@ -50,7 +50,7 @@ class Command(BaseCommand):
         # create pull request
         pull_request = utilities_github.create_pull_request(
             pull_request_title=data_update_pull_request_name,
-            pull_request_message="",
+            pull_request_message="Mise à jour de la donnée : <ul><li>data/questions.yaml</li><li>data/quizzes.yaml</li><li>data/tags.yaml</li></ul>",  # noqa
             branch_name=data_update_branch_name,
         )
         print(pull_request.html_url)
