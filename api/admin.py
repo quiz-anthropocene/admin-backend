@@ -833,7 +833,7 @@ class MyAdminSite(AdminSite):
             if "https" not in out.getvalue():
                 export_message = f"Erreur survenue. {out.getvalue()}"
             else:
-                export_message = f"La Pull Request a été créé ! Elle est visible ici : <a href='{out.getvalue()}' target='_blank'>{out.getvalue()}</a>"  # noqa
+                export_message = f"La Pull Request a été créé !<br>Elle est visible ici : <a href='{out.getvalue()}' target='_blank'>{out.getvalue()}</a>"  # noqa
             print(export_message)
 
         extra_context = extra_context or {"export_message": export_message}
