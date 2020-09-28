@@ -1,3 +1,4 @@
+import re
 from datetime import datetime, timedelta
 
 from django.apps import apps
@@ -67,3 +68,21 @@ def add_validation_error(dict, key, value):
         if type(dict[key]) == str:
             dict[key] = [dict[key], value]
     return dict
+
+
+def clean_markdown_links(string_with_markdown):
+    """
+    Clean strings with markdown links using regex
+    "string with [http://link](http://link)" --> "string with http://link"
+    https://stackoverflow.com/a/32382747
+    """
+    return re.sub(r"\[(.*?)\]\((.+?)\)", r"\1", string_with_markdown)
+
+
+def update_frontend_last_updated_datetime(file_content, new_datetime):
+    """
+    Update frontend file with regex
+    """
+    return re.sub(
+        "(?<=DATA_LAST_UPDATED_DATETIME: ')(.+?)(?=',)", new_datetime, file_content
+    )
