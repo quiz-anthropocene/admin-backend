@@ -58,22 +58,19 @@
       millénaires en arrière !"
     conclusion: ''
     author: Vincent Mignerot
-    image_background_url: https://ssl.c.photoshelter.com/img-get/I0000mmApiLjmiOw/s/750/750/GPE-5756.jpg
+    image_background_url: https://vincent-mignerot.fr/wp-content/uploads/2019/08/Vincent-Mignerot.jpg
     publish: true
     created: 2020-06-26
     questions:
     - 545
     - 546
-    - 547
-    - 548
     - 549
     - 550
     - 551
     - 552
     - 553
     - 555
-    - 574
-    - 575
+    - 556
     tags:
     - 185
 - model: api.quiz
@@ -120,19 +117,18 @@
     - 251
     - 335
     - 358
-    - 402
-    - 440
     tags: []
 - model: api.quiz
   pk: 6
   fields:
-    name: Bienvenue en Anthropocène - Partie 1
-    introduction: L'Anthropocène, c'est un terme proposé par des scientifiques pour
-      désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où
-      l'homme est devenu une force géologique majeure. La période la plus récente
-      de l'anthropocène est parfois dite la grande accélération, car de nombreux indicateurs
-      y présentent des courbes de type exponentiel. Ce quiz fait un tour d'horizon
-      de l'emprise inédite de l'homme sur la planète qu'il occupe.
+    name: Bienvenue en anthropocène - Partie 1
+    introduction: L'Anthropocène est un terme proposé par des scientifiques pour désigner
+      une nouvelle ère géologique, dans laquelle l'influence de l'être humain sur
+      la biosphère a atteint un tel niveau qu'elle est devenue une force géologique
+      majeure capable de marquer la lithosphère. La période la plus récente de l'anthropocène
+      est parfois dite la grande accélération, car de nombreux indicateurs y présentent
+      des courbes de type exponentiel. Ce quiz fait un tour d'horizon de l'emprise
+      inédite de l'homme sur la planète qu'il occupe.
     conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
@@ -153,7 +149,7 @@
 - model: api.quiz
   pk: 7
   fields:
-    name: Tout sur le Pétrole - Partie 1
+    name: Tout sur le pétrole - Partie 1
     introduction: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
       à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
     conclusion: ''
@@ -184,7 +180,7 @@
       lot de cartes distribué lors d'un atelier de la Fresque."
     conclusion: ''
     author: Matthieu Massart
-    image_background_url: http://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
+    image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: true
     created: 2020-07-14
     questions:
@@ -202,9 +198,13 @@
     - 80
     - 129
     - 137
+    - 139
     - 176
+    - 180
     - 194
+    - 294
     - 361
+    - 362
     - 369
     - 415
     - 436
@@ -236,7 +236,7 @@
 - model: api.quiz
   pk: 10
   fields:
-    name: Tout sur le Pétrole - Partie 2
+    name: Tout sur le pétrole - Partie 2
     introduction: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
       à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
     conclusion: ''
@@ -246,7 +246,6 @@
     created: 2020-07-29
     questions:
     - 12
-    - 20
     - 155
     - 156
     - 179
@@ -267,7 +266,7 @@
       lot de cartes qui est distribué lors d'un atelier de la Fresque."
     conclusion: ''
     author: Matthieu Massart
-    image_background_url: http://fresqueduclimat.org/wp-content/uploads/2020/01/IMG_9753-215x215.jpg
+    image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: true
     created: 2020-07-29
     questions:
@@ -310,7 +309,7 @@
       du 3ème lot distribué lors d'une Fresque."
     conclusion: ''
     author: Matthieu Massart
-    image_background_url: http://fresqueduclimat.org/wp-content/uploads/2020/01/J1A3917120919-2-215x215.jpg
+    image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: true
     created: 2020-07-29
     questions:
@@ -335,12 +334,12 @@
       du 4ème lot distribué lors d'une fresque."
     conclusion: ''
     author: Matthieu Massart
-    image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/07/PartieRestit-scaled.jpg?gid=1
+    image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: false
     created: 2020-07-29
     questions:
+    - 5
     - 52
-    - 294
     - 315
     tags:
     - 142
@@ -386,10 +385,8 @@
     questions:
     - 33
     - 46
-    - 139
     - 180
     - 222
-    - 264
     - 348
     - 362
     - 425
@@ -400,13 +397,14 @@
 - model: api.quiz
   pk: 16
   fields:
-    name: Bienvenue en Anthropocène - Partie 2
-    introduction: L'Anthropocène, c'est un terme proposé par des scientifiques pour
-      désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où
-      l'homme est devenu une force géologique majeure. La période la plus récente
-      de l'anthropocène est parfois dite la grande accélération, car de nombreux indicateurs
-      y présentent des courbes de type exponentiel. Ce quiz fait un tour d'horizon
-      de l'emprise inédite de l'homme sur la planète qu'il occupe.
+    name: Bienvenue en anthropocène - Partie 2
+    introduction: L'Anthropocène est un terme proposé par des scientifiques pour désigner
+      une nouvelle ère géologique, dans laquelle l'influence de l'être humain sur
+      la biosphère a atteint un tel niveau qu'elle est devenue une force géologique
+      majeure capable de marquer la lithosphère. La période la plus récente de l'anthropocène
+      est parfois dite la grande accélération, car de nombreux indicateurs y présentent
+      des courbes de type exponentiel. Ce quiz fait un tour d'horizon de l'emprise
+      inédite de l'homme sur la planète qu'il occupe.
     conclusion: ''
     author: Matthieu Massart
     image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
@@ -448,31 +446,3 @@
     - 6
     - 49
     - 76
-- model: api.quiz
-  pk: 18
-  fields:
-    name: Le quiz de Laurent Testot
-    introduction: 'Journaliste scientifique, conférencier et essayiste, Laurent Testot
-      est spécialiste de l''histoire globale. Son essai Cataclysmes - une histoire
-      environnementale de l’humanité, primé par l’Académie Française, retrace l’histoire
-      des interactions entre l''humain et la planète sur le temps long. Il est aussi
-      l’auteur de Homo Canis - une histoire des chiens et de l’humanité et : La Nouvelle
-      Histoire du Monde. Il a récemment dirigé, avec Laurent Aillet, l''ouvrage Collapsus
-      - changer ou disparaître ? Le vrai bilan sur notre planète. Voici la sélection
-      de questions que Laurent nous a préparées à partir de ses publications.'
-    conclusion: ''
-    author: Laurent Testot
-    image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
-    publish: false
-    created: 2020-09-23
-    questions:
-    - 571
-    - 572
-    - 573
-    - 576
-    - 577
-    - 578
-    - 579
-    - 580
-    tags:
-    - 185
