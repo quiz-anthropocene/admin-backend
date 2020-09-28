@@ -1,3 +1,4 @@
+# https://github.com/pascalgn/automerge-action
 name: automerge
 on:
   pull_request:
@@ -25,3 +26,9 @@ jobs:
         uses: "pascalgn/automerge-action@c29cef1b62bfb675777896255a70c69fc01bcfe4"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: "automerge"
+          MERGE_METHOD: "squash"
+          MERGE_COMMIT_MESSAGE: "pull-request-description"
+          MERGE_FORKS: false
+          MERGE_RETRIES: 3
+          MERGE_RETRY_SLEEP: 30000

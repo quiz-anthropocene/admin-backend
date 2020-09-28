@@ -350,12 +350,13 @@ class Question(models.Model):
                         validation_errors, "has_ordered_answers", error_message
                     )
             # publish rules
-            self.publish = True
-            # if not getattr(self, "publish"):
-            #     error_message = f"Valeur : '{getattr(self, 'publish')}' doit être True. Car status 'Validée'. Question {self.id}"  # noqa
-            #     validation_errors = utilities.add_validation_error(
-            #         validation_errors, "publish", error_message
-            #     )
+            if not self.publish:
+                self.publish = True
+                # if not getattr(self, "publish"):
+                #     error_message = f"Valeur : '{getattr(self, 'publish')}' doit être True. Car status 'Validée'. Question {self.id}"  # noqa
+                #     validation_errors = utilities.add_validation_error(
+                #         validation_errors, "publish", error_message
+                #     )
         if bool(validation_errors):
             raise ValidationError(validation_errors)
 
