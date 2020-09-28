@@ -19067,23 +19067,15 @@
       (Indonésie)
     answer_correct: a
     has_ordered_answers: false
-    answer_explanation: '
-
-      Pour le Samalas, http://www.ipgp.fr/fr/eruption-volcan-samalas-1257
-
-      pour le Kuwae, Patrick Boucheron (dir.), « Introduction », Histoire du monde
-      au XVe siècle, dirigé par P. Boucheron, coordonné par Julien Loiseau, Pierre
-      Monnet et Yann Potin, Fayard, 2009
-
-      pour le Huaynaputina, Sam White, chapter 5 - The Little Ice Age in the Near
-      East, DOI: https://doi.org/10.1017/CBO9780511844058.009
-
-      pour le Tambora, Gillen d’Arcy Wood, 1816, l’année sans été, traduit de l’anglais
+    answer_explanation: "Pour le Samalas, http://www.ipgp.fr/fr/eruption-volcan-samalas-1257\r\npour
+      le Kuwae, Patrick Boucheron (dir.), « Introduction », Histoire du monde au XVe
+      siècle, dirigé par P. Boucheron, coordonné par Julien Loiseau, Pierre Monnet
+      et Yann Potin, Fayard, 2009\r\npour le Huaynaputina, Sam White, chapter 5 -
+      The Little Ice Age in the Near East, DOI: https://doi.org/10.1017/CBO9780511844058.009\r\npour
+      le Tambora, Gillen d’Arcy Wood, 1816, l’année sans été, traduit de l’anglais
       par Philippe Pignarre, Paris, La Découverte, 2016 ; William K. Klingaman, Nicholas
       P. Klingaman, The Year Without Summer. 1816 and the Volcano That Darkened the
-      World and Changed History, New York, St Martin’s Press, 2013.
-
-'
+      World and Changed History, New York, St Martin’s Press, 2013."
     answer_accessible_url: ''
     answer_scientific_url: https://doi.org/10.1017/CBO9780511844058.009
     answer_image_url: https://i.dailymail.co.uk/i/pix/2015/04/15/10/27975FAA00000578-0-The_map_above_shows_major_volcanic_eruptions_from_the_past_2_000-a-17_1429091055374.jpg
@@ -19091,11 +19083,11 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: false
+    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
-    updated: 2020-09-18
+    updated: 2020-09-28
     tags:
     - 66
     - 142
