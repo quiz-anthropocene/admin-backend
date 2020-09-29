@@ -830,8 +830,8 @@ class MyAdminSite(AdminSite):
             out = StringIO()
             request.POST.get("run_export_data_to_github_script")
             management.call_command("export_data_to_github", stdout=out)
-            if "https" not in out.getvalue():
-                export_message = f"Erreur survenue. {out.getvalue()}"
+            if "https://github.com/raphodn/know-your-planet" not in out.getvalue():
+                export_message = f"Erreur survenue.<br>{out.getvalue()}"
             else:
                 export_message = f"La Pull Request a été créé !<br>Elle est visible ici : <a href='{out.getvalue()}' target='_blank'>{out.getvalue()}</a>"  # noqa
             print(export_message)
