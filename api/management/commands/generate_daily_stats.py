@@ -4,8 +4,11 @@ from django.core.management import BaseCommand
 
 from api.models import (
     Question,
+    # QuestionAggStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
+    # QuizAnswerEvent,
+    # QuizFeedbackEvent,
     DailyStat,
 )
 

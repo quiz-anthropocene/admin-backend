@@ -132,6 +132,7 @@ CORS_ORIGIN_WHITELIST = [
     "https://know-your-planet.netlify.com",
     "https://know-your-planet.netlify.app",
     "https://quiztaplanete.fr",
+    "https://quizanthropocene.fr",
 ]
 
 CORS_ORIGIN_REGEX_WHITELIST = [
