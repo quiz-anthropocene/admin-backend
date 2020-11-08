@@ -749,14 +749,14 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
 class ContributionAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
-        "text",
         "type",
-        "created",
-    )
-    readonly_fields = (
         "text",
         "description",
+        "created",
     )
+
+    def get_readonly_fields(self, request, obj=None):
+        return [f.name for f in obj._meta.fields]
 
     def has_add_permission(self, request, obj=None):
         return False
