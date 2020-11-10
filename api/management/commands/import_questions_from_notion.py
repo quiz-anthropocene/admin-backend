@@ -18,7 +18,8 @@ class Command(BaseCommand):
 
     TODO: optimise db queries and avoid Category & Tag calls ?
 
-    Help : ||| ? delimeter to show lists (string split) in the template
+    Help :
+    - '|||' and '///' ? delimeter to show lists (string split) in the template
     """
 
     def add_arguments(self, parser):
@@ -33,7 +34,7 @@ class Command(BaseCommand):
         questions_ids_missing = []
         questions_created = []
         questions_updated = set()
-        questions_updates = []
+        questions_updates = {}
         validation_errors = []
 
         all_tags_list = list(Tag.objects.all().values_list("name", flat=True))
@@ -73,12 +74,12 @@ class Command(BaseCommand):
         start_time = time.time()
 
         # reduce scope because of timeouts on Heroku (30 seconds)
-        if scope == 1:
-            notion_questions_list_scope = notion_questions_list[:200]
-        elif scope == 2:
-            notion_questions_list_scope = notion_questions_list[200:400]
-        elif scope == 3:
-            notion_questions_list_scope = notion_questions_list[400:]
+        if scope:
+            min_question_id = 200 * (scope - 1)
+            max_question_id = 200 * scope
+            notion_questions_list_scope = notion_questions_list[
+                min_question_id:max_question_id
+            ]
         else:
             notion_questions_list_scope = notion_questions_list
 
@@ -113,8 +114,6 @@ class Command(BaseCommand):
                 question_validation_errors.append(
                     ValidationError({"id": "Question sans id. vide ?"})
                 )
-            else:
-                print(notion_question_dict["id"], notion_question_dict["type"])
             if notion_question_dict["type"] is None:
                 notion_question_dict["type"] = ""
             if type(notion_question_dict["difficulty"]) == str:
@@ -226,10 +225,16 @@ class Command(BaseCommand):
                                     != question_model_field.get_default()
                                 ):
                                     # track changes (before updating field to get previous value)
-                                    db_question_field_update_message = f"Question {db_question.id} : champ '{question_model_field.name}' : {getattr(db_question, question_model_field.name)} >>> {notion_question_dict[question_model_field.name]}"  # noqa
-                                    questions_updates.append(
-                                        db_question_field_update_message
-                                    )
+                                    questions_updates_key = f"Question {db_question.id}"
+                                    db_question_field_update_message = f"champ '{question_model_field.name}' : {getattr(db_question, question_model_field.name)} >>> {notion_question_dict[question_model_field.name]}"  # noqa
+                                    if questions_updates_key in questions_updates:
+                                        questions_updates[questions_updates_key].append(
+                                            db_question_field_update_message
+                                        )
+                                    else:
+                                        questions_updates[questions_updates_key] = [
+                                            db_question_field_update_message
+                                        ]
                                     questions_updated.add(db_question.id)
                                     # update field
                                     setattr(
@@ -252,8 +257,16 @@ class Command(BaseCommand):
                             != len(notion_question_tag_name_list)
                         ):
                             # track changes
-                            db_question_tag_update_message = f"Question {db_question.id} : champ 'tags' : {list(db_question.tags.values_list('name', flat=True))} >>> {notion_question_tag_name_list}"  # noqa
-                            questions_updates.append(db_question_tag_update_message)
+                            questions_updates_key = f"Question {db_question.id}"
+                            db_question_tag_update_message = f"champ 'tags' : {list(db_question.tags.values_list('name', flat=True))} >>> {notion_question_tag_name_list}"  # noqa
+                            if questions_updates_key in questions_updates:
+                                questions_updates[questions_updates_key].append(
+                                    db_question_tag_update_message
+                                )
+                            else:
+                                questions_updates[questions_updates_key] = [
+                                    db_question_tag_update_message
+                                ]
                             questions_updated.add(db_question.id)
                             # update tags
                             notion_question_tag_objects = Tag.objects.filter(
@@ -261,7 +274,9 @@ class Command(BaseCommand):
                             )
                             db_question.tags.set(notion_question_tag_objects)
                 except ValidationError as e:
-                    validation_errors.append(e)
+                    validation_errors.append(
+                        f"Question {notion_question_dict['id']}: {e}"
+                    )
 
         print("--- loop on questions : %s seconds ---" % (time.time() - start_time))
         start_time = time.time()
@@ -270,7 +285,7 @@ class Command(BaseCommand):
         questions_notion_count = (
             f"Nombre de questions dans Notion : {len(notion_questions_list)}"
         )
-        questions_scope_count = f"Nombre de questions prises en compte ici (scope réduit ?) : {len(notion_questions_list_scope)}"  # noqa
+        questions_scope_count = f"Nombre de questions prises en compte ici : {len(notion_questions_list_scope)}"  # noqa
         questions_ids_duplicate_message = f"ids 'en double' : {', '.join([str(question_id) for question_id in questions_ids_duplicate])}"  # noqa
         questions_ids_missing_message = f"ids 'manquants' : {', '.join([str(question_id) for question_id in questions_ids_missing])}"  # noqa
 
@@ -284,18 +299,22 @@ class Command(BaseCommand):
             f"Nombre de questions modifiées : {len(questions_updated)}"
         )
         if len(questions_updates):
-            questions_updated_message += "|||" + "|||".join(questions_updates)
+            questions_updated_message += "|||" + "|||".join(
+                [
+                    key + "///" + "///".join(questions_updates[key])
+                    for key in questions_updates
+                ]
+            )  # noqa
 
         validation_errors_message = (
             f"Erreurs : {len(validation_errors)}"
+            + "|||si tags : créer les tags manquants dans l'admin et relancer l'import"
+            + "|||si id manquant : il doit y avoir des questions sans id (voire vide ?) dans Notion"
             + "|||"
             + "|||".join([str(error) for error in validation_errors])
             if len(validation_errors)
             else "aucune"
         )
-
-        print("--- prints : %s seconds ---" % (time.time() - start_time))
-        start_time = time.time()
 
         if not settings.DEBUG:
             utilities_notion.add_import_stats_row(
@@ -304,7 +323,7 @@ class Command(BaseCommand):
                 len(questions_updated),
             )
 
-        print("--- send stats : %s seconds ---" % (time.time() - start_time))
+        print("--- build and send stats : %s seconds ---" % (time.time() - start_time))
 
         self.stdout.write(
             "|||".join(
@@ -315,7 +334,7 @@ class Command(BaseCommand):
                     questions_ids_duplicate_message,
                     questions_ids_missing_message,
                     "",
-                    ">> Info sur les questions créés",
+                    ">>> Info sur les questions ajoutées",
                     questions_created_message,
                     "",
                     ">>> Info sur les questions modifiées",

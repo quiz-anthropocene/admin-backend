@@ -2,6 +2,8 @@
 
 Mieux appréhender les limites de notre planète, à travers des questions simples et sourcées.
 
+aka "Quiz de l'Anthropocène"
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 

@@ -344,6 +344,10 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
             management.call_command("import_questions_from_notion", scope, stdout=out)
             notion_questions_validation = out.getvalue()
             notion_questions_validation = notion_questions_validation.split("|||")
+            notion_questions_validation = [
+                elem.split("///") if ("///" in elem) else elem
+                for elem in notion_questions_validation
+            ]
 
         extra_context = extra_context or {
             "notion_questions_validation": notion_questions_validation

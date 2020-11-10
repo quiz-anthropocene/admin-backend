@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1 class="text-primary">
-      <router-link class="no-decoration" :to="{ name: 'home' }">Know Your Planet</router-link>
+      <router-link class="no-decoration" :to="{ name: 'home' }">Quiz de l'Anthropocène</router-link>
     </h1>
     <h2 class="d-none d-sm-block" :class="{ 'd-block': currentRoute === 'home' }">
       Des questions/réponses pour mieux appréhender les limites de notre planète&nbsp;🌍

@@ -1,6 +1,7 @@
 {% extends "admin/change_list.html" %}
 
 {% load static %}
+{% load isinstance %}
 
 {% block extrahead %}
 {{ block.super }}
@@ -30,20 +31,31 @@
   <p>
     Pourquoi plusieurs boutons ? L'import est séparé en plusieurs actions car il prend trop de temps sinon (et fait parfois planter le serveur).
   </p>
+  <p>
+    Il faut donc lancer les imports les uns après les autres (cliquer sur un bouton, attendre la réponse, puis cliquer sur le suivant, etc).
+  </p>
+  <p>
+    Merci de votre patience !
+  </p>
   <form method="POST">
     {% csrf_token %}
     <input type="hidden" name="run_import_questions_from_notion_script" value="1" />
-    <input class="action-button" type="submit" value="Lancer l'import des questions 1 à 200">
+    <input class="action-button" type="submit" value="Lancer l'import des questions : id 1 à 200">
   </form>
   <form method="POST">
     {% csrf_token %}
     <input type="hidden" name="run_import_questions_from_notion_script" value="2" />
-    <input class="action-button" type="submit" value="Lancer l'import des questions 200 à 400">
+    <input class="action-button" type="submit" value="Lancer l'import des questions : id 200 à 400">
   </form>
   <form method="POST">
     {% csrf_token %}
     <input type="hidden" name="run_import_questions_from_notion_script" value="3" />
-    <input class="action-button" type="submit" value="Lancer l'import des questions 400 à ...">
+    <input class="action-button" type="submit" value="Lancer l'import des questions : id 400 à 600">
+  </form>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="run_import_questions_from_notion_script" value="4" />
+    <input class="action-button" type="submit" value="Lancer l'import des questions : id 600 et plus">
   </form>
   <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
   <div id="spinner" class="loading" role="status" style="display:none"></div>
@@ -54,7 +66,21 @@
   <h2>Résultats : </h2>
   <ul>
   {% for result in notion_questions_validation %}
-    <li>{{ result }}</li>
+    {% if result|isinstance:"list" %}
+      <li>
+        <ul>
+          {% for elem in result %}
+            <li>{{ elem }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% else %}
+      {% if result|slice:":3" in ">>>" %}
+        <h3>{{ result }}</h3>
+      {% else %}
+        <li>{{ result }}</li>
+      {% endif %}
+    {% endif %}
   {% endfor %}
   </ul>
 </section>
@@ -65,8 +91,8 @@
 <div style="padding:1rem;margin-bottom:1rem;background-color:#fff3cd">
   ⚠️ Rappel : Actuellement les questions ne sont pas créés dans cet interface administrateur, mais dans l'application Notion (<a href="https://www.notion.so/quizplanete/d3a8e7d8c3bd41f89636302440b9629a?v=97c85b2c9c71456f919519478c6a57db" target=_blank>ici</a>).<br>
   <strong>Une fois importées ici, elles n'apparaîtront pas pour autant tout de suite dans l'interface de l'application !</strong><br>
-  Il faut les exporter au format YAML, et les rajouter dans le dossier /data/questions.yaml du code de l'application.<br>
-  Plus de détails sur la procédure *actuelle* <a href="https://github.com/raphodn/know-your-planet/wiki/Import-de-la-donn%C3%A9e">ici</a>.
+  Il faut encore exporter la donnée vers Github, un bouton à l'<strong>Accueil</strong> permet de le faire en 1 clic.<br>
+  Plus de détails sur la procédure *actuelle* <a href="https://github.com/raphodn/know-your-planet/wiki/Import-et-export-de-la-donn%C3%A9e">ici</a>.
 </div>
 
 <hr style="margin-top:20px;margin-bottom:20px" />
