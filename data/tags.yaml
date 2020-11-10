@@ -996,3 +996,9 @@
     name: Coraux
     description: ''
     created: 2020-09-22
+- model: api.tag
+  pk: 194
+  fields:
+    name: Finance
+    description: ''
+    created: 2020-11-10
