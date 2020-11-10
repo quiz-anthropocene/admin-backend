@@ -25,9 +25,9 @@ import Footer from './components/Footer.vue';
 export default {
   name: 'App',
   metaInfo: {
-    // title: 'Know Your Planet',
+    // title: 'Quiz de l\'Anthropocène',
     titleTemplate: (titleChunk) => {
-      return titleChunk ? `${titleChunk} | Know Your Planet` : 'Know Your Planet';
+      return titleChunk ? `${titleChunk} | Quiz de l'Anthropocène` : 'Quiz de l\'Anthropocène';
     },
     meta: [
       {
@@ -41,15 +41,15 @@ export default {
         property: 'og:url',
         vmid: 'og:url',
         template: (chunk) => {
-          return chunk ? `https://know-your-planet.netlify.app${chunk}` : 'https://know-your-planet.netlify.app';
+          return chunk ? `https://quizanthropocene.fr${chunk}` : 'https://quizanthropocene.fr';
         },
       },
       {
         property: 'og:title',
         vmid: 'og:title',
-        // content: 'Know Your Planet',
+        // content: 'Quiz de l\'Anthropocène',
         template: (chunk) => {
-          return chunk ? `${chunk} | Know Your Planet` : 'Know Your Planet';
+          return chunk ? `${chunk} | Quiz de l'Anthropocène` : 'Quiz de l\'Anthropocène';
         },
       },
       {
@@ -70,15 +70,15 @@ export default {
         property: 'twitter:url',
         vmid: 'twitter:url',
         template: (chunk) => {
-          return chunk ? `https://know-your-planet.netlify.app${chunk}` : 'https://know-your-planet.netlify.app';
+          return chunk ? `https://quizanthropocene.fr${chunk}` : 'https://quizanthropocene.fr';
         },
       },
       {
         property: 'twitter:title',
         vmid: 'twitter:title',
-        // content: 'Know Your Planet',
+        // content: 'Quiz de l\'Anthropocène',
         template: (chunk) => {
-          return chunk ? `${chunk} | Know Your Planet` : 'Know Your Planet';
+          return chunk ? `${chunk} | Quiz de l'Anthropocène` : 'Quiz de l\'Anthropocène';
         },
       },
       {

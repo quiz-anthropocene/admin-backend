@@ -58,7 +58,7 @@ const routes = [
     name: 'ressources',
     component: RessourcesPage,
     meta: {
-      title: 'Know Your Planet - Ressources',
+      title: 'Quiz de l\'Anthropocène - Ressources',
     },
   },
   {

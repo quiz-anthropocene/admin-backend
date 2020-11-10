@@ -46,7 +46,7 @@ Toutes les questions (finalisées ou en cours de création) sont actuellement da
 
 Un export de toutes les questions de la base de donnée de l'application peuvent être vues dans le fichier `data/questions.yaml` (Rappel: ce n'est pas la source de la base de donnée, seulement un export).
 
-Vous pouvez proposer de nouvelles questions via la page [Contribuer](https://know-your-planet.netlify.app/#/contribuer) de l'application.
+Vous pouvez proposer de nouvelles questions via la page [Contribuer](https://quizanthropocene.fr/contribuer) de l'application.
 
 La validation des questions se fait ensuite dans le fichier partagé.
 
@@ -55,7 +55,7 @@ La validation des questions se fait ensuite dans le fichier partagé.
 Vous avez vu un bug ? Vous trouvez l'app contre-intuitive, ou simplement avez une idée pour rendre le design plus beau/propre ?
 
 Il y a deux options pour remonter ces informations:
-- via la page [Contribuer](https://know-your-planet.netlify.app/#/contribuer) de l'application
+- via la page [Contribuer](https://quizanthropocene.fr/contribuer) de l'application
 - ou créer une Issue dans l'interface Github du projet ([ici](https://github.com/raphodn/know-your-planet/issues))
 
 ### Aider au développement de l'application
