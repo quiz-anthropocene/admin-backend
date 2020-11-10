@@ -125,6 +125,7 @@
     answer_image_explanation: ''
     answer_extra_info: 'article avec vidéo Brut : https://www.francetvinfo.fr/economie/emploi/metiers/agriculture/video-a-porto-rico-la-disparition-drastique-des-insectes-inquiete-les-scientifiques_3149365.html
 
+
       remise en question du rapport ici : https://www.pnas.org/content/116/25/12143'
     author: Matthieu Massart
     validator: Raphael Odini
@@ -685,6 +686,7 @@
     answer_image_url: https://pbs.twimg.com/media/DchL6tsX4AA_kmn.jpg
     answer_image_explanation: ''
     answer_extra_info: 'https://ourworldindata.org/grapher/global-co-concentration-ppm
+
 
       https://dr-petrole-mr-carbone.com/concentration-record-de-co2-la-barre-des-415-ppm-franchie-a-mauna-loa/'
     author: Matthieu Massart
@@ -1369,9 +1371,7 @@
     answer_scientific_url: ''
     answer_image_url: https://www.connaissancedesenergies.org/sites/default/files/inline-images/production-electricite-france-2019.png
     answer_image_explanation: ''
-    answer_extra_info: 'https://www.statistiques.developpement-durable.gouv.fr/tableau-de-bord-biogaz-pour-la-production-delectricite-premier-trimestre-2020
-
-      https://www.actu-environnement.com/ae/news/biogaz-raccordement-electricite-recul-30222.php4'
+    answer_extra_info: "https://www.statistiques.developpement-durable.gouv.fr/tableau-de-bord-biogaz-pour-la-production-delectricite-premier-trimestre-2020\r\nhttps://www.actu-environnement.com/ae/news/biogaz-raccordement-electricite-recul-30222.php4"
     author: Avenir Climatique
     validator: Matthieu Massart
     publish: true
@@ -1395,7 +1395,7 @@
     category: 7
     difficulty: 2
     answer_option_a: '2025'
-    answer_option_b: '2048'
+    answer_option_b: '2050'
     answer_option_c: '2100'
     answer_option_d: Jamais, il en restera toujours assez pour s'en nourrir
     answer_correct: b
@@ -1404,7 +1404,7 @@
       de poissons à consommer en 2048. En revanche, on ne manquera pas de méduses...
     answer_accessible_url: https://aquaculture-aquablog.blogspot.com/2017/10/surpeche-2048-plus-de-poisson-dans-les-oceans.html
     answer_scientific_url: ''
-    answer_image_url: ''
+    answer_image_url: https://1.bp.blogspot.com/-YPGrQC-JsnA/WddGXvQ24pI/AAAAAAAArGI/IDCmYNxgbdgfzbhOyglN5--QAFYCZKe3gCLcBGAs/s1600/Surp%25C3%25AAche%2BFin%2Bdu%2Bpoisson%2B2048%2BBoris%2BWorm%2BCharles%2BClover%2BScience%2BThe%2BTelegraph%2Bmontage.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Matthieu Massart
@@ -2135,7 +2135,7 @@
     author: Matthieu Massart
     validator: ''
     publish: true
-    validation_status: Validée
+    validation_status: Brouillon
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-09-28
@@ -2369,7 +2369,8 @@
     created: 2020-03-10
     updated: 2020-09-28
     tags:
-    - 2
+    - 11
+    - 40
 - model: api.question
   pk: 71
   fields:
@@ -2497,6 +2498,7 @@
     answer_image_url: ''
     answer_image_explanation: ''
     answer_extra_info: 'graphique pollution mails : https://www.leparisien.fr/resizer/r6wWjvmpV910kaFMATZjfE2L_4Q=/800x512/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/JW6W6ZUMZPZXPL6ZFWWDD5ISMM.jpg
+
 
       https://mrmondialisation.org/le-cout-ecologique-dinternet-est-astronomique/'
     author: Matthieu Massart
@@ -2633,6 +2635,7 @@
     answer_image_url: https://i0.wp.com/bonpote.com/wp-content/uploads/2020/07/image-34.png?w=684&ssl=1
     answer_image_explanation: ''
     answer_extra_info: 'https://bonpote.com/pourquoi-arreter-lavion-ne-devrait-plus-etre-un-debat/
+
 
       image alternative (guardian): https://pbs.twimg.com/media/EMOnQq3WkAABCPD.png'
     author: Matthieu Massart
@@ -4271,9 +4274,10 @@
     answer_image_explanation: ''
     answer_extra_info: 'autre image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r025b.jpg
 
+
       Source Fr : https://www.rte-france.com/fr/eco2mix/donnees-en-energie Source
       autres pays : https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy
-      supply&indicator=Total primary energy supply (TPES) by source'
+      supply&indicator=Total primary energy supply (TPES) by source%20by%20source)'
     author: laydgeur
     validator: Matthieu Massart
     publish: true
@@ -4538,6 +4542,7 @@
     answer_extra_info: 'https://twitter.com/laydgeur/status/1098348146135044097
 
       https://twitter.com/laydgeur/status/1166071796682149888
+
 
       https://www.linkedin.com/feed/update/urn:li:activity:6531245430238519296/'
     author: laydgeur
@@ -4805,7 +4810,9 @@
     answer_image_explanation: ''
     answer_extra_info: 'Réponse initiale: Il y a 20 millions d’années.
 
+
       Image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r041.jpg
+
 
       Image alternative: http://www.illustratedcuriosity.com/files/media/39990/wmo.jpg'
     author: laydgeur
@@ -5259,10 +5266,10 @@
     type: QCM
     category: 3
     difficulty: 3
-    answer_option_a: Amoco Cadiz
-    answer_option_b: Atlantic Empress
-    answer_option_c: Exxon Valdez
-    answer_option_d: Torrey Canyon
+    answer_option_a: Amoco Cadiz (1978, au large de la Bretagne)
+    answer_option_b: Atlantic Empress (1979, au large de Trinité-et-Tobago)
+    answer_option_c: Exxon Valdez (1989, au large de l'Alaska)
+    answer_option_d: Torrey Canyon (1967, à l'embouchure de la Manche)
     answer_correct: b
     has_ordered_answers: false
     answer_explanation: Le plus gros déversement en mer causé par un pétrolier est
@@ -13460,9 +13467,7 @@
     answer_scientific_url: https://www.ademe.fr/sites/default/files/assets/documents/le-revers-de-mon-look.pdf
     answer_image_url: https://www.wedemain.fr/photo/art/default/39713960-34059539.jpg
     answer_image_explanation: ''
-    answer_extra_info: 'lien de la contribution originale: lesamisdubarrage.over-blog.fr/2016/11/savez-vous-quelle-quantite-d-eau-est-necessaire-pour-fabriquer-un-jean-il-en-faut-10-000-litres-10-000-litres-d-eau-d-un-bout-a-l-au
-
-      autre lien: https://www.brut.media/fr/international/jamy-retrace-l-itineraire-d-un-jean-b814f446-992d-4282-8d98-5e79f2ed02ca'
+    answer_extra_info: ''
     author: Contributeur anonyme
     validator: Matthieu Massart
     publish: true
@@ -13801,7 +13806,9 @@
     answer_image_explanation: Chiffres de 2019, et évolution par rapport à 2018
     answer_extra_info: 'image alternative: http://huet.blog.lemonde.fr/files/2019/05/le-bon-graphique.jpg
 
+
       https://www.lemonde.fr/blog/huet/2019/05/06/electricite-et-co2-le-tableau-europeen/
+
 
       https://www.connaissancedesenergies.org/une-carte-pour-suivre-lintensite-carbone-de-la-consommation-electrique-170613'
     author: Raphael Odini
@@ -14006,16 +14013,17 @@
     has_ordered_answers: true
     answer_explanation: Les émissions de gaz à effet de serre de la France sont passées
       de 548 millions de tonnes d’équivalent CO2 en 1990, à 464 millions de tonnes
-      en 2017, soit une diminution d’environ 15%, Qui a eu lieu principalement après
-      2005. Si l’on prend en compte les importations (concept d’empreinte carbone),
-      alors les émissions ont augmenté de plus de 20%.
+      en 2017, soit une diminution d’environ 15%, qui a eu lieu principalement après
+      2005. On parle ici d'inventaire national. En revanche, si l’on prend en compte
+      les importations et déduit les exportations, (concept plus pertinent d’empreinte
+      carbone), alors les émissions ont augmenté de plus de 20%.
     answer_accessible_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2019-11/datalab-62-chiffres-cles-du-climat-france-europe-monde-edition2020-novembre2019_0.pdf
     answer_scientific_url: ''
     answer_image_url: https://www.citepa.org/wp-content/uploads/apercu_graphsecten1-768x595.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Citoyens Pour le Climat
-    validator: ''
+    validator: Matthieu Massart
     publish: true
     validation_status: Validée
     added: 2020-06-04
@@ -14348,7 +14356,7 @@
     hint: L’influence de l’homme sur le climat est clairement établie.
     type: QCM
     category: 1
-    difficulty: 1
+    difficulty: 0
     answer_option_a: Improbable
     answer_option_b: Aussi probable qu’improbable
     answer_option_c: Probable
@@ -14362,14 +14370,13 @@
       à 95%.'
     answer_accessible_url: ''
     answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/03/WG1AR5_SummaryVolume_FINAL_FRENCH.pdf
-    answer_image_url: ''
-    answer_image_explanation: Mettre une capture d’écran de l’encadré D.3 du rapport
-      en source
+    answer_image_url: https://www.terresacree.org/images/rechauffement4.jpg
+    answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
-    validator: ''
+    validator: Matthieu Massart
     publish: false
-    validation_status: A valider
+    validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
@@ -15630,7 +15637,7 @@
     answer_option_b: Parce qu'il faut extraire de l'uranium
     answer_option_c: Parce qu'il faut enrichir de l'uranium
     answer_option_d: Parce qu'il faudra démanteler la centrale un jour
-    answer_correct: ''
+    answer_correct: abcd
     has_ordered_answers: false
     answer_explanation: ''
     answer_accessible_url: ''
@@ -17217,15 +17224,21 @@
     hint: ''
     type: QCM
     category: null
-    difficulty: 1
+    difficulty: 0
     answer_option_a: Conference of the parties
     answer_option_b: Council of presidents
     answer_option_c: Community for environment protection
     answer_option_d: Conference observation program
     answer_correct: a
     has_ordered_answers: false
-    answer_explanation: ''
-    answer_accessible_url: ''
+    answer_explanation: Le United Nations Framework Convention on Climate Change (UNFCCC)
+      est le traité signé par les nations unies lors du sommet de la Terre à Rio de
+      Janeiro en 1992 et qui a pour but de stabiliser la concentration des gaz à effet
+      de serre dans l'atmosphère. Les parties se réunissent tous les ans lors des
+      United Nations Climate Change Conference pour constater des évolutions, plus
+      communément appelés Conference Of the Parties (COP), même si cette appellation
+      s’applique aussi aux autres conventions des Nations Unies.
+    answer_accessible_url: https://unfccc.int/process/bodies/supreme-bodies/conference-of-the-parties-cop
     answer_scientific_url: ''
     answer_image_url: ''
     answer_image_explanation: ''
@@ -17246,7 +17259,7 @@
       de la vie sur terre ?
     hint: ''
     type: QCM
-    category: null
+    category: 1
     difficulty: 1
     answer_option_a: ''
     answer_option_b: ''
@@ -17264,7 +17277,7 @@
     validator: ''
     publish: false
     validation_status: Brouillon
-    added: 2020-06-17
+    added: 2020-11-05
     created: 2020-06-24
     updated: 2020-06-24
     tags:
@@ -17897,7 +17910,7 @@
     hint: ''
     type: QCM
     category: 1
-    difficulty: 1
+    difficulty: 4
     answer_option_a: Ça n'est jamais arrivé
     answer_option_b: 5 ans
     answer_option_c: 35 ans
@@ -18780,7 +18793,7 @@
     answer_option_a: L'ADEME
     answer_option_b: L'ANDRA
     answer_option_c: L'ASN
-    answer_option_d: ''
+    answer_option_d: L'UNSCEAR
     answer_correct: c
     has_ordered_answers: false
     answer_explanation: ''
@@ -18880,7 +18893,7 @@
     hint: ''
     type: QCM
     category: 1
-    difficulty: 1
+    difficulty: 3
     answer_option_a: 8%
     answer_option_b: 18%
     answer_option_c: 28%
@@ -18900,7 +18913,8 @@
     added: 2020-08-05
     created: 2020-08-10
     updated: 2020-09-18
-    tags: []
+    tags:
+    - 51
 - model: api.question
   pk: 569
   fields:
@@ -19067,15 +19081,19 @@
       (Indonésie)
     answer_correct: a
     has_ordered_answers: false
-    answer_explanation: "Pour le Samalas, http://www.ipgp.fr/fr/eruption-volcan-samalas-1257\r\npour
-      le Kuwae, Patrick Boucheron (dir.), « Introduction », Histoire du monde au XVe
-      siècle, dirigé par P. Boucheron, coordonné par Julien Loiseau, Pierre Monnet
-      et Yann Potin, Fayard, 2009\r\npour le Huaynaputina, Sam White, chapter 5 -
-      The Little Ice Age in the Near East, DOI: https://doi.org/10.1017/CBO9780511844058.009\r\npour
-      le Tambora, Gillen d’Arcy Wood, 1816, l’année sans été, traduit de l’anglais
+    answer_explanation: '- Pour le Samalas, http://www.ipgp.fr/fr/eruption-volcan-samalas-1257
+
+      - pour le Kuwae, Patrick Boucheron (dir.), « Introduction », Histoire du monde
+      au XVe siècle, dirigé par P. Boucheron, coordonné par Julien Loiseau, Pierre
+      Monnet et Yann Potin, Fayard, 2009
+
+      - pour le Huaynaputina, Sam White, chapter 5 - The Little Ice Age in the Near
+      East, DOI: https://doi.org/10.1017/CBO9780511844058.009
+
+      - pour le Tambora, Gillen d’Arcy Wood, 1816, l’année sans été, traduit de l’anglais
       par Philippe Pignarre, Paris, La Découverte, 2016 ; William K. Klingaman, Nicholas
       P. Klingaman, The Year Without Summer. 1816 and the Volcano That Darkened the
-      World and Changed History, New York, St Martin’s Press, 2013."
+      World and Changed History, New York, St Martin’s Press, 2013.'
     answer_accessible_url: ''
     answer_scientific_url: https://doi.org/10.1017/CBO9780511844058.009
     answer_image_url: https://i.dailymail.co.uk/i/pix/2015/04/15/10/27975FAA00000578-0-The_map_above_shows_major_volcanic_eruptions_from_the_past_2_000-a-17_1429091055374.jpg
@@ -19274,7 +19292,8 @@
     added: 2020-09-08
     created: 2020-09-14
     updated: 2020-09-28
-    tags: []
+    tags:
+    - 32
 - model: api.question
   pk: 579
   fields:
