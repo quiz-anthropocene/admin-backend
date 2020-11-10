@@ -103,7 +103,7 @@
     name: Mon empreinte carbone
     introduction: L'empreinte carbone d’une activité humaine est une mesure des émissions
       de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent lui
-      être imputées. Connaissez-vous votre empreinte ? Voyons-voir ça.
+      être imputées. Connaissez-vous votre empreinte ? Voyons voir ça.
     conclusion: ''
     author: Matthieu Massart
     image_background_url: https://leshorizons.net/wp-content/uploads/2019/04/d%C3%A9finition-de-lempreinte-carbone-1020x512.jpg
@@ -121,6 +121,7 @@
     - 335
     - 358
     - 402
+    - 417
     - 440
     tags: []
 - model: api.quiz
@@ -476,3 +477,22 @@
     - 580
     tags:
     - 185
+- model: api.quiz
+  pk: 51
+  fields:
+    name: Bonpote
+    introduction: "Voici le quiz de Thomas, alias Bon Pote, blogueur invétéré sur
+      les questions environnementales, mais pas que. Thomas a commencé à bloguer fin
+      2018 en ayant un objectif : rendre ses articles utiles. Le lecteur ne doit pas
+      perdre son temps et doit soit avoir appris quelque chose, soit avoir eu le sourire
+      en lisant.\r\n\r\nIl y a sur son blogs ! Vous trouverez des articles sur la
+      politique, des personnages attachants comme Jean Michel CAC 40, une lettre d'amour
+      à Nabilla..."
+    conclusion: ''
+    author: Bonpote
+    image_background_url: https://i2.wp.com/bonpote.com/wp-content/uploads/2020/10/Tout-le-monde-cover.jpg?w=1060&ssl=1
+    publish: false
+    created: 2020-11-01
+    questions:
+    - 573
+    tags: []
