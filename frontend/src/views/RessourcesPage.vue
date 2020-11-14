@@ -3,6 +3,7 @@
   <section class="text-align-left">
     <h2>Ressources pour aller plus loin</h2>
 
+    <p><i>Table des matières</i></p>
     <ol>
       <li><a href="#ressources-soutiens">Les associations et les personnes qui participent de près ou de loin au projet</a></li>
       <li><a href="#ressources-documentation">Des ressources qui nous ont été utiles pour trouver de nouvelles questions</a></li>
@@ -11,6 +12,7 @@
       <li><a href="#ressources-glossaire">Un glossaire</a></li>
     </ol>
 
+    <br />
     <h3 id="ressources-soutiens">Les associations et les personnes qui participent de près ou de loin au projet</h3>
     <!-- <a href="https://fresqueduclimat.org/" target="_blank">La Fresque du Climat</a><br />
     <a href="https://avenirclimatique.org/" target="_blank">Avenir Climatique</a><br />
@@ -37,10 +39,16 @@
           </div>
           <div class="card-footer">
             <router-link v-if="soutien_item.quiz_tag" class="no-decoration" :to="{ name: 'quiz-list', query: { tag: soutien_item.quiz_tag.name } }">
-              <a>Voir les quizs <FilterLabel filterType="tag" v-bind:filterObject="{ name: soutien_item.quiz_tag.name }"></FilterLabel></a>
+              <a>
+                <strong>Voir les quizs </strong>
+                <FilterLabel filterType="tag" v-bind:filterObject="{ name: soutien_item.quiz_tag.name }"></FilterLabel>
+              </a>
             </router-link>
             <router-link v-if="soutien_item.question_author" class="no-decoration" :to="{ name: 'question-list', query: { author: soutien_item.question_author } }">
-              <a>Voir les questions de <FilterLabel filterType="author" v-bind:filterObject="{ name: soutien_item.question_author }"></FilterLabel></a>
+              <a>
+                <strong>Voir les questions de </strong>
+                <FilterLabel filterType="author" v-bind:filterObject="{ name: soutien_item.question_author }"></FilterLabel>
+              </a>
             </router-link>
           </div>
         </div>
@@ -50,9 +58,7 @@
     <br />
     <h3 id="ressources-documentation">Des ressources qui nous ont été utiles pour trouver de nouvelles questions</h3>
 
-    <p>
-      <strong>à venir !</strong>
-    </p>
+    <p><i>à venir !</i></p>
 
     <p>
       Vous trouverez une liste supplémentaire de ressources sur le site
@@ -101,7 +107,7 @@
     <h3 id="ressources-glossaire">Un glossaire</h3>
 
     <p>
-      Voir <router-link :to="{ name: 'glossary' }">cette page</router-link>
+      Voir la page <router-link :to="{ name: 'glossary' }">📓&nbsp;Glossaire</router-link>.
     </p>
 
   </section>

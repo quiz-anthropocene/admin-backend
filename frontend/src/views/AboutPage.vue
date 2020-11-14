@@ -4,8 +4,8 @@
 
     <section class="alert alert-primary" role="alert">
       Vous êtes un des premiers utilisateurs, merci d'être là !
-      Ce site vient tout juste d'être lancé (Mars 2020), et a été développé par quelques passionés.
-      Il a pour but d'évoluer en fonctions des retours utilisateurs :)
+      Ce site a été lancé en Mars 2020.
+      Il est développé par quelques passionés, et a pour but d'évoluer en fonctions des retours utilisateurs :)
     </section>
 
     <h3>Pourquoi cette application ?</h3>
@@ -19,8 +19,8 @@
     </p>
 
     <p>
-      Ces questions peuvent aussi servir à se former pour mieux maitriser les chiffres / ordres de grandeurs.
-      Les usages peuvent être multiples (conférences, formations, quiz, jeu...).
+      Ces questions peuvent aussi servir à se former pour mieux maitriser les chiffres et les ordres de grandeurs.
+      Les usages peuvent être multiples (conférences, formations, quiz, jeu, etc.).
     </p>
 
     <br />
@@ -43,7 +43,7 @@
     <br />
     <h3>Quelques chiffres</h3>
     <p>
-      Voir la page <router-link :to="{ name: 'stats' }">📊&nbsp;Statistiques</router-link>.
+      La page <router-link :to="{ name: 'stats' }">📊&nbsp;Statistiques</router-link> présente quelques chiffres d'usage.
     </p>
 
     <br />
@@ -51,12 +51,15 @@
     <p>
       Juste quelques <strong>bénévoles</strong> impliqués et concernés par les questions climat.
     </p>
+    <p>
+      Vous pouvez nous contacter à l'adresse <strong>contact [at] quizanthropocene.fr</strong>
+    </p>
 
     <br />
-    <h3>Vous souhaitez <router-link :to="{ name: 'ressources' }">aller plus loin ?</router-link></h3>
+    <h3>Vous souhaitez aller plus loin ?</h3>
     <p>
-      On a créé une page <router-link :to="{ name: 'ressources' }">📚&nbsp;Ressources</router-link> pour mettre
-      plein d'informations additionnelles (des assos, d'autres projets, de la lecture, etc).
+      On a créé une page <router-link :to="{ name: 'ressources' }">📚&nbsp;Ressources</router-link> pour regrouper
+      plein d'informations additionnelles (des assos, d'autres projets similaires, nos lectures pour trouver les questions, etc.).
     </p>
 
   </section>

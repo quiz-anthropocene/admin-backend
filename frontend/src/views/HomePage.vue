@@ -57,19 +57,14 @@
           <button class="btn btn-outline-primary btn-lg btn-block">🔀&nbsp;<strong>Une question au hasard</strong></button>
         </router-link>
       </div> -->
-      <div class="col-sm-6" v-if="questionsCount">
+      <!-- <div class="col-sm-6" v-if="questionsCount">
         <router-link class="no-decoration" :to="{ name: 'question-list' }">
           <button class="btn btn-outline-primary btn-lg btn-block">❓&nbsp;<strong>Toutes les questions</strong></button>
         </router-link>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6 offset-sm-3" v-if="questionsCount">
+      </div> -->
+      <div class="col-sm-6" v-if="questionsCount">
         <router-link class="no-decoration" :to="{ name: 'ressources' }">
-          <button class="btn btn-outline-secondary btn-lg btn-block">
-            📚&nbsp;<strong>Ressources</strong>
-          </button>
+          <button class="btn btn-outline-secondary btn-lg btn-block">📚&nbsp;<strong>Ressources</strong></button>
         </router-link>
       </div>
     </div>

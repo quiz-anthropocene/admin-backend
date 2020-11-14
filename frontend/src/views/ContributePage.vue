@@ -8,9 +8,6 @@
     </p>
 
     <br />
-    <hr class="custom-separator" />
-    <br />
-
     <form @submit.prevent="submitContribution" v-if="!contributionSubmitted">
       <div class="form-group">
         <h3 class="margin-bottom-0">
@@ -24,10 +21,10 @@
           <input type="radio" id="customRadioInline2" name="customRadioInline2" class="custom-control-input" value="commentaire application" v-model="contribution.type">
           <label class="custom-control-label" for="customRadioInline2">Un commentaire sur l'application</label>
         </div>
-        <div class="custom-control custom-radio custom-control-inline">
+        <!-- <div class="custom-control custom-radio custom-control-inline">
           <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input" value="nom application" v-model="contribution.type">
-          <label class="custom-control-label" for="customRadioInline3">Un nom d'application</label>
-        </div>
+          <label class="custom-control-label" for="customRadioInline3">Un nom d'application alternatif</label>
+        </div> -->
       </div>
 
       <div class="form-group" v-if="contribution.type === 'nouvelle question'">

@@ -19,11 +19,11 @@ module.exports = {
       .openHomepage()
       .assert.elementPresent('header')
       .assert.elementPresent('footer')
-      .assert.elementCount('button', 3)
+      .assert.elementCount('button', 2)
       .useXpath()
       .assert.containsText('(//main//button)[1]', 'Tous les quiz')
-      .assert.containsText('(//main//button)[2]', 'Toutes les questions')
-      .assert.containsText('(//main//button)[3]', 'Ressources')
+      // .assert.containsText('(//main//button)[2]', 'Toutes les questions')
+      .assert.containsText('(//main//button)[2]', 'Ressources')
       .useCss()
       .end();
   },

@@ -1,7 +1,9 @@
 <template>
   <section class="text-align-left">
     <h2>Glossaire</h2>
+    <p><i>Ces définitions sont ensuite affichées lorsque le mot apparait dans l'énoncé de la question.</i></p>
 
+    <br />
     <hr />
 
     <section v-for="glossary_item in glossaire" :key="glossary_item.name">

@@ -213,6 +213,9 @@ form .form-group {
 .card-body {
   padding: 10px;
 }
+.card-footer {
+  background-color: inherit; // avoir grey on grey
+}
 
 /* Global css */
 
@@ -285,6 +288,11 @@ a.no-decoration {
 .padding-left-right-10 {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.max-height-300 {
+  max-height: 300px;
+  overflow-y: hidden;
 }
 
 .color-green {

@@ -27,32 +27,32 @@ module.exports = {
       .end();
   },
 
-  'user can select a random question and answer it': (browser) => {
-    browser
-      // home page
-      .openHomepage()
-      .useXpath()
-      .assert.containsText('(//main//button)[2]', 'Toutes les questions')
-      .click('(//main//button)[2]')
-      .useCss()
-      // question list page
-      .assert.urlContains('questions')
-      .assert.elementPresent('#question-list')
-      .useXpath()
-      .assert.elementPresent('(//div[@id="question-list"]//a)[1]')
-      .click('(//div[@id="question-list"]//a)[1]')
-      .useCss()
-      // question detail page
-      .assert.elementPresent('.question')
-      .assert.not.elementPresent('.answer')
-      .assert.elementPresent('.question h2')
-      .assert.containsText('div[class*="question-next"] button', 'Question suivante')
-      // question detail page : answer question
-      .answerQuestion()
-      // .waitForElementVisible('div[class*="answer"]')
-      .assert.elementPresent('.answer')
-      .assert.elementPresent('section[class*="feedback-card"]')
-      .assert.containsText('div[class*="question-next"] button', 'Question suivante')
-      .end();
-  },
+  // 'user can select a random question and answer it': (browser) => {
+  //   browser
+  //     // home page
+  //     .openHomepage()
+  //     .useXpath()
+  //     .assert.containsText('(//main//button)[2]', 'Toutes les questions')
+  //     .click('(//main//button)[2]')
+  //     .useCss()
+  //     // question list page
+  //     .assert.urlContains('questions')
+  //     .assert.elementPresent('#question-list')
+  //     .useXpath()
+  //     .assert.elementPresent('(//div[@id="question-list"]//a)[1]')
+  //     .click('(//div[@id="question-list"]//a)[1]')
+  //     .useCss()
+  //     // question detail page
+  //     .assert.elementPresent('.question')
+  //     .assert.not.elementPresent('.answer')
+  //     .assert.elementPresent('.question h2')
+  //     .assert.containsText('div[class*="question-next"] button', 'Question suivante')
+  //     // question detail page : answer question
+  //     .answerQuestion()
+  //     // .waitForElementVisible('div[class*="answer"]')
+  //     .assert.elementPresent('.answer')
+  //     .assert.elementPresent('section[class*="feedback-card"]')
+  //     .assert.containsText('div[class*="question-next"] button', 'Question suivante')
+  //     .end();
+  // },
 };

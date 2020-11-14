@@ -7,7 +7,7 @@
     <br />
     <h3>❓&nbsp;Questions</h3>
     <p>
-      Il y a actuellement <strong>{{ question_count }}</strong> questions publiées,
+      Il y a actuellement <strong>{{ Intl.NumberFormat('fr-FR').format(question_count) }}</strong> questions publiées,
       et <strong>{{ question_pending_validation_count }}</strong> en cours de validation.
     </p>
 
@@ -20,12 +20,19 @@
     <br />
     <h3>🔗&nbsp;Réponses</h3>
     <p>
-      L'application totalise <strong v-if="stats.total">{{ stats.total.question_answer_count }}</strong> réponses (depuis la mise en ligne en Mars 2020).
+      L'application totalise <strong>{{ stats.total ? Intl.NumberFormat('fr-FR').format(stats.total.question_answer_count) : '?' }}</strong>
+      réponses (depuis la mise en ligne en Mars 2020).
     </p>
 
     <br />
-    <h3>📂&nbsp;Catégories</h3>
-    <p><i>cliquez sur une catégorie pour voir les questions associées</i></p>
+    <hr />
+    <br />
+
+    <h3>Toutes les questions par...</h3>
+    <p><i>Cliquez sur une bulle pour voir toutes les questions associées.</i></p>
+
+    <br />
+    <h4>📂&nbsp;Catégories</h4>
     <p>
       <span v-for="category in categories" :key="category.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { category: category.name } }">
@@ -35,17 +42,23 @@
     </p>
 
     <br />
-    <h3>🏷️&nbsp;Tags</h3>
-    <p>
+    <h4>🏷️&nbsp;Tags</h4>
+    <p :class="{ 'max-height-300': !showAllTags }">
       <span v-for="tag in tags" :key="tag.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { tag: tag.name } }">
           <FilterLabel :key="tag.name" filterType="tag" v-bind:filterObject="tag" />
         </router-link>
       </span>
     </p>
+    <p class="text-center fake-link">
+      <span @click="toggleAllTags()">
+        <span v-if="!showAllTags">Afficher tous les tags</span>
+        <span v-if="showAllTags">Cacher tous les tags</span>
+      </span>
+    </p>
 
     <br />
-    <h3>✍️&nbsp;Auteurs</h3>
+    <h4>✍️&nbsp;Auteurs</h4>
     <p>
       <span v-for="author in authors" :key="author.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { author: author.name } }">
@@ -55,7 +68,7 @@
     </p>
 
     <br />
-    <h3>🏆&nbsp;Niveaux de difficulté</h3>
+    <h4>🏆&nbsp;Niveaux de difficulté</h4>
     <p>
       <span v-for="difficulty in difficultyLevels" :key="difficulty.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { difficulty: difficulty.value } }">
@@ -86,7 +99,7 @@ export default {
 
   data() {
     return {
-      //
+      showAllTags: false,
     };
   },
 
@@ -133,6 +146,9 @@ export default {
   methods: {
     fetchQuestionStats() {
       this.$store.dispatch('GET_STATS');
+    },
+    toggleAllTags() {
+      this.showAllTags = !this.showAllTags;
     },
 
   },
