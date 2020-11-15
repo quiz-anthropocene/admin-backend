@@ -148,7 +148,7 @@ export default {
 /* Override bootstrap.min.css */
 
 $theme-colors: ( // shift colors
-  "primary": #005995,
+  "primary": #08519C,
   "secondary": #F33F3F
 );
 $primary-color--active: #7dcaff;
