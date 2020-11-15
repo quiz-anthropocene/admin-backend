@@ -69,6 +69,35 @@
       </div>
     </div>
 
+    <br />
+    <hr />
+    <br />
+
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <h3>Une <i>newsletter</i> pour vous tenir au courant des nouveautés</h3>
+        <p>
+          On vous enverra juste quelques emails dans l'année, pour vous annoncer de nouveaux quizs, des partenariats, etc.
+        </p>
+        <form class="row" @submit.prevent="submitNewsletterRegistration" v-if="!newsletterRegistrationSuccess && !newsletterRegistrationError">
+          <div class="col-sm-8">
+            <div class="form-group">
+              <input type="email" id="newsletter_email" class="form-control" placeholder="Votre email" v-model="emailNewsletterRegistration" required />
+            </div>
+          </div>
+          <div class="col-sm-4 text-align-left">
+            <button class="btn btn-primary" type="submit" :disabled="!emailNewsletterRegistration">Je m'inscris</button>
+          </div>
+        </form>
+        <div class="alert alert-success" v-if="newsletterRegistrationSuccess">
+          Merci pour votre inscription ! 💯
+        </div>
+        <div class="alert alert-danger" v-if="newsletterRegistrationError">
+          Une erreur s'est produite au moment de votre inscription 😢
+        </div>
+      </div>
+    </div>
+
   </section>
 </template>
 
@@ -78,7 +107,10 @@ export default {
 
   data() {
     return {
-      questionSameFilterNextId: null,
+      // questionSameFilterNextId: null,
+      emailNewsletterRegistration: null,
+      newsletterRegistrationSuccess: null,
+      newsletterRegistrationError: null,
     };
   },
 
@@ -91,22 +123,48 @@ export default {
     },
   },
 
-  watch: {
-    questionsCount: {
-      immediate: true,
-      // eslint-disable-next-line
-      handler(newQuestionsCount, oldQuestionsCount) {
-        if (newQuestionsCount) {
-          this.questionSameFilterNextId = this.$store.getters.getNextQuestionByFilter().id;
-        }
-      },
-    },
-  },
+  // watch: {
+  //   questionsCount: {
+  //     immediate: true,
+  //     // eslint-disable-next-line
+  //     handler(newQuestionsCount, oldQuestionsCount) {
+  //       if (newQuestionsCount) {
+  //         this.questionSameFilterNextId = this.$store.getters.getNextQuestionByFilter().id;
+  //       }
+  //     },
+  //   },
+  // },
 
   mounted() {
   },
 
   methods: {
+    submitNewsletterRegistration() {
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/newsletter`, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: this.emailNewsletterRegistration,
+        }),
+      })
+        .then((response) => response.json())
+      // eslint-disable-next-line
+      .then(data => {
+          console.log(data);
+          if (data.includes('Erreur')) {
+            this.newsletterRegistrationError = data;
+          } else {
+            this.newsletterRegistrationSuccess = data;
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+          this.newsletterRegistrationError = error;
+        });
+    },
   },
 };
 </script>
