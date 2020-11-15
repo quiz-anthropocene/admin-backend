@@ -34,6 +34,8 @@ else:
 
 ALLOWED_HOSTS = [os.environ["HOST"]]
 
+DOMAIN_URL = "https://quizanthropocene.fr"
+
 
 # Application definition
 
@@ -178,3 +180,13 @@ NOTION_QUESTIONS_TABLE_URL = os.getenv("NOTION_QUESTIONS_TABLE_URL")
 NOTION_CONTRIBUTION_TABLE_URL = os.getenv("NOTION_CONTRIBUTION_TABLE_URL")
 NOTION_IMPORT_STATS_TABLE_URL = os.getenv("NOTION_IMPORT_STATS_TABLE_URL")
 NOTION_GLOSSARY_TABLE_URL = os.getenv("NOTION_GLOSSARY_TABLE_URL")
+
+
+# Sendinblue (Newsletter)
+
+SIB_API_KEY = os.getenv("SIB_API_KEY")
+SIB_NEWSLETTER_LIST_ID = os.getenv("SIB_NEWSLETTER_LIST_ID")
+SIB_NEWSLETTER_DOI_TEMPLATE_ID = os.getenv("SIB_NEWSLETTER_DOI_TEMPLATE_ID")
+SIB_CONTACT_DOI_ENDPOINT = (
+    "https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation"
+)
