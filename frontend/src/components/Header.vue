@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 header {
-  background-image: url("https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png");
+  background-image: url("https://quizanthropocene.fr/showyourstripes_globe_1850-2019.png");
   background-size: cover;
   border-radius: 5px;
   margin: 10px;
