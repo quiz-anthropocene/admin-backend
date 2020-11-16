@@ -478,36 +478,20 @@
     tags:
     - 185
 - model: api.quiz
-  pk: 51
-  fields:
-    name: Bonpote
-    introduction: "Voici le quiz de Thomas, alias Bon Pote, blogueur invétéré sur
-      les questions environnementales, mais pas que. Thomas a commencé à bloguer fin
-      2018 en ayant un objectif : rendre ses articles utiles. Le lecteur ne doit pas
-      perdre son temps et doit soit avoir appris quelque chose, soit avoir eu le sourire
-      en lisant.\r\n\r\nIl y a sur son blogs ! Vous trouverez des articles sur la
-      politique, des personnages attachants comme Jean Michel CAC 40, une lettre d'amour
-      à Nabilla..."
-    conclusion: ''
-    author: Bonpote
-    image_background_url: https://i2.wp.com/bonpote.com/wp-content/uploads/2020/10/Tout-le-monde-cover.jpg?w=1060&ssl=1
-    publish: false
-    created: 2020-11-01
-    questions:
-    - 573
-    tags: []
-- model: api.quiz
   pk: 52
   fields:
     name: Le quiz de Bonpote
-    introduction: "Notre premier quiz de blogueur, c'est de Bonpote qu'il vient. bonpote.com
-      \r\nBonpote, c'est selon ses propres termes \"un mec qui vous veut du bien.
-      Avant tout, une personne curieuse, qui s’intéresse à tout\". Ses billets sont
-      mordants, très bien documentés, avec la pointe d'humour qui va bien. Au fil
-      des billets, on comprend que son travail est en lien avec le monde de la finance.
-      Et comme c'est un sujet qui n'était pas encore abordé dans nos questions, il
-      a commencé à combler ce vide. Prêt à plonger dans l'enfer du greenwashing financier
-      ? C'est parti."
+    introduction: 'Voici le quiz de Thomas, alias Bon Pote, blogueur invétéré sur
+      les questions environnementales, mais pas que. Thomas a commencé à bloguer fin
+      2018 en ayant un objectif : rendre ses articles utiles. Le lecteur ne doit pas
+      perdre son temps et doit soit avoir appris quelque chose, soit avoir eu le sourire
+      en lisant. Vous trouverez sur son blog bonpote.com des articles sur la politique,
+      des personnages attachants comme Jean Michel CAC 40, une lettre d''amour à Nabilla...Ses
+      billets sont mordants, très bien documentés, avec la pointe d''humour qui va
+      bien. Au fil des billets, on comprend que son travail est en lien avec le monde
+      de la finance. Et comme c''est un sujet qui n''était pas encore abordé dans
+      nos questions, il a commencé à combler ce vide. Prêt à plonger dans l''enfer
+      du greenwashing financier ? C''est parti.'
     conclusion: ''
     author: Bonpote
     image_background_url: https://patch.com/img/cdn20/users/224111/20190401/020846/styles/raw/public/processed_images/tree_with_money-1554098721-8512.jpg
