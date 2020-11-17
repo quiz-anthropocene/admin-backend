@@ -37,7 +37,7 @@
     <h3>Open source</h3>
     <p>
       Le code de l'application est visible sur <a href="https://github.com/raphodn/know-your-planet" target="_blank">la page Github de l'application</a>.
-      Si vous avez des commentaires ou des suggestions sur l'application, vous pouvez y créer des <i>Issues</i> 🙏
+      Si vous avez des commentaires ou des suggestions sur l'application, vous pouvez y créer des <i>Issues</i>.
     </p>
 
     <br />
@@ -59,7 +59,7 @@
     <h3>Vous souhaitez aller plus loin ?</h3>
     <p>
       On a créé une page <router-link :to="{ name: 'ressources' }">📚&nbsp;Ressources</router-link> pour regrouper
-      plein d'informations additionnelles (des assos, d'autres projets similaires, nos lectures pour trouver les questions, etc.).
+      plein d'informations additionnelles : des assos, d'autres projets similaires, nos lectures pour trouver les questions, etc.
     </p>
 
   </section>

@@ -12,7 +12,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api import constants, utilities_notion
+from api import constants, utilities_notion, utilities_sendinblue
 from api.models import (
     Category,
     Tag,
@@ -535,3 +535,22 @@ def stats_dashboard(request):
             "quiz_answer_count_json": quiz_answer_count_json,
         },
     )
+
+
+@api_view(["POST"])
+def newsletter(request):
+    if request.method == "POST":
+        try:
+            response = utilities_sendinblue.newsletter_registration(
+                request.data["email"]
+            )
+            if response.status_code != 201:
+                raise Exception(json.loads(response._content))
+            success_message = (
+                "Votre inscription a été reçu, merci ! "
+                "Vous allez reçevoir un email pour confirmer votre inscription."
+            )
+            return Response(success_message, status=status.HTTP_201_CREATED)
+        except Exception as e:
+            error_message = f"Erreur lors de votre inscription à la newsletter. {e}"
+            return Response(error_message, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

@@ -43,4 +43,5 @@ urlpatterns = [
     path("stats", views.stats, name="stats"),
     path("notion-questions", views.notion_questions, name="notion-questions"),
     path("stats-dashboard", views.stats_dashboard, name="stats-dashboard"),
+    path("newsletter", views.newsletter, name="newsletter"),
 ]
