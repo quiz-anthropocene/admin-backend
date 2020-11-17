@@ -252,6 +252,10 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         "answer_success_count_agg",
         "answer_success_rate",
     )
+    search_fields = (
+        "id",
+        "text",
+    )
     list_filter = (
         "type",
         "category",
@@ -364,6 +368,7 @@ class CategoryAdmin(ExportMixin, admin.ModelAdmin):
         "name_long",
         "question_count",
     )
+    search_fields = ("name",)
     ordering = ("id",)
     actions = [
         "export_as_csv",
@@ -380,6 +385,7 @@ class TagAdmin(ExportMixin, admin.ModelAdmin):
         "question_count",
         "quiz_count",
     )
+    search_fields = ("name",)
     ordering = ("name",)
     actions = [
         "export_as_csv",
@@ -400,6 +406,7 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
         "publish",
         "answer_count_agg",
     )
+    search_fields = ("name",)
     list_filter = ("publish",)
     ordering = ("name",)
     filter_horizontal = (
