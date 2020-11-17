@@ -3,6 +3,7 @@ import notion
 import collections
 
 from django.conf import settings
+from django.db import IntegrityError
 from django.core.management import BaseCommand
 from django.core.exceptions import ValidationError
 
@@ -47,7 +48,10 @@ class Command(BaseCommand):
             self.stdout.write("Erreur accès Notion. token_v2 expiré ?")
             return
 
-        print("--- fetch questions : %s seconds ---" % (time.time() - start_time))
+        print(
+            "--- Step 1 done : fetch questions from Notion (%s seconds) ---"
+            % round(time.time() - start_time, 1)
+        )
         start_time = time.time()
 
         # order by notion_questions_list by id
@@ -70,7 +74,10 @@ class Command(BaseCommand):
             if n not in notion_questions_id_list:
                 questions_ids_missing.append(n)
 
-        print("--- question ids : %s seconds ---" % (time.time() - start_time))
+        print(
+            "--- Step 2 done : check question ids (duplicates & missing) : %s seconds ---"
+            % round(time.time() - start_time, 1)
+        )
         start_time = time.time()
 
         # reduce scope because of timeouts on Heroku (30 seconds)
@@ -82,6 +89,8 @@ class Command(BaseCommand):
             ]
         else:
             notion_questions_list_scope = notion_questions_list
+
+        print(f"processing {len(notion_questions_list_scope)} questions")
 
         for notion_question_row in notion_questions_list_scope:
             notion_question_dict = dict()
@@ -107,6 +116,7 @@ class Command(BaseCommand):
             # - check id exists
             # - field type --> "" if None
             # - field difficulty to int
+            # - field answer_correct --> "" if None
             # - field added --> created time if None --> to date
             # - field validator --> "" if None
             # - fields answer_explanation & answer_extra_info --> clean markdown [links](links)
@@ -120,6 +130,8 @@ class Command(BaseCommand):
                 notion_question_dict["difficulty"] = int(
                     notion_question_dict["difficulty"]
                 )
+            if notion_question_dict["answer_correct"] is None:
+                notion_question_dict["answer_correct"] = ""
             if ("added" not in notion_question_dict) or (
                 notion_question_dict["added"] is None
             ):
@@ -179,7 +191,7 @@ class Command(BaseCommand):
                     question_validation_errors.append(
                         ValidationError(
                             {
-                                "tags": f"Question {notion_question_dict['id']}."
+                                "tags": f"Question {notion_question_dict['id']}. "
                                 f"Nouveau tag(s): {new_tags}"
                             }
                         )
@@ -277,8 +289,15 @@ class Command(BaseCommand):
                     validation_errors.append(
                         f"Question {notion_question_dict['id']}: {e}"
                     )
+                except IntegrityError as e:
+                    validation_errors.append(
+                        f"Question {notion_question_dict['id']}: {e}"
+                    )
 
-        print("--- loop on questions : %s seconds ---" % (time.time() - start_time))
+        print(
+            "--- Step 3 done : loop on questions : %s seconds ---"
+            % round(time.time() - start_time, 1)
+        )
         start_time = time.time()
 
         # done
@@ -308,8 +327,6 @@ class Command(BaseCommand):
 
         validation_errors_message = (
             f"Erreurs : {len(validation_errors)}"
-            + "|||si tags : créer les tags manquants dans l'admin et relancer l'import"
-            + "|||si id manquant : il doit y avoir des questions sans id (voire vide ?) dans Notion"
             + "|||"
             + "|||".join([str(error) for error in validation_errors])
             if len(validation_errors)
@@ -323,7 +340,10 @@ class Command(BaseCommand):
                 len(questions_updated),
             )
 
-        print("--- build and send stats : %s seconds ---" % (time.time() - start_time))
+        print(
+            "--- Step 4 done : build and send stats : %s seconds ---"
+            % round(time.time() - start_time, 1)
+        )
 
         self.stdout.write(
             "|||".join(
