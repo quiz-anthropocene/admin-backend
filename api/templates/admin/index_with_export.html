@@ -24,13 +24,28 @@
 
   <hr style="margin-top:20px;margin-bottom:20px" />
 
-  <h1>Exporter la donnée vers Github</h1>
+  <h1>Stats d'usage ?</h1>
+  <p>Voir la page <a href="{% url 'admin:api_dailystat_changelist' %}">Daily Stats</a>.</p>
+
+  <hr style="margin-top:20px;margin-bottom:20px" />
+
+  <h1>1. Importer la donnée depuis Notion</h1>
+  <p>Voir la page <a href="{% url 'admin:api_quiz_changelist' %}">Questions</a>.</p>
+
+  <br />
+
+  <h1>2. Ajouter et modifier les Quizs ?</h1>
+  <p>Voir la page <a href="{% url 'admin:api_question_changelist' %}">Quizs</a>.</p>
+
+  <br />
+
+  <h1>3. Exporter la donnée vers Github</h1>
   <section class="action-text">
     <p>
       Une fois les questions importées depuis Notion, et les quizs et/ou tags créés, il est temps de mettre à jour l'application.
     </p>
     <p>
-      Ce script va exporter toutes les questions/quizzes/tags au format YAML vers Github.
+      Ce script va exporter vers Github toutes les questions, tous les quizs et tous les tags au format YAML.
       Si tout va bien, l'application devrait être mise à jour dans quelques minutes.
     </p>
     <form method="POST">

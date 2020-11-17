@@ -82,6 +82,7 @@ AGGREGATION_FIELD_CHOICE_LIST = [
 AGGREGATION_QUIZ_FIELD_CHOICE_LIST = ["quiz_answer_count", "quiz_feedback_count"]
 AGGREGATION_SCALE_CHOICE_LIST = ["day", "week", "month"]
 AGGREGATION_SINCE_CHOICE_LIST = ["total", "month", "week"]
+AGGREGATION_SINCE_DATE_DEFAULT = "2020-01-01"
 
 CONTRIBUTION_TYPE_LIST = [
     "nouvelle question",

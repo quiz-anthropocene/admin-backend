@@ -794,8 +794,19 @@ class DailyStatManager(models.Manager):
         # returns None if aggregation is done on an empty queryset
         return queryset or 0
 
-    def agg_timeseries(self, field="question_answer_count", scale="day"):
+    def agg_timeseries(
+        self,
+        field="question_answer_count",
+        scale=constants.AGGREGATION_SCALE_CHOICE_LIST[0],
+        since_date=constants.AGGREGATION_SINCE_DATE_DEFAULT,
+    ):
+        """
+        Output:
+        [{'day': '2020-07-24', 'y': 1}, {'day': '2020-08-04', 'y': 13}]
+        """
         queryset = self
+        # since_date
+        queryset = queryset.filter(date__gte=since_date)
         # scale
         if scale not in constants.AGGREGATION_SCALE_CHOICE_LIST:
             raise ValueError(
@@ -814,9 +825,11 @@ class DailyStatManager(models.Manager):
 
         if scale == "month":
             queryset = (
-                queryset.extra(select={"day": "to_char(date, 'YYYY-MM-01')"})
+                queryset.extra(
+                    select={"day": "to_char(date, 'YYYY-MM-01')"}
+                )  # use Trunc ?
                 .values("day")
-                .annotate(y=Count(field))
+                .annotate(y=Sum(field))
                 .order_by("day")
             )
 

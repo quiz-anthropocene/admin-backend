@@ -719,11 +719,14 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
         current_scale = str(
             request.POST.get("scale", constants.AGGREGATION_SCALE_CHOICE_LIST[0])
         )
+        current_since_date = str(
+            request.POST.get("since_date", constants.AGGREGATION_SINCE_DATE_DEFAULT)
+        )
 
         # Aggregate answers per day
         # chart_data_query = DailyStat.objects.extra(select={"day": "date(date)"}) # sqlite
         chart_data_query = DailyStat.objects.agg_timeseries(
-            current_field, scale=current_scale
+            current_field, scale=current_scale, since_date=current_since_date
         )
 
         chart_data_list = list(chart_data_query)
@@ -744,6 +747,8 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
             "current_field": current_field,
             "scale_choice_list": constants.AGGREGATION_SCALE_CHOICE_LIST,
             "current_scale": current_scale,
+            "since_date_min": constants.AGGREGATION_SINCE_DATE_DEFAULT,
+            "current_since_date": current_since_date,
         }
 
         # Call the superclass changelist_view to render the page

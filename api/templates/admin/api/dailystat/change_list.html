@@ -86,6 +86,8 @@
       <option value="{{ scale_option }}" {% if current_scale == scale_option %}selected{% endif %}>{{ scale_option }}</option>
     {% endfor %}
   </select>
+  <label>depuis</label>
+  <input type="date" name="since_date" value="{{ current_since_date }}" pattern="^\d{4}-\d{2}-\d{2}$" min="{{ since_date_min }}" title="En format YYYY-MM-DD, par exemple : 2020-01-31">
   <input type="submit" value="Voir les statistiques">
 </form>
 

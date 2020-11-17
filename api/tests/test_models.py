@@ -195,22 +195,30 @@ class DailyStatModelTest(TestCase):
         QuestionAnswerEvent.objects.create(
             question_id=cls.question_1.id, choice="a", source="question"
         )
+        # 3 daily stats in the same week
         DailyStat.objects.create(
             date="2020-04-30", question_answer_count=10, question_feedback_count=5
         )
         DailyStat.objects.create(
             date="2020-05-01", question_answer_count=2, question_feedback_count=1
         )
+        DailyStat.objects.create(
+            date="2020-05-02", question_answer_count=4, question_feedback_count=2
+        )
+        # 1 daily stats in the next week
+        DailyStat.objects.create(
+            date="2020-05-06", question_answer_count=1, question_feedback_count=1
+        )
 
     def test_question_answer_count_count(self):
-        self.assertEqual(DailyStat.objects.agg_count("question_answer_count"), 12)
-        self.assertEqual(DailyStat.objects.agg_count("question_feedback_count"), 6)
+        self.assertEqual(DailyStat.objects.agg_count("question_answer_count"), 17)
+        self.assertEqual(DailyStat.objects.agg_count("question_feedback_count"), 9)
         self.assertEqual(DailyStat.objects.agg_count("quiz_answer_count"), 0)
         self.assertEqual(
             DailyStat.objects.agg_count(
                 "question_answer_count", since="week", week_or_month_iso_number=18
             ),
-            12,
+            16,
         )
         self.assertEqual(
             DailyStat.objects.agg_count(
@@ -222,5 +230,23 @@ class DailyStatModelTest(TestCase):
             DailyStat.objects.agg_count(
                 "question_feedback_count", since="month", week_or_month_iso_number=5
             ),
-            1,
+            4,
         )
+        agg_timeseries_per_day_1 = DailyStat.objects.agg_timeseries(
+            field="question_answer_count", scale="day"
+        )
+        self.assertEqual(len(agg_timeseries_per_day_1), 4)
+        self.assertEqual(agg_timeseries_per_day_1[0]["day"], "2020-04-30")
+        agg_timeseries_per_day_2 = DailyStat.objects.agg_timeseries(
+            field="question_answer_count", scale="day", since_date="2020-05-02"
+        )
+        self.assertEqual(len(agg_timeseries_per_day_2), 2)
+        self.assertEqual(agg_timeseries_per_day_2[0]["day"], "2020-05-02")
+        agg_timeseries_per_month = DailyStat.objects.agg_timeseries(
+            field="question_answer_count", scale="month"
+        )
+        self.assertEqual(len(agg_timeseries_per_month), 2)
+        self.assertEqual(agg_timeseries_per_month[0]["day"], "2020-04-01")
+        self.assertEqual(agg_timeseries_per_month[0]["y"], 10)
+        self.assertEqual(agg_timeseries_per_month[1]["day"], "2020-05-01")
+        self.assertEqual(agg_timeseries_per_month[1]["y"], 7)
