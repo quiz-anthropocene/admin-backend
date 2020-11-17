@@ -4,12 +4,31 @@
       <i v-if="questionsCount">Il y a actuellement <strong>{{ questionsCount }} questions</strong> et <strong>{{ quizCount }} quiz</strong>. </i>
       <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus ! </i>
     </div>
-
     <div v-if="newsletterRegistrationCallback" class="alert alert-success" role="alert">
       Votre inscription à la newsletter a été enrigstrée, merci !
       <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="newsletterCleanup()">
         <span aria-hidden="true">&times;</span>
       </button>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-sm-6" v-if="questionsCount">
+        <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
+          <button class="btn btn-primary btn-lg btn-block">
+            🕹&nbsp;<strong>Tous les quiz</strong>
+          </button>
+        </router-link>
+      </div>
+      <!-- <div class="col-sm-4" v-if="questionSameFilterNextId">
+        <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: questionSameFilterNextId } }">
+          <button class="btn btn-outline-primary btn-lg btn-block">🔀&nbsp;<strong>Une question au hasard</strong></button>
+        </router-link>
+      </div> -->
+      <!-- <div class="col-sm-6" v-if="questionsCount">
+        <router-link class="no-decoration" :to="{ name: 'question-list' }">
+          <button class="btn btn-outline-primary btn-lg btn-block">❓&nbsp;<strong>Toutes les questions</strong></button>
+        </router-link>
+      </div> -->
     </div>
 
     <div class="jumbotron jumbotron-fluid">
@@ -49,26 +68,7 @@
       </div>
     </div>
 
-    <br />
-
     <div class="row justify-content-md-center">
-      <div class="col-sm-6" v-if="questionsCount">
-        <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
-          <button class="btn btn-primary btn-lg btn-block">
-            🕹&nbsp;<strong>Tous les quiz</strong>
-          </button>
-        </router-link>
-      </div>
-      <!-- <div class="col-sm-4" v-if="questionSameFilterNextId">
-        <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: questionSameFilterNextId } }">
-          <button class="btn btn-outline-primary btn-lg btn-block">🔀&nbsp;<strong>Une question au hasard</strong></button>
-        </router-link>
-      </div> -->
-      <!-- <div class="col-sm-6" v-if="questionsCount">
-        <router-link class="no-decoration" :to="{ name: 'question-list' }">
-          <button class="btn btn-outline-primary btn-lg btn-block">❓&nbsp;<strong>Toutes les questions</strong></button>
-        </router-link>
-      </div> -->
       <div class="col-sm-6" v-if="questionsCount">
         <router-link class="no-decoration" :to="{ name: 'ressources' }">
           <button class="btn btn-outline-secondary btn-lg btn-block">📚&nbsp;<strong>Ressources</strong></button>
