@@ -19,7 +19,7 @@ def newsletter_registration(email):
         # },
         "includeListIds": [int(settings.SIB_NEWSLETTER_LIST_ID)],
         "templateId": int(settings.SIB_NEWSLETTER_DOI_TEMPLATE_ID),
-        "redirectionUrl": settings.DOMAIN_URL,
+        "redirectionUrl": settings.DOMAIN_URL + "?newsletter=confirmed",
         "updateEnabled": True,
     }
 

@@ -84,7 +84,6 @@ export default {
     submitFeedback(feedbackChoice) {
       this.feedbackSubmitted = feedbackChoice;
       this.error = this.feedbackResponse = null;
-      this.loading = true;
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/${(this.context.source === 'question') ? 'questions' : 'quizzes'}/${this.context.item.id}/feedback-events`, {
         method: 'POST',
         headers: {
@@ -131,6 +130,7 @@ export default {
         })
         .catch((error) => {
           console.log(error);
+          this.loading = false;
           this.error = error;
         });
     },

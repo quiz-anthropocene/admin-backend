@@ -5,6 +5,13 @@
       <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus ! </i>
     </div>
 
+    <div v-if="newsletterRegistrationCallback" class="alert alert-success" role="alert">
+      Votre inscription à la newsletter a été enrigstrée, merci !
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="newsletterCleanup()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <div class="row">
@@ -79,21 +86,25 @@
         <p>
           On vous enverra juste quelques emails dans l'année, pour vous annoncer de nouveaux quizs, des partenariats, etc.
         </p>
-        <form class="row" @submit.prevent="submitNewsletterRegistration" v-if="!newsletterRegistrationSuccess && !newsletterRegistrationError">
+        <form class="row" @submit.prevent="submitNewsletterRegistration" v-if="!newsletterRegistrationLoading && !newsletterRegistrationSuccess && !newsletterRegistrationError">
           <div class="col-sm-8">
             <div class="form-group">
               <input type="email" id="newsletter_email" class="form-control" placeholder="Votre email" v-model="emailNewsletterRegistration" required />
             </div>
           </div>
           <div class="col-sm-4 text-align-left">
-            <button class="btn btn-primary" type="submit" :disabled="!emailNewsletterRegistration">Je m'inscris</button>
+            <button class="btn btn-primary" type="submit" :disabled="!emailNewsletterRegistration">Je m'inscris !</button>
           </div>
         </form>
+        <div v-if="newsletterRegistrationLoading">
+          Inscription en cours...
+        </div>
         <div class="alert alert-success" v-if="newsletterRegistrationSuccess">
           Merci pour votre inscription ! 💯
         </div>
         <div class="alert alert-danger" v-if="newsletterRegistrationError">
           Une erreur s'est produite au moment de votre inscription 😢
+          <span class="fake-link" @click="newsletterCleanup()">Réessayer</span>
         </div>
       </div>
     </div>
@@ -109,8 +120,10 @@ export default {
     return {
       // questionSameFilterNextId: null,
       emailNewsletterRegistration: null,
+      newsletterRegistrationLoading: null,
       newsletterRegistrationSuccess: null,
       newsletterRegistrationError: null,
+      newsletterRegistrationCallback: null,
     };
   },
 
@@ -136,10 +149,14 @@ export default {
   // },
 
   mounted() {
+    if (this.$route.query.newsletter) {
+      this.newsletterRegistrationCallback = true;
+    }
   },
 
   methods: {
     submitNewsletterRegistration() {
+      this.newsletterRegistrationLoading = true;
       fetch(`${process.env.VUE_APP_API_ENDPOINT}/newsletter`, {
         method: 'POST',
         headers: {
@@ -150,7 +167,10 @@ export default {
           email: this.emailNewsletterRegistration,
         }),
       })
-        .then((response) => response.json())
+        .then((response) => {
+          this.newsletterRegistrationLoading = false;
+          return response.json();
+        })
       // eslint-disable-next-line
       .then(data => {
           console.log(data);
@@ -162,8 +182,15 @@ export default {
         })
         .catch((error) => {
           console.log(error);
+          this.newsletterRegistrationLoading = false;
           this.newsletterRegistrationError = error;
         });
+    },
+    newsletterCleanup() {
+      this.newsletterRegistrationLoading = null;
+      this.newsletterRegistrationSuccess = null;
+      this.newsletterRegistrationError = null;
+      this.newsletterRegistrationCallback = null;
     },
   },
 };
