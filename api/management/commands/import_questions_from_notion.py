@@ -91,6 +91,12 @@ class Command(BaseCommand):
             notion_questions_list_scope = notion_questions_list
 
         print(f"processing {len(notion_questions_list_scope)} questions")
+        print(
+            f"First question id : {notion_questions_list_scope[0].get_property('id')}"
+        )
+        print(
+            f"Last question id : {notion_questions_list_scope[-1].get_property('id')}"
+        )
 
         for notion_question_row in notion_questions_list_scope:
             notion_question_dict = dict()
@@ -305,6 +311,7 @@ class Command(BaseCommand):
             f"Nombre de questions dans Notion : {len(notion_questions_list)}"
         )
         questions_scope_count = f"Nombre de questions prises en compte ici : {len(notion_questions_list_scope)}"  # noqa
+        questions_scope_count += f" (de id {notion_questions_list_scope[0].get_property('id')} à id {notion_questions_list_scope[-1].get_property('id')})"  # noqa
         questions_ids_duplicate_message = f"ids 'en double' : {', '.join([str(question_id) for question_id in questions_ids_duplicate])}"  # noqa
         questions_ids_missing_message = f"ids 'manquants' : {', '.join([str(question_id) for question_id in questions_ids_missing])}"  # noqa
 

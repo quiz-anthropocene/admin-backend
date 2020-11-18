@@ -26,13 +26,16 @@
 <h1>Importer les questions depuis Notion</h1>
 <section class="action-text">
   <p>
-    Les questions sont créés et validées dans Notion, avant d'être importés dans l'admin (afin d'y créer les quizs).
+    Les questions sont créés et validées dans Notion, avant d'être importés dans l'admin (ici !), pour y créer les quizs.
   </p>
   <p>
-    Pourquoi plusieurs boutons ? L'import est séparé en plusieurs actions car il prend trop de temps sinon (et fait parfois planter le serveur).
+    Pourquoi plusieurs boutons ? L'import est séparé en plusieurs actions car il prend trop de temps sinon (et ferais planter le serveur).
   </p>
   <p>
-    Il faut donc lancer les imports les uns après les autres (cliquer sur un bouton, attendre la réponse, puis cliquer sur le suivant, etc).
+    Il faut donc lancer les imports les uns après les autres (cliquer sur un bouton, attendre la réponse, puis cliquer sur le suivant, etc.).
+  </p>
+  <p>
+    Les numéros affichés ici sont indicatifs, ils ne correspondent pas exactement à la réalité, car il y a certains ids manquants dans Notion (ce qui fait décaler les lots).
   </p>
   <p>
     Merci de votre patience !
@@ -40,22 +43,22 @@
   <form method="POST">
     {% csrf_token %}
     <input type="hidden" name="run_import_questions_from_notion_script" value="1" />
-    <input class="action-button" type="submit" value="Lancer l'import des questions : id 1 à 200">
+    <input class="action-button" type="submit" value="Lancer l'import des questions : # 1 à 200">
   </form>
   <form method="POST">
     {% csrf_token %}
     <input type="hidden" name="run_import_questions_from_notion_script" value="2" />
-    <input class="action-button" type="submit" value="Lancer l'import des questions : id 200 à 400">
+    <input class="action-button" type="submit" value="Lancer l'import des questions : # 200 à 400">
   </form>
   <form method="POST">
     {% csrf_token %}
     <input type="hidden" name="run_import_questions_from_notion_script" value="3" />
-    <input class="action-button" type="submit" value="Lancer l'import des questions : id 400 à 600">
+    <input class="action-button" type="submit" value="Lancer l'import des questions : # 400 à 600">
   </form>
   <form method="POST">
     {% csrf_token %}
     <input type="hidden" name="run_import_questions_from_notion_script" value="4" />
-    <input class="action-button" type="submit" value="Lancer l'import des questions : id 600 et plus">
+    <input class="action-button" type="submit" value="Lancer l'import des questions : # 600 et plus">
   </form>
   <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
   <div id="spinner" class="loading" role="status" style="display:none"></div>

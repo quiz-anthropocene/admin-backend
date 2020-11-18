@@ -259,11 +259,11 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
     list_filter = (
         "type",
         "category",
-        "tags",
         "difficulty",
         "author",
         "publish",
         "validation_status",
+        "tags",
     )
     ordering = ("id",)  # "answer_count_agg", "answer_success_rate",
     actions = [
