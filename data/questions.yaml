@@ -20003,10 +20003,10 @@
 - model: api.question
   pk: 599
   fields:
-    text: Sans les financements de bancaire, il ne serait par exemple plus possible
-      pour aux compagnies pétrolières d'investir dans des projets d'exploitations.
-      Entre 2016 et 2019, quelle banque  a le plus financé l’industrie fossile dans
-      le monde ?
+    text: Sans les financements bancaires, il ne serait plus possible aux compagnies
+      pétrolières d'investir dans des projets d'exploitations. Entre 2016 et 2019,
+      quelle est la banque qui a le plus financé l’industrie fossile dans le monde
+      ?
     hint: ''
     type: QCM
     category: 1
@@ -20297,6 +20297,44 @@
     tags:
     - 194
     - 195
+- model: api.question
+  pk: 611
+  fields:
+    text: En France, quelle proportion de leurs émissions la déclaration règlementaire
+      des entreprises couvre-t-elle ?
+    hint: ''
+    type: QCM
+    category: 8
+    difficulty: 2
+    answer_option_a: 20%
+    answer_option_b: 40%
+    answer_option_c: 60%
+    answer_option_d: 80%
+    answer_correct: c
+    has_ordered_answers: false
+    answer_explanation: L’Etat, les personnes morales de droit privé employant plus
+      de 500 personnes, les collectivités de plus de 50,000 habitants et les personnes
+      morales de droit public employant plus de 250 personnes ont l’obligation de
+      publier leur bilan d’émission de gaz à effet de serre. Ce dernier ne couvre
+      que les scopes 1 et 2, pas le scope 3 (voir leur définition dans le lien fourni).
+      En 2020, rapporté par habitant, ce scope 3 représente 4,8 tonnes de CO2eq sur
+      un total de 11,5 tonnes, soit 42%.
+    answer_accessible_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/10/hcc_rapport_empreinte-carbone.pdf
+    answer_scientific_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/10/hcc_rapport_empreinte-carbone.pdf
+    answer_image_url: https://media.lesechos.com/api/v1/images/view/5f7ed78b8fe56f38403f5d66/par_defaut/image.jpg
+    answer_image_explanation: ''
+    answer_extra_info: Bilan des gaz à effet de serre comme définis dans la loi. https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000024354907/2011-07-13
+    author: Kim Nguyen-Huu
+    validator: Matthieu Massart
+    publish: false
+    validation_status: A valider
+    added: 2020-11-11
+    created: 2020-11-18
+    updated: 2020-11-18
+    tags:
+    - 1
+    - 13
+    - 72
 - model: api.question
   pk: 612
   fields:
