@@ -13487,7 +13487,7 @@
 - model: api.question
   pk: 402
   fields:
-    text: Combien en moyenne utilise-t-on de litres d'eau pour fabriquer un jean ?
+    text: Combien de litres d'eau utilise-t-on en moyenne pour fabriquer un jean ?
     hint: ''
     type: QCM
     category: 2
@@ -14038,8 +14038,8 @@
 - model: api.question
   pk: 417
   fields:
-    text: En France, comment ont évolué les émissions de gaz à effet de serre entre
-      1990 et 2017 (en inventaire national) ?
+    text: Comment ont évolué les émissions de gaz à effet de serre sur le territoire
+      français entre 1990 et 2017 ?
     hint: Une large partie des émissions ont été délocalisés (produits importés de
       l’étranger) et ne sont donc plus comptées dans les émissions de la France
     type: QCM
@@ -14392,7 +14392,7 @@
   pk: 428
   fields:
     text: D'après les scientifiques du GIEC, le fait que les activités humaines soient
-      la cause principale du changement climatique actuel est...
+      la cause principale du changement climatique actuel est..
     hint: L’influence de l’homme sur le climat est clairement établie.
     type: QCM
     category: 1
@@ -19306,8 +19306,8 @@
 - model: api.question
   pk: 578
   fields:
-    text: 'Quel pays a inventé : l’imprimerie, le papier, la poudre à canon et la
-      boussole ?'
+    text: Dans quel pays ont été inventés l'imprimerie, le papier, la poudre à canon
+      et la boussole ?
     hint: ''
     type: QCM
     category: 6
@@ -19808,3 +19808,554 @@
     updated: 2020-09-22
     tags:
     - 31
+- model: api.question
+  pk: 594
+  fields:
+    text: Quelle proportion du CO2 d'origine humaine provient des incendies déclenchés
+      par l'homme ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: 1%
+    answer_option_b: 10%
+    answer_option_c: 20%
+    answer_option_d: 40%
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: 'Quand un arbre brûle, en quelques minutes, le carbone stocké
+      pendant des décennies retourne dans l''atmosphère. Ces émissions et l''effet
+      de serre additionnel induit viennent alors renforcer le phénomène même qui a
+      facilité ces incendies, à savoir les sécheresses et les canicules.
+
+      Les feux destructeurs des deux dernières années en Australie, en Amazonie, dans
+      l''Ouest Américain, en Sibérie et en Indonésie ne sont pas une parenthèse historique.
+      Leur fréquence et leur violence vont augmenter.
+
+      Le trait de la boucle de rétroaction entre incendies et effet de serre additionnel
+      n''a ainsi pas fini de s''épaissir.'
+    answer_accessible_url: https://www.wwf.fr/vous-informer/actualites/comprendre-limpact-de-la-foret-sur-le-climat
+    answer_scientific_url: ''
+    answer_image_url: https://media.lesechos.com/api/v1/images/view/5f619c1f3e45466cb2592835/1280x720-webp/0603890130962-web-tete.webp
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Matthieu Massart
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-17
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 63
+- model: api.question
+  pk: 595
+  fields:
+    text: Des scientifiques ont tenté d'estimer le 'coût ultime de la tonne de carbone',
+      c'est à dire en prenant en compte de son impact sur les générations futures,
+      pour le comparer au prix du marché actuel (100$/tonne). A quelle ordre de grandeur
+      sont-ils parvenus ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 4
+    answer_option_a: 100$
+    answer_option_b: 1000$
+    answer_option_c: 10,000$
+    answer_option_d: 100,000$
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: Les scientifiques de l'université de Chicaco ont bâti un modèle
+      prenant en compte les effets du changement climatique à un horizon de centaines
+      de milliers d'années, prenant en compte des effets comme la montée des eaux,
+      la fonte des glaciers, la perte de capacité agricole des sols.
+    answer_accessible_url: https://news.uchicago.edu/story/climate-change-will-ultimately-cost-humanity-100000-ton-carbon-scientists-estimate
+    answer_scientific_url: https://link.springer.com/article/10.1007%2Fs10584-020-02785-4
+    answer_image_url: https://news.uchicago.edu/sites/default/files/styles/full_width/public/images/2020-09/climate%20change%20sea%20level%20rise%20in%20pacific.jpg?itok=vplfV1-0
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Matthieu Massart
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-01
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 13
+- model: api.question
+  pk: 596
+  fields:
+    text: Juste avant la faillite de Lehman Brothers en 2008, le prix du pétrole avait
+      atteint des sommets. Quel fut alors le prix le plus haut atteint ?
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 3
+    answer_option_a: 124$
+    answer_option_b: 147$
+    answer_option_c: 166$
+    answer_option_d: 204$
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: 'On parle ici du prix du Bent cude Oil. Le prix du pétrole
+      a besoin d’un certain niveau pour atteindre un point d’équilibre. Il y en a
+      en fait 2 : géologique - prix à partir duquel l’industriel va dégager un bénéfice
+      - et économique - prix sur lequel se basent les Etats pour équilibrer leurs
+      finances. Le prix oscille donc très souvent entre le point d''équilibre géologique
+      et un prix maximum où la demande des consommateurs ne pourra pas suivre. Un
+      exemple récent l’explicite très bien : le début de la crise des gilets jaunes.
+      Une partie des français est descendue dans la rue pour une augmentation de 7
+      cents sur le litre. Dans une société complètement  dépendante au pétrole, on
+      voit bien que le prix final, dans un sens ou dans un autre, peut avoir des conséquences
+      fâcheuses, surtout pour les plus démunis.'
+    answer_accessible_url: https://bonpote.com/chute-du-petrole-pourquoi-cest-une-mauvaise-nouvelle/
+    answer_scientific_url: https://en.wikipedia.org/wiki/World_oil_market_chronology_from_2003#2008:_oil_prices_peak_at_$145.85_then_bottom_at_$32
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Bonpote
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
+    added: 2020-11-01
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 11
+- model: api.question
+  pk: 597
+  fields:
+    text: La 'taxonomie européenne' est un outil de classification créé en 2020 qui
+      fournit à tous les acteurs financiers une compréhension commune de ce qui est
+      doit être considéré comme une activité 'verte' (c'est à dire visant à rester
+      sous 2° de réchauffement). En 2020, quelle est la part des activités des entreprises
+      du CAC40 qui sont alignées avec cette classification ?
+    hint: ''
+    type: QCM
+    category: 8
+    difficulty: 4
+    answer_option_a: 2%
+    answer_option_b: 5%
+    answer_option_c: 10%
+    answer_option_d: 20%
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: Comme beaucoup de domaines, la finance n’échappe pas au greenwashing.
+      Depuis 10 ans, les termes ‘ESG’ (Environnement, Social, Gouvernance), ‘Green’
+      et ‘Sustainable’ (durable) sont apparus un peu partout. L’indice ESG de BNP
+      Paribas par exemple comprend des entreprises comme Total, Schneider Electric,
+      L’Oréal et Vinci. Doit-on le considérer comme 'vert' ?
+    answer_accessible_url: https://bonpote.com/la-neutralite-carbone-nouveau-greenwashing-ou-reelle-avancee/
+    answer_scientific_url: https://sustainablefinancesurvey.de/sites/sustainablefinancesurvey.de/files/documents/european-sustainable-finance-survey-2020_bf.pdf
+    answer_image_url: https://i2.wp.com/bonpote.com/wp-content/uploads/2020/10/image-10.png?w=648&ssl=1
+    answer_image_explanation: 'Bleu: rentre dans le périmètre de la classification.
+      Vert : et remplit les critères de l''UE'
+    answer_extra_info: ''
+    author: Bonpote
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
+    added: 2020-11-01
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 47
+    - 194
+    - 195
+- model: api.question
+  pk: 598
+  fields:
+    text: "Un dérivé climatique est un instrument financier qui peut être utilisé
+      pour se prémunir contre des risques liés au climat. L'actif sous-jacent peut
+      ainsi être la température, la quantité de neige tombée ou les précipitations.
+      \nEn quelle année le premier produit dérivé a été traité sur le Chicago Mercantile
+      Exchange ?"
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 4
+    answer_option_a: '1995'
+    answer_option_b: '1999'
+    answer_option_c: '2003'
+    answer_option_d: '2007'
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: Le premier produit dérivé a été traité sur le CME en 1999.
+      Compte tenu du risque grandissant, nous devrions entendre de plus en plus parler
+      de ce types de produits dans les années à venir (et potentiellement de gros
+      risques sur les marchés financiers si les vendeurs de produits n'ont pas anticipé/sous
+      estimé les risques climatiques...
+    answer_accessible_url: https://fr.wikipedia.org/wiki/D%C3%A9riv%C3%A9_climatique#:~:text=de%20neiges%2C%20etc.-,Historique,un%20%C3%A9lectricien%2C%20et%20Consolidated%20Edison.&text=Apr%C3%A8s%20ces%20premi%C3%A8res%20exp%C3%A9rimentations%20les,gr%C3%A9%20%C3%A0%20gr%C3%A9%20en%201997.
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Bonpote
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
+    added: 2020-11-01
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 194
+- model: api.question
+  pk: 599
+  fields:
+    text: Sans les financements de bancaire, il ne serait par exemple plus possible
+      pour aux compagnies pétrolières d'investir dans des projets d'exploitations.
+      Entre 2016 et 2019, quelle banque  a le plus financé l’industrie fossile dans
+      le monde ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: HSBC
+    answer_option_b: Bank of America
+    answer_option_c: Goldman Sachs
+    answer_option_d: JP Morgan
+    answer_correct: d
+    has_ordered_answers: false
+    answer_explanation: JP Morgan est historiquement la banque qui a le plus financé
+      l'industrie fossile. Sans ses milliards investis, l'industrie pétrolière n'aurait
+      jamais été la même (et l'état du monde dans lequel il est en 2020, de même...)
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.ran.org/wp-content/uploads/2020/03/Banking_on_Climate_Change__2020_vF.pdf
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Bonpote
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
+    added: 2020-11-01
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 11
+    - 194
+- model: api.question
+  pk: 600
+  fields:
+    text: Combien les banques françaises ont elle prêté à l’industrie fossile entre
+      2016 et 2019 ?
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 4
+    answer_option_a: 10 milliards de dollars
+    answer_option_b: 50 milliards de dollars
+    answer_option_c: 200 milliards de dollars
+    answer_option_d: 1,000 milliards de dollars
+    answer_correct: c
+    has_ordered_answers: false
+    answer_explanation: 200 milliards pour les 4 banques, où BNP Paribas arrive en
+      tête (de très loin) avec 84 milliards prêtés. La même banque qui n'arrête pas
+      de se mettre en avant pour le climat "la banque d'un monde qui change". D'où
+      l'importance de choisir où l'on place son épargne.
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.ran.org/wp-content/uploads/2020/03/Banking_on_Climate_Change__2020_vF.pdf
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Bonpote
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
+    added: 2020-11-01
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 1
+    - 11
+    - 194
+- model: api.question
+  pk: 601
+  fields:
+    text: Parmi ces produits, lequel est considéré comme une ‘valeur refuge' sur les
+      marchés financiers ?
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 1
+    answer_option_a: le pétrole
+    answer_option_b: le soja
+    answer_option_c: l’or
+    answer_option_d: Le Nutella
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: Les Français détiendraient près de 3 000 tonnes d'or dans
+      leurs bas de laine. Considéré comme une valeur refuge, l'or rassure les épargnants
+      en période de crise économique ou financière
+    answer_accessible_url: https://www.boursorama.com/patrimoine/fiches-pratiques/investir-dans-une-valeur-refuge-l-or-f85e1579077b1b6f46a7f0d1d62d345c#:~:text=Consid
+    answer_scientific_url: ''
+    answer_image_url: https://s.brsimg.com/static-000/cache/i/content/images/c/9/0/c90f1332603f98669a72bf76e1317535-760x507.webp
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Bonpote
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
+    added: 2020-11-01
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 194
+- model: api.question
+  pk: 603
+  fields:
+    text: 'Une ''obligation verte'' est un emprunt émis par une entreprise ou une
+      entité publique auprès d’investisseurs pour qu''ils financent sa transition
+      écologique, en particulier ses infrastructures. Elle se distingue par un reporting
+      détaillé sur les investissements qu’elle finance et le caractère vert des projets
+      financés.
+
+      En quelle année fut émise la première obligation verte souveraine de l’État
+      français ?'
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 3
+    answer_option_a: '1999'
+    answer_option_b: '2005'
+    answer_option_c: '2011'
+    answer_option_d: '2017'
+    answer_correct: d
+    has_ordered_answers: false
+    answer_explanation: C'est un marché qui est en plein boom et à suivre particulièrement
+      dans les années qui vont venir. Les investisseurs raffolent de ce genre d'obligations,
+      cela permet aux gestionnaires de portefeuille de labelliser leur investissement
+      et de mettre une étiquette verte à leur portefeuille d'actifs !
+    answer_accessible_url: https://www.ecologie.gouv.fr/es/node/1048
+    answer_scientific_url: ''
+    answer_image_url: https://images.firstpost.com/wp-content/uploads/2019/09/covergreenbonds.jpg
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Bonpote
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
+    added: 2020-11-01
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 1
+    - 194
+- model: api.question
+  pk: 604
+  fields:
+    text: 'Le charbon est à la source de 41% de l''électricité mondiale. Par rapport
+      au pétrole, et par unité d''énergie thermique dégagée, ce combustible émet en
+      ordre de grandeur : '
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 2
+    answer_option_a: La même quantité de Gaz à Effet de Serre (GES)
+    answer_option_b: 50% de GES en plus
+    answer_option_c: 50% de GES en plus
+    answer_option_d: 10 fois plus de GES
+    answer_correct: c
+    has_ordered_answers: false
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Alain Grandjean & Mireille Martini
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    added: 2020-11-01
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 11
+    - 40
+    - 100
+- model: api.question
+  pk: 606
+  fields:
+    text: De quel pourcentage de nos GES la déforestation et le changement d'affectation
+      des sols sont-ils responsables ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: 1%
+    answer_option_b: 11%
+    answer_option_c: 40%
+    answer_option_d: 77%
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Alain Grandjean & Mireille Martini
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    added: 2020-11-01
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 19
+- model: api.question
+  pk: 607
+  fields:
+    text: 'En 2014, la part des émissions mondiales de CO2 couvertes par une tarification
+      du carbone (taxe ou système de quotas) est de :'
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 2
+    answer_option_a: 2%
+    answer_option_b: 12%
+    answer_option_c: 50%
+    answer_option_d: 75%
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Alain Grandjean & Mireille Martini
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    added: 2020-11-01
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 13
+- model: api.question
+  pk: 609
+  fields:
+    text: Quelle est l’énergie la plus utilisée en France ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 1
+    answer_option_a: Le nucléaire
+    answer_option_b: Le pétrole
+    answer_option_c: Les énergies renouvelables
+    answer_option_d: Le charbon
+    answer_correct: b
+    has_ordered_answers: false
+    answer_explanation: On parle souvent de la France comme pays au tout nucléaire.
+      Or, l’électricité ne représente que 25% de l’énergie consommée par l’utilisateur
+      final. Le pétrole est de loin la première énergie consommée, notamment à cause
+      du transport.
+    answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/mix-energetique-de-la-france
+    answer_scientific_url: https://www.connaissancedesenergies.org/sites/default/files/pdf-pt-vue/fiche_pedago_primaire_ou_finale_-_coment_comptabiliser_l_energie_-_mars_2020.pdf
+    answer_image_url: https://negawatt.org/scenario/images/sankeys/Sankey_SnW_2017_v3_2015_simplifie.jpg?8792397
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Kim Nguyen-Huu
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
+    added: 2020-11-11
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 1
+- model: api.question
+  pk: 610
+  fields:
+    text: Quelles activités sont éligibles dans la taxonomie fond vert (ou ESG) ?
+    hint: ''
+    type: QCM-RM
+    category: 8
+    difficulty: 2
+    answer_option_a: ''
+    answer_option_b: ''
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: ''
+    has_ordered_answers: false
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.novethic.fr/finance-durable/publications/etude/les-fonds-verts-europeens-au-defi-de-la-taxonomie-octobre-2020.html
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Kim Nguyen-Huu
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    added: 2020-11-11
+    created: 2020-11-18
+    updated: 2020-11-18
+    tags:
+    - 194
+    - 195
+- model: api.question
+  pk: 612
+  fields:
+    text: En Europe, à quelle hauteur les entreprises soumises aux quotas d’émissions
+      émettent-elles de GES ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 1
+    answer_option_a: 45%
+    answer_option_b: ''
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: ''
+    has_ordered_answers: false
+    answer_explanation: Les emissions des entreprises incluses dans EU ETS represente
+      45% des GES de l'Europe
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Kim Nguyen-Huu
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    added: 2020-11-11
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags:
+    - 13
+    - 47
+- model: api.question
+  pk: 613
+  fields:
+    text: Quels projets sont exclus du fond de transition juste du Green Deal européen
+      ?
+    hint: ''
+    type: QCM-RM
+    category: 8
+    difficulty: 2
+    answer_option_a: ''
+    answer_option_b: ''
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: ''
+    has_ordered_answers: false
+    answer_explanation: Les projets de gaz sont inclus si le pays est fortement dépendant
+      du charbon.
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Kim Nguyen-Huu
+    validator: ''
+    publish: false
+    validation_status: Brouillon
+    added: 2020-11-11
+    created: 2020-11-17
+    updated: 2020-11-17
+    tags: []
