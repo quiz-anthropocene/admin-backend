@@ -16408,8 +16408,8 @@
       dans le lien du Shift Project ci-dessous. Ces émissions sont directement corélées
       à la qualité d'image. N'hésitez pas à l'ajuster. Ou carrément supprimer l'image
       sur youtube (module youtube audio).
-    answer_accessible_url: ''
-    answer_scientific_url: https://theshiftproject.org/wp-content/uploads/2020/06/2020-06_TSP-a-t-il-surestime%C3%A9-lempreinte-carbone-de-la-vid%C3%A9o-en-ligne_FR.pdf
+    answer_accessible_url: https://theshiftproject.org/wp-content/uploads/2020/06/2020-06_TSP-a-t-il-surestime%C3%A9-lempreinte-carbone-de-la-vid%C3%A9o-en-ligne_FR.pdf
+    answer_scientific_url: https://www.carbonbrief.org/factcheck-what-is-the-carbon-footprint-of-streaming-video-on-netflix
     answer_image_url: https://cdn.iopscience.com/images/1748-9326/9/5/054007/Full/erl487799f3_online.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
@@ -18939,7 +18939,7 @@
     answer_option_c: 28%
     answer_option_d: 38%
     answer_correct: c
-    has_ordered_answers: false
+    has_ordered_answers: true
     answer_explanation: ''
     answer_accessible_url: ''
     answer_scientific_url: ''
@@ -19851,8 +19851,8 @@
 - model: api.question
   pk: 595
   fields:
-    text: Des scientifiques ont tenté d'estimer le 'coût ultime de la tonne de carbone',
-      c'est à dire en prenant en compte de son impact sur les générations futures,
+    text: Des scientifiques ont tenté d'estimer le « coût ultime de la tonne de carbone
+      », c'est à dire en prenant en compte de son impact sur les générations futures,
       pour le comparer au prix du marché actuel (100$/tonne). A quelle ordre de grandeur
       sont-ils parvenus ?
     hint: ''
@@ -19892,10 +19892,10 @@
     type: QCM
     category: 6
     difficulty: 3
-    answer_option_a: 124$
-    answer_option_b: 147$
-    answer_option_c: 166$
-    answer_option_d: 204$
+    answer_option_a: $124
+    answer_option_b: $147
+    answer_option_c: $166
+    answer_option_d: $204
     answer_correct: b
     has_ordered_answers: true
     answer_explanation: 'On parle ici du prix du Bent cude Oil. Le prix du pétrole
@@ -19911,7 +19911,7 @@
       fâcheuses, surtout pour les plus démunis.'
     answer_accessible_url: https://bonpote.com/chute-du-petrole-pourquoi-cest-une-mauvaise-nouvelle/
     answer_scientific_url: https://en.wikipedia.org/wiki/World_oil_market_chronology_from_2003#2008:_oil_prices_peak_at_$145.85_then_bottom_at_$32
-    answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Crude_oil_prices_in_dollar_and_euro.png/1280px-Crude_oil_prices_in_dollar_and_euro.png
+    answer_image_url: https://c.files.bbci.co.uk/1517/production/_112899350_optimised-4-brent.oil-nc.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Bonpote
@@ -19926,9 +19926,9 @@
 - model: api.question
   pk: 597
   fields:
-    text: La 'taxonomie européenne' est un outil de classification créé en 2020 qui
-      fournit à tous les acteurs financiers une compréhension commune de ce qui est
-      doit être considéré comme une activité 'verte' (c'est à dire visant à rester
+    text: La « taxonomie européenne » est un outil de classification créé en 2020
+      qui fournit à tous les acteurs financiers une compréhension commune de ce qui
+      doit être considéré comme une activité « verte » (c'est à dire visant à rester
       sous 2° de réchauffement). En 2020, quelle est la part des activités des entreprises
       du CAC40 qui sont alignées avec cette classification ?
     hint: ''
@@ -19985,8 +19985,8 @@
       Compte tenu du risque grandissant, nous devrions entendre de plus en plus parler
       de ce types de produits dans les années à venir (et potentiellement de gros
       risques sur les marchés financiers si les vendeurs de produits n'ont pas anticipé/sous
-      estimé les risques climatiques...
-    answer_accessible_url: https://fr.wikipedia.org/wiki/D%C3%A9riv%C3%A9_climatique#:~:text=de%20neiges%2C%20etc.-,Historique,un%20%C3%A9lectricien%2C%20et%20Consolidated%20Edison.&text=Apr%C3%A8s%20ces%20premi%C3%A8res%20exp%C3%A9rimentations%20les,gr%C3%A9%20%C3%A0%20gr%C3%A9%20en%201997.
+      estimé les risques climatiques...)
+    answer_accessible_url: https://fr.wikipedia.org/wiki/D%C3%A9riv%C3%A9_climatique
     answer_scientific_url: ''
     answer_image_url: https://www.ctvnews.ca/polopoly_fs/1.5122075.1601210290!/httpImage/image.jpg_gen/derivatives/landscape_1020/image.jpg
     answer_image_explanation: ''
@@ -20022,8 +20022,8 @@
       jamais été la même (et l'état du monde dans lequel il est en 2020, de même...)
     answer_accessible_url: ''
     answer_scientific_url: https://www.ran.org/wp-content/uploads/2020/03/Banking_on_Climate_Change__2020_vF.pdf
-    answer_image_url: ''
-    answer_image_explanation: '[https://www.rangerminerals.com/wp-content/uploads/2020/06/jpmorgan-oil-price.png](https://www.rangerminerals.com/wp-content/uploads/2020/06/jpmorgan-oil-price.png)'
+    answer_image_url: https://www.rangerminerals.com/wp-content/uploads/2020/06/jpmorgan-oil-price.png
+    answer_image_explanation: ''
     answer_extra_info: ''
     author: Bonpote
     validator: Matthieu Massart
@@ -20054,9 +20054,9 @@
       tête (de très loin) avec 84 milliards prêtés. La même banque qui n'arrête pas
       de se mettre en avant pour le climat "la banque d'un monde qui change". D'où
       l'importance de choisir où l'on place son épargne.
-    answer_accessible_url: ''
+    answer_accessible_url: https://www.connaissancedesenergies.org/le-point-sur-les-investissements-de-grandes-banques-dans-les-energies-fossiles-200318
     answer_scientific_url: https://www.ran.org/wp-content/uploads/2020/03/Banking_on_Climate_Change__2020_vF.pdf
-    answer_image_url: ''
+    answer_image_url: https://www.connaissancedesenergies.org/sites/default/files/album_images/investissements-banques-energies-fossiles-2016-2019_zoom.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Bonpote
@@ -20073,8 +20073,8 @@
 - model: api.question
   pk: 601
   fields:
-    text: Parmi ces produits, lequel est considéré comme une ‘valeur refuge' sur les
-      marchés financiers ?
+    text: Parmi ces produits, lequel est considéré comme une « valeur refuge » sur
+      les marchés financiers ?
     hint: ''
     type: QCM
     category: 6
@@ -20088,7 +20088,7 @@
     answer_explanation: Les Français détiendraient près de 3 000 tonnes d'or dans
       leurs bas de laine. Considéré comme une valeur refuge, l'or rassure les épargnants
       en période de crise économique ou financière
-    answer_accessible_url: https://www.boursorama.com/patrimoine/fiches-pratiques/investir-dans-une-valeur-refuge-l-or-f85e1579077b1b6f46a7f0d1d62d345c#:~:text=Consid
+    answer_accessible_url: https://www.boursorama.com/patrimoine/fiches-pratiques/investir-dans-une-valeur-refuge-l-or-f85e1579077b1b6f46a7f0d1d62d345c
     answer_scientific_url: ''
     answer_image_url: https://www.lerevenu.com/sites/site/files/field/image/coffre-orshutterstock.jpg
     answer_image_explanation: ''
@@ -20123,9 +20123,9 @@
       à effet de serre). '
     answer_accessible_url: https://fr.tradingeconomics.com/country-list/government-debt-to-gdp
     answer_scientific_url: ''
-    answer_image_url: https://ec.europa.eu/eurostat/statistics-explained/images/a/a8/General_government_debt%2C_2018_and_2019_%28%C2%B9%29_%28General_government_consolidated_gross_debt%2C_%25_of_GDP%29_2020-10-22.png
+    answer_image_url: https://cdn.statcdn.com/Infographic/images/normal/22479.jpeg
     answer_image_explanation: ''
-    answer_extra_info: ''
+    answer_extra_info: 'graph pour l''Europe : https://ec.europa.eu/eurostat/statistics-explained/images/a/a8/General_government_debt%2C_2018_and_2019_(¹)_(General_government_consolidated_gross_debt%2C_%_of_GDP)_2020-10-22.png'
     author: Bonpote
     validator: Matthieu Massart
     publish: true
@@ -20138,7 +20138,7 @@
 - model: api.question
   pk: 603
   fields:
-    text: 'Une ''obligation verte'' est un emprunt émis par une entreprise ou une
+    text: 'Une « obligation verte » est un emprunt émis par une entreprise ou une
       entité publique auprès d’investisseurs pour qu''ils financent sa transition
       écologique, en particulier ses infrastructures. Elle se distingue par un reporting
       détaillé sur les investissements qu’elle finance et le caractère vert des projets
