@@ -30,11 +30,12 @@ class Command(BaseCommand):
         glossary_model_fields = [
             f.name for f in Glossary._meta.get_fields() if f.name not in ["id"]
         ]  # "created", "updated"
-        notion_glossary_table = utilities_notion.get_glossary_table()
+        notion_glossary_list = utilities_notion.get_glossary_rows()
         # print(list(map(lambda x: x['slug'], notion_glossary_table.collection.get_schema_properties()))) # noqa
+
         # --- glossary list
         glossary_list = list()
-        for row in notion_glossary_table.collection.get_rows():
+        for row in notion_glossary_list:
             glossary_item_base = dict()
             glossary_item_base["model"] = "api.glossary"
             glossary_item_base["pk"] = id_counter
@@ -54,12 +55,13 @@ class Command(BaseCommand):
             else:
                 glossary_item_base["fields"] = glossary_item_fields
                 glossary_list.append(glossary_item_base)
+
         # --- write to file
         with open(
             f"data/ressources-glossaire{'_flat' if kwargs.get('flat') else ''}.yaml",
             "w",
         ) as file:
-            print(glossary_list)
+            print(f"Glossary items: {len(glossary_list)}")
             yaml.safe_dump(
                 glossary_list, file, allow_unicode=True, sort_keys=False
             )  # , explicit_start=False, explicit_end=False
