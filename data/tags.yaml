@@ -1002,3 +1002,9 @@
     name: Finance
     description: ''
     created: 2020-11-10
+- model: api.tag
+  pk: 195
+  fields:
+    name: Greenwashing
+    description: ''
+    created: 2020-11-17
