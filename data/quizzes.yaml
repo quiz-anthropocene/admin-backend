@@ -480,8 +480,8 @@
 - model: api.quiz
   pk: 52
   fields:
-    name: NOUVEAU - Le quiz de Bonpote
-    introduction: Je vous présente Thomas, alias Bonpote. Thomas a commencé à bloguer
+    name: NOUVEAU - Le quiz de Bon Pote
+    introduction: Je vous présente Thomas, alias Bon Pote. Thomas a commencé à bloguer
       fin 2018 avec un objectif en tête rendre ses articles utiles. Le lecteur ne
       doit pas perdre son temps et doit soit avoir appris quelque chose, soit avoir
       eu le sourire en lisant. Vous trouverez sur son blog bonpote.com des articles
