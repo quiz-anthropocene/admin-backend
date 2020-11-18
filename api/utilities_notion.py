@@ -103,3 +103,17 @@ def get_glossary_table():
     # page = client.get_block(settings.NOTION_GLOSSARY_PAGE_URL)
     table = notion_client.get_collection_view(settings.NOTION_GLOSSARY_TABLE_URL)
     return table
+
+
+def get_glossary_rows():
+    """
+   Glossary page: get current rows
+    """
+    glossary_table = get_glossary_table()
+    # sort_params = [{
+    #     "property": "name",
+    #     "direction": "descending",
+    # }]
+    # glossary_table_sorted = glossary_table.build_query(sort=sort_params).execute()
+    rows = glossary_table.collection.get_rows()
+    return rows

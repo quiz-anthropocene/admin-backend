@@ -1,6 +1,56 @@
 - model: api.glossary
   pk: 1
   fields:
+    name: ADEME
+    name_alternatives: ''
+    definition_short: Agence de l'Environnement et de la Maîtrise de l'Energie
+    description: ''
+    description_accessible_url: https://fr.wikipedia.org/wiki/Agence_de_l'environnement_et_de_la_ma%C3%AEtrise_de_l'%C3%A9nergie
+    added: 2020-06-17
+    created: 2020-11-18
+    updated: 2020-11-18
+- model: api.glossary
+  pk: 2
+  fields:
+    name: Anthropocène
+    name_alternatives: ''
+    definition_short: Ère géologique actuelle, où les activités humaines ont de fortes
+      répercussions sur les écosystèmes de la planète (biosphère)
+    description: Le terme signifie « l'Ère de l'humain ». On fait coïncider le début
+      de l’Anthropocène avec celui de la révolution industrielle, au XVIIIe siècle,
+      succédant ainsi à l'Holocène.
+    description_accessible_url: https://fr.wikipedia.org/wiki/Anthropoc%C3%A8ne
+    added: 2020-11-18
+    created: 2020-11-18
+    updated: 2020-11-18
+- model: api.glossary
+  pk: 3
+  fields:
+    name: Bioénergies
+    name_alternatives: ''
+    definition_short: Biogaz, biomasse, déchets ménagers
+    description: Le mot désigne les formes d'énergie stockées par la biomasse. Elle
+      peut être utilisée pour produire de la chaleur, du froid, de l’électricité ou
+      des carburants. Tant qu'elle n'est pas surexploitée, elle est considérée comme
+      « renouvelable ».
+    description_accessible_url: https://fr.wikipedia.org/wiki/Bio%C3%A9nergie
+    added: 2020-06-25
+    created: 2020-11-18
+    updated: 2020-11-18
+- model: api.glossary
+  pk: 4
+  fields:
+    name: CGDD
+    name_alternatives: ''
+    definition_short: Commissariat général au développement durable
+    description: ''
+    description_accessible_url: https://fr.wikipedia.org/wiki/Commissariat_g%C3%A9n%C3%A9ral_au_d%C3%A9veloppement_durable
+    added: 2020-06-24
+    created: 2020-11-18
+    updated: 2020-11-18
+- model: api.glossary
+  pk: 5
+  fields:
     name: CO2e
     name_alternatives: eqCO2, éq. CO2, CO2-eq, CO2eq
     definition_short: équivalent CO2
@@ -11,54 +61,8 @@
       les émissions en équivalent CO2 de chacun des gaz.
     description_accessible_url: https://fr.wikipedia.org/wiki/%C3%89quivalent_CO2
     added: 2020-06-17
-    created: 2020-07-30
-    updated: 2020-07-30
-- model: api.glossary
-  pk: 2
-  fields:
-    name: ADEME
-    name_alternatives: ''
-    definition_short: Agence de l'Environnement et de la Maîtrise de l'Energie
-    description: ''
-    description_accessible_url: https://fr.wikipedia.org/wiki/Agence_de_l'environnement_et_de_la_ma%C3%AEtrise_de_l'%C3%A9nergie
-    added: 2020-06-17
-    created: 2020-07-30
-    updated: 2020-07-30
-- model: api.glossary
-  pk: 3
-  fields:
-    name: GIEC
-    name_alternatives: IPCC
-    definition_short: Groupe d'experts intergouvernemental sur l'évolution du climat
-    description: ''
-    description_accessible_url: https://fr.wikipedia.org/wiki/Groupe_d'experts_intergouvernemental_sur_l'%C3%A9volution_du_climat
-    added: 2020-06-17
-    created: 2020-07-30
-    updated: 2020-07-30
-- model: api.glossary
-  pk: 4
-  fields:
-    name: GW
-    name_alternatives: ''
-    definition_short: Gigawatt
-    description: Le gigawatt (GW) est une unité de puissance, correspondant à 1 milliard
-      de watts
-    description_accessible_url: https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_puissance#Gigawatt_(109_watts)
-    added: 2020-06-17
-    created: 2020-07-30
-    updated: 2020-07-30
-- model: api.glossary
-  pk: 5
-  fields:
-    name: GES
-    name_alternatives: ''
-    definition_short: Gaz à Effet de Serre
-    description: GES signifie gaz à effet de serre (vapeur d’eau, CO2, méthane, protoxyde
-      d’azote, CFC, HFC, ...)
-    description_accessible_url: https://fr.wikipedia.org/wiki/Gaz_à_effet_de_serre
-    added: 2020-06-17
-    created: 2020-07-30
-    updated: 2020-07-30
+    created: 2020-11-18
+    updated: 2020-11-18
 - model: api.glossary
   pk: 6
   fields:
@@ -73,54 +77,55 @@
       La COP1 a eu lieu en 2009 à Berlin, la COP21 en 2015 à Paris.
     description_accessible_url: https://fr.wikipedia.org/wiki/Conférence_des_parties
     added: 2020-06-17
-    created: 2020-07-30
-    updated: 2020-07-30
+    created: 2020-11-18
+    updated: 2020-11-18
 - model: api.glossary
   pk: 7
   fields:
-    name: ppm
+    name: Forçage radiatif
     name_alternatives: ''
-    definition_short: partie par million (0,0001%)
-    description: 10,000 ppm = 1%
-    description_accessible_url: https://fr.wikipedia.org/wiki/Partie_par_million
-    added: 2020-06-17
-    created: 2020-07-30
-    updated: 2020-07-30
+    definition_short: ''
+    description: La contribution instantanée au réchauffement d’un GES est fonction
+      de sa concentration dans l’atmosphère (exprimé en W/m2).
+    description_accessible_url: ''
+    added: 2020-06-25
+    created: 2020-11-18
+    updated: 2020-11-18
 - model: api.glossary
   pk: 8
   fields:
-    name: IPBES
+    name: GES
     name_alternatives: ''
-    definition_short: Plateforme intergouvernementale scientifique et politique sur
-      la biodiversité et les services écosystémiques (« GIEC de la biodiversité »)
-    description: ''
-    description_accessible_url: Plateforme intergouvernementale scientifique et politique
-      sur la biodiversité et les services écosystémiques
-    added: 2020-06-24
-    created: 2020-07-30
-    updated: 2020-07-30
+    definition_short: Gaz à Effet de Serre
+    description: GES signifie gaz à effet de serre (vapeur d’eau, CO2, méthane, protoxyde
+      d’azote, CFC, HFC, ...)
+    description_accessible_url: https://fr.wikipedia.org/wiki/Gaz_à_effet_de_serre
+    added: 2020-06-17
+    created: 2020-11-18
+    updated: 2020-11-18
 - model: api.glossary
   pk: 9
   fields:
-    name: MTES
-    name_alternatives: ''
-    definition_short: Ministère de la Transition Ecologique et Solidaire
+    name: GIEC
+    name_alternatives: IPCC
+    definition_short: Groupe d'experts intergouvernemental sur l'évolution du climat
     description: ''
-    description_accessible_url: https://fr.wikipedia.org/wiki/Minist%C3%A8re_de_l%27%C3%89cologie_(France)
-    added: 2020-06-24
-    created: 2020-07-30
-    updated: 2020-07-30
+    description_accessible_url: https://fr.wikipedia.org/wiki/Groupe_d'experts_intergouvernemental_sur_l'%C3%A9volution_du_climat
+    added: 2020-06-17
+    created: 2020-11-18
+    updated: 2020-11-18
 - model: api.glossary
   pk: 10
   fields:
-    name: CGDD
+    name: GW
     name_alternatives: ''
-    definition_short: Commissariat général au développement durable
-    description: ''
-    description_accessible_url: https://fr.wikipedia.org/wiki/Commissariat_g%C3%A9n%C3%A9ral_au_d%C3%A9veloppement_durable
-    added: 2020-06-24
-    created: 2020-07-30
-    updated: 2020-07-30
+    definition_short: Gigawatt
+    description: Le gigawatt (GW) est une unité de puissance, correspondant à 1 milliard
+      de watts
+    description_accessible_url: https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_puissance#Gigawatt_(109_watts)
+    added: 2020-06-17
+    created: 2020-11-18
+    updated: 2020-11-18
 - model: api.glossary
   pk: 11
   fields:
@@ -130,8 +135,8 @@
     description: Agence Internationale de l'Energie
     description_accessible_url: https://fr.wikipedia.org/wiki/Agence_internationale_de_l%27%C3%A9nergie
     added: 2020-06-24
-    created: 2020-07-30
-    updated: 2020-07-30
+    created: 2020-11-18
+    updated: 2020-11-18
 - model: api.glossary
   pk: 12
   fields:
@@ -142,21 +147,45 @@
     description: ''
     description_accessible_url: https://fr.wikipedia.org/wiki/Institut_national_de_recherche_pour_l%27agriculture,_l%27alimentation_et_l%27environnement
     added: 2020-06-24
-    created: 2020-07-30
-    updated: 2020-07-30
+    created: 2020-11-18
+    updated: 2020-11-18
 - model: api.glossary
   pk: 13
   fields:
-    name: Bioénergies
+    name: IPBES
     name_alternatives: ''
-    definition_short: Biogaz, biomasse, déchets ménagers
+    definition_short: Plateforme intergouvernementale scientifique et politique sur
+      la biodiversité et les services écosystémiques (« GIEC de la biodiversité »)
     description: ''
-    description_accessible_url: ''
-    added: 2020-06-25
-    created: 2020-07-30
-    updated: 2020-07-30
+    description_accessible_url: Plateforme intergouvernementale scientifique et politique
+      sur la biodiversité et les services écosystémiques
+    added: 2020-06-24
+    created: 2020-11-18
+    updated: 2020-11-18
 - model: api.glossary
   pk: 14
+  fields:
+    name: MTES
+    name_alternatives: ''
+    definition_short: Ministère de la Transition Ecologique et Solidaire
+    description: ''
+    description_accessible_url: https://fr.wikipedia.org/wiki/Minist%C3%A8re_de_l%27%C3%89cologie_(France)
+    added: 2020-06-24
+    created: 2020-11-18
+    updated: 2020-11-18
+- model: api.glossary
+  pk: 15
+  fields:
+    name: ppm
+    name_alternatives: ''
+    definition_short: partie par million (0,0001%)
+    description: 10,000 ppm = 1%
+    description_accessible_url: https://fr.wikipedia.org/wiki/Partie_par_million
+    added: 2020-06-17
+    created: 2020-11-18
+    updated: 2020-11-18
+- model: api.glossary
+  pk: 16
   fields:
     name: PRG
     name_alternatives: pouvoir de réchauffement global, potentiel de réchauffement
@@ -168,17 +197,5 @@
       à 100 ans, d’une quantité de gaz donnée.
     description_accessible_url: https://fr.wikipedia.org/wiki/Potentiel_de_r%C3%A9chauffement_global
     added: 2020-06-25
-    created: 2020-07-30
-    updated: 2020-07-30
-- model: api.glossary
-  pk: 15
-  fields:
-    name: Forçage radiatif
-    name_alternatives: ''
-    definition_short: ''
-    description: La contribution instantanée au réchauffement d’un GES est fonction
-      de sa concentration dans l’atmosphère (exprimé en W/m2).
-    description_accessible_url: ''
-    added: 2020-06-25
-    created: 2020-07-30
-    updated: 2020-07-30
+    created: 2020-11-18
+    updated: 2020-11-18
