@@ -19911,7 +19911,7 @@
       fâcheuses, surtout pour les plus démunis.'
     answer_accessible_url: https://bonpote.com/chute-du-petrole-pourquoi-cest-une-mauvaise-nouvelle/
     answer_scientific_url: https://en.wikipedia.org/wiki/World_oil_market_chronology_from_2003#2008:_oil_prices_peak_at_$145.85_then_bottom_at_$32
-    answer_image_url: ''
+    answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Crude_oil_prices_in_dollar_and_euro.png/1280px-Crude_oil_prices_in_dollar_and_euro.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Bonpote
@@ -20100,6 +20100,39 @@
     added: 2020-11-01
     created: 2020-11-17
     updated: 2020-11-17
+    tags:
+    - 194
+- model: api.question
+  pk: 602
+  fields:
+    text: En 2019, quel pays avait le plus fort taux d’endettement (ratio entre le
+      montant de sa dette publique et son produit intérieur brut) ?
+    hint: ''
+    type: QCM
+    category: 6
+    difficulty: 2
+    answer_option_a: France
+    answer_option_b: Italie
+    answer_option_c: Japon
+    answer_option_d: Etats-Unis
+    answer_correct: c
+    has_ordered_answers: false
+    answer_explanation: 'On voit ainsi que le taux d''endettement a) ne veut rien
+      dire et b) ne doit surtout pas nous empêcher de financer la ''transition'' écologique.
+      On peut jouer avec une dette monétaire, pas avec une dette physique (de gaz
+      à effet de serre). '
+    answer_accessible_url: https://fr.tradingeconomics.com/country-list/government-debt-to-gdp
+    answer_scientific_url: ''
+    answer_image_url: https://ec.europa.eu/eurostat/statistics-explained/images/a/a8/General_government_debt%2C_2018_and_2019_%28%C2%B9%29_%28General_government_consolidated_gross_debt%2C_%25_of_GDP%29_2020-10-22.png
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Bonpote
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
+    added: 2020-11-01
+    created: 2020-11-18
+    updated: 2020-11-18
     tags:
     - 194
 - model: api.question
