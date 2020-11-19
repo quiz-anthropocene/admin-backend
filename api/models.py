@@ -920,10 +920,10 @@ class Glossary(models.Model):
     )
     updated = models.DateField(auto_now=True)
 
-    class Meta:
-        constraints = [
-            models.UniqueConstraint(fields=["name"], name="unique glossary name")
-        ]
+    # class Meta:
+    #     constraints = [
+    #         models.UniqueConstraint(fields=["name"], name="unique glossary name")
+    #     ]
 
     def __str__(self):
         return f"{self.name}"
