@@ -209,3 +209,17 @@ Réinitialiser les stats d'une question
 ```
 python manage.py reset_question_stats <question_id>
 ```
+
+Lancer le frontend "en mode production"
+```
+cd frontend
+yarn build
+// installer le package 'serve' : npm install -g serve
+serve -s dist
+```
+
+Launch the Vue.js UI
+```
+cd frontend
+vue ui
+```

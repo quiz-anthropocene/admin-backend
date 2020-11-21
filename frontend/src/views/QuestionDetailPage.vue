@@ -1,6 +1,6 @@
 <template>
   <section>
-    <QuestionAnswerCards v-if="question && questionsDisplayedCount" v-bind:question="question" v-bind:context="{ question_number: (questionIndex+1)+' / '+questionsDisplayedCount, source: 'question' }" @answerSubmitted="onAnswerSubmitted" />
+    <QuestionAnswerCards v-if="question && questionsDisplayedCount" v-bind:question="question" v-bind:context="{ question_number: (questionIndex+1)+' / '+questionsDisplayedCount, source: 'question' }" @answer-submitted="onAnswerSubmitted" />
 
     <div v-if="question" class="question-next small" :key="question.id"> <!-- INFO: :key is to force reload, avoid button staying blur -->
       <!-- <br /> -->

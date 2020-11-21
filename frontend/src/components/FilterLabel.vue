@@ -1,5 +1,5 @@
 <template>
-  <span class="label" :class="[filterLabelClass, customClass]" @click="$emit('filterLabelClicked', { key: filterType, value: (filterType === 'difficulty') ? filterObject.value : filterObject.name })">
+  <span class="label" :class="[filterLabelClass, customClass]" @click="$emit('filter-label-clicked', { key: filterType, value: (filterType === 'difficulty') ? filterObject.value : filterObject.name })">
     <!-- name -->
     <span v-if="filterType !== 'difficulty'">{{ filterObject.name }}</span>
     <small v-if="filterType === 'difficulty'"><DifficultyBadge v-bind:difficulty="filterObject.value" /></small>

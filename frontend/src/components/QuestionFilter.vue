@@ -32,7 +32,7 @@
 
       <div v-if="categories">
         <h3>📂&nbsp;Catégories</h3>
-        <FilterLabel v-for="category in categories" :key="category.name" @filterLabelClicked="updateTempQuestionFilter"
+        <FilterLabel v-for="category in categories" :key="category.name" @filter-label-clicked="updateTempQuestionFilter"
           filterType="category" v-bind:filterObject="category" v-bind:customClass="(category.name === tempQuestionFilters['category']) ? 'label-category--active' : ''" />
       </div>
 
@@ -40,7 +40,7 @@
 
       <div v-if="tags">
         <h3>🏷️&nbsp;Tags</h3>
-        <FilterLabel v-for="tag in tags" :key="tag.name" @filterLabelClicked="updateTempQuestionFilter"
+        <FilterLabel v-for="tag in tags" :key="tag.name" @filter-label-clicked="updateTempQuestionFilter"
           filterType="tag" v-bind:filterObject="tag" v-bind:customClass="(tag.name === tempQuestionFilters['tag']) ? 'label-tag--active' : ''" />
       </div>
 
@@ -48,7 +48,7 @@
 
       <div v-if="authors">
         <h3>📝&nbsp;Auteurs</h3>
-        <FilterLabel v-for="author in authors" :key="author.name" @filterLabelClicked="updateTempQuestionFilter"
+        <FilterLabel v-for="author in authors" :key="author.name" @filter-label-clicked="updateTempQuestionFilter"
           filterType="author" v-bind:filterObject="author" v-bind:customClass="(author.name === tempQuestionFilters['author']) ? 'label-author--active' : ''" />
       </div>
 
@@ -56,7 +56,7 @@
 
       <div v-if="difficultyLevels">
         <h3>🏆&nbsp;Difficultés</h3>
-        <FilterLabel v-for="difficulty in difficultyLevels" :key="difficulty.name" @filterLabelClicked="updateTempQuestionFilter"
+        <FilterLabel v-for="difficulty in difficultyLevels" :key="difficulty.name" @filter-label-clicked="updateTempQuestionFilter"
           filterType="difficulty" v-bind:filterObject="difficulty" v-bind:customClass="(difficulty.value === tempQuestionFilters['difficulty']) ? 'label-difficulty--active' : ''" />
       </div>
 

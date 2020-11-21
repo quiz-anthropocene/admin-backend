@@ -10,31 +10,30 @@
     "test:e2e": "vue-cli-service test:e2e --headless --no-sandbox --disable-gpu"
   },
   "dependencies": {
-    "bootstrap": "^4.5.0",
-    "core-js": "^3.6.4",
-    "js-yaml": "^3.14.0",
-    "vue": "^2.6.11",
+    "bootstrap": "^4.5.3",
+    "core-js": "^3.7.0",
+    "vue": "^2.6.12",
     "vue-meta": "^2.4.0",
-    "vue-router": "^3.1.6",
-    "vuex": "^3.1.3"
+    "vue-router": "^3.4.9",
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.1",
     "@vue/cli-plugin-e2e-nightwatch": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
     "@vue/cli-service": "~4.4.1",
-    "@vue/eslint-config-airbnb": "^5.0.2",
+    "@vue/eslint-config-airbnb": "^5.1.0",
     "babel-eslint": "^10.1.0",
-    "chromedriver": "86",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "geckodriver": "^1.20.0",
+    "chromedriver": "87",
+    "eslint": "^7.14.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^7.1.0",
+    "geckodriver": "^1.21.0",
     "prerender-spa-plugin": "^3.4.0",
-    "sass": "^1.26.3",
-    "sass-loader": "^8.0.2",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
     "vue-cli-plugin-yaml": "^1.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.12"
   },
   "browserslist": [
     "> 1%",

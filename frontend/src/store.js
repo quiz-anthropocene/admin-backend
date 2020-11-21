@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
+// webpack + vue-cli-plugin-yaml
 import categoriesYamlData from '../../data/categories.yaml';
 import tagsYamlData from '../../data/tags.yaml';
 import questionsYamlData from '../../data/questions.yaml';
@@ -12,8 +13,6 @@ import ressourcesAutresAppsYamlData from '../../data/ressources-autres-apps.yaml
 
 Vue.use(Vuex);
 
-const jsyaml = require('js-yaml');
-
 /**
  * goal: flatten json list of "django models"
  * input: array of objects, with 'pk' and 'fields' fields
@@ -24,17 +23,6 @@ function processModelList(data) {
     Object.assign(el, { id: el.pk }, el.fields);
     return el;
   });
-}
-
-/**
- * goal: process raw yaml files
- * input: text file (with 'pk' & 'fields' fields)
- * output: json object
- */
-function processYamlFile(dataYaml) {
-  console.log('processYamlFile', dataYaml);
-  const data = jsyaml.load(dataYaml); // safeLoad + try/catch
-  return processModelList(data);
 }
 
 const store = new Vuex.Store({
@@ -241,17 +229,6 @@ const store = new Vuex.Store({
         .then((response) => response.json())
         .then((dataJson) => {
           commit('SET_RESSOURCES_GLOSSAIRE_LIST', { list: dataJson });
-        })
-        .catch((error) => {
-          console.log(error);
-          // this.error = error;
-        });
-    },
-    GET_RESSOURCES_GLOSSAIRE_LIST_FROM_YAML: ({ commit }) => {
-      fetch('https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/ressources-glossaire.yaml')
-        .then((response) => response.text())
-        .then((dataYaml) => {
-          commit('SET_RESSOURCES_GLOSSAIRE_LIST', { list: processYamlFile(dataYaml) });
         })
         .catch((error) => {
           console.log(error);

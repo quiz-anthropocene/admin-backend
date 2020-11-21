@@ -193,14 +193,14 @@ export default {
     },
     submitAnswer() {
       this.questionSubmitted = true;
-      // TODO: validate answer in the backend
+      // validate answer
       this.questionSuccess = (this.answerPicked === this.question.answer_correct) ? this.questionSuccessMessageList[Math.floor(Math.random() * this.questionSuccessMessageList.length)] : null;
-      // TODO: increment question stats in the backend
-      this.question.answer_count_agg += 1;
-      this.question.answer_success_count_agg += (this.questionSuccess ? 1 : 0);
-      this.question.answer_success_rate = ((this.question.answer_success_count_agg / this.question.answer_count_agg) * 100).toFixed(0);
+      // update question stats // watch out for eslint 'vue/no-mutating-props'
+      // this.question.answer_count_agg += 1;
+      // this.question.answer_success_count_agg += (this.questionSuccess ? 1 : 0);
+      // this.question.answer_success_rate = ((this.question.answer_success_count_agg / this.question.answer_count_agg) * 100).toFixed(0);
       // tell parent component
-      this.$emit('answerSubmitted', { question_id: this.question.id, success: this.questionSuccess });
+      this.$emit('answer-submitted', { question_id: this.question.id, success: this.questionSuccess });
       // scroll to answer
       setTimeout(() => {
         // why scroll to this div and not to 'answer' directly ? To have a slight top margin

@@ -132,6 +132,8 @@ export default {
   },
 
   mounted() {
+    this.$store.dispatch('GET_RESSOURCES_SOUTIENS_LIST_FROM_LOCAL_YAML');
+    this.$store.dispatch('GET_RESSOURCES_AUTRES_APPS_LIST_FROM_LOCAL_YAML');
   },
 
   data() {

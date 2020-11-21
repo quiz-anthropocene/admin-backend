@@ -123,9 +123,8 @@ export default {
       this.$store.dispatch('GET_TAG_LIST_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_QUESTION_LIST_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_QUIZ_LIST_FROM_LOCAL_YAML');
+      // needed for both glossary page & abbr filter
       this.$store.dispatch('GET_RESSOURCES_GLOSSAIRE_LIST_FROM_LOCAL_YAML');
-      this.$store.dispatch('GET_RESSOURCES_SOUTIENS_LIST_FROM_LOCAL_YAML');
-      this.$store.dispatch('GET_RESSOURCES_AUTRES_APPS_LIST_FROM_LOCAL_YAML');
       // } else {
       // this.$store.dispatch('GET_QUESTION_LIST');
       // this.$store.dispatch('GET_CATEGORY_LIST');
