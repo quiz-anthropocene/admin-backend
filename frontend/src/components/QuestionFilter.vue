@@ -105,7 +105,8 @@ export default {
     tags() {
       return this.$store.state.tags
         .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
-        .filter((t) => t.question_count);
+        .filter((t) => t.question_count)
+        .sort((a, b) => a.name.localeCompare(b.name));
     },
     authors() {
       return this.$store.state.authors

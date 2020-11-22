@@ -501,6 +501,9 @@ class Quiz(models.Model):
     questions = models.ManyToManyField(
         Question, related_name="quizzes", help_text="Les questions du quiz"
     )
+    difficulty_average = models.FloatField(
+        default=0, help_text="La difficulté moyenne des questions"  # readonly
+    )
     tags = models.ManyToManyField(
         Tag,
         blank=True,
@@ -572,11 +575,6 @@ class Quiz(models.Model):
         return ", ".join(self.tags_list)
 
     @property
-    def difficulty_average(self):
-        difficulty_average = self.questions.aggregate(Avg("difficulty"))
-        return difficulty_average["difficulty__avg"] if difficulty_average else 0
-
-    @property
     def like_count_agg(self):
         return self.feedbacks.liked().count()
 
@@ -592,7 +590,6 @@ class Quiz(models.Model):
     tags_list_string.fget.short_description = "Tag(s)"
     questions_categories_list_string.fget.short_description = "Question catégorie(s)"
     questions_tags_list_string.fget.short_description = "Question tag(s)"
-    difficulty_average.fget.short_description = "Difficulté moyenne"
     answer_count_agg.fget.short_description = "# Rép"
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"
@@ -665,6 +662,18 @@ def quiz_validate_m2m_fields(sender, **kwargs):
                     f"Unpublished questions: {[el for el in kwargs['pk_set'] if el not in list(qlist)]}"  # noqa
                 }
             )
+    # update difficulty_average
+    if kwargs["action"].startswith("post"):
+        difficulty_average_agg = kwargs["instance"].questions.aggregate(
+            Avg("difficulty")
+        )
+        difficulty_average_value = (
+            difficulty_average_agg["difficulty__avg"] if difficulty_average_agg else 0
+        )
+        kwargs["instance"].difficulty_average = difficulty_average_value
+        kwargs["instance"].save(
+            update_fields=["difficulty_average"]
+        )  # will call clean() again...
 
 
 models.signals.pre_save.connect(quiz_validate_fields, sender=Quiz)

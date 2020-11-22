@@ -25,11 +25,14 @@ function processModelList(data) {
   });
 }
 
+/**
+ * Place to store app-wide variables
+ */
 const store = new Vuex.Store({
   state: {
     loading: false,
     error: null,
-    questions: [], // received in random order
+    questions: [],
     questionsDisplayed: [],
     questionsPendingValidation: [],
     questionFilters: {
@@ -61,34 +64,13 @@ const store = new Vuex.Store({
     },
     /**
      * Get questions
+     * Pre-processing ?
+     * - remove unpublished questions
+     * - enrich with categories, tags
      */
-    GET_QUESTION_LIST: ({ commit }) => {
-      commit('UPDATE_LOADING_STATUS', true);
-      commit('UPDATE_ERROR', null);
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/questions?full=true`)
-        .then((response) => {
-          commit('UPDATE_LOADING_STATUS', false);
-          commit('UPDATE_ERROR', null);
-          return response.json();
-        })
-        .then((dataJson) => {
-          commit('SET_QUESTION_PUBLISHED_LIST', { list: dataJson });
-          // commit('UPDATE_QUESTIONS_DISPLAYED')
-          // document.dispatchEvent(new Event('custom-render-trigger'));
-        })
-        .catch((error) => {
-          commit('UPDATE_LOADING_STATUS', false);
-          commit('UPDATE_ERROR', error);
-          console.log(error);
-        });
-    },
     GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
       // questions
-      const questionsPublished = processModelList(questionsYamlData)
-        .filter((el) => el.publish === true)
-        .sort(() => Math.random() - 0.5) // random order
-        .sort((a, b) => a.difficulty - b.difficulty); // order by difficulty (easiest to hardest)
-      const questionsPendingValidation = processModelList(questionsYamlData).filter((el) => el.validation_status === 'A valider');
+      const questionsPublished = processModelList(questionsYamlData).filter((el) => el.publish === true);
       // questions: get category & tags objects
       questionsPublished.map((q) => {
         const questionCategory = getters.getCategoryById(q.category);
@@ -97,7 +79,6 @@ const store = new Vuex.Store({
         return q;
       });
       commit('SET_QUESTION_PUBLISHED_LIST', { list: questionsPublished });
-      commit('SET_QUESTION_PENDING_VALIDATION_LIST', { list: questionsPendingValidation });
 
       // update categories: add question_count
       state.categories.forEach((c) => {
@@ -129,124 +110,59 @@ const store = new Vuex.Store({
       });
       commit('SET_DIFFICULTY_LEVEL_LIST', { list: difficultyLevels });
     },
+    GET_QUESTION_PENDING_VALIDATION_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      const questionsPendingValidation = processModelList(questionsYamlData).filter((el) => el.validation_status === 'A valider');
+      commit('SET_QUESTION_PENDING_VALIDATION_LIST', { list: questionsPendingValidation });
+    },
     /**
      * Get quizzes
+     * Pre-processing ?
+     * - remove unpublished quizs
+     * - enrich with questions, tags
      */
-    GET_QUIZ_LIST: ({ commit }) => {
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/quizzes`)
-        .then((response) => response.json())
-        .then((dataJson) => {
-          commit('SET_QUIZ_LIST', { list: dataJson });
-        })
-        .catch((error) => {
-          console.log(error);
-          // this.error = error;
-        });
-    },
     GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit, getters }) => {
       const quizPublished = processModelList(quizzesYamlData).filter((el) => el.publish === true);
-      // quiz: get question objects, tag objects & difficulty average
+      // quiz: get question and tag objects; compute difficulty average
       quizPublished.map((q) => {
-        const quizQuestions = getters.getQuestionsByIdList(q.questions).sort(() => Math.random() - 0.5); // random order
+        const quizQuestions = getters.getQuestionsByIdList(q.questions);
         const quizTags = getters.getTagsByIdList(q.tags);
-        const quizDifficultyAverage = quizQuestions.map((qq) => qq.difficulty).reduce((prev, curr) => prev + curr, 0) / quizQuestions.length;
-        Object.assign(q, { questions: quizQuestions }, { tags: quizTags }, { difficulty_average: quizDifficultyAverage });
+        Object.assign(q, { questions: quizQuestions }, { tags: quizTags });
         return q;
       });
       commit('SET_QUIZ_LIST', { list: quizPublished });
     },
     /**
      * Get categories
+     * Pre-processing ? None
      */
-    GET_CATEGORY_LIST: ({ commit }) => {
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/categories`)
-        .then((response) => {
-          console.log(response);
-          response.json();
-        })
-        .then((dataJson) => {
-          commit('SET_CATEGORY_LIST', { list: dataJson });
-        })
-        .catch((error) => {
-          console.log(error);
-          // this.error = error;
-        });
-    },
     GET_CATEGORY_LIST_FROM_LOCAL_YAML: ({ commit }) => {
       commit('SET_CATEGORY_LIST', { list: processModelList(categoriesYamlData) });
     },
     /**
      * Get tags
+     * Pre-processing ? None
      */
-    GET_TAG_LIST: ({ commit }) => {
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/tags`)
-        .then((response) => response.json())
-        .then((dataJson) => {
-          commit('SET_TAG_LIST', { list: dataJson });
-        })
-        .catch((error) => {
-          console.log(error);
-          // this.error = error;
-        });
-    },
     GET_TAG_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      const tagsSorted = processModelList(tagsYamlData).sort((a, b) => a.name.localeCompare(b.name));
-      commit('SET_TAG_LIST', { list: tagsSorted });
+      commit('SET_TAG_LIST', { list: processModelList(tagsYamlData) });
     },
     /**
-     * Get authors
+     * Get authors ? Extracted in GET_QUESTION_LIST_FROM_LOCAL_YAML
+     * Get difficulty list ? Extracted in GET_QUESTION_LIST_FROM_LOCAL_YAML
      */
-    GET_AUTHOR_LIST: ({ commit }) => {
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/authors`)
-        .then((response) => response.json())
-        .then((dataJson) => {
-          commit('SET_AUTHOR_LIST', { list: dataJson });
-        })
-        .catch((error) => {
-          console.log(error);
-          // this.error = error;
-        });
-    },
     /**
-     * Get difficulty list
+     * Get ressources: glossaire, soutiens, autres apps
+     * Pre-processing ? for soutiens, append quiz tag or question author
      */
-    GET_DIFFICULTY_LIST: ({ commit }) => {
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/difficulty-levels`)
-        .then((response) => response.json())
-        .then((dataJson) => {
-          commit('SET_DIFFICULTY_LEVEL_LIST', { list: dataJson });
-        })
-        .catch((error) => {
-          console.log(error);
-          // this.error = error;
-        });
-    },
-    /**
-     * Get ressources: glossaire, soutiens, ...
-     */
-    GET_GLOSSARY_LIST: ({ commit }) => {
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/glossary`)
-        .then((response) => response.json())
-        .then((dataJson) => {
-          commit('SET_RESSOURCES_GLOSSAIRE_LIST', { list: dataJson });
-        })
-        .catch((error) => {
-          console.log(error);
-          // this.error = error;
-        });
-    },
     GET_RESSOURCES_GLOSSAIRE_LIST_FROM_LOCAL_YAML: ({ commit }) => {
       commit('SET_RESSOURCES_GLOSSAIRE_LIST', { list: processModelList(ressourcesGlossaireYamlData) });
     },
     GET_RESSOURCES_SOUTIENS_LIST_FROM_LOCAL_YAML: ({ commit, getters }) => {
-      const soutiens = processModelList(ressourcesSoutiensYamlData);
-      // soutiens: get question_author and/or quiz_tag object
-      soutiens.map((s) => {
-        const soutienQuizTag = getters.getTagById(s.quiz_tag);
+      const soutiensEnriched = processModelList(ressourcesSoutiensYamlData).map((s) => {
+        const soutienQuizTag = s.quiz_tag ? getters.getTagById(s.quiz_tag) : undefined;
         Object.assign(s, { question_author: s.question_author, quiz_tag: soutienQuizTag });
         return s;
       });
-      commit('SET_RESSOURCES_SOUTIENS_LIST', { list: soutiens });
+      commit('SET_RESSOURCES_SOUTIENS_LIST', { list: soutiensEnriched });
     },
     GET_RESSOURCES_AUTRES_APPS_LIST_FROM_LOCAL_YAML: ({ commit }) => {
       commit('SET_RESSOURCES_AUTRES_APPS_LIST', { list: processModelList(ressourcesAutresAppsYamlData) });
@@ -277,7 +193,9 @@ const store = new Vuex.Store({
      */
     UPDATE_QUESTION_FILTERS: ({ commit, state, getters }, filterObject) => {
       const currentQuestionFilters = filterObject || state.questionFilters;
-      const questionsDisplayed = getters.getQuestionsByFilter(currentQuestionFilters);
+      const questionsDisplayed = getters.getQuestionsByFilter(currentQuestionFilters)
+        .sort(() => Math.random() - 0.5) // random order
+        .sort((a, b) => a.difficulty - b.difficulty); // order by difficulty (easiest to hardest)
       commit('SET_QUESTION_FILTERS', { object: currentQuestionFilters });
       commit('SET_QUESTIONS_DISPLAYED_LIST', { list: questionsDisplayed });
     },
