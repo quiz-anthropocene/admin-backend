@@ -20,11 +20,22 @@
           </div>
         </div>
         <!-- Question answer choices -->
-        <div class="row justify-content-center">
+        <div v-if="question.type !== 'QCM-RM'" class="row justify-content-center">
           <div class="col-sm-auto text-align-left">
             <div class="form-group" v-for="answer_option_letter in answerChoices" :key="answer_option_letter" :class="{ 'text-primary' : answer_option_letter === answerPicked, 'text-danger': (questionSubmitted && (answer_option_letter !== answerPicked) && (answer_option_letter === question['answer_correct'])) }">
               <template v-if="question['answer_option_' + answer_option_letter]">
                 <input type="radio" v-bind:id="answer_option_letter" v-bind:value="answer_option_letter" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
+                <label v-bind:for="answer_option_letter">&nbsp;{{ question['answer_option_' + answer_option_letter] }}</label>
+              </template>
+            </div>
+          </div>
+        </div>
+        <div v-if="question.type === 'QCM-RM'" class="row justify-content-center">
+          <p><i>⚠️&nbsp;plusieurs réponses possibles</i></p>
+          <div class="col-sm-auto text-align-left">
+            <div class="form-group" v-for="(answer_option_letter, index) in answerChoices" :key="answer_option_letter" :class="{ 'text-primary' : answerPicked.includes(answer_option_letter), 'text-warning': (questionSubmitted && answerPicked.includes(answer_option_letter) && !question['answer_correct'].includes(answer_option_letter)), 'text-danger': (questionSubmitted && !answerPicked.includes(answer_option_letter) && question['answer_correct'].includes(answer_option_letter)) }">
+              <template v-if="question['answer_option_' + answer_option_letter]">
+                <input type="checkbox" v-bind:id="answer_option_letter" v-bind:value="answer_option_letter" v-model="answerPicked[index]" v-bind:true-value="answer_option_letter" :disabled="questionSubmitted">&nbsp;
                 <label v-bind:for="answer_option_letter">&nbsp;{{ question['answer_option_' + answer_option_letter] }}</label>
               </template>
             </div>
@@ -128,7 +139,7 @@ export default {
       // question: null,
       showQuestionHint: false,
       answerChoices: [],
-      answerPicked: '',
+      answerPicked: null,
       questionSubmitted: false,
       questionSuccess: null,
       questionSuccessMessageList: ["C'est exact", 'En effet', 'Bien vu', 'Félicitations', 'Bravo'],
@@ -161,7 +172,7 @@ export default {
     initQuestion() {
       this.showQuestionHint = false;
       this.answerChoices = this.shuffleAnswers(['a', 'b', 'c', 'd'], this.question.has_ordered_answers);
-      this.answerPicked = '';
+      this.answerPicked = (this.question.type === 'QCM-RM') ? new Array(this.question.answer_correct.length).fill('') : '';
       this.questionSubmitted = false;
       this.questionSuccess = null;
       // this.feedbackSubmitted = false;
@@ -192,9 +203,12 @@ export default {
       return answersArray;
     },
     submitAnswer() {
+      // init
       this.questionSubmitted = true;
+      const cleanedAnswerPicked = (this.question.type === 'QCM-RM') ? this.answerPicked.slice(0).sort().join('') : this.answerPicked;
+      const randomSuccessMessage = this.questionSuccessMessageList[Math.floor(Math.random() * this.questionSuccessMessageList.length)];
       // validate answer
-      this.questionSuccess = (this.answerPicked === this.question.answer_correct) ? this.questionSuccessMessageList[Math.floor(Math.random() * this.questionSuccessMessageList.length)] : null;
+      this.questionSuccess = (cleanedAnswerPicked === this.question.answer_correct) ? randomSuccessMessage : null;
       // update question stats // watch out for eslint 'vue/no-mutating-props'
       // this.question.answer_count_agg += 1;
       // this.question.answer_success_count_agg += (this.questionSuccess ? 1 : 0);
@@ -215,7 +229,7 @@ export default {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          choice: this.answerPicked,
+          choice: cleanedAnswerPicked,
           source: this.context.source,
         }),
       })

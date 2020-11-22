@@ -139,7 +139,8 @@ export default {
 
 $theme-colors: ( // shift colors
   "primary": #08519C,
-  "secondary": #F33F3F
+  "secondary": #F33F3F,
+  "warning":#f0ad4e // #ffc107
 );
 $primary-color--active: #7dcaff;
 $category-color: var(--secondary);
