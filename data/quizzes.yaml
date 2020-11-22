@@ -4,7 +4,7 @@
     name: Chiffres clés
     introduction: Quelques chiffres pour se mettre en jambes.
     conclusion: ''
-    difficulty_average: 0.0
+    difficulty_average: 2.0
     author: Raphael Odini
     image_background_url: https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png
     publish: true
@@ -28,6 +28,7 @@
     introduction: Un aperçu rapide de la production et de la consommation d'énergie
       en France.
     conclusion: ''
+    difficulty_average: 2.3
     author: Raphael Odini
     image_background_url: https://i3.wp.com/fee.asso.fr/wp-content/uploads/2015/09/Carte-de-France-eolien-2015.jpg
     publish: true
@@ -58,6 +59,7 @@
       nous a concocté un quiz teinté d'anthropologie qui va nous faire revenir quelques
       millénaires en arrière !"
     conclusion: ''
+    difficulty_average: 2.1666666666666665
     author: Vincent Mignerot
     image_background_url: https://www.slate.fr/sites/default/files/styles/1060x523/public/neandertal_1.jpg
     publish: true
@@ -86,6 +88,7 @@
       qu'explore ce quiz sur les différentes ressources non-renouvelables dont nous
       faisons usage.
     conclusion: ''
+    difficulty_average: 2.6666666666666665
     author: Matthieu Massart
     image_background_url: https://upload.wikimedia.org/wikipedia/commons/f/fe/GlobalPeakOil.png
     publish: true
@@ -106,6 +109,7 @@
       de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent lui
       être imputées. Connaissez-vous votre empreinte ? Voyons voir ça.
     conclusion: ''
+    difficulty_average: 2.0
     author: Matthieu Massart
     image_background_url: https://leshorizons.net/wp-content/uploads/2019/04/d%C3%A9finition-de-lempreinte-carbone-1020x512.jpg
     publish: true
@@ -136,6 +140,7 @@
       y présentent des courbes de type exponentiel. Ce quiz fait un tour d'horizon
       de l'emprise inédite de l'homme sur la planète qu'il occupe.
     conclusion: ''
+    difficulty_average: 2.9
     author: Matthieu Massart
     image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
     publish: true
@@ -159,6 +164,7 @@
     introduction: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
       à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
     conclusion: ''
+    difficulty_average: 2.5
     author: Matthieu Massart
     image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
     publish: true
@@ -185,6 +191,7 @@
       d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le premier
       lot de cartes distribué lors d'un atelier de la Fresque."
     conclusion: ''
+    difficulty_average: 2.15
     author: Matthieu Massart
     image_background_url: http://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
     publish: true
@@ -219,6 +226,7 @@
     introduction: Nos modes de vie génèrent des pollutions diverses. En connaissez-vous
       la variété et l'ampleur ? C'est ce que ce quiz se propose d'explorer.
     conclusion: ''
+    difficulty_average: 3.3
     author: Matthieu Massart
     image_background_url: https://static.latribune.fr/full_width/1201312/plastique-a-jakarta.jpg
     publish: true
@@ -242,6 +250,7 @@
     introduction: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
       à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
     conclusion: ''
+    difficulty_average: 2.25
     author: Matthieu Massart
     image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
     publish: true
@@ -268,6 +277,7 @@
       d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le deuxième
       lot de cartes qui est distribué lors d'un atelier de la Fresque."
     conclusion: ''
+    difficulty_average: 1.8333333333333333
     author: Matthieu Massart
     image_background_url: http://fresqueduclimat.org/wp-content/uploads/2020/01/IMG_9753-215x215.jpg
     publish: true
@@ -311,6 +321,7 @@
       d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur les cartes
       du 3ème lot distribué lors d'une Fresque."
     conclusion: ''
+    difficulty_average: 2.1666666666666665
     author: Matthieu Massart
     image_background_url: http://fresqueduclimat.org/wp-content/uploads/2020/01/J1A3917120919-2-215x215.jpg
     publish: true
@@ -336,6 +347,7 @@
       d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur les cartes
       du 4ème lot distribué lors d'une fresque."
     conclusion: ''
+    difficulty_average: 2.6666666666666665
     author: Matthieu Massart
     image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/07/PartieRestit-scaled.jpg?gid=1
     publish: false
@@ -358,6 +370,7 @@
       d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le cinquième
       et dernier lot de cartes distribué lors d'une Fresque."
     conclusion: ''
+    difficulty_average: 1.6666666666666667
     author: Matthieu Massart
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: false
@@ -381,6 +394,7 @@
       vos connaissances et parfois d'aller plus loin autour du dérèglement du climat
       - questions non liées aux 42 cartes du jeu."
     conclusion: ''
+    difficulty_average: 2.5454545454545454
     author: Matthieu Massart
     image_background_url: https://jive.univ-lille.fr/fileadmin/_processed_/c/d/csm_fresque-climat_ac9a138d0f.jpg
     publish: true
@@ -410,6 +424,7 @@
       y présentent des courbes de type exponentiel. Ce quiz fait un tour d'horizon
       de l'emprise inédite de l'homme sur la planète qu'il occupe.
     conclusion: ''
+    difficulty_average: 2.3
     author: Matthieu Massart
     image_background_url: https://reporterre.net/local/cache-vignettes/L720xH481/arton11947-94df2.jpg?1597417424
     publish: true
@@ -433,6 +448,7 @@
     introduction: Quel est l'impact de l'homme sur les autres espèces ? Un premier
       aperçu via, ces quelques questions.
     conclusion: ''
+    difficulty_average: 2.5
     author: Matthieu Massart
     image_background_url: https://images.sudouest.fr/2019/04/25/5cc1b08b66a4bd2c135ac1f5/widescreen/1000x500/l-extinction-des-dinosaures.jpg?v1
     publish: true
@@ -463,6 +479,7 @@
       - changer ou disparaître ? Le vrai bilan sur notre planète. Voici la sélection
       de questions que Laurent nous a préparée à partir de ses publications.'
     conclusion: ''
+    difficulty_average: 2.5
     author: Laurent Testot
     image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
     publish: true
@@ -481,7 +498,7 @@
 - model: api.quiz
   pk: 52
   fields:
-    name: NOUVEAU - Le quiz de Bon Pote
+    name: NOUVEAU - Le quiz de Bon Pote (Finance)
     introduction: Je vous présente Thomas, alias Bon Pote. Thomas a commencé à bloguer
       fin 2018 avec un objectif en tête rendre ses articles utiles. Le lecteur ne
       doit pas perdre son temps et doit soit avoir appris quelque chose, soit avoir
@@ -494,6 +511,7 @@
       à plonger dans l'enfer des réglementations et du greenwashing financier ? C'est
       parti.
     conclusion: ''
+    difficulty_average: 3.0
     author: Bonpote
     image_background_url: https://patch.com/img/cdn20/users/224111/20190401/020846/styles/raw/public/processed_images/tree_with_money-1554098721-8512.jpg
     publish: true
