@@ -333,7 +333,6 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
     show_answer_image.short_description = (
         "L'image du champ 'Answer image url' (cliquer pour agrandir)"
     )
-    show_answer_image.allow_tags = True
 
     def changelist_view(self, request, extra_context=None):
         """
@@ -416,6 +415,7 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
     readonly_fields = (
         "show_image_background",
         "question_count",
+        "questions_unpublished_string_html",
         "questions_categories_list_string",
         "questions_tags_list_string",
         "difficulty_average",
@@ -443,7 +443,13 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
     show_image_background.short_description = (
         "L'image du champ 'Quiz image background url' (cliquer pour agrandir)"
     )
-    show_image_background.allow_tags = True
+
+    def questions_unpublished_string_html(self, instance):
+        return mark_safe(instance.questions_unpublished_string)
+
+    questions_unpublished_string_html.short_description = (
+        "Questions pas encore validées"
+    )
 
     def changelist_view(self, request, extra_context=None):
         """

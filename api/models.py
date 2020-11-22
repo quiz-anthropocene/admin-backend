@@ -83,7 +83,10 @@ class Tag(models.Model):
 
 class QuestionQuerySet(models.QuerySet):
     def published(self):
-        return self.exclude(publish=False)
+        return self.filter(publish=True)
+
+    def unpublished(self):
+        return self.filter(publish=False)
 
     def for_validation_status(self, validation_status):
         return self.filter(validation_status=validation_status)
@@ -550,19 +553,29 @@ class Quiz(models.Model):
 
     @property
     def questions_categories_list(self):
-        # self.questions.values("category__name").annotate(count=Count('category__name')).order_by("-count")
         return list(
             self.questions.order_by()
             .values_list("category__name", flat=True)
             .distinct()
         )  # .sort()
-        # from collections import Counter
-        # counter = Counter(self.questions.values_list("category__name", flat=True))
-        # return sorted(counter, key=counter.get, reverse=True)
+
+    @property
+    def questions_categories_list_with_count(self):
+        return list(
+            self.questions.values("category__name")
+            .annotate(count=Count("category__name"))
+            .order_by("-count")
+        )
 
     @property
     def questions_categories_list_string(self):
-        return ", ".join(self.categories_list)
+        # return ", ".join(self.questions_categories_list)
+        return ", ".join(
+            [
+                f"{elem['category__name']} ({elem['count']})"
+                for elem in self.questions_categories_list_with_count
+            ]
+        )
 
     @property
     def questions_tags_list(self):
@@ -571,8 +584,30 @@ class Quiz(models.Model):
         )
 
     @property
+    def questions_tags_list_with_count(self):
+        return list(
+            self.questions.values("tags__name")
+            .annotate(count=Count("tags__name"))
+            .order_by("-count")
+        )
+
+    @property
     def questions_tags_list_string(self):
-        return ", ".join(self.tags_list)
+        # return ", ".join(self.questions_tags_list_with_count)
+        return ", ".join(
+            [
+                f"{elem['tags__name']} ({elem['count']})"
+                for elem in self.questions_tags_list_with_count
+            ]
+        )
+
+    @property
+    def questions_unpublished_list(self):
+        return list(self.questions.unpublished())
+
+    @property
+    def questions_unpublished_string(self):
+        return "<br />".join([str(q) for q in self.questions_unpublished_list])
 
     @property
     def like_count_agg(self):
@@ -588,6 +623,9 @@ class Quiz(models.Model):
 
     # Admin
     tags_list_string.fget.short_description = "Tag(s)"
+    questions_unpublished_string.fget.short_description = (
+        "Questions pas encore validées"
+    )
     questions_categories_list_string.fget.short_description = "Question catégorie(s)"
     questions_tags_list_string.fget.short_description = "Question tag(s)"
     answer_count_agg.fget.short_description = "# Rép"
