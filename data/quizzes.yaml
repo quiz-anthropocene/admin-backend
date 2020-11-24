@@ -517,17 +517,17 @@
   pk: 52
   fields:
     name: NOUVEAU - Le quiz de Bon Pote (Finance)
-    introduction: Je vous présente Thomas, alias Bon Pote. Thomas a commencé à bloguer
-      fin 2018 avec un objectif en tête rendre ses articles utiles. Le lecteur ne
+    introduction: 'Je vous présente Thomas, alias Bon Pote. Thomas a commencé à bloguer
+      fin 2018 avec un objectif en tête : rendre ses articles utiles. Le lecteur ne
       doit pas perdre son temps et doit soit avoir appris quelque chose, soit avoir
       eu le sourire en lisant. Vous trouverez sur son blog bonpote.com des articles
       sur la politique, des personnages attachants comme Jean Michel CAC 40, une lettre
-      d'amour à Nabilla...Ses billets sont mordants, très bien documentés, avec la
-      pointe d'humour qui va bien. Au fil de la lecture, on comprend que son travail
-      est en lien avec le monde de la finance. Et comme c'est un sujet qui n'était
+      d''amour à Nabilla...Ses billets sont mordants, très bien documentés, avec la
+      pointe d''humour qui va bien. Au fil de la lecture, on comprend que son travail
+      est en lien avec le monde de la finance. Et comme c''est un sujet qui n''était
       pas encore abordé dans nos questions, il a commencé à combler ce vide. Prêt
-      à plonger dans l'enfer des réglementations et du greenwashing financier ? C'est
-      parti.
+      à plonger dans l''enfer des réglementations et du greenwashing financier ? C''est
+      parti.'
     conclusion: ''
     difficulty_average: 3.0
     author: Bonpote
