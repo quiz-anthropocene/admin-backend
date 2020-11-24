@@ -404,30 +404,78 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
         "difficulty_average",
         "publish",
         "answer_count_agg",
+        "created",
     )
     search_fields = ("name",)
-    list_filter = ("publish",)
+    list_filter = (
+        "publish",
+        "author",
+    )
     ordering = ("name",)
+    # filter_vertical = (
+    #     "questions",
+    # )
     filter_horizontal = (
         "questions",
         "tags",
     )
     readonly_fields = (
-        "show_image_background",
         "question_count",
+        "difficulty_average",
         "questions_unpublished_string_html",
         "questions_categories_list_string",
         "questions_tags_list_string",
-        "difficulty_average",
+        "show_image_background",
         "answer_count_agg",
         "like_count_agg",
         "dislike_count_agg",
+        "created",
+        "updated",
     )
     actions = [
         "export_as_csv",
         "export_as_json",
         "export_as_yaml",
         "export_all_quiz_as_yaml",
+    ]
+    fieldsets = [
+        (
+            "Infos de base",
+            {"fields": ("name", "author", "introduction", "conclusion",)},
+        ),
+        (
+            "Les questions",
+            {
+                "fields": (
+                    "questions",
+                    "question_count",
+                    "difficulty_average",
+                    "questions_unpublished_string_html",
+                    "questions_categories_list_string",
+                    "questions_tags_list_string",
+                )
+            },
+        ),
+        (
+            "Tags & images",
+            {"fields": ("tags", "image_background_url", "show_image_background",)},
+        ),
+        (
+            "Prêt à être publié ? Toutes les questions doivent être au statut 'validé' !",
+            {"fields": ("publish",)},
+        ),
+        (
+            "Stats",
+            {
+                "fields": (
+                    "answer_count_agg",
+                    "like_count_agg",
+                    "dislike_count_agg",
+                    "created",
+                    "updated",
+                )
+            },
+        ),
     ]
 
     def show_image_background(self, instance):

@@ -526,6 +526,7 @@ class Quiz(models.Model):
     created = models.DateField(
         auto_now_add=True, help_text="La date de création du quiz"
     )
+    updated = models.DateField(auto_now=True)
 
     objects = QuizQuerySet.as_manager()
 
@@ -626,8 +627,8 @@ class Quiz(models.Model):
     questions_unpublished_string.fget.short_description = (
         "Questions pas encore validées"
     )
-    questions_categories_list_string.fget.short_description = "Question catégorie(s)"
-    questions_tags_list_string.fget.short_description = "Question tag(s)"
+    questions_categories_list_string.fget.short_description = "Questions catégorie(s)"
+    questions_tags_list_string.fget.short_description = "Questions tag(s)"
     answer_count_agg.fget.short_description = "# Rép"
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"

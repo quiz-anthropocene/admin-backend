@@ -9,6 +9,7 @@
     image_background_url: https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png
     publish: true
     created: 2020-04-17
+    updated: 2020-04-17
     questions:
     - 3
     - 16
@@ -33,6 +34,7 @@
     image_background_url: https://i3.wp.com/fee.asso.fr/wp-content/uploads/2015/09/Carte-de-France-eolien-2015.jpg
     publish: true
     created: 2020-05-25
+    updated: 2020-05-25
     questions:
     - 11
     - 104
@@ -64,6 +66,7 @@
     image_background_url: https://www.slate.fr/sites/default/files/styles/1060x523/public/neandertal_1.jpg
     publish: true
     created: 2020-06-26
+    updated: 2020-06-26
     questions:
     - 545
     - 546
@@ -93,6 +96,7 @@
     image_background_url: https://upload.wikimedia.org/wikipedia/commons/f/fe/GlobalPeakOil.png
     publish: true
     created: 2020-07-08
+    updated: 2020-07-08
     questions:
     - 65
     - 68
@@ -114,6 +118,7 @@
     image_background_url: https://leshorizons.net/wp-content/uploads/2019/04/d%C3%A9finition-de-lempreinte-carbone-1020x512.jpg
     publish: true
     created: 2020-07-08
+    updated: 2020-07-08
     questions:
     - 19
     - 43
@@ -145,6 +150,7 @@
     image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
     publish: true
     created: 2020-07-08
+    updated: 2020-07-08
     questions:
     - 2
     - 4
@@ -169,6 +175,7 @@
     image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
     publish: true
     created: 2020-07-09
+    updated: 2020-07-09
     questions:
     - 13
     - 106
@@ -196,6 +203,7 @@
     image_background_url: http://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
     publish: true
     created: 2020-07-14
+    updated: 2020-07-14
     questions:
     - 6
     - 8
@@ -231,6 +239,7 @@
     image_background_url: https://static.latribune.fr/full_width/1201312/plastique-a-jakarta.jpg
     publish: true
     created: 2020-07-14
+    updated: 2020-07-14
     questions:
     - 24
     - 45
@@ -255,6 +264,7 @@
     image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
     publish: true
     created: 2020-07-29
+    updated: 2020-07-29
     questions:
     - 12
     - 20
@@ -282,6 +292,7 @@
     image_background_url: http://fresqueduclimat.org/wp-content/uploads/2020/01/IMG_9753-215x215.jpg
     publish: true
     created: 2020-07-29
+    updated: 2020-07-29
     questions:
     - 6
     - 8
@@ -326,6 +337,7 @@
     image_background_url: http://fresqueduclimat.org/wp-content/uploads/2020/01/J1A3917120919-2-215x215.jpg
     publish: true
     created: 2020-07-29
+    updated: 2020-07-29
     questions:
     - 29
     - 130
@@ -352,6 +364,7 @@
     image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/07/PartieRestit-scaled.jpg?gid=1
     publish: false
     created: 2020-07-29
+    updated: 2020-07-29
     questions:
     - 52
     - 294
@@ -375,6 +388,7 @@
     image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
     publish: false
     created: 2020-07-29
+    updated: 2020-07-29
     questions:
     - 35
     - 229
@@ -399,6 +413,7 @@
     image_background_url: https://jive.univ-lille.fr/fileadmin/_processed_/c/d/csm_fresque-climat_ac9a138d0f.jpg
     publish: true
     created: 2020-07-29
+    updated: 2020-07-29
     questions:
     - 33
     - 46
@@ -429,6 +444,7 @@
     image_background_url: https://reporterre.net/local/cache-vignettes/L720xH481/arton11947-94df2.jpg?1597417424
     publish: true
     created: 2020-07-29
+    updated: 2020-07-29
     questions:
     - 51
     - 67
@@ -453,6 +469,7 @@
     image_background_url: https://images.sudouest.fr/2019/04/25/5cc1b08b66a4bd2c135ac1f5/widescreen/1000x500/l-extinction-des-dinosaures.jpg?v1
     publish: true
     created: 2020-08-04
+    updated: 2020-08-04
     questions:
     - 4
     - 7
@@ -484,6 +501,7 @@
     image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
     publish: true
     created: 2020-09-23
+    updated: 2020-09-23
     questions:
     - 571
     - 572
@@ -516,6 +534,7 @@
     image_background_url: https://patch.com/img/cdn20/users/224111/20190401/020846/styles/raw/public/processed_images/tree_with_money-1554098721-8512.jpg
     publish: true
     created: 2020-11-16
+    updated: 2020-11-16
     questions:
     - 596
     - 597

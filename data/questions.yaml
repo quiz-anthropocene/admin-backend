@@ -19221,7 +19221,7 @@
   fields:
     text: 'En 1492, Christophe Colomb accoste en Amérique. Ce faisant, il initie un
       processus qu''on a appelé ''échange colombien''. C''est-à-dire : '
-    hint: 'test'
+    hint: ''
     type: QCM-RM
     category: 6
     difficulty: 4
@@ -19242,7 +19242,7 @@
       mobilité des chevaux venus d’Europe. La Comancheria impose sa loi aux Espagnols
       basés au Mexique, jusqu’à sa désintégration face aux États-Unis dans les années
       1850'
-    answer_correct: ab
+    answer_correct: abcd
     has_ordered_answers: false
     answer_explanation: Les quatre sont vraies ! L’échange colombien (aussi appelé
       le grand échange)  constitue l'un des événements les plus importants de l'histoire
