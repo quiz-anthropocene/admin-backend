@@ -1,7 +1,7 @@
 import csv
 import json
 from io import StringIO
-from datetime import datetime
+from datetime import datetime, time
 
 # from io import StringIO
 
@@ -795,15 +795,25 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
         # get answers since today ?
         # no, need to run script to populate the values
         daily_stat_last = DailyStat.objects.last()
-        daily_stat_last_date = (
-            daily_stat_last.date if daily_stat_last else datetime(1970, 1, 1)
-        )
+        daily_stat_last_date_time = datetime(1970, 1, 1)
+        if daily_stat_last:
+            daily_stat_last_hour = next(
+                (
+                    hour
+                    for hour in reversed(list(daily_stat_last.hour_split.keys()))
+                    if daily_stat_last.hour_split[hour]["question_answer_count"] > 0
+                ),
+                0,
+            )
+            daily_stat_last_date_time = datetime.combine(
+                daily_stat_last.date, time(int(daily_stat_last_hour), 0)
+            )
 
         # Serialize and attach the chart data to the template context
         chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
         extra_context = extra_context or {
             "chart_data": chart_data_json,
-            "daily_stat_last_date": daily_stat_last_date,
+            "daily_stat_last_date_time": daily_stat_last_date_time,
             "field_choice_list": constants.AGGREGATION_FIELD_CHOICE_LIST,
             "current_field": current_field,
             "scale_choice_list": constants.AGGREGATION_SCALE_CHOICE_LIST,
