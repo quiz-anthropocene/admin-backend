@@ -543,13 +543,16 @@
     type: QCM
     category: 1
     difficulty: 4
-    answer_option_a: 350 millions de tonnes
-    answer_option_b: 3,5 milliards de tonnes
-    answer_option_c: 35 milliards de tonnes
-    answer_option_d: 350 milliards de tonnes
+    answer_option_a: 350 millions de tonnes, sot 45 kg / habitant en moyenne
+    answer_option_b: 3,5 milliards de tonnes, soit 450 kg/habitant
+    answer_option_c: 35 milliards de tonnes, soit 4,5 tonnes / habitant
+    answer_option_d: 350 milliards de tonnes, soit 45 tonnes / habitant
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: Ce qui fait un peu plus de 4,5 tonnes équivalent CO2 par personne.
+      Il y a de très fortes disparités entre les pays, et à l'intérieur des pays,
+      en lien direct avec les revenus. L'objectif de la COP21 à horizon 2050 est de
+      1,5 tonnes.
     answer_accessible_url: ''
     answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
     answer_image_url: https://img.aws.la-croix.com/2018/12/07/1300988266/Emissions-carbone-monde_1_1399_1250.jpg
@@ -558,7 +561,7 @@
     author: Avenir Climatique
     validator: Raphael Odini
     publish: true
-    validation_status: Validée
+    validation_status: Écartée
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-09-28
@@ -634,8 +637,8 @@
 - model: api.question
   pk: 20
   fields:
-    text: En 2018, quelle est la part de l'électricité par rapport à l'ensemble de
-      la consommation d'énergie dans le monde ?
+    text: En 2018 dans le monde, quelle proportion de l'énergie consommée l'a été
+      sous forme d'électricité ?
     hint: ''
     type: QCM
     category: 2
@@ -709,9 +712,9 @@
     type: QCM
     category: 1
     difficulty: 1
-    answer_option_a: 100 milliards de tonnes
-    answer_option_b: 1 milliard de tonne
-    answer_option_c: 10 milliards de tonnes
+    answer_option_a: 100 millions de tonnes, soit 13 kg/habitant en moyenne
+    answer_option_b: 1 milliard de tonne, soit 130 kg
+    answer_option_c: 10 milliards de tonnes, soit 1,3 tonnes
     answer_option_d: 400 milliards de tonnes
     answer_correct: c
     has_ordered_answers: true
@@ -1420,8 +1423,7 @@
 - model: api.question
   pk: 42
   fields:
-    text: Pendant combien de temps le CO2 émis reste t-il dans l'atmosphère avant
-      qu'il ne commence à être évacué ?
+    text: Pendant d'année faut-il à du CO2 émis pour s'évacuer de l'atmosphère ?
     hint: ''
     type: QCM
     category: 1
@@ -1824,33 +1826,37 @@
 - model: api.question
   pk: 54
   fields:
-    text: Les particules fines en France causent chaque année...
+    text: En quelle année les émissions de CO2 de la Chine ont-elles dépassé celles
+      des États-Unis ?
     hint: ''
     type: QCM
-    category: 3
-    difficulty: 2
-    answer_option_a: des crises d'asthme, mais pas de mortalité avérée
-    answer_option_b: 1000 morts
-    answer_option_c: 5000 morts
-    answer_option_d: 48 000 morts
+    category: 2
+    difficulty: 4
+    answer_option_a: '1976'
+    answer_option_b: '1986'
+    answer_option_c: '1996'
+    answer_option_d: '2006'
     answer_correct: d
     has_ordered_answers: true
-    answer_explanation: La pollution atmosphérique constitue la deuxième cause de
-      mortalité évitable en France, derrière le tabac, mais devant l'alcool.
-    answer_accessible_url: https://www.futura-sciences.com/sante/actualites/vie-pollution-air-fleau-reduit-plus-esperance-vie-monde-63256/
-    answer_scientific_url: ''
-    answer_image_url: https://img.lemde.fr/2019/02/27/0/0/534/790/688/0/60/0/4fc8975_hhpqAspZg2YOSObK32N1qr8C.png
+    answer_explanation: Avant cette date, les Etats-Unis ont été le premier émetteur
+      mondial pendant un siècle.
+    answer_accessible_url: ''
+    answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r146.jpg
     answer_image_explanation: ''
-    answer_extra_info: ''
-    author: Matthieu Massart
-    validator: Raphael Odini
+    answer_extra_info: https://twitter.com/laydgeur/status/1160996567823847425
+    author: laydgeur
+    validator: Matthieu Massart
     publish: true
     validation_status: Validée
-    added: 2020-03-10
+    added: 2019-08-12
     created: 2020-03-10
     updated: 2020-09-28
     tags:
-    - 1
+    - 10
+    - 13
+    - 72
+    - 80
 - model: api.question
   pk: 55
   fields:
@@ -2374,9 +2380,8 @@
 - model: api.question
   pk: 71
   fields:
-    text: L'empreinte carbone de la France correspond aux émissions sur le sol français,
-      celles de ses exportations et de ses importations. A combien s'élève-t-elle
-      en moyenne par habitant en 2018, en équivalent CO2 ?
+    text: A combien s'élève l'empreinte carbone d'un français (2018, en équivalent
+      CO2 ) ?
     hint: ''
     type: QCM
     category: 2
@@ -3505,7 +3510,7 @@
     created: 2019-01-07
     updated: 2020-09-28
     tags:
-    - 2
+    - 61
 - model: api.question
   pk: 104
   fields:
@@ -3527,7 +3532,7 @@
       produite avec des énergies fossiles (centrales à gaz principalement).
     answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/mix-energetique-de-la-france
     answer_scientific_url: https://www.iea.org/data-and-statistics?country=FRANCE&fuel=Energy%20consumption&indicator=Total%20final%20consumption%20(TFC)%20by%20source
-    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r002.jpg
+    answer_image_url: http://stockage.univ-valenciennes.fr/EcoPEM/BoiteB/res/I_a.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
@@ -3588,7 +3593,7 @@
     has_ordered_answers: false
     answer_explanation: On a consommé 4,4 milliards de tonnes en 2016, soit 32% du
       total. Contre 3,7 milliards de tonne équivalent pétrole pour le charbon et 3
-      milliairds pour le gaz. Le nucléaire est loin derrière avec 0,7 milliards.
+      milliards pour le gaz. Le nucléaire est loin derrière avec 0,7 milliards.
     answer_accessible_url: ''
     answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
     answer_image_url: https://ourworldindata.org/grapher/exports/energy-consumption-by-source-and-region.png
@@ -3606,8 +3611,8 @@
 - model: api.question
   pk: 107
   fields:
-    text: L'explosion d'une tonne de TNT, ça libère plus d'énergie que la combustion
-      de 1 tonne de pétrole. Vrai ou faux ?
+    text: Vrai ou faux ? L'explosion d'une tonne de TNT libère plus d'énergie que
+      la combustion d'une tonne de pétrole.
     hint: ''
     type: VF
     category: 5
@@ -3618,14 +3623,13 @@
     answer_option_d: ''
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: "42 Gigajoules à la combustion, contre 4 Gigaloules pour l’explosion
-      d’une tonne de TNT. Cette différence s'explique par deux raisons :\n - la détonation
-      du TNT se fait sans oxygène et n’est pas complète ce qui donne une énergie relativement
-      faible ;\n - l’énergie de combustion du pétrole est calculée sans tenir compte
-      de la masse d’oxygène nécessaire et avec une réaction complète, d’où une énergie
-      élevée\nQuestion piège, car on peut en revanche affirmer que le TNT a un pouvoir
-      explosif bien plus important, car il libère cette énergie très rapidement (d’où
-      le terme d'explosion)."
+    answer_explanation: "42 Gigajoules pour la tonne de pétrole contre 4 Gigajoules
+      pour la tonne de TNT. Cette différence s'explique par deux facteurs :\n - la
+      détonation du TNT se fait sans oxygène et n’est pas complète ;\n - l’énergie
+      de combustion du pétrole est calculée sans tenir compte de la masse d’oxygène
+      nécessaire et avec une réaction complète, d’où une énergie élevée\nOn peut en
+      revanche affirmer que le TNT a un pouvoir explosif bien plus important, car
+      il libère cette énergie très rapidement sous forme de détonation."
     answer_accessible_url: ''
     answer_scientific_url: ''
     answer_image_url: https://cdnfr1.img.sputniknews.com/img/103982/33/1039823388_1:0:4137:2238_1000x541_80_0_0_ca3008d757be511d68a3af98984093c5.jpg
@@ -3775,7 +3779,7 @@
     type: QCM
     category: 5
     difficulty: 2
-    answer_option_a: Chute d’1 tonne de 1500m
+    answer_option_a: La chute d’une masse d'une tonne de 1500m de haut
     answer_option_b: 1 kg de sucre
     answer_option_c: 1 litre d’essence
     answer_option_d: 1 poids lourd de 38 tonnes se déplaçant à 100 km/h
@@ -3820,7 +3824,7 @@
       gallons impériaux
     answer_accessible_url: https://www.iea.org/reports/unit-converter-and-glossary
     answer_scientific_url: ''
-    answer_image_url: ''
+    answer_image_url: https://elsegundo.chevron.com/-/media/elsegundo/our-businesses/images/about-whats-in-a-barrel-of-oil-1160x400.jpg?h=400&w=1160&la=en&hash=C38C2BAB6EE0C76F6B22A777F9B26D30
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
@@ -5185,8 +5189,9 @@
 - model: api.question
   pk: 155
   fields:
-    text: Le détroit d’Ormuz est le plus important passage de tankers au monde. Quelle
-      quantité de pétrole transite chaque jour par ce détroit ?
+    text: Le détroit d’Ormuz, à l'entrée du Golfe Persique, est la voie où transitent
+      le plus de tankers pétroliers au monde. Quelle quantité de pétrole y transite
+      chaque jour ?
     hint: ''
     type: QCM
     category: 5
@@ -5242,7 +5247,7 @@
       puissance de l’ordre de 35 000 chevaux.
     answer_accessible_url: ''
     answer_scientific_url: ''
-    answer_image_url: ''
+    answer_image_url: https://i.pinimg.com/originals/09/7c/6d/097c6d8adb100e04db3615e72ff93dea.jpg
     answer_image_explanation: ''
     answer_extra_info: 'Sources : - http://atheniangroup.com/pdf/Specs.pdf page 2
       - http://imo.org/en/OurWork/Environment/PollutionPrevention/AirPollution/Documents/Third
@@ -13970,13 +13975,16 @@
 - model: api.question
   pk: 415
   fields:
-    text: Est-ce que l’effet de serre est positif, négatif ou sans impact pour la
-      vie sur Terre ?
-    hint: L’effet de serre permet de maintenir sur terre une température permettant
+    text: Historiquement, quel impact l’effet de serre a-t-il eu sur le développement
+      de la vie sur Terre ?
+    hint: 'L’effet de serre permet de maintenir sur terre une température permettant
       d’avoir de l’eau liquide. La température moyenne sur terre est de 15°. Sans
-      effet de serre, elle serait de -18°C. C'est l'effet de serre additionnel créé
-      par l'homme qui est problématique. Dans le jeu La Fresque du Climat, voir la
+      effet de serre, elle serait de -18°C. C''est l''effet de serre additionnel créé
+      par l''homme qui est problématique. Dans le jeu La Fresque du Climat, voir la
       carte n°13.
+
+      La réponse d n''est pas fausse non plus, car il y a eu des épisodes dans l''histoire
+      du climat ou l''effet de serre était tellement fort qu''il a causé des extinctions.'
     type: QCM
     category: 1
     difficulty: 1
@@ -18175,8 +18183,8 @@
 - model: api.question
   pk: 545
   fields:
-    text: Les premiers agriculteurs étaient-ils en meilleure santé que les chasseurs-cueilleurs
-      ?
+    text: Les premiers agriculteurs se sont-ils retrouvés en meilleure santé que les
+      chasseurs-cueilleurs ?
     hint: ''
     type: VF
     category: 8
@@ -18223,8 +18231,8 @@
     answer_explanation: Cette qualité aurait pu aider en permettant la pratique de
       la chasse du gibier jusqu'à l’épuisement.
     answer_accessible_url: https://anthropogoniques.com/accueil/adaptations-a-la-course-dendurance/
-    answer_scientific_url: https://www.nature.com/articles/nature03052
-    answer_image_url: ''
+    answer_scientific_url: https://1000ideespourlacorse.files.wordpress.com/2018/10/human_running_adaptations.png?w=840
+    answer_image_url: https://lasueur.com/wp-content/uploads/2017/05/Persistence-Hunting.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Vincent Mignerot
@@ -18240,7 +18248,8 @@
   pk: 547
   fields:
     text: L’Anthropocène marque le début des impacts humains à l'échelle planétaire.
-      Depuis quand l’humain transforme-t-il son environnement à l'échelle locale ?
+      Mais à l'échelle locale, depuis combien de temps l’humain transforme-t-il son
+      environnement ?
     hint: ''
     type: QCM
     category: 6
@@ -18253,7 +18262,7 @@
     has_ordered_answers: true
     answer_explanation: Le changement de régime alimentaire de nos ancêtres, qui consomment
       de plus en plus de viande, réduit progressivement la diversité animale autour
-      des populations du genre Homo.
+      des peuplements du genre Homo.
     answer_accessible_url: ''
     answer_scientific_url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0057944
     answer_image_url: ''
@@ -18271,7 +18280,8 @@
 - model: api.question
   pk: 548
   fields:
-    text: Depuis quand l’humanité a-t-elle un impact sur toute la planète ?
+    text: Depuis combien d'années l'humanité a-t-elle un impact significatif sur l'utilisation
+      des sols sur quasiment l'ensemble des continents ?
     hint: ''
     type: QCM
     category: 8
@@ -18287,7 +18297,7 @@
       ans avant aujourd'hui.
     answer_accessible_url: ''
     answer_scientific_url: https://science.sciencemag.org/content/365/6456/897
-    answer_image_url: ''
+    answer_image_url: https://science.sciencemag.org/content/sci/365/6456/897/F5.large.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Vincent Mignerot
@@ -18302,8 +18312,8 @@
 - model: api.question
   pk: 549
   fields:
-    text: L'épaule humaine est spéciale dans l'évolution. Quel avantage a-t-elle progressivement
-      procuré ?
+    text: L'épaule humaine est spéciale dans l'évolution. Quel avantage nous a-t-elle
+      progressivement procuré ?
     hint: ''
     type: QCM
     category: 8
@@ -18320,7 +18330,7 @@
       de l'épaule et par un transfert efficace de l'énergie cinétique.
     answer_accessible_url: ''
     answer_scientific_url: https://www.nature.com/articles/nature12267
-    answer_image_url: ''
+    answer_image_url: https://4.bp.blogspot.com/-UelFVcR9bC8/UcxQ9dYteJI/AAAAAAAAwOk/tYCN2i4iBgU/s400/human-evolution-throwing_02.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Vincent Mignerot
@@ -18336,9 +18346,8 @@
 - model: api.question
   pk: 550
   fields:
-    text: Quelle est la principale modification du corps humain consécutive à une
-      alimentation de plus en plus riche en viande chez nos ancêtres chasseurs-cueilleurs
-      ?
+    text: Nos ancêtres chasseurs ont adopté une alimentation de plus en plus riche
+      en viande. Quelle évolution cela a-t-il entraîné dans le corps humain ?
     hint: ''
     type: QCM
     category: 8
@@ -18372,8 +18381,7 @@
 - model: api.question
   pk: 551
   fields:
-    text: 'Vrai ou faux : les échanges longue distance sont-ils une spécificité de
-      la modernité ?'
+    text: Vrai ou faux ? Les échanges longue distance sont une spécificité de la modernité.
     hint: ''
     type: VF
     category: 2
@@ -18408,8 +18416,8 @@
 - model: api.question
   pk: 552
   fields:
-    text: La longévité est-elle plus grande dans les sociétés industrielles que chez
-      les chasseurs-cueilleurs ?
+    text: Notre longévité (âge maximal chez une espèce) s'est-elle rallongée dans
+      sociétés industrielles par rapport aux chasseurs-cueilleurs ?
     hint: ''
     type: QCM
     category: 8
@@ -18427,7 +18435,7 @@
       essentiellement de la plus importante mortalité infantile chez les chasseurs-cueilleurs.'
     answer_accessible_url: ''
     answer_scientific_url: https://advances.sciencemag.org/content/6/26/eaax9070
-    answer_image_url: ''
+    answer_image_url: https://qph.fs.quoracdn.net/main-qimg-55abbec76c7cff5a45712ada8e3ed685
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Vincent Mignerot
@@ -18442,8 +18450,8 @@
 - model: api.question
   pk: 553
   fields:
-    text: 'Vrai ou faux : la maîtrise du feu a-t-elle joué un rôle sur l''augmentation
-      de la taille du cerveau humain ?'
+    text: Vrai ou faux ? La cuisson des aliments a joué un rôle majeur dans l'augmentation
+      de la taille du cerveau humain.
     hint: ''
     type: VF
     category: 5
@@ -18460,7 +18468,7 @@
       la recherche de nourriture que de la masse corporelle.
     answer_accessible_url: ''
     answer_scientific_url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4842772/
-    answer_image_url: ''
+    answer_image_url: http://www.gambassa.com/gambassafiles/images/images/2078/homo_erectus_harnessing_fire_v1.gif
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Vincent Mignerot
@@ -18509,8 +18517,8 @@
 - model: api.question
   pk: 555
   fields:
-    text: A ce jour, quelle est la cause la plus probable de l'extinction des Néandertaliens
-      entre -43,000 et -38,000 ans ?
+    text: On estime que les Néandertaliens se sont éteints entre -43,000 et -38,000
+      ans. A ce jour, quelle est la cause la plus probable de leur extinction ?
     hint: ''
     type: QCM
     category: 8
@@ -19159,7 +19167,8 @@
     difficulty: 3
     answer_option_a: Depuis l'apparition de l'agriculture (-10 000 ans)
     answer_option_b: Depuis que le genre Homo maîtrise le feu (au moins 450 000 ans)
-    answer_option_c: Depuis le Paléolithique supérieur (-45 000 à -12 000 ans)
+    answer_option_c: Depuis au moins le paléolithique supérieur (-45 000 à -12 000
+      ans)
     answer_option_d: Depuis l'invention du moulin pour produire de la farine
     answer_correct: c
     has_ordered_answers: false
@@ -19186,8 +19195,8 @@
 - model: api.question
   pk: 575
   fields:
-    text: 'Vrai ou faux : la taille d''une société est liée aux croyances religieuses
-      ?'
+    text: Vrai ou faux ? La taille d'une société est liée aux croyances religieuses
+      ?
     hint: ''
     type: VF
     category: 6
@@ -19199,7 +19208,7 @@
     answer_correct: a
     has_ordered_answers: true
     answer_explanation: Selon certaines études, la taille d'une société serait liée
-      à la nature de ses divinités. Plus une civilisation serait grande et structurée,
+      à la nature de ses divinités. Plus une civilisation serait nombreuse et structurée,
       plus elle vénèrerait un Dieu puissant, moralisateur et vengeur.
     answer_accessible_url: ''
     answer_scientific_url: https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/cultural-evolution-of-prosocial-religions/01B053B0294890F8CFACFB808FE2A0EF#
@@ -19898,7 +19907,7 @@
     answer_option_d: $204
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: 'On parle ici du prix du Bent cude Oil. Le prix du pétrole
+    answer_explanation: 'On parle ici du prix du Brent crude Oil. Le prix du pétrole
       a besoin d’un certain niveau pour atteindre un point d’équilibre. Il y en a
       en fait 2 : géologique - prix à partir duquel l’industriel va dégager un bénéfice
       - et économique - prix sur lequel se basent les Etats pour équilibrer leurs
@@ -19969,8 +19978,8 @@
     text: "Un dérivé climatique est un instrument financier qui peut être utilisé
       pour se prémunir contre des risques liés au climat. L'actif sous-jacent peut
       ainsi être la température, la quantité de neige tombée ou les précipitations.
-      \nEn quelle année le premier produit dérivé a été traité sur le Chicago Mercantile
-      Exchange ?"
+      \nEn quelle année le premier produit dérivé climatique a-t-il été traité sur
+      le Chicago Mercantile Exchange ?"
     hint: ''
     type: QCM
     category: 1
@@ -20430,3 +20439,345 @@
     created: 2020-11-17
     updated: 2020-11-17
     tags: []
+- model: api.question
+  pk: 614
+  fields:
+    text: Brûler 50kg de déchets verts, cela équivaut en termes d'émissions de particules
+      fines à parcourir avec un véhicule diesel récent...
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 2
+    answer_option_a: 130 km
+    answer_option_b: 1,300 km
+    answer_option_c: 13,000  km
+    answer_option_d: 130,000 km
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: On constate sur la métropole de Clermont que 7 tonnes de particules
+      fines sont émises chaque année de ce fait, ce qui représente un peu plus de
+      1% des émissions totales du territoire. Alors que c'est une ressource de valeur
+      pour un potager.
+    answer_accessible_url: https://france3-regions.francetvinfo.fr/auvergne-rhone-alpes/jardinage-pourquoi-il-ne-faut-absolument-pas-bruler-ses-dechets-verts-1894606.html
+    answer_scientific_url: ''
+    answer_image_url: https://cdn-s-www.leprogres.fr/images/1CBF5BB7-B190-4840-9E8C-0C9EA5F9A05B/NW_raw/dans-le-departement-cette-methode-de-debroussaillage-et-de-valorisation-par-le-feu-de-vegetaux-sur-pied-est-interdite-sur-toute-l-annee-par-l-arrete-prefectoral-du-17-decembre-2002-photo-d-illustration-le-progres-1490470336.jpg
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Matthieu Massart
+    validator: Raphael Odini
+    publish: true
+    validation_status: Validée
+    added: 2020-11-22
+    created: 2020-11-25
+    updated: 2020-11-25
+    tags:
+    - 114
+- model: api.question
+  pk: 615
+  fields:
+    text: Dans le monde, combien y a-t-il d'installations de capture et de stockage
+      de CO2 à large échelle ?
+    hint: La capture et le stockage géologique de CO2 se font déjà, mais sont peu
+      répandus
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: Aucune
+    answer_option_b: '2'
+    answer_option_c: '20'
+    answer_option_d: '200'
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: 'Dans le monde, il y a 51 installations de capture et stockage
+      de CO2 à large échelle (plusieurs centaines de millions de tonnes de CO2 capturées
+      chaque année), dont 19 en opération.
+
+      Sur ces 19 installations, 17 concernent des sites industriels, et 2 des centrales
+      électriques.'
+    answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/capture-et-stockage-du-co2-csc
+    answer_scientific_url: https://co2re.co/FacilityData
+    answer_image_url: https://www.globalccsinstitute.com/wp-content/uploads/2019/12/infographics-03.jpg
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: laydgeur
+    validator: Matthieu Massart
+    publish: false
+    validation_status: A valider
+    added: 2020-11-24
+    created: 2020-11-25
+    updated: 2020-11-25
+    tags:
+    - 13
+- model: api.question
+  pk: 616
+  fields:
+    text: Quelle est la part des émissions anthropiques de CO2 qui est actuellement
+      stockée dans des sites géologiques ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: Zéro
+    answer_option_b: 0.1 %
+    answer_option_c: 1 %
+    answer_option_d: 10 %
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: 'Les émissions de CO2 dues aux activités humaines sont de
+      36 milliards de tonnes par an (sans compter les émissions dues à la déforestation).
+
+      La quantité de CO2 capturée et stockée est de 40 millions de tonnes par an,
+      soit environ mille fois moins.'
+    answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/capture-et-stockage-du-co2-csc
+    answer_scientific_url: https://www.globalccsinstitute.com/resources/global-status-report/
+    answer_image_url: https://www.math-dictionary.com/images/one-thousandth.png
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-24
+    created: 2020-11-25
+    updated: 2020-11-25
+    tags:
+    - 13
+- model: api.question
+  pk: 617
+  fields:
+    text: Aujourd’hui, combien d'énergie consomme un dispositif de capture du CO2
+      installé sur une centrale à charbon ?
+    hint: Ça consomme... et pas qu'un peu
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: Quasiment rien
+    answer_option_b: 1 % de l'énergie de la centrale
+    answer_option_c: 25 % de l'énergie de la centrale
+    answer_option_d: ''
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: 'L’étape de capture du CO2 est coûteuse en énergie. On parle
+      de pénalité énergétique.
+
+      Pour une centrale électrique, cette pénalité énergétique peut représenter plus
+      de 25% de l’énergie produite.'
+    answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/capture-et-stockage-du-co2-csc
+    answer_scientific_url: ''
+    answer_image_url: https://4.bp.blogspot.com/-bE8gqXA0YR4/UVyaCguEt9I/AAAAAAAAAdw/uiIYaIULD9A/s1600/Energie+et+d%C3%A9veloppement+-+Les+trois+m%C3%A9thodes+de+capture+du+carbone+pr%C3%A9combustion,+oxyr%C3%A9duction+et+postcombustion.PNG
+    answer_image_explanation: 'Les trois méthodes de captage du carbone : postcombustion,
+      oxyréduction et précombustion (Source de l''image [http://energie-developpement.blogspot.com](http://energie-developpement.blogspot.com/))'
+    answer_extra_info: ''
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-24
+    created: 2020-11-25
+    updated: 2020-11-25
+    tags:
+    - 13
+- model: api.question
+  pk: 618
+  fields:
+    text: Aujourd’hui, quelle est l’augmentation du coût de l'électricité produite
+      par une centrale au charbon équipée d'un dispositif de capture du CO2 ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 3
+    answer_option_a: Quasiment aucune augmentation
+    answer_option_b: +10 %
+    answer_option_c: +50 %
+    answer_option_d: +100 % (=doublement du cout)
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: L'ajout d'une installation de capture du CO2 à une centrale
+      à charbon augmente le cout de cette dernière entre +45%-70%.
+    answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/capture-et-stockage-du-co2-csc
+    answer_scientific_url: https://www.globalccsinstitute.com/archive/hub/publications/201688/global-ccs-cost-updatev4.pdf
+    answer_image_url: https://www.carbonbrief.org/wp-content/uploads/2014/10/PetraNova.png
+    answer_image_explanation: Installation de capture et stockage du CO2 sur la centrale
+      au charbon de Petra Nova au Texas. On y voit les différents composants pour
+      capturer le CO2.
+    answer_extra_info: Page 4 du document
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-24
+    created: 2020-11-25
+    updated: 2020-11-25
+    tags:
+    - 13
+    - 28
+    - 39
+    - 40
+- model: api.question
+  pk: 619
+  fields:
+    text: Aujourd’hui, pour quels usages envisage t-on de faire de la capture de CO2
+      ?
+    hint: ''
+    type: QCM-RM
+    category: 1
+    difficulty: 2
+    answer_option_a: Transports (capture en sortie d'échappement des véhicules)
+    answer_option_b: Résidentiel (capture en sortie de chaudière des bâtiments)
+    answer_option_c: Centrales électriques (capture en sortie de combustion)
+    answer_option_d: Installations industrielles type cimenteries (capture en sortie
+      du procédé industriel)
+    answer_correct: cd
+    has_ordered_answers: false
+    answer_explanation: A l'heure actuelle, la capture de CO2 est envisagée uniquement
+      pour les grosses installations fixes, types centrales électriques et installations
+      industrielles (raffineries, cimenterie, ...), ce qui exclut les transports et
+      les chaudières de bâtiments.
+    answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/capture-et-stockage-du-co2-csc
+    answer_scientific_url: ''
+    answer_image_url: https://www.carbonbrief.org/wp-content/uploads/2014/10/emiratessteel.jpg
+    answer_image_explanation: Projet de capture et de stockage de CO2 aux Émirats
+      Arabes Unis sur un haut fourneau (production d'acier)
+    answer_extra_info: ''
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-24
+    created: 2020-11-25
+    updated: 2020-11-25
+    tags:
+    - 13
+- model: api.question
+  pk: 620
+  fields:
+    text: Une cimenterie qui fonctionne avec une énergie zéro carbone émet-elle encore
+      du CO2 ?
+    hint: ''
+    type: VF
+    category: 1
+    difficulty: 2
+    answer_option_a: Vrai
+    answer_option_b: Faux
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: 'Même si la cimenterie fonctionne complètement avec une énergie
+      zéro carbone, la seule réaction chimique permettant de fabriquer le ciment est
+      émettrice de CO2.
+
+      L''équation chimique est la suivante : CaCO3 = CaO + CO2'
+    answer_accessible_url: https://fr.wikipedia.org/wiki/Ciment#Fabrication
+    answer_scientific_url: http://acces.ens-lyon.fr/acces/thematiques/eedd/climat/pedagogie/hors_classe/ciment.pdf
+    answer_image_url: https://slideplayer.fr/slide/3302277/11/images/9/Le+ciment+%3A+fabrication.jpg
+    answer_image_explanation: Fabrication du ciment
+    answer_extra_info: ''
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-24
+    created: 2020-11-25
+    updated: 2020-11-25
+    tags:
+    - 13
+    - 57
+- model: api.question
+  pk: 621
+  fields:
+    text: D’ici 2050, par combien faudrait-il multiplier la capacité actuelle de capture
+      et stockage de CO2 pour être dans le scénario développement durable de l’Agence
+      Internationale de l’Energie ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 4
+    answer_option_a: Par 15
+    answer_option_b: Par 150
+    answer_option_c: Par 1500
+    answer_option_d: ''
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: 'En 2050, dans le scénario développement durable de l’Agence
+      Internationale de l’Énergie, les capacités de capture et stockage de CO2 sont
+      d''environ 5.6 milliards de tonnes par an.
+
+      Actuellement, nous en sommes à 40 millions de tonnes par an, soit 140 fois moins.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.iea.org/reports/ccus-in-clean-energy-transitions/ccus-in-the-transition-to-net-zero-emissions#abstract
+    answer_image_url: https://bioenergyinternational.com/app/uploads/sites/3/2019/11/IEA_WEO2019_SDS_CO2_reductions.jpg
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-24
+    created: 2020-11-25
+    updated: 2020-11-25
+    tags:
+    - 13
+- model: api.question
+  pk: 622
+  fields:
+    text: Quelle durée est nécessaire pour que le stockage de CO2 soit considéré comme
+      une séquestration définitive ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: 100 ans
+    answer_option_b: 1 000 ans
+    answer_option_c: 10 000 ans
+    answer_option_d: 1 million d'années
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: Le stockage géologique de CO2 est modélisé sur des périodes
+      de temps de 10 000 ans, qui sont du même ordre de grandeur que le temps nécessaire
+      pour épurer l'atmosphère de la majorité du CO2 émis.
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.nature.com/articles/s41467-018-04423-1
+    answer_image_url: https://www.encyclopedie-energie.org/wp-content/uploads/2016/01/Sch%C3%A9maPuitsDeCarboneArntzenFr.jpg
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-24
+    created: 2020-11-25
+    updated: 2020-11-25
+    tags:
+    - 13
+- model: api.question
+  pk: 623
+  fields:
+    text: En général, quelle part d’émissions est capturée par une installation de
+      capture du CO2 ?
+    hint: 'Plus de 90% du CO2 émis par des centrales électriques et autres installations
+      industrielles peut être capturé avec des équipements standards. '
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: 30 %
+    answer_option_b: 50 %
+    answer_option_c: 70 %
+    answer_option_d: 90 %
+    answer_correct: d
+    has_ordered_answers: true
+    answer_explanation: ''
+    answer_accessible_url: https://www.encyclopedie-energie.org/captage-et-stockage-du-carbone/
+    answer_scientific_url: ''
+    answer_image_url: https://www.connaissancedesenergies.org/sites/default/files/album_images/postcombustion.graphique1_zoom.png
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-24
+    created: 2020-11-25
+    updated: 2020-11-25
+    tags:
+    - 13
