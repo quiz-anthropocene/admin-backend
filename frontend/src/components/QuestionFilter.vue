@@ -19,9 +19,9 @@
         </div>
         <div class="col-4 text-align-right">
           <span v-on:click.stop>
-            <router-link class="no-decoration" :to="{ name: 'question-list' }">
+            <!-- <router-link class="no-decoration" :to="{ name: 'question-list' }"> -->
               <span class="label label-hidden"><strong>{{ questionsDisplayedCount }}</strong> Questions</span>
-            </router-link>
+            <!-- </router-link> -->
           </span>
         </div>
       </div>

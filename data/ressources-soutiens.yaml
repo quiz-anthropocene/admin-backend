@@ -3,14 +3,14 @@
   description_url: http://fresqueduclimat.org/
   description_details: Le point de départ du projet. Permettre aux gens de prendre conscience de l’ampleur du problème, sans avoir à assister à un atelier en présentiel (ou alors après un atelier pour approfondir).
   image_url: http://fresqueduclimat.org/wp-content/uploads/2020/06/cropped-logo-FR-couleur-complet-500-300.png
-  quiz_tag: 142
+  quiz_tag: Fresque du Climat
   added: 2020-06-01
 - name: Adrastia
   description: 'Adrastia vient du grec ancien Adrasteia : « auquel on ne peut échapper ».. Adrastia a pour objectif d’anticiper et préparer le déclin de la civilisation thermo-industrielle de façon honnête, responsable et digne.'
   description_url: http://adrastia.org/
   description_details: Pour toucher les questions de société, d’anthropocène et d’effondrements actuels et futurs.
   image_url: http://adrastia.org/wp-content/uploads/2017/07/Site.4.png
-  quiz_tag: 185
+  quiz_tag: Adrastia
   added: 2020-06-01
 - name: '@laydgeur'
   description: 'Un twittos connu sur les sujets climats grâce entre autre à ses quizs quotidiens #QuizzEnergieClimat.'
@@ -19,6 +19,13 @@
   image_url: https://pbs.twimg.com/profile_images/613449259766149120/ayYusf5b_400x400.jpg
   question_author: laydgeur
   added: 2020-06-01
+- name: Bon Pote
+  description: Bonpote.com est un blog que nous vous recommandons. Vous y trouverez pèle-mèle des articles sur la politique, des personnages attachants comme Jean Michel CAC 40, une lettre d'amour à Nabilla. Et surtout d'environnement. Un spécialiste en debunking de greenwashing ce Bonpote ! Il nous a d'ailleurs créé un quiz thématique sur la finance.
+  description_url: https://bonpote.com/
+  description_details: ''
+  image_url: https://pbs.twimg.com/profile_images/1324093807844012032/huQIaGTy.jpg
+  quiz_author: Bonpote
+  added: 2020-11-25
 - name: Avenir Climatique
   description: ''
   description_url: https://avenirclimatique.org/
@@ -28,6 +35,6 @@
 - name: Citoyens pour le Climat
   description: ''
   description_url: https://citoyenspourleclimat.org/
-  description_details: Contenu réalisé en partenariat avec l’association.
+  description_details: Contenu réalisé avec l'aide de l’association.
   image_url: https://citoyenspourleclimat.org/wp-content/uploads/2019/01/cropped-CPLC_Logo_National_QUADRI-1-2.png
   added: 2020-06-01

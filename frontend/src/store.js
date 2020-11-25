@@ -45,6 +45,7 @@ const store = new Vuex.Store({
     quizzesDisplayed: [],
     quizFilters: {
       tag: null,
+      author: null,
     },
     categories: [],
     tags: [],
@@ -156,13 +157,8 @@ const store = new Vuex.Store({
     GET_RESSOURCES_GLOSSAIRE_LIST_FROM_LOCAL_YAML: ({ commit }) => {
       commit('SET_RESSOURCES_GLOSSAIRE_LIST', { list: processModelList(ressourcesGlossaireYamlData) });
     },
-    GET_RESSOURCES_SOUTIENS_LIST_FROM_LOCAL_YAML: ({ commit, getters }) => {
-      const soutiensEnriched = processModelList(ressourcesSoutiensYamlData).map((s) => {
-        const soutienQuizTag = s.quiz_tag ? getters.getTagById(s.quiz_tag) : undefined;
-        Object.assign(s, { question_author: s.question_author, quiz_tag: soutienQuizTag });
-        return s;
-      });
-      commit('SET_RESSOURCES_SOUTIENS_LIST', { list: soutiensEnriched });
+    GET_RESSOURCES_SOUTIENS_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_RESSOURCES_SOUTIENS_LIST', { list: processModelList(ressourcesSoutiensYamlData) });
     },
     GET_RESSOURCES_AUTRES_APPS_LIST_FROM_LOCAL_YAML: ({ commit }) => {
       commit('SET_RESSOURCES_AUTRES_APPS_LIST', { list: processModelList(ressourcesAutresAppsYamlData) });
@@ -279,7 +275,8 @@ const store = new Vuex.Store({
       return state.questionsDisplayed[currentQuestionIndex + 1] ? state.questionsDisplayed[currentQuestionIndex + 1] : state.questionsDisplayed[0];
     },
     getQuizById: (state) => (quizId) => state.quizzes.find((q) => (q.id === quizId)),
-    getQuizzesByFilter: (state) => (filter) => state.quizzes.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true)),
+    getQuizzesByFilter: (state) => (filter) => state.quizzes.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
+      .filter((q) => (filter.author ? (q.author === filter.author) : true)),
   },
 });
 

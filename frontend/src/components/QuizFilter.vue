@@ -13,11 +13,11 @@
           </span>
         </div>
         <div class="col-6 text-align-right">
-          <button v-if="quizFilters.tag" class="btn btn-sm btn-outline-secondary margin-5" @click="clearQuizFilters()">Réinitialiser</button>
+          <button v-if="quizFilters.tag || quizFilters.author" class="btn btn-sm btn-outline-secondary margin-5" @click="clearQuizFilters()">Réinitialiser</button>
           <span v-on:click.stop>
-            <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
+            <!-- <router-link class="no-decoration" :to="{ name: 'quiz-list' }"> -->
               <span class="label label-hidden"><strong>{{ quizzesDisplayedCount }}</strong> Quiz</span>
-            </router-link>
+            <!-- </router-link> -->
           </span>
         </div>
       </div>
@@ -38,6 +38,7 @@ export default {
     return {
       tempQuizFilters: {
         tag: null,
+        author: null,
       },
       showFilterBox: false,
     };
@@ -67,6 +68,7 @@ export default {
     clearQuizFilters() {
       this.tempQuizFilters = {
         tag: null,
+        author: null,
       };
       this.updateQuizFilters();
     },
