@@ -67,6 +67,10 @@ export default {
 footer {
   margin-top: 40px;
   background-color: #e9ecef;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .row > .col-sm {

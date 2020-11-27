@@ -1,7 +1,7 @@
 <template>
   <section>
     <!-- Header -->
-    <QuizFilter />
+    <QuestionFilter objectType="quiz" :counter="quizzesDisplayed.length" />
 
     <div v-if="quizzesDisplayed && quizzesDisplayed.length === 0">
       Pas de quiz :(
@@ -45,7 +45,7 @@
 
 <script>
 import { metaTagsGenerator } from '../utils';
-import QuizFilter from '../components/QuizFilter.vue';
+import QuestionFilter from '../components/QuestionFilter.vue';
 
 export default {
   name: 'QuizListPage',
@@ -56,7 +56,7 @@ export default {
     };
   },
   components: {
-    QuizFilter,
+    QuestionFilter,
   },
 
   data() {
@@ -66,9 +66,6 @@ export default {
   },
 
   computed: {
-    quizzes() {
-      return this.$store.state.quizzes;
-    },
     quizzesDisplayed() {
       return this.$store.state.quizzesDisplayed
         .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
@@ -78,15 +75,9 @@ export default {
 
   watch: {
     // eslint-disable-next-line
-    quizzes (newQuizzes, oldQuizzes) {
-      this.$store.dispatch('UPDATE_QUIZ_FILTERS');
-    },
   },
 
   mounted() {
-    if (this.quizzes) {
-      this.$store.dispatch('UPDATE_QUIZ_FILTERS');
-    }
   },
 
   methods: {

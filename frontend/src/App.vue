@@ -197,6 +197,10 @@ form .form-group {
   margin-bottom: 10px; // changing label to inline removes it's margin-bottom of 8px...
 }
 
+#app {
+  margin-bottom: 150px;
+}
+
 .card-img-top {
   height: 10vw;
   object-fit: cover;
