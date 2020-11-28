@@ -5,7 +5,7 @@
       <div class="card-body">
         <h2 class="card-title">{{ quiz.name }}</h2>
         <p class="card-subtitle"><strong>{{ quiz.questions.length }}</strong> question<span v-if="quiz.questions.length > 1">s</span></p>
-        <button class="btn btn-outline-primary btn-lg btn-block">Découvrir le quizz</button>
+        <button class="btn btn-outline-primary btn-lg btn-block">Découvrir le quiz</button>
         <section class="d-none d-md-block">
           <hr class="margin-top-bottom-10" />
           <div class="small">
@@ -60,5 +60,8 @@ export default {
 .card:hover {
   box-shadow: 0px 0px 5px 5px #dfdfdf;
   transition: 0.2s;
+}
+.card-body button {
+  margin-top: 16px;
 }
 </style>
