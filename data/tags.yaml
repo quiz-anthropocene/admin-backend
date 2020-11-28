@@ -117,7 +117,7 @@
 - model: api.tag
   pk: 20
   fields:
-    name: Fôrets
+    name: Forêts
     description: ''
     created: 2020-04-17
 - model: api.tag
