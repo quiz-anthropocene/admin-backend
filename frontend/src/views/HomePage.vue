@@ -154,7 +154,7 @@ export default {
     quizzes() {
       return this.$store.state.quizzes
         .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
-        .sort((a, b) => a.name.localeCompare(b.name))
+        .sort((a, b) => b.id - a.id)
         .slice(0, 3);
     },
   },
