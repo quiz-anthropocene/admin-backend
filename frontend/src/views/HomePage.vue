@@ -1,17 +1,15 @@
 <template>
   <section>
 
-    <div class="row">
-      <div v-if="quizzes && quizzes.length > 0" id="quiz-list" class="row">
-        <div class="col-sm-4" v-for="quiz in quizzes" :key="quiz.id">
-          <QuizCard :quiz="quiz"/>
-        </div>
-          <!-- <div class="col-sm">
-            <router-link class="no-decoration" :to="{ name: 'quiz-detail', params: { quizId: quiz.id, skipIntro: true } }">
-              <button class="btn btn-outline-primary">⏩&nbsp;Commencer le quiz !</button>
-            </router-link>
-          </div> -->
+    <div v-if="quizzes && quizzes.length > 0" id="quiz-list"  class="row">
+      <div class="col-sm-4" v-for="quiz in quizzes" :key="quiz.id">
+        <QuizCard :quiz="quiz"/>
       </div>
+        <!-- <div class="col-sm">
+          <router-link class="no-decoration" :to="{ name: 'quiz-detail', params: { quizId: quiz.id, skipIntro: true } }">
+            <button class="btn btn-outline-primary">⏩&nbsp;Commencer le quiz !</button>
+          </router-link>
+        </div> -->
     </div>
 
     <div class="row justify-content-md-center">

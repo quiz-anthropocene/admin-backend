@@ -4,8 +4,8 @@ module.exports = {
       // home page
       .openHomepage()
       .useXpath()
-      .assert.containsText('(//main//button)[1]', 'Tous les quiz')
-      .click('(//main//button)[1]')
+      .assert.containsText('//main/section/div[2]/div/a/button', 'Tous les quiz')
+      .click('//main/section/div[2]/div/a/button')
       .useCss()
       // quiz list page
       .assert.urlContains('quiz')

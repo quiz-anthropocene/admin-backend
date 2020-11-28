@@ -5,6 +5,7 @@
       <div class="card-body">
         <h2 class="card-title">{{ quiz.name }}</h2>
         <p class="card-subtitle"><strong>{{ quiz.questions.length }}</strong> question<span v-if="quiz.questions.length > 1">s</span></p>
+        <button class="btn btn-outline-primary btn-lg btn-block">Découvrir le quizz</button>
         <section class="d-none d-md-block">
           <hr class="margin-top-bottom-10" />
           <div class="small">

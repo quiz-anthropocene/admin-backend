@@ -123,7 +123,9 @@ export default {
           .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
           .sort((a, b) => b.question_count - a.question_count);
       } else {
-        authorsAvailable = this.$store.state.quizAuthors;
+        authorsAvailable = this.$store.state.quizAuthors
+          .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
+          .sort((a, b) => b.question_count - a.question_count);
       }
       return authorsAvailable;
     },
