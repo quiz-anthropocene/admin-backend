@@ -17,12 +17,9 @@
             <span v-if="(key === 'difficulty') && Number.isInteger(value)" class="label label-difficulty"><DifficultyBadge v-bind:difficulty="value" /></span>
           </span>
         </div>
-        <div class="col-4 text-align-right">
-          <span v-on:click.stop>
-            <!-- <router-link class="no-decoration" :to="{ name: 'question-list' }"> -->
-              <span class="label label-hidden"><strong>{{ counter }}</strong> {{ objectType }}{{questionsDisplayedCount > 1 && objectType === 'question' ? 's' : ''}}</span>
-            <!-- </router-link> -->
-          </span>
+        <div class="col-4 text-align-right" v-on:click.stop>
+          <button v-if="questionFilters.category || questionFilters.tag || questionFilters.author || questionFilters.difficulty" class="btn btn-sm btn-outline-secondary margin-5" @click="clearQuestionFilters()">Réinitialiser</button>
+          <span class="label label-hidden"><strong>{{ counter }}</strong> {{ objectType }}{{questionsDisplayedCount > 1 && objectType === 'question' ? 's' : ''}}</span>
         </div>
       </div>
     </div>
