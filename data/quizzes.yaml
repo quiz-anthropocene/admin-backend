@@ -141,16 +141,17 @@
     introduction: L'Anthropocène, c'est un terme proposé par des scientifiques pour
       désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où
       l'homme est devenu une force géologique majeure. La période la plus récente
-      de l'anthropocène est parfois dite la grande accélération, car de nombreux indicateurs
-      y présentent des courbes de type exponentiel. Ce quiz fait un tour d'horizon
-      de l'emprise inédite de l'homme sur la planète qu'il occupe.
+      de l'anthropocène est parfois décrite comme celle de la grande accélération,
+      car de nombreux indicateurs y présentent des courbes de type exponentiel. Ce
+      quiz fait un tour d'horizon de l'emprise inédite de l'homme sur la planète qu'il
+      occupe.
     conclusion: ''
     difficulty_average: 2.9
     author: Matthieu Massart
     image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
     publish: true
     created: 2020-07-08
-    updated: 2020-11-24
+    updated: 2020-11-25
     questions:
     - 2
     - 4
@@ -198,18 +199,17 @@
       d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le premier
       lot de cartes distribué lors d'un atelier de la Fresque."
     conclusion: ''
-    difficulty_average: 2.15
+    difficulty_average: 2.0526315789473686
     author: Matthieu Massart
     image_background_url: http://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
     publish: true
     created: 2020-07-14
-    updated: 2020-11-24
+    updated: 2020-11-26
     questions:
     - 6
     - 8
     - 13
     - 14
-    - 17
     - 22
     - 30
     - 31
@@ -546,3 +546,32 @@
     - 603
     tags:
     - 194
+- model: api.quiz
+  pk: 53
+  fields:
+    name: Les 10 questions les plus dures
+    introduction: "Les questions présentées dans ce quiz ont été choisies spécifiquement,
+      et ont toutes le niveau de difficulté le plus élevé : ce n'est donc pas le quiz
+      par lequel commencer !\r\n\r\nPersonne n'a eu la moyenne à ce quiz à la première
+      tentative.\r\n\r\nAlors, prêts à relever le défi ? :)"
+    conclusion: "Bravo d'être allé jusqu'au bout, ce n'était vraiment pas évident
+      !\r\n\r\nPour vous remettre de ce remue-méninge, n'hésitez pas à allez découvrir
+      les autres quiz, ils sont nettement plus faciles !"
+    difficulty_average: 4.0
+    author: laydgeur
+    image_background_url: https://cdn.pixabay.com/photo/2016/11/21/15/28/brain-1845962_1280.jpg
+    publish: true
+    created: 2020-11-27
+    updated: 2020-11-27
+    questions:
+    - 45
+    - 80
+    - 233
+    - 258
+    - 348
+    - 378
+    - 534
+    - 538
+    - 573
+    - 597
+    tags: []
