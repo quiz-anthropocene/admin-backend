@@ -20342,8 +20342,8 @@
 - model: api.question
   pk: 611
   fields:
-    text: En France, quelle proportion de leurs émissions la déclaration règlementaire
-      des entreprises couvre-t-elle ?
+    text: En France, quelle proportion des émissions des entreprises est couverte
+      par leur déclaration règlementaire (bilan carbone) ?
     hint: ''
     type: QCM
     category: 8
@@ -20353,14 +20353,18 @@
     answer_option_c: 60%
     answer_option_d: 80%
     answer_correct: c
-    has_ordered_answers: false
-    answer_explanation: L’Etat, les personnes morales de droit privé employant plus
+    has_ordered_answers: true
+    answer_explanation: 'L’Etat, les personnes morales de droit privé employant plus
       de 500 personnes, les collectivités de plus de 50,000 habitants et les personnes
       morales de droit public employant plus de 250 personnes ont l’obligation de
-      publier leur bilan d’émission de gaz à effet de serre. Ce dernier ne couvre
-      que les scopes 1 et 2, pas le scope 3 (voir leur définition dans le lien fourni).
+      publier leur bilan d’émission de gaz à effet de serre.
+
+      Ce dernier ne couvre que les scopes 1 et 2, pas le scope 3 (voir leur définition
+      dans le lien fourni).
+
+
       En 2020, rapporté par habitant, ce scope 3 représente 4,8 tonnes de CO2eq sur
-      un total de 11,5 tonnes, soit 42%.
+      un total de 11,5 tonnes, soit 42%.'
     answer_accessible_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/10/hcc_rapport_empreinte-carbone.pdf
     answer_scientific_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/10/hcc_rapport_empreinte-carbone.pdf
     answer_image_url: https://media.lesechos.com/api/v1/images/view/5f7ed78b8fe56f38403f5d66/par_defaut/image.jpg
@@ -20369,7 +20373,7 @@
     author: Kim Nguyen-Huu
     validator: Matthieu Massart
     publish: false
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-11-11
     created: 2020-11-18
     updated: 2020-11-18
@@ -20781,3 +20785,1471 @@
     updated: 2020-11-25
     tags:
     - 13
+- model: api.question
+  pk: 624
+  fields:
+    text: 'La Chine émet aujourd''hui 27% du CO2 mondial.
+
+      Combien d''autres pays ont déjà fait autant depuis le début de la révolution
+      industrielle ?'
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 2
+    answer_option_a: Aucun autre pays
+    answer_option_b: 1 autre pays
+    answer_option_c: 2 autres pays
+    answer_option_d: 3 autres pays
+    answer_correct: d
+    has_ordered_answers: true
+    answer_explanation: 'Depuis 1750, seuls 3 pays ont émis plus de 27% du CO2 mondial
+      : le Royaume-Uni, les États-Unis, et la Chine.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r291.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1275171016566808576
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-06-22
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 10
+    - 13
+    - 81
+- model: api.question
+  pk: 625
+  fields:
+    text: 'Au plus fort de la crise du Covid, les émissions mondiales de CO2 ont baissé
+      de quasiment 20%.
+
+      Quelle est la dernière année où nous avons émis aussi peu de CO2 ?'
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: '1976'
+    answer_option_b: '1986'
+    answer_option_c: '1996'
+    answer_option_d: '2006'
+    answer_correct: d
+    has_ordered_answers: true
+    answer_explanation: Au plus fort de la crise du covid, début avril, les émissions
+      quotidiennes de CO2 dans le monde ont subit une baisse probablement jamais vu
+      dans l'histoire, et sont temporairement revenues à leur niveau... de 2006.
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.nature.com/articles/s41558-020-0797-x
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r292.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1275526497357500417
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-06-23
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 13
+    - 92
+- model: api.question
+  pk: 626
+  fields:
+    text: 'Vrai ou faux : les transports routiers des États-Unis émettent plus de
+      CO2 que la totalité des secteurs et activités du continent africain ?'
+    hint: ''
+    type: VF
+    category: 1
+    difficulty: 2
+    answer_option_a: Vrai
+    answer_option_b: Faux
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: 'Les émissions de CO2 de la totalité du continent africain
+      s''élèvent à 1,4 milliards de tonnes.
+
+      Celles des transports routiers des États-Unis sont de 1,5 milliards de tonnes.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r293.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1275875305081704450
+    author: laydgeur
+    validator: Matthieu Massart
+    publish: true
+    validation_status: Validée
+    added: 2020-06-24
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 13
+    - 33
+    - 80
+    - 82
+- model: api.question
+  pk: 627
+  fields:
+    text: 'La mer du nord est le seul gisement important de pétrole situé en Europe
+      occidentale.
+
+      En quelle année a-t-elle passé son pic de production ?'
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 2
+    answer_option_a: '1990'
+    answer_option_b: '2000'
+    answer_option_c: '2010'
+    answer_option_d: Il n’est pas encore passé
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: 'La production cumulée de pétrole des pays exploitant les
+      gisements en mer du nord (Norvège, Royaume-Uni, Danemark) a passé son pic en
+      l''an 2000.
+
+      Elle a diminué depuis de 65%.'
+    answer_accessible_url: https://fr.wikipedia.org/wiki/R%C3%A9gions_p%C3%A9trolif%C3%A8res_en_Europe
+    answer_scientific_url: https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r294.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1276238855482626048?s=20
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-06-25
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 11
+    - 47
+- model: api.question
+  pk: 628
+  fields:
+    text: Quel est le premier fournisseur de charbon de la France ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 3
+    answer_option_a: Allemagne
+    answer_option_b: Australie
+    answer_option_c: États-Unis
+    answer_option_d: Russie
+    answer_correct: d
+    has_ordered_answers: false
+    answer_explanation: 'Le premier fournisseur de charbon de la France est la Russie
+      avec 4,2 millions de tonnes (Mt) importées en 2018.
+
+      Elle est suivie par l''Australie (3,7 Mt), les États-Unis (1,9 Mt) et la Colombie
+      (1,5 Mt)'
+    answer_accessible_url: https://www.statistiques.developpement-durable.gouv.fr/chiffres-cles-de-lenergie-edition-2019?rubrique=19&dossier=170
+    answer_scientific_url: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r295.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1276778476985552898?s=20
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-06-27
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 1
+    - 40
+- model: api.question
+  pk: 629
+  fields:
+    text: 'Vrai ou Faux : la centrale de Fessenheim a produit en 2019 plus d’électricité
+      que la totalité des panneaux solaires de France ?'
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 3
+    answer_option_a: Vrai
+    answer_option_b: Faux
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: Les deux petits réacteurs nucléaires de 900 MW chacun de Fessenheim
+      construits il y a plus de 40 ans ont produit en 2019 plus d'électricité que
+      la totalité des 450.000 installations photovoltaïques de France.
+    answer_accessible_url: https://bilan-electrique-2019.rte-france.com/#
+    answer_scientific_url: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r296.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1277691935000494081
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-06-29
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 1
+    - 29
+    - 46
+- model: api.question
+  pk: 630
+  fields:
+    text: Lorsqu’il sort d’un réacteur nucléaire, quelle part du combustible usé est
+      considéré comme déchets ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 3
+    answer_option_a: 4 %
+    answer_option_b: 35 %
+    answer_option_c: 65 %
+    answer_option_d: 96 %
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: 'Après passage dans un réacteur nucléaire, seul 4% du combustible
+      initial est considéré comme déchets.
+
+      Les 96% restants sont réutilisés (combustible MOx) ou entreposés en attente
+      de réenrichissement.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.edf.fr/groupe-edf/producteur-industriel/nucleaire/atouts/expertise-nucleaire/cycle-du-combustible-nucleaire-edf-present-sur-toutes-les-phases
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r297.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1278063646535561216
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-06-30
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 29
+- model: api.question
+  pk: 631
+  fields:
+    text: 'Le combustible nucléaire est constitué d’assemblages de pastilles d’uranium
+      qui pèsent 7g.
+
+      Quelle quantité de charbon faudrait-il pour produire autant d’énergie qu’une
+      seule de ces pastilles ?'
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 2
+    answer_option_a: 1 kg de charbon
+    answer_option_b: 10 kg de charbon
+    answer_option_c: 100 kg de charbon
+    answer_option_d: 1000 kg de charbon
+    answer_correct: d
+    has_ordered_answers: true
+    answer_explanation: 'Une pastille d''uranium enrichi de 7g contient environ 0,3g
+      d''uranium 235, qui libère ~25 milliards de Joule de chaleur.
+
+      Soit l''énergie moyenne obtenue en brulant une tonne de charbon, ou encore 750
+      litres d''essence.'
+    answer_accessible_url: https://www.edf.fr/groupe-edf/espaces-dedies/l-energie-de-a-a-z/tout-sur-l-energie/produire-de-l-electricite/l-uranium-le-combustible-nucleaire
+    answer_scientific_url: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r298.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1278433375708217346
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-01
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 29
+    - 40
+- model: api.question
+  pk: 632
+  fields:
+    text: En France, quel est le domaine d'activité dans lequel les employés ont reçu
+      la dose moyenne de radioactivité la plus élevée ?
+    hint: ''
+    type: QCM
+    category: 8
+    difficulty: 3
+    answer_option_a: Aviation
+    answer_option_b: Médical
+    answer_option_c: Nucléaire
+    answer_option_d: Recherche
+    answer_correct: a
+    has_ordered_answers: false
+    answer_explanation: Les employés qui reçoivent le plus de dose de radioactivité
+      en France sont les personnels navigants de l'aviation (exposition aux rayonnement
+      cosmiques), avec une moyenne de 2,1mSv reçus, contre 1.8 mSv pour les travailleurs
+      du nucléaire
+    answer_accessible_url: https://www.irsn.fr/FR/expertise/rapports_expertise/Documents/radioprotection/IRSN_Infographie-Exposition_travailleurs_2018.pdf
+    answer_scientific_url: https://www.irsn.fr/FR/expertise/rapports_expertise/radioprotection-homme/Pages/Bilan-2018-exposition-professionnelle-rayonnements-ionisants-France.aspx#.X7WGG-eNxIB
+    answer_image_url: https://pbs.twimg.com/media/DoA_LwtW0AAAAKl.jpg
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1278797750788919301
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-02
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 29
+- model: api.question
+  pk: 633
+  fields:
+    text: Parmi les scénarios du GIEC qui parviennent à contenir le réchauffement
+      à +1,5°C, combien ont une production mondiale d’électricité nucléaire qui augmente
+      ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: 5 %
+    answer_option_b: 35 %
+    answer_option_c: 65 %
+    answer_option_d: 95 %
+    answer_correct: d
+    has_ordered_answers: true
+    answer_explanation: 'Le GIEC a examiné plus de 80 scénarios qui permettaient de
+      rester en dessous de +1,5°C de réchauffement.
+
+
+      92% d''entre eux ont une production nucléaire mondiale qui augmente en 2100,
+      et qui double dans 80% des scénarios.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://data.ene.iiasa.ac.at/iamc-1.5c-explorer/#/login?redirect=%2Fworkspaces
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1279147249193365508
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-03
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 22
+    - 29
+    - 39
+- model: api.question
+  pk: 635
+  fields:
+    text: En France, laquelle de ces catégories émet le plus de gaz à effet de serre
+      ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 2
+    answer_option_a: Élevage
+    answer_option_b: Procédés industriels
+    answer_option_c: Résidentiel
+    answer_option_d: Voitures
+    answer_correct: d
+    has_ordered_answers: false
+    answer_explanation: Parmi ces 4 catégories (élevage, procédés industriels, résidentiel,
+      voitures), celle qui émet le plus de gaz à effet de serre en France est la voiture
+      (+70% par rapport aux trois autres).
+    answer_accessible_url: ''
+    answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r302.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1280594616606171149
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-07
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 33
+    - 35
+- model: api.question
+  pk: 637
+  fields:
+    text: En quelle année le pétrole est-il devenu la première énergie utilisée dans
+      le monde ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 3
+    answer_option_a: '1925'
+    answer_option_b: '1945'
+    answer_option_c: '1965'
+    answer_option_d: '1985'
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: C'est aux environs de 1965 (probablement 1964) que le pétrole
+      a dépassé le charbon et est devenu la première énergie utilisée dans le monde
+      avec environ 35% du total (cette part est identique encore aujourd'hui).
+    answer_accessible_url: https://ourworldindata.org/energy
+    answer_scientific_url: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r304.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1281339597230936065
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-09
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 11
+- model: api.question
+  pk: 640
+  fields:
+    text: En quelle année a eu lieu le pic de déforestation en France ?
+    hint: ''
+    type: QCM
+    category: 4
+    difficulty: 3
+    answer_option_a: '1750'
+    answer_option_b: '1850'
+    answer_option_c: '1950'
+    answer_option_d: Il n’a pas encore eu lieu
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: Le minimum de couverture forestière en France a eu lieu aux
+      alentours de 1850, la surface occupée par les forêts était tombée alors à un
+      peu plus de 10% du territoire (contre plus de 30% aujourd'hui).
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.sciencedirect.com/science/article/abs/pii/S0743016798000230
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r307.png
+    answer_image_explanation: La déforestation a progressé jusqu'en 1320-1330, et
+      s'est arrêtée "grâce" aux épidémies successives de peste noire qui ont décimé
+      la population, laissant ainsi de nombreuses exploitations agricoles en friche
+      que la forêt a pu reprendre. La déforestation a ensuite continué jusqu'à son
+      niveau le plus bas en 1850, et s'est arrêtée "grâce" à l'utilisation du charbon
+      qui a remplacé le bois en combustible de chauffe.
+    answer_extra_info: https://twitter.com/laydgeur/status/1283485972865351680
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-15
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 1
+    - 19
+- model: api.question
+  pk: 641
+  fields:
+    text: 'En France, comment ont évolué les émissions de gaz à effet de serre de
+      l''agriculture depuis 1990 ?
+
+
+      (l''utilisation des terres et la forêt ne sont pas comptées ici)'
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: -10 %
+    answer_option_b: ~0%
+    answer_option_c: 10 %
+    answer_option_d: ''
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: Les émissions dues à l'agriculture en France (méthane des
+      animaux, azote des engrais, et CO2 des engins agricoles) ont diminué de 9% depuis
+      1990, en phase avec les objectifs fixés par la stratégie nationale bas carbone
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/chiffres-cles-du-climat-france-europe-et-monde-edition-2020-0?rubrique=&dossier=1263
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r308.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1283859848023678982
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-16
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 1
+    - 17
+    - 100
+- model: api.question
+  pk: 642
+  fields:
+    text: Dans le monde, combien de pays émettent plus de CO2 que le secteur des transports
+      des États-Unis ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: '3'
+    answer_option_b: '7'
+    answer_option_c: '11'
+    answer_option_d: '15'
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: 'Le seul transport routier des États-Unis émet 1,8 milliards
+      de tonnes de CO2 chaque année.
+
+
+      Il n''y a que 3 pays dans le monde qui émettent plus de CO2 : la Chine, les
+      États-Unis, et l''Inde.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r309.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1284208421739405313
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-17
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 13
+    - 33
+    - 80
+- model: api.question
+  pk: 643
+  fields:
+    text: Dans le monde, sur les 10 mois de juin les plus chauds enregistrés ces 140
+      dernières années, combien ont eu lieu depuis 2010 ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 2
+    answer_option_a: '7'
+    answer_option_b: '8'
+    answer_option_c: '9'
+    answer_option_d: '10'
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: 'Sur les 10 mois de juin les plus chauds enregistrés dans
+      le monde sur ces 140 dernières années, 9 ont eu lieu depuis 2010.
+
+
+      Les 7 mois de juin les plus chauds en 140 ans ont eu lieu ces 7 dernières années.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.ncei.noaa.gov/news/global-climate-202006
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r310.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1284579178847916032
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-18
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 51
+    - 81
+- model: api.question
+  pk: 645
+  fields:
+    text: Quel est le contenu moyen en gaz à effet de serre d’un repas du midi en
+      France ?
+    hint: ''
+    type: QCM
+    category: 2
+    difficulty: 2
+    answer_option_a: 400 g d’équivalent CO2
+    answer_option_b: 2 kg d’équivalent CO2
+    answer_option_c: 6 kg d’équivalent CO2
+    answer_option_d: 15 kg d’équivalent CO2
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: 'Le contenu moyen en gaz à effet de serre d’un repas du midi
+      en France est d’environ 2 kg d’équivalent CO2.
+
+
+      Il y a beaucoup de variations, entre 500g pour un repas végétarien et 5 kg pour
+      un repas avec du bœuf.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.bilans-ges.ademe.fr/documentation/UPLOAD_DOC_FR/index.htm?repas.htm
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r312.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1285674342467153922
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-21
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 1
+    - 5
+    - 100
+- model: api.question
+  pk: 646
+  fields:
+    text: 'Actuellement, combien de temps faut-il pour augmenter la concentration
+      en CO2 dans l’atmosphère de 1 ppm ?
+
+
+      (en tendance corrigée de la saisonnalité)'
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: 3 mois
+    answer_option_b: 1 an
+    answer_option_c: 3 ans
+    answer_option_d: 6 ans
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: 'Corrigée des variations saisonnières, la concentration en
+      CO2 dans l’atmosphère est de 414ppm en juin 2020.
+
+
+      Elle était de 413ppm en mars 2020, trois mois plus tôt.'
+    answer_accessible_url: https://climate.nasa.gov/vital-signs/carbon-dioxide/
+    answer_scientific_url: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r313.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1286043854278459393
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-22
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 12
+    - 13
+- model: api.question
+  pk: 647
+  fields:
+    text: Quel pourcentage de la France métropolitaine correspond à des territoires
+      artificialisés ?
+    hint: ''
+    type: QCM
+    category: 4
+    difficulty: 3
+    answer_option_a: 6 %
+    answer_option_b: 16 %
+    answer_option_c: 26 %
+    answer_option_d: 36 %
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: 'Les territoires artificialisés occupent environ 6% de la
+      surface française métropolitaine.
+
+
+      60% sont des territoires agricoles, et 34% sont des forêts et milieux semi-naturels.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2019-01/datalab-2-atlas-regional-de-loccupation-des-sols-en-france%20%28clc%29-octobre2016.pdf
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r314.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1286580801291911168
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-24
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 1
+    - 53
+- model: api.question
+  pk: 648
+  fields:
+    text: 'Quelle est la région française qui émet le plus de gaz à effet de serre
+      ?
+
+
+      (en valeur absolue)'
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: Auvergne-Rhône-Alpes
+    answer_option_b: Hauts-de-France
+    answer_option_c: Île-de-France
+    answer_option_d: Nouvelle-Aquitaine
+    answer_correct: b
+    has_ordered_answers: false
+    answer_explanation: La région française qui émet le plus de gaz à effet de serre
+      est les Hauts-de-France avec 54 millions de tonnes d’équivalent CO2 (~12% des
+      émissions nationales), elle suivie de très près par Auvergne-Rhône-Alpes.
+    answer_accessible_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/07/hcc_rapport_annuel-2020.pdf
+    answer_scientific_url: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r315.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1287025515514167296
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-25
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 1
+    - 100
+- model: api.question
+  pk: 651
+  fields:
+    text: Vrai ou Faux ? En cumulé depuis un siècle, la France a émis plus de CO2
+      que tous les volcans de la terre sur la même période.
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: Vrai
+    answer_option_b: Faux
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: Depuis un siècle, les émissions cumulée de l'ensemble des
+      volcans de la terre est estimée à 15-26 milliards de tonnes de CO2. Sur la même
+      période, la France a émis un cumul de 32 milliards de tonnes de CO2.
+    answer_accessible_url: ''
+    answer_scientific_url: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2011EO240001
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r318.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1319008577865076738
+    author: laydgeur
+    validator: ''
+    publish: true
+    validation_status: Validée
+    added: 2020-10-21
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 1
+    - 13
+    - 66
+- model: api.question
+  pk: 652
+  fields:
+    text: 'Le pétrole est la 1ère énergie consommée en France.
+
+      Quelle est la 2ème ?'
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 2
+    answer_option_a: Electricité
+    answer_option_b: Energies renouvelables
+    answer_option_c: Gaz
+    answer_option_d: ''
+    answer_correct: a
+    has_ordered_answers: false
+    answer_explanation: 'La 2ème énergie consommée en France après le pétrole est
+      l''électricité, avec 27% du total.
+
+
+      Le gaz est 3ème avec 20%, suivi par les énergies renouvelables thermiques (bois,
+      biocarburants, pompes à chaleur, ...) à 11%.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/bilan-energetique-de-la-france-en-2019-donnees-provisoires?rubrique=19&dossier=170
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r319.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1319366405377150976
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-10-22
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 1
+    - 11
+- model: api.question
+  pk: 653
+  fields:
+    text: Sur les 4,8 millions de véhicules 100% électriques en circulation dans le
+      monde, combien sont en Chine ?
+    hint: ''
+    type: QCM
+    category: 8
+    difficulty: 3
+    answer_option_a: 10 %
+    answer_option_b: 30 %
+    answer_option_c: 50 %
+    answer_option_d: 70 %
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: 'La Chine compte environ 2,6 millions de voitures 100% électriques
+      en circulation, soit plus de la moitié du total mondial.
+
+
+      Pour rappel, les deux tiers de l''électricité chinoise sont produits avec du
+      charbon.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.iea.org/reports/global-ev-outlook-2020
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r320.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1319722821728305158
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-10-23
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 10
+    - 60
+- model: api.question
+  pk: 654
+  fields:
+    text: En quelle année les émissions mondiales de CO2 ont dépassé un milliard de
+      tonnes par an ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 4
+    answer_option_a: '1885'
+    answer_option_b: '1915'
+    answer_option_c: '1945'
+    answer_option_d: '1975'
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: 'Les émissions mondiales de CO2 ont dépassé un milliard de
+      tonnes par an en 1885.
+
+
+      A cette époque, le Royaume-Uni était le 1er émetteur mondial de CO2 avec près
+      d’un tiers du total.'
+    answer_accessible_url: https://ourworldindata.org/co2-emissions
+    answer_scientific_url: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r321.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1320829859397095424
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-10-26
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 13
+- model: api.question
+  pk: 655
+  fields:
+    text: Parmi ces trois gaz à effet de serre, lequel a vu sa concentration dans
+      l’atmosphère augmenter le plus rapidement depuis l’ère préindustrielle ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 4
+    answer_option_a: Dioxyde de carbone (CO2)
+    answer_option_b: Méthane (CH4)
+    answer_option_c: Protoxyde d’azote (N2O)
+    answer_option_d: ''
+    answer_correct: b
+    has_ordered_answers: false
+    answer_explanation: Depuis la révolution industrielle, la concentration dans l’atmosphère
+      en protoxyde d’azote (N2O) a augmenté de 20% celle du CO2 de 45%, et celle du
+      méthane (CH4) de 160%.
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter06_FINAL.pdf
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r322.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1321191996661420041
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-10-27
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 12
+    - 32
+    - 100
+- model: api.question
+  pk: 656
+  fields:
+    text: Comment a varié la consommation électrique française pendant le discours
+      de Macron du 28 octobre 2020 annonçant un reconfinement ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 3
+    answer_option_a: Augmentation de 4 GW
+    answer_option_b: Augmentation de 2 GW
+    answer_option_c: Aucun changement
+    answer_option_d: Diminution de 2 GW
+    answer_correct: d
+    has_ordered_answers: true
+    answer_explanation: 'Pendant le discours de Macron mercredi 28, la consommation
+      électrique en France a chuté en quelques minutes d’environ 2 GW.
+
+
+      C’est l’équivalent de la consommation de la communauté urbaine de Marseille.
+
+
+      Cette baisse soudaine de la consommation électrique se constate aussi sur des
+      évènements importants comme les finales de coupe du monde, et est due au fait
+      que toutes les personnes arrêtent leurs activités consommatrices d''électricité
+      (cuisiner, repasser, ...) pour se réunir autour d''une télévision.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.rte-france.com/eco2mix/la-consommation-delectricite-en-france#
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r323.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1321557493592530944
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-10-28
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 1
+    - 39
+    - 92
+- model: api.question
+  pk: 657
+  fields:
+    text: Où va la majorité de nos émissions de CO2 ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 2
+    answer_option_a: Dans l’atmosphère
+    answer_option_b: Dans les océans
+    answer_option_c: Dans la végétation
+    answer_option_d: ''
+    answer_correct: a
+    has_ordered_answers: false
+    answer_explanation: 'Sur l’ensemble du CO2 émis par les activités humaines :
+
+      - 23% vont dans les océans (et contribuent à son acidification)
+
+      - 29% sont absorbés par la végétation
+
+      - et 44% restent dans l’atmosphère (et c’est bien emmerdant)'
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/19/files/GCP_CarbonBudget_2019.pdf
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r324.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1322285904187314178
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-10-30
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 13
+    - 14
+- model: api.question
+  pk: 659
+  fields:
+    text: 'Quel pays de l’Union Européenne importe le plus de pétrole ?
+
+      (brut+raffiné)'
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 4
+    answer_option_a: Allemagne
+    answer_option_b: Italie
+    answer_option_c: France
+    answer_option_d: Pays-Bas
+    answer_correct: d
+    has_ordered_answers: false
+    answer_explanation: 'Le pays qui importe le plus de pétrole dans l''UE est les
+      Pays-bas, avec 150 millions de tonnes par an.
+
+
+      C''est aussi le pays qui en exporte le plus (110 millions de tonnes), car le
+      port de Rotterdam est un "hub" du commerce du pétrole, et le pays compte de
+      nombreuses raffineries.
+
+
+      Le premier importateur net (import - export) est de loin l''Allemagne.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/87b16988-f740-11ea-991b-01aa75ed71a1/language-en/format-PDF/source-170585611
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r326.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1323371163649773571
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-02
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 11
+    - 47
+- model: api.question
+  pk: 661
+  fields:
+    text: Quelle est la dépendance de l’Union Européenne aux importations de pétrole
+      (sans le Royaume-Uni) ?
+    hint: A lui seul le Royaume-Uni produit plus du double de pétrole des 27 pays
+      de l'Union Européenne.
+    type: QCM
+    category: 5
+    difficulty: 2
+    answer_option_a: 50 %
+    answer_option_b: 65 %
+    answer_option_c: 80 %
+    answer_option_d: 95 %
+    answer_correct: d
+    has_ordered_answers: true
+    answer_explanation: 'La dépendance des 27 pays de l''Union Européenne aux importations
+      de pétrole est de 95% (avec le Royaume-Uni, cette dépendance serait de 87%).
+
+
+      Cela signifie que 95% du pétrole consommé est importé.
+
+
+      Sachant que dans l''Union Européenne, le pétrole est la première énergie utilisée,
+      que les produits pétroliers représentent 90% de l''énergie consommées dans les
+      transports, que le premier fournisseur de pétrole de l''UE est la Russie, on
+      comprend très vite l''extrême dépendance dans laquelle se trouve l''Europe avec
+      cette énergie.
+
+
+      Pour cette raison et pour le problème climatique, il est plus qu''urgent de
+      trouver le moyen de s''en passer !'
+    answer_accessible_url: ''
+    answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/87b16988-f740-11ea-991b-01aa75ed71a1/language-en/format-PDF/source-170585611
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r328.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1324242278114873345
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-05
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 11
+    - 47
+- model: api.question
+  pk: 662
+  fields:
+    text: 'Dans l’Union Européenne, quel pays produit le plus d’électricité à partir
+      du pétrole ?
+
+
+      (en valeur absolue)'
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 4
+    answer_option_a: Allemagne
+    answer_option_b: Espagne
+    answer_option_c: Grèce
+    answer_option_d: Roumanie
+    answer_correct: b
+    has_ordered_answers: false
+    answer_explanation: 'Dans l''Union Européenne, le pays qui produit le plus d''électricité
+      à partir du pétrole est l''Espagne, avec près de 15 TWh.
+
+
+      Le pays qui a le plus d''électricité dans son mix électrique est Chypre : plus
+      de 90%.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/87b16988-f740-11ea-991b-01aa75ed71a1/language-en/format-PDF/source-170585611
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r329.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1324465284615462914
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-05
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 11
+    - 39
+    - 47
+- model: api.question
+  pk: 663
+  fields:
+    text: Quel pays est le premier fournisseur de pétrole de l’Union Européenne ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 2
+    answer_option_a: Arabie Saoudite
+    answer_option_b: Etats-Unis
+    answer_option_c: Norvège
+    answer_option_d: Russie
+    answer_correct: d
+    has_ordered_answers: false
+    answer_explanation: 'Le premier fournisseur de pétrole de l''Union Européenne
+      est la Russie, avec 30% du total des imports.
+
+
+      La Russie est aussi le 1er fournisseur de l''UE en gaz et en charbon (40% des
+      imports pour chaque).'
+    answer_accessible_url: ''
+    answer_scientific_url: https://ec.europa.eu/eurostat/cache/infographs/energy/bloc-2c.html
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r330.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1324813993991614466
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-06
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 11
+    - 47
+- model: api.question
+  pk: 664
+  fields:
+    text: 'Vrai ou faux : le seul transport aérien des États-Unis (domestique + international)
+      émet plus de CO2 que la France entière.'
+    hint: ''
+    type: VF
+    category: 1
+    difficulty: 3
+    answer_option_a: Vrai
+    answer_option_b: Faux
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: 'Le transport aérien des USA émet environ 250 millions de
+      tonnes de CO2, ce qui est considérable (c''est l''équivalent de toute l''Espagne),
+      mais la France entière émet 340 millions de tonnes.
+
+
+      Les USA représentent environ le quart des émissions mondiales dues à l''aviation.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r331.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1325911824680824832
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-09
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 1
+    - 13
+    - 34
+    - 80
+- model: api.question
+  pk: 665
+  fields:
+    text: Quelle serait la place des États-Unis dans le classement mondial des émetteurs
+      de CO2 si leurs émissions liées à l'électricité tombaient à zéro ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: 2ème (place actuelle)
+    answer_option_b: 6ème (Allemagne)
+    answer_option_c: 10ème (Indonésie)
+    answer_option_d: 14ème (Brésil)
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: 'Les émissions de CO2 des États-Unis dues à l''électricité
+      sont de 1,7 milliards de tonnes (l''équivalent de la Russie entière).
+
+
+      Si elles tombaient à zéro, les États-Unis seraient toujours le 2ème émetteur
+      mondial...'
+    answer_accessible_url: ''
+    answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r332.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1326267748540878848
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-10
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 13
+    - 39
+    - 80
+- model: api.question
+  pk: 666
+  fields:
+    text: 'Vrai ou faux : les transports des États-Unis émettent plus de CO2 que les
+      transports combinés de la Chine, de l’Inde, de la Russie et du Japon ?'
+    hint: ''
+    type: VF
+    category: 1
+    difficulty: 3
+    answer_option_a: Vrai
+    answer_option_b: Faux
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: 'Le secteur des transports aux États-Unis émet 1,7 milliards
+      de tonnes de CO2 par an.
+
+      Soit légèrement plus que les transports combinés de la Chine (0,9 Mt), de l''Inde
+      (0,3 Mt), de la Russie (0,2 Mt), et du Japon (0,2 Mt).'
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.iea.org/data-and-statistics?country=USA&fuel=CO2%20emissions&indicator=CO2BySector
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r333.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1326633704119296003
+    author: laydgeur
+    validator: Raphael Odini
+    publish: true
+    validation_status: Validée
+    added: 2020-11-11
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 13
+    - 33
+    - 80
+- model: api.question
+  pk: 667
+  fields:
+    text: 'Début 2020 la production de pétrole brut des États-Unis a connu la plus
+      grande baisse de son histoire avec -2,5 millions de barils/jour.
+
+
+      Quelle a été la dernière année où ils ont produit aussi peu de pétrole ?'
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 4
+    answer_option_a: '1898'
+    answer_option_b: '1938'
+    answer_option_c: '1978'
+    answer_option_d: '2018'
+    answer_correct: d
+    has_ordered_answers: true
+    answer_explanation: Avec une chute en 2020 de 2,5 millions de barils/jour (l'équivalent
+      de la production du Koweït), la production de pétrole brut aux États-Unis a
+      simplement retrouvé son niveau de 2018.
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=pet&s=wcrfpus2&f=4
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r334.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1326996258414858240
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-12
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 11
+    - 80
+    - 92
+- model: api.question
+  pk: 668
+  fields:
+    text: À quel âge un américain moyen émet le plus de CO2 ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: Entre 20 et 30 ans
+    answer_option_b: Entre 40 et 50 ans
+    answer_option_c: Entre 60 et 70 ans
+    answer_option_d: ''
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: Un américain moyen émet le plus de CO2 entre 60 et 70 ans,
+      lorsque beaucoup de consommations sont au maximum (électricité, gaz, transport
+      aérien, nourriture, ...).
+    answer_accessible_url: https://green.blogs.nytimes.com/2011/11/10/if-you-act-your-age-whats-your-carbon-footprint/
+    answer_scientific_url: https://link.springer.com/article/10.1007/s13524-010-0004-1
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r335.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1327717007958175745
+    author: laydgeur
+    validator: Raphael Odini
+    publish: true
+    validation_status: Validée
+    added: 2020-11-14
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 13
+    - 27
+    - 80
+- model: api.question
+  pk: 669
+  fields:
+    text: 'Vrai ou faux : produire une tonne de plastique émet plus de CO2 que produire
+      une tonne d’acier ?'
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: Vrai
+    answer_option_b: Faux
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: a
+    has_ordered_answers: true
+    answer_explanation: 'Produire une tonne de plastique émet en moyenne plus de CO2
+      que produire une tonne d''acier.
+
+
+      Si par contre les matériaux sont recyclés, le plastique est largement meilleur.
+
+
+      Pour beaucoup d''usages le plastique est meilleur que l''acier car pour remplir
+      la même fonction on va utiliser une quantité moindre de plastique que d''acier.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/authentification
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r336.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1328435243855056899
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-16
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 13
+    - 26
+    - 36
+    - 86
+- model: api.question
+  pk: 671
+  fields:
+    text: Quelle est la dépendance de l'Union Européenne aux importations de charbon
+      ?
+    hint: ''
+    type: QCM
+    category: 5
+    difficulty: 3
+    answer_option_a: 5 %
+    answer_option_b: 25 %
+    answer_option_c: 45 %
+    answer_option_d: 65 %
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: 'La dépendance aux importations de charbon (tous types confondus)
+      de l''Union Européenne est de 44%.
+
+
+      Cela signifie que 44% du charbon consommé dans l''UE est importé.
+
+
+      Et le premier fournisseur de charbon de l''UE est la Russie.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://ec.europa.eu/energy/data-analysis/energy-statistical-pocketbook_fr
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r338.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1329338984703676422
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-19
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 40
+    - 47
+- model: api.question
+  pk: 672
+  fields:
+    text: Quelle région de France métropolitaine émet le plus de gaz à effet de serre
+      par habitant ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: Bourgogne-Franche-Comté
+    answer_option_b: Centre-Val de Loire
+    answer_option_c: Grand Est
+    answer_option_d: Normandie
+    answer_correct: d
+    has_ordered_answers: false
+    answer_explanation: 'La région de France métropolitaine qui émet le plus de gaz
+      à effet de serre par habitant est la Normandie, avec plus de 10 tonnes de CO2eq
+      par personne.
+
+
+      Les secteurs les plus émetteurs sont l''industrie (centrale à charbon et raffineries)
+      et l''agriculture/élevage. Ces deux secteurs comptent pour la moitié du total
+      d''émissions de la région.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/07/cartes-regions-_-20201110.pdf
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r339.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1329887456821440513
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-20
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 1
+    - 100
+- model: api.question
+  pk: 673
+  fields:
+    text: Lequel de ces équipements de sport émet le plus de CO2 lors de sa fabrication
+      ?
+    hint: Le ballon est en plastique et est léger, le club de golf est en acier mais
+      est léger aussi, les bottes d'équitation sont en cuir, et la planche de snowboard
+      est composée de divers plastiques.
+    type: QCM
+    category: 2
+    difficulty: 4
+    answer_option_a: Ballon de football
+    answer_option_b: Bottes d’équitation
+    answer_option_c: Club de golf
+    answer_option_d: Planche de snowboard
+    answer_correct: b
+    has_ordered_answers: false
+    answer_explanation: 'Parmi ces 4 équipements de sport, celui qui émet le plus
+      de CO2 est de loin les bottes d''équitation, principalement à cause du cuir
+      qui entre dans la composition.
+
+
+      Attention avec la source des valeurs, car si la démarche est intéressante, il
+      y a des erreurs grossières dans les calculs (exemple les émissions du ballon
+      de foot multipliées par 10), et les facteurs d''émissions sont approximatifs.
+
+      Il faut prendre ces données avec précaution en tant qu''ordre de grandeur uniquement.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://www.ufolep.org/modules/kameleon/upload/FE_Sport.pdf
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r340.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1330250867862360074
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-11-21
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 13
+    - 54
