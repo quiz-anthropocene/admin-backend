@@ -1,14 +1,15 @@
 <template>
   <section>
-    <div class="alert alert-warning" role="alert">
-      <i v-if="questionsCount">Il y a actuellement <strong>{{ questionsCount }} questions</strong> et <strong>{{ quizCount }} quiz</strong>. </i>
-      <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus ! </i>
-    </div>
-    <div v-if="newsletterRegistrationCallback" class="alert alert-success" role="alert">
-      Votre inscription à la newsletter a été enrigstrée, merci !
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="newsletterCleanup()">
-        <span aria-hidden="true">&times;</span>
-      </button>
+
+    <div v-if="quizzes && quizzes.length > 0" id="quiz-list"  class="row">
+      <div class="col-sm-4" v-for="quiz in quizzes" :key="quiz.id">
+        <QuizCard :quiz="quiz"/>
+      </div>
+        <!-- <div class="col-sm">
+          <router-link class="no-decoration" :to="{ name: 'quiz-detail', params: { quizId: quiz.id, skipIntro: true } }">
+            <button class="btn btn-outline-primary">⏩&nbsp;Commencer le quiz !</button>
+          </router-link>
+        </div> -->
     </div>
 
     <div class="row justify-content-md-center">
@@ -68,6 +69,17 @@
       </div>
     </div>
 
+    <div class="alert alert-warning" role="alert">
+      <i v-if="questionsCount">Il y a actuellement <strong>{{ questionsCount }} questions</strong> et <strong>{{ quizCount }} quiz</strong>. </i>
+      <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus ! </i>
+    </div>
+    <div v-if="newsletterRegistrationCallback" class="alert alert-success" role="alert">
+      Votre inscription à la newsletter a été enrigstrée, merci !
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="newsletterCleanup()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
     <div class="row justify-content-md-center">
       <div class="col-sm-6" v-if="questionsCount">
         <router-link class="no-decoration" :to="{ name: 'ressources' }">
@@ -113,9 +125,14 @@
 </template>
 
 <script>
+
+import QuizCard from '../components/QuizCard.vue';
+
 export default {
   name: 'HomePage',
-
+  components: {
+    QuizCard,
+  },
   data() {
     return {
       // questionSameFilterNextId: null,
@@ -133,6 +150,12 @@ export default {
     },
     questionsCount() {
       return this.$store.state.questions.length;
+    },
+    quizzes() {
+      return this.$store.state.quizzes
+        .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .slice(0, 3);
     },
   },
 
@@ -210,7 +233,7 @@ svg {
   transform: scale(1.03);
 }
 
-.row > .col-sm-6 {
+.row > .col-sm-6,.col-sm-4{
   padding-bottom: 20px;
 }
 

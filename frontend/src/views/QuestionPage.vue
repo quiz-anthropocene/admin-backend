@@ -1,17 +1,14 @@
 <template>
   <section>
-    <QuestionFilter />
     <router-view></router-view>
   </section>
 </template>
 
 <script>
-import QuestionFilter from '../components/QuestionFilter.vue';
 
 export default {
   name: 'QuestionPage',
   components: {
-    QuestionFilter,
   },
 
   data() {

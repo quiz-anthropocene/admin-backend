@@ -17,12 +17,9 @@
             <span v-if="(key === 'difficulty') && Number.isInteger(value)" class="label label-difficulty"><DifficultyBadge v-bind:difficulty="value" /></span>
           </span>
         </div>
-        <div class="col-4 text-align-right">
-          <span v-on:click.stop>
-            <!-- <router-link class="no-decoration" :to="{ name: 'question-list' }"> -->
-              <span class="label label-hidden"><strong>{{ questionsDisplayedCount }}</strong> Questions</span>
-            <!-- </router-link> -->
-          </span>
+        <div class="col-4 text-align-right" v-on:click.stop>
+          <button v-if="questionFilters.category || questionFilters.tag || questionFilters.author || questionFilters.difficulty" class="btn btn-sm btn-outline-secondary margin-5" @click="clearQuestionFilters()">Réinitialiser</button>
+          <span class="label label-hidden"><strong>{{ counter }}</strong> {{ objectType }}{{questionsDisplayedCount > 1 && objectType === 'question' ? 's' : ''}}</span>
         </div>
       </div>
     </div>
@@ -30,7 +27,7 @@
     <!-- Content -->
     <section v-if="showFilterBox" class="filter-box--content">
 
-      <div v-if="categories">
+      <div v-if="categories && objectType =='question'">
         <h3>📂&nbsp;Catégories</h3>
         <FilterLabel v-for="category in categories" :key="category.name" @filter-label-clicked="updateTempQuestionFilter"
           filterType="category" v-bind:filterObject="category" v-bind:customClass="(category.name === tempQuestionFilters['category']) ? 'label-category--active' : ''" />
@@ -46,7 +43,7 @@
 
       <hr class="custom-separator" />
 
-      <div v-if="authors">
+      <div v-if="authors ">
         <h3>📝&nbsp;Auteurs</h3>
         <FilterLabel v-for="author in authors" :key="author.name" @filter-label-clicked="updateTempQuestionFilter"
           filterType="author" v-bind:filterObject="author" v-bind:customClass="(author.name === tempQuestionFilters['author']) ? 'label-author--active' : ''" />
@@ -54,7 +51,7 @@
 
       <hr class="custom-separator" />
 
-      <div v-if="difficultyLevels">
+      <div v-if="difficultyLevels && objectType =='question'">
         <h3>🏆&nbsp;Difficultés</h3>
         <FilterLabel v-for="difficulty in difficultyLevels" :key="difficulty.name" @filter-label-clicked="updateTempQuestionFilter"
           filterType="difficulty" v-bind:filterObject="difficulty" v-bind:customClass="(difficulty.value === tempQuestionFilters['difficulty']) ? 'label-difficulty--active' : ''" />
@@ -67,7 +64,7 @@
     <section v-if="showFilterBox" class="filter-box--action">
       <button class="btn btn-outline-secondary margin-5" @click="clearQuestionFilters()">Réinitialiser</button>
       <button class="btn btn-outline-dark margin-5" @click="toggleFilterBox()">Annuler</button>
-      <button class="btn margin-5" :class="JSON.stringify(questionFilters) === JSON.stringify(tempQuestionFilters) ? 'btn-outline-primary' : 'btn-primary'" @click="updateQuestionFilters()">Mettre à jour les filtres !</button>
+      <button class="btn margin-5" :class="JSON.stringify(questionFilters) === JSON.stringify(tempQuestionFilters) ? 'btn-outline-primary' : 'btn-primary'" @click="updateQuestionFiltersAndQueryParams()">Mettre à jour les filtres !</button>
     </section>
 
   </section>
@@ -80,6 +77,8 @@ import DifficultyBadge from './DifficultyBadge.vue';
 export default {
   name: 'QuestionFilter',
   props: {
+    objectType: { type: String, default: 'question' },
+    counter: { type: Number, default: 0 },
   },
   components: {
     FilterLabel,
@@ -103,15 +102,29 @@ export default {
       return this.$store.state.categories;
     },
     tags() {
-      return this.$store.state.tags
-        .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
-        .filter((t) => t.question_count)
-        .sort((a, b) => a.name.localeCompare(b.name));
+      let tagsAvailable = [];
+      if (this.objectType === 'question') {
+        tagsAvailable = this.$store.state.tags
+          .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
+          .filter((t) => t.question_count)
+          .sort((a, b) => a.name.localeCompare(b.name));
+      } else {
+        return this.$store.state.quizTags;
+      }
+      return tagsAvailable;
     },
     authors() {
-      return this.$store.state.authors
-        .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
-        .sort((a, b) => b.question_count - a.question_count);
+      let authorsAvailable = [];
+      if (this.objectType === 'question') {
+        authorsAvailable = this.$store.state.authors
+          .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
+          .sort((a, b) => b.question_count - a.question_count);
+      } else {
+        authorsAvailable = this.$store.state.quizAuthors
+          .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
+          .sort((a, b) => b.question_count - a.question_count);
+      }
+      return authorsAvailable;
     },
     difficultyLevels() {
       return this.$store.state.difficultyLevels;
@@ -122,6 +135,21 @@ export default {
     questionsDisplayedCount() {
       return this.$store.state.questionsDisplayed.length;
     },
+    quizzes() {
+      return this.$store.state.quizzes;
+    },
+  },
+
+  watch: {
+    // eslint-disable-next-line
+    objectType (newType, oldType) {
+      this.updateQuestionFilters();
+    },
+    quizzes() {
+      // We need to updateFilter because sometimes the quizzes
+      // or questions doen't exist in mounted
+      this.updateQuestionFilters();
+    },
   },
 
   mounted() {
@@ -131,8 +159,8 @@ export default {
           this.tempQuestionFilters[key] = this.$route.query[key];
         }
       });
-      this.updateQuestionFilters();
     }
+    this.updateQuestionFilters();
   },
 
   methods: {
@@ -144,6 +172,7 @@ export default {
       this.tempQuestionFilters[data.key] = (this.tempQuestionFilters[data.key] === data.value) ? null : data.value;
     },
     clearQuestionFilters() {
+      this.$router.push({ query: {} });
       this.tempQuestionFilters = {
         category: null,
         tag: null,
@@ -152,9 +181,23 @@ export default {
       };
       this.updateQuestionFilters();
     },
+    updateQuestionFiltersAndQueryParams() {
+      const query = {};
+      Object.keys(this.tempQuestionFilters).forEach((key) => {
+        if (this.tempQuestionFilters[key] !== null) {
+          query[key] = this.tempQuestionFilters[key];
+        }
+      });
+      this.$router.push({ query });
+      this.updateQuestionFilters();
+    },
     updateQuestionFilters() {
       this.showFilterBox = false;
-      this.$store.dispatch('UPDATE_QUESTION_FILTERS', this.tempQuestionFilters);
+      if (this.objectType === 'question') {
+        this.$store.dispatch('UPDATE_QUESTION_FILTERS', this.tempQuestionFilters);
+      } else {
+        this.$store.dispatch('UPDATE_QUIZ_FILTERS', this.tempQuestionFilters);
+      }
     },
   },
 };

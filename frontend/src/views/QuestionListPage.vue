@@ -1,5 +1,6 @@
 <template>
   <section>
+    <QuestionFilter objectType="question" :counter="questionsDisplayed.length" />
     <!-- Question List -->
     <div v-if="questionsDisplayed" id="question-list" class="row">
       <div class="col-lg-4 col-sm-6" v-for="question in questionsDisplayed" :key="question.id">
@@ -16,6 +17,7 @@
 
 <script>
 import { metaTagsGenerator } from '../utils';
+import QuestionFilter from '../components/QuestionFilter.vue';
 import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 
 export default {
@@ -28,6 +30,7 @@ export default {
   },
   components: {
     QuestionPreviewCard,
+    QuestionFilter,
   },
 
   data() {
