@@ -327,7 +327,9 @@ def quiz_detail_answer_event(request, pk):
 
     if request.method == "POST":
         quiz_answer_event = QuizAnswerEvent.objects.create(
-            quiz=quiz, answer_success_count=request.data["answer_success_count"]
+            quiz=quiz,
+            question_count=quiz.question_count,
+            answer_success_count=request.data["answer_success_count"],
         )
 
         # Temporary hack to regularly cleanup Question stats

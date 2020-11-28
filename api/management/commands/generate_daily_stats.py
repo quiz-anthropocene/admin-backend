@@ -7,7 +7,7 @@ from api.models import (
     # QuestionAggStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
-    # QuizAnswerEvent,
+    QuizAnswerEvent,
     # QuizFeedbackEvent,
     DailyStat,
 )
@@ -15,7 +15,12 @@ from api.models import (
 
 def cleanup_question_answer_events():
     """
-    cleanup QuestionAnswerEvent
+    loop on QuestionAnswerEvent
+    - update QuestionAggStat 'answer_count' and 'answer_success_count'
+    - update DailyStat
+        - global 'question_answer_count' and 'question_answer_from_quiz_count'
+        - hour split 'question_answer_count' and 'question_answer_from_quiz_count'
+    delete QuestionAnswerEvent
     """
     print("=== starting QuestionAnswerEvent cleanup")
 
@@ -81,7 +86,7 @@ def cleanup_question_answer_events():
                 date_hour_stat_from_quiz_count = date_hour_df[
                     date_hour_df["source"] == "quiz"
                 ].shape[0]
-                # update question
+                # update daily stat hour count
                 daily_stat.hour_split[str(date_hour_unique)][
                     "question_answer_count"
                 ] += date_hour_stat_count
@@ -99,7 +104,12 @@ def cleanup_question_answer_events():
 
 def cleanup_question_feedback_events():
     """
-    cleanup QuestionFeedbackEvent
+    loop on QuestionFeedbackEvent
+    - update QuestionAggStat 'like_count' and 'dislike_count'
+    - update DailyStat
+        - global 'question_feedback_count' and 'question_feedback_from_quiz_count'
+        - hour split 'question_feedback_count' and 'question_feedback_from_quiz_count'
+    delete QuestionFeedbackEvent
     """
     print("=== starting QuestionFeedbackEvent cleanup")
 
@@ -171,7 +181,7 @@ def cleanup_question_feedback_events():
                 date_hour_feedback_from_quiz_count = date_hour_df[
                     date_hour_df["source"] == "quiz"
                 ].shape[0]
-                # update daily stat
+                # update daily stat hour count
                 daily_stat.hour_split[str(date_hour_unique)][
                     "question_feedback_count"
                 ] += date_hour_feedback_count
@@ -189,11 +199,51 @@ def cleanup_question_feedback_events():
 
 def cleanup_quiz_answer_events():
     """
-    cleanup QuizAnswerEvent
+    loop on QuizAnswerEvent
+    - update DailyStat
+        - global 'quiz_answer_count'
+        - hour split 'quiz_answer_count'
 
-    TODO: how to keep score ?
+    WARNING: QuizAnswerEvent aren't deleted, so run only once !
+    TODO: how to keep score ? how to delete QuizAnswerEvent ?
     """
-    pass
+    quiz_stats = QuizAnswerEvent.objects.all()
+    quiz_stats_df = pd.DataFrame.from_records(quiz_stats.values())
+    print(f"{quiz_stats_df.shape[0]} new answers")
+
+    if quiz_stats_df.shape[0]:
+        # aggregate by day / hour
+        quiz_stats_df["created_date"] = [d.date() for d in quiz_stats_df["created"]]
+        quiz_stats_df["created_hour"] = [
+            d.time().hour for d in quiz_stats_df["created"]
+        ]
+        # get list of unique dates
+        date_list = quiz_stats_df["created_date"].unique()
+        print(f"{len(date_list)} unique dates")
+
+        # loop on unique dates
+        for date_unique in date_list:
+            daily_stat, created = DailyStat.objects.get_or_create(date=date_unique)
+            date_df = quiz_stats_df[quiz_stats_df["created_date"] == date_unique]
+            # get number of stats
+            date_stat_count = date_df.shape[0]
+            # update daily stat
+            daily_stat.quiz_answer_count += date_stat_count
+
+            # get list of unique date hours
+            date_hour_list = date_df["created_hour"].unique()
+            # loop on unique hours
+            for date_hour_unique in date_hour_list:
+                date_hour_df = date_df[date_df["created_hour"] == date_hour_unique]
+                # get number of stats
+                date_hour_stat_count = date_hour_df.shape[0]
+                # update daily stat hour count
+                daily_stat.hour_split[str(date_hour_unique)][
+                    "quiz_answer_count"
+                ] += date_hour_stat_count
+
+            # save daily stat
+            daily_stat.save()
 
 
 def cleanup_quiz_feedback_events():

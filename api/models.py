@@ -753,7 +753,13 @@ class QuizAnswerEvent(models.Model):
     quiz = models.ForeignKey(
         Quiz, null=True, on_delete=models.CASCADE, related_name="stats"
     )
+    # Why do we store the value instead of retrieving quiz.question_count ?
+    # Because the value can change (adding or removing questions from a quiz)
+    question_count = models.IntegerField(
+        default=0, editable=False, help_text="La nombre de questions du quiz",
+    )
     answer_success_count = models.IntegerField(
+        default=0,
         editable=False,
         help_text="La nombre de réponses correctes trouvées par l'internaute",
     )
@@ -762,10 +768,6 @@ class QuizAnswerEvent(models.Model):
     )
 
     objects = QuizAnswerEventQuerySet.as_manager()
-
-    @property
-    def question_count(self):
-        return self.quiz.question_count
 
 
 class QuizFeedbackEventQuerySet(models.QuerySet):

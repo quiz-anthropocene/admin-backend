@@ -670,7 +670,7 @@ class QuizAnswerEventAdmin(ExportMixin, admin.ModelAdmin):
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
 
     def get_readonly_fields(self, request, obj=None):
-        return [f.name for f in obj._meta.fields] + ["question_count"]
+        return [f.name for f in obj._meta.fields]
 
     def has_add_permission(self, request, obj=None):
         return False
