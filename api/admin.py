@@ -265,7 +265,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         "validation_status",
         "tags",
     )
-    ordering = ("id",)  # "answer_count_agg", "answer_success_rate",
+    ordering = ("-id",)  # "answer_count_agg", "answer_success_rate",
     actions = [
         "export_as_csv",
         "export_as_json",
@@ -411,7 +411,7 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
         "publish",
         "author",
     )
-    ordering = ("name",)
+    ordering = ("-id",)
     # filter_vertical = (
     #     "questions",
     # )
@@ -559,7 +559,7 @@ class QuestionAnswerEventAdmin(ExportMixin, admin.ModelAdmin):
         "created",
     )
     list_filter = ("source",)
-    ordering = ("id",)
+    ordering = ("-id",)
     actions = [
         "export_as_csv",
         "export_as_json",
@@ -614,7 +614,7 @@ class QuestionFeedbackEventAdmin(ExportMixin, admin.ModelAdmin):
         "created",
     )
     list_filter = ("source",)
-    ordering = ("id",)
+    ordering = ("-id",)
     actions = [
         "export_as_csv",
         "export_as_json",
@@ -666,7 +666,7 @@ class QuizAnswerEventAdmin(ExportMixin, admin.ModelAdmin):
         "created",
     )
     list_filter = ("quiz",)
-    ordering = ("id",)
+    ordering = ("-id",)
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
 
     def get_readonly_fields(self, request, obj=None):
@@ -716,7 +716,7 @@ class QuizFeedbackEventAdmin(ExportMixin, admin.ModelAdmin):
         "created",
     )
     # list_filter = ("source",)
-    ordering = ("id",)
+    ordering = ("-id",)
     actions = [
         "export_as_csv",
         "export_as_json",
@@ -748,7 +748,7 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
         "created",
     )
     list_filter = ("date",)
-    ordering = ("id",)
+    ordering = ("-id",)
     actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
 
     def get_readonly_fields(self, request, obj=None):
