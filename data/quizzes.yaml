@@ -549,7 +549,7 @@
 - model: api.quiz
   pk: 53
   fields:
-    name: Les 10 questions les plus dures
+    name: Les 10 questions les plus difficiles du site
     introduction: "Les questions présentées dans ce quiz ont été choisies spécifiquement,
       et ont toutes le niveau de difficulté le plus élevé : ce n'est donc pas le quiz
       par lequel commencer !\r\n\r\nPersonne n'a eu la moyenne à ce quiz à la première
@@ -562,7 +562,7 @@
     image_background_url: https://cdn.pixabay.com/photo/2016/11/21/15/28/brain-1845962_1280.jpg
     publish: true
     created: 2020-11-27
-    updated: 2020-11-27
+    updated: 2020-11-28
     questions:
     - 45
     - 80
@@ -575,3 +575,42 @@
     - 573
     - 597
     tags: []
+- model: api.quiz
+  pk: 54
+  fields:
+    name: Born in the USA
+    introduction: "Les États-Unis sont rentrés dans notre imaginaire collectif : les
+      cow-boys, New-York, Hollywood, la Silicon Valley, ... Le rêve américain !\r\nMais
+      les États-Unis, ce sont aussi des consommateurs effrénés de pétrole, un des
+      pus gros producteurs d'énergie fossiles au monde, et un des plus gros émetteurs
+      de CO2 de la planète.\r\nDécouvrez la face sombre des États-Unis dans ces quelques
+      questions."
+    conclusion: "De nos jours, quand on pense pétrole on pense Moyen-Orient, Arabie
+      Saoudite, ... mais le pays du pétrole par excellence, ce sont les États-Unis
+      !\r\nOh, et tant qu'on parle de pétrole, je vous invite à aller faire un tour
+      sur notre page de quiz, vous trouverez quelques questions pour étancher votre
+      soif d'or noir ;)"
+    difficulty_average: 2.6666666666666665
+    author: laydgeur
+    image_background_url: https://cdn.pixabay.com/photo/2017/12/08/08/17/america-3005258_1280.jpg
+    publish: false
+    created: 2020-11-28
+    updated: 2020-11-28
+    questions:
+    - 246
+    - 278
+    - 325
+    - 353
+    - 358
+    - 360
+    - 439
+    - 503
+    - 539
+    - 626
+    - 666
+    - 668
+    tags:
+    - 11
+    - 13
+    - 31
+    - 80

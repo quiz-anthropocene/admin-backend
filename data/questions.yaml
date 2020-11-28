@@ -86,9 +86,11 @@
     answer_accessible_url: https://www.youtube.com/watch?v=b4kPjnBRZ-E
     answer_scientific_url: https://mrmondialisation.org/le-paradoxe-de-jevons-ou-pourquoi-il-nexiste-pas-de-croissance-verte/
     answer_image_url: https://images.theconversation.com/files/297327/original/file-20191016-98644-c9y1zz.png
-    answer_image_explanation: Exemple de l'effet rebond lié au covoiturage (dans le
-      cas d’un scénario de covoiturage volontariste (hausse de 25 % du taux d’occupation
-      moyen des véhicules en Île-de-France))
+    answer_image_explanation: 'Exemple de l''effet rebond lié au covoiturage (dans
+      le cas d’un scénario de covoiturage volontariste (hausse de 25 % du taux d’occupation
+      moyen des véhicules en Île-de-France)
+
+      (Source de l''image : Viguié et Coulombel, à partir de Coulombel et al. (2019))'
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
@@ -203,8 +205,8 @@
 - model: api.question
   pk: 7
   fields:
-    text: Des scientifiques ont suivi les populations de 30,000 espèces de vertébrés
-      sur 40 ans. Qu'ont-ils observé ?
+    text: Des scientifiques ont suivi la taille des populations de 30,000 espèces
+      de vertébrés sur 40 ans. Qu'ont-ils observé ?
     hint: ''
     type: QCM
     category: 4
@@ -239,7 +241,8 @@
   pk: 8
   fields:
     text: Si on arrêtait aujourd'hui toutes nos émissions de gaz à effet de serre,
-      combien de temps revenir au niveau antérieur à la révolution industrielle ?
+      combien de temps faudrait-il pour revenir au niveau antérieur à la révolution
+      industrielle ?
     hint: ''
     type: QCM
     category: 1
@@ -343,7 +346,7 @@
     category: 5
     difficulty: 2
     answer_option_a: Agriculture
-    answer_option_b: Bâtiment
+    answer_option_b: Résidentiel + Tertiaire
     answer_option_c: Industrie
     answer_option_d: Transports
     answer_correct: b
@@ -474,7 +477,7 @@
     difficulty: 1
     answer_option_a: Protoxyde d'Azote (N2O)
     answer_option_b: Dioxyde de Carbone (CO2)
-    answer_option_c: Eau (H2O)
+    answer_option_c: Vapeur d'eau (H2O)
     answer_option_d: Oxygène (O2)
     answer_correct: d
     has_ordered_answers: false
@@ -543,7 +546,7 @@
     type: QCM
     category: 1
     difficulty: 4
-    answer_option_a: 350 millions de tonnes, sot 45 kg / habitant en moyenne
+    answer_option_a: 350 millions de tonnes, soit 45 kg / habitant en moyenne
     answer_option_b: 3,5 milliards de tonnes, soit 450 kg/habitant
     answer_option_c: 35 milliards de tonnes, soit 4,5 tonnes / habitant
     answer_option_d: 350 milliards de tonnes, soit 45 tonnes / habitant
@@ -1423,7 +1426,7 @@
 - model: api.question
   pk: 42
   fields:
-    text: Pendant d'année faut-il à du CO2 émis pour s'évacuer de l'atmosphère ?
+    text: Combien d'années faut-il à du CO2 émis pour s'évacuer de l'atmosphère ?
     hint: ''
     type: QCM
     category: 1
@@ -1734,8 +1737,8 @@
 - model: api.question
   pk: 51
   fields:
-    text: Combien d'hectares de terres arables disparaissent chaque minute du fait
-      de l'urbanisation ?
+    text: Dans le monde, combien d'hectares de terres arables disparaissent chaque
+      minute du fait de l'urbanisation ?
     hint: ''
     type: QCM
     category: 6
@@ -1821,42 +1824,37 @@
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-09-28
-    tags:
-    - 2
+    tags: []
 - model: api.question
   pk: 54
   fields:
-    text: En quelle année les émissions de CO2 de la Chine ont-elles dépassé celles
-      des États-Unis ?
+    text: Les particules fines en France causent chaque année...
     hint: ''
     type: QCM
-    category: 2
-    difficulty: 4
-    answer_option_a: '1976'
-    answer_option_b: '1986'
-    answer_option_c: '1996'
-    answer_option_d: '2006'
+    category: 3
+    difficulty: 2
+    answer_option_a: des crises d'asthme, mais pas de mortalité avérée
+    answer_option_b: 1000 morts
+    answer_option_c: 5000 morts
+    answer_option_d: 48 000 morts
     answer_correct: d
     has_ordered_answers: true
-    answer_explanation: Avant cette date, les Etats-Unis ont été le premier émetteur
-      mondial pendant un siècle.
-    answer_accessible_url: ''
-    answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r146.jpg
+    answer_explanation: La pollution atmosphérique constitue la deuxième cause de
+      mortalité évitable en France, derrière le tabac, mais devant l'alcool.
+    answer_accessible_url: https://www.futura-sciences.com/sante/actualites/vie-pollution-air-fleau-reduit-plus-esperance-vie-monde-63256/
+    answer_scientific_url: ''
+    answer_image_url: https://img.lemde.fr/2019/02/27/0/0/534/790/688/0/60/0/4fc8975_hhpqAspZg2YOSObK32N1qr8C.png
     answer_image_explanation: ''
-    answer_extra_info: https://twitter.com/laydgeur/status/1160996567823847425
-    author: laydgeur
-    validator: Matthieu Massart
+    answer_extra_info: ''
+    author: Matthieu Massart
+    validator: Raphael Odini
     publish: true
     validation_status: Validée
-    added: 2019-08-12
+    added: 2020-03-10
     created: 2020-03-10
     updated: 2020-09-28
     tags:
-    - 10
-    - 13
-    - 72
-    - 80
+    - 1
 - model: api.question
   pk: 55
   fields:
@@ -2381,11 +2379,11 @@
   pk: 71
   fields:
     text: A combien s'élève l'empreinte carbone d'un français (2018, en équivalent
-      CO2 ) ?
+      CO2) ?
     hint: ''
     type: QCM
     category: 2
-    difficulty: 4
+    difficulty: 2
     answer_option_a: 2 tonnes
     answer_option_b: 5 tonnes
     answer_option_c: 11 tonnes
@@ -2619,10 +2617,12 @@
 - model: api.question
   pk: 78
   fields:
-    text: L'objectif de la COP21 à l'horizon 2050 est que chaque humain n'émette pas
-      plus que 2,1 tonnes d'équivalent CO2 par an. Imaginons que je ne fasse strictement
-      rien d'autre de l'année. Combien de vols Paris-New York aller-retour pourrais-je
-      me permettre ?
+    text: 'L''objectif de la COP21 à l''horizon 2050 est que chaque humain n''émette
+      pas plus que 2,1 tonnes d''équivalent CO2 par an.
+
+      Imaginons que je ne fasse strictement rien d''autre de l''année (plus de chauffage,
+      de voiture, d''achats...). Combien de vols Paris-New York aller-retour pourrais-je
+      me permettre ?'
     hint: ''
     type: QCM
     category: 2
@@ -3791,7 +3791,7 @@
       soit 15 MJ\n1 kg de sucre : 17 MJ. \nÉnergie de combustion d’1 l d'essence =
       33 MJ. \nLa combustion d'1 litre d'essence permet de dégager en ordre de grandeur
       100 heures d'un humain qui pédalerait sur une dynamo."
-    answer_accessible_url: ''
+    answer_accessible_url: https://fr.wikipedia.org/wiki/Ordres_de_grandeur_d%27%C3%A9nergie
     answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/documentation-gene/index/page/New_liquides
     answer_image_url: ''
     answer_image_explanation: ''
@@ -4040,7 +4040,7 @@
     hint: ''
     type: QCM
     category: 2
-    difficulty: 1
+    difficulty: 2
     answer_option_a: 1 %
     answer_option_b: 5 %
     answer_option_c: 10 %
@@ -5002,8 +5002,11 @@
     answer_option_d: Russie
     answer_correct: b
     has_ordered_answers: false
-    answer_explanation: Les Etats-Unis totalisent plus de 20% de la production totale.
-      La Russie est juste derrière.
+    answer_explanation: 'Les États-Unis totalisent plus de 20% de la production mondiale
+      de gaz, notamment grâce au boom du gaz de schiste depuis le début des années
+      2010.
+
+      La Russie est juste derrière en 2ème producteur mondial.'
     answer_accessible_url: ''
     answer_scientific_url: https://www.iea.org/reports/key-world-energy-statistics-2019
     answer_image_url: https://149354316.v2.pressablecdn.com/wp-content/uploads/2019/11/20191127_Russia_02-1.jpg
@@ -5034,9 +5037,11 @@
     answer_option_d: Vin
     answer_correct: a
     has_ordered_answers: false
-    answer_explanation: '10 kg CO2eq pour 1 kg de beurre. Ce chiffre tient compte
-      de tout le processus d’élaboration : production, transformation, conditionnement,
-      transport. Il faut une vingtaine de litres de lait pour faire 1 kg de beurre.'
+    answer_explanation: '10 kg d''équivalent CO2 pour se procurer 1 kg de beurre.
+
+      Ce chiffre tient compte de tout le processus d’élaboration : production, transformation,
+      conditionnement, transport. Il faut une vingtaine de litres de lait pour faire
+      1 kg de beurre.'
     answer_accessible_url: ''
     answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/Datalab-25-menages-environnement-cc-ed-2017-oct2017-b.pdf
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r048.jpg
@@ -7400,7 +7405,7 @@
       de glaciation et déglaciation.
     type: QCM
     category: 1
-    difficulty: 4
+    difficulty: 3
     answer_option_a: La variation du niveau de l'océan
     answer_option_b: Les variations de l'orbite terrestre
     answer_option_c: Les variations de CO2
@@ -7674,7 +7679,9 @@
 - model: api.question
   pk: 230
   fields:
-    text: Quel est le rendement moyen d'un moteur thermique ?
+    text: Le rendement d’un moteur est le rapport entre l’énergie mécanique en sortie
+      et l’énergie fournie en entrée au moteur. Quel est le rendement moyen d'un moteur
+      thermique ?
     hint: ''
     type: QCM
     category: 5
@@ -7685,12 +7692,9 @@
     answer_option_d: 55 %
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: Le rendement moyen d’un moteur thermique est d’environ 40%
-      (36% pour essence et 42% pour diesel). Le rendement d’un moteur est le rapport
-      entre l’énergie fournie au moteur (énergie chimique contenue dans le carburant)
-      et l’énergie mécanique restituée. Le reste est principalement dissipé en chaleur
-      dans l'atmosphère. C'est une limite thermodynamique des moteurs thermiques (cycle
-      de Carnot).
+    answer_explanation: 36% pour essence et 42% pour diesel pour être précis. Le reste
+      est principalement dissipé en chaleur dans l'atmosphère. C'est une limite thermodynamique
+      des moteurs thermiques (cycle de Carnot).
     answer_accessible_url: https://www.ifpenergiesnouvelles.fr/enjeux-et-prospective/decryptages/transports/les-vehicules-essence-et-diesel
     answer_scientific_url: ''
     answer_image_url: ''
@@ -7777,8 +7781,8 @@
 - model: api.question
   pk: 233
   fields:
-    text: Quelle est la part du méthane anthropique (créé par l'homme) provenant de
-      la culture du riz ?
+    text: Quelle est la part du méthane d'origine humaine qui provient de la culture
+      du riz ?
     hint: ''
     type: QCM
     category: 1
@@ -7858,7 +7862,8 @@
     answer_correct: a
     has_ordered_answers: false
     answer_explanation: L'Allemagne représente à elle seule près d'un quart (22,5%)
-      des émissions totales de l'Union Européenne.
+      des émissions totales de l'Union Européenne, principalement à cause de ses centrales
+      électriques à charbon.
     answer_accessible_url: https://www.lemonde.fr/planete/article/2019/05/08/l-ue-a-reduit-ses-emissions-de-co2-en-2018-mais-en-ordre-disperse_5459720_3244.html
     answer_scientific_url: https://ec.europa.eu/eurostat/documents/2995521/9779955/8-08052019-AP-FR.pdf
     answer_image_url: https://img.bfmtv.com/c/7778/6571/241/82fbb2c7503afdd6e6e95a898c17b.jpg
@@ -8206,8 +8211,10 @@
 - model: api.question
   pk: 246
   fields:
-    text: Les Etats-Unis représentent 4,5% de la population mondiale. Quelle est leur
-      part dans la consommation mondiale d’essence automobile ?
+    text: 'Les Etats-Unis représentent 4,5% de la population mondiale.
+
+      Mais quelle est leur part dans la consommation mondiale d’essence automobile
+      ?'
     hint: ''
     type: QCM
     category: 2
@@ -8218,9 +8225,8 @@
     answer_option_d: 36 %
     answer_correct: d
     has_ordered_answers: true
-    answer_explanation: Les Etats-Unis consomment 36% de l’essence mondiale, soit
-      environ 540 milliards de litres d’essence par an, ou encore 3 fois la consommation
-      de la Chine.
+    answer_explanation: Soit environ 540 milliards de litres d’essence par an.  Ou
+      encore 3 fois la consommation... de la Chine.
     answer_accessible_url: ''
     answer_scientific_url: https://www.eia.gov/international/overview/world
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r130.jpg
@@ -8310,7 +8316,7 @@
     hint: ''
     type: QCM
     category: 5
-    difficulty: 1
+    difficulty: 2
     answer_option_a: '1960'
     answer_option_b: '1973'
     answer_option_c: '1979'
@@ -8337,7 +8343,7 @@
 - model: api.question
   pk: 250
   fields:
-    text: A quelle quantité de TNT  l'énergie contenue dans un réservoir de 50 litres
+    text: A quelle quantité de TNT l'énergie contenue dans un réservoir de 50 litres
       d'essence équivaut-elle ?
     hint: ''
     type: QCM
@@ -8438,9 +8444,11 @@
 - model: api.question
   pk: 253
   fields:
-    text: L’état américain du Wyoming compte 570 000 habitants (agglomération de Montpellier
-      environ). Si c’était un pays, quel serait son classement dans la production
-      mondiale de charbon ?
+    text: 'L’état américain du Wyoming compte 570 000 habitant - soit l''équivalent
+      de l''agglomération de Montpellier.
+
+      Si c’était un pays, quel serait son classement dans la production mondiale de
+      charbon ?'
     hint: ''
     type: QCM
     category: 5
@@ -8452,8 +8460,8 @@
     answer_correct: a
     has_ordered_answers: true
     answer_explanation: En 2017, l’état Américain du Wyoming a produit 340 millions
-      de tonnes de charbon. Ce qui le classerait à la 7ème place mondiale des pays
-      producteurs de charbon, devant l’Afrique du Sud, l’Allemagne et la Pologne.
+      de tonnes de charbon. Ce qui le classerait devant l’Afrique du Sud, l’Allemagne
+      et la Pologne.
     answer_accessible_url: ''
     answer_scientific_url: https://www.eia.gov/coal/data/browser/
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r137.jpg
@@ -8750,7 +8758,7 @@
     hint: ''
     type: QCM
     category: 2
-    difficulty: 4
+    difficulty: 3
     answer_option_a: '1976'
     answer_option_b: '1986'
     answer_option_c: '1996'
@@ -9272,8 +9280,8 @@
 - model: api.question
   pk: 278
   fields:
-    text: Si les voitures, pick-ups et camionnettes des Etats-Unis étaient un pays,
-      quel serait son classement dans les émissions de CO2 mondiales ?
+    text: Si les voitures, pick-ups et camionnettes des États-Unis étaient un pays,
+      quel serait son classement dans les émissions mondiales de CO2 en 2018 ?
     hint: ''
     type: QCM
     category: 2
@@ -9284,9 +9292,10 @@
     answer_option_d: 24ème
     answer_correct: a
     has_ordered_answers: true
-    answer_explanation: Les voitures, pick-ups et camionnettes des Etats-Unis émettent
-      1,05 milliards de tonnes de CO2 chaque année, ce qui les classerait à la 6ème
-      position des pays les plus émetteurs, entre le Japon et l’Allemagne.
+    answer_explanation: 'Les voitures, pick-ups et camionnettes des États-Unis émettent
+      plus d''un milliard de tonnes de CO2 chaque année.
+
+      Un tel pays serait entre le Japon et l’Allemagne en termes d''émissions.'
     answer_accessible_url: ''
     answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r162.jpg
@@ -9294,11 +9303,11 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1168965089627693057
     author: laydgeur
     validator: Raphael Odini
-    publish: false
-    validation_status: Écartée
+    publish: true
+    validation_status: Validée
     added: 2019-09-03
     created: 2020-05-20
-    updated: 2020-05-20
+    updated: 2020-11-28
     tags:
     - 13
     - 33
@@ -9711,15 +9720,15 @@
     type: QCM
     category: 5
     difficulty: 2
-    answer_option_a: '34'
-    answer_option_b: '680'
-    answer_option_c: 2 040
-    answer_option_d: 32 523
+    answer_option_a: '30'
+    answer_option_b: '700'
+    answer_option_c: 2 000
+    answer_option_d: 30 000
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: Il y a aux Etats-Unis 680 mines de charbon en activité. Il
-      y en a une trentaine en Pologne et une dizaine en Allemagne. Le charbon est
-      de loin la source d'énergie fossile la plus émettrice en CO2.
+    answer_explanation: Il y a aux Etats-Unis 680 mines de charbon en activité. A
+      comparer à une trentaine en Pologne et une dizaine en Allemagne. Le charbon
+      est de loin la source d'énergie fossile la plus émettrice en CO2.
     answer_accessible_url: ''
     answer_scientific_url: https://www.eia.gov/coal/annual/pdf/acr.pdf
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r175.jpg
@@ -10470,10 +10479,9 @@
     answer_option_d: 28ème
     answer_correct: a
     has_ordered_answers: true
-    answer_explanation: Si le Texas était un pays, ce serait le 7ème plus gros émetteur
-      mondial de CO2, juste après le Japon et l’Allemagne, et devant l’Iran et l’Arabie
-      Saoudite. Le Texas représente 13% des émissions des Etats-Unis, mais moins de
-      9% de sa population.
+    answer_explanation: Cela place le Texas juste après le Japon et l’Allemagne, et
+      devant l’Iran et l’Arabie Saoudite. Le Texas représente 13% des émissions des
+      Etats-Unis, mais moins de 9% de sa population.
     answer_accessible_url: ''
     answer_scientific_url: https://www.eia.gov/environment/emissions/state/analysis/
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r197.jpg
@@ -10866,8 +10874,8 @@
 - model: api.question
   pk: 325
   fields:
-    text: Combien y a-t-il de puits de pétrole et de gaz en activité aux États-Unis
-      ?
+    text: En 2018, combien y avait-t-il de puits de pétrole et de gaz en activité
+      aux États-Unis ?
     hint: ''
     type: QCM
     category: 5
@@ -10878,9 +10886,11 @@
     answer_option_d: 1 million
     answer_correct: d
     has_ordered_answers: true
-    answer_explanation: Il y a aux Etats-Unis presque 1 million de puits de pétrole
-      et de gaz en activité. 80% d’entre eux produisent moins de 15 barils par jour
-      (~2400 litres).
+    answer_explanation: 'Il y a aux Etats-Unis presque 1 million de puits de pétrole
+      et de gaz en activité (chiffres 2018).
+
+      80% d’entre eux produisent moins de 15 barils par jour (~2400 litres) et ne
+      contribuent qu''à moins de 10% de la production totale du pays.'
     answer_accessible_url: ''
     answer_scientific_url: https://www.eia.gov/petroleum/wells/
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r209.jpg
@@ -10888,11 +10898,11 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1195256778994401280
     author: laydgeur
     validator: Raphael Odini
-    publish: false
-    validation_status: Écartée
+    publish: true
+    validation_status: Validée
     added: 2019-11-15
     created: 2020-05-20
-    updated: 2020-05-20
+    updated: 2020-11-28
     tags:
     - 11
     - 41
@@ -11831,11 +11841,11 @@
       https://twitter.com/laydgeur/status/1214647943493562371'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
-    validation_status: Écartée
+    publish: true
+    validation_status: Validée
     added: 2020-01-07
     created: 2020-05-20
-    updated: 2020-05-20
+    updated: 2020-11-29
     tags:
     - 40
     - 80
@@ -11974,8 +11984,8 @@
 - model: api.question
   pk: 358
   fields:
-    text: En combien de jours un Américain émet-il autant qu'un Éthiopien en un an
-      ?
+    text: En combien de jours un Américain émet-il autant de CO2 qu'un Éthiopien en
+      un an ?
     hint: ''
     type: QCM
     category: 2
@@ -11986,9 +11996,8 @@
     answer_option_d: 30 jours
     answer_correct: a
     has_ordered_answers: true
-    answer_explanation: Il faut 3 jours à un Américain (et 10 jours à un Français)
-      pour émettre autant de CO2 qu'un Ethiopien pendant 1 an. Pour émettre autant
-      de CO2 que les Etats-Unis il faudrait 40 milliards d’Ethiopiens.
+    answer_explanation: C'est 10 jours pour un Français. Les émissions de CO2 des
+      330 millions d'Américains correspondent à ce qu'émettraient...40 milliards d’Ethiopiens.
     answer_accessible_url: ''
     answer_scientific_url: http://www.globalcarbonatlas.org/fr/CO2-emissions
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r242.jpg
@@ -12043,21 +12052,25 @@
 - model: api.question
   pk: 360
   fields:
-    text: Dans le monde, combien de pays produisent plus d'électricité que les centrales
-      à gaz des États-Unis ?
+    text: 'Dans le monde, combien de pays produisent plus d''électricité que les seules
+      centrales à gaz des États-Unis ?
+
+      (pays autres que les États-Unis)'
     hint: ''
     type: QCM
     category: 5
     difficulty: 4
-    answer_option_a: '2'
+    answer_option_a: '1'
     answer_option_b: '4'
     answer_option_c: '6'
     answer_option_d: '8'
     answer_correct: a
     has_ordered_answers: true
-    answer_explanation: 'Dans le monde, seuls 2 pays produisent plus d’électricité
-      que les centrales à gaz américaines : la Chine, ...et les Etats-Unis. Elles
-      ont produit plus d’électricité que l’Inde et ses 1,3 milliards d’habitants.'
+    answer_explanation: 'Dans le monde, 1 seul pays autre que les États-Unis produit
+      plus d’électricité que les centrales à gaz américaines : la Chine.
+
+      Les seules centrales à gaz des États-Unis ont par exemple produit plus d’électricité
+      que la totalité de l’Inde et ses 1,3 milliards d’habitants.'
     answer_accessible_url: ''
     answer_scientific_url: https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf#page56
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r244.jpg
@@ -12065,11 +12078,11 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1218076428559929344
     author: laydgeur
     validator: Raphael Odini
-    publish: false
-    validation_status: Écartée
+    publish: true
+    validation_status: Validée
     added: 2020-01-17
     created: 2020-05-20
-    updated: 2020-05-20
+    updated: 2020-11-28
     tags:
     - 2
     - 39
@@ -12357,8 +12370,8 @@
 - model: api.question
   pk: 369
   fields:
-    text: En quelle année la concentration en CO2 dans l'atmosphère est devenue la
-      plus élevée depuis au moins 800 000 ans ?
+    text: En quelle année la concentration en CO2 dans l'atmosphère a dépassé le maximum
+      des derniers 800 000 ans ?
     hint: ''
     type: QCM
     category: 1
@@ -12369,9 +12382,13 @@
     answer_option_d: '1970'
     answer_correct: a
     has_ordered_answers: true
-    answer_explanation: La concentration en CO2 dans l'atmosphère est devenue en 1908
-      la plus élevée depuis au moins 800 000 ans, peu avant d'atteindre les 300 ppm.
-      La plus haute valeur mesurée jusqu'alors était en -311 000 av JC.
+    answer_explanation: 'La concentration en CO2 dans l''atmosphère est devenue en
+      1908 la plus élevée depuis au moins 800 000 ans, peu avant d''atteindre les
+      300 ppm.
+
+
+      La plus haute valeur mesurée jusqu''alors était en -311 000 av JC (mesure effectuée
+      dans les carottes de glace en Antarctique).'
     answer_accessible_url: https://www.konbini.com/fr/techetinnovation/lhumanite-na-jamais-connu-atmosphere-chargee-co2/
     answer_scientific_url: https://www.ncdc.noaa.gov/paleo-search/?dataTypeId=7
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r253.jpg
@@ -13572,7 +13589,7 @@
     hint: ''
     type: QCM
     category: 2
-    difficulty: 4
+    difficulty: 3
     answer_option_a: 15 jours
     answer_option_b: 1 mois
     answer_option_c: 2 mois
@@ -14748,8 +14765,7 @@
   fields:
     text: Si tous les humains vivaient au niveau moyen des Etats-Unis, combien de
       planètes Terre nous faudrait-il ?
-    hint: Les Etats-Unis sont de gros consommateurs de ressources, mais ce ne sont
-      pas les pires
+    hint: ''
     type: QCM
     category: 2
     difficulty: 2
@@ -14763,10 +14779,11 @@
       20% de la capacité de la terre, alors que leur population est d’un peu plus
       de 4% de la population mondiale. Si tous les êtres humains vivaient comme eux,
       il faudrait environ 5 planètes terre.
-    answer_accessible_url: ''
+    answer_accessible_url: https://fr.wikipedia.org/wiki/Liste_des_pays_par_empreinte_%C3%A9cologique
     answer_scientific_url: https://data.footprintnetwork.org/?_ga=2.214287760.68485461.1592040579-1962221666.1592040579#/compareCountries?type=earth&cn=231&yr=2016
-    answer_image_url: ''
-    answer_image_explanation: Image chez laydgeur, à URLisé
+    answer_image_url: https://fr.wikipedia.org/wiki/Liste_des_pays_par_empreinte_%C3%A9cologique#/media/Fichier:World_map_of_countries_by_ecological_deficit_(2013).svg
+    answer_image_explanation: Excédent ou déficit écologique par pays. Le rouge correspond
+      à un déficit entre 4 et 5 planètes.
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
@@ -14816,8 +14833,10 @@
 - model: api.question
   pk: 441
   fields:
-    text: Comment les émissions moyennes de CO2 d’un Américain se comparent-elles
+    text: 'Comment les émissions moyennes de CO2 d’un Américain se comparent-elles
       à celles d’un Indien ?
+
+      (émissions territoriales)'
     hint: L’Inde est 4 fois plus peuplée que les États-Unis, mais émet moitié moins
       de CO2.
     type: QCM
@@ -14831,9 +14850,9 @@
     has_ordered_answers: true
     answer_explanation: En 2018, un indien a émis en moyenne 2 tonnes de CO2, contre
       17 tonnes pour un américain.
-    answer_accessible_url: ''
+    answer_accessible_url: https://fr.wikipedia.org/wiki/Liste_des_pays_par_%C3%A9missions_de_dioxyde_de_carbone_par_habitant
     answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-    answer_image_url: ''
+    answer_image_url: https://upload.wikimedia.org/wikipedia/commons/4/4b/CO2_per_capita_per_country.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Citoyens Pour le Climat
@@ -15687,16 +15706,25 @@
     answer_option_d: Parce qu'il faudra démanteler la centrale un jour
     answer_correct: abcd
     has_ordered_answers: false
-    answer_explanation: ''
-    answer_accessible_url: ''
-    answer_scientific_url: ''
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_explanation: La réaction nucléaire en elle-même n’émet pas de CO2, ce qui
+      fait que l’électricité d’origine nucléaire est bas carbone, mais toutes les
+      activités en amont construction de la centrale, extraction et enrichissement
+      de l’uranium) et en aval démantèlement et gestion des déchets) sont émettrices
+      de CO2, c’est pour cela qu’il faut prendre en compte tout le cycle de vie. En
+      faisant ainsi, et d’après le GIEC, en moyenne mondiale l’électricité nucléaire
+      est au même niveau d’émissions que l’éolien et l’hydroélectricité.
+    answer_accessible_url: https://fr.wikipedia.org/wiki/Empreinte_carbone_de_l%27électricité
+    answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_annex-iii.pdf
+    answer_image_url: https://www.sfen.org/sites/default/files/public/thumbnails/image/infograf_7_3_0.png
+    answer_image_explanation: 'Émissions de gaz à effet de serre par kWh produit (en
+      CO2 équivalent). Le nucléaire est une énergie bas-carbone : sur l’ensemble de
+      son cycle de vie (construction, exploitation, démantèlement), ses émissions
+      sont comparables à celles des énergies renouvelables.'
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
     publish: false
-    validation_status: Brouillon
+    validation_status: A valider
     added: 2020-06-11
     created: 2020-06-24
     updated: 2020-06-24
@@ -16583,23 +16611,27 @@
     hint: ''
     type: QCM
     category: 5
-    difficulty: 1
-    answer_option_a: ''
-    answer_option_b: ''
-    answer_option_c: ''
-    answer_option_d: ''
-    answer_correct: ''
-    has_ordered_answers: false
-    answer_explanation: ''
-    answer_accessible_url: ''
-    answer_scientific_url: https://energystory.org/pearl-street-power-station/
-    answer_image_url: ''
+    difficulty: 3
+    answer_option_a: '1862'
+    answer_option_b: '1882'
+    answer_option_c: '1902'
+    answer_option_d: '1922'
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: 'La première centrale électrique au charbon a été mise en
+      service en 1882 à New-York.
+
+      Du nom de Pearl Street Station, elle était composée de 6 générateurs de 100kW
+      chacun et alimentait plusieurs milliers de lampes.'
+    answer_accessible_url: https://energystory.org/pearl-street-power-station/
+    answer_scientific_url: https://ethw.org/w/images/a/ae/Edison_and_Pearl_Street,_Text,_031410.pdf
+    answer_image_url: https://energystory.org/wp-content/uploads/2015/08/Pearl-Street-Station.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
     validator: ''
     publish: false
-    validation_status: Brouillon
+    validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -16744,10 +16776,13 @@
     answer_option_d: 20ème (place actuelle de la France)
     answer_correct: a
     has_ordered_answers: true
-    answer_explanation: 'Émissions totales de la Chine : 10065 MtCO2. Émissions de
-      la Chine dues au charbon : 7252 MtCO2. Émissions sans le charbon : 2813 MtCO2,
-      Elle aurait donc la 2ème place juste derrière les USA actuellement 2ème (5416
-      MtCO2) qui deviendraient 1ers, et avant l’Inde 3ème (2654 MtCO2).'
+    answer_explanation: 'Sur les 10 milliards de tonnes de CO2 émises par la Chine,
+      7,2 milliards sont dues au charbon
+
+      Sans le charbon, elle émettrait donc environ 2.8 milliards de tonnes de CO2,
+      ce qui la classerait 2ème mondiale, juste derrière les USA (actuellement 2ème
+      avec 5,4 milliards de tonnes de CO2) qui deviendraient premiers, et avant l’Inde
+      3ème (2,6 milliards de tonnes de CO2).'
     answer_accessible_url: ''
     answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
     answer_image_url: ''
@@ -16851,16 +16886,16 @@
       en cumulé 330 milliards de tonnes de CO2.
     answer_accessible_url: ''
     answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_image_url: https://ourworldindata.org/exports/annual-co2-emissions-per-country-da8ccccaf5fc9d6bab92c3527f0cc596_v20_850x600.svg
+    answer_image_explanation: de 1890 à 2006
     answer_extra_info: ''
     author: laydgeur
-    validator: ''
-    publish: false
-    validation_status: A valider
+    validator: Raphael Odini
+    publish: true
+    validation_status: Validée
     added: 2020-06-17
     created: 2020-06-24
-    updated: 2020-06-24
+    updated: 2020-11-29
     tags:
     - 2
     - 13
@@ -17271,12 +17306,12 @@
     text: En 2015 a eu lieu la COP21 à Paris. Que signifie l’acronyme COP ?
     hint: ''
     type: QCM
-    category: null
-    difficulty: 0
+    category: 6
+    difficulty: 1
     answer_option_a: Conference of the parties
     answer_option_b: Council of presidents
-    answer_option_c: Community for environment protection
-    answer_option_d: Conference observation program
+    answer_option_c: Community for environmental protection
+    answer_option_d: Climate observation program
     answer_correct: a
     has_ordered_answers: false
     answer_explanation: Le United Nations Framework Convention on Climate Change (UNFCCC)
@@ -17286,15 +17321,15 @@
       United Nations Climate Change Conference pour constater des évolutions, plus
       communément appelés Conference Of the Parties (COP), même si cette appellation
       s’applique aussi aux autres conventions des Nations Unies.
-    answer_accessible_url: https://unfccc.int/process/bodies/supreme-bodies/conference-of-the-parties-cop
-    answer_scientific_url: ''
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_accessible_url: https://www.connaissancedesenergies.org/climat-quest-ce-quune-cop-141022
+    answer_scientific_url: https://unfccc.int/process/bodies/supreme-bodies/conference-of-the-parties-cop
+    answer_image_url: https://www.afdb.org/sites/default/files/styles/1700x900/public/cop_25_in_madrid.jpg?itok=_rsG0osI
+    answer_image_explanation: COP25 à Madrid
     answer_extra_info: ''
     author: laydgeur
     validator: ''
     publish: false
-    validation_status: Brouillon
+    validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -17335,26 +17370,48 @@
   fields:
     text: Combien d’études scientifiques sont citées dans le dernier rapport d’évaluation
       du GIEC de 2014 ?
-    hint: ''
+    hint: La mission du GIEC est de "faire la synthèse des connaissances scientifiques
+      sur le changement climatique, ses impacts, et ses moyens d'atténuation".
     type: QCM
-    category: null
-    difficulty: 1
-    answer_option_a: ''
-    answer_option_b: ''
-    answer_option_c: ''
-    answer_option_d: ''
-    answer_correct: ''
-    has_ordered_answers: false
-    answer_explanation: ''
-    answer_accessible_url: ''
-    answer_scientific_url: ''
-    answer_image_url: ''
+    category: 6
+    difficulty: 4
+    answer_option_a: '30'
+    answer_option_b: '300'
+    answer_option_c: 3 000
+    answer_option_d: 30 000
+    answer_correct: d
+    has_ordered_answers: true
+    answer_explanation: 'Un rapport du GIEC est composé de 3 volets, rédigés par 3
+      groupes différents :
+
+      - Le groupe I traite de la science climatique (observations, modèles, physique,
+      ...)
+
+      - Le groupe II traite des impacts du changement climatiques, sur les sociétés
+      humaines, la faune et la flore, ...
+
+      - Le groupe III traite des moyens d''atténuer les risques, notamment avec les
+      actions à mettre en place par secteur d''activité
+
+
+      Le volet du groupe I s’appuie sur 9200 publications scientifiques, celui du
+      groupe II en cite plus de 12000, et le groupe III près de 10000.
+
+
+      Cela fait donc plus de 30000 études scientifiques citées dans le rapport d''évaluation
+      complet du GIEC.
+
+      On voit ici clairement la mission du GIEC : "faire la synthèse des connaissances
+      scientifiques sur le changement climatique, ses impacts, et ses moyens d''atténuation"'
+    answer_accessible_url: https://www.ecologie.gouv.fr/comprendre-giec
+    answer_scientific_url: https://www.ipcc.ch/report/ar5/
+    answer_image_url: https://lh3.googleusercontent.com/proxy/OlyfYX6M3WYNuGeVrsmCovGpNA_ZXixuwJsQqO_axvQWxZMXAQNQhgwAirAZyc8ZJw2GYfhjupoFQVcfcrUVGlHg8rqSB-vilOKztJhTG4SqU2rKGm0QcAJMmo-QYYv81e9QiPM
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
     validator: ''
     publish: false
-    validation_status: Brouillon
+    validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -17494,32 +17551,43 @@
 - model: api.question
   pk: 524
   fields:
-    text: Les gaz à effet de serre (GES) et le soleil influent sur le climat. En quelle
-      proportion ?
+    text: 'Les gaz à effet de serre et le soleil participent tous les deux au changement
+      climatique actuel.
+
+      En quelle proportion ?'
     hint: ''
     type: QCM
-    category: null
-    difficulty: 1
-    answer_option_a: Soleil 5 fois supérieur
-    answer_option_b: Les deux ont même influence
-    answer_option_c: GES 5 fois supérieurs
-    answer_option_d: GES 50 fois supérieurs
-    answer_correct: ''
-    has_ordered_answers: false
-    answer_explanation: ''
-    answer_accessible_url: ''
-    answer_scientific_url: ''
-    answer_image_url: ''
-    answer_image_explanation: ''
-    answer_extra_info: ''
+    category: 1
+    difficulty: 2
+    answer_option_a: Le soleil influe 6 fois plus que les gaz à effet de serre
+    answer_option_b: Les deux ont quasiment la même influence
+    answer_option_c: Les gaz à effet de serre influent 6 fois plus que le soleil
+    answer_option_d: Les gaz à effet de serre influent 60 fois plus que le soleil
+    answer_correct: d
+    has_ordered_answers: true
+    answer_explanation: L’impact sur le climat s’appelle le forçage radiatif, qui
+      s’exprime en watts par mètre carré (W/m2). Les gaz à effet de serre (CO2, mais
+      aussi méthane, protoxyde d’azote, HFC, ...) ont un forçage radiatif de +3 W/m2
+      par rapport à la période pré-industrielle. Sur la même période, le forçage radiatif
+      du soleil (dû à ses variations d’irradiance) est de +0,05 W/m2. Les gaz à effet
+      de serre ont donc 60 fois plus d’influence sur le climat que le soleil, et sont
+      par conséquent responsables de la quasi totalité du changement climatique actuel.
+    answer_accessible_url: https://www.citepa.org/fr/ges/
+    answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter08_FINAL.pdf
+    answer_image_url: https://www.citepa.org/wp-content/uploads/4.0.2_GES_forcage-768x1065.png
+    answer_image_explanation: Décomposition du forçage radiatif selon ses composantes.
+      Les gaz à effet de serre sont en haut, le soleil est tout en bas.
+    answer_extra_info: https://twitter.com/laydgeur/status/1332786312366202881?s=21
     author: laydgeur
     validator: ''
     publish: false
-    validation_status: Brouillon
+    validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-07-30
     tags:
+    - 68
+    - 98
     - 100
 - model: api.question
   pk: 525
@@ -17554,27 +17622,32 @@
 - model: api.question
   pk: 526
   fields:
-    text: Quelle a été la baisse des émissions en France pendant le confinement ?
+    text: De combien ont baissé les émissions journalières de CO2 en France pendant
+      le confinement début 2020 ?
     hint: ''
     type: QCM
-    category: null
-    difficulty: 1
-    answer_option_a: ''
-    answer_option_b: ''
-    answer_option_c: ''
-    answer_option_d: ''
-    answer_correct: ''
-    has_ordered_answers: false
-    answer_explanation: ''
-    answer_accessible_url: ''
+    category: 1
+    difficulty: 2
+    answer_option_a: -10 %
+    answer_option_b: -30 %
+    answer_option_c: -50 %
+    answer_option_d: -70 %
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: 'En France pendant le confinement en début d''année, les émissions
+      journalières de CO2 ont diminué d''environ 30%.
+
+      La baisse sur la totalité de 2020 est estimée entre 5% et 15%, avec une grosse
+      incertitude.'
+    answer_accessible_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/04/hcc_rapport_spcial_annexe.pdf
     answer_scientific_url: ''
-    answer_image_url: ''
+    answer_image_url: https://reporterre.net/local/cache-vignettes/L720xH493/arton20450-6fdd1.png?1597405073
     answer_image_explanation: ''
-    answer_extra_info: Annexe du rapport du HCC
+    answer_extra_info: ''
     author: laydgeur
     validator: ''
     publish: false
-    validation_status: Brouillon
+    validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -17585,28 +17658,47 @@
 - model: api.question
   pk: 527
   fields:
-    text: Dans le monde, quel est le secteur qui a le plus baissé ses émissions à
-      cause de la pandémie de COVID ?
+    text: Dans le monde, quel est le secteur qui a le plus baissé ses émissions (en
+      valeur absolue) à cause de la pandémie de Covid ?
     hint: ''
     type: QCM
     category: 1
-    difficulty: 1
-    answer_option_a: ''
-    answer_option_b: ''
-    answer_option_c: ''
-    answer_option_d: ''
-    answer_correct: ''
+    difficulty: 2
+    answer_option_a: L'industrie (hors production électrique)
+    answer_option_b: La production électrique
+    answer_option_c: L'aviation
+    answer_option_d: Les transports terrestres
+    answer_correct: d
     has_ordered_answers: false
-    answer_explanation: ''
-    answer_accessible_url: https://www.lemonde.fr/blog/huet/2020/05/11/covid-19-combien-de-co2-evite/
-    answer_scientific_url: ''
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_explanation: 'Les chiffres qui suivent sont des estimations valables à
+      la date de fin novembre 2020, et peuvent évoluer en fonction de la pandémie.
+
+
+      Dans le monde, le secteur qui a le plus baissé ses émissions à cause de la pandémie
+      est le secteur des transports routiers avec -840 millions de tonnes de CO2 par
+      rapport à 2019, ce qui représente plus de la moitié de la baisse mondiale.
+
+
+      L''aviation est le secteur qui a le plus baissé en relatif, avec -33%, mais
+      en valeur absolue ça ne représente "que" -90 millions de tonnes.
+
+
+      L''industrie et la production électrique ont baissé respectivement de -220 et
+      -375 millions de tonnes de CO2 par rapport à2019.'
+    answer_accessible_url: https://www.lemonde.fr/blog/huet/2020/10/16/co2-la-covid-19-surpasse-la-2eme-guerre-mondiale/
+    answer_scientific_url: https://carbonmonitor.org/
+    answer_image_url: https://asset.lemde.fr/prd-blogs/2020/10/secteurs.png
+    answer_image_explanation: Les secteurs émetteurs de CO2 étudiés par l’équipe de
+      Zhu Liu. L’électricité est en orange, les transports routiers en violet. L’aviation
+      en jaune montre que près de la moitié des émissions, donc des vols, ont disparu,
+      la chute étant plus prononcée pour les vols internationaux qui pèsent 70% de
+      la diminution. Le graphique de droite montre l’importance des transports terrestres
+      dans la chute des émissions aux Etats-Unis.
     answer_extra_info: ''
     author: laydgeur
     validator: ''
     publish: false
-    validation_status: Brouillon
+    validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -17709,7 +17801,8 @@
 - model: api.question
   pk: 531
   fields:
-    text: Auquel de ces indicateurs l'empreinte carbone est-il le mieux corrélé ?
+    text: Auquel de ces indicateurs l'empreinte carbone est-elle la mieux corrélée
+      ?
     hint: ''
     type: QCM
     category: 2
@@ -17720,16 +17813,22 @@
     answer_option_d: Le nombre d'enfants
     answer_correct: a
     has_ordered_answers: false
-    answer_explanation: ''
+    answer_explanation: 'L''indicateur le plus corrélé à l''empreinte carbone est
+      le niveau de revenus par habitant, plus ce dernier est élevé, plus les émissions
+      de CO2 sont élevés.
+
+
+      Un revenu élevé permet en effet de plus se déplacer, se chauffer, consommer,
+      ... toutes ces activités conduisent à des augmentations d''émissions.'
     answer_accessible_url: https://www.lemonde.fr/blog/huet/2019/02/06/climat-et-economie-le-co2-explique-tout/
     answer_scientific_url: ''
     answer_image_url: https://live.staticflickr.com/4918/46316143381_22a979fb60_b.jpg
     answer_image_explanation: ''
     answer_extra_info: https://jancovici.com/changement-climatique/economie/quest-ce-que-lequation-de-kaya/
     author: Matthieu Massart
-    validator: ''
+    validator: laydgeur
     publish: false
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-06-18
     created: 2020-06-24
     updated: 2020-07-23
@@ -17774,8 +17873,8 @@
 - model: api.question
   pk: 533
   fields:
-    text: 'Vrai ou faux : les transports routiers des Etats-Unis émettent plus de
-      CO2 que l’ensemble du continent africain'
+    text: '[ECARTEE] Vrai ou faux : les transports routiers des Etats-Unis émettent
+      plus de CO2 que l’ensemble du continent africain'
     hint: ''
     type: VF
     category: 2
@@ -17797,7 +17896,7 @@
     author: laydgeur
     validator: Matthieu Massart
     publish: true
-    validation_status: Validée
+    validation_status: Écartée
     added: 2020-06-19
     created: 2020-06-24
     updated: 2020-09-28
@@ -17846,6 +17945,7 @@
     updated: 2020-09-28
     tags:
     - 17
+    - 186
 - model: api.question
   pk: 535
   fields:
@@ -17987,8 +18087,10 @@
 - model: api.question
   pk: 539
   fields:
-    text: Les États-Unis ont été le 1er pays au monde à émettre plus d'1 milliard
-      de tonnes de CO2 par an. En quelle année cela s'est-il produit ?
+    text: 'Les États-Unis ont été le 1er pays au monde à émettre plus d''1 milliard
+      de tonnes de CO2 par an.
+
+      En quelle année cela s''est-il produit ?'
     hint: ''
     type: QCM
     category: 1
@@ -18001,12 +18103,13 @@
     has_ordered_answers: true
     answer_explanation: C'est en 1906 que les États-Unis sont devenus le 1er pays
       au monde à émettre plus d'1 milliard de tonnes de CO2 par an. Ils représentaient
-      alors plus de 40% des émissions mondiales.
+      alors plus de 40% des émissions mondiales. Aujourd'hui le pays émet 5x plus
+      de CO2. Et le monde 14x plus de CO2 par rapport aux émissions de 1906.
     answer_accessible_url: ''
     answer_scientific_url: https://ourworldindata.org/grapher/annual-co2-emissions-per-country
-    answer_image_url: ''
+    answer_image_url: https://ourworldindata.org/grapher/exports/annual-co-emissions-by-region.png
     answer_image_explanation: ''
-    answer_extra_info: 'image possible: https://ourworldindata.org/grapher/exports/annual-co-emissions-by-region.png'
+    answer_extra_info: ''
     author: laydgeur
     validator: Raphael Odini
     publish: true
@@ -18248,8 +18351,8 @@
   pk: 547
   fields:
     text: L’Anthropocène marque le début des impacts humains à l'échelle planétaire.
-      Mais à l'échelle locale, depuis combien de temps l’humain transforme-t-il son
-      environnement ?
+      Mais à l'échelle locale, depuis combien de temps le genre Homo transforme-t-il
+      son environnement ?
     hint: ''
     type: QCM
     category: 6
@@ -18416,19 +18519,18 @@
 - model: api.question
   pk: 552
   fields:
-    text: Notre longévité (âge maximal chez une espèce) s'est-elle rallongée dans
-      sociétés industrielles par rapport aux chasseurs-cueilleurs ?
+    text: Vrai ou faux ? La longévité (âge maximal chez une espèce) dans les sociétés
+      industrielles est plus grande que chez les chasseurs-cueilleurs.
     hint: ''
-    type: QCM
+    type: VF
     category: 8
     difficulty: 2
-    answer_option_a: Chez les chasseurs-cueilleurs
-    answer_option_b: Dans les sociétés modernes
-    answer_option_c: La longévité possible est sensiblement la même dans les deux
-      cas
+    answer_option_a: Vrai
+    answer_option_b: Faux
+    answer_option_c: ''
     answer_option_d: ''
-    answer_correct: c
-    has_ordered_answers: false
+    answer_correct: b
+    has_ordered_answers: true
     answer_explanation: 'L''espérance de vie moyenne des chasseurs-cueilleurs est
       de 30 à 40 ans, mais l''espérance de vie maximale possible est sensiblement
       la même que dans les sociétés industrielles : 70 à 80 ans. La différence provient
@@ -18444,7 +18546,7 @@
     validation_status: Validée
     added: 2020-06-25
     created: 2020-06-25
-    updated: 2020-09-28
+    updated: 2020-11-28
     tags:
     - 109
 - model: api.question
@@ -18997,8 +19099,8 @@
 - model: api.question
   pk: 570
   fields:
-    text: Quelle surface arable est perdue chaque jour du fait de la salinisation
-      ?
+    text: Quelle surface arable est perdue chaque jour dans le monde du fait de la
+      salinisation ?
     hint: ''
     type: QCM
     category: 7
@@ -19009,26 +19111,30 @@
     answer_option_d: 200,000 terrains de football
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: Deux mille hectares de terres perdus par jour, 20 milliards
-      de francs d'euros de pertes pour les cultivateurs, 20% des surfaces de culture
-      menacées… La facture du sel dans les sols agricoles est… salée, selon une étude
-      publiée fin octobre par des chercheurs de l’ONU. La salinisation des sols est
-      souvent le fait de mauvaises pratiques d’irrigation. Un apport d’eau insuffisant
-      conduit le sel qu’elle contient à s’installer dans le sol. L'étude préconise
-      une action énergique pour stopper l'hémorragie.
+    answer_explanation: 'Deux mille hectares de terres perdus par jour, 20 milliards
+      d''euros de pertes pour les cultivateurs, 20% des surfaces de culture menacées…
+
+      La facture du sel dans les sols agricoles est… salée, selon une étude publiée
+      fin octobre par des chercheurs de l’ONU.
+
+
+      La salinisation des sols est souvent le fait de mauvaises pratiques d’irrigation.
+      Un apport d’eau insuffisant conduit le sel qu’elle contient à s’installer dans
+      le sol. L''étude préconise une action énergique pour stopper l''hémorragie.'
     answer_accessible_url: https://www.letemps.ch/sciences/terres-agricoles-menacees-sel
     answer_scientific_url: https://macsphere.mcmaster.ca/handle/11375/15697
     answer_image_url: https://assets.letemps.ch/sites/default/files/media/2014/12/18/07c018f6-86da-11e4-9cd5-59e213f8caa2.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Matthieu Massart
-    validator: ''
+    validator: laydgeur
     publish: false
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-08-28
     created: 2020-09-14
     updated: 2020-09-14
     tags:
+    - 17
     - 190
 - model: api.question
   pk: 571
@@ -19820,8 +19926,8 @@
 - model: api.question
   pk: 594
   fields:
-    text: Quelle proportion du CO2 d'origine humaine provient des incendies déclenchés
-      par l'homme ?
+    text: Quelle proportion du CO2 d'origine humaine provient des destructions de
+      forêts causées par l'homme ?
     hint: ''
     type: QCM
     category: 1
@@ -19830,7 +19936,7 @@
     answer_option_b: 10%
     answer_option_c: 20%
     answer_option_d: 40%
-    answer_correct: b
+    answer_correct: c
     has_ordered_answers: true
     answer_explanation: 'Quand un arbre brûle, en quelques minutes, le carbone stocké
       pendant des décennies retourne dans l''atmosphère. Ces émissions et l''effet
@@ -19849,30 +19955,32 @@
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Matthieu Massart
-    validator: ''
+    validator: laydgeur
     publish: false
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-11-17
     created: 2020-11-17
     updated: 2020-11-17
     tags:
+    - 13
     - 63
 - model: api.question
   pk: 595
   fields:
-    text: Des scientifiques ont tenté d'estimer le « coût ultime de la tonne de carbone
-      », c'est à dire en prenant en compte de son impact sur les générations futures,
-      pour le comparer au prix du marché actuel (100$/tonne). A quelle ordre de grandeur
-      sont-ils parvenus ?
+    text: 'Des scientifiques ont tenté d''estimer le « coût ultime de la tonne de
+      carbone », c''est à dire en prenant en compte son impact sur les générations
+      futures, pour le comparer au prix du marché actuel (100$/tonne).
+
+      A quel ordre de grandeur sont-ils parvenus ?'
     hint: ''
     type: QCM
     category: 1
     difficulty: 4
-    answer_option_a: 100$
-    answer_option_b: 1000$
-    answer_option_c: 10,000$
-    answer_option_d: 100,000$
-    answer_correct: c
+    answer_option_a: 100$ / tonne
+    answer_option_b: 1,000$ / tonne
+    answer_option_c: 10,000$ / tonne
+    answer_option_d: 100,000$ / tonne
+    answer_correct: d
     has_ordered_answers: true
     answer_explanation: Les scientifiques de l'université de Chicaco ont bâti un modèle
       prenant en compte les effets du changement climatique à un horizon de centaines
@@ -19881,12 +19989,13 @@
     answer_accessible_url: https://news.uchicago.edu/story/climate-change-will-ultimately-cost-humanity-100000-ton-carbon-scientists-estimate
     answer_scientific_url: https://link.springer.com/article/10.1007%2Fs10584-020-02785-4
     answer_image_url: https://news.uchicago.edu/sites/default/files/styles/full_width/public/images/2020-09/climate%20change%20sea%20level%20rise%20in%20pacific.jpg?itok=vplfV1-0
-    answer_image_explanation: ''
+    answer_image_explanation: Augmentation du niveau des mers entre 1992 et 2014 (crédit
+      NASA)
     answer_extra_info: ''
     author: Matthieu Massart
-    validator: ''
+    validator: laydgeur
     publish: false
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-11-01
     created: 2020-11-17
     updated: 2020-11-17
@@ -21140,6 +21249,74 @@
     - 29
     - 39
 - model: api.question
+  pk: 634
+  fields:
+    text: Si la proposition de François Ruffin sur le quota carbone individuel pour
+      l’aviation était en place, quelle serait la distance parcourable (ou cumulable)
+      chaque année ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 3
+    answer_option_a: 15 km
+    answer_option_b: 150 km
+    answer_option_c: 1500 km
+    answer_option_d: 15 000 km
+    answer_correct: c
+    has_ordered_answers: true
+    answer_explanation: 'La proposition de François Ruffin consiste à répartir les
+      émissions de l''aviation en donnant à chaque français un quota de CO2 à émettre
+      via ce moyen de transport.
+
+
+      La France a émis 23,3 millions de tonnes de CO2 pour faire voler des avions
+      (5,3 en domestique et 18 pour l''international), et environ 60% des passagers
+      étaient français.
+
+      Donc chaque français aurait droit à ~205 kg de CO2 par an, qu''il pourrait choisir
+      de dépenser ou de cumuler.
+
+
+      205 kg de CO2 ça correspond à ces trajets aller/retour :
+
+      - Paris-Bastia
+
+      - Bordeaux-Strasbourg
+
+      - Lille-Marseille
+
+      - Lyon Rennes
+
+      Soit environ 1500 km aller-retour.
+
+
+      Pour voyager plus loin en avion, il faudrait donc cumuler ce quota sur plusieurs
+      années, tout en sachant qu''il serait calé sur la stratégie nationale bas carbone
+      (SNBC) dont les émissions sont prévues à la baisse pour respecter nos engagements
+      climatiques.'
+    answer_accessible_url: ''
+    answer_scientific_url: https://francoisruffin.fr/aerien-quota-carbone-individuel/
+    answer_image_url: https://i.ytimg.com/vi/Nczi3jeJJuI/maxresdefault.jpg
+    answer_image_explanation: ''
+    answer_extra_info: 'https://twitter.com/laydgeur/status/1280240217321070594
+
+
+
+      Sources complémentaires :
+
+      Émissions de l''aviation : https://di.unfccc.int/detailed_data_by_party- Enquête
+      passager de la DGAC : https://ecologique-solidaire.gouv.fr/sites/default/files/ENPA_2015_2016.pdf-
+      Stratégie nationale bas carbone : https://ecologique-solidaire.gouv.fr/strategie-nati'
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-07-06
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 34
+- model: api.question
   pk: 635
   fields:
     text: En France, laquelle de ces catégories émet le plus de gaz à effet de serre
@@ -21496,6 +21673,41 @@
     tags:
     - 1
     - 100
+- model: api.question
+  pk: 650
+  fields:
+    text: En quelle année a eu lieu le plus grand incendie en Californie depuis le
+      début des archives fiables il y a 90 ans ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 2
+    answer_option_a: '1932'
+    answer_option_b: '1977'
+    answer_option_c: '2003'
+    answer_option_d: '2020'
+    answer_correct: d
+    has_ordered_answers: true
+    answer_explanation: 'Le plus grand incendie en Californie depuis 90 ans a eu lieu
+      pendant l''été 2020.
+
+      Cet incendie nommé August Complex a brulé plus de 4000 km2 à lui seul, autant
+      que la superficie des Alpes-Maritimes.'
+    answer_accessible_url: https://www.fire.ca.gov/media/11416/top20_acres.pdf
+    answer_scientific_url: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r317.png
+    answer_image_explanation: ''
+    answer_extra_info: https://twitter.com/laydgeur/status/1318634699275849729
+    author: laydgeur
+    validator: ''
+    publish: false
+    validation_status: A valider
+    added: 2020-10-20
+    created: 2020-11-28
+    updated: 2020-11-28
+    tags:
+    - 63
+    - 80
 - model: api.question
   pk: 651
   fields:
