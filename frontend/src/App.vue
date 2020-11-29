@@ -63,7 +63,7 @@ export default {
         property: 'og:image',
         vmid: 'og:image',
         template: (chunk) => {
-          return chunk || `${process.env.BASE_URL}summary_large_image.png`;
+          return chunk || `${process.env.VUE_APP_DOMAIN_URL}/summary_large_image.png`;
         },
       },
       {
@@ -92,7 +92,7 @@ export default {
         property: 'twitter:image',
         vmid: 'twitter:image',
         template: (chunk) => {
-          return chunk || `${process.env.BASE_URL}summary_large_image.png`;
+          return chunk || `${process.env.VUE_APP_DOMAIN_URL}/summary_large_image.png`;
         },
       },
     ],

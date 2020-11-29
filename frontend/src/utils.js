@@ -23,6 +23,8 @@ function metaTagsGenerator(title, description = null, imageUrl = null) {
   if (imageUrl) {
     const imageMetaTags = [
       { property: 'og:image', vmid: 'og:image', content: imageUrl },
+      // { property: 'og:image:width', vmid: 'og:image:width', content: '1202' },
+      // { property: 'og:image:height', vmid: 'og:image:height', content: '568' },
       { property: 'twitter:image', vmid: 'twitter:image', content: imageUrl },
     ];
     metaTags.push(...imageMetaTags);
