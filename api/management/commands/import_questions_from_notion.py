@@ -7,7 +7,7 @@ from django.db import IntegrityError
 from django.core.management import BaseCommand
 from django.core.exceptions import ValidationError
 
-from api import constants, utilities, utilities_notion
+from api import utilities, utilities_notion
 from api.models import Question, Category, Tag
 
 
@@ -263,13 +263,6 @@ class Command(BaseCommand):
                                     db_question.save(
                                         update_fields=[question_model_field.name]
                                     )
-                        # extreme border case: question Validated but publish=True was not set
-                        if (
-                            db_question.validation_status
-                            == constants.QUESTION_VALIDATION_STATUS_OK
-                        ) and not db_question.publish:
-                            db_question.publish = True
-                            db_question.save(update_fields=["publish"])
 
                         # tag field
                         has_different_tags = [

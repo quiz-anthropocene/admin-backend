@@ -37,7 +37,6 @@ class QuestionFactory(factory.django.DjangoModelFactory):
     answer_option_b = "La réponse B"
     answer_correct = "a"  # constants.QUESTION_ANSWER_CHOICE_LIST[0]
     validation_status = constants.QUESTION_VALIDATION_STATUS_OK
-    publish = True
 
 
 class QuizFactory(factory.django.DjangoModelFactory):

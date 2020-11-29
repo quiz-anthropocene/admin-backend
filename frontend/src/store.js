@@ -11,6 +11,9 @@ import ressourcesGlossaireYamlData from '../../data/ressources-glossaire.yaml';
 import ressourcesSoutiensYamlData from '../../data/ressources-soutiens.yaml';
 import ressourcesAutresAppsYamlData from '../../data/ressources-autres-apps.yaml';
 
+const QUESTION_VALIDATION_STATUS_OK = 'Validée';
+const QUESTION_VALIDATION_STATUS_IN_PROGRESS = 'A valider';
+
 Vue.use(Vuex);
 
 /**
@@ -71,35 +74,35 @@ const store = new Vuex.Store({
     /**
      * Get questions
      * Pre-processing ?
-     * - remove unpublished questions
+     * - keep only validated questions
      * - enrich with categories, tags
      */
     GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
       // questions
-      const questionsPublished = processModelList(questionsYamlData).filter((el) => el.publish === true);
+      const questionsValidated = processModelList(questionsYamlData).filter((el) => el.validation_status === QUESTION_VALIDATION_STATUS_OK);
       // questions: get category & tags objects
-      questionsPublished.map((q) => {
+      questionsValidated.map((q) => {
         const questionCategory = getters.getCategoryById(q.category);
         const questionTags = getters.getTagsByIdList(q.tags);
         Object.assign(q, { category: questionCategory }, { tags: questionTags });
         return q;
       });
-      commit('SET_QUESTION_PUBLISHED_LIST', { list: questionsPublished });
+      commit('SET_QUESTION_VALIDATED_LIST', { list: questionsValidated });
 
       // update categories: add question_count
       state.categories.forEach((c) => {
-        c.question_count = questionsPublished.filter((q) => q.category.name === c.name).length;
+        c.question_count = questionsValidated.filter((q) => q.category.name === c.name).length;
       });
 
       // update tags: add question_count
       state.tags.forEach((t) => {
-        t.question_count = questionsPublished.filter((q) => q.tags.map((qt) => qt.id).includes(t.id)).length;
+        t.question_count = questionsValidated.filter((q) => q.tags.map((qt) => qt.id).includes(t.id)).length;
       });
 
       // create authors list: add question_count
       // TODO: use map/reduce instead
       const authors = [];
-      questionsPublished.forEach((q) => {
+      questionsValidated.forEach((q) => {
         const authorListIndex = authors.map((a) => a.name).indexOf(q.author);
         if (authorListIndex >= 0) {
           authors[authorListIndex].question_count += 1;
@@ -112,18 +115,18 @@ const store = new Vuex.Store({
       // create difficulty list: add question_count
       const difficultyLevels = difficultyLevelsYamlData;
       difficultyLevels.forEach((dl) => {
-        dl.question_count = questionsPublished.filter((q) => q.difficulty === dl.value).length;
+        dl.question_count = questionsValidated.filter((q) => q.difficulty === dl.value).length;
       });
       commit('SET_DIFFICULTY_LEVEL_LIST', { list: difficultyLevels });
     },
     GET_QUESTION_PENDING_VALIDATION_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      const questionsPendingValidation = processModelList(questionsYamlData).filter((el) => el.validation_status === 'A valider');
+      const questionsPendingValidation = processModelList(questionsYamlData).filter((el) => el.validation_status === QUESTION_VALIDATION_STATUS_IN_PROGRESS);
       commit('SET_QUESTION_PENDING_VALIDATION_LIST', { list: questionsPendingValidation });
     },
     /**
      * Get quizzes
      * Pre-processing ?
-     * - remove unpublished quizs
+     * - keep only published quizs
      * - enrich with questions, tags
      */
     GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit, getters }) => {
@@ -257,7 +260,7 @@ const store = new Vuex.Store({
     UPDATE_ERROR: (state, value) => {
       state.error = value;
     },
-    SET_QUESTION_PUBLISHED_LIST: (state, { list }) => {
+    SET_QUESTION_VALIDATED_LIST: (state, { list }) => {
       state.questions = list;
       state.questionsDisplayed = list;
     },

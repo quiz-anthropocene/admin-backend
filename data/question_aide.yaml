@@ -2,6 +2,7 @@
   fields:
     text: "La question. Idéalement en 1 phrase. Elle peut être longue, dans ce cas il est possible
       d'aller à la ligne. Ne pas oublier le ? à la fin :)"
+    hint: 
     type: "Le type de question (QCM, V/F, ...)"
     category: "l'id de la catégorie. Une seule catégorie possible"
     tags: "le ou les id des tags. Un ou plusieurs tags possibles rattachés à la question"
@@ -19,6 +20,8 @@
     answer_image_explanation: "Une légende pour l'image qui illustre la réponse"
     answer_extra_info: "Texte et liens explicatifs additionels, qui n'apparaissent pas dans l'interface"
     author: "L'auteur de la question"
-    publish: "La question est prête à être publiée"
+    validator: "La personne qui a validée la question"
+    validation_status: "Le statut de la question : Brouillon, A valider, Validée, Ecartée"
+    added: La date d'ajout de la question
     created: Date au format YYYY-MM-DD
     updated: Date au format YYYY-MM-DD
