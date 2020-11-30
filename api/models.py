@@ -29,25 +29,30 @@ class Configuration(SingletonModel):
         blank=True,
         help_text="La dernière fois qu'a été lancé le script de mise à jour des Daily Stats",  # noqa
     )
-    notion_import_scope_1_last_imported = models.DateTimeField(
+    notion_questions_scope_1_last_imported = models.DateTimeField(
         null=True,
         blank=True,
         help_text="La dernière fois que les questions (lot 1) ont été importées depuis Notion",  # noqa
     )
-    notion_import_scope_2_last_imported = models.DateTimeField(
+    notion_questions_scope_2_last_imported = models.DateTimeField(
         null=True,
         blank=True,
         help_text="La dernière fois que les questions (lot 2) ont été importées depuis Notion",  # noqa
     )
-    notion_import_scope_3_last_imported = models.DateTimeField(
+    notion_questions_scope_3_last_imported = models.DateTimeField(
         null=True,
         blank=True,
         help_text="La dernière fois que les questions (lot 3) ont été importées depuis Notion",  # noqa
     )
-    notion_import_scope_4_last_imported = models.DateTimeField(
+    notion_questions_scope_4_last_imported = models.DateTimeField(
         null=True,
         blank=True,
         help_text="La dernière fois que les questions (lot 4) ont été importées depuis Notion",  # noqa
+    )
+    github_last_exported = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text="La dernière fois que la donnée a été exportée vers Github",  # noqa
     )
 
     def __str__(self):

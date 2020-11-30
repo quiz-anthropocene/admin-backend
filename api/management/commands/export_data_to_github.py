@@ -1,8 +1,10 @@
 from datetime import datetime
 
+from django.utils import timezone
 from django.core.management import BaseCommand
 
 from api import utilities, utilities_github
+from api.models import Configuration
 
 
 class Command(BaseCommand):
@@ -77,7 +79,11 @@ class Command(BaseCommand):
                 pull_request_message="Mise à jour de la donnée : <ul><li>data/questions.yaml</li><li>data/quizzes.yaml</li><li>data/tags.yaml</li></ul>",  # noqa
                 branch_name=data_update_branch_name,
             )
-            print(pull_request.html_url)
+
+            # update config
+            config = Configuration.objects.get()
+            config.github_last_exported = timezone.now()
+            config.save()
 
             # return
             self.stdout.write(pull_request.html_url)

@@ -358,7 +358,7 @@ class Command(BaseCommand):
         if scope:
             config = Configuration.objects.get()
             setattr(
-                config, f"notion_import_scope_{scope}_last_imported", timezone.now()
+                config, f"notion_questions_scope_{scope}_last_imported", timezone.now()
             )
             config.save()
 

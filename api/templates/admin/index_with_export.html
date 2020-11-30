@@ -48,11 +48,31 @@
       Ce script va exporter vers Github toutes les questions, tous les quizs et tous les tags au format YAML.
       Si tout va bien, l'application devrait être mise à jour dans quelques minutes.
     </p>
-    <form method="POST">
-      {% csrf_token %}
-      <input type="hidden" name="run_export_data_to_github_script" value="1" />
-      <input id="action-button" type="submit" value="Lancer l'export de la donnée">
-    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Bouton d'export</th>
+          <th>Dernière date de lancement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <form method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="run_export_data_to_github_script" value="1" />
+          <tr>
+            <td>
+              <input id="action-button" type="submit" value="Lancer l'export de la donnée">
+            </td>
+            <td>
+              <strong>{{ configuration.github_last_exported | date:"SHORT_DATETIME_FORMAT" }}</strong>
+              <br />
+              <span>({{ configuration.github_last_exported | timesince }} ago)</span>
+            </td>
+          </tr>
+        </form>
+      </tbody>
+    </table>
 
     <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
 

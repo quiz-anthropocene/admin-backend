@@ -30,19 +30,17 @@ class Migration(migrations.Migration):
                         max_length=255,
                     ),
                 ),
-                migrations.AddField(
-                    model_name="configuration",
-                    name="application_backend_url",
-                    field=models.URLField(
+                (
+                    "application_backend_url",
+                    models.URLField(
                         blank=True,
                         help_text="Le lien vers le backend de l'application",
                         max_length=500,
                     ),
                 ),
-                migrations.AddField(
-                    model_name="configuration",
-                    name="application_frontend_url",
-                    field=models.URLField(
+                (
+                    "application_frontend_url",
+                    models.URLField(
                         blank=True,
                         help_text="Le lien vers le frontend de l'application",
                         max_length=500,
@@ -57,7 +55,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 (
-                    "notion_import_scope_1_last_imported",
+                    "notion_questions_scope_1_last_imported",
                     models.DateTimeField(
                         blank=True,
                         help_text="La dernière fois que les questions (lot 1) ont été importées depuis Notion",
@@ -65,7 +63,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 (
-                    "notion_import_scope_2_last_imported",
+                    "notion_questions_scope_2_last_imported",
                     models.DateTimeField(
                         blank=True,
                         help_text="La dernière fois que les questions (lot 2) ont été importées depuis Notion",
@@ -73,7 +71,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 (
-                    "notion_import_scope_3_last_imported",
+                    "notion_questions_scope_3_last_imported",
                     models.DateTimeField(
                         blank=True,
                         help_text="La dernière fois que les questions (lot 3) ont été importées depuis Notion",
@@ -81,10 +79,18 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 (
-                    "notion_import_scope_4_last_imported",
+                    "notion_questions_scope_4_last_imported",
                     models.DateTimeField(
                         blank=True,
                         help_text="La dernière fois que les questions (lot 4) ont été importées depuis Notion",
+                        null=True,
+                    ),
+                ),
+                (
+                    "github_last_exported",
+                    models.DateTimeField(
+                        blank=True,
+                        help_text="La dernière fois que la donnée a été exportée vers Github",
                         null=True,
                     ),
                 ),
