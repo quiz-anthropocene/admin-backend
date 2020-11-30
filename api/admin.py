@@ -1,7 +1,7 @@
 import csv
 import json
 from io import StringIO
-from datetime import datetime, time
+from datetime import datetime
 
 # from io import StringIO
 
@@ -13,6 +13,7 @@ from django.core import management
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.html import mark_safe
 
+from solo.admin import SingletonModelAdmin
 from import_export import fields, resources
 from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
 from import_export.admin import ImportMixin, DEFAULT_FORMATS
@@ -22,6 +23,7 @@ from import_export.admin import ImportMixin, DEFAULT_FORMATS
 from api import constants
 from api import utilities, utilities_notion
 from api.models import (
+    Configuration,
     Question,
     Category,
     Tag,
@@ -343,7 +345,8 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
             ]
 
         extra_context = extra_context or {
-            "notion_questions_validation": notion_questions_validation
+            "configuration": Configuration.get_solo(),
+            "notion_questions_validation": notion_questions_validation,
         }
 
         # Call the superclass changelist_view to render the page
@@ -783,28 +786,11 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
 
         chart_data_list = list(chart_data_query)
 
-        # get answers since today ?
-        # no, need to run script to populate the values
-        daily_stat_last = DailyStat.objects.last()
-        daily_stat_last_date_time = datetime(1970, 1, 1)
-        if daily_stat_last:
-            daily_stat_last_hour = next(
-                (
-                    hour
-                    for hour in reversed(list(daily_stat_last.hour_split.keys()))
-                    if daily_stat_last.hour_split[hour]["question_answer_count"] > 0
-                ),
-                0,
-            )
-            daily_stat_last_date_time = datetime.combine(
-                daily_stat_last.date, time(int(daily_stat_last_hour), 0)
-            )
-
         # Serialize and attach the chart data to the template context
         chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
         extra_context = extra_context or {
+            "configuration": Configuration.get_solo(),
             "chart_data": chart_data_json,
-            "daily_stat_last_date_time": daily_stat_last_date_time,
             "field_choice_list": constants.AGGREGATION_FIELD_CHOICE_LIST,
             "current_field": current_field,
             "scale_choice_list": constants.AGGREGATION_SCALE_CHOICE_LIST,
@@ -857,6 +843,11 @@ class GlossaryAdmin(ExportMixin, admin.ModelAdmin):
         return False
 
 
+class ConfigurationAdmin(ExportMixin, SingletonModelAdmin):
+    def get_readonly_fields(self, request, obj=None):
+        return [f.name for f in obj._meta.fields]
+
+
 class LogEntryAdmin(admin.ModelAdmin):
     """
     https://docs.djangoproject.com/en/3.0/ref/contrib/admin/#logentry-objects
@@ -907,7 +898,10 @@ class MyAdminSite(AdminSite):
                 export_message = f"La Pull Request a été créé !<br>Elle est visible ici : <a href='{out.getvalue()}' target='_blank'>{out.getvalue()}</a>"  # noqa
             print(export_message)
 
-        extra_context = extra_context or {"export_message": export_message}
+        extra_context = extra_context or {
+            "configuration": Configuration.get_solo(),
+            "export_message": export_message,
+        }
 
         # Call the superclass index to render the page
         return super().index(request, extra_context=extra_context)
@@ -915,6 +909,7 @@ class MyAdminSite(AdminSite):
 
 admin_site = MyAdminSite(name="myadmin")
 
+admin_site.register(Configuration, ConfigurationAdmin)
 admin_site.register(Question, QuestionAdmin)
 admin_site.register(Category, CategoryAdmin)
 admin_site.register(Tag, TagAdmin)

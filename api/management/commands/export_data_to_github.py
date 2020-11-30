@@ -1,8 +1,10 @@
 from datetime import datetime
 
+from django.utils import timezone
 from django.core.management import BaseCommand
 
 from api import utilities, utilities_github
+from api.models import Configuration
 
 
 class Command(BaseCommand):
@@ -29,9 +31,19 @@ class Command(BaseCommand):
             utilities_github.create_branch(data_update_branch_name)
 
             # update & commit data files
+            # data/configuration.yaml
             # data/questions.yaml
             # data/quizzes.yaml
             # data/tags.yaml
+            configuration_yaml = utilities.serialize_model_to_yaml(
+                model_label="configuration"
+            )
+            utilities_github.create_file(
+                file_path="data/configuration.yaml",
+                commit_message="update configuration",
+                file_content=configuration_yaml,
+                branch_name=data_update_branch_name,
+            )
             questions_yaml = utilities.serialize_model_to_yaml(model_label="question")
             utilities_github.create_file(
                 file_path="data/questions.yaml",
@@ -74,10 +86,14 @@ class Command(BaseCommand):
             # create pull request
             pull_request = utilities_github.create_pull_request(
                 pull_request_title=data_update_pull_request_name,
-                pull_request_message="Mise à jour de la donnée : <ul><li>data/questions.yaml</li><li>data/quizzes.yaml</li><li>data/tags.yaml</li></ul>",  # noqa
+                pull_request_message="Mise à jour de la donnée : <ul><li>data/configuration.yaml</li><li>data/questions.yaml</li><li>data/quizzes.yaml</li><li>data/tags.yaml</li></ul>",  # noqa
                 branch_name=data_update_branch_name,
             )
-            print(pull_request.html_url)
+
+            # update config
+            config = Configuration.get_solo()
+            config.github_last_exported = timezone.now()
+            config.save()
 
             # return
             self.stdout.write(pull_request.html_url)

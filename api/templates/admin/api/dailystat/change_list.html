@@ -113,16 +113,33 @@
   </p>
   <p>
     Un script, lancé manuellement, permet d'aggréger ces chiffres.
-    Dernière date (approximative) de lancement du script : <strong>{{ daily_stat_last_date_time | date:"SHORT_DATETIME_FORMAT" }}</strong>
   </p>
-  <p>
-    Pour lancer le script, cliquer sur le bouton ci-dessous. 👇
-  </p>
-  <form method="POST">
-    {% csrf_token %}
-    <input type="hidden" name="run_generate_daily_stats_script" value="1" />
-    <input id="action-button" type="submit" value="Lancer le script">
-  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Bouton d'aggrégation</th>
+        <th>Dernière date de lancement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="run_generate_daily_stats_script" value="1" />
+        <tr>
+          <td>
+            <input id="action-button" type="submit" value="Lancer le script">
+          </td>
+          <td>
+            <strong>{{ configuration.daily_stat_last_aggregated | date:"SHORT_DATETIME_FORMAT" }}</strong>
+            <br />
+            <span>({{ configuration.daily_stat_last_aggregated | timesince }} ago)</span>
+          </td>
+        </tr>
+      </form>
+    </tbody>
+  </table>
+
   <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
   <div id="spinner" class="loading" role="status" style="display:none"></div>
 </section>

@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "django_extensions",
     "import_export",
+    "solo",  # django-solo
     "api",
 ]
 

@@ -40,26 +40,74 @@
   <p>
     Merci de votre patience !
   </p>
-  <form method="POST">
-    {% csrf_token %}
-    <input type="hidden" name="run_import_questions_from_notion_script" value="1" />
-    <input class="action-button" type="submit" value="Lancer l'import des questions : # 1 à 200">
-  </form>
-  <form method="POST">
-    {% csrf_token %}
-    <input type="hidden" name="run_import_questions_from_notion_script" value="2" />
-    <input class="action-button" type="submit" value="Lancer l'import des questions : # 200 à 400">
-  </form>
-  <form method="POST">
-    {% csrf_token %}
-    <input type="hidden" name="run_import_questions_from_notion_script" value="3" />
-    <input class="action-button" type="submit" value="Lancer l'import des questions : # 400 à 600">
-  </form>
-  <form method="POST">
-    {% csrf_token %}
-    <input type="hidden" name="run_import_questions_from_notion_script" value="4" />
-    <input class="action-button" type="submit" value="Lancer l'import des questions : # 600 et plus">
-  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Boutons d'import</th>
+        <th>Dernière date de lancement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="run_import_questions_from_notion_script" value="1" />
+        <tr>
+          <td>
+            <input class="action-button" type="submit" value="Lancer l'import des questions : # 1 à 200">
+          </td>
+          <td>
+            <strong>{{ configuration.notion_questions_scope_1_last_imported | date:"SHORT_DATETIME_FORMAT" }}</strong>
+            <br />
+            <span>({{ configuration.notion_questions_scope_1_last_imported | timesince }} ago)</span>
+          </td>
+        </tr>
+      </form>
+      <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="run_import_questions_from_notion_script" value="2" />
+        <tr>
+          <td>
+            <input class="action-button" type="submit" value="Lancer l'import des questions : # 200 à 400">
+          </td>
+          <td>
+            <strong>{{ configuration.notion_questions_scope_2_last_imported | date:"SHORT_DATETIME_FORMAT" }}</strong>
+            <br />
+            <span>({{ configuration.notion_questions_scope_2_last_imported | timesince }} ago)</span>
+          </td>
+        </tr>
+      </form>
+      <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="run_import_questions_from_notion_script" value="3" />
+        <tr>
+          <td>
+            <input class="action-button" type="submit" value="Lancer l'import des questions : # 400 à 600">
+          </td>
+          <td>
+            <strong>{{ configuration.notion_questions_scope_2_last_imported | date:"SHORT_DATETIME_FORMAT" }}</strong>
+            <br />
+            <span>({{ configuration.notion_questions_scope_2_last_imported | timesince }} ago)</span>
+          </td>
+        </tr>
+      </form>
+      <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="run_import_questions_from_notion_script" value="4" />
+        <tr>
+          <td>
+            <input class="action-button" type="submit" value="Lancer l'import des questions : # 600 et plus">
+          </td>
+          <td>
+            <strong>{{ configuration.notion_questions_scope_4_last_imported | date:"SHORT_DATETIME_FORMAT" }}</strong>
+            <br />
+            <span>({{ configuration.notion_questions_scope_4_last_imported | timesince }} ago)</span>
+          </td>
+        </tr>
+      </form>
+    </tbody>
+  </table>
+
   <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
   <div id="spinner" class="loading" role="status" style="display:none"></div>
 </section>
