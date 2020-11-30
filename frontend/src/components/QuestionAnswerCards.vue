@@ -101,14 +101,14 @@
 
       <!-- Extra info -->
       <div class="row no-gutters small">
-        <div class="col" v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">
+        <div class="col-sm" title="Auteur de la question">
+          📝&nbsp;Auteur<span class="label label-hidden"><strong>{{ question.author }}</strong></span>
+        </div>
+        <div class="col-sm" v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">
           <!-- 🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.map(t => t.name).join(', ') }} -->
           🏷️&nbsp;<span v-for="tag in question.tags" :key="tag.id">
             <span class="label label-tag">{{ tag.name }}</span>
           </span>
-        </div>
-        <div  class="col">
-          <div class="label label-hidden" title="Auteur de la question">📝&nbsp;Auteur:&nbsp;{{ question.author }}</div>
         </div>
         <!-- <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count_agg }} / {{ question.answer_count_agg }} ({{ question.answer_success_rate }}%)</div> -->
       </div>

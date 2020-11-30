@@ -1,18 +1,13 @@
 <template>
   <section>
 
-    <div v-if="quizzes && quizzes.length > 0" id="quiz-list"  class="row">
-      <div class="col-sm-4" v-for="quiz in quizzes" :key="quiz.id">
-        <QuizCard :quiz="quiz"/>
+    <div v-if="quizzes && quizzes.length > 0" id="quiz-list" class="margin-bottom-1em">
+      <div class="card-deck">
+        <QuizCard v-for="quiz in quizzes" :key="quiz.id" :quiz="quiz"/>
       </div>
-        <!-- <div class="col-sm">
-          <router-link class="no-decoration" :to="{ name: 'quiz-detail', params: { quizId: quiz.id, skipIntro: true } }">
-            <button class="btn btn-outline-primary">⏩&nbsp;Commencer le quiz !</button>
-          </router-link>
-        </div> -->
     </div>
 
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-md-center margin-bottom-1em">
       <div class="col-sm-6" v-if="questionsCount">
         <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
           <button class="btn btn-primary btn-lg btn-block">
@@ -231,10 +226,6 @@ svg {
 }
 .jumbotron .row .col:hover {
   transform: scale(1.03);
-}
-
-.row > .col-sm-6,.col-sm-4{
-  padding-bottom: 20px;
 }
 
 .btn-lg {
