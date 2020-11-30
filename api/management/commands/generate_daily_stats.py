@@ -1,8 +1,10 @@
 import pandas as pd
 
+from django.utils import timezone
 from django.core.management import BaseCommand
 
 from api.models import (
+    Configuration,
     Question,
     # QuestionAggStat,
     QuestionAnswerEvent,
@@ -269,6 +271,11 @@ class Command(BaseCommand):
         cleanup_question_feedback_events()
         # cleanup_quiz_answer_events()
         # cleanup_quiz_feedback_events()
+
+        # update config
+        config = Configuration.objects.get()
+        config.daily_stat_last_aggregated = timezone.now()
+        config.save()
 
 
 """

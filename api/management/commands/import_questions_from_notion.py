@@ -2,13 +2,14 @@ import time
 import notion
 import collections
 
+from django.utils import timezone
 from django.conf import settings
 from django.db import IntegrityError
 from django.core.management import BaseCommand
 from django.core.exceptions import ValidationError
 
-from api import utilities, utilities_notion
-from api.models import Question, Category, Tag
+from api import constants, utilities, utilities_notion
+from api.models import Configuration, Question, Category, Tag
 
 
 class Command(BaseCommand):
@@ -352,6 +353,14 @@ class Command(BaseCommand):
             "--- Step 4 done : build and send stats : %s seconds ---"
             % round(time.time() - start_time, 1)
         )
+
+        # update config
+        if scope:
+            config = Configuration.objects.get()
+            setattr(
+                config, f"notion_import_scope_{scope}_last_imported", timezone.now()
+            )
+            config.save()
 
         self.stdout.write(
             "|||".join(

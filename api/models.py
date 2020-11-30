@@ -2,8 +2,59 @@ from django.db import models
 from django.db.models import Avg, Sum, Count
 from django.core.exceptions import ValidationError
 
+from solo.models import SingletonModel
+
 from api import constants
 from api import utilities
+
+
+class Configuration(SingletonModel):
+    # basics
+    application_name = models.CharField(
+        max_length=255,
+        default="Quiz de l'Anthropocène",
+        help_text="Le nom de l'application",
+    )
+    application_backend_url = models.URLField(
+        max_length=500, blank=True, help_text="Le lien vers le backend de l'application"
+    )
+    application_frontend_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="Le lien vers le frontend de l'application",
+    )
+    # timestamps
+    daily_stat_last_aggregated = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text="La dernière fois qu'a été lancé le script de mise à jour des Daily Stats",  # noqa
+    )
+    notion_import_scope_1_last_imported = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text="La dernière fois que les questions (lot 1) ont été importées depuis Notion",  # noqa
+    )
+    notion_import_scope_2_last_imported = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text="La dernière fois que les questions (lot 2) ont été importées depuis Notion",  # noqa
+    )
+    notion_import_scope_3_last_imported = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text="La dernière fois que les questions (lot 3) ont été importées depuis Notion",  # noqa
+    )
+    notion_import_scope_4_last_imported = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text="La dernière fois que les questions (lot 4) ont été importées depuis Notion",  # noqa
+    )
+
+    def __str__(self):
+        return "Configuration de l'application"
+
+    class Meta:
+        verbose_name = "Configuration de l'application"
 
 
 class Category(models.Model):

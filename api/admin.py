@@ -13,6 +13,7 @@ from django.core import management
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.html import mark_safe
 
+from solo.admin import SingletonModelAdmin
 from import_export import fields, resources
 from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
 from import_export.admin import ImportMixin, DEFAULT_FORMATS
@@ -22,6 +23,7 @@ from import_export.admin import ImportMixin, DEFAULT_FORMATS
 from api import constants
 from api import utilities, utilities_notion
 from api.models import (
+    Configuration,
     Question,
     Category,
     Tag,
@@ -857,6 +859,11 @@ class GlossaryAdmin(ExportMixin, admin.ModelAdmin):
         return False
 
 
+class ConfigurationAdmin(ExportMixin, SingletonModelAdmin):
+    def get_readonly_fields(self, request, obj=None):
+        return [f.name for f in obj._meta.fields]
+
+
 class LogEntryAdmin(admin.ModelAdmin):
     """
     https://docs.djangoproject.com/en/3.0/ref/contrib/admin/#logentry-objects
@@ -915,6 +922,7 @@ class MyAdminSite(AdminSite):
 
 admin_site = MyAdminSite(name="myadmin")
 
+admin_site.register(Configuration, ConfigurationAdmin)
 admin_site.register(Question, QuestionAdmin)
 admin_site.register(Category, CategoryAdmin)
 admin_site.register(Tag, TagAdmin)
