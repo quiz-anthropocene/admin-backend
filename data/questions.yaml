@@ -1338,7 +1338,8 @@
     answer_scientific_url: ''
     answer_image_url: https://www.connaissancedesenergies.org/sites/default/files/inline-images/production-electricite-france-2019.png
     answer_image_explanation: ''
-    answer_extra_info: "https://www.statistiques.developpement-durable.gouv.fr/tableau-de-bord-biogaz-pour-la-production-delectricite-premier-trimestre-2020\r\nhttps://www.actu-environnement.com/ae/news/biogaz-raccordement-electricite-recul-30222.php4"
+    answer_extra_info: "https://www.statistiques.developpement-durable.gouv.fr/tableau-de-bord-biogaz-pour-la-production-delectricite-premier-trimestre-2020\r\
+      \nhttps://www.actu-environnement.com/ae/news/biogaz-raccordement-electricite-recul-30222.php4"
     author: Avenir Climatique
     validator: Matthieu Massart
     validation_status: Validée
@@ -3517,13 +3518,13 @@
     answer_option_d: ''
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: "42 Gigajoules pour la tonne de pétrole contre 4 Gigajoules
-      pour la tonne de TNT. Cette différence s'explique par deux facteurs :\n - la
-      détonation du TNT se fait sans oxygène et n’est pas complète ;\n - l’énergie
-      de combustion du pétrole est calculée sans tenir compte de la masse d’oxygène
-      nécessaire et avec une réaction complète, d’où une énergie élevée\nOn peut en
-      revanche affirmer que le TNT a un pouvoir explosif bien plus important, car
-      il libère cette énergie très rapidement sous forme de détonation."
+    answer_explanation: "42 Gigajoules pour la tonne de pétrole contre 4 Gigajoules\
+      \ pour la tonne de TNT. Cette différence s'explique par deux facteurs :\n -\
+      \ la détonation du TNT se fait sans oxygène et n’est pas complète ;\n - l’énergie\
+      \ de combustion du pétrole est calculée sans tenir compte de la masse d’oxygène\
+      \ nécessaire et avec une réaction complète, d’où une énergie élevée\nOn peut\
+      \ en revanche affirmer que le TNT a un pouvoir explosif bien plus important,\
+      \ car il libère cette énergie très rapidement sous forme de détonation."
     answer_accessible_url: ''
     answer_scientific_url: ''
     answer_image_url: https://cdnfr1.img.sputniknews.com/img/103982/33/1039823388_1:0:4137:2238_1000x541_80_0_0_ca3008d757be511d68a3af98984093c5.jpg
@@ -3674,12 +3675,12 @@
     answer_option_d: 1 poids lourd de 38 tonnes se déplaçant à 100 km/h
     answer_correct: c
     has_ordered_answers: false
-    answer_explanation: "Le litre d’essence dépasse les autres d’un facteur 2.\nÉnergie
-      cinétique d’un camion de 38 tonnes qui roule à 100 km/h = 1/2*m*v², soit 15
-      MJ. \nÉnergie potentielle d’un objet de 1 tonne qui tombe de 1500m = m*g*h,
-      soit 15 MJ\n1 kg de sucre : 17 MJ. \nÉnergie de combustion d’1 l d'essence =
-      33 MJ. \nLa combustion d'1 litre d'essence permet de dégager en ordre de grandeur
-      100 heures d'un humain qui pédalerait sur une dynamo."
+    answer_explanation: "Le litre d’essence dépasse les autres d’un facteur 2.\nÉnergie\
+      \ cinétique d’un camion de 38 tonnes qui roule à 100 km/h = 1/2*m*v², soit 15\
+      \ MJ. \nÉnergie potentielle d’un objet de 1 tonne qui tombe de 1500m = m*g*h,\
+      \ soit 15 MJ\n1 kg de sucre : 17 MJ. \nÉnergie de combustion d’1 l d'essence\
+      \ = 33 MJ. \nLa combustion d'1 litre d'essence permet de dégager en ordre de\
+      \ grandeur 100 heures d'un humain qui pédalerait sur une dynamo."
     answer_accessible_url: https://fr.wikipedia.org/wiki/Ordres_de_grandeur_d%27%C3%A9nergie
     answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/documentation-gene/index/page/New_liquides
     answer_image_url: ''
@@ -4897,8 +4898,8 @@
     answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/Datalab-25-menages-environnement-cc-ed-2017-oct2017-b.pdf
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r048.jpg
     answer_image_explanation: ''
-    answer_extra_info: "images alternatives: \n- https://pbs.twimg.com/media/DN6nizmUQAAGXwY.jpg\n-
-      https://jancovici.com/wp-content/uploads/2010/01/assiette_graph5_en.png"
+    answer_extra_info: "images alternatives: \n- https://pbs.twimg.com/media/DN6nizmUQAAGXwY.jpg\n\
+      - https://jancovici.com/wp-content/uploads/2010/01/assiette_graph5_en.png"
     author: laydgeur
     validator: Matthieu Massart
     validation_status: Validée
@@ -10342,8 +10343,13 @@
     answer_scientific_url: https://ccfa.fr/brochure-analyse-statistiques/
     answer_image_url: ''
     answer_image_explanation: ''
-    answer_extra_info: "certains articles parlent de 38 millions \U0001F914\n\nimage
-      alternative: https://arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/OBZGE2QFO2MD2UALAMSONWIKC4.jpg\n\nhttps://twitter.com/laydgeur/status/1189284112013647872"
+    answer_extra_info: 'certains articles parlent de 38 millions 🤔
+
+
+      image alternative: https://arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/OBZGE2QFO2MD2UALAMSONWIKC4.jpg
+
+
+      https://twitter.com/laydgeur/status/1189284112013647872'
     author: laydgeur
     validator: ''
     validation_status: Écartée
@@ -10408,7 +10414,10 @@
     answer_scientific_url: https://www.nlog.nl/sites/default/files/2019-09/annual_review_natural_resources_and_geothermal_energy_in_the_netherlands_2018.pdf#page92
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r204.jpg
     answer_image_explanation: ''
-    answer_extra_info: "pic vs plateau \U0001F914\n\nhttps://twitter.com/laydgeur/status/1190014156746952704"
+    answer_extra_info: 'pic vs plateau 🤔
+
+
+      https://twitter.com/laydgeur/status/1190014156746952704'
     author: laydgeur
     validator: ''
     validation_status: Écartée
@@ -19487,11 +19496,11 @@
 - model: api.question
   pk: 598
   fields:
-    text: "Un dérivé climatique est un instrument financier qui peut être utilisé
-      pour se prémunir contre des risques liés au climat. L'actif sous-jacent peut
-      ainsi être la température, la quantité de neige tombée ou les précipitations.
-      \nEn quelle année le premier produit dérivé climatique a-t-il été traité sur
-      le Chicago Mercantile Exchange ?"
+    text: "Un dérivé climatique est un instrument financier qui peut être utilisé\
+      \ pour se prémunir contre des risques liés au climat. L'actif sous-jacent peut\
+      \ ainsi être la température, la quantité de neige tombée ou les précipitations.\
+      \ \nEn quelle année le premier produit dérivé climatique a-t-il été traité sur\
+      \ le Chicago Mercantile Exchange ?"
     hint: ''
     type: QCM
     category: 1
