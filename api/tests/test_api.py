@@ -21,18 +21,13 @@ class ApiTest(TestCase):
             category=cls.category_1,
             author="author 1",
             validation_status=constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS,
-            publish=False,
         )
         cls.question_2 = QuestionFactory(
-            text="Q 2",
-            category=cls.category_1,
-            answer_correct="a",
-            author="author 2",
-            publish=True,
+            text="Q 2", category=cls.category_1, answer_correct="a", author="author 2",
         )
         cls.question_2.tags.set([cls.tag_2, cls.tag_1])
         cls.question_3 = QuestionFactory(
-            text="Q 3", category=cls.category_1, author="author 3", publish=True
+            text="Q 3", category=cls.category_1, author="author 3"
         )
         cls.question_3.tags.add(cls.tag_2)
         cls.question_3.save()
@@ -51,7 +46,7 @@ class ApiTest(TestCase):
         response = self.client.get(reverse("api:question_list"))
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data, list)
-        self.assertEqual(len(response.data), 2)  # 1 question not published
+        self.assertEqual(len(response.data), 2)  # 1 question not validated
 
         response = self.client.get(reverse("api:question_list"), {"author": "author 1"})
         self.assertEqual(response.status_code, 200)
@@ -76,7 +71,7 @@ class ApiTest(TestCase):
             reverse("api:question_list"), {"category": self.category_1.name}
         )
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 2)  # 1 question not published
+        self.assertEqual(len(response.data), 2)  # 1 question not validated
 
     def test_question_detail(self):
         response = self.client.get(
@@ -132,7 +127,7 @@ class ApiTest(TestCase):
         response = self.client.get(reverse("api:question_count"))
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data, int)
-        self.assertEqual(response.data, 2)  # 1 question not published
+        self.assertEqual(response.data, 2)  # 1 question not validated
 
     def test_category_list(self):
         response = self.client.get(reverse("api:category_list"))
@@ -150,7 +145,7 @@ class ApiTest(TestCase):
         response = self.client.get(reverse("api:author_list"))
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data, list)
-        self.assertEqual(len(response.data), 2)  # 1 question not published
+        self.assertEqual(len(response.data), 2)  # 1 question not validated
 
     def test_difficulty_level_list(self):
         response = self.client.get(reverse("api:difficulty_level_list"))
@@ -286,7 +281,7 @@ class ApiTest(TestCase):
         self.assertIsInstance(response.data, dict)
         self.assertEqual(
             [
-                "question_publish_count",
+                "question_validated_count",
                 "question_validation_status_in_progress_count",
                 "total",
                 "current_month",

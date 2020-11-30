@@ -162,7 +162,6 @@ class QuestionResource(resources.ModelResource):
         So we need to fix the 'id' column
         - added timestamp
         - Issue with BooleanFields because Notion exports Yes/No
-        - Fill 'publish' field
         """
         # 'id' field
         if "id" not in row:
@@ -173,15 +172,9 @@ class QuestionResource(resources.ModelResource):
                 row["Created time"], "%b %d, %Y %I:%M %p"
             ).date()
         # boolean fields
-        BOOLEAN_FIELDS = ["has_ordered_answers"]  # "publish"
+        BOOLEAN_FIELDS = ["has_ordered_answers"]
         for boolean_field in BOOLEAN_FIELDS:
             row[boolean_field] = True if (row[boolean_field] == "Yes") else False
-        # 'publish' field
-        row["publish"] = (
-            True
-            if (row["validation_status"] == constants.QUESTION_VALIDATION_STATUS_OK)
-            else False
-        )
 
     def import_obj(self, instance, row, dry_run):
         """
@@ -242,8 +235,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         "tags_list_string",
         "difficulty",
         "author",
-        "publish",
-        # "validation_status",
+        "validation_status",
         "has_answer_explanation",
         "has_answer_accessible_url",
         # "has_answer_scientific_url",
@@ -261,7 +253,6 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         "category",
         "difficulty",
         "author",
-        "publish",
         "validation_status",
         "tags",
     )
@@ -274,7 +265,6 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
     ]
     filter_horizontal = ("tags",)
     readonly_fields = (
-        "publish",  # True if status 'Validée'
         "show_answer_image",
         "answer_count_agg",
         "answer_success_count_agg",
@@ -410,6 +400,7 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
     list_filter = (
         "publish",
         "author",
+        "tags",
     )
     ordering = ("-id",)
     # filter_vertical = (
@@ -422,7 +413,7 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
     readonly_fields = (
         "question_count",
         "difficulty_average",
-        "questions_unpublished_string_html",
+        "questions_not_validated_string_html",
         "questions_categories_list_string",
         "questions_tags_list_string",
         "show_image_background",
@@ -450,7 +441,7 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
                     "questions",
                     "question_count",
                     "difficulty_average",
-                    "questions_unpublished_string_html",
+                    "questions_not_validated_string_html",
                     "questions_categories_list_string",
                     "questions_tags_list_string",
                 )
@@ -492,10 +483,10 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
         "L'image du champ 'Quiz image background url' (cliquer pour agrandir)"
     )
 
-    def questions_unpublished_string_html(self, instance):
-        return mark_safe(instance.questions_unpublished_string)
+    def questions_not_validated_string_html(self, instance):
+        return mark_safe(instance.questions_not_validated_string)
 
-    questions_unpublished_string_html.short_description = (
+    questions_not_validated_string_html.short_description = (
         "Questions pas encore validées"
     )
 

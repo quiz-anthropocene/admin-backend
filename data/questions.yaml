@@ -20,7 +20,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-07
     created: 2020-03-07
@@ -56,7 +55,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Pascal Esposito
-    publish: true
     validation_status: Validée
     added: 2020-03-07
     created: 2020-03-07
@@ -94,7 +92,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-07
     created: 2020-03-07
@@ -131,7 +128,6 @@
       remise en question du rapport ici : https://www.pnas.org/content/116/25/12143'
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-07
     created: 2020-03-07
@@ -162,7 +158,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-03-07
     created: 2020-03-07
@@ -194,7 +189,6 @@
     answer_extra_info: 'lien vers l’image « situation actuelle » seule: https://i1.wp.com/ocean-climate.org/wp-content/uploads/2015/03/FichesP%C3%87dagogiques_EffetDeSerre_02.jpg'
     author: Matthieu Massart
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-03-08
     created: 2020-03-08
@@ -230,7 +224,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-08
     created: 2020-03-08
@@ -264,7 +257,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Pascal Esposito
-    publish: true
     validation_status: Validée
     added: 2020-03-08
     created: 2020-03-08
@@ -299,7 +291,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-03-08
     created: 2020-03-08
@@ -330,7 +321,6 @@
     answer_extra_info: ''
     author: Avenir Climatique
     validator: ''
-    publish: true
     validation_status: Écartée
     added: 2020-03-08
     created: 2020-03-08
@@ -363,7 +353,6 @@
     answer_extra_info: ''
     author: Avenir Climatique
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-09
     created: 2020-03-09
@@ -395,7 +384,6 @@
     answer_extra_info: ''
     author: Avenir Climatique
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-03-09
     created: 2020-03-09
@@ -425,7 +413,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-09
     created: 2020-03-09
@@ -458,7 +445,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-09
     created: 2020-03-09
@@ -493,7 +479,6 @@
     answer_extra_info: ''
     author: Avenir Climatique
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-03-09
     created: 2020-03-09
@@ -528,7 +513,6 @@
     answer_extra_info: 'Source image: http://www.donnees.statistiques.developpement-durable.gouv.fr/lesessentiels/climat/images/effet-de-serre-2-b.jpg'
     author: Avenir Climatique
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -563,7 +547,6 @@
     answer_extra_info: ''
     author: Avenir Climatique
     validator: Raphael Odini
-    publish: true
     validation_status: Écartée
     added: 2020-03-10
     created: 2020-03-10
@@ -596,7 +579,6 @@
     answer_extra_info: Je n'ai pas pu sourcer ces infos
     author: Avenir Climatique
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-03-10
     created: 2020-03-10
@@ -629,7 +611,6 @@
     answer_extra_info: ''
     author: Avenir Climatique
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -660,7 +641,6 @@
     answer_extra_info: ''
     author: Cyril Retourné
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -697,7 +677,6 @@
       https://dr-petrole-mr-carbone.com/concentration-record-de-co2-la-barre-des-415-ppm-franchie-a-mauna-loa/'
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -736,7 +715,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -771,7 +749,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -804,7 +781,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -847,7 +823,6 @@
       https://www.carbonbrief.org/meeting-two-degree-climate-target-means-80-per-cent-of-worlds-coal-is-unburnable-study-says'
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -882,7 +857,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -917,7 +891,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Pascal Esposito
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -954,7 +927,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -990,7 +962,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1032,7 +1003,6 @@
       https://www.futura-sciences.com/planete/actualites/climatologie-impact-energetique-flaques-banquise-44141/'
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1067,7 +1037,6 @@
     answer_extra_info: https://www.lemonde.fr/blog/oceanclimat/2015/11/18/tout-ce-quil-faut-savoir-sur-lacidification-des-oceans/
     author: Avenir Climatique
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1101,7 +1070,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1138,7 +1106,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1171,7 +1138,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1209,7 +1175,6 @@
     answer_extra_info: https://multimedia.scmp.com/news/world/article/3000839/permafrost/
     author: Matthieu Massart
     validator: ''
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1244,7 +1209,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1279,7 +1243,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1314,7 +1277,6 @@
     answer_extra_info: retiré car doublon avec la 71
     author: Matthieu Massart
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-03-10
     created: 2020-03-10
@@ -1346,7 +1308,6 @@
     answer_extra_info: https://www.energylab.sia-partners.com/observatoire-biomethane-2019
     author: Avenir Climatique
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1380,7 +1341,6 @@
     answer_extra_info: "https://www.statistiques.developpement-durable.gouv.fr/tableau-de-bord-biogaz-pour-la-production-delectricite-premier-trimestre-2020\r\nhttps://www.actu-environnement.com/ae/news/biogaz-raccordement-electricite-recul-30222.php4"
     author: Avenir Climatique
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1415,7 +1375,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: ''
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1449,7 +1408,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1487,7 +1445,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Pascal Esposito
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1521,7 +1478,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: ''
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1557,7 +1513,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1590,7 +1545,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1624,7 +1578,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Pascal Esposito
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1658,7 +1611,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1694,7 +1646,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: ''
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1727,7 +1678,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: ''
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1757,7 +1707,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: ''
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1786,7 +1735,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1819,7 +1767,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1848,7 +1795,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1880,7 +1826,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1915,7 +1860,6 @@
     answer_extra_info: https://www.theseacleaners.org/la-pollution-plastique-oceanique/
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1948,7 +1892,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -1978,7 +1921,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2010,7 +1952,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2040,7 +1981,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2074,7 +2014,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2106,7 +2045,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2138,7 +2076,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: ''
-    publish: true
     validation_status: Brouillon
     added: 2020-03-10
     created: 2020-03-10
@@ -2171,7 +2108,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2207,7 +2143,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: ''
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2239,7 +2174,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: ''
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2271,7 +2205,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: ''
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2306,7 +2239,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2337,7 +2269,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2367,7 +2298,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2403,7 +2333,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2436,7 +2365,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2469,7 +2397,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2506,7 +2433,6 @@
       https://mrmondialisation.org/le-cout-ecologique-dinternet-est-astronomique/'
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2541,7 +2467,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2574,7 +2499,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2607,7 +2531,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2645,7 +2568,6 @@
       image alternative (guardian): https://pbs.twimg.com/media/EMOnQq3WkAABCPD.png'
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-10
     created: 2020-03-10
@@ -2677,7 +2599,6 @@
     answer_extra_info: ''
     author: climat-en-questions.fr
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-11
     created: 2020-03-11
@@ -2713,7 +2634,6 @@
     answer_extra_info: ''
     author: climat-en-questions.fr
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-11
     created: 2020-03-11
@@ -2745,7 +2665,6 @@
     answer_extra_info: retiré car doublon avec la question 70
     author: Avenir Climatique
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-03-11
     created: 2020-03-11
@@ -2785,7 +2704,6 @@
     answer_extra_info: ''
     author: Avenir Climatique
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-11
     created: 2020-03-11
@@ -2823,7 +2741,6 @@
       https://ourworldindata.org/grapher/co-emissions-per-capita?tab=chart'
     author: Avenir Climatique
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-11
     created: 2020-03-11
@@ -2858,7 +2775,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -2891,7 +2807,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-04-24
     created: 2020-04-26
@@ -2923,7 +2838,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-04-24
     created: 2020-04-26
@@ -2959,7 +2873,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -2999,7 +2912,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -3031,7 +2943,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-04-24
     created: 2020-04-26
@@ -3064,7 +2975,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -3098,7 +3008,6 @@
     answer_extra_info: ''
     author: Guillaume Boudry
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -3132,7 +3041,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -3168,7 +3076,6 @@
     answer_extra_info: ''
     author: Guillaume Boudry
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -3201,7 +3108,6 @@
     answer_extra_info: ''
     author: Guillaume Boudry
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -3236,7 +3142,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -3267,7 +3172,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -3302,7 +3206,6 @@
     answer_extra_info: ''
     author: Guillaume Boudry
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -3334,7 +3237,6 @@
     answer_extra_info: ''
     author: Guillaume Boudry
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -3369,7 +3271,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -3405,7 +3306,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -3437,7 +3337,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -3472,7 +3371,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-05-11
     created: 2020-04-26
@@ -3504,7 +3402,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r001.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-07
     created: 2019-01-07
@@ -3537,7 +3434,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-08
     created: 2019-01-08
@@ -3569,7 +3465,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-09
     created: 2019-01-09
@@ -3601,7 +3496,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r004.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-10
     created: 2019-01-10
@@ -3637,7 +3531,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-11
     created: 2019-01-11
@@ -3669,7 +3562,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-01-14
     created: 2019-01-14
@@ -3702,7 +3594,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-01-15
     created: 2019-01-15
@@ -3733,7 +3624,6 @@
     answer_extra_info: 'image alternative: https://pbs.twimg.com/media/DV92X06VoAE3YmC.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-16
     created: 2019-01-16
@@ -3763,7 +3653,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-17
     created: 2019-01-17
@@ -3798,7 +3687,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-18
     created: 2019-01-18
@@ -3829,7 +3717,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-21
     created: 2019-01-21
@@ -3861,7 +3748,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-22
     created: 2019-01-22
@@ -3893,7 +3779,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-23
     created: 2019-01-23
@@ -3925,7 +3810,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r014.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-24
     created: 2019-01-24
@@ -3957,7 +3841,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-25
     created: 2019-01-25
@@ -3991,7 +3874,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-28
     created: 2019-01-28
@@ -4024,7 +3906,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-30
     created: 2019-01-30
@@ -4056,7 +3937,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-01-30
     created: 2019-01-30
@@ -4090,7 +3970,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: false
     validation_status: Écartée
     added: 2019-01-31
     created: 2019-01-31
@@ -4122,7 +4001,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: false
     validation_status: Écartée
     added: 2019-02-01
     created: 2019-02-01
@@ -4152,7 +4030,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-04
     created: 2019-02-04
@@ -4182,7 +4059,6 @@
     answer_extra_info: doublon avec la 11
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-06
     created: 2019-02-06
@@ -4213,7 +4089,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-06
     created: 2019-02-06
@@ -4245,7 +4120,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: false
     validation_status: Écartée
     added: 2019-02-07
     created: 2019-02-07
@@ -4284,7 +4158,6 @@
       supply&indicator=Total primary energy supply (TPES) by source%20by%20source)'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-08
     created: 2019-02-08
@@ -4316,7 +4189,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-11
     created: 2019-02-11
@@ -4349,7 +4221,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-12
     created: 2019-02-12
@@ -4384,7 +4255,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-13
     created: 2019-02-13
@@ -4418,7 +4288,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-14
     created: 2019-02-14
@@ -4451,7 +4320,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-02-15
     created: 2019-02-15
@@ -4483,7 +4351,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-04-24
     created: 2020-04-26
@@ -4514,7 +4381,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-19
     created: 2020-04-26
@@ -4551,7 +4417,6 @@
       https://www.linkedin.com/feed/update/urn:li:activity:6531245430238519296/'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-21
     created: 2020-04-26
@@ -4586,7 +4451,6 @@
       - https://www.deplacementspros.com/photo/art/default/6075753-9067519.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-21
     created: 2020-04-26
@@ -4620,7 +4484,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-22
     created: 2020-04-26
@@ -4655,7 +4518,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-25
     created: 2020-04-26
@@ -4687,7 +4549,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-02-26
     created: 2020-04-26
@@ -4720,7 +4581,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-02-27
     created: 2020-04-26
@@ -4751,7 +4611,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-03-01
     created: 2020-04-26
@@ -4782,7 +4641,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-03-01
     created: 2020-04-26
@@ -4821,7 +4679,6 @@
       Image alternative: http://www.illustratedcuriosity.com/files/media/39990/wmo.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-03-04
     created: 2020-04-26
@@ -4855,7 +4712,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-03-05
     created: 2020-04-26
@@ -4888,7 +4744,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-03-06
     created: 2020-04-26
@@ -4919,7 +4774,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-03-07
     created: 2020-04-26
@@ -4951,7 +4805,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-03-08
     created: 2020-04-26
@@ -4981,7 +4834,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-03-11
     created: 2020-04-26
@@ -5014,7 +4866,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r047.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-03-13
     created: 2020-04-26
@@ -5050,7 +4901,6 @@
       https://jancovici.com/wp-content/uploads/2010/01/assiette_graph5_en.png"
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-03-13
     created: 2020-04-26
@@ -5084,7 +4934,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r049.png'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-03-15
     created: 2020-04-26
@@ -5115,7 +4964,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r050.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-03-15
     created: 2020-04-26
@@ -5146,7 +4994,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r051.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-03-18
     created: 2020-04-26
@@ -5182,7 +5029,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-03-19
     created: 2020-04-26
@@ -5221,7 +5067,6 @@
       - https://media.lesechos.com/api/v1/images/view/5d0247ee8fe56f268c7e7557/contenu_article/image.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-03-20
     created: 2020-04-26
@@ -5259,7 +5104,6 @@
       Greenhouse Gas Study/GHG3 Executive Summary and Report.pdf page 55'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-03-21
     created: 2020-04-26
@@ -5299,7 +5143,6 @@
       - https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r055b.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-03-22
     created: 2020-04-26
@@ -5335,7 +5178,6 @@
     answer_extra_info: 'autre image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r056b.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: false
     validation_status: Écartée
     added: 2019-03-26
     created: 2020-04-26
@@ -5369,7 +5211,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-03-26
     created: 2020-04-26
@@ -5403,7 +5244,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-03-27
     created: 2020-04-26
@@ -5439,7 +5279,6 @@
       (affiche la production de charbon par région, pas par pays)'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-03-28
     created: 2020-04-26
@@ -5473,7 +5312,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-03-30
     created: 2020-04-26
@@ -5505,7 +5343,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-04-01
     created: 2020-04-26
@@ -5536,7 +5373,6 @@
       (import vs import net ?)'
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-04-02
     created: 2020-04-26
@@ -5567,7 +5403,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r063.png'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-04-03
     created: 2020-04-26
@@ -5598,7 +5433,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-04-05
     created: 2020-04-26
@@ -5630,7 +5464,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-04-05
     created: 2020-04-26
@@ -5664,7 +5497,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-04-08
     created: 2020-04-26
@@ -5698,7 +5530,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: false
     validation_status: Brouillon
     added: 2019-04-09
     created: 2020-04-26
@@ -5736,7 +5567,6 @@
       image alternative: https://www.helgilibrary.com/charts/image/7792/0/'
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-04-10
     created: 2020-04-26
@@ -5769,7 +5599,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r069.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-04-11
     created: 2020-04-26
@@ -5803,7 +5632,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: false
     validation_status: Écartée
     added: 2019-04-12
     created: 2020-04-26
@@ -5835,7 +5663,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-04-17
     created: 2020-04-26
@@ -5868,7 +5695,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-04-17
     created: 2020-04-26
@@ -5901,7 +5727,6 @@
       Pays : http://www.globalcarbonatlas.org/en/CO2-emissions'
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-04-18
     created: 2020-04-26
@@ -5933,7 +5758,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r075.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-04-18
     created: 2020-04-26
@@ -5966,7 +5790,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-04-22
     created: 2020-04-26
@@ -5999,7 +5822,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-04-23
     created: 2020-04-26
@@ -6029,7 +5851,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r078.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-04-24
     created: 2020-04-26
@@ -6062,7 +5883,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-04-25
     created: 2020-04-26
@@ -6095,7 +5915,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-04-26
     created: 2020-04-26
@@ -6126,7 +5945,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-04-29
     created: 2020-04-26
@@ -6156,7 +5974,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-04-30
     created: 2020-04-26
@@ -6188,7 +6005,6 @@
     answer_extra_info: 'image alternative: https://medias.liberation.fr/photo/1267308-carbuburants.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-05-01
     created: 2020-04-26
@@ -6224,7 +6040,6 @@
       688
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-05-02
     created: 2020-04-26
@@ -6257,7 +6072,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-05-03
     created: 2020-04-26
@@ -6287,7 +6101,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthie
-    publish: false
     validation_status: Écartée
     added: 2019-05-13
     created: 2020-04-26
@@ -6319,7 +6132,6 @@
       Source 2 : http://www.bom.gov.au/australia/charts/about/about_access.shtml'
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-05-14
     created: 2020-04-26
@@ -6351,7 +6163,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-05-15
     created: 2020-04-26
@@ -6388,7 +6199,6 @@
       2 : https://climate.nasa.gov/vital-signs/carbon-dioxide/'
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-05-16
     created: 2020-04-26
@@ -6418,7 +6228,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-05-17
     created: 2020-04-26
@@ -6451,7 +6260,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r091.jpg'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-05-20
     created: 2020-04-26
@@ -6487,7 +6295,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r092.jpg'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-05-21
     created: 2020-04-26
@@ -6525,7 +6332,6 @@
       - https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r093b.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-05-22
     created: 2020-04-26
@@ -6561,7 +6367,6 @@
     answer_extra_info: 'image alternative: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r094a.jpg'
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-05-23
     created: 2020-04-26
@@ -6592,7 +6397,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-05-24
     created: 2020-04-26
@@ -6631,7 +6435,6 @@
       - https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r096b.jpg'
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-05-27
     created: 2020-04-26
@@ -6661,7 +6464,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r097.jpg'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-05-28
     created: 2020-04-26
@@ -6691,7 +6493,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-05-29
     created: 2020-04-26
@@ -6723,7 +6524,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-05-30
     created: 2020-04-26
@@ -6754,7 +6554,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-05-31
     created: 2020-04-26
@@ -6785,7 +6584,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-03
     created: 2020-04-26
@@ -6817,7 +6615,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-04
     created: 2020-04-26
@@ -6849,7 +6646,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-05
     created: 2020-04-26
@@ -6881,7 +6677,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-06
     created: 2020-04-26
@@ -6912,7 +6707,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-07
     created: 2020-04-26
@@ -6942,7 +6736,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-10
     created: 2020-04-26
@@ -6973,7 +6766,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-11
     created: 2020-04-26
@@ -7004,7 +6796,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-12
     created: 2020-04-26
@@ -7034,7 +6825,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-06-13
     created: 2020-04-26
@@ -7067,7 +6857,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-15
     created: 2020-04-26
@@ -7098,7 +6887,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r111.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-06-17
     created: 2020-04-26
@@ -7129,7 +6917,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-18
     created: 2020-04-26
@@ -7160,7 +6947,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-19
     created: 2020-04-26
@@ -7190,7 +6976,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: false
     validation_status: Écartée
     added: 2019-06-20
     created: 2020-04-26
@@ -7223,7 +7008,6 @@
       image alternative: https://medias.liberation.fr/photo/1231382-infographie-les-records-de-temperature-a-battre-en-europe-2-juillet-2019.jpg'
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-21
     created: 2020-04-26
@@ -7257,7 +7041,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-06-24
     created: 2020-04-26
@@ -7289,7 +7072,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-25
     created: 2020-04-26
@@ -7321,7 +7103,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-06-26
     created: 2020-04-26
@@ -7356,7 +7137,6 @@
     answer_extra_info: les chiffres de la SNBC sont légèrement différents
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-06-27
     created: 2020-04-26
@@ -7387,7 +7167,6 @@
     answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r120.jpg'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-06-29
     created: 2020-04-26
@@ -7423,7 +7202,6 @@
     answer_extra_info: ''
     author: Cyril Retourné
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -7453,7 +7231,6 @@
     answer_extra_info: ''
     author: Cyril Retourné
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-04-24
     created: 2020-04-26
@@ -7484,7 +7261,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-24
     created: 2020-04-26
@@ -7523,7 +7299,6 @@
     answer_extra_info: 'vidéo: Gael Giraud'
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-27
     created: 2020-05-05
@@ -7557,7 +7332,6 @@
     answer_extra_info: 'graphique afp: https://pbs.twimg.com/media/DTz5DdNXcAARmq3.jpg'
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-27
     created: 2020-05-05
@@ -7595,7 +7369,6 @@
     answer_extra_info: https://info.arte.tv/fr/le-commerce-maritime-mondial-infographies
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-27
     created: 2020-05-05
@@ -7627,7 +7400,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-28
     created: 2020-05-05
@@ -7666,7 +7438,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-04-29
     created: 2020-05-05
@@ -7702,7 +7473,6 @@
     answer_extra_info: ''
     author: Contributeur anonyme
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-07
     created: 2020-05-07
@@ -7739,7 +7509,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-05-08
     created: 2020-05-05
@@ -7770,7 +7539,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-08
     created: 2020-05-05
@@ -7806,7 +7574,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-10
     created: 2020-05-10
@@ -7839,7 +7606,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-10
     created: 2020-05-10
@@ -7871,7 +7637,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-10
     created: 2020-05-10
@@ -7905,7 +7670,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-10
     created: 2020-05-10
@@ -7936,7 +7700,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1145772035559366656
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-07-01
     created: 2020-05-07
@@ -7968,7 +7731,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1146157143856431106
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-07-02
     created: 2020-05-07
@@ -7999,7 +7761,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1146495403120046080
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-05-11
     created: 2020-05-20
@@ -8034,7 +7795,6 @@
       https://twitter.com/MidesMap/status/1261174522369249282'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-07-05
     created: 2020-05-20
@@ -8067,7 +7827,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1147226216879022085
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-07-05
     created: 2020-05-20
@@ -8100,7 +7859,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1148318499535806465
     author: laydgeur
     validator: Matthieu Massart
-    publish: false
     validation_status: Écartée
     added: 2019-07-08
     created: 2020-05-20
@@ -8133,7 +7891,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1148674455801073666
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-07-09
     created: 2020-05-20
@@ -8167,7 +7924,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1149037081915731968
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-07-10
     created: 2020-05-20
@@ -8201,7 +7957,6 @@
       https://twitter.com/laydgeur/status/1149412744766132225'
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-07-11
     created: 2020-05-20
@@ -8234,7 +7989,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1149767191178485761
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-07-12
     created: 2020-05-20
@@ -8268,7 +8022,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1151082299414515712
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-07-16
     created: 2020-05-20
@@ -8300,7 +8053,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1151211826824323074
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-07-16
     created: 2020-05-20
@@ -8332,7 +8084,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1151581846184046593
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-07-17
     created: 2020-05-20
@@ -8364,7 +8115,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1151943136471658496
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-07-18
     created: 2020-05-20
@@ -8399,7 +8149,6 @@
       https://twitter.com/laydgeur/status/1152311385189208065'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-07-19
     created: 2020-05-20
@@ -8433,7 +8182,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1153389224479121409
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-07-22
     created: 2020-05-20
@@ -8469,7 +8217,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1153752267511803909
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-07-23
     created: 2020-05-20
@@ -8502,7 +8249,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1154109763510243329
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-07-24
     created: 2020-05-20
@@ -8534,7 +8280,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1154639933174419456
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-07-26
     created: 2020-05-20
@@ -8566,7 +8311,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1155051966302699520
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-07-27
     created: 2020-05-20
@@ -8600,7 +8344,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1155927532039860224
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-07-29
     created: 2020-05-20
@@ -8632,7 +8375,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1156283029876350976
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-07-30
     created: 2020-05-20
@@ -8668,7 +8410,6 @@
       https://www.bilans-ges.ademe.fr/documentation/UPLOAD_DOC_FR/index.htm?pci_et_masse_volumique.htm'
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-07-31
     created: 2020-05-20
@@ -8701,7 +8442,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1157008672847028224
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-08-01
     created: 2020-05-20
@@ -8741,7 +8481,6 @@
       https://twitter.com/laydgeur/status/1157382377083154433'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-08-02
     created: 2020-05-20
@@ -8774,7 +8513,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1160996567823847425
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-08-12
     created: 2020-05-20
@@ -8808,7 +8546,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1161369759063166976
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-08-13
     created: 2020-05-20
@@ -8841,7 +8578,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1161933795442012160
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-08-15
     created: 2020-05-20
@@ -8874,7 +8610,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1162299761480933381
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-08-16
     created: 2020-05-20
@@ -8905,7 +8640,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1162716519849242624
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-08-17
     created: 2020-05-20
@@ -8939,7 +8673,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1165700811634163719
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-08-19
     created: 2020-05-20
@@ -8971,7 +8704,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1163894592086925313
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-08-20
     created: 2020-05-20
@@ -9003,7 +8735,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1165703510631092224
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-08-21
     created: 2020-05-20
@@ -9033,7 +8764,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1164820093919887362
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-08-23
     created: 2020-05-20
@@ -9065,7 +8795,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1165706416797233158
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-08-24
     created: 2020-05-20
@@ -9099,7 +8828,6 @@
       https://twitter.com/laydgeur/status/1166071796682149888'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-08-26
     created: 2020-05-20
@@ -9134,7 +8862,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1166426077360771072
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-08-27
     created: 2020-05-20
@@ -9165,7 +8892,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1166793988785025025
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-08-28
     created: 2020-05-20
@@ -9199,7 +8925,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1167151122601168896
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-08-29
     created: 2020-05-20
@@ -9233,7 +8958,6 @@
       https://twitter.com/laydgeur/status/1167853448408309760'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-08-31
     created: 2020-05-20
@@ -9269,7 +8993,6 @@
       https://twitter.com/laydgeur/status/1168598181262897152'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-02
     created: 2020-05-20
@@ -9303,7 +9026,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1168965089627693057
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-09-03
     created: 2020-05-20
@@ -9338,7 +9060,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1169330199965515776
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-04
     created: 2020-05-20
@@ -9372,7 +9093,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1169696167204139010
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-05
     created: 2020-05-20
@@ -9406,7 +9126,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1170061695970160640
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2019-09-06
     created: 2020-05-20
@@ -9439,7 +9158,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1171143561586380801
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-09-09
     created: 2020-05-20
@@ -9471,7 +9189,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1171516229070143495
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-10
     created: 2020-05-20
@@ -9506,7 +9223,6 @@
       https://twitter.com/laydgeur/status/1172033463958085633'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-09-12
     created: 2020-05-20
@@ -9539,7 +9255,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1172231013445058560
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-12
     created: 2020-05-20
@@ -9571,7 +9286,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1172588333815541766
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-13
     created: 2020-05-20
@@ -9603,7 +9317,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1173691915872739330
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-16
     created: 2020-05-20
@@ -9635,7 +9348,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1174042337846206464
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-17
     created: 2020-05-20
@@ -9670,7 +9382,6 @@
       https://twitter.com/laydgeur/status/1174405954026295296'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-18
     created: 2020-05-20
@@ -9703,7 +9414,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1174765593616146432
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-19
     created: 2020-05-20
@@ -9736,7 +9446,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1175144001697136640
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-09-20
     created: 2020-05-20
@@ -9769,7 +9478,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1176212562179960832
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-23
     created: 2020-05-20
@@ -9807,7 +9515,6 @@
       https://twitter.com/laydgeur/status/1176586995147137028'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-24
     created: 2020-05-20
@@ -9845,7 +9552,6 @@
       https://twitter.com/laydgeur/status/1176947315720040448'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-09-25
     created: 2020-05-20
@@ -9883,7 +9589,6 @@
       https://twitter.com/laydgeur/status/1177310853114318854'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-26
     created: 2020-05-20
@@ -9913,7 +9618,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1177672366169759746
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-27
     created: 2020-05-20
@@ -9946,7 +9650,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1178751653677285376
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-09-30
     created: 2020-05-20
@@ -9981,7 +9684,6 @@
       https://twitter.com/laydgeur/status/1179111646964387840'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-10-01
     created: 2020-05-20
@@ -10013,7 +9715,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1179475565688041473
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-10-02
     created: 2020-05-20
@@ -10048,7 +9749,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1179849946763350017
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-10-03
     created: 2020-05-20
@@ -10081,7 +9781,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1180206991471468551
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-10-04
     created: 2020-05-20
@@ -10112,7 +9811,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1181290624726769665
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-10-07
     created: 2020-05-20
@@ -10149,7 +9847,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1181651497144205312
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-10-08
     created: 2020-05-20
@@ -10181,7 +9878,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1182015967855042564
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-10-09
     created: 2020-05-20
@@ -10215,7 +9911,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1182537772659294209
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-10-11
     created: 2020-05-20
@@ -10252,7 +9947,6 @@
       https://twitter.com/laydgeur/status/1182944388009418752'
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-10-12
     created: 2020-05-20
@@ -10288,7 +9982,6 @@
       https://twitter.com/laydgeur/status/1183823706918924288'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-10-14
     created: 2020-05-20
@@ -10322,7 +10015,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1184199221567741957
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-10-15
     created: 2020-05-20
@@ -10354,7 +10046,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1184720171954511873
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-10-17
     created: 2020-05-20
@@ -10388,7 +10079,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1185074794854793216
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-10-18
     created: 2020-05-20
@@ -10423,7 +10113,6 @@
       https://twitter.com/laydgeur/status/1185279458799960071'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-10-18
     created: 2020-05-20
@@ -10455,7 +10144,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1186362594883522561
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-10-21
     created: 2020-05-20
@@ -10489,7 +10177,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1186870432005271555
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-10-23
     created: 2020-05-20
@@ -10523,7 +10210,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1187096658909245446
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-10-23
     created: 2020-05-20
@@ -10555,7 +10241,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1187618318041145345
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-10-25
     created: 2020-05-20
@@ -10593,7 +10278,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1188081994086912003
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-10-26
     created: 2020-05-20
@@ -10630,7 +10314,6 @@
       https://twitter.com/laydgeur/status/1188914665750978561'
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-10-28
     created: 2020-05-20
@@ -10663,7 +10346,6 @@
       alternative: https://arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/OBZGE2QFO2MD2UALAMSONWIKC4.jpg\n\nhttps://twitter.com/laydgeur/status/1189284112013647872"
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-10-29
     created: 2020-05-20
@@ -10696,7 +10378,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1189652849296367621
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-10-30
     created: 2020-05-20
@@ -10730,7 +10411,6 @@
     answer_extra_info: "pic vs plateau \U0001F914\n\nhttps://twitter.com/laydgeur/status/1190014156746952704"
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-10-31
     created: 2020-05-20
@@ -10763,7 +10443,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1190576430163382273
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-11-02
     created: 2020-05-20
@@ -10796,7 +10475,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1194000975872348161
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-11-11
     created: 2020-05-20
@@ -10830,7 +10508,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1194353947517034497
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-11-12
     created: 2020-05-20
@@ -10862,7 +10539,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1194711084512493569
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-11-13
     created: 2020-05-20
@@ -10898,7 +10574,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1195256778994401280
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-11-15
     created: 2020-05-20
@@ -10932,7 +10607,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1195445412603289600
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-11-15
     created: 2020-05-20
@@ -10968,7 +10642,6 @@
       https://twitter.com/laydgeur/status/1196690802883383296'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-11-19
     created: 2020-05-20
@@ -11001,7 +10674,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1196886176055083017
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-11-19
     created: 2020-05-20
@@ -11032,7 +10704,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1197418673549520897
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-11-21
     created: 2020-05-20
@@ -11064,7 +10735,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1197866585970618369
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-11-22
     created: 2020-05-20
@@ -11097,7 +10767,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1198199981590614017
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-11-23
     created: 2020-05-20
@@ -11130,7 +10799,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1199063090979049474
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-11-25
     created: 2020-05-20
@@ -11163,7 +10831,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1199580252890161152
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-11-27
     created: 2020-05-20
@@ -11199,7 +10866,6 @@
       https://twitter.com/laydgeur/status/1199937907831783424'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-11-28
     created: 2020-05-20
@@ -11231,7 +10897,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1200337898098372608
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-11-29
     created: 2020-05-20
@@ -11261,7 +10926,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1200761860703830016
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-11-30
     created: 2020-05-20
@@ -11293,7 +10957,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1201604429880995842
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-12-02
     created: 2020-05-20
@@ -11325,7 +10988,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1201967595441836033
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-12-03
     created: 2020-05-20
@@ -11358,7 +11020,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1202323118259363840
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-12-04
     created: 2020-05-20
@@ -11390,7 +11051,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1202838727678136320
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-12-06
     created: 2020-05-20
@@ -11424,7 +11084,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1203381913941135362
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-12-07
     created: 2020-05-20
@@ -11455,7 +11114,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1204135773567672320
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-12-09
     created: 2020-05-20
@@ -11493,7 +11151,6 @@
       https://twitter.com/laydgeur/status/1204505503704989704'
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-12-10
     created: 2020-05-20
@@ -11530,7 +11187,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1204864932136833031
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2019-12-11
     created: 2020-05-20
@@ -11564,7 +11220,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1205231807945302016
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-12-12
     created: 2020-05-20
@@ -11599,7 +11254,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1205599630253264899
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-12-13
     created: 2020-05-20
@@ -11636,7 +11290,6 @@
       https://twitter.com/laydgeur/status/1206678650722160640'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-12-16
     created: 2020-05-20
@@ -11670,7 +11323,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1207040354035347456
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-12-17
     created: 2020-05-20
@@ -11704,7 +11356,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1207406449518882816
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2019-12-18
     created: 2020-05-20
@@ -11738,7 +11389,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1207958658727993344
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2019-12-20
     created: 2020-05-20
@@ -11772,7 +11422,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1208347504535887872
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2019-12-21
     created: 2020-05-20
@@ -11805,7 +11454,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1214285551496552448
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-01-06
     created: 2020-05-20
@@ -11841,7 +11489,6 @@
       https://twitter.com/laydgeur/status/1214647943493562371'
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-01-07
     created: 2020-05-20
@@ -11873,7 +11520,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1215008925487161346
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-01-08
     created: 2020-05-20
@@ -11907,7 +11553,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1215370576375828480
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-01-09
     created: 2020-05-20
@@ -11940,7 +11585,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1215948088457732097
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-01-11
     created: 2020-05-20
@@ -11973,7 +11617,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1216823896470630400
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-01-13
     created: 2020-05-20
@@ -12005,7 +11648,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1217194216742432768
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-01-14
     created: 2020-05-20
@@ -12041,7 +11683,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1217550590269624323
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-01-15
     created: 2020-05-20
@@ -12078,7 +11719,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1218076428559929344
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-01-17
     created: 2020-05-20
@@ -12115,7 +11755,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1218275374330716161
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-01-17
     created: 2020-05-20
@@ -12150,7 +11789,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1219359975245520896
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-01-20
     created: 2020-05-20
@@ -12187,7 +11825,6 @@
       https://twitter.com/laydgeur/status/1219734466240950273'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-01-21
     created: 2020-05-20
@@ -12220,7 +11857,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1220084550161829895
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-01-22
     created: 2020-05-20
@@ -12253,7 +11889,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1220457844815908864
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-01-23
     created: 2020-05-20
@@ -12287,7 +11922,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1182537772659294209
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-01-25
     created: 2020-05-20
@@ -12321,7 +11955,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1221893974497079297
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-01-27
     created: 2020-05-20
@@ -12358,7 +11991,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1222261099979997185
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-01-28
     created: 2020-05-20
@@ -12400,7 +12032,6 @@
       https://twitter.com/laydgeur/status/1222623070432702464'
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-01-29
     created: 2020-05-20
@@ -12434,7 +12065,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1223144719980662785
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-01-31
     created: 2020-05-20
@@ -12473,7 +12103,6 @@
       https://twitter.com/laydgeur/status/1223349337251557376'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-01-31
     created: 2020-05-20
@@ -12508,7 +12137,6 @@
       https://twitter.com/laydgeur/status/1224453105799946253'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-02-03
     created: 2020-05-20
@@ -12543,7 +12171,6 @@
       https://twitter.com/laydgeur/status/1224791510161465345'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-02-04
     created: 2020-05-20
@@ -12580,7 +12207,6 @@
       https://twitter.com/laydgeur/status/1225157173052768256'
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-02-05
     created: 2020-05-20
@@ -12616,7 +12242,6 @@
       https://twitter.com/laydgeur/status/1225722941742161921'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-02-07
     created: 2020-05-20
@@ -12654,7 +12279,6 @@
       https://twitter.com/laydgeur/status/1226134940548505600'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-02-08
     created: 2020-05-20
@@ -12686,7 +12310,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1226973310392684545
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-02-10
     created: 2020-05-20
@@ -12718,7 +12341,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1227338442671054848
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-02-11
     created: 2020-05-20
@@ -12752,7 +12374,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1227690428528570368
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-02-12
     created: 2020-05-20
@@ -12783,7 +12404,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1228060922897412096
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-02-13
     created: 2020-05-20
@@ -12816,7 +12436,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1228794188424269826
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-02-15
     created: 2020-05-20
@@ -12852,7 +12471,6 @@
       https://twitter.com/laydgeur/status/1229511853577035777'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-02-17
     created: 2020-05-20
@@ -12888,7 +12506,6 @@
       https://twitter.com/laydgeur/status/1229863134619480071'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-02-18
     created: 2020-05-20
@@ -12924,7 +12541,6 @@
       https://twitter.com/laydgeur/status/1230445450551058432'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-02-20
     created: 2020-05-20
@@ -12961,7 +12577,6 @@
       https://twitter.com/laydgeur/status/1230762664126631937'
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-02-21
     created: 2020-05-20
@@ -12996,7 +12611,6 @@
       https://twitter.com/laydgeur/status/1231201782510096392'
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-02-22
     created: 2020-05-20
@@ -13030,7 +12644,6 @@
       https://twitter.com/laydgeur/status/1232045258281799681'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-02-24
     created: 2020-05-20
@@ -13064,7 +12677,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1232557145901715456
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-02-26
     created: 2020-05-20
@@ -13096,7 +12708,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1233006420804677633
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-02-27
     created: 2020-05-20
@@ -13129,7 +12740,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1233476594569818113
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-02-28
     created: 2020-05-20
@@ -13161,7 +12771,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1233852444418957314
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-02-29
     created: 2020-05-20
@@ -13200,7 +12809,6 @@
       https://twitter.com/laydgeur/status/1234583035296845825'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-03-02
     created: 2020-05-20
@@ -13234,7 +12842,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1234945242606055424
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-03-03
     created: 2020-05-20
@@ -13266,7 +12873,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1235821535555776512
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-03-06
     created: 2020-05-20
@@ -13299,7 +12905,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1236023674685329408
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-03-06
     created: 2020-05-20
@@ -13331,7 +12936,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1236572647187767298
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-03-08
     created: 2020-05-20
@@ -13366,7 +12970,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1237112036775133192
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-03-09
     created: 2020-05-20
@@ -13399,7 +13002,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1237477031312527360
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-03-10
     created: 2020-05-20
@@ -13432,7 +13034,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1239466059339571201
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-03-11
     created: 2020-05-20
@@ -13465,7 +13066,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1239468645471981569
     author: laydgeur
     validator: Raphael Odini
-    publish: false
     validation_status: Écartée
     added: 2020-03-13
     created: 2020-05-20
@@ -13497,7 +13097,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1238873300857651200
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-03-14
     created: 2020-05-20
@@ -13532,7 +13131,6 @@
     answer_extra_info: ''
     author: Contributeur anonyme
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-12
     created: 2020-05-20
@@ -13570,7 +13168,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-05-18
     created: 2020-05-20
@@ -13609,7 +13206,6 @@
     answer_extra_info: 'image alternative: https://www.sagess.fr/sites/default/files/evolution-stock-sagess-2018-fr.jpg'
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-20
     created: 2020-05-20
@@ -13645,7 +13241,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-05-20
     created: 2020-05-20
@@ -13685,7 +13280,6 @@
     answer_extra_info: super question Raphaël !
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-20
     created: 2020-05-23
@@ -13720,7 +13314,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-21
     created: 2020-05-23
@@ -13759,7 +13352,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-25
     created: 2020-05-28
@@ -13794,7 +13386,6 @@
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-25
     created: 2020-05-28
@@ -13829,7 +13420,6 @@
     answer_extra_info: 'image alternative: https://fr.statista.com/statistiques/472545/proportion-nucleaire-production-d-electricite-france/'
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-25
     created: 2020-05-28
@@ -13875,7 +13465,6 @@
       https://www.connaissancedesenergies.org/une-carte-pour-suivre-lintensite-carbone-de-la-consommation-electrique-170613'
     author: Raphael Odini
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-05-25
     created: 2020-05-28
@@ -13918,7 +13507,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-05-25
     created: 2020-05-28
@@ -13951,7 +13539,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-04
     created: 2020-06-24
@@ -13982,7 +13569,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14021,7 +13607,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
@@ -14053,7 +13638,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14089,7 +13673,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
@@ -14123,7 +13706,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
@@ -14153,7 +13735,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14184,7 +13765,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14213,7 +13793,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14243,7 +13822,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14273,7 +13851,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14303,7 +13880,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14336,7 +13912,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
@@ -14371,7 +13946,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
@@ -14406,7 +13980,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
@@ -14440,7 +14013,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14470,7 +14042,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14501,7 +14072,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14530,7 +14100,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14559,7 +14128,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14589,7 +14157,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14621,7 +14188,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14651,7 +14217,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14685,7 +14250,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
@@ -14720,7 +14284,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
@@ -14752,7 +14315,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-04
     created: 2020-06-24
@@ -14787,7 +14349,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
@@ -14821,7 +14382,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
@@ -14857,7 +14417,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
@@ -14890,7 +14449,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -14919,7 +14477,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-04
     created: 2020-06-24
@@ -14950,7 +14507,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-04
     created: 2020-06-24
@@ -14982,7 +14538,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-04
     created: 2020-06-24
@@ -15015,7 +14570,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-04
     created: 2020-06-24
@@ -15047,7 +14601,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-04
     created: 2020-06-24
@@ -15076,7 +14629,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-04
     created: 2020-06-24
@@ -15106,7 +14658,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-04
     created: 2020-06-24
@@ -15136,7 +14687,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-04
     created: 2020-06-24
@@ -15166,7 +14716,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -15200,7 +14749,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-11
     created: 2020-06-24
@@ -15234,7 +14782,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
@@ -15264,7 +14811,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -15295,7 +14841,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -15323,7 +14868,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -15354,7 +14898,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
@@ -15385,7 +14928,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -15419,7 +14961,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
@@ -15455,7 +14996,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Lucia Romanita
-    publish: true
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
@@ -15489,7 +15029,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -15521,7 +15060,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -15551,7 +15089,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -15584,7 +15121,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
@@ -15618,7 +15154,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
@@ -15649,7 +15184,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -15684,7 +15218,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
@@ -15723,7 +15256,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-11
     created: 2020-06-24
@@ -15759,7 +15291,6 @@
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
@@ -15792,7 +15323,6 @@
     answer_extra_info: doublon
     author: Citoyens Pour le Climat
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-11
     created: 2020-06-24
@@ -15828,7 +15358,6 @@
     answer_extra_info: ''
     author: Le Monde
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -15861,7 +15390,6 @@
     answer_extra_info: ''
     author: Le Monde
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -15894,7 +15422,6 @@
     answer_extra_info: ''
     author: Le Monde
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -15925,7 +15452,6 @@
     answer_extra_info: ''
     author: Le Monde
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -15961,7 +15487,6 @@
     answer_extra_info: ''
     author: Le Monde
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-11
     created: 2020-06-24
@@ -15996,7 +15521,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
@@ -16029,7 +15553,6 @@
     answer_extra_info: ''
     author: Le Monde
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-11
     created: 2020-06-24
@@ -16058,7 +15581,6 @@
     answer_extra_info: ''
     author: INRAE
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
@@ -16091,7 +15613,6 @@
     answer_extra_info: ''
     author: INRAE
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-11
     created: 2020-06-24
@@ -16121,7 +15642,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-14
     created: 2020-06-24
@@ -16154,7 +15674,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-14
     created: 2020-06-24
@@ -16186,7 +15705,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-14
     created: 2020-06-24
@@ -16221,7 +15739,6 @@
     answer_extra_info: 'classement puissance installé: https://www.hydropower.org/country-profiles/region-europe'
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-14
     created: 2020-06-24
@@ -16256,7 +15773,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-14
     created: 2020-06-24
@@ -16289,7 +15805,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-14
     created: 2020-06-24
@@ -16322,7 +15837,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-14
     created: 2020-06-24
@@ -16356,7 +15870,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-14
     created: 2020-06-24
@@ -16387,7 +15900,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-14
     created: 2020-06-24
@@ -16417,7 +15929,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-14
     created: 2020-06-24
@@ -16451,7 +15962,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: true
     validation_status: Validée
     added: 2020-06-16
     created: 2020-06-24
@@ -16487,7 +15997,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-17
     created: 2020-06-24
@@ -16522,7 +16031,6 @@
       4 D’OÙ VIENNENT LES ÉMISSIONS FRANÇAISES AUJOURD’HUI ?
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
@@ -16561,7 +16069,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-17
     created: 2020-06-24
@@ -16595,7 +16102,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-17
     created: 2020-06-24
@@ -16630,7 +16136,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
@@ -16660,7 +16165,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -16692,7 +16196,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -16723,7 +16226,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -16753,7 +16255,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -16790,7 +16291,6 @@
     answer_extra_info: Faire un graphique homemade avec USA Chine et Inde
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
@@ -16826,7 +16326,6 @@
     answer_extra_info: di.unfccc + carbon atlas
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -16858,7 +16357,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -16891,7 +16389,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-06-17
     created: 2020-06-24
@@ -16924,7 +16421,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -16955,7 +16451,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -16986,7 +16481,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17017,7 +16511,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17046,7 +16539,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17078,7 +16570,6 @@
     answer_extra_info: Chiffres clés énergie page 45
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17111,7 +16602,6 @@
       et cube sur la place du capitole
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
@@ -17143,7 +16633,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17172,7 +16661,6 @@
     answer_extra_info: p321 du rapport
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17202,7 +16690,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17233,7 +16720,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17263,7 +16749,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17293,7 +16778,6 @@
     answer_extra_info: rapport du GIEC AR5
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17328,7 +16812,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
@@ -17358,7 +16841,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-11-05
     created: 2020-06-24
@@ -17410,7 +16892,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
@@ -17449,7 +16930,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-17
     created: 2020-06-24
@@ -17482,7 +16962,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
@@ -17512,7 +16991,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17541,7 +17019,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17580,7 +17057,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1332786312366202881?s=21
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
@@ -17612,7 +17088,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17646,7 +17121,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
@@ -17697,7 +17171,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-17
     created: 2020-06-24
@@ -17728,7 +17201,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17759,7 +17231,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-17
     created: 2020-06-24
@@ -17790,7 +17261,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-18
     created: 2020-06-24
@@ -17827,7 +17297,6 @@
     answer_extra_info: https://jancovici.com/changement-climatique/economie/quest-ce-que-lequation-de-kaya/
     author: Matthieu Massart
     validator: laydgeur
-    publish: false
     validation_status: Validée
     added: 2020-06-18
     created: 2020-06-24
@@ -17861,7 +17330,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-19
     created: 2020-06-24
@@ -17895,7 +17363,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Écartée
     added: 2020-06-19
     created: 2020-06-24
@@ -17938,7 +17405,6 @@
       autre image: https://azote.info/images/easyblog_images/188/Billets_photos_ouverture/emission_des_sols_n2o.jpg'
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-06-19
     created: 2020-06-24
@@ -17971,7 +17437,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-20
     created: 2020-06-24
@@ -18005,7 +17470,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-20
     created: 2020-06-24
@@ -18040,7 +17504,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-20
     created: 2020-06-24
@@ -18075,7 +17538,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Lucia Romanita
-    publish: true
     validation_status: Validée
     added: 2020-06-20
     created: 2020-06-24
@@ -18112,7 +17574,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-06-20
     created: 2020-06-24
@@ -18144,7 +17605,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-20
     created: 2020-06-24
@@ -18181,7 +17641,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-20
     created: 2020-06-24
@@ -18211,7 +17670,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Lucia Romanita
-    publish: true
     validation_status: Validée
     added: 2020-06-20
     created: 2020-06-24
@@ -18243,7 +17701,6 @@
     answer_extra_info: ''
     author: ''
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-20
     created: 2020-06-24
@@ -18275,7 +17732,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Écartée
     added: 2020-06-20
     created: 2020-06-24
@@ -18308,7 +17764,6 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-22
     created: 2020-06-24
@@ -18340,7 +17795,6 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-22
     created: 2020-06-24
@@ -18373,7 +17827,6 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-22
     created: 2020-06-24
@@ -18405,7 +17858,6 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-22
     created: 2020-06-24
@@ -18438,7 +17890,6 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-25
     created: 2020-06-25
@@ -18473,7 +17924,6 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-25
     created: 2020-06-25
@@ -18508,7 +17958,6 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-25
     created: 2020-06-25
@@ -18542,7 +17991,6 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-25
     created: 2020-06-25
@@ -18575,7 +18023,6 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-25
     created: 2020-06-25
@@ -18607,7 +18054,6 @@
     answer_extra_info: 'doublon avec '
     author: Vincent Mignerot
     validator: ''
-    publish: false
     validation_status: Écartée
     added: 2020-06-22
     created: 2020-06-25
@@ -18642,7 +18088,6 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-22
     created: 2020-06-25
@@ -18682,7 +18127,6 @@
     answer_extra_info: https://youtu.be/xgy0rW0oaFI
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-26
     created: 2020-06-29
@@ -18713,7 +18157,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-30
     created: 2020-07-04
@@ -18742,7 +18185,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-30
     created: 2020-07-04
@@ -18773,7 +18215,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-30
     created: 2020-07-04
@@ -18803,7 +18244,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-30
     created: 2020-07-04
@@ -18832,7 +18272,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-30
     created: 2020-07-04
@@ -18862,7 +18301,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-30
     created: 2020-07-04
@@ -18892,7 +18330,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-30
     created: 2020-07-04
@@ -18922,7 +18359,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-30
     created: 2020-07-04
@@ -18954,7 +18390,6 @@
     answer_extra_info: ''
     author: EDF
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-06-30
     created: 2020-07-04
@@ -18989,7 +18424,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Lucia Romanita
-    publish: true
     validation_status: Validée
     added: 2020-07-04
     created: 2020-07-04
@@ -19026,7 +18460,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-07-20
     created: 2020-07-23
@@ -19058,7 +18491,6 @@
     answer_extra_info: ''
     author: Contributeur anonyme
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-08-05
     created: 2020-08-10
@@ -19088,7 +18520,6 @@
     answer_extra_info: ''
     author: Contributeur anonyme
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-08-05
     created: 2020-08-10
@@ -19128,7 +18559,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: false
     validation_status: Validée
     added: 2020-08-28
     created: 2020-09-14
@@ -19168,7 +18598,6 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19206,7 +18635,6 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19255,7 +18683,6 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19288,7 +18715,6 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19323,7 +18749,6 @@
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19376,7 +18801,6 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19411,7 +18835,6 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19442,7 +18865,6 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19481,7 +18903,6 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19516,7 +18937,6 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-09-08
     created: 2020-09-14
@@ -19547,7 +18967,6 @@
     answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
-    publish: false
     validation_status: Brouillon
     added: 2020-09-08
     created: 2020-09-14
@@ -19582,7 +19001,6 @@
     answer_extra_info: ''
     author: Contributeur anonyme
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-09-16
     created: 2020-09-18
@@ -19611,7 +19029,6 @@
     answer_extra_info: ''
     author: Pascal Mostardi
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-09-22
     created: 2020-09-22
@@ -19641,7 +19058,6 @@
     answer_extra_info: ''
     author: Pascal Mostardi
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-09-22
     created: 2020-09-22
@@ -19672,7 +19088,6 @@
     answer_extra_info: ''
     author: Pascal Mostardi
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-09-22
     created: 2020-09-22
@@ -19703,7 +19118,6 @@
     answer_extra_info: ''
     author: Pascal Mostardi
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-09-22
     created: 2020-09-22
@@ -19733,7 +19147,6 @@
     answer_extra_info: ''
     author: Pascal Mostardi
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-09-22
     created: 2020-09-22
@@ -19763,7 +19176,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-09-22
     created: 2020-09-22
@@ -19795,7 +19207,6 @@
     answer_extra_info: ''
     author: Pascal Mostardi
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-09-22
     created: 2020-09-22
@@ -19826,7 +19237,6 @@
     answer_extra_info: ''
     author: Pascal Mostardi
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-09-22
     created: 2020-09-22
@@ -19856,7 +19266,6 @@
     answer_extra_info: ''
     author: Pascal Mostardi
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-09-22
     created: 2020-09-22
@@ -19886,7 +19295,6 @@
     answer_extra_info: ''
     author: Pascal Mostardi
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-09-22
     created: 2020-09-22
@@ -19916,7 +19324,6 @@
     answer_extra_info: ''
     author: Pascal Mostardi
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-09-22
     created: 2020-09-22
@@ -19956,7 +19363,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: false
     validation_status: Validée
     added: 2020-11-17
     created: 2020-11-17
@@ -19994,7 +19400,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
-    publish: false
     validation_status: Validée
     added: 2020-11-01
     created: 2020-11-17
@@ -20034,7 +19439,6 @@
     answer_extra_info: ''
     author: Bonpote
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-11-01
     created: 2020-11-17
@@ -20072,7 +19476,6 @@
     answer_extra_info: ''
     author: Bonpote
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-11-01
     created: 2020-11-17
@@ -20111,7 +19514,6 @@
     answer_extra_info: ''
     author: Bonpote
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-11-01
     created: 2020-11-17
@@ -20145,7 +19547,6 @@
     answer_extra_info: ''
     author: Bonpote
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-11-01
     created: 2020-11-17
@@ -20179,7 +19580,6 @@
     answer_extra_info: ''
     author: Bonpote
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-11-01
     created: 2020-11-17
@@ -20213,7 +19613,6 @@
     answer_extra_info: ''
     author: Bonpote
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-11-01
     created: 2020-11-17
@@ -20246,7 +19645,6 @@
     answer_extra_info: 'graph pour l''Europe : https://ec.europa.eu/eurostat/statistics-explained/images/a/a8/General_government_debt%2C_2018_and_2019_(¹)_(General_government_consolidated_gross_debt%2C_%_of_GDP)_2020-10-22.png'
     author: Bonpote
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-11-01
     created: 2020-11-18
@@ -20285,7 +19683,6 @@
     answer_extra_info: ''
     author: Bonpote
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-11-01
     created: 2020-11-17
@@ -20317,7 +19714,6 @@
     answer_extra_info: ''
     author: Alain Grandjean & Mireille Martini
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-11-01
     created: 2020-11-17
@@ -20349,7 +19745,6 @@
     answer_extra_info: ''
     author: Alain Grandjean & Mireille Martini
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-11-01
     created: 2020-11-17
@@ -20379,7 +19774,6 @@
     answer_extra_info: ''
     author: Alain Grandjean & Mireille Martini
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-11-01
     created: 2020-11-17
@@ -20411,7 +19805,6 @@
     answer_extra_info: ''
     author: Kim Nguyen-Huu
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-11-11
     created: 2020-11-17
@@ -20440,7 +19833,6 @@
     answer_extra_info: ''
     author: Kim Nguyen-Huu
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-11-11
     created: 2020-11-18
@@ -20481,7 +19873,6 @@
     answer_extra_info: Bilan des gaz à effet de serre comme définis dans la loi. https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000024354907/2011-07-13
     author: Kim Nguyen-Huu
     validator: Matthieu Massart
-    publish: false
     validation_status: Validée
     added: 2020-11-11
     created: 2020-11-18
@@ -20514,7 +19905,6 @@
     answer_extra_info: ''
     author: Kim Nguyen-Huu
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-11-11
     created: 2020-11-17
@@ -20546,7 +19936,6 @@
     answer_extra_info: ''
     author: Kim Nguyen-Huu
     validator: ''
-    publish: false
     validation_status: Brouillon
     added: 2020-11-11
     created: 2020-11-17
@@ -20578,7 +19967,6 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-11-22
     created: 2020-11-25
@@ -20614,7 +20002,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    publish: false
     validation_status: A valider
     added: 2020-11-24
     created: 2020-11-25
@@ -20648,7 +20035,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-24
     created: 2020-11-25
@@ -20683,7 +20069,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-24
     created: 2020-11-25
@@ -20716,7 +20101,6 @@
     answer_extra_info: Page 4 du document
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-24
     created: 2020-11-25
@@ -20754,7 +20138,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-24
     created: 2020-11-25
@@ -20788,7 +20171,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-24
     created: 2020-11-25
@@ -20824,7 +20206,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-24
     created: 2020-11-25
@@ -20856,7 +20237,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-24
     created: 2020-11-25
@@ -20887,7 +20267,6 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-24
     created: 2020-11-25
@@ -20920,7 +20299,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1275171016566808576
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-22
     created: 2020-11-28
@@ -20956,7 +20334,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1275526497357500417
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-23
     created: 2020-11-28
@@ -20990,7 +20367,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1275875305081704450
     author: laydgeur
     validator: Matthieu Massart
-    publish: true
     validation_status: Validée
     added: 2020-06-24
     created: 2020-11-28
@@ -21029,7 +20405,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1276238855482626048?s=20
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-25
     created: 2020-11-28
@@ -21063,7 +20438,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1276778476985552898?s=20
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-27
     created: 2020-11-28
@@ -21096,7 +20470,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1277691935000494081
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-29
     created: 2020-11-28
@@ -21132,7 +20505,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1278063646535561216
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-06-30
     created: 2020-11-28
@@ -21169,7 +20541,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1278433375708217346
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-01
     created: 2020-11-28
@@ -21203,7 +20574,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1278797750788919301
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-02
     created: 2020-11-28
@@ -21239,7 +20609,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1279147249193365508
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-03
     created: 2020-11-28
@@ -21309,7 +20678,6 @@
       Stratégie nationale bas carbone : https://ecologique-solidaire.gouv.fr/strategie-nati'
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-06
     created: 2020-11-28
@@ -21341,7 +20709,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1280594616606171149
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-07
     created: 2020-11-28
@@ -21374,7 +20741,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1281339597230936065
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-09
     created: 2020-11-28
@@ -21410,7 +20776,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1283485972865351680
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-15
     created: 2020-11-28
@@ -21446,7 +20811,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1283859848023678982
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-16
     created: 2020-11-28
@@ -21483,7 +20847,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1284208421739405313
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-17
     created: 2020-11-28
@@ -21519,7 +20882,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1284579178847916032
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-18
     created: 2020-11-28
@@ -21555,7 +20917,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1285674342467153922
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-21
     created: 2020-11-28
@@ -21594,7 +20955,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1286043854278459393
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-22
     created: 2020-11-28
@@ -21629,7 +20989,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1286580801291911168
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-24
     created: 2020-11-28
@@ -21665,7 +21024,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1287025515514167296
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-07-25
     created: 2020-11-28
@@ -21700,7 +21058,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1318634699275849729
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-10-20
     created: 2020-11-28
@@ -21733,7 +21090,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1319008577865076738
     author: laydgeur
     validator: ''
-    publish: true
     validation_status: Validée
     added: 2020-10-21
     created: 2020-11-28
@@ -21771,7 +21127,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1319366405377150976
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-10-22
     created: 2020-11-28
@@ -21807,7 +21162,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1319722821728305158
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-10-23
     created: 2020-11-28
@@ -21843,7 +21197,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1320829859397095424
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-10-26
     created: 2020-11-28
@@ -21875,7 +21228,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1321191996661420041
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-10-27
     created: 2020-11-28
@@ -21917,7 +21269,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1321557493592530944
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-10-28
     created: 2020-11-28
@@ -21954,7 +21305,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1322285904187314178
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-10-30
     created: 2020-11-28
@@ -21995,7 +21345,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1323371163649773571
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-02
     created: 2020-11-28
@@ -22042,7 +21391,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1324242278114873345
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-05
     created: 2020-11-28
@@ -22081,7 +21429,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1324465284615462914
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-05
     created: 2020-11-28
@@ -22117,7 +21464,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1324813993991614466
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-06
     created: 2020-11-28
@@ -22153,7 +21499,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1325911824680824832
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-09
     created: 2020-11-28
@@ -22191,7 +21536,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1326267748540878848
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-10
     created: 2020-11-28
@@ -22227,7 +21571,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1326633704119296003
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-11-11
     created: 2020-11-28
@@ -22264,7 +21607,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1326996258414858240
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-12
     created: 2020-11-28
@@ -22297,7 +21639,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1327717007958175745
     author: laydgeur
     validator: Raphael Odini
-    publish: true
     validation_status: Validée
     added: 2020-11-14
     created: 2020-11-28
@@ -22337,7 +21678,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1328435243855056899
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-16
     created: 2020-11-28
@@ -22377,7 +21717,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1329338984703676422
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-19
     created: 2020-11-28
@@ -22415,7 +21754,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1329887456821440513
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-20
     created: 2020-11-28
@@ -22457,7 +21795,6 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1330250867862360074
     author: laydgeur
     validator: ''
-    publish: false
     validation_status: A valider
     added: 2020-11-21
     created: 2020-11-28

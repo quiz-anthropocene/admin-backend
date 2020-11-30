@@ -31,10 +31,10 @@ class Category(models.Model):
 
     @property
     def question_count(self):
-        return self.questions.published().count()
+        return self.questions.validated().count()
 
     # Admin
-    question_count.fget.short_description = "Questions (publiées)"
+    question_count.fget.short_description = "Questions (validées)"
 
 
 class TagManager(models.Manager):
@@ -70,23 +70,23 @@ class Tag(models.Model):
 
     @property
     def question_count(self):
-        return self.questions.published().count()
+        return self.questions.validated().count()
 
     @property
     def quiz_count(self):
         return self.quizzes.published().count()
 
     # Admin
-    question_count.fget.short_description = "Questions (publiées)"
+    question_count.fget.short_description = "Questions (validées)"
     quiz_count.fget.short_description = "Quizs (publiés)"
 
 
 class QuestionQuerySet(models.QuerySet):
-    def published(self):
-        return self.filter(publish=True)
+    def validated(self):
+        return self.filter(validation_status=constants.QUESTION_VALIDATION_STATUS_OK)
 
-    def unpublished(self):
-        return self.filter(publish=False)
+    def not_validated(self):
+        return self.exclude(validation_status=constants.QUESTION_VALIDATION_STATUS_OK)
 
     def for_validation_status(self, validation_status):
         return self.filter(validation_status=validation_status)
@@ -190,9 +190,6 @@ class Question(models.Model):
     )
     validator = models.CharField(
         max_length=50, blank=True, help_text="La personne qui a validée la question"
-    )
-    publish = models.BooleanField(
-        default=False, help_text="La question est prête à être publiée"
     )
     validation_status = models.CharField(
         max_length=150,
@@ -312,7 +309,7 @@ class Question(models.Model):
                 ("type", "QUESTION_TYPE_CHOICE_LIST"),
                 ("difficulty", "QUESTION_DIFFICULTY_CHOICE_LIST"),
                 ("answer_correct", "QUESTION_ANSWER_CHOICE_LIST"),
-                ("validation_status", "QUESTION_VALIDATION_STATUS_LIST"),
+                # ("validation_status", "QUESTION_VALIDATION_STATUS_LIST"),
             ]
             for choice_field in question_choice_fields:
                 if getattr(self, choice_field[0]) not in getattr(
@@ -352,14 +349,6 @@ class Question(models.Model):
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "has_ordered_answers", error_message
                     )
-            # publish rules
-            if not self.publish:
-                self.publish = True
-                # if not getattr(self, "publish"):
-                #     error_message = f"Valeur : '{getattr(self, 'publish')}' doit être True. Car status 'Validée'. Question {self.id}"  # noqa
-                #     validation_errors = utilities.add_validation_error(
-                #         validation_errors, "publish", error_message
-                #     )
         if bool(validation_errors):
             raise ValidationError(validation_errors)
 
@@ -488,7 +477,7 @@ class QuestionFeedbackEvent(models.Model):
 
 class QuizQuerySet(models.QuerySet):
     def published(self):
-        return self.exclude(publish=False)
+        return self.filter(publish=True)
 
     def for_author(self, author):
         return self.filter(author=author)
@@ -542,7 +531,7 @@ class Quiz(models.Model):
 
     @property
     def question_count(self):
-        return self.questions.count()  # published() ?
+        return self.questions.count()
 
     @property
     def tags_list(self):
@@ -603,12 +592,12 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_unpublished_list(self):
-        return list(self.questions.unpublished())
+    def questions_not_validated_list(self):
+        return list(self.questions.not_validated())
 
     @property
-    def questions_unpublished_string(self):
-        return "<br />".join([str(q) for q in self.questions_unpublished_list])
+    def questions_not_validated_string(self):
+        return "<br />".join([str(q) for q in self.questions_not_validated_list])
 
     @property
     def like_count_agg(self):
@@ -624,7 +613,7 @@ class Quiz(models.Model):
 
     # Admin
     tags_list_string.fget.short_description = "Tag(s)"
-    questions_unpublished_string.fget.short_description = (
+    questions_not_validated_string.fget.short_description = (
         "Questions pas encore validées"
     )
     questions_categories_list_string.fget.short_description = "Questions catégorie(s)"
@@ -646,18 +635,18 @@ class Quiz(models.Model):
                         f"Quiz {self.id}"
                     }
                 )
-            # - questions must be published
+            # - questions must be validated
             quiz_questions_ids = quiz_questions.values_list("id", flat=True)
-            quiz_questions_published_ids = (
+            quiz_questions_validated_ids = (
                 Question.objects.filter(pk__in=quiz_questions_ids)
-                .published()
+                .validated()
                 .values_list("id", flat=True)
             )
-            if len(list(quiz_questions_ids)) != len(list(quiz_questions_published_ids)):
+            if len(list(quiz_questions_ids)) != len(list(quiz_questions_validated_ids)):
                 raise ValidationError(
                     {
-                        "questions": f"Toutes les questions doivent être 'published'. "
-                        f"Unpublished questions : {[el for el in list(quiz_questions_ids) if el not in list(quiz_questions_published_ids)]}. "  # noqa
+                        "questions": f"Toutes les questions doivent être validées. "
+                        f"not_validated questions : {[el for el in list(quiz_questions_ids) if el not in list(quiz_questions_validated_ids)]}. "  # noqa
                         f"Quiz {self.id}"
                     }
                 )
@@ -686,19 +675,19 @@ def quiz_validate_m2m_fields(sender, **kwargs):
         and kwargs["instance"]
         and (kwargs["action"] == "pre_add")
     ):
-        # > relation fields: check that the quiz's questions are published
-        qlist = (
+        # > relation fields: check that the quiz's questions are validated
+        quiz_questions_validated_ids = (
             Question.objects.filter(pk__in=kwargs["pk_set"])
-            .published()
+            .validated()
             .values_list("id", flat=True)
         )
-        if len(kwargs["pk_set"]) != len(list(qlist)):
+        if len(kwargs["pk_set"]) != len(list(quiz_questions_validated_ids)):
             raise ValidationError(
                 {
                     "questions": f"Quiz pre_save_m2m error. "
-                    # f"Questions count: {len(kwargs['pk_set'])}. Questions published count: {len(list(qlist))}. "  # noqa
-                    f"Toutes les questions doivent être 'published' (c'est à dire status 'Validée'). "  # noqa
-                    f"Unpublished questions: {[el for el in kwargs['pk_set'] if el not in list(qlist)]}"  # noqa
+                    # f"Questions count: {len(kwargs['pk_set'])}. Questions validated count: {len(list(quiz_questions_validated_ids))}. "  # noqa
+                    f"Toutes les questions doivent être validées. "  # noqa
+                    f"not_validated questions: {[el for el in kwargs['pk_set'] if el not in list(quiz_questions_validated_ids)]}"  # noqa
                 }
             )
     # update difficulty_average

@@ -67,14 +67,14 @@ def api_home(request):
 @api_view(["GET"])
 def question_list(request):
     """
-    List all published questions (return them in a random order)
+    List all validated questions (return them in a semi-random order)
     Optional query parameters:
     - 'category' (string)
     - 'tag' (string)
     - 'author' (string)
     """
-    # get only the published questions
-    questions = Question.objects.published()
+    # get only the validated questions
+    questions = Question.objects.validated()
 
     # order by difficulty, then random inside
     questions = questions.order_by("difficulty", "?")
@@ -189,7 +189,7 @@ def question_random(request):
     - 'tag' (string)
     - 'author' (string)
     """
-    questions = Question.objects.published()
+    questions = Question.objects.validated()
     if request.GET.get("current"):
         questions = questions.exclude(pk=request.GET.get("current"))
     if request.GET.get("category"):
@@ -217,14 +217,9 @@ def question_count(request):
     """
     Retrieve stats on all the data
     """
-    # question_publish_stats = (
-    #     Question.objects.values("publish")
-    #     .annotate(count=Count("publish"))
-    #     .order_by("-count")
-    # )
-    question_publish_count = Question.objects.published().count()
+    question_validated_count = Question.objects.validated().count()
 
-    return Response(question_publish_count)
+    return Response(question_validated_count)
 
 
 @api_view(["GET"])
@@ -255,7 +250,7 @@ def author_list(request):
     List all authors (with the number of questions per author)
     """
     authors = (
-        Question.objects.published()
+        Question.objects.validated()
         .values(name=F("author"))
         .annotate(question_count=Count("author"))
         .order_by("-question_count")
@@ -270,7 +265,7 @@ def difficulty_level_list(request):
     List all difficulty levels (with the number of questions per difficulty)
     """
     difficulty_levels_query = (
-        Question.objects.published()
+        Question.objects.validated()
         .values(value=F("difficulty"))
         .annotate(question_count=Count("difficulty"))
     )
@@ -303,7 +298,7 @@ def quiz_list(request):
     - 'author' (string)
     - 'full' (string)
     """
-    quizzes = Quiz.objects.published().order_by("id")
+    quizzes = Quiz.objects.published()
     if request.GET.get("author"):
         quizzes = quizzes.for_author(request.GET.get("author"))
 
@@ -410,13 +405,8 @@ def stats(request):
     """
     Retrieve stats on all the data
     """
-    # question_publish_stats = (
-    #     Question.objects.values("publish")
-    #     .annotate(count=Count("publish"))
-    #     .order_by("-count")
-    # )
-    # publish / in validation
-    question_publish_count = Question.objects.published().count()
+    # validated / in validation
+    question_validated_count = Question.objects.validated().count()
     question_validation_status_in_progress_count = Question.objects.for_validation_status(
         constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS
     ).count()
@@ -474,7 +464,7 @@ def stats(request):
 
     return Response(
         {
-            "question_publish_count": question_publish_count,
+            "question_validated_count": question_validated_count,
             "question_validation_status_in_progress_count": question_validation_status_in_progress_count,  # noqa
             "total": {
                 "question_answer_count": question_answer_count,

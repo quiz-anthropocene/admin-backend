@@ -135,11 +135,6 @@ class QuestionModelTest(TestCase):
             has_ordered_answers=False,
         )
 
-    # def test_validated_question_must_have_publish(self):
-    #     self.assertRaises(
-    #         ValidationError, QuestionFactory, publish=False,
-    #     )
-
 
 class QuizModelTest(TestCase):
     @classmethod
@@ -167,24 +162,23 @@ class QuizModelTest(TestCase):
             ValidationError, self.quiz_not_published.save, update_fields=["publish"]
         )
 
-    def test_published_quiz_must_have_published_questions(self):
-        self.question_published = QuestionFactory(answer_correct="a")
-        self.question_not_published = QuestionFactory(
+    def test_published_quiz_must_have_validated_questions(self):
+        self.question_validated = QuestionFactory(answer_correct="a")
+        self.question_not_validated = QuestionFactory(
             answer_correct="a",
             validation_status=constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS,
-            publish=False,
         )
         self.quiz_published = QuizFactory(name="quiz published", publish=True)
         self.quiz_not_published = QuizFactory(name="quiz not published")
         # pass
         self.quiz_not_published.questions.set(
-            [self.question_published, self.question_not_published]
+            [self.question_validated, self.question_not_validated]
         )
         # fail
         self.assertRaises(
             ValidationError,
             self.quiz_published.questions.set,
-            [self.question_published, self.question_not_published],
+            [self.question_validated, self.question_not_validated],
         )
 
 
