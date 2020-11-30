@@ -345,7 +345,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
             ]
 
         extra_context = extra_context or {
-            "configuration": Configuration.objects.get(),
+            "configuration": Configuration.get_solo(),
             "notion_questions_validation": notion_questions_validation,
         }
 
@@ -789,7 +789,7 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
         # Serialize and attach the chart data to the template context
         chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
         extra_context = extra_context or {
-            "configuration": Configuration.objects.get(),
+            "configuration": Configuration.get_solo(),
             "chart_data": chart_data_json,
             "field_choice_list": constants.AGGREGATION_FIELD_CHOICE_LIST,
             "current_field": current_field,
@@ -899,7 +899,7 @@ class MyAdminSite(AdminSite):
             print(export_message)
 
         extra_context = extra_context or {
-            "configuration": Configuration.objects.get(),
+            "configuration": Configuration.get_solo(),
             "export_message": export_message,
         }
 

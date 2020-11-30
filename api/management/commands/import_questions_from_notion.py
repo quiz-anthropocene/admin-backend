@@ -8,7 +8,7 @@ from django.db import IntegrityError
 from django.core.management import BaseCommand
 from django.core.exceptions import ValidationError
 
-from api import constants, utilities, utilities_notion
+from api import utilities, utilities_notion
 from api.models import Configuration, Question, Category, Tag
 
 
@@ -356,7 +356,7 @@ class Command(BaseCommand):
 
         # update config
         if scope:
-            config = Configuration.objects.get()
+            config = Configuration.get_solo()
             setattr(
                 config, f"notion_questions_scope_{scope}_last_imported", timezone.now()
             )

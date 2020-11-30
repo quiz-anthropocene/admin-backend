@@ -273,7 +273,7 @@ class Command(BaseCommand):
         # cleanup_quiz_feedback_events()
 
         # update config
-        config = Configuration.objects.get()
+        config = Configuration.get_solo()
         config.daily_stat_last_aggregated = timezone.now()
         config.save()
 

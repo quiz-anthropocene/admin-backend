@@ -91,7 +91,7 @@ class Command(BaseCommand):
             )
 
             # update config
-            config = Configuration.objects.get()
+            config = Configuration.get_solo()
             config.github_last_exported = timezone.now()
             config.save()
 

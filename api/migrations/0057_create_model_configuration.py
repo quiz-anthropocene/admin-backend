@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("api", "0055_quizanswerevent_question_count"),
+        ("api", "0056_remove_question_publish"),
     ]
 
     operations = [
