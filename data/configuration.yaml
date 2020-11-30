@@ -1,0 +1,12 @@
+- model: api.configuration
+  pk: 1
+  fields:
+    application_name: Quiz de l'Anthropocène
+    application_backend_url: ''
+    application_frontend_url: ''
+    daily_stat_last_aggregated: 2020-11-30 15:29:47.704905+00:00
+    notion_questions_scope_1_last_imported: null
+    notion_questions_scope_2_last_imported: null
+    notion_questions_scope_3_last_imported: null
+    notion_questions_scope_4_last_imported: null
+    github_last_exported: null
