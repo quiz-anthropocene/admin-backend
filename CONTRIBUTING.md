@@ -90,7 +90,7 @@ La donnée est lue directement depuis les fichiers yaml dans le dossier `/data`.
 
 #### DevOps
 
-- Le backend est hébergé sur Heroku (free tier)
+- Le backend est hébergé sur Scalingo
 - Le frontend est hébergé sur Netlify (free tier)
 - CI/CD avec CircleCI
 
