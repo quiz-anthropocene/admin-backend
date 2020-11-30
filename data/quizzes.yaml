@@ -25,7 +25,7 @@
 - model: api.quiz
   pk: 2
   fields:
-    name: "L'énergie en France \U0001F1EB\U0001F1F7"
+    name: L'énergie en France 🇫🇷
     introduction: Un aperçu rapide de la production et de la consommation d'énergie
       en France.
     conclusion: ''
@@ -51,15 +51,16 @@
   pk: 3
   fields:
     name: Le quiz de Vincent Mignerot
-    introduction: "Vincent Mignerot est  essayiste et conférencier. Il développe une
-      théorie écologique de l’esprit et se questionne sur la singularité de l'humanité
-      dans son contexte évolutif. Ses travaux vont de la théorie (Essai Sur la Raison
-      de Tout, Éditions SoLo, 2015) à l’étude de la perception humaine (Heuraesthesia:
-      When Synaesthesia Fertilizes the Mind, CNRS, 2016). Il est le fondateur de l’association
-      Adrastia, qui s’inquiète du risque d’effondrement de la société thermo-industrielle
-      et du groupe Facebook Transition 2030, qui compte plus de 25,000 membres. https://vincent-mignerot.fr/\r\nVincent
-      nous a concocté un quiz teinté d'anthropologie qui va nous faire revenir quelques
-      millénaires en arrière !"
+    introduction: "Vincent Mignerot est  essayiste et conférencier. Il développe une\
+      \ théorie écologique de l’esprit et se questionne sur la singularité de l'humanité\
+      \ dans son contexte évolutif. Ses travaux vont de la théorie (Essai Sur la Raison\
+      \ de Tout, Éditions SoLo, 2015) à l’étude de la perception humaine (Heuraesthesia:\
+      \ When Synaesthesia Fertilizes the Mind, CNRS, 2016). Il est le fondateur de\
+      \ l’association Adrastia, qui s’inquiète du risque d’effondrement de la société\
+      \ thermo-industrielle et du groupe Facebook Transition 2030, qui compte plus\
+      \ de 25,000 membres. https://vincent-mignerot.fr/\r\nVincent nous a concocté\
+      \ un quiz teinté d'anthropologie qui va nous faire revenir quelques millénaires\
+      \ en arrière !"
     conclusion: ''
     difficulty_average: 2.1666666666666665
     author: Vincent Mignerot
@@ -191,13 +192,13 @@
   pk: 8
   fields:
     name: Fresque du Climat - Lot 1
-    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et
-      créatif sur le changement climatique. Il est basé sur l’intelligence collective
-      et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
-      du climat et les conséquences de son dérèglement. L’objectif de l’association
-      qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
-      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le premier
-      lot de cartes distribué lors d'un atelier de la Fresque."
+    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et\
+      \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
+      \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
+      \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
+      \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
+      \ d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le premier\
+      \ lot de cartes distribué lors d'un atelier de la Fresque."
     conclusion: ''
     difficulty_average: 2.0526315789473686
     author: Matthieu Massart
@@ -279,13 +280,13 @@
   pk: 11
   fields:
     name: Fresque du Climat - Lot 2
-    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et
-      créatif sur le changement climatique. Il est basé sur l’intelligence collective
-      et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
-      du climat et les conséquences de son dérèglement. L’objectif de l’association
-      qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
-      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le deuxième
-      lot de cartes qui est distribué lors d'un atelier de la Fresque."
+    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et\
+      \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
+      \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
+      \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
+      \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
+      \ d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le deuxième\
+      \ lot de cartes qui est distribué lors d'un atelier de la Fresque."
     conclusion: ''
     difficulty_average: 1.8333333333333333
     author: Matthieu Massart
@@ -324,13 +325,13 @@
   pk: 12
   fields:
     name: Fresque du Climat - Lot 3
-    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et
-      créatif sur le changement climatique. Il est basé sur l’intelligence collective
-      et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
-      du climat et les conséquences de son dérèglement. L’objectif de l’association
-      qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
-      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur les cartes
-      du 3ème lot distribué lors d'une Fresque."
+    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et\
+      \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
+      \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
+      \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
+      \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
+      \ d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur les cartes\
+      \ du 3ème lot distribué lors d'une Fresque."
     conclusion: ''
     difficulty_average: 2.1666666666666665
     author: Matthieu Massart
@@ -351,13 +352,13 @@
   pk: 13
   fields:
     name: Fresque du Climat - Lot 4
-    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et
-      créatif sur le changement climatique. Il est basé sur l’intelligence collective
-      et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
-      du climat et les conséquences de son dérèglement. L’objectif de l’association
-      qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
-      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur les cartes
-      du 4ème lot distribué lors d'une fresque."
+    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et\
+      \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
+      \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
+      \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
+      \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
+      \ d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur les cartes\
+      \ du 4ème lot distribué lors d'une fresque."
     conclusion: ''
     difficulty_average: 2.6666666666666665
     author: Matthieu Massart
@@ -375,13 +376,13 @@
   pk: 14
   fields:
     name: Fresque du Climat - Lot 5
-    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et
-      créatif sur le changement climatique. Il est basé sur l’intelligence collective
-      et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
-      du climat et les conséquences de son dérèglement. L’objectif de l’association
-      qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
-      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le cinquième
-      et dernier lot de cartes distribué lors d'une Fresque."
+    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et\
+      \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
+      \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
+      \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
+      \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
+      \ d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le cinquième\
+      \ et dernier lot de cartes distribué lors d'une Fresque."
     conclusion: ''
     difficulty_average: 1.6666666666666667
     author: Matthieu Massart
@@ -399,14 +400,14 @@
   pk: 15
   fields:
     name: Fresque du Climat - pour aller au-delà
-    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et
-      créatif sur le changement climatique. Il est basé sur l’intelligence collective
-      et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
-      du climat et les conséquences de son dérèglement. L’objectif de l’association
-      qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat
-      d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider
-      vos connaissances et parfois d'aller plus loin autour du dérèglement du climat
-      - questions non liées aux 42 cartes du jeu."
+    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et\
+      \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
+      \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
+      \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
+      \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
+      \ d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider\
+      \ vos connaissances et parfois d'aller plus loin autour du dérèglement du climat\
+      \ - questions non liées aux 42 cartes du jeu."
     conclusion: ''
     difficulty_average: 2.5454545454545454
     author: Matthieu Massart
@@ -550,13 +551,13 @@
   pk: 53
   fields:
     name: Les 10 questions les plus difficiles du site
-    introduction: "Les questions présentées dans ce quiz ont été choisies spécifiquement,
-      et ont toutes le niveau de difficulté le plus élevé : ce n'est donc pas le quiz
-      par lequel commencer !\r\n\r\nPersonne n'a eu la moyenne à ce quiz à la première
-      tentative.\r\n\r\nAlors, prêts à relever le défi ? :)"
-    conclusion: "Bravo d'être allé jusqu'au bout, ce n'était vraiment pas évident
-      !\r\n\r\nPour vous remettre de ce remue-méninge, n'hésitez pas à allez découvrir
-      les autres quiz, ils sont nettement plus faciles !"
+    introduction: "Les questions présentées dans ce quiz ont été choisies spécifiquement,\
+      \ et ont toutes le niveau de difficulté le plus élevé : ce n'est donc pas le\
+      \ quiz par lequel commencer !\r\n\r\nPersonne n'a eu la moyenne à ce quiz à\
+      \ la première tentative.\r\n\r\nAlors, prêts à relever le défi ? :)"
+    conclusion: "Bravo d'être allé jusqu'au bout, ce n'était vraiment pas évident\
+      \ !\r\n\r\nPour vous remettre de ce remue-méninge, n'hésitez pas à allez découvrir\
+      \ les autres quiz, ils sont nettement plus faciles !"
     difficulty_average: 4.0
     author: laydgeur
     image_background_url: https://cdn.pixabay.com/photo/2016/11/21/15/28/brain-1845962_1280.jpg
@@ -579,23 +580,23 @@
   pk: 54
   fields:
     name: Born in the USA
-    introduction: "Les États-Unis sont rentrés dans notre imaginaire collectif : les
-      cow-boys, New-York, Hollywood, la Silicon Valley, ... Le rêve américain !\r\nMais
-      les États-Unis, ce sont aussi des consommateurs effrénés de pétrole, un des
-      pus gros producteurs d'énergie fossiles au monde, et un des plus gros émetteurs
-      de CO2 de la planète.\r\nDécouvrez la face sombre des États-Unis dans ces quelques
-      questions."
-    conclusion: "De nos jours, quand on pense pétrole on pense Moyen-Orient, Arabie
-      Saoudite, ... mais le pays du pétrole par excellence, ce sont les États-Unis
-      !\r\nOh, et tant qu'on parle de pétrole, je vous invite à aller faire un tour
-      sur notre page de quiz, vous trouverez quelques questions pour étancher votre
-      soif d'or noir ;)"
+    introduction: "Les États-Unis sont rentrés dans notre imaginaire collectif : les\
+      \ cow-boys, New-York, Hollywood, la Silicon Valley, ... Le rêve américain !\r\
+      \nMais les États-Unis, ce sont aussi des consommateurs effrénés de pétrole,\
+      \ un des pus gros producteurs d'énergie fossiles au monde, et un des plus gros\
+      \ émetteurs de CO2 de la planète.\r\nDécouvrez la face sombre des États-Unis\
+      \ dans ces quelques questions."
+    conclusion: "De nos jours, quand on pense pétrole on pense Moyen-Orient, Arabie\
+      \ Saoudite, ... mais le pays du pétrole par excellence, ce sont les États-Unis\
+      \ !\r\nOh, et tant qu'on parle de pétrole, je vous invite à aller faire un tour\
+      \ sur notre page de quiz, vous trouverez quelques questions pour étancher votre\
+      \ soif d'or noir ;)"
     difficulty_average: 2.6666666666666665
     author: laydgeur
     image_background_url: https://cdn.pixabay.com/photo/2017/12/08/08/17/america-3005258_1280.jpg
-    publish: false
+    publish: true
     created: 2020-11-28
-    updated: 2020-11-28
+    updated: 2020-11-30
     questions:
     - 246
     - 278
