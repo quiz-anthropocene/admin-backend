@@ -4,9 +4,9 @@
     application_name: Quiz de l'Anthropocène
     application_backend_url: ''
     application_frontend_url: ''
-    daily_stat_last_aggregated: 2020-11-30 15:29:47.704905+00:00
+    daily_stat_last_aggregated: 2020-12-01 10:25:23.274693+00:00
     notion_questions_scope_1_last_imported: null
     notion_questions_scope_2_last_imported: null
     notion_questions_scope_3_last_imported: null
     notion_questions_scope_4_last_imported: null
-    github_last_exported: null
+    github_last_exported: 2020-11-30 15:40:57.860601+00:00
