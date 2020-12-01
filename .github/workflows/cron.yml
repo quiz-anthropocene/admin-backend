@@ -1,0 +1,17 @@
+name: Cron
+
+# Controls when the action will run. 
+on:
+  schedule:
+    # Every 6 hours (4 times a day)
+    - cron: '0 */6 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  aggregate_stats:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -X "GET" "${{ secrets.ACTION_AGGREGATE_STATS_ENDPOINT }}?token=${{ secrets.CRON_GITHUB_ACTION_SECRET }}"
