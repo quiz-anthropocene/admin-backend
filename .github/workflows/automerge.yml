@@ -7,13 +7,12 @@ on:
   check_suite:
     types:
       - completed
-  status: {}
 jobs:
   automerge:
     runs-on: ubuntu-latest
     steps:
       - name: automerge
-        uses: "pascalgn/automerge-action@c29cef1b62bfb675777896255a70c69fc01bcfe4"
+        uses: "pascalgn/automerge-action@v0.12.0"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           MERGE_LABELS: "automerge"
