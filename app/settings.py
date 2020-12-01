@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "django_extensions",
     "import_export",
+    "ckeditor",
     "solo",  # django-solo
     "api",
 ]
@@ -191,3 +192,24 @@ SIB_NEWSLETTER_DOI_TEMPLATE_ID = os.getenv("SIB_NEWSLETTER_DOI_TEMPLATE_ID")
 SIB_CONTACT_DOI_ENDPOINT = (
     "https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation"
 )
+
+
+# django-ckeditor
+
+CKEDITOR_CONFIGS = {
+    "default": {
+        "toolbar": "Custom",
+        "toolbar_Custom": [
+            ["Bold", "Italic", "Underline"],
+            ["NumberedList", "BulletedList"],
+            ["Link", "Unlink"],
+            ["SpecialChar"],
+            # ['HorizontalRule', 'Smiley'],
+            ["Undo", "Redo"],
+            ["RemoveFormat", "Source"],
+        ],
+        # avoid special characters encoding
+        "basicEntities": False,
+        "entities": False,
+    }
+}
