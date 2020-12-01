@@ -7,13 +7,6 @@
         <strong>{{ quiz.questions.length }}</strong> question<span v-if="quiz.questions.length > 1">s</span>
         <button class="btn btn-outline-primary btn-sm margin-0 margin-left-20">Découvrir</button>
       </p>
-      <!-- <button class="btn btn-outline-primary btn-lg btn-block">Découvrir le quiz</button> -->
-      <!-- <section class="d-none d-md-block">
-        <hr class="margin-top-bottom-10" />
-        <div class="small">
-          <div class="label label-hidden">📝&nbsp;Auteur&nbsp;<strong>{{ quiz.author }}</strong></div>
-        </div>
-      </section> -->
     </div>
     <div class="card-footer small d-none d-md-block">
       📝&nbsp;Auteur<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>

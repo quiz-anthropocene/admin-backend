@@ -1,9 +1,9 @@
 <template>
   <section>
 
-    <div v-if="quizzes && quizzes.length > 0" id="quiz-list" class="margin-bottom-1em">
-      <div class="card-deck">
-        <QuizCard v-for="quiz in quizzes" :key="quiz.id" :quiz="quiz"/>
+    <div class="row" v-if="quizzes && quizzes.length > 0" id="quiz-list">
+      <div class="col-sm-4" v-for="quiz in quizzes" :key="quiz.id">
+        <QuizCard :quiz="quiz"/>
       </div>
     </div>
 
@@ -230,5 +230,12 @@ svg {
 
 .btn-lg {
   min-height: 75px;
+}
+
+.row > .col-sm-4 {
+  padding-bottom: 15px;
+}
+.row > .col-sm-4 > .card {
+  height: 100%;
 }
 </style>
