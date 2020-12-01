@@ -198,6 +198,7 @@ SIB_CONTACT_DOI_ENDPOINT = (
 
 CKEDITOR_CONFIGS = {
     "default": {
+        "height": 200,
         "toolbar": "Custom",
         "toolbar_Custom": [
             ["Bold", "Italic", "Underline"],
