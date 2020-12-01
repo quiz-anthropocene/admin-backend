@@ -26,6 +26,11 @@ class Command(BaseCommand):
             f"Data: update ({current_datetime_string_pretty})"
         )
 
+        # update config first
+        config = Configuration.get_solo()
+        config.github_last_exported = timezone.now()
+        config.save()
+
         try:
             # create branch
             utilities_github.create_branch(data_update_branch_name)
@@ -89,11 +94,6 @@ class Command(BaseCommand):
                 pull_request_message="Mise à jour de la donnée : <ul><li>data/configuration.yaml</li><li>data/questions.yaml</li><li>data/quizzes.yaml</li><li>data/tags.yaml</li></ul>",  # noqa
                 branch_name=data_update_branch_name,
             )
-
-            # update config
-            config = Configuration.get_solo()
-            config.github_last_exported = timezone.now()
-            config.save()
 
             # return
             self.stdout.write(pull_request.html_url)

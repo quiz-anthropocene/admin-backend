@@ -175,6 +175,7 @@ class QuizSerializer(serializers.ModelSerializer):
             "question_count",
             "questions_categories_list",
             "questions_tags_list",
+            "questions_authors_list",
             "difficulty_average",
             "created",
         ]
@@ -198,6 +199,7 @@ class QuizFullSerializer(serializers.ModelSerializer):
             "question_count",
             "questions_categories_list",
             "questions_tags_list",
+            "questions_authors_list",
             "difficulty_average",
             "created",
         ]

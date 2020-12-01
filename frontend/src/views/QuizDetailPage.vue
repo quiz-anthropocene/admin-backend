@@ -9,7 +9,7 @@
         <h2 class="card-title"><span v-if="quizStep > 0">Quiz : </span>{{ quiz.name }}</h2>
 
         <section v-if="(quizStep === 0) || (quizStep > quiz.questions.length)">
-          <p class="card-subtitle">{{ quiz.introduction }}</p>
+          <div class="card-subtitle" v-html="quiz.introduction" title="Introduction du quiz"></div>
 
           <hr class="margin-top-bottom-10" />
 
@@ -55,7 +55,7 @@
     <section v-if="quiz && (quizStep > quiz.questions.length)" class="question">
       <h2>Votre résultat : <strong>{{ quiz.questions.filter(q => q['success']).length }} / {{ quiz.questions.length }}</strong></h2>
 
-      <p v-if="quiz.conclusion">{{ quiz.conclusion }}</p>
+      <div v-if="quiz.conclusion" v-html="quiz.conclusion" title="Conclusion du quiz"></div>
 
       <div class="row">
         <div class="col">
