@@ -251,9 +251,12 @@
       à son état antérieur. On ne parle ici que des durées de résidence des gaz à
       effet de serre dans l'atmosphère.
     answer_accessible_url: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
-    answer_scientific_url: ''
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter06_FINAL.pdf
+    answer_image_url: https://www.ipcc.ch/site/assets/uploads/2018/02/FigFAQ6.2-2-2-1024x381.jpg
+    answer_image_explanation: 'Évolution de nos émissions de CO2 : au bout de 200
+      ans il restera 60% du surplus de CO2 dans l''atmosphère, au bout de 2000 ans
+      il en restera quasiment 40%, et au bout de 10000 ans il en restera encore 20%
+      !'
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Pascal Esposito
@@ -286,7 +289,7 @@
       les plus émettrices de gaz à effet de serre.
     answer_accessible_url: https://blogs.alternatives-economiques.fr/gilles-raveaud/2015/04/02/la-chine-a-consomme-plus-de-ciment-en-3-ans-que-les-etats-unis-en-un-siecle
     answer_scientific_url: ''
-    answer_image_url: https://img.washingtonpost.com/wp-apps/imrs.php?src=https://img.washingtonpost.com/blogs/wonkblog/files/2015/03/chicago1.png&w=1484
+    answer_image_url: https://img.washingtonpost.com/blogs/wonkblog/files/2015/03/chicago1.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Matthieu Massart
@@ -504,7 +507,7 @@
     has_ordered_answers: true
     answer_explanation: +1,1°C pour être exact. Selon les scénarios du GIEC, elle
       aura augmenté de 2°C à 5°C d'ici 2100. Or, lors de la dernière période glaciaire
-      il a 20,000 ans, elle était seulement 5°C plus basse qu'aujourd'hui...et la
+      il y a 20,000 ans, elle était seulement 5°C plus basse qu'aujourd'hui...et la
       déglaciation a duré 10,000 ans.
     answer_accessible_url: http://www.meteofrance.fr/climat-passe-et-futur/le-rechauffement-observe-a-l-echelle-du-globe-et-en-france
     answer_scientific_url: ''
@@ -1489,8 +1492,8 @@
 - model: api.question
   pk: 45
   fields:
-    text: Chaque jour, quelle quantité de métaux lourds, solvants, boues toxiques
-      et autres déchets industriels est déversée dans les eaux du monde (état 2019)
+    text: Quelle quantité de métaux lourds, solvants, boues toxiques et autres déchets
+      industriels est déversée dans les eaux du monde chaque jour ?
     hint: ''
     type: QCM
     category: 3
@@ -1503,9 +1506,11 @@
     has_ordered_answers: true
     answer_explanation: 'Chaque année, 300 à 400 millions de tonnes de métaux lourds,
       solvants, boues toxiques et autres déchets issus des sites industriels sont
-      déversés dans les eaux du monde, et les engrais qui arrivent dans les écosystèmes
-      côtiers ont produit plus de 400 « zones mortes» dans les océans, ce qui représente
-      environ 245.000 km2, soit une superficie totale plus grande que le Royaume-Uni.
+      déversés dans les eaux du monde, soit donc une tonne tous les jours.  Les engrais
+      qui arrivent dans les écosystèmes côtiers ont produit plus de 400 « zones mortes»
+      dans les océans, ce qui représente environ 245.000 km2, une superficie totale
+      plus grande que le Royaume-Uni.
+
       Source : rapport IPBES 2019.'
     answer_accessible_url: https://www.consoglobe.com/rapport-ipbes-05-2019-cg
     answer_scientific_url: https://ipbes.net/news/Media-Release-Global-Assessment-Fr
@@ -1524,9 +1529,9 @@
 - model: api.question
   pk: 46
   fields:
-    text: Selon le rapport du GIEC de 2014, le degré de certitude qu'on a que le dérèglement
-      climatique est dû à l'augmentation des gaz à effet de serre issus de l'activité
-      humaine est de...
+    text: '[DOUBLON] Selon le rapport du GIEC de 2014, le degré de certitude qu''on
+      a que le dérèglement climatique est dû à l''augmentation des gaz à effet de
+      serre issus de l''activité humaine est de...'
     hint: ''
     type: QCM
     category: 1
@@ -1546,7 +1551,7 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    validation_status: Validée
+    validation_status: Écartée
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-09-28
@@ -2627,10 +2632,10 @@
       'Le jour d'après', une entrée en glaciation dure des milliers d'années. La dernière
       sortie d'un age glaciaire, qui a fait prendre 5°C supplémentaire, a pris 10,000
       ans. Du fait du réchauffement anthropique, les scientifiques du GIEC entrevoient
-      un réchauffement moyen de l'ordre de 5°C...en 100 ans.
+      un réchauffement moyen de l'ordre de 5°C... en 100 ans.
     answer_accessible_url: https://fr.wikipedia.org/wiki/Glaciation
     answer_scientific_url: ''
-    answer_image_url: https://mothernature.com/wp-content/uploads/2017/08/paleoclimate-cycles-are-key-analogs-for-present-day-holocene-warm-period-1200x800_c.jpg
+    answer_image_url: https://le-rechauffement-climatique-tpe.e-monsite.com/medias/images/cycle-glaciaire2-mieux.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: climat-en-questions.fr
@@ -3501,8 +3506,7 @@
     added: 2019-01-10
     created: 2019-01-10
     updated: 2020-09-28
-    tags:
-    - 2
+    tags: []
 - model: api.question
   pk: 107
   fields:
@@ -3816,7 +3820,6 @@
     created: 2019-01-24
     updated: 2020-09-28
     tags:
-    - 2
     - 11
 - model: api.question
   pk: 117
@@ -4872,7 +4875,6 @@
     created: 2020-04-26
     updated: 2020-09-28
     tags:
-    - 2
     - 41
 - model: api.question
   pk: 150
@@ -5379,7 +5381,6 @@
     created: 2020-04-26
     updated: 2020-05-10
     tags:
-    - 2
     - 41
 - model: api.question
   pk: 165
@@ -5573,7 +5574,6 @@
     created: 2020-04-26
     updated: 2020-06-24
     tags:
-    - 2
     - 40
 - model: api.question
   pk: 171
@@ -5669,7 +5669,6 @@
     created: 2020-04-26
     updated: 2020-09-28
     tags:
-    - 2
     - 41
 - model: api.question
   pk: 174
@@ -5733,7 +5732,6 @@
     created: 2020-04-26
     updated: 2020-05-07
     tags:
-    - 2
     - 66
 - model: api.question
   pk: 176
@@ -6169,7 +6167,6 @@
     created: 2020-04-26
     updated: 2020-05-10
     tags:
-    - 2
     - 33
     - 35
 - model: api.question
@@ -6742,7 +6739,6 @@
     created: 2020-04-26
     updated: 2020-05-10
     tags:
-    - 2
     - 20
 - model: api.question
   pk: 208
@@ -7047,7 +7043,6 @@
     created: 2020-04-26
     updated: 2020-09-28
     tags:
-    - 2
     - 11
 - model: api.question
   pk: 218
@@ -7649,14 +7644,14 @@
   fields:
     text: En 2019, l'Agence internationale de l'énergie a publié un rapport sur les
       émissions nationales de CO2 liées à l'énergie. La moyenne mondiale annuelle
-      par habitant est estimée à 4,37 tonnes de CO2. La moyenne française se situe
-      en dessous de ce chiffre. Vrai ou Faux ?
+      par habitant est estimée à 4,37 tonnes de CO2. Comment la France se situe-t-elle
+      par rapport à cette moyenne ?
     hint: ''
     type: VF
     category: 5
     difficulty: 2
-    answer_option_a: Vrai
-    answer_option_b: Faux
+    answer_option_a: Au dessus
+    answer_option_b: En dessous
     answer_option_c: ''
     answer_option_d: ''
     answer_correct: b
@@ -7865,7 +7860,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
 - model: api.question
   pk: 243
@@ -8131,10 +8125,10 @@
     type: QCM
     category: 2
     difficulty: 3
-    answer_option_a: 0,4 kg CO2eq
-    answer_option_b: 2,4 kg CO2eq
-    answer_option_c: 4,4 kg CO2eq
-    answer_option_d: 8,4 kg CO2eq
+    answer_option_a: 50 g CO2eq
+    answer_option_b: 500 g CO2eq
+    answer_option_c: 5 kg CO2eq
+    answer_option_d: 50 kg CO2eq
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: La production, transformation et acheminement jusqu’au magasin
@@ -8145,7 +8139,6 @@
     answer_image_url: ''
     answer_image_explanation: ''
     answer_extra_info: 'id: 135
-
 
       https://twitter.com/laydgeur/status/1152311385189208065'
     author: laydgeur
@@ -8350,7 +8343,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 72
 - model: api.question
   pk: 258
@@ -8646,7 +8638,6 @@
     created: 2020-05-20
     updated: 2020-09-28
     tags:
-    - 2
     - 13
     - 72
 - model: api.question
@@ -8801,7 +8792,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 22
 - model: api.question
   pk: 272
@@ -8999,7 +8989,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
 - model: api.question
   pk: 278
@@ -9066,7 +9055,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 31
     - 39
 - model: api.question
@@ -9132,7 +9120,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 44
 - model: api.question
   pk: 282
@@ -9164,7 +9151,6 @@
     created: 2020-05-20
     updated: 2020-09-28
     tags:
-    - 2
     - 15
     - 142
     - 151
@@ -9174,7 +9160,7 @@
     text: Combien de pays sont membres de l'Agence Internationale de l’Énergie ?
     hint: ''
     type: QCM
-    category: 5
+    category: 6
     difficulty: 3
     answer_option_a: '30'
     answer_option_b: '86'
@@ -9194,8 +9180,7 @@
     added: 2019-09-10
     created: 2020-05-20
     updated: 2020-05-20
-    tags:
-    - 2
+    tags: []
 - model: api.question
   pk: 284
   fields:
@@ -9261,6 +9246,7 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
+    - 5
     - 11
     - 65
 - model: api.question
@@ -9292,7 +9278,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 33
 - model: api.question
   pk: 287
@@ -9323,7 +9308,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 71
 - model: api.question
   pk: 288
@@ -9484,7 +9468,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 33
     - 39
     - 42
@@ -9521,7 +9504,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 35
     - 60
 - model: api.question
@@ -9558,7 +9540,6 @@
     created: 2020-05-20
     updated: 2020-09-28
     tags:
-    - 2
     - 69
     - 74
     - 142
@@ -9594,7 +9575,8 @@
     added: 2019-09-26
     created: 2020-05-20
     updated: 2020-05-20
-    tags: []
+    tags:
+    - 95
 - model: api.question
   pk: 296
   fields:
@@ -9721,7 +9703,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 13
     - 31
     - 72
@@ -9817,7 +9798,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
     - 46
 - model: api.question
@@ -10119,7 +10099,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 41
 - model: api.question
   pk: 312
@@ -10247,7 +10226,6 @@
     created: 2020-05-20
     updated: 2020-09-28
     tags:
-    - 2
     - 74
     - 90
     - 142
@@ -10457,7 +10435,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 40
     - 72
 - model: api.question
@@ -10489,7 +10466,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 29
     - 73
 - model: api.question
@@ -10553,7 +10529,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 47
     - 72
 - model: api.question
@@ -10749,7 +10724,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 9
     - 69
 - model: api.question
@@ -10880,7 +10854,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 77
 - model: api.question
   pk: 335
@@ -11002,7 +10975,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
 - model: api.question
   pk: 339
@@ -11065,7 +11037,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 20
     - 78
 - model: api.question
@@ -11098,7 +11069,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 11
 - model: api.question
   pk: 342
@@ -11201,7 +11171,6 @@
     created: 2020-05-20
     updated: 2020-09-28
     tags:
-    - 2
     - 40
 - model: api.question
   pk: 345
@@ -11235,7 +11204,6 @@
     updated: 2020-09-28
     tags:
     - 1
-    - 2
     - 13
     - 72
 - model: api.question
@@ -11322,9 +11290,9 @@
     answer_option_d: Pays-Bas
     answer_correct: b
     has_ordered_answers: false
-    answer_explanation: Le premier pays de l’Union Européenne à avoir adopté une stratégie
-      nationale d’adaptation au changement climatique est la Finlande, en 2005. L’Espagne
-      et la France ont été les suivants, en 2006.
+    answer_explanation: En 2005, La Finlande a été le premier pays de l’Union Européenne
+      à avoir adopté une stratégie nationale d’adaptation au changement climatique.
+      L’Espagne et la France ont été les suivants, en 2006.
     answer_accessible_url: ''
     answer_scientific_url: https://www.eea.europa.eu/data-and-maps/figures/overview-of-national-and-sectoral-3
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r232.jpg
@@ -11370,7 +11338,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 11
     - 56
 - model: api.question
@@ -11436,7 +11403,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 13
 - model: api.question
   pk: 352
@@ -11468,7 +11434,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 11
 - model: api.question
   pk: 353
@@ -11485,9 +11450,16 @@
     answer_option_d: 350 ans
     answer_correct: d
     has_ordered_answers: true
-    answer_explanation: Les États-Unis possèdent des réserves prouvées de 250 milliards
-      de tonnes de charbon (25% du total mondial). Au rythme de production actuel
-      (3ème mondial) ils en ont pour 360 ans, soit jusqu’en l’an 2380.
+    answer_explanation: 'Les États-Unis possèdent des réserves prouvées de 250 milliards
+      de tonnes de charbon (25% du total mondial).
+
+      Au rythme de production actuel (3ème producteur mondial) ils en ont pour 360
+      ans, soit jusqu’en l’an 2380.
+
+
+      Si elle devait brûler, cette seule quantité de charbon suffirait à augmenter
+      la température de la planète d''environ +0,5°C, ce qui laisse aux Américains
+      une influence énorme dans l''évolution du changement climatique.'
     answer_accessible_url: ''
     answer_scientific_url: https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf#page42
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r237.jpg
@@ -11534,7 +11506,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 41
 - model: api.question
   pk: 355
@@ -11648,8 +11619,9 @@
     answer_option_d: 30 jours
     answer_correct: a
     has_ordered_answers: true
-    answer_explanation: C'est 10 jours pour un Français. Les émissions de CO2 des
-      330 millions d'Américains correspondent à ce qu'émettraient...40 milliards d’Ethiopiens.
+    answer_explanation: 3 jours pour un Américain, et 10 jours pour un Français. Les
+      émissions de CO2 des 330 millions d'Américains correspondent à ce qu'émettraient...
+      40 milliards d’Ethiopiens.
     answer_accessible_url: ''
     answer_scientific_url: http://www.globalcarbonatlas.org/fr/CO2-emissions
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r242.jpg
@@ -11697,15 +11669,14 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
 - model: api.question
   pk: 360
   fields:
-    text: 'Dans le monde, combien de pays produisent plus d''électricité que les seules
-      centrales à gaz des États-Unis ?
+    text: 'Combien de pays produisent au total plus d''électricité que ce que produisent
+      les centrales à gaz des États-Unis à elles seules ?
 
-      (pays autres que les États-Unis)'
+      '
     hint: ''
     type: QCM
     category: 5
@@ -11717,10 +11688,9 @@
     answer_correct: a
     has_ordered_answers: true
     answer_explanation: 'Dans le monde, 1 seul pays autre que les États-Unis produit
-      plus d’électricité que les centrales à gaz américaines : la Chine.
-
-      Les seules centrales à gaz des États-Unis ont par exemple produit plus d’électricité
-      que la totalité de l’Inde et ses 1,3 milliards d’habitants.'
+      plus d’électricité que les centrales à gaz américaines : la Chine. Elles ont
+      par exemple produit plus d’électricité que la totalité de l’Inde avec ses 1,3
+      milliards d’habitants.'
     answer_accessible_url: ''
     answer_scientific_url: https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf#page56
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r244.jpg
@@ -11733,7 +11703,6 @@
     created: 2020-05-20
     updated: 2020-11-28
     tags:
-    - 2
     - 39
     - 41
     - 80
@@ -11803,7 +11772,6 @@
     created: 2020-05-20
     updated: 2020-09-28
     tags:
-    - 2
     - 13
     - 40
 - model: api.question
@@ -11839,7 +11807,6 @@
     created: 2020-05-20
     updated: 2020-09-28
     tags:
-    - 2
     - 13
     - 34
 - model: api.question
@@ -11871,7 +11838,6 @@
     created: 2020-05-20
     updated: 2020-06-24
     tags:
-    - 2
     - 13
 - model: api.question
   pk: 365
@@ -11936,7 +11902,6 @@
     created: 2020-05-20
     updated: 2020-09-28
     tags:
-    - 2
     - 39
     - 40
 - model: api.question
@@ -12080,7 +12045,6 @@
     updated: 2020-05-20
     tags:
     - 1
-    - 2
     - 13
     - 33
     - 72
@@ -12324,7 +12288,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 72
 - model: api.question
   pk: 378
@@ -12658,7 +12621,6 @@
     created: 2020-05-20
     updated: 2020-09-28
     tags:
-    - 2
     - 13
     - 72
 - model: api.question
@@ -12722,7 +12684,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 72
 - model: api.question
   pk: 390
@@ -12887,7 +12848,6 @@
     created: 2020-05-20
     updated: 2020-05-20
     tags:
-    - 2
     - 39
     - 87
 - model: api.question
@@ -12984,7 +12944,6 @@
     created: 2020-05-20
     updated: 2020-09-28
     tags:
-    - 2
     - 13
     - 38
 - model: api.question
@@ -13135,7 +13094,7 @@
       cultivées au monde !
     answer_accessible_url: https://www.gqmagazine.fr/style/article/les-5-marques-de-jeans-qui-polluent-moins
     answer_scientific_url: https://www.ademe.fr/sites/default/files/assets/documents/le-revers-de-mon-look.pdf
-    answer_image_url: https://www.wedemain.fr/photo/art/default/39713960-34059539.jpg
+    answer_image_url: ''
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Contributeur anonyme
@@ -14011,22 +13970,24 @@
     answer_correct: d
     has_ordered_answers: true
     answer_explanation: 'Extrait du résumé pour décideurs du 5ème rapport du GIEC
-      (2014) : « Il est extrêmement probable que l’influence de l’homme est la cause
-      principale du réchauffement observé depuis le milieu du XXe siècle. » Le mot
+      (2014) : « Il est extrêmement probable que l’influence de l’homme soit la cause
+      principale du réchauffement observé depuis le milieu du XXe siècle». Le mot
       "extrêmement probable" signifie un degré de confiance dans l’affirmation supérieur
-      à 95%.'
-    answer_accessible_url: ''
+      à 95%. Cette probabilité était de 90 % dans le précédent rapport du GIEC en
+      2007 et de 66 % dans celui de 2001.'
+    answer_accessible_url: https://www.lemonde.fr/planete/article/2014/04/14/rechauffement-les-dix-points-marquants-du-rapport-du-giec_4399907_3244.html
     answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/03/WG1AR5_SummaryVolume_FINAL_FRENCH.pdf
     answer_image_url: https://www.terresacree.org/images/rechauffement4.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    validation_status: Écartée
+    validation_status: Validée
     added: 2020-06-04
     created: 2020-06-24
     updated: 2020-06-24
     tags:
+    - 22
     - 32
 - model: api.question
   pk: 429
@@ -15777,7 +15738,7 @@
       turbine pour générer de l’électricité
     answer_accessible_url: https://www.edf.fr/groupe-edf/espaces-dedies/l-energie-de-a-a-z/tout-sur-l-energie/produire-de-l-electricite/qu-est-ce-que-la-geothermie
     answer_scientific_url: ''
-    answer_image_url: ''
+    answer_image_url: http://www.clg-daudet-carpentras.ac-aix-marseille.fr/spip/IMG/file/techno/niv6/la%20geothermie.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: EDF
@@ -16145,7 +16106,7 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Écartée temporairement
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -16293,7 +16254,7 @@
       ce qui la classerait 2ème mondiale, juste derrière les USA (actuellement 2ème
       avec 5,4 milliards de tonnes de CO2) qui deviendraient premiers, et avant l’Inde
       3ème (2,6 milliards de tonnes de CO2).'
-    answer_accessible_url: ''
+    answer_accessible_url: https://chinapower.csis.org/china-greenhouse-gas-emissions/
     answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
     answer_image_url: ''
     answer_image_explanation: ''
@@ -16611,7 +16572,7 @@
       et cube sur la place du capitole
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Écartée temporairement
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-07-30
@@ -16821,7 +16782,7 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Écartée temporairement
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -16901,7 +16862,7 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Écartée temporairement
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -16971,7 +16932,7 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Écartée temporairement
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-07-10
@@ -17386,21 +17347,21 @@
   pk: 534
   fields:
     text: Quelle est la consommation moyenne d’engrais azotés par habitant en France
-      ? (en quantité de produit)
+      ?
     hint: ''
     type: QCM
     category: 2
     difficulty: 4
-    answer_option_a: 1 kg par habitant
-    answer_option_b: 10 kg par habitant
-    answer_option_c: 100 kg par habitant
-    answer_option_d: 1000 kg par habitant
+    answer_option_a: 1 kg
+    answer_option_b: 10 kg
+    answer_option_c: 100 kg
+    answer_option_d: 1000 kg
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: Plus de 6,3 millions de tonnes d’engrais azotés ont été utilisé
       en France métropolitaine lors de la campagne 2017-2018, ce qui fait en moyenne
       environ 100 kg d’engrais par français. Une fois épandus, ces engrais azotés
-      émettent du protoxyde d’azote (N2O) qui et un gaz à effet de serre 300 fois
+      émettent du protoxyde d’azote (N2O) qui est un gaz à effet de serre 300 fois
       plus puissant que le CO2.
     answer_accessible_url: ''
     answer_scientific_url: https://www.unifa.fr/sites/default/files/2019-04/BROCHURE%20REGION%202017-2018.pdf
@@ -17572,10 +17533,12 @@
     answer_option_d: '1966'
     answer_correct: a
     has_ordered_answers: true
-    answer_explanation: C'est en 1906 que les États-Unis sont devenus le 1er pays
-      au monde à émettre plus d'1 milliard de tonnes de CO2 par an. Ils représentaient
-      alors plus de 40% des émissions mondiales. Aujourd'hui le pays émet 5x plus
-      de CO2. Et le monde 14x plus de CO2 par rapport aux émissions de 1906.
+    answer_explanation: 'C''est en 1906 que les États-Unis sont devenus le premier
+      pays au monde à émettre plus d''1 milliard de tonnes de CO2 par an. Ils représentaient
+      alors plus de 40% des émissions mondiales.
+
+      Aujourd''hui le pays émet 5 fois plus de CO2. Et le monde 14 fois plus de CO2
+      par rapport aux émissions de 1906.'
     answer_accessible_url: ''
     answer_scientific_url: https://ourworldindata.org/grapher/annual-co2-emissions-per-country
     answer_image_url: https://ourworldindata.org/grapher/exports/annual-co-emissions-by-region.png
@@ -18672,7 +18635,18 @@
       (Indonésie)
     answer_correct: a
     has_ordered_answers: false
-    answer_explanation: '- Pour le Samalas, http://www.ipgp.fr/fr/eruption-volcan-samalas-1257
+    answer_explanation: '- Samalas (Indonésie) en 1257
+
+      - Kuwae (Vanuatu) en 1452
+
+      - Huaynaputina (Pérou) en 1600
+
+      - Tambora (Indonésie) en 1815'
+    answer_accessible_url: ''
+    answer_scientific_url: https://doi.org/10.1017/CBO9780511844058.009
+    answer_image_url: https://i.dailymail.co.uk/i/pix/2015/04/15/10/27975FAA00000578-0-The_map_above_shows_major_volcanic_eruptions_from_the_past_2_000-a-17_1429091055374.jpg
+    answer_image_explanation: ''
+    answer_extra_info: '- Pour le Samalas, http://www.ipgp.fr/fr/eruption-volcan-samalas-1257
 
       - pour le Kuwae, Patrick Boucheron (dir.), « Introduction », Histoire du monde
       au XVe siècle, dirigé par P. Boucheron, coordonné par Julien Loiseau, Pierre
@@ -18685,11 +18659,6 @@
       par Philippe Pignarre, Paris, La Découverte, 2016 ; William K. Klingaman, Nicholas
       P. Klingaman, The Year Without Summer. 1816 and the Volcano That Darkened the
       World and Changed History, New York, St Martin’s Press, 2013.'
-    answer_accessible_url: ''
-    answer_scientific_url: https://doi.org/10.1017/CBO9780511844058.009
-    answer_image_url: https://i.dailymail.co.uk/i/pix/2015/04/15/10/27975FAA00000578-0-The_map_above_shows_major_volcanic_eruptions_from_the_past_2_000-a-17_1429091055374.jpg
-    answer_image_explanation: ''
-    answer_extra_info: ''
     author: Laurent Testot
     validator: Matthieu Massart
     validation_status: Validée
@@ -19419,7 +19388,8 @@
   pk: 596
   fields:
     text: Juste avant la faillite de Lehman Brothers en 2008, le prix du pétrole avait
-      atteint des sommets. Quel fut alors le prix le plus haut atteint ?
+      atteint des sommets. Quel fut alors le prix le plus haut atteint pour un baril
+      de Brent ?
     hint: ''
     type: QCM
     category: 6
@@ -19998,12 +19968,10 @@
     answer_option_d: '200'
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: 'Dans le monde, il y a 51 installations de capture et stockage
+    answer_explanation: Dans le monde, il y a 51 installations de capture et stockage
       de CO2 à large échelle (plusieurs centaines de millions de tonnes de CO2 capturées
-      chaque année), dont 19 en opération.
-
-      Sur ces 19 installations, 17 concernent des sites industriels, et 2 des centrales
-      électriques.'
+      chaque année), dont 19 en opération. Sur ces 19 installations, 17 concernent
+      des sites industriels, et 2 des centrales électriques.
     answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/capture-et-stockage-du-co2-csc
     answer_scientific_url: https://co2re.co/FacilityData
     answer_image_url: https://www.globalccsinstitute.com/wp-content/uploads/2019/12/infographics-03.jpg
@@ -20011,7 +19979,7 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-11-24
     created: 2020-11-25
     updated: 2020-11-25
@@ -20168,19 +20136,21 @@
     answer_option_d: ''
     answer_correct: a
     has_ordered_answers: true
-    answer_explanation: 'Même si la cimenterie fonctionne complètement avec une énergie
-      zéro carbone, la seule réaction chimique permettant de fabriquer le ciment est
-      émettrice de CO2.
+    answer_explanation: 'Même si la cimenterie est alimentée par une énergie zéro
+      carbone, la seule réaction chimique permettant de fabriquer le ciment est émettrice
+      de CO2.
 
-      L''équation chimique est la suivante : CaCO3 = CaO + CO2'
+      L''équation chimique est la suivante : CaCO3 = CaO + CO2
+
+      L''industrie du ciment est l''une des plus émettrices au monde.'
     answer_accessible_url: https://fr.wikipedia.org/wiki/Ciment#Fabrication
     answer_scientific_url: http://acces.ens-lyon.fr/acces/thematiques/eedd/climat/pedagogie/hors_classe/ciment.pdf
     answer_image_url: https://slideplayer.fr/slide/3302277/11/images/9/Le+ciment+%3A+fabrication.jpg
     answer_image_explanation: Fabrication du ciment
     answer_extra_info: ''
     author: laydgeur
-    validator: ''
-    validation_status: A valider
+    validator: Matthieu Massart
+    validation_status: Validée
     added: 2020-11-24
     created: 2020-11-25
     updated: 2020-11-25
@@ -20368,7 +20338,12 @@
     answer_explanation: 'Les émissions de CO2 de la totalité du continent africain
       s''élèvent à 1,4 milliards de tonnes.
 
-      Celles des transports routiers des États-Unis sont de 1,5 milliards de tonnes.'
+      Celles des transports routiers des États-Unis sont de 1,5 milliards de tonnes.
+
+
+      C''est assez impressionnant de penser que les seuls déplacements des 330 millions
+      d''Américains émettent plus de CO2 que la TOTALITÉ des activités des 1,2 milliards
+      d''Africains.'
     answer_accessible_url: ''
     answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r293.png
@@ -20514,7 +20489,7 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1278063646535561216
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Écartée temporairement
     added: 2020-06-30
     created: 2020-11-28
     updated: 2020-11-28
@@ -20550,7 +20525,7 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1278433375708217346
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Écartée temporairement
     added: 2020-07-01
     created: 2020-11-28
     updated: 2020-11-28
@@ -20583,7 +20558,7 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1278797750788919301
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Écartée temporairement
     added: 2020-07-02
     created: 2020-11-28
     updated: 2020-11-28
@@ -20618,7 +20593,7 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1279147249193365508
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Écartée temporairement
     added: 2020-07-03
     created: 2020-11-28
     updated: 2020-11-28
@@ -20646,27 +20621,14 @@
       émissions de l''aviation en donnant à chaque français un quota de CO2 à émettre
       via ce moyen de transport.
 
-
       La France a émis 23,3 millions de tonnes de CO2 pour faire voler des avions
       (5,3 en domestique et 18 pour l''international), et environ 60% des passagers
       étaient français.
 
       Donc chaque français aurait droit à ~205 kg de CO2 par an, qu''il pourrait choisir
-      de dépenser ou de cumuler.
-
-
-      205 kg de CO2 ça correspond à ces trajets aller/retour :
-
-      - Paris-Bastia
-
-      - Bordeaux-Strasbourg
-
-      - Lille-Marseille
-
-      - Lyon Rennes
-
-      Soit environ 1500 km aller-retour.
-
+      de dépenser ou de cumuler. 205 kg de CO2 ça correspond par ex un trajet aller/retour
+      Paris-Bastia, Bordeaux-Strasbourg, Lille-Marseille ou encore Lyon - Rennes,
+      soit environ 1500 km aller-retour.
 
       Pour voyager plus loin en avion, il faudrait donc cumuler ce quota sur plusieurs
       années, tout en sachant qu''il serait calé sur la stratégie nationale bas carbone
@@ -20686,8 +20648,8 @@
       passager de la DGAC : https://ecologique-solidaire.gouv.fr/sites/default/files/ENPA_2015_2016.pdf-
       Stratégie nationale bas carbone : https://ecologique-solidaire.gouv.fr/strategie-nati'
     author: laydgeur
-    validator: ''
-    validation_status: A valider
+    validator: Matthieu Massart
+    validation_status: Validée
     added: 2020-07-06
     created: 2020-11-28
     updated: 2020-11-28
@@ -20879,19 +20841,16 @@
     answer_option_d: '10'
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: 'Sur les 10 mois de juin les plus chauds enregistrés dans
-      le monde sur ces 140 dernières années, 9 ont eu lieu depuis 2010.
-
-
-      Les 7 mois de juin les plus chauds en 140 ans ont eu lieu ces 7 dernières années.'
+    answer_explanation: '...et les 7 mois de juin les plus chauds en 140 ans ont eu
+      lieu ces 7 dernières années.'
     answer_accessible_url: ''
     answer_scientific_url: https://www.ncei.noaa.gov/news/global-climate-202006
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r310.png
     answer_image_explanation: ''
     answer_extra_info: https://twitter.com/laydgeur/status/1284579178847916032
     author: laydgeur
-    validator: ''
-    validation_status: A valider
+    validator: Matthieu Massart
+    validation_status: Validée
     added: 2020-07-18
     created: 2020-11-28
     updated: 2020-11-28
@@ -20913,20 +20872,19 @@
     answer_option_d: 15 kg d’équivalent CO2
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: 'Le contenu moyen en gaz à effet de serre d’un repas du midi
-      en France est d’environ 2 kg d’équivalent CO2.
-
-
-      Il y a beaucoup de variations, entre 500g pour un repas végétarien et 5 kg pour
-      un repas avec du bœuf.'
-    answer_accessible_url: ''
+    answer_explanation: 'Ces émissions dépendent énormément de ce que l''on mange
+      : 500g pour un repas végétarien et 5 kg pour un repas avec du bœuf. Pour aller
+      plus loin en s''amusant sur l''empreinte carbone de notre alimentation, nous
+      recommandons l''excellent jeu pédaogique développé par Avenir Climatique donné
+      en lien ci-dessous.'
+    answer_accessible_url: https://avenirclimatique.org/carbonometre/
     answer_scientific_url: https://www.bilans-ges.ademe.fr/documentation/UPLOAD_DOC_FR/index.htm?repas.htm
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r312.png
     answer_image_explanation: ''
     answer_extra_info: https://twitter.com/laydgeur/status/1285674342467153922
     author: laydgeur
-    validator: ''
-    validation_status: A valider
+    validator: Matthieu Massart
+    validation_status: Validée
     added: 2020-07-21
     created: 2020-11-28
     updated: 2020-11-28
@@ -21008,11 +20966,8 @@
 - model: api.question
   pk: 648
   fields:
-    text: 'Quelle est la région française qui émet le plus de gaz à effet de serre
+    text: Quelle est la région française la plus émettrice en gaz à effet de serre
       ?
-
-
-      (en valeur absolue)'
     hint: ''
     type: QCM
     category: 1
@@ -21023,9 +20978,15 @@
     answer_option_d: Nouvelle-Aquitaine
     answer_correct: b
     has_ordered_answers: false
-    answer_explanation: La région française qui émet le plus de gaz à effet de serre
-      est les Hauts-de-France avec 54 millions de tonnes d’équivalent CO2 (~12% des
-      émissions nationales), elle suivie de très près par Auvergne-Rhône-Alpes.
+    answer_explanation: 'La région des Hauts-de-France émet 54 millions de tonnes
+      d’équivalent CO2 (~12% des émissions nationales), elle suivie de très près par
+      Auvergne-Rhône-Alpes.
+
+
+      Les Hauts-de-France est une région peuplée (3ème région après l''Ile-de-France
+      et Auvergne-Rhône-Alpes) et avec beaucoup d''industries (métallurgie, automobile,
+      ferroviaire, agro-alimentaire, ...) qui représentent pas loin de la moitié des
+      émissions de la région.'
     answer_accessible_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/07/hcc_rapport_annuel-2020.pdf
     answer_scientific_url: ''
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r315.png
@@ -21043,23 +21004,28 @@
 - model: api.question
   pk: 650
   fields:
-    text: En quelle année a eu lieu le plus grand incendie en Californie depuis le
-      début des archives fiables il y a 90 ans ?
+    text: Sur les 20 plus grands incendies depuis 90 ans en Californie, combien ont
+      eu lieu après l'an 2000 ?
     hint: ''
     type: QCM
     category: 1
     difficulty: 2
-    answer_option_a: '1932'
-    answer_option_b: '1977'
-    answer_option_c: '2003'
-    answer_option_d: '2020'
-    answer_correct: d
+    answer_option_a: '3'
+    answer_option_b: '10'
+    answer_option_c: '17'
+    answer_option_d: ''
+    answer_correct: c
     has_ordered_answers: true
     answer_explanation: 'Le plus grand incendie en Californie depuis 90 ans a eu lieu
       pendant l''été 2020.
 
       Cet incendie nommé August Complex a brulé plus de 4000 km2 à lui seul, autant
-      que la superficie des Alpes-Maritimes.'
+      que la superficie des Alpes-Maritimes.
+
+      La Californie est une des régions la plus touchée par les incendies, et cela
+      va en s''empirant à cause du réchauffement climatique : sur les 20 plus grands
+      incendies depuis 90 ans, 17 ont eu lieu après l''an 2000, dont 6 qui ont eu
+      lieu en 2020.'
     answer_accessible_url: https://www.fire.ca.gov/media/11416/top20_acres.pdf
     answer_scientific_url: ''
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r317.png
@@ -21067,7 +21033,7 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1318634699275849729
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-10-20
     created: 2020-11-28
     updated: 2020-11-28
@@ -21089,8 +21055,8 @@
     answer_option_d: ''
     answer_correct: a
     has_ordered_answers: true
-    answer_explanation: Depuis un siècle, les émissions cumulée de l'ensemble des
-      volcans de la terre est estimée à 15-26 milliards de tonnes de CO2. Sur la même
+    answer_explanation: Depuis un siècle, on estime les émissions cumulées de l'ensemble
+      des volcans de la terre entre 15 et 26 milliards de tonnes de CO2. Sur la même
       période, la France a émis un cumul de 32 milliards de tonnes de CO2.
     answer_accessible_url: ''
     answer_scientific_url: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2011EO240001
@@ -21098,7 +21064,7 @@
     answer_image_explanation: ''
     answer_extra_info: https://twitter.com/laydgeur/status/1319008577865076738
     author: laydgeur
-    validator: ''
+    validator: Matthieu Massart
     validation_status: Validée
     added: 2020-10-21
     created: 2020-11-28
@@ -21146,8 +21112,8 @@
 - model: api.question
   pk: 653
   fields:
-    text: Sur les 4,8 millions de véhicules 100% électriques en circulation dans le
-      monde, combien sont en Chine ?
+    text: On compte près de 5 millions de véhicules électriques en circulation dans
+      le monde.  Combien en Chine ?
     hint: ''
     type: QCM
     category: 8
@@ -21158,12 +21124,9 @@
     answer_option_d: 70 %
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: 'La Chine compte environ 2,6 millions de voitures 100% électriques
-      en circulation, soit plus de la moitié du total mondial.
-
-
-      Pour rappel, les deux tiers de l''électricité chinoise sont produits avec du
-      charbon.'
+    answer_explanation: La Chine compte environ 2,6 millions de voitures 100% électriques
+      en circulation, soit plus de la moitié du total mondial. Alors que les deux
+      tiers de l'électricité chinoise sont produits avec du charbon.
     answer_accessible_url: ''
     answer_scientific_url: https://www.iea.org/reports/global-ev-outlook-2020
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r320.png
@@ -21171,7 +21134,7 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1319722821728305158
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Écartée temporairement
     added: 2020-10-23
     created: 2020-11-28
     updated: 2020-11-28
@@ -21224,7 +21187,7 @@
     answer_option_a: Dioxyde de carbone (CO2)
     answer_option_b: Méthane (CH4)
     answer_option_c: Protoxyde d’azote (N2O)
-    answer_option_d: ''
+    answer_option_d: Vapeur d'eau (H20)
     answer_correct: b
     has_ordered_answers: false
     answer_explanation: Depuis la révolution industrielle, la concentration dans l’atmosphère
@@ -21236,8 +21199,8 @@
     answer_image_explanation: ''
     answer_extra_info: https://twitter.com/laydgeur/status/1321191996661420041
     author: laydgeur
-    validator: ''
-    validation_status: A valider
+    validator: Matthieu Massart
+    validation_status: Validée
     added: 2020-10-27
     created: 2020-11-28
     updated: 2020-11-28
@@ -21278,7 +21241,7 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1321557493592530944
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Écartée
     added: 2020-10-28
     created: 2020-11-28
     updated: 2020-11-28
@@ -21354,7 +21317,7 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1323371163649773571
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Écartée temporairement
     added: 2020-11-02
     created: 2020-11-28
     updated: 2020-11-28
@@ -21438,13 +21401,12 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1324465284615462914
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Écartée temporairement
     added: 2020-11-05
     created: 2020-11-28
     updated: 2020-11-28
     tags:
     - 11
-    - 39
     - 47
 - model: api.question
   pk: 663
@@ -21495,12 +21457,10 @@
     answer_option_d: ''
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: 'Le transport aérien des USA émet environ 250 millions de
-      tonnes de CO2, ce qui est considérable (c''est l''équivalent de toute l''Espagne),
-      mais la France entière émet 340 millions de tonnes.
-
-
-      Les USA représentent environ le quart des émissions mondiales dues à l''aviation.'
+    answer_explanation: Le transport aérien des USA émet environ 250 millions de tonnes
+      de CO2, ce qui est considérable (c'est l'équivalent de toute l'Espagne), mais
+      la France entière émet 340 millions de tonnes. Les USA représentent environ
+      le quart des émissions mondiales dues à l'aviation.
     answer_accessible_url: ''
     answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r331.png
@@ -21557,7 +21517,7 @@
   pk: 666
   fields:
     text: 'Vrai ou faux : les transports des États-Unis émettent plus de CO2 que les
-      transports combinés de la Chine, de l’Inde, de la Russie et du Japon ?'
+      transports combinés de la Chine, de l’Inde, de la Russie et du Japon.'
     hint: ''
     type: VF
     category: 1
@@ -21569,10 +21529,10 @@
     answer_correct: a
     has_ordered_answers: true
     answer_explanation: 'Le secteur des transports aux États-Unis émet 1,7 milliards
-      de tonnes de CO2 par an.
+      de tonnes (Gt) de CO2 par an.
 
-      Soit légèrement plus que les transports combinés de la Chine (0,9 Mt), de l''Inde
-      (0,3 Mt), de la Russie (0,2 Mt), et du Japon (0,2 Mt).'
+      Soit légèrement plus que toutes celles issues des transports de la Chine (0,9
+      Gt), de l''Inde (0,3 Gt), de la Russie (0,2 Gt), et du Japon (0,2 Gt).'
     answer_accessible_url: ''
     answer_scientific_url: https://www.iea.org/data-and-statistics?country=USA&fuel=CO2%20emissions&indicator=CO2BySector
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r333.png
@@ -21592,10 +21552,8 @@
   pk: 667
   fields:
     text: 'Début 2020 la production de pétrole brut des États-Unis a connu la plus
-      grande baisse de son histoire avec -2,5 millions de barils/jour.
-
-
-      Quelle a été la dernière année où ils ont produit aussi peu de pétrole ?'
+      grande baisse de son histoire : 2,5 millions de barils/jour en moins. Quelle
+      a été la dernière année où ils ont produit aussi peu de pétrole ?'
     hint: ''
     type: QCM
     category: 5
@@ -21671,15 +21629,14 @@
     answer_option_d: ''
     answer_correct: a
     has_ordered_answers: true
-    answer_explanation: 'Produire une tonne de plastique émet en moyenne plus de CO2
-      que produire une tonne d''acier.
+    answer_explanation: 'C''est le cas si on produit du plastique neuf. Pour du plastique
+      recyclé en revanche, le plastique est largement meilleur (environ 5 fois moins
+      d''émissions pour le plastique recyclé que pour l''acier recyclé).
 
-
-      Si par contre les matériaux sont recyclés, le plastique est largement meilleur.
-
-
-      Pour beaucoup d''usages le plastique est meilleur que l''acier car pour remplir
-      la même fonction on va utiliser une quantité moindre de plastique que d''acier.'
+      Un autre élément à prendre en compte : pour beaucoup d''usages le plastique
+      est moins émetteur que l''acier, car pour remplir la même fonction on va utiliser
+      une quantité moindre de plastique que d''acier. Cet argument est à contrebalancer
+      par la plus grande durabilité de l''acier.'
     answer_accessible_url: ''
     answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/authentification
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r336.png
@@ -21687,7 +21644,7 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1328435243855056899
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-11-16
     created: 2020-11-28
     updated: 2020-11-28
@@ -21699,7 +21656,7 @@
 - model: api.question
   pk: 671
   fields:
-    text: Quelle est la dépendance de l'Union Européenne aux importations de charbon
+    text: Quelle proportion de sa consommation de charbon l'Union Européenne importe-t-elle
       ?
     hint: ''
     type: QCM
@@ -21711,14 +21668,7 @@
     answer_option_d: 65 %
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: 'La dépendance aux importations de charbon (tous types confondus)
-      de l''Union Européenne est de 44%.
-
-
-      Cela signifie que 44% du charbon consommé dans l''UE est importé.
-
-
-      Et le premier fournisseur de charbon de l''UE est la Russie.'
+    answer_explanation: Le premier fournisseur de charbon de l'UE est la Russie.
     answer_accessible_url: ''
     answer_scientific_url: https://ec.europa.eu/energy/data-analysis/energy-statistical-pocketbook_fr
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r338.png
@@ -21736,8 +21686,8 @@
 - model: api.question
   pk: 672
   fields:
-    text: Quelle région de France métropolitaine émet le plus de gaz à effet de serre
-      par habitant ?
+    text: Quelle est la région de France métropolitaine qui émet le plus de gaz à
+      effet de serre par habitant ?
     hint: ''
     type: QCM
     category: 1
@@ -21748,22 +21698,18 @@
     answer_option_d: Normandie
     answer_correct: d
     has_ordered_answers: false
-    answer_explanation: 'La région de France métropolitaine qui émet le plus de gaz
-      à effet de serre par habitant est la Normandie, avec plus de 10 tonnes de CO2eq
-      par personne.
-
-
-      Les secteurs les plus émetteurs sont l''industrie (centrale à charbon et raffineries)
-      et l''agriculture/élevage. Ces deux secteurs comptent pour la moitié du total
-      d''émissions de la région.'
+    answer_explanation: La Normandie est la plus émettrice par habitant, avec plus
+      de 10 tonnes de CO2eq par personne. Les secteurs les plus émetteurs sont l'industrie
+      (centrale à charbon et raffineries) et l'agriculture/élevage. Ces deux secteurs
+      comptent pour la moitié du total d'émissions de la région.
     answer_accessible_url: ''
     answer_scientific_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/07/cartes-regions-_-20201110.pdf
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r339.png
     answer_image_explanation: ''
     answer_extra_info: https://twitter.com/laydgeur/status/1329887456821440513
     author: laydgeur
-    validator: ''
-    validation_status: A valider
+    validator: Matthieu Massart
+    validation_status: Validée
     added: 2020-11-20
     created: 2020-11-28
     updated: 2020-11-28
@@ -21775,36 +21721,33 @@
   fields:
     text: Lequel de ces équipements de sport émet le plus de CO2 lors de sa fabrication
       ?
-    hint: Le ballon est en plastique et est léger, le club de golf est en acier mais
-      est léger aussi, les bottes d'équitation sont en cuir, et la planche de snowboard
+    hint: Le ballon est en plastique et est léger. Le club de golf est en acier mais
+      est léger. Les bottes d'équitation sont en cuir, et la planche de snowboard
       est composée de divers plastiques.
     type: QCM
     category: 2
     difficulty: 4
-    answer_option_a: Ballon de football
-    answer_option_b: Bottes d’équitation
-    answer_option_c: Club de golf
-    answer_option_d: Planche de snowboard
+    answer_option_a: Un ballon de football
+    answer_option_b: Une paire de bottes d’équitation
+    answer_option_c: Un club de golf en acier
+    answer_option_d: Une planche de snowboard
     answer_correct: b
     has_ordered_answers: false
-    answer_explanation: 'Parmi ces 4 équipements de sport, celui qui émet le plus
-      de CO2 est de loin les bottes d''équitation, principalement à cause du cuir
-      qui entre dans la composition.
-
-
-      Attention avec la source des valeurs, car si la démarche est intéressante, il
-      y a des erreurs grossières dans les calculs (exemple les émissions du ballon
-      de foot multipliées par 10), et les facteurs d''émissions sont approximatifs.
-
-      Il faut prendre ces données avec précaution en tant qu''ordre de grandeur uniquement.'
+    answer_explanation: Parmi ces 4 équipements de sport, celui qui émet le plus de
+      CO2 est de loin les bottes d'équitation, principalement à cause du cuir qui
+      entre dans la composition. Attention avec la source des valeurs, car si la démarche
+      est intéressante, il y a des erreurs grossières dans les calculs (exemple les
+      émissions du ballon de foot multipliées par 10), et les facteurs d'émissions
+      sont approximatifs. Il faut prendre ces données avec précaution en tant qu'ordre
+      de grandeur uniquement.
     answer_accessible_url: ''
     answer_scientific_url: https://www.ufolep.org/modules/kameleon/upload/FE_Sport.pdf
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r340.png
     answer_image_explanation: ''
     answer_extra_info: https://twitter.com/laydgeur/status/1330250867862360074
     author: laydgeur
-    validator: ''
-    validation_status: A valider
+    validator: Matthieu Massart
+    validation_status: Validée
     added: 2020-11-21
     created: 2020-11-28
     updated: 2020-11-28

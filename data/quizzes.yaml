@@ -51,23 +51,23 @@
   pk: 3
   fields:
     name: Le quiz de Vincent Mignerot
-    introduction: "Vincent Mignerot est  essayiste et conférencier. Il développe une\
-      \ théorie écologique de l’esprit et se questionne sur la singularité de l'humanité\
-      \ dans son contexte évolutif. Ses travaux vont de la théorie (Essai Sur la Raison\
-      \ de Tout, Éditions SoLo, 2015) à l’étude de la perception humaine (Heuraesthesia:\
-      \ When Synaesthesia Fertilizes the Mind, CNRS, 2016). Il est le fondateur de\
-      \ l’association Adrastia, qui s’inquiète du risque d’effondrement de la société\
-      \ thermo-industrielle et du groupe Facebook Transition 2030, qui compte plus\
-      \ de 25,000 membres. https://vincent-mignerot.fr/\r\nVincent nous a concocté\
-      \ un quiz teinté d'anthropologie qui va nous faire revenir quelques millénaires\
-      \ en arrière !"
+    introduction: "<p>Vincent Mignerot est essayiste et conférencier. Il développe\
+      \ une théorie écologique de l’esprit et se questionne sur la singularité de\
+      \ l'humanité dans son contexte évolutif. Ses travaux vont de la théorie (Essai\
+      \ Sur la Raison de Tout, Éditions SoLo, 2015) à l’étude de la perception humaine\
+      \ (Heuraesthesia: When Synaesthesia Fertilizes the Mind, CNRS, 2016). Il est\
+      \ le fondateur de l’association Adrastia, qui s’inquiète du risque d’effondrement\
+      \ de la société thermo-industrielle et du groupe Facebook Transition 2030, qui\
+      \ compte plus de 25,000 membres. <a href=\"https://vincent-mignerot.fr/\">https://vincent-mignerot.fr/</a></p>\r\
+      \n\r\n<p>Vincent nous a concocté un quiz teinté d'anthropologie qui va nous\
+      \ faire revenir quelques millénaires en arrière !</p>"
     conclusion: ''
     difficulty_average: 2.1666666666666665
     author: Vincent Mignerot
     image_background_url: https://www.slate.fr/sites/default/files/styles/1060x523/public/neandertal_1.jpg
     publish: true
     created: 2020-06-26
-    updated: 2020-11-24
+    updated: 2020-12-02
     questions:
     - 545
     - 546
@@ -192,20 +192,20 @@
   pk: 8
   fields:
     name: Fresque du Climat - Lot 1
-    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et\
-      \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
+    introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif\
+      \ et créatif sur le changement climatique. Il est basé sur l’intelligence collective\
       \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
       \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
       \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
-      \ d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le premier\
-      \ lot de cartes distribué lors d'un atelier de la Fresque."
-    conclusion: ''
+      \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur le premier lot de cartes\
+      \ distribué lors d'un atelier de la Fresque.</p>"
+    conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
     difficulty_average: 2.0526315789473686
     author: Matthieu Massart
-    image_background_url: http://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
+    image_background_url: https://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
     publish: true
     created: 2020-07-14
-    updated: 2020-11-26
+    updated: 2020-12-02
     questions:
     - 6
     - 8
@@ -280,20 +280,20 @@
   pk: 11
   fields:
     name: Fresque du Climat - Lot 2
-    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et\
-      \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
+    introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif\
+      \ et créatif sur le changement climatique. Il est basé sur l’intelligence collective\
       \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
       \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
       \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
-      \ d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le deuxième\
-      \ lot de cartes qui est distribué lors d'un atelier de la Fresque."
-    conclusion: ''
+      \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur le deuxième lot de cartes\
+      \ qui est distribué lors d'un atelier de la Fresque.</p>"
+    conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
     difficulty_average: 1.8333333333333333
     author: Matthieu Massart
     image_background_url: http://fresqueduclimat.org/wp-content/uploads/2020/01/IMG_9753-215x215.jpg
     publish: true
     created: 2020-07-29
-    updated: 2020-11-24
+    updated: 2020-12-02
     questions:
     - 6
     - 8
@@ -325,20 +325,20 @@
   pk: 12
   fields:
     name: Fresque du Climat - Lot 3
-    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et\
-      \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
+    introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif\
+      \ et créatif sur le changement climatique. Il est basé sur l’intelligence collective\
       \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
       \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
       \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
-      \ d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur les cartes\
-      \ du 3ème lot distribué lors d'une Fresque."
-    conclusion: ''
+      \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur les cartes du 3ème lot distribué\
+      \ lors d'une Fresque.</p>"
+    conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
     difficulty_average: 2.1666666666666665
     author: Matthieu Massart
-    image_background_url: http://fresqueduclimat.org/wp-content/uploads/2020/01/J1A3917120919-2-215x215.jpg
+    image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/J1A3917120919-2-215x215.jpg
     publish: true
     created: 2020-07-29
-    updated: 2020-11-24
+    updated: 2020-12-02
     questions:
     - 29
     - 130
@@ -352,20 +352,20 @@
   pk: 13
   fields:
     name: Fresque du Climat - Lot 4
-    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et\
-      \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
+    introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif\
+      \ et créatif sur le changement climatique. Il est basé sur l’intelligence collective\
       \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
       \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
       \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
-      \ d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur les cartes\
-      \ du 4ème lot distribué lors d'une fresque."
-    conclusion: ''
+      \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur les cartes du 4ème lot distribué\
+      \ lors d'une fresque.</p>"
+    conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
     difficulty_average: 2.6666666666666665
     author: Matthieu Massart
     image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/07/PartieRestit-scaled.jpg?gid=1
     publish: false
     created: 2020-07-29
-    updated: 2020-11-24
+    updated: 2020-12-02
     questions:
     - 52
     - 294
@@ -376,20 +376,20 @@
   pk: 14
   fields:
     name: Fresque du Climat - Lot 5
-    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et\
-      \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
+    introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif\
+      \ et créatif sur le changement climatique. Il est basé sur l’intelligence collective\
       \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
       \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
       \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
-      \ d’ici 2025. https://fresqueduclimat.org\r\nCe quiz est centré sur le cinquième\
-      \ et dernier lot de cartes distribué lors d'une Fresque."
-    conclusion: ''
+      \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur le cinquième et dernier lot\
+      \ de cartes distribué lors d'une Fresque.</p>"
+    conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
     difficulty_average: 1.6666666666666667
     author: Matthieu Massart
-    image_background_url: https://www.bpi.fr/files/live/sites/SiteInstitutionnel/files/Images/Agenda/Ateliers/Ateliers%20G.Zanos/Fresque%20du%20climat/atelier_la_fresque_climat.jpg
+    image_background_url: ''
     publish: false
     created: 2020-07-29
-    updated: 2020-11-24
+    updated: 2020-12-02
     questions:
     - 35
     - 229
@@ -400,24 +400,23 @@
   pk: 15
   fields:
     name: Fresque du Climat - pour aller au-delà
-    introduction: "La Fresque du Climat, c’est un atelier ludique, participatif et\
-      \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
+    introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif\
+      \ et créatif sur le changement climatique. Il est basé sur l’intelligence collective\
       \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
       \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
       \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
-      \ d’ici 2025. https://fresqueduclimat.org\r\nCe quiz vous propose de consolider\
-      \ vos connaissances et parfois d'aller plus loin autour du dérèglement du climat\
-      \ - questions non liées aux 42 cartes du jeu."
-    conclusion: ''
-    difficulty_average: 2.5454545454545454
+      \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz vous propose de consolider vos connaissances\
+      \ et parfois d'aller plus loin autour du dérèglement du climat - questions non\
+      \ liées aux 42 cartes du jeu.</p>"
+    conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
+    difficulty_average: 2.1818181818181817
     author: Matthieu Massart
     image_background_url: https://jive.univ-lille.fr/fileadmin/_processed_/c/d/csm_fresque-climat_ac9a138d0f.jpg
     publish: true
     created: 2020-07-29
-    updated: 2020-11-24
+    updated: 2020-12-02
     questions:
     - 33
-    - 46
     - 139
     - 180
     - 222
@@ -425,6 +424,7 @@
     - 348
     - 362
     - 425
+    - 428
     - 453
     - 460
     tags:
@@ -488,21 +488,22 @@
   pk: 18
   fields:
     name: Le quiz de Laurent Testot
-    introduction: 'Journaliste scientifique, conférencier et essayiste, Laurent Testot
-      est spécialiste de l''histoire globale. Son essai Cataclysmes - une histoire
-      environnementale de l’humanité, primé par l’Académie Française, retrace l’histoire
-      des interactions entre l''humain et la planète sur le temps long. Il est aussi
-      l’auteur de Homo Canis - une histoire des chiens et de l’humanité et : La Nouvelle
-      Histoire du Monde. Il a récemment dirigé, avec Laurent Aillet, l''ouvrage Collapsus
-      - changer ou disparaître ? Le vrai bilan sur notre planète. Voici la sélection
-      de questions que Laurent nous a préparée à partir de ses publications.'
+    introduction: "<p>Journaliste scientifique, conférencier et essayiste, Laurent\
+      \ Testot est spécialiste de l'histoire globale. Son essai <em>Cataclysmes : une\
+      \ histoire environnementale de l’humanité</em>, primé par l’Académie Française,\
+      \ retrace l’histoire des interactions entre l'humain et la planète sur le temps\
+      \ long. Il est aussi l’auteur de <em>Homo Canis : une histoire des chiens et\
+      \ de l’humanité</em> et de <em>La Nouvelle Histoire du Monde</em>. Il a récemment\
+      \ dirigé, avec Laurent Aillet, l'ouvrage <em>Collapsus : changer ou disparaître\
+      \ ? Le vrai bilan sur notre planète</em>.</p>\r\n\r\n<p>Voici la sélection de\
+      \ questions que Laurent nous a préparée à partir de ses publications.</p>"
     conclusion: ''
     difficulty_average: 2.5
     author: Laurent Testot
     image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
     publish: true
     created: 2020-09-23
-    updated: 2020-11-24
+    updated: 2020-12-02
     questions:
     - 571
     - 572
@@ -551,19 +552,20 @@
   pk: 53
   fields:
     name: NOUVEAU - Les 10 questions les plus difficiles
-    introduction: "Les questions présentées dans ce quiz ont été choisies spécifiquement,\
+    introduction: "<p>Les questions présentées dans ce quiz ont été choisies spécifiquement,\
       \ et ont toutes le niveau de difficulté le plus élevé : ce n'est donc pas le\
-      \ quiz par lequel commencer !\r\n\r\nPersonne n'a eu la moyenne à ce quiz à\
-      \ la première tentative.\r\n\r\nAlors, prêts à relever le défi ? :)"
-    conclusion: "Bravo d'être allé jusqu'au bout, ce n'était vraiment pas évident\
-      \ !\r\n\r\nPour vous remettre de ce remue-méninge, n'hésitez pas à allez découvrir\
-      \ les autres quiz, ils sont nettement plus faciles !"
+      \ quiz par lequel commencer !</p>\r\n\r\n<p>Personne n'a eu la moyenne à ce\
+      \ quiz à la première tentative.</p>\r\n\r\n<p>Alors, prêts à relever le défi\
+      \ ? :)</p>"
+    conclusion: "<p>Bravo d'être allé jusqu'au bout, ce n'était vraiment pas évident\
+      \ !</p>\r\n\r\n<p>Pour vous remettre de ce remue-méninge, n'hésitez pas à allez\
+      \ découvrir les autres quiz, ils sont nettement plus faciles !</p>"
     difficulty_average: 4.0
     author: laydgeur
     image_background_url: https://cdn.pixabay.com/photo/2016/11/21/15/28/brain-1845962_1280.jpg
     publish: true
     created: 2020-11-27
-    updated: 2020-12-01
+    updated: 2020-12-02
     questions:
     - 45
     - 80
@@ -580,24 +582,25 @@
   pk: 54
   fields:
     name: NOUVEAU - Born in the USA
-    introduction: "Les États-Unis sont entrés dans notre imaginaire collectif : les\
-      \ cow-boys, New-York, Hollywood, la Silicon Valley, ... Le rêve américain !\r\
-      \nMais les États-Unis, ce sont aussi des consommateurs effrénés de pétrole,\
+    introduction: "<p>Les États-Unis sont entrés dans notre imaginaire collectif :\
+      \ les cow-boys, New-York, Hollywood, la Silicon Valley, ... Le rêve américain\
+      \ ! Mais les États-Unis, ce sont aussi des consommateurs effrénés de pétrole,\
       \ un des plus gros producteurs d'énergie fossiles au monde, et un des plus gros\
-      \ émetteurs de CO2 de la planète.\r\nDécouvrez la face écologiquement sombre\
-      \ des États-Unis dans ces quelques questions."
-    conclusion: "De nos jours, quand on pense pétrole on pense Moyen-Orient, Arabie\
+      \ émetteurs de CO2 de la planète.</p>\r\n\r\n<p>Découvrez la face écologiquement\
+      \ sombre des États-Unis dans ces quelques questions.</p>"
+    conclusion: "<p>De nos jours, quand on pense pétrole on pense Moyen-Orient, Arabie\
       \ Saoudite, ... mais le pays du pétrole par excellence, ce sont les États-Unis\
-      \ ! Attention néanmoins, nos modes de vie européens ne sont pas si éloignés.\
-      \ \r\nOh, et tant qu'on parle de pétrole, je vous invite à aller faire un tour\
-      \ sur notre page de quiz, vous trouverez d'autres quiz thématiques pour pour\
-      \ étancher votre soif de compréhension de notre dépendance à l'or noir ;)"
+      \ ! Attention néanmoins, nos modes de vie européens ne sont pas si éloignés.</p>\r\
+      \n\r\n<p>Oh, et tant qu'on parle de pétrole, je vous invite à aller faire un\
+      \ tour sur notre page de quiz, vous trouverez d'autres quiz thématiques pour\
+      \ pour étancher votre soif de compréhension de notre dépendance à l'or noir\
+      \ ;)</p>"
     difficulty_average: 2.6666666666666665
     author: laydgeur
     image_background_url: https://cdn.pixabay.com/photo/2017/12/08/08/17/america-3005258_1280.jpg
     publish: true
     created: 2020-11-28
-    updated: 2020-12-01
+    updated: 2020-12-02
     questions:
     - 246
     - 278
