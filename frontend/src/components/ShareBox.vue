@@ -9,11 +9,22 @@
       <div class="share-button">
         <!-- Your share button code -->
         <div class="fb-share-button share-button"
-          :data-href="'https://quizanthropocene.fr' + $route.path"
+          :data-href="quizShareUrl"
           data-layout="button"
           data-size="large"
         >
         </div>
+      </div>
+      <div class="share-button">
+        <button class="linkedin-button" @click="shareLinkedIn">
+          <svg viewBox="0 0 24 24" width="20px" height="20px" x="0" y="0" preserveAspectRatio="xMinYMin meet">
+              <g style="fill: currentColor">
+                  <rect x="-0.003" style="fill:none;" width="24" height="24"></rect>
+                  <path style="" d="M20,2h-16c-1.1,0-2,0.9-2,2v16c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2zM8,19h-3v-9h3V19zM6.5,8.8C5.5,8.8,4.7,8,4.7,7s0.8-1.8,1.8-1.8S8.3,6,8.3,7S7.5,8.8,6.5,8.8zM19,19h-3v-4c0-1.4-0.6-2-1.5-2c-1.1,0-1.5,0.8-1.5,2.2V19h-3v-9h2.9v1.1c0.5-0.7,1.4-1.3,2.6-1.3c2.3,0,3.5,1.1,3.5,3.7V19z"></path>
+              </g>
+          </svg>
+          <span>Share</span>
+        </button>
       </div>
       <div class="share-button share-button-url">
         <input v-model="quizShareUrl" id="quiz-share-url">
@@ -26,33 +37,27 @@
 
 <script>
 export default {
-  name: 'QuizDetailPage',
+  name: 'ShareBox',
   data() {
     return {
       textCopy: 'Copier l\'URL',
       textCopied: 'URL copiée',
     };
   },
+  props: {
+    quiz: String, // Add the component to question later
+    quizName: String,
+    score: String,
+  },
   computed: {
     quizShareUrl() {
-      return window.location.origin + this.$route.path;
+      // return window.location.origin + this.$route.path;
+      // In order to test in local we need to have a valid url (not localhost)
+      return `https://quizanthropocene.fr${this.$route.path}`;
     },
     twitterDataText() {
-      return 'Quiz Anthropocène';
-      // return `${this.quiz.questions.filter((q) => q.success).length} / ${this.quiz.questions.length} au #QuizAnthoprocene ${this.quiz.name}.`;
-    },
-  },
-
-  methods: {
-    copyQuizShareUrlToClipboard() {
-      const copyText = document.getElementById('quiz-share-url');
-      copyText.select();
-      const oldValue = this.textCopy;
-      this.textCopy = this.textCopied;
-      document.execCommand('copy');
-      setTimeout(() => {
-        this.textCopy = oldValue;
-      }, 2000);
+      // On peut mettre un message plus engageant avec le score réaliser, le titre du quiz, ...
+      return `${this.quizName}`;
     },
   },
   mounted() {
@@ -72,9 +77,24 @@ export default {
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));`;
     document.body.appendChild(fbScript);
-
-    // data-href="{{ quizShareUrl }}"
   },
+  methods: {
+    copyQuizShareUrlToClipboard() {
+      const copyText = document.getElementById('quiz-share-url');
+      copyText.select();
+      const oldValue = this.textCopy;
+      this.textCopy = this.textCopied;
+      document.execCommand('copy');
+      setTimeout(() => {
+        this.textCopy = oldValue;
+      }, 2000);
+    },
+    shareLinkedIn() {
+      const url = `http://www.linkedin.com/shareArticle?mini=true&url=${this.quizShareUrl}`;
+      window.open(url, '_blank');
+    },
+  },
+
 };
 </script>
 <style scoped>
@@ -100,5 +120,34 @@ input:focus{
 .share-button-url {
   vertical-align: middle;
 }
-
+.linkedin-button {
+  /* I kept the value from the linkedIn real share button */
+  background-color: #0073b1;
+  height: 28px;
+  padding: 0 10px 0 8px;
+  border: none;
+  border-radius: 0.3rem;
+  color: #fff;
+  display: inline-block;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif!important;
+  font-weight: 600;
+  overflow: hidden;
+  outline-width: 2px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.linkedin-button:hover{
+  background-color:#006097!important
+}
+.linkedin-button:focus{
+  outline: none;
+}
+.linkedin-button>span{
+  vertical-align: bottom;
+  margin-left: 4px;
+  font-size: 13px;
+}
 </style>

@@ -76,9 +76,8 @@
       </div>
     </section>
 
-    <!-- <div v-if="quiz && (quizStep > quiz.questions.length)" class="alert alert-primary margin-0" role="alert"> -->
-    <div v-if="quiz">
-      <ShareBox />
+    <div v-if="quiz && (quizStep > quiz.questions.length)">
+      <ShareBox type="quiz" :quizName="quiz.name" :score="quiz.questions.filter(q => q['success']).length + '/' + quiz.questions.length"/>
     </div>
 
     <FeedbackCard v-if="quiz && (quizStep > quiz.questions.length)" v-bind:context="{ source: 'quiz', item: quiz }" />
@@ -129,12 +128,6 @@ export default {
         quiz.questions.sort(() => Math.random() - 0.5); // random order
       }
       return quiz;
-    },
-    quizShareUrl() {
-      return window.location.origin + this.$route.path;
-    },
-    twitterDataText() {
-      return `${this.quiz.questions.filter((q) => q.success).length} / ${this.quiz.questions.length} au #QuizAnthoprocene ${this.quiz.name}.`;
     },
   },
 
