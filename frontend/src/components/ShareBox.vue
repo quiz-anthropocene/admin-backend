@@ -90,7 +90,7 @@ export default {
       }, 2000);
     },
     shareLinkedIn() {
-      const url = `http://www.linkedin.com/shareArticle?mini=true&url=${this.quizShareUrl}`;
+      const url = `https://www.linkedin.com/shareArticle?mini=true&url=${this.quizShareUrl}`;
       window.open(url, '_blank');
     },
   },
