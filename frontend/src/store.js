@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 
 // webpack + vue-cli-plugin-yaml
+import configurationYamlData from '../../data/configuration.yaml';
 import categoriesYamlData from '../../data/categories.yaml';
 import tagsYamlData from '../../data/tags.yaml';
 import questionsYamlData from '../../data/questions.yaml';
@@ -24,6 +25,7 @@ Vue.use(Vuex);
 function processModelList(data) {
   return data.map((el) => {
     Object.assign(el, { id: el.pk }, el.fields);
+    delete el.fields;
     return el;
   });
 }
@@ -35,6 +37,7 @@ const store = new Vuex.Store({
   state: {
     loading: false,
     error: null,
+    configuration: {},
     questions: [],
     questionsDisplayed: [],
     questionsPendingValidation: [],
@@ -70,6 +73,12 @@ const store = new Vuex.Store({
     RESET_LOADING_STATUS: ({ commit }) => {
       commit('UPDATE_LOADING_STATUS', false);
       commit('UPDATE_ERROR', null);
+    },
+    /**
+     * Get app configuration
+     */
+    GET_CONFIGURATION_DICT_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_CONFIGURATION_DICT', { dict: processModelList(configurationYamlData)[0] });
     },
     /**
      * Get questions
@@ -259,6 +268,9 @@ const store = new Vuex.Store({
     },
     UPDATE_ERROR: (state, value) => {
       state.error = value;
+    },
+    SET_CONFIGURATION_DICT: (state, { dict }) => {
+      state.configuration = dict;
     },
     SET_QUESTION_VALIDATED_LIST: (state, { list }) => {
       state.questions = list;

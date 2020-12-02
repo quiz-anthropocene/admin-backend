@@ -16,6 +16,11 @@ class Configuration(SingletonModel):
         default="Quiz de l'Anthropocène",
         help_text="Le nom de l'application",
     )
+    application_tagline = models.CharField(
+        max_length=255, help_text="La tagline de l'application",
+    )
+    application_about = RichTextField(blank=True, help_text="A propos de l'application")
+    # links
     application_backend_url = models.URLField(
         max_length=500, blank=True, help_text="Le lien vers le backend de l'application"
     )

@@ -9,19 +9,7 @@
     </section>
 
     <h3>Pourquoi cette application ?</h3>
-    <p>
-      Le but est de rassembler un ensemble de connaissances - sur l'énérgie, le climat, et plus largement la crise climatique - sous forme de questions.
-    </p>
-
-    <p>
-      Ces questions servent à sensibiliser (à édifier) sur la gravité de la situation et la diversité de ses facettes.
-      Elles permettent (on l'espère) de déclencher la prise de conscience et amorcer le changement individuel.
-    </p>
-
-    <p>
-      Ces questions peuvent aussi servir à se former pour mieux maitriser les chiffres et les ordres de grandeurs.
-      Les usages peuvent être multiples (conférences, formations, quiz, jeu, etc.).
-    </p>
+    <div v-html="configuration.application_about"></div>
 
     <br />
     <h3>Contribuer</h3>
@@ -79,6 +67,12 @@ export default {
     };
   },
   components: {
+  },
+
+  computed: {
+    configuration() {
+      return this.$store.state.configuration;
+    },
   },
 };
 </script>
