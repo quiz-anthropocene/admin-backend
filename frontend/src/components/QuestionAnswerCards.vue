@@ -16,7 +16,7 @@
         <!-- Question text -->
         <div class="row no-gutters justify-content-center">
           <div class="col-md-10 col-lg-8">
-            <h3 v-html="$options.filters.abbr(question.text, glossaire)"></h3>
+            <h3 v-html="$options.filters.abbr(questionTextWithLineBreaks, glossaire)"></h3>
           </div>
         </div>
         <!-- Question answer choices -->
@@ -73,9 +73,7 @@
         <div class="col-sm-auto">
           <p title="Explication">
             <span>ℹ️&nbsp;</span>
-            <template v-for="answer_explanation_line in question.answer_explanation.split('\n')">
-              <span :key="answer_explanation_line">{{ answer_explanation_line }}<br /></span>
-            </template>
+            <span v-html="questionAnswerExplanationWithLineBreaks"></span>
           </p>
         </div>
       </div>
@@ -149,6 +147,12 @@ export default {
   computed: {
     glossaire() {
       return this.$store.state.ressources.glossaire;
+    },
+    questionTextWithLineBreaks() {
+      return this.question.text.replaceAll('\n', '<br />');
+    },
+    questionAnswerExplanationWithLineBreaks() {
+      return this.question.answer_explanation.replaceAll('\n', '<br />');
     },
   },
 
