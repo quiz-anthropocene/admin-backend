@@ -14,7 +14,7 @@
           <hr class="margin-top-bottom-10" />
 
           <div class="row no-gutters small">
-            <div class="col" title="Nombre de question">
+            <div class="col" title="Nombre de questions">
               ❓&nbsp;<span class="label label-hidden"><strong>{{ quiz.questions.length }}</strong></span>Questions
             </div>
             <div class="col" title="Difficulté">

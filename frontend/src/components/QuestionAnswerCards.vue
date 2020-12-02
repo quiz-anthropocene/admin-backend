@@ -16,7 +16,7 @@
         <!-- Question text -->
         <div class="row no-gutters justify-content-center">
           <div class="col-md-10 col-lg-8">
-            <h3 v-html="$options.filters.abbr(question.text, glossaire)"></h3>
+            <h3 v-html="$options.filters.abbr(questionTextWithLineBreaks, glossaire)"></h3>
           </div>
         </div>
         <!-- Question answer choices -->
@@ -73,9 +73,7 @@
         <div class="col-sm-auto">
           <p title="Explication">
             <span>ℹ️&nbsp;</span>
-            <template v-for="answer_explanation_line in question.answer_explanation.split('\n')">
-              <span :key="answer_explanation_line">{{ answer_explanation_line }}<br /></span>
-            </template>
+            <span v-html="questionAnswerExplanationWithLineBreaks"></span>
           </p>
         </div>
       </div>
@@ -101,14 +99,14 @@
 
       <!-- Extra info -->
       <div class="row no-gutters small">
-        <div class="col" v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">
+        <div class="col-sm" title="Auteur de la question">
+          📝&nbsp;Auteur<span class="label label-hidden"><strong>{{ question.author }}</strong></span>
+        </div>
+        <div class="col-sm" v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">
           <!-- 🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.map(t => t.name).join(', ') }} -->
           🏷️&nbsp;<span v-for="tag in question.tags" :key="tag.id">
             <span class="label label-tag">{{ tag.name }}</span>
           </span>
-        </div>
-        <div  class="col">
-          <div class="label label-hidden" title="Auteur de la question">📝&nbsp;Auteur:&nbsp;{{ question.author }}</div>
         </div>
         <!-- <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count_agg }} / {{ question.answer_count_agg }} ({{ question.answer_success_rate }}%)</div> -->
       </div>
@@ -149,6 +147,12 @@ export default {
   computed: {
     glossaire() {
       return this.$store.state.ressources.glossaire;
+    },
+    questionTextWithLineBreaks() {
+      return this.question.text.replaceAll('\n', '<br />');
+    },
+    questionAnswerExplanationWithLineBreaks() {
+      return this.question.answer_explanation.replaceAll('\n', '<br />');
     },
   },
 

@@ -42,6 +42,15 @@ header > div {
   padding: 5px;
 }
 
+header > div > h1 {
+  margin: 0;
+}
+
+header > div > h2 {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
 @media(hover: hover) and (pointer: fine) {
   header h1 a:hover {
     text-shadow: 0px 0px 1px var(--primary);

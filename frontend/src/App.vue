@@ -203,6 +203,10 @@ form .form-group {
 }
 .card-body {
   padding: 10px;
+
+  button {
+    margin-top: 0 !important;
+  }
 }
 .card-footer {
   background-color: inherit; // avoir grey on grey
@@ -210,10 +214,13 @@ form .form-group {
 
 /* Global css */
 
-/* adds a 'opens in new tab' icon */
+/* adds a 'opens in new tab' icon. but not for images */
 a[target="_blank"]::after {
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
   margin: 0 3px 0 5px;
+}
+a[href$=".jpg"]::after, a[href$=".jpeg"]::after, a[href$=".png"]::after {
+  display: none;
 }
 
 a.no-decoration {
@@ -250,11 +257,17 @@ a.no-decoration {
   margin-left: 10px;
   margin-right: 10px;
 }
+.margin-left-20 {
+  margin-left: 20px;
+}
 .margin-bottom-0 {
   margin-bottom: 0;
 }
 .margin-bottom-10 {
   margin-bottom: 10px;
+}
+.margin-bottom-1em {
+  margin-bottom: 1em;
 }
 .padding-10 {
   padding: 10px;
