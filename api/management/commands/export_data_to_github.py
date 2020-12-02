@@ -1,9 +1,10 @@
+import yaml
 from datetime import datetime
 
 from django.utils import timezone
 from django.core.management import BaseCommand
 
-from api import utilities, utilities_github
+from api import utilities, utilities_stats, utilities_github
 from api.models import Configuration
 
 
@@ -37,6 +38,7 @@ class Command(BaseCommand):
 
             # update & commit data files
             # data/configuration.yaml
+            # data/stats.yaml
             # data/questions.yaml
             # data/quizzes.yaml
             # data/tags.yaml
@@ -47,6 +49,21 @@ class Command(BaseCommand):
                 file_path="data/configuration.yaml",
                 commit_message="update configuration",
                 file_content=configuration_yaml,
+                branch_name=data_update_branch_name,
+            )
+            stats_dict = {
+                **utilities_stats.question_stats(),
+                **utilities_stats.quiz_stats(),
+                **utilities_stats.answer_stats(),
+                **utilities_stats.category_stats(),
+                **utilities_stats.tag_stats(),
+                **utilities_stats.contribution_stats(),
+            }
+            stats_yaml = yaml.safe_dump(stats_dict, allow_unicode=True, sort_keys=False)
+            utilities_github.create_file(
+                file_path="data/stats.yaml",
+                commit_message="update stats",
+                file_content=stats_yaml,
                 branch_name=data_update_branch_name,
             )
             questions_yaml = utilities.serialize_model_to_yaml(model_label="question")

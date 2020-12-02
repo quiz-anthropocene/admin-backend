@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 
 // webpack + vue-cli-plugin-yaml
 import configurationYamlData from '../../data/configuration.yaml';
+import statsYamlData from '../../data/stats.yaml';
 import categoriesYamlData from '../../data/categories.yaml';
 import tagsYamlData from '../../data/tags.yaml';
 import questionsYamlData from '../../data/questions.yaml';
@@ -79,6 +80,12 @@ const store = new Vuex.Store({
      */
     GET_CONFIGURATION_DICT_FROM_LOCAL_YAML: ({ commit }) => {
       commit('SET_CONFIGURATION_DICT', { dict: processModelList(configurationYamlData)[0] });
+    },
+    /**
+     * Get app stats
+     */
+    GET_STATS_DICT_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_STATS_DICT', { dict: statsYamlData });
     },
     /**
      * Get questions
@@ -271,6 +278,9 @@ const store = new Vuex.Store({
     },
     SET_CONFIGURATION_DICT: (state, { dict }) => {
       state.configuration = dict;
+    },
+    SET_STATS_DICT: (state, { dict }) => {
+      state.stats = dict;
     },
     SET_QUESTION_VALIDATED_LIST: (state, { list }) => {
       state.questions = list;

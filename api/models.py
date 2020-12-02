@@ -1,3 +1,5 @@
+from datetime import date, timedelta
+
 from django.db import models
 from django.db.models import Avg, Sum, Count
 from django.core.exceptions import ValidationError
@@ -803,6 +805,9 @@ class QuizAnswerEventQuerySet(models.QuerySet):
     def for_quiz(self, quiz_id):
         return self.filter(quiz=quiz_id)
 
+    def last_30_days(self):
+        return self.filter(created__date__gte=(date.today() - timedelta(days=30)))
+
     def agg_timeseries(self, scale="day"):
         queryset = self
         # scale
@@ -913,6 +918,8 @@ class DailyStatManager(models.Manager):
             raise ValueError(
                 f"DailyStat agg_count: must be one of {constants.AGGREGATION_SINCE_CHOICE_LIST}"
             )
+        if since == "last_30_days":
+            queryset = queryset.filter(date__gte=(date.today() - timedelta(days=30)))
         if since == "month":
             queryset = queryset.filter(date__month=week_or_month_iso_number)
         elif since == "week":
