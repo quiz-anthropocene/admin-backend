@@ -1,6 +1,5 @@
 import json
 import random
-import datetime
 from io import StringIO
 
 from django.core import management
@@ -398,94 +397,6 @@ def glossary_list(request):
 
     serializer = GlossarySerializer(glossary, many=True)
     return Response(serializer.data)
-
-
-@api_view(["GET"])
-def stats(request):
-    """
-    Retrieve stats on all the data
-    """
-    # validated / in validation
-    question_validated_count = Question.objects.validated().count()
-    question_validation_status_in_progress_count = Question.objects.for_validation_status(
-        constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS
-    ).count()
-    # total question/quiz answer/feedback count
-    question_answer_count = QuestionAnswerEvent.objects.count() + DailyStat.objects.agg_count(
-        "question_answer_count"
-    )
-    question_answer_from_quiz_count = QuestionAnswerEvent.objects.from_quiz().count() + DailyStat.objects.agg_count(  # noqa
-        "question_answer_from_quiz_count"
-    )
-    quiz_answer_count = QuizAnswerEvent.objects.count() + DailyStat.objects.agg_count(
-        "quiz_answer_count"
-    )
-    question_feedback_count = QuestionFeedbackEvent.objects.count() + DailyStat.objects.agg_count(
-        "question_feedback_count"
-    )
-    question_feedback_from_quiz_count = QuestionFeedbackEvent.objects.from_quiz().count() + DailyStat.objects.agg_count(  # noqa
-        "question_feedback_from_quiz_count"
-    )
-    quiz_feedback_count = QuizFeedbackEvent.objects.count() + DailyStat.objects.agg_count(
-        "quiz_feedback_count"
-    )
-    # current month
-    current_month_iso_number = datetime.date.today().month
-    question_answer_count_current_month = QuestionAnswerEvent.objects.filter(
-        created__date__month=current_month_iso_number
-    ).count() + DailyStat.objects.agg_count(
-        "question_answer_count",
-        since="month",
-        week_or_month_iso_number=current_month_iso_number,
-    )
-    quiz_answer_count_current_month = QuizAnswerEvent.objects.filter(
-        created__date__month=current_month_iso_number
-    ).count() + DailyStat.objects.agg_count(
-        "quiz_answer_count",
-        since="month",
-        week_or_month_iso_number=current_month_iso_number,
-    )
-    # current week
-    current_week_iso_number = datetime.date.today().isocalendar()[1]
-    question_answer_count_current_week = QuestionAnswerEvent.objects.filter(
-        created__date__week=current_week_iso_number
-    ).count() + DailyStat.objects.agg_count(
-        "question_answer_count",
-        since="week",
-        week_or_month_iso_number=current_week_iso_number,
-    )
-    quiz_answer_count_current_week = QuizAnswerEvent.objects.filter(
-        created__date__week=current_week_iso_number
-    ).count() + DailyStat.objects.agg_count(
-        "quiz_answer_count",
-        since="week",
-        week_or_month_iso_number=current_week_iso_number,
-    )
-
-    return Response(
-        {
-            "question_validated_count": question_validated_count,
-            "question_validation_status_in_progress_count": question_validation_status_in_progress_count,  # noqa
-            "total": {
-                "question_answer_count": question_answer_count,
-                "question_answer_from_quiz_count": question_answer_from_quiz_count,
-                "quiz_answer_count": quiz_answer_count,
-                "question_feedback_count": question_feedback_count,
-                "question_feedback_from_quiz_count": question_feedback_from_quiz_count,
-                "quiz_feedback_count": quiz_feedback_count,
-            },
-            "current_month": {
-                "month_iso_number": current_month_iso_number,
-                "question_answer_count": question_answer_count_current_month,
-                "quiz_answer_count": quiz_answer_count_current_month,
-            },
-            "current_week": {
-                "week_iso_number": current_week_iso_number,
-                "question_answer_count": question_answer_count_current_week,
-                "quiz_answer_count": quiz_answer_count_current_week,
-            },
-        }
-    )
 
 
 @api_view(["GET", "POST"])

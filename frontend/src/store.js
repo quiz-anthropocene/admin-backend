@@ -82,12 +82,6 @@ const store = new Vuex.Store({
       commit('SET_CONFIGURATION_DICT', { dict: processModelList(configurationYamlData)[0] });
     },
     /**
-     * Get app stats
-     */
-    GET_STATS_DICT_FROM_LOCAL_YAML: ({ commit }) => {
-      commit('SET_STATS_DICT', { dict: statsYamlData });
-    },
-    /**
      * Get questions
      * Pre-processing ?
      * - keep only validated questions
@@ -229,25 +223,10 @@ const store = new Vuex.Store({
       commit('SET_RESSOURCES_AUTRES_APPS_LIST', { list: processModelList(ressourcesAutresAppsYamlData) });
     },
     /**
-     * Get stats
+     * Get app stats
      */
-    GET_STATS: ({ commit }) => {
-      commit('UPDATE_LOADING_STATUS', true);
-      commit('UPDATE_ERROR', null);
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/stats`)
-        .then((response) => {
-          commit('UPDATE_LOADING_STATUS', false);
-          commit('UPDATE_ERROR', null);
-          return response.json();
-        })
-        .then((dataJson) => {
-          commit('SET_STATS', { object: dataJson });
-        })
-        .catch((error) => {
-          commit('UPDATE_LOADING_STATUS', false);
-          commit('UPDATE_ERROR', error);
-          console.log(error);
-        });
+    GET_STATS_DICT_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_STATS_DICT', { dict: statsYamlData });
     },
     /**
      * Update question & quiz filters
@@ -278,9 +257,6 @@ const store = new Vuex.Store({
     },
     SET_CONFIGURATION_DICT: (state, { dict }) => {
       state.configuration = dict;
-    },
-    SET_STATS_DICT: (state, { dict }) => {
-      state.stats = dict;
     },
     SET_QUESTION_VALIDATED_LIST: (state, { list }) => {
       state.questions = list;
@@ -325,15 +301,14 @@ const store = new Vuex.Store({
     SET_QUIZZES_DISPLAYED_LIST: (state, { list }) => {
       state.quizzesDisplayed = list;
     },
-    SET_STATS: (state, { object }) => {
-      state.stats = object;
-    },
-
     SET_QUIZ_TAGS: (state, quizTags) => {
       state.quizTags = quizTags;
     },
     SET_QUIZ_AUTHORS: (state, quizAuthors) => {
       state.quizAuthors = quizAuthors;
+    },
+    SET_STATS_DICT: (state, { dict }) => {
+      state.stats = dict;
     },
   },
   getters: {

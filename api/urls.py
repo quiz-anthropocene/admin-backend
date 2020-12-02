@@ -6,7 +6,6 @@ urlpatterns = [
     path("", views.api_home, name="index"),
     path("questions", views.question_list, name="question_list"),
     path("questions/<int:pk>", views.question_detail, name="question_detail"),
-    path("questions/<int:pk>/stats", views.question_stats, name="question_stats"),
     path(
         "questions/<int:pk>/feedback-events",
         views.question_detail_feedback_event,

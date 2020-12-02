@@ -162,15 +162,11 @@ export default {
   },
 
   mounted() {
-    this.fetchQuestionStats();
+    this.$store.dispatch('GET_STATS_DICT_FROM_LOCAL_YAML');
+    this.$store.dispatch('GET_QUESTION_PENDING_VALIDATION_LIST_FROM_LOCAL_YAML');
   },
 
   methods: {
-    fetchQuestionStats() {
-      // this.$store.dispatch('GET_STATS');
-      this.$store.dispatch('GET_STATS_DICT_FROM_LOCAL_YAML');
-      this.$store.dispatch('GET_QUESTION_PENDING_VALIDATION_LIST_FROM_LOCAL_YAML');
-    },
     toggleAllTags() {
       this.showAllTags = !this.showAllTags;
     },
