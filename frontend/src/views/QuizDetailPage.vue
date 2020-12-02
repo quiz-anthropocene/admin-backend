@@ -76,9 +76,9 @@
       </div>
     </section>
 
-    <div v-if="quiz && (quizStep > quiz.questions.length)" class="alert alert-primary margin-0" role="alert">
-      Partager le quiz : <strong id="quiz-share-url">{{ quizShareUrl }}</strong>
-      <!-- <a class="fake-link float-right" @click="copyQuizShareUrlToClipboard()">📋&nbsp;Copier</a> -->
+    <!-- <div v-if="quiz && (quizStep > quiz.questions.length)" class="alert alert-primary margin-0" role="alert"> -->
+    <div v-if="quiz">
+      <ShareBox />
     </div>
 
     <FeedbackCard v-if="quiz && (quizStep > quiz.questions.length)" v-bind:context="{ source: 'quiz', item: quiz }" />
@@ -90,6 +90,7 @@ import { metaTagsGenerator } from '../utils';
 import QuestionAnswerCards from '../components/QuestionAnswerCards.vue';
 import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 import FeedbackCard from '../components/FeedbackCard.vue';
+import ShareBox from '../components/ShareBox.vue';
 
 export default {
   name: 'QuizDetailPage',
@@ -107,6 +108,7 @@ export default {
     QuestionAnswerCards,
     QuestionPreviewCard,
     FeedbackCard,
+    ShareBox,
   },
 
   data() {
@@ -131,9 +133,9 @@ export default {
     quizShareUrl() {
       return window.location.origin + this.$route.path;
     },
-  },
-
-  mounted() {
+    twitterDataText() {
+      return `${this.quiz.questions.filter((q) => q.success).length} / ${this.quiz.questions.length} au #QuizAnthoprocene ${this.quiz.name}.`;
+    },
   },
 
   methods: {
@@ -173,13 +175,6 @@ export default {
           console.log(error);
         });
     },
-    // copyQuizShareUrlToClipboard() {
-    //   let quizShareUrlElement = document.querySelector('#quiz-share-url');
-    //   console.log(quizShareUrlElement, quizShareUrlElement.text)
-    //   // quizShareUrlElement.setAttribute('type', 'text');
-    //   quizShareUrlElement.innerText.select();
-    //   document.execCommand('copy');
-    // }
   },
 };
 </script>
