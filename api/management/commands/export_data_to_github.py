@@ -106,9 +106,19 @@ class Command(BaseCommand):
             )
 
             # create pull request
+            pull_request_message = (
+                "Mise à jour de la donnée :"
+                "<ul>"
+                "<li>data/configuration.yaml</li>"
+                "<li>data/stats.yaml</li>"
+                "<li>data/questions.yaml</li>"
+                "<li>data/quizzes.yaml</li>"
+                "<li>data/tags.yaml</li>"
+                "</ul>"
+            )
             pull_request = utilities_github.create_pull_request(
                 pull_request_title=data_update_pull_request_name,
-                pull_request_message="Mise à jour de la donnée : <ul><li>data/configuration.yaml</li><li>data/questions.yaml</li><li>data/quizzes.yaml</li><li>data/tags.yaml</li></ul>",  # noqa
+                pull_request_message=pull_request_message,
                 branch_name=data_update_branch_name,
             )
 
