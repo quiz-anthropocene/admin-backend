@@ -8,7 +8,7 @@ from django.db import IntegrityError
 from django.core.management import BaseCommand
 from django.core.exceptions import ValidationError
 
-from api import utilities, utilities_notion
+from api import constants, utilities, utilities_notion
 from api.models import Configuration, Question, Category, Tag
 
 
@@ -26,11 +26,15 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument(
-            "scope", type=int, help="0 = all, 1 = first X, 2 = second X"
+            "scope",
+            type=int,
+            choices=constants.NOTION_QUESTIONS_IMPORT_SCOPE_LIST,
+            help="0 = all, 1 = first X, 2 = second X",
         )
 
     def handle(self, *args, **options):
         scope = options["scope"]
+        print(scope)
         notion_questions_list = []
         questions_ids_duplicate = []
         questions_ids_missing = []
@@ -269,7 +273,7 @@ class Command(BaseCommand):
             else "aucune"
         )
 
-        if not settings.DEBUG:
+        if not settings.DEBUG and scope == 0:
             utilities_notion.add_import_stats_row(
                 len(notion_questions_list),
                 len(questions_created),
@@ -287,7 +291,14 @@ class Command(BaseCommand):
             setattr(
                 config, f"notion_questions_scope_{scope}_last_imported", timezone.now()
             )
-            config.save()
+        else:
+            for scope in constants.NOTION_QUESTIONS_IMPORT_SCOPE_LIST[1:]:
+                setattr(
+                    config,
+                    f"notion_questions_scope_{scope}_last_imported",
+                    timezone.now(),
+                )
+        config.save()
 
         self.stdout.write(
             "\n".join(

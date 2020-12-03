@@ -166,7 +166,7 @@ IMPORT_EXPORT_SKIP_ADMIN_LOG = True
 
 SHELL_PLUS_IMPORTS = [
     "from datetime import datetime, timedelta",
-    "from api import utilities_notion",
+    "from api import constants, utilities, utilities_notion, utilities_github",
 ]
 
 
