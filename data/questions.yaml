@@ -78,9 +78,11 @@
       d'une ressource, plus nous en consommons au total
     answer_correct: d
     has_ordered_answers: false
-    answer_explanation: 'Exemple: les voitures sont de plus en plus économes, mais
+    answer_explanation: 'Exemple : les voitures sont de plus en plus économes, mais
       la consommation globale d’essence ne fait qu’augmenter, par effet d’aubaine.
-      Idem pour la 5G.'
+
+      Idem pour l''aviation (billets moins chers donc on voyage plus souvent, ou plus
+      loin).'
     answer_accessible_url: https://www.youtube.com/watch?v=b4kPjnBRZ-E
     answer_scientific_url: https://mrmondialisation.org/le-paradoxe-de-jevons-ou-pourquoi-il-nexiste-pas-de-croissance-verte/
     answer_image_url: https://images.theconversation.com/files/297327/original/file-20191016-98644-c9y1zz.png
@@ -697,10 +699,10 @@
     type: QCM
     category: 1
     difficulty: 1
-    answer_option_a: 100 millions de tonnes, soit 13 kg/habitant en moyenne
-    answer_option_b: 1 milliard de tonne, soit 130 kg
-    answer_option_c: 10 milliards de tonnes, soit 1,3 tonnes
-    answer_option_d: 400 milliards de tonnes
+    answer_option_a: 370 millions de tonnes de CO2, soit 48 kg/habitant en moyenne
+    answer_option_b: 3,7 milliards de tonnes de CO2, soit 480 kg/hab
+    answer_option_c: 37 milliards de tonnes de CO2, soit 4,8 tonnes/hab
+    answer_option_d: 370 milliards de tonnes de CO2, soit 48 tonnes/hab
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: En 2019, 37 milliards de tonnes de CO2, soit à peu près 10
@@ -1258,35 +1260,39 @@
 - model: api.question
   pk: 38
   fields:
-    text: Quelle est la quantité moyenne d'équivalent CO2 émise par un français en
-      une année (2018) ?
+    text: Quel pays en Europe a le plus fortement réduit l'intensité carbone de sa
+      production d'électricité, entre 2010 et 2019 ?
     hint: ''
     type: QCM
-    category: 1
-    difficulty: 1
-    answer_option_a: 320 kg
-    answer_option_b: 2,1 tonnes
-    answer_option_c: 11 tonnes
-    answer_option_d: 57 tonnes
-    answer_correct: c
-    has_ordered_answers: true
-    answer_explanation: Ce chiffre, appelé « empreinte carbone », inclut les émissions
-      des pays où ont été produits les produits consommés (émissions importées). 2,1
-      tonnes, c'est l'objectif COP21 à l'horizon 2050.
-    answer_accessible_url: https://www.hautconseilclimat.fr/rapport-2019/
-    answer_scientific_url: ''
-    answer_image_url: https://www.connaissancedesenergies.org/sites/default/files/album_images/Empreinte-carbone-moyenne-france_zoom.png
+    category: 5
+    difficulty: 3
+    answer_option_a: Allemagne
+    answer_option_b: Italie
+    answer_option_c: Pologne
+    answer_option_d: Royaume-Uni
+    answer_correct: d
+    has_ordered_answers: false
+    answer_explanation: Cette forte baisse au Royaume-Uni s'explique surtout par la
+      réduction de la consommation de charbon, qui a représenté en 2018 moins de 5
+      % de la production électrique britannique, contre 40 % en 2012. Mais selon le
+      Comité britannique pour le changement climatique, ce ne sera pas assez pour
+      que le pays atteigne ses objectifs climatiques, il faudra aussi réduire les
+      emissions dans d'autres secteurs.
+    answer_accessible_url: https://www.lesechos.fr/monde/europe/royaume-uni-les-emissions-de-co2-baissent-pour-la-6e-annee-consecutive-995531
+    answer_scientific_url: http://reports.electricinsights.co.uk/wp-content/uploads/2020/11/201126_Drax_20Q3_005-1.pdf
+    answer_image_url: https://pbs.twimg.com/media/EoNpVcJXUAA3kKR?format=jpg&name=large
     answer_image_explanation: ''
-    answer_extra_info: retiré car doublon avec la 71
-    author: Matthieu Massart
+    answer_extra_info: ''
+    author: Raphael Odini
     validator: ''
-    validation_status: Écartée
-    added: 2020-03-10
+    validation_status: A valider
+    added: 2020-12-02
     created: 2020-03-10
     updated: 2020-05-23
     tags:
-    - 1
     - 13
+    - 39
+    - 47
 - model: api.question
   pk: 39
   fields:
@@ -1514,8 +1520,11 @@
       Source : rapport IPBES 2019.'
     answer_accessible_url: https://www.consoglobe.com/rapport-ipbes-05-2019-cg
     answer_scientific_url: https://ipbes.net/news/Media-Release-Global-Assessment-Fr
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_image_url: https://www.notre-planete.info/actualites/images/pollution/minis/sol-pollue-mine-Pyrites-Australie.jpg
+    answer_image_explanation: 'Sol pollué dans la mine Brukunga Pyrites, à l''est
+      d''Adelaide, sud de l''Australie en 1992
+
+      Crédit : John Coppi'
     answer_extra_info: ''
     author: Matthieu Massart
     validator: laydgeur
@@ -1664,19 +1673,19 @@
 - model: api.question
   pk: 50
   fields:
-    text: L'érosion et l'épuisement des sols réduisent les surfaces arables. De combien
-      d'hectares par an ?
+    text: Dans le monde, l'érosion et l'épuisement des sols réduisent les surfaces
+      arables. De combien d'hectares par an ?
     hint: ''
     type: QCM
     category: 2
     difficulty: 2
-    answer_option_a: 100 000
-    answer_option_b: 1 million
-    answer_option_c: 10 millions
-    answer_option_d: 100 millions
+    answer_option_a: 100,000 hectares (superficie de Hong-Kong)
+    answer_option_b: 1 million d'hectares (superficie de Chypre)
+    answer_option_c: 10 millions d’hectares (superficie de la Corée du Sud)
+    answer_option_d: 100 millions (superficie de l’Égypte)
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: Soit la superficie de Los Angeles
+    answer_explanation: Soit plus de 20% de la surface de la France Métropolitaine.
     answer_accessible_url: https://www.planetoscope.com/sols/1175-disparition-de-surfaces-agricoles-dans-le-monde.html
     answer_scientific_url: ''
     answer_image_url: ''
@@ -1727,16 +1736,16 @@
     type: QCM
     category: 1
     difficulty: 3
-    answer_option_a: 1200 km2
-    answer_option_b: 12 000 km2
-    answer_option_c: 120 000 km2
-    answer_option_d: 1 200 000 km2
+    answer_option_a: 1 200 km² (superficie du département du Val-d'Oise)
+    answer_option_b: 12 000 km² (superficie de la région Île-de-France)
+    answer_option_c: 120 000 km² (superficie de la Grèce)
+    answer_option_d: 1 200 000 km² (superficie de l'Afrique du Sud)
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: Soit 20% de la superficie de la France métropolitaine.
     answer_accessible_url: https://www.planetoscope.com/sols/273-avancee-des-deserts-dans-le-monde.html
     answer_scientific_url: ''
-    answer_image_url: ''
+    answer_image_url: https://youmatter.world/app/uploads/sites/3/2018/01/desertification-rechauffement-climatique.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Matthieu Massart
@@ -1827,7 +1836,7 @@
       et l’agriculture.
     answer_accessible_url: https://www.lemonde.fr/planete/article/2015/07/15/la-pollution-de-l-air-coute-chaque-annee-101-3-milliards-d-euros-a-la-france_4683432_3244.html
     answer_scientific_url: ''
-    answer_image_url: ''
+    answer_image_url: https://img.lemde.fr/2014/03/27/47/0/1024/512/688/0/60/0/ill_4390558_7e89_594017.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Matthieu Massart
@@ -2198,9 +2207,9 @@
     category: 7
     difficulty: 2
     answer_option_a: Il est resté globalement stable
-    answer_option_b: Il a décliné de 50%
-    answer_option_c: Il a décliné de 75%
-    answer_option_d: Il a décliné de 90%
+    answer_option_b: Il a décliné d'un quart
+    answer_option_c: Il a décliné de moitié
+    answer_option_d: Il a décliné des deux tiers
     answer_correct: d
     has_ordered_answers: true
     answer_explanation: La raison en est bien sûr la surpêche
@@ -3109,7 +3118,7 @@
       faudra 500 ans pour se dégrader.
     answer_accessible_url: https://entreprise-environnement.org/stop-aux-gobelets-jetables-en-entreprise/
     answer_scientific_url: ''
-    answer_image_url: ''
+    answer_image_url: https://www.novethic.fr/fileadmin/gobelets-plastiques-pixabay.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Guillaume Boudry
@@ -3207,7 +3216,7 @@
       douce et liquide. 10% de la population n'a pas accès à l'eau potable.
     answer_accessible_url: https://lite.framacalc.org/jsuisvertetjeposedesquestions
     answer_scientific_url: ''
-    answer_image_url: ''
+    answer_image_url: https://www.notre-planete.info/actualites/images/eau/eau-Terre.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Guillaume Boudry
@@ -3417,8 +3426,8 @@
 - model: api.question
   pk: 104
   fields:
-    text: En France en 2017, quelle est la part de l'électricité dans la consommation
-      d'énergie ?
+    text: En France sur ces dernières années, quelle est la part de l'électricité
+      dans la consommation d'énergie ?
     hint: ''
     type: QCM
     category: 5
@@ -3435,7 +3444,7 @@
       produite avec des énergies fossiles (centrales à gaz principalement).
     answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/mix-energetique-de-la-france
     answer_scientific_url: https://www.iea.org/data-and-statistics?country=FRANCE&fuel=Energy%20consumption&indicator=Total%20final%20consumption%20(TFC)%20by%20source
-    answer_image_url: http://stockage.univ-valenciennes.fr/EcoPEM/BoiteB/res/I_a.png
+    answer_image_url: https://www.connaissancedesenergies.org/sites/default/files/album_images/consommation-finale-energie-france-2015.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
@@ -3462,11 +3471,17 @@
     answer_option_d: '1997'
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: le GIEC a été créé en 1988 par l'Organisation Météorologique
-      Mondiale et le Programme des Nations Unies pour l'Environnement.
-    answer_accessible_url: ''
+    answer_explanation: 'le GIEC a été créé en 1988 par l''Organisation Météorologique
+      Mondiale et le Programme des Nations Unies pour l''Environnement.
+
+
+      Le premier rapport d''évaluation du GIEC sur le changement climatique a été
+      publié en 1990. Quatre autres rapports ont suivis (1995, 2001, 2007, 2014).
+      Un 6ème rapport d''évaluation est en cours de rédaction et devrait paraitre
+      en 2021/2022.'
+    answer_accessible_url: https://www.ecologie.gouv.fr/comprendre-giec
     answer_scientific_url: https://www.ipcc.ch/about/history/
-    answer_image_url: ''
+    answer_image_url: https://www.eaufrance.fr/sites/default/files/2019-06/evenements-politiques-internationaux-de-lutte-contre-changement-climatique.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
@@ -3679,12 +3694,12 @@
     answer_option_d: 1 poids lourd de 38 tonnes se déplaçant à 100 km/h
     answer_correct: c
     has_ordered_answers: false
-    answer_explanation: "Le litre d’essence dépasse les autres d’un facteur 2.\nÉnergie\
-      \ cinétique d’un camion de 38 tonnes qui roule à 100 km/h = 1/2*m*v², soit 15\
-      \ MJ. \nÉnergie potentielle d’un objet de 1 tonne qui tombe de 1500m = m*g*h,\
-      \ soit 15 MJ\n1 kg de sucre : 17 MJ. \nÉnergie de combustion d’1 l d'essence\
-      \ = 33 MJ. \nLa combustion d'1 litre d'essence permet de dégager en ordre de\
-      \ grandeur 100 heures d'un humain qui pédalerait sur une dynamo."
+    answer_explanation: "Le litre d’essence dépasse les autres d’un facteur 2.\n\n\
+      - Énergie cinétique d’un camion de 38 tonnes qui roule à 100 km/h = 1/2*m*v²,\
+      \ soit 15 MJ. \n- Énergie potentielle d’un objet de 1 tonne qui tombe de 1500m\
+      \ = m*g*h, soit 15 MJ\n- Énergie d'1 kg de sucre : 17 MJ. \n- Énergie de combustion\
+      \ d’1 l d'essence = 33 MJ. \n\nLa combustion d'1 litre d'essence permet de dégager\
+      \ en ordre de grandeur 100 heures d'un humain qui pédalerait sur une dynamo."
     answer_accessible_url: https://fr.wikipedia.org/wiki/Ordres_de_grandeur_d%27%C3%A9nergie
     answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/documentation-gene/index/page/New_liquides
     answer_image_url: ''
@@ -3744,11 +3759,17 @@
     answer_option_d: 500 milliards de litres
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: En 2017 la France a consommé environ 51 milliards de litres
-      de carburants routiers
-    answer_accessible_url: ''
+    answer_explanation: 'En 2017 la France a consommé environ 51 milliards de litres
+      de carburants routiers. Un tel volume correspond à un cube de 370m de haut (ce
+      serait donc le plus haut monument de France, s''il ne partait pas en fumée chaque
+      année...).
+
+
+      SI l''on rajoute le carburant pour avions, tracteurs, bateaux, et le fioul des
+      chaudières, cela fait 21 milliards de litres supplémentaires.'
+    answer_accessible_url: https://www.planetoscope.com/petrole/1480-consommation-de-petrole-en-france.html
     answer_scientific_url: https://ccfa.fr/wp-content/uploads/2018/09/analyse_statistiques_2018_fr.pdf
-    answer_image_url: ''
+    answer_image_url: https://pbs.twimg.com/media/EFJ1MqpWsAAf1HL?format=png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
@@ -4084,11 +4105,16 @@
     answer_option_d: 43 l/100km
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: En 2017 en France la consommation moyenne des poids lourds
+    answer_explanation: 'En 2017 en France la consommation moyenne des poids lourds
       (> 5 tonnes) est de 34 l/100km.
-    answer_accessible_url: ''
+
+
+      Cela semble beaucoup par rapport à une voiture, mais il ne faut pas oublier
+      que le camion peut transporter plusieurs tonnes voire dizaines de tonnes de
+      marchandises, là où une voiture ne déplace que quelques centaines de kilos.'
+    answer_accessible_url: https://fr.statista.com/statistiques/487208/consommation-de-carburant-moyenne-vehicule-lourd-france/
     answer_scientific_url: https://ccfa.fr/wp-content/uploads/2018/09/analyse_statistiques_2018_fr.pdf
-    answer_image_url: ''
+    answer_image_url: https://www.webfleet.com/fr_fr/webfleet/blog/wp-content/uploads/sites/151/2020/04/Consumo_Carburante_truck-1181063_1280-820x350-768x328.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
@@ -4511,13 +4537,24 @@
     answer_option_d: '7'
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: 5 rapports d’évaluation (Assessment Report) ont été publiés
-      par le GIEC. En 1990, FAR (First Assessment Report). En 1995, SAR (Second AR).
-      En 2001, TAR (Third AR). En 2007, AR4 (4th AR). En 2014, AR5 (5th AR). Le 6ème
-      rapport est prévu pour 2022.
-    answer_accessible_url: ''
+    answer_explanation: '5 rapports d’évaluation (Assessment Report) ont été publiés
+      par le GIEC depuis sa création.
+
+
+      En 1990, FAR (First Assessment Report).
+
+      En 1995, SAR (Second AR).
+
+      En 2001, TAR (Third AR).
+
+      En 2007, AR4 (4th AR).
+
+      En 2014, AR5 (5th AR).
+
+      Le 6ème rapport est prévu pour 2022.'
+    answer_accessible_url: https://fr.wikipedia.org/wiki/Groupe_d%27experts_intergouvernemental_sur_l%27%C3%A9volution_du_climat#Rapports_d'%C3%A9valuation
     answer_scientific_url: https://www.ipcc.ch/reports/
-    answer_image_url: ''
+    answer_image_url: http://ceriscope.sciences-po.fr/sites/default/files/03c_chronologie_GIEC_1988-2014-01.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
@@ -5748,8 +5785,12 @@
     answer_option_d: 33 %
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: Le méthane représente 13% des émissions françaises de gaz
+    answer_explanation: 'Le méthane représente 13% des émissions françaises de gaz
       à effet de serre (en équivalent CO2).
+
+
+      70% de ce méthane provient de l''agriculture (fermentation entérique des animaux,
+      bovins, ovins, ...), et 25% provient de la gestion des déchets.'
     answer_accessible_url: ''
     answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-12/datalab-46-chiffres-cles-du-climat-edition-2019-novembre2018_1.pdf#page36
     answer_image_url: ''
