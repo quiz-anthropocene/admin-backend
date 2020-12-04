@@ -136,7 +136,7 @@ input:focus{
   position: relative;
   text-align: center;
   text-decoration: none;
-  vertical-align: middle;
+  vertical-align: sub;
   white-space: nowrap;
 }
 .linkedin-button:hover{
