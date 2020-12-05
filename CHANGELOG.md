@@ -6,6 +6,31 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Des pistes dans [README.md#idées](README.md#idées)
 
+## [1.1.0] - 2020-12-06
+
+- [Data] Nouveau dashboard Metabase connecté à la base de donnée de Scalingo
+- [Backend] Nouveau modèle `Configuration` pour stocker des variables globales de l'application. Certains champs sont modifiables.
+- [Backend] RichTextEditor pour les champs `introduction` & `conclusion` du modèle `Quiz` (pour pouvoir aller à la ligne)
+- [Backend] Nouveau statut "Ecartée temporairement" pour les questions
+- [Backend] Enlève le champ `publish` du modèle `Question` (on regarde maintenant seulement sont `validation_status`)
+- [Backend] Créer les nouveaux tags automatiquement lors de l'import depuis Notion
+
+- [Backend] Automatiser le lancement des tâches (import depuis Notion, export vers Github, aggrégation des Daily Stats)
+- [Backend] Exporter certains stats à chaque export de la donnée (pour éviter d'avoir un endpoint API et d'y faire des appels)
+- [Frontend] Boutons de partage sur les réseaux sociaux à la fin d'un quiz
+
+## [1.0.0] - 2020-11-29
+
+- [Data] Ajout d'images de laydgeur
+- [Data] Ajout de Bon Pote dans les soutiens
+- [DevOps] Migration du backend de Heroku vers Scalingo
+- [Backend] Ajout d'un champ `question_count` dans le modèle `QuizAnswerEvent` (pour garder des stats de réussites claires même si le nombre de questions du quiz change)
+- [Backend] Toujours mettre `publish=True` lors de l'import si la question est Validée (bug fix)
+- [Frontend] Afficher les 3 derniers quizs sur la page d'accueil
+- [Frontend] Ajout des filtres sur la page des quizs
+
+## TODO
+
 ## [0.7.0] - en cours
 
 ### Ajouté

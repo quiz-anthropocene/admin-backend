@@ -40,19 +40,19 @@
           <div class="card-footer">
             <router-link v-if="soutien_item.quiz_tag" class="no-decoration" :to="{ name: 'quiz-list', query: { tag: soutien_item.quiz_tag } }">
               <a>
-                <strong>Voir les quizs </strong>
+                <strong>Tous les quizs </strong>
                 <FilterLabel filterType="tag" v-bind:filterObject="{ name: soutien_item.quiz_tag }"></FilterLabel>
               </a>
             </router-link>
             <router-link v-if="soutien_item.quiz_author" class="no-decoration" :to="{ name: 'quiz-list', query: { author: soutien_item.quiz_author } }">
               <a>
-                <strong>Voir les quizs de </strong>
+                <strong>Tous les quizs de </strong>
                 <FilterLabel filterType="author" v-bind:filterObject="{ name: soutien_item.quiz_author }"></FilterLabel>
               </a>
             </router-link>
             <router-link v-if="soutien_item.question_author" class="no-decoration" :to="{ name: 'question-list', query: { author: soutien_item.question_author } }">
               <a>
-                <strong>Voir les questions de </strong>
+                <strong>Toutes les questions de </strong>
                 <FilterLabel filterType="author" v-bind:filterObject="{ name: soutien_item.question_author }"></FilterLabel>
               </a>
             </router-link>
@@ -166,5 +166,10 @@ export default {
 
 .card-img-top {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-footer > a {
+  white-space: nowrap;
+  margin-right: 10px;
 }
 </style>
