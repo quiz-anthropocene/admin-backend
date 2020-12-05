@@ -1,4 +1,4 @@
-name: Cron
+name: cron_aggregate_stats
 
 # Controls when the action will run. 
 on:

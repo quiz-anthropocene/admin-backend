@@ -8,4 +8,5 @@ urlpatterns = [
     path("", views.app_home),
     path("admin/", admin_site.urls),
     path("api/", include("api.urls")),
+    path("actions/aggregate-stats", views.action_aggregate_stats),
 ]

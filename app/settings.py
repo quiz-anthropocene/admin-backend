@@ -166,14 +166,14 @@ IMPORT_EXPORT_SKIP_ADMIN_LOG = True
 
 SHELL_PLUS_IMPORTS = [
     "from datetime import datetime, timedelta",
-    "from api import constants, utilities, utilities_notion, utilities_github",
+    "from api import constants, utilities, utilities_stats, utilities_notion, utilities_github",
 ]
 
 
 # Github
 
 GITHUB_ACCESS_TOKEN = os.getenv("GITHUB_ACCESS_TOKEN")
-
+GITHUB_CRON_ACTION_TOKEN = os.getenv("GITHUB_CRON_ACTION_TOKEN")
 
 # Notion.so
 
