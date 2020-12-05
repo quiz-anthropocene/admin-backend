@@ -1008,3 +1008,81 @@
     name: Greenwashing
     description: ''
     created: 2020-11-17
+- model: api.tag
+  pk: 196
+  fields:
+    name: IDH
+    description: ''
+    created: 2020-12-05
+- model: api.tag
+  pk: 197
+  fields:
+    name: Puissance humaine
+    description: ''
+    created: 2020-12-05
+- model: api.tag
+  pk: 198
+  fields:
+    name: Inventaire National
+    description: ''
+    created: 2020-12-05
+- model: api.tag
+  pk: 199
+  fields:
+    name: Animaux sauvages
+    description: ''
+    created: 2020-12-05
+- model: api.tag
+  pk: 200
+  fields:
+    name: PIB
+    description: ''
+    created: 2020-12-05
+- model: api.tag
+  pk: 201
+  fields:
+    name: Banques
+    description: ''
+    created: 2020-12-05
+- model: api.tag
+  pk: 202
+  fields:
+    name: Finances
+    description: ''
+    created: 2020-12-05
+- model: api.tag
+  pk: 203
+  fields:
+    name: Canicule
+    description: ''
+    created: 2020-12-05
+- model: api.tag
+  pk: 204
+  fields:
+    name: Royaume-Uni
+    description: ''
+    created: 2020-12-05
+- model: api.tag
+  pk: 205
+  fields:
+    name: Paris
+    description: ''
+    created: 2020-12-05
+- model: api.tag
+  pk: 206
+  fields:
+    name: Cryosphère
+    description: ''
+    created: 2020-12-05
+- model: api.tag
+  pk: 207
+  fields:
+    name: arbres
+    description: ''
+    created: 2020-12-05
+- model: api.tag
+  pk: 208
+  fields:
+    name: Cuivre
+    description: ''
+    created: 2020-12-05
