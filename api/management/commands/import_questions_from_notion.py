@@ -34,7 +34,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         scope = options["scope"]
-        print(scope)
+
         notion_questions_list = []
         questions_ids_duplicate = []
         questions_ids_missing = []

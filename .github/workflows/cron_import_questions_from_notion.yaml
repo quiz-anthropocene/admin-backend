@@ -3,7 +3,7 @@ name: cron_import_questions_from_notion
 # Controls when the action will run. 
 on:
   schedule:
-    # Every 12 hours (2 times a day)
+    # Every 12 hours (2 times a day: 00:00, 12:00)
     - cron: '0 */12 * * *'
 
   # Allows you to run this workflow manually from the Actions tab

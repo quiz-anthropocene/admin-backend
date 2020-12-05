@@ -37,3 +37,16 @@ def action_import_questions_from_notion(request):
     management.call_command("import_questions_from_notion", scope=0)
 
     return HttpResponse("success")
+
+
+@require_http_methods(["GET"])
+def action_export_data_to_github(request):
+    """
+    Run the export command
+    """
+    if not request.GET.get("token") == settings.GITHUB_CRON_ACTION_TOKEN:
+        return HttpResponseForbidden()
+
+    management.call_command("action_export_data_to_github")
+
+    return HttpResponse("success")
