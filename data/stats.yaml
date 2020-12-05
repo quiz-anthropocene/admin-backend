@@ -1,0 +1,21 @@
+question_count: 663
+question_per_validation_status_count:
+- validation_status: Validée
+  total: 310
+- validation_status: Écartée
+  total: 198
+- validation_status: Brouillon
+  total: 81
+- validation_status: A valider
+  total: 74
+- validation_status: Écartée temporairement
+  total: 13
+question_answer_count: 1018
+quiz_answer_count: 11
+question_answer_count_last_30_days: 999
+quiz_answer_count_last_30_days: 5
+category_count: 8
+tag_count: 168
+question_feedback_count: 30
+quiz_feedback_count: 15
+contribution_count: 50

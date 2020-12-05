@@ -5,23 +5,28 @@
     <p class="text-muted">Mise à jour : {{ data_last_updated }}</p>
 
     <br />
+    <h3>🕹️&nbsp;Quizs</h3>
+    <p>
+      <strong>{{ quiz_count_formatted }}</strong> publiés.
+      <br />
+      <strong>{{ quiz_answer_count_formatted }}</strong> quizs terminés depuis le lancement
+      (dont <strong>{{ quiz_answer_count_last_30_days_formatted }}</strong> durant les 30 derniers jours).
+    </p>
+
+    <br />
     <h3>❓&nbsp;Questions</h3>
     <p>
-      Il y a actuellement <strong>{{ Intl.NumberFormat('fr-FR').format(question_count) }}</strong> questions publiées,
-      et <strong>{{ question_pending_validation_count }}</strong> en cours de validation.
+      <strong>{{ question_validated_count_formatted }}</strong> validées,
+      et <strong>{{ question_pending_validation_count_formatted }}</strong> en cours de validation.
+      <br />
+      <strong>{{ question_answer_count_formatted }}</strong> questions répondues depuis le lancement
+      (dont <strong>{{ question_answer_count_last_30_days_formatted }}</strong> durant les 30 derniers jours).
     </p>
 
     <br />
-    <h3>🕹️&nbsp;Quiz</h3>
+    <h3>❓&nbsp;Contributions</h3>
     <p>
-      <strong>{{ quiz_count ? quiz_count : 0 }}</strong> quiz ont été publiés.
-    </p>
-
-    <br />
-    <h3>🔗&nbsp;Réponses</h3>
-    <p>
-      L'application totalise <strong>{{ stats.total ? Intl.NumberFormat('fr-FR').format(stats.total.question_answer_count) : '?' }}</strong>
-      réponses (depuis la mise en ligne en Mars 2020).
+      <strong>{{ feedback_agg_formatted }}</strong> feedbacks/likes/suggestions reçus, merci ! 💯
     </p>
 
     <br />
@@ -29,7 +34,7 @@
     <br />
 
     <h3>Toutes les questions par...</h3>
-    <p><i>Cliquez sur une bulle pour voir toutes les questions associées.</i></p>
+    <p><i>Cliquez sur une bulle pour voir toutes les questions (validées) associées.</i></p>
 
     <br />
     <h4>📂&nbsp;Catégories</h4>
@@ -107,14 +112,32 @@ export default {
     data_last_updated() {
       return new Date(constants.DATA_LAST_UPDATED_DATETIME).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
     },
-    question_count() {
-      return this.$store.state.questions.length;
+    question_validated_count_formatted() {
+      const questionValidatedCount = this.$store.state.stats.question_per_validation_status_count ? this.$store.state.stats.question_per_validation_status_count.slice(0).find((item) => item.validation_status === constants.QUESTION_VALIDATION_STATUS_OK).total : 0;
+      return Intl.NumberFormat('fr-FR').format(questionValidatedCount);
     },
-    question_pending_validation_count() {
-      return this.$store.state.questionsPendingValidation.length;
+    question_pending_validation_count_formatted() {
+      const questionPendingValidationCount = this.$store.state.stats.question_per_validation_status_count ? this.$store.state.stats.question_per_validation_status_count.slice(0).find((item) => item.validation_status === constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS).total : 0;
+      return Intl.NumberFormat('fr-FR').format(questionPendingValidationCount);
     },
-    quiz_count() {
-      return this.$store.state.quizzes.length;
+    quiz_count_formatted() {
+      return Intl.NumberFormat('fr-FR').format(this.$store.state.quizzes.length);
+    },
+    question_answer_count_formatted() {
+      return Intl.NumberFormat('fr-FR').format(this.$store.state.stats.question_answer_count);
+    },
+    quiz_answer_count_formatted() {
+      return Intl.NumberFormat('fr-FR').format(this.$store.state.stats.quiz_answer_count);
+    },
+    question_answer_count_last_30_days_formatted() {
+      return Intl.NumberFormat('fr-FR').format(this.$store.state.stats.question_answer_count_last_30_days);
+    },
+    quiz_answer_count_last_30_days_formatted() {
+      return Intl.NumberFormat('fr-FR').format(this.$store.state.stats.quiz_answer_count_last_30_days);
+    },
+    feedback_agg_formatted() {
+      const feedbackAgg = this.$store.state.stats.question_feedback_count + this.$store.state.stats.quiz_feedback_count + this.$store.state.stats.contribution_count;
+      return Intl.NumberFormat('fr-FR').format(feedbackAgg);
     },
     categories() {
       return this.$store.state.categories
@@ -134,20 +157,13 @@ export default {
     difficultyLevels() {
       return this.$store.state.difficultyLevels;
     },
-    stats() {
-      return this.$store.state.stats;
-    },
   },
 
   mounted() {
-    this.fetchQuestionStats();
+    this.$store.dispatch('GET_STATS_DICT_FROM_LOCAL_YAML');
   },
 
   methods: {
-    fetchQuestionStats() {
-      this.$store.dispatch('GET_STATS');
-      this.$store.dispatch('GET_QUESTION_PENDING_VALIDATION_LIST_FROM_LOCAL_YAML');
-    },
     toggleAllTags() {
       this.showAllTags = !this.showAllTags;
     },

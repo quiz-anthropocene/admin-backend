@@ -274,18 +274,3 @@ class ApiTest(TestCase):
         self.assertEqual(response.data["answer_success_count"], 2)
         self.assertEqual(self.quiz_2.stats.count(), 2)
         self.assertEqual(self.quiz_2.answer_count_agg, 2)
-
-    def test_app_stats(self):
-        response = self.client.get(reverse("api:stats"))
-        self.assertEqual(response.status_code, 200)
-        self.assertIsInstance(response.data, dict)
-        self.assertEqual(
-            [
-                "question_validated_count",
-                "question_validation_status_in_progress_count",
-                "total",
-                "current_month",
-                "current_week",
-            ],
-            list(response.data.keys()),
-        )
