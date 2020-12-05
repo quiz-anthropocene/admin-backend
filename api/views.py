@@ -326,12 +326,6 @@ def quiz_detail_answer_event(request, pk):
             answer_success_count=request.data["answer_success_count"],
         )
 
-        # Temporary hack to regularly cleanup Question stats
-        # TODO: find a better solution !
-        question_answer_event_count = QuestionAnswerEvent.objects.count()
-        if question_answer_event_count > 900:
-            management.call_command("generate_daily_stats")
-
         serializer = QuizAnswerEventSerializer(quiz_answer_event)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 

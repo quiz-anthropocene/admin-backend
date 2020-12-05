@@ -1,10 +1,10 @@
-name: Cron
+name: cron_aggregate_stats
 
 # Controls when the action will run. 
 on:
   schedule:
-    # Every 6 hours (4 times a day)
-    - cron: '0 */6 * * *'
+    # Every 6 hours (4 times a day: 00:15, 06:15, 12:15, 18:15)
+    - cron: '15 */6 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -14,4 +14,4 @@ jobs:
   aggregate_stats:
     runs-on: ubuntu-latest
     steps:
-      - run: curl -X "GET" "${{ secrets.ACTION_AGGREGATE_STATS_ENDPOINT }}?token=${{ secrets.CRON_GITHUB_ACTION_SECRET }}"
+      - run: curl -X "GET" "${{ secrets.BACKEND_URL }}/actions/aggregate-stats?token=${{ secrets.CRON_GITHUB_ACTION_SECRET }}"

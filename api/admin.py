@@ -331,22 +331,37 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         Corresponding template in templates/admin/api/question/change_list_with_import.html
         """
 
-        notion_questions_validation = []
+        configuration = Configuration.get_solo()
+        notion_questions_import_scope_choices = [
+            (
+                scope_value,
+                scope_label,
+                "notion_questions_scope_" + str(scope_value) + "_last_imported",
+            )
+            for (
+                scope_value,
+                scope_label,
+            ) in constants.NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES[1:]
+        ]
+        notion_questions_import_response = []
 
         if request.POST.get("run_import_questions_from_notion_script", False):
             out = StringIO()
             scope = request.POST.get("run_import_questions_from_notion_script")
             management.call_command("import_questions_from_notion", scope, stdout=out)
-            notion_questions_validation = out.getvalue()
-            notion_questions_validation = notion_questions_validation.split("\n")
-            notion_questions_validation = [
+            notion_questions_import_response = out.getvalue()
+            notion_questions_import_response = notion_questions_import_response.split(
+                "\n"
+            )
+            notion_questions_import_response = [
                 elem.split("///") if ("///" in elem) else elem
-                for elem in notion_questions_validation
+                for elem in notion_questions_import_response
             ]
 
         extra_context = extra_context or {
-            "configuration": Configuration.get_solo(),
-            "notion_questions_validation": notion_questions_validation,
+            "configuration": configuration,
+            "notion_questions_import_scope_choices": notion_questions_import_scope_choices,
+            "notion_questions_import_response": notion_questions_import_response,
         }
 
         # Call the superclass changelist_view to render the page
