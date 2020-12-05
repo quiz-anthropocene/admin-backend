@@ -7,26 +7,26 @@
     <br />
     <h3>🕹️&nbsp;Quizs</h3>
     <p>
-      <strong>{{ quiz_count_formated }}</strong> publiés.
+      <strong>{{ quiz_count_formatted }}</strong> publiés.
       <br />
-      <strong>{{ quiz_answer_count_formated }}</strong> quizs terminés depuis le lancement
-      (dont <strong>{{ quiz_answer_count_last_30_days_formated }}</strong> durant les 30 derniers jours).
+      <strong>{{ quiz_answer_count_formatted }}</strong> quizs terminés depuis le lancement
+      (dont <strong>{{ quiz_answer_count_last_30_days_formatted }}</strong> durant les 30 derniers jours).
     </p>
 
     <br />
     <h3>❓&nbsp;Questions</h3>
     <p>
-      <strong>{{ question_validated_count_formated }}</strong> validées,
-      et <strong>{{ question_pending_validation_count_formated }}</strong> en cours de validation.
+      <strong>{{ question_validated_count_formatted }}</strong> validées,
+      et <strong>{{ question_pending_validation_count_formatted }}</strong> en cours de validation.
       <br />
-      <strong>{{ question_answer_count_formated }}</strong> questions répondues depuis le lancement
-      (dont <strong>{{ question_answer_count_last_30_days_formated }}</strong> durant les 30 derniers jours).
+      <strong>{{ question_answer_count_formatted }}</strong> questions répondues depuis le lancement
+      (dont <strong>{{ question_answer_count_last_30_days_formatted }}</strong> durant les 30 derniers jours).
     </p>
 
     <br />
     <h3>❓&nbsp;Contributions</h3>
     <p>
-      <strong>{{ feedback_agg_formated }}</strong> feedbacks/likes/suggestions reçus, merci ! 💯
+      <strong>{{ feedback_agg_formatted }}</strong> feedbacks/likes/suggestions reçus, merci ! 💯
     </p>
 
     <br />
@@ -112,28 +112,30 @@ export default {
     data_last_updated() {
       return new Date(constants.DATA_LAST_UPDATED_DATETIME).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
     },
-    question_validated_count_formated() {
-      return Intl.NumberFormat('fr-FR').format(this.$store.state.questions.length);
+    question_validated_count_formatted() {
+      const questionValidatedCount = this.$store.state.stats.question_per_validation_status_count ? this.$store.state.stats.question_per_validation_status_count.slice(0).find((item) => item.validation_status === constants.QUESTION_VALIDATION_STATUS_OK).total : 0;
+      return Intl.NumberFormat('fr-FR').format(questionValidatedCount);
     },
-    question_pending_validation_count_formated() {
-      return Intl.NumberFormat('fr-FR').format(this.$store.state.questionsPendingValidation.length);
+    question_pending_validation_count_formatted() {
+      const questionPendingValidationCount = this.$store.state.stats.question_per_validation_status_count ? this.$store.state.stats.question_per_validation_status_count.slice(0).find((item) => item.validation_status === constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS).total : 0;
+      return Intl.NumberFormat('fr-FR').format(questionPendingValidationCount);
     },
-    quiz_count_formated() {
+    quiz_count_formatted() {
       return Intl.NumberFormat('fr-FR').format(this.$store.state.quizzes.length);
     },
-    question_answer_count_formated() {
+    question_answer_count_formatted() {
       return Intl.NumberFormat('fr-FR').format(this.$store.state.stats.question_answer_count);
     },
-    quiz_answer_count_formated() {
+    quiz_answer_count_formatted() {
       return Intl.NumberFormat('fr-FR').format(this.$store.state.stats.quiz_answer_count);
     },
-    question_answer_count_last_30_days_formated() {
+    question_answer_count_last_30_days_formatted() {
       return Intl.NumberFormat('fr-FR').format(this.$store.state.stats.question_answer_count_last_30_days);
     },
-    quiz_answer_count_last_30_days_formated() {
+    quiz_answer_count_last_30_days_formatted() {
       return Intl.NumberFormat('fr-FR').format(this.$store.state.stats.quiz_answer_count_last_30_days);
     },
-    feedback_agg_formated() {
+    feedback_agg_formatted() {
       const feedbackAgg = this.$store.state.stats.question_feedback_count + this.$store.state.stats.quiz_feedback_count + this.$store.state.stats.contribution_count;
       return Intl.NumberFormat('fr-FR').format(feedbackAgg);
     },
@@ -155,15 +157,10 @@ export default {
     difficultyLevels() {
       return this.$store.state.difficultyLevels;
     },
-    stats() {
-      console.log(this.$store.state.stats)
-      return this.$store.state.stats;
-    },
   },
 
   mounted() {
     this.$store.dispatch('GET_STATS_DICT_FROM_LOCAL_YAML');
-    this.$store.dispatch('GET_QUESTION_PENDING_VALIDATION_LIST_FROM_LOCAL_YAML');
   },
 
   methods: {

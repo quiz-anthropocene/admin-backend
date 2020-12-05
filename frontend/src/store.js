@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
+import constants from './constants';
+
 // webpack + vue-cli-plugin-yaml
 import configurationYamlData from '../../data/configuration.yaml';
 import statsYamlData from '../../data/stats.yaml';
@@ -12,9 +14,6 @@ import difficultyLevelsYamlData from '../../data/difficulty-levels.yaml';
 import ressourcesGlossaireYamlData from '../../data/ressources-glossaire.yaml';
 import ressourcesSoutiensYamlData from '../../data/ressources-soutiens.yaml';
 import ressourcesAutresAppsYamlData from '../../data/ressources-autres-apps.yaml';
-
-const QUESTION_VALIDATION_STATUS_OK = 'Validée';
-const QUESTION_VALIDATION_STATUS_IN_PROGRESS = 'A valider';
 
 Vue.use(Vuex);
 
@@ -41,13 +40,13 @@ const store = new Vuex.Store({
     configuration: {},
     questions: [],
     questionsDisplayed: [],
-    questionsPendingValidation: [],
     questionFilters: {
       category: null,
       tag: null,
       author: null,
       difficulty: null,
     },
+    questionsPendingValidation: [],
     quizzes: [],
     quizzesDisplayed: [],
     quizFilters: {
@@ -89,7 +88,7 @@ const store = new Vuex.Store({
      */
     GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
       // questions
-      const questionsValidated = processModelList(questionsYamlData).filter((el) => el.validation_status === QUESTION_VALIDATION_STATUS_OK);
+      const questionsValidated = processModelList(questionsYamlData).filter((el) => el.validation_status === constants.QUESTION_VALIDATION_STATUS_OK);
       // questions: get category & tags objects
       questionsValidated.map((q) => {
         const questionCategory = getters.getCategoryById(q.category);
@@ -130,7 +129,7 @@ const store = new Vuex.Store({
       commit('SET_DIFFICULTY_LEVEL_LIST', { list: difficultyLevels });
     },
     GET_QUESTION_PENDING_VALIDATION_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      const questionsPendingValidation = processModelList(questionsYamlData).filter((el) => el.validation_status === QUESTION_VALIDATION_STATUS_IN_PROGRESS);
+      const questionsPendingValidation = processModelList(questionsYamlData).filter((el) => el.validation_status === constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS);
       commit('SET_QUESTION_PENDING_VALIDATION_LIST', { list: questionsPendingValidation });
     },
     /**
@@ -308,6 +307,7 @@ const store = new Vuex.Store({
       state.quizAuthors = quizAuthors;
     },
     SET_STATS_DICT: (state, { dict }) => {
+      console.log(dict);
       state.stats = dict;
     },
   },

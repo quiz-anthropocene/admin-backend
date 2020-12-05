@@ -8,6 +8,8 @@ question_per_validation_status_count:
   total: 81
 - validation_status: A valider
   total: 74
+- validation_status: Écartée temporairement
+  total: 13
 question_answer_count: 1018
 quiz_answer_count: 11
 question_answer_count_last_30_days: 999
