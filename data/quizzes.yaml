@@ -53,12 +53,11 @@
     name: Le quiz de Vincent Mignerot
     introduction: "<p>Vincent Mignerot est essayiste et conférencier. Il développe\
       \ une théorie écologique de l’esprit et se questionne sur la singularité de\
-      \ l'humanité dans son contexte évolutif. Ses travaux vont de la théorie (Essai\
-      \ Sur la Raison de Tout, Éditions SoLo, 2015) à l’étude de la perception humaine\
-      \ (Heuraesthesia: When Synaesthesia Fertilizes the Mind, CNRS, 2016). Il est\
-      \ le fondateur de l’association Adrastia, qui s’inquiète du risque d’effondrement\
-      \ de la société thermo-industrielle et du groupe Facebook Transition 2030, qui\
-      \ compte plus de 25,000 membres. <a href=\"https://vincent-mignerot.fr/\">https://vincent-mignerot.fr/</a></p>\r\
+      \ l'humanité dans son contexte évolutif. Ses travaux vont de la théorie à l’étude\
+      \ de la perception humaine, notamment la synesthésie. Il est le fondateur de\
+      \ l’association Adrastia, qui s’intéresse aux risques d’effondrement de la société\
+      \ thermo-industrielle, et du groupe Facebook Transition 2030, qui compte plus\
+      \ de 30,000 membres. <a href=\"https://vincent-mignerot.fr/\">https://vincent-mignerot.fr/</a></p>\r\
       \n\r\n<p>Vincent nous a concocté un quiz teinté d'anthropologie qui va nous\
       \ faire revenir quelques millénaires en arrière !</p>"
     conclusion: ''
@@ -67,7 +66,7 @@
     image_background_url: https://www.slate.fr/sites/default/files/styles/1060x523/public/neandertal_1.jpg
     publish: true
     created: 2020-06-26
-    updated: 2020-12-02
+    updated: 2020-12-05
     questions:
     - 545
     - 546
@@ -110,19 +109,18 @@
   pk: 5
   fields:
     name: Mon empreinte carbone
-    introduction: L'empreinte carbone d’une activité humaine est une mesure des émissions
-      de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent lui
-      être imputées. Connaissez-vous votre empreinte ? Voyons voir ça.
+    introduction: <p>L'empreinte carbone d’une activité humaine est une mesure des
+      émissions de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent
+      lui être imputées. Connaissez-vous votre empreinte ? Voyons voir ça.</p>
     conclusion: ''
     difficulty_average: 2.0
     author: Matthieu Massart
     image_background_url: https://leshorizons.net/wp-content/uploads/2019/04/d%C3%A9finition-de-lempreinte-carbone-1020x512.jpg
     publish: true
     created: 2020-07-08
-    updated: 2020-11-24
+    updated: 2020-12-05
     questions:
     - 19
-    - 43
     - 78
     - 102
     - 150
@@ -139,20 +137,20 @@
   pk: 6
   fields:
     name: Bienvenue en Anthropocène - Partie 1
-    introduction: L'Anthropocène, c'est un terme proposé par des scientifiques pour
-      désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où
-      l'homme est devenu une force géologique majeure. La période la plus récente
+    introduction: <p>L'Anthropocène, c'est un terme proposé par des scientifiques
+      pour désigner une nouvelle ère géologique dans laquelle nous serions rentrés,
+      où l'homme est devenu une force géologique majeure. La période la plus récente
       de l'anthropocène est parfois décrite comme celle de la grande accélération,
       car de nombreux indicateurs y présentent des courbes de type exponentiel. Ce
-      quiz fait un tour d'horizon de l'emprise inédite de l'homme sur la planète qu'il
-      occupe.
+      quiz propose un premier tour d'horizon de l'emprise inédite de l'homme sur la
+      planète qu'il occupe.</p>
     conclusion: ''
     difficulty_average: 2.9
     author: Matthieu Massart
     image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
     publish: true
     created: 2020-07-08
-    updated: 2020-11-25
+    updated: 2020-12-05
     questions:
     - 2
     - 4
@@ -433,19 +431,19 @@
   pk: 16
   fields:
     name: Bienvenue en Anthropocène - Partie 2
-    introduction: L'Anthropocène, c'est un terme proposé par des scientifiques pour
-      désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où
-      l'homme est devenu une force géologique majeure. La période la plus récente
+    introduction: <p>L'Anthropocène, c'est un terme proposé par des scientifiques
+      pour désigner une nouvelle ère géologique dans laquelle nous serions rentrés,
+      où l'homme est devenu une force géologique majeure. La période la plus récente
       de l'anthropocène est parfois dite la grande accélération, car de nombreux indicateurs
-      y présentent des courbes de type exponentiel. Ce quiz fait un tour d'horizon
-      de l'emprise inédite de l'homme sur la planète qu'il occupe.
+      y présentent des courbes de type exponentiel. Ce 2ème quiz continue le tour
+      d'horizon de l'emprise inédite de l'homme sur la planète qu'il occupe.</p>
     conclusion: ''
     difficulty_average: 2.3
     author: Matthieu Massart
     image_background_url: https://reporterre.net/local/cache-vignettes/L720xH481/arton11947-94df2.jpg?1597417424
     publish: true
     created: 2020-07-29
-    updated: 2020-11-24
+    updated: 2020-12-05
     questions:
     - 51
     - 67
