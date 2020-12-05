@@ -9,4 +9,8 @@ urlpatterns = [
     path("admin/", admin_site.urls),
     path("api/", include("api.urls")),
     path("actions/aggregate-stats", views.action_aggregate_stats),
+    path(
+        "actions/import-questions-from-notion",
+        views.action_import_questions_from_notion,
+    ),
 ]
