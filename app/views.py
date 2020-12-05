@@ -34,7 +34,8 @@ def action_import_questions_from_notion(request):
     if not request.GET.get("token") == settings.GITHUB_CRON_ACTION_TOKEN:
         return HttpResponseForbidden()
 
-    management.call_command("import_questions_from_notion", scope=0)
+    scope = 0
+    management.call_command("import_questions_from_notion", scope)
 
     return HttpResponse("success")
 
@@ -47,6 +48,6 @@ def action_export_data_to_github(request):
     if not request.GET.get("token") == settings.GITHUB_CRON_ACTION_TOKEN:
         return HttpResponseForbidden()
 
-    management.call_command("action_export_data_to_github")
+    management.call_command("export_data_to_github")
 
     return HttpResponse("success")

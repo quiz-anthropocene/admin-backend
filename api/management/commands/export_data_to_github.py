@@ -2,6 +2,7 @@ import yaml
 from datetime import datetime
 
 from django.utils import timezone
+from django.conf import settings
 from django.core.management import BaseCommand
 
 from api import utilities, utilities_stats, utilities_github
@@ -105,25 +106,26 @@ class Command(BaseCommand):
                 branch_name=data_update_branch_name,
             )
 
-            # create pull request
-            pull_request_message = (
-                "Mise à jour de la donnée :"
-                "<ul>"
-                "<li>data/configuration.yaml</li>"
-                "<li>data/stats.yaml</li>"
-                "<li>data/questions.yaml</li>"
-                "<li>data/quizzes.yaml</li>"
-                "<li>data/tags.yaml</li>"
-                "</ul>"
-            )
-            pull_request = utilities_github.create_pull_request(
-                pull_request_title=data_update_pull_request_name,
-                pull_request_message=pull_request_message,
-                branch_name=data_update_branch_name,
-            )
+            if not settings.DEBUG:
+                # create pull request
+                pull_request_message = (
+                    "Mise à jour de la donnée :"
+                    "<ul>"
+                    "<li>data/configuration.yaml</li>"
+                    "<li>data/stats.yaml</li>"
+                    "<li>data/questions.yaml</li>"
+                    "<li>data/quizzes.yaml</li>"
+                    "<li>data/tags.yaml</li>"
+                    "</ul>"
+                )
+                pull_request = utilities_github.create_pull_request(
+                    pull_request_title=data_update_pull_request_name,
+                    pull_request_message=pull_request_message,
+                    branch_name=data_update_branch_name,
+                )
 
-            # return
-            self.stdout.write(pull_request.html_url)
+                # return
+                self.stdout.write(pull_request.html_url)
         except Exception as e:
             print(e)
             self.stdout.write(str(e))

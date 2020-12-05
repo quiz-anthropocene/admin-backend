@@ -13,5 +13,5 @@ urlpatterns = [
         "actions/import-questions-from-notion",
         views.action_import_questions_from_notion,
     ),
-    path("actions/export-data-to-github", views.action_import_questions_from_notion,),
+    path("actions/export-data-to-github", views.action_export_data_to_github),
 ]

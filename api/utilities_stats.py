@@ -46,7 +46,7 @@ def question_stats():
 def quiz_stats():
     quiz_count = Quiz.objects.count()
     quiz_per_publish_count = (
-        Question.objects.all()
+        Quiz.objects.all()
         .values("publish")
         .annotate(total=Count("publish"))
         .order_by("-total")

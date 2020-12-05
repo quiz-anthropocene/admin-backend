@@ -286,8 +286,8 @@ class Command(BaseCommand):
         )
 
         # update config
+        config = Configuration.get_solo()
         if scope:
-            config = Configuration.get_solo()
             setattr(
                 config, f"notion_questions_scope_{scope}_last_imported", timezone.now()
             )
