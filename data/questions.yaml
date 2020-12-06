@@ -17433,8 +17433,8 @@
 - model: api.question
   pk: 534
   fields:
-    text: Quelle est la consommation moyenne d’engrais azotés par habitant en France
-      ?
+    text: Quelle est la consommation moyenne annuelle d’engrais azotés par habitant
+      en France ?
     hint: ''
     type: QCM
     category: 2
