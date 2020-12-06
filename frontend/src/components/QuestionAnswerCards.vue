@@ -149,10 +149,10 @@ export default {
       return this.$store.state.ressources.glossaire;
     },
     questionTextWithLineBreaks() {
-      return this.question.text.replaceAll('\n', '<br />');
+      return this.question.text.replace('/\n/g', '<br />');
     },
     questionAnswerExplanationWithLineBreaks() {
-      return this.question.answer_explanation.replaceAll('\n', '<br />');
+      return this.question.answer_explanation.replace('/\n/g', '<br />');
     },
   },
 
