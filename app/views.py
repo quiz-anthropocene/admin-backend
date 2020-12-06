@@ -43,11 +43,24 @@ def action_import_questions_from_notion(request):
 @require_http_methods(["GET"])
 def action_export_data_to_github(request):
     """
-    Run the export command
+    Run the export data command
     """
     if not request.GET.get("token") == settings.GITHUB_CRON_ACTION_TOKEN:
         return HttpResponseForbidden()
 
     management.call_command("export_data_to_github")
+
+    return HttpResponse("success")
+
+
+@require_http_methods(["GET"])
+def action_export_contributions_to_notion(request):
+    """
+    Run the export contributions command
+    """
+    if not request.GET.get("token") == settings.GITHUB_CRON_ACTION_TOKEN:
+        return HttpResponseForbidden()
+
+    management.call_command("export_contributions_to_notion")
 
     return HttpResponse("success")

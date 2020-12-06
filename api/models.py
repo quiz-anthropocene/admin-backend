@@ -62,6 +62,11 @@ class Configuration(SingletonModel):
         blank=True,
         help_text="La dernière fois que la donnée a été exportée vers Github",  # noqa
     )
+    notion_contributions_last_exported = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text="La dernière fois que les contributions exportées vers Notion",  # noqa
+    )
 
     def __str__(self):
         return "Configuration de l'application"

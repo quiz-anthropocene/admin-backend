@@ -11,7 +11,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api import constants, utilities_notion, utilities_sendinblue
+from api import constants, utilities_sendinblue
 from api.models import (
     Category,
     Tag,
@@ -369,14 +369,8 @@ def contribute(request):
             type=request.data["type"],
         )
 
-        try:
-            utilities_notion.add_contribution_row(
-                contribution_text=contribution.text,
-                contribution_description=contribution.description,
-                contribution_type=contribution.type,
-            )
-        except Exception as e:
-            Contribution.objects.create(text=e)
+        # send to Notion ?
+        # done with export_contributions_to_notion + cron_export_contributions_to_notion  # noqa
 
         serializer = ContributionSerializer(contribution)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
