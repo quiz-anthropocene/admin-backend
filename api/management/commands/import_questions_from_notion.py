@@ -15,7 +15,7 @@ from api.models import Configuration, Question, Category, Tag
 class Command(BaseCommand):
     """
     Usage:
-    - python manage.py import_questions_from_notion
+    - python manage.py import_questions_from_notion 0  # all
     - python manage.py import_questions_from_notion 1
 
     TODO: optimise db queries and avoid Category & Tag calls ?

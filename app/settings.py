@@ -165,7 +165,7 @@ IMPORT_EXPORT_SKIP_ADMIN_LOG = True
 # Shell Plus
 
 SHELL_PLUS_IMPORTS = [
-    "from datetime import datetime, timedelta",
+    "from datetime import datetime, date, timedelta",
     "from api import constants, utilities, utilities_stats, utilities_notion, utilities_github",
 ]
 
