@@ -3,13 +3,14 @@ import notion
 import collections
 
 from django.utils import timezone
-from django.conf import settings
+
+# from django.conf import settings
 from django.db import IntegrityError
 from django.core.management import BaseCommand
 from django.core.exceptions import ValidationError
 
 from api import constants, utilities, utilities_notion
-from api.models import Configuration, Question, Category, Tag
+from api.models import Configuration, Question, Category, Tag, Contribution
 
 
 class Command(BaseCommand):
@@ -265,20 +266,25 @@ class Command(BaseCommand):
                 ]
             )
 
-        validation_errors_message = (
-            f"Erreurs : {len(validation_errors)}"
-            + "\n"
-            + "\n".join([str(error) for error in validation_errors])
-            if len(validation_errors)
-            else "aucune"
-        )
-
-        if not settings.DEBUG and scope == 0:
-            utilities_notion.add_import_stats_row(
-                len(notion_questions_list),
-                len(questions_created),
-                len(questions_updated),
+        validation_errors_message = "Erreurs : "
+        if len(validation_errors):
+            validation_errors_message += (
+                f"Erreurs : {len(validation_errors)}"
+                + "\n"
+                + "\n".join([str(error) for error in validation_errors])
             )
+            Contribution.objects.create(
+                text="Erreur(s) lors de l'import",
+                description=validation_errors_message,
+                type="erreur application",
+            )
+
+        # if not settings.DEBUG and scope == 0:
+        #     utilities_notion.add_import_stats_row(
+        #         len(notion_questions_list),
+        #         len(questions_created),
+        #         len(questions_updated),
+        #     )
 
         print(
             "--- Step 4 done : build and send stats : %s seconds ---"

@@ -92,6 +92,7 @@ CONTRIBUTION_TYPE_LIST = [
     "commentaire question",
     "commentaire quiz",
     "nom application",
+    "erreur application",
 ]
 
 NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES = [
