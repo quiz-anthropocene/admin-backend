@@ -55,7 +55,7 @@ jobs:
           SECRET_KEY: github_workflow
           HOST: localhost
           DATABASE_URL: postgres://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/know_your_planet
-          SESSION_COOKIE_SECURE: False
-          CSRF_COOKIE_SECURE: False
+          SESSION_COOKIE_SECURE: "False"
+          CSRF_COOKIE_SECURE: "False"
           SECURE_HSTS_SECONDS: 0
-          SECURE_SSL_REDIRECT: False
+          SECURE_SSL_REDIRECT: "False"
