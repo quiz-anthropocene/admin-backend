@@ -1,6 +1,5 @@
 import json
 import random
-import datetime
 from io import StringIO
 
 from django.core import management
@@ -12,7 +11,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api import constants, utilities_notion, utilities_sendinblue
+from api import constants, utilities_sendinblue
 from api.models import (
     Category,
     Tag,
@@ -327,12 +326,6 @@ def quiz_detail_answer_event(request, pk):
             answer_success_count=request.data["answer_success_count"],
         )
 
-        # Temporary hack to regularly cleanup Question stats
-        # TODO: find a better solution !
-        question_answer_event_count = QuestionAnswerEvent.objects.count()
-        if question_answer_event_count > 900:
-            management.call_command("generate_daily_stats")
-
         serializer = QuizAnswerEventSerializer(quiz_answer_event)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -376,14 +369,8 @@ def contribute(request):
             type=request.data["type"],
         )
 
-        try:
-            utilities_notion.add_contribution_row(
-                contribution_text=contribution.text,
-                contribution_description=contribution.description,
-                contribution_type=contribution.type,
-            )
-        except Exception as e:
-            Contribution.objects.create(text=e)
+        # send to Notion ?
+        # done with export_contributions_to_notion + cron_export_contributions_to_notion  # noqa
 
         serializer = ContributionSerializer(contribution)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -398,94 +385,6 @@ def glossary_list(request):
 
     serializer = GlossarySerializer(glossary, many=True)
     return Response(serializer.data)
-
-
-@api_view(["GET"])
-def stats(request):
-    """
-    Retrieve stats on all the data
-    """
-    # validated / in validation
-    question_validated_count = Question.objects.validated().count()
-    question_validation_status_in_progress_count = Question.objects.for_validation_status(
-        constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS
-    ).count()
-    # total question/quiz answer/feedback count
-    question_answer_count = QuestionAnswerEvent.objects.count() + DailyStat.objects.agg_count(
-        "question_answer_count"
-    )
-    question_answer_from_quiz_count = QuestionAnswerEvent.objects.from_quiz().count() + DailyStat.objects.agg_count(  # noqa
-        "question_answer_from_quiz_count"
-    )
-    quiz_answer_count = QuizAnswerEvent.objects.count() + DailyStat.objects.agg_count(
-        "quiz_answer_count"
-    )
-    question_feedback_count = QuestionFeedbackEvent.objects.count() + DailyStat.objects.agg_count(
-        "question_feedback_count"
-    )
-    question_feedback_from_quiz_count = QuestionFeedbackEvent.objects.from_quiz().count() + DailyStat.objects.agg_count(  # noqa
-        "question_feedback_from_quiz_count"
-    )
-    quiz_feedback_count = QuizFeedbackEvent.objects.count() + DailyStat.objects.agg_count(
-        "quiz_feedback_count"
-    )
-    # current month
-    current_month_iso_number = datetime.date.today().month
-    question_answer_count_current_month = QuestionAnswerEvent.objects.filter(
-        created__date__month=current_month_iso_number
-    ).count() + DailyStat.objects.agg_count(
-        "question_answer_count",
-        since="month",
-        week_or_month_iso_number=current_month_iso_number,
-    )
-    quiz_answer_count_current_month = QuizAnswerEvent.objects.filter(
-        created__date__month=current_month_iso_number
-    ).count() + DailyStat.objects.agg_count(
-        "quiz_answer_count",
-        since="month",
-        week_or_month_iso_number=current_month_iso_number,
-    )
-    # current week
-    current_week_iso_number = datetime.date.today().isocalendar()[1]
-    question_answer_count_current_week = QuestionAnswerEvent.objects.filter(
-        created__date__week=current_week_iso_number
-    ).count() + DailyStat.objects.agg_count(
-        "question_answer_count",
-        since="week",
-        week_or_month_iso_number=current_week_iso_number,
-    )
-    quiz_answer_count_current_week = QuizAnswerEvent.objects.filter(
-        created__date__week=current_week_iso_number
-    ).count() + DailyStat.objects.agg_count(
-        "quiz_answer_count",
-        since="week",
-        week_or_month_iso_number=current_week_iso_number,
-    )
-
-    return Response(
-        {
-            "question_validated_count": question_validated_count,
-            "question_validation_status_in_progress_count": question_validation_status_in_progress_count,  # noqa
-            "total": {
-                "question_answer_count": question_answer_count,
-                "question_answer_from_quiz_count": question_answer_from_quiz_count,
-                "quiz_answer_count": quiz_answer_count,
-                "question_feedback_count": question_feedback_count,
-                "question_feedback_from_quiz_count": question_feedback_from_quiz_count,
-                "quiz_feedback_count": quiz_feedback_count,
-            },
-            "current_month": {
-                "month_iso_number": current_month_iso_number,
-                "question_answer_count": question_answer_count_current_month,
-                "quiz_answer_count": quiz_answer_count_current_month,
-            },
-            "current_week": {
-                "week_iso_number": current_week_iso_number,
-                "question_answer_count": question_answer_count_current_week,
-                "quiz_answer_count": quiz_answer_count_current_week,
-            },
-        }
-    )
 
 
 @api_view(["GET", "POST"])

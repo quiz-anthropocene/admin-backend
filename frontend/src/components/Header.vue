@@ -5,7 +5,7 @@
         <router-link class="no-decoration" :to="{ name: 'home' }">Quiz de l'Anthropocène</router-link>
       </h1>
       <h2 class="d-none d-sm-block" :class="{ 'd-block': currentRoute === 'home' }">
-        Des questions/réponses pour mieux appréhender les limites de notre planète&nbsp;🌍
+        <span v-html="configuration.application_tagline"></span>
       </h2>
     </div>
   </header>
@@ -20,6 +20,9 @@ export default {
   computed: {
     currentRoute() {
       return this.$route.name;
+    },
+    configuration() {
+      return this.$store.state.configuration;
     },
   },
 };
@@ -37,6 +40,15 @@ header {
 header > div {
   background-color: white;
   padding: 5px;
+}
+
+header > div > h1 {
+  margin: 0;
+}
+
+header > div > h2 {
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 @media(hover: hover) and (pointer: fine) {

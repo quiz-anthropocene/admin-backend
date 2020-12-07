@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "django_extensions",
     "import_export",
+    "ckeditor",
     "solo",  # django-solo
     "api",
 ]
@@ -164,15 +165,15 @@ IMPORT_EXPORT_SKIP_ADMIN_LOG = True
 # Shell Plus
 
 SHELL_PLUS_IMPORTS = [
-    "from datetime import datetime, timedelta",
-    "from api import utilities_notion",
+    "from datetime import datetime, date, timedelta",
+    "from api import constants, utilities, utilities_stats, utilities_notion, utilities_github",
 ]
 
 
 # Github
 
 GITHUB_ACCESS_TOKEN = os.getenv("GITHUB_ACCESS_TOKEN")
-
+GITHUB_CRON_ACTION_TOKEN = os.getenv("GITHUB_CRON_ACTION_TOKEN")
 
 # Notion.so
 
@@ -191,3 +192,25 @@ SIB_NEWSLETTER_DOI_TEMPLATE_ID = os.getenv("SIB_NEWSLETTER_DOI_TEMPLATE_ID")
 SIB_CONTACT_DOI_ENDPOINT = (
     "https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation"
 )
+
+
+# django-ckeditor
+
+CKEDITOR_CONFIGS = {
+    "default": {
+        "height": 200,
+        "toolbar": "Custom",
+        "toolbar_Custom": [
+            ["Bold", "Italic", "Underline"],
+            ["NumberedList", "BulletedList"],
+            ["Link", "Unlink"],
+            ["SpecialChar"],
+            # ['HorizontalRule', 'Smiley'],
+            ["Undo", "Redo"],
+            ["RemoveFormat", "Source"],
+        ],
+        # avoid special characters encoding
+        "basicEntities": False,
+        "entities": False,
+    }
+}

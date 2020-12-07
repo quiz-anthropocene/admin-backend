@@ -68,4 +68,7 @@ export default {
 .row > .col-sm-6 {
   padding-bottom: 15px;
 }
+.row > .col-sm-6 > .card {
+  height: 100%;
+}
 </style>

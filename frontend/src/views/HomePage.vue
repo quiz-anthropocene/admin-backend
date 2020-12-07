@@ -1,18 +1,13 @@
 <template>
   <section>
 
-    <div v-if="quizzes && quizzes.length > 0" id="quiz-list"  class="row">
+    <div class="row" v-if="quizzes && quizzes.length > 0" id="quiz-list">
       <div class="col-sm-4" v-for="quiz in quizzes" :key="quiz.id">
         <QuizCard :quiz="quiz"/>
       </div>
-        <!-- <div class="col-sm">
-          <router-link class="no-decoration" :to="{ name: 'quiz-detail', params: { quizId: quiz.id, skipIntro: true } }">
-            <button class="btn btn-outline-primary">⏩&nbsp;Commencer le quiz !</button>
-          </router-link>
-        </div> -->
     </div>
 
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-md-center margin-bottom-1em">
       <div class="col-sm-6" v-if="questionsCount">
         <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
           <button class="btn btn-primary btn-lg btn-block">
@@ -233,11 +228,14 @@ svg {
   transform: scale(1.03);
 }
 
-.row > .col-sm-6,.col-sm-4{
-  padding-bottom: 20px;
-}
-
 .btn-lg {
   min-height: 75px;
+}
+
+.row > .col-sm-4 {
+  padding-bottom: 15px;
+}
+.row > .col-sm-4 > .card {
+  height: 100%;
 }
 </style>

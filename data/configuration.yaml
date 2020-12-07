@@ -2,11 +2,22 @@
   pk: 1
   fields:
     application_name: Quiz de l'Anthropocène
+    application_tagline: Des questions/réponses pour mieux appréhender les limites
+      de notre planète 🌍
+    application_about: "<p>Le but est de rassembler un ensemble de connaissances -\
+      \ sur l'énérgie, le climat, et plus largement la crise climatique - sous forme\
+      \ de questions.</p>\r\n\r\n<p>Ces questions servent à sensibiliser (à édifier)\
+      \ sur la gravité de la situation et la diversité de ses facettes. Elles permettent\
+      \ (on l'espère) de déclencher la prise de conscience et amorcer le changement\
+      \ individuel.</p>\r\n\r\n<p>Ces questions peuvent aussi servir à se former pour\
+      \ mieux maitriser les chiffres et les ordres de grandeurs. Les usages peuvent\
+      \ être multiples (conférences, formations, quiz, jeu, etc.).</p>"
     application_backend_url: ''
     application_frontend_url: ''
-    daily_stat_last_aggregated: 2020-11-30 15:29:47.704905+00:00
-    notion_questions_scope_1_last_imported: null
-    notion_questions_scope_2_last_imported: null
-    notion_questions_scope_3_last_imported: null
-    notion_questions_scope_4_last_imported: null
-    github_last_exported: null
+    daily_stat_last_aggregated: 2020-12-07 01:09:49.475129+00:00
+    notion_questions_scope_1_last_imported: 2020-12-07 03:04:13.739951+00:00
+    notion_questions_scope_2_last_imported: 2020-12-07 03:04:13.739964+00:00
+    notion_questions_scope_3_last_imported: 2020-12-07 03:04:13.739970+00:00
+    notion_questions_scope_4_last_imported: 2020-12-07 03:04:13.739975+00:00
+    github_last_exported: 2020-12-07 03:40:17.545681+00:00
+    notion_contributions_last_exported: 2020-12-07 01:23:41.306105+00:00

@@ -9,6 +9,7 @@ from django.http import HttpResponse
 from django.conf import settings
 from django.contrib import admin
 from django.contrib.admin import AdminSite
+from django.contrib.auth.models import Group, Permission, User
 from django.core import management
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.html import mark_safe
@@ -331,22 +332,37 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         Corresponding template in templates/admin/api/question/change_list_with_import.html
         """
 
-        notion_questions_validation = []
+        configuration = Configuration.get_solo()
+        notion_questions_import_scope_choices = [
+            (
+                scope_value,
+                scope_label,
+                "notion_questions_scope_" + str(scope_value) + "_last_imported",
+            )
+            for (
+                scope_value,
+                scope_label,
+            ) in constants.NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES[1:]
+        ]
+        notion_questions_import_response = []
 
         if request.POST.get("run_import_questions_from_notion_script", False):
             out = StringIO()
             scope = request.POST.get("run_import_questions_from_notion_script")
             management.call_command("import_questions_from_notion", scope, stdout=out)
-            notion_questions_validation = out.getvalue()
-            notion_questions_validation = notion_questions_validation.split("|||")
-            notion_questions_validation = [
+            notion_questions_import_response = out.getvalue()
+            notion_questions_import_response = notion_questions_import_response.split(
+                "\n"
+            )
+            notion_questions_import_response = [
                 elem.split("///") if ("///" in elem) else elem
-                for elem in notion_questions_validation
+                for elem in notion_questions_import_response
             ]
 
         extra_context = extra_context or {
-            "configuration": Configuration.get_solo(),
-            "notion_questions_validation": notion_questions_validation,
+            "configuration": configuration,
+            "notion_questions_import_scope_choices": notion_questions_import_scope_choices,
+            "notion_questions_import_response": notion_questions_import_response,
         }
 
         # Call the superclass changelist_view to render the page
@@ -417,8 +433,9 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
         "question_count",
         "difficulty_average",
         "questions_not_validated_string_html",
-        "questions_categories_list_string",
-        "questions_tags_list_string",
+        "questions_categories_list_with_count_string",
+        "questions_tags_list_with_count_string",
+        "questions_authors_list_with_count_string",
         "show_image_background",
         "answer_count_agg",
         "like_count_agg",
@@ -445,8 +462,9 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
                     "question_count",
                     "difficulty_average",
                     "questions_not_validated_string_html",
-                    "questions_categories_list_string",
-                    "questions_tags_list_string",
+                    "questions_categories_list_with_count_string",
+                    "questions_tags_list_with_count_string",
+                    "questions_authors_list_with_count_string",
                 )
             },
         ),
@@ -637,6 +655,9 @@ class QuestionAggStatAdmin(ExportMixin, admin.ModelAdmin):
         "like_count",
         "dislike_count",
     )
+    actions = [
+        "export_as_csv",
+    ]
 
     def get_readonly_fields(self, request, obj=None):
         return [f.name for f in obj._meta.fields]
@@ -844,8 +865,21 @@ class GlossaryAdmin(ExportMixin, admin.ModelAdmin):
 
 
 class ConfigurationAdmin(ExportMixin, SingletonModelAdmin):
+    EXCLUDED_FIELDS = ["id"]
+    EDITABLE_FIELDS = ["application_tagline", "application_about"]
+
+    class Meta:
+        exclude = ("id",)
+
+    def get_fields(self, request, obj=None):
+        return [f.name for f in obj._meta.fields if f.name not in self.EXCLUDED_FIELDS]
+
     def get_readonly_fields(self, request, obj=None):
-        return [f.name for f in obj._meta.fields]
+        return [
+            f.name
+            for f in obj._meta.fields
+            if f.name not in self.EXCLUDED_FIELDS + self.EDITABLE_FIELDS
+        ]
 
 
 class LogEntryAdmin(admin.ModelAdmin):
@@ -923,3 +957,6 @@ admin_site.register(DailyStat, DailyStatAdmin)
 admin_site.register(Contribution, ContributionAdmin)
 admin_site.register(Glossary, GlossaryAdmin)
 admin_site.register(admin.models.LogEntry, LogEntryAdmin)
+admin_site.register(User)
+admin_site.register(Permission)
+admin_site.register(Group)

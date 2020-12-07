@@ -1,8 +1,11 @@
+from datetime import date, timedelta
+
 from django.db import models
 from django.db.models import Avg, Sum, Count
 from django.core.exceptions import ValidationError
 
 from solo.models import SingletonModel
+from ckeditor.fields import RichTextField
 
 from api import constants
 from api import utilities
@@ -15,6 +18,11 @@ class Configuration(SingletonModel):
         default="Quiz de l'Anthropocène",
         help_text="Le nom de l'application",
     )
+    application_tagline = models.CharField(
+        max_length=255, help_text="La tagline de l'application",
+    )
+    application_about = RichTextField(blank=True, help_text="A propos de l'application")
+    # links
     application_backend_url = models.URLField(
         max_length=500, blank=True, help_text="Le lien vers le backend de l'application"
     )
@@ -54,6 +62,11 @@ class Configuration(SingletonModel):
         blank=True,
         help_text="La dernière fois que la donnée a été exportée vers Github",  # noqa
     )
+    notion_contributions_last_exported = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text="La dernière fois que les contributions exportées vers Notion",  # noqa
+    )
 
     def __str__(self):
         return "Configuration de l'application"
@@ -69,9 +82,7 @@ class Category(models.Model):
     name_long = models.CharField(
         max_length=150, blank=False, help_text="Le nom allongé de la catégorie"
     )
-    description = models.TextField(
-        blank=True, help_text="Une description de la catégorie"
-    )
+    description = RichTextField(blank=True, help_text="Une description de la catégorie")
     created = models.DateField(
         auto_now_add=True, help_text="La date de création de la catégorie"
     )
@@ -110,7 +121,7 @@ class TagManager(models.Manager):
 
 class Tag(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du tag")
-    description = models.TextField(blank=True, help_text="Une description du tag")
+    description = RichTextField(blank=True, help_text="Une description du tag")
     created = models.DateField(
         auto_now_add=True, help_text="La date de création du tag"
     )
@@ -541,8 +552,8 @@ class QuizQuerySet(models.QuerySet):
 
 class Quiz(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du quiz")
-    introduction = models.TextField(blank=True, help_text="Une description du quiz")
-    conclusion = models.TextField(
+    introduction = RichTextField(blank=True, help_text="Une description du quiz")
+    conclusion = RichTextField(
         blank=True,
         help_text="Une conclusion du quiz et des pistes pour aller plus loin",
     )
@@ -614,7 +625,7 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_categories_list_string(self):
+    def questions_categories_list_with_count_string(self):
         # return ", ".join(self.questions_categories_list)
         return ", ".join(
             [
@@ -638,12 +649,36 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_tags_list_string(self):
+    def questions_tags_list_with_count_string(self):
         # return ", ".join(self.questions_tags_list_with_count)
         return ", ".join(
             [
                 f"{elem['tags__name']} ({elem['count']})"
                 for elem in self.questions_tags_list_with_count
+            ]
+        )
+
+    @property
+    def questions_authors_list(self):
+        return list(
+            self.questions.order_by().values_list("author", flat=True).distinct()
+        )
+
+    @property
+    def questions_authors_list_with_count(self):
+        return list(
+            self.questions.values("author")
+            .annotate(count=Count("author"))
+            .order_by("-count")
+        )
+
+    @property
+    def questions_authors_list_with_count_string(self):
+        # return ", ".join(self.questions_authors_list_with_count)
+        return ", ".join(
+            [
+                f"{elem['author']} ({elem['count']})"
+                for elem in self.questions_authors_list_with_count
             ]
         )
 
@@ -672,8 +707,13 @@ class Quiz(models.Model):
     questions_not_validated_string.fget.short_description = (
         "Questions pas encore validées"
     )
-    questions_categories_list_string.fget.short_description = "Questions catégorie(s)"
-    questions_tags_list_string.fget.short_description = "Questions tag(s)"
+    questions_categories_list_with_count_string.fget.short_description = (
+        "Questions catégorie(s)"
+    )
+    questions_tags_list_with_count_string.fget.short_description = "Questions tag(s)"
+    questions_authors_list_with_count_string.fget.short_description = (
+        "Questions author(s)"
+    )
     answer_count_agg.fget.short_description = "# Rép"
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"
@@ -769,6 +809,9 @@ models.signals.m2m_changed.connect(
 class QuizAnswerEventQuerySet(models.QuerySet):
     def for_quiz(self, quiz_id):
         return self.filter(quiz=quiz_id)
+
+    def last_30_days(self):
+        return self.filter(created__date__gte=(date.today() - timedelta(days=30)))
 
     def agg_timeseries(self, scale="day"):
         queryset = self
@@ -880,6 +923,8 @@ class DailyStatManager(models.Manager):
             raise ValueError(
                 f"DailyStat agg_count: must be one of {constants.AGGREGATION_SINCE_CHOICE_LIST}"
             )
+        if since == "last_30_days":
+            queryset = queryset.filter(date__gte=(date.today() - timedelta(days=30)))
         if since == "month":
             queryset = queryset.filter(date__month=week_or_month_iso_number)
         elif since == "week":

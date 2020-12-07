@@ -22,8 +22,8 @@ Merci d'être là et de vouloir contribuer :)
       - [Lancer le Frontend](#lancer-le-frontend)
     - [Accéder à la console admin](#acc%C3%A9der-%C3%A0-la-console-admin)
   - [Lancer les tests](#lancer-les-tests)
-    - [Lancer les tests du backend](#lancer-les-tests-du-backend)
-    - [Lancer les tests du frontend](#lancer-les-tests-du-frontend)
+    - [Lancer les tests du Backend](#lancer-les-tests-du-backend)
+    - [Lancer les tests du Frontend](#lancer-les-tests-du-frontend)
   - [Autres commandes utiles](#autres-commandes-utiles)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -74,24 +74,24 @@ Si vous souhaitez ajouter une fonctionnalité:
 
 #### Backend
 
-- Une backend en Python Django:
+- Un Backend en Python Django:
   - API avec Django Rest Framework
   - console Admin
 - Une base de donnée PostgreSQL
 
-Le backend sert pour valider la donnée, ainsi que comme endpoint pour les stats.
+Le Backend sert pour valider la donnée, ainsi que comme endpoint pour les stats.
 
 #### Frontend
 
-- Un frontend en Vue.js
+- Un Frontend en Vue.js
 - Bootstrap 4
 
 La donnée est lue directement depuis les fichiers yaml dans le dossier `/data`.
 
 #### DevOps
 
-- Le backend est hébergé sur Scalingo
-- Le frontend est hébergé sur Netlify (free tier)
+- Le Backend est hébergé sur Scalingo
+- Le Frontend est hébergé sur Netlify (free tier)
 - CI/CD avec CircleCI
 
 ### Lancer le projet en local
@@ -121,6 +121,7 @@ La donnée est lue directement depuis les fichiers yaml dans le dossier `/data`.
     ```
 - Chargez la base de donnée
     ```
+    python manage.py loaddata data/configuration.yaml
     python manage.py loaddata data/categories.yaml
     python manage.py loaddata data/tags.yaml
     python manage.py loaddata data/questions.yaml
@@ -131,6 +132,7 @@ La donnée est lue directement depuis les fichiers yaml dans le dossier `/data`.
     cd frontend
     yarn install
     ```
+- Dupliquer le fichier `frontend/.env.example` et le renommer en `frontend/.env`
 - Installer le pre-commit git hook
     ```
     pre-commit install
@@ -162,11 +164,11 @@ Créez d'abord un utilisateur admin
 python manage.py createsuperuser --username admin@email.com
 ```
 
-Lancez le backend, et connectez-vous sur `http://localhost:8000/admin`
+Lancez le Backend, et connectez-vous sur `http://localhost:8000/admin`
 
 ### Lancer les tests
 
-#### Lancer les tests du backend
+#### Lancer les tests du Backend
 
 Tests
 ```
@@ -184,9 +186,12 @@ coverage html
 
 Linting avec black et flake8 (pre-commit hook)
 
-#### Lancer les tests du frontend
+#### Lancer les tests du Frontend
 
-Aucun tests pour l'instant :)
+Tests
+```
+yarn test:e2e
+```
 
 Linting
 ```
@@ -210,7 +215,7 @@ Réinitialiser les stats d'une question
 python manage.py reset_question_stats <question_id>
 ```
 
-Lancer le frontend "en mode production"
+Lancer le Frontend "en mode production"
 ```
 cd frontend
 yarn build
@@ -223,3 +228,6 @@ Launch the Vue.js UI
 cd frontend
 vue ui
 ```
+
+Mettre à jour l'instance Metabase sur Heroku
+- https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-heroku.html
