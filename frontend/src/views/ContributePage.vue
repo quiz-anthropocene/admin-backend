@@ -8,6 +8,7 @@
     </p>
 
     <br />
+
     <form @submit.prevent="submitContribution" v-if="!contributionSubmitted">
       <div class="form-group">
         <h3 class="margin-bottom-0">
@@ -18,8 +19,12 @@
           <label class="custom-control-label" for="customRadioInline1">Une nouvelle question</label>
         </div>
         <div class="custom-control custom-radio custom-control-inline">
-          <input type="radio" id="customRadioInline2" name="customRadioInline2" class="custom-control-input" value="commentaire application" v-model="contribution.type">
-          <label class="custom-control-label" for="customRadioInline2">Un commentaire sur l'application</label>
+          <input type="radio" id="customRadioInline2" name="customRadioInline2" class="custom-control-input" value="nouveau quiz" v-model="contribution.type">
+          <label class="custom-control-label" for="customRadioInline2">Une idée de quiz</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input" value="commentaire application" v-model="contribution.type">
+          <label class="custom-control-label" for="customRadioInline3">Un commentaire sur l'application</label>
         </div>
         <!-- <div class="custom-control custom-radio custom-control-inline">
           <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input" value="nom application" v-model="contribution.type">
@@ -46,6 +51,25 @@
         <textarea id="description" class="form-control" rows="5" v-model="contribution.description"></textarea>
       </div>
 
+      <div class="form-group" v-if="contribution.type === 'nouveau quiz'">
+        <h3 class="margin-bottom-0">
+          <label for="contribution_text">Votre idée de quiz <span class="color-red">*</span></label>
+        </h3>
+        <div class="help">
+          <small><i>En 1 ou 2 phrases au maximum</i></small>
+        </div>
+        <input type="text" id="contribution_text" class="form-control" v-model="contribution.text" required />
+      </div>
+      <div class="form-group" v-if="contribution.type === 'nouveau quiz'">
+        <h3 class="margin-bottom-0">
+          <label for="text">Informations supplémentaires <small>(optionnel)</small></label>
+        </h3>
+        <div class="help">
+          <small><i>Des idées de questions, des liens pour creuser le sujet, ...</i></small>
+        </div>
+        <textarea id="description" class="form-control" rows="5" v-model="contribution.description"></textarea>
+      </div>
+
       <div class="form-group" v-if="contribution.type === 'commentaire application'">
         <h3 class="margin-bottom-0">
           <label for="contribution_text">Votre commentaire <span class="color-red">*</span></label>
@@ -62,6 +86,13 @@
         </h3>
         <textarea id="contribution_text" class="form-control" rows="2" v-model="contribution.text" required></textarea>
       </div>
+
+      <br />
+
+      <p>
+        🙋&nbsp;Veuillez indiquer votre <strong>email</strong> si voulez être tenu au courant de votre contribution !<br />
+        <small class="help"><i>En soumettant ce formulaire, vous autorisez que les informations saisies soient traitées afin d'améliorer notre application, et vous recontacter si besoin.</i></small>
+      </p>
 
       <div class="form-group">
         <p>

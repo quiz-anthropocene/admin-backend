@@ -88,6 +88,7 @@ AGGREGATION_SINCE_DATE_DEFAULT = "2020-01-01"
 
 CONTRIBUTION_TYPE_LIST = [
     "nouvelle question",
+    "nouveau quiz",
     "commentaire application",
     "commentaire question",
     "commentaire quiz",
