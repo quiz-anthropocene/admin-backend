@@ -147,13 +147,19 @@ CORS_ORIGIN_REGEX_WHITELIST = [
 # Cookie security
 
 SESSION_COOKIE_HTTPONLY = True
-SESSION_COOKIE_SECURE = False if os.getenv("SESSION_COOKIE_SECURE") == "False" else True
-CSRF_COOKIE_SECURE = False if os.getenv("CSRF_COOKIE_SECURE") == "False" else True
+SESSION_COOKIE_SECURE = (
+    False if os.getenv("SESSION_COOKIE_SECURE") in ["False", False] else True
+)
+CSRF_COOKIE_SECURE = (
+    False if os.getenv("CSRF_COOKIE_SECURE") in ["False", False] else True
+)
 
 
 # SSL security
 
-SECURE_SSL_REDIRECT = False if os.getenv("SECURE_SSL_REDIRECT") == "False" else True
+SECURE_SSL_REDIRECT = (
+    False if os.getenv("SECURE_SSL_REDIRECT") in ["False", False] else True
+)
 SECURE_HSTS_SECONDS = os.getenv("SECURE_HSTS_SECONDS")
 
 
