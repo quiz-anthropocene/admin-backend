@@ -66,7 +66,6 @@ export default {
     twitterScript.setAttribute('src', 'https://platform.twitter.com/widgets.js');
     twitterScript.setAttribute('charset', 'utf-8');
     document.head.appendChild(twitterScript);
-
     // Add Facebook Script
     const fbScript = document.createElement('script');
     fbScript.text = `(function(d, s, id) {
