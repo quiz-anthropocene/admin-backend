@@ -14,9 +14,10 @@
       \ être multiples (conférences, formations, quiz, jeu, etc.).</p>"
     application_backend_url: ''
     application_frontend_url: ''
-    daily_stat_last_aggregated: 2020-12-06 12:37:07.354903+00:00
-    notion_questions_scope_1_last_imported: 2020-12-06 12:22:42.027365+00:00
-    notion_questions_scope_2_last_imported: 2020-12-06 12:22:42.027384+00:00
-    notion_questions_scope_3_last_imported: 2020-12-06 12:22:42.027391+00:00
-    notion_questions_scope_4_last_imported: 2020-12-06 12:22:42.027398+00:00
-    github_last_exported: 2020-12-06 12:44:40.397140+00:00
+    daily_stat_last_aggregated: 2020-12-07 01:09:49.475129+00:00
+    notion_questions_scope_1_last_imported: 2020-12-07 03:04:13.739951+00:00
+    notion_questions_scope_2_last_imported: 2020-12-07 03:04:13.739964+00:00
+    notion_questions_scope_3_last_imported: 2020-12-07 03:04:13.739970+00:00
+    notion_questions_scope_4_last_imported: 2020-12-07 03:04:13.739975+00:00
+    github_last_exported: 2020-12-07 03:40:17.545681+00:00
+    notion_contributions_last_exported: 2020-12-07 01:23:41.306105+00:00
