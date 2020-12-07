@@ -27,7 +27,7 @@ aka "Quiz de l'Anthropocène"
 
 - Backend: Python Django
 - Frontend: Vue.js, [![Netlify Status](https://api.netlify.com/api/v1/badges/fda65ff6-86b3-4a33-81bd-708699135c63/deploy-status)](https://app.netlify.com/sites/know-your-planet/deploys)
-- DevOps: Scalingo, Netlify, CircleCI
+- DevOps: Scalingo, Netlify, Github Actions
 
 Plus de détails [ici](CONTRIBUTING.md#stack-technique)
 

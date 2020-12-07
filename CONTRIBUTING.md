@@ -92,7 +92,8 @@ La donnée est lue directement depuis les fichiers yaml dans le dossier `/data`.
 
 - Le Backend est hébergé sur Scalingo
 - Le Frontend est hébergé sur Netlify (free tier)
-- CI/CD avec CircleCI
+- CI/CD avec Github Actions
+- Cron pour automatiser certaines tâches avec Github Actions
 
 ### Lancer le projet en local
 
