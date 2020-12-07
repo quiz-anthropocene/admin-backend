@@ -9,6 +9,7 @@ from django.http import HttpResponse
 from django.conf import settings
 from django.contrib import admin
 from django.contrib.admin import AdminSite
+from django.contrib.auth.models import Group, Permission, User
 from django.core import management
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.html import mark_safe
@@ -654,6 +655,9 @@ class QuestionAggStatAdmin(ExportMixin, admin.ModelAdmin):
         "like_count",
         "dislike_count",
     )
+    actions = [
+        "export_as_csv",
+    ]
 
     def get_readonly_fields(self, request, obj=None):
         return [f.name for f in obj._meta.fields]
@@ -953,3 +957,6 @@ admin_site.register(DailyStat, DailyStatAdmin)
 admin_site.register(Contribution, ContributionAdmin)
 admin_site.register(Glossary, GlossaryAdmin)
 admin_site.register(admin.models.LogEntry, LogEntryAdmin)
+admin_site.register(User)
+admin_site.register(Permission)
+admin_site.register(Group)
