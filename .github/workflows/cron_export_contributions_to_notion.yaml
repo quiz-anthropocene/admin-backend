@@ -1,4 +1,4 @@
-name: cron_aggregate_stats
+name: cron_export_contributions_to_notion
 
 # Controls when the action will run. 
 on:
@@ -11,7 +11,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  aggregate_stats:
+  export_contributions_to_notion:
     runs-on: ubuntu-latest
     steps:
       - run: curl -X "GET" "${{ secrets.BACKEND_URL }}/actions/export-contributions-to-notion?token=${{ secrets.CRON_GITHUB_ACTION_SECRET }}"
