@@ -291,7 +291,7 @@
     has_ordered_answers: true
     answer_explanation: 20 millions de Chinois quittent leur campagne chaque année,
       allant se loger dans des grandes constructions récentes, dont très peu sont
-      en bois, sans incitation à l'économiser le béton. C'est pourtant l'une des industries
+      en bois, sans incitation à économiser le béton. C'est pourtant l'une des industries
       les plus émettrices de gaz à effet de serre.
     answer_accessible_url: https://blogs.alternatives-economiques.fr/gilles-raveaud/2015/04/02/la-chine-a-consomme-plus-de-ciment-en-3-ans-que-les-etats-unis-en-un-siecle
     answer_scientific_url: ''
@@ -1024,13 +1024,13 @@
 - model: api.question
   pk: 31
   fields:
-    text: Quelle est la conséquence de la dissolution du CO2 dans l'eau ?
+    text: Quelle est la conséquence de la dissolution du CO2 dans les océans
     hint: ''
     type: QCM
     category: 1
     difficulty: 1
-    answer_option_a: l'acidification des océans
-    answer_option_b: le réchauffement de l'eau
+    answer_option_a: Leur acidification
+    answer_option_b: leur réchauffement
     answer_option_c: un ralentissement du Gulf Stream
     answer_option_d: une baisse de la fertilité des poissons
     answer_correct: a
@@ -2011,7 +2011,7 @@
   pk: 61
   fields:
     text: On connaît la dernière grande extinction d'espèces, celle des dinosaures
-      il y a 65 millions d'année. Les scientifiques disent qu'une 6ème extinction
+      il y a 66 millions d'année. Les scientifiques disent qu'une 6ème extinction
       est en cours. A quelle vitesse les espèces disparaissent-elles par rapport à
       avant la révolution industrielle ?
     hint: ''
@@ -17114,7 +17114,7 @@
     answer_extra_info: https://twitter.com/laydgeur/status/1332786312366202881?s=21
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-07-30
@@ -17178,7 +17178,7 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -17228,7 +17228,7 @@
     answer_extra_info: ''
     author: laydgeur
     validator: ''
-    validation_status: A valider
+    validation_status: Validée
     added: 2020-06-17
     created: 2020-06-24
     updated: 2020-06-24
@@ -20482,7 +20482,7 @@
     hint: ''
     type: VF
     category: 1
-    difficulty: 2
+    difficulty: 1
     answer_option_a: Vrai
     answer_option_b: Faux
     answer_option_c: ''
