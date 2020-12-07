@@ -59,7 +59,11 @@ class Command(BaseCommand):
                 config = Configuration.get_solo()
                 config.notion_contributions_last_exported = timezone.now()
                 config.save()
+
                 print("Done !")
+                self.stdout.write(
+                    f"New contributions exported: {new_contributions_to_export.count()}"
+                )
 
             except Exception as e:
                 print("Error !")
