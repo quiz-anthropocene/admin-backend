@@ -144,7 +144,7 @@ export default {
       return this.$store.state.quizzes.length;
     },
     questionsCount() {
-      return this.$store.state.questions.length;
+      return this.$store.state.questionsValidated.length;
     },
     quizzes() {
       return this.$store.state.quizzes
