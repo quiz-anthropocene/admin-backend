@@ -152,26 +152,28 @@ const store = new Vuex.Store({
       quizzes.map((q) => {
         const quizQuestions = getters.getQuestionsByIdList(q.questions);
         const quizTags = getters.getTagsByIdList(q.tags);
-        if (uniqueAuthor.indexOf(q.author) === -1) {
-          uniqueAuthor.push(q.author);
-          authorCounter[q.author] = {
-            counter: 1,
-            object: q.author,
-          };
-        } else {
-          authorCounter[q.author].counter += 1;
-        }
-        quizTags.forEach((t) => {
-          if (uniqueTag.indexOf(t) === -1) {
-            uniqueTag.push(t.name);
-            tagCounter[t.name] = {
+        if (q.publish === true) {
+          if (uniqueAuthor.indexOf(q.author) === -1) {
+            uniqueAuthor.push(q.author);
+            authorCounter[q.author] = {
               counter: 1,
-              object: t,
+              object: q.author,
             };
           } else {
-            tagCounter[t.name].counter += 1;
+            authorCounter[q.author].counter += 1;
           }
-        });
+          quizTags.forEach((t) => {
+            if (uniqueTag.indexOf(t.name) === -1) {
+              uniqueTag.push(t.name);
+              tagCounter[t.name] = {
+                counter: 1,
+                object: t,
+              };
+            } else {
+              tagCounter[t.name].counter += 1;
+            }
+          });
+        }
         Object.assign(q, { questions: quizQuestions }, { tags: quizTags });
         return q;
       });
