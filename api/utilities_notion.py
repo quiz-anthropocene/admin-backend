@@ -50,7 +50,10 @@ def get_contribution_table():
 
 
 def add_contribution_row(
-    contribution_text: str, contribution_description: str, contribution_type: str
+    contribution_text: str,
+    contribution_description: str,
+    contribution_type: str,
+    contribution_date=datetime.now(),
 ):
     """
     Contribution page: add row
@@ -63,7 +66,7 @@ def add_contribution_row(
     row.text = contribution_text
     row.description = contribution_description
     # row.created = notion.collection.NotionDate(date.today())
-    row.created = notion.collection.NotionDate(datetime.now())
+    row.created = notion.collection.NotionDate(contribution_date)
     return row
 
 

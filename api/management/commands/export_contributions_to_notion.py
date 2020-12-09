@@ -8,6 +8,9 @@ from api import utilities_notion
 from api.models import Configuration, Contribution
 
 
+config = Configuration.get_solo()
+
+
 class Command(BaseCommand):
     """
     Usage:
@@ -32,7 +35,6 @@ class Command(BaseCommand):
             )
             contributions_last_exported = timezone.make_aware(custom_start_date_parsed)
         else:
-            config = Configuration.get_solo()
             contributions_last_exported = config.notion_contributions_last_exported
         print("Contributions last exported:", contributions_last_exported)
 
@@ -53,12 +55,12 @@ class Command(BaseCommand):
                         contribution_text=new_contribution.text,
                         contribution_description=new_contribution.description,
                         contribution_type=new_contribution.type,
+                        contribution_date=new_contribution.created,
                     )
 
-                # update config
-                config = Configuration.get_solo()
-                config.notion_contributions_last_exported = timezone.now()
-                config.save()
+                    # update config every time (sometimes it time's out)
+                    config.notion_contributions_last_exported = timezone.now()
+                    config.save()
 
                 print("Done !")
                 self.stdout.write(
