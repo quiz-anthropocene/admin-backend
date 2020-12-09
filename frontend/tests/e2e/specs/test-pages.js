@@ -52,15 +52,15 @@ module.exports = {
       .end();
   },
 
-  'quiz list page': (browser) => {
-    browser
-      .openUrl('quiz/')
-      .assert.elementPresent('header')
-      .assert.elementPresent('footer')
-      .assert.elementPresent('.filter-box')
-      .assert.elementPresent('#quiz-list')
-      .end();
-  },
+  // 'quiz list page': (browser) => {
+  //   browser
+  //     .openUrl('quiz/')
+  //     .assert.elementPresent('header')
+  //     .assert.elementPresent('footer')
+  //     .assert.elementPresent('.filter-box')
+  //     .assert.elementPresent('#quiz-list')
+  //     .end();
+  // },
 
   'quiz detail page': (browser) => {
     browser

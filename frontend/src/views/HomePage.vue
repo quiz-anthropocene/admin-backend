@@ -1,8 +1,8 @@
 <template>
   <section>
 
-    <div class="row" v-if="quizzes && quizzes.length > 0" id="quiz-list">
-      <div class="col-sm-4" v-for="quiz in quizzes" :key="quiz.id">
+    <div class="row" v-if="quizzesFeatured && quizzesFeatured.length > 0" id="quiz-list">
+      <div class="col-sm-4" v-for="quiz in quizzesFeatured" :key="quiz.id">
         <QuizCard :quiz="quiz"/>
       </div>
     </div>
@@ -65,7 +65,7 @@
     </div>
 
     <div class="alert alert-warning" role="alert">
-      <i v-if="questionsCount">Il y a actuellement <strong>{{ questionsCount }} questions</strong> et <strong>{{ quizCount }} quiz</strong>. </i>
+      <i v-if="questionsCount">Il y a actuellement <strong>{{ questionsCount }} questions</strong> et <strong>{{ quizzesPublishedCount }} quiz</strong>. </i>
       <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus ! </i>
     </div>
     <div v-if="newsletterRegistrationCallback" class="alert alert-success" role="alert">
@@ -140,14 +140,14 @@ export default {
   },
 
   computed: {
-    quizCount() {
-      return this.$store.state.quizzes.length;
+    quizzesPublishedCount() {
+      return this.$store.state.quizzesPublished.length;
     },
     questionsCount() {
       return this.$store.state.questionsValidated.length;
     },
-    quizzes() {
-      return this.$store.state.quizzes
+    quizzesFeatured() {
+      return this.$store.state.quizzesPublished
         .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
         .sort((a, b) => b.id - a.id)
         .slice(0, 3);
