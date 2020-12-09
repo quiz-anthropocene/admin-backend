@@ -7,11 +7,11 @@ import constants from './constants';
 import configurationYamlData from '../../data/configuration.yaml';
 import statsYamlData from '../../data/stats.yaml';
 import authorsYamlData from '../../data/authors.yaml';
+import difficultyLevelsYamlData from '../../data/difficulty-levels.yaml';
 import categoriesYamlData from '../../data/categories.yaml';
 import tagsYamlData from '../../data/tags.yaml';
 import questionsYamlData from '../../data/questions.yaml';
 import quizzesYamlData from '../../data/quizzes.yaml';
-import difficultyLevelsYamlData from '../../data/difficulty-levels.yaml';
 import ressourcesGlossaireYamlData from '../../data/ressources-glossaire.yaml';
 import ressourcesSoutiensYamlData from '../../data/ressources-soutiens.yaml';
 import ressourcesAutresAppsYamlData from '../../data/ressources-autres-apps.yaml';
@@ -107,13 +107,6 @@ const store = new Vuex.Store({
       state.tags.forEach((t) => {
         t.question_count = questionsValidated.filter((q) => q.tags.map((qt) => qt.id).includes(t.id)).length;
       });
-
-      // create difficulty list: add question_count
-      const difficultyLevels = difficultyLevelsYamlData;
-      difficultyLevels.forEach((dl) => {
-        dl.question_count = questionsValidated.filter((q) => q.difficulty === dl.value).length;
-      });
-      commit('SET_DIFFICULTY_LEVEL_LIST', { list: difficultyLevels });
     },
     GET_QUESTION_PENDING_VALIDATION_LIST_FROM_LOCAL_YAML: ({ commit }) => {
       const questionsPendingValidation = processModelList(questionsYamlData).filter((el) => el.validation_status === constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS);
@@ -151,6 +144,13 @@ const store = new Vuex.Store({
       commit('SET_AUTHOR_LIST', { list: authorsYamlData });
     },
     /**
+     * Get difficulty-levels
+     * Pre-processing ? None
+     */
+    GET_DIFFICULTY_LEVEL_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_DIFFICULTY_LEVEL_LIST', { list: difficultyLevelsYamlData });
+    },
+    /**
      * Get categories
      * Pre-processing ? None
      */
@@ -164,10 +164,6 @@ const store = new Vuex.Store({
     GET_TAG_LIST_FROM_LOCAL_YAML: ({ commit }) => {
       commit('SET_TAG_LIST', { list: processModelList(tagsYamlData) });
     },
-    /**
-     * Get authors ? Extracted in GET_QUESTION_LIST_FROM_LOCAL_YAML
-     * Get difficulty list ? Extracted in GET_QUESTION_LIST_FROM_LOCAL_YAML
-     */
     /**
      * Get ressources: glossaire, soutiens, autres apps
      * Pre-processing ? for soutiens, append quiz tag or question author
@@ -282,7 +278,7 @@ const store = new Vuex.Store({
     getQuestionsValidatedByFilter: (state) => (filter) => state.questionsValidated.filter((q) => (filter.category ? (q.category.name === filter.category) : true))
       .filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
       .filter((q) => (filter.author ? (q.author === filter.author) : true))
-      .filter((q) => (Number.isInteger(filter.difficulty) ? (q.difficulty === filter.difficulty) : true)),
+      .filter((q) => (filter.difficulty ? (q.difficulty === parseInt(filter.difficulty, 10)) : true)),
     getCurrentQuestionIndex: (state) => (currentQuestionId) => state.questionsDisplayed.findIndex((q) => q.id === currentQuestionId),
     getNextQuestionByFilter: (state) => (currentQuestionId) => {
       const currentQuestionIndex = currentQuestionId ? state.questionsDisplayed.findIndex((q) => q.id === currentQuestionId) : state.questionsDisplayed[0];
@@ -291,6 +287,7 @@ const store = new Vuex.Store({
     getQuizById: (state) => (quizId) => state.quizzes.find((q) => (q.id === quizId)),
     getQuizzesPublishedByFilter: (state) => (filter) => state.quizzesPublished.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
       .filter((q) => (filter.author ? (q.author === filter.author) : true)),
+    getDifficultyLevelEmojiByValue: (state) => (difficultyLevelValue) => state.difficultyLevels.find((dl) => (dl.value === parseInt(difficultyLevelValue, 10))).emoji,
   },
 });
 

@@ -64,6 +64,17 @@ class Command(BaseCommand):
                 file_content=stats_yaml,
                 branch_name=data_update_branch_name,
             )
+            # data/difficulty-levels.yaml
+            difficulty_levels_list = utilities_stats.difficulty_aggregate()
+            difficulty_levels_yaml = yaml.safe_dump(
+                difficulty_levels_list, allow_unicode=True, sort_keys=False
+            )
+            utilities_github.create_file(
+                file_path="data/difficulty-levels.yaml",
+                commit_message="update difficulty levels",
+                file_content=difficulty_levels_yaml,
+                branch_name=data_update_branch_name,
+            )
             # data/authors.yaml
             authors_list = utilities_stats.author_aggregate()
             authors_yaml = yaml.safe_dump(

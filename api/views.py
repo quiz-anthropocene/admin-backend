@@ -282,7 +282,7 @@ def difficulty_level_list(request):
                         if item["value"] == x
                     ),
                     0,
-                ),  # noqa
+                ),
             }
         )
 
