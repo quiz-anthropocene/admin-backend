@@ -378,7 +378,7 @@
     difficulty: 2
     answer_option_a: La combustion de 1 litre de pétrole
     answer_option_b: 'La combustion de 1 litre de gaz à 200 bar '
-    answer_option_c: 50 m2 de panneaux solaires pendant 1h
+    answer_option_c: 50 m² de panneaux solaires pendant 1h
     answer_option_d: Une éolienne de 5m de diamètre pendant 1h avec un vent à 80km/h
     answer_correct: a
     has_ordered_answers: false
@@ -597,8 +597,9 @@
 - model: api.question
   pk: 19
   fields:
-    text: Lequel de ces gestes permet de réduire le plus son empreinte carbone (par
-      rapport à la consommation moyenne d'un Français) ?
+    text: En mettant de côté la facilité de leur mise en œuvre, lequel de ces gestes
+      permet de réduire le plus son empreinte carbone (par rapport à la consommation
+      moyenne d'un Français) ?
     hint: ''
     type: QCM
     category: 2
@@ -610,8 +611,8 @@
     answer_correct: a
     has_ordered_answers: true
     answer_explanation: Tous les gestes ne se valent pas en impact, comme le montre
-      l'infographie. Et l'option qui économise le plus dans ce graphique suscite systématiquement
-      des débats animés !
+      l'infographie.  La dernière option qui économise le plus d'émission pose bien
+      sûr d'autres question, et son évaluation même est sujet de controverse.
     answer_accessible_url: https://jancovici.com/changement-climatique/agir-individuellement/effectuer-sa-ba-pour-agir-contre-le-changement-climatique-quelques-ordres-de-grandeur/
     answer_scientific_url: https://iopscience.iop.org/article/10.1088/1748-9326/aa7541
     answer_image_url: https://pbs.twimg.com/media/DsBdo7AWwAARSX1.jpg
@@ -1683,18 +1684,18 @@
     type: QCM
     category: 2
     difficulty: 2
-    answer_option_a: 100 000 hectares (superficie de Hong-Kong)
+    answer_option_a: 100,000 hectares (superficie de Hong-Kong)
     answer_option_b: 1 million d'hectares (superficie de Chypre)
     answer_option_c: 10 millions d’hectares (superficie de la Corée du Sud)
     answer_option_d: 100 millions d'hectares (superficie de l’Égypte)
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: Soit plus de 20% de la surface de la France Métropolitaine.
+    answer_explanation: Soit plus de 20% de la surface de la France métropolitaine.
     answer_accessible_url: https://www.planetoscope.com/sols/1175-disparition-de-surfaces-agricoles-dans-le-monde.html
     answer_scientific_url: ''
-    answer_image_url: ''
-    answer_image_explanation: ''
-    answer_extra_info: ''
+    answer_image_url: https://i.guim.co.uk/img/media/6254405aa6e58794f74e5a782413c2f1f151ee9d/0_0_5410_3245/master/5410.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=8eff17dc64f679a3950d41fde8cb632a
+    answer_image_explanation: Érosion des sols au Royaume-Uni
+    answer_extra_info: 'Autre source : https://www.theguardian.com/environment/2015/dec/02/arable-land-soil-food-security-shortage'
     author: Matthieu Massart
     validator: ''
     validation_status: Validée
@@ -2184,12 +2185,16 @@
     answer_option_d: 70%
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: Quand on brûle du bois, ce carbone part dans l'atmosphère.
-      On peut craindre que la déforestation ne s'agrave une fois le pic des énergies
-      fossiles atteint.
+    answer_explanation: 'La majorité des émissions de CO2 d''origine humaine (énergies
+      fossiles et déforestation) finit dans l''atmosphère (~45%) et nous pose *quelques*
+      problèmes avec le climat.
+
+      Environ 30% du CO2 émis est dissous dans les océans, et contribue à son acidification.
+
+      Le reste (~25%) est absorbé par la végétation.'
     answer_accessible_url: https://reseauactionclimat.org/stockage-carbone-sol-rechauffement-climatique/
-    answer_scientific_url: ''
-    answer_image_url: ''
+    answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/19/presentation.htm
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/66.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Matthieu Massart
@@ -2439,14 +2444,15 @@
     answer_correct: b
     has_ordered_answers: true
     answer_explanation: Si internet était un pays, il serait le troisième plus gros
-      consommateur d’électricité au monde derrière la Chine et les États-Unis, avec
-      quelque 1 500 térawattheures (TWH) par an, avancent des experts. Mais il faut
+      consommateur d’électricité au monde, derrière la Chine et les États-Unis, avec
+      quelques 1,500 térawattheures (TWh) par an, avancent des experts. Mais il faut
       un peu relativiser ces chiffres avec le nombre d'utilisateurs, qui se chiffre
       en milliards.
     answer_accessible_url: https://www.lefigaro.fr/secteur/high-tech/internet-un-ogre-energetique-a-l-appetit-insatiable-en-electricite-20191120
-    answer_scientific_url: ''
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_scientific_url: https://www.nature.com/articles/d41586-018-06610-y
+    answer_image_url: https://media.nature.com/w1172/magazine-assets/d41586-018-06610-y/d41586-018-06610-y_16109898.jpg
+    answer_image_explanation: 'Data center de Facebook à Luleå, en Suède. Crédit :
+      Jonathan Nackstrand/AFP/Getty'
     answer_extra_info: 'graphique pollution mails : https://www.leparisien.fr/resizer/r6wWjvmpV910kaFMATZjfE2L_4Q=/800x512/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/JW6W6ZUMZPZXPL6ZFWWDD5ISMM.jpg
 
 
@@ -3043,10 +3049,11 @@
 - model: api.question
   pk: 92
   fields:
-    text: L'objectif de la COP21 à l'horizon 2050 est que chaque humain n'émette pas
-      plus que 2,1 tonnes d'équivalent CO2 par an. Imaginons que je ne fasse strictement
-      rien d'autre de l'année. Combien de kilomètres pourrais-je parcourir avec une
-      voiture diesel consommant 6 L/100km pour rester dans ce budget ?
+    text: 'L''objectif de la COP21 à l''horizon 2050 est que chaque humain sur terre
+      n''émette pas plus que 2,1 tonnes d''équivalent CO2 par an.
+
+      Imaginons que je n''émette rien d''autre de l''année. Combien de kilomètres
+      pourrai-je parcourir avec une Clio diesel pour rester dans ce budget ?'
     hint: ''
     type: QCM
     category: 2
@@ -3057,13 +3064,18 @@
     answer_option_d: 1 300 000 km
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: Ou encore chauffer un appartement de 100m2 relativement peu
-      énergivore. Ou encore 1 aller-retour Paris-New York en avion. Ou encore fabriquer
-      1,5 ordinateur
+    answer_explanation: 'Ou encore chauffer un appartement de 100m² relativement peu
+      énergivore.
+
+      Ou encore 1 aller-retour Paris-New York en avion.
+
+      Ou encore fabriquer 1,5 ordinateurs.
+
+      Mais c''est tout !'
     answer_accessible_url: https://www.la-croix.com/Ethique/Sciences-Ethique/Sciences/Deux-tonnes-de-CO2-par-habitant-comment-faire-_NG_-2009-12-07-569882
     answer_scientific_url: ''
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_image_url: https://www.ecoconso.be/sites/default/files/publications/une-tonne-co2.jpg
+    answer_image_explanation: Ce qu'on peut faire en émettant une tonne de CO2
     answer_extra_info: ''
     author: Raphael Odini
     validator: Matthieu Massart
@@ -3241,24 +3253,44 @@
 - model: api.question
   pk: 98
   fields:
-    text: A chaque lavage, les vêtements en fibres synthétiques relâchent des microparticules
-      de plastique, trop petites pour être filtrées. Quelle quantité de micro-plastiques
-      finit sa course dans les océans tous les ans ?
+    text: 'Les microplastiques sont des fines particules rejetées par l''usure des
+      pneus, le lavage de vêtements synthétiques, les peintures, ...
+
+      Quelle quantité de microplastiques finit sa course dans les océans du monde
+      tous les ans ?'
     hint: ''
     type: QCM
     category: 3
     difficulty: 4
-    answer_option_a: 5 000 tonnes
-    answer_option_b: 50 000 tonnes
-    answer_option_c: 500 000 tonnes
-    answer_option_d: 5 millions de tonnes
+    answer_option_a: 15 000 tonnes (2g par habitant)
+    answer_option_b: 150 000 tonnes (20g par habitant)
+    answer_option_c: 1,5 millions de tonnes (200g par habitant)
+    answer_option_d: 15 millions de tonnes (2 kg par habitant)
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: Cela équivaut à 50 milliards de bouteille en plastique. Une
-      partie est ingérée par les organismes marins.
+    answer_explanation: 'Les rejets mondiaux de microplastiques primaires dans les
+      océans ont été estimés à 1,5 millions de tonnes par an. Ce chiffre mondial correspond
+      à 212 grammes par personne, soit l’équivalent, dans le monde, d’un sac d’épicerie
+      vide jeté dans l’océan chaque semaine par chaque habitant.
+
+
+      On parle ici de microplastiques primaires, c’est-à-dire les particules de plastique
+      d’une taille inférieure à 5 mm qui se retrouvent directement dans l’environnement.
+
+      Ils se distinguent des microplastiques secondaires, qui proviennent principalement
+      de la dégradation due à leur exposition à l’environnement marin, de déchets
+      en plastique plus volumineux.
+
+
+      Les microplastiques primaires peuvent être volontairement ajoutés à des produits,
+      comme certains agents exfoliants incorporés dans des cosmétiques (gels douche,
+      crèmes, etc ) ou ils peuvent résulter de l’abrasion d’objets en plastique plus
+      gros, au cours de leur fabrication, de leur utilisation ou de leur entretien,
+      comme l’usure des pneus sur les routes ou celle des textiles synthétiques pendant
+      le lavage.'
     answer_accessible_url: ''
-    answer_scientific_url: ''
-    answer_image_url: ''
+    answer_scientific_url: https://portals.iucn.org/library/sites/library/files/documents/2017-002-Fr.pdf
+    answer_image_url: https://cdn.statcdn.com/Infographic/images/normal/18234.jpeg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Guillaume Boudry
@@ -3699,10 +3731,10 @@
     type: QCM
     category: 5
     difficulty: 2
-    answer_option_a: La chute d’une masse d'une tonne de 1500m de haut
-    answer_option_b: 1 kg de sucre
-    answer_option_c: 1 litre d’essence
-    answer_option_d: 1 poids lourd de 38 tonnes se déplaçant à 100 km/h
+    answer_option_a: Chute d’une masse d'une tonne de 1500m de haut
+    answer_option_b: Digestion d'un kilo de sucre
+    answer_option_c: Combustion d'un litre d’essence
+    answer_option_d: Poids lourd de 38 tonnes se déplaçant à 100 km/h
     answer_correct: c
     has_ordered_answers: false
     answer_explanation: "Le litre d’essence dépasse les autres d’un facteur 2.\n\n\
@@ -3713,7 +3745,7 @@
       \ en ordre de grandeur 100 heures d'un humain qui pédalerait sur une dynamo."
     answer_accessible_url: https://fr.wikipedia.org/wiki/Ordres_de_grandeur_d%27%C3%A9nergie
     answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/documentation-gene/index/page/New_liquides
-    answer_image_url: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/112.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
@@ -4786,13 +4818,20 @@
     answer_option_d: 31 000
     answer_correct: d
     has_ordered_answers: true
-    answer_explanation: Le dernier rapport d’évaluation du GIEC de 2014 fait référence
-      à environ 31000 publications scientifiques. 9200 dans le groupe I. 12000 dans
-      le groupe II. 10000 dans le groupe III.
+    answer_explanation: 'Le dernier rapport d’évaluation du GIEC de 2014 fait référence
+      à environ 31000 publications scientifiques.
+
+      9200 dans le groupe I
+
+      12000 dans le groupe II
+
+      10000 dans le groupe III'
     answer_accessible_url: ''
     answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/03/WGIII_AR5_FactSheet-1.pdf
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/145.jpg
+    answer_image_explanation: Exemples d'un rapport du GIEC listant les références
+      des études scientifiques sur lequel il s'est appuyé. Il y a des centaines de
+      pages comme celles-ci.
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
@@ -4927,8 +4966,8 @@
 - model: api.question
   pk: 150
   fields:
-    text: Prenons 1 kg des quatre aliments suivants. Lequel génère le plus de gaz
-      à effet de serre ? (en kg CO2eq)
+    text: "Prenons 1 kg des quatre aliments suivants. \nLequel génère le plus de gaz\
+      \ à effet de serre ? (en équivalent CO2)"
     hint: ''
     type: QCM
     category: 2
@@ -4942,8 +4981,8 @@
     answer_explanation: '10 kg d''équivalent CO2 pour se procurer 1 kg de beurre.
 
       Ce chiffre tient compte de tout le processus d’élaboration : production, transformation,
-      conditionnement, transport. Il faut une vingtaine de litres de lait pour faire
-      1 kg de beurre.'
+      conditionnement, transport. Il faut en effet une vingtaine de litres de lait
+      pour faire 1 kg de beurre.'
     answer_accessible_url: ''
     answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/Datalab-25-menages-environnement-cc-ed-2017-oct2017-b.pdf
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r048.jpg
@@ -5272,25 +5311,31 @@
 - model: api.question
   pk: 160
   fields:
-    text: La France est le 10ème producteur d’électricité mondial, avec environ 550
-      TWh par an. En comparaison, de combien la Chine a-t-elle augmenté sa production
-      d'électricité entre 2005 et 2015 ?
+    text: 'La France est le 10ème producteur d’électricité mondial, avec environ 550
+      TWh par an.
+
+      En comparaison, de combien la Chine a-t-elle augmenté sa production d''électricité
+      entre 2005 et 2015 ?'
     hint: ''
     type: QCM
     category: 5
     difficulty: 2
-    answer_option_a: l'équivalent de la production française
+    answer_option_a: L'équivalent de la production française
     answer_option_b: 2 fois la production française
     answer_option_c: 4 fois la production française
     answer_option_d: 6 fois la production française
     answer_correct: d
     has_ordered_answers: true
-    answer_explanation: En 2005, la Chine a produit 2500 TWh d’électricité. En 2015,
-      elle en produisait plus de 5800 TWh. Soit un ajout équivalent à 6 fois la totalité
-      de la France, en 10 ans. La majorité provient de centrales à charbon.
+    answer_explanation: 'En 10 ans, entre 2005 et 2015, la Chine est passée 1er producteur
+      mondial d''électricité (devant les États-Unis), en augmentant sa production
+      de plus de 3300 TWh, soit 6 fois la production totale d''électricité française.
+
+
+      Les deux tiers de cette augmentation ont été faite à partir de charbon, et 20%
+      à partir d''hydroélectricité.'
     answer_accessible_url: ''
     answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
-    answer_image_url: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/160.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
@@ -6101,21 +6146,23 @@
 - model: api.question
   pk: 186
   fields:
-    text: Il vous faudra environ 7 secondes pour lire cette question. Pendant ce laps
-      de temps, quelle quantité de CO2 aura été émise par les activités humaines ?
+    text: 'Il vous faudra environ 7 secondes pour lire cette question.
+
+      Pendant ce laps de temps, quelle quantité de CO2 aura été émise dans le monde
+      par les activités humaines ?'
     hint: ''
     type: QCM
     category: 2
     difficulty: 3
-    answer_option_a: 8 tonnes
-    answer_option_b: 80 tonnes
-    answer_option_c: 800 tonnes
-    answer_option_d: 8 000 tonnes
+    answer_option_a: 8 tonnes (bulle de 20m de diamètre)
+    answer_option_b: 80 tonnes (bulle de 40m de diamètre)
+    answer_option_c: 800 tonnes (bulle de 90m de diamètre)
+    answer_option_d: 8 000 tonnes (bulle de 200m de diamètre)
     answer_correct: d
     has_ordered_answers: true
     answer_explanation: En 2017 les activités humaines ont rejetées 36 milliards de
-      tonnes de CO2, ce qui fait environ 1100 tonnes (~600 millions de litres) par
-      seconde.
+      tonnes de CO2, ce qui fait environ 1100 tonnes (~600 millions de litres, soit
+      une bulle de 100m de diamètre) par seconde.
     answer_accessible_url: ''
     answer_scientific_url: http://www.globalcarbonatlas.org/en/CO2-emissions
     answer_image_url: https://reporterre.net/local/cache-vignettes/L720xH480/arton16196-43e69.png
@@ -7498,9 +7545,10 @@
 - model: api.question
   pk: 230
   fields:
-    text: Le rendement d’un moteur est le rapport entre l’énergie mécanique en sortie
-      et l’énergie fournie en entrée au moteur. Quel est le rendement moyen d'un moteur
-      thermique ?
+    text: 'Le rendement d’un moteur est le rapport entre l’énergie mécanique en sortie
+      et l’énergie fournie en entrée au moteur.
+
+      Quel est le rendement moyen d''un moteur thermique ?'
     hint: ''
     type: QCM
     category: 5
@@ -7511,12 +7559,18 @@
     answer_option_d: 55 %
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: 36% pour essence et 42% pour diesel pour être précis. Le reste
-      est principalement dissipé en chaleur dans l'atmosphère. C'est une limite thermodynamique
-      des moteurs thermiques (cycle de Carnot).
+    answer_explanation: 'Dans des conditions optimales de fonctionnement, le rendement
+      est actuellement au maximum de 36% pour un moteur essence et 42% pour diesel.
+
+      Le reste de l''énergie fournie par le carburant est perdu et dissipé en chaleur
+      dans l''atmosphère.
+
+      En réalité, les véhicules automobiles sont utilisés majoritairement sur de courts
+      trajets en agglomération, ce qui se traduit finalement par une sollicitation
+      des moteurs à faible charge, et un rendement qui ne dépasse guère 15 %.'
     answer_accessible_url: https://www.ifpenergiesnouvelles.fr/enjeux-et-prospective/decryptages/transports/les-vehicules-essence-et-diesel
     answer_scientific_url: ''
-    answer_image_url: ''
+    answer_image_url: https://www.ifpenergiesnouvelles.fr/sites/ifpen.fr/files/inline-images/Enjeux%20et%20prospective/Decryptage/TRANSPORTS/Capture_moteur.PNG
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Contributeur anonyme
@@ -8034,7 +8088,8 @@
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: 'Les Américains consomment environ 540 milliards de litres
-      d’essence par an. Soit 3 fois la consommation... de la Chine.
+      d’essence par an. Soit 3 fois la consommation... de la Chine (ou 50 fois celle
+      de la France).
 
 
       C''est considérable : 1/3 de l''essence automobile mondiale est engloutie par
@@ -11517,8 +11572,9 @@
 - model: api.question
   pk: 353
   fields:
-    text: Les États-Unis sont le 3ème producteur mondial de charbon. Combien ont-ils
-      d’années de réserves ?
+    text: 'Les États-Unis sont le 3ème producteur mondial de charbon.
+
+      Combien ont-ils d’années de réserves ?'
     hint: ''
     type: QCM
     category: 5
@@ -11532,8 +11588,9 @@
     answer_explanation: 'Les États-Unis possèdent des réserves prouvées de 250 milliards
       de tonnes de charbon (de loin le premier pays au monde, avec 25% du total mondial).
 
-      Au rythme de production actuel (3ème producteur mondial) ils en ont pour 360
-      ans, soit au moins jusqu’en l’an 2380.
+      Au rythme de production actuel (685 millions de tonnes extraites chaque années,
+      soit un cube de 750m de coté), ils en ont pour 360 ans, soit au moins jusqu’en
+      l’an 2380.
 
 
       Si elle devait brûler, cette seule quantité de charbon suffirait à augmenter
@@ -11757,22 +11814,26 @@
 - model: api.question
   pk: 360
   fields:
-    text: Lequel de ces pays produit au total plus d'électricité que ce que produisent
-      les seules centrales à gaz des États-Unis ?
+    text: Parmi ces pays, lesquels produisent plus d'électricité que les seules centrales
+      électriques à gaz des États-Unis ?
     hint: ''
     type: QCM
     category: 5
     difficulty: 4
-    answer_option_a: '1'
-    answer_option_b: '4'
-    answer_option_c: '6'
-    answer_option_d: '8'
+    answer_option_a: Chine
+    answer_option_b: Russie
+    answer_option_c: Inde
+    answer_option_d: Japon
     answer_correct: a
-    has_ordered_answers: true
-    answer_explanation: 'Dans le monde, 1 seul pays autre que les États-Unis produit
-      plus d’électricité que les centrales à gaz américaines : la Chine. Elles ont
-      par exemple produit plus d’électricité que la totalité de l’Inde avec ses 1,3
-      milliards d’habitants.'
+    has_ordered_answers: false
+    answer_explanation: 'Dans le monde, un seul pays (autre que les États-Unis) produit
+      plus d’électricité que les centrales à gaz américaines : la Chine.
+
+
+      Les seules centrales à gaz des États-Unis ont donc produit plus d''électricité
+      que la totalité de l’Inde et ses 1,3 milliards d’habitants, la totalité Russie,
+      ou encore la totalité du Japon (respectivement 3ème, 4ème et 5ème producteur
+      d''électricité mondial).'
     answer_accessible_url: ''
     answer_scientific_url: https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf#page56
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r244.jpg
@@ -13972,8 +14033,8 @@
 - model: api.question
   pk: 426
   fields:
-    text: Les travaux du GIEC ne prennent pas en compte les aspects sociaux du dérèglement
-      climatique. Vrai ou faux ?
+    text: Vrai ou Faux ? Les travaux du GIEC ne prennent pas en compte les aspects
+      sociaux du dérèglement climatique.
     hint: Le GIEC est composé de plusieurs groupes de travail, sur les aspects scientifiques
       du climat mais aussi sur l’adaptation et l’atténuation des risques
     type: VF
@@ -13990,8 +14051,8 @@
       socio-économiques et naturels aux changements climatiques, les conséquences
       négatives et positives de ces changements et les possibilités de s’y adapter.
     answer_accessible_url: https://www.ecologique-solidaire.gouv.fr/comprendre-giec
-    answer_scientific_url: ''
-    answer_image_url: ''
+    answer_scientific_url: https://www.ipcc.ch/languages-2/francais/
+    answer_image_url: https://archive.ipcc.ch/img/graphics/ipcc_chart_web_fr.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Citoyens Pour le Climat
@@ -14023,10 +14084,10 @@
       du GIEC ne reçoivent aucune rémunération de l’ONU ni du GIEC. Ils sont détachés
       par leurs laboratoires et leurs frais de déplacement et d'hébergement sont à
       peine couverts.
-    answer_accessible_url: https://www.ecologique-solidaire.gouv.fr/comprendre-giec
-    answer_scientific_url: ''
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_accessible_url: https://lejournal.cnrs.fr/articles/le-giec-en-quatre-questions
+    answer_scientific_url: https://www.ecologique-solidaire.gouv.fr/comprendre-giec
+    answer_image_url: https://www.ipcc.ch/site/assets/uploads/2020/02/WP_AR6_fr_web-1.png
+    answer_image_explanation: Processus de construction d'un rapport du GIEC
     answer_extra_info: ''
     author: Citoyens Pour le Climat
     validator: Matthieu Massart
@@ -15551,9 +15612,11 @@
 - model: api.question
   pk: 476
   fields:
-    text: Les récifs coralliens représentent moins de 0,25 % de tout l’environnement
-      marin. Quel pourcentage de la population aquatique est dépendant de cet habitat
-      naturel ?
+    text: 'Les récifs coralliens représentent moins de 0,25 % de tout l’environnement
+      marin.
+
+      Quel pourcentage de la population aquatique est dépendant de cet habitat naturel
+      ?'
     hint: ''
     type: QCM
     category: 4
@@ -15564,13 +15627,16 @@
     answer_option_d: 90%
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: On estime que ce sont près de deux millions d’espèces différentes
-      qui vivent dans, sur et autour des récifs coralliens du monde. Environ un quart
-      des récifs coralliens mondiaux ont déjà subi des dégâts irréversibles, et deux
-      tiers sont gravement menacés. En cause, encore et toujours les activités humaines.
+    answer_explanation: 'On estime que ce sont près de deux millions d’espèces différentes
+      qui vivent dans, sur et autour des récifs coralliens du monde.
+
+      Environ un quart des récifs coralliens mondiaux ont déjà subi des dégâts irréversibles,
+      et deux tiers sont gravement menacés.
+
+      En cause, encore et toujours les activités humaines.'
     answer_accessible_url: https://www.lemonde.fr/planete/article/2020/04/06/en-australie-la-grande-barriere-de-corail-victime-de-l-ete-austral_6035755_3244.html
     answer_scientific_url: ''
-    answer_image_url: ''
+    answer_image_url: https://planete.lesechos.fr/wp-content/uploads/2020/03/corail-poissons.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
@@ -15656,17 +15722,16 @@
     answer_option_d: ''
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: 'La viande de porc est la plus consommée en France, devant
-      les volailles et les bovins. Les Français sont les 5èmes plus gros consommateurs
-      de porcs de l’Union Européenne, loin derrière les Hongrois, Autrichiens, Polonais,
-      Espagnols et Danois qui en consomment plus de 50 kg par an.
-
-      Toutes viandes confondues, un français en mange en moyenne 90 kg par an, soit
-      250g par jour...'
+    answer_explanation: "La viande de porc est la plus consommée en France, devant\
+      \ les volailles et les bovins, même si elle est en baisse depuis les années\
+      \ 90. \n\nLes Français sont les 5èmes plus gros consommateurs de porcs de l’Union\
+      \ Européenne, loin derrière les Hongrois, Autrichiens, Polonais, Espagnols et\
+      \ Danois qui en consomment plus de 50 kg par an.\n\nToutes viandes confondues,\
+      \ un français en mange en moyenne 90 kg par an, soit 250g par jour..."
     answer_accessible_url: https://www.inrae.fr/actualites/que-connaissez-vous-des-cochons
     answer_scientific_url: https://agreste.agriculture.gouv.fr/agreste-web/disaron/GraFraChap10.2/detail/
-    answer_image_url: ''
-    answer_image_explanation: 'Page 114 de graphagri '
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/479.png
+    answer_image_explanation: ''
     answer_extra_info: ''
     author: INRAE
     validator: Matthieu Massart
@@ -15785,13 +15850,16 @@
     answer_option_d: Norvège, Turquie, Suède
     answer_correct: d
     has_ordered_answers: false
-    answer_explanation: La Norvège est de loin le 1er producteur d'hydroélectricité
+    answer_explanation: 'La Norvège est de loin le 1er producteur d''hydroélectricité
       en Europe avec 125 TWh produit en 2019. Elle est suivie de la Turquie (87 TWh),
-      la Suède (64 TWh), la France (63 TWh) et l'Italie (47 TWh). Attention ce classement
-      peut varier selon les années (exceptée la Norvège toujours en tête).
+      la Suède (64 TWh), la France (63 TWh) et l''Italie (47 TWh).
+
+
+      Attention ce classement peut varier selon les années (exceptée la Norvège toujours
+      en tête).'
     answer_accessible_url: https://www.statista.com/statistics/690039/hydropower-generation-europe/
     answer_scientific_url: https://www.hydropower.org/statusreport
-    answer_image_url: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/483.png
     answer_image_explanation: ''
     answer_extra_info: 'classement puissance installé: https://www.hydropower.org/country-profiles/region-europe'
     author: laydgeur
@@ -16136,8 +16204,9 @@
 - model: api.question
   pk: 494
   fields:
-    text: Si l’on empilait tous les barils de pétrole que la France consomme en une
-      année, à quelle altitude irait-on ?
+    text: 'Si l’on empilait tous les barils de pétrole  que la France consomme en
+      une année, à quelle altitude irait-on ? 1 baril : 80cm de haut, contenance 159
+      litres.'
     hint: On irait très très haut !...
     type: QCM
     category: 5
@@ -16435,10 +16504,13 @@
     answer_option_d: 115 ans
     answer_correct: d
     has_ordered_answers: true
-    answer_explanation: Les États-Unis sont devenus le 1er émetteur de CO2 mondial
-      en 1890 en dépassant le Royaume-Uni, jusqu'en 2006 où ils ont été dépassés par
-      la Chine. Soit une durée totale de 116 ans. Durée pendant laquelle ils ont émis
-      en cumulé 330 milliards de tonnes de CO2.
+    answer_explanation: 'Les États-Unis sont devenus le 1er émetteur de CO2 mondial
+      en 1890 en dépassant le Royaume-Uni, jusqu''en 2006 où ils ont été dépassés
+      par la Chine. Soit une durée totale de 116 ans.
+
+
+      Durée pendant laquelle ils ont émis en cumulé 330 milliards de tonnes de CO2,
+      soit plus que le cumul de la Chine, de l''Inde et de la Russie.'
     answer_accessible_url: ''
     answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
     answer_image_url: https://ourworldindata.org/exports/annual-co2-emissions-per-country-da8ccccaf5fc9d6bab92c3527f0cc596_v20_850x600.svg
@@ -17585,12 +17657,16 @@
     answer_option_d: 65 ans
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: Pendant 36 ans, de 1834 à 1870, la France a émis plus de 10%
-      des émissions mondiales de CO2. Pendant cette période, les émissions françaises
+    answer_explanation: 'Pendant 36 ans, de 1834 à 1870, la France a émis plus de
+      10% des émissions mondiales de CO2. Pendant cette période, les émissions françaises
       sont passées de 9 millions de tonnes à 50 millions de tonnes de CO2.
+
+      Les émissions territoriales de la France sont (chiffres 2018) de 340 millions
+      de tonnes de CO2 par an, mais cette quantité ne représente plus qu''environ
+      1% des émissions mondiales.'
     answer_accessible_url: ''
-    answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
-    answer_image_url: ''
+    answer_scientific_url: https://ourworldindata.org/co2/country/france?country=~FRA
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/538.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
@@ -17710,7 +17786,8 @@
 - model: api.question
   pk: 542
   fields:
-    text: En quelle année la France a passé son maximum d'émissions de CO2 ?
+    text: En quelle année a-ton émis a-t-elle émis le plus de CO2 sur le territoire
+      français ?
     hint: ''
     type: QCM
     category: 1
@@ -17721,11 +17798,24 @@
     answer_option_d: '1991'
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: Le maximum d'émissions de CO2 de la France a été émis en 1979,
+    answer_explanation: 'Le maximum d''émissions de CO2 émis en France a été en 1979,
       avec 530 millions de tonnes de CO2.
+
+      1979, c''est aussi l''année du 2ème choc pétrolier, et l''année de la mise en
+      service de la centrale nucléaire de Fessenheim, tête de série du parc nucléaire
+      actuel.
+
+      Ces deux événements ont largement contribué aux économies d''énergies et à la
+      baisse de la consommation d''énergies fossiles (pétrole et charbon), conduisant
+      de facto à une baisse des émissions de CO2. Les émissions territoriales de CO2
+      se sont remises à baisser vers les années 2000 suite à la désindustrialisation
+      et aux délocalisations progressives vers des pays étrangers, notamment la Chine.
+
+      Les émissions territoriales françaises sont maintenant d''environ 340 millions
+      de tonnes par an.'
     answer_accessible_url: ''
     answer_scientific_url: https://ourworldindata.org/co2/country/france?country=~FRA
-    answer_image_url: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/542.png
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
@@ -17979,8 +18069,8 @@
       de consommation de produits carnés.
     answer_accessible_url: https://anthropogoniques.com/affirmations-evolution-de-lalimentation/
     answer_scientific_url: ''
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/550.png
+    answer_image_explanation: Schéma de systèmes digestifs de différents mammifères
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
@@ -18013,8 +18103,8 @@
       d'Anatolie et du cuivre d'Espagne
     answer_accessible_url: ''
     answer_scientific_url: https://www.pourlascience.fr/sd/prehistoire/les-reseaux-sociaux-a-lepoque-gravettienne-6879.php
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_image_url: https://www.larousse.fr/encyclopedie/data/images/1011156-LEurope_pr%c3%a9historique.jpg
+    answer_image_explanation: 'L''Europe préhistorique. Crédit : Larousse'
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
@@ -18143,8 +18233,9 @@
       un niveau de fécondité plus élevé.
     answer_accessible_url: ''
     answer_scientific_url: https://phys.org/news/2020-05-supercomputer-simulations-reveal-neanderthal-extinction.html?fbclid=IwAR0YH-YV7fSdA6DEh6OoMqJp-bVaSr6xb0GaEM42zCagXZxXh97iNpVt3Ys
-    answer_image_url: ''
-    answer_image_explanation: ''
+    answer_image_url: https://upload.wikimedia.org/wikipedia/commons/8/88/Sapiens_neanderthal_comparison_en_blackbackground.png
+    answer_image_explanation: Crânes d'Homo sapiens (à gauche) et de Néandertalien
+      (à droite)
     answer_extra_info: ''
     author: Vincent Mignerot
     validator: Matthieu Massart
@@ -18159,15 +18250,15 @@
   pk: 556
   fields:
     text: On développe les énergies renouvelables, notamment le photovoltaïque, pour
-      éviter la consommation de charbon. Comment se comparent les capacités supplémentaire
-      de production de l'un et de l'autre sur la période 2000-2017 ?
+      éviter la consommation de charbon. Sur la période 2000 à 2018, comment se comparent
+      les capacités de production nouvellement créées pour l'un et l'autre ?
     hint: ''
     type: QCM
     category: 5
     difficulty: 3
     answer_option_a: Pour une unité supplémentaire de d'énergie photovoltaïque il
-      a été ajouté 14 unités d'énergie à base de charbon.
-    answer_option_b: Pour une unité supplémentaire de charbon il a été ajouté 14 fois
+      a été ajouté 11 unités d'énergie à base de charbon.
+    answer_option_b: Pour une unité supplémentaire de charbon il a été ajouté 11 fois
       plus d'énergie photovoltaïque.
     answer_option_c: Pour une unité supplémentaire d'énergie photovoltaïque, il a
       été ajouté une unité d'énergie à base de charbon
@@ -18176,13 +18267,13 @@
     answer_correct: a
     has_ordered_answers: false
     answer_explanation: 'L''histoire de l''énergie n''a jamais observé de réelle substitution
-      : toutes les énergies s''additionnent les unes aux autres. À ce jour, la croissance
-      des énergies renouvelables reste inférieure à la croissance de la production
-      d''énergie par le charbon. Pour l''éolien, le rapport est de 1 à 6 par rapport
-      aux unités supplémentaires de charbon.'
-    answer_accessible_url: https://www.youtube.com/watch?v=xgy0rW0oaFI&t=6333s
+      : à ce jour, toutes les énergies se sont additionnées les unes aux autres et
+      la croissance des énergies renouvelables reste de très loin inférieure à la
+      croissance de la production d''énergie par le charbon, et plus généralement
+      des énergies fossiles. Pour l''éolien, le rapport est de 1 à 5.'
+    answer_accessible_url: https://youtu.be/xgy0rW0oaFI?t=4539
     answer_scientific_url: ''
-    answer_image_url: ''
+    answer_image_url: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.slideshare.net%2FJoelleLeconte%2Fdiaporama-confrence-de-jancovici-sciences-po-29-aout-2019&psig=AOvVaw1q1wfIayHxaLXSangi5eta&ust=1607416887158000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDHgNu8u-0CFQAAAAAdAAAAABAY
     answer_image_explanation: Voir vidéo autour de 1h16'
     answer_extra_info: https://youtu.be/xgy0rW0oaFI
     author: Vincent Mignerot
@@ -21861,8 +21952,9 @@
 - model: api.question
   pk: 666
   fields:
-    text: 'Vrai ou faux : les transports des États-Unis émettent plus de CO2 que les
-      transports combinés de la Chine, de l’Inde, de la Russie et du Japon.'
+    text: 'Vrai ou faux : les transports des États-Unis (330 millions d''habitants)
+      émettent plus de CO2 que les transports combinés de la Chine, de l’Inde, de
+      la Russie et du Japon (3 milliards d''habitants).'
     hint: ''
     type: VF
     category: 1
@@ -22135,6 +22227,36 @@
     tags:
     - 13
     - 54
+- model: api.question
+  pk: 674
+  fields:
+    text: Combien un arbre absorbe-t-il de CO2 par an ?
+    hint: ''
+    type: QCM
+    category: 1
+    difficulty: 1
+    answer_option_a: ''
+    answer_option_b: ''
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: ''
+    has_ordered_answers: false
+    answer_explanation: Un arbre commun pompe en moyenne entre 20kg et 30kg de CO2
+      par an.
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Matthieu Massart
+    validator: ''
+    validation_status: Brouillon
+    added: 2020-12-03
+    created: 2020-12-09
+    updated: 2020-12-09
+    tags:
+    - 13
+    - 209
 - model: api.question
   pk: 675
   fields:

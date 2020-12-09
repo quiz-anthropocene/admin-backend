@@ -1086,3 +1086,9 @@
     name: Cuivre
     description: ''
     created: 2020-12-05
+- model: api.tag
+  pk: 209
+  fields:
+    name: Arbres
+    description: ''
+    created: 2020-12-09
