@@ -142,16 +142,6 @@ const store = new Vuex.Store({
       state.tags.forEach((t) => {
         t.quiz_count = quizzesPublished.filter((q) => q.tags.map((qt) => qt.id).includes(t.id)).length;
       });
-
-      // update authors: add quiz_count
-      quizzesPublished.forEach((q) => {
-        const authorListIndex = state.authors.map((a) => a.name).indexOf(q.author);
-        if (authorListIndex >= 0) {
-          state.authors[authorListIndex].quiz_count += 1;
-        } else {
-          state.authors.push({ name: q.author, quiz_count: 1 });
-        }
-      });
     },
     /**
      * Get authors

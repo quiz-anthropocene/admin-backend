@@ -177,6 +177,8 @@ def author_aggregate():
                 }
             )
         # sort
-        question_quiz_authors = sorted(question_quiz_authors, key=lambda k: k["name"])
+        question_quiz_authors = sorted(
+            question_quiz_authors, key=lambda k: k["name"].casefold()
+        )
 
     return question_quiz_authors

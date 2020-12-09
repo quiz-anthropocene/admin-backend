@@ -33,6 +33,33 @@
     <hr />
     <br />
 
+    <h3>Tous les quizs par...</h3>
+    <p><i>Cliquez sur une bulle pour voir tous les quizs (publiés) associés.</i></p>
+
+    <br />
+    <h4>🏷️&nbsp;Tags</h4>
+    <p>
+      <span v-for="tag in quizTags" :key="tag.name">
+        <router-link class="no-decoration" :to="{ name: 'quiz-list', query: { tag: tag.name } }">
+          <FilterLabel :key="tag.name" filterType="tag" v-bind:filterValue="tag.name" v-bind:filterCount="tag.quiz_count" />
+        </router-link>
+      </span>
+    </p>
+
+    <br />
+    <h4>✍️&nbsp;Auteurs</h4>
+    <p>
+      <span v-for="author in quizAuthors" :key="author.name">
+        <router-link class="no-decoration" :to="{ name: 'quiz-list', query: { author: author.name } }">
+          <FilterLabel :key="author.name" filterType="author" v-bind:filterValue="author.name" v-bind:filterCount="author.quiz_count" />
+        </router-link>
+      </span>
+    </p>
+
+    <br />
+    <hr />
+    <br />
+
     <h3>Toutes les questions par...</h3>
     <p><i>Cliquez sur une bulle pour voir toutes les questions (validées) associées.</i></p>
 
@@ -41,33 +68,33 @@
     <p>
       <span v-for="category in categories" :key="category.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { category: category.name } }">
-          <FilterLabel filterType="category" v-bind:filterValue="category.name" />
+          <FilterLabel filterType="category" v-bind:filterValue="category.name" v-bind:filterCount="category.question_count" />
         </router-link>
       </span>
     </p>
 
     <br />
     <h4>🏷️&nbsp;Tags</h4>
-    <p :class="{ 'max-height-300': !showAllTags }">
-      <span v-for="tag in tags" :key="tag.name">
+    <p :class="{ 'max-height-300': !showAllQuestionTags }">
+      <span v-for="tag in questionTags" :key="tag.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { tag: tag.name } }">
-          <FilterLabel :key="tag.name" filterType="tag" v-bind:filterValue="tag.name" />
+          <FilterLabel :key="tag.name" filterType="tag" v-bind:filterValue="tag.name" v-bind:filterCount="tag.question_count" />
         </router-link>
       </span>
     </p>
     <p class="text-center fake-link">
-      <span @click="toggleAllTags()">
-        <span v-if="!showAllTags">Afficher tous les tags</span>
-        <span v-if="showAllTags">Cacher tous les tags</span>
+      <span @click="toggleAllQuestionTags()">
+        <span v-if="!showAllQuestionTags">Afficher tous les tags</span>
+        <span v-if="showAllQuestionTags">Cacher tous les tags</span>
       </span>
     </p>
 
     <br />
     <h4>✍️&nbsp;Auteurs</h4>
     <p>
-      <span v-for="author in authors" :key="author.name">
+      <span v-for="author in questionAuthors" :key="author.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { author: author.name } }">
-          <FilterLabel :key="author.name" filterType="author" v-bind:filterValue="author.name" />
+          <FilterLabel :key="author.name" filterType="author" v-bind:filterValue="author.name" v-bind:filterCount="author.question_count" />
         </router-link>
       </span>
     </p>
@@ -77,7 +104,7 @@
     <p>
       <span v-for="difficulty in difficultyLevels" :key="difficulty.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { difficulty: difficulty.value } }">
-          <FilterLabel :key="difficulty.name" filterType="difficulty" v-bind:filterValue="difficulty.value" />
+          <FilterLabel :key="difficulty.name" filterType="difficulty" v-bind:filterValue="difficulty.value" v-bind:filterCount="difficulty.question_count" />
         </router-link>
       </span>
     </p>
@@ -104,7 +131,7 @@ export default {
 
   data() {
     return {
-      showAllTags: false,
+      showAllQuestionTags: false,
     };
   },
 
@@ -144,12 +171,22 @@ export default {
         .filter((c) => c.question_count)
         .sort((a, b) => b.question_count - a.question_count);
     },
-    tags() {
+    quizTags() {
+      return this.$store.state.tags
+        .filter((t) => t.quiz_count)
+        .sort((a, b) => b.quiz_count - a.quiz_count);
+    },
+    questionTags() {
       return this.$store.state.tags
         .filter((t) => t.question_count)
         .sort((a, b) => b.question_count - a.question_count);
     },
-    authors() {
+    quizAuthors() {
+      return this.$store.state.authors
+        .filter((a) => a.quiz_count)
+        .sort((a, b) => b.quiz_count - a.quiz_count);
+    },
+    questionAuthors() {
       return this.$store.state.authors
         .filter((a) => a.question_count)
         .sort((a, b) => b.question_count - a.question_count);
@@ -164,8 +201,8 @@ export default {
   },
 
   methods: {
-    toggleAllTags() {
-      this.showAllTags = !this.showAllTags;
+    toggleAllQuestionTags() {
+      this.showAllQuestionTags = !this.showAllQuestionTags;
     },
   },
 };
