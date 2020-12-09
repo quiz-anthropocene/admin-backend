@@ -1,6 +1,6 @@
 # from datetime import date, timedelta
 
-from django.db.models import Count
+from django.db.models import Count, F
 
 from api.models import (
     Category,
@@ -131,3 +131,52 @@ def contribution_stats():
         "quiz_feedback_count": quiz_feedback_count,
         "contribution_count": contribution_count,
     }
+
+
+def author_aggregate():
+    question_authors = list(
+        Question.objects.validated()
+        .values(name=F("author"))
+        .annotate(question_count=Count("author"))
+        .order_by("name")
+    )
+    quiz_authors = list(
+        Quiz.objects.published()
+        .values("author")  # cannot use name= (already a field in Quiz model)
+        .annotate(quiz_count=Count("author"))
+        .order_by("author")
+    )
+    # merge known quiz_authors into question_authors
+    question_quiz_authors = []
+    for question_author in question_authors:
+        question_author["quiz_count"] = next(
+            (
+                quiz_author["quiz_count"]
+                for quiz_author in quiz_authors
+                if question_author["name"] == quiz_author["author"]
+            ),
+            0,
+        )
+        question_quiz_authors.append(question_author)
+    # manage new quiz_authors
+    question_authors_flat = [
+        question_author["name"] for question_author in question_authors
+    ]
+    new_quiz_authors = [
+        quiz_author
+        for quiz_author in quiz_authors
+        if quiz_author["author"] not in question_authors_flat
+    ]
+    if len(new_quiz_authors):
+        for new_quiz_author in new_quiz_authors:
+            question_quiz_authors.append(
+                {
+                    "name": new_quiz_author["author"],
+                    "question_count": 0,
+                    "quiz_count": new_quiz_author["quiz_count"],
+                }
+            )
+        # sort
+        question_quiz_authors = sorted(question_quiz_authors, key=lambda k: k["name"])
+
+    return question_quiz_authors

@@ -248,14 +248,14 @@ def author_list(request):
     """
     List all authors (with the number of questions per author)
     """
-    authors = (
+    question_authors = (
         Question.objects.validated()
         .values(name=F("author"))
         .annotate(question_count=Count("author"))
         .order_by("-question_count")
     )
 
-    return Response(list(authors))
+    return Response(list(question_authors))
 
 
 @api_view(["GET"])

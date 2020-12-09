@@ -39,10 +39,6 @@ class Command(BaseCommand):
 
             # update & commit data files
             # data/configuration.yaml
-            # data/stats.yaml
-            # data/questions.yaml
-            # data/quizzes.yaml
-            # data/tags.yaml
             configuration_yaml = utilities.serialize_model_to_yaml(
                 model_label="configuration"
             )
@@ -52,6 +48,7 @@ class Command(BaseCommand):
                 file_content=configuration_yaml,
                 branch_name=data_update_branch_name,
             )
+            # data/stats.yaml
             stats_dict = {
                 **utilities_stats.question_stats(),
                 **utilities_stats.quiz_stats(),
@@ -67,6 +64,26 @@ class Command(BaseCommand):
                 file_content=stats_yaml,
                 branch_name=data_update_branch_name,
             )
+            # data/authors.yaml
+            authors_list = utilities_stats.author_aggregate()
+            authors_yaml = yaml.safe_dump(
+                authors_list, allow_unicode=True, sort_keys=False
+            )
+            utilities_github.create_file(
+                file_path="data/authors.yaml",
+                commit_message="update authors",
+                file_content=authors_yaml,
+                branch_name=data_update_branch_name,
+            )
+            # data/tags.yaml
+            tags_yaml = utilities.serialize_model_to_yaml(model_label="tag")
+            utilities_github.create_file(
+                file_path="data/tags.yaml",
+                commit_message="update tags",
+                file_content=tags_yaml,
+                branch_name=data_update_branch_name,
+            )
+            # data/questions.yaml
             questions_yaml = utilities.serialize_model_to_yaml(model_label="question")
             utilities_github.create_file(
                 file_path="data/questions.yaml",
@@ -74,18 +91,12 @@ class Command(BaseCommand):
                 file_content=questions_yaml,
                 branch_name=data_update_branch_name,
             )
+            # data/quizzes.yaml
             quizzes_yaml = utilities.serialize_model_to_yaml(model_label="quiz")
             utilities_github.create_file(
                 file_path="data/quizzes.yaml",
                 commit_message="update quizzes",
                 file_content=quizzes_yaml,
-                branch_name=data_update_branch_name,
-            )
-            tags_yaml = utilities.serialize_model_to_yaml(model_label="tag")
-            utilities_github.create_file(
-                file_path="data/tags.yaml",
-                commit_message="update tags",
-                file_content=tags_yaml,
                 branch_name=data_update_branch_name,
             )
 
