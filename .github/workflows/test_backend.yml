@@ -21,6 +21,11 @@ jobs:
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.6.0
+        with:
+          access_token: "${{ secrets.GITHUB_TOKEN }}"
+  
       - uses: actions/checkout@v2
 
       - name: Set up Python 3.7
