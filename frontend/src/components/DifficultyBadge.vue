@@ -1,25 +1,24 @@
 <template>
-  <span v-bind:title="difficultyTitle">
-    <template v-if="difficulty === 0">🧸</template>
-    <template v-if="difficulty != 0">
-      <span class="difficulty-badge" v-for="index in difficulty" :key="index">
-        <span>🏆</span>
-      </span>
-    </template>
-  </span>
+  <span v-bind:title="difficultyTitle">{{ currentDifficultyLevelEmoji }}</span>
 </template>
 
 <script>
 export default {
   name: 'DifficultyBadge',
   props: {
-    difficulty: Number,
+    difficulty: [Number, String],
   },
 
   data() {
     return {
       difficultyTitle: `Difficulté ${this.difficulty}/4`,
     };
+  },
+
+  computed: {
+    currentDifficultyLevelEmoji() {
+      return this.$store.getters.getDifficultyLevelEmojiByValue(parseInt(this.difficulty, 10));
+    },
   },
 };
 </script>

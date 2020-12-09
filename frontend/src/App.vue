@@ -119,6 +119,7 @@ export default {
   methods: {
     initData() {
       this.$store.dispatch('GET_CONFIGURATION_DICT_FROM_LOCAL_YAML');
+      this.$store.dispatch('GET_DIFFICULTY_LEVEL_LIST_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_AUTHOR_LIST_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_CATEGORY_LIST_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_TAG_LIST_FROM_LOCAL_YAML');

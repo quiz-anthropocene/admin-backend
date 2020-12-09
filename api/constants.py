@@ -22,14 +22,15 @@ QUESTION_VALIDATION_STATUS_LIST = [
 ]
 
 QUESTION_DIFFICULTY_EASY = 1
-QUESTION_DIFFICULTY_CHOICES = [
-    (0, "Junior"),
-    (QUESTION_DIFFICULTY_EASY, "Facile"),
-    (2, "Moyen"),
-    (3, "Difficile"),
-    (4, "Expert"),
+QUESTION_DIFFICULTY_OPTIONS = [
+    (0, "Junior", "🧸"),
+    (QUESTION_DIFFICULTY_EASY, "Facile", "🏆"),
+    (2, "Moyen", "🏆🏆"),
+    (3, "Difficile", "🏆🏆🏆"),
+    (4, "Expert", "🏆🏆🏆🏆"),
 ]
-QUESTION_DIFFICULTY_CHOICE_LIST = [c[0] for c in QUESTION_DIFFICULTY_CHOICES]
+QUESTION_DIFFICULTY_CHOICES = [(c[0], c[1]) for c in QUESTION_DIFFICULTY_OPTIONS]
+QUESTION_DIFFICULTY_CHOICE_LIST = [c[0] for c in QUESTION_DIFFICULTY_OPTIONS]
 
 QUESTION_ANSWER_CHOICE_LIST = [
     "a",

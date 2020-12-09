@@ -2,6 +2,7 @@
 
 from django.db.models import Count, F
 
+from api import constants
 from api.models import (
     Category,
     Tag,
@@ -131,6 +132,35 @@ def contribution_stats():
         "quiz_feedback_count": quiz_feedback_count,
         "contribution_count": contribution_count,
     }
+
+
+def difficulty_aggregate():
+    question_difficulty_levels = list(
+        Question.objects.validated()
+        .values(value=F("difficulty"))
+        .annotate(question_count=Count("difficulty"))
+        .order_by("value")
+    )
+
+    difficulty_levels = []
+    for value, name, emoji in constants.QUESTION_DIFFICULTY_OPTIONS:
+        difficulty_levels.append(
+            {
+                "name": name,
+                "value": value,
+                "emoji": emoji,
+                "question_count": next(
+                    (
+                        item["question_count"]
+                        for item in question_difficulty_levels
+                        if item["value"] == value
+                    ),
+                    0,
+                ),
+            }
+        )
+
+    return difficulty_levels
 
 
 def author_aggregate():

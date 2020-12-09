@@ -14,7 +14,7 @@
             <span v-if="(key === 'category') && value" class="label label-category">📂{{ value }}</span>
             <span v-if="(key === 'tag') && value" class="label label-tag">🏷️{{ value }}</span>
             <span v-if="(key === 'author') && value" class="label label-author">📝{{ value }}</span>
-            <span v-if="(key === 'difficulty') && Number.isInteger(value)" class="label label-difficulty"><DifficultyBadge v-bind:difficulty="value" /></span>
+            <span v-if="(key === 'difficulty') && value" class="label label-difficulty"><DifficultyBadge v-bind:difficulty="value" /></span>
           </span>
         </div>
         <div class="col-4 text-align-right" v-on:click.stop>
@@ -30,7 +30,7 @@
       <div v-if="categories && objectType =='question'">
         <h3>📂&nbsp;Catégories</h3>
         <FilterLabel v-for="category in categories" :key="category.name" @filter-label-clicked="updateTempQuestionFilter"
-          filterType="category" v-bind:filterValue="category.name" v-bind:filterCount="category[objectType === 'question' ? 'question_count' : 'quiz_count']" v-bind:customClass="(category.name === tempQuestionFilters['category']) ? 'label-category--active' : ''" />
+          filterType="category" v-bind:filterValue="category.name" v-bind:filterCount="category['question_count']" v-bind:customClass="(category.name === tempQuestionFilters['category']) ? 'label-category--active' : ''" />
       </div>
 
       <hr class="custom-separator" />
@@ -54,7 +54,7 @@
       <div v-if="difficultyLevels && objectType =='question'">
         <h3>🏆&nbsp;Difficultés</h3>
         <FilterLabel v-for="difficulty in difficultyLevels" :key="difficulty.name" @filter-label-clicked="updateTempQuestionFilter"
-          filterType="difficulty" v-bind:filterValue="difficulty.name" v-bind:filterCount="difficulty[objectType === 'question' ? 'question_count' : 'quiz_count']" v-bind:customClass="(difficulty.value === tempQuestionFilters['difficulty']) ? 'label-difficulty--active' : ''" />
+          filterType="difficulty" v-bind:filterValue="difficulty.value" v-bind:filterCount="difficulty['question_count']" v-bind:customClass="(difficulty.value == tempQuestionFilters['difficulty']) ? 'label-difficulty--active' : ''" />
       </div>
 
       <br />

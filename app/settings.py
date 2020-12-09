@@ -170,6 +170,7 @@ IMPORT_EXPORT_SKIP_ADMIN_LOG = True
 
 # Shell Plus
 
+SHELL_PLUS = "ipython"
 SHELL_PLUS_IMPORTS = [
     "import csv, json, yaml",
     "from datetime import datetime, date, timedelta",
