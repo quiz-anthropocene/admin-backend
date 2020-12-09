@@ -297,6 +297,14 @@ class Question(models.Model):
         return ", ".join(self.tags_list)
 
     @property
+    def quizs_list(self):
+        return list(self.quizzes.values_list("name", flat=True))
+
+    @property
+    def quizs_list_string(self):
+        return ", ".join(self.quizs_list)
+
+    @property
     def has_hint(self):
         return len(self.hint) > 0
 
@@ -345,6 +353,7 @@ class Question(models.Model):
 
     # Admin
     tags_list_string.fget.short_description = "Tag(s)"
+    quizs_list_string.fget.short_description = "Quiz(s)"
     answer_count_agg.fget.short_description = "# Rép"
     answer_success_count_agg.fget.short_description = "# Rép Corr"
     answer_success_rate.fget.short_description = "% Rép Corr"

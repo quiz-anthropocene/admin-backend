@@ -61,7 +61,7 @@ class ExportMixin:
         writer = csv.writer(response)
 
         if queryset.model.__name__ == "Question":
-            writer.writerow(field_names + ["tags"])
+            writer.writerow(field_names + ["tags", "quizs"])
         else:
             writer.writerow(field_names)
 
@@ -69,7 +69,7 @@ class ExportMixin:
             if queryset.model.__name__ == "Question":
                 writer.writerow(
                     [getattr(obj, field) for field in field_names]
-                    + [obj.tags_list_string]
+                    + [obj.tags_list_string, obj.quizs_list_string]
                 )
             else:
                 writer.writerow([getattr(obj, field) for field in field_names])
@@ -157,6 +157,11 @@ class QuestionResource(resources.ModelResource):
     tags = fields.Field(
         column_name="tags", attribute="tags", widget=ManyToManyWidget(Tag, field="name")
     )
+    quizzes = fields.Field(
+        column_name="quizzes",
+        attribute="quizzes",
+        widget=ManyToManyWidget(Quiz, field="name"),
+    )
 
     def before_import_row(self, row, **kwargs):
         """
@@ -236,6 +241,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         "type",
         "category",
         "tags_list_string",
+        "quizs_list_string",
         "difficulty",
         "author",
         "validation_status",
