@@ -6,6 +6,7 @@ import constants from './constants';
 // webpack + vue-cli-plugin-yaml
 import configurationYamlData from '../../data/configuration.yaml';
 import statsYamlData from '../../data/stats.yaml';
+import authorsYamlData from '../../data/authors.yaml';
 import categoriesYamlData from '../../data/categories.yaml';
 import tagsYamlData from '../../data/tags.yaml';
 import questionsYamlData from '../../data/questions.yaml';
@@ -107,19 +108,6 @@ const store = new Vuex.Store({
         t.question_count = questionsValidated.filter((q) => q.tags.map((qt) => qt.id).includes(t.id)).length;
       });
 
-      // create authors list: add question_count
-      // TODO: use map/reduce instead
-      const authors = [];
-      questionsValidated.forEach((q) => {
-        const authorListIndex = authors.map((a) => a.name).indexOf(q.author);
-        if (authorListIndex >= 0) {
-          authors[authorListIndex].question_count += 1;
-        } else {
-          authors.push({ name: q.author, question_count: 1, quiz_count: 0 });
-        }
-      });
-      commit('SET_AUTHOR_LIST', { list: authors });
-
       // create difficulty list: add question_count
       const difficultyLevels = difficultyLevelsYamlData;
       difficultyLevels.forEach((dl) => {
@@ -154,16 +142,13 @@ const store = new Vuex.Store({
       state.tags.forEach((t) => {
         t.quiz_count = quizzesPublished.filter((q) => q.tags.map((qt) => qt.id).includes(t.id)).length;
       });
-
-      // update authors: add quiz_count
-      quizzesPublished.forEach((q) => {
-        const authorListIndex = state.authors.map((a) => a.name).indexOf(q.author);
-        if (authorListIndex >= 0) {
-          state.authors[authorListIndex].quiz_count += 1;
-        } else {
-          state.authors.push({ name: q.author, quiz_count: 1 });
-        }
-      });
+    },
+    /**
+     * Get authors
+     * Pre-processing ? None
+     */
+    GET_AUTHOR_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_AUTHOR_LIST', { list: authorsYamlData });
     },
     /**
      * Get categories
