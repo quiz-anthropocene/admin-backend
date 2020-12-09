@@ -18,7 +18,7 @@ export default {
 
   computed: {
     questions() {
-      return this.$store.state.questions;
+      return this.$store.state.questionsValidated;
     },
   },
 

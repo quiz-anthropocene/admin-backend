@@ -39,6 +39,7 @@ const store = new Vuex.Store({
     error: null,
     configuration: {},
     questions: [],
+    questionsValidated: [],
     questionsDisplayed: [],
     questionFilters: {
       category: null,
@@ -48,16 +49,12 @@ const store = new Vuex.Store({
     },
     questionsPendingValidation: [],
     quizzes: [],
+    quizzesPublished: [],
     quizzesDisplayed: [],
     quizFilters: {
       tag: null,
       author: null,
     },
-    // QuizAuthors and quizCategories can be set in tags and categories
-    // We need to add in tags and authors a quiz_count variable
-    // We might add category for the quiz as well?
-    quizAuthors: {},
-    quizTags: {},
     categories: [],
     tags: [],
     authors: [],
@@ -88,14 +85,16 @@ const store = new Vuex.Store({
      */
     GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
       // questions
-      const questionsValidated = processModelList(questionsYamlData).filter((el) => el.validation_status === constants.QUESTION_VALIDATION_STATUS_OK);
+      const questions = processModelList(questionsYamlData);
       // questions: get category & tags objects
-      questionsValidated.map((q) => {
+      questions.map((q) => {
         const questionCategory = getters.getCategoryById(q.category);
         const questionTags = getters.getTagsByIdList(q.tags);
         Object.assign(q, { category: questionCategory }, { tags: questionTags });
         return q;
       });
+      const questionsValidated = questions.filter((el) => el.validation_status === constants.QUESTION_VALIDATION_STATUS_OK);
+      commit('SET_QUESTION_LIST', { list: questions });
       commit('SET_QUESTION_VALIDATED_LIST', { list: questionsValidated });
 
       // update categories: add question_count
@@ -116,7 +115,7 @@ const store = new Vuex.Store({
         if (authorListIndex >= 0) {
           authors[authorListIndex].question_count += 1;
         } else {
-          authors.push({ name: q.author, question_count: 1 });
+          authors.push({ name: q.author, question_count: 1, quiz_count: 0 });
         }
       });
       commit('SET_AUTHOR_LIST', { list: authors });
@@ -138,57 +137,33 @@ const store = new Vuex.Store({
      * - keep only published quizs
      * - enrich with questions, tags
      */
-    GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit, getters }) => {
-      const quizPublished = processModelList(quizzesYamlData).filter((el) => el.publish === true);
-      // quiz: get question and tag objects; compute difficulty average
-      const uniqueTag = [];
-      const uniqueAuthor = [];
-      const tagCounter = {};
-      const authorCounter = {};
-      quizPublished.map((q) => {
+    GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
+      const quizzes = processModelList(quizzesYamlData);
+      // quiz: get question and tag objects
+      quizzes.map((q) => {
         const quizQuestions = getters.getQuestionsByIdList(q.questions);
         const quizTags = getters.getTagsByIdList(q.tags);
-        if (uniqueAuthor.indexOf(q.author) === -1) {
-          uniqueAuthor.push(q.author);
-          authorCounter[q.author] = {
-            counter: 1,
-            object: q.author,
-          };
-        } else {
-          authorCounter[q.author].counter += 1;
-        }
-        quizTags.forEach((t) => {
-          if (uniqueTag.indexOf(t) === -1) {
-            uniqueTag.push(t.name);
-            tagCounter[t.name] = {
-              counter: 1,
-              object: t,
-            };
-          } else {
-            tagCounter[t.name].counter += 1;
-          }
-        });
         Object.assign(q, { questions: quizQuestions }, { tags: quizTags });
         return q;
       });
-      const tags = [];
-      const authors = [];
-      // Reformat the tagCounter and authorCounter to the same format as the questions
-      Object.values(tagCounter).forEach((t) => {
-        tags.push({
-          ...t.object,
-          question_count: t.counter,
-        });
+      const quizzesPublished = quizzes.filter((el) => el.publish === true);
+      commit('SET_QUIZ_LIST', { list: quizzes });
+      commit('SET_QUIZ_PUBLISHED_LIST', { list: quizzesPublished });
+
+      // update tags: add quiz_count
+      state.tags.forEach((t) => {
+        t.quiz_count = quizzesPublished.filter((q) => q.tags.map((qt) => qt.id).includes(t.id)).length;
       });
-      Object.values(authorCounter).forEach((a) => {
-        authors.push({
-          name: a.object,
-          question_count: a.counter,
-        });
+
+      // update authors: add quiz_count
+      quizzesPublished.forEach((q) => {
+        const authorListIndex = state.authors.map((a) => a.name).indexOf(q.author);
+        if (authorListIndex >= 0) {
+          state.authors[authorListIndex].quiz_count += 1;
+        } else {
+          state.authors.push({ name: q.author, quiz_count: 1 });
+        }
       });
-      commit('SET_QUIZ_AUTHORS', authors);
-      commit('SET_QUIZ_TAGS', tags);
-      commit('SET_QUIZ_LIST', { list: quizPublished });
     },
     /**
      * Get categories
@@ -232,7 +207,7 @@ const store = new Vuex.Store({
      */
     UPDATE_QUESTION_FILTERS: ({ commit, state, getters }, filterObject) => {
       const currentQuestionFilters = filterObject || state.questionFilters;
-      const questionsDisplayed = getters.getQuestionsByFilter(currentQuestionFilters)
+      const questionsDisplayed = getters.getQuestionsValidatedByFilter(currentQuestionFilters)
         .sort(() => Math.random() - 0.5) // random order
         .sort((a, b) => a.difficulty - b.difficulty); // order by difficulty (easiest to hardest)
       commit('SET_QUESTION_FILTERS', { object: currentQuestionFilters });
@@ -240,7 +215,7 @@ const store = new Vuex.Store({
     },
     UPDATE_QUIZ_FILTERS: ({ commit, state, getters }, filterObject) => {
       const currentQuizFilters = filterObject || state.quizFilters;
-      const quizzesDisplayed = getters.getQuizzesByFilter(currentQuizFilters);
+      const quizzesDisplayed = getters.getQuizzesPublishedByFilter(currentQuizFilters);
       commit('SET_QUESTION_FILTERS', { object: currentQuizFilters });
       // We are not using the quizFilterVairable anymore
       // commit('SET_QUIZ_FILTERS', { object: currentQuizFilters });
@@ -257,8 +232,11 @@ const store = new Vuex.Store({
     SET_CONFIGURATION_DICT: (state, { dict }) => {
       state.configuration = dict;
     },
-    SET_QUESTION_VALIDATED_LIST: (state, { list }) => {
+    SET_QUESTION_LIST: (state, { list }) => {
       state.questions = list;
+    },
+    SET_QUESTION_VALIDATED_LIST: (state, { list }) => {
+      state.questionsValidated = list;
       state.questionsDisplayed = list;
     },
     SET_QUESTION_PENDING_VALIDATION_LIST: (state, { list }) => {
@@ -266,6 +244,9 @@ const store = new Vuex.Store({
     },
     SET_QUIZ_LIST: (state, { list }) => {
       state.quizzes = list;
+    },
+    SET_QUIZ_PUBLISHED_LIST: (state, { list }) => {
+      state.quizzesPublished = list;
     },
     SET_CATEGORY_LIST: (state, { list }) => {
       state.categories = list;
@@ -300,14 +281,7 @@ const store = new Vuex.Store({
     SET_QUIZZES_DISPLAYED_LIST: (state, { list }) => {
       state.quizzesDisplayed = list;
     },
-    SET_QUIZ_TAGS: (state, quizTags) => {
-      state.quizTags = quizTags;
-    },
-    SET_QUIZ_AUTHORS: (state, quizAuthors) => {
-      state.quizAuthors = quizAuthors;
-    },
     SET_STATS_DICT: (state, { dict }) => {
-      console.log(dict);
       state.stats = dict;
     },
   },
@@ -320,7 +294,7 @@ const store = new Vuex.Store({
     getQuestionsByCategoryName: (state) => (categoryName) => state.questions.filter((q) => (q.category.name === categoryName)),
     getQuestionsByTagName: (state) => (tagName) => state.questions.filter((q) => q.tags.map((qt) => qt.name).includes(tagName)),
     getQuestionsByAuthorName: (state) => (authorName) => state.questions.filter((q) => q.author === authorName),
-    getQuestionsByFilter: (state) => (filter) => state.questions.filter((q) => (filter.category ? (q.category.name === filter.category) : true))
+    getQuestionsValidatedByFilter: (state) => (filter) => state.questionsValidated.filter((q) => (filter.category ? (q.category.name === filter.category) : true))
       .filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
       .filter((q) => (filter.author ? (q.author === filter.author) : true))
       .filter((q) => (Number.isInteger(filter.difficulty) ? (q.difficulty === filter.difficulty) : true)),
@@ -330,7 +304,7 @@ const store = new Vuex.Store({
       return state.questionsDisplayed[currentQuestionIndex + 1] ? state.questionsDisplayed[currentQuestionIndex + 1] : state.questionsDisplayed[0];
     },
     getQuizById: (state) => (quizId) => state.quizzes.find((q) => (q.id === quizId)),
-    getQuizzesByFilter: (state) => (filter) => state.quizzes.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
+    getQuizzesPublishedByFilter: (state) => (filter) => state.quizzesPublished.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
       .filter((q) => (filter.author ? (q.author === filter.author) : true)),
   },
 });

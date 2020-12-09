@@ -1,10 +1,10 @@
 <template>
-  <span class="label" :class="[filterLabelClass, customClass]" @click="$emit('filter-label-clicked', { key: filterType, value: (filterType === 'difficulty') ? filterObject.value : filterObject.name })">
+  <span class="label" :class="[filterLabelClass, customClass]" @click="$emit('filter-label-clicked', { key: filterType, value: filterValue })">
     <!-- name -->
-    <span v-if="filterType !== 'difficulty'">{{ filterObject.name }}</span>
-    <small v-if="filterType === 'difficulty'"><DifficultyBadge v-bind:difficulty="filterObject.value" /></small>
-    <!-- question_count -->
-    <small v-if="filterObject.question_count"><i> {{ filterObject.question_count }}</i></small>
+    <span v-if="filterType !== 'difficulty'">{{ filterValue }}</span>
+    <small v-if="filterType === 'difficulty'"><DifficultyBadge v-bind:difficulty="filterValue" /></small>
+    <!-- question_count or quiz_count -->
+    <small v-if="filterCount"><i> {{ filterCount }}</i></small>
   </span>
 </template>
 
@@ -15,7 +15,8 @@ export default {
   name: 'FilterLabel',
   props: {
     filterType: String,
-    filterObject: Object,
+    filterValue: [String, Number],
+    filterCount: Number,
     customClass: String,
   },
   components: {

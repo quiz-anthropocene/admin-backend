@@ -41,19 +41,19 @@
             <router-link v-if="soutien_item.quiz_tag" class="no-decoration" :to="{ name: 'quiz-list', query: { tag: soutien_item.quiz_tag } }">
               <a>
                 <strong>Tous les quizs </strong>
-                <FilterLabel filterType="tag" v-bind:filterObject="{ name: soutien_item.quiz_tag }"></FilterLabel>
+                <FilterLabel filterType="tag" v-bind:filterValue="soutien_item.quiz_tag"></FilterLabel>
               </a>
             </router-link>
             <router-link v-if="soutien_item.quiz_author" class="no-decoration" :to="{ name: 'quiz-list', query: { author: soutien_item.quiz_author } }">
               <a>
                 <strong>Tous les quizs de </strong>
-                <FilterLabel filterType="author" v-bind:filterObject="{ name: soutien_item.quiz_author }"></FilterLabel>
+                <FilterLabel filterType="author" v-bind:filterValue="soutien_item.quiz_author"></FilterLabel>
               </a>
             </router-link>
             <router-link v-if="soutien_item.question_author" class="no-decoration" :to="{ name: 'question-list', query: { author: soutien_item.question_author } }">
               <a>
                 <strong>Toutes les questions de </strong>
-                <FilterLabel filterType="author" v-bind:filterObject="{ name: soutien_item.question_author }"></FilterLabel>
+                <FilterLabel filterType="author" v-bind:filterValue="soutien_item.question_author"></FilterLabel>
               </a>
             </router-link>
           </div>
