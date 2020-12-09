@@ -55,11 +55,6 @@ const store = new Vuex.Store({
       tag: null,
       author: null,
     },
-    // QuizAuthors and quizCategories can be set in tags and categories
-    // We need to add in tags and authors a quiz_count variable
-    // We might add category for the quiz as well?
-    quizAuthors: {},
-    quizTags: {},
     categories: [],
     tags: [],
     authors: [],
@@ -120,7 +115,7 @@ const store = new Vuex.Store({
         if (authorListIndex >= 0) {
           authors[authorListIndex].question_count += 1;
         } else {
-          authors.push({ name: q.author, question_count: 1 });
+          authors.push({ name: q.author, question_count: 1, quiz_count: 0 });
         }
       });
       commit('SET_AUTHOR_LIST', { list: authors });
@@ -142,61 +137,33 @@ const store = new Vuex.Store({
      * - keep only published quizs
      * - enrich with questions, tags
      */
-    GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit, getters }) => {
+    GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
       const quizzes = processModelList(quizzesYamlData);
-      // quiz: get question and tag objects; compute difficulty average
-      const uniqueTag = [];
-      const uniqueAuthor = [];
-      const tagCounter = {};
-      const authorCounter = {};
+      // quiz: get question and tag objects
       quizzes.map((q) => {
         const quizQuestions = getters.getQuestionsByIdList(q.questions);
         const quizTags = getters.getTagsByIdList(q.tags);
-        if (q.publish === true) {
-          if (uniqueAuthor.indexOf(q.author) === -1) {
-            uniqueAuthor.push(q.author);
-            authorCounter[q.author] = {
-              counter: 1,
-              object: q.author,
-            };
-          } else {
-            authorCounter[q.author].counter += 1;
-          }
-          quizTags.forEach((t) => {
-            if (uniqueTag.indexOf(t.name) === -1) {
-              uniqueTag.push(t.name);
-              tagCounter[t.name] = {
-                counter: 1,
-                object: t,
-              };
-            } else {
-              tagCounter[t.name].counter += 1;
-            }
-          });
-        }
         Object.assign(q, { questions: quizQuestions }, { tags: quizTags });
         return q;
       });
-      const tags = [];
-      const authors = [];
-      // Reformat the tagCounter and authorCounter to the same format as the questions
-      Object.values(tagCounter).forEach((t) => {
-        tags.push({
-          ...t.object,
-          question_count: t.counter,
-        });
-      });
-      Object.values(authorCounter).forEach((a) => {
-        authors.push({
-          name: a.object,
-          question_count: a.counter,
-        });
-      });
       const quizzesPublished = quizzes.filter((el) => el.publish === true);
-      commit('SET_QUIZ_AUTHORS', authors);
-      commit('SET_QUIZ_TAGS', tags);
       commit('SET_QUIZ_LIST', { list: quizzes });
       commit('SET_QUIZ_PUBLISHED_LIST', { list: quizzesPublished });
+
+      // update tags: add quiz_count
+      state.tags.forEach((t) => {
+        t.quiz_count = quizzesPublished.filter((q) => q.tags.map((qt) => qt.id).includes(t.id)).length;
+      });
+
+      // update authors: add quiz_count
+      quizzesPublished.forEach((q) => {
+        const authorListIndex = state.authors.map((a) => a.name).indexOf(q.author);
+        if (authorListIndex >= 0) {
+          state.authors[authorListIndex].quiz_count += 1;
+        } else {
+          state.authors.push({ name: q.author, quiz_count: 1 });
+        }
+      });
     },
     /**
      * Get categories
@@ -314,14 +281,7 @@ const store = new Vuex.Store({
     SET_QUIZZES_DISPLAYED_LIST: (state, { list }) => {
       state.quizzesDisplayed = list;
     },
-    SET_QUIZ_TAGS: (state, quizTags) => {
-      state.quizTags = quizTags;
-    },
-    SET_QUIZ_AUTHORS: (state, quizAuthors) => {
-      state.quizAuthors = quizAuthors;
-    },
     SET_STATS_DICT: (state, { dict }) => {
-      console.log(dict);
       state.stats = dict;
     },
   },

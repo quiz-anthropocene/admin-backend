@@ -41,7 +41,7 @@
     <p>
       <span v-for="category in categories" :key="category.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { category: category.name } }">
-          <FilterLabel filterType="category" v-bind:filterObject="category" />
+          <FilterLabel filterType="category" v-bind:filterValue="category.name" />
         </router-link>
       </span>
     </p>
@@ -51,7 +51,7 @@
     <p :class="{ 'max-height-300': !showAllTags }">
       <span v-for="tag in tags" :key="tag.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { tag: tag.name } }">
-          <FilterLabel :key="tag.name" filterType="tag" v-bind:filterObject="tag" />
+          <FilterLabel :key="tag.name" filterType="tag" v-bind:filterValue="tag.name" />
         </router-link>
       </span>
     </p>
@@ -67,7 +67,7 @@
     <p>
       <span v-for="author in authors" :key="author.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { author: author.name } }">
-          <FilterLabel :key="author.name" filterType="author" v-bind:filterObject="author" />
+          <FilterLabel :key="author.name" filterType="author" v-bind:filterValue="author.name" />
         </router-link>
       </span>
     </p>
@@ -77,7 +77,7 @@
     <p>
       <span v-for="difficulty in difficultyLevels" :key="difficulty.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { difficulty: difficulty.value } }">
-          <FilterLabel :key="difficulty.name" filterType="difficulty" v-bind:filterObject="difficulty" />
+          <FilterLabel :key="difficulty.name" filterType="difficulty" v-bind:filterValue="difficulty.value" />
         </router-link>
       </span>
     </p>

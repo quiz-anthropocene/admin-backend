@@ -19,7 +19,7 @@
         </div>
         <div class="col-4 text-align-right" v-on:click.stop>
           <button v-if="questionFilters.category || questionFilters.tag || questionFilters.author || questionFilters.difficulty" class="btn btn-sm btn-outline-secondary margin-5" @click="clearQuestionFilters()">Réinitialiser</button>
-          <span class="label label-hidden"><strong>{{ counter }}</strong> {{ objectType }}{{questionsDisplayedCount > 1 && objectType === 'question' ? 's' : ''}}</span>
+          <span class="label label-hidden"><strong>{{ counter }}</strong> {{ objectType }}{{ (objectType === 'question' && questionsDisplayedCount > 1) ? 's' : '' }}</span>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
       <div v-if="categories && objectType =='question'">
         <h3>📂&nbsp;Catégories</h3>
         <FilterLabel v-for="category in categories" :key="category.name" @filter-label-clicked="updateTempQuestionFilter"
-          filterType="category" v-bind:filterObject="category" v-bind:customClass="(category.name === tempQuestionFilters['category']) ? 'label-category--active' : ''" />
+          filterType="category" v-bind:filterValue="category.name" v-bind:filterCount="category[objectType === 'question' ? 'question_count' : 'quiz_count']" v-bind:customClass="(category.name === tempQuestionFilters['category']) ? 'label-category--active' : ''" />
       </div>
 
       <hr class="custom-separator" />
@@ -38,7 +38,7 @@
       <div v-if="tags">
         <h3>🏷️&nbsp;Tags</h3>
         <FilterLabel v-for="tag in tags" :key="tag.name" @filter-label-clicked="updateTempQuestionFilter"
-          filterType="tag" v-bind:filterObject="tag" v-bind:customClass="(tag.name === tempQuestionFilters['tag']) ? 'label-tag--active' : ''" />
+          filterType="tag" v-bind:filterValue="tag.name" v-bind:filterCount="tag[objectType === 'question' ? 'question_count' : 'quiz_count']" v-bind:customClass="(tag.name === tempQuestionFilters['tag']) ? 'label-tag--active' : ''" />
       </div>
 
       <hr class="custom-separator" />
@@ -46,7 +46,7 @@
       <div v-if="authors ">
         <h3>📝&nbsp;Auteurs</h3>
         <FilterLabel v-for="author in authors" :key="author.name" @filter-label-clicked="updateTempQuestionFilter"
-          filterType="author" v-bind:filterObject="author" v-bind:customClass="(author.name === tempQuestionFilters['author']) ? 'label-author--active' : ''" />
+          filterType="author" v-bind:filterValue="author.name" v-bind:filterCount="author[objectType === 'question' ? 'question_count' : 'quiz_count']" v-bind:customClass="(author.name === tempQuestionFilters['author']) ? 'label-author--active' : ''" />
       </div>
 
       <hr class="custom-separator" />
@@ -54,7 +54,7 @@
       <div v-if="difficultyLevels && objectType =='question'">
         <h3>🏆&nbsp;Difficultés</h3>
         <FilterLabel v-for="difficulty in difficultyLevels" :key="difficulty.name" @filter-label-clicked="updateTempQuestionFilter"
-          filterType="difficulty" v-bind:filterObject="difficulty" v-bind:customClass="(difficulty.value === tempQuestionFilters['difficulty']) ? 'label-difficulty--active' : ''" />
+          filterType="difficulty" v-bind:filterValue="difficulty.name" v-bind:filterCount="difficulty[objectType === 'question' ? 'question_count' : 'quiz_count']" v-bind:customClass="(difficulty.value === tempQuestionFilters['difficulty']) ? 'label-difficulty--active' : ''" />
       </div>
 
       <br />
@@ -102,29 +102,22 @@ export default {
       return this.$store.state.categories;
     },
     tags() {
-      let tagsAvailable = [];
-      if (this.objectType === 'question') {
-        tagsAvailable = this.$store.state.tags
-          .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
-          .filter((t) => t.question_count)
-          .sort((a, b) => a.name.localeCompare(b.name));
-      } else {
-        return this.$store.state.quizTags;
-      }
-      return tagsAvailable;
+      return this.$store.state.tags
+        .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
+        .filter((t) => {
+          return (this.objectType === 'question') ? t.question_count : t.quiz_count;
+        })
+        .sort((a, b) => a.name.localeCompare(b.name));
     },
     authors() {
-      let authorsAvailable = [];
-      if (this.objectType === 'question') {
-        authorsAvailable = this.$store.state.authors
-          .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
-          .sort((a, b) => b.question_count - a.question_count);
-      } else {
-        authorsAvailable = this.$store.state.quizAuthors
-          .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
-          .sort((a, b) => b.question_count - a.question_count);
-      }
-      return authorsAvailable;
+      return this.$store.state.authors
+        .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
+        .filter((a) => {
+          return (this.objectType === 'question') ? a.question_count : a.quiz_count;
+        })
+        .sort((a, b) => {
+          return (this.objectType === 'question') ? (b.question_count - a.question_count) : (b.quiz_count - a.quiz_count);
+        });
     },
     difficultyLevels() {
       return this.$store.state.difficultyLevels;
