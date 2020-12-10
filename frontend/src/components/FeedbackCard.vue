@@ -13,7 +13,11 @@
           <span v-if="feedbackResponse" class="margin-left-right-10">
             <strong>{{ feedbackResponse.like_count_agg }}</strong>&nbsp;👍&nbsp;&nbsp;<strong>{{ feedbackResponse.dislike_count_agg }}</strong>&nbsp;👎&nbsp;</span>
         </span>
-        <button class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Votre avis" @click="showContributionForm = true">💬&nbsp;<span class="fake-link">Suggérer une modification</span></button>
+        <button class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Votre avis" @click="showContributionForm = !showContributionForm">
+          💬&nbsp;<span class="fake-link">Suggérer une modification</span>
+          <span v-if="!showContributionForm">&nbsp;▸</span>
+          <span v-if="showContributionForm">&nbsp;▾</span>
+        </button>
       </div>
     </div>
 
@@ -24,23 +28,27 @@
         <h3 class="margin-bottom-0">
           <label for="contribution_text">Votre suggestion, commentaire, ... <span class="color-red">*</span></label>
         </h3>
+        <p>
+          <textarea id="contribution_text" class="form-control" rows="2" v-model="contribution_text" required></textarea>
+        </p>
         <p v-if="(context.source) === 'question' && (!context.item.answer_explanation || !context.item.answer_accessible_url || !context.item.answer_scientific_url || !context.item.answer_image_url)">
-          <i>
-            cette question n'est pas 100% complète. Il manque :
+          🛠️<i>
+            Cette question n'est pas 100% <strong>complète</strong>. Il manque :
             <span v-if="!context.item.answer_explanation">&nbsp;ℹ️&nbsp;une explication</span>
             <span v-if="!context.item.answer_accessible_url">&nbsp;🔗&nbsp;un lien accessible</span>
             <span v-if="!context.item.answer_scientific_url">&nbsp;🔗🧬&nbsp;un lien scientifique</span>
             <span v-if="!context.item.answer_image_url">&nbsp;🖼️&nbsp;une image</span>
           </i>
         </p>
-        <div class="row">
-          <div class="col">
-            <textarea id="contribution_text" class="form-control" rows="2" v-model="contribution_text" required></textarea>
-            <p>
-              <button type="submit" class="btn btn-sm" :class="contribution_text ? 'btn-primary' : 'btn-outline-primary'" :disabled="!contribution_text">📩&nbsp;Envoyer !</button>
-            </p>
-          </div>
-        </div>
+        <p>
+          🙋&nbsp;Veuillez indiquer votre <strong>email</strong> si voulez être tenu au courant de votre contribution !<br />
+        </p>
+        <p class="help-text">
+          <i>En soumettant ce formulaire, vous autorisez que les informations saisies soient traitées afin d'améliorer notre application, et vous recontacter si besoin.</i>
+        </p>
+        <p>
+          <button type="submit" class="btn btn-sm" :class="contribution_text ? 'btn-primary' : 'btn-outline-primary'" :disabled="!contribution_text">📩&nbsp;Envoyer !</button>
+        </p>
       </form>
       <div v-if="contributionSubmitted && loading" class="loading">
         <p>Envoi de votre suggestion...</p>

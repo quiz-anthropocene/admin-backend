@@ -36,18 +36,14 @@
         <h3 class="margin-bottom-0">
           <label for="contribution_text">Votre question <span class="color-red">*</span></label>
         </h3>
-        <div class="help">
-          <small><i>En 1 ou 2 phrases au maximum</i></small>
-        </div>
+        <div class="help-text">En 1 ou 2 phrases au maximum</div>
         <input type="text" id="contribution_text" class="form-control" v-model="contribution.text" required />
       </div>
       <div class="form-group" v-if="contribution.type === 'nouvelle question'">
         <h3 class="margin-bottom-0">
-          <label for="text">Informations supplémentaires <small>(optionnel)</small></label>
+          <label for="text">Informations supplémentaires</label>
         </h3>
-        <div class="help">
-          <small><i>La réponse et un peu d'explication, un lien pour aller plus loin, ...</i></small>
-        </div>
+        <div class="help-text">La réponse et un peu d'explication, un lien pour aller plus loin, ...</div>
         <textarea id="description" class="form-control" rows="5" v-model="contribution.description"></textarea>
       </div>
 
@@ -55,18 +51,14 @@
         <h3 class="margin-bottom-0">
           <label for="contribution_text">Votre idée de quiz <span class="color-red">*</span></label>
         </h3>
-        <div class="help">
-          <small><i>En 1 ou 2 phrases au maximum</i></small>
-        </div>
+        <div class="help-text">En 1 ou 2 phrases au maximum</div>
         <input type="text" id="contribution_text" class="form-control" v-model="contribution.text" required />
       </div>
       <div class="form-group" v-if="contribution.type === 'nouveau quiz'">
         <h3 class="margin-bottom-0">
-          <label for="text">Informations supplémentaires <small>(optionnel)</small></label>
+          <label for="text">Informations supplémentaires</label>
         </h3>
-        <div class="help">
-          <small><i>Des idées de questions, des liens pour creuser le sujet, ...</i></small>
-        </div>
+        <div class="help-text">Des idées de questions, des liens pour creuser le sujet, ...</div>
         <textarea id="description" class="form-control" rows="5" v-model="contribution.description"></textarea>
       </div>
 
@@ -74,9 +66,7 @@
         <h3 class="margin-bottom-0">
           <label for="contribution_text">Votre commentaire <span class="color-red">*</span></label>
         </h3>
-        <div class="help">
-          <small><i>bug, amélioration, ... Lâchez-vous :)</i></small>
-        </div>
+        <div class="help-text">bug, amélioration, ... Lâchez-vous :)</div>
         <textarea id="contribution_text" class="form-control" rows="5" v-model="contribution.text" required></textarea>
       </div>
 
@@ -91,7 +81,9 @@
 
       <p>
         🙋&nbsp;Veuillez indiquer votre <strong>email</strong> si voulez être tenu au courant de votre contribution !<br />
-        <small class="help"><i>En soumettant ce formulaire, vous autorisez que les informations saisies soient traitées afin d'améliorer notre application, et vous recontacter si besoin.</i></small>
+      </p>
+      <p class="help-text">
+        En soumettant ce formulaire, vous autorisez que les informations saisies soient traitées afin d'améliorer notre application, et vous recontacter si besoin.
       </p>
 
       <div class="form-group">

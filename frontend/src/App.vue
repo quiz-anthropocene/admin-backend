@@ -342,10 +342,18 @@ span.no-wrap {
 .small {
   font-size: small;
 }
+.smaller {
+  font-size: smaller;
+}
 
 .btn-primary-light {
   color: #fff;
   background-color: rgba(0, 89, 149, 0.03); // var(--primary);
+}
+
+.help-text {
+  font-size: smaller;
+  font-style: italic;
 }
 
 /* Elements */
