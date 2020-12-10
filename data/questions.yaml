@@ -1802,12 +1802,13 @@
     difficulty: 2
     answer_option_a: des crises d'asthme, mais pas de mortalité avérée
     answer_option_b: 1000 morts
-    answer_option_c: 5000 morts
-    answer_option_d: 48 000 morts
+    answer_option_c: 5,000 morts
+    answer_option_d: 50,000 morts
     answer_correct: d
     has_ordered_answers: true
-    answer_explanation: La pollution atmosphérique constitue la deuxième cause de
-      mortalité évitable en France, derrière le tabac, mais devant l'alcool.
+    answer_explanation: Avec 48,000 morts prématurées, la pollution atmosphérique
+      constitue la deuxième cause de mortalité évitable en France, derrière le tabac,
+      mais devant l'alcool.
     answer_accessible_url: https://www.futura-sciences.com/sante/actualites/vie-pollution-air-fleau-reduit-plus-esperance-vie-monde-63256/
     answer_scientific_url: ''
     answer_image_url: https://img.lemde.fr/2019/02/27/0/0/534/790/688/0/60/0/4fc8975_hhpqAspZg2YOSObK32N1qr8C.png
@@ -17786,33 +17787,28 @@
 - model: api.question
   pk: 542
   fields:
-    text: En quelle année a-ton émis a-t-elle émis le plus de CO2 sur le territoire
-      français ?
+    text: En quelle année a-ton émis le plus de CO2 sur le territoire français ?
     hint: ''
     type: QCM
     category: 1
     difficulty: 2
     answer_option_a: '1941'
-    answer_option_b: '1973'
-    answer_option_c: '1979'
-    answer_option_d: '1991'
-    answer_correct: c
+    answer_option_b: '1979'
+    answer_option_c: '1991'
+    answer_option_d: '2008'
+    answer_correct: b
     has_ordered_answers: true
     answer_explanation: 'Le maximum d''émissions de CO2 émis en France a été en 1979,
-      avec 530 millions de tonnes de CO2.
+      avec 530 millions de tonnes de CO2. 1979, c''est aussi l''année du 2ème choc
+      pétrolier, et l''année de la mise en service de la centrale nucléaire de Fessenheim,
+      tête de série du parc nucléaire actuel. Ces deux événements ont largement contribué
+      aux économies d''énergies et à la baisse de la consommation d''énergies fossiles
+      (pétrole et charbon), conduisant de facto à une baisse des émissions de CO2.
 
-      1979, c''est aussi l''année du 2ème choc pétrolier, et l''année de la mise en
-      service de la centrale nucléaire de Fessenheim, tête de série du parc nucléaire
-      actuel.
-
-      Ces deux événements ont largement contribué aux économies d''énergies et à la
-      baisse de la consommation d''énergies fossiles (pétrole et charbon), conduisant
-      de facto à une baisse des émissions de CO2. Les émissions territoriales de CO2
-      se sont remises à baisser vers les années 2000 suite à la désindustrialisation
-      et aux délocalisations progressives vers des pays étrangers, notamment la Chine.
-
-      Les émissions territoriales françaises sont maintenant d''environ 340 millions
-      de tonnes par an.'
+      Après un plateau, les émissions territoriales de CO2 se sont remises à baisser
+      vers les années 2000 suite à la désindustrialisation et aux délocalisations
+      progressives vers des pays étrangers, notamment la Chine. Les émissions territoriales
+      françaises sont maintenant d''environ 340 millions de tonnes par an.'
     answer_accessible_url: ''
     answer_scientific_url: https://ourworldindata.org/co2/country/france?country=~FRA
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/542.png
@@ -19551,12 +19547,12 @@
       prenant en compte les effets du changement climatique à un horizon de centaines
       de milliers d'années, prenant en compte des effets comme la montée des eaux,
       la fonte des glaciers, la perte de capacité agricole des sols.
-    answer_accessible_url: https://news.uchicago.edu/story/climate-change-will-ultimately-cost-humanity-100000-ton-carbon-scientists-estimate
+    answer_accessible_url: ''
     answer_scientific_url: https://link.springer.com/article/10.1007%2Fs10584-020-02785-4
     answer_image_url: https://news.uchicago.edu/sites/default/files/styles/full_width/public/images/2020-09/climate%20change%20sea%20level%20rise%20in%20pacific.jpg?itok=vplfV1-0
     answer_image_explanation: Augmentation du niveau des mers entre 1992 et 2014 (crédit
       NASA)
-    answer_extra_info: ''
+    answer_extra_info: https://news.uchicago.edu/story/climate-change-will-ultimately-cost-humanity-100000-ton-carbon-scientists-estimate
     author: Matthieu Massart
     validator: laydgeur
     validation_status: Validée
@@ -22292,3 +22288,99 @@
     - 36
     - 73
     - 208
+- model: api.question
+  pk: 676
+  fields:
+    text: Quel est le poids de la dette "durable" dans les émissions de dette totales
+      dans le monde en 2019 ?
+    hint: La dette durable englobe les green bonds, sustainability bonds, social bonds,
+      green loans, sustainability-linked loans et sustainability-linked bonds.
+    type: QCM
+    category: 8
+    difficulty: 2
+    answer_option_a: 5%
+    answer_option_b: 10%
+    answer_option_c: 25%
+    answer_option_d: 50%
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: 465 milliards de dollars de dette "durable" ont été émis en
+      2019, ce qui représente que 10% des 5 000 milliards de dollars émis au total.
+    answer_accessible_url: https://about.newenergyfinance.com/blog/sustainable-debt-sees-record-issuance-at-465bn-in-2019-up-78-from-2018/
+    answer_scientific_url: https://www.climatebonds.net/files/reports/2019_annual_highlights-final.pdf
+    answer_image_url: https://assets.bbhub.io/professional/sites/24/Sustainable-finance-market-outlook-2020.-.jpg
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Kim Nguyen-Huu
+    validator: ''
+    validation_status: A valider
+    added: 2020-12-09
+    created: 2020-12-10
+    updated: 2020-12-10
+    tags:
+    - 194
+- model: api.question
+  pk: 677
+  fields:
+    text: En 2019 quels ont été les moyens de financement des énergies fossiles comparés
+      à ceux des énergies renouvelables ?
+    hint: ''
+    type: QCM
+    category: 8
+    difficulty: 1
+    answer_option_a: ''
+    answer_option_b: ''
+    answer_option_c: ''
+    answer_option_d: ''
+    answer_correct: ''
+    has_ordered_answers: false
+    answer_explanation: ''
+    answer_accessible_url: ''
+    answer_scientific_url: ''
+    answer_image_url: ''
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Kim Nguyen-Huu
+    validator: ''
+    validation_status: Brouillon
+    added: 2020-12-09
+    created: 2020-12-10
+    updated: 2020-12-10
+    tags:
+    - 194
+- model: api.question
+  pk: 678
+  fields:
+    text: Si les 6 plus grandes banques françaises étaient un pays, comment se classerait-il
+      en terme d'émissions de gaz à effet de serre ?
+    hint: ''
+    type: QCM
+    category: 8
+    difficulty: 1
+    answer_option_a: 1er
+    answer_option_b: 3ème
+    answer_option_c: 10ème
+    answer_option_d: 30ème
+    answer_correct: b
+    has_ordered_answers: true
+    answer_explanation: Oxfam a calculé que les 6 plus grandes banques françaises
+      (BNP Paribas, Sociéte Générale, Crédit Agricole, Groupe BPCE, La Banque Postale,
+      Crédit Mutuel) émettaient 3.3 milliards de tonne équivalent CO2 par an, ce qui
+      les placeraient en 3ème position des pays émetteurs, derrière la Chine (~10
+      milliards de tonnes), et les USA (~5.5 milliards de tonnes) et devant l'Inde
+      (~2.7 milliards de tonnes). Elles seraient également au même niveau que l'Union
+      Européenne.
+    answer_accessible_url: http://www.globalcarbonatlas.org/en/CO2-emissions
+    answer_scientific_url: https://www.oxfamfrance.org/rapports/banques-des-engagements-climat-a-prendre-au-4eme-degre/
+    answer_image_url: https://www.outside.fr/wp-content/uploads/2020/10/Oxfam-Banques-720x640.jpg
+    answer_image_explanation: ''
+    answer_extra_info: ''
+    author: Kim Nguyen-Huu
+    validator: ''
+    validation_status: A valider
+    added: 2020-12-09
+    created: 2020-12-10
+    updated: 2020-12-10
+    tags:
+    - 194
+    - 201
