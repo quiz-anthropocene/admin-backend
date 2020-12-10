@@ -621,25 +621,25 @@
   pk: 55
   fields:
     name: NOUVEAU - Capture et stockage du CO2
-    introduction: "<p>Le Réveilleur est un vulgarisateur sur les thématiques environnementales,\
-      \ et explique de manière padagogique ces sujets complexes sur Youtube.</p>\r\
+    introduction: "<p>Le Réveilleur est un vulgarisateur sur les thématiques environnementales.\
+      \ Il explique de manière pédagogique ces sujets complexes sur Youtube.</p>\r\
       \n\r\n<p>Une de ses dernières vidéos traite de la capture et du stockage du\
       \ CO2 dans le sol, qui est une technologie clé pour beaucoup de scénarios d'atténuation\
       \ du changement climatique.</p>\r\n\r\n<p>Ce quiz vous permettra de compléter\
       \ sa vidéo sur le sujet : https://youtu.be/AQlqQEhVi1M</p>"
-    conclusion: "<p>Bravo à vous !</p>\r\n\r\n<p>Les principaux message à retenir\
-      \ sur la capture et le stockage du CO2 : techniquement ça marche pour de grosses\
-      \ installations fixes (cimenterie, centrales électriques), et on sait le faire\
-      \ depuis des années dans des projets à grande échelle.</p>\r\n\r\n<p>Mais économiquement\
-      \ c'est là que le bât blesse : moindre production, rentabilité en baisse, ...\
-      \ tout cela induit un cout supplémentaire, et ne sera rentable qu'avec une taxe\
-      \ significative sur le carbone émis.</p>"
+    conclusion: "<p>Bravo à vous d'être allé au bout !</p>\r\n\r\n<p>Les principaux\
+      \ message à retenir sur la capture et le stockage du CO2 :</p>\r\n\r\n<p>Techniquement,\
+      \ ça marche pour de grosses installations fixes (cimenterie, centrales électriques),\
+      \ et on sait le faire depuis des années pour des projets à grande échelle.</p>\r\
+      \n\r\n<p>Mais économiquement c'est là que le bât blesse : moindre production,\
+      \ rentabilité en baisse... Tout cela induit un surcoût. Cela ne sera  rentable\
+      \ qu'avec une taxe significative sur le carbone émis.</p>"
     difficulty_average: 2.888888888888889
     author: Le Réveilleur
     image_background_url: https://www.lereveilleur.com/wp-content/uploads/2020/09/CSC_paint.jpg
     publish: false
     created: 2020-12-08
-    updated: 2020-12-08
+    updated: 2020-12-09
     questions:
     - 615
     - 616
