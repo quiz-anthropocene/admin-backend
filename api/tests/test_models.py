@@ -74,19 +74,14 @@ class QuestionModelTest(TestCase):
         self.assertRaises(ValidationError, QuestionFactory, answer_correct="")
         self.assertRaises(ValidationError, QuestionFactory, answer_correct="ab")
         self.assertRaises(ValidationError, QuestionFactory, answer_correct="aa")
+        self.assertRaises(ValidationError, QuestionFactory, answer_correct="e")
 
-    def test_validated_question_qcm_rm_must_have_at_least_two_answers(self):
+    def test_validated_question_qcm_rm_must_have_at_least_one_answer(self):
         self.assertRaises(
             ValidationError,
             QuestionFactory,
             type=constants.QUESTION_TYPE_QCM_RM,
             answer_correct="",
-        )
-        self.assertRaises(
-            ValidationError,
-            QuestionFactory,
-            type=constants.QUESTION_TYPE_QCM_RM,
-            answer_correct="a",
         )
         self.assertRaises(
             ValidationError,

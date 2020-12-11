@@ -398,7 +398,7 @@ class Question(models.Model):
             # > type 'QCM' rules
             # - QCM question must have len(answer_correct) equal to 1 ('a', 'b', 'c' or 'd')
             if self.type == constants.QUESTION_TYPE_QCM:
-                if len(self.answer_correct) != 1:
+                if self.answer_correct not in constants.QUESTION_TYPE_QCM_CHOICE_LIST:
                     error_message = f"Valeur : '{self.answer_correct}' doit être 'a', 'b', 'c' ou 'd'. Car type 'QCM'. Question {self.id}"  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "answer_correct", error_message
@@ -406,8 +406,8 @@ class Question(models.Model):
             # > type 'QCM-RM' rules
             # - QCM-RM question must have len(answer_correct) larger than 1 and lower than 5
             if self.type == constants.QUESTION_TYPE_QCM_RM:
-                if (len(self.answer_correct) < 2) or (len(self.answer_correct) > 4):
-                    error_message = f"Valeur : '{self.answer_correct}' longueur doit être égale à 2, 3 or 4 ('ab' ... 'abcd'). Car type 'QCM-RM'. Question {self.id}"  # noqa
+                if (len(self.answer_correct) < 1) or (len(self.answer_correct) > 4):
+                    error_message = f"Valeur : '{self.answer_correct}' longueur doit être égale à 1, 2, 3 or 4 ('a', 'ab' ... 'abcd'). Car type 'QCM-RM'. Question {self.id}"  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "answer_correct", error_message
                     )
@@ -415,7 +415,7 @@ class Question(models.Model):
             # - Vrai/Faux question must have answer_correct equal to 'a' or 'b'
             # - Vrai/Faux question must have has_ordered_answers checked
             if self.type == constants.QUESTION_TYPE_VF:
-                if self.answer_correct not in ["a", "b"]:
+                if self.answer_correct not in constants.QUESTION_TYPE_VF_CHOICE_LIST:
                     error_message = f"Valeur : '{self.answer_correct}' doit être 'a' ou 'b'. Car type 'VF'. Question {self.id}"  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "answer_correct", error_message
