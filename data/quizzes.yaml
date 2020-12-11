@@ -283,15 +283,15 @@
       \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
       \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
       \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
-      \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur le deuxième lot de cartes\
-      \ qui est distribué lors d'un atelier de la Fresque.</p>"
+      \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur le lot de cartes n°2 qui\
+      \ est distribué lors d'un atelier de la Fresque.</p>"
     conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
-    difficulty_average: 1.8333333333333333
+    difficulty_average: 1.9047619047619049
     author: Matthieu Massart
     image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/IMG_9753-215x215.jpg
     publish: true
     created: 2020-07-29
-    updated: 2020-12-02
+    updated: 2020-12-11
     questions:
     - 6
     - 8
@@ -303,16 +303,13 @@
     - 26
     - 27
     - 28
-    - 31
     - 32
     - 34
-    - 36
     - 37
     - 42
     - 47
     - 48
     - 66
-    - 118
     - 143
     - 282
     - 343
