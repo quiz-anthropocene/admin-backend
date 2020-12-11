@@ -13075,7 +13075,7 @@
       est retiré en 2012.'
     answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/protocole-de-kyoto
     answer_scientific_url: https://unfccc.int/process/the-kyoto-protocol/status-of-ratification
-    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r281.jpg
+    answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r281.png
     answer_image_explanation: '2009: le vert indique les pays ayant signé et ratifié
       le traité (en vert foncé, les pays des annexes I et II) ; en brun orangé ne
       voulant pas le ratifier ; en gris sans position; en rouge a ratifié, mais a
@@ -22351,7 +22351,7 @@
 - model: api.question
   pk: 678
   fields:
-    text: Si les 6 plus grandes banques françaises étaient un pays, comment se classerait-il
+    text: Si les 6 plus grandes banques françaises étaient un pays, combien se classerait-il
       en terme d'émissions de gaz à effet de serre ?
     hint: ''
     type: QCM
@@ -22365,8 +22365,8 @@
     has_ordered_answers: true
     answer_explanation: Oxfam a calculé que les 6 plus grandes banques françaises
       (BNP Paribas, Sociéte Générale, Crédit Agricole, Groupe BPCE, La Banque Postale,
-      Crédit Mutuel) émettaient 3.3 milliards de tonne équivalent CO2 par an, ce qui
-      les placeraient en 3ème position des pays émetteurs, derrière la Chine (~10
+      Crédit Mutuel) émettaient 3.3 milliards de tonnes équivalent CO2 par an, ce
+      qui les placeraient en 3ème position des pays émetteurs, derrière la Chine (~10
       milliards de tonnes), et les USA (~5.5 milliards de tonnes) et devant l'Inde
       (~2.7 milliards de tonnes). Elles seraient également au même niveau que l'Union
       Européenne.
@@ -22376,11 +22376,50 @@
     answer_image_explanation: ''
     answer_extra_info: ''
     author: Kim Nguyen-Huu
-    validator: ''
-    validation_status: A valider
+    validator: Matthieu Massart
+    validation_status: Validée
     added: 2020-12-09
     created: 2020-12-10
     updated: 2020-12-10
     tags:
     - 194
     - 201
+- model: api.question
+  pk: 679
+  fields:
+    text: Quelle est l'empreinte carbone du Bitcoin ?
+    hint: ''
+    type: QCM
+    category: 8
+    difficulty: 2
+    answer_option_a: ''
+    answer_option_b: ''
+    answer_option_c: 20 millions de tonnes (comme Las Vegas)
+    answer_option_d: ''
+    answer_correct: c
+    has_ordered_answers: false
+    answer_explanation: Le transfert de Bitcoin s'effectue à travers un réseau décentralisé
+      d'ordinateurs à travers le monde qui nécessite 46 TWh d'électricité. En comparant
+      les émissions moyennes de l'électricité aux zones d'où provient l'équipement
+      informatique, les émissions de carbon du Bitcoin ont été estimée à 22 millions
+      de tonne de CO2 par an, soit l'équivalent de la ville de Las Vegas. Il y a à
+      peu près 20 millions de Bitcoin actuellement en circulation, ce qui représente
+      400 milliards de dollars au cours actuel. Si toute la monnaie mondiale (physique
+      et épargne) était sous la forme de Bitcoin, il en faudrait 200 fois plus à son
+      niveau actuel, 600 fois plus síl était à son niveau díl y a 6 mois (pour atteindre
+      80 000 milliards de dollars), ce qui le placerait alors devant les émissions
+      de la Chine.
+    answer_accessible_url: https://www.rse-magazine.com/Le-Bitcoin-emet-autant-de-CO2-que-Las-Vegas_a3342.html
+    answer_scientific_url: ''
+    answer_image_url: https://coincentral.com/wp-content/uploads/2019/04/bitcoin-energy-consumpti.jpeg
+    answer_image_explanation: ''
+    answer_extra_info: https://youtu.be/WhI72CFrqEk
+    author: Kim Nguyen-Huu
+    validator: ''
+    validation_status: Brouillon
+    added: 2020-12-10
+    created: 2020-12-11
+    updated: 2020-12-11
+    tags:
+    - 72
+    - 194
