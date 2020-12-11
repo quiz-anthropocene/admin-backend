@@ -6,6 +6,18 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Des pistes dans [README.md#idées](README.md#idées)
 
+## [] - 2020-12-13
+
+- [Data] Générer un fichier `data/stats.yaml` lors de l'export
+- [Data] Générer un fichier `data/authors.yaml` lors de l'export (avec les `question_count` et `quiz_count`)
+- [Data] Avoir les `question_count` dans le fichier `difficulty-levels.yaml`
+- [DevOps] Migration du CI de CircleCI vers Github Actions
+- [Backend] Stocker les erreurs d'import dans une Contribution
+- [Backend] Export asynchrone des Contributions vers Notion
+- [Backend] Les QCM-RM peuvent maintenant avoir qu'1 seule réponse
+- [Frontend] Pouvoir accéder dans l'interface (via l'url) aux quizs non publiés
+- [Frontend] Contribution: rajouter du texte pour proposer aux utilisateurs de laisser leur email
+
 ## [1.1.0] - 2020-12-06
 
 - [Data] Nouveau dashboard Metabase connecté à la base de donnée de Scalingo
@@ -14,8 +26,7 @@ Des pistes dans [README.md#idées](README.md#idées)
 - [Backend] Nouveau statut "Ecartée temporairement" pour les questions
 - [Backend] Enlève le champ `publish` du modèle `Question` (on regarde maintenant seulement sont `validation_status`)
 - [Backend] Créer les nouveaux tags automatiquement lors de l'import depuis Notion
-
-- [Backend] Automatiser le lancement des tâches (import depuis Notion, export vers Github, aggrégation des Daily Stats)
+- [Backend] Automatiser le lancement des tâches (import depuis Notion, export vers Github, aggrégation des Daily Stats) grâce à Github Actions
 - [Backend] Exporter certains stats à chaque export de la donnée (pour éviter d'avoir un endpoint API et d'y faire des appels)
 - [Frontend] Boutons de partage sur les réseaux sociaux à la fin d'un quiz
 
