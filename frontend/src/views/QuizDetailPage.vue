@@ -124,9 +124,6 @@ export default {
     quiz() {
       const quiz = this.$store.getters.getQuizById(parseInt(this.$route.params.quizId, 10));
       // .slice(0) ? // .slice makes a copy of the array, instead of mutating the orginal
-      if (quiz) { // can be undefined if loading '/quiz/<quizId' page directly
-        quiz.questions.sort(() => Math.random() - 0.5); // random order
-      }
       return quiz;
     },
   },

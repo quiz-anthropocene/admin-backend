@@ -31,7 +31,7 @@
           </div>
         </div>
         <div v-if="question.type === 'QCM-RM'" class="row justify-content-center">
-          <p><i>⚠️&nbsp;plusieurs réponses possibles</i></p>
+          <div class="col-12 margin-bottom-10"><i>⚠️&nbsp;plusieurs réponses possibles</i></div>
           <div class="col-sm-auto text-align-left">
             <div class="form-group" v-for="(answer_option_letter, index) in answerChoices" :key="answer_option_letter" :class="{ 'text-primary' : answerPicked.includes(answer_option_letter), 'text-warning': (questionSubmitted && answerPicked.includes(answer_option_letter) && !question['answer_correct'].includes(answer_option_letter)), 'text-danger': (questionSubmitted && !answerPicked.includes(answer_option_letter) && question['answer_correct'].includes(answer_option_letter)) }">
               <template v-if="question['answer_option_' + answer_option_letter]">
@@ -42,7 +42,7 @@
           </div>
         </div>
         <!-- Question hint & form submit -->
-        <div v-if="question.hint && showQuestionHint" class="row no-gutters text-align-left">
+        <div v-if="question.hint && showQuestionHint" class="row no-gutters justify-content-center">
           <div class="col-md-10 col-lg-8">
             <div class="alert alert-warning-custom text-align-left margin-bottom-10 padding-10">💡{{ question.hint }}</div>
           </div>
@@ -118,6 +118,7 @@
 </template>
 
 <script>
+import constants from '../constants';
 import DifficultyBadge from './DifficultyBadge.vue';
 import FeedbackCard from './FeedbackCard.vue';
 
@@ -140,7 +141,7 @@ export default {
       answerPicked: null,
       questionSubmitted: false,
       questionSuccess: null,
-      questionSuccessMessageList: ["C'est exact", 'En effet', 'Bien vu', 'Félicitations', 'Bravo'],
+      questionSuccessMessageList: constants.QUESTION_SUCCESS_MESSAGES,
     };
   },
 
@@ -209,7 +210,7 @@ export default {
     submitAnswer() {
       // init
       this.questionSubmitted = true;
-      const cleanedAnswerPicked = (this.question.type === 'QCM-RM') ? this.answerPicked.slice(0).sort().join('') : this.answerPicked;
+      const cleanedAnswerPicked = (this.question.type === 'QCM-RM') ? this.answerPicked.slice(0).filter(Boolean).sort().join('') : this.answerPicked;
       const randomSuccessMessage = this.questionSuccessMessageList[Math.floor(Math.random() * this.questionSuccessMessageList.length)];
       // validate answer
       this.questionSuccess = (cleanedAnswerPicked === this.question.answer_correct) ? randomSuccessMessage : null;
