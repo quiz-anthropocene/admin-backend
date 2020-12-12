@@ -738,8 +738,9 @@
 - model: api.question
   pk: 23
   fields:
-    text: Quelle proportion de nos émissions les puits de carbone naturels absorbent-ils
-      ?
+    text: Un puits de carbone est un réservoir qui absorbe et stocke durablement du
+      carbone en circulation dans la biosphère. Quelle proportion des  émissions d'origine
+      humaine les puits de carbone naturels absorbent-ils ?
     hint: ''
     type: QCM
     category: 1
@@ -953,7 +954,8 @@
     type: QCM
     category: 1
     difficulty: 1
-    answer_option_a: Sur la santé, oui ! Mais sur le climat, aucun effet notable.
+    answer_option_a: Elles ont un effet nocif sur la santé. Mais sur le climat, aucun
+      effet.
     answer_option_b: Elles détruisent la couche d'ozone
     answer_option_c: Elles le refroidissent
     answer_option_d: Elles le réchauffent
@@ -1025,7 +1027,7 @@
 - model: api.question
   pk: 31
   fields:
-    text: Quelle est la conséquence de la dissolution du CO2 dans les océans
+    text: DOUBLON Quelle est la conséquence de la dissolution du CO2 dans les océans
     hint: ''
     type: QCM
     category: 1
@@ -1047,7 +1049,7 @@
     answer_extra_info: https://www.lemonde.fr/blog/oceanclimat/2015/11/18/tout-ce-quil-faut-savoir-sur-lacidification-des-oceans/
     author: Avenir Climatique
     validator: Matthieu Massart
-    validation_status: Validée
+    validation_status: Écartée
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-09-28
@@ -1197,8 +1199,8 @@
 - model: api.question
   pk: 36
   fields:
-    text: Outre le changement climatique, les émissions de CO2 ont aussi une influence
-      inquiétante sur...
+    text: DOUBON Outre le changement climatique, les émissions de CO2 ont aussi une
+      influence inquiétante sur...
     hint: ''
     type: QCM
     category: 1
@@ -1219,7 +1221,7 @@
     answer_extra_info: ''
     author: Matthieu Massart
     validator: Raphael Odini
-    validation_status: Validée
+    validation_status: Écartée
     added: 2020-03-10
     created: 2020-03-10
     updated: 2020-09-28
@@ -1509,10 +1511,11 @@
     type: QCM
     category: 3
     difficulty: 4
-    answer_option_a: 1000 tonnes
-    answer_option_b: 100 000 tonnes
-    answer_option_c: 1 million de tonnes
-    answer_option_d: 100 millions de tonnes
+    answer_option_a: 1000 tonnes (10 baleines bleues)
+    answer_option_b: 100 000 tonnes (10 fois la Tour Eiffel)
+    answer_option_c: 1 million de tonnes (la grande Pyramide de Bizeh)
+    answer_option_d: 100 millions de tonnes (la masse totale de la population humaine
+      mondiale)
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: 'Chaque année, 300 à 400 millions de tonnes de métaux lourds,
@@ -2196,7 +2199,8 @@
     answer_accessible_url: https://reseauactionclimat.org/stockage-carbone-sol-rechauffement-climatique/
     answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/19/presentation.htm
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/66.png
-    answer_image_explanation: ''
+    answer_image_explanation: A gauche, les sources. A droite, les puits. Les 4% représentent
+      le déséquilibre.
     answer_extra_info: ''
     author: Matthieu Massart
     validator: ''
@@ -3920,7 +3924,7 @@
 - model: api.question
   pk: 118
   fields:
-    text: Quelle était la concentration en CO2 dans l'atmosphère à l'ère pré-industrielle
+    text: DOUBLON Quelle était la concentration en CO2 dans l'atmosphère à l'ère pré-industrielle
       (dans les années 1850)  (en ppm, parties par millions, soit en dix-millièmes
       de %) ?
     hint: ''
@@ -3943,7 +3947,7 @@
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
-    validation_status: Validée
+    validation_status: Écartée
     added: 2019-01-28
     created: 2019-01-28
     updated: 2020-09-28
@@ -4346,15 +4350,14 @@
     type: QCM
     category: 1
     difficulty: 3
-    answer_option_a: Infrarouge
-    answer_option_b: Lumière visible
-    answer_option_c: Rayons X
-    answer_option_d: Ultraviolet
+    answer_option_a: Les rayons infrarouges
+    answer_option_b: La lumière visible
+    answer_option_c: Les rayons X
+    answer_option_d: Les ultraviolets
     answer_correct: a
     has_ordered_answers: false
-    answer_explanation: 'Les gaz à effet de serre absorbent le rayonnement infrarouge
-      émis par la terre, puis ré-émettent cette chaleur dans toutes les directions,
-      y compris à nouveau vers la terre : c’est ce qu’on appelle le forçage radiatif.'
+    answer_explanation: Les gaz à effet de serre absorbent le rayonnement infrarouge
+      émis par la terre, puis ré-émettent cette chaleur dans toutes les directions.
     answer_accessible_url: https://fr.m.wikipedia.org/wiki/Effet_de_serre
     answer_scientific_url: ''
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r029.jpg
@@ -4967,8 +4970,8 @@
 - model: api.question
   pk: 150
   fields:
-    text: "Prenons 1 kg des quatre aliments suivants. \nLequel génère le plus de gaz\
-      \ à effet de serre ? (en équivalent CO2)"
+    text: Prenons 1 kg des quatre aliments suivants. Lequel génère le plus de gaz
+      à effet de serre ? (en équivalent CO2)
     hint: ''
     type: QCM
     category: 2
@@ -4979,11 +4982,10 @@
     answer_option_d: Vin
     answer_correct: a
     has_ordered_answers: false
-    answer_explanation: '10 kg d''équivalent CO2 pour se procurer 1 kg de beurre.
-
-      Ce chiffre tient compte de tout le processus d’élaboration : production, transformation,
-      conditionnement, transport. Il faut en effet une vingtaine de litres de lait
-      pour faire 1 kg de beurre.'
+    answer_explanation: '10 kg d''équivalent CO2 pour 1 kg de beurre. Ce chiffre tient
+      compte de tout le processus d’élaboration : production, transformation, conditionnement,
+      transport. Il faut en effet une vingtaine de litres de lait pour faire 1 kg
+      de beurre. On mange certes pas les mêmes quantités de beurre que du reste !'
     answer_accessible_url: ''
     answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/Datalab-25-menages-environnement-cc-ed-2017-oct2017-b.pdf
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r048.jpg
@@ -11760,10 +11762,10 @@
       Les émissions de CO2 des 330 millions d''Américains correspondent à ce qu''émettraient...
       40 milliards d’Ethiopiens.
 
-
       Les Américains sont parmi les plus gros émetteurs de CO2 de la planète, avec
       deux secteurs prédominants : la production électrique (mix électrique à 60%
-      fossile, gaz et charbon), et les transports (voitures, pick-ups, avions).'
+      fossile, gaz et charbon), et les transports (voitures, pick-ups, avions). On
+      parle ici des émissions territoriales.'
     answer_accessible_url: ''
     answer_scientific_url: http://www.globalcarbonatlas.org/fr/CO2-emissions
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r242.jpg
@@ -11818,7 +11820,7 @@
     text: Parmi ces pays, lesquels produisent plus d'électricité que les seules centrales
       électriques à gaz des États-Unis ?
     hint: ''
-    type: QCM
+    type: QCM-RM
     category: 5
     difficulty: 4
     answer_option_a: Chine
@@ -15053,7 +15055,7 @@
 - model: api.question
   pk: 459
   fields:
-    text: 'Les éruptions volcaniques refroidissent le climat : vrai ou faux ?'
+    text: Vrai ou faux ? Les éruptions volcaniques refroidissent le climat.
     hint: Des éruptions volcaniques majeures sont possiblement la cause de l'extinction
       des dinosaures. Dans le jeu La Fresque du Climat, voir la carte n°14.
     type: VF
@@ -15061,14 +15063,14 @@
     difficulty: 1
     answer_option_a: Vrai
     answer_option_b: Faux
-    answer_option_c: Réchauffement
+    answer_option_c: ''
     answer_option_d: ''
     answer_correct: a
     has_ordered_answers: true
     answer_explanation: Les éruptions volcaniques projettent des fines particules
       dans l'atmosphère (aérosols) qui réfléchissent les rayons du soleil, ce qui
-      a un effet refroidissant qui peut être très important mais sur une courte période
-      (1-3 ans).
+      a un effet refroidissant qui peut être très important mais sur une courte période,
+      de 1 à 3 ans.
     answer_accessible_url: https://www.meteocontact.fr/pour-aller-plus-loin/les-volcans-et-le-climat
     answer_scientific_url: http://documents.irevues.inist.fr/handle/2042/51959
     answer_image_url: https://www.meteocontact.fr/uploads/lsv/eruptionvolcanique.jpg
@@ -17964,7 +17966,7 @@
     answer_correct: d
     has_ordered_answers: true
     answer_explanation: Le changement de régime alimentaire de nos ancêtres, qui consomment
-      de plus en plus de viande, réduit progressivement la diversité animale autour
+      de plus en plus de viande, a réduit progressivement la diversité animale autour
       des peuplements du genre Homo.
     answer_accessible_url: ''
     answer_scientific_url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0057944
@@ -20198,8 +20200,8 @@
 - model: api.question
   pk: 615
   fields:
-    text: Dans le monde, combien y a-t-il d'installations de capture et de stockage
-      de CO2 à large échelle ?
+    text: Dans le monde, combien y a-t-il d'installations opérationnelles de capture
+      et de stockage de CO2 à large échelle ?
     hint: La capture et le stockage géologique de CO2 se font déjà, mais sont peu
       répandus
     type: QCM
@@ -20211,10 +20213,13 @@
     answer_option_d: '200'
     answer_correct: c
     has_ordered_answers: true
-    answer_explanation: Dans le monde, il y a 51 installations de capture et stockage
-      de CO2 à large échelle (plusieurs centaines de millions de tonnes de CO2 capturées
-      chaque année), dont 19 en opération. Sur ces 19 installations, 17 concernent
-      des sites industriels, et 2 des centrales électriques.
+    answer_explanation: 'Dans le monde, il y a en tout 51 installations de capture
+      et stockage de CO2 à large échelle (plusieurs centaines de millions de tonnes
+      de CO2 capturées chaque année), dont 19 en opération, les 32 autres étant en
+      développement ou en construction.
+
+      Sur ces 19 installations, 17 concernent des sites industriels, et 2 des centrales
+      électriques.'
     answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/capture-et-stockage-du-co2-csc
     answer_scientific_url: https://co2re.co/FacilityData
     answer_image_url: https://www.globalccsinstitute.com/wp-content/uploads/2019/12/infographics-03.jpg
@@ -20237,16 +20242,19 @@
     type: QCM
     category: 1
     difficulty: 3
-    answer_option_a: Zéro
-    answer_option_b: 0.1 %
+    answer_option_a: 0,01%
+    answer_option_b: 0,1 %
     answer_option_c: 1 %
     answer_option_d: 10 %
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: Les émissions de CO2 dues aux activités humaines sont de 36
-      milliards de tonnes par an (sans compter les émissions dues à la déforestation),
+    answer_explanation: 'Les émissions de CO2 dues aux activités humaines sont de
+      36 milliards de tonnes par an (sans compter les émissions dues à la déforestation),
       et la quantité capturée dans le même temps est de 40 millions de tonnes par
-      an. Soit environ mille fois moins.
+      an.
+
+
+      Soit environ mille fois moins.'
     answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/capture-et-stockage-du-co2-csc
     answer_scientific_url: https://www.globalccsinstitute.com/resources/global-status-report/
     answer_image_url: https://www.math-dictionary.com/images/one-thousandth.png
@@ -20310,10 +20318,10 @@
     answer_correct: c
     has_ordered_answers: true
     answer_explanation: L'ajout d'une installation de capture du CO2 à une centrale
-      à charbon augmente le cout de cette dernière entre +45%-70%.
+      à charbon augmente le cout de cette dernière entre +45% et +70%.
     answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/capture-et-stockage-du-co2-csc
     answer_scientific_url: https://www.globalccsinstitute.com/archive/hub/publications/201688/global-ccs-cost-updatev4.pdf
-    answer_image_url: https://www.carbonbrief.org/wp-content/uploads/2014/10/PetraNova.png
+    answer_image_url: https://www.eia.gov/todayinenergy/images/2017.10.31/main.png
     answer_image_explanation: Installation de capture et stockage du CO2 sur la centrale
       au charbon de Petra Nova au Texas. On y voit les différents composants pour
       capturer le CO2.
@@ -20351,9 +20359,9 @@
       exclut à ce jour les transports et les chaudières de bâtiments.
     answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/capture-et-stockage-du-co2-csc
     answer_scientific_url: ''
-    answer_image_url: https://www.carbonbrief.org/wp-content/uploads/2014/10/emiratessteel.jpg
-    answer_image_explanation: Projet de capture et de stockage de CO2 aux Émirats
-      Arabes Unis sur un haut fourneau (production d'acier)
+    answer_image_url: https://www.thenationalnews.com/image/policy:1.213290:1499318519/image/jpeg.jpg?f=16x9&w=1200&$p$f$w=dfa40e8
+    answer_image_explanation: Installation de production d'acier équipée de capture
+      et de stockage de CO2 aux Émirats Arabes Unis
     answer_extra_info: ''
     author: laydgeur
     validator: Matthieu Massart
@@ -20452,7 +20460,7 @@
       pour épurer le CO2 émis de l'atmosphère.
     answer_accessible_url: ''
     answer_scientific_url: https://www.nature.com/articles/s41467-018-04423-1
-    answer_image_url: https://www.encyclopedie-energie.org/wp-content/uploads/2016/01/Sch%C3%A9maPuitsDeCarboneArntzenFr.jpg
+    answer_image_url: https://www.brgm.fr/sites/default/files/galerie_stockagegeol_01.jpg
     answer_image_explanation: ''
     answer_extra_info: ''
     author: laydgeur
@@ -20468,8 +20476,7 @@
   fields:
     text: Quelle proportion de CO2 une installation de capture peut-elle récupérer
       ?
-    hint: 'Plus de 90% du CO2 émis par des centrales électriques et autres installations
-      industrielles peut être capturé avec des équipements standards. '
+    hint: ''
     type: QCM
     category: 1
     difficulty: 3
@@ -20479,7 +20486,8 @@
     answer_option_d: 90 %
     answer_correct: d
     has_ordered_answers: true
-    answer_explanation: ''
+    answer_explanation: Plus de 90% du CO2 émis par des centrales électriques et autres
+      installations industrielles peut être capturé avec des équipements standards.
     answer_accessible_url: https://www.encyclopedie-energie.org/captage-et-stockage-du-carbone/
     answer_scientific_url: ''
     answer_image_url: https://www.connaissancedesenergies.org/sites/default/files/album_images/postcombustion.graphique1_zoom.png
