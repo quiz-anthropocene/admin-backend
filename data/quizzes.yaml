@@ -198,12 +198,12 @@
       \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur le premier lot de cartes\
       \ distribué lors d'un atelier de la Fresque.</p>"
     conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
-    difficulty_average: 2.0526315789473686
+    difficulty_average: 2.111111111111111
     author: Matthieu Massart
     image_background_url: https://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
     publish: true
     created: 2020-07-14
-    updated: 2020-12-02
+    updated: 2020-12-12
     questions:
     - 6
     - 8
@@ -211,7 +211,6 @@
     - 14
     - 22
     - 30
-    - 31
     - 32
     - 33
     - 79
