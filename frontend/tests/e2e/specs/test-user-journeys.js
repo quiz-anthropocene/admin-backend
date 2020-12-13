@@ -15,7 +15,7 @@ module.exports = {
       .click('(//main//a[contains(@class, "card")])[1]')
       .useCss()
       // quiz detail page
-      .assert.urlContains('quiz/17')
+      // .assert.urlContains('quiz/17')
       // .assert.containsText('.card h2', 'Anéantissement de la biodiversité')
       .assert.containsText('div[class*="quiz-start"] button', 'Commencer le quiz')
       .click('div[class*="quiz-start"] button')
