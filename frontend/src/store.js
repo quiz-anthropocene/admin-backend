@@ -19,19 +19,6 @@ import ressourcesAutresAppsYamlData from '../../data/ressources-autres-apps.yaml
 Vue.use(Vuex);
 
 /**
- * goal: flatten json list of "django models"
- * input: array of objects, with 'pk' and 'fields' fields
- * output: array of objects with 'fields' object moved up
- */
-function processModelList(data) {
-  return data.map((el) => {
-    Object.assign(el, { id: el.pk }, el.fields);
-    delete el.fields;
-    return el;
-  });
-}
-
-/**
  * Place to store app-wide variables
  */
 const store = new Vuex.Store({
@@ -76,7 +63,7 @@ const store = new Vuex.Store({
      * Get app configuration
      */
     GET_CONFIGURATION_DICT_FROM_LOCAL_YAML: ({ commit }) => {
-      commit('SET_CONFIGURATION_DICT', { dict: processModelList(configurationYamlData)[0] });
+      commit('SET_CONFIGURATION_DICT', { dict: configurationYamlData[0] });
     },
     /**
      * Get questions
@@ -86,7 +73,7 @@ const store = new Vuex.Store({
      */
     GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
       // questions
-      const questions = processModelList(questionsYamlData);
+      const questions = questionsYamlData;
       // questions: get category & tags objects
       questions.map((q) => {
         const questionCategory = getters.getCategoryById(q.category);
@@ -109,7 +96,7 @@ const store = new Vuex.Store({
       });
     },
     GET_QUESTION_PENDING_VALIDATION_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      const questionsPendingValidation = processModelList(questionsYamlData).filter((el) => el.validation_status === constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS);
+      const questionsPendingValidation = questionsYamlData.filter((el) => el.validation_status === constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS);
       commit('SET_QUESTION_PENDING_VALIDATION_LIST', { list: questionsPendingValidation });
     },
     /**
@@ -119,7 +106,7 @@ const store = new Vuex.Store({
      * - enrich with questions, tags
      */
     GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
-      const quizzes = processModelList(quizzesYamlData);
+      const quizzes = quizzesYamlData;
       // quiz: get question and tag objects
       quizzes.map((q) => {
         const quizQuestions = getters.getQuestionsByIdList(q.questions);
@@ -155,27 +142,27 @@ const store = new Vuex.Store({
      * Pre-processing ? None
      */
     GET_CATEGORY_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      commit('SET_CATEGORY_LIST', { list: processModelList(categoriesYamlData) });
+      commit('SET_CATEGORY_LIST', { list: categoriesYamlData });
     },
     /**
      * Get tags
      * Pre-processing ? None
      */
     GET_TAG_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      commit('SET_TAG_LIST', { list: processModelList(tagsYamlData) });
+      commit('SET_TAG_LIST', { list: tagsYamlData });
     },
     /**
      * Get ressources: glossaire, soutiens, autres apps
      * Pre-processing ? for soutiens, append quiz tag or question author
      */
     GET_RESSOURCES_GLOSSAIRE_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      commit('SET_RESSOURCES_GLOSSAIRE_LIST', { list: processModelList(ressourcesGlossaireYamlData) });
+      commit('SET_RESSOURCES_GLOSSAIRE_LIST', { list: ressourcesGlossaireYamlData });
     },
     GET_RESSOURCES_SOUTIENS_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      commit('SET_RESSOURCES_SOUTIENS_LIST', { list: processModelList(ressourcesSoutiensYamlData) });
+      commit('SET_RESSOURCES_SOUTIENS_LIST', { list: ressourcesSoutiensYamlData });
     },
     GET_RESSOURCES_AUTRES_APPS_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      commit('SET_RESSOURCES_AUTRES_APPS_LIST', { list: processModelList(ressourcesAutresAppsYamlData) });
+      commit('SET_RESSOURCES_AUTRES_APPS_LIST', { list: ressourcesAutresAppsYamlData });
     },
     /**
      * Get app stats

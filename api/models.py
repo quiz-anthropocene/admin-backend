@@ -731,7 +731,11 @@ class Quiz(models.Model):
         # > only run on existing and published quizzes (Quiz query won't work on new quizzes)
         if getattr(self, "id") and getattr(self, "publish"):
             # > questions rules (only works for *existing* quiz questions, see quiz_validate_m2m_fields for new questions)  # noqa
-            quiz_questions = Quiz.objects.get(pk=self.id).questions
+            try:
+                quiz = Quiz.objects.get(pk=self.id)
+            except:  # noqa
+                return
+            quiz_questions = quiz.questions
             # - must have at least 1 question
             if quiz_questions.count() < 1:
                 raise ValidationError(

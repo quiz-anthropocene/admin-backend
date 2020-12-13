@@ -1,9 +1,8 @@
-import yaml
-
-from django.apps import apps
-from django.core import serializers
+# from django.core import serializers
 from django.core.management.base import CommandError
 from django.core.management.commands.dumpdata import Command as Dumpdata
+
+from api import utilities
 
 
 class Command(Dumpdata):
@@ -27,29 +26,24 @@ class Command(Dumpdata):
         if options.get("format").startswith("yaml-"):
             # init
             if (len(app_labels) == 0) or (len(app_labels) > 1):
-                raise CommandError("error with app_labels. only 1 'app.model' possible")
-            else:
-                app_label, model_label = app_labels[0].split(".")
-                model = apps.get_app_config(app_label).get_model(model_label)
+                raise CommandError(
+                    "Error with app_labels. Only 1 'app.model' possible."
+                )
+            # get input model
+            app_label, model_label = app_labels[0].split(".")
+            # model = apps.get_app_config(app_label).get_model(model_label)
+            # init output
             output = options["output"]
             stream = open(output, "w") if output else None
             # yaml + pretty : call django serializer
             if options.get("format") == "yaml-pretty":
-                model_queryset = model.objects.all()
-                serializers.serialize(
-                    "yaml",
-                    model_queryset,
-                    stream=stream or self.stdout,
-                    allow_unicode=True,
+                utilities.serialize_model_to_yaml(
+                    model_label, stream=stream or self.stdout
                 )
             # yaml + pretty + flat : call pyyaml
             elif options.get("format") == "yaml-pretty-flat":
-                model_queryset_values_list = list(model.objects.values())
-                yaml.safe_dump(
-                    model_queryset_values_list,
-                    stream=stream or self.stdout,
-                    allow_unicode=True,
-                    sort_keys=False,
+                utilities.serialize_model_to_yaml(
+                    model_label, flat=True, stream=stream or self.stdout
                 )
         else:
             super(Command, self).handle(*app_labels, **options)

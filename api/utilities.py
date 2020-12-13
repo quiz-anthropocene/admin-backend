@@ -1,28 +1,72 @@
 import re
+import yaml
 from datetime import datetime, timedelta
 
 from django.apps import apps
 from django.core import serializers
 
 
-def serialize_queryset_to_yaml(queryset):
-    return serializers.serialize("yaml", list(queryset), allow_unicode=True)
+def serialize_queryset_to_yaml(queryset, flat=False, stream=None):
+    if not flat:
+        return serializers.serialize(
+            "yaml", list(queryset), allow_unicode=True, stream=stream
+        )
+    serialized = serializers.serialize("yaml", list(queryset), allow_unicode=True)
+    serialized = yaml.safe_load(serialized)
+    serialized_flat = []
+    # flatten list
+    for item in serialized:
+        # keep only fields, add new key 'id' to the top
+        item_flat = {**{"id": item["pk"]}, **item["fields"]}
+        serialized_flat.append(item_flat)
+    return yaml.safe_dump(
+        serialized_flat, allow_unicode=True, sort_keys=False, stream=stream,
+    )
 
 
-def serialize_model_to_yaml(model_label):
+def serialize_model_to_yaml(model_label, flat=False, stream=None):
     model = apps.get_app_config("api").get_model(model_label)
     queryset = model.objects.all().order_by("pk")
-    return serialize_queryset_to_yaml(queryset)
+    return serialize_queryset_to_yaml(queryset, flat=flat, stream=stream)
 
 
-def serialize_queryset_to_json(queryset):
-    return serializers.serialize("json", list(queryset), ensure_ascii=False)
+def serialize_queryset_to_json(queryset, stream=None):
+    return serializers.serialize(
+        "json", list(queryset), ensure_ascii=False, stream=stream
+    )
 
 
-def serialize_model_to_json(model_label):
+def serialize_model_to_json(model_label, stream=None):
     model = apps.get_app_config("api").get_model(model_label)
     queryset = model.objects.all().order_by("pk")
-    return serialize_queryset_to_json(queryset)
+    return serialize_queryset_to_json(queryset, stream=stream)
+
+
+def load_model_data_to_db(model, data):
+    """
+    translate ids to FK & M2M
+    - FK: category
+    - M2M: tags, questions
+    """
+    for index, item in enumerate(data):
+        tag_ids = []
+        question_ids = []
+        # quiz_ids = []
+        if "category" in item:
+            item["category_id"] = item["category"]
+            del item["category"]
+        if "tags" in item:
+            tag_ids = item["tags"]
+            del item["tags"]
+        if "questions" in item:
+            question_ids = item["questions"]
+            del item["questions"]
+        # print(item)
+        instance = model.objects.create(**item)
+        if len(tag_ids):
+            instance.tags.set(tag_ids)
+        if len(question_ids):
+            instance.questions.set(question_ids)
 
 
 def aggregate_timeseries_by_week(timeseries):

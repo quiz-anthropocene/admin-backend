@@ -39,7 +39,6 @@ class Command(BaseCommand):
             glossary_item_base = dict()
             glossary_item_base["model"] = "api.glossary"
             glossary_item_base["pk"] = id_counter
-            id_counter += 1
             glossary_item_fields = dict()
             for field in glossary_model_fields:
                 if field == "added":
@@ -51,16 +50,14 @@ class Command(BaseCommand):
                 else:
                     glossary_item_fields[field] = row.get_property(field)
             if kwargs.get("flat"):
-                glossary_list.append({**glossary_item_base, **glossary_item_fields})
+                glossary_list.append({**{"id": id_counter}, **glossary_item_fields})
             else:
                 glossary_item_base["fields"] = glossary_item_fields
                 glossary_list.append(glossary_item_base)
+            id_counter += 1
 
         # --- write to file
-        with open(
-            f"data/ressources-glossaire{'_flat' if kwargs.get('flat') else ''}.yaml",
-            "w",
-        ) as file:
+        with open("data/ressources-glossaire.yaml", "w") as file:
             print(f"Glossary items: {len(glossary_list)}")
             yaml.safe_dump(
                 glossary_list, file, allow_unicode=True, sort_keys=False
