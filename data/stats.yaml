@@ -10,18 +10,18 @@ question_per_validation_status_count:
   total: 25
 - validation_status: Écartée temporairement
   total: 16
-quiz_count: 22
+quiz_count: 23
 quiz_per_publish_count:
 - publish: true
-  total: 20
+  total: 21
 - publish: false
   total: 2
-question_answer_count: 79501
-quiz_answer_count: 5704
-question_answer_count_last_30_days: 60742
-quiz_answer_count_last_30_days: 4702
+question_answer_count: 79855
+quiz_answer_count: 5712
+question_answer_count_last_30_days: 61096
+quiz_answer_count_last_30_days: 4710
 category_count: 8
 tag_count: 182
-question_feedback_count: 1348
+question_feedback_count: 1350
 quiz_feedback_count: 323
 contribution_count: 227
