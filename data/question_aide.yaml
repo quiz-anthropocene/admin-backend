@@ -1,27 +1,26 @@
-- model: api.question
-  fields:
-    text: "La question. Idéalement en 1 phrase. Elle peut être longue, dans ce cas il est possible
-      d'aller à la ligne. Ne pas oublier le ? à la fin :)"
-    hint: 
-    type: "Le type de question (QCM, V/F, ...)"
-    category: "l'id de la catégorie. Une seule catégorie possible"
-    tags: "le ou les id des tags. Un ou plusieurs tags possibles rattachés à la question"
-    difficulty: Chiffre entre 1 et 4
-    answer_option_a: Une courte réponse
-    answer_option_b: Une courte réponse
-    answer_option_c: Une courte réponse
-    answer_option_d: Une courte réponse
-    answer_correct: Lettre minuscule entre a et d
-    has_ordered_answers: Vrai si les choix de réponse sont dans un ordre figé, et ne doivent pas être mélangés
-    answer_explanation: "Une explication et/ou un commentaire à propos la réponse"
-    answer_accessible_url: Un lien pour aller plus loin
-    answer_scientific_url: La source scientifique du chiffre (rapport)
-    answer_image_url: "Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée en bas de l'image)"
-    answer_image_explanation: "Une légende pour l'image qui illustre la réponse"
-    answer_extra_info: "Texte et liens explicatifs additionels, qui n'apparaissent pas dans l'interface"
-    author: "L'auteur de la question"
-    validator: "La personne qui a validée la question"
-    validation_status: "Le statut de la question : Brouillon, A valider, Validée, Ecartée"
-    added: La date d'ajout de la question
-    created: Date au format YYYY-MM-DD
-    updated: Date au format YYYY-MM-DD
+- id: "L'identifiant unique de la question. Doit être un nombre entier."
+  text: "La question. Idéalement en 1 phrase. Elle peut être longue, dans ce cas il est possible
+    d'aller à la ligne. Ne pas oublier le ? à la fin :)"
+  hint: 
+  type: "Le type de question (QCM, V/F, ...)"
+  category: "l'id de la catégorie. Une seule catégorie possible"
+  tags: "le ou les id des tags. Un ou plusieurs tags possibles rattachés à la question"
+  difficulty: Chiffre entre 1 et 4
+  answer_option_a: Une courte réponse
+  answer_option_b: Une courte réponse
+  answer_option_c: Une courte réponse
+  answer_option_d: Une courte réponse
+  answer_correct: Lettre minuscule entre a et d
+  has_ordered_answers: Vrai si les choix de réponse sont dans un ordre figé, et ne doivent pas être mélangés
+  answer_explanation: "Une explication et/ou un commentaire à propos la réponse"
+  answer_accessible_url: Un lien pour aller plus loin
+  answer_scientific_url: La source scientifique du chiffre (rapport)
+  answer_image_url: "Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée en bas de l'image)"
+  answer_image_explanation: "Une légende pour l'image qui illustre la réponse"
+  answer_extra_info: "Texte et liens explicatifs additionels, qui n'apparaissent pas dans l'interface"
+  author: "L'auteur de la question"
+  validator: "La personne qui a validée la question"
+  validation_status: "Le statut de la question : Brouillon, A valider, Validée, Ecartée"
+  added: La date d'ajout de la question
+  created: Date au format YYYY-MM-DD
+  updated: Date au format YYYY-MM-DD
