@@ -50,7 +50,7 @@
 - model: api.quiz
   pk: 3
   fields:
-    name: Le quiz de Vincent Mignerot
+    name: Le quiz de Vincent Mignerot sur l'anthropologie
     introduction: "<p>Vincent Mignerot est essayiste et conférencier. Il développe\
       \ une théorie écologique de l’esprit et se questionne sur la singularité de\
       \ l'humanité dans son contexte évolutif. Ses travaux vont de la théorie à l’étude\
@@ -66,7 +66,7 @@
     image_background_url: https://www.slate.fr/sites/default/files/styles/1060x523/public/neandertal_1.jpg
     publish: true
     created: 2020-06-26
-    updated: 2020-12-05
+    updated: 2020-12-13
     questions:
     - 545
     - 546
@@ -136,7 +136,7 @@
 - model: api.quiz
   pk: 6
   fields:
-    name: Bienvenue en Anthropocène - Partie 1
+    name: L'anthropocène, premier aperçu
     introduction: <p>L'Anthropocène, c'est un terme proposé par des scientifiques
       pour désigner une nouvelle ère géologique dans laquelle nous serions rentrés,
       où l'homme est devenu une force géologique majeure. La période la plus récente
@@ -150,7 +150,7 @@
     image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
     publish: true
     created: 2020-07-08
-    updated: 2020-12-05
+    updated: 2020-12-13
     questions:
     - 2
     - 4
@@ -166,16 +166,16 @@
 - model: api.quiz
   pk: 7
   fields:
-    name: Tout sur le Pétrole - Partie 1
-    introduction: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
-      à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
+    name: le Pétrole - Partie 1
+    introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
+      à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
     conclusion: ''
     difficulty_average: 2.5
     author: Matthieu Massart
     image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
     publish: true
     created: 2020-07-09
-    updated: 2020-11-24
+    updated: 2020-12-13
     questions:
     - 13
     - 106
@@ -189,21 +189,22 @@
 - model: api.quiz
   pk: 8
   fields:
-    name: Fresque du Climat - Lot 1
+    name: La Fresque du Climat - Lot 1
     introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif\
       \ et créatif sur le changement climatique. Il est basé sur l’intelligence collective\
       \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
       \ du climat et les conséquences de son dérèglement. L’objectif de l’association\
       \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
-      \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur le premier lot de cartes\
-      \ distribué lors d'un atelier de la Fresque.</p>"
-    conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
+      \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur le lot de cartes n°1.</p>"
+    conclusion: "<p>Vous voilà prêt à vous attaquer au lot 2 ! Ou, mieux encore, à\
+      \ vous inscrire à un atelier. Plus d'information <a href=\"https://fresqueduclimat.org\"\
+      >ici</a>.</p>\r\n\r\n<p> </p>"
     difficulty_average: 2.111111111111111
     author: Matthieu Massart
     image_background_url: https://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
     publish: true
     created: 2020-07-14
-    updated: 2020-12-12
+    updated: 2020-12-13
     questions:
     - 6
     - 8
@@ -253,16 +254,16 @@
 - model: api.quiz
   pk: 10
   fields:
-    name: Tout sur le Pétrole - Partie 2
-    introduction: Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
-      à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.
+    name: Le Pétrole - Partie 2
+    introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
+      à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
     conclusion: ''
     difficulty_average: 2.25
     author: Matthieu Massart
     image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
     publish: true
     created: 2020-07-29
-    updated: 2020-11-24
+    updated: 2020-12-13
     questions:
     - 12
     - 20
@@ -276,7 +277,7 @@
 - model: api.quiz
   pk: 11
   fields:
-    name: Fresque du Climat - Lot 2
+    name: La fresque du Climat - Lot 2
     introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif\
       \ et créatif sur le changement climatique. Il est basé sur l’intelligence collective\
       \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -290,7 +291,7 @@
     image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/IMG_9753-215x215.jpg
     publish: true
     created: 2020-07-29
-    updated: 2020-12-11
+    updated: 2020-12-13
     questions:
     - 6
     - 8
@@ -345,7 +346,7 @@
 - model: api.quiz
   pk: 13
   fields:
-    name: Fresque du Climat - Lot 4
+    name: La Fresque du Climat - Lot 4
     introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif\
       \ et créatif sur le changement climatique. Il est basé sur l’intelligence collective\
       \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -359,7 +360,7 @@
     image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/07/PartieRestit-scaled.jpg?gid=1
     publish: false
     created: 2020-07-29
-    updated: 2020-12-02
+    updated: 2020-12-13
     questions:
     - 52
     - 294
@@ -369,7 +370,7 @@
 - model: api.quiz
   pk: 14
   fields:
-    name: Fresque du Climat - Lot 5
+    name: La Fresque du Climat - Lot 5
     introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif\
       \ et créatif sur le changement climatique. Il est basé sur l’intelligence collective\
       \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -377,13 +378,13 @@
       \ qui l’a créée est de sensibiliser 1 million de personnes aux enjeux du climat\
       \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur le cinquième et dernier lot\
       \ de cartes distribué lors d'une Fresque.</p>"
-    conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
+    conclusion: <p>Plus d'information sur la Fresque du Climat <a href="https://fresqueduclimat.org">ici</a>.</p>
     difficulty_average: 1.6666666666666667
     author: Matthieu Massart
     image_background_url: ''
     publish: false
     created: 2020-07-29
-    updated: 2020-12-02
+    updated: 2020-12-13
     questions:
     - 35
     - 229
@@ -393,7 +394,7 @@
 - model: api.quiz
   pk: 15
   fields:
-    name: Fresque du Climat - pour aller au-delà
+    name: La Fresque du Climat - pour aller au-delà
     introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif\
       \ et créatif sur le changement climatique. Il est basé sur l’intelligence collective\
       \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -408,7 +409,7 @@
     image_background_url: https://jive.univ-lille.fr/fileadmin/_processed_/c/d/csm_fresque-climat_ac9a138d0f.jpg
     publish: true
     created: 2020-07-29
-    updated: 2020-12-02
+    updated: 2020-12-13
     questions:
     - 33
     - 139
@@ -426,20 +427,20 @@
 - model: api.quiz
   pk: 16
   fields:
-    name: Bienvenue en Anthropocène - Partie 2
+    name: L'anthropocène, suite
     introduction: <p>L'Anthropocène, c'est un terme proposé par des scientifiques
       pour désigner une nouvelle ère géologique dans laquelle nous serions rentrés,
       où l'homme est devenu une force géologique majeure. La période la plus récente
       de l'anthropocène est parfois dite la grande accélération, car de nombreux indicateurs
       y présentent des courbes de type exponentiel. Ce 2ème quiz continue le tour
-      d'horizon de l'emprise inédite de l'homme sur la planète qu'il occupe.</p>
+      d'horizon sur l'emprise inédite de l'homme sur la planète qu'il occupe.</p>
     conclusion: ''
     difficulty_average: 2.3
     author: Matthieu Massart
     image_background_url: https://reporterre.net/local/cache-vignettes/L720xH481/arton11947-94df2.jpg?1597417424
     publish: true
     created: 2020-07-29
-    updated: 2020-12-05
+    updated: 2020-12-13
     questions:
     - 51
     - 67
@@ -455,16 +456,16 @@
 - model: api.quiz
   pk: 17
   fields:
-    name: Anéantissement de la biodiversité
-    introduction: Quel est l'impact de l'homme sur les autres espèces ? Un premier
-      aperçu via ces quelques questions.
+    name: L'anéantissement de la biodiversité
+    introduction: <p>Quel impact 'homme a-t-il sur les autres espèces ? Un premier
+      aperçu via ces quelques questions.</p>
     conclusion: ''
     difficulty_average: 2.5
     author: Matthieu Massart
     image_background_url: https://images.sudouest.fr/2019/04/25/5cc1b08b66a4bd2c135ac1f5/widescreen/1000x500/l-extinction-des-dinosaures.jpg?v1
     publish: true
     created: 2020-08-04
-    updated: 2020-11-30
+    updated: 2020-12-13
     questions:
     - 4
     - 7
@@ -481,7 +482,7 @@
 - model: api.quiz
   pk: 18
   fields:
-    name: Le quiz de Laurent Testot
+    name: Le quiz de Laurent Testot, histoire globale
     introduction: "<p>Journaliste scientifique, conférencier et essayiste, Laurent\
       \ Testot est spécialiste de l'histoire globale. Son essai <em>Cataclysmes : une\
       \ histoire environnementale de l’humanité</em>, primé par l’Académie Française,\
@@ -497,7 +498,7 @@
     image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
     publish: true
     created: 2020-09-23
-    updated: 2020-12-02
+    updated: 2020-12-13
     questions:
     - 571
     - 572
@@ -621,8 +622,8 @@
       \ sur les thématiques énergie et climat. Il explique de manière pédagogique\
       \ ces sujets complexes sur Youtube.</p>\r\n\r\n<p>Une de ses dernières vidéos\
       \ traite de la capture et du stockage du CO2 dans le sol. C'est en effet une\
-      \ technologie clé pour beaucoup de scénarios d'atténuation du changement climatique.Ce\
-      \ quiz vous permettra de compléter sa vidéo sur le sujet.</p>"
+      \ technologie clé pour beaucoup de scénarios d'atténuation du changement climatique.On\
+      \ espère que ce quiz vous donnera envie de visionner sa vidéo.</p>"
     conclusion: "<p>Bravo à vous d'être allé au bout de ces questions un poil tecniques.\
       \ Les principaux message à retenir sur la capture et le stockage du CO2 :<br\
       \ />\r\nTechniquement, ça marche pour de grosses installations f,ixes (cimenterie,\
@@ -632,7 +633,7 @@
       \ rentable que si une taxe significative sur le carbone émis est imposée.<br\
       \ />\r\nAprès ce petit quiz pour vous mettre en appétit, il est temps pour vous\
       \ d'aller visionner la vidéo <a href=\"https://youtu.be/AQlqQEhVi1M\">ici</a>\
-      \ !<br />\r\n </p>"
+      \ ! Et ses autres vidéos aussi d'ailleurs.<br />\r\n </p>"
     difficulty_average: 2.888888888888889
     author: Le Réveilleur
     image_background_url: https://www.lereveilleur.com/wp-content/uploads/2020/09/CSC_paint.jpg
