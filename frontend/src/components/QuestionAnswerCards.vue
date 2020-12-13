@@ -73,7 +73,7 @@
         <div class="col-sm-auto">
           <p title="Explication">
             <span>ℹ️&nbsp;</span>
-            <span v-html="questionAnswerExplanationWithLineBreaks"></span>
+            <span v-html="$options.filters.abbr(questionAnswerExplanationWithLineBreaks, glossaire)"></span>
           </p>
         </div>
       </div>
@@ -150,10 +150,10 @@ export default {
       return this.$store.state.ressources.glossaire;
     },
     questionTextWithLineBreaks() {
-      return this.question.text.replace('/\n/g', '<br />');
+      return this.question.text.replace(/(?:\r\n|\r|\n)/g, '<br />');
     },
     questionAnswerExplanationWithLineBreaks() {
-      return this.question.answer_explanation.replace('/\n/g', '<br />');
+      return this.question.answer_explanation.replace(/(?:\r\n|\r|\n)/g, '<br />');
     },
   },
 
