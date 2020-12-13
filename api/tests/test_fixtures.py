@@ -5,20 +5,20 @@ from api.models import Configuration, Category, Tag, Question, Quiz, Glossary
 
 
 class FixturesTest(TestCase):
-    fixtures = [
-        # "data/categories.yaml",
-        # "data/tags.yaml",
-        # "data/questions.yaml",
-        # "data/quizzes.yaml",
-        "data/ressources-glossaire.yaml",
-    ]
+    # fixtures = [
+    #     "data/categories.yaml",
+    #     "data/tags.yaml",
+    #     "data/questions.yaml",
+    #     "data/quizzes.yaml",
+    #     "data/ressources-glossaire.yaml",
+    # ]
 
-    def test_fixtures_load_successfully(self):
-        # self.assertTrue(Category.objects.count())
-        # self.assertTrue(Tag.objects.count())
-        # self.assertTrue(Question.objects.count())
-        # self.assertTrue(Quiz.objects.count())
-        self.assertTrue(Glossary.objects.count())
+    # def test_fixtures_load_successfully(self):
+    #     self.assertTrue(Category.objects.count())
+    #     self.assertTrue(Tag.objects.count())
+    #     self.assertTrue(Question.objects.count())
+    #     self.assertTrue(Quiz.objects.count())
+    #     self.assertTrue(Glossary.objects.count())
 
     def test_flat_fixtures_load_successfully(self):
         management.call_command("init_db")
@@ -27,3 +27,4 @@ class FixturesTest(TestCase):
         self.assertTrue(Tag.objects.count())
         self.assertTrue(Question.objects.count())
         self.assertTrue(Quiz.objects.count())
+        self.assertTrue(Glossary.objects.count())
