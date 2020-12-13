@@ -275,6 +275,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
     ]
     filter_horizontal = ("tags",)
     readonly_fields = (
+        "quizs_list_string",
         "show_answer_image",
         "answer_count_agg",
         "answer_success_count_agg",
@@ -429,11 +430,9 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
         "tags",
     )
     ordering = ("-id",)
-    # filter_vertical = (
-    #     "questions",
-    # )
+    filter_vertical = ("questions",)
     filter_horizontal = (
-        "questions",
+        # "questions",
         "tags",
     )
     readonly_fields = (
@@ -567,6 +566,9 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)
+
+    class Media:
+        css = {"all": ("css/admin/extra.css",)}
 
 
 class QuestionAnswerEventAdmin(ExportMixin, admin.ModelAdmin):

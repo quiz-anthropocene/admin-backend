@@ -21,3 +21,17 @@
     -webkit-transform: rotate(360deg);
   }
 }
+
+
+/* filter_vertical questions full width */
+.form-row .stacked,
+.form-row .stacked .selector-available,
+.form-row .stacked .selector-chosen,
+.form-row .stacked .selector-available select,
+.form-row .stacked .selector-chosen select {
+  width: 100%;
+}
+.form-row .stacked .selector-available select,
+.form-row .stacked .selector-chosen select {
+  height: 20em;
+}

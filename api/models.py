@@ -751,7 +751,7 @@ class Quiz(models.Model):
                 raise ValidationError(
                     {
                         "questions": f"Toutes les questions doivent être validées. "
-                        f"not_validated questions : {[el for el in list(quiz_questions_ids) if el not in list(quiz_questions_validated_ids)]}. "  # noqa
+                        f"questions non validées: {[el for el in list(quiz_questions_ids) if el not in list(quiz_questions_validated_ids)]}. "  # noqa
                         f"Quiz {self.id}"
                     }
                 )
@@ -792,7 +792,8 @@ def quiz_validate_m2m_fields(sender, **kwargs):
                     "questions": f"Quiz pre_save_m2m error. "
                     # f"Questions count: {len(kwargs['pk_set'])}. Questions validated count: {len(list(quiz_questions_validated_ids))}. "  # noqa
                     f"Toutes les questions doivent être validées. "  # noqa
-                    f"not_validated questions: {[el for el in kwargs['pk_set'] if el not in list(quiz_questions_validated_ids)]}"  # noqa
+                    f"questions non validées: {[el for el in kwargs['pk_set'] if el not in list(quiz_questions_validated_ids)]}. "  # noqa
+                    f"Quiz {getattr(kwargs['instance'], 'id')}"
                 }
             )
     # update difficulty_average
