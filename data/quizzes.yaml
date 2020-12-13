@@ -319,7 +319,7 @@
 - model: api.quiz
   pk: 12
   fields:
-    name: Fresque du Climat - Lot 3
+    name: La Fresque du Climat - Lot 3
     introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif\
       \ et créatif sur le changement climatique. Il est basé sur l’intelligence collective\
       \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -333,7 +333,7 @@
     image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/J1A3917120919-2-215x215.jpg
     publish: true
     created: 2020-07-29
-    updated: 2020-12-02
+    updated: 2020-12-13
     questions:
     - 29
     - 130
