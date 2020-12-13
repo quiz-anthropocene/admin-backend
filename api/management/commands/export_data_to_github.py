@@ -40,7 +40,7 @@ class Command(BaseCommand):
             # update & commit data files
             # data/configuration.yaml
             configuration_yaml = utilities.serialize_model_to_yaml(
-                model_label="configuration"
+                model_label="configuration", flat=True
             )
             utilities_github.create_file(
                 file_path="data/configuration.yaml",
@@ -87,7 +87,7 @@ class Command(BaseCommand):
                 branch_name=data_update_branch_name,
             )
             # data/tags.yaml
-            tags_yaml = utilities.serialize_model_to_yaml(model_label="tag")
+            tags_yaml = utilities.serialize_model_to_yaml(model_label="tag", flat=True)
             utilities_github.create_file(
                 file_path="data/tags.yaml",
                 commit_message="update tags",
@@ -95,7 +95,9 @@ class Command(BaseCommand):
                 branch_name=data_update_branch_name,
             )
             # data/questions.yaml
-            questions_yaml = utilities.serialize_model_to_yaml(model_label="question")
+            questions_yaml = utilities.serialize_model_to_yaml(
+                model_label="question", flat=True
+            )
             utilities_github.create_file(
                 file_path="data/questions.yaml",
                 commit_message="update questions",
@@ -103,7 +105,9 @@ class Command(BaseCommand):
                 branch_name=data_update_branch_name,
             )
             # data/quizzes.yaml
-            quizzes_yaml = utilities.serialize_model_to_yaml(model_label="quiz")
+            quizzes_yaml = utilities.serialize_model_to_yaml(
+                model_label="quiz", flat=True
+            )
             utilities_github.create_file(
                 file_path="data/quizzes.yaml",
                 commit_message="update quizzes",

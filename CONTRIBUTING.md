@@ -122,11 +122,7 @@ La donnée est lue directement depuis les fichiers yaml dans le dossier `/data`.
     ```
 - Chargez la base de donnée
     ```
-    python manage.py loaddata data/configuration.yaml
-    python manage.py loaddata data/categories.yaml
-    python manage.py loaddata data/tags.yaml
-    python manage.py loaddata data/questions.yaml
-    python manage.py loaddata data/quizzes.yaml
+    python manage.py init_db
     ```
 - Installez les dépendances du Frontend
     ```
@@ -203,12 +199,20 @@ yarn lint
 
 Exporter les questions de la base au format YAML
 ```
-python manage.py dumpdata api.question --format=yaml-pretty --output=data/questions.yaml
+// on utilise un format légerement modifier pour simplifier le fichier
+python manage.py dumpdata api.question --output=data/questions.yaml  --format=yaml-pretty-flat
+
+// mais il est toujours possible de faire un dumpdata normal
+python manage.py dumpdata api.question --output=data/questions.yaml
 ```
 
 Importer les questions dans la base
 ```
+// ne marche pas car les fichiers dans le dossier /data sont "applatis" (flat)
 python manage.py loaddata data/questions.yaml
+
+// marche seulement si les questions ont été supprimées en amont
+python manage.py loaddata data/questions.yaml --model=question --format=yaml-pretty-flat
 ```
 
 Réinitialiser les stats d'une question
