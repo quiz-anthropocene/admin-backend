@@ -1,15 +1,15 @@
 - model: api.quiz
   pk: 1
   fields:
-    name: Chiffres clés
-    introduction: Quelques chiffres pour se mettre en jambes.
+    name: Quelques chiffres clés
+    introduction: <p>Quelques chiffres pour se mettre en jambes.</p>
     conclusion: ''
     difficulty_average: 2.0
     author: Raphael Odini
     image_background_url: https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png
     publish: true
     created: 2020-04-17
-    updated: 2020-11-24
+    updated: 2020-12-13
     questions:
     - 3
     - 16
@@ -328,7 +328,7 @@
       \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur les cartes du 3ème lot distribué\
       \ lors d'une Fresque.</p>"
     conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
-    difficulty_average: 2.1666666666666665
+    difficulty_average: 2.142857142857143
     author: Matthieu Massart
     image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/J1A3917120919-2-215x215.jpg
     publish: true
@@ -341,6 +341,7 @@
     - 305
     - 306
     - 459
+    - 524
     tags:
     - 142
 - model: api.quiz
@@ -456,7 +457,7 @@
 - model: api.quiz
   pk: 17
   fields:
-    name: L'anéantissement de la biodiversité
+    name: Une biodiversité qui s'anéantit
     introduction: <p>Quel impact 'homme a-t-il sur les autres espèces ? Un premier
       aperçu via ces quelques questions.</p>
     conclusion: ''
@@ -546,12 +547,11 @@
 - model: api.quiz
   pk: 53
   fields:
-    name: NOUVEAU - Les 10 questions les plus difficiles
+    name: Les 10 questions les plus difficiles
     introduction: "<p>Les questions présentées dans ce quiz ont été choisies spécifiquement,\
       \ et ont toutes le niveau de difficulté le plus élevé : ce n'est donc pas le\
       \ quiz par lequel commencer !</p>\r\n\r\n<p>Personne n'a eu la moyenne à ce\
-      \ quiz à la première tentative.</p>\r\n\r\n<p>Alors, prêts à relever le défi\
-      \ ? :)</p>"
+      \ quiz à la première tentative. Alors, prêts à relever le défi ?</p>"
     conclusion: "<p>Bravo d'être allé jusqu'au bout, ce n'était vraiment pas évident\
       \ !</p>\r\n\r\n<p>Pour vous remettre de ce remue-méninge, n'hésitez pas à allez\
       \ découvrir les autres quiz, ils sont nettement plus faciles !</p>"
@@ -560,7 +560,7 @@
     image_background_url: https://cdn.pixabay.com/photo/2016/11/21/15/28/brain-1845962_1280.jpg
     publish: true
     created: 2020-11-27
-    updated: 2020-12-02
+    updated: 2020-12-13
     questions:
     - 45
     - 80
@@ -652,3 +652,32 @@
     - 623
     tags:
     - 62
+- model: api.quiz
+  pk: 56
+  fields:
+    name: NOUVEAU - En état d'ébriété énergétique ?
+    introduction: '<p>L''énergie est partout autour de nous: nos voitures, notre électricité,
+      nos usines...Mais avons-nous bien conscience du degré de dépendance que nous
+      avons développé vis à vis d''elle ? Ce quiz pour apprendre à mieux s''en rendre
+      compte.</p>'
+    conclusion: <p>Pour explorer plus avant ces thématiques liées à notre dépendance
+      vis à vis de l'énergie, vous pouvez tester nos quiz sur le pétrole <a href="https://quizanthropocene.fr/quiz/7">ici
+      </a>et <a href="https://quizanthropocene.fr/quiz/10">là</a>.</p>
+    difficulty_average: 2.6
+    author: Matthieu Massart
+    image_background_url: https://www.popsci.com/resizer/iHd2-DUNyurlTDhvndesdxzQoFU=/857x643/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/MTUGSVPHBB22CKTZETTB42BCIE.jpg
+    publish: true
+    created: 2020-12-13
+    updated: 2020-12-13
+    questions:
+    - 64
+    - 93
+    - 103
+    - 107
+    - 125
+    - 134
+    - 284
+    - 520
+    - 573
+    - 582
+    tags: []
