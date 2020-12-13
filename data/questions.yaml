@@ -6489,7 +6489,8 @@
     answer_option_d: 1 000 Mt CO2eq
     answer_correct: b
     has_ordered_answers: true
-    answer_explanation: Cela correspond aux émissions de la Suisse ou de l’Irlande.
+    answer_explanation: Cela correspond aux émissions de la Suisse ou de l’Irlande,
+      en inventaire national.
     answer_accessible_url: ''
     answer_scientific_url: https://www.sustainable-performance.total.com/fr/indicateurs-climat
     answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r095.jpg
