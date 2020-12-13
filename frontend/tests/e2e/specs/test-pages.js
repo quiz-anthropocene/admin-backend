@@ -67,7 +67,7 @@ module.exports = {
       .openUrl('quiz/1/')
       .assert.elementPresent('header')
       .assert.elementPresent('footer')
-      .assert.containsText('.card h2', 'Chiffres clés')
+      .assert.elementPresent('.card h2')
       .assert.containsText('div[class*="quiz-start"] button', 'Commencer le quiz')
       .end();
   },
@@ -90,7 +90,7 @@ module.exports = {
       .assert.elementPresent('.question')
       .assert.not.elementPresent('.answer')
       .assert.elementPresent('.question h2')
-      .assert.containsText('.question h3', "Quelle quantité d'aliments jette-t-on chaque année dans le monde ?")
+      .assert.elementPresent('.question h3')
       .assert.containsText('button[type="submit"]', 'Valider')
       .assert.containsText('div[class*="question-next"] button', 'Question suivante')
       .end();

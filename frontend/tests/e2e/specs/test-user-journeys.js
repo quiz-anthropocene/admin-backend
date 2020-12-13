@@ -11,12 +11,12 @@ module.exports = {
       .assert.urlContains('quiz')
       .assert.elementPresent('#quiz-list')
       .useXpath()
-      // .assert.containsText('(//main//a[contains(@class, "card")]//h2)[1]', 'Anéantissement de la biodiversité')
+      .assert.elementPresent('(//main//a[contains(@class, "card")]//h2)[1]')
       .click('(//main//a[contains(@class, "card")])[1]')
       .useCss()
       // quiz detail page
       // .assert.urlContains('quiz/17')
-      // .assert.containsText('.card h2', 'Anéantissement de la biodiversité')
+      .assert.elementPresent('.card h2')
       .assert.containsText('div[class*="quiz-start"] button', 'Commencer le quiz')
       .click('div[class*="quiz-start"] button')
       // quiz detail first question page
