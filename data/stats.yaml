@@ -17,9 +17,9 @@ quiz_per_publish_count:
 - publish: false
   total: 2
 question_answer_count: 80227
-quiz_answer_count: 5746
+quiz_answer_count: 5747
 question_answer_count_last_30_days: 61330
-quiz_answer_count_last_30_days: 4733
+quiz_answer_count_last_30_days: 4734
 category_count: 8
 tag_count: 182
 question_feedback_count: 1406
