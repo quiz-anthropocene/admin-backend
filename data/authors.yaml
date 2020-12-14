@@ -23,7 +23,7 @@
   question_count: 2
   quiz_count: 0
 - name: Kim Nguyen-Huu
-  question_count: 3
+  question_count: 4
   quiz_count: 0
 - name: Laurent Testot
   question_count: 8
@@ -40,9 +40,6 @@
 - name: Matthieu Massart
   question_count: 71
   quiz_count: 13
-- name: Oxfam
-  question_count: 1
-  quiz_count: 0
 - name: Raphael Odini
   question_count: 30
   quiz_count: 2
