@@ -2,16 +2,15 @@
   name: Quelques chiffres clés
   introduction: <p>Quelques chiffres pour se mettre en jambes.</p>
   conclusion: ''
-  difficulty_average: 2.0
+  difficulty_average: 1.8888888888888888
   author: Raphael Odini
   image_background_url: https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png
   publish: true
   created: 2020-04-17
-  updated: 2020-12-13
+  updated: 2020-12-14
   questions:
   - 3
   - 16
-  - 19
   - 21
   - 48
   - 59
@@ -102,14 +101,13 @@
     de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent lui être
     imputées. Connaissez-vous votre empreinte ? Voyons voir ça.</p>
   conclusion: ''
-  difficulty_average: 2.0
+  difficulty_average: 2.090909090909091
   author: Matthieu Massart
   image_background_url: https://leshorizons.net/wp-content/uploads/2019/04/d%C3%A9finition-de-lempreinte-carbone-1020x512.jpg
   publish: true
   created: 2020-07-08
-  updated: 2020-12-05
+  updated: 2020-12-14
   questions:
-  - 19
   - 78
   - 102
   - 150
@@ -612,7 +610,8 @@
     développé vis à vis d''elle ? Ce quiz pour apprendre à mieux nous en rendre compte.</p>'
   conclusion: <p>Pour explorer plus avant ces thématiques liées à notre dépendance
     vis à vis de l'énergie, vous pouvez tester nos quiz sur le pétrole <a href="https://quizanthropocene.fr/quiz/7">ici
-    </a>et <a href="https://quizanthropocene.fr/quiz/10">là</a>.</p>
+    </a>et <a href="https://quizanthropocene.fr/quiz/10">là</a>. Et pour aller au
+    coma éthylique énergétique, c'est <a href="https://quizanthropocene.fr/quiz/54">par-là</a>.</p>
   difficulty_average: 2.5
   author: Matthieu Massart
   image_background_url: https://www.popsci.com/resizer/iHd2-DUNyurlTDhvndesdxzQoFU=/857x643/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/MTUGSVPHBB22CKTZETTB42BCIE.jpg
