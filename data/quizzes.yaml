@@ -123,7 +123,7 @@
   - 440
   tags: []
 - id: 6
-  name: L'anthropocène, premier aperçu
+  name: Regard sur l'anthropocène, premier aperçu
   introduction: <p>L'Anthropocène, c'est un terme proposé par des scientifiques pour
     désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où l'homme
     est devenu une force géologique majeure. La période la plus récente de l'anthropocène
@@ -136,7 +136,7 @@
   image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
   publish: true
   created: 2020-07-08
-  updated: 2020-12-13
+  updated: 2020-12-14
   questions:
   - 2
   - 4
@@ -394,7 +394,7 @@
   tags:
   - 142
 - id: 16
-  name: L'anthropocène, suite
+  name: Regard sur l'anthropocène, suite
   introduction: <p>L'Anthropocène, c'est un terme proposé par des scientifiques pour
     désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où l'homme
     est devenu une force géologique majeure. La période la plus récente de l'anthropocène
@@ -407,7 +407,7 @@
   image_background_url: https://reporterre.net/local/cache-vignettes/L720xH481/arton11947-94df2.jpg?1597417424
   publish: true
   created: 2020-07-29
-  updated: 2020-12-13
+  updated: 2020-12-14
   questions:
   - 51
   - 67
@@ -575,14 +575,14 @@
     \ sur les thématiques énergie et climat. Il explique de manière pédagogique ces\
     \ sujets complexes sur Youtube.</p>\r\n\r\n<p>Une de ses dernières vidéos traite\
     \ de la capture et du stockage du CO2 dans le sol. C'est en effet une technologie\
-    \ clé pour beaucoup de scénarios d'atténuation du changement climatique.On espère\
+    \ clé pour beaucoup de scénarios d'atténuation du changement climatique. On espère\
     \ que ce quiz vous donnera envie de visionner sa vidéo.</p>"
-  conclusion: "<p>Bravo à vous d'être allé au bout de ces questions un poil tecniques.\
-    \ Les principaux message à retenir sur la capture et le stockage du CO2 :<br />\r\
-    \nTechniquement, ça marche pour de grosses installations f,ixes (cimenterie, centrales\
-    \ électriques), et on sait le faire depuis des années pour des projets à grande\
-    \ échelle. Mais économiquement c'est là que le bât blesse : moindre production,\
-    \ rentabilité en baisse... Tout cela induit un surcoût, et ne sera  rentable que\
+  conclusion: "<p>Bravo à vous d'être allé au bout de ces questions un poil techniques.\
+    \ Les principaux messages à retenir sur la capture et le stockage du CO2 :<br\
+    \ />\r\nTechniquement, ça marche pour de grosses installations fixes (cimenterie,\
+    \ centrales électriques), et on sait le faire depuis des années pour des projets\
+    \ à grande échelle. Mais économiquement c'est là que le bât blesse : moindre production,\
+    \ rentabilité en baisse... Tout cela induit un surcoût, et ne sera rentable que\
     \ si une taxe significative sur le carbone émis est imposée.<br />\r\nAprès ce\
     \ petit quiz pour vous mettre en appétit, il est temps pour vous d'aller visionner\
     \ la vidéo <a href=\"https://youtu.be/AQlqQEhVi1M\">ici</a> ! Et ses autres vidéos\
@@ -592,7 +592,7 @@
   image_background_url: https://www.lereveilleur.com/wp-content/uploads/2020/09/CSC_paint.jpg
   publish: true
   created: 2020-12-08
-  updated: 2020-12-13
+  updated: 2020-12-14
   questions:
   - 615
   - 616
