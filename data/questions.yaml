@@ -1978,19 +1978,20 @@
   - 27
   - 28
 - id: 64
-  text: Entre 1500 et nos jours, la population mondiale a été multipliée par 14. Et
-    sa consommation d'énergie ?
+  text: Entre 1500 et nos jours, la population mondiale a été multipliée par 14. Qu'en
+    est-il de sa consommation d'énergie ?
   hint: ''
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: Par 40
-  answer_option_b: Par 100
-  answer_option_c: Par 500
-  answer_option_d: Par 1000
+  answer_option_a: Multipliée par 40
+  answer_option_b: Multipliée par 100
+  answer_option_c: Multipliée par 500
+  answer_option_d: Multipliée par 1000
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Soit 10 fois plus vite. Mais ça s'accélère !
+  answer_explanation: Soit 10 fois plus vite. Et la différence s'accélère encore,
+    nos besoins énergétiques par personne augmentant.
   answer_accessible_url: https://fr.wikipedia.org/wiki/Ressources_et_consommation_%C3%A9nerg%C3%A9tiques_mondiales
   answer_scientific_url: ''
   answer_image_url: https://ourworldindata.org/grapher/exports/global-primary-energy.png
@@ -2905,7 +2906,7 @@
   type: QCM
   category: 2
   difficulty: 3
-  answer_option_a: La masse du smartphone
+  answer_option_a: 70 g
   answer_option_b: 700 g
   answer_option_c: 70 kg
   answer_option_d: 700 kg
@@ -3241,8 +3242,10 @@
   answer_option_d: 40 Gtep
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: l'approvisionnement mondial en énergie a été plus précisément
-    de 13,86 Gtep en 2018.
+  answer_explanation: 'L''approvisionnement mondial en énergie a été plus précisément
+    de 13,86 Gtep en 2018. Pour se rendre compte : c''est l''énergie qui serait consommée
+    si chacun des 7,5 milliards d''humains sur la planète faisait un tour du monde
+    (40,000 km) en clio (6l/100km).'
   answer_accessible_url: https://www.connaissancedesenergies.org/les-chiffres-cles-de-ledition-2019-des-key-world-energy-statistics-de-laie-191001
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
   answer_image_url: https://www.connaissancedesenergies.org/sites/default/files/album_images/consommation-energie-primaire-monde-2018_zoom.png
@@ -3361,13 +3364,13 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: "42 Gigajoules pour la tonne de pétrole contre 4 Gigajoules\
-    \ pour la tonne de TNT. Cette différence s'explique par deux facteurs :\n - la\
-    \ détonation du TNT se fait sans oxygène et n’est pas complète ;\n - l’énergie\
-    \ de combustion du pétrole est calculée sans tenir compte de la masse d’oxygène\
-    \ nécessaire et avec une réaction complète, d’où une énergie élevée\nOn peut en\
-    \ revanche affirmer que le TNT a un pouvoir explosif bien plus important, car\
-    \ il libère cette énergie très rapidement sous forme de détonation."
+  answer_explanation: '42 Gigajoules pour la tonne de pétrole contre 4 Gigajoules
+    pour la tonne de TNT. Cette différence s''explique par deux facteurs : la détonation
+    du TNT se fait sans oxygène et n’est pas complète d''une part, et l’énergie de
+    combustion du pétrole est calculée sans tenir compte de la masse d’oxygène nécessaire
+    et avec une réaction complète, d’où une énergie élevée. On peut en revanche affirmer
+    que le TNT a un pouvoir explosif bien plus important, car il libère cette énergie
+    très rapidement sous forme de détonation.'
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_image_url: https://cdnfr1.img.sputniknews.com/img/103982/33/1039823388_1:0:4137:2238_1000x541_80_0_0_ca3008d757be511d68a3af98984093c5.jpg
@@ -3891,13 +3894,11 @@
   answer_option_d: 43 l/100km
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: 'En 2017 en France la consommation moyenne des poids lourds
-    (> 5 tonnes) est de 34 l/100km.
-
-
-    Cela semble beaucoup par rapport à une voiture, mais il ne faut pas oublier que
-    le camion peut transporter plusieurs tonnes voire dizaines de tonnes de marchandises,
-    là où une voiture ne déplace que quelques centaines de kilos.'
+  answer_explanation: En 2017 en France la consommation moyenne des poids lourds (>
+    5 tonnes) est de 34 l/100km. Cela semble beaucoup par rapport à une voiture, mais
+    il ne faut pas oublier que le camion peut transporter plusieurs tonnes voire dizaines
+    de tonnes de marchandises, là où une voiture ne déplace que quelques dizaines
+    de kilos de poids utile la plupart du temps.
   answer_accessible_url: https://fr.statista.com/statistiques/487208/consommation-de-carburant-moyenne-vehicule-lourd-france/
   answer_scientific_url: https://ccfa.fr/wp-content/uploads/2018/09/analyse_statistiques_2018_fr.pdf
   answer_image_url: https://www.webfleet.com/fr_fr/webfleet/blog/wp-content/uploads/sites/151/2020/04/Consumo_Carburante_truck-1181063_1280-820x350-768x328.jpg
@@ -4163,9 +4164,9 @@
   category: 2
   difficulty: 2
   answer_option_a: 550 litres
-  answer_option_b: 2200 litres
-  answer_option_c: 4400 litres
-  answer_option_d: 8800 litres
+  answer_option_b: 2,200 litres
+  answer_option_c: 4,400 litres
+  answer_option_d: 8,800 litres
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: 'Hypothèses du calcul: Airbus A320 avec 150 passagers'
@@ -8726,12 +8727,13 @@
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: En France 7,3 milliards de litres de fioul domestiques sont
-    vendus chaque année. La pompe à chaleur ou la chaudière à granulés (à bois) sont
-    des alternatives intéressantes pour réduire son empreinte de chauffage.
+    vendus chaque année. Soit environ 100 litres par personne. La pompe à chaleur
+    ou la chaudière à granulés (à bois) sont des alternatives intéressantes pour réduire
+    son empreinte de chauffage.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-11/datalab-essentiel-159-les-ventes-de-produits-petroliers-en-2017-novembre2018.pdf
   answer_image_url: https://www.ouest-france.fr/sites/default/files/styles/image-640/public/2019/04/22/chauffage-de-plus-en-plus-de-foyers-passent-du-fioul-au-gaz_0.jpg
-  answer_image_explanation: 1L de fioul = 0,88 kg
+  answer_image_explanation: 1l de fioul = 0,88 kg
   answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r168.jpg
 
 
@@ -15944,9 +15946,9 @@
   tags:
   - 22
 - id: 520
-  text: Avec la totalité de l’énergie consommée en France en une année, combien Elon
-    Musk pourrait-il envoyer de personnes vers une station spatiale avec ses fusées
-    Space X  ?
+  text: Rêvons un peu...Avec la totalité de l’énergie consommée en France en une année,
+    combien Elon Musk pourrait-il envoyer de personnes vers une station spatiale avec
+    ses fusées Space X  ?
   hint: ''
   type: QCM
   category: 5
@@ -15959,13 +15961,13 @@
   has_ordered_answers: true
   answer_explanation: La France a consommé 144 Mtep en 2018 (énergie finale) ce qui
     fait 6,029 10ˆ18J. La fusée Falcon 9 de SpaceX brule 155,9 tonnes de RP-1 soit
-    7,202 10ˆ12J (1 kg de RP-1 libère 46,2 MJ en brûlant) et emporte 2 astronautes
-    dans la station spatiale internationale. La totalité de l’énergie consommée en
-    France en une année équivaut donc au décollage de 840 000 fusées Falcon 9 (2300
-    lancements par jour...), de quoi envoyer 1,68 millions de personnes dans la station
-    spatiale. Pour y envoyer tous les français il faudrait utiliser la totalité de
-    l’énergie consommée en France pendant 40 ans. Ces calculs ne prennent pas en compte
-    l'énergie grise requise pour construire les fusées.
+    7,202 10ˆ12J et emporte 2 astronautes dans la station spatiale internationale.
+    La totalité de l’énergie consommée en France en une année équivaut donc au décollage
+    de 840 000 fusées Falcon 9 (2300 lancements par jour...), de quoi envoyer 1,68
+    millions de personnes dans la station spatiale. Pour y envoyer tous les français
+    il faudrait utiliser la totalité de l’énergie consommée en France pendant 40 ans.
+    Ces calculs ne prennent pas en compte l'énergie grise requise pour construire
+    les fusées.
   answer_accessible_url: https://www.statistiques.developpement-durable.gouv.fr/chiffres-cles-de-lenergie-edition-2019?rubrique=19&dossier=170
   answer_scientific_url: http://www.capcomespace.net/dossiers/espace_privee/SpaceX/falcon_9_heavy.htm
   answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/0/3/2/03221bc992_50164229_crew-dragon-nasa.jpg
@@ -16140,18 +16142,15 @@
   answer_option_d: -70 %
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: 'En France pendant le confinement en début d''année, les émissions
-    journalières de CO2 ont diminué d''environ 30%.
-
-    La baisse sur la totalité de 2020 est estimée entre 5% et 15%, avec une grosse
-    incertitude.'
+  answer_explanation: La baisse sur la totalité de 2020 est estimée entre 5% et 15%,
+    avec une grosse incertitude.
   answer_accessible_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/04/hcc_rapport_spcial_annexe.pdf
   answer_scientific_url: ''
   answer_image_url: https://reporterre.net/local/cache-vignettes/L720xH493/arton20450-6fdd1.png?1597405073
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2020-06-17
   created: 2020-06-24
@@ -16292,7 +16291,8 @@
   - 53
   - 57
 - id: 531
-  text: Auquel de ces indicateurs l'empreinte carbone est-elle la mieux corrélée ?
+  text: Lequel de ces indicateurs permet de mieux prédire l'empreinte carbone d'un
+    individu en moyenne ?
   hint: ''
   type: QCM
   category: 2
@@ -16303,17 +16303,17 @@
   answer_option_d: Le nombre d'enfants
   answer_correct: a
   has_ordered_answers: false
-  answer_explanation: 'L''indicateur le plus corrélé à l''empreinte carbone est le
-    niveau de revenus par habitant, plus ce dernier est élevé, plus les émissions
-    de CO2 sont élevés.
-
+  answer_explanation: 'L''indicateur le mieux corrélé à l''empreinte carbone est le
+    niveau de revenus par habitant:  plus ce dernier est élevé, plus les émissions
+    de CO2 sont élevées.
 
     Un revenu élevé permet en effet de plus se déplacer, se chauffer, consommer, ...
     toutes ces activités conduisent à des augmentations d''émissions.'
   answer_accessible_url: https://www.lemonde.fr/blog/huet/2019/02/06/climat-et-economie-le-co2-explique-tout/
   answer_scientific_url: ''
   answer_image_url: https://live.staticflickr.com/4918/46316143381_22a979fb60_b.jpg
-  answer_image_explanation: ''
+  answer_image_explanation: Émissions de CO2 par personne en fonction du niveau de
+    PIB par personne, par pays
   answer_extra_info: https://jancovici.com/changement-climatique/economie/quest-ce-que-lequation-de-kaya/
   author: Matthieu Massart
   validator: laydgeur
@@ -17914,8 +17914,8 @@
   tags:
   - 191
 - id: 582
-  text: Peut-on faire griller une tartine dans un grille-pain standard connecté à
-    un vélo qui produirait de l'électricité ?
+  text: En pédalant sur un vélo muni d'une dynamo, peut-on faire griller une tartine
+    dans un grille-pain standard ?
   hint: ''
   type: VF
   category: 2
@@ -17926,16 +17926,16 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: A moins d'être un champion olympique de cyclisme et de produire
-    un effort violent et court ! Autrement dit, les publicités qui vous promettent
-    d'alimenter un foyer avec un appareil sur lequel vous pédaleriez quelques heures
-    par jour est un mythe.
+  answer_explanation: Un champion olympique a tenté l'expérience, voyez le résultat
+    sur le lien ci-dessous. Autrement dit, les publicités qui vous promettent d'alimenter
+    un foyer avec un appareil sur lequel vous pédaleriez quelques heures par jour
+    est un mythe.
   answer_accessible_url: https://www.youtube.com/watch?v=S4O5voOCqAQ
   answer_scientific_url: ''
   answer_image_url: https://imgix.bustle.com/rehost/2016/9/13/6029141b-a962-4ed0-b403-27d0abdbb1a5.png?w=800&auto=format%2Ccompress&cs=srgb&q=70&fit=crop&crop=faces
   answer_image_explanation: Défi lancé à Robert Förstemann, champion du monde de sprint
-    et cycliste olympique capable de développer 700 watts, de faire fonctionner un
-    simple grille-pain (de 700 watts)
+    et cycliste olympique qui possède des cuisses démesurées, capable de développer
+    700 watts, de faire fonctionner un simple grille-pain.
   answer_extra_info: ''
   author: Contributeur anonyme
   validator: Raphael Odini
@@ -18712,13 +18712,15 @@
   answer_option_d: 25 tonnes
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: ''
+  answer_explanation: L'empreinte moyenne des français est de 11 tonnes de CO2 sans
+    compter leur épargne. Quand on prend en compte leur épargnes, l'empreinte est
+    effectivement doublé.
   answer_accessible_url: https://www.oxfamfrance.org/communiques-de-presse/les-banques-francaises-nous-emmenent-vers-un-monde-a-4c/
   answer_scientific_url: https://www.oxfamfrance.org/wp-content/uploads/2020/10/rapportBanque_OXFAM_v5.pdf
   answer_image_url: https://www.oxfamfrance.org/wp-content/uploads/2019/11/Hexagones-1160x580.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Oxfam
+  author: Kim Nguyen-Huu
   validator: Matthieu Massart
   validation_status: Validée
   added: 2020-11-08
@@ -18913,7 +18915,7 @@
 - id: 615
   text: Dans le monde, combien y a-t-il d'installations opérationnelles de capture
     et de stockage de CO2 à large échelle ?
-  hint: La capture et le stockage géologique de CO2 se font déjà, mais sont peu répandus
+  hint: La capture et le stockage géologique de CO2 se font déjà, mais sont peu répandus.
   type: QCM
   category: 1
   difficulty: 3
@@ -18977,13 +18979,14 @@
   - 13
 - id: 617
   text: Aujourd’hui, si un dispositif de capture du CO2 est installé sur une centrale
-    à charbon, quelle part de l'énergie produite consomme-t-il ?
+    à charbon, quelle part de l'énergie produite par cette dernière consomme-t-il
+    ?
   hint: Ça consomme... et pas qu'un peu
   type: QCM
   category: 1
   difficulty: 3
   answer_option_a: 0,1%
-  answer_option_b: 1 %
+  answer_option_b: 1%
   answer_option_c: 10%
   answer_option_d: 25%
   answer_correct: c
@@ -19008,15 +19011,15 @@
   tags:
   - 13
 - id: 618
-  text: Quel surcoût un dispositif de capture du CO2 engendre-t-il sur une centrale
-    à charbon ?
+  text: Quel est l'ordre de grandeur du surcoût occasionné par un dispositif de capture
+    du CO2 installé sur une centrale à charbon ?
   hint: ''
   type: QCM
   category: 5
   difficulty: 3
   answer_option_a: +1%
-  answer_option_b: +10 %
-  answer_option_c: +50 %
+  answer_option_b: +10%
+  answer_option_c: +50%
   answer_option_d: +100 % (=doublement du coût)
   answer_correct: c
   has_ordered_answers: true
@@ -19172,10 +19175,10 @@
   type: QCM
   category: 1
   difficulty: 3
-  answer_option_a: 30 %
-  answer_option_b: 50 %
-  answer_option_c: 70 %
-  answer_option_d: 90 %
+  answer_option_a: 30%
+  answer_option_b: 50%
+  answer_option_c: 70%
+  answer_option_d: 90%
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: Plus de 90% du CO2 émis par des centrales électriques et autres
@@ -20907,27 +20910,31 @@
   tags:
   - 194
 - id: 677
-  text: En 2019 quels ont été les moyens de financement des énergies fossiles comparés
-    à ceux des énergies renouvelables ?
+  text: En 2019 quelle a été la part d'investissement dans les énergies renouvelables
+    dans les investissements mondiaux dans les énergies ?
   hint: ''
   type: QCM
   category: 8
   difficulty: 1
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: ''
-  has_ordered_answers: false
-  answer_explanation: ''
+  answer_option_a: 10%
+  answer_option_b: 25%
+  answer_option_c: 50%
+  answer_option_d: 75%
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: En considérant la production et l'approvisionnemnt, 1320 milliards
+    de dollars ont été investis en 2019 dans les énergies dans le monde. 976 concernaient
+    les énergies fossiles alors que 344 concernaient les renouvelables, soit à peu
+    près 25% des investissements.
   answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_scientific_url: https://www.iea.org/reports/world-energy-investment-2020/key-findings#abstract
+  answer_image_url: http://newenergydrupalfs.s3.amazonaws.com/annual_clean_energy_investment_bnef_january_2019.jpg
+  answer_image_explanation: Le graphe s'arrête en 2018 mais la répartition entre les
+    différents investissements a les même proportions en 2019.
   answer_extra_info: ''
   author: Kim Nguyen-Huu
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2020-12-09
   created: 2020-12-10
   updated: 2020-12-10
@@ -20972,10 +20979,10 @@
   type: QCM
   category: 8
   difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: 20 millions de tonnes (comme Las Vegas)
-  answer_option_d: ''
+  answer_option_a: 8 millions de tonnes (comme Lisbonne)
+  answer_option_b: 22 millions de tonnes (comme Las Vegas)
+  answer_option_c: 43 millions de tonnes (comme Madrid)
+  answer_option_d: 78 millions de tonnes (comme Paris)
   answer_correct: c
   has_ordered_answers: false
   answer_explanation: Le transfert de Bitcoin s'effectue à travers un réseau décentralisé
@@ -20989,13 +20996,13 @@
     plus síl était à son niveau díl y a 6 mois (pour atteindre 80 000 milliards de
     dollars), ce qui le placerait alors devant les émissions de la Chine.
   answer_accessible_url: https://www.rse-magazine.com/Le-Bitcoin-emet-autant-de-CO2-que-Las-Vegas_a3342.html
-  answer_scientific_url: ''
+  answer_scientific_url: http://citycarbonfootprints.info/
   answer_image_url: https://coincentral.com/wp-content/uploads/2019/04/bitcoin-energy-consumpti.jpeg
   answer_image_explanation: ''
   answer_extra_info: https://youtu.be/WhI72CFrqEk
   author: Kim Nguyen-Huu
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2020-12-10
   created: 2020-12-11
   updated: 2020-12-11
