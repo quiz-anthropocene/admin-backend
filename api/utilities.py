@@ -52,9 +52,17 @@ def load_model_data_to_db(model, data):
         tag_ids = []
         question_ids = []
         # quiz_ids = []
+        # FK
         if "category" in item:
             item["category_id"] = item["category"]
             del item["category"]
+        if "from_quiz" in item:
+            item["from_quiz_id"] = item["from_quiz"]
+            del item["from_quiz"]
+        if "to_quiz" in item:
+            item["to_quiz_id"] = item["to_quiz"]
+            del item["to_quiz"]
+        # M2M
         if "tags" in item:
             tag_ids = item["tags"]
             del item["tags"]
