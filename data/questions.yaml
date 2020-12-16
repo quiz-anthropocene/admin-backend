@@ -1391,8 +1391,8 @@
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: Les massifs coralliens hébergent environ 1 million d'espèces
-    animales et fournissent des services (nourriture, salaire, protection cotière,
-    ...) à 500 millions de personnes. A une température de +1,5°C (qui sera atteinte
+    animales et fournissent des services à 500 millions de personnes (nourriture,
+    travaux de protection côtière...). A une température de +1,5°C (qui sera atteinte
     aux environ de 2040) ce sont près de 90% des coraux qui subiront des dégradations.
     A +2°C la quasi totalité des coraux de la planète disparaitront.
   answer_accessible_url: https://www.nationalgeographic.fr/environnement/les-recifs-coralliens-pourraient-disparaitre-avant-2050
@@ -1721,7 +1721,7 @@
   answer_option_b: 1 milliards d'euros
   answer_option_c: 10 milliards d'euros
   answer_option_d: 100 milliards d'euros
-  answer_correct: c
+  answer_correct: d
   has_ordered_answers: true
   answer_explanation: L’évaluation inédite intègre non seulement les dommages sanitaires
     de la pollution, mais également ses conséquences sur les bâtiments, les écosystèmes
@@ -4038,8 +4038,8 @@
   - 142
   - 163
 - id: 130
-  text: Quelle est la perte de masse annuelle de la calotte glaciaire du Groenland
-    ?
+  text: '[ECARTEE] Quelle est la perte de masse annuelle de la calotte glaciaire du
+    Groenland ?'
   hint: ''
   type: QCM
   category: 1
@@ -4057,10 +4057,10 @@
   answer_scientific_url: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r028.jpg
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: Doublon avec la 305
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2019-02-13
   created: 2019-02-13
   updated: 2020-09-28
@@ -16313,7 +16313,7 @@
   answer_scientific_url: ''
   answer_image_url: https://live.staticflickr.com/4918/46316143381_22a979fb60_b.jpg
   answer_image_explanation: Émissions de CO2 par personne en fonction du niveau de
-    PIB par personne, par pays
+    PIB par personne, par pays, chiffres 2011 en dollars
   answer_extra_info: https://jancovici.com/changement-climatique/economie/quest-ce-que-lequation-de-kaya/
   author: Matthieu Massart
   validator: laydgeur
@@ -17926,10 +17926,11 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Un champion olympique a tenté l'expérience, voyez le résultat
-    sur le lien ci-dessous. Autrement dit, les publicités qui vous promettent d'alimenter
-    un foyer avec un appareil sur lequel vous pédaleriez quelques heures par jour
-    est un mythe.
+  answer_explanation: La réponse est non...à moins d'être un champion olympique et
+    de finir les cuisses en feu ! Un tel champion olympique a tenté l'expérience,
+    voyez le résultat dans la vidéo ci-dessous. Autrement dit, les publicités qui
+    vous promettent d'alimenter un foyer avec un appareil sur lequel vous pédaleriez
+    quelques heures par jour est un mythe.
   answer_accessible_url: https://www.youtube.com/watch?v=S4O5voOCqAQ
   answer_scientific_url: ''
   answer_image_url: https://imgix.bustle.com/rehost/2016/9/13/6029141b-a962-4ed0-b403-27d0abdbb1a5.png?w=800&auto=format%2Ccompress&cs=srgb&q=70&fit=crop&crop=faces
@@ -18989,7 +18990,7 @@
   answer_option_b: 1%
   answer_option_c: 10%
   answer_option_d: 25%
-  answer_correct: c
+  answer_correct: d
   has_ordered_answers: true
   answer_explanation: 'L’étape de capture du CO2 est coûteuse en énergie. On parle
     de pénalité énergétique.
@@ -19155,7 +19156,7 @@
   has_ordered_answers: true
   answer_explanation: Le stockage géologique de CO2 est modélisé sur des périodes
     de temps de 10 000 ans, soit le même ordre de grandeur que le temps nécessaire
-    pour épurer le CO2 émis de l'atmosphère.
+    pour épurer de l'atmosphère environ 80% du CO2 d'origine humaine.
   answer_accessible_url: ''
   answer_scientific_url: https://www.nature.com/articles/s41467-018-04423-1
   answer_image_url: https://www.brgm.fr/sites/default/files/galerie_stockagegeol_01.jpg
@@ -21008,4 +21009,38 @@
   updated: 2020-12-11
   tags:
   - 72
+  - 194
+- id: 680
+  text: En 2020, quel est le cours de la tonne de CO2 sur le marché européen et combien
+    de barril de pétrole faut-il brûler pour émettre 1 tonne de CO2 ?
+  hint: Cours boursiers du 14 décembre 2020, tout exprimé en USD.
+  type: QCM
+  category: 8
+  difficulty: 3
+  answer_option_a: 36 dollars et à peu près 3 barrils
+  answer_option_b: 48 dollars et à peu près 1 barril
+  answer_option_c: 65 dollars et à peu près 10 barrils
+  answer_option_d: 100 dollars et à peu près 15 barrils
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: La tonne de CO2 échangée sur le marché européen ETS est à 30
+    EUR, soit 36 USD. Pour émettre 1 tonne de CO2 il faut brûler 2.8 barrils de pétrole,
+    ce qui fait 12 USD si on rapporte le prix du CO2 au barril. Ce dernier s'échange
+    à 50 USD et son prix a un écart-type de 11 USD sur la dernière année. A ces niveaux
+    le prix du CO2 n'est pas assez disruptif pour se détourner du pétrole, encore
+    moins s'il retrouvait ses niveaux de fin 2018 à 80 USD ou de 2012 à 130 USD.
+  answer_accessible_url: https://www.barchart.com/futures/quotes/CKZ20/overview
+  answer_scientific_url: https://www.ecologie.gouv.fr/prix-du-carbone
+  answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/EUA_future_real_price.pdf/page1-800px-EUA_future_real_price.pdf.jpg
+  answer_image_explanation: ''
+  answer_extra_info: https://www.boursorama.com/bourse/matieres-premieres/cours/8xBRN/
+  author: Kim Nguyen-Huu
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-14
+  created: 2020-12-15
+  updated: 2020-12-15
+  tags:
+  - 11
+  - 13
   - 194
