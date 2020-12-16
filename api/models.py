@@ -16,6 +16,7 @@ class Configuration(SingletonModel):
     application_name = models.CharField(
         max_length=255,
         default="Quiz de l'Anthropocène",
+        editable=False,
         help_text="Le nom de l'application",
     )
     application_tagline = models.CharField(
@@ -31,40 +32,63 @@ class Configuration(SingletonModel):
         blank=True,
         help_text="Le lien vers le frontend de l'application",
     )
+    # social links
+    application_facebook_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="Le lien vers la page Facebook de l'application",
+    )
+    application_twitter_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="Le lien vers la page Twitter de l'application",
+    )
+    application_linkedin_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="Le lien vers la page Linkedin de l'application",
+    )
     # timestamps
     daily_stat_last_aggregated = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois qu'a été lancé le script de mise à jour des Daily Stats",  # noqa
     )
     notion_questions_scope_1_last_imported = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois que les questions (lot 1) ont été importées depuis Notion",  # noqa
     )
     notion_questions_scope_2_last_imported = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois que les questions (lot 2) ont été importées depuis Notion",  # noqa
     )
     notion_questions_scope_3_last_imported = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois que les questions (lot 3) ont été importées depuis Notion",  # noqa
     )
     notion_questions_scope_4_last_imported = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois que les questions (lot 4) ont été importées depuis Notion",  # noqa
     )
     github_last_exported = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois que la donnée a été exportée vers Github",  # noqa
     )
     notion_contributions_last_exported = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois que les contributions exportées vers Notion",  # noqa
     )
 

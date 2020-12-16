@@ -925,20 +925,13 @@ class GlossaryAdmin(ExportMixin, admin.ModelAdmin):
 
 class ConfigurationAdmin(ExportMixin, SingletonModelAdmin):
     EXCLUDED_FIELDS = ["id"]
-    EDITABLE_FIELDS = ["application_tagline", "application_about"]
 
-    class Meta:
-        exclude = ("id",)
-
+    # to keep order
     def get_fields(self, request, obj=None):
         return [f.name for f in obj._meta.fields if f.name not in self.EXCLUDED_FIELDS]
 
     def get_readonly_fields(self, request, obj=None):
-        return [
-            f.name
-            for f in obj._meta.fields
-            if f.name not in self.EXCLUDED_FIELDS + self.EDITABLE_FIELDS
-        ]
+        return [f.name for f in obj._meta.fields if not f.editable]
 
 
 class LogEntryAdmin(admin.ModelAdmin):
