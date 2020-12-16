@@ -40,7 +40,7 @@ export default {
 
   data() {
     return {
-      // quizzes: null,
+      // quizzesDisplayed: null,
     };
   },
 
