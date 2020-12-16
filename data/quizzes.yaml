@@ -300,15 +300,14 @@
     \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur les cartes du 3ème lot distribué\
     \ lors d'une Fresque.</p>"
   conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
-  difficulty_average: 2.142857142857143
+  difficulty_average: 2.0
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/J1A3917120919-2-215x215.jpg
   publish: true
   created: 2020-07-29
-  updated: 2020-12-13
+  updated: 2020-12-15
   questions:
   - 29
-  - 130
   - 131
   - 305
   - 306
