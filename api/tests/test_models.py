@@ -7,6 +7,7 @@ from api.models import (
     QuestionAggStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
+    QuizRelationship,
     QuizAnswerEvent,
     QuizFeedbackEvent,
     DailyStat,
@@ -174,6 +175,45 @@ class QuizModelTest(TestCase):
             ValidationError,
             self.quiz_published.questions.set,
             [self.question_validated, self.question_not_validated],
+        )
+
+
+class QuizRelationshipModelTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.question_1 = QuestionFactory(answer_correct="a")
+        cls.quiz_1 = QuizFactory(name="quiz 1")
+        cls.quiz_2 = QuizFactory(name="quiz 2")
+        cls.quiz_3 = QuizFactory(name="quiz 2")
+        cls.quiz_relationship = QuizRelationship.objects.create(
+            from_quiz=cls.quiz_1, to_quiz=cls.quiz_2, status="suivant"
+        )
+
+    def test_quiz_relationship_must_have_correct_status(self):
+        self.assertRaises(
+            ValidationError,
+            QuizRelationship.objects.create,
+            from_quiz=self.quiz_1,
+            to_quiz=self.quiz_3,
+            status="coucou",
+        )
+
+    def test_quiz_relationship_must_not_have_same_from_to(self):
+        self.assertRaises(
+            ValidationError,
+            QuizRelationship.objects.create,
+            from_quiz=self.quiz_1,
+            to_quiz=self.quiz_2,
+            status="similaire",
+        )
+
+    def test_quiz_relationship_cannot_have_symmetrical_from_to(self):
+        self.assertRaises(
+            ValidationError,
+            QuizRelationship.objects.create,
+            from_quiz=self.quiz_2,
+            to_quiz=self.quiz_1,
+            status="similaire",
         )
 
 

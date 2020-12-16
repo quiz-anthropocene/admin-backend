@@ -1,7 +1,15 @@
 from django.test import TestCase
 from django.core import management
 
-from api.models import Configuration, Category, Tag, Question, Quiz, Glossary
+from api.models import (
+    Configuration,
+    Category,
+    Tag,
+    Question,
+    Quiz,
+    QuizRelationship,
+    Glossary,
+)
 
 
 class FixturesTest(TestCase):
@@ -10,6 +18,7 @@ class FixturesTest(TestCase):
     #     "data/tags.yaml",
     #     "data/questions.yaml",
     #     "data/quizzes.yaml",
+    #     "data/quiz-relationships.yaml",
     #     "data/ressources-glossaire.yaml",
     # ]
 
@@ -18,6 +27,7 @@ class FixturesTest(TestCase):
     #     self.assertTrue(Tag.objects.count())
     #     self.assertTrue(Question.objects.count())
     #     self.assertTrue(Quiz.objects.count())
+    #     self.assertTrue(QuizRelationship.objects.count())
     #     self.assertTrue(Glossary.objects.count())
 
     def test_flat_fixtures_load_successfully(self):
@@ -27,4 +37,5 @@ class FixturesTest(TestCase):
         self.assertTrue(Tag.objects.count())
         self.assertTrue(Question.objects.count())
         self.assertTrue(Quiz.objects.count())
+        self.assertTrue(QuizRelationship.objects.count())
         self.assertTrue(Glossary.objects.count())

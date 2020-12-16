@@ -67,6 +67,13 @@ QUESTION_SOURCE_CHOICES = [
     (QUESTION_SOURCE_QUIZ, "Quiz"),
 ]
 
+QUIZ_RELATIONSHIP_LIST = [
+    "suivant",
+    # "précédent",
+    "jumeau",
+    "similaire",
+]
+
 DEFAULT_DAILY_STAT_HOUR_SPLIT = {
     str(h): {
         "question_answer_count": 0,

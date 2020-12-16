@@ -114,6 +114,16 @@ class Command(BaseCommand):
                 file_content=quizzes_yaml,
                 branch_name=data_update_branch_name,
             )
+            # data/quiz-relationships.yaml
+            quiz_relationships_yaml = utilities.serialize_model_to_yaml(
+                model_label="quizrelationship", flat=True
+            )
+            utilities_github.create_file(
+                file_path="data/quiz-relationships.yaml",
+                commit_message="update quiz relationships",
+                file_content=quiz_relationships_yaml,
+                branch_name=data_update_branch_name,
+            )
 
             # update & commit frontend file
             # frontend/src/constants.js

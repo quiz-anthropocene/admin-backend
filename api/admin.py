@@ -29,6 +29,7 @@ from api.models import (
     Category,
     Tag,
     Quiz,
+    QuizRelationship,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
     QuestionAggStat,
@@ -411,6 +412,57 @@ class TagAdmin(ExportMixin, admin.ModelAdmin):
     ]
 
 
+class QuizRelationshipFromInline(admin.StackedInline):  # TabularInline
+    model = QuizRelationship
+    fk_name = "from_quiz"
+    extra = 1
+
+    def formfield_for_foreignkey(self, db_field, request=None, **kwargs):
+        """
+        Hide the current quiz in the relationship form
+        """
+        field = super(QuizRelationshipFromInline, self).formfield_for_foreignkey(
+            db_field, request, **kwargs
+        )
+        if db_field.name == "to_quiz":
+            if "object_id" in request.resolver_match.kwargs:
+                current_quiz_id = request.resolver_match.kwargs["object_id"]
+                # remove the current quiz from the list
+                field.queryset = Quiz.objects.exclude(id=current_quiz_id)
+                # remove the current quiz's relationship quizs
+                current_quiz_from_relationships = QuizRelationship.objects.filter(
+                    from_quiz__id=current_quiz_id
+                ).values_list("to_quiz_id", flat=True)
+                current_quiz_to_relationships = QuizRelationship.objects.filter(
+                    to_quiz__id=current_quiz_id
+                ).values_list("from_quiz_id", flat=True)
+                field.queryset = field.queryset.exclude(
+                    id__in=list(current_quiz_from_relationships)
+                    + list(current_quiz_to_relationships)
+                )
+                # order queryset
+                field.queryset = field.queryset.order_by("-id")
+        return field
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+
+class QuizRelationshipToInline(admin.StackedInline):  # TabularInline
+    model = QuizRelationship
+    fk_name = "to_quiz"
+    extra = 0
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
 class QuizAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
@@ -431,10 +483,8 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
     )
     ordering = ("-id",)
     filter_vertical = ("questions",)
-    filter_horizontal = (
-        # "questions",
-        "tags",
-    )
+    filter_horizontal = ("tags",)
+    inlines = [QuizRelationshipFromInline, QuizRelationshipToInline]
     readonly_fields = (
         "question_count",
         "difficulty_average",

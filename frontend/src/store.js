@@ -12,6 +12,7 @@ import categoriesYamlData from '../../data/categories.yaml';
 import tagsYamlData from '../../data/tags.yaml';
 import questionsYamlData from '../../data/questions.yaml';
 import quizzesYamlData from '../../data/quizzes.yaml';
+import quizRelationshipsYamlData from '../../data/quiz-relationships.yaml';
 import ressourcesGlossaireYamlData from '../../data/ressources-glossaire.yaml';
 import ressourcesSoutiensYamlData from '../../data/ressources-soutiens.yaml';
 import ressourcesAutresAppsYamlData from '../../data/ressources-autres-apps.yaml';
@@ -43,6 +44,7 @@ const store = new Vuex.Store({
       tag: null,
       author: null,
     },
+    quizRelationships: [],
     categories: [],
     tags: [],
     authors: [],
@@ -122,6 +124,13 @@ const store = new Vuex.Store({
       state.tags.forEach((t) => {
         t.quiz_count = quizzesPublished.filter((q) => q.tags.map((qt) => qt.id).includes(t.id)).length;
       });
+    },
+    /**
+     * Get quiz relationships
+     * Pre-processing ? None
+     */
+    GET_QUIZ_RELATIONSHIP_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_QUIZ_RELATIONSHIP_LIST', { list: quizRelationshipsYamlData });
     },
     /**
      * Get authors
@@ -216,6 +225,9 @@ const store = new Vuex.Store({
     SET_QUIZ_PUBLISHED_LIST: (state, { list }) => {
       state.quizzesPublished = list;
     },
+    SET_QUIZ_RELATIONSHIP_LIST: (state, { list }) => {
+      state.quizRelationships = list;
+    },
     SET_CATEGORY_LIST: (state, { list }) => {
       state.categories = list;
     },
@@ -257,6 +269,8 @@ const store = new Vuex.Store({
     getCategoryById: (state) => (categoryId) => state.categories.find((c) => (c.id === categoryId)),
     getTagById: (state) => (tagId) => state.tags.find((t) => (t.id === tagId)),
     getTagsByIdList: (state) => (tagIdList) => state.tags.filter((t) => tagIdList.includes(t.id)),
+    getDifficultyLevelEmojiByValue: (state) => (difficultyLevelValue) => state.difficultyLevels.find((dl) => (dl.value === parseInt(difficultyLevelValue, 10))).emoji,
+    // questions
     getQuestionById: (state) => (questionId) => state.questions.find((q) => (q.id === questionId)),
     getQuestionsByIdList: (state) => (questionIdList) => state.questions.filter((q) => questionIdList.includes(q.id)),
     getQuestionsByCategoryName: (state) => (categoryName) => state.questions.filter((q) => (q.category.name === categoryName)),
@@ -271,10 +285,11 @@ const store = new Vuex.Store({
       const currentQuestionIndex = currentQuestionId ? state.questionsDisplayed.findIndex((q) => q.id === currentQuestionId) : state.questionsDisplayed[0];
       return state.questionsDisplayed[currentQuestionIndex + 1] ? state.questionsDisplayed[currentQuestionIndex + 1] : state.questionsDisplayed[0];
     },
+    // quiz
     getQuizById: (state) => (quizId) => state.quizzes.find((q) => (q.id === quizId)),
     getQuizzesPublishedByFilter: (state) => (filter) => state.quizzesPublished.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
       .filter((q) => (filter.author ? (q.author === filter.author) : true)),
-    getDifficultyLevelEmojiByValue: (state) => (difficultyLevelValue) => state.difficultyLevels.find((dl) => (dl.value === parseInt(difficultyLevelValue, 10))).emoji,
+    getQuizRelationshipsById: (state) => (quizId) => state.quizRelationships.filter((qr) => (qr.from_quiz === quizId) || (qr.to_quiz === quizId)),
   },
 });
 

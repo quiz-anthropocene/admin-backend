@@ -587,6 +587,13 @@ class Quiz(models.Model):
     publish = models.BooleanField(
         default=False, help_text="Le quiz est prêt à être publié"
     )
+    relationships = models.ManyToManyField(
+        "self",
+        through="QuizRelationship",
+        symmetrical=False,
+        related_name="related_to",
+        help_text="Les quizs similaires ou liés",
+    )
     # timestamps
     created = models.DateField(
         auto_now_add=True, help_text="La date de création du quiz"
@@ -698,6 +705,10 @@ class Quiz(models.Model):
     @property
     def questions_not_validated_string(self):
         return "<br />".join([str(q) for q in self.questions_not_validated_list])
+
+    @property
+    def relationships_all(self):
+        return self.from_quizs.all() | self.to_quizs.all()
 
     @property
     def like_count_agg(self):
@@ -818,6 +829,58 @@ models.signals.pre_save.connect(quiz_validate_fields, sender=Quiz)
 models.signals.m2m_changed.connect(
     quiz_validate_m2m_fields, sender=Quiz.questions.through
 )
+
+
+class QuizRelationship(models.Model):
+    from_quiz = models.ForeignKey(
+        Quiz, on_delete=models.CASCADE, related_name="from_quizs"
+    )
+    to_quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name="to_quizs")
+    status = models.CharField(
+        max_length=50,
+        choices=zip(
+            constants.QUIZ_RELATIONSHIP_LIST, constants.QUIZ_RELATIONSHIP_LIST,
+        ),
+        help_text="Le type de relation entre les deux quizs",
+    )
+    created = models.DateField(
+        auto_now_add=True, help_text="La date & heure de la création de la relation"
+    )
+
+    def __str__(self):
+        return f"{self.from_quiz} >>> {self.status} >>> {self.to_quiz}"
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super(QuizRelationship, self).save(*args, **kwargs)
+
+    def clean(self):
+        """
+        Rules on QuizRelationship
+        - cannot have the same from_quiz & to_quiz
+        - status must be one of the choices
+        - cannot have reverse ?
+        """
+        if self.from_quiz == self.to_quiz:
+            raise ValidationError({"to_quiz": "ne peut pas être le même quiz"})
+        if self.status not in constants.QUIZ_RELATIONSHIP_LIST:
+            raise ValidationError({"status": "doit être une valeur de la liste"})
+        # check there isn't any existing relationships # status ?
+        existing_identical_relationships = QuizRelationship.objects.filter(
+            from_quiz=self.from_quiz, to_quiz=self.to_quiz
+        )
+        if len(existing_identical_relationships):
+            raise ValidationError(
+                {"to_quiz": "il y a déjà une relation avec ce quiz dans ce sens"}
+            )
+        # check there isn't any existing symmetrical relationships
+        existing_symmetrical_relationships = QuizRelationship.objects.filter(
+            from_quiz=self.to_quiz, to_quiz=self.from_quiz
+        )
+        if len(existing_symmetrical_relationships):
+            raise ValidationError(
+                {"to_quiz": "il y a déjà une relation avec ce quiz dans l'autre sens"}
+            )
 
 
 class QuizAnswerEventQuerySet(models.QuerySet):
