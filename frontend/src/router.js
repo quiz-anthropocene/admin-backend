@@ -14,6 +14,7 @@ import StatsPage from './views/StatsPage.vue';
 import GlossaryPage from './views/GlossaryPage.vue';
 import ContributePage from './views/ContributePage.vue';
 import NotFoundPage from './views/NotFoundPage.vue';
+import PrintPage from './views/PrintPage.vue';
 
 Vue.use(VueRouter);
 Vue.use(VueMeta);
@@ -52,6 +53,11 @@ const routes = [
     path: '/a-propos',
     name: 'about',
     component: AboutPage,
+  },
+  {
+    path: '/print',
+    name: 'print',
+    component: PrintPage,
   },
   {
     path: '/ressources',

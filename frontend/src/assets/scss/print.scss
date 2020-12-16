@@ -1,0 +1,124 @@
+
+.print {
+  // position: absolute;
+  display: flex;
+  // z-index: 100000;
+  // transform: scale(0.3);
+  .row{
+    margin: 0;
+    padding: 0 10px 10px 10px;
+  }
+  .recto {
+    // transform: rotate(90deg);
+  }
+  .verso {
+    // left: 28vw;
+    // margin: 0 10px 0 10px;
+    // transform: rotate(-90deg);
+
+    .good-answer {
+      margin: auto;
+
+      .letter {
+        background-color: var(--bg-color);
+        padding: 4px;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 17px;
+        margin-left: 10px;
+      }
+      .ans {
+        margin-left: 10px;
+
+      }
+    }
+
+    .qrcode {
+      position: absolute;
+      bottom: 100px;
+      left: calc(50% - 50px);
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  .card {
+    width: 20vw;
+    height: 28vw;
+    border-radius: 5px;
+    background-color: white;
+
+
+    .header {
+      height: 15px;
+      margin: 10px;
+      background: repeating-linear-gradient(-90deg, var(--bg-color), var(--bg-color) 5px, #fff 5px, #fff 10px);
+    }
+
+    .footer {
+      background: var(--bg-color);
+      height: 80px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+
+      .logo {
+        background-image: url('../logo.png');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+      }
+
+      .content {
+        margin: 10px 0 10px 0;
+        .title {
+          font-size: 20px;
+          line-height: 1em;
+          text-transform: uppercase;
+          text-align: left;
+        }
+
+        .category {
+          left: 0;
+          text-align: center;
+          border: solid 1px;
+          border-radius: 8px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .question {
+      margin: 0;
+      max-height: 190px;
+      text-align: left;
+    }
+    .answers {
+      padding: 0 10px 10px 10px;
+      .group {
+        display: flex;
+        margin-bottom: 10px;
+        .letter {
+          background-color: var(--bg-color);
+          padding: 4px;
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+          text-align: center;
+          line-height: 17px;
+        }
+        .answer {
+          padding-left: 10px;
+          max-width: 90%;
+        }
+
+      }
+    }
+  }
+}

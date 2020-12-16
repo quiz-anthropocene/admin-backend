@@ -12,6 +12,7 @@
   "dependencies": {
     "bootstrap": "^4.5.3",
     "core-js": "^3.7.0",
+    "html2canvas": "^1.0.0-rc.7",
     "vue": "^2.6.12",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.4.9",
