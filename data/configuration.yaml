@@ -10,8 +10,11 @@
     \ individuel.</p>\r\n\r\n<p>Ces questions peuvent aussi servir à se former pour\
     \ mieux maitriser les chiffres et les ordres de grandeurs. Les usages peuvent\
     \ être multiples (conférences, formations, quiz, jeu, etc.).</p>"
-  application_backend_url: ''
-  application_frontend_url: ''
+  application_backend_url: 'https://quiz-anthropocene.osc-fr1.scalingo.io/'
+  application_frontend_url: 'https://quizanthropocene.fr/'
+  application_facebook_url: 'https://www.facebook.com/quizanthropocene/'
+  application_twitter_url: 'https://twitter.com/AnthroQuiz'
+  application_linkedin_url: 'https://www.linkedin.com/company/quiz-de-l-anthropocene/'
   daily_stat_last_aggregated: 2020-12-16 01:18:11.727729+00:00
   notion_questions_scope_1_last_imported: 2020-12-16 03:03:46.154846+00:00
   notion_questions_scope_2_last_imported: 2020-12-16 03:03:46.154854+00:00
