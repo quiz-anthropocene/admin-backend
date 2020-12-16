@@ -197,22 +197,27 @@ yarn lint
 
 ### Autres commandes utiles
 
-Exporter les questions de la base au format YAML
+Importer toute la donnée dans la base de donnée
 ```
-// on utilise un format légerement modifier pour simplifier le fichier
-python manage.py dumpdata api.question --output=data/questions.yaml  --format=yaml-pretty-flat
-
-// mais il est toujours possible de faire un dumpdata normal
-python manage.py dumpdata api.question --output=data/questions.yaml
+python manage.py init_db
 ```
 
-Importer les questions dans la base
+Importer les questions dans la base de donnée
 ```
 // ne marche pas car les fichiers dans le dossier /data sont "applatis" (flat)
 python manage.py loaddata data/questions.yaml
 
 // marche seulement si les questions ont été supprimées en amont
 python manage.py loaddata data/questions.yaml --model=question --format=yaml-pretty-flat
+```
+
+Exporter les questions de la base de donnée au format YAML
+```
+// on utilise un format légerement modifier pour simplifier le fichier
+python manage.py dumpdata api.question --output=data/questions.yaml  --format=yaml-pretty-flat
+
+// mais il est toujours possible de faire un dumpdata normal
+python manage.py dumpdata api.question --output=data/questions.yaml
 ```
 
 Réinitialiser les stats d'une question

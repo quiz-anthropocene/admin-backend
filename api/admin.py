@@ -483,10 +483,7 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
     )
     ordering = ("-id",)
     filter_vertical = ("questions",)
-    filter_horizontal = (
-        # "questions",
-        "tags",
-    )
+    filter_horizontal = ("tags",)
     inlines = [QuizRelationshipFromInline, QuizRelationshipToInline]
     readonly_fields = (
         "question_count",
@@ -535,9 +532,6 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
             "Prêt à être publié ? Toutes les questions doivent être au statut 'validé' !",
             {"fields": ("publish",)},
         ),
-        # (
-        #     "Quizs similaires",
-        # )
         (
             "Stats",
             {
