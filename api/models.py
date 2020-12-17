@@ -24,6 +24,12 @@ class Configuration(SingletonModel):
     )
     application_about = RichTextField(blank=True, help_text="A propos de l'application")
     # links
+    application_open_source_code_url = models.URLField(
+        max_length=500,
+        default="https://github.com/raphodn/know-your-planet",
+        editable=False,
+        help_text="Le lien vers le code de l'application",
+    )
     application_backend_url = models.URLField(
         max_length=500, blank=True, help_text="Le lien vers le backend de l'application"
     )

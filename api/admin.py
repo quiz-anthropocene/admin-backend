@@ -340,8 +340,6 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         """
         Corresponding template in templates/admin/api/question/change_list_with_import.html
         """
-
-        configuration = Configuration.get_solo()
         notion_questions_import_scope_choices = [
             (
                 scope_value,
@@ -369,7 +367,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
             ]
 
         extra_context = extra_context or {
-            "configuration": configuration,
+            "configuration": Configuration.get_solo(),
             "notion_questions_import_scope_choices": notion_questions_import_scope_choices,
             "notion_questions_import_response": notion_questions_import_response,
         }
@@ -619,6 +617,25 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
 
     class Media:
         css = {"all": ("css/admin/extra.css",)}
+
+
+class QuizRelationshipAdmin(ExportMixin, admin.ModelAdmin):
+    list_display = (
+        "from_quiz",
+        "status",
+        "to_quiz",
+        "created",
+    )
+    list_filter = ("status",)
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 
 class QuestionAnswerEventAdmin(ExportMixin, admin.ModelAdmin):
@@ -971,21 +988,25 @@ class MyAdminSite(AdminSite):
         """
         Corresponding template in templates/admin/api/index_with_export.html
         """
-
+        configuration = Configuration.get_solo()
         export_message = ""
 
         if request.POST.get("run_export_data_to_github_script", False):
             out = StringIO()
             request.POST.get("run_export_data_to_github_script")
             management.call_command("export_data_to_github", stdout=out)
-            if "https://github.com/raphodn/know-your-planet" not in out.getvalue():
-                export_message = f"Erreur survenue.<br>{out.getvalue()}"
+            if configuration.application_open_source_code_url not in out.getvalue():
+                export_message = f"Erreur survenue.<br />{out.getvalue()}"
             else:
-                export_message = f"La Pull Request a été créé !<br>Elle est visible ici : <a href='{out.getvalue()}' target='_blank'>{out.getvalue()}</a>"  # noqa
+                export_message = (
+                    "La Pull Request a été créé !<br />"
+                    "Elle est visible ici : "
+                    "<a href='{out.getvalue()}' target='_blank'>{out.getvalue()}</a>"  # noqa
+                )
             print(export_message)
 
         extra_context = extra_context or {
-            "configuration": Configuration.get_solo(),
+            "configuration": configuration,
             "export_message": export_message,
         }
 
@@ -1000,6 +1021,7 @@ admin_site.register(Question, QuestionAdmin)
 admin_site.register(Category, CategoryAdmin)
 admin_site.register(Tag, TagAdmin)
 admin_site.register(Quiz, QuizAdmin)
+admin_site.register(QuizRelationship, QuizRelationshipAdmin)
 admin_site.register(QuestionAnswerEvent, QuestionAnswerEventAdmin)
 admin_site.register(QuestionFeedbackEvent, QuestionFeedbackEventAdmin)
 admin_site.register(QuestionAggStat, QuestionAggStatAdmin)

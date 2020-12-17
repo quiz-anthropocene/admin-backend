@@ -8,7 +8,7 @@ from api import utilities_notion
 from api.models import Configuration, Contribution
 
 
-config = Configuration.get_solo()
+configuration = Configuration.get_solo()
 
 
 class Command(BaseCommand):
@@ -35,7 +35,9 @@ class Command(BaseCommand):
             )
             contributions_last_exported = timezone.make_aware(custom_start_date_parsed)
         else:
-            contributions_last_exported = config.notion_contributions_last_exported
+            contributions_last_exported = (
+                configuration.notion_contributions_last_exported
+            )
         print("Contributions last exported:", contributions_last_exported)
 
         # find new contributions
@@ -58,9 +60,9 @@ class Command(BaseCommand):
                         contribution_date=new_contribution.created,
                     )
 
-                    # update config every time (sometimes it time's out)
-                    config.notion_contributions_last_exported = timezone.now()
-                    config.save()
+                    # update configuration every time (sometimes it time's out)
+                    configuration.notion_contributions_last_exported = timezone.now()
+                    configuration.save()
 
                 print("Done !")
                 self.stdout.write(

@@ -291,20 +291,22 @@ class Command(BaseCommand):
             % round(time.time() - start_time, 1)
         )
 
-        # update config
-        config = Configuration.get_solo()
+        # update configuration
+        configuration = Configuration.get_solo()
         if scope:
             setattr(
-                config, f"notion_questions_scope_{scope}_last_imported", timezone.now()
+                configuration,
+                f"notion_questions_scope_{scope}_last_imported",
+                timezone.now(),
             )
         else:
             for scope in constants.NOTION_QUESTIONS_IMPORT_SCOPE_LIST[1:]:
                 setattr(
-                    config,
+                    configuration,
                     f"notion_questions_scope_{scope}_last_imported",
                     timezone.now(),
                 )
-        config.save()
+        configuration.save()
 
         self.stdout.write(
             "\n".join(

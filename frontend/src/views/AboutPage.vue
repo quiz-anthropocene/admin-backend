@@ -17,14 +17,16 @@
       On est preneur de tous vos retours !
     </p>
     <p>
-      Une page <router-link :to="{ name: 'contribute' }">✍️&nbsp;Contribuer</router-link> vous permet de rajouter une question ou un sujet qui vous tiens à coeur.
+      Une page <router-link :to="{ name: 'contribute' }">✍️&nbsp;Contribuer</router-link>
+      vous permet de rajouter une question ou un sujet qui vous tiens à coeur.
       Vous pouvez aussi y laisser vos commentaires et remarques !
     </p>
 
     <br />
     <h3>Open source</h3>
     <p>
-      Le code de l'application est visible sur <a href="https://github.com/raphodn/know-your-planet" target="_blank">la page Github de l'application</a>.
+      Le code de l'application est visible sur
+      <a :href="configuration.application_open_source_code_url" target="_blank" title="Lien vers le code de l'application">la page Github de l'application</a>.
       Si vous avez des commentaires ou des suggestions sur l'application, vous pouvez y créer des <i>Issues</i>.
     </p>
 

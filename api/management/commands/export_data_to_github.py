@@ -28,10 +28,10 @@ class Command(BaseCommand):
             f"Data: update ({current_datetime_string_pretty})"
         )
 
-        # update config first
-        config = Configuration.get_solo()
-        config.github_last_exported = timezone.now()
-        config.save()
+        # update configuration first
+        configuration = Configuration.get_solo()
+        configuration.github_last_exported = timezone.now()
+        configuration.save()
 
         try:
             # create branch
