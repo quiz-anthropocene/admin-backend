@@ -409,10 +409,10 @@
   type: QCM
   category: 1
   difficulty: 3
-  answer_option_a: -50°
+  answer_option_a: -50°C
   answer_option_b: -18°C
-  answer_option_c: 0°
-  answer_option_d: 15°
+  answer_option_c: 0°C
+  answer_option_d: 15°C
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: L'effet de serre est un phénomène naturel et nécessaire à la
@@ -1416,11 +1416,10 @@
   type: QCM
   category: 3
   difficulty: 4
-  answer_option_a: 1000 tonnes (10 baleines bleues)
-  answer_option_b: 100 000 tonnes (10 fois la Tour Eiffel)
-  answer_option_c: 1 million de tonnes (la grande Pyramide de Bizeh)
-  answer_option_d: 100 millions de tonnes (la masse totale de la population humaine
-    mondiale)
+  answer_option_a: 1000 tonnes,  soit 4 avions A380
+  answer_option_b: 100 000 tonnes, soit 10 fois la Tour Eiffel
+  answer_option_c: 1 million de tonnes, soit 3 fois l'Empire State Building
+  answer_option_d: 100 millions de tonnes, soit 20 fois la Grande pyramide de Gizeh
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: 'Chaque année, 300 à 400 millions de tonnes de métaux lourds,
@@ -1552,7 +1551,7 @@
   answer_option_a: 20 millions
   answer_option_b: 50 millions
   answer_option_c: 100 millions
-  answer_option_d: au moins 250 millions
+  answer_option_d: 250 millions
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: En 2010, il y avait autant de déplacés pour des raisons de guerre
@@ -1968,7 +1967,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2020-03-10
   created: 2020-03-10
   updated: 2020-09-28
@@ -2412,8 +2411,8 @@
     pas plus que 2,1 tonnes d''équivalent CO2 par an.
 
     Imaginons que je ne fasse strictement rien d''autre de l''année (plus de chauffage,
-    de voiture, d''achats...). Combien de vols Paris-New York aller-retour pourrais-je
-    me permettre ?'
+    de voiture, d''achats...). Combien de vols aller-retour Paris-New York pourrais-je
+    me permettre pour respecter ce budget ?'
   hint: ''
   type: QCM
   category: 2
@@ -2563,7 +2562,7 @@
   answer_extra_info: ''
   author: Avenir Climatique
   validator: Raphael Odini
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-03-11
   created: 2020-03-11
   updated: 2020-09-28
@@ -5594,7 +5593,8 @@
   answer_correct: a
   has_ordered_answers: true
   answer_explanation: A comparer aux 11% provenant du transport maritime et 72% du
-    transport routier.
+    transport routier. Mais une grande partie de ces déplacements sont évitables,
+    et ils majoritairement le fait des populations les plus aisées.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_chapter8.pdf
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r079.jpg
@@ -6936,10 +6936,10 @@
   type: QCM
   category: 2
   difficulty: 2
-  answer_option_a: 53 000
-  answer_option_b: 93 000
-  answer_option_c: 130 000
-  answer_option_d: 230 000
+  answer_option_a: 50,000
+  answer_option_b: 90,000
+  answer_option_c: 130,000
+  answer_option_d: 230,000
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: L’International Air Transport Association indique que le trafic
@@ -15959,15 +15959,11 @@
   answer_option_d: 17 millions
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: La France a consommé 144 Mtep en 2018 (énergie finale) ce qui
-    fait 6,029 10ˆ18J. La fusée Falcon 9 de SpaceX brule 155,9 tonnes de RP-1 soit
-    7,202 10ˆ12J et emporte 2 astronautes dans la station spatiale internationale.
-    La totalité de l’énergie consommée en France en une année équivaut donc au décollage
-    de 840 000 fusées Falcon 9 (2300 lancements par jour...), de quoi envoyer 1,68
-    millions de personnes dans la station spatiale. Pour y envoyer tous les français
-    il faudrait utiliser la totalité de l’énergie consommée en France pendant 40 ans.
-    Ces calculs ne prennent pas en compte l'énergie grise requise pour construire
-    les fusées.
+  answer_explanation: La France a consommé en 2018 6 10ˆ18J. Une fusée Falcon 9 de
+    SpaceX en consomme 7 10ˆ12J pour emmener 2 astronautes vers la station spatiale.
+    Le calcul non donne donc 1,7 millions de personnes. Ce calcul ne prend pas en
+    compte l'énergie grise requise pour construire les fusées. Quant à déménager toute
+    l'humanité sur Mars...
   answer_accessible_url: https://www.statistiques.developpement-durable.gouv.fr/chiffres-cles-de-lenergie-edition-2019?rubrique=19&dossier=170
   answer_scientific_url: http://www.capcomespace.net/dossiers/espace_privee/SpaceX/falcon_9_heavy.htm
   answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/0/3/2/03221bc992_50164229_crew-dragon-nasa.jpg
