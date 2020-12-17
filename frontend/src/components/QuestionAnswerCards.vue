@@ -65,10 +65,13 @@
     <div v-if="question && questionSubmitted" id="scroll-to-answer" style="height:1px"></div>
 
     <!-- Answer -->
-    <div v-if="question && questionSubmitted" class="answer" :class="questionSuccess ? 'answer-success' : 'answer-error'">
-      <h2 v-if="questionSuccess">{{ questionSuccess }} !</h2>
-      <h2 v-if="!questionSuccess">Pas tout à fait...</h2>
-      <h3 v-if="!questionSuccess">La réponse était: {{ question["answer_option_" + question["answer_correct"]] }}</h3>
+    <div v-if="question && questionSubmitted" class="answer" :class="questionAnswer.success ? 'answer-success' : 'answer-error'">
+      <h2 v-if="questionAnswer.success">{{ questionAnswer.message }} !</h2>
+      <h2 v-if="!questionAnswer.success">{{ questionAnswer.message }}</h2>
+      <h3 v-if="!questionAnswer.success">
+        <small>La réponse était :&nbsp;</small>
+        <span>{{ question["answer_option_" + question["answer_correct"]] }}</span>
+      </h3>
       <div class="row no-gutters text-align-left">
         <div class="col-sm-auto">
           <p title="Explication">
@@ -142,6 +145,7 @@ export default {
       questionSubmitted: false,
       questionSuccess: null,
       questionSuccessMessageList: constants.QUESTION_SUCCESS_MESSAGES,
+      questionErrorMessageList: constants.QUESTION_ERROR_MESSAGES,
     };
   },
 
@@ -179,7 +183,7 @@ export default {
       this.answerChoices = this.shuffleAnswers(['a', 'b', 'c', 'd'], this.question.has_ordered_answers);
       this.answerPicked = (this.question.type === 'QCM-RM') ? new Array(this.question.answer_correct.length).fill('') : '';
       this.questionSubmitted = false;
-      this.questionSuccess = null;
+      this.questionAnswer = {};
       // this.feedbackSubmitted = false;
     },
     initContribution() {
@@ -212,14 +216,16 @@ export default {
       this.questionSubmitted = true;
       const cleanedAnswerPicked = (this.question.type === 'QCM-RM') ? this.answerPicked.slice(0).filter(Boolean).sort().join('') : this.answerPicked;
       const randomSuccessMessage = this.questionSuccessMessageList[Math.floor(Math.random() * this.questionSuccessMessageList.length)];
+      const randomErrorMessage = this.questionErrorMessageList[Math.floor(Math.random() * this.questionErrorMessageList.length)];
       // validate answer
-      this.questionSuccess = (cleanedAnswerPicked === this.question.answer_correct) ? randomSuccessMessage : null;
+      this.questionAnswer.success = (cleanedAnswerPicked === this.question.answer_correct);
+      this.questionAnswer.message = this.questionAnswer.success ? randomSuccessMessage : randomErrorMessage;
       // update question stats // watch out for eslint 'vue/no-mutating-props'
       // this.question.answer_count_agg += 1;
       // this.question.answer_success_count_agg += (this.questionSuccess ? 1 : 0);
       // this.question.answer_success_rate = ((this.question.answer_success_count_agg / this.question.answer_count_agg) * 100).toFixed(0);
       // tell parent component
-      this.$emit('answer-submitted', { question_id: this.question.id, success: this.questionSuccess });
+      this.$emit('answer-submitted', { question_id: this.question.id, success: this.questionAnswer.success, message: this.questionAnswer.message });
       // scroll to answer
       setTimeout(() => {
         // why scroll to this div and not to 'answer' directly ? To have a slight top margin
