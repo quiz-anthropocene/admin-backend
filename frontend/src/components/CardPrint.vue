@@ -28,9 +28,6 @@ export default {
   },
 };
 </script>
-<style scoped lang="scss">
-.flex {
-  display: flex;
-  flex-flow: row wrap;
-}
+
+<style lang="scss" scoped src="../assets/scss/print.scss">
 </style>

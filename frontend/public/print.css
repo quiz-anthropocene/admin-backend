@@ -1,0 +1,134 @@
+.line {
+	 display: flex;
+	 flex-flow: row wrap;
+	 margin: auto;
+}
+ .print-btn {
+	 z-index: 2;
+}
+ .printbg {
+	 z-index: 1;
+	 background-color: #fff;
+	 width: 1100px;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+.page {
+  margin-bottom: 50px;
+}
+ .print {
+	 display: flex;
+	 margin-left: 30px;
+}
+.print h3 {
+	font-size: 18px;
+}
+.print .answers {
+	font-size: 16px;
+}
+.print .good-answer {
+	font-size: 16px;
+}
+.print .answer-explication {
+	font-size: 16px;
+}
+ .print .row {
+	 margin: 0;
+	 padding: 0 10px 10px 10px;
+}
+ .print .verso .good-answer {
+	 margin: auto;
+}
+ .print .verso .good-answer .letter {
+	 background-color: #fff;
+	 padding: 4px;
+	 border-radius: 50%;
+	 border: 1px solid rgba(0, 0, 0, 0.5);
+	 width: 25px;
+	 height: 25px;
+	 text-align: center;
+	 line-height: 17px;
+	 margin-left: 10px;
+}
+ .print .verso .good-answer .ans {
+	 margin-left: 10px;
+}
+ .print .verso .qrcode {
+	 position: absolute;
+	 bottom: 100px;
+	 left: calc(50% - 50px);
+}
+ .print .card {
+	 width: 413px;
+	 height: 370px;
+	 border-radius: 5px;
+	 background-color: white;
+	 border: solid 1px;
+	 margin-left: 20px;
+	 margin-bottom: 1px;
+}
+ .print .card .header {
+	 height: 15px;
+	 margin: 10px;
+	 background: repeating-linear-gradient(-90deg, #000, #000 5px, #fff 5px, #fff 10px);
+}
+ .print .card .footer {
+	 border-top: 1px solid rgba(0, 0, 0, 0.1);
+	 background-color: #fff;
+	 height: 80px;
+	 position: absolute;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 margin: 0;
+}
+.print .card .footer .logo{
+	 text-align: left;
+}
+ .print .card .footer .logo img{
+	 height: 75px;
+}
+ .print .card .footer .content {
+	 margin: 10px 0 10px 0;
+}
+ .print .card .footer .content .title {
+	 font-size: 20px;
+	 line-height: 1em;
+	 text-transform: uppercase;
+	 text-align: left;
+}
+ .print .card .footer .content .category {
+	 left: 0;
+	 text-align: center;
+	 border: solid 1px;
+	 border-radius: 8px;
+	 font-size: 12px;
+}
+ .print .card .question {
+	 margin: 0;
+	 max-height: 190px;
+	 text-align: left;
+}
+ .print .card .answers {
+	 padding: 0 10px 10px 10px;
+}
+ .print .card .answers .group {
+	 display: flex;
+	 margin-bottom: 10px;
+}
+ .print .card .answers .group .letter {
+	 background-color: 1px solid rgba(0, 0, 0, 0.5);
+	 padding: 4px;
+	 border-radius: 50%;
+	 width: 25px;
+	 height: 25px;
+	 text-align: center;
+	 line-height: 17px;
+}
+ .print .card .answers .group .answer {
+	 padding-left: 10px;
+	 max-width: 90%;
+}

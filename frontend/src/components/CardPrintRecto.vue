@@ -33,6 +33,7 @@
       </div>
       <div class="footer row">
         <div class="logo col-md-4">
+          <img src="./../assets/logo.png" alt="">
 
         </div>
         <div class="col-md-8 content">
@@ -55,7 +56,7 @@ export default {
     context: Object,
     bgColor: {
       type: String,
-      default: '#FED106',
+      default: '#00000',
     },
     index: Number,
   },
@@ -64,10 +65,6 @@ export default {
   data() {
     return {
       answerChoices: ['a', 'b', 'c', 'd'],
-      dimension: {
-        width: 62,
-        height: 88,
-      },
     };
   },
 

@@ -12,9 +12,11 @@
   "dependencies": {
     "bootstrap": "^4.5.3",
     "core-js": "^3.7.0",
-    "html2canvas": "^1.0.0-rc.7",
+    "qrcode": "^1.4.4",
     "vue": "^2.6.12",
+    "vue-html-to-paper": "^1.3.1",
     "vue-meta": "^2.4.0",
+    "vue-qrcode": "^0.3.5",
     "vue-router": "^3.4.9",
     "vuex": "^3.5.1"
   },

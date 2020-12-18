@@ -26,15 +26,11 @@
             </div>
           </div>
         </div>
-
-        <div class="qrcode">
-          <img src="../assets/qrcode.png" alt="">
-
-        </div>
       </div>
       <div class="footer row">
         <div class="logo col-md-4">
-
+          <vue-qrcode :value="questionUrl" />
+          <!-- <img src="../assets/qrcode.png" alt=""> -->
         </div>
         <div class="col-md-8 content">
           <div class="title">
@@ -50,6 +46,7 @@
 </template>
 
 <script>
+import VueQrcode from 'vue-qrcode';
 
 export default {
   name: 'CardPrintVerso',
@@ -58,11 +55,12 @@ export default {
     context: Object,
     bgColor: {
       type: String,
-      default: '#FED106',
+      default: '#000000',
     },
     index: Number,
   },
   components: {
+    VueQrcode,
   },
   data() {
     return {
@@ -83,6 +81,9 @@ export default {
     },
     questionAnswerExplanationWithLineBreaks() {
       return this.question.answer_explanation.replace(/(?:\r\n|\r|\n)/g, '<br />');
+    },
+    questionUrl() {
+      return `${process.env.VUE_APP_DOMAIN_URL}/questions/${this.question.id}`;
     },
     cssVars() {
       return {
