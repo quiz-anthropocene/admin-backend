@@ -10,15 +10,16 @@
     \ individuel.</p>\r\n\r\n<p>Ces questions peuvent aussi servir à se former pour\
     \ mieux maitriser les chiffres et les ordres de grandeurs. Les usages peuvent\
     \ être multiples (conférences, formations, quiz, jeu, etc.).</p>"
-  application_backend_url: 'https://quiz-anthropocene.osc-fr1.scalingo.io/'
-  application_frontend_url: 'https://quizanthropocene.fr/'
-  application_facebook_url: 'https://www.facebook.com/quizanthropocene/'
-  application_twitter_url: 'https://twitter.com/AnthroQuiz'
-  application_linkedin_url: 'https://www.linkedin.com/company/quiz-de-l-anthropocene/'
-  daily_stat_last_aggregated: 2020-12-17 01:18:47.667394+00:00
-  notion_questions_scope_1_last_imported: 2020-12-17 03:03:52.715803+00:00
-  notion_questions_scope_2_last_imported: 2020-12-17 03:03:52.715811+00:00
-  notion_questions_scope_3_last_imported: 2020-12-17 03:03:52.715814+00:00
-  notion_questions_scope_4_last_imported: 2020-12-17 03:03:52.715816+00:00
-  github_last_exported: 2020-12-17 03:41:36.552102+00:00
-  notion_contributions_last_exported: 2020-12-16 06:57:28.486491+00:00
+  application_open_source_code_url: https://github.com/raphodn/know-your-planet
+  application_backend_url: https://quiz-anthropocene.osc-fr1.scalingo.io/
+  application_frontend_url: https://quizanthropocene.fr/
+  application_facebook_url: https://www.facebook.com/quizanthropocene/
+  application_twitter_url: https://twitter.com/AnthroQuiz
+  application_linkedin_url: https://www.linkedin.com/company/quiz-de-l-anthropocene/
+  daily_stat_last_aggregated: 2020-12-19 01:19:26.936628+00:00
+  notion_questions_scope_1_last_imported: 2020-12-19 03:06:28.687809+00:00
+  notion_questions_scope_2_last_imported: 2020-12-19 03:06:28.687823+00:00
+  notion_questions_scope_3_last_imported: 2020-12-19 03:06:28.687831+00:00
+  notion_questions_scope_4_last_imported: 2020-12-19 03:06:28.687837+00:00
+  github_last_exported: 2020-12-19 03:43:30.337171+00:00
+  notion_contributions_last_exported: 2020-12-18 13:03:55.804465+00:00

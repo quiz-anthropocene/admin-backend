@@ -113,9 +113,9 @@
   has_ordered_answers: true
   answer_explanation: En 35 ans dans la forêt tropicale de Luqillo à Porto Rico, 80
     % des insectes de la canopée se sont éteints, et ce phénomène monte jusqu’à 98
-    % d’insectes au sol. Pour Brad Lister, cet effondrement des populations d’insectes
-    est dû au réchauffement climatique. Entre les années 1970 et aujourd’hui, la température
-    moyenne de la forêt pluviale a augmenté de 2,2° C.
+    % pour les insectes au sol. Pour l'auteur de l'étude, cet effondrement des populations
+    d’insectes est dû au réchauffement climatique. Entre les années 1970 et aujourd’hui,
+    la température moyenne de la forêt pluviale a augmenté de 2,2° C.
   answer_accessible_url: https://www.lemonde.fr/planete/article/2019/02/11/le-declin-des-insectes-une-menace-grandissante-pour-les-ecosystemes-naturels_5422018_3244.html
   answer_scientific_url: https://www.pnas.org/content/115/44/E10397
   answer_image_url: https://lareleveetlapeste.fr/wp-content/uploads/2019/01/image-couv-sitz-929292.jpg
@@ -3476,14 +3476,16 @@
   type: QCM
   category: 7
   difficulty: 3
-  answer_option_a: 8 %
-  answer_option_b: 16 %
-  answer_option_c: 32 %
-  answer_option_d: 64 %
+  answer_option_a: 5 %
+  answer_option_b: 15 %
+  answer_option_c: 30 %
+  answer_option_d: 60 %
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: La part des usages non énergétiques du pétrole est de 16,4%.
-    Tout le reste est brûlé.
+  answer_explanation: Les usages non énergétiques du pétrole sont par exemple la fabrication
+    de plastique, de goudron, de produits pour l'industrie chimique comme les lubrifiants,
+    cires, peintures, engrais...Cette part représente environ 16% des usages du pétrole
+    dans le monde. Tout le reste est brûlé, majoritairement dans les transports.
   answer_accessible_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Oil&indicator=Oil%20products%20final%20consumption%20by%20sector
   answer_scientific_url: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r009.jpg
@@ -3504,18 +3506,18 @@
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: Chute d’une masse d'une tonne de 1500m de haut
-  answer_option_b: Digestion d'un kilo de sucre
-  answer_option_c: Combustion d'un litre d’essence
-  answer_option_d: Poids lourd de 38 tonnes se déplaçant à 100 km/h
+  answer_option_a: La chute d’une masse d'une tonne de 1500m de haut
+  answer_option_b: La digestion d'un kilo de sucre
+  answer_option_c: La combustion d'un litre d’essence
+  answer_option_d: Le déplacement d'un poids lourd de 38 tonnes roulant à 100 km/h
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: "Le litre d’essence dépasse les autres d’un facteur 2.\n\n-\
-    \ Énergie cinétique d’un camion de 38 tonnes qui roule à 100 km/h = 1/2*m*v²,\
-    \ soit 15 MJ. \n- Énergie potentielle d’un objet de 1 tonne qui tombe de 1500m\
-    \ = m*g*h, soit 15 MJ\n- Énergie d'1 kg de sucre : 17 MJ. \n- Énergie de combustion\
-    \ d’1 l d'essence = 33 MJ. \n\nLa combustion d'1 litre d'essence permet de dégager\
-    \ en ordre de grandeur 100 heures d'un humain qui pédalerait sur une dynamo."
+  answer_explanation: "Le litre d’essence dépasse les autres d’un facteur 2.\n- Énergie\
+    \ cinétique d’un camion de 38 tonnes qui roule à 100 km/h = 1/2*m*v², soit 15\
+    \ MJ. \n- Énergie potentielle d’un objet de 1 tonne qui tombe de 1500m = m*g*h,\
+    \ soit 15 MJ\n- Énergie d'1 kg de sucre : 17 MJ. \n- Énergie de combustion d’1\
+    \ l d'essence = 33 MJ. \nLa combustion d'1 litre d'essence permet de dégager en\
+    \ ordre de grandeur 100 heures d'un humain qui pédalerait sur une dynamo."
   answer_accessible_url: https://fr.wikipedia.org/wiki/Ordres_de_grandeur_d%27%C3%A9nergie
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/documentation-gene/index/page/New_liquides
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/112.png
@@ -4323,7 +4325,7 @@
   tags:
   - 22
 - id: 139
-  text: Quel est le gaz qui contribue le plus à l’effet de serre de la terre ?
+  text: Lequel de ces gaz contribue le plus à l’effet de serre ?
   hint: ''
   type: QCM
   category: 1
@@ -5694,8 +5696,8 @@
   - 10
   - 57
 - id: 184
-  text: En France, quelle est la part des dépenses relatives à l'énergie dans la consommation
-    des ménages ?
+  text: En France, quelle est la part des dépenses relatives à l'énergie (transport
+    et logement) dans la consommation des ménages ?
   hint: ''
   type: QCM
   category: 5
@@ -5706,8 +5708,10 @@
   answer_option_d: 32 %
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: D'où la faible importance accordée aux questions énergétiques
-    dans le débat politique ?
+  answer_explanation: Cela recouvre seulement les consommations directes d'énergie
+    des ménages et pas l'ensemble des consommations énergétiques indirectes. D'où
+    la faible importance accordée aux questions énergétiques dans le débat politique
+    ?
   answer_accessible_url: https://www.liberation.fr/france/2019/11/07/combien-pese-l-energie-dans-notre-budget_1761886
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-43-chiffres-cles-de-l-energie-edition-_2018-septembre2018.pdf#page13
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r083.jpg
@@ -6535,7 +6539,8 @@
   answer_accessible_url: ''
   answer_scientific_url: https://www.norskpetroleum.no/en/facts/historical-production/#annually
   answer_image_url: https://assets.letemps.ch/sites/default/files/styles/original/public/media/2019/02/01/file73w6xgbtw7s2c7kjdoz.jpg
-  answer_image_explanation: ''
+  answer_image_explanation: Production de pétrole et de gaz de la Norvège, le pic
+    du pétrole est atteint en 2000, le pic des deux combinés est en 2004.
   answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r111.jpg'
   author: laydgeur
   validator: Matthieu Massart
@@ -16485,8 +16490,10 @@
   - 13
   - 80
 - id: 537
-  text: La Chine émet aujourd'hui plus de 27% des émissions mondiales de CO2. Combien
-    d'autres pays l'ont déjà fait depuis le début de la révolution industrielle ?
+  text: 'La Chine émet aujourd''hui plus de 27% des émissions mondiales de CO2.
+
+    Combien d''autres pays l''ont déjà fait depuis le début de la révolution industrielle
+    ?'
   hint: ''
   type: QCM
   category: 1
@@ -17592,51 +17599,32 @@
   - 63
   - 107
 - id: 573
-  text: Le refroidissement climatique connu sous le nom de Petit Âge glaciaire a été
-    causé notamment par plusieurs méga-explosions volcaniques, depuis la fin du 13ème
-    jusqu'au début du 19ème siècle. Les plus importantes identifiées à ce jour ont
-    eu lieu en 1257, 1452, 1600, 1815… Mais dans quel ordre ?
+  text: Le Petit Âge Glaciaire est une période de refroidissement planétaire qui court
+    de la fin du XIIIe siècle au début du XIXe siècle. Quelle est la cause majeure
+    probable de ce long épisode de froid ?
   hint: ''
   type: QCM
   category: 6
   difficulty: 4
-  answer_option_a: Samalas (Indonésie), Kuwae (Vanuatu), Huaynaputina (Pérou), Tambora
-    (Indonésie)
-  answer_option_b: Kuwae (Vanuatu), Huaynaputina (Pérou), Samalas (Indonésie), Tambora
-    (Indonésie)
-  answer_option_c: Huaynaputina (Pérou), Samalas (Indonésie), Tambora (Indonésie),
-    Kuwae (Vanuatu)
-  answer_option_d: Huaynaputina (Pérou), Samalas (Indonésie), Kuwae (Vanuatu), Tambora
-    (Indonésie)
+  answer_option_a: Une série de méga-éruptions volcaniques, expulsant de grands volumes
+    de cendres et d’aérosols dans l’atmosphère.
+  answer_option_b: Le recul de la riziculture inondée en Asie, qui a ralenti les émissions
+    de méthane dues aux hommes.
+  answer_option_c: Une reforestation massive, suite aux grandes épidémies qui a absorbé
+    d'énormes quantités de CO2, un gaz à effet de serre.
+  answer_option_d: Une baisse cyclique du rayonnement solaire, phénomène dit du «
+    Minimum de Maunders ».
   answer_correct: a
   has_ordered_answers: false
-  answer_explanation: '- Samalas (Indonésie) en 1257
-
-    - Kuwae (Vanuatu) en 1452
-
-    - Huaynaputina (Pérou) en 1600
-
-    - Tambora (Indonésie) en 1815'
+  answer_explanation: ''
   answer_accessible_url: ''
   answer_scientific_url: https://doi.org/10.1017/CBO9780511844058.009
   answer_image_url: https://i.dailymail.co.uk/i/pix/2015/04/15/10/27975FAA00000578-0-The_map_above_shows_major_volcanic_eruptions_from_the_past_2_000-a-17_1429091055374.jpg
   answer_image_explanation: ''
-  answer_extra_info: '- Pour le Samalas, http://www.ipgp.fr/fr/eruption-volcan-samalas-1257
-
-    - pour le Kuwae, Patrick Boucheron (dir.), « Introduction », Histoire du monde
-    au XVe siècle, dirigé par P. Boucheron, coordonné par Julien Loiseau, Pierre Monnet
-    et Yann Potin, Fayard, 2009
-
-    - pour le Huaynaputina, Sam White, chapter 5 - The Little Ice Age in the Near
-    East, DOI: https://doi.org/10.1017/CBO9780511844058.009
-
-    - pour le Tambora, Gillen d’Arcy Wood, 1816, l’année sans été, traduit de l’anglais
-    par Philippe Pignarre, Paris, La Découverte, 2016 ; William K. Klingaman, Nicholas
-    P. Klingaman, The Year Without Summer. 1816 and the Volcano That Darkened the
-    World and Changed History, New York, St Martin’s Press, 2013.'
+  answer_extra_info: ''
   author: Laurent Testot
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Brouillon
   added: 2020-09-08
   created: 2020-09-14
   updated: 2020-09-28
@@ -20663,9 +20651,9 @@
   answer_option_d: ''
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: 'C''est le cas si on produit du plastique neuf. Pour du plastique
-    recyclé en revanche, le plastique est largement meilleur (environ 5 fois moins
-    d''émissions pour le plastique recyclé que pour l''acier recyclé).
+  answer_explanation: 'C''est le cas si on produit du plastique neuf. Pour des matériaux
+    recyclés en revanche, le plastique est largement meilleur que l''acier (environ
+    5 fois moins d''émissions pour le plastique recyclé que pour l''acier recyclé).
 
     Un autre élément à prendre en compte : pour beaucoup d''usages le plastique est
     moins émetteur que l''acier, car pour remplir la même fonction on va utiliser
@@ -20688,8 +20676,8 @@
   - 36
   - 86
 - id: 670
-  text: Combien de temps faudrait-il à un cycliste du tour de France pour chauffer
-    en pédalant l'eau d'une douche de 10min ?
+  text: Combien de temps de pédalage faudrait-il à un cycliste du Tour de France pour
+    chauffer l'eau d'une douche de 10min ?
   hint: ''
   type: QCM
   category: 5
@@ -20857,18 +20845,18 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: Raffiner un kilo de cuivre secondaire demande 85% d’énergie
-    en moins que pour un kilo de cuivre primaire. Et pour un coût 75% moindre. Ce
-    qui limite le recyclage est la difficulté de la collecte des objets contenant
-    du cuivre. Le cuivre contenu dans des composants électroniques par exemple, ne
-    présente guère d'intérêt économique à être recyclé.
+  answer_explanation: "Raffiner un kilo de cuivre secondaire demande 85% d’énergie\
+    \ en moins que pour un kilo de cuivre primaire. Et pour un coût 75% moindre. \n\
+    Ce qui limite le recyclage est la difficulté de la collecte des objets contenant\
+    \ du cuivre. Le cuivre contenu dans des composants électroniques par exemple,\
+    \ ne présente guère d'intérêt économique à être recyclé."
   answer_accessible_url: https://copperalliance.fr/l-environnement/recyclage/
   answer_scientific_url: ''
   answer_image_url: https://mktg.factosoft.com/consoglobe/image-upload/img/triDuMetal.jpg
-  answer_image_explanation: ''
+  answer_image_explanation: Processus de recyclage du métal
   answer_extra_info: ''
   author: Matthieu Massart
-  validator: ''
+  validator: laydgeur
   validation_status: A valider
   added: 2020-12-04
   created: 2020-12-05
@@ -20938,8 +20926,8 @@
   tags:
   - 194
 - id: 678
-  text: Si les 6 plus grandes banques françaises étaient un pays, combien se classerait-il
-    en terme d'émissions de gaz à effet de serre ?
+  text: Si les 6 plus grandes banques françaises étaient un pays, à quel rang se classerait-il
+    en termes d'émissions de gaz à effet de serre ?
   hint: ''
   type: QCM
   category: 8
@@ -20952,10 +20940,11 @@
   has_ordered_answers: true
   answer_explanation: Oxfam a calculé que les 6 plus grandes banques françaises (BNP
     Paribas, Sociéte Générale, Crédit Agricole, Groupe BPCE, La Banque Postale, Crédit
-    Mutuel) émettaient 3.3 milliards de tonnes équivalent CO2 par an, ce qui les placeraient
-    en 3ème position des pays émetteurs, derrière la Chine (~10 milliards de tonnes),
-    et les USA (~5.5 milliards de tonnes) et devant l'Inde (~2.7 milliards de tonnes).
-    Elles seraient également au même niveau que l'Union Européenne.
+    Mutuel) émettaient au total 3,3 milliards de tonnes équivalent CO2 par an, ce
+    qui les placeraient en 3ème position des pays émetteurs, derrière la Chine (~10
+    milliards de tonnes), et les USA (~5.5 milliards de tonnes) et devant l'Inde (~2.7
+    milliards de tonnes). Elles seraient également au même niveau que l'Union Européenne,
+    ou encore 8 fois celles de la France.
   answer_accessible_url: http://www.globalcarbonatlas.org/en/CO2-emissions
   answer_scientific_url: https://www.oxfamfrance.org/rapports/banques-des-engagements-climat-a-prendre-au-4eme-degre/
   answer_image_url: https://www.outside.fr/wp-content/uploads/2020/10/Oxfam-Banques-720x640.jpg
@@ -20971,27 +20960,27 @@
   - 194
   - 201
 - id: 679
-  text: Quelle est l'empreinte carbone du Bitcoin ?
+  text: Quelle est l'empreinte carbone du Bitcoin sur terre ?
   hint: ''
   type: QCM
   category: 8
   difficulty: 2
-  answer_option_a: 8 millions de tonnes (comme Lisbonne)
-  answer_option_b: 22 millions de tonnes (comme Las Vegas)
-  answer_option_c: 43 millions de tonnes (comme Madrid)
-  answer_option_d: 78 millions de tonnes (comme Paris)
+  answer_option_a: 8 millions de tonnes équivalent CO2 (comme Lisbonne)
+  answer_option_b: 22 millions de tonnes équivalent CO2  (comme Las Vegas)
+  answer_option_c: 43 millions de tonnes équivalent CO2 (comme Madrid)
+  answer_option_d: 78 millions de tonnes équivalent CO2  (comme Paris)
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: Le transfert de Bitcoin s'effectue à travers un réseau décentralisé
-    d'ordinateurs à travers le monde qui nécessite 46 TWh d'électricité. En comparant
-    les émissions moyennes de l'électricité aux zones d'où provient l'équipement informatique,
-    les émissions de carbon du Bitcoin ont été estimée à 22 millions de tonne de CO2
-    par an, soit l'équivalent de la ville de Las Vegas. Il y a à peu près 20 millions
-    de Bitcoin actuellement en circulation, ce qui représente 400 milliards de dollars
-    au cours actuel. Si toute la monnaie mondiale (physique et épargne) était sous
-    la forme de Bitcoin, il en faudrait 200 fois plus à son niveau actuel, 600 fois
-    plus síl était à son niveau díl y a 6 mois (pour atteindre 80 000 milliards de
-    dollars), ce qui le placerait alors devant les émissions de la Chine.
+  answer_explanation: 'Le transfert de Bitcoin s''effectue à travers un réseau décentralisé
+    d''ordinateurs à travers le monde qui nécessite 46 TWh d''électricité, ce qui
+    résulte en une émission estimée qui es de l''ordre de celle de Las Vegas. Il y
+    a à peu près 20 millions de Bitcoin actuellement en circulation, ce qui représente
+    400 milliards de dollars au cours actuel.
+
+    Si toute la monnaie mondiale (physique et épargne) était sous la forme de Bitcoin,
+    il en faudrait 200 fois plus à son niveau actuel, 600 fois plus s''il était à
+    son niveau d''il y a 6 mois (pour atteindre 80 000 milliards de dollars), ce qui
+    le placerait alors devant les émissions de la Chine.'
   answer_accessible_url: https://www.rse-magazine.com/Le-Bitcoin-emet-autant-de-CO2-que-Las-Vegas_a3342.html
   answer_scientific_url: http://citycarbonfootprints.info/
   answer_image_url: https://coincentral.com/wp-content/uploads/2019/04/bitcoin-energy-consumpti.jpeg
@@ -21008,7 +20997,7 @@
   - 194
 - id: 680
   text: En 2020, quel est le cours de la tonne de CO2 sur le marché européen et combien
-    de barril de pétrole faut-il brûler pour émettre 1 tonne de CO2 ?
+    de barils de pétrole faut-il brûler pour émettre 1 tonne de CO2 ?
   hint: Cours boursiers du 14 décembre 2020, tout exprimé en USD.
   type: QCM
   category: 8
@@ -21040,3 +21029,29 @@
   - 11
   - 13
   - 194
+- id: 681
+  text: Dans quel endroit est stocké définitivement le CO2 ?
+  hint: ''
+  type: QCM-RM
+  category: 1
+  difficulty: 2
+  answer_option_a: Dans des mines de charbon
+  answer_option_b: Dans des aquifères salins (poches d'eau salées en profondeur)
+  answer_option_c: Dans des puits de pétrole ou de gaz
+  answer_option_d: Au fond de failles océaniques
+  answer_correct: abc
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: laydgeur
+  validator: ''
+  validation_status: Brouillon
+  added: 2020-12-18
+  created: 2020-12-19
+  updated: 2020-12-19
+  tags:
+  - 13
