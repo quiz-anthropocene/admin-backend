@@ -21,13 +21,12 @@ module.exports = {
             '/a-propos', '/contribuer', '/glossaire',
             // '/quiz',
           ],
-          postProcess (renderedRoute) {
+          postProcess(renderedRoute) {
             if (renderedRoute.originalRoute === '/') {
               renderedRoute.route = '/index';
             }
-
             renderedRoute.outputPath = path.join(__dirname, 'dist', renderedRoute.route + '.rendered.html');
-            return renderedRoute
+            return renderedRoute;
           },
         }),
       ],
