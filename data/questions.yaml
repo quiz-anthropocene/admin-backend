@@ -4,13 +4,14 @@
   type: QCM
   category: 2
   difficulty: 1
-  answer_option_a: 1,4 million de tonnes
-  answer_option_b: 52 millions de tonnes
-  answer_option_c: 143 millions de tonnes
-  answer_option_d: 1,3 milliards de tonnes
+  answer_option_a: 1% de la nourriture produite
+  answer_option_b: 5% de la nourriture produite
+  answer_option_c: 10% de la nourriture produite
+  answer_option_d: 30% de la nourriture produite
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: Cela représente 30% de la nourriture produite.
+  answer_explanation: C'est à dire 1,3 milliards de tonnes, ou encore 3,5 millions
+    de tonnes par jour.
   answer_accessible_url: https://www.planetoscope.com/agriculture-alimentation/1556-le-gaspillage-alimentaire-dans-le-monde.html
   answer_scientific_url: http://www.fao.org/food-loss-and-food-waste/fr/
   answer_image_url: https://s.brsimg.com/static-000/cache/i/content/images/0/b/c/0bc2de11c601b97c235f4177a59fadbd-755x1024.jpg
@@ -2347,8 +2348,9 @@
   tags:
   - 31
 - id: 76
-  text: Si on compare le poids de tout ce qui a été construit par l'homme avec le
-    poids de toute la matière vivante sur terre, cela donne...
+  text: Tentez de vous représenter pour commencer le poids de tout ce qui a été construit
+    par l'homme. Puis le poids le poids de toute la matière vivante sur terre. Vous
+    y êtes ? Et si vous comparez ces deux poids colossaux, cela donne...
   hint: 'Il faut compter tout ce qui a été construit par l’homme : bâtiments, infrastructures
     (routes, ponts), habitations, industries, systèmes mobiles (voitures, trains,
     avions), ...'
@@ -5940,7 +5942,7 @@
   hint: ''
   type: QCM
   category: 1
-  difficulty: 1
+  difficulty: 4
   answer_option_a: La hausse des températures obtenue en 2100
   answer_option_b: La concentration en GES obtenue en 2100
   answer_option_c: Le forçage radiatif obtenue en 2100
@@ -7407,7 +7409,7 @@
     https://twitter.com/MidesMap/status/1261174522369249282'
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée temporairement
   added: 2019-07-05
   created: 2020-05-20
   updated: 2020-09-28
@@ -15179,7 +15181,8 @@
   - 51
 - id: 494
   text: 'Si l’on empilait tous les barils de pétrole  que la France consomme en une
-    année, à quelle altitude irait-on ? 1 baril : 80cm de haut, contenance 159 litres.'
+    année, à quelle altitude irait-on ? 1 baril : 80cm de haut, contenance 160 litres.
+    Ne faites pas le calcul, fiez-vous à votre intuition !'
   hint: On irait très très haut !...
   type: QCM
   category: 5
@@ -17616,7 +17619,11 @@
     Minimum de Maunders ».
   answer_correct: a
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: Ce refroidissement a été causé notamment par plusieurs méga-explosion
+    volcaniques, de la fin du 13e siècle au début du 19e. Les plus importantes identifiées
+    à ce jour ont eu lieu en 1257 (Samalas, Indonésie), 1452 (Kuwae, Vanuatu), 1600
+    (Huaynaputina, Pérou), 1815 (Tambora, Indonésie), et ont entraîné des conséquences
+    planétaires durable, sur les écosystèmes, les cultures comme sur la géopolitique.
   answer_accessible_url: ''
   answer_scientific_url: https://doi.org/10.1017/CBO9780511844058.009
   answer_image_url: https://i.dailymail.co.uk/i/pix/2015/04/15/10/27975FAA00000578-0-The_map_above_shows_major_volcanic_eruptions_from_the_past_2_000-a-17_1429091055374.jpg
@@ -17624,7 +17631,7 @@
   answer_extra_info: ''
   author: Laurent Testot
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2020-09-08
   created: 2020-09-14
   updated: 2020-09-28
@@ -20844,7 +20851,7 @@
   answer_option_c: ''
   answer_option_d: ''
   answer_correct: b
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: "Raffiner un kilo de cuivre secondaire demande 85% d’énergie\
     \ en moins que pour un kilo de cuivre primaire. Et pour un coût 75% moindre. \n\
     Ce qui limite le recyclage est la difficulté de la collecte des objets contenant\
@@ -20857,7 +20864,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: laydgeur
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-12-04
   created: 2020-12-05
   updated: 2020-12-05
