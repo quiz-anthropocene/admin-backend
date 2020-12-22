@@ -224,9 +224,10 @@
   tags:
   - 7
 - id: 8
-  text: Si on arrêtait aujourd'hui toutes nos émissions de gaz à effet de serre, combien
-    de temps faudrait-il pour revenir au niveau antérieur à la révolution industrielle
-    ?
+  text: 'Les lecteurs de Jean-Marc Jancovici n''auront pas de difficulté avec cette
+    question : si on arrêtait aujourd''hui toutes nos émissions de gaz à effet de
+    serre, combien de temps faudrait-il pour revenir au niveau antérieur à la révolution
+    industrielle ?'
   hint: ''
   type: QCM
   category: 1
@@ -17574,12 +17575,12 @@
   type: QCM
   category: 6
   difficulty: 4
-  answer_option_a: 5 000 ans, à l’arrivée du dingo sur le sous-continent
-  answer_option_b: 40 000 ans, à la disparition de la mégafaune d’Australie
-  answer_option_c: 70 000 ans, au débarquement des humains en Australie
-  answer_option_d: 300 000 ans, depuis que les humains ont la maîtrise du feu
+  answer_option_a: 5,000 ans, à l’arrivée du dingo sur le sous-continent
+  answer_option_b: 40,000 ans, à la disparition de la mégafaune d’Australie
+  answer_option_c: 70,000 ans, au débarquement des humains en Australie
+  answer_option_d: 300,000 ans, depuis que les humains ont la maîtrise du feu
   answer_correct: b
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'Après une perte de biodiversité, les écosystèmes s’adaptent
     à un brûlis parcellaire. Si la pratique est maintenue longtemps (comme en Australie,
     en Afrique australe ou dans les Amériques), les écosystèmes ont besoin de cette
@@ -17767,7 +17768,8 @@
     en 1859 au cours d’un maximum solaire. Au cours de cette tempête, baptisée l’évènement
     de Carrington, des aurores boréales ont été observées jusqu’à Cuba et Honolulu
     au sud, et des aurores australes jusqu’à Santiago du Chili au nord. Heureusement,
-    à cette date-là, seuls des télégraphes furent mis hors service !
+    à cette date-là, seuls des télégraphes furent mis hors service. Aujourd'hui, une
+    telle tempête, imprévisible, aurait des effets catastrophiques.
   answer_accessible_url: https://www.nationalgeographic.fr/espace/et-si-la-plus-grande-tempete-solaire-jamais-enregistree-etait-venir
   answer_scientific_url: ''
   answer_image_url: https://img.maxisciences.com/article/mourir-moins-con/eruption-solaire_9b358aa01d21270d7599f9825ae7a32a470af690.jpg
@@ -17810,10 +17812,10 @@
   tags:
   - 32
 - id: 579
-  text: Les animaux et les humains ont longtemps fourni à l’humanité l’essentiel de
-    l’énergie mécanique disponible. Le charbon puis le pétrole ont pris le relais.
-    À partir de quelle date s'est-on mis à consommer plus d’énergie fossile que d’énergie
-    musculaire ?
+  text: "Jusqu'à une époque récente, ce sont les animaux et les humains qui ont fourni\
+    \ l’essentiel de l’énergie mécanique disponible. Le charbon puis le pétrole ont\
+    \ pris le relais. \nÀ partir de quelle date s'est-on mis à consommer plus d’énergie\
+    \ fossile que d’énergie musculaire ?"
   hint: ''
   type: QCM
   category: 6
@@ -17821,7 +17823,7 @@
   answer_option_a: Vers 1800, c'est à dire quand James Watt parvient à faire fonctionner
     500 de ses machines à vapeur
   answer_option_b: Vers 1860, quand la France et l’Angleterre signent un accord de
-    libre-échange, inaugurant la diffusion de l’idéologie libérale
+    libre échange, inaugurant la diffusion de l’idéologie libérale
   answer_option_c: Vers 1885, quand les pays d’Europe occidentale sont suffisamment
     industrialisés pour se partager l’Afrique sans demander leur avis aux Africains
   answer_option_d: Vers 1910, quand les industries métallurgiques d’Occident prennent
@@ -17846,9 +17848,9 @@
   - 11
   - 40
 - id: 580
-  text: J'ai inventé un processus permettant de transformer le pétrole en essence.
-    J'ai aussi mis au point la synthèse de l’ammoniac, un processus qui va permettre
-    la fabrication d’engrais azotés. Qui suis-je ?
+  text: J'ai inventé un processus permettant de transformer le pétrole en essence
+    et mis au point la synthèse de l’ammoniac, un processus qui va permettre la fabrication
+    d’engrais azotés. Qui suis-je ?
   hint: ''
   type: QCM
   category: 6
@@ -17911,8 +17913,8 @@
   type: VF
   category: 2
   difficulty: 1
-  answer_option_a: Vrai
-  answer_option_b: Faux
+  answer_option_a: Oui
+  answer_option_b: Non
   answer_option_c: ''
   answer_option_d: ''
   answer_correct: b
