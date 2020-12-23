@@ -12734,8 +12734,8 @@
   - 39
   - 47
 - id: 412
-  text: Au plus fort de la crise du Covid, les émissions quotidiennes mondiales auront
-    été similaires à celles observées en ...
+  text: Au plus fort de la crise du Covid-19, les émissions quotidiennes mondiales
+    auront été similaires à celles observées en...
   hint: ''
   type: QCM
   category: 1
@@ -16141,17 +16141,19 @@
   type: QCM
   category: 1
   difficulty: 2
-  answer_option_a: -10 %
-  answer_option_b: -30 %
-  answer_option_c: -50 %
-  answer_option_d: -70 %
+  answer_option_a: -10%
+  answer_option_b: -30%
+  answer_option_c: -50%
+  answer_option_d: -70%
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: La baisse sur la totalité de 2020 est estimée entre 5% et 15%,
-    avec une grosse incertitude.
-  answer_accessible_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/04/hcc_rapport_spcial_annexe.pdf
-  answer_scientific_url: ''
-  answer_image_url: https://reporterre.net/local/cache-vignettes/L720xH493/arton20450-6fdd1.png?1597405073
+  answer_explanation: La réduction des émissions a été de 30% pendant le premier confinement.
+    La baisse des transports (routier, aérien, ...) est la raison principale. Sur
+    la totalité de 2020, elle est estimée entre 5% et 15%, avec une grosse incertitude
+    (Avril 2020).
+  answer_accessible_url: https://www.lemonde.fr/planete/article/2020/05/20/pourquoi-les-emissions-n-ont-baisse-que-de-30-en-france-pendant-le-confinement_6040243_3244.html
+  answer_scientific_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/04/hcc_rapport_spcial_annexe.pdf
+  answer_image_url: https://reporterre.net/local/cache-vignettes/L720xH493/arton20450-6fdd1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -16178,7 +16180,7 @@
   answer_correct: d
   has_ordered_answers: false
   answer_explanation: 'Les chiffres qui suivent sont des estimations valables à la
-    date de fin novembre 2020, et peuvent évoluer en fonction de la pandémie.
+    date de fin Novembre 2020, et peuvent évoluer en fonction de la pandémie.
 
 
     Dans le monde, le secteur qui a le plus baissé ses émissions à cause de la pandémie
@@ -16203,7 +16205,7 @@
     dans la chute des émissions aux Etats-Unis.
   answer_extra_info: ''
   author: laydgeur
-  validator: ''
+  validator: Raphael Odini
   validation_status: Validée
   added: 2020-06-17
   created: 2020-06-24
@@ -17534,7 +17536,7 @@
 - id: 571
   text: La première domestication animale, bien avant le néolithique (-6,000 ans),
     a été celle du chien. Mais comment nos ancêtres ont-ils réussi à transformer des
-    loups gris en caniches et chihuahuas en 15 000 ans de sélection seulement ?
+    loups gris en caniches et chihuahuas en 15,000 ans de sélection seulement ?
   hint: ''
   type: QCM
   category: 6
@@ -17549,10 +17551,10 @@
     transmettant des malformations à leur descendance par imitation
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: 'Ce processus a pu être reproduit sur quelques générations sur
-    des renards, voir l''article donné en lien (en anglais). Pour une évocation plus
-    générale de la domestication du chien : Homo Canis, Une histoire des chiens et
-    de l’humanité, Laurent Testot, Paris, Payot, 2018.'
+  answer_explanation: 'Comme preuve, ce processus a pu être reproduit sur quelques
+    générations sur des renards. Pour une évocation plus générale de la domestication
+    du chien : Homo Canis, Une histoire des chiens et de l’humanité, Laurent Testot,
+    Paris, Payot, 2018.'
   answer_accessible_url: https://www.science-et-vie.com/questions-reponses/comment-le-loup-est-il-devenu-chien-50850
   answer_scientific_url: http://www.terrierman.com/russianfoxfarmstudy.pdf
   answer_image_url: https://www.sciencesetavenir.fr/assets/img/2015/02/23/cover-r4x3w1000-57e155beab460-domestication-du-chien.jpg
@@ -17812,10 +17814,10 @@
   tags:
   - 32
 - id: 579
-  text: "Jusqu'à une époque récente, ce sont les animaux et les humains qui ont fourni\
-    \ l’essentiel de l’énergie mécanique disponible. Le charbon puis le pétrole ont\
-    \ pris le relais. \nÀ partir de quelle date s'est-on mis à consommer plus d’énergie\
-    \ fossile que d’énergie musculaire ?"
+  text: Jusqu'à une époque récente, ce sont les animaux et les humains qui ont fourni
+    l’essentiel de l’énergie mécanique. Puis le charbon et le pétrole ont pris le
+    relais. À partir de quelle date s'est-on mis à consommer plus d’énergie fossile
+    que d’énergie musculaire ?
   hint: ''
   type: QCM
   category: 6
@@ -17879,9 +17881,9 @@
   tags:
   - 186
 - id: 581
-  text: Je suis biologiste. Après avoir découvert qu’une rivière chimiquement polluée
-    abritait une proportion anormalement élevée de poissons femelles, j'ai mis en
-    lumière et théorisé les effets des perturbateurs endocriniens. Qui suis-je ?
+  text: Je suis biologiste. Après avoir découvert qu’une rivière polluée abritait
+    une proportion anormalement élevée de poissons femelles, j'ai mis en lumière les
+    effets ravageurs des perturbateurs endocriniens. Qui suis-je ?
   hint: ''
   type: QCM
   category: 3
@@ -17892,7 +17894,8 @@
   answer_option_d: Theo Colborn
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: 'Le point commun entre ces quatre chercheurs est que sont des
+    femmes. '
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_image_url: ''
@@ -19244,7 +19247,10 @@
   answer_scientific_url: https://www.nature.com/articles/s41558-020-0797-x
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r292.png
   answer_image_explanation: ''
-  answer_extra_info: https://twitter.com/laydgeur/status/1275526497357500417
+  answer_extra_info: 'https://twitter.com/laydgeur/status/1275526497357500417
+
+
+    doublon avec la 412'
   author: laydgeur
   validator: ''
   validation_status: A valider
@@ -20599,17 +20605,23 @@
   answer_option_d: '2018'
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: Avec une chute en 2020 de 2,5 millions de barils/jour (l'équivalent
-    de la production du Koweït), la production de pétrole brut aux États-Unis a simplement
-    retrouvé son niveau de 2018.
-  answer_accessible_url: ''
+  answer_explanation: 'Avec une chute en 2020 de 2,5 millions de barils/jour, la production
+    de pétrole brut aux États-Unis a simplement retrouvé son niveau de 2018.
+
+
+    13 millions de barils/jour, c''était le chiffre record avant cette chute. Les
+    États-Unis ont donc vu une baisse de presque 20% de leur production.
+
+
+    2,5 millions de barils/jour, c''est l''équivalent de la production du Koweït.'
+  answer_accessible_url: https://www.lemonde.fr/economie/article/2020/07/14/petrole-la-fin-de-l-age-d-or-americain_6046169_3234.html
   answer_scientific_url: https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=pet&s=wcrfpus2&f=4
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r334.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1326996258414858240
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-11-12
   created: 2020-11-28
   updated: 2020-11-28
@@ -20875,94 +20887,115 @@
   - 73
   - 208
 - id: 676
-  text: Quel est le poids de la dette "durable" dans les émissions de dette totales
-    dans le monde en 2019 ?
-  hint: La dette durable englobe les green bonds, sustainability bonds, social bonds,
-    green loans, sustainability-linked loans et sustainability-linked bonds.
+  text: Avec le Covid-19, l'année 2020 a vu une baisse des émissions mondiales de
+    CO2. De combien ?
+  hint: ''
   type: QCM
-  category: 8
+  category: 1
   difficulty: 2
-  answer_option_a: 5%
-  answer_option_b: 10%
-  answer_option_c: 25%
-  answer_option_d: 50%
+  answer_option_a: -3%
+  answer_option_b: -7%
+  answer_option_c: -13%
+  answer_option_d: -17%
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: 465 milliards de dollars de dette "durable" ont été émis en
-    2019, ce qui représente que 10% des 5 000 milliards de dollars émis au total.
-  answer_accessible_url: https://about.newenergyfinance.com/blog/sustainable-debt-sees-record-issuance-at-465bn-in-2019-up-78-from-2018/
-  answer_scientific_url: https://www.climatebonds.net/files/reports/2019_annual_highlights-final.pdf
-  answer_image_url: https://assets.bbhub.io/professional/sites/24/Sustainable-finance-market-outlook-2020.-.jpg
+  answer_explanation: 'D''après le Global Carbon Project (GCP), la baisse a été de
+    7% par rapport à 2019, soit 2,4 milliards de tonnes. Du fait bien sûr du ralentissement
+    économique et des différentes restrictions.
+
+
+    « La diminution des émissions en 2020 semble plus prononcée aux Etats-Unis (−
+    12 %), dans l’UE-27 (− 11 %) et en Inde (− 9 %), l’effet des restrictions Covid-19
+    s’ajoutant à une tendance précédente, et étant moins prononcée en Chine (− 1,7
+    %), où les mesures de restriction ont été prises au début de l’année et ont été
+    plus limitées dans le temps »
+
+
+    La baisse est le plus marquée dans le secteur des transports (routier, aérien,
+    ...).'
+  answer_accessible_url: https://www.lemonde.fr/climat/article/2020/12/11/baisse-record-de-7-des-emissions-de-co2-en-2020-liee-au-covid-19_6062971_1652612.html
+  answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/20/highlights.htm
+  answer_image_url: https://pbs.twimg.com/media/EW8GD1LXkAABPng?format=png&name=large
   answer_image_explanation: ''
-  answer_extra_info: ''
-  author: Kim Nguyen-Huu
+  answer_extra_info: 'source du graphique : https://twitter.com/iea/status/1256229486015766530'
+  author: Raphael Odini
   validator: ''
   validation_status: A valider
-  added: 2020-12-09
+  added: 2020-12-22
   created: 2020-12-10
   updated: 2020-12-10
   tags:
   - 194
 - id: 677
-  text: En 2019 quelle a été la part d'investissement dans les énergies renouvelables
-    dans les investissements mondiaux dans les énergies ?
+  text: Lors du premier confinement en Europe à cause du Covid-19, le traffic aérien
+    à chuté de...
   hint: ''
   type: QCM
-  category: 8
+  category: 2
   difficulty: 1
-  answer_option_a: 10%
-  answer_option_b: 25%
-  answer_option_c: 50%
-  answer_option_d: 75%
-  answer_correct: b
+  answer_option_a: -45%
+  answer_option_b: -60%
+  answer_option_c: -75%
+  answer_option_d: -90%
+  answer_correct: d
   has_ordered_answers: true
-  answer_explanation: En considérant la production et l'approvisionnemnt, 1320 milliards
-    de dollars ont été investis en 2019 dans les énergies dans le monde. 976 concernaient
-    les énergies fossiles alors que 344 concernaient les renouvelables, soit à peu
-    près 25% des investissements.
-  answer_accessible_url: ''
-  answer_scientific_url: https://www.iea.org/reports/world-energy-investment-2020/key-findings#abstract
-  answer_image_url: http://newenergydrupalfs.s3.amazonaws.com/annual_clean_energy_investment_bnef_january_2019.jpg
-  answer_image_explanation: Le graphe s'arrête en 2018 mais la répartition entre les
-    différents investissements a les même proportions en 2019.
+  answer_explanation: 'Avec les restrictions de déplacements et les fermetures de
+    frontières, beaucoup d''avions été cloués au sol. C''est surtout les vols internationaux
+    qui en ont subi les conséquences.
+
+
+    Pour autant, l''IATA espère un retour à la normal avant 2024. C''est à dire presque
+    40 millions de vol par an (soit 110 000 vols par jour) transportant plus de 4
+    milliards de passagers (en majorité pour du loisir, par classes supérieurs).'
+  answer_accessible_url: https://www.ouest-france.fr/sante/virus/coronavirus/confinement/avec-le-confinement-le-trafic-aerien-en-europe-chute-de-90-compare-il-y-un-6819737
+  answer_scientific_url: ''
+  answer_image_url: https://wolfstreet.com/wp-content/uploads/2020/07/US-IATA-2020-07-29-air-passenger-volume-.png
+  answer_image_explanation: RPK = Revenue-Passenger-Kilometers
   answer_extra_info: ''
-  author: Kim Nguyen-Huu
+  author: Raphael Odini
   validator: ''
   validation_status: A valider
-  added: 2020-12-09
+  added: 2020-12-22
   created: 2020-12-10
   updated: 2020-12-10
   tags:
   - 194
 - id: 678
-  text: Si les 6 plus grandes banques françaises étaient un pays, à quel rang se classerait-il
-    en termes d'émissions de gaz à effet de serre ?
+  text: Au printemps 2020, quel a été l'impact du confinement sur la consommation
+    électrique en France ?
   hint: ''
   type: QCM
-  category: 8
+  category: 2
   difficulty: 1
-  answer_option_a: 1er
-  answer_option_b: 3ème
-  answer_option_c: 10ème
-  answer_option_d: 30ème
-  answer_correct: b
+  answer_option_a: Elle a augmenté
+  answer_option_b: Elle est resté à peu près pareil
+  answer_option_c: Elle a diminué
+  answer_option_d: ''
+  answer_correct: c
   has_ordered_answers: true
-  answer_explanation: Oxfam a calculé que les 6 plus grandes banques françaises (BNP
-    Paribas, Sociéte Générale, Crédit Agricole, Groupe BPCE, La Banque Postale, Crédit
-    Mutuel) émettaient au total 3,3 milliards de tonnes équivalent CO2 par an, ce
-    qui les placeraient en 3ème position des pays émetteurs, derrière la Chine (~10
-    milliards de tonnes), et les USA (~5.5 milliards de tonnes) et devant l'Inde (~2.7
-    milliards de tonnes). Elles seraient également au même niveau que l'Union Européenne,
-    ou encore 8 fois celles de la France.
-  answer_accessible_url: http://www.globalcarbonatlas.org/en/CO2-emissions
-  answer_scientific_url: https://www.oxfamfrance.org/rapports/banques-des-engagements-climat-a-prendre-au-4eme-degre/
-  answer_image_url: https://www.outside.fr/wp-content/uploads/2020/10/Oxfam-Banques-720x640.jpg
-  answer_image_explanation: ''
-  answer_extra_info: ''
-  author: Kim Nguyen-Huu
-  validator: Matthieu Massart
-  validation_status: Validée
-  added: 2020-12-09
+  answer_explanation: 'La consommation d’électricité française a été 15% inférieure
+    en moyenne au niveau habituellement constaté au mois de mars.
+
+
+    Cette baisse est principalement due à la baisse de l’activité économique : fermeture
+    des commerces non essentiels (restaurants, cinémas, magasins …) et ralentissement
+    de l’activité dans le secteur industriel.'
+  answer_accessible_url: https://www.lemonde.fr/blog/huet/2020/04/24/lelectricite-bousculee-par-le-coronavirus/
+  answer_scientific_url: https://www.rte-france.com/actualites/covid19_quels_impacts_sur_la_consommation_electricite
+  answer_image_url: https://asset.lemde.fr/prd-blogs/2020/04/Baisse-conso-elec-RTE.png
+  answer_image_explanation: La consommation du 26 mars 2020 ressemble à celle d’un
+    lundi de Pâques (ici celui de 2018) avec une baisse particulièrement forte durant
+    la matinée. Source RTE.
+  answer_extra_info: 'autres liens :
+
+    - https://www.strategie.gouv.fr/point-de-vue/impacts-de-crise-covid-19-systeme-electrique
+
+    - https://www.youtube.com/watch?v=PiVCLKIYQPQ (Mr Bidouille - Comment le confinement
+    a changé la consommation électrique Française)'
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-22
   created: 2020-12-10
   updated: 2020-12-10
   tags:
@@ -21005,33 +21038,34 @@
   - 72
   - 194
 - id: 680
-  text: En 2020, quel est le cours de la tonne de CO2 sur le marché européen et combien
-    de barils de pétrole faut-il brûler pour émettre 1 tonne de CO2 ?
-  hint: Cours boursiers du 14 décembre 2020, tout exprimé en USD.
-  type: QCM
-  category: 8
-  difficulty: 3
-  answer_option_a: 36 dollars et à peu près 3 barrils
-  answer_option_b: 48 dollars et à peu près 1 barril
-  answer_option_c: 65 dollars et à peu près 10 barrils
-  answer_option_d: 100 dollars et à peu près 15 barrils
+  text: 2020 sera peut-être l'année la plus chaude jamais enregistrée. Vrai ou Faux
+    ?
+  hint: ''
+  type: VF
+  category: 1
+  difficulty: 1
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
   answer_correct: a
-  has_ordered_answers: false
-  answer_explanation: La tonne de CO2 échangée sur le marché européen ETS est à 30
-    EUR, soit 36 USD. Pour émettre 1 tonne de CO2 il faut brûler 2.8 barrils de pétrole,
-    ce qui fait 12 USD si on rapporte le prix du CO2 au barril. Ce dernier s'échange
-    à 50 USD et son prix a un écart-type de 11 USD sur la dernière année. A ces niveaux
-    le prix du CO2 n'est pas assez disruptif pour se détourner du pétrole, encore
-    moins s'il retrouvait ses niveaux de fin 2018 à 80 USD ou de 2012 à 130 USD.
-  answer_accessible_url: https://www.barchart.com/futures/quotes/CKZ20/overview
-  answer_scientific_url: https://www.ecologie.gouv.fr/prix-du-carbone
-  answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/EUA_future_real_price.pdf/page1-800px-EUA_future_real_price.pdf.jpg
-  answer_image_explanation: ''
-  answer_extra_info: https://www.boursorama.com/bourse/matieres-premieres/cours/8xBRN/
-  author: Kim Nguyen-Huu
+  has_ordered_answers: true
+  answer_explanation: '2020 détrônerait 2016. L’Arctique a particulièrement souffert
+    cette année, avec des températures supérieures de plus de 5 °C à la moyenne.
+
+
+    A ce rythme là, les 1,5°C d''augmentation pourraient être atteint avant 2030. '
+  answer_accessible_url: https://www.francetvinfo.fr/meteo/climat/video-climat-l-annee-2020-parmi-les-plus-chaudes-malgre-le-phenomene-la-nina_4211985.html
+  answer_scientific_url: https://www.carbonbrief.org/state-of-the-climate-2020-on-course-to-be-warmest-year-on-record
+  answer_image_url: https://img.lemde.fr/2020/12/02/0/0/1790/1076/1328/0/45/0/c9d81a7_308820608-capture-d-e-cran-2020-12-02-a-09-38-47.jpg
+  answer_image_explanation: Ecart de la température moyenne annuelle à l’échelle du
+    globe par rapport à la période préindustrielle (1850 –1900). Les données pour
+    2020 concernent la période de janvier à octobre. Source OMM.
+  answer_extra_info: 'France : https://meteofrance.com/actualites-et-dossiers/actualites/climat/2020-vers-lannee-la-plus-chaude'
+  author: Raphael Odini
   validator: ''
   validation_status: A valider
-  added: 2020-12-14
+  added: 2020-12-22
   created: 2020-12-15
   updated: 2020-12-15
   tags:
@@ -21039,27 +21073,42 @@
   - 13
   - 194
 - id: 681
-  text: Dans quel endroit est stocké définitivement le CO2 ?
+  text: Le 12 Décembre 2020 a été fêté les 5 ans de l'accord de Paris (COP 21). Cet
+    accord a pour objectif de contenir l'élévation de la température moyenne de la
+    planète «nettement en dessous de 2 °C» en «poursuivant l'action menée pour limiter
+    l'élévation de la température à 1,5°C». Or avec les promesses actuelles, sur quelle
+    trajectoire sommes-nous ?
   hint: ''
-  type: QCM-RM
-  category: 1
+  type: QCM
+  category: 6
   difficulty: 2
-  answer_option_a: Dans des mines de charbon
-  answer_option_b: Dans des aquifères salins (poches d'eau salées en profondeur)
-  answer_option_c: Dans des puits de pétrole ou de gaz
-  answer_option_d: Au fond de failles océaniques
-  answer_correct: abc
-  has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
-  answer_extra_info: ''
-  author: laydgeur
+  answer_option_a: +2,5-3°C
+  answer_option_b: +3-3,5°C
+  answer_option_c: +3,5-4°C
+  answer_option_d: +4-4,5°C
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: 'Maintenir la hausse à +1,5°C est illusoire (il faudrait diminuer
+    les émissions de gaz à effet de serre de 7,6% par an tous les ans jusqu’en 2030),
+    mais il y encore espoir pour +2°C.
+
+
+    Le 12 décembre 2020 a eu lieu un sommet virtuel pour l’ambition climatique, avec
+    des annonces de chefs d''états qui ont permis de réhausser les ambitions.
+
+
+    Et la COP 26 aura lieu fin 2021.'
+  answer_accessible_url: https://www.rfi.fr/fr/science/20201211-climat-5-ans-après-l-accord-de-paris-les-résultats-se-font-attendre
+  answer_scientific_url: https://wedocs.unep.org/bitstream/handle/20.500.11822/34438/EGR20ESE.pdf
+  answer_image_url: https://cdn.radiofrance.fr/s3/cruiser-production/2020/12/576b9a07-4013-41e0-9965-46698b3bf02a/838_001_8wv6kb_jpeg.webp
+  answer_image_explanation: Graphique montrant l'écart entre les engagements nationaux
+    pour limiter l'émission de gaz à effet de serre et les réductions nécessaires
+    pour endiguer le réchauffement climatique
+  answer_extra_info: 'autres liens : https://www.slate.fr/story/198014/accord-de-paris-cop21-cinq-ans-apres-etats-environnement-bilan-changement-climatique'
+  author: Raphael Odini
   validator: ''
-  validation_status: Brouillon
-  added: 2020-12-18
+  validation_status: A valider
+  added: 2020-12-22
   created: 2020-12-19
   updated: 2020-12-19
   tags:
