@@ -48,7 +48,7 @@ export default {
       return this.$store.state.questionsValidated.slice(0, 100);
     },
     questionByPages() {
-      const chunk = 4;
+      const chunk = 3;
       let i;
       let j;
       const array = [];
