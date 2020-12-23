@@ -80,7 +80,11 @@ export default {
       return this.question.text.replace(/(?:\r\n|\r|\n)/g, '<br />');
     },
     questionAnswerExplanationWithLineBreaks() {
-      return this.question.answer_explanation.replace(/(?:\r\n|\r|\n)/g, '<br />');
+      let questionAnswer = this.question.answer_explanation.replace(/(?:\r\n|\r|\n)/g, '<br />');
+      if (this.question.answer_explanation.length > 650) {
+        questionAnswer = `${questionAnswer.substring(0, 650)} ...`;
+      }
+      return questionAnswer;
     },
     questionUrl() {
       return `${process.env.VUE_APP_DOMAIN_URL}/questions/${this.question.id}`;

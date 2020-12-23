@@ -171,6 +171,9 @@ export default {
   },
 
   mounted() {
+    if (this.$route.query.showdetails) {
+      this.questionSubmitted = true;
+    }
   },
 
   methods: {

@@ -14,22 +14,25 @@
         <!-- Question answer choices -->
         <div class="row answers">
           <div class="text-align-left">
-            <div class="group" v-for="answer_option_letter in answerChoices" :key="answer_option_letter">
-              <div class="letter">
+            <div class="group"
+              v-for="answer_option_letter in answerChoices"
+              :key="answer_option_letter"
+              >
+              <div class="letter" v-if="question['answer_option_' + answer_option_letter]">
                 {{answer_option_letter}}
               </div>
-              <div class="answer">
+              <div class="answer" v-if="question['answer_option_' + answer_option_letter]">
                 <label v-bind:for="answer_option_letter">&nbsp;{{ question['answer_option_' + answer_option_letter] }}</label>
               </div>
             </div>
           </div>
         </div>
         <!-- Question hint & form submit -->
-        <div v-if="question.hint" class="row no-gutters justify-content-center">
+        <!-- <div v-if="question.hint" class="row no-gutters justify-content-center">
           <div class="col-md-10 col-lg-8">
             <div class="alert alert-warning-custom text-align-left margin-bottom-10 padding-10">💡{{ question.hint }}</div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="footer row">
         <div class="logo col-md-4">
