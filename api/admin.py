@@ -29,6 +29,7 @@ from api.models import (
     Category,
     Tag,
     Quiz,
+    QuizRelationship,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
     QuestionAggStat,
@@ -339,8 +340,6 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         """
         Corresponding template in templates/admin/api/question/change_list_with_import.html
         """
-
-        configuration = Configuration.get_solo()
         notion_questions_import_scope_choices = [
             (
                 scope_value,
@@ -368,7 +367,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
             ]
 
         extra_context = extra_context or {
-            "configuration": configuration,
+            "configuration": Configuration.get_solo(),
             "notion_questions_import_scope_choices": notion_questions_import_scope_choices,
             "notion_questions_import_response": notion_questions_import_response,
         }
@@ -411,6 +410,57 @@ class TagAdmin(ExportMixin, admin.ModelAdmin):
     ]
 
 
+class QuizRelationshipFromInline(admin.StackedInline):  # TabularInline
+    model = QuizRelationship
+    fk_name = "from_quiz"
+    extra = 1
+
+    def formfield_for_foreignkey(self, db_field, request=None, **kwargs):
+        """
+        Hide the current quiz in the relationship form
+        """
+        field = super(QuizRelationshipFromInline, self).formfield_for_foreignkey(
+            db_field, request, **kwargs
+        )
+        if db_field.name == "to_quiz":
+            if "object_id" in request.resolver_match.kwargs:
+                current_quiz_id = request.resolver_match.kwargs["object_id"]
+                # remove the current quiz from the list
+                field.queryset = Quiz.objects.exclude(id=current_quiz_id)
+                # remove the current quiz's relationship quizs
+                current_quiz_from_relationships = QuizRelationship.objects.filter(
+                    from_quiz__id=current_quiz_id
+                ).values_list("to_quiz_id", flat=True)
+                current_quiz_to_relationships = QuizRelationship.objects.filter(
+                    to_quiz__id=current_quiz_id
+                ).values_list("from_quiz_id", flat=True)
+                field.queryset = field.queryset.exclude(
+                    id__in=list(current_quiz_from_relationships)
+                    + list(current_quiz_to_relationships)
+                )
+                # order queryset
+                field.queryset = field.queryset.order_by("-id")
+        return field
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+
+class QuizRelationshipToInline(admin.StackedInline):  # TabularInline
+    model = QuizRelationship
+    fk_name = "to_quiz"
+    extra = 0
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
 class QuizAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
@@ -431,10 +481,8 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
     )
     ordering = ("-id",)
     filter_vertical = ("questions",)
-    filter_horizontal = (
-        # "questions",
-        "tags",
-    )
+    filter_horizontal = ("tags",)
+    inlines = [QuizRelationshipFromInline, QuizRelationshipToInline]
     readonly_fields = (
         "question_count",
         "difficulty_average",
@@ -569,6 +617,25 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
 
     class Media:
         css = {"all": ("css/admin/extra.css",)}
+
+
+class QuizRelationshipAdmin(ExportMixin, admin.ModelAdmin):
+    list_display = (
+        "from_quiz",
+        "status",
+        "to_quiz",
+        "created",
+    )
+    list_filter = ("status",)
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 
 class QuestionAnswerEventAdmin(ExportMixin, admin.ModelAdmin):
@@ -875,20 +942,13 @@ class GlossaryAdmin(ExportMixin, admin.ModelAdmin):
 
 class ConfigurationAdmin(ExportMixin, SingletonModelAdmin):
     EXCLUDED_FIELDS = ["id"]
-    EDITABLE_FIELDS = ["application_tagline", "application_about"]
 
-    class Meta:
-        exclude = ("id",)
-
+    # to keep order
     def get_fields(self, request, obj=None):
         return [f.name for f in obj._meta.fields if f.name not in self.EXCLUDED_FIELDS]
 
     def get_readonly_fields(self, request, obj=None):
-        return [
-            f.name
-            for f in obj._meta.fields
-            if f.name not in self.EXCLUDED_FIELDS + self.EDITABLE_FIELDS
-        ]
+        return [f.name for f in obj._meta.fields if not f.editable]
 
 
 class LogEntryAdmin(admin.ModelAdmin):
@@ -928,21 +988,25 @@ class MyAdminSite(AdminSite):
         """
         Corresponding template in templates/admin/api/index_with_export.html
         """
-
+        configuration = Configuration.get_solo()
         export_message = ""
 
         if request.POST.get("run_export_data_to_github_script", False):
             out = StringIO()
             request.POST.get("run_export_data_to_github_script")
             management.call_command("export_data_to_github", stdout=out)
-            if "https://github.com/raphodn/know-your-planet" not in out.getvalue():
-                export_message = f"Erreur survenue.<br>{out.getvalue()}"
+            if configuration.application_open_source_code_url not in out.getvalue():
+                export_message = f"Erreur survenue.<br />{out.getvalue()}"
             else:
-                export_message = f"La Pull Request a été créé !<br>Elle est visible ici : <a href='{out.getvalue()}' target='_blank'>{out.getvalue()}</a>"  # noqa
+                export_message = (
+                    "La Pull Request a été créé !<br />"
+                    "Elle est visible ici : "
+                    "<a href='{out.getvalue()}' target='_blank'>{out.getvalue()}</a>"  # noqa
+                )
             print(export_message)
 
         extra_context = extra_context or {
-            "configuration": Configuration.get_solo(),
+            "configuration": configuration,
             "export_message": export_message,
         }
 
@@ -957,6 +1021,7 @@ admin_site.register(Question, QuestionAdmin)
 admin_site.register(Category, CategoryAdmin)
 admin_site.register(Tag, TagAdmin)
 admin_site.register(Quiz, QuizAdmin)
+admin_site.register(QuizRelationship, QuizRelationshipAdmin)
 admin_site.register(QuestionAnswerEvent, QuestionAnswerEventAdmin)
 admin_site.register(QuestionFeedbackEvent, QuestionFeedbackEventAdmin)
 admin_site.register(QuestionAggStat, QuestionAggStatAdmin)

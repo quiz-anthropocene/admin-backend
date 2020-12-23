@@ -34,8 +34,6 @@ else:
 
 ALLOWED_HOSTS = [os.environ["HOST"]]
 
-DOMAIN_URL = "https://quizanthropocene.fr"
-
 
 # Application definition
 

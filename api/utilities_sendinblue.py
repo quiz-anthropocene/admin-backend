@@ -3,8 +3,12 @@ import requests
 
 from django.conf import settings
 
+from api.models import Configuration
+
 
 def newsletter_registration(email):
+    configuration = Configuration.get_solo()
+
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
@@ -19,7 +23,8 @@ def newsletter_registration(email):
         # },
         "includeListIds": [int(settings.SIB_NEWSLETTER_LIST_ID)],
         "templateId": int(settings.SIB_NEWSLETTER_DOI_TEMPLATE_ID),
-        "redirectionUrl": settings.DOMAIN_URL + "?newsletter=confirmed",
+        "redirectionUrl": configuration.application_frontend_url
+        + "?newsletter=confirmed",
         "updateEnabled": True,
     }
 

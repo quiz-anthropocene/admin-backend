@@ -43,10 +43,10 @@ class Command(BaseCommand):
         # self.cleanup_quiz_answer_events()
         # self.cleanup_quiz_feedback_events()
 
-        # update config
-        config = Configuration.get_solo()
-        config.daily_stat_last_aggregated = timezone.now()
-        config.save()
+        # update configuration
+        configuration = Configuration.get_solo()
+        configuration.daily_stat_last_aggregated = timezone.now()
+        configuration.save()
 
     def cleanup_question_answer_events(self):
         """

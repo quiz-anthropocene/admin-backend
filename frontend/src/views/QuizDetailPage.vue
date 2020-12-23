@@ -28,10 +28,17 @@
 
           <hr v-if="quiz.tags && quiz.tags.length > 0" class="margin-top-bottom-10" />
 
-          <div v-if="quiz.tags && quiz.tags.length > 0" class="small" title="Tag(s) du quiz">
-            🏷️&nbsp;<span v-for="(tag, index) in quiz.tags" :key="tag.id">
-              <span v-if="index < 3" class="label label-tag">{{ tag.name }}</span>
-            </span>
+          <div class="row no-gutters">
+            <div v-if="quiz.tags && quiz.tags.length > 0" class="col small" title="Tag(s) du quiz">
+              🏷️&nbsp;<span v-for="(tag, index) in quiz.tags" :key="tag.id">
+                <span v-if="index < 3" class="label label-tag">{{ tag.name }}</span>
+              </span>
+            </div>
+
+            <div v-if="previousQuiz" class="col">
+              <span>Ce quiz est la suite de&nbsp;👉&nbsp;</span>
+              <strong><router-link class="no-decoration" :to="{ name: 'quiz-detail', params: { quizId: previousQuiz.id } }">{{ previousQuiz.name }}</router-link></strong>
+            </div>
           </div>
         </section>
       </div>
@@ -52,35 +59,42 @@
 
     <!-- Quiz terminé -->
 
-    <section v-if="quiz && (quizStep > quiz.questions.length)" class="question">
-      <h2>Votre résultat : <strong>{{ quiz.questions.filter(q => q['success']).length }} / {{ quiz.questions.length }}</strong></h2>
+    <section v-if="quiz && (quizStep > quiz.questions.length)">
 
-      <div v-if="quiz.conclusion" v-html="quiz.conclusion" title="Conclusion du quiz"></div>
+      <section class="question">
+        <h2>Votre résultat : <strong>{{ quiz.questions.filter(q => q['success']).length }} / {{ quiz.questions.length }}</strong></h2>
 
-      <div class="row">
-        <div class="col">
+        <div v-if="quiz.conclusion" v-html="quiz.conclusion" title="Conclusion du quiz"></div>
+
+        <div v-if="nextQuiz">
+          <span>Continuez avec le quiz suivant&nbsp;👉&nbsp;</span>
+          <strong><router-link class="no-decoration" :to="{ name: 'quiz-detail', params: { quizId: nextQuiz.id } }">{{ nextQuiz.name }}</router-link></strong>
+        </div>
+
+        <hr />
+
+        <div>
           <a class="fake-link" @click="showQuizQuestions = !showQuizQuestions">Afficher le détails de vos réponses</a>
           <span v-if="!showQuizQuestions">&nbsp;▸</span>
           <span v-if="showQuizQuestions">&nbsp;▾</span>
         </div>
-      </div>
 
-      <hr v-if="showQuizQuestions" />
+        <hr v-if="showQuizQuestions" />
 
-      <div v-if="showQuizQuestions" class="row">
-        <div class="col-lg-4 col-sm-6" v-for="question in quiz.questions" :key="question.id"><!-- :class="question.success ? 'answer-success' : 'answer-error'" -->
-          <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: question.id } }">
-            <QuestionPreviewCard v-bind:question="question" v-bind:customClass="question.success ? 'answer-success' : 'answer-error'" />
-          </router-link>
+        <div v-if="showQuizQuestions" class="row">
+          <div class="col-lg-4 col-sm-6" v-for="question in quiz.questions" :key="question.id"><!-- :class="question.success ? 'answer-success' : 'answer-error'" -->
+            <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: question.id } }">
+              <QuestionPreviewCard v-bind:question="question" v-bind:customClass="question.success ? 'answer-success' : 'answer-error'" />
+            </router-link>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <ShareBox type="quiz" :quizName="quiz.name" :score="quiz.questions.filter(q => q['success']).length + '/' + quiz.questions.length" />
+
+      <FeedbackCard v-bind:context="{ source: 'quiz', item: quiz }" />
+
     </section>
-
-    <div v-if="quiz && (quizStep > quiz.questions.length)">
-      <ShareBox type="quiz" :quizName="quiz.name" :score="quiz.questions.filter(q => q['success']).length + '/' + quiz.questions.length"/>
-    </div>
-
-    <FeedbackCard v-if="quiz && (quizStep > quiz.questions.length)" v-bind:context="{ source: 'quiz', item: quiz }" />
   </section>
 </template>
 
@@ -117,6 +131,9 @@ export default {
       showNextButton: true,
       emphasisNextButton: false,
       showQuizQuestions: false,
+      // quizRelationships: null,
+      // previousQuiz: null,
+      // nextQuiz: null,
     };
   },
 
@@ -126,9 +143,43 @@ export default {
       // .slice(0) ? // .slice makes a copy of the array, instead of mutating the orginal
       return quiz;
     },
+    quizRelationships() {
+      const quizRelationships = this.$store.getters.getQuizRelationshipsById(this.quiz.id);
+      // .slice(0) ? // .slice makes a copy of the array, instead of mutating the orginal
+      return quizRelationships;
+    },
+    previousQuiz() {
+      const previousQuizRelationship = this.quizRelationships.find((qr) => (qr.to_quiz === this.quiz.id) && (qr.status === 'suivant'));
+      if (previousQuizRelationship) {
+        return this.$store.getters.getQuizById(previousQuizRelationship.from_quiz);
+      }
+      return null;
+    },
+    nextQuiz() {
+      const nextQuizRelationship = this.quizRelationships.find((qr) => (qr.from_quiz === this.quiz.id) && (qr.status === 'suivant'));
+      if (nextQuizRelationship) {
+        return this.$store.getters.getQuizById(nextQuizRelationship.to_quiz);
+      }
+      return null;
+    },
+  },
+
+  beforeRouteUpdate(to, from, next) {
+    // reloading a quiz when moving from one to another
+    if (from.path !== to.path) {
+      this.initQuiz();
+    }
+    next();
+  },
+
+  mounted() {
   },
 
   methods: {
+    initQuiz() {
+      this.quizStep = 0;
+      this.showQuizQuestions = false;
+    },
     incrementStep() {
       // increment quiz step
       this.quizStep += 1;

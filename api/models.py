@@ -16,6 +16,7 @@ class Configuration(SingletonModel):
     application_name = models.CharField(
         max_length=255,
         default="Quiz de l'Anthropocène",
+        editable=False,
         help_text="Le nom de l'application",
     )
     application_tagline = models.CharField(
@@ -23,6 +24,12 @@ class Configuration(SingletonModel):
     )
     application_about = RichTextField(blank=True, help_text="A propos de l'application")
     # links
+    application_open_source_code_url = models.URLField(
+        max_length=500,
+        default="https://github.com/raphodn/know-your-planet",
+        editable=False,
+        help_text="Le lien vers le code de l'application",
+    )
     application_backend_url = models.URLField(
         max_length=500, blank=True, help_text="Le lien vers le backend de l'application"
     )
@@ -31,40 +38,63 @@ class Configuration(SingletonModel):
         blank=True,
         help_text="Le lien vers le frontend de l'application",
     )
+    # social links
+    application_facebook_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="Le lien vers la page Facebook de l'application",
+    )
+    application_twitter_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="Le lien vers la page Twitter de l'application",
+    )
+    application_linkedin_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="Le lien vers la page Linkedin de l'application",
+    )
     # timestamps
     daily_stat_last_aggregated = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois qu'a été lancé le script de mise à jour des Daily Stats",  # noqa
     )
     notion_questions_scope_1_last_imported = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois que les questions (lot 1) ont été importées depuis Notion",  # noqa
     )
     notion_questions_scope_2_last_imported = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois que les questions (lot 2) ont été importées depuis Notion",  # noqa
     )
     notion_questions_scope_3_last_imported = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois que les questions (lot 3) ont été importées depuis Notion",  # noqa
     )
     notion_questions_scope_4_last_imported = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois que les questions (lot 4) ont été importées depuis Notion",  # noqa
     )
     github_last_exported = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois que la donnée a été exportée vers Github",  # noqa
     )
     notion_contributions_last_exported = models.DateTimeField(
         null=True,
         blank=True,
+        editable=False,
         help_text="La dernière fois que les contributions exportées vers Notion",  # noqa
     )
 
@@ -587,6 +617,13 @@ class Quiz(models.Model):
     publish = models.BooleanField(
         default=False, help_text="Le quiz est prêt à être publié"
     )
+    relationships = models.ManyToManyField(
+        "self",
+        through="QuizRelationship",
+        symmetrical=False,
+        related_name="related_to",
+        help_text="Les quizs similaires ou liés",
+    )
     # timestamps
     created = models.DateField(
         auto_now_add=True, help_text="La date de création du quiz"
@@ -698,6 +735,10 @@ class Quiz(models.Model):
     @property
     def questions_not_validated_string(self):
         return "<br />".join([str(q) for q in self.questions_not_validated_list])
+
+    @property
+    def relationships_all(self):
+        return self.from_quizs.all() | self.to_quizs.all()
 
     @property
     def like_count_agg(self):
@@ -818,6 +859,58 @@ models.signals.pre_save.connect(quiz_validate_fields, sender=Quiz)
 models.signals.m2m_changed.connect(
     quiz_validate_m2m_fields, sender=Quiz.questions.through
 )
+
+
+class QuizRelationship(models.Model):
+    from_quiz = models.ForeignKey(
+        Quiz, on_delete=models.CASCADE, related_name="from_quizs"
+    )
+    to_quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name="to_quizs")
+    status = models.CharField(
+        max_length=50,
+        choices=zip(
+            constants.QUIZ_RELATIONSHIP_LIST, constants.QUIZ_RELATIONSHIP_LIST,
+        ),
+        help_text="Le type de relation entre les deux quizs",
+    )
+    created = models.DateField(
+        auto_now_add=True, help_text="La date & heure de la création de la relation"
+    )
+
+    def __str__(self):
+        return f"{self.from_quiz} >>> {self.status} >>> {self.to_quiz}"
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super(QuizRelationship, self).save(*args, **kwargs)
+
+    def clean(self):
+        """
+        Rules on QuizRelationship
+        - cannot have the same from_quiz & to_quiz
+        - status must be one of the choices
+        - cannot have reverse ?
+        """
+        if self.from_quiz == self.to_quiz:
+            raise ValidationError({"to_quiz": "ne peut pas être le même quiz"})
+        if self.status not in constants.QUIZ_RELATIONSHIP_LIST:
+            raise ValidationError({"status": "doit être une valeur de la liste"})
+        # check there isn't any existing relationships # status ?
+        existing_identical_relationships = QuizRelationship.objects.filter(
+            from_quiz=self.from_quiz, to_quiz=self.to_quiz
+        )
+        if len(existing_identical_relationships):
+            raise ValidationError(
+                {"to_quiz": "il y a déjà une relation avec ce quiz dans ce sens"}
+            )
+        # check there isn't any existing symmetrical relationships
+        existing_symmetrical_relationships = QuizRelationship.objects.filter(
+            from_quiz=self.to_quiz, to_quiz=self.from_quiz
+        )
+        if len(existing_symmetrical_relationships):
+            raise ValidationError(
+                {"to_quiz": "il y a déjà une relation avec ce quiz dans l'autre sens"}
+            )
 
 
 class QuizAnswerEventQuerySet(models.QuerySet):

@@ -28,10 +28,10 @@ class Command(BaseCommand):
             f"Data: update ({current_datetime_string_pretty})"
         )
 
-        # update config first
-        config = Configuration.get_solo()
-        config.github_last_exported = timezone.now()
-        config.save()
+        # update configuration first
+        configuration = Configuration.get_solo()
+        configuration.github_last_exported = timezone.now()
+        configuration.save()
 
         try:
             # create branch
@@ -114,6 +114,16 @@ class Command(BaseCommand):
                 file_content=quizzes_yaml,
                 branch_name=data_update_branch_name,
             )
+            # data/quiz-relationships.yaml
+            quiz_relationships_yaml = utilities.serialize_model_to_yaml(
+                model_label="quizrelationship", flat=True
+            )
+            utilities_github.create_file(
+                file_path="data/quiz-relationships.yaml",
+                commit_message="update quiz relationships",
+                file_content=quiz_relationships_yaml,
+                branch_name=data_update_branch_name,
+            )
 
             # update & commit frontend file
             # frontend/src/constants.js
@@ -139,9 +149,12 @@ class Command(BaseCommand):
                     "<ul>"
                     "<li>data/configuration.yaml</li>"
                     "<li>data/stats.yaml</li>"
+                    "<li>data/difficulty-levels.yaml</li>"
+                    "<li>data/authors.yaml</li>"
+                    "<li>data/tags.yaml</li>"
                     "<li>data/questions.yaml</li>"
                     "<li>data/quizzes.yaml</li>"
-                    "<li>data/tags.yaml</li>"
+                    "<li>data/quiz-relationships.yaml</li>"
                     "</ul>"
                 )
                 pull_request = utilities_github.create_pull_request(

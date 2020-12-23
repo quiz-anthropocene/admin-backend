@@ -3,7 +3,15 @@ import yaml
 from django.core.management import BaseCommand
 
 from api import utilities
-from api.models import Configuration, Category, Tag, Question, Quiz, Glossary
+from api.models import (
+    Configuration,
+    Category,
+    Tag,
+    Question,
+    Quiz,
+    QuizRelationship,
+    Glossary,
+)
 
 
 CONFIGURATION_FILE_PATH = "data/configuration.yaml"
@@ -11,6 +19,7 @@ CATEGORIES_FILE_PATH = "data/categories.yaml"
 TAGS_FILE_PATH = "data/tags.yaml"
 QUESTIONS_FILE_PATH = "data/questions.yaml"
 QUIZZES_FILE_PATH = "data/quizzes.yaml"
+QUIZ_RELATIONSHIPS_FILE_PATH = "data/quiz-relationships.yaml"
 GLOSSARY_FILE_PATH = "data/ressources-glossaire.yaml"
 
 
@@ -27,6 +36,7 @@ class Command(BaseCommand):
         (Tag, TAGS_FILE_PATH),
         (Question, QUESTIONS_FILE_PATH),
         (Quiz, QUIZZES_FILE_PATH),
+        (QuizRelationship, QUIZ_RELATIONSHIPS_FILE_PATH),
         (Glossary, GLOSSARY_FILE_PATH),
     ]
 

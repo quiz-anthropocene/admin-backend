@@ -4,13 +4,14 @@
   type: QCM
   category: 2
   difficulty: 1
-  answer_option_a: 1,4 million de tonnes
-  answer_option_b: 52 millions de tonnes
-  answer_option_c: 143 millions de tonnes
-  answer_option_d: 1,3 milliards de tonnes
+  answer_option_a: 1% de la nourriture produite
+  answer_option_b: 5% de la nourriture produite
+  answer_option_c: 10% de la nourriture produite
+  answer_option_d: 30% de la nourriture produite
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: Cela représente 30% de la nourriture produite.
+  answer_explanation: C'est à dire 1,3 milliards de tonnes, ou encore 3,5 millions
+    de tonnes par jour.
   answer_accessible_url: https://www.planetoscope.com/agriculture-alimentation/1556-le-gaspillage-alimentaire-dans-le-monde.html
   answer_scientific_url: http://www.fao.org/food-loss-and-food-waste/fr/
   answer_image_url: https://s.brsimg.com/static-000/cache/i/content/images/0/b/c/0bc2de11c601b97c235f4177a59fadbd-755x1024.jpg
@@ -113,9 +114,9 @@
   has_ordered_answers: true
   answer_explanation: En 35 ans dans la forêt tropicale de Luqillo à Porto Rico, 80
     % des insectes de la canopée se sont éteints, et ce phénomène monte jusqu’à 98
-    % d’insectes au sol. Pour Brad Lister, cet effondrement des populations d’insectes
-    est dû au réchauffement climatique. Entre les années 1970 et aujourd’hui, la température
-    moyenne de la forêt pluviale a augmenté de 2,2° C.
+    % pour les insectes au sol. Pour l'auteur de l'étude, cet effondrement des populations
+    d’insectes est dû au réchauffement climatique. Entre les années 1970 et aujourd’hui,
+    la température moyenne de la forêt pluviale a augmenté de 2,2° C.
   answer_accessible_url: https://www.lemonde.fr/planete/article/2019/02/11/le-declin-des-insectes-une-menace-grandissante-pour-les-ecosystemes-naturels_5422018_3244.html
   answer_scientific_url: https://www.pnas.org/content/115/44/E10397
   answer_image_url: https://lareleveetlapeste.fr/wp-content/uploads/2019/01/image-couv-sitz-929292.jpg
@@ -223,9 +224,10 @@
   tags:
   - 7
 - id: 8
-  text: Si on arrêtait aujourd'hui toutes nos émissions de gaz à effet de serre, combien
-    de temps faudrait-il pour revenir au niveau antérieur à la révolution industrielle
-    ?
+  text: 'Les lecteurs de Jean-Marc Jancovici n''auront pas de difficulté avec cette
+    question : si on arrêtait aujourd''hui toutes nos émissions de gaz à effet de
+    serre, combien de temps faudrait-il pour revenir au niveau antérieur à la révolution
+    industrielle ?'
   hint: ''
   type: QCM
   category: 1
@@ -409,10 +411,10 @@
   type: QCM
   category: 1
   difficulty: 3
-  answer_option_a: -50°
+  answer_option_a: -50°C
   answer_option_b: -18°C
-  answer_option_c: 0°
-  answer_option_d: 15°
+  answer_option_c: 0°C
+  answer_option_d: 15°C
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: L'effet de serre est un phénomène naturel et nécessaire à la
@@ -1391,8 +1393,8 @@
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: Les massifs coralliens hébergent environ 1 million d'espèces
-    animales et fournissent des services (nourriture, salaire, protection cotière,
-    ...) à 500 millions de personnes. A une température de +1,5°C (qui sera atteinte
+    animales et fournissent des services à 500 millions de personnes (nourriture,
+    travaux de protection côtière...). A une température de +1,5°C (qui sera atteinte
     aux environ de 2040) ce sont près de 90% des coraux qui subiront des dégradations.
     A +2°C la quasi totalité des coraux de la planète disparaitront.
   answer_accessible_url: https://www.nationalgeographic.fr/environnement/les-recifs-coralliens-pourraient-disparaitre-avant-2050
@@ -1416,11 +1418,10 @@
   type: QCM
   category: 3
   difficulty: 4
-  answer_option_a: 1000 tonnes (10 baleines bleues)
-  answer_option_b: 100 000 tonnes (10 fois la Tour Eiffel)
-  answer_option_c: 1 million de tonnes (la grande Pyramide de Bizeh)
-  answer_option_d: 100 millions de tonnes (la masse totale de la population humaine
-    mondiale)
+  answer_option_a: 1000 tonnes,  soit 4 avions A380
+  answer_option_b: 100 000 tonnes, soit 10 fois la Tour Eiffel
+  answer_option_c: 1 million de tonnes, soit 3 fois l'Empire State Building
+  answer_option_d: 100 millions de tonnes, soit 20 fois la Grande pyramide de Gizeh
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: 'Chaque année, 300 à 400 millions de tonnes de métaux lourds,
@@ -1552,7 +1553,7 @@
   answer_option_a: 20 millions
   answer_option_b: 50 millions
   answer_option_c: 100 millions
-  answer_option_d: au moins 250 millions
+  answer_option_d: 250 millions
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: En 2010, il y avait autant de déplacés pour des raisons de guerre
@@ -1721,7 +1722,7 @@
   answer_option_b: 1 milliards d'euros
   answer_option_c: 10 milliards d'euros
   answer_option_d: 100 milliards d'euros
-  answer_correct: c
+  answer_correct: d
   has_ordered_answers: true
   answer_explanation: L’évaluation inédite intègre non seulement les dommages sanitaires
     de la pollution, mais également ses conséquences sur les bâtiments, les écosystèmes
@@ -1968,7 +1969,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2020-03-10
   created: 2020-03-10
   updated: 2020-09-28
@@ -2348,8 +2349,9 @@
   tags:
   - 31
 - id: 76
-  text: Si on compare le poids de tout ce qui a été construit par l'homme avec le
-    poids de toute la matière vivante sur terre, cela donne...
+  text: Tentez de vous représenter pour commencer le poids de tout ce qui a été construit
+    par l'homme. Puis le poids le poids de toute la matière vivante sur terre. Vous
+    y êtes ? Et si vous comparez ces deux poids colossaux, cela donne...
   hint: 'Il faut compter tout ce qui a été construit par l’homme : bâtiments, infrastructures
     (routes, ponts), habitations, industries, systèmes mobiles (voitures, trains,
     avions), ...'
@@ -2412,8 +2414,8 @@
     pas plus que 2,1 tonnes d''équivalent CO2 par an.
 
     Imaginons que je ne fasse strictement rien d''autre de l''année (plus de chauffage,
-    de voiture, d''achats...). Combien de vols Paris-New York aller-retour pourrais-je
-    me permettre ?'
+    de voiture, d''achats...). Combien de vols aller-retour Paris-New York pourrais-je
+    me permettre pour respecter ce budget ?'
   hint: ''
   type: QCM
   category: 2
@@ -2563,7 +2565,7 @@
   answer_extra_info: ''
   author: Avenir Climatique
   validator: Raphael Odini
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-03-11
   created: 2020-03-11
   updated: 2020-09-28
@@ -3477,14 +3479,16 @@
   type: QCM
   category: 7
   difficulty: 3
-  answer_option_a: 8 %
-  answer_option_b: 16 %
-  answer_option_c: 32 %
-  answer_option_d: 64 %
+  answer_option_a: 5 %
+  answer_option_b: 15 %
+  answer_option_c: 30 %
+  answer_option_d: 60 %
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: La part des usages non énergétiques du pétrole est de 16,4%.
-    Tout le reste est brûlé.
+  answer_explanation: Les usages non énergétiques du pétrole sont par exemple la fabrication
+    de plastique, de goudron, de produits pour l'industrie chimique comme les lubrifiants,
+    cires, peintures, engrais...Cette part représente environ 16% des usages du pétrole
+    dans le monde. Tout le reste est brûlé, majoritairement dans les transports.
   answer_accessible_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Oil&indicator=Oil%20products%20final%20consumption%20by%20sector
   answer_scientific_url: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r009.jpg
@@ -3505,18 +3509,18 @@
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: Chute d’une masse d'une tonne de 1500m de haut
-  answer_option_b: Digestion d'un kilo de sucre
-  answer_option_c: Combustion d'un litre d’essence
-  answer_option_d: Poids lourd de 38 tonnes se déplaçant à 100 km/h
+  answer_option_a: La chute d’une masse d'une tonne de 1500m de haut
+  answer_option_b: La digestion d'un kilo de sucre
+  answer_option_c: La combustion d'un litre d’essence
+  answer_option_d: Le déplacement d'un poids lourd de 38 tonnes roulant à 100 km/h
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: "Le litre d’essence dépasse les autres d’un facteur 2.\n\n-\
-    \ Énergie cinétique d’un camion de 38 tonnes qui roule à 100 km/h = 1/2*m*v²,\
-    \ soit 15 MJ. \n- Énergie potentielle d’un objet de 1 tonne qui tombe de 1500m\
-    \ = m*g*h, soit 15 MJ\n- Énergie d'1 kg de sucre : 17 MJ. \n- Énergie de combustion\
-    \ d’1 l d'essence = 33 MJ. \n\nLa combustion d'1 litre d'essence permet de dégager\
-    \ en ordre de grandeur 100 heures d'un humain qui pédalerait sur une dynamo."
+  answer_explanation: "Le litre d’essence dépasse les autres d’un facteur 2.\n- Énergie\
+    \ cinétique d’un camion de 38 tonnes qui roule à 100 km/h = 1/2*m*v², soit 15\
+    \ MJ. \n- Énergie potentielle d’un objet de 1 tonne qui tombe de 1500m = m*g*h,\
+    \ soit 15 MJ\n- Énergie d'1 kg de sucre : 17 MJ. \n- Énergie de combustion d’1\
+    \ l d'essence = 33 MJ. \nLa combustion d'1 litre d'essence permet de dégager en\
+    \ ordre de grandeur 100 heures d'un humain qui pédalerait sur une dynamo."
   answer_accessible_url: https://fr.wikipedia.org/wiki/Ordres_de_grandeur_d%27%C3%A9nergie
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/documentation-gene/index/page/New_liquides
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/112.png
@@ -4038,8 +4042,8 @@
   - 142
   - 163
 - id: 130
-  text: Quelle est la perte de masse annuelle de la calotte glaciaire du Groenland
-    ?
+  text: '[ECARTEE] Quelle est la perte de masse annuelle de la calotte glaciaire du
+    Groenland ?'
   hint: ''
   type: QCM
   category: 1
@@ -4057,10 +4061,10 @@
   answer_scientific_url: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r028.jpg
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: Doublon avec la 305
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2019-02-13
   created: 2019-02-13
   updated: 2020-09-28
@@ -4324,7 +4328,7 @@
   tags:
   - 22
 - id: 139
-  text: Quel est le gaz qui contribue le plus à l’effet de serre de la terre ?
+  text: Lequel de ces gaz contribue le plus à l’effet de serre ?
   hint: ''
   type: QCM
   category: 1
@@ -5594,7 +5598,8 @@
   answer_correct: a
   has_ordered_answers: true
   answer_explanation: A comparer aux 11% provenant du transport maritime et 72% du
-    transport routier.
+    transport routier. Mais une grande partie de ces déplacements sont évitables,
+    et ils majoritairement le fait des populations les plus aisées.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_chapter8.pdf
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r079.jpg
@@ -5694,8 +5699,8 @@
   - 10
   - 57
 - id: 184
-  text: En France, quelle est la part des dépenses relatives à l'énergie dans la consommation
-    des ménages ?
+  text: En France, quelle est la part des dépenses relatives à l'énergie (transport
+    et logement) dans la consommation des ménages ?
   hint: ''
   type: QCM
   category: 5
@@ -5706,8 +5711,10 @@
   answer_option_d: 32 %
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: D'où la faible importance accordée aux questions énergétiques
-    dans le débat politique ?
+  answer_explanation: Cela recouvre seulement les consommations directes d'énergie
+    des ménages et pas l'ensemble des consommations énergétiques indirectes. D'où
+    la faible importance accordée aux questions énergétiques dans le débat politique
+    ?
   answer_accessible_url: https://www.liberation.fr/france/2019/11/07/combien-pese-l-energie-dans-notre-budget_1761886
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-43-chiffres-cles-de-l-energie-edition-_2018-septembre2018.pdf#page13
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r083.jpg
@@ -5936,7 +5943,7 @@
   hint: ''
   type: QCM
   category: 1
-  difficulty: 1
+  difficulty: 4
   answer_option_a: La hausse des températures obtenue en 2100
   answer_option_b: La concentration en GES obtenue en 2100
   answer_option_c: Le forçage radiatif obtenue en 2100
@@ -6535,7 +6542,8 @@
   answer_accessible_url: ''
   answer_scientific_url: https://www.norskpetroleum.no/en/facts/historical-production/#annually
   answer_image_url: https://assets.letemps.ch/sites/default/files/styles/original/public/media/2019/02/01/file73w6xgbtw7s2c7kjdoz.jpg
-  answer_image_explanation: ''
+  answer_image_explanation: Production de pétrole et de gaz de la Norvège, le pic
+    du pétrole est atteint en 2000, le pic des deux combinés est en 2004.
   answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r111.jpg'
   author: laydgeur
   validator: Matthieu Massart
@@ -6936,10 +6944,10 @@
   type: QCM
   category: 2
   difficulty: 2
-  answer_option_a: 53 000
-  answer_option_b: 93 000
-  answer_option_c: 130 000
-  answer_option_d: 230 000
+  answer_option_a: 50,000
+  answer_option_b: 90,000
+  answer_option_c: 130,000
+  answer_option_d: 230,000
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: L’International Air Transport Association indique que le trafic
@@ -7402,7 +7410,7 @@
     https://twitter.com/MidesMap/status/1261174522369249282'
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée temporairement
   added: 2019-07-05
   created: 2020-05-20
   updated: 2020-09-28
@@ -12726,8 +12734,8 @@
   - 39
   - 47
 - id: 412
-  text: Au plus fort de la crise du Covid, les émissions quotidiennes mondiales auront
-    été similaires à celles observées en ...
+  text: Au plus fort de la crise du Covid-19, les émissions quotidiennes mondiales
+    auront été similaires à celles observées en...
   hint: ''
   type: QCM
   category: 1
@@ -15174,7 +15182,8 @@
   - 51
 - id: 494
   text: 'Si l’on empilait tous les barils de pétrole  que la France consomme en une
-    année, à quelle altitude irait-on ? 1 baril : 80cm de haut, contenance 159 litres.'
+    année, à quelle altitude irait-on ? 1 baril : 80cm de haut, contenance 160 litres.
+    Ne faites pas le calcul, fiez-vous à votre intuition !'
   hint: On irait très très haut !...
   type: QCM
   category: 5
@@ -15959,15 +15968,11 @@
   answer_option_d: 17 millions
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: La France a consommé 144 Mtep en 2018 (énergie finale) ce qui
-    fait 6,029 10ˆ18J. La fusée Falcon 9 de SpaceX brule 155,9 tonnes de RP-1 soit
-    7,202 10ˆ12J et emporte 2 astronautes dans la station spatiale internationale.
-    La totalité de l’énergie consommée en France en une année équivaut donc au décollage
-    de 840 000 fusées Falcon 9 (2300 lancements par jour...), de quoi envoyer 1,68
-    millions de personnes dans la station spatiale. Pour y envoyer tous les français
-    il faudrait utiliser la totalité de l’énergie consommée en France pendant 40 ans.
-    Ces calculs ne prennent pas en compte l'énergie grise requise pour construire
-    les fusées.
+  answer_explanation: La France a consommé en 2018 6 10ˆ18J. Une fusée Falcon 9 de
+    SpaceX en consomme 7 10ˆ12J pour emmener 2 astronautes vers la station spatiale.
+    Le calcul non donne donc 1,7 millions de personnes. Ce calcul ne prend pas en
+    compte l'énergie grise requise pour construire les fusées. Quant à déménager toute
+    l'humanité sur Mars...
   answer_accessible_url: https://www.statistiques.developpement-durable.gouv.fr/chiffres-cles-de-lenergie-edition-2019?rubrique=19&dossier=170
   answer_scientific_url: http://www.capcomespace.net/dossiers/espace_privee/SpaceX/falcon_9_heavy.htm
   answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/0/3/2/03221bc992_50164229_crew-dragon-nasa.jpg
@@ -16136,17 +16141,19 @@
   type: QCM
   category: 1
   difficulty: 2
-  answer_option_a: -10 %
-  answer_option_b: -30 %
-  answer_option_c: -50 %
-  answer_option_d: -70 %
+  answer_option_a: -10%
+  answer_option_b: -30%
+  answer_option_c: -50%
+  answer_option_d: -70%
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: La baisse sur la totalité de 2020 est estimée entre 5% et 15%,
-    avec une grosse incertitude.
-  answer_accessible_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/04/hcc_rapport_spcial_annexe.pdf
-  answer_scientific_url: ''
-  answer_image_url: https://reporterre.net/local/cache-vignettes/L720xH493/arton20450-6fdd1.png?1597405073
+  answer_explanation: La réduction des émissions a été de 30% pendant le premier confinement.
+    La baisse des transports (routier, aérien, ...) est la raison principale. Sur
+    la totalité de 2020, elle est estimée entre 5% et 15%, avec une grosse incertitude
+    (Avril 2020).
+  answer_accessible_url: https://www.lemonde.fr/planete/article/2020/05/20/pourquoi-les-emissions-n-ont-baisse-que-de-30-en-france-pendant-le-confinement_6040243_3244.html
+  answer_scientific_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/04/hcc_rapport_spcial_annexe.pdf
+  answer_image_url: https://reporterre.net/local/cache-vignettes/L720xH493/arton20450-6fdd1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -16173,7 +16180,7 @@
   answer_correct: d
   has_ordered_answers: false
   answer_explanation: 'Les chiffres qui suivent sont des estimations valables à la
-    date de fin novembre 2020, et peuvent évoluer en fonction de la pandémie.
+    date de fin Novembre 2020, et peuvent évoluer en fonction de la pandémie.
 
 
     Dans le monde, le secteur qui a le plus baissé ses émissions à cause de la pandémie
@@ -16198,7 +16205,7 @@
     dans la chute des émissions aux Etats-Unis.
   answer_extra_info: ''
   author: laydgeur
-  validator: ''
+  validator: Raphael Odini
   validation_status: Validée
   added: 2020-06-17
   created: 2020-06-24
@@ -16313,7 +16320,7 @@
   answer_scientific_url: ''
   answer_image_url: https://live.staticflickr.com/4918/46316143381_22a979fb60_b.jpg
   answer_image_explanation: Émissions de CO2 par personne en fonction du niveau de
-    PIB par personne, par pays
+    PIB par personne, par pays, chiffres 2011 en dollars
   answer_extra_info: https://jancovici.com/changement-climatique/economie/quest-ce-que-lequation-de-kaya/
   author: Matthieu Massart
   validator: laydgeur
@@ -16489,8 +16496,10 @@
   - 13
   - 80
 - id: 537
-  text: La Chine émet aujourd'hui plus de 27% des émissions mondiales de CO2. Combien
-    d'autres pays l'ont déjà fait depuis le début de la révolution industrielle ?
+  text: 'La Chine émet aujourd''hui plus de 27% des émissions mondiales de CO2.
+
+    Combien d''autres pays l''ont déjà fait depuis le début de la révolution industrielle
+    ?'
   hint: ''
   type: QCM
   category: 1
@@ -17527,7 +17536,7 @@
 - id: 571
   text: La première domestication animale, bien avant le néolithique (-6,000 ans),
     a été celle du chien. Mais comment nos ancêtres ont-ils réussi à transformer des
-    loups gris en caniches et chihuahuas en 15 000 ans de sélection seulement ?
+    loups gris en caniches et chihuahuas en 15,000 ans de sélection seulement ?
   hint: ''
   type: QCM
   category: 6
@@ -17542,10 +17551,10 @@
     transmettant des malformations à leur descendance par imitation
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: 'Ce processus a pu être reproduit sur quelques générations sur
-    des renards, voir l''article donné en lien (en anglais). Pour une évocation plus
-    générale de la domestication du chien : Homo Canis, Une histoire des chiens et
-    de l’humanité, Laurent Testot, Paris, Payot, 2018.'
+  answer_explanation: 'Comme preuve, ce processus a pu être reproduit sur quelques
+    générations sur des renards. Pour une évocation plus générale de la domestication
+    du chien : Homo Canis, Une histoire des chiens et de l’humanité, Laurent Testot,
+    Paris, Payot, 2018.'
   answer_accessible_url: https://www.science-et-vie.com/questions-reponses/comment-le-loup-est-il-devenu-chien-50850
   answer_scientific_url: http://www.terrierman.com/russianfoxfarmstudy.pdf
   answer_image_url: https://www.sciencesetavenir.fr/assets/img/2015/02/23/cover-r4x3w1000-57e155beab460-domestication-du-chien.jpg
@@ -17568,12 +17577,12 @@
   type: QCM
   category: 6
   difficulty: 4
-  answer_option_a: 5 000 ans, à l’arrivée du dingo sur le sous-continent
-  answer_option_b: 40 000 ans, à la disparition de la mégafaune d’Australie
-  answer_option_c: 70 000 ans, au débarquement des humains en Australie
-  answer_option_d: 300 000 ans, depuis que les humains ont la maîtrise du feu
+  answer_option_a: 5,000 ans, à l’arrivée du dingo sur le sous-continent
+  answer_option_b: 40,000 ans, à la disparition de la mégafaune d’Australie
+  answer_option_c: 70,000 ans, au débarquement des humains en Australie
+  answer_option_d: 300,000 ans, depuis que les humains ont la maîtrise du feu
   answer_correct: b
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'Après une perte de biodiversité, les écosystèmes s’adaptent
     à un brûlis parcellaire. Si la pratique est maintenue longtemps (comme en Australie,
     en Afrique australe ou dans les Amériques), les écosystèmes ont besoin de cette
@@ -17596,48 +17605,33 @@
   - 63
   - 107
 - id: 573
-  text: Le refroidissement climatique connu sous le nom de Petit Âge glaciaire a été
-    causé notamment par plusieurs méga-explosions volcaniques, depuis la fin du 13ème
-    jusqu'au début du 19ème siècle. Les plus importantes identifiées à ce jour ont
-    eu lieu en 1257, 1452, 1600, 1815… Mais dans quel ordre ?
+  text: Le Petit Âge Glaciaire est une période de refroidissement planétaire qui court
+    de la fin du XIIIe siècle au début du XIXe siècle. Quelle est la cause majeure
+    probable de ce long épisode de froid ?
   hint: ''
   type: QCM
   category: 6
   difficulty: 4
-  answer_option_a: Samalas (Indonésie), Kuwae (Vanuatu), Huaynaputina (Pérou), Tambora
-    (Indonésie)
-  answer_option_b: Kuwae (Vanuatu), Huaynaputina (Pérou), Samalas (Indonésie), Tambora
-    (Indonésie)
-  answer_option_c: Huaynaputina (Pérou), Samalas (Indonésie), Tambora (Indonésie),
-    Kuwae (Vanuatu)
-  answer_option_d: Huaynaputina (Pérou), Samalas (Indonésie), Kuwae (Vanuatu), Tambora
-    (Indonésie)
+  answer_option_a: Une série de méga-éruptions volcaniques, expulsant de grands volumes
+    de cendres et d’aérosols dans l’atmosphère.
+  answer_option_b: Le recul de la riziculture inondée en Asie, qui a ralenti les émissions
+    de méthane dues aux hommes.
+  answer_option_c: Une reforestation massive, suite aux grandes épidémies qui a absorbé
+    d'énormes quantités de CO2, un gaz à effet de serre.
+  answer_option_d: Une baisse cyclique du rayonnement solaire, phénomène dit du «
+    Minimum de Maunders ».
   answer_correct: a
   has_ordered_answers: false
-  answer_explanation: '- Samalas (Indonésie) en 1257
-
-    - Kuwae (Vanuatu) en 1452
-
-    - Huaynaputina (Pérou) en 1600
-
-    - Tambora (Indonésie) en 1815'
+  answer_explanation: Ce refroidissement a été causé notamment par plusieurs méga-explosion
+    volcaniques, de la fin du 13e siècle au début du 19e. Les plus importantes identifiées
+    à ce jour ont eu lieu en 1257 (Samalas, Indonésie), 1452 (Kuwae, Vanuatu), 1600
+    (Huaynaputina, Pérou), 1815 (Tambora, Indonésie), et ont entraîné des conséquences
+    planétaires durable, sur les écosystèmes, les cultures comme sur la géopolitique.
   answer_accessible_url: ''
   answer_scientific_url: https://doi.org/10.1017/CBO9780511844058.009
   answer_image_url: https://i.dailymail.co.uk/i/pix/2015/04/15/10/27975FAA00000578-0-The_map_above_shows_major_volcanic_eruptions_from_the_past_2_000-a-17_1429091055374.jpg
   answer_image_explanation: ''
-  answer_extra_info: '- Pour le Samalas, http://www.ipgp.fr/fr/eruption-volcan-samalas-1257
-
-    - pour le Kuwae, Patrick Boucheron (dir.), « Introduction », Histoire du monde
-    au XVe siècle, dirigé par P. Boucheron, coordonné par Julien Loiseau, Pierre Monnet
-    et Yann Potin, Fayard, 2009
-
-    - pour le Huaynaputina, Sam White, chapter 5 - The Little Ice Age in the Near
-    East, DOI: https://doi.org/10.1017/CBO9780511844058.009
-
-    - pour le Tambora, Gillen d’Arcy Wood, 1816, l’année sans été, traduit de l’anglais
-    par Philippe Pignarre, Paris, La Découverte, 2016 ; William K. Klingaman, Nicholas
-    P. Klingaman, The Year Without Summer. 1816 and the Volcano That Darkened the
-    World and Changed History, New York, St Martin’s Press, 2013.'
+  answer_extra_info: ''
   author: Laurent Testot
   validator: Matthieu Massart
   validation_status: Validée
@@ -17776,7 +17770,8 @@
     en 1859 au cours d’un maximum solaire. Au cours de cette tempête, baptisée l’évènement
     de Carrington, des aurores boréales ont été observées jusqu’à Cuba et Honolulu
     au sud, et des aurores australes jusqu’à Santiago du Chili au nord. Heureusement,
-    à cette date-là, seuls des télégraphes furent mis hors service !
+    à cette date-là, seuls des télégraphes furent mis hors service. Aujourd'hui, une
+    telle tempête, imprévisible, aurait des effets catastrophiques.
   answer_accessible_url: https://www.nationalgeographic.fr/espace/et-si-la-plus-grande-tempete-solaire-jamais-enregistree-etait-venir
   answer_scientific_url: ''
   answer_image_url: https://img.maxisciences.com/article/mourir-moins-con/eruption-solaire_9b358aa01d21270d7599f9825ae7a32a470af690.jpg
@@ -17819,10 +17814,10 @@
   tags:
   - 32
 - id: 579
-  text: Les animaux et les humains ont longtemps fourni à l’humanité l’essentiel de
-    l’énergie mécanique disponible. Le charbon puis le pétrole ont pris le relais.
-    À partir de quelle date s'est-on mis à consommer plus d’énergie fossile que d’énergie
-    musculaire ?
+  text: Jusqu'à une époque récente, ce sont les animaux et les humains qui ont fourni
+    l’essentiel de l’énergie mécanique. Puis le charbon et le pétrole ont pris le
+    relais. À partir de quelle date s'est-on mis à consommer plus d’énergie fossile
+    que d’énergie musculaire ?
   hint: ''
   type: QCM
   category: 6
@@ -17830,7 +17825,7 @@
   answer_option_a: Vers 1800, c'est à dire quand James Watt parvient à faire fonctionner
     500 de ses machines à vapeur
   answer_option_b: Vers 1860, quand la France et l’Angleterre signent un accord de
-    libre-échange, inaugurant la diffusion de l’idéologie libérale
+    libre échange, inaugurant la diffusion de l’idéologie libérale
   answer_option_c: Vers 1885, quand les pays d’Europe occidentale sont suffisamment
     industrialisés pour se partager l’Afrique sans demander leur avis aux Africains
   answer_option_d: Vers 1910, quand les industries métallurgiques d’Occident prennent
@@ -17855,9 +17850,9 @@
   - 11
   - 40
 - id: 580
-  text: J'ai inventé un processus permettant de transformer le pétrole en essence.
-    J'ai aussi mis au point la synthèse de l’ammoniac, un processus qui va permettre
-    la fabrication d’engrais azotés. Qui suis-je ?
+  text: J'ai inventé un processus permettant de transformer le pétrole en essence
+    et mis au point la synthèse de l’ammoniac, un processus qui va permettre la fabrication
+    d’engrais azotés. Qui suis-je ?
   hint: ''
   type: QCM
   category: 6
@@ -17886,9 +17881,9 @@
   tags:
   - 186
 - id: 581
-  text: Je suis biologiste. Après avoir découvert qu’une rivière chimiquement polluée
-    abritait une proportion anormalement élevée de poissons femelles, j'ai mis en
-    lumière et théorisé les effets des perturbateurs endocriniens. Qui suis-je ?
+  text: Je suis biologiste. Après avoir découvert qu’une rivière polluée abritait
+    une proportion anormalement élevée de poissons femelles, j'ai mis en lumière les
+    effets ravageurs des perturbateurs endocriniens. Qui suis-je ?
   hint: ''
   type: QCM
   category: 3
@@ -17899,7 +17894,8 @@
   answer_option_d: Theo Colborn
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: 'Le point commun entre ces quatre chercheurs est que sont des
+    femmes. '
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_image_url: ''
@@ -17920,16 +17916,17 @@
   type: VF
   category: 2
   difficulty: 1
-  answer_option_a: Vrai
-  answer_option_b: Faux
+  answer_option_a: Oui
+  answer_option_b: Non
   answer_option_c: ''
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Un champion olympique a tenté l'expérience, voyez le résultat
-    sur le lien ci-dessous. Autrement dit, les publicités qui vous promettent d'alimenter
-    un foyer avec un appareil sur lequel vous pédaleriez quelques heures par jour
-    est un mythe.
+  answer_explanation: La réponse est non...à moins d'être un champion olympique et
+    de finir les cuisses en feu ! Un tel champion olympique a tenté l'expérience,
+    voyez le résultat dans la vidéo ci-dessous. Autrement dit, les publicités qui
+    vous promettent d'alimenter un foyer avec un appareil sur lequel vous pédaleriez
+    quelques heures par jour est un mythe.
   answer_accessible_url: https://www.youtube.com/watch?v=S4O5voOCqAQ
   answer_scientific_url: ''
   answer_image_url: https://imgix.bustle.com/rehost/2016/9/13/6029141b-a962-4ed0-b403-27d0abdbb1a5.png?w=800&auto=format%2Ccompress&cs=srgb&q=70&fit=crop&crop=faces
@@ -18989,7 +18986,7 @@
   answer_option_b: 1%
   answer_option_c: 10%
   answer_option_d: 25%
-  answer_correct: c
+  answer_correct: d
   has_ordered_answers: true
   answer_explanation: 'L’étape de capture du CO2 est coûteuse en énergie. On parle
     de pénalité énergétique.
@@ -19155,7 +19152,7 @@
   has_ordered_answers: true
   answer_explanation: Le stockage géologique de CO2 est modélisé sur des périodes
     de temps de 10 000 ans, soit le même ordre de grandeur que le temps nécessaire
-    pour épurer le CO2 émis de l'atmosphère.
+    pour épurer de l'atmosphère environ 80% du CO2 d'origine humaine.
   answer_accessible_url: ''
   answer_scientific_url: https://www.nature.com/articles/s41467-018-04423-1
   answer_image_url: https://www.brgm.fr/sites/default/files/galerie_stockagegeol_01.jpg
@@ -19250,7 +19247,10 @@
   answer_scientific_url: https://www.nature.com/articles/s41558-020-0797-x
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r292.png
   answer_image_explanation: ''
-  answer_extra_info: https://twitter.com/laydgeur/status/1275526497357500417
+  answer_extra_info: 'https://twitter.com/laydgeur/status/1275526497357500417
+
+
+    doublon avec la 412'
   author: laydgeur
   validator: ''
   validation_status: A valider
@@ -20605,17 +20605,23 @@
   answer_option_d: '2018'
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: Avec une chute en 2020 de 2,5 millions de barils/jour (l'équivalent
-    de la production du Koweït), la production de pétrole brut aux États-Unis a simplement
-    retrouvé son niveau de 2018.
-  answer_accessible_url: ''
+  answer_explanation: 'Avec une chute en 2020 de 2,5 millions de barils/jour, la production
+    de pétrole brut aux États-Unis a simplement retrouvé son niveau de 2018.
+
+
+    13 millions de barils/jour, c''était le chiffre record avant cette chute. Les
+    États-Unis ont donc vu une baisse de presque 20% de leur production.
+
+
+    2,5 millions de barils/jour, c''est l''équivalent de la production du Koweït.'
+  answer_accessible_url: https://www.lemonde.fr/economie/article/2020/07/14/petrole-la-fin-de-l-age-d-or-americain_6046169_3234.html
   answer_scientific_url: https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=pet&s=wcrfpus2&f=4
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r334.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1326996258414858240
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-11-12
   created: 2020-11-28
   updated: 2020-11-28
@@ -20666,9 +20672,9 @@
   answer_option_d: ''
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: 'C''est le cas si on produit du plastique neuf. Pour du plastique
-    recyclé en revanche, le plastique est largement meilleur (environ 5 fois moins
-    d''émissions pour le plastique recyclé que pour l''acier recyclé).
+  answer_explanation: 'C''est le cas si on produit du plastique neuf. Pour des matériaux
+    recyclés en revanche, le plastique est largement meilleur que l''acier (environ
+    5 fois moins d''émissions pour le plastique recyclé que pour l''acier recyclé).
 
     Un autre élément à prendre en compte : pour beaucoup d''usages le plastique est
     moins émetteur que l''acier, car pour remplir la même fonction on va utiliser
@@ -20691,8 +20697,8 @@
   - 36
   - 86
 - id: 670
-  text: Combien de temps faudrait-il à un cycliste du tour de France pour chauffer
-    en pédalant l'eau d'une douche de 10min ?
+  text: Combien de temps de pédalage faudrait-il à un cycliste du Tour de France pour
+    chauffer l'eau d'une douche de 10min ?
   hint: ''
   type: QCM
   category: 5
@@ -20859,20 +20865,20 @@
   answer_option_c: ''
   answer_option_d: ''
   answer_correct: b
-  has_ordered_answers: false
-  answer_explanation: Raffiner un kilo de cuivre secondaire demande 85% d’énergie
-    en moins que pour un kilo de cuivre primaire. Et pour un coût 75% moindre. Ce
-    qui limite le recyclage est la difficulté de la collecte des objets contenant
-    du cuivre. Le cuivre contenu dans des composants électroniques par exemple, ne
-    présente guère d'intérêt économique à être recyclé.
+  has_ordered_answers: true
+  answer_explanation: "Raffiner un kilo de cuivre secondaire demande 85% d’énergie\
+    \ en moins que pour un kilo de cuivre primaire. Et pour un coût 75% moindre. \n\
+    Ce qui limite le recyclage est la difficulté de la collecte des objets contenant\
+    \ du cuivre. Le cuivre contenu dans des composants électroniques par exemple,\
+    \ ne présente guère d'intérêt économique à être recyclé."
   answer_accessible_url: https://copperalliance.fr/l-environnement/recyclage/
   answer_scientific_url: ''
   answer_image_url: https://mktg.factosoft.com/consoglobe/image-upload/img/triDuMetal.jpg
-  answer_image_explanation: ''
+  answer_image_explanation: Processus de recyclage du métal
   answer_extra_info: ''
   author: Matthieu Massart
-  validator: ''
-  validation_status: A valider
+  validator: laydgeur
+  validation_status: Validée
   added: 2020-12-04
   created: 2020-12-05
   updated: 2020-12-05
@@ -20881,120 +20887,142 @@
   - 73
   - 208
 - id: 676
-  text: Quel est le poids de la dette "durable" dans les émissions de dette totales
-    dans le monde en 2019 ?
-  hint: La dette durable englobe les green bonds, sustainability bonds, social bonds,
-    green loans, sustainability-linked loans et sustainability-linked bonds.
+  text: Avec le Covid-19, l'année 2020 a vu une baisse des émissions mondiales de
+    CO2. De combien ?
+  hint: ''
   type: QCM
-  category: 8
+  category: 1
   difficulty: 2
-  answer_option_a: 5%
-  answer_option_b: 10%
-  answer_option_c: 25%
-  answer_option_d: 50%
+  answer_option_a: -3%
+  answer_option_b: -7%
+  answer_option_c: -13%
+  answer_option_d: -17%
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: 465 milliards de dollars de dette "durable" ont été émis en
-    2019, ce qui représente que 10% des 5 000 milliards de dollars émis au total.
-  answer_accessible_url: https://about.newenergyfinance.com/blog/sustainable-debt-sees-record-issuance-at-465bn-in-2019-up-78-from-2018/
-  answer_scientific_url: https://www.climatebonds.net/files/reports/2019_annual_highlights-final.pdf
-  answer_image_url: https://assets.bbhub.io/professional/sites/24/Sustainable-finance-market-outlook-2020.-.jpg
+  answer_explanation: 'D''après le Global Carbon Project (GCP), la baisse a été de
+    7% par rapport à 2019, soit 2,4 milliards de tonnes. Du fait bien sûr du ralentissement
+    économique et des différentes restrictions.
+
+
+    « La diminution des émissions en 2020 semble plus prononcée aux Etats-Unis (−
+    12 %), dans l’UE-27 (− 11 %) et en Inde (− 9 %), l’effet des restrictions Covid-19
+    s’ajoutant à une tendance précédente, et étant moins prononcée en Chine (− 1,7
+    %), où les mesures de restriction ont été prises au début de l’année et ont été
+    plus limitées dans le temps »
+
+
+    La baisse est le plus marquée dans le secteur des transports (routier, aérien,
+    ...).'
+  answer_accessible_url: https://www.lemonde.fr/climat/article/2020/12/11/baisse-record-de-7-des-emissions-de-co2-en-2020-liee-au-covid-19_6062971_1652612.html
+  answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/20/highlights.htm
+  answer_image_url: https://pbs.twimg.com/media/EW8GD1LXkAABPng?format=png&name=large
   answer_image_explanation: ''
-  answer_extra_info: ''
-  author: Kim Nguyen-Huu
+  answer_extra_info: 'source du graphique : https://twitter.com/iea/status/1256229486015766530'
+  author: Raphael Odini
   validator: ''
   validation_status: A valider
-  added: 2020-12-09
+  added: 2020-12-22
   created: 2020-12-10
   updated: 2020-12-10
   tags:
   - 194
 - id: 677
-  text: En 2019 quelle a été la part d'investissement dans les énergies renouvelables
-    dans les investissements mondiaux dans les énergies ?
+  text: Lors du premier confinement en Europe à cause du Covid-19, le traffic aérien
+    à chuté de...
   hint: ''
   type: QCM
-  category: 8
+  category: 2
   difficulty: 1
-  answer_option_a: 10%
-  answer_option_b: 25%
-  answer_option_c: 50%
-  answer_option_d: 75%
-  answer_correct: b
+  answer_option_a: -45%
+  answer_option_b: -60%
+  answer_option_c: -75%
+  answer_option_d: -90%
+  answer_correct: d
   has_ordered_answers: true
-  answer_explanation: En considérant la production et l'approvisionnemnt, 1320 milliards
-    de dollars ont été investis en 2019 dans les énergies dans le monde. 976 concernaient
-    les énergies fossiles alors que 344 concernaient les renouvelables, soit à peu
-    près 25% des investissements.
-  answer_accessible_url: ''
-  answer_scientific_url: https://www.iea.org/reports/world-energy-investment-2020/key-findings#abstract
-  answer_image_url: http://newenergydrupalfs.s3.amazonaws.com/annual_clean_energy_investment_bnef_january_2019.jpg
-  answer_image_explanation: Le graphe s'arrête en 2018 mais la répartition entre les
-    différents investissements a les même proportions en 2019.
+  answer_explanation: 'Avec les restrictions de déplacements et les fermetures de
+    frontières, beaucoup d''avions été cloués au sol. C''est surtout les vols internationaux
+    qui en ont subi les conséquences.
+
+
+    Pour autant, l''IATA espère un retour à la normal avant 2024. C''est à dire presque
+    40 millions de vol par an (soit 110 000 vols par jour) transportant plus de 4
+    milliards de passagers (en majorité pour du loisir, par classes supérieurs).'
+  answer_accessible_url: https://www.ouest-france.fr/sante/virus/coronavirus/confinement/avec-le-confinement-le-trafic-aerien-en-europe-chute-de-90-compare-il-y-un-6819737
+  answer_scientific_url: ''
+  answer_image_url: https://wolfstreet.com/wp-content/uploads/2020/07/US-IATA-2020-07-29-air-passenger-volume-.png
+  answer_image_explanation: RPK = Revenue-Passenger-Kilometers
   answer_extra_info: ''
-  author: Kim Nguyen-Huu
+  author: Raphael Odini
   validator: ''
   validation_status: A valider
-  added: 2020-12-09
+  added: 2020-12-22
   created: 2020-12-10
   updated: 2020-12-10
   tags:
   - 194
 - id: 678
-  text: Si les 6 plus grandes banques françaises étaient un pays, combien se classerait-il
-    en terme d'émissions de gaz à effet de serre ?
+  text: Au printemps 2020, quel a été l'impact du confinement sur la consommation
+    électrique en France ?
   hint: ''
   type: QCM
-  category: 8
+  category: 2
   difficulty: 1
-  answer_option_a: 1er
-  answer_option_b: 3ème
-  answer_option_c: 10ème
-  answer_option_d: 30ème
-  answer_correct: b
+  answer_option_a: Elle a augmenté
+  answer_option_b: Elle est resté à peu près pareil
+  answer_option_c: Elle a diminué
+  answer_option_d: ''
+  answer_correct: c
   has_ordered_answers: true
-  answer_explanation: Oxfam a calculé que les 6 plus grandes banques françaises (BNP
-    Paribas, Sociéte Générale, Crédit Agricole, Groupe BPCE, La Banque Postale, Crédit
-    Mutuel) émettaient 3.3 milliards de tonnes équivalent CO2 par an, ce qui les placeraient
-    en 3ème position des pays émetteurs, derrière la Chine (~10 milliards de tonnes),
-    et les USA (~5.5 milliards de tonnes) et devant l'Inde (~2.7 milliards de tonnes).
-    Elles seraient également au même niveau que l'Union Européenne.
-  answer_accessible_url: http://www.globalcarbonatlas.org/en/CO2-emissions
-  answer_scientific_url: https://www.oxfamfrance.org/rapports/banques-des-engagements-climat-a-prendre-au-4eme-degre/
-  answer_image_url: https://www.outside.fr/wp-content/uploads/2020/10/Oxfam-Banques-720x640.jpg
-  answer_image_explanation: ''
-  answer_extra_info: ''
-  author: Kim Nguyen-Huu
-  validator: Matthieu Massart
-  validation_status: Validée
-  added: 2020-12-09
+  answer_explanation: 'La consommation d’électricité française a été 15% inférieure
+    en moyenne au niveau habituellement constaté au mois de mars.
+
+
+    Cette baisse est principalement due à la baisse de l’activité économique : fermeture
+    des commerces non essentiels (restaurants, cinémas, magasins …) et ralentissement
+    de l’activité dans le secteur industriel.'
+  answer_accessible_url: https://www.lemonde.fr/blog/huet/2020/04/24/lelectricite-bousculee-par-le-coronavirus/
+  answer_scientific_url: https://www.rte-france.com/actualites/covid19_quels_impacts_sur_la_consommation_electricite
+  answer_image_url: https://asset.lemde.fr/prd-blogs/2020/04/Baisse-conso-elec-RTE.png
+  answer_image_explanation: La consommation du 26 mars 2020 ressemble à celle d’un
+    lundi de Pâques (ici celui de 2018) avec une baisse particulièrement forte durant
+    la matinée. Source RTE.
+  answer_extra_info: 'autres liens :
+
+    - https://www.strategie.gouv.fr/point-de-vue/impacts-de-crise-covid-19-systeme-electrique
+
+    - https://www.youtube.com/watch?v=PiVCLKIYQPQ (Mr Bidouille - Comment le confinement
+    a changé la consommation électrique Française)'
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-22
   created: 2020-12-10
   updated: 2020-12-10
   tags:
   - 194
   - 201
 - id: 679
-  text: Quelle est l'empreinte carbone du Bitcoin ?
+  text: Quelle est l'empreinte carbone du Bitcoin sur terre ?
   hint: ''
   type: QCM
   category: 8
   difficulty: 2
-  answer_option_a: 8 millions de tonnes (comme Lisbonne)
-  answer_option_b: 22 millions de tonnes (comme Las Vegas)
-  answer_option_c: 43 millions de tonnes (comme Madrid)
-  answer_option_d: 78 millions de tonnes (comme Paris)
+  answer_option_a: 8 millions de tonnes équivalent CO2 (comme Lisbonne)
+  answer_option_b: 22 millions de tonnes équivalent CO2  (comme Las Vegas)
+  answer_option_c: 43 millions de tonnes équivalent CO2 (comme Madrid)
+  answer_option_d: 78 millions de tonnes équivalent CO2  (comme Paris)
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: Le transfert de Bitcoin s'effectue à travers un réseau décentralisé
-    d'ordinateurs à travers le monde qui nécessite 46 TWh d'électricité. En comparant
-    les émissions moyennes de l'électricité aux zones d'où provient l'équipement informatique,
-    les émissions de carbon du Bitcoin ont été estimée à 22 millions de tonne de CO2
-    par an, soit l'équivalent de la ville de Las Vegas. Il y a à peu près 20 millions
-    de Bitcoin actuellement en circulation, ce qui représente 400 milliards de dollars
-    au cours actuel. Si toute la monnaie mondiale (physique et épargne) était sous
-    la forme de Bitcoin, il en faudrait 200 fois plus à son niveau actuel, 600 fois
-    plus síl était à son niveau díl y a 6 mois (pour atteindre 80 000 milliards de
-    dollars), ce qui le placerait alors devant les émissions de la Chine.
+  answer_explanation: 'Le transfert de Bitcoin s''effectue à travers un réseau décentralisé
+    d''ordinateurs à travers le monde qui nécessite 46 TWh d''électricité, ce qui
+    résulte en une émission estimée qui es de l''ordre de celle de Las Vegas. Il y
+    a à peu près 20 millions de Bitcoin actuellement en circulation, ce qui représente
+    400 milliards de dollars au cours actuel.
+
+    Si toute la monnaie mondiale (physique et épargne) était sous la forme de Bitcoin,
+    il en faudrait 200 fois plus à son niveau actuel, 600 fois plus s''il était à
+    son niveau d''il y a 6 mois (pour atteindre 80 000 milliards de dollars), ce qui
+    le placerait alors devant les émissions de la Chine.'
   answer_accessible_url: https://www.rse-magazine.com/Le-Bitcoin-emet-autant-de-CO2-que-Las-Vegas_a3342.html
   answer_scientific_url: http://citycarbonfootprints.info/
   answer_image_url: https://coincentral.com/wp-content/uploads/2019/04/bitcoin-energy-consumpti.jpeg
@@ -21009,3 +21037,79 @@
   tags:
   - 72
   - 194
+- id: 680
+  text: 2020 sera peut-être l'année la plus chaude jamais enregistrée. Vrai ou Faux
+    ?
+  hint: ''
+  type: VF
+  category: 1
+  difficulty: 1
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: '2020 détrônerait 2016. L’Arctique a particulièrement souffert
+    cette année, avec des températures supérieures de plus de 5 °C à la moyenne.
+
+
+    A ce rythme là, les 1,5°C d''augmentation pourraient être atteint avant 2030. '
+  answer_accessible_url: https://www.francetvinfo.fr/meteo/climat/video-climat-l-annee-2020-parmi-les-plus-chaudes-malgre-le-phenomene-la-nina_4211985.html
+  answer_scientific_url: https://www.carbonbrief.org/state-of-the-climate-2020-on-course-to-be-warmest-year-on-record
+  answer_image_url: https://img.lemde.fr/2020/12/02/0/0/1790/1076/1328/0/45/0/c9d81a7_308820608-capture-d-e-cran-2020-12-02-a-09-38-47.jpg
+  answer_image_explanation: Ecart de la température moyenne annuelle à l’échelle du
+    globe par rapport à la période préindustrielle (1850 –1900). Les données pour
+    2020 concernent la période de janvier à octobre. Source OMM.
+  answer_extra_info: 'France : https://meteofrance.com/actualites-et-dossiers/actualites/climat/2020-vers-lannee-la-plus-chaude'
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-22
+  created: 2020-12-15
+  updated: 2020-12-15
+  tags:
+  - 11
+  - 13
+  - 194
+- id: 681
+  text: Le 12 Décembre 2020 a été fêté les 5 ans de l'accord de Paris (COP 21). Cet
+    accord a pour objectif de contenir l'élévation de la température moyenne de la
+    planète «nettement en dessous de 2 °C» en «poursuivant l'action menée pour limiter
+    l'élévation de la température à 1,5°C». Or avec les promesses actuelles, sur quelle
+    trajectoire sommes-nous ?
+  hint: ''
+  type: QCM
+  category: 6
+  difficulty: 2
+  answer_option_a: +2,5-3°C
+  answer_option_b: +3-3,5°C
+  answer_option_c: +3,5-4°C
+  answer_option_d: +4-4,5°C
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: 'Maintenir la hausse à +1,5°C est illusoire (il faudrait diminuer
+    les émissions de gaz à effet de serre de 7,6% par an tous les ans jusqu’en 2030),
+    mais il y encore espoir pour +2°C.
+
+
+    Le 12 décembre 2020 a eu lieu un sommet virtuel pour l’ambition climatique, avec
+    des annonces de chefs d''états qui ont permis de réhausser les ambitions.
+
+
+    Et la COP 26 aura lieu fin 2021.'
+  answer_accessible_url: https://www.rfi.fr/fr/science/20201211-climat-5-ans-après-l-accord-de-paris-les-résultats-se-font-attendre
+  answer_scientific_url: https://wedocs.unep.org/bitstream/handle/20.500.11822/34438/EGR20ESE.pdf
+  answer_image_url: https://cdn.radiofrance.fr/s3/cruiser-production/2020/12/576b9a07-4013-41e0-9965-46698b3bf02a/838_001_8wv6kb_jpeg.webp
+  answer_image_explanation: Graphique montrant l'écart entre les engagements nationaux
+    pour limiter l'émission de gaz à effet de serre et les réductions nécessaires
+    pour endiguer le réchauffement climatique
+  answer_extra_info: 'autres liens : https://www.slate.fr/story/198014/accord-de-paris-cop21-cinq-ans-apres-etats-environnement-bilan-changement-climatique'
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-22
+  created: 2020-12-19
+  updated: 2020-12-19
+  tags:
+  - 13

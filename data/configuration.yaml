@@ -10,12 +10,16 @@
     \ individuel.</p>\r\n\r\n<p>Ces questions peuvent aussi servir à se former pour\
     \ mieux maitriser les chiffres et les ordres de grandeurs. Les usages peuvent\
     \ être multiples (conférences, formations, quiz, jeu, etc.).</p>"
-  application_backend_url: ''
-  application_frontend_url: ''
-  daily_stat_last_aggregated: 2020-12-14 12:41:34.433435+00:00
-  notion_questions_scope_1_last_imported: 2020-12-13 03:04:03.630015+00:00
-  notion_questions_scope_2_last_imported: 2020-12-13 03:04:03.630022+00:00
-  notion_questions_scope_3_last_imported: 2020-12-13 03:04:03.630025+00:00
-  notion_questions_scope_4_last_imported: 2020-12-13 03:04:03.630028+00:00
-  github_last_exported: 2020-12-14 14:52:19.814962+00:00
-  notion_contributions_last_exported: 2020-12-14 13:09:18.750279+00:00
+  application_open_source_code_url: https://github.com/raphodn/know-your-planet
+  application_backend_url: https://quiz-anthropocene.osc-fr1.scalingo.io/
+  application_frontend_url: https://quizanthropocene.fr/
+  application_facebook_url: https://www.facebook.com/quizanthropocene/
+  application_twitter_url: https://twitter.com/AnthroQuiz
+  application_linkedin_url: https://www.linkedin.com/company/quiz-de-l-anthropocene/
+  daily_stat_last_aggregated: 2020-12-23 01:26:15.259665+00:00
+  notion_questions_scope_1_last_imported: 2020-12-23 03:14:30.971521+00:00
+  notion_questions_scope_2_last_imported: 2020-12-23 03:14:30.971542+00:00
+  notion_questions_scope_3_last_imported: 2020-12-23 03:14:30.971546+00:00
+  notion_questions_scope_4_last_imported: 2020-12-23 03:14:30.971550+00:00
+  github_last_exported: 2020-12-23 03:50:55.835999+00:00
+  notion_contributions_last_exported: 2020-12-22 01:39:25.700261+00:00

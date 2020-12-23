@@ -1,5 +1,5 @@
 - name: Avenir Climatique
-  question_count: 9
+  question_count: 8
   quiz_count: 0
 - name: Bonpote
   question_count: 8
@@ -23,13 +23,13 @@
   question_count: 2
   quiz_count: 0
 - name: Kim Nguyen-Huu
-  question_count: 4
+  question_count: 3
   quiz_count: 0
 - name: Laurent Testot
   question_count: 8
   quiz_count: 1
 - name: laydgeur
-  question_count: 172
+  question_count: 171
   quiz_count: 2
 - name: Le Monde
   question_count: 1
@@ -38,7 +38,7 @@
   question_count: 0
   quiz_count: 1
 - name: Matthieu Massart
-  question_count: 71
+  question_count: 72
   quiz_count: 13
 - name: Raphael Odini
   question_count: 30

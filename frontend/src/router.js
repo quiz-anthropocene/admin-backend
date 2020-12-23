@@ -6,6 +6,7 @@ import HomePage from './views/HomePage.vue';
 import QuestionPage from './views/QuestionPage.vue';
 import QuestionListPage from './views/QuestionListPage.vue';
 import QuestionDetailPage from './views/QuestionDetailPage.vue';
+import QuizPage from './views/QuizPage.vue';
 import QuizListPage from './views/QuizListPage.vue';
 import QuizDetailPage from './views/QuizDetailPage.vue';
 import AboutPage from './views/AboutPage.vue';
@@ -41,13 +42,19 @@ const routes = [
   },
   {
     path: '/quiz',
-    name: 'quiz-list',
-    component: QuizListPage,
-  },
-  {
-    path: '/quiz/:quizId',
-    name: 'quiz-detail',
-    component: QuizDetailPage,
+    component: QuizPage,
+    children: [
+      {
+        path: '',
+        name: 'quiz-list',
+        component: QuizListPage,
+      },
+      {
+        path: ':quizId',
+        name: 'quiz-detail',
+        component: QuizDetailPage,
+      },
+    ],
   },
   {
     path: '/a-propos',
