@@ -175,7 +175,8 @@ export default {
   },
 
   mounted() {
-    if (this.$route.query.showdetails) {
+    if (this.$route.query.source === 'qrcode'
+      && this.$route.query.answer_correct === this.question.answer_correct) {
       this.questionSubmitted = true;
     }
   },

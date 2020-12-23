@@ -87,7 +87,7 @@ export default {
       return questionAnswer;
     },
     questionUrl() {
-      return `${process.env.VUE_APP_DOMAIN_URL}/questions/${this.question.id}`;
+      return `${process.env.VUE_APP_DOMAIN_URL}/questions/${this.question.id}?answer_correct=${this.question.answer_correct}&source=qrcode`;
     },
     cssVars() {
       return {
