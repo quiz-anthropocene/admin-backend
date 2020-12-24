@@ -638,3 +638,28 @@
   - 531
   - 582
   tags: []
+- id: 57
+  name: 2020 en chiffres
+  introduction: ''
+  conclusion: ''
+  difficulty_average: 1.8333333333333333
+  author: Raphael Odini
+  image_background_url: ''
+  publish: false
+  created: 2020-12-24
+  updated: 2020-12-24
+  questions:
+  - 682
+  - 683
+  - 684
+  - 685
+  - 686
+  - 687
+  - 688
+  - 689
+  - 690
+  - 691
+  - 692
+  - 693
+  tags:
+  - 213
