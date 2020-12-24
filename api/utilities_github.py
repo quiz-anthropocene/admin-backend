@@ -53,7 +53,16 @@ def update_file(file_path, commit_message, file_content, branch_name):
             file_path, commit_message, file_content, contents.sha, branch=branch_name,
         )
     except github.GithubException as e:
-        raise e
+        # trying to update a non-existent file
+        if e.data["message"] == "Not Found":
+            res = create_file(
+                file_path=file_path,
+                commit_message=commit_message,
+                file_content=file_content,
+                branch_name=branch_name,
+            )
+        else:
+            raise e
     print(res)
     return res
 
@@ -66,9 +75,8 @@ def create_file(file_path, commit_message, file_content, branch_name):
             file_path, commit_message, file_content, branch=branch_name
         )
     except github.GithubException as e:
-        if (
-            e.data["message"] == 'Invalid request.\n\n"sha" wasn\'t supplied.'
-        ):  # trying to update an existing file # noqa
+        # trying to update an existing file
+        if e.data["message"] == 'Invalid request.\n\n"sha" wasn\'t supplied.':
             res = update_file(
                 file_path=file_path,
                 commit_message=commit_message,
@@ -85,8 +93,8 @@ def create_pull_request(
     pull_request_title,
     pull_request_message,
     branch_name,
-    pull_request_labels="automerge",
-    review_request=False,
+    pull_request_labels="",
+    review_request=True,
 ):
     print("in create_pull_request", pull_request_title)
     repo = get_repo()
