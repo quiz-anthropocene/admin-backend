@@ -20887,115 +20887,94 @@
   - 73
   - 208
 - id: 676
-  text: Avec le Covid-19, l'année 2020 a vu une baisse des émissions mondiales de
-    CO2. De combien ?
-  hint: ''
+  text: Quel est le poids de la dette "durable" dans les émissions de dette totales
+    dans le monde en 2019 ?
+  hint: La dette durable englobe les green bonds, sustainability bonds, social bonds,
+    green loans, sustainability-linked loans et sustainability-linked bonds.
   type: QCM
-  category: 1
+  category: 8
   difficulty: 2
-  answer_option_a: -3%
-  answer_option_b: -7%
-  answer_option_c: -13%
-  answer_option_d: -17%
+  answer_option_a: 5%
+  answer_option_b: 10%
+  answer_option_c: 25%
+  answer_option_d: 50%
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: 'D''après le Global Carbon Project (GCP), la baisse a été de
-    7% par rapport à 2019, soit 2,4 milliards de tonnes. Du fait bien sûr du ralentissement
-    économique et des différentes restrictions.
-
-
-    « La diminution des émissions en 2020 semble plus prononcée aux Etats-Unis (−
-    12 %), dans l’UE-27 (− 11 %) et en Inde (− 9 %), l’effet des restrictions Covid-19
-    s’ajoutant à une tendance précédente, et étant moins prononcée en Chine (− 1,7
-    %), où les mesures de restriction ont été prises au début de l’année et ont été
-    plus limitées dans le temps »
-
-
-    La baisse est le plus marquée dans le secteur des transports (routier, aérien,
-    ...).'
-  answer_accessible_url: https://www.lemonde.fr/climat/article/2020/12/11/baisse-record-de-7-des-emissions-de-co2-en-2020-liee-au-covid-19_6062971_1652612.html
-  answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/20/highlights.htm
-  answer_image_url: https://pbs.twimg.com/media/EW8GD1LXkAABPng?format=png&name=large
+  answer_explanation: 465 milliards de dollars de dette "durable" ont été émis en
+    2019, ce qui représente que 10% des 5 000 milliards de dollars émis au total.
+  answer_accessible_url: https://about.newenergyfinance.com/blog/sustainable-debt-sees-record-issuance-at-465bn-in-2019-up-78-from-2018/
+  answer_scientific_url: https://www.climatebonds.net/files/reports/2019_annual_highlights-final.pdf
+  answer_image_url: https://assets.bbhub.io/professional/sites/24/Sustainable-finance-market-outlook-2020.-.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'source du graphique : https://twitter.com/iea/status/1256229486015766530'
-  author: Raphael Odini
+  answer_extra_info: ''
+  author: Kim Nguyen-Huu
   validator: ''
   validation_status: A valider
-  added: 2020-12-22
+  added: 2020-12-09
   created: 2020-12-10
   updated: 2020-12-10
   tags:
   - 194
 - id: 677
-  text: Lors du premier confinement en Europe à cause du Covid-19, le traffic aérien
-    à chuté de...
+  text: En 2019 quelle a été la part d'investissement dans les énergies renouvelables
+    dans les investissements mondiaux dans les énergies ?
   hint: ''
   type: QCM
-  category: 2
+  category: 8
   difficulty: 1
-  answer_option_a: -45%
-  answer_option_b: -60%
-  answer_option_c: -75%
-  answer_option_d: -90%
-  answer_correct: d
+  answer_option_a: 10%
+  answer_option_b: 25%
+  answer_option_c: 50%
+  answer_option_d: 75%
+  answer_correct: b
   has_ordered_answers: true
-  answer_explanation: 'Avec les restrictions de déplacements et les fermetures de
-    frontières, beaucoup d''avions été cloués au sol. C''est surtout les vols internationaux
-    qui en ont subi les conséquences.
-
-
-    Pour autant, l''IATA espère un retour à la normal avant 2024. C''est à dire presque
-    40 millions de vol par an (soit 110 000 vols par jour) transportant plus de 4
-    milliards de passagers (en majorité pour du loisir, par classes supérieurs).'
-  answer_accessible_url: https://www.ouest-france.fr/sante/virus/coronavirus/confinement/avec-le-confinement-le-trafic-aerien-en-europe-chute-de-90-compare-il-y-un-6819737
-  answer_scientific_url: ''
-  answer_image_url: https://wolfstreet.com/wp-content/uploads/2020/07/US-IATA-2020-07-29-air-passenger-volume-.png
-  answer_image_explanation: RPK = Revenue-Passenger-Kilometers
+  answer_explanation: En considérant la production et l'approvisionnemnt, 1320 milliards
+    de dollars ont été investis en 2019 dans les énergies dans le monde. 976 concernaient
+    les énergies fossiles alors que 344 concernaient les renouvelables, soit à peu
+    près 25% des investissements.
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.iea.org/reports/world-energy-investment-2020/key-findings#abstract
+  answer_image_url: http://newenergydrupalfs.s3.amazonaws.com/annual_clean_energy_investment_bnef_january_2019.jpg
+  answer_image_explanation: Le graphe s'arrête en 2018 mais la répartition entre les
+    différents investissements a les même proportions en 2019.
   answer_extra_info: ''
-  author: Raphael Odini
+  author: Kim Nguyen-Huu
   validator: ''
   validation_status: A valider
-  added: 2020-12-22
+  added: 2020-12-09
   created: 2020-12-10
   updated: 2020-12-10
   tags:
   - 194
 - id: 678
-  text: Au printemps 2020, quel a été l'impact du confinement sur la consommation
-    électrique en France ?
+  text: Si les 6 plus grandes banques françaises étaient un pays, à quel rang se classerait-il
+    en termes d'émissions de gaz à effet de serre ?
   hint: ''
   type: QCM
-  category: 2
+  category: 8
   difficulty: 1
-  answer_option_a: Elle a augmenté
-  answer_option_b: Elle est resté à peu près pareil
-  answer_option_c: Elle a diminué
-  answer_option_d: ''
-  answer_correct: c
+  answer_option_a: 1er
+  answer_option_b: 3ème
+  answer_option_c: 10ème
+  answer_option_d: 30ème
+  answer_correct: b
   has_ordered_answers: true
-  answer_explanation: 'La consommation d’électricité française a été 15% inférieure
-    en moyenne au niveau habituellement constaté au mois de mars.
-
-
-    Cette baisse est principalement due à la baisse de l’activité économique : fermeture
-    des commerces non essentiels (restaurants, cinémas, magasins …) et ralentissement
-    de l’activité dans le secteur industriel.'
-  answer_accessible_url: https://www.lemonde.fr/blog/huet/2020/04/24/lelectricite-bousculee-par-le-coronavirus/
-  answer_scientific_url: https://www.rte-france.com/actualites/covid19_quels_impacts_sur_la_consommation_electricite
-  answer_image_url: https://asset.lemde.fr/prd-blogs/2020/04/Baisse-conso-elec-RTE.png
-  answer_image_explanation: La consommation du 26 mars 2020 ressemble à celle d’un
-    lundi de Pâques (ici celui de 2018) avec une baisse particulièrement forte durant
-    la matinée. Source RTE.
-  answer_extra_info: 'autres liens :
-
-    - https://www.strategie.gouv.fr/point-de-vue/impacts-de-crise-covid-19-systeme-electrique
-
-    - https://www.youtube.com/watch?v=PiVCLKIYQPQ (Mr Bidouille - Comment le confinement
-    a changé la consommation électrique Française)'
-  author: Raphael Odini
-  validator: ''
-  validation_status: A valider
-  added: 2020-12-22
+  answer_explanation: Oxfam a calculé que les 6 plus grandes banques françaises (BNP
+    Paribas, Sociéte Générale, Crédit Agricole, Groupe BPCE, La Banque Postale, Crédit
+    Mutuel) émettaient au total 3,3 milliards de tonnes équivalent CO2 par an, ce
+    qui les placeraient en 3ème position des pays émetteurs, derrière la Chine (~10
+    milliards de tonnes), et les USA (~5.5 milliards de tonnes) et devant l'Inde (~2.7
+    milliards de tonnes). Elles seraient également au même niveau que l'Union Européenne,
+    ou encore 8 fois celles de la France.
+  answer_accessible_url: http://www.globalcarbonatlas.org/en/CO2-emissions
+  answer_scientific_url: https://www.oxfamfrance.org/rapports/banques-des-engagements-climat-a-prendre-au-4eme-degre/
+  answer_image_url: https://www.outside.fr/wp-content/uploads/2020/10/Oxfam-Banques-720x640.jpg
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Kim Nguyen-Huu
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2020-12-09
   created: 2020-12-10
   updated: 2020-12-10
   tags:
@@ -21038,6 +21017,191 @@
   - 72
   - 194
 - id: 680
+  text: En 2020, quel est le cours de la tonne de CO2 sur le marché européen et combien
+    de barils de pétrole faut-il brûler pour émettre 1 tonne de CO2 ?
+  hint: Cours boursiers du 14 décembre 2020, tout exprimé en USD.
+  type: QCM
+  category: 8
+  difficulty: 3
+  answer_option_a: 36 dollars et à peu près 3 barrils
+  answer_option_b: 48 dollars et à peu près 1 barril
+  answer_option_c: 65 dollars et à peu près 10 barrils
+  answer_option_d: 100 dollars et à peu près 15 barrils
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: La tonne de CO2 échangée sur le marché européen ETS est à 30
+    EUR, soit 36 USD. Pour émettre 1 tonne de CO2 il faut brûler 2.8 barrils de pétrole,
+    ce qui fait 12 USD si on rapporte le prix du CO2 au barril. Ce dernier s'échange
+    à 50 USD et son prix a un écart-type de 11 USD sur la dernière année. A ces niveaux
+    le prix du CO2 n'est pas assez disruptif pour se détourner du pétrole, encore
+    moins s'il retrouvait ses niveaux de fin 2018 à 80 USD ou de 2012 à 130 USD.
+  answer_accessible_url: https://www.barchart.com/futures/quotes/CKZ20/overview
+  answer_scientific_url: https://www.ecologie.gouv.fr/prix-du-carbone
+  answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/EUA_future_real_price.pdf/page1-800px-EUA_future_real_price.pdf.jpg
+  answer_image_explanation: ''
+  answer_extra_info: https://www.boursorama.com/bourse/matieres-premieres/cours/8xBRN/
+  author: Kim Nguyen-Huu
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-14
+  created: 2020-12-15
+  updated: 2020-12-15
+  tags:
+  - 11
+  - 13
+  - 194
+- id: 681
+  text: Dans quel endroit est stocké définitivement le CO2 ?
+  hint: ''
+  type: QCM-RM
+  category: 1
+  difficulty: 2
+  answer_option_a: Dans des mines de charbon
+  answer_option_b: Dans des aquifères salins (poches d'eau salées en profondeur)
+  answer_option_c: Dans des puits de pétrole ou de gaz
+  answer_option_d: Au fond de failles océaniques
+  answer_correct: abc
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: laydgeur
+  validator: ''
+  validation_status: Brouillon
+  added: 2020-12-18
+  created: 2020-12-19
+  updated: 2020-12-19
+  tags:
+  - 13
+- id: 682
+  text: Avec le Covid-19, l'année 2020 a vu une baisse des émissions mondiales de
+    CO2. De combien ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 2
+  answer_option_a: -3%
+  answer_option_b: -7%
+  answer_option_c: -13%
+  answer_option_d: -17%
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: 'D''après le Global Carbon Project (GCP), la baisse a été de
+    7% par rapport à 2019, soit 2,4 milliards de tonnes. Du fait bien sûr du ralentissement
+    économique et des différentes restrictions.
+
+
+    « La diminution des émissions en 2020 semble plus prononcée aux Etats-Unis (−
+    12 %), dans l’UE-27 (− 11 %) et en Inde (− 9 %), l’effet des restrictions Covid-19
+    s’ajoutant à une tendance précédente, et étant moins prononcée en Chine (− 1,7
+    %), où les mesures de restriction ont été prises au début de l’année et ont été
+    plus limitées dans le temps »
+
+
+    La baisse est le plus marquée dans le secteur des transports (routier, aérien,
+    ...).
+
+
+    Mais un rebond économique est attendu pour 2021...'
+  answer_accessible_url: https://www.lemonde.fr/climat/article/2020/12/11/baisse-record-de-7-des-emissions-de-co2-en-2020-liee-au-covid-19_6062971_1652612.html
+  answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/20/highlights.htm
+  answer_image_url: https://pbs.twimg.com/media/EW8GD1LXkAABPng?format=png&name=large
+  answer_image_explanation: ''
+  answer_extra_info: 'source du graphique : https://twitter.com/iea/status/1256229486015766530'
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-22
+  created: 2020-12-24
+  updated: 2020-12-24
+  tags:
+  - 13
+  - 92
+  - 213
+- id: 683
+  text: Lors du premier confinement en Europe à cause du Covid-19, le traffic aérien
+    à chuté de...
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 1
+  answer_option_a: -45%
+  answer_option_b: -60%
+  answer_option_c: -75%
+  answer_option_d: -90%
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: 'Avec les restrictions de déplacements et les fermetures de
+    frontières, beaucoup d''avions été cloués au sol. C''est surtout les vols internationaux
+    qui en ont subi les conséquences.
+
+
+    Pour autant, l''IATA espère un retour à la normal avant 2024. C''est à dire presque
+    40 millions de vol par an (soit 110 000 vols par jour) transportant plus de 4
+    milliards de passagers (en majorité pour du loisir, par classes supérieurs).'
+  answer_accessible_url: https://www.ouest-france.fr/sante/virus/coronavirus/confinement/avec-le-confinement-le-trafic-aerien-en-europe-chute-de-90-compare-il-y-un-6819737
+  answer_scientific_url: ''
+  answer_image_url: https://wolfstreet.com/wp-content/uploads/2020/07/US-IATA-2020-07-29-air-passenger-volume-.png
+  answer_image_explanation: RPK = Revenue-Passenger-Kilometers
+  answer_extra_info: ''
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-22
+  created: 2020-12-24
+  updated: 2020-12-24
+  tags:
+  - 34
+  - 47
+  - 92
+  - 213
+- id: 684
+  text: Au printemps 2020, quel a été l'impact du confinement sur la consommation
+    électrique en France ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 1
+  answer_option_a: Elle a augmenté
+  answer_option_b: Elle est resté à peu près pareil
+  answer_option_c: Elle a diminué
+  answer_option_d: ''
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'La consommation d’électricité française a été 15% inférieure
+    en moyenne au niveau habituellement constaté au mois de mars.
+
+
+    Cette baisse est principalement due à la baisse de l’activité économique : fermeture
+    des commerces non essentiels (restaurants, cinémas, magasins …) et ralentissement
+    de l’activité dans le secteur industriel.'
+  answer_accessible_url: https://www.lemonde.fr/blog/huet/2020/04/24/lelectricite-bousculee-par-le-coronavirus/
+  answer_scientific_url: https://www.rte-france.com/actualites/covid19_quels_impacts_sur_la_consommation_electricite
+  answer_image_url: https://asset.lemde.fr/prd-blogs/2020/04/Baisse-conso-elec-RTE.png
+  answer_image_explanation: La consommation du 26 mars 2020 ressemble à celle d’un
+    lundi de Pâques (ici celui de 2018) avec une baisse particulièrement forte durant
+    la matinée. Source RTE.
+  answer_extra_info: 'autres liens :
+
+    - https://www.strategie.gouv.fr/point-de-vue/impacts-de-crise-covid-19-systeme-electrique
+
+    - https://www.youtube.com/watch?v=PiVCLKIYQPQ (Mr Bidouille - Comment le confinement
+    a changé la consommation électrique Française)'
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-22
+  created: 2020-12-24
+  updated: 2020-12-24
+  tags:
+  - 1
+  - 39
+  - 92
+  - 213
+- id: 685
   text: 2020 sera peut-être l'année la plus chaude jamais enregistrée. Vrai ou Faux
     ?
   hint: ''
@@ -21066,13 +21230,12 @@
   validator: ''
   validation_status: A valider
   added: 2020-12-22
-  created: 2020-12-15
-  updated: 2020-12-15
+  created: 2020-12-24
+  updated: 2020-12-24
   tags:
-  - 11
-  - 13
-  - 194
-- id: 681
+  - 51
+  - 213
+- id: 686
   text: Le 12 Décembre 2020 a été fêté les 5 ans de l'accord de Paris (COP 21). Cet
     accord a pour objectif de contenir l'élévation de la température moyenne de la
     planète «nettement en dessous de 2 °C» en «poursuivant l'action menée pour limiter
@@ -21109,7 +21272,284 @@
   validator: ''
   validation_status: A valider
   added: 2020-12-22
-  created: 2020-12-19
-  updated: 2020-12-19
+  created: 2020-12-24
+  updated: 2020-12-24
   tags:
-  - 13
+  - 24
+  - 38
+  - 51
+  - 213
+- id: 687
+  text: 'La Convention Citoyenne pour le Climat avait pour objectif de proposer des
+    mesures structurantes permettant de réduire les émissions françaises de gaz à
+    effet de serre, dans un esprit de justice sociale. Quel était l''objectif exactement
+    ? '
+  hint: ''
+  type: QCM
+  category: 6
+  difficulty: 2
+  answer_option_a: Réduire d'au moins 30% d'ici 2050 par rapport à 1990
+  answer_option_b: Réduire d'au moins 40% d'ici 2050 par rapport à 1990
+  answer_option_c: Réduire d'au moins 30% d'ici 2030 par rapport à 1990
+  answer_option_d: Réduire d'au moins 40% d'ici 2030 par rapport à 1990
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: Afin de respecter la trajectoire de la Stratégie Nationale Bas
+    Carbone (SNBC).
+  answer_accessible_url: https://www.lesechos.fr/politique-societe/societe/la-convention-citoyenne-pour-le-climat-1137904
+  answer_scientific_url: https://www.conventioncitoyennepourleclimat.fr/foire-aux-questions/
+  answer_image_url: https://www.ecologie.gouv.fr/sites/default/files/Trajectoire%20et%20budgets%20carbone.PNG
+  answer_image_explanation: ''
+  answer_extra_info: 'Comment les 150 ont-ils été sélectionnés ? : https://www.conventioncitoyennepourleclimat.fr/wp-content/uploads/2019/09/CCC-infogrpahie-critere-representativite-1-1024x921.png'
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-22
+  created: 2020-12-24
+  updated: 2020-12-24
+  tags:
+  - 1
+  - 213
+  - 214
+- id: 688
+  text: En 2020, quelle a été l'évolution de la déforestation en Amazonie brésilienne
+    (par rapport à 2019) ?
+  hint: ''
+  type: QCM
+  category: 4
+  difficulty: 1
+  answer_option_a: -10%
+  answer_option_b: aucune évolution
+  answer_option_c: +10%
+  answer_option_d: ''
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'En 2020, plus de 11 000 km² ont été détruits (soit la superficie
+    de la Jamaique). C''est une hausse de 9,5% par rapport à 2019, et le plus haut
+    chiffre depuis 12 ans.
+
+
+    Le gouvernement de Bolsonaro est pour partie responsable de cette hausse, car
+    il appelle à légaliser l’agriculture (soja, pâturages pour bovins, ...) ou les
+    activités minières dans des zones protégées et a réduit les fonds pour les programmes
+    de protection de l’environnement.
+
+
+    Les incendies ont eux augmenté de 30%, après avoir triplé entre 2018 et 2019.'
+  answer_accessible_url: https://www.la-croix.com/deforestation-Amazonie-bresilienne-haut-12-ans-2020-12-01-1301127563
+  answer_scientific_url: ''
+  answer_image_url: https://media.lesechos.com/api/v1/images/view/5fc6861cd286c27f782a1c86/par_defaut/image.jpg
+  answer_image_explanation: ''
+  answer_extra_info: 'source de l''image : https://www.lesechos.fr/monde/ameriques/nouvelle-poussee-de-la-deforestation-au-bresil-1270055
+
+
+    incendies 2020 au Brésil : https://www.la-croix.com/Monde/Amazonie-intensification-catastrophique-previsible-incendies-2020-08-04-1201107701
+
+
+    Entre 2000 et 2018, l''Amazonie a perdu 8% de sa surface (équivalent à la surface
+    de l''Espagne) : https://www.leparisien.fr/environnement/deforestation-en-18-ans-la-foret-amazonienne-a-perdu-la-surface-de-l-espagne-08-12-2020-8413179.php'
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-23
+  created: 2020-12-24
+  updated: 2020-12-24
+  tags:
+  - 19
+  - 213
+  - 215
+- id: 689
+  text: Amazonie, Sud de l'Afrique, Californie, Sibérie, 2020 a été une année record
+    en terme d'incendies dans le monde. Vrai ou Faux ?
+  hint: ''
+  type: VF
+  category: 4
+  difficulty: 2
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: 'Paradoxalement, l''année 2020 a vu des feux plus intenses mais
+    moins nombreux, avec un solde d''émissions CO2 en baisse.
+
+
+    Source : Service Copernicus pour la surveillance de l''atmosphère (CAMS)'
+  answer_accessible_url: https://www.lesechos.fr/monde/enjeux-internationaux/climat-les-incendies-de-foret-polluent-de-moins-en-moins-la-planete-1274256
+  answer_scientific_url: https://atmosphere.copernicus.eu/wildfires-americas-and-tropical-africa-2020-compared-previous-years
+  answer_image_url: https://atmosphere.copernicus.eu/sites/default/files/inline-images/cams_gfas_global_monthly_c_january_december_2003_2020_small.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-23
+  created: 2020-12-24
+  updated: 2020-12-24
+  tags:
+  - 19
+  - 63
+  - 213
+- id: 690
+  text: En 2020, il y a eu beaucoup d'annonces en faveur du train de nuit. Mais aujourd'hui
+    en France, combien de lignes nationales sont-elles en service ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 3
+  answer_option_a: Aucune
+  answer_option_b: '2'
+  answer_option_c: '5'
+  answer_option_d: '10'
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: 'Les 2 lignes encore en service sont « Paris - Besançon » et
+    « Paris - Toulouse - Rodez - Latour-de-Carol ».
+
+
+    Problèmes de rentabilité, rames vieillissantes, absence de discussions transfrontalières,
+    et focus sur le TGV sont les multiples raisons de la disparition progressive de
+    lignes en France ces 20 dernières années.
+
+
+    D''ici 2022, 2 nouveaux trains de nuits devraient voir le jour : « Paris - Nice
+    » et « Paris - Hendaye ». Et en Europe, 4 compagnies européennes (SNCF, DB, ÖBB,
+    CFF) ont annoncé la création de six grandes lignes transfrontalières.'
+  answer_accessible_url: https://www.francetvinfo.fr/economie/transports/sncf/video-en-europe-les-trains-de-nuit-font-leur-retour_4219615.html
+  answer_scientific_url: ''
+  answer_image_url: https://reporterre.net/IMG/jpg/sans_titre-1.jpg
+  answer_image_explanation: ''
+  answer_extra_info: 'tweet avec carte annonce lignes transfrontalières : https://twitter.com/seatsixtyone/status/1336293208343666692'
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-23
+  created: 2020-12-24
+  updated: 2020-12-24
+  tags:
+  - 33
+  - 42
+  - 213
+- id: 691
+  text: En 2020 en France, quelle était la part des voitures électriques dans l'immatriculation
+    des voitures neuves ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 3%
+  answer_option_b: 6%
+  answer_option_c: 9%
+  answer_option_d: 12%
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: 'Après huit mois, les voitures électriques représentent un peu
+    plus de 6% des ventes neuves, et les hybrides un peu moins de 12%. Cela fait 180
+    000 voitures neuves vendues avec une part d''électrique dans leur motorisation.
+
+
+    Prime à la conversion élargie, bonus écologique, autonomie en hausse sont autant
+    d''explications à cet essor.'
+  answer_accessible_url: https://www.leparisien.fr/economie/automobile-pourquoi-2020-est-une-annee-electrique-01-10-2020-8395026.php
+  answer_scientific_url: ''
+  answer_image_url: https://www.leparisien.fr/resizer/x6mOI7LpiEdvCOQj_gIHtcmz5vI=/1167x1280/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/LGKGNNXPORZ5UHSA4OHS7ZPYE4.jpg
+  answer_image_explanation: Un succès qui ne s'arrête pas aux grandes villes
+  answer_extra_info: question 120 pose la même question pour l'année 2017
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-23
+  created: 2020-12-24
+  updated: 2020-12-24
+  tags:
+  - 1
+  - 33
+  - 35
+  - 60
+  - 213
+- id: 692
+  text: L'année 2020 aura été marquée par l'usage massif du vélo. Dans le cadre du
+    programme « Coup de pouce vélo », lancé en mai 2020, une prise en charge jusqu'à
+    50 euros était possible pour la remise en état d'un vélo. Combien y'a-t-il eu
+    de bénéficiaires ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 100 000 réparations
+  answer_option_b: 500 000 réparations
+  answer_option_c: 1 million de réparations
+  answer_option_d: 10 millions de réparations
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'A la sortie du premier confinement, un plan vélo d''envergure
+    a permis de financer ce programme, ainsi que la création de 1000km de pistes cyclables
+    supplémentaires, et un plan pour former des centaines de réparateurs certifiés
+    dans les prochaines années. Le programme « Coup de pouce vélo » a été prolongé
+    jusqu''au 31 Mars 2021.
+
+
+    Durant l''été, les déplacements à vélo auraient augmenté en moyenne de 30 % par
+    rapport à la même période en 2019. Il pourrait représenter 5% des déplacements
+    en 2021.
+
+
+    Seule ombre au tableau : la baisse de fréquentation des transports en communs.'
+  answer_accessible_url: https://www.lejdd.fr/Societe/un-million-de-francais-ont-fait-reparer-leur-velo-depuis-mai-4007240
+  answer_scientific_url: https://www.ecologie.gouv.fr/ministere-transition-ecologique-consolide-soutien-pratique-du-velo
+  answer_image_url: https://static.latribune.fr/full_width/1528551/velo.jpg
+  answer_image_explanation: Nombre de vélos passant devant les sites de comptage à
+    Paris, par heure.
+  answer_extra_info: 'Plan vélo Mai 2020 : https://www.ecologie.gouv.fr/sites/default/files/20200529_DP_VELO_MTES.pdf
+
+
+    article intéressant : https://www.la-croix.com/Economie/Velo-Covid-19-Francais-sont-remis-selle-2020-08-22-1201110255'
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-23
+  created: 2020-12-24
+  updated: 2020-12-24
+  tags:
+  - 1
+  - 33
+  - 43
+  - 213
+- id: 693
+  text: Quelle est la part modale du vélo dans les transports quotidiens des français
+    ? (en 2018)
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 3
+  answer_option_a: 1%
+  answer_option_b: 3%
+  answer_option_c: 6%
+  answer_option_d: 9%
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: 'Grâce à l''année 2020 (grèves, covid, plan de relance) et l''augmentation
+    significative de l''usage du vélo, cette part devrait passer à 5% en 2021.
+
+
+    9% c''est l''objectif à horizon 2024 dans le cadre du Plan « Vélo et mobilités
+    actives » présenté par le gouvernement en septembre 2018.
+
+
+    Et 12% en 2030, chiffre qui correspond à la part modale vélo en Allemagne aujourd’hui.'
+  answer_accessible_url: https://www.connaissancedesenergies.org/le-velo-un-avenir-radieux-dans-le-monde-dapres-200518
+  answer_scientific_url: https://www.ecologie.gouv.fr/plan-velo-et-mobilites-actives
+  answer_image_url: https://www.france-ecotours.com/media/infographie_1.png
+  answer_image_explanation: Chiffres de 2018
+  answer_extra_info: 'article intéressant : https://www.velo-territoires.org/actualite/2020/10/08/deux-ans-plan-velo-12-de-part-modale-velo-2030/'
+  author: Raphael Odini
+  validator: ''
+  validation_status: A valider
+  added: 2020-12-23
+  created: 2020-12-24
+  updated: 2020-12-24
+  tags:
+  - 1
+  - 33
+  - 43
