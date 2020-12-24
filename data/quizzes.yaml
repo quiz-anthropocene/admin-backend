@@ -455,20 +455,21 @@
     2019), un atlas-manuel d’histoire mondiale. Il a dernièrement codirigé, avec Laurent
     Aillet, <em>Collapsus. Changer ou disparaître ? Le vrai bilan sur notre planète</em>
     (Albin Michel, 2020), réunissant 40 auteurs autour de la notion d’effondrement.
-    Il nous fait partager, dans ce quiz, quelques tournants de l’histoire des humains
-    et de leurs milieux.</p>
-  conclusion: <p>Ce quiz s'est attaché à montrer comment des événements climatiques,
-    des inventions, des conquêtes ont pu avoir une influence imprévue mais déterminante
-    dans notre interaction avec l'environnement.On espère qu'il aura suscité votre
-    curiosité. Pour aller plus loin, vous pouvez vous plonger dans les ouvrages de
-    Laurent, ou continuer dans le même esprit avec le <a href="https://quizanthropocene.fr/quiz/3">quiz
+    Dans ce quiz, ill nous donne à découvrir quelques tournants méconnus de l’histoire
+    de l'homme avec son milieu.</p>
+  conclusion: <p>Comment anticiper l'avenir sans chercher à comprendre le passé ?
+    Ce quiz s'est attaché à montrer comment des événements climatiques, des inventions,
+    des conquêtes ont pu avoir une influence imprévue mais déterminante dans notre
+    interaction avec l'environnement.On espère qu'il aura suscité votre curiosité.
+    Pour aller plus loin, vous pouvez vous plonger dans les ouvrages de Laurent, ou
+    continuer dans le même esprit avec le <a href="https://quizanthropocene.fr/quiz/3">quiz
     de Vincent Mignerot</a>.</p>
-  difficulty_average: 2.2857142857142856
+  difficulty_average: 2.5
   author: Laurent Testot
   image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
-  publish: true
+  publish: false
   created: 2020-09-23
-  updated: 2020-12-22
+  updated: 2020-12-24
   questions:
   - 571
   - 572
@@ -477,6 +478,7 @@
   - 578
   - 579
   - 580
+  - 581
   tags:
   - 185
 - id: 52
@@ -639,7 +641,7 @@
   - 582
   tags: []
 - id: 57
-  name: 2020 en chiffres
+  name: NOUVEAU - 2020 en chiffres
   introduction: ''
   conclusion: ''
   difficulty_average: 1.8333333333333333
