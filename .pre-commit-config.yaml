@@ -1,6 +1,12 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
-# Setup: pre-commit install
+
+# How to run pre-commit inside folder ?
+# https://github.com/pre-commit/pre-commit/issues/1110
+
+# How-to install locally ?
+# pre-commit install
+
 repos:
   - repo: https://github.com/ambv/black
     rev: stable
