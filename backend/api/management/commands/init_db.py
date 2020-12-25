@@ -14,13 +14,13 @@ from api.models import (
 )
 
 
-CONFIGURATION_FILE_PATH = "data/configuration.yaml"
-CATEGORIES_FILE_PATH = "data/categories.yaml"
-TAGS_FILE_PATH = "data/tags.yaml"
-QUESTIONS_FILE_PATH = "data/questions.yaml"
-QUIZZES_FILE_PATH = "data/quizzes.yaml"
-QUIZ_RELATIONSHIPS_FILE_PATH = "data/quiz-relationships.yaml"
-GLOSSARY_FILE_PATH = "data/ressources-glossaire.yaml"
+CONFIGURATION_FILE_PATH = "../data/configuration.yaml"
+CATEGORIES_FILE_PATH = "../data/categories.yaml"
+TAGS_FILE_PATH = "../data/tags.yaml"
+QUESTIONS_FILE_PATH = "../data/questions.yaml"
+QUIZZES_FILE_PATH = "../data/quizzes.yaml"
+QUIZ_RELATIONSHIPS_FILE_PATH = "../data/quiz-relationships.yaml"
+GLOSSARY_FILE_PATH = "../data/ressources-glossaire.yaml"
 
 
 class Command(BaseCommand):
