@@ -106,9 +106,10 @@ La donnée est lue directement depuis les fichiers yaml dans le dossier `/data`.
     ```
 - Installez les dépendances du Backend
     ```
+    cd backend
     pip install -r requirements.txt
     ```
-- Dupliquer le fichier `.env.example` et le renommer en `.env`
+- Dupliquer le fichier `backend/.env.example` et le renommer en `backend/.env`
 - Installez [PostgreSQL](https://www.postgresql.org)
 - Créez la base de donnée
     ```
@@ -140,6 +141,7 @@ La donnée est lue directement depuis les fichiers yaml dans le dossier `/data`.
 ##### Lancer le Backend (optionnel)
 
 ```
+cd backend
 python manage.py runserver
 ```
 
@@ -158,6 +160,7 @@ Le Frontend sera accessible à l'url `http://localhost:8080`
 
 Créez d'abord un utilisateur admin
 ```
+cd backend
 python manage.py createsuperuser --username admin@email.com
 ```
 
@@ -197,6 +200,8 @@ yarn lint
 
 ### Autres commandes utiles
 
+#### Backend
+
 Importer toute la donnée dans la base de donnée
 ```
 python manage.py init_db
@@ -225,9 +230,10 @@ Réinitialiser les stats d'une question
 python manage.py reset_question_stats <question_id>
 ```
 
+#### Frontend
+
 Lancer le Frontend "en mode production"
 ```
-cd frontend
 yarn build
 // installer le package 'serve' : npm install -g serve
 serve -s dist
@@ -235,9 +241,10 @@ serve -s dist
 
 Launch the Vue.js UI
 ```
-cd frontend
 vue ui
 ```
+
+#### Autres
 
 Mettre à jour l'instance Metabase sur Heroku
 - https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-heroku.html
