@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="0">
+
+  <testsuite name="test-with-pageobjects"
+    errors="0" failures="0" hostname="" id="" package="test-with-pageobjects" skipped="2"
+    tests="0" time="0" timestamp="">
+  
+
+  
+
+    
+
+  
+    
+    <testcase
+      name="e2e tests using page objects" classname="test-with-pageobjects">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="verify if string &#34;e2e-nightwatch&#34; is within the cli plugin links" classname="test-with-pageobjects">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>
