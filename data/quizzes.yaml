@@ -444,7 +444,7 @@
   - 49
   - 76
 - id: 18
-  name: Quiz de Laurent Testot, histoire environnementale
+  name: NOUVEAU - Quiz de Laurent Testot
   introduction: <p>Laurent Testot est journaliste, conférencier et formateur. Il se
     consacre à la promotion en France de l’histoire globale, une méthode transdisciplinaire
     d’analyse de l’histoire à grandes échelles. Son premier livre, <em>Cataclysmes.
@@ -456,13 +456,13 @@
     Aillet, <em>Collapsus. Changer ou disparaître ? Le vrai bilan sur notre planète</em>
     (Albin Michel, 2020), réunissant 40 auteurs autour de la notion d’effondrement.
     Dans ce quiz, ill nous donne à découvrir quelques tournants méconnus de l’histoire
-    de l'homme avec son milieu.</p>
+    de l'homme avec son milieu.Laurent complète la réponse avec des explications audios
+    très fouillées, ne manquez pas de les écouter.</p>
   conclusion: <p>Comment anticiper l'avenir sans chercher à comprendre le passé ?
     Ce quiz s'est attaché à montrer comment des événements climatiques, des inventions,
     des conquêtes ont pu avoir une influence imprévue mais déterminante dans notre
-    interaction avec l'environnement.On espère qu'il aura suscité votre curiosité.
-    Pour aller plus loin, vous pouvez vous plonger dans les ouvrages de Laurent, ou
-    continuer dans le même esprit avec le <a href="https://quizanthropocene.fr/quiz/3">quiz
+    interaction avec l'environnement. Pour aller plus loin, vous pouvez vous plonger
+    dans les ouvrages de Laurent, ou continuer dans le même esprit avec le <a href="https://quizanthropocene.fr/quiz/3">quiz
     de Vincent Mignerot</a>.</p>
   difficulty_average: 2.5
   author: Laurent Testot
@@ -479,8 +479,7 @@
   - 579
   - 580
   - 581
-  tags:
-  - 185
+  tags: []
 - id: 52
   name: Le quiz de Bon Pote sur la finance "verte"
   introduction: '<p>Je vous présente Thomas, alias Bon Pote. Thomas a commencé à bloguer
