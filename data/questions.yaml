@@ -485,7 +485,7 @@
     a duré 10,000 ans.
   answer_accessible_url: http://www.meteofrance.fr/climat-passe-et-futur/le-rechauffement-observe-a-l-echelle-du-globe-et-en-france
   answer_scientific_url: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/raw/master/api/static/images/questions/16_evolution-temperature.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/016.jpg
   answer_image_explanation: ''
   answer_extra_info: 'Source image: http://www.donnees.statistiques.developpement-durable.gouv.fr/lesessentiels/climat/images/effet-de-serre-2-b.jpg'
   author: Avenir Climatique
@@ -2060,7 +2060,7 @@
     Le reste (~25%) est absorbé par la végétation.'
   answer_accessible_url: https://reseauactionclimat.org/stockage-carbone-sol-rechauffement-climatique/
   answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/19/presentation.htm
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/66.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/066.png
   answer_image_explanation: A gauche, les sources. A droite, les puits. Les 4% représentent
     le déséquilibre.
   answer_extra_info: ''
@@ -3252,7 +3252,7 @@
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
   answer_image_url: https://www.connaissancedesenergies.org/sites/default/files/album_images/consommation-energie-primaire-monde-2018_zoom.png
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r001.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/001.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -3345,7 +3345,7 @@
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
   answer_image_url: https://ourworldindata.org/grapher/exports/energy-consumption-by-source-and-region.png
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r004.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/004.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -3491,7 +3491,7 @@
     dans le monde. Tout le reste est brûlé, majoritairement dans les transports.
   answer_accessible_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Oil&indicator=Oil%20products%20final%20consumption%20by%20sector
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r009.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/009.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -3523,7 +3523,7 @@
     \ ordre de grandeur 100 heures d'un humain qui pédalerait sur une dynamo."
   answer_accessible_url: https://fr.wikipedia.org/wiki/Ordres_de_grandeur_d%27%C3%A9nergie
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/documentation-gene/index/page/New_liquides
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/112.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/112.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -3645,7 +3645,7 @@
   answer_scientific_url: https://www.eia.gov/tools/faqs/faq.php?id=709&t=6
   answer_image_url: https://cdn.statcdn.com/Infographic/images/normal/19382.jpeg
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r014.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/014.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -3671,7 +3671,7 @@
     ! Le 3ème est l'Iran et le 4ème l'Arabie Saoudite.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-43-chiffres-cles-de-l-energie-edition-_2018-septembre2018.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r015.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/015.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -3702,7 +3702,7 @@
     280ppm, jusqu’au début de l’ère industrielle vers 1750-1800.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter06_FINAL.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r016.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/016.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -3732,7 +3732,7 @@
     hors fonte.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-43-chiffres-cles-de-l-energie-edition-_2018-septembre2018.pdf#page39
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r017.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/017.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -3760,7 +3760,7 @@
   answer_explanation: Soit à peine 25 000 véhicules sur un total de plus de 2,1 millions.
   answer_accessible_url: ''
   answer_scientific_url: https://ccfa.fr/wp-content/uploads/2018/09/analyse_statistiques_2018_fr.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r018.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/018.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -3847,7 +3847,7 @@
   answer_explanation: CO2, CH4, N2O, HFC, PFC, SF6, NF3
   answer_accessible_url: ''
   answer_scientific_url: https://treaties.un.org/doc/Treaties/2012/12/20121217%2011-40%20AM/CN.718.2012.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r021.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/021.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -3874,7 +3874,7 @@
     (31%), l’industrie (19%). L’agriculture est loin derrière à 3%.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-43-chiffres-cles-de-l-energie-edition-_2018-septembre2018.pdf#page20
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r022.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/022.jpg
   answer_image_explanation: ''
   answer_extra_info: doublon avec la 11
   author: laydgeur
@@ -3964,9 +3964,9 @@
     et le Danemark 30.
   answer_accessible_url: ''
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r025a.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/025a.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'autre image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r025b.jpg
+  answer_extra_info: 'autre image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/025b.jpg
 
 
     Source Fr : https://www.rte-france.com/fr/eco2mix/donnees-en-energie Source autres
@@ -3997,7 +3997,7 @@
     avec 42% du total. Suivie par la Russie (19%), Pays-Bas (10%) et Algérie (8%).
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-43-chiffres-cles-de-l-energie-edition-_2018-septembre2018.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r026.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/026.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -4027,7 +4027,7 @@
     atteindra +1,5°C en 2040.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/sites/2/2019/02/SR15_Chapter1_Low_Res.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r027.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/027.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -4059,7 +4059,7 @@
     de tonnes de glace.
   answer_accessible_url: https://climate.nasa.gov/vital-signs/ice-sheets/
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r028.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/028.jpg
   answer_image_explanation: ''
   answer_extra_info: Doublon avec la 305
   author: laydgeur
@@ -4089,7 +4089,7 @@
     émis par la terre, puis ré-émettent cette chaleur dans toutes les directions.
   answer_accessible_url: https://fr.m.wikipedia.org/wiki/Effet_de_serre
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r029.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/029.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -4119,7 +4119,7 @@
     de couvrir 1% de ses besoins en pétrole.'
   answer_accessible_url: https://www.la-croix.com/Sciences-et-ethique/Environnement/Ou-trouve-petrole-France-2017-11-07-1200890170
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-43-chiffres-cles-de-l-energie-edition-_2018-septembre2018.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r030.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/030.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -4176,7 +4176,7 @@
   answer_explanation: 'Hypothèses du calcul: Airbus A320 avec 150 passagers'
   answer_accessible_url: https://eco-calculateur.dta.aviation-civile.gouv.fr/
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r032.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/032.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -4205,7 +4205,7 @@
     2ème, suivi par les biocarburants et l'éolien.
   answer_accessible_url: https://www.capital.fr/economie-politique/energies-renouvelables-ou-en-est-la-france-1343976
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-35-cc-des-energies-renouvelables-edition-2018-mai2018-c.pdf#page7
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r033.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/033.png
   answer_image_explanation: ''
   answer_extra_info: 'https://twitter.com/laydgeur/status/1098348146135044097
 
@@ -4238,7 +4238,7 @@
   answer_explanation: Près de 80% de ces déplacements est fait en voiture.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-31-chiffres-cles-transport-mars2018-c.pdf#page20
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r034.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/034.png
   answer_image_explanation: ''
   answer_extra_info: 'images alternatives:
 
@@ -4273,7 +4273,7 @@
     est absorbée par les océans.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter03_FINAL.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r035.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/035.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -4375,7 +4375,7 @@
     routier le plus dense.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-31-chiffres-cles-transport-mars2018-c.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r038.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/038.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -4403,7 +4403,7 @@
     et enfin l’hydraulique.
   answer_accessible_url: https://fr.wikipedia.org/wiki/%C3%89nergie_en_Su%C3%A8de#Ressources_%C3%A9nerg%C3%A9tiques
   answer_scientific_url: http://www.energimyndigheten.se/en/news/2019/energy-in-sweden---facts-and-figures-2019-available-now/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r039.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/039.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -4431,7 +4431,7 @@
     du territoire métropolitain.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-36-environnement-agriculture-les-cc-edition-2018-juin2018.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r040.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/040.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -4466,7 +4466,7 @@
   answer_extra_info: 'Réponse initiale: Il y a 20 millions d’années.
 
 
-    Image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r041.jpg
+    Image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/041.jpg
 
 
     Image alternative: http://www.illustratedcuriosity.com/files/media/39990/wmo.jpg'
@@ -4533,7 +4533,7 @@
     10000 dans le groupe III'
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/03/WGIII_AR5_FactSheet-1.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/145.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/145.jpg
   answer_image_explanation: Exemples d'un rapport du GIEC listant les références des
     études scientifiques sur lequel il s'est appuyé. Il y a des centaines de pages
     comme celles-ci.
@@ -4563,7 +4563,7 @@
     mécaniques
   answer_accessible_url: ''
   answer_scientific_url: http://www.strmtg.developpement-durable.gouv.fr/IMG/pdf/parc_et_trafic_2018.pdf#page12
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r044.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/044.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -4619,7 +4619,7 @@
     407 Mtep en 2016, contre 317 pour le pétrole
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r046.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/046.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -4650,7 +4650,7 @@
   answer_scientific_url: https://www.iea.org/reports/key-world-energy-statistics-2019
   answer_image_url: https://149354316.v2.pressablecdn.com/wp-content/uploads/2019/11/20191127_Russia_02-1.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r047.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/047.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -4678,7 +4678,7 @@
     beurre. On mange certes pas les mêmes quantités de beurre que du reste !'
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/Datalab-25-menages-environnement-cc-ed-2017-oct2017-b.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r048.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/048.jpg
   answer_image_explanation: ''
   answer_extra_info: "images alternatives: \n- https://pbs.twimg.com/media/DN6nizmUQAAGXwY.jpg\n\
     - https://jancovici.com/wp-content/uploads/2010/01/assiette_graph5_en.png"
@@ -4712,7 +4712,7 @@
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-12/datalab-46-chiffres-cles-du-climat-edition-2019-novembre2018_1.pdf
   answer_image_url: https://upload.wikimedia.org/wikipedia/commons/7/72/Global_warming_potential.png
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r049.png'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/049.png'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -4740,7 +4740,7 @@
   answer_scientific_url: http://www.meteofrance.fr/actualites/78251648-france-2019-au-3e-rang-des-annees-les-plus-chaudes
   answer_image_url: http://www.meteofrance.fr/documents/10192/69785107/Graphe_Ecart-temperature_1900_2018.png/
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r050.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/050.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -4768,7 +4768,7 @@
   answer_scientific_url: https://unctad.org/en/PublicationsLibrary/rmt2018_en.pdf
   answer_image_url: http://geoconfluences.ens-lyon.fr/images/img-eurocorridors/img-hackenberg/graphique1.png
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r051.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/051.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -4799,7 +4799,7 @@
     La Chine est 2ème pour les pétroliers mais 1ère tous navires confondus.
   answer_accessible_url: ''
   answer_scientific_url: https://unctad.org/en/PublicationsLibrary/rmt2018_en.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r052.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/052.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -4831,7 +4831,7 @@
     à environ 15 pétroliers chargés sortant chaque jour (+15 navires vides entrant).
   answer_accessible_url: https://www.lepoint.fr/monde/ormuz-le-detroit-ou-tremble-le-monde-31-07-2019-2327820_24.php
   answer_scientific_url: https://www.eia.gov/international/analysis/special-topics/World_Oil_Transit_Chokepoints
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r053.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/053.jpg
   answer_image_explanation: Basé sur des chiffres de 2016.
   answer_extra_info: 'images alternatives:
 
@@ -4906,9 +4906,9 @@
   answer_image_explanation: ''
   answer_extra_info: 'images originales:
 
-    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r055a.jpg
+    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/055a.jpg
 
-    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r055b.jpg'
+    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/055b.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -4939,9 +4939,9 @@
     place mondiale, juste après l’Inde.
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/reports/key-world-energy-statistics-2019
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r056a.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/056a.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'autre image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r056b.jpg'
+  answer_extra_info: 'autre image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/056b.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Écartée
@@ -4970,7 +4970,7 @@
     par français.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-12/datalab-46-chiffres-cles-du-climat-edition-2019-novembre2018_1.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r057.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/057.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5007,7 +5007,7 @@
     à partir d''hydroélectricité.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/160.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/160.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5039,7 +5039,7 @@
   answer_scientific_url: https://www.iea.org/reports/key-world-energy-statistics-2019
   answer_image_url: https://i1.wp.com/images.mapsofworld.com/answers/2018/08/map-coal-producing-countries.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r059.jpg
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/059.jpg
 
     image alternative: https://ourworldindata.org/grapher/exports/coal-production-by-region.png
     (affiche la production de charbon par région, pas par pays)'
@@ -5070,7 +5070,7 @@
     la totalité de l’énergie utilisée en Inde, 3ème mondial (862 Mtep).
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/reports/key-world-energy-statistics-2019
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r060.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/060.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5099,7 +5099,7 @@
     voitures (13200km par an à 111gCO2/km)
   answer_accessible_url: ''
   answer_scientific_url: https://www.autoroutes.fr/FCKeditor/UserFiles/File/ASFA_Chiffres_Cles18(2).pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r061.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/061.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5126,7 +5126,7 @@
     La Chine est 2ème, l'Italie 4ème, et la Turquie 5ème.
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/reports/key-world-energy-statistics-2019
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r062.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/062.png
   answer_image_explanation: ''
   answer_extra_info: 'image alternative: https://www.connaissancedesenergies.org/sites/default/files/album_images/GNL-pays-exportateurs-pays-importateurs-dans-monde_zoom.png
     (import vs import net ?)'
@@ -5156,7 +5156,7 @@
   answer_scientific_url: https://ec.europa.eu/eurostat/tgm/graph.do?tab=graph&plugin=1&pcode=t2020_rd300&language=en&toolbox=sort
   answer_image_url: https://stock.rtl.lu/rtl/728/rtl2008.lu/nt/p/2019/12/12/00/5861f8cdff6ffd87e4b6311f64707d7d.jpeg
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r063.png'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/063.png'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -5181,7 +5181,7 @@
   answer_explanation: Il y a dans le monde 19 grandes régions qui possèdent des glaciers
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter04_FINAL.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r064.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/064.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5240,7 +5240,7 @@
     un peu moins que les émissions de Malte (2,2 Mt).
   answer_accessible_url: ''
   answer_scientific_url: https://thewaltdisneycompany.com/app/uploads/2019/03/2018-CSR-Report.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r066.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/066.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5268,7 +5268,7 @@
     est estimée à 50 Mt CO2eq.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-12/datalab-46-chiffres-cles-du-climat-edition-2019-novembre2018_1.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r067a.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/067a.jpg
   answer_image_explanation: En France, la séquestration nette de carbone dans la biomasse
     des forêts est estimée à environ 50 Mt CO2éq, soit environ 12 % des émissions
     nationales de carbone fossile hors utilisation des terres, changement d’affectation
@@ -5302,7 +5302,7 @@
     producteur mondial).
   answer_accessible_url: ''
   answer_scientific_url: https://webstore.iea.org/coal-information-2019
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r068.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/068.jpg
   answer_image_explanation: ''
   answer_extra_info: 'la Chine n’en produit pas ?
 
@@ -5337,7 +5337,7 @@
   answer_scientific_url: https://data-ogauthority.opendata.arcgis.com/
   answer_image_url: https://qph.fs.quoracdn.net/main-qimg-9d0f2589ec5e938f922c5ae156629080
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r069.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/069.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -5365,7 +5365,7 @@
     soit la totalité des émissions de gaz à effet de serre du Portugal ou de l'Autriche.
   answer_accessible_url: ''
   answer_scientific_url: https://ec.europa.eu/eurostat/fr/data/database
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r070.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/070.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5422,7 +5422,7 @@
     sans énergie, pas de PIB !'
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-43-chiffres-cles-de-l-energie-edition-_2018-septembre2018.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r073.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/073.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5484,9 +5484,9 @@
     bovins, ovins, ...), et 25% provient de la gestion des déchets.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-12/datalab-46-chiffres-cles-du-climat-edition-2019-novembre2018_1.pdf#page36
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/176.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/176.png
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r075.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/075.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -5544,7 +5544,7 @@
     pieds, soit environ 5600m.
   answer_accessible_url: ''
   answer_scientific_url: https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/sustainability/issue-briefings/deepwater-horizon-accident-investigation-report.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r077.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/077.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5573,7 +5573,7 @@
   answer_scientific_url: https://www.acea.be/statistics/tag/category/key-figures
   answer_image_url: https://media.ouest-france.fr/v1/pictures/MjAxNzEwNTkxOGE1ODQ0YzBmOTY4ZjAxMzExMTkxOTMwOWNiYzc
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r078.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/078.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -5602,7 +5602,7 @@
     et ils majoritairement le fait des populations les plus aisées.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_chapter8.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r079.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/079.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5659,7 +5659,7 @@
     jusqu’à environ 10-15 km d’altitude
   answer_accessible_url: https://scied.ucar.edu/atmosphere-layers
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r081.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/081.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5686,7 +5686,7 @@
     près de 60% du ciment
   answer_accessible_url: ''
   answer_scientific_url: https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/mcs-2019-cemen_0.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r082.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/082.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5717,7 +5717,7 @@
     ?
   answer_accessible_url: https://www.liberation.fr/france/2019/11/07/combien-pese-l-energie-dans-notre-budget_1761886
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-43-chiffres-cles-de-l-energie-edition-_2018-septembre2018.pdf#page13
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r083.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/083.jpg
   answer_image_explanation: ''
   answer_extra_info: 'image alternative: https://medias.liberation.fr/photo/1267308-carbuburants.jpg'
   author: laydgeur
@@ -5807,7 +5807,7 @@
     16000 espèces différentes.
   answer_accessible_url: ''
   answer_scientific_url: https://science.sciencemag.org/content/342/6156/1243092
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r086.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/086.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5835,7 +5835,7 @@
     Climate and Earth-System Simulator).
   answer_accessible_url: ''
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r087.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/087.jpg
   answer_image_explanation: ''
   answer_extra_info: 'Source 1 : http://www.meteofrance.fr/prevoir-le-temps/la-prevision-du-temps/les-modeles-de-prevision-de-meteo-france
     Source 2 : http://www.bom.gov.au/australia/charts/about/about_access.shtml'
@@ -5865,7 +5865,7 @@
     est 4ème.
   answer_accessible_url: ''
   answer_scientific_url: https://www.acea.be/statistics/tag/category/vehicles-per-capita-by-country/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r088.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/088.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -5897,7 +5897,7 @@
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r088.jpg
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/088.jpg
 
     Source 1 : https://skepticalscience.net/pdf/rebuttal/CO2-emissions-correlation-with-CO2-concentration-intermediate.pdf
     2 : https://climate.nasa.gov/vital-signs/carbon-dioxide/'
@@ -5957,7 +5957,7 @@
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2017/09/WG1AR5_Chapter01_FINAL.pdf
   answer_image_url: https://globalclimat.files.wordpress.com/2015/12/time_tas_world_mon1_ave12_ref1986-2005_1900-2100_cmip5one_rcp26_rcp45_rcp60_rcp85.png
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r091.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/091.jpg'
   author: laydgeur
   validator: Raphael Odini
   validation_status: Écartée
@@ -5990,7 +5990,7 @@
   answer_scientific_url: https://scrippsco2.ucsd.edu/history_legacy/early_keeling_curve.html
   answer_image_url: https://www.esrl.noaa.gov/gmd/webdata/ccgg/trends/co2_data_mlo.png
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r092.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/092.jpg'
   author: laydgeur
   validator: Raphael Odini
   validation_status: Écartée
@@ -6022,9 +6022,9 @@
   answer_image_explanation: ''
   answer_extra_info: 'images originales:
 
-    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r093a.jpg
+    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/093a.jpg
 
-    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r093b.jpg'
+    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/093b.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -6055,9 +6055,9 @@
     était d’environ 650 ppb.
   answer_accessible_url: https://www.futura-sciences.com/planete/actualites/terre-emissions-methane-gaz-30-fois-plus-rechauffant-co2-ont-ete-tres-sous-estimees-2805/
   answer_scientific_url: https://www.esrl.noaa.gov/gmd/ccgg/trends_ch4/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r094b.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/094b.jpg
   answer_image_explanation: le graphique du milieu avec les points en orange.
-  answer_extra_info: 'image alternative: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r094a.jpg'
+  answer_extra_info: 'image alternative: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/094a.jpg'
   author: laydgeur
   validator: ''
   validation_status: Écartée
@@ -6084,7 +6084,7 @@
     en inventaire national.
   answer_accessible_url: ''
   answer_scientific_url: https://www.sustainable-performance.total.com/fr/indicateurs-climat
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r095.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/095.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6120,9 +6120,9 @@
 
     images originales:
 
-    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r096a.jpg
+    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/096a.jpg
 
-    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r096b.jpg'
+    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/096b.jpg'
   author: laydgeur
   validator: ''
   validation_status: Écartée
@@ -6149,7 +6149,7 @@
   answer_scientific_url: ''
   answer_image_url: https://fr.statista.com/graphique/1/689808/classement-mondial-plus-grandes-centrales-electricite-hydraulique.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r097.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/097.jpg'
   author: laydgeur
   validator: Raphael Odini
   validation_status: Écartée
@@ -6174,7 +6174,7 @@
     est Alessandro Calori, qui était un footballeur italien.
   answer_accessible_url: https://fr.m.wikipedia.org/wiki/Alessandro_Calori
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r098.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/098.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6203,7 +6203,7 @@
     des territoires artificialisés.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2019-01/datalab-2-atlas-regional-de-loccupation-des-sols-en-france%20%28clc%29-octobre2016.pdf#page8
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r099.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/099.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6231,7 +6231,7 @@
     la valeur n’est pas officielle et est encore en discussion)
   answer_accessible_url: ''
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/basecarbone/donnees-consulter/liste-element/categorie/297
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r100.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/100.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6259,7 +6259,7 @@
     de 110 g d’équivalent CO2
   answer_accessible_url: ''
   answer_scientific_url: http://bilan-carbone-ademe.blogspot.com/2010/09/bilan-carbone-dune-balle-de-tennis.html
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r101.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/101.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6288,7 +6288,7 @@
     avec 10 kgCO2eq.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ademe.fr/sites/default/files/assets/documents/acv-biens-equipements-201809-rapport.pdf#page80
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r102.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/102.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6346,7 +6346,7 @@
     effet de serre est 23 500 fois plus puissant que le CO2.
   answer_accessible_url: ''
   answer_scientific_url: https://ww3.arb.ca.gov/cc/hgwpss/meetings/021508/sf6_draft_concept_paper_feb_2008.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r104.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/104.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6374,7 +6374,7 @@
     80 kWh d’énergie.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ademe.fr/sites/default/files/assets/documents/acv-biens-equipements-201809-rapport.pdf#page88
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r105.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/105.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6401,7 +6401,7 @@
     Par comparaison, c’est 62 fois la superficie de la France.
   answer_accessible_url: ''
   answer_scientific_url: http://www.fao.org/3/a-i4793f.pdf#page11
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r106.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/106.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6428,7 +6428,7 @@
     moins qu’en Allemagne (6500) mais plus qu’au Royaume-Uni (2500) ou Italie (1900).
   answer_accessible_url: ''
   answer_scientific_url: https://www.autorite-transports.fr/wp-content/uploads/2016/07/0515_16_ARAFER_CAHIER_THEMATIQUE_DIGITAL.pdf#page10
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r107.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/107.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6456,7 +6456,7 @@
   answer_explanation: Le carburant qui émet le plus de CO2 par litre est le Gazole.
   answer_accessible_url: ''
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/documentation-gene/index/page/New_liquides
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r108.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/108.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6483,7 +6483,7 @@
     (41%) sont chauffés au gaz fossile.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/consommation-denergie-des-menages?rubrique=20
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r109.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/109.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6513,7 +6513,7 @@
     du secteur agricole en France
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/chiffres-stats517-conso-energie-agriculture-mai2014.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r110.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/110.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6544,7 +6544,7 @@
   answer_image_url: https://assets.letemps.ch/sites/default/files/styles/original/public/media/2019/02/01/file73w6xgbtw7s2c7kjdoz.jpg
   answer_image_explanation: Production de pétrole et de gaz de la Norvège, le pic
     du pétrole est atteint en 2000, le pic des deux combinés est en 2004.
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r111.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/111.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -6598,7 +6598,7 @@
   answer_explanation: 30% de plus que le charbon.
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r113.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/113.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6625,7 +6625,7 @@
     le plus.
   answer_accessible_url: ''
   answer_scientific_url: https://r.lvmh-static.com/uploads/2018/04/lvmh_environment_2017fr.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r114.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/114.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6655,7 +6655,7 @@
   answer_scientific_url: ''
   answer_image_url: https://yonnelautre.fr/local/cache-vignettes/L527xH718/to_en_france-da2af.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r115.jpg
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/115.jpg
 
     image alternative: https://medias.liberation.fr/photo/1231382-infographie-les-records-de-temperature-a-battre-en-europe-2-juillet-2019.jpg'
   author: laydgeur
@@ -6686,7 +6686,7 @@
     Le volume de 2 piscines olympiques par minute !
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/international/data/world#/?pa=000gfs0000000000000000000000000000vg&c=4100000002000060000000000000g000200000000000000001&tl_id=5-A&vs=INTL.53-1-AFRC-TBPD.A&vo=0&v=H&end=2018
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r116.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/116.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6714,7 +6714,7 @@
     rouler 1 km en petite voiture (4,5 litres au 100 km).
   answer_accessible_url: ''
   answer_scientific_url: https://www.cocacolaep.com/media/news/2019/coca-cola-european-partners-reports-on-2018-sustainability-progress/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r117.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/117.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6743,7 +6743,7 @@
     2022.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/04/FS_timeline.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r118.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/118.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -6805,7 +6805,7 @@
   answer_scientific_url: http://www.georisques.gouv.fr/dossiers/telechargement/gaspar
   answer_image_url: https://pbs.twimg.com/media/CK2rIHiWIAAYvh0.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r120.jpg'
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/120.jpg'
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
@@ -7345,7 +7345,7 @@
     Pays-Bas qui est d’origine fossile.
   answer_accessible_url: https://www.cbs.nl/en-gb/news/2019/16/energy-consumption-down-in-2018
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r122.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/122.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1146157143856431106
   author: laydgeur
@@ -7373,7 +7373,7 @@
     quatre « nuages annexes » et cinq nuages spéciaux.'
   answer_accessible_url: http://www.meteofrance.fr/prevoir-le-temps/phenomenes-meteo/les-nuages
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r123.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/123.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1146495403120046080
   author: laydgeur
@@ -7402,7 +7402,7 @@
     de 10km à vol d’oiseau d’une gare ou halte ferroviaire.
   answer_accessible_url: ''
   answer_scientific_url: https://www.autorite-transports.fr/wp-content/uploads/2019/03/bilan_ferroviaire_2017_internet.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r124.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/124.jpg
   answer_image_explanation: ''
   answer_extra_info: 'https://twitter.com/laydgeur/status/1147012562485219328
 
@@ -7435,7 +7435,7 @@
     n’a eu lieu ces 50 dernières années.
   answer_accessible_url: ''
   answer_scientific_url: http://www.meteofrance.fr/climat-passe-et-futur/climathd
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r125.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/125.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1147226216879022085
   author: laydgeur
@@ -7465,7 +7465,7 @@
     pendant 45 ans la plus puissante du monde.
   answer_accessible_url: ''
   answer_scientific_url: https://www.irena.org/Statistics/View-Data-by-Topic/Capacity-and-Generation/Country-Rankings
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r126.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/126.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1148318499535806465
   author: laydgeur
@@ -7494,7 +7494,7 @@
     importations), contre 200 kg.'
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r127.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/127.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1148674455801073666
   author: laydgeur
@@ -7525,7 +7525,7 @@
     classique d’une ligne à grande vitesse est 220 km/h.
   answer_accessible_url: ''
   answer_scientific_url: https://www.autorite-transports.fr/wp-content/uploads/2019/03/bilan_ferroviaire_2017_internet.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r128.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/128.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1149037081915731968
   author: laydgeur
@@ -7553,7 +7553,7 @@
   answer_explanation: L’Algérie a passé son pic de production de pétrole en 2007.
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/international/overview/world
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r129.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/129.jpg
   answer_image_explanation: ''
   answer_extra_info: 'Réponse pas raccord avec les choix de la question
 
@@ -7589,7 +7589,7 @@
     à peine 5% de la population...'
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/international/overview/world
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r130.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/130.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1149767191178485761
   author: laydgeur
@@ -7649,7 +7649,7 @@
     gros émetteur de CO2 mondial, après la Chine et les Etats-Unis.
   answer_accessible_url: ''
   answer_scientific_url: http://www.globalcarbonatlas.org/fr/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r132.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/132.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1151211826824323074
   author: laydgeur
@@ -7678,7 +7678,7 @@
     1973 et 1979.
   answer_accessible_url: https://www.lesechos.fr/finance-marches/marches-financiers/petrole-le-poids-de-lopep-na-jamais-ete-aussi-faible-1147265
   answer_scientific_url: https://www.opec.org/opec_web/en/about_us/24.htm
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r133.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/133.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1151581846184046593
   author: laydgeur
@@ -7775,7 +7775,7 @@
     derrière l’Allemagne, et juste derrière le Royaume-Uni.
   answer_accessible_url: ''
   answer_scientific_url: https://ec.europa.eu/eurostat/statistics-explained/pdfscache/1180.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r136.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/136.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1153389224479121409
   author: laydgeur
@@ -7808,7 +7808,7 @@
     et la Pologne.
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/coal/data/browser/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r137.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/137.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1153752267511803909
   author: laydgeur
@@ -7838,7 +7838,7 @@
     entière chaque année.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-43-chiffres-cles-de-l-energie-edition-_2018-septembre2018.pdf#page45
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r138.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/138.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1154109763510243329
   author: laydgeur
@@ -7867,7 +7867,7 @@
     près de 40% du total.
   answer_accessible_url: ''
   answer_scientific_url: https://www.bfe.admin.ch/bfe/de/home/versorgung/statistik-und-geodaten/energiestatistiken/gesamtenergiestatistik.exturl.html/aHR0cHM6Ly9wdWJkYi5iZmUuYWRtaW4uY2gvZGUvcHVibGljYX/Rpb24vZG93bmxvYWQvOTc3NA==.html#page22
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r139.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/139.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1154639933174419456
   author: laydgeur
@@ -7896,7 +7896,7 @@
     90.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ecologique-solidaire.gouv.fr/impacts-du-changement-climatique-agriculture-et-foret
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r140.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/140.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1155051966302699520
   author: laydgeur
@@ -7927,7 +7927,7 @@
     à un peu moins de 40 milliards de tonnes de CO2.
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r141.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/141.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1155927532039860224
   author: laydgeur
@@ -7955,7 +7955,7 @@
     d’environ 4 km/an. C'est un de très nombreux effets du changement climatique.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ecologique-solidaire.gouv.fr/impacts-du-changement-climatique-eau-et-biodiversite#e0
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r142.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/142.jpg
   answer_image_explanation: Avancée de la chenille processionnaire du pin
   answer_extra_info: https://twitter.com/laydgeur/status/1156283029876350976
   author: laydgeur
@@ -7985,7 +7985,7 @@
     Soit 220 kg par français.
   answer_accessible_url: https://www.franceculture.fr/ecologie-et-environnement/consommation-de-charbon-les-bons-et-mauvais-eleves-dans-le-monde
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-43-chiffres-cles-de-l-energie-edition-_2018-septembre2018.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r143.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/143.jpg
   answer_image_explanation: ''
   answer_extra_info: 'https://twitter.com/laydgeur/status/1156643243368603648
 
@@ -8018,7 +8018,7 @@
     des TGV, Intercités et RER.
   answer_accessible_url: ''
   answer_scientific_url: https://www.autorite-transports.fr/wp-content/uploads/2019/03/bilan_ferroviaire_2017_internet.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r144.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/144.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1157008672847028224
   author: laydgeur
@@ -8051,7 +8051,7 @@
     amendes.
   answer_accessible_url: ''
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/documentation-gene/index/page/New_liquides
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r145.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/145.jpg
   answer_image_explanation: ''
   answer_extra_info: 'Modifiées les choix pour être raccord avec la réponse
 
@@ -8084,7 +8084,7 @@
     mondial pendant un siècle.
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r146.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/146.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1160996567823847425
   author: laydgeur
@@ -8115,7 +8115,7 @@
     est le nucléaire, avec environ un quart du total.
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r147.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/147.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1161369759063166976
   author: laydgeur
@@ -8145,7 +8145,7 @@
     feux de forêt, mouvements de terrain).
   answer_accessible_url: ''
   answer_scientific_url: https://www.ecologique-solidaire.gouv.fr/impacts-du-changement-climatique-sante-et-societe
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r148.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/148.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1161933795442012160
   author: laydgeur
@@ -8175,7 +8175,7 @@
     reste est brûlé.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-43-chiffres-cles-de-l-energie-edition-_2018-septembre2018.pdf#page44
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r149.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/149.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1162299761480933381
   author: laydgeur
@@ -8203,7 +8203,7 @@
     l’Océanie. Elle est suivie par l’Amérique du Nord, le Moyen-Orient et l’Europe.
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r150.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/150.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1162716519849242624
   author: laydgeur
@@ -8233,7 +8233,7 @@
     en 2017).
   answer_accessible_url: ''
   answer_scientific_url: https://ec.europa.eu/eurostat/fr/data/database
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r151.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/151.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1165700811634163719
   author: laydgeur
@@ -8262,7 +8262,7 @@
     avec environ 2 millions de baril par jour (~2% de la production mondiale).
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/international/overview/world
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r152.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/152.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1163894592086925313
   author: laydgeur
@@ -8291,7 +8291,7 @@
     mais PAS pour la consommation de pétrole : elle est 2ème, derrière les Etats-Unis.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/international/overview/country/CHN
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r153.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/153.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1165703510631092224
   author: laydgeur
@@ -8318,7 +8318,7 @@
     en avril 2004 (mine de La Houve, en Moselle).
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-28-bilan-physique-monetaire-charbon-janvier2018.pdf#page14
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r154.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/154.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1164820093919887362
   author: laydgeur
@@ -8347,7 +8347,7 @@
     reconnus par l’ONU.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2019/02/ipcc_members.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r155.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/155.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1165706416797233158
   author: laydgeur
@@ -8374,7 +8374,7 @@
     près de 40% du total des EnR.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2019-05/datalab-53-chiffres-cles-des-energies-renouvelables-edition-2019-mai2019.pdf#page7
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r156.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/156.jpg
   answer_image_explanation: ''
   answer_extra_info: 'En doublon avec la n°33
 
@@ -8409,7 +8409,7 @@
     rejetés dans l’atmosphère.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2019-05/datalab-46-chiffres-cles-du-climat-edition-2019-novembre2018.pdf#page36
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r157.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/157.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1166426077360771072
   author: laydgeur
@@ -8437,7 +8437,7 @@
     000 unités).
   answer_accessible_url: ''
   answer_scientific_url: https://www.europeanbiogas.eu/wp-content/uploads/2019/11/EBA_report2018_abriged_A4_vers12_220519_RZweb.pdf#page3
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r158.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/158.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1166793988785025025
   author: laydgeur
@@ -8468,7 +8468,7 @@
     plus fines des modèles utilisés par MétéoFrance.
   answer_accessible_url: http://www.meteofrance.fr/prevoir-le-temps/la-prevision-du-temps/le-modele-a-maille-fine-arome
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r159.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/159.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1167151122601168896
   author: laydgeur
@@ -8498,7 +8498,7 @@
   answer_scientific_url: https://www.eia.gov/petroleum/imports/browser/#/?vs=PET_IMPORTS.WORLD-US-ALL.A
   answer_image_url: https://static.latribune.fr/1093805/statista-venezuela-pays-producteurs-petrole-fournisseurs-des-etats-unis.png
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r160.jpg
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/160.jpg
 
 
     https://twitter.com/laydgeur/status/1167853448408309760'
@@ -8531,7 +8531,7 @@
   answer_scientific_url: https://webstore.iea.org/electricity-information-2019
   answer_image_url: https://ourworldindata.org/grapher/exports/world-electricity-by-source.png
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r161.jpg
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/161.jpg
 
 
     https://twitter.com/laydgeur/status/1168598181262897152'
@@ -8563,7 +8563,7 @@
     et avant l’Allemagne.'
   answer_accessible_url: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r162.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/162.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1168965089627693057
   author: laydgeur
@@ -8595,7 +8595,7 @@
     1,45 milliards en 1990.
   answer_accessible_url: ''
   answer_scientific_url: https://trackingsdg7.esmap.org/downloads#chapter1
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r163.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/163.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1169330199965515776
   author: laydgeur
@@ -8624,7 +8624,7 @@
     Près de 90% de la capacité installée provient de seulement 10% des installations.
   answer_accessible_url: ''
   answer_scientific_url: https://www.edf.fr/groupe-edf/espaces-dedies/l-energie-de-a-a-z/tout-sur-l-energie/produire-de-l-electricite/l-hydraulique-en-chiffres
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r164.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/164.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1169696167204139010
   author: laydgeur
@@ -8655,7 +8655,7 @@
     Népal est à 79%, l’Islande à 78% et le Paraguay à 59%.
   answer_accessible_url: ''
   answer_scientific_url: https://trackingsdg7.esmap.org/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r165.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/165.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1170061695970160640
   author: laydgeur
@@ -8684,7 +8684,7 @@
     40% des émissions de méthane, tout le reste est d’origine anthropique (humaine).
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/reports/methane-tracker-2020
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r166.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/166.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1171143561586380801
   author: laydgeur
@@ -8712,7 +8712,7 @@
   answer_explanation: Il y a 30 pays membres de l’Agence Internationale de l’Energie.
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/about/membership
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r167.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/167.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1171516229070143495
   author: laydgeur
@@ -8742,7 +8742,7 @@
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-11/datalab-essentiel-159-les-ventes-de-produits-petroliers-en-2017-novembre2018.pdf
   answer_image_url: https://www.ouest-france.fr/sites/default/files/styles/image-640/public/2019/04/22/chauffage-de-plus-en-plus-de-foyers-passent-du-fioul-au-gaz_0.jpg
   answer_image_explanation: 1l de fioul = 0,88 kg
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r168.jpg
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/168.jpg
 
 
     https://twitter.com/laydgeur/status/1172033463958085633'
@@ -8773,7 +8773,7 @@
     a été mis en service en 1940.
   answer_accessible_url: ''
   answer_scientific_url: https://qp.com.qa/en/AboutQP/Pages/QPHistory.aspx
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r169.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/169.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1172231013445058560
   author: laydgeur
@@ -8803,7 +8803,7 @@
     milliards.
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/reports/the-future-of-rail
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r170.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/170.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1172588333815541766
   author: laydgeur
@@ -8831,7 +8831,7 @@
     le transport est complètement anecdotique.
   answer_accessible_url: ''
   answer_scientific_url: https://webstore.iea.org/the-future-of-hydrogen#page32
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r171.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/171.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1173691915872739330
   author: laydgeur
@@ -8859,7 +8859,7 @@
     à 25%.
   answer_accessible_url: ''
   answer_scientific_url: https://www.energy.gov.au/sites/default/files/australian_energy_statistics_2019_energy_update_report_september.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r172.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/172.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1174042337846206464
   author: laydgeur
@@ -8888,7 +8888,7 @@
     bas pendant le mois d’Avril, avant la fonte des neiges.
   answer_accessible_url: ''
   answer_scientific_url: https://www.services-rte.com/fr/visualisez-les-donnees-publiees-par-rte/stock-hydraulique.html
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r173.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/173.jpg
   answer_image_explanation: ''
   answer_extra_info: 'image alternative: http://blog.formatis.pro/wp-content/uploads/2018/11/sae18_9.png
 
@@ -8921,7 +8921,7 @@
     et l’Inde 780 millions.
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r174.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/174.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1174765593616146432
   author: laydgeur
@@ -8951,7 +8951,7 @@
     la source d'énergie fossile la plus émettrice en CO2.
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/coal/annual/pdf/acr.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r175.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/175.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1175144001697136640
   author: laydgeur
@@ -8981,7 +8981,7 @@
     Pour le fret c’est 50% du trafic qui est électrifié.
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/reports/the-future-of-rail#page50
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r176.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/176.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1176212562179960832
   author: laydgeur
@@ -9012,7 +9012,7 @@
     en Chine.
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/reports/global-ev-outlook-2018
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r177.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/177.jpg
   answer_image_explanation: ''
   answer_extra_info: 'image alternative: https://www.avcesar.com/source/actualites/00/00/61/8D/belle-tenue-de-route-pour-la-voiture-electrique_07043834.jpg
 
@@ -9048,7 +9048,7 @@
   answer_scientific_url: https://www.ipcc.ch/srocc/download#chapter1
   answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/7/5/4/7540dfa366_82076_cop21-l-impact-du-rechauffement-mer.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r178.jpg
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/178.jpg
 
 
     https://twitter.com/laydgeur/status/1176947315720040448'
@@ -9082,7 +9082,7 @@
   answer_scientific_url: https://www.ecologique-solidaire.gouv.fr/sites/default/files/ONERC_Rapport_2014_Arbre_Et_Foret_WEB.pdf#page25
   answer_image_url: https://i.pinimg.com/originals/03/1a/13/031a13494a4dfc1685fec2bc28598ae5.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r179.jpg
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/179.jpg
 
 
     https://twitter.com/laydgeur/status/1177310853114318854'
@@ -9111,7 +9111,7 @@
     trajet sur autoroute à péage est de 60 km, contre 76 km pour les camions.
   answer_accessible_url: ''
   answer_scientific_url: https://www.autoroutes.fr/FCKeditor/UserFiles/File/RA_ASFA_WEB(1).pdf#page4
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r180.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/180.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1177672366169759746
   author: laydgeur
@@ -9141,7 +9141,7 @@
     serait devant la France.
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r181.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/181.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1178751653677285376
   author: laydgeur
@@ -9170,7 +9170,7 @@
   answer_explanation: Il y a en France un peu plus de 4400 bateaux de pêche.
   answer_accessible_url: ''
   answer_scientific_url: https://www.franceagrimer.fr/filiere-peche-et-aquaculture/Actualites/20192/Chiffres-cles-de-la-filiere-peche-et-aquaculture-en-France-en-2019#page12
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r182.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/182.jpg
   answer_image_explanation: ''
   answer_extra_info: 'image alternative: https://wwz.ifremer.fr/var/storage/images/_aliases/content_embed_page/medias-ifremer/medias-peche/cartes/flottilles-regionales/flottilles_2012/1090163-1-fre-FR/flottilles_2012.png
 
@@ -9202,7 +9202,7 @@
     entière : la Chine, les États-Unis, l''Inde et la Russie.'
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions#page12
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r183.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/183.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1179475565688041473
   author: laydgeur
@@ -9233,7 +9233,7 @@
     le mois de mai, avant que la photosynthèse de l'hémisphère nord ne redémarre.
   answer_accessible_url: ''
   answer_scientific_url: https://www.esrl.noaa.gov/gmd/dv/iadv/graph.php?code=MLO&program=ccgg&type=sc
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r184.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/184.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1179849946763350017
   author: laydgeur
@@ -9263,7 +9263,7 @@
     : 160 m; Peinture Lascaux : 470 m; Apparition Homo Sapiens : 2470 m.'
   answer_accessible_url: ''
   answer_scientific_url: https://cdiac.ess-dive.lbl.gov/trends/co2/ice_core_co2.html
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r185.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/185.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1180206991471468551
   author: laydgeur
@@ -9291,7 +9291,7 @@
     du solaire à concentration est l’Espagne, avec 50% du total mondial en 2016.
   answer_accessible_url: ''
   answer_scientific_url: https://www.irena.org/Statistics/View-Data-by-Topic/Capacity-and-Generation/Country-Rankings
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r186.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/186.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1181290624726769665
   author: laydgeur
@@ -9324,7 +9324,7 @@
     à 2050.'
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r187.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/187.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1181651497144205312
   author: laydgeur
@@ -9353,7 +9353,7 @@
     année là de 3,8 millions de tonnes extraites.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/bilan-energetique-de-la-france-en-2018-donnees-provisoires?rubrique=19&dossier=170
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r188.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/188.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1182015967855042564
   author: laydgeur
@@ -9383,7 +9383,7 @@
     recouverte par 2,4 km d’eau.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/srocc/download#chapter3
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r189.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/189.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1182537772659294209
   author: laydgeur
@@ -9414,9 +9414,9 @@
     années 1990.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ecologique-solidaire.gouv.fr/sites/default/files/ONERC_FichesIndicateur_Glacier.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r190b.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/190b.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r190a.jpg
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/190a.jpg
 
 
     https://twitter.com/laydgeur/status/1182944388009418752'
@@ -9449,7 +9449,7 @@
   answer_scientific_url: https://fee.asso.fr/pub/observatoire-de-leolien-2019#page15
   answer_image_url: https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_in_line/2019/10/11/node_650356/41134233/public/2019/10/11/B9721211682Z.1_20191011162352_000%2BGIPELTPVL.1-0.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r191.jpg
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/191.jpg
 
 
     https://twitter.com/laydgeur/status/1183823706918924288'
@@ -9481,7 +9481,7 @@
     km et s’effectuait en 25 minutes.
   answer_accessible_url: ''
   answer_scientific_url: https://www.sncf.com/fr/groupe/patrimoine/deux-siecles-histoire
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r192.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/192.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1184199221567741957
   author: laydgeur
@@ -9510,7 +9510,7 @@
     avec cette année là 60 millions de tonnes extraites.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ccomptes.fr/fr/publications/la-fin-des-activites-minieres-en-france
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r193.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/193.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1184720171954511873
   author: laydgeur
@@ -9568,7 +9568,7 @@
     suivie de très près par le Japon.
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/international/overview/world
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r195.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/195.jpg
   answer_image_explanation: ''
   answer_extra_info: 'En doublon avec la n°62 et réponse pas bonne par rapport à la
     source, affiner la question (volume, énergie) et mettre à jour avec une source
@@ -9601,7 +9601,7 @@
     surfaces (GMS).
   answer_accessible_url: ''
   answer_scientific_url: https://www.ufip.fr/uploads/pdf/UFIP_-_Conf%C3%A9rence_de_presse_28_mars_2019_Paris_2.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r196.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/196.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1186362594883522561
   author: laydgeur
@@ -9632,7 +9632,7 @@
     Etats-Unis, mais moins de 9% de sa population.
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/environment/emissions/state/analysis/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r197.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/197.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1186870432005271555
   author: laydgeur
@@ -9663,7 +9663,7 @@
     et la production d’électricité et de chaleur (19% aussi).
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2019-09/datalab-59-chiffres-cles-energie-edition-2019-septembre2019.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r198.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/198.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1187096658909245446
   author: laydgeur
@@ -9692,7 +9692,7 @@
     dans des zones extrêmement inondables (= inondées plus d’une fois par an).
   answer_accessible_url: ''
   answer_scientific_url: https://www.unicef.org/publications/files/Unless_we_act_now_The_impact_of_climate_change_on_children.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r199.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/199.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1187618318041145345
   author: laydgeur
@@ -9726,7 +9726,7 @@
     depuis, même pendant les deux guerres mondiales.
   answer_accessible_url: ''
   answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r200.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/200.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1188081994086912003
   author: laydgeur
@@ -9757,9 +9757,9 @@
     trouvent à Brest, et sont disponibles depuis 1807.
   answer_accessible_url: ''
   answer_scientific_url: https://www.psmsl.org/data/obtaining/map.html
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r201b.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/201b.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r201a.jpg
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/201a.jpg
 
 
     https://twitter.com/laydgeur/status/1188914665750978561'
@@ -9825,7 +9825,7 @@
     France et le Royaume-Uni.
   answer_accessible_url: ''
   answer_scientific_url: https://www.acea.be/uploads/statistic_documents/ACEA_Report_Vehicles_in_use-Europe_2018.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r203.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/203.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1189652849296367621
   author: laydgeur
@@ -9855,7 +9855,7 @@
     et se casse complètement la gueule depuis 2014.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.nlog.nl/sites/default/files/2019-09/annual_review_natural_resources_and_geothermal_energy_in_the_netherlands_2018.pdf#page92
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r204.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/204.jpg
   answer_image_explanation: ''
   answer_extra_info: 'pic vs plateau 🤔
 
@@ -9887,7 +9887,7 @@
     au total l’Estonie est à 15 tonnes de CO2 par habitant).
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions#page25
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r205.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/205.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1190576430163382273
   author: laydgeur
@@ -9916,7 +9916,7 @@
     des environs, dont l’exploitation a duré de 1952 à 1982.
   answer_accessible_url: ''
   answer_scientific_url: http://uraniumcity-history.com/memorabilia/history-uc-district-booklet/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r206.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/206.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1194000975872348161
   author: laydgeur
@@ -9946,7 +9946,7 @@
     les renouvelables. Elle est de 65% en France.
   answer_accessible_url: ''
   answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/e0544b72-db53-11e9-9c4e-01aa75ed71a1/language-en
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r207.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/207.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1194353947517034497
   author: laydgeur
@@ -9975,7 +9975,7 @@
     la France 18ème, et l’Italie 19ème.'
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/fr/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r208.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/208.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1194711084512493569
   author: laydgeur
@@ -10007,7 +10007,7 @@
     qu''à moins de 10% de la production totale du pays.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/petroleum/wells/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r209.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/209.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1195256778994401280
   author: laydgeur
@@ -10038,7 +10038,7 @@
     des berlines, 2200 des 4x4/pickups/SUV, et 470 des monospaces.
   answer_accessible_url: ''
   answer_scientific_url: https://ccfa.fr/wp-content/uploads/2019/09/ccfa-2019-fr-web-v2.pdf#page39
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r210.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/210.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1195445412603289600
   author: laydgeur
@@ -10068,7 +10068,7 @@
     de diamètre, une puissance de 200 kW et est toujours en fonctionnement.
   answer_accessible_url: ''
   answer_scientific_url: http://www.aude.gouv.fr/eolien-terrestre-a10156.html
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r211.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/211.jpg
   answer_image_explanation: ''
   answer_extra_info: 'Autre source avec éolienne expérimentale plus tôt : http://eolienne.cavey.org/fr/production.php
 
@@ -10101,7 +10101,7 @@
     / km.
   answer_accessible_url: ''
   answer_scientific_url: https://csrreport2018.airfranceklm.com/wp-content/uploads/2019/09/Air-France-KLM-Rapport-Developpement-Durable-2018.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r212.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/212.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1196886176055083017
   author: laydgeur
@@ -10129,7 +10129,7 @@
     en 1950, dépassant ainsi le charbon.
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/todayinenergy/detail.php?id=40013
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r213.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/213.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1197418673549520897
   author: laydgeur
@@ -10158,7 +10158,7 @@
     côtières (à moins de 100 km de la mer), soit environ 30% de la population mondiale.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/sites/3/2019/11/05_SROCC_Ch01_FINAL.pdf#page75
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r214.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/214.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1197866585970618369
   author: laydgeur
@@ -10187,7 +10187,7 @@
     dépendante à 75% et cela ne fait qu'augmenter depuis 25 ans.
   answer_accessible_url: ''
   answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/e0544b72-db53-11e9-9c4e-01aa75ed71a1/language-en#page79
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r215.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/215.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1198199981590614017
   author: laydgeur
@@ -10217,7 +10217,7 @@
     est dans la moyenne de de l’UE avec 590.
   answer_accessible_url: ''
   answer_scientific_url: https://www.acea.be/statistics/tag/category/vehicles-per-capita-by-country/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r216.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/216.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1199063090979049474
   author: laydgeur
@@ -10247,7 +10247,7 @@
     millions d’années. Ce sont de véritables archives climatiques.
   answer_accessible_url: ''
   answer_scientific_url: https://serc.carleton.edu/microbelife/topics/proxies/paleoclimate.html
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r217.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/217.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1199580252890161152
   author: laydgeur
@@ -10276,7 +10276,7 @@
   answer_scientific_url: https://www.eia.gov/international/rankings/world?pa=12&u=0&f=A&v=none&y=01%2F01%2F2017
   answer_image_url: https://2.bp.blogspot.com/_RSKFRo9oWAQ/S3PAQxv9y4I/AAAAAAAAAS8/cQCBUQsITbI/s1600/article_1504-ECO-biocarburants.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r218.jpg
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/218.jpg
 
 
     image alternative: https://images.ladepeche.fr/api/v1/images/view/5c17793c8fe56f189029116f/large/image.jpg
@@ -10318,7 +10318,7 @@
     Le Coca-Cola et le verre de vin sont nettement en dessous.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/actualite/actualite/detail/id/23
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r219.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/219.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1200337898098372608
   author: laydgeur
@@ -10345,7 +10345,7 @@
     de celle de Total à La Mède en 2016 pour être convertie en bio-raffinerie.
   answer_accessible_url: https://www.connaissancedesenergies.org/combien-y-t-il-de-raffineries-en-france-et-ou-sont-elles-situees-191219
   answer_scientific_url: https://www.ufip.fr/uploads/pdf/UFIP_-_Conf%C3%A9rence_de_presse_28_mars_2019_Paris_2.pdf#page10
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r220.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/220.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1200761860703830016
   author: laydgeur
@@ -10374,7 +10374,7 @@
     modèles climatiques : CNRM-CERFACS et IPSL.'
   answer_accessible_url: ''
   answer_scientific_url: https://wcrp-cmip.github.io/CMIP6_CVs/docs/CMIP6_institution_id.html
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r221.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/221.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1201604429880995842
   author: laydgeur
@@ -10403,7 +10403,7 @@
     de kWh, la Suisse est 5ème et les États-Unis 21ème.
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/international/rankings/world?pa=12&u=0&f=A&v=none&y=01%2F01%2F2017
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r222.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/222.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1201967595441836033
   author: laydgeur
@@ -10431,7 +10431,7 @@
     (8ème producteur européen après les Pays-Bas).
   answer_accessible_url: ''
   answer_scientific_url: https://ec.europa.eu/eurostat/fr/data/database
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r223.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/223.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1202323118259363840
   author: laydgeur
@@ -10460,7 +10460,7 @@
     des forêts mondiales, et 24% des forêts boréales.
   answer_accessible_url: ''
   answer_scientific_url: https://www.nrcan.gc.ca/our-natural-resources/forests-forestry/state-canadas-forests-report/how-much-forest-does-canada-have/17601
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r224.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/224.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1202838727678136320
   author: laydgeur
@@ -10490,7 +10490,7 @@
     et Arabie Saoudite représente 39% de la production mondiale.
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/international/rankings/world?pa=12&u=0&f=A&v=none&y=01%2F01%2F2017
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r225.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/225.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1203381913941135362
   author: laydgeur
@@ -10517,7 +10517,7 @@
     l’essence. Le fioul est le plus lourd, quasiment au même niveau que le gazole.
   answer_accessible_url: https://www.total-proxi-energies.fr/transport/actualites/essence-diesel-fioul-quelles-sont-les-differences-entre-ces-produits
   answer_scientific_url: https://www.cpdp.org/fr/le-marche-petrolier
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r226.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/226.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1204135773567672320
   author: laydgeur
@@ -10549,9 +10549,9 @@
   answer_image_explanation: ''
   answer_extra_info: 'images originales:
 
-    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r227a.jpg
+    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/227a.jpg
 
-    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r227b.jpg
+    - https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/227b.jpg
 
 
     https://twitter.com/laydgeur/status/1204505503704989704'
@@ -10585,7 +10585,7 @@
     mondiale de charbon. '
   answer_accessible_url: ''
   answer_scientific_url: https://webstore.iea.org/coal-information-2019#page7
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r228.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/228.jpg
   answer_image_explanation: L'Indonésie et l'Australie sont au coude à coude depuis
     quelques années. difficile de trouver des articles récents sur le sujet.
   answer_extra_info: https://twitter.com/laydgeur/status/1204864932136833031
@@ -10616,7 +10616,7 @@
     tonnes (+8,5%).
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r229.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/229.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1205231807945302016
   author: laydgeur
@@ -10647,7 +10647,7 @@
     ou d’une essence consommant 3,3 litres/100km.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ecologique-solidaire.gouv.fr/sites/default/files/Information%20CO2%20des%20prestations%20de%20transport%20%20%20%20%20Guide%20m%C3%A9thodologique.pdf#page123
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r230.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/230.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1205599630253264899
   author: laydgeur
@@ -10678,7 +10678,7 @@
     60% sont causées par la combustion de gaz.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2019-05/datalab-46-chiffres-cles-du-climat-edition-2019-novembre2018.pdf#page49
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r231.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/231.jpg
   answer_image_explanation: ''
   answer_extra_info: 'Attention la biomasse n’est pas comptée…
 
@@ -10712,7 +10712,7 @@
     L’Espagne et la France ont été les suivants, en 2006.
   answer_accessible_url: ''
   answer_scientific_url: https://www.eea.europa.eu/data-and-maps/figures/overview-of-national-and-sectoral-3
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r232.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/232.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1207040354035347456
   author: laydgeur
@@ -10743,7 +10743,7 @@
     clients par jour et délivre 260 millions de litres de carburants par an.
   answer_accessible_url: https://www.francebleu.fr/infos/transports/luxembourg-la-station-shell-de-berchem-revendique-le-titre-de-plus-grande-aire-d-autoroute-du-monde-1531152291
   answer_scientific_url: https://www.shell.lu/motorists/notre-plus-grande-station-service-au-monde-berchem.html
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r233.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/233.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1207406449518882816
   author: laydgeur
@@ -10773,7 +10773,7 @@
     autant qu'un million de voitures.
   answer_accessible_url: ''
   answer_scientific_url: https://unfccc.int/process-and-meetings/transparency-and-reporting/reporting-and-review-under-the-convention/greenhouse-gas-inventories-annex-i-parties/national-inventory-submissions-2019
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r234.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/234.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1207958658727993344
   author: laydgeur
@@ -10804,7 +10804,7 @@
     question de mon quiz, environ 41 milliards de tonnes ont donc été émises.
   answer_accessible_url: ''
   answer_scientific_url: https://www.lemonde.fr/blog/huet/2019/12/04/368-gigatonnes-de-co2-emis-en-2019/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r235.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/235.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1208347504535887872
   author: laydgeur
@@ -10833,7 +10833,7 @@
     en 2018. Cette part est à peu près constante depuis le milieu des années 1990.
   answer_accessible_url: ''
   answer_scientific_url: https://asb.opec.org/index.php/interactive-charts/oil-data-upstream
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r236.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/236.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1214285551496552448
   author: laydgeur
@@ -10871,7 +10871,7 @@
     énorme dans l''évolution du changement climatique.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf#page42
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r237.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/237.jpg
   answer_image_explanation: ''
   answer_extra_info: 'image alternative: https://cdn.radiofrance.fr/s3/cruiser-production/2018/11/13238c20-fd37-4844-9ca8-a7c984b6a4ac/838_visactu-donald-trump-souhaite-assouplir-les-normes-anti-pollution-des-centrales-a-charbon-1656610eb99.jpg
 
@@ -10903,7 +10903,7 @@
     les Etats-Unis, avec plus de 77 milliards de m3 échangés en 2018.
   answer_accessible_url: ''
   answer_scientific_url: https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf#page41
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r238.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/238.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1215008925487161346
   author: laydgeur
@@ -10932,7 +10932,7 @@
     ont augmenté de 120 millions, ciment +50, et celles du charbon ont baissé de 130.
   answer_accessible_url: ''
   answer_scientific_url: https://www.carbonbrief.org/analysis-global-fossil-fuel-emissions-up-zero-point-six-per-cent-in-2019-due-to-china
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r239.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/239.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1215370576375828480
   author: laydgeur
@@ -10962,7 +10962,7 @@
     derrière 2016. 2019 a été l''année la plus chaude jamais enregistrée en Europe. '
   answer_accessible_url: https://www.lemonde.fr/planete/article/2020/01/08/2019-deuxieme-annee-la-plus-chaude-dans-le-monde_6025193_3244.html
   answer_scientific_url: http://www.meteofrance.fr/actualites/78484941-monde-2019-2e-annee-la-plus-chaude
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r240.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/240.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1215948088457732097
   author: laydgeur
@@ -10991,7 +10991,7 @@
     Aquitaine, avec plus de 10 millions de m3, soit environ 25% du total français.
   answer_accessible_url: ''
   answer_scientific_url: https://agreste.agriculture.gouv.fr/agreste-web/download/publication/publie/GraFraChap8.1/Graf1931%20-%20Bois%20-%20R%C3%A9colte,%20production.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r241.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/241.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1216823896470630400
   author: laydgeur
@@ -11026,7 +11026,7 @@
     des émissions territoriales.'
   answer_accessible_url: ''
   answer_scientific_url: http://www.globalcarbonatlas.org/fr/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r242.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/242.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1217194216742432768
   author: laydgeur
@@ -11059,7 +11059,7 @@
     avec 60% de la hausse du fait des mises en service de centrales fossiles.
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/international/data/world#/?pa=0000000000000000000004&c=ruvvvvvfvtvnvv1vrvvvvfvvvvvvfvvvou20evvvvvvvvvvvvuvs&ct=0&tl_id=2-A&vs=INTL.2-7-AFG-MK.A&vo=0&v=H&start=1980&end=2017
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r243.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/243.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1217550590269624323
   author: laydgeur
@@ -11093,7 +11093,7 @@
     mondial).'
   answer_accessible_url: ''
   answer_scientific_url: https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf#page56
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r244.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/244.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1218076428559929344
   author: laydgeur
@@ -11126,7 +11126,7 @@
     seulement.
   answer_accessible_url: https://www.numerama.com/sciences/530703-lantarctique-a-perdu-autant-detendue-de-banquise-en-3-ans-que-larctique-en-35-ans.html
   answer_scientific_url: https://seaice.uni-bremen.de/sea-ice-concentration/amsre-amsr2/time-series/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r245.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/245.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1218275374330716161
   author: laydgeur
@@ -11158,7 +11158,7 @@
     20% chacun, le reste sont des émissions directes (agriculture, procédés...).
   answer_accessible_url: https://www.connaissancedesenergies.org/emissions-mondiales-de-co2-etat-des-lieux-160404
   answer_scientific_url: https://guidehouse.com/insights/energy/2019/coal-responsible-for-quarter-of-global-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r246.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/246.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1219359975245520896
   author: laydgeur
@@ -11188,7 +11188,7 @@
     le Japon et devant l’Allemagne.
   answer_accessible_url: https://detours.canal.fr/pollution-aerienne-le-nombre-de-passagers-va-doubler-dici-2040/
   answer_scientific_url: https://theicct.org/publications/co2-emissions-commercial-aviation-2018
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r247.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/247.jpg
   answer_image_explanation: ''
   answer_extra_info: 'lien alternatif (article abonné): https://www.lemonde.fr/planete/article/2019/09/20/ce-qu-il-faut-savoir-sur-la-pollution-generee-par-le-trafic-aerien_6012443_3244.html
 
@@ -11220,7 +11220,7 @@
     des plus gros émetteurs : Japon, Corée du Sud et Indonésie.'
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r248.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/248.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1220084550161829895
   author: laydgeur
@@ -11249,7 +11249,7 @@
     peut contenir au maximum 1200 personnes.
   answer_accessible_url: ''
   answer_scientific_url: https://webstore.iea.org/the-future-of-rail#page38
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r249.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/249.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1220457844815908864
   author: laydgeur
@@ -11280,7 +11280,7 @@
     de la France. L'écrasante majorité de ces projets se trouve en Asie.
   answer_accessible_url: https://www.futura-sciences.com/planete/actualites/environnement-allemagne-va-mettre-service-centrale-charbon-plus-78238/
   answer_scientific_url: https://endcoal.org/global-coal-plant-tracker/summary-statistics/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r250.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/250.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1182537772659294209
   author: laydgeur
@@ -11310,7 +11310,7 @@
     exemple.
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r251.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/251.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1221893974497079297
   author: laydgeur
@@ -11343,7 +11343,7 @@
     proviennent de la fabrication des produits (extraction et production).
   answer_accessible_url: ''
   answer_scientific_url: http://developpement-durable.decathlon.com/?ymm-file=11415#page16
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r252.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/252.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1222261099979997185
   author: laydgeur
@@ -11377,7 +11377,7 @@
     dans les carottes de glace en Antarctique).'
   answer_accessible_url: https://www.konbini.com/fr/techetinnovation/lhumanite-na-jamais-connu-atmosphere-chargee-co2/
   answer_scientific_url: https://www.ncdc.noaa.gov/paleo-search/?dataTypeId=7
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r253.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/253.jpg
   answer_image_explanation: ''
   answer_extra_info: 'Parfois les articles mentionnent 800 000 ans avec la barre de
     400 ppm et non 300 ppm.
@@ -11412,7 +11412,7 @@
     35 pays dans le monde émettent plus, pour l'ensemble de leurs secteurs.
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r254.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/254.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1223144719980662785
   author: laydgeur
@@ -11444,7 +11444,7 @@
     les océans) n'a augmenté « que » de 1°C.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/sites/4/2019/11/05_Chapter-2.pdf#page141
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r255.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/255.jpg
   answer_image_explanation: ''
   answer_extra_info: 'doublon avec une question existante.
 
@@ -11476,7 +11476,7 @@
     place par les États-Unis, qui la conserveront pendant plus d'un siècle.
   answer_accessible_url: ''
   answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions#annual-co2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r256.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/256.png
   answer_image_explanation: ''
   answer_extra_info: 'Semaine spéciale Royaume-Uni (brexit)
 
@@ -11508,7 +11508,7 @@
     TWh chacun.
   answer_accessible_url: ''
   answer_scientific_url: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/840015/DUKES_2019_MASTER_COPY.pdf#page70
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r257.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/257.jpg
   answer_image_explanation: ''
   answer_extra_info: 'Semaine spéciale Royaume-Uni (brexit)
 
@@ -11542,7 +11542,7 @@
     détruisirent complètement et fit 167 victimes.
   answer_accessible_url: ''
   answer_scientific_url: https://www.hse.gov.uk/offshore/piper-alpha-disaster-public-inquiry.htm
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r258.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/258.png
   answer_image_explanation: ''
   answer_extra_info: 'Semaine spéciale Royaume-Uni (brexit)
 
@@ -11575,7 +11575,7 @@
     seulement 5 ans.
   answer_accessible_url: https://www.la-croix.com/Economie/Economie-et-entreprises/taxe-carbone-britannique-chasse-charbon-2018-12-10-1200988625
   answer_scientific_url: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/840015/DUKES_2019_MASTER_COPY.pdf#page87
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r259.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/259.jpg
   answer_image_explanation: ''
   answer_extra_info: 'Semaine spéciale Royaume-Uni (brexit)
 
@@ -11607,7 +11607,7 @@
     de pétrole en 1999 et de gaz en 2000.
   answer_accessible_url: ''
   answer_scientific_url: https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r260.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/260.png
   answer_image_explanation: ''
   answer_extra_info: 'Semaine spéciale Royaume-Uni (brexit)
 
@@ -11642,7 +11642,7 @@
     seuls 58% des émissions et 44% de la population mondiale.'
   answer_accessible_url: https://www.futura-sciences.com/planete/questions-reponses/gaz-effet-serre-pays-emettent-plus-co2-1178/
   answer_scientific_url: http://globalcarbonatlas.org/fr/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r261.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/261.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1226973310392684545
   author: laydgeur
@@ -11670,7 +11670,7 @@
     vol aller-retour Paris-New York.
   answer_accessible_url: ''
   answer_scientific_url: https://www.worldsteel.org/about-steel/steel-facts.html
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r262.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/262.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1227338442671054848
   author: laydgeur
@@ -11701,7 +11701,7 @@
     le plus récent.
   answer_accessible_url: https://www.lemonde.fr/planete/article/2015/01/15/nous-sommes-entres-dans-l-anthropocene-depuis-1950_4557141_3244.html
   answer_scientific_url: http://www.stratigraphy.org/ICSchart/ChronostratChart2019-05French.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r263.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/263.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1227690428528570368
   author: laydgeur
@@ -11729,7 +11729,7 @@
     minière de l’uranium en France.
   answer_accessible_url: ''
   answer_scientific_url: https://www.irsn.fr/FR/connaissances/Environnement/expertises-locales/sites-miniers-uranium/Documents/irsn_mines-uranium_extraction-uranium_2017.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r264.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/264.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1228060922897412096
   author: laydgeur
@@ -11759,7 +11759,7 @@
     Une centrale nucléaire inclut en général 2 à 4 réacteurs.
   answer_accessible_url: ''
   answer_scientific_url: https://pris.iaea.org/PRIS/home.aspx
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r265.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/265.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1228794188424269826
   author: laydgeur
@@ -11789,7 +11789,7 @@
     plus tard, il est tombé à 10% suite au déploiement massif du parc nucléaire.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/bilan-energetique-de-la-france-pour-2018?rubrique=19&dossier=170
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r266.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/266.png
   answer_image_explanation: ''
   answer_extra_info: 'Semaine spéciale centrale nucléaire de Fessenheim
 
@@ -11822,7 +11822,7 @@
     la centrale complète (1800 MW) a été construite en 6 ans et demi.
   answer_accessible_url: ''
   answer_scientific_url: https://pris.iaea.org/PRIS/CountryStatistics/CountryDetails.aspx?current=FR
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r267.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/267.png
   answer_image_explanation: ''
   answer_extra_info: 'Semaine spéciale centrale nucléaire de Fessenheim
 
@@ -11855,7 +11855,7 @@
     de tonnes de CO2 dans l'atmosphère, l'équivalent de 1,7 millions de voitures.
   answer_accessible_url: ''
   answer_scientific_url: https://bilan-electrique-2019.rte-france.com/emissions-de-co2/#
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r268.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/268.png
   answer_image_explanation: ''
   answer_extra_info: 'Semaine spéciale centrale nucléaire de Fessenheim
 
@@ -11889,7 +11889,7 @@
     « se distinguent de manière favorable par rapport à la moyenne du parc ».
   answer_accessible_url: https://www.usinenouvelle.com/article/fessenheim-est-l-une-des-centrales-les-plus-sures-de-france-affirme-l-autorite-de-surete-nucleaire.N394267
   answer_scientific_url: https://www.asn.fr/L-ASN/L-ASN-en-region/Grand-Est/Installations-nucleaires/Centrale-nucleaire-de-Fessenheim
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r269.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/269.png
   answer_image_explanation: ''
   answer_extra_info: 'Semaine spéciale centrale nucléaire de Fessenheim
 
@@ -11921,7 +11921,7 @@
     de construction est donc largement amorti depuis de nombreuses années.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ccomptes.fr/sites/default/files/EzPublish/Rapport_thematique_filiere_electronucleaire.pdf#page22
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r270.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/270.jpg
   answer_image_explanation: ''
   answer_extra_info: 'Semaine spéciale centrale nucléaire de Fessenheim
 
@@ -11954,7 +11954,7 @@
   answer_scientific_url: http://www.globalcarbonatlas.org/fr/CO2-emissions
   answer_image_url: https://s.brsimg.com/static-000/cache/i/content/images/d/9/1/d91a8646db5d1a6af1e576f0a88c046f-1024x731.jpg
   answer_image_explanation: chiffres de 2015
-  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r271.png
+  answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/271.png
 
 
     https://twitter.com/laydgeur/status/1232045258281799681'
@@ -11985,7 +11985,7 @@
     sur les feuilles et la concentration en CO2 dans l'atmosphère.
   answer_accessible_url: https://www.futura-sciences.com/planete/questions-reponses/vegetation-hausse-niveau-co2-elle-bonne-plantes-11616/
   answer_scientific_url: http://acces.ens-lyon.fr/acces/thematiques/CCCIC/ressources/bio_point2
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r272.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/272.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1232557145901715456
   author: laydgeur
@@ -12014,7 +12014,7 @@
     pour la France.
   answer_accessible_url: ''
   answer_scientific_url: http://www.globalcarbonatlas.org/fr/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r273.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/273.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1233006420804677633
   author: laydgeur
@@ -12042,7 +12042,7 @@
     d'un français est de 21 kWh, et celle d'énergie primaire de 116 kWh.
   answer_accessible_url: ''
   answer_scientific_url: https://www.nutripro.nestle.fr/dossier/nutrition-generale/vie-quotidienne-et-equilibre-alimentaire/les-apports-nutritionnels-conseilles-anc/apports-nutritionnels-conseilles-adulte#
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r274.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/274.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1233476594569818113
   author: laydgeur
@@ -12071,7 +12071,7 @@
     de tonnes émises chaque année.
   answer_accessible_url: https://www.lesechos.fr/industrie-services/immobilier-btp/cap-sur-le-ciment-bas-carbone-1140893
   answer_scientific_url: http://www.globalcarbonatlas.org/fr/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r275.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/275.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1233852444418957314
   author: laydgeur
@@ -12103,7 +12103,7 @@
     sont 14 milliards de smartphones qui ont été produits.
   answer_accessible_url: https://www.zdnet.fr/actualites/gaz-a-effet-de-serre-les-smartphones-polluent-surtout-pendant-leur-fabrication-39846224.htm
   answer_scientific_url: https://www.apple.com/euro/environment/pdf/a/generic/products/iphone/iPhone_11_PER_sept2019.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r276.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/276.jpg
   answer_image_explanation: ''
   answer_extra_info: 'Réponses modifiées pour permettre de mémoriser l’ordre de grandeur
     de l’empreinte carbone d’un smartphone: ~100 kg CO2eq
@@ -12138,7 +12138,7 @@
     16,5% chacun, et les transports 29%.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/chiffres-cles-du-climat-france-europe-et-monde-edition-2020-0
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r277.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/277.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1234945242606055424
   author: laydgeur
@@ -12167,7 +12167,7 @@
     est 4ème, l’Italie 5ème et l’Islande 8ème.
   answer_accessible_url: ''
   answer_scientific_url: https://www.irena.org/Statistics/View-Data-by-Topic/Capacity-and-Generation/Country-Rankings
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r278.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/278.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1235821535555776512
   author: laydgeur
@@ -12196,7 +12196,7 @@
     du Danemark sont des énergies fossiles (pétrole, gaz, charbon).
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=DENMARK&fuel=Energy%20supply&indicator=Coal%20production%20by%20type
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r279.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/279.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1236023674685329408
   author: laydgeur
@@ -12225,7 +12225,7 @@
     par jour.
   answer_accessible_url: ''
   answer_scientific_url: http://www.minpet.gob.ve/index.php/es-es/comunicaciones/noticias-comunicaciones/29-noticias-2018/412-zumaque-i-a-104-anos-de-la-explotacion-comercial-petrolera-en-venezuela
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r280.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/280.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1236572647187767298
   author: laydgeur
@@ -12254,7 +12254,7 @@
     est retiré en 2012.'
   answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/protocole-de-kyoto
   answer_scientific_url: https://unfccc.int/process/the-kyoto-protocol/status-of-ratification
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r281.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/281.png
   answer_image_explanation: '2009: le vert indique les pays ayant signé et ratifié
     le traité (en vert foncé, les pays des annexes I et II) ; en brun orangé ne voulant
     pas le ratifier ; en gris sans position; en rouge a ratifié, mais a l''intention
@@ -12286,7 +12286,7 @@
     de l'approvisionnement énergétique de l'Italie qui est d'origine fossile.
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=ITALY&fuel=Energy%20supply&indicator=Coal%20production%20by%20type
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r282.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/282.jpg
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1237477031312527360
   author: laydgeur
@@ -12316,7 +12316,7 @@
     y a eu un record de consommation électrique le 24 juillet 2019.
   answer_accessible_url: ''
   answer_scientific_url: https://www.rte-france.com/fr/eco2mix/eco2mix-consommation
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r283.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/283.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1239466059339571201
   author: laydgeur
@@ -12346,7 +12346,7 @@
     en 1998 et a permis de remonter 420 000 ans dans le passé de l'atmosphère.
   answer_accessible_url: ''
   answer_scientific_url: https://www.cambridge.org/core/journals/annals-of-glaciology/article/deep-drilling-at-vostok-station-antarctica-history-and-recent-events/8DA18E684DD19E80E7D02F2FBD2DFA26
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r284.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/284.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1239468645471981569
   author: laydgeur
@@ -12375,7 +12375,7 @@
     (N2O), un gaz à effet de serre 300 fois plus réchauffant que le CO2 à court-terme.
   answer_accessible_url: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r285.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/285.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1238873300857651200
   author: laydgeur
@@ -13488,7 +13488,7 @@
     la France est au 20ème rang mondial, entre l’Italie et le Kazakhstan.
   answer_accessible_url: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/437.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/437.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Citoyens Pour le Climat
@@ -14707,7 +14707,7 @@
     de porcs (60% des porcs français).
   answer_accessible_url: https://www.inrae.fr/actualites/que-connaissez-vous-des-cochons
   answer_scientific_url: https://agreste.agriculture.gouv.fr/agreste-web/disaron/GraFraChap12.9/detail/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/478.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/478.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: INRAE
@@ -14739,7 +14739,7 @@
     \ mange en moyenne 90 kg par an, soit 250g par jour..."
   answer_accessible_url: https://www.inrae.fr/actualites/que-connaissez-vous-des-cochons
   answer_scientific_url: https://agreste.agriculture.gouv.fr/agreste-web/disaron/GraFraChap10.2/detail/
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/479.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/479.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: INRAE
@@ -14860,7 +14860,7 @@
     en tête).'
   answer_accessible_url: https://www.statista.com/statistics/690039/hydropower-generation-europe/
   answer_scientific_url: https://www.hydropower.org/statusreport
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/483.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/483.png
   answer_image_explanation: ''
   answer_extra_info: 'classement puissance installé: https://www.hydropower.org/country-profiles/region-europe'
   author: laydgeur
@@ -16548,7 +16548,7 @@
     des émissions mondiales.'
   answer_accessible_url: ''
   answer_scientific_url: https://ourworldindata.org/co2/country/france?country=~FRA
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/538.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/538.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -16684,7 +16684,7 @@
     sont maintenant d''environ 340 millions de tonnes par an.'
   answer_accessible_url: ''
   answer_scientific_url: https://ourworldindata.org/co2/country/france?country=~FRA
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/542.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/542.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -16922,7 +16922,7 @@
     de produits carnés.
   answer_accessible_url: https://anthropogoniques.com/affirmations-evolution-de-lalimentation/
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/questions/550.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/550.png
   answer_image_explanation: Schéma de systèmes digestifs de différents mammifères
   answer_extra_info: ''
   author: Vincent Mignerot
@@ -17114,7 +17114,7 @@
     fossiles. Pour l''éolien, le rapport est de 1 à 5.'
   answer_accessible_url: https://youtu.be/xgy0rW0oaFI?t=4539
   answer_scientific_url: ''
-  answer_image_url: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.slideshare.net%2FJoelleLeconte%2Fdiaporama-confrence-de-jancovici-sciences-po-29-aout-2019&psig=AOvVaw1q1wfIayHxaLXSangi5eta&ust=1607416887158000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDHgNu8u-0CFQAAAAAdAAAAABAY
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/556.jpg
   answer_image_explanation: Voir vidéo autour de 1h16'
   answer_extra_info: https://youtu.be/xgy0rW0oaFI
   author: Vincent Mignerot
@@ -17552,7 +17552,7 @@
     générations sur des renards. Pour une évocation plus générale de la domestication
     du chien : Homo Canis, Une histoire des chiens et de l’humanité, Laurent Testot,
     Paris, Payot, 2018.'
-  answer_accessible_url: https://github.com/raphodn/know-your-planet/compare/master...Sarma38-patch-1?expand=1#diff-a68629b75a9bc007d57c3fb5df2e3006d6583030e69be8c62ef2f4a13fb055aa
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/laurent-testot/571.mp3
   answer_scientific_url: http://www.terrierman.com/russianfoxfarmstudy.pdf
   answer_image_url: https://www.sciencesetavenir.fr/assets/img/2015/02/23/cover-r4x3w1000-57e155beab460-domestication-du-chien.jpg
   answer_image_explanation: ''
@@ -17587,7 +17587,7 @@
     s’est interrompu aux 19ème et 20ème siècles suite au génocide subi par les Aborigènes
     face aux colons. Comme d’autres pratiques autochtones, il est aujourd’hui redécouvert
     pour lutter contre les méga-feux. '
-  answer_accessible_url: https://github.com/raphodn/know-your-planet/compare/master...Sarma38-patch-1?expand=1#diff-c1cda8d03cc963ab6cd51a9d4a087b601b83cba945fd9130b0a1000c75de1dc7
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/laurent-testot/572.mp3
   answer_scientific_url: https://academic.oup.com/bioscience/article/59/7/593/334816
   answer_image_url: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.aboriginalsignature.com%2Fglossaire-art-aborigene&psig=AOvVaw32zHNMmfTnNgx5X0yvbeSl&ust=1599644337872000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCfk92h2esCFQAAAAAdAAAAABAD
   answer_image_explanation: ''
@@ -17624,7 +17624,7 @@
     à ce jour ont eu lieu en 1257 (Samalas, Indonésie), 1452 (Kuwae, Vanuatu), 1600
     (Huaynaputina, Pérou), 1815 (Tambora, Indonésie), et ont entraîné des conséquences
     planétaires durable, sur les écosystèmes, les cultures comme sur la géopolitique.
-  answer_accessible_url: https://github.com/raphodn/know-your-planet/compare/master...Sarma38-patch-1?expand=1#diff-478a9ad7ca347c5d038260b6b320bfd9ea353d0b9e8b8d0b994e0f824ede0eb7
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/laurent-testot/573.mp3
   answer_scientific_url: https://doi.org/10.1017/CBO9780511844058.009
   answer_image_url: https://i.dailymail.co.uk/i/pix/2015/04/15/10/27975FAA00000578-0-The_map_above_shows_major_volcanic_eruptions_from_the_past_2_000-a-17_1429091055374.jpg
   answer_image_explanation: ''
@@ -17734,7 +17734,7 @@
     entre l'Ancien et le Nouveau Monde. Beaucoup de choses furent échangées entre
     les deux hémisphères, ce qui bouleversa les patrimoines biologiques et culturels
     de part et d'autre.
-  answer_accessible_url: https://github.com/raphodn/know-your-planet/compare/master...Sarma38-patch-1?expand=1#diff-478a9ad7ca347c5d038260b6b320bfd9ea353d0b9e8b8d0b994e0f824ede0eb7
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/laurent-testot/576.mp3
   answer_scientific_url: https://fr.wikipedia.org/wiki/%C3%89change_colombien
   answer_image_url: https://upload.wikimedia.org/wikipedia/commons/e/eb/Intikawan_Amantani.jpg
   answer_image_explanation: Culture en terrasses sur l'île de Taquile, où sont cultivés
@@ -17769,7 +17769,7 @@
     au sud, et des aurores australes jusqu’à Santiago du Chili au nord. Heureusement,
     à cette date-là, seuls des télégraphes furent mis hors service. Aujourd'hui, une
     telle tempête, imprévisible, aurait des effets catastrophiques.
-  answer_accessible_url: https://github.com/raphodn/know-your-planet/compare/master...Sarma38-patch-1?expand=1#diff-d63731451d09f0b2f2ac6512f8d05dce7b87fe4256dd72c430489e1b63c1e7a9
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/laurent-testot/577.mp3
   answer_scientific_url: https://www.nationalgeographic.fr/espace/et-si-la-plus-grande-tempete-solaire-jamais-enregistree-etait-venir
   answer_image_url: https://img.maxisciences.com/article/mourir-moins-con/eruption-solaire_9b358aa01d21270d7599f9825ae7a32a470af690.jpg
   answer_image_explanation: Eruption solaire massive
@@ -17794,10 +17794,10 @@
   answer_option_c: L'Egypte
   answer_option_d: La Chine
   answer_correct: d
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'Et c''est ce qui lui permit de demeurer la première puissance
     mondiale du 10e au 18e siècle. '
-  answer_accessible_url: https://github.com/raphodn/know-your-planet/compare/master...Sarma38-patch-1?expand=1#diff-55de4e9ddffb19abae211ef50345c943124707cc2bc594eda3556e581142b022
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/laurent-testot/578.mp3
   answer_scientific_url: https://fr.wikipedia.org/wiki/Quatre_grandes_inventions_de_la_Chine_antique
   answer_image_url: https://upload.wikimedia.org/wikipedia/commons/5/53/Model_Si_Nan_of_Han_Dynasty.jpg
   answer_image_explanation: Maquette d'une cuiller indiquant le sud
@@ -17829,10 +17829,11 @@
     leur essor, prêtes pour la Première Guerre mondiale
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: Vaclav Smil estime qu’il a fallu plus de cent ans pour que le
-    charbon contribue à hauteur de 25 % à l’approvisionnement mondial en énergie,
-    alors que le pétrole a atteint ce chiffre en 80 ans. Des délais assez longs finalement.
-  answer_accessible_url: https://github.com/raphodn/know-your-planet/compare/master...Sarma38-patch-1?expand=1#diff-9de6015833b6463203eda56ebc4397b43364ddcf102959b95e4ec7d959812006
+  answer_explanation: Le chercheur Vaclav Smil estime qu’il a fallu plus de cent ans
+    pour que le charbon contribue à hauteur de 25 % à l’approvisionnement mondial
+    en énergie, alors que le pétrole a atteint ce chiffre en 80 ans. Des délais assez
+    longs finalement.
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/laurent-testot/579.mp3
   answer_scientific_url: https://mitpress.mit.edu/books/energy-and-civilization
   answer_image_url: https://www.geostrategia.fr/wp-content/uploads/2018/09/pixiz-05-09-2018-18-11-54.jpg
   answer_image_explanation: ''
@@ -17859,12 +17860,12 @@
   answer_option_c: Albert Einstein
   answer_option_d: Otto von Guericke
   answer_correct: b
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: La première application de son invention a été que l'Allemagne
     a pu produire des explosifs pendant la Première Guerre mondiale.  Fritz Haber
     a apporté une contribution décisive au développement des industries automobiles
     et agricoles, bouleversant la biosphère à un degré inégalé.
-  answer_accessible_url: https://github.com/raphodn/know-your-planet/compare/master...Sarma38-patch-1?expand=1#diff-bd0f789eddfb1ad5e1d3d0e643fc1316d7cb1cc5346882ec1b0390e3902c946b
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/laurent-testot/580.mp3
   answer_scientific_url: https://journals.openedition.org/etudesrurales/9545
   answer_image_url: https://www.agro.basf.ch/de/Pictures/images2_pictures/startseite_pictures/geschichte_pictures/cheval_1540x866.jpg
   answer_image_explanation: ''
@@ -17897,7 +17898,7 @@
     endocriniens furent d'abord rejetées par les lobbies et la communauté scientifique,
     avant que le sujet devienne un sujet majeur de recherche et un motif d'inquiétude
     sérieux pour la santé des hommes et des animaux.
-  answer_accessible_url: https://github.com/raphodn/know-your-planet/compare/master...Sarma38-patch-1?expand=1#diff-e9452af98661667e6f122aff5e0aae8b73c4ef8dbf1e402683dcd5ae743f57c5
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/laurent-testot/581.mp3
   answer_scientific_url: https://www.lemonde.fr/planete/article/2014/12/24/theo-colborn-1927-2014_4545871_3244.html
   answer_image_url: https://i1.wp.com/www.lavoixdubio.com/wp-content/uploads/2015/03/Perturbateurs-endocriniens-salle-de-bain.jpg?fit=800%2C600
   answer_image_explanation: ''
@@ -19213,7 +19214,7 @@
     : le Royaume-Uni, les États-Unis, et la Chine.'
   answer_accessible_url: ''
   answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r291.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/291.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1275171016566808576
   author: laydgeur
@@ -19246,7 +19247,7 @@
     dans l'histoire, et sont temporairement revenues à leur niveau... de 2006.
   answer_accessible_url: ''
   answer_scientific_url: https://www.nature.com/articles/s41558-020-0797-x
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r292.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/292.png
   answer_image_explanation: ''
   answer_extra_info: 'https://twitter.com/laydgeur/status/1275526497357500417
 
@@ -19285,7 +19286,7 @@
     d''Africains.'
   answer_accessible_url: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r293.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/293.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1275875305081704450
   author: laydgeur
@@ -19318,7 +19319,7 @@
     Elle a diminué depuis de 65% depuis.'
   answer_accessible_url: https://fr.wikipedia.org/wiki/R%C3%A9gions_p%C3%A9trolif%C3%A8res_en_Europe
   answer_scientific_url: https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r294.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/294.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1276238855482626048?s=20
   author: laydgeur
@@ -19347,7 +19348,7 @@
     (3,7 Mt), les États-Unis (1,9 Mt) et la Colombie (1,5 Mt)
   answer_accessible_url: https://www.statistiques.developpement-durable.gouv.fr/chiffres-cles-de-lenergie-edition-2019?rubrique=19&dossier=170
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r295.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/295.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1276778476985552898?s=20
   author: laydgeur
@@ -19381,7 +19382,7 @@
     par du renouvelable, qui plus est intermittent.
   answer_accessible_url: ''
   answer_scientific_url: https://bilan-electrique-2019.rte-france.com/#
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r296.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/296.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1277691935000494081
   author: laydgeur
@@ -19414,7 +19415,7 @@
     réenrichissement.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.edf.fr/groupe-edf/producteur-industriel/nucleaire/atouts/expertise-nucleaire/cycle-du-combustible-nucleaire-edf-present-sur-toutes-les-phases
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r297.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/297.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1278063646535561216
   author: laydgeur
@@ -19448,7 +19449,7 @@
     litres d''essence.'
   answer_accessible_url: https://www.edf.fr/groupe-edf/espaces-dedies/l-energie-de-a-a-z/tout-sur-l-energie/produire-de-l-electricite/l-uranium-le-combustible-nucleaire
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r298.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/298.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1278433375708217346
   author: laydgeur
@@ -19595,7 +19596,7 @@
     (+70% par rapport aux trois autres).
   answer_accessible_url: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r302.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/302.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1280594616606171149
   author: laydgeur
@@ -19632,7 +19633,7 @@
     Avec des émissions fortes, ce serait tous les 3,5 ans en 2100.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.nature.com/articles/s41467-020-16834-0
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r303.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/303.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1280967873117270029
   author: laydgeur
@@ -19664,7 +19665,7 @@
     avec environ 35% du total (cette part est identique encore aujourd'hui).
   answer_accessible_url: https://ourworldindata.org/energy
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r304.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/304.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1281339597230936065
   author: laydgeur
@@ -19693,7 +19694,7 @@
     de la course, soit entre la puissance d'un grille-pain et d'un four à micro-ondes.
   answer_accessible_url: https://www.bfmtv.com/auto/usain-bolt-ou-le-rapport-poids-puissance-d-une-peugeot-203_AN-201608190008.html
   answer_scientific_url: https://aapt.scitation.org/doi/abs/10.1119/1.3274162
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r305.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/305.png
   answer_image_explanation: Puissance mécanique fournie par Usain Bolt aux championnats
     du monde de Pékin (2008) et Berlin (2009). On voit clairement le pic de puissance
     quand il est en pleine accélération 1 seconde après le départ, puis la puissance
@@ -19726,7 +19727,7 @@
     total. Suivent ensuite l'alimentation, et le transport routier hors Paris.
   answer_accessible_url: https://www.paris.fr/pages/le-bilan-carbone-de-paris-2018-7479
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r306.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/306.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1282765530487824387
   author: laydgeur
@@ -19760,7 +19761,7 @@
     du charbon qui a remplacé le bois en combustible de chauffe.
   answer_accessible_url: ''
   answer_scientific_url: https://www.sciencedirect.com/science/article/abs/pii/S0743016798000230
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r307.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/307.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1283485972865351680
   author: laydgeur
@@ -19793,7 +19794,7 @@
     en phase avec les objectifs fixés par la stratégie nationale bas carbone
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/chiffres-cles-du-climat-france-europe-et-monde-edition-2020-0?rubrique=&dossier=1263
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r308.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/308.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1283859848023678982
   author: laydgeur
@@ -19824,7 +19825,7 @@
     au total.
   answer_accessible_url: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r309.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/309.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1284208421739405313
   author: laydgeur
@@ -19854,7 +19855,7 @@
     lieu ces 7 dernières années.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.ncei.noaa.gov/news/global-climate-202006
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r310.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/310.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1284579178847916032
   author: laydgeur
@@ -19886,7 +19887,7 @@
     continent.'
   answer_accessible_url: ''
   answer_scientific_url: https://onlinelibrary.wiley.com/doi/abs/10.1002/esp.1670
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r311.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/311.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1285314669587181574
   author: laydgeur
@@ -19916,7 +19917,7 @@
     l''excellent jeu pédaogique développé par Avenir Climatique donné en lien ci-dessous.'
   answer_accessible_url: https://avenirclimatique.org/carbonometre/
   answer_scientific_url: https://www.bilans-ges.ademe.fr/documentation/UPLOAD_DOC_FR/index.htm?repas.htm
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r312.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/312.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1285674342467153922
   author: laydgeur
@@ -19947,7 +19948,7 @@
     trois mois plus tôt. Cette augmentation a tendance à s'accélérer en fait.
   answer_accessible_url: https://climate.nasa.gov/vital-signs/carbon-dioxide/
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r313.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/313.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1286043854278459393
   author: laydgeur
@@ -19979,7 +19980,7 @@
     60% sont des territoires agricoles, et 34% sont des forêts et milieux semi-naturels.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2019-01/datalab-2-atlas-regional-de-loccupation-des-sols-en-france%20%28clc%29-octobre2016.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r314.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/314.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1286580801291911168
   author: laydgeur
@@ -20012,7 +20013,7 @@
     pas loin de la moitié des émissions de la région.
   answer_accessible_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/07/hcc_rapport_annuel-2020.pdf
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r315.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/315.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1287025515514167296
   author: laydgeur
@@ -20048,7 +20049,7 @@
     depuis 90 ans, 17 ont eu lieu après l''an 2000, dont 6 qui ont eu lieu en 2020.'
   answer_accessible_url: https://www.fire.ca.gov/media/11416/top20_acres.pdf
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r317.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/317.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1318634699275849729
   author: laydgeur
@@ -20078,7 +20079,7 @@
     période, la France a émis un cumul de 32 milliards de tonnes de CO2.
   answer_accessible_url: ''
   answer_scientific_url: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2011EO240001
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r318.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/318.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1319008577865076738
   author: laydgeur
@@ -20110,7 +20111,7 @@
     20%, suivi par les énergies renouvelables thermiques à 11%.
   answer_accessible_url: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/bilan-energetique-de-la-france-en-2019-donnees-provisoires?rubrique=19&dossier=170
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r319.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/319.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1319366405377150976
   author: laydgeur
@@ -20140,7 +20141,7 @@
     de l'électricité chinoise sont produits avec du charbon.
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/reports/global-ev-outlook-2020
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r320.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/320.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1319722821728305158
   author: laydgeur
@@ -20173,7 +20174,7 @@
     d’un tiers du total.'
   answer_accessible_url: https://ourworldindata.org/co2-emissions
   answer_scientific_url: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r321.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/321.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1320829859397095424
   author: laydgeur
@@ -20202,7 +20203,7 @@
     méthane (CH4) de 160%.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter06_FINAL.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r322.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/322.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1321191996661420041
   author: laydgeur
@@ -20239,7 +20240,7 @@
     (cuisiner, repasser, ...) pour se réunir autour d''une télévision.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.rte-france.com/eco2mix/la-consommation-delectricite-en-france#
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r323.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/323.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1321557493592530944
   author: laydgeur
@@ -20273,7 +20274,7 @@
     - et 44% restent dans l’atmosphère (et c’est bien emmerdant)'
   answer_accessible_url: ''
   answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/19/files/GCP_CarbonBudget_2019.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r324.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/324.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1322285904187314178
   author: laydgeur
@@ -20304,7 +20305,7 @@
     géographique restreinte et de leur nourriture spécialisée. '
   answer_accessible_url: ''
   answer_scientific_url: https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/06-0546.1
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r325.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/325.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1322637135644688385
   author: laydgeur
@@ -20343,7 +20344,7 @@
     Le premier importateur net (import - export) est de loin l''Allemagne.'
   answer_accessible_url: ''
   answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/87b16988-f740-11ea-991b-01aa75ed71a1/language-en/format-PDF/source-170585611
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r326.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/326.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1323371163649773571
   author: laydgeur
@@ -20373,7 +20374,7 @@
     produit à lui seul deux fois plus de pétrole que les 27 pays de l'UE réunis.
   answer_accessible_url: ''
   answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/87b16988-f740-11ea-991b-01aa75ed71a1/language-en/format-PDF/source-170585611
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r327.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/327.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1323898618995216384
   author: laydgeur
@@ -20410,7 +20411,7 @@
     le moyen de réduire notre dépendance au pétrole.
   answer_accessible_url: ''
   answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/87b16988-f740-11ea-991b-01aa75ed71a1/language-en/format-PDF/source-170585611
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r328.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/328.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1324242278114873345
   author: laydgeur
@@ -20446,7 +20447,7 @@
     de 90%.'
   answer_accessible_url: ''
   answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/87b16988-f740-11ea-991b-01aa75ed71a1/language-en/format-PDF/source-170585611
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r329.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/329.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1324465284615462914
   author: laydgeur
@@ -20478,7 +20479,7 @@
     imports pour chaque).'
   answer_accessible_url: ''
   answer_scientific_url: https://ec.europa.eu/eurostat/cache/infographs/energy/bloc-2c.html
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r330.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/330.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1324813993991614466
   author: laydgeur
@@ -20509,7 +20510,7 @@
     quart des émissions mondiales dues à l'aviation.
   answer_accessible_url: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r331.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/331.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1325911824680824832
   author: laydgeur
@@ -20543,7 +20544,7 @@
     Si elles tombaient à zéro, les États-Unis seraient toujours le 2ème émetteur mondial...'
   answer_accessible_url: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r332.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/332.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1326267748540878848
   author: laydgeur
@@ -20577,7 +20578,7 @@
     Gt), de l''Inde (0,3 Gt), de la Russie (0,2 Gt), et du Japon (0,2 Gt).'
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=USA&fuel=CO2%20emissions&indicator=CO2BySector
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r333.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/333.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1326633704119296003
   author: laydgeur
@@ -20613,7 +20614,7 @@
     2,5 millions de barils/jour, c''est l''équivalent de la production du Koweït.'
   answer_accessible_url: https://www.lemonde.fr/economie/article/2020/07/14/petrole-la-fin-de-l-age-d-or-americain_6046169_3234.html
   answer_scientific_url: https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=pet&s=wcrfpus2&f=4
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r334.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/334.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1326996258414858240
   author: laydgeur
@@ -20643,7 +20644,7 @@
     nourriture, ...).
   answer_accessible_url: https://green.blogs.nytimes.com/2011/11/10/if-you-act-your-age-whats-your-carbon-footprint/
   answer_scientific_url: https://link.springer.com/article/10.1007/s13524-010-0004-1
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r335.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/335.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1327717007958175745
   author: laydgeur
@@ -20679,7 +20680,7 @@
     par la plus grande durabilité de l''acier.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/authentification
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r336.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/336.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1328435243855056899
   author: laydgeur
@@ -20743,7 +20744,7 @@
   answer_explanation: Le premier fournisseur de charbon de l'UE est la Russie.
   answer_accessible_url: ''
   answer_scientific_url: https://ec.europa.eu/energy/data-analysis/energy-statistical-pocketbook_fr
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r338.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/338.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1329338984703676422
   author: laydgeur
@@ -20774,7 +20775,7 @@
     comptent pour la moitié du total d'émissions de la région.
   answer_accessible_url: ''
   answer_scientific_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/07/cartes-regions-_-20201110.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r339.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/339.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1329887456821440513
   author: laydgeur
@@ -20810,7 +20811,7 @@
     grandeur uniquement.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ufolep.org/modules/kameleon/upload/FE_Sport.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/api/static/images/laydgeur/r340.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/340.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1330250867862360074
   author: laydgeur
@@ -21360,8 +21361,9 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: 'Paradoxalement, l''année 2020 a vu des feux plus intenses mais
-    moins nombreux, avec un solde d''émissions CO2 en baisse.
+  answer_explanation: 'Paradoxalement, malgré le caractère exceptionnel de l''année
+    2020 avec des feux d''une ampleur inégalée, le nombre d''incendies a été plus
+    faible, et les émissions de CO2 qui en ont résulté en deça des années records.
 
     Source : Service Copernicus pour la surveillance de l''atmosphère (CAMS)'
   answer_accessible_url: https://www.lesechos.fr/monde/enjeux-internationaux/climat-les-incendies-de-foret-polluent-de-moins-en-moins-la-planete-1274256
