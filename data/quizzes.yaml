@@ -464,15 +464,16 @@
     interaction avec l'environnement. Pour aller plus loin, vous pouvez vous plonger
     dans les ouvrages de Laurent, ou continuer dans le même esprit avec le <a href="https://quizanthropocene.fr/quiz/3">quiz
     de Vincent Mignerot</a>.</p>
-  difficulty_average: 2.5
+  difficulty_average: 2.6666666666666665
   author: Laurent Testot
   image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
   publish: false
   created: 2020-09-23
-  updated: 2020-12-24
+  updated: 2020-12-25
   questions:
   - 571
   - 572
+  - 573
   - 576
   - 577
   - 578
@@ -641,14 +642,16 @@
   tags: []
 - id: 57
   name: NOUVEAU - 2020 en chiffres
-  introduction: ''
+  introduction: <p>Covid-19 et son lot de confinements et de coronapistes, 5 ans de
+    la COP21, propositions de la Convention Citoyenne pour le Climat,... L'année 2020
+    a été riche en matière d'environment. Mais avez-vous bien tout suivi ?</p>
   conclusion: ''
   difficulty_average: 1.8333333333333333
   author: Raphael Odini
-  image_background_url: ''
+  image_background_url: https://www.radioclassique.fr/wp-content/thumbnails/uploads/2020/05/animal-paris-article-tt-width-978-height-383-crop-1-bgcolor-ffffff.jpg
   publish: false
   created: 2020-12-24
-  updated: 2020-12-24
+  updated: 2020-12-26
   questions:
   - 682
   - 683
