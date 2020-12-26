@@ -26,7 +26,7 @@
     <h3>Open source</h3>
     <p>
       Le code de l'application est visible sur
-      <a :href="configuration.application_open_source_code_url" target="_blank" title="Lien vers le code de l'application">la page Github de l'application</a>.
+      <a v-bind:href="configuration.application_open_source_code_url" target="_blank" title="Lien vers le code de l'application">la page Github de l'application</a>.
       Si vous avez des commentaires ou des suggestions sur l'application, vous pouvez y créer des <i>Issues</i>.
     </p>
 

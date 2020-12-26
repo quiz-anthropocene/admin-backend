@@ -83,7 +83,16 @@
       <div class="row no-gutters text-align-left">
         <div class="col-sm-auto">
           <p class="answer-link" v-if="question.answer_accessible_url" title="Lien accessible pour aller plus loin">
-            🔗&nbsp;<a v-bind:href="question.answer_accessible_url" target="_blank" v-bind:title="question.answer_accessible_url">{{ question.answer_accessible_url }}</a>
+            <span v-if="questionAnswerAccessibleUrlIsAudio">
+              🔈&nbsp;
+              <audio controls>
+                <source v-bind:src="question.answer_accessible_url" type="audio/mpeg">
+                Votre navigateur ne supporte par le HTML5 audio. Voici un <a href="question.answer_accessible_url">lien pour télécharger le fichier audio</a>.
+              </audio>
+            </span>
+            <span v-if="!questionAnswerAccessibleUrlIsAudio">
+              🔗&nbsp;<a v-bind:href="question.answer_accessible_url" target="_blank" v-bind:title="question.answer_accessible_url">{{ question.answer_accessible_url }}</a>
+            </span>
           </p>
           <p class="answer-link" v-if="question.answer_scientific_url" title="Lien scientifique pour creuser la source">
             🔗🧬&nbsp;<a v-bind:href="question.answer_scientific_url" target="_blank" v-bind:title="question.answer_scientific_url">{{ question.answer_scientific_url }}</a>
@@ -158,6 +167,10 @@ export default {
     },
     questionAnswerExplanationWithLineBreaks() {
       return this.question.answer_explanation.replace(/(?:\r\n|\r|\n)/g, '<br />');
+    },
+    questionAnswerAccessibleUrlIsAudio() {
+      if (!String.prototype.endsWith || !this.question.answer_accessible_url) { return false; }
+      return this.question.answer_accessible_url.endsWith('.mp3');
     },
   },
 

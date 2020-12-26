@@ -199,6 +199,10 @@ form .form-group {
   margin-bottom: 10px; // changing label to inline removes it's margin-bottom of 8px...
 }
 
+audio {
+  vertical-align: middle;
+}
+
 .card-img-top {
   height: 10vw;
   object-fit: cover;

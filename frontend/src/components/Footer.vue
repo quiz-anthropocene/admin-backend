@@ -41,9 +41,9 @@
       </div>
       <div class="row">
         <div class="col-sm">
-          <a class="no-after" :href="configuration.application_linkedin_url" target="_blank"><img height="30px" src="openmoji_linkedin_E046.svg" alt="Linkedin" title="Linkedin" /></a>
-          <a class="no-after" :href="configuration.application_twitter_url" target="_blank"><img height="30px" src="openmoji_twitter_E040.svg" alt="Twitter" title="Twitter" /></a>
-          <a class="no-after" :href="configuration.application_facebook_url" target="_blank"><img height="30px" src="openmoji_facebook_E042.svg" alt="Facebook" title="Facebook" /></a>
+          <a class="no-after" v-bind:href="configuration.application_linkedin_url" target="_blank"><img height="30px" src="/openmoji_linkedin_E046.svg" alt="Linkedin" title="Linkedin" /></a>
+          <a class="no-after" v-bind:href="configuration.application_twitter_url" target="_blank"><img height="30px" src="/openmoji_twitter_E040.svg" alt="Twitter" title="Twitter" /></a>
+          <a class="no-after" v-bind:href="configuration.application_facebook_url" target="_blank"><img height="30px" src="/openmoji_facebook_E042.svg" alt="Facebook" title="Facebook" /></a>
         </div>
       </div>
     </section>
