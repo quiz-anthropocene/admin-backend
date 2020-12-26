@@ -1,6 +1,6 @@
 <template>
   <router-link class="card no-decoration" :to="{ name: 'quiz-detail', params: { quizId: quiz.id } }">
-    <img class="card-img-top" v-bind:src="quiz.image_background_url || 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png'" alt="Une image pour illustrer le quiz">
+    <img class="card-img-top" v-bind:src="quiz.image_background_url || 'https://quizanthropocene.fr/showyourstripes_globe_1850-2019.png'" alt="Une image pour illustrer le quiz">
     <div class="card-body">
       <h2 class="card-title">{{ quiz.name }}</h2>
       <p class="card-text text-center">

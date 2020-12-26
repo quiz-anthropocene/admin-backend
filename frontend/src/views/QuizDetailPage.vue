@@ -3,7 +3,7 @@
 
     <!-- Quiz header -->
     <div v-if="quiz" class="card">
-      <img v-bind:src="quiz.image_background_url || 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png'" class="image-background" :class="(quizStep === 0) ? 'height-200' : 'height-50'">
+      <img v-bind:src="quiz.image_background_url || 'https://quizanthropocene.fr/showyourstripes_globe_1850-2019.png'" class="image-background" :class="(quizStep === 0) ? 'height-200' : 'height-50'">
 
       <div class="card-body">
         <h2 class="card-title"><span v-if="quizStep > 0">Quiz : </span>{{ quiz.name }}</h2>
@@ -111,7 +111,7 @@ export default {
     // const url = `/quiz/${this.$route.params.quizId}`;
     const title = this.quiz && this.quiz.name ? `Quiz #${this.$route.params.quizId} - ${this.quiz.name}` : `Quiz #${this.$route.params.quizId}`;
     const description = this.quiz && this.quiz.introduction ? this.quiz.introduction : 'Le quiz n’a pas de description';
-    const imageUrl = this.quiz && this.quiz.image_background_url ? this.quiz.image_background_url : 'https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png';
+    const imageUrl = this.quiz && this.quiz.image_background_url ? this.quiz.image_background_url : 'https://quizanthropocene.fr/showyourstripes_globe_1850-2019.png';
     return {
       title,
       meta: metaTagsGenerator(title, description, imageUrl),

@@ -14,10 +14,10 @@ class Command(Dumpdata):
     Get readable data in the dumpdata output https://djangosnippets.org/snippets/10625/
 
     Usage example:
-    python manage.py dumpdata api.question > data/questions.yaml
-    python manage.py dumpdata api.question --format=yaml --output=data/questions.yaml
-    python manage.py dumpdata api.question --format=yaml-pretty --output=data/questions.yaml
-    python manage.py dumpdata api.question --format=yaml-pretty-flat --output=data/questions.yaml
+    python manage.py dumpdata api.question > ../data/questions.yaml
+    python manage.py dumpdata api.question --format=yaml --output=../data/questions.yaml
+    python manage.py dumpdata api.question --format=yaml-pretty --output=../data/questions.yaml
+    python manage.py dumpdata api.question --format=yaml-pretty-flat --output=../data/questions.yaml
     """
 
     def handle(self, *app_labels, **options):
