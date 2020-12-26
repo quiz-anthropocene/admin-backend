@@ -1,0 +1,152 @@
+{% extends "admin/change_list.html" %}
+
+{% load static %}
+
+<!-- Override extrahead to add Chart.js -->
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin/extra.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const ctx = document.getElementById('myChart').getContext('2d');
+  
+    // Sample data
+    const chartData = {{ chart_data | safe }};
+  
+    // Parse the dates to JS
+    chartData.forEach((d) => {
+      d.x = new Date(d.day);
+    });
+  
+    // Render the chart
+    const chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        datasets: [
+          {
+            label: '{{ current_field | safe }}', // 'answers_count'
+            data: chartData,
+            backgroundColor: 'rgba(220,20,20,0.5)',
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        scales: {
+          xAxes: [
+            {
+              type: 'time',
+              time: {
+                unit: '{{ current_scale | safe }}', // 'day',
+                round: 'day',
+                tooltipFormat: 'ddd, D/MM',
+                displayFormats: {
+                  day: 'D/MM',
+                },
+                isoWeekday: true
+              },
+            },
+          ],
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                precision: 0
+              },
+            },
+          ],
+        },
+      },
+    });
+    // remove first h1
+    document.getElementsByTagName("h1")[1].remove();
+    // add click listener
+    document.getElementById("action-button").addEventListener("click", function() {
+      document.getElementById("spinner").style.display = "block";
+    });
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+<h1>Statistiques d'usage</h1>
+<form method="POST">
+  {% csrf_token %}
+  <label for ="id_field">champ</label>
+  <select name="field" id="id_field">
+    {% for field_option in field_choice_list %}
+      <option value="{{ field_option }}" {% if current_field == field_option %}selected{% endif %}>{{ field_option }}</option>
+    {% endfor %}
+  </select>
+  <label for ="id_scale">par</label>
+  <select name="scale" id="id_scale">
+    {% for scale_option in scale_choice_list %}
+      <option value="{{ scale_option }}" {% if current_scale == scale_option %}selected{% endif %}>{{ scale_option }}</option>
+    {% endfor %}
+  </select>
+  <label>depuis</label>
+  <input type="date" name="since_date" value="{{ current_since_date }}" pattern="^\d{4}-\d{2}-\d{2}$" min="{{ since_date_min }}" title="En format YYYY-MM-DD, par exemple : 2020-01-31">
+  <input type="submit" value="Voir les statistiques">
+</form>
+
+<div style="width: 100%">
+  <canvas id="myChart" style="margin-bottom: 70px; width: 80%; height: 20%;"></canvas>
+</div>
+
+<h3>Aide</h3>
+<ul>
+  <li><strong>question_answer_count</strong> : Nombre de questions répondues (à la fois au sein d'un quiz ou individuellement)</li>
+  <li><strong>question_feedback_count</strong> : Nombre de réactions envoyées (👍 ou 👎)</li>
+  <li>vous souhaitez voir le nombre de quizs répondus (complétés) ? Voir la page d'admin Quizs</li>
+  <li>vous souhaitez voir le nombre de réponses ou de feedbacks ou le taux de réussite par question ? Voir la page d'admin Questions</li>
+</ul>
+
+<hr style="margin-top:20px;margin-bottom:20px" />
+
+<h1>Mettre à jour les statistiques d'usage</h1>
+<section class="action-text">
+  <p>
+    Les DailyStats sont générées à partir des statistiques d'usage stockées dans
+    QuestionAnswerEvent, QuestionFeedbackEvent, <strike>QuizAnswerEvent et QuizFeedbackEvent</strike>.<br />
+  </p>
+  <p>
+    Un script, lancé manuellement, permet d'aggréger ces chiffres.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Bouton d'aggrégation</th>
+        <th>Dernière date de lancement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="run_generate_daily_stats_script" value="1" />
+        <tr>
+          <td>
+            <input id="action-button" type="submit" value="Lancer le script">
+          </td>
+          <td>
+            <strong>{{ configuration.daily_stat_last_aggregated | date:"SHORT_DATETIME_FORMAT" }}</strong>
+            <br />
+            <span>({{ configuration.daily_stat_last_aggregated | timesince }} ago)</span>
+          </td>
+        </tr>
+      </form>
+    </tbody>
+  </table>
+
+  <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
+  <div id="spinner" class="loading" role="status" style="display:none"></div>
+</section>
+
+<hr style="margin-top:20px;margin-bottom:20px" />
+
+<!-- Render the rest of the ChangeList view by calling block.super -->
+{% block content_title %}{{ block.super }}{% endblock %}
+{{ block.super }}
+{% endblock %}

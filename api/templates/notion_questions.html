@@ -1,0 +1,54 @@
+{% extends 'layouts/main.html' %}
+
+{% block content %}
+<h3>But : vérifier que les questions dans Notion sont bien formatées</h3>
+<p>
+  Exemple d'erreurs remontées : 
+  <ul>
+    <li>une question validée mais sans type, ou catégorie, ou difficulté, ...</li>
+    <li>le tag n'existe pas encore dans la base de donnée de l'application</li>
+    <li>la catégorie n'existe pas encore dans la base de donnée de l'application</li>
+    <li>{'id': ['Question sans id. vide ?']} et {'text': ['Ce champ ne peut pas être vide.']} signifient qu'il y a une question 'vide'</li>
+  </ul>
+</p>
+<p>
+  Notes :
+  <ul>
+    <li>cache bizarre ?</li>
+    <li>questions id : faire -10000 pour retrouver l'id véritable de la question</li>
+  </ul>
+</p>
+
+<br>
+
+<form method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="run_validate_questions_in_notion_script" value="1" />
+  <input id="submit-button" type="submit" value="Lancer la vérification">
+  <br>
+  <i>l'attente peut être longue... environ 1 minute</i>
+</form>
+
+<hr style="margin-top:20px;margin-bottom:20px" />
+
+{% if notion_questions_validation %}
+<section id="error-section">
+  <h4>Erreurs : </h4>
+  {% if notion_questions_validation %}
+    <ul>
+    {% for error in notion_questions_validation %}
+      <li>{{ error }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+</section>
+{% endif %}
+{% endblock content %}
+
+{% block extrajs %}
+<script>
+document.getElementById("submit-button").addEventListener("click", function() {
+  document.getElementById("error-section").style.display = "none";
+});
+</script>
+{% endblock extrajs %}

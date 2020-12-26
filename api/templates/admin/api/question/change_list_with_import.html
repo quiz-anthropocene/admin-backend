@@ -1,0 +1,127 @@
+{% extends "admin/change_list.html" %}
+
+{% load static %}
+
+{% load custom_filters %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin/extra.css' %}">
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // remove first h1
+    document.getElementsByTagName("h1")[1].remove();
+    // add click listener
+    const elements = document.getElementsByClassName("action-button");
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].addEventListener("click", function() {
+        document.getElementById("spinner").style.display = "block";
+        document.getElementById("result-section").style.display = "none";
+      });
+    }
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+<h1>Importer les questions depuis Notion</h1>
+<section class="action-text">
+  <p>
+    Les questions sont créés et validées dans Notion, avant d'être importés dans l'admin (ici !), pour y créer les quizs.
+  </p>
+  <p>
+    Pourquoi plusieurs boutons ? L'import est séparé en plusieurs actions car il prend trop de temps sinon (et ferait planter le serveur).
+  </p>
+  <p>
+    Il faut donc lancer les imports les uns après les autres (cliquer sur un bouton, attendre la réponse, puis cliquer sur le suivant, etc.).
+  </p>
+  <p>
+    Les numéros affichés ici sont indicatifs, ils ne correspondent pas exactement à la réalité, car il y a certains ids manquants dans Notion (ce qui fait décaler les lots).
+  </p>
+  <p>
+    Merci de votre patience !
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Boutons d'import</th>
+        <th>Dernière date de lancement</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for scope_value, scope_label, configuration_scope_field in notion_questions_import_scope_choices %}
+        <form method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="run_import_questions_from_notion_script" value="{{ scope_value }}" />
+          <tr>
+            <td>
+              <input class="action-button" type="submit" value="Lancer l'import des questions : # {{ scope_label }}">
+            </td>
+            <td>
+              <strong>{{ configuration | get_obj_attr:configuration_scope_field | date:"SHORT_DATETIME_FORMAT" }}</strong>
+              <br />
+              <span>({{ configuration | get_obj_attr:configuration_scope_field | timesince }} ago)</span>
+            </td>
+          </tr>
+        </form>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
+  <div id="spinner" class="loading" role="status" style="display:none"></div>
+</section>
+
+{% if notion_questions_import_response %}
+<section id="result-section">
+  <h2>Résultats : </h2>
+  <ul>
+  {% for result in notion_questions_import_response %}
+    {% if result|isinstance:"list" %}
+      <li>
+        <ul>
+          {% for elem in result %}
+            <li>{{ elem }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% else %}
+      {% if result|slice:":3" in ">>>" %}
+        <h3>{{ result }}</h3>
+      {% else %}
+        <li>{{ result }}</li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  </ul>
+
+  <h3>Aide sur les erreurs lors de l'import</h3>
+  <ul>
+    <li>si id manquant : il doit y avoir des questions sans id (voire vide ?) dans Notion</li>
+  </ul>
+
+</section>
+{% endif %}
+
+<hr style="margin-top:20px;margin-bottom:20px" />
+
+<div style="padding:1rem;margin-bottom:1rem;background-color:#fff3cd">
+  ⚠️ Rappel : Actuellement les questions ne sont pas créés dans cet interface administrateur, mais dans l'application Notion (<a href="https://www.notion.so/quizplanete/d3a8e7d8c3bd41f89636302440b9629a?v=97c85b2c9c71456f919519478c6a57db" target=_blank>ici</a>).<br>
+  <strong>Une fois importées ici, elles n'apparaîtront pas pour autant tout de suite dans l'interface de l'application !</strong><br>
+  Il faut encore exporter la donnée vers Github, un bouton à <a href="{% url 'admin:index' %}">l'Accueil</a> permet de le faire en 1 clic.<br>
+  Plus de détails sur la procédure *actuelle* <a href="https://github.com/raphodn/know-your-planet/wiki/Import-et-export-de-la-donn%C3%A9e">ici</a>.
+</div>
+
+<hr style="margin-top:20px;margin-bottom:20px" />
+
+<!-- Render the rest of the ChangeList view by calling block.super -->
+{% block content_title %}{{ block.super }}{% endblock %}
+{{ block.super }}
+{% endblock %}
+
+<!-- django-import-export : https://github.com/django-import-export/django-import-export/blob/master/import_export/templates/admin/import_export/change_list_import.html -->
+{% block object-tools-items %}
+  {% include "admin/import_export/change_list_import_item.html" %}
+  {{ block.super }}
+{% endblock %}

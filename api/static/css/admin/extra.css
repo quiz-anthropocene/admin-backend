@@ -1,0 +1,37 @@
+.action-text {
+  border-left: 5px solid #cce5ff;
+  padding-left: 10px;
+}
+
+.loading {
+  height: 0;
+  width: 0;
+  padding: 5px;
+  border: 6px solid #ccc;
+  border-right-color: #888;
+  border-radius: 22px;
+  -webkit-animation: rotate 1s infinite linear;
+  /* left, top and position just for the demo! */
+}
+
+@-webkit-keyframes rotate {
+  /* 100% keyframe for  clockwise. 
+    use 0% instead for anticlockwise */
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+
+/* filter_vertical questions full width */
+.form-row .stacked,
+.form-row .stacked .selector-available,
+.form-row .stacked .selector-chosen,
+.form-row .stacked .selector-available select,
+.form-row .stacked .selector-chosen select {
+  width: 100%;
+}
+.form-row .stacked .selector-available select,
+.form-row .stacked .selector-chosen select {
+  height: 20em;
+}

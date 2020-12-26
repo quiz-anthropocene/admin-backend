@@ -1,0 +1,99 @@
+{% extends 'layouts/main.html' %}
+
+{% block extracss %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.css" />
+{% endblock extracss %}
+
+{% block content %}
+<h2>Nombre de réponses aux questions <small>(question_answer_count)</small></h2>
+<div style="width: 100%">
+  <canvas id="question_answer_count" style="margin-bottom: 70px; width: 80%; height: 20%;"></canvas>
+</div>
+
+<h2>Nombre de réponses aux quizs <small>(quiz_answer_count)</small></h2>
+<div style="width: 100%">
+  <canvas id="quiz_answer_count" style="margin-bottom: 70px; width: 80%; height: 20%;"></canvas>
+</div>
+{% endblock content %}
+
+{% block extrajs %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const chartOptions = {
+      responsive: true,
+      scales: {
+        xAxes: [
+          {
+            type: 'time',
+            time: {
+              unit: 'day', // 'month', 'month'
+              round: 'day', // 'month'
+              tooltipFormat: 'ddd, D/MM', // 'MMM'
+              displayFormats: {
+                day: 'D/MM',
+              },
+              isoWeekday: true
+            },
+          },
+        ],
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+              precision: 0
+            },
+          },
+        ],
+      },
+    };
+
+    const question_answer_count_context = document.getElementById('question_answer_count').getContext('2d');
+    const question_answer_count_data = {{ question_answer_count_json | safe }};
+  
+    // Parse the dates to JS
+    question_answer_count_data.forEach((d) => {
+      d.x = new Date(d.day);
+    });
+  
+    // Render the chart
+    const question_answer_count_chart = new Chart(question_answer_count_context, {
+      type: 'bar',
+      data: {
+        datasets: [
+          {
+            label: 'answers',
+            data: question_answer_count_data,
+            backgroundColor: 'rgba(220,20,20,0.5)',
+          },
+        ],
+      },
+      options: chartOptions,
+    });
+
+    const quiz_answer_count_context = document.getElementById('quiz_answer_count').getContext('2d');
+    const quiz_answer_count_data = {{ quiz_answer_count_json | safe }};
+  
+    // Parse the dates to JS
+    quiz_answer_count_data.forEach((d) => {
+      d.x = new Date(d.day);
+    });
+  
+    // Render the chart
+    const quiz_answer_count_chart = new Chart(quiz_answer_count_context, {
+      type: 'bar',
+      data: {
+        datasets: [
+          {
+            label: 'answers',
+            data: quiz_answer_count_data,
+            backgroundColor: 'rgba(220,20,20,0.5)',
+          },
+        ],
+      },
+      options: chartOptions,
+    });
+
+  });
+</script>
+{% endblock extrajs %}

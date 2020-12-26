@@ -1,0 +1,117 @@
+{% extends "admin/change_list.html" %}
+
+{% load static %}
+
+<!-- Override extrahead to add Chart.js -->
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const ctx = document.getElementById('myChart').getContext('2d');
+  
+    // Sample data
+    const chartData = {{ chart_data | safe }};
+  
+    // Parse the dates to JS
+    chartData.forEach((d) => {
+      d.x = new Date(d.day);
+    });
+  
+    // Render the chart
+    const chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        datasets: [
+          {
+            label: '{{ current_field | safe }}', // 'quiz_answers',
+            data: chartData,
+            backgroundColor: 'rgba(220,20,20,0.5)',
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        scales: {
+          xAxes: [
+            {
+              type: 'time',
+              time: {
+                unit: 'day',
+                round: 'day',
+                tooltipFormat: 'ddd, D/MM',
+                displayFormats: {
+                  day: 'D/MM',
+                },
+                isoWeekday: true
+              },
+            },
+          ],
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                precision: 0
+              },
+            },
+          ],
+        },
+      },
+    });
+    // remove first h1
+    document.getElementsByTagName("h1")[1].remove();
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+<h1>Statistiques par quiz</h1>
+<form method="POST">
+  {% csrf_token %}
+  <label for ="id_field">quiz</label>
+  <select name="quiz_id" id="id_quiz_id">
+    {% for quiz in quiz_choice_list %}
+      <option value="{{ quiz.id }}" {% if current_quiz_id == quiz.id %}selected{% endif %}>{{ quiz.id }} - {{ quiz.name }}</option>
+    {% endfor %}
+  </select>
+  <label for ="id_field">champ</label>
+  <select name="field" id="id_field">
+    {% for field_option in field_choice_list %}
+      <option value="{{ field_option }}" {% if current_field == field_option %}selected{% endif %}>{{ field_option }}</option>
+    {% endfor %}
+  </select>
+  <label for ="id_field">par</label>
+  <select name="scale" id="id_scale">
+    {% for scale_option in scale_choice_list %}
+      <option value="{{ scale_option }}" {% if current_scale == scale_option %}selected{% endif %}>{{ scale_option }}</option>
+    {% endfor %}
+  </select>
+  <input type="submit" value="Voir les statistiques du quiz">
+</form>
+
+<div style="width: 100%">
+  <canvas id="myChart" style="margin-bottom: 70px; width: 80%; height: 20%;"></canvas>
+</div>
+
+<h3>Aide</h3>
+<ul>
+  <li><strong>quiz_answer_count</strong> : Nombre de fois que le quiz a été complété</li>
+  <li><strong>quiz_feedback_count</strong> : Nombre de réactions envoyées à la fin du quiz (👍 ou 👎)</li>
+</ul>
+
+<hr style="margin-top:20px;margin-bottom:20px" />
+
+<div style="padding:1rem;margin-bottom:1rem;background-color:#fff3cd">
+  ⚠️ Rappel : Actuellement les quizs sont créés dans cet interface administrateur.<br>
+  <strong>Mais ils n'apparaîtront pas tout de suite dans l'interface de l'application !</strong><br>
+  Il faut encore exporter la donnée vers Github, un bouton à <a href="{% url 'admin:index' %}">l'Accueil</a> permet de le faire en 1 clic.<br>
+  Plus de détails sur la procédure *actuelle* <a href="https://github.com/raphodn/know-your-planet/wiki/Import-et-export-de-la-donn%C3%A9e">ici</a>.
+</div>
+
+<hr style="margin-top:20px;margin-bottom:20px" />
+
+<!-- Render the rest of the ChangeList view by calling block.super -->
+{% block content_title %}{{ block.super }}{% endblock %}
+{{ block.super }}
+{% endblock %}
