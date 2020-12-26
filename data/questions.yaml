@@ -21213,7 +21213,7 @@
     A ce rythme là, les 1,5°C d''augmentation pourraient être atteints avant 2030. '
   answer_accessible_url: https://www.francetvinfo.fr/meteo/climat/video-climat-l-annee-2020-parmi-les-plus-chaudes-malgre-le-phenomene-la-nina_4211985.html
   answer_scientific_url: https://www.carbonbrief.org/state-of-the-climate-2020-on-course-to-be-warmest-year-on-record
-  answer_image_url: https://img.lemde.fr/2020/12/02/0/0/1790/1076/1328/0/45/0/c9d81a7_308820608-capture-d-e-cran-2020-12-02-a-09-38-47.jpg
+  answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/2/9/7/297292d5a2_50170756_climat-secheresse-annee-plus-chaude-onu.jpg
   answer_image_explanation: Ecart de la température moyenne annuelle à l’échelle du
     globe par rapport à la période préindustrielle (1850 –1900). Les données pour
     2020 concernent la période de janvier à octobre. Source OMM.
@@ -21228,19 +21228,20 @@
   - 51
   - 213
 - id: 686
-  text: Le 12 Décembre 2020, on a célébré les 5 ans de l'accord de Paris (COP 21).
-    Cet accord a pour objectif de contenir l'élévation de la température moyenne de
-    la planète « nettement en dessous de 2°C » en « poursuivant l'action menée pour
-    limiter l'élévation de la température à 1,5°C ». Or avec les promesses actuelles,
-    sur quelle trajectoire sommes-nous ?
+  text: 'Le 12 Décembre 2020, on a célébré les 5 ans de l''accord de Paris (COP 21).
+    Cet accord a pour objectif de contenir l''élévation de la température moyenne
+    de la planète « nettement en dessous de 2°C » en « poursuivant l''action menée
+    pour limiter l''élévation de la température à 1,5°C ».
+
+    Or avec les promesses actuelles, sur quelle trajectoire sommes-nous ?'
   hint: ''
   type: QCM
   category: 6
   difficulty: 2
-  answer_option_a: +2,5-3°C
-  answer_option_b: +3-3,5°C
-  answer_option_c: +3,5-4°C
-  answer_option_d: +4-4,5°C
+  answer_option_a: +2,5 à +3°C
+  answer_option_b: +3 à +3,5°C
+  answer_option_c: +3,5 à +4°C
+  answer_option_d: +4 à +4,5°C
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: 'Maintenir la hausse à +1,5°C est illusoire (il faudrait diminuer
@@ -21270,9 +21271,9 @@
   - 51
   - 213
 - id: 687
-  text: 'La Convention Citoyenne avait pour mandat de proposer des mesures structurantes
-    pour réduire les émissions françaises de gaz à effet de serre, dans un esprit
-    de justice sociale.
+  text: 'La Convention Citoyenne pour le Climat avait pour mandat de proposer des
+    mesures structurantes pour réduire les émissions françaises de gaz à effet de
+    serre, dans un esprit de justice sociale.
 
     Quel était l''objectif chiffré de réduction (par rapport à 1990) ?'
   hint: ''
