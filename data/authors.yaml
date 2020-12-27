@@ -23,13 +23,13 @@
   question_count: 2
   quiz_count: 0
 - name: Kim Nguyen-Huu
-  question_count: 4
+  question_count: 5
   quiz_count: 0
 - name: Laurent Testot
   question_count: 9
-  quiz_count: 0
+  quiz_count: 1
 - name: laydgeur
-  question_count: 171
+  question_count: 172
   quiz_count: 2
 - name: Le Monde
   question_count: 1
@@ -41,7 +41,7 @@
   question_count: 72
   quiz_count: 13
 - name: Raphael Odini
-  question_count: 39
+  question_count: 40
   quiz_count: 2
 - name: Vincent Mignerot
   question_count: 13
