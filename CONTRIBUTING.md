@@ -15,6 +15,7 @@ Merci d'être là et de vouloir contribuer :)
     - [Backend](#backend)
     - [Frontend](#frontend)
     - [DevOps](#devops)
+  - [Schéma d'architecture](#sch%C3%A9ma-darchitecture)
   - [Lancer le projet en local](#lancer-le-projet-en-local)
     - [Installer l'application](#installer-lapplication)
     - [Lancer l'application](#lancer-lapplication)
@@ -79,7 +80,7 @@ Si vous souhaitez ajouter une fonctionnalité:
   - console Admin
 - Une base de donnée PostgreSQL
 
-Le Backend sert pour valider la donnée, ainsi que comme endpoint pour les stats.
+Le Backend sert pour valider la donnée, ainsi que d'endpoint pour les stats.
 
 #### Frontend
 
@@ -94,6 +95,10 @@ La donnée est lue directement depuis les fichiers yaml dans le dossier `/data`.
 - Le Frontend est hébergé sur Netlify (free tier)
 - CI/CD avec Github Actions
 - Cron pour automatiser certaines tâches avec Github Actions
+
+### Schéma d'architecture
+
+Voir dans le dossier `/data/architecture`
 
 ### Lancer le projet en local
 
