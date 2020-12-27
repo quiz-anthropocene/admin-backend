@@ -843,7 +843,7 @@
     dans l'atmosphère.
   answer_accessible_url: https://jancovici.com/changement-climatique/risques/faut-il-redouter-les-hydrates-de-methane/
   answer_scientific_url: ''
-  answer_image_url: https://ourworldindata.org/grapher/exports/methane-emissions-by-sector-gg-coe.png
+  answer_image_url: https://reporterre.net/IMG/jpg/emissions_de_me_thane_lie_es_aux_activite_s_humaines_1_.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -1175,7 +1175,9 @@
   answer_accessible_url: https://www.lemonde.fr/planete/article/2015/09/07/80-de-la-deforestation-est-due-a-l-agriculture_4747867_3244.html
   answer_scientific_url: ''
   answer_image_url: https://mongabay-images.s3.amazonaws.com/14/0911-report-chart.jpg
-  answer_image_explanation: ''
+  answer_image_explanation: Pays les plus affectés par la déforestation. Les % en
+    bleu représentent la proportion du bois qui est exportée. Sont illustrés également
+    les principales causes par pays (en anglais).
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Raphael Odini
@@ -16517,7 +16519,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2020-06-20
   created: 2020-06-24
   updated: 2020-06-24
@@ -17589,7 +17591,7 @@
     pour lutter contre les méga-feux. '
   answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/laurent-testot/572.mp3
   answer_scientific_url: https://academic.oup.com/bioscience/article/59/7/593/334816
-  answer_image_url: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.aboriginalsignature.com%2Fglossaire-art-aborigene&psig=AOvVaw32zHNMmfTnNgx5X0yvbeSl&ust=1599644337872000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCfk92h2esCFQAAAAAdAAAAABAD
+  answer_image_url: https://blog.nature.org/science/files/2018/06/tnc_84671281-1260x708.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Laurent Testot
@@ -17862,8 +17864,8 @@
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: La première application de son invention a été que l'Allemagne
-    a pu produire des explosifs pendant la Première Guerre mondiale.  Fritz Haber
-    a apporté une contribution décisive au développement des industries automobiles
+    a pu produire des explosifs pendant la Première Guerre mondiale. Fritz Haber a
+    apporté une contribution décisive au développement des industries automobiles
     et agricoles, bouleversant la biosphère à un degré inégalé.
   answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/laurent-testot/580.mp3
   answer_scientific_url: https://journals.openedition.org/etudesrurales/9545
@@ -19228,8 +19230,8 @@
   - 13
   - 81
 - id: 625
-  text: 'Au plus fort de la crise du Covid, les émissions mondiales de CO2 ont baissé
-    de quasiment 20%.
+  text: 'Au plus fort de la crise de la Covid, les émissions mondiales de CO2 ont
+    baissé de quasiment 20%.
 
     Quelle est la dernière année où nous avons émis aussi peu de CO2 ?'
   hint: ''
@@ -19255,7 +19257,7 @@
     doublon avec la 412'
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2020-06-23
   created: 2020-11-28
   updated: 2020-11-28
@@ -19579,29 +19581,28 @@
   tags:
   - 34
 - id: 635
-  text: En France, laquelle de ces catégories émet le plus de gaz à effet de serre
+  text: En France, laquelle de ces activités émet le plus de gaz à effet de serre
     ?
   hint: ''
   type: QCM
   category: 1
   difficulty: 2
-  answer_option_a: Élevage
-  answer_option_b: Procédés industriels
-  answer_option_c: Résidentiel
-  answer_option_d: Voitures
+  answer_option_a: L'élevage
+  answer_option_b: Les procédés industriels
+  answer_option_c: Le secteur résidentiel
+  answer_option_d: Les voitures
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: Parmi ces 4 catégories (élevage, procédés industriels, résidentiel,
-    voitures), celle qui émet le plus de gaz à effet de serre en France est la voiture
-    (+70% par rapport aux trois autres).
+  answer_explanation: Parmi ces 4 activités, celle qui émet le plus de gaz à effet
+    de serre en France est la voiture (+70% par rapport aux trois autres).
   answer_accessible_url: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/302.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1280594616606171149
   author: laydgeur
-  validator: ''
-  validation_status: A valider
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2020-07-07
   created: 2020-11-28
   updated: 2020-11-28
@@ -19609,10 +19610,10 @@
   - 33
   - 35
 - id: 636
-  text: 'Au Royaume-Uni, la fréquence d’occurence de températures de 40°C était entre
-    300 et 1000 ans à l’ère pré-industrielle.
-
-    A combien cette fréquence passerait-elle en 2100 en cas de fortes émissions ?'
+  text: "Au Royaume-Uni, à l’ère pré-industrielle, des températures de 40°C ou plus\
+    \ ne se produisaient au plus qu'une fois tous les 300 ans \nA combien cette fréquence\
+    \ passerait-elle à l'horizon 2100 si nos émissions continuent à croître comme\
+    \ actuellement (scénario le plus pessimiste du GIEC) ?"
   hint: ''
   type: QCM
   category: 1
@@ -19624,20 +19625,18 @@
   answer_correct: a
   has_ordered_answers: true
   answer_explanation: 'Au Royaume-Uni, des températures de 40°C apparaissaient tous
-    les 300-1000 ans à l''ère pré-industrielle.
+    les 300-1000 ans à l''ère pré-industrielle. Actuellement c''est tous les 100-300
+    ans.
 
-
-    Actuellement c''est tous les 100-300 ans.
-
-
-    Avec des émissions fortes, ce serait tous les 3,5 ans en 2100.'
+    Avec des émissions fortes, ce serait tous les 3,5 ans en 2100 selon le scénario
+    RCP 8.5 du GIEC'
   answer_accessible_url: ''
   answer_scientific_url: https://www.nature.com/articles/s41467-020-16834-0
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/303.png
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1280967873117270029
   author: laydgeur
-  validator: ''
+  validator: Matthieu Massart
   validation_status: A valider
   added: 2020-07-08
   created: 2020-12-05
@@ -20885,7 +20884,7 @@
   - 73
   - 208
 - id: 676
-  text: Quel est le poids de la dette "durable" dans les émissions de dette totales
+  text: Quel est le poids de la dette dite "durable" dans les émissions de dette totales
     dans le monde en 2019 ?
   hint: La dette durable englobe les green bonds, sustainability bonds, social bonds,
     green loans, sustainability-linked loans et sustainability-linked bonds.
@@ -20914,8 +20913,8 @@
   tags:
   - 194
 - id: 677
-  text: En 2019 quelle a été la part d'investissement dans les énergies renouvelables
-    dans les investissements mondiaux dans les énergies ?
+  text: En 2019, parmi les investissements mondiaux dans les énergies, quelle part
+    l'a été dans les énergies renouvelables ?
   hint: ''
   type: QCM
   category: 8
@@ -20926,10 +20925,11 @@
   answer_option_d: 75%
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: En considérant la production et l'approvisionnemnt, 1320 milliards
+  answer_explanation: En considérant la production et l'approvisionnemnt, 1,320 milliards
     de dollars ont été investis en 2019 dans les énergies dans le monde. 976 concernaient
     les énergies fossiles alors que 344 concernaient les renouvelables, soit à peu
-    près 25% des investissements.
+    près 25% des investissements. L'augmentation est forte depuis les années 2000,
+    mais la part du fossile reste prédominante.
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/reports/world-energy-investment-2020/key-findings#abstract
   answer_image_url: http://newenergydrupalfs.s3.amazonaws.com/annual_clean_energy_investment_bnef_january_2019.jpg
@@ -20937,8 +20937,8 @@
     différents investissements a les même proportions en 2019.
   answer_extra_info: ''
   author: Kim Nguyen-Huu
-  validator: ''
-  validation_status: A valider
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2020-12-09
   created: 2020-12-10
   updated: 2020-12-10
@@ -21195,8 +21195,8 @@
   - 92
   - 213
 - id: 685
-  text: 2020 sera peut-être l'année la plus chaude jamais enregistrée. Vrai ou Faux
-    ?
+  text: 2020 sera sûrement l'année la plus chaude jamais enregistrée sur terre. Vrai
+    ou Faux ?
   hint: ''
   type: VF
   category: 1
@@ -21384,7 +21384,7 @@
   - 213
 - id: 690
   text: En 2020, il y a eu beaucoup d'annonces en faveur du train de nuit. A ce jour,
-    combien reste t-il de lignes en service en France ?
+    combien reste t-il de lignes nationales en service en France ?
   hint: ''
   type: QCM
   category: 2
@@ -21409,7 +21409,12 @@
   answer_scientific_url: ''
   answer_image_url: https://reporterre.net/IMG/jpg/sans_titre-1.jpg
   answer_image_explanation: ''
-  answer_extra_info: 'tweet avec carte annonce lignes transfrontalières : https://twitter.com/seatsixtyone/status/1336293208343666692'
+  answer_extra_info: 'tweet avec carte annonce lignes transfrontalières : https://twitter.com/seatsixtyone/status/1336293208343666692
+
+
+    pourquoi lignes "nationales" ? car il existe plusieurs autres lignes internationales
+
+    https://www.lefigaro.fr/voyages/cinq-trains-de-nuit-que-l-on-peut-encore-emprunter-depuis-paris-20190821'
   author: Raphael Odini
   validator: Matthieu Massart
   validation_status: Validée
@@ -21540,3 +21545,39 @@
   - 1
   - 33
   - 43
+- id: 694
+  text: En 2020, combien reste-il en France de centrale à charbon en activité ?
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: Aucune
+  answer_option_b: '1'
+  answer_option_c: '4'
+  answer_option_d: '10'
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Il reste 4 centrales à charbon en activité en France.
+
+    Elles ont été mises à contribution dès cet automne, du fait d''une indisponibilité
+    partielle du parc nucléaire (maintenance) et des vents très faibles sur une large
+    partie de l''Europe.
+
+    Ces centrales sont le plus souvent mobilisées au cœur de l''hiver pour faire face
+    aux pics de consommation d''électricité. Deux d''entre elles fermeront en 2022,
+    une troisième en 2026.'
+  answer_accessible_url: https://www.lesechos.fr/industrie-services/energie-environnement/la-france-fait-deja-fonctionner-ses-centrales-a-charbon-1243601
+  answer_scientific_url: https://fr.wikipedia.org/wiki/Liste_des_centrales_thermiques_%C3%A0_flamme_en_France#Centrales_%C3%A0_charbon
+  answer_image_url: https://www.publicsenat.fr/sites/default/files/styles/pse_rte_moyen/public/thumbnails/image/a5984100d91b4ddcb281f4259ac29bae31927bfe.jpg
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Raphael Odini
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2020-12-26
+  created: 2020-12-27
+  updated: 2020-12-27
+  tags:
+  - 1
+  - 40
+  - 213
