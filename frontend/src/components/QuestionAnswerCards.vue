@@ -1,7 +1,7 @@
 <template>
   <section>
 
-    <!-- Question -->
+    <!-- QUESTION -->
     <div v-if="question" class="question">
       <h2>
         <span>
@@ -64,7 +64,7 @@
     <!-- <br v-if="question && questionSubmitted" /> -->
     <div v-if="question && questionSubmitted" id="scroll-to-answer" style="height:1px"></div>
 
-    <!-- Answer -->
+    <!-- ANSWER -->
     <div v-if="question && questionSubmitted" class="answer" :class="questionAnswer.success ? 'answer-success' : 'answer-error'">
       <h2 v-if="questionAnswer.success">{{ questionAnswer.message }} !</h2>
       <h2 v-if="!questionAnswer.success">{{ questionAnswer.message }}</h2>
@@ -72,6 +72,7 @@
         <small>La réponse était :&nbsp;</small>
         <span>{{ question["answer_option_" + question["answer_correct"]] }}</span>
       </h3>
+      <!-- Answer explanation -->
       <div class="row no-gutters text-align-left">
         <div class="col-sm-auto">
           <p title="Explication">
@@ -80,6 +81,7 @@
           </p>
         </div>
       </div>
+      <!-- Answer links -->
       <div class="row no-gutters text-align-left">
         <div class="col-sm-auto">
           <p class="answer-link" v-if="question.answer_accessible_url" title="Lien accessible pour aller plus loin">
@@ -99,30 +101,13 @@
           </p>
         </div>
       </div>
+      <!-- Answer image -->
       <p v-if="question.answer_image_url" class="answer-image" title="Une image pour illustrer la réponse">
         <a v-bind:href="question.answer_image_url" target="_blank">
           <img v-bind:src="question.answer_image_url" alt="une image pour illustrer la réponse" />
         </a>
       </p>
       <p v-if="question.answer_image_explanation" class="answer-image-explanation" title="Légende de l'image">Légende: {{ question.answer_image_explanation }}</p>
-
-      <!-- <div class="separator-with-text"></div> -->
-      <hr class="margin-top-bottom-10" />
-
-      <!-- Extra info -->
-      <div class="row no-gutters small">
-        <div class="col-sm" title="Auteur de la question">
-          📝&nbsp;Auteur<span class="label label-hidden"><strong>{{ question.author }}</strong></span>
-        </div>
-        <div class="col-sm" v-if="question.tags && question.tags.length > 0" title="Tag(s) de la question">
-          <!-- 🏷️&nbsp;Tag<span v-if="question.tags.length > 1">s</span>:&nbsp;{{ question.tags.map(t => t.name).join(', ') }} -->
-          🏷️&nbsp;<span v-for="tag in question.tags" :key="tag.id">
-            <span class="label label-tag">{{ tag.name }}</span>
-          </span>
-        </div>
-        <!-- <div title="Statistiques de la question">📊&nbsp;Stats:&nbsp;{{ question.answer_success_count_agg }} / {{ question.answer_count_agg }} ({{ question.answer_success_rate }}%)</div> -->
-      </div>
-
     </div>
 
     <FeedbackCard v-if="question && questionSubmitted" v-bind:context="{ source: 'question', item: question }" />
