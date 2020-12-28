@@ -20,9 +20,9 @@
             <div class="col" title="Difficulté">
               🏆&nbsp;Difficulté<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }} / 4</strong></span>
             </div>
-            <div class="col" title="Auteur du quiz">
+            <!-- <div class="col" title="Auteur du quiz">
               📝&nbsp;Auteur<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>
-            </div>
+            </div> -->
             <!-- <span title="Date de création du quiz">📊&nbsp;Crée le:&nbsp;{{ new Date(quiz.created).toLocaleString() }}</span> -->
           </div>
 

@@ -6,9 +6,11 @@
       </div>
 
       <div class="col-sm">
-        <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light margin-left-right-10 small" title="J'ai aimé" @click="submitFeedback('like')" :disabled="feedbackSubmitted">👍<span class="fake-link"></span></button>
-        <button v-if="!feedbackSubmitted" class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Je n'ai pas aimé" @click="submitFeedback('dislike')" :disabled="feedbackSubmitted">👎<span class="fake-link"></span></button>
-        <span v-if="feedbackSubmitted" class="margin-left-right-10">
+        <span v-if="!feedbackSubmitted" class="span-like">
+          <button class="btn btn-sm btn-primary-light margin-left-right-10 small" title="J'ai aimé" @click="submitFeedback('like')" :disabled="feedbackSubmitted">👍<span class="fake-link"></span></button>
+          <button class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Je n'ai pas aimé" @click="submitFeedback('dislike')" :disabled="feedbackSubmitted">👎<span class="fake-link"></span></button>
+        </span>
+        <span v-if="feedbackSubmitted" class="span-like margin-left-right-10">
           Merci 💯
           <span v-if="feedbackResponse" class="margin-left-right-10">
             <strong>{{ feedbackResponse.like_count_agg }}</strong>&nbsp;👍&nbsp;&nbsp;<strong>{{ feedbackResponse.dislike_count_agg }}</strong>&nbsp;👎&nbsp;</span>
@@ -157,9 +159,10 @@ export default {
   background-color: white;
 }
 
-.btn-feedback {
-  margin: 0;
-  padding: 0;
-  font-size: small;
+@media (max-width: 767.98px) {
+  .span-like {
+    display: block;
+    margin-bottom: 5px;
+  }
 }
 </style>
