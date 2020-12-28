@@ -8,13 +8,10 @@
         <button class="btn btn-outline-primary btn-sm margin-0 margin-left-20">Découvrir</button>
       </p>
     </div>
-    <div class="card-footer small d-none d-md-block">
-      📝&nbsp;Auteur<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>
-    </div>
   </router-link>
 </template>
-<script>
 
+<script>
 export default {
   name: 'QuizCard',
   components: {
