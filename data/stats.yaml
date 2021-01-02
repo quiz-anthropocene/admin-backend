@@ -7,21 +7,21 @@ question_per_validation_status_count:
 - validation_status: Brouillon
   total: 83
 - validation_status: A valider
-  total: 25
+  total: 24
 - validation_status: Écartée temporairement
-  total: 17
+  total: 18
 quiz_count: 24
 quiz_per_publish_count:
 - publish: true
   total: 21
 - publish: false
   total: 3
-question_answer_count: 89183
-quiz_answer_count: 6313
-question_answer_count_last_30_days: 26007
-quiz_answer_count_last_30_days: 1788
+question_answer_count: 89398
+quiz_answer_count: 6325
+question_answer_count_last_30_days: 23871
+quiz_answer_count_last_30_days: 1632
 category_count: 8
 tag_count: 188
-question_feedback_count: 1524
+question_feedback_count: 1526
 quiz_feedback_count: 339
 contribution_count: 256
