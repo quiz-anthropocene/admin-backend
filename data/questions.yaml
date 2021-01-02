@@ -12737,7 +12737,7 @@
   - 47
 - id: 412
   text: Au plus fort de la crise du Covid-19, les émissions quotidiennes mondiales
-    auront été similaires à celles observées en...
+    de CO2 ont été similaires à celles observées en...
   hint: ''
   type: QCM
   category: 1
@@ -12748,14 +12748,18 @@
   answer_option_d: '2006'
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: 'Au plus fort de la crise, la baisse a été de -17% au niveau
-    mondial par rapport à la moyenne quotidienne de 2019. Cette baisse a été plus
-    forte dans certains pays, comme la France avec -34%, due notamment à la forte
-    baisse du trafic routier. Étalées sur l’ensemble de l’année 2020, les émissions
-    globales de carbone devraient chuter de 4 à 7% par rapport à 2019. Cette baisse
-    est de l’ordre de grandeur de celle qui serait à maintenir chaque année afin de
-    tenir les objectifs climatiques de l’accord de Paris (2 °C et tendre vers 1,5
-    °C, soit -3% à -7% chaque année).
+  answer_explanation: 'Au plus fort de la crise, la baisse des émissions mondiales
+    de CO2 a été de -17% par rapport à la moyenne quotidienne de 2019.
+
+    Cette baisse a été plus forte dans certains pays, comme la France avec -34%, due
+    notamment à la forte baisse du trafic routier. Étalées sur l’ensemble de l’année
+    2020, les émissions globales de carbone devraient chuter de 4 à 7% par rapport
+    à 2019.
+
+    Cette baisse est de l’ordre de grandeur de celle qui serait à maintenir chaque
+    année afin de tenir les objectifs climatiques de l’accord de Paris (2 °C et tendre
+    vers 1,5 °C, soit -3% à -7% chaque année).
+
 
     Le fait que le monde émette autant, dans des conditions de confinement strict,
     qu’il y a 14 ans, dans des conditions normales, souligne la croissance rapide
@@ -16486,7 +16490,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée temporairement
   added: 2020-06-20
   created: 2020-06-24
   updated: 2020-06-24
@@ -16495,7 +16499,8 @@
   - 13
   - 80
 - id: 537
-  text: 'La Chine émet aujourd''hui plus de 27% des émissions mondiales de CO2.
+  text: '[DOUBLON] La Chine émet aujourd''hui plus de 27% des émissions mondiales
+    de CO2.
 
     Combien d''autres pays l''ont déjà fait depuis le début de la révolution industrielle
     ?'
@@ -16516,7 +16521,7 @@
   answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
   answer_image_url: ''
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: Doublon avec la 624
   author: laydgeur
   validator: ''
   validation_status: Écartée
@@ -19230,8 +19235,8 @@
   - 13
   - 81
 - id: 625
-  text: 'Au plus fort de la crise de la Covid, les émissions mondiales de CO2 ont
-    baissé de quasiment 20%.
+  text: '[DOUBLON] Au plus fort de la crise de la Covid, les émissions mondiales de
+    CO2 ont baissé de quasiment 20%.
 
     Quelle est la dernière année où nous avons émis aussi peu de CO2 ?'
   hint: ''
@@ -19610,10 +19615,11 @@
   - 33
   - 35
 - id: 636
-  text: "Au Royaume-Uni, à l’ère pré-industrielle, des températures de 40°C ou plus\
-    \ ne se produisaient au plus qu'une fois tous les 300 ans \nA combien cette fréquence\
-    \ passerait-elle à l'horizon 2100 si nos émissions continuent à croître comme\
-    \ actuellement (scénario le plus pessimiste du GIEC) ?"
+  text: 'Au Royaume-Uni, à l’ère pré-industrielle, des températures de 40°C ou plus
+    ne se produisaient au plus qu''une fois tous les 300 ans.
+
+    A combien cette fréquence passerait-elle à l''horizon 2100 si nos émissions continuent
+    à croître comme actuellement (scénario le plus pessimiste du GIEC) ?'
   hint: ''
   type: QCM
   category: 1
@@ -19625,15 +19631,20 @@
   answer_correct: a
   has_ordered_answers: true
   answer_explanation: 'Au Royaume-Uni, des températures de 40°C apparaissaient tous
-    les 300-1000 ans à l''ère pré-industrielle. Actuellement c''est tous les 100-300
-    ans.
+    les 300-1000 ans à l''ère pré-industrielle.
 
-    Avec des émissions fortes, ce serait tous les 3,5 ans en 2100 selon le scénario
-    RCP 8.5 du GIEC'
+    Actuellement c''est tous les 100-300 ans.
+
+    Avec un scénario d’émissions modérées (RCP 4.5 du GIEC), de telles températures
+    apparaîtraient en 2100 tous les 10-11 ans.
+
+    Avec des émissions fortes (scénario RCP 8.5 du GIEC), ce serait tous les 3-4 ans.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.nature.com/articles/s41467-020-16834-0
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/303.png
-  answer_image_explanation: ''
+  answer_image_explanation: Evolution de la fréquence d’apparition (“temps de retour“)
+    de températures de 40°C au Royaume-Uni, depuis 1900 jusqu’en 2100 selon deux scénarios
+    du GIEC
   answer_extra_info: https://twitter.com/laydgeur/status/1280967873117270029
   author: laydgeur
   validator: Matthieu Massart
@@ -21088,8 +21099,8 @@
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: 'D''après le Global Carbon Project (GCP), la baisse a été de
-    7% par rapport à 2019, soit 2,4 milliards de tonnes. Du fait bien sûr du ralentissement
-    économique et des différentes restrictions.
+    7% par rapport à 2019, soit 2,4 milliards de tonnes de CO2 en moins. Du fait bien
+    sûr du ralentissement économique et des différentes restrictions.
 
     « La diminution des émissions en 2020 semble plus prononcée aux Etats-Unis (−
     12 %), dans l’UE-27 (− 11 %) et en Inde (− 9 %), l’effet des restrictions Covid-19
@@ -21104,7 +21115,8 @@
   answer_accessible_url: https://www.lemonde.fr/climat/article/2020/12/11/baisse-record-de-7-des-emissions-de-co2-en-2020-liee-au-covid-19_6062971_1652612.html
   answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/20/highlights.htm
   answer_image_url: https://pbs.twimg.com/media/EW8GD1LXkAABPng?format=png&name=large
-  answer_image_explanation: ''
+  answer_image_explanation: Émissions mondiales de CO2 causées par la consommation
+    d’énergie depuis 1900, avec les principaux événements ayant entraîné des baisses
   answer_extra_info: 'source du graphique : https://twitter.com/iea/status/1256229486015766530'
   author: Raphael Odini
   validator: Matthieu Massart
