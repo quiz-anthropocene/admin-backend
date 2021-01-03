@@ -16459,7 +16459,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-06-20
   created: 2020-06-24
   updated: 2020-06-24
@@ -17538,9 +17538,9 @@
   - 17
   - 190
 - id: 571
-  text: La première domestication animale, bien avant le néolithique (-6,000 ans),
-    a été celle du chien. Mais comment nos ancêtres ont-ils réussi à transformer des
-    loups gris en caniches et chihuahuas en 15,000 ans de sélection seulement ?
+  text: La première domestication animale, bien avant le néolithique, a été celle
+    du chien. Comment nos ancêtres ont-ils réussi à transformer des loups gris en
+    caniches et chihuahuas en 15,000 ans de sélection seulement ?
   hint: ''
   type: QCM
   category: 6
@@ -17554,7 +17554,7 @@
   answer_option_d: En brisant les os des chiots à leur naissance, ceux qui survivaient
     transmettant des malformations à leur descendance par imitation
   answer_correct: b
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'Comme preuve, ce processus a pu être reproduit sur quelques
     générations sur des renards. Pour une évocation plus générale de la domestication
     du chien : Homo Canis, Une histoire des chiens et de l’humanité, Laurent Testot,
@@ -17587,13 +17587,13 @@
   answer_option_d: 300,000 ans, depuis que les humains ont la maîtrise du feu
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: 'Après une perte de biodiversité, les écosystèmes s’adaptent
-    à un brûlis parcellaire. Si la pratique est maintenue longtemps (comme en Australie,
-    en Afrique australe ou dans les Amériques), les écosystèmes ont besoin de cette
-    intervention de l''homme pour se maintenir. En Australie, le brûlis parcellaire
-    s’est interrompu aux 19ème et 20ème siècles suite au génocide subi par les Aborigènes
-    face aux colons. Comme d’autres pratiques autochtones, il est aujourd’hui redécouvert
-    pour lutter contre les méga-feux. '
+  answer_explanation: 'Après un choc temporaire, les écosystèmes s’adaptent à un brûlis
+    parcellaire. Si la pratique est maintenue longtemps (comme en Australie, en Afrique
+    australe ou dans les Amériques), les écosystèmes ont besoin de cette intervention
+    de l''homme pour se maintenir. En Australie, le brûlis parcellaire s’est interrompu
+    aux 19ème et 20ème siècles suite au génocide subi par les Aborigènes face aux
+    colons. Comme d’autres pratiques autochtones, il est aujourd’hui redécouvert pour
+    lutter contre les méga-feux. '
   answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/laurent-testot/572.mp3
   answer_scientific_url: https://academic.oup.com/bioscience/article/59/7/593/334816
   answer_image_url: https://blog.nature.org/science/files/2018/06/tnc_84671281-1260x708.jpg
@@ -17629,8 +17629,8 @@
   answer_explanation: Ce refroidissement a été causé notamment par plusieurs méga-explosion
     volcaniques, de la fin du 13e siècle au début du 19e. Les plus importantes identifiées
     à ce jour ont eu lieu en 1257 (Samalas, Indonésie), 1452 (Kuwae, Vanuatu), 1600
-    (Huaynaputina, Pérou), 1815 (Tambora, Indonésie), et ont entraîné des conséquences
-    planétaires durable, sur les écosystèmes, les cultures comme sur la géopolitique.
+    (Huaynaputina, Pérou), 1815 (Tambora, Indonésie), et ont eu des conséquences planétaires
+    durables, sur les écosystèmes, les cultures comme sur la géopolitique.
   answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/laurent-testot/573.mp3
   answer_scientific_url: https://doi.org/10.1017/CBO9780511844058.009
   answer_image_url: https://i.dailymail.co.uk/i/pix/2015/04/15/10/27975FAA00000578-0-The_map_above_shows_major_volcanic_eruptions_from_the_past_2_000-a-17_1429091055374.jpg
@@ -19226,7 +19226,7 @@
   answer_extra_info: https://twitter.com/laydgeur/status/1275171016566808576
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-06-22
   created: 2020-11-28
   updated: 2020-11-28
@@ -21102,21 +21102,20 @@
     7% par rapport à 2019, soit 2,4 milliards de tonnes de CO2 en moins. Du fait bien
     sûr du ralentissement économique et des différentes restrictions.
 
-    « La diminution des émissions en 2020 semble plus prononcée aux Etats-Unis (−
-    12 %), dans l’UE-27 (− 11 %) et en Inde (− 9 %), l’effet des restrictions Covid-19
-    s’ajoutant à une tendance précédente, et étant moins prononcée en Chine (− 1,7
+    «La diminution des émissions en 2020 semble plus prononcée aux Etats-Unis (-12
+    %), dans l’UE-27 (-11 %) et en Inde (-9 %), l’effet des restrictions Covid-19
+    s’ajoutant à une tendance précédente, et étant moins prononcée en Chine (-1,7
     %), où les mesures de restriction ont été prises au début de l’année et ont été
-    plus limitées dans le temps »
+    plus limitées dans le temps ».
 
     La baisse est le plus marquée dans le secteur des transports (routier, aérien,
-    ...).
-
-    Mais un rebond économique est attendu pour 2021...'
+    ...). Mais un rebond économique est attendu pour 2021...'
   answer_accessible_url: https://www.lemonde.fr/climat/article/2020/12/11/baisse-record-de-7-des-emissions-de-co2-en-2020-liee-au-covid-19_6062971_1652612.html
   answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/20/highlights.htm
   answer_image_url: https://pbs.twimg.com/media/EW8GD1LXkAABPng?format=png&name=large
   answer_image_explanation: Émissions mondiales de CO2 causées par la consommation
-    d’énergie depuis 1900, avec les principaux événements ayant entraîné des baisses
+    d’énergie depuis 1900, mesurées en gigatonnes (Gt), ou milliards de tonnes, avec
+    les principaux événements ayant entraîné des baisses.
   answer_extra_info: 'source du graphique : https://twitter.com/iea/status/1256229486015766530'
   author: Raphael Odini
   validator: Matthieu Massart
@@ -21145,15 +21144,15 @@
     frontières, beaucoup d''avions été cloués au sol. Ce sont surtout les vols internationaux
     qui en ont subi les conséquences.
 
-    Pour autant, l''IATA espère un retour à la normale avant 2024.
-
-    La « normale » c''est presque 40 millions de vol par an (soit 110 000 vols par
-    jour) transportant plus de 4 milliards de passagers (en majorité pour du loisir,
-    pour les classes aisées). Chiffres du traffic en 2019.'
+    Pour autant, l''IATA espère un retour à la normale avant 2024. La « normale »
+    c''est presque 40 millions de vol par an (soit 110 000 vols par jour) transportant
+    plus de 4 milliards de passagers (en majorité pour du loisir, pour les classes
+    aisées). Chiffres du trafic en 2019.'
   answer_accessible_url: https://www.ouest-france.fr/sante/virus/coronavirus/confinement/avec-le-confinement-le-trafic-aerien-en-europe-chute-de-90-compare-il-y-un-6819737
   answer_scientific_url: ''
   answer_image_url: https://wolfstreet.com/wp-content/uploads/2020/07/US-IATA-2020-07-29-air-passenger-volume-.png
-  answer_image_explanation: RPK = Revenue-Passenger-Kilometers
+  answer_image_explanation: Volume de trafic, mesuré en milliards de passagers payants
+    x km. (RPK = Revenue Passenger x Kilometers)
   answer_extra_info: ''
   author: Raphael Odini
   validator: Matthieu Massart
@@ -21174,7 +21173,7 @@
   category: 2
   difficulty: 1
   answer_option_a: Elle a augmenté
-  answer_option_b: Elle est resté à peu près pareil
+  answer_option_b: Elle est restée stable
   answer_option_c: Elle a diminué
   answer_option_d: ''
   answer_correct: c
@@ -21183,7 +21182,7 @@
     en moyenne au niveau habituellement constaté au mois de mars.
 
     Cette baisse est principalement due à la baisse de l’activité économique : fermeture
-    des commerces non essentiels (restaurants, cinémas, magasins …) et ralentissement
+    des commerces non essentiels (restaurants, cinémas, magasins…) et ralentissement
     de l’activité dans le secteur industriel.'
   answer_accessible_url: https://www.lemonde.fr/blog/huet/2020/04/24/lelectricite-bousculee-par-le-coronavirus/
   answer_scientific_url: https://www.rte-france.com/actualites/covid19_quels_impacts_sur_la_consommation_electricite
@@ -21210,7 +21209,7 @@
   - 213
 - id: 685
   text: 2020 sera sûrement l'année la plus chaude jamais enregistrée sur terre. Vrai
-    ou Faux ?
+    ou faux ?
   hint: ''
   type: VF
   category: 1
@@ -21222,9 +21221,9 @@
   answer_correct: a
   has_ordered_answers: true
   answer_explanation: "À l'échelle mondiale, 2020 détrônerait 2016. L’Arctique a particulièrement\
-    \ souffert cette année, avec des températures supérieures de plus de 5 °C à la\
-    \ moyenne.\nA ce rythme là, les 1,5°C d'augmentation pourraient être atteints\
-    \ avant 2030. \n\nÀ l'échelle française, Météo France a annoncé que 2020 avait\
+    \ souffert cette année, avec des températures supérieures de plus de 5°C à la\
+    \ moyenne. A ce rythme là, les 1,5°C d'augmentation pourraient être atteints avant\
+    \ 2030. \n\nÀ l'échelle française également, Météo France a annoncé que 2020 avait\
     \ été l'année plus chaude jamais enregistrée, détrônant 2018."
   answer_accessible_url: https://www.francetvinfo.fr/meteo/climat/video-climat-l-annee-2020-parmi-les-plus-chaudes-malgre-le-phenomene-la-nina_4211985.html
   answer_scientific_url: https://www.carbonbrief.org/state-of-the-climate-2020-on-course-to-be-warmest-year-on-record
@@ -21234,8 +21233,8 @@
     2020 concernent la période de janvier à octobre. Source OMM.
   answer_extra_info: 'France : https://meteofrance.com/actualites-et-dossiers/actualites/climat/2020-vers-lannee-la-plus-chaude'
   author: Raphael Odini
-  validator: ''
-  validation_status: A valider
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2020-12-22
   created: 2020-12-24
   updated: 2020-12-24
@@ -21243,12 +21242,12 @@
   - 51
   - 213
 - id: 686
-  text: 'Le 12 Décembre 2020, on a célébré les 5 ans de l''accord de Paris (COP 21).
-    Cet accord a pour objectif de maintenir le réchauffement climatique « nettement
-    en dessous de 2°C » à la fin du siècle (en s''efforçant de limiter la hausse à
-    1,5°C).
+  text: 'On a célébré en décembre 2020 les 5 ans de l''accord de Paris (COP 21). Il
+    a pour objectif de maintenir le réchauffement climatique «nettement en dessous
+    de 2°C» d''ici la fin du siècle, en s''efforçant de limiter la hausse à 1,5°C.
 
-    Or avec les promesses actuelles, sur quelle trajectoire sommes-nous ?'
+    Or avec les promesses actuelles des pays signataires, sur quelle trajectoire sommes-nous
+    ?'
   hint: ''
   type: QCM
   category: 6
@@ -21290,7 +21289,7 @@
     mesures structurantes pour réduire les émissions françaises de gaz à effet de
     serre, dans un esprit de justice sociale.
 
-    Quel était l''objectif chiffré de réduction (par rapport à 1990) ?'
+    Quel était l''objectif chiffré de réduction par rapport à 1990 ?'
   hint: ''
   type: QCM
   category: 6
@@ -21301,13 +21300,20 @@
   answer_option_d: -40% d'ici 10 ans (2030)
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: Afin de respecter la trajectoire de la Stratégie Nationale Bas
-    Carbone (SNBC) française.
+  answer_explanation: 'Afin de respecter la trajectoire de la Stratégie Nationale
+    Bas Carbone (SNBC) française.
+
+    Après 8 mois de travail, les 149 propositions ont été présentées en Juin 2020,
+    à travers 5 thématiques : se déplacer, consommer, se loger, produire/travailler,
+    se nourrir. Parmi ces propositions, on retrouve : limiter la publicité des produits
+    les plus émetteurs de GES, modifier la constitution, grand plan de rénovation
+    des logements pour lutter contre les passoires thermiques, réduire la TVA sur
+    les billets de train, généralisation de la consigne de verre, etc.'
   answer_accessible_url: https://www.lesechos.fr/politique-societe/societe/la-convention-citoyenne-pour-le-climat-1137904
   answer_scientific_url: https://www.conventioncitoyennepourleclimat.fr/foire-aux-questions/
   answer_image_url: https://www.ecologie.gouv.fr/sites/default/files/Trajectoire%20et%20budgets%20carbone.PNG
   answer_image_explanation: Stratégie Nationale Bas Carbone française avec l'objectif
-    d'atteindre la neutralité carbone en 2050.
+    d'atteindre la neutralité carbone en 2050. GES = gaz à effet de serre.
   answer_extra_info: 'Comment les 150 ont-ils été sélectionnés ? : https://www.conventioncitoyennepourleclimat.fr/wp-content/uploads/2019/09/CCC-infogrpahie-critere-representativite-1-1024x921.png'
   author: Raphael Odini
   validator: Matthieu Massart
@@ -21320,14 +21326,14 @@
   - 213
   - 214
 - id: 688
-  text: En 2020, quelle a été l'évolution du rythme de la déforestation en Amazonie
-    brésilienne (par rapport à 2019) ?
+  text: La déforestation s'est poursuivi en Amazonie brésilienne en 2020. A quel rythme
+    par rapport à 2019 ?
   hint: ''
   type: QCM
   category: 4
   difficulty: 1
   answer_option_a: -10%
-  answer_option_b: aucune évolution
+  answer_option_b: même surface déforestée qu'en 2019
   answer_option_c: +10%
   answer_option_d: +20%
   answer_correct: c
@@ -21366,7 +21372,7 @@
   - 215
 - id: 689
   text: Amazonie, Sud de l'Afrique, Californie, Sibérie... 2020 a été une année record
-    en terme d'incendies dans le monde. Vrai ou Faux ?
+    en terme d'incendies dans le monde. Vrai ou faux ?
   hint: ''
   type: VF
   category: 4
@@ -21383,17 +21389,17 @@
 
     Mais il faut se garder de toute conclusion hâtive. « Les incendies dans les zones
     les plus touchées ont atteint une intensité record en raison de conditions plus
-    chaudes et plus sèches ».
-
-    Source : Service Copernicus pour la surveillance de l''atmosphère (CAMS)'
+    chaudes et plus sèches ». Source : Service Copernicus pour la surveillance de
+    l''atmosphère (CAMS)'
   answer_accessible_url: https://www.lesechos.fr/monde/enjeux-internationaux/climat-les-incendies-de-foret-polluent-de-moins-en-moins-la-planete-1274256
   answer_scientific_url: https://atmosphere.copernicus.eu/wildfires-americas-and-tropical-africa-2020-compared-previous-years
   answer_image_url: https://atmosphere.copernicus.eu/sites/default/files/inline-images/cams_gfas_global_monthly_c_january_december_2003_2020_small.png
-  answer_image_explanation: ''
+  answer_image_explanation: Émissions totales de carbone dues aux feux de forêt, en
+    millions de tonnes par année
   answer_extra_info: ''
   author: Raphael Odini
-  validator: ''
-  validation_status: A valider
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2020-12-23
   created: 2020-12-24
   updated: 2020-12-24
@@ -21458,8 +21464,8 @@
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: 'Après huit mois, les voitures électriques représentent un peu
-    plus de 6% des ventes neuves, et les hybrides un peu moins de 12%. Cela fait 180
-    000 voitures neuves vendues avec une part d''électrique dans leur motorisation.
+    plus de 6% des ventes neuves, et les hybrides un peu moins de 12%. Cela fait 180,000
+    voitures neuves vendues avec une part d''électrique dans leur motorisation.
 
     Prime à la conversion élargie, bonus écologique, autonomie en hausse sont autant
     d''explications à cet essor.'
@@ -21470,7 +21476,7 @@
   answer_extra_info: question 120 pose la même question pour l'année 2017
   author: Raphael Odini
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-12-23
   created: 2020-12-24
   updated: 2020-12-24
@@ -21489,23 +21495,21 @@
   type: QCM
   category: 2
   difficulty: 2
-  answer_option_a: 100 000 réparations
-  answer_option_b: 500 000 réparations
-  answer_option_c: 1 million de réparations
-  answer_option_d: 10 millions de réparations
+  answer_option_a: 100,000
+  answer_option_b: 500,000
+  answer_option_c: 1 million
+  answer_option_d: 10 millions
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: 'A la sortie du premier confinement, un plan vélo d''envergure
-    a permis de financer ce programme, ainsi que la création de 1000km de pistes cyclables
-    supplémentaires, et un plan pour former des centaines de réparateurs certifiés
-    dans les prochaines années. Le programme « Coup de pouce vélo » a été prolongé
-    jusqu''au 31 Mars 2021.
+    a permis de financer ce programme, ainsi que la création de 1,000 km de pistes
+    cyclables supplémentaires, et un plan pour former des centaines de réparateurs
+    certifiés dans les prochaines années. Le programme «Coup de pouce vélo» a été
+    prolongé jusqu''au 31 Mars 2021.
 
-    Durant l''été, les déplacements à vélo auraient augmenté en moyenne de 30 % par
+    Durant l''été, les déplacements à vélo auraient augmenté en moyenne de 30% par
     rapport à la même période en 2019. Il pourrait représenter 5% des déplacements
-    en 2021.
-
-    Seule ombre au tableau : la baisse de fréquentation des transports en communs.'
+    en 2021. Les transports en communs en revanche ont subi une baisse de fréquentation.'
   answer_accessible_url: https://www.lejdd.fr/Societe/un-million-de-francais-ont-fait-reparer-leur-velo-depuis-mai-4007240
   answer_scientific_url: https://www.ecologie.gouv.fr/ministere-transition-ecologique-consolide-soutien-pratique-du-velo
   answer_image_url: https://static.latribune.fr/full_width/1528551/velo.jpg
@@ -21576,15 +21580,12 @@
   answer_option_d: '10'
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: 'Il reste 4 centrales à charbon en activité en France.
-
-    Elles ont été mises à contribution dès cet automne, du fait d''une indisponibilité
-    partielle du parc nucléaire (maintenance) et des vents très faibles sur une large
-    partie de l''Europe.
-
-    Ces centrales sont le plus souvent mobilisées au cœur de l''hiver pour faire face
-    aux pics de consommation d''électricité. Deux d''entre elles fermeront en 2022,
-    une troisième en 2026.'
+  answer_explanation: Ces 4 centrales à charbon restantes ont été mises à contribution
+    dès l'automne en 2020, du fait d'une indisponibilité partielle du parc nucléaire
+    (maintenance) et des vents très faibles sur une large partie de l'Europe. Elles
+    sont le plus souvent mobilisées au cœur de l'hiver pour faire face aux pics de
+    consommation d'électricité. Deux d'entre elles fermeront en 2022, une troisième
+    en 2026.
   answer_accessible_url: https://www.lesechos.fr/industrie-services/energie-environnement/la-france-fait-deja-fonctionner-ses-centrales-a-charbon-1243601
   answer_scientific_url: https://fr.wikipedia.org/wiki/Liste_des_centrales_thermiques_%C3%A0_flamme_en_France#Centrales_%C3%A0_charbon
   answer_image_url: https://www.publicsenat.fr/sites/default/files/styles/pse_rte_moyen/public/thumbnails/image/a5984100d91b4ddcb281f4259ac29bae31927bfe.jpg
