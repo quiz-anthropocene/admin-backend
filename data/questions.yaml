@@ -21145,9 +21145,11 @@
     frontières, beaucoup d''avions été cloués au sol. Ce sont surtout les vols internationaux
     qui en ont subi les conséquences.
 
-    Pour autant, l''IATA espère un retour à la normal avant 2024. C''est à dire presque
-    40 millions de vol par an (soit 110 000 vols par jour) transportant plus de 4
-    milliards de passagers (en majorité pour du loisir, pour les classes aisées).'
+    Pour autant, l''IATA espère un retour à la normale avant 2024.
+
+    La « normale » c''est presque 40 millions de vol par an (soit 110 000 vols par
+    jour) transportant plus de 4 milliards de passagers (en majorité pour du loisir,
+    pour les classes aisées). Chiffres du traffic en 2019.'
   answer_accessible_url: https://www.ouest-france.fr/sante/virus/coronavirus/confinement/avec-le-confinement-le-trafic-aerien-en-europe-chute-de-90-compare-il-y-un-6819737
   answer_scientific_url: ''
   answer_image_url: https://wolfstreet.com/wp-content/uploads/2020/07/US-IATA-2020-07-29-air-passenger-volume-.png
@@ -21219,11 +21221,11 @@
   answer_option_d: ''
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: 'À l''echelle mondiale, 2020 détrônerait 2016. L’Arctique a
-    particulièrement souffert cette année, avec des températures supérieures de plus
-    de 5 °C à la moyenne.
-
-    A ce rythme là, les 1,5°C d''augmentation pourraient être atteints avant 2030. '
+  answer_explanation: "À l'échelle mondiale, 2020 détrônerait 2016. L’Arctique a particulièrement\
+    \ souffert cette année, avec des températures supérieures de plus de 5 °C à la\
+    \ moyenne.\nA ce rythme là, les 1,5°C d'augmentation pourraient être atteints\
+    \ avant 2030. \n\nÀ l'échelle française, Météo France a annoncé que 2020 avait\
+    \ été l'année plus chaude jamais enregistrée, détrônant 2018."
   answer_accessible_url: https://www.francetvinfo.fr/meteo/climat/video-climat-l-annee-2020-parmi-les-plus-chaudes-malgre-le-phenomene-la-nina_4211985.html
   answer_scientific_url: https://www.carbonbrief.org/state-of-the-climate-2020-on-course-to-be-warmest-year-on-record
   answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/2/9/7/297292d5a2_50170756_climat-secheresse-annee-plus-chaude-onu.jpg
@@ -21242,9 +21244,9 @@
   - 213
 - id: 686
   text: 'Le 12 Décembre 2020, on a célébré les 5 ans de l''accord de Paris (COP 21).
-    Cet accord a pour objectif de contenir l''élévation de la température moyenne
-    de la planète « nettement en dessous de 2°C » en « poursuivant l''action menée
-    pour limiter l''élévation de la température à 1,5°C ».
+    Cet accord a pour objectif de maintenir le réchauffement climatique « nettement
+    en dessous de 2°C » à la fin du siècle (en s''efforçant de limiter la hausse à
+    1,5°C).
 
     Or avec les promesses actuelles, sur quelle trajectoire sommes-nous ?'
   hint: ''
@@ -21293,10 +21295,10 @@
   type: QCM
   category: 6
   difficulty: 2
-  answer_option_a: -30% d'ici 2050
-  answer_option_b: -40% d'ici 2050
-  answer_option_c: -30% d'ici 2030
-  answer_option_d: -40% d'ici 2030
+  answer_option_a: -30% d'ici 30 ans (2050)
+  answer_option_b: -40% d'ici 30 ans (2050)
+  answer_option_c: -30% d'ici 10 ans (2030)
+  answer_option_d: -40% d'ici 10 ans (2030)
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: Afin de respecter la trajectoire de la Stratégie Nationale Bas
@@ -21377,7 +21379,11 @@
   has_ordered_answers: true
   answer_explanation: 'Paradoxalement, malgré le caractère exceptionnel de l''année
     2020 avec des feux d''une ampleur inégalée, le nombre d''incendies a été plus
-    faible, et les émissions de CO2 qui en ont résulté en deça des années records.
+    faible, et les émissions de CO2 qui en ont résulté en deçà des années records.
+
+    Mais il faut se garder de toute conclusion hâtive. « Les incendies dans les zones
+    les plus touchées ont atteint une intensité record en raison de conditions plus
+    chaudes et plus sèches ».
 
     Source : Service Copernicus pour la surveillance de l''atmosphère (CAMS)'
   answer_accessible_url: https://www.lesechos.fr/monde/enjeux-internationaux/climat-les-incendies-de-foret-polluent-de-moins-en-moins-la-planete-1274256
