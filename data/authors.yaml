@@ -29,7 +29,7 @@
   question_count: 9
   quiz_count: 1
 - name: laydgeur
-  question_count: 172
+  question_count: 174
   quiz_count: 2
 - name: Le Monde
   question_count: 1
@@ -41,8 +41,8 @@
   question_count: 72
   quiz_count: 13
 - name: Raphael Odini
-  question_count: 40
-  quiz_count: 2
+  question_count: 43
+  quiz_count: 3
 - name: Vincent Mignerot
   question_count: 13
   quiz_count: 1
