@@ -456,7 +456,7 @@
     \ codirigé, avec Laurent Aillet, <em>Collapsus. Changer ou disparaître ? Le vrai\
     \ bilan sur notre planète</em> (Albin Michel, 2020), réunissant 40 auteurs autour\
     \ de la notion d’effondrement. Dans ce quiz, il nous donne à découvrir quelques\
-    \ tournants méconnus de l’histoire de l'homme avec son milieu.<br />\r\nLa nouveuté\
+    \ tournants méconnus de l’histoire de l'homme avec son milieu.<br />\r\nLa nouveauté\
     \ : nous avons édité le quiz avec des explications audios plus complètes de l'auteur.\
     \ Ne manquez pas de cliquer sur le premier lien fourni pour les écouter.</p>"
   conclusion: <p>Comment anticiper l'avenir sans chercher à comprendre le passé ?
@@ -470,7 +470,7 @@
   image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
   publish: true
   created: 2020-09-23
-  updated: 2020-12-26
+  updated: 2021-01-03
   questions:
   - 571
   - 572
@@ -540,7 +540,7 @@
   - 597
   tags: []
 - id: 54
-  name: NOUVEAU - Born in the USA
+  name: Born in the USA
   introduction: "<p>Les États-Unis sont entrés dans notre imaginaire collectif : les\
     \ cow-boys, New-York, Hollywood, la Silicon Valley, ... Le rêve américain ! Mais\
     \ les États-Unis, ce sont aussi des consommateurs effrénés de pétrole, un des\
@@ -558,7 +558,7 @@
   image_background_url: https://cdn.pixabay.com/photo/2017/12/08/08/17/america-3005258_1280.jpg
   publish: true
   created: 2020-11-28
-  updated: 2020-12-02
+  updated: 2021-01-03
   questions:
   - 246
   - 278
@@ -650,7 +650,7 @@
   difficulty_average: 1.8461538461538463
   author: Raphael Odini
   image_background_url: https://www.radioclassique.fr/wp-content/thumbnails/uploads/2020/05/animal-paris-article-tt-width-978-height-383-crop-1-bgcolor-ffffff.jpg
-  publish: false
+  publish: true
   created: 2020-12-24
   updated: 2021-01-03
   questions:
