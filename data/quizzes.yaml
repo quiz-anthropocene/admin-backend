@@ -647,12 +647,12 @@
     la COP21, propositions de la Convention Citoyenne pour le Climat,... L'année 2020
     a été riche en matière d'environment. Mais avez-vous bien tout suivi ?</p>
   conclusion: ''
-  difficulty_average: 1.8333333333333333
+  difficulty_average: 1.8461538461538463
   author: Raphael Odini
   image_background_url: https://www.radioclassique.fr/wp-content/thumbnails/uploads/2020/05/animal-paris-article-tt-width-978-height-383-crop-1-bgcolor-ffffff.jpg
   publish: false
   created: 2020-12-24
-  updated: 2020-12-26
+  updated: 2021-01-03
   questions:
   - 682
   - 683
@@ -666,5 +666,6 @@
   - 691
   - 692
   - 693
+  - 694
   tags:
   - 213
