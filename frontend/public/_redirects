@@ -8,6 +8,7 @@
 /a-propos /a-propos.rendered.html 200
 /contribuer /contribuer.rendered.html 200
 /glossaire /glossaire.rendered.html 200
+/quiz/57 /quiz/57.rendered.html 200
 
 # Keep this at the bottom - settings for SPA routing
 # index.vue.html is used because Netlify automatically uses index.html if present, and that breaks the index's prerendering

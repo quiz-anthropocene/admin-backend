@@ -19,6 +19,7 @@ module.exports = {
           routes: [
             '/',
             '/a-propos', '/contribuer', '/glossaire',
+            '/quiz/57'
             // '/quiz',
           ],
           postProcess(renderedRoute) {
