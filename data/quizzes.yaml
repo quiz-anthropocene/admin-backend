@@ -444,7 +444,7 @@
   - 49
   - 76
 - id: 18
-  name: NOUVEAU - Quiz de Laurent Testot
+  name: Quiz de Laurent Testot, histoire environnementale
   introduction: "<p>Laurent Testot est journaliste, conférencier et formateur. Il\
     \ se consacre à la promotion en France de l’histoire globale, une méthode transdisciplinaire\
     \ d’analyse de l’histoire à grandes échelles. Son premier livre, <em>Cataclysmes.\
@@ -456,15 +456,16 @@
     \ codirigé, avec Laurent Aillet, <em>Collapsus. Changer ou disparaître ? Le vrai\
     \ bilan sur notre planète</em> (Albin Michel, 2020), réunissant 40 auteurs autour\
     \ de la notion d’effondrement. Dans ce quiz, il nous donne à découvrir quelques\
-    \ tournants méconnus de l’histoire de l'homme avec son milieu.<br />\r\nLa nouveauté\
+    \ tournants méconnus de l’histoire de l'homme avec son milieu.<br />\r\nLA NOUVEAUTE\
     \ : nous avons édité le quiz avec des explications audios plus complètes de l'auteur.\
-    \ Ne manquez pas de cliquer sur le premier lien fourni pour les écouter.</p>"
-  conclusion: <p>Comment anticiper l'avenir sans chercher à comprendre le passé ?
+    \ Cliquez sur le lien audio fourni les écouter. Une quiz'conférencence en quelque\
+    \ sorte !</p>"
+  conclusion: <p>Pour anticiper l'avenir, le mieux est d'abord de comprendre le passé.
     Ce quiz s'est attaché à montrer comment des événements climatiques, des inventions,
     des conquêtes ont pu avoir une influence imprévue mais déterminante dans notre
-    interaction avec l'environnement. Pour aller plus loin, vous pouvez vous plonger
-    dans les ouvrages de Laurent, ou continuer dans le même esprit avec le <a href="https://quizanthropocene.fr/quiz/3">quiz
-    de Vincent Mignerot</a>.</p>
+    l'interaction de l'homme avec son environnement. Pour aller plus loin, vous pouvez
+    vous plonger dans les ouvrages de Laurent, ou continuer dans le même esprit avec
+    le <a href="https://quizanthropocene.fr/quiz/3">quiz de Vincent Mignerot</a>.</p>
   difficulty_average: 2.6666666666666665
   author: Laurent Testot
   image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
@@ -646,7 +647,8 @@
   introduction: <p>Covid-19 et son lot de confinements et de coronapistes, 5 ans de
     la COP21, propositions de la Convention Citoyenne pour le Climat,... L'année 2020
     a été riche en matière d'environment. Mais avez-vous bien tout suivi ?</p>
-  conclusion: ''
+  conclusion: <p>En route vers 2021 ! La nouvelle année nous réservera-t-elle son
+    lot de chiffres et faits inattendus ?</p>
   difficulty_average: 1.8461538461538463
   author: Raphael Odini
   image_background_url: https://www.radioclassique.fr/wp-content/thumbnails/uploads/2020/05/animal-paris-article-tt-width-978-height-383-crop-1-bgcolor-ffffff.jpg
