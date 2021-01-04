@@ -1994,11 +1994,14 @@
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: Soit 10 fois plus vite. Et la différence s'accélère encore,
-    nos besoins énergétiques par personne augmentant.
+    nos besoins énergétiques par personne augmentant. Observez au passage dans le
+    graphe ci-dessous quelle est la part des nouvelles énergies renouvelables (biofuels
+    modernes, autres renouvelables, solaire vent).
   answer_accessible_url: https://fr.wikipedia.org/wiki/Ressources_et_consommation_%C3%A9nerg%C3%A9tiques_mondiales
   answer_scientific_url: ''
   answer_image_url: https://ourworldindata.org/grapher/exports/global-primary-energy.png
-  answer_image_explanation: ''
+  answer_image_explanation: 'Consommation globale directe d''énergie primaire dans
+    le monde. Unité : Téra watt-heures. '
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Raphael Odini
@@ -6834,7 +6837,8 @@
   answer_explanation: 'Les glaciations et déglaciations sont déclenchées par des variations
     d’orbites de la terre, qui modifient l’insolation : variations de la trajectoire
     autour du soleil, et variation de l’inclinaison de l’axe de rotation de la terre
-    sur elle même.'
+    sur elle même. Ce sont bien elles qui ont été les principales causes de modification
+    radiale du climat dans l''histoire de la terre.'
   answer_accessible_url: https://uclouvain.be/fr/sciencetoday/actualites/mieux-comprendre-le-phenomene-de-deglaciation.html
   answer_scientific_url: http://la.climatologie.free.fr/glaciation/glaciation.htm
   answer_image_url: https://trustmyscience.com/wp-content/uploads/2020/03/axes-terre.jpeg
@@ -12673,9 +12677,9 @@
   answer_option_d: 90 %
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: Ce chiffre est en baisse de 3,5 % par rapport à 2018, du fait
+  answer_explanation: Ce chiffre est en baisse de 3,5% par rapport à 2018, du fait
     « d’une moins bonne disponibilité du parc » (canicule, contrôles, ...) ainsi qu'à
-    une baisse de 1 % de la consommation brute. La loi énergie-climat adoptée en septembre
+    une baisse de 1% de la consommation brute. La loi énergie-climat adoptée en septembre
     2019 fixe pour objectif de réduire cette part à 50% à l’horizon 2035.
   answer_accessible_url: https://www.connaissancedesenergies.org/la-production-delectricite-en-france-metropolitaine-tous-les-chiffres-cles-de-2019-200212-0
   answer_scientific_url: https://www.rte-france.com/fr/article/bilans-electriques-nationaux
@@ -20398,8 +20402,8 @@
   - 47
   - 204
 - id: 661
-  text: Quelle est le niveau dépendance en pétrole de l’Union Européenne (sans le
-    Royaume-Uni) aux importations ?
+  text: Quelle est la part des importations pour la consommation de pétrole au sein
+    de l'Union Européenne (sans compter le Royaume Uni) ?
   hint: A lui seul le Royaume-Uni produit plus du double de pétrole des 27 pays de
     l'Union Européenne.
   type: QCM
