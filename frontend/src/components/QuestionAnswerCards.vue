@@ -110,6 +110,10 @@
       <p v-if="question.answer_image_explanation" class="answer-image-explanation" title="Légende de l'image">Légende: {{ question.answer_image_explanation }}</p>
     </div>
 
+    <div v-if="question && questionSubmitted && questionNotValidated" class="alert alert-warning">
+      Cette question est en cours de validation
+    </div>
+
     <FeedbackCard v-if="question && questionSubmitted" v-bind:context="{ source: 'question', item: question }" />
   </section>
 </template>
@@ -156,6 +160,9 @@ export default {
     questionAnswerAccessibleUrlIsAudio() {
       if (!String.prototype.endsWith || !this.question.answer_accessible_url) { return false; }
       return this.question.answer_accessible_url.endsWith('.mp3');
+    },
+    questionNotValidated() {
+      return this.question.validation_status !== constants.QUESTION_VALIDATION_STATUS_OK;
     },
   },
 

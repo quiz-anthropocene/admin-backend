@@ -158,7 +158,7 @@ class QuizModelTest(TestCase):
             ValidationError, self.quiz_not_published.save, update_fields=["publish"]
         )
 
-    def test_published_quiz_must_have_validated_questions(self):
+    def test_published_quiz_can_have_not_validated_questions(self):
         self.question_validated = QuestionFactory(answer_correct="a")
         self.question_not_validated = QuestionFactory(
             answer_correct="a",
@@ -170,12 +170,11 @@ class QuizModelTest(TestCase):
         self.quiz_not_published.questions.set(
             [self.question_validated, self.question_not_validated]
         )
-        # fail
-        self.assertRaises(
-            ValidationError,
-            self.quiz_published.questions.set,
-            [self.question_validated, self.question_not_validated],
+        # pass # used to be fail
+        self.quiz_published.questions.set(
+            [self.question_validated, self.question_not_validated]
         )
+        self.assertEqual(len(self.quiz_published.questions_not_validated_list), 1)
 
 
 class QuizRelationshipModelTest(TestCase):
