@@ -764,3 +764,23 @@
   name: Energie
   description: ''
   created: 2021-01-05
+- id: 219
+  name: Phénomènes extrêmes
+  description: ''
+  created: 2021-01-06
+- id: 220
+  name: Pollution atmosphérique
+  description: ''
+  created: 2021-01-06
+- id: 221
+  name: Cyclones
+  description: ''
+  created: 2021-01-06
+- id: 222
+  name: Aérosols
+  description: ''
+  created: 2021-01-06
+- id: 223
+  name: Poissons
+  description: ''
+  created: 2021-01-06
