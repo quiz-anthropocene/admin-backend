@@ -284,7 +284,7 @@ class Command(BaseCommand):
                 ]
             )
 
-        # check if any published quiz has a non-validated question
+        # check if any published quiz have non-validated questions
         published_quizs = Quiz.objects.prefetch_related("questions").published()
         for pq in published_quizs:
             pq_not_validated_questions = pq.questions_not_validated_list

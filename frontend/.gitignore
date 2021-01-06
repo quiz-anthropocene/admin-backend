@@ -14,4 +14,4 @@ yarn-error.log*
 # Tests
 chromedriver.log
 geckodriver.log
-tests/e2e/reports/**
+tests/e2e/reports
