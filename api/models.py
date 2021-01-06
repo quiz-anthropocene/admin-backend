@@ -785,21 +785,6 @@ class Quiz(models.Model):
                         f"Quiz {self.id}"
                     }
                 )
-            # - questions must be validated
-            quiz_questions_ids = quiz_questions.values_list("id", flat=True)
-            quiz_questions_validated_ids = (
-                Question.objects.filter(pk__in=quiz_questions_ids)
-                .validated()
-                .values_list("id", flat=True)
-            )
-            if len(list(quiz_questions_ids)) != len(list(quiz_questions_validated_ids)):
-                raise ValidationError(
-                    {
-                        "questions": f"Toutes les questions doivent être validées. "
-                        f"questions non validées: {[el for el in list(quiz_questions_ids) if el not in list(quiz_questions_validated_ids)]}. "  # noqa
-                        f"Quiz {self.id}"
-                    }
-                )
 
 
 def quiz_validate_fields(sender, instance, **kwargs):
@@ -819,28 +804,6 @@ def quiz_validate_m2m_fields(sender, **kwargs):
     Method to validate *new* Quiz m2m fields.
     see question_validate_fields
     """
-    # only run on published quizzes
-    if (
-        getattr(kwargs["instance"], "publish")
-        and kwargs["instance"]
-        and (kwargs["action"] == "pre_add")
-    ):
-        # > relation fields: check that the quiz's questions are validated
-        quiz_questions_validated_ids = (
-            Question.objects.filter(pk__in=kwargs["pk_set"])
-            .validated()
-            .values_list("id", flat=True)
-        )
-        if len(kwargs["pk_set"]) != len(list(quiz_questions_validated_ids)):
-            raise ValidationError(
-                {
-                    "questions": f"Quiz pre_save_m2m error. "
-                    # f"Questions count: {len(kwargs['pk_set'])}. Questions validated count: {len(list(quiz_questions_validated_ids))}. "  # noqa
-                    f"Toutes les questions doivent être validées. "  # noqa
-                    f"questions non validées: {[el for el in kwargs['pk_set'] if el not in list(quiz_questions_validated_ids)]}. "  # noqa
-                    f"Quiz {getattr(kwargs['instance'], 'id')}"
-                }
-            )
     # update difficulty_average
     if kwargs["action"].startswith("post"):
         difficulty_average_agg = kwargs["instance"].questions.aggregate(
