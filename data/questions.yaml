@@ -21212,8 +21212,8 @@
   - 92
   - 213
 - id: 685
-  text: 2020 sera sûrement l'année la plus chaude jamais enregistrée sur terre. Vrai
-    ou faux ?
+  text: 2020 sera sûrement l'année la plus chaude jamais enregistrée (depuis les premières
+    mesures en 1850). Vrai ou faux ?
   hint: ''
   type: VF
   category: 1
@@ -21224,11 +21224,13 @@
   answer_option_d: ''
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: "À l'échelle mondiale, 2020 détrônerait 2016. L’Arctique a particulièrement\
-    \ souffert cette année, avec des températures supérieures de plus de 5°C à la\
-    \ moyenne. A ce rythme là, les 1,5°C d'augmentation pourraient être atteints avant\
-    \ 2030. \n\nÀ l'échelle française également, Météo France a annoncé que 2020 avait\
-    \ été l'année plus chaude jamais enregistrée, détrônant 2018."
+  answer_explanation: 'À l''échelle mondiale, 2020 détrônerait 2016. L’Arctique a
+    particulièrement souffert cette année, avec des températures supérieures de plus
+    de 5°C à la moyenne. A ce rythme là, les 1,5°C d''augmentation pourraient être
+    atteints avant 2030.
+
+    À l''échelle française également, Météo France a annoncé que 2020 avait été l''année
+    plus chaude jamais enregistrée, détrônant 2018.'
   answer_accessible_url: https://www.francetvinfo.fr/meteo/climat/video-climat-l-annee-2020-parmi-les-plus-chaudes-malgre-le-phenomene-la-nina_4211985.html
   answer_scientific_url: https://www.carbonbrief.org/state-of-the-climate-2020-on-course-to-be-warmest-year-on-record
   answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/2/9/7/297292d5a2_50170756_climat-secheresse-annee-plus-chaude-onu.jpg
@@ -21432,8 +21434,10 @@
     lignes en France ces 20 dernières années.
 
     D''ici 2022, 2 nouveaux trains de nuits devraient (re)voir le jour : Paris - Nice
-    et Paris - Hendaye. En Europe, 4 compagnies européennes (SNCF, DB, ÖBB, CFF) ont
-    annoncé la création de six grandes lignes transfrontalières.'
+    et Paris - Hendaye.
+
+    Et en Europe, 4 compagnies européennes (SNCF, DB, ÖBB, CFF) ont annoncé la création
+    de six grandes lignes transfrontalières.'
   answer_accessible_url: https://www.francetvinfo.fr/economie/transports/sncf/video-en-europe-les-trains-de-nuit-font-leur-retour_4219615.html
   answer_scientific_url: ''
   answer_image_url: https://reporterre.net/IMG/jpg/sans_titre-1.jpg
@@ -21467,9 +21471,12 @@
   answer_option_d: 12%
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: 'Après huit mois, les voitures électriques représentent un peu
-    plus de 6% des ventes neuves, et les hybrides un peu moins de 12%. Cela fait 180,000
-    voitures neuves vendues avec une part d''électrique dans leur motorisation.
+  answer_explanation: 'Sur l''ensemble de l''année, les voitures électriques représentent
+    un peu plus de 6% des ventes neuves. Cela représente 110,000 nouvelles immatriculations,
+    soit une hausse de 169% par rapport à 2019.
+
+    Le nombre d''hybrides vendues est aussi en hausse (4,5% de part de marché pour
+    les hybrides rechargeables, un peu moins de 12% pour les hybrides non rechargeables).
 
     Prime à la conversion élargie, bonus écologique, autonomie en hausse sont autant
     d''explications à cet essor.'
@@ -21477,7 +21484,12 @@
   answer_scientific_url: ''
   answer_image_url: https://www.leparisien.fr/resizer/x6mOI7LpiEdvCOQj_gIHtcmz5vI=/1167x1280/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/LGKGNNXPORZ5UHSA4OHS7ZPYE4.jpg
   answer_image_explanation: Un succès qui ne s'arrête pas aux grandes villes
-  answer_extra_info: question 120 pose la même question pour l'année 2017
+  answer_extra_info: 'question 120 pose la même question pour l''année 2017
+
+
+    Autre article avec les chiffres sur toute l''année
+
+    https://www.automobile-propre.com/la-voiture-electrique-passe-le-cap-des-100-000-immatriculations-en-2020/'
   author: Raphael Odini
   validator: ''
   validation_status: Validée
@@ -21605,3 +21617,1969 @@
   - 1
   - 40
   - 213
+- id: 695
+  text: Quelle quantité de CO2 en kg émet 1 litre de kérosène ?
+  hint: Tout se transforme
+  type: QCM
+  category: 3
+  difficulty: 2
+  answer_option_a: '0.5'
+  answer_option_b: '3'
+  answer_option_c: '5'
+  answer_option_d: '20'
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: Ou encore 3.1 tonnes de CO2 pour 1000 litres de kérosène. La
+    combustion d'1 litre de kérosène (0.8kG) libère 2,52 kg de CO2, auxquels il faut
+    ajouter 0,52 kg pour l'extraction, le transport et le raffinage, soit un facteur
+    d'émission total de 3,04 kg de CO2 par litre de kérosène (ou 3,81 kg de CO2 par
+    kg de kérosène, ou 0,312 kg par kWh, ou 3 642 kg par tep)
+  answer_accessible_url: https://restonslespiedssurterre.fr/pourquoi-1000-litres-de-kerosene-produisent-3000-kg-de-co2/
+  answer_scientific_url: https://fr.wikipedia.org/wiki/K%C3%A9ros%C3%A8ne
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-04
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 13
+  - 33
+  - 217
+- id: 696
+  text: 'Quelle quantité de CO2 en kG émet 1 litre de Kérosène pour la phase production
+    : extraction + raffinage + transport ?'
+  hint: Tout se transforme
+  type: QCM
+  category: 3
+  difficulty: 2
+  answer_option_a: '0.1'
+  answer_option_b: '0.5'
+  answer_option_c: '5'
+  answer_option_d: '8'
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: Ou encore 0.5 tonnes de CO2 pour 1000 litres de kérosène.  Saurez-vous
+    répondre à la question suivante pour la consommation ?
+  answer_accessible_url: https://restonslespiedssurterre.fr/pourquoi-1000-litres-de-kerosene-produisent-3000-kg-de-co2/
+  answer_scientific_url: https://fr.wikipedia.org/wiki/K%C3%A9ros%C3%A8ne
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-04
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 13
+  - 33
+  - 217
+- id: 697
+  text: 'Quelle quantité de CO2 en kG émet 1 litre de Kérosène pour la phase consommation
+    : combustion ?'
+  hint: Tout se transforme
+  type: QCM
+  category: 3
+  difficulty: 2
+  answer_option_a: '2.5'
+  answer_option_b: '5'
+  answer_option_c: '10'
+  answer_option_d: '15'
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: Ou encore 0.5 tonnes de CO2 pour 1000 litres de kérosène.  Saurez-vous
+    répondre à la question suivante pour la consommation ?
+  answer_accessible_url: https://restonslespiedssurterre.fr/pourquoi-1000-litres-de-kerosene-produisent-3000-kg-de-co2/
+  answer_scientific_url: https://fr.wikipedia.org/wiki/K%C3%A9ros%C3%A8ne
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-04
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 13
+  - 33
+  - 217
+- id: 698
+  text: Quelle est la durée de persistance du CO2 dans l'atmosphère ? Années
+  hint: Oh la la
+  type: QCM
+  category: 3
+  difficulty: 2
+  answer_option_a: '0.01'
+  answer_option_b: '0.5'
+  answer_option_c: '10'
+  answer_option_d: '100'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-04
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 13
+  - 33
+  - 217
+- id: 699
+  text: Quel est le rapport entre la durée de vie du CO2 et la durée du vol LC AR
+    ?
+  hint: Oh la la
+  type: QCM
+  category: 3
+  difficulty: 2
+  answer_option_a: '1'
+  answer_option_b: '120'
+  answer_option_c: '5500'
+  answer_option_d: '36500'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-04
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 13
+  - 33
+  - 217
+- id: 700
+  text: Quelle est la part du CO2 de l'aviation dans les émissions mondiale  2019
+    ? %
+  hint: Un train peu en cacher un autre
+  type: QCM
+  category: 3
+  difficulty: 2
+  answer_option_a: 0.5 %
+  answer_option_b: 3 %
+  answer_option_c: 6 %
+  answer_option_d: 12 %
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-04
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 13
+  - 33
+  - 217
+- id: 701
+  text: Quelle est la part de l'aviation dans le réchauffement climatique ? %
+  hint: Un train peu en cacher un autre
+  type: QCM
+  category: 1
+  difficulty: 2
+  answer_option_a: 2 %
+  answer_option_b: 5%
+  answer_option_c: 9 %
+  answer_option_d: 15 %
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-04
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 13
+  - 33
+  - 217
+- id: 702
+  text: Quel est le poids d'un A380 au décollage ? Tonnes
+  hint: 'MTOW : Max Take Off Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '50'
+  answer_option_b: '200'
+  answer_option_c: '550'
+  answer_option_d: '1000'
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 703
+  text: Quel est le poids du carburant d'un A380 au décollage ? Tonnes
+  hint: 'MTOW : Max Take Off Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '40'
+  answer_option_b: '240'
+  answer_option_c: '540'
+  answer_option_d: '840'
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 704
+  text: Quel est le poids des passagers d'un A380 au décollage ? Tonnes
+  hint: 'MTOW : Max Take Off Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '20'
+  answer_option_b: '30'
+  answer_option_c: '40'
+  answer_option_d: '5'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 705
+  text: Quel est le poids moyen relatif des passagers / poids total décollage ? %
+  hint: 'MTOW : Max Take Off Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: 2%
+  answer_option_b: 5%
+  answer_option_c: 8%
+  answer_option_d: 10%
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 706
+  text: Quel est le poids moyen relatif du kérosène / poids total décollage ? %
+  hint: 'MTOW : Max Take Off Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: 5%
+  answer_option_b: 20%
+  answer_option_c: 30%
+  answer_option_d: 40%
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 707
+  text: Quel est le poids moyen relatif de l'avion à vide / poids total décollage
+    ? %
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: 40%
+  answer_option_b: 50%
+  answer_option_c: 60%
+  answer_option_d: 75%
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 708
+  text: A380 sur un vol AR, le poids émissions de CO2 rapportées au poids de l'avion
+    ?
+  hint: Et encore sans compter les effets hors CO2.
+  type: QCM
+  category: 3
+  difficulty: 2
+  answer_option_a: '1'
+  answer_option_b: '2'
+  answer_option_c: '6'
+  answer_option_d: '15'
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: 'On a vu que le kérosène c''est environ 40 % du poids de l''avion.
+
+    Et celui de la carlingue vide 50 %.
+
+    Si on admet que 10 % est rarement consommée on tombe à 36 %.
+
+    Comme nous l’avons vu les émissions correspondent à 3.04 kg CO2 / litre,
+
+    ou 3.8 kg CO2 / kg de kérosène.
+
+    36% x 3.8 = 137% pour un vol simple
+
+    et 2 x 137% = 274% pour un vol AR.
+
+    Ce dernier chiffre est à rapprocher de celui de l’avion à vide
+
+    Soit 274% / 50% = 5.6 arrondit à un facteur 6
+
+    Donc sur un seul vol long-courrier AR, les beaux avions dispersent tranquillement
+    des tonnes de CO2.
+
+    Dans le cas présent avec un emport de 2 x 240 tonnes de kérosène ce sont plus
+    de 1600 tonnes de CO2 émises pour un minimum d’une centaine d’année pour chaque
+    AR.
+
+    Soit 6 fois le poids de l’avion.
+
+    Si on considère que les LC font un peu moins d’une rotation par jour, soit 275
+    rotations par an,
+
+    un seul avion aura émis 445 000 tonnes de CO2 / an.'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 13
+  - 33
+  - 217
+- id: 709
+  text: Quelle étaient les perspectives du trafic aérien pour 2036 ?
+  hint: Pour le TA, le terrain de jeux est sans limites
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: 12%
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 710
+  text: Quel est le nombre d'avions commerciaux dans le monde en 2019 ?
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 711
+  text: Quel est le nombre d'aéroports dans le monde en 2019 ?
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 712
+  text: Quel est le trafic de Paris CDG 2019 ? Millions de passagers?
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '10'
+  answer_option_b: '20'
+  answer_option_c: '40'
+  answer_option_d: '80'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: Avec le terminal 4 la capacité passerait à 115 millions de passager
+    à l'horizon 2032
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 713
+  text: Quel est le taux de croissance annuelle de l'aviation Pré-COVID ? %
+  hint: Pour le TA, le terrain de jeux est sans limites
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: 1%
+  answer_option_b: 4%
+  answer_option_c: 7%
+  answer_option_d: 12%
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 715
+  text: à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 716
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 717
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 718
+  text: Copy of Quel est le trafic de Paris CDG 2019 ? Millions de passagers?
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 719
+  text: Copy of Quel est le trafic de Paris CDG 2019 ? Millions de passagers?
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 720
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 721
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 722
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 723
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 724
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 725
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 726
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 727
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 728
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 729
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 730
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 731
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 732
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 733
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 734
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 735
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 736
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 737
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 738
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 739
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 740
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 741
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 742
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 743
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 744
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 745
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 746
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 747
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 748
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 749
+  text: Copy of à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 750
+  text: à venir jusqu'à 799
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-04
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 751
+  text: Copy of Quel est le trafic de Paris CDG 2019 ? Millions de passagers?
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 799
+  text: ' à venir jusqu''à 799'
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 800
+  text: Jusqu'à quelle vitesse peut tomber la grêle ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 1
+  answer_option_a: 50 km/h
+  answer_option_b: 100 km/h
+  answer_option_c: 150 km/h
+  answer_option_d: 200 km/h
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 219
+- id: 801
+  text: Vrai ou faux ?  Il n'y a que la pluie ou le vent qui peuvent faire disparaître
+    un épisode de pollution atmosphérique
+  hint: ''
+  type: VF
+  category: null
+  difficulty: 0
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: Vrai, car ils favorisent la dispersion, le brassage et le lessivage
+    de particules de pollution dans l'air
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 220
+- id: 802
+  text: Vrai ou faux ? Avec le changement climatique, les vendanges pourraient démarrer
+    20 à 40 jours plus tôt qu'actuellement d'ici 2100.
+  hint: ''
+  type: VF
+  category: 1
+  difficulty: 0
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: ''
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 34
+- id: 803
+  text: 'Le smog est une brume brunâtre provenant d''un mélange de polluants dans
+    l''atmosphère. Quand et comment s''est-on rendu compte qu''il était mauvais pour
+    la santé ? '
+  hint: ''
+  type: QCM
+  category: 3
+  difficulty: 1
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: En 1952, à Londres, car on a dénombré plusieurs milliers de morts.
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: Le grand smog de Londres de 1952 est reconnu comme étant l'un
+    des épisodes de pollution les plus significatifs de l'histoire. Le mot a été forgé
+    à partir des mots anglais SMoke (fumée) et fOG (brouilard).
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 220
+- id: 804
+  text: Vrai ou faux ? Avec le changement climatique, on s'attend à ce que des cyclones
+    viennent frapper les côtes françaises dans les années à venir
+  hint: ''
+  type: VF
+  category: 1
+  difficulty: 0
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: ''
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 221
+- id: 805
+  text: 'Vrai ou faux : certains polluants ont tendance à refroidir la planète'
+  hint: ''
+  type: VF
+  category: 1
+  difficulty: 1
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 222
+- id: 806
+  text: 'Vrai ou faux : depuis la création de la terre, le climat est resté plutôt
+    stable'
+  hint: ''
+  type: VF
+  category: 1
+  difficulty: 0
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags: []
+- id: 807
+  text: L'oxygène est nécessaire à la vie. Quelle est la part produite par les océans
+    ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 1
+  answer_option_a: 5%
+  answer_option_b: 25%
+  answer_option_c: 50%
+  answer_option_d: 80%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 9
+- id: 808
+  text: D'ici 2050, on prévoit qu'il y aura plus de déchets plastiques que de poissons
+    dans les océans. Vrai ou faux ?
+  hint: ''
+  type: VF
+  category: 3
+  difficulty: 0
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 9
+  - 26
+- id: 809
+  text: Vrai ou faux ? Les poissons ne sont pas gênés par le réchauffement climatique.
+  hint: ''
+  type: VF
+  category: 1
+  difficulty: 0
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: ''
+  has_ordered_answers: true
+  answer_explanation: Ils migrent vers des eaux moins chaudes.
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 9
+  - 223
+- id: 810
+  text: Vrai ou faux ? C'est triste de voir des espèces se réduire ou disparaître,
+    mais ça n'a pas d'importance réelle pour l'homme.
+  hint: ''
+  type: VF
+  category: 4
+  difficulty: 0
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 7
+- id: 811
+  text: Vrai ou faux ? Les forêts sont importantes pour réguler nos ressources en
+    eau
+  hint: ''
+  type: VF
+  category: 1
+  difficulty: 0
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 20
+  - 37
