@@ -10,7 +10,7 @@ from django.core.management import BaseCommand
 from django.core.exceptions import ValidationError
 
 from api import constants, utilities, utilities_notion
-from api.models import Configuration, Question, Category, Tag, Contribution
+from api.models import Configuration, Question, Category, Tag, Quiz, Contribution
 
 
 class Command(BaseCommand):
@@ -34,6 +34,9 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
+        #########################################################
+        # Init
+        #########################################################
         scope = options["scope"]
 
         notion_questions_list = []
@@ -47,6 +50,9 @@ class Command(BaseCommand):
 
         all_tags_list = list(Tag.objects.all().values_list("name", flat=True))
 
+        #########################################################
+        # Fetch questions from Notion
+        #########################################################
         start_time = time.time()
 
         try:
@@ -59,6 +65,10 @@ class Command(BaseCommand):
             "--- Step 1 done : fetch questions from Notion (%s seconds) ---"
             % round(time.time() - start_time, 1)
         )
+
+        #########################################################
+        # Check question ids (duplicates & missing)
+        #########################################################
         start_time = time.time()
 
         # order by notion_questions_list by id
@@ -85,6 +95,10 @@ class Command(BaseCommand):
             "--- Step 2 done : check question ids (duplicates & missing) : %s seconds ---"
             % round(time.time() - start_time, 1)
         )
+
+        #########################################################
+        # Loop on questions and create, update, store validation_errors
+        #########################################################
         start_time = time.time()
 
         # reduce scope because of timeouts on Heroku (30 seconds)
@@ -228,6 +242,10 @@ class Command(BaseCommand):
             "--- Step 3 done : loop on questions : %s seconds ---"
             % round(time.time() - start_time, 1)
         )
+
+        #########################################################
+        # Build and send stats
+        #########################################################
         start_time = time.time()
 
         # done
@@ -266,6 +284,15 @@ class Command(BaseCommand):
                 ]
             )
 
+        # check if any published quiz has a non-validated question
+        published_quizs = Quiz.objects.prefetch_related("questions").published()
+        for pq in published_quizs:
+            pq_not_validated_questions = pq.questions_not_validated_list
+            for question in pq_not_validated_questions:
+                validation_errors.append(
+                    f"Quiz {pq.id}: Question {question.id} is not validated but quiz is published"
+                )
+
         validation_errors_message = "Erreurs : "
         if len(validation_errors):
             validation_errors_message += (
@@ -291,7 +318,9 @@ class Command(BaseCommand):
             % round(time.time() - start_time, 1)
         )
 
-        # update configuration
+        #########################################################
+        # Update configuration
+        #########################################################
         configuration = Configuration.get_solo()
         if scope:
             setattr(
