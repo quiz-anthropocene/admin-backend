@@ -5,9 +5,9 @@
 
   <testsuite name="test-user-journeys"
     errors="0" failures="0" hostname="" id="" package="test-user-journeys" skipped="0"
-    tests="1" time="1.453" timestamp="">
+    tests="1" time="2.080" timestamp="">
   
-    <testcase name="user can start a quiz" classname="test-user-journeys" time="1.453" assertions="11">
+    <testcase name="user can start a quiz" classname="test-user-journeys" time="2.080" assertions="11">
 
     
 
