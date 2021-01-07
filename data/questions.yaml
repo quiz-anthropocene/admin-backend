@@ -22052,16 +22052,16 @@
   - 33
   - 217
 - id: 709
-  text: Quelle étaient les perspectives du trafic aérien pour 2036 ?
-  hint: Pour le TA, le terrain de jeux est sans limites
+  text: a venir
+  hint: ''
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: '25000'
+  answer_option_a: '24000'
   answer_option_b: '35000'
   answer_option_c: '50000'
-  answer_option_d: 12%
-  answer_correct: c
+  answer_option_d: '100000'
+  answer_correct: d
   has_ordered_answers: false
   answer_explanation: ''
   answer_accessible_url: ''
@@ -22072,7 +22072,7 @@
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-01-06
   created: 2021-01-06
   updated: 2021-01-06
   tags:
@@ -22080,19 +22080,31 @@
   - 217
   - 218
 - id: 710
-  text: Quel est le nombre d'avions commerciaux dans le monde en 2019 ?
-  hint: 'OEW : Operating Empty Weight'
+  text: Quelle était la croissance annuelle du TA en 2019 ?
+  hint: ''
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: '25000'
-  answer_option_b: '35000'
-  answer_option_c: '50000'
-  answer_option_d: '100000'
-  answer_correct: d
+  answer_option_a: 0.5 % par an
+  answer_option_b: 4.3 %
+  answer_option_c: 6 %
+  answer_option_d: 11 %
+  answer_correct: c
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: 'Si le transport aérien croît en moyenne de 6 % par an, les
+    écarts régionaux demeurent considérables :
+
+    Sa croissance est de l’ordre de 8 à 10 % dans les pays asiatiques ou du MO, mais
+    de 3 à 4 % « seulement » en Europe ou aux États-Unis.
+
+    Le TA est pris entre le marteau et l''enclume,
+
+    Soit il annonce de fortes croissances pour vendre sa "réussite", mais il a bien
+    pris conscience qu''une part de l''opinion publique ne suit plus.
+
+    Enfant chéri des politiques, c''est un des plus forts lobbies au monde, qui doit
+    surtout sa réussite aux exonérations de taxes et autres subventions.'
+  answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -22108,6 +22120,40 @@
   - 217
   - 218
 - id: 711
+  text: Quel est le nombre d'avions commerciaux dans le monde en 2019 ? Alors imaginez
+    en 2038...
+  hint: La croissance passée augure t-elle encore celle de demain ?
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '24000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: 'Stratosphérique ! Le marché n’en finit pas de prendre de l’altitude,
+    avec une demande mondiale estimée à 39 210 avions neufs sur les vingt prochaines
+    années (2019-2038) selon Airbus. Soit 1 820 appareils de plus que dans sa dernière
+    prévision, période 2018-2037, et même de 4 320 avions supplémentaires par rapport
+    à l’étude 2017-2036. Conséquence : la flotte va plus que doubler à horizon 2038,
+    à près de 48 000 appareils'
+  answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 712
   text: Quel est le nombre d'aéroports dans le monde en 2019 ?
   hint: 'OEW : Operating Empty Weight'
   type: QCM
@@ -22135,7 +22181,7 @@
   - 33
   - 217
   - 218
-- id: 712
+- id: 713
   text: Quel est le trafic de Paris CDG 2019 ? Millions de passagers?
   hint: 'OEW : Operating Empty Weight'
   type: QCM
@@ -22164,7 +22210,7 @@
   - 33
   - 217
   - 218
-- id: 713
+- id: 714
   text: Quel est le taux de croissance annuelle de l'aviation Pré-COVID ? %
   hint: Pour le TA, le terrain de jeux est sans limites
   type: QCM
@@ -22186,23 +22232,23 @@
   validator: ''
   validation_status: Brouillon
   added: 2021-01-05
-  created: 2021-01-06
-  updated: 2021-01-06
+  created: 2021-01-07
+  updated: 2021-01-07
   tags:
   - 33
   - 217
   - 218
 - id: 715
-  text: à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: Quelle étaient les perspectives du trafic aérien pour 2036 ?
+  hint: Pour le TA, le terrain de jeux est sans limites
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: '25000'
+  answer_option_a: '24000'
   answer_option_b: '35000'
   answer_option_c: '50000'
-  answer_option_d: '100000'
-  answer_correct: d
+  answer_option_d: 12%
+  answer_correct: c
   has_ordered_answers: false
   answer_explanation: ''
   answer_accessible_url: ''
@@ -23224,6 +23270,34 @@
   added: 2021-01-05
   created: 2021-01-06
   updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 755
+  text: à venir
+  hint: 'OEW : Operating Empty Weight'
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '25000'
+  answer_option_b: '35000'
+  answer_option_c: '50000'
+  answer_option_d: '100000'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-07
+  updated: 2021-01-07
   tags:
   - 33
   - 217
