@@ -21650,8 +21650,8 @@
   - 33
   - 217
 - id: 696
-  text: 'Quelle quantité de CO2 en kG émet 1 litre de Kérosène pour la phase production
-    : extraction + raffinage + transport ?'
+  text: 'Quelle quantité de CO2 en kG est émise pour la phase de production d''un
+    litre de Kérosène : extraction + raffinage + transport ?'
   hint: Tout se transforme
   type: QCM
   category: 3
@@ -21721,12 +21721,17 @@
   answer_option_d: '100'
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_explanation: La décroissance d'un surplus de CO2 atmosphérique est complexe.
+    Une fraction va être rapidement absorbée par la végétation et les océans (de l'ordre
+    de l'année). La réduction de la fraction restante dépend de mécanismes bien plus
+    lents et notamment de l'altération des silicates. La disparition totale d'un surplus
+    important de CO2 atmosphérique a lieu au bout de plusieurs centaines de milliers
+    d'années.
+  answer_accessible_url: https://fr.wikipedia.org/wiki/%C3%89quivalent_CO2#:~:text=de%20r%C3%A9chauffement%20climatique.-,Dur%C3%A9e%20de%20vie%20et%20PRG%20des%20gaz%20%C3%A0%20effet%20de,ce%20gaz%20sert%20de%20r%C3%A9f%C3%A9rence).
+  answer_scientific_url: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
   answer_image_url: ''
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: https://fr.wikipedia.org/wiki/Gaz_à_effet_de_serre#cite_note-51
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
@@ -21750,8 +21755,13 @@
   answer_option_d: '36500'
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: '36500 FOIS PLUS.
+
+    Si on considère qu’un vol LC AR c’est peu ou prou 24 heures,
+
+    le CO2 reste alors 365 x 100 = 36500 fois plus de temps dans l’atmosphère que
+    la durée du vol.'
+  answer_accessible_url: https://fr.wikipedia.org/wiki/Gaz_%C3%A0_effet_de_serre#cite_note-51
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -21808,7 +21818,7 @@
   answer_correct: c
   has_ordered_answers: false
   answer_explanation: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://www.sciencedirect.com/science/article/pii/S1352231020305689?via%3Dihub
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -22323,19 +22333,23 @@
   - 217
   - 218
 - id: 718
-  text: Copy of Quel est le trafic de Paris CDG 2019 ? Millions de passagers?
-  hint: 'OEW : Operating Empty Weight'
+  text: Quel est le nombre d'hélicoptère dans le Monde en 2016 ?
+  hint: similaire aux avions
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: '25000'
-  answer_option_b: '35000'
+  answer_option_a: '5000'
+  answer_option_b: '25000'
   answer_option_c: '50000'
   answer_option_d: '100000'
-  answer_correct: d
+  answer_correct: b
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: '2500 en 2016 et pourrait passer à 37400 en 2036.
+
+    Le marché des hélicoptères civils et parapublics va représenter un montant de
+    370 milliards d''euros ( 125 neuf + 245 Maintenance) sur la période 2017-2036,
+    selon une étude de marché d''Airbus Helicopters.'
+  answer_accessible_url: https://www.latribune.fr/entreprises-finance/industrie/aeronautique-defense/quand-airbus-helicopters-voit-l-avenir-en-rose-753410.html#:~:text=Selon%20une%20%C3%A9tude%20de%20march%C3%A9%20d'Airbus%20Helicopters%20(AH),et%20les%20pi%C3%A8ces%20de%20rechange.
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -22351,19 +22365,30 @@
   - 217
   - 218
 - id: 719
-  text: Copy of Quel est le trafic de Paris CDG 2019 ? Millions de passagers?
-  hint: 'OEW : Operating Empty Weight'
+  text: 'Homme volant : Quelle quantité de carburant Frankie Zapata à utilisé pour
+    traverser la Manche ?'
+  hint: Avec ravitaillement à mi-parcours
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: '25000'
-  answer_option_b: '35000'
-  answer_option_c: '50000'
-  answer_option_d: '100000'
-  answer_correct: d
+  answer_option_a: '23'
+  answer_option_b: '52'
+  answer_option_c: '80'
+  answer_option_d: '150'
+  answer_correct: c
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: '80 litres pour faire 35 km soit 2,3 litres / km ou encore 229
+    litres / 100 km.
+
+    Comparé à 3.4 litres / 100 km en avion (2018 : Moyenne flotte AF)
+
+    C’est 67 fois plus…
+
+    Autant faire voler une pierre.
+
+    Cela donne une idée de l’énergie qu’il faudra mettre en œuvre pour faire voler
+    des taxis volants pour désengorger les villes du futur…'
+  answer_accessible_url: https://www.liberation.fr/checknews/2019/08/07/combien-consomme-le-flyboard-de-franky-zapata_1743786
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -23656,4 +23681,96 @@
   updated: 2021-01-06
   tags:
   - 20
+  - 37
+- id: 812
+  text: Parmi toute l’eau présente sur Terre, quel est le pourcentage d’eau douce
+    accessible ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 1
+  answer_option_a: 3%
+  answer_option_b: 15%
+  answer_option_c: 50%
+  answer_option_d: 70%
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: 'Notre « Planète bleue » se compose à 70% d’eau. 97% est de
+    l’eau salée et seulement 3% de l’eau douce, plus ou moins accessible. Cette eau
+    douce est stockée sous la forme de neige ou de glace (69%), dans les aquifères
+    (30%) ou sous forme d''eau de surface liquide (rivières, lacs, etc.) (1%). '
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-08
+  created: 2021-01-09
+  updated: 2021-01-09
+  tags:
+  - 37
+- id: 813
+  text: De combien a diminué le volume annuel des ressources en eau douce disponibles
+    par personne à l’échelle mondiale au cours de ces vingt dernières années ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  answer_option_a: 0.1%
+  answer_option_b: 1%
+  answer_option_c: 10%
+  answer_option_d: 20%
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: En raison de la croissance de la population, qui est un facteur
+    déterminant de l’épuisement des ressources en eau douce, le volume annuel des
+    ressources en eau disponibles par personne a diminué de 20% au cours de ces 20
+    dernières années.
+  answer_accessible_url: ''
+  answer_scientific_url: http://www.fao.org/3/cb1441fr/CB1441FR.pdf
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-08
+  created: 2021-01-09
+  updated: 2021-01-09
+  tags:
+  - 27
+  - 37
+- id: 814
+  text: Quel est le pourcentage de terres agricoles irriguées soumises à un stress
+    hydrique élevée ou très élevée à l’échelle mondiale ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 4
+  answer_option_a: 2%
+  answer_option_b: 15%
+  answer_option_c: 33%
+  answer_option_d: 62%
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: Dans le monde, 62% des terres irriguées font face à une situation
+    de stress hydrique élevé ou très élevé. Ainsi, pour assurer la pérennité de l’agriculture,
+    il est primordial d’accroître la productivité de l’eau par des pratiques innovantes
+    et par la modernisation des infrastructures d’irrigation.
+  answer_accessible_url: ''
+  answer_scientific_url: http://www.fao.org/3/cb1441fr/CB1441FR.pdf
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-08
+  created: 2021-01-09
+  updated: 2021-01-09
+  tags:
+  - 17
   - 37
