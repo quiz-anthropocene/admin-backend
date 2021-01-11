@@ -600,7 +600,10 @@ class Quiz(models.Model):
         help_text="Une conclusion du quiz et des pistes pour aller plus loin",
     )
     questions = models.ManyToManyField(
-        Question, related_name="quizzes", help_text="Les questions du quiz"
+        Question,
+        through="QuizQuestion",
+        # related_name="quizzes",
+        help_text="Les questions du quiz",
     )
     difficulty_average = models.FloatField(
         default=0, help_text="La difficulté moyenne des questions"  # readonly
@@ -823,9 +826,35 @@ def quiz_validate_m2m_fields(sender, **kwargs):
 
 
 models.signals.pre_save.connect(quiz_validate_fields, sender=Quiz)
-models.signals.m2m_changed.connect(
-    quiz_validate_m2m_fields, sender=Quiz.questions.through
-)
+# models.signals.m2m_changed.connect(
+#     quiz_validate_m2m_fields, sender=Quiz.questions.through
+# )
+
+
+class QuizQuestion(models.Model):
+    quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    order = models.PositiveIntegerField(blank=True, default=0)
+    # timestamps
+    created = models.DateField(
+        auto_now_add=True, help_text="La date de création du lien"
+    )
+    updated = models.DateField(auto_now=True)
+
+    class Meta:
+        ordering = ["quiz_id", "order"]
+
+    def __str__(self):
+        return f"Quiz {self.quiz.id} >>> Question {self.question.id} (#{self.order})"
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super(QuizQuestion, self).save(*args, **kwargs)
+
+    def clean(self):
+        if not self.order:  # 0 or None
+            last_quiz_question = QuizQuestion.objects.filter(quiz=self.quiz).last()
+            self.order = (last_quiz_question.order + 1) if last_quiz_question else 1
 
 
 class QuizRelationship(models.Model):

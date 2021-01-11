@@ -172,6 +172,23 @@ class Command(BaseCommand):
             )
             start_time = time.time()
 
+            # data/quiz-questions.yaml
+            quiz_questions_yaml = utilities.serialize_model_to_yaml(
+                model_label="quizquestion", flat=True
+            )
+            utilities_github.update_file(
+                file_path="data/quiz-questions.yaml",
+                commit_message="update quiz questions",
+                file_content=quiz_questions_yaml,
+                branch_name=data_update_branch_name,
+            )
+
+            print(
+                "--- Step 2.8 done : quiz-questions.yaml (%s seconds) ---"
+                % round(time.time() - start_time, 1)
+            )
+            start_time = time.time()
+
             # data/quiz-relationships.yaml
             quiz_relationships_yaml = utilities.serialize_model_to_yaml(
                 model_label="quizrelationship", flat=True
@@ -184,7 +201,7 @@ class Command(BaseCommand):
             )
 
             print(
-                "--- Step 2.8 done : quiz-relationships.yaml (%s seconds) ---"
+                "--- Step 2.9 done : quiz-relationships.yaml (%s seconds) ---"
                 % round(time.time() - start_time, 1)
             )
             start_time = time.time()
@@ -224,6 +241,7 @@ class Command(BaseCommand):
                     "<li>data/tags.yaml</li>"
                     "<li>data/questions.yaml</li>"
                     "<li>data/quizzes.yaml</li>"
+                    "<li>data/quiz-questions.yaml</li>"
                     "<li>data/quiz-relationships.yaml</li>"
                     "</ul>"
                 )

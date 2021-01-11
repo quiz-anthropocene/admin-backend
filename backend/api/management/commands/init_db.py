@@ -9,6 +9,7 @@ from api.models import (
     Tag,
     Question,
     Quiz,
+    QuizQuestion,
     QuizRelationship,
     Glossary,
 )
@@ -19,6 +20,7 @@ CATEGORIES_FILE_PATH = "../data/categories.yaml"
 TAGS_FILE_PATH = "../data/tags.yaml"
 QUESTIONS_FILE_PATH = "../data/questions.yaml"
 QUIZZES_FILE_PATH = "../data/quizzes.yaml"
+QUIZ_QUESTIONS_FILE_PATH = "../data/quiz-questions.yaml"
 QUIZ_RELATIONSHIPS_FILE_PATH = "../data/quiz-relationships.yaml"
 GLOSSARY_FILE_PATH = "../data/ressources-glossaire.yaml"
 
@@ -36,6 +38,7 @@ class Command(BaseCommand):
         (Tag, TAGS_FILE_PATH),
         (Question, QUESTIONS_FILE_PATH),
         (Quiz, QUIZZES_FILE_PATH),
+        (QuizQuestion, QUIZ_QUESTIONS_FILE_PATH),
         (QuizRelationship, QUIZ_RELATIONSHIPS_FILE_PATH),
         (Glossary, GLOSSARY_FILE_PATH),
     ]

@@ -29,6 +29,7 @@ from api.models import (
     Category,
     Tag,
     Quiz,
+    QuizQuestion,
     QuizRelationship,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
@@ -264,7 +265,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         "difficulty",
         "author",
         "validation_status",
-        "quizzes",
+        # "quizzes",
         "tags",
     )
     ordering = ("-id",)  # "answer_count_agg", "answer_success_rate",
@@ -410,10 +411,15 @@ class TagAdmin(ExportMixin, admin.ModelAdmin):
     ]
 
 
+class QuizQuestionInline(admin.StackedInline):
+    model = QuizQuestion
+    extra = 0
+
+
 class QuizRelationshipFromInline(admin.StackedInline):  # TabularInline
     model = QuizRelationship
     fk_name = "from_quiz"
-    extra = 1
+    extra = 0
 
     def formfield_for_foreignkey(self, db_field, request=None, **kwargs):
         """
@@ -484,7 +490,7 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
     ordering = ("-id",)
     filter_vertical = ("questions",)
     filter_horizontal = ("tags",)
-    inlines = [QuizRelationshipFromInline, QuizRelationshipToInline]
+    inlines = [QuizQuestionInline, QuizRelationshipFromInline, QuizRelationshipToInline]
     readonly_fields = (
         "question_count",
         "difficulty_average",
@@ -514,7 +520,6 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
             "Les questions",
             {
                 "fields": (
-                    "questions",
                     "question_count",
                     "difficulty_average",
                     "questions_not_validated_string_html",

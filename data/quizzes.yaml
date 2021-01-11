@@ -9,16 +9,6 @@
   spotlight: false
   created: 2020-04-17
   updated: 2020-12-14
-  questions:
-  - 3
-  - 16
-  - 21
-  - 48
-  - 59
-  - 70
-  - 71
-  - 75
-  - 83
   tags: []
 - id: 2
   name: L'énergie en France 🇫🇷
@@ -32,17 +22,6 @@
   spotlight: false
   created: 2020-05-25
   updated: 2020-11-24
-  questions:
-  - 11
-  - 104
-  - 132
-  - 135
-  - 184
-  - 210
-  - 254
-  - 259
-  - 307
-  - 410
   tags: []
 - id: 3
   name: Le quiz de Vincent Mignerot sur l'anthropologie
@@ -64,19 +43,6 @@
   spotlight: false
   created: 2020-06-26
   updated: 2020-12-21
-  questions:
-  - 545
-  - 546
-  - 547
-  - 548
-  - 549
-  - 550
-  - 551
-  - 552
-  - 553
-  - 555
-  - 574
-  - 575
   tags:
   - 185
 - id: 4
@@ -92,13 +58,6 @@
   spotlight: false
   created: 2020-07-08
   updated: 2020-11-24
-  questions:
-  - 65
-  - 68
-  - 69
-  - 171
-  - 212
-  - 245
   tags: []
 - id: 5
   name: Mon empreinte carbone
@@ -113,18 +72,6 @@
   spotlight: false
   created: 2020-07-08
   updated: 2020-12-14
-  questions:
-  - 78
-  - 102
-  - 150
-  - 236
-  - 243
-  - 251
-  - 335
-  - 358
-  - 402
-  - 417
-  - 440
   tags: []
 - id: 6
   name: Regard sur l'anthropocène, premier aperçu
@@ -142,17 +89,6 @@
   spotlight: false
   created: 2020-07-08
   updated: 2020-12-17
-  questions:
-  - 2
-  - 4
-  - 7
-  - 9
-  - 13
-  - 41
-  - 44
-  - 45
-  - 47
-  - 49
   tags: []
 - id: 7
   name: le Pétrole - Partie 1
@@ -166,15 +102,6 @@
   spotlight: false
   created: 2020-07-09
   updated: 2020-12-17
-  questions:
-  - 13
-  - 106
-  - 107
-  - 111
-  - 112
-  - 113
-  - 114
-  - 115
   tags: []
 - id: 8
   name: La Fresque du Climat - Lot 1
@@ -194,25 +121,6 @@
   spotlight: false
   created: 2020-07-14
   updated: 2020-12-21
-  questions:
-  - 6
-  - 8
-  - 13
-  - 14
-  - 22
-  - 30
-  - 32
-  - 33
-  - 79
-  - 80
-  - 129
-  - 137
-  - 176
-  - 194
-  - 361
-  - 369
-  - 415
-  - 436
   tags:
   - 142
 - id: 9
@@ -227,17 +135,6 @@
   spotlight: false
   created: 2020-07-14
   updated: 2020-11-24
-  questions:
-  - 24
-  - 45
-  - 53
-  - 54
-  - 55
-  - 56
-  - 57
-  - 58
-  - 98
-  - 157
   tags: []
 - id: 10
   name: Le Pétrole - Partie 2
@@ -251,15 +148,6 @@
   spotlight: false
   created: 2020-07-29
   updated: 2020-12-13
-  questions:
-  - 12
-  - 20
-  - 155
-  - 156
-  - 179
-  - 230
-  - 246
-  - 494
   tags: []
 - id: 11
   name: La fresque du Climat - Lot 2
@@ -279,28 +167,6 @@
   spotlight: false
   created: 2020-07-29
   updated: 2020-12-21
-  questions:
-  - 6
-  - 8
-  - 14
-  - 15
-  - 16
-  - 21
-  - 23
-  - 26
-  - 27
-  - 28
-  - 32
-  - 34
-  - 37
-  - 42
-  - 47
-  - 48
-  - 66
-  - 143
-  - 282
-  - 343
-  - 405
   tags:
   - 142
 - id: 12
@@ -320,13 +186,6 @@
   spotlight: false
   created: 2020-07-29
   updated: 2020-12-21
-  questions:
-  - 29
-  - 131
-  - 305
-  - 306
-  - 459
-  - 524
   tags:
   - 142
 - id: 13
@@ -346,10 +205,6 @@
   spotlight: false
   created: 2020-07-29
   updated: 2020-12-17
-  questions:
-  - 52
-  - 294
-  - 315
   tags:
   - 142
 - id: 14
@@ -369,10 +224,6 @@
   spotlight: false
   created: 2020-07-29
   updated: 2020-12-13
-  questions:
-  - 35
-  - 229
-  - 403
   tags:
   - 142
 - id: 15
@@ -393,18 +244,6 @@
   spotlight: false
   created: 2020-07-29
   updated: 2020-12-13
-  questions:
-  - 33
-  - 139
-  - 180
-  - 222
-  - 264
-  - 348
-  - 362
-  - 425
-  - 428
-  - 453
-  - 460
   tags:
   - 142
 - id: 16
@@ -423,17 +262,6 @@
   spotlight: false
   created: 2020-07-29
   updated: 2020-12-14
-  questions:
-  - 51
-  - 67
-  - 77
-  - 78
-  - 79
-  - 96
-  - 225
-  - 294
-  - 403
-  - 494
   tags: []
 - id: 17
   name: Une biodiversité qui s'anéantit
@@ -447,15 +275,6 @@
   spotlight: false
   created: 2020-08-04
   updated: 2020-12-13
-  questions:
-  - 4
-  - 7
-  - 41
-  - 44
-  - 59
-  - 60
-  - 61
-  - 67
   tags:
   - 6
   - 49
@@ -490,16 +309,6 @@
   spotlight: true
   created: 2020-09-23
   updated: 2021-01-11
-  questions:
-  - 571
-  - 572
-  - 573
-  - 576
-  - 577
-  - 578
-  - 579
-  - 580
-  - 581
   tags: []
 - id: 52
   name: Le quiz de Bon Pote sur la finance "verte"
@@ -522,15 +331,6 @@
   spotlight: false
   created: 2020-11-16
   updated: 2020-12-13
-  questions:
-  - 596
-  - 597
-  - 598
-  - 599
-  - 600
-  - 601
-  - 602
-  - 603
   tags:
   - 194
 - id: 53
@@ -549,16 +349,6 @@
   spotlight: false
   created: 2020-11-27
   updated: 2020-12-19
-  questions:
-  - 45
-  - 80
-  - 233
-  - 258
-  - 348
-  - 378
-  - 534
-  - 538
-  - 597
   tags: []
 - id: 54
   name: Born in the USA
@@ -581,19 +371,6 @@
   spotlight: false
   created: 2020-11-28
   updated: 2021-01-03
-  questions:
-  - 246
-  - 278
-  - 325
-  - 353
-  - 358
-  - 360
-  - 439
-  - 503
-  - 539
-  - 626
-  - 666
-  - 668
   tags:
   - 11
   - 13
@@ -625,16 +402,6 @@
   spotlight: false
   created: 2020-12-08
   updated: 2020-12-21
-  questions:
-  - 615
-  - 616
-  - 617
-  - 618
-  - 619
-  - 620
-  - 621
-  - 622
-  - 623
   tags:
   - 62
 - id: 56
@@ -653,17 +420,6 @@
   spotlight: true
   created: 2020-12-13
   updated: 2021-01-11
-  questions:
-  - 64
-  - 93
-  - 103
-  - 107
-  - 125
-  - 134
-  - 284
-  - 520
-  - 531
-  - 582
   tags: []
 - id: 57
   name: NOUVEAU - 2020 en chiffres
@@ -679,19 +435,5 @@
   spotlight: true
   created: 2020-12-24
   updated: 2021-01-04
-  questions:
-  - 682
-  - 683
-  - 684
-  - 685
-  - 686
-  - 687
-  - 688
-  - 689
-  - 690
-  - 691
-  - 692
-  - 693
-  - 694
   tags:
   - 213

@@ -2,6 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 
 from api import constants
+from api.models import QuizQuestion
 from api.tests.factories import (
     CategoryFactory,
     TagFactory,
@@ -32,9 +33,10 @@ class ApiTest(TestCase):
         cls.question_3.tags.add(cls.tag_2)
         cls.question_3.save()
         cls.quiz_1 = QuizFactory(name="quiz 1", publish=False)
-        cls.quiz_1.questions.set([cls.question_1.id])
+        QuizQuestion.objects.create(quiz=cls.quiz_1, question=cls.question_1)
         cls.quiz_2 = QuizFactory(name="quiz 2", publish=True)
-        cls.quiz_2.questions.set([cls.question_2.id, cls.question_3.id])
+        QuizQuestion.objects.create(quiz=cls.quiz_2, question=cls.question_2, order=2)
+        QuizQuestion.objects.create(quiz=cls.quiz_2, question=cls.question_3, order=1)
 
     def test_root(self):
         response = self.client.get(reverse("api:index"))
@@ -159,6 +161,16 @@ class ApiTest(TestCase):
         self.assertIsInstance(response.data, list)
         self.assertEqual(len(response.data), 1)  # 1 quiz not published
         self.assertEqual(response.data[0]["question_count"], 2)
+        self.assertEqual(response.data[0]["questions"][0], self.question_2.id)
+
+    def test_quiz_list_with_question_order(self):
+        response = self.client.get(reverse("api:quiz_list"), {"question_order": "true"})
+        self.assertEqual(response.status_code, 200)
+        self.assertIsInstance(response.data, list)
+        self.assertEqual(len(response.data), 1)  # 1 quiz not published
+        self.assertEqual(len(response.data[0]["questions"]), 2)
+        self.assertEqual(response.data[0]["questions"][0]["id"], self.question_3.id)
+        self.assertEqual(response.data[0]["questions"][0]["order"], 1)
 
     def test_quiz_list_full(self):
         response = self.client.get(reverse("api:quiz_list"), {"full": "true"})
@@ -166,6 +178,7 @@ class ApiTest(TestCase):
         self.assertIsInstance(response.data, list)
         self.assertEqual(len(response.data), 1)  # 1 quiz not published
         self.assertEqual(len(response.data[0]["questions"]), 2)
+        self.assertEqual(response.data[0]["questions"][0]["id"], self.question_2.id)
 
     def test_question_feedback_event(self):
         response = self.client.post(

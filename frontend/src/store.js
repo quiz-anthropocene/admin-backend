@@ -12,6 +12,7 @@ import categoriesYamlData from '../../data/categories.yaml';
 import tagsYamlData from '../../data/tags.yaml';
 import questionsYamlData from '../../data/questions.yaml';
 import quizzesYamlData from '../../data/quizzes.yaml';
+import quizQuestionsYamlData from '../../data/quiz-questions.yaml';
 import quizRelationshipsYamlData from '../../data/quiz-relationships.yaml';
 import ressourcesGlossaireYamlData from '../../data/ressources-glossaire.yaml';
 import ressourcesSoutiensYamlData from '../../data/ressources-soutiens.yaml';
@@ -111,8 +112,14 @@ const store = new Vuex.Store({
       const quizzes = quizzesYamlData;
       // quiz: get question and tag objects
       quizzes.map((q) => {
-        const quizQuestions = getters.getQuestionsByIdList(q.questions);
+        // get quiz questions + order + only get question ids
+        const quizQuestionsList = quizQuestionsYamlData.filter((qq) => qq.quiz === q.id);
+        quizQuestionsList.sort((a, b) => a.order - b.order);
+        const quizQuestionsIdList = quizQuestionsList.map((qq) => qq.question);
+        const quizQuestions = getters.getQuestionsByIdList(quizQuestionsIdList);
+        // get quiz tags
         const quizTags = getters.getTagsByIdList(q.tags);
+        // assign
         Object.assign(q, { questions: quizQuestions }, { tags: quizTags });
         return q;
       });
