@@ -1,8 +1,8 @@
 <template>
   <section>
 
-    <div class="row" v-if="quizzesFeatured && quizzesFeatured.length > 0" id="quiz-list">
-      <div class="col-sm-4" v-for="quiz in quizzesFeatured" :key="quiz.id">
+    <div class="row" v-if="quizzesSpotlighted && quizzesSpotlighted.length > 0" id="quiz-list">
+      <div class="col-sm-4" v-for="quiz in quizzesSpotlighted" :key="quiz.id">
         <QuizCard :quiz="quiz"/>
       </div>
     </div>
@@ -146,11 +146,12 @@ export default {
     questionsCount() {
       return this.$store.state.questionsValidated.length;
     },
-    quizzesFeatured() {
+    quizzesSpotlighted() {
       return this.$store.state.quizzesPublished
         .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
-        .sort((a, b) => b.id - a.id)
-        .slice(0, 3);
+        .filter((q) => q.spotlight) // only display spotlighted quizs
+        .sort((a, b) => b.id - a.id) // biggest/latest id first
+        .slice(0, 3); // make sure we display only 3
     },
   },
 

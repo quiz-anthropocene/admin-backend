@@ -470,12 +470,14 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
         "tags_list_string",
         "difficulty_average",
         "publish",
+        "spotlight",
         "answer_count_agg",
         "created",
     )
     search_fields = ("name",)
     list_filter = (
         "publish",
+        "spotlight",
         "author",
         "tags",
     )
@@ -528,7 +530,7 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
         ),
         (
             "Prêt à être publié ? Toutes les questions doivent être au statut 'validé' !",
-            {"fields": ("publish",)},
+            {"fields": ("publish", "spotlight",)},
         ),
         (
             "Stats",
