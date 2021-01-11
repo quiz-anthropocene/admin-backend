@@ -444,7 +444,7 @@
   - 49
   - 76
 - id: 18
-  name: Quiz de Laurent Testot, histoire environnementale
+  name: Quiz de Laurent Testot - COMMENTAIRES AUDIO
   introduction: "<p>Laurent Testot est journaliste, conférencier et formateur. Il\
     \ se consacre à la promotion en France de l’histoire globale, une méthode transdisciplinaire\
     \ d’analyse de l’histoire à grandes échelles. Son premier livre, <em>Cataclysmes.\
@@ -455,11 +455,11 @@
     \ Humaines Éditions, 2019), un atlas-manuel d’histoire mondiale. Il a dernièrement\
     \ codirigé, avec Laurent Aillet, <em>Collapsus. Changer ou disparaître ? Le vrai\
     \ bilan sur notre planète</em> (Albin Michel, 2020), réunissant 40 auteurs autour\
-    \ de la notion d’effondrement. Dans ce quiz, il nous donne à découvrir quelques\
-    \ tournants méconnus de l’histoire de l'homme avec son milieu.<br />\r\nLA NOUVEAUTE\
-    \ : nous avons édité le quiz avec des explications audios plus complètes de l'auteur.\
-    \ Cliquez sur le lien audio fourni les écouter. Une quiz'conférencence en quelque\
-    \ sorte !</p>"
+    \ de la notion d’effondrement.<br />\r\n<br />\r\nDans ce quiz, il nous donne\
+    \ à découvrir quelques tournants méconnus de l’histoire de l'homme avec son milieu.<br\
+    \ />\r\nLA NOUVEAUTE : le quiz est désormais assorti d'explications audios plus\
+    \ complètes de l'auteur. Cliquez sur le lien audio fourni les écouter. Une quiz'conférence\
+    \ en quelque sorte !</p>"
   conclusion: <p>Pour anticiper l'avenir, le mieux est d'abord de comprendre le passé.
     Ce quiz s'est attaché à montrer comment des événements climatiques, des inventions,
     des conquêtes ont pu avoir une influence imprévue mais déterminante dans notre
@@ -471,7 +471,7 @@
   image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
   publish: true
   created: 2020-09-23
-  updated: 2021-01-03
+  updated: 2021-01-11
   questions:
   - 571
   - 572
@@ -616,7 +616,7 @@
   tags:
   - 62
 - id: 56
-  name: NOUVEAU - En état d'ébriété énergétique ?
+  name: En état d'ébriété énergétique ?
   introduction: '<p>L''énergie est partout autour de nous: nos voitures, notre électricité,
     nos usines...Mais avons-nous bien conscience du degré de dépendance que nous avons
     développé vis à vis d''elle ? Ce quiz pour apprendre à mieux nous en rendre compte.</p>'
@@ -629,7 +629,7 @@
   image_background_url: https://www.popsci.com/resizer/iHd2-DUNyurlTDhvndesdxzQoFU=/857x643/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/MTUGSVPHBB22CKTZETTB42BCIE.jpg
   publish: true
   created: 2020-12-13
-  updated: 2020-12-14
+  updated: 2021-01-11
   questions:
   - 64
   - 93
