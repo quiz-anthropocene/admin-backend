@@ -35,3 +35,18 @@
 .form-row .stacked .selector-chosen select {
   height: 20em;
 }
+
+
+/* Hide add/edit buttons next to related forms */
+div.related-widget-wrapper > a {
+  display: none;
+}
+
+
+/* Quiz questions many-to-many */
+div.field-question div.related-widget-wrapper {
+  width: 80%;
+}
+div.field-question div.related-widget-wrapper > select {
+  width: 75%;
+}

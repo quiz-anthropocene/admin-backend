@@ -56,6 +56,12 @@ def load_model_data_to_db(model, data):
         if "category" in item:
             item["category_id"] = item["category"]
             del item["category"]
+        if "quiz" in item:
+            item["quiz_id"] = item["quiz"]
+            del item["quiz"]
+        if "question" in item:
+            item["question_id"] = item["question"]
+            del item["question"]
         if "from_quiz" in item:
             item["from_quiz_id"] = item["from_quiz"]
             del item["from_quiz"]
@@ -69,7 +75,6 @@ def load_model_data_to_db(model, data):
         if "questions" in item:
             question_ids = item["questions"]
             del item["questions"]
-        # print(item)
         instance = model.objects.create(**item)
         if len(tag_ids):
             instance.tags.set(tag_ids)
