@@ -8,6 +8,7 @@ from api.models import (
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
     Quiz,
+    QuizQuestion,
     QuizAnswerEvent,
     QuizFeedbackEvent,
     Contribution,
@@ -88,9 +89,6 @@ QUESTION_FIELDS = [
 
 
 class QuestionSerializer(serializers.ModelSerializer):
-    # category = CategoryStringSerializer()
-    # tags = TagStringSerializer(many=True)
-
     class Meta:
         model = Question
         fields = QUESTION_FIELDS
@@ -154,31 +152,53 @@ class QuestionFeedbackEventSerializer(serializers.ModelSerializer):
 
 
 """
-QUIZ
+QUIZ QUESTION
 """
 
 
+class QuizQuestionSerializer(serializers.ModelSerializer):
+    # override QuizQuestion id with question_id
+    id = serializers.ReadOnlyField(source="question.id")
+
+    class Meta:
+        model = QuizQuestion
+        fields = ["id", "order"]
+
+
+"""
+QUIZ
+"""
+
+QUIZ_FIELDS = [
+    "id",
+    "name",
+    "introduction",
+    "conclusion",
+    "author",
+    "image_background_url",
+    "questions",
+    "tags",
+    "question_count",
+    "questions_categories_list",
+    "questions_tags_list",
+    "questions_authors_list",
+    "difficulty_average",
+    "created",
+]
+
+
 class QuizSerializer(serializers.ModelSerializer):
-    # questions = QuestionSerializer(many=True)
+    class Meta:
+        model = Quiz
+        fields = QUIZ_FIELDS
+
+
+class QuizWithQuestionOrderSerializer(serializers.ModelSerializer):
+    questions = QuizQuestionSerializer(source="quizquestion_set", many=True)
 
     class Meta:
         model = Quiz
-        fields = [
-            "id",
-            "name",
-            "introduction",
-            "conclusion",
-            "author",
-            "image_background_url",
-            "questions",
-            "tags",
-            "question_count",
-            "questions_categories_list",
-            "questions_tags_list",
-            "questions_authors_list",
-            "difficulty_average",
-            "created",
-        ]
+        fields = QUIZ_FIELDS
 
 
 class QuizFullSerializer(serializers.ModelSerializer):
@@ -187,22 +207,7 @@ class QuizFullSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Quiz
-        fields = [
-            "id",
-            "name",
-            "introduction",
-            "conclusion",
-            "author",
-            "image_background_url",
-            "questions",
-            "tags",
-            "question_count",
-            "questions_categories_list",
-            "questions_tags_list",
-            "questions_authors_list",
-            "difficulty_average",
-            "created",
-        ]
+        fields = QUIZ_FIELDS
 
 
 """

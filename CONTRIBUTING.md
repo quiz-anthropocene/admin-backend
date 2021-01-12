@@ -235,6 +235,25 @@ Réinitialiser les stats d'une question
 python manage.py reset_question_stats <question_id>
 ```
 
+Réinitialiser complètement la base de donnée
+```
+python manage.py reset_db // django-extensions
+python manage.py migrate
+python manage.py init_db
+```
+
+Queries M2M
+```
+q1 = Quiz.objects.first()
+
+q1.questions.all()
+q1.quizquestion_set.all()
+
+q1.relationships.all()
+q1.from_quizs.all()
+q1.to_quizs.all()
+```
+
 #### Frontend
 
 Lancer le Frontend "en mode production"

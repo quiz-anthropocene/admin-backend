@@ -31,6 +31,7 @@ from api.serializers import (
     CategorySerializer,
     TagSerializer,
     QuizSerializer,
+    QuizWithQuestionOrderSerializer,
     QuizFullSerializer,
     QuestionAggStatSerializer,
     QuestionAnswerEventSerializer,
@@ -303,6 +304,8 @@ def quiz_list(request):
 
     if request.GET.get("full"):
         serializer = QuizFullSerializer(quizzes, many=True)
+    elif request.GET.get("question_order"):
+        serializer = QuizWithQuestionOrderSerializer(quizzes, many=True)
     else:
         serializer = QuizSerializer(quizzes, many=True)
 
