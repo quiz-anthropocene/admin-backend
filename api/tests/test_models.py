@@ -153,6 +153,26 @@ class QuizModelTest(TestCase):
         self.assertEqual(self.quiz_1.like_count_agg, 0)
         self.assertEqual(self.quiz_1.dislike_count_agg, 1)
 
+    def test_quiz_questions_uniqueness(self):
+        # try to add the same question to the quiz
+        self.assertRaises(
+            ValidationError,
+            QuizQuestion.objects.create,
+            quiz=self.quiz_1,
+            question=self.question_1,
+        )
+
+    def test_quiz_question_order_uniqueness_on_create(self):
+        self.question_validated = QuestionFactory(answer_correct="a")
+        # try to add a new question with an existing order to the quiz
+        self.assertRaises(
+            ValidationError,
+            QuizQuestion.objects.create,
+            quiz=self.quiz_1,
+            question=self.question_validated,
+            order=1,
+        )
+
     def test_published_quiz_must_have_at_least_one_question(self):
         self.quiz_not_published = QuizFactory(name="quiz not published")
         self.quiz_not_published.publish = True

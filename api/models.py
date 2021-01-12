@@ -842,6 +842,10 @@ class QuizQuestion(models.Model):
     updated = models.DateField(auto_now=True)
 
     class Meta:
+        unique_together = [
+            ["quiz", "question"],
+            # ["quiz", "order"],  # empêche de réordonner simplement les questions
+        ]
         ordering = ["quiz_id", "order"]
 
     def __str__(self):
@@ -852,6 +856,17 @@ class QuizQuestion(models.Model):
         return super(QuizQuestion, self).save(*args, **kwargs)
 
     def clean(self):
+        """
+        Rules on QuizQuestion
+        - cannot add a new question with an existing order
+        - if the order is 0 or None, increment from the biggest existing value
+        """
+        if not self.id:
+            if self.order:
+                if QuizQuestion.objects.filter(
+                    quiz=self.quiz, order=self.order
+                ).exists():
+                    raise ValidationError({"order": "la valeur existe déjà"})
         if not self.order:  # 0 or None
             last_quiz_question = QuizQuestion.objects.filter(quiz=self.quiz).last()
             self.order = (last_quiz_question.order + 1) if last_quiz_question else 1
