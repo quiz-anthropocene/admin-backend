@@ -17588,7 +17588,7 @@
   answer_option_a: 5,000 ans, à l’arrivée du dingo sur le sous-continent
   answer_option_b: 40,000 ans, à la disparition de la mégafaune d’Australie
   answer_option_c: 70,000 ans, au débarquement des humains en Australie
-  answer_option_d: 300,000 ans, depuis que les humains ont la maîtrise du feu
+  answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: 'Après un choc temporaire, les écosystèmes s’adaptent à un brûlis
@@ -21786,14 +21786,33 @@
   hint: Un train peut en cacher un autre
   type: QCM
   category: 3
-  difficulty: 2
+  difficulty: 3
   answer_option_a: 0.5 %
   answer_option_b: 3 %
   answer_option_c: 6 %
   answer_option_d: 12 %
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: e
+  answer_explanation: 'La part du CO2 seul est de 2.7%,
+
+    Elle est loin d’être représentative de l’impact majeur des vols sur le Réchauffement
+    Climatique RC.
+
+    Avez-vous vu ces trainées de condensation qui apparaissent entre 8000 et 13000m
+    ?
+
+    Ces trainées génèrent des effets dit "Non CO2" qui amplifient les effets du CO2
+    seul sur le RC.
+
+    Au total l''impact réel sur le RC est :
+
+    CO2e = 3 x CO2.
+
+    Cad que l''impact de l''aviation sur le RC, n''est pas de 2.5 à 3%
+
+    mais 3 fois plus important
+
+    soit 7.5 à 9%'
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_image_url: ''
@@ -21814,7 +21833,7 @@
   hint: Un train peu en cacher un autre
   type: QCM
   category: 1
-  difficulty: 2
+  difficulty: 4
   answer_option_a: 2 %
   answer_option_b: 5%
   answer_option_c: 9 %
@@ -21874,7 +21893,7 @@
   hint: 'MTOW : Max Take Off Weight'
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 3
   answer_option_a: '50'
   answer_option_b: '200'
   answer_option_c: '550'
@@ -21900,10 +21919,11 @@
   - 218
 - id: 703
   text: Quel est le poids du carburant d'un A380 au décollage ? Tonnes
-  hint: Total Fuel
+  hint: Quelques citernes que les aéroports voudraient bien faire disparaitre des
+    yeux des voyageurs
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 3
   answer_option_a: '40'
   answer_option_b: '240'
   answer_option_c: '540'
@@ -21935,7 +21955,7 @@
   hint: à 100 kg le passager
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 3
   answer_option_a: '20'
   answer_option_b: '30'
   answer_option_c: '40'
@@ -21968,7 +21988,7 @@
   hint: à 100 kg le passager
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 3
   answer_option_a: 2%
   answer_option_b: 5%
   answer_option_c: 8%
@@ -21994,10 +22014,11 @@
   - 218
 - id: 706
   text: Quel est le poids moyen relatif du kérosène / poids total décollage ? %
-  hint: Total Fuel
+  hint: Quelques citernes que les aéroports voudraient bien faire disparaitre des
+    yeux des voyageurs
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 3
   answer_option_a: 5%
   answer_option_b: 20%
   answer_option_c: 30%
@@ -22026,7 +22047,7 @@
   hint: 'OEW : Operating Empty Weight'
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 3
   answer_option_a: 40%
   answer_option_b: 50%
   answer_option_c: 60%
@@ -22055,7 +22076,7 @@
   hint: Et encore sans compter les effets hors CO2.
   type: QCM
   category: 3
-  difficulty: 2
+  difficulty: 3
   answer_option_a: '1'
   answer_option_b: '2'
   answer_option_c: '6'
@@ -22138,9 +22159,9 @@
   - 218
 - id: 710
   text: Quelle était la croissance annuelle du TA en 2019 ?
-  hint: ''
+  hint: C'est plus qu'à la banque...
   type: QCM
-  category: 5
+  category: 2
   difficulty: 2
   answer_option_a: 0.5 % par an
   answer_option_b: 4.3 %
@@ -22179,10 +22200,10 @@
 - id: 711
   text: Quel est le nombre d'avions commerciaux dans le monde en 2019 ? Alors imaginez
     en 2038...
-  hint: La croissance passée augure t-elle encore celle de demain ?
+  hint: La croissance passée augure-t-elle encore celle de demain ?
   type: QCM
-  category: 5
-  difficulty: 2
+  category: 2
+  difficulty: 3
   answer_option_a: '24000'
   answer_option_b: '35000'
   answer_option_c: '50000'
@@ -22214,8 +22235,8 @@
   text: Quel est le nombre d'aéroports dans le monde en 2019 ?
   hint: Et pas tous  saturés
   type: QCM
-  category: 5
-  difficulty: 2
+  category: 2
+  difficulty: 3
   answer_option_a: '621'
   answer_option_b: '998'
   answer_option_c: '3500'
@@ -22240,10 +22261,10 @@
   - 218
 - id: 713
   text: Quel est le trafic de Paris CDG 2019 ? Millions de passagers?
-  hint: Comme les chasseurs
+  hint: Toujours plus
   type: QCM
-  category: 5
-  difficulty: 2
+  category: 2
+  difficulty: 3
   answer_option_a: '10'
   answer_option_b: '20'
   answer_option_c: '40'
@@ -22268,19 +22289,23 @@
   - 217
   - 218
 - id: 714
-  text: Quel est le taux de croissance annuelle de l'aviation Pré-COVID ? %
+  text: Quel est le nombre de vols commerciaux dans le monde en 2018 ? Millions
   hint: Pour le TA, le terrain de jeux est sans limites
   type: QCM
-  category: 5
+  category: 2
   difficulty: 2
-  answer_option_a: 1%
-  answer_option_b: 4%
-  answer_option_c: 7%
-  answer_option_d: 12%
+  answer_option_a: '6'
+  answer_option_b: '12'
+  answer_option_c: '26'
+  answer_option_d: '38'
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: '38 millions de vols par jour,
+
+    c’est presque 110 000 vols commerciaux par jours en moyenne,
+
+    avec des pointes en juin à 230 000 vols.'
+  answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -22296,19 +22321,19 @@
   - 217
   - 218
 - id: 715
-  text: Quelle étaient les perspectives du trafic aérien pour 2036 ?
+  text: Quel est le nombre de Cies Aériennes dans le monde en 2018 ?
   hint: Pour le TA, le terrain de jeux est sans limites
   type: QCM
-  category: 5
+  category: 2
   difficulty: 2
-  answer_option_a: '24000'
-  answer_option_b: '35000'
-  answer_option_c: '50000'
-  answer_option_d: 12%
+  answer_option_a: '200'
+  answer_option_b: '650'
+  answer_option_c: '1300'
+  answer_option_d: '5100'
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: 1300 compagnies, c'est 6 compagnies par pays.
+  answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -22325,7 +22350,7 @@
   - 218
 - id: 716
   text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  hint: ''
   type: QCM
   category: 5
   difficulty: 2
@@ -22352,6 +22377,167 @@
   - 217
   - 218
 - id: 717
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 718
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 719
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 720
+  text: Quelle quantité d'énergie y a t-il dans un litre d'essence, kérosène...  en
+    kWh ?
+  hint: On n'imagine pas les services pour pas très cher.
+  type: QCM
+  category: 5
+  difficulty: 3
+  answer_option_a: '2'
+  answer_option_b: '10'
+  answer_option_c: '30'
+  answer_option_d: '100'
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: 'La réponse est 10 kWh / litre
+
+    La densité énergétique de kérosène, essence ou fuel est environ de :
+
+    10 kWh / litre soit environ 12.5 kWh / kg, ou
+
+    36 MJ / litre soit environ 45 MJ /kg'
+  answer_accessible_url: https://fr.wikipedia.org/wiki/Densit%C3%A9_massique_d%27%C3%A9nergie
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 721
+  text: Quelle quantité d'énergie dépense un sportif de haut niveau chaque jour en
+    kWh ?
+  hint: Vous allez être déçu ..
+  type: QCM
+  category: 5
+  difficulty: 3
+  answer_option_a: '0.5'
+  answer_option_b: '5'
+  answer_option_c: '25'
+  answer_option_d: '50'
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: 'Et oui seulement 0.5 kWh.
+
+    Cad que 1 litre de kérosène ou essence contient 20 fois plus d’énergie.
+
+    90 kg (avec sac à dos) x 9.81 x 2000m de dénivelé / 3600 000 = 0.5 kWh
+
+    1 kWh = 3600 000 Joule
+
+    Il va de soi que dans la vie courante notre activité physique est bien moindre
+
+    et plus proche de 0.1 kWh par jour.
+
+    Cad que 1 litre de kérosène ou essence contient 100 fois plus d’énergie que ce
+    que vous dépensez si vous n’êtes pas un grand sportif.'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 722
   text: Quel est le nombre d'hélicoptère dans le Monde en 2016 ?
   hint: Similaire aux avions
   type: QCM
@@ -22383,12 +22569,12 @@
   - 33
   - 217
   - 218
-- id: 718
+- id: 723
   text: 'Hélicoptère DRAGON : Quelle consommation ? litres / km'
   hint: Juste un peu moins que les hommes volants
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 3
   answer_option_a: '1.8 '
   answer_option_b: '3.2'
   answer_option_c: '5.5'
@@ -22415,7 +22601,7 @@
   - 33
   - 217
   - 218
-- id: 719
+- id: 724
   text: 'Homme volant : Quelle quantité de carburant Frankie Zapata à utilisé pour
     traverser la Manche ? litres'
   hint: Avec ravitaillement à mi-parcours
@@ -22454,12 +22640,45 @@
   - 33
   - 217
   - 218
-- id: 720
+- id: 725
+  text: F. Zapata a dépensé combien de fois plus d’énergie que ce qu’il dépense comme
+    grand sportif ?
+  hint: Ah bon... !
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '20'
+  answer_option_b: '200'
+  answer_option_c: '800'
+  answer_option_d: '1600'
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: '80 lit x 10kwh/ l = 800 kWh vs 0.5 kWh (Sportif haut niveau)
+
+    => 1600 fois plus (ou 1600 jrs cad 4.4 années)
+
+    Et pour une personne lambda ce serait 5 fois plus.'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 726
   text: Quel est le nombre maximum de passager jamais transporté  dans un seul et
     même avion ?
   hint: Mission
   type: QCM
-  category: 5
+  category: 6
   difficulty: 2
   answer_option_a: '600'
   answer_option_b: '952'
@@ -22497,40 +22716,12 @@
   - 33
   - 217
   - 218
-- id: 721
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
-  type: QCM
-  category: 5
-  difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
-  answer_extra_info: ''
-  author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
-  added: 2021-01-05
-  created: 2021-01-06
-  updated: 2021-01-06
-  tags:
-  - 33
-  - 217
-  - 218
-- id: 722
+- id: 727
   text: L'effet rebond est de partout ?
   hint: Souvent considéré comme un petit effet pervers
   type: VF
   category: 5
-  difficulty: 2
+  difficulty: 3
   answer_option_a: Oui
   answer_option_b: Non
   answer_option_c: ''
@@ -22569,12 +22760,12 @@
   - 33
   - 217
   - 218
-- id: 723
+- id: 728
   text: Pouvez-vous citez 5 exemples d'effets rebond ?
   hint: Vous allez bien en trouver 3 ?
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 3
   answer_option_a: Oui
   answer_option_b: Non
   answer_option_c: ''
@@ -22636,146 +22827,6 @@
   - 33
   - 217
   - 218
-- id: 724
-  text: Copy of à venir
-  hint: ''
-  type: QCM
-  category: 5
-  difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
-  answer_extra_info: ''
-  author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
-  added: 2021-01-05
-  created: 2021-01-06
-  updated: 2021-01-06
-  tags:
-  - 33
-  - 217
-  - 218
-- id: 725
-  text: Copy of à venir
-  hint: ''
-  type: QCM
-  category: 5
-  difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
-  answer_extra_info: ''
-  author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
-  added: 2021-01-05
-  created: 2021-01-06
-  updated: 2021-01-06
-  tags:
-  - 33
-  - 217
-  - 218
-- id: 726
-  text: Copy of à venir
-  hint: ''
-  type: QCM
-  category: 5
-  difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
-  answer_extra_info: ''
-  author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
-  added: 2021-01-05
-  created: 2021-01-06
-  updated: 2021-01-06
-  tags:
-  - 33
-  - 217
-  - 218
-- id: 727
-  text: Copy of à venir
-  hint: ''
-  type: QCM
-  category: 5
-  difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
-  answer_extra_info: ''
-  author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
-  added: 2021-01-05
-  created: 2021-01-06
-  updated: 2021-01-06
-  tags:
-  - 33
-  - 217
-  - 218
-- id: 728
-  text: Copy of à venir
-  hint: ''
-  type: QCM
-  category: 5
-  difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
-  answer_extra_info: ''
-  author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
-  added: 2021-01-05
-  created: 2021-01-06
-  updated: 2021-01-06
-  tags:
-  - 33
-  - 217
-  - 218
 - id: 729
   text: Copy of à venir
   hint: ''
@@ -22808,7 +22859,7 @@
   text: Le transport Aérien = TA paye trop de taxe ?
   hint: A votre avis ?
   type: QCM
-  category: 5
+  category: 2
   difficulty: 2
   answer_option_a: Oui
   answer_option_b: Non
@@ -22851,7 +22902,7 @@
   text: Quel est le taux de TVA sur les vols ?
   hint: Question piège
   type: QCM-RM
-  category: 5
+  category: 2
   difficulty: 2
   answer_option_a: 0%
   answer_option_b: 5%
@@ -22883,7 +22934,7 @@
   text: Connaissez-vous les autres taxes en vigueur en France ?
   hint: Pourtant vous la payez bien
   type: QCM
-  category: 5
+  category: 2
   difficulty: 2
   answer_option_a: Oui
   answer_option_b: Non
@@ -22914,7 +22965,7 @@
   text: Quel est le montant de la TICPE à la pompe en France ?
   hint: Vous n’imaginez pas
   type: QCM
-  category: 5
+  category: 2
   difficulty: 2
   answer_option_a: 1%
   answer_option_b: 10%
@@ -22948,7 +22999,7 @@
   text: Quel est la part de coût du kérosène dans le prix d'un billet d'avion ?
   hint: Pas assez essentiel
   type: QCM
-  category: 5
+  category: 2
   difficulty: 2
   answer_option_a: 5%
   answer_option_b: 10%
@@ -23118,10 +23169,10 @@
 - id: 740
   text: Connaissez-vous le nom du programme de réduction des émissions de transport
     AÉRIEN -- TA ?
-  hint: ''
+  hint: Et je ne vous mène pas en bateau
   type: QCM
-  category: 5
-  difficulty: 2
+  category: 3
+  difficulty: 4
   answer_option_a: Blague
   answer_option_b: Canular
   answer_option_c: Corsia
@@ -23593,18 +23644,18 @@
   - 217
   - 218
 - id: 756
-  text: Copy of à venir
-  hint: ''
+  text: Part des émissions de l’aviation privée dans le total de l’aviation ?
+  hint: Plutôt en hausse
   type: QCM
   category: 2
   difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: 4%
+  answer_option_b: 5%
+  answer_option_c: 6%
+  answer_option_d: 8%
+  answer_correct: a
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: 4% en 2018 au niveau mondial,
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_image_url: ''
