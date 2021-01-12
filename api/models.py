@@ -585,6 +585,9 @@ class QuizQuerySet(models.QuerySet):
     def published(self):
         return self.filter(publish=True)
 
+    def spotlighted(self):
+        return self.filter(spotlight=True)
+
     def for_author(self, author):
         return self.filter(author=author)
 
@@ -617,6 +620,7 @@ class Quiz(models.Model):
     publish = models.BooleanField(
         default=False, help_text="Le quiz est prêt à être publié"
     )
+    spotlight = models.BooleanField(default=False, help_text="Le quiz est mis en avant")
     relationships = models.ManyToManyField(
         "self",
         through="QuizRelationship",
