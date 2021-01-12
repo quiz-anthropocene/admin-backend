@@ -18,6 +18,7 @@ from solo.admin import SingletonModelAdmin
 from import_export import fields, resources
 from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
 from import_export.admin import ImportMixin, DEFAULT_FORMATS
+from fieldsets_with_inlines import FieldsetsInlineMixin
 
 # from django.core.management import call_command
 
@@ -413,12 +414,14 @@ class TagAdmin(ExportMixin, admin.ModelAdmin):
 
 class QuizQuestionInline(admin.StackedInline):
     model = QuizQuestion
+    autocomplete_fields = ["question"]
     extra = 0
 
 
 class QuizRelationshipFromInline(admin.StackedInline):  # TabularInline
     model = QuizRelationship
     fk_name = "from_quiz"
+    autocomplete_fields = ["to_quiz"]
     extra = 0
 
     def formfield_for_foreignkey(self, db_field, request=None, **kwargs):
@@ -467,7 +470,7 @@ class QuizRelationshipToInline(admin.StackedInline):  # TabularInline
         return False
 
 
-class QuizAdmin(ExportMixin, admin.ModelAdmin):
+class QuizAdmin(ExportMixin, FieldsetsInlineMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "name",
@@ -490,7 +493,7 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
     ordering = ("-id",)
     filter_vertical = ("questions",)
     filter_horizontal = ("tags",)
-    inlines = [QuizQuestionInline, QuizRelationshipFromInline, QuizRelationshipToInline]
+    # inlines = [QuizQuestionInline, QuizRelationshipFromInline, QuizRelationshipToInline]
     readonly_fields = (
         "question_count",
         "difficulty_average",
@@ -511,13 +514,14 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
         "export_as_yaml",
         "export_all_quiz_as_yaml",
     ]
-    fieldsets = [
+    fieldsets_with_inlines = [
         (
             "Infos de base",
             {"fields": ("name", "author", "introduction", "conclusion",)},
         ),
+        QuizQuestionInline,
         (
-            "Les questions",
+            "Recap des questions",
             {
                 "fields": (
                     "question_count",
@@ -537,6 +541,8 @@ class QuizAdmin(ExportMixin, admin.ModelAdmin):
             "Prêt à être publié ? Toutes les questions doivent être au statut 'validé' !",
             {"fields": ("publish", "spotlight",)},
         ),
+        QuizRelationshipFromInline,
+        QuizRelationshipToInline,
         (
             "Stats",
             {

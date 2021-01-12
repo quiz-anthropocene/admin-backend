@@ -44,11 +44,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "corsheaders",
-    "rest_framework",
-    "django_extensions",
-    "import_export",
-    "ckeditor",
+    "corsheaders",  # django-cors-headers
+    "rest_framework",  # djangorestframework
+    "django_extensions",  # django-extensions
+    "import_export",  # django-import-export
+    "ckeditor",  # django-ckeditor
+    "fieldsets_with_inlines",  # django-fieldsets-with-inlines
     "solo",  # django-solo
     "api",
 ]
