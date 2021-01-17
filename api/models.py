@@ -600,10 +600,7 @@ class Quiz(models.Model):
         help_text="Une conclusion du quiz et des pistes pour aller plus loin",
     )
     questions = models.ManyToManyField(
-        Question,
-        through="QuizQuestion",
-        # related_name="quizzes",
-        help_text="Les questions du quiz",
+        Question, through="QuizQuestion", help_text="Les questions du quiz",
     )
     difficulty_average = models.FloatField(
         default=0, help_text="La difficulté moyenne des questions"  # readonly

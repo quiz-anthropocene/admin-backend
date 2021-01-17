@@ -7,6 +7,7 @@ from api.models import (
     QuestionAggStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
+    Quiz,
     QuizQuestion,
     QuizRelationship,
     QuizAnswerEvent,
@@ -152,6 +153,20 @@ class QuizModelTest(TestCase):
     def test_feedback_count(self):
         self.assertEqual(self.quiz_1.like_count_agg, 0)
         self.assertEqual(self.quiz_1.dislike_count_agg, 1)
+
+    def test_quiz_questions_querying(self):
+        # question --> quiz
+        self.assertEqual(self.question_1.quiz_set.count(), 1)
+        self.assertEqual(type(self.question_1.quiz_set.first()), Quiz)
+        self.assertEqual(self.question_1.quizquestion_set.count(), 1)
+        self.assertEqual(type(self.question_1.quizquestion_set.first()), QuizQuestion)
+        self.assertRaises(AttributeError, getattr, self.question_1, "quizzes")
+        # quiz --> question
+        self.assertEqual(self.quiz_1.questions.count(), 1)
+        self.assertEqual(type(self.quiz_1.questions.first()), Question)
+        self.assertEqual(self.quiz_1.quizquestion_set.count(), 1)
+        self.assertEqual(type(self.quiz_1.quizquestion_set.first()), QuizQuestion)
+        self.assertRaises(AttributeError, getattr, self.quiz_1, "question_set")
 
     def test_quiz_questions_uniqueness(self):
         # try to add the same question to the quiz
