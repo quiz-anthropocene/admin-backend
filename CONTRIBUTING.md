@@ -244,14 +244,19 @@ python manage.py init_db
 
 Queries M2M
 ```
-q1 = Quiz.objects.first()
+qz1 = Quiz.objects.first()
 
-q1.questions.all()
+qz1.questions.all()
+qz1.quizquestion_set.all()
+
+qz1.relationships.all()
+qz1.from_quizs.all()
+qz1.to_quizs.all()
+
+q = Question.objects.first()
+
+q.quiz_set.all()
 q1.quizquestion_set.all()
-
-q1.relationships.all()
-q1.from_quizs.all()
-q1.to_quizs.all()
 ```
 
 #### Frontend
