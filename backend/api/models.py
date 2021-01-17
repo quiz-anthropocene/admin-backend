@@ -328,7 +328,7 @@ class Question(models.Model):
 
     @property
     def quizs_list(self):
-        return list(self.quizzes.values_list("name", flat=True))
+        return list(self.quiz_set.values_list("name", flat=True))
 
     @property
     def quizs_list_string(self):
