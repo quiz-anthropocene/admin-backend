@@ -603,7 +603,7 @@
   answer_option_d: 50%
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: En France, cette part monte à 40%.
+  answer_explanation: En France, cette part monte à 25%.
   answer_accessible_url: https://www.iea.org/geco/
   answer_scientific_url: ''
   answer_image_url: http://stockage.univ-valenciennes.fr/EcoPEM/BoiteB/res/I_a.png
@@ -611,7 +611,7 @@
   answer_extra_info: ''
   author: Cyril Retourné
   validator: Raphael Odini
-  validation_status: Validée
+  validation_status: A valider
   added: 2020-03-10
   created: 2020-03-10
   updated: 2020-09-28
@@ -4819,16 +4819,16 @@
   - 59
 - id: 155
   text: Le détroit d’Ormuz, à l'entrée du Golfe Persique, est la voie où transitent
-    le plus de tankers pétroliers au monde. Quelle quantité de pétrole y transite
+    le plus de tankers pétroliers au monde. Combien de barils de pétrole y transitent
     chaque jour ?
   hint: ''
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: 19 000 barils/jour
-  answer_option_b: 190 000 barils/jour
-  answer_option_c: 1,9 millions barils/jour
-  answer_option_d: 19 millions barils/jour
+  answer_option_a: 20,000 barils/jour
+  answer_option_b: 200,000 barils/jour
+  answer_option_c: 2 millions de barils/jour
+  answer_option_d: 20 millions barils/jour
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: Le détroit d’Ormuz voit passer chaque jour 18,5 millions de
@@ -16766,8 +16766,8 @@
   - 1
   - 100
 - id: 545
-  text: Les premiers agriculteurs se sont-ils retrouvés en meilleure santé que les
-    chasseurs-cueilleurs ?
+  text: Les premiers agriculteurs étaient-ils en meilleure santé que les chasseurs-cueilleurs
+    ?
   hint: ''
   type: VF
   category: 8
@@ -16781,8 +16781,8 @@
   answer_explanation: Les premiers agriculteurs travaillaient plus, ils avaient une
     alimentation moins diversifiée et étaient plus exposés aux pathogènes que les
     chasseurs-cueilleurs.
-  answer_accessible_url: https://www.partage-le.com/2016/09/02/lagriculture-ou-la-pire-erreur-de-lhistoire-de-lhumanite-par-jared-diamond-clive-dennis/
-  answer_scientific_url: ''
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/545.mp3
+  answer_scientific_url: https://www.partage-le.com/2016/09/02/lagriculture-ou-la-pire-erreur-de-lhistoire-de-lhumanite-par-jared-diamond-clive-dennis/
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
@@ -16810,7 +16810,7 @@
   has_ordered_answers: false
   answer_explanation: Cette qualité aurait pu aider en permettant la pratique de la
     chasse du gibier jusqu'à l’épuisement.
-  answer_accessible_url: https://anthropogoniques.com/accueil/adaptations-a-la-course-dendurance/
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/546.mp3
   answer_scientific_url: https://1000ideespourlacorse.files.wordpress.com/2018/10/human_running_adaptations.png?w=840
   answer_image_url: https://lasueur.com/wp-content/uploads/2017/05/Persistence-Hunting.png
   answer_image_explanation: ''
@@ -16832,17 +16832,17 @@
   category: 6
   difficulty: 2
   answer_option_a: 200 ans
-  answer_option_b: 4 000 ans
-  answer_option_c: 300 000 ans
+  answer_option_b: 4,000 ans
+  answer_option_c: 300,000 ans
   answer_option_d: 3 millions d'années
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: Le changement de régime alimentaire de nos ancêtres, qui consomment
-    de plus en plus de viande, a réduit progressivement la diversité animale autour
-    des peuplements du genre Homo.
-  answer_accessible_url: ''
+    de plus en plus de viande, a  pu réduire progressivement la diversité animale
+    autour des peuplements du genre Homo.
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/547.mp3
   answer_scientific_url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0057944
-  answer_image_url: ''
+  answer_image_url: https://c8.alamy.com/compfr/fkcjp6/homo-erectus-plaque-livre-britannique-fkcjp6.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Vincent Mignerot
@@ -16862,14 +16862,14 @@
   difficulty: 2
   answer_option_a: 70 ans
   answer_option_b: 200 ans
-  answer_option_c: 3 000 ans
-  answer_option_d: 100 000 ans
+  answer_option_c: 3,000 ans
+  answer_option_d: 100,000 ans
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: Les chasseurs-cueilleurs, les agriculteurs et les éleveurs ont
-    transformé l'environnement planétaire de façon globale à partir de 3000 ans avant
+    transformé l'environnement planétaire de façon globale à partir de 3,000 ans avant
     aujourd'hui.
-  answer_accessible_url: ''
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/548.mp3
   answer_scientific_url: https://science.sciencemag.org/content/365/6456/897
   answer_image_url: https://science.sciencemag.org/content/sci/365/6456/897/F5.large.jpg
   answer_image_explanation: ''
@@ -16899,7 +16899,7 @@
     Homo remonte à près de deux millions d'années. Les vitesses élevées des projectiles
     sont possibles grâce à une combinaison de stockage d'énergie élastique au niveau
     de l'épaule et par un transfert efficace de l'énergie cinétique.
-  answer_accessible_url: ''
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/549.mp3
   answer_scientific_url: https://www.nature.com/articles/nature12267
   answer_image_url: https://4.bp.blogspot.com/-UelFVcR9bC8/UcxQ9dYteJI/AAAAAAAAwOk/tYCN2i4iBgU/s400/human-evolution-throwing_02.jpg
   answer_image_explanation: ''
@@ -16931,8 +16931,8 @@
     Un système digestif volumineux étant plus adapté à la consommation de végétaux,
     la diminution de ses dimensions proviendrait d'une augmentation de consommation
     de produits carnés.
-  answer_accessible_url: https://anthropogoniques.com/affirmations-evolution-de-lalimentation/
-  answer_scientific_url: ''
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/550.mp3
+  answer_scientific_url: https://anthropogoniques.com/affirmations-evolution-de-lalimentation/
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/550.png
   answer_image_explanation: Schéma de systèmes digestifs de différents mammifères
   answer_extra_info: ''
@@ -16962,8 +16962,8 @@
     kms à vol d'oiseau. Des liens commerciaux et culturels existaient entre des communautés
     vivant sur des territoires très éloignés les uns des autres. Plus près de nous,
     à l'âge de bronze, ce bronze était fabriqué avec de l'étain d'Anatolie et du cuivre
-    d'Espagne
-  answer_accessible_url: ''
+    d'Espagne.
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/551.mp3
   answer_scientific_url: https://www.pourlascience.fr/sd/prehistoire/les-reseaux-sociaux-a-lepoque-gravettienne-6879.php
   answer_image_url: https://www.larousse.fr/encyclopedie/data/images/1011156-LEurope_pr%c3%a9historique.jpg
   answer_image_explanation: 'L''Europe préhistorique. Crédit : Larousse'
@@ -16994,7 +16994,7 @@
     30 à 40 ans, mais l''espérance de vie maximale possible est sensiblement la même
     que dans les sociétés industrielles : 70 à 80 ans. La différence provient essentiellement
     de la plus importante mortalité infantile chez les chasseurs-cueilleurs.'
-  answer_accessible_url: ''
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/552.mp3
   answer_scientific_url: https://advances.sciencemag.org/content/6/26/eaax9070
   answer_image_url: https://qph.fs.quoracdn.net/main-qimg-55abbec76c7cff5a45712ada8e3ed685
   answer_image_explanation: ''
@@ -17024,7 +17024,7 @@
     ne rend pas compte du volume cérébral des homininés. Le nombre de neurones dans
     le cerveau de l'homininé varie beaucoup plus en fonction de l'efficacité de la
     recherche de nourriture que de la masse corporelle.
-  answer_accessible_url: ''
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/553.mp3
   answer_scientific_url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4842772/
   answer_image_url: http://www.gambassa.com/gambassafiles/images/images/2078/homo_erectus_harnessing_fire_v1.gif
   answer_image_explanation: ''
@@ -17081,11 +17081,11 @@
   answer_option_d: Un virus
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: Les raisons possibles de la supériorité de l'Homo sapiens pour
-    l'acquisition des ressources auraient pu être associées à de meilleures techniques
-    de chasse, à une résistance plus forte aux agents pathogènes ou à un niveau de
-    fécondité plus élevé.
-  answer_accessible_url: ''
+  answer_explanation: Les raisons possibles de la plus grande performance de l'Homo
+    sapiens pour l'acquisition des ressources auraient pu être associées à de meilleures
+    techniques de chasse, à une résistance plus forte aux agents pathogènes ou à un
+    niveau de fécondité plus élevé.
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/555.mp3
   answer_scientific_url: https://phys.org/news/2020-05-supercomputer-simulations-reveal-neanderthal-extinction.html?fbclid=IwAR0YH-YV7fSdA6DEh6OoMqJp-bVaSr6xb0GaEM42zCagXZxXh97iNpVt3Ys
   answer_image_url: https://upload.wikimedia.org/wikipedia/commons/8/88/Sapiens_neanderthal_comparison_en_blackbackground.png
   answer_image_explanation: Crânes d'Homo sapiens (à gauche) et de Néandertalien (à
@@ -17656,15 +17656,15 @@
   category: 6
   difficulty: 3
   answer_option_a: Depuis l'apparition de l'agriculture (-10 000 ans)
-  answer_option_b: Depuis que le genre Homo maîtrise le feu (au moins 450 000 ans)
-  answer_option_c: Depuis au moins le paléolithique supérieur (-45 000 à -12 000 ans)
+  answer_option_b: Depuis que le genre Homo maîtrise le feu (au moins 450,000 ans)
+  answer_option_c: Depuis au moins le paléolithique supérieur (-45,000 à -12,000 ans)
   answer_option_d: Depuis l'invention du moulin pour produire de la farine
   answer_correct: c
   has_ordered_answers: false
   answer_explanation: La transformation des aliments végétaux, et peut-être la production
     de farine semble avoir été une pratique courante, répandue dans toute l'Europe
-    il y a au moins 30 000 ans.
-  answer_accessible_url: ''
+    il y a au moins 30,000 ans.
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/574.mp3
   answer_scientific_url: https://www.pnas.org/content/107/44/18815
   answer_image_url: https://qph.fs.quoracdn.net/main-qimg-8fa02c6af750c8cfe1540a91d9d7aff5
   answer_image_explanation: ''
@@ -17696,9 +17696,9 @@
   answer_explanation: Selon certaines études, la taille d'une société serait liée
     à la nature de ses divinités. Plus une civilisation serait nombreuse et structurée,
     plus elle vénèrerait un Dieu puissant, moralisateur et vengeur.
-  answer_accessible_url: ''
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/575.mp3
   answer_scientific_url: https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/cultural-evolution-of-prosocial-religions/01B053B0294890F8CFACFB808FE2A0EF#
-  answer_image_url: https://ibb.co/cT1nv9V
+  answer_image_url: https://i.ibb.co/2Ky46rH/Lien-foi-soci-t.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Vincent Mignerot
@@ -19086,8 +19086,8 @@
   tags:
   - 13
 - id: 620
-  text: Une cimenterie qui fonctionne avec une énergie zéro carbone émet-elle encore
-    du CO2 ?
+  text: Vrai ou faux ? Une cimenterie qui fonctionne avec une énergie zéro carbone
+    émet encore du CO2.
   hint: ''
   type: VF
   category: 1
@@ -19822,8 +19822,8 @@
   - 17
   - 100
 - id: 642
-  text: Dans le monde, combien y a-t-il de pays qui émettent au total plus de CO2
-    que le seul secteur des transports aux États-Unis ?
+  text: 'Dans le monde, combien y a-t-il de pays qui émettent au total plus de CO2
+    que le seul secteur des transports aux États-Unis ?  '
   hint: ''
   type: QCM
   category: 1
@@ -19835,8 +19835,7 @@
   answer_correct: a
   has_ordered_answers: true
   answer_explanation: Le seul transport routier des États-Unis émet 1,8 milliards
-    de tonnes de CO2 chaque année. Seuls la Chine et l'Inde émettent plus d'émissions
-    au total.
+    de tonnes de CO2 chaque année. Seuls la Chine et l'Inde émettent d'avantage.
   answer_accessible_url: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/309.png
@@ -19844,7 +19843,7 @@
   answer_extra_info: https://twitter.com/laydgeur/status/1284208421739405313
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-07-17
   created: 2020-11-28
   updated: 2020-11-28
@@ -20268,14 +20267,14 @@
   - 39
   - 92
 - id: 657
-  text: Où va la majorité de nos émissions de CO2 ?
+  text: Que devient majoritairement le CO2 émis dans l'atmosphère ?
   hint: ''
   type: QCM
   category: 1
   difficulty: 2
-  answer_option_a: Dans l’atmosphère
-  answer_option_b: Dans les océans
-  answer_option_c: Dans la végétation
+  answer_option_a: Il reste dans l'atmosphère.
+  answer_option_b: Il est dissous dans les océans
+  answer_option_c: Il est absorbé par la végétation (photosynthèse)
   answer_option_d: ''
   answer_correct: a
   has_ordered_answers: false
@@ -20285,7 +20284,9 @@
 
     - 29% sont absorbés par la végétation
 
-    - et 44% restent dans l’atmosphère (et c’est bien emmerdant)'
+    - et 44% restent dans l’atmosphère. Ceci entraine donc une augmentation de sa
+    concentration. Or, comme le CO2 est un gaz à effet de serre, cela a comme conséquence
+    de réchauffer le climat.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/19/files/GCP_CarbonBudget_2019.pdf
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/324.png
@@ -20293,7 +20294,7 @@
   answer_extra_info: https://twitter.com/laydgeur/status/1322285904187314178
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-10-30
   created: 2020-11-28
   updated: 2020-11-28
@@ -21491,7 +21492,7 @@
 
     https://www.automobile-propre.com/la-voiture-electrique-passe-le-cap-des-100-000-immatriculations-en-2020/'
   author: Raphael Odini
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2020-12-23
   created: 2020-12-24
@@ -21813,7 +21814,7 @@
     mais 3 fois plus important
 
     soit 7.5 à 9%'
-  answer_accessible_url: ''
+  answer_accessible_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -23552,16 +23553,17 @@
   - 217
   - 224
 - id: 753
-  text: Quelle est le volume des émissions de l’aviation privée ?
-  hint: ''
+  text: Quelles émissions maxi atteintes par des individus de l’aviation privée ?
+    en tCO2 /an /pers
+  hint: à peine croyable
   type: QCM
   category: 2
   difficulty: 2
-  answer_option_a: '7500'
-  answer_option_b: '30000'
-  answer_option_c: '50000'
-  answer_option_d: '100000'
-  answer_correct: a
+  answer_option_a: '250'
+  answer_option_b: '1000'
+  answer_option_c: '5000'
+  answer_option_d: '7500'
+  answer_correct: d
   has_ordered_answers: false
   answer_explanation: Pas énorme; mais en très forte croissance
   answer_accessible_url: ''
@@ -23756,7 +23758,7 @@
   - 217
   - 218
 - id: 760
-  text: à venir
+  text: Copy of à venir
   hint: ''
   type: QCM
   category: 2
@@ -23776,7 +23778,7 @@
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-01-13
   created: 2021-01-11
   updated: 2021-01-11
   tags:
@@ -23804,9 +23806,1002 @@
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-11
+  added: 2021-01-13
   created: 2021-01-11
   updated: 2021-01-11
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 762
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-11
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 763
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 764
+  text: à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-05
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 765
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 766
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 767
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 768
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 769
+  text: venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 770
+  text: L'hydrogène une énergie d'avenir pour le TA ?
+  hint: Fo pas rêver...!
+  type: VF
+  category: 5
+  difficulty: 1
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: On l'a un peu oublié, mais l'H2 est très difficile à manipuler.
+  answer_accessible_url: https://france3-regions.francetvinfo.fr/occitanie/haute-garonne/toulouse/toulouse-chercheurs-critiquent-airbus-sa-promotion-avion-hydrogene-1878868.html
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 771
+  text: A quantité d’énergie égale, quel volume d’H2 liquide pour 1 litre d’essence
+    ?
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '4'
+  answer_option_b: '7'
+  answer_option_c: '16'
+  answer_option_d: '25'
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 772
+  text: Quel volume d’H2 Gazeux pour 1 litre d’essence ?
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: '4'
+  answer_option_b: '7'
+  answer_option_c: '16'
+  answer_option_d: '25'
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 773
+  text: Efficacité énergétique d’une voiture 100% électrique ?
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: 10%
+  answer_option_b: 30%
+  answer_option_c: 50%
+  answer_option_d: 80%
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 774
+  text: Efficacité énergétique d’une voiture 100% Hydrogène ?
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: 10%
+  answer_option_b: 30%
+  answer_option_c: 50%
+  answer_option_d: 80%
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 775
+  text: Plage d’inflammabilité de l’hydrogène ?
+  hint: Cà fait Boum
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: 4 à 75%
+  answer_option_b: 5.3 à 17%
+  answer_option_c: 1 à 7.6%
+  answer_option_d: 1 à 95%
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: '4 à 75% soit une plage de concentration très large.
+
+    5.3 à 17% pour le méthane CH4
+
+    1 à 7.6% pour les vapeurs d’essence'
+  answer_accessible_url: https://fr.wikipedia.org/wiki/LZ_129_Hindenburg#Travers%C3%A9es_transatlantiques
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 776
+  text: '"La production d''hydrogène se fait à 90% par vaporéformage du méthane, une
+    technique très émettrice en CO2 : quelle à été en 2018 la production mondiale
+    en Millions de tonnes ?'
+  hint: Un certain nombre... pas très loin de votre poids
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: 10 Mnt
+  answer_option_b: 33 Mnt
+  answer_option_c: 70 Mnt
+  answer_option_d: 143 Mnt
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: '70 Mnt d’H2.
+
+    Utilisées principalement pour la production d’engrais et le raffinage du pétrole
+    ‒ a engendré l’émission de 800 millions de tonnes de CO2,
+
+    Un chiffre comparable aux émissions du transport aérien commercial
+
+    (918 millions de tonnes en 2018).'
+  answer_accessible_url: https://france3-regions.francetvinfo.fr/occitanie/haute-garonne/toulouse/toulouse-chercheurs-critiquent-airbus-sa-promotion-avion-hydrogene-1878868.html
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 777
+  text: Si l’aéroport de Toulouse devait fournir de l’hydrogène, de combien d’éoliennes
+    (ou de panneaux solaires) en km² devrait-il disposer pour fournir les 3.8 millions
+    de kWh nécessaires ?
+  hint: C'est ce qu'on appelle un grand excès de vitesse.
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: 20 km²
+  answer_option_b: 80 km²
+  answer_option_c: 145 km²
+  answer_option_d: 190 km²
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: '190 km² pour les éoliennes et 35 km² de panneaux solaires
+
+    "La surface sur laquelle seraient installées les éoliennes représenterait presque
+    deux fois celle de la ville de Toulouse ;
+
+    Les 37 km² de panneaux photovoltaïques, quant à eux, couvriraient la surface combinée
+    des villes de Blagnac et Colomiers et représentent presque 200 fois la surface
+    de la ferme photovoltaïque de l’Oncopole, récemment construite à proximité du
+    centre de Toulouse sur l’ancien site d’AZF.
+
+    Ces calculs traitent d’un aéroport régional, d’où ne décolle presque aucun long-courrier".'
+  answer_accessible_url: https://france3-regions.francetvinfo.fr/occitanie/haute-garonne/toulouse/toulouse-chercheurs-critiquent-airbus-sa-promotion-avion-hydrogene-1878868.html
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-16
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 778
+  text: Si l’aéroport de Paris CDG devait fournir de l’hydrogène, de combien d’éoliennes
+    (ou de panneaux solaires) devrait-il disposer pour fournir les kWh nécessaires
+    ?
+  hint: Je ne peux pas souffler...
+  type: QCM
+  category: 5
+  difficulty: 2
+  answer_option_a: 5000  éoliennes
+  answer_option_b: 14000 éoliennes
+  answer_option_c: 20000 éoliennes
+  answer_option_d: 50000 éoliennes
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: '5000 éoliennes – 14000 éoliennes – 20000 éoliennes – 50000
+    éoliennes
+
+    Les chercheurs ont calculé qu''il faudrait entre
+
+    10 et 18.000 éoliennes, soit l''équivalent d''un département français,
+
+    1 000 km² de panneaux photovoltaïques, ou
+
+    16 réacteurs nucléaires.'
+  answer_accessible_url: https://france3-regions.francetvinfo.fr/occitanie/haute-garonne/toulouse/toulouse-chercheurs-critiquent-airbus-sa-promotion-avion-hydrogene-1878868.html
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-16
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 779
+  text: 'Copy of '
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 780
+  text: Quelle est la part des bio-carburants (SAF – Sustainable Aviation Fuel) dans
+    le TA ?
+  hint: Un indice ? Bof…
+  type: QCM
+  category: 1
+  difficulty: 2
+  answer_option_a: 0.01%
+  answer_option_b: 2%
+  answer_option_c: 12%
+  answer_option_d: 33%
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: '0.01% et oui le TA en parle beaucoup, mais c’est l’Arlésienne,
+
+    Les bio-carburants c’est la fuite en avant,
+
+    Le greenwashing, mais pas pour les loopings.
+
+    On compte 3 générations de bio-fuel :
+
+    1 - Issue de la bio-masse 2020 à 2025
+
+    2 - Issue des déchets : bois, huiles, graisses 2025 à 2035
+
+    3 - Issue de l’électricité « Power to Liquid » > 2035…'
+  answer_accessible_url: https://www.lufthansagroup.com/en/themes/sustainable-aviation-fuel.html
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-13
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 13
+  - 33
+  - 217
+- id: 781
+  text: Quel est le cout relatif des bio-carburants vs fossiles ?
+  hint: Les fossiles à volonté c’est du passé
+  type: QCM
+  category: 1
+  difficulty: 2
+  answer_option_a: 1 x
+  answer_option_b: 3 x
+  answer_option_c: 5 x
+  answer_option_d: 10 x
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: 3x actuellement à partir de la bio-masse (1ere génération),
+    mais cette solution n’est que temporaire car elle entre en concurrence avec les
+    surfaces cultivées et la production alimentaire.
+  answer_accessible_url: https://www.lufthansagroup.com/en/themes/sustainable-aviation-fuel.html
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-16
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 13
+  - 33
+  - 217
+- id: 782
+  text: Copy of Quel volume d’H2 gazeux pour 1 litre d’essence ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-16
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 783
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-16
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 785
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-16
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 786
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-16
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 787
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-16
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 790
+  text: Les 1% plus grand émetteurs de la planète habitent dans 5 pays. Leurs émissions
+    sont toutes au-dessus de  "x" tCO2e / an / cap.
+  hint: Soit plus de 30 fois la moyenne mondiale ah ah
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: '50'
+  answer_option_b: '200'
+  answer_option_c: '500'
+  answer_option_d: '1000'
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: 'Alors que les grands émetteurs vivent dans tous les pays, Chancel
+    et Piketty (2015) identifient les 1% les plus riches des individus les plus riches
+    dans cinq pays comme étant particulièrement pertinents, Avec des émissions par
+    habitant dépassant 200 t de CO2e par an.
+
+    Aux États-Unis, avec 3,16 millions de personnes qui dépassent les 318 t CO2e ;
+
+    Luxembourg (10 000 individus, 287 t CO2e / an) ;
+
+    Singapour (50 000 individus, 251 t CO2e / an);
+
+    Arabie saoudite (290 000 individus, 247 t CO2e / an);
+
+    et au Canada (350000 individus, 204 t CO2e / an).
+
+    En comparaison, les faibles émetteurs de nombreuses régions d''Afrique n''émettent
+    que 0,1 t de CO2e par an (Banque mondiale, 2020a).'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 13
+  - 218
+  - 225
+- id: 791
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 793
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 794
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 795
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 796
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 797
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-17
+  updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 798
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-17
+  updated: 2021-01-17
   tags:
   - 33
   - 217
