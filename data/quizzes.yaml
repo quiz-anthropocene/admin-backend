@@ -24,7 +24,7 @@
   updated: 2020-11-24
   tags: []
 - id: 3
-  name: Le quiz de Vincent Mignerot sur l'anthropologie
+  name: Le quiz de Vincent Mignerot - COMMENTAIRES AUDIO
   introduction: "<p>Vincent Mignerot est essayiste et conférencier. Il développe une\
     \ théorie écologique de l’esprit et se questionne sur la singularité de l'humanité\
     \ dans son contexte évolutif. Ses <a href=\"https://vincent-mignerot.fr/\">travaux\
@@ -33,16 +33,18 @@
     \ qui s’intéresse aux risques d’effondrement de la civilisation thermo-industrielle,\
     \ et du groupe <a href=\"https://www.facebook.com/groups/transition.2030\">Facebook\
     \ Transition 2030</a>, qui compte plus de 30,000 membres.</p>\r\n\r\n<p>Vincent\
-    \ nous a concocté un quiz teinté d'anthropologie qui va nous faire revenir quelques\
-    \ millénaires en arrière !</p>"
+    \ nous a concocté un quiz teinté d'anthropologie, qui nous fait réfléchir sur\
+    \ les racines de cette emprise dérégulée que l'homme imprime sur son environnement.<br\
+    \ />\r\nJanvier 2021 : Les réponses sont désormais agrémentées de commentaires\
+    \ audio de l'auteur pour aller plus loin. </p>"
   conclusion: ''
   difficulty_average: 2.1666666666666665
   author: Vincent Mignerot
   image_background_url: https://www.slate.fr/sites/default/files/styles/1060x523/public/neandertal_1.jpg
   publish: true
-  spotlight: false
+  spotlight: true
   created: 2020-06-26
-  updated: 2020-12-21
+  updated: 2021-01-16
   tags:
   - 185
 - id: 4
@@ -377,7 +379,7 @@
   - 31
   - 80
 - id: 55
-  name: NOUVEAU - Capture et stockage du CO2
+  name: Capture et stockage du CO2
   introduction: "<p>Le Réveilleur, c'est une chaîne Youtube qui fait de la vulgarisation\
     \ sur les thématiques énergie et climat. Il explique de manière pédagogique ces\
     \ sujets complexes sur Youtube.</p>\r\n\r\n<p>Une de ses dernières vidéos traite\
@@ -401,7 +403,7 @@
   publish: true
   spotlight: false
   created: 2020-12-08
-  updated: 2020-12-21
+  updated: 2021-01-16
   tags:
   - 62
 - id: 56
@@ -417,9 +419,9 @@
   author: Matthieu Massart
   image_background_url: https://www.popsci.com/resizer/iHd2-DUNyurlTDhvndesdxzQoFU=/857x643/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/MTUGSVPHBB22CKTZETTB42BCIE.jpg
   publish: true
-  spotlight: true
+  spotlight: false
   created: 2020-12-13
-  updated: 2021-01-12
+  updated: 2021-01-16
   tags: []
 - id: 57
   name: NOUVEAU - 2020 en chiffres
