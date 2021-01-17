@@ -255,8 +255,14 @@ qz1.to_quizs.all()
 
 q = Question.objects.first()
 
-q.quiz_set.all()
+q.quizzes.all()
 q1.quizquestion_set.all()
+```
+
+Générer le graph des modèles
+```
+pip install pygraphviz
+python manage.py graph_models -a -X ContentType,LogEntry,AbstractUser,User,AbstractBaseSession,Session,Group,Permission -o graph.png
 ```
 
 #### Frontend
