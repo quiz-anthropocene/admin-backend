@@ -25253,3 +25253,741 @@
   tags:
   - 17
   - 37
+- id: 815
+  text: 'La concentration en CO2 a atteint 415 ppm en 2020, soit 140 ppm de plus que
+    la concentration au début de la révolution industrielle.
+
+    Par comparaison, de combien cette concentration a-t-elle varié entre les périodes
+    inter-glaciaires et les périodes glaciaires qui ont marqué le dernier million
+    d''années ?'
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 3
+  answer_option_a: 100 ppm
+  answer_option_b: 500 ppm
+  answer_option_c: 1 000 ppm
+  answer_option_d: 2 000 ppm
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: Lorsque les calottes glaciaires recouvraient l'intégralité du
+    Canada et une bonne partie de l'Europe, la concentration atmosphérique en CO2
+    était de 180 ppm. Seulement 100 ppm séparent l'âge de glace du monde que l'on
+    connaît aujourd'hui.
+  answer_accessible_url: ''
+  answer_scientific_url: https://doi.org/10.1038/nature06949
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Sous nos pieds
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-12
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 13
+  - 32
+- id: 816
+  text: Durant le dernier million d'années, combien de fois la concentration atmosphérique
+    en CO2 a dépassé 400 ppm ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 2
+  answer_option_a: '0'
+  answer_option_b: '1'
+  answer_option_c: '2'
+  answer_option_d: '3'
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: La Terre a connu plusieurs périodes inter-glaciaires, mais la
+    concentration en CO2 n'a jamais dépassé les 300 ppm durant le dernier million
+    d'années.
+  answer_accessible_url: ''
+  answer_scientific_url: https://doi.org/10.1038/nature06949
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Sous nos pieds
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-12
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 13
+- id: 817
+  text: Combien d'années faut-il remonter dans le passé pour retrouver une concentration
+    atmosphérique en CO2 supérieure à celle atteinte en 2020 ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 3
+  answer_option_a: 1,3 millions d'années
+  answer_option_b: 3 millions d'années
+  answer_option_c: 13 millions d'années
+  answer_option_d: 30 millions d'années
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: C'est durant le Pliocène moyen, il y a un peu plus de 3 millions
+    d'années, que la concentration atmosphérique est passée sous le seuil des 400
+    ppm.
+  answer_accessible_url: ''
+  answer_scientific_url: https://doi.org/10.1038/s41586-019-1543-2
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Sous nos pieds
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-12
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 13
+  - 227
+- id: 818
+  text: Où se trouvait le niveau de la mer durant le Pliocène, lorsque la concentration
+    en CO2 était similaire à celle de 2020 ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 3
+  answer_option_a: 2 mètres au-dessus de l'actuel
+  answer_option_b: 5 mètres au-dessus de l'actuel
+  answer_option_c: 20 mètres au-dessus de l'actuel
+  answer_option_d: 50 mètres au-dessus de l'actuel
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: Le niveau des océans variait au rythme des cycles climatiques
+    (périodes glaciaires et inter-glaciaires), mais les études les plus récentes suggèrent
+    que l'élévation du niveau de la mer était de l'ordre de 20 mètres par rapport
+    au niveau actuel.
+  answer_accessible_url: ''
+  answer_scientific_url: https://doi.org/10.1038/s41586-019-1543-2
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Sous nos pieds
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-12
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 13
+  - 227
+- id: 819
+  text: Il y a 40 millions d'années, la concentration atmosphérique en CO2 était trop
+    élevée pour que les calottes glaciaires puissent se former. La calotte glaciaire
+    de l'Antarctique a commencé à grandir il y a 34 millions d'années, lorsque la
+    concentration de CO2 est passée sous le niveau de ...
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 4
+  answer_option_a: 550 ppm
+  answer_option_b: 750 ppm
+  answer_option_c: 950 ppm
+  answer_option_d: 1150 ppm
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: Durant les 32 millions d'années qui se sont écoulés après la
+    disparition des dinosaures non-aviens, la concentration en CO2 était supérieure
+    à 750 ppm et les températures étaient trop chaudes pour permettre aux glaces de
+    se maintenir.
+  answer_accessible_url: ''
+  answer_scientific_url: https://doi.org/10.1038/nature07337
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Sous nos pieds
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-12
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 13
+  - 227
+- id: 820
+  text: Lors du maximum thermique du Paléocène-Eocène, il y a 56 millions d'années,
+    la vitess d'augmentation de la concentration atmosphérique en CO2 a été…
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 4
+  answer_option_a: 2 fois plus rapide qu'aujourd'hui
+  answer_option_b: Similaire à celle d'aujourd'hui
+  answer_option_c: 2 fois plus lente qu’aujourd’hui
+  answer_option_d: 10 fois plus lente qu'aujourd'hui
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: On estime qu'entre 5000 et 10000 milliards de tonnes de carbone
+    ont été relâchées dans l'atmosphère, pendant une durée de 20 000 ans. Par comparaison,
+    nous ne mettrions au rythme actuel que quelques siècles pour dégager la même quantité.
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.annualreviews.org/doi/abs/10.1146/annurev-earth-040610-133431
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: 'Source image : Svensen, H., 2012, Bubbles from the deep, Nature,
+    483, 413–415. https://doi.org/10.1038/483413a'
+  author: Sous nos pieds
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-12
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 13
+  - 227
+- id: 821
+  text: Combien de temps la Terre a-t-elle mise à se remettre de la crise du maximum
+    thermique du Paléocène-Eocène ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 4
+  answer_option_a: 1 000 ans
+  answer_option_b: 10 000 ans
+  answer_option_c: 100 000 ans
+  answer_option_d: 1 000 000 d'années
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: Il aura fallu un peu plus de 100 000 ans pour que l'altération
+    des montagnes et les organismes vivants retirent les milliers de milliards de
+    tonnes de Carbone qui avait été rajoutés dans l’atmosphère durant le maximum thermique.
+    Après une augmentation de 5 à 8°C, les températures sont redevenues similaires
+    à ce qu'elles étaient auparavant.
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.annualreviews.org/doi/abs/10.1146/annurev-earth-040610-133431
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Sous nos pieds
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-12
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 227
+- id: 822
+  text: La biosphère est en train de vivre sa 6ème extinction de masse. Quand s'est
+    déroulée la plus dévastatrice d'entre elles ?
+  hint: ''
+  type: QCM
+  category: 4
+  difficulty: 3
+  answer_option_a: Il y a 65 millions d'années
+  answer_option_b: Il y a 200 millions d'années
+  answer_option_c: Il y a 250 millions d'années
+  answer_option_d: Il y a 540 millions d'années
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: A la fin du Permien, les paléontologues ont constaté la disparition
+    de 70% des vertébrés terrestres et 96% des espèces marines.
+  answer_accessible_url: ''
+  answer_scientific_url: https://science.sciencemag.org/content/321/5885/97
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Sous nos pieds
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-12
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 7
+- id: 823
+  text: Bien qu'elles apparaissent "instantanées" à l'échelle des temps géologiques,
+    les extinctions de masse ne sont pas soudaines à notre échelle humaine. Entre
+    l'extinction des vertébrés terrestres et celle des faunes marines lors de la crise
+    du Permien-Trias, il se serait écoulé ….
+  hint: ''
+  type: QCM
+  category: 4
+  difficulty: 4
+  answer_option_a: 300 ans
+  answer_option_b: 3,000 ans
+  answer_option_c: 30,000 ans
+  answer_option_d: 300,000 ans
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: Selon de récentes études, le remplacement des faunes terrestres
+    s'est effectué il y a 252,3 millions d'années, tandis que l'extinction est datée
+    à 251,9 millions d'années dans les environnements marins. Cela reste très court
+    à l'échelle géologique !
+  answer_accessible_url: ''
+  answer_scientific_url: https://doi.org/10.1038/s41467-018-07934-z
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: 'Sources : Fielding, C.R., Frank, T.D., McLoughlin, S., Vajda,
+    V., Mays, C., Tevyaw, A.P., Winguth, A., Winguth, C., Nicoll, R.S., Bocking, M.
+    and Crowley, J.L., 2019, Age and pattern of the southern high-latitude continental
+    end-Permian extinction constrained by multiproxy analysis. Nat. Commun. 10, 385.
+    https://doi.org/10.1038/s41467-018-07934-z
+
+    Gastaldo, R.A., Kamo, S.L., Neveling, J., Geissman, J.W., Looy, C.V. and Martini,
+    A.M., 2020, The base of the Lystrosaurus Assemblage Zone, Karoo Basin, predates
+    the end-Permian marine extinction. Nat. Commun. 11, 1428. https://doi.org/10.1038/s41467-020-15243-7
+
+    Source image : Gastaldo, R.A., Kamo, S.L., Neveling, J., Geissman, J.W., Looy,
+    C.V. and Martini, A.M., 2020, The base of the Lystrosaurus Assemblage Zone, Karoo
+    Basin, predates the end-Permian marine extinction. Nat. Commun. 11, 1428. https://doi.org/10.1038/s41467-020-15243-7'
+  author: Sous nos pieds
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-12
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 7
+- id: 824
+  text: Les extinctions de masses sont souvent associées à des épisodes volcaniques
+    intenses. La violence particulière de l'extinction du Permien-Trias serait liée
+    au fait que le magma, en remontant à la surface, aurait causé la combustion d'épaisses
+    couches de …
+  hint: ''
+  type: QCM
+  category: 4
+  difficulty: 3
+  answer_option_a: Granite
+  answer_option_b: Calcaire
+  answer_option_c: Pétrole
+  answer_option_d: Charbon
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: Le carbone piégé dans ces couches de charbon aurait été relâché
+    en même temps que le carbone dégagé par l'éruption, causant une augmentation brutale
+    de la concentration atmosphérique en CO2.
+  answer_accessible_url: ''
+  answer_scientific_url: https://doi.org/10.1130/G47365.1
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Sous nos pieds
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-12
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 7
+  - 219
+- id: 825
+  text: "Quelle est la part de la population mondiale n'ayant pas accès à l'eau potable\
+    \ en date de 2015 ? \n[C'est à dire, qui doit se déplacer à plus de trente minutes\
+    \ aller-retour, selon la définition de l'OMS]"
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  answer_option_a: 3%
+  answer_option_b: 11%
+  answer_option_c: 35%
+  answer_option_d: 53%
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: Selon l'OMS, environ 11% de la population mondiale n'aurait
+    pas accès à l'eau potable en date de 2015, ce qui concerne approximativement 844
+    millions de personnes. Bien que ce pourcentage reste élevé, il diminue linéairement
+    d'année en année (environ 19% en 2000).
+  answer_accessible_url: ''
+  answer_scientific_url: https://washdata.org/sites/default/files/documents/reports/2018-01/JMP-2017-report-final.pdf
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-16
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 37
+- id: 826
+  text: Quelle est la part de la population mondiale n'ayant pas accès à une eau potable
+    sûre et propre en date de 2015 ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  answer_option_a: 3%
+  answer_option_b: 15%
+  answer_option_c: 29%
+  answer_option_d: 55%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: Selon l'OMS, environ 29% de la population mondiale, soit 2.2
+    milliards de personnes, ne disposeraient pas de services d’alimentation en eau
+    potable gérés en toute sécurité. Les personnes vivant dans les régions rurales
+    sont les plus exposées (1.9 milliards de personnes).
+  answer_accessible_url: ''
+  answer_scientific_url: https://washdata.org/sites/default/files/documents/reports/2018-01/JMP-2017-report-final.pdf
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-16
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 37
+- id: 827
+  text: 'Combien de personnes vivent dans des pays soumis à un stress hydrique très
+    élevé ? '
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  answer_option_a: 500 millions
+  answer_option_b: 1 milliard
+  answer_option_c: 1.5 milliard
+  answer_option_d: Plus de 2 milliards
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: 'Cette situation s''aggravera au fil du temps considérant les
+    projections sur la croissance démographique et le changement climatique qui entrainera
+    une hausse de la fréquence et sévérité des sécheresses. '
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.unwater.org/publications/highlights-sdg-6-synthesis-report-2018-on-water-and-sanitation-2/
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-16
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 37
+- id: 828
+  text: 'Quel est le pourcentage d''eau consommée par le secteur de l''agriculture
+    à l''échelle mondiale ? '
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 2
+  answer_option_a: 20%
+  answer_option_b: 30%
+  answer_option_c: 50%
+  answer_option_d: 70%
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: 'L''agriculture est incontestablement le secteur qui consomme
+    le plus d''eau douce à l''échelle mondiale avec une part estimée à environ 70%.
+    Dans le régions arides, cette part atteint même les 90%. Les usages industriels
+    et municipaux représentent respectivement 20% et 10% des prélèvements d''eau douce. '
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.unwater.org/publications/highlights-sdg-6-synthesis-report-2018-on-water-and-sanitation-2/
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 37
+- id: 900
+  text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
+  hint: Bas carbone donc…
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: '10'
+  answer_option_b: '30'
+  answer_option_c: '80'
+  answer_option_d: '125'
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: "30.7 $ / MWh Pour le LCOE - Levelised Cost Of Electricity\n\
+    Ce cout passe à 35 $ / MWh Nucléaire étendu à 10 ans.\nLes énergies bas carbone\
+    \ sont les plus compétitives. La moins chère de toute étant la prolongation des\
+    \ réacteurs nucléaires, ou long term operation (LTO), les coûts du « grand carénage\
+    \ » (refurbishment), du démantèlement (decommissioning) comme ceux d’opération\
+    \ et maintenance (O&M) étant spécifiques pour chaque pays, \nLa gestion des déchets\
+    \ est également annualisée et comprise dans la rubrique « decommissioning »."
+  answer_accessible_url: https://www.iea.org/articles/levelised-cost-of-electricity-calculator
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 218
+- id: 901
+  text: Quel est le cout du MWh éolien en mer - $ / MWh ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: '18'
+  answer_option_b: '38'
+  answer_option_c: '90'
+  answer_option_d: '128'
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: '90 $ / MWh Pour le LCOE - Levelised Cost Of Electricity
+
+    Ce cout passe à 56 $ / MWh éolien à terre'
+  answer_accessible_url: https://www.iea.org/articles/levelised-cost-of-electricity-calculator
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 218
+- id: 902
+  text: Quel est le montant de la taxe carbone en France - $ / t CO2e ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: '10'
+  answer_option_b: '20'
+  answer_option_c: '50'
+  answer_option_d: '125'
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: https://www.oecd-nea.org/jcms/pl_51110/projected-costs-of-generating-electricity-2020-edition
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 218
+- id: 903
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 218
+- id: 904
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 218
+- id: 905
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 218
+- id: 906
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 218
+- id: 907
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 218
+- id: 908
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 218
+- id: 919
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 218
+- id: 920
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-18
+  updated: 2021-01-18
+  tags:
+  - 218
