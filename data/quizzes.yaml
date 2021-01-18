@@ -27,24 +27,23 @@
   name: Le quiz de Vincent Mignerot - COMMENTAIRES AUDIO
   introduction: "<p>Vincent Mignerot est essayiste et conférencier. Il développe une\
     \ théorie écologique de l’esprit et se questionne sur la singularité de l'humanité\
-    \ dans son contexte évolutif. Ses <a href=\"https://vincent-mignerot.fr/\">travaux\
-    \ </a>vont de la théorie à l’étude de la perception humaine, notamment la synesthésie.\
-    \ Il est le fondateur de l’association <a href=\"http://adrastia.org\">Adrastia</a>,\
-    \ qui s’intéresse aux risques d’effondrement de la civilisation thermo-industrielle,\
-    \ et du groupe <a href=\"https://www.facebook.com/groups/transition.2030\">Facebook\
-    \ Transition 2030</a>.</p>\r\n\r\n<p>Vincent nous a concocté un quiz teinté d'anthropologie,\
-    \ qui nous fait réfléchir sur les racines de cette emprise dérégulée que l'homme\
-    \ imprime sur son environnement.<br />\r\nMise à jour janvier 2021 : Les réponses\
-    \ sont désormais agrémentées de commentaires audio de l'auteur pour aller plus\
-    \ loin. </p>"
-  conclusion: ''
+    \ dans son contexte évolutif. Il est le fondateur d'<a href=\"http://adrastia.org\"\
+    >Adrastia</a>, une association qui s’intéresse aux risques d’effondrement de la\
+    \ civilisation thermo-industrielle et du groupe <a href=\"https://www.facebook.com/groups/transition.2030\"\
+    >Facebook Transition 2030</a>.</p>\r\n\r\n<p>Vincent nous a concocté un quiz teinté\
+    \ d'anthropologie, qui nous fait réfléchir sur les racines de cette emprise dérégulée\
+    \ que notre espèce imprime sur son environnement.<br />\r\nMise à jour janvier\
+    \ 2021 : Les réponses sont désormais agrémentées de commentaires audio de l'auteur\
+    \ pour aller plus loin. </p>"
+  conclusion: <p>Si ce quiz vous a intéressé, vous le serez problablement par <a href="http://quizanthropocene.fr/quiz/18">celui-ci,</a>
+    qui traite de questions similaires.</p>
   difficulty_average: 2.1666666666666665
   author: Vincent Mignerot
   image_background_url: https://www.slate.fr/sites/default/files/styles/1060x523/public/neandertal_1.jpg
   publish: true
-  spotlight: false
+  spotlight: true
   created: 2020-06-26
-  updated: 2021-01-17
+  updated: 2021-01-18
   tags:
   - 185
 - id: 4
