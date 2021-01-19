@@ -611,7 +611,7 @@
   answer_extra_info: ''
   author: Cyril Retourné
   validator: Raphael Odini
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-03-10
   created: 2020-03-10
   updated: 2020-09-28
@@ -25784,19 +25784,19 @@
   tags:
   - 218
 - id: 903
-  text: Copy of à venir
-  hint: ''
+  text: Quel est le montant de la taxe carbone en Suède - $ / t CO2e ?
+  hint: La plus cher au monde
   type: QCM
   category: 2
   difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
+  answer_option_a: '10'
+  answer_option_b: '20'
+  answer_option_c: '50'
+  answer_option_d: '125'
   answer_correct: d
   has_ordered_answers: false
   answer_explanation: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://www.oecd-nea.org/jcms/pl_51110/projected-costs-of-generating-electricity-2020-edition
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -25810,19 +25810,20 @@
   tags:
   - 218
 - id: 904
-  text: Copy of à venir
-  hint: ''
+  text: Quelle est la part des Français qui habitent à moins de 10 km d’une gare ?
+    %
+  hint: Beaucoup
   type: QCM
   category: 2
   difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
+  answer_option_a: 9 %
+  answer_option_b: 20 %
+  answer_option_c: 50 %
+  answer_option_d: 90 %
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: 90 %... qui l’eut cru ?
+  answer_accessible_url: https://www.railcoop.fr/
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -25937,6 +25938,32 @@
   added: 2021-01-17
   created: 2021-01-18
   updated: 2021-01-18
+  tags:
+  - 218
+- id: 909
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-19
+  updated: 2021-01-19
   tags:
   - 218
 - id: 919
