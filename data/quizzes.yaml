@@ -438,3 +438,25 @@
   updated: 2021-01-12
   tags:
   - 213
+- id: 59
+  name: Fresque du Numérique
+  introduction: <p>La <a href="https://fresquedunumerique.org">Fresque du Numérique </a>est
+    un atelier pédagogique qui permet de comprendre les impacts écologiques du numérique et
+    de réfléchir à des solutions, tout en passant un bon moment ! Elle reprend la
+    méthode de la Fresque du Climat (des cartes que les participants doivent remettre
+    en ordre), le contenu étant basé sur des sources de référence. Ce quiz vous permet
+    de découvrir quelques informations étonnantes sur l'impact environnemental du
+    numérique.</p>
+  conclusion: <p>Bravo, vous êtes au bout de ce quiz ! Le numérique, ce n'est donc
+    pas que de la dématérialisation. Pour aller plus loin,nous vous recommandons de
+    participer à un atelier. Plus d'information sur <a href="https://fresquedunumerique.org">Fresque
+    du Numérique. </a></p>
+  difficulty_average: 0.0
+  author: Aurélien Deragne
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/logo%20FDN.png
+  publish: false
+  spotlight: true
+  created: 2021-01-21
+  updated: 2021-01-22
+  tags:
+  - 30
