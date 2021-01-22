@@ -1,3 +1,6 @@
+- name: Aurélien Déragne
+  question_count: 3
+  quiz_count: 0
 - name: Avenir Climatique
   question_count: 8
   quiz_count: 0
@@ -38,7 +41,7 @@
   question_count: 0
   quiz_count: 1
 - name: Matthieu Massart
-  question_count: 72
+  question_count: 71
   quiz_count: 13
 - name: Raphael Odini
   question_count: 43

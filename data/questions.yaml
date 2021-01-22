@@ -1008,8 +1008,10 @@
   answer_option_d: La fonte des glaciers
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: La banquise, qui flotte sur l'eau, ne fait pas monter l'eau
-    quand elle fond. Faites le test avec un pastis.
+  answer_explanation: En vertu du principe d'Archimède, la banquise, qui flotte sur
+    l'eau, ne fait pas monter l'eau quand elle fond. Faites le test avec un glaçon
+    dans votre pastis ! La situation est différente avec les calottes glaciaires,
+    qui reposent sur la terre ferme.
   answer_accessible_url: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
   answer_scientific_url: ''
   answer_image_url: https://sciencesdelavieetdelaterre93.files.wordpress.com/2018/08/18-bis-exp-fonte-glaces.jpg
@@ -2852,9 +2854,8 @@
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: Le secteur des nouvelles technologies représentait à lui seul
-    entre 6 et 10 % de la consommation mondiale d’électricité en 2018. Soit près de
-    4 % de nos émissions de gaz à effet de serre. Et la tendance est franchement à
-    la hausse, à raison de 5 à 7 % d’augmentation tous les ans.
+    entre 6 et 10 % de la consommation mondiale d’électricité en 2018. Et la tendance
+    est franchement à la hausse, à raison de 5 à 7 % d’augmentation tous les ans.
   answer_accessible_url: https://lejournal.cnrs.fr/articles/numerique-le-grand-gachis-energetique
   answer_scientific_url: ''
   answer_image_url: https://i0.wp.com/verdamano.com/wp-content/uploads/2020/04/La-pollution-numerique-en-chiffres_1.png
@@ -2929,7 +2930,9 @@
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2018-10/datalab-essentiel-142-empreinte-matiere-avril2018b.pdf
   answer_image_url: https://pbs.twimg.com/media/DbDcakTWAAASzbV.jpg
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: l'iPhone 5 fait 110g et a un écran de 4". D'après l'ADEME (https://www.ademe.fr/sites/default/files/assets/documents/acv-biens-equipements-201809-rapport.pdf,
+    pages 24 et 25), un smartphone de +5,5" / 200g, a un "sac à dos écologique" =
+    MIPS de +200kg
   author: Guillaume Boudry
   validator: Matthieu Massart
   validation_status: Validée
@@ -12097,10 +12100,10 @@
   type: QCM
   category: 2
   difficulty: 3
-  answer_option_a: 7 kg équivalent CO2
-  answer_option_b: 70 kg équivalent CO2
-  answer_option_c: 700 kg équivalent CO2
-  answer_option_d: 7000 kg équivalent CO2
+  answer_option_a: 7 kg équivalent CO2, soit 50km en Clio essence.
+  answer_option_b: 70 kg équivalent CO2, soit 500km
+  answer_option_c: 700 kg équivalent CO2, soit 5,000km
+  answer_option_d: 7000 kg équivalent CO2, soit 50,000km
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: Sur toute sa durée de vie, un iPhone 11 émettra environ 72 kg
@@ -13771,7 +13774,7 @@
   answer_extra_info: ''
   author: Citoyens Pour le Climat
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2020-06-04
   created: 2020-06-24
   updated: 2020-06-24
@@ -14236,7 +14239,7 @@
   - 47
 - id: 463
   text: Sur tout le cycle de vie d'un smartphone, quelle est la part de l'énergie
-    consommée due à son usage (charge) ?
+    consommée due à son usage (charge) ? DOUBLON 392
   hint: ''
   type: QCM
   category: 2
@@ -14255,7 +14258,7 @@
   answer_extra_info: ''
   author: Citoyens Pour le Climat
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2020-06-11
   created: 2020-06-24
   updated: 2020-06-24
@@ -15060,22 +15063,23 @@
   - 39
   - 94
 - id: 490
-  text: Allez, va pour une petite série d'une heure sur Netflix ! Mais au fait, ça
-    fait combien de CO2 émis dans l'atmosphère ?
+  text: 'Allez, va pour une petite série d''une heure sur Netflix ! Mais au fait,
+    ça fait combien de CO2 émis dans l''atmosphère ? '
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: 2
   difficulty: 3
-  answer_option_a: 40 g CO2 équivalent, soit 160 m en voiture
-  answer_option_b: 400g CO2 équivalent, soit 1,6 km en voiture
-  answer_option_c: 4 kg CO2 équivalent, soir 16 km en voiture
-  answer_option_d: 40 kg CO2 équivalent, soit 160 km en voiture
-  answer_correct: b
+  answer_option_a: 4 g CO2 équivalent, soit 16 m en voiture
+  answer_option_b: 40 g CO2 équivalent, soit 160 m en voiture
+  answer_option_c: 400 g CO2 équivalent, soir 1,6 km en voiture
+  answer_option_d: 4 kg CO2 équivalent, soit 16 km en voiture
+  answer_correct: abc
   has_ordered_answers: true
-  answer_explanation: Ces estimations font encore l'objet de débats, comme détaillé
-    dans le lien du Shift Project ci-dessous. Ces émissions sont directement corélées
-    à la qualité d'image. N'hésitez pas à l'ajuster. Ou carrément supprimer l'image
-    sur youtube (module youtube audio).
+  answer_explanation: Ces estimations font encore l'objet de débats et dépendent de
+    beaucoup de paramètres. Les émissions dépendent de où vous êtes, où sont les serveurs,
+    par où transitent les données... Et elles sont directement corrélées à la qualité
+    d'image, que vous pouvez ajuster lors d'un visionnage - ou carrément supprimer
+    l'image sur Youtube si elle est inutile (module Youtube audio).
   answer_accessible_url: https://theshiftproject.org/wp-content/uploads/2020/06/2020-06_TSP-a-t-il-surestime%C3%A9-lempreinte-carbone-de-la-vid%C3%A9o-en-ligne_FR.pdf
   answer_scientific_url: https://www.carbonbrief.org/factcheck-what-is-the-carbon-footprint-of-streaming-video-on-netflix
   answer_image_url: https://cdn.iopscience.com/images/1748-9326/9/5/054007/Full/erl487799f3_online.jpg
@@ -15083,7 +15087,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: laydgeur
-  validation_status: Validée
+  validation_status: Brouillon
   added: 2020-06-16
   created: 2020-06-24
   updated: 2020-09-28
@@ -17477,8 +17481,8 @@
   tags:
   - 51
 - id: 569
-  text: En France, combien de tonnes d'aliments consommables partent à la poubelle
-    tous les ans ?
+  text: DOUBLON - En France, combien de tonnes d'aliments consommables partent à la
+    poubelle tous les ans ?
   hint: ''
   type: QCM
   category: 2
@@ -20643,7 +20647,7 @@
   - 80
   - 92
 - id: 668
-  text: À quel âge un américain moyen émet le plus de CO2 ?
+  text: À quel âge un américain émet-il le plus de CO2 en moyenne ?
   hint: ''
   type: QCM
   category: 1
@@ -21789,8 +21793,8 @@
   category: 3
   difficulty: 3
   answer_option_a: 0.5 %
-  answer_option_b: 3 %
-  answer_option_c: 6 %
+  answer_option_b: 2.5 %
+  answer_option_c: 6.2 %
   answer_option_d: 12 %
   answer_correct: b
   has_ordered_answers: false
@@ -21837,7 +21841,7 @@
   difficulty: 4
   answer_option_a: 2 %
   answer_option_b: 5%
-  answer_option_c: 9 %
+  answer_option_c: 8 %
   answer_option_d: 15 %
   answer_correct: c
   has_ordered_answers: false
@@ -22072,8 +22076,8 @@
   - 217
   - 218
 - id: 708
-  text: A380 sur un vol AR, le poids des émissions de CO2 rapportées au poids de l'avion
-    ?
+  text: A380 sur un vol AR, le poids des émissions de "CO2" rapportées au poids de
+    l'avion ?
   hint: Et encore sans compter les effets hors CO2.
   type: QCM
   category: 3
@@ -22084,37 +22088,35 @@
   answer_option_d: '15'
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: 'On a vu que le kérosène c''est environ 40 % du poids de l''avion.
+  answer_explanation: '6 fois plus de CO2 que le poids propre de l’avion… !
+
+    Le kérosène c''est environ 40 % du poids au décollage.
 
     Et celui de la carlingue vide 50 %.
 
-    Si on admet que 10 % est rarement consommée on tombe à 36 %.
+    Les émissions correspondent à 3.8 kg CO2 / kg de kérosène
 
-    Comme nous l’avons vu les émissions correspondent à 3.04 kg CO2 / litre,
+    (ou 3.04 kg CO2 / litre),
 
-    ou 3.8 kg CO2 / kg de kérosène.
+    40% x 3.8 = 152% pour un vol simple
 
-    36% x 3.8 = 137% pour un vol simple
-
-    et 2 x 137% = 274% pour un vol AR.
+    et 2 x 152% = 304% pour un vol AR.
 
     Ce dernier chiffre est à rapprocher de celui de l’avion à vide
 
-    Soit 274% / 50% = 5.6 arrondit à un facteur 6
+    Soit 304% / 50% = 6.1 arrondit à un facteur 6
 
-    Donc sur un seul vol long-courrier AR, les beaux avions dispersent tranquillement
+    Donc sur « un seul vol long-courrier AR », les beaux avions dispersent tranquillement
     des tonnes de CO2.
 
     Dans le cas présent avec un emport de 2 x 240 tonnes de kérosène ce sont plus
-    de 1600 tonnes de CO2 émises pour un minimum d’une centaine d’année pour chaque
+    de 1800 tonnes de CO2 émises pour un minimum d’une centaine d’années pour chaque
     AR.
 
-    Soit 6 fois le poids de l’avion.
+    Soit 6 fois le poids de l’avion à vide.
 
-    Si on considère que les LC font un peu moins d’une rotation par jour, soit 275
-    rotations par an,
-
-    un seul avion aura émis 445 000 tonnes de CO2 / an.'
+    Avec un peu moins d’une rotation par jour, soit 275 par an, un seul avion LC émettra
+    « 500 000 tonnes de CO2 / an ».'
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_image_url: ''
@@ -22131,18 +22133,30 @@
   - 33
   - 217
 - id: 709
-  text: a venir
-  hint: ''
+  text: A380 sur un vol AR, le poids des émissions de « CO2eq » rapportées au poids
+    de l'avion ?
+  hint: Et maintenant avec les « effets hors CO2 ». cf question 708
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
+  answer_option_a: '1'
+  answer_option_b: '6'
+  answer_option_c: '12'
+  answer_option_d: '18'
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: '18 fois plus de CO2 que le poids propre de l’avion… !
+
+    CO2eq = CO2 + effets non CO2 = 3 x CO2
+
+    Comme le CO2 représente 6 fois le poids à vide de l’avion sur un AR
+
+    En termes de réchauffement climatique les émissions de CO2eq représenteront donc
+    6 x 3 = 18 fois le poids de l’avion à vide.
+
+    Ou 1800 x 3 = 5400 tonnes CO2eq pour chaque AR.
+
+    Par année 500 000 x 3 = 1 500 000 tonnes CO2eq'
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_image_url: ''
@@ -22211,12 +22225,18 @@
   answer_option_d: '100000'
   answer_correct: a
   has_ordered_answers: false
-  answer_explanation: 'Stratosphérique ! Le marché n’en finit pas de prendre de l’altitude,
-    avec une demande mondiale estimée à 39 210 avions neufs sur les vingt prochaines
-    années (2019-2038) selon Airbus. Soit 1 820 appareils de plus que dans sa dernière
-    prévision, période 2018-2037, et même de 4 320 avions supplémentaires par rapport
-    à l’étude 2017-2036. Conséquence : la flotte va plus que doubler à horizon 2038,
-    à près de 48 000 appareils'
+  answer_explanation: 'En 2019 : 24000 avions commerciaux
+
+    Une croissance sur les 20 prochaine année Stratosphérique ! Le marché n’en finit
+    pas de prendre de l’altitude, avec une demande mondiale estimée à 39 210 avions
+    neufs sur les vingt prochaines années (2019-2038) selon Airbus.
+
+    Conséquence : la flotte va plus que doubler à horizon 2038, à près de 48 000 appareils.
+
+    Cà c’était les prévisions pré-COVID… !
+
+    Sauf miracle le transport aérien est dans les starting-blocks pour redécoller
+    ASAP'
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: ''
   answer_image_url: ''
@@ -25697,6 +25717,109 @@
   updated: 2021-01-18
   tags:
   - 37
+- id: 829
+  text: 'Les objets du numérique, ce sont : les terminaux utilisateurs, les infrastructures
+    réseaux, et les data centers. Quelle est la famille d''objet qui consomme le plus
+    d''électricité ?'
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: Les 3 sont au même niveau
+  answer_option_b: Les terminaux utilisateurs
+  answer_option_c: Les infrastructures réseau
+  answer_option_d: Les data centers
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: 'Nos équipements numériques / terminaux utilisateurs sont tellement
+    nombreux qu''en 2019 ils consomment environ 2 fois plus que les data centers (qui
+    sont pourtant des "grosses machines" !) : 30% de l''énergie primaire mobilisée
+    par le secteur du numérique sert à l''utilisation de nos équipements, et seulement
+    15% pour les data centers'
+  answer_accessible_url: https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf
+  answer_scientific_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/829.png
+  answer_image_explanation: 'Source : la Fresque du Numérique, [https://www.fresquedunumerique.org/](https://www.fresquedunumerique.org/)'
+  answer_extra_info: ''
+  author: Aurélien Déragne
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-01-20
+  created: 2021-01-21
+  updated: 2021-01-21
+  tags:
+  - 30
+  - 39
+- id: 830
+  text: 'Au niveau mondial, et toutes étapes du cycle de vie confondues, quelle part
+    le numérique représente-t-il dans nos émissions de gaz à effet de serre ? (référence
+    : 2018)'
+  hint: C'est plus que l'aviation civile
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: négligeable, c'est dématérialisé
+  answer_option_b: 2%
+  answer_option_c: 4%
+  answer_option_d: 10%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Si on compte les émissions de GES dues à la fabrication plus
+    celles dues à l''usage (principalement électricité), le secteur du numérique représente
+    déjà près de 4% de nos émissions de GES, soit plus que l''aviation civile.
+
+    A noter : la part liée aux déchets n''est pas documentée à ce jour (elle est sans
+    doute très faible - malheureusement).'
+  answer_accessible_url: https://theshiftproject.org/wp-content/uploads/2018/11/Rapport-final-v8-WEB.pdf
+  answer_scientific_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/830.png
+  answer_image_explanation: 'Source : la Fresque du Numérique, fresquedunumerique.org'
+  answer_extra_info: ''
+  author: Aurélien Déragne
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-01-20
+  created: 2021-01-22
+  updated: 2021-01-22
+  tags:
+  - 30
+  - 100
+- id: 832
+  text: Au niveau mondial, quelle part des déchets électroniques est collectée en
+    vue d'un traitement ?
+  hint: C'est très peu
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 20%
+  answer_option_b: 40%
+  answer_option_c: 60%
+  answer_option_d: 80%
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: 'Au niveau mondial, environ 20% des déchets électroniques sont
+    collectés en vue d''un recyclage. Attention contrairement à ce qui est souvent
+    affirmé, collecté ne veut pas dire réellement recyclé : en France, 1/4 part directement
+    en incinération. Et ce qui entre effectivement en filière de recyclage ne pourra
+    pas être recyclé en totalité : on récupère moins de 30% d''un smartphone, le reste
+    est incinéré. Ce qui n''est pas collecté est exporté par des circuits illégaux,
+    en dépit du fait que la plupart des pays ont signé la convention de Bâle qui interdit
+    l''export de déchets toxiques comme les déchets électroniques.'
+  answer_accessible_url: https://www.greenit.fr/2017/12/26/20-dechets-electroniques-recycles/
+  answer_scientific_url: https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM%202017/Global-E-waste%20Monitor%202017%20-%20Chapter%206.pdf
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/832.png
+  answer_image_explanation: 'Source : la Fresque du Numérique, [https://www.fresquedunumerique.org/](https://www.fresquedunumerique.org/)'
+  answer_extra_info: ''
+  author: Aurélien Déragne
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-01-20
+  created: 2021-01-22
+  updated: 2021-01-22
+  tags:
+  - 30
+  - 228
+  - 229
 - id: 900
   text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
   hint: Bas carbone donc…
