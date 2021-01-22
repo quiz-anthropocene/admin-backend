@@ -48,7 +48,8 @@ class Command(BaseCommand):
         questions_updates = {}
         validation_errors = []
 
-        all_tags_list = list(Tag.objects.all().values_list("name", flat=True))
+        all_categories_list = list(Category.objects.all())
+        all_tags_name_list = list(Tag.objects.all().values_list("name", flat=True))
 
         #########################################################
         # Fetch questions from Notion
@@ -122,12 +123,16 @@ class Command(BaseCommand):
         for notion_question_row in notion_questions_list_scope:
             question_validation_errors = []
             notion_question_tag_objects = []
+            # notion_question_last_updated = notion_question_row.get_property("Last edited time").date()  # noqa
 
             # check question has id
             if notion_question_row.get_property("id") is None:
                 question_validation_errors.append(
                     ValidationError({"id": "Question sans id. vide ?"})
                 )
+            # # ignore questions not updated recently
+            # elif notion_question_last_updated < (datetime.now().date() - timedelta(days=10)):
+            #     pass
             else:
                 # build question_dict from notion_row
                 notion_question_dict = self.transform_notion_question_row_to_question_dict(
@@ -138,11 +143,20 @@ class Command(BaseCommand):
                 # - check category exists
                 # error if unknown category : api.models.DoesNotExist: Category matching query does not exist.  # noqa
                 if notion_question_dict["category"] is not None:
-                    try:
-                        notion_question_dict["category"] = Category.objects.get(
-                            name=notion_question_dict["category"]
-                        )
-                    except Category.DoesNotExist:
+                    notion_question_category_id = next(
+                        (
+                            c.id
+                            for c in all_categories_list
+                            if c.name == notion_question_dict["category"]
+                        ),
+                        None,
+                    )
+                    if notion_question_category_id:
+                        notion_question_dict[
+                            "category_id"
+                        ] = notion_question_category_id
+                        del notion_question_dict["category"]
+                    else:
                         question_validation_errors.append(
                             ValidationError(
                                 {
@@ -166,14 +180,14 @@ class Command(BaseCommand):
                     new_tags = [
                         new_tag
                         for new_tag in notion_question_tag_name_list
-                        if new_tag not in all_tags_list
+                        if new_tag not in all_tags_name_list
                     ]
                     # create missing tags
                     if len(new_tags):
                         Tag.objects.bulk_create(
                             [Tag(name=new_tag) for new_tag in new_tags]
                         )
-                        all_tags_list += new_tags
+                        all_tags_name_list += new_tags
                         tags_created += new_tags
                 del notion_question_dict["tags"]
 
@@ -181,8 +195,11 @@ class Command(BaseCommand):
             # - if the question does not have validation_errors
             if len(question_validation_errors):
                 validation_errors += question_validation_errors
+            # # - if the question has been updated recently
+            # elif notion_question_last_updated < (datetime.now().date() - timedelta(days=10)):
+            #     pass
             else:
-                # the question doesn't have errors : ready do create/update
+                # the question doesn't have errors : ready to create/update
                 try:
                     db_question, created = Question.objects.get_or_create(
                         id=notion_question_dict["id"], defaults=notion_question_dict
@@ -214,7 +231,7 @@ class Command(BaseCommand):
                             questions_updated.add(db_question.id)
 
                         # update tags
-                        question_tag_changes_string = self.update_question(
+                        question_tag_changes_string = self.update_question_tags(
                             db_question, notion_question_tag_name_list
                         )
 
