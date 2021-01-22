@@ -40,7 +40,9 @@ def action_import_questions_from_notion(request):
         return HttpResponseForbidden()
 
     scope = 0
-    management.call_command("import_questions_from_notion", scope, stdout=out)
+    management.call_command(
+        "import_questions_from_notion", scope, "--skip-old", stdout=out
+    )
     result = out.getvalue()
 
     return HttpResponse(result)
