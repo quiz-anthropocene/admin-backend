@@ -112,7 +112,8 @@ NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES = [
     (1, "1 à 200"),
     (2, "200 à 400"),
     (3, "400 à 600"),
-    (4, "600 et plus"),
+    (4, "600 à 800"),
+    (5, "800 et plus"),
 ]
 NOTION_QUESTIONS_IMPORT_SCOPE_LIST = [
     value for (value, label) in NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES
