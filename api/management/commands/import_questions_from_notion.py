@@ -1,6 +1,7 @@
 import time
 import notion
 import collections
+from datetime import datetime, timedelta
 
 from django.utils import timezone
 
@@ -13,13 +14,15 @@ from api import constants, utilities, utilities_notion
 from api.models import Configuration, Question, Category, Tag, Quiz, Contribution
 
 
+SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS = 15
+
+
 class Command(BaseCommand):
     """
     Usage:
     - python manage.py import_questions_from_notion 0  # all
     - python manage.py import_questions_from_notion 1
-
-    TODO: optimise db queries and avoid Category & Tag calls ?
+    - python manage.py import_questions_from_notion 0 --skip-old
 
     Help :
     - '///' ? delimeter to show lists (string split) in the template
@@ -31,6 +34,13 @@ class Command(BaseCommand):
             type=int,
             choices=constants.NOTION_QUESTIONS_IMPORT_SCOPE_LIST,
             help="0 = all, 1 = first X, 2 = second X",
+        )
+        parser.add_argument(
+            "--skip-old",
+            default=False,
+            action="store_true",
+            dest="skip-old",
+            help="Skip processing of old questions (last updated > 15 days)",
         )
 
     def handle(self, *args, **options):
@@ -123,16 +133,24 @@ class Command(BaseCommand):
         for notion_question_row in notion_questions_list_scope:
             question_validation_errors = []
             notion_question_tag_objects = []
-            # notion_question_last_updated = notion_question_row.get_property("Last edited time").date()  # noqa
+            notion_question_last_updated = notion_question_row.get_property(
+                "Last edited time"
+            ).date()  # noqa
 
             # check question has id
             if notion_question_row.get_property("id") is None:
                 question_validation_errors.append(
                     ValidationError({"id": "Question sans id. vide ?"})
                 )
-            # # ignore questions not updated recently
-            # elif notion_question_last_updated < (datetime.now().date() - timedelta(days=10)):
-            #     pass
+            # ignore questions not updated recently
+            elif options.get("skip-old") and (
+                notion_question_last_updated
+                < (
+                    datetime.now().date()
+                    - timedelta(days=SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS)
+                )
+            ):
+                pass
             else:
                 # build question_dict from notion_row
                 notion_question_dict = self.transform_notion_question_row_to_question_dict(
@@ -195,9 +213,15 @@ class Command(BaseCommand):
             # - if the question does not have validation_errors
             if len(question_validation_errors):
                 validation_errors += question_validation_errors
-            # # - if the question has been updated recently
-            # elif notion_question_last_updated < (datetime.now().date() - timedelta(days=10)):
-            #     pass
+            # - if the question has been updated recently
+            elif options.get("skip-old") and (
+                notion_question_last_updated
+                < (
+                    datetime.now().date()
+                    - timedelta(days=SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS)
+                )
+            ):
+                pass
             else:
                 # the question doesn't have errors : ready to create/update
                 try:
