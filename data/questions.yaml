@@ -24,9 +24,9 @@
   created: 2020-03-07
   updated: 2020-09-28
   tags:
-  - 2
   - 4
   - 5
+  - 216
 - id: 2
   text: 'Calcul d''ordre de grandeur : supposons un instant que toutes nos machines
     soient remplacées par des serviteurs humains, qui les feraient fonctionner avec
@@ -62,6 +62,8 @@
   updated: 2020-09-28
   tags:
   - 1
+  - 197
+  - 216
 - id: 3
   text: Qu'appelle t-on l'effet rebond ?
   hint: ''
@@ -259,6 +261,7 @@
   - 13
   - 142
   - 153
+  - 212
 - id: 9
   text: Entre 2011 et 2013, la Chine a consommé autant de ciment que les États-Unis
     en...
@@ -290,6 +293,7 @@
   tags:
   - 10
   - 57
+  - 216
 - id: 10
   text: « On a 40 ans de pétrole devant nous ! »
   hint: ''
@@ -402,8 +406,8 @@
   created: 2020-03-09
   updated: 2020-09-28
   tags:
-  - 2
   - 11
+  - 216
 - id: 14
   text: Quelle serait la température de la Terre sans atmosphère et effet de serre
     associé ?
@@ -1319,6 +1323,7 @@
   tags:
   - 9
   - 21
+  - 216
 - id: 42
   text: Combien d'années faut-il à du CO2 émis pour s'évacuer de l'atmosphère ?
   hint: ''
@@ -1415,6 +1420,7 @@
   tags:
   - 9
   - 51
+  - 216
 - id: 45
   text: Quelle quantité de métaux lourds, solvants, boues toxiques et autres déchets
     industriels est déversée dans les eaux du monde chaque jour ?
@@ -1453,6 +1459,7 @@
   tags:
   - 9
   - 49
+  - 216
 - id: 46
   text: '[DOUBLON] Selon le rapport du GIEC de 2014, le degré de certitude qu''on
     a que le dérèglement climatique est dû à l''augmentation des gaz à effet de serre
@@ -1546,6 +1553,7 @@
   - 51
   - 142
   - 163
+  - 216
 - id: 49
   text: Un réfugié climatique est une personne contrainte de se relocaliser pour des
     raisons environnementales. Leur nombre actuel (2016) est estimé à 25 millions
@@ -1579,6 +1587,7 @@
   - 24
   - 142
   - 181
+  - 216
 - id: 50
   text: Dans le monde, l'érosion et l'épuisement des sols réduisent les surfaces arables.
     De combien d'hectares par an ?
@@ -1633,6 +1642,7 @@
   updated: 2020-09-28
   tags:
   - 17
+  - 216
 - id: 52
   text: La progression du désert dans le monde, c'est chaque année...
   hint: ''
@@ -1686,7 +1696,8 @@
   added: 2020-03-10
   created: 2020-03-10
   updated: 2020-09-28
-  tags: []
+  tags:
+  - 99
 - id: 54
   text: Les particules fines en France causent chaque année...
   hint: ''
@@ -1862,6 +1873,7 @@
   updated: 2020-09-28
   tags:
   - 7
+  - 216
 - id: 60
   text: Parmi les familles suivantes, quelle est celle dont la proportion d'espèces
     menacées est la plus forte ?
@@ -1921,6 +1933,7 @@
   updated: 2020-09-28
   tags:
   - 7
+  - 216
 - id: 62
   text: De combien d'habitants la population mondiale s'accroît-elle chaque année
     ?
@@ -2168,6 +2181,7 @@
   updated: 2020-09-28
   tags:
   - 11
+  - 216
 - id: 70
   text: 'Dans la consommation d''énergie mondiale, quelle est la part des énergies
     fossiles ? '
@@ -2196,6 +2210,8 @@
   tags:
   - 11
   - 40
+  - 199
+  - 216
 - id: 71
   text: A combien s'élève l'empreinte carbone d'un français (2018, en équivalent CO2)
     ?
@@ -2228,6 +2244,7 @@
   updated: 2020-09-28
   tags:
   - 1
+  - 216
 - id: 72
   text: En émissions sur le territoire national, lequel de ces secteurs émet le plus
     de gaz à effet de serre en France ?
@@ -2386,6 +2403,7 @@
   updated: 2020-09-28
   tags:
   - 32
+  - 216
 - id: 77
   text: Quelle est la contribution aux émissions de gaz à effet de serre de la moitié
     la plus pauvre de la population mondiale ?
@@ -2452,6 +2470,7 @@
   - 24
   - 33
   - 34
+  - 216
 - id: 79
   text: De combien s'est élevé le niveau moyen des océans depuis 1900 ?
   hint: ''
@@ -2618,7 +2637,8 @@
   created: 2020-03-11
   updated: 2020-09-28
   tags:
-  - 2
+  - 13
+  - 198
 - id: 84
   text: Quelle proportion des émissions françaises de gaz à effet de serre les forêts
     françaises absorbent-elles ?
@@ -3004,6 +3024,7 @@
   tags:
   - 1
   - 5
+  - 216
 - id: 96
   text: Quelle quantité d'aliments jette-t-on chaque année en France ?
   hint: ''
@@ -3782,6 +3803,7 @@
   - 33
   - 35
   - 60
+  - 216
 - id: 121
   text: Quelle est la taille des données et modèles climatiques qui ont été utilisés
     par le GIEC dans leur dernier rapport d’évaluation en 2014 (en GigaOctets) ?
@@ -5622,6 +5644,7 @@
   tags:
   - 33
   - 34
+  - 216
 - id: 181
   text: L’albédo est le pouvoir réfléchissant d'une surface, et varie de 0 (corps
     noir parfait) à 1 (miroir parfait). Quel est l’albédo moyen de la terre ?
@@ -5856,6 +5879,7 @@
   tags:
   - 50
   - 64
+  - 199
 - id: 189
   text: Parmi ces pays, lequel a le plus de voitures par habitant ?
   hint: ''
@@ -6795,6 +6819,7 @@
   tags:
   - 1
   - 24
+  - 216
 - id: 221
   text: Quelle proportion des communes françaises sont classées à risque feux de forêts
     ?
@@ -6945,7 +6970,8 @@
   created: 2020-05-05
   updated: 2020-09-28
   tags:
-  - 2
+  - 196
+  - 216
 - id: 226
   text: Le 25 juillet 2019, le record de trafic aérien a été battu. Combien d'avions
     ont volé ce jour-là ?
@@ -7641,6 +7667,7 @@
   tags:
   - 43
   - 54
+  - 197
 - id: 248
   text: Si l’Union Européenne était un pays, quel serait son classement dans les émissions
     de CO2 mondiales ?
@@ -11050,6 +11077,7 @@
   - 72
   - 80
   - 82
+  - 216
 - id: 359
   text: Quelle est la puissance installée de tous les moyens de production électrique
     en service dans le monde ? (France = 130 GW)
@@ -12461,11 +12489,11 @@
   created: 2020-05-20
   updated: 2020-09-28
   tags:
-  - 5
   - 23
   - 51
   - 142
   - 181
+  - 216
 - id: 404
   text: 'A combien de jours de consommation intérieure les stocks stratégiques pétroliers
     correspondent-ils en France ? '
@@ -12786,6 +12814,7 @@
   - 3
   - 13
   - 92
+  - 213
 - id: 413
   text: Si - hypothèse de pensée - tous les pays du monde tenaient les engagements
     pris suite à l’accord de Paris (COP21), de combien serait le réchauffement moyen
@@ -13606,6 +13635,7 @@
   - 1
   - 31
   - 72
+  - 216
 - id: 441
   text: 'Comment les émissions moyennes de CO2 d’un Américain se comparent-elles à
     celles d’un Indien ?
@@ -16180,6 +16210,7 @@
   - 1
   - 72
   - 92
+  - 213
 - id: 527
   text: Dans le monde, quel est le secteur qui a le plus baissé ses émissions (en
     valeur absolue) à cause de la pandémie de Covid ?
@@ -16224,6 +16255,7 @@
   tags:
   - 1
   - 92
+  - 213
 - id: 528
   text: Lors de la pandémie de Covid, combien de supertankers sont restés au large
     de la Californie à cause de la baisse de la demande en pétrole ?
@@ -16252,7 +16284,9 @@
   tags:
   - 11
   - 59
+  - 80
   - 92
+  - 213
 - id: 529
   text: Lequel de ces volumes est le plus grand ?
   hint: ''
@@ -16798,7 +16832,9 @@
   updated: 2020-09-28
   tags:
   - 17
+  - 86
   - 107
+  - 226
 - id: 546
   text: Laquelle de ces capacités physiques acquises par le genre Homo a pu lui apporter
     le plus d'avantages pour la chasse ?
@@ -16857,6 +16893,8 @@
   updated: 2020-09-28
   tags:
   - 32
+  - 86
+  - 226
 - id: 548
   text: Depuis combien d'années l'humanité a-t-elle un impact significatif sur l'utilisation
     des sols sur quasiment l'ensemble des continents ?
@@ -17480,6 +17518,7 @@
   updated: 2020-09-18
   tags:
   - 51
+  - 216
 - id: 569
   text: DOUBLON - En France, combien de tonnes d'aliments consommables partent à la
     poubelle tous les ans ?
@@ -17893,6 +17932,7 @@
   updated: 2020-09-28
   tags:
   - 186
+  - 216
 - id: 581
   text: Je suis biologiste. Après avoir découvert qu’une rivière polluée abritait
     une proportion de poissons femelles anormalement élevée, j'ai mis en lumière les
@@ -17959,6 +17999,7 @@
   updated: 2020-09-28
   tags:
   - 39
+  - 197
 - id: 583
   text: 'La population mondiale a été multipliée par 8 en :'
   hint: ''
@@ -18150,6 +18191,7 @@
   updated: 2020-09-22
   tags:
   - 37
+  - 216
 - id: 590
   text: Parmi ces régions, lesquelles ont connu des gigantesques feux de forêt entre
     le 1er juillet 2019 et le 1er juillet 2020 (plusieurs réponses possibles) ?
@@ -18231,6 +18273,7 @@
   updated: 2020-09-22
   tags:
   - 95
+  - 216
 - id: 593
   text: La frange des 1% les riches du monde émettent autant de gaz à effet de serre
     que...
@@ -18330,6 +18373,7 @@
   updated: 2020-11-17
   tags:
   - 13
+  - 216
 - id: 596
   text: Juste avant la faillite de Lehman Brothers en 2008, le prix du pétrole avait
     atteint des sommets. Quel fut alors le prix le plus haut atteint pour un baril
@@ -18895,7 +18939,9 @@
   added: 2020-11-11
   created: 2020-11-17
   updated: 2020-11-17
-  tags: []
+  tags:
+  - 194
+  - 202
 - id: 614
   text: Brûler 50kg de déchets verts, cela équivaut en termes d'émissions de particules
     fines à parcourir avec un véhicule diesel récent...
@@ -19277,6 +19323,7 @@
   tags:
   - 13
   - 92
+  - 213
 - id: 626
   text: 'Vrai ou faux : les transports routiers des États-Unis émettent plus de CO2
     que la totalité des secteurs et activités du continent africain ?'
@@ -20270,6 +20317,7 @@
   - 1
   - 39
   - 92
+  - 213
 - id: 657
   text: Que devient majoritairement le CO2 émis dans l'atmosphère ?
   hint: ''
@@ -20646,6 +20694,7 @@
   - 11
   - 80
   - 92
+  - 213
 - id: 668
   text: À quel âge un américain émet-il le plus de CO2 en moyenne ?
   hint: ''
@@ -20996,6 +21045,7 @@
   created: 2020-12-10
   updated: 2020-12-10
   tags:
+  - 72
   - 194
   - 201
 - id: 679
@@ -22211,7 +22261,7 @@
   tags:
   - 33
   - 217
-  - 218
+  - 224
 - id: 711
   text: Quel est le nombre d'avions commerciaux dans le monde en 2019 ? Alors imaginez
     en 2038...
@@ -22251,7 +22301,7 @@
   tags:
   - 33
   - 217
-  - 218
+  - 224
 - id: 712
   text: Quel est le nombre d'aéroports dans le monde en 2019 ?
   hint: Et pas tous  saturés
@@ -22279,7 +22329,7 @@
   tags:
   - 33
   - 217
-  - 218
+  - 224
 - id: 713
   text: Quel est le trafic de Paris CDG 2019 ? Millions de passagers?
   hint: Toujours plus
@@ -22308,7 +22358,7 @@
   tags:
   - 33
   - 217
-  - 218
+  - 224
 - id: 714
   text: Quel est le nombre de vols commerciaux dans le monde en 2018 ? Millions
   hint: Pour le TA, le terrain de jeux est sans limites
@@ -22340,7 +22390,7 @@
   tags:
   - 33
   - 217
-  - 218
+  - 224
 - id: 715
   text: Quel est le nombre de Cies Aériennes dans le monde en 2018 ?
   hint: Pour le TA, le terrain de jeux est sans limites
@@ -22589,7 +22639,7 @@
   tags:
   - 33
   - 217
-  - 218
+  - 224
 - id: 723
   text: 'Hélicoptère DRAGON : Quelle consommation ? litres / km'
   hint: Juste un peu moins que les hommes volants
@@ -22778,6 +22828,8 @@
   created: 2021-01-06
   updated: 2021-01-06
   tags:
+  - 12
+  - 32
   - 33
   - 217
   - 218
@@ -22949,8 +23001,8 @@
   updated: 2021-01-06
   tags:
   - 33
+  - 85
   - 217
-  - 218
 - id: 732
   text: Connaissez-vous les autres taxes en vigueur en France ?
   hint: Pourtant vous la payez bien
@@ -22980,8 +23032,8 @@
   updated: 2021-01-06
   tags:
   - 33
+  - 85
   - 217
-  - 218
 - id: 733
   text: Quel est le montant de la TICPE à la pompe en France ?
   hint: Vous n’imaginez pas
@@ -23014,8 +23066,8 @@
   updated: 2021-01-06
   tags:
   - 33
+  - 85
   - 217
-  - 218
 - id: 734
   text: Quel est la part de coût du kérosène dans le prix d'un billet d'avion ?
   hint: Pas assez essentiel
@@ -23045,8 +23097,8 @@
   updated: 2021-01-06
   tags:
   - 33
+  - 85
   - 217
-  - 218
 - id: 735
   text: Copy of à venir
   hint: 'OEW : Operating Empty Weight'
@@ -23217,7 +23269,7 @@
   tags:
   - 33
   - 217
-  - 218
+  - 225
 - id: 741
   text: Copy of à venir
   hint: 'OEW : Operating Empty Weight'
@@ -23507,9 +23559,10 @@
   created: 2021-01-06
   updated: 2021-01-06
   tags:
+  - 24
   - 33
   - 217
-  - 218
+  - 224
 - id: 751
   text: Quelle est la part de la population mondiale qui utilise des vols internationaux
     ?
@@ -23536,9 +23589,10 @@
   created: 2021-01-06
   updated: 2021-01-06
   tags:
+  - 24
   - 33
   - 217
-  - 218
+  - 224
 - id: 752
   text: 50% des émissions sont produites par « x % » des voyageurs de la population
     mondiale ?
@@ -24501,6 +24555,34 @@
   - 33
   - 217
   - 218
+- id: 784
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-16
+  created: 2021-01-23
+  updated: 2021-01-23
+  tags:
+  - 33
+  - 217
+  - 218
 - id: 785
   text: Copy of à venir
   hint: ''
@@ -24651,9 +24733,37 @@
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-17
+  added: 2021-01-13
   created: 2021-01-17
   updated: 2021-01-17
+  tags:
+  - 33
+  - 217
+  - 218
+- id: 792
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-23
+  updated: 2021-01-23
   tags:
   - 33
   - 217
@@ -25958,6 +26068,8 @@
   created: 2021-01-18
   updated: 2021-01-18
   tags:
+  - 33
+  - 42
   - 218
 - id: 905
   text: Copy of à venir
