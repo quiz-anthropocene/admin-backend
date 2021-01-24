@@ -128,7 +128,7 @@ Voir dans le dossier `/data/architecture`
     ```
 - Chargez la base de donnée
     ```
-    python manage.py init_db
+    python manage.py init_db --with-sql-reset
     ```
 - Installez les dépendances du Frontend
     ```
@@ -166,7 +166,7 @@ Le Frontend sera accessible à l'url `http://localhost:8080`
 Créez d'abord un utilisateur admin
 ```
 cd backend
-python manage.py createsuperuser --username admin@email.com
+python manage.py createsuperuser --username admin@email.com --email admin@email.com
 ```
 
 Lancez le Backend, et connectez-vous sur `http://localhost:8000/admin`
@@ -209,7 +209,7 @@ yarn lint
 
 Importer toute la donnée dans la base de donnée
 ```
-python manage.py init_db
+python manage.py init_db --with-sql-reset
 ```
 
 Importer les questions dans la base de donnée
@@ -239,7 +239,7 @@ Réinitialiser complètement la base de donnée
 ```
 python manage.py reset_db // django-extensions
 python manage.py migrate
-python manage.py init_db
+python manage.py init_db --with-sql-reset
 ```
 
 Queries M2M

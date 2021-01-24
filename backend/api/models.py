@@ -750,6 +750,16 @@ class Quiz(models.Model):
         return "<br />".join([str(q) for q in self.questions_not_validated_list])
 
     @property
+    def questions_difficulty_average(self):
+        questions_difficulty_avg_raw = self.questions.aggregate(Avg("difficulty"))
+        questions_difficulty_average_value = (
+            questions_difficulty_avg_raw["difficulty__avg"]
+            if questions_difficulty_avg_raw
+            else 0
+        )
+        return questions_difficulty_average_value
+
+    @property
     def relationships_all(self):
         return self.from_quizs.all() | self.to_quizs.all()
 
@@ -782,22 +792,26 @@ class Quiz(models.Model):
     dislike_count_agg.fget.short_description = "# Dislike"
 
     def clean(self):
-        # > only run on existing and published quizzes (Quiz query won't work on new quizzes)
-        if getattr(self, "id") and getattr(self, "publish"):
-            # > questions rules (only works for *existing* quiz questions, see quiz_validate_m2m_fields for new questions)  # noqa
+        # > only run on existing (Quiz query won't work on new quizzes)
+        if getattr(self, "id"):
+            # get quiz
             try:
                 quiz = Quiz.objects.get(pk=self.id)
             except:  # noqa
                 return
-            quiz_questions = quiz.questions
-            # - must have at least 1 question
-            if quiz_questions.count() < 1:
-                raise ValidationError(
-                    {
-                        "questions": f"Un quiz 'published' doit comporter au moins 1 question. "
-                        f"Quiz {self.id}"
-                    }
-                )
+            # > basic question checks
+            if getattr(self, "publish"):
+                quiz_questions = quiz.questions
+                # - must have at least 1 question
+                if quiz_questions.count() < 1:
+                    raise ValidationError(
+                        {
+                            "questions": f"Un quiz 'published' doit comporter au moins 1 question. "
+                            f"Quiz {self.id}"
+                        }
+                    )
+            # > compute questions difficulty_average
+            self.difficulty_average = self.questions_difficulty_average
 
 
 def quiz_validate_fields(sender, instance, **kwargs):
@@ -812,29 +826,7 @@ def quiz_validate_fields(sender, instance, **kwargs):
         raise ValidationError({"id": f"Valeur : 'empty'. " f"Quiz: {instance}"})
 
 
-def quiz_validate_m2m_fields(sender, **kwargs):
-    """
-    Method to validate *new* Quiz m2m fields.
-    see question_validate_fields
-    """
-    # update difficulty_average
-    if kwargs["action"].startswith("post"):
-        difficulty_average_agg = kwargs["instance"].questions.aggregate(
-            Avg("difficulty")
-        )
-        difficulty_average_value = (
-            difficulty_average_agg["difficulty__avg"] if difficulty_average_agg else 0
-        )
-        kwargs["instance"].difficulty_average = difficulty_average_value
-        kwargs["instance"].save(
-            update_fields=["difficulty_average"]
-        )  # will call clean() again...
-
-
 models.signals.pre_save.connect(quiz_validate_fields, sender=Quiz)
-# models.signals.m2m_changed.connect(
-#     quiz_validate_m2m_fields, sender=Quiz.questions.through
-# )
 
 
 class QuizQuestion(models.Model):
