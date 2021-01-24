@@ -1,6 +1,8 @@
 import yaml
+from io import StringIO
 
-from django.core.management import BaseCommand
+from django.core.management import BaseCommand, call_command
+from django.db import connection
 
 from api import utilities
 from api.models import (
@@ -15,6 +17,7 @@ from api.models import (
 )
 
 
+APP_NAME = "api"
 CONFIGURATION_FILE_PATH = "../data/configuration.yaml"
 CATEGORIES_FILE_PATH = "../data/categories.yaml"
 TAGS_FILE_PATH = "../data/tags.yaml"
@@ -29,6 +32,7 @@ class Command(BaseCommand):
     """
     Usage:
     python manage.py init_db
+    python manage.py init_db --with_sql_reset
     """
 
     help = """Initialize database with the files in the /data folder"""
@@ -43,10 +47,23 @@ class Command(BaseCommand):
         (Glossary, GLOSSARY_FILE_PATH),
     ]
 
+    def add_arguments(self, parser):
+        parser.add_argument(
+            "--with-sql-reset",
+            default=False,
+            action="store_true",
+            dest="with-sql-reset",
+            help="Reset the SQL table sequences afterwards",
+        )
+
     def handle(self, *args, **options):
+        # delete + add data
         self.init_configuration_table()
         for model_item in self.MODELS_LIST:
             self.init_model_table(model_item[0], model_item[1])
+        if options["with-sql-reset"]:
+            # reset table indexes
+            self.reset_sql_squences()
 
     def init_configuration_table(self):
         Configuration.objects.all().delete()
@@ -62,3 +79,17 @@ class Command(BaseCommand):
         data = yaml.safe_load(data_file)
         utilities.load_model_data_to_db(model, data)
         print(f"{model._meta.object_name}:", model.objects.count(), "objects")
+
+    def reset_sql_squences(self):
+        """
+        https://docs.djangoproject.com/en/3.1/ref/django-admin/#sqlsequencereset
+        https://stackoverflow.com/a/44113124
+        """
+        print("Resetting SQL sequences...")
+        out = StringIO()
+        call_command("sqlsequencereset", APP_NAME, stdout=out, no_color=True)
+        sql = out.getvalue()
+        with connection.cursor() as cursor:
+            cursor.execute(sql)
+        out.close()
+        print("Done")
