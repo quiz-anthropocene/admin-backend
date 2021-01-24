@@ -2928,8 +2928,8 @@
   - 24
   - 33
 - id: 93
-  text: Quelle quantité de matières est extraite du sol pour la fabrication d'un smartphone
-    ?
+  text: DOUBLON 392 - Quelle quantité de matières est extraite du sol pour la fabrication
+    d'un smartphone ?
   hint: ''
   type: QCM
   category: 2
@@ -2955,7 +2955,7 @@
     MIPS de +200kg
   author: Guillaume Boudry
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-04-24
   created: 2020-04-26
   updated: 2020-09-28
@@ -12140,7 +12140,7 @@
     sont 14 milliards de smartphones qui ont été produits.
   answer_accessible_url: https://www.zdnet.fr/actualites/gaz-a-effet-de-serre-les-smartphones-polluent-surtout-pendant-leur-fabrication-39846224.htm
   answer_scientific_url: https://www.apple.com/euro/environment/pdf/a/generic/products/iphone/iPhone_11_PER_sept2019.pdf
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/276.jpg
+  answer_image_url: https://pbs.twimg.com/media/DbDcakTWAAASzbV.jpg
   answer_image_explanation: ''
   answer_extra_info: 'Réponses modifiées pour permettre de mémoriser l’ordre de grandeur
     de l’empreinte carbone d’un smartphone: ~100 kg CO2eq
@@ -21678,7 +21678,7 @@
   type: QCM
   category: 3
   difficulty: 2
-  answer_option_a: '0.5'
+  answer_option_a: 0.5 kg
   answer_option_b: '3'
   answer_option_c: '5'
   answer_option_d: '20'
@@ -21711,7 +21711,7 @@
   type: QCM
   category: 3
   difficulty: 2
-  answer_option_a: '0.1'
+  answer_option_a: 0.1 kg
   answer_option_b: '0.5'
   answer_option_c: '5'
   answer_option_d: '8'
@@ -21741,7 +21741,7 @@
   type: QCM
   category: 3
   difficulty: 2
-  answer_option_a: '2.5'
+  answer_option_a: 2.5 kg
   answer_option_b: '5'
   answer_option_c: '10'
   answer_option_d: '15'
@@ -21769,12 +21769,12 @@
   - 33
   - 217
 - id: 698
-  text: Quelle est la durée de persistance du CO2 dans l'atmosphère ? Années
+  text: 'Quelle est la durée de persistance du CO2 dans l''atmosphère ? '
   hint: Oh la la
   type: QCM
   category: 3
   difficulty: 2
-  answer_option_a: '0.01'
+  answer_option_a: 0.01 année
   answer_option_b: '0.5'
   answer_option_c: '10'
   answer_option_d: '100'
@@ -21808,7 +21808,7 @@
   type: QCM
   category: 3
   difficulty: 2
-  answer_option_a: '1'
+  answer_option_a: x 1
   answer_option_b: '120'
   answer_option_c: '5500'
   answer_option_d: '36500'
@@ -21836,8 +21836,8 @@
   - 33
   - 217
 - id: 700
-  text: Quelle est la part du CO2 de l'aviation dans les émissions mondiale  2019
-    ? %
+  text: 'Quelle est la part du CO2 de l''aviation dans les émissions mondiale  2019
+    ? '
   hint: Un train peut en cacher un autre
   type: QCM
   category: 3
@@ -21884,7 +21884,7 @@
   - 33
   - 217
 - id: 701
-  text: Quelle est la part de l'aviation dans le réchauffement climatique ? %
+  text: 'Quelle est la part de l''aviation dans le réchauffement climatique ? '
   hint: Un train peu en cacher un autre
   type: QCM
   category: 1
@@ -21944,12 +21944,12 @@
   - 33
   - 217
 - id: 702
-  text: Quel est le poids d'un A380 au décollage ? Tonnes
+  text: 'Quel est le poids d''un A380 au décollage ? '
   hint: 'MTOW : Max Take Off Weight'
   type: QCM
   category: 5
   difficulty: 3
-  answer_option_a: '50'
+  answer_option_a: 50 tonnes
   answer_option_b: '200'
   answer_option_c: '550'
   answer_option_d: '1000'
@@ -21973,13 +21973,13 @@
   - 217
   - 218
 - id: 703
-  text: Quel est le poids du carburant d'un A380 au décollage ? Tonnes
+  text: 'Quel est le poids du carburant d''un A380 au décollage ? '
   hint: Quelques citernes que les aéroports voudraient bien faire disparaitre des
     yeux des voyageurs
   type: QCM
   category: 5
   difficulty: 3
-  answer_option_a: '40'
+  answer_option_a: 40 tonnes
   answer_option_b: '240'
   answer_option_c: '540'
   answer_option_d: '840'
@@ -22006,12 +22006,12 @@
   - 217
   - 218
 - id: 704
-  text: Quel est le poids des passagers d'un A380 au décollage ? Tonnes
+  text: 'Quel est le poids des passagers d''un A380 au décollage ? '
   hint: à 100 kg le passager
   type: QCM
   category: 5
   difficulty: 3
-  answer_option_a: '20'
+  answer_option_a: 20 tonnes
   answer_option_b: '30'
   answer_option_c: '40'
   answer_option_d: '50'
@@ -22039,7 +22039,7 @@
   - 217
   - 218
 - id: 705
-  text: Quel est le poids moyen relatif des passagers / poids total décollage ? %
+  text: 'Quel est le poids moyen relatif des passagers / poids total décollage ? '
   hint: à 100 kg le passager
   type: QCM
   category: 5
@@ -22068,7 +22068,7 @@
   - 217
   - 218
 - id: 706
-  text: Quel est le poids moyen relatif du kérosène / poids total décollage ? %
+  text: 'Quel est le poids moyen relatif du kérosène / poids total décollage ? '
   hint: Quelques citernes que les aéroports voudraient bien faire disparaitre des
     yeux des voyageurs
   type: QCM
@@ -22097,8 +22097,8 @@
   - 217
   - 218
 - id: 707
-  text: Quel est le poids moyen relatif de l'avion à vide / poids total décollage
-    ? %
+  text: 'Quel est le poids moyen relatif de l''avion à vide / poids total décollage
+    ? '
   hint: 'OEW : Operating Empty Weight'
   type: QCM
   category: 5
@@ -22132,10 +22132,10 @@
   type: QCM
   category: 3
   difficulty: 3
-  answer_option_a: '1'
-  answer_option_b: '2'
-  answer_option_c: '6'
-  answer_option_d: '15'
+  answer_option_a: ' x 1'
+  answer_option_b: x 2
+  answer_option_c: x 6
+  answer_option_d: x 15
   answer_correct: c
   has_ordered_answers: false
   answer_explanation: '6 fois plus de CO2 que le poids propre de l’avion… !
@@ -22189,10 +22189,10 @@
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: '1'
-  answer_option_b: '6'
-  answer_option_c: '12'
-  answer_option_d: '18'
+  answer_option_a: ' x 1'
+  answer_option_b: ' x 6'
+  answer_option_c: ' x 12'
+  answer_option_d: x 18
   answer_correct: d
   has_ordered_answers: false
   answer_explanation: '18 fois plus de CO2 que le poids propre de l’avion… !
@@ -22331,12 +22331,12 @@
   - 217
   - 224
 - id: 713
-  text: Quel est le trafic de Paris CDG 2019 ? Millions de passagers?
+  text: Quel est le trafic de Paris CDG 2019 ?
   hint: Toujours plus
   type: QCM
   category: 2
   difficulty: 3
-  answer_option_a: '10'
+  answer_option_a: 10 Millions
   answer_option_b: '20'
   answer_option_c: '40'
   answer_option_d: '80'
@@ -22360,12 +22360,12 @@
   - 217
   - 224
 - id: 714
-  text: Quel est le nombre de vols commerciaux dans le monde en 2018 ? Millions
+  text: Quel est le nombre de vols commerciaux dans le monde en 2018 ?
   hint: Pour le TA, le terrain de jeux est sans limites
   type: QCM
   category: 2
   difficulty: 2
-  answer_option_a: '6'
+  answer_option_a: 6 Millions
   answer_option_b: '12'
   answer_option_c: '26'
   answer_option_d: '38'
@@ -22420,18 +22420,25 @@
   - 217
   - 218
 - id: 716
-  text: Copy of à venir
-  hint: ''
+  text: 'Quelle était la consommation moyenne de la flotte Air France en 2018 ? '
+  hint: Presque autant qu'une petite voiture
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: 2 l / 100km
+  answer_option_b: '3.4'
+  answer_option_c: '4.1'
+  answer_option_d: '5'
+  answer_correct: b
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: '3.4 litres au 100 km / passager.
+
+    Cela suppose que l’avion est plein.
+
+    Une petite voiture et 2 passagers font mieux que l''avion. Il faut admettre que
+    ce ne sont pas les mêmes usages.
+
+    On ne fait pas 5 ou 10000 km d’une seule traite en voiture.'
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_image_url: ''
@@ -22448,19 +22455,34 @@
   - 217
   - 218
 - id: 717
-  text: Copy of à venir
-  hint: ''
+  text: Combien de nouveaux aéroports y a-t-il à l'étude dans le monde ?
+  hint: No limits
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: '52'
+  answer_option_b: '423'
+  answer_option_c: '675'
+  answer_option_d: 1,150
+  answer_correct: b
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: 'Actuellement, 423 nouveaux aéroports sont prévus ou sont en
+    construction.
+
+    223 d''entre eux se trouvent dans la seule région Asie-Pacifique et
+
+    58 en Europe.
+
+    Pistes supplémentaires considérées comme numéro 121 dans le monde (28 en Europe)
+
+    sont également en projet ou en construction.
+
+    Les résidents protestent contre bon nombre de ces projets pour une multitude de
+    raisons, ainsi la réalisation de ces plans est toujours contestée.
+
+    Ce que le diagramme ne montre pas, ce sont 205 autres extensions de piste prévues,
+    262 nouveaux terminaux et 175 extensions de terminaux.'
+  answer_accessible_url: http://www.ftwatch.at/wp-content/uploads/2017/10/FT-Watch_Green-Flying_2017.pdf
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -22538,7 +22560,7 @@
   type: QCM
   category: 5
   difficulty: 3
-  answer_option_a: '2'
+  answer_option_a: 2 kWh
   answer_option_b: '10'
   answer_option_c: '30'
   answer_option_d: '100'
@@ -22573,7 +22595,7 @@
   type: QCM
   category: 5
   difficulty: 3
-  answer_option_a: '0.5'
+  answer_option_a: 0.5 kWh
   answer_option_b: '5'
   answer_option_c: '25'
   answer_option_d: '50'
@@ -22641,12 +22663,12 @@
   - 217
   - 224
 - id: 723
-  text: 'Hélicoptère DRAGON : Quelle consommation ? litres / km'
+  text: 'Hélicoptère DRAGON : Quelle consommation par km ? '
   hint: Juste un peu moins que les hommes volants
   type: QCM
   category: 5
   difficulty: 3
-  answer_option_a: '1.8 '
+  answer_option_a: 1.8 l / km
   answer_option_b: '3.2'
   answer_option_c: '5.5'
   answer_option_d: '8.6'
@@ -22674,12 +22696,12 @@
   - 218
 - id: 724
   text: 'Homme volant : Quelle quantité de carburant Frankie Zapata à utilisé pour
-    traverser la Manche ? litres'
+    traverser la Manche ? '
   hint: Avec ravitaillement à mi-parcours
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: '23'
+  answer_option_a: 23 litres
   answer_option_b: '52'
   answer_option_c: '80'
   answer_option_d: '150'
@@ -22718,7 +22740,7 @@
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: '20'
+  answer_option_a: ' x 20'
   answer_option_b: '200'
   answer_option_c: '800'
   answer_option_d: '1600'
@@ -22745,13 +22767,13 @@
   - 217
   - 218
 - id: 726
-  text: Quel est le nombre maximum de passager jamais transporté  dans un seul et
-    même avion ?
+  text: Quel est le nombre maximum de passager (pax) jamais transporté  dans un seul
+    et même avion ?
   hint: Mission
   type: QCM
   category: 6
   difficulty: 2
-  answer_option_a: '600'
+  answer_option_a: 600 pax
   answer_option_b: '952'
   answer_option_c: '1122'
   answer_option_d: '1446'
@@ -23100,19 +23122,31 @@
   - 85
   - 217
 - id: 735
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: Dans l'Union Européenne, quelle est la perte de revenu provenant des exemptions
+    de taxe sur le kérosène ?
+  hint: Et finalement payé par ceux qui ne prennent pas l'avion
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
+  answer_option_a: 4,6 Mds €
+  answer_option_b: 12,4 Mds €
+  answer_option_c: 28,0 Mds €
+  answer_option_d: 40 Mds €
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: ' 40 Milliards d''€uro,...
+
+    Les avionneurs et les compagnies aériennes bénéficient de subventions importantes.
+
+    Tout le monde - y compris ceux qui ne volent pas - paie ces subventions pour que
+    le mode de transport des plus aisés reste bon marché.
+
+    Tous les inconvénients exposés - du changement climatique au déplacement de population
+    dû à l''expansion des aéroports - soulèvent la question de savoir si l''objectif
+    peut vraiment être de faire de tout le monde des voyageurs fréquents,
+
+    ou si les voyages aériens doivent en fait être limités.'
+  answer_accessible_url: http://www.ftwatch.at/wp-content/uploads/2017/10/FT-Watch_Green-Flying_2017.pdf
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -23250,7 +23284,7 @@
   answer_option_b: Canular
   answer_option_c: Corsia
   answer_option_d: Farcia
-  answer_correct: d
+  answer_correct: c
   has_ordered_answers: false
   answer_explanation: L'outil élaboré par L'OACI et IATA en 2016 qui devait entre
     en vigueur progressivement entre 2021 et 2027 avec l'objectif de diviser par 2
@@ -23627,13 +23661,12 @@
   - 217
   - 224
 - id: 753
-  text: Quelles émissions maxi atteintes par des individus de l’aviation privée ?
-    en tCO2 /an /pers
+  text: 'Quelles émissions maxi atteintes par des individus de l’aviation privée ? '
   hint: à peine croyable
   type: QCM
   category: 2
   difficulty: 2
-  answer_option_a: '250'
+  answer_option_a: 250 t CO2 / an / Cap
   answer_option_b: '1000'
   answer_option_c: '5000'
   answer_option_d: '7500'
@@ -24146,7 +24179,7 @@
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: '4'
+  answer_option_a: 4 litres
   answer_option_b: '7'
   answer_option_c: '16'
   answer_option_d: '25'
@@ -24174,7 +24207,7 @@
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: '4'
+  answer_option_a: 4 litres
   answer_option_b: '7'
   answer_option_c: '16'
   answer_option_d: '25'
@@ -24258,7 +24291,7 @@
   type: QCM
   category: 5
   difficulty: 2
-  answer_option_a: 4 à 75%
+  answer_option_a: De 4 à 75%
   answer_option_b: 5.3 à 17%
   answer_option_c: 1 à 7.6%
   answer_option_d: 1 à 95%
@@ -24713,19 +24746,38 @@
   - 218
   - 225
 - id: 791
-  text: Copy of à venir
-  hint: ''
+  text: 'Quelle est parmi ces actions pour lutter contre le RC, celle la plus facile
+    pour les Français ?
+
+    Moins de viande
+
+    Moins de vêtements
+
+    Moins de Voiture
+
+    Moins d’avion '
+  hint: 'Surprise : le simple bon sens'
   type: QCM
   category: 2
   difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
+  answer_option_a: Moins de viande
+  answer_option_b: Moins de vêtements neufs
+  answer_option_c: Moins de voiture
+  answer_option_d: moins d'avion
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: 'Moins d’avion 40%, dans l’ordre :
+
+    Moins d’avion 40 %
+
+    Moins de viande 18%
+
+    Moins de streaming 18%
+
+    Moins d’habits neufs 14%
+
+    Moins de voiture 10%'
+  answer_accessible_url: https://www.eib.org/en/surveys/climate-survey/3rd-climate-survey/what-to-give-up-for-climate-change#anchor-1
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -24739,21 +24791,23 @@
   tags:
   - 33
   - 217
-  - 218
+  - 225
 - id: 792
-  text: Copy of à venir
-  hint: ''
+  text: Quelle est le nbre de vols / semaine de la route aérienne la plus fréquentée
+    ?
+  hint: Waouh, quand même
   type: QCM
   category: 2
   difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
+  answer_option_a: '123'
+  answer_option_b: '298'
+  answer_option_c: '625'
+  answer_option_d: '1240'
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: 1240 vols par semaine soit 175 vols par jours on croit "rêver"
+    ou pas...
+  answer_accessible_url: https://fr.wikipedia.org/wiki/Routes_a%C3%A9riennes_les_plus_fr%C3%A9quent%C3%A9es
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -25849,7 +25903,7 @@
   answer_accessible_url: https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf
   answer_scientific_url: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/829.png
-  answer_image_explanation: 'Source : la Fresque du Numérique, [https://www.fresquedunumerique.org/](https://www.fresquedunumerique.org/)'
+  answer_image_explanation: 'Source : la Fresque du Numérique, fresquedunumerique.org'
   answer_extra_info: ''
   author: Aurélien Déragne
   validator: Matthieu Massart
@@ -25894,6 +25948,33 @@
   tags:
   - 30
   - 100
+- id: 831
+  text: Quelle part du trafic internet la vidéo représente-t-elle ?
+  hint: C'est plus que ce que l'on croit :)
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 20%
+  answer_option_b: 40%
+  answer_option_c: 60%
+  answer_option_d: 80%
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: '80% des flux de données mondiaux qui transitent par internet
+    sont des flux vidéo : vidéo à la demande, pornographie, vidéos de réseaux sociaux...'
+  answer_accessible_url: https://theshiftproject.org/wp-content/uploads/2019/07/R%C3%A9sum%C3%A9-aux-d%C3%A9cideurs_FR_Linsoutenable-usage-de-la-vid%C3%A9o-en-ligne.pdf
+  answer_scientific_url: https://theshiftproject.org/wp-content/uploads/2019/07/2019-01.pdf
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/831.png
+  answer_image_explanation: 'Source : la Fresque du Numérique, [https://www.fresquedunumerique.org/](https://www.fresquedunumerique.org/)'
+  answer_extra_info: ''
+  author: Aurélien Déragne
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-01-20
+  created: 2021-01-24
+  updated: 2021-01-24
+  tags:
+  - 30
 - id: 832
   text: Au niveau mondial, quelle part des déchets électroniques est collectée en
     vue d'un traitement ?
@@ -25918,7 +25999,7 @@
   answer_accessible_url: https://www.greenit.fr/2017/12/26/20-dechets-electroniques-recycles/
   answer_scientific_url: https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM%202017/Global-E-waste%20Monitor%202017%20-%20Chapter%206.pdf
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/832.png
-  answer_image_explanation: 'Source : la Fresque du Numérique, [https://www.fresquedunumerique.org/](https://www.fresquedunumerique.org/)'
+  answer_image_explanation: 'Source : la Fresque du Numérique, fresquedunumerique.org'
   answer_extra_info: ''
   author: Aurélien Déragne
   validator: Matthieu Massart
