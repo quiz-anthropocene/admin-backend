@@ -478,6 +478,7 @@ class QuizAdmin(ExportMixin, FieldsetsInlineMixin, admin.ModelAdmin):
         "author",
         "tags_list_string",
         "difficulty_average",
+        "has_audio",
         "publish",
         "spotlight",
         "answer_count_agg",
@@ -487,6 +488,7 @@ class QuizAdmin(ExportMixin, FieldsetsInlineMixin, admin.ModelAdmin):
     list_filter = (
         "publish",
         "spotlight",
+        "has_audio",
         "author",
         "tags",
     )
@@ -539,7 +541,7 @@ class QuizAdmin(ExportMixin, FieldsetsInlineMixin, admin.ModelAdmin):
         ),
         (
             "Prêt à être publié ? Toutes les questions doivent être au statut 'validé' !",
-            {"fields": ("publish", "spotlight",)},
+            {"fields": ("has_audio", "publish", "spotlight",)},
         ),
         QuizRelationshipFromInline,
         QuizRelationshipToInline,
