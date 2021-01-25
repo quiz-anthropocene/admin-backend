@@ -5,6 +5,7 @@
   difficulty_average: 1.8888888888888888
   author: Raphael Odini
   image_background_url: https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-04-17
@@ -18,13 +19,14 @@
   difficulty_average: 2.3
   author: Raphael Odini
   image_background_url: https://i3.wp.com/fee.asso.fr/wp-content/uploads/2015/09/Carte-de-France-eolien-2015.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-05-25
   updated: 2020-11-24
   tags: []
 - id: 3
-  name: Le quiz de Vincent Mignerot - COMMENTAIRES AUDIO
+  name: Le quiz de Vincent Mignerot
   introduction: "<p>Vincent Mignerot est essayiste et conférencier. Il développe une\
     \ théorie écologique de l’esprit et se questionne sur la singularité de l'humanité\
     \ dans son contexte évolutif. Il est le fondateur d'<a href=\"http://adrastia.org\"\
@@ -40,6 +42,7 @@
   difficulty_average: 2.1666666666666665
   author: Vincent Mignerot
   image_background_url: https://www.slate.fr/sites/default/files/styles/1060x523/public/neandertal_1.jpg
+  has_audio: true
   publish: true
   spotlight: true
   created: 2020-06-26
@@ -55,6 +58,7 @@
   difficulty_average: 2.6666666666666665
   author: Matthieu Massart
   image_background_url: https://upload.wikimedia.org/wikipedia/commons/f/fe/GlobalPeakOil.png
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-08
@@ -69,6 +73,7 @@
   difficulty_average: 2.090909090909091
   author: Matthieu Massart
   image_background_url: https://leshorizons.net/wp-content/uploads/2019/04/d%C3%A9finition-de-lempreinte-carbone-1020x512.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-08
@@ -86,6 +91,7 @@
   difficulty_average: 2.9
   author: Matthieu Massart
   image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-08
@@ -99,6 +105,7 @@
   difficulty_average: 2.5
   author: Matthieu Massart
   image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-09
@@ -118,6 +125,7 @@
   difficulty_average: 2.111111111111111
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-14
@@ -132,6 +140,7 @@
   difficulty_average: 3.3
   author: Matthieu Massart
   image_background_url: https://static.latribune.fr/full_width/1201312/plastique-a-jakarta.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-14
@@ -145,6 +154,7 @@
   difficulty_average: 2.25
   author: Matthieu Massart
   image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-29
@@ -164,6 +174,7 @@
   difficulty_average: 1.9047619047619049
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/IMG_9753-215x215.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-29
@@ -183,6 +194,7 @@
   difficulty_average: 2.0
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/J1A3917120919-2-215x215.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-29
@@ -241,6 +253,7 @@
   difficulty_average: 2.1818181818181817
   author: Matthieu Massart
   image_background_url: https://jive.univ-lille.fr/fileadmin/_processed_/c/d/csm_fresque-climat_ac9a138d0f.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-29
@@ -259,6 +272,7 @@
   difficulty_average: 2.3
   author: Matthieu Massart
   image_background_url: https://reporterre.net/local/cache-vignettes/L720xH481/arton11947-94df2.jpg?1597417424
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-29
@@ -272,6 +286,7 @@
   difficulty_average: 2.5
   author: Matthieu Massart
   image_background_url: https://images.sudouest.fr/2019/04/25/5cc1b08b66a4bd2c135ac1f5/widescreen/1000x500/l-extinction-des-dinosaures.jpg?v1
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-08-04
@@ -281,7 +296,7 @@
   - 49
   - 76
 - id: 18
-  name: Quiz de Laurent Testot - COMMENTAIRES AUDIO
+  name: Quiz de Laurent Testot
   introduction: "<p>Laurent Testot est journaliste, conférencier et formateur. Il\
     \ se consacre à la promotion en France de l’histoire globale, une méthode transdisciplinaire\
     \ d’analyse de l’histoire à grandes échelles. Son premier livre, <em>Cataclysmes.\
@@ -306,6 +321,7 @@
   difficulty_average: 2.6666666666666665
   author: Laurent Testot
   image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
+  has_audio: true
   publish: true
   spotlight: true
   created: 2020-09-23
@@ -328,6 +344,7 @@
   difficulty_average: 3.0
   author: Bonpote
   image_background_url: https://patch.com/img/cdn20/users/224111/20190401/020846/styles/raw/public/processed_images/tree_with_money-1554098721-8512.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-11-16
@@ -346,6 +363,7 @@
   difficulty_average: 4.0
   author: laydgeur
   image_background_url: https://cdn.pixabay.com/photo/2016/11/21/15/28/brain-1845962_1280.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-11-27
@@ -368,6 +386,7 @@
   difficulty_average: 2.6666666666666665
   author: laydgeur
   image_background_url: https://cdn.pixabay.com/photo/2017/12/08/08/17/america-3005258_1280.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-11-28
@@ -399,6 +418,7 @@
   difficulty_average: 2.888888888888889
   author: Le Réveilleur
   image_background_url: https://www.lereveilleur.com/wp-content/uploads/2020/09/CSC_paint.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-12-08
@@ -417,13 +437,14 @@
   difficulty_average: 2.5
   author: Matthieu Massart
   image_background_url: https://www.popsci.com/resizer/iHd2-DUNyurlTDhvndesdxzQoFU=/857x643/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/MTUGSVPHBB22CKTZETTB42BCIE.jpg
+  has_audio: false
   publish: true
   spotlight: false
   created: 2020-12-13
   updated: 2021-01-16
   tags: []
 - id: 57
-  name: NOUVEAU - 2020 en chiffres
+  name: 2020 en chiffres
   introduction: <p>Covid-19 et son lot de confinements et de coronapistes, 5 ans de
     la COP21, propositions de la Convention Citoyenne pour le Climat,... L'année 2020
     a été riche en matière d'environment. Mais avez-vous bien tout suivi ?</p>
@@ -432,6 +453,7 @@
   difficulty_average: 1.8461538461538463
   author: Raphael Odini
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/057.jpg
+  has_audio: false
   publish: true
   spotlight: true
   created: 2020-12-24

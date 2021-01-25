@@ -599,6 +599,9 @@ class QuizQuerySet(models.QuerySet):
     def spotlighted(self):
         return self.filter(spotlight=True)
 
+    def have_audio(self):
+        return self.filter(has_audio=True)
+
     def for_author(self, author):
         return self.filter(author=author)
 
@@ -630,6 +633,9 @@ class Quiz(models.Model):
         max_length=500,
         blank=True,
         help_text="Un lien vers une image pour illustrer le quiz",
+    )
+    has_audio = models.BooleanField(
+        default=False, help_text="Le quiz a du contenu audio"
     )
     publish = models.BooleanField(
         default=False, help_text="Le quiz est prêt à être publié"

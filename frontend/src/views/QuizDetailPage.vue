@@ -6,7 +6,11 @@
       <img v-bind:src="quiz.image_background_url || 'https://quizanthropocene.fr/showyourstripes_globe_1850-2019.png'" class="image-background" :class="(quizStep === 0) ? 'height-200' : 'height-50'">
 
       <div class="card-body">
-        <h2 class="card-title"><span v-if="quizStep > 0">Quiz : </span>{{ quiz.name }}</h2>
+        <h2 class="card-title">
+          <span v-if="quizStep > 0">Quiz : </span>
+          {{ quiz.name }}
+          <span v-if="quiz.has_audio" class="label small" style="vertical-align:top">🔉Commentaires audio</span>
+        </h2>
 
         <section v-if="(quizStep === 0) || (quizStep > quiz.questions.length)">
           <div class="card-subtitle" v-html="quiz.introduction" title="Introduction du quiz"></div>
