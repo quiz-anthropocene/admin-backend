@@ -1,6 +1,7 @@
 <template>
   <section>
 
+    <h2 class="new-quiz-title">Nouveaux quiz&nbsp;✨</h2>
     <div class="row" v-if="quizzesSpotlighted && quizzesSpotlighted.length > 0" id="quiz-list">
       <div class="col-sm-4" v-for="quiz in quizzesSpotlighted" :key="quiz.id">
         <QuizCard :quiz="quiz"/>
@@ -57,14 +58,14 @@
             </svg>
             <h3>
               À l'écoute de vos retours<br />
-              <small>et ouverts aux contributions !</small>
+              <small>et ouverts aux <router-link :to="{ name: 'contribute' }">contributions</router-link> !</small>
             </h3>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="alert alert-warning" role="alert">
+    <div class="alert alert-primary" role="alert">
       <i v-if="questionsCount">Il y a actuellement <strong>{{ questionsCount }} questions</strong> et <strong>{{ quizzesPublishedCount }} quiz</strong>. </i>
       <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus ! </i>
     </div>
@@ -78,7 +79,7 @@
     <div class="row justify-content-md-center">
       <div class="col-sm-6" v-if="questionsCount">
         <router-link class="no-decoration" :to="{ name: 'ressources' }">
-          <button class="btn btn-outline-secondary btn-lg btn-block">📚&nbsp;<strong>Ressources</strong></button>
+          <button class="btn btn-outline-primary btn-lg btn-block">📚&nbsp;<strong>Ressources</strong></button>
         </router-link>
       </div>
     </div>
@@ -218,6 +219,12 @@ export default {
 <style scoped>
 svg {
   font-size: 2em;
+}
+
+h2.new-quiz-title {
+  text-align: left;
+  margin-bottom: 5px;
+  color: var(--primary);
 }
 
 .jumbotron {

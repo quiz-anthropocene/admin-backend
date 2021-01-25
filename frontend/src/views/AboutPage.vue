@@ -2,11 +2,11 @@
   <section class="text-align-left">
     <h2>A propos</h2>
 
-    <section class="alert alert-primary" role="alert">
+    <!-- <section class="alert alert-primary" role="alert">
       Vous êtes un des premiers utilisateurs, merci d'être là !
       Ce site a été lancé en Mars 2020.
       Il est développé par quelques passionés, et a pour but d'évoluer en fonctions des retours utilisateurs :)
-    </section>
+    </section> -->
 
     <h3>Pourquoi cette application ?</h3>
     <div v-html="configuration.application_about"></div>

@@ -246,6 +246,12 @@ a.no-decoration {
   cursor: pointer;
 }
 
+/* show abbr on small screens */
+abbr[title]:hover::after,
+abbr[title]:focus::after {
+  content: " (" attr(title) ")";
+}
+
 .margin-0 {
   margin: 0;
 }
