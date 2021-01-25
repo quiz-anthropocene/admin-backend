@@ -38,6 +38,11 @@ class Configuration(SingletonModel):
         blank=True,
         help_text="Le lien vers le frontend de l'application",
     )
+    application_frontend_ecoindex_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="Le lien vers le test EcoIndex.fr du frontend",
+    )
     # social links
     application_facebook_url = models.URLField(
         max_length=500,
