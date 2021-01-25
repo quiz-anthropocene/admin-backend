@@ -453,12 +453,12 @@
     réduire sont nombreuses. Pour aller plus loin,nous vous recommandons de participer
     à un atelier. Plus d'information sur <a href="https://fresquedunumerique.org">Fresque
     du Numérique. </a></p>
-  difficulty_average: 0.0
+  difficulty_average: 2.142857142857143
   author: Aurélien Deragne
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/logo%20FDN.png
   publish: false
   spotlight: true
   created: 2021-01-21
-  updated: 2021-01-23
+  updated: 2021-01-25
   tags:
   - 30
