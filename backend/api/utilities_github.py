@@ -10,12 +10,12 @@ def get_github_instance():
 
 def get_repo():
     g = get_github_instance()
-    repo = g.get_repo("raphodn/know-your-planet")
+    repo = g.get_repo(settings.GITHUB_REPO)
     return repo
 
 
 def create_branch(branch_name):
-    print("in create_branch", branch_name)
+    print("creating branch :", branch_name)
     repo = get_repo()
     source = repo.get_branch("master")
     branch_ref = f"heads/{branch_name}"
@@ -28,19 +28,18 @@ def create_branch(branch_name):
             branch = repo.get_git_ref(ref=branch_ref)
         else:
             raise e
-    print(branch)
+    # print(branch)
     return branch
 
 
 def get_file(file_path, branch_name="master"):
-    print("in get_file", file_path)
     repo = get_repo()
     try:
         contents = repo.get_contents(file_path, ref=branch_name)
     except github.GithubException as e:
         # 404 {"message": "Not Found", "documentation_url": "https://docs.github.com/rest/reference/repos#get-repository-content"}  # noqa
         raise e
-    print(contents)
+    # print(contents)
     return contents
 
 
@@ -89,6 +88,35 @@ def create_file(file_path, commit_message, file_content, branch_name):
     return res
 
 
+def create_file_element(file_path, file_content):
+    repo = get_repo()
+    file_blob = repo.create_git_blob(file_content, "utf-8")
+    file_element = github.InputGitTreeElement(
+        path=file_path, mode="100644", type="blob", sha=file_blob.sha
+    )
+    return file_element
+
+
+def update_multiple_files(branch_name, commit_message, file_element_list: list):
+    """
+    Method to commit multiple files on a branch
+    https://github.com/PyGithub/PyGithub/issues/1628
+    """
+    repo = get_repo()
+
+    # create new branch
+    create_branch(branch_name)
+    branch_sha = repo.get_branch(branch_name).commit.sha
+
+    # create 1 commit with multiple files, and update the ref
+    base_tree = repo.get_git_tree(sha=branch_sha)
+    tree = repo.create_git_tree(file_element_list, base_tree)
+    parent = repo.get_git_commit(sha=branch_sha)
+    commit = repo.create_git_commit(commit_message, tree, [parent])
+    branch_refs = repo.get_git_ref(ref=f"heads/{branch_name}")
+    branch_refs.edit(sha=commit.sha)
+
+
 def create_pull_request(
     pull_request_title,
     pull_request_message,
@@ -96,7 +124,7 @@ def create_pull_request(
     pull_request_labels="",
     review_request=True,
 ):
-    print("in create_pull_request", pull_request_title)
+    print("creating PR :", pull_request_title)
     repo = get_repo()
     try:
         pull_request = repo.create_pull(
@@ -124,5 +152,5 @@ def create_pull_request(
         pull_request.add_to_labels(pull_request_labels)
     # if review_request:
     #     pull_request.create_review_request(reviewers=["raphodn"])
-    print(pull_request)
+    # print(pull_request)
     return pull_request
