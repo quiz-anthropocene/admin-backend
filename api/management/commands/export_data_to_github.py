@@ -38,7 +38,7 @@ class Command(BaseCommand):
 
         try:
             # create branch
-            utilities_github.create_branch(data_update_branch_name)
+            # utilities_github.create_branch(data_update_branch_name)
 
             print(
                 "--- Step 1 done : init and create branch (%s seconds) ---"
@@ -51,11 +51,8 @@ class Command(BaseCommand):
             configuration_yaml = utilities.serialize_model_to_yaml(
                 model_label="configuration", flat=True
             )
-            utilities_github.update_file(
-                file_path="data/configuration.yaml",
-                commit_message="update configuration",
-                file_content=configuration_yaml,
-                branch_name=data_update_branch_name,
+            configuration_element = utilities_github.create_file_element(
+                file_path="data/configuration.yaml", file_content=configuration_yaml
             )
 
             print(
@@ -74,11 +71,8 @@ class Command(BaseCommand):
                 **utilities_stats.contribution_stats(),
             }
             stats_yaml = yaml.safe_dump(stats_dict, allow_unicode=True, sort_keys=False)
-            utilities_github.update_file(
-                file_path="data/stats.yaml",
-                commit_message="update stats",
-                file_content=stats_yaml,
-                branch_name=data_update_branch_name,
+            stats_element = utilities_github.create_file_element(
+                file_path="data/stats.yaml", file_content=stats_yaml
             )
 
             print(
@@ -92,11 +86,9 @@ class Command(BaseCommand):
             difficulty_levels_yaml = yaml.safe_dump(
                 difficulty_levels_list, allow_unicode=True, sort_keys=False
             )
-            utilities_github.update_file(
+            difficulty_levels_element = utilities_github.create_file_element(
                 file_path="data/difficulty-levels.yaml",
-                commit_message="update difficulty levels",
                 file_content=difficulty_levels_yaml,
-                branch_name=data_update_branch_name,
             )
 
             print(
@@ -110,26 +102,33 @@ class Command(BaseCommand):
             authors_yaml = yaml.safe_dump(
                 authors_list, allow_unicode=True, sort_keys=False
             )
-            utilities_github.update_file(
-                file_path="data/authors.yaml",
-                commit_message="update authors",
-                file_content=authors_yaml,
-                branch_name=data_update_branch_name,
+            authors_element = utilities_github.create_file_element(
+                file_path="data/authors.yaml", file_content=authors_yaml
             )
 
             print(
                 "--- Step 2.4 done : authors.yaml (%s seconds) ---"
                 % round(time.time() - start_time, 1)
             )
+            # start_time = time.time()
+
+            # # data/categories.yaml
+            # categories_yaml = utilities.serialize_model_to_yaml(model_label="category", flat=True)
+            # categories_element = utilities_github.create_file_element(
+            #     file_path="data/categories.yaml",
+            #     file_content=categories_element
+            # )
+
+            # print(
+            #     "--- Step 2.5 done : categories.yaml (%s seconds) ---"
+            #     % round(time.time() - start_time, 1)
+            # )
             start_time = time.time()
 
             # data/tags.yaml
             tags_yaml = utilities.serialize_model_to_yaml(model_label="tag", flat=True)
-            utilities_github.update_file(
-                file_path="data/tags.yaml",
-                commit_message="update tags",
-                file_content=tags_yaml,
-                branch_name=data_update_branch_name,
+            tags_element = utilities_github.create_file_element(
+                file_path="data/tags.yaml", file_content=tags_yaml
             )
 
             print(
@@ -142,11 +141,8 @@ class Command(BaseCommand):
             questions_yaml = utilities.serialize_model_to_yaml(
                 model_label="question", flat=True
             )
-            utilities_github.update_file(
-                file_path="data/questions.yaml",
-                commit_message="update questions",
-                file_content=questions_yaml,
-                branch_name=data_update_branch_name,
+            questions_element = utilities_github.create_file_element(
+                file_path="data/questions.yaml", file_content=questions_yaml
             )
 
             print(
@@ -159,11 +155,8 @@ class Command(BaseCommand):
             quizzes_yaml = utilities.serialize_model_to_yaml(
                 model_label="quiz", flat=True
             )
-            utilities_github.update_file(
-                file_path="data/quizzes.yaml",
-                commit_message="update quizzes",
-                file_content=quizzes_yaml,
-                branch_name=data_update_branch_name,
+            quizzes_element = utilities_github.create_file_element(
+                file_path="data/quizzes.yaml", file_content=quizzes_yaml
             )
 
             print(
@@ -176,11 +169,8 @@ class Command(BaseCommand):
             quiz_questions_yaml = utilities.serialize_model_to_yaml(
                 model_label="quizquestion", flat=True
             )
-            utilities_github.update_file(
-                file_path="data/quiz-questions.yaml",
-                commit_message="update quiz questions",
-                file_content=quiz_questions_yaml,
-                branch_name=data_update_branch_name,
+            quiz_questions_element = utilities_github.create_file_element(
+                file_path="data/quiz-questions.yaml", file_content=quiz_questions_yaml
             )
 
             print(
@@ -193,11 +183,9 @@ class Command(BaseCommand):
             quiz_relationships_yaml = utilities.serialize_model_to_yaml(
                 model_label="quizrelationship", flat=True
             )
-            utilities_github.update_file(
+            quiz_relationships_element = utilities_github.create_file_element(
                 file_path="data/quiz-relationships.yaml",
-                commit_message="update quiz relationships",
                 file_content=quiz_relationships_yaml,
-                branch_name=data_update_branch_name,
             )
 
             print(
@@ -210,21 +198,41 @@ class Command(BaseCommand):
             # frontend/src/constants.js
             old_frontend_constants_file_content = utilities_github.get_file(
                 file_path="frontend/src/constants.js",
-                branch_name=data_update_branch_name,
             )
             new_frontend_constants_file_content_string = utilities.update_frontend_last_updated_datetime(  # noqa
                 old_frontend_constants_file_content.decoded_content.decode(),
                 current_datetime_string_pretty,
             )
-            utilities_github.update_file(
+            new_frontend_constants_file_element = utilities_github.create_file_element(
                 file_path="frontend/src/constants.js",
-                commit_message="update frontend constants (last_updated datetime)",
                 file_content=new_frontend_constants_file_content_string,
-                branch_name=data_update_branch_name,
             )
 
             print(
-                "--- Step 2.9 done : constants.js (%s seconds) ---"
+                "--- Step 2.10 done : constants.js (%s seconds) ---"
+                % round(time.time() - start_time, 1)
+            )
+            start_time = time.time()
+
+            utilities_github.update_multiple_files(
+                branch_name=data_update_branch_name,
+                commit_message="Data: daily update",
+                file_element_list=[
+                    configuration_element,
+                    stats_element,
+                    difficulty_levels_element,
+                    authors_element,
+                    tags_element,
+                    questions_element,
+                    quizzes_element,
+                    quiz_questions_element,
+                    quiz_relationships_element,
+                    new_frontend_constants_file_element,
+                ],
+            )
+
+            print(
+                "--- Step 3 done : committed to branch (%s seconds) ---"
                 % round(time.time() - start_time, 1)
             )
             start_time = time.time()
@@ -253,7 +261,7 @@ class Command(BaseCommand):
                 )
 
                 print(
-                    "--- Step 3 done : created Pull Request (%s seconds) ---"
+                    "--- Step 4 done : created Pull Request (%s seconds) ---"
                     % round(time.time() - start_time, 1)
                 )
 
