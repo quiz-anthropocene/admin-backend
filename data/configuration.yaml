@@ -13,6 +13,7 @@
   application_open_source_code_url: https://github.com/raphodn/know-your-planet
   application_backend_url: https://quiz-anthropocene.osc-fr1.scalingo.io/
   application_frontend_url: https://quizanthropocene.fr/
+  application_frontend_ecoindex_url: http://www.ecoindex.fr/resultats/?id=115832
   application_facebook_url: https://www.facebook.com/quizanthropocene/
   application_twitter_url: https://twitter.com/AnthroQuiz
   application_linkedin_url: https://www.linkedin.com/company/quiz-de-l-anthropocene/
