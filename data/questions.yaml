@@ -149,7 +149,13 @@
   answer_option_d: A partir de +5°C de hausse de la température de l'air
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: ''
+  answer_explanation: 'Des scientifiques craignent que le réchauffement climatique,
+    en élevant suffisamment la température du pergélisol, permette que les hydrates
+    qui y sont présents fondent au moins partiellement : cela aurait pour effet de
+    relâcher d''énormes quantités de méthane dans l''atmosphère, lequel viendrait
+    à son tour augmenter l''effet de serre, d''où un effet d''emballement. Florent
+    Dominé, du CNRS, évoque une augmentation de 5 à 8 °C de la température d''ici
+    à 2100.'
   answer_accessible_url: https://jancovici.com/changement-climatique/risques/faut-il-redouter-les-hydrates-de-methane/
   answer_scientific_url: ''
   answer_image_url: https://www.notre-planete.info/actualites/images/geologie/minis/hydrate-methane.jpg
@@ -1616,20 +1622,23 @@
   tags:
   - 17
 - id: 51
-  text: Dans le monde, combien d'hectares de terres arables disparaissent chaque minute
+  text: Combien d'hectares de terres arables disparaissent chaque minute dans le monde
     du fait de l'urbanisation ?
   hint: ''
   type: QCM
   category: 6
   difficulty: 4
-  answer_option_a: 0,5 ha
-  answer_option_b: 5 ha
-  answer_option_c: 50 ha
-  answer_option_d: 500 ha
+  answer_option_a: 0,5 ha (1 terrain de football)
+  answer_option_b: 5 ha (7 terrains de football)
+  answer_option_c: 50 ha (70 terrains de football)
+  answer_option_d: 500 ha (700 terrains de football)
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: Soit 50 terrains de football chaque minute
-  answer_accessible_url: https://www.planetoscope.com/sols/1175-disparition-de-surfaces-agricoles-dans-le-monde.html
+  answer_explanation: Plus de 60 % de l’expansion urbaine de ces 50 dernières années
+    dans le monde s’est effectuée sur des terrains agricoles. En France, une surface
+    équivalente à celle d’un département tous les 10 ans est artificialisée en raison
+    de l’étalement urbain, de la construction de routes, de parkings et d’infrastructures.
+  answer_accessible_url: https://www.goodplanet.info/2020/03/30/lurbanisation-mondiale-sopere-au-detriment-des-terres-agricoles/
   answer_scientific_url: ''
   answer_image_url: https://cdn-s-www.ledauphine.com/images/C2000558-A859-4CD7-9768-E4FCF9741D1F/NW_raw/une-vue-aerienne-de-la-plaine-de-valence-l-urbanisation-grignote-les-terres-agricoles-trop-pour-certains-le-d-l-f-h-1297717691.jpg
   answer_image_explanation: ''
@@ -2867,15 +2876,15 @@
   type: QCM
   category: 2
   difficulty: 1
-  answer_option_a: 1 %
-  answer_option_b: 3 %
-  answer_option_c: 8 %
-  answer_option_d: 20 %
+  answer_option_a: 1%
+  answer_option_b: 3%
+  answer_option_c: 8%
+  answer_option_d: 20%
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: Le secteur des nouvelles technologies représentait à lui seul
-    entre 6 et 10 % de la consommation mondiale d’électricité en 2018. Et la tendance
-    est franchement à la hausse, à raison de 5 à 7 % d’augmentation tous les ans.
+    entre 6 et 10% de la consommation mondiale d’électricité en 2018. Et la tendance
+    est franchement à la hausse, à raison de 5 à 7% d’augmentation tous les ans.
   answer_accessible_url: https://lejournal.cnrs.fr/articles/numerique-le-grand-gachis-energetique
   answer_scientific_url: ''
   answer_image_url: https://i0.wp.com/verdamano.com/wp-content/uploads/2020/04/La-pollution-numerique-en-chiffres_1.png
@@ -3026,15 +3035,16 @@
   - 5
   - 216
 - id: 96
-  text: Quelle quantité d'aliments jette-t-on chaque année en France ?
+  text: Quelle quantité d'aliments jette-t-on chaque année en France par personne
+    ?
   hint: ''
   type: QCM
   category: 2
   difficulty: 3
-  answer_option_a: 100 000 tonnes
-  answer_option_b: 1 million de tonnes
-  answer_option_c: 10 millions de tonnes
-  answer_option_d: 100 millions de tonnes
+  answer_option_a: 15 kg
+  answer_option_b: 50 kg
+  answer_option_c: 150 kg
+  answer_option_d: 400 kg
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: Cela émet de surcroît 15 millions de tonnes équivalent CO2,
@@ -6947,10 +6957,10 @@
   type: QCM
   category: 6
   difficulty: 3
-  answer_option_a: Boutan
+  answer_option_a: Le Boutan
   answer_option_b: Cuba
-  answer_option_c: Suède
-  answer_option_d: Costa Rica
+  answer_option_c: La Suède
+  answer_option_d: Le Costa Rica
   answer_correct: b
   has_ordered_answers: false
   answer_explanation: La zone cible est définie par un IDH supérieur à 0,8 et une
@@ -12122,16 +12132,16 @@
   - 57
   - 72
 - id: 392
-  text: Quelle est l'empreinte carbone totale (fabrication, utilisation, rebus) d'un
+  text: Quelle est l'empreinte carbone totale (fabrication, utilisation, rebut) d'un
     smartphone comme un Iphone 11 ?
   hint: ''
   type: QCM
   category: 2
   difficulty: 3
-  answer_option_a: 7 kg équivalent CO2, soit 50km en Clio essence.
-  answer_option_b: 70 kg équivalent CO2, soit 500km
-  answer_option_c: 700 kg équivalent CO2, soit 5,000km
-  answer_option_d: 7000 kg équivalent CO2, soit 50,000km
+  answer_option_a: 7 kg équivalent CO2, soit 50 km en Clio essence.
+  answer_option_b: 70 kg équivalent CO2, soit 500 km
+  answer_option_c: 700 kg équivalent CO2, soit 5,000 km
+  answer_option_d: 7,000 kg équivalent CO2, soit 50,000 km
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: Sur toute sa durée de vie, un iPhone 11 émettra environ 72 kg
@@ -15226,7 +15236,7 @@
   - 51
 - id: 494
   text: 'Si l’on empilait tous les barils de pétrole  que la France consomme en une
-    année, à quelle altitude irait-on ? 1 baril : 80cm de haut, contenance 160 litres.
+    année, à quelle altitude irait-on ? 1 baril : 80cm de haut, contenance 159 litres.
     Ne faites pas le calcul, fiez-vous à votre intuition !'
   hint: On irait très très haut !...
   type: QCM
@@ -17457,8 +17467,8 @@
   - 2
   - 29
 - id: 567
-  text: 'Vrai ou faux : le lavage de vos vêtements rejette plus de microplastiques
-    que votre voiture'
+  text: Vrai ou faux ? Le lavage de vos vêtements rejette plus de microplastiques
+    que votre voiture
   hint: ''
   type: VF
   category: 3
@@ -17707,7 +17717,7 @@
   answer_explanation: La transformation des aliments végétaux, et peut-être la production
     de farine semble avoir été une pratique courante, répandue dans toute l'Europe
     il y a au moins 30,000 ans.
-  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/574.mp3
+  answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/Q574.mp3
   answer_scientific_url: https://www.pnas.org/content/107/44/18815
   answer_image_url: https://qph.fs.quoracdn.net/main-qimg-8fa02c6af750c8cfe1540a91d9d7aff5
   answer_image_explanation: ''
@@ -25805,7 +25815,7 @@
   answer_option_d: 55%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: Selon l'OMS, environ 29% de la population mondiale, soit 2.2
+  answer_explanation: Selon l'OMS, environ 29% de la population mondiale, soit 2,2
     milliards de personnes, ne disposeraient pas de services d’alimentation en eau
     potable gérés en toute sécurité. Les personnes vivant dans les régions rurales
     sont les plus exposées (1.9 milliards de personnes).
@@ -25852,7 +25862,7 @@
   tags:
   - 37
 - id: 828
-  text: 'Quel est le pourcentage d''eau consommée par le secteur de l''agriculture
+  text: 'Quel est le pourcentage d''eau douce consommée par le secteur de l''agriculture
     à l''échelle mondiale ? '
   hint: ''
   type: QCM
@@ -25867,7 +25877,10 @@
   answer_explanation: 'L''agriculture est incontestablement le secteur qui consomme
     le plus d''eau douce à l''échelle mondiale avec une part estimée à environ 70%.
     Dans le régions arides, cette part atteint même les 90%. Les usages industriels
-    et municipaux représentent respectivement 20% et 10% des prélèvements d''eau douce. '
+    et municipaux représentent respectivement 20% et 10% des prélèvements d''eau douce.
+    Cette surconsommation s''explique en grande partie par les importantes pertes
+    d''eau par les systèmes d''irrigation classiques: 2/3 de l''eau issue de ces systèmes
+    ne parvient pas jusqu''à la plante.'
   answer_accessible_url: ''
   answer_scientific_url: https://www.unwater.org/publications/highlights-sdg-6-synthesis-report-2018-on-water-and-sanitation-2/
   answer_image_url: ''
@@ -25899,9 +25912,9 @@
     nombreux qu''en 2019 ils consomment environ 2 fois plus que les data centers (qui
     sont pourtant des "grosses machines" !) : 30% de l''énergie primaire mobilisée
     par le secteur du numérique sert à l''utilisation de nos équipements, et seulement
-    15% pour les data centers'
-  answer_accessible_url: https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf
-  answer_scientific_url: ''
+    15% pour les data centers.'
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/829.png
   answer_image_explanation: 'Source : la Fresque du Numérique, fresquedunumerique.org'
   answer_extra_info: ''
@@ -25965,7 +25978,7 @@
   answer_accessible_url: https://theshiftproject.org/wp-content/uploads/2019/07/R%C3%A9sum%C3%A9-aux-d%C3%A9cideurs_FR_Linsoutenable-usage-de-la-vid%C3%A9o-en-ligne.pdf
   answer_scientific_url: https://theshiftproject.org/wp-content/uploads/2019/07/2019-01.pdf
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/831.png
-  answer_image_explanation: 'Source : la Fresque du Numérique, [https://www.fresquedunumerique.org/](https://www.fresquedunumerique.org/)'
+  answer_image_explanation: 'Source : la Fresque du Numérique, fresquedunumerique.org'
   answer_extra_info: ''
   author: Aurélien Déragne
   validator: Matthieu Massart
@@ -26011,6 +26024,282 @@
   - 30
   - 228
   - 229
+- id: 840
+  text: Combien de personnes meurent  chaque année de l'absence d'eau potable ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  answer_option_a: 500,000
+  answer_option_b: 1,2 million
+  answer_option_c: 5,2 millions
+  answer_option_d: 10 millions
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Plus de 1,2 million de personnes meurent chaque année de l''absence
+    d''eau potable sûre, principalement à cause de maladies diarrhéiques. C''est à
+    peu près l''équivalent du nombre de morts sur la route. '
+  answer_accessible_url: https://ourworldindata.org/water-access#unsafe-water-is-a-leading-risk-factor-for-death
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-21
+  created: 2021-01-26
+  updated: 2021-01-26
+  tags:
+  - 37
+- id: 845
+  text: Quel est le taux actuel mondial de croissance de la consommation d'énergie
+    par an pour le secteur numérique ? (2020)
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 2%
+  answer_option_b: 5%
+  answer_option_c: 9%
+  answer_option_d: 15%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'La consommation d’énergie due au numérique est en augmentation
+    de 9 % par an. Si nous continuons à ce rythme, elle sera trois fois plus importante
+    en 2025 qu’elle ne l’était en 2005. C’est l’inverse de ce qu’il faut faire pour
+    tenir nos objectifs climatiques.
+
+    L’empreinte énergétique directe du numérique inclut l’énergie de fabrication et
+    d’utilisation des équipements (serveurs, réseaux, terminaux).'
+  answer_accessible_url: https://theshiftproject.org/wp-content/uploads/2020/10/Deployer-la-sobriete-numerique_Resume_ShiftProject.pdf
+  answer_scientific_url: https://theshiftproject.org/wp-content/uploads/2020/01/2020-01.pdf
+  answer_image_url: https://www.researchgate.net/profile/Alexandre_Monnin2/publication/341099681/figure/fig1/AS:886676264062979@1588411503728/Evolution-2013-2025-de-la-consommation-energetique-du-Numerique-en-TWh-Source-Lean.ppm
+  answer_image_explanation: 'Évolution 2013-2025 de la consommation énergétique du
+    Numérique en TWh Source : [Lean ICT Materials] Forecast Model. Les couleurs correspondent
+    à différents scénarios'
+  answer_extra_info: ''
+  author: Alain Servigne
+  validator: ''
+  validation_status: A valider
+  added: 2021-01-26
+  created: 2021-01-26
+  updated: 2021-01-26
+  tags:
+  - 30
+- id: 846
+  text: Quelle quantité de matières premières faut-il pour fabriquer 2 grammes de
+    puce électronique ?
+  hint: C'est beaucoup et certainement plus que l'on en croit
+  type: QCM
+  category: 7
+  difficulty: 2
+  answer_option_a: 500g
+  answer_option_b: 1,2kg
+  answer_option_c: 14kg
+  answer_option_d: 32kg
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: 'La fabrication d''une puce électronique requiert 32kg en grande
+    majorité de l''eau, des combustibles fossiles, des intrants chimiques et un gaz
+    élémentaire (azote notamment). 32 kg, c''est 16,000 fois le poids final de la
+    puce fabriquée. '
+  answer_accessible_url: https://www.greenit.fr/2020/05/26/500-fois-son-poids-en-matiere-premiere/
+  answer_scientific_url: https://pubs.acs.org/doi/abs/10.1021/es025643o
+  answer_image_url: https://www.tuvoiscequejeveuxdire.net/contenus/wp-content/uploads/2020/04/FNL_2019-11_CERDD_HSalazar_BFPTC_Sobriete-numerique_7-copie.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Alain Servigne
+  validator: ''
+  validation_status: A valider
+  added: 2021-01-26
+  created: 2021-01-26
+  updated: 2021-01-26
+  tags:
+  - 30
+- id: 847
+  text: Rapportée à des usages quotidiens de la vie courante, quel est l'impact du
+    numérique mondial annuel (2019) mesuré en packs d'eau minérale (9 litres) ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  answer_option_a: 150 millions de packs
+  answer_option_b: 2,4 milliards de packs
+  answer_option_c: 242 milliards de packs
+  answer_option_d: '2242 milliards de packs '
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Cela correspond à 3,6 milliards de douche. La consommation
+    d''eau est un indicateur pertinent dans la mesure où il rapproche l''impact du
+    numérique à une ressource essenti²elle pour l''humanité : l''eau douce.'
+  answer_accessible_url: https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf
+  answer_scientific_url: ''
+  answer_image_url: https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_in_line/2019/10/22/node_655549/41727334/public/2019/10/22/B9721336264Z.1_20191022183731_000+G3FEOH77G.2-0.jpg?itok=BExwB_hc1571815589
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Alain Servigne
+  validator: ''
+  validation_status: A valider
+  added: 2021-01-26
+  created: 2021-01-26
+  updated: 2021-01-26
+  tags:
+  - 30
+- id: 848
+  text: Parmi ces facteurs qui risquent de faire grossir l'empreinte du numérique
+    mondial dans les cinq années à venir, lequel va grossir le plus vite ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: La masse des équipements vendus
+  answer_option_b: le taux d'équipement par utilisateur
+  answer_option_c: Le nombre d'objets connectés
+  answer_option_d: Le nombre d'utilisateurs
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: La tendance la plus significative observée depuis 2010 et qui
+    ne fait que s'amplifier est le nombre d'objets connectés et de l'informatique
+    embarquée (montres, domotique, automobiles, appareils médicaux, drones...). La
+    croissance est exponentielle avec une multiplication par 48 entre 2010 et sa projection
+    en 2025. C'est le domaine de l'internet des objets. On passerait d'1 milliard
+    (1% des impacts) à 48 milliards (18 à 23% des impacts) d'objets connectés. Par
+    comparaison, c'est un facteur 2,5 pour le nombre d'utilisateurs, 3 pour la masse.
+    En revanche, le taux d'équipement par utilisateur va aller à la baisse (de 7 à
+    3,5) car le nombre d'utilisateurs augmente plus vite que le nombre d'équipements
+    vendus plutôt aux pays émergents au pouvoir d'achat moindre (saturation des pays
+    développés).
+  answer_accessible_url: https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-synthese-accessible.VF_.pdf
+  answer_scientific_url: ''
+  answer_image_url: https://enseignantspourlaplanete.files.wordpress.com/2020/04/image-7.png?w=453
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Alain Servigne
+  validator: ''
+  validation_status: A valider
+  added: 2021-01-26
+  created: 2021-01-26
+  updated: 2021-01-26
+  tags:
+  - 30
+- id: 849
+  text: Combien de courriels sont envoyés chaque jour dans le monde (2020) ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 725 millions
+  answer_option_b: 2,4 milliards
+  answer_option_c: 15 milliards
+  answer_option_d: 306 milliards
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: 306 milliards c'est une moyenne de 33 mails par utilisateur
+    et par jour (3,9 milliards d'utilisateurs de messagerie). Moins de la moitié d'entre
+    eux sont lus.
+  answer_accessible_url: https://mondedumail.com/nombre-de-mails-envoyes-par-jour/
+  answer_scientific_url: ''
+  answer_image_url: https://www.statista.com/statistics/456500/daily-number-of-e-mails-worldwide/
+  answer_image_explanation: Nombre de mails envoyés et reçus par jour dans le monde
+  answer_extra_info: ''
+  author: Alain Servigne
+  validator: ''
+  validation_status: A valider
+  added: 2021-01-26
+  created: 2021-01-26
+  updated: 2021-01-26
+  tags:
+  - 30
+- id: 850
+  text: Quelle est l'empreinte carbone d'un courriel standard ?
+  hint: Cela paraît peu mais au regard du nombre considérable de mails envoyés par
+    an…
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 2 g CO2e
+  answer_option_b: 4 g CO2e
+  answer_option_c: 19 g CO2
+  answer_option_d: 150 g CO2e
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: Selon l'organisation Carbon Literacy Project, un e-mail standard
+    génère environ 4 g de CO2 mais… 306 milliards de courriels quotidiens (2020) par
+    4 g CO2 en moyenne par courriel (11 690 milliards courriels par an), c'est donc
+    1,2 Mt CO2 /jour, 450 million de t CO2 par an. Les mails peuvent être beaucoup
+    plus volumineux et être envoyés à une liste multi-destinataires, ce qui décuple
+    l'empreinte.
+  answer_accessible_url: https://www.futura-sciences.com/planete/questions-reponses/eco-consommation-empreinte-carbone-e-mail-10840/
+  answer_scientific_url: ''
+  answer_image_url: https://fr.statista.com/statistiques/583905/nombre-d-e-mails-par-jour-dans-le-monde--2019/
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Alain Servigne
+  validator: ''
+  validation_status: A valider
+  added: 2021-01-26
+  created: 2021-01-26
+  updated: 2021-01-26
+  tags:
+  - 30
+- id: 851
+  text: Quelles est la distance moyenne parcourue par une donnée numérique (email,
+    téléchargement, vidéo, requête web,…) ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 1,000 km
+  answer_option_b: 3,500 km
+  answer_option_c: 6,800 km
+  answer_option_d: 15,000 km
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: 15 000 km, c'est la distance moyenne parcourue par une donnée
+    numérique (mail, téléchargement, vidéo, requête web…)
+  answer_accessible_url: https://www.transition-europe.eu/fr/news/le-cout-environnemental-du-numerique#:~:text=La%20distance%20moyenne%20parcourue%20par,r%C3%A9duit%20au%20maximum%20leur%20utilisation.
+  answer_scientific_url: https://www.ademe.fr/sites/default/files/assets/documents/guide-pratique-face-cachee-numerique.pdf
+  answer_image_url: https://pbs.twimg.com/media/Eg1470MWAAEUFO_?format=jpg&name=large
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Alain Servigne
+  validator: ''
+  validation_status: A valider
+  added: 2021-01-26
+  created: 2021-01-26
+  updated: 2021-01-26
+  tags:
+  - 30
+- id: 852
+  text: De combien augmentera l'empreinte carbone du numérique en 2030 en France avec
+    l'arrivée de la 5G ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 2
+  answer_option_a: Entre 270 et 670 milliers de t Co2e supplémentaires
+  answer_option_b: Entre 2,7 et 6,7 millions de t CO2e
+  answer_option_c: Entre 27 et 67 millions de t CO2e
+  answer_option_d: Entre 270 et 670 millions de t CO2e
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: 'C''est la fourchette donnée par le Haut Conseil pour le Climat.
+    Cela représente  une augmentation significative si l''on considère l’empreinte
+    carbone du numérique annuelle en France : environ 15 Mt CO2e en 2020.'
+  answer_accessible_url: https://www.youtube.com/watch?v=eH-LTLsSviQ&feature=youtu.be
+  answer_scientific_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/12/rapport-5g_haut-conseil-pour-le-climat.pdf
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Alain Servigne
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-26
+  created: 2021-01-26
+  updated: 2021-01-26
+  tags:
+  - 30
 - id: 900
   text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
   hint: Bas carbone donc…

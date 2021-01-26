@@ -1,9 +1,6 @@
-- name: Aurélien Deragne
-  question_count: 0
-  quiz_count: 1
 - name: Aurélien Déragne
   question_count: 4
-  quiz_count: 0
+  quiz_count: 1
 - name: Avenir Climatique
   question_count: 8
   quiz_count: 0
