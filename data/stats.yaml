@@ -13,15 +13,15 @@ question_per_validation_status_count:
 quiz_count: 25
 quiz_per_publish_count:
 - publish: true
-  total: 22
+  total: 23
 - publish: false
-  total: 3
-question_answer_count: 99338
-quiz_answer_count: 6955
-question_answer_count_last_30_days: 11719
-quiz_answer_count_last_30_days: 743
+  total: 2
+question_answer_count: 99558
+quiz_answer_count: 6968
+question_answer_count_last_30_days: 11644
+quiz_answer_count_last_30_days: 742
 category_count: 8
 tag_count: 203
-question_feedback_count: 1752
+question_feedback_count: 1759
 quiz_feedback_count: 360
 contribution_count: 305
