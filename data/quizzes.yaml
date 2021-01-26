@@ -2,19 +2,19 @@
   name: Quelques chiffres clés
   introduction: <p>Quelques chiffres pour se mettre en jambes.</p>
   conclusion: ''
-  difficulty_average: 1.8888888888888888
+  difficulty_average: 1.9
   author: Raphael Odini
   image_background_url: https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png
   has_audio: false
   publish: true
   spotlight: false
   created: 2020-04-17
-  updated: 2020-12-14
+  updated: 2021-01-26
   tags: []
 - id: 2
   name: L'énergie en France 🇫🇷
-  introduction: Un aperçu rapide de la production et de la consommation d'énergie
-    en France.
+  introduction: <p>Un aperçu rapide de la production et de la consommation d'énergie
+    en France.</p>
   conclusion: ''
   difficulty_average: 2.3
   author: Raphael Odini
@@ -23,8 +23,9 @@
   publish: true
   spotlight: false
   created: 2020-05-25
-  updated: 2020-11-24
-  tags: []
+  updated: 2021-01-26
+  tags:
+  - 1
 - id: 3
   name: Le quiz de Vincent Mignerot
   introduction: "<p>Vincent Mignerot est essayiste et conférencier. Il développe une\
@@ -39,14 +40,14 @@
     \ pour aller plus loin. </p>"
   conclusion: <p>Si ce quiz vous a intéressé, vous le serez problablement par <a href="http://quizanthropocene.fr/quiz/18">celui-ci,</a>
     qui traite de questions similaires.</p>
-  difficulty_average: 2.1666666666666665
+  difficulty_average: 2.2
   author: Vincent Mignerot
   image_background_url: https://www.slate.fr/sites/default/files/styles/1060x523/public/neandertal_1.jpg
   has_audio: true
   publish: true
   spotlight: true
   created: 2020-06-26
-  updated: 2021-01-18
+  updated: 2021-01-26
   tags:
   - 185
 - id: 4
@@ -55,14 +56,14 @@
     lequel elle ne peut que décroître pour finalement tomber à 0. C'est le thème qu'explore
     ce quiz sur les différentes ressources non-renouvelables dont nous faisons usage.
   conclusion: ''
-  difficulty_average: 2.6666666666666665
+  difficulty_average: 2.7
   author: Matthieu Massart
   image_background_url: https://upload.wikimedia.org/wikipedia/commons/f/fe/GlobalPeakOil.png
   has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-08
-  updated: 2020-11-24
+  updated: 2021-01-26
   tags: []
 - id: 5
   name: Mon empreinte carbone
@@ -70,15 +71,16 @@
     de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent lui être
     imputées. Connaissez-vous votre empreinte ? Voyons voir ça.</p>
   conclusion: ''
-  difficulty_average: 2.090909090909091
+  difficulty_average: 2.1
   author: Matthieu Massart
   image_background_url: https://leshorizons.net/wp-content/uploads/2019/04/d%C3%A9finition-de-lempreinte-carbone-1020x512.jpg
   has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-08
-  updated: 2020-12-14
-  tags: []
+  updated: 2021-01-26
+  tags:
+  - 72
 - id: 6
   name: Regard sur l'anthropocène, premier aperçu
   introduction: <p>L'Anthropocène, c'est un terme proposé par des scientifiques pour
@@ -95,7 +97,7 @@
   publish: true
   spotlight: false
   created: 2020-07-08
-  updated: 2020-12-17
+  updated: 2021-01-26
   tags: []
 - id: 7
   name: le Pétrole - Partie 1
@@ -109,8 +111,9 @@
   publish: true
   spotlight: false
   created: 2020-07-09
-  updated: 2020-12-17
-  tags: []
+  updated: 2021-01-26
+  tags:
+  - 11
 - id: 8
   name: La Fresque du Climat - Lot 1
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
@@ -122,14 +125,14 @@
   conclusion: "<p>Vous voilà prêt à vous attaquer au lot 2 ! Ou, mieux encore, à vous\
     \ inscrire à un atelier. Plus d'information <a href=\"https://fresqueduclimat.org\"\
     >ici</a>.</p>\r\n\r\n<p> </p>"
-  difficulty_average: 2.111111111111111
+  difficulty_average: 2.1
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
   has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-14
-  updated: 2020-12-21
+  updated: 2021-01-26
   tags:
   - 142
 - id: 9
@@ -144,22 +147,23 @@
   publish: true
   spotlight: false
   created: 2020-07-14
-  updated: 2020-11-24
+  updated: 2021-01-26
   tags: []
 - id: 10
   name: Le Pétrole - Partie 2
   introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
     à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
   conclusion: ''
-  difficulty_average: 2.25
+  difficulty_average: 2.2
   author: Matthieu Massart
   image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
   has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-29
-  updated: 2020-12-13
-  tags: []
+  updated: 2021-01-26
+  tags:
+  - 11
 - id: 11
   name: La fresque du Climat - Lot 2
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
@@ -171,14 +175,14 @@
     \ distribué lors d'un atelier de la Fresque.</p>"
   conclusion: <p>Vous voilà prêt à vous attaquer au lot 3 ! Ou, mieux encore, à vous
     inscrire à un atelier. Plus d'information <a href="https://fresqueduclimat.org">ici</a>.</p>
-  difficulty_average: 1.9047619047619049
+  difficulty_average: 1.9
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/IMG_9753-215x215.jpg
   has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-29
-  updated: 2020-12-21
+  updated: 2021-01-26
   tags:
   - 142
 - id: 12
@@ -198,7 +202,7 @@
   publish: true
   spotlight: false
   created: 2020-07-29
-  updated: 2020-12-21
+  updated: 2021-01-26
   tags:
   - 142
 - id: 13
@@ -211,13 +215,14 @@
     \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur les cartes du 4ème lot distribué\
     \ lors d'une fresque.</p>"
   conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
-  difficulty_average: 2.6666666666666665
+  difficulty_average: 2.7
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/07/PartieRestit-scaled.jpg?gid=1
+  has_audio: false
   publish: false
   spotlight: false
   created: 2020-07-29
-  updated: 2020-12-17
+  updated: 2021-01-26
   tags:
   - 142
 - id: 14
@@ -230,13 +235,14 @@
     \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur le cinquième et dernier lot\
     \ de cartes distribué lors d'une Fresque.</p>"
   conclusion: <p>Plus d'information sur la Fresque du Climat <a href="https://fresqueduclimat.org">ici</a>.</p>
-  difficulty_average: 1.6666666666666667
+  difficulty_average: 1.7
   author: Matthieu Massart
   image_background_url: ''
+  has_audio: false
   publish: false
   spotlight: false
   created: 2020-07-29
-  updated: 2020-12-13
+  updated: 2021-01-26
   tags:
   - 142
 - id: 15
@@ -250,14 +256,14 @@
     \ et parfois d'aller plus loin autour du dérèglement du climat - questions non\
     \ liées aux 42 cartes du jeu.</p>"
   conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
-  difficulty_average: 2.1818181818181817
+  difficulty_average: 2.2
   author: Matthieu Massart
   image_background_url: https://jive.univ-lille.fr/fileadmin/_processed_/c/d/csm_fresque-climat_ac9a138d0f.jpg
   has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-29
-  updated: 2020-12-13
+  updated: 2021-01-26
   tags:
   - 142
 - id: 16
@@ -276,7 +282,7 @@
   publish: true
   spotlight: false
   created: 2020-07-29
-  updated: 2020-12-14
+  updated: 2021-01-26
   tags: []
 - id: 17
   name: Une biodiversité qui s'anéantit
@@ -290,7 +296,7 @@
   publish: true
   spotlight: false
   created: 2020-08-04
-  updated: 2020-12-13
+  updated: 2021-01-26
   tags:
   - 6
   - 49
@@ -318,14 +324,14 @@
     l'interaction de l'homme avec son environnement. Pour aller plus loin, vous pouvez
     vous plonger dans les ouvrages de Laurent, ou continuer dans le même esprit avec
     le <a href="https://quizanthropocene.fr/quiz/3">quiz de Vincent Mignerot</a>.</p>
-  difficulty_average: 2.6666666666666665
+  difficulty_average: 2.7
   author: Laurent Testot
   image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
   has_audio: true
   publish: true
   spotlight: true
   created: 2020-09-23
-  updated: 2021-01-12
+  updated: 2021-01-26
   tags: []
 - id: 52
   name: Le quiz de Bon Pote sur la finance "verte"
@@ -348,7 +354,7 @@
   publish: true
   spotlight: false
   created: 2020-11-16
-  updated: 2020-12-13
+  updated: 2021-01-26
   tags:
   - 194
 - id: 53
@@ -367,7 +373,7 @@
   publish: true
   spotlight: false
   created: 2020-11-27
-  updated: 2020-12-19
+  updated: 2021-01-26
   tags: []
 - id: 54
   name: Born in the USA
@@ -383,14 +389,14 @@
     \n\r\n<p>Oh, et tant qu'on parle de pétrole, je vous invite à aller faire un tour\
     \ sur notre page de quiz, vous trouverez d'autres quiz thématiques pour pour étancher\
     \ votre soif de compréhension de notre dépendance à l'or noir ;)</p>"
-  difficulty_average: 2.6666666666666665
+  difficulty_average: 2.6
   author: laydgeur
   image_background_url: https://cdn.pixabay.com/photo/2017/12/08/08/17/america-3005258_1280.jpg
   has_audio: false
   publish: true
   spotlight: false
   created: 2020-11-28
-  updated: 2021-01-03
+  updated: 2021-01-26
   tags:
   - 11
   - 13
@@ -415,14 +421,14 @@
     \ sur le carbone émis est imposée.<br />\r\nAprès ce petit quiz pour vous mettre\
     \ en appétit, il est temps pour vous d'aller visionner la vidéo <a href=\"https://youtu.be/AQlqQEhVi1M\"\
     >ici</a> ! Et ses autres vidéos aussi d'ailleurs.<br />\r\n </p>"
-  difficulty_average: 2.888888888888889
+  difficulty_average: 2.9
   author: Le Réveilleur
   image_background_url: https://www.lereveilleur.com/wp-content/uploads/2020/09/CSC_paint.jpg
   has_audio: false
   publish: true
   spotlight: false
   created: 2020-12-08
-  updated: 2021-01-16
+  updated: 2021-01-26
   tags:
   - 62
 - id: 56
@@ -441,7 +447,7 @@
   publish: true
   spotlight: false
   created: 2020-12-13
-  updated: 2021-01-16
+  updated: 2021-01-26
   tags: []
 - id: 57
   name: 2020 en chiffres
@@ -450,14 +456,14 @@
     a été riche en matière d'environment. Mais avez-vous bien tout suivi ?</p>
   conclusion: <p>En route vers 2021 ! La nouvelle année nous réservera-t-elle son
     lot de chiffres et faits inattendus ?</p>
-  difficulty_average: 1.8461538461538463
+  difficulty_average: 1.8
   author: Raphael Odini
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/057.jpg
   has_audio: false
   publish: true
   spotlight: true
   created: 2020-12-24
-  updated: 2021-01-12
+  updated: 2021-01-26
   tags:
   - 213
 - id: 59
@@ -475,12 +481,13 @@
     réduire sont nombreuses. Pour aller plus loin,nous vous recommandons de participer
     à un atelier. Plus d'information sur <a href="https://fresquedunumerique.org">Fresque
     du Numérique. </a></p>
-  difficulty_average: 2.142857142857143
+  difficulty_average: 2.1
   author: Aurélien Deragne
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/logo%20FDN.png
-  publish: false
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/logo%20FDN%20fond%20blanc.png
+  has_audio: false
+  publish: true
   spotlight: true
   created: 2021-01-21
-  updated: 2021-01-25
+  updated: 2021-01-26
   tags:
   - 30
