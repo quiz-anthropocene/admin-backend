@@ -670,7 +670,8 @@
   type: QCM
   category: 1
   difficulty: 1
-  answer_option_a: 370 millions de tonnes de CO2, soit 48 kg/habitant en moyenne
+  answer_option_a: 370 millions de tonnes de CO2, soit 48 kg/habitant en moyenne dans
+    le monde
   answer_option_b: 3,7 milliards de tonnes de CO2, soit 480 kg/hab
   answer_option_c: 37 milliards de tonnes de CO2, soit 4,8 tonnes/hab
   answer_option_d: 370 milliards de tonnes de CO2, soit 48 tonnes/hab
@@ -22437,20 +22438,25 @@
   category: 5
   difficulty: 2
   answer_option_a: 2 l / 100km
-  answer_option_b: '3.4'
+  answer_option_b: '3.3'
   answer_option_c: '4.1'
   answer_option_d: '5'
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: '3.4 litres au 100 km / passager.
+  answer_explanation: '3.3 litres au 100 km / passager.
 
-    Cela suppose que l’avion est plein.
+    AF est parmi les flottes les plus modernes au monde.
+
+    Les gains faciles sont derrière nous malgré les belles promesses d’efficacité
+    énergétique.
+
+    Cela suppose que l’avion soit plein.
 
     Une petite voiture et 2 passagers font mieux que l''avion. Il faut admettre que
     ce ne sont pas les mêmes usages.
 
     On ne fait pas 5 ou 10000 km d’une seule traite en voiture.'
-  answer_accessible_url: ''
+  answer_accessible_url: https://corporate.airfrance.com/sites/default/files/dp_dd_fr_0.pdf
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -26024,6 +26030,131 @@
   - 30
   - 228
   - 229
+- id: 833
+  text: 'Selon vous, est-ce que les barrages réduisent le risque d''inondation ?  '
+  hint: ''
+  type: VF
+  category: 7
+  difficulty: 1
+  answer_option_a: Oui
+  answer_option_b: Non
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: Une récente étude publiée dans Nature Communications a montré
+    que les barrages réduisaient significativement le nombre de personnes exposées
+    aux inondations à l'échelle mondiale, d'environ 13% sous un scénario de réchauffement
+    à +2.5°C (RCP6.0). Il y a donc un réel intérêt à intégrer les barrages dans les
+    modèles d'impacts au changement climatique.
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.nature.com/articles/s41467-020-20704-0
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-21
+  created: 2021-02-01
+  updated: 2021-02-01
+  tags:
+  - 32
+  - 37
+  - 93
+  - 230
+- id: 834
+  text: 'Combien y a-t-il de grands barrages dans le monde (hauteur de mur supérieure
+    à 15m ou comprise entre 5m et 15m avec un réservoir de plus de 3 millions de m3)
+    ? '
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  answer_option_a: <5000
+  answer_option_b: 5000-24000
+  answer_option_c: 24000-58000
+  answer_option_d: '>58000'
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: Selon la Commission International des Grands Barrages, il y
+    a environ 58000 grands barrages référencés dans le monde. Les barrages en remblai
+    sont les plus nombreux, puisque ce type de barrage représente 65% des barrages
+    répertoriés.
+  answer_accessible_url: https://www.icold-cigb.org/GB/world_register/general_synthesis.asp
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-21
+  created: 2021-02-01
+  updated: 2021-02-01
+  tags:
+  - 37
+  - 230
+- id: 835
+  text: Quel est le pays qui compte le plus de grands barrages (hauteur de mur supérieure
+    à 15m ou comprise entre 5m et 15m avec un réservoir de plus de 3 millions de m3)
+    ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 2
+  answer_option_a: Chine
+  answer_option_b: France
+  answer_option_c: Inde
+  answer_option_d: États-Unis
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: 'La Chine est incontestablement le pays qui compte le plus de
+    grands barrages (23841), loin devant les États-Unis (9263), l''Inde (4407) et
+    la France (720). '
+  answer_accessible_url: https://www.icold-cigb.org/article/GB/world_register/general_synthesis/number-of-dams-by-country-members
+  answer_scientific_url: ''
+  answer_image_url: https://www.nature.com/articles/s41597-020-0362-5/figures/1
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-21
+  created: 2021-02-01
+  updated: 2021-02-01
+  tags:
+  - 37
+  - 230
+- id: 836
+  text: 'Quel est le principal usage des barrages dans le monde ? '
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  answer_option_a: Irrigation
+  answer_option_b: Production d'hydroélectricité
+  answer_option_c: Gestion des inondations
+  answer_option_d: Alimentation en eau potable
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: Mondialement, les grands barrages servent principalement pour
+    l'irrigation (36% des usages). La production d'hydroélectricité représentent quant
+    à elle 19% des usages.
+  answer_accessible_url: https://www.icold-cigb.org/GB/world_register/general_synthesis.asp
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-21
+  created: 2021-02-01
+  updated: 2021-02-01
+  tags:
+  - 37
+  - 230
 - id: 840
   text: Combien de personnes meurent  chaque année de l'absence d'eau potable ?
   hint: ''
@@ -26495,19 +26626,24 @@
   - 42
   - 218
 - id: 905
-  text: Copy of à venir
-  hint: ''
+  text: A quelle altitude volent les avions Long Courrier ?
+  hint: Turboréacteur
   type: QCM
   category: 2
-  difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
+  difficulty: 1
+  answer_option_a: 6500 m
+  answer_option_b: 7400 m
+  answer_option_c: 8500 m
+  answer_option_d: 11000 m
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: 'Pour les turboréacteurs, entre 30.000 et 40.000 pieds,
+
+    soit entre 9.200 et 12.200 mètres
+
+    Un gros porteur rempli de carburant, en effet, n''aura pas la possibilité de dépasser
+    les 30.000 pieds en début de parcours.'
+  answer_accessible_url: https://www.futura-sciences.com/tech/questions-reponses/technologie-altitude-volent-avions-8900/
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -26521,19 +26657,24 @@
   tags:
   - 218
 - id: 906
-  text: Copy of à venir
-  hint: ''
+  text: A quelle altitude volent les avions Court Courrier ?
+  hint: Turbopropulseur
   type: QCM
   category: 2
-  difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  difficulty: 1
+  answer_option_a: 3000 m
+  answer_option_b: 6100 m
+  answer_option_c: 7500 m
+  answer_option_d: 11000 m
+  answer_correct: b
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: 'Pour les turbopropulseurs, entre 17.000 et 25.000 pieds,
+
+    soit entre 5.100 et 7.100 mètres
+
+    Les avions à hélices par ailleurs sont moins rapides. Ils n''ont pas la portance
+    nécessaire à un vol en haute altitude.'
+  answer_accessible_url: https://www.futura-sciences.com/tech/questions-reponses/technologie-altitude-volent-avions-8900/
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -26547,19 +26688,21 @@
   tags:
   - 218
 - id: 907
-  text: Copy of à venir
+  text: A quelle altitude volent les jets privés ?Copy of à venir
   hint: ''
   type: QCM
   category: 2
   difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: 10500 m
+  answer_option_b: 15500 m
+  answer_option_c: 20500 m
+  answer_option_d: 25500 m
+  answer_correct: b
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: 'Les jets privés peuvent voler plus haut, jusqu''à 51.000 pieds,
+
+    soit 15.500 mètres.'
+  answer_accessible_url: https://www.futura-sciences.com/tech/questions-reponses/technologie-altitude-volent-avions-8900/
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -26567,25 +26710,32 @@
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-17
+  added: 2021-01-31
   created: 2021-01-18
   updated: 2021-01-18
   tags:
   - 218
 - id: 908
-  text: Copy of à venir
-  hint: ''
+  text: 'Ponctualité en France : Train vs Avion le gagnant est ?'
+  hint: Tchou tchou
   type: QCM
   category: 2
   difficulty: 2
-  answer_option_a: ''
-  answer_option_b: ''
+  answer_option_a: Le Train
+  answer_option_b: L'avion
   answer_option_c: ''
   answer_option_d: ''
-  answer_correct: d
+  answer_correct: a
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
+  answer_explanation: 'En 2019, 22,6 % des moyen-courriers ont atterri ou décollé
+    avec plus de 15 mn de retard en France,
+
+    avec un retard moyen de 44 mn,
+
+    contre 14,6 % pour les liaisons ferroviaires internationales de la SNCF,
+
+    avec un retard moyen de 32 mn'
+  answer_accessible_url: https://www.lefigaro.fr/voyages/conseils/train-ou-avion-quel-transport-choisir-pour-ses-voyages-en-europe-20201118
   answer_scientific_url: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -26599,6 +26749,168 @@
   tags:
   - 218
 - id: 909
+  text: 'Ponctualité en Europe : Train vs Avion le gagnant est : ... ?'
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: L'avion
+  answer_option_b: Le train
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: 'Les vols intra-européens d''Air France affichaient en 2019
+    un taux de ponctualité de 79,92 %,
+
+    contre 78,66 % sur sa filiale Transavia ou 73,08 % chez easyJet, selon OAG,
+
+    Côté rail, en moyenne 91 % des trains sont arrivés à l''heure en 2017'
+  answer_accessible_url: https://www.lefigaro.fr/voyages/conseils/train-ou-avion-quel-transport-choisir-pour-ses-voyages-en-europe-20201118
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-01-19
+  updated: 2021-01-19
+  tags:
+  - 218
+- id: 910
+  text: 'Train vs Avion : le Paris - Marseille, l''avion KO ? Mais combien de fois
+    plus de CO2 ?'
+  hint: Au tapis... bien sûr
+  type: QCM
+  category: 2
+  difficulty: 3
+  answer_option_a: 8 fois plus
+  answer_option_b: '30 fois plus '
+  answer_option_c: 53 fois plus
+  answer_option_d: 75 fois plus
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: '74 fois plus exactement.
+
+    Faites le calcul sur le site de la DGAC pourtant très favorable.
+
+    Le train TGV est imbattable avec 1.73 g CO2e / km. (source SNCF)
+
+    A noter que les consommations par km de l’avion sont très variables sur les destinations
+    domestiques de 3.7 à 7 litres aux 100 km.
+
+    C’est selon les types d’avions, les distances entre 344 et 900 km, les coefficients
+    de remplissage…'
+  answer_accessible_url: https://eco-calculateur.dta.aviation-civile.gouv.fr/
+  answer_scientific_url: https://www.oui.sncf/aide/calcul-des-emissions-de-co2-sur-votre-trajet-en-train
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-31
+  created: 2021-02-01
+  updated: 2021-02-01
+  tags:
+  - 218
+- id: 911
+  text: Faites vous confiance à l’éco-calculateur de la DGAC ?
+  hint: Moitié plein ?
+  type: QCM
+  category: 2
+  difficulty: 4
+  answer_option_a: 50/50
+  answer_option_b: ne sais pas
+  answer_option_c: Oui
+  answer_option_d: Non
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: '50/50 La réponse serait plutôt 40 oui / 60 non
+
+    Oui pour les distances
+
+    Oui pour les consommations
+
+    Oui pour le CO2, pour lequel il sépare bien les émissions pour la production et
+    le transport du carburant.
+
+    Par contre il omet totalement les émissions dites « non CO2 » en vol dont on mesure
+    les influences à travers le forçage radiatif en CO2e pour équivalent. CO2e = CO2
+    + Non CO2 = 3 x CO2
+
+    Ces émissions très difficiles à caractériser ont fait l’objet d’études successives
+    depuis une bonne vingtaine d’années qui ont permis de mieux comprendre les phénomène
+    complexes à 10000 m et -50°C, conditions pas possibles d’étudier en laboratoire.
+
+    La dernière étude de sept. 2020 à confirmé la fourchette haute cad CO2e = 3 x
+    CO2.
+
+    Dit autrement la DGAC qui applique les recommandations du transport aérien, est
+    en opposition total avec les études scientifiques sans apporter aucunes contestations
+    officielles à celles-ci.
+
+    Elle les ignore.
+
+    Habillement elle mentionne une part infime de CO2e (2.4%) qui pourrait laisser
+    croire qu’elle s’en soucie.
+
+    Autrement dit pour les vols en haute altitude, le compte n’y est pas, il manque
+    juste 66% des émissions.
+
+    Voir question 701'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-17
+  created: 2021-02-01
+  updated: 2021-02-01
+  tags:
+  - 218
+- id: 912
+  text: Quelle est la durée de vie des avions avant prendre leur retraite ?
+  hint: En baisse
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 10 ans
+  answer_option_b: 20 ans
+  answer_option_c: 30 ans
+  answer_option_d: 50 ans
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: 'Elle était de 25 à 30 ans,
+
+    Et même 50 ans pour le plus vieux Boeing 747 en service, dont plus de 1550 exemplaires
+    ont été livrés, il a fait son 1er vol commercial en 1970 et Boeing fermera la
+    chaine de production en 2022, après avoir transporté plus de 250 millions de passagers.
+
+    Un 747 d’AF a atteint 97271 heures de vol en 2000 après 38 ans de service.
+
+    mais elle tend à se réduire considérablement, l’A380 n’enregistre plus de commandes
+    depuis 2015 et certaines compagnies anticipent sa retraite en 2020 à peine 12
+    ans après les premières livraisons.'
+  answer_accessible_url: https://www.museeairespace.fr/a-voir-a-faire/activites/boarding-pass/boeing-747/
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-31
+  created: 2021-02-01
+  updated: 2021-02-01
+  tags:
+  - 218
+- id: 913
   text: Copy of à venir
   hint: ''
   type: QCM
@@ -26619,9 +26931,113 @@
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-17
-  created: 2021-01-19
-  updated: 2021-01-19
+  added: 2021-01-31
+  created: 2021-02-01
+  updated: 2021-02-01
+  tags:
+  - 218
+- id: 915
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-31
+  created: 2021-02-01
+  updated: 2021-02-01
+  tags:
+  - 218
+- id: 916
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-31
+  created: 2021-02-01
+  updated: 2021-02-01
+  tags:
+  - 218
+- id: 917
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-31
+  created: 2021-02-01
+  updated: 2021-02-01
+  tags:
+  - 218
+- id: 918
+  text: Copy of à venir
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-31
+  created: 2021-02-01
+  updated: 2021-02-01
   tags:
   - 218
 - id: 919
