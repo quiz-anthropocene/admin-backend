@@ -459,13 +459,16 @@
   has_ordered_answers: false
   answer_explanation: Ces gaz ont pour caractéristique d'absorber une partie des rayonnements
     infrarouges émis par la surface de la Terre, et donc d'emmagasiner de l'énergie
-    au lieu qu'elle reparte vers l'espace.
+    au lieu qu'elle reparte vers l'espace. Le méthane est un autre gaz à effet de
+    serre qui contribue largement au réchauffement climatique. La vapeur d'eau est
+    elle aussi un puissant gaz à effet de serre, le principal même, mais très peu
+    influencée par les activités humaines.
   answer_accessible_url: https://fr.wikipedia.org/wiki/Effet_de_serre#Les_gaz_%C3%A0_%C2%AB_effet_de_serre_%C2%BB
   answer_scientific_url: ''
   answer_image_url: https://www.conventioncitoyennepourleclimat.fr/wp-content/uploads/2019/12/122019-CCC-insta-effetdeserre.png
-  answer_image_explanation: Le méthane et le protoxyde d'azote sont respectivement
+  answer_image_explanation: 'Le méthane et le protoxyde d''azote sont respectivement
     28 et 298 fois plus puissant que le CO2 en terme de potentiel de réchauffement
-    global
+    global. '
   answer_extra_info: ''
   author: Avenir Climatique
   validator: Matthieu Massart
@@ -26155,6 +26158,88 @@
   tags:
   - 37
   - 230
+- id: 837
+  text: 'Quel est le plus grand barrage du monde ? '
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 1
+  answer_option_a: Trois-Gorges (Chine)
+  answer_option_b: Roselend (France)
+  answer_option_c: Zillergründl (Autriche)
+  answer_option_d: Itaipu (Brésil-Paraguay)
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-21
+  created: 2021-02-02
+  updated: 2021-02-02
+  tags:
+  - 37
+  - 230
+- id: 838
+  text: 'Quelle est la capacité volumique du plus grand barrage du monde ? '
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: ''
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-21
+  created: 2021-02-02
+  updated: 2021-02-02
+  tags:
+  - 37
+  - 230
+- id: 839
+  text: Quel est le nombre de morts par terawatt-heure d'énergie hydraulique produite
+    (1 terawatth-heure correspond à la consommation annuelle d'environ 27000 européens)?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  answer_option_a: '0.001'
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: ''
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-21
+  created: 2021-02-02
+  updated: 2021-02-02
+  tags:
+  - 37
+  - 230
 - id: 840
   text: Combien de personnes meurent  chaque année de l'absence d'eau potable ?
   hint: ''
@@ -26181,6 +26266,61 @@
   added: 2021-01-21
   created: 2021-01-26
   updated: 2021-01-26
+  tags:
+  - 37
+- id: 841
+  text: Selon l'ONU, quel serait le montant à investir pour garantir à tous l'accès
+    à l'eau potable et à l'assainissement ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  answer_option_a: 10 milliards $
+  answer_option_b: 30 milliards $
+  answer_option_c: 100 milliards $
+  answer_option_d: 300 milliards $
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-21
+  created: 2021-02-02
+  updated: 2021-02-02
+  tags:
+  - 37
+- id: 843
+  text: 'Combien existe-t-il de zones de conflits potentiels dus à l''eau ? '
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 4
+  answer_option_a: '30'
+  answer_option_b: '300'
+  answer_option_c: 3,000
+  answer_option_d: 15,000
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: 'Avec plus de 260 bassins transfrontaliers (partagés entre au
+    moins 2 pays), on dénombre aujourd''hui plus de 300 zones de conflits potentiels
+    dus à l''eau. '
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-21
+  created: 2021-02-02
+  updated: 2021-02-02
   tags:
   - 37
 - id: 845
@@ -26421,15 +26561,21 @@
   type: QCM
   category: 7
   difficulty: 2
-  answer_option_a: Entre 270 et 670 milliers de t Co2e supplémentaires
-  answer_option_b: Entre 2,7 et 6,7 millions de t CO2e
-  answer_option_c: Entre 27 et 67 millions de t CO2e
-  answer_option_d: Entre 270 et 670 millions de t CO2e
+  answer_option_a: Entre 270 et 670 milliers de tonnes de CO2éq supplémentaires, soit
+    les émissions de 1,5 à 4 millions de passagers faisant Paris - New York aller-retour
+  answer_option_b: Entre 2,7 et 6,7 millions de tonnes CO2éq supplémentaires, soit
+    les émissions de 15 à 37 millions de passagers faisant Paris - New York aller-retour
+  answer_option_c: Entre 27 et 67 millions de tonnes de CO2éq supplémentaires, soit
+    les émissions de 150 à 370 millions de passagers faisant Paris - New York aller-retour
+  answer_option_d: Une baisse de  2,7 à 6,7 millions de tonnes de CO2éq, soit les
+    émissions de 1,5 à 4 millions de passagers faisant Paris - New York aller-retour
+    économisées.
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: 'C''est la fourchette donnée par le Haut Conseil pour le Climat.
-    Cela représente  une augmentation significative si l''on considère l’empreinte
-    carbone du numérique annuelle en France : environ 15 Mt CO2e en 2020.'
+    Cela représente  une augmentation significative (de 18 à 45% en 10 ans seulement)
+    si l''on considère l’empreinte carbone du numérique annuelle en France : environ
+    15 Mt CO2e en 2020.'
   answer_accessible_url: https://www.youtube.com/watch?v=eH-LTLsSviQ&feature=youtu.be
   answer_scientific_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/12/rapport-5g_haut-conseil-pour-le-climat.pdf
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/852.JPG
@@ -26439,7 +26585,7 @@
   answer_extra_info: ''
   author: Alain Servigne
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-01-26
   created: 2021-01-26
   updated: 2021-01-26
@@ -26477,7 +26623,7 @@
   answer_extra_info: ''
   author: Alain Servigne
   validator: Matthieu Massart
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-01-29
   created: 2021-01-30
   updated: 2021-01-30
