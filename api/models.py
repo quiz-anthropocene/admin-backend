@@ -765,7 +765,7 @@ class Quiz(models.Model):
         questions_difficulty_avg_raw = self.questions.aggregate(Avg("difficulty"))
         questions_difficulty_average_value = (
             round(questions_difficulty_avg_raw["difficulty__avg"], 1)
-            if questions_difficulty_avg_raw
+            if questions_difficulty_avg_raw["difficulty__avg"]
             else 0
         )
         return questions_difficulty_average_value

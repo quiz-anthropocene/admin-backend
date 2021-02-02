@@ -32,7 +32,7 @@ class Command(BaseCommand):
     """
     Usage:
     python manage.py init_db
-    python manage.py init_db --with_sql_reset
+    python manage.py init_db --with-sql-reset
     """
 
     help = """Initialize database with the files in the /data folder"""
