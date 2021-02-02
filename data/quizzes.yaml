@@ -440,14 +440,14 @@
     vis à vis de l'énergie, vous pouvez tester nos quiz sur le pétrole <a href="https://quizanthropocene.fr/quiz/7">ici
     </a>et <a href="https://quizanthropocene.fr/quiz/10">là</a>. Et pour aller au
     coma éthylique énergétique, c'est <a href="https://quizanthropocene.fr/quiz/54">par-là</a>.</p>
-  difficulty_average: 2.5
+  difficulty_average: 2.4
   author: Matthieu Massart
   image_background_url: https://www.popsci.com/resizer/iHd2-DUNyurlTDhvndesdxzQoFU=/857x643/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/MTUGSVPHBB22CKTZETTB42BCIE.jpg
   has_audio: false
   publish: true
   spotlight: false
   created: 2020-12-13
-  updated: 2021-01-26
+  updated: 2021-02-01
   tags: []
 - id: 57
   name: 2020 en chiffres
@@ -491,3 +491,20 @@
   updated: 2021-01-26
   tags:
   - 30
+- id: 60
+  name: Le numérique est-il écologique ?
+  introduction: <p>Loin des caractères immatériel et propre qui lui sont prêtés, le
+    numérique a, comme toute activité humaine, des impacts environnementaux. Ce quiz
+    est là pour vous éclairer sur quelques chiffres qui pourront vous éclairer.</p>
+  conclusion: <p>Bravo, vous avez quelques ordres de grandeur pour aborder le sujet
+    de la sobriété numérique. Vous pouvez également compléter vos connaissances avec
+    le quiz de la fresque du numérique.</p>
+  difficulty_average: 0.0
+  author: Alain Servigne
+  image_background_url: https://www.usinenouvelle.com/mediatheque/4/1/3/000828314_896x598_c.png
+  has_audio: false
+  publish: false
+  spotlight: false
+  created: 2021-02-01
+  updated: 2021-02-01
+  tags: []
