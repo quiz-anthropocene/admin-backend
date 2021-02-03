@@ -28,3 +28,8 @@
   to_quiz: 14
   status: suivant
   created: 2020-12-17
+- id: 7
+  from_quiz: 60
+  to_quiz: 59
+  status: jumeau
+  created: 2021-02-02
