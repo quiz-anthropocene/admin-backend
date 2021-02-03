@@ -461,9 +461,9 @@
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/057.jpg
   has_audio: false
   publish: true
-  spotlight: true
+  spotlight: false
   created: 2020-12-24
-  updated: 2021-01-26
+  updated: 2021-02-02
   tags:
   - 213
 - id: 59
@@ -495,16 +495,17 @@
   name: Le numérique est-il écologique ?
   introduction: <p>Loin des caractères immatériel et propre qui lui sont prêtés, le
     numérique a, comme toute activité humaine, des impacts environnementaux. Ce quiz
-    est là pour vous éclairer sur quelques chiffres qui pourront vous éclairer.</p>
+    est là pour vous éclairer sur quelques chiffres.</p>
   conclusion: <p>Bravo, vous avez quelques ordres de grandeur pour aborder le sujet
     de la sobriété numérique. Vous pouvez également compléter vos connaissances avec
     le quiz de la fresque du numérique.</p>
-  difficulty_average: 0.0
+  difficulty_average: 2.2
   author: Alain Servigne
   image_background_url: https://www.usinenouvelle.com/mediatheque/4/1/3/000828314_896x598_c.png
   has_audio: false
-  publish: false
-  spotlight: false
+  publish: true
+  spotlight: true
   created: 2021-02-01
-  updated: 2021-02-01
-  tags: []
+  updated: 2021-02-02
+  tags:
+  - 30
