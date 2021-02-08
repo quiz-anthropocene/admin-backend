@@ -3,12 +3,11 @@
 
     <!-- Quiz header -->
     <div v-if="quiz" class="card">
-      <img v-bind:src="quiz.image_background_url || 'https://quizanthropocene.fr/showyourstripes_globe_1850-2019.png'" class="image-background" :class="(quizStep === 0) ? 'height-200' : 'height-50'">
+      <img v-bind:src="quiz.image_background_url || 'https://quizanthropocene.fr/showyourstripes_globe_1850-2019.png'" class="card-img-top" :class="(quizStep === 0) ? 'height-200' : 'height-50'">
 
       <div class="card-body">
         <h2 class="card-title">
-          <span v-if="quizStep > 0">Quiz : </span>
-          {{ quiz.name }}
+          Quiz : {{ quiz.name }}
           <span v-if="quiz.has_audio" class="label small" style="vertical-align:top">🔉Commentaires audio</span>
         </h2>
 
@@ -19,7 +18,7 @@
 
           <div class="row no-gutters small">
             <div class="col" title="Nombre de questions">
-              ❓&nbsp;<span class="label label-hidden"><strong>{{ quiz.questions.length }}</strong></span>Questions
+              <span class="label label-hidden"><strong>{{ quiz.questions.length }}</strong></span>Questions
             </div>
             <div class="col" title="Difficulté">
               🏆&nbsp;Difficulté<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }} / 4</strong></span>
@@ -28,18 +27,17 @@
               📝&nbsp;Auteur<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>
             </div> -->
             <!-- <span title="Date de création du quiz">📊&nbsp;Crée le:&nbsp;{{ new Date(quiz.created).toLocaleString() }}</span> -->
-          </div>
-
-          <hr v-if="quiz.tags && quiz.tags.length > 0" class="margin-top-bottom-10" />
-
-          <div class="row no-gutters">
             <div v-if="quiz.tags && quiz.tags.length > 0" class="col small" title="Tag(s) du quiz">
-              🏷️&nbsp;<span v-for="(tag, index) in quiz.tags" :key="tag.id">
+              <span v-for="(tag, index) in quiz.tags" :key="tag.id">
                 <span v-if="index < 3" class="label label-tag">{{ tag.name }}</span>
               </span>
             </div>
+          </div>
 
-            <div v-if="previousQuiz" class="col">
+          <hr v-if="previousQuiz" class="margin-top-bottom-10" />
+
+          <div v-if="previousQuiz" class="row no-gutters">
+            <div class="col">
               <span>Ce quiz est la suite de&nbsp;👉&nbsp;</span>
               <strong><router-link class="no-decoration" :to="{ name: 'quiz-detail', params: { quizId: previousQuiz.id } }">{{ previousQuiz.name }}</router-link></strong>
             </div>
@@ -50,7 +48,7 @@
 
     <div v-if="quiz && quizStep === 0" class="quiz-start">
       <br />
-      <button class="btn btn-lg btn-primary margin-5" @click="incrementStep()">⏩&nbsp;Commencer le quiz !</button>
+      <button class="btn btn-lg btn-primary margin-5" @click="incrementStep()">▶️&nbsp;Commencer le quiz !</button>
     </div>
 
     <!-- Quiz en cours -->
@@ -230,19 +228,6 @@ export default {
   border-radius: 5px;
   margin: 10px 0px;
   padding: 10px;
-}
-
-.image-background {
-  /* height: 200px; */
-  width: 100%;
-  object-fit: cover;
-  text-align: center;
-}
-.height-200 {
-  height: 200px;
-}
-.height-50 {
-  height: 50px;
 }
 
 .row > .col-lg-4,

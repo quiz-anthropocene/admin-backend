@@ -163,11 +163,6 @@ export default {
 .card {
   margin-bottom: 15px;
 }
-
-.card-img-top {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-}
-
 .card-footer > a {
   white-space: nowrap;
   margin-right: 10px;

@@ -1,7 +1,7 @@
 <template>
   <div class="alert alert-primary margin-0" role="alert">
     <div id="fb-root"></div>
-    Vous souhaitez partager le quiz avec vos amis ?
+    Partager le quiz avec vos amis
     <div class="share-buttons row justify-content-center">
       <div class="share-button">
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button share-button" data-size="large" :data-text="twitterDataText" data-related="AnthroQuiz" data-show-count="false">Partager sur Twitter</a>
@@ -110,7 +110,6 @@ input:focus{
 }
 
 .share-buttons {
-  margin-left: 20px;
   margin-top: 10px;
 }
 .share-button {

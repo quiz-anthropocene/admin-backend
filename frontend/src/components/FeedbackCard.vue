@@ -5,7 +5,7 @@
         <h3 class="margin-5">Votre avis sur {{ (context.source) === 'question' ? 'cette' : 'ce' }} {{ context.source }} ?</h3>
       </div>
 
-      <div class="col-sm">
+      <div class="col-sm action">
         <span v-if="!feedbackSubmitted" class="span-like">
           <button class="btn btn-sm btn-primary-light margin-left-right-10 small" title="J'ai aimé" @click="submitFeedback('like')" :disabled="feedbackSubmitted">👍<span class="fake-link"></span></button>
           <button class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Je n'ai pas aimé" @click="submitFeedback('dislike')" :disabled="feedbackSubmitted">👎<span class="fake-link"></span></button>
@@ -148,7 +148,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .feedback-card {
   border: 1px solid var(--primary);
   border-radius: 5px;
@@ -157,12 +157,10 @@ export default {
   padding-left: 10px;
   padding-right: 10px;
   background-color: white;
-}
 
-@media (max-width: 767.98px) {
-  .span-like {
-    display: block;
-    margin-bottom: 5px;
+  div.action {
+    white-space: nowrap;
+    overflow-x: hidden;
   }
 }
 </style>

@@ -47,10 +47,6 @@ export default {
   box-shadow: 0px 0px 5px 5px #dfdfdf;
   transition: 0.2s;
 }
-.card-body h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
 .card-body button {
   margin-top: 16px;
 }

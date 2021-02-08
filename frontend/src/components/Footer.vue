@@ -39,14 +39,16 @@
           <br />
         </div>
       </div>
-      <div class="row">
+
+      <div class="row" v-if="currentRoute === 'home'">
         <div class="col-sm">
           <a class="no-after" v-bind:href="configuration.application_linkedin_url" target="_blank"><img height="30px" src="/openmoji_linkedin_E046.svg" alt="Linkedin" title="Linkedin" /></a>
           <a class="no-after" v-bind:href="configuration.application_twitter_url" target="_blank"><img height="30px" src="/openmoji_twitter_E040.svg" alt="Twitter" title="Twitter" /></a>
           <a class="no-after" v-bind:href="configuration.application_facebook_url" target="_blank"><img height="30px" src="/openmoji_facebook_E042.svg" alt="Facebook" title="Facebook" /></a>
         </div>
       </div>
-      <div class="row" v-if="configuration.application_frontend_ecoindex_url">
+
+      <div class="row" v-if="currentRoute === 'home' && configuration.application_frontend_ecoindex_url">
         <div class="col-sm">
           Cette page a un score <a v-bind:href="configuration.application_frontend_ecoindex_url" target="_blank">EcoIndex.fr</a> de
           <span class="ecoindex-score">80.2 / 100</span><span class="ecoindex-letter">A</span>

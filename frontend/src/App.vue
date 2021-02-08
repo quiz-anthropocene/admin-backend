@@ -139,7 +139,7 @@ export default {
 
 /* Override bootstrap.min.css */
 
-$theme-colors: ( // shift colors
+$theme-colors: (
   "primary": #08519C,
   "secondary": #F33F3F,
   "warning":#f0ad4e // #ffc107
@@ -206,9 +206,19 @@ audio {
 .card-img-top {
   height: 10vw;
   object-fit: cover;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-body {
   padding: 10px;
+
+  .card-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .card-title:last-child {
+    // margin-top: 0;
+    margin-bottom: 0;
+  }
 
   button {
     margin-top: 0 !important;
@@ -307,6 +317,15 @@ abbr[title]:focus::after {
   padding-right: 10px;
 }
 
+.height-200 {
+  height: 200px;
+}
+.height-150 {
+  height: 150px;
+}
+.height-50 {
+  height: 50px;
+}
 .max-height-300 {
   max-height: 300px;
   overflow-y: hidden;
