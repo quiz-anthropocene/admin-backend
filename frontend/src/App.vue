@@ -213,11 +213,12 @@ audio {
 
   .card-title {
     margin-top: 0;
-    margin-bottom: 10px;
-  }
-  .card-title:last-child {
-    // margin-top: 0;
     margin-bottom: 0;
+  }
+  .card-subtitle {
+    margin-top: 0;
+    max-height: 200px;
+    overflow-y: scroll;
   }
 
   button {
@@ -267,6 +268,9 @@ abbr[title]:focus::after {
 }
 .margin-5 {
   margin: 5px;
+}
+.margin-10 {
+  margin: 10px;
 }
 .margin-top-bottom-10 {
   margin-top: 10px;
@@ -441,7 +445,7 @@ span.no-wrap {
 
 hr.custom-separator {
   border: 0 none;
-  height: 1px;
+  // height: 1px;
   width: 50%;
   color: var(--primary);
   background-color: var(--primary);

@@ -62,7 +62,7 @@
     </div>
 
     <!-- <br v-if="question && questionSubmitted" /> -->
-    <div v-if="question && questionSubmitted" id="scroll-to-answer" style="height:1px"></div>
+    <div v-if="question && questionSubmitted" id="scroll-to-answer" style="height:0px"></div>
 
     <!-- ANSWER -->
     <div v-if="question && questionSubmitted" class="answer" :class="questionAnswer.success ? 'answer-success' : 'answer-error'">

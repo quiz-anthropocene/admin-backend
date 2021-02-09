@@ -3,7 +3,7 @@
 
     <!-- Quiz header -->
     <div v-if="quiz" class="card">
-      <img v-bind:src="quiz.image_background_url || 'https://quizanthropocene.fr/showyourstripes_globe_1850-2019.png'" class="card-img-top" :class="(quizStep === 0) ? 'height-200' : 'height-50'">
+      <img v-bind:src="quiz.image_background_url || 'https://quizanthropocene.fr/showyourstripes_globe_1850-2019.png'" class="card-img-top" :class="(quizStep === 0) ? 'height-150' : 'height-50'">
 
       <div class="card-body">
         <h2 class="card-title">
@@ -47,8 +47,7 @@
     </div>
 
     <div v-if="quiz && quizStep === 0" class="quiz-start">
-      <br />
-      <button class="btn btn-lg btn-primary margin-5" @click="incrementStep()">▶️&nbsp;Commencer le quiz !</button>
+      <button class="btn btn-lg btn-primary margin-10" @click="incrementStep()">▶️&nbsp;Commencer le quiz !</button>
     </div>
 
     <!-- Quiz en cours -->
