@@ -420,20 +420,22 @@ class QuizQuestionInline(admin.StackedInline):
 
 class QuizRelationshipFromInline(admin.StackedInline):  # TabularInline
     model = QuizRelationship
+    verbose_name = "Quiz Relationship (sortant)"
     fk_name = "from_quiz"
-    autocomplete_fields = ["to_quiz"]
+    # autocomplete_fields = ["to_quiz"]
     extra = 0
 
     def formfield_for_foreignkey(self, db_field, request=None, **kwargs):
         """
         Hide the current quiz in the relationship form
+        Doesn't work with autocomplete_fields
         """
         field = super(QuizRelationshipFromInline, self).formfield_for_foreignkey(
             db_field, request, **kwargs
         )
         if db_field.name == "to_quiz":
             if "object_id" in request.resolver_match.kwargs:
-                current_quiz_id = request.resolver_match.kwargs["object_id"]
+                current_quiz_id = int(request.resolver_match.kwargs["object_id"])
                 # remove the current quiz from the list
                 field.queryset = Quiz.objects.exclude(id=current_quiz_id)
                 # remove the current quiz's relationship quizs
@@ -444,8 +446,10 @@ class QuizRelationshipFromInline(admin.StackedInline):  # TabularInline
                     to_quiz__id=current_quiz_id
                 ).values_list("from_quiz_id", flat=True)
                 field.queryset = field.queryset.exclude(
-                    id__in=list(current_quiz_from_relationships)
-                    + list(current_quiz_to_relationships)
+                    id__in=(
+                        list(current_quiz_from_relationships)
+                        + list(current_quiz_to_relationships)
+                    )
                 )
                 # order queryset
                 field.queryset = field.queryset.order_by("-id")
@@ -457,11 +461,13 @@ class QuizRelationshipFromInline(admin.StackedInline):  # TabularInline
 
 class QuizRelationshipToInline(admin.StackedInline):  # TabularInline
     model = QuizRelationship
+    verbose_name = "Quiz Relationship (entrant)"
     fk_name = "to_quiz"
     extra = 0
+    max_num = 0
 
-    def has_add_permission(self, request, obj=None):
-        return False
+    # def has_add_permission(self, request, obj=None):
+    #     return False
 
     def has_change_permission(self, request, obj=None):
         return False
@@ -470,7 +476,7 @@ class QuizRelationshipToInline(admin.StackedInline):  # TabularInline
         return False
 
 
-class QuizAdmin(ExportMixin, FieldsetsInlineMixin, admin.ModelAdmin):
+class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "name",
