@@ -1,7 +1,7 @@
 <template>
   <section>
 
-    <h2 class="new-quiz-title">Nouveaux quiz&nbsp;✨</h2>
+    <h2 class="special-title">Nouveaux quiz&nbsp;✨</h2>
     <div class="row" v-if="quizzesSpotlighted && quizzesSpotlighted.length > 0" id="quiz-list">
       <div class="col-sm-4" v-for="quiz in quizzesSpotlighted" :key="quiz.id">
         <QuizCard :quiz="quiz"/>
@@ -121,7 +121,6 @@
 </template>
 
 <script>
-
 import QuizCard from '../components/QuizCard.vue';
 
 export default {
@@ -219,12 +218,6 @@ export default {
 <style scoped>
 svg {
   font-size: 2em;
-}
-
-h2.new-quiz-title {
-  text-align: left;
-  margin-bottom: 5px;
-  color: var(--primary);
 }
 
 .jumbotron {

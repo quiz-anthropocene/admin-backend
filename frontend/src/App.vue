@@ -365,6 +365,12 @@ abbr[title]:focus::after {
   text-align: right;
 }
 
+h2.special-title {
+  text-align: left;
+  margin-bottom: 5px;
+  color: var(--primary);
+}
+
 span.no-wrap {
   white-space: nowrap;
 }

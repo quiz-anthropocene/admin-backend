@@ -68,10 +68,7 @@
 
         <div v-if="quiz.conclusion" v-html="quiz.conclusion" title="Conclusion du quiz"></div>
 
-        <div v-if="nextQuiz">
-          <span>Continuez avec le quiz suivant&nbsp;👉&nbsp;</span>
-          <strong><router-link class="no-decoration" :to="{ name: 'quiz-detail', params: { quizId: nextQuiz.id } }">{{ nextQuiz.name }}</router-link></strong>
-        </div>
+        <ShareBox type="quiz" :quizName="quiz.name" :score="quiz.questions.filter(q => q['success']).length + '/' + quiz.questions.length" />
 
         <hr />
 
@@ -92,16 +89,28 @@
         </div>
       </section>
 
-      <ShareBox type="quiz" :quizName="quiz.name" :score="quiz.questions.filter(q => q['success']).length + '/' + quiz.questions.length" />
-
       <FeedbackCard v-bind:context="{ source: 'quiz', item: quiz }" />
+
+      <section v-if="nextQuiz">
+        <br />
+        <h2 class="special-title">Quiz suivant&nbsp;⏩</h2>
+        <QuizCard :quiz="nextQuiz" />
+      </section>
+
+      <section v-if="similarQuizs">
+        <br />
+        <h2 class="special-title">Quiz similaire<span v-if="similarQuizs.length > 1">s</span>&nbsp;👯</h2>
+        <QuizCard v-for="quiz in similarQuizs" :key="quiz.id" :quiz="quiz" />
+      </section>
 
     </section>
   </section>
 </template>
 
 <script>
+import constants from '../constants';
 import { metaTagsGenerator } from '../utils';
+import QuizCard from '../components/QuizCard.vue';
 import QuestionAnswerCards from '../components/QuestionAnswerCards.vue';
 import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 import FeedbackCard from '../components/FeedbackCard.vue';
@@ -120,6 +129,7 @@ export default {
     };
   },
   components: {
+    QuizCard,
     QuestionAnswerCards,
     QuestionPreviewCard,
     FeedbackCard,
@@ -151,16 +161,25 @@ export default {
       return quizRelationships;
     },
     previousQuiz() {
-      const previousQuizRelationship = this.quizRelationships.find((qr) => (qr.to_quiz === this.quiz.id) && (qr.status === 'suivant'));
+      const previousQuizRelationship = this.quizRelationships.find((qr) => (qr.to_quiz === this.quiz.id) && (qr.status === constants.QUIZ_RELATIONSHIP_NEXT));
       if (previousQuizRelationship) {
         return this.$store.getters.getQuizById(previousQuizRelationship.from_quiz);
       }
       return null;
     },
     nextQuiz() {
-      const nextQuizRelationship = this.quizRelationships.find((qr) => (qr.from_quiz === this.quiz.id) && (qr.status === 'suivant'));
+      const nextQuizRelationship = this.quizRelationships.find((qr) => (qr.from_quiz === this.quiz.id) && (qr.status === constants.QUIZ_RELATIONSHIP_NEXT));
       if (nextQuizRelationship) {
         return this.$store.getters.getQuizById(nextQuizRelationship.to_quiz);
+      }
+      return null;
+    },
+    similarQuizs() {
+      const similarQuizRelationships = this.quizRelationships.filter((qr) => (qr.to_quiz === this.quiz.id) || (qr.from_quiz === this.quiz.id))
+        .filter((qr) => (qr.status === constants.QUIZ_RELATIONSHIP_SIMILAR) || (qr.status === constants.QUIZ_RELATIONSHIP_TWIN));
+      if (similarQuizRelationships.length) {
+        const similarQuizRelationshipsIdList = similarQuizRelationships.map((qr) => ((qr.to_quiz === this.quiz.id) ? qr.from_quiz : qr.to_quiz));
+        return this.$store.getters.getQuizzesByIdList(similarQuizRelationshipsIdList);
       }
       return null;
     },

@@ -911,26 +911,29 @@ class QuizRelationship(models.Model):
         - status must be one of the choices
         - cannot have reverse ?
         """
-        if self.from_quiz == self.to_quiz:
-            raise ValidationError({"to_quiz": "ne peut pas être le même quiz"})
         if self.status not in constants.QUIZ_RELATIONSHIP_LIST:
             raise ValidationError({"status": "doit être une valeur de la liste"})
-        # check there isn't any existing relationships # status ?
-        existing_identical_relationships = QuizRelationship.objects.filter(
-            from_quiz=self.from_quiz, to_quiz=self.to_quiz
-        )
-        if len(existing_identical_relationships):
-            raise ValidationError(
-                {"to_quiz": "il y a déjà une relation avec ce quiz dans ce sens"}
+        if self.from_quiz_id and self.to_quiz_id:
+            if self.from_quiz_id == self.to_quiz_id:
+                raise ValidationError({"to_quiz": "ne peut pas être le même quiz"})
+            # check there isn't any existing relationships # status ?
+            existing_identical_relationships = QuizRelationship.objects.filter(
+                from_quiz=self.from_quiz, to_quiz=self.to_quiz
             )
-        # check there isn't any existing symmetrical relationships
-        existing_symmetrical_relationships = QuizRelationship.objects.filter(
-            from_quiz=self.to_quiz, to_quiz=self.from_quiz
-        )
-        if len(existing_symmetrical_relationships):
-            raise ValidationError(
-                {"to_quiz": "il y a déjà une relation avec ce quiz dans l'autre sens"}
+            if len(existing_identical_relationships):
+                raise ValidationError(
+                    {"to_quiz": "il y a déjà une relation avec ce quiz dans ce sens"}
+                )
+            # check there isn't any existing symmetrical relationships
+            existing_symmetrical_relationships = QuizRelationship.objects.filter(
+                from_quiz=self.to_quiz, to_quiz=self.from_quiz
             )
+            if len(existing_symmetrical_relationships):
+                raise ValidationError(
+                    {
+                        "to_quiz": "il y a déjà une relation avec ce quiz dans l'autre sens"
+                    }
+                )
 
 
 class QuizAnswerEventQuerySet(models.QuerySet):

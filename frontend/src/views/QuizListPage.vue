@@ -9,7 +9,7 @@
 
     <div v-if="quizzesDisplayed && quizzesDisplayed.length > 0" id="quiz-list" class="row">
       <div class="col-sm-6" v-for="quiz in quizzesDisplayed" :key="quiz.id">
-        <QuizCard :quiz="quiz"/>
+        <QuizCard :quiz="quiz" />
       </div>
         <!-- <div class="col-sm">
           <router-link class="no-decoration" :to="{ name: 'quiz-detail', params: { quizId: quiz.id, skipIntro: true } }">
