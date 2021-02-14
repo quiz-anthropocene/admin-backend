@@ -387,23 +387,31 @@
   tags:
   - 50
 - id: 13
-  text: Combien l'humanité consomme-t-elle de barils de pétrole en une année ?
+  text: Combien l'humanité consomme-t-elle de barils de pétrole en une journée ?
   hint: ''
   type: QCM
   category: 5
-  difficulty: 4
-  answer_option_a: 39 millions
-  answer_option_b: 390 millions
-  answer_option_c: 3,9 milliards
-  answer_option_d: 39 milliards
+  difficulty: 2
+  answer_option_a: 100 mille barils, l'énergie que produiraient 1 million d'humains
+    en un jour
+  answer_option_b: 1 million de barils, l'énergie que produiraient 10 millions d'humains
+    en un jour
+  answer_option_c: 10 millions de barils, l'énergie que produiraient 100 millions
+    d'humains en un jour
+  answer_option_d: 100 millions de barils, l'énergie que produiraient 1 milliards
+    d'humains en un jour
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: Ou encore, 100 millions de barils par jour, pour retenir l'ordre
-    de grandeur. Un baril, c'est 159 litres.
-  answer_accessible_url: https://www.planetoscope.com/Source-d-energie/229-consommation-mondiale-d-energie-en-tep-.html
+  answer_explanation: Le pétrole est plus que jamais consommé en très grande quantité.
+    Preuve en est le franchissement fin 2018 de la barre des 100 millions de barils
+    par jour. Cela équivaut à 16 milliards de litres, ou encore 6,400 piscines olympiques.
+  answer_accessible_url: https://sciencepost.fr/petrole-la-barre-des-100-millions-de-barils-consommes-par-jour-a-ete-franchie/
   answer_scientific_url: ''
   answer_image_url: https://blogs.letemps.ch/laurent-horvath/wp-content/uploads/sites/45/2020/02/2020_02_Graph-Month.png
-  answer_image_explanation: ''
+  answer_image_explanation: "Consommation de pétrole, en millions barils par jour.\
+    \ \nCourbe bleu foncé : prévision sans changement de politique;\nCourbe bleu clair\
+    \ : avec les intentions annoncées ; \nCourbe rouge : en respectant les mesures\
+    \ visant à réduire le réchauffement climatique sous 2°C"
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Raphael Odini
@@ -604,7 +612,7 @@
   - 1
   - 72
 - id: 20
-  text: En 2018 dans le monde, quelle proportion de l'énergie consommée l'a été sous
+  text: En 2018, quelle proportion de l'énergie consommée dans le monde l'a été sous
     forme d'électricité ?
   hint: ''
   type: QCM
@@ -26363,16 +26371,16 @@
   type: QCM
   category: 7
   difficulty: 2
-  answer_option_a: 500g
-  answer_option_b: 1,2kg
-  answer_option_c: 14kg
-  answer_option_d: 32kg
+  answer_option_a: 500 g
+  answer_option_b: 1,2 kg
+  answer_option_c: 14 kg
+  answer_option_d: 32 kg
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: 'La fabrication d''une puce électronique requiert 32kg en grande
-    majorité de l''eau, des combustibles fossiles, des intrants chimiques et un gaz
-    élémentaire (azote notamment). 32 kg, c''est 16,000 fois le poids final de la
-    puce fabriquée. '
+  answer_explanation: 'La fabrication d''une puce électronique requiert 32 kg - en
+    grande majorité de l''eau, des combustibles fossiles, des intrants chimiques et
+    un gaz élémentaire (azote notamment). 32 kg, c''est 16,000 fois le poids final
+    de la puce fabriquée. '
   answer_accessible_url: https://www.greenit.fr/2020/05/26/500-fois-son-poids-en-matiere-premiere/
   answer_scientific_url: https://pubs.acs.org/doi/abs/10.1021/es025643o
   answer_image_url: https://www.tuvoiscequejeveuxdire.net/contenus/wp-content/uploads/2020/04/FNL_2019-11_CERDD_HSalazar_BFPTC_Sobriete-numerique_7-copie.png
@@ -26387,9 +26395,9 @@
   tags:
   - 30
 - id: 847
-  text: Rapportée au volume d'une piscine olympique (2,500 m³), quelle est la quantité
-    d'eau correspondant à la consommation annuelle mondiale du numérique en eau bleue
-    (2019) ?
+  text: "Quelle quantité d' \"eau bleue\" le secteur du numérique a-t-il consommée\
+    \ en 2019 ? \n[Comme c'est un grand volume, on va compter en nombre de piscines\
+    \ olympiques (2,500 m³)]"
   hint: ''
   type: QCM
   category: 7
@@ -26437,17 +26445,16 @@
   answer_correct: c
   has_ordered_answers: false
   answer_explanation: "La tendance la plus significative observée depuis 2010 et qui\
-    \ ne fait que s'amplifier est le nombre d'objets connectés et de l'informatique\
-    \ embarquée (montres, domotique, automobiles, appareils médicaux, drones...).\
-    \ La croissance est exponentielle avec une multiplication par 48 entre 2010 et\
-    \ sa projection en 2025. C'est le domaine de l'internet des objets. On passerait\
-    \ d'1 milliard (1% des impacts) à 48 milliards (18 à 23% des impacts) d'objets\
-    \ connectés. \nLes autres réponses proposées ont une croissance prévue sans aucune\
-    \ mesure. C'est un facteur 2,5 pour le nombre d'utilisateurs, 3 pour la masse.\
-    \ En revanche, le taux d'équipement par utilisateur va aller à la baisse (de 7\
-    \ à 3,5) car le nombre d'utilisateurs augmente plus vite que le nombre d'équipements\
-    \ vendus plutôt aux pays émergents au pouvoir d'achat moindre (saturation des\
-    \ pays développés)."
+    \ ne fait que s'amplifier est le nombre d'objets connectés de l'informatique embarquée\
+    \ (montres, domotique, automobiles, appareils médicaux, drones...). La croissance\
+    \ est exponentielle avec une multiplication par 48 entre 2010 et sa projection\
+    \ en 2025. C'est le domaine de l'internet des objets. On passerait d'1 milliard\
+    \ (1% des impacts) à 48 milliards (18 à 23% des impacts) d'objets connectés. \n\
+    Les autres réponses proposées ont une croissance prévue sans aucune mesure. C'est\
+    \ un facteur 2,5 pour le nombre d'utilisateurs, 3 pour la masse. En revanche,\
+    \ le taux d'équipement par utilisateur va aller à la baisse (de 7 à 3,5) car le\
+    \ nombre d'utilisateurs augmente plus vite que le nombre d'équipements vendus\
+    \ plutôt aux pays émergents au pouvoir d'achat moindre (saturation des pays développés)."
   answer_accessible_url: https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-synthese-accessible.VF_.pdf
   answer_scientific_url: ''
   answer_image_url: https://enseignantspourlaplanete.files.wordpress.com/2020/04/image-7.png?w=453
@@ -26481,7 +26488,7 @@
     moitié d'entre eux sont lus.
   answer_accessible_url: https://mondedumail.com/nombre-de-mails-envoyes-par-jour/
   answer_scientific_url: ''
-  answer_image_url: https://www.statista.com/statistics/456500/daily-number-of-e-mails-worldwide/
+  answer_image_url: https://www.statista.com/graphic/1/456500/daily-number-of-e-mails-worldwide.jpg
   answer_image_explanation: Nombre de mails envoyés et reçus par jour dans le monde
   answer_extra_info: ''
   author: Alain Servigne
@@ -26508,9 +26515,9 @@
   has_ordered_answers: true
   answer_explanation: Selon l'organisation Carbon Literacy Project, un courriel standard
     génère environ 4 g de CO2 équivalent...mais 306 milliards de courriels de ce type
-    circulent quotidiens (2020), 11 690 milliards courriels par an, c'est donc au
+    circulent au quotidien (2020), 11 690 milliards courriels par an, c'est donc au
     total 1,2 Mt CO2e /jour et 450 Mt CO2e par an ! Mais un courriel avec une pièce
-    jointe volumineuse produit jusqu'à 50 g de CO2. Voire encore beaucoup plus s'ils
+    jointe volumineuse produit jusqu'à 50 g de CO2. Voire encore beaucoup plus s'il
     est multi-destinataires.
   answer_accessible_url: https://www.futura-sciences.com/planete/questions-reponses/eco-consommation-empreinte-carbone-e-mail-10840/
   answer_scientific_url: ''
@@ -26540,7 +26547,7 @@
   has_ordered_answers: true
   answer_explanation: 15 000 km, c'est la distance moyenne parcourue par une donnée
     numérique (mail, téléchargement, vidéo, requête web…) pour les différentes étapes
-    de son traitement et acheminement.
+    de son traitement et de son acheminement.
   answer_accessible_url: https://www.transition-europe.eu/fr/news/le-cout-environnemental-du-numerique#:~:text=La%20distance%20moyenne%20parcourue%20par,r%C3%A9duit%20au%20maximum%20leur%20utilisation.
   answer_scientific_url: https://www.ademe.fr/sites/default/files/assets/documents/guide-pratique-face-cachee-numerique.pdf
   answer_image_url: https://pbs.twimg.com/media/Eg1470MWAAEUFO_?format=jpg&name=large
@@ -26561,15 +26568,14 @@
   type: QCM
   category: 7
   difficulty: 2
-  answer_option_a: Entre 270 et 670 milliers de tonnes de CO2éq supplémentaires, soit
-    les émissions de 1,5 à 4 millions de passagers faisant Paris - New York aller-retour
-  answer_option_b: Entre 2,7 et 6,7 millions de tonnes CO2éq supplémentaires, soit
+  answer_option_a: Entre 270 et 670 milliers de tonnes de CO2e supplémentaires, soit
+    les émissions de 1,5 à 4 millions de passagers faisant un Paris - New York aller-retour
+  answer_option_b: Entre 2,7 et 6,7 millions de tonnes CO2e supplémentaires, soit
     les émissions de 15 à 37 millions de passagers faisant Paris - New York aller-retour
-  answer_option_c: Entre 27 et 67 millions de tonnes de CO2éq supplémentaires, soit
+  answer_option_c: Entre 27 et 67 millions de tonnes de CO2e supplémentaires, soit
     les émissions de 150 à 370 millions de passagers faisant Paris - New York aller-retour
-  answer_option_d: Une baisse de  2,7 à 6,7 millions de tonnes de CO2éq, soit les
-    émissions de 1,5 à 4 millions de passagers faisant Paris - New York aller-retour
-    économisées.
+  answer_option_d: Une baisse de  2,7 à 6,7 millions de tonnes de CO2e, soit les émissions
+    de 1,5 à 4 millions de passagers faisant Paris - New York aller-retour économisées.
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: 'C''est la fourchette donnée par le Haut Conseil pour le Climat.
@@ -26627,6 +26633,389 @@
   added: 2021-01-29
   created: 2021-01-30
   updated: 2021-01-30
+  tags:
+  - 30
+- id: 854
+  text: Des 100 milliards de tonnes de matière qui entrent dans l'économie chaque
+    année, quelle portion pourrait être théoriquement récupérée si les processus de
+    circularité étaient parfaits ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 2
+  answer_option_a: 10%
+  answer_option_b: 33%
+  answer_option_c: 50%
+  answer_option_d: 99%
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: Un tiers de ces matières est émis ou dispersé, donc non récupérable.
+    Un autre tiers est tout simplement immobilisé pour un certain temps dans les constructions,
+    les objets… (heureusement !). La limite théorique est donc le tiers restant. Mais
+    comme le recyclage et la récupération sont loin d'être parfaits, la "circularité"
+    n'était que de 8.5% en 2020. Cette limite nous montre que les efforts pour circulariser
+    l'économie ne seront pas du tout suffisants pour rendre nos sociétés "soutenables",
+    dû aux lois de la physique mais aussi à notre propension à perpétuer la croissance,
+    qui va demander encore longtemps des grandes filières d'approvisionnement.
+  answer_accessible_url: ''
+  answer_scientific_url: https://solar.lowtechmagazine.com/fr/2020/01/how-circular-is-the-circular-economy.html
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/854.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-02-08
+  created: 2021-02-14
+  updated: 2021-02-14
+  tags:
+  - 232
+- id: 855
+  text: De toute la masse de plastique produite chaque année, quel pourcentage est
+    effectivement réinjecté en cycle fermé grâce au recyclage (plastique recyclable
+    à nouveau) ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 0,02%
+  answer_option_b: 0,2%
+  answer_option_c: 2%
+  answer_option_d: 20%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Actuellement, 7 à 8% du plastique est recyclé (1% en cumulé
+    depuis 1950). Lorsqu''il l''est, il devient majoritairement (8 fois sur 10) du
+    "thermodurcissable", qui est un plastique non-recyclable : on ne fait ainsi que
+    retarder un peu la production d''un déchet. Ainsi moins de 2% du plastique est
+    effectivement en cycle fermé, et la limite théorique pourrait être autour de 20%.'
+  answer_accessible_url: https://theconversation.com/dechets-plastiques-la-dangereuse-illusion-du-tout-recyclage-90359
+  answer_scientific_url: https://ourworldindata.org/plastic-pollution
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/855.png
+  answer_image_explanation: Production et destin du plastique, depuis 1950 à 2015,
+    en millions de tonnes
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-02-08
+  created: 2021-02-14
+  updated: 2021-02-14
+  tags:
+  - 26
+- id: 856
+  text: Quelle est la part des microplastiques retrouvés dans l'océan provenant de
+    la dégradation de débris plastiques ?
+  hint: ''
+  type: QCM
+  category: 3
+  difficulty: 3
+  answer_option_a: 1 à 2%
+  answer_option_b: 10 à 20%
+  answer_option_c: 60 à 80%
+  answer_option_d: 99%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'La dégradation des débris plastiques produit des microplastiques
+    secondaires, mais il y a beaucoup de rejets directs de microplastiques (donc primaires)
+    : 1/3 vient des pneus de véhicules, 1/3 des textiles synthétiques et 1/3 de divers
+    usages des villes. On pourrait aussi compter le caoutchouc en plus. 1,5 millions
+    de tonnes par an viennent ainsi s''ajouter dans les océans, et viennent compléter
+    les microplastiques secondaires qui en représentent donc 60-80%. De plus, sur
+    les 8 millions de tonnes de débris plastiques arrivant dans l''océan chaque année,
+    seuls 50,000 tonnes soit 0,6% seraient en surface, négligeable par rapport à la
+    quantité qui coule (~10%) ou qui est rejetée sur les côtes (~90%).'
+  answer_accessible_url: https://www.futura-sciences.com/planete/actualites/pollution-plastique-on-retrouve-99-plastique-disparus-ocean-62879/
+  answer_scientific_url: https://iopscience.iop.org/article/10.1088/1748-9326/ab7836
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/856.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-02-08
+  created: 2021-02-14
+  updated: 2021-02-14
+  tags:
+  - 9
+  - 26
+- id: 857
+  text: Le recyclage des métaux est limité par …
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 2
+  answer_option_a: Ils sont recyclables à 100%, la limite est surtout la collecte
+    en fin de vie
+  answer_option_b: Il est moins cher d'extraire des métaux bruts que de les recycler,
+    mais quand les stocks seront en phase d'épuisement, le recyclage décollera.
+  answer_option_c: Les usages dispersifs, les alliages complexes, les processus de
+    séparation, les pertes à la source.
+  answer_option_d: Beaucoup de métaux ne sont pas physiquement recyclables.
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: 'Tous les métaux sont en principe 100% recyclables. S''il est
+    facile de recycler des métaux utilisés en gros volume (aluminium, fer …) en les
+    refondant, certains sont en revanche présents en infime quantité dans toute sorte
+    d''appareil (électronique pour l''or, la palladium par exemple), ou sous forme
+    d''alliage, ce qui limite grandement le recyclage. Il y a des pertes partout,
+    et certains usages sont dispersifs par nature :  encres, pigments de peinture,
+    cosmétiques... Il est effectivement plus difficile et moins rentable de recycler
+    que d''extraire en mine pour l''instant, et cela perdurera pour de nombreux métaux
+    car leur usage empêche tout recyclage.'
+  answer_accessible_url: https://reporterre.net/La-croissance-verte-est-une-mystification-absolue
+  answer_scientific_url: https://www.slideshare.net/PaulineTSP/pptlow-techphilippe-bihouix
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/857.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Validée
+  added: 2021-02-08
+  created: 2021-02-14
+  updated: 2021-02-14
+  tags:
+  - 233
+- id: 858
+  text: Quelle est la part moyenne des métaux (tels que cadmium, cobalt, étain, plomb)
+    qui finissent en usage dispersif (micro- ou nanoparticules) ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 2
+  answer_option_a: négligeable
+  answer_option_b: 1 à 2%
+  answer_option_c: 10 à 15%
+  answer_option_d: 80 à 90%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Les usages dispersifs de ces métaux sont évalués à 10-15% de
+    la masse totale utilisée (pigments, additifs, …), et peut atteindre des proportions
+    bien plus grandes pour certains (95% pour le titane !). Il y a aussi une énorme
+    dispersion dans les uages (ex : pots catalytiques échappant du platine, colbalt,
+    zinc ...).'
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.slideshare.net/PaulineTSP/pptlow-techphilippe-bihouix
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/858.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-02-08
+  created: 2021-02-14
+  updated: 2021-02-14
+  tags:
+  - 36
+  - 235
+- id: 859
+  text: Qu'appelle-t-on l'effet parc ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 3
+  answer_option_a: La tendance pour une amélioration technologique à augmenter l'impact
+    total, car cette technologie est davantage utilisée.
+  answer_option_b: L'existence d'une diversité de leviers d'actions possibles pour
+    résoudre un problème, mais aussi de frein, tous en inter-relation.
+  answer_option_c: L'existence d'une latence et d'un coût en énergie/matériaux à remplacer
+    les structures existantes par leurs contreparties plus eco-vertueuses.
+  answer_option_d: Le fait que plusieurs solutions puissent avoir un impact positif
+    encore plus grand en étant combinées.
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Lorsqu’on veut remplacer une technologie par sa version moins
+    polluante, on se heurte au fait que le parc existant est déjà bien déployé et
+    multiple. Le remplacer demande une quantité d’énergie et de matériaux gigantesque,
+    ainsi qu''un temps considérable. C’est vrai pour l’objet lui-même, mais aussi
+    pour toute la chaîne de production / distribution / fin de vie : il faut savoir
+    quoi faire de tout ce qui devient obsolète.'
+  answer_accessible_url: ''
+  answer_scientific_url: https://au-dela-du-climat.org/2017/10/01/pourquoi-les-high-tech-ne-nous-sauveront-pas-lage-des-low-tech-de-philippe-bihouix/
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/859.png
+  answer_image_explanation: ''
+  answer_extra_info: Bihouix, L'age des low-techs (2014)
+  author: Max Pinsard
+  validator: ''
+  validation_status: Validée
+  added: 2021-02-08
+  created: 2021-02-14
+  updated: 2021-02-14
+  tags: []
+- id: 860
+  text: Quelle proportion des déchets électriques et électroniques sortent des filières
+    de traitement officielles, pour finir exportés vers les pays pauvres ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 1%
+  answer_option_b: 10%
+  answer_option_c: 30%
+  answer_option_d: 60%
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: '60% de ces déchets en Europe et aux USA sortent du réseau légal
+    de traitement. Les appareils laissés dans la rue sont détournés par des ferrailleurs
+    ou des trafiquants, qui récupèrent les parties de valeur (métaux précieux...)
+    au détriment des pollutions directes (ex : compresseur des frigos). Il arrive
+    même que les déchetteries subissent un détournement à l''interne, ou des attaques.
+    La revente à l''étranger est ensuite facilitée par des failles juridiques (ex
+    : une voiture remplie d''appareils peut passer les douanes comme simple véhicule),
+    le manque de personnel et l''impossibilité de vérifier l''état de marche, ainsi
+    que la pression d''acteurs qui bénéficient de ce marché. Internet favorise la
+    négociation en ligne de tels déchets, qui atterrissent soit en Chine soit directement
+    en Afrique, à la suite d''un transport par cargo. La corruption des douaniers
+    dans ces pays autorise l''entrée d''appareils défectueux déclarés comme d''occasion,
+    et finissent désossés par des populations pauvres, sans normes environnementales.'
+  answer_accessible_url: https://www.techniques-ingenieur.fr/actualite/articles/le-traitement-illegal-des-deee-est-majoritaire-en-europe-28718/
+  answer_scientific_url: https://www.youtube.com/watch?v=uZI99xZDVkg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/860.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Validée
+  added: 2021-02-08
+  created: 2021-02-14
+  updated: 2021-02-14
+  tags:
+  - 228
+  - 229
+- id: 861
+  text: L'humanité utilise en une année une masse de matière considérable. Lesquelles
+    de ces affirmations sont vraies ?
+  hint: ''
+  type: QCM-RM
+  category: 2
+  difficulty: 4
+  answer_option_a: 10 fois plus de sable que de ciment
+  answer_option_b: Presque 100 fois plus d'eau douce que de sable
+  answer_option_c: 5 fois plus de fer que de ciment et d'aluminium
+  answer_option_d: Des milliards de tonnes de fer et de ciment
+  answer_correct: abd
+  has_ordered_answers: false
+  answer_explanation: Si l'on compte en milliards de tonnes par an, l'eau douce exploitée
+    pointe à 4,000, le sable à 41, le gravier 9, le ciment 4. En revanche, la consommation
+    de fer n'est 'que' de 3 milliards de tonnes, et l'aluminium 60 millions de tonnes.
+  answer_accessible_url: https://www.oecd.org/fr/environnement/l-utilisation-de-matieres-premieres-devrait-doubler-d-ici-2060-ce-qui-aura-de-graves-repercussions-sur-l-environnement.htm
+  answer_scientific_url: https://www.visualcapitalist.com/all-the-worlds-metals-and-minerals-in-one-visualization/
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/861.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Validée
+  added: 2021-02-08
+  created: 2021-02-14
+  updated: 2021-02-14
+  tags: []
+- id: 862
+  text: "En 1975, le penseur Ivan Illich a estimé la \"vitesse généralisée\", en considérant\
+    \ non seulement le temps effectif du déplacement, mais aussi  le temps que l’on\
+    \ passe à se donner les moyens du déplacement.  \nQuelle la vitesse a-t-il trouvée\
+    \ pour un trajet domicile-travail en voiture ?"
+  hint: Pensez à tout ce qu'il faut pour avoir votre véhicule, en état de marche...
+  type: QCM
+  category: 6
+  difficulty: 4
+  answer_option_a: 6 km/h
+  answer_option_b: 12 km/h
+  answer_option_c: 30 km/h
+  answer_option_d: 50 km/h
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: 'La vitesse généralisée prend en compte l''ensemble des dépenses
+    de temps associées à un mode de déplacement. Par exemple pour un véhicule : entretien,
+    stationnement, temps de travail nécessaire à le payer (achat initial + carburant
+    + réparations, pose de pneus ...)... Tout compris la vitesse trouvée est de 6
+    km/h ! D''autres calculs peuvent donner des valeurs autour de 10km/h, donc certainement
+    pas plus rapide qu''un vélo !'
+  answer_accessible_url: https://fr.forumviesmobiles.org/reperes/vitesse-des-deplacements-12976
+  answer_scientific_url: https://books.openedition.org/pur/50874
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/862.png
+  answer_image_explanation: ''
+  answer_extra_info: Energie et équité, Ivan Illich
+  author: Max Pinsard
+  validator: ''
+  validation_status: Validée
+  added: 2021-02-08
+  created: 2021-02-14
+  updated: 2021-02-14
+  tags:
+  - 35
+- id: 863
+  text: Les principales causes de mortalité et de vie en mauvaise santé dans les pays
+    riches sont …
+  hint: ''
+  type: QCM
+  category: 8
+  difficulty: 2
+  answer_option_a: Les conditions néonatales, les maladies congénitales, les problèmes
+    cardiaques, les cancers
+  answer_option_b: Les problèmes cardiaques (malbouffe, stress...), les problèmes
+    respiratoires (pollution de l'air, drogues …), le manque d'activité physique (mal
+    de dos, de cou...), le manque de relations sociales (Alzheimer, dépressions),
+    diabètes, accidents de la route.
+  answer_option_c: Causes environnementales (pollutions de l'air, de l'eau, produits
+    chimiques …), accidents de la route, Les problèmes cardiaques (malbouffe, stress...),
+    problèmes respiratoires (pollution de l'air, drogues …), diabètes
+  answer_option_d: Maladies infectieuses, homicides, vieillesse, surpoids, cancer.
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: Les causes ne sont pas toujours bien identifiées, mais l'OMS
+    relève que dans les pays riches, la mortalité est due à des problèmes cardiaques,
+    respiratoires, de démence (Alzheimer…), de diabète sucré, accidents de la route
+    et cancers. Les causes de vie en mauvaise santé (DALY) sont les mêmes, en ajoutant
+    les maux de dos et de cou, les usages de drogues et les dépressions. Passer à
+    un mode de vie low-tech permet de limiter ces causes, en faisant plus d'activité
+    physique et conviviales, en supprimant l'hégémonie des voitures et des véhicules
+    rapides, en réduisant la pollution de l'air etc.
+  answer_accessible_url: https://www.who.int/fr/news-room/fact-sheets/detail/the-top-10-causes-of-death
+  answer_scientific_url: https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/global-health-estimates-leading-causes-of-dalys
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/863.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Validée
+  added: 2021-02-08
+  created: 2021-02-14
+  updated: 2021-02-14
+  tags:
+  - 234
+- id: 864
+  text: Entre 2005 et 2020, les données totales générées chaque année par tous l'ensemble
+    des appareils dans le monde ont été multipliées d'un facteur...
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 3
+  answer_option_a: entre 50 et 80
+  answer_option_b: entre 500 et 800
+  answer_option_c: entre 5,000 et 8,000
+  answer_option_d: entre 500,000 et 800,000
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Les données totales créées sont passées de 100 millions de
+    à 800 milliards de téraoctets par an (2020) [3], c’est-à-dire ×8000. En corrigeant
+    par l’augmentation du nombre d’internautes, le ratio devient ×2000. Durant ces
+    15 ans, la quantité de données circulant dans le réseau internet a été multipliée
+    par 100.  Attention, l''évaluation de cette masse de données est difficile à réaliser.
+    : par exemple, le site Statista affirmait plutôt 50 milliards de téraoctets en
+    2020. Ce chiffre pourrait être de nouveau multiplié par 50 sur les 15 prochaines
+    années (jusqu''en 2035).'
+  answer_accessible_url: ''
+  answer_scientific_url: https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/864.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-02-14
+  created: 2021-02-14
+  updated: 2021-02-14
   tags:
   - 30
 - id: 900
