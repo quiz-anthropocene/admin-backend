@@ -407,11 +407,22 @@
     par jour. Cela équivaut à 16 milliards de litres, ou encore 6,400 piscines olympiques.
   answer_accessible_url: https://sciencepost.fr/petrole-la-barre-des-100-millions-de-barils-consommes-par-jour-a-ete-franchie/
   answer_scientific_url: ''
-  answer_image_url: ''
-  answer_image_explanation: "Consommation de pétrole, en millions barils par jour.\
-    \ \nCourbe bleu foncé : prévision sans changement de politique;\nCourbe bleu clair\
-    \ : avec les intentions annoncées ; \nCourbe rouge : en respectant les mesures\
-    \ visant à réduire le réchauffement climatique sous 2°C"
+  answer_image_url: https://resiliencealimentaire.org/wp-content/uploads/2019/04/word-image-32-768x328.png
+  answer_image_explanation: 'Projections du déclin de la production des gisements
+    pétroliers (tous pétroles) actuellement en exploitation et de la demande mondiale.
+    Le déclin naturel correspond à un taux d’environ 8 % et serait la conséquence
+    d’une absence d’investissements dans les puits actuels. Le déclin observé correspond
+    à un taux de 4 %, ce que l’on observe dans des champs en déclin où l’on investit
+    pour récupérer le pétrole de fin de production, plus difficile à extraire. Deux
+    scénarios d’évolution de la demande sont présentés : « Nouvelles politiques »
+    qui correspond à la prolongation de la tendance actuelle et « Développement durable
+    » qui correspond à des efforts de limitation de la demande pour réduire les émissions
+    de gaz à effet de serre. Le déséquilibre de 34 millions de barils/jour (Mb/j)
+    prévu en 2025 devrait être compensé à hauteur de 20Mb/j par la mise en exploitation
+    de réserves existantes de pétrole conventionnel et la hausse de la production
+    américaine de pétrole de schistes. Cela n’est pas suffisant pour satisfaire la
+    demande, quel que soit le scénario envisagé. Source : Agence Internationale de
+    l’Énergie. 2018 via les Greniers d''Abondance.'
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Raphael Odini
@@ -2413,7 +2424,7 @@
     30 000 milliards de tonnes. A comparer aux 4 000 milliards de tonnes du vivant.
   answer_accessible_url: https://www.futura-sciences.com/planete/actualites/environnement-pese-tout-ce-homme-pu-fabriquer-65435/
   answer_scientific_url: https://journals.sagepub.com/doi/10.1177/2053019616677743
-  answer_image_url: ''
+  answer_image_url: https://en.ugtu.net/sites/default/files/users/user_302/large_spectehnika-head.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -16523,7 +16534,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: ''
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-06-20
   created: 2020-06-24
   updated: 2020-06-24
@@ -16843,7 +16854,7 @@
     chasseurs-cueilleurs.
   answer_accessible_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/audio/questions/vincent-mignerot/545.mp3
   answer_scientific_url: https://www.partage-le.com/2016/09/02/lagriculture-ou-la-pire-erreur-de-lhistoire-de-lhumanite-par-jared-diamond-clive-dennis/
-  answer_image_url: ''
+  answer_image_url: https://cardiologydoc.files.wordpress.com/2012/02/cave-man-diet.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Vincent Mignerot
@@ -26910,7 +26921,11 @@
   added: 2021-02-08
   created: 2021-02-14
   updated: 2021-02-14
-  tags: []
+  tags:
+  - 37
+  - 57
+  - 236
+  - 237
 - id: 862
   text: "En 1975, le penseur Ivan Illich a estimé la \"vitesse généralisée\", en considérant\
     \ non seulement le temps effectif du déplacement, mais aussi  le temps que l’on\
