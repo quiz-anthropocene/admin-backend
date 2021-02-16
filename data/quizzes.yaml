@@ -542,7 +542,7 @@
   author: Max Pinsard
   image_background_url: https://fresquedeslowtechs.files.wordpress.com/2021/02/fr_techs_modern_dezo_flouetee_64c.png
   has_audio: false
-  publish: false
+  publish: true
   spotlight: true
   created: 2021-02-14
   updated: 2021-02-16
