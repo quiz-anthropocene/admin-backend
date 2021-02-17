@@ -78,6 +78,7 @@ QUESTION_FIELDS = [
     "answer_explanation",
     "answer_accessible_url",
     "answer_scientific_url",
+    "answer_reading_recommendation",
     "answer_image_url",
     "answer_image_explanation",
     "answer_count_agg",
