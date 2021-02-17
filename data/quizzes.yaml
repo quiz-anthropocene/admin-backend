@@ -512,7 +512,7 @@
   tags:
   - 30
 - id: 61
-  name: Fresque des Low-Techs
+  name: Fresque des Low-Techs - les constats
   introduction: "<p>Les low-techs, vous connaissez ? Allez on va vous donner la réponse\
     \ : des objets, des systèmes, des techniques, des services, des savoir-faire,\
     \ des pratiques, des modes de vie et même des courants de pensée, qui intègrent\
@@ -545,5 +545,5 @@
   publish: true
   spotlight: true
   created: 2021-02-14
-  updated: 2021-02-16
+  updated: 2021-02-17
   tags: []
