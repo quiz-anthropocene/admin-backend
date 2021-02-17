@@ -2405,16 +2405,16 @@
   tags:
   - 31
 - id: 76
-  text: Tentez de vous représenter pour commencer le poids de tout ce qui a été construit
-    par l'homme. Puis le poids le poids de toute la matière vivante sur terre. Vous
-    y êtes ? Et si vous comparez ces deux poids colossaux, cela donne...
+  text: Tentez de vous représenter pour commencer la masse de tout ce qui a été construit
+    par l'homme. Puis la masse de toute la matière vivante sur terre. Vous y êtes
+    ? Et si vous comparez ces deux masses colossales, cela donne...
   hint: 'Il faut compter tout ce qui a été construit par l’homme : bâtiments, infrastructures
     (routes, ponts), habitations, industries, systèmes mobiles (voitures, trains,
     avions), ...'
   type: QCM
   category: 6
   difficulty: 2
-  answer_option_a: 100 fois moins
+  answer_option_a: Le premier pèse 100 fois moins que le second
   answer_option_b: 10 fois moins
   answer_option_c: à peu près autant
   answer_option_d: 10 fois plus
