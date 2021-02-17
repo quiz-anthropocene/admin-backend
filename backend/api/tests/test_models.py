@@ -4,17 +4,19 @@ from django.core.exceptions import ValidationError
 from api import constants
 from api.models import (
     Question,
-    QuestionAggStat,
-    QuestionAnswerEvent,
-    QuestionFeedbackEvent,
     Quiz,
     QuizQuestion,
     QuizRelationship,
+)
+from api.tests.factories import QuestionFactory, QuizFactory
+from stats.models import (
+    QuestionAggStat,
+    QuestionAnswerEvent,
+    QuestionFeedbackEvent,
     QuizAnswerEvent,
     QuizFeedbackEvent,
     DailyStat,
 )
-from api.tests.factories import QuestionFactory, QuizFactory
 
 
 class QuestionModelTest(TestCase):

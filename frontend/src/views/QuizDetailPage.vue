@@ -217,7 +217,7 @@ export default {
     },
     submitQuiz() {
       // stats
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/quizzes/${this.quiz.id}/answer-events`, {
+      fetch(`${process.env.VUE_APP_STATS_ENDPOINT}/quizzes/${this.quiz.id}/answer-events`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',

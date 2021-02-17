@@ -94,7 +94,7 @@ export default {
     submitFeedback(feedbackChoice) {
       this.feedbackSubmitted = feedbackChoice;
       this.error = this.feedbackResponse = null;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/${(this.context.source === 'question') ? 'questions' : 'quizzes'}/${this.context.item.id}/feedback-events`, {
+      fetch(`${process.env.VUE_APP_STATS_ENDPOINT}/${(this.context.source === 'question') ? 'questions' : 'quizzes'}/${this.context.item.id}/feedback-events`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',

@@ -113,7 +113,7 @@ class ApiTest(TestCase):
 
     def test_question_stats(self):
         response = self.client.get(
-            reverse("api:question_stats", args=[self.question_2.id])
+            reverse("stats:question_stats", args=[self.question_2.id])
         )
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data, dict)
@@ -182,7 +182,7 @@ class ApiTest(TestCase):
 
     def test_question_feedback_event(self):
         response = self.client.post(
-            reverse("api:question_detail_feedback_event", args=[self.question_2.id]),
+            reverse("stats:question_detail_feedback_event", args=[self.question_2.id]),
             data={
                 "question": self.question_2.id,
                 "choice": "like",
@@ -197,7 +197,7 @@ class ApiTest(TestCase):
         self.assertEqual(self.question_2.dislike_count_agg, 0)
 
         response = self.client.post(
-            reverse("api:question_detail_feedback_event", args=[self.question_2.id]),
+            reverse("stats:question_detail_feedback_event", args=[self.question_2.id]),
             data={
                 "question": self.question_2.id,
                 "choice": "dislike",
@@ -215,7 +215,7 @@ class ApiTest(TestCase):
 
     def test_question_answer_event(self):
         response = self.client.post(
-            reverse("api:question_detail_answer_event", args=[self.question_2.id]),
+            reverse("stats:question_detail_answer_event", args=[self.question_2.id]),
             data={"question": self.question_2.id, "choice": "a", "source": "question"},
         )
         self.assertEqual(response.status_code, 201)
@@ -227,7 +227,7 @@ class ApiTest(TestCase):
         self.assertEqual(self.question_2.answer_success_rate, 100)
 
         response = self.client.post(
-            reverse("api:question_detail_answer_event", args=[self.question_2.id]),
+            reverse("stats:question_detail_answer_event", args=[self.question_2.id]),
             data={"question": self.question_2.id, "choice": "b", "source": "question"},
         )
         self.assertEqual(response.status_code, 201)
@@ -240,7 +240,7 @@ class ApiTest(TestCase):
 
     def test_quiz_feedback_event(self):
         response = self.client.post(
-            reverse("api:quiz_detail_feedback_event", args=[self.quiz_2.id]),
+            reverse("stats:quiz_detail_feedback_event", args=[self.quiz_2.id]),
             data={"quiz": self.quiz_2.id, "choice": "like"},
         )
         self.assertEqual(response.status_code, 201)
@@ -251,7 +251,7 @@ class ApiTest(TestCase):
         self.assertEqual(self.quiz_2.dislike_count_agg, 0)
 
         response = self.client.post(
-            reverse("api:quiz_detail_feedback_event", args=[self.quiz_2.id]),
+            reverse("stats:quiz_detail_feedback_event", args=[self.quiz_2.id]),
             data={
                 "quiz": self.quiz_2.id,
                 "choice": "dislike",
@@ -269,7 +269,7 @@ class ApiTest(TestCase):
 
     def test_quiz_answer_event(self):
         response = self.client.post(
-            reverse("api:quiz_detail_answer_event", args=[self.quiz_2.id]),
+            reverse("stats:quiz_detail_answer_event", args=[self.quiz_2.id]),
             data={"quiz": self.quiz_2.id, "answer_success_count": 1},
         )
         self.assertEqual(response.status_code, 201)
@@ -279,7 +279,7 @@ class ApiTest(TestCase):
         self.assertEqual(self.quiz_2.answer_count_agg, 1)
 
         response = self.client.post(
-            reverse("api:quiz_detail_answer_event", args=[self.quiz_2.id]),
+            reverse("stats:quiz_detail_answer_event", args=[self.quiz_2.id]),
             data={"question": self.quiz_2.id, "answer_success_count": 2},
         )
         self.assertEqual(response.status_code, 201)

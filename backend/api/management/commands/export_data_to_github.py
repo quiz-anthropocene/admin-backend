@@ -6,7 +6,8 @@ from django.utils import timezone
 from django.conf import settings
 from django.core.management import BaseCommand
 
-from api import utilities, utilities_stats, utilities_github
+from api import utilities, utilities_github
+from stats import utilities as utilities_stats
 from api.models import Configuration
 
 

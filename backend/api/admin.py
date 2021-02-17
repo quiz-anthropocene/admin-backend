@@ -9,7 +9,8 @@ from django.http import HttpResponse
 from django.conf import settings
 from django.contrib import admin
 from django.contrib.admin import AdminSite
-from django.contrib.auth.models import Group, Permission, User
+
+# from django.contrib.auth.models import Group, Permission, User
 from django.core import management
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.html import mark_safe
@@ -22,7 +23,7 @@ from fieldsets_with_inlines import FieldsetsInlineMixin
 
 # from django.core.management import call_command
 
-from api import constants
+from api import constants as api_constants
 from api import utilities, utilities_notion
 from api.models import (
     Configuration,
@@ -32,14 +33,15 @@ from api.models import (
     Quiz,
     QuizQuestion,
     QuizRelationship,
-    QuestionAnswerEvent,
-    QuestionFeedbackEvent,
-    QuestionAggStat,
-    QuizAnswerEvent,
-    QuizFeedbackEvent,
-    DailyStat,
     Contribution,
     Glossary,
+)
+from stats import constants
+from stats.models import (
+    QuestionAnswerEvent,
+    QuestionFeedbackEvent,
+    QuizAnswerEvent,
+    QuizFeedbackEvent,
 )
 
 
@@ -351,7 +353,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
             for (
                 scope_value,
                 scope_label,
-            ) in constants.NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES[1:]
+            ) in api_constants.NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES[1:]
         ]
         notion_questions_import_response = []
 
@@ -659,268 +661,6 @@ class QuizRelationshipAdmin(ExportMixin, admin.ModelAdmin):
         return False
 
 
-class QuestionAnswerEventAdmin(ExportMixin, admin.ModelAdmin):
-    list_display = (
-        "id",
-        "question",
-        "choice",
-        "source",
-        "created",
-    )
-    list_filter = ("source",)
-    ordering = ("-id",)
-    actions = [
-        "export_as_csv",
-        "export_as_json",
-        "export_as_yaml",
-        "export_all_questionanswerevent_as_yaml",
-    ]
-
-    def get_readonly_fields(self, request, obj=None):
-        return [f.name for f in obj._meta.fields]
-
-    def has_add_permission(self, request, obj=None):
-        return False
-
-    def has_change_permission(self, request, obj=None):
-        return False
-
-    def has_delete_permission(self, request, obj=None):
-        return False
-
-    def changelist_view(self, request, extra_context=None):
-        """
-        show chart of answers per day
-        https://dev.to/danihodovic/integrating-chart-js-with-django-admin-1kjb
-
-        Corresponding template in templates/admin/api/questionanswerevent/change_list.html
-        """
-        # Aggregate answers per day
-        chart_data_query = QuestionAnswerEvent.objects.agg_timeseries()
-
-        chart_data_list = list(chart_data_query)
-
-        # get answers since today
-        if len(chart_data_list) and (
-            str(chart_data_list[-1]["day"]) != str(datetime.now().date())
-        ):
-            chart_data_list += [{"day": str(datetime.now().date()), "y": 0}]
-
-        # Serialize and attach the chart data to the template context
-        chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
-        extra_context = extra_context or {"chart_data": chart_data_json}
-
-        # Call the superclass changelist_view to render the page
-        return super().changelist_view(request, extra_context=extra_context)
-
-
-class QuestionFeedbackEventAdmin(ExportMixin, admin.ModelAdmin):
-    list_display = (
-        "id",
-        "question",
-        "choice",
-        "source",
-        "created",
-    )
-    list_filter = ("source",)
-    ordering = ("-id",)
-    actions = [
-        "export_as_csv",
-        "export_as_json",
-        "export_as_yaml",
-        "export_all_questionfeedbackevent_as_yaml",
-    ]
-
-    def get_readonly_fields(self, request, obj=None):
-        return [f.name for f in obj._meta.fields]
-
-    def has_add_permission(self, request, obj=None):
-        return False
-
-    def has_change_permission(self, request, obj=None):
-        return False
-
-    def has_delete_permission(self, request, obj=None):
-        return False
-
-
-class QuestionAggStatAdmin(ExportMixin, admin.ModelAdmin):
-    list_display = (
-        "question_id",
-        "answer_count",
-        "answer_success_count",
-        "like_count",
-        "dislike_count",
-    )
-    actions = [
-        "export_as_csv",
-    ]
-
-    def get_readonly_fields(self, request, obj=None):
-        return [f.name for f in obj._meta.fields]
-
-    def has_add_permission(self, request, obj=None):
-        return False
-
-    def has_change_permission(self, request, obj=None):
-        return False
-
-    def has_delete_permission(self, request, obj=None):
-        return False
-
-
-class QuizAnswerEventAdmin(ExportMixin, admin.ModelAdmin):
-    list_display = (
-        "id",
-        "quiz",
-        "question_count",
-        "answer_success_count",
-        "created",
-    )
-    list_filter = ("quiz",)
-    ordering = ("-id",)
-    actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
-
-    def get_readonly_fields(self, request, obj=None):
-        return [f.name for f in obj._meta.fields]
-
-    def has_add_permission(self, request, obj=None):
-        return False
-
-    def has_change_permission(self, request, obj=None):
-        return False
-
-    def has_delete_permission(self, request, obj=None):
-        return False
-
-    def changelist_view(self, request, extra_context=None):
-        """
-        show chart of answers per day
-        https://dev.to/danihodovic/integrating-chart-js-with-django-admin-1kjb
-
-        Corresponding template in templates/admin/api/quizanswerevent/change_list.html
-        """
-        # Aggregate answers per day
-        # chart_data_query = QuizAnswerEvent.objects.extra(select={"day": "date(created)"}) # sqlite
-        chart_data_query = QuizAnswerEvent.objects.agg_timeseries()
-
-        chart_data_list = list(chart_data_query)
-
-        # get answers since today
-        if len(chart_data_list) and (
-            str(chart_data_list[-1]["day"]) != str(datetime.now().date())
-        ):
-            chart_data_list += [{"day": str(datetime.now().date()), "y": 0}]
-
-        # Serialize and attach the chart data to the template context
-        chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
-        extra_context = extra_context or {"chart_data": chart_data_json}
-
-        # Call the superclass changelist_view to render the page
-        return super().changelist_view(request, extra_context=extra_context)
-
-
-class QuizFeedbackEventAdmin(ExportMixin, admin.ModelAdmin):
-    list_display = (
-        "id",
-        "quiz",
-        "choice",
-        "created",
-    )
-    # list_filter = ("source",)
-    ordering = ("-id",)
-    actions = [
-        "export_as_csv",
-        "export_as_json",
-        "export_as_yaml",
-        # "export_all_questionanswerevent_as_yaml",
-    ]
-
-    def get_readonly_fields(self, request, obj=None):
-        return [f.name for f in obj._meta.fields]
-
-    def has_add_permission(self, request, obj=None):
-        return False
-
-    def has_change_permission(self, request, obj=None):
-        return False
-
-    def has_delete_permission(self, request, obj=None):
-        return False
-
-
-class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
-    list_display = (
-        "id",
-        "date",
-        "question_answer_count",
-        # "quiz_answer_count",
-        "question_feedback_count",
-        # "quiz_feedback_count",
-        "created",
-    )
-    list_filter = ("date",)
-    ordering = ("-id",)
-    actions = ["export_as_csv", "export_as_json", "export_as_yaml"]
-
-    def get_readonly_fields(self, request, obj=None):
-        return [f.name for f in obj._meta.fields]
-
-    def has_add_permission(self, request, obj=None):
-        return False
-
-    def has_change_permission(self, request, obj=None):
-        return False
-
-    def has_delete_permission(self, request, obj=None):
-        return False
-
-    def changelist_view(self, request, extra_context=None):
-        """
-        show chart of answers per day
-        https://dev.to/danihodovic/integrating-chart-js-with-django-admin-1kjb
-
-        Corresponding template in templates/admin/api/dailystat/change_list.html
-        """
-        if request.POST.get("run_generate_daily_stats_script", False):
-            management.call_command("generate_daily_stats")
-
-        # custom form
-        current_field = str(
-            request.POST.get("field", constants.AGGREGATION_FIELD_CHOICE_LIST[0])
-        )
-        current_scale = str(
-            request.POST.get("scale", constants.AGGREGATION_SCALE_CHOICE_LIST[0])
-        )
-        current_since_date = str(
-            request.POST.get("since_date", constants.AGGREGATION_SINCE_DATE_DEFAULT)
-        )
-
-        # Aggregate answers per day
-        # chart_data_query = DailyStat.objects.extra(select={"day": "date(date)"}) # sqlite
-        chart_data_query = DailyStat.objects.agg_timeseries(
-            current_field, scale=current_scale, since_date=current_since_date
-        )
-
-        chart_data_list = list(chart_data_query)
-
-        # Serialize and attach the chart data to the template context
-        chart_data_json = json.dumps(chart_data_list, cls=DjangoJSONEncoder)
-        extra_context = extra_context or {
-            "configuration": Configuration.get_solo(),
-            "chart_data": chart_data_json,
-            "field_choice_list": constants.AGGREGATION_FIELD_CHOICE_LIST,
-            "current_field": current_field,
-            "scale_choice_list": constants.AGGREGATION_SCALE_CHOICE_LIST,
-            "current_scale": current_scale,
-            "since_date_min": constants.AGGREGATION_SINCE_DATE_DEFAULT,
-            "current_since_date": current_since_date,
-        }
-
-        # Call the superclass changelist_view to render the page
-        return super().changelist_view(request, extra_context=extra_context)
-
-
 class ContributionAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
@@ -1035,23 +775,17 @@ class MyAdminSite(AdminSite):
         return super().index(request, extra_context=extra_context)
 
 
-admin_site = MyAdminSite(name="myadmin")
+# admin_site = MyAdminSite(name="myadmin")
 
-admin_site.register(Configuration, ConfigurationAdmin)
-admin_site.register(Question, QuestionAdmin)
-admin_site.register(Category, CategoryAdmin)
-admin_site.register(Tag, TagAdmin)
-admin_site.register(Quiz, QuizAdmin)
-admin_site.register(QuizRelationship, QuizRelationshipAdmin)
-admin_site.register(QuestionAnswerEvent, QuestionAnswerEventAdmin)
-admin_site.register(QuestionFeedbackEvent, QuestionFeedbackEventAdmin)
-admin_site.register(QuestionAggStat, QuestionAggStatAdmin)
-admin_site.register(QuizAnswerEvent, QuizAnswerEventAdmin)
-admin_site.register(QuizFeedbackEvent, QuizFeedbackEventAdmin)
-admin_site.register(DailyStat, DailyStatAdmin)
-admin_site.register(Contribution, ContributionAdmin)
-admin_site.register(Glossary, GlossaryAdmin)
-admin_site.register(admin.models.LogEntry, LogEntryAdmin)
-admin_site.register(User)
-admin_site.register(Permission)
-admin_site.register(Group)
+admin.site.register(Configuration, ConfigurationAdmin)
+admin.site.register(Question, QuestionAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Tag, TagAdmin)
+admin.site.register(Quiz, QuizAdmin)
+admin.site.register(QuizRelationship, QuizRelationshipAdmin)
+admin.site.register(Contribution, ContributionAdmin)
+admin.site.register(Glossary, GlossaryAdmin)
+admin.site.register(admin.models.LogEntry, LogEntryAdmin)
+# admin.site.register(User)
+# admin.site.register(Permission)
+# admin.site.register(Group)

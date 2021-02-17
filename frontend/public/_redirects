@@ -2,6 +2,7 @@
 
 # API
 /api/* https://quiz-anthropocene.osc-fr1.scalingo.io/api
+/stats/* https://quiz-anthropocene.osc-fr1.scalingo.io/stats
 
 # Use prerender page when available (see vue.config.js)
 / /index.rendered.html 200
