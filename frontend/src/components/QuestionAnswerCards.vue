@@ -99,6 +99,9 @@
           <p class="answer-link" v-if="question.answer_scientific_url" title="Lien scientifique pour creuser la source">
             🔗🧬&nbsp;<a v-bind:href="question.answer_scientific_url" target="_blank" v-bind:title="question.answer_scientific_url">{{ question.answer_scientific_url }}</a>
           </p>
+          <p v-if="question.answer_reading_recommendation" title="Un livre pour aller plus loin">
+            📚&nbsp;{{ question.answer_reading_recommendation }}
+          </p>
         </div>
       </div>
       <!-- Answer image -->

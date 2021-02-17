@@ -279,6 +279,9 @@ class Question(models.Model):
         blank=True,
         help_text="La source scientifique du chiffre (rapport)",
     )
+    answer_reading_recommendation = models.TextField(
+        blank=True, help_text="Un livre pour aller plus loin"
+    )
     answer_image_url = models.URLField(
         max_length=500,
         blank=True,
