@@ -15,15 +15,15 @@ class Migration(migrations.Migration):
             "alter sequence api_dailystat_id_seq rename to stats_dailystat_id_seq;"
         ),
         migrations.RunSQL(
-            "alter sequence api_questionfeedback_id_seq rename to stats_questionfeedback_id_seq;"
+            "alter sequence api_questionstat_id_seq rename to stats_questionanswerevent_id_seq;"
         ),
         migrations.RunSQL(
-            "alter sequence api_questionstat_id_seq rename to stats_questionstat_id_seq;"
+            "alter sequence api_questionfeedback_id_seq rename to stats_questionfeedbackevent_id_seq;"
+        ),
+        migrations.RunSQL(
+            "alter sequence api_quizstat_id_seq rename to stats_quizanswerevent_id_seq;"
         ),
         migrations.RunSQL(
             "alter sequence api_quizfeedbackevent_id_seq rename to stats_quizfeedbackevent_id_seq;"
-        ),
-        migrations.RunSQL(
-            "alter sequence api_quizstat_id_seq rename to stats_quizstat_id_seq;"
         ),
     ]
