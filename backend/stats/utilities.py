@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime, date, timedelta
 
 from django.db.models import Count, F
 
@@ -59,6 +59,59 @@ def quiz_stats():
         "quiz_count": quiz_count,
         "quiz_per_publish_count": list(quiz_per_publish_count),
     }
+
+
+def quiz_detail_stats():
+    """
+    for each quiz :
+    - number of answers : total, last 30 days, last 7 days
+    - number of feedbacks : positive & negative
+    - number of positive answers per count
+    """
+    quiz_detail_stats = []
+
+    for quiz in Quiz.objects.all():
+        quiz_detail_stat = dict()
+        quiz_detail_stat["quiz_id"] = quiz.id
+
+        quiz_answer_events = QuizAnswerEvent.objects.for_quiz(quiz.id)
+        quiz_detail_stat["answer_count"] = quiz_answer_events.count()
+        quiz_detail_stat["answer_count_last_30_days"] = quiz_answer_events.filter(
+            created__date__gte=(date.today() - timedelta(days=30))
+        ).count()
+        quiz_detail_stat["answer_count_last_7_days"] = quiz_answer_events.filter(
+            created__date__gte=(date.today() - timedelta(days=7))
+        ).count()
+
+        quiz_detail_stat["like_count"] = (
+            QuizFeedbackEvent.objects.for_quiz(quiz.id).liked().count()
+        )
+        quiz_detail_stat["dislike_count"] = (
+            QuizFeedbackEvent.objects.for_quiz(quiz.id).disliked().count()
+        )
+
+        quiz_detail_stat["answer_success_count_split"] = []
+        answer_success_count_agg = (
+            QuizAnswerEvent.objects.for_quiz(quiz.id)
+            .values("answer_success_count")
+            .annotate(count=Count("created"))
+        )
+        answer_success_count_agg_list = list(answer_success_count_agg)
+        for n in range(0, quiz.question_count):
+            quiz_detail_stat["answer_success_count_split"].append(
+                next(
+                    (
+                        item
+                        for item in answer_success_count_agg_list
+                        if item["answer_success_count"] == n
+                    ),
+                    {"answer_success_count": n, "count": 0},
+                )
+            )
+
+        quiz_detail_stats.append(quiz_detail_stat)
+
+    return quiz_detail_stats
 
 
 def answer_stats():

@@ -195,6 +195,21 @@ class Command(BaseCommand):
             )
             start_time = time.time()
 
+            # data/quiz-stats.yaml
+            quiz_detail_stats_list = utilities_stats.quiz_detail_stats()
+            quiz_detail_stats_yaml = yaml.safe_dump(
+                quiz_detail_stats_list, allow_unicode=True, sort_keys=False
+            )
+            quiz_stats_element = utilities_github.create_file_element(
+                file_path="data/quiz-stats.yaml", file_content=quiz_detail_stats_yaml
+            )
+
+            print(
+                "--- Step 2.10 done : quiz-stats.yaml (%s seconds) ---"
+                % round(time.time() - start_time, 1)
+            )
+            start_time = time.time()
+
             # update & commit frontend file
             # frontend/src/constants.js
             old_frontend_constants_file_content = utilities_github.get_file(
@@ -210,7 +225,7 @@ class Command(BaseCommand):
             )
 
             print(
-                "--- Step 2.10 done : constants.js (%s seconds) ---"
+                "--- Step 2.11 done : constants.js (%s seconds) ---"
                 % round(time.time() - start_time, 1)
             )
             start_time = time.time()
@@ -228,6 +243,7 @@ class Command(BaseCommand):
                     quizzes_element,
                     quiz_questions_element,
                     quiz_relationships_element,
+                    quiz_stats_element,
                     new_frontend_constants_file_element,
                 ],
             )
