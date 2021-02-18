@@ -5,9 +5,10 @@ from freezegun import freeze_time
 from django.core import management
 from django.test import TestCase
 
-from api import constants
-from api.models import Question, QuestionAnswerEvent, QuestionFeedbackEvent, DailyStat
+from api.models import Question
 from api.tests.factories import QuestionFactory
+from stats.models import QuestionAnswerEvent, QuestionFeedbackEvent, DailyStat
+from stats import constants
 
 
 class CleanupAppStatsCommandTest(TestCase):

@@ -3,7 +3,6 @@ import random
 from io import StringIO
 
 from django.core import management
-from django.core.serializers.json import DjangoJSONEncoder
 from django.db.models import Count, F
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -16,14 +15,9 @@ from api.models import (
     Category,
     Tag,
     Question,
-    QuestionAnswerEvent,
-    QuestionFeedbackEvent,
     Quiz,
-    QuizAnswerEvent,
-    QuizFeedbackEvent,
     Contribution,
     Glossary,
-    DailyStat,
 )
 from api.serializers import (
     QuestionSerializer,
@@ -33,11 +27,6 @@ from api.serializers import (
     QuizSerializer,
     QuizWithQuestionOrderSerializer,
     QuizFullSerializer,
-    QuestionAggStatSerializer,
-    QuestionAnswerEventSerializer,
-    QuestionFeedbackEventSerializer,
-    QuizAnswerEventSerializer,
-    QuizFeedbackEventSerializer,
     ContributionSerializer,
     GlossarySerializer,
 )
@@ -46,14 +35,12 @@ from api.serializers import (
 def api_home(request):
     return HttpResponse(
         """
-        <p>Welcome to the 'Know Your Planet' API.</p>
+        <p>Welcome to the 'Know Your Planet' API app.</p>
         <p>Available endpoints:</p>
         <ul>
             <li>GET /api/questions</li>
             <li>GET /api/questions/:id</li>
-            <li>POST /api/questions/:id/stats</li>
             <li>GET /api/questions/random</li>
-            <li>GET /api/questions/stats</li>
             <li>GET /api/categories</li>
             <li>GET /api/tags</li>
             <li>GET /api/authors</li>
@@ -111,72 +98,6 @@ def question_detail(request, pk):
         serializer = QuestionSerializer(question)
 
     return Response(serializer.data)
-
-
-@api_view(["GET"])
-def question_stats(request, pk):
-    """
-    Retrieve a question's stats
-    """
-    try:
-        question = Question.objects.get(pk=pk)
-    except Question.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
-
-    serializer = QuestionAggStatSerializer(question.agg_stats)
-
-    return Response(serializer.data)
-
-
-@api_view(["POST"])
-def question_detail_answer_event(request, pk):
-    """
-    Create a question answer event
-    """
-    try:
-        question = Question.objects.get(pk=pk)
-    except Question.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
-
-    if request.method == "POST":
-        question_answer_event = QuestionAnswerEvent.objects.create(
-            question=question,
-            choice=request.data["choice"],
-            source=request.data["source"],
-        )
-
-        serializer = QuestionAnswerEventSerializer(question_answer_event)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-
-@api_view(["POST"])
-def question_detail_feedback_event(request, pk):
-    """
-    Create a question feedback event
-    """
-    try:
-        question = Question.objects.get(pk=pk)
-    except Question.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
-
-    if request.method == "POST":
-        question_feedback_event = QuestionFeedbackEvent.objects.create(
-            question=question,
-            choice=request.data["choice"],
-            source=request.data["source"],
-        )
-
-        serializer = QuestionFeedbackEventSerializer(question_feedback_event)
-
-        # enrich with the agg stats
-        question_feedback_count = {
-            "like_count_agg": question.like_count_agg,
-            "dislike_count_agg": question.dislike_count_agg,
-        }
-        return Response(
-            {**serializer.data, **question_feedback_count},
-            status=status.HTTP_201_CREATED,
-        )
 
 
 @api_view(["GET"])
@@ -313,54 +234,6 @@ def quiz_list(request):
 
 
 @api_view(["POST"])
-def quiz_detail_answer_event(request, pk):
-    """
-    Update the quiz answer event
-    """
-    try:
-        quiz = Quiz.objects.get(pk=pk)
-    except Quiz.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
-
-    if request.method == "POST":
-        quiz_answer_event = QuizAnswerEvent.objects.create(
-            quiz=quiz,
-            question_count=quiz.question_count,
-            answer_success_count=request.data["answer_success_count"],
-        )
-
-        serializer = QuizAnswerEventSerializer(quiz_answer_event)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-
-@api_view(["POST"])
-def quiz_detail_feedback_event(request, pk):
-    """
-    Create a quiz feedback event
-    """
-    try:
-        quiz = Quiz.objects.get(pk=pk)
-    except Quiz.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
-
-    if request.method == "POST":
-        quiz_feedback_event = QuizFeedbackEvent.objects.create(
-            quiz=quiz, choice=request.data["choice"]
-        )
-
-        serializer = QuizFeedbackEventSerializer(quiz_feedback_event)
-
-        # enrich with the agg stats
-        quiz_feedback_count = {
-            "like_count_agg": quiz.like_count_agg,
-            "dislike_count_agg": quiz.dislike_count_agg,
-        }
-        return Response(
-            {**serializer.data, **quiz_feedback_count}, status=status.HTTP_201_CREATED
-        )
-
-
-@api_view(["POST"])
 def contribute(request):
     """
     Add a contribution
@@ -404,36 +277,6 @@ def notion_questions(request):
         request,
         "notion_questions.html",
         {"notion_questions_validation": notion_questions_validation},
-    )
-
-
-@api_view(["GET"])
-def stats_dashboard(request):
-    question_answer_count_query = DailyStat.objects.agg_timeseries(
-        "question_answer_count", scale="day"
-    )
-    question_answer_event_count_query = QuestionAnswerEvent.objects.agg_timeseries()
-    question_answer_count_list = list(question_answer_count_query) + list(
-        question_answer_event_count_query
-    )
-    question_answer_count_json = json.dumps(
-        question_answer_count_list, cls=DjangoJSONEncoder
-    )
-
-    quiz_answer_count_query = DailyStat.objects.agg_timeseries("quiz_answer_count")
-    quiz_answer_event_count_query = QuizAnswerEvent.objects.agg_timeseries()
-    quiz_answer_count_list = list(quiz_answer_count_query) + list(
-        quiz_answer_event_count_query
-    )
-    quiz_answer_count_json = json.dumps(quiz_answer_count_list, cls=DjangoJSONEncoder)
-
-    return render(
-        request,
-        "stats_dashboard.html",
-        {
-            "question_answer_count_json": question_answer_count_json,
-            "quiz_answer_count_json": quiz_answer_count_json,
-        },
     )
 
 
