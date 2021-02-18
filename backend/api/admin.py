@@ -3,14 +3,10 @@ import json
 from io import StringIO
 from datetime import datetime
 
-# from io import StringIO
-
 from django.http import HttpResponse
 from django.conf import settings
 from django.contrib import admin
-from django.contrib.admin import AdminSite
-
-# from django.contrib.auth.models import Group, Permission, User
+from django.contrib.auth.models import Group, Permission, User
 from django.core import management
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.html import mark_safe
@@ -20,8 +16,6 @@ from import_export import fields, resources
 from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
 from import_export.admin import ImportMixin, DEFAULT_FORMATS
 from fieldsets_with_inlines import FieldsetsInlineMixin
-
-# from django.core.management import call_command
 
 from api import constants as api_constants
 from api import utilities, utilities_notion
@@ -133,7 +127,7 @@ class ExportMixin:
     #     response['Content-Disposition'] = 'attachment; filename={}.yaml'.format(meta)
 
     #     out = StringIO()
-    #     call_command('dumpdata', 'api.question', '--format=yaml', '--pretty', stdout=out)
+    #     management.call_command('dumpdata', 'api.question', '--format=yaml', '--pretty', stdout=out)  # noqa
 
     #     response.write(out.getvalue())
 
@@ -740,7 +734,7 @@ class LogEntryAdmin(admin.ModelAdmin):
         return False
 
 
-class MyAdminSite(AdminSite):
+class MyAdminSite(admin.AdminSite):
     site_header = "Know Your Planet administration"
     enable_nav_sidebar = False
     index_template = "admin/index_with_export.html"
@@ -775,17 +769,18 @@ class MyAdminSite(AdminSite):
         return super().index(request, extra_context=extra_context)
 
 
-# admin_site = MyAdminSite(name="myadmin")
+admin_site = MyAdminSite(name="myadmin")
 
-admin.site.register(Configuration, ConfigurationAdmin)
-admin.site.register(Question, QuestionAdmin)
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(Tag, TagAdmin)
-admin.site.register(Quiz, QuizAdmin)
-admin.site.register(QuizRelationship, QuizRelationshipAdmin)
-admin.site.register(Contribution, ContributionAdmin)
-admin.site.register(Glossary, GlossaryAdmin)
-admin.site.register(admin.models.LogEntry, LogEntryAdmin)
-# admin.site.register(User)
-# admin.site.register(Permission)
-# admin.site.register(Group)
+admin_site.register(Configuration, ConfigurationAdmin)
+admin_site.register(Question, QuestionAdmin)
+admin_site.register(Category, CategoryAdmin)
+admin_site.register(Tag, TagAdmin)
+admin_site.register(Quiz, QuizAdmin)
+admin_site.register(QuizRelationship, QuizRelationshipAdmin)
+admin_site.register(Contribution, ContributionAdmin)
+admin_site.register(Glossary, GlossaryAdmin)
+admin_site.register(admin.models.LogEntry, LogEntryAdmin)
+
+admin_site.register(User)
+admin_site.register(Permission)
+admin_site.register(Group)

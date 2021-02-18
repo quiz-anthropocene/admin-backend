@@ -15,7 +15,7 @@ from stats.models import (
     DailyStat,
 )
 from api.models import Configuration
-from api.admin import ExportMixin
+from api.admin import admin_site, ExportMixin
 
 
 class QuestionAggStatAdmin(ExportMixin, admin.ModelAdmin):
@@ -280,9 +280,9 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
         return super().changelist_view(request, extra_context=extra_context)
 
 
-admin.site.register(QuestionAggStat, QuestionAggStatAdmin)
-admin.site.register(QuestionAnswerEvent, QuestionAnswerEventAdmin)
-admin.site.register(QuestionFeedbackEvent, QuestionFeedbackEventAdmin)
-admin.site.register(QuizAnswerEvent, QuizAnswerEventAdmin)
-admin.site.register(QuizFeedbackEvent, QuizFeedbackEventAdmin)
-admin.site.register(DailyStat, DailyStatAdmin)
+admin_site.register(QuestionAggStat, QuestionAggStatAdmin)
+admin_site.register(QuestionAnswerEvent, QuestionAnswerEventAdmin)
+admin_site.register(QuestionFeedbackEvent, QuestionFeedbackEventAdmin)
+admin_site.register(QuizAnswerEvent, QuizAnswerEventAdmin)
+admin_site.register(QuizFeedbackEvent, QuizFeedbackEventAdmin)
+admin_site.register(DailyStat, DailyStatAdmin)
