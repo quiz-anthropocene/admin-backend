@@ -840,3 +840,11 @@
   name: Aluminium
   description: ''
   created: 2021-02-16
+- id: 238
+  name: céréales
+  description: ''
+  created: 2021-02-18
+- id: 239
+  name: Produits laitiers
+  description: ''
+  created: 2021-02-18
