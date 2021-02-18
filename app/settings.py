@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "fieldsets_with_inlines",  # django-fieldsets-with-inlines
     "solo",  # django-solo
     "api",
+    "stats",
 ]
 
 MIDDLEWARE = [
@@ -173,7 +174,8 @@ SHELL_PLUS = "ipython"
 SHELL_PLUS_IMPORTS = [
     "import csv, json, yaml",
     "from datetime import datetime, date, timedelta",
-    "from api import constants, utilities, utilities_stats, utilities_notion, utilities_github",
+    "from api import constants, utilities, utilities_notion, utilities_github",
+    "from stats import utilities as utilities_stats",
 ]
 
 

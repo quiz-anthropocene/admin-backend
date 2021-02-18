@@ -3,13 +3,13 @@ import time
 from django.core import management
 from django.test import TestCase
 
-from api.models import (
-    Question,
+from api.models import Question
+from api.tests.factories import QuestionFactory
+from stats.models import (
     # QuestionAggStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
 )
-from api.tests.factories import QuestionFactory
 
 
 class CleanupQuestionStatsCommandTest(TestCase):

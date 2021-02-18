@@ -3,15 +3,17 @@ import pandas as pd
 from django.utils import timezone
 from django.core.management import BaseCommand
 
-from api.models import (
-    Configuration,
-    Question,
+from stats.models import (
     # QuestionAggStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
     QuizAnswerEvent,
     # QuizFeedbackEvent,
     DailyStat,
+)
+from api.models import (
+    Configuration,
+    Question,
 )
 
 
