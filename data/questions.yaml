@@ -3137,7 +3137,7 @@
     locaux sont exportés hors de leur aire. Pour améliorer l'autonomie alimentaire,
     il faut favoriser les filières locales de transformation.
   answer_accessible_url: https://www.ledauphine.com/actualite/2019/09/27/autonomie-alimentaire-avignon-et-valence-championnes-de-france
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.utopies.com/publications/autonomie-alimentaire-des-villes/
   answer_reading_recommendation: ''
   answer_image_url: https://www.wedemain.fr/photo/art/grande/14235315-20234759.jpg
   answer_image_explanation: ''
@@ -28554,3 +28554,31 @@
   updated: 2021-02-18
   tags:
   - 223
+- id: 930
+  text: Parmi ces quatre propositions, laquelle ne représente PAS un enjeu majeur
+    direct vis-à-vis de la santé humaine ?
+  hint: ''
+  type: QCM
+  category: 8
+  difficulty: 1
+  answer_option_a: L’utilisation d’antibiotiques dans les élevages
+  answer_option_b: L’épandage de pesticides sur les cultures
+  answer_option_c: La consommation de produits ultra-transformés
+  answer_option_d: La prépondérance des achats en grandes surfaces
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Julien Briton
+  validator: Matthieu Massart
+  validation_status: Brouillon
+  added: 2021-02-18
+  created: 2021-02-19
+  updated: 2021-02-19
+  tags:
+  - 243

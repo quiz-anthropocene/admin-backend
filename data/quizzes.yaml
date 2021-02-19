@@ -547,3 +547,32 @@
   created: 2021-02-14
   updated: 2021-02-17
   tags: []
+- id: 62
+  name: Fresque de l'Alimintation
+  introduction: "<p>Connaissez-vous réellement les comment un steak ou une salade\
+    \ finit dans votre assiette ? Et leurs conséquences environnementales ? Pour mieux\
+    \ vous éclairer, un atlier collectif et pédagogique a été créé : la <a href=\"\
+    http://fresquealimentation.org/\">Fresque de l’Alimentation</a>.<br />\r\nPour\
+    \ vous mettre en appétit, rien de mieux qu'un petit quiz pour sonder vos connaissanes\
+    \ ?</p>\r\n\r\n<p> </p>\r\n\r\n<p>Un quiz conçu par Julien Briton, co-concepteur\
+    \ de l'atelier Fresque de l'Alimentation.<br />\r\n </p>"
+  conclusion: "<p>Pour aller plus loin, direction le site de la <a href=\"http://fresquealimentation.org/\"\
+    >Fresque de l’Alimentation</a>.<br />\r\nL'atelier vous</p>\r\n\r\n<p>Pour faire\
+    \ le lien entre toutes ces briques de notre alimentation et leurs conséquences\
+    \ environnementales, nous vous invitons à participer à la<br />\r\nL’objectif\
+    \ de cette Fresque est d’embarquer le plus grand nombre dans une transition alimentaire\
+    \ rapide et effective ! Pour cela nous vous proposerons successivement de :<br\
+    \ />\r\n- Comprendre les grandes lignes de notre alimentation et sles impacts\
+    \ environnementaux, sanitaires et sociaux qu'elle engendre.<br />\r\n- DPuis définir\
+    \ une alimentation saine et durable, végétalisée, locale, bio et de saison.<br\
+    \ />\r\n- Comprendre en quoi une alimentation durable améliore la résilience alimentaire.</p>\r\
+    \n\r\n<p> </p>\r\n\r\n<p> </p>"
+  difficulty_average: 0.0
+  author: ''
+  image_background_url: ''
+  has_audio: false
+  publish: false
+  spotlight: false
+  created: 2021-02-18
+  updated: 2021-02-18
+  tags: []
