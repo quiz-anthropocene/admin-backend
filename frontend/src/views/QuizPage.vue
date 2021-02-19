@@ -24,6 +24,7 @@ export default {
 
   mounted() {
     this.$store.dispatch('GET_QUIZ_RELATIONSHIP_LIST_FROM_LOCAL_YAML');
+    this.$store.dispatch('GET_QUIZ_STATS_LIST_FROM_LOCAL_YAML');
   },
 };
 </script>

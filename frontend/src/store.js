@@ -14,6 +14,7 @@ import questionsYamlData from '../../data/questions.yaml';
 import quizzesYamlData from '../../data/quizzes.yaml';
 import quizQuestionsYamlData from '../../data/quiz-questions.yaml';
 import quizRelationshipsYamlData from '../../data/quiz-relationships.yaml';
+import quizStatsYamlData from '../../data/quiz-stats.yaml';
 import ressourcesGlossaireYamlData from '../../data/ressources-glossaire.yaml';
 import ressourcesSoutiensYamlData from '../../data/ressources-soutiens.yaml';
 import ressourcesAutresAppsYamlData from '../../data/ressources-autres-apps.yaml';
@@ -46,6 +47,7 @@ const store = new Vuex.Store({
       author: null,
     },
     quizRelationships: [],
+    quizStats: [],
     categories: [],
     tags: [],
     authors: [],
@@ -138,6 +140,13 @@ const store = new Vuex.Store({
      */
     GET_QUIZ_RELATIONSHIP_LIST_FROM_LOCAL_YAML: ({ commit }) => {
       commit('SET_QUIZ_RELATIONSHIP_LIST', { list: quizRelationshipsYamlData });
+    },
+    /**
+     * Get quiz stats
+     * Pre-processing ? None
+     */
+    GET_QUIZ_STATS_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      commit('SET_QUIZ_STATS_LIST', { list: quizStatsYamlData });
     },
     /**
      * Get authors
@@ -235,6 +244,9 @@ const store = new Vuex.Store({
     SET_QUIZ_RELATIONSHIP_LIST: (state, { list }) => {
       state.quizRelationships = list;
     },
+    SET_QUIZ_STATS_LIST: (state, { list }) => {
+      state.quizStats = list;
+    },
     SET_CATEGORY_LIST: (state, { list }) => {
       state.categories = list;
     },
@@ -298,6 +310,7 @@ const store = new Vuex.Store({
     getQuizzesPublishedByFilter: (state) => (filter) => state.quizzesPublished.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
       .filter((q) => (filter.author ? (q.author === filter.author) : true)),
     getQuizRelationshipsById: (state) => (quizId) => state.quizRelationships.filter((qr) => (qr.from_quiz === quizId) || (qr.to_quiz === quizId)),
+    getQuizStatsById: (state) => (quizId) => state.quizStats.find((q) => (q.quiz_id === quizId)),
   },
 });
 

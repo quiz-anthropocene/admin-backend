@@ -63,33 +63,21 @@
     <section v-if="quiz && (quizStep > quiz.questions.length)">
 
       <section class="question">
-        <h2>Votre résultat : <strong>{{ quiz.questions.filter(q => q['success']).length }} / {{ quiz.questions.length }}</strong></h2>
+        <h2>Votre résultat : <strong>{{ finalScore }} / {{ quiz.questions.length }}</strong></h2>
+
+        <p>
+          📈&nbsp;Le quiz a été complété <strong>{{ quizStats.answer_count }}</strong> fois.<br />
+          Vous avez fait mieux que <strong>{{ finalScoreBetterThanPercent }}%</strong> des joueurs qui vous ont précédés !
+        </p>
 
         <div v-if="quiz.conclusion" v-html="quiz.conclusion" title="Conclusion du quiz"></div>
-
-        <ShareBox type="quiz" :quizName="quiz.name" :score="quiz.questions.filter(q => q['success']).length + '/' + quiz.questions.length" />
-
-        <hr />
-
-        <div>
-          <a class="fake-link" @click="showQuizQuestions = !showQuizQuestions">Afficher le détails de vos réponses</a>
-          <span v-if="!showQuizQuestions">&nbsp;▸</span>
-          <span v-if="showQuizQuestions">&nbsp;▾</span>
-        </div>
-
-        <hr v-if="showQuizQuestions" />
-
-        <div v-if="showQuizQuestions" class="row">
-          <div class="col-lg-4 col-sm-6" v-for="question in quiz.questions" :key="question.id"><!-- :class="question.success ? 'answer-success' : 'answer-error'" -->
-            <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: question.id } }">
-              <QuestionPreviewCard v-bind:question="question" v-bind:customClass="question.success ? 'answer-success' : 'answer-error'" />
-            </router-link>
-          </div>
-        </div>
       </section>
+
+      <ShareBox type="quiz" :quizName="quiz.name" :score="finalScore + '/' + quiz.questions.length" />
 
       <FeedbackCard v-bind:context="{ source: 'quiz', item: quiz }" />
 
+      <!-- Next / similar quiz -->
       <section v-if="nextQuiz">
         <br />
         <h2 class="special-title">Quiz suivant&nbsp;⏩</h2>
@@ -111,7 +99,6 @@ import constants from '../constants';
 import { metaTagsGenerator } from '../utils';
 import QuizCard from '../components/QuizCard.vue';
 import QuestionAnswerCards from '../components/QuestionAnswerCards.vue';
-import QuestionPreviewCard from '../components/QuestionPreviewCard.vue';
 import FeedbackCard from '../components/FeedbackCard.vue';
 import ShareBox from '../components/ShareBox.vue';
 
@@ -130,7 +117,6 @@ export default {
   components: {
     QuizCard,
     QuestionAnswerCards,
-    QuestionPreviewCard,
     FeedbackCard,
     ShareBox,
   },
@@ -153,6 +139,11 @@ export default {
       const quiz = this.$store.getters.getQuizById(parseInt(this.$route.params.quizId, 10));
       // .slice(0) ? // .slice makes a copy of the array, instead of mutating the orginal
       return quiz;
+    },
+    quizStats() {
+      const quizStats = this.$store.getters.getQuizStatsById(this.quiz.id);
+      // .slice(0) ? // .slice makes a copy of the array, instead of mutating the orginal
+      return quizStats;
     },
     quizRelationships() {
       const quizRelationships = this.$store.getters.getQuizRelationshipsById(this.quiz.id);
@@ -181,6 +172,14 @@ export default {
         return this.$store.getters.getQuizzesByIdList(similarQuizRelationshipsIdList);
       }
       return null;
+    },
+    finalScore() {
+      return this.quiz.questions.filter((q) => q.success).length;
+    },
+    finalScoreBetterThanPercent() {
+      const finalScoreBetterThan = this.quizStats.answer_success_count_split.filter((q) => (q.answer_success_count < this.finalScore)).reduce((acc, curr) => acc + curr.count, 0);
+      const finalScoreBetterThanPercent = this.quizStats.answer_count ? Math.round((finalScoreBetterThan / this.quizStats.answer_count) * 100) : 0;
+      return finalScoreBetterThanPercent;
     },
   },
 
