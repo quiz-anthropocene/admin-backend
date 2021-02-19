@@ -848,3 +848,23 @@
   name: Produits laitiers
   description: ''
   created: 2021-02-18
+- id: 240
+  name: Grandes Surfaces
+  description: ''
+  created: 2021-02-19
+- id: 241
+  name: Agroalimentaire
+  description: ''
+  created: 2021-02-19
+- id: 242
+  name: Elevage
+  description: ''
+  created: 2021-02-19
+- id: 243
+  name: Santé
+  description: ''
+  created: 2021-02-19
+- id: 244
+  name: pèche
+  description: ''
+  created: 2021-02-19
