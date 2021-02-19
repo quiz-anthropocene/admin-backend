@@ -268,6 +268,7 @@ class Command(BaseCommand):
                     "<li>data/quizzes.yaml</li>"
                     "<li>data/quiz-questions.yaml</li>"
                     "<li>data/quiz-relationships.yaml</li>"
+                    "<li>data/quiz-stats.yaml</li>"
                     "</ul>"
                 )
                 pull_request = utilities_github.create_pull_request(
