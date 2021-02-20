@@ -1933,7 +1933,6 @@
   created: 2020-03-10
   updated: 2020-09-28
   tags:
-  - 2
   - 26
 - id: 59
   text: Entre 1970 et 2012, les populations de mammifères, d'oiseaux, de reptiles
@@ -27567,7 +27566,8 @@
 - id: 856
   text: Quelle est la part des microplastiques retrouvés dans l'océan provenant de
     la dégradation de débris plastiques ?
-  hint: ''
+  hint: Les microplastiques sont les petites particules (< 5 mm) de matière plastique
+    dispersées dans l'environnement.
   type: QCM
   category: 3
   difficulty: 3
@@ -27577,15 +27577,17 @@
   answer_option_d: 99%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: 'La dégradation des débris plastiques produit des microplastiques
-    secondaires, mais il y a beaucoup de rejets directs de microplastiques (donc primaires)
-    : 1/3 vient des pneus de véhicules, 1/3 des textiles synthétiques et 1/3 de divers
-    usages des villes. On pourrait aussi compter le caoutchouc en plus. 1,5 millions
-    de tonnes par an viennent ainsi s''ajouter dans les océans, et viennent compléter
-    les microplastiques secondaires qui en représentent donc 60-80%. De plus, sur
-    les 8 millions de tonnes de débris plastiques arrivant dans l''océan chaque année,
-    seuls 50,000 tonnes soit 0,6% seraient en surface, négligeable par rapport à la
-    quantité qui coule (~10%) ou qui est rejetée sur les côtes (~90%).'
+  answer_explanation: "On appelle \"microplastique\" les petites particules (< 5 mm)\
+    \ de matière plastique dispersées dans l'environnement.\nLa dégradation des débris\
+    \ plastiques produit des microplastiques secondaires.\nLes microplastiques primaire\
+    \ sont ceux provenant de rejets directs :\n1/3 vient des pneus de véhicules, \n\
+    1/3 des textiles synthétiques \n1/3 de divers usages des villes. \n\nOn pourrait\
+    \ aussi compter le caoutchouc en plus. 1,5 millions de tonnes par an viennent\
+    \ ainsi s'ajouter dans les océans, et viennent compléter les microplastiques secondaires\
+    \ qui en représentent donc 60-80%. De plus, sur les 8 millions de tonnes de débris\
+    \ plastiques arrivant dans l'océan chaque année, seuls 50,000 tonnes soit 0,6%\
+    \ seraient en surface, négligeable par rapport à la quantité qui coule (~10%)\
+    \ ou qui est rejetée sur les côtes (~90%)."
   answer_accessible_url: https://www.iew.be/microplastiques-macroproblemesquelles-avancees-en-2020/
   answer_scientific_url: https://www.futura-sciences.com/planete/actualites/pollution-plastique-on-retrouve-99-plastique-disparus-ocean-62879/
   answer_reading_recommendation: ''
@@ -28553,7 +28555,8 @@
   created: 2021-02-18
   updated: 2021-02-18
   tags:
-  - 223
+  - 5
+  - 21
 - id: 930
   text: Parmi ces quatre propositions, laquelle ne représente PAS un enjeu majeur
     direct vis-à-vis de la santé humaine ?

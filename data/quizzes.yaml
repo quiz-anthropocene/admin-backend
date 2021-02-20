@@ -83,21 +83,22 @@
   - 72
 - id: 6
   name: Regard sur l'anthropocène, premier aperçu
-  introduction: <p>L'Anthropocène, c'est un terme proposé par des scientifiques pour
-    désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où l'homme
-    est devenu une force géologique majeure. La période la plus récente de l'anthropocène
-    est parfois décrite comme celle de la grande accélération, car de nombreux indicateurs
-    y présentent des courbes de type exponentiel. Ce quiz propose un premier tour
-    d'horizon de l'emprise inédite de l'homme sur la planète qu'il occupe.</p>
+  introduction: "<p>L'Anthropocène, c'est un terme proposé par des scientifiques pour\
+    \ désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où\
+    \ l'homme est devenu une force géologique majeure. La période la plus récente\
+    \ de l'anthropocène est parfois décrite comme celle de la grande accélération,\
+    \ car de nombreux indicateurs y présentent des courbes de type exponentiel. Ce\
+    \ quiz propose un premier tour d'horizon de l'emprise inédite de l'homme sur la\
+    \ planète qu'il occupe.<br />\r\n<br />\r\nDurée à prévoir : 15 min</p>"
   conclusion: ''
-  difficulty_average: 2.9
+  difficulty_average: 2.7
   author: Matthieu Massart
   image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
   has_audio: false
   publish: true
   spotlight: false
   created: 2020-07-08
-  updated: 2021-01-26
+  updated: 2021-02-19
   tags: []
 - id: 7
   name: le Pétrole - Partie 1
@@ -377,12 +378,12 @@
   tags: []
 - id: 54
   name: Born in the USA
-  introduction: "<p>Les États-Unis sont entrés dans notre imaginaire collectif : les\
-    \ cow-boys, New-York, Hollywood, la Silicon Valley, ... Le rêve américain ! Mais\
-    \ les États-Unis, ce sont aussi des consommateurs effrénés de pétrole, un des\
-    \ plus gros producteurs d'énergie fossiles au monde, et un des plus gros émetteurs\
-    \ de CO2 de la planète.</p>\r\n\r\n<p>Découvrez la face écologiquement sombre\
-    \ des États-Unis dans ces quelques questions.</p>"
+  introduction: '<p>Les États-Unis sont entrés dans notre imaginaire collectif : les
+    cow-boys, New-York, Hollywood, la Silicon Valley, ... Le rêve américain ! Mais
+    les États-Unis, ce sont aussi des consommateurs effrénés de pétrole, un des plus
+    gros producteurs d''énergie fossiles au monde, et un des plus gros émetteurs de
+    CO2 de la planète. Découvrez la face écologiquement sombre des États-Unis via
+    ces quelques questions.</p>'
   conclusion: "<p>De nos jours, quand on pense pétrole on pense Moyen-Orient, Arabie\
     \ Saoudite, ... mais le pays du pétrole par excellence, ce sont les États-Unis\
     \ ! Attention néanmoins, nos modes de vie européens ne sont pas si éloignés.</p>\r\
@@ -396,7 +397,7 @@
   publish: true
   spotlight: false
   created: 2020-11-28
-  updated: 2021-01-26
+  updated: 2021-02-19
   tags:
   - 11
   - 13
@@ -406,8 +407,8 @@
   name: Capture et stockage du CO2
   introduction: "<p>Le Réveilleur, c'est une chaîne Youtube qui fait de la vulgarisation\
     \ sur les thématiques énergie et climat. Il explique de manière pédagogique ces\
-    \ sujets complexes sur Youtube.</p>\r\n\r\n<p>Une de ses dernières vidéos traite\
-    \ de la capture et du stockage du CO2 dans le sol. C'est en effet une technologie\
+    \ sujets complexes sur Youtube.<br />\r\nUne de ses dernières vidéos traite de\
+    \ la capture et du stockage du CO2 dans le sol. C'est en effet une technologie\
     \ clé pour beaucoup de scénarios d'atténuation du changement climatique. Précisons\
     \ qu'il ne s'agit ici que de processus de capture pour réduire les émissions humaines,\
     \ par pour récupére du CO2 déjà dans l'atmosphère. On espère que ce quiz vous\
@@ -428,7 +429,7 @@
   publish: true
   spotlight: false
   created: 2020-12-08
-  updated: 2021-01-26
+  updated: 2021-02-19
   tags:
   - 62
 - id: 56
@@ -440,14 +441,14 @@
     vis à vis de l'énergie, vous pouvez tester nos quiz sur le pétrole <a href="https://quizanthropocene.fr/quiz/7">ici
     </a>et <a href="https://quizanthropocene.fr/quiz/10">là</a>. Et pour aller au
     coma éthylique énergétique, c'est <a href="https://quizanthropocene.fr/quiz/54">par-là</a>.</p>
-  difficulty_average: 2.4
+  difficulty_average: 2.5
   author: Matthieu Massart
   image_background_url: https://www.popsci.com/resizer/iHd2-DUNyurlTDhvndesdxzQoFU=/857x643/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/MTUGSVPHBB22CKTZETTB42BCIE.jpg
   has_audio: false
   publish: true
   spotlight: false
   created: 2020-12-13
-  updated: 2021-02-01
+  updated: 2021-02-19
   tags: []
 - id: 57
   name: 2020 en chiffres
@@ -463,7 +464,7 @@
   publish: true
   spotlight: false
   created: 2020-12-24
-  updated: 2021-02-02
+  updated: 2021-02-19
   tags:
   - 213
 - id: 59
@@ -489,26 +490,25 @@
   publish: true
   spotlight: true
   created: 2021-01-21
-  updated: 2021-02-07
+  updated: 2021-02-19
   tags:
   - 30
 - id: 60
   name: Le numérique est-il écologique ?
-  introduction: "<p>Loin des caractères immatériel et propre qui lui sont prêtés,\
-    \ le numérique a, comme toute activité humaine, des impacts environnementaux.\
-    \ Ce quiz est là pour vous éclairer sur quelques chiffres.</p>\r\n\r\n<p>Un quiz\
-    \ élaboré par Alain Servigne</p>"
+  introduction: <p>Loin des caractères immatériel et propre qui lui sont prêtés, le
+    numérique a, comme toute activité humaine, des impacts environnementaux. Ce quiz
+    est là pour vous éclairer sur quelques chiffres.</p>
   conclusion: <p>Bravo, vous avez quelques ordres de grandeur pour aborder le sujet
     de la sobriété numérique. Vous pouvez également compléter vos connaissances avec
     le quiz de la fresque du numérique.</p>
-  difficulty_average: 2.2
+  difficulty_average: 2.3
   author: Alain Servigne
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/Quiz60.jpg
   has_audio: false
   publish: true
   spotlight: true
   created: 2021-02-01
-  updated: 2021-02-16
+  updated: 2021-02-19
   tags:
   - 30
 - id: 61
@@ -545,7 +545,7 @@
   publish: true
   spotlight: true
   created: 2021-02-14
-  updated: 2021-02-17
+  updated: 2021-02-19
   tags: []
 - id: 62
   name: Fresque de l'Alimintation
