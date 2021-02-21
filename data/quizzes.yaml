@@ -576,3 +576,16 @@
   created: 2021-02-18
   updated: 2021-02-18
   tags: []
+- id: 63
+  name: Digital Collage - the Quiz
+  introduction: ''
+  conclusion: ''
+  difficulty_average: 0.0
+  author: 'Aurélien Deragne, translation: Benoît Barraque'
+  image_background_url: ''
+  has_audio: false
+  publish: false
+  spotlight: false
+  created: 2021-02-20
+  updated: 2021-02-20
+  tags: []
