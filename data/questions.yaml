@@ -27500,7 +27500,7 @@
   hint: ''
   type: QCM
   category: 7
-  difficulty: 2
+  difficulty: 3
   answer_option_a: 10%
   answer_option_b: 33%
   answer_option_c: 50%
@@ -27577,17 +27577,16 @@
   answer_option_d: 99%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: "On appelle \"microplastique\" les petites particules (< 5 mm)\
-    \ de matière plastique dispersées dans l'environnement.\nLa dégradation des débris\
-    \ plastiques produit des microplastiques secondaires.\nLes microplastiques primaire\
-    \ sont ceux provenant de rejets directs :\n1/3 vient des pneus de véhicules, \n\
-    1/3 des textiles synthétiques \n1/3 de divers usages des villes. \n\nOn pourrait\
-    \ aussi compter le caoutchouc en plus. 1,5 millions de tonnes par an viennent\
-    \ ainsi s'ajouter dans les océans, et viennent compléter les microplastiques secondaires\
-    \ qui en représentent donc 60-80%. De plus, sur les 8 millions de tonnes de débris\
-    \ plastiques arrivant dans l'océan chaque année, seuls 50,000 tonnes soit 0,6%\
-    \ seraient en surface, négligeable par rapport à la quantité qui coule (~10%)\
-    \ ou qui est rejetée sur les côtes (~90%)."
+  answer_explanation: "La dégradation des débris plastiques produit des microplastiques\
+    \ secondaires.\nLes microplastiques primaire sont ceux provenant de rejets directs\
+    \ :\n1/3 vient des pneus de véhicules, \n1/3 des textiles synthétiques \n1/3 de\
+    \ divers usages des villes. \n\nOn pourrait aussi compter le caoutchouc en plus.\
+    \ 1,5 millions de tonnes par an viennent ainsi s'ajouter dans les océans, et viennent\
+    \ compléter les microplastiques secondaires qui en représentent donc 60-80%. De\
+    \ plus, sur les 8 millions de tonnes de débris plastiques arrivant dans l'océan\
+    \ chaque année, seuls 50,000 tonnes soit 0,6% seraient en surface, négligeable\
+    \ par rapport à la quantité qui coule (~10%) ou qui est rejetée sur les côtes\
+    \ (~90%)."
   answer_accessible_url: https://www.iew.be/microplastiques-macroproblemesquelles-avancees-en-2020/
   answer_scientific_url: https://www.futura-sciences.com/planete/actualites/pollution-plastique-on-retrouve-99-plastique-disparus-ocean-62879/
   answer_reading_recommendation: ''
@@ -27647,7 +27646,7 @@
   hint: ''
   type: QCM
   category: 7
-  difficulty: 2
+  difficulty: 3
   answer_option_a: négligeable
   answer_option_b: 1 à 2%
   answer_option_c: 10 à 15%
@@ -27660,9 +27659,9 @@
     dispersion dans les uages (ex : pots catalytiques échappant du platine, colbalt,
     zinc ...).'
   answer_accessible_url: https://www.gralon.net/articles/commerce-et-societe/automobile--auto-moto/article-le-pot-catalytique---fonctionnement-et-limites-3427.htm
-  answer_scientific_url: https://www.slideshare.net/PaulineTSP/pptlow-techphilippe-bihouix
-  answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/858.png
+  answer_scientific_url: ''
+  answer_reading_recommendation: L'âge des low-techs, Philippe Bihouix (2014)
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/858.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -27676,7 +27675,7 @@
   - 235
 - id: 859
   text: Qu'appelle-t-on l'effet parc ?
-  hint: ''
+  hint: '*en écologie'
   type: QCM
   category: 2
   difficulty: 3
@@ -27757,7 +27756,7 @@
   hint: ''
   type: QCM-RM
   category: 2
-  difficulty: 4
+  difficulty: 3
   answer_option_a: 10 fois plus de sable que de ciment
   answer_option_b: Presque 100 fois plus d'eau douce que de sable
   answer_option_c: 5 fois plus de fer que de ciment et d'aluminium
@@ -27825,6 +27824,41 @@
   hint: ''
   type: QCM
   category: 8
+  difficulty: 3
+  answer_option_a: de l'ordre de 50
+  answer_option_b: entre 50 et 500
+  answer_option_c: entre 500 et 8,000
+  answer_option_d: entre 50,000 et 800,000
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Les données totales créées sont passées de 100 millions (2005)
+    à 800 milliards de téraoctets par an (2020) [3], c’est-à-dire ×8000. En corrigeant
+    par l’augmentation du nombre d’internautes, le ratio devient ×2000. Durant ces
+    15 ans, la quantité de données circulant dans le réseau internet a été multipliée
+    par "seulement" 100.  Attention, l''évaluation de cette masse de données est difficile
+    à réaliser. : par exemple, le site Statista affirmait plutôt 50 milliards de téraoctets
+    en 2020 (donc rapport ×500). Ce chiffre pourrait être de nouveau multiplié par
+    50 sur les 15 prochaines années (jusqu''en 2035).'
+  answer_accessible_url: https://fr.statista.com/infographie/17800/big-data-evolution-quantite-donnees-numeriques-creees-dans-le-monde/
+  answer_scientific_url: https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/864.png
+  answer_image_explanation: IDC, cité par [https://www.economist.com/special-report/2010/02/27/data-data-everywhere](https://www.economist.com/special-report/2010/02/27/data-data-everywhere)
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-02-14
+  created: 2021-02-14
+  updated: 2021-02-14
+  tags:
+  - 30
+- id: 864
+  text: Entre 2005 et 2020, les données totales générées chaque année par tous l'ensemble
+    des appareils dans le monde ont été multipliées d'un facteur...
+  hint: ''
+  type: QCM
+  category: 2
   difficulty: 2
   answer_option_a: Les conditions néonatales, les maladies congénitales, les problèmes
     cardiaques, les cancers
@@ -27860,41 +27894,6 @@
   updated: 2021-02-14
   tags:
   - 234
-- id: 864
-  text: Entre 2005 et 2020, les données totales générées chaque année par tous l'ensemble
-    des appareils dans le monde ont été multipliées d'un facteur...
-  hint: ''
-  type: QCM
-  category: 2
-  difficulty: 3
-  answer_option_a: entre 50 et 80
-  answer_option_b: entre 50 et 800
-  answer_option_c: entre 500 et 8,000
-  answer_option_d: entre 50,000 et 800,000
-  answer_correct: c
-  has_ordered_answers: true
-  answer_explanation: 'Les données totales créées sont passées de 100 millions (2005)
-    à 800 milliards de téraoctets par an (2020) [3], c’est-à-dire ×8000. En corrigeant
-    par l’augmentation du nombre d’internautes, le ratio devient ×2000. Durant ces
-    15 ans, la quantité de données circulant dans le réseau internet a été multipliée
-    par "seulement" 100.  Attention, l''évaluation de cette masse de données est difficile
-    à réaliser. : par exemple, le site Statista affirmait plutôt 50 milliards de téraoctets
-    en 2020 (donc rapport ×500). Ce chiffre pourrait être de nouveau multiplié par
-    50 sur les 15 prochaines années (jusqu''en 2035).'
-  answer_accessible_url: https://fr.statista.com/infographie/17800/big-data-evolution-quantite-donnees-numeriques-creees-dans-le-monde/
-  answer_scientific_url: https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic
-  answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/864.png
-  answer_image_explanation: IDC, cité par [https://www.economist.com/special-report/2010/02/27/data-data-everywhere](https://www.economist.com/special-report/2010/02/27/data-data-everywhere)
-  answer_extra_info: ''
-  author: Max Pinsard
-  validator: Matthieu Massart
-  validation_status: Validée
-  added: 2021-02-14
-  created: 2021-02-14
-  updated: 2021-02-14
-  tags:
-  - 30
 - id: 900
   text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
   hint: Bas carbone donc…
