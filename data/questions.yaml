@@ -27151,6 +27151,40 @@
   updated: 2021-02-02
   tags:
   - 37
+- id: 842
+  text: Quelle est la quantité d'eau nécessaire pour produire 1 kg de viande bovine
+    ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  answer_option_a: 300 litres
+  answer_option_b: 2,000 litres
+  answer_option_c: 10,000 litres
+  answer_option_d: 15,000 litres
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: 'La production d'' un kg de viande bovine nécessite 15 000 litres
+    d''eau douce. C''est 9 fois plus d''eau que les cultures céréalières.  En 2018,
+    la production de viande bovine a atteint 72 millions de tonnes, nécessitant un
+    volume d''eau équivalent à 420 millions de piscines olympiques. Quand on sait
+    que plusieurs milliers de tonnes de viande ne seront pas consommés, la quantité
+    d''eau gaspillée est énorme. '
+  answer_accessible_url: ''
+  answer_scientific_url: https://waterfootprint.org/en/water-footprint/product-water-footprint/water-footprint-crop-and-animal-products/
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: https://ourworldindata.org/meat-production
+  author: Baptiste Leveque
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-01-21
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 37
+  - 231
 - id: 843
   text: 'Combien existe-t-il de zones de conflits potentiels dus à l''eau ? '
   hint: ''
@@ -27564,8 +27598,8 @@
   tags:
   - 26
 - id: 856
-  text: Quelle est la part des microplastiques retrouvés dans l'océan provenant de
-    la dégradation de débris plastiques ?
+  text: Parmi les microplastiques retrouvés dans l'océan, quelle est la part provenant
+    de la dégradation de débris plastiques ?
   hint: Les microplastiques sont les petites particules (< 5 mm) de matière plastique
     dispersées dans l'environnement.
   type: QCM
@@ -27819,8 +27853,8 @@
   tags:
   - 35
 - id: 863
-  text: Les principales causes de mortalité et de vie en mauvaise santé dans les pays
-    riches sont …
+  text: Entre 2005 et 2020, les données totales générées chaque année par tous l'ensemble
+    des appareils dans le monde ont été multipliées d'un facteur...
   hint: ''
   type: QCM
   category: 8
@@ -27854,8 +27888,8 @@
   tags:
   - 30
 - id: 864
-  text: Entre 2005 et 2020, les données totales générées chaque année par tous l'ensemble
-    des appareils dans le monde ont été multipliées d'un facteur...
+  text: Les principales causes de mortalité et de vie en mauvaise santé dans les pays
+    riches sont …
   hint: ''
   type: QCM
   category: 2
@@ -28523,9 +28557,69 @@
   updated: 2021-01-18
   tags:
   - 218
+- id: 921
+  text: Le glacier d'Aletsch, situé en Suisse, est le plus grand glacier des Alpes.
+    Comment le glacier a-t-il évolué en taille puis 1880 ?
+  hint: Ce n'est pas un glacier très original
+  type: QCM
+  category: 1
+  difficulty: 2
+  answer_option_a: il a reculé de 500m
+  answer_option_b: Il a reculé de 3 km
+  answer_option_c: Il a reculé de 10 km
+  answer_option_d: Il a avancé de 890 m
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Lionel Favier
+  validator: Matthieu Massart
+  validation_status: Brouillon
+  added: 2021-02-03
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 16
+  - 206
+- id: 922
+  text: Quel pourcentage des emballages jetés par les ménages sont des emballages
+    alimentaires ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 25%
+  answer_option_b: 45%
+  answer_option_c: 65%
+  answer_option_d: 85%
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: L’alimentation a donc un rôle important à jouer dans la réduction
+    des déchets.
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: 'Source : Infographie, Mieux manger, Moins gaspiller,
+    Moins polluer, ADEME'
+  answer_extra_info: ''
+  author: Julien Briton
+  validator: Matthieu Massart
+  validation_status: Brouillon
+  added: 2021-02-17
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 228
+  - 245
 - id: 923
-  text: Quel pourcentage de poissons sont pêchés à la limite ou au-delà de leur capacité
-    de régénération ?
+  text: Quelle proportion des poissons sont pêchés à la limite ou au-delà de leur
+    capacité de régénération ?
   hint: ''
   type: QCM
   category: 2
@@ -28556,6 +28650,192 @@
   tags:
   - 5
   - 21
+- id: 924
+  text: Quelle proportion de fruits et légumes que nous consommons est importée ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 3
+  answer_option_a: 1 sur 2
+  answer_option_b: 1 sur 3
+  answer_option_c: 1 sur 4
+  answer_option_d: 1 sur 5
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: 'L’hyper-sophistication des chaînes d’approvisionnement, la
+    faible autonomie alimentaire, la dépendance aux flux de produits et de main d’œuvre
+    rendent notre système alimentaire particulièrement vulnérable.
+
+    C’est quand tout va bien qu’il faut relocaliser et soutenir nos productions locales,
+    afin qu’elles soient opérationnelles quand tout va mal… en plus de cela, ce qui
+    est bon pour la résilience territoriale, est également très bon pour le climat
+    !'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Julien Briton
+  validator: Matthieu Massart
+  validation_status: Brouillon
+  added: 2021-02-17
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 5
+- id: 925
+  text: La moitié de la production céréalière Française est exportée. Dans la moitié
+    qui reste pour le marché français, quelle proportion est destinée à l’alimentation
+    animale ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 3
+  answer_option_a: 20%
+  answer_option_b: 40%
+  answer_option_c: 60%
+  answer_option_d: 80%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: '60% de la production céréalière Française conservée sur le
+    territoire est utilisée pour l’alimentation animale.
+
+    Les animaux d’élevage valorisent certains sous-produits agricoles, comme les tourteaux
+    d’oléagineux, le son des céréales ou la pulpe de betteraves. Ils restituent cependant
+    bien moins de calories (et de protéines, dans la plupart des cas) à l’homme sous
+    forme de viande, de laitages ou d''œufs, que ce qui pourrait être directement
+    utilisé pour nous nourrir dans les céréales allouées à leur alimentation.. En
+    cas de contraintes sur la production végétale globale, la compétition entre alimentation
+    humaine et alimentation animale se trouverait accentuée.
+
+    (Source Les Greniers d’Abondance)'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Julien Briton
+  validator: Matthieu Massart
+  validation_status: Brouillon
+  added: 2021-02-17
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 5
+  - 238
+- id: 926
+  text: Pour subvenir à la consommation annuelle moyenne en œufs et produits laitiers
+    d’un Français, quelle surface est déforestée ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 30 m²
+  answer_option_b: 60 m²
+  answer_option_c: 100 m²
+  answer_option_d: 350 m²
+  answer_correct: ''
+  has_ordered_answers: true
+  answer_explanation: 'Les œufs et les produits laitiers sont tous les deux responsables
+    de 30 m², soit un total de 60 m². L’empreinte forêt d’un Français est de 352 m²,
+    parmi lesquels on retrouve 97 m² rien que pour l’élevage industriel. L’alimentation
+    est particulièrement impactante sur la déforestation, puisqu’on estime qu’un végétarien
+    sobre et responsable a une empreinte forêt de 44 m² (contre 352 m² en moyenne
+    pour une Français).
+
+    Enfin, la déforestation représente environ 10% des émissions de CO2 à l’échelle
+    mondiale.'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Julien Briton
+  validator: Matthieu Massart
+  validation_status: Brouillon
+  added: 2021-02-17
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 5
+  - 239
+- id: 928
+  text: En France, la grande distribution représente quel pourcentage des dépenses
+    de produits alimentaires.
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 35%
+  answer_option_b: 55%
+  answer_option_c: 75%
+  answer_option_d: 95%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'En France, la grande distribution représente les trois quarts
+    des dépenses de produits alimentaires. Les circuits courts, eux, ne représentent
+    que 6 à 7%.
+
+    Une crise énergétique soudaine aurait des impacts immédiats majeurs sur le système
+    alimentaire. L’approvisionnement de la population repose très majoritairement
+    sur les poids lourds, la grande distribution, les véhicules utilitaires de livraison
+    et la voiture individuelle. Le système de production et de distribution fonctionne
+    en flux tendu et ne dispose par conséquent que de très peu de stocks. Une perturbation
+    des transports routiers peut rapidement compromettre localement ou plus largement
+    la sécurité alimentaire.'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Julien Briton
+  validator: Matthieu Massart
+  validation_status: Brouillon
+  added: 2021-02-18
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 1
+  - 5
+  - 240
+  - 241
+- id: 929
+  text: A l’échelle mondiale, quelle partie des surfaces agricoles est occupée par
+    l'élevage ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 1
+  answer_option_a: 17%
+  answer_option_b: 37%
+  answer_option_c: 57%
+  answer_option_d: 77%
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: L’élevage met une pression forte sur l’environnement et est
+    ainsi à l’origine de près de 90 % des émissions de gaz à effet de serre de l’agriculture.
+    De plus, son intensification récente pose de nombreux problèmes de pollution des
+    milieux aquatiques par les nitrates et les phosphates, de souffrance animale et
+    humaine, et de sécurité sanitaire
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Julien Briton
+  validator: Matthieu Massart
+  validation_status: Brouillon
+  added: 2021-02-18
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 17
+  - 242
 - id: 930
   text: Parmi ces quatre propositions, laquelle ne représente PAS un enjeu majeur
     direct vis-à-vis de la santé humaine ?
@@ -28584,3 +28864,401 @@
   updated: 2021-02-19
   tags:
   - 243
+- id: 931
+  text: Quelle proportion des poissons consommés provient de l’aquaculture ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 10%
+  answer_option_b: 30%
+  answer_option_c: 50%
+  answer_option_d: 50%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Julien Briton
+  validator: Matthieu Massart
+  validation_status: Brouillon
+  added: 2021-02-18
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 223
+  - 244
+- id: 932
+  text: Au niveau mondial, quel pourcentage de la production de céréales le maïs,
+    le blé et le riz représentent-ils ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 30%
+  answer_option_b: 50%
+  answer_option_c: 70%
+  answer_option_d: 90%
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Julien Briton
+  validator: Matthieu Massart
+  validation_status: Brouillon
+  added: 2021-02-18
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 5
+  - 238
+- id: 933
+  text: En quelle année l'accord de Paris a-t-il été signé ?
+  hint: L'accord a été signé à Paris
+  type: QCM
+  category: 1
+  difficulty: 2
+  answer_option_a: En 2000 à Paris
+  answer_option_b: En 2002 en Afrique du Sud
+  answer_option_c: En 2015 à Paris
+  answer_option_d: En 1992 à Rio
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: https://unfccc.int/fr/processus-et-reunions/l-accord-de-paris/l-accord-de-paris
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: FJG
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-19
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 38
+- id: 934
+  text: De combien la température moyenne sur Terre s'est-elle réchauffée depuis l'ère
+    préindustrielle ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 1
+  answer_option_a: +1°C
+  answer_option_b: +1.2°C
+  answer_option_c: +1.5°C
+  answer_option_d: +2°C
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: ca s'est réchauffé de 1°C en moyenne
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: JBD
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-19
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 51
+  - 98
+- id: 935
+  text: Quelle est la part de la population mondiale qui a voyagé en avion en 2018
+    ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 3
+  answer_option_a: 74%
+  answer_option_b: 25%
+  answer_option_c: 1%
+  answer_option_d: 11%
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: L'aviation reste un mode de transport très inégalitaire bien
+    que "démocratisé" depuis les 50 dernières décennies. Et il représente aujourd'hui
+    entre 3% et 6% des émissions de GES selon que l'on compte que le CO2 seul ou de
+    l'impact du forçage radiatif global.
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: FJG
+  validator: ''
+  validation_status: A valider
+  added: 2021-02-19
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 31
+  - 33
+  - 34
+- id: 1000
+  text: At global scale, what is the portion of electronic waste collected to be treated?
+  hint: it is really not much!
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 20%
+  answer_option_b: 40%
+  answer_option_c: 60%
+  answer_option_d: 80%
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: 'At global scale, less than 20% of electronic waste is collected
+    to be recycled (17% according to http://ewastemonitor.info/). But unlike what
+    is being said, collecting does not mean recycling: in France, 1/4 directly goes
+    to incineration. And among what goes indeed into the recycling factory, all is
+    not fully recycled: less than 30% of a smartphone is recycled, the rest is incinerated.
+    From what is not collected is exported to illegal circuits, despite most of countries
+    have signed Bâle convention which does not allow exporting toxic wastes including
+    electronic wastes.'
+  answer_accessible_url: https://www.greenit.fr/2017/12/26/20-dechets-electroniques-recycles/
+  answer_scientific_url: https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM%202017/Global-E-waste%20Monitor%202017%20-%20Chapter%206.pdf
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/832.png
+  answer_image_explanation: 'Electronic wastes
+
+
+    Source : Digital collage, fresquedunumerique.org'
+  answer_extra_info: ''
+  author: Aurélien Déragne
+  validator: Matthieu Massart
+  validation_status: A valider
+  added: 2021-02-19
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 30
+  - 228
+  - 229
+- id: 1001
+  text: What portion of Internet traffic does the video represent?
+  hint: It is more that what we think...
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: 20%
+  answer_option_b: 40%
+  answer_option_c: 60%
+  answer_option_d: 80%
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: '80% of worldwide data flows which are going through Internet
+    are video-related: video on demand (34%), pornography (27%), Social network video
+    (18%)...'
+  answer_accessible_url: https://theshiftproject.org/wp-content/uploads/2019/07/R%C3%A9sum%C3%A9-aux-d%C3%A9cideurs_FR_Linsoutenable-usage-de-la-vid%C3%A9o-en-ligne.pdf
+  answer_scientific_url: https://theshiftproject.org/wp-content/uploads/2019/07/2019-01.pdf
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/831.png
+  answer_image_explanation: "Video online represents 80% of the internet traffic,\
+    \ following is the distribution \n- 20% - vod (Netflix, Amazon Prime)\n- 20% -\
+    \ other video (TV, videoconf)\n- 16% - pornography\n \nSource : Digital collage,\
+    \ fresquedunumerique.org"
+  answer_extra_info: ''
+  author: Aurélien Déragne
+  validator: Matthieu Massart
+  validation_status: A valider
+  added: 2021-02-19
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 30
+- id: 1002
+  text: 'At global scale, including full life cycle, which portion the digital represents
+    in our green house gas (ref : 2018)'
+  hint: It is more than civil aviation
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: negligeable, it is dematerialized
+  answer_option_b: 2%
+  answer_option_c: 4%
+  answer_option_d: 10%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'If we take into account Green house Emission (GHE) due to extraction
+    and usage (mainly electricity), the digital sector represents close to 4% of our
+    GHE, hence more than civil aviation.
+
+    To note : the portion linked to waste is not documented (represents probably a
+    small portion unfortunately).'
+  answer_accessible_url: https://theshiftproject.org/wp-content/uploads/2018/11/Rapport-final-v8-WEB.pdf
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/830.png
+  answer_image_explanation: "Emissions of GHG distribution\n- 40% building equipment\n\
+    - 26% usage of digital equipment \n- 16% network usage\n\nSource : Digital collage,\
+    \  fresquedunumerique.org"
+  answer_extra_info: ''
+  author: Aurélien Déragne
+  validator: Matthieu Massart
+  validation_status: A valider
+  added: 2021-02-19
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 30
+  - 100
+- id: 1003
+  text: 'The digital objects are: end user devices, infrastructure devices, and data
+    centers. Which family objects consume the more electricity ?'
+  hint: It is not the one we thought about first time
+  type: QCM
+  category: 2
+  difficulty: 2
+  answer_option_a: The 3 are at the same level
+  answer_option_b: End user devices
+  answer_option_c: Network infrastructures
+  answer_option_d: Data centers
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: 'Our end user devices (computers, smart watches, smartphones...)
+    are so numerous that in 2019 they consummed about 2 times more than data centers
+    (which are big machines !) : 30% of primary energy primaire mobilized by digital
+    sector is used for our end user equipments usage, and only 15% for data centers.'
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/829.png
+  answer_image_explanation: "Electricity consumed for usage (greenit.fr) distribution:\
+    \ \n30% - Digital equipment usage \n20% - Network usage \n15% - Data center usage\n\
+    \nSource : Digital collage, fresquedunumerique.org"
+  answer_extra_info: ''
+  author: Aurélien Déragne
+  validator: Matthieu Massart
+  validation_status: A valider
+  added: 2021-02-19
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 30
+  - 39
+- id: 1004
+  text: What is the  carbon footprint of the full cycle for an Iphone 11 (building,
+    usage;end of lyfe) ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 3
+  answer_option_a: 7 kg CO2, about 50 km in Clio car using gas
+  answer_option_b: 70 kg CO2, about 500 km in Clio car using gas
+  answer_option_c: 700 kg CO2, about 5,000 km in Clio car using gas
+  answer_option_d: 7,000 kg CO2, about 50,000 km in Clio car using gas
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: During full cycle, an iPhone 11 will emit about 72 kg CO2eq,
+    equivalent of 500 km done using a car. 80% of those emission are linked to the
+    productionof the phone and 17% to its usage. In 2019, it is about 14 billions
+    of smartphones that were produced.
+  answer_accessible_url: https://www.zdnet.fr/actualites/gaz-a-effet-de-serre-les-smartphones-polluent-surtout-pendant-leur-fabrication-39846224.htm
+  answer_scientific_url: https://www.apple.com/euro/environment/pdf/a/generic/products/iphone/iPhone_11_PER_sept2019.pdf
+  answer_reading_recommendation: ''
+  answer_image_url: https://pbs.twimg.com/media/DbDcakTWAAASzbV.jpg
+  answer_image_explanation: "120g of smartphone contains \n70 precious and rare metals\
+    \ (or, silver, aluminium, cobalt...) and requires 70 kg of substance (difficult\
+    \ to extract and requiring a lot of water)"
+  answer_extra_info: 'answers modified to allow to memorize the values about carbon
+    footprint of a smartphone: ~100 kg CO2eq
+
+
+    https://twitter.com/laydgeur/status/1234583035296845825'
+  author: laydgeur
+  validator: Matthieu Massart
+  validation_status: A valider
+  added: 2020-03-02
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 30
+  - 55
+  - 72
+- id: 1005
+  text: What is the portion of digital from the world electric consumption ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 1
+  answer_option_a: 1%
+  answer_option_b: 3%
+  answer_option_c: 8%
+  answer_option_d: 20%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: The new technology sector represented between 6 and 10% of global
+    consumption of electricity in 2018. And the trend is sincerely increasing, about
+    5 to 7% increase every year.
+  answer_accessible_url: https://lejournal.cnrs.fr/articles/numerique-le-grand-gachis-energetique
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: https://i0.wp.com/verdamano.com/wp-content/uploads/2020/04/La-pollution-numerique-en-chiffres_1.png
+  answer_image_explanation: 'Data coming from The Shift project 2017.
+
+    It represents 4% of the portion of worldwide Co2 emissions (more than civil Aviation),
+    in 2025 it will double. Same for the wordwide electric consumption (from 10 to
+    20%).
+
+    Digital footprint will increase about 9% per year.'
+  answer_extra_info: ''
+  author: Guillaume Boudry
+  validator: Matthieu Massart
+  validation_status: A valider
+  added: 2021-02-19
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 30
+- id: 1006
+  text: If Internet were a country, at which position will it arrive when talking
+    about electricity consumption ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 3
+  answer_option_a: 1st
+  answer_option_b: 3rd
+  answer_option_c: 5th
+  answer_option_d: 10th
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: It will be 3rd most bigger consumer of electricity in the world,
+    behind China and USA, with about 1,500 terawatthours (TWh) per year, according
+    to experts. But this needs to put in perspective with number of users, which is
+    about billons.
+  answer_accessible_url: https://www.lefigaro.fr/secteur/high-tech/internet-un-ogre-energetique-a-l-appetit-insatiable-en-electricite-20191120
+  answer_scientific_url: https://www.nature.com/articles/d41586-018-06610-y
+  answer_reading_recommendation: ''
+  answer_image_url: https://media.nature.com/w1172/magazine-assets/d41586-018-06610-y/d41586-018-06610-y_16109898.jpg
+  answer_image_explanation: 'Data center of Facebook at Luleå, in Sweden. Credit :
+    Jonathan Nackstrand/AFP/Getty'
+  answer_extra_info: 'mail pollution : https://www.leparisien.fr/resizer/r6wWjvmpV910kaFMATZjfE2L_4Q=/800x512/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/JW6W6ZUMZPZXPL6ZFWWDD5ISMM.jpg
+
+
+    https://mrmondialisation.org/le-cout-ecologique-dinternet-est-astronomique/'
+  author: Matthieu Massart
+  validator: Raphael Odini
+  validation_status: A valider
+  added: 2020-03-10
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags:
+  - 2
+  - 30
+  - 39

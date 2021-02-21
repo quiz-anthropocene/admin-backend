@@ -1,27 +1,27 @@
-question_count: 881
+question_count: 901
 question_per_validation_status_count:
 - validation_status: Validée
   total: 390
 - validation_status: Brouillon
-  total: 246
+  total: 258
 - validation_status: Écartée
   total: 210
+- validation_status: A valider
+  total: 25
 - validation_status: Écartée temporairement
   total: 18
-- validation_status: A valider
-  total: 17
 quiz_count: 29
 quiz_per_publish_count:
 - publish: true
   total: 25
 - publish: false
   total: 4
-question_answer_count: 114375
-quiz_answer_count: 8004
-question_answer_count_last_30_days: 16176
-quiz_answer_count_last_30_days: 1124
+question_answer_count: 114488
+quiz_answer_count: 8018
+question_answer_count_last_30_days: 16289
+quiz_answer_count_last_30_days: 1138
 category_count: 8
 tag_count: 218
 question_feedback_count: 2052
-quiz_feedback_count: 404
-contribution_count: 406
+quiz_feedback_count: 405
+contribution_count: 411
