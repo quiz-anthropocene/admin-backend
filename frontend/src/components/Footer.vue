@@ -34,17 +34,24 @@
         </div>
         <div class="col-sm" v-if="currentRoute === 'quiz-detail'">
           <router-link :to="{ name: 'quiz-list' }">
-            🕹&nbsp;{{ $t('messages.allQuiz') }}
+            🕹&nbsp;{{ $t('messages.allQuizs') }}
           </router-link>
           <br />
         </div>
       </div>
 
-      <div class="row" v-if="currentRoute === 'home'">
+      <div class="row">
         <div class="col-sm">
           <a class="no-after" v-bind:href="configuration.application_linkedin_url" target="_blank"><img height="30px" src="/openmoji_linkedin_E046.svg" alt="Linkedin" title="Linkedin" /></a>
           <a class="no-after" v-bind:href="configuration.application_twitter_url" target="_blank"><img height="30px" src="/openmoji_twitter_E040.svg" alt="Twitter" title="Twitter" /></a>
           <a class="no-after" v-bind:href="configuration.application_facebook_url" target="_blank"><img height="30px" src="/openmoji_facebook_E042.svg" alt="Facebook" title="Facebook" /></a>
+        </div>
+        <div class="col-sm">
+          <select v-model="$i18n.locale">
+            <option v-for="(lang, i) in languages" :key="`Lang${i}`" :value="lang.key">
+              {{ lang.value }}
+            </option>
+          </select>
         </div>
       </div>
 
@@ -69,6 +76,15 @@ export default {
     HomeLink,
   },
   props: {
+  },
+
+  data() {
+    return {
+      languages: [
+        { key: 'fr', value: '🇫🇷 Français' },
+        { key: 'en', value: '🌐 English' },
+      ],
+    };
   },
 
   computed: {

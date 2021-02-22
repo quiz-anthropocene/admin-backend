@@ -7,7 +7,7 @@
 
       <div class="card-body">
         <h2 class="card-title">
-          Quiz : {{ quiz.name }}
+          Quiz{{ $t('words.semiColon') }} {{ quiz.name }}
           <span v-if="quiz.has_audio" class="label small" style="vertical-align:top">🔉{{ $t('messages.audioComments') }}</span>
         </h2>
 
@@ -20,7 +20,7 @@
             <div class="col" title="Nombre de questions">
               <span class="label label-hidden"><strong>{{ quiz.questions.length }}</strong></span>Questions
             </div>
-            <div class="col" v-title="$t('messages.difficulty')">
+            <div class="col" v-bind:title="$t('messages.difficulty')">
               🏆&nbsp;{{ $t('messages.difficulty') }}<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }} / 4</strong></span>
             </div>
             <!-- <div class="col" title="Auteur du quiz">
@@ -38,7 +38,7 @@
 
           <div v-if="previousQuiz" class="row no-gutters">
             <div class="col">
-              <span>Ce quiz est la suite de&nbsp;👉&nbsp;</span>
+              <span>{{ $t('messages.previousQuiz') }}&nbsp;👉&nbsp;</span>
               <strong><router-link class="no-decoration" :to="{ name: 'quiz-detail', params: { quizId: previousQuiz.id } }">{{ previousQuiz.name }}</router-link></strong>
             </div>
           </div>
@@ -47,7 +47,7 @@
     </div>
 
     <div v-if="quiz && quizStep === 0" class="quiz-start">
-      <button class="btn btn-lg btn-primary margin-10" @click="incrementStep()">▶️&nbsp;{{ $t('messages.quizStart') }}</button>
+      <button class="btn btn-lg btn-primary margin-10" @click="incrementStep()">▶️&nbsp;{{ $t('messages.startQuiz') }}</button>
     </div>
 
     <!-- Quiz en cours -->
@@ -66,8 +66,8 @@
         <h2>{{ $t('messages.yourScore') }} : <strong>{{ finalScore }} / {{ quiz.questions.length }}</strong></h2>
 
         <p>
-          📈&nbsp;Le quiz a été complété <strong>{{ quizStats.answer_count }}</strong> fois.<br />
-          Vous avez fait mieux que <strong>{{ finalScoreBetterThanPercent }}%</strong> des joueurs qui vous ont précédés !
+          📈&nbsp;{{ $t('messages.quizCompletedStats') }} <strong>{{ quizStats.answer_count }}</strong> {{ $t('words.times') }}.<br />
+          {{ $t('messages.quizCompletedBetter1') }} <strong>{{ finalScoreBetterThanPercent }}%</strong> {{ $t('messages.quizCompletedBetter2') }}
         </p>
 
         <div v-if="quiz.conclusion" v-html="quiz.conclusion" title="Conclusion du quiz"></div>

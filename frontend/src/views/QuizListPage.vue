@@ -4,7 +4,7 @@
     <QuestionFilter objectType="quiz" :counter="quizzesDisplayed.length" />
 
     <div v-if="quizzesDisplayed && quizzesDisplayed.length === 0">
-      Pas de quiz :(
+      {{ $t('messages.noQuiz') }}
     </div>
 
     <div v-if="quizzesDisplayed && quizzesDisplayed.length > 0" id="quiz-list" class="row">
@@ -13,7 +13,7 @@
       </div>
         <!-- <div class="col-sm">
           <router-link class="no-decoration" :to="{ name: 'quiz-detail', params: { quizId: quiz.id, skipIntro: true } }">
-            <button class="btn btn-outline-primary">⏩&nbsp;Commencer le quiz !</button>
+            <button class="btn btn-outline-primary">⏩&nbsp;{{ $t('messages.startQuiz') }}</button>
           </router-link>
         </div> -->
     </div>
