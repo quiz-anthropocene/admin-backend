@@ -4,8 +4,11 @@ const PrerenderSpaPlugin = require('prerender-spa-plugin');
 const path = require('path');
 
 module.exports = {
-  lintOnSave: true, // 'default' makes compilation fail in case of errors
+  // 'default' makes compilation fail in case of errors
+  lintOnSave: true,
+
   indexPath: 'index.vue.html',
+
   configureWebpack: (config) => {
     if (process.env.NODE_ENV !== 'production') return;
     return {
@@ -33,4 +36,13 @@ module.exports = {
       ],
     };
   },
+
+  pluginOptions: {
+    i18n: {
+      locale: 'fr',
+      fallbackLocale: 'fr',
+      localeDir: 'locales',
+      enableInSFC: false
+    }
+  }
 };

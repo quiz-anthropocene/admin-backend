@@ -4,7 +4,7 @@
       <div class="row">
         <!-- <div class="col-sm">
           <router-link :to="{ name: 'question-list' }">
-            ❓&nbsp;Toutes les questions
+            ❓&nbsp;{{ $t('footer.allQuestions') }}
           </router-link>
           <br />
         </div> -->
@@ -15,26 +15,26 @@
         <!-- Center link -->
         <div class="col-sm" v-if="currentRoute !== 'about'">
           <router-link :to="{ name: 'about' }">
-            ℹ️&nbsp;À propos de cette application
+            ℹ️&nbsp;{{ $t('footer.about') }}
           </router-link>
         </div>
         <div class="col-sm" v-if="currentRoute === 'about'">
           <!-- <router-link :to="{ name: 'glossary' }">
-            📓&nbsp;Glossaire
+            📓&nbsp;{{ $t('footer.glossary') }}
           </router-link> -->
           <router-link :to="{ name: 'ressources' }">
-            📚&nbsp;Ressources
+            📚&nbsp;{{ $t('footer.resources') }}
           </router-link>
         </div>
         <!-- Right link -->
         <div class="col-sm" v-if="currentRoute !== 'quiz-detail'">
           <router-link :to="{ name: 'contribute' }">
-            ✍️&nbsp;Contribuer
+            ✍️&nbsp;{{ $t('footer.contribute') }}
           </router-link>
         </div>
         <div class="col-sm" v-if="currentRoute === 'quiz-detail'">
           <router-link :to="{ name: 'quiz-list' }">
-            🕹&nbsp;Tous les quiz
+            🕹&nbsp;{{ $t('messages.allQuiz') }}
           </router-link>
           <br />
         </div>

@@ -1,0 +1,45 @@
+{
+    "header": {
+        "title": "Anthropocene Quiz",
+        "subtitle": "Questions/answers to better grasp the limits of our planet 🌍"
+    },
+    "home": {
+        "item1Title": "Science-backed and sourced questions",
+        "item1Subtitle": "(we do our best :)",
+        "item2Title": "Explore and filter with the <span class='text-secondary'>categories</span> & <span class='color-tag'>tags</span>",
+        "item3Title": "Attentive to feedback",
+        "item3Subtitle": "and open to "
+    },
+    "footer": {
+        "home": "Home",
+        "about": "About this application",
+        "resources": "Resources",
+        "contribute": "Contribute",
+        "glossary": "Glossaire"
+    },
+    "messages": {
+        "allQuestions": "Toutes les questions",
+        "newQuestions": "New questions",
+        "randomQuestion": "A random question",
+        "allQuizs": "All quizs",
+        "newQuizs": "New quizs",
+        "randomQuiz": "A random quiz",
+        "startQuiz": "Start the quiz!",
+        "endQuiz": "You're done! View your score",
+        "nextQuiz": "Next quiz",
+        "similarQuiz": "Similar quiz",
+        "yourScore": "Your score",
+        "nextQuestion": "Next question",
+        "filters": "Filters",
+        "categories": "Categories",
+        "tags": "Tags",
+        "authors": "Authors",
+        "difficulty": "Difficulty",
+        "difficulties": "Difficulties",
+        "updateFilters": "Update the filters!",
+        "reset": "Reset",
+        "cancel": "Cancel",
+        "audioComments": "Audio comments",
+        "discover": "Discover"
+    }
+}

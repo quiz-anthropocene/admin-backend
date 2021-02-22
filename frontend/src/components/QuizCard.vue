@@ -8,7 +8,7 @@
       </h2>
       <p class="card-text text-center">
         <strong>{{ quiz.questions.length }}</strong> question<span v-if="quiz.questions.length > 1">s</span>
-        <button class="btn btn-outline-primary btn-sm margin-0 margin-left-20">Découvrir</button>
+        <button class="btn btn-outline-primary btn-sm margin-0 margin-left-20">{{ $t('messages.discover') }}</button>
       </p>
     </div>
   </router-link>

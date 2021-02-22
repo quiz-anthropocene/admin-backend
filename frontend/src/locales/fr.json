@@ -1,0 +1,51 @@
+{
+    "header": {
+        "title": "Quiz de l'Anthropocène",
+        "subtitle": "Des questions/réponses pour mieux appréhender les limites de notre planète 🌍"
+    },
+    "home": {
+        "item1Title": "Des questions objectives et sourcées",
+        "item1Subtitle": "(on fait de notre mieux :)",
+        "item2Title": "Explorer et filtrer grâce aux <span class='text-secondary'>catégories</span> & <span class='color-tag'>tags</span>",
+        "item3Title": "À l'écoute de vos retours",
+        "item3Subtitle": "et ouvert aux "
+    },
+    "newsletter": {
+        "success": "Votre inscription à la newsletter a été enregistrée, merci !"
+    },
+    "footer": {
+        "home": "Menu principal",
+        "about": "À propos de cette application",
+        "resources": "Ressources",
+        "contribute": "Contribuer",
+        "glossary": "Glossaire"
+    },
+    "messages": {
+        "allQuestions": "Toutes les questions",
+        "newQuestions": "Nouvelles questions",
+        "randomQuestion": "Une question au hasard",
+        "allQuizs": "Tous les quiz",
+        "newQuizs": "Nouveaux quiz",
+        "randomQuiz": "Un quiz au hasard",
+        "startQuiz": "Commencer le quiz !",
+        "endQuiz": "C'est fini ! Voir vos résultats",
+        "nextQuiz": "Quiz suivant",
+        "similarQuiz": "Quiz similaire",
+        "yourScore": "Votre résultat",
+        "nextQuestion": "Question suivante",
+        "filters": "Filtres",
+        "categories": "Catégories",
+        "tags": "Tags",
+        "authors": "Auteurs",
+        "difficulty": "Difficulté",
+        "difficulties": "Difficultés",
+        "updateFilters": "Mettre à jour les filtres !",
+        "reset": "Réinitialiser",
+        "cancel": "Annuler",
+        "audioComments": "Commentaires audio",
+        "discover": "Découvrir"
+    },
+    "categories": {
+        
+    }
+}
