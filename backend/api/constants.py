@@ -71,6 +71,13 @@ CONTRIBUTION_TYPE_LIST = [
     "erreur application",
 ]
 
+LANGUAGE_FRENCH = "Français"
+LANGUAGE_ENGLISH = "English"
+LANGUAGE_CHOICE_LIST = [
+    LANGUAGE_FRENCH,
+    LANGUAGE_ENGLISH,
+]
+
 NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES = [
     (0, "tout"),
     (1, "1 à 200"),

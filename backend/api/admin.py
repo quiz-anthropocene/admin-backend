@@ -262,6 +262,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         "difficulty",
         "author",
         "validation_status",
+        "language",
         # "quizzes",
         "tags",
     )
@@ -492,6 +493,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "spotlight",
         "has_audio",
         "author",
+        "language",
         "tags",
     )
     ordering = ("-id",)
@@ -521,7 +523,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
     fieldsets_with_inlines = [
         (
             "Infos de base",
-            {"fields": ("name", "author", "introduction", "conclusion",)},
+            {"fields": ("name", "language", "author", "introduction", "conclusion",)},
         ),
         QuizQuestionInline,
         (
