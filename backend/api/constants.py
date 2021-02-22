@@ -53,11 +53,12 @@ QUESTION_ANSWER_CHOICE_LIST = [
     "abcd",
 ]
 
-QUIZ_RELATIONSHIP_LIST = [
+QUIZ_RELATIONSHIP_CHOICE_LIST = [
     "suivant",
     # "précédent",
     "jumeau",
     "similaire",
+    "traduction",
 ]
 
 CONTRIBUTION_TYPE_LIST = [

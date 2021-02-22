@@ -791,7 +791,8 @@ class QuizRelationship(models.Model):
     status = models.CharField(
         max_length=50,
         choices=zip(
-            constants.QUIZ_RELATIONSHIP_LIST, constants.QUIZ_RELATIONSHIP_LIST,
+            constants.QUIZ_RELATIONSHIP_CHOICE_LIST,
+            constants.QUIZ_RELATIONSHIP_CHOICE_LIST,
         ),
         help_text="Le type de relation entre les deux quizs",
     )
@@ -811,9 +812,10 @@ class QuizRelationship(models.Model):
         Rules on QuizRelationship
         - cannot have the same from_quiz & to_quiz
         - status must be one of the choices
+        - cannot have 2 relationships between 2 quizs
         - cannot have reverse ?
         """
-        if self.status not in constants.QUIZ_RELATIONSHIP_LIST:
+        if self.status not in constants.QUIZ_RELATIONSHIP_CHOICE_LIST:
             raise ValidationError({"status": "doit être une valeur de la liste"})
         if self.from_quiz_id and self.to_quiz_id:
             if self.from_quiz_id == self.to_quiz_id:
