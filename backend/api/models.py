@@ -432,6 +432,7 @@ class Question(models.Model):
             question_choice_fields = [
                 ("type", "QUESTION_TYPE_CHOICE_LIST"),
                 ("difficulty", "QUESTION_DIFFICULTY_CHOICE_LIST"),
+                ("language", "LANGUAGE_CHOICE_LIST"),
                 ("answer_correct", "QUESTION_ANSWER_CHOICE_LIST"),
                 # ("validation_status", "QUESTION_VALIDATION_STATUS_LIST"),
             ]

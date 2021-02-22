@@ -434,6 +434,8 @@ class Command(BaseCommand):
             notion_question_dict["type"] = ""
         if type(notion_question_dict["difficulty"]) == str:
             notion_question_dict["difficulty"] = int(notion_question_dict["difficulty"])
+        if notion_question_dict["language"] is None:
+            notion_question_dict["language"] = ""
         if notion_question_dict["answer_correct"] is None:
             notion_question_dict["answer_correct"] = ""
         if ("added" not in notion_question_dict) or (
