@@ -239,6 +239,13 @@ class Question(models.Model):
         blank=False,
         help_text="Le niveau de difficulté de la question",
     )
+    language = models.CharField(
+        max_length=50,
+        choices=zip(constants.LANGUAGE_CHOICE_LIST, constants.LANGUAGE_CHOICE_LIST,),
+        default=constants.LANGUAGE_FRENCH,
+        blank=False,
+        help_text="La langue de la question",
+    )
     answer_option_a = models.CharField(
         max_length=500, blank=True, help_text="La réponse a"
     )
@@ -521,14 +528,21 @@ class Quiz(models.Model):
         related_name="quizzes",
         help_text="Les questions du quiz",
     )
-    difficulty_average = models.FloatField(
-        default=0, help_text="La difficulté moyenne des questions"  # readonly
-    )
     tags = models.ManyToManyField(
         Tag,
         blank=True,
         related_name="quizzes",
         help_text="Un ou plusieurs tags rattaché au quiz",
+    )
+    difficulty_average = models.FloatField(
+        default=0, help_text="La difficulté moyenne des questions"  # readonly
+    )
+    language = models.CharField(
+        max_length=50,
+        choices=zip(constants.LANGUAGE_CHOICE_LIST, constants.LANGUAGE_CHOICE_LIST,),
+        default=constants.LANGUAGE_FRENCH,
+        blank=False,
+        help_text="La langue du quiz",
     )
     author = models.CharField(max_length=50, blank=True, help_text="L'auteur du quiz")
     image_background_url = models.URLField(
