@@ -4,6 +4,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 1% de la nourriture produite
   answer_option_b: 5% de la nourriture produite
   answer_option_c: 10% de la nourriture produite
@@ -39,6 +40,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '20'
   answer_option_b: '100'
   answer_option_c: '400'
@@ -72,6 +74,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: Le fait que la population d'une espèce se met à augmenter à nouveau
     après avoir diminué faute de ressources
   answer_option_b: La réflexion de la lumière sur la terre
@@ -111,6 +114,7 @@
   type: QCM
   category: 4
   difficulty: 3
+  language: Français
   answer_option_a: -10%
   answer_option_b: -30%
   answer_option_c: -50%
@@ -147,6 +151,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Dès maintenant
   answer_option_b: A partir de +1°C de hausse de la température de l'air
   answer_option_c: A partir de +2°C de hausse de la température de l'air
@@ -181,6 +186,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 13%
   answer_option_b: 53%
   answer_option_c: 73%
@@ -212,6 +218,7 @@
   type: QCM
   category: 4
   difficulty: 2
+  language: Français
   answer_option_a: Une forte augmentation pour 1/3 d'entre eux, une diminuation notable
     pour les autres
   answer_option_b: Une relative stabilité
@@ -247,6 +254,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 100 ans
   answer_option_b: 1000 ans
   answer_option_c: 10 000 ans
@@ -283,6 +291,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 10 ans
   answer_option_b: 50 ans
   answer_option_c: 100 ans
@@ -315,6 +324,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: C’est des sornettes, ça fait 40 ans qu’on dit ça !
   answer_option_b: Ben oui, c'est la vérité
   answer_option_c: 'La question est mal posée : les réserves ne peuvent pas s’exprimer
@@ -343,6 +353,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Agriculture
   answer_option_b: Résidentiel + Tertiaire
   answer_option_c: Industrie
@@ -374,6 +385,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: La combustion de 1 litre de pétrole
   answer_option_b: 'La combustion de 1 litre de gaz à 200 bar '
   answer_option_c: 50 m² de panneaux solaires pendant 1h
@@ -404,6 +416,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 100,000 barils, l'énergie que produiraient 1 milliard d'humains
     en un jour en travaillant manuellement
   answer_option_b: 1 million de barils, l'énergie que produiraient 10 milliards d'humains
@@ -453,6 +466,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: -50°C
   answer_option_b: -18°C
   answer_option_c: 0°C
@@ -484,6 +498,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Protoxyde d'Azote (N2O)
   answer_option_b: Dioxyde de Carbone (CO2)
   answer_option_c: Vapeur d'eau (H2O)
@@ -520,6 +535,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: +0,1°C
   answer_option_b: +0,5°C
   answer_option_c: +1°C
@@ -553,6 +569,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 350 millions de tonnes, soit 45 kg / habitant en moyenne
   answer_option_b: 3,5 milliards de tonnes, soit 450 kg/habitant
   answer_option_c: 35 milliards de tonnes, soit 4,5 tonnes / habitant
@@ -587,6 +604,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: Bananes de Martinique
   answer_option_b: Café de Colombie
   answer_option_c: Rutabaga
@@ -616,6 +634,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: Abandonner sa voiture à essence
   answer_option_b: Adopter un régime alimentaire à base de végétaux
   answer_option_c: Changer ses ampoules en ampoules basses consommation
@@ -648,6 +667,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 10%
   answer_option_b: 20%
   answer_option_c: 40%
@@ -678,6 +698,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 280 ppm
   answer_option_b: 315 ppm
   answer_option_c: 415 ppm
@@ -713,6 +734,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: 370 millions de tonnes de CO2, soit 48 kg/habitant en moyenne dans
     le monde
   answer_option_b: 3,7 milliards de tonnes de CO2, soit 480 kg/hab
@@ -754,6 +776,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: 20%
   answer_option_b: 50%
   answer_option_c: 90%
@@ -784,6 +807,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: les chlorofluorocarbures (CFC, notamment les gaz aérosols)
   answer_option_b: Le dioxyde de carbone (CO2)
   answer_option_c: Le méthane (CH4)
@@ -814,6 +838,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: 30%
   answer_option_b: 50%
   answer_option_c: 80%
@@ -856,6 +881,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: 100 ans
   answer_option_b: 1000 ans
   answer_option_c: 10 000 ans
@@ -891,6 +917,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: la déforestation
   answer_option_b: la fonte du permafrost
   answer_option_c: les réfrigérateurs
@@ -922,6 +949,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: des émissions de CO2
   answer_option_b: de l'eutrophisation (manque d'oxygène)
   answer_option_c: de la photosynthèse
@@ -957,6 +985,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Elles ont un effet nocif sur la santé. Mais sur le climat, aucun
     effet.
   answer_option_b: Elles détruisent la couche d'ozone
@@ -993,6 +1022,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: El Niño
   answer_option_b: l'albedo (la réflexion de l'énergie vers le ciel)
   answer_option_c: l'acidification de l'océan
@@ -1032,6 +1062,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Leur acidification
   answer_option_b: leur réchauffement
   answer_option_c: un ralentissement du Gulf Stream
@@ -1066,6 +1097,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: La dilatation de l'eau sous l'effet du réchauffement climatique
   answer_option_b: La fonte des calottes glaciaires
   answer_option_c: La fonte de la banquise
@@ -1101,6 +1133,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Oui, par la chaleur latente des océans
   answer_option_b: Oui, en raison du dégazage des océans
   answer_option_c: Oui, c'est l'effet albedo
@@ -1133,6 +1166,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 15%
   answer_option_b: 25%
   answer_option_c: 35%
@@ -1167,6 +1201,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: du CO2
   answer_option_b: de l'eau
   answer_option_c: du méthane
@@ -1201,6 +1236,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: l'augmentation des cancers de la peau
   answer_option_b: l'acidité de l'océan
   answer_option_c: la fréquence des événements météorologiques extrèmes
@@ -1232,6 +1268,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: l'agriculture
   answer_option_b: la construction
   answer_option_c: l'industrie
@@ -1269,6 +1306,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: Italie
   answer_option_c: Pologne
@@ -1304,6 +1342,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Moins de 1%
   answer_option_b: Entre 1% et 3%
   answer_option_c: Entre 3% et 6%
@@ -1336,6 +1375,7 @@
   type: QCM
   category: 5
   difficulty: 4
+  language: Français
   answer_option_a: Moins de 1%
   answer_option_b: Entre 1% et 3%
   answer_option_c: Entre 3% et 6%
@@ -1370,6 +1410,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: '2025'
   answer_option_b: '2050'
   answer_option_c: '2100'
@@ -1400,6 +1441,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 1 an
   answer_option_b: 10 ans
   answer_option_c: 100 ans
@@ -1435,6 +1477,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: Le 17 février
   answer_option_b: Le 5 mai
   answer_option_c: Le 27 juillet
@@ -1467,6 +1510,7 @@
   type: QCM
   category: 4
   difficulty: 2
+  language: Français
   answer_option_a: Pas d'effet observable
   answer_option_b: 30% de réduction
   answer_option_c: 60% de réduction
@@ -1501,6 +1545,7 @@
   type: QCM
   category: 3
   difficulty: 4
+  language: Français
   answer_option_a: 1000 tonnes,  soit 4 avions A380
   answer_option_b: 100 000 tonnes, soit 10 fois la Tour Eiffel
   answer_option_c: 1 million de tonnes, soit 3 fois l'Empire State Building
@@ -1542,6 +1587,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 50%
   answer_option_b: 80%
   answer_option_c: 95%
@@ -1572,6 +1618,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Elle est restée globalement stable
   answer_option_b: Elle a diminué de 10%
   answer_option_c: Elle a diminué de moitié
@@ -1606,6 +1653,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: +1°C à +3°C
   answer_option_b: +2°C à +5°C
   answer_option_c: +6°C à +10°C
@@ -1639,6 +1687,7 @@
   type: QCM
   category: 6
   difficulty: 3
+  language: Français
   answer_option_a: 20 millions
   answer_option_b: 50 millions
   answer_option_c: 100 millions
@@ -1673,6 +1722,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 100,000 hectares (superficie de Hong-Kong)
   answer_option_b: 1 million d'hectares (superficie de Chypre)
   answer_option_c: 10 millions d’hectares (superficie de la Corée du Sud)
@@ -1701,6 +1751,7 @@
   type: QCM
   category: 6
   difficulty: 4
+  language: Français
   answer_option_a: 0,5 ha (1 terrain de football)
   answer_option_b: 5 ha (7 terrains de football)
   answer_option_c: 50 ha (70 terrains de football)
@@ -1732,6 +1783,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 1 200 km² (superficie du département du Val-d'Oise)
   answer_option_b: 12 000 km² (superficie de la région Île-de-France)
   answer_option_c: 120 000 km² (superficie de la Grèce)
@@ -1762,6 +1814,7 @@
   type: QCM
   category: 3
   difficulty: 3
+  language: Français
   answer_option_a: 100 000 morts
   answer_option_b: 900 000 morts
   answer_option_c: 9 millions de morts
@@ -1789,6 +1842,7 @@
   type: QCM
   category: 3
   difficulty: 2
+  language: Français
   answer_option_a: des crises d'asthme, mais pas de mortalité avérée
   answer_option_b: 1000 morts
   answer_option_c: 5,000 morts
@@ -1819,6 +1873,7 @@
   type: QCM
   category: 3
   difficulty: 4
+  language: Français
   answer_option_a: 100 millions d'euros
   answer_option_b: 1 milliards d'euros
   answer_option_c: 10 milliards d'euros
@@ -1848,6 +1903,7 @@
   type: QCM
   category: 3
   difficulty: 4
+  language: Français
   answer_option_a: 80 000 tonnes
   answer_option_b: 800 000 tonnes
   answer_option_c: 8 millions de tonnes
@@ -1883,6 +1939,7 @@
   type: QCM
   category: 3
   difficulty: 4
+  language: Français
   answer_option_a: la Corse
   answer_option_b: 3 fois la France
   answer_option_c: le Brésil
@@ -1913,6 +1970,7 @@
   type: QCM
   category: 3
   difficulty: 4
+  language: Français
   answer_option_a: 100 millions
   answer_option_b: 1 milliard
   answer_option_c: 50 milliards
@@ -1941,6 +1999,7 @@
   type: QCM
   category: 4
   difficulty: 3
+  language: Français
   answer_option_a: 15%
   answer_option_b: 30%
   answer_option_c: 60%
@@ -1971,6 +2030,7 @@
   type: QCM
   category: 4
   difficulty: 4
+  language: Français
   answer_option_a: Les amphibiens
   answer_option_b: Les massifs de coraux
   answer_option_c: Les oiseaux
@@ -2002,6 +2062,7 @@
   type: QCM
   category: 4
   difficulty: 2
+  language: Français
   answer_option_a: Une vitesse comparable
   answer_option_b: 10 fois plus vite
   answer_option_c: 100 fois plus vite
@@ -2033,6 +2094,7 @@
   type: QCM
   category: 6
   difficulty: 3
+  language: Français
   answer_option_a: 10 millions
   answer_option_b: 50 millions
   answer_option_c: 89 millions
@@ -2065,6 +2127,7 @@
   type: QCM
   category: 6
   difficulty: 3
+  language: Français
   answer_option_a: 2 pour 1
   answer_option_b: 1 pour 1
   answer_option_c: 1 pour 2
@@ -2096,6 +2159,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Multipliée par 40
   answer_option_b: Multipliée par 100
   answer_option_c: Multipliée par 500
@@ -2130,6 +2194,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: Déjà passé
   answer_option_b: '2030'
   answer_option_c: '2100'
@@ -2161,6 +2226,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 1%
   answer_option_b: 10%
   answer_option_c: 30%
@@ -2198,6 +2264,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: Il est resté globalement stable
   answer_option_b: Il a décliné d'un quart
   answer_option_c: Il a décliné de moitié
@@ -2228,6 +2295,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: Oui, en 1930
   answer_option_b: Oui, en 1964
   answer_option_c: Oui, en 2006
@@ -2259,6 +2327,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: Oui, en 1973
   answer_option_b: Oui, en 2006
   answer_option_c: Non, il est estimé à 2045
@@ -2289,6 +2358,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 40%
   answer_option_b: 65%
   answer_option_c: 85%
@@ -2320,6 +2390,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 2 tonnes
   answer_option_b: 5 tonnes
   answer_option_c: 11 tonnes
@@ -2354,6 +2425,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: L'agriculture
   answer_option_b: Le bâtiment
   answer_option_c: L'industrie
@@ -2384,6 +2456,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Pas du tout
   answer_option_b: Très peu
   answer_option_c: Beaucoup
@@ -2416,6 +2489,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 1ère
   answer_option_b: 3ème
   answer_option_c: 5ème
@@ -2454,6 +2528,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: 10%
   answer_option_b: 30%
   answer_option_c: 50%
@@ -2488,6 +2563,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: Le premier pèse 100 fois moins que le second
   answer_option_b: 10 fois moins
   answer_option_c: à peu près autant
@@ -2518,6 +2594,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 1%
   answer_option_b: 10%
   answer_option_c: 50%
@@ -2553,6 +2630,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '1'
   answer_option_b: '2'
   answer_option_c: '10'
@@ -2586,6 +2664,7 @@
   type: QCM
   category: 1
   difficulty: 0
+  language: Français
   answer_option_a: 1 à 2 mm
   answer_option_b: 1 à 2 cm
   answer_option_c: 10 à 20 cm
@@ -2617,6 +2696,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: quelques semaines
   answer_option_b: quelques siècles
   answer_option_c: quelques dizaines de milliers d'années
@@ -2650,6 +2730,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Oxygène, Hydrogène, Azote, Phosphore, Carbone et Potassium
   answer_option_b: Carbone, Hydrogène, Azote, Oxygène, Phosphore et Soufre
   answer_option_c: Carbone, Hydrogène, Oxygène, Potassium, Calcium et Sodium
@@ -2692,6 +2773,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Efficacité > Renouvelables > Sobriété
   answer_option_b: Efficacité > Sobriété > Renouvelables
   answer_option_c: Renouvelables > Sobriété > Efficacité
@@ -2726,6 +2808,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: La Russie
   answer_option_b: La Chine
   answer_option_c: Les États-Unis
@@ -2768,6 +2851,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 1 %
   answer_option_b: 15 %
   answer_option_c: 40 %
@@ -2802,6 +2886,7 @@
   type: QCM
   category: 4
   difficulty: 3
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -2832,6 +2917,7 @@
   type: QCM
   category: 4
   difficulty: 3
+  language: Français
   answer_option_a: 5 %
   answer_option_b: 15 %
   answer_option_c: 30 %
@@ -2863,6 +2949,7 @@
   type: QCM
   category: 6
   difficulty: 0
+  language: Français
   answer_option_a: Le Haut Conseil pour le Climat
   answer_option_b: L'ADEME
   answer_option_c: Le Ministère de la Transition écologique et solidaire
@@ -2895,6 +2982,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: La feuille de route de la France pour lutter contre le changement
     climatique
   answer_option_b: La stratégie de l’industrie automobile pour des transports sobres
@@ -2934,6 +3022,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -2963,6 +3052,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Agence de l’environnement et de la maîtrise de l’énergie
   answer_option_b: Agence du démantèlement des installations industrielles
   answer_option_c: Agence des déchets et moyens environnementaux
@@ -2995,6 +3085,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 1%
   answer_option_b: 3%
   answer_option_c: 8%
@@ -3028,6 +3119,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 1 300 km
   answer_option_b: 13 000 km
   answer_option_c: 130 000 km
@@ -3064,6 +3156,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 70 g
   answer_option_b: 700 g
   answer_option_c: 70 kg
@@ -3100,6 +3193,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 1 %
   answer_option_b: 10 %
   answer_option_c: 50 %
@@ -3131,6 +3225,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 8%
   answer_option_b: 20%
   answer_option_c: 40%
@@ -3165,6 +3260,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 15 kg
   answer_option_b: 50 kg
   answer_option_c: 150 kg
@@ -3196,6 +3292,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: une tête d'épingle
   answer_option_b: un grain de maïs
   answer_option_c: une balle de tennis
@@ -3230,6 +3327,7 @@
   type: QCM
   category: 3
   difficulty: 4
+  language: Français
   answer_option_a: 15 000 tonnes (2g par habitant)
   answer_option_b: 150 000 tonnes (20g par habitant)
   answer_option_c: 1,5 millions de tonnes (200g par habitant)
@@ -3276,6 +3374,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Batteries au lithium
   answer_option_b: Hydrogène
   answer_option_c: Stations de pompage sur les barrages
@@ -3311,6 +3410,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: 1995 à Berlin
   answer_option_b: 1996 à Genève
   answer_option_c: 1997 à Kyoto
@@ -3344,6 +3444,7 @@
   type: QCM
   category: 6
   difficulty: 3
+  language: Français
   answer_option_a: 50 centimes d'€
   answer_option_b: €5
   answer_option_c: €25
@@ -3375,6 +3476,7 @@
   type: VF
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -3408,6 +3510,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 1 Gtep
   answer_option_b: 8 Gtep
   answer_option_c: 14 Gtep
@@ -3439,6 +3542,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 10 %
   answer_option_b: 25 %
   answer_option_c: 50 %
@@ -3471,6 +3575,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: '1972'
   answer_option_b: '1988'
   answer_option_c: '1992'
@@ -3505,6 +3610,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Charbon
   answer_option_b: Gaz
   answer_option_c: Nucléaire
@@ -3534,6 +3640,7 @@
   type: VF
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -3568,6 +3675,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 30 litres/100km
   answer_option_b: 60 litres/100km
   answer_option_c: 100 litres/100km
@@ -3597,6 +3705,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: Calorie
   answer_option_b: Joule
   answer_option_c: Kilowatt
@@ -3629,6 +3738,7 @@
   type: QCM
   category: 6
   difficulty: 3
+  language: Français
   answer_option_a: Sommet de la Terre 1992
   answer_option_b: Protocole de Kyoto 1997
   answer_option_c: Accords de Copenhague 2009
@@ -3657,6 +3767,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: 5 %
   answer_option_b: 15 %
   answer_option_c: 30 %
@@ -3688,6 +3799,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: La chute d’une masse d'une tonne de 1500m de haut
   answer_option_b: La digestion d'un kilo de sucre
   answer_option_c: La combustion d'un litre d’essence
@@ -3721,6 +3833,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 89 litres
   answer_option_b: 129 litres
   answer_option_c: 159 litres
@@ -3751,6 +3864,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 500 millions de litres
   answer_option_b: 5 milliards de litres
   answer_option_c: 50 milliards de litres
@@ -3787,6 +3901,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '5'
   answer_option_b: '9'
   answer_option_c: '13'
@@ -3816,6 +3931,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Arabie Saoudite
   answer_option_b: États-Unis
   answer_option_c: Iran
@@ -3845,6 +3961,7 @@
   type: QCM
   category: 5
   difficulty: 4
+  language: Français
   answer_option_a: Arabie Saoudite
   answer_option_b: Iran
   answer_option_c: Kazakhstan
@@ -3876,6 +3993,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 160 ppm
   answer_option_b: 280 ppm
   answer_option_c: 320 ppm
@@ -3908,6 +4026,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Chauffage domestique
   answer_option_b: Hauts fourneaux (fonte)
   answer_option_c: Industrie (hors fonte)
@@ -3938,6 +4057,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 1 %
   answer_option_b: 5 %
   answer_option_c: 10 %
@@ -3970,6 +4090,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: 2 000 Go
   answer_option_b: 20 000 Go
   answer_option_c: 200 000 Go
@@ -3999,6 +4120,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: 1 MW
   answer_option_b: 100 MW
   answer_option_c: 1 GW
@@ -4029,6 +4151,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: '2'
   answer_option_b: '3'
   answer_option_c: '7'
@@ -4056,6 +4179,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Agriculture
   answer_option_b: Industrie
   answer_option_c: Résidentiel-Tertiaire
@@ -4085,6 +4209,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 16 l/100km
   answer_option_b: 25 l/100km
   answer_option_c: 34 l/100km
@@ -4117,6 +4242,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 50 %
   answer_option_b: 65 %
   answer_option_c: 80 %
@@ -4148,6 +4274,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Algérie
   answer_option_b: Danemark
   answer_option_c: Grèce
@@ -4183,6 +4310,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Algérie
   answer_option_b: Norvège
   answer_option_c: Qatar
@@ -4214,6 +4342,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: '2030'
   answer_option_b: '2040'
   answer_option_c: '2050'
@@ -4246,6 +4375,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 285 millions de tonnes
   answer_option_b: 2,85 milliards de tonnes
   answer_option_c: 28,5 milliards de tonnes
@@ -4278,6 +4408,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Les rayons infrarouges
   answer_option_b: La lumière visible
   answer_option_c: Les rayons X
@@ -4308,6 +4439,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 800 tonnes
   answer_option_b: 8 000 tonnes
   answer_option_c: 80 000 tonnes
@@ -4339,6 +4471,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: 1,5 %
   answer_option_b: 7,5 %
   answer_option_c: 15 %
@@ -4369,6 +4502,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 550 litres
   answer_option_b: 2,200 litres
   answer_option_c: 4,400 litres
@@ -4397,6 +4531,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Biocarburant
   answer_option_b: Biomasse
   answer_option_c: Éolien
@@ -4433,6 +4568,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 10 %
   answer_option_b: 20 %
   answer_option_c: 30 %
@@ -4467,6 +4603,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 0,1%
   answer_option_b: 1%
   answer_option_c: 10 %
@@ -4499,6 +4636,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: '2'
   answer_option_b: '3'
   answer_option_c: '5'
@@ -4540,6 +4678,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Dioxyde de carbone (CO2)
   answer_option_b: Hexafluorure soufre (SF6)
   answer_option_c: Méthane (CH4)
@@ -4573,6 +4712,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: France
   answer_option_c: Pays-Bas
@@ -4601,6 +4741,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Nucléaire
   answer_option_b: Biomasse
   answer_option_c: Pétrole
@@ -4631,6 +4772,7 @@
   type: QCM
   category: 4
   difficulty: 3
+  language: Français
   answer_option_a: 15%
   answer_option_b: 25 %
   answer_option_c: 35 %
@@ -4661,6 +4803,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: Il y a 1000 ans
   answer_option_b: Il y a 5000 ans
   answer_option_c: Il y a 800 000 ans
@@ -4700,6 +4843,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 550 millions de m3
   answer_option_b: 5,5 milliards de m3
   answer_option_c: 55 milliards de m3
@@ -4730,6 +4874,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: 3 000
   answer_option_b: 9 000
   answer_option_c: 17 000
@@ -4767,6 +4912,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: 1 600
   answer_option_b: 3 200
   answer_option_c: 6 400
@@ -4797,6 +4943,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: 350 ch
   answer_option_b: 550 ch
   answer_option_c: 750 ch
@@ -4825,6 +4972,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Gaz
   answer_option_b: Hydrolique
   answer_option_c: Pétrole
@@ -4853,6 +5001,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Canada
   answer_option_b: États-Unis
   answer_option_c: Iran
@@ -4884,6 +5033,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Beurre
   answer_option_b: Porc
   answer_option_c: Saumon
@@ -4916,6 +5066,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: '23'
   answer_option_b: '230'
   answer_option_c: 2 300
@@ -4948,6 +5099,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: '2003'
   answer_option_b: '2011'
   answer_option_c: '2014'
@@ -4978,6 +5130,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 5 %
   answer_option_b: 10 %
   answer_option_c: 20 %
@@ -5010,6 +5163,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Chine
   answer_option_b: Corée du Sud
   answer_option_c: Japon
@@ -5043,6 +5197,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 20,000 barils/jour
   answer_option_b: 200,000 barils/jour
   answer_option_c: 2 millions de barils/jour
@@ -5081,6 +5236,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 5 tonnes par jour
   answer_option_b: 25 tonnes par jour
   answer_option_c: 50 tonnes par jour
@@ -5114,6 +5270,7 @@
   type: QCM
   category: 3
   difficulty: 3
+  language: Français
   answer_option_a: Amoco Cadiz (1978, au large de la Bretagne)
   answer_option_b: Atlantic Empress (1979, au large de Trinité-et-Tobago)
   answer_option_c: Exxon Valdez (1989, au large de l'Alaska)
@@ -5154,6 +5311,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: 4ème
   answer_option_b: 8ème
   answer_option_c: 12ème
@@ -5186,6 +5344,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '1989'
   answer_option_b: '1999'
   answer_option_c: '2009'
@@ -5220,6 +5379,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: L'équivalent de la production française
   answer_option_b: 2 fois la production française
   answer_option_c: 4 fois la production française
@@ -5255,6 +5415,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 25 %
   answer_option_b: 35 %
   answer_option_c: 45 %
@@ -5289,6 +5450,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Brésil
   answer_option_b: France
   answer_option_c: Inde
@@ -5319,6 +5481,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 5 500 tonnes
   answer_option_b: 110 000 tonnes
   answer_option_c: 5,5 millions de tonnes
@@ -5348,6 +5511,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Chine
   answer_option_b: Italie
   answer_option_c: Japon
@@ -5378,6 +5542,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Croatie
   answer_option_b: Malte
   answer_option_c: Suède
@@ -5406,6 +5571,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: '7'
   answer_option_b: '19'
   answer_option_c: '27'
@@ -5434,6 +5600,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: '1778'
   answer_option_b: '1855'
   answer_option_c: '1892'
@@ -5465,6 +5632,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 190 000 tonnes CO2eq
   answer_option_b: 1,9 millions tonnes CO2eq
   answer_option_c: 19 millions tonnes CO2eq
@@ -5495,6 +5663,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 10 Mt CO2eq
   answer_option_b: 50 Mt CO2eq
   answer_option_c: 250 Mt CO2eq
@@ -5529,6 +5698,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: Chine
   answer_option_c: États-Unis
@@ -5564,6 +5734,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: '1989'
   answer_option_b: '1999'
   answer_option_c: '2009'
@@ -5594,6 +5765,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: Espagne
   answer_option_c: France
@@ -5624,6 +5796,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: États-Unis
   answer_option_b: Iran
   answer_option_c: Qatar
@@ -5653,6 +5826,7 @@
   type: QCM
   category: 6
   difficulty: 3
+  language: Français
   answer_option_a: 2 %
   answer_option_b: 6 %
   answer_option_c: 10 %
@@ -5683,6 +5857,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: Arabie Saoudite
   answer_option_b: États-Unis
   answer_option_c: Malaisie
@@ -5714,6 +5889,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 3 %
   answer_option_b: 13 %
   answer_option_c: 23 %
@@ -5748,6 +5924,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 11 gCO2eq
   answer_option_b: 110 gCO2eq
   answer_option_c: 550 gCO2eq
@@ -5779,6 +5956,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 1500 m
   answer_option_b: 3100 m
   answer_option_c: 5600 m
@@ -5809,6 +5987,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 30 millions
   answer_option_b: 150 millions
   answer_option_c: 300 millions
@@ -5839,6 +6018,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 10 %
   answer_option_b: 15 %
   answer_option_c: 20 %
@@ -5871,6 +6051,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 0,2
   answer_option_b: 0,3
   answer_option_c: 0,4
@@ -5900,6 +6081,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Surface terrestre
   answer_option_b: 12 km
   answer_option_c: 50 km
@@ -5928,6 +6110,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 30 %
   answer_option_b: 40 %
   answer_option_c: 50 %
@@ -5958,6 +6141,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 8 %
   answer_option_b: 16 %
   answer_option_c: 24 %
@@ -5990,6 +6174,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 6 ans
   answer_option_b: 11 ans
   answer_option_c: 60 ans
@@ -6024,6 +6209,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 8 tonnes (bulle de 20m de diamètre)
   answer_option_b: 80 tonnes (bulle de 40m de diamètre)
   answer_option_c: 800 tonnes (bulle de 90m de diamètre)
@@ -6053,6 +6239,7 @@
   type: QCM
   category: 7
   difficulty: 4
+  language: Français
   answer_option_a: 390 millions
   answer_option_b: 3,9 milliards
   answer_option_c: 39 milliards
@@ -6081,6 +6268,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: ACCESS
   answer_option_b: ALADIN
   answer_option_c: AROME
@@ -6113,6 +6301,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: Espagne
   answer_option_c: France
@@ -6144,6 +6333,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 7,8 Mt (million tonnes)
   answer_option_b: 78 Mt
   answer_option_c: 780 Mt
@@ -6177,6 +6367,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: 1 000 joules
   answer_option_b: 3 600 joules
   answer_option_c: 1 000 000 joules
@@ -6206,6 +6397,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: La hausse des températures obtenue en 2100
   answer_option_b: La concentration en GES obtenue en 2100
   answer_option_c: Le forçage radiatif obtenue en 2100
@@ -6241,6 +6433,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: '1948'
   answer_option_b: '1958'
   answer_option_c: '1968'
@@ -6271,6 +6464,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: 1 m
   answer_option_b: 3 m
   answer_option_c: 7 m
@@ -6309,6 +6503,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 74 ppb
   answer_option_b: 372 ppb
   answer_option_c: 1 860 ppb
@@ -6340,6 +6535,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 8 Mt CO2eq
   answer_option_b: 40 Mt CO2eq
   answer_option_c: 200 Mt CO2eq
@@ -6369,6 +6565,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 4 000 kcal
   answer_option_b: 7 000 kcal
   answer_option_c: 10 000 kcal
@@ -6404,6 +6601,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 10 GW
   answer_option_b: 14 GW
   answer_option_c: 18 GW
@@ -6433,6 +6631,7 @@
   type: QCM
   category: 8
   difficulty: 1
+  language: Français
   answer_option_a: Anders Celsius
   answer_option_b: Alessandro Calori
   answer_option_c: James Prescott Joule
@@ -6462,6 +6661,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: 30 %
   answer_option_b: 40 %
   answer_option_c: 50 %
@@ -6492,6 +6692,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 0,02 gCO2eq
   answer_option_b: 0,2 gCO2eq
   answer_option_c: 2 gCO2eq
@@ -6521,6 +6722,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 60 gCO2eq
   answer_option_b: 110 gCO2eq
   answer_option_c: 220 gCO2eq
@@ -6550,6 +6752,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: Matières premières
   answer_option_b: Fabrication en Asie
   answer_option_c: Transport et distribution
@@ -6580,6 +6783,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: 90 Joules
   answer_option_b: 180 Joules
   answer_option_c: 1 100 Joules
@@ -6610,6 +6814,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: Dioxyde de carbone (CO2)
   answer_option_b: Hexafluorure soufre (SF6)
   answer_option_c: Hydrofluorocarbure (HFC)
@@ -6640,6 +6845,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 80 kWh
   answer_option_b: 160 kWh
   answer_option_c: 320 kWh
@@ -6668,6 +6874,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: 500 millions d’hectares
   answer_option_b: 1 milliard d’hectares
   answer_option_c: 2 milliards d’hectares
@@ -6696,6 +6903,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: 2 000
   answer_option_b: 3 000
   answer_option_c: 4 000
@@ -6726,6 +6934,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: 1 litre de diesel
   answer_option_b: 1 litre d’essence
   answer_option_c: 1 litre de GPL
@@ -6753,6 +6962,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: Bois
   answer_option_b: Électricité
   answer_option_c: Fioul
@@ -6784,6 +6994,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 50 %
   answer_option_b: 60 %
   answer_option_c: 70 %
@@ -6813,6 +7024,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '1990'
   answer_option_b: '2000'
   answer_option_c: '2010'
@@ -6844,6 +7056,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: 4 millions
   answer_option_b: 9 millions
   answer_option_c: 14 millions
@@ -6873,6 +7086,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Charbon
   answer_option_b: Gaz
   answer_option_c: Pétrole
@@ -6900,6 +7114,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Mode & Maroquinerie
   answer_option_b: Montres & Joaillerie
   answer_option_c: Parfums & Cosmétiques
@@ -6929,6 +7144,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: '1947'
   answer_option_b: '1983'
   answer_option_c: '2003'
@@ -6962,6 +7178,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 16 millions de litres
   answer_option_b: 160 millions de litres
   answer_option_c: 1 600 millions de litres
@@ -6992,6 +7209,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 11 gCO2
   answer_option_b: 110 gCO2
   answer_option_c: 550 gCO2
@@ -7021,6 +7239,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: '1972'
   answer_option_b: '1990'
   answer_option_c: '1992'
@@ -7052,6 +7271,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 50 %
   answer_option_b: 85 %
   answer_option_c: 95 %
@@ -7086,6 +7306,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: 20 %
   answer_option_b: 30 %
   answer_option_c: 40 %
@@ -7116,6 +7337,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: La variation du niveau de l'océan
   answer_option_b: Les variations de l'orbite terrestre
   answer_option_c: Les variations de CO2
@@ -7148,6 +7370,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 1 %
   answer_option_b: 10 %
   answer_option_c: 50 %
@@ -7176,6 +7399,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 1 %
   answer_option_b: 5 %
   answer_option_c: 10 %
@@ -7210,6 +7434,7 @@
   type: QCM
   category: 6
   difficulty: 3
+  language: Français
   answer_option_a: Le Boutan
   answer_option_b: Cuba
   answer_option_c: La Suède
@@ -7243,6 +7468,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 50,000
   answer_option_b: 90,000
   answer_option_c: 130,000
@@ -7278,6 +7504,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 30%
   answer_option_b: 50%
   answer_option_c: 70%
@@ -7311,6 +7538,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 500 millions
   answer_option_b: 2 milliards
   answer_option_c: 4 milliards
@@ -7345,6 +7573,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: 30%
   answer_option_b: 50%
   answer_option_c: 75%
@@ -7383,6 +7612,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 10 %
   answer_option_b: 25 %
   answer_option_c: 40 %
@@ -7421,6 +7651,7 @@
   type: VF
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -7459,6 +7690,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: Jacques Chirac
   answer_option_b: Cécile Duflot
   answer_option_c: Nicolas Hulot
@@ -7489,6 +7721,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 5 %
   answer_option_b: 10 %
   answer_option_c: 20 %
@@ -7524,6 +7757,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: Estonie
   answer_option_c: Luxembourg
@@ -7553,6 +7787,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: France
   answer_option_c: Pologne
@@ -7586,6 +7821,7 @@
   type: VF
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Au-dessus
   answer_option_b: En dessous
   answer_option_c: ''
@@ -7616,6 +7852,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 1800 m
   answer_option_b: 3700 m
   answer_option_c: 4600 m
@@ -7645,6 +7882,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Charbon
   answer_option_b: Éolien
   answer_option_c: Gaz
@@ -7674,6 +7912,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: '5'
   answer_option_b: '10'
   answer_option_c: '15'
@@ -7705,6 +7944,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: 40 %
   answer_option_b: 55 %
   answer_option_c: 70 %
@@ -7739,6 +7979,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: '0'
   answer_option_b: '3'
   answer_option_c: '6'
@@ -7769,6 +8010,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Canada
   answer_option_b: Corée du Sud
   answer_option_c: France
@@ -7799,6 +8041,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 9 fois
   answer_option_b: 15 fois
   answer_option_c: 21 fois
@@ -7832,6 +8075,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: 180 km/h
   answer_option_b: 220 km/h
   answer_option_c: 260 km/h
@@ -7862,6 +8106,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '1997'
   answer_option_b: '2007'
   answer_option_c: '2017'
@@ -7894,6 +8139,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 5 %
   answer_option_b: 15 %
   answer_option_c: 35 %
@@ -7929,6 +8175,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 220 W
   answer_option_b: 660 W
   answer_option_c: 1100 W
@@ -7961,6 +8208,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 3ème
   answer_option_b: 6ème
   answer_option_c: 9ème
@@ -7991,6 +8239,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: '1960'
   answer_option_b: '1973'
   answer_option_c: '1979'
@@ -8021,6 +8270,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 25 kg
   answer_option_b: 50 kg
   answer_option_c: 100 kg
@@ -8050,6 +8300,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 50 g d'équivalent CO2
   answer_option_b: 500 g d'équivalent CO2
   answer_option_c: 5 kg d'équivalent CO2
@@ -8090,6 +8341,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 6 %
   answer_option_b: 11 %
   answer_option_c: 16 %
@@ -8124,6 +8376,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 7ème
   answer_option_b: 14ème
   answer_option_c: 21ème
@@ -8155,6 +8408,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 300 litres
   answer_option_b: 600 litres
   answer_option_c: 900 litres
@@ -8186,6 +8440,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Gaz
   answer_option_b: Hydraulique
   answer_option_c: Nucléaire
@@ -8215,6 +8470,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 0 jour
   answer_option_b: 15 jours
   answer_option_c: 30 jours
@@ -8247,6 +8503,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 60 Gt
   answer_option_b: 80 Gt
   answer_option_c: 100 Gt
@@ -8277,6 +8534,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 25 km
   answer_option_b: 50 km
   answer_option_c: 75 km
@@ -8307,6 +8565,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 15 000 tonnes
   answer_option_b: 150 000 tonnes
   answer_option_c: 1,5 million tonnes
@@ -8341,6 +8600,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: 60 millions
   answer_option_b: 100 millions
   answer_option_c: 210 millions
@@ -8372,6 +8632,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 7 km
   answer_option_b: 21 km
   answer_option_c: 35 km
@@ -8410,6 +8671,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: '1976'
   answer_option_b: '1986'
   answer_option_c: '1996'
@@ -8442,6 +8704,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Charbon
   answer_option_b: Gaz
   answer_option_c: Hydroélectricité
@@ -8472,6 +8735,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 30 %
   answer_option_b: 40 %
   answer_option_c: 50 %
@@ -8503,6 +8767,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 10 %
   answer_option_b: 20 %
   answer_option_c: 30 %
@@ -8533,6 +8798,7 @@
   type: QCM
   category: 2
   difficulty: 4
+  language: Français
   answer_option_a: Amérique du Nord
   answer_option_b: Europe
   answer_option_c: Moyen-Orient
@@ -8563,6 +8829,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Autriche
   answer_option_b: Italie
   answer_option_c: France
@@ -8594,6 +8861,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Algérie
   answer_option_b: Angola
   answer_option_c: Libye
@@ -8624,6 +8892,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Consommation d’électricité
   answer_option_b: Production de charbon
   answer_option_c: Consommation de pétrole
@@ -8652,6 +8921,7 @@
   type: QCM
   category: 5
   difficulty: 4
+  language: Français
   answer_option_a: '1974'
   answer_option_b: '1984'
   answer_option_c: '1994'
@@ -8682,6 +8952,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: '29'
   answer_option_b: '37'
   answer_option_c: '103'
@@ -8710,6 +8981,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Biocarburants
   answer_option_b: Bois
   answer_option_c: Hydroélectricité
@@ -8743,6 +9015,7 @@
   type: QCM
   category: 2
   difficulty: 4
+  language: Français
   answer_option_a: 10 000 t CO2e
   answer_option_b: 100 000 t CO2e
   answer_option_c: 1 000 000 t CO2e
@@ -8774,6 +9047,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: Autriche
   answer_option_c: France
@@ -8807,6 +9081,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 130 m
   answer_option_b: 800 m
   answer_option_c: 1,3 km
@@ -8836,6 +9111,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Arabie Saoudite
   answer_option_b: Canada
   answer_option_c: Mexique
@@ -8869,6 +9145,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 55 %
   answer_option_b: 65 %
   answer_option_c: 75 %
@@ -8902,6 +9179,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 6ème (place de l'Allemagne)
   answer_option_b: 12ème (place du Mexique)
   answer_option_c: 18ème (place de la Pologne)
@@ -8937,6 +9215,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 140 millions
   answer_option_b: 440 millions
   answer_option_c: 840 millions
@@ -8968,6 +9247,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '95'
   answer_option_b: '540'
   answer_option_c: '1100'
@@ -8999,6 +9279,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: République Démocratique du Congo
   answer_option_b: Islande
   answer_option_c: Népal
@@ -9029,6 +9310,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Agriculture et élevage
   answer_option_b: Energies fossiles
   answer_option_c: Marécages
@@ -9060,6 +9342,7 @@
   type: QCM
   category: 6
   difficulty: 3
+  language: Français
   answer_option_a: '30'
   answer_option_b: '86'
   answer_option_c: '103'
@@ -9086,6 +9369,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 7,3 millions de litres
   answer_option_b: 73 millions de litres
   answer_option_c: 730 millions de litres
@@ -9122,6 +9406,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: '1900'
   answer_option_b: '1920'
   answer_option_c: '1940'
@@ -9152,6 +9437,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: New-York
   answer_option_b: Pékin
   answer_option_c: Séoul
@@ -9181,6 +9467,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Production d’ammoniac
   answer_option_b: Caloporteur
   answer_option_c: Raffinage du pétrole
@@ -9210,6 +9497,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Charbon
   answer_option_b: Gaz
   answer_option_c: Nucléaire
@@ -9241,6 +9529,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Janvier
   answer_option_b: Avril
   answer_option_c: Juillet
@@ -9274,6 +9563,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 34 ans (1985)
   answer_option_b: 54 ans (1965)
   answer_option_c: 74 ans (1945)
@@ -9305,6 +9595,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: '30'
   answer_option_b: '700'
   answer_option_c: 2 000
@@ -9337,6 +9628,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: 25 %
   answer_option_b: 40 %
   answer_option_c: 60 %
@@ -9368,6 +9660,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: 3 millions
   answer_option_b: 12 millions
   answer_option_c: 60 millions
@@ -9402,6 +9695,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 100 millions
   answer_option_b: 340 millions
   answer_option_c: 680 millions
@@ -9439,6 +9733,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Construction Ameublement
   answer_option_b: Panneaux Papiers Cartons
   answer_option_c: Energie Chauffage
@@ -9471,6 +9766,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: 30 km
   answer_option_b: 60 km
   answer_option_c: 90 km
@@ -9501,6 +9797,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Italie
   answer_option_b: Finlande
   answer_option_c: France
@@ -9533,6 +9830,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: '1200'
   answer_option_b: '4400'
   answer_option_c: 12 000
@@ -9565,6 +9863,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '4'
   answer_option_b: '8'
   answer_option_c: '12'
@@ -9597,6 +9896,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Février
   answer_option_b: Mai
   answer_option_c: Août
@@ -9627,6 +9927,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 800 m
   answer_option_b: 3200 m
   answer_option_c: 6400 m
@@ -9657,6 +9958,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Afrique du Sud
   answer_option_b: Chine
   answer_option_c: Espagne
@@ -9687,6 +9989,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 0 année
   answer_option_b: 1 année
   answer_option_c: 2 années
@@ -9720,6 +10023,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '1968'
   answer_option_b: '1978'
   answer_option_c: '1988'
@@ -9751,6 +10055,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 2,4 m
   answer_option_b: 24 m
   answer_option_c: 240 m
@@ -9783,6 +10088,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 20 %
   answer_option_b: 40 %
   answer_option_c: 60 %
@@ -9818,6 +10124,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 2 000
   answer_option_b: 8 000
   answer_option_c: 16 000
@@ -9852,6 +10159,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: '1837'
   answer_option_b: '1857'
   answer_option_c: '1877'
@@ -9883,6 +10191,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '1918'
   answer_option_b: '1938'
   answer_option_c: '1958'
@@ -9913,6 +10222,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: '1971'
   answer_option_b: '1981'
   answer_option_c: '1991'
@@ -9943,6 +10253,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: Chine
   answer_option_c: Inde
@@ -9976,6 +10287,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 3 000
   answer_option_b: 11 000
   answer_option_c: 33 000
@@ -10008,6 +10320,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: 7ème
   answer_option_b: 14ème
   answer_option_c: 21ème
@@ -10040,6 +10353,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Industrie
   answer_option_b: Production d’électricité
   answer_option_c: Résidentiel
@@ -10071,6 +10385,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 20 millions
   answer_option_b: 100 millions
   answer_option_c: 500 millions
@@ -10105,6 +10420,7 @@
   type: QCM
   category: 2
   difficulty: 4
+  language: Français
   answer_option_a: '1881'
   answer_option_b: '1915'
   answer_option_c: '1932'
@@ -10138,6 +10454,7 @@
   type: QCM
   category: 6
   difficulty: 3
+  language: Français
   answer_option_a: Brest
   answer_option_b: La Rochelle
   answer_option_c: Marseille
@@ -10171,6 +10488,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '- 500 000 voitures'
   answer_option_b: à peu près 0
   answer_option_c: + 500 000 voitures
@@ -10207,6 +10525,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: France
   answer_option_b: Italie
   answer_option_c: Royaume-Uni
@@ -10237,6 +10556,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '1976'
   answer_option_b: '1991'
   answer_option_c: '2006'
@@ -10271,6 +10591,7 @@
   type: QCM
   category: 2
   difficulty: 4
+  language: Français
   answer_option_a: Australie
   answer_option_b: Corée du Sud
   answer_option_c: Estonie
@@ -10301,6 +10622,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Afrique du Sud
   answer_option_b: Australie
   answer_option_c: Canada
@@ -10332,6 +10654,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 60 %
   answer_option_b: 70 %
   answer_option_c: 80 %
@@ -10362,6 +10685,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: '1'
   answer_option_b: '2'
   answer_option_c: '3'
@@ -10393,6 +10717,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 5 000 puits  (1 tous les 45 km)
   answer_option_b: 20 000 puits  (1 tous les 20 km)
   answer_option_c: 100 000 puits  (1 tous les 10 km)
@@ -10427,6 +10752,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 1 200
   answer_option_b: 6 000
   answer_option_c: 24 000
@@ -10458,6 +10784,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: '1971'
   answer_option_b: '1981'
   answer_option_c: '1991'
@@ -10492,6 +10819,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 3,2 litres / 100 km
   answer_option_b: 6,2 litres / 100 km
   answer_option_c: 9,2 litres / 100 km
@@ -10522,6 +10850,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '1910'
   answer_option_b: '1930'
   answer_option_c: '1950'
@@ -10552,6 +10881,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: 200 millions
   answer_option_b: 500 millions
   answer_option_c: 1 milliard
@@ -10582,6 +10912,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: '8'
   answer_option_b: '12'
   answer_option_c: '16'
@@ -10612,6 +10943,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Estonie
   answer_option_b: Italie
   answer_option_c: Luxembourg
@@ -10643,6 +10975,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: Des espèces d’insectes
   answer_option_b: Des graines de pollen
   answer_option_c: Des organismes unicellulaires
@@ -10671,6 +11004,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Argentine
   answer_option_b: Brésil
   answer_option_c: Chine
@@ -10709,6 +11043,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: Bière (25 cl)
   answer_option_b: Coca-Cola (30 cl)
   answer_option_c: Chocolat chaud (40 cl)
@@ -10745,6 +11080,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '3'
   answer_option_b: '5'
   answer_option_c: '7'
@@ -10775,6 +11111,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: '0'
   answer_option_b: '2'
   answer_option_c: '4'
@@ -10804,6 +11141,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: France
   answer_option_c: États-Unis
@@ -10833,6 +11171,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Finlande
   answer_option_b: France
   answer_option_c: Irlande
@@ -10864,6 +11203,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: 10 %
   answer_option_b: 20 %
   answer_option_c: 30 %
@@ -10895,6 +11235,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 40 %
   answer_option_b: 50 %
   answer_option_c: 60 %
@@ -10923,6 +11264,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Essence
   answer_option_b: Fioul
   answer_option_c: Gazole
@@ -10952,6 +11294,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 5 %
   answer_option_b: 25 %
   answer_option_c: 45 %
@@ -10990,6 +11333,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Australie
   answer_option_b: États-Unis
   answer_option_c: Indonésie
@@ -11024,6 +11368,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: -6 milliards de tonnes
   answer_option_b: -3 milliards de tonnes
   answer_option_c: stable
@@ -11056,6 +11401,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 80 gCO2/km
   answer_option_b: 140 gCO2/km
   answer_option_c: 200 gCO2/km
@@ -11089,6 +11435,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 20 %
   answer_option_b: 40 %
   answer_option_c: 60 %
@@ -11123,6 +11470,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: Danemark
   answer_option_b: Finlande
   answer_option_c: France
@@ -11155,6 +11503,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Canada
   answer_option_b: États-Unis
   answer_option_c: Luxembourg
@@ -11186,6 +11535,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: Chèvres
   answer_option_b: Moutons
   answer_option_c: Porcs
@@ -11218,6 +11568,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 410 millions de tonnes
   answer_option_b: 4,1 milliards de tonnes
   answer_option_c: 41 milliards de tonnes
@@ -11248,6 +11599,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 40 %
   answer_option_b: 50 %
   answer_option_c: 60 %
@@ -11279,6 +11631,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 50 ans
   answer_option_b: 200 ans
   answer_option_c: 350 ans
@@ -11321,6 +11674,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Australie – Japon
   answer_option_b: Canada – Etats-Unis
   answer_option_c: Russie – Allemagne
@@ -11350,6 +11704,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Charbon
   answer_option_b: Ciment
   answer_option_c: Gaz
@@ -11381,6 +11736,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 1ère
   answer_option_b: 2ème
   answer_option_c: 3ème
@@ -11412,6 +11768,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: Auvergne Rhône-Alpes
   answer_option_b: Bourgogne Franche-Comté
   answer_option_c: Grand Est
@@ -11442,6 +11799,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 3 jours
   answer_option_b: 15 jours
   answer_option_c: 30 jours
@@ -11482,6 +11840,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 1 000 GW
   answer_option_b: 7 000 GW
   answer_option_c: 21 000 GW
@@ -11512,6 +11871,7 @@
   type: QCM-RM
   category: 5
   difficulty: 4
+  language: Français
   answer_option_a: Chine
   answer_option_b: Russie
   answer_option_c: Inde
@@ -11549,6 +11909,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: '- 500 000 km² (la superficie de l''Espagne)'
   answer_option_b: '- 1 000 000 km² (la superficie de l''Egypte)'
   answer_option_c: '- 2 000 000 km² (la superficie du Mexique)'
@@ -11584,6 +11945,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 25 %
   answer_option_b: 45 %
   answer_option_c: 65 %
@@ -11615,6 +11977,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 3ème (après les Etats-Unis)
   answer_option_b: 6ème (après le Japon)
   answer_option_c: 9ème (après la Corée du Sud)
@@ -11648,6 +12011,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Asie (hors Chine et Inde)
   answer_option_b: Afrique
   answer_option_c: Amérique du Sud
@@ -11678,6 +12042,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: '500'
   answer_option_b: '1000'
   answer_option_c: '1500'
@@ -11710,6 +12075,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '50'
   answer_option_b: '250'
   answer_option_c: '500'
@@ -11741,6 +12107,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: '0'
   answer_option_b: '1'
   answer_option_c: '2'
@@ -11775,6 +12142,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 8 kg de CO2
   answer_option_b: 32 kg de CO2
   answer_option_c: 64 kg de CO2
@@ -11807,6 +12175,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: '1910'
   answer_option_b: '1930'
   answer_option_c: '1950'
@@ -11846,6 +12215,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 35 pays
   answer_option_b: 70 pays
   answer_option_c: 105 pays
@@ -11879,6 +12249,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: +0,5°C
   answer_option_b: +1°C
   answer_option_c: +1,5°C
@@ -11912,6 +12283,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '1865'
   answer_option_b: '1890'
   answer_option_c: '1915'
@@ -11945,6 +12317,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Industrie
   answer_option_b: Génération électrique
   answer_option_c: Résidentiel
@@ -11980,6 +12353,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Navire pétrolier
   answer_option_b: Pipeline
   answer_option_c: Plateforme pétrolière
@@ -12014,6 +12388,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 10%
   answer_option_b: 40%
   answer_option_c: 60%
@@ -12048,6 +12423,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Charbon
   answer_option_b: Gaz
   answer_option_c: Pétrole
@@ -12083,6 +12459,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '3'
   answer_option_b: '5'
   answer_option_c: '7'
@@ -12113,6 +12490,7 @@
   type: QCM
   category: 7
   difficulty: 4
+  language: Français
   answer_option_a: 200 kg
   answer_option_b: 1,000 kg
   answer_option_c: 1,800 kg
@@ -12144,6 +12522,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Eocène
   answer_option_b: Holocène
   answer_option_c: Milocène
@@ -12173,6 +12552,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: '1986'
   answer_option_b: '2001'
   answer_option_c: '2016'
@@ -12204,6 +12584,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 880 MW
   answer_option_b: 1080 MW
   answer_option_c: 1280 MW
@@ -12235,6 +12616,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 55 %
   answer_option_b: 65 %
   answer_option_c: 75 %
@@ -12269,6 +12651,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 6 ans
   answer_option_b: 8 ans
   answer_option_c: 10 ans
@@ -12303,6 +12686,7 @@
   type: QCM
   category: 5
   difficulty: 4
+  language: Français
   answer_option_a: 37 kt CO2
   answer_option_b: 370 kt CO2
   answer_option_c: 3,7 Mt CO2
@@ -12338,6 +12722,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Fragile
   answer_option_b: Sous surveillance
   answer_option_c: Manque de rigueur
@@ -12371,6 +12756,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 1,6 milliards d'euros
   answer_option_b: 4,6 milliards d'euros
   answer_option_c: 7,6 milliards d'euros
@@ -12404,6 +12790,7 @@
   type: QCM
   category: 2
   difficulty: 4
+  language: Français
   answer_option_a: Australie
   answer_option_b: Canada
   answer_option_c: Iran
@@ -12437,6 +12824,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Des graines de pollens
   answer_option_b: Une espèce d’arbres
   answer_option_c: Des organismes marins
@@ -12466,6 +12854,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: Belgique
   answer_option_b: Danemark
   answer_option_c: France
@@ -12496,6 +12885,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 3 kWh
   answer_option_b: 30 kWh
   answer_option_c: 100 kWh
@@ -12526,6 +12916,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 2ème (devant les Etats-Unis)
   answer_option_b: 5ème (devant le Japon)
   answer_option_c: 8ème (devant la Corée du Sud)
@@ -12558,6 +12949,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 7 kg équivalent CO2, soit 50 km en Clio essence.
   answer_option_b: 70 kg équivalent CO2, soit 500 km
   answer_option_c: 700 kg équivalent CO2, soit 5,000 km
@@ -12595,6 +12987,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Agriculture
   answer_option_b: Résidentiel et tertiaire
   answer_option_c: Transports
@@ -12625,6 +13018,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Etats-Unis
   answer_option_b: Italie
   answer_option_c: Islande
@@ -12655,6 +13049,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Charbon
   answer_option_b: Gaz
   answer_option_c: Pétrole
@@ -12685,6 +13080,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '1914'
   answer_option_b: '1939'
   answer_option_c: '1973'
@@ -12715,6 +13111,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: Chine
   answer_option_b: États-Unis
   answer_option_c: Inde
@@ -12748,6 +13145,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Gaz
   answer_option_b: Pétrole
   answer_option_c: Nucléaire
@@ -12778,6 +13176,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: '3'
   answer_option_b: '10'
   answer_option_c: '17'
@@ -12810,6 +13209,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: '1930'
   answer_option_b: '1950'
   answer_option_c: '1970'
@@ -12840,6 +13240,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Acier (énergie et procédés)
   answer_option_b: Vols internationaux
   answer_option_c: Azote des sols agricoles
@@ -12871,6 +13272,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 100 litres
   answer_option_b: 1 000 litres
   answer_option_c: 5 000 litres
@@ -12906,6 +13308,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 200 millions
   answer_option_b: 1 milliard
   answer_option_c: 3,5 milliards
@@ -12943,6 +13346,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 15 jours
   answer_option_b: 1 mois
   answer_option_c: 2 mois
@@ -12978,6 +13382,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: '4'
   answer_option_b: '16'
   answer_option_c: '28'
@@ -13014,6 +13419,7 @@
   type: VF
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -13049,6 +13455,7 @@
   type: QCM
   category: 4
   difficulty: 3
+  language: Français
   answer_option_a: 7ème
   answer_option_b: 10ème
   answer_option_c: 14ème
@@ -13080,6 +13487,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Chine
   answer_option_b: États-Unis
   answer_option_c: France
@@ -13118,6 +13526,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Chine
   answer_option_b: États-Unis
   answer_option_c: Slovaquie
@@ -13150,6 +13559,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 15 %
   answer_option_b: 30 %
   answer_option_c: 70 %
@@ -13184,6 +13594,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: Estonie
   answer_option_c: Grêce
@@ -13227,6 +13638,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: '1976'
   answer_option_b: '1986'
   answer_option_c: '1996'
@@ -13274,6 +13686,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: +1.5°C
   answer_option_b: +2°C
   answer_option_c: +3-4°C
@@ -13303,6 +13716,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: l’échelle de temps et d’espace prise en compte
   answer_option_b: ''
   answer_option_c: ''
@@ -13338,6 +13752,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Positif
   answer_option_b: Neutre
   answer_option_c: Négatif
@@ -13369,6 +13784,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Mercure
   answer_option_b: Vénus
   answer_option_c: la Terre
@@ -13399,6 +13815,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: Elles ont diminué de 30%
   answer_option_b: Elles ont diminué de 15%
   answer_option_c: Elles sont restées stable
@@ -13433,6 +13850,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: diminué de 30%
   answer_option_b: diminué de 10%
   answer_option_c: stagné
@@ -13464,6 +13882,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Groupement Intergouvernemental d’Experts sur le Climat
   answer_option_b: ''
   answer_option_c: ''
@@ -13491,6 +13910,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Non
   answer_option_b: Oui, un peu
   answer_option_c: Oui, beaucoup
@@ -13519,6 +13939,7 @@
   type: VF
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -13546,6 +13967,7 @@
   type: VF
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -13574,6 +13996,7 @@
   type: VF
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -13602,6 +14025,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Non
   answer_option_b: Oui, un peu
   answer_option_c: Oui, beaucoup
@@ -13631,6 +14055,7 @@
   type: VF
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -13664,6 +14089,7 @@
   type: VF
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -13697,6 +14123,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: Rien
   answer_option_b: 3000 € par rapport
   answer_option_c: Prime de 5000 € pour la participation
@@ -13728,6 +14155,7 @@
   type: QCM
   category: 1
   difficulty: 0
+  language: Français
   answer_option_a: Improbable
   answer_option_b: Aussi probable qu’improbable
   answer_option_c: Probable
@@ -13762,6 +14190,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Peer review
   answer_option_b: Publication
   answer_option_c: ''
@@ -13790,6 +14219,7 @@
   type: VF
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -13818,6 +14248,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Prix Nobel de Physique
   answer_option_b: Prix Nobel de la Paix
   answer_option_c: Prix de l'ONU Champion de la Terre
@@ -13845,6 +14276,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: '2022'
   answer_option_b: '2025'
   answer_option_c: '2027'
@@ -13872,6 +14304,7 @@
   type: VF
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -13901,6 +14334,7 @@
   type: VF
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Oui
   answer_option_b: Non
   answer_option_c: ''
@@ -13930,6 +14364,7 @@
   type: VF
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -13960,6 +14395,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: '2030'
   answer_option_b: '2050'
   answer_option_c: '2080'
@@ -13995,6 +14431,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 5ème
   answer_option_b: 10ème
   answer_option_c: 20ème
@@ -14024,6 +14461,7 @@
   type: QCM-RM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Population de 1.3 Milliard de personnes
   answer_option_b: énergie fortement liée au charbon
   answer_option_c: usine du monde
@@ -14055,6 +14493,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '2'
   answer_option_b: '5'
   answer_option_c: '8'
@@ -14089,6 +14528,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '1'
   answer_option_b: '3'
   answer_option_c: '5'
@@ -14125,6 +14565,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 2 fois plus élevées
   answer_option_b: 5 fois plus élevées
   answer_option_c: 8 fois plus élevées
@@ -14157,6 +14598,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: '5'
   answer_option_b: '7'
   answer_option_c: '12'
@@ -14184,6 +14626,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: Habillement
   answer_option_b: Chauffage
   answer_option_c: Voiture
@@ -14213,6 +14656,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 2 %
   answer_option_b: 7 %
   answer_option_c: 19 %
@@ -14243,6 +14687,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 0.3 %
   answer_option_b: 2 %
   answer_option_c: 6 %
@@ -14272,6 +14717,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: négligeable, c'est dématérialisé
   answer_option_b: 2 %
   answer_option_c: 5 %
@@ -14303,6 +14749,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 125 km
   answer_option_b: 2 000 km
   answer_option_c: 6 000 km
@@ -14331,6 +14778,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Plus aucune
   answer_option_b: Identiques aux autres énergies
   answer_option_c: 30 fois plus que les énergies "vertes"
@@ -14359,6 +14807,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: Canapé en cuir
   answer_option_b: Télévision 55 pouces
   answer_option_c: Jean en coton
@@ -14387,6 +14836,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: '... d''un ordinateur portable'
   answer_option_b: '... d''une télévision 55 pouces'
   answer_option_c: '... d''un canapé en cuir'
@@ -14415,6 +14865,7 @@
   type: QCM-RM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Vapeur d'eau (H2O)
   answer_option_b: Dioxyde de carbone (CO2)
   answer_option_c: Méthane (CH4)
@@ -14442,6 +14893,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: Ils réchauffent
   answer_option_b: Ils n'ont aucun impact
   answer_option_c: Ils refroidissent
@@ -14476,6 +14928,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 1 an
   answer_option_b: 10 ans
   answer_option_c: 30 ans
@@ -14507,6 +14960,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Les gaz à effet de serre
   answer_option_b: Les cycles solaires
   answer_option_c: L'orbite terrestre
@@ -14535,6 +14989,7 @@
   type: QCM-RM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Beaucoup plus rapide
   answer_option_b: 'D''origine humaine '
   answer_option_c: Intensité plus forte
@@ -14562,6 +15017,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Activité solaire
   answer_option_b: Activité volcanique
   answer_option_c: Gaz à effet de serre
@@ -14588,6 +15044,7 @@
   type: VF
   category: 1
   difficulty: 0
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -14618,6 +15075,7 @@
   type: VF
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -14648,6 +15106,7 @@
   type: VF
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -14682,6 +15141,7 @@
   type: QCM
   category: 1
   difficulty: 0
+  language: Français
   answer_option_a: Disparition d’espèces animales
   answer_option_b: Migrations humaines importantes
   answer_option_c: Tremblements de terre
@@ -14714,6 +15174,7 @@
   type: QCM
   category: 1
   difficulty: 0
+  language: Français
   answer_option_a: Conséquences similaires
   answer_option_b: Conséquences légèrement plus fortes
   answer_option_c: Conséquences beaucoup plus fortes
@@ -14747,6 +15208,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: Biens de consommation
   answer_option_b: Transport
   answer_option_c: Chauffage
@@ -14775,6 +15237,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 10 %
   answer_option_b: 30 %
   answer_option_c: 50 %
@@ -14804,6 +15267,7 @@
   type: VF
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -14835,6 +15299,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 3ème derrière le gaz
   answer_option_b: 4ème derrière l'hydroélectricité
   answer_option_c: 5ème derrière l'éolien
@@ -14867,6 +15332,7 @@
   type: VF
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -14896,6 +15362,7 @@
   type: VF
   category: 5
   difficulty: 0
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -14928,6 +15395,7 @@
   type: QCM-RM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Parce qu'il faut construire la centrale
   answer_option_b: Parce qu'il faut extraire de l'uranium
   answer_option_c: Parce qu'il faut enrichir de l'uranium
@@ -14968,6 +15436,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: '0'
   answer_option_b: '1'
   answer_option_c: '5'
@@ -15002,6 +15471,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: 25 %
   answer_option_b: 50 %
   answer_option_c: 75 %
@@ -15032,6 +15502,7 @@
   type: QCM
   category: 4
   difficulty: 1
+  language: Français
   answer_option_a: 270 000
   answer_option_b: 2,7 millions
   answer_option_c: 27 millions
@@ -15064,6 +15535,7 @@
   type: QCM
   category: 3
   difficulty: 1
+  language: Français
   answer_option_a: Du méthane et du CO2
   answer_option_b: De l’hydrogène sulfuré et de l’ammoniac
   answer_option_c: De l’éthane et du pentane
@@ -15095,6 +15567,7 @@
   type: QCM
   category: 3
   difficulty: 1
+  language: Français
   answer_option_a: Entre 100 et 250 ans
   answer_option_b: Entre 250 et 450 ans
   answer_option_c: Plus de 450 ans
@@ -15126,6 +15599,7 @@
   type: QCM
   category: 3
   difficulty: 1
+  language: Français
   answer_option_a: Entre 1 million et 4 millions de tonnes
   answer_option_b: Entre 5 millions et 13 millions de tonnes
   answer_option_c: Entre 14 millions et 22 millions de tonnes
@@ -15156,6 +15630,7 @@
   type: QCM
   category: 4
   difficulty: 2
+  language: Français
   answer_option_a: '1983'
   answer_option_b: '1993'
   answer_option_c: '2003'
@@ -15193,6 +15668,7 @@
   type: QCM
   category: 4
   difficulty: 2
+  language: Français
   answer_option_a: 1%
   answer_option_b: 25%
   answer_option_c: 50%
@@ -15227,6 +15703,7 @@
   type: QCM
   category: 3
   difficulty: 1
+  language: Français
   answer_option_a: 800 000
   answer_option_b: 8 millions
   answer_option_c: 80 millions
@@ -15256,6 +15733,7 @@
   type: VF
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -15285,6 +15763,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 4 kg
   answer_option_b: 33 kg
   answer_option_c: 120 kg
@@ -15318,6 +15797,7 @@
   type: QCM
   category: 5
   difficulty: 0
+  language: Français
   answer_option_a: L’eau
   answer_option_b: Le vent
   answer_option_c: Le soleil
@@ -15346,6 +15826,7 @@
   type: QCM
   category: 5
   difficulty: 0
+  language: Français
   answer_option_a: Une éolienne installée en mer
   answer_option_b: 'Une éolienne produisant de l''énergie depuis un paradis fiscal '
   answer_option_c: Une éolienne installée à l’étranger
@@ -15378,6 +15859,7 @@
   type: QCM
   category: 5
   difficulty: 0
+  language: Français
   answer_option_a: Les mats solaires
   answer_option_b: Les capteurs photosensibles
   answer_option_c: Les panneaux photovoltaïques ou solaires
@@ -15409,6 +15891,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Norvège, France, Italie
   answer_option_b: Norvège, Suède, France
   answer_option_c: France, Suède, Suisse
@@ -15444,6 +15927,7 @@
   type: QCM
   category: 5
   difficulty: 0
+  language: Français
   answer_option_a: Par pompage de magma
   answer_option_b: Par pompage de gaz ou de pétrole
   answer_option_c: Par pompage d’eau chaude ou de vapeur
@@ -15477,6 +15961,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: La centrale de Bouillante en Guadeloupe
   answer_option_b: La centrale de Bourbon-Lancy, en Bourgogne
   answer_option_c: La centrale d’Aix-les-Bains, en Savoie
@@ -15508,6 +15993,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: La combustion de charbon ou de gaz
   answer_option_b: La combustion de matières organiques et/ou de biogaz
   answer_option_c: La fracturation de roches
@@ -15538,6 +16024,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: La production de chaleur, en plus de celle d’électricité
   answer_option_b: La production de biocarburants, en plus de celle d’électricité
   answer_option_c: La production de déchets, en plus de celle d’électricité
@@ -15569,6 +16056,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: 'Les centrales océanographiques '
   answer_option_b: Les hydroliennes
   answer_option_c: Les passes à courant
@@ -15597,6 +16085,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Les centrales thermales
   answer_option_b: Les turbines à eau
   answer_option_c: Les usines marémotrices
@@ -15627,6 +16116,7 @@
   type: QCM-RM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 4 g CO2 équivalent, soit 16 m en voiture
   answer_option_b: 40 g CO2 équivalent, soit 160 m en voiture
   answer_option_c: 400 g CO2 équivalent, soir 1,6 km en voiture
@@ -15661,6 +16151,7 @@
   type: QCM
   category: 6
   difficulty: 4
+  language: Français
   answer_option_a: '1979'
   answer_option_b: '1989'
   answer_option_c: '1999'
@@ -15695,6 +16186,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 35 %
   answer_option_b: 50 %
   answer_option_c: 65 %
@@ -15728,6 +16220,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: A l'évolution des températures sur le dernier millénaire
   answer_option_b: Au rythme de disparition des espèces animales depuis la préhistoire
   answer_option_c: A la concentration en CO2 dans l'atmosphère depuis la révolution
@@ -15764,6 +16257,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 8 km (Everest)
   answer_option_b: 400 km (station spatiale internationale)
   answer_option_c: 40 000 km (satellites géostationnaires)
@@ -15796,6 +16290,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '1862'
   answer_option_b: '1882'
   answer_option_c: '1902'
@@ -15828,6 +16323,7 @@
   type: QCM
   category: null
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -15858,6 +16354,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -15887,6 +16384,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -15915,6 +16413,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: '6000'
   answer_option_b: ''
   answer_option_c: ''
@@ -15944,6 +16443,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 2ème (place actuelle des USA)
   answer_option_b: 6ème (place actuelle de l’Allemagne)
   answer_option_c: 12ème (place actuelle du Mexique)
@@ -15980,6 +16480,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16014,6 +16515,7 @@
   type: QCM
   category: 7
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16042,6 +16544,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 25 ans
   answer_option_b: 55 ans
   answer_option_c: 85 ans
@@ -16079,6 +16582,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16108,6 +16612,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16137,6 +16642,7 @@
   type: QCM
   category: 7
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16166,6 +16672,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16193,6 +16700,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Bois
   answer_option_b: Eolien
   answer_option_c: Hydraulique
@@ -16223,6 +16731,7 @@
   type: QCM
   category: null
   difficulty: 1
+  language: Français
   answer_option_a: 59 %
   answer_option_b: ''
   answer_option_c: ''
@@ -16253,6 +16762,7 @@
   type: QCM
   category: 5
   difficulty: 4
+  language: Français
   answer_option_a: 5 400 litres
   answer_option_b: 54 000 litres
   answer_option_c: 540 000 litres
@@ -16284,6 +16794,7 @@
   type: QCM
   category: null
   difficulty: 1
+  language: Français
   answer_option_a: 0,36 kWh
   answer_option_b: 0,72 kWh
   answer_option_c: 3,6 kWh
@@ -16311,6 +16822,7 @@
   type: QCM
   category: null
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16339,6 +16851,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: 10 000 ans
   answer_option_b: 3 millions d’années
   answer_option_c: 500 millions d’années
@@ -16368,6 +16881,7 @@
   type: QCM
   category: null
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16396,6 +16910,7 @@
   type: QCM
   category: null
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16424,6 +16939,7 @@
   type: QCM
   category: null
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16451,6 +16967,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: Conference of the parties
   answer_option_b: Council of presidents
   answer_option_c: Community for environmental protection
@@ -16485,6 +17002,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16514,6 +17032,7 @@
   type: QCM
   category: 6
   difficulty: 4
+  language: Français
   answer_option_a: '30'
   answer_option_b: '300'
   answer_option_c: 3 000
@@ -16564,6 +17083,7 @@
   type: QCM
   category: 5
   difficulty: 4
+  language: Français
   answer_option_a: 17 000
   answer_option_b: 170 000
   answer_option_c: 1,7 millions
@@ -16597,6 +17117,7 @@
   type: QCM
   category: 6
   difficulty: 4
+  language: Français
   answer_option_a: 130 pages
   answer_option_b: 630 pages
   answer_option_c: 1230 pages
@@ -16627,6 +17148,7 @@
   type: QCM
   category: null
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16654,6 +17176,7 @@
   type: QCM
   category: null
   difficulty: 1
+  language: Français
   answer_option_a: Milliards de Joule
   answer_option_b: Millions de milliards de Joule
   answer_option_c: Milliards de milliards de Joule
@@ -16684,6 +17207,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: Le soleil influe 6 fois plus que les gaz à effet de serre
   answer_option_b: Les deux ont quasiment la même influence
   answer_option_c: Les gaz à effet de serre influent 6 fois plus que le soleil
@@ -16721,6 +17245,7 @@
   type: QCM
   category: null
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16749,6 +17274,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: -10%
   answer_option_b: -30%
   answer_option_c: -50%
@@ -16783,6 +17309,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: L'industrie (hors production électrique)
   answer_option_b: La production électrique
   answer_option_c: L'aviation
@@ -16829,6 +17356,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16860,6 +17388,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Fonte de la calotte du Groenland
   answer_option_b: Consommation pétrole pays xx
   answer_option_c: 'Émissions CO2 pays xx '
@@ -16886,6 +17415,7 @@
   type: QCM
   category: 7
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -16918,6 +17448,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: Le niveau de revenus
   answer_option_b: Le niveau de consommation
   answer_option_c: Le niveau d'éducation
@@ -16954,6 +17485,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: '1979'
   answer_option_b: '1989'
   answer_option_c: '1999'
@@ -16986,6 +17518,7 @@
   type: VF
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -17020,6 +17553,7 @@
   type: QCM
   category: 2
   difficulty: 4
+  language: Français
   answer_option_a: 1 kg
   answer_option_b: 10 kg
   answer_option_c: 100 kg
@@ -17058,6 +17592,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 6ème (place actuelle de l'Allemagne)
   answer_option_b: 12ème (place actuelle du Mexique)
   answer_option_c: 18ème (place actuelle de la Pologne)
@@ -17089,6 +17624,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 25 %
   answer_option_b: 40 %
   answer_option_c: 55 %
@@ -17125,6 +17661,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: '0'
   answer_option_b: '1'
   answer_option_c: '2'
@@ -17158,6 +17695,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: Ça n'est jamais arrivé
   answer_option_b: 5 ans
   answer_option_c: 35 ans
@@ -17196,6 +17734,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: '1906'
   answer_option_b: '1926'
   answer_option_c: '1946'
@@ -17231,6 +17770,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -17262,6 +17802,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 1 600 Hiroshima par jour (~1 par minute)
   answer_option_b: 16 000 Hiroshima par jour (~10 par minute)
   answer_option_c: 160 000 Hiroshima par jour (~2 par seconde)
@@ -17294,6 +17835,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: '1941'
   answer_option_b: '1979'
   answer_option_c: '1991'
@@ -17334,6 +17876,7 @@
   type: QCM
   category: null
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -17362,6 +17905,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 18 tonnes
   answer_option_b: 180 tonnes
   answer_option_c: 1 800 tonnes
@@ -17393,6 +17937,7 @@
   type: VF
   category: 8
   difficulty: 1
+  language: Français
   answer_option_a: Oui
   answer_option_b: Non
   answer_option_c: ''
@@ -17426,6 +17971,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: Un gros cerveau
   answer_option_b: Une main habile
   answer_option_c: L'endurance physique
@@ -17456,6 +18002,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: 200 ans
   answer_option_b: 4,000 ans
   answer_option_c: 300,000 ans
@@ -17488,6 +18035,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: 70 ans
   answer_option_b: 200 ans
   answer_option_c: 3,000 ans
@@ -17518,6 +18066,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: Une plus grande capacité à porter des charges
   answer_option_b: Une plus grande performance pour lancer des objets
   answer_option_c: Sa morphologie a augmenté l'habileté manuelle
@@ -17550,6 +18099,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: Un plus gros cerveau
   answer_option_b: Un système digestif plus petit
   answer_option_c: Des canines plus tranchantes
@@ -17582,6 +18132,7 @@
   type: VF
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -17616,6 +18167,7 @@
   type: VF
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -17647,6 +18199,7 @@
   type: VF
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -17680,6 +18233,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: 3 ans
   answer_option_b: 10 ans
   answer_option_c: 20 ans
@@ -17710,6 +18264,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: La guerre avec Homo Sapiens
   answer_option_b: La plus grande emprise d'Homo Sapiens sur les ressources alimentaires
   answer_option_c: Un changement climatique
@@ -17744,6 +18299,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Pour une unité supplémentaire de d'énergie photovoltaïque il a
     été ajouté 11 unités d'énergie à base de charbon.
   answer_option_b: Pour une unité supplémentaire de charbon il a été ajouté 11 fois
@@ -17781,6 +18337,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Albert Einstein
   answer_option_b: Pierre et Marie Curie
   answer_option_c: Henri Becquerel
@@ -17808,6 +18365,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Le Bescherelle
   answer_option_b: Le Becquerel
   answer_option_c: La Sauterelle
@@ -17837,6 +18395,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: L'uranium
   answer_option_b: Le plutonium
   answer_option_c: L'irridium
@@ -17865,6 +18424,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: La fusion des atomes d'uranium
   answer_option_b: La scission des atomes d'uranium
   answer_option_c: La fission des atomes d'uranium
@@ -17892,6 +18452,7 @@
   type: QCM
   category: 5
   difficulty: 4
+  language: Français
   answer_option_a: 7 grammes
   answer_option_b: 108 grammes
   answer_option_c: 1,2 kilogrammes
@@ -17920,6 +18481,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Les mats
   answer_option_b: Les crayons
   answer_option_c: Les tubas
@@ -17948,6 +18510,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Le granit
   answer_option_b: Le grès
   answer_option_c: L'argile
@@ -17976,6 +18539,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: 1ère place
   answer_option_b: 2ème place
   answer_option_c: 3ème place
@@ -18006,6 +18570,7 @@
   type: QCM
   category: 6
   difficulty: 3
+  language: Français
   answer_option_a: L'ADEME
   answer_option_b: L'ANDRA
   answer_option_c: L'ASN
@@ -18035,6 +18600,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '0'
   answer_option_b: '1'
   answer_option_c: '5'
@@ -18068,6 +18634,7 @@
   type: VF
   category: 3
   difficulty: 3
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -18104,6 +18671,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 8%
   answer_option_b: 18%
   answer_option_c: 28%
@@ -18133,6 +18701,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 10,000 tonnes
   answer_option_b: 100,000 tonnes
   answer_option_c: 1 million de tonnes
@@ -18162,6 +18731,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: 200 terrains de football
   answer_option_b: 2,000 terrains de football
   answer_option_c: 20,000 terrains de football
@@ -18201,6 +18771,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: En comprimant les chiots durant leur croissance, pour qu’ils ne
     soient pas trop gros, jusqu’à créer une nouvelle espèce
   answer_option_b: En sélectionnant dans les portées les petits porteurs de caractères
@@ -18238,6 +18809,7 @@
   type: QCM
   category: 6
   difficulty: 4
+  language: Français
   answer_option_a: 5,000 ans, à l’arrivée du dingo sur le sous-continent
   answer_option_b: 40,000 ans, à la disparition de la mégafaune d’Australie
   answer_option_c: 70,000 ans, au débarquement des humains en Australie
@@ -18274,6 +18846,7 @@
   type: QCM
   category: 6
   difficulty: 4
+  language: Français
   answer_option_a: Une série de méga-éruptions volcaniques, expulsant de grands volumes
     de cendres et d’aérosols dans l’atmosphère.
   answer_option_b: Le recul de la riziculture inondée en Asie, qui a ralenti les émissions
@@ -18310,6 +18883,7 @@
   type: QCM
   category: 6
   difficulty: 3
+  language: Français
   answer_option_a: Depuis l'apparition de l'agriculture (-10 000 ans)
   answer_option_b: Depuis que le genre Homo maîtrise le feu (au moins 450,000 ans)
   answer_option_c: Depuis au moins le paléolithique supérieur (-45,000 à -12,000 ans)
@@ -18343,6 +18917,7 @@
   type: VF
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -18376,6 +18951,7 @@
   type: QCM-RM
   category: 6
   difficulty: 4
+  language: Français
   answer_option_a: 'Microbe contre nourriture : les Européens apportent leurs maladies
     aux Amérindiens, ce qui leur permet une victoire facile, et ils acquièrent des
     plantes au rendement agronomique extraordinaire, tels le maïs, la pomme de terre
@@ -18426,6 +19002,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: L’explosion d’une supernova
   answer_option_b: Une éruption magnétique terrestre
   answer_option_c: Une éruption magnétique solaire
@@ -18459,6 +19036,7 @@
   type: QCM
   category: 6
   difficulty: 0
+  language: Français
   answer_option_a: L'Inde
   answer_option_b: L'Angleterre
   answer_option_c: L'Egypte
@@ -18490,6 +19068,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: Vers 1800, c'est à dire quand James Watt parvient à faire fonctionner
     500 de ses machines à vapeur
   answer_option_b: Vers 1860, quand la France et l’Angleterre signent un accord de
@@ -18527,6 +19106,7 @@
   type: QCM
   category: 6
   difficulty: 4
+  language: Français
   answer_option_a: Thomas Midgley Jr
   answer_option_b: Fritz Haber
   answer_option_c: Albert Einstein
@@ -18560,6 +19140,7 @@
   type: QCM
   category: 3
   difficulty: 4
+  language: Français
   answer_option_a: Rachel Carson
   answer_option_b: Rosalind Franklin
   answer_option_c: Joan Evelyn
@@ -18593,6 +19174,7 @@
   type: VF
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: Oui
   answer_option_b: Non
   answer_option_c: ''
@@ -18627,6 +19209,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: 50 ans
   answer_option_b: 200 ans
   answer_option_c: 1000 ans
@@ -18655,6 +19238,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 100 ans
   answer_option_b: 300 ans (la révolution industrielle)
   answer_option_c: 30,000 ans
@@ -18684,6 +19268,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 1°C de moins
   answer_option_b: 2°C de moins
   answer_option_c: 5°C de moins
@@ -18712,6 +19297,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 0,2°C
   answer_option_b: 0,5°C
   answer_option_c: 0,8°C
@@ -18740,6 +19326,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: '2030'
   answer_option_b: '2040'
   answer_option_c: '2050'
@@ -18768,6 +19355,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: '2040'
   answer_option_b: '2050'
   answer_option_c: '2100'
@@ -18798,6 +19386,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: 1 sur 1000
   answer_option_b: 1 sur 100
   answer_option_c: 1 sur 10
@@ -18827,6 +19416,7 @@
   type: QCM-RM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Europe
   answer_option_b: Cercle Polaire
   answer_option_c: Afrique Australe
@@ -18854,6 +19444,7 @@
   type: QCM
   category: 4
   difficulty: 1
+  language: Français
   answer_option_a: La disparition des dinosaures
   answer_option_b: La disparition de l'homme de Néanderthal
   answer_option_c: La très forte mortalité des indiens d'Amérique du Sud à l'arrivée
@@ -18883,6 +19474,7 @@
   type: QCM
   category: 4
   difficulty: 2
+  language: Français
   answer_option_a: 2%
   answer_option_b: 5%
   answer_option_c: 20%
@@ -18912,6 +19504,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: les 10% les plus pauvres
   answer_option_b: les 20% les plus pauvres
   answer_option_c: les 30% les plus pauvres
@@ -18940,6 +19533,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 1%
   answer_option_b: 10%
   answer_option_c: 20%
@@ -18982,6 +19576,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 100$ / tonne
   answer_option_b: 1,000$ / tonne
   answer_option_c: 10,000$ / tonne
@@ -19016,6 +19611,7 @@
   type: QCM
   category: 6
   difficulty: 3
+  language: Français
   answer_option_a: $124
   answer_option_b: $147
   answer_option_c: $166
@@ -19057,6 +19653,7 @@
   type: QCM
   category: 8
   difficulty: 4
+  language: Français
   answer_option_a: 2%
   answer_option_b: 5%
   answer_option_c: 10%
@@ -19095,6 +19692,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: '1995'
   answer_option_b: '1999'
   answer_option_c: '2003'
@@ -19128,6 +19726,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: HSBC
   answer_option_b: Bank of America
   answer_option_c: Goldman Sachs
@@ -19159,6 +19758,7 @@
   type: QCM
   category: 6
   difficulty: 4
+  language: Français
   answer_option_a: 10 milliards de dollars
   answer_option_b: 50 milliards de dollars
   answer_option_c: 200 milliards de dollars
@@ -19192,6 +19792,7 @@
   type: QCM
   category: 6
   difficulty: 1
+  language: Français
   answer_option_a: le pétrole
   answer_option_b: le soja
   answer_option_c: l’or
@@ -19222,6 +19823,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: France
   answer_option_b: Italie
   answer_option_c: Japon
@@ -19258,6 +19860,7 @@
   type: QCM
   category: 6
   difficulty: 3
+  language: Français
   answer_option_a: '1999'
   answer_option_b: '2005'
   answer_option_c: '2011'
@@ -19291,6 +19894,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: La même quantité de Gaz à Effet de Serre (GES)
   answer_option_b: 50% de GES en plus
   answer_option_c: 50% de GES en plus
@@ -19323,6 +19927,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: baisser de 20%
   answer_option_b: être divisée par 2
   answer_option_c: être divisée par 5
@@ -19352,6 +19957,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 1%
   answer_option_b: 11%
   answer_option_c: 40%
@@ -19380,6 +19986,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 2%
   answer_option_b: 12%
   answer_option_c: 50%
@@ -19410,6 +20017,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: 1 tonne
   answer_option_b: 5 tonnes
   answer_option_c: 11 tonnes
@@ -19442,6 +20050,7 @@
   type: QCM
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Le nucléaire
   answer_option_b: Le pétrole
   answer_option_c: Les énergies renouvelables
@@ -19472,6 +20081,7 @@
   type: QCM-RM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -19501,6 +20111,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: 20%
   answer_option_b: 40%
   answer_option_c: 60%
@@ -19541,6 +20152,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: 45%
   answer_option_b: ''
   answer_option_c: ''
@@ -19571,6 +20183,7 @@
   type: QCM-RM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -19601,6 +20214,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 130 km
   answer_option_b: 1,300 km
   answer_option_c: 13,000  km
@@ -19632,6 +20246,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Aucune
   answer_option_b: '2'
   answer_option_c: '20'
@@ -19666,6 +20281,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 0,01%
   answer_option_b: 0,1 %
   answer_option_c: 1 %
@@ -19700,6 +20316,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 0,1%
   answer_option_b: 1%
   answer_option_c: 10%
@@ -19733,6 +20350,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: +1%
   answer_option_b: +10%
   answer_option_c: +50%
@@ -19767,6 +20385,7 @@
   type: QCM-RM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: Transports (capture en sortie d'échappement des véhicules)
   answer_option_b: Résidentiel (capture en sortie de chaudière des bâtiments)
   answer_option_c: Centrales électriques (capture en sortie de combustion)
@@ -19800,6 +20419,7 @@
   type: VF
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -19836,6 +20456,7 @@
   type: QCM
   category: 5
   difficulty: 4
+  language: Français
   answer_option_a: Par 15
   answer_option_b: Par 150
   answer_option_c: Par 1500
@@ -19867,6 +20488,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 100 ans
   answer_option_b: 1 000 ans
   answer_option_c: 10 000 ans
@@ -19896,6 +20518,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 30%
   answer_option_b: 50%
   answer_option_c: 70%
@@ -19927,6 +20550,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: Aucun autre pays
   answer_option_b: 1 autre pays
   answer_option_c: 2 autres pays
@@ -19960,6 +20584,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: '1976'
   answer_option_b: '1986'
   answer_option_c: '1996'
@@ -19995,6 +20620,7 @@
   type: VF
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -20034,6 +20660,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: '1990'
   answer_option_b: '2000'
   answer_option_c: '2020'
@@ -20065,6 +20692,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: Australie
   answer_option_c: États-Unis
@@ -20096,6 +20724,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -20132,6 +20761,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 4 %
   answer_option_b: 35 %
   answer_option_c: 65 %
@@ -20167,6 +20797,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 1 kg de charbon
   answer_option_b: 10 kg de charbon
   answer_option_c: 100 kg de charbon
@@ -20200,6 +20831,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: Aviation
   answer_option_b: Médical
   answer_option_c: Nucléaire
@@ -20232,6 +20864,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 5 %
   answer_option_b: 35 %
   answer_option_c: 65 %
@@ -20268,6 +20901,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 15 km
   answer_option_b: 150 km
   answer_option_c: 1500 km
@@ -20320,6 +20954,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: L'élevage
   answer_option_b: Les procédés industriels
   answer_option_c: Le secteur résidentiel
@@ -20353,6 +20988,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Tous les 3 ans
   answer_option_b: Tous les 15 ans
   answer_option_c: Tous les 30 ans
@@ -20394,6 +21030,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: '1925'
   answer_option_b: '1945'
   answer_option_c: '1965'
@@ -20424,6 +21061,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 600 Watts
   answer_option_b: 3 000 Watts
   answer_option_c: 9 000 Watts
@@ -20458,6 +21096,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: Alimentation
   answer_option_b: Aviation
   answer_option_c: Résidentiel
@@ -20488,6 +21127,7 @@
   type: QCM
   category: 4
   difficulty: 3
+  language: Français
   answer_option_a: '1750'
   answer_option_b: '1850'
   answer_option_c: '1950'
@@ -20527,6 +21167,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: -10 %
   answer_option_b: ~0%
   answer_option_c: 10 %
@@ -20559,6 +21200,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: '2'
   answer_option_b: '7'
   answer_option_c: '11'
@@ -20590,6 +21232,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: '7'
   answer_option_b: '8'
   answer_option_c: '9'
@@ -20619,6 +21262,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 3,4 milliards d’années
   answer_option_b: 340 millions d’années
   answer_option_c: 34 millions d’années
@@ -20652,6 +21296,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 400 g d’équivalent CO2
   answer_option_b: 2 kg d’équivalent CO2
   answer_option_c: 6 kg d’équivalent CO2
@@ -20685,6 +21330,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 3 mois
   answer_option_b: 1 an
   answer_option_c: 3 ans
@@ -20716,6 +21362,7 @@
   type: QCM
   category: 4
   difficulty: 3
+  language: Français
   answer_option_a: 6 %
   answer_option_b: 16 %
   answer_option_c: 26 %
@@ -20749,6 +21396,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Auvergne-Rhône-Alpes
   answer_option_b: Hauts-de-France
   answer_option_c: Île-de-France
@@ -20784,6 +21432,7 @@
   type: QCM
   category: 4
   difficulty: 2
+  language: Français
   answer_option_a: 48%
   answer_option_b: 58%
   answer_option_c: 68%
@@ -20818,6 +21467,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: '3'
   answer_option_b: '10'
   answer_option_c: '17'
@@ -20855,6 +21505,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -20888,6 +21539,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Electricité
   answer_option_b: Charbon
   answer_option_c: Gaz
@@ -20919,6 +21571,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: 10 %
   answer_option_b: 30 %
   answer_option_c: 50 %
@@ -20950,6 +21603,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: '1885'
   answer_option_b: '1915'
   answer_option_c: '1945'
@@ -20983,6 +21637,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: Dioxyde de carbone (CO2)
   answer_option_b: Méthane (CH4)
   answer_option_c: Protoxyde d’azote (N2O)
@@ -21015,6 +21670,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Augmentation de 4 GW
   answer_option_b: Augmentation de 2 GW
   answer_option_c: Aucun changement
@@ -21053,6 +21709,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: Il reste dans l'atmosphère.
   answer_option_b: Il est dissous dans les océans
   answer_option_c: Il est absorbé par la végétation (photosynthèse)
@@ -21090,6 +21747,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: La baleine boréale
   answer_option_b: Le morse
   answer_option_c: Le narval
@@ -21124,6 +21782,7 @@
   type: QCM
   category: 5
   difficulty: 4
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: Italie
   answer_option_c: France
@@ -21162,6 +21821,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Danemark
   answer_option_b: Italie
   answer_option_c: Pays-bas
@@ -21195,6 +21855,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 50 %
   answer_option_b: 65 %
   answer_option_c: 80 %
@@ -21234,6 +21895,7 @@
   type: QCM
   category: 5
   difficulty: 4
+  language: Français
   answer_option_a: Allemagne
   answer_option_b: Espagne
   answer_option_c: Grèce
@@ -21267,6 +21929,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Arabie Saoudite
   answer_option_b: Etats-Unis
   answer_option_c: Norvège
@@ -21301,6 +21964,7 @@
   type: VF
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -21335,6 +21999,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 2ème (place actuelle)
   answer_option_b: 6ème (Allemagne)
   answer_option_c: 10ème (Indonésie)
@@ -21370,6 +22035,7 @@
   type: VF
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -21405,6 +22071,7 @@
   type: QCM
   category: 5
   difficulty: 4
+  language: Français
   answer_option_a: '1898'
   answer_option_b: '1938'
   answer_option_c: '1978'
@@ -21441,6 +22108,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Entre 20 et 30 ans
   answer_option_b: Entre 40 et 50 ans
   answer_option_c: Entre 60 et 70 ans
@@ -21473,6 +22141,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -21511,6 +22180,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 10 minutes
   answer_option_b: 1 h
   answer_option_c: 6 h
@@ -21546,6 +22216,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 5 %
   answer_option_b: 25 %
   answer_option_c: 45 %
@@ -21575,6 +22246,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: Bourgogne-Franche-Comté
   answer_option_b: Centre-Val de Loire
   answer_option_c: Grand Est
@@ -21609,6 +22281,7 @@
   type: QCM
   category: 2
   difficulty: 4
+  language: Français
   answer_option_a: Un ballon de football
   answer_option_b: Une paire de bottes d’équitation
   answer_option_c: Un club de golf en acier
@@ -21643,6 +22316,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -21673,6 +22347,7 @@
   type: VF
   category: 7
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -21708,6 +22383,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: 5%
   answer_option_b: 10%
   answer_option_c: 25%
@@ -21737,6 +22413,7 @@
   type: QCM
   category: 8
   difficulty: 1
+  language: Français
   answer_option_a: 10%
   answer_option_b: 25%
   answer_option_c: 50%
@@ -21770,6 +22447,7 @@
   type: QCM
   category: 8
   difficulty: 1
+  language: Français
   answer_option_a: 1er
   answer_option_b: 3ème
   answer_option_c: 10ème
@@ -21805,6 +22483,7 @@
   type: QCM
   category: 8
   difficulty: 2
+  language: Français
   answer_option_a: 8 millions de tonnes équivalent CO2 (comme Lisbonne)
   answer_option_b: 22 millions de tonnes équivalent CO2  (comme Las Vegas)
   answer_option_c: 43 millions de tonnes équivalent CO2 (comme Madrid)
@@ -21843,6 +22522,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: 36 dollars et à peu près 3 barrils
   answer_option_b: 48 dollars et à peu près 1 barril
   answer_option_c: 65 dollars et à peu près 10 barrils
@@ -21877,6 +22557,7 @@
   type: QCM-RM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: Dans des mines de charbon
   answer_option_b: Dans des aquifères salins (poches d'eau salées en profondeur)
   answer_option_c: Dans des puits de pétrole ou de gaz
@@ -21905,6 +22586,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: -3%
   answer_option_b: -7%
   answer_option_c: -13%
@@ -21949,6 +22631,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 45%
   answer_option_b: 60%
   answer_option_c: 75%
@@ -21988,6 +22671,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: Elle a augmenté
   answer_option_b: Elle est restée stable
   answer_option_c: Elle a diminué
@@ -22031,6 +22715,7 @@
   type: VF
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -22072,6 +22757,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: +2,5 à +3°C
   answer_option_b: +3 à +3,5°C
   answer_option_c: +3,5 à +4°C
@@ -22115,6 +22801,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: -30% d'ici 30 ans (2050)
   answer_option_b: -40% d'ici 30 ans (2050)
   answer_option_c: -30% d'ici 10 ans (2030)
@@ -22154,6 +22841,7 @@
   type: QCM
   category: 4
   difficulty: 1
+  language: Français
   answer_option_a: -10%
   answer_option_b: même surface déforestée qu'en 2019
   answer_option_c: +10%
@@ -22200,6 +22888,7 @@
   type: VF
   category: 4
   difficulty: 2
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -22238,6 +22927,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: Aucune
   answer_option_b: '2'
   answer_option_c: '5'
@@ -22284,6 +22974,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 3%
   answer_option_b: 6%
   answer_option_c: 9%
@@ -22331,6 +23022,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 100,000
   answer_option_b: 500,000
   answer_option_c: 1 million
@@ -22374,6 +23066,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 1%
   answer_option_b: 3%
   answer_option_c: 6%
@@ -22412,6 +23105,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: Aucune
   answer_option_b: '1'
   answer_option_c: '4'
@@ -22446,6 +23140,7 @@
   type: QCM
   category: 3
   difficulty: 2
+  language: Français
   answer_option_a: 0.5 kg
   answer_option_b: '3'
   answer_option_c: '5'
@@ -22480,6 +23175,7 @@
   type: QCM
   category: 3
   difficulty: 2
+  language: Français
   answer_option_a: 0.1 kg
   answer_option_b: '0.5'
   answer_option_c: '5'
@@ -22511,6 +23207,7 @@
   type: QCM
   category: 3
   difficulty: 2
+  language: Français
   answer_option_a: 2.5 kg
   answer_option_b: '5'
   answer_option_c: '10'
@@ -22545,6 +23242,7 @@
   type: QCM
   category: 3
   difficulty: 2
+  language: Français
   answer_option_a: 0.01 année
   answer_option_b: '0.5'
   answer_option_c: '10'
@@ -22580,6 +23278,7 @@
   type: QCM
   category: 3
   difficulty: 2
+  language: Français
   answer_option_a: x 1
   answer_option_b: '120'
   answer_option_c: '5500'
@@ -22615,6 +23314,7 @@
   type: QCM
   category: 3
   difficulty: 3
+  language: Français
   answer_option_a: 0.5 %
   answer_option_b: 2.5 %
   answer_option_c: 6.2 %
@@ -22663,6 +23363,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 2 %
   answer_option_b: 5%
   answer_option_c: 8 %
@@ -22724,6 +23425,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 50 tonnes
   answer_option_b: '200'
   answer_option_c: '550'
@@ -22755,6 +23457,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 40 tonnes
   answer_option_b: '240'
   answer_option_c: '540'
@@ -22788,6 +23491,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 20 tonnes
   answer_option_b: '30'
   answer_option_c: '40'
@@ -22822,6 +23526,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 2%
   answer_option_b: 5%
   answer_option_c: 8%
@@ -22853,6 +23558,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 5%
   answer_option_b: 20%
   answer_option_c: 30%
@@ -22883,6 +23589,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 40%
   answer_option_b: 50%
   answer_option_c: 60%
@@ -22913,6 +23620,7 @@
   type: QCM
   category: 3
   difficulty: 3
+  language: Français
   answer_option_a: ' x 1'
   answer_option_b: x 2
   answer_option_c: x 6
@@ -22971,6 +23679,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ' x 1'
   answer_option_b: ' x 6'
   answer_option_c: ' x 12'
@@ -23011,6 +23720,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 0.5 % par an
   answer_option_b: 4.3 %
   answer_option_c: 6 %
@@ -23053,6 +23763,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: '24000'
   answer_option_b: '35000'
   answer_option_c: '50000'
@@ -23093,6 +23804,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: '621'
   answer_option_b: '998'
   answer_option_c: '3500'
@@ -23122,6 +23834,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 10 Millions
   answer_option_b: '20'
   answer_option_c: '40'
@@ -23152,6 +23865,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 6 Millions
   answer_option_b: '12'
   answer_option_c: '26'
@@ -23185,6 +23899,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '200'
   answer_option_b: '650'
   answer_option_c: '1300'
@@ -23214,6 +23929,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 2 l / 100km
   answer_option_b: '3.3'
   answer_option_c: '4.1'
@@ -23255,6 +23971,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: '52'
   answer_option_b: '423'
   answer_option_c: '675'
@@ -23298,6 +24015,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -23327,6 +24045,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -23357,6 +24076,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 2 kWh
   answer_option_b: '10'
   answer_option_c: '30'
@@ -23393,6 +24113,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 0.5 kWh
   answer_option_b: '5'
   answer_option_c: '25'
@@ -23435,6 +24156,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: '5000'
   answer_option_b: '25000'
   answer_option_c: '50000'
@@ -23468,6 +24190,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 1.8 l / km
   answer_option_b: '3.2'
   answer_option_c: '5.5'
@@ -23502,6 +24225,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 23 litres
   answer_option_b: '52'
   answer_option_c: '80'
@@ -23542,6 +24266,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ' x 20'
   answer_option_b: '200'
   answer_option_c: '800'
@@ -23576,6 +24301,7 @@
   type: QCM
   category: 6
   difficulty: 2
+  language: Français
   answer_option_a: 600 pax
   answer_option_b: '952'
   answer_option_c: '1122'
@@ -23619,6 +24345,7 @@
   type: VF
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Oui
   answer_option_b: Non
   answer_option_c: ''
@@ -23666,6 +24393,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: Oui
   answer_option_b: Non
   answer_option_c: ''
@@ -23734,6 +24462,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -23763,6 +24492,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Oui
   answer_option_b: Non
   answer_option_c: ''
@@ -23807,6 +24537,7 @@
   type: QCM-RM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 0%
   answer_option_b: 5%
   answer_option_c: 10%
@@ -23840,6 +24571,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Oui
   answer_option_b: Non
   answer_option_c: ''
@@ -23872,6 +24604,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 1%
   answer_option_b: 10%
   answer_option_c: 20%
@@ -23907,6 +24640,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 5%
   answer_option_b: 10%
   answer_option_c: 20%
@@ -23940,6 +24674,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 4,6 Mds €
   answer_option_b: 12,4 Mds €
   answer_option_c: 28,0 Mds €
@@ -23980,6 +24715,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24009,6 +24745,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24038,6 +24775,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24067,6 +24805,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24097,6 +24836,7 @@
   type: QCM
   category: 3
   difficulty: 4
+  language: Français
   answer_option_a: Blague
   answer_option_b: Canular
   answer_option_c: Corsia
@@ -24128,6 +24868,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24157,6 +24898,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24186,6 +24928,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24215,6 +24958,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24244,6 +24988,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24273,6 +25018,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24302,6 +25048,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24331,6 +25078,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24360,6 +25108,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24389,6 +25138,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 5%
   answer_option_b: 11%
   answer_option_c: 25%
@@ -24432,6 +25182,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 1%
   answer_option_b: 4%
   answer_option_c: 6%
@@ -24463,6 +25214,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 0.5%
   answer_option_b: 1%
   answer_option_c: 4%
@@ -24496,6 +25248,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 250 t CO2 / an / Cap
   answer_option_b: '1000'
   answer_option_c: '5000'
@@ -24525,6 +25278,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 4%
   answer_option_b: 11%
   answer_option_c: 19%
@@ -24560,6 +25314,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 2%
   answer_option_b: 8%
   answer_option_c: 15%
@@ -24591,6 +25346,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 4%
   answer_option_b: 5%
   answer_option_c: 6%
@@ -24620,6 +25376,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24649,6 +25406,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24678,6 +25436,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24707,6 +25466,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24736,6 +25496,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24765,6 +25526,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24794,6 +25556,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24823,6 +25586,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24852,6 +25616,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24881,6 +25646,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24910,6 +25676,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24939,6 +25706,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24968,6 +25736,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -24997,6 +25766,7 @@
   type: VF
   category: 5
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -25027,6 +25797,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 4 litres
   answer_option_b: '7'
   answer_option_c: '16'
@@ -25056,6 +25827,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 4 litres
   answer_option_b: '7'
   answer_option_c: '16'
@@ -25085,6 +25857,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 10%
   answer_option_b: 30%
   answer_option_c: 50%
@@ -25114,6 +25887,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 10%
   answer_option_b: 30%
   answer_option_c: 50%
@@ -25143,6 +25917,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: De 4 à 75%
   answer_option_b: 5.3 à 17%
   answer_option_c: 1 à 7.6%
@@ -25178,6 +25953,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 10 Mnt
   answer_option_b: 33 Mnt
   answer_option_c: 70 Mnt
@@ -25216,6 +25992,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 20 km²
   answer_option_b: 80 km²
   answer_option_c: 145 km²
@@ -25257,6 +26034,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: 5000  éoliennes
   answer_option_b: 14000 éoliennes
   answer_option_c: 20000 éoliennes
@@ -25295,6 +26073,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25325,6 +26104,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 0.01%
   answer_option_b: 2%
   answer_option_c: 12%
@@ -25366,6 +26146,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 1 x
   answer_option_b: 3 x
   answer_option_c: 5 x
@@ -25397,6 +26178,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25426,6 +26208,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25455,6 +26238,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25484,6 +26268,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25513,6 +26298,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25542,6 +26328,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25572,6 +26359,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '50'
   answer_option_b: '200'
   answer_option_c: '500'
@@ -25626,6 +26414,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Moins de viande
   answer_option_b: Moins de vêtements neufs
   answer_option_c: Moins de voiture
@@ -25666,6 +26455,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '123'
   answer_option_b: '298'
   answer_option_c: '625'
@@ -25696,6 +26486,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25725,6 +26516,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25754,6 +26546,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25783,6 +26576,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25812,6 +26606,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25841,6 +26636,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25870,6 +26666,7 @@
   type: QCM
   category: 5
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -25899,6 +26696,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: 50 km/h
   answer_option_b: 100 km/h
   answer_option_c: 150 km/h
@@ -25927,6 +26725,7 @@
   type: VF
   category: null
   difficulty: 0
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -25956,6 +26755,7 @@
   type: VF
   category: 1
   difficulty: 0
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -25985,6 +26785,7 @@
   type: QCM
   category: 3
   difficulty: 1
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -26015,6 +26816,7 @@
   type: VF
   category: 1
   difficulty: 0
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -26042,6 +26844,7 @@
   type: VF
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -26070,6 +26873,7 @@
   type: VF
   category: 1
   difficulty: 0
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -26097,6 +26901,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: 5%
   answer_option_b: 25%
   answer_option_c: 50%
@@ -26125,6 +26930,7 @@
   type: VF
   category: 3
   difficulty: 0
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -26153,6 +26959,7 @@
   type: VF
   category: 1
   difficulty: 0
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -26182,6 +26989,7 @@
   type: VF
   category: 4
   difficulty: 0
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -26210,6 +27018,7 @@
   type: VF
   category: 1
   difficulty: 0
+  language: Français
   answer_option_a: Vrai
   answer_option_b: Faux
   answer_option_c: ''
@@ -26239,6 +27048,7 @@
   type: QCM
   category: 7
   difficulty: 1
+  language: Français
   answer_option_a: 3%
   answer_option_b: 15%
   answer_option_c: 50%
@@ -26270,6 +27080,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: 0.1%
   answer_option_b: 1%
   answer_option_c: 10%
@@ -26302,6 +27113,7 @@
   type: QCM
   category: 7
   difficulty: 4
+  language: Français
   answer_option_a: 2%
   answer_option_b: 15%
   answer_option_c: 33%
@@ -26338,6 +27150,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 100 ppm
   answer_option_b: 500 ppm
   answer_option_c: 1 000 ppm
@@ -26370,6 +27183,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: '0'
   answer_option_b: '1'
   answer_option_c: '2'
@@ -26400,6 +27214,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 1,3 millions d'années
   answer_option_b: 3 millions d'années
   answer_option_c: 13 millions d'années
@@ -26431,6 +27246,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 2 mètres au-dessus de l'actuel
   answer_option_b: 5 mètres au-dessus de l'actuel
   answer_option_c: 20 mètres au-dessus de l'actuel
@@ -26465,6 +27281,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 550 ppm
   answer_option_b: 750 ppm
   answer_option_c: 950 ppm
@@ -26497,6 +27314,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 2 fois plus rapide qu'aujourd'hui
   answer_option_b: Similaire à celle d'aujourd'hui
   answer_option_c: 2 fois plus lente qu’aujourd’hui
@@ -26529,6 +27347,7 @@
   type: QCM
   category: 1
   difficulty: 4
+  language: Français
   answer_option_a: 1 000 ans
   answer_option_b: 10 000 ans
   answer_option_c: 100 000 ans
@@ -26561,6 +27380,7 @@
   type: QCM
   category: 4
   difficulty: 3
+  language: Français
   answer_option_a: Il y a 65 millions d'années
   answer_option_b: Il y a 200 millions d'années
   answer_option_c: Il y a 250 millions d'années
@@ -26592,6 +27412,7 @@
   type: QCM
   category: 4
   difficulty: 4
+  language: Français
   answer_option_a: 300 ans
   answer_option_b: 3,000 ans
   answer_option_c: 30,000 ans
@@ -26637,6 +27458,7 @@
   type: QCM
   category: 4
   difficulty: 3
+  language: Français
   answer_option_a: Granite
   answer_option_b: Calcaire
   answer_option_c: Pétrole
@@ -26669,6 +27491,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: 3%
   answer_option_b: 11%
   answer_option_c: 35%
@@ -26700,6 +27523,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: 3%
   answer_option_b: 15%
   answer_option_c: 29%
@@ -26731,6 +27555,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: 500 millions
   answer_option_b: 1 milliard
   answer_option_c: 1.5 milliard
@@ -26761,6 +27586,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: 20%
   answer_option_b: 30%
   answer_option_c: 50%
@@ -26796,6 +27622,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Les 3 sont au même niveau
   answer_option_b: Les terminaux utilisateurs
   answer_option_c: Les infrastructures réseau
@@ -26830,6 +27657,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: négligeable, c'est dématérialisé
   answer_option_b: 2%
   answer_option_c: 4%
@@ -26863,6 +27691,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 20%
   answer_option_b: 40%
   answer_option_c: 60%
@@ -26892,6 +27721,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 20%
   answer_option_b: 40%
   answer_option_c: 60%
@@ -26928,6 +27758,7 @@
   type: VF
   category: 7
   difficulty: 1
+  language: Français
   answer_option_a: Oui
   answer_option_b: Non
   answer_option_c: ''
@@ -26964,6 +27795,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: <5000
   answer_option_b: 5000-24000
   answer_option_c: 24000-58000
@@ -26997,6 +27829,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: Chine
   answer_option_b: France
   answer_option_c: Inde
@@ -27027,6 +27860,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: Irrigation
   answer_option_b: Production d'hydroélectricité
   answer_option_c: Gestion des inondations
@@ -27057,6 +27891,7 @@
   type: QCM
   category: 7
   difficulty: 1
+  language: Français
   answer_option_a: Trois-Gorges (Chine)
   answer_option_b: Roselend (France)
   answer_option_c: Zillergründl (Autriche)
@@ -27085,6 +27920,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -27114,6 +27950,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: '0.001'
   answer_option_b: ''
   answer_option_c: ''
@@ -27142,6 +27979,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: 500,000
   answer_option_b: 1,2 million
   answer_option_c: 5,2 millions
@@ -27172,6 +28010,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: 10 milliards $
   answer_option_b: 30 milliards $
   answer_option_c: 100 milliards $
@@ -27200,6 +28039,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: 300 litres
   answer_option_b: 2,000 litres
   answer_option_c: 10,000 litres
@@ -27233,6 +28073,7 @@
   type: QCM
   category: 7
   difficulty: 4
+  language: Français
   answer_option_a: '30'
   answer_option_b: '300'
   answer_option_c: 3,000
@@ -27262,6 +28103,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: 2,5%
   answer_option_b: 5%
   answer_option_c: 10%
@@ -27296,6 +28138,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 2%
   answer_option_b: 5%
   answer_option_c: 9%
@@ -27330,6 +28173,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: 500 g
   answer_option_b: 1,2 kg
   answer_option_c: 14 kg
@@ -27362,6 +28206,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: 30,000
   answer_option_b: 500,000
   answer_option_c: 900,000
@@ -27399,6 +28244,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: La masse des équipements vendus
   answer_option_b: le taux d'équipement par utilisateur
   answer_option_c: Le nombre d'objets connectés
@@ -27439,6 +28285,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 725 millions
   answer_option_b: 2,4 milliards
   answer_option_c: 15 milliards
@@ -27470,6 +28317,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 2 g CO2e
   answer_option_b: 4 g CO2e
   answer_option_c: 19 g CO2
@@ -27503,6 +28351,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 1,000 km
   answer_option_b: 3,500 km
   answer_option_c: 6,800 km
@@ -27533,6 +28382,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: Entre 270 et 670 milliers de tonnes de CO2e supplémentaires, soit
     les émissions de 1,5 à 4 millions de passagers faisant un Paris - New York aller-retour
   answer_option_b: Entre 2,7 et 6,7 millions de tonnes CO2e supplémentaires, soit
@@ -27571,6 +28421,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: La 5G sera un catalyseur de progrès du fait de sa meilleure efficacité
     énergétique, d'une réduction de latence, de débits augmentés et d'une densité
     plus forte de terminaux connectable.
@@ -27610,6 +28461,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: 10%
   answer_option_b: 33%
   answer_option_c: 50%
@@ -27646,6 +28498,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 0,02%
   answer_option_b: 0,2%
   answer_option_c: 2%
@@ -27680,6 +28533,7 @@
   type: QCM
   category: 3
   difficulty: 3
+  language: Français
   answer_option_a: 1 à 2%
   answer_option_b: 10 à 20%
   answer_option_c: 60 à 80%
@@ -27717,6 +28571,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: Ils sont recyclables à 100%, la limite est surtout la collecte
     en fin de vie
   answer_option_b: Il est moins cher d'extraire des métaux bruts que de les recycler,
@@ -27756,6 +28611,7 @@
   type: QCM
   category: 7
   difficulty: 3
+  language: Français
   answer_option_a: négligeable
   answer_option_b: 1 à 2%
   answer_option_c: 10 à 15%
@@ -27788,6 +28644,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: La tendance pour une amélioration technologique à augmenter l'impact
     total, car cette technologie est davantage utilisée.
   answer_option_b: L'existence d'une diversité de leviers d'actions possibles pour
@@ -27824,6 +28681,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 1%
   answer_option_b: 10%
   answer_option_c: 30%
@@ -27866,6 +28724,7 @@
   type: QCM-RM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 10 fois plus de sable que de ciment
   answer_option_b: Presque 100 fois plus d'eau douce que de sable
   answer_option_c: 5 fois plus de fer que de ciment et d'aluminium
@@ -27901,6 +28760,7 @@
   type: QCM
   category: 6
   difficulty: 4
+  language: Français
   answer_option_a: 6 km/h
   answer_option_b: 12 km/h
   answer_option_c: 30 km/h
@@ -27934,6 +28794,7 @@
   type: QCM
   category: 8
   difficulty: 3
+  language: Français
   answer_option_a: de l'ordre de 50
   answer_option_b: entre 50 et 500
   answer_option_c: entre 500 et 8,000
@@ -27969,6 +28830,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Les conditions néonatales, les maladies congénitales, les problèmes
     cardiaques, les cancers
   answer_option_b: Les problèmes cardiaques (malbouffe, stress...), les problèmes
@@ -28010,6 +28872,7 @@
   type: QCM
   category: 7
   difficulty: 2
+  language: Français
   answer_option_a: 10%
   answer_option_b: 20%
   answer_option_c: 30%
@@ -28052,6 +28915,7 @@
   type: QCM
   category: 5
   difficulty: 3
+  language: Français
   answer_option_a: 1%
   answer_option_b: 5%
   answer_option_c: 10%
@@ -28091,6 +28955,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 1,000 ans
   answer_option_b: 5,000 ans
   answer_option_c: 10,000 ans
@@ -28123,6 +28988,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: -5%
   answer_option_b: -10%
   answer_option_c: -15%
@@ -28154,6 +29020,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '10'
   answer_option_b: '30'
   answer_option_c: '80'
@@ -28188,6 +29055,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '18'
   answer_option_b: '38'
   answer_option_c: '90'
@@ -28217,6 +29085,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '10'
   answer_option_b: '20'
   answer_option_c: '50'
@@ -28244,6 +29113,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: '10'
   answer_option_b: '20'
   answer_option_c: '50'
@@ -28272,6 +29142,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 9 %
   answer_option_b: 20 %
   answer_option_c: 50 %
@@ -28301,6 +29172,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 6500 m
   answer_option_b: 7400 m
   answer_option_c: 8500 m
@@ -28333,6 +29205,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 3000 m
   answer_option_b: 6100 m
   answer_option_c: 7500 m
@@ -28365,6 +29238,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 10500 m
   answer_option_b: 15500 m
   answer_option_c: 20500 m
@@ -28394,6 +29268,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: Le Train
   answer_option_b: L'avion
   answer_option_c: ''
@@ -28428,6 +29303,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: L'avion
   answer_option_b: Le train
   answer_option_c: ''
@@ -28461,6 +29337,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 8 fois plus
   answer_option_b: '30 fois plus '
   answer_option_c: 53 fois plus
@@ -28498,6 +29375,7 @@
   type: QCM
   category: 2
   difficulty: 4
+  language: Français
   answer_option_a: 50/50
   answer_option_b: ne sais pas
   answer_option_c: Oui
@@ -28557,6 +29435,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 10 ans
   answer_option_b: 20 ans
   answer_option_c: 30 ans
@@ -28594,6 +29473,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -28621,6 +29501,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -28648,6 +29529,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -28675,6 +29557,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -28702,6 +29585,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -28729,6 +29613,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -28756,6 +29641,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
@@ -28784,6 +29670,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: il a reculé de 500m
   answer_option_b: Il a reculé de 3 km
   answer_option_c: Il a reculé de 10 km
@@ -28813,6 +29700,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 25%
   answer_option_b: 45%
   answer_option_c: 65%
@@ -28844,6 +29732,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 7%
   answer_option_b: 33%
   answer_option_c: 60%
@@ -28876,6 +29765,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 1 sur 2
   answer_option_b: 1 sur 3
   answer_option_c: 1 sur 4
@@ -28912,6 +29802,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: Français
   answer_option_a: 20%
   answer_option_b: 40%
   answer_option_c: 60%
@@ -28952,6 +29843,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 30 m²
   answer_option_b: 60 m²
   answer_option_c: 100 m²
@@ -28989,6 +29881,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: 1ère
   answer_option_b: 3ème
   answer_option_c: 5ème
@@ -29018,6 +29911,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 35%
   answer_option_b: 55%
   answer_option_c: 75%
@@ -29059,6 +29953,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: Français
   answer_option_a: 17%
   answer_option_b: 37%
   answer_option_c: 57%
@@ -29092,6 +29987,7 @@
   type: QCM
   category: 8
   difficulty: 1
+  language: Français
   answer_option_a: L’utilisation d’antibiotiques dans les élevages
   answer_option_b: L’épandage de pesticides sur les cultures
   answer_option_c: La consommation de produits ultra-transformés
@@ -29119,6 +30015,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 10%
   answer_option_b: 30%
   answer_option_c: 50%
@@ -29148,6 +30045,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: Français
   answer_option_a: 30%
   answer_option_b: 50%
   answer_option_c: 70%
@@ -29176,6 +30074,7 @@
   type: QCM
   category: 1
   difficulty: 2
+  language: Français
   answer_option_a: En 2000 à Paris
   answer_option_b: En 2002 en Afrique du Sud
   answer_option_c: En 2015 à Paris
@@ -29204,6 +30103,7 @@
   type: QCM
   category: 1
   difficulty: 1
+  language: Français
   answer_option_a: +1°C
   answer_option_b: +1.2°C
   answer_option_c: +1.5°C
@@ -29233,6 +30133,7 @@
   type: QCM
   category: 1
   difficulty: 3
+  language: Français
   answer_option_a: 74%
   answer_option_b: 25%
   answer_option_c: 1%
@@ -29265,6 +30166,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: English
   answer_option_a: 20%
   answer_option_b: 40%
   answer_option_c: 60%
@@ -29304,6 +30206,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: English
   answer_option_a: 20%
   answer_option_b: 40%
   answer_option_c: 60%
@@ -29337,6 +30240,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: English
   answer_option_a: negligeable, it is dematerialized
   answer_option_b: 2%
   answer_option_c: 4%
@@ -29373,6 +30277,7 @@
   type: QCM
   category: 2
   difficulty: 2
+  language: English
   answer_option_a: The 3 are at the same level
   answer_option_b: End user devices
   answer_option_c: Network infrastructures
@@ -29407,6 +30312,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: English
   answer_option_a: 7 kg CO2, about 50 km in Clio car using gas
   answer_option_b: 70 kg CO2, about 500 km in Clio car using gas
   answer_option_c: 700 kg CO2, about 5,000 km in Clio car using gas
@@ -29445,6 +30351,7 @@
   type: QCM
   category: 2
   difficulty: 1
+  language: English
   answer_option_a: 1%
   answer_option_b: 3%
   answer_option_c: 8%
@@ -29481,6 +30388,7 @@
   type: QCM
   category: 2
   difficulty: 3
+  language: English
   answer_option_a: 1st
   answer_option_b: 3rd
   answer_option_c: 5th
