@@ -420,7 +420,7 @@
   answer_accessible_url: https://sciencepost.fr/petrole-la-barre-des-100-millions-de-barils-consommes-par-jour-a-ete-franchie/
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://resiliencealimentaire.org/wp-content/uploads/2019/04/word-image-32-768x328.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/13.png
   answer_image_explanation: 'Projections du déclin de la production des gisements
     pétroliers (tous pétroles) actuellement en exploitation et de la demande mondiale.
     Le déclin naturel correspond à un taux d’environ 8 % et serait la conséquence
@@ -2645,37 +2645,44 @@
   - 142
   - 163
 - id: 81
-  text: Quelle est la part des énergies fossiles dans la consommation d'énergie dans
-    le monde ?
+  text: Quels sont les 6 éléments essentiels à la vie sur Terre ?
   hint: ''
   type: QCM
   category: 5
-  difficulty: 2
-  answer_option_a: 40%
-  answer_option_b: 60%
-  answer_option_c: 80%
-  answer_option_d: 90%
-  answer_correct: c
-  has_ordered_answers: true
-  answer_explanation: Pétrole (33%), Charbon (27%), Gaz (23%)
+  difficulty: 3
+  answer_option_a: Oxygène, Hydrogène, Azote, Phosphore, Carbone et Potassium
+  answer_option_b: Carbone, Hydrogène, Azote, Oxygène, Phosphore et Soufre
+  answer_option_c: Carbone, Hydrogène, Oxygène, Potassium, Calcium et Sodium
+  answer_option_d: Oxygène, Hydrogène, Carbone, Azote, Phosphore et Calcium.
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: 'CHNOPS est un acronyme mnémotechnique désignant les six éléments
+    chimiques principaux qui constituent les êtres vivants :
+
+    C : Carbone
+
+    H : Hydrogène
+
+    N : Azote (Nitrogène)
+
+    O : Oxygène
+
+    P : Phosphore
+
+    S : Soufre'
   answer_accessible_url: ''
-  answer_scientific_url: https://ourworldindata.org/grapher/energy-consumption-by-source-and-region
+  answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
-  answer_extra_info: retiré car doublon avec la question 70
-  author: Avenir Climatique
+  answer_extra_info: ''
+  author: Jean-Christophe Anna
   validator: ''
-  validation_status: Écartée
-  added: 2020-03-11
+  validation_status: Brouillon
+  added: 2021-02-21
   created: 2020-03-11
   updated: 2020-05-28
-  tags:
-  - 2
-  - 11
-  - 19
-  - 40
-  - 41
+  tags: []
 - id: 82
   text: Négawatt est une association qui propose une feuille de route permettant à
     la France de se passer de l'énergie nucléaire et presque totalement des énergies
@@ -7468,7 +7475,7 @@
   answer_extra_info: ''
   author: Raphael Odini
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-05-08
   created: 2020-05-05
   updated: 2020-09-28
@@ -20769,6 +20776,41 @@
   tags:
   - 1
   - 100
+- id: 649
+  text: Quelle proportion des populations d'animaux vertébrés sauvages (poissons,
+    oiseaux, mammifères terrestres et marins, amphibiens et reptiles) a disparu en
+    46 ans ?
+  hint: ''
+  type: QCM
+  category: 4
+  difficulty: 2
+  answer_option_a: 48%
+  answer_option_b: 58%
+  answer_option_c: 68%
+  answer_option_d: 78%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: Selon le rapport Planète Vivante publié en 2020 par le WWF,
+    68%* des populations d’animaux vertébrés sauvages – poissons, oiseaux, mammifères
+    terrestres et marins, amphibiens et reptiles – ont disparu en 46 ans (1970-2016)
+    au niveau mondial. Dont 8% pour la seule période 2014-2016, soit une accélération
+    aussi spectaculaire qu'inquiétante du déclin. Ce chiffre monte jusqu’à 94% dans
+    la zone Amérique latine-Amérique centrale-Caraïbes. Le rythme est 100 à 1 000
+    fois plus rapide que la vitesse naturelle d'extinction.
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Jean-Christophe Anna
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-21
+  created: 2021-02-22
+  updated: 2021-02-22
+  tags:
+  - 246
 - id: 650
   text: Sur les 20 plus grands incendies depuis 90 ans en Californie, combien ont
     eu lieu après l'an 2000 ?
@@ -27214,6 +27256,39 @@
   updated: 2021-02-02
   tags:
   - 37
+- id: 844
+  text: Quelle est la proportion d'eau douce (potable) sur Terre ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 2
+  answer_option_a: 2,5%
+  answer_option_b: 5%
+  answer_option_c: 10%
+  answer_option_d: 20%
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: 'Si sur notre planète bleue, l’eau semble omniprésente, 97,5%
+    de la quantité totale est de l’eau de mer, impropre à la consommation humaine
+    et à l’agriculture/élevage puisqu’elle est salée. Or, la désalinisation de l’eau
+    de mer est très coûteuse et… très énergivore. L’eau douce, celle qui est potable
+    ne représente que 2,5% ! Elle est présente sous différentes formes : 1,9% (68,9%
+    des 2,5%) sous forme de glace, 0,3% dans les nappes phréatiques et 0,3% sous forme
+    de précipitations, de rivières ou de lacs.'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Jean-Christophe Anna
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-21
+  created: 2021-02-22
+  updated: 2021-02-22
+  tags:
+  - 37
 - id: 845
   text: Quel est le taux actuel mondial de croissance de la consommation d'énergie
     par an pour le secteur numérique ? (référence 2020)
@@ -27876,7 +27951,7 @@
   answer_accessible_url: https://fr.statista.com/infographie/17800/big-data-evolution-quantite-donnees-numeriques-creees-dans-le-monde/
   answer_scientific_url: https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/864.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/863.png
   answer_image_explanation: IDC, cité par [https://www.economist.com/special-report/2010/02/27/data-data-everywhere](https://www.economist.com/special-report/2010/02/27/data-data-everywhere)
   answer_extra_info: ''
   author: Max Pinsard
@@ -27917,7 +27992,7 @@
   answer_accessible_url: https://www.who.int/fr/news-room/fact-sheets/detail/the-top-10-causes-of-death
   answer_scientific_url: https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/global-health-estimates-leading-causes-of-dalys
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/863.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/864.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -27928,6 +28003,151 @@
   updated: 2021-02-14
   tags:
   - 234
+- id: 865
+  text: Quelle proportion de la population mondiale n'a pas accès à l'eau potable
+    ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 2
+  answer_option_a: 10%
+  answer_option_b: 20%
+  answer_option_c: 30%
+  answer_option_d: 40%
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: 'En 2025, selon l’ONU, entre la moitié et les deux tiers de
+    l’humanité – soit entre 4 et 5,3 milliards d’humains – devraient être en situation
+    dite de stress hydrique.
+
+    Selon une étude parue dans le journal Nature :
+
+    - 80% de la population mondiale est exposée à des risques de pénurie ;
+
+    - en 2030, 40% de la demande mondiale en eau ne sera pas couverte ;
+
+    - en 2040, 1 pays sur 5 dans le monde devra faire face à de sévères pénuries d’eau
+    ; le Moyen-Orient sera la région la plus touchée par les futures crises de l’eau
+    : 14 des 33 pays qui sont les plus exposés au monde se trouvent dans cette zone
+    du globe.'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: Etude 'Global Threats to human water security and
+    river biodiversity', revue Nature – 2010
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Jean-Christophe Anna
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-21
+  created: 2021-02-22
+  updated: 2021-02-22
+  tags:
+  - 37
+- id: 866
+  text: Quelle est la proportion d'énergies renouvelables dans le mix énergétique
+    mondial ?
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 3
+  answer_option_a: 1%
+  answer_option_b: 5%
+  answer_option_c: 10%
+  answer_option_d: 20%
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: "Loin de se substituer, les énergies se sont historiquement\
+    \ toujours… additionnées les unes aux autres ! Ainsi, le pétrole n’a jamais remplacé\
+    \ le charbon, pas plus que le nucléaire n’a remplacé le pétrole. \nLe mix énergétique\
+    \ mondial n’a pas évolué depuis… 1980. Selon le World Energy Outlook publié par\
+    \ l'Agence Internationale de l’Énergie en 2017, les énergies fossiles fournissent\
+    \ toujours l’essentiel de la consommation d’énergie de l’humanité, soit 82% :\
+    \ 32% pour le pétrole, 28% pour le charbon et 22% pour le gaz naturel. Le nucléaire\
+    \ représente 5%, l’hydroélectricité 2%, les biocarburants et les déchets 10%.\
+    \ Les énergies renouvelables (solaire et éolien principalement), quant à elles,\
+    \ ne couvrent que 1% de la consommation mondiale. Ainsi, malgré leur développement,\
+    \ leur proportion dans le mix énergétique n’évolue pas car, dans le même temps,\
+    \ les énergies fossiles continuent d’être utilisées toujours en plus grande quantité."
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Jean-Christophe Anna
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-21
+  created: 2021-02-22
+  updated: 2021-02-22
+  tags:
+  - 44
+- id: 867
+  text: La dernière fois que la Terre a connu un réchauffement de 5°C, cela a eu lieu
+    sur une période de... ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 2
+  answer_option_a: 1,000 ans
+  answer_option_b: 5,000 ans
+  answer_option_c: 10,000 ans
+  answer_option_d: 15,000 ans
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: ' La dernière fois que la Terre a connu un tel réchauffement,
+    lors de la sortie de la période glaciaire (entre il y a 21 000 et il y a 11 000
+    ans), la vie a eu le temps de s’adapter puisque cela s’est produit sur... 10 000
+    ans, soit une augmentation moyenne 0,05°C par siècle. Selon certains scenarios
+    du GIEC, on parle de 5°C en 250 ans (1850-2100), voire… en un seul siècle si les
+    pires devaient se produire !'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Jean-Christophe Anna
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-21
+  created: 2021-02-22
+  updated: 2021-02-22
+  tags: []
+- id: 868
+  text: Quel est l'impact prévu sur les rendements agricoles d'un degré supplémentaire
+    (température globale mondiale) ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 3
+  answer_option_a: -5%
+  answer_option_b: -10%
+  answer_option_c: -15%
+  answer_option_d: -20%
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: Une hausse d’1°C de la température moyenne correspond à une
+    perte de 10% des rendements agricoles, une augmentation de 20% des départs de
+    feux (domino biologique) et une augmentation de 20 à 40% des risques d’affrontements
+    armés (domino politique et domino social) et de mouvements migratoires qui se
+    compteront en centaines de millions d’humains.
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Jean-Christophe Anna
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-21
+  created: 2021-02-22
+  updated: 2021-02-22
+  tags:
+  - 51
 - id: 900
   text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
   hint: Bas carbone donc…
@@ -28762,6 +28982,35 @@
   tags:
   - 5
   - 239
+- id: 927
+  text: Si la RVM - la République des Vaches du Monde - était un pays, en quelle position
+    arriverait-il en termes d’émissions de gaz à effet de serre ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 2
+  answer_option_a: 1ère
+  answer_option_b: 3ème
+  answer_option_c: 5ème
+  answer_option_d: 10ème
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'L’élevage représente environ 15% des émissions mondiales de
+    GES : de manière directe avec la fermentation entérique et indirecte avec la déforestation
+    et les engrais azotés pour produire la nourriture de ces animaux.'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Julien Briton
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-17
+  created: 2021-02-21
+  updated: 2021-02-21
+  tags: []
 - id: 928
   text: En France, la grande distribution représente quel pourcentage des dépenses
     de produits alimentaires.
