@@ -3,6 +3,7 @@
   introduction: <p>Quelques chiffres pour se mettre en jambes.</p>
   conclusion: ''
   difficulty_average: 1.9
+  language: Français
   author: Raphael Odini
   image_background_url: https://showyourstripes.info/stripes/GLOBE---1850-2019-MO.png
   has_audio: false
@@ -17,6 +18,7 @@
     en France.</p>
   conclusion: ''
   difficulty_average: 2.3
+  language: Français
   author: Raphael Odini
   image_background_url: https://i3.wp.com/fee.asso.fr/wp-content/uploads/2015/09/Carte-de-France-eolien-2015.jpg
   has_audio: false
@@ -41,6 +43,7 @@
   conclusion: <p>Si ce quiz vous a intéressé, vous le serez problablement par <a href="http://quizanthropocene.fr/quiz/18">celui-ci,</a>
     qui traite de questions similaires.</p>
   difficulty_average: 2.2
+  language: Français
   author: Vincent Mignerot
   image_background_url: https://www.slate.fr/sites/default/files/styles/1060x523/public/neandertal_1.jpg
   has_audio: true
@@ -57,6 +60,7 @@
     ce quiz sur les différentes ressources non-renouvelables dont nous faisons usage.
   conclusion: ''
   difficulty_average: 2.7
+  language: Français
   author: Matthieu Massart
   image_background_url: https://upload.wikimedia.org/wikipedia/commons/f/fe/GlobalPeakOil.png
   has_audio: false
@@ -72,6 +76,7 @@
     imputées. Connaissez-vous votre empreinte ? Voyons voir ça.</p>
   conclusion: ''
   difficulty_average: 2.1
+  language: Français
   author: Matthieu Massart
   image_background_url: https://leshorizons.net/wp-content/uploads/2019/04/d%C3%A9finition-de-lempreinte-carbone-1020x512.jpg
   has_audio: false
@@ -92,6 +97,7 @@
     \ planète qu'il occupe.<br />\r\n<br />\r\nDurée à prévoir : 15 min</p>"
   conclusion: ''
   difficulty_average: 2.7
+  language: Français
   author: Matthieu Massart
   image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
   has_audio: false
@@ -106,6 +112,7 @@
     à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
   conclusion: ''
   difficulty_average: 2.5
+  language: Français
   author: Matthieu Massart
   image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
   has_audio: false
@@ -127,6 +134,7 @@
     \ inscrire à un atelier. Plus d'information <a href=\"https://fresqueduclimat.org\"\
     >ici</a>.</p>\r\n\r\n<p> </p>"
   difficulty_average: 2.1
+  language: Français
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
   has_audio: false
@@ -142,6 +150,7 @@
     la variété et l'ampleur ? C'est ce que ce quiz se propose d'explorer.
   conclusion: ''
   difficulty_average: 3.3
+  language: Français
   author: Matthieu Massart
   image_background_url: https://static.latribune.fr/full_width/1201312/plastique-a-jakarta.jpg
   has_audio: false
@@ -156,6 +165,7 @@
     à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
   conclusion: ''
   difficulty_average: 2.2
+  language: Français
   author: Matthieu Massart
   image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
   has_audio: false
@@ -177,6 +187,7 @@
   conclusion: <p>Vous voilà prêt à vous attaquer au lot 3 ! Ou, mieux encore, à vous
     inscrire à un atelier. Plus d'information <a href="https://fresqueduclimat.org">ici</a>.</p>
   difficulty_average: 1.9
+  language: Français
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/IMG_9753-215x215.jpg
   has_audio: false
@@ -197,6 +208,7 @@
     \ lors d'une Fresque.</p>"
   conclusion: <p>Vous pouvez vous inscire à un atelier. Plus d'information <a href="https://fresqueduclimat.org">ici</a>.</p>
   difficulty_average: 2.0
+  language: Français
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/J1A3917120919-2-215x215.jpg
   has_audio: false
@@ -217,6 +229,7 @@
     \ lors d'une fresque.</p>"
   conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
   difficulty_average: 2.7
+  language: Français
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/07/PartieRestit-scaled.jpg?gid=1
   has_audio: false
@@ -237,6 +250,7 @@
     \ de cartes distribué lors d'une Fresque.</p>"
   conclusion: <p>Plus d'information sur la Fresque du Climat <a href="https://fresqueduclimat.org">ici</a>.</p>
   difficulty_average: 1.7
+  language: Français
   author: Matthieu Massart
   image_background_url: ''
   has_audio: false
@@ -258,6 +272,7 @@
     \ liées aux 42 cartes du jeu.</p>"
   conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
   difficulty_average: 2.2
+  language: Français
   author: Matthieu Massart
   image_background_url: https://jive.univ-lille.fr/fileadmin/_processed_/c/d/csm_fresque-climat_ac9a138d0f.jpg
   has_audio: false
@@ -277,6 +292,7 @@
     inédite de l'homme sur la planète qu'il occupe.</p>
   conclusion: ''
   difficulty_average: 2.3
+  language: Français
   author: Matthieu Massart
   image_background_url: https://reporterre.net/local/cache-vignettes/L720xH481/arton11947-94df2.jpg?1597417424
   has_audio: false
@@ -291,6 +307,7 @@
     via ces quelques questions.</p>
   conclusion: ''
   difficulty_average: 2.5
+  language: Français
   author: Matthieu Massart
   image_background_url: https://images.sudouest.fr/2019/04/25/5cc1b08b66a4bd2c135ac1f5/widescreen/1000x500/l-extinction-des-dinosaures.jpg?v1
   has_audio: false
@@ -326,6 +343,7 @@
     vous plonger dans les ouvrages de Laurent, ou continuer dans le même esprit avec
     le <a href="https://quizanthropocene.fr/quiz/3">quiz de Vincent Mignerot</a>.</p>
   difficulty_average: 2.7
+  language: Français
   author: Laurent Testot
   image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
   has_audio: true
@@ -349,6 +367,7 @@
     parti.</p>'
   conclusion: ''
   difficulty_average: 3.0
+  language: Français
   author: Bonpote
   image_background_url: https://patch.com/img/cdn20/users/224111/20190401/020846/styles/raw/public/processed_images/tree_with_money-1554098721-8512.jpg
   has_audio: false
@@ -368,6 +387,7 @@
     \ !</p>\r\n\r\n<p>Pour vous remettre de ce remue-méninge, n'hésitez pas à allez\
     \ découvrir les autres quiz, ils sont nettement plus faciles !</p>"
   difficulty_average: 4.0
+  language: Français
   author: laydgeur
   image_background_url: https://cdn.pixabay.com/photo/2016/11/21/15/28/brain-1845962_1280.jpg
   has_audio: false
@@ -391,6 +411,7 @@
     \ sur notre page de quiz, vous trouverez d'autres quiz thématiques pour pour étancher\
     \ votre soif de compréhension de notre dépendance à l'or noir ;)</p>"
   difficulty_average: 2.6
+  language: Français
   author: laydgeur
   image_background_url: https://cdn.pixabay.com/photo/2017/12/08/08/17/america-3005258_1280.jpg
   has_audio: false
@@ -423,6 +444,7 @@
     \ en appétit, il est temps pour vous d'aller visionner la vidéo <a href=\"https://youtu.be/AQlqQEhVi1M\"\
     >ici</a> ! Et ses autres vidéos aussi d'ailleurs.<br />\r\n </p>"
   difficulty_average: 2.9
+  language: Français
   author: Le Réveilleur
   image_background_url: https://www.lereveilleur.com/wp-content/uploads/2020/09/CSC_paint.jpg
   has_audio: false
@@ -442,6 +464,7 @@
     </a>et <a href="https://quizanthropocene.fr/quiz/10">là</a>. Et pour aller au
     coma éthylique énergétique, c'est <a href="https://quizanthropocene.fr/quiz/54">par-là</a>.</p>
   difficulty_average: 2.5
+  language: Français
   author: Matthieu Massart
   image_background_url: https://www.popsci.com/resizer/iHd2-DUNyurlTDhvndesdxzQoFU=/857x643/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/MTUGSVPHBB22CKTZETTB42BCIE.jpg
   has_audio: false
@@ -458,6 +481,7 @@
   conclusion: <p>En route vers 2021 ! La nouvelle année nous réservera-t-elle son
     lot de chiffres et faits inattendus ?</p>
   difficulty_average: 1.8
+  language: Français
   author: Raphael Odini
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/057.jpg
   has_audio: false
@@ -484,6 +508,7 @@
     à un atelier. Plus d'information sur <a href="https://fresquedunumerique.org">Fresque
     du Numérique. </a></p>
   difficulty_average: 2.1
+  language: Français
   author: Aurélien Déragne
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/logo%20FDN%20fond%20blanc.png
   has_audio: false
@@ -502,6 +527,7 @@
     de la sobriété numérique. Vous pouvez également compléter vos connaissances avec
     le quiz de la fresque du numérique.</p>
   difficulty_average: 2.3
+  language: Français
   author: Alain Servigne
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/Quiz60.jpg
   has_audio: false
@@ -539,6 +565,7 @@
     une croissance infinie dans un monde aux ressources finies qui SE DÉGRADENT et
     SE DISPERSENT »</p>
   difficulty_average: 2.6
+  language: Français
   author: Max Pinsard
   image_background_url: https://fresquedeslowtechs.files.wordpress.com/2021/02/fr_techs_modern_dezo_flouetee_64c.png
   has_audio: false
@@ -565,6 +592,7 @@
     \ une alimentation durable améliore la résilience alimentaire.</p>\r\n\r\n<p> </p>\r\
     \n\r\n<p> </p>"
   difficulty_average: 0.0
+  language: Français
   author: ''
   image_background_url: ''
   has_audio: false
@@ -575,14 +603,23 @@
   tags: []
 - id: 63
   name: Digital Collage - the Quiz
-  introduction: ''
-  conclusion: ''
+  introduction: "<p>The Digital Collage is a collaborative and pedagogical workshop\
+    \ aiming at showing the ecological impacts of the digital world and potential\
+    \ levers to alleviate their impact, in a friendly way! The principle is the same\
+    \ as the Climate Collage workshop:link cards showing cause-to-effect relationships.<br\
+    \ />\r\nCome on, get to grips with a few questions inspired by this workshop!<br\
+    \ />\r\n<br />\r\nEnglish version: Benoît Baraque, based on an initial quiz by\
+    \ Aurélien Deragne</p>"
+  conclusion: <p>As you can see, the digital world is causing real impacts. A good
+    news? There are plenty of measures that can easily be adopted to reduce them.
+    They are exposed in the Digital Collage workshop (in French only so far).</p>
   difficulty_average: 2.1
+  language: English
   author: 'Aurélien Deragne, translation: Benoît Barraque'
-  image_background_url: ''
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/logo%20FDN.png
   has_audio: false
   publish: false
   spotlight: false
   created: 2021-02-20
-  updated: 2021-02-21
+  updated: 2021-02-22
   tags: []
