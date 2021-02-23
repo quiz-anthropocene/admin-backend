@@ -2,7 +2,7 @@
   <section class="feedback-card small">
     <div class="row no-gutters margin-top-bottom-10">
       <div class="col-sm">
-        <h3 class="margin-5">Votre avis sur {{ (context.source) === 'question' ? 'cette' : 'ce' }} {{ context.source }} ?</h3>
+        <h3 class="margin-5">{{ $t('feedback.yourOpinion') }} {{ (context.source) === 'question' ? $t('words.cette') : $t('words.ce') }} {{ context.source }}{{ $t('words.questionMark') }}</h3>
       </div>
 
       <div class="col-sm action">
@@ -11,12 +11,12 @@
           <button class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Je n'ai pas aimé" @click="submitFeedback('dislike')" :disabled="feedbackSubmitted">👎<span class="fake-link"></span></button>
         </span>
         <span v-if="feedbackSubmitted" class="span-like margin-left-right-10">
-          Merci 💯
+          {{ $t('messages.thanks') }}&nbsp;💯
           <span v-if="feedbackResponse" class="margin-left-right-10">
             <strong>{{ feedbackResponse.like_count_agg }}</strong>&nbsp;👍&nbsp;&nbsp;<strong>{{ feedbackResponse.dislike_count_agg }}</strong>&nbsp;👎&nbsp;</span>
         </span>
         <button class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Votre avis" @click="showContributionForm = !showContributionForm">
-          💬&nbsp;<span class="fake-link">Suggérer une modification</span>
+          💬&nbsp;<span class="fake-link">{{ $t('feedback.suggestCorrection') }}</span>
           <span v-if="!showContributionForm">&nbsp;▸</span>
           <span v-if="showContributionForm">&nbsp;▾</span>
         </button>
@@ -28,7 +28,7 @@
       <hr class="custom-separator" />
       <form @submit.prevent="submitContribution" v-if="!contributionSubmitted">
         <h3 class="margin-bottom-0">
-          <label for="contribution_text">Votre suggestion, commentaire, ... <span class="color-red">*</span></label>
+          <label for="contribution_text">{{ $t('feedback.yourSuggestion') }} <span class="color-red">*</span></label>
         </h3>
         <p>
           <textarea id="contribution_text" class="form-control" rows="2" v-model="contribution_text" required></textarea>
@@ -43,7 +43,7 @@
           </i>
         </p>
         <p>
-          🙋&nbsp;Veuillez indiquer votre <strong>email</strong> si voulez être tenu au courant de votre contribution !<br />
+          🙋&nbsp;{{ $t('feedback.userEmail') }}<br />
         </p>
         <p class="help-text">
           <i>En soumettant ce formulaire, vous autorisez que les informations saisies soient traitées afin d'améliorer notre application, et vous recontacter si besoin.</i>
@@ -53,17 +53,17 @@
         </p>
       </form>
       <div v-if="contributionSubmitted && loading" class="loading">
-        <p>Envoi de votre suggestion...</p>
+        <p>{{ $t('feedback.sendingSuggestion') }}</p>
       </div>
 
       <div v-if="contributionSubmitted && error" class="error">
-        <h3>Il y a eu une erreur 😢</h3>
+        <h3>{{ $t('messages.errorOccured') }}&nbsp;😢</h3>
         <p>{{ error }}</p>
       </div>
 
       <div v-if="contributionSubmitted && contributionResponse">
-        <h3>Merci beaucoup 💯</h3>
-        <p>On fera de notre mieux pour prendre en compte votre suggestion.</p>
+        <h3>{{ $t('messages.thankYou') }}&nbsp;💯</h3>
+        <p>{{ $t('feedback.suggestionSubmitted') }}</p>
       </div>
     </template>
 

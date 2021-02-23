@@ -3,7 +3,7 @@
     <div id="fb-root"></div>
     <div class="row">
       <div class="col-md">
-        Partager le quiz avec vos amis
+        {{ $t('messages.shareQuiz') }}
       </div>
       <div class="col-md">
         <div class="share-buttons row justify-content-center">

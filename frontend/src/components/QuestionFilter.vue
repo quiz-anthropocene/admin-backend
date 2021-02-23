@@ -6,7 +6,7 @@
       <div class="row no-gutters">
         <div class="col-8">
           <span class="label label-hidden">
-            <span>⚙️&nbsp;<strong>Filtres</strong></span>
+            <span>⚙️&nbsp;<strong>{{ $t('messages.filters') }}</strong></span>
             <span v-if="!showFilterBox">&nbsp;▸</span> <!-- ▲ ► -->
             <span v-if="showFilterBox">&nbsp;▾</span> <!-- ▼ -->
           </span>
@@ -18,7 +18,7 @@
           </span>
         </div>
         <div class="col-4 text-align-right" v-on:click.stop>
-          <button v-if="questionFilters.category || questionFilters.tag || questionFilters.author || questionFilters.difficulty" class="btn btn-sm btn-outline-secondary margin-5" @click="clearQuestionFilters()">Réinitialiser</button>
+          <button v-if="questionFilters.category || questionFilters.tag || questionFilters.author || questionFilters.difficulty" class="btn btn-sm btn-outline-secondary margin-5" @click="clearQuestionFilters()">{{ $t('messages.reset') }}</button>
           <span class="label label-hidden"><strong>{{ counter }}</strong> {{ objectType }}{{ (objectType === 'question' && questionsDisplayedCount > 1) ? 's' : '' }}</span>
         </div>
       </div>
@@ -28,7 +28,7 @@
     <section v-if="showFilterBox" class="filter-box--content">
 
       <div v-if="categories && objectType =='question'">
-        <h3>📂&nbsp;Catégories</h3>
+        <h3>📂&nbsp;{{ $t('messages.categories') }}</h3>
         <FilterLabel v-for="category in categories" :key="category.name" @filter-label-clicked="updateTempQuestionFilter"
           filterType="category" v-bind:filterValue="category.name" v-bind:filterCount="category['question_count']" v-bind:customClass="(category.name === tempQuestionFilters['category']) ? 'label-category--active' : ''" />
       </div>
@@ -36,7 +36,7 @@
       <hr class="custom-separator" />
 
       <div v-if="tags">
-        <h3>🏷️&nbsp;Tags</h3>
+        <h3>🏷️&nbsp;{{ $t('messages.tags') }}</h3>
         <FilterLabel v-for="tag in tags" :key="tag.name" @filter-label-clicked="updateTempQuestionFilter"
           filterType="tag" v-bind:filterValue="tag.name" v-bind:filterCount="tag[objectType === 'question' ? 'question_count' : 'quiz_count']" v-bind:customClass="(tag.name === tempQuestionFilters['tag']) ? 'label-tag--active' : ''" />
       </div>
@@ -44,7 +44,7 @@
       <hr class="custom-separator" />
 
       <div v-if="authors ">
-        <h3>📝&nbsp;Auteurs</h3>
+        <h3>📝&nbsp;{{ $t('messages.authors') }}</h3>
         <FilterLabel v-for="author in authors" :key="author.name" @filter-label-clicked="updateTempQuestionFilter"
           filterType="author" v-bind:filterValue="author.name" v-bind:filterCount="author[objectType === 'question' ? 'question_count' : 'quiz_count']" v-bind:customClass="(author.name === tempQuestionFilters['author']) ? 'label-author--active' : ''" />
       </div>
@@ -52,7 +52,7 @@
       <hr class="custom-separator" />
 
       <div v-if="difficultyLevels && objectType =='question'">
-        <h3>🏆&nbsp;Difficultés</h3>
+        <h3>🏆&nbsp;{{ $t('messages.difficulties') }}</h3>
         <FilterLabel v-for="difficulty in difficultyLevels" :key="difficulty.name" @filter-label-clicked="updateTempQuestionFilter"
           filterType="difficulty" v-bind:filterValue="difficulty.value" v-bind:filterCount="difficulty['question_count']" v-bind:customClass="(difficulty.value == tempQuestionFilters['difficulty']) ? 'label-difficulty--active' : ''" />
       </div>
@@ -62,9 +62,9 @@
 
     <!-- Action Buttons -->
     <section v-if="showFilterBox" class="filter-box--action">
-      <button class="btn btn-outline-secondary margin-5" @click="clearQuestionFilters()">Réinitialiser</button>
-      <button class="btn btn-outline-dark margin-5" @click="toggleFilterBox()">Annuler</button>
-      <button class="btn margin-5" :class="JSON.stringify(questionFilters) === JSON.stringify(tempQuestionFilters) ? 'btn-outline-primary' : 'btn-primary'" @click="updateQuestionFiltersAndQueryParams()">Mettre à jour les filtres !</button>
+      <button class="btn btn-outline-secondary margin-5" @click="clearQuestionFilters()">{{ $t('messages.reset') }}</button>
+      <button class="btn btn-outline-dark margin-5" @click="toggleFilterBox()">{{ $t('messages.cancel') }}</button>
+      <button class="btn margin-5" :class="JSON.stringify(questionFilters) === JSON.stringify(tempQuestionFilters) ? 'btn-outline-primary' : 'btn-primary'" @click="updateQuestionFiltersAndQueryParams()">{{ $t('messages.updateFilters') }}</button>
     </section>
 
   </section>

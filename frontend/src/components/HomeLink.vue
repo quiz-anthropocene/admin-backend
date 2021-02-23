@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <router-link :to="{ name: 'home' }">
-      🏠&nbsp;Menu principal
+      🏠&nbsp;{{ $t('footer.home') }}
     </router-link>
   </div>
 </template>

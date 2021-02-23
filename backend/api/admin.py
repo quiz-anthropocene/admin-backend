@@ -640,6 +640,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
 
 class QuizRelationshipAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
+        "id",
         "from_quiz",
         "status",
         "to_quiz",

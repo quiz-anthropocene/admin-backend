@@ -8,7 +8,7 @@
           <span class="text-primary">#{{ context.question_number }}</span>
         </span>
         <span> | </span>
-        <span class="text-secondary">{{ question.category.name }}</span>
+        <span class="text-secondary">{{ $t('categories.'+question.category.name) }}</span>
         <span> | </span>
         <span><small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
       </h2>
@@ -31,7 +31,7 @@
           </div>
         </div>
         <div v-if="question.type === 'QCM-RM'" class="row justify-content-center">
-          <div class="col-12 margin-bottom-10"><i>⚠️&nbsp;plusieurs réponses possibles</i></div>
+          <div class="col-12 margin-bottom-10"><i>{{ $t('messages.multipleAnswers') }}</i></div>
           <div class="col-sm-auto text-align-left">
             <div class="form-group" v-for="(answer_option_letter, index) in answerChoices" :key="answer_option_letter" :class="{ 'text-primary' : answerPicked.includes(answer_option_letter), 'text-warning': (questionSubmitted && answerPicked.includes(answer_option_letter) && !question['answer_correct'].includes(answer_option_letter)), 'text-danger': (questionSubmitted && !answerPicked.includes(answer_option_letter) && question['answer_correct'].includes(answer_option_letter)) }">
               <template v-if="question['answer_option_' + answer_option_letter]">
@@ -49,11 +49,11 @@
         </div>
         <div class="row no-gutters">
           <div class="col-4">
-            <button v-if="question.hint && !showQuestionHint" class="btn btn-sm btn-outline-warning" @click="showQuestionHint=!showQuestionHint">💡un indice</button>
+            <button v-if="question.hint && !showQuestionHint" class="btn btn-sm btn-outline-warning" @click="showQuestionHint=!showQuestionHint">💡&nbsp;{{ $t('messages.hint') }}</button>
           </div>
           <div class="col-4">
             <div class="form-group">
-              <button v-if="!questionSubmitted" type="submit" class="btn" :class="answerPicked ? 'btn-primary' : 'btn-outline-primary'" :disabled="!answerPicked">Valider</button>
+              <button v-if="!questionSubmitted" type="submit" class="btn" :class="answerPicked ? 'btn-primary' : 'btn-outline-primary'" :disabled="!answerPicked">{{ $t('messages.submit') }}</button>
             </div>
           </div>
           <div class="col-4"></div>
@@ -69,7 +69,7 @@
       <h2 v-if="questionAnswer.success">{{ questionAnswer.message }} !</h2>
       <h2 v-if="!questionAnswer.success">{{ questionAnswer.message }}</h2>
       <h3 v-if="!questionAnswer.success">
-        <small>La réponse était :&nbsp;</small>
+        <small>{{ $t('messages.answerWas') }}&nbsp;</small>
         <span>{{ question["answer_option_" + question["answer_correct"]] }}</span>
       </h3>
       <!-- Answer explanation -->
@@ -110,11 +110,11 @@
           <img v-bind:src="question.answer_image_url" alt="une image pour illustrer la réponse" />
         </a>
       </p>
-      <p v-if="question.answer_image_explanation" class="answer-image-explanation" title="Légende de l'image">Légende: {{ question.answer_image_explanation }}</p>
+      <p v-if="question.answer_image_explanation" class="answer-image-explanation" title="Légende de l'image">{{ $t('messages.imageLegend') }} {{ question.answer_image_explanation }}</p>
     </div>
 
     <div v-if="question && questionSubmitted && questionNotValidated" class="alert alert-warning">
-      Cette question est en cours de validation
+      {{ $t('messages.questionPendingValidation') }}
     </div>
 
     <FeedbackCard v-if="question && questionSubmitted" v-bind:context="{ source: 'question', item: question }" />
@@ -145,8 +145,8 @@ export default {
       answerPicked: null,
       questionSubmitted: false,
       questionSuccess: null,
-      questionSuccessMessageList: constants.QUESTION_SUCCESS_MESSAGES,
-      questionErrorMessageList: constants.QUESTION_ERROR_MESSAGES,
+      questionSuccessMessageList: (this.$i18n.locale !== 'fr') ? constants.QUESTION_SUCCESS_MESSAGES_EN : constants.QUESTION_SUCCESS_MESSAGES_FR,
+      questionErrorMessageList: (this.$i18n.locale !== 'fr') ? constants.QUESTION_ERROR_MESSAGES_EN : constants.QUESTION_ERROR_MESSAGES_FR,
     };
   },
 

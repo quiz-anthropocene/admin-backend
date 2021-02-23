@@ -2,10 +2,11 @@
   <header>
     <div>
       <h1 class="text-primary">
-        <router-link class="no-decoration" :to="{ name: 'home' }">Quiz de l'Anthropocène</router-link>
+        <router-link class="no-decoration" :to="{ name: 'home' }">{{ $t('header.title') }}</router-link>
       </h1>
       <h2 class="d-none d-sm-block" :class="{ 'd-block': currentRoute === 'home' }">
-        <span v-html="configuration.application_tagline"></span>
+        <!-- <span v-html="configuration.application_tagline"></span> -->
+        {{ $t('header.subtitle') }}
       </h2>
     </div>
   </header>

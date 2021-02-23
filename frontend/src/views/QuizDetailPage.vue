@@ -7,8 +7,8 @@
 
       <div class="card-body">
         <h2 class="card-title">
-          Quiz : {{ quiz.name }}
-          <span v-if="quiz.has_audio" class="label small" style="vertical-align:top">🔉Commentaires audio</span>
+          Quiz{{ $t('words.semiColon') }} {{ quiz.name }}
+          <span v-if="quiz.has_audio" class="label small" style="vertical-align:top">🔉{{ $t('messages.audioComments') }}</span>
         </h2>
 
         <section v-if="(quizStep === 0) || (quizStep > quiz.questions.length)">
@@ -20,8 +20,8 @@
             <div class="col" title="Nombre de questions">
               <span class="label label-hidden"><strong>{{ quiz.questions.length }}</strong></span>Questions
             </div>
-            <div class="col" title="Difficulté">
-              🏆&nbsp;Difficulté<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }} / 4</strong></span>
+            <div class="col" v-bind:title="$t('messages.difficulty')">
+              🏆&nbsp;{{ $t('messages.difficulty') }}<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }} / 4</strong></span>
             </div>
             <!-- <div class="col" title="Auteur du quiz">
               📝&nbsp;Auteur<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>
@@ -38,7 +38,7 @@
 
           <div v-if="previousQuiz" class="row no-gutters">
             <div class="col">
-              <span>Ce quiz est la suite de&nbsp;👉&nbsp;</span>
+              <span>{{ $t('messages.previousQuiz') }}&nbsp;👉&nbsp;</span>
               <strong><router-link class="no-decoration" :to="{ name: 'quiz-detail', params: { quizId: previousQuiz.id } }">{{ previousQuiz.name }}</router-link></strong>
             </div>
           </div>
@@ -47,15 +47,15 @@
     </div>
 
     <div v-if="quiz && quizStep === 0" class="quiz-start">
-      <button class="btn btn-lg btn-primary margin-10" @click="incrementStep()">▶️&nbsp;Commencer le quiz !</button>
+      <button class="btn btn-lg btn-primary margin-10" @click="incrementStep()">▶️&nbsp;{{ $t('messages.startQuiz') }}</button>
     </div>
 
     <!-- Quiz en cours -->
 
     <section v-if="quiz && (quizStep > 0) && quiz.questions[quizStep-1]">
       <QuestionAnswerCards v-bind:question="quiz.questions[quizStep-1]" v-bind:context="{ question_number: quizStep+' / '+quiz.questions.length, source: 'quiz' }" @answer-submitted="onAnswerSubmitted" />
-      <button v-if="showNextButton && (quizStep < quiz.questions.length)" class="btn" :class="emphasisNextButton ? 'btn-primary' : 'btn-outline-primary'" @click="incrementStep()">⏩&nbsp;Question suivante</button>
-      <button v-if="showNextButton && (quizStep === quiz.questions.length)" class="btn btn-lg btn-primary" @click="incrementStep()">⏩&nbsp;C'est fini ! Voir vos résultats</button>
+      <button v-if="showNextButton && (quizStep < quiz.questions.length)" class="btn" :class="emphasisNextButton ? 'btn-primary' : 'btn-outline-primary'" @click="incrementStep()">⏩&nbsp;{{ $t('messages.nextQuestion') }}</button>
+      <button v-if="showNextButton && (quizStep === quiz.questions.length)" class="btn btn-lg btn-primary" @click="incrementStep()">⏩&nbsp;{{ $t('messages.endQuiz') }}</button>
     </section>
 
     <!-- Quiz terminé -->
@@ -63,11 +63,11 @@
     <section v-if="quiz && (quizStep > quiz.questions.length)">
 
       <section class="question">
-        <h2>Votre résultat : <strong>{{ finalScore }} / {{ quiz.questions.length }}</strong></h2>
+        <h2>{{ $t('messages.yourScore') }} : <strong>{{ finalScore }} / {{ quiz.questions.length }}</strong></h2>
 
         <p>
-          📈&nbsp;Le quiz a été complété <strong>{{ quizStats.answer_count }}</strong> fois.<br />
-          Vous avez fait mieux que <strong>{{ finalScoreBetterThanPercent }}%</strong> des joueurs qui vous ont précédés !
+          📈&nbsp;{{ $t('messages.quizCompletedStats') }} <strong>{{ quizStats.answer_count }}</strong> {{ $t('words.times') }}.<br />
+          {{ $t('messages.quizCompletedBetter1') }} <strong>{{ finalScoreBetterThanPercent }}%</strong> {{ $t('messages.quizCompletedBetter2') }}
         </p>
 
         <div v-if="quiz.conclusion" v-html="quiz.conclusion" title="Conclusion du quiz"></div>
@@ -80,13 +80,13 @@
       <!-- Next / similar quiz -->
       <section v-if="nextQuiz">
         <br />
-        <h2 class="special-title">Quiz suivant&nbsp;⏩</h2>
+        <h2 class="special-title">{{ $t('messages.nextQuiz') }}&nbsp;⏩</h2>
         <QuizCard :quiz="nextQuiz" />
       </section>
 
       <section v-if="similarQuizs">
         <br />
-        <h2 class="special-title">Quiz similaire<span v-if="similarQuizs.length > 1">s</span>&nbsp;👯</h2>
+        <h2 class="special-title">{{ $t('messages.similarQuiz') }}<span v-if="similarQuizs.length > 1">s</span>&nbsp;👯</h2>
         <QuizCard v-for="quiz in similarQuizs" :key="quiz.id" :quiz="quiz" />
       </section>
 

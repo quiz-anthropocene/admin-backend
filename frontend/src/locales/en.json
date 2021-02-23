@@ -1,0 +1,86 @@
+{
+    "header": {
+        "title": "Anthropocene Quiz",
+        "subtitle": "Questions/answers to better grasp the limits of our planet 🌍"
+    },
+    "home": {
+        "item1Title": "Science-backed and sourced questions",
+        "item1Subtitle": "(we do our best :)",
+        "item2Title": "Explore and filter with the <span class='text-secondary'>categories</span> & <span class='color-tag'>tags</span>",
+        "item3Title": "Attentive to feedback",
+        "item3Subtitle": "and open to "
+    },
+    "footer": {
+        "home": "Home",
+        "about": "About this application",
+        "resources": "Resources",
+        "contribute": "Contribute",
+        "glossary": "Glossaire"
+    },
+    "feedback": {
+        "yourOpinion": "Your opinion on",
+        "suggestCorrection": "Suggest a modification",
+        "yourSuggestion": "Your suggestion, comment, ...",
+        "userEmail": "Please specify your <strong>email</strong> if you wish to be kept informed of your contribution!",
+        "sendingSuggestion": "Sending your suggestion...",
+        "suggestionSubmitted": "We'll do our best to take your suggesting into account"
+    },
+    "messages": {
+        "allQuestions": "Toutes les questions",
+        "newQuestions": "New questions",
+        "randomQuestion": "A random question",
+        "allQuizs": "All quizs",
+        "newQuizs": "New quizs",
+        "randomQuiz": "A random quiz",
+        "noQuiz": "No quiz :(",
+        "startQuiz": "Start the quiz!",
+        "endQuiz": "You're done! View your score",
+        "previousQuiz": "This quiz is the continuation of",
+        "nextQuiz": "Next quiz",
+        "similarQuiz": "Similar quiz",
+        "shareQuiz": "Share the quiz with your friends",
+        "yourScore": "Your score",
+        "quizCompletedStats": "The quiz has been completed",
+        "quizCompletedBetter1": "You did better than",
+        "quizCompletedBetter2": "of the players who came before you!",
+        "nextQuestion": "Next question",
+        "filters": "Filters",
+        "categories": "Categories",
+        "tags": "Tags",
+        "authors": "Authors",
+        "difficulty": "Difficulty",
+        "difficulties": "Difficulties",
+        "updateFilters": "Update the filters!",
+        "reset": "Reset",
+        "cancel": "Cancel",
+        "audioComments": "Audio comments",
+        "discover": "Discover",
+        "multipleAnswers": "multiple answers possible",
+        "hint": "Hint",
+        "submit": "Submit",
+        "answerWas": "The answer was:",
+        "imageLegend": "Legend:",
+        "questionPendingValidation": "This question is pending validation",
+        "thanks": "Thanks",
+        "thankYou": "Thank You",
+        "errorOccured": "An error occured"
+    },
+    "words": {
+        "times": "times",
+        "cette": "this",
+        "ce": "this",
+        "exclamationMark": "!",
+        "questionMark": "?",
+        "semiColon": ":"
+    },
+    "categories": {
+        "Autres": "Other",
+        "Biodiversité": "Biodiversity",
+        "Climat": "Climate",
+        "Consommation": "Consumption",
+        "Énergie": "Energy",
+        "Histoire & Politique": "History & Politics",
+        "Pollution": "Pollution",
+        "Ressources": "Resources"
+    }
+}
