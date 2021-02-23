@@ -113,6 +113,14 @@ export default {
   },
 
   mounted() {
+    // set locale
+    if (Object.keys(this.$route.query).length) {
+      if (Object.keys(this.$route.query).includes('locale')) {
+        this.$i18n.locale = this.$route.query.locale || process.env.VUE_APP_I18N_LOCALE;
+      }
+    }
+
+    // load data
     this.initData();
   },
 

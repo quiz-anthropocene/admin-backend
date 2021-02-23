@@ -95,4 +95,19 @@ module.exports = {
       .assert.containsText('div[class*="question-next"] button', 'Question suivante')
       .end();
   },
+
+  'home page in english': (browser) => {
+    browser
+      .openUrl('?locale=en')
+      .assert.elementPresent('header')
+      .assert.elementPresent('footer')
+      // .assert.elementCount('button', 6) // can be 3 to 6 depending on the number of spotlighted quizs
+      .useXpath()
+      .assert.containsText('//main/section/div[2]/div/a/button', 'All quizs')
+      // .assert.containsText('(//main//button)[2]', 'All questions')
+      .assert.containsText('//main/section/div[5]/div/a/button', 'Resources')
+      .assert.containsText('//main/section/div[6]/div/form/div[2]/button', 'Je m\'inscris !')
+      .useCss()
+      .end();
+  },
 };
