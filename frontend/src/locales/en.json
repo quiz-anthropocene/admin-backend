@@ -8,7 +8,10 @@
         "item1Subtitle": "(we do our best :)",
         "item2Title": "Explore and filter with the <span class='text-secondary'>categories</span> & <span class='color-tag'>tags</span>",
         "item3Title": "Attentive to feedback",
-        "item3Subtitle": "and open to "
+        "item3Subtitle": "and open to",
+        "thereIsCurrently": "There are currently",
+        "helpUs": "Help us",
+        "toAddMore": "to add more"
     },
     "footer": {
         "home": "Home",
@@ -58,14 +61,15 @@
         "multipleAnswers": "multiple answers possible",
         "hint": "Hint",
         "submit": "Submit",
-        "answerWas": "The answer was:",
-        "imageLegend": "Legend:",
+        "answerWas": "The answer was",
+        "imageLegend": "Legend",
         "questionPendingValidation": "This question is pending validation",
         "thanks": "Thanks",
         "thankYou": "Thank You",
         "errorOccured": "An error occured"
     },
     "words": {
+        "et": "and",
         "times": "times",
         "cette": "this",
         "ce": "this",

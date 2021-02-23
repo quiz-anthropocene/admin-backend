@@ -49,7 +49,7 @@
         <div class="col-sm">
           <select v-model="$i18n.locale">
             <option v-for="(lang, i) in languages" :key="`Lang${i}`" :value="lang.key">
-              {{ lang.value }}
+              {{ lang.emoji }}&nbsp;{{ lang.value }}
             </option>
           </select>
         </div>
@@ -68,6 +68,7 @@
 </template>
 
 <script>
+import constants from '../constants';
 import HomeLink from './HomeLink.vue';
 
 export default {
@@ -80,10 +81,7 @@ export default {
 
   data() {
     return {
-      languages: [
-        { key: 'fr', value: '🇫🇷 Français' },
-        { key: 'en', value: '🌐 English' },
-      ],
+      languages: constants.LANGUAGE_CHOICE_LIST,
     };
   },
 

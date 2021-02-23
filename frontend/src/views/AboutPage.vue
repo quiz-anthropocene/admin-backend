@@ -8,6 +8,10 @@
       Il est développé par quelques passionés, et a pour but d'évoluer en fonctions des retours utilisateurs :)
     </section> -->
 
+    <section class="alert alert-warning" role="alert" v-if="$i18n.locale === 'en'">
+      🌐Page not yet translated ...
+    </section>
+
     <h3>Pourquoi cette application ?</h3>
     <div v-html="configuration.application_about"></div>
 

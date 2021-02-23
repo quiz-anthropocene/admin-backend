@@ -69,7 +69,7 @@
       <h2 v-if="questionAnswer.success">{{ questionAnswer.message }} !</h2>
       <h2 v-if="!questionAnswer.success">{{ questionAnswer.message }}</h2>
       <h3 v-if="!questionAnswer.success">
-        <small>{{ $t('messages.answerWas') }}&nbsp;</small>
+        <small>{{ $t('messages.answerWas') }}{{ $t('words.semiColon') }}&nbsp;</small>
         <span>{{ question["answer_option_" + question["answer_correct"]] }}</span>
       </h3>
       <!-- Answer explanation -->
@@ -110,7 +110,7 @@
           <img v-bind:src="question.answer_image_url" alt="une image pour illustrer la réponse" />
         </a>
       </p>
-      <p v-if="question.answer_image_explanation" class="answer-image-explanation" title="Légende de l'image">{{ $t('messages.imageLegend') }} {{ question.answer_image_explanation }}</p>
+      <p v-if="question.answer_image_explanation" class="answer-image-explanation" title="Légende de l'image">{{ $t('messages.imageLegend') }}{{ $t('words.semiColon') }} {{ question.answer_image_explanation }}</p>
     </div>
 
     <div v-if="question && questionSubmitted && questionNotValidated" class="alert alert-warning">

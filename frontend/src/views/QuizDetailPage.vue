@@ -46,8 +46,8 @@
       </div>
     </div>
 
-    <div v-if="quiz && quizStep === 0" class="quiz-start">
-      <button class="btn btn-lg btn-primary margin-10" @click="incrementStep()">▶️&nbsp;{{ $t('messages.startQuiz') }}</button>
+    <div v-if="quiz && quizStep === 0">
+      <button id="quiz-start-btn" class="btn btn-lg btn-primary margin-10" @click="incrementStep()">▶️&nbsp;{{ $t('messages.startQuiz') }}</button>
     </div>
 
     <!-- Quiz en cours -->

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
+import i18n from './i18n';
 import constants from './constants';
 
 // webpack + vue-cli-plugin-yaml
@@ -29,6 +30,7 @@ const store = new Vuex.Store({
     loading: false,
     error: null,
     configuration: {},
+    locale: {},
     questions: [],
     questionsValidated: [],
     questionsDisplayed: [],
@@ -65,6 +67,13 @@ const store = new Vuex.Store({
       commit('UPDATE_ERROR', null);
     },
     /**
+     * Set app locale
+     */
+    SET_LOCALE: ({ commit }) => {
+      const localeDict = constants.LANGUAGE_CHOICE_LIST.find((l) => l.key === i18n.locale);
+      commit('SET_LOCALE_DICT', { dict: localeDict });
+    },
+    /**
      * Get app configuration
      */
     GET_CONFIGURATION_DICT_FROM_LOCAL_YAML: ({ commit }) => {
@@ -77,8 +86,7 @@ const store = new Vuex.Store({
      * - enrich with categories, tags
      */
     GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
-      // questions
-      const questions = questionsYamlData;
+      const questions = questionsYamlData.filter((q) => q.language === state.locale.value);
       // questions: get category & tags objects
       questions.map((q) => {
         const questionCategory = getters.getCategoryById(q.category);
@@ -92,7 +100,7 @@ const store = new Vuex.Store({
 
       // update categories: add question_count
       state.categories.forEach((c) => {
-        c.question_count = questionsValidated.filter((q) => q.category.name === c.name).length;
+        c.question_count = questionsValidated.filter((q) => q.category && q.category.name === c.name).length;
       });
 
       // update tags: add question_count
@@ -111,7 +119,7 @@ const store = new Vuex.Store({
      * - enrich with questions, tags
      */
     GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
-      const quizzes = quizzesYamlData;
+      const quizzes = quizzesYamlData.filter((q) => q.language === state.locale.value);
       // quiz: get question and tag objects
       quizzes.map((q) => {
         // get quiz questions + order + only get question ids
@@ -221,6 +229,9 @@ const store = new Vuex.Store({
     },
     UPDATE_ERROR: (state, value) => {
       state.error = value;
+    },
+    SET_LOCALE_DICT: (state, { dict }) => {
+      state.locale = dict;
     },
     SET_CONFIGURATION_DICT: (state, { dict }) => {
       state.configuration = dict;

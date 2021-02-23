@@ -112,6 +112,14 @@ export default {
     },
   },
 
+  watch: {
+    // eslint-disable-next-line
+    '$i18n.locale' (newLocale, oldLocale) {
+      // reload data (includes updating locale in the store)
+      this.initData();
+    },
+  },
+
   mounted() {
     // set locale
     if (Object.keys(this.$route.query).length) {
@@ -119,13 +127,13 @@ export default {
         this.$i18n.locale = this.$route.query.locale || process.env.VUE_APP_I18N_LOCALE;
       }
     }
-
     // load data
     this.initData();
   },
 
   methods: {
     initData() {
+      this.$store.dispatch('SET_LOCALE');
       this.$store.dispatch('GET_CONFIGURATION_DICT_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_DIFFICULTY_LEVEL_LIST_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_AUTHOR_LIST_FROM_LOCAL_YAML');

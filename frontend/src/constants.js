@@ -22,5 +22,9 @@ export default {
   QUIZ_RELATIONSHIP_SIMILAR: 'similaire',
   QUIZ_RELATIONSHIP_TWIN: 'jumeau',
   QUIZ_RELATONSHIP_TRANSLATION: 'traduction',
+  LANGUAGE_CHOICE_LIST: [
+    { key: 'fr', value: 'Français', emoji: '🇫🇷' },
+    { key: 'en', value: 'English', emoji: '🌐' },
+  ],
   // DEFAULT_BACKGROUND_IMAGE_NAME: 'https://quizanthropocene.fr/showyourstripes_globe_1850-2019.png'
 };

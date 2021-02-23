@@ -1,7 +1,7 @@
 <template>
   <section>
 
-    <h2 class="special-title">✨&nbsp;{{ $t('messages.newQuizs') }}&nbsp;✨</h2>
+    <h2 v-if="quizzesSpotlighted && quizzesSpotlighted.length > 0" class="special-title">✨&nbsp;{{ $t('messages.newQuizs') }}&nbsp;✨</h2>
     <div class="row" v-if="quizzesSpotlighted && quizzesSpotlighted.length > 0" id="quiz-list">
       <div class="col-sm-4" v-for="quiz in quizzesSpotlighted" :key="quiz.id">
         <QuizCard :quiz="quiz"/>
@@ -9,9 +9,9 @@
     </div>
 
     <div class="row justify-content-md-center margin-bottom-1em">
-      <div class="col-sm-6" v-if="questionsCount">
+      <div class="col-sm-6">
         <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
-          <button class="btn btn-primary btn-lg btn-block">
+          <button id="all-quizs-btn" class="btn btn-primary btn-lg btn-block">
             🕹&nbsp;<strong>{{ $t('messages.allQuizs') }}</strong>
           </button>
         </router-link>
@@ -64,8 +64,10 @@
     </div>
 
     <div class="alert alert-primary" role="alert">
-      <i v-if="questionsCount">Il y a actuellement <strong>{{ questionsCount }} questions</strong> et <strong>{{ quizzesPublishedCount }} quiz</strong>. </i>
-      <i><router-link :to="{ name: 'about' }">Aidez-nous</router-link> à en rajouter plus ! </i>
+      <i>
+        {{ $t('home.thereIsCurrently') }} <strong>{{ questionsCount }} questions</strong> {{ $t('words.et') }} <strong>{{ quizzesPublishedCount }} quiz</strong>.
+        <router-link :to="{ name: 'about' }">{{ $t('home.helpUs') }}</router-link> {{ $t('home.toAddMore') }}{{ $t('words.exclamationMark') }}
+      </i>
     </div>
     <div v-if="newsletterRegistrationCallback" class="alert alert-success" role="alert">
       {{ $t('newsletter.success') }}
@@ -75,9 +77,9 @@
     </div>
 
     <div class="row justify-content-md-center">
-      <div class="col-sm-6" v-if="questionsCount">
+      <div class="col-sm-6">
         <router-link class="no-decoration" :to="{ name: 'ressources' }">
-          <button class="btn btn-outline-primary btn-lg btn-block">📚&nbsp;<strong>{{ $t('footer.resources') }}</strong></button>
+          <button id="resources-btn" class="btn btn-outline-primary btn-lg btn-block">📚&nbsp;<strong>{{ $t('footer.resources') }}</strong></button>
         </router-link>
       </div>
     </div>
@@ -101,7 +103,7 @@
             </div>
           </div>
           <div class="col-sm-4 text-align-left">
-            <button class="btn btn-primary" type="submit" :disabled="!emailNewsletterRegistration">Je m'inscris !</button>
+            <button id="newsletter-btn" class="btn btn-primary" type="submit" :disabled="!emailNewsletterRegistration">Je m'inscris !</button>
           </div>
         </form>
         <div v-if="newsletterRegistrationLoading">

@@ -20,11 +20,10 @@ module.exports = {
       .assert.elementPresent('header')
       .assert.elementPresent('footer')
       // .assert.elementCount('button', 6) // can be 3 to 6 depending on the number of spotlighted quizs
-      .useXpath()
-      .assert.containsText('//main/section/div[2]/div/a/button', 'Tous les quiz')
-      // .assert.containsText('(//main//button)[2]', 'Toutes les questions')
-      .assert.containsText('//main/section/div[5]/div/a/button', 'Ressources')
-      .assert.containsText('//main/section/div[6]/div/form/div[2]/button', 'Je m\'inscris !')
+      .assert.containsText('button[id="all-quizs-btn"]', 'Tous les quiz')
+      // .assert.containsText('button[id="all-questions-btn"]', 'Toutes les questions')
+      .assert.containsText('button[id="resources-btn"]', 'Ressources')
+      .assert.containsText('button[id="newsletter-btn"]', 'Je m\'inscris !')
       .useCss()
       .end();
   },
@@ -68,7 +67,7 @@ module.exports = {
       .assert.elementPresent('header')
       .assert.elementPresent('footer')
       .assert.elementPresent('.card h2')
-      .assert.containsText('div[class*="quiz-start"] button', 'Commencer le quiz')
+      .assert.containsText('button[id="quiz-start-btn"]', 'Commencer le quiz')
       .end();
   },
 
@@ -92,7 +91,7 @@ module.exports = {
       .assert.elementPresent('.question h2')
       .assert.elementPresent('.question h3')
       .assert.containsText('button[type="submit"]', 'Valider')
-      .assert.containsText('div[class*="question-next"] button', 'Question suivante')
+      .assert.containsText('button[id="question-next-btn"]', 'Question suivante')
       .end();
   },
 
@@ -102,12 +101,10 @@ module.exports = {
       .assert.elementPresent('header')
       .assert.elementPresent('footer')
       // .assert.elementCount('button', 6) // can be 3 to 6 depending on the number of spotlighted quizs
-      .useXpath()
-      .assert.containsText('//main/section/div[2]/div/a/button', 'All quizs')
-      // .assert.containsText('(//main//button)[2]', 'All questions')
-      .assert.containsText('//main/section/div[5]/div/a/button', 'Resources')
-      .assert.containsText('//main/section/div[6]/div/form/div[2]/button', 'Je m\'inscris !')
-      .useCss()
+      .assert.containsText('button[id="all-quizs-btn"]', 'All quizs')
+      // .assert.containsText('button[id="all-questions-btn"]', 'All questions')
+      .assert.containsText('button[id="resources-btn"]', 'Resources')
+      .assert.containsText('button[id="newsletter-btn"]', 'Je m\'inscris !')
       .end();
   },
 };

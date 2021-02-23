@@ -1,7 +1,10 @@
 <template>
-
   <section class="text-align-left">
     <h2>Ressources pour aller plus loin</h2>
+
+    <section class="alert alert-warning" role="alert" v-if="$i18n.locale === 'en'">
+      🌐Page not yet translated ...
+    </section>
 
     <p><i>Table des matières</i></p>
     <ol>

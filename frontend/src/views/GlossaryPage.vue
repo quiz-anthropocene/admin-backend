@@ -1,6 +1,11 @@
 <template>
   <section class="text-align-left">
     <h2>Glossaire</h2>
+
+    <section class="alert alert-warning" role="alert" v-if="$i18n.locale === 'en'">
+      🌐Page not yet translated ...
+    </section>
+
     <p><i>Ces définitions sont ensuite affichées lorsque le mot apparait dans l'énoncé de la question.</i></p>
 
     <br />

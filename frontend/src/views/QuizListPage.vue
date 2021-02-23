@@ -53,7 +53,6 @@ export default {
   },
 
   watch: {
-    // eslint-disable-next-line
   },
 
   mounted() {

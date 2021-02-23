@@ -8,7 +8,10 @@
         "item1Subtitle": "(on fait de notre mieux :)",
         "item2Title": "Explorer et filtrer grâce aux <span class='text-secondary'>catégories</span> & <span class='color-tag'>tags</span>",
         "item3Title": "À l'écoute de vos retours",
-        "item3Subtitle": "et ouvert aux "
+        "item3Subtitle": "et ouvert aux ",
+        "thereIsCurrently": "Il y a actuellement",
+        "helpUs": "Aidez-nous",
+        "toAddMore": "à en rajouter plus"
     },
     "newsletter": {
         "success": "Votre inscription à la newsletter a été enregistrée, merci !"
@@ -61,14 +64,15 @@
         "multipleAnswers": "plusieurs réponses possibles",
         "hint": "un indice",
         "submit": "Valider",
-        "answerWas": "La réponse était :",
-        "imageLegend": "Légende :",
+        "answerWas": "La réponse était",
+        "imageLegend": "Légende",
         "questionPendingValidation": "Cette question est en cours de validation",
         "thanks": "Merci",
         "thankYou": "Merci beaucoup",
         "errorOccured": "Il y a eu une erreur"
     },
     "words": {
+        "et": "et",
         "times": "times",
         "cette": "cette",
         "ce": "ce",

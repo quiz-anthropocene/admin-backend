@@ -2,6 +2,10 @@
   <section class="text-align-left">
     <h2>Contribuer !</h2>
 
+    <section class="alert alert-warning" role="alert" v-if="$i18n.locale === 'en'">
+      🌐Page not yet translated ...
+    </section>
+
     <p>
       Vous souhaitez rajouter une question ? Ou faire un commentaire sur le contenu existant ?<br />
       Envoyez-nous ça en remplissant le petit formulaire ci-dessous 👇

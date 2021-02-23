@@ -17,13 +17,13 @@ module.exports = {
       // quiz detail page
       // .assert.urlContains('quiz/17')
       .assert.elementPresent('.card h2')
-      .assert.containsText('div[class*="quiz-start"] button', 'Commencer le quiz')
-      .click('div[class*="quiz-start"] button')
+      .assert.containsText('button[id="quiz-start-btn"]', 'Commencer le quiz')
+      .click('button[id="quiz-start-btn"]')
       // quiz detail first question page
       .assert.elementPresent('.question')
       .assert.not.elementPresent('.answer')
       .assert.containsText('button[type="submit"]', 'Valider')
-      .assert.not.elementPresent('div[class="question-next"] button')
+      .assert.not.elementPresent('button[id="question-next-btn"]')
       .end();
   },
 
@@ -46,13 +46,13 @@ module.exports = {
   //     .assert.elementPresent('.question')
   //     .assert.not.elementPresent('.answer')
   //     .assert.elementPresent('.question h2')
-  //     .assert.containsText('div[class*="question-next"] button', 'Question suivante')
+  //     .assert.containsText('button[id="question-next-btn"]', 'Question suivante')
   //     // question detail page : answer question
   //     .answerQuestion()
   //     // .waitForElementVisible('div[class*="answer"]')
   //     .assert.elementPresent('.answer')
   //     .assert.elementPresent('section[class*="feedback-card"]')
-  //     .assert.containsText('div[class*="question-next"] button', 'Question suivante')
+  //     .assert.containsText('button[id="question-next-btn"]', 'Question suivante')
   //     .end();
   // },
 };

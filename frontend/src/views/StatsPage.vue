@@ -2,12 +2,16 @@
   <section class="text-align-left">
     <h2>Quelques statistiques</h2>
 
+    <section class="alert alert-warning" role="alert" v-if="$i18n.locale === 'en'">
+      🌐Page not yet translated ...
+    </section>
+
     <p class="text-muted">Mise à jour : {{ data_last_updated }}</p>
 
     <br />
     <h3>🕹️&nbsp;Quizs</h3>
     <p>
-      <strong>{{ quiz_count_formatted }}</strong> publiés.
+      <strong>{{ quiz_published_count_formatted }}</strong> publiés.
       <br />
       <strong>{{ quiz_answer_count_formatted }}</strong> quizs terminés depuis le lancement
       (dont <strong>{{ quiz_answer_count_last_30_days_formatted }}</strong> durant les 30 derniers jours).
@@ -147,8 +151,9 @@ export default {
       const questionPendingValidationCount = this.$store.state.stats.question_per_validation_status_count ? this.$store.state.stats.question_per_validation_status_count.slice(0).find((item) => item.validation_status === constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS).total : 0;
       return Intl.NumberFormat('fr-FR').format(questionPendingValidationCount);
     },
-    quiz_count_formatted() {
-      return Intl.NumberFormat('fr-FR').format(this.$store.state.quizzes.length);
+    quiz_published_count_formatted() {
+      const quizPublishedCount = this.$store.state.stats.quiz_per_publish_count ? this.$store.state.stats.quiz_per_publish_count.slice(0).find((item) => item.publish === true).total : 0;
+      return Intl.NumberFormat('fr-FR').format(quizPublishedCount);
     },
     question_answer_count_formatted() {
       return Intl.NumberFormat('fr-FR').format(this.$store.state.stats.question_answer_count);
