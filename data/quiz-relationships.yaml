@@ -33,3 +33,8 @@
   to_quiz: 59
   status: jumeau
   created: 2021-02-02
+- id: 9
+  from_quiz: 59
+  to_quiz: 63
+  status: traduction
+  created: 2021-02-22

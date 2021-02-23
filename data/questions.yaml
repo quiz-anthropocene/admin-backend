@@ -28527,7 +28527,7 @@
   - 26
 - id: 856
   text: Parmi les microplastiques retrouvés dans l'océan, quelle est la part provenant
-    de la dégradation de débris plastiques ?
+    de la dégradation de débris plastiques (macros) ?
   hint: Les microplastiques sont les petites particules (< 5 mm) de matière plastique
     dispersées dans l'environnement.
   type: QCM
@@ -28540,16 +28540,17 @@
   answer_option_d: 99%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: "La dégradation des débris plastiques produit des microplastiques\
-    \ secondaires.\nLes microplastiques primaire sont ceux provenant de rejets directs\
-    \ :\n1/3 vient des pneus de véhicules, \n1/3 des textiles synthétiques \n1/3 de\
-    \ divers usages des villes. \n\nOn pourrait aussi compter le caoutchouc en plus.\
-    \ 1,5 millions de tonnes par an viennent ainsi s'ajouter dans les océans, et viennent\
-    \ compléter les microplastiques secondaires qui en représentent donc 60-80%. De\
-    \ plus, sur les 8 millions de tonnes de débris plastiques arrivant dans l'océan\
-    \ chaque année, seuls 50,000 tonnes soit 0,6% seraient en surface, négligeable\
-    \ par rapport à la quantité qui coule (~10%) ou qui est rejetée sur les côtes\
-    \ (~90%)."
+  answer_explanation: "La dégradation des débris plastiques macros produit des microplastiques\
+    \ secondaires, qui représentent 60-80% du microplastique mesuré dans les océans.\n\
+    Le reste sont des microplastiques primaires, provenant de rejets directs :\n1/3\
+    \ vient des pneus de véhicules, \n1/3 des textiles synthétiques \n1/3 de divers\
+    \ usages (\"poussières\" des villes). \n\nOn pourrait aussi compter le caoutchouc\
+    \ (naturel) en plus. 1,5 millions de tonnes par an viennent ainsi s'ajouter dans\
+    \ les océans, et s'additionnent ainsi aux microplastiques secondaires. Ce microplastique\
+    \ est quasi-irrécupérable, tout comme les ~10% des débris plastiques ayant coulés\
+    \ au fond des océans (seuls 50,000 tonnes des 8 Mt de débris ajoutés chaque année\
+    \ (0,6%) resteraient en surface, le reste étant rejeté sur les côtes (~90%)).\
+    \ Le \"nettoyage\" des océans s'avère donc plus compliqué qu'à prime abord ..."
   answer_accessible_url: https://www.iew.be/microplastiques-macroproblemesquelles-avancees-en-2020/
   answer_scientific_url: https://www.futura-sciences.com/planete/actualites/pollution-plastique-on-retrouve-99-plastique-disparus-ocean-62879/
   answer_reading_recommendation: ''
@@ -28775,10 +28776,10 @@
     pas plus rapide qu''un vélo !'
   answer_accessible_url: https://fr.forumviesmobiles.org/reperes/vitesse-des-deplacements-12976
   answer_scientific_url: https://books.openedition.org/pur/50874
-  answer_reading_recommendation: ''
+  answer_reading_recommendation: Energie et équité, Ivan Illich
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/862.png
-  answer_image_explanation: '"Energie et équité", I. Illich'
-  answer_extra_info: Energie et équité, Ivan Illich
+  answer_image_explanation: ''
+  answer_extra_info: ''
   author: Max Pinsard
   validator: ''
   validation_status: Validée
@@ -28806,9 +28807,9 @@
     par l’augmentation du nombre d’internautes, le ratio devient ×2000. Durant ces
     15 ans, la quantité de données circulant dans le réseau internet a été multipliée
     par "seulement" 100.  Attention, l''évaluation de cette masse de données est difficile
-    à réaliser. : par exemple, le site Statista affirmait plutôt 50 milliards de téraoctets
+    à réaliser : par exemple, le site Statista affirmait plutôt 50 milliards de téraoctets
     en 2020 (donc rapport ×500). Ce chiffre pourrait être de nouveau multiplié par
-    50 sur les 15 prochaines années (jusqu''en 2035).'
+    50 sur les 15 prochaines années (d''ici 2035).'
   answer_accessible_url: https://fr.statista.com/infographie/17800/big-data-evolution-quantite-donnees-numeriques-creees-dans-le-monde/
   answer_scientific_url: https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic
   answer_reading_recommendation: ''
@@ -29014,6 +29015,42 @@
   updated: 2021-02-22
   tags:
   - 51
+- id: 869
+  text: Quels sont les principaux puits de carbone naturels ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 3
+  language: Français
+  answer_option_a: Les forêts (arbres)
+  answer_option_b: Les sols (humus)
+  answer_option_c: Les tourbières (toundra)
+  answer_option_d: Les baleines
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: Les baleines sont essentielles à la survie du phytoplancton
+    tout comme à la captation du CO2. D’une part, leurs excréments, riches en fer
+    et en azote, font partie de l’alimentation du plancton végétal. D'autre part,
+    elles se nourrissent de ce plancton et capturent ainsi énormément de CO2. Cela
+    fait d’elles d’extraordinaires puits de carbone. Quand une baleine meurt et sombre
+    au fond de l’océan, elle piège 33 tonnes de CO2 en moyenne, supprimant ce carbone
+    de l’atmosphère pendant des siècles. A titre de comparaison, un arbre n’absorbe
+    que jusqu’à 48 kilos de CO2 par an. Sauver une baleine est aujourd’hui beaucoup
+    plus efficace pour le climat que de planter un arbre.
+  answer_accessible_url: https://mrmondialisation.org/le-vrai-poumon-du-monde-est-oceanique-et-il-brule-sans-faire-de-vague/
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Jean-Christophe Anna
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-21
+  created: 2021-02-23
+  updated: 2021-02-23
+  tags:
+  - 14
 - id: 900
   text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
   hint: Bas carbone donc…
@@ -29847,8 +29884,8 @@
   answer_option_a: 30 m²
   answer_option_b: 60 m²
   answer_option_c: 100 m²
-  answer_option_d: 350 m²
-  answer_correct: ''
+  answer_option_d: 352 m²
+  answer_correct: b
   has_ordered_answers: true
   answer_explanation: 'Les œufs et les produits laitiers sont tous les deux responsables
     de 30 m², soit un total de 60 m². L’empreinte forêt d’un Français est de 352 m²,
@@ -29903,7 +29940,9 @@
   added: 2021-02-17
   created: 2021-02-21
   updated: 2021-02-21
-  tags: []
+  tags:
+  - 5
+  - 17
 - id: 928
   text: En France, la grande distribution représente quel pourcentage des dépenses
     de produits alimentaires.
@@ -30019,7 +30058,7 @@
   answer_option_a: 10%
   answer_option_b: 30%
   answer_option_c: 50%
-  answer_option_d: 50%
+  answer_option_d: 70%
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: ''
