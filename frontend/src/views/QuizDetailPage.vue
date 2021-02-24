@@ -1,6 +1,14 @@
 <template>
   <section>
 
+    <section v-if="!quiz" class="alert alert-warning" role="alert">
+      {{ $t('messages.quizNotFound') }}
+    </section>
+
+    <section v-if="quiz && quiz.language !== currentLocale.value" class="alert alert-warning" role="alert">
+      {{ $t('messages.quizOtherLanguage') }}
+    </section>
+
     <!-- Quiz header -->
     <div v-if="quiz" class="card">
       <img v-bind:src="quiz.image_background_url || 'https://quizanthropocene.fr/showyourstripes_globe_1850-2019.png'" class="card-img-top" :class="(quizStep === 0) ? 'height-150' : 'height-50'">
@@ -181,6 +189,9 @@ export default {
       const finalScoreBetterThanPercent = this.quizStats.answer_count ? Math.round((finalScoreBetterThan / this.quizStats.answer_count) * 100) : 0;
       return finalScoreBetterThanPercent;
     },
+    currentLocale() {
+      return this.$store.state.locale;
+    },
   },
 
   beforeRouteUpdate(to, from, next) {
@@ -191,10 +202,24 @@ export default {
     next();
   },
 
+  watch: {
+    // eslint-disable-next-line
+    'quiz' (newQuiz, oldQuiz) {
+      if (newQuiz) {
+        this.adaptLocale();
+      }
+    },
+  },
+
   mounted() {
   },
 
   methods: {
+    adaptLocale() {
+      if (this.quiz && this.$store.state.locale && this.quiz.language !== this.$store.state.locale.value) {
+        this.$i18n.locale = constants.LANGUAGE_CHOICE_LIST.find((l) => l.value === this.quiz.language).key;
+      }
+    },
     initQuiz() {
       this.quizStep = 0;
       this.showQuizQuestions = false;

@@ -86,7 +86,7 @@ const store = new Vuex.Store({
      * - enrich with categories, tags
      */
     GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
-      const questions = questionsYamlData.filter((q) => q.language === state.locale.value);
+      const questions = questionsYamlData;
       // questions: get category & tags objects
       questions.map((q) => {
         const questionCategory = getters.getCategoryById(q.category);
@@ -94,7 +94,7 @@ const store = new Vuex.Store({
         Object.assign(q, { category: questionCategory }, { tags: questionTags });
         return q;
       });
-      const questionsValidated = questions.filter((el) => el.validation_status === constants.QUESTION_VALIDATION_STATUS_OK);
+      const questionsValidated = questions.filter((q) => q.language === state.locale.value).filter((el) => el.validation_status === constants.QUESTION_VALIDATION_STATUS_OK);
       commit('SET_QUESTION_LIST', { list: questions });
       commit('SET_QUESTION_VALIDATED_LIST', { list: questionsValidated });
 
@@ -108,8 +108,8 @@ const store = new Vuex.Store({
         t.question_count = questionsValidated.filter((q) => q.tags.map((qt) => qt.id).includes(t.id)).length;
       });
     },
-    GET_QUESTION_PENDING_VALIDATION_LIST_FROM_LOCAL_YAML: ({ commit }) => {
-      const questionsPendingValidation = questionsYamlData.filter((el) => el.validation_status === constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS);
+    GET_QUESTION_PENDING_VALIDATION_LIST_FROM_LOCAL_YAML: ({ commit, state }) => {
+      const questionsPendingValidation = questionsYamlData.filter((q) => q.language === state.locale.value).filter((el) => el.validation_status === constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS);
       commit('SET_QUESTION_PENDING_VALIDATION_LIST', { list: questionsPendingValidation });
     },
     /**
@@ -119,7 +119,7 @@ const store = new Vuex.Store({
      * - enrich with questions, tags
      */
     GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
-      const quizzes = quizzesYamlData.filter((q) => q.language === state.locale.value);
+      const quizzes = quizzesYamlData;
       // quiz: get question and tag objects
       quizzes.map((q) => {
         // get quiz questions + order + only get question ids
@@ -133,7 +133,7 @@ const store = new Vuex.Store({
         Object.assign(q, { questions: quizQuestions }, { tags: quizTags });
         return q;
       });
-      const quizzesPublished = quizzes.filter((el) => el.publish === true);
+      const quizzesPublished = quizzes.filter((q) => q.language === state.locale.value).filter((el) => el.publish === true);
       commit('SET_QUIZ_LIST', { list: quizzes });
       commit('SET_QUIZ_PUBLISHED_LIST', { list: quizzesPublished });
 
@@ -216,7 +216,8 @@ const store = new Vuex.Store({
     },
     UPDATE_QUIZ_FILTERS: ({ commit, state, getters }, filterObject) => {
       const currentQuizFilters = filterObject || state.quizFilters;
-      const quizzesDisplayed = getters.getQuizzesPublishedByFilter(currentQuizFilters);
+      const quizzesDisplayed = getters.getQuizzesPublishedByFilter(currentQuizFilters)
+        .sort((a, b) => b.id - a.id);
       commit('SET_QUESTION_FILTERS', { object: currentQuizFilters });
       // We are not using the quizFilterVairable anymore
       // commit('SET_QUIZ_FILTERS', { object: currentQuizFilters });
@@ -296,9 +297,9 @@ const store = new Vuex.Store({
     },
   },
   getters: {
-    getCategoryById: (state) => (categoryId) => state.categories.find((c) => (c.id === categoryId)),
-    getTagById: (state) => (tagId) => state.tags.find((t) => (t.id === tagId)),
-    getTagsByIdList: (state) => (tagIdList) => state.tags.filter((t) => tagIdList.includes(t.id)),
+    getCategoryById: (state) => (categoryId) => state.categories.find((c) => (c.id === ((categoryId && typeof categoryId === 'object') ? categoryId.id : categoryId))),
+    getTagById: (state) => (tagId) => state.tags.find((t) => (t.id === ((tagId && typeof tagId === 'object') ? tagId.id : tagId))),
+    getTagsByIdList: (state) => (tagIdList) => state.tags.filter((t) => ((tagIdList && tagIdList.length && typeof tagIdList[0] === 'object') ? tagIdList.map((tag) => tag.id).includes(t.id) : tagIdList.includes(t.id))),
     getDifficultyLevelEmojiByValue: (state) => (difficultyLevelValue) => state.difficultyLevels.find((dl) => (dl.value === parseInt(difficultyLevelValue, 10))).emoji,
     // questions
     getQuestionById: (state) => (questionId) => state.questions.find((q) => (q.id === questionId)),

@@ -8,7 +8,7 @@
           <span class="text-primary">#{{ context.question_number }}</span>
         </span>
         <span> | </span>
-        <span class="text-secondary">{{ $t('categories.'+question.category.name) }}</span>
+        <span v-if="question.category" class="text-secondary">{{ $t('categories.'+question.category.name) }}</span>
         <span> | </span>
         <span><small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
       </h2>
@@ -197,7 +197,7 @@ export default {
     initContribution() {
       this.contribution = {
         text: '',
-        description: `Question #${this.question.id} - ${this.question.category.name} - ${this.question.text}`,
+        description: `Question #${this.question.id} - ${this.question.text}`,
         type: 'commentaire question',
       };
       this.showContributionForm = false;

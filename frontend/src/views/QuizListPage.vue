@@ -3,9 +3,9 @@
     <!-- Header -->
     <QuestionFilter objectType="quiz" :counter="quizzesDisplayed.length" />
 
-    <div v-if="quizzesDisplayed && quizzesDisplayed.length === 0">
-      {{ $t('messages.noQuiz') }}
-    </div>
+    <section v-if="quizzesDisplayed && quizzesDisplayed.length === 0" class="alert alert-warning" role="alert">
+      🙁{{ $t('messages.noQuizFound') }}
+    </section>
 
     <div v-if="quizzesDisplayed && quizzesDisplayed.length > 0" id="quiz-list" class="row">
       <div class="col-sm-6" v-for="quiz in quizzesDisplayed" :key="quiz.id">
@@ -46,9 +46,7 @@ export default {
 
   computed: {
     quizzesDisplayed() {
-      return this.$store.state.quizzesDisplayed
-        .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
-        .sort((a, b) => a.name.localeCompare(b.name));
+      return this.$store.state.quizzesDisplayed;
     },
   },
 

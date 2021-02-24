@@ -8,7 +8,7 @@
       Il est développé par quelques passionés, et a pour but d'évoluer en fonctions des retours utilisateurs :)
     </section> -->
 
-    <section class="alert alert-warning" role="alert" v-if="$i18n.locale === 'en'">
+    <section v-if="$i18n.locale === 'en'" class="alert alert-warning" role="alert">
       🌐Page not yet translated ...
     </section>
 
