@@ -334,12 +334,6 @@
   order: 5
   created: 2021-01-12
   updated: 2021-01-12
-- id: 89
-  quiz: 7
-  question: 113
-  order: 6
-  created: 2021-01-12
-  updated: 2021-01-12
 - id: 90
   quiz: 7
   question: 114
@@ -1561,9 +1555,9 @@
 - id: 378
   quiz: 61
   question: 863
-  order: 12
+  order: 11
   created: 2021-02-15
-  updated: 2021-02-16
+  updated: 2021-02-23
 - id: 380
   quiz: 60
   question: 864
@@ -1573,9 +1567,9 @@
 - id: 381
   quiz: 61
   question: 864
-  order: 11
+  order: 12
   created: 2021-02-16
-  updated: 2021-02-16
+  updated: 2021-02-23
 - id: 382
   quiz: 63
   question: 1000

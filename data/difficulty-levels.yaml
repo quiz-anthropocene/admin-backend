@@ -1,7 +1,7 @@
 - name: Junior
   value: 0
   emoji: 🧸
-  question_count: 9
+  question_count: 8
 - name: Facile
   value: 1
   emoji: 🏆
@@ -9,7 +9,7 @@
 - name: Moyen
   value: 2
   emoji: 🏆🏆
-  question_count: 167
+  question_count: 166
 - name: Difficile
   value: 3
   emoji: 🏆🏆🏆
