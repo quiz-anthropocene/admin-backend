@@ -111,7 +111,7 @@
   introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
     à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
   conclusion: ''
-  difficulty_average: 2.5
+  difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
   image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
@@ -119,7 +119,7 @@
   publish: true
   spotlight: false
   created: 2020-07-09
-  updated: 2021-01-26
+  updated: 2021-02-23
   tags:
   - 11
 - id: 8
@@ -564,7 +564,7 @@
     la<a href="http://fresquedeslowtechs.org"> Fresque des Low-Techs</a>. « Contre
     une croissance infinie dans un monde aux ressources finies qui SE DÉGRADENT et
     SE DISPERSENT »</p>
-  difficulty_average: 2.6
+  difficulty_average: 2.7
   language: Français
   author: Max Pinsard
   image_background_url: https://fresquedeslowtechs.files.wordpress.com/2021/02/fr_techs_modern_dezo_flouetee_64c.png
@@ -572,7 +572,7 @@
   publish: true
   spotlight: true
   created: 2021-02-14
-  updated: 2021-02-19
+  updated: 2021-02-23
   tags: []
 - id: 62
   name: Fresque de l'Alimentation

@@ -3850,7 +3850,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2019-01-21
   created: 2019-01-21
   updated: 2020-09-28
@@ -15813,7 +15813,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-06-14
   created: 2020-06-24
   updated: 2020-06-24
@@ -29763,7 +29763,7 @@
   - 228
   - 245
 - id: 923
-  text: Quelle proportion des poissons sont pêchés à la limite ou au-delà de leur
+  text: Quelle proportion des poissons pêchés le sont à la limite ou au-delà de leur
     capacité de régénération ?
   hint: ''
   type: QCM
@@ -30421,8 +30421,8 @@
   tags:
   - 30
 - id: 1006
-  text: If Internet were a country, at which position will it arrive when talking
-    about electricity consumption ?
+  text: If Internet was a country, at which position will it arrive when talking about
+    electricity consumption ?
   hint: ''
   type: QCM
   category: 2
