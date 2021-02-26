@@ -29140,6 +29140,41 @@
   updated: 2021-02-23
   tags:
   - 14
+- id: 870
+  text: De toute l'énergie finale dont l'humanité a besoin, quelle est la part d'énergie
+    thermique (chaleur) ?
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 2
+  language: Français
+  answer_option_a: 15%
+  answer_option_b: 33%
+  answer_option_c: 50%
+  answer_option_d: 80%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Les industries représentent la moitié de l''énergie primaire,
+    les transports 1/4 et les bâtiments le dernier quart (BP). En excluant les moteurs
+    des transports, on peut voir que l''industrie requiert pour 67% de la chaleur,
+    et les batiments (résidentiels et pro) environ la moitié en chaleur (chauffage,
+    eau chaude ...), le reste en électricité. Total : environ la moitié de l''énergie
+    requise est sous forme de chaleur, ce qui contrevient à l''idée que l''électricité
+    fait tout.'
+  answer_accessible_url: ''
+  answer_scientific_url: https://solar.lowtechmagazine.com/2011/07/solar-powered-factories.html
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-22
+  created: 2021-02-26
+  updated: 2021-02-26
+  tags:
+  - 218
 - id: 900
   text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
   hint: Bas carbone donc…
@@ -30289,7 +30324,7 @@
   - 33
   - 34
 - id: 1000
-  text: At global scale, what is the portion of electronic waste collected to be treated?
+  text: At global scale, what is the portion of electronic waste collected for recycling?
   hint: it is really not much!
   type: QCM
   category: 2
@@ -30301,26 +30336,25 @@
   answer_option_d: 80%
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: 'At global scale, less than 20% of electronic waste is collected
-    to be recycled (17% according to http://ewastemonitor.info/). But unlike what
-    is being said, collecting does not mean recycling: in France, 1/4 directly goes
-    to incineration. And among what goes indeed into the recycling factory, all is
-    not fully recycled: less than 30% of a smartphone is recycled, the rest is incinerated.
-    From what is not collected is exported to illegal circuits, despite most of countries
-    have signed Bâle convention which does not allow exporting toxic wastes including
-    electronic wastes.'
+  answer_explanation: 'Globally, about 20% of electronic waste is collected for recycling.
+    Contrary to what is often asserted, collected does not really mean recycled: in
+    France, 1/4 is directly burnt. And what actually goes into the recycling process
+    cannot be fully recycled: less than 30% of a smartphone is recovered, the rest
+    is incinerated. The part that is not collected is exported through illegal channels,
+    despite the fact that most countries have signed the Basel Convention which prohibits
+    the export of toxic waste such as electronic waste.'
   answer_accessible_url: https://www.greenit.fr/2017/12/26/20-dechets-electroniques-recycles/
   answer_scientific_url: https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM%202017/Global-E-waste%20Monitor%202017%20-%20Chapter%206.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/832.png
-  answer_image_explanation: 'Electronic wastes
+  answer_image_explanation: 'Electronic waste
 
 
     Source : Digital collage, fresquedunumerique.org'
   answer_extra_info: ''
   author: Aurélien Déragne
   validator: Matthieu Massart
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-02-19
   created: 2021-02-21
   updated: 2021-02-21
@@ -30329,7 +30363,7 @@
   - 228
   - 229
 - id: 1001
-  text: What portion of Internet traffic does the video represent?
+  text: What is the share of video flows in the internet traffic?
   hint: It is more that what we think...
   type: QCM
   category: 2
@@ -30348,28 +30382,27 @@
   answer_scientific_url: https://theshiftproject.org/wp-content/uploads/2019/07/2019-01.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/831.png
-  answer_image_explanation: "Video online represents 80% of the internet traffic,\
-    \ following is the distribution \n- 20% - vod (Netflix, Amazon Prime)\n- 20% -\
-    \ other video (TV, videoconf)\n- 16% - pornography\n \nSource : Digital collage,\
-    \ fresquedunumerique.org"
+  answer_image_explanation: "Video online represents 80% of the internet traffic:\n\
+    - 20% - vod (Netflix, Amazon Prime)\n- 20% - other video (TV, videoconf)\n- 16%\
+    \ - pornography\n \nSource : Digital collage, fresquedunumerique.org"
   answer_extra_info: ''
   author: Aurélien Déragne
   validator: Matthieu Massart
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-02-19
   created: 2021-02-21
   updated: 2021-02-21
   tags:
   - 30
 - id: 1002
-  text: 'At global scale, including full life cycle, which portion the digital represents
-    in our green house gas (ref : 2018)'
+  text: 'Globally, and considering all stages of the life cycle, what share does digital
+    represent in our greenhouse gas emissions? (reference: 2018)'
   hint: It is more than civil aviation
   type: QCM
   category: 2
   difficulty: 2
   language: English
-  answer_option_a: negligeable, it is dematerialized
+  answer_option_a: neglectible, it is dematerialized
   answer_option_b: 2%
   answer_option_c: 4%
   answer_option_d: 10%
@@ -30379,8 +30412,8 @@
     and usage (mainly electricity), the digital sector represents close to 4% of our
     GHE, hence more than civil aviation.
 
-    To note : the portion linked to waste is not documented (represents probably a
-    small portion unfortunately).'
+    To note : the portion linked to waste is not documented (probably amounts for
+    a small part, unfortunately).'
   answer_accessible_url: https://theshiftproject.org/wp-content/uploads/2018/11/Rapport-final-v8-WEB.pdf
   answer_scientific_url: ''
   answer_reading_recommendation: ''
@@ -30391,7 +30424,7 @@
   answer_extra_info: ''
   author: Aurélien Déragne
   validator: Matthieu Massart
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-02-19
   created: 2021-02-21
   updated: 2021-02-21
@@ -30400,7 +30433,7 @@
   - 100
 - id: 1003
   text: 'The digital objects are: end user devices, infrastructure devices, and data
-    centers. Which family objects consume the more electricity ?'
+    centers. Which family of objects consume the most electricity ?'
   hint: It is not the one we thought about first time
   type: QCM
   category: 2
@@ -30412,21 +30445,21 @@
   answer_option_d: Data centers
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: 'Our end user devices (computers, smart watches, smartphones...)
-    are so numerous that in 2019 they consummed about 2 times more than data centers
-    (which are big machines !) : 30% of primary energy primaire mobilized by digital
-    sector is used for our end user equipments usage, and only 15% for data centers.'
+  answer_explanation: Our digital equipment / user terminals are so numerous that
+    in 2019 they consumed consume about twice as much as data centres. 30% of the
+    primary energy mobilised by the digital sector is used for the use of our equipment,
+    and only 15% for data centres.
   answer_accessible_url: ''
   answer_scientific_url: https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/829.png
-  answer_image_explanation: "Electricity consumed for usage (greenit.fr) distribution:\
+  answer_image_explanation: "Electricity consumed for usage (source: greenit.fr) distribution:\
     \ \n30% - Digital equipment usage \n20% - Network usage \n15% - Data center usage\n\
     \nSource : Digital collage, fresquedunumerique.org"
   answer_extra_info: ''
   author: Aurélien Déragne
   validator: Matthieu Massart
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-02-19
   created: 2021-02-21
   updated: 2021-02-21
@@ -30434,23 +30467,22 @@
   - 30
   - 39
 - id: 1004
-  text: What is the  carbon footprint of the full cycle for an Iphone 11 (building,
-    usage;end of lyfe) ?
+  text: What is the total carbon footprint (manufacturing, use, disposal) of a smartphone
+    such as an Iphone 11?
   hint: ''
   type: QCM
   category: 2
   difficulty: 3
   language: English
-  answer_option_a: 7 kg CO2, about 50 km in Clio car using gas
-  answer_option_b: 70 kg CO2, about 500 km in Clio car using gas
-  answer_option_c: 700 kg CO2, about 5,000 km in Clio car using gas
-  answer_option_d: 7,000 kg CO2, about 50,000 km in Clio car using gas
+  answer_option_a: 7 kg CO2, a 50 km drive with a small size car
+  answer_option_b: 70 kg CO2, a 500 km drive
+  answer_option_c: 700 kg CO2, a 500 km drive
+  answer_option_d: 7,000 kg CO2, a 5,000 km drive
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: During full cycle, an iPhone 11 will emit about 72 kg CO2eq,
-    equivalent of 500 km done using a car. 80% of those emission are linked to the
-    productionof the phone and 17% to its usage. In 2019, it is about 14 billions
-    of smartphones that were produced.
+  answer_explanation: Over its lifetime, an iPhone 11 will emit around 72 kg of CO2
+    equivalent, about as much as driving 500 km by car. 80% is manufacturing, 17%
+    is use. In 2019, 14 billion smartphones have been manufactured.
   answer_accessible_url: https://www.zdnet.fr/actualites/gaz-a-effet-de-serre-les-smartphones-polluent-surtout-pendant-leur-fabrication-39846224.htm
   answer_scientific_url: https://www.apple.com/euro/environment/pdf/a/generic/products/iphone/iPhone_11_PER_sept2019.pdf
   answer_reading_recommendation: ''
@@ -30465,7 +30497,7 @@
     https://twitter.com/laydgeur/status/1234583035296845825'
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-03-02
   created: 2021-02-21
   updated: 2021-02-21
@@ -30474,7 +30506,7 @@
   - 55
   - 72
 - id: 1005
-  text: What is the portion of digital from the world electric consumption ?
+  text: How much of the world's electricity consumption is digital?
   hint: ''
   type: QCM
   category: 2
@@ -30486,9 +30518,9 @@
   answer_option_d: 20%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: The new technology sector represented between 6 and 10% of global
-    consumption of electricity in 2018. And the trend is sincerely increasing, about
-    5 to 7% increase every year.
+  answer_explanation: The IT sector amounted to between 6 and 10% of global consumption
+    of electricity in 2018. And the trend is sharpening, about 5 to 7% increase every
+    year.
   answer_accessible_url: https://lejournal.cnrs.fr/articles/numerique-le-grand-gachis-energetique
   answer_scientific_url: ''
   answer_reading_recommendation: ''
@@ -30499,19 +30531,19 @@
     in 2025 it will double. Same for the wordwide electric consumption (from 10 to
     20%).
 
-    Digital footprint will increase about 9% per year.'
+    Digital footprint will increase by about 9% per year.'
   answer_extra_info: ''
   author: Guillaume Boudry
   validator: Matthieu Massart
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-02-19
   created: 2021-02-21
   updated: 2021-02-21
   tags:
   - 30
 - id: 1006
-  text: If Internet was a country, at which position will it arrive when talking about
-    electricity consumption ?
+  text: If the Internet were a country, where would it stand in terms of electricity
+    consumption?
   hint: ''
   type: QCM
   category: 2
@@ -30523,23 +30555,20 @@
   answer_option_d: 10th
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: It will be 3rd most bigger consumer of electricity in the world,
-    behind China and USA, with about 1,500 terawatthours (TWh) per year, according
-    to experts. But this needs to put in perspective with number of users, which is
-    about billons.
+  answer_explanation: If the internet were a country, it would be the third biggest
+    consumer of electricity in the world, behind China and the United States, with
+    some 1,500 terawatt hours (TWh) per year, experts say. But this to be put into
+    perspective with the number of users, which ranges in the billions.
   answer_accessible_url: https://www.lefigaro.fr/secteur/high-tech/internet-un-ogre-energetique-a-l-appetit-insatiable-en-electricite-20191120
   answer_scientific_url: https://www.nature.com/articles/d41586-018-06610-y
   answer_reading_recommendation: ''
   answer_image_url: https://media.nature.com/w1172/magazine-assets/d41586-018-06610-y/d41586-018-06610-y_16109898.jpg
   answer_image_explanation: 'Data center of Facebook at Luleå, in Sweden. Credit :
     Jonathan Nackstrand/AFP/Getty'
-  answer_extra_info: 'mail pollution : https://www.leparisien.fr/resizer/r6wWjvmpV910kaFMATZjfE2L_4Q=/800x512/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/JW6W6ZUMZPZXPL6ZFWWDD5ISMM.jpg
-
-
-    https://mrmondialisation.org/le-cout-ecologique-dinternet-est-astronomique/'
+  answer_extra_info: ''
   author: Matthieu Massart
   validator: Raphael Odini
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-03-10
   created: 2021-02-21
   updated: 2021-02-21
