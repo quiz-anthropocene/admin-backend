@@ -21711,7 +21711,7 @@
   difficulty: 2
   language: Français
   answer_option_a: Il reste dans l'atmosphère.
-  answer_option_b: Il est dissous dans les océans
+  answer_option_b: Il est dissout dans les océans
   answer_option_c: Il est absorbé par la végétation (photosynthèse)
   answer_option_d: ''
   answer_correct: a
@@ -26352,6 +26352,95 @@
   - 33
   - 217
   - 218
+- id: 788
+  text: Quelle est la principale source d'oxygène sur Terre ?
+  hint: ''
+  type: QCM
+  category: 4
+  difficulty: 3
+  language: Français
+  answer_option_a: La forêt amazonienne
+  answer_option_b: L'ensemble des forêts primaires
+  answer_option_c: Le phytoplancton
+  answer_option_d: Les algues
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: 'Bien moins connu que l''Amazonie, le vrai « poumon de la Terre
+    » est invisible à l’œil nu car sa taille est microscopique. Il s’agit du phytoplancton,
+    le plancton végétal constitué de micro-algues et de cyanobactéries. Ces organismes
+    végétaux évoluent dans la partie superficielle des océans qui recouvrent 71% de
+    la surface de la planète, bien loin des 1,4% de l’Amazonie. Absolument essentiel
+    à la vie – aquatique comme terrestre – sur notre planète, le phytoplancton produit
+    - grâce à son activité photosynthétique - 50 à 85% de l’oxygène de la planète,
+    selon les saisons. En pompant le CO2 qu’il transforme en O2, il joue aussi un
+    rôle essentiel dans la régulation du climat.
+
+    Le reste provient des plantes vertes terrestres. Au moins la moitié de l’air que
+    nous respirons est prodiguée par le phytoplancton. Ces micro-organismes d’apparence
+    passive qui représentent seulement 1% de la biomasse des organismes photosynthétiques,
+    semblent bien être ceux dont le rôle nous est le plus vital. La photosynthèse
+    du phytoplancton a d’ailleurs été un facteur déclencheur de la production de dioxygène
+    atmosphérique dès le début du Précambrien, il y a plusieurs milliards d’années.
+    C’est cette activité qui aurait permis la diversification évolutive du biote tel
+    qu’on le connaît aujourd’hui. Les périodes de baisse de productivité ou de disparition
+    du phytoplancton auraient également gravement affecté la vie sur Terre.'
+  answer_accessible_url: https://mrmondialisation.org/le-vrai-poumon-du-monde-est-oceanique-et-il-brule-sans-faire-de-vague/
+  answer_scientific_url: https://earthsky.org/earth/how-much-do-oceans-add-to-worlds-oxygen
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Jean-Christophe Anna
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-21
+  created: 2021-02-26
+  updated: 2021-02-26
+  tags:
+  - 247
+  - 248
+- id: 789
+  text: Quelle proportion du phytoplancton a disparu depuis 1950 ?
+  hint: ''
+  type: QCM
+  category: 4
+  difficulty: 3
+  language: Français
+  answer_option_a: Entre 20 et 30%
+  answer_option_b: Entre 30 et 40%
+  answer_option_c: Entre 40 et 50%
+  answer_option_d: Entre 50 et 60%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Le phytoplancton est gravement menacé : entre 40 et 50% de
+    sa quantité totale a disparu depuis 1950. C''est le fait notamment de la surpêche,
+    de l’acidification des océans et du réchauffement climatique.
+
+    « Plus de baleines = plus de phytoplancton
+
+    Plus de phytoplancton = plus de zooplancton
+
+    Plus de zooplancton = plus de poissons
+
+    Plus de gens = moins de vie dans l’océan »
+
+    Paul Watson – Urgence ! Si l’océan meurt, nous mourrons – Éditions Glénat, Avril
+    2016'
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: Paul Watson – Urgence ! Si l’océan meurt, nous mourrons
+    – Éditions Glénat, Avril 2016
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Jean-Christophe Anna
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-21
+  created: 2021-02-26
+  updated: 2021-02-26
+  tags:
+  - 247
 - id: 790
   text: Les 1% plus grand émetteurs de la planète habitent dans 5 pays. Leurs émissions
     sont toutes au-dessus de  "x" tCO2e / an / cap.
@@ -27580,8 +27669,8 @@
   tags:
   - 37
 - id: 828
-  text: 'Quel est le pourcentage d''eau douce consommée par le secteur de l''agriculture
-    à l''échelle mondiale ? '
+  text: Quel est le pourcentage d'eau douce consommée par le secteur de l'agriculture
+    à l'échelle mondiale ?
   hint: ''
   type: QCM
   category: 7
@@ -30458,3 +30547,32 @@
   - 2
   - 30
   - 39
+- id: 1007
+  text: En 2009, quelle était est le pourcentage de chercheurs spécialisés en sciences
+    du climat attribuant à l'humain la cause du réchauffement climatique actuel ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 2
+  language: Français
+  answer_option_a: 47%
+  answer_option_b: 65%
+  answer_option_c: 97%
+  answer_option_d: 100%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Jean-Philippe Pernin
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-02-23
+  created: 2021-02-26
+  updated: 2021-02-26
+  tags:
+  - 22
