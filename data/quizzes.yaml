@@ -618,9 +618,9 @@
   author: 'Aurélien Deragne, translation: Benoît Barraque'
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/logo%20FDN.png
   has_audio: false
-  publish: false
-  spotlight: false
+  publish: true
+  spotlight: true
   created: 2021-02-20
-  updated: 2021-02-26
+  updated: 2021-02-28
   tags:
   - 30
