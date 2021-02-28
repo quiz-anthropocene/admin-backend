@@ -269,6 +269,47 @@ def author_aggregate():
     return question_quiz_authors
 
 
+def language_aggregate():
+    question_languages = list(
+        Question.objects.validated()
+        .values("language")
+        .annotate(question_count=Count("language"))
+        .order_by("language")
+    )
+    quiz_languages = list(
+        Quiz.objects.published()
+        .values("language")
+        .annotate(quiz_count=Count("language"))
+        .order_by("language")
+    )
+
+    languages = []
+    for language in constants.LANGUAGE_CHOICE_LIST:
+        languages.append(
+            {
+                "name": language,
+                "question_count": next(
+                    (
+                        item["question_count"]
+                        for item in question_languages
+                        if item["language"] == language
+                    ),
+                    0,
+                ),
+                "quiz_count": next(
+                    (
+                        item["quiz_count"]
+                        for item in quiz_languages
+                        if item["language"] == language
+                    ),
+                    0,
+                ),
+            }
+        )
+
+    return languages
+
+
 def aggregate_timeseries_by_week(timeseries):
     """
     input:
