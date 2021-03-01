@@ -29872,10 +29872,10 @@
     des déchets.
   answer_accessible_url: ''
   answer_scientific_url: ''
-  answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: 'Source : Infographie, Mieux manger, Moins gaspiller,
-    Moins polluer, ADEME'
+  answer_reading_recommendation: Infographie, Mieux manger, Moins gaspiller, Moins
+    polluer, ADEME
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/922.jpg
+  answer_image_explanation: ' '
   answer_extra_info: ''
   author: Julien Briton
   validator: Matthieu Massart
@@ -29908,7 +29908,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/923.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Julien Briton
@@ -29943,7 +29943,8 @@
     !'
   answer_accessible_url: ''
   answer_scientific_url: ''
-  answer_reading_recommendation: ''
+  answer_reading_recommendation: FranceAgriMer “Les Chiffres-clés de la filière Fruit
+    & Légumes frais et transformés 2018”
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
@@ -29985,7 +29986,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/925.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Julien Briton
@@ -30023,7 +30024,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/926.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Julien Briton
@@ -30055,7 +30056,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/927.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Julien Briton
@@ -30068,8 +30069,8 @@
   - 5
   - 17
 - id: 928
-  text: En France, la grande distribution représente quel pourcentage des dépenses
-    de produits alimentaires.
+  text: En France, quel pourcentage des dépenses de produits alimentaires la grande
+    distribution représente-t-elle ?
   hint: ''
   type: QCM
   category: 2
@@ -30095,7 +30096,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/928.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Julien Briton
@@ -30131,7 +30132,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/929.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Julien Briton

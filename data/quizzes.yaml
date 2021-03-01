@@ -512,10 +512,10 @@
   author: Aurélien Déragne
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/logo%20FDN%20fond%20blanc.png
   has_audio: false
-  publish: true
+  publish: false
   spotlight: true
   created: 2021-01-21
-  updated: 2021-02-22
+  updated: 2021-03-01
   tags:
   - 30
 - id: 60
@@ -580,9 +580,9 @@
     \ finit dans votre assiette ? Et leurs conséquences environnementales ? Pour mieux\
     \ vous éclairer, un atlier collectif et pédagogique a été créé : la <a href=\"\
     http://fresquealimentation.org/\">Fresque de l’Alimentation</a>.<br />\r\nPour\
-    \ vous mettre en appétit, rien de mieux qu'un petit quiz pour sonder vos connaissanes\
-    \ ?</p>\r\n\r\n<p>Un quiz conçu par Julien Briton, co-concepteur de l'atelier\
-    \ Fresque de l'Alimentation.<br />\r\n </p>"
+    \ vous mettre en appétit, quoi de mieux qu'un petit quiz pour sonder vos connaissanes\
+    \ ?</p>\r\n\r\n<p>Un quiz conçu par Julien Briton et Thomas Moulin, concepteurs\
+    \ de l'atelier Fresque de l'Alimentation.<br />\r\n </p>"
   conclusion: "<p>Pour aller plus loin, direction le site de la <a href=\"http://fresquealimentation.org/\"\
     >Fresque de l’Alimentation</a>. Avec comme objectif d’embarquer le plus grand\
     \ nombre dans une transition alimentaire rapide et effective, l'atelier passe\
@@ -591,16 +591,21 @@
     \ saine et durable, végétalisée, locale, bio et de saison, et détaille en quoi\
     \ une alimentation durable améliore la résilience alimentaire.</p>\r\n\r\n<p> </p>\r\
     \n\r\n<p> </p>"
-  difficulty_average: 0.0
+  difficulty_average: 2.0
   language: Français
-  author: ''
-  image_background_url: ''
+  author: Julien Briton et Thomas Moulin
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/logo_FA.png
   has_audio: false
   publish: false
-  spotlight: false
+  spotlight: true
   created: 2021-02-18
-  updated: 2021-02-21
-  tags: []
+  updated: 2021-03-01
+  tags:
+  - 5
+  - 17
+  - 188
+  - 223
+  - 244
 - id: 63
   name: Digital Collage
   introduction: "<p>The Digital Collage is a collaborative and pedagogical workshop\
