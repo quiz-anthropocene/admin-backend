@@ -604,12 +604,12 @@
 - id: 63
   name: Digital Collage
   introduction: "<p>The Digital Collage is a collaborative and pedagogical workshop\
-    \ aiming at showing the ecological impacts of the digital world and potential\
-    \ levers to alleviate their impact, in a friendly way! The principle is the same\
-    \ as the Climate Collage workshop:create cause-to-effect links between cards to\
-    \ see build a global picture. Come on, get to grips with a few appetizing questions\
-    \ inspired by this workshop!<br />\r\n<br />\r\nEnglish version: Benoît Baraque,\
-    \ based on an initial quiz by Aurélien Deragne</p>"
+    \ that unveils the ecological impacts of the digital world, and presents potential\
+    \ levers to alleviate them, in a friendly way! The principle is the same as the\
+    \ Climate Collage workshop:create cause-to-effect links between cards to see build\
+    \ a global picture. Come on, get to grips with a few questions inspired by this\
+    \ workshop!<br />\r\n<br />\r\nEnglish version: Benoît Baraque, based on an initial\
+    \ quiz by Aurélien Deragne</p>"
   conclusion: <p>As you can see, the digital world is causing real impacts. A good
     news? There are plenty of measures that can easily be adopted to reduce them.
     They are exposed in the Digital Collage workshop (in French only so far).</p>
@@ -621,6 +621,6 @@
   publish: true
   spotlight: true
   created: 2021-02-20
-  updated: 2021-02-28
+  updated: 2021-03-01
   tags:
   - 30
