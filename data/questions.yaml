@@ -28714,7 +28714,7 @@
     dispersion dans les uages (ex : pots catalytiques échappant du platine, colbalt,
     zinc ...).'
   answer_accessible_url: https://www.gralon.net/articles/commerce-et-societe/automobile--auto-moto/article-le-pot-catalytique---fonctionnement-et-limites-3427.htm
-  answer_scientific_url: ''
+  answer_scientific_url: https://pubs.acs.org/doi/abs/10.1021/es505515z
   answer_reading_recommendation: L'âge des low-techs, Philippe Bihouix (2014)
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/858.png
   answer_image_explanation: ''
@@ -29826,14 +29826,14 @@
   - 218
 - id: 921
   text: Le glacier d'Aletsch, situé en Suisse, est le plus grand glacier des Alpes.
-    Comment le glacier a-t-il évolué en taille puis 1880 ?
+    Comment le glacier a-t-il évolué en taille depuis les années 1960 ?
   hint: Ce n'est pas un glacier très original
   type: QCM
   category: 1
   difficulty: 2
   language: Français
-  answer_option_a: il a reculé de 500m
-  answer_option_b: Il a reculé de 3 km
+  answer_option_a: il a reculé de 500 m
+  answer_option_b: Il a reculé de 1500 m
   answer_option_c: Il a reculé de 10 km
   answer_option_d: Il a avancé de 890 m
   answer_correct: b
