@@ -30606,3 +30606,33 @@
   updated: 2021-02-26
   tags:
   - 22
+- id: 1008
+  text: Depuis quelle période l'influence humaine a-t-elle clairement fait sortir
+    le climat de la Terre de sa variabilité naturelle ?
+  hint: Les 30 glorieuses sont synonymes d'une grande accélération
+  type: QCM
+  category: 1
+  difficulty: 3
+  language: Français
+  answer_option_a: Du 10éme au 14éme siècle
+  answer_option_b: De 1880 à 1910
+  answer_option_c: De 1950 à 1980
+  answer_option_d: de 1980 à 2010
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Lionel Favier
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-01
+  created: 2021-03-03
+  updated: 2021-03-03
+  tags:
+  - 32
+  - 51
