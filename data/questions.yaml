@@ -1784,10 +1784,10 @@
   category: 1
   difficulty: 3
   language: Français
-  answer_option_a: 1 200 km² (superficie du département du Val-d'Oise)
-  answer_option_b: 12 000 km² (superficie de la région Île-de-France)
-  answer_option_c: 120 000 km² (superficie de la Grèce)
-  answer_option_d: 1 200 000 km² (superficie de l'Afrique du Sud)
+  answer_option_a: 1,200 km² (superficie du département du Val-d'Oise)
+  answer_option_b: 12,000 km² (superficie de la région Île-de-France)
+  answer_option_c: 120,000 km² (superficie de la Grèce)
+  answer_option_d: 1,200,000 km² (superficie de l'Afrique du Sud)
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: Soit 20% de la superficie de la France métropolitaine.
@@ -18744,7 +18744,6 @@
     La facture du sel dans les sols agricoles est… salée, selon une étude publiée
     fin octobre par des chercheurs de l’ONU.
 
-
     La salinisation des sols est souvent le fait de mauvaises pratiques d’irrigation.
     Un apport d’eau insuffisant conduit le sel qu’elle contient à s’installer dans
     le sol. L''étude préconise une action énergique pour stopper l''hémorragie.'
@@ -22210,8 +22209,10 @@
   tags:
   - 197
 - id: 671
-  text: Quelle proportion de sa consommation de charbon l'Union Européenne importe-t-elle
+  text: 'Quelle proportion de sa consommation de charbon l''Union Européenne importe-t-elle
     ?
+
+    (périmètre : Union à 28 membres)'
   hint: ''
   type: QCM
   category: 5
