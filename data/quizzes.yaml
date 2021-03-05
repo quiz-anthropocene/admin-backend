@@ -629,3 +629,17 @@
   updated: 2021-03-01
   tags:
   - 30
+- id: 64
+  name: Quiz Atelier
+  introduction: ''
+  conclusion: ''
+  difficulty_average: 2.6
+  language: Français
+  author: Matthieu Massart et Jean-Philippe Pernin
+  image_background_url: ''
+  has_audio: false
+  publish: false
+  spotlight: false
+  created: 2021-03-05
+  updated: 2021-03-05
+  tags: []
