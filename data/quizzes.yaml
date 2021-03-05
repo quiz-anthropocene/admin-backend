@@ -526,7 +526,7 @@
   conclusion: <p>Bravo, vous avez quelques ordres de grandeur pour aborder le sujet
     de la sobriété numérique. Vous pouvez également compléter vos connaissances avec
     le quiz de la fresque du numérique.</p>
-  difficulty_average: 2.3
+  difficulty_average: 2.2
   language: Français
   author: Alain Servigne
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/Quiz60.jpg
@@ -534,7 +534,7 @@
   publish: true
   spotlight: true
   created: 2021-02-01
-  updated: 2021-02-19
+  updated: 2021-03-04
   tags:
   - 30
 - id: 61
