@@ -4,7 +4,7 @@
         "subtitle": "Des questions/réponses pour mieux appréhender les limites de notre planète 🌍"
     },
     "home": {
-        "item1Title": "Des questions objectives et sourcées",
+        "item1Title": "Des réponses objectives et sourcées",
         "item1Subtitle": "(on fait de notre mieux :)",
         "item2Title": "Explorer et filtrer grâce aux <span class='text-secondary'>catégories</span> & <span class='color-tag'>tags</span>",
         "item3Title": "À l'écoute de vos retours",
@@ -75,7 +75,7 @@
     },
     "words": {
         "et": "et",
-        "times": "times",
+        "times": "fois",
         "cette": "cette",
         "ce": "ce",
         "exclamationMark": " !",
