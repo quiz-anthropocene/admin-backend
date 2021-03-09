@@ -66,16 +66,16 @@ export default {
       },
     },
     // eslint-disable-next-line
-    questionFilters (newQuestionFilters, oldQuestionFilters) {
-      if (newQuestionFilters) {
-        const nextQuestion = this.$store.getters.getNextQuestionByFilter();
-        if (nextQuestion) {
-          this.$router.push({ name: 'question-detail', params: { questionId: nextQuestion.id } });
-        } else {
-          this.$router.push({ name: 'question-list' });
-        }
-      }
-    },
+    // questionFilters (newQuestionFilters, oldQuestionFilters) {
+    //   if (newQuestionFilters) {
+    //     const nextQuestion = this.$store.getters.getNextQuestionByFilter();
+    //     if (nextQuestion) {
+    //       this.$router.push({ name: 'question-detail', params: { questionId: nextQuestion.id } });
+    //     } else {
+    //       this.$router.push({ name: 'question-list' });
+    //     }
+    //   }
+    // },
   },
 
   mounted() {
