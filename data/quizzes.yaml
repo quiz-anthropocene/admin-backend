@@ -512,10 +512,10 @@
   author: Aurélien Déragne
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/logo%20FDN%20fond%20blanc.png
   has_audio: false
-  publish: false
+  publish: true
   spotlight: true
   created: 2021-01-21
-  updated: 2021-03-01
+  updated: 2021-03-08
   tags:
   - 30
 - id: 60
@@ -633,7 +633,7 @@
   name: Quiz Atelier
   introduction: ''
   conclusion: ''
-  difficulty_average: 2.6
+  difficulty_average: 2.5
   language: Français
   author: Matthieu Massart et Jean-Philippe Pernin
   image_background_url: ''
@@ -641,5 +641,5 @@
   publish: false
   spotlight: false
   created: 2021-03-05
-  updated: 2021-03-05
+  updated: 2021-03-08
   tags: []
