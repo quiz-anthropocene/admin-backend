@@ -1654,28 +1654,10 @@
   order: 8
   created: 2021-03-01
   updated: 2021-03-01
-- id: 397
-  quiz: 62
-  question: 95
-  order: 12
-  created: 2021-03-01
-  updated: 2021-03-01
 - id: 398
   quiz: 62
   question: 930
   order: 9
-  created: 2021-03-01
-  updated: 2021-03-01
-- id: 399
-  quiz: 62
-  question: 931
-  order: 10
-  created: 2021-03-01
-  updated: 2021-03-01
-- id: 400
-  quiz: 62
-  question: 932
-  order: 11
   created: 2021-03-01
   updated: 2021-03-01
 - id: 401
