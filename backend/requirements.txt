@@ -18,10 +18,12 @@ freezegun==0.3.15
 gunicorn==20.0.4
 ipython==7.19.0
 # notion==0.0.25
-git+git://github.com/jamalex/notion-py
+# git+git://github.com/jamalex/notion-py
+# git+git://github.com/c0j0s/notion-py
+git+git://github.com/julrach/notion-py
 pandas==1.1.5
 pre-commit==2.9.3
-psycopg2==2.8.4
+psycopg2==2.8.6
 PyGithub==1.54
 python-dotenv==0.12.0
 pytz==2020.4
