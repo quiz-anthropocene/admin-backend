@@ -122,11 +122,12 @@ const store = new Vuex.Store({
       const quizzes = quizzesYamlData;
       // quiz: get question and tag objects
       quizzes.map((q) => {
-        // get quiz questions + order + only get question ids
+        // get quiz questions (in the right order)
         const quizQuestionsList = quizQuestionsYamlData.filter((qq) => qq.quiz === q.id);
         quizQuestionsList.sort((a, b) => a.order - b.order);
         const quizQuestionsIdList = quizQuestionsList.map((qq) => qq.question);
         const quizQuestions = getters.getQuestionsByIdList(quizQuestionsIdList);
+        quizQuestions.sort((a, b) => quizQuestionsIdList.indexOf(a.id) - quizQuestionsIdList.indexOf(b.id));
         // get quiz tags
         const quizTags = getters.getTagsByIdList(q.tags);
         // assign
