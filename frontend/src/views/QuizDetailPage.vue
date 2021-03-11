@@ -20,7 +20,9 @@
         </h2>
 
         <section v-if="(quizStep === 0) || (quizStep > quiz.questions.length)">
-          <div class="card-subtitle" v-html="quiz.introduction" title="Introduction du quiz"></div>
+          <div class="row no-gutters justify-content-center card-subtitle">
+            <div class="col-md-10 col-lg-8" v-html="quiz.introduction" title="Introduction du quiz"></div>
+          </div>
 
           <hr class="margin-top-bottom-10" />
 
@@ -28,12 +30,12 @@
             <div class="col" title="Nombre de questions">
               <span class="label label-hidden"><strong>{{ quiz.questions.length }}</strong></span>Questions
             </div>
-            <div class="col" v-bind:title="$t('messages.difficulty')">
+            <!-- <div class="col" v-bind:title="$t('messages.difficulty')">
               🏆&nbsp;{{ $t('messages.difficulty') }}<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }} / 4</strong></span>
-            </div>
-            <!-- <div class="col" title="Auteur du quiz">
-              📝&nbsp;Auteur<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>
             </div> -->
+            <div class="col" title="Auteur du quiz">
+              📝&nbsp;Auteur<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>
+            </div>
             <!-- <span title="Date de création du quiz">📊&nbsp;Crée le:&nbsp;{{ new Date(quiz.created).toLocaleString() }}</span> -->
             <div v-if="quiz.tags && quiz.tags.length > 0" class="col small" title="Tag(s) du quiz">
               <span v-for="(tag, index) in quiz.tags" :key="tag.id">
@@ -115,7 +117,7 @@ export default {
   metaInfo() {
     // const url = `/quiz/${this.$route.params.quizId}`;
     const title = this.quiz && this.quiz.name ? `Quiz #${this.$route.params.quizId} - ${this.quiz.name}` : `Quiz #${this.$route.params.quizId}`;
-    const description = this.quiz && this.quiz.introduction ? this.quiz.introduction : 'Le quiz n’a pas de description';
+    const description = this.quiz && this.quiz.introduction ? this.quiz.introduction : '';
     const imageUrl = this.quiz && this.quiz.image_background_url ? this.quiz.image_background_url : 'https://quizanthropocene.fr/showyourstripes_globe_1850-2019.png';
     return {
       title,
