@@ -29996,7 +29996,7 @@
   answer_accessible_url: https://www.passioncereales.fr/dossier-thematique/le-march%C3%A9-des-c%C3%A9r%C3%A9ales-fran%C3%A7aises
   answer_scientific_url: https://resiliencealimentaire.org/
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/925.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/925.png
   answer_image_explanation: Répartition de la production céréalière française pour
     la campagne 2019/2020 (hors imports et stocks)
   answer_extra_info: ''
@@ -30085,8 +30085,8 @@
   - 5
   - 242
 - id: 928
-  text: 'Pour leurs produits alimentaires, dans quelle proportion les Français s''approvisionnent-ils
-    dans les grandes surfaces ? '
+  text: Dans quelle proportion les Français s'approvisionnent-ils dans les grandes
+    surfaces pour leurs produits alimentaires ?
   hint: ''
   type: QCM
   category: 2
@@ -30154,7 +30154,7 @@
   answer_reading_recommendation: 'Source INRAE : [https://www.inrae.fr/actualites/infographie-elevage-occupation-terres](https://www.inrae.fr/actualites/infographie-elevage-occupation-terres)
 
     Source FAO : [http://www.fao.org/3/a0701e/a0701e11.pdf](http://www.fao.org/3/a0701e/a0701e11.pdf)'
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/929.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/929.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Julien Briton

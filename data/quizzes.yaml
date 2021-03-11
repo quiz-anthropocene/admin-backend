@@ -593,7 +593,7 @@
   difficulty_average: 1.9
   language: Français
   author: Julien Briton et Thomas Moulin
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/LOGO-HORIZONTAL-QUADRI-HD.jpg
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/logo_FA.png
   has_audio: false
   publish: true
   spotlight: true
