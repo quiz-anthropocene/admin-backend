@@ -72,6 +72,8 @@ QUESTION_FIELDS = [
     "has_ordered_answers",
     "answer_correct",
     "answer_explanation",
+    "answer_audio",
+    "answer_video",
     "answer_accessible_url",
     "answer_scientific_url",
     "answer_reading_recommendation",
