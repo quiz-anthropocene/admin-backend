@@ -884,3 +884,11 @@
   name: Oxygène
   description: ''
   created: 2021-02-22
+- id: 249
+  name: vélo
+  description: ''
+  created: 2021-03-11
+- id: 250
+  name: Poubelles
+  description: ''
+  created: 2021-03-11
