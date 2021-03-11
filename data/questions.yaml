@@ -30,12 +30,10 @@
   - 5
   - 216
 - id: 2
-  text: 'Calcul d''ordre de grandeur : supposons un instant que toutes nos machines
-    soient remplacées par des serviteurs humains, qui les feraient fonctionner avec
-    la seule force de leurs muscles 8h par jour.
-
-    Combien faudrait-il de tels serviteurs par personne en France pour soutenir notre
-    niveau de vie actuel ?'
+  text: Supposons que l’énergie fournie par toutes les machines soit remplacée par
+    l’énergie de travailleurs faisant travailler leurs muscles 8h par jour. Combien
+    faudrait-il en moyenne de travailleurs au service de chaque français pour continuer
+    à vivre comme aujourd’hui ?
   hint: ''
   type: QCM
   category: 5
@@ -1195,10 +1193,10 @@
   - 150
 - id: 35
   text: Le pergélisol (ou permafrost), c'est un sol dont la température se maintient
-    en dessous de 0°C. Il couvre 20% de la surface terrestre de la planète. Que libère-t-il
-    principalement en dégelant sous l'effet du réchauffement climatique ?
+    en dessous de 0°C. Il couvre 20% de la surface terrestre. Que libère-t-il principalement
+    en dégelant sous l'effet du réchauffement climatique ?
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: 1
   difficulty: 1
   language: Français
@@ -1206,7 +1204,7 @@
   answer_option_b: de l'eau
   answer_option_c: du méthane
   answer_option_d: du NO2
-  answer_correct: c
+  answer_correct: ac
   has_ordered_answers: false
   answer_explanation: La libération en grande quantité de ce méthane emprisonné aurait
     un effet dévastateur sur le climat de la planète. Et aussi des virus du passé
@@ -5727,9 +5725,7 @@
   tags:
   - 40
 - id: 171
-  text: Le pic pétrolier désigne le moment où l'extraction de pétrole atteint son
-    niveau maximal avant de décroître inexorablement. En quelle année a eu lieu ce
-    pic au Royaume-Uni ?
+  text: En quelle année le Royaume-Uni a-t-il atteint son pic pétrolier ?
   hint: ''
   type: QCM
   category: 5
@@ -7331,7 +7327,9 @@
   - 20
   - 63
 - id: 222
-  text: Qu'est-ce qui déclenche les glaciations et les déglaciations de la terre ?
+  text: Quelle est l'origine naturelle des glaciations et des déglaciations de la
+    période du quaternaire, commencée il y a 2.6 millions d'années et toujours en
+    cours aujourd'hui ?
   hint: C’est la modification de l’insolation de la terre qui déclenche les périodes
     de glaciation et déglaciation.
   type: QCM
@@ -7357,7 +7355,7 @@
   answer_extra_info: ''
   author: Cyril Retourné
   validator: laydgeur
-  validation_status: Validée
+  validation_status: A valider
   added: 2020-04-24
   created: 2020-04-26
   updated: 2020-09-28
@@ -7425,13 +7423,13 @@
   - 8
   - 39
 - id: 225
-  text: 'L’Agence Française pour le Développement (AFD) tente de conditionner ses
-    aides au développement au travers de 2 indicateurs : l’indice de développement
-    humain (IDH), et la maîtrise de l’empreinte écologique. Lequel des pays suivants
-    combinait jusqu’il y a peu un IDH décent (du niveau de la Russie) avec une empreinte
+  text: 'L’Agence Française pour le Développement tente de conditionner ses aides
+    au développement au travers de 2 indicateurs : l’indice de développement humain
+    (IDH), et l’empreinte écologique. Lequel ou lesquels des pays suivants combinaient
+    jusqu’il y a peu un IDH décent (du niveau de la Russie) avec une empreinte écologique
     soutenable ?'
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: 6
   difficulty: 3
   language: Français
@@ -9702,10 +9700,8 @@
   answer_option_d: 1 milliard
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: Dans le monde, environ 680 millions de personnes vivent dans
-    des zones à moins de 10m au dessus du niveau de la mer. Ce sont les premières
-    exposées à la montée des eaux et à la montée en fréquence et intensité des phénomènes
-    météorologiques extrêmes.
+  answer_explanation: Ce sont les premières exposées à la montée des eaux et à la
+    montée en fréquence et intensité des phénomènes météorologiques extrêmes.
   answer_accessible_url: ''
   answer_scientific_url: https://www.ipcc.ch/srocc/download#chapter1
   answer_reading_recommendation: ''
@@ -16136,7 +16132,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: laydgeur
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2020-06-16
   created: 2020-06-24
   updated: 2020-09-28
@@ -17229,7 +17225,7 @@
     Les gaz à effet de serre sont en haut, le soleil est tout en bas.
   answer_extra_info: https://twitter.com/laydgeur/status/1332786312366202881?s=21
   author: laydgeur
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2020-06-17
   created: 2020-06-24
@@ -17443,7 +17439,7 @@
   - 57
 - id: 531
   text: Lequel de ces indicateurs permet de mieux prédire l'empreinte carbone d'un
-    individu en moyenne ?
+    individu ?
   hint: ''
   type: QCM
   category: 2
@@ -20565,7 +20561,7 @@
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1275171016566808576
   author: laydgeur
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2020-06-22
   created: 2020-11-28
@@ -21215,7 +21211,7 @@
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1284208421739405313
   author: laydgeur
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2020-07-17
   created: 2020-11-28
@@ -21731,7 +21727,7 @@
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1322285904187314178
   author: laydgeur
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2020-10-30
   created: 2020-11-28
@@ -22091,7 +22087,7 @@
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1326996258414858240
   author: laydgeur
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2020-11-12
   created: 2020-11-28
@@ -22509,7 +22505,7 @@
   answer_extra_info: https://youtu.be/WhI72CFrqEk
   author: Kim Nguyen-Huu
   validator: ''
-  validation_status: A valider
+  validation_status: Brouillon
   added: 2020-12-10
   created: 2020-12-11
   updated: 2020-12-11
@@ -22544,7 +22540,7 @@
   answer_extra_info: https://www.boursorama.com/bourse/matieres-premieres/cours/8xBRN/
   author: Kim Nguyen-Huu
   validator: ''
-  validation_status: A valider
+  validation_status: Brouillon
   added: 2020-12-14
   created: 2020-12-15
   updated: 2020-12-15
@@ -23281,19 +23277,20 @@
   difficulty: 2
   language: Français
   answer_option_a: x 1
-  answer_option_b: '120'
-  answer_option_c: '5500'
-  answer_option_d: '36500'
+  answer_option_b: x 120
+  answer_option_c: x 5500
+  answer_option_d: x 36500
   answer_correct: d
   has_ordered_answers: false
   answer_explanation: '36500 FOIS PLUS.
 
-    Si on considère qu’un vol LC AR c’est peu ou prou 24 heures,
+    Si on considère qu’un vol LC AR c’est peu ou prou 24 heures, le CO2 reste 100
+    ans :
 
-    le CO2 reste alors 365 x 100 = 36500 fois plus de temps dans l’atmosphère que
-    la durée du vol.'
-  answer_accessible_url: https://fr.wikipedia.org/wiki/Gaz_%C3%A0_effet_de_serre#cite_note-51
-  answer_scientific_url: ''
+    soit 365 x 100 = 36500 fois plus de temps dans l’atmosphère que la durée du voyage
+    AR.'
+  answer_accessible_url: https://fr.wikipedia.org/wiki/Gaz_%C3%A0_effet_de_serre
+  answer_scientific_url: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/699.png
   answer_image_explanation: ''
@@ -23341,7 +23338,7 @@
 
     mais 3 fois plus important
 
-    soit 7.5 à 9%'
+    soit 7.5 %'
   answer_accessible_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_scientific_url: ''
   answer_reading_recommendation: ''
@@ -23433,8 +23430,10 @@
   answer_option_d: '1000'
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: 550 tonnes au décollage et selon les version il peut même monter
-    à 575 tonnes.
+  answer_explanation: '550 tonnes au décollage, et selon les versions il peut même
+    monter à 575 tonnes.
+
+    Dont 240 tonnes (=300m3) de carburant et 50 tonnes de passagers.'
   answer_accessible_url: https://fr.wikipedia.org/wiki/Airbus_A380
   answer_scientific_url: https://www.airbus.com/aircraft/passenger-aircraft/a380/innovation.html#details
   answer_reading_recommendation: ''
@@ -23628,35 +23627,25 @@
   answer_option_d: x 15
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: '6 fois plus de CO2 que le poids propre de l’avion… !
+  answer_explanation: 'Pour un AR en A380 les émissions de CO2 s’élèvent à :
 
-    Le kérosène c''est environ 40 % du poids au décollage.
+    6 fois plus que le poids de l’avion à vide…
 
-    Et celui de la carlingue vide 50 %.
+    Pour ceux qui aiment les détails :
 
-    Les émissions correspondent à 3.8 kg CO2 / kg de kérosène
+    300 m3 (=240 tonnes) de kérosène à 3 tonnes de CO2 / m3
 
-    (ou 3.04 kg CO2 / litre),
+    => 900 tonnes de CO2 ou
 
-    40% x 3.8 = 152% pour un vol simple
+    =>1800 tonnes Aller-retour
 
-    et 2 x 152% = 304% pour un vol AR.
+    Rapporté au poids de l’avion à vide 275 tonnes
 
-    Ce dernier chiffre est à rapprocher de celui de l’avion à vide
+    1800 / 275 = 6.5
 
-    Soit 304% / 50% = 6.1 arrondit à un facteur 6
+    Avec un peu moins d’une rotation par jour, soit 275 par an,
 
-    Donc sur « un seul vol long-courrier AR », les beaux avions dispersent tranquillement
-    des tonnes de CO2.
-
-    Dans le cas présent avec un emport de 2 x 240 tonnes de kérosène ce sont plus
-    de 1800 tonnes de CO2 émises pour un minimum d’une centaine d’années pour chaque
-    AR.
-
-    Soit 6 fois le poids de l’avion à vide.
-
-    Avec un peu moins d’une rotation par jour, soit 275 par an, un seul avion LC émettra
-    « 500 000 tonnes de CO2 / an ».'
+    un seul avion LC de 275 tonnes émettra « 500 000 tonnes de CO2 / an ».'
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
@@ -23773,7 +23762,7 @@
   has_ordered_answers: false
   answer_explanation: 'En 2019 : 24000 avions commerciaux
 
-    Une croissance sur les 20 prochaine année Stratosphérique ! Le marché n’en finit
+    Une croissance sur les 20 prochaines années Stratosphérique ! Le marché n’en finit
     pas de prendre de l’altitude, avec une demande mondiale estimée à 39 210 avions
     neufs sur les vingt prochaines années (2019-2038) selon Airbus.
 
@@ -23812,7 +23801,8 @@
   answer_option_d: '15350'
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: 3500 aéroports commerciaux
+  answer_explanation: 3500 aéroports commerciaux, c'est en moyenne une vingtaine par
+    pays, sachant qu'il y a une concentration dans le monde occidental...
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: ''
   answer_reading_recommendation: ''
@@ -23842,12 +23832,17 @@
   answer_option_d: '80'
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: Avec le terminal 4 la capacité passerait à 115 millions de passager
-    à l'horizon 2032
-  answer_accessible_url: ''
+  answer_explanation: 'D’une capacité de 80 millions de passagers, en 2018, l’aéroport
+    Charles de Gaulle a accueilli 72,2 millions de passagers (+4 % par rapport à 2017)
+
+    Avec le terminal 4 la capacité passerait à 115 millions de passager à l''horizon
+    2032
+
+    un doublement du nombre de passagers est anticipé d’ici 2040.'
+  answer_accessible_url: https://www.liberation.fr/environnement/le-gouvernement-abandonne-le-terminal-4-a-roissy-20210211_OEWFJLGC3ZENHIRF7XSWVY7S3M/
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: http://www.cgedd.developpement-durable.gouv.fr/IMG/pdf/200708_creation_t4_cdg_delibere_cle622f7d.pdf
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -23873,9 +23868,9 @@
   answer_option_d: '38'
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: '38 millions de vols par jour,
+  answer_explanation: '38 millions de vols par an,
 
-    c’est presque 110 000 vols commerciaux par jours en moyenne,
+    c’est presque 110 000 vols commerciaux par jour en moyenne,
 
     avec des pointes en juin à 230 000 vols.'
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
@@ -23934,7 +23929,7 @@
   answer_option_a: 2 l / 100km
   answer_option_b: '3.3'
   answer_option_c: '4.1'
-  answer_option_d: '5'
+  answer_option_d: '7'
   answer_correct: b
   has_ordered_answers: false
   answer_explanation: '3.3 litres au 100 km / passager.
@@ -23949,7 +23944,7 @@
     Une petite voiture et 2 passagers font mieux que l''avion. Il faut admettre que
     ce ne sont pas les mêmes usages.
 
-    On ne fait pas 5 ou 10000 km d’une seule traite en voiture.'
+    Les vols courte distance peuvent atteindre 7 litres / 100 km / pax'
   answer_accessible_url: https://corporate.airfrance.com/sites/default/files/dp_dd_fr_0.pdf
   answer_scientific_url: ''
   answer_reading_recommendation: ''
@@ -24041,44 +24036,45 @@
   - 217
   - 218
 - id: 719
-  text: Copy of à venir
+  text: L'objectif de la COP21 à l'horizon 2050 est que chaque humain n'émette pas
+    plus que 2 tonnes de CO2e par an. 2 tonnes, c'est ce que j'émets en..
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
+  answer_option_a: 'faisant 1 aller-retour Paris New York '
+  answer_option_b: roulant 10,000 km dans une clio essence
+  answer_option_c: chauffant un appartement de 80m2 au fioul pendant un an
   answer_option_d: ''
-  answer_correct: d
+  answer_correct: abc
   has_ordered_answers: false
   answer_explanation: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://www.liberation.fr/checknews/2019/02/13/est-ce-qu-un-aller-retour-en-avion-a-bali-emet-autant-de-co2-qu-une-annee-de-vie-en-france_1708854
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Matthieu Massart
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2020-03-10
   created: 2021-01-06
   updated: 2021-01-06
   tags:
+  - 24
   - 33
-  - 217
-  - 218
+  - 34
+  - 216
 - id: 720
-  text: Quelle quantité d'énergie y a t-il dans un litre d'essence, kérosène...  en
-    kWh ?
+  text: Quelle quantité d'énergie y a t-il dans un litre de kérosène...  en kWh ?
   hint: On n'imagine pas les services pour pas très cher.
   type: QCM
   category: 5
   difficulty: 3
   language: Français
-  answer_option_a: 2 kWh
+  answer_option_a: 2 kWh/litre
   answer_option_b: '10'
   answer_option_c: '30'
   answer_option_d: '100'
@@ -24123,18 +24119,16 @@
   has_ordered_answers: false
   answer_explanation: 'Et oui seulement 0.5 kWh.
 
-    Cad que 1 litre de kérosène ou essence contient 20 fois plus d’énergie.
+    Cad que 1 litre de kérosène ou essence contient 20 fois plus d’énergie que n’en
+    dépense un grand sportif.
 
-    90 kg (avec sac à dos) x 9.81 x 2000m de dénivelé / 3600 000 = 0.5 kWh
-
-    1 kWh = 3600 000 Joule
+    90 kg (avec sac à dos) x 9.81 x 2000 m de dénivelé / 3600 000 J/kWh = 0.5 kWh
 
     Il va de soi que dans la vie courante notre activité physique est bien moindre
-
     et plus proche de 0.1 kWh par jour.
 
-    Cad que 1 litre de kérosène ou essence contient 100 fois plus d’énergie que ce
-    que vous dépensez si vous n’êtes pas un grand sportif.'
+    Cad que 1 litre de kérosène à 0.35€ (1.5€ pour 1litre d’essence) contient autant
+    d’énergie que tout être humain non sportif dépense en 100 jours.'
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
@@ -24164,7 +24158,7 @@
   answer_option_d: '100000'
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: '2500 en 2016 et pourrait passer à 37400 en 2036.
+  answer_explanation: '25000 en 2016 et pourrait passer à 37400 en 2036.
 
     Le marché des hélicoptères civils et parapublics va représenter un montant de
     370 milliards d''euros ( 125 neuf + 245 Maintenance) sur la période 2017-2036,
@@ -24236,14 +24230,14 @@
   answer_explanation: '80 litres pour faire 35 km soit 2,3 litres / km ou encore 229
     litres / 100 km.
 
-    Comparé à 3.4 litres / 100 km en avion (2018 : Moyenne flotte AF)
+    Comparé à 3.3 litres / 100 km en avion (2018 : Moyenne flotte AF)
 
     C’est 67 fois plus…
 
     Autant faire voler une pierre.
 
     Cela donne une idée de l’énergie qu’il faudra mettre en œuvre pour faire voler
-    des taxis volants pour désengorger les villes du futur…'
+    des "taxis volants" pour désengorger les villes du futur…'
   answer_accessible_url: https://www.liberation.fr/checknews/2019/08/07/combien-consomme-le-flyboard-de-franky-zapata_1743786
   answer_scientific_url: ''
   answer_reading_recommendation: ''
@@ -24252,7 +24246,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -24287,7 +24281,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -24298,7 +24292,7 @@
 - id: 726
   text: Quel est le nombre maximum de passager (pax) jamais transporté  dans un seul
     et même avion ?
-  hint: Mission
+  hint: Mission humanitaire
   type: QCM
   category: 6
   difficulty: 2
@@ -24458,9 +24452,9 @@
   - 217
   - 218
 - id: 729
-  text: Copy of à venir
+  text: A quelle conséquences peut amener la fonte du permafrost ? QRM
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: 5
   difficulty: 2
   language: Français
@@ -24488,7 +24482,7 @@
   - 217
   - 218
 - id: 730
-  text: Le transport Aérien = TA paye trop de taxe ?
+  text: Le transport Aérien (=TA) paye trop de taxe ?
   hint: A votre avis ?
   type: QCM
   category: 2
@@ -24500,10 +24494,10 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: 'Le TA paye très peu ou pas de taxes, il paye aussi des Contributions
-    et Redevances.
+  answer_explanation: 'Le TA paye très peu ou pas de taxes, il paye aussi des "Contributions
+    et Redevances".
 
-    Mais les contributions et redevances correspondent à des services qu''utilise
+    Mais ces contributions et redevances correspondent à des services qu''utilise
     le TA.
 
     Par exemple :
@@ -24618,7 +24612,7 @@
     TTC, c''est 3,5 fois plus ➕
 
     La bonne réponse serait donc plutôt 70%, bien que ce ne soit pas comparable puisque
-    le TA en est exonéré depuis 75 ans.'
+    le "TA" en est exonéré depuis 75 ans.'
   answer_accessible_url: https://www.ecologie.gouv.fr/fiscalite-des-energies#e4
   answer_scientific_url: https://fr.wikipedia.org/wiki/Taxe_int%C3%A9rieure_de_consommation_sur_les_produits_%C3%A9nerg%C3%A9tiques
   answer_reading_recommendation: ''
@@ -24711,8 +24705,10 @@
   - 217
   - 218
 - id: 736
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: 'Imaginez une balance colossale. A gauche, tous les animaux sauvages ; à droite
+    tous les animaux domestiqués ou utilisés par l’humain. De quel côté va pencher
+    la balance ? '
+  hint: ''
   type: QCM
   category: 5
   difficulty: 2
@@ -24741,10 +24737,10 @@
   - 217
   - 218
 - id: 737
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: Insectes pollinisateurs => alimentation humaine
+  hint: ''
   type: QCM
-  category: 5
+  category: null
   difficulty: 2
   language: Français
   answer_option_a: ''
@@ -24771,8 +24767,8 @@
   - 217
   - 218
 - id: 738
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: Question à créer sur le pic des métaux
+  hint: ''
   type: QCM
   category: 5
   difficulty: 2
@@ -24855,7 +24851,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -24864,38 +24860,45 @@
   - 217
   - 225
 - id: 741
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: Comment se compare l'empreinte carbone d'un vélo à assistance électrique par
+    rapport à un vélo classique ?
+  hint: ''
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 1
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: 2 fois moins
+  answer_option_b: comparable
+  answer_option_c: 3 fois plus
+  answer_option_d: 30 fois plus
+  answer_correct: b
   has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_explanation: "'Démachiniser' et limiter le contenu électronique, voici 2\
+    \ ambitions des solutions low-techs. \nSelon la Fédération cycliste européenne,\
+    \ ce serait 16 gCO2e/km contre 5 gCO2e/km pour un vélo classique, soit 3 fois\
+    \ plus. Pour le VAE, la production compte pour moitié (Il faut en effet fabriquer\
+    \ le moteur au pédalier et la batterie au lithium-ion), et l'électricité pour\
+    \ l'autre moitié (dépendante du pays).\nPour l'impact énergétique c'est même jusqu'à\
+    \ 5 dois plus pour l'électrique : 40W contre 8W. "
+  answer_accessible_url: https://veroniquecloutier.com/environnement/mollets-contre-moteur
+  answer_scientific_url: https://www.ibiketo.ca/blog/2009/07/13/embodied-energy-our-vehicles
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Max Pinsard
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-03-08
   created: 2021-01-06
   updated: 2021-01-06
   tags:
-  - 33
-  - 217
-  - 218
+  - 72
+  - 249
 - id: 742
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: Quelles économies en matériaux pourrait-on générer via une interdiction du
+    verre coloré pour les contenants ?
+  hint: ''
   type: QCM
   category: 5
   difficulty: 2
@@ -24924,8 +24927,10 @@
   - 217
   - 218
 - id: 743
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: Quelle est la part des déchets produits par les ménages qui pourrait assez
+    facilement ne pas finir dans la poubelle grise ou devenir des déchets délicats
+    à traiter pour les filières de fin de vie ?
+  hint: ''
   type: QCM
   category: 5
   difficulty: 2
@@ -24954,8 +24959,9 @@
   - 217
   - 218
 - id: 744
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: Si tous les logements baissaient leur température moyenne au niveau recommandé,
+    la consommation de chauffage diminuerait d'au moins…?
+  hint: ''
   type: QCM
   category: 5
   difficulty: 2
@@ -25844,7 +25850,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-13
   created: 2021-01-17
   updated: 2021-01-17
@@ -25938,7 +25944,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-13
   created: 2021-01-17
   updated: 2021-01-17
@@ -28222,17 +28228,16 @@
   tags:
   - 37
 - id: 845
-  text: Quel est le taux actuel mondial de croissance de la consommation d'énergie
-    par an pour le secteur numérique ? (référence 2020)
+  text: En 2020, comment a évolué consommation d'énergie du secteur numérique ?
   hint: ''
   type: QCM
   category: 2
   difficulty: 2
   language: Français
-  answer_option_a: 2%
-  answer_option_b: 5%
-  answer_option_c: 9%
-  answer_option_d: 15%
+  answer_option_a: -2%
+  answer_option_b: +5%
+  answer_option_c: +9%
+  answer_option_d: +15%
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: "La consommation d’énergie due au numérique est en augmentation\
@@ -28680,7 +28685,7 @@
     et certains usages sont dispersifs par nature :  encres, pigments de peinture,
     cosmétiques... Il est effectivement plus difficile et moins rentable de recycler
     que d''extraire en mine pour l''instant, et cela perdurera pour de nombreux métaux
-    car leur usage empêche tout recyclage.'
+    car leur usage (dispersif) empêche tout recyclage.'
   answer_accessible_url: https://reporterre.net/La-croissance-verte-est-une-mystification-absolue
   answer_scientific_url: https://www.slideshare.net/PaulineTSP/pptlow-techphilippe-bihouix
   answer_reading_recommendation: ''
@@ -28688,7 +28693,7 @@
   answer_image_explanation: '[https://www.youtube.com/watch?v=mqhC6uI8TUY](https://www.youtube.com/watch?v=mqhC6uI8TUY)'
   answer_extra_info: Lâge des low-techs de P. Bihouix (2014)
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-02-08
   created: 2021-02-14
@@ -28759,7 +28764,7 @@
   answer_image_explanation: Bihouix, L'âge des low-techs (2014)
   answer_extra_info: Bihouix, L'âge des low-techs (2014)
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-02-08
   created: 2021-02-14
@@ -28800,7 +28805,7 @@
     + "La tragédie électronique" (ARTE'
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-02-08
   created: 2021-02-14
@@ -28832,7 +28837,7 @@
   answer_image_explanation: '[https://ourworldindata.org/water-use-stress](https://ourworldindata.org/water-use-stress)'
   answer_extra_info: USGS, Mineral commodity services (2020)
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-02-08
   created: 2021-02-14
@@ -28871,7 +28876,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-02-08
   created: 2021-02-14
@@ -28949,7 +28954,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-02-08
   created: 2021-02-14
@@ -29263,7 +29268,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-17
   created: 2021-01-18
   updated: 2021-01-18
@@ -29388,7 +29393,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-17
   created: 2021-01-18
   updated: 2021-01-18
@@ -29418,7 +29423,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-31
   created: 2021-01-18
   updated: 2021-01-18
@@ -29453,7 +29458,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-17
   created: 2021-01-18
   updated: 2021-01-18
@@ -29486,7 +29491,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-17
   created: 2021-01-19
   updated: 2021-01-19
@@ -29525,7 +29530,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-31
   created: 2021-02-01
   updated: 2021-02-01
@@ -29585,7 +29590,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-17
   created: 2021-02-01
   updated: 2021-02-01
@@ -29869,10 +29874,17 @@
   answer_option_d: 85%
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: L’alimentation a donc un rôle important à jouer dans la réduction
-    des déchets.
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_explanation: Les emballages alimentaires font partie intégrante de la chaîne
+    de valeur de l’alimentation. Depuis la généralisation du plastique dans les années
+    60, il est très rare de trouver un produit non emballé dans du plastique (film
+    PET, polyester, etc.). Cette consommation accrue de matière s’est également couplée
+    à une mutation des comportements poussée par la pratique du tout jetable,et ce
+    même pour les autres types d’emballages (carton, verre, aluminium, etc.). C’est
+    ainsi que 85 % des emballages jetés par les ménages sont des emballages alimentaires
+    et que le volume des ordures ménagères des ménages a doublé en France en 40 ans
+    (même si ce dernier diminue depuis maintenant plus de 10 ans).
+  answer_accessible_url: http://multimedia.ademe.fr/animations/alimentation/
+  answer_scientific_url: https://nosgestesclimat.fr/actions/plus/alimentation/d%C3%A9chets/vrac
   answer_reading_recommendation: Infographie, Mieux manger, Moins gaspiller, Moins
     polluer, ADEME
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/922.jpg
@@ -29880,7 +29892,7 @@
   answer_extra_info: ''
   author: Julien Briton
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-02-17
   created: 2021-02-21
   updated: 2021-02-21
@@ -29903,18 +29915,18 @@
   has_ordered_answers: true
   answer_explanation: Malgré le spectre d’océans vides, 33% des poissons sont pêchés
     au-delà de leur capacité de régénération et environ 60% à la limite, soit un total
-    de 93%. Seuls 7% sont sous-exploités. La pêche trop importante et non sélective
-    et l’augmentation de la consommation contribuent à la surpêche, principale cause
-    de perte de biodiversité marine.
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+    de 93%. Seuls 7% sont en deçà du seuil de régénération. La pêche trop importante
+    et non sélective et l’augmentation de la consommation contribuent à la surpêche,
+    principale cause de perte de biodiversité marine.
+  answer_accessible_url: https://www.msc.org/fr/nos-actions/les-oceans-en-danger/surpeche-peche-illegale-et-destructrice
+  answer_scientific_url: http://www.fao.org/3/ca9229fr/ca9229fr.pdf
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/923.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/923.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Julien Briton
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-02-17
   created: 2021-02-18
   updated: 2021-02-18
@@ -29922,44 +29934,43 @@
   - 5
   - 21
 - id: 924
-  text: Quelle proportion de fruits et légumes que nous consommons est importée ?
+  text: Parmi les fruits et légumes que nous consommons, combien sont importés ?
   hint: ''
   type: QCM
   category: 2
   difficulty: 3
   language: Français
-  answer_option_a: 1 sur 2
-  answer_option_b: 1 sur 3
-  answer_option_c: 1 sur 4
-  answer_option_d: 1 sur 5
-  answer_correct: a
+  answer_option_a: 1 sur 5
+  answer_option_b: 1 sur 4
+  answer_option_c: 1 sur 3
+  answer_option_d: 1 sur 2
+  answer_correct: d
   has_ordered_answers: true
   answer_explanation: 'L’hyper-sophistication des chaînes d’approvisionnement, la
     faible autonomie alimentaire, la dépendance aux flux de produits et de main d’œuvre
     rendent notre système alimentaire particulièrement vulnérable.
 
     C’est quand tout va bien qu’il faut relocaliser et soutenir nos productions locales,
-    afin qu’elles soient opérationnelles quand tout va mal… en plus de cela, ce qui
-    est bon pour la résilience territoriale, est également très bon pour le climat
-    !'
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+    afin qu’elles soient opérationnelles quand tout va mal. Qui plus est, ce qui est
+    bon pour la résilience territoriale réduit aussi les impacts sur le climat.'
+  answer_accessible_url: https://www.francebleu.fr/emissions/la-minute-conso/la-moitie-des-fruits-et-legumes-sont-importes
+  answer_scientific_url: https://www.franceagrimer.fr/Mediatheque/INFORMATIONS-ECONOMIQUES/FRUITS-ET-LEGUMES/CHIFFRES-ET-BILANS/2020/Les-filieres-fruits-et-legumes-chiffres-cles-2018
   answer_reading_recommendation: FranceAgriMer “Les Chiffres-clés de la filière Fruit
     & Légumes frais et transformés 2018”
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/924.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Julien Briton
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-02-17
   created: 2021-02-21
   updated: 2021-02-21
   tags:
   - 5
 - id: 925
-  text: La moitié de la production céréalière Française est exportée. Dans la moitié
-    qui reste pour le marché français, quelle proportion est destinée à l’alimentation
+  text: La moitié des céréales produites en France est exportée. Dans la moitié qui
+    reste pour le marché français, quelle proportion est destinée à l’alimentation
     animale ?
   hint: ''
   type: QCM
@@ -29973,35 +29984,36 @@
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: '60% de la production céréalière Française conservée sur le
-    territoire est utilisée pour l’alimentation animale.
-
-    Les animaux d’élevage valorisent certains sous-produits agricoles, comme les tourteaux
-    d’oléagineux, le son des céréales ou la pulpe de betteraves. Ils restituent cependant
-    bien moins de calories (et de protéines, dans la plupart des cas) à l’homme sous
-    forme de viande, de laitages ou d''œufs, que ce qui pourrait être directement
-    utilisé pour nous nourrir dans les céréales allouées à leur alimentation.. En
-    cas de contraintes sur la production végétale globale, la compétition entre alimentation
-    humaine et alimentation animale se trouverait accentuée.
-
-    (Source Les Greniers d’Abondance)'
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+    territoire est utilisée pour l’alimentation animale : soit les céréales sont stockées
+    et consommées à la ferme (50 %), soit elles sont utilisées par l''industrie de
+    l''alimentation animale (50 %). Certains sous-produits agricoles comme les tourteaux
+    d’oléagineux, le son des céréales ou la pulpe de betteraves sont valorisés pour
+    le bétail. Cependant, que soit sous forme de viande, de laitages ou d''œufs, ils
+    restituent bien moins de calories (et de protéines, dans la plupart des cas) à
+    l’homme que ce qui pourrait être directement utilisé pour nous nourrir. En cas
+    de contraintes sur la production végétale globale, la compétition entre alimentation
+    humaine et alimentation animale se trouverait accentuée.'
+  answer_accessible_url: https://www.passioncereales.fr/dossier-thematique/le-march%C3%A9-des-c%C3%A9r%C3%A9ales-fran%C3%A7aises
+  answer_scientific_url: https://resiliencealimentaire.org/
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/925.jpg
-  answer_image_explanation: ''
+  answer_image_explanation: Répartition de la production céréalière française pour
+    la campagne 2019/2020 (hors imports et stocks)
   answer_extra_info: ''
   author: Julien Briton
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-02-17
   created: 2021-02-21
   updated: 2021-02-21
   tags:
   - 5
   - 238
+  - 242
 - id: 926
-  text: Pour subvenir à la consommation annuelle moyenne en œufs et produits laitiers
-    d’un Français, quelle surface est déforestée ?
+  text: Chaque année, quelle surface est déforestée au niveau mondial pour subvenir
+    à la consommation annuelle moyenne en œufs et produits laitiers d’un Français
+    ?
   hint: ''
   type: QCM
   category: 2
@@ -30013,24 +30025,26 @@
   answer_option_d: 352 m²
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: 'Les œufs et les produits laitiers sont tous les deux responsables
-    de 30 m², soit un total de 60 m². L’empreinte forêt d’un Français est de 352 m²,
-    parmi lesquels on retrouve 97 m² rien que pour l’élevage industriel. L’alimentation
+  answer_explanation: 'En un an en moyenne, la consommation d''œufs et de produits
+    laitiers de chaque Français implique 60 m² de déforestation au niveau mondial
+    (30 m² pour les oeufs et 30 m² pour les produits laitiers) à cause notamment de
+    l''alimentation animale. L’empreinte forêt d’un Français est de 352 m², parmi
+    lesquels on retrouve 97 m² rien que pour la viande industrielle. L’alimentation
     est particulièrement impactante sur la déforestation, puisqu’on estime qu’un végétarien
     sobre et responsable a une empreinte forêt de 44 m² (contre 352 m² en moyenne
-    pour une Français).
+    pour un Français).
 
     Enfin, la déforestation représente environ 10% des émissions de CO2 à l’échelle
     mondiale.'
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.liberation.fr/france/2018/11/08/deforestation-un-francais-consomme-chaque-annee-352-metres-carres-de-foret_1690583/
+  answer_scientific_url: http://envol-vert.org/wp-content/uploads/2018/11/Envol_Vert_Rapport_Empreinte_Foret_Final.pdf
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/926.jpg
-  answer_image_explanation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/926b.PNG
+  answer_image_explanation: Empreinte forêt moyenne d'un français
   answer_extra_info: ''
   author: Julien Briton
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-02-17
   created: 2021-02-21
   updated: 2021-02-21
@@ -30043,7 +30057,7 @@
   hint: ''
   type: QCM
   category: 1
-  difficulty: 2
+  difficulty: 1
   language: Français
   answer_option_a: 1ère
   answer_option_b: 3ème
@@ -30052,26 +30066,27 @@
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: 'L’élevage représente environ 15% des émissions mondiales de
-    GES : de manière directe avec la fermentation entérique et indirecte avec la déforestation
-    et les engrais azotés pour produire la nourriture de ces animaux.'
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+    GES : de manière directe avec la fermentation entérique, et indirecte avec la
+    déforestation et les engrais azotés pour produire la nourriture de ces animaux
+    - dont les 2/3 uniquement pour les bovins.'
+  answer_accessible_url: https://blogs.mediapart.fr/edition/il-etait-une-fois-le-climat/article/080915/l-elevage-emet-plus-de-gaz-effet-de-serre-que-les-transports
+  answer_scientific_url: http://www.fao.org/3/a-i6345f.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/927.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Julien Briton
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-02-17
   created: 2021-02-21
   updated: 2021-02-21
   tags:
   - 5
-  - 17
+  - 242
 - id: 928
-  text: En France, quel pourcentage des dépenses de produits alimentaires la grande
-    distribution représente-t-elle ?
+  text: 'Pour leurs produits alimentaires, dans quelle proportion les Français s''approvisionnent-ils
+    dans les grandes surfaces ? '
   hint: ''
   type: QCM
   category: 2
@@ -30094,15 +30109,15 @@
     en flux tendu et ne dispose par conséquent que de très peu de stocks. Une perturbation
     des transports routiers peut rapidement compromettre localement ou plus largement
     la sécurité alimentaire.'
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.lefigaro.fr/conso/2014/12/12/05007-20141212ARTFIG00012-grande-surface-petit-commerce-internet-o-les-francais-font-ils-leurs-courses.php
+  answer_scientific_url: https://www.franceagrimer.fr/fam/content/download/56762/document/A4_vdef_%C3%A9volution%20d%C3%A9penses%20alimentaires%20m%C3%A9nages%20circuits%20distrib%202008_2017.pdf?version=4
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/928.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Julien Briton
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-02-18
   created: 2021-02-21
   updated: 2021-02-21
@@ -30125,20 +30140,26 @@
   answer_option_d: 77%
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: L’élevage met une pression forte sur l’environnement et est
-    ainsi à l’origine de près de 90 % des émissions de gaz à effet de serre de l’agriculture.
-    De plus, son intensification récente pose de nombreux problèmes de pollution des
-    milieux aquatiques par les nitrates et les phosphates, de souffrance animale et
-    humaine, et de sécurité sanitaire
-  answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_reading_recommendation: ''
+  answer_explanation: 'L''élevage représente 77% des surfaces agricoles utilisées,
+    que cela soit via les pâturages (87%) ou via les cultures à destination de l''alimentation
+    animale (13%). L''INRAE estime que la part optimale de protéines d''origine animale
+    dans nos régimes serait entre 15 et 30% pour limiter la surface cultivée nécessaire
+    pour nourrir la population, les animaux valorisant les coproduits des cultures
+    à destination de l''alimentation humaine. Selon la FAO, la part actuelle dans
+    les pays développés est de 56%.
+
+    '
+  answer_accessible_url: https://blog.mondediplo.net/2012-06-21-Quand-l-industrie-de-la-viande-devore-la-planete
+  answer_scientific_url: http://www.fao.org/3/i0680f/i0680f.pdf
+  answer_reading_recommendation: 'Source INRAE : [https://www.inrae.fr/actualites/infographie-elevage-occupation-terres](https://www.inrae.fr/actualites/infographie-elevage-occupation-terres)
+
+    Source FAO : [http://www.fao.org/3/a0701e/a0701e11.pdf](http://www.fao.org/3/a0701e/a0701e11.pdf)'
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/929.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Julien Briton
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-02-18
   created: 2021-02-21
   updated: 2021-02-21
@@ -30158,17 +30179,30 @@
   answer_option_c: La consommation de produits ultra-transformés
   answer_option_d: La prépondérance des achats en grandes surfaces
   answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_reading_recommendation: ''
-  answer_image_url: ''
+  has_ordered_answers: true
+  answer_explanation: 'L''utilisation d''antibiotiques joue sur les résistances microbiennes.
+    A l’échelle mondiale, ces dernières seraient responsables de 700,000 morts par
+    an. Les maladies infectieuses d’origine bactériennes pourraient redevenir en 2050
+    une des premières causes de mortalité dans le monde, en provoquant jusqu’à 10
+    millions de morts par an.
+
+    Concernant les pesticides, si les études épidémiologiques menées chez des travailleurs
+    exposés à des doses plus élevées et façon plus fréquente attestent du danger,
+    les scientifiques ne peuvent pas affirmer qu''il y a un risque pour la population
+    générale. En outre, certains pesticides possèdent aussi des effets perturbateurs
+    endocriniens, effets qui ne dépendent pas de la dose.
+
+    Enfin, la consommation de produits ultra-transformés peut induire de nombreux
+    risques sur la santé, notamment sur les maladies cardiovasculaire '
+  answer_accessible_url: https://www.sciencesetavenir.fr/sante/resistance-aux-antbiotiques-1-deces-toutes-les-3-secondes-en-2050_28034
+  answer_scientific_url: https://solidarites-sante.gouv.fr/sante-et-environnement/risques-microbiologiques-physiques-et-chimiques/pesticides/article/effets-sur-la-sante-d-une-exposition-a-des-pesticides
+  answer_reading_recommendation: 'source : [https://presse.inserm.fr/en/consommation-daliments-ultra-transformes-et-risque-de-maladies-cardiovasculaires/35086/](https://presse.inserm.fr/en/consommation-daliments-ultra-transformes-et-risque-de-maladies-cardiovasculaires/35086/)'
+  answer_image_url: https://cdn.radiofrance.fr/s3/cruiser-production/2020/06/ac211826-ed88-4d88-90bd-7e6be210a825/838_supermarche.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Julien Briton
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-02-18
   created: 2021-02-19
   updated: 2021-02-19
@@ -30317,7 +30351,7 @@
   answer_extra_info: ''
   author: FJG
   validator: ''
-  validation_status: A valider
+  validation_status: Brouillon
   added: 2021-02-19
   created: 2021-02-21
   updated: 2021-02-21
