@@ -486,6 +486,11 @@ class Command(BaseCommand):
                         notion_question_dict[question_model_field.name],
                     )
                     db_question.save(update_fields=[question_model_field.name])
+                    # reset question stats in some cases
+                    if question_model_field.name == "answer_correct":
+                        db_question.agg_stats.answer_count = 0
+                        db_question.agg_stats.answer_success_count = 0
+                        db_question.agg_stats.save()
 
         return question_changes
 
