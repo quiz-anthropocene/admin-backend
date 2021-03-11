@@ -275,6 +275,12 @@ class Question(models.Model):
     answer_explanation = models.TextField(
         blank=True, help_text="Un petit texte d'explication"
     )
+    answer_audio = models.URLField(
+        max_length=500, blank=True, help_text="Une explication audio"
+    )
+    answer_video = models.URLField(
+        max_length=500, blank=True, help_text="Une explication vidéo"
+    )
     answer_accessible_url = models.URLField(
         max_length=500, blank=True, help_text="Un lien pour aller plus loin"
     )
@@ -359,6 +365,14 @@ class Question(models.Model):
     @property
     def has_answer_explanation(self):
         return len(self.answer_explanation) > 0
+
+    @property
+    def has_answer_audio(self):
+        return len(self.answer_audio) > 0
+
+    @property
+    def has_answer_video(self):
+        return len(self.answer_video) > 0
 
     @property
     def has_answer_accessible_url(self):

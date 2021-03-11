@@ -13,6 +13,8 @@
   answer_correct: Lettre minuscule entre a et d
   has_ordered_answers: Vrai si les choix de réponse sont dans un ordre figé, et ne doivent pas être mélangés
   answer_explanation: "Une explication et/ou un commentaire à propos la réponse"
+  answer_audio: Une explication audio
+  answer_video: Une explication video
   answer_accessible_url: Un lien pour aller plus loin
   answer_scientific_url: La source scientifique du chiffre (rapport)
   answer_reading_recommendation: Un livre pour aller plus loin
