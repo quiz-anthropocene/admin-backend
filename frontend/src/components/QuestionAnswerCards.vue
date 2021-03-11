@@ -81,6 +81,13 @@
           </p>
         </div>
       </div>
+      <!-- Answer image -->
+      <p v-if="question.answer_image_url" class="answer-image" title="Une image pour illustrer la réponse">
+        <a v-bind:href="question.answer_image_url" target="_blank">
+          <img v-bind:src="question.answer_image_url" alt="une image pour illustrer la réponse" />
+        </a>
+      </p>
+      <p v-if="question.answer_image_explanation" class="answer-image-explanation" title="Légende de l'image">{{ $t('messages.imageLegend') }}{{ $t('words.semiColon') }} {{ question.answer_image_explanation }}</p>
       <!-- Answer links -->
       <div class="row no-gutters text-align-left">
         <div class="col-sm-auto">
@@ -104,13 +111,6 @@
           </p>
         </div>
       </div>
-      <!-- Answer image -->
-      <p v-if="question.answer_image_url" class="answer-image" title="Une image pour illustrer la réponse">
-        <a v-bind:href="question.answer_image_url" target="_blank">
-          <img v-bind:src="question.answer_image_url" alt="une image pour illustrer la réponse" />
-        </a>
-      </p>
-      <p v-if="question.answer_image_explanation" class="answer-image-explanation" title="Légende de l'image">{{ $t('messages.imageLegend') }}{{ $t('words.semiColon') }} {{ question.answer_image_explanation }}</p>
     </div>
 
     <div v-if="question && questionSubmitted && questionNotValidated" class="alert alert-warning">

@@ -8,7 +8,7 @@
     </section>
 
     <div v-if="quizzesDisplayed && quizzesDisplayed.length > 0" id="quiz-list" class="row">
-      <div class="col-sm-6" v-for="quiz in quizzesDisplayed" :key="quiz.id">
+      <div class="col-sm-4" v-for="quiz in quizzesDisplayed" :key="quiz.id">
         <QuizCard :quiz="quiz" />
       </div>
         <!-- <div class="col-sm">
@@ -62,10 +62,10 @@ export default {
 </script>
 
 <style scoped>
-.row > .col-sm-6 {
+.row > .col-sm-4 {
   padding-bottom: 15px;
 }
-.row > .col-sm-6 > .card {
+.row > .col-sm-4 > .card {
   height: 100%;
 }
 </style>
