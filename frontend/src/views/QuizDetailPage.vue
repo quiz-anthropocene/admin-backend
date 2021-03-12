@@ -37,7 +37,7 @@
               📝&nbsp;Auteur<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>
             </div>
             <!-- <span title="Date de création du quiz">📊&nbsp;Crée le:&nbsp;{{ new Date(quiz.created).toLocaleString() }}</span> -->
-            <div v-if="quiz.tags && quiz.tags.length > 0" class="col small" title="Tag(s) du quiz">
+            <div v-if="quiz.tags && quiz.tags.length > 0" class="col small d-none d-sm-block" title="Tag(s) du quiz">
               <span v-for="(tag, index) in quiz.tags" :key="tag.id">
                 <span v-if="index < 3" class="label label-tag">{{ tag.name }}</span>
               </span>
@@ -78,6 +78,7 @@
         <p>
           📈&nbsp;{{ $t('messages.quizCompletedStats') }} <strong>{{ quizStats.answer_count }}</strong> {{ $t('words.times') }}.<br />
           {{ $t('messages.quizCompletedBetter1') }} <strong>{{ finalScoreBetterThanPercent }}%</strong> {{ $t('messages.quizCompletedBetter2') }}
+          <abbr v-bind:title="'dernière mise à jour le ' + statsLastUdated">stats&nbsp;?&nbsp;</abbr>
         </p>
 
         <div v-if="quiz.conclusion" v-html="quiz.conclusion" title="Conclusion du quiz"></div>
@@ -190,6 +191,11 @@ export default {
       const finalScoreBetterThan = this.quizStats.answer_success_count_split.filter((q) => (q.answer_success_count < this.finalScore)).reduce((acc, curr) => acc + curr.count, 0);
       const finalScoreBetterThanPercent = this.quizStats.answer_count ? Math.round((finalScoreBetterThan / this.quizStats.answer_count) * 100) : 0;
       return finalScoreBetterThanPercent;
+    },
+    statsLastUdated() {
+      return new Date(constants.DATA_LAST_UPDATED_DATETIME).toLocaleDateString('fr-FR', {
+        year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false,
+      });
     },
     currentLocale() {
       return this.$store.state.locale;
