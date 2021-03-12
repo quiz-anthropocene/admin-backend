@@ -1,0 +1,17 @@
+name: cron_export_stats_to_github
+
+# Controls when the action will run. 
+on:
+  schedule:
+    # Every 12 hours (2 times a day: 06:30, 18:30)
+    - cron: '30 6,18 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  export_stats_to_github:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -X "GET" "${{ secrets.BACKEND_URL }}/actions/export-stats-to-github?token=${{ secrets.CRON_GITHUB_ACTION_SECRET }}"

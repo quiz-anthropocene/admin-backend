@@ -1,4 +1,5 @@
 import time
+import yaml
 from datetime import datetime
 
 from django.utils import timezone
@@ -6,13 +7,14 @@ from django.conf import settings
 from django.core.management import BaseCommand
 
 from api import utilities, utilities_github
+from stats import utilities as utilities_stats
 from api.models import Configuration
 
 
 class Command(BaseCommand):
     """
     Usage:
-    python manage.py export_data_to_github
+    python manage.py export_stats_to_github
     """
 
     def handle(self, *args, **options):
@@ -22,12 +24,12 @@ class Command(BaseCommand):
         current_datetime = datetime.now()
         current_datetime_string = current_datetime.strftime("%Y-%m-%d-%H-%M")
         current_datetime_string_pretty = current_datetime.strftime("%Y-%m-%d %H:%M")
-        branch_name = f"update-data-{current_datetime_string}"
-        pull_request_name = f"Update: data ({current_datetime_string_pretty})"
+        branch_name = f"update-stats-{current_datetime_string}"
+        pull_request_name = f"Update: stats ({current_datetime_string_pretty})"
 
         # update configuration first
         configuration = Configuration.get_solo()
-        configuration.github_data_last_exported = timezone.now()
+        configuration.github_stats_last_exported = timezone.now()
         configuration.save()
 
         print(
@@ -35,105 +37,91 @@ class Command(BaseCommand):
             % round(time.time() - start_time, 1)
         )
 
-        # update & commit data files
+        # update & commit stats files
         try:
             #####################################
-            # data/configuration.yaml
+            # data/stats.yaml
             start_time = time.time()
-            configuration_yaml = utilities.serialize_model_to_yaml(
-                model_label="configuration", flat=True
-            )
-            configuration_element = utilities_github.create_file_element(
-                file_path="data/configuration.yaml", file_content=configuration_yaml
+            stats_dict = {
+                **utilities_stats.question_stats(),
+                **utilities_stats.quiz_stats(),
+                **utilities_stats.answer_stats(),
+                **utilities_stats.category_stats(),
+                **utilities_stats.tag_stats(),
+                **utilities_stats.contribution_stats(),
+            }
+            stats_yaml = yaml.safe_dump(stats_dict, allow_unicode=True, sort_keys=False)
+            stats_element = utilities_github.create_file_element(
+                file_path="data/stats.yaml", file_content=stats_yaml
             )
 
             print(
-                "--- Step 2.1 done : configuration.yaml (%s seconds) ---"
+                "--- Step 2.1 done : stats.yaml (%s seconds) ---"
                 % round(time.time() - start_time, 1)
             )
 
             #####################################
-            # # data/categories.yaml
+            # data/difficulty-levels.yaml
             start_time = time.time()
-            # categories_yaml = utilities.serialize_model_to_yaml(model_label="category", flat=True)
-            # categories_element = utilities_github.create_file_element(
-            #     file_path="data/categories.yaml",
-            #     file_content=categories_element
-            # )
-
-            print("--- Step 2.2 done : categories.yaml (skipped) ---")
-
-            #####################################
-            # data/tags.yaml
-            start_time = time.time()
-            tags_yaml = utilities.serialize_model_to_yaml(model_label="tag", flat=True)
-            tags_element = utilities_github.create_file_element(
-                file_path="data/tags.yaml", file_content=tags_yaml
+            difficulty_levels_list = utilities_stats.difficulty_aggregate()
+            difficulty_levels_yaml = yaml.safe_dump(
+                difficulty_levels_list, allow_unicode=True, sort_keys=False
+            )
+            difficulty_levels_element = utilities_github.create_file_element(
+                file_path="data/difficulty-levels.yaml",
+                file_content=difficulty_levels_yaml,
             )
 
             print(
-                "--- Step 2.3 done : tags.yaml (%s seconds) ---"
+                "--- Step 2.2 done : difficulty-levels.yaml (%s seconds) ---"
                 % round(time.time() - start_time, 1)
             )
 
             #####################################
-            # data/questions.yaml
+            # data/authors.yaml
             start_time = time.time()
-            questions_yaml = utilities.serialize_model_to_yaml(
-                model_label="question", flat=True
+            authors_list = utilities_stats.author_aggregate()
+            authors_yaml = yaml.safe_dump(
+                authors_list, allow_unicode=True, sort_keys=False
             )
-            questions_element = utilities_github.create_file_element(
-                file_path="data/questions.yaml", file_content=questions_yaml
+            authors_element = utilities_github.create_file_element(
+                file_path="data/authors.yaml", file_content=authors_yaml
             )
 
             print(
-                "--- Step 2.4 done : questions.yaml (%s seconds) ---"
+                "--- Step 2.3 done : authors.yaml (%s seconds) ---"
                 % round(time.time() - start_time, 1)
             )
 
             #####################################
-            # data/quizzes.yaml
+            # data/languages.yaml
             start_time = time.time()
-            quizzes_yaml = utilities.serialize_model_to_yaml(
-                model_label="quiz", flat=True
+            languages_list = utilities_stats.language_aggregate()
+            languages_yaml = yaml.safe_dump(
+                languages_list, allow_unicode=True, sort_keys=False
             )
-            quizzes_element = utilities_github.create_file_element(
-                file_path="data/quizzes.yaml", file_content=quizzes_yaml
+            languages_element = utilities_github.create_file_element(
+                file_path="data/languages.yaml", file_content=languages_yaml
             )
 
             print(
-                "--- Step 2.5 done : quizzes.yaml (%s seconds) ---"
+                "--- Step 2.4 done : languages.yaml (%s seconds) ---"
                 % round(time.time() - start_time, 1)
             )
 
             #####################################
-            # data/quiz-questions.yaml
+            # data/quiz-stats.yaml
             start_time = time.time()
-            quiz_questions_yaml = utilities.serialize_model_to_yaml(
-                model_label="quizquestion", flat=True
+            quiz_detail_stats_list = utilities_stats.quiz_detail_stats()
+            quiz_detail_stats_yaml = yaml.safe_dump(
+                quiz_detail_stats_list, allow_unicode=True, sort_keys=False
             )
-            quiz_questions_element = utilities_github.create_file_element(
-                file_path="data/quiz-questions.yaml", file_content=quiz_questions_yaml
+            quiz_stats_element = utilities_github.create_file_element(
+                file_path="data/quiz-stats.yaml", file_content=quiz_detail_stats_yaml
             )
 
             print(
-                "--- Step 2.6 done : quiz-questions.yaml (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
-
-            #####################################
-            # data/quiz-relationships.yaml
-            start_time = time.time()
-            quiz_relationships_yaml = utilities.serialize_model_to_yaml(
-                model_label="quizrelationship", flat=True
-            )
-            quiz_relationships_element = utilities_github.create_file_element(
-                file_path="data/quiz-relationships.yaml",
-                file_content=quiz_relationships_yaml,
-            )
-
-            print(
-                "--- Step 2.7 done : quiz-relationships.yaml (%s seconds) ---"
+                "--- Step 2.5 done : quiz-stats.yaml (%s seconds) ---"
                 % round(time.time() - start_time, 1)
             )
 
@@ -154,7 +142,7 @@ class Command(BaseCommand):
             )
 
             print(
-                "--- Step 2.8 done : constants.js (%s seconds) ---"
+                "--- Step 2.6 done : constants.js (%s seconds) ---"
                 % round(time.time() - start_time, 1)
             )
 
@@ -164,14 +152,13 @@ class Command(BaseCommand):
 
             utilities_github.update_multiple_files(
                 branch_name=branch_name,
-                commit_message="Data: data update",
+                commit_message="Data: stats update",
                 file_element_list=[
-                    configuration_element,
-                    tags_element,
-                    questions_element,
-                    quizzes_element,
-                    quiz_questions_element,
-                    quiz_relationships_element,
+                    stats_element,
+                    difficulty_levels_element,
+                    authors_element,
+                    languages_element,
+                    quiz_stats_element,
                     new_frontend_constants_file_element,
                 ],
             )
@@ -188,14 +175,14 @@ class Command(BaseCommand):
             if not settings.DEBUG:
                 # create pull request
                 pull_request_message = (
-                    "Mise à jour de la donnée :"
+                    "Mise à jour des stats :"
                     "<ul>"
-                    "<li>data/configuration.yaml</li>"
+                    "<li>data/stats.yaml</li>"
+                    "<li>data/difficulty-levels.yaml</li>"
+                    "<li>data/authors.yaml</li>"
+                    "<li>data/languages.yaml</li>"
                     "<li>data/tags.yaml</li>"
-                    "<li>data/questions.yaml</li>"
-                    "<li>data/quizzes.yaml</li>"
-                    "<li>data/quiz-questions.yaml</li>"
-                    "<li>data/quiz-relationships.yaml</li>"
+                    "<li>data/quiz-stats.yaml</li>"
                     "</ul>"
                 )
                 pull_request = utilities_github.create_pull_request(

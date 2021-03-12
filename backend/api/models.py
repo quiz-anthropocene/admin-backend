@@ -93,11 +93,17 @@ class Configuration(SingletonModel):
         editable=False,
         help_text="La dernière fois que les questions (lot 5) ont été importées depuis Notion",  # noqa
     )
-    github_last_exported = models.DateTimeField(
+    github_data_last_exported = models.DateTimeField(
         null=True,
         blank=True,
         editable=False,
         help_text="La dernière fois que la donnée a été exportée vers Github",  # noqa
+    )
+    github_stats_last_exported = models.DateTimeField(
+        null=True,
+        blank=True,
+        editable=False,
+        help_text="La dernière fois que les stats ont été exportées vers Github",  # noqa
     )
     notion_contributions_last_exported = models.DateTimeField(
         null=True,
