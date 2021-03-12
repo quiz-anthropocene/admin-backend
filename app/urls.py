@@ -16,6 +16,7 @@ urlpatterns = [
         views.action_import_questions_from_notion,
     ),
     path("actions/export-data-to-github", views.action_export_data_to_github),
+    path("actions/export-stats-to-github", views.action_export_stats_to_github),
     path(
         "actions/export-contributions-to-notion",
         views.action_export_contributions_to_notion,

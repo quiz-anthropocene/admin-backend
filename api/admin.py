@@ -762,6 +762,19 @@ class MyAdminSite(admin.AdminSite):
                     "<a href='{out.getvalue()}' target='_blank'>{out.getvalue()}</a>"  # noqa
                 )
             print(export_message)
+        if request.POST.get("run_export_stats_to_github_script", False):
+            out = StringIO()
+            request.POST.get("run_export_stats_to_github_script")
+            management.call_command("export_stats_to_github", stdout=out)
+            if configuration.application_open_source_code_url not in out.getvalue():
+                export_message = f"Erreur survenue.<br />{out.getvalue()}"
+            else:
+                export_message = (
+                    "La Pull Request a été créé !<br />"
+                    "Elle est visible ici : "
+                    "<a href='{out.getvalue()}' target='_blank'>{out.getvalue()}</a>"  # noqa
+                )
+            print(export_message)
 
         extra_context = extra_context or {
             "configuration": configuration,
