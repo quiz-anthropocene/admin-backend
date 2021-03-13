@@ -28864,12 +28864,10 @@
   - 17
   - 37
 - id: 815
-  text: 'La concentration en CO2 dans l’atmosphère a atteint 415 ppm en 2020, soit
-    140 ppm de plus que la concentration au début de la révolution industrielle.
+  text: '
 
-    Par comparaison, de combien cette concentration a-t-elle varié entre les périodes
-    inter-glaciaires et les périodes glaciaires qui ont marqué le dernier million
-    d''années ?'
+    Entre les périodes interglaciaires et les périodes glaciaires qui ont marqué le
+    dernier million d''années, de combien la concentration en CO2 a-t-elle varié ?'
   hint: ''
   type: QCM
   category: 1
@@ -28881,10 +28879,18 @@
   answer_option_d: 2 000 ppm
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: Lorsque les calottes glaciaires recouvraient l'intégralité du
-    Canada et une bonne partie de l'Europe, la concentration atmosphérique en CO2
-    était de 180 ppm. Seulement 100 ppm séparent l'âge de glace du monde que l'on
-    connaît aujourd'hui.
+  answer_explanation: 'La concentration atmosphérique de CO2 pendant les périodes
+    interglaciaires (telle que celle où nous sommes depuis 10 000 ans) était d’environ
+    280ppm.
+
+    Lorsque les calottes glaciaires recouvraient l''intégralité du Canada et une bonne
+    partie de l''Europe, la concentration atmosphérique en CO2 était de 180 ppm.
+
+    Seulement 100 ppm séparent l’âge de glace du monde dans lequel notre civilisation
+    est apparue et s’est développée.
+
+
+    En 2020, la concentration atmosphérique de CO2 était de 415ppm...'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -28906,8 +28912,9 @@
   - 13
   - 32
 - id: 816
-  text: Durant le dernier million d'années, combien de fois la concentration atmosphérique
-    en CO2 a dépassé 400 ppm ?
+  text: La concentration en CO2 dans l’atmosphère a atteint 415 ppm en 2020, soit
+    140 ppm de plus qu’au début de la révolution industrielle. Durant le dernier million
+    d'années, combien de fois cette concentration a dépassé 400 ppm ?
   hint: ''
   type: QCM
   category: 1
@@ -28923,7 +28930,7 @@
     la concentration en CO2 n''a jamais dépassé les 300 ppm durant le dernier million
     d''années...
 
-    Sauf une seule fois, au début des années 1900, juste après la révolution industrielle.'
+    ...Sauf une seule fois, au début des années 1900, juste après la révolution industrielle. '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -28937,7 +28944,7 @@
   answer_extra_info: ''
   author: Sous nos pieds
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -28978,8 +28985,8 @@
   - 13
   - 227
 - id: 818
-  text: A quel niveau se trouvait le niveau de la mer il y a 3 millions d’années durant
-    le pliocène, lorsque la concentration en CO2 était similaire à celle de 2020 ?
+  text: A quel niveau se trouvait le niveau de la mer durant le pliocène il y a 3
+    millions d’années, lorsque la concentration en CO2 était au niveau de 2020 ?
   hint: ''
   type: QCM
   category: 1
@@ -29004,7 +29011,7 @@
   answer_extra_info: ''
   author: Sous nos pieds
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -29030,7 +29037,7 @@
   answer_explanation: Durant les 32 millions d'années qui se sont écoulées après la
     disparition des dinosaures, la concentration en CO2 était supérieure à 750 ppm
     et les températures étaient trop chaudes pour permettre aux glaces de se maintenir
-    dans les pôles.
+    aux pôles.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -29045,7 +29052,7 @@
   answer_extra_info: ''
   author: Sous nos pieds
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -29083,7 +29090,7 @@
     483, 413–415. https://doi.org/10.1038/483413a'
   author: Sous nos pieds
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -29124,7 +29131,7 @@
   answer_extra_info: ''
   author: Sous nos pieds
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -29159,7 +29166,7 @@
   answer_extra_info: ''
   author: Sous nos pieds
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -29167,7 +29174,7 @@
   - 7
 - id: 823
   text: 'Bien qu''elles apparaissent "instantanées" à l''échelle des temps géologiques,
-    les extinctions de masse ne sont pas soudaines à notre échelle humaine.
+    les extinctions de masse ne sont pas soudaines à l''échelle humaine.
 
     Entre l''extinction des vertébrés terrestres et celle des faunes marines lors
     de la crise du Permien-Trias il y a 250 millions d’années, il se serait écoulé
@@ -29187,8 +29194,8 @@
     s''est effectué il y a 252,3 millions d''années, tandis que l''extinction est
     datée à 251,9 millions d''années dans les environnements marins.
 
-    Il s’est donc écoulé environ 300 000 ans entre l’extinction des espèces marines
-    et celle des espèces terrestres.
+    Il s’est donc écoulé environ 300 000 ans entre l’extinction des espèces terrestres
+    et celle des espèces marines.
 
     C’est une durée très importante à notre échelle, mais cela reste très court à
     l''échelle géologique !'
@@ -29196,26 +29203,29 @@
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://doi.org/10.1038/s41467-018-07934-z
-  answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/823.png
-  answer_image_explanation: 'Source image : Gastaldo, R.A., Kamo, S.L., Neveling,
-    J., Geissman, J.W., Looy, C.V. and Martini, A.M., 2020, The base of the Lystrosaurus
-    Assemblage Zone, Karoo Basin, predates the end-Permian marine extinction. Nat.
-    Commun. 11, 1428. [https://doi.org/10.1038/s41467-020-15243-7](https://doi.org/10.1038/s41467-020-15243-7)'
-  answer_extra_info: 'Sources : Fielding, C.R., Frank, T.D., McLoughlin, S., Vajda,
-    V., Mays, C., Tevyaw, A.P., Winguth, A., Winguth, C., Nicoll, R.S., Bocking, M.
-    and Crowley, J.L., 2019, Age and pattern of the southern high-latitude continental
-    end-Permian extinction constrained by multiproxy analysis. Nat. Commun. 10, 385.
-    https://doi.org/10.1038/s41467-018-07934-z
+  answer_reading_recommendation: 'Sources : Fielding, C.R., Frank, T.D., McLoughlin,
+    S., Vajda, V., Mays, C., Tevyaw, A.P., Winguth, A., Winguth, C., Nicoll, R.S.,
+    Bocking, M. and Crowley, J.L., 2019, Age and pattern of the southern high-latitude
+    continental end-Permian extinction constrained by multiproxy analysis. Nat. Commun.
+    10, 385. [https://doi.org/10.1038/s41467-018-07934-z](https://doi.org/10.1038/s41467-018-07934-z)
 
     Gastaldo, R.A., Kamo, S.L., Neveling, J., Geissman, J.W., Looy, C.V. and Martini,
     A.M., 2020, The base of the Lystrosaurus Assemblage Zone, Karoo Basin, predates
-    the end-Permian marine extinction. Nat. Commun. 11, 1428. https://doi.org/10.1038/s41467-020-15243-7
-
-    '
+    the end-Permian marine extinction. Nat. Commun. 11, 1428. [https://doi.org/10.1038/s41467-020-15243-7](https://doi.org/10.1038/s41467-020-15243-7)'
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/823.png
+  answer_image_explanation: Le trait rouge correspond à l’extinction marine il y a
+    251,9 millions d’années, qui marque la limite entre le Permien et le Trias. Tout
+    à droite en bleu et vert clair, on voit la transition abrupte entre deux types
+    d’animaux (Daptocephalus et Lystrosaurus), qui s’est déroulé environ 300 000 ans
+    plus tôt que l’extinction marine. Les deux événements sont corrélés avec l’activité
+    volcanique des Trapps de Sibérie (les barres du milieu en marron, gris et jaune).
+  answer_extra_info: 'Source image : Gastaldo, R.A., Kamo, S.L., Neveling, J., Geissman,
+    J.W., Looy, C.V. and Martini, A.M., 2020, The base of the Lystrosaurus Assemblage
+    Zone, Karoo Basin, predates the end-Permian marine extinction. Nat. Commun. 11,
+    1428. https://doi.org/10.1038/s41467-020-15243-7'
   author: Sous nos pieds
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18

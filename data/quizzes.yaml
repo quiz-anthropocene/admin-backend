@@ -87,7 +87,7 @@
   tags:
   - 72
 - id: 6
-  name: Regard sur l'anthropocène, premier aperçu
+  name: Introduction à l'anthropocène - partie 1
   introduction: "<p>L'Anthropocène, c'est un terme proposé par des scientifiques pour\
     \ désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où\
     \ l'homme est devenu une force géologique majeure. La période la plus récente\
@@ -104,7 +104,7 @@
   publish: true
   spotlight: false
   created: 2020-07-08
-  updated: 2021-02-19
+  updated: 2021-03-13
   tags: []
 - id: 7
   name: Le Pétrole - Partie 1 (retiré)
@@ -667,32 +667,36 @@
     \ Si ce dicton s'applique facilement aux événements vécus par nos ancêtres durant\
     \ ces derniers siècles, il est plus difficile à appliquer à l'histoire de la Terre.\
     \ Comment se souvenir d'événements qui se sont déroulés des millions d'années\
-    \ avant l'apparition des premiers hommes ? Grâce à l'étude de carottes glaciaires,\
-    \ de boues marines ou des roches qui forment nos paysages, les géologues sont\
-    \ capables de reconstituer les différents événements qui ont marqué l'histoire\
-    \ de la Terre.</p>\r\n\r\n<p>Entre deux vidéos expliquant l'origine des roches\
-    \ qui forment nos paysages, Sous Nos Pieds vous a préparé un quiz pour tester\
-    \ vos connaissances sur les changements climatiques qui ont marqué l'histoire\
-    \ de la Terre.</p>"
-  conclusion: "<p>Après ces quelques questions, vous pouvez maintenant mieux comprendre\
-    \ comment la géologie peut informer les débats sur le climat. La Terre a déjà\
-    \ connu de nombreux changements climatiques, dont certains ont été provoqués par\
-    \ une augmentation \"soudaine\" de la concentration atmosphérique en CO2.</p>\r\
-    \n\r\n<p>Ces périodes ont été marquées par de plus hautes températures et l'extinction\
-    \ d'innombrables espèces, mais ces changements se sont déroulés sur plusieurs\
-    \ dizaines de milliers d'années. Si nous voulons anticiper cette crise d'une rapidité\
-    \ inédite et comprendre l'impact que nos émissions auront sur les climats du futur,\
-    \ il nous faut d'abord commencer par regarder sous nos pieds pour reconstituer\
-    \ les climats du passé.</p>\r\n\r\n<p>Si ce quiz vous a donné le vertige, rendez-vous\
-    \ sur la <a href=\"https://www.youtube.com/channel/UCtXgE_tacrZi1HS8Wbdq4zQ\"\
-    >chaine YouTube de Sous Nos Pieds</a> pour en prendre encore plus.</p>"
-  difficulty_average: 3.3
+    \ avant l'apparition des premiers hommes ? Les géologues sont capables de reconstituer\
+    \ les différents événements qui ont marqué l'histoire de la Terre.</p>\r\n\r\n\
+    <p>Entre deux vidéos expliquant l'origine des roches qui forment nos paysages,\
+    \ le scientifique vulgarisateur <a href=\"https://www.youtube.com/channel/UCtXgE_tacrZi1HS8Wbdq4zQ\"\
+    >Sous Nos Pieds </a>vous a préparé un quiz pour tester vos connaissances sur les\
+    \ changements climatiques qui ont marqué l'histoire de la Terre.</p>"
+  conclusion: "<p>La géologie et la paléo-climatologie peuvent sont ainsi des aides\
+    \ précieuses pour comprendre et prévoir l'évolution du climat actuel. La Terre\
+    \ a déjà connu de nombreux changements climatiques, dont certains ont été provoqués\
+    \ par une augmentation \"soudaine\" de la concentration atmosphérique en CO2.\
+    \ Ces périodes ont été marquées par de plus hautes températures et l'extinction\
+    \ d'innombrables espèces, mais ces changements se sont déroulés sur plusieursau\
+    \ moins des dizaines de milliers d'années.<br />\r\nSi nous voulons comprendre\
+    \ l'impact des nos émissions sur les climats du futur et anticiper cette crise\
+    \ d'une rapidité inédite, il nous faut d'abord commencer par regarder <a href=\"\
+    https://www.youtube.com/channel/UCtXgE_tacrZi1HS8Wbdq4zQ\">sous nos pieds</a>\
+    \ pour reconstituer les climats du passé. Si ce quiz vous a donné le vertig, rendez-vous\
+    \ sur sa chaîne pour aller plus loin.</p>"
+  difficulty_average: 3.2
   language: Français
   author: Sous Nos Pieds
   image_background_url: https://cdn.pixabay.com/photo/2015/11/19/21/43/desert-1052092_1280.jpg
   has_audio: false
   publish: false
-  spotlight: false
+  spotlight: true
   created: 2021-03-12
-  updated: 2021-03-12
-  tags: []
+  updated: 2021-03-13
+  tags:
+  - 7
+  - 13
+  - 40
+  - 225
+  - 227
