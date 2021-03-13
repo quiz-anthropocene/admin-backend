@@ -66,7 +66,7 @@
 
     <!-- ANSWER -->
     <div v-if="question && questionSubmitted" class="answer" :class="questionAnswer.success ? 'answer-success' : 'answer-error'">
-      <h2 v-if="questionAnswer.success">{{ questionAnswer.message }} !</h2>
+      <h2 v-if="questionAnswer.success">{{ questionAnswer.message }}</h2>
       <h2 v-if="!questionAnswer.success">{{ questionAnswer.message }}</h2>
       <h3 v-if="!questionAnswer.success">
         <small>{{ $t('messages.answerWas') }}{{ $t('words.semiColon') }}&nbsp;</small>
@@ -79,12 +79,19 @@
             <span>ℹ️&nbsp;</span>
             <span v-html="$options.filters.abbr(questionAnswerExplanationWithLineBreaks, glossaire)"></span>
           </p>
+          <p v-if="question.answer_audio" title="Explication au format audio">
+            <span>🔈&nbsp;</span>
+            <audio controls>
+              <source v-bind:src="question.answer_audio" type="audio/mpeg">
+              Votre navigateur ne supporte par le HTML5 audio. Voici un <a href="question.answer_audio">lien pour télécharger le fichier audio</a>.
+            </audio>
+          </p>
         </div>
       </div>
       <!-- Answer image -->
       <p v-if="question.answer_image_url" class="answer-image" title="Une image pour illustrer la réponse">
         <a v-bind:href="question.answer_image_url" target="_blank">
-          <img v-bind:src="question.answer_image_url" alt="une image pour illustrer la réponse" />
+          <img v-bind:src="question.answer_image_url" alt="Une image pour illustrer la réponse" />
         </a>
       </p>
       <p v-if="question.answer_image_explanation" class="answer-image-explanation" title="Légende de l'image">{{ $t('messages.imageLegend') }}{{ $t('words.semiColon') }} {{ question.answer_image_explanation }}</p>
@@ -92,16 +99,7 @@
       <div class="row no-gutters text-align-left">
         <div class="col-sm-auto">
           <p class="answer-link" v-if="question.answer_accessible_url" title="Lien accessible pour aller plus loin">
-            <span v-if="questionAnswerAccessibleUrlIsAudio">
-              🔈&nbsp;
-              <audio controls>
-                <source v-bind:src="question.answer_accessible_url" type="audio/mpeg">
-                Votre navigateur ne supporte par le HTML5 audio. Voici un <a href="question.answer_accessible_url">lien pour télécharger le fichier audio</a>.
-              </audio>
-            </span>
-            <span v-if="!questionAnswerAccessibleUrlIsAudio">
-              🔗&nbsp;<a v-bind:href="question.answer_accessible_url" target="_blank" v-bind:title="question.answer_accessible_url">{{ question.answer_accessible_url }}</a>
-            </span>
+            🔗&nbsp;<a v-bind:href="question.answer_accessible_url" target="_blank" v-bind:title="question.answer_accessible_url">{{ question.answer_accessible_url }}</a>
           </p>
           <p class="answer-link" v-if="question.answer_scientific_url" title="Lien scientifique pour creuser la source">
             🔗🧬&nbsp;<a v-bind:href="question.answer_scientific_url" target="_blank" v-bind:title="question.answer_scientific_url">{{ question.answer_scientific_url }}</a>
@@ -159,10 +157,6 @@ export default {
     },
     questionAnswerExplanationWithLineBreaks() {
       return this.question.answer_explanation.replace(/(?:\r\n|\r|\n)/g, '<br />');
-    },
-    questionAnswerAccessibleUrlIsAudio() {
-      if (!String.prototype.endsWith || !this.question.answer_accessible_url) { return false; }
-      return this.question.answer_accessible_url.endsWith('.mp3');
     },
     questionNotValidated() {
       return this.question.validation_status !== constants.QUESTION_VALIDATION_STATUS_OK;

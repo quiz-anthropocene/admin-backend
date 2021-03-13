@@ -3,12 +3,12 @@ export default {
   QUESTION_VALIDATION_STATUS_OK: 'Validée',
   QUESTION_VALIDATION_STATUS_IN_PROGRESS: 'A valider',
   QUESTION_SUCCESS_MESSAGES_FR: [
-    'C\'est exact', 'En effet', 'Bien vu', 'Félicitations', 'Bravo',
+    'C\'est exact !', 'En effet !', 'Bien vu !', 'Félicitations !', 'Bravo !',
     'Très fort', 'C\'est bien ça. Coup de chance ?', 'Impressionnant',
     'Ca c\'est du génie', 'On applaudit', 'Rangez vos antisèches, c\'est trop facile',
   ],
   QUESTION_SUCCESS_MESSAGES_EN: [
-    'Perfect', 'Exactly', 'Congrats', 'Nice', 'Well done', 'Bravo',
+    'Perfect!', 'Exactly!', 'Congrats', 'Nice', 'Well done', 'Bravo',
   ],
   QUESTION_ERROR_MESSAGES_FR: [
     'On ne baisse pas les bras', 'Rien n\'est perdu', 'On croit en toi', 'Pas tombé loin',
