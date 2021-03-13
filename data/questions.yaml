@@ -21488,7 +21488,7 @@
   answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/capture-et-stockage-du-co2-csc
   answer_scientific_url: https://co2re.co/FacilityData
   answer_reading_recommendation: ''
-  answer_image_url: https://www.globalccsinstitute.com/wp-content/uploads/2019/12/infographics-03.jpg
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/615.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -21524,7 +21524,7 @@
   answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/capture-et-stockage-du-co2-csc
   answer_scientific_url: https://www.globalccsinstitute.com/resources/global-status-report/
   answer_reading_recommendation: ''
-  answer_image_url: https://www.math-dictionary.com/images/one-thousandth.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/616.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
@@ -28127,7 +28127,7 @@
   - 217
   - 225
 - id: 792
-  text: Quelle est le nbre de vols / semaine de la route aérienne la plus fréquentée
+  text: Quelle est le nombre de vols / semaine de la route aérienne la plus fréquentée
     ?
   hint: Waouh, quand même
   type: QCM
@@ -28864,8 +28864,8 @@
   - 17
   - 37
 - id: 815
-  text: 'La concentration en CO2 a atteint 415 ppm en 2020, soit 140 ppm de plus que
-    la concentration au début de la révolution industrielle.
+  text: 'La concentration en CO2 dans l’atmosphère a atteint 415 ppm en 2020, soit
+    140 ppm de plus que la concentration au début de la révolution industrielle.
 
     Par comparaison, de combien cette concentration a-t-elle varié entre les périodes
     inter-glaciaires et les périodes glaciaires qui ont marqué le dernier million
@@ -28890,12 +28890,15 @@
   answer_accessible_url: ''
   answer_scientific_url: https://doi.org/10.1038/nature06949
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://climate.nasa.gov/system/charts/15_co2_left_061720.gif
+  answer_image_explanation: Évolution de la concentration en CO2 dans l’atmosphère
+    durant les derniers 800 000 ans (source NASA). La concentration variait entre
+    180ppm et 280ppm. Depuis le début de la révolution industrielle la hausse est
+    vertigineuse.
   answer_extra_info: ''
   author: Sous nos pieds
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -28914,22 +28917,27 @@
   answer_option_b: '1'
   answer_option_c: '2'
   answer_option_d: '3'
-  answer_correct: a
+  answer_correct: b
   has_ordered_answers: true
-  answer_explanation: La Terre a connu plusieurs périodes inter-glaciaires, mais la
-    concentration en CO2 n'a jamais dépassé les 300 ppm durant le dernier million
-    d'années.
+  answer_explanation: 'La Terre a connu plusieurs périodes inter-glaciaires, mais
+    la concentration en CO2 n''a jamais dépassé les 300 ppm durant le dernier million
+    d''années...
+
+    Sauf une seule fois, au début des années 1900, juste après la révolution industrielle.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://doi.org/10.1038/nature06949
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://climate.nasa.gov/system/charts/15_co2_left_061720.gif
+  answer_image_explanation: Évolution de la concentration en CO2 dans l’atmosphère
+    durant les derniers 800 000 ans (source NASA). La concentration variait entre
+    180ppm et 280ppm. Depuis le début de la révolution industrielle la hausse est
+    vertigineuse.
   answer_extra_info: ''
   author: Sous nos pieds
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -28949,7 +28957,7 @@
   answer_option_d: 30 millions d'années
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: C'est durant le Pliocène moyen, il y a un peu plus de 3 millions
+  answer_explanation: C'est au cours du Pliocène moyen, il y a un peu plus de 3 millions
     d'années, que la concentration atmosphérique est passée sous le seuil des 400
     ppm.
   answer_audio: ''
@@ -28957,12 +28965,12 @@
   answer_accessible_url: ''
   answer_scientific_url: https://doi.org/10.1038/s41586-019-1543-2
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/817-818.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Sous nos pieds
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -28970,8 +28978,8 @@
   - 13
   - 227
 - id: 818
-  text: Où se trouvait le niveau de la mer durant le Pliocène, lorsque la concentration
-    en CO2 était similaire à celle de 2020 ?
+  text: A quel niveau se trouvait le niveau de la mer il y a 3 millions d’années durant
+    le pliocène, lorsque la concentration en CO2 était similaire à celle de 2020 ?
   hint: ''
   type: QCM
   category: 1
@@ -28985,19 +28993,18 @@
   has_ordered_answers: true
   answer_explanation: Le niveau des océans variait au rythme des cycles climatiques
     (périodes glaciaires et inter-glaciaires), mais les études les plus récentes suggèrent
-    que l'élévation du niveau de la mer était de l'ordre de 20 mètres par rapport
-    au niveau actuel.
+    que le niveau de la mer était d'environ 20 mètres plus élevé que le niveau actuel.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://doi.org/10.1038/s41586-019-1543-2
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/817-818.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Sous nos pieds
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -29020,21 +29027,25 @@
   answer_option_d: 1150 ppm
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Durant les 32 millions d'années qui se sont écoulés après la
-    disparition des dinosaures non-aviens, la concentration en CO2 était supérieure
-    à 750 ppm et les températures étaient trop chaudes pour permettre aux glaces de
-    se maintenir.
+  answer_explanation: Durant les 32 millions d'années qui se sont écoulées après la
+    disparition des dinosaures, la concentration en CO2 était supérieure à 750 ppm
+    et les températures étaient trop chaudes pour permettre aux glaces de se maintenir
+    dans les pôles.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://doi.org/10.1038/nature07337
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/819.jpg
+  answer_image_explanation: La courbe grise montre l’évolution de la concentration
+    en CO2 (plus on va vers la droite et plus on remonte dans le temps). Le trait
+    rouge à 750ppm est le seuil en dessous duquel les glaces de l’Antarctique peuvent
+    se former. La concentration est passée en dessous de ce seuil il y a environ 34
+    millions d’années, permettant à la calotte Antarctique de se former et de se maintenir.
   answer_extra_info: ''
   author: Sous nos pieds
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -29042,8 +29053,8 @@
   - 13
   - 227
 - id: 820
-  text: Lors du maximum thermique du Paléocène-Eocène, il y a 56 millions d'années,
-    la vitess d'augmentation de la concentration atmosphérique en CO2 a été…
+  text: Lors du maximum thermique du Paléocène-Eocène (PETM) il y a 56 millions d'années,
+    la vitesse d'augmentation de la concentration atmosphérique en CO2 a été…
   hint: ''
   type: QCM
   category: 1
@@ -29055,21 +29066,24 @@
   answer_option_d: 10 fois plus lente qu'aujourd'hui
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: On estime qu'entre 5000 et 10000 milliards de tonnes de carbone
-    ont été relâchées dans l'atmosphère, pendant une durée de 20 000 ans. Par comparaison,
-    nous ne mettrions au rythme actuel que quelques siècles pour dégager la même quantité.
+  answer_explanation: 'On estime qu''entre 5 000 et 10 000 milliards de tonnes de
+    carbone ont été relâchées dans l''atmosphère, pendant une durée de 20 000 ans.
+
+    C’est absolument considérable, mais par comparaison, nous ne mettrions au rythme
+    actuel que quelques siècles pour dégager la même quantité de carbone...'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://www.annualreviews.org/doi/abs/10.1146/annurev-earth-040610-133431
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/820.jpg
+  answer_image_explanation: Evolution de la température des océans, on voit très clairement
+    le pic lors de l’évènement PETM il y a environ 56 millions d’années
   answer_extra_info: 'Source image : Svensen, H., 2012, Bubbles from the deep, Nature,
     483, 413–415. https://doi.org/10.1038/483413a'
   author: Sous nos pieds
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -29077,8 +29091,8 @@
   - 13
   - 227
 - id: 821
-  text: Combien de temps la Terre a-t-elle mise à se remettre de la crise du maximum
-    thermique du Paléocène-Eocène ?
+  text: Combien de temps la Terre a-t-elle mis pour se remettre de la crise du maximum
+    thermique du Paléocène-Eocène (PETM) il y a 56 millions d’années ?
   hint: ''
   type: QCM
   category: 1
@@ -29087,33 +29101,39 @@
   answer_option_a: 1 000 ans
   answer_option_b: 10 000 ans
   answer_option_c: 100 000 ans
-  answer_option_d: 1 000 000 d'années
+  answer_option_d: 1 million d'années
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: Il aura fallu un peu plus de 100 000 ans pour que l'altération
-    des montagnes et les organismes vivants retirent les milliers de milliards de
-    tonnes de Carbone qui avait été rajoutés dans l’atmosphère durant le maximum thermique.
+  answer_explanation: 'Il aura fallu plus de 100 000 ans pour que le système terre
+    (via l''altération des montagnes et les organismes vivants) retire les milliers
+    de milliards de tonnes de carbone qui avait été rajoutées dans l’atmosphère durant
+    le maximum thermique.
+
     Après une augmentation de 5 à 8°C, les températures sont redevenues similaires
-    à ce qu'elles étaient auparavant.
+    à ce qu''elles étaient auparavant.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://www.annualreviews.org/doi/abs/10.1146/annurev-earth-040610-133431
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/821.jpg
+  answer_image_explanation: La courbe rouge montre l’évolution de la température à
+    partir du début de la crise du PETM. Les températures augmentent très rapidement
+    pendant environ 40 000 ans, et redescendent ensuite plus lentement, pour retrouver
+    le niveau d’avant crise environ 130 000 ans après.
   answer_extra_info: ''
   author: Sous nos pieds
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
   tags:
   - 227
 - id: 822
-  text: La biosphère est en train de vivre sa 6ème extinction de masse. Quand s'est
-    déroulée la plus dévastatrice d'entre elles ?
+  text: 'La biosphère est en train de vivre sa 6ème extinction de masse.
+
+    Quand s''est déroulée la plus dévastatrice de ces extinctions ?'
   hint: ''
   type: QCM
   category: 4
@@ -29132,44 +29152,56 @@
   answer_accessible_url: ''
   answer_scientific_url: https://science.sciencemag.org/content/321/5885/97
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/822.jpg
+  answer_image_explanation: Évolution du nombre d’espèces depuis 500 millions d’années.
+    On voit très clairement le “trou“ il y a 250 millions d’années, correspondant
+    à la plus grande extinction de masse que la terre ait connu.
   answer_extra_info: ''
   author: Sous nos pieds
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
   tags:
   - 7
 - id: 823
-  text: Bien qu'elles apparaissent "instantanées" à l'échelle des temps géologiques,
-    les extinctions de masse ne sont pas soudaines à notre échelle humaine. Entre
-    l'extinction des vertébrés terrestres et celle des faunes marines lors de la crise
-    du Permien-Trias, il se serait écoulé ….
+  text: 'Bien qu''elles apparaissent "instantanées" à l''échelle des temps géologiques,
+    les extinctions de masse ne sont pas soudaines à notre échelle humaine.
+
+    Entre l''extinction des vertébrés terrestres et celle des faunes marines lors
+    de la crise du Permien-Trias il y a 250 millions d’années, il se serait écoulé
+    ….'
   hint: ''
   type: QCM
   category: 4
   difficulty: 4
   language: Français
   answer_option_a: 300 ans
-  answer_option_b: 3,000 ans
-  answer_option_c: 30,000 ans
-  answer_option_d: 300,000 ans
+  answer_option_b: 3 000 ans
+  answer_option_c: 30 000 ans
+  answer_option_d: 300 000 ans
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: Selon de récentes études, le remplacement des faunes terrestres
-    s'est effectué il y a 252,3 millions d'années, tandis que l'extinction est datée
-    à 251,9 millions d'années dans les environnements marins. Cela reste très court
-    à l'échelle géologique !
+  answer_explanation: 'Selon de récentes études, le remplacement des faunes terrestres
+    s''est effectué il y a 252,3 millions d''années, tandis que l''extinction est
+    datée à 251,9 millions d''années dans les environnements marins.
+
+    Il s’est donc écoulé environ 300 000 ans entre l’extinction des espèces marines
+    et celle des espèces terrestres.
+
+    C’est une durée très importante à notre échelle, mais cela reste très court à
+    l''échelle géologique !'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://doi.org/10.1038/s41467-018-07934-z
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/823.png
+  answer_image_explanation: 'Source image : Gastaldo, R.A., Kamo, S.L., Neveling,
+    J., Geissman, J.W., Looy, C.V. and Martini, A.M., 2020, The base of the Lystrosaurus
+    Assemblage Zone, Karoo Basin, predates the end-Permian marine extinction. Nat.
+    Commun. 11, 1428. [https://doi.org/10.1038/s41467-020-15243-7](https://doi.org/10.1038/s41467-020-15243-7)'
   answer_extra_info: 'Sources : Fielding, C.R., Frank, T.D., McLoughlin, S., Vajda,
     V., Mays, C., Tevyaw, A.P., Winguth, A., Winguth, C., Nicoll, R.S., Bocking, M.
     and Crowley, J.L., 2019, Age and pattern of the southern high-latitude continental
@@ -29180,12 +29212,10 @@
     A.M., 2020, The base of the Lystrosaurus Assemblage Zone, Karoo Basin, predates
     the end-Permian marine extinction. Nat. Commun. 11, 1428. https://doi.org/10.1038/s41467-020-15243-7
 
-    Source image : Gastaldo, R.A., Kamo, S.L., Neveling, J., Geissman, J.W., Looy,
-    C.V. and Martini, A.M., 2020, The base of the Lystrosaurus Assemblage Zone, Karoo
-    Basin, predates the end-Permian marine extinction. Nat. Commun. 11, 1428. https://doi.org/10.1038/s41467-020-15243-7'
+    '
   author: Sous nos pieds
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -29193,13 +29223,13 @@
   - 7
 - id: 824
   text: Les extinctions de masses sont souvent associées à des épisodes volcaniques
-    intenses. La violence particulière de l'extinction du Permien-Trias serait liée
-    au fait que le magma, en remontant à la surface, aurait causé la combustion d'épaisses
-    couches de …
+    intenses. La violence particulière de l'extinction du Permien-Trias il y a 250
+    millions d’années serait liée au fait que le magma, en remontant à la surface,
+    aurait causé la combustion d'épaisses couches de …
   hint: ''
   type: QCM
   category: 4
-  difficulty: 3
+  difficulty: 2
   language: Français
   answer_option_a: Granite
   answer_option_b: Calcaire
@@ -29215,12 +29245,12 @@
   answer_accessible_url: ''
   answer_scientific_url: https://doi.org/10.1130/G47365.1
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/824.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Sous nos pieds
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
   updated: 2021-01-18
@@ -31710,8 +31740,8 @@
   answer_scientific_url: https://nosgestesclimat.fr/actions/plus/alimentation/d%C3%A9chets/vrac
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/922.jpg
-  answer_image_explanation: Infographie, Mieux manger, Moins gaspiller, Moins polluer,
-    ADEME
+  answer_image_explanation: 'Infographie ADEME : Mieux manger, moins gaspiller, moins
+    polluer'
   answer_extra_info: ''
   author: Julien Briton
   validator: Matthieu Massart
@@ -31784,8 +31814,8 @@
   answer_scientific_url: https://www.franceagrimer.fr/Mediatheque/INFORMATIONS-ECONOMIQUES/FRUITS-ET-LEGUMES/CHIFFRES-ET-BILANS/2020/Les-filieres-fruits-et-legumes-chiffres-cles-2018
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/924.jpg
-  answer_image_explanation: FranceAgriMer “Les Chiffres-clés de la filière Fruit &
-    Légumes frais et transformés 2018”
+  answer_image_explanation: 'FranceAgriMer : Les chiffres clés de la filière fruit
+    & légumes frais et transformés 2018'
   answer_extra_info: ''
   author: Julien Briton
   validator: Matthieu Massart
@@ -31884,7 +31914,7 @@
   - 239
 - id: 927
   text: Si la RVM - la République des Vaches du Monde - était un pays, en quelle position
-    arriverait-il en termes d’émissions de gaz à effet de serre ?
+    arriverait-elle en termes d’émissions de gaz à effet de serre ?
   hint: ''
   type: QCM
   category: 1
