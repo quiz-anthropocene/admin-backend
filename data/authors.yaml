@@ -61,6 +61,9 @@
 - name: Raphael Odini
   question_count: 42
   quiz_count: 3
+- name: Sous nos pieds
+  question_count: 3
+  quiz_count: 0
 - name: Vincent Mignerot
   question_count: 13
   quiz_count: 1
