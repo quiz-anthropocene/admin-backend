@@ -17,6 +17,9 @@ from api.models import (
 )
 
 
+configuration = Configuration.get_solo()
+
+
 class Command(BaseCommand):
     """
     Usage:
@@ -42,11 +45,10 @@ class Command(BaseCommand):
         print("it will only run on QuestionAnswerEvent & QuestionFeedbackEvent")
         self.cleanup_question_answer_events()
         self.cleanup_question_feedback_events()
-        # self.cleanup_quiz_answer_events()
+        self.cleanup_quiz_answer_events()
         # self.cleanup_quiz_feedback_events()
 
         # update configuration
-        configuration = Configuration.get_solo()
         configuration.daily_stat_last_aggregated = timezone.now()
         configuration.save()
 
@@ -246,7 +248,9 @@ class Command(BaseCommand):
         WARNING: QuizAnswerEvent aren't deleted, so run only once !
         TODO: how to keep score ? how to delete QuizAnswerEvent ?
         """
-        quiz_stats = QuizAnswerEvent.objects.all()
+        quiz_stats = QuizAnswerEvent.objects.filter(
+            created__gte=configuration.daily_stat_last_aggregated
+        )
         quiz_stats_df = pd.DataFrame.from_records(quiz_stats.values())
         print(f"{quiz_stats_df.shape[0]} new answers")
 
