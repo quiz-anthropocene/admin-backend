@@ -213,7 +213,7 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
         "id",
         "date",
         "question_answer_count",
-        # "quiz_answer_count",
+        "quiz_answer_count",
         "question_feedback_count",
         # "quiz_feedback_count",
         "created",
