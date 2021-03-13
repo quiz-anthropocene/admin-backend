@@ -62,7 +62,7 @@
             {% csrf_token %}
             <input type="hidden" name="run_export_data_to_github_script" value="1" />
             <td>
-              <input id="action-button" type="submit" value="🕹Lancer l'export de la donnée">
+              <input id="action-button" type="submit" value="🕹 Lancer l'export de la donnée">
             </td>
             <td>
               <strong>{{ configuration.github_data_last_exported | date:"SHORT_DATETIME_FORMAT" }}</strong>
@@ -76,7 +76,7 @@
             {% csrf_token %}
             <input type="hidden" name="run_export_stats_to_github_script" value="1" />
             <td>
-              <input id="action-button" type="submit" value="📈Lancer l'export des stats">
+              <input id="action-button" type="submit" value="📈 Lancer l'export des stats">
             </td>
             <td>
               <strong>{{ configuration.github_stats_last_exported | date:"SHORT_DATETIME_FORMAT" }}</strong>

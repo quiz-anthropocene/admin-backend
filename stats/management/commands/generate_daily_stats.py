@@ -17,6 +17,9 @@ from api.models import (
 )
 
 
+configuration = Configuration.get_solo()
+
+
 class Command(BaseCommand):
     """
     Usage:
@@ -39,14 +42,15 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         print("=== generate_daily_stats running")
-        print("it will only run on QuestionAnswerEvent & QuestionFeedbackEvent")
+        print(
+            "it will only run on QuestionAnswerEvent, QuizAnswerEvent & QuestionFeedbackEvent"
+        )
         self.cleanup_question_answer_events()
         self.cleanup_question_feedback_events()
-        # self.cleanup_quiz_answer_events()
+        self.sumup_quiz_answer_events()
         # self.cleanup_quiz_feedback_events()
 
         # update configuration
-        configuration = Configuration.get_solo()
         configuration.daily_stat_last_aggregated = timezone.now()
         configuration.save()
 
@@ -236,7 +240,7 @@ class Command(BaseCommand):
             question_feedbacks.delete()
             print("QuestionFeedbackEvent deleted")
 
-    def cleanup_quiz_answer_events(self):
+    def sumup_quiz_answer_events(self):
         """
         loop on QuizAnswerEvent
         - update DailyStat
@@ -246,7 +250,11 @@ class Command(BaseCommand):
         WARNING: QuizAnswerEvent aren't deleted, so run only once !
         TODO: how to keep score ? how to delete QuizAnswerEvent ?
         """
-        quiz_stats = QuizAnswerEvent.objects.all()
+        print("=== starting QuizAnswerEvent sumup")
+
+        quiz_stats = QuizAnswerEvent.objects.filter(
+            created__gte=configuration.daily_stat_last_aggregated
+        )
         quiz_stats_df = pd.DataFrame.from_records(quiz_stats.values())
         print(f"{quiz_stats_df.shape[0]} new answers")
 
