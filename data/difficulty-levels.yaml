@@ -9,12 +9,12 @@
 - name: Moyen
   value: 2
   emoji: 🏆🏆
-  question_count: 175
+  question_count: 176
 - name: Difficile
   value: 3
   emoji: 🏆🏆🏆
-  question_count: 124
+  question_count: 126
 - name: Expert
   value: 4
   emoji: 🏆🏆🏆🏆
-  question_count: 41
+  question_count: 45
