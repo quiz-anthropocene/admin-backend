@@ -1843,23 +1843,29 @@
   tags:
   - 17
 - id: 51
-  text: Combien d'hectares de terres arables disparaissent chaque minute dans le monde
-    du fait de l'urbanisation ?
+  text: Dans 24 heures, quelle surface des terres cultivables ou labourables aura
+    disparu dans le monde, principalement du fait de l'urbanisation ?
   hint: ''
   type: QCM
   category: 6
   difficulty: 4
   language: Français
-  answer_option_a: 0,5 ha (1 terrain de football)
-  answer_option_b: 5 ha (7 terrains de football)
-  answer_option_c: 50 ha (70 terrains de football)
-  answer_option_d: 500 ha (700 terrains de football)
-  answer_correct: c
+  answer_option_a: la superficie d'une capitale comme Paris soit environ 100 km2
+  answer_option_b: la superficie d'une grande métropole comme Berlin ou le Grand Paris,
+    soit environ 800km2
+  answer_option_c: la superficie d'un département français comme le Nord ou l'Ardèche,
+    soit environ 55000 km2
+  answer_option_d: la superficie d'un pays comme l'Italie ou la Pologne soit plus
+    de 300000 km2
+  answer_correct: b
   has_ordered_answers: true
   answer_explanation: Plus de 60 % de l’expansion urbaine de ces 50 dernières années
     dans le monde s’est effectuée sur des terrains agricoles. En France, une surface
     équivalente à celle d’un département tous les 10 ans est artificialisée en raison
     de l’étalement urbain, de la construction de routes, de parkings et d’infrastructures.
+    La diminution des surfaces cultivables est à mettre en relation avec la stagnation
+    depuis 20 ans des rendements dans certains pays de tradition agricole comme la
+    France, comme le souligne un rapport alarmant du Sénat de 2019.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.goodplanet.info/2020/03/30/lurbanisation-mondiale-sopere-au-detriment-des-terres-agricoles/
@@ -20550,32 +20556,42 @@
   - 9
   - 193
 - id: 589
-  text: 'Quelle proportion de la population est dans une situation de stress hydrique
-    grave c''est à dire proche du "jour zéro" lors duquel plus aucune eau ne sortira
-    du robinet ? Environ :'
+  text: On dit d'une personne qu'elle est exposée à une situation de "stress hydrique
+    très élevé" lorsqu'elle rencontre chaque année des situations de manque d'eau,
+    voire de pénurie totale durant certaines périodes de l'année. Combien de personnes
+    sont concernées sur terre ?
   hint: ''
   type: QCM
   category: 7
   difficulty: 2
   language: Français
-  answer_option_a: 1 sur 1000
-  answer_option_b: 1 sur 100
-  answer_option_c: 1 sur 10
-  answer_option_d: 1 sur 4
+  answer_option_a: 1 personne sur 1000
+  answer_option_b: 1 personne sur 100
+  answer_option_c: 1 personne sur 10
+  answer_option_d: 1 personne sur 4
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: ''
+  answer_explanation: 'Près d’un quart de la population mondiale, vivant dans dix-sept
+    pays, est en situation de « stress hydrique très élevé»,
+
+    Le stress hydrique – autrement dit, une ressource insuffisante pour répondre aux
+    différentes activités humaines et aux besoins de l’environnement – commence lorsque
+    la disponibilité en eau est inférieure à 1 700 mètres cubes par an et par personne.
+
+    Les prévisions pour 2040 sont encore plus inquiétantes, comme le montre le graphique
+    ci-dessous.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.lemonde.fr/planete/article/2019/08/06/pres-d-un-quart-de-la-population-mondiale-est-menace-par-une-penurie-d-eau_5497203_3244.html
+  answer_scientific_url: https://www.wri.org/blog/2019/08/17-countries-home-one-quarter-world-population-face-extremely-high-water-stress
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://reliefweb.int/sites/reliefweb.int/files/resources/water_stress_world_map_large.pdf
+  answer_image_explanation: En l'absence de changement majeur, les pays indiqués en
+    rouge sombre seront en stress hydrique très élevé en 2040
   answer_extra_info: ''
   author: Pascal Mostardi
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2020-09-22
   created: 2020-09-22
   updated: 2020-09-22
@@ -25908,7 +25924,10 @@
   - 217
   - 218
 - id: 729
-  text: A quelle conséquences peut amener la fonte du permafrost ? QRM
+  text: Le pergélisol (ou permafrost) est un sol gelé en permanence. Il recouvre une
+    grande partie des régions arctiques. On craint fortement que le réchauffement
+    climatique engendre une fonte majeure de ce pergélisol. Avec quelles conséquences
+    ?
   hint: ''
   type: QCM-RM
   category: 5
@@ -26175,20 +26194,20 @@
   - 217
   - 218
 - id: 736
-  text: 'Imaginez une balance colossale. A gauche, tous les animaux sauvages ; à droite
-    tous les animaux domestiqués ou utilisés par l’humain. De quel côté va pencher
-    la balance ? '
+  text: 'Imaginons une balance colossale : à gauche, tous les animaux sauvages ; à
+    droite tous les animaux domestiqués ou utilisés par l’humain. De quel côté va
+    pencher la balance ? '
   hint: ''
   type: QCM
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
+  answer_option_a: A gauche
+  answer_option_b: A droite
   answer_option_c: ''
   answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
+  answer_correct: ''
+  has_ordered_answers: true
   answer_explanation: ''
   answer_audio: ''
   answer_video: ''
@@ -26198,28 +26217,33 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Jean-Philippe Pernin
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-03-05
   created: 2021-01-06
   updated: 2021-01-06
   tags:
-  - 33
-  - 217
-  - 218
+  - 189
 - id: 737
-  text: Insectes pollinisateurs => alimentation humaine
+  text: "Une étude récente a mis en évidence une diminution en Europe de 75 à 82 %\
+    \ de la masse totale des insectes en 30 ans en Allemagne. \nQuelles seront les\
+    \ conséquences les plus probables de cette diminution pour les insectes pollinisateurs\
+    \ ?"
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: null
   difficulty: 2
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: La perte des insectes pollinisateurs pourrait menacer 1,4 milliard
+    d’emploi
+  answer_option_b: A un tel rythme, lLes insectes pollinisateurs pourraient disparaître
+    en quelques décennies
+  answer_option_c: La perte des insectes pollinisateurs pourrait susciter une recrudescence
+    substantielle de maladies chez l'humain
+  answer_option_d: L'extinction des pollinisateurs pourrait menacer la sécurité alimentaire
+    mondiale
+  answer_correct: abcd
   has_ordered_answers: false
   answer_explanation: ''
   answer_audio: ''
@@ -26245,13 +26269,13 @@
   hint: ''
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 3
   language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
   answer_option_d: ''
-  answer_correct: d
+  answer_correct: ''
   has_ordered_answers: false
   answer_explanation: ''
   answer_audio: ''
@@ -26262,16 +26286,13 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Jean-Philippe Pernin
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-03-08
   created: 2021-01-06
   updated: 2021-01-06
-  tags:
-  - 33
-  - 217
-  - 218
+  tags: []
 - id: 739
   text: Copy of à venir
   hint: 'OEW : Operating Empty Weight'
@@ -26385,31 +26406,34 @@
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: négligeable par rapport à d'autres usages
+  answer_option_b: 10 à 20% de la consommation de sélénium, 8% des lanthanides
+  answer_option_c: moitié moins de silicium consommé, 20% d'épuisement du sable en
+    moins
+  answer_option_d: 30% de la consommation d'argent métal, 10% de l'étain, 0.1% du
+    brome
+  answer_correct: b
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: "La coloration du verre provient de l'usage de métaux critiques,\
+    \ comme les platinoïdes, les lanthanides, le sélénium etc. Revenir à du verre\
+    \ transparent permettrait de limiter ces usages dispersifs. \nL'étape d'après\
+    \ serait d'imposer la consigne et de standardiser les tailles et formats de contenants\
+    \ !"
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://pubs.acs.org/doi/abs/10.1021/es505515z
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Max Pinsard
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-03-08
   created: 2021-01-06
   updated: 2021-01-06
-  tags:
-  - 33
-  - 217
-  - 218
+  tags: []
 - id: 743
   text: Quelle est la part des déchets produits par les ménages qui pourrait assez
     facilement ne pas finir dans la poubelle grise ou devenir des déchets délicats
@@ -26419,13 +26443,20 @@
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  answer_option_a: 10%
+  answer_option_b: 50%
+  answer_option_c: 70%
+  answer_option_d: 99%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: Sur les 375kg/ha/an de déchets produits par les ménages, environ
+    100kg sont putrescibles et devraient aller au compost ou nourrir des animaux,
+    160kg pourraient être collectés sélectivement en vue d'un recyclage "facile" (papiers,
+    verre, métaux …). En comptant d'autres déchets non-classés, c'est 70% qui pourraient
+    éviter la poubelle grise. Le reste est composé de déchets dangereux (DEEE...),
+    de plastiques, de déchets inertes divers non facilement recyclables ... La réduction
+    à la source (zéro déchet, sobriété) est un autre levier majeur pour éviter ces
+    70%.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -26434,31 +26465,35 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Max Pinsard
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-03-08
   created: 2021-01-06
   updated: 2021-01-06
   tags:
-  - 33
-  - 217
-  - 218
+  - 228
+  - 250
 - id: 744
   text: Si tous les logements baissaient leur température moyenne au niveau recommandé,
     la consommation de chauffage diminuerait d'au moins…?
   hint: ''
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 1
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
+  answer_option_a: 2 à 4%
+  answer_option_b: 9 à 12%
   answer_option_c: ''
   answer_option_d: ''
-  answer_correct: d
+  answer_correct: ''
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: 'On estime environ 7-10% d''économie sur la facture de chauffage
+    par dégré de chauffage en moins; entre les pièces à vivre (19°C recommandé) et
+    les chambres à coucher (16°C recommandés), on pourrait faire globalement baisser
+    le chauffage d''au moins 3°C, donc économiser 3×7 = 21% en chauffage.
+
+    Et en mettant un pull en hiver, n pourrait même aller encore plus loin !'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -26467,16 +26502,14 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Max Pinsard
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-03-08
   created: 2021-01-06
   updated: 2021-01-06
   tags:
-  - 33
-  - 217
-  - 218
+  - 67
 - id: 745
   text: Copy of à venir
   hint: 'OEW : Operating Empty Weight'
@@ -28875,8 +28908,8 @@
   language: Français
   answer_option_a: 100 ppm
   answer_option_b: 500 ppm
-  answer_option_c: 1 000 ppm
-  answer_option_d: 2 000 ppm
+  answer_option_c: 1,000 ppm
+  answer_option_d: 2,000 ppm
   answer_correct: a
   has_ordered_answers: true
   answer_explanation: 'La concentration atmosphérique de CO2 pendant les périodes
@@ -28943,7 +28976,7 @@
     vertigineuse.
   answer_extra_info: ''
   author: Sous nos pieds
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
@@ -28976,7 +29009,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Sous nos pieds
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
@@ -29010,7 +29043,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Sous nos pieds
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
@@ -29051,7 +29084,7 @@
     millions d’années, permettant à la calotte Antarctique de se former et de se maintenir.
   answer_extra_info: ''
   author: Sous nos pieds
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
@@ -29089,7 +29122,7 @@
   answer_extra_info: 'Source image : Svensen, H., 2012, Bubbles from the deep, Nature,
     483, 413–415. https://doi.org/10.1038/483413a'
   author: Sous nos pieds
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
@@ -29130,7 +29163,7 @@
     le niveau d’avant crise environ 130 000 ans après.
   answer_extra_info: ''
   author: Sous nos pieds
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
@@ -29165,7 +29198,7 @@
     à la plus grande extinction de masse que la terre ait connu.
   answer_extra_info: ''
   author: Sous nos pieds
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
@@ -29203,11 +29236,12 @@
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://doi.org/10.1038/s41467-018-07934-z
-  answer_reading_recommendation: 'Sources : Fielding, C.R., Frank, T.D., McLoughlin,
-    S., Vajda, V., Mays, C., Tevyaw, A.P., Winguth, A., Winguth, C., Nicoll, R.S.,
-    Bocking, M. and Crowley, J.L., 2019, Age and pattern of the southern high-latitude
-    continental end-Permian extinction constrained by multiproxy analysis. Nat. Commun.
-    10, 385. [https://doi.org/10.1038/s41467-018-07934-z](https://doi.org/10.1038/s41467-018-07934-z)
+  answer_reading_recommendation: 'Fielding, C.R., Frank, T.D., McLoughlin, S., Vajda,
+    V., Mays, C., Tevyaw, A.P., Winguth, A., Winguth, C., Nicoll, R.S., Bocking, M.
+    and Crowley, J.L., 2019, Age and pattern of the southern high-latitude continental
+    end-Permian extinction constrained by multiproxy analysis. Nat. Commun. 10, 385.
+    [https://doi.org/10.1038/s41467-018-07934-z](https://doi.org/10.1038/s41467-018-07934-z);
+
 
     Gastaldo, R.A., Kamo, S.L., Neveling, J., Geissman, J.W., Looy, C.V. and Martini,
     A.M., 2020, The base of the Lystrosaurus Assemblage Zone, Karoo Basin, predates
@@ -29224,7 +29258,7 @@
     Zone, Karoo Basin, predates the end-Permian marine extinction. Nat. Commun. 11,
     1428. https://doi.org/10.1038/s41467-020-15243-7'
   author: Sous nos pieds
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
@@ -29259,7 +29293,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Sous nos pieds
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-12
   created: 2021-01-18
@@ -31000,6 +31034,81 @@
   - 1
   - 197
   - 216
+- id: 877
+  text: On utilisait au XIXe siècle des bateaux tractés par des câbles. Lesquelles
+    des affirmations suivantes sont vraies ?
+  hint: ''
+  type: QCM-RM
+  category: 2
+  difficulty: 3
+  language: Français
+  answer_option_a: La puissance requise pour les tracter était 4 fois moindre qu'un
+    propulseur embarqué
+  answer_option_b: Leurs moteurs étaient 10 fois moins gourmands en énergie qu'un
+    camion pour parcourir une distance donnée
+  answer_option_c: Ils provoquaient beaucoup moins de nuisances sonores qu'un propulseur
+  answer_option_d: Leur vitesse ne dépassait pas 7 km/h
+  answer_correct: abcd
+  has_ordered_answers: false
+  answer_explanation: Il subsiste quelques un de ces "trolley boats". Mais leur vitesse
+    limitée les a rendus obsolètes. Même entre 2 rives proches les câbles peuvent
+    être tirés pour assurer une liaison simple par ferry. La liaison par câble peut
+    même exercer une force mécanique pour que la barge soit moins déviée par le courant.
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/2009/12/trolley-canal-boats.html
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-14
+  created: 2021-03-15
+  updated: 2021-03-15
+  tags:
+  - 254
+  - 255
+- id: 880
+  text: Construire un nouveau bâtiment génère des gaz à effet de serre. En particulier
+    pour les bâtiments efficients énergétiquement (béton, matériaux ...). Au bout
+    de combien de temps ces émissions initiales sont-elles amorties par rapport à
+    l'utilisation d'un bâtiment inefficient, mais déjà existant ?
+  hint: ''
+  type: QCM
+  category: null
+  difficulty: 2
+  language: Français
+  answer_option_a: 1 an
+  answer_option_b: 5 ans
+  answer_option_c: 50 ans
+  answer_option_d: 100 ans
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: "Il faut 50 ans pour que les émissions vieux bâtiment inefficient\
+    \ liées à son usage (chauffage …) dépassent celles d'un nouveau bâtiment efficient\
+    \ en comptant les émissions dues à sa construction. \nIl faut donc mieux parfois\
+    \ réutiliser des anciens bâtiments même inefficients, ou au moins être sûr que\
+    \ les nouveaux seront conservés plus de 50 ans."
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.lowtechmagazine.com/2011/02/body-insulation-thermal-underwear.html
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-14
+  created: 2021-03-15
+  updated: 2021-03-15
+  tags:
+  - 53
+  - 100
 - id: 900
   text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
   hint: Bas carbone donc…
@@ -31853,7 +31962,7 @@
   answer_explanation: '60% de la production céréalière Française conservée sur le
     territoire est utilisée pour l’alimentation animale : soit les céréales sont stockées
     et consommées à la ferme (50 %), soit elles sont utilisées par l''industrie de
-    l''alimentation animale (50 %). Certains sous-produits agricoles comme les tourteaux
+    l''alimentation animale. Certains sous-produits agricoles comme les tourteaux
     d’oléagineux, le son des céréales ou la pulpe de betteraves sont valorisés pour
     le bétail. Cependant, que soit sous forme de viande, de laitages ou d''œufs, ils
     restituent bien moins de calories (et de protéines, dans la plupart des cas) à
@@ -32529,13 +32638,21 @@
   answer_option_d: 100%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: ''
+  answer_explanation: 'Selon un sondage effectué en 2009 auprès de 3146 scientifiques,
+    97% des chercheurs spécialisés dans la science du climat attribuaient à l''humain
+    la cause du réchauffement climatique actuel. Il est intéressant de noter que le
+    même sondage précisait que seuls 47%  de chercheurs spécialisés en géologie attribuaient
+    à l''humain la cause du réchauffement.
+
+    La valeur de 65% représentait en 2010 la proportion de la population française
+    attribuant à l''humain la cause du réchauffement. Cette proportion a régulièrement
+    varié depuis et atteint 79 % en 2020.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.usinenouvelle.com/blogs/julien-fosse/au-parlement-le-lent-verdissement-des-esprits.N1041164
+  answer_scientific_url: https://fr.wikipedia.org/wiki/Consensus_scientifique_sur_le_r%C3%A9chauffement_climatique
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://citizen4science.com/wp-content/uploads/2020/12/ademe-8.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Philippe Pernin

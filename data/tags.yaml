@@ -892,3 +892,23 @@
   name: Poubelles
   description: ''
   created: 2021-03-11
+- id: 251
+  name: Pollinisateurs
+  description: ''
+  created: 2021-03-15
+- id: 252
+  name: Jouets
+  description: ''
+  created: 2021-03-15
+- id: 253
+  name: Bois
+  description: ''
+  created: 2021-03-15
+- id: 254
+  name: Bateaux
+  description: ''
+  created: 2021-03-15
+- id: 255
+  name: Low techs
+  description: ''
+  created: 2021-03-15
