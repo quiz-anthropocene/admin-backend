@@ -236,10 +236,10 @@
   answer_option_d: Une baisse de 60%
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: 'Causes principales: perte et dégradation des habitats. Puis
-    surexploitation des sols, pollution, changement climatique. Notez qu’on parle
-    de réduction des populations, pas de disparitions d’espèces, ce qui est une autre
-    question.'
+  answer_explanation: Les causes principales en sont la perte et dégradation des habitats.
+    Puis viennent la surexploitation des sols, la pollution, et le changement climatique.
+    Notez qu’on parle de réduction des populations, pas de disparitions d’espèces,
+    ce qui est une autre question.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/biodiversite/article/2016/10/27/la-moitie-des-vertebres-a-disparu-en-quarante-ans_5020936_1652692.html
@@ -1869,7 +1869,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.goodplanet.info/2020/03/30/lurbanisation-mondiale-sopere-au-detriment-des-terres-agricoles/
-  answer_scientific_url: ''
+  answer_scientific_url: http://www.senat.fr/rap/r18-528/r18-5281.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://cdn-s-www.ledauphine.com/images/C2000558-A859-4CD7-9768-E4FCF9741D1F/NW_raw/une-vue-aerienne-de-la-plaine-de-valence-l-urbanisation-grignote-les-terres-agricoles-trop-pour-certains-le-d-l-f-h-1297717691.jpg
   answer_image_explanation: ''
@@ -1882,7 +1882,6 @@
   updated: 2020-09-28
   tags:
   - 17
-  - 216
 - id: 52
   text: La progression du désert dans le monde, c'est chaque année...
   hint: ''
@@ -2946,11 +2945,11 @@
   answer_option_d: Sobriété > Efficacité > Renouvelables
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: Sobriété = prioriser les besoins énergétiques essentiels (exemple
-    éteindre les vitrines des magasins et bureaux inoccupés la nuit, rouler moins
-    vite, ...). Efficacité = réduire la quantité d'énergie nécessaire à la satisfaction
-    d'un même besoin (exemple isoler les bâtiments, améliorer les rendements, ...).
-    Renouvelables = privilégier les énergies renouvelables.
+  answer_explanation: "Sobriété = prioriser les besoins énergétiques essentiels (exemple\
+    \ éteindre les vitrines des magasins et bureaux inoccupés la nuit, rouler moins\
+    \ vite, ...). \nEfficacité = réduire la quantité d'énergie nécessaire à la satisfaction\
+    \ d'un même besoin (exemple isoler les bâtiments, améliorer les rendements, ...).\
+    \ \nRenouvelables = privilégier les énergies renouvelables."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://negawatt.org/La-demarche-negaWatt
@@ -7883,7 +7882,7 @@
     jusqu’il y a peu un IDH décent (du niveau de la Russie) avec une empreinte écologique
     soutenable ?'
   hint: ''
-  type: QCM-RM
+  type: QCM
   category: 6
   difficulty: 3
   language: Français
@@ -7904,7 +7903,7 @@
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: https://www.latoilescoute.net/IMG/png/photo_4-2-resp1200.png
-  answer_image_explanation: ''
+  answer_image_explanation: hag = hectare agricole
   answer_extra_info: 'vidéo: Gael Giraud'
   author: Raphael Odini
   validator: Matthieu Massart
@@ -15336,17 +15335,16 @@
   hint: ''
   type: QCM-RM
   category: 1
-  difficulty: 1
+  difficulty: 2
   language: Français
-  answer_option_a: Population de 1.3 Milliard de personnes
-  answer_option_b: énergie fortement liée au charbon
-  answer_option_c: usine du monde
+  answer_option_a: Une population de 1,3 milliard de personnes
+  answer_option_b: Une énergie fortement liée au charbon
+  answer_option_c: La Chine est l'usine du monde
   answer_option_d: ''
   answer_correct: ''
   has_ordered_answers: false
-  answer_explanation: Population de 1.3 Milliard de personnes, énergie fortement liée
-    au charbon, mais surtout usine du monde donc leurs émissions de GES sont en partie
-    les nôtres, délocalisées.
+  answer_explanation: Mais surtout usine du monde donc leurs émissions de GES sont
+    en partie les nôtres, délocalisées.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -15785,7 +15783,7 @@
   answer_extra_info: ''
   author: Citoyens Pour le Climat
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2020-06-11
   created: 2020-06-24
   updated: 2020-06-24
@@ -17093,7 +17091,7 @@
   text: 'Allez, va pour une petite série d''une heure sur Netflix ! Mais au fait,
     ça fait combien de CO2 émis dans l''atmosphère ? '
   hint: ''
-  type: QCM-RM
+  type: QCM
   category: 2
   difficulty: 3
   language: Français
@@ -20600,7 +20598,7 @@
   - 216
 - id: 590
   text: Parmi ces régions, lesquelles ont connu des gigantesques feux de forêt entre
-    le 1er juillet 2019 et le 1er juillet 2020 (plusieurs réponses possibles) ?
+    le 1er juillet 2019 et le 1er juillet 2020 ?
   hint: ''
   type: QCM-RM
   category: 1
@@ -25933,31 +25931,39 @@
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: La libération de bactéries ou de virus enfouis dans le sol gelé
+  answer_option_b: L’émission massive de CO2 et de méthane, deux gaz a effet de serre
+    qui réchauffent le climat.
+  answer_option_c: Le montée supplémentaire du niveau de l'océan arctique, qui va
+    déjà subir la fonte de la banquise
+  answer_option_d: L'effondrement de certaines villes construites sur le sol gelé
+  answer_correct: abd
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: "L'effet de la fonte du pergélisol est déjà visible en 2020\
+    \ par la déformation ou l'effondrement de bâtiments ou de  constructions en Sibérie.\
+    \  De nombreux scientifiques voient également dans la fonte du pergélisol une\
+    \ \"bombe climatique\" pouvant très fortement accélérer le réchauffement climatique\
+    \ en cours. Quand à la réapparition de virus enfouis, si des cas ont déjà été\
+    \ observés, il n'existe pas de consensus sur la gravité du danger qu'ils représentent.\
+    \ \nLa fonte du pergélisol est un exemple parmi d'autres tout aussi inquiétants\
+    \ de phénomènes d'emballement : plus il faut chaud, plus ça dégèle ; plus ça dégèle,\
+    \ plus il fait chaud etc."
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.lavoixdunord.fr/761928/article/2020-06-05/la-fonte-du-permafrost-boite-de-pandore-climatique-et-sanitaire
+  answer_scientific_url: https://fr.wikipedia.org/wiki/Perg%C3%A9lisol#Situation_actuelle_:_fonte_acc%C3%A9l%C3%A9r%C3%A9e
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://legrandnord.org/wp-content/uploads/file/permafrost10(1).jpg
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Jean-Philippe Pernin
   validator: ''
-  validation_status: Brouillon
-  added: 2021-01-05
+  validation_status: A valider
+  added: 2021-03-05
   created: 2021-01-06
   updated: 2021-01-06
   tags:
-  - 33
-  - 217
-  - 218
+  - 18
 - id: 730
   text: Le transport Aérien (=TA) paye trop de taxe ?
   hint: A votre avis ?
@@ -26008,7 +26014,7 @@
 - id: 731
   text: Quel est le taux de TVA sur les vols ?
   hint: Question piège
-  type: QCM-RM
+  type: QCM
   category: 2
   difficulty: 2
   language: Français
@@ -26178,7 +26184,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: http://www.ftwatch.at/wp-content/uploads/2017/10/FT-Watch_Green-Flying_2017.pdf
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.franceculture.fr/emissions/les-nouvelles-de-leco/les-nouvelles-de-leco-du-mercredi-22-mai-2019
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/735.png
   answer_image_explanation: ''
@@ -26363,7 +26369,9 @@
 - id: 741
   text: Comment se compare l'empreinte carbone d'un vélo à assistance électrique par
     rapport à un vélo classique ?
-  hint: ''
+  hint: On ne tient pas compte des "calories dépensées en plus" par le cycliste sans
+    assistance électrique, en considérant que les usager n'ajustent pas leur régime
+    alimentaire (viande ...) en fonction de leur moyen de transport.
   type: QCM
   category: 5
   difficulty: 1
@@ -26376,11 +26384,11 @@
   has_ordered_answers: false
   answer_explanation: "'Démachiniser' et limiter le contenu électronique, voici 2\
     \ ambitions des solutions low-techs. \nSelon la Fédération cycliste européenne,\
-    \ ce serait 16 gCO2e/km contre 5 gCO2e/km pour un vélo classique, soit 3 fois\
-    \ plus. Pour le VAE, la production compte pour moitié (Il faut en effet fabriquer\
-    \ le moteur au pédalier et la batterie au lithium-ion), et l'électricité pour\
-    \ l'autre moitié (dépendante du pays).\nPour l'impact énergétique c'est même jusqu'à\
-    \ 5 dois plus pour l'électrique : 40W contre 8W. "
+    \ ce serait 16 gCO2e/km pour le vélo électrique (VAE) contre 5 gCO2e/km pour un\
+    \ vélo classique, soit 3 fois plus. Pour le VAE, la production compte pour moitié\
+    \ (Il faut en effet fabriquer le moteur du pédalier et la batterie au lithium-ion),\
+    \ et l'électricité pour l'autre moitié (dépendant du pays).\nPour l'impact énergétique\
+    \ c'est même jusqu'à 5 dois plus pour le VAE : 40W contre 8W. "
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://veroniquecloutier.com/environnement/mollets-contre-moteur
@@ -26435,9 +26443,9 @@
   updated: 2021-01-06
   tags: []
 - id: 743
-  text: Quelle est la part des déchets produits par les ménages qui pourrait assez
-    facilement ne pas finir dans la poubelle grise ou devenir des déchets délicats
-    à traiter pour les filières de fin de vie ?
+  text: Quelle fraction de la masse totale des déchets produits par les ménages pourrait
+    assez facilement ne pas finir dans la poubelle générale (grise) ou ne pas devenir
+    des déchets délicats à traiter pour les filières de fin de vie ?
   hint: ''
   type: QCM
   category: 5
@@ -26449,19 +26457,20 @@
   answer_option_d: 99%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: Sur les 375kg/ha/an de déchets produits par les ménages, environ
-    100kg sont putrescibles et devraient aller au compost ou nourrir des animaux,
-    160kg pourraient être collectés sélectivement en vue d'un recyclage "facile" (papiers,
-    verre, métaux …). En comptant d'autres déchets non-classés, c'est 70% qui pourraient
-    éviter la poubelle grise. Le reste est composé de déchets dangereux (DEEE...),
-    de plastiques, de déchets inertes divers non facilement recyclables ... La réduction
-    à la source (zéro déchet, sobriété) est un autre levier majeur pour éviter ces
-    70%.
+  answer_explanation: 'Sur les 250kg/ha/an (en France) de déchets jetés dans la poubelle
+    générale par les ménages, un tiers sont purescibles et devraient aller au compost
+    ou nourrir des animaux, et un autre tiers devraient être collectés sélectivement
+    en vue d''un recyclage "facile" (papiers, verre, métaux …) selon l''ADEME : en
+    comptant d''autres déchets non-classés, c''est 70% qui pourraient éviter d''aller
+    dans la poubelle grise. Le reste est composé de déchets dangereux (DEEE...), de
+    plastiques, de déchets inertes divers non facilement recyclables ... Bien entendu
+    la réduction à la source (zéro déchet, sobriété) est un autre levier majeur pour
+    éviter ces 70%, voire se passer totalement de poubelle grise.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_reading_recommendation: ''
+  answer_accessible_url: https://www.ademe.fr/expertises/dechets/chiffres-cles-observation/dossier/caracterisation-dechets/campagne-nationale-caracterisation-dechets-menagers-assimiles
+  answer_scientific_url: https://www.actu-environnement.com/media/pdf/news-35407-chiffres-cles-dechets-2019.pdf
+  answer_reading_recommendation: cité par P. Bihouix, dans "L'age des low-techs"
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
@@ -26484,20 +26493,21 @@
   language: Français
   answer_option_a: 2 à 4%
   answer_option_b: 9 à 12%
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: ''
+  answer_option_c: 20 à 25%
+  answer_option_d: 50 à 60%
+  answer_correct: c
   has_ordered_answers: false
   answer_explanation: 'On estime environ 7-10% d''économie sur la facture de chauffage
     par dégré de chauffage en moins; entre les pièces à vivre (19°C recommandé) et
-    les chambres à coucher (16°C recommandés), on pourrait faire globalement baisser
+    les chambres à coucher (16°C recommandé), on pourrait faire globalement baisser
     le chauffage d''au moins 3°C, donc économiser 3×7 = 21% en chauffage.
 
-    Et en mettant un pull en hiver, n pourrait même aller encore plus loin !'
+    Et en portant des vêtements "thermiques" en hiver, on pourrait même aller encore
+    plus loin !'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.quechoisir.org/conseils-chauffage-10-gestes-simples-pour-limiter-sa-consommation-energetique-au-quotidien-n4725/
+  answer_scientific_url: https://www.lowtechmagazine.com/2011/02/body-insulation-thermal-underwear.html
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -26683,23 +26693,22 @@
   answer_option_d: 50%
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: '11% et oui, une écrasante majorité (silencieuse) n’a pas les
-    moyens de voyager.
+  answer_explanation: 'Et oui seulement 11%
 
-    Le revers de la médaille :
+    Autrement dit 89% chaque année reste à terre.
 
-    Le TA aérien voit cela comme un gigantesque marché à conquérir, le COVID est venu
-    perturber ses plans.
+    Et seulement 20% de la population mondiale à volé au moins une fois dans sa vie.
 
-    Pour les responsables ce n’est qu’une crise passagère, et ils feront tout pour
-    repartir sans état d’âme.
+    Cela nous montre comment notre perception est influencée par notre propre mode
+    de vie.
 
-    Ils sont sur un nuage, les maitres du monde et au début du COVID se sont même
-    permis de donner des injonctions aux états, ce qui montre leur capacité de lobbying.'
+    On imagine alors les impacts sur les émissions si ce pourcentage doublait ou quadruplait
+    d’ici 2050, alors que le GIEC demande à l’ensemble des secteurs de réduire leurs
+    émissions.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -26733,7 +26742,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -29822,37 +29831,45 @@
   - 37
   - 230
 - id: 840
-  text: Combien de personnes meurent  chaque année de l'absence d'eau potable ?
+  text: Metal recycling is limited by ...
   hint: ''
   type: QCM
   category: 7
-  difficulty: 3
-  language: Français
-  answer_option_a: 500,000
-  answer_option_b: 1,2 million
-  answer_option_c: 5,2 millions
-  answer_option_d: 10 millions
+  difficulty: 2
+  language: English
+  answer_option_a: They are 100% recyclable, but are not sufficiently collected in
+    the end-of-life part of the value chain.
+  answer_option_b: It is cheaper to mine raw metals than to recycle them, but when
+    stocks run out, recycling will take off.
+  answer_option_c: Dispersive uses, complex alloys, separation processes, losses at
+    the source.
+  answer_option_d: Many metals are not physically recyclable.
   answer_correct: c
-  has_ordered_answers: true
-  answer_explanation: 'Plus de 1,2 million de personnes meurent chaque année de l''absence
-    d''eau potable sûre, principalement à cause de maladies diarrhéiques. C''est à
-    peu près l''équivalent du nombre de morts sur la route. '
+  has_ordered_answers: false
+  answer_explanation: 'All metals are theoretically 100% recyclable. While it is easy
+    to recycle bulky metals used in large volumes (aluminum, iron, etc.) by remelting
+    them, others are however used in tiny quantities in various devices (electronics
+    for gold and palladium for example), or in the form of alloys, which greatly limit
+    recycling. There are losses everywhere, and some uses are dispersive by nature:
+    inks, paint pigments, cosmetics ... It is indeed more difficult and less profitable
+    to recycle than to mine for the moment, and that will probably last for a while
+    since many use of metals do not take into account recycling considerations.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://ourworldindata.org/water-access#unsafe-water-is-a-leading-risk-factor-for-death
+  answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Baptiste Leveque
+  author: Max Pinsard
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-21
+  added: 2021-03-15
   created: 2021-01-26
   updated: 2021-01-26
   tags:
-  - 37
+  - 235
 - id: 841
   text: Selon l'ONU, quel serait le montant à investir pour garantir à tous l'accès
     à l'eau potable et à l'assainissement ?
@@ -30418,7 +30435,7 @@
   answer_option_c: 60 à 80%
   answer_option_d: 99%
   answer_correct: c
-  has_ordered_answers: true
+  has_ordered_answers: false
   answer_explanation: "La dégradation des débris plastiques macros produit des microplastiques\
     \ secondaires, qui représentent 60-80% du microplastique mesuré dans les océans.\n\
     Le reste sont des microplastiques primaires, provenant de rejets directs :\n1/3\
@@ -30561,7 +30578,8 @@
   added: 2021-02-08
   created: 2021-02-14
   updated: 2021-02-14
-  tags: []
+  tags:
+  - 255
 - id: 860
   text: Quelle proportion des déchets électriques et électroniques sortent des filières
     de traitement officielles, pour finir exportés vers les pays pauvres ?
@@ -30682,7 +30700,7 @@
   tags:
   - 35
 - id: 863
-  text: Entre 2005 et 2020, les données totales générées chaque année par tous l'ensemble
+  text: Entre 2005 et 2020, les données totales générées chaque année par l'ensemble
     des appareils dans le monde ont été multipliées d'un facteur...
   hint: ''
   type: QCM
@@ -30972,17 +30990,17 @@
   answer_option_d: 80%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: 'Les industries représentent la moitié de l''énergie primaire,
+  answer_explanation: Les industries représentent la moitié de l'énergie primaire,
     les transports 1/4 et les bâtiments le dernier quart (BP). En excluant les moteurs
-    des transports, on peut voir que l''industrie requiert pour 67% de la chaleur,
-    et les batiments (résidentiels et pro) environ la moitié en chaleur (chauffage,
-    eau chaude ...), le reste en électricité. Total : environ la moitié de l''énergie
-    requise est sous forme de chaleur, ce qui contrevient à l''idée que l''électricité
-    fait tout.'
+    des transports, on peut voir que l'industrie requiert pour 67% de la chaleur,
+    et les batiments (résidentiels et pro) environ 50% (pour le chauffage, l'eau chaude
+    ...), le reste en électricité. Au total environ la moitié de l'énergie requise
+    est sous forme de chaleur, ce qui contrevient à l'idée que l'électricité fait
+    tout.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: https://solar.lowtechmagazine.com/2011/07/solar-powered-factories.html
+  answer_accessible_url: https://solar.lowtechmagazine.com/2011/07/solar-powered-factories.html
+  answer_scientific_url: https://www.iea.org/commentaries/clean-and-efficient-heat-for-industry
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -31095,7 +31113,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lowtechmagazine.com/2011/02/body-insulation-thermal-underwear.html
-  answer_scientific_url: ''
+  answer_scientific_url: https://world-habitat.org/publications/new-tricks-with-old-bricks/
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -32357,6 +32375,88 @@
   - 31
   - 33
   - 34
+- id: 946
+  text: The extraction and processing of all resources (materials, fuels, food…) contribute
+    to…?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  language: English
+  answer_option_a: half of anthropogenic GHGs, 90% of water stress and destruction
+    of biodiversity linked to land use
+  answer_option_b: 90% of anthropogenic GHGs, 50% of water stress and destruction
+    of biodiversity linked to land use
+  answer_option_c: 20% of anthropogenic GHGs, 50% of water stress and destruction
+    of biodiversity linked to land use
+  answer_option_d: half of anthropogenic GHGs, 50% of water stress and 70 % of the
+    destruction of biodiversity linked to land use
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: The rest is due to other economic activities and households
+    (2019 figures). While GHGs are rather balanced between sectors, water stress and
+    the loss of biodiversity linked to land use are due for 94% to the use of biomass
+    (food, etc.)
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.resourcepanel.org/reports/global-resources-outlook
+  answer_scientific_url: https://www.unep.org/news-and-stories/press-release/un-calls-urgent-rethink-resource-use-skyrockets
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-15
+  created: 2021-03-16
+  updated: 2021-03-16
+  tags:
+  - 13
+  - 19
+  - 73
+- id: 947
+  text: The main causes of death and disability-adjusted lifetime in rich countries
+    are ...
+  hint: ''
+  type: QCM
+  category: 8
+  difficulty: 2
+  language: English
+  answer_option_a: Neonatal conditions, congenital diseases, heart problems, cancers
+  answer_option_b: Heart problems (junk food, stress ...), respiratory problems (air
+    pollution, drugs ...), lack of physical activity (back pain, neck pain ...), lack
+    of social relationships ( Alzheimer's, depression), diabetes, traffic accidents.
+  answer_option_c: Environmental causes (air pollution, water pollution, chemicals,
+    etc.), road accidents, heart problems (junk food, stress, etc.), respiratory problems
+    (air pollution, drugs, etc.), diabetes
+  answer_option_d: Infectious diseases, homicides, old age, overweight, cancer.
+  answer_correct: ''
+  has_ordered_answers: false
+  answer_explanation: The causes are not always well identified, but the WHO notes
+    that in rich countries, mortality is due to heart problems, respiratory problems,
+    dementia (Alzheimer's, etc.), diabetes mellitus, road accidents and cancer. The
+    causes of life with disabilities (DALY) are the same, adding back pain and neck
+    pain, drug use and depression. Switching to a low-tech lifestyle makes it possible
+    to limit these causes by eliminating junk food and drugs (including cigarettes),
+    by doing more physical and convivial activity, by eliminating the hegemony of
+    fast cars and vehicles, by reducing air pollution etc.
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.who.int/fr/news-room/fact-sheets/detail/the-top-10-causes-of-death
+  answer_scientific_url: https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/global-health-estimates-leading-causes-of-dalys
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-15
+  created: 2021-03-16
+  updated: 2021-03-16
+  tags:
+  - 234
 - id: 1000
   text: Globally, how much electronic waste is collected in order to be recycled?
   hint: it is really not much!
