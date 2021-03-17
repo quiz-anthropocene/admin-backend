@@ -93,8 +93,8 @@
     loin).'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.youtube.com/watch?v=b4kPjnBRZ-E
-  answer_scientific_url: https://mrmondialisation.org/le-paradoxe-de-jevons-ou-pourquoi-il-nexiste-pas-de-croissance-verte/
+  answer_accessible_url: http://www.decroissance.qc.ca/sites/default/files/journal/Schneider_l_Ecologiste.pdf
+  answer_scientific_url: https://www.lafabriqueecologique.fr/transition-energetique-le-role-incontournable-de-leffet-rebond/
   answer_reading_recommendation: ''
   answer_image_url: https://images.theconversation.com/files/297327/original/file-20191016-98644-c9y1zz.png
   answer_image_explanation: 'Exemple de l''effet rebond lié au covoiturage (dans le
@@ -1843,20 +1843,20 @@
   tags:
   - 17
 - id: 51
-  text: Dans 24 heures, quelle surface des terres cultivables ou labourables aura
-    disparu dans le monde, principalement du fait de l'urbanisation ?
+  text: Dans 24 heures qui viennent, quelle est la surface de terres cultivables ou
+    labourables qui aura disparu dans le monde ?
   hint: ''
   type: QCM
   category: 6
   difficulty: 4
   language: Français
-  answer_option_a: la superficie d'une capitale comme Paris soit environ 100 km2
+  answer_option_a: la superficie d'une capitale comme Paris, soit environ 100 km2
   answer_option_b: la superficie d'une grande métropole comme Berlin ou le Grand Paris,
     soit environ 800km2
   answer_option_c: la superficie d'un département français comme le Nord ou l'Ardèche,
-    soit environ 55000 km2
+    soit environ 55,000 km2
   answer_option_d: la superficie d'un pays comme l'Italie ou la Pologne soit plus
-    de 300000 km2
+    de 300,000 km2
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: Plus de 60 % de l’expansion urbaine de ces 50 dernières années
@@ -1906,7 +1906,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Raphael Odini
-  validation_status: Validée
+  validation_status: Brouillon
   added: 2020-03-10
   created: 2020-03-10
   updated: 2020-09-28
@@ -2460,8 +2460,8 @@
   tags:
   - 11
 - id: 69
-  text: A-t-on atteint le pic de production de pétrole conventionnel (c'est à dire
-    hors pétrole de schiste et pétrole bitumineux) ?
+  text: "Avons-nous déjà atteint le pic de production de pétrole dit conventionnel\
+    \ ? \n(c'est à dire hors pétrole de schiste et pétrole bitumineux)"
   hint: ''
   type: QCM
   category: 7
@@ -2473,15 +2473,19 @@
   answer_option_d: Non, il est trop loin pour pouvoir être estimé
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: L'agence internationale de l'énergie a annoncé fin 2018 qu'elle
-    s'attendait à un pic tous pétrole confondus à l'horizon 2025
+  answer_explanation: L'agence internationale de l'énergie a effectivement annoncé
+    en 2018 que ce pic avait étaé passé en 2006. Elle s'attend à un pic tous pétrole
+    confondus à l'horizon 2025.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://jancovici.com/transition-energetique/petrole/a-quand-le-pic-de-production-mondial-pour-le-petrole/
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: https://www.researchgate.net/profile/Paul_Fenton6/publication/284183970/figure/fig4/AS:668520648044558@1536399151955/Production-at-todays-oil-fi-elds-has-already-started-to-decline-Source-UK-Energy.png
-  answer_image_explanation: ''
+  answer_image_explanation: 'Production globale de pétrole, passé et prévisons à 2030.
+
+    En vert : puits de pétrole brut en opération ; en gris: puits en développement
+    ; en jaune : puits à trouver ; noir : pétrole non conventionnel '
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Raphael Odini
@@ -2707,9 +2711,9 @@
   tags:
   - 31
 - id: 76
-  text: Tentez de vous représenter pour commencer la masse de tout ce qui a été construit
-    par l'homme. Puis la masse de toute la matière vivante sur terre. Vous y êtes
-    ? Et si vous comparez ces deux masses colossales, cela donne...
+  text: 'Imaginez une balance titanesque, sur laquelle vous mettez : à gauche tout
+    ce qui a été construit par l''homme ; à droite toute la matière vivante sur terre.
+    Vous y êtes ? De quel côté va pencher la balance ?'
   hint: 'Il faut compter tout ce qui a été construit par l’homme : bâtiments, infrastructures
     (routes, ponts), habitations, industries, systèmes mobiles (voitures, trains,
     avions), ...'
@@ -2717,14 +2721,16 @@
   category: 6
   difficulty: 2
   language: Français
-  answer_option_a: Le premier pèse 100 fois moins que le second
-  answer_option_b: 10 fois moins
-  answer_option_c: à peu près autant
-  answer_option_d: 10 fois plus
+  answer_option_a: 'Violement à droite  '
+  answer_option_b: A droite
+  answer_option_c: Ca s'équilibre à peu près
+  answer_option_d: A gauche
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: C'est ce qu'on appelle la technosphère. Elle a été évaluée à
     30 000 milliards de tonnes. A comparer aux 4 000 milliards de tonnes du vivant.
+    Environ dix fois plus lourd donc. Cela donne la mesure de la ponction que l'humanité
+    a opéré sur les ressources de la terre.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.futura-sciences.com/planete/actualites/environnement-pese-tout-ce-homme-pu-fabriquer-65435/
@@ -7877,12 +7883,12 @@
   - 39
 - id: 225
   text: 'L’Agence Française pour le Développement tente de conditionner ses aides
-    au développement au travers de 2 indicateurs : l’indice de développement humain
-    (IDH), et l’empreinte écologique. Lequel ou lesquels des pays suivants combinaient
-    jusqu’il y a peu un IDH décent (du niveau de la Russie) avec une empreinte écologique
-    soutenable ?'
+    au développement au travers de deux indicateurs : l’indice de développement humain
+    (IDH), et l’empreinte écologique. Lesquels fde ces pays suivants combinaient jusqu’il
+    y a peu un IDH décent (du niveau de la Russie) avec une empreinte écologique soutenable
+    ?'
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: 6
   difficulty: 3
   language: Français
@@ -16706,7 +16712,7 @@
   answer_extra_info: ''
   author: INRAE
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-06-11
   created: 2020-06-24
   updated: 2020-09-28
@@ -18520,11 +18526,13 @@
     de CO2 sont élevées.
 
     Un revenu élevé permet en effet de plus se déplacer, se chauffer, consommer, ...
-    toutes ces activités conduisent à des augmentations d''émissions.'
+    toutes ces activités conduisent à des augmentations d''émissions.
+
+    Cette corrélation s''observe à l''intérieur d''un pays, ou d''un pays à l''autre.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.lemonde.fr/blog/huet/2019/02/06/climat-et-economie-le-co2-explique-tout/
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.oxfamfrance.org/communiques-de-presse/les-1-les-plus-riches-sont-responsables-de-deux-fois-plus-demissions-que-la-moitie-la-plus-pauvre-de-lhumanite/
+  answer_scientific_url: https://www.lemonde.fr/blog/huet/2019/02/06/climat-et-economie-le-co2-explique-tout/
   answer_reading_recommendation: ''
   answer_image_url: https://live.staticflickr.com/4918/46316143381_22a979fb60_b.jpg
   answer_image_explanation: Émissions de CO2 par personne en fonction du niveau de
@@ -20554,10 +20562,10 @@
   - 9
   - 193
 - id: 589
-  text: On dit d'une personne qu'elle est exposée à une situation de "stress hydrique
-    très élevé" lorsqu'elle rencontre chaque année des situations de manque d'eau,
-    voire de pénurie totale durant certaines périodes de l'année. Combien de personnes
-    sont concernées sur terre ?
+  text: On dit d'une personne qu'elle est dans une situation de "stress hydrique très
+    élevé" lorsqu'elle rencontre chaque année des situations de manque d'eau, voire
+    de pénurie totale durant certaines périodes de l'année. Combien de personnes y
+    sont exposées sur terre ?
   hint: ''
   type: QCM
   category: 7
@@ -25486,8 +25494,9 @@
   - 217
   - 218
 - id: 719
-  text: L'objectif de la COP21 à l'horizon 2050 est que chaque humain n'émette pas
-    plus que 2 tonnes de CO2e par an. 2 tonnes, c'est ce que j'émets en..
+  text: 'L''objectif de la COP21 à l''horizon 2050 est que chaque humain n''émette
+    pas plus que 2 tonnes de CO2e par an. Vrai ou faux : 2 tonnes, c''est ce que j''émets
+    en...'
   hint: ''
   type: QCM-RM
   category: 5
@@ -26200,18 +26209,18 @@
   - 217
   - 218
 - id: 736
-  text: 'Imaginons une balance colossale : à gauche, tous les animaux sauvages ; à
-    droite tous les animaux domestiqués ou utilisés par l’humain. De quel côté va
+  text: 'Reprenons notre balance de titans : à gauche, tous les animaux sauvages ;
+    à droite tous les animaux domestiqués ou utilisés par l’humain. De quel côté va
     pencher la balance ? '
   hint: ''
   type: QCM
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: A gauche
-  answer_option_b: A droite
-  answer_option_c: ''
-  answer_option_d: ''
+  answer_option_a: Fortement à  gauche
+  answer_option_b: A gauche
+  answer_option_c: Equilibré
+  answer_option_d: A droite
   answer_correct: ''
   has_ordered_answers: true
   answer_explanation: ''
@@ -26407,8 +26416,8 @@
   - 72
   - 249
 - id: 742
-  text: Quelles économies en matériaux pourrait-on générer via une interdiction du
-    verre coloré pour les contenants ?
+  text: Quelles économies en matériaux pourrait-on générer via une uniformisation
+    du verre coloré pour les contenants ?
   hint: ''
   type: QCM
   category: 5
@@ -26422,11 +26431,16 @@
     brome
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: "La coloration du verre provient de l'usage de métaux critiques,\
-    \ comme les platinoïdes, les lanthanides, le sélénium etc. Revenir à du verre\
-    \ transparent permettrait de limiter ces usages dispersifs. \nL'étape d'après\
-    \ serait d'imposer la consigne et de standardiser les tailles et formats de contenants\
-    \ !"
+  answer_explanation: 'Les pigments colorés dans les verres sont souvent réalisé grâce
+    à des métaux critiques, comme les platinoides, les lanthanides, le selenium etc.
+    Arrêter la coloration juste esthétique permettrait de limiter ces usages dispersifs
+    qui ne seront jamais récupérés. Toutefois, il est à noter que plusieurs colorations
+    sont obtenues par défaut lors de la fabrication du verre (bleuté voire vert lorsque
+    le matériau est ferrugineux), c''est donc parfois l''incolore qui demande le plus
+    de traitement, et qu''une couleur foncée peut servir à protéger de la lumière
+    comme pour le vin : enlever les additifs des verres signifierait juste moins de
+    diversités de couleurs. Le mieux serait également de standardiser les contenants
+    (ex : 3-4 tailles de boueilles max), et de les consigner.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -31052,6 +31066,42 @@
   - 1
   - 197
   - 216
+- id: 875
+  text: Aux voitures de quelle époque peut-on comparer l'autonomie des voitures électriques
+    actuelles (Nissan Leaf ou Mitsubishi i-MiEV)... ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 3
+  language: Français
+  answer_option_a: avant 1900
+  answer_option_b: 1900-1920
+  answer_option_c: 1950-1960
+  answer_option_d: Elles ont une atonomie bien supérieure aux voitures du début/milieu
+    XXe siècle
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: De nos jours les VE sont en revanche plus lourdes (la Fritchle
+    de 1908 pèse moins d'une tonne), et 10 fois plus puissantes (>100 CV, contre 10
+    CV pour la Fritchle 1908). Comme la consommation d'énergie augmente avec la vitesse
+    en puissance de deux, être bridé à 40km/h permet d'avoir une autonomie gigantesque
+    ...
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/fr/2010/05/the-status-quo-of-electric-cars-better-batteries-same-range.html
+  answer_scientific_url: http://cnum.cnam.fr/CGI/fpage.cgi?BSPI.154/186/100/420/0/0
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: A valider
+  added: 2021-03-14
+  created: 2021-03-17
+  updated: 2021-03-17
+  tags:
+  - 60
 - id: 877
   text: On utilisait au XIXe siècle des bateaux tractés par des câbles. Lesquelles
     des affirmations suivantes sont vraies ?
@@ -31071,11 +31121,49 @@
   answer_explanation: Il subsiste quelques un de ces "trolley boats". Mais leur vitesse
     limitée les a rendus obsolètes. Même entre 2 rives proches les câbles peuvent
     être tirés pour assurer une liaison simple par ferry. La liaison par câble peut
-    même exercer une force mécanique pour que la barge soit moins déviée par le courant.
+    même exercer une force mécanique pour que la barge soit moins déviée par le courant,
+    et économiser encore plus de carburant.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://solar.lowtechmagazine.com/2009/12/trolley-canal-boats.html
-  answer_scientific_url: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/fr/2009/12/trolley-canal-boats.html
+  answer_scientific_url: http://cnum.cnam.fr/CGI/fpage.cgi?ECCMC6.62/44/100/941/927/941
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: A valider
+  added: 2021-03-14
+  created: 2021-03-15
+  updated: 2021-03-15
+  tags:
+  - 254
+  - 255
+- id: 878
+  text: Entre 1900 et 1910, un cargo à voile géant a été en service en Allemagne.  Par
+    rapport à un cargo actuel à mazout, il avançait en moyenne...
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  language: Français
+  answer_option_a: moitié moins vite
+  answer_option_b: aussi vite
+  answer_option_c: 2 fois plus vite
+  answer_option_d: dix fois moins vite
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: "Ce cargo impressionnant, le Preussen, atteignait 10 noeuds\
+    \ en moyenne, autant qu'un cargo actuel à mazout consommant 100 tonnes de fioul\
+    \ par jour. Il a coulé suite à une collision avec un autre navire. \nLes émissions\
+    \ cumulées de GES du fret marin équivalent à celles de plusieurs dizaines de millions\
+    \ de voitures. Si toutes les voies maritimes ne s'y prêtent pas du fait de l'orientation\
+    \ des vents, le potentiel à repasser à la marine à voile semble important."
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/2009/04/cargo-ships-then-and-now.html
+  answer_scientific_url: http://www.bruzelius.info/Nautica/Ships/Fivemast_ships/Preussen%281902%29.html
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -31084,14 +31172,51 @@
   validator: ''
   validation_status: Brouillon
   added: 2021-03-14
-  created: 2021-03-15
-  updated: 2021-03-15
+  created: 2021-03-17
+  updated: 2021-03-17
+  tags: []
+- id: 879
+  text: La tourbe constituait un combustible fossile majeur pour les économies européennes
+    du XVIIe siècle (une consommation d'énergie par personne aussi grande que la facture
+    d'électricité d'un foyer moyen de nos jours) et même après. Elle est considérée
+    par les scientifiques du GIEC comme un combustible renouvelable, mais combien
+    de temps faut-il pour qu'une couche de tourbe de 3 mètres se renouvelle ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 3
+  language: Français
+  answer_option_a: 3 ans
+  answer_option_b: 30 ans
+  answer_option_c: 300 ans
+  answer_option_d: 3,000 ans
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: Il faut 3,000 ans à une couche de tourbe de 3 mètres pour retrouver
+    son épaisseur d’origine. Pas très renouvelable donc à l'échelle des sociétés humaines
+    ! On en consommait 16,75 GJ/personne/an aux Pays-Bas, soit autant qu'une facture
+    annuelle d'électricité en France (~5000kWh) ! Avant la révolution industrielle,
+    de multiples combustibles fossiles étaient ainsi utilisés en Europe, comme le
+    charbon de bois.
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/fr/2011/09/peat-and-coal-fossil-fuels-in-pre-industrial-times.html
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: A valider
+  added: 2021-03-14
+  created: 2021-03-17
+  updated: 2021-03-17
   tags:
-  - 254
-  - 255
+  - 256
 - id: 880
   text: Construire un nouveau bâtiment génère des gaz à effet de serre. En particulier
-    pour les bâtiments efficients énergétiquement (béton, matériaux ...). Au bout
+    pour les bâtiments à bonne efficacité énergétique (béton, matériaux ...). Au bout
     de combien de temps ces émissions initiales sont-elles amorties par rapport à
     l'utilisation d'un bâtiment inefficient, mais déjà existant ?
   hint: ''
@@ -31105,11 +31230,13 @@
   answer_option_d: 100 ans
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: "Il faut 50 ans pour que les émissions vieux bâtiment inefficient\
-    \ liées à son usage (chauffage …) dépassent celles d'un nouveau bâtiment efficient\
-    \ en comptant les émissions dues à sa construction. \nIl faut donc mieux parfois\
-    \ réutiliser des anciens bâtiments même inefficients, ou au moins être sûr que\
-    \ les nouveaux seront conservés plus de 50 ans."
+  answer_explanation: 'Il faut 50 ans pour que les émissions vieux bâtiment inefficient
+    liées à son usage (chauffage …) dépassent celles d''un nouveau bâtiment efficient
+    en comptant les émissions dues à sa construction. Ce chiffre dépend des matériaux
+    employés bien-sûr.
+
+    Il vaut donc mieux parfois réutiliser des anciens bâtiments même inefficients,
+    ou au moins être sûr que les nouveaux seront conservés plus de 50 ans.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lowtechmagazine.com/2011/02/body-insulation-thermal-underwear.html
@@ -31120,13 +31247,48 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-03-14
   created: 2021-03-15
   updated: 2021-03-15
   tags:
   - 53
   - 100
+- id: 882
+  text: Quelle est la force des tuiles catalanes ? (plusieurs réponses possibles)
+  hint: ''
+  type: QCM-RM
+  category: 6
+  difficulty: 2
+  language: Français
+  answer_option_a: aussi solides que du béton armé, sans utiliser d'acier
+  answer_option_b: permettant des courbes moins prononcées que les voûtes romaines
+  answer_option_c: un besoin en colonne porteuse moins grand
+  answer_option_d: de ne pas utiliser de mortier
+  answer_correct: abc
+  has_ordered_answers: false
+  answer_explanation: 'Sans utiliser d''acier avec des agencements astucieux défiant
+    la gravité, elles sont aussi solides que du béton armé ! Elles permettent des
+    courbes moins prononcées que les voûtes romaines, et donc d''espacer les colonnes.
+    Par contre du mortier doit être appliqué pour lier les brique, d''ailleurs amélioré
+    lors de son import aux Etats-Unis fin XIXe siècle : avec du ciment à prise rapide
+    on peut faire des arches encore plus grande !'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/fr/2008/11/tiles-vaults.html
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: A valider
+  added: 2021-03-16
+  created: 2021-03-17
+  updated: 2021-03-17
+  tags:
+  - 257
 - id: 900
   text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
   hint: Bas carbone donc…
@@ -32061,7 +32223,7 @@
   answer_option_b: 3ème
   answer_option_c: 5ème
   answer_option_d: 10ème
-  answer_correct: c
+  answer_correct: b
   has_ordered_answers: true
   answer_explanation: 'L’élevage représente environ 15% des émissions mondiales de
     GES : de manière directe avec la fermentation entérique, et indirecte avec la
@@ -32159,7 +32321,9 @@
 
     Source FAO : [http://www.fao.org/3/a0701e/a0701e11.pdf](http://www.fao.org/3/a0701e/a0701e11.pdf)'
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/929.png
-  answer_image_explanation: ''
+  answer_image_explanation: 29% de la planète est occupée par des terres, dont 71%
+    de cette surface terrestre est habitable. La surface habitable elle, est dédiée
+    à 50% à l'agriculture.
   answer_extra_info: ''
   author: Julien Briton
   validator: Matthieu Massart
@@ -32375,6 +32539,273 @@
   - 31
   - 33
   - 34
+- id: 936
+  text: How many oil barrels (1 barrel = 159L) do we consume every day in the world?
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 2
+  language: English
+  answer_option_a: 100 million
+  answer_option_b: 1 million
+  answer_option_c: '100000'
+  answer_option_d: 1 billion
+  answer_correct: ''
+  has_ordered_answers: false
+  answer_explanation: 100 million barrels per day, i.e. 1 billion years of human labor
+    (in energetic slave equivalent), every day! Or over a trillion humans working
+    for us every day ...
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.arcenergyinstitute.com/100-million-barrels-per-day/
+  answer_scientific_url: https://en.wikipedia.org/wiki/Energy_slave
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-15
+  created: 2021-03-17
+  updated: 2021-03-17
+  tags:
+  - 11
+- id: 937
+  text: Of the 100 billion metric tons of material that enters the economy each year,
+    what percentage could theoretically be recovered if the circularity processes
+    were perfect?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  language: English
+  answer_option_a: 99%
+  answer_option_b: 10%
+  answer_option_c: 50%
+  answer_option_d: 33%
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: '1/3 of these materials are emitted or dispersed and are therefore
+    not recoverable, and another third is simply immobilized for a certain time in
+    buildings, objects… (hopefully!). The theoretical limit is therefore 33%: as recycling
+    and recovery are far from perfect, "circularity" was only 8.5% in 2020. This limit
+    shows us that efforts to circularize the economy are not at all sufficient to
+    make our societies "sustainable", due to the laws of physics but also to our will
+    to perpetuate growth, which requires large supply chains nowadays and in the close
+    future.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/2020/01/how-circular-is-the-circular-economy.html
+  answer_scientific_url: https://www.circularity-gap.world/global
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-15
+  created: 2021-03-17
+  updated: 2021-03-17
+  tags:
+  - 232
+- id: 938
+  text: Of the mass of plastic produced each year, what percentage is actually reinjected
+    in the closed cycle through recycling (plastic that can be recycled again)?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  language: English
+  answer_option_a: 2%
+  answer_option_b: 0.1%
+  answer_option_c: 0.01%
+  answer_option_d: 20%
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: 'Currently, 7% to 8% of plastic is recycled (1% in cumulative
+    since 1950). When it is, it becomes mostly (80% of cases) "thermoset", which is
+    a non-recyclable plastic: this only delays a little the production of waste. So
+    less than 2% of plastic is effectively in a closed cycle, and the theoretical
+    limit could be around 20%.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://theconversation.com/think-all-your-plastic-is-being-recycled-new-research-shows-it-can-end-up-in-the-ocean-155208
+  answer_scientific_url: http://www.environnement.brussels/sites/default/files/user_files/pres_20150326_mat_1_4ptat_fr.pdf
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: '[https://ourworldindata.org/plastic-pollution](https://ourworldindata.org/plastic-pollution)'
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-15
+  created: 2021-03-17
+  updated: 2021-03-17
+  tags:
+  - 26
+- id: 940
+  text: Metal recycling is limited by ...
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 2
+  language: English
+  answer_option_a: They are 100% recyclable, but are not sufficiently collected in
+    the end-of-life part of the value chain.
+  answer_option_b: It is cheaper to mine raw metals than to recycle them, but when
+    stocks run out, recycling will take off.
+  answer_option_c: Dispersive uses, complex alloys, separation processes, losses at
+    the source.
+  answer_option_d: Many metals are not physically recyclable.
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: 'All metals are theoretically 100% recyclable. While it is easy
+    to recycle bulky metals used in large volumes (aluminum, iron, etc.) by remelting
+    them, others are however used in tiny quantities in various devices (electronics
+    for gold and palladium for example), or in the form of alloys, which greatly limit
+    recycling. There are losses everywhere, and some uses are dispersive by nature:
+    inks, paint pigments, cosmetics ... It is indeed more difficult and less profitable
+    to recycle than to mine for the moment, and that will probably last for a while
+    since many use of metals do not take into account recycling considerations.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-15
+  created: 2021-03-17
+  updated: 2021-03-17
+  tags:
+  - 235
+- id: 942
+  text: What is the infrastructure inertia?
+  hint: (in ecology)
+  type: QCM
+  category: 2
+  difficulty: 3
+  language: English
+  answer_option_a: The tendency for technological improvement to increase the total
+    impact, as this technology is increasingly used.
+  answer_option_b: '''Stationary infrastructure is easier to decarbonize than mobile
+    sources of emissions such as vehicles'
+  answer_option_c: That there is a latency and a cost in energy / materials to replace
+    the existing structures with their more eco-friendly counterparts.
+  answer_option_d: Strong corporate oppositions make ecological footprint of infrastructure
+    difficult to regulate
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: 'When one wants to replace a technology with its less polluting
+    version, one significant limitation is that a whole fleet is already well deployed
+    and multiple. Replacing it requires an enormous amount of (embodied) energy and
+    materials, as well as a considerable amount of time. This is true for the object
+    itself, but also for the entire production / distribution / end-of-life chain:
+    you have to know what to do with the technology you replace that are now obsolete.
+    So the "park effect" is a scaling limitation.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-15
+  created: 2021-03-17
+  updated: 2021-03-17
+  tags:
+  - 255
+- id: 943
+  text: What percentage of electrical and electronic waste (WEEE) leaves official
+    treatment chains, and ends up exported to poor countries?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  language: English
+  answer_option_a: ~60%
+  answer_option_b: ~30%
+  answer_option_c: ~10%
+  answer_option_d: ~1%
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: '60% of WEEE in Europe and the USA leaves the legal treatment
+    network. The devices left in the street are hijacked by scrap dealers or traffickers,
+    who recover valuable parts (precious metals ...) to the detriment of direct pollution
+    (e.g. : compressor or refrigerator). Sometimes waste reception centers are directly
+    attacked or internally stolen. Resale abroad is then facilitated by legal loopholes
+    (e.g. a car full of devices can pass customs as a simple vehicle), the lack of
+    personnel and the inability to check the working condition, as well as the pressure
+    from actors who benefit from this market. The Internet promotes the online negotiation
+    of such waste, which ends up either in China or directly in Africa, following
+    transport by cargo ship. The corruption of customs officials in these countries
+    allows the entry of defective devices declared as second-hand, and end up boned
+    by poor populations, without environmental standards.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: http://www.basel.int/Implementation/TechnicalAssistance/MOOC/tabid/4966/Default.aspx
+  answer_scientific_url: https://innoenergy.learnify.se/l/show.html#E1rl
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-15
+  created: 2021-03-17
+  updated: 2021-03-17
+  tags:
+  - 228
+  - 229
+- id: 945
+  text: The total amount of data created by all devices in the world has been multiplied,
+    between 2005 and 2020, by ...
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 3
+  language: English
+  answer_option_a: between ×50 and ×80
+  answer_option_b: between ×50 and ×800
+  answer_option_c: between ×500 and ×8000
+  answer_option_d: between ×0.5 million and ×8 million
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: 'The total data created everywhere (industries ...) has increased
+    from 100 million TB / year (2005) to 800 billion TB / year (2020), i.e. × 8000.
+    Correcting by the increase in the number of Internet users, the ratio is still
+    × 2000. During these 15 years, the amount of data circulating on the Internet
+    has multiplied by "only" 100 (see https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic).
+    It should be noted that all the data created is very approximate to evaluate:
+    for example Statista rather claimed 50 billion TB in 2020. This figure could be
+    multiplied again by 50 over the next 15 years (until 2035).'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://blogs.cisco.com/sp/five-things-that-are-bigger-than-the-internet-findings-from-this-years-global-cloud-index
+  answer_scientific_url: https://www.statista.com/topics/1464/big-data/
+  answer_reading_recommendation: '[3] IDC, cited by [https://www.economist.com/special-report/2010/02/27/data-data-everywhere](https://www.economist.com/special-report/2010/02/27/data-data-everywhere)'
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-15
+  created: 2021-03-17
+  updated: 2021-03-17
+  tags:
+  - 30
 - id: 946
   text: The extraction and processing of all resources (materials, fuels, food…) contribute
     to…?
@@ -32443,7 +32874,7 @@
     fast cars and vehicles, by reducing air pollution etc.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.who.int/fr/news-room/fact-sheets/detail/the-top-10-causes-of-death
+  answer_accessible_url: https://www.who.int/en/news-room/fact-sheets/detail/the-top-10-causes-of-death
   answer_scientific_url: https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/global-health-estimates-leading-causes-of-dalys
   answer_reading_recommendation: ''
   answer_image_url: ''
@@ -32457,6 +32888,45 @@
   updated: 2021-03-16
   tags:
   - 234
+- id: 948
+  text: 'Lesquelles de ces affirmations sont vraies : L''extraction et la transformation
+    des ressources (matériaux, combustibles, aliments…) contribuent à...'
+  hint: ''
+  type: QCM-RM
+  category: 7
+  difficulty: 3
+  language: Français
+  answer_option_a: la moitié des GES anthropiques, 90% du stress hydrique et de la
+    destruction de biodiversité liée aux terres
+  answer_option_b: 90% des GES anthropiques, 50% du stress hydrique et de la destruction
+    de biodiversité liée aux terres
+  answer_option_c: 20% des GES anthropiques, 50% du stress hydrique et de la destruction
+    de biodiversité liée aux terres
+  answer_option_d: la moitié des GES anthropiques, 10% du stress hydrique et de la
+    destruction de biodiversité liée aux terres
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: Le reste est dû aux autres activités économiques et aux ménages
+    (chiffres de 2019). Alors que les GES sont plutôt équilibrés entre les secteurs,
+    le stress hydrique et la perte de biodiversité liée à l'utilisation des terres
+    sont dû pour 94% à l'usage de la biomasse (aliments ...)
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.unenvironment.org/fr/actualites-et-recits/communique-de-presse/lonu-appelle-reconsiderer-de-toute-urgence-lutilisation
+  answer_scientific_url: https://www.resourcepanel.org/reports/global-resources-outlook
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-16
+  created: 2021-03-17
+  updated: 2021-03-17
+  tags:
+  - 13
+  - 49
 - id: 1000
   text: Globally, how much electronic waste is collected in order to be recycled?
   hint: it is really not much!
