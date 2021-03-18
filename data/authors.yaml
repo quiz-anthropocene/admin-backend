@@ -31,6 +31,9 @@
 - name: INRAE
   question_count: 1
   quiz_count: 0
+- name: Jean-Philippe Pernin
+  question_count: 2
+  quiz_count: 0
 - name: Julien Briton
   question_count: 9
   quiz_count: 0
@@ -44,7 +47,7 @@
   question_count: 9
   quiz_count: 1
 - name: laydgeur
-  question_count: 174
+  question_count: 173
   quiz_count: 2
 - name: Le Monde
   question_count: 1
@@ -58,6 +61,9 @@
 - name: Max Pinsard
   question_count: 11
   quiz_count: 1
+- name: Pascal Mostardi
+  question_count: 1
+  quiz_count: 0
 - name: Raphael Odini
   question_count: 42
   quiz_count: 3
