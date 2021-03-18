@@ -92,7 +92,7 @@
     Idem pour l''aviation (billets moins chers donc on voyage plus souvent, ou plus
     loin).'
   answer_audio: ''
-  answer_video: ''
+  answer_video: https://www.youtube.com/watch?v=b4kPjnBRZ-E
   answer_accessible_url: http://www.decroissance.qc.ca/sites/default/files/journal/Schneider_l_Ecologiste.pdf
   answer_scientific_url: https://www.lafabriqueecologique.fr/transition-energetique-le-role-incontournable-de-leffet-rebond/
   answer_reading_recommendation: ''
@@ -417,8 +417,8 @@
     de grandeur, 100 heures d'un humain qui pédalerait sur une dynamo, ou encore la
     consommation électrique moyenne d'un foyer français.
   answer_audio: ''
-  answer_video: ''
-  answer_accessible_url: https://www.youtube.com/watch?v=Nb2S7oge8TQ?t=3600
+  answer_video: https://www.youtube.com/watch?v=Nb2S7oge8TQ?t=3600
+  answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
@@ -1848,7 +1848,7 @@
   hint: ''
   type: QCM
   category: 6
-  difficulty: 4
+  difficulty: 3
   language: Français
   answer_option_a: la superficie d'une capitale comme Paris, soit environ 100 km2
   answer_option_b: la superficie d'une grande métropole comme Berlin ou le Grand Paris,
@@ -2460,8 +2460,7 @@
   tags:
   - 11
 - id: 69
-  text: "Avons-nous déjà atteint le pic de production de pétrole dit conventionnel\
-    \ ? \n(c'est à dire hors pétrole de schiste et pétrole bitumineux)"
+  text: Avons-nous déjà atteint le pic de production de pétrole conventionnel ?
   hint: ''
   type: QCM
   category: 7
@@ -2473,9 +2472,21 @@
   answer_option_d: Non, il est trop loin pour pouvoir être estimé
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: L'agence internationale de l'énergie a effectivement annoncé
-    en 2018 que ce pic avait étaé passé en 2006. Elle s'attend à un pic tous pétrole
-    confondus à l'horizon 2025.
+  answer_explanation: "Cela exclut les pétroles de schistes et pétroles bitumineux.\
+    \ L'agence internationale de l'énergie a effectivement annoncé en 2018 que ce\
+    \ pic avait étaé passé en 2006. Elle s'attend à un pic tous pétroles confondus\
+    \ à l'horizon 2025. En quelques années seulement, le taux de succès des forages\
+    \ d'exploration est passé de 50% à 10% sur terre et de (40% à 25% en mer. La recherche\
+    \ des gisements de pétrole, c'est comme la chasse aux œufs de Pâques : ceux que\
+    \ l'on trouve en premier sont les plus gros et/ou les moins bien cachés : l'exploitation\
+    \ est alors facile et le prix du pétrole produit est bas. Depuis 1980, les découvertes\
+    \ sont inférieures à la production, les gisements sont plus durs / plus chers\
+    \ à exploiter et se vident plus rapidement. \nLe pétrole, c'est la corne d'abondance\
+    \ du 20è siècle. Sans pétrole, pas de mondialisation, pas de civilisation urbaine\
+    \ (pensez aux camions pour livrer nos usines et nos boutiques), pas de plastiques,\
+    \ d'huiles, de détergents et de vêtements synthétiques, pas de routes...\nOn peut\
+    \ voir la contraction pétrolière comme une bonne nouvelle pour le climat, mais\
+    \ c'est une énorme mâchoire qui se referme sur nos sociétés. \n(d'après JM. Jancovici)"
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://jancovici.com/transition-energetique/petrole/a-quand-le-pic-de-production-mondial-pour-le-petrole/
@@ -10312,7 +10323,7 @@
     https://twitter.com/laydgeur/status/1176947315720040448'
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Brouillon
   added: 2019-09-25
   created: 2020-05-20
   updated: 2020-09-28
@@ -17094,8 +17105,8 @@
   - 39
   - 94
 - id: 490
-  text: 'Allez, va pour une petite série d''une heure sur Netflix ! Mais au fait,
-    ça fait combien de CO2 émis dans l''atmosphère ? '
+  text: Allez, va pour une petite série d'une heure sur Netflix ! Mais au fait, ça
+    fait combien de CO2 émis dans l'atmosphère ?
   hint: ''
   type: QCM
   category: 2
@@ -20356,8 +20367,8 @@
     vous promettent d'alimenter un foyer avec un appareil sur lequel vous pédaleriez
     quelques heures par jour est un mythe.
   answer_audio: ''
-  answer_video: ''
-  answer_accessible_url: https://www.youtube.com/watch?v=S4O5voOCqAQ
+  answer_video: https://www.youtube.com/watch?v=S4O5voOCqAQ
+  answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: https://imgix.bustle.com/rehost/2016/9/13/6029141b-a962-4ed0-b403-27d0abdbb1a5.png?w=800&auto=format%2Ccompress&cs=srgb&q=70&fit=crop&crop=faces
@@ -20597,7 +20608,7 @@
   answer_extra_info: ''
   author: Pascal Mostardi
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-09-22
   created: 2020-09-22
   updated: 2020-09-22
@@ -24070,20 +24081,15 @@
     des commerces non essentiels (restaurants, cinémas, magasins…) et ralentissement
     de l’activité dans le secteur industriel.'
   answer_audio: ''
-  answer_video: ''
+  answer_video: https://www.youtube.com/watch?v=PiVCLKIYQPQ
   answer_accessible_url: https://www.lemonde.fr/blog/huet/2020/04/24/lelectricite-bousculee-par-le-coronavirus/
   answer_scientific_url: https://www.rte-france.com/actualites/covid19_quels_impacts_sur_la_consommation_electricite
-  answer_reading_recommendation: ''
+  answer_reading_recommendation: 'autres lien : [https://www.strategie.gouv.fr/point-de-vue/impacts-de-crise-covid-19-systeme-electrique](https://www.strategie.gouv.fr/point-de-vue/impacts-de-crise-covid-19-systeme-electrique)'
   answer_image_url: https://asset.lemde.fr/prd-blogs/2020/04/Baisse-conso-elec-RTE.png
   answer_image_explanation: La consommation du 26 mars 2020 ressemble à celle d’un
     lundi de Pâques (ici celui de 2018) avec une baisse particulièrement forte durant
     la matinée. Source RTE.
-  answer_extra_info: 'autres liens :
-
-    - https://www.strategie.gouv.fr/point-de-vue/impacts-de-crise-covid-19-systeme-electrique
-
-    - https://www.youtube.com/watch?v=PiVCLKIYQPQ (Mr Bidouille - Comment le confinement
-    a changé la consommation électrique Française)'
+  answer_extra_info: ''
   author: Raphael Odini
   validator: Matthieu Massart
   validation_status: Validée
@@ -25792,8 +25798,8 @@
 
     Il semblerait selon certains que Ryanair pourrait s’inspirer de ce vol historique.'
   answer_audio: ''
-  answer_video: ''
-  answer_accessible_url: https://www.youtube.com/watch?v=IKd-x4dutrE&feature=youtu.be&ab_channel=SimpleFlying
+  answer_video: https://www.youtube.com/watch?v=IKd-x4dutrE&feature=youtu.be&ab_channel=SimpleFlying
+  answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
@@ -25967,7 +25973,7 @@
   answer_extra_info: ''
   author: Jean-Philippe Pernin
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-03-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -26252,7 +26258,7 @@
   language: Français
   answer_option_a: La perte des insectes pollinisateurs pourrait menacer 1,4 milliard
     d’emploi
-  answer_option_b: A un tel rythme, lLes insectes pollinisateurs pourraient disparaître
+  answer_option_b: A un tel rythme, les insectes pollinisateurs pourraient disparaître
     en quelques décennies
   answer_option_c: La perte des insectes pollinisateurs pourrait susciter une recrudescence
     substantielle de maladies chez l'humain
@@ -30300,8 +30306,8 @@
     si l''on considère l’empreinte carbone du numérique annuelle en France : environ
     15 Mt CO2e en 2020.'
   answer_audio: ''
-  answer_video: ''
-  answer_accessible_url: https://www.youtube.com/watch?v=eH-LTLsSviQ&feature=youtu.be
+  answer_video: https://www.youtube.com/watch?v=eH-LTLsSviQ&feature=youtu.be
+  answer_accessible_url: ''
   answer_scientific_url: https://www.hautconseilclimat.fr/wp-content/uploads/2020/12/rapport-5g_haut-conseil-pour-le-climat.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/852.JPG
@@ -30504,12 +30510,12 @@
     que d''extraire en mine pour l''instant, et cela perdurera pour de nombreux métaux
     car leur usage (dispersif) empêche tout recyclage.'
   answer_audio: ''
-  answer_video: ''
+  answer_video: https://www.youtube.com/watch?v=mqhC6uI8TUY
   answer_accessible_url: https://reporterre.net/La-croissance-verte-est-une-mystification-absolue
   answer_scientific_url: https://www.slideshare.net/PaulineTSP/pptlow-techphilippe-bihouix
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/857.png
-  answer_image_explanation: '[https://www.youtube.com/watch?v=mqhC6uI8TUY](https://www.youtube.com/watch?v=mqhC6uI8TUY)'
+  answer_image_explanation: ''
   answer_extra_info: Lâge des low-techs de P. Bihouix (2014)
   author: Max Pinsard
   validator: Matthieu Massart
@@ -30622,9 +30628,9 @@
     dans ces pays autorise l''entrée d''appareils défectueux déclarés comme d''occasion,
     et finissent désossés par des populations pauvres, sans normes environnementales.'
   answer_audio: ''
-  answer_video: ''
+  answer_video: https://www.youtube.com/watch?v=uZI99xZDVkg
   answer_accessible_url: https://www.techniques-ingenieur.fr/actualite/articles/le-traitement-illegal-des-deee-est-majoritaire-en-europe-28718/
-  answer_scientific_url: https://www.youtube.com/watch?v=uZI99xZDVkg
+  answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/860.png
   answer_image_explanation: '"Déchets électroniques, le grand détournement" (2019)
@@ -31029,8 +31035,8 @@
   - 218
 - id: 871
   text: Supposons que du jour au lendemain l'énergie dépensée par la France ne soit
-    plus fournie par des machines, mais par du travail humain. Quelle population devrait
-    travailler au service des français
+    plus fournie par des machines, mais par du travail humain. Combien de personnes
+    devraient alors travailler au service des Français ?
   hint: ''
   type: QCM
   category: 5
@@ -31096,7 +31102,7 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: A valider
+  validation_status: Brouillon
   added: 2021-03-14
   created: 2021-03-17
   updated: 2021-03-17
@@ -33227,7 +33233,7 @@
   answer_extra_info: ''
   author: Jean-Philippe Pernin
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-02-23
   created: 2021-02-26
   updated: 2021-02-26
