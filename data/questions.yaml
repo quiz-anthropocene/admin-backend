@@ -1843,8 +1843,8 @@
   tags:
   - 17
 - id: 51
-  text: Dans 24 heures qui viennent, quelle est la surface de terres cultivables ou
-    labourables qui aura disparu dans le monde ?
+  text: D'ici 24 heures, combien de terres cultivables ou labourables auront-elles
+    disparu dans le monde ?
   hint: ''
   type: QCM
   category: 6
@@ -2722,9 +2722,10 @@
   tags:
   - 31
 - id: 76
-  text: 'Imaginez une balance titanesque, sur laquelle vous mettez : à gauche tout
-    ce qui a été construit par l''homme ; à droite toute la matière vivante sur terre.
-    Vous y êtes ? De quel côté va pencher la balance ?'
+  text: "Imaginez une balance titanesque. Placez sur le plateau de droite toute la\
+    \ matière vivante sur terre. Sur le plateau de gauche, tout ce qui a été construit\
+    \ depuis l'origine par l'homme. \nVous y êtes ? De quel côté va pencher la balance\
+    \ ?"
   hint: 'Il faut compter tout ce qui a été construit par l’homme : bâtiments, infrastructures
     (routes, ponts), habitations, industries, systèmes mobiles (voitures, trains,
     avions), ...'
@@ -2732,10 +2733,10 @@
   category: 6
   difficulty: 2
   language: Français
-  answer_option_a: 'Violement à droite  '
-  answer_option_b: A droite
+  answer_option_a: ''
+  answer_option_b: A gauche
   answer_option_c: Ca s'équilibre à peu près
-  answer_option_d: A gauche
+  answer_option_d: A droite
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: C'est ce qu'on appelle la technosphère. Elle a été évaluée à
@@ -18519,7 +18520,7 @@
   - 53
   - 57
 - id: 531
-  text: Lequel de ces indicateurs permet de mieux prédire l'empreinte carbone d'un
+  text: Lequel de ces indicateurs permet le mieux de prédire l'empreinte carbone d'un
     individu ?
   hint: ''
   type: QCM
@@ -19818,7 +19819,7 @@
   - 105
 - id: 568
   text: Selon le rapport 2019 du GIEC, quelle proportion de la population mondiale
-    va se trouver une situation de 'péril vital' si la température moyenne augmente
+    va se trouver une situation dite de péril vital si la température moyenne augmente
     de 2° ?
   hint: ''
   type: QCM
@@ -20602,7 +20603,7 @@
   answer_accessible_url: https://www.lemonde.fr/planete/article/2019/08/06/pres-d-un-quart-de-la-population-mondiale-est-menace-par-une-penurie-d-eau_5497203_3244.html
   answer_scientific_url: https://www.wri.org/blog/2019/08/17-countries-home-one-quarter-world-population-face-extremely-high-water-stress
   answer_reading_recommendation: ''
-  answer_image_url: https://reliefweb.int/sites/reliefweb.int/files/resources/water_stress_world_map_large.pdf
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/589.png
   answer_image_explanation: En l'absence de changement majeur, les pays indiqués en
     rouge sombre seront en stress hydrique très élevé en 2040
   answer_extra_info: ''
@@ -25500,32 +25501,37 @@
   - 217
   - 218
 - id: 719
-  text: 'L''objectif de la COP21 à l''horizon 2050 est que chaque humain n''émette
-    pas plus que 2 tonnes de CO2e par an. Vrai ou faux : 2 tonnes, c''est ce que j''émets
-    en...'
+  text: "L'objectif de la COP21 à l'horizon 2050 est que chaque humain n'émette pas\
+    \ plus que 2 tonnes de CO2e par an. \nLesquelles de ces affirmations sont vraies\
+    \ : 2 tonnes, c'est ce que j'émets en..."
   hint: ''
   type: QCM-RM
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: 'faisant 1 aller-retour Paris New York '
-  answer_option_b: roulant 10,000 km dans une clio essence
-  answer_option_c: chauffant un appartement de 80m2 au fioul pendant un an
-  answer_option_d: ''
-  answer_correct: abc
+  answer_option_a: '...faisant 1 aller-retour Paris New York '
+  answer_option_b: '...roulant 10,000 km dans une clio essence'
+  answer_option_c: '...chauffant un appartement de 80m2 au fioul pendant un an'
+  answer_option_d: '...mangeant 200g de bœuf par jour'
+  answer_correct: abcd
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: "Eh oui ! Une seule de ces quatre options vous fait atteindre\
+    \ votre budget carbone. 2 tonnes, c'est encore l'empreinte moyenne d'un Français...en\
+    \ 1881 ! \nL'empreinte moyenne d'un Français est estimée autour de 10t, dont la\
+    \ moitié sont des émissions importées. Sachant que l'impact carbone des seuls\
+    \ services publics est estimé à 1,5t par habitant, cela donne une idée de la hauteur\
+    \ de la marche à descendre..."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.liberation.fr/checknews/2019/02/13/est-ce-qu-un-aller-retour-en-avion-a-bali-emet-autant-de-co2-qu-une-annee-de-vie-en-france_1708854
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: http://ravijen.fr/wp-content/uploads/2018/11/empreinte_FR_2016_graphe.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2020-03-10
   created: 2021-01-06
   updated: 2021-01-06
@@ -25937,10 +25943,9 @@
   - 217
   - 218
 - id: 729
-  text: Le pergélisol (ou permafrost) est un sol gelé en permanence. Il recouvre une
-    grande partie des régions arctiques. On craint fortement que le réchauffement
-    climatique engendre une fonte majeure de ce pergélisol. Avec quelles conséquences
-    ?
+  text: Le pergélisol (ou permafrost) est un sol gelé en permanence qui recouvre une
+    grande partie des régions arctiques. Le réchauffement climatique commence à le
+    faire dégeler. Avec quelles conséquences ?
   hint: ''
   type: QCM-RM
   category: 5
@@ -26215,19 +26220,19 @@
   - 217
   - 218
 - id: 736
-  text: 'Reprenons notre balance de titans : à gauche, tous les animaux sauvages ;
-    à droite tous les animaux domestiqués ou utilisés par l’humain. De quel côté va
-    pencher la balance ? '
+  text: 'Reprenons notre balance de titans : à droite, tous les animaux sauvages ;
+    à gauche, tous les animaux domestiqués ou utilisés par l’humain. De quel côté
+    va pencher la balance ?'
   hint: ''
   type: QCM
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: Fortement à  gauche
+  answer_option_a: ''
   answer_option_b: A gauche
   answer_option_c: Equilibré
   answer_option_d: A droite
-  answer_correct: ''
+  answer_correct: d
   has_ordered_answers: true
   answer_explanation: ''
   answer_audio: ''
@@ -33201,8 +33206,8 @@
   - 30
   - 39
 - id: 1007
-  text: En 2009, quelle était est le pourcentage de chercheurs spécialisés en sciences
-    du climat attribuant à l'humain la cause du réchauffement climatique actuel ?
+  text: En 2009, combien de chercheurs spécialisés en sciences du climat attribuaient
+    à l'humain la cause du dérèglement climatique actuel ?
   hint: ''
   type: QCM
   category: 1
