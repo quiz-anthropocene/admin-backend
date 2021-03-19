@@ -633,9 +633,9 @@
   - answer_success_count: 12
     count: 4
 - quiz_id: 59
-  answer_count: 342
-  answer_count_last_30_days: 47
-  answer_count_last_7_days: 7
+  answer_count: 343
+  answer_count_last_30_days: 48
+  answer_count_last_7_days: 8
   like_count: 19
   dislike_count: 0
   answer_success_count_split:
@@ -652,7 +652,7 @@
   - answer_success_count: 5
     count: 59
   - answer_success_count: 6
-    count: 17
+    count: 18
 - quiz_id: 60
   answer_count: 248
   answer_count_last_30_days: 91
@@ -679,10 +679,10 @@
   - answer_success_count: 8
     count: 8
 - quiz_id: 61
-  answer_count: 186
-  answer_count_last_30_days: 179
-  answer_count_last_7_days: 19
-  like_count: 6
+  answer_count: 187
+  answer_count_last_30_days: 180
+  answer_count_last_7_days: 20
+  like_count: 7
   dislike_count: 1
   answer_success_count_split:
   - answer_success_count: 0
@@ -692,7 +692,7 @@
   - answer_success_count: 2
     count: 10
   - answer_success_count: 3
-    count: 12
+    count: 13
   - answer_success_count: 4
     count: 34
   - answer_success_count: 5
@@ -710,9 +710,9 @@
   - answer_success_count: 11
     count: 3
 - quiz_id: 62
-  answer_count: 293
-  answer_count_last_30_days: 293
-  answer_count_last_7_days: 251
+  answer_count: 296
+  answer_count_last_30_days: 296
+  answer_count_last_7_days: 254
   like_count: 4
   dislike_count: 0
   answer_success_count_split:
@@ -723,13 +723,13 @@
   - answer_success_count: 2
     count: 31
   - answer_success_count: 3
-    count: 52
+    count: 53
   - answer_success_count: 4
-    count: 74
+    count: 75
   - answer_success_count: 5
     count: 72
   - answer_success_count: 6
-    count: 31
+    count: 32
   - answer_success_count: 7
     count: 12
   - answer_success_count: 8
@@ -797,9 +797,9 @@
   - answer_success_count: 15
     count: 0
 - quiz_id: 65
-  answer_count: 30
-  answer_count_last_30_days: 30
-  answer_count_last_7_days: 29
+  answer_count: 31
+  answer_count_last_30_days: 31
+  answer_count_last_7_days: 30
   like_count: 2
   dislike_count: 0
   answer_success_count_split:
@@ -818,7 +818,7 @@
   - answer_success_count: 6
     count: 6
   - answer_success_count: 7
-    count: 1
+    count: 2
   - answer_success_count: 8
     count: 5
   - answer_success_count: 9
