@@ -26010,9 +26010,7 @@
     Redevance pour la navigation aérienne, service de sécurité, contrôle de passagers,
     aéroport
 
-    Bien entendu le transport aérien non content de payer très peu de taxes, dans
-    ses communications media vers le grand public, noie le poisson 🐠 et regroupe tout
-    sous le vocable de taxes.'
+    Dans ses communications le transport aérien regroupe tout sous le vocable de taxes.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theshiftproject.org/article/aerien-climat-fiscalite-manuel-auto-defense-intellectuelle/
@@ -26155,11 +26153,11 @@
   has_ordered_answers: false
   answer_explanation: 'C''est en principe de l''ordre de 30%.
 
-    La variabilité des prix aux clients est telle que le coût du kérosène est devenu
-    accessoire.'
+    La variabilité des prix aux clients (avec les lowcost et le yield managment) est
+    telle que le coût du kérosène est presque devenu accessoire.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://www.lefigaro.fr/flash-eco/2017/01/27/97002-20170127FILWWW00041-les-prix-des-billets-d-avion-s-effritent.php#:~:text=Le%20co%C3%BBt%20du%20k%C3%A9ros%C3%A8ne%20repr%C3%A9sente,avion%20et%20la%20distance%20parcourue.
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
@@ -26217,8 +26215,8 @@
   updated: 2021-01-06
   tags:
   - 33
+  - 85
   - 217
-  - 218
 - id: 736
   text: 'Reprenons notre balance de titans : à droite, tous les animaux sauvages ;
     à gauche, tous les animaux domestiqués ou utilisés par l’humain. De quel côté
@@ -31637,8 +31635,8 @@
   tags:
   - 218
 - id: 910
-  text: 'Train vs Avion : le Paris - Marseille, l''avion KO ? Mais combien de fois
-    plus de CO2 ?'
+  text: 'Emissions Train vs Avion : Le Paris - Marseille. Mais combien de fois plus
+    ?'
   hint: Au tapis... bien sûr
   type: QCM
   category: 2
@@ -31650,9 +31648,10 @@
   answer_option_d: 75 fois plus
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: '74 fois plus exactement.
+  answer_explanation: '74 fois plus exactement. Un chiffre qui se suffit à lui-même.
 
-    Faites le calcul sur le site de la DGAC pourtant très favorable.
+    Faites le calcul sur le site de la DGAC (ne prend pas en compte les émissions
+    dites "non CO2)
 
     Le train TGV est imbattable avec 1.73 g CO2e / km. (source SNCF)
 
@@ -31676,9 +31675,10 @@
   created: 2021-02-01
   updated: 2021-02-01
   tags:
-  - 218
+  - 13
+  - 100
 - id: 911
-  text: Faites vous confiance à l’éco-calculateur de la DGAC ?
+  text: Faites vous confiance aux "éco-calculateurs" ?
   hint: Moitié plein ?
   type: QCM
   category: 2
@@ -31699,9 +31699,9 @@
     Oui pour le CO2, pour lequel il sépare bien les émissions pour la production et
     le transport du carburant.
 
-    Par contre il omet totalement les émissions dites « non CO2 » en vol dont on mesure
-    les influences à travers le forçage radiatif en CO2e pour équivalent. CO2e = CO2
-    + Non CO2 = 3 x CO2
+    Par contre ils omettent souvent les émissions dites « non CO2 » en vol dont on
+    mesure les influences à travers le forçage radiatif en CO2e pour équivalent. CO2e
+    = CO2 + Non CO2 = 3 x CO2
 
     Ces émissions très difficiles à caractériser ont fait l’objet d’études successives
     depuis une bonne vingtaine d’années qui ont permis de mieux comprendre les phénomène
@@ -31710,14 +31710,14 @@
     La dernière étude de sept. 2020 à confirmé la fourchette haute cad CO2e = 3 x
     CO2.
 
-    Dit autrement la DGAC qui applique les recommandations du transport aérien, est
-    en opposition total avec les études scientifiques sans apporter aucunes contestations
-    officielles à celles-ci.
+    Dit autrement les éco-calculateurs qui appliquent les recommandations du transport
+    aérien, sont en opposition totale avec les études scientifiques sans apporter
+    aucunes contestations officielles à celles-ci.
 
     Elle les ignore.
 
-    Habillement elle mentionne une part infime de CO2e (2.4%) qui pourrait laisser
-    croire qu’elle s’en soucie.
+    Habillement elle mentionne une part infime de CO2e  qui pourrait laisser croire
+    qu’elle s’en soucie.
 
     Autrement dit pour les vols en haute altitude, le compte n’y est pas, il manque
     juste 66% des émissions.
@@ -31726,7 +31726,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S1352231020305689?via%3Dihub
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -31738,7 +31738,9 @@
   created: 2021-02-01
   updated: 2021-02-01
   tags:
-  - 218
+  - 13
+  - 98
+  - 225
 - id: 912
   text: Quelle est la durée de vie des avions avant prendre leur retraite ?
   hint: En baisse
@@ -31779,6 +31781,7 @@
   updated: 2021-02-01
   tags:
   - 218
+  - 258
 - id: 913
   text: Copy of à venir
   hint: ''
@@ -33308,3 +33311,37 @@
   tags:
   - 16
   - 206
+- id: 1010
+  text: En France, quelle est la perte de revenu provenant des exemptions de taxe
+    sur le kérosène ?
+  hint: Une exonération qui date de 1944 pour développer les TA....
+  type: QCM
+  category: 2
+  difficulty: 2
+  language: Français
+  answer_option_a: 500 Mn€
+  answer_option_b: 1 Md€
+  answer_option_c: 4 Md€
+  answer_option_d: 8 Md€
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: Près de 4 Md€. Soit plus 3 Milliards d’€uro pour les vols internationaux
+    qui passent par la France, et 0.5 autre Md€ supplémentaire pour les vols intérieurs.
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.liberation.fr/checknews/2018/11/06/pourquoi-ne-pas-taxer-le-kerosene-des-avions_1689795/
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-19
+  created: 2021-03-20
+  updated: 2021-03-20
+  tags:
+  - 33
+  - 85
+  - 217
