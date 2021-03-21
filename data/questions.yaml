@@ -26412,7 +26412,7 @@
   answer_accessible_url: https://veroniquecloutier.com/environnement/mollets-contre-moteur
   answer_scientific_url: https://www.ibiketo.ca/blog/2009/07/13/embodied-energy-our-vehicles
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/741.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -26494,7 +26494,7 @@
   answer_accessible_url: https://www.ademe.fr/expertises/dechets/chiffres-cles-observation/dossier/caracterisation-dechets/campagne-nationale-caracterisation-dechets-menagers-assimiles
   answer_scientific_url: https://www.actu-environnement.com/media/pdf/news-35407-chiffres-cles-dechets-2019.pdf
   answer_reading_recommendation: cité par P. Bihouix, dans "L'age des low-techs"
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/743.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -26532,8 +26532,8 @@
   answer_accessible_url: https://www.quechoisir.org/conseils-chauffage-10-gestes-simples-pour-limiter-sa-consommation-energetique-au-quotidien-n4725/
   answer_scientific_url: https://www.lowtechmagazine.com/2011/02/body-insulation-thermal-underwear.html
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://im.qccdn.fr/node/conseils-chauffage-10-gestes-simples-pour-limiter-sa-consommation-energetique-au-quotidien-4725/principal-49871.jpg
+  answer_image_explanation: © morissfoto
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
@@ -31025,8 +31025,10 @@
   answer_accessible_url: https://solar.lowtechmagazine.com/2011/07/solar-powered-factories.html
   answer_scientific_url: https://www.iea.org/commentaries/clean-and-efficient-heat-for-industry
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/870.png
+  answer_image_explanation: 'énergie utilisée dans le monde pour les bâtiments et
+    industries (tout sauf les transports) : les besoins se divisent 50% en chaleur
+    50% en électricité'
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
@@ -31100,8 +31102,8 @@
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2010/05/the-status-quo-of-electric-cars-better-batteries-same-range.html
   answer_scientific_url: http://cnum.cnam.fr/CGI/fpage.cgi?BSPI.154/186/100/420/0/0
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/875.png
+  answer_image_explanation: Châssis de voiture électrique
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
@@ -31111,6 +31113,42 @@
   updated: 2021-03-17
   tags:
   - 60
+- id: 876
+  text: Les moteurs à bois pour les voitures, késako ? (plusieurs réponses possibles)
+  hint: ''
+  type: QCM-RM
+  category: 2
+  difficulty: 3
+  language: Français
+  answer_option_a: 500,000 voitures durant la seconde guerre mondiale - quasiment
+    touts véhicules non-militaires, principal remplacement de l'essence à ce moment
+  answer_option_b: un truc de bricolo passioné, quelques prototypes aboutis
+  answer_option_c: impossible physiquement
+  answer_option_d: moins de pollution de l'air que les voitures à essence
+  answer_correct: ad
+  has_ordered_answers: false
+  answer_explanation: 'Des voitures pas du tout aérodynamiques, avec un gros réservoir
+    à l''arrière. Mais en temps de pénurie d''essence ce dispositif ingénieux a été
+    grandement utilisé, apportant une solution simple mais pas exempte de défauts
+    : moteur bien plus gros, puissance bien plus limitée, 10 minutes de pré-chauffage,
+    production de monoxyde de carbone…'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/2010/01/wood-gas-cars.html
+  answer_scientific_url: https://translate.google.com/translate?hl=&sl=fi&tl=fr&u=https%3A%2F%2Fwww.ekoautoilijat.fi%2Ftekstit%2Fhistoriaa.htm
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/876.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: A valider
+  added: 2021-03-14
+  created: 2021-03-21
+  updated: 2021-03-21
+  tags:
+  - 35
+  - 253
 - id: 877
   text: On utilisait au XIXe siècle des bateaux tractés par des câbles. Lesquelles
     des affirmations suivantes sont vraies ?
@@ -31127,17 +31165,17 @@
   answer_option_d: Leur vitesse ne dépassait pas 7 km/h
   answer_correct: abcd
   has_ordered_answers: false
-  answer_explanation: Il subsiste quelques un de ces "trolley boats". Mais leur vitesse
-    limitée les a rendus obsolètes. Même entre 2 rives proches les câbles peuvent
-    être tirés pour assurer une liaison simple par ferry. La liaison par câble peut
-    même exercer une force mécanique pour que la barge soit moins déviée par le courant,
-    et économiser encore plus de carburant.
+  answer_explanation: Il subsiste quelques un de ces "trolley boats" dans le monde.
+    Ailleurs leur vitesse limitée les a rendus obsolètes. Pourtant ils sont bien pratiques
+    pour relier 2 rives proches par exemple. La liaison par câble peut même exercer
+    une force mécanique pour que la barge soit moins déviée par le courant, et économiser
+    encore plus de carburant.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2009/12/trolley-canal-boats.html
   answer_scientific_url: http://cnum.cnam.fr/CGI/fpage.cgi?ECCMC6.62/44/100/941/927/941
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/877.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -31174,7 +31212,7 @@
   answer_accessible_url: https://solar.lowtechmagazine.com/2009/04/cargo-ships-then-and-now.html
   answer_scientific_url: http://www.bruzelius.info/Nautica/Ships/Fivemast_ships/Preussen%281902%29.html
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/878.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -31210,7 +31248,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2011/09/peat-and-coal-fossil-fuels-in-pre-industrial-times.html
-  answer_scientific_url: ''
+  answer_scientific_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/879.png
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -31263,8 +31301,45 @@
   tags:
   - 53
   - 100
+- id: 881
+  text: 70 ans avant l'ampoule électrique l'utilisation d'arc électrique permettait
+    à des lampadaires du début du XIXe une luminance équivalente à environ … ?
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 3
+  language: Français
+  answer_option_a: 0.5 ampoules de 100W
+  answer_option_b: 20 ampoules de 100W
+  answer_option_c: 5 ampoules de 50W
+  answer_option_d: une LED de qulques mW
+  answer_correct: ''
+  has_ordered_answers: false
+  answer_explanation: Cette invention produisait une brillance démentielle, de 1500
+    à 6000 équivalents bougie (une flamme de gaz produit ~100 équivalents bougie).
+    Ces lampes étaient plus efficaces énergétiquement que même les ampoules incandescentes
+    de nos jours, et peuvent rivaliser avec les ampoules fluorescentes même si elles
+    sont vouées à éclairer l'extérieur (car en hauteur pour éviter les chocs électriques).
+    Très populaires pour l'éclairage urbain fin XIXe, elles contribuaient même à la
+    pollution lumineuse !
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.lowtechmagazine.com/2009/01/moonlight-towers-light-pollution-in-the-1800s.html
+  answer_scientific_url: https://en.wikipedia.org/wiki/Moonlight_tower
+  answer_reading_recommendation: ''
+  answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/LeveeAtNightNewOrleans1883.jpg/1024px-LeveeAtNightNewOrleans1883.jpg
+  answer_image_explanation: Nouvelle-Orléans, 1883
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: A valider
+  added: 2021-03-16
+  created: 2021-03-21
+  updated: 2021-03-21
+  tags:
+  - 255
 - id: 882
-  text: Quelle est la force des tuiles catalanes ? (plusieurs réponses possibles)
+  text: Quelle est la force des voûtes catalanes ? (plusieurs réponses possibles)
   hint: ''
   type: QCM-RM
   category: 6
@@ -31287,8 +31362,8 @@
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2008/11/tiles-vaults.html
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/New_York_City_City_Hall_subway_station_HAER_image.jpg/800px-New_York_City_City_Hall_subway_station_HAER_image.jpg
+  answer_image_explanation: Guastavino a importé ces voûtes dans la ville de New-York
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
@@ -32613,7 +32688,7 @@
   answer_accessible_url: https://solar.lowtechmagazine.com/2020/01/how-circular-is-the-circular-economy.html
   answer_scientific_url: https://www.circularity-gap.world/global
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/937.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -32648,7 +32723,7 @@
   answer_accessible_url: https://theconversation.com/think-all-your-plastic-is-being-recycled-new-research-shows-it-can-end-up-in-the-ocean-155208
   answer_scientific_url: http://www.environnement.brussels/sites/default/files/user_files/pres_20150326_mat_1_4ptat_fr.pdf
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/938.png
   answer_image_explanation: '[https://ourworldindata.org/plastic-pollution](https://ourworldindata.org/plastic-pollution)'
   answer_extra_info: ''
   author: Max Pinsard
@@ -32688,7 +32763,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/940.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -32725,10 +32800,10 @@
     So the "park effect" is a scaling limitation.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://bristoluniversitypress.co.uk/the-age-of-low-tech
+  answer_scientific_url: https://link.springer.com/article/10.1007/s10584-011-0268-5
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/942.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -32770,7 +32845,7 @@
   answer_accessible_url: http://www.basel.int/Implementation/TechnicalAssistance/MOOC/tabid/4966/Default.aspx
   answer_scientific_url: https://innoenergy.learnify.se/l/show.html#E1rl
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/943.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -32809,7 +32884,7 @@
   answer_accessible_url: https://blogs.cisco.com/sp/five-things-that-are-bigger-than-the-internet-findings-from-this-years-global-cloud-index
   answer_scientific_url: https://www.statista.com/topics/1464/big-data/
   answer_reading_recommendation: '[3] IDC, cited by [https://www.economist.com/special-report/2010/02/27/data-data-everywhere](https://www.economist.com/special-report/2010/02/27/data-data-everywhere)'
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/945.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -32847,8 +32922,8 @@
   answer_accessible_url: https://www.resourcepanel.org/reports/global-resources-outlook
   answer_scientific_url: https://www.unep.org/news-and-stories/press-release/un-calls-urgent-rethink-resource-use-skyrockets
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/946.png
+  answer_image_explanation: UNEP
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
@@ -32876,7 +32951,7 @@
     etc.), road accidents, heart problems (junk food, stress, etc.), respiratory problems
     (air pollution, drugs, etc.), diabetes
   answer_option_d: Infectious diseases, homicides, old age, overweight, cancer.
-  answer_correct: ''
+  answer_correct: b
   has_ordered_answers: false
   answer_explanation: The causes are not always well identified, but the WHO notes
     that in rich countries, mortality is due to heart problems, respiratory problems,
@@ -32891,7 +32966,7 @@
   answer_accessible_url: https://www.who.int/en/news-room/fact-sheets/detail/the-top-10-causes-of-death
   answer_scientific_url: https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/global-health-estimates-leading-causes-of-dalys
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/947.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -32903,10 +32978,10 @@
   tags:
   - 234
 - id: 948
-  text: 'Lesquelles de ces affirmations sont vraies : L''extraction et la transformation
-    des ressources (matériaux, combustibles, aliments…) contribuent à...'
+  text: L'extraction et la transformation des ressources (matériaux, combustibles,
+    aliments…) contribuent à...
   hint: ''
-  type: QCM-RM
+  type: QCM
   category: 7
   difficulty: 3
   language: Français
@@ -32929,8 +33004,8 @@
   answer_accessible_url: https://www.unenvironment.org/fr/actualites-et-recits/communique-de-presse/lonu-appelle-reconsiderer-de-toute-urgence-lutilisation
   answer_scientific_url: https://www.resourcepanel.org/reports/global-resources-outlook
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/948.png
+  answer_image_explanation: PNUE
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
