@@ -26398,15 +26398,15 @@
   answer_option_b: comparable
   answer_option_c: 3 fois plus
   answer_option_d: 30 fois plus
-  answer_correct: b
-  has_ordered_answers: false
-  answer_explanation: "'Démachiniser' et limiter le contenu électronique, voici 2\
-    \ ambitions des solutions low-techs. \nSelon la Fédération cycliste européenne,\
-    \ ce serait 16 gCO2e/km pour le vélo électrique (VAE) contre 5 gCO2e/km pour un\
-    \ vélo classique, soit 3 fois plus. Pour le VAE, la production compte pour moitié\
-    \ (Il faut en effet fabriquer le moteur du pédalier et la batterie au lithium-ion),\
-    \ et l'électricité pour l'autre moitié (dépendant du pays).\nPour l'impact énergétique\
-    \ c'est même jusqu'à 5 dois plus pour le VAE : 40W contre 8W. "
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Selon la Fédération cycliste européenne, ce serait 16 g CO2e/km
+    pour un VAE contre 5 g CO2e/km pour un vélo classique. Pour le VAE, la production
+    compte pour moitié (Il faut en effet fabriquer le moteur du pédalier et la batterie
+    au lithium-ion), et l''électricité pour l''autre moitié (dépendant du pays).
+
+    Pour l''impact énergétique c''est même jusqu''à 5 fois plus pour le VAE : 40W
+    contre 8W.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://veroniquecloutier.com/environnement/mollets-contre-moteur
@@ -26416,8 +26416,8 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-03-08
   created: 2021-01-06
   updated: 2021-01-06
@@ -26425,50 +26425,52 @@
   - 72
   - 249
 - id: 742
-  text: Quelles économies en matériaux pourrait-on générer via une uniformisation
-    du verre coloré pour les contenants ?
+  text: Quelles économies en matériaux dégagerait-on si on décidait de généraliser
+    l'usage du verre coloré pour les contenants ?
   hint: ''
   type: QCM
   category: 5
   difficulty: 2
   language: Français
   answer_option_a: négligeable par rapport à d'autres usages
-  answer_option_b: 10 à 20% de la consommation de sélénium, 8% des lanthanides
+  answer_option_b: 10 à 20% de la consommation de sélénium, 8% des lanthanides, qui
+    sont des matériaux critiques
   answer_option_c: moitié moins de silicium consommé, 20% d'épuisement du sable en
     moins
-  answer_option_d: 30% de la consommation d'argent métal, 10% de l'étain, 0.1% du
+  answer_option_d: 30% de la consommation de métal argent, 10% de l'étain, 0.1% du
     brome
   answer_correct: b
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'Les pigments colorés dans les verres sont souvent réalisé grâce
-    à des métaux critiques, comme les platinoides, les lanthanides, le selenium etc.
-    Arrêter la coloration juste esthétique permettrait de limiter ces usages dispersifs
-    qui ne seront jamais récupérés. Toutefois, il est à noter que plusieurs colorations
-    sont obtenues par défaut lors de la fabrication du verre (bleuté voire vert lorsque
-    le matériau est ferrugineux), c''est donc parfois l''incolore qui demande le plus
-    de traitement, et qu''une couleur foncée peut servir à protéger de la lumière
-    comme pour le vin : enlever les additifs des verres signifierait juste moins de
-    diversités de couleurs. Le mieux serait également de standardiser les contenants
-    (ex : 3-4 tailles de boueilles max), et de les consigner.'
+    à des métaux critiques, comme les platinoïdes, les lanthanides, le sélénium etc.
+    Arrêter la coloration à des fins esthétiques permettrait de limiter l''usage dispersifs
+    de ces métaux. Toutefois, il est à noter que plusieurs colorations sont obtenues
+    par défaut lors de la fabrication du verre (bleuté voire vert lorsque le matériau
+    est ferrugineux), c''est donc parfois l''incolore qui demande le plus de traitement,
+    et qu''une couleur foncée peut servir à protéger de la lumière comme pour le vin
+    : enlever les additifs des verres signifierait seulement moins de diversités de
+    couleurs. Pour aller plus loin, on pourrait aussi décider standardiser les tailles
+    et formats des contenants et de les consigner.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://pubs.acs.org/doi/abs/10.1021/es505515z
-  answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_reading_recommendation: L'age des low-techs, Ph. Bihouix
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/742.png
+  answer_image_explanation: '[https://www.pavisa.com.mx/fr/dou-viennent-les-differentes-couleurs-du-verre/](https://www.pavisa.com.mx/fr/dou-viennent-les-differentes-couleurs-du-verre/)'
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-03-08
   created: 2021-01-06
   updated: 2021-01-06
-  tags: []
+  tags:
+  - 259
+  - 260
 - id: 743
-  text: Quelle fraction de la masse totale des déchets produits par les ménages pourrait
-    assez facilement ne pas finir dans la poubelle générale (grise) ou ne pas devenir
-    des déchets délicats à traiter pour les filières de fin de vie ?
+  text: Parmi les déchets que les ménages français jettent à la poubelle générale
+    (grise), quelle partie pourrait facilement être évitée ?
   hint: ''
   type: QCM
   category: 5
@@ -26480,26 +26482,26 @@
   answer_option_d: 99%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: 'Sur les 250kg/ha/an (en France) de déchets jetés dans la poubelle
-    générale par les ménages, un tiers sont purescibles et devraient aller au compost
-    ou nourrir des animaux, et un autre tiers devraient être collectés sélectivement
-    en vue d''un recyclage "facile" (papiers, verre, métaux …) selon l''ADEME : en
-    comptant d''autres déchets non-classés, c''est 70% qui pourraient éviter d''aller
-    dans la poubelle grise. Le reste est composé de déchets dangereux (DEEE...), de
-    plastiques, de déchets inertes divers non facilement recyclables ... Bien entendu
-    la réduction à la source (zéro déchet, sobriété) est un autre levier majeur pour
-    éviter ces 70%, voire se passer totalement de poubelle grise.'
+  answer_explanation: "Sur les 250kg/ha/an (en France) de déchets jetés dans la poubelle\
+    \ générale par les ménages, un tiers est putrescible et pourrait être compostés\
+    \ ou nourrir des animaux, et un autre tiers pourrait être collectés sélectivement\
+    \ en vue d'un recyclage \"facile\" (papiers, verre, métaux …). Selon l'ADEME,\
+    \ en comptant d'autres déchets non-classés, c'est 70% qui pourraient éviter d'aller\
+    \ dans la poubelle grise. Le reste est composé de déchets dangereux (DEEE...),\
+    \ de plastiques, de déchets inertes divers non facilement recyclables... \nLa\
+    \ réduction à la source (zéro déchet, sobriété) est un autre levier majeur pour\
+    \ éviter ces 70%. Et un jour se passer totalement de poubelle grise ?"
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ademe.fr/expertises/dechets/chiffres-cles-observation/dossier/caracterisation-dechets/campagne-nationale-caracterisation-dechets-menagers-assimiles
   answer_scientific_url: https://www.actu-environnement.com/media/pdf/news-35407-chiffres-cles-dechets-2019.pdf
-  answer_reading_recommendation: cité par P. Bihouix, dans "L'age des low-techs"
+  answer_reading_recommendation: L'age des low-techs", Ph. Bihouix
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/743.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-03-08
   created: 2021-01-06
   updated: 2021-01-06
@@ -26507,25 +26509,25 @@
   - 228
   - 250
 - id: 744
-  text: Si tous les logements baissaient leur température moyenne au niveau recommandé,
-    la consommation de chauffage diminuerait d'au moins…?
+  text: Si tous les logements ajustaient leur température moyenne au niveau recommandé
+    en France, de combien diminuerait-on la consommation de chauffage ?
   hint: ''
   type: QCM
   category: 5
-  difficulty: 1
+  difficulty: 2
   language: Français
   answer_option_a: 2 à 4%
   answer_option_b: 9 à 12%
   answer_option_c: 20 à 25%
   answer_option_d: 50 à 60%
   answer_correct: c
-  has_ordered_answers: false
-  answer_explanation: 'On estime environ 7-10% d''économie sur la facture de chauffage
-    par dégré de chauffage en moins; entre les pièces à vivre (19°C recommandé) et
+  has_ordered_answers: true
+  answer_explanation: 'On estime environ à 7 à 10% l''économie sur la facture de chauffage
+    par degré de chauffage en moins. Entre les pièces à vivre (19°C recommandé) et
     les chambres à coucher (16°C recommandé), on pourrait faire globalement baisser
-    le chauffage d''au moins 3°C, donc économiser 3×7 = 21% en chauffage.
+    le chauffage d''au moins 3°C, donc économiser 21% en chauffage.
 
-    Et en portant des vêtements "thermiques" en hiver, on pourrait même aller encore
+    Et en portant un pull en hiver à l''intérieur, on peut facilement aller encore
     plus loin !'
   answer_audio: ''
   answer_video: ''
@@ -26536,8 +26538,8 @@
   answer_image_explanation: © morissfoto
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-03-08
   created: 2021-01-06
   updated: 2021-01-06
@@ -30458,7 +30460,7 @@
   answer_option_c: 60 à 80%
   answer_option_d: 99%
   answer_correct: c
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: "La dégradation des débris plastiques macros produit des microplastiques\
     \ secondaires, qui représentent 60-80% du microplastique mesuré dans les océans.\n\
     Le reste sont des microplastiques primaires, provenant de rejets directs :\n1/3\
@@ -30580,7 +30582,7 @@
   answer_option_d: Le fait que plusieurs solutions puissent avoir un impact positif
     encore plus grand en étant combinées.
   answer_correct: c
-  has_ordered_answers: true
+  has_ordered_answers: false
   answer_explanation: 'Lorsqu’on veut remplacer une technologie par sa version moins
     polluante, on se heurte au fait que le parc existant est déjà bien déployé et
     multiple. Le remplacer demande une quantité d’énergie et de matériaux gigantesque,
@@ -31000,7 +31002,7 @@
   tags:
   - 14
 - id: 870
-  text: De toute l'énergie finale dont l'humanité a besoin, quelle est la part d'énergie
+  text: De toute l'énergie finale que l'humanité utilise, quelle est la part d'énergie
     thermique (chaleur) ?
   hint: ''
   type: QCM
@@ -31014,12 +31016,11 @@
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: Les industries représentent la moitié de l'énergie primaire,
-    les transports 1/4 et les bâtiments le dernier quart (BP). En excluant les moteurs
+    les transports 1/4 et les bâtiments le dernier quart. En excluant les moteurs
     des transports, on peut voir que l'industrie requiert pour 67% de la chaleur,
     et les batiments (résidentiels et pro) environ 50% (pour le chauffage, l'eau chaude
     ...), le reste en électricité. Au total environ la moitié de l'énergie requise
-    est sous forme de chaleur, ce qui contrevient à l'idée que l'électricité fait
-    tout.
+    est sous forme de chaleur. L'électricité ne fait pas tout.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/2011/07/solar-powered-factories.html
@@ -31032,7 +31033,7 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-02-22
   created: 2021-02-26
   updated: 2021-02-26
@@ -31088,7 +31089,7 @@
   answer_option_a: avant 1900
   answer_option_b: 1900-1920
   answer_option_c: 1950-1960
-  answer_option_d: Elles ont une atonomie bien supérieure aux voitures du début/milieu
+  answer_option_d: Elles ont une autonomie bien supérieure aux voitures du début/milieu
     XXe siècle
   answer_correct: b
   has_ordered_answers: true
@@ -31106,23 +31107,23 @@
   answer_image_explanation: Châssis de voiture électrique
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-03-14
   created: 2021-03-17
   updated: 2021-03-17
   tags:
   - 60
 - id: 876
-  text: Les moteurs à bois pour les voitures, késako ? (plusieurs réponses possibles)
+  text: Les moteurs à bois pour les voitures, ça existe ? (plusieurs réponses possibles)
   hint: ''
   type: QCM-RM
   category: 2
-  difficulty: 3
+  difficulty: 1
   language: Français
-  answer_option_a: 500,000 voitures durant la seconde guerre mondiale - quasiment
-    touts véhicules non-militaires, principal remplacement de l'essence à ce moment
-  answer_option_b: un truc de bricolo passioné, quelques prototypes aboutis
+  answer_option_a: 'oui : 500,000 voitures durant la seconde guerre mondiale - quasiment
+    touts véhicules non-militaires, principal remplacement de l''essence à ce moment-là'
+  answer_option_b: un truc de bricolo passioné, seulement quelques prototypes aboutis
   answer_option_c: impossible physiquement
   answer_option_d: moins de pollution de l'air que les voitures à essence
   answer_correct: ad
@@ -31142,7 +31143,7 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-03-14
   created: 2021-03-21
   updated: 2021-03-21
@@ -31166,10 +31167,11 @@
   answer_correct: abcd
   has_ordered_answers: false
   answer_explanation: Il subsiste quelques un de ces "trolley boats" dans le monde.
-    Ailleurs leur vitesse limitée les a rendus obsolètes. Pourtant ils sont bien pratiques
-    pour relier 2 rives proches par exemple. La liaison par câble peut même exercer
-    une force mécanique pour que la barge soit moins déviée par le courant, et économiser
-    encore plus de carburant.
+    Ailleurs, leur vitesse limitée les a rendus obsolètes. Pourtant, ils constituent
+    une alternative peu énergivore pour relier 2 rives proches par exemple. Un autre
+    intérêt de cette technique est que le par câble peut exercer une force mécanique
+    pour que la barge soit moins déviée par le courant, et économiser encore plus
+    de carburant.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2009/12/trolley-canal-boats.html
@@ -31180,7 +31182,7 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-03-14
   created: 2021-03-15
   updated: 2021-03-15
@@ -31201,12 +31203,13 @@
   answer_option_d: dix fois moins vite
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: "Ce cargo impressionnant, le Preussen, atteignait 10 noeuds\
-    \ en moyenne, autant qu'un cargo actuel à mazout consommant 100 tonnes de fioul\
-    \ par jour. Il a coulé suite à une collision avec un autre navire. \nLes émissions\
-    \ cumulées de GES du fret marin équivalent à celles de plusieurs dizaines de millions\
-    \ de voitures. Si toutes les voies maritimes ne s'y prêtent pas du fait de l'orientation\
-    \ des vents, le potentiel à repasser à la marine à voile semble important."
+  answer_explanation: "Ce cargo impressionnant, le Preussen, se déplaçait à une vitesse\
+    \ de 10 nœuds en moyenne, soit aussi vite qu'un cargo actuel à mazout consommant\
+    \ 100 tonnes de fioul par jour. Il a coulé suite à une collision avec un autre\
+    \ navire. \nLes émissions cumulées de GES du fret marin équivalent à celles de\
+    \ plusieurs dizaines de millions de voitures. Si toutes les voies maritimes ne\
+    \ s'y prêtent pas du fait de l'orientation des vents, le potentiel à repasser\
+    \ à la marine à voile semble important."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/2009/04/cargo-ships-then-and-now.html
@@ -31217,17 +31220,17 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-03-14
   created: 2021-03-17
   updated: 2021-03-17
   tags: []
 - id: 879
-  text: La tourbe constituait un combustible fossile majeur pour les économies européennes
-    du XVIIe siècle (une consommation d'énergie par personne aussi grande que la facture
-    d'électricité d'un foyer moyen de nos jours) et même après. Elle est considérée
-    par les scientifiques du GIEC comme un combustible renouvelable, mais combien
-    de temps faut-il pour qu'une couche de tourbe de 3 mètres se renouvelle ?
+  text: 'La tourbe constituait un combustible fossile majeur pour les économies européennes
+    du XVIIe siècle : une consommation d''énergie par personne aussi grande celle
+    électricité d''un foyer moyen de nos jours. Elle est considérée par les scientifiques
+    du GIEC comme un combustible renouvelable. Combien de temps faut-il pour qu''une
+    couche de tourbe de 3 mètres se renouvelle ?'
   hint: ''
   type: QCM
   category: 2
@@ -31255,17 +31258,18 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-03-14
   created: 2021-03-17
   updated: 2021-03-17
   tags:
   - 256
 - id: 880
-  text: Construire un nouveau bâtiment génère des gaz à effet de serre. En particulier
-    pour les bâtiments à bonne efficacité énergétique (béton, matériaux ...). Au bout
-    de combien de temps ces émissions initiales sont-elles amorties par rapport à
-    l'utilisation d'un bâtiment inefficient, mais déjà existant ?
+  text: "La construction d'un nouveau bâtiment est source d'émission de gaz à effet\
+    \ de serre. Et ceci en particulier pour les bâtiments à haute efficacité énergétique\
+    \ (béton, matériaux ...). \nAu bout de combien de temps ces émissions initiales\
+    \ seront-elles compensées par rapport à l'utilisation d'un bâtiment moins efficient,\
+    \ mais déjà existant ?"
   hint: ''
   type: QCM
   category: null
@@ -31276,7 +31280,7 @@
   answer_option_c: 50 ans
   answer_option_d: 100 ans
   answer_correct: c
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'Il faut 50 ans pour que les émissions vieux bâtiment inefficient
     liées à son usage (chauffage …) dépassent celles d''un nouveau bâtiment efficient
     en comptant les émissions dues à sa construction. Ce chiffre dépend des matériaux
@@ -31293,7 +31297,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: A valider
   added: 2021-03-14
   created: 2021-03-15
@@ -31309,14 +31313,14 @@
   category: 5
   difficulty: 3
   language: Français
-  answer_option_a: 0.5 ampoules de 100W
+  answer_option_a: 0,5 ampoules de 100W
   answer_option_b: 20 ampoules de 100W
   answer_option_c: 5 ampoules de 50W
-  answer_option_d: une LED de qulques mW
+  answer_option_d: une LED de quelques mW
   answer_correct: ''
-  has_ordered_answers: false
-  answer_explanation: Cette invention produisait une brillance démentielle, de 1500
-    à 6000 équivalents bougie (une flamme de gaz produit ~100 équivalents bougie).
+  has_ordered_answers: true
+  answer_explanation: Cette invention produisait une brillance phénoménale, de 1,500
+    à 6,000 équivalents bougie (une flamme de gaz produit ~100 équivalents bougie).
     Ces lampes étaient plus efficaces énergétiquement que même les ampoules incandescentes
     de nos jours, et peuvent rivaliser avec les ampoules fluorescentes même si elles
     sont vouées à éclairer l'extérieur (car en hauteur pour éviter les chocs électriques).
@@ -31339,11 +31343,13 @@
   tags:
   - 255
 - id: 882
-  text: Quelle est la force des voûtes catalanes ? (plusieurs réponses possibles)
+  text: "La voûte catalane est une technique multicentenaire qui consiste en une superposition\
+    \ de plusieurs couches de tuiles assemblées à l’aide d’un mortier à prise rapide.\
+    \ \nComment décrire la résistance de la voûte catalane ?"
   hint: ''
   type: QCM-RM
   category: 6
-  difficulty: 2
+  difficulty: 3
   language: Français
   answer_option_a: aussi solides que du béton armé, sans utiliser d'acier
   answer_option_b: permettant des courbes moins prononcées que les voûtes romaines
@@ -31354,24 +31360,26 @@
   answer_explanation: 'Sans utiliser d''acier avec des agencements astucieux défiant
     la gravité, elles sont aussi solides que du béton armé ! Elles permettent des
     courbes moins prononcées que les voûtes romaines, et donc d''espacer les colonnes.
-    Par contre du mortier doit être appliqué pour lier les brique, d''ailleurs amélioré
-    lors de son import aux Etats-Unis fin XIXe siècle : avec du ciment à prise rapide
-    on peut faire des arches encore plus grande !'
+    En revanche, du mortier doit être appliqué pour lier les brique, un mortier qui
+    fut amélioré lors de son import aux Etats-Unis fin XIXe siècle : avec du ciment
+    à prise rapide on peut construire des arches encore plus grande !'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2008/11/tiles-vaults.html
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/New_York_City_City_Hall_subway_station_HAER_image.jpg/800px-New_York_City_City_Hall_subway_station_HAER_image.jpg
-  answer_image_explanation: Guastavino a importé ces voûtes dans la ville de New-York
+  answer_image_explanation: L'architecteGuastavino a importé ces voûtes dans la ville
+    de New-York
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-03-16
   created: 2021-03-17
   updated: 2021-03-17
   tags:
+  - 255
   - 257
 - id: 900
   text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
@@ -31710,9 +31718,10 @@
   tags:
   - 218
 - id: 910
-  text: 'Emissions Train vs Avion : Le Paris - Marseille. Mais combien de fois plus
-    ?'
-  hint: Au tapis... bien sûr
+  text: "Jouons le match Paris-Marseille...pas en football, mais GES avion contre\
+    \ train ! \nBien sûr, c'est l'avion le plus émetteur. Mais combien de fois plus\
+    \ ?"
+  hint: ''
   type: QCM
   category: 2
   difficulty: 3
@@ -31722,19 +31731,14 @@
   answer_option_c: 53 fois plus
   answer_option_d: 75 fois plus
   answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: '74 fois plus exactement. Un chiffre qui se suffit à lui-même.
+  has_ordered_answers: true
+  answer_explanation: 'Le calcul peut être fait sur le site de la DGAC (ne prend pas
+    en compte les émissions dites "non CO2"). Le train TGV est imbattable avec 1.73
+    g CO2e/km. (source SNCF). A noter que les consommations par km de l’avion sont
+    très variables sur les destinations domestiques de 3.7 à 7 litres aux 100 km.
 
-    Faites le calcul sur le site de la DGAC (ne prend pas en compte les émissions
-    dites "non CO2)
-
-    Le train TGV est imbattable avec 1.73 g CO2e / km. (source SNCF)
-
-    A noter que les consommations par km de l’avion sont très variables sur les destinations
-    domestiques de 3.7 à 7 litres aux 100 km.
-
-    C’est selon les types d’avions, les distances entre 344 et 900 km, les coefficients
-    de remplissage…'
+    Cela dépend des types d’avions, des distances et du coefficient de remplissage
+    de l''avion.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://eco-calculateur.dta.aviation-civile.gouv.fr/
@@ -31745,7 +31749,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Écartée
+  validation_status: Brouillon
   added: 2021-01-31
   created: 2021-02-01
   updated: 2021-02-01
@@ -32635,12 +32639,12 @@
   category: 5
   difficulty: 2
   language: English
-  answer_option_a: 100 million
+  answer_option_a: 100,000
   answer_option_b: 1 million
-  answer_option_c: '100000'
+  answer_option_c: 100 million
   answer_option_d: 1 billion
-  answer_correct: ''
-  has_ordered_answers: false
+  answer_correct: c
+  has_ordered_answers: true
   answer_explanation: 100 million barrels per day, i.e. 1 billion years of human labor
     (in energetic slave equivalent), every day! Or over a trillion humans working
     for us every day ...
@@ -32653,36 +32657,35 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-03-15
   created: 2021-03-17
   updated: 2021-03-17
   tags:
   - 11
 - id: 937
-  text: Of the 100 billion metric tons of material that enters the economy each year,
-    what percentage could theoretically be recovered if the circularity processes
-    were perfect?
+  text: 100 billion additional tons of material are injected into the economy each
+    year. Assuming circularity processes were perfect, what part of it could be recovered?
   hint: ''
   type: QCM
   category: 7
   difficulty: 3
   language: English
-  answer_option_a: 99%
-  answer_option_b: 10%
+  answer_option_a: 10%
+  answer_option_b: 33%
   answer_option_c: 50%
-  answer_option_d: 33%
-  answer_correct: d
+  answer_option_d: 99%
+  answer_correct: b
   has_ordered_answers: false
-  answer_explanation: '1/3 of these materials are emitted or dispersed and are therefore
+  answer_explanation: 1/3 of this material is emitted or dispersed and is therefore
     not recoverable, and another third is simply immobilized for a certain time in
-    buildings, objects… (hopefully!). The theoretical limit is therefore 33%: as recycling
-    and recovery are far from perfect, "circularity" was only 8.5% in 2020. This limit
-    shows us that efforts to circularize the economy are not at all sufficient to
-    make our societies "sustainable", due to the laws of physics but also to our will
-    to perpetuate growth, which requires large supply chains nowadays and in the close
-    future.'
+    buildings, objects…The theoretical limit is therefore 33%. However, as recycling
+    and recovery are far from perfect, the circularity rate of economy was only 8.5%
+    in 2020. This limit shows that efforts to make the economy more circular are far
+    from sufficient to make our societies sustainable. Laws of physic are one reason
+    for it, another being the human desire for inifinite growth, which requires larger
+    and larger supply chains.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/2020/01/how-circular-is-the-circular-economy.html
@@ -32692,32 +32695,32 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-03-15
   created: 2021-03-17
   updated: 2021-03-17
   tags:
   - 232
 - id: 938
-  text: Of the mass of plastic produced each year, what percentage is actually reinjected
-    in the closed cycle through recycling (plastic that can be recycled again)?
+  text: What part of the plastic produced every year gets actually recycled in closed
+    cycle?
   hint: ''
   type: QCM
   category: 2
   difficulty: 2
   language: English
-  answer_option_a: 2%
+  answer_option_a: 0.01%
   answer_option_b: 0.1%
-  answer_option_c: 0.01%
+  answer_option_c: 2%
   answer_option_d: 20%
-  answer_correct: a
-  has_ordered_answers: false
-  answer_explanation: 'Currently, 7% to 8% of plastic is recycled (1% in cumulative
-    since 1950). When it is, it becomes mostly (80% of cases) "thermoset", which is
-    a non-recyclable plastic: this only delays a little the production of waste. So
-    less than 2% of plastic is effectively in a closed cycle, and the theoretical
-    limit could be around 20%.'
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: Currently, 7-8% of plastic is recycled - a mere 1% when cumulating
+    since 1950. When so,  it gets transformed in 80% of cases into "thermoset", a
+    non-recyclable plastic. This hence only delays a little bit the ultimate production
+    of waste. So, less than 2% of plastic is effectively processed in a closed cycle,
+    and the theoretical limit could be around 20%.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/think-all-your-plastic-is-being-recycled-new-research-shows-it-can-end-up-in-the-ocean-155208
@@ -32727,15 +32730,58 @@
   answer_image_explanation: '[https://ourworldindata.org/plastic-pollution](https://ourworldindata.org/plastic-pollution)'
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-03-15
   created: 2021-03-17
   updated: 2021-03-17
   tags:
   - 26
+- id: 939
+  text: Among the microplastics found in the ocean, what part comes from the degradation
+    of plastic debris ?
+  hint: Microplastics are the small particles (<5mm) of plastic that are dispersed
+    in the environment.
+  type: QCM
+  category: 3
+  difficulty: 3
+  language: English
+  answer_option_a: 1-2%
+  answer_option_b: 10-20%
+  answer_option_c: 60-80%
+  answer_option_d: 95-99%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'The degradation of (macro) plastic debris produces secondary
+    microplastics, which make up 60-80% of the microplastic measured in the oceans.
+
+    The rest are primary microplastics, coming from direct releases: 1/3 comes from
+    vehicle tires, 1/3 of synthetic textiles, 1/3 of various uses (city "dust"). The
+    (natural) rubber could also be added. 1.5 million tons per year are thus added
+    to the oceans, and thus add up to secondary microplastics. This microplastic is
+    almost irrecoverable, as is the ~ 10% of plastic debris that has sunk to the bottom
+    of the oceans (only 50,000 tons of the 8 Mt of debris added each year (0.6%) would
+    remain on the surface, the rest being rejected on the shores (~ 90%)). The "cleaning"
+    of the oceans is therefore more complicated than it looks.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.iucn.org/content/primary-microplastics-oceans
+  answer_scientific_url: https://iopscience.iop.org/article/10.1088/1748-9326/ab7836
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/939.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Validée
+  added: 2021-03-15
+  created: 2021-03-22
+  updated: 2021-03-22
+  tags:
+  - 9
+  - 26
 - id: 940
-  text: Metal recycling is limited by ...
+  text: What limits metal recycling?
   hint: ''
   type: QCM
   category: 7
@@ -32753,11 +32799,12 @@
   answer_explanation: 'All metals are theoretically 100% recyclable. While it is easy
     to recycle bulky metals used in large volumes (aluminum, iron, etc.) by remelting
     them, others are however used in tiny quantities in various devices (electronics
-    for gold and palladium for example), or in the form of alloys, which greatly limit
-    recycling. There are losses everywhere, and some uses are dispersive by nature:
-    inks, paint pigments, cosmetics ... It is indeed more difficult and less profitable
-    to recycle than to mine for the moment, and that will probably last for a while
-    since many use of metals do not take into account recycling considerations.'
+    for gold and palladium for example), or in the form of alloys. This greatly limits
+    recycling. There are losses at every step of the process nd some uses are dispersive
+    by their very nature: inks, paint pigments, cosmetics... It is indeed sometimes
+    more difficult and less profitable to recycle than to mine for the moment, and
+    that will probably last for a while since many use of metals do not take into
+    account recycling considerations.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -32767,25 +32814,27 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-03-15
   created: 2021-03-17
   updated: 2021-03-17
   tags:
+  - 17
+  - 36
   - 235
 - id: 942
   text: What is the infrastructure inertia?
-  hint: (in ecology)
+  hint: ''
   type: QCM
   category: 2
   difficulty: 3
   language: English
   answer_option_a: The tendency for technological improvement to increase the total
     impact, as this technology is increasingly used.
-  answer_option_b: '''Stationary infrastructure is easier to decarbonize than mobile
-    sources of emissions such as vehicles'
-  answer_option_c: That there is a latency and a cost in energy / materials to replace
+  answer_option_b: Stationary infrastructure is easier to decarbonize than mobile
+    sources of emissions such as vehicles
+  answer_option_c: The latency and cost incurred in energy / materials to replace
     the existing structures with their more eco-friendly counterparts.
   answer_option_d: Strong corporate oppositions make ecological footprint of infrastructure
     difficult to regulate
@@ -32808,38 +32857,38 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-03-15
   created: 2021-03-17
   updated: 2021-03-17
   tags:
   - 255
 - id: 943
-  text: What percentage of electrical and electronic waste (WEEE) leaves official
-    treatment chains, and ends up exported to poor countries?
+  text: What percentage of electrical and electronic waste (WEEE) exits the official
+    processing chains and ends up exported to poor countries?
   hint: ''
   type: QCM
   category: 2
   difficulty: 2
   language: English
-  answer_option_a: ~60%
-  answer_option_b: ~30%
-  answer_option_c: ~10%
-  answer_option_d: ~1%
-  answer_correct: a
+  answer_option_a: ~1%
+  answer_option_b: ~10%
+  answer_option_c: ~30%
+  answer_option_d: ~60%
+  answer_correct: d
   has_ordered_answers: false
-  answer_explanation: '60% of WEEE in Europe and the USA leaves the legal treatment
+  answer_explanation: '60% of WEEE in Europe and the USA exits the legal treatment
     network. The devices left in the street are hijacked by scrap dealers or traffickers,
-    who recover valuable parts (precious metals ...) to the detriment of direct pollution
-    (e.g. : compressor or refrigerator). Sometimes waste reception centers are directly
+    who recover valuable parts (precious metals ...) at the expense of direct pollution
+    (e.g. : compressors or refrigerators). Sometimes waste reception centers are directly
     attacked or internally stolen. Resale abroad is then facilitated by legal loopholes
     (e.g. a car full of devices can pass customs as a simple vehicle), the lack of
-    personnel and the inability to check the working condition, as well as the pressure
-    from actors who benefit from this market. The Internet promotes the online negotiation
-    of such waste, which ends up either in China or directly in Africa, following
-    transport by cargo ship. The corruption of customs officials in these countries
-    allows the entry of defective devices declared as second-hand, and end up boned
-    by poor populations, without environmental standards.'
+    personnel and the inability to check the working conditions, as well as the pressure
+    from individuals who benefit from this market. The Internet promotes the online
+    negotiation of such waste, which ends up either in China or directly in Africa.
+    The corruption of customs officials in these countries allows the entry of defective
+    devices declared as second-hand, and end up boned by poor populations, without
+    any environmental standards whatsoever.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: http://www.basel.int/Implementation/TechnicalAssistance/MOOC/tabid/4966/Default.aspx
@@ -32850,7 +32899,7 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-03-15
   created: 2021-03-17
   updated: 2021-03-17
@@ -32871,32 +32920,33 @@
   answer_option_d: between ×0.5 million and ×8 million
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: 'The total data created everywhere (industries ...) has increased
-    from 100 million TB / year (2005) to 800 billion TB / year (2020), i.e. × 8000.
-    Correcting by the increase in the number of Internet users, the ratio is still
-    × 2000. During these 15 years, the amount of data circulating on the Internet
-    has multiplied by "only" 100 (see https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic).
-    It should be noted that all the data created is very approximate to evaluate:
-    for example Statista rather claimed 50 billion TB in 2020. This figure could be
-    multiplied again by 50 over the next 15 years (until 2035).'
+  answer_explanation: The total data created everywhere (industries ...) has increased
+    from 100 million terabytes/year (2005) to 800 billion terabytes /year (2020),
+    i.e. × 8000. Correcting by the increase in the number of Internet users, the ratio
+    is still × 2000. Over these 15 years, the amount of data circulating on the Internet
+    has increased by "only" a factor of 100. It should be noted that all the data
+    created is very approximate to evaluate. For example, Statista rather claimed
+    50 billion TB in 2020. This figure could be multiplied again by 50 over the next
+    15 years (until 2035).
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://blogs.cisco.com/sp/five-things-that-are-bigger-than-the-internet-findings-from-this-years-global-cloud-index
   answer_scientific_url: https://www.statista.com/topics/1464/big-data/
-  answer_reading_recommendation: '[3] IDC, cited by [https://www.economist.com/special-report/2010/02/27/data-data-everywhere](https://www.economist.com/special-report/2010/02/27/data-data-everywhere)'
+  answer_reading_recommendation: "[https://www.economist.com/special-report/2010/02/27/data-data-everywhere](https://www.economist.com/special-report/2010/02/27/data-data-everywhere),\
+    \ \n[https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic](https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic))."
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/945.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-03-15
   created: 2021-03-17
   updated: 2021-03-17
   tags:
   - 30
 - id: 946
-  text: The extraction and processing of all resources (materials, fuels, food…) contribute
+  text: Extraction and processing of all resources (materials, fuels, food…) contribute
     to…?
   hint: ''
   type: QCM
@@ -32927,7 +32977,7 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-03-15
   created: 2021-03-16
   updated: 2021-03-16
@@ -32971,19 +33021,19 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-03-15
   created: 2021-03-16
   updated: 2021-03-16
   tags:
   - 234
 - id: 948
-  text: L'extraction et la transformation des ressources (matériaux, combustibles,
-    aliments…) contribuent à...
+  text: Pour estimer les impacts de l'extraction et de la transformation des ressources
+    (matériaux, combustibles, aliments…), laquelle de ces affirmations est vraie ?
   hint: ''
   type: QCM
   category: 7
-  difficulty: 3
+  difficulty: 4
   language: Français
   answer_option_a: la moitié des GES anthropiques, 90% du stress hydrique et de la
     destruction de biodiversité liée aux terres
@@ -32998,18 +33048,18 @@
   answer_explanation: Le reste est dû aux autres activités économiques et aux ménages
     (chiffres de 2019). Alors que les GES sont plutôt équilibrés entre les secteurs,
     le stress hydrique et la perte de biodiversité liée à l'utilisation des terres
-    sont dû pour 94% à l'usage de la biomasse (aliments ...)
+    sont dû pour 94% à l'usage de la biomasse (aliments ...).
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.unenvironment.org/fr/actualites-et-recits/communique-de-presse/lonu-appelle-reconsiderer-de-toute-urgence-lutilisation
   answer_scientific_url: https://www.resourcepanel.org/reports/global-resources-outlook
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/948.png
-  answer_image_explanation: PNUE
+  answer_image_explanation: 'Source : PNUE'
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-03-16
   created: 2021-03-17
   updated: 2021-03-17
