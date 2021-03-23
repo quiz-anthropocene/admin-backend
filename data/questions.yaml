@@ -31002,9 +31002,10 @@
   tags:
   - 14
 - id: 870
-  text: De toute l'énergie finale que l'humanité utilise, quelle est la part d'énergie
-    thermique (chaleur) ?
-  hint: ''
+  text: De toute l'énergie utile que l'humanité utilise actuellement, quelle est la
+    part d'énergie thermique (chaleur) ?
+  hint: Quel type d'énergie consomme-t-on en fin de course ? On convertit beaucoup
+    d'électricité en chaleur mais dans ce cas c'est de chaleur qu'on a besoin ...
   type: QCM
   category: 5
   difficulty: 2
@@ -31078,6 +31079,42 @@
   - 1
   - 197
   - 216
+- id: 872
+  text: De combien réduit-on son impact environnemental en optant pour l'achat d'un
+    smartphone reconditionné plutôt que d'un neuf ?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 1
+  language: Français
+  answer_option_a: 1%
+  answer_option_b: 10%
+  answer_option_c: 50%
+  answer_option_d: 90%
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: L’impact d’un smartphone reconditionné est équivalent à 10 %
+    de celui d’un neuf. En outre, un produit re-fabriqué peut être jusqu'à 50% moins
+    cher à produire. Cependant, favoriser le reconditionné peut avoir comme effet
+    pervers de "justifier" la mise au rebut rapide de téléphones sur leur 1er cycle
+    de vie, et donc générer un effet rebond..
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://agirpourlatransition.ademe.fr/particuliers/conso/conso-responsable/acheter-smartphone-reconditionne-avantages
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/872.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-03-14
+  created: 2021-03-23
+  updated: 2021-03-23
+  tags:
+  - 30
+  - 36
 - id: 875
   text: Aux voitures de quelle époque peut-on comparer l'autonomie des voitures électriques
     actuelles (Nissan Leaf ou Mitsubishi i-MiEV)... ?
@@ -31125,7 +31162,7 @@
     touts véhicules non-militaires, principal remplacement de l''essence à ce moment-là'
   answer_option_b: un truc de bricolo passioné, seulement quelques prototypes aboutis
   answer_option_c: impossible physiquement
-  answer_option_d: moins de pollution de l'air que les voitures à essence
+  answer_option_d: Cela produit moins de pollution de l'air que les voitures à essence
   answer_correct: ad
   has_ordered_answers: false
   answer_explanation: 'Des voitures pas du tout aérodynamiques, avec un gros réservoir
@@ -31251,9 +31288,9 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2011/09/peat-and-coal-fossil-fuels-in-pre-industrial-times.html
-  answer_scientific_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/879.png
+  answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/879.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -31344,17 +31381,17 @@
   - 255
 - id: 882
   text: "La voûte catalane est une technique multicentenaire qui consiste en une superposition\
-    \ de plusieurs couches de tuiles assemblées à l’aide d’un mortier à prise rapide.\
-    \ \nComment décrire la résistance de la voûte catalane ?"
+    \ de plusieurs couches de tuiles assemblées à l’aide d’un mortier. \nComment décrire\
+    \ la résistance de la voûte catalane ?"
   hint: ''
   type: QCM-RM
   category: 6
   difficulty: 3
   language: Français
-  answer_option_a: aussi solides que du béton armé, sans utiliser d'acier
-  answer_option_b: permettant des courbes moins prononcées que les voûtes romaines
-  answer_option_c: un besoin en colonne porteuse moins grand
-  answer_option_d: de ne pas utiliser de mortier
+  answer_option_a: Elles sont aussi solides que du béton armé, sans utiliser d'acier
+  answer_option_b: Elles permettent des courbes moins prononcées que les voûtes romaines
+  answer_option_c: Elles nécessitent moins de colonnes porteuses
+  answer_option_d: Le mortier est optionnel tant que la clé de voûte est bien construite
   answer_correct: abc
   has_ordered_answers: false
   answer_explanation: 'Sans utiliser d''acier avec des agencements astucieux défiant
@@ -31366,10 +31403,10 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2008/11/tiles-vaults.html
-  answer_scientific_url: ''
+  answer_scientific_url: https://en.wikipedia.org/wiki/Guastavino_tile
   answer_reading_recommendation: ''
   answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/New_York_City_City_Hall_subway_station_HAER_image.jpg/800px-New_York_City_City_Hall_subway_station_HAER_image.jpg
-  answer_image_explanation: L'architecteGuastavino a importé ces voûtes dans la ville
+  answer_image_explanation: L'architecte Guastavino a importé ces voûtes dans la ville
     de New-York
   answer_extra_info: ''
   author: Max Pinsard
@@ -31718,9 +31755,9 @@
   tags:
   - 218
 - id: 910
-  text: "Jouons le match Paris-Marseille...pas en football, mais GES avion contre\
-    \ train ! \nBien sûr, c'est l'avion le plus émetteur. Mais combien de fois plus\
-    \ ?"
+  text: "Jouons le match Paris-Marseille...pas en football, mais GES de l'avion contre\
+    \ GES du train ! \nBien sûr, c'est l'avion le plus émetteur. Mais combien de fois\
+    \ plus ?"
   hint: ''
   type: QCM
   category: 2
@@ -31732,13 +31769,12 @@
   answer_option_d: 75 fois plus
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: 'Le calcul peut être fait sur le site de la DGAC (ne prend pas
-    en compte les émissions dites "non CO2"). Le train TGV est imbattable avec 1.73
-    g CO2e/km. (source SNCF). A noter que les consommations par km de l’avion sont
-    très variables sur les destinations domestiques de 3.7 à 7 litres aux 100 km.
-
-    Cela dépend des types d’avions, des distances et du coefficient de remplissage
-    de l''avion.'
+  answer_explanation: Le calcul peut être fait sur le site de la DGAC donné ci-dessous.
+    (Le site ne prend pas en compte les émissions dites "non CO2"). Le train TGV est
+    imbattable avec 1.73 g CO2e/km. (source SNCF). A noter que les consommations par
+    km de l’avion sont très variables sur les destinations domestiques de 3.7 à 7
+    litres aux 100 km. Cela dépend des types d’avions, des distances et du coefficient
+    de remplissage de l'avion.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://eco-calculateur.dta.aviation-civile.gouv.fr/
@@ -32684,8 +32720,8 @@
     and recovery are far from perfect, the circularity rate of economy was only 8.5%
     in 2020. This limit shows that efforts to make the economy more circular are far
     from sufficient to make our societies sustainable. Laws of physic are one reason
-    for it, another being the human desire for inifinite growth, which requires larger
-    and larger supply chains.
+    for it, another being the human desire for inifinite growth, which requires increasingly
+    large supply chains.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/2020/01/how-circular-is-the-circular-economy.html
@@ -32703,8 +32739,8 @@
   tags:
   - 232
 - id: 938
-  text: What part of the plastic produced every year gets actually recycled in closed
-    cycle?
+  text: What share of the annual production of plastic truly gets recycled (in closed
+    cycle)?
   hint: ''
   type: QCM
   category: 2
@@ -32807,15 +32843,15 @@
     account recycling considerations.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.resourcepanel.org/reports/metal-recycling
+  answer_scientific_url: https://science.sciencemag.org/content/337/6095/690
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/940.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-03-15
   created: 2021-03-17
   updated: 2021-03-17
@@ -32841,12 +32877,12 @@
   answer_correct: c
   has_ordered_answers: false
   answer_explanation: 'When one wants to replace a technology with its less polluting
-    version, one significant limitation is that a whole fleet is already well deployed
-    and multiple. Replacing it requires an enormous amount of (embodied) energy and
-    materials, as well as a considerable amount of time. This is true for the object
-    itself, but also for the entire production / distribution / end-of-life chain:
-    you have to know what to do with the technology you replace that are now obsolete.
-    So the "park effect" is a scaling limitation.'
+    version, a significant limitation is that a whole fleet is already well deployed.
+    Replacing it requires an enormous amount of (embodied) energy and materials, as
+    well as a huge amount of time. This is true for the object itself, but also for
+    the entire production / distribution / end-of-life chain: you have to know what
+    to do with the technologies you replace that are now obsolete. This "infrastructure
+    inertia" is thus a scaling limitation.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://bristoluniversitypress.co.uk/the-age-of-low-tech
@@ -33028,27 +33064,26 @@
   tags:
   - 234
 - id: 948
-  text: Pour estimer les impacts de l'extraction et de la transformation des ressources
-    (matériaux, combustibles, aliments…), laquelle de ces affirmations est vraie ?
-  hint: ''
+  text: L'extraction et la transformation des ressources (matériaux, combustibles,
+    aliments…) est responsable du stress hydrique et de la destruction de la biodiversité
+    à hauteur de ... ?
+  hint: Perte de biodiv liée à l'utilisation des terres
   type: QCM
   category: 7
   difficulty: 4
   language: Français
-  answer_option_a: la moitié des GES anthropiques, 90% du stress hydrique et de la
-    destruction de biodiversité liée aux terres
-  answer_option_b: 90% des GES anthropiques, 50% du stress hydrique et de la destruction
-    de biodiversité liée aux terres
-  answer_option_c: 20% des GES anthropiques, 50% du stress hydrique et de la destruction
-    de biodiversité liée aux terres
-  answer_option_d: la moitié des GES anthropiques, 10% du stress hydrique et de la
-    destruction de biodiversité liée aux terres
+  answer_option_a: 90%
+  answer_option_b: 50%
+  answer_option_c: 30%
+  answer_option_d: 10% du stress hydrique et de la destruction de biodiversité liée
+    aux terres
   answer_correct: a
   has_ordered_answers: false
-  answer_explanation: Le reste est dû aux autres activités économiques et aux ménages
-    (chiffres de 2019). Alors que les GES sont plutôt équilibrés entre les secteurs,
-    le stress hydrique et la perte de biodiversité liée à l'utilisation des terres
-    sont dû pour 94% à l'usage de la biomasse (aliments ...).
+  answer_explanation: 'Le reste est dû aux autres activités économiques et aux ménages
+    (chiffres de 2019). Le stress hydrique et la perte de biodiversité (liée à l''utilisation
+    des terres) sont en particulier largement dus à l''usage de la biomasse (aliments
+    ..., en vert sur le graphique). Enfin, l''extraction des ressources c''est aussi
+    la moitié des GES anthropiques ! '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.unenvironment.org/fr/actualites-et-recits/communique-de-presse/lonu-appelle-reconsiderer-de-toute-urgence-lutilisation
