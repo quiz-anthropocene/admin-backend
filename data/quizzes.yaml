@@ -700,3 +700,18 @@
   - 40
   - 225
   - 227
+- id: 67
+  name: Des low-techs tombées dans l'oubli
+  introduction: ''
+  conclusion: ''
+  difficulty_average: 2.5
+  language: Français
+  author: Max Pinsard
+  image_background_url: ''
+  has_audio: false
+  publish: false
+  spotlight: false
+  created: 2021-03-23
+  updated: 2021-03-23
+  tags:
+  - 255

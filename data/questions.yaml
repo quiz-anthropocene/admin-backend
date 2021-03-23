@@ -29856,45 +29856,37 @@
   - 37
   - 230
 - id: 840
-  text: Metal recycling is limited by ...
+  text: Combien de personnes meurent  chaque année de l'absence d'eau potable ?
   hint: ''
   type: QCM
   category: 7
-  difficulty: 2
-  language: English
-  answer_option_a: They are 100% recyclable, but are not sufficiently collected in
-    the end-of-life part of the value chain.
-  answer_option_b: It is cheaper to mine raw metals than to recycle them, but when
-    stocks run out, recycling will take off.
-  answer_option_c: Dispersive uses, complex alloys, separation processes, losses at
-    the source.
-  answer_option_d: Many metals are not physically recyclable.
+  difficulty: 3
+  language: Français
+  answer_option_a: 500,000
+  answer_option_b: 1,2 million
+  answer_option_c: 5,2 millions
+  answer_option_d: 10 millions
   answer_correct: c
-  has_ordered_answers: false
-  answer_explanation: 'All metals are theoretically 100% recyclable. While it is easy
-    to recycle bulky metals used in large volumes (aluminum, iron, etc.) by remelting
-    them, others are however used in tiny quantities in various devices (electronics
-    for gold and palladium for example), or in the form of alloys, which greatly limit
-    recycling. There are losses everywhere, and some uses are dispersive by nature:
-    inks, paint pigments, cosmetics ... It is indeed more difficult and less profitable
-    to recycle than to mine for the moment, and that will probably last for a while
-    since many use of metals do not take into account recycling considerations.'
+  has_ordered_answers: true
+  answer_explanation: 'Plus de 1,2 million de personnes meurent chaque année de l''absence
+    d''eau potable sûre, principalement à cause de maladies diarrhéiques. C''est à
+    peu près l''équivalent du nombre de morts sur la route. '
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://ourworldindata.org/water-access#unsafe-water-is-a-leading-risk-factor-for-death
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Max Pinsard
+  author: Baptiste Leveque
   validator: ''
   validation_status: Brouillon
-  added: 2021-03-15
+  added: 2021-01-21
   created: 2021-01-26
   updated: 2021-01-26
   tags:
-  - 235
+  - 37
 - id: 841
   text: Selon l'ONU, quel serait le montant à investir pour garantir à tous l'accès
     à l'eau potable et à l'assainissement ?
@@ -31115,6 +31107,79 @@
   tags:
   - 30
   - 36
+- id: 873
+  text: Combien de figurines Playmobil® a-t-on produits depuis leur mise sur le marché
+    en 1974 ?
+  hint: ''
+  type: QCM-RM
+  category: 2
+  difficulty: 2
+  language: English
+  answer_option_a: De quoi en donner 2 ou 3 à chaque enfant du monde
+  answer_option_b: De quoi en donner 20 à 30 à chaque enfant du monde
+  answer_option_c: De quoi en donner 1 à chaque enfant en Chine
+  answer_option_d: De quoi en donner 1 à chaque enfant en France
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: 'Vu qu''il sont plutôt solides et stables dans le temps, on
+    pourrait ainsi en donner plusieurs à chaque enfant du monde si on les avait tous
+    conservés ! Mais bien sûr, une bonne partie a déjà été jetée et broyée, ou oubliée
+    dans les tiroirs...
+
+    Cela illustre que nos sociétés ont déjà produit beaucoup de choses, qu''il s''agirait
+    de mieux redistribuer et qui viennent questionner les logiques productivistes.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.lapresse.ca/affaires/economie/commerce-de-detail/201312/06/01-4718237-playmobil-limagination-au-pouvoir-depuis-40-ans.php
+  answer_scientific_url: ''
+  answer_reading_recommendation: L'âge des low tech, Ph. Bihouix, 2017
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/873.png
+  answer_image_explanation: '[https://www.laboiteverte.fr/a-linterieur-dune-usine-de-playmobils/](https://www.laboiteverte.fr/a-linterieur-dune-usine-de-playmobils/)'
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-03-14
+  created: 2021-03-23
+  updated: 2021-03-23
+  tags:
+  - 252
+- id: 874
+  text: Avant les grues électriques, il existait des grue mues par la seule force
+    humaine. La plus puissante d'entre elles démultipliait la force exercée par les
+    opérateurs d'un facteur…?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  language: Français
+  answer_option_a: '6'
+  answer_option_b: '60'
+  answer_option_c: '600'
+  answer_option_d: 6,000
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: A Keyham en Grande-Bretagne une grue de 60 tonnes donnait un
+    rendement de 1:600 (et pouvait soulever 5 fois son poids). Deux hommes seuls peuvent
+    manipuler la grue avec 60 tonnes suspendues à l’extrémité de la flèche. De nos
+    jours, nous utilisons des machines électriques et exerçons notre force physique
+    dans des salles de sport...
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/fr/2010/03/history-of-human-powered-cranes.html
+  answer_scientific_url: https://archive.org/details/usefulinformati09fairgoog/page/n207/mode/2up
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/874.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-03-14
+  created: 2021-03-23
+  updated: 2021-03-23
+  tags:
+  - 255
 - id: 875
   text: Aux voitures de quelle époque peut-on comparer l'autonomie des voitures électriques
     actuelles (Nissan Leaf ou Mitsubishi i-MiEV)... ?
@@ -31261,7 +31326,8 @@
   added: 2021-03-14
   created: 2021-03-17
   updated: 2021-03-17
-  tags: []
+  tags:
+  - 255
 - id: 879
   text: 'La tourbe constituait un combustible fossile majeur pour les économies européennes
     du XVIIe siècle : une consommation d''énergie par personne aussi grande celle
@@ -31351,10 +31417,10 @@
   difficulty: 3
   language: Français
   answer_option_a: 0,5 ampoules de 100W
-  answer_option_b: 20 ampoules de 100W
-  answer_option_c: 5 ampoules de 50W
+  answer_option_b: 2,5 ampoules de 50W
+  answer_option_c: 20 ampoules de 100W
   answer_option_d: une LED de quelques mW
-  answer_correct: ''
+  answer_correct: c
   has_ordered_answers: true
   answer_explanation: Cette invention produisait une brillance phénoménale, de 1,500
     à 6,000 équivalents bougie (une flamme de gaz produit ~100 équivalents bougie).
@@ -31373,7 +31439,7 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-03-16
   created: 2021-03-21
   updated: 2021-03-21
@@ -32859,6 +32925,42 @@
   - 17
   - 36
   - 235
+- id: 941
+  text: In average, what share of metals - such as cadmium, cobalt, tin, lead - end
+    up in dispersive use (i.e. micro- or nanoparticles)?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  language: English
+  answer_option_a: neglectable
+  answer_option_b: 1-2%
+  answer_option_c: 10-15%
+  answer_option_d: 80-90%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'The dispersive uses of these metals are evaluated at 10-15%
+    of the total mass used (pigments, additives, etc.), but can reach much higher
+    proportions for some (95% for titanium!). There is also a huge variety according
+    to the usages (eg: catalytic converters releasing particles of platinum, colbalt,
+    zinc ...).'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: https://pubs.acs.org/doi/abs/10.1021/es505515z
+  answer_reading_recommendation: The Age of Low Tech, Philippe Bihouix
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/941.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-03-15
+  created: 2021-03-23
+  updated: 2021-03-23
+  tags:
+  - 36
+  - 235
 - id: 942
   text: What is the infrastructure inertia?
   hint: ''
@@ -32939,6 +33041,40 @@
   added: 2021-03-15
   created: 2021-03-17
   updated: 2021-03-17
+  tags:
+  - 228
+  - 229
+- id: 944
+  text: Our societies use a significant mass of matter every year. Which of the following
+    statements are true?
+  hint: ''
+  type: QCM-RM
+  category: 2
+  difficulty: 3
+  language: English
+  answer_option_a: 10 times more sand used than cement
+  answer_option_b: 100 times more fresh water than sand
+  answer_option_c: 5 times more iron than cement and aluminum
+  answer_option_d: Billions of tons of iron and cement
+  answer_correct: abd
+  has_ordered_answers: false
+  answer_explanation: In billion metric tons used every year, the fresh water exploited
+    amounts 4,000, the sand to 41, the gravel 9, the cement 4. By constrat, the iron
+    consumption is 'only' 3 billion tons, and aluminum 60 million tons.
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.visualcapitalist.com/all-the-worlds-metals-and-minerals-in-one-visualization/
+  answer_scientific_url: https://www.oecd.org/environment/raw-materials-use-to-double-by-2060-with-severe-environmental-consequences.htm
+  answer_reading_recommendation: '[https://ourworldindata.org/water-use-stress](https://ourworldindata.org/water-use-stress)'
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/944.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Validée
+  added: 2021-03-15
+  created: 2021-03-23
+  updated: 2021-03-23
   tags:
   - 228
   - 229
