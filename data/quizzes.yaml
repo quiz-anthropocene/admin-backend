@@ -715,3 +715,18 @@
   updated: 2021-03-23
   tags:
   - 255
+- id: 68
+  name: Low tech Collage - current issues
+  introduction: ''
+  conclusion: ''
+  difficulty_average: 0.0
+  language: Français
+  author: Max Pinsard
+  image_background_url: ''
+  has_audio: false
+  publish: false
+  spotlight: true
+  created: 2021-03-24
+  updated: 2021-03-24
+  tags:
+  - 255
