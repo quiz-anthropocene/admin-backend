@@ -10324,7 +10324,7 @@
     https://twitter.com/laydgeur/status/1176947315720040448'
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2019-09-25
   created: 2020-05-20
   updated: 2020-09-28
@@ -25455,7 +25455,7 @@
   answer_accessible_url: http://www.ftwatch.at/wp-content/uploads/2017/10/FT-Watch_Green-Flying_2017.pdf
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/717.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/717.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25681,7 +25681,7 @@
   answer_accessible_url: https://www.latribune.fr/entreprises-finance/industrie/aeronautique-defense/quand-airbus-helicopters-voit-l-avenir-en-rose-753410.html#:~:text=Selon%20une%20%C3%A9tude%20de%20march%C3%A9%20d'Airbus%20Helicopters%20(AH),et%20les%20pi%C3%A8ces%20de%20rechange.
   answer_scientific_url: https://www.facebook.com/757915144314007/videos/1077571789259770
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/723-1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25724,7 +25724,7 @@
   answer_accessible_url: https://www.liberation.fr/checknews/2019/08/07/combien-consomme-le-flyboard-de-franky-zapata_1743786
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/724-1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25805,10 +25805,10 @@
     Il semblerait selon certains que Ryanair pourrait s’inspirer de ce vol historique.'
   answer_audio: ''
   answer_video: https://www.youtube.com/watch?v=IKd-x4dutrE&feature=youtu.be&ab_channel=SimpleFlying
-  answer_accessible_url: ''
+  answer_accessible_url: https://simpleflying.com/fr/le-jour-ou-1122-passagers-ont-vole-a-bord-d-un-seul-747/
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/726.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26049,7 +26049,7 @@
     10% sur les vols nationaux'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.ouest-france.fr/leditiondusoir/data/17217/reader/reader.html#!preferred/1/package/17217/pub/24756/page/8
+  answer_accessible_url: https://www.ouest-france.fr/leditiondusoir/2018-01-18/pourquoi-le-kerosene-est-il-completement-detaxe-83f0840c-e9bc-4e3b-ab81-83495ba02ee5
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
@@ -26081,15 +26081,34 @@
   answer_explanation: 'La TICPE, Taxe Intérieure sur la Consommation des Produits
     Énergétiques
 
-    Mais le TA en est exonéré depuis 75 ans.'
+    Mais le TA en est exonéré depuis 75 ans.
+
+    A la sortie de la guerre les États-Unis ont voulu donner de l’activité à leurs
+    usines d’avions militaires en favorisant l’aviation civile et les liaisons internationales.
+
+    Et 75 ans plus tard ce privilège persiste.
+
+    Le kérosène utilisé pour les vols internationaux est non taxé en vertu de la convention
+    de Chicago de 1944.
+
+    La convention précise dans l''article 24 relatif aux droits de douane que le carburant
+    contenu dans les réservoirs d’un avion à l''arrivée dans un pays ne peut pas être
+    taxé. Par la suite, de nombreux pays signent des accords bilatéraux empêchant
+    toute taxation du kérosène6.
+
+    En France :
+
+    « le transport aérien (article 265 bis du code des douanes) : les livraisons de
+    produits pétroliers à l’avitaillement des avions commerciaux (autre que les avions
+    de tourisme) sont exonérées de TICPE »'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ecologie.gouv.fr/fiscalite-des-energies#e4
   answer_scientific_url: https://fr.wikipedia.org/wiki/Convention_de_Chicago
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/732.png
   answer_image_explanation: ''
-  answer_extra_info: https://www.ouest-france.fr/leditiondusoir/data/17217/reader/reader.html#!preferred/1/package/17217/pub/24756/page/8
+  answer_extra_info: https://www.ouest-france.fr/leditiondusoir/2018-01-18/pourquoi-le-kerosene-est-il-completement-detaxe-83f0840c-e9bc-4e3b-ab81-83495ba02ee5
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
@@ -26127,7 +26146,7 @@
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
-  answer_extra_info: https://www.ouest-france.fr/leditiondusoir/data/17217/reader/reader.html#!preferred/1/package/17217/pub/24756/page/8
+  answer_extra_info: https://www.ouest-france.fr/leditiondusoir/2018-01-18/pourquoi-le-kerosene-est-il-completement-detaxe-83f0840c-e9bc-4e3b-ab81-83495ba02ee5
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
@@ -26191,20 +26210,20 @@
 
     Les avionneurs et les compagnies aériennes bénéficient de subventions importantes.
 
-    Tout le monde - y compris ceux qui ne volent pas - paie ces subventions pour que
-    le mode de transport des plus aisés reste bon marché.
+    Tout le monde - y compris ceux qui ne volent pas - paient ces subventions.
 
-    Tous les inconvénients exposés - du changement climatique au déplacement de population
-    dû à l''expansion des aéroports - soulèvent la question de savoir si l''objectif
-    peut vraiment être de faire de tout le monde des voyageurs fréquents,
+    A l’heure de l’urgence climatique se pose la question de la remise en cause des
+    ces niches fiscales sachant que le transport aérien est le mode de transport qui
+    pollue le plus par unité de temps.
 
-    ou si les voyages aériens doivent en fait être limités.'
+    Cela crée une distorsion de concurrence avec le train, qui sur les longues distances
+    pollue entre 40 et 80 fois moins que l’avion.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: http://www.ftwatch.at/wp-content/uploads/2017/10/FT-Watch_Green-Flying_2017.pdf
   answer_scientific_url: https://www.franceculture.fr/emissions/les-nouvelles-de-leco/les-nouvelles-de-leco-du-mercredi-22-mai-2019
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/735.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/735.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26412,7 +26431,7 @@
   answer_accessible_url: https://veroniquecloutier.com/environnement/mollets-contre-moteur
   answer_scientific_url: https://www.ibiketo.ca/blog/2009/07/13/embodied-energy-our-vehicles
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/741.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/741.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -26456,7 +26475,7 @@
   answer_accessible_url: ''
   answer_scientific_url: https://pubs.acs.org/doi/abs/10.1021/es505515z
   answer_reading_recommendation: L'age des low-techs, Ph. Bihouix
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/742.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/742.png
   answer_image_explanation: '[https://www.pavisa.com.mx/fr/dou-viennent-les-differentes-couleurs-du-verre/](https://www.pavisa.com.mx/fr/dou-viennent-les-differentes-couleurs-du-verre/)'
   answer_extra_info: ''
   author: Max Pinsard
@@ -26496,7 +26515,7 @@
   answer_accessible_url: https://www.ademe.fr/expertises/dechets/chiffres-cles-observation/dossier/caracterisation-dechets/campagne-nationale-caracterisation-dechets-menagers-assimiles
   answer_scientific_url: https://www.actu-environnement.com/media/pdf/news-35407-chiffres-cles-dechets-2019.pdf
   answer_reading_recommendation: L'age des low-techs", Ph. Bihouix
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/743.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/743.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -27418,13 +27437,20 @@
   answer_option_d: '25'
   answer_correct: a
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: '4 litres
+
+    Pour une même quantité d’énergie embarquée, il faut un volume 4 fois plus important.
+
+    Et ce n’est pas tout, le stockage se fait à -253°C pour H2 liquide.
+
+    Autrement dit il faut embarquer des moyens très conséquents en termes d’isolation
+    et pour maintenir une telle température.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: http://acti-ve.org/avenir-du-transport-personnel-est-pas-du-tout-a-la-voiture-a-hydrogene/mobilite-electrique/2019/08/
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/771.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -27438,7 +27464,8 @@
   - 217
   - 218
 - id: 772
-  text: Quel volume d’H2 Gazeux pour 1 litre d’essence ?
+  text: A quantité d’énergie égale, quel volume d’H2 gazeux pour 1 litre d’essence
+    ?
   hint: ''
   type: QCM
   category: 5
@@ -27450,13 +27477,20 @@
   answer_option_d: '25'
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: '7 litres
+
+    Pour une même quantité d’énergie embarquée, il faut un volume 7 fois plus important.
+
+    Pour corser le tout, le stockage se fait à 700 bar à l’état gazeux.
+
+    La pression est tellement grande et la molécule si petite que les fuites sont
+    inévitables, même à travers des réservoirs en acier.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: http://acti-ve.org/avenir-du-transport-personnel-est-pas-du-tout-a-la-voiture-a-hydrogene/mobilite-electrique/2019/08/
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/772.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -28180,7 +28214,7 @@
   answer_accessible_url: https://www.eib.org/en/surveys/climate-survey/3rd-climate-survey/what-to-give-up-for-climate-change#anchor-1
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/791.png
+  answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -28214,7 +28248,7 @@
   answer_accessible_url: https://fr.wikipedia.org/wiki/Routes_a%C3%A9riennes_les_plus_fr%C3%A9quent%C3%A9es
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/792.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/792.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -30743,7 +30777,7 @@
   answer_accessible_url: https://fr.statista.com/infographie/17800/big-data-evolution-quantite-donnees-numeriques-creees-dans-le-monde/
   answer_scientific_url: https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/863.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/864.png
   answer_image_explanation: IDC, cité par [https://www.economist.com/special-report/2010/02/27/data-data-everywhere](https://www.economist.com/special-report/2010/02/27/data-data-everywhere)
   answer_extra_info: ''
   author: Max Pinsard
@@ -30787,7 +30821,7 @@
   answer_accessible_url: https://www.who.int/fr/news-room/fact-sheets/detail/the-top-10-causes-of-death
   answer_scientific_url: https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/global-health-estimates-leading-causes-of-dalys
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/864.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/863.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -31160,8 +31194,8 @@
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: A Keyham en Grande-Bretagne une grue de 60 tonnes donnait un
-    rendement de 1:600 (et pouvait soulever 5 fois son poids). Deux hommes seuls peuvent
-    manipuler la grue avec 60 tonnes suspendues à l’extrémité de la flèche. De nos
+    avantage de 1:600 (et pouvait soulever 5 fois son poids). Deux hommes seuls peuvent
+    manipuler la grue avec 60 tonnes suspendues à l’extrémité de la flèche ! De nos
     jours, nous utilisons des machines électriques et exerçons notre force physique
     dans des salles de sport...
   answer_audio: ''
@@ -31169,7 +31203,7 @@
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2010/03/history-of-human-powered-cranes.html
   answer_scientific_url: https://archive.org/details/usefulinformati09fairgoog/page/n207/mode/2up
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/874.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/874.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -31205,7 +31239,7 @@
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2010/05/the-status-quo-of-electric-cars-better-batteries-same-range.html
   answer_scientific_url: http://cnum.cnam.fr/CGI/fpage.cgi?BSPI.154/186/100/420/0/0
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/875.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/875.png
   answer_image_explanation: Châssis de voiture électrique
   answer_extra_info: ''
   author: Max Pinsard
@@ -31240,7 +31274,7 @@
   answer_accessible_url: https://solar.lowtechmagazine.com/2010/01/wood-gas-cars.html
   answer_scientific_url: https://translate.google.com/translate?hl=&sl=fi&tl=fr&u=https%3A%2F%2Fwww.ekoautoilijat.fi%2Ftekstit%2Fhistoriaa.htm
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/876.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/876.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -31279,7 +31313,7 @@
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2009/12/trolley-canal-boats.html
   answer_scientific_url: http://cnum.cnam.fr/CGI/fpage.cgi?ECCMC6.62/44/100/941/927/941
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/877.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/877.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -31317,7 +31351,7 @@
   answer_accessible_url: https://solar.lowtechmagazine.com/2009/04/cargo-ships-then-and-now.html
   answer_scientific_url: http://www.bruzelius.info/Nautica/Ships/Fivemast_ships/Preussen%281902%29.html
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/878.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/878.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -31356,7 +31390,7 @@
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2011/09/peat-and-coal-fossil-fuels-in-pre-industrial-times.html
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/879.png
+  answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -31909,7 +31943,7 @@
   answer_accessible_url: ''
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S1352231020305689?via%3Dihub
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/911.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -32760,7 +32794,7 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Brouillon
   added: 2021-03-15
   created: 2021-03-17
   updated: 2021-03-17
@@ -32793,7 +32827,7 @@
   answer_accessible_url: https://solar.lowtechmagazine.com/2020/01/how-circular-is-the-circular-economy.html
   answer_scientific_url: https://www.circularity-gap.world/global
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/937.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/937.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -32828,7 +32862,7 @@
   answer_accessible_url: https://theconversation.com/think-all-your-plastic-is-being-recycled-new-research-shows-it-can-end-up-in-the-ocean-155208
   answer_scientific_url: http://www.environnement.brussels/sites/default/files/user_files/pres_20150326_mat_1_4ptat_fr.pdf
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/938.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/938.png
   answer_image_explanation: '[https://ourworldindata.org/plastic-pollution](https://ourworldindata.org/plastic-pollution)'
   answer_extra_info: ''
   author: Max Pinsard
@@ -32870,7 +32904,7 @@
   answer_accessible_url: https://www.iucn.org/content/primary-microplastics-oceans
   answer_scientific_url: https://iopscience.iop.org/article/10.1088/1748-9326/ab7836
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/939.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/939.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -32912,7 +32946,7 @@
   answer_accessible_url: https://www.resourcepanel.org/reports/metal-recycling
   answer_scientific_url: https://science.sciencemag.org/content/337/6095/690
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/940.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/940.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -32949,7 +32983,7 @@
   answer_accessible_url: ''
   answer_scientific_url: https://pubs.acs.org/doi/abs/10.1021/es505515z
   answer_reading_recommendation: The Age of Low Tech, Philippe Bihouix
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/941.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/941.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -32990,7 +33024,7 @@
   answer_accessible_url: https://bristoluniversitypress.co.uk/the-age-of-low-tech
   answer_scientific_url: https://link.springer.com/article/10.1007/s10584-011-0268-5
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/942.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/942.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -33032,7 +33066,7 @@
   answer_accessible_url: http://www.basel.int/Implementation/TechnicalAssistance/MOOC/tabid/4966/Default.aspx
   answer_scientific_url: https://innoenergy.learnify.se/l/show.html#E1rl
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/943.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/943.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -33066,7 +33100,7 @@
   answer_accessible_url: https://www.visualcapitalist.com/all-the-worlds-metals-and-minerals-in-one-visualization/
   answer_scientific_url: https://www.oecd.org/environment/raw-materials-use-to-double-by-2060-with-severe-environmental-consequences.htm
   answer_reading_recommendation: '[https://ourworldindata.org/water-use-stress](https://ourworldindata.org/water-use-stress)'
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/944.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/944.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -33106,7 +33140,7 @@
   answer_scientific_url: https://www.statista.com/topics/1464/big-data/
   answer_reading_recommendation: "[https://www.economist.com/special-report/2010/02/27/data-data-everywhere](https://www.economist.com/special-report/2010/02/27/data-data-everywhere),\
     \ \n[https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic](https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic))."
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/945.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/945.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -33144,7 +33178,7 @@
   answer_accessible_url: https://www.resourcepanel.org/reports/global-resources-outlook
   answer_scientific_url: https://www.unep.org/news-and-stories/press-release/un-calls-urgent-rethink-resource-use-skyrockets
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/946.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/946.png
   answer_image_explanation: UNEP
   answer_extra_info: ''
   author: Max Pinsard
@@ -33188,7 +33222,7 @@
   answer_accessible_url: https://www.who.int/en/news-room/fact-sheets/detail/the-top-10-causes-of-death
   answer_scientific_url: https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/global-health-estimates-leading-causes-of-dalys
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/947.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/947.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -33225,7 +33259,7 @@
   answer_accessible_url: https://www.unenvironment.org/fr/actualites-et-recits/communique-de-presse/lonu-appelle-reconsiderer-de-toute-urgence-lutilisation
   answer_scientific_url: https://www.resourcepanel.org/reports/global-resources-outlook
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/948.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/948.png
   answer_image_explanation: 'Source : PNUE'
   answer_extra_info: ''
   author: Max Pinsard
