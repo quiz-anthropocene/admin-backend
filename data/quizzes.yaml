@@ -95,7 +95,7 @@
     \ car de nombreux indicateurs y présentent des courbes de type exponentiel. Ce\
     \ quiz propose un premier tour d'horizon de l'emprise inédite de l'homme sur la\
     \ planète qu'il occupe.<br />\r\n<br />\r\nDurée à prévoir : 15 min</p>"
-  conclusion: ''
+  conclusion: <p>Vous êtes prêts à enchaîner sur la partie 2 ?</p>
   difficulty_average: 2.7
   language: Français
   author: Matthieu Massart
@@ -104,7 +104,7 @@
   publish: true
   spotlight: false
   created: 2020-07-08
-  updated: 2021-03-13
+  updated: 2021-03-24
   tags: []
 - id: 7
   name: Le Pétrole - Partie 1 (retiré)
@@ -291,7 +291,7 @@
     des courbes de type exponentiel. Ce 2ème quiz continue le tour d'horizon sur l'emprise
     inédite de l'homme sur la planète qu'il occupe.</p>
   conclusion: ''
-  difficulty_average: 2.3
+  difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
   image_background_url: https://reporterre.net/local/cache-vignettes/L720xH481/arton11947-94df2.jpg?1597417424
@@ -299,7 +299,7 @@
   publish: true
   spotlight: false
   created: 2020-07-29
-  updated: 2021-03-11
+  updated: 2021-03-24
   tags: []
 - id: 17
   name: Une biodiversité qui s'anéantit

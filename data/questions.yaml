@@ -2742,7 +2742,9 @@
   answer_explanation: C'est ce qu'on appelle la technosphère. Elle a été évaluée à
     30 000 milliards de tonnes. A comparer aux 4 000 milliards de tonnes du vivant.
     Environ dix fois plus lourd donc. Cela donne la mesure de la ponction que l'humanité
-    a opéré sur les ressources de la terre.
+    a opéré sur les ressources de la terre. On pourrait poser la même question avec
+    les animaux domestiqués vs les animaux sauvages, on tomberait sur 97% de la masse
+    à gauche.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.futura-sciences.com/planete/actualites/environnement-pese-tout-ce-homme-pu-fabriquer-65435/
@@ -10309,12 +10311,14 @@
   answer_option_d: 1 milliard
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: Ce sont les premières exposées à la montée des eaux et à la
-    montée en fréquence et intensité des phénomènes météorologiques extrêmes.
+  answer_explanation: 10 mètres, c'est la limite adoptée par le GIEC pour définir
+    les populations cotières, les premières exposées à la montée des eaux et à la
+    montée en fréquence et intensité des phénomènes météorologiques extrêmes. Ce sont
+    aussi celles qui possèdent la plus faible capacité d'adaptation.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: https://www.ipcc.ch/srocc/download#chapter1
+  answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/sites/3/2020/07/SROCC_SPM_fr.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/7/5/4/7540dfa366_82076_cop21-l-impact-du-rechauffement-mer.jpg
   answer_image_explanation: ''
@@ -19641,7 +19645,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2020-06-30
   created: 2020-07-04
   updated: 2020-07-04
@@ -19818,9 +19822,8 @@
   - 26
   - 105
 - id: 568
-  text: Selon le rapport 2019 du GIEC, quelle proportion de la population mondiale
-    va se trouver une situation dite de péril vital si la température moyenne augmente
-    de 2° ?
+  text: Quelle proportion de la population mondiale se trouvera dans une situation
+    de péril vital si la température moyenne augmente de 2° ?
   hint: ''
   type: QCM
   category: 1
@@ -19832,7 +19835,7 @@
   answer_option_d: 38%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: ''
+  answer_explanation: Selon le rapport 2019 du GIEC,
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -19841,9 +19844,9 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Contributeur anonyme
+  author: Matthieu Massart
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2020-08-05
   created: 2020-08-10
   updated: 2020-09-18
@@ -26269,10 +26272,9 @@
   tags:
   - 189
 - id: 737
-  text: "Une étude récente a mis en évidence une diminution en Europe de 75 à 82 %\
-    \ de la masse totale des insectes en 30 ans en Allemagne. \nQuelles seront les\
-    \ conséquences les plus probables de cette diminution pour les insectes pollinisateurs\
-    \ ?"
+  text: "Une étude récente a mis en évidence une diminution en Europe de 75 à 80%\
+    \ de la masse des insectes en 30 ans en Allemagne. \nQuelles seront les conséquences\
+    \ les plus probables de cette diminution pour les insectes pollinisateurs ?"
   hint: ''
   type: QCM-RM
   category: null
@@ -26288,54 +26290,72 @@
     mondiale
   answer_correct: abcd
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: 'Les conséquences sur l''humain d''une telle perte seraient
+    abyssales. Parmi les recommandations pour éviter ce désastre : remplacer les pesticides
+    par des techniques naturelles, planter des allées de fleurs entre les semences,
+    assurer une rotation des cultures et restaurer des zones de floraison sauvage
+    pour accueillir ces insectes.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://www.lemonde.fr/biodiversite/article/2016/11/28/l-extinction-des-pollinisateurs-menace-1-4-milliard-d-emplois-selon-un-rapport_5039767_1652692.html
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
-  answer_extra_info: ''
-  author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
-  added: 2021-01-05
-  created: 2021-01-06
-  updated: 2021-01-06
-  tags:
-  - 33
-  - 217
-  - 218
-- id: 738
-  text: Question à créer sur le pic des métaux
-  hint: ''
-  type: QCM
-  category: 5
-  difficulty: 3
-  language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: ''
-  has_ordered_answers: false
-  answer_explanation: ''
-  answer_audio: ''
-  answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://img.lemde.fr/2016/11/28/0/0/1897/1462/664/0/75/0/322ce7c_6239-w2dqs0.x50cnmi.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Philippe Pernin
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
+  added: 2021-03-05
+  created: 2021-01-06
+  updated: 2021-01-06
+  tags:
+  - 5
+  - 251
+- id: 738
+  text: Parmi les métaux suivants, pour lesquels prévoit-on un pic de production avant
+    2070 ?
+  hint: ''
+  type: QCM-RM
+  category: 5
+  difficulty: 3
+  language: Français
+  answer_option_a: Fer
+  answer_option_b: Argent
+  answer_option_c: Cuivre
+  answer_option_d: Or
+  answer_correct: bd
+  has_ordered_answers: false
+  answer_explanation: "Les minerais enfouis sous terre sont en quantité finie. Comme\
+    \ pour un tube de dentifrice, leur extraction par unité de temps passe forcément\
+    \ par un pic. Leur extraction fonctionne comme la chasse aux œufs de Pâques :\
+    \ ce sont les plus gros que l'on trouve les premiers, et avec le moins d'effort.\
+    \ Les minerais sont de moins en moins concentrés en métaux. Et pour creuser des\
+    \ mines, il faut de l’énergie, beaucoup d’énergie : 8 à 10 % de l’énergie primaire\
+    \ est consacrée à extraire et raffiner les ressources métallique. Il faut donc\
+    \ de plus en plus d’énergie pour les extraire. Or les extractions de la source\
+    \ principale d’énergie, le pétrole, paraissent elles-mêmes au bord du déclin.\
+    \ \nLe même commentaire s'applique aux métaux rares qui sont au cœur des énergies\
+    \ renouvelables, comme le Néodyme (1kg dans une voiture hybride, 1 tonne dans\
+    \ une éolienne). Le recyclage est bien sûr une piste, mais avec ses limites physiques\
+    \ et économiques."
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.lemonde.fr/blog/petrole/2012/05/08/rarefaction-des-metaux-demain-le-peak-all/
+  answer_scientific_url: https://www.ademe.fr/sites/default/files/assets/documents/epuisement-metaux-mineraux-fiche-technique.pdf
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/738.png
+  answer_image_explanation: Prévisions de production annuelle (en millions de tonnes)
+    de différents métaux, au rythme actuel de consommation.
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: A valider
   added: 2021-03-08
   created: 2021-01-06
   updated: 2021-01-06
-  tags: []
+  tags:
+  - 235
 - id: 739
   text: Copy of à venir
   hint: 'OEW : Operating Empty Weight'
@@ -30516,7 +30536,7 @@
   - 9
   - 26
 - id: 857
-  text: Le recyclage des métaux est limité par …
+  text: Le recyclage des métaux est limité par…
   hint: ''
   type: QCM
   category: 7
@@ -31067,9 +31087,9 @@
   tags:
   - 218
 - id: 871
-  text: Supposons que du jour au lendemain l'énergie dépensée par la France ne soit
-    plus fournie par des machines, mais par du travail humain. Combien de personnes
-    devraient alors travailler au service des Français ?
+  text: 'Faisons un exercice de pensée : demain, toute l''énergie dépensée par la
+    France doit être fournie par du travail humain exclusivement. Combien de personnes
+    devraient alors travailler au service des Français ?'
   hint: ''
   type: QCM
   category: 5
@@ -31082,11 +31102,11 @@
   answer_option_d: La population de 4 planètes
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: "On peut estimer qu'en un journée, un humain consomme en nourriture\
-    \ environ 5 kWh dont il peut restituer en puissance mécanique 0,05 à 0,5 kWh.\
-    \ Voir le calcul estimatif dans l'article en référence. \nJean-Marc Jancovici\
-    \ a popularisé pour illustrer ces chiffres la notion \"d'esclave énergétique\"\
-    \ à notre service pour nous fournir le niveau de vie dont nous jouissons."
+  answer_explanation: On peut estimer qu'en un journée, un humain consomme en nourriture
+    environ 5 kWh dont il peut restituer en puissance mécanique 0,05 à 0,5 kWh. Voir
+    le calcul estimatif dans l'article en référence. Cela donne une idée de la puissance
+    que nous a conférée l'usage des machines à notre service, toutes alimentées par
+    de l'énergie, notamment fossile.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://jancovici.com/transition-energetique/l-energie-et-nous/combien-suis-je-un-esclavagiste/
@@ -31097,7 +31117,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Pascal Esposito
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2020-03-07
   created: 2021-03-12
   updated: 2021-03-12
@@ -31251,24 +31271,27 @@
   tags:
   - 60
 - id: 876
-  text: Les moteurs à bois pour les voitures, ça existe ? (plusieurs réponses possibles)
+  text: Les moteurs à bois pour les voitures, ça existe ? Choisissez les affirmations
+    correctes.
   hint: ''
   type: QCM-RM
   category: 2
   difficulty: 1
   language: Français
-  answer_option_a: 'oui : 500,000 voitures durant la seconde guerre mondiale - quasiment
-    touts véhicules non-militaires, principal remplacement de l''essence à ce moment-là'
-  answer_option_b: un truc de bricolo passioné, seulement quelques prototypes aboutis
-  answer_option_c: impossible physiquement
+  answer_option_a: 'Oui, ça  a existé à grande échelle: 500,000 voitures durant la
+    seconde guerre mondiale - quasiment tous les véhicules non-militaires. Cela a
+    été le principal remplacement de l''essence.'
+  answer_option_b: Un truc de bricoleur passionné, seulement quelques prototypes aboutis
+  answer_option_c: Impossible physiquement
   answer_option_d: Cela produit moins de pollution de l'air que les voitures à essence
   answer_correct: ad
-  has_ordered_answers: false
-  answer_explanation: 'Des voitures pas du tout aérodynamiques, avec un gros réservoir
-    à l''arrière. Mais en temps de pénurie d''essence ce dispositif ingénieux a été
-    grandement utilisé, apportant une solution simple mais pas exempte de défauts
-    : moteur bien plus gros, puissance bien plus limitée, 10 minutes de pré-chauffage,
-    production de monoxyde de carbone…'
+  has_ordered_answers: true
+  answer_explanation: 'Des voitures peu aérodynamiques, avec un gros réservoir à l''arrière,
+    qui n''était donc pas exempte de défauts : moteur bien plus gros, puissance bien
+    plus limitée, 10 minutes de pré-chauffage, production de monoxyde de carbone…
+    Mais en temps de pénurie d''essence ce dispositif ingénieux a été grandement utilisé,
+    apportant une solution simple. De quoi nous inspirer dans une perspective de descente
+    énergétique ...'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/2010/01/wood-gas-cars.html
@@ -31379,18 +31402,23 @@
   answer_option_d: 3,000 ans
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: Il faut 3,000 ans à une couche de tourbe de 3 mètres pour retrouver
-    son épaisseur d’origine. Pas très renouvelable donc à l'échelle des sociétés humaines
-    ! On en consommait 16,75 GJ/personne/an aux Pays-Bas, soit autant qu'une facture
-    annuelle d'électricité en France (~5000kWh) ! Avant la révolution industrielle,
+  answer_explanation: 'Il faut 3,000 ans à une couche de tourbe de 3 mètres pour retrouver
+    son épaisseur d’origine. Pas très renouvelable donc à l''échelle des sociétés
+    humaines ! On en consommait 16,75 GJ/personne/an aux Pays-Bas, soit autant qu''une
+    facture annuelle d''électricité en France (~5000kWh) ! Avant la révolution industrielle,
     de multiples combustibles fossiles étaient ainsi utilisés en Europe, comme le
     charbon de bois.
+
+    Il ne serait cependant pas souhaitable de recommencer l''exploitation de la tourbe
+    de nos jours, les tourbières étant des hauts lieux à biodiversité et stockant
+    plus de carbone que les forêts ... Tout ce qui est ancien n''est pas low-tech
+    !'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2011/09/peat-and-coal-fossil-fuels-in-pre-industrial-times.html
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/879.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
@@ -31430,8 +31458,8 @@
   answer_accessible_url: https://www.lowtechmagazine.com/2011/02/body-insulation-thermal-underwear.html
   answer_scientific_url: https://world-habitat.org/publications/new-tricks-with-old-bricks/
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: http://wiki.lowtechlab.org/wiki/Panneau_isolant_au_Myc%C3%A9lium_de_champignon#/media/File:Isolation_grace_au_myc_lium_panneau_carton.PNG
+  answer_image_explanation: Isolation low-tech, grâce au mycelium de champignon
   answer_extra_info: ''
   author: Max Pinsard
   validator: Matthieu Massart
@@ -31443,8 +31471,8 @@
   - 53
   - 100
 - id: 881
-  text: 70 ans avant l'ampoule électrique l'utilisation d'arc électrique permettait
-    à des lampadaires du début du XIXe une luminance équivalente à environ … ?
+  text: 70 ans avant l'ampoule électrique l'utilisation d'arcs électriques conférait
+    à des lampadaires début XIXe une luminance équivalente à environ … ?
   hint: ''
   type: QCM
   category: 5
@@ -31457,12 +31485,14 @@
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: Cette invention produisait une brillance phénoménale, de 1,500
-    à 6,000 équivalents bougie (une flamme de gaz produit ~100 équivalents bougie).
-    Ces lampes étaient plus efficaces énergétiquement que même les ampoules incandescentes
-    de nos jours, et peuvent rivaliser avec les ampoules fluorescentes même si elles
-    sont vouées à éclairer l'extérieur (car en hauteur pour éviter les chocs électriques).
-    Très populaires pour l'éclairage urbain fin XIXe, elles contribuaient même à la
-    pollution lumineuse !
+    à 6,000 équivalents bougie (une flamme de gaz produit ~100 équivalents bougie),
+    commes 20 ampoules de 100W ! Ces lampes étaient plus efficaces énergétiquement
+    que même les ampoules incandescentes de nos jours, et peuvent rivaliser avec les
+    ampoules fluorescentes même si elles ne sont vouées qu'à éclairer l'extérieur
+    (car en hauteur pour éviter les chocs électriques). Très populaires pour l'éclairage
+    urbain fin XIXe, elles contribuaient même à la pollution lumineuse ! Une inspiration
+    intéressante pour éviter la multiplication des ampoules individuelles et le coût
+    en matériaux correspondant ...
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lowtechmagazine.com/2009/01/moonlight-towers-light-pollution-in-the-1800s.html
@@ -31499,7 +31529,10 @@
     courbes moins prononcées que les voûtes romaines, et donc d''espacer les colonnes.
     En revanche, du mortier doit être appliqué pour lier les brique, un mortier qui
     fut amélioré lors de son import aux Etats-Unis fin XIXe siècle : avec du ciment
-    à prise rapide on peut construire des arches encore plus grande !'
+    à prise rapide on peut construire des arches encore plus grande ! Le béton est
+    un important contributeur aux GES, et il n''est pas durable : son acier finit
+    toujours pas rouiller. Il est peut-être temps de revenir à des architectures plus
+    astucieuces ?'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2008/11/tiles-vaults.html
@@ -32813,7 +32846,7 @@
   answer_option_c: 50%
   answer_option_d: 99%
   answer_correct: b
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 1/3 of this material is emitted or dispersed and is therefore
     not recoverable, and another third is simply immobilized for a certain time in
     buildings, objects…The theoretical limit is therefore 33%. However, as recycling
@@ -33048,7 +33081,7 @@
   answer_option_c: ~30%
   answer_option_d: ~60%
   answer_correct: d
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: '60% of WEEE in Europe and the USA exits the legal treatment
     network. The devices left in the street are hijacked by scrap dealers or traffickers,
     who recover valuable parts (precious metals ...) at the expense of direct pollution
@@ -33120,12 +33153,12 @@
   category: 2
   difficulty: 3
   language: English
-  answer_option_a: between ×50 and ×80
-  answer_option_b: between ×50 and ×800
+  answer_option_a: x 50
+  answer_option_b: between ×50 and ×500
   answer_option_c: between ×500 and ×8000
   answer_option_d: between ×0.5 million and ×8 million
   answer_correct: c
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: The total data created everywhere (industries ...) has increased
     from 100 million terabytes/year (2005) to 800 billion terabytes /year (2020),
     i.e. × 8000. Correcting by the increase in the number of Internet users, the ratio
