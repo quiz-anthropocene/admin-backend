@@ -1843,8 +1843,8 @@
   tags:
   - 17
 - id: 51
-  text: D'ici 24 heures, combien de terres cultivables ou labourables auront-elles
-    disparu dans le monde ?
+  text: D'ici 24 heures, combien de terres cultivables ou labourables auront disparu
+    dans le monde ?
   hint: ''
   type: QCM
   category: 6
@@ -2722,8 +2722,8 @@
   tags:
   - 31
 - id: 76
-  text: "Imaginez une balance titanesque. Placez sur le plateau de droite toute la\
-    \ matière vivante sur terre. Sur le plateau de gauche, tout ce qui a été construit\
+  text: "Imaginez une balance titanesque. Placez sur le plateau de gauche toute la\
+    \ matière vivante sur terre. Sur le plateau de droite, tout ce qui a été construit\
     \ depuis l'origine par l'homme. \nVous y êtes ? De quel côté va pencher la balance\
     \ ?"
   hint: 'Il faut compter tout ce qui a été construit par l’homme : bâtiments, infrastructures
@@ -24574,7 +24574,7 @@
   answer_accessible_url: https://restonslespiedssurterre.fr/pourquoi-1000-litres-de-kerosene-produisent-3000-kg-de-co2/
   answer_scientific_url: https://fr.wikipedia.org/wiki/K%C3%A9ros%C3%A8ne
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/695%20696%20697%20V1.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/695%20696%20697%20V1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -24608,7 +24608,7 @@
   answer_accessible_url: https://restonslespiedssurterre.fr/pourquoi-1000-litres-de-kerosene-produisent-3000-kg-de-co2/
   answer_scientific_url: https://fr.wikipedia.org/wiki/K%C3%A9ros%C3%A8ne
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/695%20696%20697%20V1.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/695%20696%20697%20V1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -24646,7 +24646,7 @@
   answer_accessible_url: https://restonslespiedssurterre.fr/pourquoi-1000-litres-de-kerosene-produisent-3000-kg-de-co2/
   answer_scientific_url: https://fr.wikipedia.org/wiki/K%C3%A9ros%C3%A8ne
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/695%20696%20697%20V1.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/695%20696%20697%20V1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -24683,7 +24683,7 @@
   answer_accessible_url: https://fr.wikipedia.org/wiki/%C3%89quivalent_CO2#:~:text=de%20r%C3%A9chauffement%20climatique.-,Dur%C3%A9e%20de%20vie%20et%20PRG%20des%20gaz%20%C3%A0%20effet%20de,ce%20gaz%20sert%20de%20r%C3%A9f%C3%A9rence).
   answer_scientific_url: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/698.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/698.png
   answer_image_explanation: ''
   answer_extra_info: https://fr.wikipedia.org/wiki/Gaz_à_effet_de_serre#cite_note-51
   author: Restons les pieds sur terre
@@ -24722,7 +24722,7 @@
   answer_accessible_url: https://fr.wikipedia.org/wiki/Gaz_%C3%A0_effet_de_serre
   answer_scientific_url: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/699.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/699.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -24774,7 +24774,7 @@
   answer_accessible_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/700%20V1.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/700%20V1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -24838,7 +24838,7 @@
   answer_accessible_url: https://www.sciencedirect.com/science/article/pii/S1352231020305689?via%3Dihub
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/701.jpg
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/701.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -24873,7 +24873,7 @@
   answer_accessible_url: https://fr.wikipedia.org/wiki/Airbus_A380
   answer_scientific_url: https://www.airbus.com/aircraft/passenger-aircraft/a380/innovation.html#details
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/702.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/702.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -24910,7 +24910,7 @@
   answer_accessible_url: https://fr.wikipedia.org/wiki/Airbus_A380
   answer_scientific_url: https://www.airbus.com/aircraft/passenger-aircraft/a380/innovation.html#details
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/703ter.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/703ter.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -24947,7 +24947,7 @@
   answer_accessible_url: https://fr.wikipedia.org/wiki/Airbus_A380
   answer_scientific_url: https://www.airbus.com/aircraft/passenger-aircraft/a380/innovation.html#details
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/704.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/704.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -24980,7 +24980,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/705%20706%20707%20v1.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/705%20706%20707%20v1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25013,7 +25013,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/708%20709%20v1.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/705%20706%20707%20v1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25046,7 +25046,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/708%20709%20v1.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/705%20706%20707%20v1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25097,7 +25097,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/708%20709%20v1.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/708%20709%20v1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25141,7 +25141,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/708%20709%20v1.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/708%20709%20v1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25173,19 +25173,14 @@
     Sa croissance est de l’ordre de 8 à 10 % dans les pays asiatiques ou du MO, mais
     de 3 à 4 % « seulement » en Europe ou aux États-Unis.
 
-    Le TA est pris entre le marteau et l''enclume,
 
-    Soit il annonce de fortes croissances pour vendre sa "réussite", mais il a bien
-    pris conscience qu''une part de l''opinion publique ne suit plus.
-
-    Enfant chéri des politiques, c''est un des plus forts lobbies au monde, qui doit
-    surtout sa réussite aux exonérations de taxes et autres subventions.'
+    Cette croissance est favorisée par les exonérations multiples de taxes.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/compare/master...BXMichel-patch-1?expand=1#diff-3197c0835580c2e32ef88bf7e46a3202f62a34bd156239168c6a7752c106960f
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/710-1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25260,7 +25255,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
-  answer_scientific_url: ''
+  answer_scientific_url: https://aci.aero/sponsorships/
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -25276,7 +25271,7 @@
   - 217
   - 224
 - id: 713
-  text: Quel est le trafic de Paris CDG 2019 ?
+  text: Quel était le trafic de Paris CDG en 2019 ?
   hint: Toujours plus
   type: QCM
   category: 2
@@ -25294,13 +25289,17 @@
     Avec le terminal 4 la capacité passerait à 115 millions de passager à l''horizon
     2032
 
-    un doublement du nombre de passagers est anticipé d’ici 2040.'
+    un doublement du nombre de passagers est anticipé d’ici 2040.
+
+    En Juillet 2020, l’Autorité Environnementale a rendu un avis très défavorable.
+
+    Avec la COVID, la pertinence du projet est remise en cause, mais pas annulée.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.liberation.fr/environnement/le-gouvernement-abandonne-le-terminal-4-a-roissy-20210211_OEWFJLGC3ZENHIRF7XSWVY7S3M/
-  answer_scientific_url: ''
+  answer_scientific_url: http://www.cgedd.developpement-durable.gouv.fr/IMG/pdf/200708_creation_t4_cdg_delibere_cle622f7d.pdf
   answer_reading_recommendation: ''
-  answer_image_url: http://www.cgedd.developpement-durable.gouv.fr/IMG/pdf/200708_creation_t4_cdg_delibere_cle622f7d.pdf
+  answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25326,11 +25325,13 @@
   answer_option_d: '38'
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: '38 millions de vols par an,
+  answer_explanation: '38 millions de vols par an.
 
-    c’est presque 110 000 vols commerciaux par jour en moyenne,
+    C’est presque 110 000 vols commerciaux par jour en moyenne,
 
-    avec des pointes en juin à 230 000 vols.'
+    Avec des pointes en juin à 230 000 vols.
+
+    L’urgence climatique, questionne le modèle de développement du transport aérien.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
@@ -25362,7 +25363,14 @@
   answer_option_d: '5100'
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: 1300 compagnies, c'est 6 compagnies par pays.
+  answer_explanation: '1300 compagnies.
+
+    Les compagnies à bas coûts contribuent à une très forte intensification aérienne
+    en Europe : à ce jour, elles représentent 25 % du trafic mondial et plus de 40
+    % du trafic en Europe.
+
+    Elles ont surtout influencé les prix des autres compagnies, les contraignant à
+    réduire leurs coûts pour offrir des billets moins chers.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
@@ -25406,7 +25414,7 @@
     Une petite voiture et 2 passagers font mieux que l''avion. Il faut admettre que
     ce ne sont pas les mêmes usages.
 
-    Les vols courte distance peuvent atteindre 7 litres / 100 km / pax'
+    Les vols courte distance (<1000 km) peuvent atteindre 7 litres / 100 km / pax'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://corporate.airfrance.com/sites/default/files/dp_dd_fr_0.pdf
@@ -25544,7 +25552,7 @@
   - 34
   - 216
 - id: 720
-  text: Quelle quantité d'énergie y a t-il dans un litre de kérosène...  en kWh ?
+  text: Quelle quantité d'énergie y a-t-il dans un litre de kérosène...  en kWh ?
   hint: On n'imagine pas les services pour pas très cher.
   type: QCM
   category: 5
@@ -25970,7 +25978,7 @@
     \ observés, il n'existe pas de consensus sur la gravité du danger qu'ils représentent.\
     \ \nLa fonte du pergélisol est un exemple parmi d'autres tout aussi inquiétants\
     \ de phénomènes d'emballement : plus il faut chaud, plus ça dégèle ; plus ça dégèle,\
-    \ plus il fait chaud etc."
+    \ plus il fait chaud etc. C'est ce qu'on appelle une boucle d'auto-renforcement."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lavoixdunord.fr/761928/article/2020-06-05/la-fonte-du-permafrost-boite-de-pandore-climatique-et-sanitaire

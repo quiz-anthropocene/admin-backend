@@ -572,8 +572,9 @@
   publish: true
   spotlight: true
   created: 2021-02-14
-  updated: 2021-03-11
-  tags: []
+  updated: 2021-03-25
+  tags:
+  - 255
 - id: 62
   name: La Fresque de l'Alimentation
   introduction: "<p>Savez-vous réellement comment un steak ou une salade finit dans\
@@ -702,17 +703,28 @@
   - 227
 - id: 67
   name: Des low-techs tombées dans l'oubli
-  introduction: ''
-  conclusion: ''
-  difficulty_average: 2.5
+  introduction: "<p>Et si on faisait un petit détour par le passé ? Les XIX et XXe\
+    \ siècles ont en effet été l'ère des grands inventeurs. Ils ont été capables de\
+    \ faire le tour du monde, de construire des bâtiments gigantesques ou de s'adapter\
+    \ à une pénurie d'énergie. Pourtant, beaucoup de leurs innovations sont tombées\
+    \ dans l'oubli, car jugées inférieures aux systèmes d'aujourd'hui. Prêts à découvrir\
+    \ quelques-unes de ces inventions ?<br />\r\n<br />\r\nUn quiz créé par Max Pinsard,\
+    \ inspiré de <a class=\"notion-link-token notion-enable-hover\" href=\"https://solar.lowtechmagazine.com/fr\"\
+    \ rel=\"noopener noreferrer\" style=\"cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit\"\
+    \ target=\"_blank\">Low-tech Magazine</a></p>"
+  conclusion: <p>Morale de l'histoire ? C'est la manne d'énergie à notre disposition
+    qui nous a fait mettre de côté ces technologies qui ne manquaient pas d'intérêt.
+    Cela vous a captivé ? Pour aller plus loin, rendez-vous sur le site du <a href="https://solar.lowtechmagazine.com/fr/">Low
+    Tech Magasine</a> ou le site <a href="https://paleo-energetique.org/">Paléo Energétique</a>.</p>
+  difficulty_average: 2.4
   language: Français
   author: Max Pinsard
-  image_background_url: ''
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/874.png
   has_audio: false
   publish: false
   spotlight: false
   created: 2021-03-23
-  updated: 2021-03-23
+  updated: 2021-03-25
   tags:
   - 255
 - id: 68
