@@ -95,7 +95,7 @@
     \ car de nombreux indicateurs y présentent des courbes de type exponentiel. Ce\
     \ quiz propose un premier tour d'horizon de l'emprise inédite de l'homme sur la\
     \ planète qu'il occupe.<br />\r\n<br />\r\nDurée à prévoir : 15 min</p>"
-  conclusion: ''
+  conclusion: <p>Vous êtes prêts à enchaîner sur la partie 2 ?</p>
   difficulty_average: 2.7
   language: Français
   author: Matthieu Massart
@@ -104,7 +104,7 @@
   publish: true
   spotlight: false
   created: 2020-07-08
-  updated: 2021-03-13
+  updated: 2021-03-24
   tags: []
 - id: 7
   name: Le Pétrole - Partie 1 (retiré)
@@ -291,7 +291,7 @@
     des courbes de type exponentiel. Ce 2ème quiz continue le tour d'horizon sur l'emprise
     inédite de l'homme sur la planète qu'il occupe.</p>
   conclusion: ''
-  difficulty_average: 2.3
+  difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
   image_background_url: https://reporterre.net/local/cache-vignettes/L720xH481/arton11947-94df2.jpg?1597417424
@@ -299,7 +299,7 @@
   publish: true
   spotlight: false
   created: 2020-07-29
-  updated: 2021-03-11
+  updated: 2021-03-24
   tags: []
 - id: 17
   name: Une biodiversité qui s'anéantit
@@ -572,8 +572,9 @@
   publish: true
   spotlight: true
   created: 2021-02-14
-  updated: 2021-03-11
-  tags: []
+  updated: 2021-03-25
+  tags:
+  - 255
 - id: 62
   name: La Fresque de l'Alimentation
   introduction: "<p>Savez-vous réellement comment un steak ou une salade finit dans\
@@ -702,31 +703,59 @@
   - 227
 - id: 67
   name: Des low-techs tombées dans l'oubli
-  introduction: ''
-  conclusion: ''
-  difficulty_average: 2.5
+  introduction: "<p>Et si on faisait un petit détour par le passé ? Les XIX et XXe\
+    \ siècles ont en effet été l'ère des grands inventeurs. Ils ont été capables de\
+    \ faire le tour du monde, de construire des bâtiments gigantesques ou de s'adapter\
+    \ à une pénurie d'énergie. Pourtant, beaucoup de leurs innovations sont tombées\
+    \ dans l'oubli, car jugées inférieures aux systèmes d'aujourd'hui. Prêts à découvrir\
+    \ quelques-unes de ces inventions ?<br />\r\n<br />\r\nUn quiz créé par Max Pinsard,\
+    \ inspiré de <a class=\"notion-link-token notion-enable-hover\" href=\"https://solar.lowtechmagazine.com/fr\"\
+    \ rel=\"noopener noreferrer\" style=\"cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit\"\
+    \ target=\"_blank\">Low-tech Magazine</a></p>"
+  conclusion: <p>Morale de l'histoire ? C'est la manne d'énergie à notre disposition
+    qui nous a fait mettre de côté ces technologies qui ne manquaient pas d'intérêt.
+    Cela vous a captivé ? Pour aller plus loin, rendez-vous sur le site du <a href="https://solar.lowtechmagazine.com/fr/">Low
+    Tech Magasine</a> ou le site <a href="https://paleo-energetique.org/">Paléo Energétique</a>.</p>
+  difficulty_average: 2.4
   language: Français
   author: Max Pinsard
-  image_background_url: ''
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/874.png
   has_audio: false
   publish: false
   spotlight: false
   created: 2021-03-23
-  updated: 2021-03-23
+  updated: 2021-03-25
   tags:
   - 255
 - id: 68
-  name: Low tech Collage - current issues
-  introduction: ''
-  conclusion: ''
-  difficulty_average: 0.0
-  language: Français
+  name: Low tech Collage - Current Issues
+  introduction: "<p>Ever heard of low-techs ? They are objects, systems, techniques,\
+    \ services, know-how, practices, lifestyle and even a current of thought that\
+    \ integrate technology while being useful, accessible and sustainable. The Low-Tech\
+    \ Collage is a collaborative workshop/game - ony available in French at the moment.\
+    \ It deals with the (lack of) sustainability of technologies, addresses the limits\
+    \ and problems of the current technical system, and introduces the concept of\
+    \ low techs.<br />\r\nThis quiz provides you with an overview of what you will\
+    \ learn in this workshop. It is focused on the first section, focused on the problems.</p>\r\
+    \n\r\n<p>A quiz proposed by Max Pinsard, PhD in energy and materials science from\
+    \ INRS-EMT Montreal, and creator of the Low-Tech Collage.</p>"
+  conclusion: <p>This quiz is of course too short to cover it all. But by now, the
+    impacts of our technological system should be familiar to you, as well as the
+    deceiving promises of technofuturism and green growth! Since low-tech is also
+    a philosophy, many of the concepts cannot be conveyed by figures, but are rather
+    political, sociological, psychological... We can ony encourage you to attend a
+    full workshop! More info on <a class="notion-link-token notion-enable-hover" href="http://fresquedeslowtechs.org/"
+    rel="noopener noreferrer" style="cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit"
+    target="_blank">fresquedeslowtechs.org</a> (in french). "<em>Against infinite
+    growth in a world with finite resources that ARE DEGRADING and DISPERSING".</em></p>
+  difficulty_average: 2.6
+  language: English
   author: Max Pinsard
-  image_background_url: ''
+  image_background_url: https://fresquedeslowtechs.files.wordpress.com/2021/02/fr_techs_modern_dezo_flouetee_64c.png
   has_audio: false
   publish: false
   spotlight: true
   created: 2021-03-24
-  updated: 2021-03-24
+  updated: 2021-03-25
   tags:
   - 255
