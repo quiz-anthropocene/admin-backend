@@ -24838,7 +24838,7 @@
   answer_accessible_url: https://www.sciencedirect.com/science/article/pii/S1352231020305689?via%3Dihub
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/701.jpg
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/701-41.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -24873,7 +24873,7 @@
   answer_accessible_url: https://fr.wikipedia.org/wiki/Airbus_A380
   answer_scientific_url: https://www.airbus.com/aircraft/passenger-aircraft/a380/innovation.html#details
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/702.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/702%20V1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -24947,7 +24947,7 @@
   answer_accessible_url: https://fr.wikipedia.org/wiki/Airbus_A380
   answer_scientific_url: https://www.airbus.com/aircraft/passenger-aircraft/a380/innovation.html#details
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/704.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/704%20V1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25257,7 +25257,7 @@
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: https://aci.aero/sponsorships/
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/712.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25299,7 +25299,7 @@
   answer_accessible_url: https://www.liberation.fr/environnement/le-gouvernement-abandonne-le-terminal-4-a-roissy-20210211_OEWFJLGC3ZENHIRF7XSWVY7S3M/
   answer_scientific_url: http://www.cgedd.developpement-durable.gouv.fr/IMG/pdf/200708_creation_t4_cdg_delibere_cle622f7d.pdf
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/713.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25337,7 +25337,7 @@
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/714.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25376,7 +25376,7 @@
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/715.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25576,7 +25576,7 @@
   answer_accessible_url: https://fr.wikipedia.org/wiki/Densit%C3%A9_massique_d%27%C3%A9nergie
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/720.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25605,16 +25605,18 @@
   has_ordered_answers: false
   answer_explanation: 'Et oui seulement 0.5 kWh.
 
-    Cad que 1 litre de kérosène ou essence contient 20 fois plus d’énergie que n’en
-    dépense un grand sportif.
+    Cad que 1 litre de kérosène (10 kWh) contient 20 fois plus d’énergie que n’en
+    dépense un grand sportif chaque jour.
 
-    90 kg (avec sac à dos) x 9.81 x 2000 m de dénivelé / 3600 000 J/kWh = 0.5 kWh
+    Dans la vie courante notre activité physique est bien moindre et plus proche de
+    0.1 kWh par jour.
 
-    Il va de soi que dans la vie courante notre activité physique est bien moindre
-    et plus proche de 0.1 kWh par jour.
+    Cad que 1 litre de kérosène à 0.35€ (1.5€ pour l’essence) contient autant d’énergie
+    que tout être humain dépense en 100 jours.
 
-    Cad que 1 litre de kérosène à 0.35€ (1.5€ pour 1litre d’essence) contient autant
-    d’énergie que tout être humain non sportif dépense en 100 jours.'
+    Détail pour un sportif :
+
+    90 kg (avec sac à dos) x 9.81 x 2000 m de dénivelé / 3600 000 J/kWh = 0.5 kWh'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
