@@ -89,7 +89,6 @@ module.exports = {
       .assert.elementPresent('footer')
       .assert.elementPresent('.question')
       .assert.not.elementPresent('.answer')
-      .assert.elementPresent('.question h2')
       .assert.elementPresent('.question h3')
       .assert.containsText('button[type="submit"]', 'Valider')
       .assert.containsText('button[id="question-next-btn"]', 'Question suivante')

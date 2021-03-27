@@ -45,7 +45,7 @@ module.exports = {
   //     // question detail page
   //     .assert.elementPresent('.question')
   //     .assert.not.elementPresent('.answer')
-  //     .assert.elementPresent('.question h2')
+  //     .assert.elementPresent('.question h3')
   //     .assert.containsText('button[id="question-next-btn"]', 'Question suivante')
   //     // question detail page : answer question
   //     .answerQuestion()

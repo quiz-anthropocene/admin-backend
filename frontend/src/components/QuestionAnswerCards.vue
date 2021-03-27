@@ -10,43 +10,49 @@
             <h3 v-html="$options.filters.abbr(questionTextWithLineBreaks, glossaire)"></h3>
           </div>
         </div>
+
+        <br />
+
         <!-- Question answer choices -->
         <div v-if="question.type !== 'QCM-RM'" class="row justify-content-center">
-          <div class="col-sm-auto text-align-left">
+          <div class="col-sm-auto col-md-8 col-lg-6 text-align-left">
             <div class="form-group" v-for="answer_option_letter in answerChoices" :key="answer_option_letter" :class="{ 'text-primary' : answer_option_letter === answerPicked, 'text-danger': (questionSubmitted && (answer_option_letter !== answerPicked) && (answer_option_letter === question['answer_correct'])) }">
-              <template v-if="question['answer_option_' + answer_option_letter]">
+              <label v-if="question['answer_option_' + answer_option_letter]" :for="answer_option_letter">
                 <input type="radio" v-bind:id="answer_option_letter" v-bind:value="answer_option_letter" v-model="answerPicked" :disabled="questionSubmitted">&nbsp;
-                <label v-bind:for="answer_option_letter">&nbsp;{{ question['answer_option_' + answer_option_letter] }}</label>
-              </template>
+                {{ question['answer_option_' + answer_option_letter] }}
+              </label>
             </div>
           </div>
         </div>
         <div v-if="question.type === 'QCM-RM'" class="row justify-content-center">
-          <div class="col-12 margin-bottom-10"><i>{{ $t('messages.multipleAnswers') }}</i></div>
-          <div class="col-sm-auto text-align-left">
+          <div class="col-sm-auto col-md-8 col-lg-6 text-align-left">
             <div class="form-group" v-for="(answer_option_letter, index) in answerChoices" :key="answer_option_letter" :class="{ 'text-primary' : answerPicked.includes(answer_option_letter), 'text-warning': (questionSubmitted && answerPicked.includes(answer_option_letter) && !question['answer_correct'].includes(answer_option_letter)), 'text-danger': (questionSubmitted && !answerPicked.includes(answer_option_letter) && question['answer_correct'].includes(answer_option_letter)) }">
-              <template v-if="question['answer_option_' + answer_option_letter]">
+              <label v-if="question['answer_option_' + answer_option_letter]" :for="answer_option_letter">
                 <input type="checkbox" v-bind:id="answer_option_letter" v-bind:value="answer_option_letter" v-model="answerPicked[index]" v-bind:true-value="answer_option_letter" :disabled="questionSubmitted">&nbsp;
-                <label v-bind:for="answer_option_letter">&nbsp;{{ question['answer_option_' + answer_option_letter] }}</label>
-              </template>
+                {{ question['answer_option_' + answer_option_letter] }}
+              </label>
             </div>
           </div>
+          <div class="col-12 margin-bottom-10 small"><i>{{ $t('messages.multipleAnswers') }}</i></div>
         </div>
-        <!-- Question hint & form submit -->
+
+        <!-- Question hint -->
         <div v-if="question.hint && showQuestionHint" class="row no-gutters justify-content-center">
           <div class="col-md-10 col-lg-8">
             <div class="alert alert-warning-custom text-align-left margin-bottom-10 padding-10">💡{{ question.hint }}</div>
           </div>
         </div>
+
+        <br />
+
+        <!-- Question form submit -->
         <div class="row no-gutters">
           <div class="col-4">
             <span class="text-primary">#{{ context.question_number }}</span><br />
             <span><small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
           </div>
           <div class="col-4">
-            <div class="form-group">
-              <button v-if="!questionSubmitted" type="submit" class="btn" :class="answerPicked ? 'btn-primary' : 'btn-outline-primary'" :disabled="!answerPicked">{{ $t('messages.submit') }}</button>
-            </div>
+            <button v-if="!questionSubmitted" type="submit" class="btn" :class="answerPicked ? 'btn-primary' : 'btn-outline-primary'" :disabled="!answerPicked">{{ $t('messages.submit') }}</button>
           </div>
           <div class="col-4">
             <button v-if="question.hint && !showQuestionHint" class="btn btn-sm btn-outline-warning" @click="showQuestionHint=!showQuestionHint">💡&nbsp;{{ $t('messages.hint') }}</button>
@@ -268,6 +274,14 @@ export default {
   margin: 10px 0px;
   padding: 10px;
   background-color: white;
+}
+.question .form-group label {
+  display: block;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 2px 2px #ededed;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-bottom: 0;
 }
 
 /* hint */
