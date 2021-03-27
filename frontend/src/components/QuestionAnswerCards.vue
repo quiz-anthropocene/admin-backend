@@ -3,15 +3,6 @@
 
     <!-- QUESTION -->
     <div v-if="question" class="question">
-      <h2>
-        <span>
-          <span class="text-primary">#{{ context.question_number }}</span>
-        </span>
-        <span> | </span>
-        <span v-if="question.category" class="text-secondary">{{ $t('categories.'+question.category.name) }}</span>
-        <span> | </span>
-        <span><small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
-      </h2>
       <form @submit.prevent="submitAnswer">
         <!-- Question text -->
         <div class="row no-gutters justify-content-center">
@@ -49,14 +40,17 @@
         </div>
         <div class="row no-gutters">
           <div class="col-4">
-            <button v-if="question.hint && !showQuestionHint" class="btn btn-sm btn-outline-warning" @click="showQuestionHint=!showQuestionHint">💡&nbsp;{{ $t('messages.hint') }}</button>
+            <span class="text-primary">#{{ context.question_number }}</span><br />
+            <span><small><DifficultyBadge v-bind:difficulty="question.difficulty" /></small></span>
           </div>
           <div class="col-4">
             <div class="form-group">
               <button v-if="!questionSubmitted" type="submit" class="btn" :class="answerPicked ? 'btn-primary' : 'btn-outline-primary'" :disabled="!answerPicked">{{ $t('messages.submit') }}</button>
             </div>
           </div>
-          <div class="col-4"></div>
+          <div class="col-4">
+            <button v-if="question.hint && !showQuestionHint" class="btn btn-sm btn-outline-warning" @click="showQuestionHint=!showQuestionHint">💡&nbsp;{{ $t('messages.hint') }}</button>
+          </div>
         </div>
       </form>
     </div>
