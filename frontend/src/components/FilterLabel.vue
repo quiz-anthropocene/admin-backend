@@ -1,5 +1,7 @@
 <template>
   <span class="label" :class="[filterLabelClass, customClass]" @click="$emit('filter-label-clicked', { key: filterType, value: filterValue })">
+    <!-- cross prefix -->
+    <span v-if="showCross">✘&nbsp;</span>
     <!-- name -->
     <span v-if="filterType !== 'difficulty'">{{ filterValue }}</span>
     <small v-if="filterType === 'difficulty'"><DifficultyBadge v-bind:difficulty="filterValue" /></small>
@@ -18,6 +20,7 @@ export default {
     filterValue: [String, Number],
     filterCount: Number,
     customClass: String,
+    showCross: Boolean,
   },
   components: {
     DifficultyBadge,

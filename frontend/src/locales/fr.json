@@ -53,13 +53,17 @@
         "quizCompletedBetter2": "des joueurs qui vous ont précédés !",
         "lastUpdatedOn": "dernière mise à jour le",
         "nextQuestion": "Question suivante",
+        "sort": "Tri",
         "filters": "Filtres",
+        "category": "Categorie",
         "categories": "Catégories",
+        "tag": "Mot clé",
         "tags": "Tags",
+        "author": "Auteur",
         "authors": "Auteurs",
         "difficulty": "Difficulté",
         "difficulties": "Difficultés",
-        "updateFilters": "Mettre à jour les filtres !",
+        "update": "Mettre à jour",
         "reset": "Réinitialiser",
         "cancel": "Annuler",
         "audioComments": "Commentaires audio",
@@ -92,5 +96,9 @@
         "Histoire & Politique": "Histoire & Politique",
         "Pollution": "Pollution",
         "Ressources": "Ressources"
+    },
+    "sort": {
+        "Plus récents": "Plus récents",
+        "Plus anciens": "Plus anciens"
     }
 }
