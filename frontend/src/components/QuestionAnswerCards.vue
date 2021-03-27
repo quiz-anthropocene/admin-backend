@@ -86,6 +86,14 @@
               Votre navigateur ne supporte par le HTML5 audio. Voici un <a href="question.answer_audio">lien pour télécharger le fichier audio</a>.
             </audio>
           </p>
+          <p v-if="question.answer_video" title="Explication au format vidéo">
+            <span>📺&nbsp;</span>
+            <video v-if="question.answer_video.endsWith('.mp4')" controls height="250" type="video/mp4">
+              <source v-bind:src="question.answer_video">
+              Votre navigateur ne supporte par le HTML5 vidéo. Voici un <a href="question.answer_video">lien pour télécharger le fichier vidéo</a>.
+            </video>
+            <object v-if="!question.answer_video.endsWith('.mp4')" :data="question.answer_video" height="250"></object>
+          </p>
         </div>
       </div>
       <!-- Answer image -->
