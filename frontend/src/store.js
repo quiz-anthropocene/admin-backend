@@ -39,6 +39,7 @@ const store = new Vuex.Store({
       tag: null,
       author: null,
       difficulty: null,
+      sort: constants.QUIZ_SORT_DEFAULT,
     },
     questionsPendingValidation: [],
     quizzes: [],
@@ -217,8 +218,7 @@ const store = new Vuex.Store({
     },
     UPDATE_QUIZ_FILTERS: ({ commit, state, getters }, filterObject) => {
       const currentQuizFilters = filterObject || state.quizFilters;
-      const quizzesDisplayed = getters.getQuizzesPublishedByFilter(currentQuizFilters)
-        .sort((a, b) => b.id - a.id);
+      const quizzesDisplayed = getters.getQuizzesPublishedByFilter(currentQuizFilters);
       commit('SET_QUESTION_FILTERS', { object: currentQuizFilters });
       // We are not using the quizFilterVairable anymore
       // commit('SET_QUIZ_FILTERS', { object: currentQuizFilters });
@@ -321,7 +321,8 @@ const store = new Vuex.Store({
     getQuizById: (state) => (quizId) => state.quizzes.find((q) => (q.id === quizId)),
     getQuizzesByIdList: (state) => (quizIdList) => state.quizzes.filter((q) => quizIdList.includes(q.id)),
     getQuizzesPublishedByFilter: (state) => (filter) => state.quizzesPublished.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
-      .filter((q) => (filter.author ? (q.author === filter.author) : true)),
+      .filter((q) => (filter.author ? (q.author === filter.author) : true))
+      .sort((a, b) => ((filter.sort === 'date_old') ? (a.created.localeCompare(b.created)) : (b.id - a.id))),
     getQuizRelationshipsById: (state) => (quizId) => state.quizRelationships.filter((qr) => (qr.from_quiz === quizId) || (qr.to_quiz === quizId)),
     getQuizStatsById: (state) => (quizId) => state.quizStats.find((q) => (q.quiz_id === quizId)),
   },

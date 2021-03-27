@@ -22,6 +22,11 @@ export default {
   QUIZ_RELATIONSHIP_SIMILAR: 'similaire',
   QUIZ_RELATIONSHIP_TWIN: 'jumeau',
   QUIZ_RELATONSHIP_TRANSLATION: 'traduction',
+  QUIZ_SORT_DEFAULT: 'date_new',
+  QUIZ_SORT_CHOICE_LIST: [
+    { key: 'date_new', value: 'Plus récents' },
+    { key: 'date_old', value: 'Plus anciens' },
+  ],
   LANGUAGE_CHOICE_LIST: [
     { key: 'fr', value: 'Français', emoji: '🇫🇷' },
     { key: 'en', value: 'English', emoji: '🌐' },

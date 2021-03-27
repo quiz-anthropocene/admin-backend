@@ -2,77 +2,103 @@
   <section class="filter-box" :class="{ 'background-color-dark-grey': showFilterBox }">
 
     <!-- Header -->
-    <div class="filter-box--header" :class="{ 'padding-bottom-5': showFilterBox }" @click="toggleFilterBox()">
+    <div class="filter-box--header">
+
       <div class="row no-gutters">
-        <div class="col-8">
+        <div class="col-3 text-align-left">
+          <span class="label label-hidden"><strong>{{ counter }}</strong> {{ objectType }}{{ (objectType === 'question' && questionsDisplayedCount > 1) ? 's' : '' }}</span>
+        </div>
+
+        <div class="col-6 text-center">
+          <span v-for="(value, key) in questionFilters" :key="key">
+            <FilterLabel v-if="key !== 'sort' && questionFilters[key]" :filterType="key" :filterValue="value" :showCross="true" @filter-label-clicked="removeFilter"></FilterLabel>
+          </span>
+        </div>
+
+        <div class="col-3 text-align-right cursor-pointer" @click="toggleFilterBox()">
           <span class="label label-hidden">
-            <span>⚙️&nbsp;<strong>{{ $t('messages.filters') }}</strong></span>
+            <img height="25px" src="/openmoji_filter_E257.svg" :alt="$t('messages.filters')" :title="$t('messages.filters')" />
+            <img height="25px" src="/openmoji_sort_E265.svg" :alt="$t('messages.sort')" :title="$t('messages.sort')" />
             <span v-if="!showFilterBox">&nbsp;▸</span> <!-- ▲ ► -->
             <span v-if="showFilterBox">&nbsp;▾</span> <!-- ▼ -->
           </span>
-          <span v-for="(value, key) in questionFilters" :key="key">
-            <span v-if="(key === 'category') && value" class="label label-category">📂{{ value }}</span>
-            <span v-if="(key === 'tag') && value" class="label label-tag">🏷️{{ value }}</span>
-            <span v-if="(key === 'author') && value" class="label label-author">📝{{ value }}</span>
-            <span v-if="(key === 'difficulty') && value" class="label label-difficulty"><DifficultyBadge v-bind:difficulty="value" /></span>
-          </span>
-        </div>
-        <div class="col-4 text-align-right" v-on:click.stop>
-          <button v-if="questionFilters.category || questionFilters.tag || questionFilters.author || questionFilters.difficulty" class="btn btn-sm btn-outline-secondary margin-5" @click="clearQuestionFilters()">{{ $t('messages.reset') }}</button>
-          <span class="label label-hidden"><strong>{{ counter }}</strong> {{ objectType }}{{ (objectType === 'question' && questionsDisplayedCount > 1) ? 's' : '' }}</span>
         </div>
       </div>
+
     </div>
 
     <!-- Content -->
     <section v-if="showFilterBox" class="filter-box--content">
 
-      <div v-if="categories && objectType =='question'">
-        <h3>📂&nbsp;{{ $t('messages.categories') }}</h3>
-        <FilterLabel v-for="category in categories" :key="category.name" @filter-label-clicked="updateTempQuestionFilter"
-          filterType="category" v-bind:filterValue="category.name" v-bind:filterCount="category['question_count']" v-bind:customClass="(category.name === tempQuestionFilters['category']) ? 'label-category--active' : ''" />
+      <div class="row">
+        <div class="col-sm-6">
+          <h6>
+            <img height="20px" src="/openmoji_filter_E257.svg" :alt="$t('messages.filters')" :title="$t('messages.filters')" />
+            {{ $t('messages.filters') }}
+          </h6>
+          <p v-if="categories && objectType =='question'">
+            <span>{{ $t('messages.category') }}{{ $t('words.semiColon') }}&nbsp;</span>
+            <select v-model="tempQuestionFilters['category']">
+              <option v-for="(option, i) in tags" :key="i" :value="option.name">
+                  {{ option.name }} ({{ option[objectType === 'question' ? 'question_count' : 'quiz_count'] }})
+                </option>
+            </select>
+          </p>
+          <p v-if="tags">
+            <span>{{ $t('messages.tag') }}{{ $t('words.semiColon') }}&nbsp;</span>
+            <select v-model="tempQuestionFilters['tag']">
+              <option v-for="(option, i) in tags" :key="i" :value="option.name">
+                  {{ option.name }} ({{ option[objectType === 'question' ? 'question_count' : 'quiz_count'] }})
+                </option>
+            </select>
+          </p>
+          <p v-if="authors">
+            <span>{{ $t('messages.author') }}{{ $t('words.semiColon') }}&nbsp;</span>
+            <select v-model="tempQuestionFilters['author']">
+              <option v-for="(option, i) in authors" :key="i" :value="option.name">
+                {{ option.name }} ({{ option[objectType === 'question' ? 'question_count' : 'quiz_count'] }})
+              </option>
+            </select>
+          </p>
+          <p v-if="difficultyLevels && objectType =='question'">
+            <span>{{ $t('messages.difficulty') }}{{ $t('words.semiColon') }}&nbsp;</span>
+            <select v-model="tempQuestionFilters['difficulty']">
+              <option v-for="(option, i) in difficultyLevels" :key="i" :value="option.name">
+                {{ option.name }} ({{ option[objectType === 'question' ? 'question_count' : 'quiz_count'] }})
+              </option>
+            </select>
+          </p>
+        </div>
+
+        <div class="col-sm-6">
+          <h6>
+            <img height="20px" src="/openmoji_sort_E265.svg" :alt="$t('messages.sort')" :title="$t('messages.sort')" />
+            {{ $t('messages.sort') }}
+          </h6>
+          <p v-if="quizSortChoices && objectType =='quiz'">
+            <select v-model="tempQuestionFilters['sort']">
+              <option v-for="(option, i) in quizSortChoices" :key="i" :value="option.key">
+                {{ option.value }}
+              </option>
+            </select>
+          </p>
+        </div>
       </div>
-
-      <hr class="custom-separator" />
-
-      <div v-if="tags">
-        <h3>🏷️&nbsp;{{ $t('messages.tags') }}</h3>
-        <FilterLabel v-for="tag in tags" :key="tag.name" @filter-label-clicked="updateTempQuestionFilter"
-          filterType="tag" v-bind:filterValue="tag.name" v-bind:filterCount="tag[objectType === 'question' ? 'question_count' : 'quiz_count']" v-bind:customClass="(tag.name === tempQuestionFilters['tag']) ? 'label-tag--active' : ''" />
-      </div>
-
-      <hr class="custom-separator" />
-
-      <div v-if="authors ">
-        <h3>📝&nbsp;{{ $t('messages.authors') }}</h3>
-        <FilterLabel v-for="author in authors" :key="author.name" @filter-label-clicked="updateTempQuestionFilter"
-          filterType="author" v-bind:filterValue="author.name" v-bind:filterCount="author[objectType === 'question' ? 'question_count' : 'quiz_count']" v-bind:customClass="(author.name === tempQuestionFilters['author']) ? 'label-author--active' : ''" />
-      </div>
-
-      <hr class="custom-separator" />
-
-      <div v-if="difficultyLevels && objectType =='question'">
-        <h3>🏆&nbsp;{{ $t('messages.difficulties') }}</h3>
-        <FilterLabel v-for="difficulty in difficultyLevels" :key="difficulty.name" @filter-label-clicked="updateTempQuestionFilter"
-          filterType="difficulty" v-bind:filterValue="difficulty.value" v-bind:filterCount="difficulty['question_count']" v-bind:customClass="(difficulty.value == tempQuestionFilters['difficulty']) ? 'label-difficulty--active' : ''" />
-      </div>
-
-      <br />
     </section>
 
     <!-- Action Buttons -->
     <section v-if="showFilterBox" class="filter-box--action">
-      <button class="btn btn-outline-secondary margin-5" @click="clearQuestionFilters()">{{ $t('messages.reset') }}</button>
-      <button class="btn btn-outline-dark margin-5" @click="toggleFilterBox()">{{ $t('messages.cancel') }}</button>
-      <button class="btn margin-5" :class="JSON.stringify(questionFilters) === JSON.stringify(tempQuestionFilters) ? 'btn-outline-primary' : 'btn-primary'" @click="updateQuestionFiltersAndQueryParams()">{{ $t('messages.updateFilters') }}</button>
+      <button class="btn btn-sm btn-outline-secondary margin-5" @click="clearQuestionFilters()">{{ $t('messages.reset') }}</button>
+      <button class="btn btn-sm btn-outline-dark margin-5" @click="toggleFilterBox()">{{ $t('messages.cancel') }}</button>
+      <button class="btn btn-sm margin-5" :class="JSON.stringify(questionFilters) === JSON.stringify(tempQuestionFilters) ? 'btn-outline-primary' : 'btn-primary'" @click="updateQuestionFilters(true)">{{ $t('messages.update') }}{{ $t('words.exclamationMark') }}</button>
     </section>
 
   </section>
 </template>
 
 <script>
+import constants from '../constants';
 import FilterLabel from './FilterLabel.vue';
-import DifficultyBadge from './DifficultyBadge.vue';
 
 export default {
   name: 'QuestionFilter',
@@ -82,7 +108,6 @@ export default {
   },
   components: {
     FilterLabel,
-    DifficultyBadge,
   },
 
   data() {
@@ -92,7 +117,9 @@ export default {
         tag: null,
         author: null,
         difficulty: null,
+        sort: constants.QUIZ_SORT_DEFAULT,
       },
+      quizSortChoices: constants.QUIZ_SORT_CHOICE_LIST,
       showFilterBox: false,
     };
   },
@@ -171,8 +198,24 @@ export default {
         tag: null,
         author: null,
         difficulty: null,
+        sort: constants.QUIZ_SORT_DEFAULT,
       };
       this.updateQuestionFilters();
+    },
+    updateQuestionFilters(updateQueryParams = false) {
+      if (updateQueryParams) {
+        this.updateQuestionFiltersAndQueryParams();
+      }
+      this.showFilterBox = false;
+      if (this.objectType === 'question') {
+        this.$store.dispatch('UPDATE_QUESTION_FILTERS', this.tempQuestionFilters);
+      } else {
+        this.$store.dispatch('UPDATE_QUIZ_FILTERS', this.tempQuestionFilters);
+      }
+    },
+    removeFilter(data) {
+      this.tempQuestionFilters[data.key] = null;
+      this.updateQuestionFilters(true);
     },
     updateQuestionFiltersAndQueryParams() {
       const query = {};
@@ -182,15 +225,6 @@ export default {
         }
       });
       this.$router.push({ query });
-      this.updateQuestionFilters();
-    },
-    updateQuestionFilters() {
-      this.showFilterBox = false;
-      if (this.objectType === 'question') {
-        this.$store.dispatch('UPDATE_QUESTION_FILTERS', this.tempQuestionFilters);
-      } else {
-        this.$store.dispatch('UPDATE_QUIZ_FILTERS', this.tempQuestionFilters);
-      }
     },
   },
 };
@@ -199,22 +233,22 @@ export default {
 <style scoped>
 .filter-box {
   /* background-color: #ebebeb; */
-  box-shadow: 0px 0px 5px 5px #c5c5c5;
-  border-radius: 5px;
-  margin: 10px 0px;
-  padding: 5px;
-}
-.filter-box > .filter-box--header {
-  text-align: left;
-  cursor: pointer;
+  /* box-shadow: 0px 0px 5px 5px #c5c5c5;
+  border-radius: 5px; */
+  margin: 5px 0px;
+  padding: 0px 5px;
 }
 .filter-box > .filter-box--content {
   background-color: white;
-  /* max-height: 65vh; */
   max-height: 50vh;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 .filter-box > .filter-box--action {
   padding-top: 5px;
+}
+
+select {
+  max-width: 200px;
 }
 </style>

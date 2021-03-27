@@ -1,6 +1,5 @@
 <template>
   <section>
-    <!-- Header -->
     <QuestionFilter objectType="quiz" :counter="quizzesDisplayed.length" />
 
     <section v-if="quizzesDisplayed && quizzesDisplayed.length === 0" class="alert alert-warning" role="alert">

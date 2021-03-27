@@ -50,13 +50,17 @@
         "quizCompletedBetter2": "of the players who came before you!",
         "lastUpdatedOn": "last updated on",
         "nextQuestion": "Next question",
+        "sort": "Sort",
         "filters": "Filters",
+        "category": "Category",
         "categories": "Categories",
+        "tag": "Tag",
         "tags": "Tags",
+        "author": "Author",
         "authors": "Authors",
         "difficulty": "Difficulty",
         "difficulties": "Difficulties",
-        "updateFilters": "Update the filters!",
+        "update": "Update",
         "reset": "Reset",
         "cancel": "Cancel",
         "audioComments": "Audio comments",
@@ -89,5 +93,9 @@
         "Histoire & Politique": "History & Politics",
         "Pollution": "Pollution",
         "Ressources": "Resources"
+    },
+    "sort": {
+        "Plus récents": "Newest",
+        "Plus anciens": "Oldest"
     }
 }
