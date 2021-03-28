@@ -92,7 +92,7 @@
     Idem pour l''aviation (billets moins chers donc on voyage plus souvent, ou plus
     loin).'
   answer_audio: ''
-  answer_video: https://www.youtube.com/embed/b4kPjnBRZ-E
+  answer_video: https://www.youtube.com/embed/uZI99xZDVkg
   answer_accessible_url: http://www.decroissance.qc.ca/sites/default/files/journal/Schneider_l_Ecologiste.pdf
   answer_scientific_url: https://www.lafabriqueecologique.fr/transition-energetique-le-role-incontournable-de-leffet-rebond/
   answer_reading_recommendation: ''
@@ -20375,7 +20375,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://imgix.bustle.com/rehost/2016/9/13/6029141b-a962-4ed0-b403-27d0abdbb1a5.png?w=800&auto=format%2Ccompress&cs=srgb&q=70&fit=crop&crop=faces
+  answer_image_url: https://imgix.bustle.com/rehost/2016/9/13/6029141b-a962-4ed0-b403-27d0abdbb1a5.png
   answer_image_explanation: Défi lancé à Robert Förstemann, champion du monde de sprint
     et cycliste olympique qui possède des cuisses démesurées, capable de développer
     700 watts, de faire fonctionner un simple grille-pain.
@@ -30427,10 +30427,11 @@
   tags:
   - 30
 - id: 854
-  text: Des 100 milliards de tonnes de matière qui entrent dans l'économie chaque
-    année, quelle portion pourrait être théoriquement récupérée si les processus de
-    circularité étaient parfaits ?
-  hint: ''
+  text: Des 100 milliards de tonnes de matière qu'utilise l'économie chaque année,
+    quelle portion pourrait être théoriquement réinjectée en début de chaîne comme
+    ressource (si les processus de circularité étaient parfaits) ?
+  hint: la circularité désigne le fait de réutiliser les "déchets" en fin de chaîne
+    comme matière première en début de chaîne
   type: QCM
   category: 7
   difficulty: 3
@@ -30695,7 +30696,7 @@
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/860.png
   answer_image_explanation: '"Déchets électroniques, le grand détournement" (2019)
-    + "La tragédie électronique" (ARTE'
+    + "La tragédie électronique" (ARTE)'
   answer_extra_info: ''
   author: Max Pinsard
   validator: Matthieu Massart
@@ -32844,9 +32845,11 @@
   tags:
   - 11
 - id: 937
-  text: 100 billion additional tons of material are injected into the economy each
-    year. Assuming circularity processes were perfect, what part of it could be recovered?
-  hint: ''
+  text: 100 billion additional tons of material are used by the economy each year.
+    Assuming circularity processes were perfect, what part of it could be reinjected
+    as raw material?
+  hint: Circularity designates the reuse of "waste" (at the end of the chain) as raw
+    material (beginning of the chain)
   type: QCM
   category: 7
   difficulty: 3
