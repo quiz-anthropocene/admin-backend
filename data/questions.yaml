@@ -26043,7 +26043,7 @@
   - 217
   - 218
 - id: 731
-  text: Quel est le taux de TVA sur les vols ?
+  text: Quel est le taux de TVA sur le kérosène ?
   hint: Question piège
   type: QCM
   category: 2
@@ -33721,3 +33721,35 @@
   - 33
   - 85
   - 217
+- id: 1011
+  text: Quelle est depuis les années 2000 la contribution annuelle des glaciers à
+    la hausse du niveau des mers ?
+  hint: Cela ne paraît pas beaucoup mais la montée s'accumule petit à petit
+  type: QCM
+  category: 1
+  difficulty: 2
+  language: Français
+  answer_option_a: 1mm
+  answer_option_b: 5 cm
+  answer_option_c: 10 cm
+  answer_option_d: 30 cm
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Lionel Favier
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-03-25
+  created: 2021-03-29
+  updated: 2021-03-29
+  tags:
+  - 16
+  - 69
