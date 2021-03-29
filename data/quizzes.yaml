@@ -629,10 +629,10 @@
   tags:
   - 30
 - id: 64
-  name: Atelier Quiz de l'Anthropocène
+  name: Le quiz Choc
   introduction: ''
   conclusion: ''
-  difficulty_average: 2.4
+  difficulty_average: 2.5
   language: Français
   author: Matthieu Massart et Jean-Philippe Pernin
   image_background_url: ''
@@ -640,7 +640,7 @@
   publish: false
   spotlight: false
   created: 2021-03-05
-  updated: 2021-03-11
+  updated: 2021-03-29
   tags: []
 - id: 65
   name: Le Pétrole
@@ -708,10 +708,11 @@
     \ faire le tour du monde, de construire des bâtiments gigantesques ou de s'adapter\
     \ à une pénurie d'énergie. Pourtant, beaucoup de leurs innovations sont tombées\
     \ dans l'oubli, car jugées inférieures aux systèmes d'aujourd'hui. Prêts à découvrir\
-    \ quelques-unes de ces inventions ?<br />\r\n<br />\r\nUn quiz créé par Max Pinsard,\
-    \ inspiré de <a class=\"notion-link-token notion-enable-hover\" href=\"https://solar.lowtechmagazine.com/fr\"\
-    \ rel=\"noopener noreferrer\" style=\"cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit\"\
-    \ target=\"_blank\">Low-tech Magazine</a></p>"
+    \ quelques-unes de ces inventions méconnues ?<br />\r\n<br />\r\nUn quiz créé\
+    \ par Max Pinsard, inspiré de <a class=\"notion-link-token notion-enable-hover\"\
+    \ href=\"https://solar.lowtechmagazine.com/fr\" rel=\"noopener noreferrer\" style=\"\
+    cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit\" target=\"\
+    _blank\">Low-tech Magazine</a></p>"
   conclusion: <p>Morale de l'histoire ? C'est la manne d'énergie à notre disposition
     qui nous a fait mettre de côté ces technologies qui ne manquaient pas d'intérêt.
     Cela vous a captivé ? Pour aller plus loin, rendez-vous sur le site du <a href="https://solar.lowtechmagazine.com/fr/">Low
@@ -721,10 +722,10 @@
   author: Max Pinsard
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/874.png
   has_audio: false
-  publish: false
-  spotlight: false
+  publish: true
+  spotlight: true
   created: 2021-03-23
-  updated: 2021-03-25
+  updated: 2021-03-29
   tags:
   - 255
 - id: 68
@@ -753,9 +754,9 @@
   author: Max Pinsard
   image_background_url: https://fresquedeslowtechs.files.wordpress.com/2021/02/fr_techs_modern_dezo_flouetee_64c.png
   has_audio: false
-  publish: false
+  publish: true
   spotlight: true
   created: 2021-03-24
-  updated: 2021-03-25
+  updated: 2021-03-29
   tags:
   - 255

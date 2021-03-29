@@ -10312,9 +10312,10 @@
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: 10 mètres, c'est la limite adoptée par le GIEC pour définir
-    les populations cotières, les premières exposées à la montée des eaux et à la
+    les populations côtières, les premières exposées à la montée des eaux et à la
     montée en fréquence et intensité des phénomènes météorologiques extrêmes. Ce sont
-    aussi celles qui possèdent la plus faible capacité d'adaptation.
+    aussi celles qui possèdent la plus faible capacité d'adaptation. On peut donc
+    s'attendre à une forte augmentation des phénomènes migratoires.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -14144,8 +14145,7 @@
   has_ordered_answers: true
   answer_explanation: Ces 3,5 milliards de personnes sortiraient alors de la « niche
     climatique » dans laquelle les humains ont prospéré depuis six mille ans. Voilà
-    les conclusions d’une étude publiée lundi 4 mai dans la revue américaine Proceedings
-    of the National Academy of Sciences, qui met en lumière les risques maximaux auxquels
+    les conclusions d'une étude récent qui met en lumière les risques maximaux auxquels
     le monde pourrait être soumis dans les prochaines décennies à moins que nous ne
     parvenions à inverser la tendance.
   answer_audio: ''
@@ -20593,14 +20593,10 @@
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: 'Près d’un quart de la population mondiale, vivant dans dix-sept
-    pays, est en situation de « stress hydrique très élevé»,
-
-    Le stress hydrique – autrement dit, une ressource insuffisante pour répondre aux
-    différentes activités humaines et aux besoins de l’environnement – commence lorsque
-    la disponibilité en eau est inférieure à 1 700 mètres cubes par an et par personne.
-
+    pays, est en situation de « stress hydrique très élevé». C''est une conséquence
+    de l''augmentation de l''effet de serre, qui vient perturber le cycle de l''eau.
     Les prévisions pour 2040 sont encore plus inquiétantes, comme le montre le graphique
-    ci-dessous.'
+    ci-dessous. '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2019/08/06/pres-d-un-quart-de-la-population-mondiale-est-menace-par-une-penurie-d-eau_5497203_3244.html
@@ -26282,9 +26278,9 @@
   tags:
   - 189
 - id: 737
-  text: "Une étude récente a mis en évidence une diminution en Europe de 75 à 80%\
-    \ de la masse des insectes en 30 ans en Allemagne. \nQuelles seront les conséquences\
-    \ les plus probables de cette diminution pour les insectes pollinisateurs ?"
+  text: "Une étude récente a mis en évidence une diminution de plus de 75 de la masse\
+    \ des insectes en 30 ans en Allemagne. \nQuelles seront les conséquences les plus\
+    \ probables de cette diminution pour les insectes pollinisateurs ?"
   hint: ''
   type: QCM-RM
   category: null
@@ -26309,7 +26305,7 @@
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/biodiversite/article/2016/11/28/l-extinction-des-pollinisateurs-menace-1-4-milliard-d-emplois-selon-un-rapport_5039767_1652692.html
   answer_scientific_url: ''
-  answer_reading_recommendation: ''
+  answer_reading_recommendation: '[https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0185809](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0185809)'
   answer_image_url: https://img.lemde.fr/2016/11/28/0/0/1897/1462/664/0/75/0/322ce7c_6239-w2dqs0.x50cnmi.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
