@@ -14,6 +14,7 @@ import RessourcesPage from './views/RessourcesPage.vue';
 import StatsPage from './views/StatsPage.vue';
 import GlossaryPage from './views/GlossaryPage.vue';
 import ContributePage from './views/ContributePage.vue';
+import AtelierBiennale2021Page from './views/AtelierBiennale2021Page.vue';
 import NotFoundPage from './views/NotFoundPage.vue';
 
 Vue.use(VueRouter);
@@ -82,6 +83,11 @@ const routes = [
     path: '/contribuer',
     name: 'contribute',
     component: ContributePage,
+  },
+  {
+    path: '/atelier-biennale-2021',
+    name: 'atelier-biennale-2021',
+    component: AtelierBiennale2021Page,
   },
   {
     // will match everything
