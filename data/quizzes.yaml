@@ -555,15 +555,17 @@
     \ vous apprendrez dans la première partie de cet atelier, ciblée sur les constats.<br\
     \ />\r\n<br />\r\nUn quiz proposé par Max Pinsard, docteur en sciences de l’énergie\
     \ et matériaux de INRS-EMT Montréal et créateur de la Fresque des Low-Techs.</p>"
-  conclusion: <p>Ces quelques questions, c'est bien sûr un peu court pour tout aborder,
-    mais vous avez pu apercevoir l'ordre de grandeur des impacts de notre système
-    techologique, et quelques notions d'auto-défense contre les fausses promesses
-    du salut technologique et de la croissance verte ! Comme le low-tech est aussi
-    une philosophie, beaucoup de concepts ne se retranscrivent pas en chiffres, mais
-    sont politiques, sociologiques, psychologiques... Plus d'infos sur le site de
-    la<a href="http://fresquedeslowtechs.org"> Fresque des Low-Techs</a>. « Contre
-    une croissance infinie dans un monde aux ressources finies qui SE DÉGRADENT et
-    SE DISPERSENT »</p>
+  conclusion: "<p>Ces quelques questions, c'est bien sûr un peu court pour tout aborder,\
+    \ mais vous avez pu apercevoir l'ordre de grandeur des impacts de notre système\
+    \ techologique, et quelques notions d'auto-défense contre les fausses promesses\
+    \ du salut technologique et de la croissance verte ! Comme le low-tech est aussi\
+    \ une philosophie, beaucoup de concepts ne se retranscrivent pas en chiffres,\
+    \ mais sont politiques, sociologiques, psychologiques... Plus d'infos sur le site\
+    \ de la<a href=\"http://fresquedeslowtechs.org\"> Fresque des Low-Techs</a>. «\
+    \ Contre une croissance infinie dans un monde aux ressources finies qui SE DÉGRADENT\
+    \ et SE DISPERSENT ».<br />\r\nEnfin, si vous avez envie de faire découvrir ce\
+    \ quiz au-delà de la France, sa version anglaise est <a href=\"http://quizanthropocene.fr/quiz/67\"\
+    >ici</a>.</p>"
   difficulty_average: 2.7
   language: Français
   author: Max Pinsard
@@ -572,7 +574,7 @@
   publish: true
   spotlight: true
   created: 2021-02-14
-  updated: 2021-03-25
+  updated: 2021-03-31
   tags:
   - 255
 - id: 62
@@ -640,7 +642,7 @@
   publish: false
   spotlight: false
   created: 2021-03-05
-  updated: 2021-03-29
+  updated: 2021-03-31
   tags: []
 - id: 65
   name: Le Pétrole
@@ -725,7 +727,7 @@
   publish: true
   spotlight: true
   created: 2021-03-23
-  updated: 2021-03-29
+  updated: 2021-03-31
   tags:
   - 255
 - id: 68
@@ -757,6 +759,6 @@
   publish: true
   spotlight: true
   created: 2021-03-24
-  updated: 2021-03-29
+  updated: 2021-03-31
   tags:
   - 255
