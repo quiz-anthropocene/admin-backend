@@ -38,3 +38,18 @@
   to_quiz: 63
   status: traduction
   created: 2021-02-22
+- id: 10
+  from_quiz: 68
+  to_quiz: 61
+  status: traduction
+  created: 2021-03-31
+- id: 11
+  from_quiz: 61
+  to_quiz: 63
+  status: traduction
+  created: 2021-03-31
+- id: 12
+  from_quiz: 61
+  to_quiz: 67
+  status: similaire
+  created: 2021-03-31
