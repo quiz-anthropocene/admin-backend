@@ -3,10 +3,8 @@ module.exports = {
     browser
       // home page
       .openHomepage()
-      .useXpath()
-      .assert.containsText('//main/section/div[2]/div/a/button', 'Tous les quiz')
-      .click('//main/section/div[2]/div/a/button')
-      .useCss()
+      .assert.containsText('button[id="all-quizs-btn"]', 'Tous les quiz')
+      .click('button[id="all-quizs-btn"]')
       // quiz list page
       .assert.urlContains('quiz')
       .assert.elementPresent('#quiz-list')
