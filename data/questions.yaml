@@ -7642,7 +7642,7 @@
     671 000 barils par jour. Ce qui fait environ 16 milliards de litres chaque jour.
     Le volume de 2 piscines olympiques par minute !
   answer_audio: ''
-  answer_video: https://www.youtube.com/watch?v=02x5UuV898c
+  answer_video: https://www.youtube.com/embed/02x5UuV898c
   answer_accessible_url: ''
   answer_scientific_url: https://www.eia.gov/international/data/world#/?pa=000gfs0000000000000000000000000000vg&c=4100000002000060000000000000g000200000000000000001&tl_id=5-A&vs=INTL.53-1-AFRC-TBPD.A&vo=0&v=H&end=2018
   answer_reading_recommendation: ''
@@ -31107,7 +31107,7 @@
     de personnes
   answer_option_c: La population entière de la terre, soit 7,8 milliards d'habitants
   answer_option_d: La population de 4 planètes
-  answer_correct: c
+  answer_correct: d
   has_ordered_answers: true
   answer_explanation: On peut estimer qu'en un journée, un humain consomme en nourriture
     environ 5 kWh dont il peut restituer en puissance mécanique 0,05 à 0,5 kWh. Voir
