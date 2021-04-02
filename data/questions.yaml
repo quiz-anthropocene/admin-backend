@@ -31106,7 +31106,7 @@
   answer_option_b: La population de l'Europe et celle de l'Afrique, soit 2 milliards
     de personnes
   answer_option_c: La population entière de la terre, soit 7,8 milliards d'habitants
-  answer_option_d: La population de 4 planètes
+  answer_option_d: 4 fois la population de la planète, soit environ 28 milliards d'habitants
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: On peut estimer qu'en un journée, un humain consomme en nourriture
@@ -31221,10 +31221,10 @@
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: A Keyham en Grande-Bretagne une grue de 60 tonnes donnait un
-    avantage de 1:600 (et pouvait soulever 5 fois son poids). Deux hommes seuls peuvent
+    avantage de 1:600 (et pouvait soulever 5 fois son poids). Deux hommes seuls pouvaient
     manipuler la grue avec 60 tonnes suspendues à l’extrémité de la flèche ! De nos
-    jours, nous utilisons des machines électriques et exerçons notre force physique
-    dans des salles de sport...
+    jours on utilise des machines électriques, en réservant notre force physique pour
+    la salle de sport...
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2010/03/history-of-human-powered-cranes.html
@@ -31294,8 +31294,8 @@
   answer_correct: ad
   has_ordered_answers: true
   answer_explanation: 'Des voitures peu aérodynamiques, avec un gros réservoir à l''arrière,
-    qui n''était donc pas exempte de défauts : moteur bien plus gros, puissance bien
-    plus limitée, 10 minutes de pré-chauffage, production de monoxyde de carbone…
+    qui n''étaient donc pas exempte de défauts : moteur bien plus gros, puissance
+    bien plus limitée, 10 minutes de pré-chauffage, production de monoxyde de carbone…
     Mais en temps de pénurie d''essence ce dispositif ingénieux a été grandement utilisé,
     apportant une solution simple. De quoi nous inspirer dans une perspective de descente
     énergétique ...'
@@ -31332,10 +31332,10 @@
   answer_option_d: Leur vitesse ne dépassait pas 7 km/h
   answer_correct: abcd
   has_ordered_answers: false
-  answer_explanation: Il subsiste quelques un de ces "trolley boats" dans le monde.
-    Ailleurs, leur vitesse limitée les a rendus obsolètes. Pourtant, ils constituent
-    une alternative peu énergivore pour relier 2 rives proches par exemple. Un autre
-    intérêt de cette technique est que le par câble peut exercer une force mécanique
+  answer_explanation: Il subsiste quelques-un de ces "trolley boats" dans le monde.
+    Ailleurs, leur vitesse limitée les a rendus obsolètes. Pourtant ils constituent
+    une alternative peu énergivore pour relier deux rives proches par exemple. Un
+    autre intérêt de cette technique est que le par câble peut exercer une force mécanique
     pour que la barge soit moins déviée par le courant, et économiser encore plus
     de carburant.
   answer_audio: ''
@@ -31394,10 +31394,10 @@
   - 255
 - id: 879
   text: 'La tourbe constituait un combustible fossile majeur pour les économies européennes
-    du XVIIe siècle : une consommation d''énergie par personne aussi grande celle
-    électricité d''un foyer moyen de nos jours. Elle est considérée par les scientifiques
-    du GIEC comme un combustible renouvelable. Combien de temps faut-il pour qu''une
-    couche de tourbe de 3 mètres se renouvelle ?'
+    du XVIIe siècle : une consommation d''énergie par personne aussi grande que l''électricité
+    d''un foyer moyen de nos jours. Elle est considérée par les scientifiques du GIEC
+    comme un combustible renouvelable. Combien de temps faut-il pour qu''une couche
+    de tourbe de 3 mètres se renouvelle ?'
   hint: ''
   type: QCM
   category: 2
@@ -31453,13 +31453,13 @@
   answer_option_d: 100 ans
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: 'Il faut 50 ans pour que les émissions vieux bâtiment inefficient
-    liées à son usage (chauffage …) dépassent celles d''un nouveau bâtiment efficient
-    en comptant les émissions dues à sa construction. Ce chiffre dépend des matériaux
-    employés bien-sûr.
+  answer_explanation: 'Il faut 50 ans pour que les émissions d''un vieux bâtiment
+    inefficient liées à son usage (chauffage …) dépassent celles d''un nouveau bâtiment
+    efficient en comptant les émissions dues à sa construction. Ce chiffre dépend
+    des matériaux employés bien-sûr.
 
     Il vaut donc mieux parfois réutiliser des anciens bâtiments même inefficients,
-    ou au moins être sûr que les nouveaux seront conservés plus de 50 ans.'
+    ou au moins être sûr que les nouveaux seront conservés plus de 50 ans...'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lowtechmagazine.com/2011/02/body-insulation-thermal-underwear.html
@@ -31478,7 +31478,7 @@
   - 53
   - 100
 - id: 881
-  text: 70 ans avant l'ampoule électrique l'utilisation d'arcs électriques conférait
+  text: 70 ans avant l'ampoule électrique, l'utilisation d'arcs électriques conférait
     à des lampadaires début XIXe une luminance équivalente à environ … ?
   hint: ''
   type: QCM
@@ -31493,10 +31493,10 @@
   has_ordered_answers: true
   answer_explanation: Cette invention produisait une brillance phénoménale, de 1,500
     à 6,000 équivalents bougie (une flamme de gaz produit ~100 équivalents bougie),
-    commes 20 ampoules de 100W ! Ces lampes étaient plus efficaces énergétiquement
-    que même les ampoules incandescentes de nos jours, et peuvent rivaliser avec les
-    ampoules fluorescentes même si elles ne sont vouées qu'à éclairer l'extérieur
-    (car en hauteur pour éviter les chocs électriques). Très populaires pour l'éclairage
+    càd comme 20 ampoules de 100W ! Ces lampes étaient même plus efficaces énergétiquement
+    que les ampoules incandescentes de nos jours, et peuvent rivaliser avec les ampoules
+    fluorescentes, même si elles ne sont vouées qu'à éclairer l'extérieur (car en
+    hauteur, pour éviter les chocs électriques). Très populaires pour l'éclairage
     urbain fin XIXe, elles contribuaient même à la pollution lumineuse ! Une inspiration
     intéressante pour éviter la multiplication des ampoules individuelles et le coût
     en matériaux correspondant ...
@@ -31519,7 +31519,7 @@
 - id: 882
   text: "La voûte catalane est une technique multicentenaire qui consiste en une superposition\
     \ de plusieurs couches de tuiles assemblées à l’aide d’un mortier. \nComment décrire\
-    \ la résistance de la voûte catalane ?"
+    \ la résistance d'une voûte catalane ?"
   hint: ''
   type: QCM-RM
   category: 6
@@ -31531,10 +31531,10 @@
   answer_option_d: Le mortier est optionnel tant que la clé de voûte est bien construite
   answer_correct: abc
   has_ordered_answers: false
-  answer_explanation: 'Sans utiliser d''acier avec des agencements astucieux défiant
+  answer_explanation: 'Sans utiliser d''acier, avec des agencements astucieux défiant
     la gravité, elles sont aussi solides que du béton armé ! Elles permettent des
     courbes moins prononcées que les voûtes romaines, et donc d''espacer les colonnes.
-    En revanche, du mortier doit être appliqué pour lier les brique, un mortier qui
+    En revanche, du mortier doit être appliqué pour lier les briques, un mortier qui
     fut amélioré lors de son import aux Etats-Unis fin XIXe siècle : avec du ciment
     à prise rapide on peut construire des arches encore plus grande ! Le béton est
     un important contributeur aux GES, et il n''est pas durable : son acier finit
