@@ -178,9 +178,9 @@
   - answer_success_count: 6
     count: 31
 - quiz_id: 8
-  answer_count: 434
-  answer_count_last_30_days: 44
-  answer_count_last_7_days: 5
+  answer_count: 435
+  answer_count_last_30_days: 45
+  answer_count_last_7_days: 6
   like_count: 11
   dislike_count: 0
   answer_success_count_split:
@@ -195,7 +195,7 @@
   - answer_success_count: 4
     count: 14
   - answer_success_count: 5
-    count: 26
+    count: 27
   - answer_success_count: 6
     count: 22
   - answer_success_count: 7
@@ -710,10 +710,10 @@
   - answer_success_count: 11
     count: 3
 - quiz_id: 62
-  answer_count: 340
-  answer_count_last_30_days: 340
-  answer_count_last_7_days: 23
-  like_count: 4
+  answer_count: 341
+  answer_count_last_30_days: 341
+  answer_count_last_7_days: 24
+  like_count: 5
   dislike_count: 0
   answer_success_count_split:
   - answer_success_count: 0
@@ -725,7 +725,7 @@
   - answer_success_count: 3
     count: 62
   - answer_success_count: 4
-    count: 91
+    count: 92
   - answer_success_count: 5
     count: 81
   - answer_success_count: 6
@@ -793,10 +793,10 @@
   - answer_success_count: 13
     count: 0
 - quiz_id: 65
-  answer_count: 82
-  answer_count_last_30_days: 82
-  answer_count_last_7_days: 27
-  like_count: 5
+  answer_count: 83
+  answer_count_last_30_days: 83
+  answer_count_last_7_days: 28
+  like_count: 6
   dislike_count: 1
   answer_success_count_split:
   - answer_success_count: 0
@@ -804,7 +804,7 @@
   - answer_success_count: 1
     count: 1
   - answer_success_count: 2
-    count: 1
+    count: 2
   - answer_success_count: 3
     count: 4
   - answer_success_count: 4
@@ -851,24 +851,24 @@
   - answer_success_count: 9
     count: 1
 - quiz_id: 67
-  answer_count: 52
-  answer_count_last_30_days: 52
-  answer_count_last_7_days: 49
+  answer_count: 61
+  answer_count_last_30_days: 61
+  answer_count_last_7_days: 58
   like_count: 1
   dislike_count: 0
   answer_success_count_split:
   - answer_success_count: 0
     count: 0
   - answer_success_count: 1
-    count: 7
+    count: 8
   - answer_success_count: 2
-    count: 11
+    count: 15
   - answer_success_count: 3
-    count: 14
+    count: 16
   - answer_success_count: 4
-    count: 10
+    count: 11
   - answer_success_count: 5
-    count: 2
+    count: 3
   - answer_success_count: 6
     count: 1
   - answer_success_count: 7
