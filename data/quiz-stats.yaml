@@ -851,9 +851,9 @@
   - answer_success_count: 9
     count: 1
 - quiz_id: 67
-  answer_count: 66
-  answer_count_last_30_days: 66
-  answer_count_last_7_days: 63
+  answer_count: 70
+  answer_count_last_30_days: 70
+  answer_count_last_7_days: 67
   like_count: 1
   dislike_count: 0
   answer_success_count_split:
@@ -864,11 +864,11 @@
   - answer_success_count: 2
     count: 15
   - answer_success_count: 3
-    count: 17
+    count: 19
   - answer_success_count: 4
-    count: 13
+    count: 14
   - answer_success_count: 5
-    count: 3
+    count: 4
   - answer_success_count: 6
     count: 2
   - answer_success_count: 7
