@@ -1843,8 +1843,8 @@
   tags:
   - 17
 - id: 51
-  text: D'ici 24 heures, combien de terres cultivables ou labourables auront disparu
-    dans le monde ?
+  text: En 24 heures, combien de terres cultivables ou labourables disparaissent dans
+    le monde ?
   hint: ''
   type: QCM
   category: 6
@@ -2412,7 +2412,7 @@
   answer_accessible_url: https://www.encyclo-ecolo.com/P%C3%AAche_et_surp%C3%AAche
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/67.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -2468,7 +2468,7 @@
   language: Français
   answer_option_a: Oui, en 1973
   answer_option_b: Oui, en 2006
-  answer_option_c: Non, il est estimé à 2045
+  answer_option_c: Pas encore, il est estimé à 2045
   answer_option_d: Non, il est trop loin pour pouvoir être estimé
   answer_correct: b
   has_ordered_answers: true
@@ -2733,7 +2733,7 @@
   category: 6
   difficulty: 2
   language: Français
-  answer_option_a: ''
+  answer_option_a: A droite
   answer_option_b: A gauche
   answer_option_c: Ca s'équilibre à peu près
   answer_option_d: A droite
@@ -7899,8 +7899,8 @@
   text: 'L’Agence Française pour le Développement tente de conditionner ses aides
     au développement au travers de deux indicateurs : l’indice de développement humain
     (IDH), et l’empreinte écologique. Lesquels de ces pays combinaient jusqu’il y
-    a peu un IDH décent (du niveau de la Russie) avec une empreinte écologique soutenable
-    ?'
+    a peu un IDH  jugé décent (du niveau de la Russie) avec une empreinte écologique
+    soutenable ?'
   hint: ''
   type: QCM-RM
   category: 6
@@ -20577,10 +20577,9 @@
   - 9
   - 193
 - id: 589
-  text: On dit d'une personne qu'elle est dans une situation de "stress hydrique très
-    élevé" lorsqu'elle rencontre chaque année des situations de manque d'eau, voire
-    de pénurie totale durant certaines périodes de l'année. Combien de personnes y
-    sont exposées sur terre ?
+  text: Le stress hydrique est une situation dans laquelle les populations font face
+    à un manque voire une pénurie totale d'eau durant certaines périodes de l'année.
+    Combien de personnes y sont exposées sur terre ?
   hint: ''
   type: QCM
   category: 7
@@ -25517,9 +25516,9 @@
   difficulty: 2
   language: Français
   answer_option_a: '...faisant 1 aller-retour Paris New York '
-  answer_option_b: '...roulant 10,000 km dans une clio essence'
+  answer_option_b: '...roulant 10,000 km en Clio'
   answer_option_c: '...chauffant un appartement de 80m2 au fioul pendant un an'
-  answer_option_d: '...mangeant 200g de bœuf par jour'
+  answer_option_d: '...mangeant de la viande une fois par jour'
   answer_correct: abcd
   has_ordered_answers: false
   answer_explanation: "Eh oui ! Une seule de ces quatre options vous fait atteindre\
@@ -25796,7 +25795,7 @@
   answer_option_c: '1122'
   answer_option_d: '1446'
   answer_correct: c
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: '1122 passagers pour un vol humanitaire de El Al, opération
     « Salomon » en 1991 pour rapatrier quelques 14325 personnes depuis l’Ethiopie
     Addis Abeba vers tel Aviv.
@@ -26143,11 +26142,13 @@
   has_ordered_answers: false
   answer_explanation: 'En France la TICPE, c''est 69 c€ par litre.
 
-    Si on compare sur un litre d''essence hors TVA à la pompe environ 1€ soit 1.2€
-    TTC, c''est 3,5 fois plus ➕
+    Si on compare sur un litre d''essence hors TVA à la pompe environ 1€ :
+
+    soit 1.2€ TTC, dont 0.2€ de TVA, la TICPE à 0.69 € c''est 3,5 fois plus
 
     La bonne réponse serait donc plutôt 70%, bien que ce ne soit pas comparable puisque
-    le "TA" en est exonéré depuis 75 ans.'
+    le « TA » en est exonéré depuis 75 ans, et que la TVA pour les vol intérieur se
+    limite à 10%.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ecologie.gouv.fr/fiscalite-des-energies#e4
@@ -26278,7 +26279,7 @@
   tags:
   - 189
 - id: 737
-  text: "Une étude récente a mis en évidence une diminution de plus de 75 de la masse\
+  text: "Une étude récente a mis en évidence une diminution de plus de 75% de la masse\
     \ des insectes en 30 ans en Allemagne. \nQuelles seront les conséquences les plus\
     \ probables de cette diminution pour les insectes pollinisateurs ?"
   hint: ''
@@ -26287,13 +26288,12 @@
   difficulty: 2
   language: Français
   answer_option_a: La perte des insectes pollinisateurs pourrait menacer 1,4 milliard
-    d’emploi
+    d’emplois
   answer_option_b: A un tel rythme, les insectes pollinisateurs pourraient disparaître
     en quelques décennies
-  answer_option_c: La perte des insectes pollinisateurs pourrait susciter une recrudescence
-    substantielle de maladies chez l'humain
-  answer_option_d: L'extinction des pollinisateurs pourrait menacer la sécurité alimentaire
-    mondiale
+  answer_option_c: L'extinction des insectes pollinisateurs pourrait menacer la sécurité
+    alimentation mondiale
+  answer_option_d: ''
   answer_correct: abcd
   has_ordered_answers: false
   answer_explanation: 'Les conséquences sur l''humain d''une telle perte seraient
@@ -31095,8 +31095,8 @@
   - 218
 - id: 871
   text: 'Faisons un exercice de pensée : demain, toute l''énergie dépensée par la
-    France doit être fournie par du travail humain exclusivement. Combien de personnes
-    devraient alors travailler au service des Français ?'
+    France doit être exclusivement fournie par du travail humain. Combien de personnes
+    devraient alors travailler à notre service ?'
   hint: ''
   type: QCM
   category: 5
