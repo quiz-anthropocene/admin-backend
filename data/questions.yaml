@@ -26898,7 +26898,8 @@
   - 100
   - 217
 - id: 754
-  text: Répartition des émissions entre transport de passagers vs fret en 2018 ?
+  text: Quelle est la part du Fret ( vs passagers ) dans l’aviation commerciale en
+    2018 ?
   hint: Ne pas le négliger
   type: QCM
   category: 2
@@ -26910,7 +26911,8 @@
   answer_option_d: 27%
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: 'Le frêt représente 19% des émissions du TA.
+  answer_explanation: 'Le fret représente 19% de l’aviation commerciale, dont la part
+    passagers est de 81%.
 
     Pendant le Corona Virus, les transporteurs ont mis le fret en avant pour maintenir
     leur activité…
