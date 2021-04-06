@@ -24905,7 +24905,7 @@
   answer_accessible_url: https://fr.wikipedia.org/wiki/Airbus_A380
   answer_scientific_url: https://www.airbus.com/aircraft/passenger-aircraft/a380/innovation.html#details
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/703ter.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/703%2031.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25475,37 +25475,44 @@
   - 217
   - 218
 - id: 718
-  text: Copy of à venir
+  text: Entre la période 1961-1990 et 2046-2065 de quel ordre de grandeur la quantité
+    d'eau circulant dans les rivières françaises devrait-elle évoluer?
   hint: ''
   type: QCM
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
+  answer_option_a: +10 à +40%
+  answer_option_b: +1 à +4%
+  answer_option_c: -1 à -4%
+  answer_option_d: -10 à -40%
   answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  has_ordered_answers: true
+  answer_explanation: 'Le projections actuelles des modèles sont que pour la plupart
+    des cours d''eau de France métropolitaine le débit moyen annuel (la quantité d''eau
+    s''écoulant) devrait baisser de 10 à 40% entre 1961-1990 et 2046-2065 du fait
+    du changement climatique et notamment de la baisse des précipitations.
+
+    Néanmoins ces résultats sont encore associés à de fortes incertitudes sur l''évolution
+    de l''usage en eau, de l''usage des sols et sur la précision des chaînes de modèles
+    climatiques et hydrologiques. Il s''agit encore d''un champ de recherche important.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.natura-sciences.com/environnement/rechauffement-climatique-rivieres363.html
+  answer_scientific_url: https://professionnels.ofb.fr/fr/node/44
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: AR
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
   tags:
-  - 33
-  - 217
-  - 218
+  - 24
+  - 37
 - id: 719
   text: "L'objectif de la COP21 à l'horizon 2050 est que chaque humain n'émette pas\
     \ plus que 2 tonnes de CO2e par an. \nLesquelles de ces affirmations sont vraies\
@@ -25617,7 +25624,7 @@
   answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/721.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25653,7 +25660,7 @@
   answer_accessible_url: https://www.latribune.fr/entreprises-finance/industrie/aeronautique-defense/quand-airbus-helicopters-voit-l-avenir-en-rose-753410.html#:~:text=Selon%20une%20%C3%A9tude%20de%20march%C3%A9%20d'Airbus%20Helicopters%20(AH),et%20les%20pi%C3%A8ces%20de%20rechange.
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/722.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25864,7 +25871,7 @@
   answer_accessible_url: https://fr.wikipedia.org/wiki/Effet_rebond_(%C3%A9conomie)#:~:text=Par%20exemple%20une%20baisse%20de,ou%20les%20nuisances%20lumineuses%20auront
   answer_scientific_url: https://greenwashingeconomy.com/effet-rebond-innovation-est-un-leurre/
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/727.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26363,37 +26370,41 @@
   tags:
   - 235
 - id: 739
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: Combien a-t-il fallu d'années à la Mer d'Aral pour perdre les 9/10 de sa superficie
+    (soit 2 fois la surface de la Belgique)?
+  hint: ''
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 1
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  answer_option_a: 1 an
+  answer_option_b: 10 ans
+  answer_option_c: '30 ans '
+  answer_option_d: 50 ans
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: En 1960 les soviétiques lancent une politique d'agirculture
+    intensive au Kazakhstan et en Ouzbékistan, notamment pour le coton et le blé.
+    Pour se faire ils détournent une partie des fleuves alimentant la mer d'Aral,
+    conduisant rapidement à l'assèchement de sa majeure partie et à la salinification
+    des zones restantes.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://www.nationalgeographic.fr/environnement/2014/10/disparition-de-la-mer-daral-les-causes-dun-desastre-ecologique
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: AR
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
   tags:
-  - 33
-  - 217
-  - 218
+  - 37
+  - 65
 - id: 740
   text: Connaissez-vous le nom du programme de réduction des émissions de transport
     AÉRIEN -- TA ?
@@ -26591,165 +26602,192 @@
   tags:
   - 67
 - id: 745
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: Entre 1960-1990 et 1990-2019 comment a évolué la hauteur de neige moyenne
+    au Col de Porte dans les Alpes françaises (1025m d'altitude)?
+  hint: ''
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 1
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  answer_option_a: +10 cm
+  answer_option_b: -10 cm
+  answer_option_c: -40 cm
+  answer_option_d: -1 m
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Le Col de Porte est le site de référence de Météo France pour
+    l''étude des changements du manteau neigeux depuis 1960. Sur la période donnée,
+    la hauteur moyenne de neige a diminué de 40 cm du fait du réchauffement climatique.
+    Les conséquences de cette diminution de l''enneigemment et en particulier de sa
+    durées sont et seront multiples: viabilité des stations de ski de moyenne altitude,
+    impacts sur les écosystèmes, diminution du débit des rivières au printemps...'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: http://www.meteofrance.fr/climat-passe-et-futur/impacts-du-changement-climatique-sur-les-phenomenes-hydrometeorologiques/changement-climatique-et-enneigement
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: AR
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
   tags:
-  - 33
-  - 217
-  - 218
+  - 48
+  - 206
 - id: 746
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: Sur la période 1986-2005 quelle a été l'ordre de grandeur de la consommation
+    annuelle des canons à neige en France (en piscines olympiques)?
+  hint: ''
   type: QCM
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  answer_option_a: '50'
+  answer_option_b: '500'
+  answer_option_c: '5000'
+  answer_option_d: 50,000
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: Sur cette période la consommation d'eau nécessaire à la neige
+    de culture est en moyenne de 10 à 20 millions de m3 (soit 2700 à 5500 piscines
+    olympiques). C'est la moitié de la consommation en eau des piscines privées. Néanmoins
+    ces prélèvements d'eau ne sont pas sans conséquence (dégradation du paysage par
+    les retenues, pertes par évaporation, prélèevement en hiver dans les torrents
+    en basses eaux, conflits avec d'autres usages...).
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_reading_recommendation: ''
+  answer_accessible_url: https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige
+  answer_scientific_url: http://www.meteofrance.fr/climat-passe-et-futur/impacts-du-changement-climatique-sur-les-phenomenes-hydrometeorologiques/changement-climatique-et-enneigement
+  answer_reading_recommendation: '[https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige](https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige)'
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: AR
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
   tags:
-  - 33
-  - 217
-  - 218
+  - 37
+  - 48
+  - 206
 - id: 747
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: Considérant un scénario de faibles émission de gaz à effet de serre, de combien
+    de kilomètres par décennie une espèce aquatique devra-t-elle se déplacer à la
+    fin du siècle pour retrouver un lac avec une température habitable en Europe?
+  hint: ''
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 3
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  answer_option_a: 2 km
+  answer_option_b: 9 km
+  answer_option_c: 23 km
+  answer_option_d: 47 km
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: Il a déjà été montré que les lacs Européens se réchauffent à
+    une vitesse de 0.13°C par décennie. Cette tendance va tendre à s'accélerer même
+    pour un scénario optimiste d'émissions de gaz à effet de serre, nécessitant une
+    migration des espèces aquatiques vers des climats plus froids pour retrouver un
+    habitat adapaté. Ce chiffre moyen de 9 km/décennie peut semble faible, mais pour
+    certaines espèces c'est plus que leur capacité de déplacement. Pour un scénario
+    pessimiste d'émissions de gaz à effet de serre, cette distance augmenterait jusqu'à
+    57 km/décennie.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.esa.int/Applications/Observing_the_Earth/Space_for_our_climate/Global_lake_warming_trend_threatens_freshwater_species
+  answer_scientific_url: https://www.nature.com/articles/s41558-020-0889-7
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: AR
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
   tags:
-  - 33
-  - 217
-  - 218
+  - 37
+  - 61
+  - 223
 - id: 748
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: A quelle vitesse maximale la côte du delta du Mékong (Vietnam) se retire-t-elle
+    actuellement vers les terres, du fait du manque d'apport en sédiments?
+  hint: ''
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 3
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
+  answer_option_a: 1 cm/an
+  answer_option_b: 20 cm/an
+  answer_option_c: 1 m/an
+  answer_option_d: 20 m/an
   answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  has_ordered_answers: true
+  answer_explanation: 'La côte du delta du Mekong subit fortement l''érosion des vagues
+    et se retire petit à petit. La cause principale est le déficit d''apport en sédiments
+    par le fleuve sur ces dernières décennies. Ce déficit à des causes multiples liées
+    à l''activité humaine: carrières de sable, barrages en amont, canaux alimentant
+    les rizières...'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.lecourrier.vn/le-delta-du-mekong-sous-le-feu-de-lerosion/424002.html
+  answer_scientific_url: https://www.nature.com/articles/s41598-020-64630-z
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: AR
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
   tags:
-  - 33
-  - 217
-  - 218
+  - 37
+  - 261
 - id: 749
-  text: Copy of à venir
-  hint: 'OEW : Operating Empty Weight'
+  text: Face à la montée du niveau des mers, quelle superficie de l'Ile de la Réunion
+    est vulnérable à une salinisation de ses eaux souterraines?
+  hint: ''
   type: QCM
   category: 5
-  difficulty: 2
+  difficulty: 3
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  answer_option_a: 3%
+  answer_option_b: 15%
+  answer_option_c: 35%
+  answer_option_d: 50%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: Avec la montée du niveau des mers, les zones cotières situées
+    à très basse altitude voient des intrusions d'eau salée dans leur eaux souterraines
+    davantage vers l'intérieur des terres. Cela peut poser des problèmes d'approvisionnement
+    en eau pour certaines populations cotières.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.documentation.eauetbiodiversite.fr/notice/influence-de-la-montee-du-niveau-de-la-mer-sur-le-biseau-salin-des-aquiferes-cotiers-des-drom0
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: AR
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
   tags:
-  - 33
-  - 217
-  - 218
+  - 37
+  - 69
 - id: 750
   text: Quelle part de la population mondiale voyage en avion chaque année ?
   hint: C’est encore trop
@@ -26780,9 +26818,9 @@
   answer_accessible_url: ''
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/750%20752.png
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: Abstract Page 1, Par. 4.4 Page 9
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
@@ -26808,15 +26846,18 @@
   answer_option_d: 8%
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: 4% est la bonne réponse, soit  30% des usagers de l'avion.
+  answer_explanation: '4% est la bonne réponse, soit 40% des usagers de l’avion (11%
+    de la population mondiale).
+
+    Environ 329 Millions de personnes voyagent à l’internationale chaque année.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
-  answer_reading_recommendation: ''
+  answer_reading_recommendation: Paragraphe 4.1 Page 4
   answer_image_url: ''
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: Paragraphe 4.1 Page 4
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
@@ -26849,11 +26890,11 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/750%20752.png
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: Abstract Page 1, Par. 4.4 Page 9
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
@@ -26922,11 +26963,11 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/754.png
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: Par. 4.1 Page 3
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
@@ -26956,11 +26997,11 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/755.png
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: Paragraphe 4.1 Page 3 – fig. 1 Page 4
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
@@ -27004,69 +27045,92 @@
   - 217
   - 218
 - id: 757
-  text: Copy of à venir
-  hint: ''
+  text: Copy of Quel était le nombre de Passager x Km mondial ( RPK ) en 2018 ?
+  hint: Est-ce un progrès ?
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 3
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: 500 Mds RPK
+  answer_option_b: 8500 Mds RPK
+  answer_option_c: 34250 Mds RPK
+  answer_option_d: 55000 Mds de RPK
+  answer_correct: c
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: '8500 Milliards de RPK en 2018.
+
+    Pour 4,3 Milliards de passagers transportés.
+
+    Autrement dit chaque passager fait en moyenne 8500 / 4.378 = 1950 km par vol
+
+    Bien entendu, certains passagers peuvent voler plusieurs fois.
+
+    Globalement, les voyages aériens pourraient passer de :
+
+    8 503 milliards de RPK en 2018 à
+
+    34 247 milliards de RPK au milieu du siècle.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
+  answer_reading_recommendation: Table 3 Page 5
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/757.png
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: Table 3 Page 5
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-11
+  added: 2021-04-05
   created: 2021-01-11
   updated: 2021-01-11
   tags:
+  - 13
   - 33
+  - 34
   - 217
-  - 218
+  - 224
 - id: 758
-  text: Copy of à venir
-  hint: ''
+  text: Si un Islandais fait 45000 km /an en avion, combien fait un Congolais de RDC
+    ?
+  hint: ben ... on va pas loin
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 3
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: 6 km
+  answer_option_b: 23 km
+  answer_option_c: 254 km
+  answer_option_d: 850 km
+  answer_correct: b
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: '23 km.
+
+    Mieux vaut y aller à pieds.
+
+    C’est 2000 fois moins de km.
+
+    Pour un écart de revenus nettement moindre, de 1 à 140.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
+  answer_reading_recommendation: Fig. 5 Page 7
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/758.png
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: Par. 4.3 et Fig. 5 Page 7
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-11
+  added: 2021-03-19
   created: 2021-01-11
   updated: 2021-01-11
   tags:
+  - 13
   - 33
+  - 34
   - 217
-  - 218
+  - 224
 - id: 759
   text: Copy of à venir
   hint: ''
@@ -31922,7 +31986,7 @@
   answer_accessible_url: https://eco-calculateur.dta.aviation-civile.gouv.fr/
   answer_scientific_url: https://www.oui.sncf/aide/calcul-des-emissions-de-co2-sur-votre-trajet-en-train
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/910.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -33686,8 +33750,8 @@
   - 16
   - 206
 - id: 1010
-  text: En France, quelle est la perte de revenu provenant des exemptions de taxe
-    sur le kérosène ?
+  text: Copy of En France, quelle est la perte de revenu provenant des exemptions
+    de taxe sur le kérosène ?
   hint: Une exonération qui date de 1944 pour développer les TA....
   type: QCM
   category: 2
@@ -33712,7 +33776,7 @@
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
-  added: 2021-03-19
+  added: 2021-04-05
   created: 2021-03-20
   updated: 2021-03-20
   tags:
@@ -33751,3 +33815,48 @@
   tags:
   - 16
   - 69
+- id: 1012
+  text: Quelle est la part des vols internationaux dans le trafic mondial ?
+  hint: Est-ce un progrès ?
+  type: QCM
+  category: 2
+  difficulty: 2
+  language: Français
+  answer_option_a: 10%
+  answer_option_b: 30%
+  answer_option_c: 60%
+  answer_option_d: 85%
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: '60% est la bonne réponse, avec de grandes disparités géographiques,
+    la taille des pays influence fortement ce ratio comme les niveaux de développement.
+
+    La part des vols internationaux est en forte croissance depuis 1990.
+
+    Aux USA, les liaisons domestiques restent prépondérantes 67% ( 161 Mnt CO2e vs
+    78.4 Mnt CO2e pour l’international )
+
+    L’international reste le segment du trafic le plus dynamique en France métropolitaine.
+
+    En 2018, il a progressé de +5,7% contre +2,4% seulement pour le trafic domestique
+    et représente aujourd’hui 73% du trafic métropolitain.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.air-journal.fr/2019-03-15-200-millions-de-passagers-aeriens-en-france-5211129.html
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
+  answer_reading_recommendation: Paragraphe 4.3 Page 5 / fig. 3 page 6
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/1012.png
+  answer_image_explanation: ''
+  answer_extra_info: Paragraphe 4.3 Page 5 / fig. 3 page 6
+  author: Restons les pieds sur terre
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-04-05
+  created: 2021-04-06
+  updated: 2021-04-06
+  tags:
+  - 13
+  - 33
+  - 34
+  - 217
+  - 224
