@@ -309,8 +309,8 @@
   answer_option_a: 10 ans
   answer_option_b: 50 ans
   answer_option_c: 100 ans
-  answer_option_d: 250 ans
-  answer_correct: d
+  answer_option_d: ''
+  answer_correct: c
   has_ordered_answers: true
   answer_explanation: 20 millions de Chinois quittent leur campagne chaque année,
     allant se loger dans des grandes constructions récentes, dont très peu sont en
@@ -25475,27 +25475,27 @@
   - 217
   - 218
 - id: 718
-  text: Entre la période 1961-1990 et 2046-2065 de quel ordre de grandeur la quantité
-    d'eau circulant dans les rivières françaises devrait-elle évoluer?
+  text: Entre la période 1961-1990 et 2046-2065, quelle évolution prévoit-on pour
+    la quantité d'eau circulant dans les rivières françaises ?
   hint: ''
   type: QCM
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: +10 à +40%
-  answer_option_b: +1 à +4%
+  answer_option_a: +10 à 40%
+  answer_option_b: +1 à 4%
   answer_option_c: -1 à -4%
   answer_option_d: -10 à -40%
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: 'Le projections actuelles des modèles sont que pour la plupart
-    des cours d''eau de France métropolitaine le débit moyen annuel (la quantité d''eau
-    s''écoulant) devrait baisser de 10 à 40% entre 1961-1990 et 2046-2065 du fait
-    du changement climatique et notamment de la baisse des précipitations.
+  answer_explanation: 'Selon les projections des derniers modèles, le débit moyen
+    annuel de la plupart des cours d''eau de France métropolitaine le débit moyen
+    annuel devrait baisser de 10 à 40% entre 1961-1990 et 2046-2065. La cause majeure
+    en est le changement climatique, et en particulier la baisse des précipitations.
 
-    Néanmoins ces résultats sont encore associés à de fortes incertitudes sur l''évolution
-    de l''usage en eau, de l''usage des sols et sur la précision des chaînes de modèles
-    climatiques et hydrologiques. Il s''agit encore d''un champ de recherche important.'
+    Néanmoins ces résultats sont encore sujets à de fortes incertitudes : usage en
+    eau, usage des sols, précision des chaînes de modèles climatiques et hydrologiques
+    etc.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.natura-sciences.com/environnement/rechauffement-climatique-rivieres363.html
@@ -25505,12 +25505,13 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: AR
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Brouillon
-  added: 2021-04-05
+  added: 2021-04-06
   created: 2021-01-06
   updated: 2021-01-06
   tags:
+  - 1
   - 24
   - 37
 - id: 719
@@ -26370,12 +26371,13 @@
   tags:
   - 235
 - id: 739
-  text: Combien a-t-il fallu d'années à la Mer d'Aral pour perdre les 9/10 de sa superficie
-    (soit 2 fois la surface de la Belgique)?
+  text: La mer d'Aral est un lac d'eau salée en Asie centrale, d'une surface initiale
+    de l'ordre de 2 fois la Belgique. Elle a perdu récemment les 9/10èmes de sa surface.
+    En combien de temps ?
   hint: ''
   type: QCM
   category: 5
-  difficulty: 1
+  difficulty: 2
   language: Français
   answer_option_a: 1 an
   answer_option_b: 10 ans
@@ -26385,8 +26387,8 @@
   has_ordered_answers: true
   answer_explanation: En 1960 les soviétiques lancent une politique d'agirculture
     intensive au Kazakhstan et en Ouzbékistan, notamment pour le coton et le blé.
-    Pour se faire ils détournent une partie des fleuves alimentant la mer d'Aral,
-    conduisant rapidement à l'assèchement de sa majeure partie et à la salinification
+    Pour ce faire, ils détournent une partie des fleuves alimentant la mer d'Aral.
+    Cela conduit rapidement à l'assèchement de sa majeure partie et à la salinification
     des zones restantes.
   answer_audio: ''
   answer_video: ''
@@ -26397,7 +26399,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: AR
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-04-05
   created: 2021-01-06
@@ -26602,8 +26604,8 @@
   tags:
   - 67
 - id: 745
-  text: Entre 1960-1990 et 1990-2019 comment a évolué la hauteur de neige moyenne
-    au Col de Porte dans les Alpes françaises (1025m d'altitude)?
+  text: Entre les périodes 1960-1990 et 1990-2019, comment a évolué la hauteur de
+    neige moyenne au Col de Porte dans les Alpes françaises (1025m d'altitude)?
   hint: ''
   type: QCM
   category: 5
@@ -26616,9 +26618,9 @@
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: 'Le Col de Porte est le site de référence de Météo France pour
-    l''étude des changements du manteau neigeux depuis 1960. Sur la période donnée,
+    l''étude de l''évolution du manteau neigeux depuis 1960. Sur la période donnée,
     la hauteur moyenne de neige a diminué de 40 cm du fait du réchauffement climatique.
-    Les conséquences de cette diminution de l''enneigemment et en particulier de sa
+    Les conséquences de cette diminution de l''enneigement et en particulier de sa
     durées sont et seront multiples: viabilité des stations de ski de moyenne altitude,
     impacts sur les écosystèmes, diminution du débit des rivières au printemps...'
   answer_audio: ''
@@ -26630,7 +26632,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: AR
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-04-05
   created: 2021-01-06
@@ -26638,26 +26640,27 @@
   tags:
   - 48
   - 206
+  - 262
 - id: 746
-  text: Sur la période 1986-2005 quelle a été l'ordre de grandeur de la consommation
-    annuelle des canons à neige en France (en piscines olympiques)?
+  text: Sur la période 1986-2005, quelle a été la consommation annuelle d'eau des
+    canons à neige en France ?
   hint: ''
   type: QCM
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: '50'
-  answer_option_b: '500'
-  answer_option_c: '5000'
-  answer_option_d: 50,000
+  answer_option_a: l'équivalent de 50 piscines olympiques
+  answer_option_b: 500 piscines olympiques
+  answer_option_c: 5,000 piscines olympiques
+  answer_option_d: 50,000 piscines olympiques
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: Sur cette période la consommation d'eau nécessaire à la neige
-    de culture est en moyenne de 10 à 20 millions de m3 (soit 2700 à 5500 piscines
-    olympiques). C'est la moitié de la consommation en eau des piscines privées. Néanmoins
-    ces prélèvements d'eau ne sont pas sans conséquence (dégradation du paysage par
-    les retenues, pertes par évaporation, prélèevement en hiver dans les torrents
-    en basses eaux, conflits avec d'autres usages...).
+  answer_explanation: 'Sur cette période, la consommation d''eau nécessaire à la neige
+    de culture est en moyenne de 10 à 20 millions de m3, soit le contenu de 2,700
+    à 5,500 piscines olympiques. C''est la moitié de la consommation en eau des piscines
+    privées. Ces prélèvements d''eau ne sont pas sans conséquence : dégradation du
+    paysage par les retenues, pertes par évaporation, prélèvement en hiver dans les
+    torrents en basses eaux, conflits avec d''autres usages.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige
@@ -26667,7 +26670,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: AR
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-04-05
   created: 2021-01-06
@@ -26677,9 +26680,10 @@
   - 48
   - 206
 - id: 747
-  text: Considérant un scénario de faibles émission de gaz à effet de serre, de combien
-    de kilomètres par décennie une espèce aquatique devra-t-elle se déplacer à la
-    fin du siècle pour retrouver un lac avec une température habitable en Europe?
+  text: Plaçons dans un scénario optimiste en termes d'émissions de gaz à effet de
+    serre. A l'horizon 2100 en Europe, de combien de kilomètres par décennie une espèce
+    aquatique devra-t-elle migrer en moyenne pour retrouver un lac avec une température
+    habitable ?
   hint: ''
   type: QCM
   category: 5
@@ -26691,24 +26695,23 @@
   answer_option_d: 47 km
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Il a déjà été montré que les lacs Européens se réchauffent à
-    une vitesse de 0.13°C par décennie. Cette tendance va tendre à s'accélerer même
-    pour un scénario optimiste d'émissions de gaz à effet de serre, nécessitant une
-    migration des espèces aquatiques vers des climats plus froids pour retrouver un
-    habitat adapaté. Ce chiffre moyen de 9 km/décennie peut semble faible, mais pour
-    certaines espèces c'est plus que leur capacité de déplacement. Pour un scénario
-    pessimiste d'émissions de gaz à effet de serre, cette distance augmenterait jusqu'à
-    57 km/décennie.
+  answer_explanation: Les lacs européens se réchauffent à une vitesse de 0,13°C par
+    décennie. Cette tendance va s'accélérer, et cela même dans un scénario optimiste
+    d'émissions de gaz à effet de serre. Les espèces aquatiques devront migrer vers
+    des climats plus froids pour retrouver un habitat adapté. Ce chiffre moyen de
+    9 km/décennie peut semble faible, mais pour certaines espèces c'est plus que leur
+    capacité de déplacement. Pour un scénario pessimiste d'émissions de gaz à effet
+    de serre, cette distance augmenterait jusqu'à 57 km/décennie.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.esa.int/Applications/Observing_the_Earth/Space_for_our_climate/Global_lake_warming_trend_threatens_freshwater_species
-  answer_scientific_url: https://www.nature.com/articles/s41558-020-0889-7
+  answer_accessible_url: https://www.geo.fr/environnement/selon-une-etude-60-des-poissons-seront-incapables-de-survivre-dans-leur-habitat-actuel-dici-2100-201143
+  answer_scientific_url: https://www.esa.int/Applications/Observing_the_Earth/Space_for_our_climate/Global_lake_warming_trend_threatens_freshwater_species
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
   author: AR
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-04-05
   created: 2021-01-06
@@ -26718,8 +26721,7 @@
   - 61
   - 223
 - id: 748
-  text: A quelle vitesse maximale la côte du delta du Mékong (Vietnam) se retire-t-elle
-    actuellement vers les terres, du fait du manque d'apport en sédiments?
+  text: La côte du delta du Mékong au Vietnam recule. A quelle vitesse ?
   hint: ''
   type: QCM
   category: 5
@@ -26745,7 +26747,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: AR
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-04-05
   created: 2021-01-06
@@ -26768,9 +26770,9 @@
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: Avec la montée du niveau des mers, les zones cotières situées
-    à très basse altitude voient des intrusions d'eau salée dans leur eaux souterraines
-    davantage vers l'intérieur des terres. Cela peut poser des problèmes d'approvisionnement
-    en eau pour certaines populations cotières.
+    à très basse altitude subissent des intrusions d'eau salée dans leur eaux souterraines
+    de plus en plus loin vers l'intérieur des terres. Cela peut poser des problèmes
+    d'approvisionnement en eau pour certaines populations côtières.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -26780,14 +26782,16 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: AR
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
   tags:
+  - 1
   - 37
   - 69
+  - 263
 - id: 750
   text: Quelle part de la population mondiale voyage en avion chaque année ?
   hint: C’est encore trop
@@ -27132,17 +27136,18 @@
   - 217
   - 224
 - id: 759
-  text: Copy of à venir
+  text: Quelle proportion des terres agricoles dans le monde sont polluées par des
+    pesticides ?
   hint: ''
   type: QCM
   category: 2
   difficulty: 2
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: 15%
+  answer_option_b: 31%
+  answer_option_c: 64%
+  answer_option_d: 95%
+  answer_correct: c
   has_ordered_answers: false
   answer_explanation: ''
   answer_audio: ''
@@ -31222,7 +31227,7 @@
   answer_accessible_url: https://agirpourlatransition.ademe.fr/particuliers/conso/conso-responsable/acheter-smartphone-reconditionne-avantages
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/872.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/872.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
