@@ -70,6 +70,9 @@
 - name: Sous nos pieds
   question_count: 10
   quiz_count: 0
+- name: Sous Nos Pieds
+  question_count: 0
+  quiz_count: 1
 - name: Vincent Mignerot
   question_count: 13
   quiz_count: 1
