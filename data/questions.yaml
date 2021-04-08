@@ -25504,7 +25504,7 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: AR
+  author: Alix Reverdy
   validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-04-06
@@ -26398,7 +26398,7 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: AR
+  author: Alix Reverdy
   validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-04-05
@@ -26604,8 +26604,10 @@
   tags:
   - 67
 - id: 745
-  text: Entre les périodes 1960-1990 et 1990-2019, comment a évolué la hauteur de
-    neige moyenne au Col de Porte dans les Alpes françaises (1025m d'altitude)?
+  text: Le col de Porte, situé à 1,025m d'altitude dans les Alpes françaises est le
+    site de référence de Météo France pour l'étude de l'évolution du manteau neigeux
+    depuis 1960. Entre les périodes 1960-1990 et 1990-2019, comment a évolué la hauteur
+    de neige moyenne mesurée au col ?
   hint: ''
   type: QCM
   category: 5
@@ -26617,12 +26619,10 @@
   answer_option_d: -1 m
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: 'Le Col de Porte est le site de référence de Météo France pour
-    l''étude de l''évolution du manteau neigeux depuis 1960. Sur la période donnée,
-    la hauteur moyenne de neige a diminué de 40 cm du fait du réchauffement climatique.
-    Les conséquences de cette diminution de l''enneigement et en particulier de sa
-    durées sont et seront multiples: viabilité des stations de ski de moyenne altitude,
-    impacts sur les écosystèmes, diminution du débit des rivières au printemps...'
+  answer_explanation: 'Les conséquences de cette diminution de l''enneigement et en
+    particulier de sa durée sont et seront multiples: viabilité des stations de ski
+    de moyenne altitude, impacts sur les écosystèmes, diminution du débit des rivières
+    au printemps...'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: http://www.meteofrance.fr/climat-passe-et-futur/impacts-du-changement-climatique-sur-les-phenomenes-hydrometeorologiques/changement-climatique-et-enneigement
@@ -26631,7 +26631,7 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: AR
+  author: Alix Reverdy
   validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-04-05
@@ -26657,10 +26657,10 @@
   has_ordered_answers: true
   answer_explanation: 'Sur cette période, la consommation d''eau nécessaire à la neige
     de culture est en moyenne de 10 à 20 millions de m3, soit le contenu de 2,700
-    à 5,500 piscines olympiques. C''est la moitié de la consommation en eau des piscines
-    privées. Ces prélèvements d''eau ne sont pas sans conséquence : dégradation du
-    paysage par les retenues, pertes par évaporation, prélèvement en hiver dans les
-    torrents en basses eaux, conflits avec d''autres usages.'
+    à 5,500 piscines olympiques. Cela représente la moitié de la consommation totale
+    en eau des piscines privées. Ces prélèvements d''eau ne sont pas sans conséquence
+    : dégradation du paysage par les retenues, pertes par évaporation, prélèvement
+    en hiver dans les torrents en basses eaux, conflits avec d''autres usages.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige
@@ -26669,7 +26669,7 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: AR
+  author: Alix Reverdy
   validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-04-05
@@ -26680,10 +26680,10 @@
   - 48
   - 206
 - id: 747
-  text: Plaçons dans un scénario optimiste en termes d'émissions de gaz à effet de
-    serre. A l'horizon 2100 en Europe, de combien de kilomètres par décennie une espèce
-    aquatique devra-t-elle migrer en moyenne pour retrouver un lac avec une température
-    habitable ?
+  text: Plaçons-nous dans un scénario optimiste en termes d'émissions de gaz à effet
+    de serre. A l'horizon 2100 en Europe, de combien de kilomètres par décennie une
+    espèce aquatique devra-t-elle migrer en moyenne pour retrouver un lac avec une
+    température habitable ?
   hint: ''
   type: QCM
   category: 5
@@ -26710,7 +26710,7 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: AR
+  author: Alix Reverdy
   validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-04-05
@@ -26746,7 +26746,7 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: AR
+  author: Alix Reverdy
   validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-04-05
@@ -26756,8 +26756,9 @@
   - 37
   - 261
 - id: 749
-  text: Face à la montée du niveau des mers, quelle superficie de l'Ile de la Réunion
-    est vulnérable à une salinisation de ses eaux souterraines?
+  text: Du fait de la montée du niveau des mers, l'Île de la Réunion est de plus en
+    plus sujette à une salinisation de ses eaux souterraines. Quelle proportion des
+    terres ?
   hint: ''
   type: QCM
   category: 5
@@ -26781,7 +26782,7 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: AR
+  author: Alix Reverdy
   validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-04-05
