@@ -25510,7 +25510,7 @@
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-04-06
   created: 2021-01-06
   updated: 2021-01-06
@@ -26376,8 +26376,8 @@
   - 235
 - id: 739
   text: La mer d'Aral est un lac d'eau salée en Asie centrale, d'une surface initiale
-    de l'ordre de 2 fois la Belgique. Elle a perdu récemment les 9/10èmes de sa surface.
-    En combien de temps ?
+    de l'ordre de 2 fois la Belgique. Elle a perdu récemment 90% de sa surface. En
+    combien de temps ?
   hint: ''
   type: QCM
   category: 5
@@ -26407,7 +26407,7 @@
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -26634,14 +26634,14 @@
   answer_video: ''
   answer_accessible_url: http://www.meteofrance.fr/climat-passe-et-futur/impacts-du-changement-climatique-sur-les-phenomenes-hydrometeorologiques/changement-climatique-et-enneigement
   answer_scientific_url: ''
-  answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: Lesaffre et al. (2012), 25ème Colloque de l’Association
+  answer_reading_recommendation: Lesaffre et al. (2012), 25ème Colloque de l’Association
     Internationale de Climatologie
+  answer_image_url: https://lh3.googleusercontent.com/proxy/6gDr9cIMiA7eTLsoG8iNNuuHKVx7nberTVje61hLSyrmc7Nn81_HhOZQo4rmpd95lGgNof1WO_d2Mcc9NrHIUwBlRU-nkjvqWC3j0YfF5AxprQSOJGzG8HG9hw9GTfY
+  answer_image_explanation: ''
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -26676,13 +26676,11 @@
   answer_scientific_url: http://www.meteofrance.fr/climat-passe-et-futur/impacts-du-changement-climatique-sur-les-phenomenes-hydrometeorologiques/changement-climatique-et-enneigement
   answer_reading_recommendation: '[https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige](https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige)'
   answer_image_url: https://cdn.radiofrance.fr/s3/cruiser-production/2018/01/c5107a92-02bd-4209-8050-a946499a94b7/1136_gettyimages-171316657.webp
-  answer_image_explanation: 'Canon à neige: enneigeur monofluide à ventilateur
-
-    Franceinter.fr'
+  answer_image_explanation: 'Canon à neige: enneigeur monofluide à ventilateur'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -26692,7 +26690,7 @@
   - 206
 - id: 747
   text: Plaçons-nous dans un scénario optimiste en termes d'émissions de gaz à effet
-    de serre. A l'horizon 2100 en Europe, de combien de kilomètres par décennie une
+    de serre ; à l'horizon 2100 en Europe, de combien de kilomètres par décennie une
     espèce aquatique devra-t-elle migrer en moyenne pour retrouver un lac avec une
     température habitable ?
   hint: ''
@@ -26725,7 +26723,7 @@
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -26734,7 +26732,8 @@
   - 61
   - 223
 - id: 748
-  text: La côte du delta du Mékong au Vietnam recule. A quelle vitesse ?
+  text: La côte du delta du Mékong au Vietnam recule. Quel recul peut-on  observer
+    en certains endroits ?
   hint: ''
   type: QCM
   category: 5
@@ -26747,10 +26746,11 @@
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: 'La côte du delta du Mekong subit fortement l''érosion des vagues
-    et se retire petit à petit. Dans certains endroits ce recul atteint 20m/an. La
-    cause principale est le déficit d''apport en sédiments par le fleuve sur ces dernières
-    décennies. Ce déficit à des causes multiples liées à l''activité humaine: carrières
-    de sable, barrages en amont, canaux alimentant les rizières...'
+    et se retire petit à petit. Dans certains endroits ce recul atteint 20m en l''espace
+    d''une année. Ce recul provient principalement d''un déficit d''apport en sédiments
+    par le fleuve sur ces dernières décennies. Ce déficit à des causes multiples liées
+    à l''activité humaine: carrières de sable, barrages en amont, canaux alimentant
+    les rizières...'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lecourrier.vn/le-delta-du-mekong-sous-le-feu-de-lerosion/424002.html
@@ -26763,7 +26763,7 @@
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -26802,7 +26802,7 @@
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-04-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -27114,8 +27114,8 @@
   - 217
   - 224
 - id: 758
-  text: Si un Islandais fait 45000 km /an en avion, combien fait un Congolais de RDC
-    ?
+  text: Si un Islandais fait en moyenne 45,000 km /an en avion, combien fait un Congolais
+    de RDC ?
   hint: ben ... on va pas loin
   type: QCM
   category: 2
@@ -27177,16 +27177,15 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Jean-Philippe Pernin
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-11
+  added: 2021-04-06
   created: 2021-01-11
   updated: 2021-01-11
   tags:
-  - 33
-  - 217
-  - 218
+  - 17
+  - 264
 - id: 760
   text: Copy of à venir
   hint: ''
@@ -27848,37 +27847,45 @@
   - 217
   - 218
 - id: 779
-  text: 'Copy of '
+  text: Du fait d'un trop fort pompage des eaux souterraines, on a observé un affaissement
+    de la surface du sol dans la vallée de San Joaquin aux Etats-Unis. De quelle hauteur
+    ?
   hint: ''
   type: QCM
   category: 2
   difficulty: 2
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  answer_option_a: 0,5 m
+  answer_option_b: 2,3 m
+  answer_option_c: 8,5 m
+  answer_option_d: 14,8m
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: Le prélèvement intensif d'eau dans les nappes souterraines a
+    conduit à un tassement du sol et donc à son affaissement. Outre l'épuisement des
+    nappes, cela réduit la taille du réservoir (l'espace entre les "grains" de sol)
+    et donc la possibilité pour les nappes de se recharger dans le futur, sans compter
+    les risques pour la stabilité des bâtiments en surface.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.sciencesetavenir.fr/fondamental/geologie/ces-grandes-villes-du-monde-comme-teheran-qui-s-enfoncent_130166
+  answer_scientific_url: https://www.usgs.gov/centers/ca-water-ls/science/land-subsidence-san-joaquin-valley?qt-science_center_objects=0#qt-science_center_objects
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://hydrologie.org/glu/ZZ/GP1240.JPG
+  answer_image_explanation: 'Photo US Geological Survey in "IHP and related UNESCO
+    Programmes in Water Resources 1984-1989" ([https://hydrologie.org/glu/ZZ/GP1240.HTM](https://hydrologie.org/glu/ZZ/GP1240.HTM))
+
+
+    Panneaux montrant le niveau historique du sol dans la vallée de San Joaquin'
   answer_extra_info: ''
-  author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
-  added: 2021-01-13
+  author: Alix Reverdy
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-04-05
   created: 2021-01-17
   updated: 2021-01-17
   tags:
-  - 33
-  - 217
-  - 218
+  - 37
 - id: 780
   text: Quelle est la part des bio-carburants (SAF – Sustainable Aviation Fuel) dans
     le TA ?
