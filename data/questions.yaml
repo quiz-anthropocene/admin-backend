@@ -25489,9 +25489,9 @@
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: 'Selon les projections des derniers modèles, le débit moyen
-    annuel de la plupart des cours d''eau de France métropolitaine le débit moyen
-    annuel devrait baisser de 10 à 40% entre 1961-1990 et 2046-2065. La cause majeure
-    en est le changement climatique, et en particulier la baisse des précipitations.
+    annuel (quantité d''eau circulant) de la plupart des cours d''eau de France métropolitaine
+    devrait baisser de 10 à 40% entre 1961-1990 et 2046-2065. La cause majeure en
+    est le changement climatique, et en particulier la baisse des précipitations.
 
     Néanmoins ces résultats sont encore sujets à de fortes incertitudes : usage en
     eau, usage des sols, précision des chaînes de modèles climatiques et hydrologiques
@@ -25501,8 +25501,12 @@
   answer_accessible_url: https://www.natura-sciences.com/environnement/rechauffement-climatique-rivieres363.html
   answer_scientific_url: https://professionnels.ofb.fr/fr/node/44
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://i1.wp.com/www.natura-sciences.com/wp-content/uploads/2012/10/changement-climatique-baisse-debit-cours-eau-explore-2070.jpg?w=881&ssl=1
+  answer_image_explanation: 'Carte prévisionnelle de l''évolution plausible des débits
+    des cours d''eau en France métropolitaine à l''horizon 2046-2065. On note la disparité
+    selon les régions.
+
+    natura.sciences.com'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
@@ -26388,15 +26392,18 @@
   answer_explanation: En 1960 les soviétiques lancent une politique d'agirculture
     intensive au Kazakhstan et en Ouzbékistan, notamment pour le coton et le blé.
     Pour ce faire, ils détournent une partie des fleuves alimentant la mer d'Aral.
-    Cela conduit rapidement à l'assèchement de sa majeure partie et à la salinification
-    des zones restantes.
+    Cela conduit rapidement à l'assèchement de la majeure partie de sa superficie
+    et à la salinification des zones restantes.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.nationalgeographic.fr/environnement/2014/10/disparition-de-la-mer-daral-les-causes-dun-desastre-ecologique
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://static.nationalgeographic.fr/files/styles/image_3200/public/425.Tesson4-big.webp?w=710&h=474
+  answer_image_explanation: 'A gauche la Mer d''Aral en 2000, à droite en 2014, en
+    liseré le contour de la mer d''Aral en 1960
+
+    Nationalgeographic.fr'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
@@ -26629,7 +26636,8 @@
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_explanation: Lesaffre et al. (2012), 25ème Colloque de l’Association
+    Internationale de Climatologie
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
@@ -26658,16 +26666,19 @@
   answer_explanation: 'Sur cette période, la consommation d''eau nécessaire à la neige
     de culture est en moyenne de 10 à 20 millions de m3, soit le contenu de 2,700
     à 5,500 piscines olympiques. Cela représente la moitié de la consommation totale
-    en eau des piscines privées. Ces prélèvements d''eau ne sont pas sans conséquence
-    : dégradation du paysage par les retenues, pertes par évaporation, prélèvement
-    en hiver dans les torrents en basses eaux, conflits avec d''autres usages.'
+    en eau des piscines privées. Ces prélèvements d''eau pour les stations ne sont
+    pas sans conséquence : dégradation du paysage par les retenues, pertes par évaporation,
+    prélèvement en hiver dans les torrents en basses eaux, conflits avec d''autres
+    usages.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige
   answer_scientific_url: http://www.meteofrance.fr/climat-passe-et-futur/impacts-du-changement-climatique-sur-les-phenomenes-hydrometeorologiques/changement-climatique-et-enneigement
   answer_reading_recommendation: '[https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige](https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige)'
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://cdn.radiofrance.fr/s3/cruiser-production/2018/01/c5107a92-02bd-4209-8050-a946499a94b7/1136_gettyimages-171316657.webp
+  answer_image_explanation: 'Canon à neige: enneigeur monofluide à ventilateur
+
+    Franceinter.fr'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
@@ -26699,16 +26710,18 @@
     décennie. Cette tendance va s'accélérer, et cela même dans un scénario optimiste
     d'émissions de gaz à effet de serre. Les espèces aquatiques devront migrer vers
     des climats plus froids pour retrouver un habitat adapté. Ce chiffre moyen de
-    9 km/décennie peut semble faible, mais pour certaines espèces c'est plus que leur
-    capacité de déplacement. Pour un scénario pessimiste d'émissions de gaz à effet
-    de serre, cette distance augmenterait jusqu'à 57 km/décennie.
+    9 km/décennie peut sembler faible, mais pour certaines espèces c'est plus que
+    leur capacité de déplacement. Pour un scénario pessimiste d'émissions de gaz à
+    effet de serre, cette distance augmenterait jusqu'à 57 km/décennie.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.geo.fr/environnement/selon-une-etude-60-des-poissons-seront-incapables-de-survivre-dans-leur-habitat-actuel-dici-2100-201143
   answer_scientific_url: https://www.esa.int/Applications/Observing_the_Earth/Space_for_our_climate/Global_lake_warming_trend_threatens_freshwater_species
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Jumping_Salmon.jpg/800px-Jumping_Salmon.jpg
+  answer_image_explanation: 'Saumon en migration
+
+    Wikipedia.org'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
@@ -26734,17 +26747,19 @@
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: 'La côte du delta du Mekong subit fortement l''érosion des vagues
-    et se retire petit à petit. La cause principale est le déficit d''apport en sédiments
-    par le fleuve sur ces dernières décennies. Ce déficit à des causes multiples liées
-    à l''activité humaine: carrières de sable, barrages en amont, canaux alimentant
-    les rizières...'
+    et se retire petit à petit. Dans certains endroits ce recul atteint 20m/an. La
+    cause principale est le déficit d''apport en sédiments par le fleuve sur ces dernières
+    décennies. Ce déficit à des causes multiples liées à l''activité humaine: carrières
+    de sable, barrages en amont, canaux alimentant les rizières...'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lecourrier.vn/le-delta-du-mekong-sous-le-feu-de-lerosion/424002.html
   answer_scientific_url: https://www.nature.com/articles/s41598-020-64630-z
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: http://i.dtinews.vn/images/editor/images/ngovan/52020/29/Big/hien-truong-vu-sat-o-1590553465-width1004height565.jpg?v=1.0
+  answer_image_explanation: 'Exemple d''érosion sur le delta du Mékong
+
+    vnexplorer.net'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
@@ -26756,9 +26771,9 @@
   - 37
   - 261
 - id: 749
-  text: Du fait de la montée du niveau des mers, l'Île de la Réunion est de plus en
-    plus sujette à une salinisation de ses eaux souterraines. Quelle proportion des
-    terres ?
+  text: Du fait de la montée du niveau des mers, l'Île de la Réunion sera de plus
+    en plus sujette à une salinisation de ses eaux souterraines. Quelle proportion
+    des terres est à risque?
   hint: ''
   type: QCM
   category: 5
@@ -26776,11 +26791,14 @@
     d'approvisionnement en eau pour certaines populations côtières.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: http://wikhydro.developpement-durable.gouv.fr/index.php/Changement_climatique_-_accentuation_de_la_salinit%C3%A9_des_eaux_souterraines_littorales
   answer_scientific_url: https://www.documentation.eauetbiodiversite.fr/notice/influence-de-la-montee-du-niveau-de-la-mer-sur-le-biseau-salin-des-aquiferes-cotiers-des-drom0
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: http://wikhydro.developpement-durable.gouv.fr/images/thumb/e/ee/Position_de_l%27interface_selon_Ghyben_Herzberg_%2848%29_.jpg/800px-Position_de_l%27interface_selon_Ghyben_Herzberg_%2848%29_.jpg
+  answer_image_explanation: 'Schéma de principe des interactions entre eaux souterraines
+    salées et douces
+
+    Wikihydro.developpement.gouv.fr'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
@@ -33756,8 +33774,8 @@
   - 16
   - 206
 - id: 1010
-  text: Copy of En France, quelle est la perte de revenu provenant des exemptions
-    de taxe sur le kérosène ?
+  text: En France, quelle est la perte de revenu provenant des exemptions de taxe
+    sur le kérosène ?
   hint: Une exonération qui date de 1944 pour développer les TA....
   type: QCM
   category: 2
