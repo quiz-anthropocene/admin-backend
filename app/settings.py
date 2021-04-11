@@ -163,6 +163,11 @@ SECURE_SSL_REDIRECT = (
 SECURE_HSTS_SECONDS = os.getenv("SECURE_HSTS_SECONDS")
 
 
+# Models
+
+DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
+
+
 # Django Import Export
 
 IMPORT_EXPORT_SKIP_ADMIN_LOG = True
