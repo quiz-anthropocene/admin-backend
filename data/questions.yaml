@@ -2319,8 +2319,7 @@
   - 27
 - id: 65
   text: Le phosphore, une ressource non-renouvelable, est essentiel pour l'agriculture.
-    À quelle date est estimé son pic de production (moment à partir duquel sa production
-    ne fera que décroître) ?
+    À quelle date est estimé son pic de production ?
   hint: ''
   type: QCM
   category: 7
@@ -25482,11 +25481,11 @@
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: +10 à 40%
-  answer_option_b: +1 à 4%
-  answer_option_c: -1 à -4%
-  answer_option_d: -10 à -40%
-  answer_correct: d
+  answer_option_a: -10 à -40%
+  answer_option_b: -1 à -4%
+  answer_option_c: +1 à -4%
+  answer_option_d: +10 à 40%
+  answer_correct: a
   has_ordered_answers: true
   answer_explanation: 'Selon les projections des derniers modèles, le débit moyen
     annuel (quantité d''eau circulant) de la plupart des cours d''eau de France métropolitaine
@@ -26401,9 +26400,7 @@
   answer_reading_recommendation: ''
   answer_image_url: https://static.nationalgeographic.fr/files/styles/image_3200/public/425.Tesson4-big.webp?w=710&h=474
   answer_image_explanation: 'A gauche la Mer d''Aral en 2000, à droite en 2014, en
-    liseré le contour de la mer d''Aral en 1960
-
-    Nationalgeographic.fr'
+    liseré le contour de la mer d''Aral en 1960. Source : nationalgeographic.fr'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
@@ -26636,7 +26633,7 @@
   answer_scientific_url: ''
   answer_reading_recommendation: Lesaffre et al. (2012), 25ème Colloque de l’Association
     Internationale de Climatologie
-  answer_image_url: https://lh3.googleusercontent.com/proxy/6gDr9cIMiA7eTLsoG8iNNuuHKVx7nberTVje61hLSyrmc7Nn81_HhOZQo4rmpd95lGgNof1WO_d2Mcc9NrHIUwBlRU-nkjvqWC3j0YfF5AxprQSOJGzG8HG9hw9GTfY
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/745.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Alix Reverdy
@@ -29608,13 +29605,13 @@
   answer_option_d: 70%
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: 'L''agriculture est incontestablement le secteur qui consomme
-    le plus d''eau douce à l''échelle mondiale avec une part estimée à environ 70%.
-    Dans le régions arides, cette part atteint même les 90%. Les usages industriels
-    et municipaux représentent respectivement 20% et 10% des prélèvements d''eau douce.
-    Cette surconsommation s''explique en grande partie par les importantes pertes
-    d''eau par les systèmes d''irrigation classiques: 2/3 de l''eau issue de ces systèmes
-    ne parvient pas jusqu''à la plante.'
+  answer_explanation: 'L''agriculture est de loin le secteur qui consomme le plus
+    d''eau douce à l''échelle mondiale avec une part estimée à environ 70%. Dans le
+    régions arides, cette part atteint même les 90%. Les usages industriels et municipaux
+    représentent respectivement 20% et 10% des prélèvements d''eau douce. Cette surconsommation
+    s''explique en grande partie par les importantes pertes d''eau par les systèmes
+    d''irrigation classiques: 2/3 de l''eau issue de ces systèmes ne parvient pas
+    jusqu''à la plante.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -30113,7 +30110,8 @@
   - 37
   - 231
 - id: 843
-  text: 'Combien existe-t-il de zones de conflits potentiels dus à l''eau ? '
+  text: 'Combien existe-t-il dans le monde de zones de conflits potentiels dus à l''eau
+    ? '
   hint: ''
   type: QCM
   category: 7
