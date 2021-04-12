@@ -765,17 +765,26 @@
   - 255
 - id: 69
   name: Le cycle de l'eau dans tous ses états
-  introduction: ''
-  conclusion: ''
-  difficulty_average: 2.3
+  introduction: <p>Le cycle de l'eau joue un rôle central, tant dans nos vies quotidiennes
+    que dans le fonctionnement du système planétaire. Cependant l'être humain a une
+    influence croissante sur ce cycle, et donc sur les systèmes physiques et vivants
+    qui en dépendent. Vous allez pouvoir en découvrir quelques aspects.</p>
+  conclusion: <p>Vous avez maintenant une idée des différents types d'impacts que
+    l'homme peut avoir sur le cycle de l'eau. De la neige tombant au sommet des montagnes
+    aux eaux souterraines côtières, en passant pas toutes les sociétés, les géo-systèmes
+    et les écosystèmes qui en dépendent.</p>
+  difficulty_average: 2.1
   language: Français
   author: Alix Reverdy
-  image_background_url: ''
+  image_background_url: http://sigesbre.brgm.fr/IMG/bmp/cycle_de_leau.bmp
   has_audio: false
-  publish: false
-  spotlight: false
+  publish: true
+  spotlight: true
   created: 2021-04-10
-  updated: 2021-04-10
+  updated: 2021-04-12
   tags:
   - 37
   - 69
+  - 206
+  - 261
+  - 263
