@@ -765,15 +765,16 @@
   - 255
 - id: 69
   name: Le cycle de l'eau dans tous ses états
-  introduction: <p>Le cycle de l'eau joue un rôle central, tant dans nos vies quotidiennes
-    que dans le fonctionnement du système planétaire. Cependant l'être humain a une
-    influence croissante sur ce cycle, et donc sur les systèmes physiques et vivants
-    qui en dépendent. Vous allez pouvoir en découvrir quelques aspects.</p>
+  introduction: "<p>Le cycle de l'eau joue un rôle central, tant dans nos vies quotidiennes\
+    \ que dans le fonctionnement du système planétaire. Cependant l'être humain a\
+    \ une influence croissante sur ce cycle, et donc sur les systèmes physiques et\
+    \ vivants qui en dépendent. Vous allez pouvoir en découvrir quelques aspects.<br\
+    \ />\r\n<br />\r\nUn quiz proposé par Alix Reverdy, ingénieur d'étude hydrométéorologue</p>"
   conclusion: <p>Vous avez maintenant une idée des différents types d'impacts que
     l'homme peut avoir sur le cycle de l'eau. De la neige tombant au sommet des montagnes
     aux eaux souterraines côtières, en passant pas toutes les sociétés, les géo-systèmes
     et les écosystèmes qui en dépendent.</p>
-  difficulty_average: 2.1
+  difficulty_average: 2.2
   language: Français
   author: Alix Reverdy
   image_background_url: http://sigesbre.brgm.fr/IMG/bmp/cycle_de_leau.bmp
