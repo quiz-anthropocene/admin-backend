@@ -25505,7 +25505,8 @@
     des cours d''eau en France métropolitaine à l''horizon 2046-2065. On note la disparité
     selon les régions.
 
-    natura.sciences.com'
+
+    Source: natura.sciences.com'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
@@ -26400,7 +26401,10 @@
   answer_reading_recommendation: ''
   answer_image_url: https://static.nationalgeographic.fr/files/styles/image_3200/public/425.Tesson4-big.webp?w=710&h=474
   answer_image_explanation: 'A gauche la Mer d''Aral en 2000, à droite en 2014, en
-    liseré le contour de la mer d''Aral en 1960. Source : nationalgeographic.fr'
+    liseré le contour de la mer d''Aral en 1960.
+
+
+    Source : nationalgeographic.fr'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
@@ -26716,7 +26720,8 @@
   answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Jumping_Salmon.jpg/800px-Jumping_Salmon.jpg
   answer_image_explanation: 'Saumon en migration
 
-    Wikipedia.org'
+
+    Source: Wikipedia.org'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
@@ -26756,7 +26761,8 @@
   answer_image_url: http://i.dtinews.vn/images/editor/images/ngovan/52020/29/Big/hien-truong-vu-sat-o-1590553465-width1004height565.jpg?v=1.0
   answer_image_explanation: 'Exemple d''érosion sur le delta du Mékong
 
-    vnexplorer.net'
+
+    Source: vnexplorer.net'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
@@ -26791,11 +26797,15 @@
   answer_accessible_url: http://wikhydro.developpement-durable.gouv.fr/index.php/Changement_climatique_-_accentuation_de_la_salinit%C3%A9_des_eaux_souterraines_littorales
   answer_scientific_url: https://www.documentation.eauetbiodiversite.fr/notice/influence-de-la-montee-du-niveau-de-la-mer-sur-le-biseau-salin-des-aquiferes-cotiers-des-drom0
   answer_reading_recommendation: ''
-  answer_image_url: http://wikhydro.developpement-durable.gouv.fr/images/thumb/e/ee/Position_de_l%27interface_selon_Ghyben_Herzberg_%2848%29_.jpg/800px-Position_de_l%27interface_selon_Ghyben_Herzberg_%2848%29_.jpg
+  answer_image_url: https://www.aquaportail.com/pictures1802/phones/biseau-sale-intrusion.jpg
   answer_image_explanation: 'Schéma de principe des interactions entre eaux souterraines
-    salées et douces
+    salées et douces (h la hauteur du "toit" de la nappe par rapport au niveau de
+    la mer et z la profondeur de sa base). Une montée du niveau de la mer, réduit
+    la zone d''influence de l''eau douce. un pompage excessif par l''Homme peut avoir
+    un effet de salinisation aussi.
 
-    Wikihydro.developpement.gouv.fr'
+
+    Source: aquaportail.com'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
@@ -27869,11 +27879,14 @@
   answer_scientific_url: https://www.usgs.gov/centers/ca-water-ls/science/land-subsidence-san-joaquin-valley?qt-science_center_objects=0#qt-science_center_objects
   answer_reading_recommendation: ''
   answer_image_url: https://hydrologie.org/glu/ZZ/GP1240.JPG
-  answer_image_explanation: 'Photo US Geological Survey in "IHP and related UNESCO
-    Programmes in Water Resources 1984-1989" ([https://hydrologie.org/glu/ZZ/GP1240.HTM](https://hydrologie.org/glu/ZZ/GP1240.HTM))
+  answer_image_explanation: 'Panneaux montrant le niveau historique du sol dans la
+    vallée de San Joaquin
 
 
-    Panneaux montrant le niveau historique du sol dans la vallée de San Joaquin'
+    Photo US Geological Survey in "IHP and related UNESCO Programmes in Water Resources
+    1984-1989" ([https://hydrologie.org/glu/ZZ/GP1240.HTM](https://hydrologie.org/glu/ZZ/GP1240.HTM))
+
+    '
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
