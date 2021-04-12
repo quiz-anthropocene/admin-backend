@@ -730,26 +730,28 @@
   tags:
   - 255
 - id: 68
-  name: Low tech Collage - Current Issues
+  name: Low-tech Collage - Current Issues
   introduction: "<p>Ever heard of low-techs ? They are objects, systems, techniques,\
     \ services, know-how, practices, lifestyle and even a current of thought that\
     \ integrate technology while being useful, accessible and sustainable. The Low-Tech\
     \ Collage is a collaborative workshop/game - ony available in French at the moment.\
     \ It deals with the (lack of) sustainability of technologies, addresses the limits\
     \ and problems of the current technical system, and introduces the concept of\
-    \ low techs.<br />\r\nThis quiz provides you with an overview of what you will\
-    \ learn in this workshop. It is focused on the first section, focused on the problems.</p>\r\
+    \ low techs.<br />\r\nThis quiz provides an overview of what you will learn in\
+    \ this workshop. It is focused on the first section, focused on the problems.</p>\r\
     \n\r\n<p>A quiz proposed by Max Pinsard, PhD in energy and materials science from\
     \ INRS-EMT Montreal, and creator of the Low-Tech Collage.</p>"
-  conclusion: <p>This quiz is of course too short to cover it all. But by now, the
+  conclusion: '<p>This quiz is of course too short to cover it all. But by now, the
     impacts of our technological system should be familiar to you, as well as the
     deceiving promises of technofuturism and green growth! Since low-tech is also
     a philosophy, many of the concepts cannot be conveyed by figures, but are rather
     political, sociological, psychological... We can ony encourage you to attend a
-    full workshop! More info on <a class="notion-link-token notion-enable-hover" href="http://fresquedeslowtechs.org/"
-    rel="noopener noreferrer" style="cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit"
-    target="_blank">fresquedeslowtechs.org</a> (in french). "<em>Against infinite
-    growth in a world with finite resources that ARE DEGRADING and DISPERSING".</em></p>
+    full workshop! More info on <a class="notion-link-token notion-enable-hover" data-darkreader-inline-color=""
+    href="http://fresquedeslowtechs.org/" rel="noopener noreferrer" style="cursor:
+    pointer; color: inherit; overflow-wrap: break-word; text-decoration: inherit;
+    --darkreader-inline-color: inherit;" target="_blank">fresquedeslowtechs.org</a>
+    (in french). "<em>Against infinite growth in a world with finite resources that
+    ARE DEGRADING and DISPERSING".</em></p>'
   difficulty_average: 2.6
   language: English
   author: Max Pinsard
@@ -758,7 +760,7 @@
   publish: true
   spotlight: true
   created: 2021-03-24
-  updated: 2021-03-31
+  updated: 2021-04-11
   tags:
   - 255
 - id: 69
