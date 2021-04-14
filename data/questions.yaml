@@ -26389,7 +26389,7 @@
   answer_option_d: 50 ans
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: En 1960 les soviétiques lancent une politique d'agirculture
+  answer_explanation: En 1960 les soviétiques lancent une politique d'agriculture
     intensive au Kazakhstan et en Ouzbékistan, notamment pour le coton et le blé.
     Pour ce faire, ils détournent une partie des fleuves alimentant la mer d'Aral.
     Cela conduit rapidement à l'assèchement de la majeure partie de sa superficie
@@ -26750,7 +26750,7 @@
   answer_explanation: 'La côte du delta du Mekong subit fortement l''érosion des vagues
     et se retire petit à petit. Dans certains endroits ce recul atteint 20m en l''espace
     d''une année. Ce recul provient principalement d''un déficit d''apport en sédiments
-    par le fleuve sur ces dernières décennies. Ce déficit à des causes multiples liées
+    par le fleuve sur ces dernières décennies. Ce déficit a des causes multiples liées
     à l''activité humaine: carrières de sable, barrages en amont, canaux alimentant
     les rizières...'
   answer_audio: ''
@@ -26797,15 +26797,14 @@
   answer_accessible_url: http://wikhydro.developpement-durable.gouv.fr/index.php/Changement_climatique_-_accentuation_de_la_salinit%C3%A9_des_eaux_souterraines_littorales
   answer_scientific_url: https://www.documentation.eauetbiodiversite.fr/notice/influence-de-la-montee-du-niveau-de-la-mer-sur-le-biseau-salin-des-aquiferes-cotiers-des-drom0
   answer_reading_recommendation: ''
-  answer_image_url: https://www.aquaportail.com/pictures1802/phones/biseau-sale-intrusion.jpg
+  answer_image_url: https://www.symcrau.com/images/2-LA-NAPPE-de-la-CRAU/B4b_schema_biseau_sale.jpg
   answer_image_explanation: 'Schéma de principe des interactions entre eaux souterraines
-    salées et douces (h la hauteur du "toit" de la nappe par rapport au niveau de
-    la mer et z la profondeur de sa base). Une montée du niveau de la mer, réduit
-    la zone d''influence de l''eau douce. un pompage excessif par l''Homme peut avoir
-    un effet de salinisation aussi.
+    salées et douces. Une montée du niveau de la mer, réduit la zone d''influence
+    de l''eau douce. Un pompage excessif par l''Homme peut également entraîner une
+    intrusion d''eau salée.
 
 
-    Source: aquaportail.com'
+    Source: symcrau.com'
   answer_extra_info: ''
   author: Alix Reverdy
   validator: Matthieu Massart
