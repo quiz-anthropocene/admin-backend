@@ -25490,7 +25490,8 @@
   answer_explanation: 'Selon les projections des derniers modèles, le débit moyen
     annuel (quantité d''eau circulant) de la plupart des cours d''eau de France métropolitaine
     devrait baisser de 10 à 40% entre 1961-1990 et 2046-2065. La cause majeure en
-    est le changement climatique, et en particulier la baisse des précipitations.
+    est le changement climatique, et en particulier l''augmentation de l’évaporation
+    et la baisse des précipitations estivales.
 
     Néanmoins ces résultats sont encore sujets à de fortes incertitudes : usage en
     eau, usage des sols, précision des chaînes de modèles climatiques et hydrologiques
@@ -26612,7 +26613,7 @@
   tags:
   - 67
 - id: 745
-  text: Le col de Porte, situé à 1,025m d'altitude dans les Alpes françaises est le
+  text: Le Col de Porte, situé à 1,025m d'altitude dans les Alpes françaises est le
     site de référence de Météo France pour l'étude de l'évolution du manteau neigeux
     depuis 1960. Entre les périodes 1960-1990 et 1990-2019, comment a évolué la hauteur
     de neige moyenne mesurée au col ?
@@ -26665,12 +26666,12 @@
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: 'Sur cette période, la consommation d''eau nécessaire à la neige
-    de culture est en moyenne de 10 à 20 millions de m3, soit le contenu de 2,700
-    à 5,500 piscines olympiques. Cela représente la moitié de la consommation totale
-    en eau des piscines privées. Ces prélèvements d''eau pour les stations ne sont
-    pas sans conséquence : dégradation du paysage par les retenues, pertes par évaporation,
-    prélèvement en hiver dans les torrents en basses eaux, conflits avec d''autres
-    usages.'
+    de culture est en moyenne de 10 à 20 millions de m3 par an, soit le contenu de
+    2,700 à 5,500 piscines olympiques. Cela représente la moitié de la consommation
+    totale en eau des piscines privées. Ces prélèvements d''eau pour les stations
+    ne sont pas sans conséquence : dégradation du paysage par les retenues, pertes
+    par évaporation, prélèvement en hiver dans les torrents en basses eaux, conflits
+    avec d''autres usages.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige
@@ -26734,8 +26735,9 @@
   - 61
   - 223
 - id: 748
-  text: La côte du delta du Mékong au Vietnam recule. Quel recul peut-on observer
-    en certains endroits ?
+  text: La côte du delta du Mékong au Vietnam recule, et cela plus vite que ce qui
+    pourrait s'expliquer par la seul montée du niveau des mers. Quel recul peut-on
+    observer en certains endroits ?
   hint: ''
   type: QCM
   category: 5
@@ -27854,8 +27856,8 @@
   - 218
 - id: 779
   text: Du fait d'un trop fort pompage des eaux souterraines, on a observé un affaissement
-    de la surface du sol dans la vallée de San Joaquin aux Etats-Unis. De quelle hauteur
-    ?
+    de la surface du sol dans l'ensemble de la vallée de San Joaquin aux Etats-Unis.
+    De quelle hauteur maximale?
   hint: ''
   type: QCM
   category: 2
