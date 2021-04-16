@@ -1,15 +1,15 @@
 - name: La Fresque du Climat
   description: Un atelier d’intelligence collective qui permet de mieux comprendre les composantes du dérèglement climatique et son caractère systémique.
-  description_url: http://fresqueduclimat.org/
+  description_url: https://fresqueduclimat.org/
   description_details: Le point de départ du projet. Permettre aux gens de prendre conscience de l’ampleur du problème, sans avoir à assister à un atelier en présentiel (ou alors après un atelier pour approfondir).
-  image_url: http://fresqueduclimat.org/wp-content/uploads/2020/06/cropped-logo-FR-couleur-complet-500-300.png
+  image_url: https://fresqueduclimat.org/wp-content/uploads/2020/06/cropped-logo-FR-couleur-complet-500-300.png
   quiz_tag: Fresque du Climat
   added: 2020-06-01
 - name: Adrastia
   description: 'Adrastia vient du grec ancien Adrasteia : « auquel on ne peut échapper ».. Adrastia a pour objectif d’anticiper et préparer le déclin de la civilisation thermo-industrielle de façon honnête, responsable et digne.'
-  description_url: http://adrastia.org/
+  description_url: https://adrastia.org/
   description_details: Pour toucher les questions de société, d’anthropocène et d’effondrements actuels et futurs.
-  image_url: http://adrastia.org/wp-content/uploads/2017/07/Site.4.png
+  image_url: https://adrastia.org/wp-content/uploads/2017/07/Site.4.png
   quiz_tag: Adrastia
   added: 2020-06-01
 - name: '@laydgeur'

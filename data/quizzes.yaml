@@ -32,7 +32,7 @@
   name: Le quiz de Vincent Mignerot
   introduction: "<p>Vincent Mignerot est essayiste et conférencier. Il développe une\
     \ théorie écologique de l’esprit et se questionne sur la singularité de l'humanité\
-    \ dans son contexte évolutif. Il est le fondateur d'<a href=\"http://adrastia.org\"\
+    \ dans son contexte évolutif. Il est le fondateur d'<a href=\"https://adrastia.org\"\
     >Adrastia</a>, une association qui s’intéresse aux risques d’effondrement de la\
     \ civilisation thermo-industrielle et du groupe <a href=\"https://www.facebook.com/groups/transition.2030\"\
     >Facebook Transition 2030</a>.</p>\r\n\r\n<p>Vincent nous a concocté un quiz teinté\
@@ -40,7 +40,7 @@
     \ que notre espèce imprime sur son environnement.<br />\r\nMise à jour janvier\
     \ 2021 : Les réponses sont désormais agrémentées de commentaires audio de l'auteur\
     \ pour aller plus loin. </p>"
-  conclusion: <p>Si ce quiz vous a intéressé, vous le serez problablement par <a href="http://quizanthropocene.fr/quiz/18">celui-ci,</a>
+  conclusion: <p>Si ce quiz vous a intéressé, vous le serez problablement par <a href="https://quizanthropocene.fr/quiz/18">celui-ci,</a>
     qui traite de questions similaires.</p>
   difficulty_average: 2.2
   language: Français
@@ -496,7 +496,7 @@
   introduction: '<p>La <a href="https://fresquedunumerique.org">Fresque du Numérique </a>est
     un atelier collectif et pédagogique qui permet de comprendre les impacts écologiques
     du numérique, et de réfléchir à des solutions pour les réduire, le tout en passant
-    un bon moment ! Elle reprend le principe de la <a href="http://fresqueduclimat.org">Fresque
+    un bon moment ! Elle reprend le principe de la <a href="https://fresqueduclimat.org">Fresque
     du Climat</a> : des cartes que les participants doivent relier entre elles selons
     les causes et les effets, le contenu étant basé sur des sources vérifiées. Ce
     quiz vous permet de découvrir quelques informations étonnantes sur l''impact environnemental
@@ -543,7 +543,7 @@
     \ : des objets, des systèmes, des techniques, des services, des savoir-faire,\
     \ des pratiques, des modes de vie et même des courants de pensée, qui intègrent\
     \ la technologie en étant <strong>utiles</strong>, <strong>accessibles </strong>et\
-    \ <strong>durables</strong>.</p>\r\n\r\n<p>La <a href=\"http://fresquedeslowtechs.org\"\
+    \ <strong>durables</strong>.</p>\r\n\r\n<p>La <a href=\"https://fresquedeslowtechs.org\"\
     >Fresque des Low-Techs</a> est un atelier-jeu collaboratif. Il traite de la (non)\
     \ soutenabilité des technologies, aborde les limites et problèmes du système technique\
     \ actuel, et familiarise les participants au concept de low-tech. En reprenant\
@@ -561,10 +561,10 @@
     \ du salut technologique et de la croissance verte ! Comme le low-tech est aussi\
     \ une philosophie, beaucoup de concepts ne se retranscrivent pas en chiffres,\
     \ mais sont politiques, sociologiques, psychologiques... Plus d'infos sur le site\
-    \ de la<a href=\"http://fresquedeslowtechs.org\"> Fresque des Low-Techs</a>. «\
+    \ de la<a href=\"https://fresquedeslowtechs.org\"> Fresque des Low-Techs</a>. «\
     \ Contre une croissance infinie dans un monde aux ressources finies qui SE DÉGRADENT\
     \ et SE DISPERSENT ».<br />\r\nEnfin, si vous avez envie de faire découvrir ce\
-    \ quiz au-delà de la France, sa version anglaise est <a href=\"http://quizanthropocene.fr/quiz/67\"\
+    \ quiz au-delà de la France, sa version anglaise est <a href=\"https://quizanthropocene.fr/quiz/67\"\
     >ici</a>.</p>"
   difficulty_average: 2.7
   language: Français
@@ -581,12 +581,12 @@
   name: La Fresque de l'Alimentation
   introduction: "<p>Savez-vous réellement comment un steak ou une salade finit dans\
     \ votre assiette ? Et leurs conséquences environnementales ? Pour mieux vous éclairer,\
-    \ un atelier collectif et pédagogique a été créé : la <a href=\"http://fresquealimentation.org/\"\
+    \ un atelier collectif et pédagogique a été créé : la <a href=\"https://fresquealimentation.org/\"\
     >Fresque de l’Alimentation</a>.</p>\r\n\r\n<p>Pour vous mettre en appétit, quoi\
     \ de mieux qu'un petit quiz pour sonder vos connaissances ?</p>\r\n\r\n<p> </p>\r\
     \n\r\n<p>Un quiz conçu par Julien Briton et Thomas Moulin, concepteurs de l'atelier\
     \ La Fresque de l'Alimentation.</p>"
-  conclusion: <p>Pour aller plus loin, direction le site de La <a href="http://fresquealimentation.org/"
+  conclusion: <p>Pour aller plus loin, direction le site de La <a href="https://fresquealimentation.org/"
     style="color:blue; text-decoration:underline">Fresque de l’Alimentation</a>. Avec
     comme objectif d’embarquer le plus grand nombre dans une transition alimentaire
     rapide et effective, l'atelier passe en revue les grandes lignes de notre alimentation
@@ -747,7 +747,7 @@
     a philosophy, many of the concepts cannot be conveyed by figures, but are rather
     political, sociological, psychological... We can ony encourage you to attend a
     full workshop! More info on <a class="notion-link-token notion-enable-hover" data-darkreader-inline-color=""
-    href="http://fresquedeslowtechs.org/" rel="noopener noreferrer" style="cursor:
+    href="https://fresquedeslowtechs.org/" rel="noopener noreferrer" style="cursor:
     pointer; color: inherit; overflow-wrap: break-word; text-decoration: inherit;
     --darkreader-inline-color: inherit;" target="_blank">fresquedeslowtechs.org</a>
     (in french). "<em>Against infinite growth in a world with finite resources that
@@ -777,7 +777,7 @@
   difficulty_average: 2.2
   language: Français
   author: Alix Reverdy
-  image_background_url: http://sigesbre.brgm.fr/IMG/bmp/cycle_de_leau.bmp
+  image_background_url: https://www.ge.ch/media/media_image/2020-11/grand-cycle.jpg
   has_audio: false
   publish: true
   spotlight: true

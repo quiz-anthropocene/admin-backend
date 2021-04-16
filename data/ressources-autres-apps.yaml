@@ -1,7 +1,7 @@
 - name: Mission Climat
   description: Votre mission, si vous l'acceptez, est de proposer un scénario climat 2030 pour la France, permettant de limiter les impacts du dérèglement climatique à un niveau soutenable. Pour ce faire, vous avez à votre disposition quelques paramètres, un modèle de calcul et un joli tableau de bord.
-  description_url: http://mission-climat.io/
-  img_url: http://mission-climat.io/images/baisse-carbone.png
+  description_url: https://mission-climat.io/
+  img_url: https://mission-climat.io/images/baisse-carbone.png
   added: 2020-08-10
 - name: Futur.eco
   description: Découvre l'impact de chaque geste du quotidien !

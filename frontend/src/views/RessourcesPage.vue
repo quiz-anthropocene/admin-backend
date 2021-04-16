@@ -17,10 +17,6 @@
 
     <br />
     <h3 id="ressources-soutiens">Les associations et les personnes qui participent de près ou de loin au projet</h3>
-    <!-- <a href="https://fresqueduclimat.org/" target="_blank">La Fresque du Climat</a><br />
-    <a href="https://avenirclimatique.org/" target="_blank">Avenir Climatique</a><br />
-    <a href="http://adrastia.org/" target="_blank">Adrastia</a><br />
-    <a href="https://citoyenspourleclimat.org/" target="_blank">Citoyens pour le climat (CPLC)</a><br /> -->
 
     <p>
       Une variété de profils pour toucher tous les sujets de la crise climatique :
