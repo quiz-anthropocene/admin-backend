@@ -191,10 +191,10 @@
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/IMG_9753-215x215.jpg
   has_audio: false
-  publish: true
+  publish: false
   spotlight: false
   created: 2020-07-29
-  updated: 2021-01-26
+  updated: 2021-04-16
   tags:
   - 142
 - id: 12
@@ -212,10 +212,10 @@
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/J1A3917120919-2-215x215.jpg
   has_audio: false
-  publish: true
+  publish: false
   spotlight: false
   created: 2020-07-29
-  updated: 2021-01-26
+  updated: 2021-04-16
   tags:
   - 142
 - id: 13
@@ -276,10 +276,10 @@
   author: Matthieu Massart
   image_background_url: https://jive.univ-lille.fr/fileadmin/_processed_/c/d/csm_fresque-climat_ac9a138d0f.jpg
   has_audio: false
-  publish: true
+  publish: false
   spotlight: false
   created: 2020-07-29
-  updated: 2021-01-26
+  updated: 2021-04-16
   tags:
   - 142
 - id: 16
@@ -320,7 +320,7 @@
   - 49
   - 76
 - id: 18
-  name: Le Quiz de Laurent Testot
+  name: Le quiz de Laurent Testot
   introduction: "<p>Laurent Testot est journaliste, conférencier et formateur. Il\
     \ se consacre à la promotion en France de l’histoire globale, une méthode transdisciplinaire\
     \ d’analyse de l’histoire à grandes échelles. Son premier livre, <em>Cataclysmes.\
@@ -350,7 +350,7 @@
   publish: true
   spotlight: true
   created: 2020-09-23
-  updated: 2021-03-11
+  updated: 2021-04-16
   tags: []
 - id: 52
   name: La finance "verte", par Bon Pote
@@ -492,7 +492,7 @@
   tags:
   - 213
 - id: 59
-  name: La Fresque du Numérique
+  name: Fresque du Numérique
   introduction: '<p>La <a href="https://fresquedunumerique.org">Fresque du Numérique</a> est
     un atelier collectif et pédagogique qui permet de comprendre les impacts écologiques
     du numérique, et de réfléchir à des solutions pour les réduire, le tout en passant
@@ -538,7 +538,7 @@
   tags:
   - 30
 - id: 61
-  name: La Fresque des Low-Techs - les constats
+  name: Fresque des low-techs - les constats
   introduction: "<p>Les low-techs, vous connaissez ? Allez on va vous donner la réponse\
     \ : des objets, des systèmes, des techniques, des services, des savoir-faire,\
     \ des pratiques, des modes de vie et même des courants de pensée, qui intègrent\
@@ -578,7 +578,7 @@
   tags:
   - 255
 - id: 62
-  name: La Fresque de l'Alimentation
+  name: Fresque de l'Alimentation
   introduction: "<p>Savez-vous réellement comment un steak ou une salade finit dans\
     \ votre assiette ? Et leurs conséquences environnementales ? Pour mieux vous éclairer,\
     \ un atelier collectif et pédagogique a été créé : la <a href=\"https://fresquealimentation.org/\"\
@@ -586,14 +586,14 @@
     \ de mieux qu'un petit quiz pour sonder vos connaissances ?</p>\r\n\r\n<p>Un quiz\
     \ conçu par Julien Briton et Thomas Moulin, concepteurs de l'atelier La Fresque\
     \ de l'Alimentation.</p>"
-  conclusion: '<p>Pour aller plus loin, direction le site de La <a data-darkreader-inline-color=""
-    href="https://fresquealimentation.org/" style="color: blue; text-decoration: underline;
-    --darkreader-inline-color:#337dff;">Fresque de l’Alimentation</a>. Avec comme
-    objectif d’embarquer le plus grand nombre dans une transition alimentaire rapide
-    et effective, l''atelier passe en revue les grandes lignes de notre alimentation
-    et les impacts environnementaux, sanitaires et sociaux qu''elle engendre, donne
-    les grandes lignes d''une alimentation durable, végétalisée, locale, bio et de
-    saison, et détaille en quoi une alimentation durable améliore la résilience alimentaire.</p>'
+  conclusion: '<p>Pour aller plus loin, direction le site de La <a href="https://fresquealimentation.org/"
+    style="color: blue; text-decoration: underline; --darkreader-inline-color:#337dff;">Fresque
+    de l’Alimentation</a>. Avec comme objectif d’embarquer le plus grand nombre dans
+    une transition alimentaire rapide et effective, l''atelier passe en revue les
+    grandes lignes de notre alimentation et les impacts environnementaux, sanitaires
+    et sociaux qu''elle engendre, donne les grandes lignes d''une alimentation durable,
+    végétalisée, locale, bio et de saison, et détaille en quoi une alimentation durable
+    améliore la résilience alimentaire.</p>'
   difficulty_average: 1.9
   language: Français
   author: Julien Briton et Thomas Moulin
@@ -722,12 +722,12 @@
   difficulty_average: 2.4
   language: Français
   author: Max Pinsard
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/874.png
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/LToubli%C3%A9es.png
   has_audio: false
   publish: true
   spotlight: true
   created: 2021-03-23
-  updated: 2021-03-31
+  updated: 2021-04-16
   tags:
   - 255
 - id: 68
@@ -787,3 +787,37 @@
   - 206
   - 261
   - 263
+- id: 70
+  name: Fresque des low-techs - les leviers d'action
+  introduction: "<p>La <a class=\"notion-link-token notion-enable-hover\" href=\"\
+    https://fresquedeslowtechs.org/\" rel=\"noopener noreferrer\" style=\"cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit\"\
+    \ target=\"_blank\">Fresque des Low-techs</a> est un atelier-jeu collaboratif\
+    \ sur la (non) soutenabilité des technologies qui nous entourent. Il permet de\
+    \ comprendre les limites du système technique actuel et problèmes qu'il pose,\
+    \ et d'approcher ce qu'on entend par low-techs. En reprenant le principe de la\
+    \ Fresque du Climat (des cartes thématiques que l'on relie entre elles), les participants\
+    \ dessinent progressivement le tableau global des technologies, puis le résolvent\
+    \ pour aboutir à une esquisse des basses technologies, en apprenant de manière\
+    \ ludique des concepts clés et des aspects contre-intuitifs liés à la soutenabilité.\
+    \ Ce quiz vous donne un aperçu de ce qu'on découvre en participant à un tel atelier,\
+    \ avec un focus sur les leviers d'actions.<br />\r\n<br />\r\nUn quiz proposé\
+    \ par Max Pinsard, docteur en sciences de l’énergie et matériaux de INRS-EMT Montréal\
+    \ et créateur de la Fresque des Low-Techs.</p>"
+  conclusion: <p>Et voilà vous êtes maintenant paré pour diffuser quelques principes
+    des low-techs autour de vous ! Comme la low-tech, c'est aussi une philosophie,
+    beaucoup de concepts ne se retranscrivent pas en chiffres, mais sont politiques,
+    sociologiques, psychologiques ... On vous encourage ainsi à participer à un atelier
+    pour approfondir tout ça ! Plus d'infos sur <a class="notion-link-token notion-enable-hover"
+    href="http://fresquedeslowtechs.org/" rel="noopener noreferrer" style="cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit"
+    target="_blank">fresquedeslowtechs.org</a></p>
+  difficulty_average: 1.9
+  language: Français
+  author: Max Pinsard
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/solLT_32c.png
+  has_audio: false
+  publish: false
+  spotlight: false
+  created: 2021-04-16
+  updated: 2021-04-16
+  tags:
+  - 255
