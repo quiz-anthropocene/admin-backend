@@ -50,7 +50,7 @@
   publish: true
   spotlight: true
   created: 2020-06-26
-  updated: 2021-01-26
+  updated: 2021-04-16
   tags:
   - 185
 - id: 4
@@ -493,7 +493,7 @@
   - 213
 - id: 59
   name: La Fresque du Numérique
-  introduction: '<p>La <a href="https://fresquedunumerique.org">Fresque du Numérique </a>est
+  introduction: '<p>La <a href="https://fresquedunumerique.org">Fresque du Numérique</a> est
     un atelier collectif et pédagogique qui permet de comprendre les impacts écologiques
     du numérique, et de réfléchir à des solutions pour les réduire, le tout en passant
     un bon moment ! Elle reprend le principe de la <a href="https://fresqueduclimat.org">Fresque
@@ -506,7 +506,7 @@
     mais des impacts bien réels. La bonne nouvelle, c'est que les pistes pour les
     réduire sont nombreuses. Pour aller plus loin,nous vous recommandons de participer
     à un atelier. Plus d'information sur <a href="https://fresquedunumerique.org">Fresque
-    du Numérique. </a></p>
+    du Numérique</a>.</p>
   difficulty_average: 2.1
   language: Français
   author: Aurélien Déragne
@@ -515,7 +515,7 @@
   publish: true
   spotlight: true
   created: 2021-01-21
-  updated: 2021-03-11
+  updated: 2021-04-16
   tags:
   - 30
 - id: 60
@@ -561,8 +561,8 @@
     \ du salut technologique et de la croissance verte ! Comme le low-tech est aussi\
     \ une philosophie, beaucoup de concepts ne se retranscrivent pas en chiffres,\
     \ mais sont politiques, sociologiques, psychologiques... Plus d'infos sur le site\
-    \ de la<a href=\"https://fresquedeslowtechs.org\"> Fresque des Low-Techs</a>. «\
-    \ Contre une croissance infinie dans un monde aux ressources finies qui SE DÉGRADENT\
+    \ de la <a href=\"https://fresquedeslowtechs.org\">Fresque des Low-Techs</a>.\
+    \ « Contre une croissance infinie dans un monde aux ressources finies qui SE DÉGRADENT\
     \ et SE DISPERSENT ».<br />\r\nEnfin, si vous avez envie de faire découvrir ce\
     \ quiz au-delà de la France, sa version anglaise est <a href=\"https://quizanthropocene.fr/quiz/67\"\
     >ici</a>.</p>"
@@ -574,7 +574,7 @@
   publish: true
   spotlight: true
   created: 2021-02-14
-  updated: 2021-03-31
+  updated: 2021-04-16
   tags:
   - 255
 - id: 62
@@ -583,16 +583,17 @@
     \ votre assiette ? Et leurs conséquences environnementales ? Pour mieux vous éclairer,\
     \ un atelier collectif et pédagogique a été créé : la <a href=\"https://fresquealimentation.org/\"\
     >Fresque de l’Alimentation</a>.</p>\r\n\r\n<p>Pour vous mettre en appétit, quoi\
-    \ de mieux qu'un petit quiz pour sonder vos connaissances ?</p>\r\n\r\n<p> </p>\r\
-    \n\r\n<p>Un quiz conçu par Julien Briton et Thomas Moulin, concepteurs de l'atelier\
-    \ La Fresque de l'Alimentation.</p>"
-  conclusion: <p>Pour aller plus loin, direction le site de La <a href="https://fresquealimentation.org/"
-    style="color:blue; text-decoration:underline">Fresque de l’Alimentation</a>. Avec
-    comme objectif d’embarquer le plus grand nombre dans une transition alimentaire
-    rapide et effective, l'atelier passe en revue les grandes lignes de notre alimentation
-    et les impacts environnementaux, sanitaires et sociaux qu'elle engendre, donne
-    les grandes lignes d'une alimentation durable, végétalisée, locale, bio et de
-    saison, et détaille en quoi une alimentation durable améliore la résilience alimentaire.</p>
+    \ de mieux qu'un petit quiz pour sonder vos connaissances ?</p>\r\n\r\n<p>Un quiz\
+    \ conçu par Julien Briton et Thomas Moulin, concepteurs de l'atelier La Fresque\
+    \ de l'Alimentation.</p>"
+  conclusion: '<p>Pour aller plus loin, direction le site de La <a data-darkreader-inline-color=""
+    href="https://fresquealimentation.org/" style="color: blue; text-decoration: underline;
+    --darkreader-inline-color:#337dff;">Fresque de l’Alimentation</a>. Avec comme
+    objectif d’embarquer le plus grand nombre dans une transition alimentaire rapide
+    et effective, l''atelier passe en revue les grandes lignes de notre alimentation
+    et les impacts environnementaux, sanitaires et sociaux qu''elle engendre, donne
+    les grandes lignes d''une alimentation durable, végétalisée, locale, bio et de
+    saison, et détaille en quoi une alimentation durable améliore la résilience alimentaire.</p>'
   difficulty_average: 1.9
   language: Français
   author: Julien Briton et Thomas Moulin
@@ -601,7 +602,7 @@
   publish: true
   spotlight: true
   created: 2021-02-18
-  updated: 2021-03-11
+  updated: 2021-04-16
   tags:
   - 5
   - 17
@@ -741,17 +742,14 @@
     \ this workshop. It is focused on the first section, focused on the problems.</p>\r\
     \n\r\n<p>A quiz proposed by Max Pinsard, PhD in energy and materials science from\
     \ INRS-EMT Montreal, and creator of the Low-Tech Collage.</p>"
-  conclusion: '<p>This quiz is of course too short to cover it all. But by now, the
+  conclusion: <p>This quiz is of course too short to cover it all. But by now, the
     impacts of our technological system should be familiar to you, as well as the
     deceiving promises of technofuturism and green growth! Since low-tech is also
     a philosophy, many of the concepts cannot be conveyed by figures, but are rather
     political, sociological, psychological... We can ony encourage you to attend a
-    full workshop! More info on <a class="notion-link-token notion-enable-hover" data-darkreader-inline-color=""
-    href="https://fresquedeslowtechs.org/" rel="noopener noreferrer" style="cursor:
-    pointer; color: inherit; overflow-wrap: break-word; text-decoration: inherit;
-    --darkreader-inline-color: inherit;" target="_blank">fresquedeslowtechs.org</a>
+    full workshop! More info on <a href="https://fresquedeslowtechs.org">fresquedeslowtechs.org</a>
     (in french). "<em>Against infinite growth in a world with finite resources that
-    ARE DEGRADING and DISPERSING".</em></p>'
+    ARE DEGRADING and DISPERSING".</em></p>
   difficulty_average: 2.6
   language: English
   author: Max Pinsard
@@ -760,7 +758,7 @@
   publish: true
   spotlight: true
   created: 2021-03-24
-  updated: 2021-04-11
+  updated: 2021-04-16
   tags:
   - 255
 - id: 69
@@ -782,7 +780,7 @@
   publish: true
   spotlight: true
   created: 2021-04-10
-  updated: 2021-04-12
+  updated: 2021-04-16
   tags:
   - 37
   - 69
