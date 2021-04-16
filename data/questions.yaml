@@ -1397,7 +1397,11 @@
   answer_scientific_url: http://reports.electricinsights.co.uk/wp-content/uploads/2020/11/201126_Drax_20Q3_005-1.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://pbs.twimg.com/media/EoNpVcJXUAA3kKR?format=jpg&name=large
-  answer_image_explanation: ''
+  answer_image_explanation: 'A gauche : intensité carbone au début et à la fin de
+    la décennie 2010, par pays;
+
+    A droite : classement des pays par ordre de plus forts changement dans l''intensité
+    carbone sur la même période'
   answer_extra_info: ''
   author: Raphael Odini
   validator: Matthieu Massart
@@ -16337,7 +16341,7 @@
   answer_extra_info: ''
   author: Citoyens Pour le Climat
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-06-11
   created: 2020-06-24
   updated: 2020-09-28
@@ -16622,7 +16626,7 @@
   answer_extra_info: ''
   author: Le Monde
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-06-11
   created: 2020-06-24
   updated: 2020-06-24
@@ -16763,7 +16767,7 @@
   answer_extra_info: ''
   author: INRAE
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-06-11
   created: 2020-06-24
   updated: 2020-09-28
@@ -26735,9 +26739,9 @@
   - 61
   - 223
 - id: 748
-  text: La côte du delta du Mékong au Vietnam recule, et cela plus vite que ce qui
-    pourrait s'expliquer par la seul montée du niveau des mers. Quel recul peut-on
-    observer en certains endroits ?
+  text: La côte du delta du Mékong au Vietnam recule. La montée du niveau de la mer
+    ne suffit pas à l'expliquer. Quel recul peut-on observer en certains endroits
+    ?
   hint: ''
   type: QCM
   category: 5
