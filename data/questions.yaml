@@ -31651,7 +31651,7 @@
     fut amélioré lors de son import aux Etats-Unis fin XIXe siècle : avec du ciment
     à prise rapide on peut construire des arches encore plus grande ! Le béton est
     un important contributeur aux GES, et il n''est pas durable : son acier finit
-    toujours pas rouiller. Il est peut-être temps de revenir à des architectures plus
+    toujours par rouiller. Il est peut-être temps de revenir à des architectures plus
     astucieuces ?'
   answer_audio: ''
   answer_video: ''
@@ -31671,6 +31671,47 @@
   tags:
   - 255
   - 257
+- id: 883
+  text: Une éolienne peut-elle servir à produire de la chaleur ?
+  hint: ''
+  type: QCM-RM
+  category: 5
+  difficulty: 2
+  language: Français
+  answer_option_a: Pas vraiment, sauf à passer par une plinthe électrique, ce qui
+    est peu efficace
+  answer_option_b: Oui, par friction de la rotation des pâles
+  answer_option_c: Oui, avec possibilité de chauffer l'eau d'un réservoir contenu
+    dans le support de l'éolienne elle-même
+  answer_option_d: ''
+  answer_correct: bc
+  has_ordered_answers: false
+  answer_explanation: 'Pendant le pic pétrolier des années 1970, le Danemark a notamment
+    développé ces systèmes de chauffage ingénieux : de petites éoliennes locales répondaient
+    à ces besoins énergétiques, dans une région connue pour ses vents forts. La LO-FA
+    contenant un réservoir d''eau était même de 12m de diamètre ! L''avantage est
+    de ne pas dépendre des fluctuations de production de puissance (dues aux variations
+    du vent), contrairement à la production d''électricité demandant une certaine
+    qualité du signal produit, se stocke facilement (réservoirs d''eau isolés ou autre),
+    avec un rendement de conversion d''énergie proche de 90% ! En revanche, le transport
+    de cette forme d''énergie se fait difficilement.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/fr/2020/12/heat-your-house-with-a-water-brake-windmill.html
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0960148115003079
+  answer_reading_recommendation: ''
+  answer_image_url: https://solar.lowtechmagazine.com/dithers/thermal-windmill3.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Validée
+  added: 2021-04-16
+  created: 2021-04-16
+  updated: 2021-04-16
+  tags:
+  - 45
+  - 255
 - id: 900
   text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
   hint: Bas carbone donc…
@@ -33426,6 +33467,81 @@
   tags:
   - 13
   - 49
+- id: 949
+  text: Before electric cranes, there were cranes driven by human power alone. The
+    most powerful of them multiplied the force exerted by the operators by a factor…?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  language: English
+  answer_option_a: ×6
+  answer_option_b: ×60
+  answer_option_c: ×600
+  answer_option_d: ×6000
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: 'At Keyham in the UK a 60 ton crane gave an advantage of 1:
+    600 (and could lift 5 times its weight). Two men alone could handle the crane
+    with 60 tons hanging from the end of the jib! Nowadays we use electric machines,
+    reserving our physical strength for the gym ...'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/2010/03/history-of-human-powered-cranes.html
+  answer_scientific_url: https://archive.org/details/usefulinformati09fairgoog/page/n207/mode/2up
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/874.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: A valider
+  added: 2021-04-16
+  created: 2021-04-16
+  updated: 2021-04-16
+  tags:
+  - 255
+- id: 957
+  text: The Catalan vault is a century-old technique that consists of a superposition
+    of several layers of tiles assembled using mortar. How to best describe the resistance
+    of these vaults?
+  hint: ''
+  type: QCM-RM
+  category: 6
+  difficulty: 3
+  language: English
+  answer_option_a: They are as strong as reinforced concrete, without using steel
+  answer_option_b: They allow less pronounced curves than standard Roman vaults
+  answer_option_c: They require fewer load-bearing columns
+  answer_option_d: Mortar is optional as long as the keystone is well designed
+  answer_correct: abc
+  has_ordered_answers: false
+  answer_explanation: 'Without the use of steel, with a clever arrangement defying
+    gravity, they are as strong as reinforced concrete! They also allow less pronounced
+    curves than the Roman vaults, and therefore to use less columns. On the other
+    hand, mortar must be applied to bind the tiles, which was improved when imported
+    into the US at the end of the 19th century: with quick-setting cement it is even
+    possible to build even larger arches! Concrete has a huge carbon footprint, and
+    is not durable: its steel always rusts eventually. Maybe it''s time to go back
+    to smarter architectures?'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/2008/11/tiles-vaults.html
+  answer_scientific_url: https://en.wikipedia.org/wiki/Guastavino_tile
+  answer_reading_recommendation: ''
+  answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/New_York_City_City_Hall_subway_station_HAER_image.jpg/800px-New_York_City_City_Hall_subway_station_HAER_image.jpg
+  answer_image_explanation: The architect Guastavino imported these vaults to New
+    York City
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: A valider
+  added: 2021-04-16
+  created: 2021-04-16
+  updated: 2021-04-16
+  tags:
+  - 53
+  - 86
 - id: 1000
   text: Globally, how much electronic waste is collected in order to be recycled?
   hint: it is really not much!
