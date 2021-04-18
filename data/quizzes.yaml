@@ -694,9 +694,9 @@
   image_background_url: https://cdn.pixabay.com/photo/2015/11/19/21/43/desert-1052092_1280.jpg
   has_audio: false
   publish: true
-  spotlight: true
+  spotlight: false
   created: 2021-03-12
-  updated: 2021-04-06
+  updated: 2021-04-18
   tags:
   - 7
   - 13
@@ -810,7 +810,7 @@
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/solLT_32c.png
   has_audio: false
   publish: true
-  spotlight: false
+  spotlight: true
   created: 2021-04-16
   updated: 2021-04-18
   tags:
