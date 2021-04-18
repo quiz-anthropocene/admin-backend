@@ -791,24 +791,19 @@
   name: Fresque des low-techs - les leviers d'action
   introduction: "<p>La <a class=\"notion-link-token notion-enable-hover\" href=\"\
     https://fresquedeslowtechs.org/\" rel=\"noopener noreferrer\" style=\"cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit\"\
-    \ target=\"_blank\">Fresque des Low-techs</a> est un atelier-jeu collaboratif\
-    \ sur la (non) soutenabilité des technologies qui nous entourent. Il permet de\
-    \ comprendre les limites du système technique actuel et problèmes qu'il pose,\
-    \ et d'approcher ce qu'on entend par low-techs. En reprenant le principe de la\
-    \ Fresque du Climat (des cartes thématiques que l'on relie entre elles), les participants\
-    \ dessinent progressivement le tableau global des technologies, puis le résolvent\
-    \ pour aboutir à une esquisse des basses technologies, en apprenant de manière\
-    \ ludique des concepts clés et des aspects contre-intuitifs liés à la soutenabilité.\
+    \ target=\"_blank\">Fresque des Low-techs, c</a>'est un atelier-jeu collaboratif\
+    \ sur la (non ?) soutenabilité des technologies qui nous entourent. Il amène d'abord\
+    \ à s'interroger sur leurs limites, puis d'introduire la notion de low-techs.\
     \ Ce quiz vous donne un aperçu de ce qu'on découvre en participant à un tel atelier,\
-    \ avec un focus sur les leviers d'actions.<br />\r\n<br />\r\nUn quiz proposé\
-    \ par Max Pinsard, docteur en sciences de l’énergie et matériaux de INRS-EMT Montréal\
-    \ et créateur de la Fresque des Low-Techs.</p>"
-  conclusion: <p>Et voilà vous êtes maintenant paré pour diffuser quelques principes
-    des low-techs autour de vous ! Comme la low-tech, c'est aussi une philosophie,
-    beaucoup de concepts ne se retranscrivent pas en chiffres, mais sont politiques,
-    sociologiques, psychologiques ... On vous encourage ainsi à participer à un atelier
-    pour approfondir tout ça ! Plus d'infos sur <a class="notion-link-token notion-enable-hover"
-    href="http://fresquedeslowtechs.org/" rel="noopener noreferrer" style="cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit"
+    \ avec un focus sur les leviers d'actions à notre disposition.<br />\r\n<br />\r\
+    \nUn quiz proposé par Max Pinsard, docteur en sciences de l’énergie et matériaux\
+    \ de INRS-EMT Montréal et créateur de la Fresque des Low-Techs.</p>"
+  conclusion: <p>Vous voilà désormais paré pour diffuser quelques principes des low-techs
+    autour de vous ! Mais la low-tech, c'est aussi une philosophie, et des concepts
+    qui ne se retranscrivent pas en chiffres, mais sont politiques, sociologiques,
+    psychologiques ... On vous encourage donc  à participer à un atelier pour approfondir
+    tout ça ! Plus d'infos sur <a class="notion-link-token notion-enable-hover" href="http://fresquedeslowtechs.org/"
+    rel="noopener noreferrer" style="cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit"
     target="_blank">fresquedeslowtechs.org</a></p>
   difficulty_average: 1.9
   language: Français
@@ -818,6 +813,6 @@
   publish: false
   spotlight: false
   created: 2021-04-16
-  updated: 2021-04-16
+  updated: 2021-04-17
   tags:
   - 255

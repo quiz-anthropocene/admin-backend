@@ -26456,11 +26456,12 @@
   - 217
   - 225
 - id: 741
-  text: Comment se compare l'empreinte carbone d'un vélo à assistance électrique par
-    rapport à un vélo classique ?
+  text: Comment se compare l'empreinte carbone d'un vélo à assistance électrique (VAE)
+    par rapport à un vélo "classique" ?
   hint: On ne tient pas compte des "calories dépensées en plus" par le cycliste sans
     assistance électrique, en considérant que les usager n'ajustent pas leur régime
-    alimentaire (viande ...) en fonction de leur moyen de transport.
+    alimentaire (viande ...) en fonction de leur moyen de transport. Les effets rebonds
+    peuvent aussi venir changer la donne ...
   type: QCM
   category: 5
   difficulty: 1
@@ -26540,8 +26541,9 @@
   - 259
   - 260
 - id: 743
-  text: Parmi les déchets que les ménages français jettent à la poubelle générale
-    (grise), quelle partie pourrait facilement être évitée ?
+  text: Un ménage français jette en moyenne 250kg/hectare/an de déchets à la poubelle
+    générale (grise), qui sont souvent délicats à traiter car mélangés. Quelle part
+    de ce total pourrait facilement ne pas se retrouver dans cette poubelle ?
   hint: ''
   type: QCM
   category: 5
@@ -26554,8 +26556,8 @@
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: "Sur les 250kg/ha/an (en France) de déchets jetés dans la poubelle\
-    \ générale par les ménages, un tiers est putrescible et pourrait être compostés\
-    \ ou nourrir des animaux, et un autre tiers pourrait être collectés sélectivement\
+    \ générale par les ménages, un tiers est putrescible et pourrait être composté\
+    \ ou nourrir des animaux, et un autre tiers pourrait être collecté sélectivement\
     \ en vue d'un recyclage \"facile\" (papiers, verre, métaux …). Selon l'ADEME,\
     \ en comptant d'autres déchets non-classés, c'est 70% qui pourraient éviter d'aller\
     \ dans la poubelle grise. Le reste est composé de déchets dangereux (DEEE...),\
@@ -26566,7 +26568,7 @@
   answer_video: ''
   answer_accessible_url: https://www.ademe.fr/expertises/dechets/chiffres-cles-observation/dossier/caracterisation-dechets/campagne-nationale-caracterisation-dechets-menagers-assimiles
   answer_scientific_url: https://www.actu-environnement.com/media/pdf/news-35407-chiffres-cles-dechets-2019.pdf
-  answer_reading_recommendation: L'age des low-techs", Ph. Bihouix
+  answer_reading_recommendation: '"L''age des low-techs", Ph. Bihouix'
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/743.png
   answer_image_explanation: ''
   answer_extra_info: ''
@@ -31176,10 +31178,10 @@
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: 15%
-  answer_option_b: 33%
-  answer_option_c: 50%
-  answer_option_d: 80%
+  answer_option_a: ~15%
+  answer_option_b: ~33%
+  answer_option_c: ~50%
+  answer_option_d: ~80%
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: Les industries représentent la moitié de l'énergie primaire,
@@ -31193,7 +31195,7 @@
   answer_accessible_url: https://solar.lowtechmagazine.com/2011/07/solar-powered-factories.html
   answer_scientific_url: https://www.iea.org/commentaries/clean-and-efficient-heat-for-industry
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/870.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/870.png
   answer_image_explanation: 'énergie utilisée dans le monde pour les bâtiments et
     industries (tout sauf les transports) : les besoins se divisent 50% en chaleur
     50% en électricité'
@@ -31307,7 +31309,7 @@
   answer_accessible_url: https://www.lapresse.ca/affaires/economie/commerce-de-detail/201312/06/01-4718237-playmobil-limagination-au-pouvoir-depuis-40-ans.php
   answer_scientific_url: ''
   answer_reading_recommendation: L'âge des low tech, Ph. Bihouix, 2017
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/MaxP92-patch-1/data/images/questions/873.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/873.png
   answer_image_explanation: '[https://www.laboiteverte.fr/a-linterieur-dune-usine-de-playmobils/](https://www.laboiteverte.fr/a-linterieur-dune-usine-de-playmobils/)'
   answer_extra_info: ''
   author: Max Pinsard
@@ -31578,7 +31580,7 @@
   answer_accessible_url: https://www.lowtechmagazine.com/2011/02/body-insulation-thermal-underwear.html
   answer_scientific_url: https://world-habitat.org/publications/new-tricks-with-old-bricks/
   answer_reading_recommendation: ''
-  answer_image_url: http://wiki.lowtechlab.org/wiki/Panneau_isolant_au_Myc%C3%A9lium_de_champignon#/media/File:Isolation_grace_au_myc_lium_panneau_carton.PNG
+  answer_image_url: https://wiki.lowtechlab.org/images/1/1b/Isolation_grace_au_myc_lium_panneau_carton.PNG
   answer_image_explanation: Isolation low-tech, grâce au mycelium de champignon
   answer_extra_info: ''
   author: Max Pinsard
@@ -33431,16 +33433,18 @@
   - 234
 - id: 948
   text: L'extraction et la transformation des ressources (matériaux, combustibles,
-    aliments…) est responsable du stress hydrique et de la destruction de la biodiversité
-    à hauteur de ... ?
+    aliments…) est responsable de ... ?
   hint: Perte de biodiv liée à l'utilisation des terres
   type: QCM
   category: 7
   difficulty: 4
   language: Français
-  answer_option_a: 90%
-  answer_option_b: 50%
-  answer_option_c: 30%
+  answer_option_a: 90% du stress hydrique et de la destruction de biodiversité liée
+    aux terres
+  answer_option_b: 50% du stress hydrique et de la destruction de biodiversité liée
+    aux terres
+  answer_option_c: 30% du stress hydrique et de la destruction de biodiversité liée
+    aux terres
   answer_option_d: 10% du stress hydrique et de la destruction de biodiversité liée
     aux terres
   answer_correct: a
@@ -33448,8 +33452,8 @@
   answer_explanation: 'Le reste est dû aux autres activités économiques et aux ménages
     (chiffres de 2019). Le stress hydrique et la perte de biodiversité (liée à l''utilisation
     des terres) sont en particulier largement dus à l''usage de la biomasse (aliments
-    ..., en vert sur le graphique). Enfin, l''extraction des ressources c''est aussi
-    la moitié des GES anthropiques ! '
+    ..., en vert sur le graphique). Enfin, cette extraction des ressources c''est
+    aussi la moitié des GES anthropiques ! '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.unenvironment.org/fr/actualites-et-recits/communique-de-presse/lonu-appelle-reconsiderer-de-toute-urgence-lutilisation
