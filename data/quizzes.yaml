@@ -538,30 +538,30 @@
   tags:
   - 30
 - id: 61
-  name: Fresque des low-techs - les constats
-  introduction: "<p>Les low-techs, vous connaissez ? Allez on va vous donner la réponse\
+  name: Fresque des low techs - les constats
+  introduction: "<p>Les low techs, vous connaissez ? Allez on va vous donner la réponse\
     \ : des objets, des systèmes, des techniques, des services, des savoir-faire,\
     \ des pratiques, des modes de vie et même des courants de pensée, qui intègrent\
     \ la technologie en étant <strong>utiles</strong>, <strong>accessibles </strong>et\
     \ <strong>durables</strong>.</p>\r\n\r\n<p>La <a href=\"https://fresquedeslowtechs.org\"\
-    >Fresque des Low-Techs</a> est un atelier-jeu collaboratif. Il traite de la (non)\
+    >Fresque des low techs</a> est un atelier-jeu collaboratif. Il traite de la (non)\
     \ soutenabilité des technologies, aborde les limites et problèmes du système technique\
-    \ actuel, et familiarise les participants au concept de low-tech. En reprenant\
-    \ le principe de la Fresque du Climat (des cartes thématiques que les participants\
-    \ doivent relier entre elles), les participants dessinent progressivement le tableau\
-    \ global des technologies, puis le résolvent pour aboutir à une esquisse des basses\
-    \ technologies, en apprenant de manière ludique des chiffres officiels de rapports\
-    \ tel que l'UNEP et des concepts clés. Ce quiz vous donne un aperçu de ce que\
-    \ vous apprendrez dans la première partie de cet atelier, ciblée sur les constats.<br\
-    \ />\r\n<br />\r\nUn quiz proposé par Max Pinsard, docteur en sciences de l’énergie\
-    \ et matériaux de INRS-EMT Montréal et créateur de la Fresque des Low-Techs.</p>"
+    \ actuel, et familiarise les participants au concept de low tech. En reprenant\
+    \ le principe de la Fresque du Climat, les participants dessinent progressivement\
+    \ le tableau global des technologies, puis le résolvent pour aboutir à une esquisse\
+    \ des basses technologies, en apprenant de manière ludique des chiffres officiels\
+    \ de rapports tel que l'UNEP et des concepts clés. Ce quiz vous donne un aperçu\
+    \ de ce que vous apprendrez dans la première partie de cet atelier, ciblée sur\
+    \ les constats.<br />\r\n<br />\r\nUn quiz proposé par Max Pinsard, docteur en\
+    \ sciences de l’énergie et matériaux de INRS-EMT Montréal et créateur de la Fresque\
+    \ des Low-Techs.</p>"
   conclusion: "<p>Ces quelques questions, c'est bien sûr un peu court pour tout aborder,\
     \ mais vous avez pu apercevoir l'ordre de grandeur des impacts de notre système\
     \ techologique, et quelques notions d'auto-défense contre les fausses promesses\
     \ du salut technologique et de la croissance verte ! Comme le low-tech est aussi\
     \ une philosophie, beaucoup de concepts ne se retranscrivent pas en chiffres,\
     \ mais sont politiques, sociologiques, psychologiques... Plus d'infos sur le site\
-    \ de la <a href=\"https://fresquedeslowtechs.org\">Fresque des Low-Techs</a>.\
+    \ de la <a href=\"https://fresquedeslowtechs.org\">Fresque des low techs</a>.\
     \ « Contre une croissance infinie dans un monde aux ressources finies qui SE DÉGRADENT\
     \ et SE DISPERSENT ».<br />\r\nEnfin, si vous avez envie de faire découvrir ce\
     \ quiz au-delà de la France, sa version anglaise est <a href=\"https://quizanthropocene.fr/quiz/67\"\
@@ -574,7 +574,7 @@
   publish: true
   spotlight: true
   created: 2021-02-14
-  updated: 2021-04-16
+  updated: 2021-04-18
   tags:
   - 255
 - id: 62
@@ -704,7 +704,7 @@
   - 225
   - 227
 - id: 67
-  name: Des low-techs tombées dans l'oubli
+  name: Des low techs tombées dans l'oubli
   introduction: "<p>Et si on faisait un petit détour par le passé ? Les XIX et XXe\
     \ siècles ont en effet été l'ère des grands inventeurs. Ils ont été capables de\
     \ faire le tour du monde, de construire des bâtiments gigantesques ou de s'adapter\
@@ -727,21 +727,21 @@
   publish: true
   spotlight: true
   created: 2021-03-23
-  updated: 2021-04-16
+  updated: 2021-04-18
   tags:
   - 255
 - id: 68
-  name: Low-tech Collage - Current Issues
-  introduction: "<p>Ever heard of low-techs ? They are objects, systems, techniques,\
+  name: Low Tech Collage - Current Issues
+  introduction: "<p>Ever heard of low techs ? They are objects, systems, techniques,\
     \ services, know-how, practices, lifestyle and even a current of thought that\
-    \ integrate technology while being useful, accessible and sustainable. The Low-Tech\
-    \ Collage is a collaborative workshop/game - ony available in French at the moment.\
-    \ It deals with the (lack of) sustainability of technologies, addresses the limits\
-    \ and problems of the current technical system, and introduces the concept of\
-    \ low techs.<br />\r\nThis quiz provides an overview of what you will learn in\
-    \ this workshop. It is focused on the first section, focused on the problems.</p>\r\
+    \ integrate technology while being useful, accessible and sustainable. The Low\
+    \ Tech Collage is a collaborative workshop/game - ony available in French at the\
+    \ moment. It deals with the (lack of) sustainability of technologies, addresses\
+    \ the limits and problems of the current technical system, and introduces the\
+    \ concept of low techs.<br />\r\nThis quiz provides an overview of what you will\
+    \ learn in this workshop. It is focused on the first section, focused on issues.</p>\r\
     \n\r\n<p>A quiz proposed by Max Pinsard, PhD in energy and materials science from\
-    \ INRS-EMT Montreal, and creator of the Low-Tech Collage.</p>"
+    \ INRS-EMT Montreal, and creator of the Low Tech Collage.</p>"
   conclusion: <p>This quiz is of course too short to cover it all. But by now, the
     impacts of our technological system should be familiar to you, as well as the
     deceiving promises of technofuturism and green growth! Since low-tech is also
@@ -758,7 +758,7 @@
   publish: true
   spotlight: true
   created: 2021-03-24
-  updated: 2021-04-16
+  updated: 2021-04-18
   tags:
   - 255
 - id: 69
@@ -788,16 +788,15 @@
   - 261
   - 263
 - id: 70
-  name: Fresque des low-techs - les leviers d'action
-  introduction: "<p>La <a class=\"notion-link-token notion-enable-hover\" href=\"\
-    https://fresquedeslowtechs.org/\" rel=\"noopener noreferrer\" style=\"cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit\"\
-    \ target=\"_blank\">Fresque des Low-techs, c</a>'est un atelier-jeu collaboratif\
-    \ sur la (non ?) soutenabilité des technologies qui nous entourent. Il amène d'abord\
-    \ à s'interroger sur leurs limites, puis d'introduire la notion de low-techs.\
-    \ Ce quiz vous donne un aperçu de ce qu'on découvre en participant à un tel atelier,\
-    \ avec un focus sur les leviers d'actions à notre disposition.<br />\r\n<br />\r\
-    \nUn quiz proposé par Max Pinsard, docteur en sciences de l’énergie et matériaux\
-    \ de INRS-EMT Montréal et créateur de la Fresque des Low-Techs.</p>"
+  name: Fresque des low techs - les leviers d'action
+  introduction: "<p>La <a href=\"https://fresquedeslowtechs.org\">Fresque des low\
+    \ techs</a>, c'est un atelier-jeu collaboratif sur la (non ?) soutenabilité des\
+    \ technologies qui nous entourent. Il amène d'abord à s'interroger sur leurs limites,\
+    \ puis d'introduire la notion de low-techs. Ce quiz vous donne un aperçu de ce\
+    \ qu'on découvre en participant à un tel atelier, avec un focus sur les leviers\
+    \ d'actions à notre disposition.<br />\r\n<br />\r\nUn quiz proposé par Max Pinsard,\
+    \ docteur en sciences de l’énergie et matériaux de INRS-EMT Montréal et créateur\
+    \ de la Fresque des low techs.</p>"
   conclusion: <p>Vous voilà désormais paré pour diffuser quelques principes des low-techs
     autour de vous ! Mais la low-tech, c'est aussi une philosophie, et des concepts
     qui ne se retranscrivent pas en chiffres, mais sont politiques, sociologiques,
@@ -810,9 +809,9 @@
   author: Max Pinsard
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/solLT_32c.png
   has_audio: false
-  publish: false
+  publish: true
   spotlight: false
   created: 2021-04-16
-  updated: 2021-04-17
+  updated: 2021-04-18
   tags:
   - 255
