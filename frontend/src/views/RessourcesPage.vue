@@ -3,7 +3,7 @@
     <h2>Ressources pour aller plus loin</h2>
 
     <section v-if="$i18n.locale === 'en'" class="alert alert-warning" role="alert">
-      🌐Page not yet translated ...
+      🌐Page not yet translated
     </section>
 
     <p><i>Table des matières</i></p>

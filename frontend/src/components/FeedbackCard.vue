@@ -43,7 +43,7 @@
           </i>
         </p>
         <p>
-          🙋&nbsp;{{ $t('feedback.userEmail') }}<br />
+          🙋&nbsp;<span v-html="$t('feedback.userEmail')"></span><br />
         </p>
         <p class="help-text">
           <i>En soumettant ce formulaire, vous autorisez que les informations saisies soient traitées afin d'améliorer notre application, et vous recontacter si besoin.</i>

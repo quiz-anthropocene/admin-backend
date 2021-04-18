@@ -7,6 +7,7 @@ import constants from './constants';
 // webpack + vue-cli-plugin-yaml
 import configurationYamlData from '../../data/configuration.yaml';
 import statsYamlData from '../../data/stats.yaml';
+import languagesYamlData from '../../data/languages.yaml';
 import authorsYamlData from '../../data/authors.yaml';
 import difficultyLevelsYamlData from '../../data/difficulty-levels.yaml';
 import categoriesYamlData from '../../data/categories.yaml';
@@ -53,6 +54,7 @@ const store = new Vuex.Store({
     quizStats: [],
     categories: [],
     tags: [],
+    languages: [],
     authors: [],
     difficultyLevels: [],
     ressources: {
@@ -157,6 +159,20 @@ const store = new Vuex.Store({
      */
     GET_QUIZ_STATS_LIST_FROM_LOCAL_YAML: ({ commit }) => {
       commit('SET_QUIZ_STATS_LIST', { list: quizStatsYamlData });
+    },
+    /**
+     * Get languages
+     * Pre-processing ? None
+     */
+    GET_LANGUAGE_LIST_FROM_LOCAL_YAML: ({ commit }) => {
+      const languages = languagesYamlData;
+      // enrich languages with key & emoji
+      languages.map((l) => {
+        const currentLanguage = constants.LANGUAGE_CHOICE_LIST.find((cl) => cl.value === l.name);
+        Object.assign(l, { key: currentLanguage.key }, { emoji: currentLanguage.emoji });
+        return l;
+      });
+      commit('SET_LANGUAGE_LIST', { list: languages });
     },
     /**
      * Get authors
@@ -265,6 +281,9 @@ const store = new Vuex.Store({
     },
     SET_TAG_LIST: (state, { list }) => {
       state.tags = list;
+    },
+    SET_LANGUAGE_LIST: (state, { list }) => {
+      state.languages = list;
     },
     SET_AUTHOR_LIST: (state, { list }) => {
       state.authors = list;

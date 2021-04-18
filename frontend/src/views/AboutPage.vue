@@ -9,7 +9,7 @@
     </section> -->
 
     <section v-if="$i18n.locale === 'en'" class="alert alert-warning" role="alert">
-      🌐Page not yet translated ...
+      🌐Page not yet translated
     </section>
 
     <h3>Pourquoi cette application ?</h3>

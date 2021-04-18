@@ -1,5 +1,5 @@
 <template>
-  <span class="label" :class="[filterLabelClass, customClass]" @click="$emit('filter-label-clicked', { key: filterType, value: filterValue })">
+  <span class="label" :class="[getFilterLabelClass, customClass]" @click="$emit('filter-label-clicked', { key: filterType, value: filterValue })">
     <!-- cross prefix -->
     <span v-if="showCross">✘&nbsp;</span>
     <!-- name -->
@@ -20,27 +20,42 @@ export default {
     filterValue: [String, Number],
     filterCount: Number,
     customClass: String,
-    showCross: Boolean,
+    withHover: {
+      type: Boolean,
+      default: true,
+    },
+    showCross: {
+      type: Boolean,
+      default: false,
+    },
   },
   components: {
     DifficultyBadge,
   },
 
   computed: {
-    filterLabelClass() {
+    getFilterLabelClass() {
+      let filterLabelClass = '';
       if (this.filterType === 'category') {
-        return 'label-category label-category--with-hover';
+        filterLabelClass = 'label-category';
       }
       if (this.filterType === 'tag') {
-        return 'label-tag label-tag--with-hover';
+        filterLabelClass = 'label-tag';
       }
       if (this.filterType === 'author') {
-        return 'label-author label-author--with-hover';
+        filterLabelClass = 'label-author';
       }
       if (this.filterType === 'difficulty') {
-        return 'label-difficulty label-difficulty--with-hover';
+        filterLabelClass = 'label-difficulty';
       }
-      return '';
+      if (this.filterType === 'language') {
+        filterLabelClass = 'label-language';
+      }
+      if (this.withHover) {
+        // example : 'label-language' --> 'label-language label-language--with-hover'
+        filterLabelClass += ` ${filterLabelClass}--with-hover`;
+      }
+      return filterLabelClass;
     },
   },
 };

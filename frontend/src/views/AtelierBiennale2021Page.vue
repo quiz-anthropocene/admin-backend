@@ -3,7 +3,7 @@
     <h2>Atelier pour la Biennale des Villes en Transition <small>(1-4 avril 2021)</small></h2>
 
     <section v-if="$i18n.locale === 'en'" class="alert alert-warning" role="alert">
-      🌐Page not yet translated ...
+      🌐Page not yet translated
     </section>
 
     <p>

@@ -3,7 +3,7 @@
     <h2>Quelques statistiques</h2>
 
     <section v-if="$i18n.locale === 'en'" class="alert alert-warning" role="alert">
-      🌐Page not yet translated ...
+      🌐Page not yet translated
     </section>
 
     <p class="text-muted">Mise à jour : {{ data_last_updated }}</p>
@@ -61,6 +61,16 @@
     </p>
 
     <br />
+    <h4>🌐&nbsp;Langues</h4>
+    <p>
+      <span v-for="language in languages" :key="language.name">
+        <!-- <router-link class="no-decoration" :to="{ name: 'quiz-list', query: { locale: language.key } }"> -->
+          <FilterLabel :key="language.name" filterType="language" v-bind:filterValue="language.name" v-bind:filterCount="language.quiz_count" v-bind:withHover="false" />
+        <!-- </router-link> -->
+      </span>
+    </p>
+
+    <br />
     <hr />
     <br />
 
@@ -110,6 +120,16 @@
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { difficulty: difficulty.value } }">
           <FilterLabel :key="difficulty.name" filterType="difficulty" v-bind:filterValue="difficulty.value" v-bind:filterCount="difficulty.question_count" />
         </router-link>
+      </span>
+    </p>
+
+    <br />
+    <h4>🌐&nbsp;Langues</h4>
+    <p>
+      <span v-for="language in languages" :key="language.name">
+        <!-- <router-link class="no-decoration" :to="{ name: 'question-list', query: { locale: language.key } }"> -->
+          <FilterLabel :key="language.name" filterType="language" v-bind:filterValue="language.name" v-bind:filterCount="language.question_count" v-bind:withHover="false" />
+        <!-- </router-link> -->
       </span>
     </p>
 
@@ -198,6 +218,9 @@ export default {
     },
     difficultyLevels() {
       return this.$store.state.difficultyLevels;
+    },
+    languages() {
+      return this.$store.state.languages;
     },
   },
 

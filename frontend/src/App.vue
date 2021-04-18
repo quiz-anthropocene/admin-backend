@@ -136,6 +136,7 @@ export default {
       this.$store.dispatch('SET_LOCALE');
       this.$store.dispatch('GET_CONFIGURATION_DICT_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_DIFFICULTY_LEVEL_LIST_FROM_LOCAL_YAML');
+      this.$store.dispatch('GET_LANGUAGE_LIST_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_AUTHOR_LIST_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_CATEGORY_LIST_FROM_LOCAL_YAML');
       this.$store.dispatch('GET_TAG_LIST_FROM_LOCAL_YAML');
@@ -170,6 +171,8 @@ $author-color: #f33f99;
 $author-color-active: #f887bf; // last Monochromatic Color
 $difficulty-color: #ffd700; // 'gold'
 $difficulty-color-active: #ffe34d; // last Monochromatic Color
+$language-color: #00ffd7;
+$language-color-active: #4dffe3; // last Monochromatic Color
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -459,6 +462,13 @@ span.no-wrap {
   background-color: $difficulty-color-active;
   text-shadow: 0px 0px 1px black;
 }
+.label-language {
+  border-color: $language-color;
+}
+.label-language--active {
+  background-color: $language-color-active;
+  text-shadow: 0px 0px 1px black;
+}
 
 hr.custom-separator {
   border: 0 none;
@@ -503,6 +513,10 @@ hr.custom-separator {
   }
   .label-difficulty--with-hover:hover {
     background-color: $difficulty-color-active;
+    cursor: pointer;
+  }
+  .label-language--with-hover:hover {
+    background-color: $language-color-active;
     cursor: pointer;
   }
 }
