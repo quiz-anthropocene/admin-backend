@@ -53,3 +53,13 @@
   to_quiz: 67
   status: similaire
   created: 2021-03-31
+- id: 13
+  from_quiz: 70
+  to_quiz: 67
+  status: similaire
+  created: 2021-04-17
+- id: 14
+  from_quiz: 70
+  to_quiz: 61
+  status: suivant
+  created: 2021-04-17
