@@ -1203,7 +1203,7 @@
   answer_correct: b
   has_ordered_answers: false
   answer_explanation: Plus la température augmente et plus la solubilité des gaz dans
-    l’eau diminue, ce qui entraine une diminuation de l'oxygène disponible pour la
+    l’eau diminue, ce qui entraine une diminution de l'oxygène disponible pour la
     vie marine. L'effet albedo, c'est l'effet de réflexion par les surfaces terrestres
     du rayonnement solaire.
   answer_audio: ''
@@ -14666,7 +14666,7 @@
   tags:
   - 12
 - id: 417
-  text: Comment ont évolué les émissions de gaz à effet de serre sur le territoire
+  text: Comment ont évolué les émissions de gaz à effet de serre émises sur le territoire
     français entre 1990 et 2017 ?
   hint: Une large partie des émissions ont été délocalisés (produits importés de l’étranger)
     et ne sont donc plus comptées dans les émissions de la France
@@ -26682,7 +26682,7 @@
   answer_video: ''
   answer_accessible_url: https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige
   answer_scientific_url: http://www.meteofrance.fr/climat-passe-et-futur/impacts-du-changement-climatique-sur-les-phenomenes-hydrometeorologiques/changement-climatique-et-enneigement
-  answer_reading_recommendation: '[https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige](https://www.ledauphine.com/societe/2020/02/24/vrai-ou-faux-tout-savoir-sur-les-canons-a-neige)'
+  answer_reading_recommendation: ''
   answer_image_url: https://cdn.radiofrance.fr/s3/cruiser-production/2018/01/c5107a92-02bd-4209-8050-a946499a94b7/1136_gettyimages-171316657.webp
   answer_image_explanation: 'Canon à neige: enneigeur monofluide à ventilateur'
   answer_extra_info: ''
@@ -30457,7 +30457,7 @@
   - 30
 - id: 852
   text: Avec l'arrivée de la 5G, quelle évolution le Haut Conseil pour le Climat prévoit-il
-    pour l'empreinte carbone du numérique en 2030 ?
+    pour l'empreinte carbone du numérique en France en 2030 ?
   hint: ''
   type: QCM
   category: 7
@@ -30931,8 +30931,8 @@
   tags:
   - 30
 - id: 864
-  text: Les principales causes de mortalité et de vie en mauvaise santé dans les pays
-    riches sont …
+  text: 'Les principales causes de mortalité et de vie en mauvaise santé dans les
+    pays riches sont, dans l''ordre :'
   hint: ''
   type: QCM
   category: 2
@@ -31287,7 +31287,7 @@
   text: Combien de figurines Playmobil® a-t-on produits depuis leur mise sur le marché
     en 1974 ?
   hint: ''
-  type: QCM-RM
+  type: QCM
   category: 2
   difficulty: 2
   language: English
@@ -31478,11 +31478,11 @@
   category: 2
   difficulty: 2
   language: Français
-  answer_option_a: moitié moins vite
-  answer_option_b: aussi vite
-  answer_option_c: 2 fois plus vite
-  answer_option_d: dix fois moins vite
-  answer_correct: b
+  answer_option_a: dix fois moins vite
+  answer_option_b: moitié moins vite
+  answer_option_c: aussi vite
+  answer_option_d: 2 fois plus vite
+  answer_correct: c
   has_ordered_answers: false
   answer_explanation: "Ce cargo impressionnant, le Preussen, se déplaçait à une vitesse\
     \ de 10 nœuds en moyenne, soit aussi vite qu'un cargo actuel à mazout consommant\
@@ -33505,6 +33505,36 @@
   updated: 2021-04-16
   tags:
   - 255
+- id: 950
+  text: With the cars of which time can one compare the autonomy of current electric
+    cars (Nissan Leaf or Mitsubishi i-MiEV) ...?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  language: English
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: ''
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-04-16
+  created: 2021-04-19
+  updated: 2021-04-19
+  tags: []
 - id: 957
   text: The Catalan vault is a century-old technique that consists of a superposition
     of several layers of tiles assembled using mortar. How to best describe the resistance
