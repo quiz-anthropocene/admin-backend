@@ -26301,7 +26301,7 @@
     \ probables de cette diminution pour les insectes pollinisateurs ?"
   hint: ''
   type: QCM-RM
-  category: null
+  category: 4
   difficulty: 2
   language: Français
   answer_option_a: La perte des insectes pollinisateurs pourrait menacer 1,4 milliard
@@ -26328,10 +26328,10 @@
   answer_extra_info: ''
   author: Jean-Philippe Pernin
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-03-05
   created: 2021-01-06
-  updated: 2021-01-06
+  updated: 2021-04-19
   tags:
   - 5
   - 251
@@ -31412,8 +31412,8 @@
     qui n''étaient donc pas exempte de défauts : moteur bien plus gros, puissance
     bien plus limitée, 10 minutes de pré-chauffage, production de monoxyde de carbone…
     Mais en temps de pénurie d''essence ce dispositif ingénieux a été grandement utilisé,
-    apportant une solution simple. De quoi nous inspirer dans une perspective de descente
-    énergétique ...'
+    apportant une solution simple qui en plus pollait moins qu''une voiture à essence.
+    De quoi nous inspirer dans une perspective de descente énergétique ...'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/2010/01/wood-gas-cars.html
@@ -31559,7 +31559,7 @@
     \ mais déjà existant ?"
   hint: ''
   type: QCM
-  category: null
+  category: 2
   difficulty: 2
   language: Français
   answer_option_a: 1 an
@@ -31585,10 +31585,10 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: Matthieu Massart
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-03-14
   created: 2021-03-15
-  updated: 2021-03-15
+  updated: 2021-04-19
   tags:
   - 53
   - 100
@@ -31685,7 +31685,7 @@
   answer_option_b: Oui, par friction de la rotation des pâles
   answer_option_c: Oui, avec possibilité de chauffer l'eau d'un réservoir contenu
     dans le support de l'éolienne elle-même
-  answer_option_d: ''
+  answer_option_d: Oui, mais avec un rendement énergétique très faible
   answer_correct: bc
   has_ordered_answers: false
   answer_explanation: 'Pendant le pic pétrolier des années 1970, le Danemark a notamment
@@ -33534,6 +33534,44 @@
   added: 2021-04-16
   created: 2021-04-19
   updated: 2021-04-19
+  tags: []
+- id: 956
+  text: Can a wind turbine be used to produce heat? (several possible responses)
+  hint: ''
+  type: QCM-RM
+  category: 5
+  difficulty: 2
+  language: English
+  answer_option_a: Not really, except going through an electric baseboard, which is
+    quite inefficient
+  answer_option_b: Yes, by friction of the blades rotation
+  answer_option_c: Yes with the possibility of heating the water from a tank contained
+    in the support of the wind turbine itself
+  answer_option_d: Yes, but with a very low energy yield
+  answer_correct: bc
+  has_ordered_answers: false
+  answer_explanation: 'During peak oil in the 1970s, Denmark notably developed these
+    ingenious heating systems: small local wind turbines met the energy needs, in
+    a region known for its strong winds. The "LO-FA", containing a water tank, was
+    even 12m in diameter! Advantageously is does not depend on power production fluctuations
+    (due to wind change), unlike the production of electricity that requires a certain
+    quality of the signal produced, It is easily stored (in isolated water tanks,
+    or other), with an energy conversion efficiency close to 90%! However, the transport
+    of this energy form is difficult.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/2020/12/heat-your-house-with-a-water-brake-windmill.html
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0960148115003079
+  answer_reading_recommendation: ''
+  answer_image_url: https://solar.lowtechmagazine.com/dithers/thermal-windmill3.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: A valider
+  added: 2021-04-16
+  created: 2021-04-20
+  updated: 2021-04-20
   tags: []
 - id: 957
   text: The Catalan vault is a century-old technique that consists of a superposition
