@@ -32,7 +32,7 @@
   question_count: 5
   quiz_count: 0
 - name: Jean-Philippe Pernin
-  question_count: 2
+  question_count: 3
   quiz_count: 0
 - name: Julien Briton
   question_count: 9
@@ -56,7 +56,7 @@
   question_count: 72
   quiz_count: 9
 - name: Max Pinsard
-  question_count: 39
+  question_count: 40
   quiz_count: 4
 - name: Pascal Mostardi
   question_count: 1
