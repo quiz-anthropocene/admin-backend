@@ -79,7 +79,7 @@
   language: Français
   answer_option_a: Le fait que la population d'une espèce se met à augmenter à nouveau
     après avoir diminué faute de ressources
-  answer_option_b: La réflexion de la lumière sur la terre
+  answer_option_b: La réflexion des rayons solaires sur la terre
   answer_option_c: Le fait qu'un gisement d'énergie fossile redevienne compétitif
     une fois que le prix du marché a augmenté
   answer_option_d: Le fait que plus on gagne en efficacité dans la consommation d'une
@@ -92,16 +92,15 @@
     Idem pour l''aviation (billets moins chers donc on voyage plus souvent, ou plus
     loin).'
   answer_audio: ''
-  answer_video: https://www.youtube.com/embed/uZI99xZDVkg
-  answer_accessible_url: http://www.decroissance.qc.ca/sites/default/files/journal/Schneider_l_Ecologiste.pdf
-  answer_scientific_url: https://www.lafabriqueecologique.fr/transition-energetique-le-role-incontournable-de-leffet-rebond/
+  answer_video: ''
+  answer_accessible_url: https://www.lafabriqueecologique.fr/transition-energetique-le-role-incontournable-de-leffet-rebond/
+  answer_scientific_url: http://www.decroissance.qc.ca/sites/default/files/journal/Schneider_l_Ecologiste.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://images.theconversation.com/files/297327/original/file-20191016-98644-c9y1zz.png
-  answer_image_explanation: 'Exemple de l''effet rebond lié au covoiturage (dans le
-    cas d’un scénario de covoiturage volontariste (hausse de 25 % du taux d’occupation
-    moyen des véhicules en Île-de-France)
-
-    (Source de l''image : Viguié et Coulombel, à partir de Coulombel et al. (2019))'
+  answer_image_explanation: "Effet rebond lié au covoiturage (dans le cas d’un scénario\
+    \ de covoiturage volontariste (hausse de 25 % du taux d’occupation moyen des véhicules\
+    \ en Île-de-France. \nSource de l'image : Viguié et Coulombel, à partir de Coulombel\
+    \ et al. (2019)"
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Raphael Odini
@@ -1298,7 +1297,7 @@
   - 142
   - 183
 - id: 36
-  text: DOUBON Outre le changement climatique, les émissions de CO2 ont aussi une
+  text: DOUBLON Outre le changement climatique, les émissions de CO2 ont aussi une
     influence inquiétante sur...
   hint: ''
   type: QCM
@@ -2993,7 +2992,8 @@
   - 29
   - 40
 - id: 83
-  text: Lequel de ces pays émet le plus de CO2 par habitant ?
+  text: Si l'on ne considère que les émissions issues du territoire, lequel de ces
+    pays émet le plus de CO2 par habitant ?
   hint: ''
   type: QCM
   category: 2
@@ -3005,27 +3005,22 @@
   answer_option_d: La France
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: 'Parmi ces 4 pays, ce sont les Etats-Unis qui émettent le plus
+  answer_explanation: Parmi ces 4 pays, ce sont les Etats-Unis qui émettent le plus
     de CO2 par habitant, avec près de 17 tonnes par personne et par an. La France
-    est dans le moyenne mondiale avec ~5 tonnes par habitant.
-
-
-    Notez qu''on parle ici d''inventaire national (comptabilisation uniquement des
-    émissions ayant eu lieu sur le territoire), pas d''empreinte carbone (comptabilisation
-    de toutes les émissions des activités d''un pays, même si elles ont eu lieu à
-    l''étranger).'
+    est dans la moyenne mondiale avec ~5 tonnes par habitant. Mais on ne parle ici
+    que d'inventaire national, c'est-à-dire qu'on ne comptabilise que les émissions
+    ayant eu lieu sur le territoire. La notion d'empreinte carbone prend en compte
+    toutes les émissions des activités d'un pays, même si elles ont eu lieu à l'étranger.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.weforum.org/agenda/2018/12/les-plus-gros-pays-emetteurs-de-co2-au-monde/
   answer_scientific_url: http://www.globalcarbonatlas.org/fr/CO2-emissions
   answer_reading_recommendation: ''
   answer_image_url: https://upload.wikimedia.org/wikipedia/commons/a/a7/CO2_emissions_per_capita%2C_2017_%28Our_World_in_Data%29.svg
-  answer_image_explanation: On parle ici d'émissions sur le territoire et non d'empreinte
+  answer_image_explanation: Émissions de CO2 par personne dans le monde, mesurées
+    en tonnes équivalent CO2. On parle ici d'émissions sur le territoire et non d'empreinte
     carbone
-  answer_extra_info: 'image alternative: https://assets.weforum.org/editor/large_n5aoy13DQXewrirrpQi5-q8pcyN3z0NhMDLT6B_TEXE.jpg
-
-
-    https://ourworldindata.org/grapher/co-emissions-per-capita?tab=chart'
+  answer_extra_info: https://ourworldindata.org/grapher/co-emissions-per-capita?tab=chart
   author: Avenir Climatique
   validator: Raphael Odini
   validation_status: Validée
@@ -9885,7 +9880,7 @@
   answer_extra_info: https://twitter.com/laydgeur/status/1170061695970160640
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2019-09-06
   created: 2020-05-20
   updated: 2020-05-20
@@ -15356,7 +15351,8 @@
   - 1
   - 13
 - id: 438
-  text: 'La Chine est le premier émetteur de GES au monde : donner au moins 3 explications'
+  text: La Chine est le premier émetteur de GES au monde. Pourquoi ?  Lesquelles de
+    ces explications sont correctes ?
   hint: ''
   type: QCM-RM
   category: 1
@@ -16468,11 +16464,11 @@
   category: 4
   difficulty: 1
   language: Français
-  answer_option_a: 270 000
-  answer_option_b: 2,7 millions
-  answer_option_c: 27 millions
-  answer_option_d: ''
-  answer_correct: b
+  answer_option_a: 27,000
+  answer_option_b: 270,000
+  answer_option_c: 2,7 millions
+  answer_option_d: 27 millions
+  answer_correct: c
   has_ordered_answers: true
   answer_explanation: L’ONG Bloom estime que 90 % de la production mondiale d’huile
     de foie de requin est destinée à la production de squalane pour le secteur cosmétique.
@@ -16865,7 +16861,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2020-06-14
   created: 2020-06-24
   updated: 2020-06-24
@@ -16940,7 +16936,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2020-06-14
   created: 2020-06-24
   updated: 2020-07-30
@@ -17074,7 +17070,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2020-06-14
   created: 2020-06-24
   updated: 2020-07-30
@@ -17105,7 +17101,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2020-06-14
   created: 2020-06-24
   updated: 2020-07-30
@@ -17214,7 +17210,7 @@
     4 D’OÙ VIENNENT LES ÉMISSIONS FRANÇAISES AUJOURD’HUI ?
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Brouillon
   added: 2020-06-17
   created: 2020-06-24
   updated: 2020-06-24
@@ -17490,7 +17486,7 @@
   answer_extra_info: Faire un graphique homemade avec USA Chine et Inde
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2020-06-17
   created: 2020-06-24
   updated: 2020-06-24
@@ -18594,7 +18590,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2020-06-19
   created: 2020-06-24
   updated: 2020-06-24
@@ -22279,20 +22275,20 @@
   - 33
   - 35
 - id: 636
-  text: 'Au Royaume-Uni, à l’ère pré-industrielle, des températures de 40°C ou plus
-    ne se produisaient au plus qu''une fois tous les 300 ans.
+  text: 'Avant 1750 au Royaume-Uni, il n''arrivait jamais que le thermomètre dépasse
+    les 40°C (1 fois tous les 300 ans).
 
-    A combien cette fréquence passerait-elle à l''horizon 2100 si nos émissions continuent
-    à croître comme actuellement (scénario le plus pessimiste du GIEC) ?'
+    Scénario ''on ne change rien à nos habitudes'', à quelle fréquence cela arrivera-t-il
+    à l''horizon 2100 ?'
   hint: ''
   type: QCM
   category: 1
   difficulty: 3
   language: Français
   answer_option_a: Tous les 3 ans
-  answer_option_b: Tous les 15 ans
+  answer_option_b: Tous les 10 ans
   answer_option_c: Tous les 30 ans
-  answer_option_d: Tous les 90 ans
+  answer_option_d: Tous les 50 ans
   answer_correct: a
   has_ordered_answers: true
   answer_explanation: 'Au Royaume-Uni, des températures de 40°C apparaissaient tous
@@ -22301,9 +22297,9 @@
     Actuellement c''est tous les 100-300 ans.
 
     Avec un scénario d’émissions modérées (RCP 4.5 du GIEC), de telles températures
-    apparaîtraient en 2100 tous les 10-11 ans.
+    apparaîtront en 2100 tous les 10-11 ans.
 
-    Avec des émissions fortes (scénario RCP 8.5 du GIEC), ce serait tous les 3-4 ans.'
+    Avec des émissions fortes (scénario RCP 8.5 du GIEC), ce sera tous les 3-4 ans.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -22312,11 +22308,11 @@
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/303.png
   answer_image_explanation: Evolution de la fréquence d’apparition (“temps de retour“)
     de températures de 40°C au Royaume-Uni, depuis 1900 jusqu’en 2100 selon deux scénarios
-    du GIEC
+    du GIEC. Echelle logarithmique
   answer_extra_info: https://twitter.com/laydgeur/status/1280967873117270029
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-07-08
   created: 2020-12-05
   updated: 2020-12-05
@@ -22678,8 +22674,8 @@
   - 12
   - 13
 - id: 647
-  text: Quel pourcentage de la France métropolitaine correspond à des territoires
-    artificialisés ?
+  text: Quelle proportion du sol de la France métropolitaine est artificialisée (routes,
+    bâtiments...)
   hint: ''
   type: QCM
   category: 4
@@ -22694,7 +22690,6 @@
   answer_explanation: 'Les territoires artificialisés occupent environ 6% de la surface
     française métropolitaine.
 
-
     60% sont des territoires agricoles, et 34% sont des forêts et milieux semi-naturels.'
   answer_audio: ''
   answer_video: ''
@@ -22706,7 +22701,7 @@
   answer_extra_info: https://twitter.com/laydgeur/status/1286580801291911168
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-07-24
   created: 2020-11-28
   updated: 2020-11-28
@@ -22962,7 +22957,7 @@
   answer_extra_info: https://twitter.com/laydgeur/status/1320829859397095424
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2020-10-26
   created: 2020-11-28
   updated: 2020-11-28
@@ -23112,7 +23107,7 @@
   answer_extra_info: https://twitter.com/laydgeur/status/1322637135644688385
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2020-10-31
   created: 2020-12-05
   updated: 2020-12-05
@@ -23379,7 +23374,7 @@
   answer_extra_info: https://twitter.com/laydgeur/status/1326267748540878848
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2020-11-10
   created: 2020-11-28
   updated: 2020-11-28
@@ -23606,7 +23601,7 @@
   answer_extra_info: https://twitter.com/laydgeur/status/1329338984703676422
   author: laydgeur
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2020-11-19
   created: 2020-11-28
   updated: 2020-11-28
@@ -23784,7 +23779,7 @@
   answer_extra_info: ''
   author: Kim Nguyen-Huu
   validator: ''
-  validation_status: A valider
+  validation_status: Écartée
   added: 2020-12-09
   created: 2020-12-10
   updated: 2020-12-10
@@ -24577,7 +24572,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-04
   created: 2021-01-06
   updated: 2021-01-06
@@ -25537,7 +25532,7 @@
   answer_option_c: '...chauffant un appartement de 80m2 au fioul pendant un an'
   answer_option_d: '...mangeant de la viande une fois par jour'
   answer_correct: abcd
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: "Eh oui ! Une seule de ces quatre options vous fait atteindre\
     \ votre budget carbone. 2 tonnes, c'est encore l'empreinte moyenne d'un Français...en\
     \ 1881 ! \nL'empreinte moyenne d'un Français est estimée autour de 10t, dont la\
@@ -25554,7 +25549,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2020-03-10
   created: 2021-01-06
   updated: 2021-01-06
@@ -26373,7 +26368,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-03-08
   created: 2021-01-06
   updated: 2021-01-06
@@ -26607,8 +26602,8 @@
   answer_accessible_url: https://www.quechoisir.org/conseils-chauffage-10-gestes-simples-pour-limiter-sa-consommation-energetique-au-quotidien-n4725/
   answer_scientific_url: https://www.lowtechmagazine.com/2011/02/body-insulation-thermal-underwear.html
   answer_reading_recommendation: ''
-  answer_image_url: https://im.qccdn.fr/node/conseils-chauffage-10-gestes-simples-pour-limiter-sa-consommation-energetique-au-quotidien-4725/principal-49871.jpg
-  answer_image_explanation: © morissfoto
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/744.png
+  answer_image_explanation: © Maison&Travaux
   answer_extra_info: ''
   author: Max Pinsard
   validator: Matthieu Massart
@@ -31372,10 +31367,10 @@
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: De nos jours les VE sont en revanche plus lourdes (la Fritchle
-    de 1908 pèse moins d'une tonne), et 10 fois plus puissantes (>100 CV, contre 10
-    CV pour la Fritchle 1908). Comme la consommation d'énergie augmente avec la vitesse
-    en puissance de deux, être bridé à 40km/h permet d'avoir une autonomie gigantesque
-    ...
+    de 1908 pesait 950kg), et 10 fois plus puissantes (>100 CV, contre 10 CV pour
+    la Fritchle 1908). Comme la consommation d'énergie augmente avec le carré de la
+    vitesse, le bridage à 40km/h permettait une autonomie confortable, de 144km pour
+    la Fritchle 1908, avec une batterie pourtant très sommaire !
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2010/05/the-status-quo-of-electric-cars-better-batteries-same-range.html
@@ -31600,21 +31595,20 @@
   category: 5
   difficulty: 3
   language: Français
-  answer_option_a: 0,5 ampoules de 100W
-  answer_option_b: 2,5 ampoules de 50W
-  answer_option_c: 20 ampoules de 100W
-  answer_option_d: une LED de quelques mW
-  answer_correct: c
+  answer_option_a: une LED (quelques mW)
+  answer_option_b: 1 ampoule classique de 100W
+  answer_option_c: 5 ampoules de 100W
+  answer_option_d: 20 ampoules de 100W
+  answer_correct: d
   has_ordered_answers: true
-  answer_explanation: Cette invention produisait une brillance phénoménale, de 1,500
-    à 6,000 équivalents bougie (une flamme de gaz produit ~100 équivalents bougie),
-    càd comme 20 ampoules de 100W ! Ces lampes étaient même plus efficaces énergétiquement
+  answer_explanation: Cette invention produisait une brillance phénoménale, équivalente
+    à 20 ampoules de 100W ! Ces lampes étaient même plus efficaces énergétiquement
     que les ampoules incandescentes de nos jours, et peuvent rivaliser avec les ampoules
     fluorescentes, même si elles ne sont vouées qu'à éclairer l'extérieur (car en
     hauteur, pour éviter les chocs électriques). Très populaires pour l'éclairage
-    urbain fin XIXe, elles contribuaient même à la pollution lumineuse ! Une inspiration
-    intéressante pour éviter la multiplication des ampoules individuelles et le coût
-    en matériaux correspondant ...
+    urbain à la fin du XIXe siècle, elles contribuaient même à la pollution lumineuse
+    ! Une inspiration intéressante pour éviter la multiplication des ampoules individuelles
+    et le coût en matériaux correspondant ...
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lowtechmagazine.com/2009/01/moonlight-towers-light-pollution-in-the-1800s.html
@@ -33472,8 +33466,8 @@
   - 13
   - 49
 - id: 949
-  text: Before electric cranes, there were cranes driven by human power alone. The
-    most powerful of them multiplied the force exerted by the operators by a factor…?
+  text: Before electric cranes, there used be cranes driven by human power alone.
+    The most powerful of them multiplied the force exerted by the operators by a factor…?
   hint: ''
   type: QCM
   category: 2
@@ -33485,10 +33479,10 @@
   answer_option_d: ×6000
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: 'At Keyham in the UK a 60 ton crane gave an advantage of 1:
+  answer_explanation: 'At Keyham in the UK, a 60 ton crane gave an advantage of 1:
     600 (and could lift 5 times its weight). Two men alone could handle the crane
-    with 60 tons hanging from the end of the jib! Nowadays we use electric machines,
-    reserving our physical strength for the gym ...'
+    with 60 tons hanging at the end of the jib! Nowadays, we use electric machines
+    instead and go to the gym to stay fit!'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/2010/03/history-of-human-powered-cranes.html
@@ -33499,7 +33493,7 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-04-16
   created: 2021-04-16
   updated: 2021-04-16
@@ -33535,29 +33529,66 @@
   created: 2021-04-19
   updated: 2021-04-19
   tags: []
+- id: 955
+  text: 70 years before the electric bulb, electric were used to light up the streets
+    at the beginning of the 19th century. Their luminance was in the range of…?
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 3
+  language: English
+  answer_option_a: a LED (a few mW)
+  answer_option_b: 1 standard lightbulb of 100W
+  answer_option_c: 5 lightbulbs of 100W
+  answer_option_d: 20 lightbulbs of 100W
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: This invention produced a tremendous brilliance, equivalent
+    to 20 lightbulbs of 100W! These lamps were even more energy efficient than incandescent
+    bulbs nowadays, and can compete with fluorescent bulbs, even if they are only
+    intended to illuminate outside (they must be placed in height, to avoid electric
+    shocks). Very popular for urban lighting at the end of the 19th century, they
+    even contributed to light pollution! An interesting inspiration to avoid the multiplication
+    of individual bulbs and their cost in materials ...
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.lowtechmagazine.com/2009/01/moonlight-towers-light-pollution-in-the-1800s.html
+  answer_scientific_url: https://en.wikipedia.org/wiki/Moonlight_tower
+  answer_reading_recommendation: ''
+  answer_image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/LeveeAtNightNewOrleans1883.jpg/1024px-LeveeAtNightNewOrleans1883.jpg
+  answer_image_explanation: New-Orleans, 1883
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Validée
+  added: 2021-04-16
+  created: 2021-04-21
+  updated: 2021-04-21
+  tags:
+  - 255
 - id: 956
-  text: Can a wind turbine be used to produce heat? (several possible responses)
+  text: Can a wind turbine be used to produce heat?
   hint: ''
   type: QCM-RM
   category: 5
   difficulty: 2
   language: English
-  answer_option_a: Not really, except going through an electric baseboard, which is
-    quite inefficient
-  answer_option_b: Yes, by friction of the blades rotation
+  answer_option_a: Not really, except by using an electric baseboard, which is quite
+    inefficient
+  answer_option_b: Yes, by friction of the spinning blades
   answer_option_c: Yes with the possibility of heating the water from a tank contained
     in the support of the wind turbine itself
   answer_option_d: Yes, but with a very low energy yield
   answer_correct: bc
   has_ordered_answers: false
-  answer_explanation: 'During peak oil in the 1970s, Denmark notably developed these
-    ingenious heating systems: small local wind turbines met the energy needs, in
-    a region known for its strong winds. The "LO-FA", containing a water tank, was
-    even 12m in diameter! Advantageously is does not depend on power production fluctuations
-    (due to wind change), unlike the production of electricity that requires a certain
-    quality of the signal produced, It is easily stored (in isolated water tanks,
-    or other), with an energy conversion efficiency close to 90%! However, the transport
-    of this energy form is difficult.'
+  answer_explanation: 'During the peak oil in the 1970s, Denmark notably developed
+    these ingenious heating systems: small local wind turbines met the energy needs,
+    in a region known for its strong winds. The "LO-FA", containing a water tank,
+    was even 12m in diameter! Advantageously is does not depend on power production
+    fluctuations (due to wind change), unlike the production of electricity that requires
+    a certain quality of the signal produced, It is easily stored (in isolated water
+    tanks, or other), with an energy conversion efficiency close to 90%! However,
+    the transport of this energy form is difficult.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/2020/12/heat-your-house-with-a-water-brake-windmill.html
@@ -33568,15 +33599,15 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-04-16
   created: 2021-04-20
   updated: 2021-04-20
   tags: []
 - id: 957
   text: The Catalan vault is a century-old technique that consists of a superposition
-    of several layers of tiles assembled using mortar. How to best describe the resistance
-    of these vaults?
+    of several layers of tiles assembled using mortar. How would you best describe
+    the resistance of such vaults?
   hint: ''
   type: QCM-RM
   category: 6
@@ -33607,7 +33638,7 @@
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-04-16
   created: 2021-04-16
   updated: 2021-04-16
