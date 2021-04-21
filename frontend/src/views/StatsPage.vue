@@ -37,11 +37,11 @@
     <hr />
     <br />
 
-    <h3>Tous les quizs par...</h3>
+    <h3>{{ $t('messages.allQuizs') }} {{ $t('words.by') }}...</h3>
     <p><i>Cliquez sur une bulle pour voir tous les quizs (publiés) associés.</i></p>
 
     <br />
-    <h4>🏷️&nbsp;Tags</h4>
+    <h4>🏷️&nbsp;{{ $t('messages.tags') }}</h4>
     <p>
       <span v-for="tag in quizTags" :key="tag.name">
         <router-link class="no-decoration" :to="{ name: 'quiz-list', query: { tag: tag.name } }">
@@ -51,7 +51,7 @@
     </p>
 
     <br />
-    <h4>✍️&nbsp;Auteurs</h4>
+    <h4>✍️&nbsp;{{ $t('messages.authors') }}</h4>
     <p>
       <span v-for="author in quizAuthors" :key="author.name">
         <router-link class="no-decoration" :to="{ name: 'quiz-list', query: { author: author.name } }">
@@ -61,7 +61,7 @@
     </p>
 
     <br />
-    <h4>🌐&nbsp;Langues</h4>
+    <h4>🌐&nbsp;{{ $t('messages.languages') }}</h4>
     <p>
       <span v-for="language in languages" :key="language.name">
         <!-- <router-link class="no-decoration" :to="{ name: 'quiz-list', query: { locale: language.key } }"> -->
@@ -74,11 +74,11 @@
     <hr />
     <br />
 
-    <h3>Toutes les questions par...</h3>
+    <h3>{{ $t('messages.allQuestions') }} {{ $t('words.by') }}...</h3>
     <p><i>Cliquez sur une bulle pour voir toutes les questions (validées) associées.</i></p>
 
     <br />
-    <h4>📂&nbsp;Catégories</h4>
+    <h4>📂&nbsp;{{ $t('messages.categories') }}</h4>
     <p>
       <span v-for="category in categories" :key="category.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { category: category.name } }">
@@ -88,7 +88,7 @@
     </p>
 
     <br />
-    <h4>🏷️&nbsp;Tags</h4>
+    <h4>🏷️&nbsp;{{ $t('messages.tags') }}</h4>
     <p :class="{ 'max-height-300': !showAllQuestionTags }">
       <span v-for="tag in questionTags" :key="tag.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { tag: tag.name } }">
@@ -98,13 +98,13 @@
     </p>
     <p class="text-center fake-link">
       <span @click="toggleAllQuestionTags()">
-        <span v-if="!showAllQuestionTags">Afficher tous les tags</span>
-        <span v-if="showAllQuestionTags">Cacher tous les tags</span>
+        <span v-if="!showAllQuestionTags">{{ $t('stats.showAllTags') }}</span>
+        <span v-if="showAllQuestionTags">{{ $t('stats.hideAllTags') }}</span>
       </span>
     </p>
 
     <br />
-    <h4>✍️&nbsp;Auteurs</h4>
+    <h4>✍️&nbsp;{{ $t('messages.authors') }}</h4>
     <p>
       <span v-for="author in questionAuthors" :key="author.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { author: author.name } }">
@@ -114,7 +114,7 @@
     </p>
 
     <br />
-    <h4>🏆&nbsp;Niveaux de difficulté</h4>
+    <h4>🏆&nbsp;{{ $t('messages.difficulty') }}</h4>
     <p>
       <span v-for="difficulty in difficultyLevels" :key="difficulty.name">
         <router-link class="no-decoration" :to="{ name: 'question-list', query: { difficulty: difficulty.value } }">
@@ -124,7 +124,7 @@
     </p>
 
     <br />
-    <h4>🌐&nbsp;Langues</h4>
+    <h4>🌐&nbsp;{{ $t('messages.languages') }}</h4>
     <p>
       <span v-for="language in languages" :key="language.name">
         <!-- <router-link class="no-decoration" :to="{ name: 'question-list', query: { locale: language.key } }"> -->

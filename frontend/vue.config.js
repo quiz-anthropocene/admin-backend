@@ -34,6 +34,12 @@ module.exports = {
           },
         }),
       ],
+      // https://vueschool.io/articles/vuejs-tutorials/lazy-loading-and-code-splitting-in-vue-js/
+      // optimization: {
+      //   splitChunks: {
+      //     chunks: 'all'
+      //   }
+      // },
     };
   },
 

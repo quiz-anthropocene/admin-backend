@@ -6,7 +6,7 @@
     "home": {
         "item1Title": "Des réponses objectives et sourcées",
         "item1Subtitle": "(on fait de notre mieux :)",
-        "item2Title": "Explorer et filtrer grâce aux <span class='text-secondary'>catégories</span> & <span class='color-tag'>tags</span>",
+        "item2Title": "Explorer et filtrer grâce aux <span class='text-secondary'>catégories</span> & <span class='color-tag'>mots clés</span>",
         "item3Title": "À l'écoute de vos retours",
         "item3Subtitle": "et ouvert aux ",
         "thereIsCurrently": "Il y a actuellement",
@@ -30,6 +30,10 @@
         "userEmail": "Veuillez indiquer votre <strong>email</strong> si vous voulez être tenu au courant de votre contribution !",
         "sendingSuggestion": "Envoi de votre suggestion...",
         "suggestionSubmitted": "On fera de notre mieux pour prendre en compte votre suggestion"
+    },
+    "stats": {
+        "showAllTags": "Afficher tous les mots clés",
+        "hideAllTags": "Cacher tous les mots clés"
     },
     "messages": {
         "allQuestions": "Toutes les questions",
@@ -58,11 +62,13 @@
         "category": "Categorie",
         "categories": "Catégories",
         "tag": "Mot clé",
-        "tags": "Tags",
+        "tags": "Mots clés",
         "author": "Auteur",
         "authors": "Auteurs",
         "difficulty": "Difficulté",
         "difficulties": "Difficultés",
+        "language": "Langue",
+        "languages": "Langues",
         "update": "Mettre à jour",
         "reset": "Réinitialiser",
         "cancel": "Annuler",
@@ -83,6 +89,7 @@
         "times": "fois",
         "cette": "cette",
         "ce": "ce",
+        "by": "par",
         "exclamationMark": " !",
         "questionMark": " ?",
         "semiColon": " :"

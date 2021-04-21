@@ -34,10 +34,10 @@
               🏆&nbsp;{{ $t('messages.difficulty') }}<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }} / 4</strong></span>
             </div> -->
             <div class="col" title="Auteur du quiz">
-              📝&nbsp;Auteur<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>
+              📝&nbsp;{{ $t('messages.author') }}<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>
             </div>
             <!-- <span title="Date de création du quiz">📊&nbsp;Crée le:&nbsp;{{ new Date(quiz.created).toLocaleString() }}</span> -->
-            <div v-if="quiz.tags && quiz.tags.length > 0" class="col small d-none d-sm-block" title="Tag(s) du quiz">
+            <div v-if="quiz.tags && quiz.tags.length > 0" class="col small d-none d-sm-block" title="Mot(s) clé(s) du quiz">
               <span v-for="(tag, index) in quiz.tags" :key="tag.id">
                 <span v-if="index < 3" class="label label-tag">{{ tag.name }}</span>
               </span>
@@ -70,6 +70,8 @@
 
     <!-- Quiz terminé -->
 
+    <div id="scroll-to-results" style="height:0px"></div>
+
     <section v-if="quiz && (quizStep > quiz.questions.length)">
 
       <section class="question">
@@ -94,7 +96,6 @@
         <h2 class="special-title">{{ $t('messages.nextQuiz') }}&nbsp;⏩</h2>
         <QuizCard :quiz="nextQuiz" />
       </section>
-
       <section v-if="similarQuizs">
         <br />
         <h2 class="special-title">{{ $t('messages.similarQuiz') }}<span v-if="similarQuizs.length > 1">s</span>&nbsp;👯</h2>
@@ -240,6 +241,10 @@ export default {
       // done ?
       if (this.quizStep > this.quiz.questions.length) {
         this.submitQuiz();
+        setTimeout(() => {
+          // why scroll to this div and not to 'answer' directly ? To have a slight top margin
+          document.getElementById('scroll-to-results').scrollIntoView({ behavior: 'smooth' });
+        }, 25);
       }
     },
     onAnswerSubmitted(data) {

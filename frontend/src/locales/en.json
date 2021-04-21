@@ -28,11 +28,15 @@
         "sendingSuggestion": "Sending your suggestion...",
         "suggestionSubmitted": "We'll do our best to take your suggesting into account"
     },
+    "stats": {
+        "showAllTags": "Show all the tags",
+        "hideAllTags": "Hide all the tags"
+    },
     "messages": {
-        "allQuestions": "All questions",
+        "allQuestions": "All the questions",
         "newQuestions": "New questions",
         "randomQuestion": "A random question",
-        "allQuizs": "All quizs",
+        "allQuizs": "All the quizs",
         "newQuizs": "New quizs",
         "randomQuiz": "A random quiz",
         "noQuizFound": "No quiz found.",
@@ -60,6 +64,8 @@
         "authors": "Authors",
         "difficulty": "Difficulty",
         "difficulties": "Difficulties",
+        "language": "Language",
+        "languages": "Languages",
         "update": "Update",
         "reset": "Reset",
         "cancel": "Cancel",
@@ -80,6 +86,7 @@
         "times": "times",
         "cette": "this",
         "ce": "this",
+        "by": "by",
         "exclamationMark": "!",
         "questionMark": "?",
         "semiColon": ":"
