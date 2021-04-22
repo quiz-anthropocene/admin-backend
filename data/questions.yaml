@@ -12855,8 +12855,8 @@
   - 39
   - 40
 - id: 367
-  text: Sur les 54 pays du continent africain, combien émettent plus de CO2 que la
-    France ?
+  text: Sur les 54 pays du continent africain, combien émettent sur leur territoire
+    plus de CO2 que la France ?
   hint: ''
   type: QCM
   category: 2
@@ -28977,7 +28977,11 @@
   answer_option_d: ''
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: ''
+  answer_explanation: 'C''est vrai ! Il suffit de voir ce qu''il se passe lorsque
+    des forêts sont coupées - on appelle cela la déforestation : le régime des pluies
+    est perturbé, plus de crues (car les racines des arbres retiennent l''eau), plus
+    de sécheresses (car les arbres stockent beaucoup d''eau. Si on les coupe, ils
+    ne jouent plus ce rôle de réserve).'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -33529,6 +33533,47 @@
   created: 2021-04-19
   updated: 2021-04-19
   tags: []
+- id: 954
+  text: 'In the 17th century, peat used to be a major fossil fuel for European economies:
+    per capita, it was as large as the electricity consumption of an average household
+    today. It is considered by IPCC a renewable fuel. But how long does it take for
+    a 3-meter layer of peat to recover its its original depth?'
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 3
+  language: English
+  answer_option_a: 3 years
+  answer_option_b: 30 years
+  answer_option_c: 300 years
+  answer_option_d: 3,000 years
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: 'It takes 3,000 years for a 3-meter layer of peat to return
+    to its original thickness. Not quite renewable on the scale of human societies!
+    16.75 GJ / person / year was consumed in the Netherlands in the 17th century,
+    as much as an annual electricity bill in France (~ 5000kWh)! Before the industrial
+    revolution, multiple fossil fuels were used in Europe, such as charcoal.
+
+    However, it would not be desirable to start peat exploitation again nowadays,
+    peatlands being high places of biodiversity and storing more carbon than forests
+    ... A technique can be old but not low-tech!'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/2011/09/peat-and-coal-fossil-fuels-in-pre-industrial-times.html
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/879.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: A valider
+  added: 2021-04-16
+  created: 2021-04-22
+  updated: 2021-04-22
+  tags:
+  - 256
 - id: 955
   text: 70 years before the electric bulb, electric were used to light up the streets
     at the beginning of the 19th century. Their luminance was in the range of…?
