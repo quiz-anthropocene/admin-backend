@@ -25217,7 +25217,7 @@
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/compare/master...BXMichel-patch-1?expand=1#diff-dc69d20f96b76700fb3c13985a11f0603b6f72621bc837d78dcb01f88bca4649
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/711.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26114,7 +26114,7 @@
     La convention précise dans l''article 24 relatif aux droits de douane que le carburant
     contenu dans les réservoirs d’un avion à l''arrivée dans un pays ne peut pas être
     taxé. Par la suite, de nombreux pays signent des accords bilatéraux empêchant
-    toute taxation du kérosène6.
+    toute taxation du kérosène.
 
     En France :
 
@@ -27077,7 +27077,7 @@
   - 217
   - 218
 - id: 757
-  text: Copy of Quel était le nombre de Passager x Km mondial ( RPK ) en 2018 ?
+  text: Quel était le nombre de Passager x Km mondial ( RPK ) en 2018 ?
   hint: Est-ce un progrès ?
   type: QCM
   category: 2
@@ -27528,7 +27528,8 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: On l'a un peu oublié, mais l'H2 est très difficile à manipuler.
+  answer_explanation: On l'a un peu oublié, mais l'H2 est très difficile à manipuler,
+    et très explosif.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://france3-regions.francetvinfo.fr/occitanie/haute-garonne/toulouse/toulouse-chercheurs-critiquent-airbus-sa-promotion-avion-hydrogene-1878868.html
@@ -27852,6 +27853,7 @@
   created: 2021-01-17
   updated: 2021-01-17
   tags:
+  - 17
   - 33
   - 217
   - 218
@@ -28296,7 +28298,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -28360,6 +28362,7 @@
   updated: 2021-01-17
   tags:
   - 33
+  - 86
   - 217
   - 225
 - id: 792
@@ -32963,21 +32966,21 @@
   - 33
   - 34
 - id: 936
-  text: How many oil barrels (1 barrel = 159L) do we consume every day in the world?
+  text: How many oil barrels (1 barrel = 159 l) do we consume every day in the world?
   hint: ''
   type: QCM
   category: 5
   difficulty: 2
   language: English
   answer_option_a: 100,000
-  answer_option_b: 1 million
-  answer_option_c: 100 million
+  answer_option_b: 100 million
+  answer_option_c: 1 million
   answer_option_d: 1 billion
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: 100 million barrels per day, i.e. 1 billion years of human labor
-    (in energetic slave equivalent), every day! Or over a trillion humans working
-    for us every day ...
+    (in 'energy slave' equivalent), every day! Or over a trillion humans working for
+    us every day ...
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.arcenergyinstitute.com/100-million-barrels-per-day/
@@ -33104,7 +33107,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-15
   created: 2021-03-22
@@ -33533,6 +33536,44 @@
   created: 2021-04-19
   updated: 2021-04-19
   tags: []
+- id: 952
+  text: Cable-towed boats were in use  during the 19th century. Which of the following
+    statements are true?
+  hint: ''
+  type: QCM-RM
+  category: 5
+  difficulty: 3
+  language: English
+  answer_option_a: The power required to tow them was 4 times smaller than with an
+    on-board propeller
+  answer_option_b: Their engines used 10 times less energy than a (petrol) truck to
+    cover a given distance
+  answer_option_c: They caused much less noise pollution than a propeller
+  answer_option_d: Their average speed was below 7 km/h (4.3 mph)
+  answer_correct: abcd
+  has_ordered_answers: false
+  answer_explanation: Some of these "trolley boats" are still in use in the world.
+    Elsewhere, their limited speed has made them obsolete. However, they are an energy-efficient
+    alternative to link two nearby shores, for instance. Another advantage of this
+    technique is that the cable can apply a mechanical force so that the barge is
+    less deflected by the river current, thereby saving even more fuel.
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/2009/12/trolley-canal-boats.html
+  answer_scientific_url: http://cnum.cnam.fr/CGI/fpage.cgi?ECCMC6.62/44/100/941/927/941
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/877.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Validée
+  added: 2021-04-16
+  created: 2021-04-24
+  updated: 2021-04-24
+  tags:
+  - 254
+  - 255
 - id: 953
   text: Between 1900 and 1910, a giant sailing freighter was in service in Germany.
     Compared to a current oil-fired freighter, it was on average ...
