@@ -1,5 +1,5 @@
 - quiz_id: 1
-  answer_count: 716
+  answer_count: 717
   answer_count_last_30_days: 36
   answer_count_last_7_days: 5
   like_count: 40
@@ -22,11 +22,11 @@
   - answer_success_count: 7
     count: 112
   - answer_success_count: 8
-    count: 174
+    count: 175
 - quiz_id: 2
   answer_count: 439
-  answer_count_last_30_days: 15
-  answer_count_last_7_days: 5
+  answer_count_last_30_days: 14
+  answer_count_last_7_days: 3
   like_count: 21
   dislike_count: 2
   answer_success_count_split:
@@ -51,9 +51,9 @@
   - answer_success_count: 9
     count: 14
 - quiz_id: 3
-  answer_count: 272
-  answer_count_last_30_days: 8
-  answer_count_last_7_days: 0
+  answer_count: 273
+  answer_count_last_30_days: 9
+  answer_count_last_7_days: 1
   like_count: 27
   dislike_count: 0
   answer_success_count_split:
@@ -74,7 +74,7 @@
   - answer_success_count: 7
     count: 48
   - answer_success_count: 8
-    count: 22
+    count: 23
   - answer_success_count: 9
     count: 23
   - answer_success_count: 10
@@ -101,9 +101,9 @@
   - answer_success_count: 5
     count: 35
 - quiz_id: 5
-  answer_count: 277
+  answer_count: 278
   answer_count_last_30_days: 14
-  answer_count_last_7_days: 1
+  answer_count_last_7_days: 2
   like_count: 8
   dislike_count: 1
   answer_success_count_split:
@@ -118,7 +118,7 @@
   - answer_success_count: 4
     count: 50
   - answer_success_count: 5
-    count: 59
+    count: 60
   - answer_success_count: 6
     count: 44
   - answer_success_count: 7
@@ -131,7 +131,7 @@
     count: 8
 - quiz_id: 6
   answer_count: 909
-  answer_count_last_30_days: 22
+  answer_count_last_30_days: 19
   answer_count_last_7_days: 2
   like_count: 68
   dislike_count: 0
@@ -179,8 +179,8 @@
     count: 31
 - quiz_id: 8
   answer_count: 462
-  answer_count_last_30_days: 35
-  answer_count_last_7_days: 14
+  answer_count_last_30_days: 33
+  answer_count_last_7_days: 13
   like_count: 12
   dislike_count: 0
   answer_success_count_split:
@@ -395,7 +395,7 @@
     count: 5
 - quiz_id: 16
   answer_count: 356
-  answer_count_last_30_days: 17
+  answer_count_last_30_days: 16
   answer_count_last_7_days: 2
   like_count: 17
   dislike_count: 0
@@ -493,7 +493,7 @@
     count: 38
 - quiz_id: 53
   answer_count: 433
-  answer_count_last_30_days: 16
+  answer_count_last_30_days: 15
   answer_count_last_7_days: 3
   like_count: 18
   dislike_count: 0
@@ -548,9 +548,9 @@
   - answer_success_count: 11
     count: 9
 - quiz_id: 55
-  answer_count: 158
-  answer_count_last_30_days: 8
-  answer_count_last_7_days: 1
+  answer_count: 159
+  answer_count_last_30_days: 9
+  answer_count_last_7_days: 2
   like_count: 4
   dislike_count: 0
   answer_success_count_split:
@@ -561,7 +561,7 @@
   - answer_success_count: 2
     count: 20
   - answer_success_count: 3
-    count: 32
+    count: 33
   - answer_success_count: 4
     count: 32
   - answer_success_count: 5
@@ -601,7 +601,7 @@
     count: 1
 - quiz_id: 57
   answer_count: 408
-  answer_count_last_30_days: 20
+  answer_count_last_30_days: 17
   answer_count_last_7_days: 2
   like_count: 20
   dislike_count: 4
@@ -634,7 +634,7 @@
     count: 6
 - quiz_id: 59
   answer_count: 364
-  answer_count_last_30_days: 16
+  answer_count_last_30_days: 15
   answer_count_last_7_days: 3
   like_count: 20
   dislike_count: 0
@@ -680,8 +680,8 @@
     count: 12
 - quiz_id: 61
   answer_count: 253
-  answer_count_last_30_days: 42
-  answer_count_last_7_days: 4
+  answer_count_last_30_days: 34
+  answer_count_last_7_days: 3
   like_count: 8
   dislike_count: 1
   answer_success_count_split:
@@ -711,7 +711,7 @@
     count: 4
 - quiz_id: 62
   answer_count: 377
-  answer_count_last_30_days: 63
+  answer_count_last_30_days: 60
   answer_count_last_7_days: 8
   like_count: 5
   dislike_count: 0
@@ -794,7 +794,7 @@
     count: 0
 - quiz_id: 65
   answer_count: 100
-  answer_count_last_30_days: 49
+  answer_count_last_30_days: 45
   answer_count_last_7_days: 0
   like_count: 6
   dislike_count: 1
@@ -852,8 +852,8 @@
     count: 1
 - quiz_id: 67
   answer_count: 113
-  answer_count_last_30_days: 111
-  answer_count_last_7_days: 9
+  answer_count_last_30_days: 110
+  answer_count_last_7_days: 8
   like_count: 2
   dislike_count: 1
   answer_success_count_split:
@@ -877,7 +877,7 @@
     count: 2
 - quiz_id: 68
   answer_count: 8
-  answer_count_last_30_days: 1
+  answer_count_last_30_days: 0
   answer_count_last_7_days: 0
   like_count: 0
   dislike_count: 0
@@ -905,9 +905,9 @@
   - answer_success_count: 10
     count: 0
 - quiz_id: 69
-  answer_count: 56
-  answer_count_last_30_days: 56
-  answer_count_last_7_days: 6
+  answer_count: 57
+  answer_count_last_30_days: 57
+  answer_count_last_7_days: 7
   like_count: 5
   dislike_count: 1
   answer_success_count_split:
@@ -920,7 +920,7 @@
   - answer_success_count: 3
     count: 9
   - answer_success_count: 4
-    count: 12
+    count: 13
   - answer_success_count: 5
     count: 5
   - answer_success_count: 6
@@ -928,8 +928,8 @@
   - answer_success_count: 7
     count: 1
 - quiz_id: 70
-  answer_count: 32
-  answer_count_last_30_days: 32
+  answer_count: 34
+  answer_count_last_30_days: 34
   answer_count_last_7_days: 32
   like_count: 2
   dislike_count: 0
@@ -943,7 +943,7 @@
   - answer_success_count: 3
     count: 5
   - answer_success_count: 4
-    count: 6
+    count: 8
   - answer_success_count: 5
     count: 5
   - answer_success_count: 6
