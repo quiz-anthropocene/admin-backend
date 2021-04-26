@@ -32986,12 +32986,12 @@
   answer_accessible_url: https://www.arcenergyinstitute.com/100-million-barrels-per-day/
   answer_scientific_url: https://en.wikipedia.org/wiki/Energy_slave
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/Q10_oil.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-03-15
   created: 2021-03-17
   updated: 2021-03-17
@@ -33507,8 +33507,8 @@
   tags:
   - 255
 - id: 950
-  text: With the cars of which time can one compare the autonomy of current electric
-    cars (Nissan Leaf or Mitsubishi i-MiEV) ...?
+  text: With the cars of which epoch can the autonomy of current electric cars (Nissan
+    Leaf or Mitsubishi i-MiEV) be compared ...?
   hint: ''
   type: QCM
   category: 2
@@ -33536,6 +33536,42 @@
   created: 2021-04-19
   updated: 2021-04-19
   tags: []
+- id: 951
+  text: Do wood engines exist for cars? Choose the correct statements.
+  hint: ''
+  type: QCM-RM
+  category: 2
+  difficulty: 2
+  language: English
+  answer_option_a: 'Yes, it did exist on a large scale: 500,000 cars in WWII - pretty
+    much all non-military vehicles. This was the main replacement for gasoline.'
+  answer_option_b: A passion for DIY people, only a few successful prototypes
+  answer_option_c: Thousands are still in use today
+  answer_option_d: A wood engine produces less air pollution than gasoline cars
+  answer_correct: ad
+  has_ordered_answers: false
+  answer_explanation: 'Cars with a poor aerodynamics, and a large tank at the rear,
+    which had therefore lots of downsides: a much larger engine, a power much more
+    limited , 10 minutes of pre-heating, production of carbon monoxide… But during
+    fuel shortages, this ingenious device has been widely used, providing a simple
+    solution that pollutes less than a gasoline car. It can be an inspiration for
+    a future way down with less energy supply...'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/2010/01/wood-gas-cars.html
+  answer_scientific_url: https://translate.google.com/translate?hl=&sl=fi&tl=en&u=https%3A%2F%2Fwww.ekoautoilijat.fi%2Ftekstit%2Fhistoriaa.htm&sandbox=1
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/876.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Max Pinsard
+  validator: ''
+  validation_status: Validée
+  added: 2021-04-16
+  created: 2021-04-25
+  updated: 2021-04-25
+  tags:
+  - 35
 - id: 952
   text: Cable-towed boats were in use  during the 19th century. Which of the following
     statements are true?
