@@ -815,3 +815,22 @@
   updated: 2021-04-18
   tags:
   - 255
+- id: 71
+  name: Fresque Océane
+  introduction: '<p>La Fresque Océane : 1 océan - 6 thématiques qui décrivent ce qu''il
+    est en tant que milieu, ce qu''il représente pour les sociétés humaines, les menaces
+    auxquelles il est confronté.</p>'
+  conclusion: ''
+  difficulty_average: 0.0
+  language: Français
+  author: Cyril Retourné
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/Logo%20Fresque%20oc%C3%A9ane.jpg
+  has_audio: false
+  publish: false
+  spotlight: false
+  created: 2021-04-26
+  updated: 2021-04-26
+  tags:
+  - 9
+  - 21
+  - 223
