@@ -834,3 +834,27 @@
   - 9
   - 21
   - 223
+- id: 73
+  name: Forgotten Low Techs
+  introduction: "<p>How about a diversion into the past? The 19th and 20th centuries\
+    \ were indeed an era of great inventors. They were able to circumnavigate the\
+    \ globe, construct gigantic buildings or adapt to an energy shortage. However,\
+    \ many of their innovations have been forgotten, regarded as inferior to today's\
+    \ systems. Ready to discover some of these little-known inventions?</p>\r\n\r\n\
+    <p>A quiz created by Max Pinsard, inspired by the <a href=\"https://solar.lowtechmagazine.com/fr\"\
+    >Low-tech Magazine</a></p>"
+  conclusion: <p>Moral of the story? It is the energy at our disposal that made us
+    put aside these valuabe technologies. Did it captivate you? To find out more,
+    visit the <a href="http://solar.lowtechmagazine.com/fr/">Low Tech Magasine</a>
+    or <a href="http://Paléo Energétique">Paleo Energy</a> websites.</p>
+  difficulty_average: 2.6
+  language: English
+  author: Max Pinsard
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/LToubli%C3%A9es.png
+  has_audio: false
+  publish: true
+  spotlight: true
+  created: 2021-04-27
+  updated: 2021-04-27
+  tags:
+  - 255
