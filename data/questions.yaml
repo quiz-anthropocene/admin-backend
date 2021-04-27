@@ -1001,7 +1001,7 @@
   category: 1
   difficulty: 2
   language: Français
-  answer_option_a: des émissions de CO2
+  answer_option_a: des émissions de CO2 par l'homme
   answer_option_b: de l'eutrophisation (manque d'oxygène)
   answer_option_c: de la photosynthèse
   answer_option_d: du réchauffement de l'air
@@ -4916,7 +4916,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2019-02-22
   created: 2020-04-26
   updated: 2020-09-28
@@ -7853,7 +7853,7 @@
   answer_extra_info: ''
   author: Cyril Retourné
   validator: ''
-  validation_status: Écartée
+  validation_status: Brouillon
   added: 2020-04-24
   created: 2020-04-26
   updated: 2020-06-24
@@ -14309,7 +14309,7 @@
   answer_extra_info: ''
   author: Raphael Odini
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-05-21
   created: 2020-05-23
   updated: 2020-09-28
@@ -31360,7 +31360,7 @@
   - 255
 - id: 875
   text: Aux voitures de quelle époque peut-on comparer l'autonomie des voitures électriques
-    actuelles (Nissan Leaf ou Mitsubishi i-MiEV)... ?
+    (VE) actuelles (Nissan Leaf ou Mitsubishi i-MiEV)... ?
   hint: ''
   type: QCM
   category: 2
@@ -33507,35 +33507,41 @@
   tags:
   - 255
 - id: 950
-  text: With the cars of which epoch can the autonomy of current electric cars (Nissan
-    Leaf or Mitsubishi i-MiEV) be compared ...?
+  text: The autonomy of current electric cars (Nissan Leaf or Mitsubishi i-MiEV) can
+    be compared to the cars of which period ...?
   hint: ''
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 3
   language: English
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: ''
+  answer_option_a: Before 1900
+  answer_option_b: 1900-1920
+  answer_option_c: 1950-1960
+  answer_option_d: They now have a much better autonomy than cars from the early /
+    mid-twentieth century.
+  answer_correct: b
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: Nowadays electric vehicules (EVs) are on the other hand heavier
+    (the Fritchle of 1908 weighed 950kg), and 10 times more powerful (> 100 CV, against
+    10 CV for the Fritchle 1908). As the energy consumption increases with the square
+    of the speed, a clamping at 40km/h (25 mph) allowed a comfortable autonomy, of
+    144km (89 mi) for the Fritchle 1908, with a battery however very basic!
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://solar.lowtechmagazine.com/2010/05/the-status-quo-of-electric-cars-better-batteries-same-range.html
+  answer_scientific_url: http://cnum.cnam.fr/CGI/fpage.cgi?BSPI.154/186/100/420/0/0
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/875.png
+  answer_image_explanation: Chassis of an electric car
   answer_extra_info: ''
   author: Max Pinsard
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-04-16
   created: 2021-04-19
   updated: 2021-04-19
-  tags: []
+  tags:
+  - 60
 - id: 951
   text: Do wood engines exist for cars? Choose the correct statements.
   hint: ''
