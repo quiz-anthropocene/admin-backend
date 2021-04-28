@@ -4916,7 +4916,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Écartée
+  validation_status: Validée
   added: 2019-02-22
   created: 2020-04-26
   updated: 2020-09-28
@@ -26451,8 +26451,8 @@
   - 217
   - 225
 - id: 741
-  text: Comment se compare l'empreinte carbone d'un vélo à assistance électrique (VAE)
-    par rapport à un vélo "classique" ?
+  text: Par rapport à un vélo traditionnel, l'empreinte carbone d'un vélo à assistance
+    électrique (VAE) est...
   hint: On ne tient pas compte des "calories dépensées en plus" par le cycliste sans
     assistance électrique, en considérant que les usager n'ajustent pas leur régime
     alimentaire (viande ...) en fonction de leur moyen de transport. Les effets rebonds
@@ -26461,10 +26461,10 @@
   category: 5
   difficulty: 1
   language: Français
-  answer_option_a: 2 fois moins
+  answer_option_a: 2 fois moindre
   answer_option_b: comparable
-  answer_option_c: 3 fois plus
-  answer_option_d: 30 fois plus
+  answer_option_c: 3 fois plus élevée
+  answer_option_d: 30 fois plus élevée
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: 'Selon la Fédération cycliste européenne, ce serait 16 g CO2e/km
@@ -31292,7 +31292,7 @@
   type: QCM
   category: 2
   difficulty: 2
-  language: English
+  language: Français
   answer_option_a: De quoi en donner 2 ou 3 à chaque enfant du monde
   answer_option_b: De quoi en donner 20 à 30 à chaque enfant du monde
   answer_option_c: De quoi en donner 1 à chaque enfant en Chine
@@ -31325,7 +31325,7 @@
 - id: 874
   text: Avant les grues électriques, il existait des grue mues par la seule force
     humaine. La plus puissante d'entre elles démultipliait la force exercée par les
-    opérateurs d'un facteur…?
+    opérateurs d'un facteur…
   hint: ''
   type: QCM
   category: 2
@@ -32966,7 +32966,8 @@
   - 33
   - 34
 - id: 936
-  text: How many oil barrels (1 barrel = 159 l) do we consume every day in the world?
+  text: How many oil barrels do we consume every day in the world ? 1 barrel = 159
+    l
   hint: ''
   type: QCM
   category: 5
@@ -32980,9 +32981,9 @@
   has_ordered_answers: true
   answer_explanation: 100 million barrels per day, i.e. 1 billion years of human labor
     (in 'energy slave' equivalent), every day! Or over a trillion humans working for
-    us every day ...
+    us every day ...This equates the volume of two olympic pools every single minute.
   answer_audio: ''
-  answer_video: ''
+  answer_video: https://www.youtube.com/embed/02x5UuV898c
   answer_accessible_url: https://www.arcenergyinstitute.com/100-million-barrels-per-day/
   answer_scientific_url: https://en.wikipedia.org/wiki/Energy_slave
   answer_reading_recommendation: ''
@@ -33508,7 +33509,7 @@
   - 255
 - id: 950
   text: The autonomy of current electric cars (Nissan Leaf or Mitsubishi i-MiEV) can
-    be compared to the cars of which period ...?
+    be compared to the one of...
   hint: ''
   type: QCM
   category: 2
@@ -33521,11 +33522,11 @@
     mid-twentieth century.
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: Nowadays electric vehicules (EVs) are on the other hand heavier
-    (the Fritchle of 1908 weighed 950kg), and 10 times more powerful (> 100 CV, against
-    10 CV for the Fritchle 1908). As the energy consumption increases with the square
-    of the speed, a clamping at 40km/h (25 mph) allowed a comfortable autonomy, of
-    144km (89 mi) for the Fritchle 1908, with a battery however very basic!
+  answer_explanation: Nowadays electric vehicules (EVs) are heavier (the Fritchle
+    of 1908 weighed 950kg), and 10 times more powerful (100 HP compared to 10 HP for
+    the 1908 Fritchle). As the energy consumption increases with the square of peed,
+    a clamping at 40km/h (25 mph) allowed a comfortable autonomy, of 144km (89 mi)
+    for the Fritchle 1908, with a rather primitive battery!
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/2010/05/the-status-quo-of-electric-cars-better-batteries-same-range.html
@@ -33535,8 +33536,8 @@
   answer_image_explanation: Chassis of an electric car
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
-  validation_status: A valider
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-04-16
   created: 2021-04-19
   updated: 2021-04-19
@@ -33624,20 +33625,20 @@
   category: 5
   difficulty: 2
   language: English
-  answer_option_a: 10 times less fast
+  answer_option_a: 10 times slower
   answer_option_b: half as fast
   answer_option_c: as fast
   answer_option_d: twice as fast
   answer_correct: c
   has_ordered_answers: false
   answer_explanation: 'This impressive freighter, the Preussen, was moving at an average
-    speed of 10 knots, which is as fast as a current oil-fired freighter consuming
-    100 tonnes of fuel oil per day. It unfortunately sank following a collision with
-    another ship.
+    speed of 10 knots, i.e as fast as a current oil-fired freighter that consume 100
+    tonnes of fuel oil per day. It unfortunately sank afer colliding with another
+    ship.
 
     The cumulative GHG emissions of marine freight are equivalent to those of tens
-    of millions of cars. If not all sea lanes are suitable because of the direction
-    of the winds, the potential to switch back to sailing freighters seems significant.'
+    of millions of cars. If not all sea lanes are suitable because of the dominant
+    wind direction, the potential to switch back to sailing freighters looks significant.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/2009/04/cargo-ships-then-and-now.html
@@ -33647,18 +33648,18 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
-  validation_status: A valider
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-04-16
   created: 2021-04-23
   updated: 2021-04-23
   tags:
   - 33
 - id: 954
-  text: 'In the 17th century, peat used to be a major fossil fuel for European economies:
-    per capita, it was as large as the electricity consumption of an average household
-    today. It is considered by IPCC a renewable fuel. But how long does it take for
-    a 3-meter deep layer of peat to recover its original depth?'
+  text: 'In the 17th century, peat used to be a major source of fossil fuel for European
+    economies: per capita, it was as large as the electricity consumption of an average
+    household today. It is considered by IPCC a renewable fuel. But how long does
+    it take for a 3-meter deep layer of peat to recover its original depth?'
   hint: ''
   type: QCM
   category: 7
@@ -33669,16 +33670,16 @@
   answer_option_c: 300 years
   answer_option_d: 3,000 years
   answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: 'It takes 3,000 years for a 3-meter layer of peat to return
-    to its original thickness. Not quite renewable on the scale of human societies!
-    16.75 GJ / person / year was consumed in the Netherlands in the 17th century,
-    as much as an annual electricity bill in France (~ 5000kWh)! Before the industrial
+  has_ordered_answers: true
+  answer_explanation: 'It takes 3,000 years for a 3-meter peat layer to return to
+    its original thickness. Not quite renewable on the scale of human societies! 17
+    GJ / person / year was consumed in the Netherlands in the 17th century, i.e. as
+    much as an annual houshold electricity bill in France. Prior to the industrial
     revolution, multiple fossil fuels were used in Europe, such as charcoal.
 
-    However, it would not be desirable to start peat exploitation again nowadays,
-    peatlands being high places of biodiversity and storing more carbon than forests
-    ... A technique can be old but not low-tech!'
+    However, it would not be desirable to resume peat exploitation. Peatlands are
+    valuable shelters of biodiversity and store more carbon globally than forests...
+    A technique can be old but not low-tech!'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://solar.lowtechmagazine.com/2011/09/peat-and-coal-fossil-fuels-in-pre-industrial-times.html
@@ -33688,8 +33689,8 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
-  validation_status: A valider
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-04-16
   created: 2021-04-22
   updated: 2021-04-22
@@ -33811,6 +33812,160 @@
   tags:
   - 53
   - 86
+- id: 958
+  text: Quelle est la part d'hydrocarbures extraite des océans chaque année ?
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 2
+  language: Français
+  answer_option_a: 10%
+  answer_option_b: 30%
+  answer_option_c: 50%
+  answer_option_d: 70%
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: TODO
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Cyril Retourné
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-04-25
+  created: 2021-04-28
+  updated: 2021-04-28
+  tags:
+  - 11
+  - 200
+- id: 959
+  text: Quelle part du pétrole consommé en France est acheminée par bateau ?
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 2
+  language: Français
+  answer_option_a: answer a
+  answer_option_b: answer b
+  answer_option_c: answer c
+  answer_option_d: answer d
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: TODO
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Cyril Retourné
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-04-25
+  created: 2021-04-28
+  updated: 2021-04-28
+  tags:
+  - 11
+- id: 960
+  text: Quelle part de la population tire de la mer sa seule source de protéines /
+    dépend de la mer pour assouvir ses besoins alimentaires de base ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 2
+  language: Français
+  answer_option_a: answer a
+  answer_option_b: answer b
+  answer_option_c: answer c
+  answer_option_d: answer d
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: TODO
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Cyril Retourné
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-04-25
+  created: 2021-04-28
+  updated: 2021-04-28
+  tags:
+  - 5
+- id: 961
+  text: Quelle part du sable utilisé dans la construction est issue des fonds marins
+    ?
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 2
+  language: Français
+  answer_option_a: answer a
+  answer_option_b: answer b
+  answer_option_c: answer c
+  answer_option_d: answer d
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: TODO
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Cyril Retourné
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-04-26
+  created: 2021-04-28
+  updated: 2021-04-28
+  tags:
+  - 53
+  - 257
+- id: 962
+  text: Combien de médicaments sont inspirés des ressources marines ?
+  hint: ''
+  type: QCM
+  category: 8
+  difficulty: 2
+  language: Français
+  answer_option_a: environ 500
+  answer_option_b: + de 2500
+  answer_option_c: à ce jour, 10000 environ
+  answer_option_d: + de 25000
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: TODO
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Cyril Retourné
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-04-26
+  created: 2021-04-28
+  updated: 2021-04-28
+  tags:
+  - 243
 - id: 1000
   text: Globally, how much electronic waste is collected in order to be recycled?
   hint: it is really not much!
