@@ -47,7 +47,7 @@
   question_count: 9
   quiz_count: 1
 - name: laydgeur
-  question_count: 175
+  question_count: 176
   quiz_count: 2
 - name: Le Réveilleur
   question_count: 0
@@ -56,8 +56,8 @@
   question_count: 74
   quiz_count: 9
 - name: Max Pinsard
-  question_count: 47
-  quiz_count: 4
+  question_count: 50
+  quiz_count: 5
 - name: Pascal Mostardi
   question_count: 1
   quiz_count: 0
