@@ -28,7 +28,7 @@
     </p>
 
     <br />
-    <h3>❓&nbsp;Contributions</h3>
+    <h3>✍️&nbsp;Contributions</h3>
     <p>
       <strong>{{ feedback_agg_formatted }}</strong> feedbacks/likes/suggestions reçus, merci ! 💯
     </p>
@@ -168,7 +168,8 @@ export default {
       return Intl.NumberFormat('fr-FR').format(questionValidatedCount);
     },
     question_pending_validation_count_formatted() {
-      const questionPendingValidationCount = this.$store.state.stats.question_per_validation_status_count ? this.$store.state.stats.question_per_validation_status_count.slice(0).find((item) => item.validation_status === constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS).total : 0;
+      const questionPendingValidation = this.$store.state.stats.question_per_validation_status_count ? this.$store.state.stats.question_per_validation_status_count.slice(0).find((item) => item.validation_status === constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS) : {};
+      const questionPendingValidationCount = questionPendingValidation ? questionPendingValidation.total : 0;
       return Intl.NumberFormat('fr-FR').format(questionPendingValidationCount);
     },
     quiz_published_count_formatted() {

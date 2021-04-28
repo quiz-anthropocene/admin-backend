@@ -5,7 +5,7 @@ from stats import views
 
 app_name = "stats"
 urlpatterns = [
-    path("", views.api_home, name="index"),
+    # path("", views.api_home, name="index"),
     path("questions/<int:pk>/stats", views.question_stats, name="question_stats"),
     path(
         "questions/<int:pk>/feedback-events",
