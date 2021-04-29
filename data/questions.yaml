@@ -33486,7 +33486,7 @@
   answer_option_c: ×600
   answer_option_d: ×6000
   answer_correct: c
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'At Keyham in the UK, a 60 ton crane gave an advantage of 1:
     600 (and could lift 5 times its weight). Two men alone could handle the crane
     with 60 tons hanging at the end of the jib! Nowadays, we use electric machines
@@ -33521,7 +33521,7 @@
   answer_option_d: They now have a much better autonomy than cars from the early /
     mid-twentieth century.
   answer_correct: b
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: Nowadays electric vehicules (EVs) are heavier (the Fritchle
     of 1908 weighed 950kg), and 10 times more powerful (100 HP compared to 10 HP for
     the 1908 Fritchle). As the energy consumption increases with the square of peed,
@@ -33630,7 +33630,7 @@
   answer_option_c: as fast
   answer_option_d: twice as fast
   answer_correct: c
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'This impressive freighter, the Preussen, was moving at an average
     speed of 10 knots, i.e as fast as a current oil-fired freighter that consume 100
     tonnes of fuel oil per day. It unfortunately sank afer colliding with another
@@ -33697,8 +33697,9 @@
   tags:
   - 256
 - id: 955
-  text: 70 years before the electric bulb, electric were used to light up the streets
-    at the beginning of the 19th century. Their luminance was in the range of…?
+  text: 70 years before the electric bulb, electric arcs were used to light up the
+    streets at the beginning of the 19th century. Their luminance was in the range
+    of…?
   hint: ''
   type: QCM
   category: 2
