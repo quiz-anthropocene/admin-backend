@@ -24736,36 +24736,21 @@
   category: 3
   difficulty: 3
   language: Français
-  answer_option_a: 0.5 %
-  answer_option_b: 2.5 %
-  answer_option_c: 6.2 %
+  answer_option_a: 0,5 %
+  answer_option_b: 2,5 %
+  answer_option_c: 6,2 %
   answer_option_d: 12 %
   answer_correct: b
-  has_ordered_answers: false
-  answer_explanation: 'La part du CO2 seul est de 2.7%,
-
-    Elle est loin d’être représentative de l’impact majeur des vols sur le Réchauffement
-    Climatique RC.
-
-    Avez-vous vu ces trainées de condensation qui apparaissent entre 8000 et 13000m
-    ?
-
-    Ces trainées génèrent des effets dit "Non CO2" qui amplifient les effets du CO2
-    seul sur le RC.
-
-    Au total l''impact réel sur le RC est :
-
-    CO2e = 3 x CO2.
-
-    Cad que l''impact de l''aviation sur le RC, n''est pas de 2.5 à 3%
-
-    mais 3 fois plus important
-
-    soit 7.5 %'
+  has_ordered_answers: true
+  answer_explanation: "La part du CO2 seul est de 2.7% des émissions mondiales. \n\
+    Mais elle est loin d’être représentative de l’impact majeur des vols sur le climat.\
+    \ Les trainées de condensation, ces nuages blancs derrière les avions contribuent\
+    \ en effet également à l'effet de serre. Au total, l'impact est estimé 3 fois\
+    \ plus élevé, soit 7.5 %"
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
-  answer_scientific_url: ''
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/700%20V1.png
   answer_image_explanation: ''
@@ -25231,7 +25216,7 @@
   - 217
   - 224
 - id: 712
-  text: Quel est le nombre d'aéroports dans le monde en 2019 ?
+  text: Combien y a-t-il d'aéroports dans le monde en 2019 ?
   hint: Et pas tous  saturés
   type: QCM
   category: 2
@@ -25243,14 +25228,14 @@
   answer_option_d: '15350'
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: 3500 aéroports commerciaux, c'est en moyenne une vingtaine par
-    pays, sachant qu'il y a une concentration dans le monde occidental...
+  answer_explanation: 3,500 aéroports commerciaux, c'est en moyenne une vingtaine
+    par pays, sachant qu'il y a une concentration dans le monde occidental.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: https://aci.aero/sponsorships/
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/712.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/712.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26131,7 +26116,7 @@
   answer_extra_info: https://www.ouest-france.fr/leditiondusoir/2018-01-18/pourquoi-le-kerosene-est-il-completement-detaxe-83f0840c-e9bc-4e3b-ab81-83495ba02ee5
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -32052,9 +32037,8 @@
   tags:
   - 218
 - id: 910
-  text: "Jouons le match Paris-Marseille...pas en football, mais GES de l'avion contre\
-    \ GES du train ! \nBien sûr, c'est l'avion le plus émetteur. Mais combien de fois\
-    \ plus ?"
+  text: Jouons le match Paris-Marseille...pas en football, mais en GES, avion contre
+    train ! Bien sûr, c'est l'avion le plus émetteur. Mais combien de fois plus ?
   hint: ''
   type: QCM
   category: 2
@@ -32077,7 +32061,7 @@
   answer_accessible_url: https://eco-calculateur.dta.aviation-civile.gouv.fr/
   answer_scientific_url: https://www.oui.sncf/aide/calcul-des-emissions-de-co2-sur-votre-trajet-en-train
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/910.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/910.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -34416,26 +34400,20 @@
   answer_option_d: 85%
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: '60% est la bonne réponse, avec de grandes disparités géographiques,
-    la taille des pays influence fortement ce ratio comme les niveaux de développement.
-
-    La part des vols internationaux est en forte croissance depuis 1990.
-
-    Aux USA, les liaisons domestiques restent prépondérantes 67% ( 161 Mnt CO2e vs
-    78.4 Mnt CO2e pour l’international )
-
-    L’international reste le segment du trafic le plus dynamique en France métropolitaine.
-
-    En 2018, il a progressé de +5,7% contre +2,4% seulement pour le trafic domestique
-    et représente aujourd’hui 73% du trafic métropolitain.'
+  answer_explanation: La part des vols internationaux est en forte croissance depuis
+    1990. On observe de fortes disparités selon les pays, notamment selon leur taille
+    ou le niveau de développement. Aux Etats-Unis, les liaisons domestiques restent
+    prépondérantes (67%). L’international reste le segment du trafic le plus dynamique
+    en France métropolitaine. En 2018, il a progressé de 6%, 2 fois plus vite que
+    le trafic domestique et représente aujourd’hui 73% du trafic métropolitain.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.air-journal.fr/2019-03-15-200-millions-de-passagers-aeriens-en-france-5211129.html
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: Paragraphe 4.3 Page 5 / fig. 3 page 6
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/1012.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/1012.png
   answer_image_explanation: ''
-  answer_extra_info: Paragraphe 4.3 Page 5 / fig. 3 page 6
+  answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Brouillon
