@@ -25291,21 +25291,19 @@
   - 217
   - 224
 - id: 714
-  text: Quel est le nombre de vols commerciaux dans le monde en 2018 ?
+  text: En 2018, quel a été le nombre de vols commerciaux dans le monde ?
   hint: Pour le TA, le terrain de jeux est sans limites
   type: QCM
   category: 2
   difficulty: 2
   language: Français
-  answer_option_a: 6 Millions
-  answer_option_b: '12'
-  answer_option_c: '26'
-  answer_option_d: '38'
+  answer_option_a: 6 millions
+  answer_option_b: 12 millions
+  answer_option_c: 26 millions
+  answer_option_d: 38 millions
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: '38 millions de vols par an.
-
-    C’est presque 110 000 vols commerciaux par jour en moyenne,
+  answer_explanation: 'C’est presque 110 000 vols commerciaux par jour en moyenne,
 
     Avec des pointes en juin à 230 000 vols.
 
@@ -25315,12 +25313,12 @@
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/714.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/714.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-01-05
   created: 2021-01-07
   updated: 2021-01-07
@@ -25573,7 +25571,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -26062,7 +26060,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -26807,7 +26805,7 @@
   - 263
 - id: 750
   text: Quelle part de la population mondiale voyage en avion chaque année ?
-  hint: C’est encore trop
+  hint: ''
   type: QCM
   category: 2
   difficulty: 2
@@ -26817,38 +26815,28 @@
   answer_option_c: 25%
   answer_option_d: 50%
   answer_correct: b
-  has_ordered_answers: false
-  answer_explanation: 'Et oui seulement 11%
-
-    Autrement dit 89% chaque année reste à terre.
-
-    Et seulement 20% de la population mondiale à volé au moins une fois dans sa vie.
-
-    Cela nous montre comment notre perception est influencée par notre propre mode
-    de vie.
-
-    On imagine alors les impacts sur les émissions si ce pourcentage doublait ou quadruplait
-    d’ici 2050, alors que le GIEC demande à l’ensemble des secteurs de réduire leurs
-    émissions.'
+  has_ordered_answers: true
+  answer_explanation: Et seulement 20% de la population mondiale à volé au moins une
+    fois dans sa vie. On imagine alors les impacts sur les émissions si ce pourcentage
+    augmentait d’ici 2050, alors que le GIEC demande à l’ensemble des secteurs de
+    réduire leurs émissions.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/750%20752.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/750%20752.png
   answer_image_explanation: ''
   answer_extra_info: Abstract Page 1, Par. 4.4 Page 9
   author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-01-04
   created: 2021-01-06
   updated: 2021-01-06
   tags:
-  - 24
   - 33
   - 217
-  - 224
 - id: 751
   text: Quelle est la part de la population mondiale qui utilise des vols internationaux
     ?
@@ -26887,29 +26875,27 @@
   - 217
   - 224
 - id: 752
-  text: 50% des émissions sont produites par « x % » des voyageurs de la population
-    mondiale ?
+  text: Si l'on classe les passagers aériens selon leurs émissions, quel pourcentage
+    est responsable de la moitié des émissions de gaz à effet de serre ?
   hint: En ont-ils conscience ?
   type: QCM
   category: 2
   difficulty: 2
   language: Français
-  answer_option_a: 0.5%
-  answer_option_b: 1%
-  answer_option_c: 4%
-  answer_option_d: 6%
-  answer_correct: b
+  answer_option_a: 1%
+  answer_option_b: 5%
+  answer_option_c: 10%
+  answer_option_d: 20%
+  answer_correct: a
   has_ordered_answers: false
-  answer_explanation: 'La bascule est énorme, 1%
-
-    Pas très étonnant puisque une grande part des émissions ne sont pas couvertes
-    par des réglementations contraignantes.'
+  answer_explanation: Pas très étonnant puisque une grande part des émissions ne sont
+    pas couvertes par des réglementations contraignantes.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/750%20752.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/750%20752.png
   answer_image_explanation: ''
   answer_extra_info: Abstract Page 1, Par. 4.4 Page 9
   author: Restons les pieds sur terre
@@ -27030,7 +27016,8 @@
   - 217
   - 218
 - id: 756
-  text: Part des émissions de l’aviation privée dans le total de l’aviation ?
+  text: Quelle est la part de l’aviation privée dans les émissions générées par le
+    secteur aérien ?
   hint: Plutôt en hausse
   type: QCM
   category: 2
@@ -27525,7 +27512,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-13
   created: 2021-01-17
   updated: 2021-01-17
@@ -33951,6 +33938,54 @@
   updated: 2021-04-28
   tags:
   - 243
+- id: 999
+  text: 'Vrai ou faux : sur les dix dernières années, la forêt amazonienne au Brésil
+    a émis plus de carbone qu''elle n''en a capté. '
+  hint: ''
+  type: VF
+  category: 1
+  difficulty: 1
+  language: Français
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: 'Entre 2010 et 2019, cette forêt a perdu de sa biomasse, et
+    donc de son carbone : les pertes de carbone sont environ 18% supérieures aux gains.
+    "C’est la première fois qu''on a des chiffres qui montrent qu''on a basculé et
+    que l''Amazonie brésilienne est émettrice" nette de carbone, explique l''un des
+    auteur.
+
+    Pour l''instant, a priori, "les autres pays compensent les pertes de l''Amazonie
+    brésilienne" et ainsi "l''ensemble de l''Amazonie n’a pas encore basculé, mais
+    elle pourrait le faire bientôt", poursuit-il.
+
+    L''étude met d''autre part en avant la responsabilité méconnue, mais majeure,
+    des "dégradations" de la forêt. Contrairement à la déforestation qui fait disparaître
+    la surface boisée, les dégradations incluent tout ce qui peut l''abîmer, sans
+    pour autant la détruire totalement : arbres fragilisés en bordure des zones déforestées,
+    coupes sélectives, petits incendies, mortalité des arbres liée à la sécheresse.
+    Des atteintes moins facilement décelables que de grandes étendues rasées.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.sciencesetavenir.fr/nature-environnement/la-foret-amazonienne-bresilienne-desormais-emettrice-nette-de-carbone_153956
+  answer_scientific_url: https://www.nature.com/articles/s41467-021-22050-1
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/999.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Matthieu Massart
+  validator: ''
+  validation_status: A valider
+  added: 2021-05-01
+  created: 2021-05-02
+  updated: 2021-05-02
+  tags:
+  - 13
+  - 19
+  - 265
 - id: 1000
   text: Globally, how much electronic waste is collected in order to be recycled?
   hint: it is really not much!
