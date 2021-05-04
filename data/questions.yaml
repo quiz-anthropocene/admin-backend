@@ -1610,11 +1610,11 @@
     aux environ de 2040) ce sont près de 90% des coraux qui subiront des dégradations.
     A +2°C la quasi totalité des coraux de la planète disparaitront.
   answer_audio: ''
-  answer_video: ''
+  answer_video: https://dai.ly/x45uiki
   answer_accessible_url: https://www.nationalgeographic.fr/environnement/les-recifs-coralliens-pourraient-disparaitre-avant-2050
   answer_scientific_url: http://whc.unesco.org/en/news/1676/
   answer_reading_recommendation: ''
-  answer_image_url: https://medias.liberation.fr/photo/1011627-897181-le-processus-du-blanchissement-des-coraux-infographie-big.jpg
+  answer_image_url: https://twitter.com/BonPote/status/1384058346509012997/photo/1
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -2014,19 +2014,20 @@
   tags:
   - 1
 - id: 56
-  text: Les déchets plastiques dans les océans, c'est chaque année...
+  text: Les déchets plastiques qui se déversent dans l'océan, c'est chaque jour...
   hint: ''
   type: QCM
   category: 3
   difficulty: 4
   language: Français
-  answer_option_a: 80 000 tonnes
-  answer_option_b: 800 000 tonnes
-  answer_option_c: 8 millions de tonnes
-  answer_option_d: 80 millions de tonnes
+  answer_option_a: 200 tonnes
+  answer_option_b: 2,000 tonnes
+  answer_option_c: 20,000 tonnes
+  answer_option_d: 20,000 tonnes
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: On estime que 80 % des déchets en mer proviennent des terres
+  answer_explanation: 8 millions de tonnes par an, soit 22,000 tonnes par jour selon
+    des chiffres de 2019. On estime que 80 % des déchets en mer proviennent des terres
     émergées. Cette pollution provient surtout des déchets ménagers, qui sont mal
     collectés, mal recyclés ou abandonnés dans la nature ou sur les bords des routes.
     Ces déchets vont être portés par les vents, poussés par les pluies pour emprunter
@@ -33938,8 +33939,69 @@
   updated: 2021-04-28
   tags:
   - 243
+- id: 963
+  text: Quel est le nombre de conteneurs max sur porte conteneurs
+  hint: ''
+  type: QCM
+  category: 2
+  difficulty: 2
+  language: Français
+  answer_option_a: ''
+  answer_option_b: ''
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: ''
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Cyril Retourné
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-04-26
+  created: 2021-05-03
+  updated: 2021-05-03
+  tags: []
+- id: 964
+  text: Pour pêcher une crevette, combien de prise accessoires (autres animaux marins
+    qui sont tués et rejetés par dessus bord) ?
+  hint: ''
+  type: QCM
+  category: 4
+  difficulty: 3
+  language: Français
+  answer_option_a: non significatif
+  answer_option_b: 1 crevette pêchée, 2 individus  "autre" rejetés
+  answer_option_c: 1 crevette pêchée, 5 individus  "autre" rejetés
+  answer_option_d: 1 crevette pêchée, 50 individus  "autre" rejetés
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Cyril Retourné
+  validator: ''
+  validation_status: Brouillon
+  added: 2021-04-26
+  created: 2021-05-03
+  updated: 2021-05-03
+  tags:
+  - 21
+  - 223
 - id: 999
-  text: 'Vrai ou faux : sur les dix dernières années, la forêt amazonienne au Brésil
+  text: 'Vrai ou faux ? Sur les dix dernières années, la forêt amazonienne au Brésil
     a émis plus de carbone qu''elle n''en a capté. '
   hint: ''
   type: VF
@@ -33952,11 +34014,11 @@
   answer_option_d: ''
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: 'Entre 2010 et 2019, cette forêt a perdu de sa biomasse, et
-    donc de son carbone : les pertes de carbone sont environ 18% supérieures aux gains.
+  answer_explanation: 'Entre 2010 et 2019, la forêt brésilienne a perdu de sa biomasse,
+    et donc de son carbone : les pertes sont d''environ 18% supérieures aux gains.
     "C’est la première fois qu''on a des chiffres qui montrent qu''on a basculé et
     que l''Amazonie brésilienne est émettrice" nette de carbone, explique l''un des
-    auteur.
+    auteur de l''étude parue en mars 2021.
 
     Pour l''instant, a priori, "les autres pays compensent les pertes de l''Amazonie
     brésilienne" et ainsi "l''ensemble de l''Amazonie n’a pas encore basculé, mais
@@ -33978,7 +34040,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-05-01
   created: 2021-05-02
   updated: 2021-05-02
