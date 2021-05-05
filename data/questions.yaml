@@ -1614,7 +1614,7 @@
   answer_accessible_url: https://www.nationalgeographic.fr/environnement/les-recifs-coralliens-pourraient-disparaitre-avant-2050
   answer_scientific_url: http://whc.unesco.org/en/news/1676/
   answer_reading_recommendation: ''
-  answer_image_url: https://twitter.com/BonPote/status/1384058346509012997/photo/1
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/44.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -27169,37 +27169,41 @@
   - 17
   - 264
 - id: 760
-  text: Copy of à venir
+  text: L'humanité utilise en une année une masse de matière considérable. Lesquelles
+    de ces affirmations sont vraies ?
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: 2
-  difficulty: 2
+  difficulty: 3
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: 10 fois plus de sable que de ciment
+  answer_option_b: Presque 100 fois plus d'eau douce que de sable
+  answer_option_c: 5 fois plus de fer que de ciment et d'aluminium
+  answer_option_d: Des milliards de tonnes de fer et de ciment
+  answer_correct: abd
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: Si l'on compte en milliards de tonnes par an, l'eau douce exploitée
+    pointe à 4,000, le sable à 41, le gravier 9, le ciment 4. En revanche, la consommation
+    de fer n'est 'que' de 3 milliards de tonnes, et l'aluminium 60 millions de tonnes.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.oecd.org/fr/environnement/l-utilisation-de-matieres-premieres-devrait-doubler-d-ici-2060-ce-qui-aura-de-graves-repercussions-sur-l-environnement.htm
+  answer_scientific_url: https://www.visualcapitalist.com/all-the-worlds-metals-and-minerals-in-one-visualization/
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
-  answer_extra_info: ''
-  author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
-  added: 2021-01-13
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/861.png
+  answer_image_explanation: '[https://ourworldindata.org/water-use-stress](https://ourworldindata.org/water-use-stress)'
+  answer_extra_info: USGS, Mineral commodity services (2020)
+  author: Max Pinsard
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-02-08
   created: 2021-01-11
   updated: 2021-01-11
   tags:
-  - 33
-  - 217
-  - 218
+  - 37
+  - 57
+  - 236
+  - 237
 - id: 761
   text: Copy of à venir
   hint: ''
@@ -30794,8 +30798,8 @@
   - 228
   - 229
 - id: 861
-  text: L'humanité utilise en une année une masse de matière considérable. Lesquelles
-    de ces affirmations sont vraies ?
+  text: Entre 2005 et 2020, les données totales générées chaque année par l'ensemble
+    des appareils dans le monde ont été multipliées d'un facteur...
   hint: ''
   type: QCM-RM
   category: 2
