@@ -1286,7 +1286,7 @@
   answer_image_explanation: ''
   answer_extra_info: https://multimedia.scmp.com/news/world/article/3000839/permafrost/
   author: Matthieu Massart
-  validator: ''
+  validator: Jean-Philippe Pernin
   validation_status: Validée
   added: 2020-03-10
   created: 2020-03-10
@@ -1519,7 +1519,8 @@
   - 21
   - 216
 - id: 42
-  text: Combien d'années faut-il à du CO2 émis pour s'évacuer de l'atmosphère ?
+  text: Combien d'années faut-il à du CO2 émis pour commencer à être évacué de l'atmosphère
+    ?
   hint: ''
   type: QCM
   category: 1
@@ -1531,8 +1532,9 @@
   answer_option_d: 1000 ans
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: La durée de vie d'une particule de CO2 dans l'atmosphère est
-    de 100 ans. C'est pourquoi les changements climatiques sont fondamentalement irréversibles
+  answer_explanation: La durée de séjour (= "demi-vie") d'une particule de CO2 dans
+    l'atmosphère est de 100 ans mais il faut plus de 10 000  ans pour toutes les évacuer.
+    C'est pourquoi les changements climatiques sont fondamentalement irréversibles
     à l'échelle humaine.
   answer_audio: ''
   answer_video: ''
@@ -1540,13 +1542,16 @@
   answer_scientific_url: https://fr.wikipedia.org/wiki/Potentiel_de_r%C3%A9chauffement_global
   answer_reading_recommendation: ''
   answer_image_url: https://jancovici.com/wp-content/uploads/2016/04/gaz_graph7.png
-  answer_image_explanation: Forçage radiatif résiduel, au cours du temps, et en watts
-    par mètre carré, provenant d’une d’un million de tonnes de gaz émises à l’instant
-    0.
+  answer_image_explanation: 'Forçage radiatif résiduel, au cours du temps, et en watts
+    par mètre carré, provenant d’un million de tonnes de gaz émises à l’instant 0
+    (échelles logaritmiques).
+
+    On voit qu’il faut attendre de l’ordre du siècle avant que le CO2 ne commence
+    à être évacué de l’atmosphère de manière significative.'
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Raphael Odini
-  validation_status: Validée
+  validation_status: A valider
   added: 2020-03-10
   created: 2020-03-10
   updated: 2020-09-28
@@ -1878,7 +1883,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
-  validator: ''
+  validator: Jean-Philippe Pernin
   validation_status: Validée
   added: 2020-03-10
   created: 2020-03-10
@@ -2348,7 +2353,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
-  validator: ''
+  validator: Jean-Philippe Pernin
   validation_status: Validée
   added: 2020-03-10
   created: 2020-03-10
@@ -4716,7 +4721,6 @@
   tags:
   - 12
   - 142
-  - 155
 - id: 132
   text: Quelle est la production française de pétrole (en 2017, métropole) ?
   hint: ''
@@ -7911,11 +7915,12 @@
   answer_option_d: Le Costa Rica
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: La zone cible est définie par un IDH supérieur à 0,8 et une
-    empreinte écologique d'un peu moins de 2 hectares par personne. Cuba était le
-    seul pays au monde à respecter ces deux critères. Une 3ème dimension est le respect
-    des droits de l'Homme et de la démocratie... A noter que Cuba a quitté cette zone
-    depuis, et qu'aucun pays ne répond donc à ces critères.
+  answer_explanation: La zone cible est définie par un IDH supérieur à 0,8 - soit
+    du niveau de la Russie - et une empreinte écologique d'un peu moins de 2 hectares
+    agricoles par personne. Cuba était le seul pays au monde à respecter ces deux
+    critères. Une 3ème dimension, pas considéré ici, est le respect des droits de
+    l'Homme et de la démocratie... A noter que Cuba a quitté cette zone depuis, et
+    qu'aucun pays ne répond donc plus à ces critères.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://youtu.be/n3LyVbGUFu4?t=1320
@@ -20606,7 +20611,7 @@
     rouge sombre seront en stress hydrique très élevé en 2040
   answer_extra_info: ''
   author: Pascal Mostardi
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2020-09-22
   created: 2020-09-22
@@ -22701,7 +22706,7 @@
   answer_image_explanation: ''
   answer_extra_info: https://twitter.com/laydgeur/status/1286580801291911168
   author: laydgeur
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2020-07-24
   created: 2020-11-28
@@ -25318,7 +25323,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-05
   created: 2021-01-07
@@ -25532,7 +25537,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2020-03-10
   created: 2021-01-06
@@ -25947,9 +25952,9 @@
   - 217
   - 218
 - id: 729
-  text: Le pergélisol (ou permafrost) est un sol gelé en permanence qui recouvre une
-    grande partie des régions arctiques. Le réchauffement climatique commence à le
-    faire dégeler. Avec quelles conséquences ?
+  text: Le réchauffement climatique commence à faire dégeler le permafrost, un sol
+    normalement gelé en permanence qui recouvre l'essentiel des régions arctiques.
+    Avec quelles conséquences ?
   hint: ''
   type: QCM-RM
   category: 5
@@ -25981,7 +25986,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Philippe Pernin
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-05
   created: 2021-01-06
@@ -26290,7 +26295,7 @@
   answer_option_c: L'extinction des insectes pollinisateurs pourrait menacer la sécurité
     alimentation mondiale
   answer_option_d: ''
-  answer_correct: abcd
+  answer_correct: abc
   has_ordered_answers: false
   answer_explanation: 'Les conséquences sur l''humain d''une telle perte seraient
     abyssales. Parmi les recommandations pour éviter ce désastre : remplacer les pesticides
@@ -26306,7 +26311,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Philippe Pernin
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-05
   created: 2021-01-06
@@ -26351,7 +26356,7 @@
     de différents métaux, au rythme actuel de consommation.
   answer_extra_info: ''
   author: Matthieu Massart
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-08
   created: 2021-01-06
@@ -30415,7 +30420,7 @@
   answer_option_d: 15,000 km
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: 15 000 km, c'est la distance moyenne parcourue par une donnée
+  answer_explanation: 15,000 km, c'est la distance moyenne parcourue par une donnée
     numérique (mail, téléchargement, vidéo, requête web…) pour les différentes étapes
     de son traitement et de son acheminement.
   answer_audio: ''
@@ -31180,7 +31185,7 @@
     50% en électricité'
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-02-22
   created: 2021-02-26
@@ -31402,7 +31407,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-14
   created: 2021-03-21
@@ -31441,7 +31446,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-14
   created: 2021-03-15
@@ -31479,7 +31484,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-14
   created: 2021-03-17
@@ -31523,7 +31528,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-14
   created: 2021-03-17
@@ -31602,7 +31607,7 @@
   answer_image_explanation: Nouvelle-Orléans, 1883
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Raphael Odini
   validation_status: Validée
   added: 2021-03-16
   created: 2021-03-21
@@ -31643,7 +31648,7 @@
     de New-York
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-16
   created: 2021-03-17
@@ -31684,7 +31689,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-04-16
   created: 2021-04-16
@@ -33204,7 +33209,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-15
   created: 2021-03-17
@@ -33246,7 +33251,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-15
   created: 2021-03-17
@@ -33280,7 +33285,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-15
   created: 2021-03-23
@@ -33320,7 +33325,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-15
   created: 2021-03-17
@@ -33358,7 +33363,7 @@
   answer_image_explanation: UNEP
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-15
   created: 2021-03-16
@@ -33402,7 +33407,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-15
   created: 2021-03-16
@@ -33441,7 +33446,7 @@
   answer_image_explanation: 'Source : PNUE'
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-03-16
   created: 2021-03-17
@@ -33476,7 +33481,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-04-16
   created: 2021-04-16
@@ -33548,7 +33553,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-04-16
   created: 2021-04-25
@@ -33585,7 +33590,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-04-16
   created: 2021-04-24
@@ -33703,7 +33708,7 @@
   answer_image_explanation: New-Orleans, 1883
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-04-16
   created: 2021-04-21
@@ -33742,7 +33747,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-04-16
   created: 2021-04-20
@@ -33781,7 +33786,7 @@
     York City
   answer_extra_info: ''
   author: Max Pinsard
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-04-16
   created: 2021-04-16
@@ -34022,7 +34027,7 @@
     et donc de son carbone : les pertes sont d''environ 18% supérieures aux gains.
     "C’est la première fois qu''on a des chiffres qui montrent qu''on a basculé et
     que l''Amazonie brésilienne est émettrice" nette de carbone, explique l''un des
-    auteur de l''étude parue en mars 2021.
+    auteurs de l''étude parue en mars 2021.
 
     Pour l''instant, a priori, "les autres pays compensent les pertes de l''Amazonie
     brésilienne" et ainsi "l''ensemble de l''Amazonie n’a pas encore basculé, mais
@@ -34351,7 +34356,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Philippe Pernin
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-02-23
   created: 2021-02-26
