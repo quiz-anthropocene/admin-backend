@@ -24752,10 +24752,10 @@
     Mais elle est loin d’être représentative de l’impact majeur des vols sur le climat.\
     \ Les trainées de condensation, ces nuages blancs derrière les avions contribuent\
     \ en effet également à l'effet de serre. Au total, l'impact est estimé 3 fois\
-    \ plus élevé, soit 7.5 %"
+    \ plus élevé, soit 7,5 %"
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://bonpote.com/pourquoi-arreter-lavion-ne-devrait-plus-etre-un-debat/?fbclid=IwAR0PaMr4N5MTpEIEn4C6SZNBOLhpAnORrGJ1eTpFyMQJonbAWkiP0b72GA0
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/700%20V1.png
@@ -25234,13 +25234,34 @@
   answer_option_d: '15350'
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: 3,500 aéroports commerciaux, c'est en moyenne une vingtaine
-    par pays, sachant qu'il y a une concentration dans le monde occidental.
+  answer_explanation: '3500 aéroports commerciaux, c''est en moyenne une vingtaine
+    par pays, sachant qu''il y a une concentration dans le monde occidental...
+
+    Les aéroports font face à 2 difficultés
+
+    Pour les aéroports existants :
+
+    La taille des villes grandissantes rend la cohabitation avec les riverains difficile
+    de partout dans le monde Roissy, Toulouse, Nantes, mais aussi Heathrow, Schiphol,
+    Sydney…. : nuisances, bruit, horaires …
+
+    Pour les extensions ou nouveaux aéroports, nouveaux terminaux :
+
+    Là encore on rencontre de nombreuses remises en cause : Infrastructures lourdes,
+    accès, parkings, nouvelles pistes, artificialisation des sols.
+
+    Les exemples sont nombreux : Roissy, Nice, Marseille, Andorre, Heathrow, …
+
+    Sans parler des aéroports « fantômes » qui ne voient passer que très peu d’avion
+    ( voir liste Wikipédia) Ciudad Real ou Berlin…
+
+    En France ces projets d’extension sont l’objet d’une des 150 propositions de la
+    CCC.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
-  answer_scientific_url: https://aci.aero/sponsorships/
-  answer_reading_recommendation: ''
+  answer_scientific_url: ''
+  answer_reading_recommendation: voir site de l'ACI "Airport Council international"
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/712.png
   answer_image_explanation: ''
   answer_extra_info: ''
@@ -26053,9 +26074,11 @@
   has_ordered_answers: false
   answer_explanation: 'La réponse est :
 
-    0% sur les vols internationaux
+    0% sur les vols internationaux, soit environ 40c€ le litre *
 
-    10% sur les vols nationaux'
+    10% sur les vols nationaux, soit environ 44c€ le litre *
+
+    * Selon les cours du pétrole'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ouest-france.fr/leditiondusoir/2018-01-18/pourquoi-le-kerosene-est-il-completement-detaxe-83f0840c-e9bc-4e3b-ab81-83495ba02ee5
@@ -27039,7 +27062,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -32058,12 +32081,12 @@
   answer_accessible_url: https://eco-calculateur.dta.aviation-civile.gouv.fr/
   answer_scientific_url: https://www.oui.sncf/aide/calcul-des-emissions-de-co2-sur-votre-trajet-en-train
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/910.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/910.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-01-31
   created: 2021-02-01
   updated: 2021-02-01
@@ -34516,9 +34539,9 @@
   answer_video: ''
   answer_accessible_url: https://www.air-journal.fr/2019-03-15-200-millions-de-passagers-aeriens-en-france-5211129.html
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
-  answer_reading_recommendation: Paragraphe 4.3 Page 5 / fig. 3 page 6
+  answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/1012.png
-  answer_image_explanation: ''
+  answer_image_explanation: Paragraphe 4.3 Page 5 / fig. 3 page 6 (version pdf)
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
