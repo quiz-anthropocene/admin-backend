@@ -25222,7 +25222,7 @@
   - 217
   - 224
 - id: 712
-  text: Combien y a-t-il d'aéroports dans le monde en 2019 ?
+  text: Combien y a-t-il d'aéroports dans le monde (chiffres de 2019) ?
   hint: Et pas tous  saturés
   type: QCM
   category: 2
@@ -25234,40 +25234,30 @@
   answer_option_d: '15350'
   answer_correct: c
   has_ordered_answers: false
-  answer_explanation: '3500 aéroports commerciaux, c''est en moyenne une vingtaine
-    par pays, sachant qu''il y a une concentration dans le monde occidental...
-
-    Les aéroports font face à 2 difficultés
-
-    Pour les aéroports existants :
-
-    La taille des villes grandissantes rend la cohabitation avec les riverains difficile
-    de partout dans le monde Roissy, Toulouse, Nantes, mais aussi Heathrow, Schiphol,
-    Sydney…. : nuisances, bruit, horaires …
-
-    Pour les extensions ou nouveaux aéroports, nouveaux terminaux :
-
-    Là encore on rencontre de nombreuses remises en cause : Infrastructures lourdes,
-    accès, parkings, nouvelles pistes, artificialisation des sols.
-
-    Les exemples sont nombreux : Roissy, Nice, Marseille, Andorre, Heathrow, …
-
-    Sans parler des aéroports « fantômes » qui ne voient passer que très peu d’avion
-    ( voir liste Wikipédia) Ciudad Real ou Berlin…
-
-    En France ces projets d’extension sont l’objet d’une des 150 propositions de la
-    CCC.'
+  answer_explanation: "3,500 aéroports commerciaux, c'est en moyenne une vingtaine\
+    \ par pays, sachant qu'il y a une concentration dans le monde occidental. Les\
+    \ aéroports font face à 2 difficultés. Pour les aéroports existants, la taille\
+    \ des villes grandissantes rend la cohabitation avec les riverains difficile.\
+    \ Pensons à Roissy, Toulouse, Nantes, mais aussi Heathrow, Schiphol, Sydney….\
+    \ nuisances, bruit, horaires…\nPour les extensions ou nouveaux aéroports, nouveaux\
+    \ terminaux, là encore, on rencontre de nombreuses remises en cause : infrastructures\
+    \ lourdes, accès, parkings, nouvelles pistes, artificialisation des sols. Des\
+    \ exemples ? Les projets d'extension de : Roissy, Nice, Marseille, Andorre, Heathrow,…En\
+    \ France ces projets d’extension sont l’objet d’une des 150 propositions de la\
+    \ convention citoyenne pour le climat. \nSans parler des aéroports « fantômes\
+    \ » qui ne voient passer que très peu d’avion ( voir liste Wikipédia) Ciudad Real\
+    \ ou Berlin…"
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: ''
-  answer_reading_recommendation: voir site de l'ACI "Airport Council international"
+  answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/712.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-01-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -30407,12 +30397,15 @@
   answer_option_d: 150 g CO2e
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Selon l'organisation Carbon Literacy Project, un courriel standard
-    génère environ 4 g de CO2 équivalent...mais 306 milliards de courriels de ce type
-    circulent au quotidien (2020), 11 690 milliards courriels par an, c'est donc au
-    total 1,2 Mt CO2e /jour et 450 Mt CO2e par an ! Mais un courriel avec une pièce
-    jointe volumineuse produit jusqu'à 50 g de CO2. Voire encore beaucoup plus s'il
-    est multi-destinataires.
+  answer_explanation: 'Selon l''organisation Carbon Literacy Project, un courriel
+    standard génère environ 4 g de CO2 équivalent...mais 306 milliards de courriels
+    de ce type circulent au quotidien (2020), 11 690 milliards courriels par an, c''est
+    donc au total 1,2 Mt CO2e /jour et 450 Mt CO2e par an ! Mais un courriel avec
+    une pièce jointe volumineuse produit jusqu''à 50 g de CO2. Multiplié par le nombre
+    de destinataires, le cas échéant.
+
+    En moyenne, un Français reçoit 39 mails par jour, ce qui émet autant de CO2e qu''une
+    baguette de pain, s''il sont sans pièces jointes. '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.futura-sciences.com/planete/questions-reponses/eco-consommation-empreinte-carbone-e-mail-10840/
@@ -30423,7 +30416,7 @@
   answer_extra_info: ''
   author: Alain Servigne
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: A valider
   added: 2021-01-26
   created: 2021-01-26
   updated: 2021-01-26
