@@ -4689,8 +4689,8 @@
   - 142
   - 161
 - id: 131
-  text: La caractéristique des gaz à effet de serre est d’absorber un type de rayonnement.
-    Lequel ?
+  text: La caractéristique des gaz à effet de serre est d’absorber un  rayonnement.
+    Oui, mais lequel ?
   hint: ''
   type: QCM
   category: 1
@@ -4702,15 +4702,22 @@
   answer_option_d: Les ultraviolets
   answer_correct: a
   has_ordered_answers: false
-  answer_explanation: Les gaz à effet de serre absorbent le rayonnement infrarouge
+  answer_explanation: 'Les gaz à effet de serre absorbent le rayonnement infrarouge
     émis par la terre, puis ré-émettent cette chaleur dans toutes les directions.
+    Les échanges d''énergie entre le sol et l’atmosphère, dont les gaz à effet de
+    serre, résultent en un «piégeage» de l''énergie rayonnée. On peut se représenter
+    l''effet de serre comme une couette : sous la couette, on est juste bien en termes
+    de température, la couette, c’est l’effet de serre naturel. Tous les GES que l’homme
+    met dans l’atmosphère viennent rajouter des plumes dans la couette et il fait
+    donc de plus en plus chaud.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.m.wikipedia.org/wiki/Effet_de_serre
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/029.jpg
-  answer_image_explanation: ''
+  answer_image_url: https://sites.uclouvain.be/teclim-conferences/Climat/Effet_de_serre_files/droppedImage.jpg
+  answer_image_explanation: Graphique établi sur la base du 4ème rapport d’évaluation
+    du GIEC, 2007 (AR4, WGI)
   answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
@@ -24735,8 +24742,7 @@
   - 33
   - 217
 - id: 700
-  text: 'Quelle est la part du CO2 de l''aviation dans les émissions mondiale  2019
-    ? '
+  text: 'Quelle est la part de l''aviation dans les émissions mondiale en 2019 ? '
   hint: Un train peut en cacher un autre
   type: QCM
   category: 3
@@ -24748,17 +24754,16 @@
   answer_option_d: 12 %
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: "La part du CO2 seul est de 2.7% des émissions mondiales. \n\
-    Mais elle est loin d’être représentative de l’impact majeur des vols sur le climat.\
-    \ Les trainées de condensation, ces nuages blancs derrière les avions contribuent\
-    \ en effet également à l'effet de serre. Au total, l'impact est estimé 3 fois\
-    \ plus élevé, soit 7,5 %"
+  answer_explanation: La part du CO2 seul est de 2,7% des émissions mondiales. Mais
+    elle est loin d’être représentative de l’impact total du secteur aérien. Les trainées
+    de condensation, ces nuages blancs derrière les avions contribuent en effet également
+    à l'effet de serre. Au total, l'impact est estimé à 3 fois plus, soit 7,5 %
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://bonpote.com/pourquoi-arreter-lavion-ne-devrait-plus-etre-un-debat/?fbclid=IwAR0PaMr4N5MTpEIEn4C6SZNBOLhpAnORrGJ1eTpFyMQJonbAWkiP0b72GA0
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/700%20V1.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/700%20V2.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25145,31 +25150,29 @@
   category: 2
   difficulty: 2
   language: Français
-  answer_option_a: 0.5 % par an
+  answer_option_a: 0,5 %
   answer_option_b: 4.3 %
   answer_option_c: 6 %
   answer_option_d: 11 %
   answer_correct: c
   has_ordered_answers: false
   answer_explanation: 'Si le transport aérien croît en moyenne de 6 % par an, les
-    écarts régionaux demeurent considérables :
-
-    Sa croissance est de l’ordre de 8 à 10 % dans les pays asiatiques ou du MO, mais
-    de 3 à 4 % « seulement » en Europe ou aux États-Unis.
-
+    écarts régionaux demeurent considérables : de l’ordre de 8 à 10 % dans les pays
+    asiatiques et du Moyen-Orient, pour de 3 à 4 % en Europe ou aux États-Unis.
 
     Cette croissance est favorisée par les exonérations multiples de taxes.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.icao.int/Newsroom/Pages/FR/Solid-passenger-traffic-growth-and-moderate-air-cargo-demand-in-2018.aspx
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/710-1.png
-  answer_image_explanation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/710-1.png
+  answer_image_explanation: Forte croissance du trafic passagers et demande de fret
+    aérien modérée en 2018
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-01-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -25245,8 +25248,7 @@
     \ exemples ? Les projets d'extension de : Roissy, Nice, Marseille, Andorre, Heathrow,…En\
     \ France ces projets d’extension sont l’objet d’une des 150 propositions de la\
     \ convention citoyenne pour le climat. \nSans parler des aéroports « fantômes\
-    \ » qui ne voient passer que très peu d’avion ( voir liste Wikipédia) Ciudad Real\
-    \ ou Berlin…"
+    \ » qui ne voient passer que très peu d’avions. On peut citer Ciudad Real ou Berlin."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
@@ -25257,7 +25259,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-01-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -25330,7 +25332,7 @@
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/714.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/714-1r.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26074,7 +26076,7 @@
   answer_accessible_url: https://www.ouest-france.fr/leditiondusoir/2018-01-18/pourquoi-le-kerosene-est-il-completement-detaxe-83f0840c-e9bc-4e3b-ab81-83495ba02ee5
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/731%20735.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26219,7 +26221,7 @@
 - id: 735
   text: Dans l'Union Européenne, quelle est la perte de revenu provenant des exemptions
     de taxe sur le kérosène ?
-  hint: Et finalement payé par ceux qui ne prennent pas l'avion
+  hint: ''
   type: QCM
   category: 5
   difficulty: 2
@@ -26230,29 +26232,24 @@
   answer_option_d: 40 Mds €
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: ' 40 Milliards d''€uro,...
-
-    Les avionneurs et les compagnies aériennes bénéficient de subventions importantes.
-
-    Tout le monde - y compris ceux qui ne volent pas - paient ces subventions.
-
+  answer_explanation: Les avionneurs et les compagnies aériennes bénéficient de subventions
+    importantes. Tout le monde - y compris ceux qui ne volent pas - paient ces subventions.
     A l’heure de l’urgence climatique se pose la question de la remise en cause des
-    ces niches fiscales sachant que le transport aérien est le mode de transport qui
-    pollue le plus par unité de temps.
-
-    Cela crée une distorsion de concurrence avec le train, qui sur les longues distances
-    pollue entre 40 et 80 fois moins que l’avion.'
-  answer_audio: ''
+    ces niches fiscales, sachant que le transport aérien est le mode de transport
+    qui pollue le plus par unité de temps. Cela crée une distorsion de concurrence
+    avec le train, qui sur les longues distances pollue entre 40 et 80 fois moins
+    que l’avion.
+  answer_audio: https://www.franceculture.fr/emissions/les-nouvelles-de-leco/les-nouvelles-de-leco-du-mercredi-22-mai-2019
   answer_video: ''
-  answer_accessible_url: http://www.ftwatch.at/wp-content/uploads/2017/10/FT-Watch_Green-Flying_2017.pdf
-  answer_scientific_url: https://www.franceculture.fr/emissions/les-nouvelles-de-leco/les-nouvelles-de-leco-du-mercredi-22-mai-2019
+  answer_accessible_url: ''
+  answer_scientific_url: http://www.ftwatch.at/wp-content/uploads/2017/10/FT-Watch_Green-Flying_2017.pdf
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/735.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/731%20735.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-01-05
   created: 2021-01-06
   updated: 2021-01-06
@@ -27048,7 +27045,21 @@
   answer_option_d: 8%
   answer_correct: a
   has_ordered_answers: false
-  answer_explanation: 4% en 2018 au niveau mondial,
+  answer_explanation: '40% des vols en jet privé sont des vols à vide
+
+    75% des jets privés sont immatriculés aux USA.
+
+    On admet qu’un vol en jet privé émet entre 5 et 10 fois plus qu’un vol commercial.
+
+    Les 10% des voyageurs les plus fréquents cad 1% de la population mondiale seraient
+    responsables de 50% des émissions.
+
+    Certaines personnes peuvent contribuer jusqu’à 7500 tCO2/an
+
+    Soit env. 750 fois l’empreinte carbone d’un français moyen.
+
+    En prenant en compte les émissions Non CO2 et la tranche des plus pauvres 0.1
+    ton CO2/an on atteint 225000 fois plus.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -28330,40 +28341,46 @@
   answer_option_d: moins d'avion
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: 'Moins d’avion 40%, dans l’ordre :
+  answer_explanation: 'Quel que soit le lieu de résidence, les gens disent qu''il
+    serait plus facile de renoncer à voler pour lutter contre le changement climatique
 
-    Moins d’avion 40 %
+    38% pour les Américains et
 
-    Moins de viande 18%
+    43% pour les Chinois.
 
-    Moins de streaming 18%
+    Ce chiffre est encore plus élevé
 
-    Moins d’habits neufs 14%
+    en Pologne 46%,
 
-    Moins de voiture 10%'
+    en République tchèque 48%,
+
+    en Hongrie 48%,
+
+    en Slovaquie 48% et
+
+    en Croatie 51%.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.eib.org/en/surveys/climate-survey/3rd-climate-survey/what-to-give-up-for-climate-change#anchor-1
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/791.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-13
   created: 2021-01-17
   updated: 2021-01-17
   tags:
   - 33
-  - 86
   - 217
   - 225
 - id: 792
-  text: Quelle est le nombre de vols / semaine de la route aérienne la plus fréquentée
+  text: Quelle est le nombre de vols par semaine de la route aérienne la plus fréquentée
     ?
-  hint: Waouh, quand même
+  hint: ''
   type: QCM
   category: 2
   difficulty: 2
@@ -28374,19 +28391,23 @@
   answer_option_d: '1240'
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: 1240 vols par semaine soit 175 vols par jours on croit "rêver"
-    ou pas...
+  answer_explanation: "L’exemple de la liaison Madrid - Barcelone est éloquent.\n\
+    En 2007, l’avion est le principal mode de transport entre les villes distantes\
+    \ de 485 km : 90 aller-retours quotidiens, et par an : 6.5 millions de passagers,\
+    \ 500,000 tonnes de CO2 émises. \nEn 2008, la ligne ferroviaire AVE à grande vitesse\
+    \ est créée. En 2020, il n'y a plus que 15 vols dans les deux sens, les émissions\
+    \ ont été réduire d'un facteur 8. "
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://fr.wikipedia.org/wiki/Routes_a%C3%A9riennes_les_plus_fr%C3%A9quent%C3%A9es
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.tourhebdo.com/actualites/transport/aerien/bientot-la-fin-des-vols-entre-barcelone-et-madrid-545764.php
+  answer_scientific_url: https://fr.wikipedia.org/wiki/Routes_a%C3%A9riennes_les_plus_fr%C3%A9quent%C3%A9es
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/792.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/792.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-01-17
   created: 2021-01-23
   updated: 2021-01-23
@@ -30404,8 +30425,8 @@
     une pièce jointe volumineuse produit jusqu''à 50 g de CO2. Multiplié par le nombre
     de destinataires, le cas échéant.
 
-    En moyenne, un Français reçoit 39 mails par jour, ce qui émet autant de CO2e qu''une
-    baguette de pain, s''il sont sans pièces jointes. '
+    En moyenne, un Français reçoit 39 mails par jour, ce qui émet autant de CO2e que
+    la fabrication d''une baguette de pain, s''il sont sans pièces jointes. '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.futura-sciences.com/planete/questions-reponses/eco-consommation-empreinte-carbone-e-mail-10840/
@@ -30416,7 +30437,7 @@
   answer_extra_info: ''
   author: Alain Servigne
   validator: Matthieu Massart
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-01-26
   created: 2021-01-26
   updated: 2021-01-26
@@ -32074,7 +32095,7 @@
   answer_accessible_url: https://eco-calculateur.dta.aviation-civile.gouv.fr/
   answer_scientific_url: https://www.oui.sncf/aide/calcul-des-emissions-de-co2-sur-votre-trajet-en-train
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/910.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/910-1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -34511,7 +34532,7 @@
   - 69
 - id: 1012
   text: Quelle est la part des vols internationaux dans le trafic mondial ?
-  hint: Est-ce un progrès ?
+  hint: ''
   type: QCM
   category: 2
   difficulty: 2
@@ -34533,7 +34554,7 @@
   answer_accessible_url: https://www.air-journal.fr/2019-03-15-200-millions-de-passagers-aeriens-en-france-5211129.html
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/1012.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/1012-1.png
   answer_image_explanation: Paragraphe 4.3 Page 5 / fig. 3 page 6 (version pdf)
   answer_extra_info: ''
   author: Restons les pieds sur terre
