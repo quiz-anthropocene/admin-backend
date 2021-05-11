@@ -1,5 +1,5 @@
 - name: Alain Servigne
-  question_count: 8
+  question_count: 9
   quiz_count: 1
 - name: Alix Reverdy
   question_count: 8
@@ -65,7 +65,7 @@
   question_count: 41
   quiz_count: 3
 - name: Restons les pieds sur terre
-  question_count: 2
+  question_count: 6
   quiz_count: 0
 - name: Sous nos pieds
   question_count: 10
