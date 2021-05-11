@@ -872,7 +872,7 @@
     \ le mouvement : <a href=\"http://https://restonslespiedssurterre.fr\">Restons\
     \ les Pieds sur Terre</a>,  <a href=\"https://www.facebook.com/restonslespiedssurterre\
     \ @restonssurterre\">page facebook</a>.</p>"
-  difficulty_average: 2.0
+  difficulty_average: 2.2
   language: Français
   author: Michel Bonnassieux
   image_background_url: https://restonslespiedssurterre.fr/wp-content/uploads/2019/06/OVH-En-tete-Avions-fum%C3%A9e.png
@@ -880,5 +880,5 @@
   publish: false
   spotlight: false
   created: 2021-05-03
-  updated: 2021-05-03
+  updated: 2021-05-10
   tags: []
