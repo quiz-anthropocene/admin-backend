@@ -2744,7 +2744,7 @@
   answer_option_a: A droite
   answer_option_b: A gauche
   answer_option_c: Ca s'équilibre à peu près
-  answer_option_d: A droite
+  answer_option_d: ''
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: C'est ce qu'on appelle la technosphère. Elle a été évaluée à
@@ -25144,7 +25144,7 @@
   - 217
   - 218
 - id: 710
-  text: Quelle était la croissance annuelle du TA en 2019 ?
+  text: Quelle était la croissance annuelle du TA en 2018 ?
   hint: C'est plus qu'à la banque...
   type: QCM
   category: 2
@@ -25163,7 +25163,7 @@
     Cette croissance est favorisée par les exonérations multiples de taxes.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
+  answer_accessible_url: https://www.air-journal.fr/2019-01-02-oaci-43-milliards-de-passagers-aeriens-en-2018-61-5209278.html
   answer_scientific_url: https://www.icao.int/Newsroom/Pages/FR/Solid-passenger-traffic-growth-and-moderate-air-cargo-demand-in-2018.aspx
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/710-1.png
@@ -25311,7 +25311,7 @@
   - 224
 - id: 714
   text: En 2018, quel a été le nombre de vols commerciaux dans le monde ?
-  hint: Pour le TA, le terrain de jeux est sans limites
+  hint: Pour le TA, le terrain de jeux est sans limites ⇒ plus qu'un par seconde
   type: QCM
   category: 2
   difficulty: 2
@@ -25391,10 +25391,10 @@
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: 2 l / 100km
-  answer_option_b: '3.3'
-  answer_option_c: '4.1'
-  answer_option_d: '7'
+  answer_option_a: 2 litre / 100 km
+  answer_option_b: 3.3 litre / 100 km
+  answer_option_c: 4.1 litre / 100 km
+  answer_option_d: 7 litre / 100 km
   answer_correct: b
   has_ordered_answers: false
   answer_explanation: '3.3 litres au 100 km / passager.
@@ -25894,62 +25894,37 @@
   - 217
   - 218
 - id: 728
-  text: Pouvez-vous citez 5 exemples d'effets rebond ?
+  text: 'Parmi ces innovations, lesquelles ont généré un effet rebond ? '
   hint: Vous allez bien en trouver 3 ?
-  type: QCM
+  type: QCM-RM
   category: 5
   difficulty: 3
   language: Français
-  answer_option_a: Oui
-  answer_option_b: Non
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: a
+  answer_option_a: Les vaccins
+  answer_option_b: La machine à vapeur
+  answer_option_c: La climatisation
+  answer_option_d: L'aviation
+  answer_correct: bcd
   has_ordered_answers: false
-  answer_explanation: 'la machine à vapeur conçue par James Watt,
-
-    Beaucoup plus économe en charbon que les anciens modèles. Plutôt qu’une baisse
-    de la consommation de charbon, c’est le contraire qui s’est produit :
-
-    le gain en efficacité, accru par des machines de plus en plus puissantes et nombreuses,
-    a entraîné une augmentation constante de cette source d’énergie.
-
-    Le covoiturage
-
-    A priori, l’intention est bonne
-
-    Pourtant elle aurait fait baisser le taux de remplissage de la SNCF, et augmente
-    la mobilité de ceux qui la pratiquent.
-
-    La 5G
-
-    Dont on sait déjà que la consommation d''énergie explosera.
-
-    Plusieurs types d’effets sont à craindre.
-
-    Pour remplacer les terminaux tablettes téléphones serveurs...
-
-    Ensuite les usages augmenteront, y compris ceux des film pornos qui mobilisent
-    déjà 80% de la bande passante.
-
-    L''aviation
-
-    Entre 1960 et 2015 :
-
-    La consommation au km a été divisée par 3.
-
-    Le trafic Passager x km à été multiplié par 20
-
-    Les émissions de CO2 multipliées par 7
-
-    Elle peut être transversale
-
-    On peut par exemple se payer un billet d’avion pour Dakar avec les économies faites
-    en chauffant'
+  answer_explanation: "Les effets rebonds sont partout, et surtout dans les innovations\
+    \ technologiques appelées à nous faciliter la vie. Les usages massifs que nous\
+    \ pouvons en faire peuvent se révéler assez délétères.\nLa machine à vapeur conçue\
+    \ par James Watt était beaucoup plus économe en charbon que les anciens modèles.\
+    \ Plutôt qu’une baisse de la consommation globale de charbon, c’est le contraire\
+    \ qui s’est produit : le gain en efficacité, accru par des machines de plus en\
+    \ plus puissantes et nombreuses, a entraîné une augmentation massive de la consommation\
+    \ de charbon.\nLe covoiturage : a priori, l’intention est bonne ! Pourtant elle\
+    \ aurait fait baisser le taux de remplissage de la SNCF, et augmente la mobilité\
+    \ de ceux qui la pratiquent. \nL'aviation : entre 1960 et 2015, la consommation\
+    \ au km a été divisée par 3. Le trafic mesuré en passagers-km à été multiplié\
+    \ par 20, et les émissions de CO2 associées par 7.\nSeule la vaccination, qui\
+    \ n’est pas un acte du quotidien échappe à l’effet rebond.\nl'effet rebond peut\
+    \ aussi être transversal : on peut par exemple se payer un billet d’avion pour\
+    \ Dakar avec les économies faites sur le chauffage !"
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: http://www.decroissance.qc.ca/sites/default/files/journal/Schneider_l_Ecologiste.pdf
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.vie-publique.fr/parole-dexpert/276090-linnovation-technologique-lepreuve-de-lanthropocene
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -26052,7 +26027,7 @@
   - 217
   - 218
 - id: 731
-  text: Quel est le taux de TVA sur le kérosène ?
+  text: Quel est le taux de TVA appliqué sur le kérosène ?
   hint: Question piège
   type: QCM
   category: 2
@@ -26064,19 +26039,60 @@
   answer_option_d: 20%
   answer_correct: ac
   has_ordered_answers: false
-  answer_explanation: 'La réponse est :
+  answer_explanation: 'Question piège car les deux réponses sont vraies :
 
-    0% sur les vols internationaux, soit environ 40c€ le litre *
+    0% sur les vols internationaux, soit environ 40c€ le litre, et
 
     10% sur les vols nationaux, soit environ 44c€ le litre *
 
-    * Selon les cours du pétrole'
+    * Selon les cours du pétrole.
+
+
+    Beaucoup d''associations depuis des années demandent à ce que le kérosène soit
+    taxé comme les carburants des autres activités.
+
+    Plus d’une dizaine de pays Européens ont lancé une initiative en 2020 pour aller
+    dans ce sens.
+
+    Le sujet n’est pas nouveau, le président Chirac, il y a 20 ans, la taxe carbone
+    en 2019 manifestent de cette volonté...
+
+    Si ces mesures pouvaient se comprendre en 1945, elles sont beaucoup moins soutenables
+    aujourd’hui.
+
+    Alors que l’avion est devenu une source d’émissions de CO2 grandissante et que
+    les compagnies aériennes commencent à remplacer les centrales à charbon dans la
+    liste des plus gros émetteurs de GES, actuellement ni l’UE, ni aucun états membres
+    ne taxe le Kérosène.
+
+    Est-ce qu’il est juste de laisser quelques-uns des plus gros émetteurs polluer
+    gratuitement ?
+
+    L’Europe peut faire beaucoup mieux que cela.
+
+    Contrairement aux voitures et camions ou aux trains, les compagnies aériennes
+    ne payent pas de taxes sur les carburants, mais seulement des redevances pour
+    des services qu’elles utilisent.
+
+    Si nous voulons tenir les objectifs de l’Accord de Paris, l’aviation devra faire
+    sa part.
+
+    Une taxe sur le kérosène à l’échelle Européenne permettrait de réduire les émissions
+    de 11% sans effet négatif sur l’économie.
+
+    Taxer le kérosène à 33 centimes par litre rapporterait 27 milliards par an d’Euro
+    à l’Europe.
+
+    Cet argent pourrait être utilisé pour investir dans la mobilité décarbonée et
+    faire revivre le transport ferroviaire.
+
+    Nous avons tous un rôle à jouer.'
   answer_audio: ''
-  answer_video: ''
+  answer_video: https://twitter.com/KarimaDelli/status/1359090887691800576
   answer_accessible_url: https://www.ouest-france.fr/leditiondusoir/2018-01-18/pourquoi-le-kerosene-est-il-completement-detaxe-83f0840c-e9bc-4e3b-ab81-83495ba02ee5
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/731%20735.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/731%20735.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26241,11 +26257,12 @@
     que l’avion.
   answer_audio: https://www.franceculture.fr/emissions/les-nouvelles-de-leco/les-nouvelles-de-leco-du-mercredi-22-mai-2019
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://www.lemonde.fr/planete/article/2019/05/13/climat-une-etude-de-la-commission-europeenne-propose-de-taxer-le-kerosene-des-avions_5461201_3244.html
   answer_scientific_url: http://www.ftwatch.at/wp-content/uploads/2017/10/FT-Watch_Green-Flying_2017.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/731%20735.png
-  answer_image_explanation: ''
+  answer_image_explanation: 'TICPE : Taxe Intérieure sur la Consommation des Produits
+    Energétiques'
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
@@ -26832,13 +26849,13 @@
   answer_option_d: 50%
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Et seulement 20% de la population mondiale à volé au moins une
-    fois dans sa vie. On imagine alors les impacts sur les émissions si ce pourcentage
-    augmentait d’ici 2050, alors que le GIEC demande à l’ensemble des secteurs de
-    réduire leurs émissions.
+  answer_explanation: Soit 845 Millions de personnes. Et seulement 20% de la population
+    mondiale a volé au moins une fois dans sa vie. On imagine alors les impacts sur
+    les émissions si ce pourcentage augmentait d’ici 2050, alors que le GIEC demande
+    à l’ensemble des secteurs d'activité de réduire leurs émissions.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://www.lesechos.fr/industrie-services/tourisme-transport/aerien-1-de-la-population-mondiale-cause-la-moitie-des-emissions-de-co2-1266064#:~:text=Les%20%C2%AB%20habitu%C3%A9s%20%C2%BB%20responsables%20d'une%20grande%20partie%20des%20vols&text=En%202018%2C%20seule%2011%20%25%20de,apr%C3%A8s%20les%20calculs%20des%20chercheurs.
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/750%20752.png
@@ -26904,8 +26921,27 @@
   answer_option_d: 20%
   answer_correct: a
   has_ordered_answers: false
-  answer_explanation: Pas très étonnant puisque une grande part des émissions ne sont
-    pas couvertes par des réglementations contraignantes.
+  answer_explanation: '11% de la population mondiale vole chaque année, et parmi eux,
+    10% sont des « ''frequent fliers'', des voyageurs fréquents. Certains ont même
+    enregistré jusqu’à 300 voyages soit 600 vols par an !
+
+    Cela recouvre des personnes qui profitent de plusieurs lieux de résidences dans
+    le monde, qui voyagent en jet privé ou en première classe, voire dans des suites
+    dont la taille peut être selon les compagnies entre 5 et 10 fois plus grande que
+    la classe économique.
+
+    Par exemple sur A380 de Singapore Airline :
+
+    50% de la cabine correspond à la classe éco pour 400 passagers, 25% de la cabine
+    correspond à la classe affaire pour 60 passagers et 25% de la cabine correspond
+    à la classe Suite pour 12 passagers.
+
+    A noter que les « fréquent fliers » peuvent souvent profiter de miles qui sont
+    des invitations à la croissance du trafic aérien.
+
+    Les auteurs de l’étude en référence soulignent que pour cette population de «
+    fréquent flyer » sont aussi souvent, sans surprise, de gros consommateurs de trajets
+    en superyachts et en hélicoptères.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -27045,24 +27081,17 @@
   answer_option_d: 8%
   answer_correct: a
   has_ordered_answers: false
-  answer_explanation: '40% des vols en jet privé sont des vols à vide
+  answer_explanation: 'On admet qu’un vol en jet privé émet entre 5 et 10 fois plus
+    qu’un vol commercial par passager.  Et 40% de ces vols se font à vide. Les 10%
+    des voyageurs les plus fréquents - 1% de la population mondiale - seraient responsables
+    de 50% des émissions du secteur aérien ! Les plus gros voyageurs peuvent contribuer
+    jusqu’à 7,500 tCO2/an, soit 750 fois l’empreinte moyenne d’un français !! C''est
+    un luxe typiquement américain : les 3/4 des jets sont immatriculés aux Etats-Unis.
 
-    75% des jets privés sont immatriculés aux USA.
-
-    On admet qu’un vol en jet privé émet entre 5 et 10 fois plus qu’un vol commercial.
-
-    Les 10% des voyageurs les plus fréquents cad 1% de la population mondiale seraient
-    responsables de 50% des émissions.
-
-    Certaines personnes peuvent contribuer jusqu’à 7500 tCO2/an
-
-    Soit env. 750 fois l’empreinte carbone d’un français moyen.
-
-    En prenant en compte les émissions Non CO2 et la tranche des plus pauvres 0.1
-    ton CO2/an on atteint 225000 fois plus.'
+    '
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://www.forbes.com/sites/niallmccarthy/2017/03/02/the-countries-where-private-jet-ownership-is-soaring-infographic/?sh=abdab62539e1
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: ''
@@ -28393,17 +28422,20 @@
   has_ordered_answers: false
   answer_explanation: "L’exemple de la liaison Madrid - Barcelone est éloquent.\n\
     En 2007, l’avion est le principal mode de transport entre les villes distantes\
-    \ de 485 km : 90 aller-retours quotidiens, et par an : 6.5 millions de passagers,\
+    \ de 485 km : 90 aller-retours quotidiens, et par an : 6,5 millions de passagers,\
     \ 500,000 tonnes de CO2 émises. \nEn 2008, la ligne ferroviaire AVE à grande vitesse\
     \ est créée. En 2020, il n'y a plus que 15 vols dans les deux sens, les émissions\
-    \ ont été réduire d'un facteur 8. "
+    \ ont été réduites d'un facteur 8. \nCerise sur le gâteau, La SNCF lance un Ouigo\
+    \ Espagnol à 15€ contre un tarif de base à 75€. Cela risque d'être le coup de\
+    \ grâce pour les liaisons aériennes entre les 2 villes. La maire de Barcelone\
+    \ pousse d'ailleurs fortement dans ce sens."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.tourhebdo.com/actualites/transport/aerien/bientot-la-fin-des-vols-entre-barcelone-et-madrid-545764.php
   answer_scientific_url: https://fr.wikipedia.org/wiki/Routes_a%C3%A9riennes_les_plus_fr%C3%A9quent%C3%A9es
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/792.png
-  answer_image_explanation: ''
+  answer_image_explanation: 'Sources : Wikipedia - OAG'
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
@@ -34555,7 +34587,10 @@
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/1012-1.png
-  answer_image_explanation: Paragraphe 4.3 Page 5 / fig. 3 page 6 (version pdf)
+  answer_image_explanation: 'Source Scientifique : L''échelle mondiale, la distribution
+    et la croissance de l''aviation :
+
+    Paragraphe 4.3 Page 5 / fig. 3 page 6 (version pdf)'
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
