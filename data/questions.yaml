@@ -27227,22 +27227,25 @@
   - 17
   - 264
 - id: 760
-  text: L'humanité utilise en une année une masse de matière considérable. Lesquelles
-    de ces affirmations sont vraies ?
+  text: 'L''humanité utilise en une année une masse de matière considérable : 3 milliard
+    de tonnes de fer par an par exemple. Par rapport au métal fer, on consomme également
+    (en masse) ... ?'
   hint: ''
   type: QCM-RM
   category: 2
   difficulty: 3
   language: Français
-  answer_option_a: 10 fois plus de sable que de ciment
-  answer_option_b: Presque 100 fois plus d'eau douce que de sable
-  answer_option_c: 5 fois plus de fer que de ciment et d'aluminium
-  answer_option_d: Des milliards de tonnes de fer et de ciment
+  answer_option_a: 10 fois plus de sable
+  answer_option_b: 1000 fois plus d'eau douce
+  answer_option_c: 2 fois moins d'aluminium
+  answer_option_d: A peu près autant en ciment
   answer_correct: abd
   has_ordered_answers: false
-  answer_explanation: Si l'on compte en milliards de tonnes par an, l'eau douce exploitée
-    pointe à 4,000, le sable à 41, le gravier 9, le ciment 4. En revanche, la consommation
-    de fer n'est 'que' de 3 milliards de tonnes, et l'aluminium 60 millions de tonnes.
+  answer_explanation: "Si l'on compte en milliards de tonnes par an, l'eau douce exploitée\
+    \ pointe à 4,000, le sable à 41, le gravier 9, le ciment 4. En revanche, la consommation\
+    \ de fer n'est 'que' de 3 milliards de tonnes (et l'aluminium 60 millions de tonnes).\
+    \ \nAutrement dit pour 1 tonne de fer on consomme quasiment autant de ciment,\
+    \ mais 10 fois plus de sable et 1000 fois plus d'eau douce)."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.oecd.org/fr/environnement/l-utilisation-de-matieres-premieres-devrait-doubler-d-ici-2060-ce-qui-aura-de-graves-repercussions-sur-l-environnement.htm
@@ -30615,7 +30618,7 @@
     dû aux lois de la physique mais aussi à notre propension à perpétuer la croissance,
     qui va demander encore longtemps des grandes filières d'approvisionnement.
   answer_audio: ''
-  answer_video: ''
+  answer_video: https://www.coursera.org/learn/ecologie-politique/lecture/Swpgv/v3-l-echec-du-developpement-durable-et-ses-raisons
   answer_accessible_url: https://solar.lowtechmagazine.com/fr/2020/01/how-circular-is-the-circular-economy.html
   answer_scientific_url: https://www.circularity-gap.world/global
   answer_reading_recommendation: ''
@@ -31301,8 +31304,8 @@
   - 197
   - 216
 - id: 872
-  text: De combien réduit-on son impact environnemental en optant pour l'achat d'un
-    smartphone reconditionné plutôt que d'un neuf ?
+  text: De combien réduit-on son impact environnemental (carbone, matériaux ...) en
+    optant pour l'achat d'un smartphone reconditionné plutôt que d'un neuf ?
   hint: ''
   type: QCM
   category: 2
