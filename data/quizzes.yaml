@@ -861,18 +861,18 @@
 - id: 74
   name: Faut-il encore prendre l'avion ?
   introduction: "<p>Comme son nom l'indique, le collectif <a href=\"https://restonslespiedssurterre.fr/\"\
-    >Restons Les Pieds Sur Terre</a>, (émanation française de <a href=\"https://stay-grounded.org\"\
-    >Stay Grounded</a>) milite pour une réduction massive de l'usage de l'avion. Avec\
+    >Restons Les Pieds Sur Terre</a>, émanation française de <a href=\"https://stay-grounded.org\"\
+    >Stay Grounded</a>, milite pour une réduction massive de l'usage de l'avion. Avec\
     \ eux, découvrez les vrais impacts du transport aérien.</p>\r\n\r\n<p> </p>\r\n\
     \r\n<p>Un quiz créé par Michel Bonnassieux, fondateur du site</p>"
-  conclusion: "<p>L’empreinte carbone individuelle des voyageurs aériens, surtout\
-    \ le fait des populations aisée, est très intense, et un seul vol inernational\
-    \ explosera votre budget carbone annuel. Vous voilà mieux armé pour comprendre\
-    \ les vrais impacts du transport aérien.</p>\r\n\r\n<p>Pour aller plus loin, rejoindre\
-    \ le mouvement : <a href=\"http://https://restonslespiedssurterre.fr\">Restons\
-    \ les Pieds sur Terre</a>,  <a href=\"https://www.facebook.com/restonslespiedssurterre\
-    \ @restonssurterre\">page facebook</a>.</p>"
-  difficulty_average: 2.2
+  conclusion: "<p>L’empreinte carbone individuelle des voyageurs aériens, majoritairement\
+    \ le fait des populations aisées de la planète, est très intense et un seul vol\
+    \ inernational explosera votre budget carbone annuel. Vous voilà mieux armé pour\
+    \ comprendre les vrais impacts du transport aérien.</p>\r\n\r\n<p>Pour aller plus\
+    \ loin, <a href=\"http://https://restonslespiedssurterre.fr\">Restons les Pieds\
+    \ sur Terre</a>,  <a href=\"https://www.facebook.com/restonslespiedssurterre @restonssurterre\"\
+    >page facebook</a>.</p>"
+  difficulty_average: 2.3
   language: Français
   author: Michel Bonnassieux
   image_background_url: https://restonslespiedssurterre.fr/wp-content/uploads/2019/06/OVH-En-tete-Avions-fum%C3%A9e.png
@@ -880,5 +880,7 @@
   publish: false
   spotlight: false
   created: 2021-05-03
-  updated: 2021-05-10
-  tags: []
+  updated: 2021-05-19
+  tags:
+  - 33
+  - 34
