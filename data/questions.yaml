@@ -25144,14 +25144,14 @@
   - 217
   - 218
 - id: 710
-  text: Quelle était la croissance annuelle du TA en 2018 ?
+  text: Quelle a été la croissance annuelle du trafic aérien en 2018 ?
   hint: C'est plus qu'à la banque...
   type: QCM
   category: 2
   difficulty: 2
   language: Français
   answer_option_a: 0,5 %
-  answer_option_b: 4.3 %
+  answer_option_b: 4,3 %
   answer_option_c: 6 %
   answer_option_d: 11 %
   answer_correct: c
@@ -25166,9 +25166,8 @@
   answer_accessible_url: https://www.air-journal.fr/2019-01-02-oaci-43-milliards-de-passagers-aeriens-en-2018-61-5209278.html
   answer_scientific_url: https://www.icao.int/Newsroom/Pages/FR/Solid-passenger-traffic-growth-and-moderate-air-cargo-demand-in-2018.aspx
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/710-11.png
-  answer_image_explanation: Forte croissance du trafic passagers et demande de fret
-    aérien modérée en 2018
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/710-11.png
+  answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
@@ -25917,10 +25916,10 @@
     \ aurait fait baisser le taux de remplissage de la SNCF, et augmente la mobilité\
     \ de ceux qui la pratiquent. \nL'aviation : entre 1960 et 2015, la consommation\
     \ au km a été divisée par 3. Le trafic mesuré en passagers-km à été multiplié\
-    \ par 20, et les émissions de CO2 associées par 7.\nSeule la vaccination, qui\
-    \ n’est pas un acte du quotidien échappe à l’effet rebond.\nl'effet rebond peut\
-    \ aussi être transversal : on peut par exemple se payer un billet d’avion pour\
-    \ Dakar avec les économies faites sur le chauffage !"
+    \ par 20, et les émissions de CO2 associées par 7.\nSeule la vaccination parmi\
+    \ les options proposées échappe à l’effet rebond.\nNotons enfin que l'effet rebond\
+    \ peut aussi être transversal : on peut par exemple se payer un billet d’avion\
+    \ pour Dakar avec les économies faites sur le chauffage."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: http://www.decroissance.qc.ca/sites/default/files/journal/Schneider_l_Ecologiste.pdf
@@ -26235,26 +26234,26 @@
   - 85
   - 217
 - id: 735
-  text: Dans l'Union Européenne, quelle est la perte de revenu provenant des exemptions
-    de taxe sur le kérosène ?
+  text: Au sein de l'Union Européenne, quelle est la perte de revenu provenant des
+    exemptions de taxe sur le kérosène ?
   hint: ''
   type: QCM
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: 4,6 Mds €
-  answer_option_b: 12,4 Mds €
-  answer_option_c: 28,0 Mds €
-  answer_option_d: 40 Mds €
+  answer_option_a: 4,6 milliards €
+  answer_option_b: 12,4 milliards €
+  answer_option_c: 28,0 milliards €
+  answer_option_d: 40 milliards €
   answer_correct: d
   has_ordered_answers: false
   answer_explanation: Les avionneurs et les compagnies aériennes bénéficient de subventions
-    importantes. Tout le monde - y compris ceux qui ne volent pas - paient ces subventions.
-    A l’heure de l’urgence climatique se pose la question de la remise en cause des
-    ces niches fiscales, sachant que le transport aérien est le mode de transport
-    qui pollue le plus par unité de temps. Cela crée une distorsion de concurrence
-    avec le train, qui sur les longues distances pollue entre 40 et 80 fois moins
-    que l’avion.
+    importantes. Tout le monde - y compris les contribuables qui ne volent pas - paient
+    ces subventions. A l’heure de l’urgence climatique se pose la question de la remise
+    en cause des ces niches fiscales, sachant que le transport aérien est le mode
+    de transport qui pollue le plus par unité de temps. Cela crée une distorsion de
+    concurrence avec le train, qui sur les longues distances pollue entre 40 et 80
+    fois moins que l’avion.
   answer_audio: https://www.franceculture.fr/emissions/les-nouvelles-de-leco/les-nouvelles-de-leco-du-mercredi-22-mai-2019
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2019/05/13/climat-une-etude-de-la-commission-europeenne-propose-de-taxer-le-kerosene-des-avions_5461201_3244.html
@@ -26923,18 +26922,13 @@
   has_ordered_answers: false
   answer_explanation: '11% de la population mondiale vole chaque année, et parmi eux,
     10% sont des « ''frequent fliers'', des voyageurs fréquents. Certains ont même
-    enregistré jusqu’à 300 voyages soit 600 vols par an !
-
-    Cela recouvre des personnes qui profitent de plusieurs lieux de résidences dans
-    le monde, qui voyagent en jet privé ou en première classe, voire dans des suites
-    dont la taille peut être selon les compagnies entre 5 et 10 fois plus grande que
-    la classe économique.
-
-    Par exemple sur A380 de Singapore Airline :
-
-    50% de la cabine correspond à la classe éco pour 400 passagers, 25% de la cabine
-    correspond à la classe affaire pour 60 passagers et 25% de la cabine correspond
-    à la classe Suite pour 12 passagers.
+    enregistré 600 vols par an ! Cela recouvre des voyageurs qui profitent de plusieurs
+    lieux de résidences dans le monde, qui voyagent en jet privé ou en première classe,
+    voire dans des suites dont la taille peut être selon les compagnies entre 5 et
+    10 fois plus grande que la classe économique. Par exemple sur les A380 de Singapore
+    Airline : 50% de la cabine correspond à la classe éco pour 400 passagers, 25%
+    de la cabine correspond à la classe affaire pour 60 passagers et 25% de la cabine
+    correspond à la classe Suite pour 12 passagers.
 
     A noter que les « fréquent fliers » peuvent souvent profiter de miles qui sont
     des invitations à la croissance du trafic aérien.
@@ -32121,8 +32115,8 @@
   has_ordered_answers: true
   answer_explanation: Le calcul peut être fait sur le site de la DGAC donné ci-dessous.
     (Le site ne prend pas en compte les émissions dites "non CO2"). Le train TGV est
-    imbattable avec 1.73 g CO2e/km. (source SNCF). A noter que les consommations par
-    km de l’avion sont très variables sur les destinations domestiques de 3.7 à 7
+    imbattable avec 1,73 g CO2e/km. (source SNCF). A noter que les consommations par
+    km de l’avion sont très variables sur les destinations domestiques de 3,7 à 7
     litres aux 100 km. Cela dépend des types d’avions, des distances et du coefficient
     de remplissage de l'avion.
   answer_audio: ''
@@ -32130,12 +32124,12 @@
   answer_accessible_url: https://eco-calculateur.dta.aviation-civile.gouv.fr/
   answer_scientific_url: https://www.oui.sncf/aide/calcul-des-emissions-de-co2-sur-votre-trajet-en-train
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/910-1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/910-1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-01-31
   created: 2021-02-01
   updated: 2021-02-01
