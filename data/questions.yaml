@@ -24748,27 +24748,28 @@
   category: 3
   difficulty: 3
   language: Français
-  answer_option_a: 0,5 %
-  answer_option_b: 2,5 %
-  answer_option_c: 6,2 %
-  answer_option_d: 12 %
+  answer_option_a: 0,5%
+  answer_option_b: 2,5%
+  answer_option_c: 6,2%
+  answer_option_d: 12%
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: La part du CO2 seul est de 2,7% des émissions mondiales. Mais
-    elle est loin d’être représentative de l’impact total du secteur aérien. Les trainées
-    de condensation, ces nuages blancs derrière les avions contribuent en effet également
-    à l'effet de serre. Au total, l'impact est estimé à 3 fois plus, soit 7,5 %
+  answer_explanation: 'La part du CO2 seul est de 2,7% des émissions mondiales. Mais
+    elle est loin d’être représentative de l’impact total du secteur aérien : les
+    trainées de condensation, ces nuages blancs derrière les avions contribuent en
+    effet également à l''effet de serre. Au total, l''impact est estimé à 3 fois plus,
+    soit 7,5 %'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://bonpote.com/pourquoi-arreter-lavion-ne-devrait-plus-etre-un-debat/?fbclid=IwAR0PaMr4N5MTpEIEn4C6SZNBOLhpAnORrGJ1eTpFyMQJonbAWkiP0b72GA0
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/700%20V21.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/700%20V21.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-01-04
   created: 2021-01-06
   updated: 2021-01-06
@@ -25310,10 +25311,11 @@
   - 224
 - id: 714
   text: En 2018, quel a été le nombre de vols commerciaux dans le monde ?
-  hint: Pour le TA, le terrain de jeux est sans limites ⇒ plus qu'un par seconde
+  hint: Pour le transport aérien, le terrain de jeux est sans limites, plus qu'un
+    par seconde
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 3
   language: Français
   answer_option_a: 6 millions
   answer_option_b: 12 millions
@@ -25321,17 +25323,15 @@
   answer_option_d: 38 millions
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: 'C’est presque 110 000 vols commerciaux par jour en moyenne,
-
-    Avec des pointes en juin à 230 000 vols.
-
-    L’urgence climatique, questionne le modèle de développement du transport aérien.'
+  answer_explanation: C’est presque 110,000 vols commerciaux par jour en moyenne,
+    avec des pointes en juin à 230 000 vols. L’urgence climatique, questionne le modèle
+    de développement du transport aérien.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/714-1r.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/714-1r.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -25390,25 +25390,17 @@
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: 2 litre / 100 km
-  answer_option_b: 3.3 litre / 100 km
-  answer_option_c: 4.1 litre / 100 km
-  answer_option_d: 7 litre / 100 km
+  answer_option_a: 2 litres/100 km
+  answer_option_b: 3,3 litres/100 km
+  answer_option_c: 4,1 litres/100 km
+  answer_option_d: 7 litres/100 km
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: '3.3 litres au 100 km / passager.
-
-    AF est parmi les flottes les plus modernes au monde.
-
-    Les gains faciles sont derrière nous malgré les belles promesses d’efficacité
-    énergétique.
-
-    Cela suppose que l’avion soit plein.
-
-    Une petite voiture et 2 passagers font mieux que l''avion. Il faut admettre que
-    ce ne sont pas les mêmes usages.
-
-    Les vols courte distance (<1000 km) peuvent atteindre 7 litres / 100 km / pax'
+  answer_explanation: "Cela suppose que l’avion soit plein. Pour les vols courte distance\
+    \ (<1000 km), cela peut 7 litres/100 km/passager. Une petite voiture avec 2 passagers\
+    \ consomme moins que l'avion - mais les distances à parcourir ne sont pas comparables.\
+    \ Ces chiffres sont pour Air France, dont la flotte est l'une des plus modernes\
+    \ au monde, avec une consommation au km moindre que la moyenne mondiale. \n\n\n"
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://corporate.airfrance.com/sites/default/files/dp_dd_fr_0.pdf
@@ -26908,7 +26900,8 @@
   - 224
 - id: 752
   text: Si l'on classe les passagers aériens selon leurs émissions, quel pourcentage
-    est responsable de la moitié des émissions de gaz à effet de serre ?
+    d'entre eux est responsable de la moitié des émissions de gaz à effet de serre
+    ?
   hint: En ont-ils conscience ?
   type: QCM
   category: 2
@@ -29201,8 +29194,9 @@
   - 32
 - id: 816
   text: La concentration en CO2 dans l’atmosphère a atteint 415 ppm en 2020, soit
-    140 ppm de plus qu’au début de la révolution industrielle. Durant le dernier million
-    d'années, combien de fois cette concentration a dépassé 400 ppm ?
+    140 ppm de plus qu’au début de la révolution industrielle. Avant cela, combien
+    de fois cette concentration a dépassé 400 ppm durant le dernier million d'années
+    ?
   hint: ''
   type: QCM
   category: 1
@@ -29212,13 +29206,11 @@
   answer_option_b: '1'
   answer_option_c: '2'
   answer_option_d: '3'
-  answer_correct: b
+  answer_correct: a
   has_ordered_answers: true
-  answer_explanation: 'La Terre a connu plusieurs périodes inter-glaciaires, mais
-    la concentration en CO2 n''a jamais dépassé les 300 ppm durant le dernier million
-    d''années...
-
-    ...Sauf une seule fois, au début des années 1900, juste après la révolution industrielle. '
+  answer_explanation: La Terre a connu plusieurs périodes inter-glaciaires, mais la
+    concentration en CO2 n'a jamais dépassé les 300 ppm durant le dernier million
+    d'années, avant le début de l'ère industrielle.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -30588,9 +30580,10 @@
   tags:
   - 30
 - id: 854
-  text: Des 100 milliards de tonnes de matière qu'utilise l'économie chaque année,
-    quelle portion pourrait être théoriquement réinjectée en début de chaîne comme
-    ressource (si les processus de circularité étaient parfaits) ?
+  text: L'économie mondiale mobilise chaque année 100 milliards de tonnes. Imaginons
+    une seconde que l'économie soit devenue parfaitement circulaire, quelle proportion
+    de cette matière pourrait théoriquement être réinjectée en début de chaîne comme
+    ressource ?
   hint: la circularité désigne le fait de réutiliser les "déchets" en fin de chaîne
     comme matière première en début de chaîne
   type: QCM
@@ -30869,8 +30862,8 @@
   - 228
   - 229
 - id: 861
-  text: Entre 2005 et 2020, les données totales générées chaque année par l'ensemble
-    des appareils dans le monde ont été multipliées d'un facteur...
+  text: Entre 2005 et 2020, le volume de données totales généré chaque année par l'ensemble
+    des appareils dans le monde a été multiplié d'un facteur de l'ordre de...
   hint: ''
   type: QCM-RM
   category: 2
