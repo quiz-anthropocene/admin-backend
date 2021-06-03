@@ -2886,10 +2886,10 @@
   category: 1
   difficulty: 4
   language: Français
-  answer_option_a: quelques semaines
+  answer_option_a: quelques années
   answer_option_b: quelques siècles
-  answer_option_c: quelques dizaines de milliers d'années
-  answer_option_d: quelques dizaines de millions d'années
+  answer_option_c: quelques milliers d'années
+  answer_option_d: quelques millions d'années
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: Contrairement à ce que l'on voit dans 'L'âge de glace' ou 'Le
@@ -26022,7 +26022,7 @@
   hint: Question piège
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 3
   language: Français
   answer_option_a: 0%
   answer_option_b: 5%
@@ -26030,56 +26030,18 @@
   answer_option_d: 20%
   answer_correct: ac
   has_ordered_answers: false
-  answer_explanation: 'Question piège car les deux réponses sont vraies :
-
-    0% sur les vols internationaux, soit environ 40c€ le litre, et
-
-    10% sur les vols nationaux, soit environ 44c€ le litre *
-
-    * Selon les cours du pétrole.
-
-
-    Beaucoup d''associations depuis des années demandent à ce que le kérosène soit
-    taxé comme les carburants des autres activités.
-
-    Plus d’une dizaine de pays Européens ont lancé une initiative en 2020 pour aller
-    dans ce sens.
-
-    Le sujet n’est pas nouveau, le président Chirac, il y a 20 ans, la taxe carbone
-    en 2019 manifestent de cette volonté...
-
-    Si ces mesures pouvaient se comprendre en 1945, elles sont beaucoup moins soutenables
-    aujourd’hui.
-
-    Alors que l’avion est devenu une source d’émissions de CO2 grandissante et que
-    les compagnies aériennes commencent à remplacer les centrales à charbon dans la
-    liste des plus gros émetteurs de GES, actuellement ni l’UE, ni aucun états membres
-    ne taxe le Kérosène.
-
-    Est-ce qu’il est juste de laisser quelques-uns des plus gros émetteurs polluer
-    gratuitement ?
-
-    L’Europe peut faire beaucoup mieux que cela.
-
-    Contrairement aux voitures et camions ou aux trains, les compagnies aériennes
-    ne payent pas de taxes sur les carburants, mais seulement des redevances pour
-    des services qu’elles utilisent.
-
-    Si nous voulons tenir les objectifs de l’Accord de Paris, l’aviation devra faire
-    sa part.
-
-    Une taxe sur le kérosène à l’échelle Européenne permettrait de réduire les émissions
-    de 11% sans effet négatif sur l’économie.
-
-    Taxer le kérosène à 33 centimes par litre rapporterait 27 milliards par an d’Euro
-    à l’Europe.
-
-    Cet argent pourrait être utilisé pour investir dans la mobilité décarbonée et
-    faire revivre le transport ferroviaire.
-
-    Nous avons tous un rôle à jouer.'
+  answer_explanation: "Question piège car les deux réponses sont vraies :\n0% sur\
+    \ les vols internationaux, soit environ 40c€ le litre, et\n10% sur les vols nationaux,\
+    \ soit environ 44c€ le litre (selon les cours du pétrole en 2021). \nAlors que\
+    \ l’avion est devenu une source d’émissions de CO2 grandissante et que les compagnies\
+    \ aériennes commencent à remplacer les centrales à charbon dans la liste des plus\
+    \ gros émetteurs, actuellement ni l’UE, ni aucun état membres ne taxe le kérosène.\
+    \ Une taxe sur le kérosène à l’échelle Européenne permettrait de réduire les émissions\
+    \ de 11%.\nDe nombreuses associations demandent à ce que le kérosène soit taxé\
+    \ comme les autres carburants et plus d’une dizaine de pays Européens ont lancé\
+    \ une initiative en 2020 dans ce sens.\n"
   answer_audio: ''
-  answer_video: https://twitter.com/KarimaDelli/status/1359090887691800576
+  answer_video: ''
   answer_accessible_url: https://www.ouest-france.fr/leditiondusoir/2018-01-18/pourquoi-le-kerosene-est-il-completement-detaxe-83f0840c-e9bc-4e3b-ab81-83495ba02ee5
   answer_scientific_url: ''
   answer_reading_recommendation: ''
@@ -30985,22 +30947,22 @@
     cardiaques, les cancers
   answer_option_b: Les problèmes cardiaques (malbouffe, stress...), les problèmes
     respiratoires (pollution de l'air, drogues …), le manque d'activité physique (mal
-    de dos, de cou...), le manque de relations sociales (Alzheimer, dépressions),
-    diabètes, accidents de la route.
+    de dos, de cou...), le manque de relations sociales , diabètes, accidents de la
+    route.
   answer_option_c: Causes environnementales (pollutions de l'air, de l'eau, produits
     chimiques …), accidents de la route, Les problèmes cardiaques (malbouffe, stress...),
-    problèmes respiratoires (pollution de l'air, drogues …), diabètes
+    problèmes respiratoires (pollution de l'air, drogues …), diabète
   answer_option_d: Maladies infectieuses, homicides, vieillesse, surpoids, cancer.
   answer_correct: b
   has_ordered_answers: false
   answer_explanation: Les causes ne sont pas toujours bien identifiées, mais l'OMS
     relève que dans les pays riches, la mortalité est due à des problèmes cardiaques,
-    respiratoires, de démence (Alzheimer…), de diabète sucré, accidents de la route
-    et cancers. Les causes de vie en mauvaise santé (DALY) sont les mêmes, en ajoutant
-    les maux de dos et de cou, les usages de drogues et les dépressions. Passer à
-    un mode de vie low-tech permet de limiter ces causes, en faisant plus d'activité
-    physique et conviviales, en supprimant l'hégémonie des voitures et des véhicules
-    rapides, en réduisant la pollution de l'air etc.
+    respiratoires, de démence, de diabète sucré, accidents de la route et cancers.
+    Les causes de vie en mauvaise santé (DALY) sont les mêmes, en ajoutant les maux
+    de dos et de cou, les usages de drogues et les dépressions. Passer à un mode de
+    vie low-tech permet de limiter ces causes, en faisant plus d'activité physique
+    et conviviales, en supprimant l'hégémonie des voitures et des véhicules rapides,
+    en réduisant la pollution de l'air etc.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.who.int/fr/news-room/fact-sheets/detail/the-top-10-causes-of-death
