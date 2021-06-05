@@ -10,8 +10,9 @@ from django.db import IntegrityError
 from django.core.management import BaseCommand
 from django.core.exceptions import ValidationError
 
+from core.models import Configuration
 from api import constants, utilities, utilities_notion
-from api.models import Configuration, Question, Category, Tag, Quiz, Contribution
+from api.models import Question, Category, Tag, Quiz, Contribution
 
 
 SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS = 15

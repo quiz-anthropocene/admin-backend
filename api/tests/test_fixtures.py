@@ -1,8 +1,8 @@
 from django.test import TestCase
 from django.core import management
 
+from core.models import Configuration
 from api.models import (
-    Configuration,
     Category,
     Tag,
     Question,

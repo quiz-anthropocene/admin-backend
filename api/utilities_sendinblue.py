@@ -3,7 +3,7 @@ import requests
 
 from django.conf import settings
 
-from api.models import Configuration
+from core.models import Configuration
 
 
 def newsletter_registration(email):

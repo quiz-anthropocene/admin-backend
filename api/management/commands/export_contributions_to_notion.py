@@ -4,8 +4,9 @@ from django.utils import timezone
 from django.conf import settings
 from django.core.management import BaseCommand
 
+from core.models import Configuration
 from api import utilities_notion
-from api.models import Configuration, Contribution
+from api.models import Contribution
 
 
 configuration = Configuration.get_solo()

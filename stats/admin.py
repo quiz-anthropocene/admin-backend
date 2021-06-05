@@ -5,6 +5,8 @@ from django.contrib import admin
 from django.core import management
 from django.core.serializers.json import DjangoJSONEncoder
 
+from core.models import Configuration
+from core.admin import admin_site, ExportMixin
 from stats import constants
 from stats.models import (
     QuestionAggStat,
@@ -14,8 +16,6 @@ from stats.models import (
     QuizFeedbackEvent,
     DailyStat,
 )
-from api.models import Configuration
-from api.admin import admin_site, ExportMixin
 
 
 class QuestionAggStatAdmin(ExportMixin, admin.ModelAdmin):

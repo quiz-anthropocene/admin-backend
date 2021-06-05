@@ -37,13 +37,16 @@ ALLOWED_HOSTS = [os.environ["HOST"]]
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+]
+
+THIRD_PARTY_APPS = [
     "corsheaders",  # django-cors-headers
     "rest_framework",  # djangorestframework
     "django_extensions",  # django-extensions
@@ -51,9 +54,15 @@ INSTALLED_APPS = [
     "ckeditor",  # django-ckeditor
     "fieldsets_with_inlines",  # django-fieldsets-with-inlines
     "solo",  # django-solo
+]
+
+LOCAL_APPS = [
+    "core",
     "api",
     "stats",
 ]
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
