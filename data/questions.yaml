@@ -7929,13 +7929,13 @@
     l'Homme et de la démocratie... A noter que Cuba a quitté cette zone depuis, et
     qu'aucun pays ne répond donc plus à ces critères.
   answer_audio: ''
-  answer_video: ''
-  answer_accessible_url: https://youtu.be/n3LyVbGUFu4?t=1320
+  answer_video: https://youtu.be/n3LyVbGUFu4?t=1320
+  answer_accessible_url: ''
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: https://www.latoilescoute.net/IMG/png/photo_4-2-resp1200.png
   answer_image_explanation: hag = hectare agricole
-  answer_extra_info: 'vidéo: Gael Giraud'
+  answer_extra_info: ''
   author: Raphael Odini
   validator: Matthieu Massart
   validation_status: Validée
@@ -26020,7 +26020,7 @@
 - id: 731
   text: Quel est le taux de TVA appliqué sur le kérosène ?
   hint: Question piège
-  type: QCM
+  type: QCM-RM
   category: 2
   difficulty: 3
   language: Français
@@ -26050,7 +26050,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Écartée
+  validation_status: Validée
   added: 2021-01-05
   created: 2021-01-06
   updated: 2021-01-06
