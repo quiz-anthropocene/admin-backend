@@ -4,9 +4,9 @@ from io import StringIO
 from django.core.management import BaseCommand, call_command
 from django.db import connection
 
+from core.models import Configuration
 from api import utilities
 from api.models import (
-    Configuration,
     Category,
     Tag,
     Question,

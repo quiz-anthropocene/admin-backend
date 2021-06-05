@@ -3,6 +3,7 @@ import pandas as pd
 from django.utils import timezone
 from django.core.management import BaseCommand
 
+from core.models import Configuration
 from stats.models import (
     # QuestionAggStat,
     QuestionAnswerEvent,
@@ -11,10 +12,7 @@ from stats.models import (
     # QuizFeedbackEvent,
     DailyStat,
 )
-from api.models import (
-    Configuration,
-    Question,
-)
+from api.models import Question
 
 
 configuration = Configuration.get_solo()

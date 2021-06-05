@@ -326,7 +326,7 @@ class Migration(migrations.Migration):
                     ],
                 ),
             ],
-            # Table already exist
+            # Table already exist, see api/migrations/0077_migrate_stats_models.py
             database_operations=[],
         ),
     ]

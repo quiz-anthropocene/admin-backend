@@ -6,7 +6,8 @@ from django.utils import timezone
 from django.core import management
 from django.test import TestCase
 
-from api.models import Configuration, Question, Quiz
+from core.models import Configuration
+from api.models import Question, Quiz
 from api.tests.factories import QuestionFactory, QuizFactory
 from stats.models import (
     QuestionAnswerEvent,
