@@ -257,10 +257,9 @@
   tags:
   - 7
 - id: 8
-  text: 'Les lecteurs de Jean-Marc Jancovici n''auront pas de difficulté avec cette
-    question : si on arrêtait aujourd''hui toutes nos émissions de gaz à effet de
-    serre, combien de temps faudrait-il pour revenir au niveau antérieur à la révolution
-    industrielle ?'
+  text: Si on arrêtait aujourd'hui toutes nos émissions de gaz à effet de serre, combien
+    de temps faudrait-il pour revenir au niveau antérieur à la révolution industrielle
+    ?
   hint: ''
   type: QCM
   category: 1
@@ -744,7 +743,17 @@
   has_ordered_answers: true
   answer_explanation: C'est cette augmentation de la concentration en CO2 dans l'atmosphère
     qui, combinée avec d'autres gaz à effet de serre comme le méthane et le protoxyde
-    d'azote, génère un effet de serre additionnel qui dérègle le climat.
+    d'azote, génère un effet de serre additionnel qui dérègle le climat. Selon l’agence
+    américaine NOAA, il faut remonter à il y a 3,6 millions d’années pour trouver
+    une concentration comparable. La température moyenne du globe était alors de 2
+    degrés plus chaude, le niveau de la mer était plus haut de 24 m, des forêts recouvraient
+    l’Arctique, il faisait très chaud dans l’actuelle Europe… Au rythme actuel, les
+    450 ppm, concentration qui sonne officiellement le glas de l’objectif de limiter
+    le réchauffement planétaire à +2°C, seront atteints d’ici une douzaine d’années.
+    En rassemblant tous les gaz à effet de serre, nous sommes même à 504 ppm équivalent
+    CO2. Et nous reculons vers l’Eocène, pourtant à des dizaines de millions d’années
+    de nous. Avec environ 30°C de température moyenne, la Terre ne portait alors aucun
+    glacier…
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lesechos.fr/monde/enjeux-internationaux/cop-25-les-six-chiffres-qui-ont-fait-mal-a-la-planete-en-2019-1151161
@@ -1923,8 +1932,8 @@
   - 142
   - 172
 - id: 53
-  text: D'après l'ONU, le nombre de décès causés chaque année par la pollution est
-    de...
+  text: D'après l'ONU, le nombre de décès causés chaque année dans le monde par la
+    pollution est de...
   hint: ''
   type: QCM
   category: 3
@@ -7908,9 +7917,8 @@
 - id: 225
   text: 'L’Agence Française pour le Développement tente de conditionner ses aides
     au développement au travers de deux indicateurs : l’indice de développement humain
-    (IDH), et l’empreinte écologique. Lesquels de ces pays combinaient jusqu’il y
-    a peu un IDH  jugé décent (du niveau de la Russie) avec une empreinte écologique
-    soutenable ?'
+    (IDH), et l’empreinte écologique. Le(s)quel(s) de ces pays combinai(en)t jusqu’il
+    y a peu un IDH  jugé décent avec une empreinte écologique soutenable ?'
   hint: ''
   type: QCM-RM
   category: 6
@@ -16007,7 +16015,7 @@
   answer_scientific_url: https://www.climat-en-questions.fr/reponse/fonctionnement-climat/meteorologie-climatologie-par-jean-pailleux
   answer_reading_recommendation: ''
   answer_image_url: https://static3.mclcm.net/iod/images/v2/69/photo/188031/650x370_100_300_000000x30x0.jpg?ts=20151110184722
-  answer_image_explanation: 'Source : [www.lachainemeteo.com](http://www.lachainemeteo.com/)'
+  answer_image_explanation: 'Source : www.lachainemeteo.com'
   answer_extra_info: ''
   author: Citoyens Pour le Climat
   validator: Matthieu Massart
@@ -16346,7 +16354,7 @@
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: https://www.photovoltaique.guidenr.fr/images/energie-primitive.jpg
-  answer_image_explanation: 'Source : [http://www.photovoltaique.guidenr.fr](http://www.photovoltaique.guidenr.fr/)'
+  answer_image_explanation: 'Source : http://www.photovoltaique.guidenr.fr'
   answer_extra_info: ''
   author: Citoyens Pour le Climat
   validator: Matthieu Massart
@@ -21606,7 +21614,7 @@
   answer_reading_recommendation: ''
   answer_image_url: https://4.bp.blogspot.com/-bE8gqXA0YR4/UVyaCguEt9I/AAAAAAAAAdw/uiIYaIULD9A/s1600/Energie+et+d%C3%A9veloppement+-+Les+trois+m%C3%A9thodes+de+capture+du+carbone+pr%C3%A9combustion,+oxyr%C3%A9duction+et+postcombustion.PNG
   answer_image_explanation: 'Les trois méthodes de captage du carbone : postcombustion,
-    oxyréduction et précombustion (Source de l''image [http://energie-developpement.blogspot.com](http://energie-developpement.blogspot.com/))'
+    oxyréduction et précombustion (Source de l''image http://energie-developpement.blogspot.com)'
   answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
@@ -24742,7 +24750,8 @@
   - 33
   - 217
 - id: 700
-  text: 'Quelle est la part de l''aviation dans les émissions mondiale en 2019 ? '
+  text: 'Quelle a été la part de l''aviation dans les émissions mondiale de CO2 en
+    2019 ? '
   hint: Un train peut en cacher un autre
   type: QCM
   category: 3
@@ -24768,7 +24777,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-04
   created: 2021-01-06
@@ -25145,18 +25154,18 @@
   - 217
   - 218
 - id: 710
-  text: Quelle a été la croissance annuelle du trafic aérien en 2018 ?
+  text: Quelle a été la croissance du trafic aérien en 2018 ?
   hint: C'est plus qu'à la banque...
   type: QCM
   category: 2
   difficulty: 2
   language: Français
-  answer_option_a: 0,5 %
-  answer_option_b: 4,3 %
-  answer_option_c: 6 %
-  answer_option_d: 11 %
+  answer_option_a: 0,5%
+  answer_option_b: 3%
+  answer_option_c: 6%
+  answer_option_d: 11%
   answer_correct: c
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'Si le transport aérien croît en moyenne de 6 % par an, les
     écarts régionaux demeurent considérables : de l’ordre de 8 à 10 % dans les pays
     asiatiques et du Moyen-Orient, pour de 3 à 4 % en Europe ou aux États-Unis.
@@ -25171,7 +25180,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-05
   created: 2021-01-06
@@ -25226,29 +25235,30 @@
   - 224
 - id: 712
   text: Combien y a-t-il d'aéroports dans le monde (chiffres de 2019) ?
-  hint: Et pas tous  saturés
+  hint: ''
   type: QCM
   category: 2
   difficulty: 3
   language: Français
-  answer_option_a: '621'
-  answer_option_b: '998'
-  answer_option_c: '3500'
-  answer_option_d: '15350'
+  answer_option_a: '300'
+  answer_option_b: '1000'
+  answer_option_c: 3,500
+  answer_option_d: 15,000
   answer_correct: c
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: "3,500 aéroports commerciaux, c'est en moyenne une vingtaine\
-    \ par pays, sachant qu'il y a une concentration dans le monde occidental. Les\
-    \ aéroports font face à 2 difficultés. Pour les aéroports existants, la taille\
-    \ des villes grandissantes rend la cohabitation avec les riverains difficile.\
-    \ Pensons à Roissy, Toulouse, Nantes, mais aussi Heathrow, Schiphol, Sydney….\
-    \ nuisances, bruit, horaires…\nPour les extensions ou nouveaux aéroports, nouveaux\
-    \ terminaux, là encore, on rencontre de nombreuses remises en cause : infrastructures\
-    \ lourdes, accès, parkings, nouvelles pistes, artificialisation des sols. Des\
-    \ exemples ? Les projets d'extension de : Roissy, Nice, Marseille, Andorre, Heathrow,…En\
-    \ France ces projets d’extension sont l’objet d’une des 150 propositions de la\
-    \ convention citoyenne pour le climat. \nSans parler des aéroports « fantômes\
-    \ » qui ne voient passer que très peu d’avions. On peut citer Ciudad Real ou Berlin."
+    \ par pays, avec une forte concentration dans le monde occidental. Les aéroports\
+    \ font face à des difficultés. Pour les aéroports existants d'une part, la taille\
+    \ grandissante des villes crée des nuisances qui rend la cohabitation avec les\
+    \ riverains de plus en plus difficile - pensons à Roissy, Toulouse, Nantes, mais\
+    \ aussi Heathrow, Schiphol, Sydney…Pour les extensions ou nouveaux aéroports,\
+    \ les résistances sont fortes devant les besoins d'infrastructures lourdes, d'accès,\
+    \ de parkings, de nouvelles pistes, d'artificialisation des sols. Des exemples\
+    \ ? Les projets d'extension de : Roissy, Nice, Marseille, Andorre, Heathrow,…En\
+    \ France ces projets d’extension ont d'ailleurs été l’objet de l'une des 150 propositions\
+    \ de la convention citoyenne pour le climat. \nSans parler des aéroports « fantômes\
+    \ » qui ne voient passer que très peu d’avions. On peut citer Ciudad Real à Madrid,\
+    \ ou Berlin."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
@@ -25258,7 +25268,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-05
   created: 2021-01-06
@@ -25317,15 +25327,14 @@
   category: 2
   difficulty: 3
   language: Français
-  answer_option_a: 6 millions
-  answer_option_b: 12 millions
-  answer_option_c: 26 millions
-  answer_option_d: 38 millions
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: C’est presque 110,000 vols commerciaux par jour en moyenne,
-    avec des pointes en juin à 230 000 vols. L’urgence climatique, questionne le modèle
-    de développement du transport aérien.
+  answer_option_a: 380,000
+  answer_option_b: 3,8 millions
+  answer_option_c: 38 millions
+  answer_option_d: 380 millions
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'C’est presque 110,000 vols commerciaux par jour en moyenne,
+    avec des pointes en juin à 230 000 vols. '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
@@ -26029,17 +26038,24 @@
   answer_option_c: 10%
   answer_option_d: 20%
   answer_correct: ac
-  has_ordered_answers: false
-  answer_explanation: "Question piège car les deux réponses sont vraies :\n0% sur\
-    \ les vols internationaux, soit environ 40c€ le litre, et\n10% sur les vols nationaux,\
-    \ soit environ 44c€ le litre (selon les cours du pétrole en 2021). \nAlors que\
-    \ l’avion est devenu une source d’émissions de CO2 grandissante et que les compagnies\
-    \ aériennes commencent à remplacer les centrales à charbon dans la liste des plus\
-    \ gros émetteurs, actuellement ni l’UE, ni aucun état membres ne taxe le kérosène.\
-    \ Une taxe sur le kérosène à l’échelle Européenne permettrait de réduire les émissions\
-    \ de 11%.\nDe nombreuses associations demandent à ce que le kérosène soit taxé\
-    \ comme les autres carburants et plus d’une dizaine de pays Européens ont lancé\
-    \ une initiative en 2020 dans ce sens.\n"
+  has_ordered_answers: true
+  answer_explanation: 'Question piège car les deux réponses sont vraies :
+
+    - 0% sur les vols internationaux, soit environ 0,40€ le litre ;
+
+    - 10% sur les vols nationaux, soit environ 0,44€ le litre (selon les cours du
+    pétrole en 2021).
+
+    Alors que le secteur aérien commence à concurrencer les centrales à charbon dans
+    la liste des plus gros émetteurs, actuellement ni l’UE, ni aucun état membre ne
+    taxe le kérosène. Une taxe sur le kérosène à l’échelle européenne permettrait
+    de réduire les émissions du secteur de 11%.
+
+    De nombreuses associations demandent à ce que le kérosène soit taxé comme les
+    autres carburants, et plus d’une dizaine de pays Européens ont lancé une initiative
+    en 2020 dans ce sens.
+
+    '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ouest-france.fr/leditiondusoir/2018-01-18/pourquoi-le-kerosene-est-il-completement-detaxe-83f0840c-e9bc-4e3b-ab81-83495ba02ee5
@@ -26049,7 +26065,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-05
   created: 2021-01-06
@@ -26188,19 +26204,19 @@
   - 85
   - 217
 - id: 735
-  text: Au sein de l'Union Européenne, quelle est la perte de revenu provenant des
+  text: Au sein de l'Union Européenne, quelle est la perte de revenus résultant des
     exemptions de taxe sur le kérosène ?
   hint: ''
   type: QCM
   category: 5
   difficulty: 2
   language: Français
-  answer_option_a: 4,6 milliards €
-  answer_option_b: 12,4 milliards €
-  answer_option_c: 28,0 milliards €
+  answer_option_a: 5 milliards €
+  answer_option_b: 12 milliards €
+  answer_option_c: 28 milliards €
   answer_option_d: 40 milliards €
   answer_correct: d
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: Les avionneurs et les compagnies aériennes bénéficient de subventions
     importantes. Tout le monde - y compris les contribuables qui ne volent pas - paient
     ces subventions. A l’heure de l’urgence climatique se pose la question de la remise
@@ -26209,16 +26225,16 @@
     concurrence avec le train, qui sur les longues distances pollue entre 40 et 80
     fois moins que l’avion.
   answer_audio: https://www.franceculture.fr/emissions/les-nouvelles-de-leco/les-nouvelles-de-leco-du-mercredi-22-mai-2019
-  answer_video: ''
+  answer_video: https://video.twimg.com/ext_tw_video/1359083103076106243/pu/vid/720x720/YgYWZ2v4EdMQNflK.mp4?tag=10
   answer_accessible_url: https://www.lemonde.fr/planete/article/2019/05/13/climat-une-etude-de-la-commission-europeenne-propose-de-taxer-le-kerosene-des-avions_5461201_3244.html
   answer_scientific_url: http://www.ftwatch.at/wp-content/uploads/2017/10/FT-Watch_Green-Flying_2017.pdf
-  answer_reading_recommendation: ''
+  answer_reading_recommendation: 'Source : L''illusion du voyage vert, p6, 2ème §'
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/731%20735.png
   answer_image_explanation: 'TICPE : Taxe Intérieure sur la Consommation des Produits
     Energétiques'
-  answer_extra_info: ''
+  answer_extra_info: 'Source : L''illusion du voyage vert, p6, 2ème §'
   author: Restons les pieds sur terre
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-05
   created: 2021-01-06
@@ -26493,7 +26509,7 @@
   answer_scientific_url: https://pubs.acs.org/doi/abs/10.1021/es505515z
   answer_reading_recommendation: L'age des low-techs, Ph. Bihouix
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/742.png
-  answer_image_explanation: '[https://www.pavisa.com.mx/fr/dou-viennent-les-differentes-couleurs-du-verre/](https://www.pavisa.com.mx/fr/dou-viennent-les-differentes-couleurs-du-verre/)'
+  answer_image_explanation: https://www.pavisa.com.mx/fr/dou-viennent-les-differentes-couleurs-du-verre/
   answer_extra_info: ''
   author: Max Pinsard
   validator: Matthieu Massart
@@ -26805,15 +26821,22 @@
   answer_explanation: Soit 845 millions de personnes. Et seulement 20% de la population
     mondiale a volé au moins une fois dans sa vie. On imagine alors les impacts sur
     les émissions si ce pourcentage augmentait d’ici 2050, alors que le GIEC demande
-    à l’ensemble des secteurs d'activité de réduire leurs émissions.
+    à tous les secteurs d'activité de réduire leurs émissions.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lesechos.fr/industrie-services/tourisme-transport/aerien-1-de-la-population-mondiale-cause-la-moitie-des-emissions-de-co2-1266064#:~:text=Les%20%C2%AB%20habitu%C3%A9s%20%C2%BB%20responsables%20d'une%20grande%20partie%20des%20vols&text=En%202018%2C%20seule%2011%20%25%20de,apr%C3%A8s%20les%20calculs%20des%20chercheurs.
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
-  answer_reading_recommendation: ''
+  answer_reading_recommendation: 'Source : Echelle mondiale, distribution de la croissance
+    de l''aviation, Abstract page 1, et §4.4 page 9'
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/750.png
-  answer_image_explanation: ''
-  answer_extra_info: Abstract Page 1, Par. 4.4 Page 9
+  answer_image_explanation: 'AR : Aller-Retour
+
+    Pax = Passager
+
+    Mds = Milliards
+
+    '
+  answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: Matthieu Massart
   validation_status: Validée
@@ -26861,10 +26884,10 @@
   - 217
   - 224
 - id: 752
-  text: Si l'on classe les passagers aériens selon leurs émissions, quel pourcentage
-    d'entre eux est responsable de la moitié des émissions de gaz à effet de serre
-    ?
-  hint: En ont-ils conscience ?
+  text: Classons les passagers aériens selon leurs émissions. Quel pourcentage de
+    la population est responsable de la moitié des émissions de gaz à effet de serre
+    de l'aviation ?
+  hint: ''
   type: QCM
   category: 2
   difficulty: 2
@@ -26874,34 +26897,34 @@
   answer_option_c: 10%
   answer_option_d: 20%
   answer_correct: a
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: '11% de la population mondiale vole chaque année, et parmi eux,
-    10% sont des « ''frequent fliers'', des voyageurs fréquents. Certains ont même
-    enregistré 600 vols par an ! Cela recouvre des voyageurs qui profitent de plusieurs
-    lieux de résidences dans le monde, qui voyagent en jet privé ou en première classe,
+    10% sont des « ''frequent flyers'', des voyageurs fréquents. Certains ont même
+    enregistré jusqu''à 600 vols par an ! Cela recouvre des voyageurs qui profitent
+    de plusieurs lieux de résidences, qui voyagent en jet privé ou en première classe,
     voire dans des suites dont la taille peut être selon les compagnies entre 5 et
     10 fois plus grande que la classe économique. Par exemple sur les A380 de Singapore
     Airline : 50% de la cabine correspond à la classe éco pour 400 passagers, 25%
     de la cabine correspond à la classe affaire pour 60 passagers et 25% de la cabine
     correspond à la classe Suite pour 12 passagers.
 
-    A noter que les « fréquent fliers » peuvent souvent profiter de miles qui sont
-    des invitations à la croissance du trafic aérien.
+    A noter que les fréquent flyers peuvent souvent profiter de miles qui sont des
+    invitations à la croissance du trafic aérien.
 
-    Les auteurs de l’étude en référence soulignent que pour cette population de «
-    fréquent flyer » sont aussi souvent, sans surprise, de gros consommateurs de trajets
-    en superyachts et en hélicoptères.'
+    Les auteurs de l’étude en référence soulignent que cette population de frequent
+    flyers est aussi, sans surprise, grosse consommatrice de trajets en superyachts
+    et en hélicoptères.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://news.konbini.com/societe/1-de-la-population-mondiale-est-responsable-de-50-des-emissions-du-transport-aerien
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/750%20752.png
   answer_image_explanation: ''
   answer_extra_info: Abstract Page 1, Par. 4.4 Page 9
   author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-01-11
   created: 2021-01-11
   updated: 2021-01-11
@@ -27025,31 +27048,33 @@
   difficulty: 2
   language: Français
   answer_option_a: 4%
-  answer_option_b: 5%
-  answer_option_c: 6%
-  answer_option_d: 8%
+  answer_option_b: 8%
+  answer_option_c: 15%
+  answer_option_d: 25%
   answer_correct: a
-  has_ordered_answers: false
-  answer_explanation: 'On admet qu’un vol en jet privé émet entre 5 et 10 fois plus
-    qu’un vol commercial par passager.  Il faut aussi savoir que 40% de ces vols se
-    font à vide. Les 10% des voyageurs les plus fréquents - 1% de la population mondiale
-    - seraient responsables de 50% des émissions du secteur aérien ! Les plus gros
-    voyageurs peuvent contribuer jusqu’à 7,500 tCO2/an, soit 750 fois l’empreinte
-    moyenne d’un français. C''est un luxe typiquement américain : les 3/4 des jets
-    sont immatriculés aux Etats-Unis.
+  has_ordered_answers: true
+  answer_explanation: 'Une étude récente conclut qu’un vol en jet privé émet entre
+    5 et 10 fois plus qu’un vol commercial par passager. Il faut aussi savoir que
+    40% de ces vols se font à vide. Les 10% des voyageurs les plus fréquents soit
+    1% de la population mondiale, seraient responsables de 50% des émissions du secteur
+    aérien ! Les plus gros voyageurs peuvent contribuer jusqu’à 7,500 tCO2/an, soit
+    750 fois l’empreinte moyenne d’un français. C''est un luxe typiquement américain
+    : les 3/4 des jets sont immatriculés aux Etats-Unis. L''aviation privée est un
+    secteur en forte croissance, notamment depuis l''épisode COVID.
 
-    '
+    8%, c''est l''estimation de la part du trafic militaire.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.forbes.com/sites/niallmccarthy/2017/03/02/the-countries-where-private-jet-ownership-is-soaring-infographic/?sh=abdab62539e1
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/756-2.png
-  answer_image_explanation: ''
+  answer_image_explanation: Pays où le nombre de propriétaires de jets explose (2016)
+    / croissance entre 2006 à et 2016
   answer_extra_info: ''
   author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-01-11
   created: 2021-01-11
   updated: 2021-01-11
@@ -27058,42 +27083,36 @@
   - 217
   - 218
 - id: 757
-  text: Quel était le nombre de Passager x Km mondial ( RPK ) en 2018 ?
-  hint: Est-ce un progrès ?
+  text: On mesure l'intensité du trafic aérien en passagers-km (RPK en anglais). A
+    combien s'élevait-il en 2018 ?
+  hint: ''
   type: QCM
   category: 2
   difficulty: 3
   language: Français
-  answer_option_a: 500 Mds RPK
-  answer_option_b: 8500 Mds RPK
-  answer_option_c: 34250 Mds RPK
-  answer_option_d: 55000 Mds de RPK
-  answer_correct: c
-  has_ordered_answers: false
-  answer_explanation: '8500 Milliards de RPK en 2018.
+  answer_option_a: 500 milliards de RPK, soit par exemple 50,000 millions de voyageurs
+    parcourant chacun 1,000 km
+  answer_option_b: 8,500 milliards de RPK
+  answer_option_c: 35,000 milliards de RPK
+  answer_option_d: 100,000 milliards de RPK
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: 'Pour 4,3 milliards de passagers transportés. Autrement dit
+    , chaque passager fait en moyenne 2,000 km par vol. Bien entendu, certains passagers
+    peuvent voler plusieurs fois.
 
-    Pour 4,3 Milliards de passagers transportés.
-
-    Autrement dit chaque passager fait en moyenne 8500 / 4.378 = 1950 km par vol
-
-    Bien entendu, certains passagers peuvent voler plusieurs fois.
-
-    Globalement, les voyages aériens pourraient passer de :
-
-    8 503 milliards de RPK en 2018 à
-
-    34 247 milliards de RPK au milieu du siècle.'
+    35,000 milliards de RPK, c''est le chiffre prévu par le secteur pour 2050. '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
-  answer_reading_recommendation: Table 3 Page 5
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/757.png
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/757.png
   answer_image_explanation: ''
-  answer_extra_info: Table 3 Page 5
+  answer_extra_info: ''
   author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
+  validator: Matthieu Massart
+  validation_status: Validée
   added: 2021-04-05
   created: 2021-01-11
   updated: 2021-01-11
@@ -27201,7 +27220,7 @@
   answer_scientific_url: https://www.visualcapitalist.com/all-the-worlds-metals-and-minerals-in-one-visualization/
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/861.png
-  answer_image_explanation: '[https://ourworldindata.org/water-use-stress](https://ourworldindata.org/water-use-stress)'
+  answer_image_explanation: https://ourworldindata.org/water-use-stress
   answer_extra_info: USGS, Mineral commodity services (2020)
   author: Max Pinsard
   validator: Matthieu Massart
@@ -27875,7 +27894,7 @@
 
 
     Photo US Geological Survey in "IHP and related UNESCO Programmes in Water Resources
-    1984-1989" ([https://hydrologie.org/glu/ZZ/GP1240.HTM](https://hydrologie.org/glu/ZZ/GP1240.HTM))
+    1984-1989" (https://hydrologie.org/glu/ZZ/GP1240.HTM)
 
     '
   answer_extra_info: ''
@@ -28264,7 +28283,7 @@
   answer_option_c: '500'
   answer_option_d: '1000'
   answer_correct: b
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'Alors que les grands émetteurs vivent dans tous les pays, Chancel
     et Piketty (2015) identifient les 1% les plus riches des individus les plus riches
     dans cinq pays comme étant particulièrement pertinents, Avec des émissions par
@@ -28291,7 +28310,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Brouillon
   added: 2021-01-17
   created: 2021-01-17
@@ -28359,8 +28378,8 @@
   - 217
   - 225
 - id: 792
-  text: Quelle est le nombre de vols par semaine de la route aérienne la plus fréquentée
-    ?
+  text: En 2007, quel était le nombre de vols par semaine sur la route aérienne la
+    plus fréquentée du monde ?
   hint: ''
   type: QCM
   category: 2
@@ -28371,7 +28390,7 @@
   answer_option_c: '625'
   answer_option_d: '1240'
   answer_correct: d
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: "L’exemple de la liaison Madrid - Barcelone est éloquent.\n\
     En 2007, l’avion est le principal mode de transport entre les villes distantes\
     \ de 485 km : 90 aller-retours quotidiens, et par an : 6,5 millions de passagers,\
@@ -28390,7 +28409,7 @@
   answer_image_explanation: 'Sources : Wikipedia - OAG'
   answer_extra_info: ''
   author: Restons les pieds sur terre
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-17
   created: 2021-01-23
@@ -30651,7 +30670,7 @@
   answer_scientific_url: https://www.futura-sciences.com/planete/actualites/pollution-plastique-on-retrouve-99-plastique-disparus-ocean-62879/
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/856.png
-  answer_image_explanation: '[https://portals.iucn.org/library/node/48958](https://portals.iucn.org/library/node/48958)'
+  answer_image_explanation: https://portals.iucn.org/library/node/48958
   answer_extra_info: https://iopscience.iop.org/article/10.1088/1748-9326/ab7836
   author: Max Pinsard
   validator: Matthieu Massart
@@ -31315,7 +31334,7 @@
   answer_scientific_url: ''
   answer_reading_recommendation: L'âge des low tech, Ph. Bihouix, 2017
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/873.png
-  answer_image_explanation: '[https://www.laboiteverte.fr/a-linterieur-dune-usine-de-playmobils/](https://www.laboiteverte.fr/a-linterieur-dune-usine-de-playmobils/)'
+  answer_image_explanation: https://www.laboiteverte.fr/a-linterieur-dune-usine-de-playmobils/
   answer_extra_info: ''
   author: Max Pinsard
   validator: Matthieu Massart
@@ -31860,7 +31879,7 @@
   answer_option_c: 50 %
   answer_option_d: 90 %
   answer_correct: d
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 90 %... qui l’eut cru ?
   answer_audio: ''
   answer_video: ''
@@ -32083,7 +32102,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
-  validator: ''
+  validator: Matthieu Massart
   validation_status: Validée
   added: 2021-01-31
   created: 2021-02-01
@@ -33065,7 +33084,7 @@
   answer_scientific_url: http://www.environnement.brussels/sites/default/files/user_files/pres_20150326_mat_1_4ptat_fr.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/938.png
-  answer_image_explanation: '[https://ourworldindata.org/plastic-pollution](https://ourworldindata.org/plastic-pollution)'
+  answer_image_explanation: https://ourworldindata.org/plastic-pollution
   answer_extra_info: ''
   author: Max Pinsard
   validator: Matthieu Massart
