@@ -23,8 +23,8 @@ def serialize_queryset_to_yaml(queryset, flat=False, stream=None):
     )
 
 
-def serialize_model_to_yaml(model_label, flat=False, stream=None):
-    model = apps.get_app_config("api").get_model(model_label)
+def serialize_model_to_yaml(app_label, model_label, flat=False, stream=None):
+    model = apps.get_app_config(app_label).get_model(model_label)
     queryset = model.objects.all().order_by("pk")
     return serialize_queryset_to_yaml(queryset, flat=flat, stream=stream)
 
@@ -35,8 +35,8 @@ def serialize_queryset_to_json(queryset, stream=None):
     )
 
 
-def serialize_model_to_json(model_label, stream=None):
-    model = apps.get_app_config("api").get_model(model_label)
+def serialize_model_to_json(app_label, model_label, stream=None):
+    model = apps.get_app_config(app_label).get_model(model_label)
     queryset = model.objects.all().order_by("pk")
     return serialize_queryset_to_json(queryset, stream=stream)
 
