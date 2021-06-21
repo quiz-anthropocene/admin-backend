@@ -303,8 +303,8 @@
   tags: []
 - id: 17
   name: Une biodiversité qui s'anéantit
-  introduction: <p>Quel impact 'homme a-t-il sur les autres espèces ? Un premier aperçu
-    via ces quelques questions.</p>
+  introduction: <p>Quel impact l'homme a-t-il sur les autres espèces ? Un premier
+    aperçu via ces quelques questions.</p>
   conclusion: ''
   difficulty_average: 2.5
   language: Français
@@ -314,7 +314,7 @@
   publish: true
   spotlight: false
   created: 2020-08-04
-  updated: 2021-01-26
+  updated: 2021-06-15
   tags:
   - 6
   - 49
@@ -860,19 +860,23 @@
   - 255
 - id: 74
   name: Faut-il encore prendre l'avion ?
-  introduction: "<p>Comme son nom l'indique, le collectif <a href=\"https://restonslespiedssurterre.fr/\"\
-    >Restons Les Pieds Sur Terre</a>, émanation française de <a href=\"https://stay-grounded.org\"\
-    >Stay Grounded</a>, milite pour une réduction massive de l'usage de l'avion. Avec\
-    \ eux, découvrez les vrais impacts du transport aérien.</p>\r\n\r\n<p> </p>\r\n\
-    \r\n<p>Un quiz créé par Michel Bonnassieux, fondateur du site</p>"
+  introduction: "<p><a href=\"https://restonslespiedssurterre.fr/\">Restons Les Pieds\
+    \ Sur Terre</a> est la branche française d’une organisation plus large lancée\
+    \ en 2018 par Maja Rosen et Lotta Hammar en Suède. Elle a pour objectif de sensibiliser\
+    \ le public à l’impact du transport aérien sur le climat et de travailler à la\
+    \ réduction des voyages en avions. Depuis le Le rêve d'Icare, qui n'a pas rêvé\
+    \ de voler ? Mais ce mode de déplacement est-il vraiment soutenable ? Avec eux,\
+    \ découvrez les vrais impacts du transport aérien. Bon quiz.</p>\r\n\r\n<p>Un\
+    \ quiz créé par Michel Bonnassieux, fondateur du site</p>"
   conclusion: "<p>L’empreinte carbone individuelle des voyageurs aériens, majoritairement\
     \ le fait des populations aisées de la planète, est très intense et un seul vol\
-    \ inernational explosera votre budget carbone annuel. Vous voilà mieux armé pour\
-    \ comprendre les vrais impacts du transport aérien.</p>\r\n\r\n<p>Pour aller plus\
-    \ loin, <a href=\"http://https://restonslespiedssurterre.fr\">Restons les Pieds\
-    \ sur Terre</a>,  <a href=\"https://www.facebook.com/restonslespiedssurterre @restonssurterre\"\
-    >page facebook</a>.</p>"
-  difficulty_average: 2.4
+    \ international explosera votre budget carbone annuel. Vous voilà mieux armé pour\
+    \ comprendre les vrais impacts du transport aérien.<br />\r\nSommes-nous prêts\
+    \ à questionner nos modes de vie pour face à l'urgence climatique ? Pour aller\
+    \ plus loin, <a href=\"http://https://restonslespiedssurterre.fr\">Restons les\
+    \ Pieds sur Terre</a>,  <a href=\"https://www.facebook.com/restonslespiedssurterre\
+    \ @restonssurterre\">page facebook</a>.</p>"
+  difficulty_average: 2.5
   language: Français
   author: Michel Bonnassieux
   image_background_url: https://restonslespiedssurterre.fr/wp-content/uploads/2019/06/OVH-En-tete-Avions-fum%C3%A9e.png
@@ -880,7 +884,7 @@
   publish: false
   spotlight: false
   created: 2021-05-03
-  updated: 2021-06-02
+  updated: 2021-06-21
   tags:
   - 33
   - 34
