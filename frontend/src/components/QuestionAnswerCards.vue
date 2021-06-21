@@ -5,16 +5,14 @@
     <div v-if="question" class="question">
       <form @submit.prevent="submitAnswer">
         <!-- Question text -->
-        <div class="row no-gutters justify-content-center">
+        <div class="row no-gutters justify-content-center margin-bottom-10">
           <div class="col-md-10 col-lg-8">
             <h3 v-html="$options.filters.abbr(questionTextWithLineBreaks, glossaire)"></h3>
           </div>
         </div>
 
-        <br />
-
         <!-- Question answer choices -->
-        <div v-if="question.type !== 'QCM-RM'" class="row justify-content-center">
+        <div v-if="question.type !== 'QCM-RM'" class="row justify-content-center margin-bottom-10">
           <div class="col-sm-auto col-md-8 col-lg-6 text-align-left">
             <div class="form-group" v-for="answer_option_letter in answerChoices" :key="answer_option_letter" :class="{ 'text-primary' : answer_option_letter === answerPicked, 'text-danger': (questionSubmitted && (answer_option_letter !== answerPicked) && (answer_option_letter === question['answer_correct'])) }">
               <label v-if="question['answer_option_' + answer_option_letter]" :for="answer_option_letter">
@@ -24,7 +22,8 @@
             </div>
           </div>
         </div>
-        <div v-if="question.type === 'QCM-RM'" class="row justify-content-center">
+        <div v-if="question.type === 'QCM-RM'" class="row justify-content-center margin-bottom-10">
+          <div class="col-12 margin-bottom-10 small"><i>{{ $t('messages.multipleAnswers') }}</i></div>
           <div class="col-sm-auto col-md-8 col-lg-6 text-align-left">
             <div class="form-group" v-for="(answer_option_letter, index) in answerChoices" :key="answer_option_letter" :class="{ 'text-primary' : answerPicked.includes(answer_option_letter), 'text-warning': (questionSubmitted && answerPicked.includes(answer_option_letter) && !question['answer_correct'].includes(answer_option_letter)), 'text-danger': (questionSubmitted && !answerPicked.includes(answer_option_letter) && question['answer_correct'].includes(answer_option_letter)) }">
               <label v-if="question['answer_option_' + answer_option_letter]" :for="answer_option_letter">
@@ -33,17 +32,14 @@
               </label>
             </div>
           </div>
-          <div class="col-12 margin-bottom-10 small"><i>{{ $t('messages.multipleAnswers') }}</i></div>
         </div>
 
         <!-- Question hint -->
-        <div v-if="question.hint && showQuestionHint" class="row no-gutters justify-content-center">
+        <div v-if="question.hint && showQuestionHint" class="row no-gutters justify-content-center margin-bottom-10">
           <div class="col-md-10 col-lg-8">
             <div class="alert alert-warning-custom text-align-left margin-bottom-10 padding-10">💡{{ question.hint }}</div>
           </div>
         </div>
-
-        <br />
 
         <!-- Question form submit -->
         <div class="row no-gutters">
