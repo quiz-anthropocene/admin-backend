@@ -257,10 +257,9 @@
   tags:
   - 7
 - id: 8
-  text: 'Les lecteurs de Jean-Marc Jancovici n''auront pas de difficulté avec cette
-    question : si on arrêtait aujourd''hui toutes nos émissions de gaz à effet de
-    serre, combien de temps faudrait-il pour revenir au niveau antérieur à la révolution
-    industrielle ?'
+  text: Si on arrêtait aujourd'hui toutes nos émissions de gaz à effet de serre, combien
+    de temps faudrait-il pour revenir au niveau antérieur à la révolution industrielle
+    ?
   hint: ''
   type: QCM
   category: 1
@@ -7908,9 +7907,8 @@
 - id: 225
   text: 'L’Agence Française pour le Développement tente de conditionner ses aides
     au développement au travers de deux indicateurs : l’indice de développement humain
-    (IDH), et l’empreinte écologique. Lesquels de ces pays combinaient jusqu’il y
-    a peu un IDH  jugé décent (du niveau de la Russie) avec une empreinte écologique
-    soutenable ?'
+    (IDH), et l’empreinte écologique. Le(s)quel(s) de ces pays combinai(en)t jusqu’il
+    y a peu un IDH  jugé décent avec une empreinte écologique soutenable ?'
   hint: ''
   type: QCM-RM
   category: 6
@@ -26216,7 +26214,8 @@
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/731%20735.png
   answer_image_explanation: 'TICPE : Taxe Intérieure sur la Consommation des Produits
     Energétiques'
-  answer_extra_info: ''
+  answer_extra_info: 'Réponse Scientifique : L''illusion du Voyage Vert - P6 fin 2eme
+    parag. 40 milliard €'
   author: Restons les pieds sur terre
   validator: ''
   validation_status: Validée
@@ -26812,8 +26811,9 @@
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/750.png
-  answer_image_explanation: ''
-  answer_extra_info: Abstract Page 1, Par. 4.4 Page 9
+  answer_image_explanation: 'AR : Aller-Retour - Pax = Passager - Mds = Milliards'
+  answer_extra_info: 'Source Scientifique : Echelle Mondiale, distribution de la croissance
+    de l''aviation Abstract Page 1, et Par. 4.4 Page 9'
   author: Restons les pieds sur terre
   validator: Matthieu Massart
   validation_status: Validée
@@ -26893,7 +26893,7 @@
     en superyachts et en hélicoptères.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://news.konbini.com/societe/1-de-la-population-mondiale-est-responsable-de-50-des-emissions-du-transport-aerien
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/750%20752.png
@@ -26901,7 +26901,7 @@
   answer_extra_info: Abstract Page 1, Par. 4.4 Page 9
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-01-11
   created: 2021-01-11
   updated: 2021-01-11
@@ -27032,9 +27032,9 @@
   has_ordered_answers: false
   answer_explanation: 'On admet qu’un vol en jet privé émet entre 5 et 10 fois plus
     qu’un vol commercial par passager.  Il faut aussi savoir que 40% de ces vols se
-    font à vide. Les 10% des voyageurs les plus fréquents - 1% de la population mondiale
-    - seraient responsables de 50% des émissions du secteur aérien ! Les plus gros
-    voyageurs peuvent contribuer jusqu’à 7,500 tCO2/an, soit 750 fois l’empreinte
+    font à vide. Les 10% des voyageurs les plus fréquents soit 1% de la population
+    mondiale, seraient responsables de 50% des émissions du secteur aérien ! Les plus
+    gros voyageurs peuvent contribuer jusqu’à 7,500 tCO2/an, soit 750 fois l’empreinte
     moyenne d’un français. C''est un luxe typiquement américain : les 3/4 des jets
     sont immatriculés aux Etats-Unis.
 
@@ -27045,11 +27045,12 @@
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/756-2.png
-  answer_image_explanation: ''
+  answer_image_explanation: Pays où le nombre de propriétaires de jets explose (2016)
+    / croissance entre 2006 à et 2016
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2021-01-11
   created: 2021-01-11
   updated: 2021-01-11
