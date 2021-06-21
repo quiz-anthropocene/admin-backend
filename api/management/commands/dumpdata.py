@@ -38,12 +38,12 @@ class Command(Dumpdata):
             # yaml + pretty : call django serializer
             if options.get("format") == "yaml-pretty":
                 utilities.serialize_model_to_yaml(
-                    model_label, stream=stream or self.stdout
+                    app_label, model_label, stream=stream or self.stdout
                 )
             # yaml + pretty + flat : call pyyaml
             elif options.get("format") == "yaml-pretty-flat":
                 utilities.serialize_model_to_yaml(
-                    model_label, flat=True, stream=stream or self.stdout
+                    app_label, model_label, flat=True, stream=stream or self.stdout
                 )
         else:
             super(Command, self).handle(*app_labels, **options)
