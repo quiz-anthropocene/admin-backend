@@ -430,7 +430,7 @@ class Command(BaseCommand):
         # - field answer_correct --> "" if None
         # - field added --> created time if None --> to date
         # - field validator --> "" if None
-        # - fields answer_explanation & answer_extra_info --> clean markdown [links](links)
+        # - fields answer_explanation, answer_image_explanation & answer_extra_info --> clean markdown [links](links)  # noqa
         if notion_question_dict["type"] is None:
             notion_question_dict["type"] = ""
         if type(notion_question_dict["difficulty"]) == str:
@@ -450,6 +450,12 @@ class Command(BaseCommand):
         if "http" in notion_question_dict["answer_explanation"]:
             notion_question_dict["answer_explanation"] = utilities.clean_markdown_links(
                 notion_question_dict["answer_explanation"]
+            )
+        if "http" in notion_question_dict["answer_image_explanation"]:
+            notion_question_dict[
+                "answer_image_explanation"
+            ] = utilities.clean_markdown_links(
+                notion_question_dict["answer_image_explanation"]
             )
         if "http" in notion_question_dict["answer_extra_info"]:
             notion_question_dict["answer_extra_info"] = utilities.clean_markdown_links(
