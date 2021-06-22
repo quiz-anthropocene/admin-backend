@@ -58,6 +58,9 @@
 - name: Max Pinsard
   question_count: 51
   quiz_count: 5
+- name: Michel Bonnassieux
+  question_count: 0
+  quiz_count: 1
 - name: Pascal Mostardi
   question_count: 1
   quiz_count: 0
