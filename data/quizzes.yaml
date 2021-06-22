@@ -725,9 +725,9 @@
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/LToubli%C3%A9es.png
   has_audio: false
   publish: true
-  spotlight: true
+  spotlight: false
   created: 2021-03-23
-  updated: 2021-04-18
+  updated: 2021-06-22
   tags:
   - 255
 - id: 68
@@ -880,11 +880,12 @@
   language: Français
   author: Michel Bonnassieux
   image_background_url: https://restonslespiedssurterre.fr/wp-content/uploads/2019/06/OVH-En-tete-Avions-fum%C3%A9e.png
-  has_audio: false
-  publish: false
-  spotlight: false
+  has_audio: true
+  publish: true
+  spotlight: true
   created: 2021-05-03
-  updated: 2021-06-21
+  updated: 2021-06-22
   tags:
   - 33
   - 34
+  - 100
