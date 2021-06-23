@@ -2037,7 +2037,7 @@
   answer_option_a: 200 tonnes
   answer_option_b: 2,000 tonnes
   answer_option_c: 20,000 tonnes
-  answer_option_d: 20,000 tonnes
+  answer_option_d: 200,000 tonnes
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: 8 millions de tonnes par an, soit 22,000 tonnes par jour selon
@@ -2739,8 +2739,8 @@
   tags:
   - 31
 - id: 76
-  text: "Imaginez une balance titanesque. Placez sur le plateau de gauche toute la\
-    \ matière vivante sur terre. Sur le plateau de droite, tout ce qui a été construit\
+  text: "Imaginez une balance titanesque, avec sur le plateau de gauche toute la matière\
+    \ vivante sur terre, et sur le plateau de droite, tout ce qui a été construit\
     \ depuis l'origine par l'homme. \nVous y êtes ? De quel côté va pencher la balance\
     \ ?"
   hint: 'Il faut compter tout ce qui a été construit par l’homme : bâtiments, infrastructures
@@ -2750,11 +2750,11 @@
   category: 6
   difficulty: 2
   language: Français
-  answer_option_a: A droite
-  answer_option_b: A gauche
+  answer_option_a: A gauche
+  answer_option_b: A droite
   answer_option_c: Ca s'équilibre à peu près
   answer_option_d: ''
-  answer_correct: d
+  answer_correct: b
   has_ordered_answers: true
   answer_explanation: C'est ce qu'on appelle la technosphère. Elle a été évaluée à
     30 000 milliards de tonnes. A comparer aux 4 000 milliards de tonnes du vivant.
