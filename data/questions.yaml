@@ -25235,7 +25235,7 @@
   - 224
 - id: 712
   text: Combien y a-t-il d'aéroports dans le monde (chiffres de 2019) ?
-  hint: ''
+  hint: 195 pays dans le monde, faites le compte...
   type: QCM
   category: 2
   difficulty: 3
@@ -25254,11 +25254,11 @@
     \ aussi Heathrow, Schiphol, Sydney…Pour les extensions ou nouveaux aéroports,\
     \ les résistances sont fortes devant les besoins d'infrastructures lourdes, d'accès,\
     \ de parkings, de nouvelles pistes, d'artificialisation des sols. Des exemples\
-    \ ? Les projets d'extension de : Roissy, Nice, Marseille, Andorre, Heathrow,…En\
-    \ France ces projets d’extension ont d'ailleurs été l’objet de l'une des 150 propositions\
-    \ de la convention citoyenne pour le climat. \nSans parler des aéroports « fantômes\
-    \ » qui ne voient passer que très peu d’avions. On peut citer Ciudad Real à Madrid,\
-    \ ou Berlin."
+    \ ? Les nouveaux projets ou extensions de : Roissy, Nice, Marseille, Andorre (projet\
+    \ annulé en Juin 2021) , Heathrow,…En France ces projets d’extension ont d'ailleurs\
+    \ été l’objet de l'une des 150 propositions de la convention citoyenne pour le\
+    \ climat. \nSans parler des aéroports « fantômes » qui ne voient passer que très\
+    \ peu d’avions. On peut citer Ciudad Real en Espagne, ou Berlin."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
