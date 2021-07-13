@@ -860,14 +860,12 @@
   - 255
 - id: 74
   name: Faut-il encore prendre l'avion ?
-  introduction: "<p><a href=\"https://restonslespiedssurterre.fr/\">Restons Les Pieds\
-    \ Sur Terre</a> est la branche française d’une organisation plus large lancée\
-    \ en 2018 par Maja Rosen et Lotta Hammar en Suède. Elle a pour objectif de sensibiliser\
-    \ le public à l’impact du transport aérien sur le climat et de travailler à la\
-    \ réduction des voyages en avions. Depuis le Le rêve d'Icare, qui n'a pas rêvé\
-    \ de voler ? Mais ce mode de déplacement est-il vraiment soutenable ? Avec eux,\
-    \ découvrez les vrais impacts du transport aérien. Bon quiz.</p>\r\n\r\n<p>Un\
-    \ quiz créé par Michel Bonnassieux, fondateur du site</p>"
+  introduction: "<p>Depuis le Le rêve d'Icare, qui n'a pas rêvé de voler ? Mais ce\
+    \ mode de déplacement est-il vraiment soutenable ? L'initiative <a href=\"https://restonslespiedssurterre.fr/\"\
+    >Restons Les Pieds Sur Terre</a> a pour objectif de sensibiliser le public à l’impact\
+    \ du transport aérien sur le climat et de travailler à la réduction des voyages\
+    \ en avions. Avec eux, découvrez les vrais impacts du transport aérien. Bon quiz.</p>\r\
+    \n\r\n<p>Un quiz créé par Michel Bonnassieux, fondateur du site</p>"
   conclusion: "<p>L’empreinte carbone individuelle des voyageurs aériens, majoritairement\
     \ le fait des populations aisées de la planète, est très intense et un seul vol\
     \ international explosera votre budget carbone annuel. Vous voilà mieux armé pour\
@@ -884,7 +882,7 @@
   publish: true
   spotlight: true
   created: 2021-05-03
-  updated: 2021-06-22
+  updated: 2021-07-12
   tags:
   - 33
   - 34
