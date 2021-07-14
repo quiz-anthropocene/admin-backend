@@ -24,9 +24,9 @@
   - answer_success_count: 8
     count: 177
 - quiz_id: 2
-  answer_count: 452
-  answer_count_last_30_days: 5
-  answer_count_last_7_days: 2
+  answer_count: 453
+  answer_count_last_30_days: 6
+  answer_count_last_7_days: 3
   like_count: 21
   dislike_count: 2
   answer_success_count_split:
@@ -37,7 +37,7 @@
   - answer_success_count: 2
     count: 60
   - answer_success_count: 3
-    count: 82
+    count: 83
   - answer_success_count: 4
     count: 82
   - answer_success_count: 5
