@@ -564,7 +564,7 @@
     \ de la <a href=\"https://fresquedeslowtechs.org\">Fresque des low techs</a>.\
     \ « Contre une croissance infinie dans un monde aux ressources finies qui SE DÉGRADENT\
     \ et SE DISPERSENT ».<br />\r\nEnfin, si vous avez envie de faire découvrir ce\
-    \ quiz au-delà de la France, sa version anglaise est <a href=\"https://quizanthropocene.fr/quiz/67\"\
+    \ quiz au-delà de la France, sa version anglaise est <a href=\"http://quizanthropocene.fr/quiz/68\"\
     >ici</a>.</p>"
   difficulty_average: 2.7
   language: Français
@@ -574,7 +574,7 @@
   publish: true
   spotlight: true
   created: 2021-02-14
-  updated: 2021-05-04
+  updated: 2021-07-19
   tags:
   - 255
 - id: 62
