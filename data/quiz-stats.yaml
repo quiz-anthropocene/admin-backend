@@ -928,9 +928,9 @@
   - answer_success_count: 7
     count: 4
 - quiz_id: 70
-  answer_count: 129
-  answer_count_last_30_days: 16
-  answer_count_last_7_days: 4
+  answer_count: 130
+  answer_count_last_30_days: 17
+  answer_count_last_7_days: 5
   like_count: 3
   dislike_count: 0
   answer_success_count_split:
@@ -939,7 +939,7 @@
   - answer_success_count: 1
     count: 3
   - answer_success_count: 2
-    count: 10
+    count: 11
   - answer_success_count: 3
     count: 18
   - answer_success_count: 4
