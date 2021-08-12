@@ -82,9 +82,9 @@
   - answer_success_count: 11
     count: 9
 - quiz_id: 4
-  answer_count: 214
-  answer_count_last_30_days: 2
-  answer_count_last_7_days: 0
+  answer_count: 215
+  answer_count_last_30_days: 3
+  answer_count_last_7_days: 1
   like_count: 10
   dislike_count: 2
   answer_success_count_split:
@@ -93,7 +93,7 @@
   - answer_success_count: 1
     count: 21
   - answer_success_count: 2
-    count: 37
+    count: 38
   - answer_success_count: 3
     count: 64
   - answer_success_count: 4
@@ -710,9 +710,9 @@
   - answer_success_count: 11
     count: 6
 - quiz_id: 62
-  answer_count: 427
-  answer_count_last_30_days: 5
-  answer_count_last_7_days: 1
+  answer_count: 429
+  answer_count_last_30_days: 7
+  answer_count_last_7_days: 3
   like_count: 5
   dislike_count: 0
   answer_success_count_split:
@@ -721,11 +721,11 @@
   - answer_success_count: 1
     count: 9
   - answer_success_count: 2
-    count: 43
+    count: 44
   - answer_success_count: 3
     count: 77
   - answer_success_count: 4
-    count: 118
+    count: 119
   - answer_success_count: 5
     count: 91
   - answer_success_count: 6
@@ -905,16 +905,16 @@
   - answer_success_count: 10
     count: 0
 - quiz_id: 69
-  answer_count: 142
-  answer_count_last_30_days: 12
-  answer_count_last_7_days: 4
+  answer_count: 143
+  answer_count_last_30_days: 13
+  answer_count_last_7_days: 5
   like_count: 9
   dislike_count: 1
   answer_success_count_split:
   - answer_success_count: 0
     count: 0
   - answer_success_count: 1
-    count: 9
+    count: 10
   - answer_success_count: 2
     count: 22
   - answer_success_count: 3
@@ -997,9 +997,9 @@
   - answer_success_count: 8
     count: 0
 - quiz_id: 74
-  answer_count: 127
-  answer_count_last_30_days: 60
-  answer_count_last_7_days: 19
+  answer_count: 129
+  answer_count_last_30_days: 62
+  answer_count_last_7_days: 21
   like_count: 5
   dislike_count: 0
   answer_success_count_split:
@@ -1010,9 +1010,9 @@
   - answer_success_count: 2
     count: 10
   - answer_success_count: 3
-    count: 20
+    count: 21
   - answer_success_count: 4
-    count: 25
+    count: 26
   - answer_success_count: 5
     count: 26
   - answer_success_count: 6
