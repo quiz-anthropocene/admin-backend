@@ -178,9 +178,9 @@
   - answer_success_count: 6
     count: 31
 - quiz_id: 8
-  answer_count: 573
-  answer_count_last_30_days: 27
-  answer_count_last_7_days: 14
+  answer_count: 574
+  answer_count_last_30_days: 28
+  answer_count_last_7_days: 15
   like_count: 13
   dislike_count: 0
   answer_success_count_split:
@@ -199,7 +199,7 @@
   - answer_success_count: 6
     count: 38
   - answer_success_count: 7
-    count: 22
+    count: 23
   - answer_success_count: 8
     count: 41
   - answer_success_count: 9
