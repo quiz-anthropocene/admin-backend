@@ -365,9 +365,9 @@
   - answer_success_count: 2
     count: 10
 - quiz_id: 15
-  answer_count: 154
-  answer_count_last_30_days: 2
-  answer_count_last_7_days: 1
+  answer_count: 155
+  answer_count_last_30_days: 3
+  answer_count_last_7_days: 2
   like_count: 4
   dislike_count: 0
   answer_success_count_split:
@@ -382,7 +382,7 @@
   - answer_success_count: 4
     count: 17
   - answer_success_count: 5
-    count: 26
+    count: 27
   - answer_success_count: 6
     count: 36
   - answer_success_count: 7
