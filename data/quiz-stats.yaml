@@ -178,9 +178,9 @@
   - answer_success_count: 6
     count: 31
 - quiz_id: 8
-  answer_count: 577
-  answer_count_last_30_days: 27
-  answer_count_last_7_days: 8
+  answer_count: 578
+  answer_count_last_30_days: 28
+  answer_count_last_7_days: 9
   like_count: 13
   dislike_count: 0
   answer_success_count_split:
@@ -195,7 +195,7 @@
   - answer_success_count: 4
     count: 27
   - answer_success_count: 5
-    count: 47
+    count: 48
   - answer_success_count: 6
     count: 39
   - answer_success_count: 7
@@ -492,9 +492,9 @@
   - answer_success_count: 7
     count: 42
 - quiz_id: 53
-  answer_count: 461
-  answer_count_last_30_days: 6
-  answer_count_last_7_days: 0
+  answer_count: 462
+  answer_count_last_30_days: 7
+  answer_count_last_7_days: 1
   like_count: 19
   dislike_count: 0
   answer_success_count_split:
@@ -507,7 +507,7 @@
   - answer_success_count: 3
     count: 58
   - answer_success_count: 4
-    count: 108
+    count: 109
   - answer_success_count: 5
     count: 104
   - answer_success_count: 6
@@ -600,9 +600,9 @@
   - answer_success_count: 9
     count: 1
 - quiz_id: 57
-  answer_count: 427
-  answer_count_last_30_days: 2
-  answer_count_last_7_days: 0
+  answer_count: 428
+  answer_count_last_30_days: 3
+  answer_count_last_7_days: 1
   like_count: 20
   dislike_count: 5
   answer_success_count_split:
@@ -621,7 +621,7 @@
   - answer_success_count: 6
     count: 68
   - answer_success_count: 7
-    count: 61
+    count: 62
   - answer_success_count: 8
     count: 32
   - answer_success_count: 9
@@ -997,9 +997,9 @@
   - answer_success_count: 8
     count: 0
 - quiz_id: 74
-  answer_count: 145
-  answer_count_last_30_days: 58
-  answer_count_last_7_days: 11
+  answer_count: 146
+  answer_count_last_30_days: 59
+  answer_count_last_7_days: 12
   like_count: 6
   dislike_count: 0
   answer_success_count_split:
@@ -1016,7 +1016,7 @@
   - answer_success_count: 5
     count: 28
   - answer_success_count: 6
-    count: 23
+    count: 24
   - answer_success_count: 7
     count: 12
   - answer_success_count: 8
