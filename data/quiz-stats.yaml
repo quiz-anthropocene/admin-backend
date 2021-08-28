@@ -997,9 +997,9 @@
   - answer_success_count: 8
     count: 0
 - quiz_id: 74
-  answer_count: 171
-  answer_count_last_30_days: 81
-  answer_count_last_7_days: 28
+  answer_count: 172
+  answer_count_last_30_days: 82
+  answer_count_last_7_days: 29
   like_count: 8
   dislike_count: 0
   answer_success_count_split:
@@ -1008,7 +1008,7 @@
   - answer_success_count: 1
     count: 2
   - answer_success_count: 2
-    count: 14
+    count: 15
   - answer_success_count: 3
     count: 29
   - answer_success_count: 4
