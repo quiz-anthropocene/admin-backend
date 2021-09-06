@@ -180,7 +180,7 @@
 - quiz_id: 8
   answer_count: 593
   answer_count_last_30_days: 36
-  answer_count_last_7_days: 7
+  answer_count_last_7_days: 6
   like_count: 13
   dislike_count: 0
   answer_success_count_split:
@@ -929,7 +929,7 @@
     count: 4
 - quiz_id: 70
   answer_count: 158
-  answer_count_last_30_days: 29
+  answer_count_last_30_days: 28
   answer_count_last_7_days: 6
   like_count: 4
   dislike_count: 0
@@ -999,7 +999,7 @@
 - quiz_id: 74
   answer_count: 195
   answer_count_last_30_days: 85
-  answer_count_last_7_days: 22
+  answer_count_last_7_days: 20
   like_count: 8
   dislike_count: 1
   answer_success_count_split:
