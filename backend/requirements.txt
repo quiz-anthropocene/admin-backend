@@ -28,5 +28,5 @@ PyGithub==1.55
 python-dotenv==0.17.1
 pytz==2021.1
 PyYAML==5.4.1
-sqlparse==0.4.1
+sqlparse==0.4.2
 whitenoise==5.2.0
