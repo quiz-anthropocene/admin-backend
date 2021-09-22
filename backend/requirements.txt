@@ -1,4 +1,4 @@
-Django==3.2.4
+Django==3.2.5
 
 asgiref==3.3.4
 black==20.8b1
