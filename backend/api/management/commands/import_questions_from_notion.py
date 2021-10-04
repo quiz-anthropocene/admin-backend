@@ -434,7 +434,10 @@ class Command(BaseCommand):
         if notion_question_dict["type"] is None:
             notion_question_dict["type"] = ""
         if type(notion_question_dict["difficulty"]) == str:
-            notion_question_dict["difficulty"] = int(notion_question_dict["difficulty"])
+            if notion_question_dict["difficulty"] == "":
+                notion_question_dict["difficulty"] = None
+            else:
+                notion_question_dict["difficulty"] = int(notion_question_dict["difficulty"])
         if notion_question_dict["language"] is None:
             notion_question_dict["language"] = ""
         if notion_question_dict["answer_correct"] is None:
