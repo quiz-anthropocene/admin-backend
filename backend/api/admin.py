@@ -11,7 +11,7 @@ from django.utils.html import mark_safe
 
 from import_export import fields, resources
 from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
-from import_export.admin import ImportMixin, DEFAULT_FORMATS
+from import_export.admin import ImportMixin
 from fieldsets_with_inlines import FieldsetsInlineMixin
 
 from core.admin import admin_site, ExportMixin
@@ -191,7 +191,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         """
         Restrict import formats to csv only
         """
-        formats = DEFAULT_FORMATS[:1]
+        formats = ImportMixin.formats[:1]
         return [f for f in formats if f().can_import()]
 
     def has_answer_explanation(self, instance):
