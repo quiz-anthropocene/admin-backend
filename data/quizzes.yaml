@@ -887,3 +887,18 @@
   - 33
   - 34
   - 100
+- id: 75
+  name: Emissions du transport - partie 1
+  introduction: <p>Intro à rédiger</p>
+  conclusion: <p>Conclusion à rédiger</p>
+  difficulty_average: 0.0
+  language: Français
+  author: Aurélien Bigo
+  image_background_url: ''
+  has_audio: false
+  publish: false
+  spotlight: false
+  created: 2021-10-03
+  updated: 2021-10-03
+  tags:
+  - 33
