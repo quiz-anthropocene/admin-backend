@@ -888,17 +888,34 @@
   - 34
   - 100
 - id: 75
-  name: Emissions du transport - partie 1
-  introduction: <p>Intro à rédiger</p>
-  conclusion: <p>Conclusion à rédiger</p>
+  name: 'Transition énergétique des transports #1'
+  introduction: "<p>Aurélien Bigo est un jeune chercheur spécialisé sur la transition\
+    \ énergétique des transports. La thèse qu'il a soutenue en 2020, intitulée \"\
+    Les transports face au défi de la transition énergétique. Explorations entre passé\
+    \ et avenir, technologie et sobriété, accélération et ralentissement\", a été\
+    \ beaucoup reprise par les medias. Dans ce premier quiz, Aurélien va vous familiariser\
+    \ avec les ordres de grandeur sur les émissions des différents types de transports\
+    \ en France, ainsi que les biais liés à leur mesure. Il aborde également les ambitions\
+    \ de la Stratégie Nationale Bas Carbone visant à les réduire, et ses limites.<br\
+    \ />\r\nFermeture des portes, attention au départ !</p>"
+  conclusion: <p>Les défis du secteur sont forts et la solution unique et parfaite
+    n’existe pas. Pour atteindre les objectifs ambitieux fixés en France, il faudra
+    accélérer l’action sur les différents leviers de transition, en combinant sobriété
+    et technologie. Pour compléter ce premier quiz et les connaissances sur le sujet,
+    d’autres quiz suivront dans les mois à venir. En attendant, n’hésitez pas à consulter
+    les autres quiz du site !</p>
   difficulty_average: 0.0
   language: Français
   author: Aurélien Bigo
-  image_background_url: ''
+  image_background_url: https://www.lecese.fr/sites/default/files/recup_synchro/article/transitionactu.jpg
   has_audio: false
   publish: false
   spotlight: false
   created: 2021-10-03
-  updated: 2021-10-03
+  updated: 2021-10-04
   tags:
   - 33
+  - 34
+  - 42
+  - 59
+  - 249
