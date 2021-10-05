@@ -907,7 +907,7 @@
   difficulty_average: 0.0
   language: Français
   author: Aurélien Bigo
-  image_background_url: https://www.lecese.fr/sites/default/files/recup_synchro/article/transitionactu.jpg
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/transitionactu.jpg
   has_audio: false
   publish: false
   spotlight: false
