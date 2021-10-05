@@ -26599,7 +26599,7 @@
   tags:
   - 67
 - id: 745
-  text: Le Col de Porte, situé à 1,025m d'altitude dans les Alpes françaises est le
+  text: Le Col de Porte, situé à 1,325m d'altitude dans les Alpes françaises est le
     site de référence de Météo France pour l'étude de l'évolution du manteau neigeux
     depuis 1960. Entre les périodes 1960-1990 et 1990-2019, comment a évolué la hauteur
     de neige moyenne mesurée au col ?
@@ -30881,30 +30881,30 @@
 - id: 862
   text: "En 1975, le penseur Ivan Illich a estimé la \"vitesse généralisée\", en considérant\
     \ non seulement le temps effectif du déplacement, mais aussi  le temps que l’on\
-    \ passe à se donner les moyens du déplacement.  \nQuelle vitesse a-t-il trouvé\
-    \ pour un trajet domicile-travail en voiture ?"
+    \ passe à se donner les moyens du déplacement.  \nA combien estime-t-on cette\
+    \ \"vitesse généralisée\" ?"
   hint: Pensez à tout ce qu'il faut pour avoir votre véhicule, en état de marche...
   type: QCM
   category: 6
   difficulty: 4
   language: Français
   answer_option_a: 6 km/h
-  answer_option_b: 12 km/h
+  answer_option_b: 18 km/h
   answer_option_c: 30 km/h
   answer_option_d: 50 km/h
-  answer_correct: a
+  answer_correct: b
   has_ordered_answers: true
   answer_explanation: 'La vitesse généralisée prend en compte l''ensemble des dépenses
     de temps associées à un mode de déplacement. Par exemple pour un véhicule : entretien,
-    stationnement, temps de travail nécessaire à le payer (achat initial + carburant
-    + réparations, pose de pneus ...)... Tout compris la vitesse trouvée est de 6
-    km/h ! D''autres calculs peuvent donner des valeurs autour de 10km/h, donc certainement
-    pas plus rapide qu''un vélo !'
+    stationnement, temps de travail nécessaire à payer l''achat initial, le carburant,
+    l''entretien...Les estimations d''il y a quarante ans la trouvait inférieure à
+    celle du vélo. Les derniers développements la trouve supérieure d''1/4 : entre
+    13 et 23km/h, contre 12 à 18km/h pour le vélo.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.forumviesmobiles.org/reperes/vitesse-des-deplacements-12976
-  answer_scientific_url: https://books.openedition.org/pur/50874
-  answer_reading_recommendation: Energie et équité, Ivan Illich
+  answer_scientific_url: https://github.com/raphodn/know-your-planet/blob/master/data/audio/questions/H%C3%A9ran%202009%20_%20A%20propos%20de%20la%20vitesse%20g%C3%A9n%C3%A9ralis%C3%A9e%20des%20transports%20-%20Un%20concept%20d'Ivan%20Illich%20revisit%C3%A9.pdf
+  answer_reading_recommendation: '[Energie et équité, Ivan Illich](https://github.com/raphodn/know-your-planet/blob/master/data/audio/questions/H%C3%A9ran%202009%20_%20A%20propos%20de%20la%20vitesse%20g%C3%A9n%C3%A9ralis%C3%A9e%20des%20transports%20-%20Un%20concept%20d''Ivan%20Illich%20revisit%C3%A9.pdf)'
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/862.png
   answer_image_explanation: ''
   answer_extra_info: ''
