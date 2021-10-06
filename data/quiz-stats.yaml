@@ -24,9 +24,9 @@
   - answer_success_count: 8
     count: 179
 - quiz_id: 2
-  answer_count: 466
-  answer_count_last_30_days: 4
-  answer_count_last_7_days: 0
+  answer_count: 467
+  answer_count_last_30_days: 5
+  answer_count_last_7_days: 1
   like_count: 21
   dislike_count: 2
   answer_success_count_split:
@@ -39,7 +39,7 @@
   - answer_success_count: 3
     count: 90
   - answer_success_count: 4
-    count: 82
+    count: 83
   - answer_success_count: 5
     count: 90
   - answer_success_count: 6
@@ -421,9 +421,9 @@
   - answer_success_count: 9
     count: 12
 - quiz_id: 17
-  answer_count: 942
-  answer_count_last_30_days: 7
-  answer_count_last_7_days: 2
+  answer_count: 943
+  answer_count_last_30_days: 8
+  answer_count_last_7_days: 3
   like_count: 59
   dislike_count: 2
   answer_success_count_split:
@@ -440,7 +440,7 @@
   - answer_success_count: 5
     count: 212
   - answer_success_count: 6
-    count: 125
+    count: 126
   - answer_success_count: 7
     count: 56
 - quiz_id: 18
@@ -824,9 +824,9 @@
   - answer_success_count: 11
     count: 5
 - quiz_id: 66
-  answer_count: 58
-  answer_count_last_30_days: 0
-  answer_count_last_7_days: 0
+  answer_count: 59
+  answer_count_last_30_days: 1
+  answer_count_last_7_days: 1
   like_count: 0
   dislike_count: 0
   answer_success_count_split:
@@ -839,7 +839,7 @@
   - answer_success_count: 3
     count: 11
   - answer_success_count: 4
-    count: 13
+    count: 14
   - answer_success_count: 5
     count: 13
   - answer_success_count: 6
@@ -997,9 +997,9 @@
   - answer_success_count: 8
     count: 0
 - quiz_id: 74
-  answer_count: 251
-  answer_count_last_30_days: 56
-  answer_count_last_7_days: 12
+  answer_count: 253
+  answer_count_last_30_days: 58
+  answer_count_last_7_days: 14
   like_count: 8
   dislike_count: 1
   answer_success_count_split:
@@ -1010,13 +1010,13 @@
   - answer_success_count: 2
     count: 26
   - answer_success_count: 3
-    count: 38
+    count: 39
   - answer_success_count: 4
     count: 52
   - answer_success_count: 5
     count: 47
   - answer_success_count: 6
-    count: 37
+    count: 38
   - answer_success_count: 7
     count: 21
   - answer_success_count: 8
