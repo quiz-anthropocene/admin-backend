@@ -18,7 +18,7 @@ django-solo = "*"
 freezegun = "*"
 gunicorn = "*"
 ipython = "*"
-notion = {git = "https://github.com/julrach/notion-py.git"}
+notion = {path = "/home/raphael/Projects/notion-py"}
 pandas = "*"
 psycopg2-binary = "*"
 PyGithub = "*"
