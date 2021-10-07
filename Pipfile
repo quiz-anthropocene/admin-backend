@@ -18,7 +18,7 @@ django-solo = "*"
 freezegun = "*"
 gunicorn = "*"
 ipython = "*"
-notion = {path = "/home/raphael/Projects/notion-py"}
+notion = {git = "https://github.com/raphodn/notion-py.git"}
 pandas = "*"
 psycopg2-binary = "*"
 PyGithub = "*"
@@ -29,7 +29,7 @@ sqlparse = "*"
 whitenoise = "*"
 
 [dev-packages]
-black = "*"
+black = "21.9b0"
 coverage = "*"
 factory-boy = "*"
 flake8 = "*"
