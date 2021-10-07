@@ -18,7 +18,7 @@ django-solo = "*"
 freezegun = "*"
 gunicorn = "*"
 ipython = "*"
-notion = {git = "https://github.com/raphodn/notion-py.git"}
+notion = {git = "https://github.com/raphodn/notion-py.git", ref = "511b93ed621625600795b7c4baa7e745d8ecfc2f"}
 pandas = "*"
 psycopg2-binary = "*"
 PyGithub = "*"
@@ -29,10 +29,13 @@ sqlparse = "*"
 whitenoise = "*"
 
 [dev-packages]
-black = "21.9b0"
+black = "*"
 coverage = "*"
 factory-boy = "*"
 flake8 = "*"
 
 [requires]
 python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true
