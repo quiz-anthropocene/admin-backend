@@ -778,9 +778,9 @@
   image_background_url: https://www.ge.ch/media/media_image/2020-11/grand-cycle.jpg
   has_audio: false
   publish: true
-  spotlight: true
+  spotlight: false
   created: 2021-04-10
-  updated: 2021-04-16
+  updated: 2021-10-08
   tags:
   - 37
   - 69
@@ -909,8 +909,8 @@
   author: Aurélien Bigo
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/transitionactu.jpg
   has_audio: false
-  publish: false
-  spotlight: false
+  publish: true
+  spotlight: true
   created: 2021-10-03
   updated: 2021-10-08
   tags:
