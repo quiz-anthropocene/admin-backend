@@ -34633,9 +34633,9 @@
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: 'La part modale du fret ferroviaire a été en forte baisse historiquement.
-    C''est principalement le résultat de la baisse de son trafic. Il a atteint un
-    maximum en 1974, à plus de 70 milliards de tonnes.km , puis s''est réduit de plus
-    de moitié, autour des 30-35 milliards de tonnes.km sur les années 2010.
+    C''est notamment le résultat de la baisse de son trafic. Il a atteint un maximum
+    en 1974, à plus de 70 milliards de tonnes.km, puis s''est réduit de plus de moitié,
+    autour des 30-35 milliards de tonnes.km sur les années 2010.
 
     Aussi et surtout, le trafic total a été en forte hausse, porté par le transport
     routier, qui a progressivement augmenté sa part modale, de 34 % en 1960 à quasiment
@@ -34647,7 +34647,11 @@
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1014%20-%20Fret%20ferroviaire.png
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: La tonne.kilomètre est l'unité communément utilisée pour évaluer
+    le trafic de marchandises, et représente l'équivalent d'une tonne de marchandises
+    transportée sur 1 km. Pour exemple, 5 tonnes de marchandises transportées sur
+    10 km correspondent à 50 tonnes.km. Pour la mobilité des personnes, on parle généralement
+    en voyageurs.km ou passagers.km.
   author: Aurélien Bigo
   validator: Matthieu Massart
   validation_status: Validée
@@ -34658,7 +34662,7 @@
   - 33
   - 42
 - id: 1015
-  text: Quel est le nombre moyen d'occupants d'un véhicule en France ?
+  text: Quel est le nombre moyen d'occupants par voiture en France ?
   hint: ''
   type: QCM
   category: 8
@@ -34670,11 +34674,11 @@
   answer_option_d: 1,8 personnes
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: 'Ce taux dépend fortement du type de trajet : les longs trajets
-    sont plus remplis (trajets en famille pour les départs en vacances, covoiturage
-    plus développé…) que les trajets du quotidien. Il suffit de regarder dans la rue
-    à l’heure des trajets domicile-travail, où la plupart des voitures n’ont qu’une
-    personne à bord !
+  answer_explanation: 'Ce remplissage des voitures dépend fortement du type de trajet
+    : les longs trajets sont plus remplis (trajets en famille pour les départs en
+    vacances, covoiturage plus développé…) que les trajets du quotidien. Il suffit
+    de regarder dans la rue à l’heure des trajets domicile-travail, où la plupart
+    des voitures n’ont qu’une personne à bord !
 
     Ce remplissage a été en baisse historiquement, puisqu’il est passé de 1,78 occupants
     en 1990 à 1,57 en 2019 ; et il était autour de 2,3 passagers sur la première moitié
@@ -34689,13 +34693,13 @@
   answer_scientific_url: http://www.chair-energy-prosperity.org/publications/travail-de-these-decarboner-transports-dici-2050/
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1015%20-%20Remplissage%20des%20v%C3%A9hicules.png
-  answer_image_explanation: '[Bonus] A noter aussi une petite subtilité plus technique
-    : le remplissage moyen est plus fort lorsqu’il est mesuré par kilomètre parcouru
+  answer_image_explanation: ''
+  answer_extra_info: '[Bonus] A noter aussi une petite subtilité plus technique :
+    le remplissage moyen est plus fort lorsqu’il est mesuré par kilomètre parcouru
     (où les trajets à longue distance bien remplis représentent une proportion significative)
     que par trajet (où les trajets à longue distance sont peu nombreux, et font peut
     relever la moyenne). D’où des chiffres souvent différents sur ce sujet, selon
     comment on pondère la moyenne.'
-  answer_extra_info: ''
   author: Aurélien Bigo
   validator: Matthieu Massart
   validation_status: Validée
@@ -34722,7 +34726,7 @@
   has_ordered_answers: false
   answer_explanation: 'A l''horizon 2050, l’objectif de la SNBC pour les transports
     est d''avoir complètement décarboné les transports terrestres, donc qu’il n’y
-    ait plus de consommations de pétrole aussi bien les voitures, que les véhicules
+    ait plus de consommations de pétrole aussi bien pour les voitures que les véhicules
     utilitaires légers, les poids-lourds, les 2-roues motorisés, ou encore les transports
     en communs routiers et ferroviaires, mais aussi le fluvial.
 
@@ -34771,12 +34775,12 @@
 
     Si la hausse se poursuit avec 8,5 % de véhicules électriques sur janvier à septembre
     2021, le renouvellement du parc est relativement lent, puisqu’environ 5 à 6 %
-    du parc en moyenne qui est renouvelé chaque année. La décarbonation de ce mode
-    est donc très faible à ce jour, et cette dynamique est aussi valable pour les
-    autres modes. Cela montre l’importance de fixer une date de fin de ventes des
-    véhicules thermiques bien en amont de 2040 (date fixée en 2017 en France) pour
-    qu’il n’y ait quasiment plus de véhicules thermiques en circulation en 2050, ce
-    que prévoit la SNBC.'
+    du parc en moyenne est renouvelé chaque année. La décarbonation de ce mode est
+    donc très faible à ce jour, et cette dynamique est aussi valable pour les autres
+    modes. Cela montre l’importance de fixer une date de fin de ventes des véhicules
+    thermiques bien en amont de 2040 (date fixée en 2017 en France) pour qu’il n’y
+    ait quasiment plus de véhicules thermiques en circulation en 2050, ce que prévoit
+    la SNBC.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.unionroutiere.fr/faitetchiffre/faits-et-chiffres-2020/
@@ -34857,7 +34861,7 @@
   answer_explanation: 'Trop souvent oubliée des politiques de mobilité et de transport,
     la marche à pied n’en est pas moins le 2ème mode de déplacement en France après
     la voiture, que ce soit par nombre de trajets (essentiellement les trajets les
-    plus courts) ,ou en temps de déplacement (en comptant les temps de marche à pied
+    plus courts), ou en temps de déplacement (en comptant les temps de marche à pied
     en intermodalité avec un autre mode, par exemple pour aller prendre un bus ou
     un train).
 
