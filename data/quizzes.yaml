@@ -896,15 +896,15 @@
     \ beaucoup reprise par les medias. Dans ce premier quiz, Aurélien va vous familiariser\
     \ avec les ordres de grandeur sur les émissions des différents types de transports\
     \ en France, ainsi que les biais liés à leur mesure. Il aborde également les ambitions\
-    \ de la Stratégie Nationale Bas Carbone visant à les réduire, et ses limites.<br\
-    \ />\r\nFermeture des portes, attention au départ !</p>"
+    \ et les leviers de la Stratégie Nationale Bas Carbone visant à réduire ces émissions,\
+    \ et leurs limites.<br />\r\nFermeture des portes, attention au départ !</p>"
   conclusion: <p>Les défis du secteur sont forts et la solution unique et parfaite
     n’existe pas. Pour atteindre les objectifs ambitieux fixés en France, il faudra
     accélérer l’action sur les différents leviers de transition, en combinant sobriété
     et technologie. Pour compléter ce premier quiz et les connaissances sur le sujet,
     d’autres quiz suivront dans les mois à venir. En attendant, n’hésitez pas à consulter
     les autres quiz du site !</p>
-  difficulty_average: 0.0
+  difficulty_average: 2.1
   language: Français
   author: Aurélien Bigo
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/transitionactu.jpg
@@ -912,7 +912,7 @@
   publish: false
   spotlight: false
   created: 2021-10-03
-  updated: 2021-10-04
+  updated: 2021-10-08
   tags:
   - 33
   - 34
