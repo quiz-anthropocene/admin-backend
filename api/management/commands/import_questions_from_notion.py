@@ -1,4 +1,6 @@
 import time
+
+from django.db.models.fields import URLField
 import notion
 import collections
 from datetime import datetime, timedelta
@@ -16,6 +18,7 @@ from api.models import Question, Category, Tag, Quiz, Contribution
 
 
 SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS = 15
+QUESTION_URL_FIELDS = [field.name for field in Question._meta.fields if type(field) == URLField]
 
 
 class Command(BaseCommand):
@@ -73,7 +76,7 @@ class Command(BaseCommand):
             self.stdout.write("Erreur accès Notion. token_v2 expiré ?")
             return
 
-        print(
+        self.stdout.write(
             "--- Step 1 done : fetch questions from Notion (%s seconds) ---"
             % round(time.time() - start_time, 1)
         )
@@ -103,7 +106,7 @@ class Command(BaseCommand):
             if n not in notion_questions_id_list:
                 questions_ids_missing.append(n)
 
-        print(
+        self.stdout.write(
             "--- Step 2 done : check question ids (duplicates & missing) : %s seconds ---"
             % round(time.time() - start_time, 1)
         )
@@ -123,11 +126,11 @@ class Command(BaseCommand):
         else:
             notion_questions_list_scope = notion_questions_list
 
-        print(f"processing {len(notion_questions_list_scope)} questions")
-        print(
+        self.stdout.write(f"processing {len(notion_questions_list_scope)} questions")
+        self.stdout.write(
             f"First question id : {notion_questions_list_scope[0].get_property('id')}"
         )
-        print(
+        self.stdout.write(
             f"Last question id : {notion_questions_list_scope[-1].get_property('id')}"
         )
 
@@ -158,6 +161,9 @@ class Command(BaseCommand):
                     notion_question_row
                 )
 
+                # if notion_question_dict["id"] == 1014:
+                #     self.stdout.write(notion_question_dict)
+
                 # cleanup relation category
                 # - check category exists
                 # error if unknown category : api.models.DoesNotExist: Category matching query does not exist.  # noqa
@@ -179,7 +185,7 @@ class Command(BaseCommand):
                         question_validation_errors.append(
                             ValidationError(
                                 {
-                                    "category": f"Question {notion_question_dict['id']}."
+                                    "category": f"Question {notion_question_dict['id']}. "
                                     f"Category '{notion_question_dict['category']}' inconnue"
                                 }
                             )
@@ -280,7 +286,7 @@ class Command(BaseCommand):
                         f"Question {notion_question_dict['id']}: {e}"
                     )
 
-        print(
+        self.stdout.write(
             "--- Step 3 done : loop on questions : %s seconds ---"
             % round(time.time() - start_time, 1)
         )
@@ -355,7 +361,7 @@ class Command(BaseCommand):
         #         len(questions_updated),
         #     )
 
-        print(
+        self.stdout.write(
             "--- Step 4 done : build and send stats : %s seconds ---"
             % round(time.time() - start_time, 1)
         )
@@ -431,6 +437,7 @@ class Command(BaseCommand):
         # - field added --> created time if None --> to date
         # - field validator --> "" if None
         # - fields answer_explanation, answer_image_explanation & answer_extra_info --> clean markdown [links](links)  # noqa
+        # - fields '_url' --> strip spaces at end (or else we get a ValidationError)
         if notion_question_dict["type"] is None:
             notion_question_dict["type"] = ""
         if type(notion_question_dict["difficulty"]) == str:
@@ -450,20 +457,16 @@ class Command(BaseCommand):
             ).date()
         if notion_question_dict["validator"] is None:
             notion_question_dict["validator"] = ""
-        if "http" in notion_question_dict["answer_explanation"]:
-            notion_question_dict["answer_explanation"] = utilities.clean_markdown_links(
-                notion_question_dict["answer_explanation"]
-            )
-        if "http" in notion_question_dict["answer_image_explanation"]:
-            notion_question_dict[
-                "answer_image_explanation"
-            ] = utilities.clean_markdown_links(
-                notion_question_dict["answer_image_explanation"]
-            )
-        if "http" in notion_question_dict["answer_extra_info"]:
-            notion_question_dict["answer_extra_info"] = utilities.clean_markdown_links(
-                notion_question_dict["answer_extra_info"]
-            )
+        # clean markdown [links](links)
+        for field_name in ["answer_explanation", "answer_image_explanation", "answer_extra_info"]:
+            if "http" in notion_question_dict[field_name]:
+                notion_question_dict[field_name] = utilities.clean_markdown_links(
+                    notion_question_dict[field_name]
+                )
+        # strip spaces in url fields
+        for field_name in QUESTION_URL_FIELDS:
+            if field_name in notion_question_dict:
+                notion_question_dict[field_name] = notion_question_dict[field_name].strip()
 
         return notion_question_dict
 
