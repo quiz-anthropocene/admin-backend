@@ -104,7 +104,7 @@ Voir dans le dossier `/data/architecture`
 
 #### Installer l'application
 
-- Vous devez avoir Python 3.7 installé sur votre machine (environment virtuel (`venv` par exemple) recommandé)
+- Vous devez avoir Python 3.9 & Pipenv installés sur votre machine.
 - Clonez le code en local (vous pouvez aussi Fork le projet si vous prévoyez d'y apporter des modifications et effectuer une PR)
     ```
     git clone git@github.com:raphodn/know-your-planet.git
@@ -112,23 +112,23 @@ Voir dans le dossier `/data/architecture`
 - Installez les dépendances du Backend
     ```
     cd backend
-    pip install -r requirements.txt
+    pipenv install --dev
     ```
 - Dupliquer le fichier `backend/.env.example` et le renommer en `backend/.env`
 - Installez [PostgreSQL](https://www.postgresql.org)
 - Créez la base de donnée
     ```
-    psql -c "CREATE USER know_your_planet_team"
+    psql -c "CREATE USER know_your_planet_team WITH PASSWORD 'password'"
     psql -c "CREATE DATABASE know_your_planet OWNER know_your_planet_team"
     psql -c "ALTER USER know_your_planet_team CREATEDB"
     ```
 - Lancez les migrations
     ```
-    python manage.py migrate
+    pipenv run python manage.py migrate
     ```
 - Chargez la base de donnée
     ```
-    python manage.py init_db --with-sql-reset
+    pipenv run python manage.py init_db --with-sql-reset
     ```
 - Installez les dépendances du Frontend
     ```
@@ -147,7 +147,7 @@ Voir dans le dossier `/data/architecture`
 
 ```
 cd backend
-python manage.py runserver
+pipenv run python manage.py runserver
 ```
 
 Le Backend sera accessible à l'url `http://localhost:8000`
@@ -166,7 +166,7 @@ Le Frontend sera accessible à l'url `http://localhost:8080`
 Créez d'abord un utilisateur admin
 ```
 cd backend
-python manage.py createsuperuser --username admin@email.com --email admin@email.com
+pipenv run python manage.py createsuperuser --username admin@email.com --email admin@email.com
 ```
 
 Lancez le Backend, et connectez-vous sur `http://localhost:8000/admin`
@@ -204,6 +204,8 @@ yarn lint
 ```
 
 ### Autres commandes utiles
+
+Rappel : pour le backend, toutes les commandes doivent commencer par `pipenv run`
 
 #### Backend
 

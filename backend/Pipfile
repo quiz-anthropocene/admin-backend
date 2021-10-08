@@ -1,0 +1,41 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==3.2.7"
+asgiref = "*"
+certifi = "*"
+dj-database-url = "*"
+django-ckeditor = "*"
+django-cors-headers = "*"
+django-extensions = "*"
+django-fieldsets-with-inlines = "*"
+django-import-export = "*"
+djangorestframework = "*"
+django-solo = "*"
+freezegun = "*"
+gunicorn = "*"
+ipython = "*"
+notion = {git = "https://github.com/raphodn/notion-py.git", ref = "511b93ed621625600795b7c4baa7e745d8ecfc2f"}
+pandas = "*"
+psycopg2-binary = "*"
+PyGithub = "*"
+python-dotenv = "*"
+pytz = "*"
+PyYAML = "*"
+sqlparse = "*"
+whitenoise = "*"
+
+[dev-packages]
+black = "*"
+coverage = "*"
+factory-boy = "*"
+flake8 = "*"
+
+[requires]
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true
