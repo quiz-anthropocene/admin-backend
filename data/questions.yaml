@@ -34575,3 +34575,452 @@
   - 34
   - 217
   - 224
+- id: 1013
+  text: Quelle est la part des transports dans les émissions de gaz à effet de serre
+    en France (base 2019) ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 1
+  language: Français
+  answer_option_a: 11 %
+  answer_option_b: 21 %
+  answer_option_c: 31 %
+  answer_option_d: 41 %
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: "Le secteur des transports représente 31 % des émissions sur\
+    \ le territoire français avec 136 MtCO2e sur les 436 Mt émises en 2019. C’est\
+    \ ce qu’indiquent les inventaires nationaux, qui ne tiennent cependant pas compte\
+    \ des transports aériens et maritimes internationaux, ni des émissions liées à\
+    \ la production de l’énergie, des véhicules ou des infrastructures de transport.\
+    \ \nQuand ces émissions sont en France, elles sont indiquées dans un autre secteur.\
+    \ Quand elles sont émises à l’étranger, elles ne sont tout simplement pas dans\
+    \ notre inventaire national, comme de nombreuses émissions liées à des produits\
+    \ importés.\nCependant, si on raisonne en empreinte carbone des transports sur\
+    \ le total de l’empreinte carbone des français, l’ordre de grandeur de 30 % des\
+    \ émissions liées aux transports reste valable."
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.hautconseilclimat.fr/publications/rapport-grand-public-2021/
+  answer_scientific_url: https://www.citepa.org/fr/secten/
+  answer_reading_recommendation: ''
+  answer_image_url: https://journaldelenergie.com/wp-content/uploads/2021/07/HCC-1.png
+  answer_image_explanation: 'Emissions par secteur en France en 2019 (source : Haut
+    Conseil pour le Climat)'
+  answer_extra_info: ''
+  author: Aurélien Bigo
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-09-10
+  created: 2021-10-08
+  updated: 2021-10-08
+  tags:
+  - 33
+  - 225
+- id: 1014
+  text: La part modale du fret ferroviaire en France est aujourd’hui de 9-10 % des
+    trafics. Quelle était-elle en 1960 ?
+  hint: ''
+  type: QCM
+  category: 8
+  difficulty: 2
+  language: Français
+  answer_option_a: 11 %
+  answer_option_b: 26 %
+  answer_option_c: 41 %
+  answer_option_d: 56 %
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: 'La part modale du fret ferroviaire a été en forte baisse historiquement.
+    C''est principalement le résultat de la baisse de son trafic. Il a atteint un
+    maximum en 1974, à plus de 70 milliards de tonnes.km , puis s''est réduit de plus
+    de moitié, autour des 30-35 milliards de tonnes.km sur les années 2010.
+
+    Aussi et surtout, le trafic total a été en forte hausse, porté par le transport
+    routier, qui a progressivement augmenté sa part modale, de 34 % en 1960 à quasiment
+    90 % aujourd’hui, au détriment du fret ferroviaire et du transport fluvial.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: http://www.chair-energy-prosperity.org/publications/travail-de-these-decarboner-transports-dici-2050/
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1014%20-%20Fret%20ferroviaire.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Aurélien Bigo
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-10-03
+  created: 2021-10-08
+  updated: 2021-10-08
+  tags:
+  - 33
+  - 42
+- id: 1015
+  text: Quel est le nombre moyen d'occupants d'un véhicule en France ?
+  hint: ''
+  type: QCM
+  category: 8
+  difficulty: 2
+  language: Français
+  answer_option_a: 1,2 personnes
+  answer_option_b: 1,4 personnes
+  answer_option_c: 1,6 personnes
+  answer_option_d: 1,8 personnes
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Ce taux dépend fortement du type de trajet : les longs trajets
+    sont plus remplis (trajets en famille pour les départs en vacances, covoiturage
+    plus développé…) que les trajets du quotidien. Il suffit de regarder dans la rue
+    à l’heure des trajets domicile-travail, où la plupart des voitures n’ont qu’une
+    personne à bord !
+
+    Ce remplissage a été en baisse historiquement, puisqu’il est passé de 1,78 occupants
+    en 1990 à 1,57 en 2019 ; et il était autour de 2,3 passagers sur la première moitié
+    du XXème siècle.
+
+    A noter qu’alors que le remplissage moyen des voitures diminuait, celui des poids-lourds,
+    des trains ou encore des navires augmentait, par des véhicules de plus en plus
+    gros et capacitaires (voir l’image).'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.statistiques.developpement-durable.gouv.fr/les-facteurs-devolution-des-emissions-de-co2-liees-lenergie-en-france-de-1990-2019
+  answer_scientific_url: http://www.chair-energy-prosperity.org/publications/travail-de-these-decarboner-transports-dici-2050/
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1015%20-%20Remplissage%20des%20v%C3%A9hicules.png
+  answer_image_explanation: '[Bonus] A noter aussi une petite subtilité plus technique
+    : le remplissage moyen est plus fort lorsqu’il est mesuré par kilomètre parcouru
+    (où les trajets à longue distance bien remplis représentent une proportion significative)
+    que par trajet (où les trajets à longue distance sont peu nombreux, et font peut
+    relever la moyenne). D’où des chiffres souvent différents sur ce sujet, selon
+    comment on pondère la moyenne.'
+  answer_extra_info: ''
+  author: Aurélien Bigo
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-10-03
+  created: 2021-10-08
+  updated: 2021-10-08
+  tags:
+  - 33
+  - 35
+- id: 1016
+  text: Parmi ces modes de transport, lesquels ne doivent plus du tout consommer de
+    pétrole d'ici 2050 d’après la stratégie nationale bas-carbone (SNBC) de l'Etat
+    ?
+  hint: ''
+  type: QCM-RM
+  category: 5
+  difficulty: 3
+  language: Français
+  answer_option_a: Voitures
+  answer_option_b: Poids-lourds
+  answer_option_c: Avions
+  answer_option_d: Trains
+  answer_correct: abd
+  has_ordered_answers: false
+  answer_explanation: 'A l''horizon 2050, l’objectif de la SNBC pour les transports
+    est d''avoir complètement décarboné les transports terrestres, donc qu’il n’y
+    ait plus de consommations de pétrole aussi bien les voitures, que les véhicules
+    utilitaires légers, les poids-lourds, les 2-roues motorisés, ou encore les transports
+    en communs routiers et ferroviaires, mais aussi le fluvial.
+
+    Les seuls modes qui n''auront pas être décarbonés sont les transports aériens
+    et maritimes, dont la moitié de l’énergie consommée en 2050 pourra rester du pétrole.
+    Il faut cependant noter que les transports internationaux ne sont pas inclus dans
+    le périmètre de la SNBC, le restant d’émissions en 2050 pour les transports intérieurs
+    vient donc exclusivement du transport aérien.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.ecologie.gouv.fr/strategie-nationale-bas-carbone-snbc
+  answer_scientific_url: http://www.chair-energy-prosperity.org/publications/travail-de-these-decarboner-transports-dici-2050/
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1016%20-%20Mix%20%C3%A9nerg%C3%A9tique%20SNBC.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Aurélien Bigo
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-10-03
+  created: 2021-10-08
+  updated: 2021-10-08
+  tags:
+  - 11
+  - 33
+  - 225
+- id: 1017
+  text: Fin septembre 2021, la part des véhicules électriques en France parmi les
+    voitures en circulation a passé le seuil de… ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 1
+  language: Français
+  answer_option_a: 1 %
+  answer_option_b: 2 %
+  answer_option_c: 4 %
+  answer_option_d: 8 %
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: 'La part des véhicules 100 % électriques dans les ventes de
+    voitures a fortement augmenté en 2020, porté par les exigences des réglementations
+    européennes sur les émissions des véhicules neufs. Les véhicules électriques ont
+    représenté 6,7 % des ventes de voiture (dans un marché en recul, en raison de
+    la crise Covid) en 2020, contre 1,9 % en 2019.
+
+    Si la hausse se poursuit avec 8,5 % de véhicules électriques sur janvier à septembre
+    2021, le renouvellement du parc est relativement lent, puisqu’environ 5 à 6 %
+    du parc en moyenne qui est renouvelé chaque année. La décarbonation de ce mode
+    est donc très faible à ce jour, et cette dynamique est aussi valable pour les
+    autres modes. Cela montre l’importance de fixer une date de fin de ventes des
+    véhicules thermiques bien en amont de 2040 (date fixée en 2017 en France) pour
+    qu’il n’y ait quasiment plus de véhicules thermiques en circulation en 2050, ce
+    que prévoit la SNBC.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.unionroutiere.fr/faitetchiffre/faits-et-chiffres-2020/
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1017%20-%20Part%20voitures%20%C3%A9lectriques.png
+  answer_image_explanation: ''
+  answer_extra_info: 'https://ccfa.fr/dossiers-de-presse/
+
+    http://www.avere-france.org/Site/Category/?arborescence_id=143'
+  author: Aurélien Bigo
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-10-03
+  created: 2021-10-08
+  updated: 2021-10-08
+  tags:
+  - 33
+  - 35
+  - 60
+- id: 1018
+  text: La France souhaite augmenter la part des biocarburants dans l’aviation pour
+    réduire ses émissions.  Quel est l’objectif d’incorporation pour 2030 ?
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 3
+  language: Français
+  answer_option_a: 5 %
+  answer_option_b: 10 %
+  answer_option_c: 25 %
+  answer_option_d: 50 %
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: 'Les biocarburants aériens (ou biokérosène, ou biojet) peuvent
+    actuellement être incorporés jusqu’à représenter 50 % du carburant utilisé. Cette
+    limite constitue l’objectif fixé pour la France à l’horizon 2050 dans la Stratégie
+    Nationale Bas-Carbone (SNBC). Mais à court-terme, le déploiement sera relativement
+    lent, avec un objectif de 2 % d’incorporation en 2025 et 5 % en 2030.
+
+    Les biocarburants devront être produits prioritairement à partir de déchets recyclables
+    (huiles de cuisson usagées, biodéchets, etc.) afin de maximiser l’intérêt climatique
+    et éviter d’être en concurrence avec les usages alimentaires. Leurs principaux
+    inconvénients concernent leurs stocks limités et leurs coûts a minima 2 fois plus
+    chers que le kérosène (et parfois bien plus).'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.ecologie.gouv.fr/biocarburants
+  answer_scientific_url: https://www.ecologie.gouv.fr/sites/default/files/ECV%20-%20Mise%20en%20place%20d%27une%20fili%C3%A8re%20de%20biocarburants%20a%C3%A9ronautiques%20en%20France.pdf
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1018%20-%20Biocarburants%20a%C3%A9riens.PNG
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Aurélien Bigo
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-10-03
+  created: 2021-10-08
+  updated: 2021-10-08
+  tags:
+  - 33
+  - 34
+  - 77
+- id: 1019
+  text: En nombre de trajets et en temps de déplacement, quelle part de nos déplacements
+    la marche à pied représente-t-elle en France ?
+  hint: ''
+  type: QCM
+  category: 8
+  difficulty: 2
+  language: Français
+  answer_option_a: 5 %
+  answer_option_b: 10 %
+  answer_option_c: 15 %
+  answer_option_d: 20 %
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: 'Trop souvent oubliée des politiques de mobilité et de transport,
+    la marche à pied n’en est pas moins le 2ème mode de déplacement en France après
+    la voiture, que ce soit par nombre de trajets (essentiellement les trajets les
+    plus courts) ,ou en temps de déplacement (en comptant les temps de marche à pied
+    en intermodalité avec un autre mode, par exemple pour aller prendre un bus ou
+    un train).
+
+    En termes de nombre de kilomètres parcourus, la marche est bien moins significative,
+    en raison de trajets courts et d’une faible vitesse de déplacement.
+
+    La marche, tout comme les autres modes actifs comme le vélo, présente en plus
+    de son faible impact environnemental, de forts co-bénéfices pour la santé grâce
+    à l’activité physique qu’elle implique.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.statistiques.developpement-durable.gouv.fr/comment-les-francais-se-deplacent-ils-en-2019-resultats-de-lenquete-mobilite-des-personnes
+  answer_scientific_url: http://www.chair-energy-prosperity.org/publications/travail-de-these-decarboner-transports-dici-2050/
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1019%20-%20Part%20de%20la%20marche.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Aurélien Bigo
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-10-03
+  created: 2021-10-08
+  updated: 2021-10-08
+  tags:
+  - 33
+- id: 1020
+  text: De plus en plus de poids lourds passent au biogaz. Quel gain d’émissions cela
+    procure-t-il par rapport au diesel (en prenant en compte tout le cycle de vie)
+    ?
+  hint: ''
+  type: QCM
+  category: 5
+  difficulty: 3
+  language: Français
+  answer_option_a: pas de gain significatif
+  answer_option_b: -20 %
+  answer_option_c: -50 %
+  answer_option_d: -80 %
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: 'Le rapport de Carbone 4 sur les motorisations alternatives
+    pour le transport routier montre que les résultats d’émissions de gaz à effet
+    de serre en 2030 sont largement positifs pour les poids-lourds au biogaz, les
+    poids-lourds électriques et ceux roulant à l’hydrogène lorsque celui-ci est produit
+    à partir d’électricité renouvelable. Ainsi la réduction des émissions atteint
+    plus de 80 % par rapport au diesel pour ces 3 options.
+
+    Cependant, ces motorisations sont encore peu développées à ce jour. Leur coût
+    est souvent une limite, le manque d’offre de véhicules pour l’électrique et l’hydrogène
+    en est une autre, tandis qu’une limite majeure pour le biogaz sera la quantité
+    de gaz renouvelable qu’il est possible de produire en raison des ressources disponibles
+    limitées. Si ces véhicules se développent en restant alimentés par du gaz fossile,
+    les avantages climatiques sont alors très maigres, voire inexistants.'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: http://www.carbone4.com/publication-transport-routier-motorisation-alternatives/
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1020%20-%20PL%20biogaz.png
+  answer_image_explanation: Dans la figure, la légende est modifiée pour être plus
+    compréhensible. La figure d’origine se trouve en p. 24 du rapport de Carbone 4.
+  answer_extra_info: ''
+  author: Aurélien Bigo
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-10-03
+  created: 2021-10-08
+  updated: 2021-10-08
+  tags:
+  - 33
+  - 41
+  - 70
+- id: 1021
+  text: En moyenne, quelle était la vitesse maximale des voitures neuves vendues en
+    France en 2018 ?
+  hint: ''
+  type: QCM
+  category: 8
+  difficulty: 2
+  language: Français
+  answer_option_a: 130 km/h
+  answer_option_b: 155 km/h
+  answer_option_c: 170 km/h
+  answer_option_d: 185 km/h
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: 'Le magazine automobile L’Argus tient des statistiques sur plus
+    de 60 ans d’évolution des caractéristiques des voitures neuves en France. Résultat
+    ? La voiture moyenne vendue est globalement de plus en plus longue, large, haute,
+    lourde, puissante, et… rapide ! Ces caractéristiques sont bien sûr interdépendantes,
+    par exemple une voiture plus grosse est plus lourde, demande une plus forte puissance
+    ; une voiture plus rapide nécessite davantage d’équipements de sécurité, qui pèsent
+    également.
+
+    Cet embonpoint passé de la voiture nous indique des marges de sobriété pour l’avenir,
+    car a-t-on vraiment besoin d’une vitesse si élevée, alors que les excès de vitesse
+    sont un important facteur d’accidentologie… et que la vitesse maximale autorisée
+    sur nos routes est de 130 km/h ?
+
+    Petit signal positif, les résultats de l’Argus pour 2020 indiquent une vitesse
+    maximale légèrement en baisse, désormais à 176 km/h…!'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.largus.fr/actualite-automobile/voiture-moyenne-2020-plus-petite-mais-aussi-plus-chere-10675391.html
+  answer_scientific_url: http://www.chair-energy-prosperity.org/publications/travail-de-these-decarboner-transports-dici-2050/
+  answer_reading_recommendation: ''
+  answer_image_url: https://www.largus.fr/images/images/txt_voiture-moyenne-65-ans-d-evolution.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Aurélien Bigo
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-10-03
+  created: 2021-10-08
+  updated: 2021-10-08
+  tags:
+  - 33
+  - 35
+- id: 1022
+  text: 'Quelles sont les émissions liées à la navigation (fluviale, maritime, plaisance)
+    en 2019 ? Pour comparer, c’est 24 millions de tCO2e pour le secteur aérien. '
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 2
+  language: Français
+  answer_option_a: 4 MtCO2e
+  answer_option_b: 8 MtCO2e
+  answer_option_c: 12 MtCO2e
+  answer_option_d: 16 MtCO2e
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: 'Les émissions liées à la navigation représentent 3 fois moins
+    d’émissions que le transport aérien. Comme pour ce dernier, la part liée à l’international
+    domine. En comptant ces émissions internationales, la navigation représente 5
+    % des émissions des transports (8 Mt sur le total d’environ 160 MtCO2e, dont 136
+    pour les transports intérieurs et 24 Mt pour l’international, soit 20 % du total).
+
+    Au sein de la navigation, c’est le transport maritime qui domine largement les
+    émissions. Cela inclut la moitié du transport maritime arrivant dans les ports
+    français ou en partant. De nombreuses marchandises destinées à la France transitent
+    par des ports étrangers (nos ports étant peu dynamiques par rapport à d’autres
+    ports européens) et ne sont pas inclus, ce qui alourdirait le bilan des émissions
+    du transport maritime reliées à la France.
+
+    Les autres navigations, qui incluent les bateaux de plaisance et les autres petits
+    bateaux, représentent environ 1 MtCO2e, assez loin devant le transport fluvial
+    (0,18 MtCO2e).'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.citepa.org/fr/secten/
+  answer_reading_recommendation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1022%20-%20Emissions%20navigation.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Aurélien Bigo
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-10-03
+  created: 2021-10-08
+  updated: 2021-10-08
+  tags:
+  - 33
+  - 59
+  - 225
