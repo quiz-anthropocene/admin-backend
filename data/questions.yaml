@@ -34590,16 +34590,16 @@
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: "Le secteur des transports représente 31 % des émissions sur\
-    \ le territoire français avec 136 MtCO2e sur les 436 Mt émises en 2019. C’est\
-    \ ce qu’indiquent les inventaires nationaux, qui ne tiennent cependant pas compte\
-    \ des transports aériens et maritimes internationaux, ni des émissions liées à\
-    \ la production de l’énergie, des véhicules ou des infrastructures de transport.\
-    \ \nQuand ces émissions sont en France, elles sont indiquées dans un autre secteur.\
-    \ Quand elles sont émises à l’étranger, elles ne sont tout simplement pas dans\
-    \ notre inventaire national, comme de nombreuses émissions liées à des produits\
-    \ importés.\nCependant, si on raisonne en empreinte carbone des transports sur\
-    \ le total de l’empreinte carbone des français, l’ordre de grandeur de 30 % des\
-    \ émissions liées aux transports reste valable."
+    \ le territoire français avec 136 millions de tonnes de CO2e sur les 436 émises\
+    \ en 2019. C’est ce qu’indiquent les inventaires nationaux. Ils ne tiennent cependant\
+    \ pas compte des transports aériens et maritimes internationaux, ni des émissions\
+    \ liées à la production de l’énergie, des véhicules ou des infrastructures de\
+    \ transport. \nQuand ces émissions sont en France, elles sont indiquées dans un\
+    \ autre secteur. Quand elles sont émises à l’étranger, elles ne sont tout simplement\
+    \ pas dans notre inventaire national, comme de nombreuses émissions liées à des\
+    \ produits importés.\nCependant, si on raisonne en empreinte carbone des transports\
+    \ sur le total de l’empreinte carbone des français, l’ordre de grandeur de 30\
+    \ % des émissions liées aux transports reste valable."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.hautconseilclimat.fr/publications/rapport-grand-public-2021/
@@ -34639,7 +34639,14 @@
 
     Aussi et surtout, le trafic total a été en forte hausse, porté par le transport
     routier, qui a progressivement augmenté sa part modale, de 34 % en 1960 à quasiment
-    90 % aujourd’hui, au détriment du fret ferroviaire et du transport fluvial.'
+    90 % aujourd’hui, au détriment du fret ferroviaire et du transport fluvial.
+
+
+    Bonus] La tonne.kilomètre est l''unité communément utilisée pour évaluer le trafic
+    de marchandises, et représente l''équivalent d''une tonne de marchandises transportée
+    sur 1 km. Pour exemple, 5 tonnes de marchandises transportées sur 10 km correspondent
+    à 50 [tonnes.km. Pour la mobilité des personnes, on parle généralement en voyageurs.km
+    ou passagers.km.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -34647,11 +34654,7 @@
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1014%20-%20Fret%20ferroviaire.png
   answer_image_explanation: ''
-  answer_extra_info: La tonne.kilomètre est l'unité communément utilisée pour évaluer
-    le trafic de marchandises, et représente l'équivalent d'une tonne de marchandises
-    transportée sur 1 km. Pour exemple, 5 tonnes de marchandises transportées sur
-    10 km correspondent à 50 tonnes.km. Pour la mobilité des personnes, on parle généralement
-    en voyageurs.km ou passagers.km.
+  answer_extra_info: ''
   author: Aurélien Bigo
   validator: Matthieu Massart
   validation_status: Validée
@@ -34686,7 +34689,15 @@
 
     A noter qu’alors que le remplissage moyen des voitures diminuait, celui des poids-lourds,
     des trains ou encore des navires augmentait, par des véhicules de plus en plus
-    gros et capacitaires (voir l’image).'
+    gros et capacitaires (voir l’image).
+
+
+    [Bonus] A noter aussi une petite subtilité plus technique : le remplissage moyen
+    est plus fort lorsqu’il est mesuré par kilomètre parcouru (où les trajets à longue
+    distance bien remplis représentent une proportion significative) que par trajet
+    (où les trajets à longue distance sont peu nombreux, et font peut relever la moyenne).
+    D’où des chiffres souvent différents sur ce sujet, selon comment on pondère la
+    moyenne.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.statistiques.developpement-durable.gouv.fr/les-facteurs-devolution-des-emissions-de-co2-liees-lenergie-en-france-de-1990-2019
@@ -34694,12 +34705,7 @@
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1015%20-%20Remplissage%20des%20v%C3%A9hicules.png
   answer_image_explanation: ''
-  answer_extra_info: '[Bonus] A noter aussi une petite subtilité plus technique :
-    le remplissage moyen est plus fort lorsqu’il est mesuré par kilomètre parcouru
-    (où les trajets à longue distance bien remplis représentent une proportion significative)
-    que par trajet (où les trajets à longue distance sont peu nombreux, et font peut
-    relever la moyenne). D’où des chiffres souvent différents sur ce sujet, selon
-    comment on pondère la moyenne.'
+  answer_extra_info: ''
   author: Aurélien Bigo
   validator: Matthieu Massart
   validation_status: Validée
@@ -34767,11 +34773,11 @@
   answer_option_d: 8 %
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: 'La part des véhicules 100 % électriques dans les ventes de
-    voitures a fortement augmenté en 2020, porté par les exigences des réglementations
-    européennes sur les émissions des véhicules neufs. Les véhicules électriques ont
-    représenté 6,7 % des ventes de voiture (dans un marché en recul, en raison de
-    la crise Covid) en 2020, contre 1,9 % en 2019.
+  answer_explanation: 'La part des véhicules 100% électriques dans les ventes de voitures
+    a fortement augmenté en 2020, porté par les exigences des réglementations européennes
+    sur les émissions des véhicules neufs. Les véhicules électriques ont représenté
+    6,7 % des ventes de voiture (dans un marché en recul, en raison de la crise Covid)
+    en 2020, contre 1,9 % en 2019.
 
     Si la hausse se poursuit avec 8,5 % de véhicules électriques sur janvier à septembre
     2021, le renouvellement du parc est relativement lent, puisqu’environ 5 à 6 %
