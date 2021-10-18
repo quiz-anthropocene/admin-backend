@@ -34619,8 +34619,8 @@
   - 33
   - 225
 - id: 1014
-  text: La part modale du fret ferroviaire en France est aujourd’hui de 9-10 % des
-    trafics. Quelle était-elle en 1960 ?
+  text: La part du train en France est aujourd’hui de 9-10 % des trafics de marchandises.
+    Quelle était-elle en 1960 ?
   hint: ''
   type: QCM
   category: 8
@@ -34665,7 +34665,7 @@
   - 33
   - 42
 - id: 1015
-  text: Quel est le nombre moyen d'occupants par voiture en France ?
+  text: Quel est le nombre moyen d'occupant par voiture en France ?
   hint: ''
   type: QCM
   category: 8
@@ -34851,8 +34851,9 @@
   - 34
   - 77
 - id: 1019
-  text: En nombre de trajets et en temps de déplacement, quelle part de nos déplacements
-    la marche à pied représente-t-elle en France ?
+  text: En nombre de trajets, quelle part de nos déplacements la marche à pied représente-t-elle
+    en France ? Vous pouvez aussi raisonner en proportion du temps de transport, la
+    proportion est du même ordre.
   hint: ''
   type: QCM
   category: 8
@@ -35000,11 +35001,11 @@
   answer_option_d: 16 MtCO2e
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: 'Les émissions liées à la navigation représentent 3 fois moins
-    d’émissions que le transport aérien. Comme pour ce dernier, la part liée à l’international
-    domine. En comptant ces émissions internationales, la navigation représente 5
-    % des émissions des transports (8 Mt sur le total d’environ 160 MtCO2e ; sur ce
-    total, 136 Mt sont pour les transports intérieurs et 24 Mt pour l’international,
+  answer_explanation: 'Les émissions liées à la navigation en France représentent
+    3 fois moins d’émissions que le transport aérien. Comme pour ce dernier, la part
+    liée à l’international domine. En comptant ces émissions internationales, la navigation
+    représente 5 % des émissions des transports (8 Mt sur le total d’environ 160 MtCO2e
+    ; sur ce total, 136 Mt sont pour les transports intérieurs et 24 Mt pour l’international,
     soit 15 % du total).
 
     Au sein de la navigation, c’est le transport maritime qui domine largement les
