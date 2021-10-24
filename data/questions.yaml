@@ -82,8 +82,8 @@
   answer_option_b: La réflexion des rayons solaires sur la terre
   answer_option_c: Le fait qu'un gisement d'énergie fossile redevienne compétitif
     une fois que le prix du marché a augmenté
-  answer_option_d: Le fait que plus on gagne en efficacité dans la consommation d'une
-    ressource, plus nous en consommons au total
+  answer_option_d: Le fait que plus on a gagné en efficacité dans l'utilisation d'une
+    ressource, plus on en consomme au total
   answer_correct: d
   has_ordered_answers: false
   answer_explanation: 'Exemple : les voitures sont de plus en plus économes, mais
@@ -34736,11 +34736,11 @@
     utilitaires légers, les poids-lourds, les 2-roues motorisés, ou encore les transports
     en communs routiers et ferroviaires, mais aussi le fluvial.
 
-    Les seuls modes qui n''auront pas être décarbonés sont les transports aériens
-    et maritimes, dont la moitié de l’énergie consommée en 2050 pourra rester du pétrole.
-    Il faut cependant noter que les transports internationaux ne sont pas inclus dans
-    le périmètre de la SNBC, le restant d’émissions en 2050 pour les transports intérieurs
-    vient donc exclusivement du transport aérien.'
+    Les seuls modes qui n''auront pas à être décarbonés sont les transports aériens
+    et maritimes : la moitié de l’énergie qu''ils consommeront en 2050 pourra rester
+    du pétrole. Il faut cependant noter que les transports internationaux ne sont
+    pas inclus dans le périmètre de la SNBC, le restant d’émissions en 2050 pour les
+    transports intérieurs vient donc exclusivement du transport aérien.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ecologie.gouv.fr/strategie-nationale-bas-carbone-snbc
