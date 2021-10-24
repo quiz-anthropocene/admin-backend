@@ -338,6 +338,7 @@ const store = new Vuex.Store({
     },
     // quiz
     getQuizById: (state) => (quizId) => state.quizzes.find((q) => (q.id === quizId)),
+    getQuizBySlug: (state) => (quizId) => state.quizzes.find((q) => (q.slug === quizId)),
     getQuizzesByIdList: (state) => (quizIdList) => state.quizzes.filter((q) => quizIdList.includes(q.id)),
     getQuizzesPublishedByFilter: (state) => (filter) => state.quizzesPublished.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
       .filter((q) => (filter.author ? (q.author === filter.author) : true))

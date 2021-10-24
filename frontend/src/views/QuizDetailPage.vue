@@ -1,8 +1,15 @@
 <template>
   <section>
 
-    <section v-if="!quiz" class="alert alert-warning" role="alert">
-      {{ $t('messages.quizNotFound') }}
+    <section v-if="!quiz">
+      <div class="alert alert-warning" role="alert">
+        {{ $t('messages.quizNotFound') }}
+      </div>
+      <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
+        <button id="all-quizs-btn" class="btn btn-primary btn-lg">
+          🕹&nbsp;<strong>{{ $t('messages.allQuizs') }}</strong>
+        </button>
+      </router-link>
     </section>
 
     <section v-if="quiz && quiz.language !== currentLocale.value" class="alert alert-warning" role="alert">
@@ -148,8 +155,12 @@ export default {
 
   computed: {
     quiz() {
-      const quiz = this.$store.getters.getQuizById(parseInt(this.$route.params.quizId, 10));
+      let quiz = this.$store.getters.getQuizById(parseInt(this.$route.params.quizId, 10));
       // .slice(0) ? // .slice makes a copy of the array, instead of mutating the orginal
+      // if the quiz is not found with its id, try with its slug
+      if (!quiz) {
+        quiz = this.$store.getters.getQuizBySlug(this.$route.params.quizId);
+      }
       return quiz;
     },
     quizStats() {
