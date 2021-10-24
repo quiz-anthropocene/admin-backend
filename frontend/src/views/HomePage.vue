@@ -3,7 +3,7 @@
 
     <div class="alert alert-success" role="alert">
       Le Quiz de l'Anthropocène a maintenant son atelier !<br />
-      ➡️<router-link :to="{ name: 'atelier' }"><strong>Plus d'informations</strong></router-link>&nbsp;⬅️
+      ➡️&nbsp;<router-link :to="{ name: 'atelier' }"><strong>Plus d'informations</strong></router-link>&nbsp;⬅️
     </div>
 
     <h2 v-if="quizzesSpotlighted && quizzesSpotlighted.length > 0" class="special-title">✨&nbsp;{{ $t('messages.newQuizs') }}&nbsp;✨</h2>

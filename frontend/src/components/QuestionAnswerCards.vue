@@ -62,11 +62,19 @@
 
     <!-- ANSWER -->
     <div v-if="question && questionSubmitted" class="answer" :class="questionAnswer.success ? 'answer-success' : 'answer-error'">
+      <!-- Good answer -->
       <h2 v-if="questionAnswer.success">{{ questionAnswer.message }}</h2>
+      <!-- Wrong answer -->
       <h2 v-if="!questionAnswer.success">{{ questionAnswer.message }}</h2>
       <h3 v-if="!questionAnswer.success">
         <small>{{ $t('messages.answerWas') }}{{ $t('words.semiColon') }}&nbsp;</small>
-        <span>{{ question["answer_option_" + question["answer_correct"]] }}</span>
+        <span v-if="question.type !== 'QCM-RM'">{{ question["answer_option_" + question["answer_correct"]] }}</span>
+        <span v-if="question.type === 'QCM-RM'">
+          <span v-for="(answer_correct_letter, index) in question['answer_correct']" :key="answer_correct_letter">
+            <span>{{ question["answer_option_" + answer_correct_letter] }}</span>
+            <span v-if="index < question['answer_correct'].length - 1">,&nbsp;</span>
+          </span>
+        </span>
       </h3>
       <!-- Answer explanation -->
       <div class="row no-gutters text-align-left">
