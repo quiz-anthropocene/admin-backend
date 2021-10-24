@@ -1,5 +1,6 @@
 - id: 1
   name: Quelques chiffres clés
+  slug: quelques-chiffres-cles
   introduction: <p>Quelques chiffres pour se mettre en jambes.</p>
   conclusion: ''
   difficulty_average: 1.9
@@ -14,6 +15,7 @@
   tags: []
 - id: 2
   name: L'énergie en France 🇫🇷
+  slug: lenergie-en-france
   introduction: <p>Un aperçu rapide de la production et de la consommation d'énergie
     en France.</p>
   conclusion: ''
@@ -30,6 +32,7 @@
   - 1
 - id: 3
   name: Le quiz de Vincent Mignerot
+  slug: le-quiz-de-vincent-mignerot
   introduction: "<p>Vincent Mignerot est essayiste et conférencier. Il développe une\
     \ théorie écologique de l’esprit et se questionne sur la singularité de l'humanité\
     \ dans son contexte évolutif. Il est le fondateur d'<a href=\"https://adrastia.org\"\
@@ -55,6 +58,7 @@
   - 185
 - id: 4
   name: Les pics de ressources
+  slug: les-pics-de-ressources
   introduction: L'extraction de toute ressource finie passe par un maximum, après
     lequel elle ne peut que décroître pour finalement tomber à 0. C'est le thème qu'explore
     ce quiz sur les différentes ressources non-renouvelables dont nous faisons usage.
@@ -71,6 +75,7 @@
   tags: []
 - id: 5
   name: Mon empreinte carbone
+  slug: mon-empreinte-carbone
   introduction: <p>L'empreinte carbone d’une activité humaine est une mesure des émissions
     de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent lui être
     imputées. Connaissez-vous votre empreinte ? Voyons voir ça.</p>
@@ -87,7 +92,8 @@
   tags:
   - 72
 - id: 6
-  name: Introduction à l'anthropocène - partie 1
+  name: Introduction à l'anthropocène - Partie 1
+  slug: introduction-a-lanthropocene-partie-1
   introduction: "<p>L'Anthropocène, c'est un terme proposé par des scientifiques pour\
     \ désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où\
     \ l'homme est devenu une force géologique majeure. La période la plus récente\
@@ -107,7 +113,8 @@
   updated: 2021-03-24
   tags: []
 - id: 7
-  name: Le Pétrole - Partie 1 (retiré)
+  name: Le Pétrole - Partie 1
+  slug: le-petrole-partie-1
   introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
     à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
   conclusion: ''
@@ -124,6 +131,7 @@
   - 11
 - id: 8
   name: La Fresque du Climat - Lot 1
+  slug: la-fresque-du-climat-lot-1
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
     \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
     \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -146,6 +154,7 @@
   - 142
 - id: 9
   name: Pollutions
+  slug: pollutions
   introduction: Nos modes de vie génèrent des pollutions diverses. En connaissez-vous
     la variété et l'ampleur ? C'est ce que ce quiz se propose d'explorer.
   conclusion: ''
@@ -160,7 +169,8 @@
   updated: 2021-01-26
   tags: []
 - id: 10
-  name: Le Pétrole - Partie 2 (retiré)
+  name: Le Pétrole - Partie 2
+  slug: le-petrole-partie-2
   introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
     à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
   conclusion: ''
@@ -177,6 +187,7 @@
   - 11
 - id: 11
   name: La fresque du Climat - Lot 2
+  slug: la-fresque-du-climat-lot-2
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
     \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
     \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -199,6 +210,7 @@
   - 142
 - id: 12
   name: La Fresque du Climat - Lot 3
+  slug: la-fresque-du-climat-lot-3
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
     \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
     \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -220,6 +232,7 @@
   - 142
 - id: 13
   name: La Fresque du Climat - Lot 4
+  slug: la-fresque-du-climat-lot-4
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
     \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
     \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -241,6 +254,7 @@
   - 142
 - id: 14
   name: La Fresque du Climat - Lot 5
+  slug: la-fresque-du-climat-lot-5
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
     \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
     \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -262,6 +276,7 @@
   - 142
 - id: 15
   name: La Fresque du Climat - pour aller au-delà
+  slug: la-fresque-du-climat-pour-aller-au-dela
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
     \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
     \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -283,7 +298,8 @@
   tags:
   - 142
 - id: 16
-  name: Intoduction à l'anthropocène - partie 2
+  name: Introduction à l'anthropocène - Partie 2
+  slug: introduction-a-lanthropocene-partie-2
   introduction: <p>L'Anthropocène, c'est un terme proposé par des scientifiques pour
     désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où l'homme
     est devenu une force géologique majeure. La période la plus récente de l'anthropocène
@@ -303,6 +319,7 @@
   tags: []
 - id: 17
   name: Une biodiversité qui s'anéantit
+  slug: une-biodiversite-qui-saneantit
   introduction: <p>Quel impact l'homme a-t-il sur les autres espèces ? Un premier
     aperçu via ces quelques questions.</p>
   conclusion: ''
@@ -321,6 +338,7 @@
   - 76
 - id: 18
   name: Le quiz de Laurent Testot
+  slug: le-quiz-de-laurent-testot
   introduction: "<p>Laurent Testot est journaliste, conférencier et formateur. Il\
     \ se consacre à la promotion en France de l’histoire globale, une méthode transdisciplinaire\
     \ d’analyse de l’histoire à grandes échelles. Son premier livre, <em>Cataclysmes.\
@@ -354,6 +372,7 @@
   tags: []
 - id: 52
   name: La finance "verte", par Bon Pote
+  slug: la-finance-verte-par-bon-pote
   introduction: '<p>Je vous présente Thomas, alias Bon Pote. Thomas a commencé à bloguer
     fin 2018 avec un objectif en tête : rendre ses articles utiles. Le lecteur ne
     doit pas perdre son temps et doit soit avoir appris quelque chose, soit avoir
@@ -379,6 +398,7 @@
   - 194
 - id: 53
   name: Les 10 questions les plus difficiles
+  slug: les-10-questions-les-plus-difficiles
   introduction: "<p>Les questions présentées dans ce quiz ont été choisies spécifiquement,\
     \ et ont toutes le niveau de difficulté le plus élevé : ce n'est donc pas le quiz\
     \ par lequel commencer !</p>\r\n\r\n<p>Personne n'a eu la moyenne à ce quiz à\
@@ -398,6 +418,7 @@
   tags: []
 - id: 54
   name: Born in the USA
+  slug: born-in-the-usa
   introduction: '<p>Les États-Unis sont entrés dans notre imaginaire collectif : les
     cow-boys, New-York, Hollywood, la Silicon Valley, ... Le rêve américain ! Mais
     les États-Unis, ce sont aussi des consommateurs effrénés de pétrole, un des plus
@@ -426,6 +447,7 @@
   - 80
 - id: 55
   name: Technologies de capture et stockage du CO2
+  slug: technologies-de-capture-et-stockage-du-co2
   introduction: "<p>Le Réveilleur, c'est une chaîne Youtube qui fait de la vulgarisation\
     \ sur les thématiques énergie et climat. Il explique de manière pédagogique ces\
     \ sujets complexes sur Youtube.<br />\r\nUne de ses dernières vidéos traite de\
@@ -456,6 +478,7 @@
   - 62
 - id: 56
   name: En état d'ébriété énergétique ?
+  slug: en-etat-debriete-energetique
   introduction: '<p>L''énergie est partout autour de nous: nos voitures, notre électricité,
     nos usines...Mais avons-nous bien conscience du degré de dépendance que nous avons
     développé vis à vis d''elle ? Ce quiz pour apprendre à mieux nous en rendre compte.</p>'
@@ -475,6 +498,7 @@
   tags: []
 - id: 57
   name: 2020 en chiffres
+  slug: 2020-en-chiffres
   introduction: <p>Covid-19 et son lot de confinements et de coronapistes, 5 ans de
     la COP21, propositions de la Convention Citoyenne pour le Climat,... L'année 2020
     a été riche en matière d'environment. Mais avez-vous bien tout suivi ?</p>
@@ -493,6 +517,7 @@
   - 213
 - id: 59
   name: Fresque du Numérique
+  slug: fresque-du-numerique
   introduction: '<p>La <a href="https://fresquedunumerique.org">Fresque du Numérique</a> est
     un atelier collectif et pédagogique qui permet de comprendre les impacts écologiques
     du numérique, et de réfléchir à des solutions pour les réduire, le tout en passant
@@ -520,6 +545,7 @@
   - 30
 - id: 60
   name: Le numérique est-il écologique ?
+  slug: le-numerique-est-il-ecologique
   introduction: <p>Loin des caractères immatériel et propre qui lui sont prêtés, le
     numérique a, comme toute activité humaine, des impacts environnementaux. Ce quiz
     est là pour vous éclairer sur quelques chiffres.</p>
@@ -539,6 +565,7 @@
   - 30
 - id: 61
   name: Fresque des low techs - les constats
+  slug: fresque-des-low-techs-les-constats
   introduction: "<p>Les low techs, vous connaissez ? Allez on va vous donner la réponse\
     \ : des objets, des systèmes, des techniques, des services, des savoir-faire,\
     \ des pratiques, des modes de vie et même des courants de pensée, qui intègrent\
@@ -579,6 +606,7 @@
   - 255
 - id: 62
   name: Fresque de l'Alimentation
+  slug: fresque-de-lalimentation
   introduction: "<p>Savez-vous réellement comment un steak ou une salade finit dans\
     \ votre assiette ? Et leurs conséquences environnementales ? Pour mieux vous éclairer,\
     \ un atelier collectif et pédagogique a été créé : la <a href=\"https://fresquealimentation.org/\"\
@@ -610,6 +638,7 @@
   - 244
 - id: 63
   name: Digital Collage
+  slug: digital-collage
   introduction: "<p>The Digital Collage is a collaborative and pedagogical workshop\
     \ that unveils the ecological impacts of the digital world, and presents potential\
     \ levers to alleviate them, in a friendly way! The principle is the same as the\
@@ -633,6 +662,7 @@
   - 30
 - id: 64
   name: Le quiz Choc
+  slug: le-quiz-choc
   introduction: ''
   conclusion: ''
   difficulty_average: 2.5
@@ -647,6 +677,7 @@
   tags: []
 - id: 65
   name: Le Pétrole
+  slug: le-petrole
   introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
     à cela ! Mais savez-vous à quel point ? Ce quiz pour fixer quelques ordres de
     grandeur.</p>
@@ -667,6 +698,7 @@
   - 11
 - id: 66
   name: Un voyage sur des millions d'années
+  slug: un-voyage-sur-des-millions-dannees
   introduction: "<p>Ceux qui ne peuvent se souvenir du passé sont condamnés à le répéter.\
     \ Si ce dicton s'applique facilement aux événements vécus par nos ancêtres durant\
     \ ces derniers siècles, il est plus difficile à appliquer à l'histoire de la Terre.\
@@ -705,6 +737,7 @@
   - 227
 - id: 67
   name: Des low techs tombées dans l'oubli
+  slug: des-low-techs-tombees-dans-loubli
   introduction: "<p>Et si on faisait un petit détour par le passé ? Les XIX et XXe\
     \ siècles ont en effet été l'ère des grands inventeurs. Ils ont été capables de\
     \ faire le tour du monde, de construire des bâtiments gigantesques ou de s'adapter\
@@ -732,6 +765,7 @@
   - 255
 - id: 68
   name: Low Tech Collage - Current Issues
+  slug: low-tech-collage-current-issues
   introduction: "<p>Ever heard of low techs ? They are objects, systems, techniques,\
     \ services, know-how, practices, lifestyle and even a current of thought that\
     \ integrate technology while being useful, accessible and sustainable. The Low\
@@ -763,6 +797,7 @@
   - 255
 - id: 69
   name: Le cycle de l'eau dans tous ses états
+  slug: le-cycle-de-leau-dans-tous-ses-etats
   introduction: "<p>Le cycle de l'eau joue un rôle central, tant dans nos vies quotidiennes\
     \ que dans le fonctionnement du système planétaire. Cependant l'être humain a\
     \ une influence croissante sur ce cycle, et donc sur les systèmes physiques et\
@@ -789,6 +824,7 @@
   - 263
 - id: 70
   name: Fresque des low techs - les leviers d'action
+  slug: fresque-des-low-techs-les-leviers-daction
   introduction: "<p>La <a href=\"https://fresquedeslowtechs.org\">Fresque des low\
     \ techs</a>, c'est un atelier-jeu collaboratif sur la (non ?) soutenabilité des\
     \ technologies qui nous entourent. Il amène d'abord à s'interroger sur leurs limites,\
@@ -817,6 +853,7 @@
   - 255
 - id: 71
   name: Fresque Océane
+  slug: fresque-oceane
   introduction: '<p>La Fresque Océane : 1 océan - 6 thématiques qui décrivent ce qu''il
     est en tant que milieu, ce qu''il représente pour les sociétés humaines, les menaces
     auxquelles il est confronté.</p>'
@@ -836,6 +873,7 @@
   - 223
 - id: 73
   name: Forgotten Low Techs
+  slug: forgotten-low-techs
   introduction: "<p>How about a diversion into the past? The 19th and 20th centuries\
     \ were indeed an era of great inventors. They were able to circumnavigate the\
     \ globe, construct gigantic buildings or adapt to an energy shortage. However,\
@@ -860,6 +898,7 @@
   - 255
 - id: 74
   name: Faut-il encore prendre l'avion ?
+  slug: faut-il-encore-prendre-lavion
   introduction: "<p>Depuis le Le rêve d'Icare, qui n'a pas rêvé de voler ? Mais ce\
     \ mode de déplacement est-il vraiment soutenable ? L'initiative <a href=\"https://restonslespiedssurterre.fr/\"\
     >Restons Les Pieds Sur Terre</a> a pour objectif de sensibiliser le public à l’impact\
@@ -889,6 +928,7 @@
   - 100
 - id: 75
   name: 'Transition énergétique des transports #1'
+  slug: transition-energetique-des-transports-1
   introduction: "<p>Aurélien Bigo est un jeune chercheur spécialisé sur la transition\
     \ énergétique des transports. La thèse qu'il a soutenue en 2020, intitulée \"\
     Les transports face au défi de la transition énergétique. Explorations entre passé\

@@ -373,10 +373,10 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "tags_list_string",
         "difficulty_average",
         "has_audio",
-        "publish",
-        "spotlight",
         "answer_count_agg",
         "created",
+        "publish",
+        "spotlight",
     )
     search_fields = ("name",)
     list_filter = (
