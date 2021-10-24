@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models import Avg, Count
 from django.core.exceptions import ValidationError
+from django.utils.text import slugify
 
 from ckeditor.fields import RichTextField
 
@@ -426,6 +427,7 @@ class QuizQuerySet(models.QuerySet):
 
 class Quiz(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du quiz")
+    slug = models.SlugField(max_length=50, unique=True, help_text="Le bout d'url du quiz")
     introduction = RichTextField(blank=True, help_text="Une description du quiz")
     conclusion = RichTextField(
         blank=True,
@@ -487,8 +489,18 @@ class Quiz(models.Model):
     def __str__(self):
         return f"{self.name}"
 
+    def set_slug(self):
+        """
+        The slug field should be unique.
+        TODO: manage conflicts (e.g. add uuid4 at the end)
+        """
+        if not self.id:
+            if not self.slug:
+                self.slug = slugify(self.name)
+
     def save(self, *args, **kwargs):
         self.full_clean()
+        self.set_slug()
         return super(Quiz, self).save(*args, **kwargs)
 
     @property
