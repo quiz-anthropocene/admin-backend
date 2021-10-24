@@ -1,5 +1,7 @@
 import factory
 
+from django.utils.text import slugify
+
 from api import constants
 from api.models import (
     Category,
@@ -44,4 +46,5 @@ class QuizFactory(factory.django.DjangoModelFactory):
         model = Quiz
 
     name = "le quiz"
+    slug = factory.LazyAttribute(lambda o: slugify(o.name))
     publish = False
