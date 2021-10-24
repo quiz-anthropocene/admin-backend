@@ -373,10 +373,10 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "tags_list_string",
         "difficulty_average",
         "has_audio",
-        "publish",
-        "spotlight",
         "answer_count_agg",
         "created",
+        "publish",
+        "spotlight",
     )
     search_fields = ("name",)
     list_filter = (
@@ -388,10 +388,13 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "tags",
     )
     ordering = ("-id",)
+    prepopulated_fields = {'slug': ('name',)}
     filter_vertical = ("questions",)
     filter_horizontal = ("tags",)
     # inlines = [QuizQuestionInline, QuizRelationshipFromInline, QuizRelationshipToInline]
     readonly_fields = (
+        "id",
+        # "slug",
         "question_count",
         "difficulty_average",
         "questions_not_validated_string_html",
@@ -414,7 +417,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
     fieldsets_with_inlines = [
         (
             "Infos de base",
-            {"fields": ("name", "language", "author", "introduction", "conclusion",)},
+            {"fields": ("id", "name", "slug", "language", "author", "introduction", "conclusion",)},
         ),
         QuizQuestionInline,
         (
@@ -474,6 +477,26 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
     questions_not_validated_string_html.short_description = (
         "Questions pas encore validées"
     )
+
+    def get_readonly_fields(self, request, obj=None):
+        """
+        Slug field should only be editable:
+        - when the quiz is just created
+        - if the quiz is not published yets
+        """
+        if obj:
+            if obj.publish:
+                return self.readonly_fields + ('slug',)
+        return self.readonly_fields
+
+    def get_prepopulated_fields(self, request, obj=None):
+        """
+        get_readonly_fields() method has an impact on get_prepopulated_fields()
+        """
+        if obj:
+            if obj.publish:
+                return {}
+        return self.prepopulated_fields
 
     def changelist_view(self, request, extra_context=None):
         """

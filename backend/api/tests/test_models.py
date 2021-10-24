@@ -234,7 +234,7 @@ class QuizRelationshipModelTest(TestCase):
         cls.question_1 = QuestionFactory(answer_correct="a")
         cls.quiz_1 = QuizFactory(name="quiz 1")
         cls.quiz_2 = QuizFactory(name="quiz 2")
-        cls.quiz_3 = QuizFactory(name="quiz 2")
+        cls.quiz_3 = QuizFactory(name="quiz 3")
         cls.quiz_relationship = QuizRelationship.objects.create(
             from_quiz=cls.quiz_1, to_quiz=cls.quiz_2, status="suivant"
         )
