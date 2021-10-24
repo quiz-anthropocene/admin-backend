@@ -426,6 +426,7 @@ class QuizQuerySet(models.QuerySet):
 
 class Quiz(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du quiz")
+    slug = models.SlugField(max_length=50, unique=True, help_text="Le bout d'url du quiz")
     introduction = RichTextField(blank=True, help_text="Une description du quiz")
     conclusion = RichTextField(
         blank=True,
