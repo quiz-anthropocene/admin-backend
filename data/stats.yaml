@@ -16,12 +16,12 @@ quiz_per_publish_count:
   total: 31
 - publish: false
   total: 9
-question_answer_count: 194117
-quiz_answer_count: 13751
-question_answer_count_last_30_days: 30621
-quiz_answer_count_last_30_days: 2299
+question_answer_count: 194363
+quiz_answer_count: 13767
+question_answer_count_last_30_days: 30867
+quiz_answer_count_last_30_days: 2315
 category_count: 8
 tag_count: 238
-question_feedback_count: 3340
+question_feedback_count: 3341
 quiz_feedback_count: 602
 contribution_count: 864
