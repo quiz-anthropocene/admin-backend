@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:e2e": "vue-cli-service test:e2e --headless --no-sandbox --disable-gpu",
+    "test:e2e:firefox": "vue-cli-service test:e2e --env firefox --headless --no-sandbox --disable-gpu",
     "lint": "vue-cli-service lint",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
     "test": "echo \"no unit tests yet. try 'test:e2e' instead.\" && exit 0"
