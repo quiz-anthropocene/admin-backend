@@ -84,7 +84,7 @@ jobs:
           pipenv sync --dev
 
       - name: Run flake8 linting
-        run: pipenv run python -m flake8
+        run: pipenv run flake8
 
       - name: Run tests
         run: pipenv run python manage.py test
