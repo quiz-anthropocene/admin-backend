@@ -281,6 +281,12 @@ Launch the Vue.js UI
 vue ui
 ```
 
+Update packages
+```
+yarn upgrade
+yarn upgrade-interactive
+```
+
 #### Autres
 
 Mettre à jour l'instance Metabase sur Heroku
