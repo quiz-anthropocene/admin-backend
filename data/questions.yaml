@@ -32889,35 +32889,41 @@
   - 5
   - 238
 - id: 933
-  text: En quelle année l'accord de Paris a-t-il été signé ?
-  hint: L'accord a été signé à Paris
+  text: Quelle est la part des services publics dans l'empreinte carbone des français
+    en tonnes de CO2 équivalent ?
+  hint: ''
   type: QCM
   category: 1
-  difficulty: 2
+  difficulty: 4
   language: Français
-  answer_option_a: En 2000 à Paris
-  answer_option_b: En 2002 en Afrique du Sud
-  answer_option_c: En 2015 à Paris
-  answer_option_d: En 1992 à Rio
-  answer_correct: c
+  answer_option_a: 1,1 tCO2e
+  answer_option_b: 1,5 tCO2e
+  answer_option_c: 2 tCO2e
+  answer_option_d: 1 tCO2e
+  answer_correct: a
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: La part des services publics représente 1,1 tCO2e en 2016 et
+    recouvre la santé, la recherche, l'éducation, etc. Ce sont les émissions de gaz
+    à effet de serre des infrastructures que l'on mutualise (hôpitaux, écoles, universités,
+    laboratoires de recherche, etc.) ainsi la mobilité, alimentation... des fonctionnaires
+    (Etat, collectivités, santé). Ce total est ensuite rapporter à la population.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: https://unfccc.int/fr/processus-et-reunions/l-accord-de-paris/l-accord-de-paris
+  answer_scientific_url: https://ree.developpement-durable.gouv.fr/themes/defis-environnementaux/changement-climatique/empreinte-carbone/article/l-empreinte-carbone-de-la-france
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://ree.developpement-durable.gouv.fr/local/cache-vignettes/L692xH390/decomposition_ec_par_poste_de_consommation-bb5f8.png?1607877975
+  answer_image_explanation: Décomposition de l’empreinte carbone par postes de consommation
+    en 2016
   answer_extra_info: ''
   author: FJG
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-02-19
   created: 2021-02-21
   updated: 2021-02-21
   tags:
-  - 38
+  - 72
 - id: 934
   text: De combien la température moyenne sur Terre s'est-elle réchauffée depuis l'ère
     préindustrielle ?
@@ -32951,41 +32957,48 @@
   - 51
   - 98
 - id: 935
-  text: Quelle est la part de la population mondiale qui a voyagé en avion en 2018
+  text: Quelle est l'empreinte carbone par personne des 1% les plus riches en France
     ?
   hint: ''
   type: QCM
   category: 1
   difficulty: 3
   language: Français
-  answer_option_a: 74%
-  answer_option_b: 25%
-  answer_option_c: 1%
-  answer_option_d: 11%
+  answer_option_a: 9 tCO2e
+  answer_option_b: 12 tCO2e
+  answer_option_c: 42 tCO2e
+  answer_option_d: 56 tCO2e
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: L'aviation reste un mode de transport très inégalitaire bien
-    que "démocratisé" depuis les 50 dernières décennies. Et il représente aujourd'hui
-    entre 3% et 6% des émissions de GES selon que l'on compte que le CO2 seul ou de
-    l'impact du forçage radiatif global.
+  answer_explanation: 'Il existe de forte disparités entre personnes au niveau de
+    l''empreinte carbone. Dans un monde où plus de 80% de l''énergie utilisée est
+    fossile, plus on gagne d''argent plus on a de risque d''avoir une empreinte carbone
+    importante.
+
+    A l''échelle française ou européenne, les 1% les plus riches émettent 56 tonnes
+    de CO2 équivalent par an et par personne contre une moyenne nationale autour de
+    9 à 10 tonnes de CO2e. Les chiffes sont du même ordre si on pose la question à
+    l''échelle européenne.
+
+    La cible pour respecter l''accord de Paris est d''ici à 2050 d''atteindre moins
+    de 2 tonnes de CO2e par an et par personne.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
+  answer_scientific_url: https://www.cambridge.org/core/journals/global-sustainability/article/unequal-distribution-of-household-carbon-footprints-in-europe-and-its-link-to-sustainability/F1ED4F705AF1C6C1FCAD477398353DC2
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://twitter.com/diana_nbd/status/1280177349582077952/photo/1
   answer_image_explanation: ''
   answer_extra_info: ''
   author: FJG
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-02-19
   created: 2021-02-21
   updated: 2021-02-21
   tags:
   - 31
-  - 33
-  - 34
+  - 72
 - id: 936
   text: How many oil barrels do we consume every day in the world ? 1 barrel = 159
     l

@@ -957,3 +957,18 @@
   - 33
   - 218
   - 225
+- id: 76
+  name: Quiz INVBC
+  slug: quiz-invbc
+  introduction: <p>test</p>
+  conclusion: <p>a bientôt</p>
+  difficulty_average: 0.0
+  language: Français
+  author: François Josephe Grimaud
+  image_background_url: ''
+  has_audio: false
+  publish: false
+  spotlight: false
+  created: 2021-11-16
+  updated: 2021-11-16
+  tags: []
