@@ -61,9 +61,9 @@ class Command(BaseCommand):
                         contribution_date=new_contribution.created,
                     )
 
-                    # update configuration every time (sometimes it time's out)
-                    configuration.notion_contributions_last_exported = timezone.now()
-                    configuration.save()
+                # update configuration every time (sometimes it time's out)
+                configuration.notion_contributions_last_exported = timezone.now()
+                configuration.save()
 
                 print("Done !")
                 self.stdout.write(
