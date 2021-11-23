@@ -32889,37 +32889,37 @@
   - 5
   - 238
 - id: 933
-  text: Quelle est la part des services publics dans l'empreinte carbone des français
-    en tonnes de CO2 équivalent ?
+  text: Quelle est la part des services publics dans l'empreinte carbone moyenne dun
+    Français ?
   hint: ''
   type: QCM
   category: 1
   difficulty: 4
   language: Français
-  answer_option_a: 1,1 tCO2e
-  answer_option_b: 1,5 tCO2e
-  answer_option_c: 2 tCO2e
-  answer_option_d: 1 tCO2e
-  answer_correct: a
+  answer_option_a: 0,5t CO2e
+  answer_option_b: 1t CO2e
+  answer_option_c: 1,5t CO2e
+  answer_option_d: 3t CO2e
+  answer_correct: b
   has_ordered_answers: false
-  answer_explanation: La part des services publics représente 1,1 tCO2e en 2016 et
-    recouvre la santé, la recherche, l'éducation, etc. Ce sont les émissions de gaz
-    à effet de serre des infrastructures que l'on mutualise (hôpitaux, écoles, universités,
-    laboratoires de recherche, etc.) ainsi la mobilité, alimentation... des fonctionnaires
-    (Etat, collectivités, santé). Ce total est ensuite rapporter à la population.
+  answer_explanation: On parle ici des émissions de gaz à effet de serre des infrastructures
+    que l'on mutualise (hôpitaux, écoles, universités, laboratoires de recherche,
+    etc.) ainsi la mobilité, alimentation... des fonctionnaires (Etat, collectivités,
+    santé). Ce total est ensuite rapporter à la population. Ce n'est pas incompressible,
+    des leviers existent pour le réduire, comme développé dans le lien ci-dessous.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://bonpote.com/empreinte-carbone-des-services-publics/
   answer_scientific_url: https://ree.developpement-durable.gouv.fr/themes/defis-environnementaux/changement-climatique/empreinte-carbone/article/l-empreinte-carbone-de-la-france
   answer_reading_recommendation: ''
   answer_image_url: https://ree.developpement-durable.gouv.fr/local/cache-vignettes/L692xH390/decomposition_ec_par_poste_de_consommation-bb5f8.png?1607877975
-  answer_image_explanation: Décomposition de l’empreinte carbone par postes de consommation
+  answer_image_explanation: Décomposition de l’empreinte carbone par poste de consommation
     en 2016
   answer_extra_info: ''
   author: FJG
-  validator: ''
-  validation_status: A valider
-  added: 2021-02-19
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-11-22
   created: 2021-02-21
   updated: 2021-02-21
   tags:
@@ -32964,21 +32964,21 @@
   category: 1
   difficulty: 3
   language: Français
-  answer_option_a: 9 tCO2e
-  answer_option_b: 12 tCO2e
-  answer_option_c: 42 tCO2e
-  answer_option_d: 56 tCO2e
+  answer_option_a: 9t CO2e
+  answer_option_b: 12t CO2e
+  answer_option_c: 42t CO2e
+  answer_option_d: 56t CO2e
   answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: 'Il existe de forte disparités entre personnes au niveau de
+  has_ordered_answers: true
+  answer_explanation: 'Il existe de fortes disparités entre personnes au niveau de
     l''empreinte carbone. Dans un monde où plus de 80% de l''énergie utilisée est
-    fossile, plus on gagne d''argent plus on a de risque d''avoir une empreinte carbone
-    importante.
+    d''origine fossile, plus on gagne d''argent plus on a tendance à avoir une empreinte
+    carbone importante.
 
     A l''échelle française ou européenne, les 1% les plus riches émettent 56 tonnes
-    de CO2 équivalent par an et par personne contre une moyenne nationale autour de
-    9 à 10 tonnes de CO2e. Les chiffes sont du même ordre si on pose la question à
-    l''échelle européenne.
+    de CO2 équivalent par an et par personne, contre une moyenne nationale autour
+    de 9 à 10 tonnes. Les chiffes sont du même ordre si on pose la question à l''échelle
+    européenne.
 
     La cible pour respecter l''accord de Paris est d''ici à 2050 d''atteindre moins
     de 2 tonnes de CO2e par an et par personne.'
@@ -32987,13 +32987,15 @@
   answer_accessible_url: ''
   answer_scientific_url: https://www.cambridge.org/core/journals/global-sustainability/article/unequal-distribution-of-household-carbon-footprints-in-europe-and-its-link-to-sustainability/F1ED4F705AF1C6C1FCAD477398353DC2
   answer_reading_recommendation: ''
-  answer_image_url: https://twitter.com/diana_nbd/status/1280177349582077952/photo/1
-  answer_image_explanation: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/935%20-%20urn%20cambridge.org%20id%20binary%2020200706111248707-0737%20S2059479820000125%20S2059479820000125_fig3.png?raw=true
+  answer_image_explanation: 'Distribution de l''empreinte carbone en Europe en fonction
+    des revenus : top 1%, top 10%, 40% du milieu, 50% les plus pauvres, 5% les plus
+    pauvres. En tCO2e par personne et par an'
   answer_extra_info: ''
   author: FJG
-  validator: ''
-  validation_status: A valider
-  added: 2021-02-19
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-11-22
   created: 2021-02-21
   updated: 2021-02-21
   tags:
