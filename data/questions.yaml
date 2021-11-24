@@ -32889,7 +32889,7 @@
   - 5
   - 238
 - id: 933
-  text: Quelle est la part des services publics dans l'empreinte carbone moyenne dun
+  text: Quelle est la part des services publics dans l'empreinte carbone moyenne d'un
     Français ?
   hint: ''
   type: QCM
@@ -32905,7 +32905,7 @@
   answer_explanation: On parle ici des émissions de gaz à effet de serre des infrastructures
     que l'on mutualise (hôpitaux, écoles, universités, laboratoires de recherche,
     etc.) ainsi la mobilité, alimentation... des fonctionnaires (Etat, collectivités,
-    santé). Ce total est ensuite rapporter à la population. Ce n'est pas incompressible,
+    santé). Ce total est ensuite rapporté à la population. Ce n'est pas incompressible,
     des leviers existent pour le réduire, comme développé dans le lien ci-dessous.
   answer_audio: ''
   answer_video: ''
@@ -32958,7 +32958,6 @@
   - 98
 - id: 935
   text: Quelle est l'empreinte carbone par personne des 1% les plus riches en France
-    ?
   hint: ''
   type: QCM
   category: 1
