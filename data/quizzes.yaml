@@ -958,17 +958,28 @@
   - 218
   - 225
 - id: 76
-  name: Quiz INVBC
+  name: Inventons nos Vies Bas Carbone
   slug: quiz-invbc
-  introduction: <p>test</p>
-  conclusion: <p>a bientôt</p>
-  difficulty_average: 0.0
+  introduction: <p>Peu d'entre nous connaissent les ordres de grandeur de notre empreinte
+    carbone, et encore moins les efforts à fournir pour limiter le réchauffement climatique.
+    C'est sur la base de ce constat qu'a été créé le kit pédagogique Inventons nos
+    vies bas carbone. Avec des ficelles et du carton, l'atelier permet d'appréhender
+    simplement ce que sont des kilos ou tonnes de CO2e et les ordres de grandeur associés
+    à notre vie de tous les jours. Et vous, les connaissez-vous ?</p>
+  conclusion: '<p>On pourrait imaginer à l''issue de ce quiz que des vies bas carbone,
+    ce ne sont que des restrictions insupportables sur nos modes de vie ! Au contraire,
+    cela veut dire aussi se recentrer sur les ce qui donne du sel à notre existence
+    sans émettre, ou si peu : jardiner, chanter, courir, nager, randonner, bricoler,
+    danser, rêver, marcher...etc. A vous d''inventer vos vies bas carbone, à la fois
+    durables et désirables ! Pour en savoir plus rendez-vous <a href="https://www.resistanceclimatique.org/inventons_nos_vies_bas_carbone">ici</a>.</p>'
+  difficulty_average: 3.5
   language: Français
-  author: François Josephe Grimaud
-  image_background_url: ''
+  author: François Joseph Grimaud
+  image_background_url: https://d3n8a8pro7vhmx.cloudfront.net/resistanceclimatique/pages/115/attachments/original/1616150476/nouveau_kit.jpg?1616150476
   has_audio: false
   publish: false
   spotlight: false
   created: 2021-11-16
-  updated: 2021-11-19
-  tags: []
+  updated: 2021-11-24
+  tags:
+  - 72
