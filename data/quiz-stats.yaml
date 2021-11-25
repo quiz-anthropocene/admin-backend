@@ -421,9 +421,9 @@
   - answer_success_count: 9
     count: 13
 - quiz_id: 17
-  answer_count: 961
-  answer_count_last_30_days: 3
-  answer_count_last_7_days: 1
+  answer_count: 962
+  answer_count_last_30_days: 4
+  answer_count_last_7_days: 2
   like_count: 60
   dislike_count: 2
   answer_success_count_split:
@@ -440,7 +440,7 @@
   - answer_success_count: 5
     count: 214
   - answer_success_count: 6
-    count: 131
+    count: 132
   - answer_success_count: 7
     count: 57
 - quiz_id: 18
@@ -710,9 +710,9 @@
   - answer_success_count: 11
     count: 6
 - quiz_id: 62
-  answer_count: 482
-  answer_count_last_30_days: 20
-  answer_count_last_7_days: 7
+  answer_count: 483
+  answer_count_last_30_days: 21
+  answer_count_last_7_days: 8
   like_count: 5
   dislike_count: 0
   answer_success_count_split:
@@ -723,7 +723,7 @@
   - answer_success_count: 2
     count: 49
   - answer_success_count: 3
-    count: 85
+    count: 86
   - answer_success_count: 4
     count: 140
   - answer_success_count: 5
@@ -928,9 +928,9 @@
   - answer_success_count: 7
     count: 4
 - quiz_id: 70
-  answer_count: 285
-  answer_count_last_30_days: 41
-  answer_count_last_7_days: 7
+  answer_count: 286
+  answer_count_last_30_days: 42
+  answer_count_last_7_days: 8
   like_count: 5
   dislike_count: 0
   answer_success_count_split:
@@ -951,7 +951,7 @@
   - answer_success_count: 7
     count: 27
   - answer_success_count: 8
-    count: 12
+    count: 13
   - answer_success_count: 9
     count: 9
 - quiz_id: 71
@@ -1028,20 +1028,20 @@
   - answer_success_count: 11
     count: 5
 - quiz_id: 75
-  answer_count: 1859
-  answer_count_last_30_days: 228
-  answer_count_last_7_days: 14
+  answer_count: 1862
+  answer_count_last_30_days: 231
+  answer_count_last_7_days: 17
   like_count: 85
   dislike_count: 4
   answer_success_count_split:
   - answer_success_count: 0
-    count: 151
+    count: 152
   - answer_success_count: 1
     count: 435
   - answer_success_count: 2
-    count: 492
+    count: 493
   - answer_success_count: 3
-    count: 396
+    count: 397
   - answer_success_count: 4
     count: 168
   - answer_success_count: 5
