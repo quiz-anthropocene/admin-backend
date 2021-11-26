@@ -9,14 +9,14 @@
   description: 'Adrastia vient du grec ancien Adrasteia : « auquel on ne peut échapper ».. Adrastia a pour objectif d’anticiper et préparer le déclin de la civilisation thermo-industrielle de façon honnête, responsable et digne.'
   description_url: https://adrastia.org/
   description_details: Pour toucher les questions de société, d’anthropocène et d’effondrements actuels et futurs.
-  image_url: https://adrastia.org/wp-content/uploads/2017/07/Site.4.png
+  image_url: https://quizanthropocene.fr/ressources_adrastia_logo.png
   quiz_tag: Adrastia
   added: 2020-06-01
 - name: '@laydgeur'
   description: 'Un twittos connu sur les sujets climats grâce entre autre à ses quizs quotidiens #QuizzEnergieClimat.'
   description_url: https://twitter.com/laydgeur
   description_details: ''
-  image_url: https://pbs.twimg.com/profile_images/613449259766149120/ayYusf5b_400x400.jpg
+  image_url: https://quizanthropocene.fr/ressources_laydgeur_twitter_pp.jpg
   question_author: laydgeur
   quiz_author: laydgeur
   added: 2020-06-01
@@ -24,7 +24,7 @@
   description: Bonpote.com est un blog que nous vous recommandons. Vous y trouverez pèle-mèle des articles sur la politique, des personnages attachants comme Jean Michel CAC 40, une lettre d'amour à Nabilla. Et surtout d'environnement. Un spécialiste en debunking de greenwashing ce Bonpote ! Il nous a d'ailleurs créé un quiz thématique sur la finance.
   description_url: https://bonpote.com/
   description_details: ''
-  image_url: https://pbs.twimg.com/profile_images/1324093807844012032/huQIaGTy.jpg
+  image_url: https://quizanthropocene.fr/ressources_bonpote_twitter_pp.jpg
   quiz_author: Bonpote
   added: 2020-11-25
 - name: Avenir Climatique
