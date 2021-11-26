@@ -10,6 +10,7 @@ import QuizPage from './views/QuizPage.vue';
 import QuizListPage from './views/QuizListPage.vue';
 import QuizDetailPage from './views/QuizDetailPage.vue';
 import AboutPage from './views/AboutPage.vue';
+import LicensePage from './views/LicensePage.vue';
 import RessourcesPage from './views/RessourcesPage.vue';
 import StatsPage from './views/StatsPage.vue';
 import GlossaryPage from './views/GlossaryPage.vue';
@@ -61,6 +62,11 @@ const routes = [
     path: '/a-propos',
     name: 'about',
     component: AboutPage,
+  },
+  {
+    path: '/licence',
+    name: 'license',
+    component: LicensePage,
   },
   {
     path: '/ressources',

@@ -1,6 +1,7 @@
 <template>
   <footer>
     <section class="container-md">
+      <!-- First row: app links -->
       <div class="row">
         <!-- <div class="col-sm">
           <router-link :to="{ name: 'question-list' }">
@@ -40,13 +41,19 @@
         </div>
       </div>
 
+      <!-- Second row: social, license, language -->
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm" title="Social">
           <a class="no-after" v-bind:href="configuration.application_linkedin_url" target="_blank"><img height="30px" src="/openmoji_linkedin_E046.svg" alt="Linkedin" title="Linkedin" /></a>
           <a class="no-after" v-bind:href="configuration.application_twitter_url" target="_blank"><img height="30px" src="/openmoji_twitter_E040.svg" alt="Twitter" title="Twitter" /></a>
           <a class="no-after" v-bind:href="configuration.application_facebook_url" target="_blank"><img height="30px" src="/openmoji_facebook_E042.svg" alt="Facebook" title="Facebook" /></a>
         </div>
-        <div class="col-sm">
+        <div class="col-sm" title="Licence">
+          <router-link :to="{ name: 'license' }">
+            <img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licence Creative Commons" style="border-width:0" />
+          </router-link>
+        </div>
+        <div class="col-sm" title="Langue">
           <select v-model="$i18n.locale">
             <option v-for="(lang, i) in languages" :key="`Lang${i}`" :value="lang.key">
               {{ lang.emoji }}&nbsp;{{ lang.value }}
@@ -55,6 +62,7 @@
         </div>
       </div>
 
+      <!-- Third row: ecoindex -->
       <div class="row" v-if="currentRoute === 'home' && configuration.application_frontend_ecoindex_url">
         <div class="col-sm">
           Cette page a un score <a v-bind:href="configuration.application_frontend_ecoindex_url" target="_blank">EcoIndex.fr</a> de
