@@ -1,10 +1,10 @@
 <template>
   <section>
 
-    <div class="alert alert-success" role="alert">
+    <!-- <div class="alert alert-success" role="alert">
       Le Quiz de l'Anthropocène a maintenant son atelier !
       <span class="no-wrap">➡️&nbsp;<router-link :to="{ name: 'atelier' }"><strong>Plus d'informations</strong></router-link>&nbsp;⬅️</span>
-    </div>
+    </div> -->
 
     <h2 v-if="quizzesSpotlighted && quizzesSpotlighted.length > 0" class="text-align-left">
       ✨&nbsp;{{ $t('messages.recentQuizs') }}
