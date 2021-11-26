@@ -22,7 +22,7 @@ module.exports = {
       // .assert.elementCount('button', 6) // can be 3 to 6 depending on the number of spotlighted quizs
       .assert.containsText('button[id="all-quizs-btn"]', 'Tous les quiz')
       // .assert.containsText('button[id="all-questions-btn"]', 'Toutes les questions')
-      .assert.containsText('button[id="resources-btn"]', 'Ressources')
+      // .assert.containsText('button[id="resources-btn"]', 'Ressources')
       .assert.containsText('button[id="newsletter-btn"]', 'Je m\'inscris !')
       .useCss()
       .end();
@@ -103,7 +103,7 @@ module.exports = {
       // .assert.elementCount('button', 6) // can be 3 to 6 depending on the number of spotlighted quizs
       .assert.containsText('button[id="all-quizs-btn"]', 'All the quizs')
       // .assert.containsText('button[id="all-questions-btn"]', 'All questions')
-      .assert.containsText('button[id="resources-btn"]', 'Resources')
+      // .assert.containsText('button[id="resources-btn"]', 'Resources')
       .assert.containsText('button[id="newsletter-btn"]', 'Je m\'inscris !')
       .end();
   },
