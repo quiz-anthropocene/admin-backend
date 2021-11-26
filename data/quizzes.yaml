@@ -961,17 +961,19 @@
   name: Inventons nos Vies Bas Carbone
   slug: quiz-invbc
   introduction: <p>Peu d'entre nous connaissent les ordres de grandeur de notre empreinte
-    carbone, et encore moins les efforts à fournir pour limiter le réchauffement climatique.
-    C'est sur la base de ce constat qu'a été créé le kit pédagogique Inventons nos
-    vies bas carbone. Avec des ficelles et du carton, l'atelier permet d'appréhender
-    simplement ce que sont des kilos ou tonnes de CO2e et les ordres de grandeur associés
+    carbone. Ni ce que sont des tonnes de gaz à effet de serre. Et encore moins les
+    efforts à fournir pour limiter le réchauffement climatique. C'est sur la base
+    de ce constat qu'a été créé le kit pédagogique Inventons nos vies bas carbone.
+    Avec ce powerpoint du futur, à l'aide d'une ficelle et de cartes cartonnées, l'atelier
+    permet d'appréhender simplement les ordres de grandeur associés d'émissions associées
     à notre vie de tous les jours. Et vous, les connaissez-vous ?</p>
-  conclusion: '<p>On pourrait imaginer à l''issue de ce quiz que des vies bas carbone,
-    ce ne sont que des restrictions insupportables sur nos modes de vie ! Au contraire,
-    cela veut dire aussi se recentrer sur les ce qui donne du sel à notre existence
-    sans émettre, ou si peu : jardiner, chanter, courir, nager, randonner, bricoler,
-    danser, rêver, marcher...etc. A vous d''inventer vos vies bas carbone, à la fois
-    durables et désirables ! Pour en savoir plus rendez-vous <a href="https://www.resistanceclimatique.org/inventons_nos_vies_bas_carbone">ici</a>.</p>'
+  conclusion: <p>On pourrait imaginer à l'issue de ce quiz que des vies bas carbone,
+    ce ne sont que des restrictions insupportables sur nos modes de vie ! Et si c'est
+    plutôt une invite à se recentrer sur les ce qui donne du sel à notre existence
+    sans émettre, ou si peu ? Pa exemple, cuisiner, jardiner, chanter, courir, nager,
+    randonner, bricoler, danser, rêver, marcher, etc. A vous d'inventer vos vies bas
+    carbone, à la fois durables et désirables ! Pour en savoir plus rendez-vous ici.
+    Pour en savoir plus rendez-vous <a href="https://www.resistanceclimatique.org/inventons_nos_vies_bas_carbone">ici</a>.</p>
   difficulty_average: 3.5
   language: Français
   author: François Joseph Grimaud
@@ -980,6 +982,6 @@
   publish: false
   spotlight: false
   created: 2021-11-16
-  updated: 2021-11-24
+  updated: 2021-11-25
   tags:
   - 72
