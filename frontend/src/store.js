@@ -46,6 +46,8 @@ const store = new Vuex.Store({
     quizzes: [],
     quizzesPublished: [],
     quizzesDisplayed: [],
+    quizzesToSpotlight: 5,
+    quizzesSpotlighted: [],
     quizFilters: {
       tag: null,
       author: null,
@@ -140,6 +142,11 @@ const store = new Vuex.Store({
       const quizzesPublished = quizzes.filter((q) => q.language === state.locale.value).filter((el) => el.publish === true);
       commit('SET_QUIZ_LIST', { list: quizzes });
       commit('SET_QUIZ_PUBLISHED_LIST', { list: quizzesPublished });
+      const quizzesSpotlighted = quizzesPublished
+        .filter((q) => q.spotlight) // only display spotlighted quizs
+        .sort((a, b) => b.id - a.id) // biggest/latest id first
+        .slice(0, state.quizzesToSpotlight);
+      commit('SET_QUIZ_SPOTLIGHTED_LIST', { list: quizzesSpotlighted });
 
       // update tags: add quiz_count
       state.tags.forEach((t) => {
@@ -269,6 +276,9 @@ const store = new Vuex.Store({
     },
     SET_QUIZ_PUBLISHED_LIST: (state, { list }) => {
       state.quizzesPublished = list;
+    },
+    SET_QUIZ_SPOTLIGHTED_LIST: (state, { list }) => {
+      state.quizzesSpotlighted = list;
     },
     SET_QUIZ_RELATIONSHIP_LIST: (state, { list }) => {
       state.quizRelationships = list;

@@ -11,28 +11,17 @@
     </h2>
     <div class="row" v-if="quizzesSpotlighted && quizzesSpotlighted.length > 0" id="quiz-list">
       <div class="col-sm-4" v-for="quiz in quizzesSpotlighted" :key="quiz.id">
-        <QuizCard :quiz="quiz"/>
+        <QuizCard :quiz="quiz" />
+      </div>
+      <div class="col-sm-4 my-auto">
+        <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
+            <button id="all-quizs-btn" class="btn btn-primary btn-lg">
+            🕹&nbsp;<strong>{{ $t('messages.allQuizs') }}</strong>&nbsp;
+            <small>({{ quizzesPublishedCount }})</small>
+          </button>
+        </router-link>
       </div>
     </div>
-
-    <div>
-      <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
-        <button id="all-quizs-btn" class="btn btn-primary btn-lg">
-          🕹&nbsp;<strong>{{ $t('messages.allQuizs') }}</strong>&nbsp;
-          <small>({{ quizzesPublishedCount }})</small>
-        </button>
-      </router-link>
-    </div>
-      <!-- <div class="col-sm-4" v-if="questionSameFilterNextId">
-        <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: questionSameFilterNextId } }">
-          <button class="btn btn-outline-primary btn-lg btn-block">🔀&nbsp;<strong>{{ $t('messages.randomQuestion') }}</strong></button>
-        </router-link>
-      </div> -->
-      <!-- <div class="col-sm-6" v-if="questionsCount">
-        <router-link class="no-decoration" :to="{ name: 'question-list' }">
-          <button class="btn btn-outline-primary btn-lg btn-block">❓&nbsp;<strong>{{ $t('messages.allQuestions') }}</strong></button>
-        </router-link>
-      </div> -->
 
     <br />
 
@@ -147,11 +136,7 @@ export default {
       return this.$store.state.questionsValidated.length;
     },
     quizzesSpotlighted() {
-      return this.$store.state.quizzesPublished
-        .slice(0) // .slice makes a copy of the array, instead of mutating the orginal
-        .filter((q) => q.spotlight) // only display spotlighted quizs
-        .sort((a, b) => b.id - a.id) // biggest/latest id first
-        .slice(0, 3); // make sure we display only 3
+      return this.$store.state.quizzesSpotlighted;
     },
   },
 
@@ -229,10 +214,12 @@ svg {
   transform: scale(1.03);
 }
 
-.row > .col-sm-4 {
+.row > .col-sm-4,
+.row > .col-sm-3 {
   padding-bottom: 15px;
 }
-.row > .col-sm-4 > .card {
+.row > .col-sm-4 > .card,
+.row > .col-sm-3 > .card {
   height: 100%;
 }
 </style>

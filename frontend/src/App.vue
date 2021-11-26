@@ -224,7 +224,7 @@ audio {
 }
 
 .card-img-top {
-  height: 10vw;
+  height: 7.5vw; // 10vw;
   object-fit: cover;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
