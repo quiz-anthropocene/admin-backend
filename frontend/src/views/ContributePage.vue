@@ -1,6 +1,6 @@
 <template>
   <section class="text-align-left">
-    <h2>Contribuer !</h2>
+    <h2>{{ $t('footer.contribute') }}{{ $t('words.exclamationMark') }}</h2>
 
     <section v-if="$i18n.locale === 'en'" class="alert alert-warning" role="alert">
       🌐Page not yet translated

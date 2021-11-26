@@ -16,6 +16,7 @@
     "footer": {
         "home": "Home",
         "about": "About this application",
+        "aboutShort": "About",
         "resources": "Resources",
         "contribute": "Contribute",
         "glossary": "Glossaire"
@@ -37,7 +38,7 @@
         "newQuestions": "New questions",
         "randomQuestion": "A random question",
         "allQuizs": "All the quizs",
-        "newQuizs": "New quizs",
+        "recentQuizs": "Recent quizs",
         "randomQuiz": "A random quiz",
         "noQuizFound": "No quiz found.",
         "quizNotFound": "Unable to find the quiz.",

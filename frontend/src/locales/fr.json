@@ -19,6 +19,7 @@
     "footer": {
         "home": "Menu principal",
         "about": "À propos de cette application",
+        "aboutShort": "À propos",
         "resources": "Ressources",
         "contribute": "Contribuer",
         "glossary": "Glossaire"
@@ -40,7 +41,7 @@
         "newQuestions": "Nouvelles questions",
         "randomQuestion": "Une question au hasard",
         "allQuizs": "Tous les quiz",
-        "newQuizs": "Nouveaux quiz",
+        "recentQuizs": "Derniers quiz",
         "randomQuiz": "Un quiz au hasard",
         "noQuizFound": "Aucun quiz trouvé.",
         "quizNotFound": "Aucun quiz à cette adresse.",
