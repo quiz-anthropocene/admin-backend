@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <Header />  <!-- sticky top -->
     <section>
       <div v-show="loading" class="alert alert-primary" role="alert">Chargement...</div>
       <div v-if="error" class="alert alert-danger" role="alert">
@@ -11,7 +11,7 @@
         </button>
       </div>
     </section>
-    <main class="container-md">
+    <main class="container-md padding-top-10">
       <router-view></router-view>
     </main>
     <Footer />

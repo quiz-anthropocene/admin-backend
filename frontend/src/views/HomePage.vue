@@ -2,25 +2,27 @@
   <section>
 
     <div class="alert alert-success" role="alert">
-      Le Quiz de l'Anthropocène a maintenant son atelier !<br />
-      ➡️&nbsp;<router-link :to="{ name: 'atelier' }"><strong>Plus d'informations</strong></router-link>&nbsp;⬅️
+      Le Quiz de l'Anthropocène a maintenant son atelier !
+      <span class="no-wrap">➡️&nbsp;<router-link :to="{ name: 'atelier' }"><strong>Plus d'informations</strong></router-link>&nbsp;⬅️</span>
     </div>
 
-    <h2 v-if="quizzesSpotlighted && quizzesSpotlighted.length > 0" class="special-title">✨&nbsp;{{ $t('messages.newQuizs') }}&nbsp;✨</h2>
+    <h2 v-if="quizzesSpotlighted && quizzesSpotlighted.length > 0" class="text-align-left">
+      ✨&nbsp;{{ $t('messages.recentQuizs') }}
+    </h2>
     <div class="row" v-if="quizzesSpotlighted && quizzesSpotlighted.length > 0" id="quiz-list">
       <div class="col-sm-4" v-for="quiz in quizzesSpotlighted" :key="quiz.id">
         <QuizCard :quiz="quiz"/>
       </div>
     </div>
 
-    <div class="row justify-content-md-center margin-bottom-1em">
-      <div class="col-sm-6">
-        <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
-          <button id="all-quizs-btn" class="btn btn-primary btn-lg btn-block">
-            🕹&nbsp;<strong>{{ $t('messages.allQuizs') }}</strong>
-          </button>
-        </router-link>
-      </div>
+    <div>
+      <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
+        <button id="all-quizs-btn" class="btn btn-primary btn-lg">
+          🕹&nbsp;<strong>{{ $t('messages.allQuizs') }}</strong>&nbsp;
+          <small>({{ quizzesPublishedCount }})</small>
+        </button>
+      </router-link>
+    </div>
       <!-- <div class="col-sm-4" v-if="questionSameFilterNextId">
         <router-link class="no-decoration" :to="{ name: 'question-detail', params: { questionId: questionSameFilterNextId } }">
           <button class="btn btn-outline-primary btn-lg btn-block">🔀&nbsp;<strong>{{ $t('messages.randomQuestion') }}</strong></button>
@@ -31,7 +33,8 @@
           <button class="btn btn-outline-primary btn-lg btn-block">❓&nbsp;<strong>{{ $t('messages.allQuestions') }}</strong></button>
         </router-link>
       </div> -->
-    </div>
+
+    <br />
 
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
@@ -81,16 +84,6 @@
       </button>
     </div>
 
-    <div class="row justify-content-md-center">
-      <div class="col-sm-6">
-        <router-link class="no-decoration" :to="{ name: 'ressources' }">
-          <button id="resources-btn" class="btn btn-outline-primary btn-lg btn-block">📚&nbsp;<strong>{{ $t('footer.resources') }}</strong></button>
-        </router-link>
-      </div>
-    </div>
-
-    <br />
-    <hr />
     <br />
 
     <div class="row">
@@ -234,10 +227,6 @@ svg {
 }
 .jumbotron .row .col:hover {
   transform: scale(1.03);
-}
-
-.btn-lg {
-  min-height: 75px;
 }
 
 .row > .col-sm-4 {

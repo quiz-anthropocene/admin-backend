@@ -1,5 +1,7 @@
 <template>
   <section>
+    <h2 class="text-align-left">{{ $t('messages.allQuizs') }}</h2>
+
     <QuestionFilter objectType="quiz" :counter="quizzesDisplayed.length" />
 
     <section v-if="quizzesDisplayed && quizzesDisplayed.length === 0" class="alert alert-warning" role="alert">
