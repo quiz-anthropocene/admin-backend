@@ -6,10 +6,10 @@
           <img src="/favicon-32x32.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
           Quiz de l'Anthropocène
         </router-link>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" @click="toggleNavbar" type="button" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="navbarNav" class="collapse navbar-collapse">
+        <div id="navbarNav" class="collapse navbar-collapse" :class="{ 'show': showNavbar }">
           <router-link class="nav-item nav-link" :to="{ name: 'quiz-list' }">{{ $t('messages.allQuizs') }}</router-link>
           <router-link class="nav-item nav-link" :to="{ name: 'contribute' }">{{ $t('footer.contribute') }}</router-link>
           <router-link class="nav-item nav-link" :to="{ name: 'about' }">{{ $t('footer.aboutShort') }}</router-link>
@@ -25,12 +25,24 @@ export default {
   props: {
   },
 
+  data() {
+    return {
+      showNavbar: false,
+    };
+  },
+
   computed: {
     currentRoute() {
       return this.$route.name;
     },
     configuration() {
       return this.$store.state.configuration;
+    },
+  },
+
+  methods: {
+    toggleNavbar() {
+      this.showNavbar = !this.showNavbar;
     },
   },
 };
