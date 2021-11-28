@@ -39,10 +39,7 @@ def action_import_questions_from_notion(request):
     if not request.GET.get("token") == settings.GITHUB_CRON_ACTION_TOKEN:
         return HttpResponseForbidden()
 
-    scope = 0
-    management.call_command(
-        "import_questions_from_notion", scope, "--skip-old", stdout=out
-    )
+    management.call_command("import_questions_from_notion", stdout=out)
     result = out.getvalue()
 
     return HttpResponse(result)
