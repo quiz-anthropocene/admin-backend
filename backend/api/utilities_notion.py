@@ -36,34 +36,7 @@ def get_question_table_pages(start_cursor=None):
 
 def process_page_properties(page_properties):
     """
-    # cleanup fields
-    # - field type --> "" if None
-    # - field difficulty to int
-    # - field answer_correct --> "" if None
-    # - field added --> created time if None --> to date
-    # - field validator --> "" if None
-    # - fields answer_explanation, answer_image_explanation & answer_extra_info --> clean markdown [links](links)  # noqa
-    # - fields '_url' --> strip spaces at end (or else we get a ValidationError)
-    if notion_question_dict["type"] is None:
-        notion_question_dict["type"] = ""
-    if notion_question_dict["language"] is None:
-        notion_question_dict["language"] = ""
-    if notion_question_dict["answer_correct"] is None:
-        notion_question_dict["answer_correct"] = ""
-    if notion_question_dict["validator"] is None:
-        notion_question_dict["validator"] = ""
-    # clean markdown [links](links)
-    for field_name in ["answer_explanation", "answer_image_explanation", "answer_extra_info"]:
-        if "http" in notion_question_dict[field_name]:
-            notion_question_dict[field_name] = utilities.clean_markdown_links(
-                notion_question_dict[field_name]
-            )
-    # strip spaces in url fields
-    for field_name in QUESTION_URL_FIELDS:
-        if field_name in notion_question_dict:
-            notion_question_dict[field_name] = notion_question_dict[field_name].strip()
-
-    return notion_question_dict
+    Fetch & cleanup fields
     """
     page_dict = dict()
     for key in page_properties:
