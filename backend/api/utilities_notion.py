@@ -1,3 +1,5 @@
+import requests
+import json
 from datetime import datetime  # , date
 
 import notion  # https://github.com/jamalex/notion-py
@@ -5,6 +7,27 @@ from notion.client import NotionClient
 
 from django.conf import settings
 
+
+# Official API
+
+def get_question_table_pages(start_cursor=None):
+    """
+    Retrive 100 pages from the question table
+    """
+    url = f"https://api.notion.com/v1/databases/{settings.NOTION_QUESTION_TABLE_ID}/query"
+    headers = {"Content-Type": "application/json", "Authorization": f"Bearer {settings.NOTION_API_SECRET}", "Notion-Version": f"{settings.NOTION_API_VERSION}"}
+    data = {"sorts": [{"property": "Last edited time", "direction": "descending"}]}
+    if start_cursor:
+        data["start_cursor"] = start_cursor
+
+    response = requests.post(url, headers=headers, data=json.dumps(data))
+    if response.status_code != 200:
+        raise Exception(json.loads(response._content))
+
+    return response
+
+
+# Unofficial API (notion-py)
 
 def get_notion_client():
     """
