@@ -22,7 +22,11 @@ def get_question_table_pages(start_cursor=None):
     Retrive 100 pages from the question table
     """
     url = f"https://api.notion.com/v1/databases/{settings.NOTION_QUESTION_TABLE_ID}/query"
-    headers = {"Content-Type": "application/json", "Authorization": f"Bearer {settings.NOTION_API_SECRET}", "Notion-Version": f"{settings.NOTION_API_VERSION}"}
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {settings.NOTION_API_SECRET}",
+        "Notion-Version": f"{settings.NOTION_API_VERSION}"
+    }
     data = {"sorts": [{"property": "Last edited time", "direction": "descending"}]}
     if start_cursor:
         data["start_cursor"] = start_cursor
@@ -44,27 +48,27 @@ def process_page_properties(page_properties):
         if page_properties[key]["type"] == "title":
             page_dict[key] = "".join([text["plain_text"] for text in page_properties[key]["title"]])
         elif page_properties[key]["type"] == "rich_text":
-            page_dict[key] = "".join([text["plain_text"] for text in page_properties[key]["rich_text"]])
+            page_dict[key] = "".join([text["plain_text"] for text in page_properties[key]["rich_text"]])  # noqa
         elif page_properties[key]["type"] == "number":
             page_dict[key] = page_properties[key]["number"]
         elif page_properties[key]["type"] == "select":
             try:
                 page_dict[key] = page_properties[key]["select"]["name"]
-            except (TypeError, AttributeError) as e:
+            except (TypeError, AttributeError) as e:  # noqa
                 page_dict[key] = ""
         elif page_properties[key]["type"] == "multi_select":
             page_dict[key] = [tag["name"] for tag in page_properties[key]["multi_select"]]
         elif page_properties[key]["type"] == "url":
             try:
                 page_dict[key] = page_properties[key]["url"].strip()
-            except (TypeError, AttributeError) as e:
+            except (TypeError, AttributeError) as e:  # noqa
                 page_dict[key] = ""
         elif page_properties[key]["type"] == "checkbox":
             page_dict[key] = page_properties[key]["checkbox"]  # True or False
         elif page_properties[key]["type"] == "date":
             try:
                 page_dict[key] = page_properties[key]["date"]["start"]
-            except (TypeError, AttributeError) as e:
+            except (TypeError, AttributeError) as e:  # noqa
                 page_dict[key] = ""
         elif page_properties[key]["type"] == "created_time":
             page_dict[key] = page_properties[key]["created_time"]
@@ -76,14 +80,14 @@ def process_page_properties(page_properties):
             page_dict[key] = page_properties[key]["last_edited_time"]
         else:
             raise Exception(f"process_page_properties: {page_properties[key]['type']} missing")
-        
+
         # Step 2: process key by custom rules
         if key == "Text":
             page_dict["text"] = page_dict[key]
         if key == "difficulty":
             page_dict[key] = int(page_dict[key]) if page_dict[key] else None
         elif key == "added":
-            page_dict[key] = date.fromisoformat(page_dict[key]) if page_dict[key] else datetime.strptime(page_dict["Created time"][:-5], TIMESTAMP_FORMAT).date()
+            page_dict[key] = date.fromisoformat(page_dict[key]) if page_dict[key] else datetime.strptime(page_dict["Created time"][:-5], TIMESTAMP_FORMAT).date()  # noqa
 
     return page_dict
 

@@ -1,9 +1,5 @@
 import time
 
-import notion
-import collections
-from datetime import datetime, timedelta
-
 from django.utils import timezone
 
 from django.db import IntegrityError
@@ -11,12 +7,18 @@ from django.core.management import BaseCommand
 from django.core.exceptions import ValidationError
 
 from core.models import Configuration
-from api import constants, utilities, utilities_notion
+from api import constants, utilities_notion
 from api.models import Question, Category, Tag, Quiz, Contribution
 
 
 SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS = 15
-QUESTION_FIELDS_TO_IGNORE = ["Created by", "Created time", "Intent", "Last edited by", "Last edited time", "Text", "Tweet", "answer_explanation_extended", "answer_explanation_short", "quiz", "quiz_question_order", "text_short"]
+QUESTION_FIELDS_TO_IGNORE = [
+    "Text", "text_short", "Tweet", "Intent",
+    "answer_explanation_extended", "answer_explanation_short",
+    "quiz", "quiz_question_order",
+    "Created by", "Created time",
+    "Last edited by", "Last edited time"
+]
 
 
 class Command(BaseCommand):
@@ -32,8 +34,8 @@ class Command(BaseCommand):
         # Init
         #########################################################
         notion_questions_list = []
-        questions_ids_duplicate = []
-        questions_ids_missing = []
+        # questions_ids_duplicate = []
+        # questions_ids_missing = []
         tags_created = []
         questions_created = []
         questions_updated = set()
@@ -78,32 +80,32 @@ class Command(BaseCommand):
         #########################################################
         # Check question ids (duplicates & missing)
         #########################################################
-        start_time = time.time()
+        # start_time = time.time()
 
         # order by notion_questions_list by id
         notion_questions_list = sorted(
             notion_questions_list, key=lambda question: question["id"] or 0
         )
         # check if id duplicates
-        notion_questions_id_list = [
-            question["id"]
-            for question in notion_questions_list
-            if question["id"]
-        ]
-        questions_ids_duplicate = [
-            item
-            for item, count in collections.Counter(notion_questions_id_list).items()
-            if count > 1
-        ]
+        # notion_questions_id_list = [
+        #     question["id"]
+        #     for question in notion_questions_list
+        #     if question["id"]
+        # ]
+        # questions_ids_duplicate = [
+        #     item
+        #     for item, count in collections.Counter(notion_questions_id_list).items()
+        #     if count > 1
+        # ]
         # check if id 'missing'
-        for n in range(1, notion_questions_id_list[-1]):
-            if n not in notion_questions_id_list:
-                questions_ids_missing.append(n)
+        # for n in range(1, notion_questions_id_list[-1]):
+        #     if n not in notion_questions_id_list:
+        #         questions_ids_missing.append(n)
 
-        self.stdout.write(
-            "--- Step 2 done : check question ids (duplicates & missing) : %s seconds ---"
-            % round(time.time() - start_time, 1)
-        )
+        # self.stdout.write(
+        #     "--- Step 2 done : check question ids (duplicates & missing) : %s seconds ---"
+        #     % round(time.time() - start_time, 1)
+        # )
 
         #########################################################
         # Loop on questions and create, update, store validation_errors
