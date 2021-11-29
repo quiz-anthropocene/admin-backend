@@ -59,6 +59,12 @@ class Configuration(SingletonModel):
         editable=False,
         help_text="La dernière fois qu'a été lancé le script de mise à jour des Daily Stats",  # noqa
     )
+    notion_questions_scope_0_last_imported = models.DateTimeField(
+        null=True,
+        blank=True,
+        editable=False,
+        help_text="La dernière fois que les questions ont été importées depuis Notion",  # noqa
+    )
     notion_questions_scope_1_last_imported = models.DateTimeField(
         null=True,
         blank=True,
