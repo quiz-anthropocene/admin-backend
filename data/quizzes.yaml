@@ -974,7 +974,7 @@
     randonner, bricoler, danser, rêver, marcher, etc. A vous d'inventer vos vies bas
     carbone, à la fois durables et désirables ! Pour en savoir plus rendez-vous ici.
     Pour en savoir plus rendez-vous <a href="https://www.resistanceclimatique.org/inventons_nos_vies_bas_carbone">ici</a>.</p>
-  difficulty_average: 3.5
+  difficulty_average: 2.7
   language: Français
   author: François Joseph Grimaud
   image_background_url: https://d3n8a8pro7vhmx.cloudfront.net/resistanceclimatique/pages/115/attachments/original/1616150476/nouveau_kit.jpg?1616150476
@@ -982,6 +982,6 @@
   publish: false
   spotlight: false
   created: 2021-11-16
-  updated: 2021-11-25
+  updated: 2021-11-29
   tags:
   - 72
