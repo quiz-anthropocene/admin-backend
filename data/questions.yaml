@@ -2815,7 +2815,7 @@
   - 31
 - id: 78
   text: 'L''objectif de la COP21 à l''horizon 2050 est que chaque humain n''émette
-    pas plus que 2,1 tonnes d''équivalent CO2 par an.
+    pas plus que 2 tonnes d''équivalent CO2 par an.
 
     Imaginons que je ne fasse strictement rien d''autre de l''année (plus de chauffage,
     de voiture, d''achats...). Combien de vols aller-retour Paris-New York pourrais-je
@@ -2831,7 +2831,8 @@
   answer_option_d: '50'
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: Un aller-retour Paris-New York, c'est 2 tonnes de CO2 par personne.
+  answer_explanation: Un aller-retour Paris-New York, c'est 1,8 tonnes de CO2 par
+    personne.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.liberation.fr/checknews/2019/02/13/est-ce-qu-un-aller-retour-en-avion-a-bali-emet-autant-de-co2-qu-une-annee-de-vie-en-france_1708854
@@ -2961,7 +2962,7 @@
   answer_extra_info: ''
   author: Jean-Christophe Anna
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-02-21
   created: 2020-03-11
   updated: 2020-05-28
@@ -3721,11 +3722,13 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: L'empreinte carbone d'un chien domestique est deux fois supérieure
-    à celle d'un Land Cruiser qui parcourt 10 000 kilomètres par an. C'est la conclusion
-    d'une étude menée par deux professeurs de l'université de Victoria. Le calcul
-    prend en compte les ingrédients de leur alimentation et l'espace nécessaire à
-    leur fabrication.
+  answer_explanation: Selon l'étude ci-dessous, l'empreinte carbone d'un chien domestique
+    est deux fois supérieure à celle d'un Land Cruiser qui parcourt 10 000 kilomètres
+    par an. C'est la conclusion d'une étude menée par deux professeurs de l'université
+    de Victoria. Le calcul prend en compte les ingrédients de leur alimentation et
+    l'espace nécessaire à leur fabrication. Le résultat est controversé, mais il a
+    l'avantage d'attirer l'attention sur les émissions insoupçonnées de nos amis à
+    4 pattes.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: http://www.slate.fr/story/12169/les-4x4-sont-plus-ecolos-que-les-chiens
@@ -5367,8 +5370,8 @@
   tags:
   - 41
 - id: 150
-  text: Prenons 1 kg des quatre aliments suivants. Lequel génère le plus de gaz à
-    effet de serre ? (en équivalent CO2)
+  text: Prenons la consommation de 1 kg des quatre aliments suivants. Lequel génère
+    le plus de gaz à effet de serre ? (en équivalent CO2)
   hint: ''
   type: QCM
   category: 2
@@ -8107,7 +8110,7 @@
   text: 'Le rendement d’un moteur est le rapport entre l’énergie mécanique en sortie
     et l’énergie fournie en entrée au moteur.
 
-    Quel est le rendement moyen d''un moteur thermique ?'
+    Quel est le rendement optimal d''un moteur thermique ?'
   hint: ''
   type: QCM
   category: 5
@@ -14112,7 +14115,8 @@
   - 13
   - 72
 - id: 402
-  text: Combien de litres d'eau utilise-t-on en moyenne pour fabriquer un jean ?
+  text: Combien de litres d'eau utilise-t-on en moyenne sur la durée de vie d'un jean
+    ?
   hint: ''
   type: QCM
   category: 2
@@ -14144,7 +14148,6 @@
   created: 2020-05-20
   updated: 2020-09-28
   tags:
-  - 2
   - 37
   - 105
 - id: 403
@@ -25333,8 +25336,15 @@
   answer_option_d: 380 millions
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: 'C’est presque 110,000 vols commerciaux par jour en moyenne,
-    avec des pointes en juin à 230 000 vols. '
+  answer_explanation: 'C’est presque 110 000 vols commerciaux par jour en moyenne,
+    avec des pointes en juin à 230 000 vols.
+
+    Depuis 1945 à 2020 la croissance moyenne a été régulière à 5% par an :
+
+    Soit un doublement du trafic tous les 14 ans.
+
+    Sur cette même tendance le trafic serait multiplié par plus de 4 entre 2020 et
+    2050.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://theconversation.com/trafic-aerien-mondial-une-croissance-fulgurante-pas-prete-de-sarreter-116107
@@ -26302,7 +26312,7 @@
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/biodiversite/article/2016/11/28/l-extinction-des-pollinisateurs-menace-1-4-milliard-d-emplois-selon-un-rapport_5039767_1652692.html
   answer_scientific_url: ''
-  answer_reading_recommendation: '[https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0185809](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0185809)'
+  answer_reading_recommendation: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0185809
   answer_image_url: https://img.lemde.fr/2016/11/28/0/0/1897/1462/664/0/75/0/322ce7c_6239-w2dqs0.x50cnmi.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
@@ -26314,7 +26324,6 @@
   updated: 2021-04-19
   tags:
   - 5
-  - 251
 - id: 738
   text: Parmi les métaux suivants, pour lesquels prévoit-on un pic de production avant
     2070 ?
@@ -26806,7 +26815,7 @@
   - 69
   - 263
 - id: 750
-  text: Quelle part de la population mondiale voyage en avion chaque année ?
+  text: Quelle part de la population mondiale voyage en avion ?
   hint: ''
   type: QCM
   category: 2
@@ -26884,9 +26893,9 @@
   - 217
   - 224
 - id: 752
-  text: Classons les passagers aériens selon leurs émissions. Quel pourcentage de
-    la population est responsable de la moitié des émissions de gaz à effet de serre
-    de l'aviation ?
+  text: 'Classons la population mondiale selon leur niveau d''émission de gaz à effet
+    de serre par l''avion. Quel pourcentage de la population est responsable de la
+    moitié de ces émissions ? '
   hint: ''
   type: QCM
   category: 2
@@ -26898,15 +26907,14 @@
   answer_option_d: 20%
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: '11% de la population mondiale vole chaque année, et parmi eux,
-    10% sont des « ''frequent flyers'', des voyageurs fréquents. Certains ont même
-    enregistré jusqu''à 600 vols par an ! Cela recouvre des voyageurs qui profitent
-    de plusieurs lieux de résidences, qui voyagent en jet privé ou en première classe,
-    voire dans des suites dont la taille peut être selon les compagnies entre 5 et
-    10 fois plus grande que la classe économique. Par exemple sur les A380 de Singapore
-    Airline : 50% de la cabine correspond à la classe éco pour 400 passagers, 25%
-    de la cabine correspond à la classe affaire pour 60 passagers et 25% de la cabine
-    correspond à la classe Suite pour 12 passagers.
+  answer_explanation: 'Parmi ces 1%, 10% sont des « ''frequent flyers'', des voyageurs
+    fréquents. Certains ont même enregistré jusqu''à 600 vols par an ! Cela recouvre
+    des voyageurs qui profitent de plusieurs lieux de résidences, qui voyagent en
+    jet privé ou en première classe, voire dans des suites dont la taille peut être
+    selon les compagnies entre 5 et 10 fois plus grande que la classe économique.
+    Par exemple sur les A380 de Singapore Airline : 50% de la cabine correspond à
+    la classe éco pour 400 passagers, 25% de la cabine correspond à la classe affaire
+    pour 60 passagers et 25% de la cabine correspond à la classe Suite pour 12 passagers.
 
     A noter que les fréquent flyers peuvent souvent profiter de miles qui sont des
     invitations à la croissance du trafic aérien.
@@ -27040,8 +27048,8 @@
   - 217
   - 218
 - id: 756
-  text: Quelle est la part de l’aviation privée dans les émissions générées par le
-    secteur aérien ?
+  text: Quelle est la part de l’aviation privée (=jets privés par opposition à l'aviation
+    commerciale) dans les émissions générées par le secteur aérien ?
   hint: Plutôt en hausse
   type: QCM
   category: 2
@@ -27053,14 +27061,29 @@
   answer_option_d: 25%
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: 'Une étude récente conclut qu’un vol en jet privé émet entre
-    5 et 10 fois plus qu’un vol commercial par passager. Il faut aussi savoir que
-    40% de ces vols se font à vide. Les 10% des voyageurs les plus fréquents soit
-    1% de la population mondiale, seraient responsables de 50% des émissions du secteur
-    aérien ! Les plus gros voyageurs peuvent contribuer jusqu’à 7,500 tCO2/an, soit
-    750 fois l’empreinte moyenne d’un français. C''est un luxe typiquement américain
-    : les 3/4 des jets sont immatriculés aux Etats-Unis. L''aviation privée est un
-    secteur en forte croissance, notamment depuis l''épisode COVID.
+  answer_explanation: 'Une étude récente conclut qu’un vol en "jet privé" émet entre
+    5 et 10 fois plus qu’un "vol commercial" par passager.
+
+    Il faut aussi savoir que 40% de ces vols se font à vide.
+
+    Les 10% des voyageurs les plus fréquents soit 1% de la population mondiale, seraient
+    responsables de 50% des émissions du secteur aérien !
+
+    Les plus gros voyageurs peuvent contribuer jusqu’à 7,500 tCO2/an, soit 750 fois
+    l’empreinte moyenne d’un français.
+
+    C''est un luxe typiquement américain : les 3/4 des jets sont immatriculés aux
+    Etats-Unis.
+
+    L''aviation privée est un secteur en forte croissance, notamment depuis l''épisode
+    COVID.
+
+    On constate aujourd’hui que de plus en plus de vols en « Jets Privés » recouvrent
+    à la fois des voyages « d’affaires » et « de loisirs » avec un basculement fort
+    vers les loisirs.
+
+    Il est plus noble de parler « d’affaires » pour les « frequent flyers » que de
+    voyages d’agréments.
 
     8%, c''est l''estimation de la part du trafic militaire.'
   answer_audio: ''
@@ -27083,25 +27106,25 @@
   - 217
   - 218
 - id: 757
-  text: On mesure l'intensité du trafic aérien en passagers-km (RPK en anglais). A
-    combien s'élevait-il en 2018 ?
+  text: On mesure l'intensité du trafic aérien en passagers x km (RPK en anglais).
+    A combien s'élevait-il en 2018 ?
   hint: ''
   type: QCM
   category: 2
   difficulty: 3
   language: Français
-  answer_option_a: 500 milliards de RPK, soit par exemple 50,000 millions de voyageurs
-    parcourant chacun 1,000 km
-  answer_option_b: 8,500 milliards de RPK
-  answer_option_c: 35,000 milliards de RPK
-  answer_option_d: 100,000 milliards de RPK
+  answer_option_a: 500 milliards de RPK, soit par exemple 500 millions de voyageurs
+    parcourant chacun 1 000 km
+  answer_option_b: 8 500 milliards de RPK
+  answer_option_c: 35 000 milliards de RPK
+  answer_option_d: 100 000 milliards de RPK
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: 'Pour 4,3 milliards de passagers transportés. Autrement dit
-    , chaque passager fait en moyenne 2,000 km par vol. Bien entendu, certains passagers
+    , chaque passager fait en moyenne 2 000 km par vol. Bien entendu, certains passagers
     peuvent voler plusieurs fois.
 
-    35,000 milliards de RPK, c''est le chiffre prévu par le secteur pour 2050. '
+    35 000 milliards de RPK, c''est le chiffre prévu par le secteur pour 2050. '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -30289,29 +30312,25 @@
   tags:
   - 30
 - id: 847
-  text: "Quelle quantité d' \"eau bleue\" le secteur du numérique a-t-il consommée\
-    \ en 2019 ? \n[Comme c'est un grand volume, on va compter en nombre de piscines\
-    \ olympiques (2,500 m³)]"
+  text: L'eau bleue, c'est l’eau issue des précipitations qui est disponible pour
+    l’alimentation des animaux et, après traitement, pour les usages domestiques humains.
+    Quelle quantité d'eau bleue le secteur du numérique a-t-il consommée en 2019 ?
   hint: ''
   type: QCM
   category: 7
   difficulty: 3
   language: Français
-  answer_option_a: 30,000
-  answer_option_b: 500,000
-  answer_option_c: 900,000
-  answer_option_d: 5 millions
+  answer_option_a: L'équivalent de 30,000 piscines olympiques (1 piscine = 2,500 m³)
+  answer_option_b: 500,000 piscines
+  answer_option_c: 900,000 piscines
+  answer_option_d: 5 millions de piscines
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: "L'eau bleue, c est la part de l’eau issue des précipitations\
-    \ atmosphériques qui s’écoule dans les cours d’eau jusqu’à la mer, ou qui est\
-    \ recueillie dans les lacs, les aquifères ou les réservoirs. Elle est disponible\
-    \ pour l’alimentation des animaux, et, après traitement, pour les usages domestiques\
-    \ humains. \n\nSelon Frédéric Bordage, l'industrie du numérique en forte croissance\
-    \ en prélève 0,2% en 2019. Ce qui pourrait paraître négligeable, mais l'eau douce\
-    \ potable est une ressource physiologique de base pour l'être humain dont la population\
-    \ continue à croître. Le numérique contribue donc au stress hydrique et sa forte\
-    \ croissance pose des questions d'arbitrage avec les besoins basiques."
+  answer_explanation: Selon Frédéric Bordage, l'industrie du numérique, en forte croissance,
+    en prélève 0,2% en 2019. Ce qui pourrait paraître négligeable, mais l'eau douce
+    potable est une ressource physiologique de base pour l'être humain dont la population
+    continue à croître. Le numérique contribue donc au stress hydrique et sa forte
+    croissance pose des questions d'arbitrage avec les besoins basiques.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf
@@ -30897,14 +30916,14 @@
   answer_explanation: 'La vitesse généralisée prend en compte l''ensemble des dépenses
     de temps associées à un mode de déplacement. Par exemple pour un véhicule : entretien,
     stationnement, temps de travail nécessaire à payer l''achat initial, le carburant,
-    l''entretien...Les estimations d''il y a quarante ans la trouvait inférieure à
-    celle du vélo. Les derniers développements la trouve supérieure d''1/4 : entre
+    l''entretien...Les estimations d''il y a quarante ans la trouvaient inférieure
+    à celle du vélo. Les derniers développements la trouvent supérieure d''1/4 : entre
     13 et 23km/h, contre 12 à 18km/h pour le vélo.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.forumviesmobiles.org/reperes/vitesse-des-deplacements-12976
   answer_scientific_url: https://github.com/raphodn/know-your-planet/blob/master/data/audio/questions/H%C3%A9ran%202009%20_%20A%20propos%20de%20la%20vitesse%20g%C3%A9n%C3%A9ralis%C3%A9e%20des%20transports%20-%20Un%20concept%20d'Ivan%20Illich%20revisit%C3%A9.pdf
-  answer_reading_recommendation: '[Energie et équité, Ivan Illich](https://github.com/raphodn/know-your-planet/blob/master/data/audio/questions/H%C3%A9ran%202009%20_%20A%20propos%20de%20la%20vitesse%20g%C3%A9n%C3%A9ralis%C3%A9e%20des%20transports%20-%20Un%20concept%20d''Ivan%20Illich%20revisit%C3%A9.pdf)'
+  answer_reading_recommendation: Energie et équité, Ivan Illich
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/862.png
   answer_image_explanation: ''
   answer_extra_info: ''
@@ -31285,11 +31304,11 @@
   answer_option_d: 90%
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: L’impact d’un smartphone reconditionné est équivalent à 10 %
-    de celui d’un neuf. En outre, un produit re-fabriqué peut être jusqu'à 50% moins
-    cher à produire. Cependant, favoriser le reconditionné peut avoir comme effet
-    pervers de "justifier" la mise au rebut rapide de téléphones sur leur 1er cycle
-    de vie, et donc générer un effet rebond..
+  answer_explanation: 'L’impact d’un smartphone reconditionné est équivalent à 10
+    % de celui d’un neuf. En outre, un produit re-fabriqué peut être jusqu''à 50%
+    moins cher à produire. Attention cependant au fameux effet rebond : l''essor du
+    reconditionné pourrait avoir comme effet pervers de "justifier" la mise au rebut
+    plus rapide de téléphones sur leur 1er cycle de vie.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://agirpourlatransition.ademe.fr/particuliers/conso/conso-responsable/acheter-smartphone-reconditionne-avantages
@@ -32089,10 +32108,10 @@
   has_ordered_answers: true
   answer_explanation: Le calcul peut être fait sur le site de la DGAC donné ci-dessous.
     (Le site ne prend pas en compte les émissions dites "non CO2"). Le train TGV est
-    imbattable avec 1,73 g CO2e/km. (source SNCF). A noter que les consommations par
-    km de l’avion sont très variables sur les destinations domestiques de 3,7 à 7
-    litres aux 100 km. Cela dépend des types d’avions, des distances et du coefficient
-    de remplissage de l'avion.
+    imbattable avec 1,73 g CO2e/km. (source SNCF) et mixte électrique France. A noter
+    que les consommations par km de l’avion sont très variables sur les destinations
+    domestiques de 3,7 à 7 litres aux 100 km. Cela dépend des types d’avions, des
+    distances et du coefficient de remplissage de l'avion.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://eco-calculateur.dta.aviation-civile.gouv.fr/
@@ -32826,68 +32845,82 @@
   tags:
   - 243
 - id: 931
-  text: Quelle proportion des poissons consommés provient de l’aquaculture ?
+  text: L'accord de Paris de 2015, la COP21, porte engage les pays à réduire les émissions
+    de gaz à effet de serre. Oui, mais, mesurées comment ?
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: 2
-  difficulty: 2
+  difficulty: 1
   language: Français
-  answer_option_a: 10%
-  answer_option_b: 30%
-  answer_option_c: 50%
-  answer_option_d: 70%
-  answer_correct: c
-  has_ordered_answers: true
-  answer_explanation: ''
+  answer_option_a: En inventaire national
+  answer_option_b: En mpreinte carbone
+  answer_option_c: En émissions du territoire plus les importations moins les exportations
+  answer_option_d: Les émissions du territoire
+  answer_correct: ad
+  has_ordered_answers: false
+  answer_explanation: "L'accord de Paris signé le 12 décembre 2015 et ratifié par\
+    \ près de 190 Etats vise à tout faire pour limiter la hausse de température en\
+    \ 2100 par rapport à la période pré-industrielle bien en dessous de +2°C et à\
+    \ faire le maximum pou se rapprocher de 1,5°C. \nPour ce faire les états rapportent\
+    \ régulièrement les émissions de leur territoire (via les contributions déterminées\
+    \ au niveau national. Il s'agit donc d'inventaire national. Ils doivent proposer\
+    \ des trajectoires de réduction pour tenir cet objectif."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://unfccc.int/fr/process-and-meetings/l-accord-de-paris/qu-est-ce-que-l-accord-de-paris
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://unfccc.int/sites/default/files/styles/hero_carousel_960x640/public/paris_agreement_adopted_1_758.jpg?itok=WTjOIvOr
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Julien Briton
+  author: FJG
   validator: Matthieu Massart
-  validation_status: Brouillon
-  added: 2021-02-18
+  validation_status: Validée
+  added: 2021-11-22
   created: 2021-02-21
   updated: 2021-02-21
   tags:
-  - 223
-  - 244
+  - 72
+  - 198
 - id: 932
-  text: Au niveau mondial, quel pourcentage de la production de céréales le maïs,
-    le blé et le riz représentent-ils ?
+  text: Quelle est la part des importations dans l'empreinte carbone d'un Français
+    (en 2016) ?
   hint: ''
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 3
   language: Français
-  answer_option_a: 30%
-  answer_option_b: 50%
-  answer_option_c: 70%
-  answer_option_d: 90%
-  answer_correct: d
-  has_ordered_answers: true
-  answer_explanation: ''
+  answer_option_a: 16%
+  answer_option_b: 51%
+  answer_option_c: 62%
+  answer_option_d: 74%
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: 'Quand on parle d''émissions de gaz à effet de serre, on mélange
+    et confond souvent deux notion : les émissions depuis le territoire - que l''on
+    appelle Inventaire national - et les émissions qui tiennent compte des importations
+    (en plus) et des exportations (en moins) - que l''on appelle empreinte carbone.
+    Cette dernière est à l''image de nos modes de vie puisqu''une grande partie des
+    objets que l''on utilise sont fabriqués à l''étranger et importés, donc invisible
+    dans l''inventaire national mais comptabilisé dans l''empreinte carbone. En 2016,
+    51% de l''empreinte carbone est due aux importations.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://ree.developpement-durable.gouv.fr/themes/defis-environnementaux/changement-climatique/empreinte-carbone/article/l-empreinte-carbone-de-la-france#label_onglet818
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://ree.developpement-durable.gouv.fr/local/cache-vignettes/L880xH439/comparaison_empreinte_carbone_inventaire_2016-12fcf.png?1607615135
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Julien Briton
+  author: FJG
   validator: Matthieu Massart
-  validation_status: Brouillon
-  added: 2021-02-18
+  validation_status: Validée
+  added: 2021-11-22
   created: 2021-02-21
   updated: 2021-02-21
   tags:
-  - 5
-  - 238
+  - 72
+  - 198
 - id: 933
   text: Quelle est la part des services publics dans l'empreinte carbone moyenne d'un
     Français ?
@@ -33373,8 +33406,8 @@
   answer_video: ''
   answer_accessible_url: https://blogs.cisco.com/sp/five-things-that-are-bigger-than-the-internet-findings-from-this-years-global-cloud-index
   answer_scientific_url: https://www.statista.com/topics/1464/big-data/
-  answer_reading_recommendation: "[https://www.economist.com/special-report/2010/02/27/data-data-everywhere](https://www.economist.com/special-report/2010/02/27/data-data-everywhere),\
-    \ \n[https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic](https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic))."
+  answer_reading_recommendation: "https://www.economist.com/special-report/2010/02/27/data-data-everywhere,\
+    \ \nhttps://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic)."
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/945.png
   answer_image_explanation: ''
   answer_extra_info: ''
@@ -34063,6 +34096,244 @@
   tags:
   - 21
   - 223
+- id: 966
+  text: Réduit-on son empreinte carbone en arrêtant de consommer de la viande ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 3
+  language: Français
+  answer_option_a: Non, ça ne change rien
+  answer_option_b: Oui, d'un facteur 2 en moyenne
+  answer_option_c: Oui, d'un facteur 4
+  answer_option_d: Oui, d'un facteur 10
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: 'La part de l''alimentation dans l''empreinte carbone d''un
+    Français, c''est 1,8 tCO2, dont environ la moitié pour la viande. Manger de la
+    viande une fois par jour, c''est ainsi ainsi 2,2 tCO2e. Voir à ce sujet les cartes
+    du jeu Inventons Nos Vies Bas Carbone, et le détail des menus basés sur les facteurs
+    d''émissions de la base carbone ou le calculateur Nos Gestes Climat de l''Ademe '
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://ree.developpement-durable.gouv.fr/themes/defis-environnementaux/changement-climatique/empreinte-carbone/article/l-empreinte-carbone-de-la-france#label_onglet818
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: https://d3n8a8pro7vhmx.cloudfront.net/resistanceclimatique/pages/115/attachments/original/1616150476/nouveau_kit.jpg?1616150476
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: FJG
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-11-22
+  created: 2021-11-29
+  updated: 2021-11-29
+  tags:
+  - 5
+  - 17
+  - 72
+- id: 967
+  text: 'L''empreinte carbone d''un vol aller/retour Paris / New-York est équivalent
+    à '
+  hint: ''
+  type: QCM-RM
+  category: 1
+  difficulty: 4
+  language: Français
+  answer_option_a: Manger de la viande une fois par jour
+  answer_option_b: Faire 10 000 km par an en voiture seul
+  answer_option_c: Chauffer un logement de 40m2 au fioul ou au gaz à 19°C le jour
+    / 16°C la nuit
+  answer_option_d: A acheter entre 2000€ et 5000€ de biens de consommation (livres,
+    électronique...)
+  answer_correct: abcd
+  has_ordered_answers: false
+  answer_explanation: Les 4 réponses sont correctes. Un vol Paris / New-York pour
+    1 passager émet 900 kgCO2e pour la production, l'approvisionnement et la combustion
+    du kérosène et les avions génèrent des effets supplémentaires qui impactent le
+    climat. Il faudrait multiplier les émissions de CO2 par 3 pour tenir compte de
+    ces effets. L'Ademe utilise un facteur 2, soit 1,8 tonnes de CO2 équivalent.
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: https://monconvertisseurco2.fr/?co2=1800
+  answer_reading_recommendation: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/967.jpg?raw=true
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: FJG
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-11-22
+  created: 2021-11-29
+  updated: 2021-11-29
+  tags:
+  - 34
+  - 72
+- id: 968
+  text: Lesquels de ces modes de transport sont compatibles avec une vie bas carbone,
+    c'est à dire avec une réduction respectant les accords de Paris à l'horizon 2050
+    ?
+  hint: ''
+  type: QCM-RM
+  category: 1
+  difficulty: 1
+  language: Français
+  answer_option_a: une voiture électrique individuelle
+  answer_option_b: les transports en commun (train, bus, etc.)
+  answer_option_c: une flotte de véhicule (électrique) partagée
+  answer_option_d: la marche, le vélo traditionnel ou électrique
+  answer_correct: bd
+  has_ordered_answers: false
+  answer_explanation: 'Le véhicule électrique est souvent présenté comme une solution
+    à la mobilité décarbonée. Rappelons l''usage de la voiture actuelle : elle coûte
+    des milliers d''euros à l''achat ; elle se déprécie rapidement; elle est en stationnement
+    95% du temps ; elle et occupe 10m2 environ de surface, lorsqu''elle roule; elle
+    est utilisée par 1,6 occupants en moyenne. C''est un mode de transport très inefficace.
+    La voiture électrique peut être une solution bas carbone si l''électricité qui
+    l''alimente est bas carbone. L''impact d''une voiture électrique est beaucoup
+    plus important qu''une voiture thermique dans la phase de fabrication à cause
+    des batteries. Un des leviers pour améliorer ce point serait de partager plus
+    ces véhicules électriques par exemple avec des flottes d''auto-partage.
+
+    Les transports en commun (train, bus, etc.) sont aussi des leviers pour réduire
+    les émissions du secteur transport tout comme la mobilité douce (marche, vélo,
+    vélo à assistance électrique).'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: https://monimpacttransport.fr/
+  answer_reading_recommendation: ''
+  answer_image_url: https://datagir.ademe.fr/static/e10d89bca3ede0d0737d5a999f6af127/010a5/mon-impact-transport.png
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: FJG
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-11-22
+  created: 2021-11-29
+  updated: 2021-11-29
+  tags:
+  - 33
+  - 72
+- id: 969
+  text: De combien diminue-t-on les émissions d'un logement en passant de la classe
+    E à la classe A ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 3
+  language: Français
+  answer_option_a: D'un facteur 2
+  answer_option_b: D'un facteur 5
+  answer_option_c: D'un facteur 10
+  answer_option_d: D'un facteur 20
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: 'Les classes A à G des bâtiments sont établis par un diagnostic
+    de performance énergétique (DPE). A surface donnée, en chauffant à 19°C le jour
+    et 16°C la nuit, les émissions d''un logement en classe A seront 10 fois moindres
+    que celui d''un classe E chauffé au fioul ou au gaz. La classe A signifie en effet
+    un très bon niveau d''isolation et des modes de chauffage beaucoup moins émissifs
+    : pompe à chaleur, chauffage bois performant, etc. L''isolation est donc un levier
+    énorme pour réduire l''impact en émissions de GES du bâtiment tout en améliorant
+    le confort des occupants en hiver et en été et en réduisant le budget alloué au
+    chauffage. '
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.ecologie.gouv.fr/diagnostic-performance-energetique-dpe
+  answer_reading_recommendation: ''
+  answer_image_url: https://alec-nancy.fr/wp-content/uploads/2021/05/ALEC-Nancy-Grands-Territoires-DPE-.jpg
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: FJG
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-11-22
+  created: 2021-11-29
+  updated: 2021-11-29
+  tags:
+  - 53
+  - 72
+- id: 970
+  text: Qu'est-ce qu'on pourra faire plus dans un monde bas carbone ?
+  hint: ''
+  type: QCM-RM
+  category: 1
+  difficulty: 1
+  language: Français
+  answer_option_a: prendre l'avion
+  answer_option_b: passer du temps avec ses proches
+  answer_option_c: partir en vacances à vélo
+  answer_option_d: nager dans sa piscine
+  answer_correct: bc
+  has_ordered_answers: false
+  answer_explanation: 'Inventer des vies bas carbone ce n''est pas uniquement regarder
+    les aspects de nos vies qui doivent changer et réduire leur impact (voiture individuelle,
+    trajet en avion, consommation, etc.), il y a tout un pan de nos vies qui va pouvoir
+    aussi s''amplifier. Ce sont en général des actions bas carbone que l''on aime
+    faire : jardiner, chanter, courir, nager dans un lac, randonner/bivouaquer, réparer/bricoler,
+    danser, rêver, marcher dans la nature, etc. Il y a pas de doutes que l''on peut
+    inventer des vies bas carbone durables et désirables !'
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_scientific_url: https://www.resistanceclimatique.org/inventons_nos_vies_bas_carbone
+  answer_reading_recommendation: ''
+  answer_image_url: https://d3n8a8pro7vhmx.cloudfront.net/resistanceclimatique/pages/115/features/original/_DSC4614.jpg?1598286546
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: FJG
+  validator: Matthieu Massart
+  validation_status: Écartée
+  added: 2021-11-22
+  created: 2021-11-29
+  updated: 2021-11-29
+  tags:
+  - 72
+- id: 971
+  text: Quels leviers peut-on activer pour réduire la part du numérique dans mon l'empreinte
+    ?
+  hint: ''
+  type: QCM-RM
+  category: 1
+  difficulty: 2
+  language: Français
+  answer_option_a: faire durer mon smarphone/ordinateur plus longtemps
+  answer_option_b: réduire la qualité d'affichage de visionnage des vidéos en ligne
+  answer_option_c: passer de la 4G à la 5G
+  answer_option_d: regarder des vidéos de chien plutôt que des vidéos de chat
+  answer_correct: ab
+  has_ordered_answers: false
+  answer_explanation: "Le secteur du numérique est tout sauf virtuel en terme d'impact\
+    \ sur le climat. La fabrication, l'alimentation, l'utilisation des équipements\
+    \ (serveurs, antennes, terminaux, etc.) génèrent des émissions de gaz à effet\
+    \ de serre.\nFaire durer beaucoup plus longtemps son smartphone ou son ordinateur\
+    \ est un levier important (en France, en moyenne, on change tous les 24 mois de\
+    \ smartphone) de réduction de l'impact, tout comme lorsque l'on regarde des vidéos\
+    \ de réduire la qualité de celles-ci en l'adaptant à la taille de l'écran ou à\
+    \ l'usage : qui n'a pas déjà écouté de la musique sur youtube ou regardé des vidéos\
+    \ en haute qualité sur un petit écran/format ? \nIl y a bien évidemment plein\
+    \ d'autres leviers possibles.\nVoir le détail, source, et explications dans le\
+    \ guide l'animateur du kit Inventons nos vies bas carbone."
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://d3n8a8pro7vhmx.cloudfront.net/resistanceclimatique/pages/115/attachments/original/1616151401/20210228_guide_de_l'animateur_kit_INVBC.pdf?1616151401
+  answer_scientific_url: ''
+  answer_reading_recommendation: ''
+  answer_image_url: https://live.staticflickr.com/3706/33231398121_bcabbe481a.jpg
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: FJG
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-11-29
+  created: 2021-11-29
+  updated: 2021-11-29
+  tags:
+  - 30
+  - 72
 - id: 999
   text: 'Vrai ou faux ? Sur les dix dernières années, la forêt amazonienne au Brésil
     a émis plus de carbone qu''elle n''en a capté. '
@@ -34656,10 +34927,10 @@
     90 % aujourd’hui, au détriment du fret ferroviaire et du transport fluvial.
 
 
-    Bonus] La tonne.kilomètre est l''unité communément utilisée pour évaluer le trafic
+    [Bonus] La tonne.kilomètre est l''unité communément utilisée pour évaluer le trafic
     de marchandises, et représente l''équivalent d''une tonne de marchandises transportée
     sur 1 km. Pour exemple, 5 tonnes de marchandises transportées sur 10 km correspondent
-    à 50 [tonnes.km. Pour la mobilité des personnes, on parle généralement en voyageurs.km
+    à 50 tonnes.km. Pour la mobilité des personnes, on parle généralement en voyageurs.km
     ou passagers.km.'
   answer_audio: ''
   answer_video: ''
