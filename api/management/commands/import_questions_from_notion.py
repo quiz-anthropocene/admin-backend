@@ -334,7 +334,7 @@ class Command(BaseCommand):
         # Update configuration
         #########################################################
         configuration = Configuration.get_solo()
-        for scope in constants.NOTION_QUESTIONS_IMPORT_SCOPE_LIST[1:]:
+        for scope in constants.NOTION_QUESTIONS_IMPORT_SCOPE_LIST:
             setattr(
                 configuration,
                 f"notion_questions_scope_{scope}_last_imported",

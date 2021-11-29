@@ -239,14 +239,15 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
             for (
                 scope_value,
                 scope_label,
-            ) in api_constants.NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES[1:]
+            ) in api_constants.NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES[:1]
         ]
         notion_questions_import_response = []
 
         if request.POST.get("run_import_questions_from_notion_script", False):
             out = StringIO()
-            scope = request.POST.get("run_import_questions_from_notion_script")
-            management.call_command("import_questions_from_notion", scope, stdout=out)
+            # scope = request.POST.get("run_import_questions_from_notion_script")
+            # management.call_command("import_questions_from_notion", scope, stdout=out)
+            management.call_command("import_questions_from_notion", stdout=out)
             notion_questions_import_response = out.getvalue()
             notion_questions_import_response = notion_questions_import_response.split(
                 "\n"
