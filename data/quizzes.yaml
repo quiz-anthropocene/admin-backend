@@ -960,17 +960,18 @@
 - id: 76
   name: Inventons nos Vies Bas Carbone
   slug: quiz-invbc
-  introduction: <p>Peu d'entre nous connaissent les ordres de grandeur de notre empreinte
-    carbone. Ni ce que sont des tonnes de gaz à effet de serre. Et encore moins les
-    efforts à fournir pour limiter le réchauffement climatique. C'est sur la base
-    de ce constat qu'a été créé le kit pédagogique Inventons nos vies bas carbone.
-    Avec ce powerpoint du futur, à l'aide d'une ficelle et de cartes cartonnées, l'atelier
+  introduction: <p>Connaissez-vous votre empreinte carbone ? Sauriez-vous donner une
+    activité qui émet une tonne de CO2 ? Et avez-vous une petite idée des efforts
+    à fournir pour éviter un emballement du réchauffement climatique ? Ces questions
+    sont essentielles, et peu d'entre nous savent y répondre. C'est pour répondre
+    à ce manque qu'a été créé le kit pédagogique Inventons nos vies bas carbone. Véritable
+    powerpoint interactif du futur avec ses cartes et sa corde à linge, l'atelier
     permet d'appréhender simplement les ordres de grandeur associés d'émissions associées
-    à notre vie de tous les jours. Et vous, les connaissez-vous ?</p>
+    à notre vie de tous les jours. Et vous de tester vos connaissances.</p>
   conclusion: <p>On pourrait imaginer à l'issue de ce quiz que des vies bas carbone,
-    ce ne sont que des restrictions insupportables sur nos modes de vie ! Et si c'est
-    plutôt une invite à se recentrer sur les ce qui donne du sel à notre existence
-    sans émettre, ou si peu ? Pa exemple, cuisiner, jardiner, chanter, courir, nager,
+    ce ne sont que des restrictions insupportables sur nos modes de vie ! Et pourtant...Et
+    si c'était au contraire une invite à s'interroger sur ce qui donne du sel à notre
+    existence sans émettre, ou si peu ? Cuisiner, jardiner, chanter, courir, nager,
     randonner, bricoler, danser, rêver, marcher, etc. A vous d'inventer vos vies bas
     carbone, à la fois durables et désirables ! Pour en savoir plus rendez-vous ici.
     Pour en savoir plus rendez-vous <a href="https://www.resistanceclimatique.org/inventons_nos_vies_bas_carbone">ici</a>.</p>

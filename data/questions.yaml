@@ -32853,9 +32853,9 @@
   difficulty: 1
   language: Français
   answer_option_a: En inventaire national
-  answer_option_b: En mpreinte carbone
+  answer_option_b: En empreinte carbone
   answer_option_c: En émissions du territoire plus les importations moins les exportations
-  answer_option_d: Les émissions du territoire
+  answer_option_d: En émissions du territoire
   answer_correct: ad
   has_ordered_answers: false
   answer_explanation: "L'accord de Paris signé le 12 décembre 2015 et ratifié par\
@@ -34097,13 +34097,14 @@
   - 21
   - 223
 - id: 966
-  text: Réduit-on son empreinte carbone en arrêtant de consommer de la viande ?
+  text: Si on arrête de consommer de la viande, est-ce qu'on réduit son empreinte
+    carbone alimentaire ?
   hint: ''
   type: QCM
   category: 1
   difficulty: 3
   language: Français
-  answer_option_a: Non, ça ne change rien
+  answer_option_a: Non, ça ne change rien en fait
   answer_option_b: Oui, d'un facteur 2 en moyenne
   answer_option_c: Oui, d'un facteur 4
   answer_option_d: Oui, d'un facteur 10
@@ -34293,7 +34294,7 @@
   tags:
   - 72
 - id: 971
-  text: Quels leviers peut-on activer pour réduire la part du numérique dans mon l'empreinte
+  text: Quels leviers puis-je activer pour réduire la part du numérique dans mon empreinte
     ?
   hint: ''
   type: QCM-RM
