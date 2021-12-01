@@ -27257,37 +27257,43 @@
   - 236
   - 237
 - id: 761
-  text: Copy of à venir
+  text: Entre 2005 et 2020, le volume de données totales généré chaque année par l'ensemble
+    des appareils dans le monde a été multiplié d'un facteur de l'ordre de...
   hint: ''
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 3
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  answer_option_a: entre 10 et 50
+  answer_option_b: entre 50 et 500
+  answer_option_c: entre 500 et 8,000
+  answer_option_d: entre 50,000 et 800,000
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Les données totales créées sont passées de 100 millions (2005)
+    à 800 milliards de téraoctets par an (2020), c’est-à-dire ×8000. En corrigeant
+    par l’augmentation du nombre d’internautes, le ratio devient ×2000. Durant ces
+    15 ans, la quantité de données circulant dans le réseau internet a été multipliée
+    par "seulement" 100.  Attention, l''évaluation de cette masse de données est difficile
+    à réaliser : par exemple, le site Statista affirmait plutôt 50 milliards de téraoctets
+    en 2020 (donc rapport ×500). Ce chiffre pourrait être de nouveau multiplié par
+    50 sur les 15 prochaines années (d''ici 2035).'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://fr.statista.com/infographie/17800/big-data-evolution-quantite-donnees-numeriques-creees-dans-le-monde/
+  answer_scientific_url: https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/864.png
+  answer_image_explanation: IDC, cité par https://www.economist.com/special-report/2010/02/27/data-data-everywhere
   answer_extra_info: ''
-  author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
-  added: 2021-01-13
+  author: Max Pinsard
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-12-01
   created: 2021-01-11
   updated: 2021-01-11
   tags:
-  - 33
-  - 217
-  - 218
+  - 30
 - id: 762
   text: Copy of à venir
   hint: ''
@@ -34096,6 +34102,52 @@
   tags:
   - 21
   - 223
+- id: 965
+  text: Vrai ou faux ? Dans l'accord de Paris de 2015, les émissions des transports
+    internationaux aériens et maritimes sont prises en compte.
+  hint: ''
+  type: VF
+  category: 1
+  difficulty: 2
+  language: Français
+  answer_option_a: Vrai
+  answer_option_b: Faux
+  answer_option_c: ''
+  answer_option_d: ''
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: "Ces deux secteurs internationaux sont particuliers et posent\
+    \ la question de l'attribution des émissions. Par exemple sur un vol Paris / New-York,\
+    \ a quel pays affecter les émissions pour ne pas les compter deux fois ou ne pas\
+    \ les compter du tout ?\nL'accord de Paris ne mentionne pas explicitement les\
+    \ secteurs aériens et maritimes internationaux. La réponse à la question est donc\
+    \ non. \nPour autant, les émissions de ces secteurs doivent aussi s'aligner avec\
+    \ la trajectoire des +2°C/+1,5°C.\nLa pression s'accroit (rapports d'experts tels\
+    \ le Haut Conseil pour le Climat en France, interprétation juridique, proposition\
+    \ de loi, etc.) pour inclure ces émissions dans le périmètre. Par ailleurs, les\
+    \ instances qui régulent ces secteurs, l'Organisation internationale de l'aviation\
+    \ civile (OACI) et l'Organisation maritime internationale (OMI) - s'engagent aussi\
+    \ à réduire leurs émissions. Sans forcément être alignés sur l'objectif de l'accord\
+    \ de Paris néanmoins."
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.hautconseilclimat.fr/actualites/urgence-climatique-la-france-en-retard-sur-ses-objectifs/
+  answer_scientific_url: https://iopscience.iop.org/article/10.1088/1748-9326/ac286e
+  answer_reading_recommendation: https://www.sciencedirect.com/science/article/pii/S1352231020305689
+  answer_image_url: https://p0.piqsels.com/preview/838/295/739/aircraft-airplane-blue-cargo.jpg
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: FJG
+  validator: Matthieu Massart
+  validation_status: Validée
+  added: 2021-11-22
+  created: 2021-12-01
+  updated: 2021-12-01
+  tags:
+  - 34
+  - 59
+  - 72
+  - 198
 - id: 966
   text: Si on arrête de consommer de la viande, est-ce qu'on réduit son empreinte
     carbone alimentaire ?
