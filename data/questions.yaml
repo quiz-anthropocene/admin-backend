@@ -32851,8 +32851,8 @@
   tags:
   - 243
 - id: 931
-  text: L'accord de Paris de 2015, la COP21, porte engage les pays à réduire les émissions
-    de gaz à effet de serre. Oui, mais, mesurées comment ?
+  text: L'accord de Paris de 2015, issu de la COP21, engage les pays à réduire les
+    émissions de gaz à effet de serre. Oui, mais, mesurées comment ?
   hint: ''
   type: QCM-RM
   category: 2
@@ -32867,10 +32867,10 @@
   answer_explanation: "L'accord de Paris signé le 12 décembre 2015 et ratifié par\
     \ près de 190 Etats vise à tout faire pour limiter la hausse de température en\
     \ 2100 par rapport à la période pré-industrielle bien en dessous de +2°C et à\
-    \ faire le maximum pou se rapprocher de 1,5°C. \nPour ce faire les états rapportent\
+    \ faire le maximum pour se rapprocher de 1,5°C. \nPour ce faire les états rapportent\
     \ régulièrement les émissions de leur territoire (via les contributions déterminées\
-    \ au niveau national. Il s'agit donc d'inventaire national. Ils doivent proposer\
-    \ des trajectoires de réduction pour tenir cet objectif."
+    \ au niveau national - CDN ou NDC en anglais). Il s'agit donc d'inventaire national.\
+    \ Ils doivent proposer des trajectoires de réduction pour tenir cet objectif."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -32943,7 +32943,7 @@
   has_ordered_answers: false
   answer_explanation: On parle ici des émissions de gaz à effet de serre des infrastructures
     que l'on mutualise (hôpitaux, écoles, universités, laboratoires de recherche,
-    etc.) ainsi la mobilité, alimentation... des fonctionnaires (Etat, collectivités,
+    etc.) ainsi la mobilité, l'alimentation... des fonctionnaires (Etat, collectivités,
     santé). Ce total est ensuite rapporté à la population. Ce n'est pas incompressible,
     des leviers existent pour le réduire, comme développé dans le lien ci-dessous.
   answer_audio: ''
@@ -34198,7 +34198,7 @@
   answer_option_c: Chauffer un logement de 40m2 au fioul ou au gaz à 19°C le jour
     / 16°C la nuit
   answer_option_d: A acheter entre 2000€ et 5000€ de biens de consommation (livres,
-    électronique...)
+    électronique...) par an
   answer_correct: abcd
   has_ordered_answers: false
   answer_explanation: Les 4 réponses sont correctes. Un vol Paris / New-York pour
@@ -34241,7 +34241,7 @@
   answer_explanation: 'Le véhicule électrique est souvent présenté comme une solution
     à la mobilité décarbonée. Rappelons l''usage de la voiture actuelle : elle coûte
     des milliers d''euros à l''achat ; elle se déprécie rapidement; elle est en stationnement
-    95% du temps ; elle et occupe 10m2 environ de surface, lorsqu''elle roule; elle
+    95% du temps ; elle occupe 10m2 environ de surface ; lorsqu''elle roule, elle
     est utilisée par 1,6 occupants en moyenne. C''est un mode de transport très inefficace.
     La voiture électrique peut être une solution bas carbone si l''électricité qui
     l''alimente est bas carbone. L''impact d''une voiture électrique est beaucoup
@@ -34367,9 +34367,9 @@
     \ smartphone) de réduction de l'impact, tout comme lorsque l'on regarde des vidéos\
     \ de réduire la qualité de celles-ci en l'adaptant à la taille de l'écran ou à\
     \ l'usage : qui n'a pas déjà écouté de la musique sur youtube ou regardé des vidéos\
-    \ en haute qualité sur un petit écran/format ? \nIl y a bien évidemment plein\
-    \ d'autres leviers possibles.\nVoir le détail, source, et explications dans le\
-    \ guide l'animateur du kit Inventons nos vies bas carbone."
+    \ en haute qualité sur un petit écran ? \nIl y a bien évidemment plein d'autres\
+    \ leviers possibles.\nVoir le détail, source, et explications dans le guide l'animateur\
+    \ du kit Inventons nos vies bas carbone."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://d3n8a8pro7vhmx.cloudfront.net/resistanceclimatique/pages/115/attachments/original/1616151401/20210228_guide_de_l'animateur_kit_INVBC.pdf?1616151401
