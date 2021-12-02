@@ -32,7 +32,7 @@
   question_count: 2
   quiz_count: 0
 - name: FJG
-  question_count: 9
+  question_count: 10
   quiz_count: 0
 - name: Guillaume Boudry
   question_count: 5
@@ -62,7 +62,7 @@
   question_count: 74
   quiz_count: 9
 - name: Max Pinsard
-  question_count: 51
+  question_count: 52
   quiz_count: 5
 - name: Michel Bonnassieux
   question_count: 0
