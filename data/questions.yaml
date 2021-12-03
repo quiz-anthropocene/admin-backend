@@ -32902,13 +32902,13 @@
   answer_option_d: 74%
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: 'Quand on parle d''émissions de gaz à effet de serre, on mélange
-    et confond souvent deux notion : les émissions depuis le territoire - que l''on
+  answer_explanation: 'Quand on parle émissions de gaz à effet de serre, on mélange
+    et confond souvent deux notions : les émissions depuis le territoire - que l''on
     appelle Inventaire national - et les émissions qui tiennent compte des importations
     (en plus) et des exportations (en moins) - que l''on appelle empreinte carbone.
     Cette dernière est à l''image de nos modes de vie puisqu''une grande partie des
-    objets que l''on utilise sont fabriqués à l''étranger et importés, donc invisible
-    dans l''inventaire national mais comptabilisé dans l''empreinte carbone. En 2016,
+    objets que l''on utilise sont fabriqués à l''étranger et importés, donc invisibles
+    dans l''inventaire national mais comptabilisés dans l''empreinte carbone. En 2016,
     51% de l''empreinte carbone est due aux importations.'
   answer_audio: ''
   answer_video: ''
@@ -32943,7 +32943,7 @@
   has_ordered_answers: false
   answer_explanation: On parle ici des émissions de gaz à effet de serre des infrastructures
     que l'on mutualise (hôpitaux, écoles, universités, laboratoires de recherche,
-    etc.) ainsi la mobilité, l'alimentation... des fonctionnaires (Etat, collectivités,
+    etc.) ainsi que de la mobilité, l'alimentation... des fonctionnaires (Etat, collectivités,
     santé). Ce total est ensuite rapporté à la population. Ce n'est pas incompressible,
     des leviers existent pour le réduire, comme développé dans le lien ci-dessous.
   answer_audio: ''
@@ -34236,12 +34236,12 @@
   answer_option_b: les transports en commun (train, bus, etc.)
   answer_option_c: une flotte de véhicule (électrique) partagée
   answer_option_d: la marche, le vélo traditionnel ou électrique
-  answer_correct: bd
+  answer_correct: bcd
   has_ordered_answers: false
   answer_explanation: 'Le véhicule électrique est souvent présenté comme une solution
     à la mobilité décarbonée. Rappelons l''usage de la voiture actuelle : elle coûte
     des milliers d''euros à l''achat ; elle se déprécie rapidement; elle est en stationnement
-    95% du temps ; elle occupe 10m2 environ de surface ; lorsqu''elle roule, elle
+    95% du temps ; elle occupe 10 m2 environ de surface ; lorsqu''elle roule, elle
     est utilisée par 1,6 occupants en moyenne. C''est un mode de transport très inefficace.
     La voiture électrique peut être une solution bas carbone si l''électricité qui
     l''alimente est bas carbone. L''impact d''une voiture électrique est beaucoup
@@ -34320,7 +34320,7 @@
   answer_option_b: passer du temps avec ses proches
   answer_option_c: partir en vacances à vélo
   answer_option_d: nager dans sa piscine
-  answer_correct: bc
+  answer_correct: a
   has_ordered_answers: false
   answer_explanation: 'Inventer des vies bas carbone ce n''est pas uniquement regarder
     les aspects de nos vies qui doivent changer et réduire leur impact (voiture individuelle,
@@ -34364,12 +34364,10 @@
     \ (serveurs, antennes, terminaux, etc.) génèrent des émissions de gaz à effet\
     \ de serre.\nFaire durer beaucoup plus longtemps son smartphone ou son ordinateur\
     \ est un levier important (en France, en moyenne, on change tous les 24 mois de\
-    \ smartphone) de réduction de l'impact, tout comme lorsque l'on regarde des vidéos\
-    \ de réduire la qualité de celles-ci en l'adaptant à la taille de l'écran ou à\
-    \ l'usage : qui n'a pas déjà écouté de la musique sur youtube ou regardé des vidéos\
-    \ en haute qualité sur un petit écran ? \nIl y a bien évidemment plein d'autres\
-    \ leviers possibles.\nVoir le détail, source, et explications dans le guide l'animateur\
-    \ du kit Inventons nos vies bas carbone."
+    \ smartphone) de réduction de l'impact, tout comme de réduire la qualité des vidéos\
+    \ que l’on regarde. \nIl y a bien évidemment plein d'autres leviers possibles.\n\
+    Voir le détail, source, et explications dans le guide de l'animateur du kit Inventons\
+    \ nos vies bas carbone."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://d3n8a8pro7vhmx.cloudfront.net/resistanceclimatique/pages/115/attachments/original/1616151401/20210228_guide_de_l'animateur_kit_INVBC.pdf?1616151401
