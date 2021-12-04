@@ -155,6 +155,11 @@ class QuizAnswerEvent(models.Model):
         editable=False,
         help_text="La nombre de réponses correctes trouvées par l'internaute",
     )
+    duration_seconds = models.IntegerField(
+        default=0,
+        editable=False,
+        help_text="Le temps pris (en secondes) pour compléter le quiz",
+    )
     created = models.DateTimeField(
         auto_now_add=True, help_text="La date & heure de la réponse"
     )

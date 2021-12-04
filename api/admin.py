@@ -173,6 +173,8 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         "answer_success_rate",
         "like_count_agg",
         "dislike_count_agg",
+        # "created_at",
+        # "updated_at",
     )
 
     change_list_template = "admin/api/question/change_list_with_import.html"
@@ -406,6 +408,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "answer_count_agg",
         "like_count_agg",
         "dislike_count_agg",
+        "duration_average",
         "created",
         "updated",
     )
@@ -451,6 +454,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
                     "answer_count_agg",
                     "like_count_agg",
                     "dislike_count_agg",
+                    "duration_average",
                     "created",
                     "updated",
                 )
