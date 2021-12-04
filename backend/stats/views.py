@@ -113,6 +113,7 @@ def quiz_detail_answer_event(request, pk):
             quiz=quiz,
             question_count=quiz.question_count,
             answer_success_count=request.data["answer_success_count"],
+            duration_seconds=request.data["duration_seconds"],
         )
 
         serializer = QuizAnswerEventSerializer(quiz_answer_event)

@@ -134,6 +134,7 @@ class QuizAnswerEventAdmin(ExportMixin, admin.ModelAdmin):
         "quiz",
         "question_count",
         "answer_success_count",
+        "duration_seconds",
         "created",
     )
     list_filter = ("quiz",)
