@@ -101,12 +101,20 @@
       <section v-if="nextQuiz">
         <br />
         <h2 class="special-title">{{ $t('messages.nextQuiz') }}&nbsp;⏩</h2>
-        <QuizCard :quiz="nextQuiz" />
+        <div class="row">
+          <div class="col-sm-4">
+            <QuizCard :quiz="nextQuiz" />
+          </div>
+        </div>
       </section>
       <section v-if="similarQuizs">
         <br />
         <h2 class="special-title">{{ $t('messages.similarQuiz') }}<span v-if="similarQuizs.length > 1">s</span>&nbsp;👯</h2>
-        <QuizCard v-for="quiz in similarQuizs" :key="quiz.id" :quiz="quiz" />
+        <div class="row">
+          <div class="col-sm-4" v-for="quiz in similarQuizs" :key="quiz.id">
+            <QuizCard :quiz="quiz" />
+          </div>
+        </div>
       </section>
 
     </section>

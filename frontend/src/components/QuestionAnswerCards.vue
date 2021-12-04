@@ -69,12 +69,11 @@
       <h3 v-if="!questionAnswer.success">
         <small>{{ $t('messages.answerWas') }}{{ $t('words.semiColon') }}&nbsp;</small>
         <span v-if="question.type !== 'QCM-RM'">{{ question["answer_option_" + question["answer_correct"]] }}</span>
-        <span v-if="question.type === 'QCM-RM'">
-          <span v-for="(answer_correct_letter, index) in question['answer_correct']" :key="answer_correct_letter">
+        <ul v-if="question.type === 'QCM-RM'">
+          <li v-for="answer_correct_letter in question['answer_correct']" :key="answer_correct_letter">
             <span>{{ question["answer_option_" + answer_correct_letter] }}</span>
-            <span v-if="index < question['answer_correct'].length - 1">,&nbsp;</span>
-          </span>
-        </span>
+          </li>
+        </ul>
       </h3>
       <!-- Answer explanation -->
       <div class="row no-gutters text-align-left">
@@ -156,6 +155,7 @@ export default {
       questionSubmitted: false,
       questionSuccess: null,
       questionSuccessMessageList: (this.$i18n.locale !== 'fr') ? constants.QUESTION_SUCCESS_MESSAGES_EN : constants.QUESTION_SUCCESS_MESSAGES_FR,
+      questionErrorAlmostMessageList: (this.$i18n.locale !== 'fr') ? constants.QUESTION_ERROR_ALMOST_MESSAGES_EN : constants.QUESTION_ERROR_ALMOST_MESSAGES_FR,
       questionErrorMessageList: (this.$i18n.locale !== 'fr') ? constants.QUESTION_ERROR_MESSAGES_EN : constants.QUESTION_ERROR_MESSAGES_FR,
     };
   },
@@ -231,9 +231,10 @@ export default {
       const cleanedAnswerPicked = (this.question.type === 'QCM-RM') ? this.answerPicked.slice(0).filter(Boolean).sort().join('') : this.answerPicked;
       const randomSuccessMessage = this.questionSuccessMessageList[Math.floor(Math.random() * this.questionSuccessMessageList.length)];
       const randomErrorMessage = this.questionErrorMessageList[Math.floor(Math.random() * this.questionErrorMessageList.length)];
+      const randomErrorAlmostMessage = this.questionErrorAlmostMessageList[Math.floor(Math.random() * this.questionErrorAlmostMessageList.length)];
       // validate answer
       this.questionAnswer.success = (cleanedAnswerPicked === this.question.answer_correct);
-      this.questionAnswer.message = this.questionAnswer.success ? randomSuccessMessage : randomErrorMessage;
+      this.questionAnswer.message = this.questionAnswer.success ? randomSuccessMessage : ((this.question.type === 'QCM-RM') ? randomErrorAlmostMessage : randomErrorMessage);
       // update question stats // watch out for eslint 'vue/no-mutating-props'
       // this.question.answer_count_agg += 1;
       // this.question.answer_success_count_agg += (this.questionSuccess ? 1 : 0);

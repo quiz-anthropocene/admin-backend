@@ -11,11 +11,17 @@ export default {
     'Perfect!', 'Exactly!', 'Congrats', 'Nice', 'Well done', 'Bravo',
   ],
   QUESTION_ERROR_MESSAGES_FR: [
-    'On ne baisse pas les bras', 'Rien n\'est perdu', 'On croit en toi', 'Pas tombé loin',
+    'On ne baisse pas les bras', 'Rien n\'est perdu', 'On croit en toi',
     'Essaie encore', 'Surtout, ne pas se décourager', 'La prochaine sera la bonne', 'ah… pas du tout',
-    'C\'est raté', 'Vous vous êtes bien échauffé ?', 'Pas tout à fait…',
+    'C\'est raté', 'Vous vous êtes bien échauffé ?',
+  ],
+  QUESTION_ERROR_ALMOST_MESSAGES_FR: [
+    'Presque', 'Pas tout à fait…', 'Pas tombé loin',
   ],
   QUESTION_ERROR_MESSAGES_EN: [
+    'Nope', 'Sorry…', 'Wrong',
+  ],
+  QUESTION_ERROR_ALMOST_MESSAGES_EN: [
     'Almost', 'Not quite',
   ],
   QUIZ_RELATIONSHIP_NEXT: 'suivant',
