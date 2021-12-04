@@ -958,13 +958,13 @@
   - 218
   - 225
 - id: 76
-  name: Inventons nos Vies Bas Carbone
+  name: Inventons Nos Vies Bas Carbone
   slug: invbc
   introduction: <p>Connaissez-vous votre empreinte carbone ? Sauriez-vous citer une
     activité qui émet une tonne de CO2 ? Et avez-vous une petite idée des efforts
     à fournir pour éviter un emballement du réchauffement climatique ? Ces questions
     sont essentielles, et peu d'entre nous savent y répondre. C'est pour combler ce
-    manque qu'a été créé le kit pédagogique Inventons nos Vies Bas Carbone. Véritable
+    manque qu'a été créé le kit pédagogique Inventons Nos Vies Bas Carbone. Véritable
     powerpoint interactif du futur avec ses cartes et sa corde à linge, l'atelier
     permet d'appréhender simplement les ordres de grandeur associés à nos émissions
     associées de tous les jours. A vous de tester vos connaissances.</p>
@@ -976,7 +976,7 @@
     à la fois durables et désirables ! Pour en savoir plus rendez-vous <a href="https://www.resistanceclimatique.org/inventons_nos_vies_bas_carbone">ici</a>.</p>
   difficulty_average: 2.6
   language: Français
-  author: François-Joseph Grimault
+  author: Collectif INVBC
   image_background_url: https://d3n8a8pro7vhmx.cloudfront.net/resistanceclimatique/pages/115/attachments/original/1616150476/nouveau_kit.jpg?1616150476
   has_audio: false
   publish: true
@@ -984,6 +984,4 @@
   created: 2021-11-16
   updated: 2021-12-03
   tags:
-  - 30
-  - 34
   - 72

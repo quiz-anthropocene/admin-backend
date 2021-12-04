@@ -32997,6 +32997,7 @@
   - 98
 - id: 935
   text: Quelle est l'empreinte carbone par personne des 1% les plus riches en France
+    et en Europe
   hint: ''
   type: QCM
   category: 1
@@ -34172,7 +34173,7 @@
   answer_accessible_url: https://ree.developpement-durable.gouv.fr/themes/defis-environnementaux/changement-climatique/empreinte-carbone/article/l-empreinte-carbone-de-la-france#label_onglet818
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://d3n8a8pro7vhmx.cloudfront.net/resistanceclimatique/pages/115/attachments/original/1616150476/nouveau_kit.jpg?1616150476
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/966.png?raw=true
   answer_image_explanation: ''
   answer_extra_info: ''
   author: FJG
