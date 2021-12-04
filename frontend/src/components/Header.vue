@@ -49,6 +49,10 @@ export default {
 </script>
 
 <style scoped>
+/**
+  Note: if you change the header height,
+  don't forget to change the scroll offset in QuestionAnswerCards.vue
+ */
 header {
   top: 0;
   position: sticky;
