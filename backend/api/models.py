@@ -625,7 +625,7 @@ class Quiz(models.Model):
                 else 0
             )
             return duration_seconds_average_value
-        return 0 
+        return 0
 
     @property
     def like_count_agg(self):
