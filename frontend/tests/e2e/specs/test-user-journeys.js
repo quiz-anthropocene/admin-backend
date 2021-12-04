@@ -9,7 +9,7 @@ module.exports = {
       .assert.urlContains('quiz')
       .assert.elementPresent('#quiz-list')
       .useXpath()
-      .assert.elementPresent('(//main//a[contains(@class, "card")]//h2)[1]')
+      .assert.elementPresent('(//main//a[contains(@class, "card")]//h3)[1]')
       .click('(//main//a[contains(@class, "card")])[1]')
       .useCss()
       // quiz detail page
