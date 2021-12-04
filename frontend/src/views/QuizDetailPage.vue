@@ -147,6 +147,7 @@ export default {
       showNextButton: true,
       emphasisNextButton: false,
       showQuizQuestions: false,
+      quizStartTime: null,
       // quizRelationships: null,
       // previousQuiz: null,
       // nextQuiz: null,
@@ -245,6 +246,11 @@ export default {
       this.showQuizQuestions = false;
     },
     incrementStep() {
+      // first step ?
+      if (this.quizStep === 0) {
+        this.quizStartTime = window.performance.now();
+      }
+
       // increment quiz step
       this.quizStep += 1;
       this.showNextButton = false;
@@ -265,6 +271,8 @@ export default {
     },
     submitQuiz() {
       // stats
+      const quizEndTime = window.performance.now();
+      const quizDurationInSeconds = Math.round((quizEndTime - this.quizStartTime) / 1000);
       fetch(`${process.env.VUE_APP_STATS_ENDPOINT}/quizzes/${this.quiz.id}/answer-events`, {
         method: 'POST',
         headers: {
@@ -273,6 +281,7 @@ export default {
         },
         body: JSON.stringify({
           answer_success_count: this.quiz.questions.filter((q) => q.success).length,
+          duration_seconds: quizDurationInSeconds,
         }),
       })
         .then((response) => response.json())
