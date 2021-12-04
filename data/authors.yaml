@@ -25,6 +25,9 @@
 - name: climat-en-questions.fr
   question_count: 2
   quiz_count: 0
+- name: Collectif INVBC
+  question_count: 0
+  quiz_count: 1
 - name: Contributeur anonyme
   question_count: 3
   quiz_count: 0
