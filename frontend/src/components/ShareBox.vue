@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       textCopy: 'Copier l\'URL',
-      textCopied: 'URL copiée',
+      textCopied: 'URL copiée ✅',
     };
   },
   props: {
@@ -89,6 +89,7 @@ export default {
       copyText.select();
       const oldValue = this.textCopy;
       this.textCopy = this.textCopied;
+      // TODO: execCommand is deprecated. Replace with Clipboard API?
       document.execCommand('copy');
       setTimeout(() => {
         this.textCopy = oldValue;
