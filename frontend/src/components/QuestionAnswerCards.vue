@@ -58,7 +58,7 @@
     </div>
 
     <!-- <br v-if="question && questionSubmitted" /> -->
-    <div v-if="question && questionSubmitted" id="scroll-to-answer" style="height:0px"></div>
+    <div v-if="question && questionSubmitted" id="scroll-to-answer" class="scroll-to-fix" style="height:0px"></div>
 
     <!-- ANSWER -->
     <div v-if="question && questionSubmitted" class="answer" :class="questionAnswer.success ? 'answer-success' : 'answer-error'">
@@ -244,7 +244,6 @@ export default {
       // scroll to answer
       setTimeout(() => {
         // why scroll to this div and not to 'answer' directly ? To have a slight top margin
-        // document.getElementsByClassName('answer')[0].scrollIntoView({ behavior: 'smooth' });
         document.getElementById('scroll-to-answer').scrollIntoView({ behavior: 'smooth' });
       }, 25);
       // stats
@@ -338,22 +337,6 @@ button.btn-outline-warning {
 @media all and (min-width: 60em) {
   .answer p.answer-image {
     height: 500px;
-  }
-}
-
-/**
-  On answer submit, we scroll to the answer
-  BUT the header hides the top of the answer
-  So we need to pass an offset
-  Source: https://stackoverflow.com/a/59253905/4293684
-*/
-#scroll-to-answer {
-  scroll-margin-top: 75px;
-}
-
-@media (min-width: 992px) {
-  #scroll-to-answer {
-    scroll-margin-top: 110px;
   }
 }
 </style>

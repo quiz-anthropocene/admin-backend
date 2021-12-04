@@ -51,7 +51,7 @@ export default {
 <style scoped>
 /**
   Note: if you change the header height,
-  don't forget to change the scroll offset in QuestionAnswerCards.vue
+  don't forget to change the scroll offset fix (css) in App.vue
  */
 header {
   top: 0;

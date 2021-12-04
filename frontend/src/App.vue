@@ -520,4 +520,20 @@ hr.custom-separator {
     cursor: pointer;
   }
 }
+
+/**
+  In some places (question submit, quiz submit), we scroll to a certain div
+  BUT the header hides the top of the div
+  So we need to pass an offset
+  Source: https://stackoverflow.com/a/59253905/4293684
+*/
+.scroll-to-fix {
+  scroll-margin-top: 75px;
+}
+
+@media (min-width: 992px) {
+  #scroll-to-fix {
+    scroll-margin-top: 110px;
+  }
+}
 </style>

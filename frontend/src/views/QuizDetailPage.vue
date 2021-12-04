@@ -69,6 +69,8 @@
 
     <!-- Quiz en cours -->
 
+    <div id="scroll-to-question" class="scroll-to-fix" style="height:0px"></div>
+
     <section v-if="quiz && (quizStep > 0) && quiz.questions[quizStep-1]">
       <QuestionAnswerCards v-bind:question="quiz.questions[quizStep-1]" v-bind:context="{ question_number: quizStep+' / '+quiz.questions.length, source: 'quiz' }" @answer-submitted="onAnswerSubmitted" />
       <button v-if="showNextButton && (quizStep < quiz.questions.length)" class="btn" :class="emphasisNextButton ? 'btn-primary' : 'btn-outline-primary'" @click="incrementStep()">⏩&nbsp;{{ $t('messages.nextQuestion') }}</button>
@@ -77,7 +79,7 @@
 
     <!-- Quiz terminé -->
 
-    <div id="scroll-to-results" style="height:0px"></div>
+    <div id="scroll-to-results" class="scroll-to-fix" style="height:0px"></div>
 
     <section v-if="quiz && (quizStep > quiz.questions.length)">
 
@@ -262,6 +264,10 @@ export default {
       // increment quiz step
       this.quizStep += 1;
       this.showNextButton = false;
+      setTimeout(() => {
+        // why scroll to this div and not to 'answer' directly ? To have a slight top margin
+        document.getElementById('scroll-to-question').scrollIntoView({ behavior: 'smooth' });
+      }, 25);
 
       // done ?
       if (this.quizStep > this.quiz.questions.length) {
