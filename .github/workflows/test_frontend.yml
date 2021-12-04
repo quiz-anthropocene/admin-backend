@@ -46,4 +46,6 @@ jobs:
         run: yarn test:e2e
         env:
           BROWSER: chrome
+          VUE_APP_I18N_LOCALE: fr
+          VUE_APP_I18N_FALLBACK_LOCALE: fr
   

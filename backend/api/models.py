@@ -612,16 +612,28 @@ class Quiz(models.Model):
         return self.from_quizs.all() | self.to_quizs.all()
 
     @property
+    def answer_count_agg(self):
+        return self.stats.count()
+
+    @property
+    def duration_average(self):
+        if self.answer_count_agg:
+            duration_seconds_avg_raw = self.stats.aggregate(Avg("duration_seconds"))
+            duration_seconds_average_value = (
+                round(duration_seconds_avg_raw["duration_seconds__avg"], 1)
+                if duration_seconds_avg_raw["duration_seconds__avg"]
+                else 0
+            )
+            return duration_seconds_average_value
+        return 0
+
+    @property
     def like_count_agg(self):
         return self.feedbacks.liked().count()
 
     @property
     def dislike_count_agg(self):
         return self.feedbacks.disliked().count()
-
-    @property
-    def answer_count_agg(self):
-        return self.stats.count()
 
     # Admin
     tags_list_string.fget.short_description = "Tag(s)"
@@ -636,6 +648,7 @@ class Quiz(models.Model):
         "Questions author(s)"
     )
     answer_count_agg.fget.short_description = "# Rép"
+    duration_average.fget.short_description = "Durée moyenne (en secondes)"
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"
 
