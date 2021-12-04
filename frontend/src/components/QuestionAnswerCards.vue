@@ -339,4 +339,20 @@ button.btn-outline-warning {
     height: 500px;
   }
 }
+
+/**
+  On answer submit, we scroll to the answer
+  BUT the header hides the top of the answer
+  So we need to pass an offset
+  Source: https://stackoverflow.com/a/59253905/4293684
+*/
+#scroll-to-answer {
+  scroll-margin-top: 75px;
+}
+
+@media (min-width: 992px) {
+  #scroll-to-answer {
+    scroll-margin-top: 110px;
+  }
+}
 </style>
