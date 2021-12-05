@@ -22770,9 +22770,9 @@
   - 1
   - 100
 - id: 649
-  text: Quelle proportion des populations d'animaux vertébrés sauvages (poissons,
-    oiseaux, mammifères terrestres et marins, amphibiens et reptiles) a disparu en
-    46 ans ?
+  text: Les vertébrés regroupent les poissons, oiseaux, mammifères terrestres et marins,
+    amphibiens et reptiles. Quelle proportion des vertébrés sauvage a disparu en 45
+    ans ?
   hint: ''
   type: QCM
   category: 4
@@ -22784,13 +22784,12 @@
   answer_option_d: 78%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: Selon le rapport Planète Vivante publié en 2020 par le WWF,
-    68%* des populations d’animaux vertébrés sauvages – poissons, oiseaux, mammifères
-    terrestres et marins, amphibiens et reptiles – ont disparu en 46 ans (1970-2016)
-    au niveau mondial. Dont 8% pour la seule période 2014-2016, soit une accélération
-    aussi spectaculaire qu'inquiétante du déclin. Ce chiffre monte jusqu’à 94% dans
-    la zone Amérique latine-Amérique centrale-Caraïbes. Le rythme est 100 à 1 000
-    fois plus rapide que la vitesse naturelle d'extinction.
+  answer_explanation: C'est le chiffre qui ressort du rapport Planète Vivante publié
+    en 2020 par le WWF sur la période 1970-2016, au niveau mondial. Dont 8% pour la
+    seule période 2014-2016, soit une accélération aussi spectaculaire qu'inquiétante
+    du déclin. Ce chiffre monte jusqu’à 94% dans la zone Amérique latine-Amérique
+    Centrale-Caraïbes. Le rythme est 100 à 1,000 fois plus rapide que la vitesse naturelle
+    d'extinction.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -31029,14 +31028,14 @@
   answer_option_d: 40%
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: "A l'horizon 2025 selon l’ONU, entre la moitié et les deux tiers\
-    \ de l’humanité – soit entre 4 et 5,3 milliards d’humains – devraient être en\
-    \ situation dite de stress hydrique.\nSelon une étude scientifique récente : \n\
-    - 80% de la population mondiale est exposée à des risques de pénurie ;\n- en 2030,\
-    \ 40% de la demande mondiale en eau ne sera pas couverte ;\n- en 2040, 1 pays\
-    \ sur 5 dans le monde devra faire face à de sévères pénuries d’eau.  le Moyen-Orient\
-    \ sera la région la plus touchée : 14 des 33 pays qui sont les plus exposés au\
-    \ monde se trouvent dans cette zone du globe."
+  answer_explanation: "Selon l'ONU, à l'horizon 2025, entre la moitié et les deux\
+    \ tiers de l’humanité – soit entre 4 et 5,3 milliards d’humains – devraient être\
+    \ en situation dite de stress hydrique. Et selon une étude scientifique récente\
+    \ : \n- 80% de la population mondiale est exposée à des risques de pénurie ;\n\
+    - en 2030, 40% de la demande mondiale en eau ne sera pas couverte ;\n- en 2040,\
+    \ 1 pays sur 5 dans le monde devra faire face à de sévères pénuries d’eau.  le\
+    \ Moyen-Orient sera la région la plus touchée : 14 des 33 pays qui sont les plus\
+    \ exposés au monde se trouvent dans cette zone du globe."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -31047,15 +31046,15 @@
   answer_extra_info: ''
   author: Jean-Christophe Anna
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-02-21
   created: 2021-02-22
   updated: 2021-02-22
   tags:
   - 37
 - id: 866
-  text: Quelle est la proportion d'énergies renouvelables dans le mix énergétique
-    mondial ?
+  text: Quelle est la part des énergies renouvelables (hors barrages) dans le mix
+    énergétique mondial ?
   hint: ''
   type: QCM
   category: 5
@@ -31070,34 +31069,35 @@
   answer_explanation: "Loin de se substituer, les énergies se sont historiquement\
     \ toujours… additionnées les unes aux autres ! Ainsi, le pétrole n’a jamais remplacé\
     \ le charbon, pas plus que le nucléaire n’a remplacé le pétrole. \nLe mix énergétique\
-    \ mondial n’a pas évolué depuis… 1980. Selon le World Energy Outlook publié par\
-    \ l'Agence Internationale de l’Énergie en 2017, les énergies fossiles fournissent\
-    \ toujours l’essentiel de la consommation d’énergie de l’humanité, soit 82% :\
-    \ 32% pour le pétrole, 28% pour le charbon et 22% pour le gaz naturel. Le nucléaire\
-    \ représente 5%, l’hydroélectricité 2%, les biocarburants et les déchets 10%.\
-    \ Les énergies renouvelables (solaire et éolien principalement), quant à elles,\
-    \ ne couvrent que 1% de la consommation mondiale. Ainsi, malgré leur développement,\
-    \ leur proportion dans le mix énergétique n’évolue pas car, dans le même temps,\
-    \ les énergies fossiles continuent d’être utilisées toujours en plus grande quantité."
+    \ mondial n’a guère évolué depuis…1980. Selon le rapport World Energy Outlook\
+    \ publié par l'Agence Internationale de l’Énergie en 2017, les énergies fossiles\
+    \ fournissent toujours l’essentiel de la consommation d’énergie de l’humanité\
+    \ : 82%, dont 32% pour le pétrole, 28% pour le charbon et 22% pour le gaz naturel.\
+    \ Le nucléaire représente 5%, l’hydroélectricité 2%, les biocarburants et les\
+    \ déchets 10%. Les énergies renouvelables intermittentes - lolaire et éolien principalement\
+    \ - ne couvrent que 1% de la consommation mondiale. Ainsi, malgré leur développement\
+    \ rapide, leur proportion dans le mix énergétique n’évolue pas car, dans le même\
+    \ temps, les énergies fossiles continuent d’être utilisées toujours en plus grande\
+    \ quantité."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.iea.org/reports/world-energy-outlook-2017
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://lh3.googleusercontent.com/proxy/37oe3MCubE9sbwqOJv0DPCm0-yAAfozub5sKonzLeKEXyTjkVhzoziMcA25pVn-sDoDB3c_NTYaXKojxEt06jDfKAv7dXkWW3QsT2b9LLa28tGx0M10bZxllhJip
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-02-21
   created: 2021-02-22
   updated: 2021-02-22
   tags:
   - 44
 - id: 867
-  text: La dernière fois que la Terre a connu un réchauffement de 5°C, cela a eu lieu
-    sur une période de... ?
+  text: Il y a 21,000 ans, la terre entamait un épisode de déglaciation, avec un réchauffement
+    de 5°C. Sur combien de temps cela s'est-il déroulé ?
   hint: ''
   type: QCM
   category: 1
@@ -31106,15 +31106,14 @@
   answer_option_a: 1,000 ans
   answer_option_b: 5,000 ans
   answer_option_c: 10,000 ans
-  answer_option_d: 15,000 ans
+  answer_option_d: 18,000 ans
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: ' La dernière fois que la Terre a connu un tel réchauffement,
     lors de la sortie de la période glaciaire (entre il y a 21 000 et il y a 11 000
     ans), la vie a eu le temps de s’adapter puisque cela s’est produit sur... 10 000
     ans, soit une augmentation moyenne 0,05°C par siècle. Selon certains scenarios
-    du GIEC, on parle de 5°C en 250 ans (1850-2100), voire… en un seul siècle si les
-    pires devaient se produire !'
+    du GIEC, on parle de 5°C en 250 ans (1850-2100, soit 2°C par siècle.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -31132,7 +31131,7 @@
   tags: []
 - id: 868
   text: Quel est l'impact prévu sur les rendements agricoles d'un degré supplémentaire
-    (température globale mondiale) ?
+    sur la température mondiale ?
   hint: ''
   type: QCM
   category: 1
@@ -31151,22 +31150,22 @@
     compteront en centaines de millions d’humains.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.europeanscientist.com/fr/agriculture-fr/rechauffement-climatique-et-rendement-agricole/
+  answer_scientific_url: https://www.pnas.org/content/114/35/9326
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://www.europeanscientist.com/wp-content/uploads/thumbs/111-5-36wyzbezp0b2mk3cfrcow0.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-02-21
   created: 2021-02-22
   updated: 2021-02-22
   tags:
   - 51
 - id: 869
-  text: Quels sont les principaux puits de carbone naturels ?
+  text: Lequel de ces puits absorbe le plus de carbone ?
   hint: ''
   type: QCM
   category: 1
@@ -31190,14 +31189,14 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://mrmondialisation.org/le-vrai-poumon-du-monde-est-oceanique-et-il-brule-sans-faire-de-vague/
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.imf.org/external/pubs/ft/fandd/2019/12/natures-solution-to-climate-change-chami.htm
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://i0.wp.com/mrmondialisation.org/wp-content/uploads/2019/10/baleine-1524x860.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-02-21
   created: 2021-02-23
   updated: 2021-02-23
@@ -32836,8 +32835,8 @@
   tags:
   - 243
 - id: 931
-  text: L'accord de Paris de 2015, issu de la COP21, engage les pays à réduire les
-    émissions de gaz à effet de serre. Oui, mais, mesurées comment ?
+  text: L'accord de Paris de 2015 issu de la COP21 engage les pays à réduire les émissions
+    de gaz à effet de serre. Oui, mais, mesurées comment ?
   hint: ''
   type: QCM-RM
   category: 2
@@ -32853,16 +32852,16 @@
     \ près de 190 Etats vise à tout faire pour limiter la hausse de température en\
     \ 2100 par rapport à la période pré-industrielle bien en dessous de +2°C et à\
     \ faire le maximum pour se rapprocher de 1,5°C. \nPour ce faire les états rapportent\
-    \ régulièrement les émissions de leur territoire (via les contributions déterminées\
-    \ au niveau national - CDN ou NDC en anglais). Il s'agit donc d'inventaire national\
-    \ ou d'émissions faites sur le territoire. Cette façon de faire évite les doubles\
-    \ comptages.\nUne autre façon de compter les émissions est d'utiliser l'empreinte\
-    \ carbone qui est la somme des émissions du territoire et des importations auxquelles\
-    \ on soustrait les exportations. Mais réalisé par tous les pays, ce système génèrerait\
-    \ des doubles comptes de gaz à effet de serre. Il est pourtant très utile pour\
-    \ prendre conscience de l'impact de nos modes de vie occidentaux qui génèrent\
-    \ beaucoup d'émissions lointaines (ex : importation de beaucoup de biens de consommation\
-    \ tels que électronique, habillement, etc.)."
+    \ régulièrement les émissions de leur territoire   (via les 'contributions déterminées\
+    \ au niveau national'). Il s'agit donc d'inventaire national (réponse a) ou autrement\
+    \ dit, d'émissions faites sur le territoire (réponse d). Cette façon de faire\
+    \ évite les doubles comptages.\nUne autre façon de compter les émissions est d'utiliser\
+    \ l'empreinte carbone qui est la somme des émissions du territoire et des importations\
+    \ auxquelles on soustrait les exportations. Mais réalisé par tous les pays, ce\
+    \ système génèrerait des doubles comptes de gaz à effet de serre. Il est pourtant\
+    \ très utile pour prendre conscience de l'impact de nos modes de vie occidentaux\
+    \ qui génèrent beaucoup d'émissions lointaines (ex : importation de beaucoup de\
+    \ biens de consommation tels que électronique, habillement, etc.)."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -34165,7 +34164,7 @@
   answer_accessible_url: https://ree.developpement-durable.gouv.fr/themes/defis-environnementaux/changement-climatique/empreinte-carbone/article/l-empreinte-carbone-de-la-france#label_onglet818
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/966.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/966.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: FJG
@@ -34232,10 +34231,10 @@
   answer_correct: bcd
   has_ordered_answers: false
   answer_explanation: 'Le véhicule électrique est souvent présenté comme une solution
-    à la mobilité décarbonée. Rappelons l''usage de la voiture actuelle : elle coûte
+    à la mobilité décarbonée. Rappelons l''usage de la voiture thermique : elle coûte
     des milliers d''euros à l''achat ; elle se déprécie rapidement; elle est en stationnement
-    95% du temps ; elle occupe 10 m2 environ de surface ; lorsqu''elle roule, elle
-    est utilisée par 1,6 occupants en moyenne. C''est un mode de transport très inefficace.
+    95% du temps ; elle occupe 10 m2 en stationnement ; lorsqu''elle roule, elle est
+    utilisée par 1,6 occupants en moyenne. C''est donc un mode de transport très inefficace.
     La voiture électrique peut être une solution bas carbone si l''électricité qui
     l''alimente est bas carbone. L''impact d''une voiture électrique est beaucoup
     plus important qu''une voiture thermique dans la phase de fabrication à cause
@@ -34352,15 +34351,19 @@
   answer_option_d: regarder des vidéos de chien plutôt que des vidéos de chat
   answer_correct: ab
   has_ordered_answers: false
-  answer_explanation: "Le secteur du numérique est tout sauf virtuel en terme d'impact\
-    \ sur le climat. La fabrication, l'alimentation, l'utilisation des équipements\
-    \ (serveurs, antennes, terminaux, etc.) génèrent des émissions de gaz à effet\
-    \ de serre.\nFaire durer beaucoup plus longtemps son smartphone ou son ordinateur\
-    \ est un levier important (en France, en moyenne, on change tous les 24 mois de\
-    \ smartphone) de réduction de l'impact, tout comme de réduire la qualité des vidéos\
-    \ que l’on regarde. \nIl y a bien évidemment plein d'autres leviers possibles.\n\
-    Voir le détail, source, et explications dans le guide de l'animateur du kit Inventons\
-    \ nos vies bas carbone."
+  answer_explanation: 'Le secteur du numérique est tout sauf virtuel en terme d''impact
+    sur le climat. La fabrication, l''alimentation, l''utilisation des équipements
+    (serveurs, antennes, terminaux, etc.) génèrent des émissions de gaz à effet de
+    serre.
+
+    Faire durer beaucoup plus longtemps son smartphone ou son ordinateur est un levier
+    important (en France, en moyenne, on change tous les 24 mois de smartphone) de
+    réduction de l''impact, tout comme de réduire la qualité des vidéos que l’on regarde.
+    Le passage de la 4G à la 5G nous expose à un risque d''effet rebond, c''est à
+    dire un effet d''aubaine qui risque d''augmenter la consommation globale.
+
+    Il y a bien évidemment plein d''autres leviers possibles. Voir le détail, source,
+    et explications dans le guide de l''animateur du kit Inventons nos vies bas carbone.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://d3n8a8pro7vhmx.cloudfront.net/resistanceclimatique/pages/115/attachments/original/1616151401/20210228_guide_de_l'animateur_kit_INVBC.pdf?1616151401
