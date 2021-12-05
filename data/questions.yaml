@@ -26530,7 +26530,7 @@
   - 259
   - 260
 - id: 743
-  text: Un ménage français jette en moyenne 250kg/hectare/an de déchets à la poubelle
+  text: Un ménage français jette en moyenne 250kg par an de déchets à la poubelle
     générale (grise), qui sont souvent délicats à traiter car mélangés. Quelle part
     de ce total pourrait facilement ne pas se retrouver dans cette poubelle ?
   hint: ''
@@ -26544,15 +26544,15 @@
   answer_option_d: 99%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: "Sur les 250kg/ha/an (en France) de déchets jetés dans la poubelle\
-    \ générale par les ménages, un tiers est putrescible et pourrait être composté\
-    \ ou nourrir des animaux, et un autre tiers pourrait être collecté sélectivement\
-    \ en vue d'un recyclage \"facile\" (papiers, verre, métaux …). Selon l'ADEME,\
-    \ en comptant d'autres déchets non-classés, c'est 70% qui pourraient éviter d'aller\
-    \ dans la poubelle grise. Le reste est composé de déchets dangereux (DEEE...),\
-    \ de plastiques, de déchets inertes divers non facilement recyclables... \nLa\
-    \ réduction à la source (zéro déchet, sobriété) est un autre levier majeur pour\
-    \ éviter ces 70%. Et un jour se passer totalement de poubelle grise ?"
+  answer_explanation: "Sur les 250k par habitant et par an (en France) de déchets\
+    \ jetés dans la poubelle générale par les ménages, un tiers est putrescible et\
+    \ pourrait être composté ou nourrir des animaux, et un autre tiers pourrait être\
+    \ collecté sélectivement en vue d'un recyclage \"facile\" (papiers, verre, métaux\
+    \ …). Selon l'ADEME, en comptant d'autres déchets non-classés, c'est 70% qui pourraient\
+    \ éviter d'aller dans la poubelle grise. Le reste est composé de déchets dangereux\
+    \ (DEEE...), de plastiques, de déchets inertes divers non facilement recyclables...\
+    \ \nLa réduction à la source (zéro déchet, sobriété) est un autre levier majeur\
+    \ pour éviter ces 70%. Et un jour se passer totalement de poubelle grise ?"
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ademe.fr/expertises/dechets/chiffres-cles-observation/dossier/caracterisation-dechets/campagne-nationale-caracterisation-dechets-menagers-assimiles
@@ -26569,7 +26569,6 @@
   updated: 2021-01-06
   tags:
   - 228
-  - 250
 - id: 744
   text: Si tous les logements ajustaient leur température moyenne au niveau recommandé
     en France, de combien diminuerait-on la consommation de chauffage ?
@@ -28224,31 +28223,31 @@
     le plancton végétal constitué de micro-algues et de cyanobactéries. Ces organismes
     végétaux évoluent dans la partie superficielle des océans qui recouvrent 71% de
     la surface de la planète, bien loin des 1,4% de l’Amazonie. Absolument essentiel
-    à la vie – aquatique comme terrestre – sur notre planète, le phytoplancton produit
-    - grâce à son activité photosynthétique - 50 à 85% de l’oxygène de la planète,
-    selon les saisons. En pompant le CO2 qu’il transforme en O2, il joue aussi un
-    rôle essentiel dans la régulation du climat.
+    à la vie aquatique comme terrestre, le phytoplancton produit grâce à son activité
+    photosynthétique 50 à 85% de l’oxygène de la planète selon les saisons. En pompant
+    le CO2 et en le transformant en oxygène, il joue aussi un rôle essentiel dans
+    la régulation du climat. Au moins la moitié de l’oxygène que nous respirons est
+    prodiguée par le phytoplancton, le reste provenant des plantes vertes terrestres.
+    Étonnant quand on pense qu''ils ne pèsent que 1% de la biomasse des organismes
+    photosynthétiques.
 
-    Le reste provient des plantes vertes terrestres. Au moins la moitié de l’air que
-    nous respirons est prodiguée par le phytoplancton. Ces micro-organismes d’apparence
-    passive qui représentent seulement 1% de la biomasse des organismes photosynthétiques,
-    semblent bien être ceux dont le rôle nous est le plus vital. La photosynthèse
-    du phytoplancton a d’ailleurs été un facteur déclencheur de la production de dioxygène
-    atmosphérique dès le début du Précambrien, il y a plusieurs milliards d’années.
-    C’est cette activité qui aurait permis la diversification évolutive du biote tel
-    qu’on le connaît aujourd’hui. Les périodes de baisse de productivité ou de disparition
-    du phytoplancton auraient également gravement affecté la vie sur Terre.'
+    La photosynthèse du phytoplancton a d’ailleurs été un facteur déclencheur de la
+    production d''oxygène atmosphérique dès le début du Précambrien, il y a plusieurs
+    milliards d’années. C’est cette activité qui aurait permis la diversification
+    évolutive du biote tel qu’on le connaît aujourd’hui. Les périodes de baisse de
+    productivité ou de disparition du phytoplancton auraient également gravement affecté
+    la vie sur Terre.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://mrmondialisation.org/le-vrai-poumon-du-monde-est-oceanique-et-il-brule-sans-faire-de-vague/
+  answer_accessible_url: https://wwz.ifremer.fr/L-ocean-pour-tous/Nos-ressources-pedagogiques/Comprendre-les-oceans/Ocean-et-climat/Production-primaire-du-phytoplancton-vers-une-diminution-globale
   answer_scientific_url: https://earthsky.org/earth/how-much-do-oceans-add-to-worlds-oxygen
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://i0.wp.com/mrmondialisation.org/wp-content/uploads/2019/10/diatoms_through_the_microscope.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-02-21
   created: 2021-02-26
   updated: 2021-02-26
@@ -28256,44 +28255,37 @@
   - 247
   - 248
 - id: 789
-  text: Quelle proportion du phytoplancton a disparu depuis 1950 ?
+  text: Comment a évolué la quantité de phytoplancton depuis 1950 ?
   hint: ''
   type: QCM
   category: 4
   difficulty: 3
   language: Français
-  answer_option_a: Entre 20 et 30%
-  answer_option_b: Entre 30 et 40%
-  answer_option_c: Entre 40 et 50%
-  answer_option_d: Entre 50 et 60%
+  answer_option_a: Stable globalement
+  answer_option_b: Entre 20 et 30% de réduction
+  answer_option_c: Entre 40 et 50% de réduction
+  answer_option_d: Entre 60 et 70% de réduction
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: 'Le phytoplancton est gravement menacé : entre 40 et 50% de
-    sa quantité totale a disparu depuis 1950. C''est le fait notamment de la surpêche,
-    de l’acidification des océans et du réchauffement climatique.
+  answer_explanation: 'Cette diminution est notamment le fait de la surpêche, de l’acidification
+    des océans et du réchauffement climatique.
 
-    « Plus de baleines = plus de phytoplancton
-
-    Plus de phytoplancton = plus de zooplancton
-
-    Plus de zooplancton = plus de poissons
-
-    Plus de gens = moins de vie dans l’océan »
-
-    Paul Watson – Urgence ! Si l’océan meurt, nous mourrons – Éditions Glénat, Avril
+    « Plus de baleines = plus de phytoplancton. Plus de phytoplancton = plus de zooplancton.
+    Plus de zooplancton = plus de poissons. Plus de gens = moins de vie dans l’océan
+    » Paul Watson – Urgence ! Si l’océan meurt, nous mourrons – Éditions Glénat, Avril
     2016'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.futura-sciences.com/planete/actualites/oceanographie-ocean-phytoplancton-subit-declin-inquietant-depuis-150-ans-24616/
+  answer_scientific_url: https://www.nature.com/articles/nature09268
   answer_reading_recommendation: Paul Watson – Urgence ! Si l’océan meurt, nous mourrons
     – Éditions Glénat, Avril 2016
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/3/5/0/35068fbf1e_15282_24616-phytoplancton-dr.jpg
+  answer_image_explanation: Banc de phytoplancton du ciel
   answer_extra_info: ''
   author: Jean-Christophe Anna
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-02-21
   created: 2021-02-26
   updated: 2021-02-26
@@ -30226,22 +30218,22 @@
   has_ordered_answers: true
   answer_explanation: 'Si sur notre planète bleue, l’eau semble omniprésente, 97,5%
     de la quantité totale est de l’eau de mer, impropre à la consommation humaine
-    et à l’agriculture/élevage puisqu’elle est salée. Or, la désalinisation de l’eau
-    de mer est très coûteuse et… très énergivore. L’eau douce, celle qui est potable
-    ne représente que 2,5% ! Elle est présente sous différentes formes : 1,9% (68,9%
-    des 2,5%) sous forme de glace, 0,3% dans les nappes phréatiques et 0,3% sous forme
-    de précipitations, de rivières ou de lacs.'
+    et à l’agriculture/élevage car salée. La désalinisation de l’eau de mer est très
+    coûteuse et énergivore. L’eau douce est présente sous différentes formes : 1,9%
+    sous forme de glace ; 0,3% dans les nappes phréatiques et 0,3% sous forme de précipitations,
+    de rivières ou de lacs.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.futura-sciences.com/planete/questions-reponses/eau-y-t-il-eau-douce-monde-805/
+  answer_scientific_url: https://www.cieau.com/connaitre-leau/leau-dans-la-nature/eau-douce-tout-savoir/
   answer_reading_recommendation: ''
-  answer_image_url: ''
-  answer_image_explanation: ''
+  answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/c/d/7/cd780c64f7_113142_volume-eau-terre-01.jpg
+  answer_image_explanation: 'Grosse goutte d''eau : quantité d''eau douce ; petite
+    goutte : quantité d''eau potable sur terre'
   answer_extra_info: ''
   author: Jean-Christophe Anna
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-02-21
   created: 2021-02-22
   updated: 2021-02-22
@@ -31037,26 +31029,19 @@
   answer_option_d: 40%
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: 'En 2025, selon l’ONU, entre la moitié et les deux tiers de
-    l’humanité – soit entre 4 et 5,3 milliards d’humains – devraient être en situation
-    dite de stress hydrique.
-
-    Selon une étude parue dans le journal Nature :
-
-    - 80% de la population mondiale est exposée à des risques de pénurie ;
-
-    - en 2030, 40% de la demande mondiale en eau ne sera pas couverte ;
-
-    - en 2040, 1 pays sur 5 dans le monde devra faire face à de sévères pénuries d’eau
-    ; le Moyen-Orient sera la région la plus touchée par les futures crises de l’eau
-    : 14 des 33 pays qui sont les plus exposés au monde se trouvent dans cette zone
-    du globe.'
+  answer_explanation: "A l'horizon 2025 selon l’ONU, entre la moitié et les deux tiers\
+    \ de l’humanité – soit entre 4 et 5,3 milliards d’humains – devraient être en\
+    \ situation dite de stress hydrique.\nSelon une étude scientifique récente : \n\
+    - 80% de la population mondiale est exposée à des risques de pénurie ;\n- en 2030,\
+    \ 40% de la demande mondiale en eau ne sera pas couverte ;\n- en 2040, 1 pays\
+    \ sur 5 dans le monde devra faire face à de sévères pénuries d’eau.  le Moyen-Orient\
+    \ sera la région la plus touchée : 14 des 33 pays qui sont les plus exposés au\
+    \ monde se trouvent dans cette zone du globe."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
-  answer_reading_recommendation: Etude 'Global Threats to human water security and
-    river biodiversity', revue Nature – 2010
+  answer_scientific_url: https://www.nature.com/articles/nature09440
+  answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
@@ -31297,8 +31282,8 @@
   - 197
   - 216
 - id: 872
-  text: De combien réduit-on son impact environnemental (carbone, matériaux ...) en
-    optant pour l'achat d'un smartphone reconditionné plutôt que d'un neuf ?
+  text: De combien réduit-on l'impact environnemental de son achat (carbone, matériaux
+    ...) en achetant un smartphone reconditionné plutôt que d'un neuf ?
   hint: ''
   type: QCM
   category: 2
@@ -32869,8 +32854,15 @@
     \ 2100 par rapport à la période pré-industrielle bien en dessous de +2°C et à\
     \ faire le maximum pour se rapprocher de 1,5°C. \nPour ce faire les états rapportent\
     \ régulièrement les émissions de leur territoire (via les contributions déterminées\
-    \ au niveau national - CDN ou NDC en anglais). Il s'agit donc d'inventaire national.\
-    \ Ils doivent proposer des trajectoires de réduction pour tenir cet objectif."
+    \ au niveau national - CDN ou NDC en anglais). Il s'agit donc d'inventaire national\
+    \ ou d'émissions faites sur le territoire. Cette façon de faire évite les doubles\
+    \ comptages.\nUne autre façon de compter les émissions est d'utiliser l'empreinte\
+    \ carbone qui est la somme des émissions du territoire et des importations auxquelles\
+    \ on soustrait les exportations. Mais réalisé par tous les pays, ce système génèrerait\
+    \ des doubles comptes de gaz à effet de serre. Il est pourtant très utile pour\
+    \ prendre conscience de l'impact de nos modes de vie occidentaux qui génèrent\
+    \ beaucoup d'émissions lointaines (ex : importation de beaucoup de biens de consommation\
+    \ tels que électronique, habillement, etc.)."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -32901,7 +32893,7 @@
   answer_option_c: 62%
   answer_option_d: 74%
   answer_correct: b
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'Quand on parle émissions de gaz à effet de serre, on mélange
     et confond souvent deux notions : les émissions depuis le territoire - que l''on
     appelle Inventaire national - et les émissions qui tiennent compte des importations
@@ -32940,7 +32932,7 @@
   answer_option_c: 1,5t CO2e
   answer_option_d: 3t CO2e
   answer_correct: b
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: On parle ici des émissions de gaz à effet de serre des infrastructures
     que l'on mutualise (hôpitaux, écoles, universités, laboratoires de recherche,
     etc.) ainsi que de la mobilité, l'alimentation... des fonctionnaires (Etat, collectivités,
@@ -34187,19 +34179,19 @@
   - 17
   - 72
 - id: 967
-  text: 'L''empreinte carbone d''un vol aller/retour Paris / New-York est équivalent
-    à '
+  text: 'Faire un vol aller/retour Paris - New-York, c''est l''équivalent en empreinte
+    carbone : '
   hint: ''
   type: QCM-RM
   category: 1
   difficulty: 4
   language: Français
-  answer_option_a: Manger de la viande une fois par jour
-  answer_option_b: Faire 10 000 km par an en voiture seul
+  answer_option_a: Manger de la viande une fois par jour pendant un an
+  answer_option_b: Faire 10 000 km en voiture seul pendant un an
   answer_option_c: Chauffer un logement de 40m2 au fioul ou au gaz à 19°C le jour
-    / 16°C la nuit
+    / 16°C la nuit pendant un an
   answer_option_d: A acheter entre 2000€ et 5000€ de biens de consommation (livres,
-    électronique...) par an
+    électronique...) pendant un an
   answer_correct: abcd
   has_ordered_answers: false
   answer_explanation: Les 4 réponses sont correctes. Un vol Paris / New-York pour
@@ -34283,7 +34275,7 @@
   answer_option_c: D'un facteur 10
   answer_option_d: D'un facteur 20
   answer_correct: c
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'Les classes A à G des bâtiments sont établis par un diagnostic
     de performance énergétique (DPE). A surface donnée, en chauffant à 19°C le jour
     et 16°C la nuit, les émissions d''un logement en classe A seront 10 fois moindres
@@ -34956,8 +34948,8 @@
   - 33
   - 225
 - id: 1014
-  text: La part du train en France est aujourd’hui de 9-10 % des trafics de marchandises.
-    Quelle était-elle en 1960 ?
+  text: Aujourd'hui, 9 à 10 % du trafic de marchandises passe par le train. Quelle
+    était cette proportion en 1960 ?
   hint: ''
   type: QCM
   category: 8
