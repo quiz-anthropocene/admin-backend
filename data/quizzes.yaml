@@ -535,7 +535,7 @@
   difficulty_average: 2.1
   language: Français
   author: Aurélien Déragne
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/logo%20FDN%20fond%20blanc.png
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/059-logo-fresque-numerique.png
   has_audio: false
   publish: true
   spotlight: true
@@ -555,7 +555,7 @@
   difficulty_average: 2.2
   language: Français
   author: Alain Servigne
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/Quiz60.jpg
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/060.jpg
   has_audio: false
   publish: true
   spotlight: true
@@ -625,7 +625,7 @@
   difficulty_average: 1.9
   language: Français
   author: Julien Briton et Thomas Moulin
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/logo_FA.png
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/062-logo-fresque-alimentation-square.png
   has_audio: false
   publish: true
   spotlight: true
@@ -652,7 +652,7 @@
   difficulty_average: 2.1
   language: English
   author: 'Aurélien Deragne, translation: Benoît Barraque'
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/logo%20FDN.png
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/063-logo-fresque-numerique-transparent.png
   has_audio: false
   publish: true
   spotlight: true
@@ -755,7 +755,7 @@
   difficulty_average: 2.4
   language: Français
   author: Max Pinsard
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/LToubli%C3%A9es.png
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/067-low-tech-oubli.png
   has_audio: false
   publish: true
   spotlight: false
@@ -843,7 +843,7 @@
   difficulty_average: 1.9
   language: Français
   author: Max Pinsard
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/solLT_32c.png
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/070-solLT_32c.png
   has_audio: false
   publish: true
   spotlight: true
@@ -861,7 +861,7 @@
   difficulty_average: 2.6
   language: Français
   author: Cyril Retourné
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/Logo%20Fresque%20oc%C3%A9ane.jpg
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/071-logo-fresque-oceane.jpg
   has_audio: false
   publish: false
   spotlight: false
@@ -888,7 +888,7 @@
   difficulty_average: 2.6
   language: English
   author: Max Pinsard
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/LToubli%C3%A9es.png
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/067-low-tech-oubli.png
   has_audio: false
   publish: true
   spotlight: true
@@ -947,7 +947,7 @@
   difficulty_average: 2.1
   language: Français
   author: Aurélien Bigo
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/transitionactu.jpg
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/075.jpg
   has_audio: false
   publish: true
   spotlight: true

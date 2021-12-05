@@ -296,3 +296,8 @@ yarn upgrade-interactive
 
 Mettre à jour l'instance Metabase sur Heroku
 - https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-heroku.html
+
+Réduire la taille des images (PNG)
+- Installer [pngquant](https://pngquant.org/)
+- Lancer sur un fichier donné : `pngquant -f --ext .png <filename>`
+- Ou lancer sur tous les fichiers d'un dossier : `pngquant -f --ext .png **/*.png`

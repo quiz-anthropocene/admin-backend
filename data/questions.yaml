@@ -33018,7 +33018,7 @@
   answer_accessible_url: ''
   answer_scientific_url: https://www.cambridge.org/core/journals/global-sustainability/article/unequal-distribution-of-household-carbon-footprints-in-europe-and-its-link-to-sustainability/F1ED4F705AF1C6C1FCAD477398353DC2
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/935%20-%20urn%20cambridge.org%20id%20binary%2020200706111248707-0737%20S2059479820000125%20S2059479820000125_fig3.png?raw=true
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/935.png
   answer_image_explanation: 'Distribution de l''empreinte carbone en Europe en fonction
     des revenus : top 1%, top 10%, 40% du milieu, 50% les plus pauvres, 5% les plus
     pauvres. En tCO2e par personne et par an'
@@ -34165,7 +34165,7 @@
   answer_accessible_url: https://ree.developpement-durable.gouv.fr/themes/defis-environnementaux/changement-climatique/empreinte-carbone/article/l-empreinte-carbone-de-la-france#label_onglet818
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/966.png?raw=true
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/966.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: FJG
@@ -34204,7 +34204,7 @@
   answer_accessible_url: ''
   answer_scientific_url: https://monconvertisseurco2.fr/?co2=1800
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/967.jpg?raw=true
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/967.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: FJG
@@ -34413,7 +34413,7 @@
   answer_accessible_url: https://www.sciencesetavenir.fr/nature-environnement/la-foret-amazonienne-bresilienne-desormais-emettrice-nette-de-carbone_153956
   answer_scientific_url: https://www.nature.com/articles/s41467-021-22050-1
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/999.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/999.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart

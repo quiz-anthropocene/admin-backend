@@ -9,6 +9,7 @@ Des pistes dans [README.md#idées](README.md#idées)
 ## [1.3.0] - 2021
 
 - [Data] Ajout du champ `slug` aux Quiz
+- [Data] Compression des images PNG avec `pngquant`
 - [DevOps] Utiliser `pipenv`
 - [Backend] Bouger les stats dans leur propre app Django. Idem pour le modèle `Configuration`
 - [Backend] Utiliser l'API officielle de Notion au lieu de `notion-py`
