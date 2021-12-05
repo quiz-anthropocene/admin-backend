@@ -618,7 +618,11 @@ class Quiz(models.Model):
     @property
     def duration_average_seconds(self):
         if self.answer_count_agg:
-            duration_seconds_avg_raw = self.stats.exclude(duration_seconds=0).aggregate(Avg("duration_seconds"))
+            duration_seconds_avg_raw = (
+                self.stats
+                .exclude(duration_seconds=0)
+                .aggregate(Avg("duration_seconds"))
+            )
             duration_seconds_average_value = (
                 round(duration_seconds_avg_raw["duration_seconds__avg"], 1)
                 if duration_seconds_avg_raw["duration_seconds__avg"]
@@ -633,10 +637,10 @@ class Quiz(models.Model):
             duration_average_floor_minutes = self.duration_average_seconds // 60
             duration_average_floor_minutes_string = str(round(duration_average_floor_minutes))
             duration_average_remainder_seconds = self.duration_average_seconds % 60
-            duration_average_remainder_seconds_string = str(round(duration_average_remainder_seconds))
+            duration_average_remainder_seconds_string = str(round(duration_average_remainder_seconds))  # noqa
             if len(duration_average_remainder_seconds_string) == 1:
-                duration_average_remainder_seconds_string = f"0{duration_average_remainder_seconds_string}"
-            return f"{duration_average_floor_minutes_string}min{duration_average_remainder_seconds_string}"
+                duration_average_remainder_seconds_string = f"0{duration_average_remainder_seconds_string}"  # noqa
+            return f"{duration_average_floor_minutes_string}min{duration_average_remainder_seconds_string}"  # noqa
         return ""
 
     @property
