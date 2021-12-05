@@ -408,7 +408,8 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "answer_count_agg",
         "like_count_agg",
         "dislike_count_agg",
-        "duration_average",
+        "duration_average_seconds",
+        "duration_average_minutes_string",
         "created",
         "updated",
     )
@@ -454,7 +455,8 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
                     "answer_count_agg",
                     "like_count_agg",
                     "dislike_count_agg",
-                    "duration_average",
+                    "duration_average_seconds",
+                    "duration_average_minutes_string",
                     "created",
                     "updated",
                 )

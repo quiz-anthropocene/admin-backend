@@ -616,9 +616,9 @@ class Quiz(models.Model):
         return self.stats.count()
 
     @property
-    def duration_average(self):
+    def duration_average_seconds(self):
         if self.answer_count_agg:
-            duration_seconds_avg_raw = self.stats.aggregate(Avg("duration_seconds"))
+            duration_seconds_avg_raw = self.stats.exclude(duration_seconds=0).aggregate(Avg("duration_seconds"))
             duration_seconds_average_value = (
                 round(duration_seconds_avg_raw["duration_seconds__avg"], 1)
                 if duration_seconds_avg_raw["duration_seconds__avg"]
@@ -626,6 +626,18 @@ class Quiz(models.Model):
             )
             return duration_seconds_average_value
         return 0
+
+    @property
+    def duration_average_minutes_string(self):
+        if self.duration_average_seconds:
+            duration_average_floor_minutes = self.duration_average_seconds // 60
+            duration_average_floor_minutes_string = str(round(duration_average_floor_minutes))
+            duration_average_remainder_seconds = self.duration_average_seconds % 60
+            duration_average_remainder_seconds_string = str(round(duration_average_remainder_seconds))
+            if len(duration_average_remainder_seconds_string) == 1:
+                duration_average_remainder_seconds_string = f"0{duration_average_remainder_seconds_string}"
+            return f"{duration_average_floor_minutes_string}min{duration_average_remainder_seconds_string}"
+        return ""
 
     @property
     def like_count_agg(self):
@@ -648,7 +660,8 @@ class Quiz(models.Model):
         "Questions author(s)"
     )
     answer_count_agg.fget.short_description = "# Rép"
-    duration_average.fget.short_description = "Durée moyenne (en secondes)"
+    duration_average_seconds.fget.short_description = "Durée moyenne (en secondes)"
+    duration_average_minutes_string.fget.short_description = "Durée moyenne (en minutes)"
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"
 
