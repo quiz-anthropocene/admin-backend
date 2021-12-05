@@ -23,7 +23,7 @@ class Command(BaseCommand):
         current_datetime_string = current_datetime.strftime("%Y-%m-%d-%H-%M")
         current_datetime_string_pretty = current_datetime.strftime("%Y-%m-%d %H:%M")
         branch_name = f"update-data-{current_datetime_string}"
-        pull_request_name = f"Update: data ({current_datetime_string_pretty})"
+        pull_request_name = f"Data: update data ({current_datetime_string_pretty})"
 
         # update configuration first
         configuration = Configuration.get_solo()

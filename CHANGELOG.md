@@ -6,7 +6,23 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Des pistes dans [README.md#idées](README.md#idées)
 
-## [] - 2020-12-13
+## [1.3.0] - 2021
+
+- [Data] Ajout du champ `slug` aux Quiz
+- [DevOps] Utiliser `pipenv`
+- [Backend] Bouger les stats dans leur propre app Django. Idem pour le modèle `Configuration`
+- [Backend] Utiliser l'API officielle de Notion au lieu de `notion-py`
+- [Backend] Stocker un `duration_seconds` pour chaque Quiz complété
+- [Backend] Nouveaux champs `answer_audio`, `answer_video` & `answer_reading_recommendation` au modèle Question
+- [Backend] Nouveaux champ `language` au modèle Quiz
+- [Frontend] Ajout d'un module de traductions (i18n). Pouvoir switcher entre Français et Anglais.
+- [Frontend] Nouveau logo
+- [Frontend] Nouveau header fixe
+- [Frontend] Mettre d'avantage de quizs en avant sur la home page
+- [Frontend] Page dédié à l'atelier
+- [Frontend] Améliorer l'expérience utilisateur (scroll, d'avantage de contenu sur la page...)
+
+## [1.2.0] - 2020-12-13
 
 - [Data] Générer un fichier `data/stats.yaml` lors de l'export
 - [Data] Générer un fichier `data/authors.yaml` lors de l'export (avec les `question_count` et `quiz_count`)
