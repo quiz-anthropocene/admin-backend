@@ -5,7 +5,6 @@ Merci d'être là et de vouloir contribuer :)
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Comment aider ?](#comment-aider-)
   - [Rajouter ou modifier des questions](#rajouter-ou-modifier-des-questions)
   - [Proposer des améliorations de l'application](#proposer-des-am%C3%A9liorations-de-lapplication)
@@ -19,43 +18,46 @@ Merci d'être là et de vouloir contribuer :)
   - [Lancer le projet en local](#lancer-le-projet-en-local)
     - [Installer l'application](#installer-lapplication)
     - [Lancer l'application](#lancer-lapplication)
-      - [Lancer le Backend](#lancer-le-backend)
+      - [Lancer le Backend (optionnel)](#lancer-le-backend-optionnel)
       - [Lancer le Frontend](#lancer-le-frontend)
     - [Accéder à la console admin](#acc%C3%A9der-%C3%A0-la-console-admin)
   - [Lancer les tests](#lancer-les-tests)
     - [Lancer les tests du Backend](#lancer-les-tests-du-backend)
     - [Lancer les tests du Frontend](#lancer-les-tests-du-frontend)
   - [Autres commandes utiles](#autres-commandes-utiles)
+    - [Commandes Backend](#commandes-backend)
+    - [Commandes Frontend](#commandes-frontend)
+    - [Commandes Autres](#commandes-autres)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Comment aider ?
 
-Il y a plusieurs aspects du projet qui ont besoin d'aide:
+Il y a plusieurs aspects du projet qui ont besoin d'aide :
 
-- La base de donnée de questions:
+- La base de donnée de questions :
     - rajouter de nouvelles questions
     - proposer des modifications sur des questions existantes
-- L'application:
+- L'application :
     - Remonter les bugs
     - Faire des propositions d'améliorations (grâce aux Issues Github)
     - Aider à développer l'application (grâce aux Issues et Pull Requests Github)
 
 ### Rajouter ou modifier des questions
 
-Toutes les questions (finalisées ou en cours de création) sont actuellement dans un fichier partagé (type Google Sheet), que l'on synchronise régulièrement avec la base de donnée.
+Toutes les questions (finalisées ou en cours de création) sont actuellement dans un espace partagé (Notion.so), que l'on synchronise régulièrement avec la base de donnée.
 
-Un export de toutes les questions de la base de donnée de l'application peuvent être vues dans le fichier `data/questions.yaml` (Rappel: ce n'est pas la source de la base de donnée, seulement un export).
+Un export de toute la base de donnée de l'application peut être vu dans le dossier `/data` (Rappel : ce n'est pas la source de la base de donnée, seulement un export).
 
 Vous pouvez proposer de nouvelles questions via la page [Contribuer](https://quizanthropocene.fr/contribuer) de l'application.
 
-La validation des questions se fait ensuite dans le fichier partagé.
+La validation des questions se fait ensuite dans l'espace partagé.
 
 ### Proposer des améliorations de l'application
 
 Vous avez vu un bug ? Vous trouvez l'app contre-intuitive, ou simplement avez une idée pour rendre le design plus beau/propre ?
 
-Il y a deux options pour remonter ces informations:
+Il y a deux options pour remonter ces informations :
 - via la page [Contribuer](https://quizanthropocene.fr/contribuer) de l'application
 - ou créer une Issue dans l'interface Github du projet ([ici](https://github.com/raphodn/know-your-planet/issues))
 
@@ -65,7 +67,7 @@ _La stack technique est détaillée un peu plus bas._
 
 Relecture de code, documentation, rajouter des tests, design, ajouter une fonctionnalité, etc
 
-Si vous souhaitez ajouter une fonctionnalité:
+Si vous souhaitez ajouter une fonctionnalité :
 - commentez l'Issue en question pour donner votre point de vue (ou créez l'Issue si elle n'existe pas encore), et on discutera ensemble de la meilleur façon de procéder
 - créez ensuite une PR et demandez une review (relecture)
 
@@ -75,12 +77,15 @@ Si vous souhaitez ajouter une fonctionnalité:
 
 #### Backend
 
-- Un Backend en Python Django:
+- Un Backend en Python Django :
   - API avec Django Rest Framework
   - console Admin
 - Une base de donnée PostgreSQL
 
-Le Backend sert pour valider la donnée, ainsi que d'endpoint pour les stats.
+Le Backend sert à :
+- valider la donnée provenant de l'espace partagé
+- de créer les quiz
+- d'endpoint pour les stats
 
 #### Frontend
 
@@ -207,7 +212,7 @@ yarn lint
 
 Rappel : pour le backend, toutes les commandes doivent commencer par `pipenv run`
 
-#### Backend
+#### Commandes Backend
 
 Importer toute la donnée dans la base de donnée
 ```
@@ -267,7 +272,7 @@ pip install pygraphviz
 python manage.py graph_models -a -X ContentType,LogEntry,AbstractUser,User,AbstractBaseSession,Session,Group,Permission -o graph.png
 ```
 
-#### Frontend
+#### Commandes Frontend
 
 Lancer le Frontend "en mode production"
 ```
@@ -287,7 +292,7 @@ yarn upgrade
 yarn upgrade-interactive
 ```
 
-#### Autres
+#### Commandes Autres
 
 Mettre à jour l'instance Metabase sur Heroku
 - https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-heroku.html

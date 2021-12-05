@@ -21,6 +21,7 @@ Des pistes dans [README.md#idées](README.md#idées)
 - [Frontend] Mettre d'avantage de quizs en avant sur la home page
 - [Frontend] Page dédié à l'atelier
 - [Frontend] Améliorer l'expérience utilisateur (scroll, d'avantage de contenu sur la page...)
+- [Frontend] Ajouter la license `by-nc-sa` dans le footer
 
 ## [1.2.0] - 2020-12-13
 
