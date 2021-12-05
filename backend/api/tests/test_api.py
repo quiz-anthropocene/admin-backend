@@ -270,21 +270,23 @@ class ApiTest(TestCase):
     def test_quiz_answer_event(self):
         response = self.client.post(
             reverse("stats:quiz_detail_answer_event", args=[self.quiz_2.id]),
-            data={"quiz": self.quiz_2.id, "answer_success_count": 1, "duration_seconds": 4},
+            data={"quiz": self.quiz_2.id, "answer_success_count": 1, "duration_seconds": 40},
         )
         self.assertEqual(response.status_code, 201)
         self.assertIsInstance(response.data, dict)
         self.assertEqual(response.data["answer_success_count"], 1)
         self.assertEqual(self.quiz_2.stats.count(), 1)
         self.assertEqual(self.quiz_2.answer_count_agg, 1)
-        self.assertEqual(self.quiz_2.duration_average, 4)
+        self.assertEqual(self.quiz_2.duration_average_seconds, 40)
+        self.assertEqual(self.quiz_2.duration_average_minutes_string, "0min40")
 
         response = self.client.post(
             reverse("stats:quiz_detail_answer_event", args=[self.quiz_2.id]),
-            data={"question": self.quiz_2.id, "answer_success_count": 2, "duration_seconds": 8},
+            data={"question": self.quiz_2.id, "answer_success_count": 2, "duration_seconds": 80},
         )
         self.assertEqual(response.status_code, 201)
         self.assertIsInstance(response.data, dict)
         self.assertEqual(response.data["answer_success_count"], 2)
         self.assertEqual(self.quiz_2.stats.count(), 2)
-        self.assertEqual(self.quiz_2.duration_average, 6)
+        self.assertEqual(self.quiz_2.duration_average_seconds, 60)
+        self.assertEqual(self.quiz_2.duration_average_minutes_string, "1min00")
