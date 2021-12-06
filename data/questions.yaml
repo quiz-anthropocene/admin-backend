@@ -30203,7 +30203,7 @@
   tags:
   - 37
 - id: 844
-  text: Quelle est la proportion d'eau douce (potable) sur Terre ?
+  text: Quelle proportion de l'eau sur terre est de l'eau douce sur ?
   hint: ''
   type: QCM
   category: 7
@@ -30227,8 +30227,12 @@
   answer_scientific_url: https://www.cieau.com/connaitre-leau/leau-dans-la-nature/eau-douce-tout-savoir/
   answer_reading_recommendation: ''
   answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/c/d/7/cd780c64f7_113142_volume-eau-terre-01.jpg
-  answer_image_explanation: 'Grosse goutte d''eau : quantité d''eau douce ; petite
-    goutte : quantité d''eau potable sur terre'
+  answer_image_explanation: La plus grande sphère, de 1.400 km de diamètre, concentre
+    toute l’eau terrestre (salée et douce). La petite sphère (273 km de diamètre)
+    à droite représente le volume total d’eau douce. Et enfin, la plus petite sphère
+    (56 km de diamètre), concentre toute l’eau douce terrestre disponible pour la
+    consommation (lac, rivière, une partie des nappes phréatiques). © Howard Perlman,
+    USGS, Jack Cook, Woods Hole Oceanographic Institution, Adam Nieman
   answer_extra_info: ''
   author: Jean-Christophe Anna
   validator: ''
@@ -31046,7 +31050,7 @@
   answer_extra_info: ''
   author: Jean-Christophe Anna
   validator: ''
-  validation_status: A valider
+  validation_status: Brouillon
   added: 2021-02-21
   created: 2021-02-22
   updated: 2021-02-22
@@ -31084,12 +31088,12 @@
   answer_accessible_url: ''
   answer_scientific_url: https://www.iea.org/reports/world-energy-outlook-2017
   answer_reading_recommendation: ''
-  answer_image_url: https://lh3.googleusercontent.com/proxy/37oe3MCubE9sbwqOJv0DPCm0-yAAfozub5sKonzLeKEXyTjkVhzoziMcA25pVn-sDoDB3c_NTYaXKojxEt06jDfKAv7dXkWW3QsT2b9LLa28tGx0M10bZxllhJip
+  answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
   validator: ''
-  validation_status: A valider
+  validation_status: Brouillon
   added: 2021-02-21
   created: 2021-02-22
   updated: 2021-02-22
@@ -31116,10 +31120,10 @@
     du GIEC, on parle de 5°C en 250 ans (1850-2100, soit 2°C par siècle.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.futura-sciences.com/planete/actualites/climatologie-temperature-faisait-il-terre-durant-derniere-periode-glaciaire-82668/
+  answer_scientific_url: https://www.nature.com/articles/s41586-020-2617-x
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/867.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
