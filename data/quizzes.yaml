@@ -990,15 +990,15 @@
   slug: archipel-du-vivant
   introduction: <p>To do</p>
   conclusion: <p>To do</p>
-  difficulty_average: 0.0
+  difficulty_average: 2.6
   language: Français
   author: Jean-Christophe Anna
-  image_background_url: ''
+  image_background_url: https://archipelduvivant.org/wp-content/uploads/2020/07/132-133-2.jpg
   has_audio: false
   publish: false
   spotlight: false
   created: 2021-12-05
-  updated: 2021-12-05
+  updated: 2021-12-06
   tags:
   - 14
   - 17
