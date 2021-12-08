@@ -22771,8 +22771,8 @@
   - 100
 - id: 649
   text: Les vertébrés regroupent les poissons, oiseaux, mammifères terrestres et marins,
-    amphibiens et reptiles. Quelle proportion des vertébrés sauvage a disparu en 45
-    ans ?
+    amphibiens et reptiles. Quelle proportion des vertébrés sauvages a disparu en
+    45 ans ?
   hint: ''
   type: QCM
   category: 4
@@ -22788,19 +22788,19 @@
     en 2020 par le WWF sur la période 1970-2016, au niveau mondial. Dont 8% pour la
     seule période 2014-2016, soit une accélération aussi spectaculaire qu'inquiétante
     du déclin. Ce chiffre monte jusqu’à 94% dans la zone Amérique latine-Amérique
-    Centrale-Caraïbes. Le rythme est 100 à 1,000 fois plus rapide que la vitesse naturelle
+    Centrale-Caraïbes. Le rythme est 100 à 1000 fois plus rapide que la vitesse naturelle
     d'extinction.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.nationalgeographic.fr/environnement/2020/09/biodiversite-68-des-populations-de-vertebres-ont-disparu-en-moins-de-50-ans
+  answer_scientific_url: https://www.wwf.fr/sites/default/files/doc-2020-09/20200910_Synthese_Rapport-Planete-Vivante-2020_WWF-min.pdf
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://static.nationalgeographic.fr/files/styles/image_3200/public/david-doubilet-photographic-retrospective-05-turtle.adapt_.1190.1.webp?w=1450&h=816
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-02-21
   created: 2021-02-22
   updated: 2021-02-22
@@ -30741,7 +30741,7 @@
   created: 2021-02-14
   updated: 2021-02-14
   tags:
-  - 233
+  - 235
 - id: 858
   text: Quelle est la part moyenne des métaux (tels que cadmium, cobalt, étain, plomb)
     qui finissent en usage dispersif (micro- ou nanoparticules) ?

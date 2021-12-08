@@ -997,9 +997,12 @@
     ? Vous connaissez tout sur les risques d'effondrement du vivant ? Vous n’avez
     plus rien à apprendre sur le réchauffement climatique ? Alors passez votre chemin
     ! Ou alors, essayez voir...</p>
-  conclusion: <p>Merci de vous être frotté à ces questions dérangeantes. Nous espérons
-    que ce test vous a permis d'enrichir vos connaissances. S'il vous a plu, partagez-le
-    !</p>
+  conclusion: "<p>Merci de vous être frotté à ces questions dérangeantes. Nous espérons\
+    \ que ce test vous a permis d'enrichir vos connaissances. S'il vous a plu, partagez-le\
+    \ !</p>\r\n\r\n<p><br />\r\nLe dernier ouvrage de Jean-Christophe Anna : <a href=\"\
+    https://archipelduvivant.org/nos-livres/ecrivons-ensemble-un-nouveau-recit-pour-sauver-la-vie/?fbclid=IwAR04Qs8pltv81NI_Qv55P2j6A8SIPa885lhXLjEyurvF85xWoZll3BmQAEQ\"\
+    >Écrivons ensemble un nouveau récit pour sauver la vie</a>.</p>\r\n\r\n<p> </p>\r\
+    \n\r\n<p> </p>"
   difficulty_average: 2.6
   language: Français
   author: Jean-Christophe Anna
