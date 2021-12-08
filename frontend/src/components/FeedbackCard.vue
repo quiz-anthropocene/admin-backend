@@ -25,7 +25,7 @@
 
     <!-- Contribution form -->
     <template v-if="showContributionForm">
-      <hr class="custom-separator" />
+      <hr />
       <form @submit.prevent="submitContribution" v-if="!contributionSubmitted">
         <h3 class="margin-bottom-0">
           <label for="contribution_text">{{ $t('feedback.yourSuggestion') }} <span class="color-red">*</span></label>
