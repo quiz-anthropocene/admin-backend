@@ -988,8 +988,18 @@
 - id: 77
   name: Archipel du Vivant
   slug: archipel-du-vivant
-  introduction: <p>To do</p>
-  conclusion: <p>To do</p>
+  introduction: <p><a href="https://archipelduvivant.org/">L'Archipel du Vivant </a>,
+    c'est un collectif qui vise à développer la résilience locale et faciliter la
+    coopération entre les initiatives alternatives existantes afin de faire émerger
+    une nouvelle société qui prend soin du vivant, sans rapport de domination et réellement
+    démocratique. Son fondateur Jean-Christophe Anna nous propose ce quiz pour évaluer
+    votre «culture écologique vitale». Vous êtes incollable en matière écologique
+    ? Vous connaissez tout sur les risques d'effondrement du vivant ? Vous n’avez
+    plus rien à apprendre sur le réchauffement climatique ? Alors passez votre chemin
+    ! Ou alors, essayez voir...</p>
+  conclusion: <p>Merci de vous être frotté à ces questions dérangeantes. Nous espérons
+    que ce test vous a permis d'enrichir vos connaissances. S'il vous a plu, partagez-le
+    !</p>
   difficulty_average: 2.6
   language: Français
   author: Jean-Christophe Anna
@@ -998,7 +1008,7 @@
   publish: false
   spotlight: false
   created: 2021-12-05
-  updated: 2021-12-06
+  updated: 2021-12-08
   tags:
   - 14
   - 17
