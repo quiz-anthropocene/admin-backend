@@ -31285,17 +31285,17 @@
   - 197
   - 216
 - id: 872
-  text: De combien réduit-on l'impact environnemental de son achat (carbone, matériaux
-    ...) en achetant un smartphone reconditionné plutôt que d'un neuf ?
+  text: Réduit-on l'impact environnemental de son achat (carbone, matériaux ...) en
+    achetant un smartphone reconditionné plutôt qu'un neuf ?
   hint: ''
   type: QCM
   category: 2
   difficulty: 1
   language: Français
-  answer_option_a: 1%
-  answer_option_b: 10%
-  answer_option_c: 50%
-  answer_option_d: 90%
+  answer_option_a: non, c'est du même ordre
+  answer_option_b: oui, de 10%
+  answer_option_c: oui, de 50%
+  answer_option_d: oui, de 90%
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: 'L’impact d’un smartphone reconditionné est équivalent à 10
@@ -34182,7 +34182,7 @@
   - 17
   - 72
 - id: 967
-  text: 'Faire un vol aller/retour Paris - New-York, c''est l''équivalent en empreinte
+  text: 'Faire un aller/retour Paris - New-York, c''est l''équivalent en empreinte
     carbone : '
   hint: ''
   type: QCM-RM
@@ -34197,11 +34197,10 @@
     électronique...) pendant un an
   answer_correct: abcd
   has_ordered_answers: false
-  answer_explanation: Les 4 réponses sont correctes. Un vol Paris / New-York pour
-    1 passager émet 900 kgCO2e pour la production, l'approvisionnement et la combustion
-    du kérosène et les avions génèrent des effets supplémentaires qui impactent le
-    climat. Il faudrait multiplier les émissions de CO2 par 3 pour tenir compte de
-    ces effets. L'Ademe utilise un facteur 2, soit 1,8 tonnes de CO2 équivalent.
+  answer_explanation: Les 4 réponses sont correctes. Un aller-retour Paris / New-York
+    (environ 12 000km) pour un passager émet 1,800 kgCO2e pour la production, l'approvisionnement
+    et la combustion du kérosène et les avions génèrent des effets supplémentaires
+    qui impactent le climat.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -34287,7 +34286,8 @@
     : pompe à chaleur, chauffage bois performant, etc. L''isolation est donc un levier
     énorme pour réduire l''impact en émissions de GES du bâtiment tout en améliorant
     le confort des occupants en hiver et en été et en réduisant le budget alloué au
-    chauffage. '
+    chauffage. Il y a un facteur 10 entre les émissions d''un logement classé A et
+    un logement classé E.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
