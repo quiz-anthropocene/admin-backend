@@ -1008,10 +1008,10 @@
   author: Jean-Christophe Anna
   image_background_url: https://archipelduvivant.org/wp-content/uploads/2020/07/132-133-2.jpg
   has_audio: false
-  publish: false
-  spotlight: false
+  publish: true
+  spotlight: true
   created: 2021-12-05
-  updated: 2021-12-08
+  updated: 2021-12-09
   tags:
   - 14
   - 17
