@@ -31171,7 +31171,7 @@
   tags:
   - 51
 - id: 869
-  text: Lequel de ces puits absorbe le plus de carbone ?
+  text: Qu'est-ce qui absorbe le plus de carbone ?
   hint: ''
   type: QCM
   category: 1
@@ -31180,19 +31180,18 @@
   answer_option_a: Les forêts (arbres)
   answer_option_b: Les sols (humus)
   answer_option_c: Les tourbières (toundra)
-  answer_option_d: Le phytoplancton
+  answer_option_d: Les baleines
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: Ce qui amène à évoquer le rôle essentiel des baleines, essentielles
-    à la survie du phytoplancton tout comme à la captation du CO2. D’une part, leurs
-    excréments, riches en fer et en azote, font partie de l’alimentation du plancton
-    végétal. D'autre part, elles se nourrissent de ce plancton et capturent ainsi
-    énormément de CO2. Cela fait d’elles d’extraordinaires puits de carbone indirects.
-    Quand une baleine meurt et sombre au fond de l’océan, elle piège 33 tonnes de
-    CO2 en moyenne, supprimant ce carbone de l’atmosphère pendant des siècles. A titre
-    de comparaison, un arbre n’absorbe que jusqu’à 48 kilos de CO2 par an. Sauver
-    une baleine est aujourd’hui beaucoup plus efficace pour le climat que de planter
-    un arbre.
+  answer_explanation: Les baleines sont  essentielles à la survie du phytoplancton
+    tout comme à la captation du CO2. D’une part, leurs excréments, riches en fer
+    et en azote, font partie de l’alimentation du phytoplancton. D'autre part, elles
+    se nourrissent de ce plancton et capturent ainsi énormément de CO2. Cela fait
+    d’elles d’extraordinaires puits de carbone. Quand une baleine meurt et sombre
+    au fond de l’océan, elle piège 33 tonnes de CO2 en moyenne, supprimant ce carbone
+    de l’atmosphère pendant des siècles. A titre de comparaison, un arbre n’absorbe
+    que jusqu’à 48 kilos de CO2 par an. Sauver une baleine est aujourd’hui beaucoup
+    plus efficace pour le climat que de planter un arbre.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://mrmondialisation.org/le-vrai-poumon-du-monde-est-oceanique-et-il-brule-sans-faire-de-vague/
