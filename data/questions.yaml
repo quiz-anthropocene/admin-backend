@@ -22799,7 +22799,7 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
-  validator: ''
+  validator: Guillaume Mandil
   validation_status: A valider
   added: 2021-02-21
   created: 2021-02-22
@@ -26482,8 +26482,8 @@
   created: 2021-01-06
   updated: 2021-01-06
   tags:
+  - 43
   - 72
-  - 249
 - id: 742
   text: Quelles seraient les économies en matériaux si on décidait d'uniformiser la
     couleur des contenants en verre ?
@@ -28245,8 +28245,8 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
-  validator: ''
-  validation_status: A valider
+  validator: Guillaume Mandil
+  validation_status: Validée
   added: 2021-02-21
   created: 2021-02-26
   updated: 2021-02-26
@@ -28283,8 +28283,8 @@
   answer_image_explanation: Banc de phytoplancton du ciel
   answer_extra_info: ''
   author: Jean-Christophe Anna
-  validator: ''
-  validation_status: A valider
+  validator: Guillaume Mandil
+  validation_status: Validée
   added: 2021-02-21
   created: 2021-02-26
   updated: 2021-02-26
@@ -30235,8 +30235,8 @@
     USGS, Jack Cook, Woods Hole Oceanographic Institution, Adam Nieman
   answer_extra_info: ''
   author: Jean-Christophe Anna
-  validator: ''
-  validation_status: A valider
+  validator: Guillaume Mandil
+  validation_status: Validée
   added: 2021-02-21
   created: 2021-02-22
   updated: 2021-02-22
@@ -31049,8 +31049,8 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
-  validator: ''
-  validation_status: Brouillon
+  validator: Guillaume Mandil
+  validation_status: Validée
   added: 2021-02-21
   created: 2021-02-22
   updated: 2021-02-22
@@ -31092,8 +31092,8 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
-  validator: ''
-  validation_status: Brouillon
+  validator: Guillaume Mandil
+  validation_status: Validée
   added: 2021-02-21
   created: 2021-02-22
   updated: 2021-02-22
@@ -31116,8 +31116,10 @@
   answer_explanation: ' La dernière fois que la Terre a connu un tel réchauffement,
     lors de la sortie de la période glaciaire (entre il y a 21 000 et il y a 11 000
     ans), la vie a eu le temps de s’adapter puisque cela s’est produit sur... 10 000
-    ans, soit une augmentation moyenne 0,05°C par siècle. Selon certains scenarios
-    du GIEC, on parle de 5°C en 250 ans (1850-2100, soit 2°C par siècle.'
+    ans, soit une augmentation moyenne 0,05°C par siècle. L''augmentation de la température
+    moyenne depuis le début de l''ère industrielle est déjà de 1,2°C, et selon certains
+    scenarios du GIEC, on parle de 5°C d''ici 2100 . Soit 2°C par siècle, 40 fois
+    plus rapide.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.futura-sciences.com/planete/actualites/climatologie-temperature-faisait-il-terre-durant-derniere-periode-glaciaire-82668/
@@ -31127,31 +31129,31 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
-  validator: ''
-  validation_status: Brouillon
+  validator: Guillaume Mandil
+  validation_status: Validée
   added: 2021-02-21
   created: 2021-02-22
   updated: 2021-02-22
   tags: []
 - id: 868
-  text: Quel est l'impact prévu sur les rendements agricoles d'un degré supplémentaire
-    sur la température mondiale ?
+  text: Quel est l'impact prévu sur les rendements agricoles d'une augmentation d'un
+    degré supplémentaire sur la température mondiale ?
   hint: ''
   type: QCM
   category: 1
   difficulty: 3
   language: Français
-  answer_option_a: -5%
+  answer_option_a: +5%
   answer_option_b: -10%
-  answer_option_c: -15%
-  answer_option_d: -20%
+  answer_option_c: -20%
+  answer_option_d: -30%
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Une hausse d’1°C de la température moyenne correspond à une
-    perte de 10% des rendements agricoles, une augmentation de 20% des départs de
-    feux (domino biologique) et une augmentation de 20 à 40% des risques d’affrontements
-    armés (domino politique et domino social) et de mouvements migratoires qui se
-    compteront en centaines de millions d’humains.
+  answer_explanation: Il est attendu qu'une hausse d’1°C de la température moyenne
+    générera une perte de 10% des rendements agricoles. Mais aussi une augmentation
+    de 20% des départs de feux (domino biologique) et une augmentation de 20 à 40%
+    des risques d’affrontements armés (domino politique et social), et des mouvements
+    migratoires qui se compteront en centaines de millions d’humains.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.europeanscientist.com/fr/agriculture-fr/rechauffement-climatique-et-rendement-agricole/
@@ -31161,8 +31163,8 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
-  validator: ''
-  validation_status: A valider
+  validator: Guillaume Mandil
+  validation_status: Validée
   added: 2021-02-21
   created: 2021-02-22
   updated: 2021-02-22
@@ -31178,18 +31180,19 @@
   answer_option_a: Les forêts (arbres)
   answer_option_b: Les sols (humus)
   answer_option_c: Les tourbières (toundra)
-  answer_option_d: Les baleines
+  answer_option_d: Le phytoplancton
   answer_correct: d
   has_ordered_answers: false
-  answer_explanation: Les baleines sont essentielles à la survie du phytoplancton
-    tout comme à la captation du CO2. D’une part, leurs excréments, riches en fer
-    et en azote, font partie de l’alimentation du plancton végétal. D'autre part,
-    elles se nourrissent de ce plancton et capturent ainsi énormément de CO2. Cela
-    fait d’elles d’extraordinaires puits de carbone. Quand une baleine meurt et sombre
-    au fond de l’océan, elle piège 33 tonnes de CO2 en moyenne, supprimant ce carbone
-    de l’atmosphère pendant des siècles. A titre de comparaison, un arbre n’absorbe
-    que jusqu’à 48 kilos de CO2 par an. Sauver une baleine est aujourd’hui beaucoup
-    plus efficace pour le climat que de planter un arbre.
+  answer_explanation: Ce qui amène à évoquer le rôle essentiel des baleines, essentielles
+    à la survie du phytoplancton tout comme à la captation du CO2. D’une part, leurs
+    excréments, riches en fer et en azote, font partie de l’alimentation du plancton
+    végétal. D'autre part, elles se nourrissent de ce plancton et capturent ainsi
+    énormément de CO2. Cela fait d’elles d’extraordinaires puits de carbone indirects.
+    Quand une baleine meurt et sombre au fond de l’océan, elle piège 33 tonnes de
+    CO2 en moyenne, supprimant ce carbone de l’atmosphère pendant des siècles. A titre
+    de comparaison, un arbre n’absorbe que jusqu’à 48 kilos de CO2 par an. Sauver
+    une baleine est aujourd’hui beaucoup plus efficace pour le climat que de planter
+    un arbre.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://mrmondialisation.org/le-vrai-poumon-du-monde-est-oceanique-et-il-brule-sans-faire-de-vague/
@@ -31199,8 +31202,8 @@
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
-  validator: ''
-  validation_status: A valider
+  validator: Guillaume Mandil
+  validation_status: Validée
   added: 2021-02-21
   created: 2021-02-23
   updated: 2021-02-23
