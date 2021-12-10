@@ -901,12 +901,11 @@
   has_ordered_answers: true
   answer_explanation: D'après une étude de 2015, un tiers des réserves de pétrole,
     la moitié de celles de gaz et plus de 80 % de celles de charbon devront rester
-    inexploitées, si l'on veut éviter la surchauffe de la planète. Pour conserver
-    au moins une chance sur deux de contenir la hausse des températures à la fin du
-    siècle sous la barre de 2°C par rapport à la période préindustrielle, le GIEC
-    estime que les émissions mondiales de CO2 ne devront pas dépasser, entre 2011
-    et 2050, une fourchette allant de 860 à 1 180 milliards de tonnes, ou gigatonnes
-    (Gt).
+    inexploitées si l'on veut éviter la surchauffe de la planète. Pour conserver au
+    moins une chance sur deux de contenir la hausse des températures à la fin du siècle
+    sous la barre de 2°C par rapport à la période préindustrielle, le GIEC estime
+    que les émissions mondiales de CO2 ne devront pas dépasser, entre 2011 et 2050,
+    une fourchette allant de 860 à 1 180 milliards de tonnes, ou gigatonnes (Gt).
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2015/01/07/pour-limiter-le-rechauffement-a-2-c-combien-de-petrole-gaz-et-charbon-en-moins_4550929_3244.html
@@ -2333,7 +2332,6 @@
   created: 2020-03-10
   updated: 2020-09-28
   tags:
-  - 2
   - 27
 - id: 65
   text: Le phosphore, une ressource non-renouvelable, est essentiel pour l'agriculture.
@@ -2568,7 +2566,7 @@
   language: Français
   answer_option_a: 2 tonnes
   answer_option_b: 5 tonnes
-  answer_option_c: 11 tonnes
+  answer_option_c: 9 tonnes
   answer_option_d: 18 tonnes
   answer_correct: c
   has_ordered_answers: true
@@ -4914,7 +4912,7 @@
   - 33
   - 42
 - id: 137
-  text: Les gaz à effet de serre réchauffent la planète en créant un surplus énergétique.
+  text: Les gaz à effet de serre réchauffent la planète en capturant de l'énergie.
     Quelle part de cette énergie est absorbée par l'atmosphère ?
   hint: ''
   type: QCM
@@ -4928,7 +4926,7 @@
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: Cela tient à la la faible capacité calorifique de l'air. Et
-    heureusement, sinon nous serions tous morts depuis longtemps ! 93% de cette énergie
+    heureusement, sinon nous serions tous morts depuis longtemps ! 91% de cette énergie
     est absorbée par les océans.
   answer_audio: ''
   answer_video: ''
@@ -4936,7 +4934,8 @@
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter03_FINAL.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/035.png
-  answer_image_explanation: ''
+  answer_image_explanation: 'Où va cette énergie : eaux superficielles, eaux profondes,
+    fonte de la glace, sols, air, incertitude'
   answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
@@ -18584,7 +18583,6 @@
   created: 2020-06-24
   updated: 2020-07-23
   tags:
-  - 2
   - 31
   - 72
 - id: 532
@@ -25546,17 +25544,17 @@
   has_ordered_answers: true
   answer_explanation: "Eh oui ! Une seule de ces quatre options vous fait atteindre\
     \ votre budget carbone. 2 tonnes, c'est encore l'empreinte moyenne d'un Français...en\
-    \ 1881 ! \nL'empreinte moyenne d'un Français est estimée autour de 10t, dont la\
-    \ moitié sont des émissions importées. Sachant que l'impact carbone des seuls\
-    \ services publics est estimé à 1,5t par habitant, cela donne une idée de la hauteur\
-    \ de la marche à descendre..."
+    \ 1881 ! \nL'empreinte moyenne d'un Français est désormais estimée autour de 9t,\
+    \ dont la moitié sont des émissions importées. Sachant que l'impact carbone des\
+    \ seuls services publics est estimé à 1,5t par habitant, cela donne une idée de\
+    \ la hauteur de la marche à descendre..."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.liberation.fr/checknews/2019/02/13/est-ce-qu-un-aller-retour-en-avion-a-bali-emet-autant-de-co2-qu-une-annee-de-vie-en-france_1708854
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: http://ravijen.fr/wp-content/uploads/2018/11/empreinte_FR_2016_graphe.jpg
-  answer_image_explanation: ''
+  answer_image_explanation: Total revu à 9t depuis que ce graphique a été publié
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Matthieu Massart
@@ -31323,8 +31321,8 @@
   - 30
   - 36
 - id: 873
-  text: Combien de figurines Playmobil® a-t-on produits depuis leur mise sur le marché
-    en 1974 ?
+  text: Combien de figurines Playmobil® a-t-on produites depuis leur arrivée sur le
+    marché en 1974 ?
   hint: ''
   type: QCM
   category: 2
@@ -31341,8 +31339,9 @@
     conservés ! Mais bien sûr, une bonne partie a déjà été jetée et broyée, ou oubliée
     dans les tiroirs...
 
-    Cela illustre que nos sociétés ont déjà produit beaucoup de choses, qu''il s''agirait
-    de mieux redistribuer et qui viennent questionner les logiques productivistes.'
+    Ce chiffre illustre le fait que nos sociétés ont déjà produit beaucoup de choses,
+    qu''il s''agirait de mieux redistribuer et qui viennent questionner les logiques
+    productivistes.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lapresse.ca/affaires/economie/commerce-de-detail/201312/06/01-4718237-playmobil-limagination-au-pouvoir-depuis-40-ans.php
@@ -32985,7 +32984,7 @@
   answer_extra_info: ''
   author: JBD
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-02-19
   created: 2021-02-21
   updated: 2021-02-21
@@ -32994,7 +32993,7 @@
   - 98
 - id: 935
   text: Quelle est l'empreinte carbone par personne des 1% les plus riches en France
-    et en Europe
+    ?
   hint: ''
   type: QCM
   category: 1
@@ -34069,8 +34068,8 @@
   updated: 2021-05-03
   tags: []
 - id: 964
-  text: Pour pêcher une crevette, combien de prise accessoires (autres animaux marins
-    qui sont tués et rejetés par dessus bord) ?
+  text: 'Une prise accessoire, c''est un animal marins non qui est tué et rejeté par
+    dessus bord. Pour une crevette pêchée, combien de prises accessoires ? '
   hint: ''
   type: QCM
   category: 4

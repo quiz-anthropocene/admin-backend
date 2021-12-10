@@ -691,9 +691,9 @@
   image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
   has_audio: false
   publish: true
-  spotlight: true
+  spotlight: false
   created: 2021-03-11
-  updated: 2021-10-24
+  updated: 2021-12-09
   tags:
   - 11
 - id: 66

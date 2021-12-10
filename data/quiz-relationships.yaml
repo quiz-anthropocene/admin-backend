@@ -73,3 +73,8 @@
   to_quiz: 17
   status: similaire
   created: 2021-12-09
+- id: 17
+  from_quiz: 65
+  to_quiz: 75
+  status: similaire
+  created: 2021-12-09
