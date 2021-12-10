@@ -135,7 +135,7 @@ export default {
   name: 'QuizDetailPage',
   metaInfo() {
     // const url = `/quiz/${this.$route.params.quizId}`;
-    const title = this.quiz && this.quiz.name ? `Quiz #${this.$route.params.quizId} - ${this.quiz.name}` : `Quiz #${this.$route.params.quizId}`;
+    const title = this.quiz && this.quiz.name ? `Quiz ${this.quiz.name}` : `Quiz #${this.$route.params.quizId}`;
     const description = this.quiz && this.quiz.introduction ? this.quiz.introduction : '';
     const imageUrl = this.quiz && this.quiz.image_background_url ? this.quiz.image_background_url : 'https://quizanthropocene.fr/showyourstripes_globe_1850-2019.png';
     return {
