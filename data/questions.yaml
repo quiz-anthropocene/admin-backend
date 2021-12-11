@@ -22776,10 +22776,10 @@
   category: 4
   difficulty: 2
   language: Français
-  answer_option_a: 48%
-  answer_option_b: 58%
+  answer_option_a: 28%
+  answer_option_b: 48%
   answer_option_c: 68%
-  answer_option_d: 78%
+  answer_option_d: 88%
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: C'est le chiffre qui ressort du rapport Planète Vivante publié
@@ -26889,9 +26889,8 @@
   - 217
   - 224
 - id: 752
-  text: 'Classons la population mondiale selon leur niveau d''émission de gaz à effet
-    de serre par l''avion. Quel pourcentage de la population est responsable de la
-    moitié de ces émissions ? '
+  text: 'Quel pourcentage de la population mondiale est responsable de la moitié des
+    émissions des avions? '
   hint: ''
   type: QCM
   category: 2
@@ -28232,8 +28231,8 @@
     production d''oxygène atmosphérique dès le début du Précambrien, il y a plusieurs
     milliards d’années. C’est cette activité qui aurait permis la diversification
     évolutive du biote tel qu’on le connaît aujourd’hui. Les périodes de baisse de
-    productivité ou de disparition du phytoplancton auraient également gravement affecté
-    la vie sur Terre.'
+    productivité ou de disparition du phytoplancton auraient également profondément
+    affecté la vie sur Terre.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://wwz.ifremer.fr/L-ocean-pour-tous/Nos-ressources-pedagogiques/Comprendre-les-oceans/Ocean-et-climat/Production-primaire-du-phytoplancton-vers-une-diminution-globale
@@ -28267,10 +28266,9 @@
   answer_explanation: 'Cette diminution est notamment le fait de la surpêche, de l’acidification
     des océans et du réchauffement climatique.
 
-    « Plus de baleines = plus de phytoplancton. Plus de phytoplancton = plus de zooplancton.
-    Plus de zooplancton = plus de poissons. Plus de gens = moins de vie dans l’océan
-    » Paul Watson – Urgence ! Si l’océan meurt, nous mourrons – Éditions Glénat, Avril
-    2016'
+    Comme le dit Paul Watson, activiste des mers fondateur de l''ONG Sea Shepherd
+    : « Plus de baleines = plus de phytoplancton. Plus de phytoplancton = plus de
+    zooplancton. Plus de zooplancton = plus de poissons. » '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.futura-sciences.com/planete/actualites/oceanographie-ocean-phytoplancton-subit-declin-inquietant-depuis-150-ans-24616/
@@ -31055,8 +31053,8 @@
   tags:
   - 37
 - id: 866
-  text: Quelle est la part des énergies renouvelables (hors barrages) dans le mix
-    énergétique mondial ?
+  text: Quelle est la part des énergies renouvelables (hors hydroélectricité) dans
+    le mix énergétique mondial ?
   hint: ''
   type: QCM
   category: 5
@@ -31076,7 +31074,7 @@
     \ fournissent toujours l’essentiel de la consommation d’énergie de l’humanité\
     \ : 82%, dont 32% pour le pétrole, 28% pour le charbon et 22% pour le gaz naturel.\
     \ Le nucléaire représente 5%, l’hydroélectricité 2%, les biocarburants et les\
-    \ déchets 10%. Les énergies renouvelables intermittentes - lolaire et éolien principalement\
+    \ déchets 10%. Les énergies renouvelables intermittentes - solaire et éolien principalement\
     \ - ne couvrent que 1% de la consommation mondiale. Ainsi, malgré leur développement\
     \ rapide, leur proportion dans le mix énergétique n’évolue pas car, dans le même\
     \ temps, les énergies fossiles continuent d’être utilisées toujours en plus grande\
@@ -31123,7 +31121,7 @@
   answer_accessible_url: https://www.futura-sciences.com/planete/actualites/climatologie-temperature-faisait-il-terre-durant-derniere-periode-glaciaire-82668/
   answer_scientific_url: https://www.nature.com/articles/s41586-020-2617-x
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/867.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/867.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Jean-Christophe Anna
@@ -34068,19 +34066,19 @@
   updated: 2021-05-03
   tags: []
 - id: 964
-  text: 'Une prise accessoire, c''est un animal marins non qui est tué et rejeté par
-    dessus bord. Pour une crevette pêchée, combien de prises accessoires ? '
+  text: 'Une prise accessoire, c''est un animal marin qui est tué et rejeté par dessus
+    bord. Pour une crevette pêchée, combien de prises accessoires ? '
   hint: ''
   type: QCM
   category: 4
   difficulty: 3
   language: Français
   answer_option_a: non significatif
-  answer_option_b: 1 crevette pêchée, 2 individus  "autre" rejetés
-  answer_option_c: 1 crevette pêchée, 5 individus  "autre" rejetés
-  answer_option_d: 1 crevette pêchée, 50 individus  "autre" rejetés
+  answer_option_b: 2 prises rejetées
+  answer_option_c: 5 prises rejetées
+  answer_option_d: 50 prises rejetées
   answer_correct: c
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: ''
   answer_audio: ''
   answer_video: ''
