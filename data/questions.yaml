@@ -18,7 +18,7 @@
   answer_accessible_url: https://www.planetoscope.com/agriculture-alimentation/1556-le-gaspillage-alimentaire-dans-le-monde.html
   answer_scientific_url: http://www.fao.org/food-loss-and-food-waste/fr/
   answer_reading_recommendation: ''
-  answer_image_url: https://s.brsimg.com/static-000/cache/i/content/images/0/b/c/0bc2de11c601b97c235f4177a59fadbd-755x1024.jpg
+  answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/6/4/7/6472109f5f_129947_sources-du-gaspillage-alimentaire.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -1859,8 +1859,8 @@
   tags:
   - 17
 - id: 51
-  text: En 24 heures, combien de terres cultivables ou labourables disparaissent dans
-    le monde ?
+  text: En 24 heures, quelle surface de terres arables disparaissent dans le monde
+    ?
   hint: ''
   type: QCM
   category: 6
@@ -1875,13 +1875,14 @@
     de 300,000 km2
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Plus de 60 % de l’expansion urbaine de ces 50 dernières années
-    dans le monde s’est effectuée sur des terrains agricoles. En France, une surface
-    équivalente à celle d’un département tous les 10 ans est artificialisée en raison
-    de l’étalement urbain, de la construction de routes, de parkings et d’infrastructures.
-    La diminution des surfaces cultivables est à mettre en relation avec la stagnation
-    depuis 20 ans des rendements dans certains pays de tradition agricole comme la
-    France, comme le souligne un rapport alarmant du Sénat de 2019.
+  answer_explanation: 'Plus de 60 % de l’expansion urbaine de ces 50 dernières années
+    dans le monde s’est faite au détriment de terres agricoles. Si l''on zoom sur
+    la France, c''est l''équivalent d’un département tous les 10 ans qui est artificialisé.
+    Les principaux facteurs en sont : l’étalement urbain, la construction de routes,
+    de parkings et d’infrastructures. La diminution des surfaces cultivables est à
+    mettre en relation avec la stagnation depuis 20 ans des rendements dans certains
+    pays de tradition agricole comme la France, comme le souligne un rapport alarmant
+    du Sénat de 2019.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.goodplanet.info/2020/03/30/lurbanisation-mondiale-sopere-au-detriment-des-terres-agricoles/
@@ -4912,22 +4913,23 @@
   - 33
   - 42
 - id: 137
-  text: Les gaz à effet de serre réchauffent la planète en capturant de l'énergie.
-    Quelle part de cette énergie est absorbée par l'atmosphère ?
+  text: Les gaz à effet de serre qui s'accumulent sous l'action des activités humaines
+    réchauffent la planète. Quelle part de l'énergie bloquée par ces gaz à effet de
+    serre est absorbée par les océans ?
   hint: ''
   type: QCM
   category: 1
   difficulty: 2
   language: Français
-  answer_option_a: 0,1%
-  answer_option_b: 1%
-  answer_option_c: 10 %
-  answer_option_d: 50 %
-  answer_correct: b
+  answer_option_a: 1%
+  answer_option_b: 10%
+  answer_option_c: 50%
+  answer_option_d: 91%
+  answer_correct: d
   has_ordered_answers: true
-  answer_explanation: Cela tient à la la faible capacité calorifique de l'air. Et
-    heureusement, sinon nous serions tous morts depuis longtemps ! 91% de cette énergie
-    est absorbée par les océans.
+  answer_explanation: L'eau possède en effet une très forte capacité à absorber la
+    chaleur. Ce n'est pas pour rien que les centrales nucléaires sont installées proche
+    de cours d'eau. A l'inverse, l'atmosphère n'en absorbe que 1%.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -24627,7 +24629,7 @@
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-04
   created: 2021-01-06
   updated: 2021-01-06
@@ -32671,12 +32673,13 @@
   - 5
   - 239
 - id: 927
-  text: Si la RVM - la République des Vaches du Monde - était un pays, en quelle position
-    arriverait-elle en termes d’émissions de gaz à effet de serre ?
+  text: Imaginons que nous réunissions toutes les vaches du monde dans un pays. En
+    quelle position ce pays arriverait-il en termes d’émissions de gaz à effet de
+    serre ?
   hint: ''
   type: QCM
   category: 1
-  difficulty: 1
+  difficulty: 2
   language: Français
   answer_option_a: 1ère
   answer_option_b: 3ème
@@ -34713,15 +34716,10 @@
   answer_option_d: 100%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: 'Selon un sondage effectué en 2009 auprès de 3146 scientifiques,
-    97% des chercheurs spécialisés dans la science du climat attribuaient à l''humain
-    la cause du réchauffement climatique actuel. Il est intéressant de noter que le
-    même sondage précisait que seuls 47%  de chercheurs spécialisés en géologie attribuaient
-    à l''humain la cause du réchauffement.
-
-    La valeur de 65% représentait en 2010 la proportion de la population française
-    attribuant à l''humain la cause du réchauffement. Cette proportion a régulièrement
-    varié depuis et atteint 79 % en 2020.'
+  answer_explanation: Mais ce qui est surtout intéressant de noter dans ce sondage,
+    c'est que ce chiffre tombait à 47% pour les géologues. Attention à l'ultracrépidarianisme
+    !  C'est à dire le fait de donner son avis sur des sujets pour lesquels on n'a
+    pas de compétence avérée.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.usinenouvelle.com/blogs/julien-fosse/au-parlement-le-lent-verdissement-des-esprits.N1041164
