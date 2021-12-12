@@ -1021,3 +1021,18 @@
   - 246
   - 247
   - 248
+- id: 78
+  name: Burger Quiz de l'Anthropocene
+  slug: burger-quiz-de-lanthropocene
+  introduction: ''
+  conclusion: ''
+  difficulty_average: 2.3
+  language: Français
+  author: Matthieu Massart
+  image_background_url: ''
+  has_audio: false
+  publish: false
+  spotlight: false
+  created: 2021-12-12
+  updated: 2021-12-12
+  tags: []
