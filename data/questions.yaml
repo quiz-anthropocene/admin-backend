@@ -1880,7 +1880,7 @@
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: 'Plus de 60 % de l’expansion urbaine de ces 50 dernières années
-    dans le monde s’est faite au détriment de terres agricoles. Si l''on zoom sur
+    dans le monde s’est faite au détriment de terres agricoles. Si l''on zoome sur
     la France, c''est l''équivalent d’un département tous les 10 ans qui est artificialisé.
     Les principaux facteurs en sont : l’étalement urbain, la construction de routes,
     de parkings et d’infrastructures. La diminution des surfaces cultivables est à
@@ -2305,7 +2305,7 @@
   - 28
 - id: 64
   text: Entre 1500 et nos jours, la population mondiale a été multipliée par 14. Et
-    sa population d'énergie ?
+    sa consommation d'énergie ?
   hint: ''
   type: QCM
   category: 5
@@ -2742,10 +2742,9 @@
   tags:
   - 31
 - id: 76
-  text: "Imaginez une balance titanesque, avec sur le plateau de gauche toute la matière\
-    \ vivante sur terre, et sur le plateau de droite, tout ce qui a été construit\
-    \ depuis l'origine par l'homme. \nVous y êtes ? De quel côté va pencher la balance\
-    \ ?"
+  text: "Imaginez une balance titanesque. Sur le plateau de gauche, toute la matière\
+    \ vivante sur terre. Sur le plateau de droite, tout ce qui a été construit depuis\
+    \ l'origine par l'homme. \nDe quel côté va pencher la balance ?"
   hint: 'Il faut compter tout ce qui a été construit par l’homme : bâtiments, infrastructures
     (routes, ponts), habitations, industries, systèmes mobiles (voitures, trains,
     avions), ...'
@@ -2783,8 +2782,8 @@
   - 32
   - 216
 - id: 77
-  text: Quelle est la contribution aux émissions de gaz à effet de serre de la moitié
-    la plus pauvre de la population mondiale ?
+  text: Quelle est la contribution des 50% les plus pauvres de la population mondiale
+    aux émissions de gaz à effet de serre ?
   hint: ''
   type: QCM
   category: 2
@@ -3448,17 +3447,18 @@
   - 26
   - 36
 - id: 95
-  text: Avignon est la ville de France avec le plus haut niveau d'autonomie alimentaire.
-    A combien s'élève-t-elle ?
+  text: On définit le degré d'autonomie alimentaire comme la part d'aliments qui proviennent
+    localement. L'aire urbaine d'Avignon est celle qui possède le plus haut degré
+    niveau d'autonomie alimentaire en France. A combien s'élève-t-il ?
   hint: Une large majorité de l’alimentation des aires urbaines provient de l’extérieur.
   type: QCM
   category: 2
   difficulty: 2
   language: Français
   answer_option_a: 8%
-  answer_option_b: 20%
-  answer_option_c: 40%
-  answer_option_d: 60%
+  answer_option_b: 16%
+  answer_option_c: 32%
+  answer_option_d: 64%
   answer_correct: a
   has_ordered_answers: true
   answer_explanation: Selon une étude de 2017, sur 100 aires urbaines analysées en
@@ -4933,8 +4933,8 @@
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: L'eau possède en effet une très forte capacité à absorber la
-    chaleur. Ce n'est pas pour rien que les centrales nucléaires sont installées proche
-    de cours d'eau. A l'inverse, l'atmosphère n'en absorbe que 1%.
+    chaleur. Ce n'est pas pour rien que les centrales nucléaires sont installées à
+    proximité de cours d'eau. A l'inverse, l'atmosphère n'en absorbe que 1%.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -7926,8 +7926,8 @@
 - id: 225
   text: 'L’Agence Française pour le Développement tente de conditionner ses aides
     au développement au travers de deux indicateurs : l’indice de développement humain
-    (IDH), et l’empreinte écologique. Le(s)quel(s) de ces pays combinai(en)t jusqu’il
-    y a peu un IDH  jugé décent avec une empreinte écologique soutenable ?'
+    (IDH), et l’empreinte écologique. En 2005, Le(s)quel(s) de ces pays combinai(en)t
+    un IDH  jugé décent avec une empreinte écologique soutenable ?'
   hint: ''
   type: QCM-RM
   category: 6
@@ -15453,7 +15453,7 @@
   - 72
   - 80
 - id: 440
-  text: Si tous les humains vivaient au niveau moyen de l’Europe, combien de planètes
+  text: Si tous les humains vivaient au niveau moyen de la France, combien de planètes
     Terre nous faudrait-il ?
   hint: ''
   type: QCM
@@ -15461,7 +15461,7 @@
   difficulty: 2
   language: Français
   answer_option_a: '1'
-  answer_option_b: '3'
+  answer_option_b: 2,5
   answer_option_c: '5'
   answer_option_d: '8'
   answer_correct: b
@@ -15474,7 +15474,7 @@
   answer_accessible_url: ''
   answer_scientific_url: https://data.footprintnetwork.org/?_ga=2.214287760.68485461.1592040579-1962221666.1592040579#/compareCountries?type=earth&cn=1021,1006,1018,2002,1012&yr=2016
   answer_reading_recommendation: ''
-  answer_image_url: https://le-cartographe.net/images/stories/emp_eco_l.jpg
+  answer_image_url: https://www.journalactionpme.com/wp-content/uploads/2019/08/ressources-terrestres.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Citoyens Pour le Climat
@@ -15487,7 +15487,6 @@
   - 1
   - 31
   - 72
-  - 216
 - id: 441
   text: 'Comment les émissions moyennes de CO2 d’un Américain se comparent-elles à
     celles d’un Indien ?
@@ -22777,18 +22776,18 @@
   - 1
   - 100
 - id: 649
-  text: Les vertébrés regroupent les poissons, oiseaux, mammifères terrestres et marins,
-    amphibiens et reptiles. Quelle proportion des vertébrés sauvages a disparu en
-    45 ans ?
+  text: La famille des vertébrés regroupe les poissons, oiseaux, mammifères terrestres
+    et marins, amphibiens et reptiles. Comment a évolué la population des vertébrés
+    sauvages en 45 ans ?
   hint: ''
   type: QCM
   category: 4
   difficulty: 2
   language: Français
-  answer_option_a: 28%
-  answer_option_b: 48%
-  answer_option_c: 68%
-  answer_option_d: 88%
+  answer_option_a: '- 28%'
+  answer_option_b: '- 48%'
+  answer_option_c: '- 68%'
+  answer_option_d: '- 88%'
   answer_correct: c
   has_ordered_answers: true
   answer_explanation: C'est le chiffre qui ressort du rapport Planète Vivante publié
@@ -22807,7 +22806,7 @@
   answer_extra_info: ''
   author: Jean-Christophe Anna
   validator: Guillaume Mandil
-  validation_status: A valider
+  validation_status: Validée
   added: 2021-02-21
   created: 2021-02-22
   updated: 2021-02-22
@@ -25562,7 +25561,7 @@
   answer_accessible_url: https://www.liberation.fr/checknews/2019/02/13/est-ce-qu-un-aller-retour-en-avion-a-bali-emet-autant-de-co2-qu-une-annee-de-vie-en-france_1708854
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: http://ravijen.fr/wp-content/uploads/2018/11/empreinte_FR_2016_graphe.jpg
+  answer_image_url: https://www.statistiques.developpement-durable.gouv.fr/edition-numerique/chiffres-cles-du-climat/image/evolution-empreinte-carbone-france-CGDD.svg
   answer_image_explanation: Total revu à 9t depuis que ce graphique a été publié
   answer_extra_info: ''
   author: Matthieu Massart
@@ -33514,7 +33513,7 @@
   - 234
 - id: 948
   text: L'extraction et la transformation des ressources (matériaux, combustibles,
-    aliments…) est responsable de ... ?
+    aliments…) sont responsables de ... ?
   hint: Perte de biodiv liée à l'utilisation des terres
   type: QCM
   category: 7
@@ -33529,7 +33528,7 @@
   answer_option_d: 10% du stress hydrique et de la destruction de biodiversité liée
     aux terres
   answer_correct: a
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'Le reste est dû aux autres activités économiques et aux ménages
     (chiffres de 2019). Le stress hydrique et la perte de biodiversité (liée à l''utilisation
     des terres) sont en particulier largement dus à l''usage de la biomasse (aliments
@@ -34710,8 +34709,8 @@
   - 30
   - 39
 - id: 1007
-  text: En 2009, combien de chercheurs spécialisés en sciences du climat attribuaient
-    à l'humain la cause du dérèglement climatique actuel ?
+  text: En 2009, quelle proportion des climatologues attribuaient à l'humain la cause
+    du dérèglement climatique actuel ?
   hint: ''
   type: QCM
   category: 1
@@ -34730,7 +34729,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.usinenouvelle.com/blogs/julien-fosse/au-parlement-le-lent-verdissement-des-esprits.N1041164
-  answer_scientific_url: https://fr.wikipedia.org/wiki/Consensus_scientifique_sur_le_r%C3%A9chauffement_climatique
+  answer_scientific_url: https://www.birdsdessines.fr/bds/2020/12/16/docgyneco08_ultracrepidarianisme_1608124014.png
   answer_reading_recommendation: ''
   answer_image_url: https://citizen4science.com/wp-content/uploads/2020/12/ademe-8.png
   answer_image_explanation: ''

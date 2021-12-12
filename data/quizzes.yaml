@@ -1024,12 +1024,15 @@
 - id: 78
   name: Burger Quiz de l'Anthropocene
   slug: burger-quiz-de-lanthropocene
-  introduction: ''
+  introduction: "<p>Bienvenue au Burger Quiz de l'Anthropocène ! C'est parti pour\
+    \ 24 questions. Voici les thématiques abordées, dans l'ordre :</p>\r\n\r\n<p>-\
+    \ Introduction à l'anthropocène, Energie, Climat, Inégalités, Vulnérabilités,\
+    \ Risques, Leviers d'action.</p>\r\n\r\n<p>Prêts ? A vous de jouer.</p>"
   conclusion: ''
-  difficulty_average: 2.3
+  difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
-  image_background_url: ''
+  image_background_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/LOGO%20quiz%20de%20lanthropocene-01.jpg?raw=true
   has_audio: false
   publish: false
   spotlight: false
