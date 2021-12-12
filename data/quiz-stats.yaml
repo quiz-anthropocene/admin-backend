@@ -710,9 +710,9 @@
   - answer_success_count: 11
     count: 6
 - quiz_id: 62
-  answer_count: 503
-  answer_count_last_30_days: 30
-  answer_count_last_7_days: 14
+  answer_count: 504
+  answer_count_last_30_days: 31
+  answer_count_last_7_days: 15
   like_count: 5
   dislike_count: 0
   answer_success_count_split:
@@ -725,7 +725,7 @@
   - answer_success_count: 3
     count: 90
   - answer_success_count: 4
-    count: 147
+    count: 148
   - answer_success_count: 5
     count: 102
   - answer_success_count: 6
@@ -928,9 +928,9 @@
   - answer_success_count: 7
     count: 4
 - quiz_id: 70
-  answer_count: 328
-  answer_count_last_30_days: 52
-  answer_count_last_7_days: 28
+  answer_count: 329
+  answer_count_last_30_days: 53
+  answer_count_last_7_days: 29
   like_count: 5
   dislike_count: 0
   answer_success_count_split:
@@ -945,7 +945,7 @@
   - answer_success_count: 4
     count: 77
   - answer_success_count: 5
-    count: 65
+    count: 66
   - answer_success_count: 6
     count: 51
   - answer_success_count: 7
@@ -1082,9 +1082,9 @@
   - answer_success_count: 9
     count: 4
 - quiz_id: 77
-  answer_count: 17
-  answer_count_last_30_days: 17
-  answer_count_last_7_days: 17
+  answer_count: 18
+  answer_count_last_30_days: 18
+  answer_count_last_7_days: 18
   like_count: 0
   dislike_count: 0
   answer_success_count_split:
@@ -1099,10 +1099,43 @@
   - answer_success_count: 4
     count: 3
   - answer_success_count: 5
-    count: 4
+    count: 5
   - answer_success_count: 6
     count: 4
   - answer_success_count: 7
     count: 1
   - answer_success_count: 8
+    count: 0
+- quiz_id: 78
+  answer_count: 0
+  answer_count_last_30_days: 0
+  answer_count_last_7_days: 0
+  like_count: 0
+  dislike_count: 0
+  answer_success_count_split:
+  - answer_success_count: 0
+    count: 0
+  - answer_success_count: 1
+    count: 0
+  - answer_success_count: 2
+    count: 0
+  - answer_success_count: 3
+    count: 0
+  - answer_success_count: 4
+    count: 0
+  - answer_success_count: 5
+    count: 0
+  - answer_success_count: 6
+    count: 0
+  - answer_success_count: 7
+    count: 0
+  - answer_success_count: 8
+    count: 0
+  - answer_success_count: 9
+    count: 0
+  - answer_success_count: 10
+    count: 0
+  - answer_success_count: 11
+    count: 0
+  - answer_success_count: 12
     count: 0
