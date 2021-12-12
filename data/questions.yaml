@@ -11,15 +11,18 @@
   answer_option_d: 30% de la nourriture produite
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: C'est à dire 1,3 milliards de tonnes, ou encore 3,5 millions
-    de tonnes par jour.
+  answer_explanation: Plus de 41.200 kilos de nourriture sont jetés chaque seconde
+    dans le monde. Cela représente un gaspillage alimentaire de 1,3 milliard de tonnes
+    d'aliments par an, soit 1/3 de la production globale de denrées alimentaires dédiée
+    à la consommation. Le gaspillage alimentaire concerne les pays riches comme pauvres
+    et représenterait une valeur gaspillée de 750 milliards de dollars.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.planetoscope.com/agriculture-alimentation/1556-le-gaspillage-alimentaire-dans-le-monde.html
   answer_scientific_url: http://www.fao.org/food-loss-and-food-waste/fr/
   answer_reading_recommendation: ''
   answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/6/4/7/6472109f5f_129947_sources-du-gaspillage-alimentaire.jpg
-  answer_image_explanation: ''
+  answer_image_explanation: Répartition des pertes de nourriture dans le monde.
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Raphael Odini
@@ -47,11 +50,11 @@
   answer_option_d: '1000'
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: "On peut estimer qu'en un journée, un humain consomme en nourriture\
-    \ environ 5 kWh dont il peut restituer en puissance mécanique 0,05 à 0,5 kWh.\
-    \ Voir le calcul estimatif dans l'article en référence. \nJean-Marc Jancovici\
-    \ a popularisé pour illustrer ces chiffres la notion \"d'esclave énergétique\"\
-    \ à notre service pour nous fournir le niveau de vie dont nous jouissons."
+  answer_explanation: On peut estimer qu'en un journée, un humain consomme en nourriture
+    environ 5 kWh dont il peut restituer en puissance mécanique 0,05 à 0,5 kWh (bras
+    ou jambes). Jean-Marc Jancovici a popularisé pour illustrer ces chiffres la notion
+    "d'esclave énergétique" à notre service pour nous fournir le niveau de vie dont
+    nous jouissons.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://jancovici.com/transition-energetique/l-energie-et-nous/combien-suis-je-un-esclavagiste/
@@ -899,13 +902,13 @@
   answer_option_d: 99%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: D'après une étude de 2015, un tiers des réserves de pétrole,
-    la moitié de celles de gaz et plus de 80 % de celles de charbon devront rester
-    inexploitées si l'on veut éviter la surchauffe de la planète. Pour conserver au
-    moins une chance sur deux de contenir la hausse des températures à la fin du siècle
-    sous la barre de 2°C par rapport à la période préindustrielle, le GIEC estime
-    que les émissions mondiales de CO2 ne devront pas dépasser, entre 2011 et 2050,
-    une fourchette allant de 860 à 1 180 milliards de tonnes, ou gigatonnes (Gt).
+  answer_explanation: 'Le GIEC avance que, pour conserver 50% de chance de rester
+    sous la barre des 2°C de hausse par rapport à la période préindustrielle, les
+    émissions mondiales de CO2 ne devront pas dépasser, entre 2011 et 2050, une fourchette
+    allant de 860 à 1 180 milliards de tonnes. Cela nécessite de ne pas toucher à
+    80% des réserves de charbon ET 30% des réserves de pétrole ET 50% de celles de
+    gaz. , ceci afin de conserver 50% de chances pour contenir la hausse des températures
+    d''ici la fin du siècle '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2015/01/07/pour-limiter-le-rechauffement-a-2-c-combien-de-petrole-gaz-et-charbon-en-moins_4550929_3244.html
@@ -1506,8 +1509,10 @@
   answer_option_d: Jamais, il en restera toujours assez pour s'en nourrir
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Selon une étude canadienne, il n’y aura presque plus d’espèces
-    de poissons à consommer en 2048. En revanche, on ne manquera pas de méduses...
+  answer_explanation: C'est ce qui ressort d'une étude canadienne de 200. Le déclin
+    de la biodiversité s’accélère et rythme il n’y aura presque plus d’espèces de
+    poissons ou de fruits de mer à consommer en 2048. A l’heure actuelle, 29% de ces
+    espèces se sont effondrées, c'est à dire que leurs prises ont chuté de 90%.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://aquaculture-aquablog.blogspot.com/2017/10/surpeche-2048-plus-de-poisson-dans-les-oceans.html
@@ -1859,8 +1864,7 @@
   tags:
   - 17
 - id: 51
-  text: En 24 heures, quelle surface de terres arables disparaissent dans le monde
-    ?
+  text: En 24 heures, quelle surface de terres arables disparait dans le monde ?
   hint: ''
   type: QCM
   category: 6
@@ -2300,8 +2304,8 @@
   - 27
   - 28
 - id: 64
-  text: Entre 1500 et nos jours, la population mondiale a été multipliée par 14. Qu'en
-    est-il de sa consommation d'énergie ?
+  text: Entre 1500 et nos jours, la population mondiale a été multipliée par 14. Et
+    sa population d'énergie ?
   hint: ''
   type: QCM
   category: 5
@@ -2794,8 +2798,9 @@
   has_ordered_answers: true
   answer_explanation: Que ce soit au niveau mondial ou en France, la quantité de CO2
     émise est étroitement liée au niveau de revenu des habitants, selon les travaux
-    des économistes Lucas Chancel et Thomas Piketty. C'est encore plus marqué aux
-    Etats-Unis et au Brésil.
+    des économistes Lucas Chancel et Thomas Piketty. On observe les mêmes disparités
+    au sein d'un même pays. C'est même encore plus marqué dans des pays comme les
+    Etats-Unis ou le Brésil.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.liberation.fr/checknews/2019/11/06/est-il-vrai-qu-en-france-les-10-les-plus-riches-emettent-huit-fois-plus-de-co2-que-les-10-les-plus-p_1761604
@@ -7934,19 +7939,21 @@
   answer_option_d: Le Costa Rica
   answer_correct: b
   has_ordered_answers: false
-  answer_explanation: La zone cible est définie par un IDH supérieur à 0,8 - soit
-    du niveau de la Russie - et une empreinte écologique d'un peu moins de 2 hectares
+  answer_explanation: 'La zone cible est définie par un IDH supérieur à 0,8 - soit
+    du niveau de la Russie - et une empreinte écologique d''un peu moins de 2 hectares
     agricoles par personne. Cuba était le seul pays au monde à respecter ces deux
-    critères. Une 3ème dimension, pas considéré ici, est le respect des droits de
-    l'Homme et de la démocratie... A noter que Cuba a quitté cette zone depuis, et
-    qu'aucun pays ne répond donc plus à ces critères.
+    critères. Cette particularité est assez assez artificielle : sa faible empreinte
+    est due à l’embargo qui frappe le pays et son IDH honorable à son système de santé
+    et d’éducation. Les considérations touchant à la démocratie et la liberté d''expression
+    ne sont pas prises en compte par l''IDH... Depuis, Cuba a quitté cette zone depuis
+    et aucun pays du monde ne répond donc plus à ces deux critères combinés.'
   answer_audio: ''
   answer_video: https://youtu.be/n3LyVbGUFu4?t=1320
-  answer_accessible_url: ''
+  answer_accessible_url: https://www.demographie-responsable.org/l-empreinte-ecologique.html
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://www.latoilescoute.net/IMG/png/photo_4-2-resp1200.png
-  answer_image_explanation: hag = hectare agricole
+  answer_image_url: https://servimg.com/image_preview.php?i=42&u=12905549#
+  answer_image_explanation: ''
   answer_extra_info: ''
   author: Raphael Odini
   validator: Matthieu Massart
@@ -20821,10 +20828,10 @@
   answer_option_d: 100,000$ / tonne
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: Les scientifiques de l'université de Chicaco ont bâti un modèle
-    prenant en compte les effets du changement climatique à un horizon de centaines
-    de milliers d'années, prenant en compte des effets comme la montée des eaux, la
-    fonte des glaciers, la perte de capacité agricole des sols.
+  answer_explanation: Les scientifiques de l'université de Chicaco ont pour cela bâti
+    un modèle prenant en compte les effets du changement climatique à un horizon de
+    centaines de milliers d'années, prenant en compte d'effets comme la montée des
+    eaux, la fonte des glaciers, la perte de capacité agricole des sols.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -26595,7 +26602,7 @@
   answer_scientific_url: https://www.lowtechmagazine.com/2011/02/body-insulation-thermal-underwear.html
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/744.png
-  answer_image_explanation: © Maison&Travaux
+  answer_image_explanation: ''
   answer_extra_info: ''
   author: Max Pinsard
   validator: Matthieu Massart
