@@ -20892,11 +20892,10 @@
   tags:
   - 11
 - id: 597
-  text: La « taxonomie européenne » est un outil de classification créé en 2020 qui
-    fournit à tous les acteurs financiers une compréhension commune de ce qui doit
-    être considéré comme une activité « verte » (c'est à dire visant à rester sous
-    2° de réchauffement). En 2020, quelle est la part des activités des entreprises
-    du CAC40 qui sont alignées avec cette classification ?
+  text: La taxonomie européenne est un outil de classification qui fournit à tous
+    les acteurs financiers une compréhension commune de ce qui doit être considéré
+    comme une activité « verte ». En 2020, quelle était la part des activités des
+    entreprises du CAC40 qui sont alignées avec cette classification ?
   hint: ''
   type: QCM
   category: 8
@@ -20908,11 +20907,12 @@
   answer_option_d: 20%
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: Comme beaucoup de domaines, la finance n’échappe pas au greenwashing.
-    Depuis 10 ans, les termes ‘ESG’ (Environnement, Social, Gouvernance), ‘Green’
-    et ‘Sustainable’ (durable) sont apparus un peu partout. L’indice ESG de BNP Paribas
-    par exemple comprend des entreprises comme Total, Schneider Electric, L’Oréal
-    et Vinci. Doit-on le considérer comme 'vert' ?
+  answer_explanation: Pour commencer, on précisera que 'vert' siginifie 'ayant pour
+    but de limiter le réchauffement à moins de 2°C'. Comme beaucoup de domaines, la
+    finance n’échappe pas au greenwashing. Depuis 10 ans, les termes ‘ESG’ (Environnement,
+    Social, Gouvernance), ‘Green’ et ‘Sustainable’ (durable) sont apparus un peu partout.
+    L’indice ESG de BNP Paribas par exemple comprend des entreprises comme Total,
+    Schneider Electric, L’Oréal et Vinci. Doit-on le considérer comme 'vert' ?
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://bonpote.com/la-neutralite-carbone-nouveau-greenwashing-ou-reelle-avancee/
