@@ -35,10 +35,10 @@
   - 5
   - 216
 - id: 2
-  text: Supposons que l’énergie fournie par toutes les machines soit remplacée par
-    l’énergie de travailleurs faisant travailler leurs muscles 8h par jour. Combien
-    faudrait-il en moyenne de travailleurs au service de chaque français pour continuer
-    à vivre comme aujourd’hui ?
+  text: Supposons que  demain, toute l'énergie consommée en France par des machines
+    doive être alimentée par des hommes qui pédalent 8h par jour. Combien faudrait-il
+    en moyenne de travailleurs au service de chaque français pour continuer à vivre
+    comme aujourd’hui ?
   hint: ''
   type: QCM
   category: 5
