@@ -32636,13 +32636,12 @@
   - 238
   - 242
 - id: 926
-  text: Chaque année, quelle surface est déforestée au niveau mondial pour subvenir
-    à la consommation annuelle moyenne en œufs et produits laitiers d’un Français
-    ?
+  text: Quelle surface de l'Empreinte Forêt d'un Français, la consommation en œufs
+    et produits laitiers représente ?
   hint: ''
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 4
   language: Français
   answer_option_a: 30 m²
   answer_option_b: 60 m²
@@ -32650,20 +32649,13 @@
   answer_option_d: 352 m²
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: 'En un an en moyenne, la consommation d''œufs et de produits
-    laitiers de chaque Français implique 60 m² de déforestation au niveau mondial
-    (30 m² pour les oeufs et 30 m² pour les produits laitiers) à cause notamment de
-    l''alimentation animale. L’empreinte forêt d’un Français est de 352 m², parmi
-    lesquels on retrouve 97 m² rien que pour la viande industrielle. L’alimentation
-    est particulièrement impactante sur la déforestation, puisqu’on estime qu’un végétarien
-    sobre et responsable a une empreinte forêt de 44 m² (contre 352 m² en moyenne
-    pour un Français).
+  answer_explanation: 'L’Empreinte Forêt d’un Français est de 352 m², dont 30 m² pour
+    les oeufs et 30 m² pour les produits laitiers (via l''alimentation animale).
 
-    Enfin, la déforestation représente environ 10% des émissions de CO2 à l’échelle
-    mondiale.'
+    La déforestation représente environ 10% des émissions de CO2 à l’échelle mondiale.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.liberation.fr/france/2018/11/08/deforestation-un-francais-consomme-chaque-annee-352-metres-carres-de-foret_1690583/
+  answer_accessible_url: ''
   answer_scientific_url: http://envol-vert.org/wp-content/uploads/2018/11/Envol_Vert_Rapport_Empreinte_Foret_Final.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/926b.PNG
