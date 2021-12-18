@@ -27298,37 +27298,41 @@
   tags:
   - 30
 - id: 762
-  text: Copy of à venir
+  text: 'Vrai ou faux ? Le pôle nord se refroidit moins vite qu''ailleurs. '
   hint: ''
-  type: QCM
+  type: VF
   category: 2
-  difficulty: 2
+  difficulty: 1
   language: Français
   answer_option_a: ''
   answer_option_b: ''
   answer_option_c: ''
   answer_option_d: ''
-  answer_correct: d
+  answer_correct: ''
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: 'Le pôle Nord se réchauffe plus de deux fois plus vite que le
+    reste du globe, voire quatre fois plus, selon les derniers travaux de chercheurs
+    estimant que les précédents chiffres ont été sous-estimés. En cause, un phénomène
+    appelé « amplification arctique » qui fonctionne comme un cercle vicieux : en
+    fondant, la glace et la neige, très réfléchissantes, sont remplacées par de l’océan
+    ou de la végétation, plus sombres, qui absorbent davantage les rayons du soleil.
+    Il en découle une hausse des températures de l’air et de l’eau qui, à leur tour,
+    accélèrent la fonte.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.science.org/content/article/arctic-warming-four-times-faster-rest-world
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://img.lemde.fr/2021/11/29/0/0/3500/2040/1328/0/45/0/c21c496_hs-pxp-89-global-poy-2021-0917-11.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Matthieu Massart
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-11
+  added: 2021-12-17
   created: 2021-01-17
   updated: 2021-01-17
-  tags:
-  - 33
-  - 217
-  - 218
+  tags: []
 - id: 763
   text: Copy of à venir
   hint: ''
@@ -29799,8 +29803,8 @@
   tags:
   - 30
 - id: 832
-  text: Au niveau mondial, quelle part des déchets électroniques est collectée en
-    vue d'un traitement ?
+  text: Au niveau mondial, quelle part des déchets électroniques est collectée afin
+    d'être recyclée ?
   hint: C'est très peu
   type: QCM
   category: 2
@@ -29812,14 +29816,14 @@
   answer_option_d: 80%
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: 'Au niveau mondial, environ 20% des déchets électroniques sont
-    collectés en vue d''un recyclage. Attention contrairement à ce qui est souvent
-    affirmé, collecté ne veut pas dire réellement recyclé : en France, 1/4 part directement
-    en incinération. Et ce qui entre effectivement en filière de recyclage ne pourra
-    pas être recyclé en totalité : on récupère moins de 30% d''un smartphone, le reste
-    est incinéré. Ce qui n''est pas collecté est exporté par des circuits illégaux,
-    en dépit du fait que la plupart des pays ont signé la convention de Bâle qui interdit
-    l''export de déchets toxiques comme les déchets électroniques.'
+  answer_explanation: 'Environ 20% des déchets électroniques sont collectés en vue
+    d''un recyclage. Attention contrairement à ce qui est souvent affirmé, collecté
+    ne veut pas dire réellement recyclé : en France, 1/4 part directement en incinération.
+    Et ce qui entre effectivement en filière de recyclage ne pourra pas être recyclé
+    en totalité : on récupère moins de 30% d''un smartphone, le reste est incinéré.
+    Ce qui n''est pas collecté est exporté par des circuits illégaux, en dépit du
+    fait que la plupart des pays ont signé la convention de Bâle qui interdit l''export
+    de déchets toxiques comme les déchets électroniques.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.greenit.fr/2017/12/26/20-dechets-electroniques-recycles/
@@ -32636,8 +32640,8 @@
   - 238
   - 242
 - id: 926
-  text: Quelle surface de l'Empreinte Forêt d'un Français, la consommation en œufs
-    et produits laitiers représente ?
+  text: A quelle empreinte forêt la consommation en œufs et produits laitiers d'un
+    Français représente-t-elle ?
   hint: ''
   type: QCM
   category: 2
