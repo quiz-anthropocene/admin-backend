@@ -27304,11 +27304,11 @@
   category: 2
   difficulty: 1
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
+  answer_option_a: Vrai
+  answer_option_b: Faux
   answer_option_c: ''
   answer_option_d: ''
-  answer_correct: ''
+  answer_correct: b
   has_ordered_answers: false
   answer_explanation: 'Le pôle Nord se réchauffe plus de deux fois plus vite que le
     reste du globe, voire quatre fois plus, selon les derniers travaux de chercheurs
@@ -27317,7 +27317,7 @@
     fondant, la glace et la neige, très réfléchissantes, sont remplacées par de l’océan
     ou de la végétation, plus sombres, qui absorbent davantage les rayons du soleil.
     Il en découle une hausse des températures de l’air et de l’eau qui, à leur tour,
-    accélèrent la fonte.'
+    accélèrent la fonte. La réponse est la même concernant le pôle sud.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -27328,7 +27328,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: ''
-  validation_status: Brouillon
+  validation_status: A valider
   added: 2021-12-17
   created: 2021-01-17
   updated: 2021-01-17
