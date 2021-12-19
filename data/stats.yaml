@@ -5,21 +5,21 @@ question_per_validation_status_count:
 - validation_status: Écartée
   total: 252
 - validation_status: Brouillon
-  total: 201
+  total: 200
 - validation_status: Écartée temporairement
   total: 18
 - validation_status: A valider
-  total: 1
+  total: 2
 quiz_count: 43
 quiz_per_publish_count:
 - publish: true
   total: 33
 - publish: false
   total: 10
-question_answer_count: 216394
-quiz_answer_count: 15426
-question_answer_count_last_30_days: 14796
-quiz_answer_count_last_30_days: 1110
+question_answer_count: 216598
+quiz_answer_count: 15433
+question_answer_count_last_30_days: 14722
+quiz_answer_count_last_30_days: 1101
 category_count: 8
 tag_count: 238
 question_feedback_count: 3488
