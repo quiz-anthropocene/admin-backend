@@ -51,9 +51,9 @@
   - answer_success_count: 9
     count: 15
 - quiz_id: 3
-  answer_count: 308
-  answer_count_last_30_days: 15
-  answer_count_last_7_days: 1
+  answer_count: 309
+  answer_count_last_30_days: 16
+  answer_count_last_7_days: 2
   like_count: 27
   dislike_count: 0
   answer_success_count_split:
@@ -66,7 +66,7 @@
   - answer_success_count: 3
     count: 22
   - answer_success_count: 4
-    count: 35
+    count: 36
   - answer_success_count: 5
     count: 55
   - answer_success_count: 6
@@ -600,9 +600,9 @@
   - answer_success_count: 9
     count: 3
 - quiz_id: 57
-  answer_count: 464
-  answer_count_last_30_days: 16
-  answer_count_last_7_days: 0
+  answer_count: 465
+  answer_count_last_30_days: 17
+  answer_count_last_7_days: 1
   like_count: 20
   dislike_count: 5
   answer_success_count_split:
@@ -619,7 +619,7 @@
   - answer_success_count: 5
     count: 86
   - answer_success_count: 6
-    count: 77
+    count: 78
   - answer_success_count: 7
     count: 65
   - answer_success_count: 8
@@ -1028,14 +1028,14 @@
   - answer_success_count: 11
     count: 6
 - quiz_id: 75
-  answer_count: 1953
-  answer_count_last_30_days: 104
-  answer_count_last_7_days: 3
+  answer_count: 1954
+  answer_count_last_30_days: 105
+  answer_count_last_7_days: 4
   like_count: 87
   dislike_count: 4
   answer_success_count_split:
   - answer_success_count: 0
-    count: 158
+    count: 159
   - answer_success_count: 1
     count: 456
   - answer_success_count: 2
@@ -1082,9 +1082,9 @@
   - answer_success_count: 9
     count: 4
 - quiz_id: 77
-  answer_count: 30
-  answer_count_last_30_days: 30
-  answer_count_last_7_days: 14
+  answer_count: 33
+  answer_count_last_30_days: 33
+  answer_count_last_7_days: 17
   like_count: 0
   dislike_count: 0
   answer_success_count_split:
@@ -1093,9 +1093,9 @@
   - answer_success_count: 1
     count: 1
   - answer_success_count: 2
-    count: 3
-  - answer_success_count: 3
     count: 4
+  - answer_success_count: 3
+    count: 5
   - answer_success_count: 4
     count: 6
   - answer_success_count: 5
