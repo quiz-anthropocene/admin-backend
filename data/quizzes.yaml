@@ -1029,7 +1029,7 @@
     \ Introduction à l'anthropocène, Energie, Climat, Inégalités, Vulnérabilités,\
     \ Risques, Leviers d'action.</p>\r\n\r\n<p>Prêts ? A vous de jouer.</p>"
   conclusion: ''
-  difficulty_average: 2.2
+  difficulty_average: 2.3
   language: Français
   author: Matthieu Massart
   image_background_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/LOGO%20quiz%20de%20lanthropocene-01.jpg?raw=true
@@ -1037,5 +1037,5 @@
   publish: false
   spotlight: false
   created: 2021-12-12
-  updated: 2021-12-12
+  updated: 2021-12-24
   tags: []
