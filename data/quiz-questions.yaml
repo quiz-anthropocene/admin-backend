@@ -2482,12 +2482,6 @@
   order: 13
   created: 2021-12-12
   updated: 2021-12-12
-- id: 559
-  quiz: 78
-  question: 137
-  order: 15
-  created: 2021-12-12
-  updated: 2021-12-12
 - id: 560
   quiz: 78
   question: 869
@@ -2566,12 +2560,6 @@
   order: 41
   created: 2021-12-12
   updated: 2021-12-12
-- id: 580
-  quiz: 78
-  question: 969
-  order: 43
-  created: 2021-12-12
-  updated: 2021-12-12
 - id: 581
   quiz: 78
   question: 744
@@ -2582,11 +2570,5 @@
   quiz: 78
   question: 719
   order: 47
-  created: 2021-12-12
-  updated: 2021-12-12
-- id: 583
-  quiz: 78
-  question: 597
-  order: 40
   created: 2021-12-12
   updated: 2021-12-12
