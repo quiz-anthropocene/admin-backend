@@ -1028,9 +1028,9 @@
   - answer_success_count: 11
     count: 6
 - quiz_id: 75
-  answer_count: 1960
-  answer_count_last_30_days: 94
-  answer_count_last_7_days: 6
+  answer_count: 1961
+  answer_count_last_30_days: 95
+  answer_count_last_7_days: 7
   like_count: 87
   dislike_count: 4
   answer_success_count_split:
@@ -1039,7 +1039,7 @@
   - answer_success_count: 1
     count: 456
   - answer_success_count: 2
-    count: 518
+    count: 519
   - answer_success_count: 3
     count: 414
   - answer_success_count: 4
