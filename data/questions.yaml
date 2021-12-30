@@ -1,5 +1,6 @@
 - id: 1
-  text: Quelle quantité d'aliments jette-t-on chaque année dans le monde ?
+  text: Quelle proportion des aliments produits jette-t-on chaque année dans le monde
+    ?
   hint: ''
   type: QCM
   category: 2
@@ -2743,8 +2744,9 @@
   - 31
 - id: 76
   text: "Imaginez une balance titanesque. Sur le plateau de gauche, toute la matière\
-    \ vivante sur terre. Sur le plateau de droite, tout ce qui a été construit depuis\
-    \ l'origine par l'homme. \nDe quel côté va pencher la balance ?"
+    \ vivante actuellement sur terre. Sur le plateau de droite, tout ce qui a été\
+    \ construit depuis l'origine par l'homme. \nDe quel côté va pencher la balance\
+    \ ?"
   hint: 'Il faut compter tout ce qui a été construit par l’homme : bâtiments, infrastructures
     (routes, ponts), habitations, industries, systèmes mobiles (voitures, trains,
     avions), ...'
@@ -3447,9 +3449,10 @@
   - 26
   - 36
 - id: 95
-  text: On définit le degré d'autonomie alimentaire comme la part d'aliments qui proviennent
-    localement. L'aire urbaine d'Avignon est celle qui possède le plus haut degré
-    niveau d'autonomie alimentaire en France. A combien s'élève-t-il ?
+  text: On définit le degré d'autonomie alimentaire comme la part d'aliments qui sont
+    approvisionnées localement dans un certain rayon. L'aire urbaine d'Avignon est
+    celle qui possède le plus haut degré niveau d'autonomie alimentaire en France.
+    A combien s'élève-t-il ?
   hint: Une large majorité de l’alimentation des aires urbaines provient de l’extérieur.
   type: QCM
   category: 2
@@ -10328,8 +10331,8 @@
   - 35
   - 60
 - id: 294
-  text: Dans le monde, combien de personnes vivent dans des zones à moins de 10 mètres
-    au dessus du niveau de la mer ?
+  text: Dans le monde, combien de personnes vivent dans des zones côtières à moins
+    de 10 mètres au dessus du niveau de la mer ?
   hint: ''
   type: QCM
   category: 1
@@ -14175,7 +14178,7 @@
   has_ordered_answers: true
   answer_explanation: Ces 3,5 milliards de personnes sortiraient alors de la « niche
     climatique » dans laquelle les humains ont prospéré depuis six mille ans. Voilà
-    les conclusions d'une étude récent qui met en lumière les risques maximaux auxquels
+    les conclusions d'une étude récente qui met en lumière les risques maximaux auxquels
     le monde pourrait être soumis dans les prochaines décennies à moins que nous ne
     parvenions à inverser la tendance.
   answer_audio: ''
@@ -15453,8 +15456,8 @@
   - 72
   - 80
 - id: 440
-  text: Si tous les humains vivaient au niveau moyen de la France, combien de planètes
-    Terre nous faudrait-il ?
+  text: Si tous les humains vivaient avec le niveau de vie des Français, combien de
+    planètes Terre nous faudrait-il ?
   hint: ''
   type: QCM
   category: 2
