@@ -2470,22 +2470,10 @@
   order: 9
   created: 2021-12-12
   updated: 2021-12-12
-- id: 556
-  quiz: 78
-  question: 64
-  order: 11
-  created: 2021-12-12
-  updated: 2021-12-12
 - id: 557
   quiz: 78
   question: 2
   order: 13
-  created: 2021-12-12
-  updated: 2021-12-12
-- id: 560
-  quiz: 78
-  question: 869
-  order: 17
   created: 2021-12-12
   updated: 2021-12-12
 - id: 561
@@ -2552,12 +2540,6 @@
   quiz: 78
   question: 25
   order: 39
-  created: 2021-12-12
-  updated: 2021-12-12
-- id: 579
-  quiz: 78
-  question: 595
-  order: 41
   created: 2021-12-12
   updated: 2021-12-12
 - id: 581
