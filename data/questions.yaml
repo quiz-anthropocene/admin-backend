@@ -24785,7 +24785,7 @@
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/700%20V21.png
-  answer_image_explanation: ''
+  answer_image_explanation: 'A gauche : les effets CO2. à droite, les effets non-CO2>'
   answer_extra_info: ''
   author: Restons les pieds sur terre
   validator: Matthieu Massart
@@ -27112,8 +27112,8 @@
   - 217
   - 218
 - id: 757
-  text: On mesure l'intensité du trafic aérien en passagers x km (RPK en anglais).
-    A combien s'élevait-il en 2018 ?
+  text: On mesure l'intensité du trafic aérien en nombre de passagers x km (RPK en
+    anglais). A combien s'élevait cette intensité en 2018 ?
   hint: ''
   type: QCM
   category: 2
@@ -27303,39 +27303,46 @@
 - id: 762
   text: 'Vrai ou faux ? Le pôle nord se refroidit moins vite qu''ailleurs. '
   hint: ''
-  type: VF
+  type: QCM
   category: 2
   difficulty: 1
   language: Français
-  answer_option_a: Vrai
-  answer_option_b: Faux
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: b
-  has_ordered_answers: false
-  answer_explanation: 'Le pôle Nord se réchauffe plus de deux fois plus vite que le
-    reste du globe, voire quatre fois plus, selon les derniers travaux de chercheurs
-    estimant que les précédents chiffres ont été sous-estimés. En cause, un phénomène
-    appelé « amplification arctique » qui fonctionne comme un cercle vicieux : en
-    fondant, la glace et la neige, très réfléchissantes, sont remplacées par de l’océan
-    ou de la végétation, plus sombres, qui absorbent davantage les rayons du soleil.
-    Il en découle une hausse des températures de l’air et de l’eau qui, à leur tour,
-    accélèrent la fonte. La réponse est la même concernant le pôle sud.'
+  answer_option_a: 30%
+  answer_option_b: 50%
+  answer_option_c: 80%
+  answer_option_d: 99%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Le GIEC avance que, pour conserver 50% de chance de rester
+    sous la barre des 2°C de hausse par rapport à la période préindustrielle, les
+    émissions mondiales de CO2 ne devront pas dépasser, entre 2011 et 2050, une fourchette
+    allant de 860 à 1 180 milliards de tonnes. Cela nécessite de ne pas toucher à
+    80% des réserves de charbon ET 30% des réserves de pétrole ET 50% de celles de
+    gaz. , ceci afin de conserver 50% de chances pour contenir la hausse des températures
+    d''ici la fin du siècle '
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: https://www.science.org/content/article/arctic-warming-four-times-faster-rest-world
+  answer_accessible_url: https://www.lemonde.fr/planete/article/2015/01/07/pour-limiter-le-rechauffement-a-2-c-combien-de-petrole-gaz-et-charbon-en-moins_4550929_3244.html
+  answer_scientific_url: https://www.nature.com/articles/nature14016
   answer_reading_recommendation: ''
-  answer_image_url: https://img.lemde.fr/2021/11/29/0/0/3500/2040/1328/0/45/0/c21c496_hs-pxp-89-global-poy-2021-0917-11.jpg
+  answer_image_url: https://www.carbonbrief.org/media/366129/percentage-usable2.png
   answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_extra_info: 'la question initiale faisait mention de 80% de pétrole.
+
+    autres articles:
+
+    https://reporterre.net/Pour-eviter-le-rechauffement-il-faut-laisser-dans-le-sol-la-moitie-des-reserves
+
+    https://www.carbonbrief.org/meeting-two-degree-climate-target-means-80-per-cent-of-worlds-coal-is-unburnable-study-says'
   author: Matthieu Massart
-  validator: ''
-  validation_status: A valider
-  added: 2021-12-17
+  validator: Raphael Odini
+  validation_status: Validée
+  added: 2020-03-10
   created: 2021-01-17
   updated: 2021-01-17
-  tags: []
+  tags:
+  - 40
+  - 51
 - id: 763
   text: Copy of à venir
   hint: ''
