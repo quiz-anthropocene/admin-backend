@@ -27344,37 +27344,49 @@
   - 40
   - 51
 - id: 763
-  text: Copy of à venir
+  text: Quelle proportion des réserves connues de charbon devons-nous laisser sous
+    terre pour espérer contenir la hausse de température moyenne sous 2°C ?
   hint: ''
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 1
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  answer_option_a: 30%
+  answer_option_b: 50%
+  answer_option_c: 80%
+  answer_option_d: 99%
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Le GIEC avance que, pour conserver 50% de chance de rester
+    sous la barre des 2°C de hausse par rapport à la période préindustrielle, les
+    émissions mondiales de CO2 ne devront pas dépasser, entre 2011 et 2050, une fourchette
+    allant de 860 à 1 180 milliards de tonnes. Cela nécessite de ne pas toucher à
+    80% des réserves de charbon ET 30% des réserves de pétrole ET 50% de celles de
+    gaz. , ceci afin de conserver 50% de chances pour contenir la hausse des températures
+    d''ici la fin du siècle '
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.lemonde.fr/planete/article/2015/01/07/pour-limiter-le-rechauffement-a-2-c-combien-de-petrole-gaz-et-charbon-en-moins_4550929_3244.html
+  answer_scientific_url: https://www.nature.com/articles/nature14016
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://www.carbonbrief.org/media/366129/percentage-usable2.png
   answer_image_explanation: ''
-  answer_extra_info: ''
-  author: Restons les pieds sur terre
-  validator: ''
-  validation_status: Brouillon
-  added: 2021-01-13
+  answer_extra_info: 'la question initiale faisait mention de 80% de pétrole.
+
+    autres articles:
+
+    https://reporterre.net/Pour-eviter-le-rechauffement-il-faut-laisser-dans-le-sol-la-moitie-des-reserves
+
+    https://www.carbonbrief.org/meeting-two-degree-climate-target-means-80-per-cent-of-worlds-coal-is-unburnable-study-says'
+  author: Matthieu Massart
+  validator: Raphael Odini
+  validation_status: Validée
+  added: 2020-03-10
   created: 2021-01-17
   updated: 2021-01-17
   tags:
-  - 33
-  - 217
-  - 218
+  - 40
+  - 51
 - id: 764
   text: à venir
   hint: ''
