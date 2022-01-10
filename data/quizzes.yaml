@@ -1039,3 +1039,24 @@
   created: 2021-12-12
   updated: 2021-12-30
   tags: []
+- id: 79
+  name: Introduction à la Fresque du Climat
+  slug: introduction-a-la-fresque-du-climat
+  introduction: <p>La Fresque du Climat, c’est un atelier ludique, participatif et
+    créatif sur le changement climatique. Il est basé sur l’intelligence collective
+    et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes
+    du climat et les conséquences de son dérèglement. Déjà 300,000 personnes y ont
+    participé à travers le monde. A vous de tester vos connaissances.</p>
+  conclusion: <p>Ca vous a plu ? Vous avez trouvé quelques points à approfondir ?
+    Alors n'hésitez plus, inscrivez-vous à un atelier de la Fresque autour de vous
+    ! fresqueduclimat.org</p>
+  difficulty_average: 1.6
+  language: Français
+  author: Matthieu Massart
+  image_background_url: https://1drv.ms/u/s!AnwTNViGJ-vxgtYTvGGPBuKO1byl4Q?e=AEW6ZW
+  has_audio: false
+  publish: false
+  spotlight: false
+  created: 2022-01-10
+  updated: 2022-01-10
+  tags: []
