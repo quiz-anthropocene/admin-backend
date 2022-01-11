@@ -1055,8 +1055,8 @@
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2021/05/cropped-2-5.jpg
   has_audio: false
-  publish: false
-  spotlight: false
+  publish: true
+  spotlight: true
   created: 2022-01-10
   updated: 2022-01-11
   tags:
