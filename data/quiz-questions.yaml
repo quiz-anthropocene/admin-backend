@@ -2560,12 +2560,6 @@
   order: 10
   created: 2022-01-10
   updated: 2022-01-10
-- id: 585
-  quiz: 79
-  question: 14
-  order: 20
-  created: 2022-01-10
-  updated: 2022-01-10
 - id: 586
   quiz: 79
   question: 16
