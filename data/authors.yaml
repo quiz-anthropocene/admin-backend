@@ -20,7 +20,7 @@
   question_count: 8
   quiz_count: 1
 - name: Citoyens Pour le Climat
-  question_count: 19
+  question_count: 18
   quiz_count: 0
 - name: climat-en-questions.fr
   question_count: 2
@@ -59,7 +59,7 @@
   question_count: 9
   quiz_count: 1
 - name: laydgeur
-  question_count: 176
+  question_count: 169
   quiz_count: 2
 - name: Le Réveilleur
   question_count: 0
@@ -77,7 +77,7 @@
   question_count: 1
   quiz_count: 0
 - name: Raphael Odini
-  question_count: 41
+  question_count: 40
   quiz_count: 3
 - name: Restons les pieds sur terre
   question_count: 12
