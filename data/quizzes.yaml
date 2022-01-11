@@ -141,15 +141,15 @@
   conclusion: "<p>Vous voilà prêt à vous attaquer au lot 2 ! Ou, mieux encore, à vous\
     \ inscrire à un atelier. Plus d'information <a href=\"https://fresqueduclimat.org\"\
     >ici</a>.</p>\r\n\r\n<p> </p>"
-  difficulty_average: 2.1
+  difficulty_average: 2.0
   language: Français
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
   has_audio: false
-  publish: true
+  publish: false
   spotlight: false
   created: 2020-07-14
-  updated: 2021-10-24
+  updated: 2022-01-11
   tags:
   - 142
 - id: 9
@@ -1053,7 +1053,7 @@
   difficulty_average: 1.5
   language: Français
   author: Matthieu Massart
-  image_background_url: https://fresqueduclimat.org/wp-content/uploads/2021/05/cropped-2-5.jpg
+  image_background_url: https://www.grenoble.fr/uploads/Image/81/IMF_100/GAB_GRENOBLE2019/21428_586_fresque-climat-adultes.jpg
   has_audio: false
   publish: true
   spotlight: true
@@ -1061,7 +1061,9 @@
   updated: 2022-01-11
   tags:
   - 9
+  - 14
   - 51
+  - 93
   - 97
   - 98
   - 225
