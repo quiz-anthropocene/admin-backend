@@ -486,8 +486,8 @@
   - 11
   - 216
 - id: 14
-  text: Quelle serait la température de la Terre sans atmosphère et effet de serre
-    associé ?
+  text: De combien serait la température de la Terre sans l’effet de serre naturel
+    ?
   hint: ''
   type: QCM
   category: 1
@@ -934,7 +934,7 @@
   - 40
   - 51
 - id: 26
-  text: Lors de la dernière déglaciation, la Terre s'est réchauffée d'environ 4°C.
+  text: Lors de la dernière déglaciation, la Terre s'est réchauffée d'environ 5°C.
     En combien d'années ?
   hint: ''
   type: QCM
@@ -1101,7 +1101,7 @@
     est de 95% -, elle isole les eaux froides et maintient des températures basses.
     Du fait de la diminution de la surface de la banquise, une plus grande quantité
     de rayons atteint directement l’eau (flaques, océan) qui absorbe l’énergie solaire
-    plus qu’elle ne la réverbère. L’Océan se réchauffe davantage encore !'
+    plus qu’elle ne la réverbère. L’océan se réchauffe davantage encore !'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.wikipedia.org/wiki/Alb%C3%A9do#Climatologie
@@ -1162,7 +1162,7 @@
   - 142
   - 166
 - id: 32
-  text: Parmi les phénomènes suivants, lequel ne fait pas monter le niveau de l'océan
+  text: Parmi les phénomènes suivants, lequel ne fait PAS monter le niveau de l'océan
     ?
   hint: ''
   type: QCM
@@ -1344,7 +1344,8 @@
   - 142
   - 166
 - id: 37
-  text: Ce qui cause 80% de la déforestation, c'est...
+  text: La déforestation consiste à couper ou brûler des arbres au-delà de leur capacité
+    de renouvellement. La première cause de déforestation dans le monde, c'est...
   hint: ''
   type: QCM
   category: 1
@@ -1358,9 +1359,9 @@
   has_ordered_answers: false
   answer_explanation: Depuis l'arrivée de Homo Sapiens, on est ainsi passé de 60 à
     40 milliards d'hectares de forêts. Les principales causes de déforestation sont
-    l’agriculture (soja, huile de palme, ...) et l’élevage. Mais il y a aussi la construction
-    de barrages hydroélectriques et d’infrastructures routières, l’industrie minière,
-    les feux de forêt et le trafic de bois.
+    l’agriculture (soja, huile de palme, ...) et l’élevage, pour 80%. Mais il y a
+    aussi la construction de barrages hydroélectriques et d’infrastructures routières,
+    l’industrie minière, les feux de forêt et le trafic de bois.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2015/09/07/80-de-la-deforestation-est-due-a-l-agriculture_4747867_3244.html
@@ -2529,8 +2530,8 @@
   - 11
   - 216
 - id: 70
-  text: 'Dans la consommation d''énergie mondiale, quelle est la part des énergies
-    fossiles ? '
+  text: Quelle est la part des énergies fossiles dans la consommation d'énergie mondiale
+    ?
   hint: ''
   type: QCM
   category: 5
@@ -2542,13 +2543,18 @@
   answer_option_d: 95%
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: Pétrole (33%), Charbon (27%), Gaz (23%)
+  answer_explanation: 'Pétrole (33%), Charbon (27%), Gaz (23%)
+
+    Et oui ! On parle beaucoup d’électricité et d’énergie renouvelable. Mais notre
+    mode de vie est très largement dépendant de l’usage des énergies fossiles. Que
+    ce soit pour nos transports, nos objets (le plastique), nos médicaments, nos vêtements,
+    notre chauffage...'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/chiffres-cles-production-d-energie
   answer_scientific_url: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://ourworldindata.org/grapher/exports/energy-consumption-by-source-and-region.png
+  answer_image_url: https://ourworldindata.org/grapher/exports/global-primary-energy.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -6896,21 +6902,21 @@
   - 12
   - 13
 - id: 194
-  text: Si la tendance actuelle des émissions se poursuit, à combien estime-t-on l'élévation
-    du niveau de la mer en 2100 par rapport à l’ère pré-industrielle ?
+  text: Si on ne fait rien, de combien risque de monter le niveau de la mer d’ici
+    2100 ?
   hint: ''
   type: QCM
   category: 6
   difficulty: 1
   language: Français
-  answer_option_a: 1 m
-  answer_option_b: 3 m
-  answer_option_c: 7 m
-  answer_option_d: 10 m
+  answer_option_a: 1m en prenant 1850 comme référence
+  answer_option_b: 3m
+  answer_option_c: 7m
+  answer_option_d: 10m
   answer_correct: a
   has_ordered_answers: true
   answer_explanation: Le niveau de la mer a augmenté d’environ 30 cm depuis l’ère
-    pré-industrielle, et selon les projections du scénario tendanciel (RCP8.5) le
+    pré-industrielle, et selon les projections du scénario tendanciel (SSP 8.5) le
     niveau augmentera encore d’environ 70 cm d’ici 2100.
   answer_audio: ''
   answer_video: ''
@@ -8432,7 +8438,7 @@
   answer_extra_info: https://twitter.com/laydgeur/status/1146157143856431106
   author: laydgeur
   validator: Raphael Odini
-  validation_status: Validée
+  validation_status: Écartée
   added: 2019-07-02
   created: 2020-05-07
   updated: 2020-09-28
@@ -8810,7 +8816,7 @@
   answer_extra_info: https://twitter.com/laydgeur/status/1151581846184046593
   author: laydgeur
   validator: Raphael Odini
-  validation_status: Validée
+  validation_status: Écartée
   added: 2019-07-17
   created: 2020-05-20
   updated: 2020-09-28
@@ -14383,7 +14389,7 @@
   answer_extra_info: ''
   author: Raphael Odini
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-05-25
   created: 2020-05-28
   updated: 2020-09-28
@@ -15069,15 +15075,15 @@
   answer_option_a: Improbable
   answer_option_b: Aussi probable qu’improbable
   answer_option_c: Probable
-  answer_option_d: Extrêmement probable
+  answer_option_d: Absolument sûr
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: 'Extrait du résumé pour décideurs du 5ème rapport du GIEC (2014)
-    : « Il est extrêmement probable que l’influence de l’homme soit la cause principale
-    du réchauffement observé depuis le milieu du XXe siècle». Le mot "extrêmement
-    probable" signifie un degré de confiance dans l’affirmation supérieur à 95%. Cette
-    probabilité était de 90 % dans le précédent rapport du GIEC en 2007 et de 66 %
-    dans celui de 2001.'
+  answer_explanation: Depuis le dernier rapport (AR6) du GIEC publié en 2021, plus
+    de doute possible. D’une part, il est incontestable que l’influence humaine a
+    réchauffé l’atmosphère, les océans et les terres. Des changements rapides et généralisés
+    s’y sont produits. Les conséquences sont également majeures pour les zones gelées
+    et pour la biosphère. D’autre part, on peut désormais affirmer que 100% du réchauffement
+    climatique est dû aux activités humaines. C’est un fait établi sans équivoque.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2014/04/14/rechauffement-les-dix-points-marquants-du-rapport-du-giec_4399907_3244.html
@@ -16448,7 +16454,7 @@
   answer_extra_info: ''
   author: Citoyens Pour le Climat
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-06-11
   created: 2020-06-24
   updated: 2020-09-28
@@ -16862,7 +16868,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-06-14
   created: 2020-06-24
   updated: 2020-06-24
@@ -17004,7 +17010,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-06-14
   created: 2020-06-24
   updated: 2020-06-24
@@ -17038,7 +17044,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-06-14
   created: 2020-06-24
   updated: 2020-07-30
@@ -17073,7 +17079,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-06-14
   created: 2020-06-24
   updated: 2020-06-24
@@ -17283,7 +17289,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-06-17
   created: 2020-06-24
   updated: 2020-09-28
@@ -18932,22 +18938,21 @@
   - 81
 - id: 541
   text: Considérons toute l'énergie retenue en une année par l'effet de serre d'origine
-    humaine et prenons comme unité de mesure l'énergie libérée par la bombe nucléaire
-    qui a anéanti Hiroshima. Combien obtient-on ?
+    humaine et comparons-la à l’énergie libérée par la bombe nucléaire d’Hiroshima,c’est...
   hint: ''
   type: QCM
   category: 1
   difficulty: 3
   language: Français
-  answer_option_a: 1 600 Hiroshima par jour (~1 par minute)
-  answer_option_b: 16 000 Hiroshima par jour (~10 par minute)
-  answer_option_c: 160 000 Hiroshima par jour (~2 par seconde)
+  answer_option_a: 1 600 fois plus (~1 bombe par minute)
+  answer_option_b: 16 000  fois plus  (~10 par minute)
+  answer_option_c: 160 000  fois plus (~2 par seconde)
   answer_option_d: 1 600 000 Hiroshima par jour (~20 par seconde)
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: L'énergie dégagée par la bombe atomique d'Hiroshima est estimée
     à 15 000 tonnes de TNT, soit 63 000 milliards de Joule. La puissance du forçage
-    radiatif des gaz à effet de serre d'origine humaine (2.29 W/m²) sur la surface
+    radiatif des gaz à effet de serre d'origine humaine (2.3 W/m²) sur la surface
     de la terre est d'environ 1,7 millions de milliards de watts, ce qui fait une
     énergie journalière d'environ 100 milliards de milliards de Joule. Soit la même
     énergie que 1,6 millions de bombes nucléaires d'Hiroshima par jour (18 par seconde).
@@ -23073,7 +23078,7 @@
   - 92
   - 213
 - id: 657
-  text: Que devient majoritairement le CO2 émis dans l'atmosphère ?
+  text: Que devient le CO2 émis dans l'atmosphère par les activités humaines ?
   hint: ''
   type: QCM
   category: 1
@@ -23082,7 +23087,7 @@
   answer_option_a: Il reste dans l'atmosphère.
   answer_option_b: Il est dissout dans les océans
   answer_option_c: Il est absorbé par la végétation (photosynthèse)
-  answer_option_d: ''
+  answer_option_d: Il disparaît naturellement
   answer_correct: a
   has_ordered_answers: false
   answer_explanation: 'Sur l’ensemble du CO2 émis par les activités humaines :
@@ -30233,7 +30238,7 @@
   tags:
   - 37
 - id: 844
-  text: Quelle proportion de l'eau sur terre est de l'eau douce sur ?
+  text: Quelle proportion de l'eau sur terre est de l'eau douce ?
   hint: ''
   type: QCM
   category: 7
@@ -32697,9 +32702,9 @@
   - 5
   - 239
 - id: 927
-  text: Imaginons que nous réunissions toutes les vaches du monde dans un pays. En
-    quelle position ce pays arriverait-il en termes d’émissions de gaz à effet de
-    serre ?
+  text: Imaginons que nous réunissions toutes les vaches du monde dans un même pays.
+    En quelle position ce pays arriverait-il en termes d’émissions de gaz à effet
+    de serre ?
   hint: ''
   type: QCM
   category: 1
