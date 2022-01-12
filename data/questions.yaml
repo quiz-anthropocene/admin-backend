@@ -2555,7 +2555,8 @@
   answer_scientific_url: ''
   answer_reading_recommendation: ''
   answer_image_url: https://ourworldindata.org/grapher/exports/global-primary-energy.png
-  answer_image_explanation: ''
+  answer_image_explanation: Evolution de la consommation d’énergie primaire dans le
+    monde, par source
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Raphael Odini
@@ -23078,7 +23079,7 @@
   - 92
   - 213
 - id: 657
-  text: Que devient le CO2 émis dans l'atmosphère par les activités humaines ?
+  text: Que devient le plus gros du CO2 émis par les activités humaines ?
   hint: ''
   type: QCM
   category: 1
@@ -23098,14 +23099,17 @@
 
     - et 44% restent dans l’atmosphère. Ceci entraine donc une augmentation de sa
     concentration. Or, comme le CO2 est un gaz à effet de serre, cela a comme conséquence
-    de réchauffer le climat.'
+    de réchauffer le climat.
+
+    Le CO2 ne disparaît pas naturellement, c’est un composé très stable chimiquement.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
   answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/19/files/GCP_CarbonBudget_2019.pdf
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/324.png
-  answer_image_explanation: ''
+  answer_image_explanation: 'A gauche, les sources : énergies fossiles et déforestation.
+    A droite, les puits, sur la période 2009-2018'
   answer_extra_info: https://twitter.com/laydgeur/status/1322285904187314178
   author: laydgeur
   validator: Matthieu Massart
