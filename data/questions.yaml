@@ -23089,9 +23089,9 @@
   language: Français
   answer_option_a: Une partie subsiste dans l’atmosphère.
   answer_option_b: Une partie se dissout dans les océans
-  answer_option_c: Une partie est absorbé par les plantes
+  answer_option_c: Une partie est absorbée par les plantes
   answer_option_d: Il se transforme et disparaît très vite
-  answer_correct: a
+  answer_correct: bcd
   has_ordered_answers: false
   answer_explanation: 'Sur l’ensemble du CO2 émis par les activités humaines :
 
@@ -23107,12 +23107,12 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/19/files/GCP_CarbonBudget_2019.pdf
+  answer_scientific_url: https://essd.copernicus.org/preprints/essd-2021-386/
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/324.png
   answer_image_explanation: 'A gauche, les sources : énergies fossiles et déforestation.
     A droite, les puits, sur la période 2009-2018'
-  answer_extra_info: https://twitter.com/laydgeur/status/1322285904187314178
+  answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
   validation_status: Validée
