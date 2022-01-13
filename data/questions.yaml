@@ -23090,9 +23090,9 @@
   answer_option_a: Une partie subsiste dans l’atmosphère.
   answer_option_b: Une partie se dissout dans les océans
   answer_option_c: Une partie est absorbée par les plantes
-  answer_option_d: Il se transforme et disparaît très vite
-  answer_correct: bcd
-  has_ordered_answers: false
+  answer_option_d: La plus grande partie se transforme et disparaît très vite
+  answer_correct: abc
+  has_ordered_answers: true
   answer_explanation: 'Sur l’ensemble du CO2 émis par les activités humaines :
 
     - 23% vont dans les océans (et contribuent à son acidification)
