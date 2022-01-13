@@ -15066,25 +15066,27 @@
   tags:
   - 22
 - id: 428
-  text: D'après les scientifiques du GIEC, le fait que les activités humaines soient
-    la cause principale du changement climatique actuel est..
+  text: Dans leur dernier rapport de 2021, comment les scientifiques du GIEC estiment-ils
+    la probabilité que le changement climatique actuel soit dû aux activités humaines
+    ?
   hint: L’influence de l’homme sur le climat est clairement établie.
   type: QCM
   category: 1
   difficulty: 0
   language: Français
-  answer_option_a: Improbable
-  answer_option_b: Aussi probable qu’improbable
-  answer_option_c: Probable
+  answer_option_a: Aussi probable qu’improbable
+  answer_option_b: Probable
+  answer_option_c: Très probable
   answer_option_d: Absolument sûr
   answer_correct: d
   has_ordered_answers: true
-  answer_explanation: Depuis le dernier rapport (AR6) du GIEC publié en 2021, plus
-    de doute possible. D’une part, il est incontestable que l’influence humaine a
-    réchauffé l’atmosphère, les océans et les terres. Des changements rapides et généralisés
-    s’y sont produits. Les conséquences sont également majeures pour les zones gelées
-    et pour la biosphère. D’autre part, on peut désormais affirmer que 100% du réchauffement
-    climatique est dû aux activités humaines. C’est un fait établi sans équivoque.
+  answer_explanation: Depuis le dernier rapport (AR6) du GIEC publié en 2021, c’est
+    un fait qui ne souffre plus le moindre doute. D’une part, il est incontestable
+    que l’influence humaine a réchauffé l’atmosphère, les océans et les terres ; des
+    changements rapides et généralisés s’y sont produits et les conséquences sont
+    également majeures pour les zones gelées et pour la biosphère. D’autre part, on
+    peut désormais affirmer que 100% du réchauffement climatique est dû aux activités
+    humaines.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2014/04/14/rechauffement-les-dix-points-marquants-du-rapport-du-giec_4399907_3244.html
@@ -23079,16 +23081,16 @@
   - 92
   - 213
 - id: 657
-  text: Que devient le plus gros du CO2 émis par les activités humaines ?
+  text: Que devient le CO2 que nous émettons
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: 1
   difficulty: 2
   language: Français
-  answer_option_a: Il reste dans l'atmosphère.
-  answer_option_b: Il est dissout dans les océans
-  answer_option_c: Il est absorbé par la végétation (photosynthèse)
-  answer_option_d: Il disparaît naturellement
+  answer_option_a: Une partie subsiste dans l’atmosphère.
+  answer_option_b: Une partie se dissout dans les océans
+  answer_option_c: Une partie est absorbé par les plantes
+  answer_option_d: Il se transforme et disparaît très vite
   answer_correct: a
   has_ordered_answers: false
   answer_explanation: 'Sur l’ensemble du CO2 émis par les activités humaines :
@@ -23098,8 +23100,8 @@
     - 29% sont absorbés par la végétation
 
     - et 44% restent dans l’atmosphère. Ceci entraine donc une augmentation de sa
-    concentration. Or, comme le CO2 est un gaz à effet de serre, cela a comme conséquence
-    de réchauffer le climat.
+    concentration. Or, comme le CO2 est un gaz à effet de serre, cela a comme conséquence  d’accumuler
+    de l’énergie et de réchauffer le climat.
 
     Le CO2 ne disparaît pas naturellement, c’est un composé très stable chimiquement.'
   answer_audio: ''
