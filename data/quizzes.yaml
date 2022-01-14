@@ -1045,12 +1045,13 @@
   introduction: <p>La Fresque du Climat, c’est un atelier ludique, participatif et
     créatif sur le changement climatique. Il est basé sur l’intelligence collective
     et est extrêmement pédagogique. En 3 heures, vous découvrez les mécanismes du
-    climat et les conséquences de son dérèglement. Déjà 300 000 personnes y ont participé
-    à travers le monde. A vous de tester vos connaissances !</p>
+    climat et les conséquences de son dérèglement, vous débattez entre vous et élaborez
+    des pistes d'action pour le limiter et s'y adapter. Déjà 300 000 personnes y ont
+    participé à travers le monde. A vous de tester vos connaissances !</p>
   conclusion: <p>Ca vous a plu ? Des points qui vous étaient inconnus ? Alors n'hésitez
     plus, inscrivez-vous à un atelier de la <a href="http://fresqueduclimat.org">Fresque
     du Climat</a>. Vous pourrez même rapidement devenir animateur à votre tour.</p>
-  difficulty_average: 1.5
+  difficulty_average: 1.7
   language: Français
   author: Matthieu Massart
   image_background_url: https://www.grenoble.fr/uploads/Image/81/IMF_100/GAB_GRENOBLE2019/21428_586_fresque-climat-adultes.jpg
@@ -1058,7 +1059,7 @@
   publish: true
   spotlight: true
   created: 2022-01-10
-  updated: 2022-01-13
+  updated: 2022-01-14
   tags:
   - 9
   - 13
