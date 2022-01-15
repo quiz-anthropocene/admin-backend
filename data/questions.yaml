@@ -486,8 +486,8 @@
   - 11
   - 216
 - id: 14
-  text: De combien serait la température de la Terre sans l’effet de serre naturel
-    ?
+  text: De combien serait la température moyenne à la surface de la Terre sans l’effet
+    de serre naturel ?
   hint: ''
   type: QCM
   category: 1
@@ -6903,14 +6903,14 @@
   - 12
   - 13
 - id: 194
-  text: Si on ne fait rien, de combien risque de monter le niveau de la mer d’ici
-    2100 ?
+  text: Si on ne fait rien, de combien le niveau des mers aura monté en 2100 par rapport
+    à 1850 ?
   hint: ''
   type: QCM
   category: 6
   difficulty: 1
   language: Français
-  answer_option_a: 1m en prenant 1850 comme référence
+  answer_option_a: '1m '
   answer_option_b: 3m
   answer_option_c: 7m
   answer_option_d: 10m
@@ -12572,7 +12572,7 @@
   - 20
 - id: 358
   text: En combien de jours un Américain émet-il autant de CO2 qu'un Éthiopien en
-    un an ?
+    un an (chiffres 2018) ?
   hint: ''
   type: QCM
   category: 2
@@ -30848,8 +30848,8 @@
   answer_scientific_url: https://www.lsa-conso.fr/l-effet-parc-moteur-de-la-croissance-des-hypers-et-du-hard-discount,129295
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/859.png
-  answer_image_explanation: Bihouix, L'âge des low-techs (2014)
-  answer_extra_info: Bihouix, L'âge des low-techs (2014)
+  answer_image_explanation: 'voir aussi : Bihouix, L''âge des low-techs (2014)'
+  answer_extra_info: 'voir aussi : Bihouix, L''âge des low-techs (2014)'
   author: Max Pinsard
   validator: Matthieu Massart
   validation_status: Validée
@@ -30942,8 +30942,8 @@
 - id: 862
   text: "En 1975, le penseur Ivan Illich a estimé la \"vitesse généralisée\", en considérant\
     \ non seulement le temps effectif du déplacement, mais aussi  le temps que l’on\
-    \ passe à se donner les moyens du déplacement.  \nA combien estime-t-on cette\
-    \ \"vitesse généralisée\" ?"
+    \ passe à se donner les moyens du déplacement.  \nDe nos jours, à combien estime-t-on\
+    \ cette \"vitesse généralisée\" ?"
   hint: Pensez à tout ce qu'il faut pour avoir votre véhicule, en état de marche...
   type: QCM
   category: 6
