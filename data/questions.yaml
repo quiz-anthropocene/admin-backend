@@ -26247,7 +26247,7 @@
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: Les avionneurs et les compagnies aériennes bénéficient de subventions
-    importantes. Tout le monde - y compris les contribuables qui ne volent pas - paient
+    importantes. Tout le monde - y compris les contribuables qui ne volent pas - paie
     ces subventions. A l’heure de l’urgence climatique se pose la question de la remise
     en cause des ces niches fiscales, sachant que le transport aérien est le mode
     de transport qui pollue le plus par unité de temps. Cela crée une distorsion de
@@ -34219,23 +34219,23 @@
   - 17
   - 72
 - id: 967
-  text: 'Faire un aller/retour Paris - New-York, c''est l''équivalent en empreinte
-    carbone : '
+  text: Faire un aller/retour Paris - New-York, c'est l'équivalent en empreinte carbone
+    de...
   hint: ''
   type: QCM-RM
   category: 1
   difficulty: 4
   language: Français
-  answer_option_a: Manger de la viande une fois par jour pendant un an
-  answer_option_b: Faire 10 000 km en voiture seul pendant un an
-  answer_option_c: Chauffer un logement de 40m2 au fioul ou au gaz à 19°C le jour
+  answer_option_a: manger de la viande une fois par jour pendant un an
+  answer_option_b: faire 10,000 km en voiture seul pendant un an
+  answer_option_c: chauffer un logement de 40m2 au fioul ou au gaz à 19°C le jour
     / 16°C la nuit pendant un an
-  answer_option_d: A acheter entre 2000€ et 5000€ de biens de consommation (livres,
+  answer_option_d: acheter entre 2,000€ et 5,000€ de biens de consommation (livres,
     électronique...) pendant un an
   answer_correct: abcd
   has_ordered_answers: false
   answer_explanation: Les 4 réponses sont correctes. Un aller-retour Paris / New-York
-    (environ 12 000km) pour un passager émet 1,800 kgCO2e pour la production, l'approvisionnement
+    (environ 12,000km) pour un passager émet 1,800 kgCO2e pour la production, l'approvisionnement
     et la combustion du kérosène et les avions génèrent des effets supplémentaires
     qui impactent le climat.
   answer_audio: ''
@@ -34243,7 +34243,7 @@
   answer_accessible_url: ''
   answer_scientific_url: https://monconvertisseurco2.fr/?co2=1800
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/967.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/967.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: FJG
