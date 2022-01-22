@@ -3233,7 +3233,7 @@
   answer_extra_info: ''
   author: Raphael Odini
   validator: laydgeur
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-04-24
   created: 2020-04-26
   updated: 2020-09-28
@@ -3300,7 +3300,7 @@
   answer_extra_info: ''
   author: Raphael Odini
   validator: laydgeur
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-04-24
   created: 2020-04-26
   updated: 2020-09-28
@@ -26338,7 +26338,7 @@
   answer_extra_info: ''
   author: Jean-Philippe Pernin
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2021-03-05
   created: 2021-01-06
   updated: 2021-04-19
