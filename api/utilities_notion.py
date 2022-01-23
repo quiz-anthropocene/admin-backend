@@ -17,7 +17,7 @@ QUESTION_URL_FIELDS = [field.name for field in Question._meta.fields if type(fie
 
 # Official API
 
-def get_question_table_pages(start_cursor=None):
+def get_question_table_pages(sort_direction="descending", extra_data=None, start_cursor=None):
     """
     Retrive 100 pages from the question table
     """
@@ -27,11 +27,28 @@ def get_question_table_pages(start_cursor=None):
         "Authorization": f"Bearer {settings.NOTION_API_SECRET}",
         "Notion-Version": f"{settings.NOTION_API_VERSION}"
     }
-    data = {"sorts": [{"property": "Last edited time", "direction": "descending"}]}
+    data = {"sorts": [{"property": "Last edited time", "direction": sort_direction}]}
+    if extra_data:
+        data = {**data, **extra_data}
     if start_cursor:
         data["start_cursor"] = start_cursor
 
     response = requests.post(url, headers=headers, data=json.dumps(data))
+    if response.status_code != 200:
+        raise Exception(json.loads(response._content))
+
+    return response
+
+
+def update_page_properties(page_id, data={}):
+    url = f"https://api.notion.com/v1/pages/{page_id}"
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {settings.NOTION_API_SECRET}",
+        "Notion-Version": f"{settings.NOTION_API_VERSION}"
+    }
+
+    response = requests.patch(url, headers=headers, data=json.dumps(data))
     if response.status_code != 200:
         raise Exception(json.loads(response._content))
 
