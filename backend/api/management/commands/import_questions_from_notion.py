@@ -24,11 +24,20 @@ QUESTION_FIELDS_TO_IGNORE = [
 class Command(BaseCommand):
     """
     Usage:
-    - python manage.py import_questions_from_notion # last 100 questions updated
+    - python manage.py import_questions_from_notion  # last 100 questions updated
+    - python manage.py import_questions_from_notion --start_cursor 5f40d3d8-d17c-4754-9574-b924f4724e48  # noqa
 
     Help:
     - '///' ? delimeter to show lists (string split) in the template
     """
+    def add_arguments(self, parser):
+        parser.add_argument(
+            "--start_cursor",
+            type=str,
+            default=None,
+            help="Fetch next page. Optional.",
+        )
+
     def handle(self, *args, **options):
         #########################################################
         # Init
@@ -51,7 +60,7 @@ class Command(BaseCommand):
         start_time = time.time()
 
         try:
-            notion_questions_response = utilities_notion.get_question_table_pages()
+            notion_questions_response = utilities_notion.get_question_table_pages(start_cursor=options["start_cursor"])  # noqa
         except:  # noqa
             self.stdout.write("Erreur accès à l'API Notion")
             return
