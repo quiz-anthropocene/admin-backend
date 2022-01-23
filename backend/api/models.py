@@ -179,10 +179,16 @@ class Question(models.Model):
     answer_accessible_url = models.URLField(
         max_length=500, blank=True, help_text="Un lien pour aller plus loin"
     )
+    answer_accessible_url_text = models.CharField(
+        max_length=500, blank=True, help_text="Le texte pour remplace l'affichage du lien"
+    )
     answer_scientific_url = models.URLField(
         max_length=500,
         blank=True,
         help_text="La source scientifique du chiffre (rapport)",
+    )
+    answer_scientific_url_text = models.CharField(
+        max_length=500, blank=True, help_text="Le texte pour remplace l'affichage du lien de la source scientifique"
     )
     answer_reading_recommendation = models.TextField(
         blank=True, help_text="Un livre pour aller plus loin"
