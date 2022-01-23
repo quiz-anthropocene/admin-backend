@@ -188,7 +188,7 @@ class Question(models.Model):
         help_text="La source scientifique du chiffre (rapport)",
     )
     answer_scientific_url_text = models.CharField(
-        max_length=500, blank=True, help_text="Le texte pour remplace l'affichage du lien de la source scientifique"
+        max_length=500, blank=True, help_text="Le texte pour remplace l'affichage du lien de la source scientifique"  # noqa
     )
     answer_reading_recommendation = models.TextField(
         blank=True, help_text="Un livre pour aller plus loin"
