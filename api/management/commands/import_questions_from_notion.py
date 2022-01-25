@@ -11,7 +11,6 @@ from api import constants, utilities_notion
 from api.models import Question, Category, Tag, Quiz, Contribution
 
 
-SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS = 15
 QUESTION_FIELDS_TO_IGNORE = [
     "Text", "Tweet", "Intent",  # "text_short"
     "answer_explanation_extended", "answer_explanation_short",
