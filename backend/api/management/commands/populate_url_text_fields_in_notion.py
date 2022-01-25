@@ -25,7 +25,7 @@ class Command(BaseCommand):
 
     Usage:
     python manage.py populate_url_text_fields_in_notion
-    python manage.py populate_url_text_fields_in_notion --field answer_accessible_url
+    python manage.py populate_url_text_fields_in_notion --field answer_scientific_url
     """
     def add_arguments(self, parser):
         parser.add_argument(
