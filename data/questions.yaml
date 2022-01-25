@@ -20,7 +20,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.planetoscope.com/agriculture-alimentation/1556-le-gaspillage-alimentaire-dans-le-monde.html
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: 'Planetoscope - Statistiques : Le gaspillage alimentaire
+    dans le monde'
   answer_scientific_url: http://www.fao.org/food-loss-and-food-waste/fr/
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -102,7 +103,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lafabriqueecologique.fr/transition-energetique-le-role-incontournable-de-leffet-rebond/
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: 'Transition énergétique : le rôle incontournable de
+    l’effet rebond - La fabrique écologique'
   answer_scientific_url: http://www.decroissance.qc.ca/sites/default/files/journal/Schneider_l_Ecologiste.pdf
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -539,7 +541,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.wikipedia.org/wiki/Effet_de_serre
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Effet de serre — Wikipédia
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -578,7 +580,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.wikipedia.org/wiki/Effet_de_serre#Les_gaz_%C3%A0_%C2%AB_effet_de_serre_%C2%BB
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Effet de serre — Wikipédia
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -617,7 +619,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: http://www.meteofrance.fr/climat-passe-et-futur/le-rechauffement-observe-a-l-echelle-du-globe-et-en-france
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: METEO FRANCE - Le site institutionnel de Météo-France
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -657,7 +659,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO₂ and Greenhouse Gas Emissions - Our World in Data
   answer_reading_recommendation: ''
   answer_image_url: https://img.aws.la-croix.com/2018/12/07/1300988266/Emissions-carbone-monde_1_1399_1250.jpg
   answer_image_explanation: ''
@@ -669,7 +671,6 @@
   created: 2020-03-10
   updated: 2020-09-28
   tags:
-  - 2
   - 142
   - 147
   - 149
@@ -1096,7 +1097,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.wikipedia.org/wiki/Acidification_des_oc%C3%A9ans
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Acidification des océans — Wikipédia
   answer_scientific_url: https://ocean-climate.org/?page_id=4538
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -1133,7 +1134,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://dr-petrole-mr-carbone.com/quand-la-depollution-de-lair-aggrave-le-rechauffement/
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Quand la dépollution de l’air aggrave le réchauffement…
+    | Dr Pétrole & Mr Carbone
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -1176,7 +1178,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.wikipedia.org/wiki/Alb%C3%A9do#Climatologie
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Albédo — Wikipédia
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -1257,7 +1259,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Élévation du niveau de la mer — Wikipédia
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -1410,7 +1412,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/biodiversite/article/2014/10/08/l-acidification-des-oceans-aura-d-importantes-consequences-pour-la-biodiversite_4502183_1652692.html
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: L’acidification des océans aura d’importantes conséquences
+    pour la biodiversité
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -1449,7 +1452,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2015/09/07/80-de-la-deforestation-est-due-a-l-agriculture_4747867_3244.html
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: 80 % de la déforestation est due à l’agriculture
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -2446,7 +2449,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://news.un.org/fr/story/2019/06/1045681
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Deux milliards de personnes de plus sur la Terre en
+    2050, selon l’ONU | ONU Info
   answer_reading_recommendation: ''
   answer_image_url: https://ourworldindata.org/grapher/exports/dependency-age-groups-to-2100.png
   answer_image_explanation: ''
@@ -2458,7 +2462,6 @@
   created: 2020-03-10
   updated: 2020-09-28
   tags:
-  - 2
   - 24
   - 27
   - 28
@@ -2727,7 +2730,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.connaissancedesenergies.org/fiche-pedagogique/chiffres-cles-production-d-energie
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Les chiffres clés de la production d'énergie dans le
+    monde
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -3444,7 +3448,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ecologique-solidaire.gouv.fr/strategie-nationale-bas-carbone-snbc
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Stratégie Nationale Bas-Carbone (SNBC) | Ministère de
+    la Transition écologique
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -3515,7 +3520,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ademe.fr/
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Agence de la transition écologique - ADEME
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -3711,7 +3716,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ledauphine.com/actualite/2019/09/27/autonomie-alimentaire-avignon-et-valence-championnes-de-france
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: 'L''INFO EN MOINS D''UNE MINUTE. Autonomie alimentaire
+    : Avignon et Valence, championnes de France'
   answer_scientific_url: https://www.utopies.com/publications/autonomie-alimentaire-des-villes/
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -5547,7 +5553,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.nord-stream.com/
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Nord Stream AG
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -5692,7 +5698,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Data overview - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/046.jpg
   answer_image_explanation: ''
@@ -6155,7 +6161,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Data overview - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/160.png
   answer_image_explanation: ''
@@ -7083,7 +7089,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://www.globalcarbonatlas.org/en/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://reporterre.net/local/cache-vignettes/L720xH480/arton16196-43e69.png
   answer_image_explanation: ''
@@ -7369,7 +7375,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://information.tv5monde.com/info/elevation-des-oceans-un-nouveau-rapport-du-giec-tres-inquietant-318597
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: 'Élévation des océans : un nouveau rapport du GIEC très
+    inquiétant'
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter13_FINAL.pdf
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -8473,7 +8480,7 @@
   answer_audio: ''
   answer_video: https://youtu.be/n3LyVbGUFu4?t=1320
   answer_accessible_url: https://www.demographie-responsable.org/l-empreinte-ecologique.html
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: L'empreinte écologique
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -8973,7 +8980,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.cbs.nl/en-gb/news/2019/16/energy-consumption-down-in-2018
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Energy consumption down in 2018
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -9304,7 +9311,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.thieme-connect.com/products/ejournals/abstract/10.1055/a-1101-5750
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Thieme E-Journals - Sports Medicine International Open
+    / Abstract
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -9373,7 +9381,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lesechos.fr/finance-marches/marches-financiers/petrole-le-poids-de-lopep-na-jamais-ete-aussi-faible-1147265
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: 'Pétrole : le poids de l''Opep au plus bas depuis trente
+    ans | Les Echos'
   answer_scientific_url: https://www.opec.org/opec_web/en/about_us/24.htm
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -9410,7 +9419,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/documentation-gene
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: ADEME - Site Bilans GES
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -10723,7 +10732,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/reports/the-future-of-rail
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: The Future of Rail – Analysis - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/170.jpg
   answer_image_explanation: ''
@@ -15078,7 +15087,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2020/05/04/d-ici-a-2070-un-tiers-de-l-humanite-pourrait-vivre-dans-des-endroits-aussi-chauds-que-le-sahara_6038639_3244.html?utm_source=PaidSocial&utm_medium=Facebook&utm_campaign=Fidelisation_Article&xtor=CS2-33281034-%5BFB%5D-%5Bteaser%5D-%5Babos%5D
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: D’ici à 2070, un tiers de l’humanité pourrait vivre
+    dans des endroits aussi chauds que le Sahara
   answer_scientific_url: https://www.pnas.org/content/early/2020/04/28/1910114117
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -15282,7 +15292,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.connaissancedesenergies.org/la-france-possede-le-premier-parc-nucleaire-au-monde-120514
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Classement des parcs nucléaires dans le monde par nombre
+    de réacteurs
   answer_scientific_url: https://www-pub.iaea.org/MTCD/Publications/PDF/RDS-2-39_web.pdf
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -15573,7 +15584,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.vikidia.org/wiki/Effet_de_serre
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Effet de serre - Vikidia, l’encyclopédie des 8-13 ans
   answer_scientific_url: http://www.cndp.fr/crdp-reunion/node/169
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -16033,7 +16044,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2014/04/14/rechauffement-les-dix-points-marquants-du-rapport-du-giec_4399907_3244.html
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: 'Réchauffement : les 10 points marquants du rapport
+    du GIEC'
   answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/03/WG1AR5_SummaryVolume_FINAL_FRENCH.pdf
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -16903,7 +16915,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: http://www.meteofrance.fr/climat-passe-et-futur/comprendre-le-climat-mondial/les-mots-de-la-climatologie
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: METEO FRANCE - Le site institutionnel de Météo-France
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -17478,8 +17490,9 @@
     jusqu’en 2011 (centrale de Schwander Lake en Corée du Sud).
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.edf.fr/groupe-edf/producteur-industriel/energies-renouvelables/hydraulique/edf-hydraulique-bretagne-normandie/l-usine-maremotrice-de-la-rance/decouvrir-et-comprendre
-  answer_accessible_url_text: ''
+  answer_accessible_url: https://www.edf.fr/usine-maremotrice-rance/presentation
+  answer_accessible_url_text: 'Usine marémotrice de la Rance : un site unique en Europe
+    | EDF France'
   answer_scientific_url: https://en.wikipedia.org/wiki/List_of_tidal_power_stations
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -18108,7 +18121,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.edf.fr/groupe-edf/espaces-dedies/l-energie-de-a-a-z/tout-sur-l-energie/produire-de-l-electricite/qu-est-ce-que-la-biomasse
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Qu'est-ce que la biomasse ? | EDF France
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -18145,7 +18158,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.edf.fr/groupe-edf/espaces-dedies/l-energie-de-a-a-z/tout-sur-l-energie/produire-de-l-electricite/la-cogeneration
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: 'Électricité : qu’est-ce que la cogénération ? | EDF
+    France'
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -18735,7 +18749,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO₂ and Greenhouse Gas Emissions - Our World in Data
   answer_reading_recommendation: ''
   answer_image_url: https://ourworldindata.org/exports/annual-co2-emissions-per-country-da8ccccaf5fc9d6bab92c3527f0cc596_v20_850x600.svg
   answer_image_explanation: de 1890 à 2006
@@ -18747,7 +18761,6 @@
   created: 2020-06-24
   updated: 2020-11-29
   tags:
-  - 2
   - 13
   - 80
   - 81
@@ -18873,7 +18886,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.nature.com/articles/ncomms8537
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Climate-induced variations in global wildfire danger
+    from 1979 to 2013 | Nature Communications
   answer_reading_recommendation: ''
   answer_image_url: https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fncomms8537/MediaObjects/41467_2015_Article_BFncomms8537_Fig2_HTML.jpg?as=webp
   answer_image_explanation: ''
@@ -18972,9 +18986,9 @@
   answer_explanation: 5,4 millions de litres, soit un cube de 17,5m de coté
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.toulouse-metropole.fr/documents/10180/23808457/ToulouseMetropole_chiffres2018/03c1bc7f-2ce3-45fa-92f6-a58b0d8a1cb9
+  answer_accessible_url: ''
   answer_accessible_url_text: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.toulouse-metropole.fr/documents/10180/23808457/ToulouseMetropole_chiffres2018/03c1bc7f-2ce3-45fa-92f6-a58b0d8a1cb9
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
@@ -19836,7 +19850,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Greenhouse Gas Inventory Data
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -20037,7 +20051,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ourworldindata.org/co2/country/france?country=~FRA
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: 'France: CO2 Country Profile - Our World in Data'
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/538.png
   answer_image_explanation: ''
@@ -20050,7 +20064,6 @@
   updated: 2020-09-28
   tags:
   - 1
-  - 2
   - 13
 - id: 539
   text: 'Les États-Unis ont été le 1er pays au monde à émettre plus d''1 milliard
@@ -20079,7 +20092,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ourworldindata.org/grapher/annual-co2-emissions-per-country
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Annual CO₂ emissions - Our World in Data
   answer_reading_recommendation: ''
   answer_image_url: https://ourworldindata.org/grapher/exports/annual-co-emissions-by-region.png
   answer_image_explanation: ''
@@ -20196,7 +20209,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ourworldindata.org/co2/country/france?country=~FRA
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: 'France: CO2 Country Profile - Our World in Data'
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/542.png
   answer_image_explanation: ''
@@ -20266,7 +20279,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Greenhouse Gas Inventory Data
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -21929,7 +21942,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2019/08/06/pres-d-un-quart-de-la-population-mondiale-est-menace-par-une-penurie-d-eau_5497203_3244.html
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Près d’un quart des êtres humains menacés par la pénurie
+    d’eau
   answer_scientific_url: https://www.wri.org/blog/2019/08/17-countries-home-one-quarter-world-population-face-extremely-high-water-stress
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -23145,7 +23159,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/reports/ccus-in-clean-energy-transitions/ccus-in-the-transition-to-net-zero-emissions#abstract
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CCUS in the transition to net-zero emissions – CCUS
+    in Clean Energy Transitions – Analysis - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://bioenergyinternational.com/app/uploads/sites/3/2019/11/IEA_WEO2019_SDS_CO2_reductions.jpg
   answer_image_explanation: ''
@@ -23180,7 +23195,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.nature.com/articles/s41467-018-04423-1
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Estimating geological CO2 storage security to deliver
+    on climate mitigation | Nature Communications
   answer_reading_recommendation: ''
   answer_image_url: https://www.brgm.fr/sites/default/files/galerie_stockagegeol_01.jpg
   answer_image_explanation: ''
@@ -23488,7 +23504,7 @@
   answer_video: ''
   answer_accessible_url: ''
   answer_accessible_url_text: ''
-  answer_scientific_url: https://www.edf.fr/groupe-edf/producteur-industriel/nucleaire/atouts/expertise-nucleaire/cycle-du-combustible-nucleaire-edf-present-sur-toutes-les-phases
+  answer_scientific_url: https://www.edf.fr/groupe-edf/produire-une-energie-respectueuse-du-climat/l-energie-nucleaire/edf-une-expertise-nucleaire-unique/cycle-du-combustible-nucleaire-edf-present-sur-toutes-les-phases
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/297.png
@@ -23605,7 +23621,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://data.ene.iiasa.ac.at/iamc-1.5c-explorer/#/login?redirect=%2Fworkspaces
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: IXMP Scenario Explorer developed by IIASA
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -23657,7 +23673,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://francoisruffin.fr/aerien-quota-carbone-individuel/
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: 'Aérien : pour un quota carbone individuel'
   answer_reading_recommendation: ''
   answer_image_url: https://i.ytimg.com/vi/Nczi3jeJJuI/maxresdefault.jpg
   answer_image_explanation: ''
@@ -23938,7 +23954,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/chiffres-cles-du-climat-france-europe-et-monde-edition-2020-0?rubrique=&dossier=1263
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Chiffres clés du climat - France, Europe et Monde -
+    Édition 2020 | Données et études statistiques
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/308.png
   answer_image_explanation: ''
@@ -24391,7 +24408,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/reports/global-ev-outlook-2020
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Global EV Outlook 2020 – Analysis - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/320.png
   answer_image_explanation: ''
@@ -24508,7 +24525,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.rte-france.com/eco2mix/la-consommation-delectricite-en-france#
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Eco2mix – Consommation d’électricité moyenne en France  |
+    RTE
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/323.png
   answer_image_explanation: ''
@@ -24636,7 +24654,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/87b16988-f740-11ea-991b-01aa75ed71a1/language-en/format-PDF/source-170585611
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: EU energy in figures - Publications Office of the EU
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/326.png
   answer_image_explanation: ''
@@ -24672,7 +24690,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/87b16988-f740-11ea-991b-01aa75ed71a1/language-en/format-PDF/source-170585611
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: EU energy in figures - Publications Office of the EU
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/327.png
   answer_image_explanation: ''
@@ -24757,7 +24775,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/87b16988-f740-11ea-991b-01aa75ed71a1/language-en/format-PDF/source-170585611
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: EU energy in figures - Publications Office of the EU
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/329.png
   answer_image_explanation: ''
@@ -24795,7 +24813,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ec.europa.eu/eurostat/cache/infographs/energy/bloc-2c.html
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: From where do we import energy?
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/330.png
   answer_image_explanation: ''
@@ -24832,7 +24850,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Greenhouse Gas Inventory Data
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/331.png
   answer_image_explanation: ''
@@ -24912,7 +24930,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=USA&fuel=CO2%20emissions&indicator=CO2BySector
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Data overview - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/333.png
   answer_image_explanation: ''
@@ -25077,7 +25095,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.ecoconso.be/fr/content/comment-economiser-leau-et-lenergie-sous-sa-douche
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Comment économiser l’eau et l’énergie sous sa douche
+    ? | écoconso
   answer_reading_recommendation: ''
   answer_image_url: https://cdn.radiofrance.fr/s3/cruiser-production/2019/01/415ff1b9-dff4-4c4d-896b-12fa7e4f93ca/870x489_maxsportsworldtwo628478.jpg
   answer_image_explanation: ''
@@ -27160,7 +27179,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.liberation.fr/checknews/2019/02/13/est-ce-qu-un-aller-retour-en-avion-a-bali-emet-autant-de-co2-qu-une-annee-de-vie-en-france_1708854
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Est-ce qu'un aller-retour en avion à Bali émet autant
+    de CO2 qu'une année de vie en France ? – Libération
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -27881,7 +27901,8 @@
   answer_audio: https://www.franceculture.fr/emissions/les-nouvelles-de-leco/les-nouvelles-de-leco-du-mercredi-22-mai-2019
   answer_video: https://video.twimg.com/ext_tw_video/1359083103076106243/pu/vid/720x720/YgYWZ2v4EdMQNflK.mp4?tag=10
   answer_accessible_url: https://www.lemonde.fr/planete/article/2019/05/13/climat-une-etude-de-la-commission-europeenne-propose-de-taxer-le-kerosene-des-avions_5461201_3244.html
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: 'Climat : une étude de la Commission européenne propose
+    de taxer le kérosène des avions'
   answer_scientific_url: http://www.ftwatch.at/wp-content/uploads/2017/10/FT-Watch_Green-Flying_2017.pdf
   answer_scientific_url_text: ''
   answer_reading_recommendation: 'Source : L''illusion du voyage vert, p6, 2ème §'
@@ -27959,7 +27980,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/biodiversite/article/2016/11/28/l-extinction-des-pollinisateurs-menace-1-4-milliard-d-emplois-selon-un-rapport_5039767_1652692.html
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: L’extinction des pollinisateurs menace 1,4 milliard
+    d’emplois, selon un rapport
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0185809
@@ -28004,7 +28026,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/blog/petrole/2012/05/08/rarefaction-des-metaux-demain-le-peak-all/
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: 'Raréfaction des métaux : demain, le « peak all » –
+    Oil Man'
   answer_scientific_url: https://www.ademe.fr/sites/default/files/assets/documents/epuisement-metaux-mineraux-fiche-technique.pdf
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -32134,7 +32157,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.futura-sciences.com/planete/questions-reponses/eau-y-t-il-eau-douce-monde-805/
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Combien y a-t-il d'eau douce dans le monde ?
   answer_scientific_url: https://www.cieau.com/connaitre-leau/leau-dans-la-nature/eau-douce-tout-savoir/
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -32747,7 +32770,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://au-dela-du-climat.org/2017/10/01/pourquoi-les-high-tech-ne-nous-sauveront-pas-lage-des-low-tech-de-philippe-bihouix/
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Pourquoi les High Tech ne nous sauveront pas ! (« L’âge
+    des low tech » de Philippe Bihouix) – Au-delà du climat
   answer_scientific_url: https://www.lsa-conso.fr/l-effet-parc-moteur-de-la-croissance-des-hypers-et-du-hard-discount,129295
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -32814,40 +32838,42 @@
   text: Entre 2005 et 2020, le volume de données totales généré chaque année par l'ensemble
     des appareils dans le monde a été multiplié d'un facteur de l'ordre de...
   hint: ''
-  type: QCM-RM
+  type: QCM
   category: 2
   difficulty: 3
   language: Français
-  answer_option_a: 10 fois plus de sable que de ciment
-  answer_option_b: Presque 100 fois plus d'eau douce que de sable
-  answer_option_c: 5 fois plus de fer que de ciment et d'aluminium
-  answer_option_d: Des milliards de tonnes de fer et de ciment
-  answer_correct: abd
-  has_ordered_answers: false
-  answer_explanation: Si l'on compte en milliards de tonnes par an, l'eau douce exploitée
-    pointe à 4,000, le sable à 41, le gravier 9, le ciment 4. En revanche, la consommation
-    de fer n'est 'que' de 3 milliards de tonnes, et l'aluminium 60 millions de tonnes.
+  answer_option_a: entre 10 et 50
+  answer_option_b: entre 50 et 500
+  answer_option_c: entre 500 et 8,000
+  answer_option_d: entre 50,000 et 800,000
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: 'Les données totales créées sont passées de 100 millions (2005)
+    à 800 milliards de téraoctets par an (2020) [3], c’est-à-dire ×8000. En corrigeant
+    par l’augmentation du nombre d’internautes, le ratio devient ×2000. Durant ces
+    15 ans, la quantité de données circulant dans le réseau internet a été multipliée
+    par "seulement" 100.  Attention, l''évaluation de cette masse de données est difficile
+    à réaliser : par exemple, le site Statista affirmait plutôt 50 milliards de téraoctets
+    en 2020 (donc rapport ×500). Ce chiffre pourrait être de nouveau multiplié par
+    50 sur les 15 prochaines années (d''ici 2035).'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.oecd.org/fr/environnement/l-utilisation-de-matieres-premieres-devrait-doubler-d-ici-2060-ce-qui-aura-de-graves-repercussions-sur-l-environnement.htm
-  answer_accessible_url_text: ''
-  answer_scientific_url: https://www.visualcapitalist.com/all-the-worlds-metals-and-minerals-in-one-visualization/
+  answer_accessible_url: https://fr.statista.com/infographie/17800/big-data-evolution-quantite-donnees-numeriques-creees-dans-le-monde/
+  answer_accessible_url_text: '• Graphique: Le Big Bang du Big Data | Statista'
+  answer_scientific_url: https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/861.png
-  answer_image_explanation: '[https://ourworldindata.org/water-use-stress](https://ourworldindata.org/water-use-stress)'
-  answer_extra_info: USGS, Mineral commodity services (2020)
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/864.png
+  answer_image_explanation: IDC, cité par https://www.economist.com/special-report/2010/02/27/data-data-everywhere
+  answer_extra_info: ''
   author: Max Pinsard
   validator: Matthieu Massart
-  validation_status: Validée
-  added: 2021-02-08
-  created: 2021-02-14
-  updated: 2021-02-14
+  validation_status: Écartée
+  added: 2021-02-14
+  created: 2022-01-24
+  updated: 2022-01-24
   tags:
-  - 37
-  - 57
-  - 236
-  - 237
+  - 30
 - id: 862
   text: "En 1975, le penseur Ivan Illich a estimé la \"vitesse généralisée\", en considérant\
     \ non seulement le temps effectif du déplacement, mais aussi  le temps que l’on\
@@ -34755,7 +34781,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://blogs.mediapart.fr/edition/il-etait-une-fois-le-climat/article/080915/l-elevage-emet-plus-de-gaz-effet-de-serre-que-les-transports
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: L’élevage émet plus de gaz à effet de serre que les
+    transports — Le Club
   answer_scientific_url: http://www.fao.org/3/a-i6345f.pdf
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -35022,7 +35049,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://bonpote.com/empreinte-carbone-des-services-publics/
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Empreinte carbone des Services Publics
   answer_scientific_url: https://ree.developpement-durable.gouv.fr/themes/defis-environnementaux/changement-climatique/empreinte-carbone/article/l-empreinte-carbone-de-la-france
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
