@@ -968,12 +968,15 @@
     powerpoint interactif du futur avec ses cartes et sa corde à linge, l'atelier
     permet d'appréhender simplement les ordres de grandeur associés à nos émissions
     associées de tous les jours. A vous de tester vos connaissances.</p>
-  conclusion: <p>On pourrait imaginer à l'issue de ce quiz que des vies bas carbone,
+  conclusion: <p>On pourrait imaginer à l'issue de ce quiz qu'une vie bas carbone,
     ce ne sont que des contraintes sur nos modes de vie. Et pourtant...Et si c'était
     au contraire une invite à s'interroger sur ce qui donne du sel à notre existence
     sans émettre, ou si peu ? Cuisiner, jardiner, chanter, courir, nager, randonner,
     bricoler, danser, rêver, marcher, etc. A nous d'inventer nos vies bas carbone,
-    à la fois durables et désirables ! Pour en savoir plus rendez-vous <a href="https://www.resistanceclimatique.org/inventons_nos_vies_bas_carbone">ici</a>.</p>
+    à la fois durables et désirables ! Pour en savoir plus, rendez-vous <a href="https://www.resistanceclimatique.org/inventons_nos_vies_bas_carbone">ici</a>.
+    Vous pouvez aussi consulter cet <a href="https://bonpote.com/vivre-a-2-tonnes-co2e-par-an-cest-possible/">article
+    de synthèse</a> sur la page du blogeur Bon pote. Ou encorece <a href="https://www.resistanceclimatique.org/gildas_invbc">témoignage</a>
+    de Gildas, "résistant climatique".</p>
   difficulty_average: 2.6
   language: Français
   author: Collectif INVBC
@@ -982,7 +985,7 @@
   publish: true
   spotlight: true
   created: 2021-11-16
-  updated: 2021-12-03
+  updated: 2022-01-24
   tags:
   - 72
 - id: 77
