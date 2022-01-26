@@ -5,7 +5,7 @@
   question_count: 8
   quiz_count: 1
 - name: Aurélien Bigo
-  question_count: 10
+  question_count: 9
   quiz_count: 1
 - name: 'Aurélien Deragne, translation: Benoît Barraque'
   question_count: 0
@@ -20,10 +20,10 @@
   question_count: 8
   quiz_count: 1
 - name: Citoyens Pour le Climat
-  question_count: 18
+  question_count: 17
   quiz_count: 0
 - name: climat-en-questions.fr
-  question_count: 2
+  question_count: 3
   quiz_count: 0
 - name: Collectif INVBC
   question_count: 0
