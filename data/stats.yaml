@@ -10,16 +10,16 @@ question_per_validation_status_count:
   total: 18
 - validation_status: A valider
   total: 1
-quiz_count: 44
+quiz_count: 45
 quiz_per_publish_count:
 - publish: true
   total: 33
 - publish: false
-  total: 11
-question_answer_count: 237832
-quiz_answer_count: 16810
-question_answer_count_last_30_days: 20406
-quiz_answer_count_last_30_days: 1308
+  total: 12
+question_answer_count: 237841
+quiz_answer_count: 16822
+question_answer_count_last_30_days: 20415
+quiz_answer_count_last_30_days: 1320
 category_count: 8
 tag_count: 238
 question_feedback_count: 3817
