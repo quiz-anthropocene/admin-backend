@@ -17056,12 +17056,13 @@
   answer_extra_info: ''
   author: Citoyens Pour le Climat
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2020-06-11
   created: 2020-06-24
   updated: 2020-09-28
   tags:
   - 64
+  - 142
 - id: 458
   text: Avec le réchauffement climatique, il fera plus chaud partout et tout le temps
   hint: ''
@@ -29118,9 +29119,9 @@
   - 40
   - 51
 - id: 764
-  text: 'Vrai ou faux : on est maintenant certain que le changement climatique est
-    bien provoqué par l’homme'
-  hint: L’influence de l’homme sur le climat est clairement établie.
+  text: 'Vrai ou faux : on n’est pas entièrement sûr que le changement climatique
+    soit provoqué par l’homme'
+  hint: ''
   type: VF
   category: 2
   difficulty: 0
@@ -29129,21 +29130,17 @@
   answer_option_b: Faux
   answer_option_c: ''
   answer_option_d: ''
-  answer_correct: a
+  answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Depuis le dernier rapport des scientifiques GIEC publié en 2021,
-    c’est un fait qui ne souffre plus le moindre doute. D’une part, il est incontestable
-    que l’influence humaine a réchauffé l’atmosphère, les océans et les terres ; des
-    changements rapides et généralisés s’y sont produits et les conséquences sont
-    également majeures pour les zones gelées et pour la biosphère. D’autre part, on
-    peut désormais affirmer que 100% du réchauffement climatique est dû aux activités
-    humaines.
+  answer_explanation: 'C’est un fait désormais complètement établi : l’influence humaine
+    a réchauffé l’atmosphère, les océans et les terres.  Et c’est bien la seule cause
+    !'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2014/04/14/rechauffement-les-dix-points-marquants-du-rapport-du-giec_4399907_3244.html
   answer_accessible_url_text: 'Réchauffement : les 10 points marquants du rapport
     du GIEC'
-  answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/03/WG1AR5_SummaryVolume_FINAL_FRENCH.pdf
+  answer_scientific_url: https://fr.wikipedia.org/wiki/Sixi%C3%A8me_rapport_d%27%C3%A9valuation_du_GIEC
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
   answer_image_url: https://www.terresacree.org/images/rechauffement4.jpg
@@ -29151,7 +29148,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Matthieu Massart
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2020-06-04
   created: 2021-01-17
   updated: 2021-01-17
@@ -29171,7 +29168,10 @@
   answer_option_d: Je joue dans le jardin
   answer_correct: abc
   has_ordered_answers: true
-  answer_explanation: ''
+  answer_explanation: Par exemple, tout ce que nous achetons vient de l’industrie,
+    qui émet beaucoup de CO2. Les vaches sont des ruminants. Elles rejettent du gaz
+    en pétant et rotant. Enfin, pour faire rouler une voiture, il faut brûler de l’essence
+    et du kérozène pour un avion. Cela dégage aussi du CO2.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -29179,7 +29179,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdJ784.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -29190,18 +29190,18 @@
   updated: 2021-01-17
   tags: []
 - id: 766
-  text: Copy of à venir
+  text: 'Vrai ou faux : nous contribuons tous de la même manière au changement climatique'
   hint: ''
-  type: QCM
+  type: VF
   category: 2
-  difficulty: 2
+  difficulty: 0
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
+  answer_option_a: Vrai
+  answer_option_b: Faux
   answer_option_c: ''
   answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
+  answer_correct: b
+  has_ordered_answers: true
   answer_explanation: ''
   answer_audio: ''
   answer_video: ''
@@ -29210,19 +29210,16 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://www.enerzine.com/UserFiles/Image/breve19003b.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Christine Cavazza
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-13
+  added: 2022-01-25
   created: 2021-01-17
   updated: 2021-01-17
-  tags:
-  - 33
-  - 217
-  - 218
+  tags: []
 - id: 767
   text: Vrai ou faux ? La fonte de la banquise fait monter le niveau de l'océan
   hint: ''
@@ -29235,9 +29232,9 @@
   answer_option_c: ''
   answer_option_d: ''
   answer_correct: b
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: En vertu du principe d'Archimède, la banquise, qui flotte sur
-    l'eau, ne fait pas monter l'eau quand elle fond. Faites le test avec un glaçon
+    l'eau, ne fait pas monter l'eau quand elle fond. Fais donc le test avec un glaçon
     dans votre pastis ! La situation est différente avec les calottes glaciaires,
     qui reposent sur la terre ferme.
   answer_audio: ''
@@ -29252,7 +29249,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: Raphael Odini
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2020-03-10
   created: 2021-01-17
   updated: 2021-01-17
@@ -29295,18 +29292,19 @@
   - 217
   - 218
 - id: 769
-  text: venir
+  text: Parmi ces affirmations, lesquelles sont vraies
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: 2
-  difficulty: 2
+  difficulty: 0
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
+  answer_option_a: L’effet de serre augment à cause du CO2 et du méthane
+  answer_option_b: Avant qu’on brûle des énergies fossiles, il n’y avait pas d’effet
+    de serre
+  answer_option_c: L’augmentation de l’effet de serre réchauffe la terre
+  answer_option_d: Sans effet de serre, il ferait beaucoup plus froid sur terre
+  answer_correct: abcd
+  has_ordered_answers: true
   answer_explanation: ''
   answer_audio: ''
   answer_video: ''
@@ -29315,19 +29313,17 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdcJ13.png
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Matthieu Massart
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-13
+  added: 2022-01-25
   created: 2021-01-17
   updated: 2021-01-17
   tags:
-  - 33
-  - 217
-  - 218
+  - 100
 - id: 770
   text: L'hydrogène une énergie d'avenir pour le TA ?
   hint: Fo pas rêver...!
@@ -29879,7 +29875,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/Fdcj8.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: ''
@@ -29891,18 +29887,19 @@
   tags:
   - 97
 - id: 784
-  text: Copy of à venir
+  text: Parmi ces phénomènes, lesquelles sont des conséquences du changement climatique
+    ?
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: 2
-  difficulty: 2
+  difficulty: 0
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
+  answer_option_a: Plus de sécheresses
+  answer_option_b: Plus de canicules
+  answer_option_c: Extinctions des espèces d’animaux
+  answer_option_d: Plus d’innondations
+  answer_correct: abcd
+  has_ordered_answers: true
   answer_explanation: ''
   answer_audio: ''
   answer_video: ''
@@ -29911,19 +29908,16 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdJ784.png
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Matthieu Massart
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-16
+  added: 2022-01-25
   created: 2021-01-23
   updated: 2021-01-23
-  tags:
-  - 33
-  - 217
-  - 218
+  tags: []
 - id: 785
   text: Copy of à venir
   hint: ''
@@ -30273,18 +30267,18 @@
   - 217
   - 218
 - id: 793
-  text: Copy of à venir
+  text: Parmi ces choix, quelles sont les énergies fossiles ?
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: 2
-  difficulty: 2
+  difficulty: 0
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
+  answer_option_a: Nucléaire
+  answer_option_b: Pétrole
+  answer_option_c: Soleil
+  answer_option_d: Charbon
+  answer_correct: bd
+  has_ordered_answers: true
   answer_explanation: ''
   answer_audio: ''
   answer_video: ''
@@ -30293,19 +30287,16 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2FGEO.2Fvar.2Fgeo.2Fstorage.2Fimages.2Fmedia.2Fimages.2Frubrique-environnement.2Fles-mots-verts.2Fenergies-fossiles.2F446095-1-fre-FR.2Fenergies-fossiles.2Ejpg/1150x647/background-color/ffffff/quality/70/energie-fossile-gaz-petrole-charbon.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Matthieu Massart
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-17
+  added: 2022-01-25
   created: 2021-01-17
   updated: 2021-01-17
-  tags:
-  - 33
-  - 217
-  - 218
+  tags: []
 - id: 794
   text: Copy of à venir
   hint: ''
