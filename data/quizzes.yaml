@@ -1086,7 +1086,7 @@
   difficulty_average: 0.0
   language: Français
   author: Christine Cavazza et Matthieu Massart
-  image_background_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdcJ.png
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/FdcJ.png
   has_audio: false
   publish: false
   spotlight: false
