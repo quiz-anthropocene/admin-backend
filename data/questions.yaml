@@ -17029,7 +17029,7 @@
   updated: 2020-06-24
   tags: []
 - id: 457
-  text: 'Vrai ou faux : la météo influence le climat'
+  text: 'Vrai ou faux : la météo, c’est comme le climat'
   hint: ''
   type: VF
   category: 1
@@ -17041,10 +17041,9 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Faux, mais l’inverse est vrai (par exemple le réchauffement
-    climatique entraînera des canicules plus fréquentes). La météo, c'est le temps
-    du jour alors que le climat, c'est en quelque sorte la météo sur plusieurs dizaines
-    d'années dans une région donnée.
+  answer_explanation: Météo, c'est le temps qu’il fait aujourdhui, alors que le climat,
+    c'est en quelque sorte la météo sur plusieurs dizaines d'années dans une certaine
+    région.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.francetvinfo.fr/meteo/climat/connaissez-vous-la-difference-entre-meteo-et-climat_3166497.html
@@ -17057,7 +17056,7 @@
   answer_extra_info: ''
   author: Citoyens Pour le Climat
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Brouillon
   added: 2020-06-11
   created: 2020-06-24
   updated: 2020-09-28
@@ -29119,52 +29118,59 @@
   - 40
   - 51
 - id: 764
-  text: à venir
-  hint: ''
-  type: QCM
+  text: 'Vrai ou faux : on est maintenant certain que le changement climatique est
+    bien provoqué par l’homme'
+  hint: L’influence de l’homme sur le climat est clairement établie.
+  type: VF
   category: 2
-  difficulty: 2
+  difficulty: 0
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
+  answer_option_a: Vrai
+  answer_option_b: Faux
   answer_option_c: ''
   answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: Depuis le dernier rapport des scientifiques GIEC publié en 2021,
+    c’est un fait qui ne souffre plus le moindre doute. D’une part, il est incontestable
+    que l’influence humaine a réchauffé l’atmosphère, les océans et les terres ; des
+    changements rapides et généralisés s’y sont produits et les conséquences sont
+    également majeures pour les zones gelées et pour la biosphère. D’autre part, on
+    peut désormais affirmer que 100% du réchauffement climatique est dû aux activités
+    humaines.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_accessible_url_text: ''
-  answer_scientific_url: ''
+  answer_accessible_url: https://www.lemonde.fr/planete/article/2014/04/14/rechauffement-les-dix-points-marquants-du-rapport-du-giec_4399907_3244.html
+  answer_accessible_url_text: 'Réchauffement : les 10 points marquants du rapport
+    du GIEC'
+  answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/03/WG1AR5_SummaryVolume_FINAL_FRENCH.pdf
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://www.terresacree.org/images/rechauffement4.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
-  validator: ''
+  author: Matthieu Massart
+  validator: Matthieu Massart
   validation_status: Brouillon
-  added: 2021-01-05
+  added: 2020-06-04
   created: 2021-01-17
   updated: 2021-01-17
   tags:
-  - 33
-  - 217
-  - 218
+  - 22
 - id: 765
-  text: Copy of à venir
+  text: Parmi les actions suivantes, lesquelles contribuent au changement climatiques
+    ?
   hint: ''
-  type: QCM
+  type: QCM-RM
   category: 2
-  difficulty: 2
+  difficulty: 0
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
+  answer_option_a: Je prends la voiture ou l’avion
+  answer_option_b: Je mange de la viande
+  answer_option_c: Je m’achète des choses
+  answer_option_d: Je joue dans le jardin
+  answer_correct: abc
+  has_ordered_answers: true
   answer_explanation: ''
   answer_audio: ''
   answer_video: ''
@@ -29176,16 +29182,13 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Matthieu Massart
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-13
+  added: 2022-01-25
   created: 2021-01-17
   updated: 2021-01-17
-  tags:
-  - 33
-  - 217
-  - 218
+  tags: []
 - id: 766
   text: Copy of à venir
   hint: ''
@@ -29221,39 +29224,42 @@
   - 217
   - 218
 - id: 767
-  text: Copy of à venir
+  text: Vrai ou faux ? La fonte de la banquise fait monter le niveau de l'océan
   hint: ''
-  type: QCM
+  type: VF
   category: 2
-  difficulty: 2
+  difficulty: 0
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
+  answer_option_a: Vrai
+  answer_option_b: Faux
   answer_option_c: ''
   answer_option_d: ''
-  answer_correct: d
+  answer_correct: b
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: En vertu du principe d'Archimède, la banquise, qui flotte sur
+    l'eau, ne fait pas monter l'eau quand elle fond. Faites le test avec un glaçon
+    dans votre pastis ! La situation est différente avec les calottes glaciaires,
+    qui reposent sur la terre ferme.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_accessible_url_text: ''
+  answer_accessible_url: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
+  answer_accessible_url_text: Élévation du niveau de la mer — Wikipédia
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://sciencesdelavieetdelaterre93.files.wordpress.com/2018/08/18-bis-exp-fonte-glaces.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
-  validator: ''
+  author: Matthieu Massart
+  validator: Raphael Odini
   validation_status: Brouillon
-  added: 2021-01-13
+  added: 2020-03-10
   created: 2021-01-17
   updated: 2021-01-17
   tags:
-  - 33
-  - 217
-  - 218
+  - 9
+  - 16
+  - 69
 - id: 768
   text: Copy of à venir
   hint: ''
@@ -29852,17 +29858,18 @@
   - 217
   - 218
 - id: 783
-  text: Copy of à venir
+  text: Quel gaz à effet de serre les vaches émettent-elles quand elles rotent et
+    qu’elles pètent ?
   hint: ''
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 0
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
+  answer_option_a: Du CO2
+  answer_option_b: Du méthane
+  answer_option_c: De l’azote
   answer_option_d: ''
-  answer_correct: d
+  answer_correct: b
   has_ordered_answers: false
   answer_explanation: ''
   answer_audio: ''
@@ -29875,16 +29882,14 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: ''
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-16
+  added: 2022-01-25
   created: 2021-01-17
   updated: 2021-01-17
   tags:
-  - 33
-  - 217
-  - 218
+  - 97
 - id: 784
   text: Copy of à venir
   hint: ''
@@ -37606,7 +37611,7 @@
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1022%20-%20Emissions%20navigation.png
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Aurélien Bigo
+  author: climat-en-questions.fr
   validator: Matthieu Massart
   validation_status: Validée
   added: 2021-10-03
