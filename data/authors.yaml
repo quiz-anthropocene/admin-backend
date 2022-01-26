@@ -20,7 +20,7 @@
   question_count: 8
   quiz_count: 1
 - name: Citoyens Pour le Climat
-  question_count: 17
+  question_count: 18
   quiz_count: 0
 - name: climat-en-questions.fr
   question_count: 3
@@ -65,7 +65,7 @@
   question_count: 0
   quiz_count: 1
 - name: Matthieu Massart
-  question_count: 76
+  question_count: 78
   quiz_count: 9
 - name: Max Pinsard
   question_count: 51
