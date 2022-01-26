@@ -17029,7 +17029,7 @@
   updated: 2020-06-24
   tags: []
 - id: 457
-  text: 'Vrai ou faux : la météo, c’est comme le climat'
+  text: Vrai ou faux ? Le climat, c’est la même chose que la météo
   hint: ''
   type: VF
   category: 1
@@ -17047,9 +17047,11 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.francetvinfo.fr/meteo/climat/connaissez-vous-la-difference-entre-meteo-et-climat_3166497.html
-  answer_accessible_url_text: Connaissez-vous la différence entre "météo" et "climat" ?
+  answer_accessible_url_text: Franceinfo - Connaissez-vous la différence entre "météo"
+    et "climat" ?
   answer_scientific_url: https://www.climat-en-questions.fr/reponse/fonctionnement-climat/meteorologie-climatologie-par-jean-pailleux
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Le climat en question - Quelle est la différence entre
+    météorologie et climatologie ?
   answer_reading_recommendation: ''
   answer_image_url: https://static3.mclcm.net/iod/images/v2/69/photo/188031/650x370_100_300_000000x30x0.jpg?ts=20151110184722
   answer_image_explanation: 'Source : www.lachainemeteo.com'
@@ -29119,8 +29121,7 @@
   - 40
   - 51
 - id: 764
-  text: 'Vrai ou faux : on n’est pas entièrement sûr que le changement climatique
-    soit provoqué par l’homme'
+  text: Vrai ou faux ? Ce sont les activités humaines qui causent le changement climatique
   hint: ''
   type: VF
   category: 2
@@ -29130,7 +29131,7 @@
   answer_option_b: Faux
   answer_option_c: ''
   answer_option_d: ''
-  answer_correct: b
+  answer_correct: a
   has_ordered_answers: true
   answer_explanation: 'C’est un fait désormais complètement établi : l’influence humaine
     a réchauffé l’atmosphère, les océans et les terres.  Et c’est bien la seule cause
@@ -29141,7 +29142,7 @@
   answer_accessible_url_text: 'Réchauffement : les 10 points marquants du rapport
     du GIEC'
   answer_scientific_url: https://fr.wikipedia.org/wiki/Sixi%C3%A8me_rapport_d%27%C3%A9valuation_du_GIEC
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Wikipieda - le 6ème rapport d’évaluation du GIEC
   answer_reading_recommendation: ''
   answer_image_url: https://www.terresacree.org/images/rechauffement4.jpg
   answer_image_explanation: ''
@@ -29155,7 +29156,7 @@
   tags:
   - 22
 - id: 765
-  text: Parmi les actions suivantes, lesquelles contribuent au changement climatiques
+  text: Parmi les actions suivantes, lesquelles contribuent au changement climatique
     ?
   hint: ''
   type: QCM-RM
@@ -29190,7 +29191,8 @@
   updated: 2021-01-17
   tags: []
 - id: 766
-  text: 'Vrai ou faux : nous contribuons tous de la même manière au changement climatique'
+  text: 'Vrai ou faux : Tous les humains contribuent de la même manière au changement
+    climatique'
   hint: ''
   type: VF
   category: 2
@@ -29202,7 +29204,9 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: ''
+  answer_explanation: Pas du tout ! Les plus riches sur terre émettent beaucoup plus
+    que les plus pauvres. Il y a de grosses différences entre les pays. Et à l’intérieur
+    d’un même pays. Le climat, c’est aussi un problème d’injustice.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -29233,10 +29237,10 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: En vertu du principe d'Archimède, la banquise, qui flotte sur
-    l'eau, ne fait pas monter l'eau quand elle fond. Fais donc le test avec un glaçon
-    dans votre pastis ! La situation est différente avec les calottes glaciaires,
-    qui reposent sur la terre ferme.
+  answer_explanation: Et oui, la banquise, qui flotte sur l'eau, ne fait pas monter
+    l'eau quand elle fond. Fais donc le test avec un glaçon dans un verre d’eau !
+    La situation est différente avec les calottes glaciaires, qui reposent sur la
+    terre ferme, comme au Groenland.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
@@ -29292,18 +29296,19 @@
   - 217
   - 218
 - id: 769
-  text: Parmi ces affirmations, lesquelles sont vraies
+  text: Choisis les phrases qui sont vraies
   hint: ''
   type: QCM-RM
   category: 2
   difficulty: 0
   language: Français
-  answer_option_a: L’effet de serre augment à cause du CO2 et du méthane
-  answer_option_b: Avant qu’on brûle des énergies fossiles, il n’y avait pas d’effet
-    de serre
+  answer_option_a: L’effet de serre augment à cause du CO2 et du méthane émis par
+    les activités de l’homme
+  answer_option_b: Avant que l’homme se mette à brûler des énergies fossiles, il n’y
+    avait pas d’effet de serre
   answer_option_c: L’augmentation de l’effet de serre réchauffe la terre
   answer_option_d: Sans effet de serre, il ferait beaucoup plus froid sur terre
-  answer_correct: abcd
+  answer_correct: acd
   has_ordered_answers: true
   answer_explanation: ''
   answer_audio: ''
@@ -29854,8 +29859,7 @@
   - 217
   - 218
 - id: 783
-  text: Quel gaz à effet de serre les vaches émettent-elles quand elles rotent et
-    qu’elles pètent ?
+  text: Quand elles rotent et qu’elles pètent, les vaches émettent...?
   hint: ''
   type: QCM
   category: 2
@@ -30267,19 +30271,22 @@
   - 217
   - 218
 - id: 793
-  text: Parmi ces choix, quelles sont les énergies fossiles ?
+  text: Parmi les énergies fossiles, il y a... ?
   hint: ''
   type: QCM-RM
   category: 2
   difficulty: 0
   language: Français
-  answer_option_a: Nucléaire
-  answer_option_b: Pétrole
-  answer_option_c: Soleil
-  answer_option_d: Charbon
+  answer_option_a: Le nucléaire
+  answer_option_b: Le pétrole
+  answer_option_c: Le soleil
+  answer_option_d: Le charbon
   answer_correct: bd
   has_ordered_answers: true
-  answer_explanation: ''
+  answer_explanation: Et bien sûr le gaz. La nature a mis des millions et des millions
+    d’années pour le produire à partir de matière qui s’est décomposée. Il y en a
+    une quantité limitée sur notre petite planète. On en brûle énormément, ce qui
+    émet du CO2. Et il en reste de moins en moins.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
