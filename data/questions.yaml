@@ -612,7 +612,7 @@
   answer_option_d: +2°C
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: +1,1°C pour être exact. Selon les scénarios du GIEC, elle aura
+  answer_explanation: +1,2°C pour être exact. Selon les scénarios du GIEC, elle aura
     augmenté de 2°C à 5°C d'ici 2100. Or, lors de la dernière période glaciaire il
     y a 20,000 ans, elle était seulement 5°C plus basse qu'aujourd'hui...et la déglaciation
     a duré 10,000 ans.
@@ -1255,7 +1255,7 @@
   answer_explanation: En vertu du principe d'Archimède, la banquise, qui flotte sur
     l'eau, ne fait pas monter l'eau quand elle fond. Faites le test avec un glaçon
     dans votre pastis ! La situation est différente avec les calottes glaciaires,
-    qui reposent sur la terre ferme.
+    qui reposent sur la terre ferme, comme au Groenland et en Antarctique.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
@@ -16046,7 +16046,7 @@
   answer_accessible_url: https://www.lemonde.fr/planete/article/2014/04/14/rechauffement-les-dix-points-marquants-du-rapport-du-giec_4399907_3244.html
   answer_accessible_url_text: 'Réchauffement : les 10 points marquants du rapport
     du GIEC'
-  answer_scientific_url: https://www.ipcc.ch/site/assets/uploads/2018/03/WG1AR5_SummaryVolume_FINAL_FRENCH.pdf
+  answer_scientific_url: https://archive.ipcc.ch/
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
   answer_image_url: https://www.terresacree.org/images/rechauffement4.jpg
@@ -27693,7 +27693,7 @@
   - 217
   - 218
 - id: 731
-  text: Quel est le taux de TVA appliqué sur le kérosène ?
+  text: Quel est le taux de TVA appliqué sur le kérosène ? (question piège)
   hint: Question piège
   type: QCM-RM
   category: 2
@@ -27705,7 +27705,8 @@
   answer_option_d: 20%
   answer_correct: ac
   has_ordered_answers: true
-  answer_explanation: 'Question piège car les deux réponses sont vraies :
+  answer_explanation: 'Question piège. La réponse est : ça dépend, deux réponses sont
+    correctes !
 
     - 0% sur les vols internationaux, soit environ 0,40€ le litre ;
 
@@ -29180,7 +29181,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdJ784.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdJ784.png?raw=true
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -29318,7 +29319,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdcJ13.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdcJ13.png?raw=true
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -29879,7 +29880,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/Fdcj8.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/Fdcj8.png?raw=true
   answer_image_explanation: ''
   answer_extra_info: ''
   author: ''
@@ -29900,7 +29901,7 @@
   language: Français
   answer_option_a: Plus de sécheresses
   answer_option_b: Plus de canicules
-  answer_option_c: Extinctions des espèces d’animaux
+  answer_option_c: Des espèces d’animaux qui disparaissent
   answer_option_d: Plus d’innondations
   answer_correct: abcd
   has_ordered_answers: true
@@ -29912,7 +29913,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdJ784.png
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdJ784.png?raw=true
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -33184,7 +33185,7 @@
     d’elles d’extraordinaires puits de carbone. Quand une baleine meurt et sombre
     au fond de l’océan, elle piège 33 tonnes de CO2 en moyenne, supprimant ce carbone
     de l’atmosphère pendant des siècles. A titre de comparaison, un arbre n’absorbe
-    que jusqu’à 48 kilos de CO2 par an. Sauver une baleine est aujourd’hui beaucoup
+    que jusqu’à 22 kilos de CO2 par an. Sauver une baleine est aujourd’hui beaucoup
     plus efficace pour le climat que de planter un arbre.
   answer_audio: ''
   answer_video: ''
@@ -36342,11 +36343,11 @@
   answer_option_d: Oui, d'un facteur 10
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: 'La part de l''alimentation dans l''empreinte carbone d''un
-    Français, c''est 1,8 tCO2, dont environ la moitié pour la viande. Manger de la
-    viande une fois par jour, c''est ainsi ainsi 2,2 tCO2e. Voir à ce sujet les cartes
-    du jeu Inventons Nos Vies Bas Carbone, et le détail des menus basés sur les facteurs
-    d''émissions de la base carbone ou le calculateur Nos Gestes Climat de l''Ademe '
+  answer_explanation: La part de l'alimentation dans l'empreinte carbone d'un Français,
+    c'est 1,8 tCO2, dont environ la moitié pour la viande. Manger de la viande une
+    fois par jour, c'est ainsi émettre 2,2 tCO2e. Voir à ce sujet les cartes du jeu
+    Inventons Nos Vies Bas Carbone, et le détail des menus basés sur les facteurs
+    d'émissions de la base carbone ou le calculateur Nos Gestes Climat de l'Ademe.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://ree.developpement-durable.gouv.fr/themes/defis-environnementaux/changement-climatique/empreinte-carbone/article/l-empreinte-carbone-de-la-france#label_onglet818
@@ -36369,7 +36370,7 @@
   - 17
   - 72
 - id: 967
-  text: Faire un aller/retour Paris - New-York, c'est l'équivalent en empreinte carbone
+  text: Un aller/retour Paris - New-York, c'est l'équivalent en empreinte carbone
     de...
   hint: ''
   type: QCM-RM
