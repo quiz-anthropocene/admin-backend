@@ -17041,9 +17041,13 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Météo, c'est le temps qu’il fait aujourdhui, alors que le climat,
-    c'est en quelque sorte la météo sur plusieurs dizaines d'années dans une certaine
-    région.
+  answer_explanation: La météo, que tu entends tous les jours à la radio, s’intéresse
+    au temps qu’il fait aujourd’hui ou demain, et ça change sans arrêt. Le climat
+    se définit avec des moyennes sur des régions plus vastes et des durées plus longues
+    (des années, des siècles, des millénaires parfois). On ne peut pas tirer de conclusions
+    des variations d’un jour à l’autre. Ce qui compte pour le climat, c’est de savoir
+    comment évoluent des moyennes sur au moins 30 ans et ça peut aller jusqu’à 10
+    000 ou 20 000 ans.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.francetvinfo.fr/meteo/climat/connaissez-vous-la-difference-entre-meteo-et-climat_3166497.html
@@ -29134,9 +29138,9 @@
   answer_option_d: ''
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: 'C’est un fait désormais complètement établi : l’influence humaine
-    a réchauffé l’atmosphère, les océans et les terres.  Et c’est bien la seule cause
-    !'
+  answer_explanation: 'Les humains ont su s’adapter à des climats très divers. Mais
+    depuis quelques année, notre planète est en surchauffe et le climat se dérègle,
+    et il est prouvé aujourd’hui que cela est causé par des activités humaines. '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2014/04/14/rechauffement-les-dix-points-marquants-du-rapport-du-giec_4399907_3244.html
@@ -29171,9 +29175,10 @@
   answer_correct: abc
   has_ordered_answers: true
   answer_explanation: Par exemple, tout ce que nous achetons vient de l’industrie,
-    qui émet beaucoup de CO2. Les vaches sont des ruminants. Elles rejettent du gaz
-    en pétant et rotant. Enfin, pour faire rouler une voiture, il faut brûler de l’essence
-    et du kérozène pour un avion. Cela dégage aussi du CO2.
+    qui émet beaucoup de CO2, un puissant gaz à effet de serre. Les vaches sont des
+    ruminants. Elles rejettent du gaz en pétant et rotant. Enfin, pour faire rouler
+    une voiture, il faut brûler de l’essence et du kérozène pour un avion. Cela dégage
+    aussi du CO2.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -29181,7 +29186,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdJ784.png?raw=true
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdcJ7.png?raw=true
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -29206,8 +29211,11 @@
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: Pas du tout ! Les plus riches sur terre émettent beaucoup plus
-    que les plus pauvres. Il y a de grosses différences entre les pays. Et à l’intérieur
-    d’un même pays. Le climat, c’est aussi un problème d’injustice.
+    que les plus pauvres. Il y a de grosses différences entre les pays, et même à
+    l’intérieur d’un même pays. Sur toute la planète,  les 700 000 personnes les plus
+    riches émettent plus de la moitié du CO2. Alors que les 3 500 000 personnes les
+    plus pauvres émettent une toute partie du CO2 (moins de 10%). Le climat, c’est
+    aussi un problème d’injustice.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -29303,15 +29311,23 @@
   category: 2
   difficulty: 0
   language: Français
-  answer_option_a: L’effet de serre augment à cause du CO2 et du méthane émis par
-    les activités de l’homme
+  answer_option_a: L’effet de serre augmente, c’est à cause du CO2 et du méthane émis
+    par les activités de l’homme
   answer_option_b: Avant que l’homme se mette à brûler des énergies fossiles, il n’y
     avait pas d’effet de serre
   answer_option_c: L’augmentation de l’effet de serre réchauffe la terre
   answer_option_d: Sans effet de serre, il ferait beaucoup plus froid sur terre
   answer_correct: acd
   has_ordered_answers: true
-  answer_explanation: ''
+  answer_explanation: 'L’effet de serre est indispensable : comme les vitres d’une
+    serre protègent les plantes du froid, certains gaz de notre planète gardent une
+    partie de la chaleur émise par le soleil dans l’atmosphère. Sans ces gaz (appelés
+    gaz à effet de serre ou GES), la température moyenne de la terre serait de -18°C
+    ! Les principaux gaz à effet de serre sont la vapeur d’eau et le dioxyde de carbone
+    (CO2), présents naturellement sur terre. Aujourd’hui, il y a trop de gaz à effet
+    de serre émis par les humains qui utilisent du gaz, du charbon et du pétrole.
+    Comme elle contient plus de gaz à effet de serre, l’atmosphère retient plus de
+    chaleur et la température augmente.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -29871,8 +29887,8 @@
   answer_option_c: De l’azote
   answer_option_d: ''
   answer_correct: b
-  has_ordered_answers: false
-  answer_explanation: ''
+  has_ordered_answers: true
+  answer_explanation: Les vacent
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -29901,8 +29917,8 @@
   language: Français
   answer_option_a: Plus de sécheresses
   answer_option_b: Plus de canicules
-  answer_option_c: Des espèces d’animaux qui disparaissent
-  answer_option_d: Plus d’innondations
+  answer_option_c: Des espèces animales qui disparaissent
+  answer_option_d: Plus d’inondations
   answer_correct: abcd
   has_ordered_answers: true
   answer_explanation: ''
@@ -30283,11 +30299,17 @@
   answer_option_c: Le soleil
   answer_option_d: Le charbon
   answer_correct: bd
-  has_ordered_answers: true
-  answer_explanation: Et bien sûr le gaz. La nature a mis des millions et des millions
-    d’années pour le produire à partir de matière qui s’est décomposée. Il y en a
-    une quantité limitée sur notre petite planète. On en brûle énormément, ce qui
-    émet du CO2. Et il en reste de moins en moins.
+  has_ordered_answers: false
+  answer_explanation: 'Les énergies fossiles sont le pétrole, le charbon et bien sûr
+    le gaz. Elles représentent environ 85 % des énergies utilisées dans le monde.
+    La nature a mis des millions et des millions d’années pour le produire à partir
+    de matière qui s’est décomposée. Il y en a une quantité limitée sur notre petite
+    planète. On en brûle énormément, ce qui émet du CO2. Et il en reste de moins en
+    moins.  Le soleil (comme le vent) est considéré comme une énergie renouvelable.
+    On utilise cette énergie grâce à des panneaux photovoltaïques (panneaux solaires).
+    Le nucléaire n’est pas une énergie renouvelable mais n’est pas non plus une énergie
+    fossile. De plus, son utilisation n’émet pas de CO2 et ne participe pas au dérèglement
+    climatique. '
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
