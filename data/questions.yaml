@@ -29127,6 +29127,7 @@
   - 51
 - id: 764
   text: Vrai ou faux ? Ce sont les activités humaines qui causent le changement climatique
+    actuel
   hint: ''
   type: VF
   category: 2
@@ -29138,9 +29139,10 @@
   answer_option_d: ''
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: 'Les humains ont su s’adapter à des climats très divers. Mais
-    depuis quelques année, notre planète est en surchauffe et le climat se dérègle,
-    et il est prouvé aujourd’hui que cela est causé par des activités humaines. '
+  answer_explanation: Les humains ont su s’adapter à des climats très divers. Mais
+    depuis quelques années,  le climat se dérègle et notre planète est en surchauffe.
+    Il est maintenant complètement prouvé par la science du climat que cela est causé
+    par des activités humaines, et rien que par ça.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.lemonde.fr/planete/article/2014/04/14/rechauffement-les-dix-points-marquants-du-rapport-du-giec_4399907_3244.html
@@ -29888,7 +29890,11 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Les vacent
+  answer_explanation: Les vaches sont des ruminants qui ont un énorme estomac divisé
+    en 4 parties. Une fois dans le première partie, l’herbe qu’elles ont broutée et
+    mastiquée est digérée par des microbes qui vont la réduire en bouillie. Cela rejette
+    du méthane, un gaz à effet de serre qui réchauffe 30 fois plus que le CO2. L’élevage
+    des ruminants, c’est 5% du réchauffement climatique.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -29921,7 +29927,15 @@
   answer_option_d: Plus d’inondations
   answer_correct: abcd
   has_ordered_answers: true
-  answer_explanation: ''
+  answer_explanation: 'Eh oui, toutes les réponses sont bonnes pour cette dernière
+    question. Le dérèglement climatique a de nombreux impacts. Comme la température
+    augmente, il y a plus souvent des canicules (les étés sont de plus en plus chauds)
+    et des sécheresses car il y a de moins en moins d’eau. Lorsque l’atmosphère se
+    réchauffe, tout est perturbé : l’évaporation, la formation des nuages, .... Cela
+    peut causer des pluies intenses qui font déborder les rivières et inonder les
+    terres. Bien sûr, les plantes et les animaux sont affectés par tous ces changements
+    et certaines espèces disparaissent à cause de la chaleur, du manque d’eau, de
+    la banquise qui fond,....'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -30299,17 +30313,19 @@
   answer_option_c: Le soleil
   answer_option_d: Le charbon
   answer_correct: bd
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: 'Les énergies fossiles sont le pétrole, le charbon et bien sûr
     le gaz. Elles représentent environ 85 % des énergies utilisées dans le monde.
-    La nature a mis des millions et des millions d’années pour le produire à partir
-    de matière qui s’est décomposée. Il y en a une quantité limitée sur notre petite
-    planète. On en brûle énormément, ce qui émet du CO2. Et il en reste de moins en
-    moins.  Le soleil (comme le vent) est considéré comme une énergie renouvelable.
-    On utilise cette énergie grâce à des panneaux photovoltaïques (panneaux solaires).
-    Le nucléaire n’est pas une énergie renouvelable mais n’est pas non plus une énergie
-    fossile. De plus, son utilisation n’émet pas de CO2 et ne participe pas au dérèglement
-    climatique. '
+    La nature a mis des millions et des millions d’années à les fabriquer, à partir
+    de matière qui s’est décomposée. On en brûle énormément, ce qui émet beaucoup
+    de CO2. Et puis, il n’y en a qu’une quantité limitée. Comme pour un tube de dentifrice,
+    il en reste donc de moins en moins chaque jour.
+
+    Le soleil (comme le vent) est considéré comme une énergie renouvelable. On utilise
+    cette énergie grâce à des panneaux photovoltaïques (panneaux solaires). Le nucléaire
+    n’est pas une énergie renouvelable mais n’est pas non plus une énergie fossile.
+    Son utilisation n’émet pas de CO2 et ne participe pas au dérèglement climatique,
+    mais créé des déchets dangereux qui durent très longtemps.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
