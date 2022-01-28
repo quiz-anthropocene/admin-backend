@@ -8484,7 +8484,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://servimg.com/image_preview.php?i=42&u=12905549#
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/Q225.png?raw=true
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Raphael Odini
@@ -17046,16 +17046,14 @@
     se définit avec des moyennes sur des régions plus vastes et des durées plus longues
     (des années, des siècles, des millénaires parfois). On ne peut pas tirer de conclusions
     des variations d’un jour à l’autre. Ce qui compte pour le climat, c’est de savoir
-    comment évoluent des moyennes sur au moins 30 ans et ça peut aller jusqu’à 10
-    000 ou 20 000 ans.
+    comment évoluent des moyennes sur au moins 30 ans.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.francetvinfo.fr/meteo/climat/connaissez-vous-la-difference-entre-meteo-et-climat_3166497.html
+  answer_accessible_url: https://fr.vikidia.org/wiki/Climat
   answer_accessible_url_text: Franceinfo - Connaissez-vous la différence entre "météo"
     et "climat" ?
-  answer_scientific_url: https://www.climat-en-questions.fr/reponse/fonctionnement-climat/meteorologie-climatologie-par-jean-pailleux
-  answer_scientific_url_text: Le climat en question - Quelle est la différence entre
-    météorologie et climatologie ?
+  answer_scientific_url: https://www.climat-en-questions.fr/reponse/fonctionnement-climat/definir-climat-par-jean-louis-fellous
+  answer_scientific_url_text: Comment peut-on définir le climat ?
   answer_reading_recommendation: ''
   answer_image_url: https://static3.mclcm.net/iod/images/v2/69/photo/188031/650x370_100_300_000000x30x0.jpg?ts=20151110184722
   answer_image_explanation: 'Source : www.lachainemeteo.com'
@@ -29142,16 +29140,15 @@
   answer_explanation: Les humains ont su s’adapter à des climats très divers. Mais
     depuis quelques années,  le climat se dérègle et notre planète est en surchauffe.
     Il est maintenant complètement prouvé par la science du climat que cela est causé
-    par des activités humaines, et rien que par ça.
+    par les activités humaines.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.lemonde.fr/planete/article/2014/04/14/rechauffement-les-dix-points-marquants-du-rapport-du-giec_4399907_3244.html
-  answer_accessible_url_text: 'Réchauffement : les 10 points marquants du rapport
-    du GIEC'
+  answer_accessible_url: https://fr.vikidia.org/wiki/R%C3%A9chauffement_climatique
+  answer_accessible_url_text: ''
   answer_scientific_url: https://fr.wikipedia.org/wiki/Sixi%C3%A8me_rapport_d%27%C3%A9valuation_du_GIEC
   answer_scientific_url_text: Wikipieda - le 6ème rapport d’évaluation du GIEC
   answer_reading_recommendation: ''
-  answer_image_url: https://www.terresacree.org/images/rechauffement4.jpg
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/Q764.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -29163,8 +29160,8 @@
   tags:
   - 22
 - id: 765
-  text: Parmi les actions suivantes, lesquelles contribuent au changement climatique
-    ?
+  text: Parmi ces actions que tu peux faire, lesquelles contribuent au changement
+    climatique ?
   hint: ''
   type: QCM-RM
   category: 2
@@ -29176,11 +29173,10 @@
   answer_option_d: Je joue dans le jardin
   answer_correct: abc
   has_ordered_answers: true
-  answer_explanation: Par exemple, tout ce que nous achetons vient de l’industrie,
-    qui émet beaucoup de CO2, un puissant gaz à effet de serre. Les vaches sont des
-    ruminants. Elles rejettent du gaz en pétant et rotant. Enfin, pour faire rouler
-    une voiture, il faut brûler de l’essence et du kérozène pour un avion. Cela dégage
-    aussi du CO2.
+  answer_explanation: Par exemple, tout ce que tu achètes vient de l’industrie, qui
+    émet beaucoup de CO2, un puissant gaz à effet de serre. Les vaches sont des ruminants
+    qui rejettent du gaz. Enfin, pour faire rouler une voiture, il faut brûler de
+    l’essence et du kérozène pour un avion. Cela dégage aussi du CO2.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -29193,7 +29189,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2022-01-25
   created: 2021-01-17
   updated: 2021-01-17
@@ -29219,8 +29215,8 @@
     plus pauvres émettent une toute partie du CO2 (moins de 10%). Le climat, c’est
     aussi un problème d’injustice.
   answer_audio: ''
-  answer_video: ''
-  answer_accessible_url: ''
+  answer_video: https://www.youtube.com/watch?v=QvXntfdmQYQ
+  answer_accessible_url: https://www.novethic.fr/actualite/infographies/isr-rse/infographie-le-1-le-plus-riche-de-la-planete-emet-deux-fois-plus-de-co2-que-la-moitie-la-plus-pauvre-de-l-humanite-149017.html
   answer_accessible_url_text: ''
   answer_scientific_url: ''
   answer_scientific_url_text: ''
@@ -29230,7 +29226,7 @@
   answer_extra_info: ''
   author: Christine Cavazza
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2022-01-25
   created: 2021-01-17
   updated: 2021-01-17
@@ -29253,7 +29249,7 @@
     La situation est différente avec les calottes glaciaires, qui reposent sur la
     terre ferme, comme au Groenland.
   answer_audio: ''
-  answer_video: ''
+  answer_video: https://www.youtube.com/watch?v=cs5-KWwmGXU
   answer_accessible_url: https://fr.wikipedia.org/wiki/%C3%89l%C3%A9vation_du_niveau_de_la_mer
   answer_accessible_url_text: Élévation du niveau de la mer — Wikipédia
   answer_scientific_url: ''
@@ -29307,33 +29303,30 @@
   - 217
   - 218
 - id: 769
-  text: Choisis les phrases qui sont vraies
+  text: A propos de l’effet de serre, est-il vrai de dire que...
   hint: ''
   type: QCM-RM
   category: 2
   difficulty: 0
   language: Français
-  answer_option_a: L’effet de serre augmente, c’est à cause du CO2 et du méthane émis
-    par les activités de l’homme
-  answer_option_b: Avant que l’homme se mette à brûler des énergies fossiles, il n’y
-    avait pas d’effet de serre
-  answer_option_c: L’augmentation de l’effet de serre réchauffe la terre
-  answer_option_d: Sans effet de serre, il ferait beaucoup plus froid sur terre
+  answer_option_a: il augmente à cause du CO2 et du méthane émis par les activités
+    de l’homme
+  answer_option_b: il n’existait pas avant que l’homme se mette à brûler des énergies
+    fossiles
+  answer_option_c: Son augmentation réchauffe la terre
+  answer_option_d: Sans lui, il ferait beaucoup plus froid
   answer_correct: acd
   has_ordered_answers: true
-  answer_explanation: 'L’effet de serre est indispensable : comme les vitres d’une
-    serre protègent les plantes du froid, certains gaz de notre planète gardent une
-    partie de la chaleur émise par le soleil dans l’atmosphère. Sans ces gaz (appelés
-    gaz à effet de serre ou GES), la température moyenne de la terre serait de -18°C
-    ! Les principaux gaz à effet de serre sont la vapeur d’eau et le dioxyde de carbone
-    (CO2), présents naturellement sur terre. Aujourd’hui, il y a trop de gaz à effet
-    de serre émis par les humains qui utilisent du gaz, du charbon et du pétrole.
-    Comme elle contient plus de gaz à effet de serre, l’atmosphère retient plus de
-    chaleur et la température augmente.'
+  answer_explanation: 'L’effet de serre est indispensable à la vie: comme les vitres
+    d’une serre protègent les plantes du froid, certains gaz de notre planète gardent
+    une partie de la chaleur émise par le soleil dans l’atmosphère. Sans ces gaz appelés
+    gaz à effet de serre, la température moyenne de la terre serait de -18°C ! Les
+    principaux gaz à effet de serre sont la vapeur d’eau et le CO2. Aujourd’hui, il
+    y a trop de gaz à effet de serre émis par les humains et cela réchauffe la terre.'
   answer_audio: ''
-  answer_video: ''
-  answer_accessible_url: ''
-  answer_accessible_url_text: ''
+  answer_video: https://www.youtube.com/watch?v=Tfu2K3dOrqI
+  answer_accessible_url: https://fr.vikidia.org/wiki/Gaz_%C3%A0_effet_de_serre
+  answer_accessible_url_text: Wikidia - l’effet de serre
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -29342,7 +29335,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2022-01-25
   created: 2021-01-17
   updated: 2021-01-17
@@ -29890,14 +29883,14 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Les vaches sont des ruminants qui ont un énorme estomac divisé
-    en 4 parties. Une fois dans le première partie, l’herbe qu’elles ont broutée et
-    mastiquée est digérée par des microbes qui vont la réduire en bouillie. Cela rejette
-    du méthane, un gaz à effet de serre qui réchauffe 30 fois plus que le CO2. L’élevage
-    des ruminants, c’est 5% du réchauffement climatique.
+  answer_explanation: Surtout quand elles rotent ! Les vaches sont des ruminants qui
+    ont un énorme estomac. L’herbe qu’elles ont broutée et mastiquée est digérée par
+    des microbes qui vont la réduire en bouillie. Cela rejette du méthane, un gaz
+    à effet de serre qui réchauffe 30 fois plus que le CO2. L’élevage des ruminants,
+    c’est 5% du réchauffement climatique.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://parlonssciences.ca/ressources-pedagogiques/les-stim-en-contexte/vaches-methane-et-changement-climatique
   answer_accessible_url_text: ''
   answer_scientific_url: ''
   answer_scientific_url_text: ''
@@ -29907,15 +29900,14 @@
   answer_extra_info: ''
   author: ''
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2022-01-25
   created: 2021-01-17
   updated: 2021-01-17
   tags:
   - 97
 - id: 784
-  text: Parmi ces phénomènes, lesquelles sont des conséquences du changement climatique
-    ?
+  text: Qu’est-ce que le changement climatique va entraîner comme conséquences ?
   hint: ''
   type: QCM-RM
   category: 2
@@ -29927,15 +29919,14 @@
   answer_option_d: Plus d’inondations
   answer_correct: abcd
   has_ordered_answers: true
-  answer_explanation: 'Eh oui, toutes les réponses sont bonnes pour cette dernière
+  answer_explanation: 'Eh oui, il faut cocher toutes les réponses pour cette dernière
     question. Le dérèglement climatique a de nombreux impacts. Comme la température
-    augmente, il y a plus souvent des canicules (les étés sont de plus en plus chauds)
-    et des sécheresses car il y a de moins en moins d’eau. Lorsque l’atmosphère se
-    réchauffe, tout est perturbé : l’évaporation, la formation des nuages, .... Cela
-    peut causer des pluies intenses qui font déborder les rivières et inonder les
-    terres. Bien sûr, les plantes et les animaux sont affectés par tous ces changements
-    et certaines espèces disparaissent à cause de la chaleur, du manque d’eau, de
-    la banquise qui fond,....'
+    augmente, il y a plus souvent des jours où il fait trop chaud, et des sécheresses
+    car il y a de moins en moins d’eau. Lorsque l’atmosphère se réchauffe, tout est
+    perturbé : l’évaporation, la formation des nuages... Cela peut causer des pluies
+    intenses qui font déborder les rivières et inonder les terres. Bien sûr, les plantes
+    et les animaux sont affectés par tous ces changements et certaines espèces disparaissent
+    à cause de la chaleur, du manque d’eau ou de la banquise qui fond.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -29943,12 +29934,12 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdJ784.png?raw=true
+  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdJ784.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2022-01-25
   created: 2021-01-23
   updated: 2021-01-23
@@ -30319,17 +30310,17 @@
     La nature a mis des millions et des millions d’années à les fabriquer, à partir
     de matière qui s’est décomposée. On en brûle énormément, ce qui émet beaucoup
     de CO2. Et puis, il n’y en a qu’une quantité limitée. Comme pour un tube de dentifrice,
-    il en reste donc de moins en moins chaque jour.
+    il en reste de moins en moins chaque jour.
 
     Le soleil (comme le vent) est considéré comme une énergie renouvelable. On utilise
-    cette énergie grâce à des panneaux photovoltaïques (panneaux solaires). Le nucléaire
-    n’est pas une énergie renouvelable mais n’est pas non plus une énergie fossile.
-    Son utilisation n’émet pas de CO2 et ne participe pas au dérèglement climatique,
-    mais créé des déchets dangereux qui durent très longtemps.'
+    cette énergie grâce à des panneaux solaires. Le nucléaire n’est pas une énergie
+    renouvelable mais n’est pas non plus une énergie fossile. Son utilisation n’émet
+    pas de CO2 et ne participe pas au dérèglement climatique, mais créé des déchets
+    dangereux qui durent très longtemps.'
   answer_audio: ''
-  answer_video: ''
-  answer_accessible_url: ''
-  answer_accessible_url_text: ''
+  answer_video: https://www.lumni.fr/video/c-est-quoi-les-energies-fossiles
+  answer_accessible_url: https://fr.vikidia.org/wiki/%C3%89nergie_fossile
+  answer_accessible_url_text: Wikidia - Les énergies fossiles
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -30338,7 +30329,7 @@
   answer_extra_info: ''
   author: Matthieu Massart
   validator: ''
-  validation_status: Brouillon
+  validation_status: Validée
   added: 2022-01-25
   created: 2021-01-17
   updated: 2021-01-17
@@ -37648,7 +37639,7 @@
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/1022%20-%20Emissions%20navigation.png
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: climat-en-questions.fr
+  author: Aurélien Bigo
   validator: Matthieu Massart
   validation_status: Validée
   added: 2021-10-03
