@@ -1074,12 +1074,12 @@
   - 225
   - 256
 - id: 80
-  name: La Fresque du Climat Junior expliquée à mes parent
-  slug: la-fresque-du-climat-junior-expliquee-a-mes-parent
+  name: La Fresque du Climat Junior expliquée à ma famille
+  slug: la-fresque-du-climat-junior-expliquee-a-ma-famille
   introduction: <p>Tu viens de participer à une fresque junior et tu aimerais partager
     cette expérience avec ta famille ? Voici un petit quiz que tu peux t'amuser à
-    leur soumettre. Les questions sont basées sur les cartes du jeu. A toi d'expliquer
-    plus en détail. A toi de jouer !</p>
+    leur soumettre. Les questions sont basées sur les cartes du jeu. A toi de leur
+    expliquer ta fresque !</p>
   conclusion: <p>Bravo !  Alors, tu leur as appris des choses ? Si vous avez commencé
     à discuter d'action à faire pour limiter le changement climatique, alors tu as
     MISSION ACCOMPLIE !</p>
@@ -1091,7 +1091,7 @@
   publish: false
   spotlight: false
   created: 2022-01-26
-  updated: 2022-01-27
+  updated: 2022-01-28
   tags:
   - 13
   - 51
