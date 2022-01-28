@@ -1078,12 +1078,12 @@
   slug: la-fresque-du-climat-junior-expliquee-a-ma-famille
   introduction: <p>Tu viens de participer à une fresque junior et tu aimerais partager
     cette expérience avec ta famille ? Voici un petit quiz que tu peux t'amuser à
-    leur soumettre. Les questions sont basées sur les cartes du jeu. A toi de leur
-    expliquer ta fresque !</p>
-  conclusion: <p>Bravo !  Alors, tu leur as appris des choses ? Tu trouveras un bon
+    leur soumettre. Les questions sont basées sur les cartes du jeu. A toi de tester
+    leurs connaissances !</p>
+  conclusion: '<p>Bravo !  Alors, tu leur as appris des choses ? Tu trouveras un bon
     résumé dans cette <a href="https://www.youtube.com/watch?v=t9f39nukKBY">vidéo</a>.
-    Si vous avez réussi à déclencher une discussions sur des actions pour limiter
-    vos émissions de gaz à effet de serre, tu as MISSION ACCOMPLIE !</p>
+    Ta prochaine mission : entamer une discussion sur ce que vous pourriez faire pour
+    réduire ces émissions de gaz à effet de serre !</p>'
   difficulty_average: 0.0
   language: Français
   author: Christine Cavazza et Matthieu Massart
