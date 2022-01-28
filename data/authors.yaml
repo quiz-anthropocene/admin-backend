@@ -1,3 +1,6 @@
+- name: ''
+  question_count: 1
+  quiz_count: 0
 - name: Alain Servigne
   question_count: 9
   quiz_count: 1
@@ -5,7 +8,7 @@
   question_count: 8
   quiz_count: 1
 - name: Aurélien Bigo
-  question_count: 9
+  question_count: 10
   quiz_count: 1
 - name: 'Aurélien Deragne, translation: Benoît Barraque'
   question_count: 0
@@ -19,11 +22,14 @@
 - name: Bonpote
   question_count: 8
   quiz_count: 1
+- name: Christine Cavazza
+  question_count: 1
+  quiz_count: 0
 - name: Citoyens Pour le Climat
   question_count: 18
   quiz_count: 0
 - name: climat-en-questions.fr
-  question_count: 3
+  question_count: 2
   quiz_count: 0
 - name: Collectif INVBC
   question_count: 0
@@ -65,7 +71,7 @@
   question_count: 0
   quiz_count: 1
 - name: Matthieu Massart
-  question_count: 78
+  question_count: 82
   quiz_count: 9
 - name: Max Pinsard
   question_count: 51
