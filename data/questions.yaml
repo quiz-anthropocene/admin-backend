@@ -17029,7 +17029,7 @@
   updated: 2020-06-24
   tags: []
 - id: 457
-  text: Vrai ou faux ? Le climat, c’est la même chose que la météo
+  text: Vrai ou faux ? Le climat, c’est la même chose que la météo.
   hint: ''
   type: VF
   category: 1
@@ -17041,12 +17041,11 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: La météo, que tu entends tous les jours à la radio, s’intéresse
-    au temps qu’il fait aujourd’hui ou demain, et ça change sans arrêt. Le climat
-    se définit avec des moyennes sur des régions plus vastes et des durées plus longues
-    (des années, des siècles, des millénaires parfois). On ne peut pas tirer de conclusions
-    des variations d’un jour à l’autre. Ce qui compte pour le climat, c’est de savoir
-    comment évoluent des moyennes sur au moins 30 ans.
+  answer_explanation: "La météo, que tu entends tous les jours à la radio, s’intéresse\
+    \ au temps qu’il fait aujourd’hui ou demain, et ça change sans arrêt. Le climat,\
+    \ c’est le temps qu’il fait en général dans une région, sur des années ou même\
+    \ des siècles ! \nSi le temps change d’un jour à l’autre, on ne peut pas en conclure\
+    \ que le climat change."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.vikidia.org/wiki/Climat
@@ -29125,7 +29124,7 @@
   - 51
 - id: 764
   text: Vrai ou faux ? Ce sont les activités humaines qui causent le changement climatique
-    actuel
+    actuel.
   hint: ''
   type: VF
   category: 2
@@ -29160,26 +29159,26 @@
   tags:
   - 22
 - id: 765
-  text: Parmi ces actions que tu peux faire, lesquelles contribuent au changement
-    climatique ?
+  text: Est-ce que tu contribues au changement climatique quand tu...
   hint: ''
   type: QCM-RM
   category: 2
   difficulty: 0
   language: Français
-  answer_option_a: Je prends la voiture ou l’avion
-  answer_option_b: Je mange de la viande
-  answer_option_c: Je m’achète des choses
-  answer_option_d: Je joue dans le jardin
+  answer_option_a: '...prends la voiture ou l’avion'
+  answer_option_b: '...manges de la viande'
+  answer_option_c: '...t’achètes des choses'
+  answer_option_d: '...joues dans le jardin'
   answer_correct: abc
   has_ordered_answers: true
-  answer_explanation: Par exemple, tout ce que tu achètes vient de l’industrie, qui
-    émet beaucoup de CO2, un puissant gaz à effet de serre. Les vaches sont des ruminants
-    qui rejettent du gaz. Enfin, pour faire rouler une voiture, il faut brûler de
-    l’essence et du kérozène pour un avion. Cela dégage aussi du CO2.
+  answer_explanation: "Par exemple, tout ce que tu achètes vient de l’industrie, qui\
+    \ émet beaucoup de CO2, un puissant gaz à effet de serre. \nLes vaches dont tu\
+    \ manges la viande ou bois le lait sont des ruminants qui rejettent du gaz. \n\
+    Enfin, pour faire rouler une voiture, il faut brûler de l’essence et du kérozène\
+    \ pour un avion. Cela dégage aussi du CO2."
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://fr.vikidia.org/wiki/Gaz_%C3%A0_effet_de_serre
   answer_accessible_url_text: ''
   answer_scientific_url: ''
   answer_scientific_url_text: ''
@@ -29196,7 +29195,7 @@
   tags: []
 - id: 766
   text: 'Vrai ou faux : Tous les humains contribuent de la même manière au changement
-    climatique'
+    climatique.'
   hint: ''
   type: VF
   category: 2
@@ -29208,10 +29207,11 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Pas du tout ! Les plus riches sur terre émettent beaucoup plus
-    que les plus pauvres. Il y a de grosses différences entre les pays, et même à
-    l’intérieur d’un même pays. Et ce sont aussi ceux qui émettent le moins qui sont
-    touchés en premier. Le climat, c’est aussi un problème d’injustice.
+  answer_explanation: Pas du tout ! Ce graphique illustre que les plus riches sur
+    terre émettent beaucoup plus que les plus pauvres. Il y a de grosses différences
+    entre les pays, et aussi à l’intérieur d’un même pays. Et ce sont aussi ceux qui
+    émettent le moins qui sont touchés en premier. Le changement climatique, c’est
+    donc aussi un problème d’injustice.
   answer_audio: ''
   answer_video: https://www.youtube.com/watch?v=QvXntfdmQYQ
   answer_accessible_url: https://www.novethic.fr/actualite/infographies/isr-rse/infographie-le-1-le-plus-riche-de-la-planete-emet-deux-fois-plus-de-co2-que-la-moitie-la-plus-pauvre-de-l-humanite-149017.html
@@ -29230,7 +29230,7 @@
   updated: 2021-01-17
   tags: []
 - id: 767
-  text: Vrai ou faux ? La fonte de la banquise fait monter le niveau de l'océan
+  text: Vrai ou faux ? La fonte de la banquise fait monter le niveau de l'océan.
   hint: ''
   type: VF
   category: 2
@@ -29869,7 +29869,7 @@
   - 217
   - 218
 - id: 783
-  text: Quand elles rotent et qu’elles pètent, les vaches émettent...?
+  text: Quand elles rotent et qu’elles pètent, les vaches émettent...
   hint: ''
   type: QCM
   category: 2
@@ -29884,8 +29884,9 @@
   answer_explanation: Surtout quand elles rotent ! Les vaches sont des ruminants qui
     ont un énorme estomac. L’herbe qu’elles ont broutée et mastiquée est digérée par
     des microbes qui vont la réduire en bouillie. Cela rejette du méthane, un gaz
-    à effet de serre qui réchauffe 30 fois plus que le CO2. L’élevage des ruminants,
-    c’est 5% du réchauffement climatique.
+    à effet de serre qui réchauffe 30 fois plus que le CO2. L’élevage des ruminants
+    fait partie des causes importantes du réchauffement climatique, avec le transport,
+    l’industrie, les bâtiments, les ordinateurs...
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://parlonssciences.ca/ressources-pedagogiques/les-stim-en-contexte/vaches-methane-et-changement-climatique
@@ -29927,7 +29928,7 @@
     à cause de la chaleur, du manque d’eau ou de la banquise qui fond.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://fr.vikidia.org/wiki/R%C3%A9chauffement_climatique
   answer_accessible_url_text: ''
   answer_scientific_url: ''
   answer_scientific_url_text: ''
@@ -30303,18 +30304,17 @@
   answer_option_d: Le charbon
   answer_correct: bd
   has_ordered_answers: true
-  answer_explanation: 'Les énergies fossiles sont le pétrole, le charbon et bien sûr
-    le gaz. Elles représentent environ 85 % des énergies utilisées dans le monde.
-    La nature a mis des millions et des millions d’années à les fabriquer, à partir
-    de matière qui s’est décomposée. On en brûle énormément, ce qui émet beaucoup
-    de CO2. Et puis, il n’y en a qu’une quantité limitée. Comme pour un tube de dentifrice,
-    il en reste de moins en moins chaque jour.
-
-    Le soleil (comme le vent) est considéré comme une énergie renouvelable. On utilise
-    cette énergie grâce à des panneaux solaires. Le nucléaire n’est pas une énergie
-    renouvelable mais n’est pas non plus une énergie fossile. Son utilisation n’émet
-    pas de CO2 et ne participe pas au dérèglement climatique, mais créé des déchets
-    dangereux qui durent très longtemps.'
+  answer_explanation: "Les énergies fossiles sont le pétrole, le charbon et bien sûr\
+    \ le gaz. Sur 10 machines dans le monde, 8 sont alimentées par ces énergies fossiles\
+    \ ! La nature a mis des millions et des millions d’années à les fabriquer à partir\
+    \ de matière vivante qui s’est décomposée. On en brûle énormément, ce qui émet\
+    \ donc beaucoup de CO2. Et puis, il n’y en a qu’une quantité limitée. Comme pour\
+    \ un tube de dentifrice, il en reste de moins en moins chaque jour.\nLe soleil\
+    \ (comme le vent) est considéré comme une énergie renouvelable. On utilise cette\
+    \ énergie grâce à des panneaux solaires notamment. \nLe nucléaire n’est pas une\
+    \ énergie renouvelable mais n’est pas non plus une énergie fossile. Son utilisation\
+    \ n’émet pas de CO2 et ne participe pas au dérèglement climatique, mais créé des\
+    \ déchets dangereux qui durent très longtemps."
   answer_audio: ''
   answer_video: https://www.lumni.fr/video/c-est-quoi-les-energies-fossiles
   answer_accessible_url: https://fr.vikidia.org/wiki/%C3%89nergie_fossile
