@@ -110,10 +110,10 @@
       <div class="row no-gutters text-align-left">
         <div class="col-sm-auto">
           <p class="answer-link" v-if="question.answer_accessible_url" title="Lien accessible pour aller plus loin">
-            🔗&nbsp;<a v-bind:href="question.answer_accessible_url" target="_blank" v-bind:title="question.answer_accessible_url">{{ question.answer_accessible_url }}</a>
+            🔗&nbsp;<a v-bind:href="question.answer_accessible_url" target="_blank" v-bind:title="question.answer_accessible_url">{{ question.answer_accessible_url_text ? question.answer_accessible_url_text : question.answer_accessible_url }}</a>
           </p>
           <p class="answer-link" v-if="question.answer_scientific_url" title="Lien scientifique pour creuser la source">
-            🔗🧬&nbsp;<a v-bind:href="question.answer_scientific_url" target="_blank" v-bind:title="question.answer_scientific_url">{{ question.answer_scientific_url }}</a>
+            🔗🧬&nbsp;<a v-bind:href="question.answer_scientific_url" target="_blank" v-bind:title="question.answer_scientific_url">{{ question.answer_scientific_url_text ? question.answer_scientific_url_text : question.answer_scientific_url }}</a>
           </p>
           <p v-if="question.answer_reading_recommendation" title="Un livre pour aller plus loin">
             📚&nbsp;{{ question.answer_reading_recommendation }}

@@ -97,6 +97,7 @@ class Command(BaseCommand):
                 }
                 try:
                     utilities_notion.update_page_properties(page_id=question["id"], data=data)
+                    self.stdout.write(f"{question_field_url_text}")
                     questions_updated += 1
                 except:  # noqa
                     self.stdout.write("Erreur accès à l'API Notion")
