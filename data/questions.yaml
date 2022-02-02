@@ -4154,7 +4154,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Data overview - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://ourworldindata.org/grapher/exports/energy-consumption-by-source-and-region.png
   answer_image_explanation: ''
@@ -5733,7 +5733,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/reports/key-world-energy-statistics-2019
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Key World Energy Statistics 2020 – Analysis - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://149354316.v2.pressablecdn.com/wp-content/uploads/2019/11/20191127_Russia_02-1.jpg
   answer_image_explanation: ''
@@ -6081,7 +6081,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/reports/key-world-energy-statistics-2019
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Key World Energy Statistics 2020 – Analysis - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/056a.jpg
   answer_image_explanation: ''
@@ -6197,7 +6197,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/reports/key-world-energy-statistics-2019
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Key World Energy Statistics 2020 – Analysis - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://i1.wp.com/images.mapsofworld.com/answers/2018/08/map-coal-producing-countries.jpg
   answer_image_explanation: ''
@@ -6236,7 +6236,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/reports/key-world-energy-statistics-2019
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Key World Energy Statistics 2020 – Analysis - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/060.jpg
   answer_image_explanation: ''
@@ -6304,7 +6304,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/reports/key-world-energy-statistics-2019
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Key World Energy Statistics 2020 – Analysis - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/062.png
   answer_image_explanation: ''
@@ -6338,7 +6338,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ec.europa.eu/eurostat/tgm/graph.do?tab=graph&plugin=1&pcode=t2020_rd300&language=en&toolbox=sort
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: EU Login
   answer_reading_recommendation: ''
   answer_image_url: https://stock.rtl.lu/rtl/728/rtl2008.lu/nt/p/2019/12/12/00/5861f8cdff6ffd87e4b6311f64707d7d.jpeg
   answer_image_explanation: ''
@@ -6516,7 +6516,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://webstore.iea.org/coal-information-2019
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: IEA – International Energy Agency - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/068.jpg
   answer_image_explanation: ''
@@ -6837,7 +6837,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.acea.be/statistics/tag/category/key-figures
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Key figures on the EU auto industry - ACEA - European
+    Automobile Manufacturers' Association
   answer_reading_recommendation: ''
   answer_image_url: https://media.ouest-france.fr/v1/pictures/MjAxNzEwNTkxOGE1ODQ0YzBmOTY4ZjAxMzExMTkxOTMwOWNiYzc
   answer_image_explanation: ''
@@ -7122,13 +7123,13 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://science.sciencemag.org/content/342/6156/1243092
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Hyperdominance in the Amazonian Tree Flora
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/086.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: laydgeur
-  validator: Matthie
+  validator: ''
   validation_status: Écartée
   added: 2019-05-13
   created: 2020-04-26
@@ -7193,7 +7194,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.acea.be/statistics/tag/category/vehicles-per-capita-by-country/
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Motorisation rates in the EU, by country and vehicle
+    type - ACEA - European Automobile Manufacturers' Association
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/088.jpg
   answer_image_explanation: ''
@@ -7635,7 +7637,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/basecarbone/donnees-consulter/liste-element/categorie/297
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: ADEME - Site Bilans GES
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/100.jpg
   answer_image_explanation: ''
@@ -7669,7 +7671,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://bilan-carbone-ademe.blogspot.com/2010/09/bilan-carbone-dune-balle-de-tennis.html
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: 'Bilan Carbone: Bilan Carbone d''une balle de tennis'
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/101.jpg
   answer_image_explanation: ''
@@ -7908,7 +7910,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/documentation-gene/index/page/New_liquides
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: ADEME - Site Bilans GES
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/108.jpg
   answer_image_explanation: ''
@@ -8011,7 +8013,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.norskpetroleum.no/en/facts/historical-production/#annually
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Historical production on the NCS - Norwegianpetroleum.no
   answer_reading_recommendation: ''
   answer_image_url: https://assets.letemps.ch/sites/default/files/styles/original/public/media/2019/02/01/file73w6xgbtw7s2c7kjdoz.jpg
   answer_image_explanation: Production de pétrole et de gaz de la Norvège, le pic
@@ -8329,7 +8331,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://www.georisques.gouv.fr/dossiers/telechargement/gaspar
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Procédures administratives relatives aux risques | Géorisques
   answer_reading_recommendation: ''
   answer_image_url: https://pbs.twimg.com/media/CK2rIHiWIAAYvh0.jpg
   answer_image_explanation: ''
@@ -9090,7 +9092,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://www.meteofrance.fr/climat-passe-et-futur/climathd
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: METEO FRANCE - Le site institutionnel de Météo-France
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/125.jpg
   answer_image_explanation: ''
@@ -9126,7 +9128,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.irena.org/Statistics/View-Data-by-Topic/Capacity-and-Generation/Country-Rankings
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Country Rankings
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/126.jpg
   answer_image_explanation: ''
@@ -9161,7 +9163,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/127.jpg
   answer_image_explanation: ''
@@ -9232,7 +9234,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/international/overview/world
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: International - U.S. Energy Information Administration
+    (EIA)
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/129.jpg
   answer_image_explanation: ''
@@ -9274,7 +9277,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/international/overview/world
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: International - U.S. Energy Information Administration
+    (EIA)
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/130.jpg
   answer_image_explanation: ''
@@ -9348,7 +9352,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://www.globalcarbonatlas.org/fr/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/132.jpg
   answer_image_explanation: ''
@@ -9538,7 +9542,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/coal/data/browser/
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Coal Data Browser
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/137.jpg
   answer_image_explanation: ''
@@ -9681,7 +9685,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/141.jpg
   answer_image_explanation: ''
@@ -9715,7 +9719,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.ecologique-solidaire.gouv.fr/impacts-du-changement-climatique-eau-et-biodiversite#e0
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: 'Impacts du changement climatique : Eau et Biodiversité
+    | Ministère de la Transition écologique'
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/142.jpg
   answer_image_explanation: Avancée de la chenille processionnaire du pin
@@ -9830,7 +9835,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/accueil/documentation-gene/index/page/New_liquides
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: ADEME - Site Bilans GES
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/145.jpg
   answer_image_explanation: ''
@@ -9869,7 +9874,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/146.jpg
   answer_image_explanation: ''
@@ -9906,7 +9911,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Data overview - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/147.jpg
   answer_image_explanation: ''
@@ -10012,7 +10017,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/150.jpg
   answer_image_explanation: ''
@@ -10048,7 +10053,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ec.europa.eu/eurostat/fr/data/database
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Base de données - Eurostat
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/151.jpg
   answer_image_explanation: ''
@@ -10083,7 +10088,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/international/overview/world
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: International - U.S. Energy Information Administration
+    (EIA)
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/152.jpg
   answer_image_explanation: ''
@@ -10118,7 +10124,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/international/overview/country/CHN
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: International - U.S. Energy Information Administration
+    (EIA)
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/153.jpg
   answer_image_explanation: ''
@@ -10444,7 +10451,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Greenhouse Gas Inventory Data
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/162.jpg
   answer_image_explanation: ''
@@ -10482,7 +10489,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://trackingsdg7.esmap.org/downloads#chapter1
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Downloads | Tracking SDG 7
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/163.jpg
   answer_image_explanation: ''
@@ -10517,7 +10524,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.edf.fr/groupe-edf/espaces-dedies/l-energie-de-a-a-z/tout-sur-l-energie/produire-de-l-electricite/l-hydraulique-en-chiffres
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: L'hydraulique en chiffres | EDF France
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/164.jpg
   answer_image_explanation: ''
@@ -10589,7 +10596,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/reports/methane-tracker-2020
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Methane Tracker 2020 – Analysis - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/166.jpg
   answer_image_explanation: ''
@@ -10623,7 +10630,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/about/membership
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Membership - About - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/167.jpg
   answer_image_explanation: ''
@@ -10766,7 +10773,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://webstore.iea.org/the-future-of-hydrogen#page32
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: IEA – International Energy Agency - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/171.jpg
   answer_image_explanation: ''
@@ -10835,7 +10842,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.services-rte.com/fr/visualisez-les-donnees-publiees-par-rte/stock-hydraulique.html
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Stock Hydraulique - RTE Portail Services
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/173.jpg
   answer_image_explanation: ''
@@ -10874,7 +10881,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/174.jpg
   answer_image_explanation: ''
@@ -10946,7 +10953,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/reports/the-future-of-rail#page50
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: The Future of Rail – Analysis - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/176.jpg
   answer_image_explanation: ''
@@ -10983,7 +10990,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/reports/global-ev-outlook-2018
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Global EV Outlook 2018 – Analysis - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/177.jpg
   answer_image_explanation: ''
@@ -11137,7 +11144,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Total%20primary%20energy%20supply%20(TPES)%20by%20source
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Data overview - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/181.jpg
   answer_image_explanation: ''
@@ -11172,7 +11179,9 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.franceagrimer.fr/filiere-peche-et-aquaculture/Actualites/20192/Chiffres-cles-de-la-filiere-peche-et-aquaculture-en-France-en-2019#page12
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Chiffres clés de la filière pêche et aquaculture en
+    France en 2019  | FranceAgriMer - établissement national des produits de l'agriculture
+    et de la mer
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/182.jpg
   answer_image_explanation: ''
@@ -11210,7 +11219,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions#page12
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/183.jpg
   answer_image_explanation: ''
@@ -11247,7 +11256,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.esrl.noaa.gov/gmd/dv/iadv/graph.php?code=MLO&program=ccgg&type=sc
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Global Monitoring Laboratory - Data Visualization
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/184.jpg
   answer_image_explanation: ''
@@ -11283,7 +11292,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://cdiac.ess-dive.lbl.gov/trends/co2/ice_core_co2.html
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: 800,000-year Ice-Core Records of Atmospheric Carbon
+    Dioxide (CO2)
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/185.jpg
   answer_image_explanation: ''
@@ -11317,7 +11327,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.irena.org/Statistics/View-Data-by-Topic/Capacity-and-Generation/Country-Rankings
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Country Rankings
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/186.jpg
   answer_image_explanation: ''
@@ -11356,7 +11366,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/187.jpg
   answer_image_explanation: ''
@@ -11391,7 +11401,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/bilan-energetique-de-la-france-en-2018-donnees-provisoires?rubrique=19&dossier=170
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Bilan énergétique de la France en 2018 - Données provisoires
+    | Données et études statistiques
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/188.jpg
   answer_image_explanation: ''
@@ -11427,7 +11438,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.ipcc.ch/srocc/download#chapter3
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Download Report — Special Report on the Ocean and Cryosphere
+    in a Changing Climate
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/189.jpg
   answer_image_explanation: ''
@@ -11544,7 +11556,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.sncf.com/fr/groupe/patrimoine/deux-siecles-histoire
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Deux siècles d’histoire | SNCF
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/192.jpg
   answer_image_explanation: ''
@@ -11579,7 +11591,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.ccomptes.fr/fr/publications/la-fin-des-activites-minieres-en-france
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: La fin des activités minières en France | Cour des comptes
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/193.jpg
   answer_image_explanation: ''
@@ -11650,7 +11662,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/international/overview/world
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: International - U.S. Energy Information Administration
+    (EIA)
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/195.jpg
   answer_image_explanation: ''
@@ -11726,7 +11739,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/environment/emissions/state/analysis/
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: State-Level Energy-Related Carbon Dioxide Emissions,
+    2005-2016
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/197.jpg
   answer_image_explanation: ''
@@ -11838,7 +11852,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO₂ and Greenhouse Gas Emissions - Our World in Data
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/200.jpg
   answer_image_explanation: ''
@@ -11913,7 +11927,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ccfa.fr/brochure-analyse-statistiques/
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Page introuvable - CCFA | Comité des Constructeurs Français
+    d'Automobiles
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -12029,7 +12044,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions#page25
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/205.jpg
   answer_image_explanation: ''
@@ -12100,7 +12115,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/e0544b72-db53-11e9-9c4e-01aa75ed71a1/language-en
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: EU energy in figures - Publications Office of the EU
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/207.jpg
   answer_image_explanation: ''
@@ -12135,7 +12150,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://globalcarbonatlas.org/fr/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/208.jpg
   answer_image_explanation: ''
@@ -12173,7 +12188,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/petroleum/wells/
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: US Oil and Gas Wells by Production Rate - U.S. Energy
+    Information Administration (EIA)
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/209.jpg
   answer_image_explanation: ''
@@ -12246,7 +12262,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://www.aude.gouv.fr/eolien-terrestre-a10156.html
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Eolien terrestre - AUDE
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/211.jpg
   answer_image_explanation: ''
@@ -12319,7 +12335,9 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/todayinenergy/detail.php?id=40013
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Petroleum, natural gas, and coal continue to dominate
+    U.S. energy consumption - Today in Energy - U.S. Energy Information Administration
+    (EIA)
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/213.png
   answer_image_explanation: ''
@@ -12389,7 +12407,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/e0544b72-db53-11e9-9c4e-01aa75ed71a1/language-en#page79
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: EU energy in figures - Publications Office of the EU
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/215.png
   answer_image_explanation: ''
@@ -12425,7 +12443,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.acea.be/statistics/tag/category/vehicles-per-capita-by-country/
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Motorisation rates in the EU, by country and vehicle
+    type - ACEA - European Automobile Manufacturers' Association
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/216.jpg
   answer_image_explanation: ''
@@ -12461,7 +12480,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://serc.carleton.edu/microbelife/topics/proxies/paleoclimate.html
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: 'Paleoclimatology: Climate Proxies'
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/217.jpg
   answer_image_explanation: ''
@@ -12494,7 +12513,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/international/rankings/world?pa=12&u=0&f=A&v=none&y=01%2F01%2F2017
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: International - U.S. Energy Information Administration
+    (EIA)
   answer_reading_recommendation: ''
   answer_image_url: https://2.bp.blogspot.com/_RSKFRo9oWAQ/S3PAQxv9y4I/AAAAAAAAAS8/cQCBUQsITbI/s1600/article_1504-ECO-biocarburants.jpg
   answer_image_explanation: ''
@@ -12544,7 +12564,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/actualite/actualite/detail/id/23
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: ADEME - Site Bilans GES
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/219.jpg
   answer_image_explanation: ''
@@ -12613,7 +12633,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://wcrp-cmip.github.io/CMIP6_CVs/docs/CMIP6_institution_id.html
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CMIP6 institution_id values
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/221.jpg
   answer_image_explanation: ''
@@ -12648,7 +12668,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/international/rankings/world?pa=12&u=0&f=A&v=none&y=01%2F01%2F2017
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: International - U.S. Energy Information Administration
+    (EIA)
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/222.jpg
   answer_image_explanation: ''
@@ -12682,7 +12703,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ec.europa.eu/eurostat/fr/data/database
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Base de données - Eurostat
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/223.jpg
   answer_image_explanation: ''
@@ -12717,7 +12738,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.nrcan.gc.ca/our-natural-resources/forests-forestry/state-canadas-forests-report/how-much-forest-does-canada-have/17601
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: How much forest does Canada have?
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/224.jpg
   answer_image_explanation: ''
@@ -12753,7 +12774,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/international/rankings/world?pa=12&u=0&f=A&v=none&y=01%2F01%2F2017
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: International - U.S. Energy Information Administration
+    (EIA)
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/225.jpg
   answer_image_explanation: ''
@@ -12867,7 +12889,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://webstore.iea.org/coal-information-2019#page7
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: IEA – International Energy Agency - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/228.jpg
   answer_image_explanation: L'Indonésie et l'Australie sont au coude à coude depuis
@@ -12904,7 +12926,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/229.jpg
   answer_image_explanation: ''
@@ -13129,7 +13151,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.lemonde.fr/blog/huet/2019/12/04/368-gigatonnes-de-co2-emis-en-2019/
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: 43,1 gigatonnes de CO2 émis en 2019 – {Sciences²}
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/235.jpg
   answer_image_explanation: ''
@@ -13433,7 +13455,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/international/data/world#/?pa=0000000000000000000004&c=ruvvvvvfvtvnvv1vrvvvvfvvvvvvfvvvou20evvvvvvvvvvvvuvs&ct=0&tl_id=2-A&vs=INTL.2-7-AFG-MK.A&vo=0&v=H&start=1980&end=2017
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: International - U.S. Energy Information Administration
+    (EIA)
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/243.jpg
   answer_image_explanation: ''
@@ -13627,7 +13650,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/248.jpg
   answer_image_explanation: ''
@@ -13662,7 +13685,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://webstore.iea.org/the-future-of-rail#page38
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: IEA – International Energy Agency - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/249.jpg
   answer_image_explanation: ''
@@ -13775,7 +13798,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://developpement-durable.decathlon.com/?ymm-file=11415#page16
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Engagements Decathlon
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/252.jpg
   answer_image_explanation: ''
@@ -13857,7 +13880,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/254.png
   answer_image_explanation: ''
@@ -13933,7 +13956,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions#annual-co2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO₂ and Greenhouse Gas Emissions - Our World in Data
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/256.png
   answer_image_explanation: ''
@@ -14011,7 +14034,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.hse.gov.uk/offshore/piper-alpha-disaster-public-inquiry.htm
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: The Public Inquiry into the Piper Alpha Disaster.
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/258.png
   answer_image_explanation: ''
@@ -14088,7 +14111,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Statistical Review of World Energy | Energy economics
+    | Home
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/260.png
   answer_image_explanation: ''
@@ -14163,7 +14187,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.worldsteel.org/about-steel/steel-facts.html
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: '#steelfacts - worldsteel.org'
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/262.jpg
   answer_image_explanation: ''
@@ -14271,7 +14295,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://pris.iaea.org/PRIS/home.aspx
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: PRIS - Home
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/265.jpg
   answer_image_explanation: ''
@@ -14307,7 +14331,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/bilan-energetique-de-la-france-pour-2018?rubrique=19&dossier=170
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Bilan énergétique de la France pour 2018 | Données et
+    études statistiques
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/266.png
   answer_image_explanation: ''
@@ -14346,7 +14371,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://pris.iaea.org/PRIS/CountryStatistics/CountryDetails.aspx?current=FR
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: PRIS - Country Details
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/267.png
   answer_image_explanation: ''
@@ -14385,7 +14410,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://bilan-electrique-2019.rte-france.com/emissions-de-co2/#
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: 'Production – Emissions de CO2  : RTE Bilan électrique
+    2019'
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/268.png
   answer_image_explanation: ''
@@ -14501,7 +14527,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://www.globalcarbonatlas.org/fr/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://s.brsimg.com/static-000/cache/i/content/images/d/9/1/d91a8646db5d1a6af1e576f0a88c046f-1024x731.jpg
   answer_image_explanation: chiffres de 2015
@@ -14576,7 +14602,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://www.globalcarbonatlas.org/fr/CO2-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO2 Emissions | Global Carbon Atlas
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/273.png
   answer_image_explanation: ''
@@ -14610,7 +14636,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.nutripro.nestle.fr/dossier/nutrition-generale/vie-quotidienne-et-equilibre-alimentaire/les-apports-nutritionnels-conseilles-anc/apports-nutritionnels-conseilles-adulte#
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: 'Apports nutritionnels conseillés : tableau | Nutri
+    Pro'
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/274.png
   answer_image_explanation: ''
@@ -14725,7 +14752,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.statistiques.developpement-durable.gouv.fr/chiffres-cles-du-climat-france-europe-et-monde-edition-2020-0
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Chiffres clés du climat - France, Europe et Monde -
+    Édition 2020 | Données et études statistiques
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/277.jpg
   answer_image_explanation: ''
@@ -14760,7 +14788,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.irena.org/Statistics/View-Data-by-Topic/Capacity-and-Generation/Country-Rankings
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Country Rankings
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/278.jpg
   answer_image_explanation: ''
@@ -14795,7 +14823,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=DENMARK&fuel=Energy%20supply&indicator=Coal%20production%20by%20type
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Data overview - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/279.jpg
   answer_image_explanation: ''
@@ -14830,7 +14858,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: http://www.minpet.gob.ve/index.php/es-es/comunicaciones/noticias-comunicaciones/29-noticias-2018/412-zumaque-i-a-104-anos-de-la-explotacion-comercial-petrolera-en-venezuela
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: 'ZUMAQUE I: A 104 AÑOS DE LA EXPLOTACIÓN COMERCIAL PETROLERA
+    EN VENEZUELA'
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/280.jpg
   answer_image_explanation: ''
@@ -14904,7 +14933,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.iea.org/data-and-statistics?country=ITALY&fuel=Energy%20supply&indicator=Coal%20production%20by%20type
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Data overview - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/282.jpg
   answer_image_explanation: ''
@@ -14940,7 +14969,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.rte-france.com/fr/eco2mix/eco2mix-consommation
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: RTE | Gestionnaire du Réseau de Transport d'Electricité
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/283.png
   answer_image_explanation: ''
@@ -14976,7 +15005,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.cambridge.org/core/journals/annals-of-glaciology/article/deep-drilling-at-vostok-station-antarctica-history-and-recent-events/8DA18E684DD19E80E7D02F2FBD2DFA26
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: 'Deep drilling at Vostok station, Antarctica: history
+    and recent events | Annals of Glaciology | Cambridge Core'
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/284.png
   answer_image_explanation: ''
@@ -15011,7 +15041,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Greenhouse Gas Inventory Data
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/285.png
   answer_image_explanation: ''
