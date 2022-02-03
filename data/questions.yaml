@@ -6337,15 +6337,15 @@
   answer_video: ''
   answer_accessible_url: ''
   answer_accessible_url_text: ''
-  answer_scientific_url: https://ec.europa.eu/eurostat/tgm/graph.do?tab=graph&plugin=1&pcode=t2020_rd300&language=en&toolbox=sort
-  answer_scientific_url_text: EU Login
+  answer_scientific_url: ''
+  answer_scientific_url_text: ''
   answer_reading_recommendation: ''
   answer_image_url: https://stock.rtl.lu/rtl/728/rtl2008.lu/nt/p/2019/12/12/00/5861f8cdff6ffd87e4b6311f64707d7d.jpeg
   answer_image_explanation: ''
   answer_extra_info: 'image originale: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/063.png'
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2019-04-03
   created: 2020-04-26
   updated: 2020-09-28
@@ -9812,7 +9812,7 @@
   - 33
   - 42
 - id: 261
-  text: Combien de km faut-il rouler en voiture diesel pour émettre 1 kg de CO2 ?
+  text: 1 kg de CO2, cela représente combien de km d’une voiture diesel ?
   hint: ''
   type: QCM
   category: 2
@@ -14537,7 +14537,7 @@
     https://twitter.com/laydgeur/status/1232045258281799681'
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-02-24
   created: 2020-05-20
   updated: 2020-09-28
@@ -29195,21 +29195,23 @@
   category: 2
   difficulty: 0
   language: Français
-  answer_option_a: '...prends la voiture ou l’avion'
-  answer_option_b: '...manges de la viande'
-  answer_option_c: '...t’achètes des choses'
-  answer_option_d: '...joues dans le jardin'
+  answer_option_a: prends la voiture ou l’avion
+  answer_option_b: manges de la viande
+  answer_option_c: t’achètes des choses
+  answer_option_d: joues dans le jardin
   answer_correct: abc
   has_ordered_answers: true
-  answer_explanation: "Par exemple, tout ce que tu achètes vient de l’industrie, qui\
-    \ émet beaucoup de CO2, un puissant gaz à effet de serre. \nLes vaches dont tu\
-    \ manges la viande ou bois le lait sont des ruminants qui rejettent du gaz. \n\
-    Enfin, pour faire rouler une voiture, il faut brûler de l’essence et du kérozène\
-    \ pour un avion. Cela dégage aussi du CO2."
+  answer_explanation: "Par exemple, tout ce que tu achètes vient de l’industrie. Pour\
+    \ le produire, le transporter, le faire fonctionner ou s’en débarrasser, cela\
+    \ émet beaucoup de CO2, un gaz à effet de serre. \nLes vaches dont tu manges la\
+    \ viande ou tu bois le lait sont des ruminants qui rejettent du gaz. \nEnfin,\
+    \ pour faire rouler une voiture, il faut brûler de l’essence et du kérosène pour\
+    \ un avion. Cela dégage aussi du CO2."
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.vikidia.org/wiki/Gaz_%C3%A0_effet_de_serre
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Gaz à effet de serre - Vikidia, l’encyclopédie des 8-13
+    ans
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
