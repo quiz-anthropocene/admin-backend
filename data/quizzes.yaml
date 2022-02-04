@@ -1079,9 +1079,9 @@
   introduction: "<p>Ce quiz s'adresse avant tout à des enfants qui viennent de participer\
     \ à un atelier Fresque du Climat Junior.<br />\r\nTu viens de participer à une\
     \ fresque junior et tu aimerais partager cette expérience avec ta famille ? Voici\
-    \ un petit quiz que tu pourras t'amuser à leur soumettre. Les questions sont basées\
-    \ sur les cartes du jeu. A toi de tester leurs connaissances !</p>"
-  conclusion: '<p>Bravo !  Alors, tu leur as appris des choses ? Tu trouveras un bon
+    \ un petit quiz que tu pourras leur soumettre. Les questions sont basées sur les\
+    \ cartes du jeu. A toi de tester leurs connaissances !</p>"
+  conclusion: '<p>Bravo !  Alors, vous avez appris des choses ? Tu trouveras un bon
     résumé dans cette <a href="https://www.youtube.com/watch?v=t9f39nukKBY">vidéo</a>.
     Ta prochaine mission : entamer une discussion sur ce que vous pourriez faire pour
     réduire ces émissions de gaz à effet de serre !</p>'
@@ -1090,10 +1090,10 @@
   author: Christine Cavazza et Matthieu Massart
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/FdcJ.png
   has_audio: false
-  publish: false
+  publish: true
   spotlight: false
   created: 2022-01-26
-  updated: 2022-02-01
+  updated: 2022-02-04
   tags:
   - 13
   - 51
