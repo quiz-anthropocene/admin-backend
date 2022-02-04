@@ -33105,36 +33105,31 @@
   - 37
 - id: 866
   text: Quelle est la part des énergies renouvelables (hors hydroélectricité) dans
-    le mix énergétique mondial ?
+    le mix énergétique mondial en 2020 ?
   hint: ''
   type: QCM
   category: 5
   difficulty: 3
   language: Français
-  answer_option_a: 1%
-  answer_option_b: 5%
-  answer_option_c: 10%
-  answer_option_d: 20%
-  answer_correct: a
+  answer_option_a: 3%
+  answer_option_b: 8%
+  answer_option_c: 15%
+  answer_option_d: 30%
+  answer_correct: b
   has_ordered_answers: true
-  answer_explanation: "Loin de se substituer, les énergies se sont historiquement\
-    \ toujours… additionnées les unes aux autres ! Ainsi, le pétrole n’a jamais remplacé\
-    \ le charbon, pas plus que le nucléaire n’a remplacé le pétrole. \nLe mix énergétique\
-    \ mondial n’a guère évolué depuis…1980. Selon le rapport World Energy Outlook\
-    \ publié par l'Agence Internationale de l’Énergie en 2017, les énergies fossiles\
-    \ fournissent toujours l’essentiel de la consommation d’énergie de l’humanité\
-    \ : 82%, dont 32% pour le pétrole, 28% pour le charbon et 22% pour le gaz naturel.\
-    \ Le nucléaire représente 5%, l’hydroélectricité 2%, les biocarburants et les\
-    \ déchets 10%. Les énergies renouvelables intermittentes - solaire et éolien principalement\
-    \ - ne couvrent que 1% de la consommation mondiale. Ainsi, malgré leur développement\
-    \ rapide, leur proportion dans le mix énergétique n’évolue pas car, dans le même\
-    \ temps, les énergies fossiles continuent d’être utilisées toujours en plus grande\
-    \ quantité."
+  answer_explanation: 'Parmi les faits marquants de 2020, la hausse impressionnante
+    des capacités électriques éoliennes et solaires : + 238 GW durant l''année, soit
+    50% de plus que le plus fort développement annuel précédemment connu . Malgré
+    cette forte progression, les filières éolienne et solaire n''ont respectivement
+    compté que pour 5,9% et 3,2% du mix électrique mondial en 2020, ce qui en fait
+    les 3ème et 4ème sources d''électricité bas carbone après l''hydroélectricité
+    (16%) et le nucléaire (10,1%). Les énergies fossiles, pétrole gaz et charbon sont
+    loin devant.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
   answer_accessible_url_text: ''
-  answer_scientific_url: https://www.iea.org/reports/world-energy-outlook-2017
+  answer_scientific_url: https://www.connaissancedesenergies.org/bp-statistical-review-world-energy-2021-les-chiffres-cles-de-lenergie-dans-le-monde-210712
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
