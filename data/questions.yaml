@@ -29153,8 +29153,7 @@
   - 40
   - 51
 - id: 764
-  text: Vrai ou faux ? Ce sont les activités humaines qui causent le changement climatique
-    actuel.
+  text: Vrai ou faux ? Ce sont les activités humaines qui font changer le climat.
   hint: ''
   type: VF
   category: 2
@@ -29173,7 +29172,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.vikidia.org/wiki/R%C3%A9chauffement_climatique
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Réchauffement climatique - Vikidia, l’encyclopédie des
+    8-13 ans
   answer_scientific_url: https://fr.wikipedia.org/wiki/Sixi%C3%A8me_rapport_d%27%C3%A9valuation_du_GIEC
   answer_scientific_url_text: WIkipedia - le 6ème rapport d’évaluation du GIEC
   answer_reading_recommendation: ''
@@ -29189,7 +29189,7 @@
   tags:
   - 22
 - id: 765
-  text: Est-ce que tu contribues au changement climatique quand tu...
+  text: Est-ce que ça émet des gaz à effet de serre si tu...
   hint: ''
   type: QCM-RM
   category: 2
@@ -29203,10 +29203,9 @@
   has_ordered_answers: true
   answer_explanation: "Par exemple, tout ce que tu achètes vient de l’industrie. Pour\
     \ le produire, le transporter, le faire fonctionner ou s’en débarrasser, cela\
-    \ émet beaucoup de CO2, un gaz à effet de serre. \nLes vaches dont tu manges la\
-    \ viande ou tu bois le lait sont des ruminants qui rejettent du gaz. \nEnfin,\
-    \ pour faire rouler une voiture, il faut brûler de l’essence et du kérosène pour\
-    \ un avion. Cela dégage aussi du CO2."
+    \ émet beaucoup de CO2, un gaz à effet de serre. Idem pour faire rouler une voiture\
+    \ ou voler un avion. \nLes vaches dont tu manges la viande ou tu bois le lait\
+    \ sont des ruminants qui rejettent un autre gaz. "
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.vikidia.org/wiki/Gaz_%C3%A0_effet_de_serre
@@ -29239,15 +29238,16 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Pas du tout ! Ce graphique illustre que les plus riches sur
-    terre émettent beaucoup plus que les plus pauvres. Il y a de grosses différences
-    entre les pays, et aussi à l’intérieur d’un même pays. Et ce sont aussi ceux qui
-    émettent le moins qui sont touchés en premier. Le changement climatique, c’est
-    donc aussi un problème d’injustice.
+  answer_explanation: Pas du tout ! Il y a de grosses différences d’un pays à l’autre,
+    et aussi à l’intérieur d’un même pays. Comme tu le vois sur ce graphiques, ce
+    sont les plus riches sur terre qui émettent le plus, alors que la moitié de l’humanité
+    la plus pauvre contribue très peu. Et ce sont eux qui sont touchés en premier.
+    Le changement climatique, c’est donc aussi un problème d’injustice.
   answer_audio: ''
   answer_video: https://www.youtube.com/watch?v=QvXntfdmQYQ
   answer_accessible_url: https://www.novethic.fr/actualite/infographies/isr-rse/infographie-le-1-le-plus-riche-de-la-planete-emet-deux-fois-plus-de-co2-que-la-moitie-la-plus-pauvre-de-l-humanite-149017.html
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Les 1 % les plus riches de la planète émettent deux
+    fois plus de CO2 que la moitié la plus pauvre de l’humanité
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -29341,7 +29341,7 @@
   language: Français
   answer_option_a: il augmente à cause du CO2 et du méthane émis par les activités
     de l’homme
-  answer_option_b: il n’existait pas avant que l’homme se mette à brûler des énergies
+  answer_option_b: il n’existait pas avant que l’homme se mette à utiliser des énergies
     fossiles
   answer_option_c: Son augmentation réchauffe la terre
   answer_option_d: Sans lui, il ferait beaucoup plus froid
@@ -29913,16 +29913,15 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Surtout quand elles rotent ! Les vaches sont des ruminants qui
-    ont un énorme estomac. L’herbe qu’elles ont broutée et mastiquée est digérée par
-    des microbes qui vont la réduire en bouillie. Cela rejette du méthane, un gaz
-    à effet de serre qui réchauffe 30 fois plus que le CO2. L’élevage des ruminants
-    fait partie des causes importantes du réchauffement climatique, avec le transport,
-    l’industrie, les bâtiments, les ordinateurs...
+  answer_explanation: Surtout quand elles rotent ! L’herbe qu’elles ont broutée digérée
+    dans leur estomac par des microbes qui vont la réduire en bouillie. Cela rejette
+    du méthane, un gaz à effet de serre qui réchauffe encore plus que le CO2. L’élevage
+    des ruminants fait partie des causes importantes du réchauffement climatique,
+    avec le transport, l’industrie, les bâtiments, les ordinateurs...
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://parlonssciences.ca/ressources-pedagogiques/les-stim-en-contexte/vaches-methane-et-changement-climatique
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Vaches, méthane et changement climatique | Parlons sciences
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -29950,8 +29949,8 @@
   answer_option_d: Plus d’inondations
   answer_correct: abcd
   has_ordered_answers: true
-  answer_explanation: 'Eh oui, il faut cocher toutes les réponses pour cette dernière
-    question. Le dérèglement climatique a de nombreux impacts. Comme la température
+  answer_explanation: 'Il fallait en effet cocher toutes les réponses pour cette dernière
+    question. Le changement climatique a de nombreux impacts. Comme la température
     augmente, il y a plus souvent des jours où il fait trop chaud, et des sécheresses
     car il y a de moins en moins d’eau. Lorsque l’atmosphère se réchauffe, tout est
     perturbé : l’évaporation, la formation des nuages... Cela peut causer des pluies
@@ -29961,7 +29960,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.vikidia.org/wiki/R%C3%A9chauffement_climatique
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Réchauffement climatique - Vikidia, l’encyclopédie des
+    8-13 ans
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
