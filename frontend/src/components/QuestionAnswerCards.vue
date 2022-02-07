@@ -95,7 +95,8 @@
               <source v-bind:src="question.answer_video">
               Votre navigateur ne supporte par le HTML5 vidéo. Voici un <a href="question.answer_video">lien pour télécharger le fichier vidéo</a>.
             </video>
-            <object v-if="!question.answer_video.endsWith('.mp4')" :data="question.answer_video" height="250"></object>
+            <!-- <object v-if="!question.answer_video.endsWith('.mp4')" :data="question.answer_video" height="250"></object> -->
+            <a v-bind:href="question.answer_video" target="_blank">{{ question.answer_video }}</a>
           </p>
         </div>
       </div>
