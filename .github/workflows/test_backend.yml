@@ -83,17 +83,17 @@ jobs:
         run: |
           pipenv sync --dev
 
-      # - name: Run flake8 linting
-      #   run: pipenv run python -m flake8
+      - name: Run flake8 linting
+        run: pipenv run python -m flake8
 
-      # - name: Run tests
-      #   run: pipenv run python manage.py test
-      #   env:
-      #     DEBUG: True
-      #     SECRET_KEY: github_workflow
-      #     HOST: localhost
-      #     DATABASE_URL: postgres://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/know_your_planet
-      #     SESSION_COOKIE_SECURE: "False"
-      #     CSRF_COOKIE_SECURE: "False"
-      #     SECURE_HSTS_SECONDS: 0
-      #     SECURE_SSL_REDIRECT: "False"
+      - name: Run tests
+        run: pipenv run python manage.py test
+        env:
+          DEBUG: True
+          SECRET_KEY: github_workflow
+          HOST: localhost
+          DATABASE_URL: postgres://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/know_your_planet
+          SESSION_COOKIE_SECURE: "False"
+          CSRF_COOKIE_SECURE: "False"
+          SECURE_HSTS_SECONDS: 0
+          SECURE_SSL_REDIRECT: "False"
