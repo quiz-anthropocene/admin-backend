@@ -12,7 +12,7 @@ from api.models import Question, Category, Tag, Quiz, Contribution
 
 
 QUESTION_FIELDS_TO_IGNORE = [
-    "Text", "Tweet", "Intent",  # "text_short"
+    "Text", "tweet", "intent",  # "text_short"
     "answer_explanation_extended", "answer_explanation_short",
     "quiz", "quiz_question_order",
     "Created by", "Created time",
