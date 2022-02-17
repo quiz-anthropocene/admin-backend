@@ -74,16 +74,23 @@ class Command(BaseCommand):
             question_field_url = question["properties"][question_field]["url"]
             question_field_url_text = ""
 
-            if question_field_url and not question_field_url.endswith(".pdf"):
-                try:
-                    question_field_url_response = requests.get(question_field_url, verify=False)
-                    if question_field_url_response.status_code == 200:
-                        html = bs4.BeautifulSoup(question_field_url_response.text, "html.parser")
-                        if html:
-                            if html.title:
-                                question_field_url_text = html.title.text.strip()
-                except OSError:  # urllib3.exceptions.NewConnectionError:
-                    self.stdout.write("Erreur DNS")
+            if question_field_url:
+                if not question_field_url.endswith(".pdf"):
+                    try:
+                        question_field_url_response = requests.get(question_field_url, verify=False)
+                        if question_field_url_response.status_code == 200:
+                            html = bs4.BeautifulSoup(question_field_url_response.text, "html.parser")
+                            if html:
+                                if html.title:
+                                    question_field_url_text = html.title.text.strip()
+                        elif question_field_url_response.status_code == 404:
+                            self.stdout.write("Erreur: 404")
+                        else:
+                            self.stdout.write(f"Erreur: {question_field_url_response.status_code}")
+                    except OSError:  # urllib3.exceptions.NewConnectionError:
+                        self.stdout.write("Erreur: DNS")
+                else:
+                    self.stdout.write("Erreur: PDF")
 
             if question_field_url_text:
                 data = {
