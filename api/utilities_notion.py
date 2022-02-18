@@ -17,23 +17,39 @@ QUESTION_URL_FIELDS = [field.name for field in Question._meta.fields if type(fie
 
 # Official API
 
+NOTION_API_HEADERS = {
+    "Content-Type": "application/json",
+    "Authorization": f"Bearer {settings.NOTION_API_SECRET}",
+    "Notion-Version": f"{settings.NOTION_API_VERSION}"
+}
+
 def get_question_table_pages(sort_direction="descending", extra_data=None, start_cursor=None):
     """
     Retrive 100 pages from the question table
     """
     url = f"https://api.notion.com/v1/databases/{settings.NOTION_QUESTION_TABLE_ID}/query"
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {settings.NOTION_API_SECRET}",
-        "Notion-Version": f"{settings.NOTION_API_VERSION}"
-    }
     data = {"sorts": [{"property": "Last edited time", "direction": sort_direction}]}
     if extra_data:
         data = {**data, **extra_data}
     if start_cursor:
         data["start_cursor"] = start_cursor
 
-    response = requests.post(url, headers=headers, data=json.dumps(data))
+    response = requests.post(url, headers=NOTION_API_HEADERS, data=json.dumps(data))
+    if response.status_code != 200:
+        raise Exception(json.loads(response._content))
+
+    return response
+
+
+def create_page_in_database(database_id, page_properties):
+    url = f"https://api.notion.com/v1/pages"
+    data = {
+        "parent": { "database_id": database_id },
+        "properties": page_properties,
+    }
+
+    response = requests.post(url, headers=NOTION_API_HEADERS, data=json.dumps(data))
+
     if response.status_code != 200:
         raise Exception(json.loads(response._content))
 
@@ -42,13 +58,8 @@ def get_question_table_pages(sort_direction="descending", extra_data=None, start
 
 def update_page_properties(page_id, data={}):
     url = f"https://api.notion.com/v1/pages/{page_id}"
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {settings.NOTION_API_SECRET}",
-        "Notion-Version": f"{settings.NOTION_API_VERSION}"
-    }
 
-    response = requests.patch(url, headers=headers, data=json.dumps(data))
+    response = requests.patch(url, headers=NOTION_API_HEADERS, data=json.dumps(data))
     if response.status_code != 200:
         raise Exception(json.loads(response._content))
 
