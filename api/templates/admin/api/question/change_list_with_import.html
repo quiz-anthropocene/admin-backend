@@ -29,23 +29,11 @@
   <p>
     Les questions sont créés et validées dans Notion, avant d'être importés dans l'admin (ici !), pour y créer les quizs.
   </p>
-  <p>
-    Pourquoi plusieurs boutons ? L'import est séparé en plusieurs actions car il prend trop de temps sinon (et ferait planter le serveur).
-  </p>
-  <p>
-    Il faut donc lancer les imports les uns après les autres (cliquer sur un bouton, attendre la réponse, puis cliquer sur le suivant, etc.).
-  </p>
-  <p>
-    Les numéros affichés ici sont indicatifs, ils ne correspondent pas exactement à la réalité, car il y a certains ids manquants dans Notion (ce qui fait décaler les lots).
-  </p>
-  <p>
-    Merci de votre patience !
-  </p>
 
   <table>
     <thead>
       <tr>
-        <th>Boutons d'import - NE MARCHENT PLUS ACTUELLEMENT !</th>
+        <th>Boutons d'import</th>
         <th>Dernière date de lancement</th>
       </tr>
     </thead>
@@ -56,7 +44,7 @@
           <input type="hidden" name="run_import_questions_from_notion_script" value="{{ scope_value }}" />
           <tr>
             <td>
-              <input class="action-button" type="submit" value="Lancer l'import des questions : # {{ scope_label }}">
+              <input class="action-button" type="submit" value="Lancer l'import des questions depuis Notion : # {{ scope_label }}">
             </td>
             <td>
               <strong>{{ configuration | get_obj_attr:configuration_scope_field | date:"SHORT_DATETIME_FORMAT" }}</strong>

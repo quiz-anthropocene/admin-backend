@@ -79,7 +79,7 @@ LANGUAGE_CHOICE_LIST = [
 ]
 
 NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES = [
-    (0, "tout"),
+    (0, "100 dernières questions modifiées"),
     # below are currently hidden
     (1, "1 à 200"),
     (2, "200 à 400"),
