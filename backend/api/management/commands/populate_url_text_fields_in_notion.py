@@ -79,7 +79,7 @@ class Command(BaseCommand):
                     try:
                         question_field_url_response = requests.get(question_field_url, verify=False)
                         if question_field_url_response.status_code == 200:
-                            html = bs4.BeautifulSoup(question_field_url_response.text, "html.parser")
+                            html = bs4.BeautifulSoup(question_field_url_response.text, "html.parser")  # noqa
                             if html:
                                 if html.title:
                                     question_field_url_text = html.title.text.strip()

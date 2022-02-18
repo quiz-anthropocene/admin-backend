@@ -55,12 +55,12 @@ class Command(BaseCommand):
             try:
                 for new_contribution in new_contributions_to_export:
                     new_contribution_properties = {
-                        "text": { "title": [{ "text": { "content": new_contribution.text } }] },
-                        "type": { "select": { "name": new_contribution.type } },
-                        "description": { "rich_text": [{ "text": { "content": new_contribution.description } }] },
-                        "created": { "date": { "start": new_contribution.created.isoformat() } },
+                        "text": {"title": [{"text": {"content": new_contribution.text}}]},
+                        "type": {"select": {"name": new_contribution.type}},
+                        "description": {"rich_text": [{"text": {"content": new_contribution.description}}]},  # noqa
+                        "created": {"date": {"start": new_contribution.created.isoformat()}},
                     }
-                    utilities_notion.create_page_in_database(settings.NOTION_CONTRIBUTION_TABLE_ID, new_contribution_properties)
+                    utilities_notion.create_page_in_database(settings.NOTION_CONTRIBUTION_TABLE_ID, new_contribution_properties)  # noqa
 
                 # update configuration
                 configuration.notion_contributions_last_exported = timezone.now()
