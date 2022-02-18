@@ -23,6 +23,7 @@ NOTION_API_HEADERS = {
     "Notion-Version": f"{settings.NOTION_API_VERSION}"
 }
 
+
 def get_question_table_pages(sort_direction="descending", extra_data=None, start_cursor=None):
     """
     Retrive 100 pages from the question table
@@ -42,9 +43,9 @@ def get_question_table_pages(sort_direction="descending", extra_data=None, start
 
 
 def create_page_in_database(database_id, page_properties):
-    url = f"https://api.notion.com/v1/pages"
+    url = "https://api.notion.com/v1/pages"
     data = {
-        "parent": { "database_id": database_id },
+        "parent": {"database_id": database_id},
         "properties": page_properties,
     }
 
