@@ -17,7 +17,7 @@
   question_count: 8
   quiz_count: 1
 - name: Avenir Climatique
-  question_count: 8
+  question_count: 9
   quiz_count: 0
 - name: Bonpote
   question_count: 8
@@ -68,13 +68,13 @@
   question_count: 9
   quiz_count: 1
 - name: laydgeur
-  question_count: 167
+  question_count: 165
   quiz_count: 2
 - name: Le Réveilleur
   question_count: 0
   quiz_count: 1
 - name: Matthieu Massart
-  question_count: 82
+  question_count: 81
   quiz_count: 9
 - name: Max Pinsard
   question_count: 51
