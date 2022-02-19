@@ -215,7 +215,7 @@
   answer_option_a: 13%
   answer_option_b: 53%
   answer_option_c: 73%
-  answer_option_d: 93%
+  answer_option_d: 91%
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: Et en se réchauffant, l'eau se dilate, entre autres dérèglements.
@@ -223,7 +223,7 @@
     l'océan pour absorber l'essentiel de ce surplus d'énergie !
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://ocean-climate.org/?p=4104
+  answer_accessible_url: https://ocean-climate.org/presentation-des-fiches-scientifiques-ocean-et-climat/locean-reservoir-de-chaleur/
   answer_accessible_url_text: ''
   answer_scientific_url: ''
   answer_scientific_url_text: ''
@@ -1374,7 +1374,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.france24.com/fr/20180125-le-permafrost-cette-bombe-a-retardement-sous-larctique
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Le permafrost, cette bombe à retardement sous l'Arctique
   answer_scientific_url: https://www.nature.com/articles/480032a
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -5603,7 +5603,7 @@
   answer_extra_info: ''
   author: laydgeur
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: 2019-03-06
   created: 2020-04-26
   updated: 2020-09-28
@@ -7459,7 +7459,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.sustainable-performance.total.com/fr/indicateurs-climat
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Indicateurs climat | Sustainable performance
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/095.jpg
   answer_image_explanation: ''
@@ -7739,7 +7739,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.calcprofi.fr/l-energie-cinetique-formule-calculatrice.html
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Calculatrice de formule d'énergie cinétique
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -8486,7 +8486,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/Q225.png?raw=true
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/Q225.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Raphael Odini
@@ -9464,7 +9464,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.bilans-ges.ademe.fr/fr/actualite/actualite/detail/id/23
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: ADEME - Site Bilans GES
   answer_reading_recommendation: ''
   answer_image_url: https://quoidansmonassiette.fr/wp-content/uploads/2020/01/Emissions-en-GES-pour-100g-de-prot%C3%A9ines.jpg
   answer_image_explanation: ''
@@ -9480,7 +9480,7 @@
   tags:
   - 5
   - 72
-  - 89
+  - 231
 - id: 252
   text: Quelle est la part de la France dans les émissions de gaz à effet de serre
     de l’Union Européenne ?
@@ -10372,7 +10372,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.eia.gov/petroleum/imports/browser/#/?vs=PET_IMPORTS.WORLD-US-ALL.A
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Crude Imports
   answer_reading_recommendation: ''
   answer_image_url: https://static.latribune.fr/1093805/statista-venezuela-pays-producteurs-petrole-fournisseurs-des-etats-unis.png
   answer_image_explanation: ''
@@ -10411,7 +10411,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://webstore.iea.org/electricity-information-2019
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: IEA – International Energy Agency - IEA
   answer_reading_recommendation: ''
   answer_image_url: https://ourworldindata.org/grapher/exports/world-electricity-by-source.png
   answer_image_explanation: ''
@@ -13503,7 +13503,7 @@
   answer_extra_info: https://twitter.com/laydgeur/status/1218076428559929344
   author: laydgeur
   validator: Raphael Odini
-  validation_status: Validée
+  validation_status: Écartée
   added: 2020-01-17
   created: 2020-05-20
   updated: 2020-11-28
@@ -18667,7 +18667,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://chinapower.csis.org/china-greenhouse-gas-emissions/
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: How is China Managing its Greenhouse Gas Emissions?
+    | ChinaPower Project
   answer_scientific_url: http://globalcarbonatlas.org/en/CO2-emissions
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -19189,7 +19190,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://clearseas.org/en/tankers/
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Oil Tanker Facts | Clear Seas
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -20002,7 +20003,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO₂ and Greenhouse Gas Emissions - Our World in Data
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -20014,7 +20015,6 @@
   created: 2020-06-24
   updated: 2020-06-24
   tags:
-  - 2
   - 13
   - 80
 - id: 537
@@ -20042,7 +20042,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: CO₂ and Greenhouse Gas Emissions - Our World in Data
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -20054,7 +20054,6 @@
   created: 2020-06-24
   updated: 2020-06-24
   tags:
-  - 2
   - 10
   - 13
   - 81
@@ -21715,7 +21714,7 @@
   - 191
 - id: 582
   text: En pédalant sur un vélo muni d'une dynamo, peut-on faire griller une tartine
-    dans un grille-pain standard ?
+    dans un grille-pain ?
   hint: ''
   type: VF
   category: 2
@@ -23338,7 +23337,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.nature.com/articles/s41558-020-0797-x
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Temporary reduction in daily global CO2 emissions during
+    the COVID-19 forced confinement | Nature Climate Change
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/292.png
   answer_image_explanation: ''
@@ -23748,7 +23748,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://di.unfccc.int/detailed_data_by_party
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Greenhouse Gas Inventory Data
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/302.png
   answer_image_explanation: ''
@@ -24766,7 +24766,7 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://op.europa.eu/en/publication-detail/-/publication/87b16988-f740-11ea-991b-01aa75ed71a1/language-en/format-PDF/source-170585611
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: EU energy in figures - Publications Office of the EU
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/laydgeur/328.png
   answer_image_explanation: ''
@@ -25634,7 +25634,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ouest-france.fr/sante/virus/coronavirus/confinement/avec-le-confinement-le-trafic-aerien-en-europe-chute-de-90-compare-il-y-un-6819737
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Avec le confinement, le trafic aérien en Europe a chuté
+    de 90 % comparé à il y a un an
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -25767,8 +25768,9 @@
     26 aura lieu fin 2021 à Glasgow.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.rfi.fr/fr/science/20201211-climat-5-ans-après-l-accord-de-paris-les-résultats-se-font-attendre
-  answer_accessible_url_text: ''
+  answer_accessible_url: https://www.rfi.fr/fr/science/20201211-climat-5-ans-apr%C3%A8s-l-accord-de-paris-les-r%C3%A9sultats-se-font-attendre
+  answer_accessible_url_text: 'Climat: cinq ans après l’Accord de Paris, les résultats
+    se font attendre'
   answer_scientific_url: https://wedocs.unep.org/bitstream/handle/20.500.11822/34438/EGR20ESE.pdf
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -26195,7 +26197,7 @@
   answer_scientific_url: https://fr.wikipedia.org/wiki/K%C3%A9ros%C3%A8ne
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/695%20696%20697%20V1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/695%20696%20697%20V1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26232,7 +26234,7 @@
   answer_scientific_url: https://fr.wikipedia.org/wiki/K%C3%A9ros%C3%A8ne
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/695%20696%20697%20V1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/695%20696%20697%20V1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26273,7 +26275,7 @@
   answer_scientific_url: https://fr.wikipedia.org/wiki/K%C3%A9ros%C3%A8ne
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/695%20696%20697%20V1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/695%20696%20697%20V1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26312,7 +26314,7 @@
   answer_scientific_url: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/698.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/698.png
   answer_image_explanation: ''
   answer_extra_info: https://fr.wikipedia.org/wiki/Gaz_à_effet_de_serre#cite_note-51
   author: Restons les pieds sur terre
@@ -26353,7 +26355,7 @@
   answer_scientific_url: https://jancovici.com/changement-climatique/gaz-a-effet-de-serre-et-cycle-du-carbone/quels-sont-les-gaz-a-effet-de-serre-quels-sont-leurs-contribution-a-leffet-de-serre/
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/699.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/699.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26453,12 +26455,13 @@
     des pays dont la France ADEME retenait un facteur 2.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.sciencedirect.com/science/article/pii/S1352231020305689?via%3Dihub
-  answer_accessible_url_text: ''
+  answer_accessible_url: https://www.sciencedirect.com/science/article/pii/S1352231020305689
+  answer_accessible_url_text: The contribution of global aviation to anthropogenic
+    climate forcing for 2000 to 2018 - ScienceDirect
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/701-41.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/701-41.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26495,7 +26498,7 @@
   answer_scientific_url: https://www.airbus.com/aircraft/passenger-aircraft/a380/innovation.html#details
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/702%20V1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/702%20V1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26534,7 +26537,7 @@
   answer_scientific_url: https://www.airbus.com/aircraft/passenger-aircraft/a380/innovation.html#details
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/703%2031.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/703%2031.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26573,7 +26576,7 @@
   answer_scientific_url: https://www.airbus.com/aircraft/passenger-aircraft/a380/innovation.html#details
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/704%20V1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/704%20V1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26608,7 +26611,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/705%20706%20707%20v1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/705%20706%20707%20v1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26643,7 +26646,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/705%20706%20707%20v1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/705%20706%20707%20v1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26678,7 +26681,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/705%20706%20707%20v1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/705%20706%20707%20v1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26731,7 +26734,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/708%20709%20v1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/708%20709%20v1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26777,7 +26780,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/708%20709%20v1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/708%20709%20v1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26863,7 +26866,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/711.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/711.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -26954,7 +26957,7 @@
   answer_scientific_url: http://www.cgedd.developpement-durable.gouv.fr/IMG/pdf/200708_creation_t4_cdg_delibere_cle622f7d.pdf
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/713.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/713.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -27040,7 +27043,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/715.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/715.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -27126,7 +27129,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/717.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/717.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -27165,7 +27168,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.natura-sciences.com/environnement/rechauffement-climatique-rivieres363.html
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: 'Réchauffement climatique: moins d''eau pour nos rivières
+    !'
   answer_scientific_url: https://professionnels.ofb.fr/fr/node/44
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -27257,7 +27261,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/720-1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/720-1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -27305,7 +27309,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/721.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/721.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -27344,7 +27348,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/722.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/722.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -27383,7 +27387,7 @@
   answer_scientific_url: https://www.facebook.com/757915144314007/videos/1077571789259770
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/723-1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/723-1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -27428,7 +27432,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/724-1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/724-1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -27517,7 +27521,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/726-1.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/726-1.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -27567,7 +27571,7 @@
   answer_scientific_url: https://greenwashingeconomy.com/effet-rebond-innovation-est-un-leurre/
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/727.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/727.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -27757,7 +27761,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.ouest-france.fr/leditiondusoir/2018-01-18/pourquoi-le-kerosene-est-il-completement-detaxe-83f0840c-e9bc-4e3b-ab81-83495ba02ee5
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Pourquoi le kérosène est-il complètement détaxé ? -
+    Edition du soir Ouest-France - 18/01/2018
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -27818,7 +27823,7 @@
   answer_scientific_url: https://fr.wikipedia.org/wiki/Convention_de_Chicago
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/732.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/732.png
   answer_image_explanation: ''
   answer_extra_info: https://www.ouest-france.fr/leditiondusoir/2018-01-18/pourquoi-le-kerosene-est-il-completement-detaxe-83f0840c-e9bc-4e3b-ab81-83495ba02ee5
   author: Restons les pieds sur terre
@@ -28749,7 +28754,7 @@
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/754.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/754.png
   answer_image_explanation: ''
   answer_extra_info: Par. 4.1 Page 3
   author: Restons les pieds sur terre
@@ -28785,7 +28790,7 @@
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/755.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/755.png
   answer_image_explanation: ''
   answer_extra_info: Paragraphe 4.1 Page 3 – fig. 1 Page 4
   author: Restons les pieds sur terre
@@ -28929,7 +28934,7 @@
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S0959378020307779
   answer_scientific_url_text: ''
   answer_reading_recommendation: Fig. 5 Page 7
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/758.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/758.png
   answer_image_explanation: ''
   answer_extra_info: Par. 4.3 et Fig. 5 Page 7
   author: Restons les pieds sur terre
@@ -29153,7 +29158,7 @@
   - 40
   - 51
 - id: 764
-  text: Vrai ou faux ? Ce sont les activités humaines qui font changer le climat.
+  text: Vrai ou faux ? Ce sont les activités humaines qui font changer le climat actuel.
   hint: ''
   type: VF
   category: 2
@@ -29189,16 +29194,16 @@
   tags:
   - 22
 - id: 765
-  text: Est-ce que ça émet des gaz à effet de serre si tu...
+  text: Ca émet des gaz à effet de serre si tu...
   hint: ''
   type: QCM-RM
   category: 2
   difficulty: 0
   language: Français
-  answer_option_a: prends la voiture ou l’avion
-  answer_option_b: manges de la viande
-  answer_option_c: t’achètes des choses
-  answer_option_d: joues dans le jardin
+  answer_option_a: prends la voiture ou l’avion ?
+  answer_option_b: manges de la viande ?
+  answer_option_c: t’achètes des choses ?
+  answer_option_d: joues dans le jardin ?
   answer_correct: abc
   has_ordered_answers: true
   answer_explanation: "Par exemple, tout ce que tu achètes vient de l’industrie. Pour\
@@ -29288,7 +29293,7 @@
   answer_image_url: https://sciencesdelavieetdelaterre93.files.wordpress.com/2018/08/18-bis-exp-fonte-glaces.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Matthieu Massart
+  author: Avenir Climatique
   validator: Raphael Odini
   validation_status: Validée
   added: 2020-03-10
@@ -29299,19 +29304,19 @@
   - 16
   - 69
 - id: 768
-  text: Copy of à venir
+  text: Tagada tsoin toin?
   hint: ''
-  type: QCM
+  type: VF
   category: 2
   difficulty: 2
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
+  answer_option_a: Vrai
+  answer_option_b: Faux
   answer_option_c: ''
   answer_option_d: ''
-  answer_correct: d
+  answer_correct: a
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: Ben tagada tsoin tsoin quoi!
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -29360,7 +29365,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/FdcJ13.png?raw=true
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/FdcJ13.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Matthieu Massart
@@ -29437,7 +29442,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/771.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/771.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -29480,7 +29485,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/772.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/772.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -30266,7 +30271,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/791.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/791.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -31600,7 +31605,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.unwater.org/publications/highlights-sdg-6-synthesis-report-2018-on-water-and-sanitation-2/
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: SDG 6 Synthesis Report 2018 on Water and Sanitation
+    | UN-Water
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -31830,7 +31836,8 @@
   answer_accessible_url: ''
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.nature.com/articles/s41467-020-20704-0
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Role of dams in reducing global flood exposure under
+    climate change | Nature Communications
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
@@ -32962,7 +32969,8 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.forumviesmobiles.org/reperes/vitesse-des-deplacements-12976
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Vitesse des déplacements | Forum Vies Mobiles - Préparer
+    la transition mobilitaire
   answer_scientific_url: https://github.com/raphodn/know-your-planet/blob/master/data/audio/questions/H%C3%A9ran%202009%20_%20A%20propos%20de%20la%20vitesse%20g%C3%A9n%C3%A9ralis%C3%A9e%20des%20transports%20-%20Un%20concept%20d'Ivan%20Illich%20revisit%C3%A9.pdf
   answer_scientific_url_text: ''
   answer_reading_recommendation: Energie et équité, Ivan Illich
@@ -34299,7 +34307,7 @@
   answer_scientific_url: https://www.sciencedirect.com/science/article/pii/S1352231020305689?via%3Dihub
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/michel-bx/911.png
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/michel-bx/911.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: Restons les pieds sur terre
@@ -35224,7 +35232,7 @@
   answer_audio: ''
   answer_video: https://www.youtube.com/embed/02x5UuV898c
   answer_accessible_url: https://www.arcenergyinstitute.com/100-million-barrels-per-day/
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: 100 Million Barrels Per Day | ARC Energy Research Institute
   answer_scientific_url: https://en.wikipedia.org/wiki/Energy_slave
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -35348,7 +35356,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.iucn.org/content/primary-microplastics-oceans
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: Primary microplastics in the oceans | IUCN
   answer_scientific_url: https://iopscience.iop.org/article/10.1088/1748-9326/ab7836
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -35555,7 +35563,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://www.visualcapitalist.com/all-the-worlds-metals-and-minerals-in-one-visualization/
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: All the World’s Metals and Minerals in One Visualization
   answer_scientific_url: https://www.oecd.org/environment/raw-materials-use-to-double-by-2060-with-severe-environmental-consequences.htm
   answer_scientific_url_text: ''
   answer_reading_recommendation: https://ourworldindata.org/water-use-stress
@@ -35724,7 +35732,7 @@
     aussi la moitié des GES anthropiques ! '
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://www.unenvironment.org/fr/actualites-et-recits/communique-de-presse/lonu-appelle-reconsiderer-de-toute-urgence-lutilisation
+  answer_accessible_url: https://www.unep.org/fr/actualites-et-recits/communique-de-presse/lonu-appelle-reconsiderer-de-toute-urgence-lutilisation
   answer_accessible_url_text: ''
   answer_scientific_url: https://www.resourcepanel.org/reports/global-resources-outlook
   answer_scientific_url_text: ''
@@ -36450,7 +36458,7 @@
   answer_scientific_url: https://monconvertisseurco2.fr/?co2=1800
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/967.jpg?raw=true
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/967.jpg
   answer_image_explanation: ''
   answer_extra_info: ''
   author: FJG
@@ -37555,7 +37563,7 @@
     les avantages climatiques sont alors très maigres, voire inexistants.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: http://www.carbone4.com/publication-transport-routier-motorisation-alternatives/
+  answer_accessible_url: https://www.carbone4.com/publication-transport-routier-motorisation-alternatives
   answer_accessible_url_text: ''
   answer_scientific_url: ''
   answer_scientific_url_text: ''
