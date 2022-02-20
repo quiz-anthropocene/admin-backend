@@ -13503,7 +13503,7 @@
   answer_extra_info: https://twitter.com/laydgeur/status/1218076428559929344
   author: laydgeur
   validator: Raphael Odini
-  validation_status: Écartée
+  validation_status: Validée
   added: 2020-01-17
   created: 2020-05-20
   updated: 2020-11-28
@@ -29158,7 +29158,8 @@
   - 40
   - 51
 - id: 764
-  text: Vrai ou faux ? Ce sont les activités humaines qui font changer le climat actuel.
+  text: Vrai ou faux ? Ce sont les activités humaines qui font changer depuis quelques
+    siècles.
   hint: ''
   type: VF
   category: 2
@@ -29344,8 +29345,8 @@
   category: 2
   difficulty: 0
   language: Français
-  answer_option_a: il augmente à cause du CO2 et du méthane émis par les activités
-    de l’homme
+  answer_option_a: il augmente actuellement à cause du CO2 et du méthane émis par
+    les activités de l’homme
   answer_option_b: il n’existait pas avant que l’homme se mette à utiliser des énergies
     fossiles
   answer_option_c: Son augmentation réchauffe la terre
@@ -29959,9 +29960,12 @@
     augmente, il y a plus souvent des jours où il fait trop chaud, et des sécheresses
     car il y a de moins en moins d’eau. Lorsque l’atmosphère se réchauffe, tout est
     perturbé : l’évaporation, la formation des nuages... Cela peut causer des pluies
-    intenses qui font déborder les rivières et inonder les terres. Bien sûr, les plantes
-    et les animaux sont affectés par tous ces changements et certaines espèces disparaissent
-    à cause de la chaleur, du manque d’eau ou de la banquise qui fond.'
+    intenses qui font déborder les rivières et inonder les terres. Ce ne sont pas
+    des bonnes nouvelles pour les hommes.
+
+    Les plantes et les animaux sont aussi affectés par tous ces changements et certaines
+    espèces disparaissent à cause de la chaleur, du manque d’eau ou de la banquise
+    qui fond.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://fr.vikidia.org/wiki/R%C3%A9chauffement_climatique
@@ -34808,9 +34812,9 @@
     La déforestation représente environ 10% des émissions de CO2 à l’échelle mondiale.'
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://envol-vert.org/rapport/lempreinte-foret-des-francais-352m2/
   answer_accessible_url_text: ''
-  answer_scientific_url: http://envol-vert.org/wp-content/uploads/2018/11/Envol_Vert_Rapport_Empreinte_Foret_Final.pdf
+  answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/926b.PNG
