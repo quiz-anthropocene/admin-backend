@@ -1,6 +1,23 @@
 <template>
   <section>
 
+    <h2 class="text-align-left">
+      Des questions-réponses sur notre empreinte sur la planète
+    </h2>
+
+    <p class="text-align-left">
+      Dérèglement du climat, anéantissement du vivant, épuisement des ressources naturelles, artificialisation des espaces naturels…
+      Nous voilà entrés dans l’Anthropocène, l’ère de l’humain. L’homme est devenu la plus grande force qui façonne le monde.
+    </p>
+    <p class="text-align-left">
+      Ce site a vocation à vous en donner un premier aperçu. {{ questionsCount }} questions en ligne, regroupées en {{ quizzesPublishedCount }} quiz thématiques, avec des explications, des liens fiables pour aller plus loin et des illustrations.
+      Déjà {{ question_answer_count_formatted }} questions jouées sur le site.
+    <p class="text-align-left margin-bottom-0">
+      A vous de tester, et faire tourner !
+    </p>
+
+    <br />
+
     <!-- <div class="alert alert-success" role="alert">
       Le Quiz de l'Anthropocène a maintenant son atelier !
       <span class="no-wrap">➡️&nbsp;<router-link :to="{ name: 'atelier' }"><strong>Plus d'informations</strong></router-link>&nbsp;⬅️</span>
@@ -137,6 +154,9 @@ export default {
     },
     quizzesSpotlighted() {
       return this.$store.state.quizzesSpotlighted;
+    },
+    question_answer_count_formatted() {
+      return Intl.NumberFormat('fr-FR').format(this.$store.state.stats.question_answer_count || 250000);
     },
   },
 
