@@ -793,9 +793,9 @@
   - answer_success_count: 13
     count: 0
 - quiz_id: 65
-  answer_count: 284
-  answer_count_last_30_days: 15
-  answer_count_last_7_days: 3
+  answer_count: 285
+  answer_count_last_30_days: 16
+  answer_count_last_7_days: 4
   like_count: 8
   dislike_count: 1
   answer_success_count_split:
@@ -810,7 +810,7 @@
   - answer_success_count: 4
     count: 28
   - answer_success_count: 5
-    count: 40
+    count: 41
   - answer_success_count: 6
     count: 44
   - answer_success_count: 7
