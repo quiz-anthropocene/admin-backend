@@ -29328,16 +29328,15 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Laetitia BATAILLIE
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-13
+  added: 2022-02-09
   created: 2021-01-17
   updated: 2021-01-17
   tags:
-  - 33
-  - 217
-  - 218
+  - 53
+  - 266
 - id: 769
   text: A propos de l’effet de serre, est-il vrai de dire que...
   hint: ''
@@ -29919,11 +29918,11 @@
   answer_option_d: ''
   answer_correct: b
   has_ordered_answers: true
-  answer_explanation: Surtout quand elles rotent ! L’herbe qu’elles ont broutée digérée
-    dans leur estomac par des microbes qui vont la réduire en bouillie. Cela rejette
-    du méthane, un gaz à effet de serre qui réchauffe encore plus que le CO2. L’élevage
-    des ruminants fait partie des causes importantes du réchauffement climatique,
-    avec le transport, l’industrie, les bâtiments, les ordinateurs...
+  answer_explanation: Surtout quand elles rotent ! Des microbes dans leur estomac
+    vont réduire l’herbe qu’elles ont broutée en bouillie. Cela rejette du méthane,
+    un gaz à effet de serre qui réchauffe encore plus que le CO2. L’élevage des ruminants
+    fait partie des causes importantes du réchauffement climatique, avec le transport,
+    l’industrie, les bâtiments, les ordinateurs...
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: https://parlonssciences.ca/ressources-pedagogiques/les-stim-en-contexte/vaches-methane-et-changement-climatique
@@ -29931,7 +29930,7 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/Fdcj8.png?raw=true
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/Fdcj8.png
   answer_image_explanation: ''
   answer_extra_info: ''
   author: ''
