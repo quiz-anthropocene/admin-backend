@@ -1,4 +1,5 @@
 from django.urls import path
+from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
 from api import views
 
@@ -21,4 +22,8 @@ urlpatterns = [
     path("glossary", views.glossary_list, name="glossary_list"),
     path("notion-questions", views.notion_questions, name="notion-questions"),
     path("newsletter", views.newsletter, name="newsletter"),
+    # Swagger / OpenAPI documentation
+    path("schema/", SpectacularAPIView.as_view(), name="schema"),
+    path("docs/", SpectacularSwaggerView.as_view(url_name="api:schema"), name="swagger-ui"),
+    path("redoc/", SpectacularRedocView.as_view(url_name="api:schema"), name="redoc"),
 ]

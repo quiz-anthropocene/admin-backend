@@ -49,6 +49,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     "corsheaders",  # django-cors-headers
     "rest_framework",  # djangorestframework
+    "drf_spectacular",  # drf-spectacular
     "django_extensions",  # django-extensions
     "import_export",  # django-import-export
     "ckeditor",  # django-ckeditor
@@ -99,6 +100,7 @@ WSGI_APPLICATION = "app.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+# ------------------------------------------------------------------------------
 
 DATABASES = {}
 DATABASES["default"] = dj_database_url.config(conn_max_age=600)
@@ -106,6 +108,7 @@ DATABASES["default"] = dj_database_url.config(conn_max_age=600)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
+# ------------------------------------------------------------------------------
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -119,6 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
+# ------------------------------------------------------------------------------
 
 LANGUAGE_CODE = "fr"
 
@@ -133,12 +137,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+# ------------------------------------------------------------------------------
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = "/static/"
 
 
 # CORS
+# ------------------------------------------------------------------------------
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:8080",
@@ -153,7 +159,8 @@ CORS_ORIGIN_REGEX_WHITELIST = [
 ]
 
 
-# Cookie security
+# Security
+# ------------------------------------------------------------------------------
 
 SESSION_COOKIE_HTTPONLY = True
 SESSION_COOKIE_SECURE = (
@@ -163,9 +170,6 @@ CSRF_COOKIE_SECURE = (
     False if os.getenv("CSRF_COOKIE_SECURE") in ["False", False] else True
 )
 
-
-# SSL security
-
 SECURE_SSL_REDIRECT = (
     False if os.getenv("SECURE_SSL_REDIRECT") in ["False", False] else True
 )
@@ -173,16 +177,34 @@ SECURE_HSTS_SECONDS = os.getenv("SECURE_HSTS_SECONDS")
 
 
 # Models
+# ------------------------------------------------------------------------------
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 
+# Django REST Framework (DRF)
+# https://www.django-rest-framework.org/
+# ------------------------------------------------------------------------------
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+
+# DRF Spectacular
+# https://drf-spectacular.readthedocs.io/en/latest/settings.html
+# ------------------------------------------------------------------------------
+
+
+
 # Django Import Export
+# ------------------------------------------------------------------------------
 
 IMPORT_EXPORT_SKIP_ADMIN_LOG = True
 
 
 # Shell Plus
+# ------------------------------------------------------------------------------
 
 SHELL_PLUS = "ipython"
 SHELL_PLUS_IMPORTS = [
@@ -194,12 +216,15 @@ SHELL_PLUS_IMPORTS = [
 
 
 # Github
+# ------------------------------------------------------------------------------
 
 GITHUB_REPO = "raphodn/know-your-planet"
 GITHUB_ACCESS_TOKEN = os.getenv("GITHUB_ACCESS_TOKEN")
 GITHUB_CRON_ACTION_TOKEN = os.getenv("GITHUB_CRON_ACTION_TOKEN")
 
+
 # Notion.so
+# ------------------------------------------------------------------------------
 
 NOTION_API_SECRET = os.getenv("NOTION_API_SECRET")
 NOTION_API_VERSION = "2021-08-16"
@@ -214,6 +239,7 @@ NOTION_GLOSSARY_TABLE_URL = os.getenv("NOTION_GLOSSARY_TABLE_URL")
 
 
 # Sendinblue (Newsletter)
+# ------------------------------------------------------------------------------
 
 SIB_API_KEY = os.getenv("SIB_API_KEY")
 SIB_NEWSLETTER_LIST_ID = os.getenv("SIB_NEWSLETTER_LIST_ID")
@@ -224,6 +250,7 @@ SIB_CONTACT_DOI_ENDPOINT = (
 
 
 # django-ckeditor
+# ------------------------------------------------------------------------------
 
 CKEDITOR_CONFIGS = {
     "default": {
