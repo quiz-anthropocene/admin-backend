@@ -9,6 +9,7 @@ from rest_framework.response import Response
 
 from stats.models import (
     DailyStat,
+    QuestionAggStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
     QuizAnswerEvent,

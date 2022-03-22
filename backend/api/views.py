@@ -1,6 +1,8 @@
 import json
 import random
 from io import StringIO
+from drf_spectacular.utils import extend_schema
+from rest_framework import mixins, viewsets
 
 from django.core import management
 from django.db.models import Count, F
@@ -35,31 +37,16 @@ from api.serializers import (
 def api_home(request):
     return HttpResponse(
         """
-        <p>Welcome to the 'Know Your Planet' API app.</p>
-        <p>Available endpoints:</p>
-        <ul>
-            <li>GET /api/questions</li>
-            <li>GET /api/questions/:id</li>
-            <li>GET /api/questions/random</li>
-            <li>GET /api/categories</li>
-            <li>GET /api/tags</li>
-            <li>GET /api/authors</li>
-            <li>GET /api/quizzes</li>
-            <li>GET /api/glossary</li>
-        </ul>
-    """
+        <p>API du Quiz de l'Anthropocène.</p>
+        <p>La documentation se trouve à l'adresse <a href="/api/docs/">/api/docs/</a></p>
+        """
     )
 
 
-@api_view(["GET"])
-def question_list(request):
+class QuestionViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     """
-    List all validated questions (return them in a semi-random order)
-    Optional query parameters:
-    - 'category' (string)
-    - 'tag' (string)
-    - 'author' (string)
-    """
+    TODO: implement filters
+
     # get only the validated questions
     questions = Question.objects.validated()
 
@@ -78,26 +65,17 @@ def question_list(request):
         serializer = QuestionFullStringSerializer(questions, many=True)
     else:
         serializer = QuestionSerializer(questions, many=True)
-
-    return Response(serializer.data)
-
-
-@api_view(["GET"])
-def question_detail(request, pk):
     """
-    Retrieve a question
-    """
-    try:
-        question = Question.objects.get(pk=pk)
-    except Question.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+    queryset = Question.objects.validated()
+    serializer_class = QuestionSerializer
 
-    if request.GET.get("full"):
-        serializer = QuestionFullStringSerializer(question)
-    else:
-        serializer = QuestionSerializer(question)
+    @extend_schema(summary="Lister toutes les questions", tags=[Question._meta.verbose_name_plural])
+    def list(self, request, *args, **kwargs):
+        return super().list(request, args, kwargs)
 
-    return Response(serializer.data)
+    @extend_schema(summary="Détail d'une question", tags=[Question._meta.verbose_name_plural])
+    def retrieve(self, request, *args, **kwargs):
+        return super().retrieve(request, args, kwargs)
 
 
 @api_view(["GET"])
@@ -143,26 +121,22 @@ def question_count(request):
     return Response(question_validated_count)
 
 
-@api_view(["GET"])
-def category_list(request):
-    """
-    List all categories (with the number of questions per category)
-    """
-    categories = Category.objects.all()
+class CategoryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
 
-    serializer = CategorySerializer(categories, many=True)
-    return Response(serializer.data)
+    @extend_schema(summary="Lister toutes les catégories", tags=[Category._meta.verbose_name_plural])
+    def list(self, request, *args, **kwargs):
+        return super().list(request, args, kwargs)
 
 
-@api_view(["GET"])
-def tag_list(request):
-    """
-    List all tags (with the number of questions per tag)
-    """
-    tags = Tag.objects.all().order_by("name")
+class TagViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    queryset = Tag.objects.all().order_by("name")
+    serializer_class = TagSerializer
 
-    serializer = TagSerializer(tags, many=True)
-    return Response(serializer.data)
+    @extend_schema(summary="Lister tous les tags", tags=[Tag._meta.verbose_name_plural])
+    def list(self, request, *args, **kwargs):
+        return super().list(request, args, kwargs)
 
 
 @api_view(["GET"])
@@ -211,14 +185,10 @@ def difficulty_level_list(request):
     return Response(difficulty_levels)
 
 
-@api_view(["GET"])
-def quiz_list(request):
+class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     """
-    List all quizzes (with the number of questions per quiz)
-    Optional query parameters:
-    - 'author' (string)
-    - 'full' (string)
-    """
+    TODO: implement filters
+
     quizzes = Quiz.objects.published()
     if request.GET.get("author"):
         quizzes = quizzes.for_author(request.GET.get("author"))
@@ -229,8 +199,17 @@ def quiz_list(request):
         serializer = QuizWithQuestionOrderSerializer(quizzes, many=True)
     else:
         serializer = QuizSerializer(quizzes, many=True)
+    """
+    queryset = Quiz.objects.published()
+    serializer_class = QuizSerializer
 
-    return Response(serializer.data)
+    @extend_schema(summary="Lister tous les quiz", tags=[Quiz._meta.verbose_name_plural])
+    def list(self, request, *args, **kwargs):
+        return super().list(request, args, kwargs)
+
+    @extend_schema(summary="Détail d'un quiz", tags=[Quiz._meta.verbose_name_plural])
+    def retrieve(self, request, *args, **kwargs):
+        return super().retrieve(request, args, kwargs)
 
 
 @api_view(["POST"])
