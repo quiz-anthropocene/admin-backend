@@ -20,6 +20,7 @@ class SimpleChoiceSerializer(serializers.Serializer):
 QUESTION DIFFICULTY
 """
 
+
 class QuestionDifficultyChoiceSerializer(serializers.Serializer):
     id = serializers.IntegerField()
     name = serializers.CharField()

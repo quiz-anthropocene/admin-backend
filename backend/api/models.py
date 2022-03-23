@@ -32,7 +32,7 @@ class Category(models.Model):
         return f"{self.name}"
 
     @property
-    def question_count(self):
+    def question_count(self) -> int:
         return self.questions.validated().count()
 
     # Admin
@@ -73,11 +73,11 @@ class Tag(models.Model):
         return f"{self.name}"
 
     @property
-    def question_count(self):
+    def question_count(self) -> int:
         return self.questions.validated().count()
 
     @property
-    def quiz_count(self):
+    def quiz_count(self) -> int:
         return self.quizzes.published().count()
 
     # Admin
@@ -248,62 +248,62 @@ class Question(models.Model):
         return super(Question, self).save(*args, **kwargs)
 
     @property
-    def tags_list(self):
+    def tags_list(self) -> list:
         return list(self.tags.values_list("name", flat=True))
 
     @property
-    def tags_list_string(self):
+    def tags_list_string(self) -> str:
         return ", ".join(self.tags_list)
 
     @property
-    def quizs_list(self):
+    def quizs_list(self) -> list:
         return list(self.quizzes.values_list("name", flat=True))
 
     @property
-    def quizs_list_string(self):
+    def quizs_list_string(self) -> str:
         return ", ".join(self.quizs_list)
 
     @property
-    def has_hint(self):
+    def has_hint(self) -> bool:
         return len(self.hint) > 0
 
     @property
-    def has_answer_explanation(self):
+    def has_answer_explanation(self) -> bool:
         return len(self.answer_explanation) > 0
 
     @property
-    def has_answer_audio(self):
+    def has_answer_audio(self) -> bool:
         return len(self.answer_audio) > 0
 
     @property
-    def has_answer_video(self):
+    def has_answer_video(self) -> bool:
         return len(self.answer_video) > 0
 
     @property
-    def has_answer_accessible_url(self):
+    def has_answer_accessible_url(self) -> bool:
         return len(self.answer_accessible_url) > 0
 
     @property
-    def has_answer_scientific_url(self):
+    def has_answer_scientific_url(self) -> bool:
         return len(self.answer_scientific_url) > 0
 
     @property
-    def has_answer_image_url(self):
+    def has_answer_image_url(self) -> bool:
         return len(self.answer_image_url) > 0
 
     @property
-    def answer_count_agg(self):
+    def answer_count_agg(self) -> int:
         return self.agg_stats.answer_count + self.stats.count()
 
     @property
-    def answer_success_count_agg(self):
+    def answer_success_count_agg(self) -> int:
         return (
             self.agg_stats.answer_success_count
             + self.stats.filter(choice=self.answer_correct).count()
         )
 
     @property
-    def answer_success_rate(self):
+    def answer_success_rate(self) -> int:
         return (
             0
             if (self.answer_count_agg == 0)
@@ -311,11 +311,11 @@ class Question(models.Model):
         )
 
     @property
-    def like_count_agg(self):
+    def like_count_agg(self) -> int:
         return self.agg_stats.like_count + self.feedbacks.liked().count()
 
     @property
-    def dislike_count_agg(self):
+    def dislike_count_agg(self) -> int:
         return self.agg_stats.dislike_count + self.feedbacks.disliked().count()
 
     # Admin
@@ -518,19 +518,19 @@ class Quiz(models.Model):
         return super(Quiz, self).save(*args, **kwargs)
 
     @property
-    def question_count(self):
+    def question_count(self) -> int:
         return self.questions.count()
 
     @property
-    def tags_list(self):
+    def tags_list(self) -> list:
         return list(self.tags.values_list("name", flat=True))
 
     @property
-    def tags_list_string(self):
+    def tags_list_string(self) -> str:
         return ", ".join(self.tags_list)
 
     @property
-    def questions_categories_list(self):
+    def questions_categories_list(self) -> list:
         return list(
             self.questions.order_by()
             .values_list("category__name", flat=True)
@@ -538,7 +538,7 @@ class Quiz(models.Model):
         )  # .sort()
 
     @property
-    def questions_categories_list_with_count(self):
+    def questions_categories_list_with_count(self) -> list:
         return list(
             self.questions.values("category__name")
             .annotate(count=Count("category__name"))
@@ -546,7 +546,7 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_categories_list_with_count_string(self):
+    def questions_categories_list_with_count_string(self) -> str:
         # return ", ".join(self.questions_categories_list)
         return ", ".join(
             [
@@ -556,13 +556,13 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_tags_list(self):
+    def questions_tags_list(self) -> list:
         return list(
             self.questions.order_by().values_list("tags__name", flat=True).distinct()
         )
 
     @property
-    def questions_tags_list_with_count(self):
+    def questions_tags_list_with_count(self) -> list:
         return list(
             self.questions.values("tags__name")
             .annotate(count=Count("tags__name"))
@@ -570,7 +570,7 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_tags_list_with_count_string(self):
+    def questions_tags_list_with_count_string(self) -> str:
         # return ", ".join(self.questions_tags_list_with_count)
         return ", ".join(
             [
@@ -580,13 +580,13 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_authors_list(self):
+    def questions_authors_list(self) -> list:
         return list(
             self.questions.order_by().values_list("author", flat=True).distinct()
         )
 
     @property
-    def questions_authors_list_with_count(self):
+    def questions_authors_list_with_count(self) -> list:
         return list(
             self.questions.values("author")
             .annotate(count=Count("author"))
@@ -594,7 +594,7 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_authors_list_with_count_string(self):
+    def questions_authors_list_with_count_string(self) -> str:
         # return ", ".join(self.questions_authors_list_with_count)
         return ", ".join(
             [
@@ -604,15 +604,15 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_not_validated_list(self):
+    def questions_not_validated_list(self) -> list:
         return list(self.questions.not_validated())
 
     @property
-    def questions_not_validated_string(self):
+    def questions_not_validated_string(self) -> str:
         return "<br />".join([str(q) for q in self.questions_not_validated_list])
 
     @property
-    def questions_difficulty_average(self):
+    def questions_difficulty_average(self) -> int:
         questions_difficulty_avg_raw = self.questions.aggregate(Avg("difficulty"))
         questions_difficulty_average_value = (
             round(questions_difficulty_avg_raw["difficulty__avg"], 1)
@@ -626,11 +626,11 @@ class Quiz(models.Model):
         return self.from_quizs.all() | self.to_quizs.all()
 
     @property
-    def answer_count_agg(self):
+    def answer_count_agg(self) -> int:
         return self.stats.count()
 
     @property
-    def duration_average_seconds(self):
+    def duration_average_seconds(self) -> int:
         if self.answer_count_agg:
             duration_seconds_avg_raw = self.stats.exclude(duration_seconds=0).aggregate(
                 Avg("duration_seconds")
@@ -644,7 +644,7 @@ class Quiz(models.Model):
         return 0
 
     @property
-    def duration_average_minutes_string(self):
+    def duration_average_minutes_string(self) -> str:
         if self.duration_average_seconds:
             duration_average_floor_minutes = self.duration_average_seconds // 60
             duration_average_floor_minutes_string = str(
@@ -662,11 +662,11 @@ class Quiz(models.Model):
         return ""
 
     @property
-    def like_count_agg(self):
+    def like_count_agg(self) -> int:
         return self.feedbacks.liked().count()
 
     @property
-    def dislike_count_agg(self):
+    def dislike_count_agg(self) -> int:
         return self.feedbacks.disliked().count()
 
     # Admin

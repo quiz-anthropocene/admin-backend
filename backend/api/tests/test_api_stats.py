@@ -96,7 +96,6 @@ class ApiStatTest(TestCase):
         self.assertEqual(self.quiz_2.duration_average_seconds, 60)
         self.assertEqual(self.quiz_2.duration_average_minutes_string, "1min00")
 
-
     def test_quiz_feedback_event(self):
         response = self.client.post(
             reverse("stats:quiz-feedback-event-list"),

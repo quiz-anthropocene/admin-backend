@@ -1,12 +1,10 @@
 import json
 
-from django.http import HttpResponse
 from django.core.serializers.json import DjangoJSONEncoder
 from django.shortcuts import render
 from drf_spectacular.utils import extend_schema
-from rest_framework import status, mixins, viewsets
+from rest_framework import mixins, viewsets
 from rest_framework.decorators import api_view
-from rest_framework.response import Response
 
 from stats.models import (
     DailyStat,
@@ -16,13 +14,11 @@ from stats.models import (
     QuizFeedbackEvent,
 )
 from stats.serializers import (
-    QuestionAggStatSerializer,
     QuestionAnswerEventSerializer,
     QuestionFeedbackEventSerializer,
     QuizAnswerEventSerializer,
     QuizFeedbackEventSerializer,
 )
-from api.models import Question, Quiz
 
 
 class QuestionAnswerEventViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
