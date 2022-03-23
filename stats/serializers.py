@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
+from api.models import Question, Quiz
 from stats.models import (
     QuestionAggStat,
     QuestionAnswerEvent,
@@ -7,11 +8,6 @@ from stats.models import (
     QuizAnswerEvent,
     QuizFeedbackEvent,
 )
-
-
-"""
-QUESTION AGG STATS
-"""
 
 
 class QuestionAggStatSerializer(serializers.ModelSerializer):
@@ -26,38 +22,29 @@ class QuestionAggStatSerializer(serializers.ModelSerializer):
         ]
 
 
-"""
-QUESTION ANSWER EVENT
-"""
-
-
 class QuestionAnswerEventSerializer(serializers.ModelSerializer):
+    question = serializers.PrimaryKeyRelatedField(queryset=Question.objects.all(), required=True)
+
     class Meta:
         model = QuestionAnswerEvent
-        fields = ["question_id", "choice", "source", "created"]
-
-
-"""
-QUESTION FEEDBACK EVENT
-"""
+        fields = ["question", "choice", "source", "created"]
 
 
 class QuestionFeedbackEventSerializer(serializers.ModelSerializer):
+    question = serializers.PrimaryKeyRelatedField(queryset=Question.objects.all(), required=True)
+
     class Meta:
         model = QuestionFeedbackEvent
-        fields = ["question_id", "choice", "source", "created"]
-
-
-"""
-QUIZ ANSWER EVENT
-"""
+        fields = ["question", "choice", "source", "created"]
 
 
 class QuizAnswerEventSerializer(serializers.ModelSerializer):
+    quiz = serializers.PrimaryKeyRelatedField(queryset=Quiz.objects.all(), required=True)
+
     class Meta:
         model = QuizAnswerEvent
         fields = [
-            "quiz_id",
+            "quiz",
             "question_count",
             "answer_success_count",
             "duration_seconds",
@@ -65,12 +52,9 @@ class QuizAnswerEventSerializer(serializers.ModelSerializer):
         ]
 
 
-"""
-QUIZ FEEDBACK EVENT
-"""
-
-
 class QuizFeedbackEventSerializer(serializers.ModelSerializer):
+    quiz = serializers.PrimaryKeyRelatedField(queryset=Quiz.objects.all(), required=True)
+
     class Meta:
         model = QuizFeedbackEvent
-        fields = ["quiz_id", "choice", "created"]
+        fields = ["quiz", "choice", "created"]

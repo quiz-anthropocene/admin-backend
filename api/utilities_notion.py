@@ -11,8 +11,12 @@ from django.db.models.fields import URLField
 from api.models import Question
 
 
-TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%S"  # "2021-05-05T13:02:00.000Z"  # milliseconds not managed
-QUESTION_URL_FIELDS = [field.name for field in Question._meta.fields if type(field) == URLField]
+TIMESTAMP_FORMAT = (
+    "%Y-%m-%dT%H:%M:%S"  # "2021-05-05T13:02:00.000Z"  # milliseconds not managed
+)
+QUESTION_URL_FIELDS = [
+    field.name for field in Question._meta.fields if type(field) == URLField
+]
 
 
 # Official API
@@ -20,15 +24,19 @@ QUESTION_URL_FIELDS = [field.name for field in Question._meta.fields if type(fie
 NOTION_API_HEADERS = {
     "Content-Type": "application/json",
     "Authorization": f"Bearer {settings.NOTION_API_SECRET}",
-    "Notion-Version": f"{settings.NOTION_API_VERSION}"
+    "Notion-Version": f"{settings.NOTION_API_VERSION}",
 }
 
 
-def get_question_table_pages(sort_direction="descending", extra_data=None, start_cursor=None):
+def get_question_table_pages(
+    sort_direction="descending", extra_data=None, start_cursor=None
+):
     """
     Retrive 100 pages from the question table
     """
-    url = f"https://api.notion.com/v1/databases/{settings.NOTION_QUESTION_TABLE_ID}/query"
+    url = (
+        f"https://api.notion.com/v1/databases/{settings.NOTION_QUESTION_TABLE_ID}/query"
+    )
     data = {"sorts": [{"property": "Last edited time", "direction": sort_direction}]}
     if extra_data:
         data = {**data, **extra_data}
@@ -75,9 +83,13 @@ def process_page_properties(page_properties):
     for key in page_properties:
         # Step 1: process key by Notion 'type"
         if page_properties[key]["type"] == "title":
-            page_dict[key] = "".join([text["plain_text"] for text in page_properties[key]["title"]])
+            page_dict[key] = "".join(
+                [text["plain_text"] for text in page_properties[key]["title"]]
+            )
         elif page_properties[key]["type"] == "rich_text":
-            page_dict[key] = "".join([text["plain_text"] for text in page_properties[key]["rich_text"]])  # noqa
+            page_dict[key] = "".join(
+                [text["plain_text"] for text in page_properties[key]["rich_text"]]
+            )  # noqa
         elif page_properties[key]["type"] == "number":
             page_dict[key] = page_properties[key]["number"]
         elif page_properties[key]["type"] == "select":
@@ -86,7 +98,9 @@ def process_page_properties(page_properties):
             except (TypeError, AttributeError) as e:  # noqa
                 page_dict[key] = ""
         elif page_properties[key]["type"] == "multi_select":
-            page_dict[key] = [tag["name"] for tag in page_properties[key]["multi_select"]]
+            page_dict[key] = [
+                tag["name"] for tag in page_properties[key]["multi_select"]
+            ]
         elif page_properties[key]["type"] == "url":
             try:
                 page_dict[key] = page_properties[key]["url"].strip()
@@ -108,7 +122,9 @@ def process_page_properties(page_properties):
         elif page_properties[key]["type"] == "last_edited_time":
             page_dict[key] = page_properties[key]["last_edited_time"]
         else:
-            raise Exception(f"process_page_properties: {page_properties[key]['type']} missing")
+            raise Exception(
+                f"process_page_properties: {page_properties[key]['type']} missing"
+            )
 
         # Step 2: process key by custom rules
         if key == "Text":
@@ -116,12 +132,19 @@ def process_page_properties(page_properties):
         if key == "difficulty":
             page_dict[key] = int(page_dict[key]) if page_dict[key] else None
         elif key == "added":
-            page_dict[key] = date.fromisoformat(page_dict[key]) if page_dict[key] else datetime.strptime(page_dict["Created time"][:-5], TIMESTAMP_FORMAT).date()  # noqa
+            page_dict[key] = (
+                date.fromisoformat(page_dict[key])
+                if page_dict[key]
+                else datetime.strptime(
+                    page_dict["Created time"][:-5], TIMESTAMP_FORMAT
+                ).date()
+            )  # noqa
 
     return page_dict
 
 
 # Unofficial API (notion-py)
+
 
 def get_notion_client():
     """
@@ -217,7 +240,7 @@ def add_import_stats_row(total, new, update):
 
 def get_glossary_table():
     """
-   Glossary page: get table
+    Glossary page: get table
     """
     notion_client = get_notion_client()
     # page = client.get_block(settings.NOTION_GLOSSARY_PAGE_URL)
@@ -227,7 +250,7 @@ def get_glossary_table():
 
 def get_glossary_rows():
     """
-   Glossary page: get current rows
+    Glossary page: get current rows
     """
     glossary_table = get_glossary_table()
     # sort_params = [{

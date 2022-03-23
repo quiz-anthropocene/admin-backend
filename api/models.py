@@ -21,6 +21,8 @@ class Category(models.Model):
     )
 
     class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
         ordering = ["pk"]
         constraints = [
             models.UniqueConstraint(fields=["name"], name="unique category name")
@@ -30,7 +32,7 @@ class Category(models.Model):
         return f"{self.name}"
 
     @property
-    def question_count(self):
+    def question_count(self) -> int:
         return self.questions.validated().count()
 
     # Admin
@@ -62,6 +64,8 @@ class Tag(models.Model):
     objects = TagManager()
 
     class Meta:
+        verbose_name = "Tag"
+        verbose_name_plural = "Tags"
         ordering = ["pk"]
         constraints = [models.UniqueConstraint(fields=["name"], name="unique tag name")]
 
@@ -69,11 +73,11 @@ class Tag(models.Model):
         return f"{self.name}"
 
     @property
-    def question_count(self):
+    def question_count(self) -> int:
         return self.questions.validated().count()
 
     @property
-    def quiz_count(self):
+    def quiz_count(self) -> int:
         return self.quizzes.published().count()
 
     # Admin
@@ -136,7 +140,7 @@ class Question(models.Model):
     )
     language = models.CharField(
         max_length=50,
-        choices=zip(constants.LANGUAGE_CHOICE_LIST, constants.LANGUAGE_CHOICE_LIST,),
+        choices=constants.LANGUAGE_CHOICES,
         default=constants.LANGUAGE_FRENCH,
         blank=False,
         help_text="La langue de la question",
@@ -155,10 +159,7 @@ class Question(models.Model):
     )
     answer_correct = models.CharField(
         max_length=50,
-        choices=zip(
-            constants.QUESTION_ANSWER_CHOICE_LIST,
-            constants.QUESTION_ANSWER_CHOICE_LIST,
-        ),
+        choices=constants.QUESTION_ANSWER_CHOICES,
         blank=True,
         help_text="a, b, c ou d. ab, acd, abcd, etc si plusieurs réponses.",
     )
@@ -180,7 +181,9 @@ class Question(models.Model):
         max_length=500, blank=True, help_text="Un lien pour aller plus loin"
     )
     answer_accessible_url_text = models.CharField(
-        max_length=500, blank=True, help_text="Le texte pour remplace l'affichage du lien"
+        max_length=500,
+        blank=True,
+        help_text="Le texte pour remplace l'affichage du lien",
     )
     answer_scientific_url = models.URLField(
         max_length=500,
@@ -188,7 +191,9 @@ class Question(models.Model):
         help_text="La source scientifique du chiffre (rapport)",
     )
     answer_scientific_url_text = models.CharField(
-        max_length=500, blank=True, help_text="Le texte pour remplace l'affichage du lien de la source scientifique"  # noqa
+        max_length=500,
+        blank=True,
+        help_text="Le texte pour remplace l'affichage du lien de la source scientifique",  # noqa
     )
     answer_reading_recommendation = models.TextField(
         blank=True, help_text="Un livre pour aller plus loin"
@@ -215,10 +220,7 @@ class Question(models.Model):
     )
     validation_status = models.CharField(
         max_length=150,
-        choices=zip(
-            constants.QUESTION_VALIDATION_STATUS_LIST,
-            constants.QUESTION_VALIDATION_STATUS_LIST,
-        ),
+        choices=constants.QUESTION_VALIDATION_STATUS_CHOICES,
         default=constants.QUESTION_VALIDATION_STATUS_NEW,
         help_text="Le statut de la question dans le workflow de validation",
     )
@@ -234,6 +236,8 @@ class Question(models.Model):
     objects = QuestionQuerySet.as_manager()
 
     class Meta:
+        verbose_name = "Question"
+        verbose_name_plural = "Questions"
         ordering = ["pk"]
 
     def __str__(self):
@@ -244,62 +248,62 @@ class Question(models.Model):
         return super(Question, self).save(*args, **kwargs)
 
     @property
-    def tags_list(self):
+    def tags_list(self) -> list:
         return list(self.tags.values_list("name", flat=True))
 
     @property
-    def tags_list_string(self):
+    def tags_list_string(self) -> str:
         return ", ".join(self.tags_list)
 
     @property
-    def quizs_list(self):
+    def quizs_list(self) -> list:
         return list(self.quizzes.values_list("name", flat=True))
 
     @property
-    def quizs_list_string(self):
+    def quizs_list_string(self) -> str:
         return ", ".join(self.quizs_list)
 
     @property
-    def has_hint(self):
+    def has_hint(self) -> bool:
         return len(self.hint) > 0
 
     @property
-    def has_answer_explanation(self):
+    def has_answer_explanation(self) -> bool:
         return len(self.answer_explanation) > 0
 
     @property
-    def has_answer_audio(self):
+    def has_answer_audio(self) -> bool:
         return len(self.answer_audio) > 0
 
     @property
-    def has_answer_video(self):
+    def has_answer_video(self) -> bool:
         return len(self.answer_video) > 0
 
     @property
-    def has_answer_accessible_url(self):
+    def has_answer_accessible_url(self) -> bool:
         return len(self.answer_accessible_url) > 0
 
     @property
-    def has_answer_scientific_url(self):
+    def has_answer_scientific_url(self) -> bool:
         return len(self.answer_scientific_url) > 0
 
     @property
-    def has_answer_image_url(self):
+    def has_answer_image_url(self) -> bool:
         return len(self.answer_image_url) > 0
 
     @property
-    def answer_count_agg(self):
+    def answer_count_agg(self) -> int:
         return self.agg_stats.answer_count + self.stats.count()
 
     @property
-    def answer_success_count_agg(self):
+    def answer_success_count_agg(self) -> int:
         return (
             self.agg_stats.answer_success_count
             + self.stats.filter(choice=self.answer_correct).count()
         )
 
     @property
-    def answer_success_rate(self):
+    def answer_success_rate(self) -> int:
         return (
             0
             if (self.answer_count_agg == 0)
@@ -307,11 +311,11 @@ class Question(models.Model):
         )
 
     @property
-    def like_count_agg(self):
+    def like_count_agg(self) -> int:
         return self.agg_stats.like_count + self.feedbacks.liked().count()
 
     @property
-    def dislike_count_agg(self):
+    def dislike_count_agg(self) -> int:
         return self.agg_stats.dislike_count + self.feedbacks.disliked().count()
 
     # Admin
@@ -433,7 +437,9 @@ class QuizQuerySet(models.QuerySet):
 
 class Quiz(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du quiz")
-    slug = models.SlugField(max_length=50, unique=True, help_text="Le bout d'url du quiz")
+    slug = models.SlugField(
+        max_length=50, unique=True, help_text="Le bout d'url du quiz"
+    )
     introduction = RichTextField(blank=True, help_text="Une description du quiz")
     conclusion = RichTextField(
         blank=True,
@@ -456,7 +462,7 @@ class Quiz(models.Model):
     )
     language = models.CharField(
         max_length=50,
-        choices=zip(constants.LANGUAGE_CHOICE_LIST, constants.LANGUAGE_CHOICE_LIST,),
+        choices=constants.LANGUAGE_CHOICES,
         default=constants.LANGUAGE_FRENCH,
         blank=False,
         help_text="La langue du quiz",
@@ -490,6 +496,8 @@ class Quiz(models.Model):
     objects = QuizQuerySet.as_manager()
 
     class Meta:
+        verbose_name = "Quiz"
+        verbose_name_plural = "Quizs"
         ordering = ["pk"]
 
     def __str__(self):
@@ -510,19 +518,19 @@ class Quiz(models.Model):
         return super(Quiz, self).save(*args, **kwargs)
 
     @property
-    def question_count(self):
+    def question_count(self) -> int:
         return self.questions.count()
 
     @property
-    def tags_list(self):
+    def tags_list(self) -> list:
         return list(self.tags.values_list("name", flat=True))
 
     @property
-    def tags_list_string(self):
+    def tags_list_string(self) -> str:
         return ", ".join(self.tags_list)
 
     @property
-    def questions_categories_list(self):
+    def questions_categories_list(self) -> list:
         return list(
             self.questions.order_by()
             .values_list("category__name", flat=True)
@@ -530,7 +538,7 @@ class Quiz(models.Model):
         )  # .sort()
 
     @property
-    def questions_categories_list_with_count(self):
+    def questions_categories_list_with_count(self) -> list:
         return list(
             self.questions.values("category__name")
             .annotate(count=Count("category__name"))
@@ -538,7 +546,7 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_categories_list_with_count_string(self):
+    def questions_categories_list_with_count_string(self) -> str:
         # return ", ".join(self.questions_categories_list)
         return ", ".join(
             [
@@ -548,13 +556,13 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_tags_list(self):
+    def questions_tags_list(self) -> list:
         return list(
             self.questions.order_by().values_list("tags__name", flat=True).distinct()
         )
 
     @property
-    def questions_tags_list_with_count(self):
+    def questions_tags_list_with_count(self) -> list:
         return list(
             self.questions.values("tags__name")
             .annotate(count=Count("tags__name"))
@@ -562,7 +570,7 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_tags_list_with_count_string(self):
+    def questions_tags_list_with_count_string(self) -> str:
         # return ", ".join(self.questions_tags_list_with_count)
         return ", ".join(
             [
@@ -572,13 +580,13 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_authors_list(self):
+    def questions_authors_list(self) -> list:
         return list(
             self.questions.order_by().values_list("author", flat=True).distinct()
         )
 
     @property
-    def questions_authors_list_with_count(self):
+    def questions_authors_list_with_count(self) -> list:
         return list(
             self.questions.values("author")
             .annotate(count=Count("author"))
@@ -586,7 +594,7 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_authors_list_with_count_string(self):
+    def questions_authors_list_with_count_string(self) -> str:
         # return ", ".join(self.questions_authors_list_with_count)
         return ", ".join(
             [
@@ -596,15 +604,15 @@ class Quiz(models.Model):
         )
 
     @property
-    def questions_not_validated_list(self):
+    def questions_not_validated_list(self) -> list:
         return list(self.questions.not_validated())
 
     @property
-    def questions_not_validated_string(self):
+    def questions_not_validated_string(self) -> str:
         return "<br />".join([str(q) for q in self.questions_not_validated_list])
 
     @property
-    def questions_difficulty_average(self):
+    def questions_difficulty_average(self) -> int:
         questions_difficulty_avg_raw = self.questions.aggregate(Avg("difficulty"))
         questions_difficulty_average_value = (
             round(questions_difficulty_avg_raw["difficulty__avg"], 1)
@@ -618,16 +626,14 @@ class Quiz(models.Model):
         return self.from_quizs.all() | self.to_quizs.all()
 
     @property
-    def answer_count_agg(self):
+    def answer_count_agg(self) -> int:
         return self.stats.count()
 
     @property
-    def duration_average_seconds(self):
+    def duration_average_seconds(self) -> int:
         if self.answer_count_agg:
-            duration_seconds_avg_raw = (
-                self.stats
-                .exclude(duration_seconds=0)
-                .aggregate(Avg("duration_seconds"))
+            duration_seconds_avg_raw = self.stats.exclude(duration_seconds=0).aggregate(
+                Avg("duration_seconds")
             )
             duration_seconds_average_value = (
                 round(duration_seconds_avg_raw["duration_seconds__avg"], 1)
@@ -638,23 +644,29 @@ class Quiz(models.Model):
         return 0
 
     @property
-    def duration_average_minutes_string(self):
+    def duration_average_minutes_string(self) -> str:
         if self.duration_average_seconds:
             duration_average_floor_minutes = self.duration_average_seconds // 60
-            duration_average_floor_minutes_string = str(round(duration_average_floor_minutes))
+            duration_average_floor_minutes_string = str(
+                round(duration_average_floor_minutes)
+            )
             duration_average_remainder_seconds = self.duration_average_seconds % 60
-            duration_average_remainder_seconds_string = str(round(duration_average_remainder_seconds))  # noqa
+            duration_average_remainder_seconds_string = str(
+                round(duration_average_remainder_seconds)
+            )  # noqa
             if len(duration_average_remainder_seconds_string) == 1:
-                duration_average_remainder_seconds_string = f"0{duration_average_remainder_seconds_string}"  # noqa
+                duration_average_remainder_seconds_string = (
+                    f"0{duration_average_remainder_seconds_string}"  # noqa
+                )
             return f"{duration_average_floor_minutes_string}min{duration_average_remainder_seconds_string}"  # noqa
         return ""
 
     @property
-    def like_count_agg(self):
+    def like_count_agg(self) -> int:
         return self.feedbacks.liked().count()
 
     @property
-    def dislike_count_agg(self):
+    def dislike_count_agg(self) -> int:
         return self.feedbacks.disliked().count()
 
     # Admin
@@ -671,7 +683,9 @@ class Quiz(models.Model):
     )
     answer_count_agg.fget.short_description = "# Rép"
     duration_average_seconds.fget.short_description = "Durée moyenne (en secondes)"
-    duration_average_minutes_string.fget.short_description = "Durée moyenne (en minutes)"
+    duration_average_minutes_string.fget.short_description = (
+        "Durée moyenne (en minutes)"
+    )
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"
 
@@ -822,7 +836,8 @@ class Contribution(models.Model):
     type = models.CharField(
         max_length=150,
         choices=zip(
-            constants.CONTRIBUTION_TYPE_LIST, constants.CONTRIBUTION_TYPE_LIST,
+            constants.CONTRIBUTION_TYPE_LIST,
+            constants.CONTRIBUTION_TYPE_LIST,
         ),
         blank=True,
         help_text="Le type de contribution",
@@ -856,7 +871,9 @@ class Glossary(models.Model):
     )
     updated = models.DateField(auto_now=True)
 
-    # class Meta:
+    class Meta:
+        ordering = ["name"]
+
     #     constraints = [
     #         models.UniqueConstraint(fields=["name"], name="unique glossary name")
     #     ]
