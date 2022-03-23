@@ -21,6 +21,8 @@ class Category(models.Model):
     )
 
     class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
         ordering = ["pk"]
         constraints = [
             models.UniqueConstraint(fields=["name"], name="unique category name")
@@ -62,6 +64,8 @@ class Tag(models.Model):
     objects = TagManager()
 
     class Meta:
+        verbose_name = "Tag"
+        verbose_name_plural = "Tags"
         ordering = ["pk"]
         constraints = [models.UniqueConstraint(fields=["name"], name="unique tag name")]
 
@@ -234,6 +238,8 @@ class Question(models.Model):
     objects = QuestionQuerySet.as_manager()
 
     class Meta:
+        verbose_name = "Question"
+        verbose_name_plural = "Questions"
         ordering = ["pk"]
 
     def __str__(self):
@@ -490,6 +496,8 @@ class Quiz(models.Model):
     objects = QuizQuerySet.as_manager()
 
     class Meta:
+        verbose_name = "Quiz"
+        verbose_name_plural = "Quizs"
         ordering = ["pk"]
 
     def __str__(self):
