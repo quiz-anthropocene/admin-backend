@@ -11,6 +11,20 @@ from api.models import (
 )
 
 
+class SimpleChoiceSerializer(serializers.Serializer):
+    id = serializers.CharField()
+    name = serializers.CharField()
+
+
+"""
+QUESTION DIFFICULTY
+"""
+
+class QuestionDifficultyChoiceSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    name = serializers.CharField()
+
+
 """
 QUESTION CATEGORY
 """
@@ -111,16 +125,6 @@ class QuestionFullObjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
         fields = QUESTION_FIELDS
-
-
-class QuestionDifficultyChoiceSerializer(serializers.Serializer):
-    id = serializers.IntegerField()
-    name = serializers.CharField()
-
-
-class SimpleChoiceSerializer(serializers.Serializer):
-    id = serializers.CharField()
-    name = serializers.CharField()
 
 
 """

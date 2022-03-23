@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 
 from api import constants
-from api.models import QuizQuestion
+from api.models import QuizQuestion, Glossary
 from api.tests.factories import (
     CategoryFactory,
     TagFactory,
@@ -255,6 +255,25 @@ class ApiTest(TestCase):
     #     self.assertEqual(len(response.data["results"]), 1)  # 1 quiz not published
     #     self.assertEqual(len(response.data["results"][0]["questions"]), 2)
     #     self.assertEqual(response.data["results"][0]["questions"][0]["id"], self.question_2.id)
+
+    def test_glossary(self):
+        Glossary.objects.create(name="Anthropocène")
+        response = self.client.get(reverse("api:glossary-list"))
+        self.assertEqual(response.status_code, 200)
+        self.assertIsInstance(response.data["results"], list)
+        self.assertEqual(len(response.data["results"]), 1)
+
+    def test_contribution(self):
+        response = self.client.post(
+            reverse("api:contribution-list"),
+            data={
+                "text": "du texte",
+                "description": "une description",
+                "type": constants.CONTRIBUTION_TYPE_LIST[0],
+            },
+        )
+        self.assertEqual(response.status_code, 201)
+        self.assertIsInstance(response.data, dict)
 
     def test_question_feedback_event(self):
         response = self.client.post(

@@ -1,7 +1,7 @@
 import json
 import random
 from io import StringIO
-from drf_spectacular.utils import extend_schema
+from drf_spectacular.utils import extend_schema, extend_schema_view
 from rest_framework import mixins, viewsets
 
 from django.core import management
@@ -228,28 +228,20 @@ class QuizViewSet(
         return super().retrieve(request, args, kwargs)
 
 
-@api_view(["POST"])
-def contribute(request):
-    """
-    Add a contribution
-    """
-    if request.method == "POST":
-        contribution = Contribution.objects.create(
-            text=request.data["text"],
-            description=request.data["description"],
-            type=request.data["type"],
-        )
+class ContributionViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
+    queryset = Contribution.objects.all()
+    serializer_class = ContributionSerializer
 
+    @extend_schema(summary="Nouvelle contribution", tags=[Contribution._meta.verbose_name], exclude=True)
+    def create(self, request, *args, **kwargs):
         # send to Notion ?
-        # done with export_contributions_to_notion + cron_export_contributions_to_notion  # noqa
-
-        serializer = ContributionSerializer(contribution)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        # done with export_contributions_to_notion + cron_export_contributions_to_notion
+        return super().create(request, args, kwargs)
 
 
 class GlossaryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Glossary.objects.all()
-    serializer = GlossarySerializer
+    serializer_class = GlossarySerializer
 
     @extend_schema(summary="Glossaire", tags=[Glossary._meta.verbose_name])
     def list(self, request, *args, **kwargs):
