@@ -42,42 +42,43 @@ class ApiTest(TestCase):
         response = self.client.get(reverse("api:index"))
         self.assertEqual(response.status_code, 200)
         html = response.content.decode("utf8")
-        self.assertIn("Welcome", html)
+        self.assertIn("API", html)
 
     def test_question_list(self):
-        response = self.client.get(reverse("api:question_list"))
+        response = self.client.get(reverse("api:question-list"))
         self.assertEqual(response.status_code, 200)
-        self.assertIsInstance(response.data, list)
-        self.assertEqual(len(response.data), 2)  # 1 question not validated
+        self.assertEqual(response.data["count"], 2)
+        self.assertIsInstance(response.data["results"], list)
+        self.assertEqual(len(response.data["results"]), 2)  # 1 question not validated
 
-        response = self.client.get(reverse("api:question_list"), {"author": "author 1"})
+        response = self.client.get(reverse("api:question-list"), {"author": "author 1"})
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 0)
-        response = self.client.get(reverse("api:question_list"), {"author": "author 2"})
+        self.assertEqual(len(response.data["results"]), 0)
+        response = self.client.get(reverse("api:question-list"), {"author": "author 2"})
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 1)
-
-        response = self.client.get(
-            reverse("api:question_list"), {"tag": self.tag_1.name}
-        )
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 1)
+        self.assertEqual(len(response.data["results"]), 1)
 
         response = self.client.get(
-            reverse("api:question_list"), {"tag": self.tag_2.name}
+            reverse("api:question-list"), {"tag": self.tag_1.name}
         )
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 2)
+        self.assertEqual(len(response.data["results"]), 1)
 
         response = self.client.get(
-            reverse("api:question_list"), {"category": self.category_1.name}
+            reverse("api:question-list"), {"tag": self.tag_2.name}
         )
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.data), 2)  # 1 question not validated
+        self.assertEqual(len(response.data["results"]), 2)
+
+        response = self.client.get(
+            reverse("api:question-list"), {"category": self.category_1.name}
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.data["results"]), 2)  # 1 question not validated
 
     def test_question_detail(self):
         response = self.client.get(
-            reverse("api:question_detail", args=[self.question_2.id])
+            reverse("api:question-detail", args=[self.question_2.id])
         )
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data, dict)
@@ -89,7 +90,7 @@ class ApiTest(TestCase):
 
     def test_question_detail_full_string(self):
         response = self.client.get(
-            reverse("api:question_detail", args=[self.question_2.id]) + "?full=true"
+            reverse("api:question-detail", args=[self.question_2.id]) + "?full=true"
         )
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data, dict)
@@ -125,60 +126,54 @@ class ApiTest(TestCase):
         self.assertIsInstance(response.data, dict)
         self.assertIn(response.data["id"], [self.question_2.id, self.question_3.id])
 
-    def test_question_count(self):
-        response = self.client.get(reverse("api:question_count"))
-        self.assertEqual(response.status_code, 200)
-        self.assertIsInstance(response.data, int)
-        self.assertEqual(response.data, 2)  # 1 question not validated
-
     def test_category_list(self):
-        response = self.client.get(reverse("api:category_list"))
+        response = self.client.get(reverse("api:category-list"))
         self.assertEqual(response.status_code, 200)
-        self.assertIsInstance(response.data, list)
-        self.assertEqual(len(response.data), 1)
+        self.assertIsInstance(response.data["results"], list)
+        self.assertEqual(len(response.data["results"]), 1)
 
     def test_tag_list(self):
-        response = self.client.get(reverse("api:tag_list"))
+        response = self.client.get(reverse("api:tag-list"))
         self.assertEqual(response.status_code, 200)
-        self.assertIsInstance(response.data, list)
-        self.assertEqual(len(response.data), 2)
+        self.assertIsInstance(response.data["results"], list)
+        self.assertEqual(len(response.data["results"]), 2)
 
-    def test_author_list(self):
-        response = self.client.get(reverse("api:author_list"))
-        self.assertEqual(response.status_code, 200)
-        self.assertIsInstance(response.data, list)
-        self.assertEqual(len(response.data), 2)  # 1 question not validated
+    # def test_author_list(self):
+    #     response = self.client.get(reverse("api:author_list"))
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertIsInstance(response.data["results"], list)
+    #     self.assertEqual(len(response.data["results"]), 2)  # 1 question not validated
 
     def test_difficulty_level_list(self):
-        response = self.client.get(reverse("api:difficulty_level_list"))
+        response = self.client.get(reverse("api:question-difficulty-list"))
         self.assertEqual(response.status_code, 200)
-        self.assertIsInstance(response.data, list)
-        self.assertEqual(len(response.data), 5)
+        self.assertIsInstance(response.data["results"], list)
+        self.assertEqual(len(response.data["results"]), 5)
 
     def test_quiz_list(self):
-        response = self.client.get(reverse("api:quiz_list"))
+        response = self.client.get(reverse("api:quiz-list"))
         self.assertEqual(response.status_code, 200)
-        self.assertIsInstance(response.data, list)
-        self.assertEqual(len(response.data), 1)  # 1 quiz not published
-        self.assertEqual(response.data[0]["question_count"], 2)
-        self.assertEqual(response.data[0]["questions"][0], self.question_2.id)
+        self.assertIsInstance(response.data["results"], list)
+        self.assertEqual(len(response.data["results"]), 1)  # 1 quiz not published
+        self.assertEqual(response.data["results"][0]["question_count"], 2)
+        self.assertEqual(response.data["results"][0]["questions"][0], self.question_2.id)
 
     def test_quiz_list_with_question_order(self):
-        response = self.client.get(reverse("api:quiz_list"), {"question_order": "true"})
+        response = self.client.get(reverse("api:quiz-list"), {"question_order": "true"})
         self.assertEqual(response.status_code, 200)
-        self.assertIsInstance(response.data, list)
-        self.assertEqual(len(response.data), 1)  # 1 quiz not published
-        self.assertEqual(len(response.data[0]["questions"]), 2)
-        self.assertEqual(response.data[0]["questions"][0]["id"], self.question_3.id)
-        self.assertEqual(response.data[0]["questions"][0]["order"], 1)
+        self.assertIsInstance(response.data["results"], list)
+        self.assertEqual(len(response.data["results"]), 1)  # 1 quiz not published
+        self.assertEqual(len(response.data["results"][0]["questions"]), 2)
+        self.assertEqual(response.data["results"][0]["questions"][0]["id"], self.question_3.id)
+        self.assertEqual(response.data["results"][0]["questions"][0]["order"], 1)
 
     def test_quiz_list_full(self):
-        response = self.client.get(reverse("api:quiz_list"), {"full": "true"})
+        response = self.client.get(reverse("api:quiz-list"), {"full": "true"})
         self.assertEqual(response.status_code, 200)
-        self.assertIsInstance(response.data, list)
-        self.assertEqual(len(response.data), 1)  # 1 quiz not published
-        self.assertEqual(len(response.data[0]["questions"]), 2)
-        self.assertEqual(response.data[0]["questions"][0]["id"], self.question_2.id)
+        self.assertIsInstance(response.data["results"], list)
+        self.assertEqual(len(response.data["results"]), 1)  # 1 quiz not published
+        self.assertEqual(len(response.data["results"][0]["questions"]), 2)
+        self.assertEqual(response.data["results"][0]["questions"][0]["id"], self.question_2.id)
 
     def test_question_feedback_event(self):
         response = self.client.post(

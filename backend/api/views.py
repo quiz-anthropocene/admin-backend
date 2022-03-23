@@ -27,8 +27,8 @@ from api.serializers import (
     CategorySerializer,
     TagSerializer,
     QuizSerializer,
-    QuizWithQuestionOrderSerializer,
-    QuizFullSerializer,
+    QuestionDifficultyChoiceSerializer,
+    SimpleChoiceSerializer,
     ContributionSerializer,
     GlossarySerializer,
 )
@@ -78,6 +78,58 @@ class QuestionViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets
         return super().retrieve(request, args, kwargs)
 
 
+class QuestionDifficultyViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    serializer_class = QuestionDifficultyChoiceSerializer
+    queryset = Question.objects.none()
+
+    def get_queryset(self):
+        question_difficulties = [{"id": id, "name": name} for (id, name) in constants.QUESTION_DIFFICULTY_CHOICES]
+        return question_difficulties
+
+    @extend_schema(summary="Lister tous les niveaux de difficulté", tags=[Question._meta.verbose_name_plural])
+    def list(self, request, *args, **kwargs):
+        return super().list(request, args, kwargs)
+
+
+class QuestionLanguageViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    serializer_class = SimpleChoiceSerializer
+    queryset = Question.objects.none()
+
+    def get_queryset(self):
+        question_languages = [{"id": id, "name": name} for (id, name) in constants.LANGUAGE_CHOICES]
+        return question_languages
+
+    @extend_schema(summary="Lister toutes les langues", tags=[Question._meta.verbose_name_plural])
+    def list(self, request, *args, **kwargs):
+        return super().list(request, args, kwargs)
+
+
+class QuestionValidationStatusViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    serializer_class = SimpleChoiceSerializer
+    queryset = Question.objects.none()
+
+    def get_queryset(self):
+        question_validation_status = [{"id": id, "name": name} for (id, name) in constants.QUESTION_VALIDATION_STATUS_CHOICES]
+        return question_validation_status
+
+    @extend_schema(summary="Lister tous les statuts de validation", tags=[Question._meta.verbose_name_plural])
+    def list(self, request, *args, **kwargs):
+        return super().list(request, args, kwargs)
+
+
+class QuestionTypeViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    serializer_class = SimpleChoiceSerializer
+    queryset = Question.objects.none()
+
+    def get_queryset(self):
+        question_types = [{"id": id, "name": name} for (id, name) in constants.QUESTION_TYPE_CHOICES]
+        return question_types
+
+    @extend_schema(summary="Lister tous les types de question", tags=[Question._meta.verbose_name_plural])
+    def list(self, request, *args, **kwargs):
+        return super().list(request, args, kwargs)
+
+
 @api_view(["GET"])
 def question_random(request):
     """
@@ -111,16 +163,6 @@ def question_random(request):
     return Response(serializer.data)
 
 
-@api_view(["GET"])
-def question_count(request):
-    """
-    Retrieve stats on all the data
-    """
-    question_validated_count = Question.objects.validated().count()
-
-    return Response(question_validated_count)
-
-
 class CategoryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
@@ -152,37 +194,6 @@ def author_list(request):
     )
 
     return Response(list(question_authors))
-
-
-@api_view(["GET"])
-def difficulty_level_list(request):
-    """
-    List all difficulty levels (with the number of questions per difficulty)
-    """
-    difficulty_levels_query = (
-        Question.objects.validated()
-        .values(value=F("difficulty"))
-        .annotate(question_count=Count("difficulty"))
-    )
-
-    difficulty_levels = []
-    for x, y in constants.QUESTION_DIFFICULTY_CHOICES:
-        difficulty_levels.append(
-            {
-                "name": y,
-                "value": x,
-                "question_count": next(
-                    (
-                        item["question_count"]
-                        for item in difficulty_levels_query
-                        if item["value"] == x
-                    ),
-                    0,
-                ),
-            }
-        )
-
-    return Response(difficulty_levels)
 
 
 class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
@@ -231,15 +242,13 @@ def contribute(request):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
-@api_view(["GET"])
-def glossary_list(request):
-    """
-    List all glossary entries
-    """
-    glossary = Glossary.objects.all().order_by("name")
+class GlossaryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    queryset = Glossary.objects.all()
+    serializer = GlossarySerializer
 
-    serializer = GlossarySerializer(glossary, many=True)
-    return Response(serializer.data)
+    @extend_schema(summary="Glossaire", tags=[Glossary._meta.verbose_name])
+    def list(self, request, *args, **kwargs):
+        return super().list(request, args, kwargs)
 
 
 @api_view(["GET", "POST"])

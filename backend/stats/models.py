@@ -48,10 +48,7 @@ class QuestionAnswerEvent(models.Model):
     )
     choice = models.CharField(
         max_length=50,
-        choices=zip(
-            api_constants.QUESTION_ANSWER_CHOICE_LIST,
-            api_constants.QUESTION_ANSWER_CHOICE_LIST,
-        ),
+        choices=api_constants.QUESTION_ANSWER_CHOICES,
         editable=False,
         help_text="La réponse choisie par l'internaute",
     )

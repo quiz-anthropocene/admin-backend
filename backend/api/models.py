@@ -140,7 +140,7 @@ class Question(models.Model):
     )
     language = models.CharField(
         max_length=50,
-        choices=zip(constants.LANGUAGE_CHOICE_LIST, constants.LANGUAGE_CHOICE_LIST,),
+        choices=constants.LANGUAGE_CHOICES,
         default=constants.LANGUAGE_FRENCH,
         blank=False,
         help_text="La langue de la question",
@@ -159,10 +159,7 @@ class Question(models.Model):
     )
     answer_correct = models.CharField(
         max_length=50,
-        choices=zip(
-            constants.QUESTION_ANSWER_CHOICE_LIST,
-            constants.QUESTION_ANSWER_CHOICE_LIST,
-        ),
+        choices=constants.QUESTION_ANSWER_CHOICES,
         blank=True,
         help_text="a, b, c ou d. ab, acd, abcd, etc si plusieurs réponses.",
     )
@@ -219,10 +216,7 @@ class Question(models.Model):
     )
     validation_status = models.CharField(
         max_length=150,
-        choices=zip(
-            constants.QUESTION_VALIDATION_STATUS_LIST,
-            constants.QUESTION_VALIDATION_STATUS_LIST,
-        ),
+        choices=constants.QUESTION_VALIDATION_STATUS_CHOICES,
         default=constants.QUESTION_VALIDATION_STATUS_NEW,
         help_text="Le statut de la question dans le workflow de validation",
     )
@@ -864,7 +858,8 @@ class Glossary(models.Model):
     )
     updated = models.DateField(auto_now=True)
 
-    # class Meta:
+    class Meta:
+        ordering = ["name"]
     #     constraints = [
     #         models.UniqueConstraint(fields=["name"], name="unique glossary name")
     #     ]

@@ -26,4 +26,8 @@ class Migration(migrations.Migration):
             name='tag',
             options={'ordering': ['pk'], 'verbose_name': 'Tag', 'verbose_name_plural': 'Tags'},
         ),
+        migrations.AlterModelOptions(
+            name='glossary',
+            options={'ordering': ['name']},
+        ),
     ]
