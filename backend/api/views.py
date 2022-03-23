@@ -21,6 +21,7 @@ from api.models import (
     Contribution,
     Glossary,
 )
+from api.filters import QuestionFilter, QuizFilter
 from api.serializers import (
     QuestionSerializer,
     QuestionFullStringSerializer,
@@ -44,38 +45,30 @@ def api_home(request):
 
 
 class QuestionViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
-    """
-    TODO: implement filters
-
-    # get only the validated questions
-    questions = Question.objects.validated()
-
-    # order by difficulty, then random inside
-    questions = questions.order_by("difficulty", "?")
-
-    # filters
-    if request.GET.get("category"):
-        questions = questions.for_category(request.GET.get("category"))
-    if request.GET.get("tag"):
-        questions = questions.for_tag(request.GET.get("tag"))
-    if request.GET.get("author"):
-        questions = questions.for_author(request.GET.get("author"))
-
-    if request.GET.get("full"):
-        serializer = QuestionFullStringSerializer(questions, many=True)
-    else:
-        serializer = QuestionSerializer(questions, many=True)
-    """
     queryset = Question.objects.validated()
     serializer_class = QuestionSerializer
+    filter_class = QuestionFilter
 
-    @extend_schema(summary="Lister toutes les questions", tags=[Question._meta.verbose_name_plural])
+    @extend_schema(summary="Lister toutes les questions *validées*", tags=[Question._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
-    @extend_schema(summary="Détail d'une question", tags=[Question._meta.verbose_name_plural])
+    @extend_schema(summary="Détail d'une question *validée*", tags=[Question._meta.verbose_name_plural])
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, args, kwargs)
+
+
+class QuestionTypeViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    serializer_class = SimpleChoiceSerializer
+    queryset = Question.objects.none()
+
+    def get_queryset(self):
+        question_types = [{"id": id, "name": name} for (id, name) in constants.QUESTION_TYPE_CHOICES]
+        return question_types
+
+    @extend_schema(summary="Lister tous les types de question", tags=[Question._meta.verbose_name_plural])
+    def list(self, request, *args, **kwargs):
+        return super().list(request, args, kwargs)
 
 
 class QuestionDifficultyViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
@@ -113,19 +106,6 @@ class QuestionValidationStatusViewSet(mixins.ListModelMixin, viewsets.GenericVie
         return question_validation_status
 
     @extend_schema(summary="Lister tous les statuts de validation", tags=[Question._meta.verbose_name_plural])
-    def list(self, request, *args, **kwargs):
-        return super().list(request, args, kwargs)
-
-
-class QuestionTypeViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
-    serializer_class = SimpleChoiceSerializer
-    queryset = Question.objects.none()
-
-    def get_queryset(self):
-        question_types = [{"id": id, "name": name} for (id, name) in constants.QUESTION_TYPE_CHOICES]
-        return question_types
-
-    @extend_schema(summary="Lister tous les types de question", tags=[Question._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
@@ -197,28 +177,15 @@ def author_list(request):
 
 
 class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
-    """
-    TODO: implement filters
-
-    quizzes = Quiz.objects.published()
-    if request.GET.get("author"):
-        quizzes = quizzes.for_author(request.GET.get("author"))
-
-    if request.GET.get("full"):
-        serializer = QuizFullSerializer(quizzes, many=True)
-    elif request.GET.get("question_order"):
-        serializer = QuizWithQuestionOrderSerializer(quizzes, many=True)
-    else:
-        serializer = QuizSerializer(quizzes, many=True)
-    """
     queryset = Quiz.objects.published()
     serializer_class = QuizSerializer
+    filter_class = QuizFilter
 
-    @extend_schema(summary="Lister tous les quiz", tags=[Quiz._meta.verbose_name_plural])
+    @extend_schema(summary="Lister tous les quiz *publiés*", tags=[Quiz._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
-    @extend_schema(summary="Détail d'un quiz", tags=[Quiz._meta.verbose_name_plural])
+    @extend_schema(summary="Détail d'un quiz *publié*", tags=[Quiz._meta.verbose_name_plural])
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, args, kwargs)
 

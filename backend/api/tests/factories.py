@@ -33,8 +33,9 @@ class QuestionFactory(factory.django.DjangoModelFactory):
 
     text = "La question"
     type = constants.QUESTION_TYPE_QCM
-    category = factory.SubFactory(CategoryFactory, name="Energie")
     difficulty = constants.QUESTION_DIFFICULTY_EASY
+    language = constants.LANGUAGE_FRENCH
+    category = factory.SubFactory(CategoryFactory, name="Energie")
     answer_option_a = "La réponse A"
     answer_option_b = "La réponse B"
     answer_correct = "a"  # constants.QUESTION_ANSWER_CHOICE_LIST[0]
