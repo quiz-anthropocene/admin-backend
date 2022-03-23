@@ -248,13 +248,14 @@ export default {
         document.getElementById('scroll-to-answer').scrollIntoView({ behavior: 'smooth' });
       }, 25);
       // stats
-      fetch(`${process.env.VUE_APP_STATS_ENDPOINT}/questions/${this.question.id}/answer-events`, {
+      fetch(`${process.env.VUE_APP_STATS_ENDPOINT}/question-answer-event`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          question: this.question.id,
           choice: cleanedAnswerPicked,
           source: this.context.source,
         }),

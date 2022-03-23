@@ -49,7 +49,11 @@ def update_file(file_path, commit_message, file_content, branch_name):
     try:
         contents = repo.get_contents(file_path, ref=branch_name)
         res = repo.update_file(
-            file_path, commit_message, file_content, contents.sha, branch=branch_name,
+            file_path,
+            commit_message,
+            file_content,
+            contents.sha,
+            branch=branch_name,
         )
     except github.GithubException as e:
         # trying to update a non-existent file

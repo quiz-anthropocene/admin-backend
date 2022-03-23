@@ -48,18 +48,13 @@ class QuestionAnswerEvent(models.Model):
     )
     choice = models.CharField(
         max_length=50,
-        choices=zip(
-            api_constants.QUESTION_ANSWER_CHOICE_LIST,
-            api_constants.QUESTION_ANSWER_CHOICE_LIST,
-        ),
-        editable=False,
+        choices=api_constants.QUESTION_ANSWER_CHOICES,
         help_text="La réponse choisie par l'internaute",
     )
     source = models.CharField(
         max_length=50,
         choices=constants.QUESTION_SOURCE_CHOICES,
         default=constants.QUESTION_SOURCE_QUESTION,
-        editable=False,
         help_text="Le contexte dans lequel a été répondu la question",
     )
     created = models.DateTimeField(
@@ -91,14 +86,12 @@ class QuestionFeedbackEvent(models.Model):
         max_length=50,
         choices=constants.FEEDBACK_CHOICES,
         default=constants.FEEDBACK_LIKE,
-        editable=False,
         help_text="L'avis laissé sur la question",
     )
     source = models.CharField(
         max_length=50,
         choices=constants.QUESTION_SOURCE_CHOICES,
         default=constants.QUESTION_SOURCE_QUESTION,
-        editable=False,
         help_text="Le contexte dans lequel a été envoyé l'avis",
     )
     created = models.DateTimeField(
@@ -148,16 +141,14 @@ class QuizAnswerEvent(models.Model):
     # Why do we store the value instead of retrieving quiz.question_count ?
     # Because the value can change (adding or removing questions from a quiz)
     question_count = models.IntegerField(
-        default=0, editable=False, help_text="La nombre de questions du quiz",
+        default=0, help_text="La nombre de questions du quiz",
     )
     answer_success_count = models.IntegerField(
         default=0,
-        editable=False,
         help_text="La nombre de réponses correctes trouvées par l'internaute",
     )
     duration_seconds = models.IntegerField(
         default=0,
-        editable=False,
         help_text="Le temps pris (en secondes) pour compléter le quiz",
     )
     created = models.DateTimeField(
@@ -211,7 +202,6 @@ class QuizFeedbackEvent(models.Model):
         max_length=50,
         choices=constants.FEEDBACK_CHOICES,
         default=constants.FEEDBACK_LIKE,
-        editable=False,
         help_text="L'avis laissé sur le quiz",
     )
     created = models.DateTimeField(

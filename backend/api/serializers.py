@@ -11,6 +11,21 @@ from api.models import (
 )
 
 
+class SimpleChoiceSerializer(serializers.Serializer):
+    id = serializers.CharField()
+    name = serializers.CharField()
+
+
+"""
+QUESTION DIFFICULTY
+"""
+
+
+class QuestionDifficultyChoiceSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    name = serializers.CharField()
+
+
 """
 QUESTION CATEGORY
 """
