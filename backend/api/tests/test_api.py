@@ -24,7 +24,13 @@ class ApiTest(TestCase):
             validation_status=constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS,
         )
         cls.question_2 = QuestionFactory(
-            text="Q 2", type=constants.QUESTION_TYPE_VF, difficulty=constants.QUESTION_DIFFICULTY_HARD, language=constants.LANGUAGE_ENGLISH, category=cls.category_1, answer_correct="a", author="author 2",
+            text="Q 2",
+            type=constants.QUESTION_TYPE_VF,
+            difficulty=constants.QUESTION_DIFFICULTY_HARD,
+            language=constants.LANGUAGE_ENGLISH,
+            category=cls.category_1,
+            answer_correct="a",
+            author="author 2",
         )
         cls.question_2.tags.set([cls.tag_2, cls.tag_1])
         cls.question_3 = QuestionFactory(
@@ -34,7 +40,12 @@ class ApiTest(TestCase):
         cls.question_3.save()
         cls.quiz_1 = QuizFactory(name="quiz 1", publish=False, author="author 1")
         QuizQuestion.objects.create(quiz=cls.quiz_1, question=cls.question_1)
-        cls.quiz_2 = QuizFactory(name="quiz 2", publish=True, language=constants.LANGUAGE_ENGLISH, author="author 2")
+        cls.quiz_2 = QuizFactory(
+            name="quiz 2",
+            publish=True,
+            language=constants.LANGUAGE_ENGLISH,
+            author="author 2",
+        )
         cls.quiz_2.tags.set([cls.tag_1])
         QuizQuestion.objects.create(quiz=cls.quiz_2, question=cls.question_2, order=2)
         QuizQuestion.objects.create(quiz=cls.quiz_2, question=cls.question_3, order=1)
@@ -61,7 +72,8 @@ class ApiTest(TestCase):
 
     def test_question_list_filter_by_difficulty(self):
         response = self.client.get(
-            reverse("api:question-list"), {"difficulty": constants.QUESTION_DIFFICULTY_HARD}
+            reverse("api:question-list"),
+            {"difficulty": constants.QUESTION_DIFFICULTY_HARD},
         )
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 1)
@@ -100,7 +112,6 @@ class ApiTest(TestCase):
         response = self.client.get(reverse("api:question-list"), {"author": "author 2"})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 1)
-
 
     def test_question_detail(self):
         response = self.client.get(
@@ -200,7 +211,9 @@ class ApiTest(TestCase):
         self.assertIsInstance(response.data["results"], list)
         self.assertEqual(len(response.data["results"]), 1)  # 1 quiz not published
         self.assertEqual(response.data["results"][0]["question_count"], 2)
-        self.assertEqual(response.data["results"][0]["questions"][0], self.question_2.id)
+        self.assertEqual(
+            response.data["results"][0]["questions"][0], self.question_2.id
+        )
 
     def test_quiz_list_filter_by_language(self):
         response = self.client.get(
@@ -210,19 +223,15 @@ class ApiTest(TestCase):
         self.assertEqual(len(response.data["results"]), 1)
 
     def test_quiz_list_filter_by_tag(self):
-        response = self.client.get(
-            reverse("api:quiz-list"), {"tags": self.tag_1.id}
-        )
+        response = self.client.get(reverse("api:quiz-list"), {"tags": self.tag_1.id})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 1)
 
-        response = self.client.get(
-            reverse("api:quiz-list"), {"tags": self.tag_2.id}
-        )
+        response = self.client.get(reverse("api:quiz-list"), {"tags": self.tag_2.id})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 0)
 
-    def test_question_list_filter_by_author(self):
+    def test_quiz_list_filter_by_author(self):
         response = self.client.get(reverse("api:quiz-list"), {"author": "author 1"})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 0)  # quiz not published
@@ -337,7 +346,11 @@ class ApiTest(TestCase):
     def test_quiz_answer_event(self):
         response = self.client.post(
             reverse("stats:quiz_detail_answer_event", args=[self.quiz_2.id]),
-            data={"quiz": self.quiz_2.id, "answer_success_count": 1, "duration_seconds": 40},
+            data={
+                "quiz": self.quiz_2.id,
+                "answer_success_count": 1,
+                "duration_seconds": 40,
+            },
         )
         self.assertEqual(response.status_code, 201)
         self.assertIsInstance(response.data, dict)
@@ -349,7 +362,11 @@ class ApiTest(TestCase):
 
         response = self.client.post(
             reverse("stats:quiz_detail_answer_event", args=[self.quiz_2.id]),
-            data={"question": self.quiz_2.id, "answer_success_count": 2, "duration_seconds": 80},
+            data={
+                "question": self.quiz_2.id,
+                "answer_success_count": 2,
+                "duration_seconds": 80,
+            },
         )
         self.assertEqual(response.status_code, 201)
         self.assertIsInstance(response.data, dict)

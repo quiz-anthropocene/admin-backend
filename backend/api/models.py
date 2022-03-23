@@ -181,7 +181,9 @@ class Question(models.Model):
         max_length=500, blank=True, help_text="Un lien pour aller plus loin"
     )
     answer_accessible_url_text = models.CharField(
-        max_length=500, blank=True, help_text="Le texte pour remplace l'affichage du lien"
+        max_length=500,
+        blank=True,
+        help_text="Le texte pour remplace l'affichage du lien",
     )
     answer_scientific_url = models.URLField(
         max_length=500,
@@ -189,7 +191,9 @@ class Question(models.Model):
         help_text="La source scientifique du chiffre (rapport)",
     )
     answer_scientific_url_text = models.CharField(
-        max_length=500, blank=True, help_text="Le texte pour remplace l'affichage du lien de la source scientifique"  # noqa
+        max_length=500,
+        blank=True,
+        help_text="Le texte pour remplace l'affichage du lien de la source scientifique",  # noqa
     )
     answer_reading_recommendation = models.TextField(
         blank=True, help_text="Un livre pour aller plus loin"
@@ -433,7 +437,9 @@ class QuizQuerySet(models.QuerySet):
 
 class Quiz(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du quiz")
-    slug = models.SlugField(max_length=50, unique=True, help_text="Le bout d'url du quiz")
+    slug = models.SlugField(
+        max_length=50, unique=True, help_text="Le bout d'url du quiz"
+    )
     introduction = RichTextField(blank=True, help_text="Une description du quiz")
     conclusion = RichTextField(
         blank=True,
@@ -456,7 +462,7 @@ class Quiz(models.Model):
     )
     language = models.CharField(
         max_length=50,
-        choices=zip(constants.LANGUAGE_CHOICE_LIST, constants.LANGUAGE_CHOICE_LIST,),
+        choices=constants.LANGUAGE_CHOICES,
         default=constants.LANGUAGE_FRENCH,
         blank=False,
         help_text="La langue du quiz",
@@ -626,10 +632,8 @@ class Quiz(models.Model):
     @property
     def duration_average_seconds(self):
         if self.answer_count_agg:
-            duration_seconds_avg_raw = (
-                self.stats
-                .exclude(duration_seconds=0)
-                .aggregate(Avg("duration_seconds"))
+            duration_seconds_avg_raw = self.stats.exclude(duration_seconds=0).aggregate(
+                Avg("duration_seconds")
             )
             duration_seconds_average_value = (
                 round(duration_seconds_avg_raw["duration_seconds__avg"], 1)
@@ -643,11 +647,17 @@ class Quiz(models.Model):
     def duration_average_minutes_string(self):
         if self.duration_average_seconds:
             duration_average_floor_minutes = self.duration_average_seconds // 60
-            duration_average_floor_minutes_string = str(round(duration_average_floor_minutes))
+            duration_average_floor_minutes_string = str(
+                round(duration_average_floor_minutes)
+            )
             duration_average_remainder_seconds = self.duration_average_seconds % 60
-            duration_average_remainder_seconds_string = str(round(duration_average_remainder_seconds))  # noqa
+            duration_average_remainder_seconds_string = str(
+                round(duration_average_remainder_seconds)
+            )  # noqa
             if len(duration_average_remainder_seconds_string) == 1:
-                duration_average_remainder_seconds_string = f"0{duration_average_remainder_seconds_string}"  # noqa
+                duration_average_remainder_seconds_string = (
+                    f"0{duration_average_remainder_seconds_string}"  # noqa
+                )
             return f"{duration_average_floor_minutes_string}min{duration_average_remainder_seconds_string}"  # noqa
         return ""
 
@@ -673,7 +683,9 @@ class Quiz(models.Model):
     )
     answer_count_agg.fget.short_description = "# Rép"
     duration_average_seconds.fget.short_description = "Durée moyenne (en secondes)"
-    duration_average_minutes_string.fget.short_description = "Durée moyenne (en minutes)"
+    duration_average_minutes_string.fget.short_description = (
+        "Durée moyenne (en minutes)"
+    )
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"
 
@@ -824,7 +836,8 @@ class Contribution(models.Model):
     type = models.CharField(
         max_length=150,
         choices=zip(
-            constants.CONTRIBUTION_TYPE_LIST, constants.CONTRIBUTION_TYPE_LIST,
+            constants.CONTRIBUTION_TYPE_LIST,
+            constants.CONTRIBUTION_TYPE_LIST,
         ),
         blank=True,
         help_text="Le type de contribution",
@@ -860,6 +873,7 @@ class Glossary(models.Model):
 
     class Meta:
         ordering = ["name"]
+
     #     constraints = [
     #         models.UniqueConstraint(fields=["name"], name="unique glossary name")
     #     ]

@@ -36,8 +36,7 @@ from stats.models import (
 
 
 class QuestionResource(resources.ModelResource):
-    """
-    """
+    """"""
 
     category = fields.Field(
         column_name="category",
@@ -391,7 +390,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "tags",
     )
     ordering = ("-id",)
-    prepopulated_fields = {'slug': ('name',)}
+    prepopulated_fields = {"slug": ("name",)}
     filter_vertical = ("questions",)
     filter_horizontal = ("tags",)
     # inlines = [QuizQuestionInline, QuizRelationshipFromInline, QuizRelationshipToInline]
@@ -422,7 +421,17 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
     fieldsets_with_inlines = [
         (
             "Infos de base",
-            {"fields": ("id", "name", "slug", "language", "author", "introduction", "conclusion",)},
+            {
+                "fields": (
+                    "id",
+                    "name",
+                    "slug",
+                    "language",
+                    "author",
+                    "introduction",
+                    "conclusion",
+                )
+            },
         ),
         QuizQuestionInline,
         (
@@ -440,11 +449,23 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         ),
         (
             "Tags & images",
-            {"fields": ("tags", "image_background_url", "show_image_background",)},
+            {
+                "fields": (
+                    "tags",
+                    "image_background_url",
+                    "show_image_background",
+                )
+            },
         ),
         (
             "Prêt à être publié ? Toutes les questions doivent être au statut 'validé' !",
-            {"fields": ("has_audio", "publish", "spotlight",)},
+            {
+                "fields": (
+                    "has_audio",
+                    "publish",
+                    "spotlight",
+                )
+            },
         ),
         QuizRelationshipFromInline,
         QuizRelationshipToInline,
@@ -493,7 +514,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         """
         if obj:
             if obj.publish:
-                return self.readonly_fields + ('slug',)
+                return self.readonly_fields + ("slug",)
         return self.readonly_fields
 
     def get_prepopulated_fields(self, request, obj=None):

@@ -1,18 +1,40 @@
 from django.urls import path
 from rest_framework import routers
-from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
+from drf_spectacular.views import (
+    SpectacularAPIView,
+    SpectacularRedocView,
+    SpectacularSwaggerView,
+)
 
 from api import views
-from api.views import QuestionViewSet, QuizViewSet, CategoryViewSet, TagViewSet, GlossaryViewSet, QuestionTypeViewSet, QuestionDifficultyViewSet, QuestionLanguageViewSet, QuestionValidationStatusViewSet
+from api.views import (
+    QuestionViewSet,
+    QuizViewSet,
+    CategoryViewSet,
+    TagViewSet,
+    GlossaryViewSet,
+    QuestionTypeViewSet,
+    QuestionDifficultyViewSet,
+    QuestionLanguageViewSet,
+    QuestionValidationStatusViewSet,
+)
 
 
 app_name = "api"
 
 router = routers.DefaultRouter()
 router.register(r"questions/types", QuestionTypeViewSet, basename="question-type")
-router.register(r"questions/difficulties", QuestionDifficultyViewSet, basename="question-difficulty")
-router.register(r"questions/languages", QuestionLanguageViewSet, basename="question-language")
-router.register(r"questions/validation-status", QuestionValidationStatusViewSet, basename="question-validation-status")
+router.register(
+    r"questions/difficulties", QuestionDifficultyViewSet, basename="question-difficulty"
+)
+router.register(
+    r"questions/languages", QuestionLanguageViewSet, basename="question-language"
+)
+router.register(
+    r"questions/validation-status",
+    QuestionValidationStatusViewSet,
+    basename="question-validation-status",
+)
 router.register(r"questions", QuestionViewSet, basename="question")
 router.register(r"quizs", QuizViewSet, basename="quiz")
 router.register(r"categories", CategoryViewSet, basename="category")
@@ -28,7 +50,11 @@ urlpatterns = [
     path("newsletter", views.newsletter, name="newsletter"),
     # Swagger / OpenAPI documentation
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
-    path("docs/", SpectacularSwaggerView.as_view(url_name="api:schema"), name="swagger-ui"),
+    path(
+        "docs/",
+        SpectacularSwaggerView.as_view(url_name="api:schema"),
+        name="swagger-ui",
+    ),
     path("redoc/", SpectacularRedocView.as_view(url_name="api:schema"), name="redoc"),
 ]
 

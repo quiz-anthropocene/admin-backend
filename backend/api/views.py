@@ -44,16 +44,24 @@ def api_home(request):
     )
 
 
-class QuestionViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+class QuestionViewSet(
+    mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet
+):
     queryset = Question.objects.validated()
     serializer_class = QuestionSerializer
     filter_class = QuestionFilter
 
-    @extend_schema(summary="Lister toutes les questions *validées*", tags=[Question._meta.verbose_name_plural])
+    @extend_schema(
+        summary="Lister toutes les questions *validées*",
+        tags=[Question._meta.verbose_name_plural],
+    )
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
-    @extend_schema(summary="Détail d'une question *validée*", tags=[Question._meta.verbose_name_plural])
+    @extend_schema(
+        summary="Détail d'une question *validée*",
+        tags=[Question._meta.verbose_name_plural],
+    )
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, args, kwargs)
 
@@ -63,10 +71,15 @@ class QuestionTypeViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Question.objects.none()
 
     def get_queryset(self):
-        question_types = [{"id": id, "name": name} for (id, name) in constants.QUESTION_TYPE_CHOICES]
+        question_types = [
+            {"id": id, "name": name} for (id, name) in constants.QUESTION_TYPE_CHOICES
+        ]
         return question_types
 
-    @extend_schema(summary="Lister tous les types de question", tags=[Question._meta.verbose_name_plural])
+    @extend_schema(
+        summary="Lister tous les types de question",
+        tags=[Question._meta.verbose_name_plural],
+    )
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
@@ -76,10 +89,16 @@ class QuestionDifficultyViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Question.objects.none()
 
     def get_queryset(self):
-        question_difficulties = [{"id": id, "name": name} for (id, name) in constants.QUESTION_DIFFICULTY_CHOICES]
+        question_difficulties = [
+            {"id": id, "name": name}
+            for (id, name) in constants.QUESTION_DIFFICULTY_CHOICES
+        ]
         return question_difficulties
 
-    @extend_schema(summary="Lister tous les niveaux de difficulté", tags=[Question._meta.verbose_name_plural])
+    @extend_schema(
+        summary="Lister tous les niveaux de difficulté",
+        tags=[Question._meta.verbose_name_plural],
+    )
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
@@ -89,10 +108,14 @@ class QuestionLanguageViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Question.objects.none()
 
     def get_queryset(self):
-        question_languages = [{"id": id, "name": name} for (id, name) in constants.LANGUAGE_CHOICES]
+        question_languages = [
+            {"id": id, "name": name} for (id, name) in constants.LANGUAGE_CHOICES
+        ]
         return question_languages
 
-    @extend_schema(summary="Lister toutes les langues", tags=[Question._meta.verbose_name_plural])
+    @extend_schema(
+        summary="Lister toutes les langues", tags=[Question._meta.verbose_name_plural]
+    )
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
@@ -102,10 +125,16 @@ class QuestionValidationStatusViewSet(mixins.ListModelMixin, viewsets.GenericVie
     queryset = Question.objects.none()
 
     def get_queryset(self):
-        question_validation_status = [{"id": id, "name": name} for (id, name) in constants.QUESTION_VALIDATION_STATUS_CHOICES]
+        question_validation_status = [
+            {"id": id, "name": name}
+            for (id, name) in constants.QUESTION_VALIDATION_STATUS_CHOICES
+        ]
         return question_validation_status
 
-    @extend_schema(summary="Lister tous les statuts de validation", tags=[Question._meta.verbose_name_plural])
+    @extend_schema(
+        summary="Lister tous les statuts de validation",
+        tags=[Question._meta.verbose_name_plural],
+    )
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
@@ -147,7 +176,10 @@ class CategoryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
-    @extend_schema(summary="Lister toutes les catégories", tags=[Category._meta.verbose_name_plural])
+    @extend_schema(
+        summary="Lister toutes les catégories",
+        tags=[Category._meta.verbose_name_plural],
+    )
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
@@ -176,16 +208,22 @@ def author_list(request):
     return Response(list(question_authors))
 
 
-class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+class QuizViewSet(
+    mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet
+):
     queryset = Quiz.objects.published()
     serializer_class = QuizSerializer
     filter_class = QuizFilter
 
-    @extend_schema(summary="Lister tous les quiz *publiés*", tags=[Quiz._meta.verbose_name_plural])
+    @extend_schema(
+        summary="Lister tous les quiz *publiés*", tags=[Quiz._meta.verbose_name_plural]
+    )
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
-    @extend_schema(summary="Détail d'un quiz *publié*", tags=[Quiz._meta.verbose_name_plural])
+    @extend_schema(
+        summary="Détail d'un quiz *publié*", tags=[Quiz._meta.verbose_name_plural]
+    )
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, args, kwargs)
 

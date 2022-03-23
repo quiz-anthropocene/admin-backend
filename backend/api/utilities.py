@@ -19,7 +19,10 @@ def serialize_queryset_to_yaml(queryset, flat=False, stream=None):
         item_flat = {**{"id": item["pk"]}, **item["fields"]}
         serialized_flat.append(item_flat)
     return yaml.safe_dump(
-        serialized_flat, allow_unicode=True, sort_keys=False, stream=stream,
+        serialized_flat,
+        allow_unicode=True,
+        sort_keys=False,
+        stream=stream,
     )
 
 
