@@ -12,8 +12,9 @@
         </span>
         <span v-if="feedbackSubmitted" class="span-like margin-left-right-10">
           {{ $t('messages.thanks') }}&nbsp;💯
-          <span v-if="feedbackResponse" class="margin-left-right-10">
-            <strong>{{ feedbackResponse.like_count_agg }}</strong>&nbsp;👍&nbsp;&nbsp;<strong>{{ feedbackResponse.dislike_count_agg }}</strong>&nbsp;👎&nbsp;</span>
+          <!-- <span v-if="feedbackResponse" class="margin-left-right-10">
+            <strong>{{ feedbackResponse.like_count_agg }}</strong>&nbsp;👍&nbsp;&nbsp;<strong>{{ feedbackResponse.dislike_count_agg }}</strong>&nbsp;👎&nbsp;
+          </span> -->
         </span>
         <button class="btn btn-sm btn-primary-light margin-left-right-10 small" title="Votre avis" @click="showContributionForm = !showContributionForm">
           💬&nbsp;<span class="fake-link">{{ $t('feedback.suggestCorrection') }}</span>
@@ -94,13 +95,16 @@ export default {
     submitFeedback(feedbackChoice) {
       this.feedbackSubmitted = feedbackChoice;
       this.error = this.feedbackResponse = null;
-      fetch(`${process.env.VUE_APP_STATS_ENDPOINT}/${(this.context.source === 'question') ? 'questions' : 'quizzes'}/${this.context.item.id}/feedback-events`, {
+      fetch(`${process.env.VUE_APP_STATS_ENDPOINT}/${(this.context.source === 'question') ? 'question' : 'quiz'}-feedback-event`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          // hacky (TODO: build body before instead, in order to chose between question & quiz)
+          question: this.context.item.id,
+          quiz: this.context.item.id,
           choice: feedbackChoice, // 'like' or 'dislike'
           source: this.context.source, // only for 'api/questions/'
         }),

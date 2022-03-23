@@ -287,13 +287,14 @@ export default {
       // stats
       const quizEndTime = window.performance.now();
       const quizDurationInSeconds = Math.round((quizEndTime - this.quizStartTime) / 1000);
-      fetch(`${process.env.VUE_APP_STATS_ENDPOINT}/quizzes/${this.quiz.id}/answer-events`, {
+      fetch(`${process.env.VUE_APP_STATS_ENDPOINT}/quiz-answer-event`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          quiz: this.quiz.id,
           answer_success_count: this.quiz.questions.filter((q) => q.success).length,
           duration_seconds: quizDurationInSeconds,
         }),

@@ -1,7 +1,7 @@
 import json
 import random
 from io import StringIO
-from drf_spectacular.utils import extend_schema, extend_schema_view
+from drf_spectacular.utils import extend_schema
 from rest_framework import mixins, viewsets
 
 from django.core import management
@@ -44,24 +44,16 @@ def api_home(request):
     )
 
 
-class QuestionViewSet(
-    mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet
-):
+class QuestionViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     queryset = Question.objects.validated()
     serializer_class = QuestionSerializer
     filter_class = QuestionFilter
 
-    @extend_schema(
-        summary="Lister toutes les questions *validées*",
-        tags=[Question._meta.verbose_name_plural],
-    )
+    @extend_schema(summary="Lister toutes les questions *validées*", tags=[Question._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
-    @extend_schema(
-        summary="Détail d'une question *validée*",
-        tags=[Question._meta.verbose_name_plural],
-    )
+    @extend_schema(summary="Détail d'une question *validée*", tags=[Question._meta.verbose_name_plural])
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, args, kwargs)
 
@@ -76,10 +68,7 @@ class QuestionTypeViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
         ]
         return question_types
 
-    @extend_schema(
-        summary="Lister tous les types de question",
-        tags=[Question._meta.verbose_name_plural],
-    )
+    @extend_schema(summary="Lister tous les types de question", tags=[Question._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
@@ -95,10 +84,7 @@ class QuestionDifficultyViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
         ]
         return question_difficulties
 
-    @extend_schema(
-        summary="Lister tous les niveaux de difficulté",
-        tags=[Question._meta.verbose_name_plural],
-    )
+    @extend_schema(summary="Lister tous les niveaux de difficulté", tags=[Question._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
@@ -113,9 +99,7 @@ class QuestionLanguageViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
         ]
         return question_languages
 
-    @extend_schema(
-        summary="Lister toutes les langues", tags=[Question._meta.verbose_name_plural]
-    )
+    @extend_schema(summary="Lister toutes les langues", tags=[Question._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
@@ -131,10 +115,7 @@ class QuestionValidationStatusViewSet(mixins.ListModelMixin, viewsets.GenericVie
         ]
         return question_validation_status
 
-    @extend_schema(
-        summary="Lister tous les statuts de validation",
-        tags=[Question._meta.verbose_name_plural],
-    )
+    @extend_schema(summary="Lister tous les statuts de validation", tags=[Question._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
@@ -176,10 +157,7 @@ class CategoryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
-    @extend_schema(
-        summary="Lister toutes les catégories",
-        tags=[Category._meta.verbose_name_plural],
-    )
+    @extend_schema(summary="Lister toutes les catégories", tags=[Category._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
@@ -208,22 +186,16 @@ def author_list(request):
     return Response(list(question_authors))
 
 
-class QuizViewSet(
-    mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet
-):
+class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     queryset = Quiz.objects.published()
     serializer_class = QuizSerializer
     filter_class = QuizFilter
 
-    @extend_schema(
-        summary="Lister tous les quiz *publiés*", tags=[Quiz._meta.verbose_name_plural]
-    )
+    @extend_schema(summary="Lister tous les quiz *publiés*", tags=[Quiz._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
         return super().list(request, args, kwargs)
 
-    @extend_schema(
-        summary="Détail d'un quiz *publié*", tags=[Quiz._meta.verbose_name_plural]
-    )
+    @extend_schema(summary="Détail d'un quiz *publié*", tags=[Quiz._meta.verbose_name_plural])
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, args, kwargs)
 
@@ -269,9 +241,7 @@ def notion_questions(request):
 def newsletter(request):
     if request.method == "POST":
         try:
-            response = utilities_sendinblue.newsletter_registration(
-                request.data["email"]
-            )
+            response = utilities_sendinblue.newsletter_registration(request.data["email"])
             if response.status_code != 201:
                 raise Exception(json.loads(response._content))
             success_message = (

@@ -18,13 +18,13 @@ class ApiTest(TestCase):
         cls.tag_1 = TagFactory(name="Tag 1")
         cls.tag_2 = TagFactory(name="Tag 2")
         cls.question_1 = QuestionFactory(
-            text="Q 1",
+            text="question 1",
             category=cls.category_1,
             author="author 1",
             validation_status=constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS,
         )
         cls.question_2 = QuestionFactory(
-            text="Q 2",
+            text="question 2",
             type=constants.QUESTION_TYPE_VF,
             difficulty=constants.QUESTION_DIFFICULTY_HARD,
             language=constants.LANGUAGE_ENGLISH,
@@ -34,7 +34,7 @@ class ApiTest(TestCase):
         )
         cls.question_2.tags.set([cls.tag_2, cls.tag_1])
         cls.question_3 = QuestionFactory(
-            text="Q 3", category=cls.category_1, author="author 3"
+            text="question 3", category=cls.category_1, author="author 3"
         )
         cls.question_3.tags.add(cls.tag_2)
         cls.question_3.save()
@@ -266,130 +266,7 @@ class ApiTest(TestCase):
     def test_contribution(self):
         response = self.client.post(
             reverse("api:contribution-list"),
-            data={
-                "text": "du texte",
-                "description": "une description",
-                "type": constants.CONTRIBUTION_TYPE_LIST[0],
-            },
+            data={"text": "du texte", "description": "une description", "type": constants.CONTRIBUTION_TYPE_LIST[0]},
         )
         self.assertEqual(response.status_code, 201)
         self.assertIsInstance(response.data, dict)
-
-    def test_question_feedback_event(self):
-        response = self.client.post(
-            reverse("stats:question_detail_feedback_event", args=[self.question_2.id]),
-            data={
-                "question": self.question_2.id,
-                "choice": "like",
-                "source": "question",
-            },
-        )
-        self.assertEqual(response.status_code, 201)
-        self.assertIsInstance(response.data, dict)
-        self.assertEqual(response.data["choice"], "like")
-        self.assertEqual(self.question_2.feedbacks.count(), 1)
-        self.assertEqual(self.question_2.like_count_agg, 1)
-        self.assertEqual(self.question_2.dislike_count_agg, 0)
-
-        response = self.client.post(
-            reverse("stats:question_detail_feedback_event", args=[self.question_2.id]),
-            data={
-                "question": self.question_2.id,
-                "choice": "dislike",
-                "source": "question",
-            },
-        )
-        self.assertEqual(response.status_code, 201)
-        self.assertIsInstance(response.data, dict)
-        self.assertEqual(response.data["choice"], "dislike")
-        self.assertEqual(response.data["like_count_agg"], 1)
-        self.assertEqual(response.data["dislike_count_agg"], 1)
-        self.assertEqual(self.question_2.feedbacks.count(), 2)
-        self.assertEqual(self.question_2.like_count_agg, 1)
-        self.assertEqual(self.question_2.dislike_count_agg, 1)
-
-    def test_question_answer_event(self):
-        response = self.client.post(
-            reverse("stats:question_detail_answer_event", args=[self.question_2.id]),
-            data={"question": self.question_2.id, "choice": "a", "source": "question"},
-        )
-        self.assertEqual(response.status_code, 201)
-        self.assertIsInstance(response.data, dict)
-        self.assertEqual(response.data["choice"], "a")
-        self.assertEqual(self.question_2.stats.count(), 1)
-        self.assertEqual(self.question_2.answer_count_agg, 1)
-        self.assertEqual(self.question_2.answer_success_count_agg, 1)
-        self.assertEqual(self.question_2.answer_success_rate, 100)
-
-        response = self.client.post(
-            reverse("stats:question_detail_answer_event", args=[self.question_2.id]),
-            data={"question": self.question_2.id, "choice": "b", "source": "question"},
-        )
-        self.assertEqual(response.status_code, 201)
-        self.assertIsInstance(response.data, dict)
-        self.assertEqual(response.data["choice"], "b")
-        self.assertEqual(self.question_2.stats.count(), 2)
-        self.assertEqual(self.question_2.answer_count_agg, 2)
-        self.assertEqual(self.question_2.answer_success_count_agg, 1)
-        self.assertEqual(self.question_2.answer_success_rate, 50)
-
-    def test_quiz_feedback_event(self):
-        response = self.client.post(
-            reverse("stats:quiz_detail_feedback_event", args=[self.quiz_2.id]),
-            data={"quiz": self.quiz_2.id, "choice": "like"},
-        )
-        self.assertEqual(response.status_code, 201)
-        self.assertIsInstance(response.data, dict)
-        self.assertEqual(response.data["choice"], "like")
-        self.assertEqual(self.quiz_2.feedbacks.count(), 1)
-        self.assertEqual(self.quiz_2.like_count_agg, 1)
-        self.assertEqual(self.quiz_2.dislike_count_agg, 0)
-
-        response = self.client.post(
-            reverse("stats:quiz_detail_feedback_event", args=[self.quiz_2.id]),
-            data={
-                "quiz": self.quiz_2.id,
-                "choice": "dislike",
-                # "source": "question"
-            },
-        )
-        self.assertEqual(response.status_code, 201)
-        self.assertIsInstance(response.data, dict)
-        self.assertEqual(response.data["choice"], "dislike")
-        self.assertEqual(response.data["like_count_agg"], 1)
-        self.assertEqual(response.data["dislike_count_agg"], 1)
-        self.assertEqual(self.quiz_2.feedbacks.count(), 2)
-        self.assertEqual(self.quiz_2.like_count_agg, 1)
-        self.assertEqual(self.quiz_2.dislike_count_agg, 1)
-
-    def test_quiz_answer_event(self):
-        response = self.client.post(
-            reverse("stats:quiz_detail_answer_event", args=[self.quiz_2.id]),
-            data={
-                "quiz": self.quiz_2.id,
-                "answer_success_count": 1,
-                "duration_seconds": 40,
-            },
-        )
-        self.assertEqual(response.status_code, 201)
-        self.assertIsInstance(response.data, dict)
-        self.assertEqual(response.data["answer_success_count"], 1)
-        self.assertEqual(self.quiz_2.stats.count(), 1)
-        self.assertEqual(self.quiz_2.answer_count_agg, 1)
-        self.assertEqual(self.quiz_2.duration_average_seconds, 40)
-        self.assertEqual(self.quiz_2.duration_average_minutes_string, "0min40")
-
-        response = self.client.post(
-            reverse("stats:quiz_detail_answer_event", args=[self.quiz_2.id]),
-            data={
-                "question": self.quiz_2.id,
-                "answer_success_count": 2,
-                "duration_seconds": 80,
-            },
-        )
-        self.assertEqual(response.status_code, 201)
-        self.assertIsInstance(response.data, dict)
-        self.assertEqual(response.data["answer_success_count"], 2)
-        self.assertEqual(self.quiz_2.stats.count(), 2)
-        self.assertEqual(self.quiz_2.duration_average_seconds, 60)
-        self.assertEqual(self.quiz_2.duration_average_minutes_string, "1min00")
