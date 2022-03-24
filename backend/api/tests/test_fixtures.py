@@ -1,8 +1,9 @@
 from django.core import management
 from django.test import TestCase
 
-from api.models import Category, Glossary, Question, Quiz, QuizRelationship, Tag
+from api.models import Category, Question, Quiz, QuizRelationship, Tag
 from core.models import Configuration
+from glossary.models import GlossaryItem
 
 
 class FixturesTest(TestCase):
@@ -21,7 +22,7 @@ class FixturesTest(TestCase):
     #     self.assertTrue(Question.objects.count())
     #     self.assertTrue(Quiz.objects.count())
     #     self.assertTrue(QuizRelationship.objects.count())
-    #     self.assertTrue(Glossary.objects.count())
+    #     self.assertTrue(GlossaryItem.objects.count())
 
     def test_flat_fixtures_load_successfully(self):
         management.call_command("init_db")
@@ -31,4 +32,4 @@ class FixturesTest(TestCase):
         self.assertTrue(Question.objects.count())
         self.assertTrue(Quiz.objects.count())
         self.assertTrue(QuizRelationship.objects.count())
-        self.assertTrue(Glossary.objects.count())
+        self.assertTrue(GlossaryItem.objects.count())

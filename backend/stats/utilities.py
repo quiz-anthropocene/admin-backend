@@ -3,7 +3,8 @@ from datetime import date, datetime, timedelta
 from django.db.models import Count, F
 
 from api import constants
-from api.models import Category, Contribution, Question, Quiz, Tag
+from api.models import Category, Question, Quiz, Tag
+from contributions.models import Contribution
 from stats.models import DailyStat, QuizAnswerEvent, QuizFeedbackEvent
 
 

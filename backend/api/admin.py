@@ -14,7 +14,7 @@ from import_export.admin import ImportMixin
 from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
 
 from api import constants as api_constants, utilities_notion
-from api.models import Category, Contribution, Glossary, Question, Quiz, QuizQuestion, QuizRelationship, Tag
+from api.models import Category, Question, Quiz, QuizQuestion, QuizRelationship, Tag
 from core.admin import ExportMixin, admin_site
 from core.models import Configuration
 from stats import constants
@@ -552,53 +552,11 @@ class QuizRelationshipAdmin(ExportMixin, admin.ModelAdmin):
         return False
 
 
-class ContributionAdmin(ExportMixin, admin.ModelAdmin):
-    list_display = (
-        "id",
-        "type",
-        "text",
-        "description",
-        "created",
-    )
-
-    def get_readonly_fields(self, request, obj=None):
-        return [f.name for f in obj._meta.fields]
-
-    def has_add_permission(self, request, obj=None):
-        return False
-
-    def has_change_permission(self, request, obj=None):
-        return False
-
-    def has_delete_permission(self, request, obj=None):
-        return False
-
-
-class GlossaryAdmin(ExportMixin, admin.ModelAdmin):
-    list_display = (
-        "id",
-        "name",
-        "definition_short",
-        "created",
-    )
-
-    def has_add_permission(self, request, obj=None):
-        return False
-
-    def has_change_permission(self, request, obj=None):
-        return False
-
-    def has_delete_permission(self, request, obj=None):
-        return False
-
-
 admin_site.register(Question, QuestionAdmin)
 admin_site.register(Category, CategoryAdmin)
 admin_site.register(Tag, TagAdmin)
 admin_site.register(Quiz, QuizAdmin)
 admin_site.register(QuizRelationship, QuizRelationshipAdmin)
-admin_site.register(Contribution, ContributionAdmin)
-admin_site.register(Glossary, GlossaryAdmin)
 
 admin_site.register(User)
 admin_site.register(Permission)

@@ -5,7 +5,7 @@ from django.core.management import BaseCommand
 from django.utils import timezone
 
 from api import utilities_notion
-from api.models import Contribution
+from contributions.models import Contribution
 from core.models import Configuration
 
 

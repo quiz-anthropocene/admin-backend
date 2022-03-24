@@ -5,8 +5,9 @@ from django.core.management import BaseCommand, call_command
 from django.db import connection
 
 from api import utilities
-from api.models import Category, Glossary, Question, Quiz, QuizQuestion, QuizRelationship, Tag
+from api.models import Category, Question, Quiz, QuizQuestion, QuizRelationship, Tag
 from core.models import Configuration
+from glossary.models import GlossaryItem
 
 
 APP_NAME = "api"
@@ -36,7 +37,7 @@ class Command(BaseCommand):
         (Quiz, QUIZZES_FILE_PATH),
         (QuizQuestion, QUIZ_QUESTIONS_FILE_PATH),
         (QuizRelationship, QUIZ_RELATIONSHIPS_FILE_PATH),
-        (Glossary, GLOSSARY_FILE_PATH),
+        (GlossaryItem, GLOSSARY_FILE_PATH),
     ]
 
     def add_arguments(self, parser):
