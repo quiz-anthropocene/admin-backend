@@ -36,15 +36,11 @@ class Migration(migrations.Migration):
                         ),
                         (
                             "application_tagline",
-                            models.CharField(
-                                help_text="La tagline de l'application", max_length=255
-                            ),
+                            models.CharField(help_text="La tagline de l'application", max_length=255),
                         ),
                         (
                             "application_about",
-                            ckeditor.fields.RichTextField(
-                                blank=True, help_text="A propos de l'application"
-                            ),
+                            ckeditor.fields.RichTextField(blank=True, help_text="A propos de l'application"),
                         ),
                         (
                             "application_open_source_code_url",
@@ -185,7 +181,9 @@ class Migration(migrations.Migration):
                             ),
                         ),
                     ],
-                    options={"verbose_name": "Configuration de l'application",},
+                    options={
+                        "verbose_name": "Configuration de l'application",
+                    },
                 ),
             ],
             # Table already exists. See api/migrations/0082_delete_configuration.py

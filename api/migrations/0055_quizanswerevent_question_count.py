@@ -13,9 +13,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="quizanswerevent",
             name="question_count",
-            field=models.IntegerField(
-                default=0, editable=False, help_text="La nombre de questions du quiz"
-            ),
+            field=models.IntegerField(default=0, editable=False, help_text="La nombre de questions du quiz"),
         ),
         migrations.AlterField(
             model_name="quizanswerevent",

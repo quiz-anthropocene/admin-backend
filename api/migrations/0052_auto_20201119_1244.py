@@ -10,11 +10,24 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AlterModelOptions(name="category", options={"ordering": ["pk"]},),
-        migrations.AlterModelOptions(name="question", options={"ordering": ["pk"]},),
-        migrations.AlterModelOptions(name="quiz", options={"ordering": ["pk"]},),
-        migrations.AlterModelOptions(name="tag", options={"ordering": ["pk"]},),
+        migrations.AlterModelOptions(
+            name="category",
+            options={"ordering": ["pk"]},
+        ),
+        migrations.AlterModelOptions(
+            name="question",
+            options={"ordering": ["pk"]},
+        ),
+        migrations.AlterModelOptions(
+            name="quiz",
+            options={"ordering": ["pk"]},
+        ),
+        migrations.AlterModelOptions(
+            name="tag",
+            options={"ordering": ["pk"]},
+        ),
         migrations.RemoveConstraint(
-            model_name="glossary", name="unique glossary name",
+            model_name="glossary",
+            name="unique glossary name",
         ),
     ]

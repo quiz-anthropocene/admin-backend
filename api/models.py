@@ -1,32 +1,23 @@
+from ckeditor.fields import RichTextField
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models import Avg, Count
-from django.core.exceptions import ValidationError
 from django.utils.text import slugify
-
-from ckeditor.fields import RichTextField
 
 from api import constants, utilities
 
 
 class Category(models.Model):
-    name = models.CharField(
-        max_length=50, blank=False, help_text="Le nom de la catégorie"
-    )
-    name_long = models.CharField(
-        max_length=150, blank=False, help_text="Le nom allongé de la catégorie"
-    )
+    name = models.CharField(max_length=50, blank=False, help_text="Le nom de la catégorie")
+    name_long = models.CharField(max_length=150, blank=False, help_text="Le nom allongé de la catégorie")
     description = RichTextField(blank=True, help_text="Une description de la catégorie")
-    created = models.DateField(
-        auto_now_add=True, help_text="La date de création de la catégorie"
-    )
+    created = models.DateField(auto_now_add=True, help_text="La date de création de la catégorie")
 
     class Meta:
         verbose_name = "Category"
         verbose_name_plural = "Categories"
         ordering = ["pk"]
-        constraints = [
-            models.UniqueConstraint(fields=["name"], name="unique category name")
-        ]
+        constraints = [models.UniqueConstraint(fields=["name"], name="unique category name")]
 
     def __str__(self):
         return f"{self.name}"
@@ -57,9 +48,7 @@ class TagManager(models.Manager):
 class Tag(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du tag")
     description = RichTextField(blank=True, help_text="Une description du tag")
-    created = models.DateField(
-        auto_now_add=True, help_text="La date de création du tag"
-    )
+    created = models.DateField(auto_now_add=True, help_text="La date de création du tag")
 
     objects = TagManager()
 
@@ -145,18 +134,10 @@ class Question(models.Model):
         blank=False,
         help_text="La langue de la question",
     )
-    answer_option_a = models.CharField(
-        max_length=500, blank=True, help_text="La réponse a"
-    )
-    answer_option_b = models.CharField(
-        max_length=500, blank=True, help_text="La réponse b"
-    )
-    answer_option_c = models.CharField(
-        max_length=500, blank=True, help_text="La réponse c"
-    )
-    answer_option_d = models.CharField(
-        max_length=500, blank=True, help_text="La réponse d"
-    )
+    answer_option_a = models.CharField(max_length=500, blank=True, help_text="La réponse a")
+    answer_option_b = models.CharField(max_length=500, blank=True, help_text="La réponse b")
+    answer_option_c = models.CharField(max_length=500, blank=True, help_text="La réponse c")
+    answer_option_d = models.CharField(max_length=500, blank=True, help_text="La réponse d")
     answer_correct = models.CharField(
         max_length=50,
         choices=constants.QUESTION_ANSWER_CHOICES,
@@ -165,21 +146,12 @@ class Question(models.Model):
     )
     has_ordered_answers = models.BooleanField(
         default=True,
-        help_text="Les choix de réponse sont dans un ordre figé, "
-        "et ne doivent pas être mélangés",
+        help_text="Les choix de réponse sont dans un ordre figé, " "et ne doivent pas être mélangés",
     )
-    answer_explanation = models.TextField(
-        blank=True, help_text="Un petit texte d'explication"
-    )
-    answer_audio = models.URLField(
-        max_length=500, blank=True, help_text="Une explication audio"
-    )
-    answer_video = models.URLField(
-        max_length=500, blank=True, help_text="Une explication vidéo"
-    )
-    answer_accessible_url = models.URLField(
-        max_length=500, blank=True, help_text="Un lien pour aller plus loin"
-    )
+    answer_explanation = models.TextField(blank=True, help_text="Un petit texte d'explication")
+    answer_audio = models.URLField(max_length=500, blank=True, help_text="Une explication audio")
+    answer_video = models.URLField(max_length=500, blank=True, help_text="Une explication vidéo")
+    answer_accessible_url = models.URLField(max_length=500, blank=True, help_text="Un lien pour aller plus loin")
     answer_accessible_url_text = models.CharField(
         max_length=500,
         blank=True,
@@ -195,9 +167,7 @@ class Question(models.Model):
         blank=True,
         help_text="Le texte pour remplace l'affichage du lien de la source scientifique",  # noqa
     )
-    answer_reading_recommendation = models.TextField(
-        blank=True, help_text="Un livre pour aller plus loin"
-    )
+    answer_reading_recommendation = models.TextField(blank=True, help_text="Un livre pour aller plus loin")
     answer_image_url = models.URLField(
         max_length=500,
         blank=True,
@@ -209,15 +179,10 @@ class Question(models.Model):
     )
     answer_extra_info = models.TextField(
         blank=True,
-        help_text="Texte et liens explicatifs additionels, qui n'apparaissent pas "
-        "dans l'interface",
+        help_text="Texte et liens explicatifs additionels, qui n'apparaissent pas " "dans l'interface",
     )
-    author = models.CharField(
-        max_length=50, blank=True, help_text="L'auteur de la question"
-    )
-    validator = models.CharField(
-        max_length=50, blank=True, help_text="La personne qui a validée la question"
-    )
+    author = models.CharField(max_length=50, blank=True, help_text="L'auteur de la question")
+    validator = models.CharField(max_length=50, blank=True, help_text="La personne qui a validée la question")
     validation_status = models.CharField(
         max_length=150,
         choices=constants.QUESTION_VALIDATION_STATUS_CHOICES,
@@ -225,12 +190,8 @@ class Question(models.Model):
         help_text="Le statut de la question dans le workflow de validation",
     )
     # timestamps
-    added = models.DateField(
-        blank=True, null=True, help_text="La date d'ajout de la question"
-    )
-    created = models.DateField(
-        auto_now_add=True, help_text="La date de création de la question"
-    )
+    added = models.DateField(blank=True, null=True, help_text="La date d'ajout de la question")
+    created = models.DateField(auto_now_add=True, help_text="La date de création de la question")
     updated = models.DateField(auto_now=True)
 
     objects = QuestionQuerySet.as_manager()
@@ -297,17 +258,12 @@ class Question(models.Model):
 
     @property
     def answer_success_count_agg(self) -> int:
-        return (
-            self.agg_stats.answer_success_count
-            + self.stats.filter(choice=self.answer_correct).count()
-        )
+        return self.agg_stats.answer_success_count + self.stats.filter(choice=self.answer_correct).count()
 
     @property
     def answer_success_rate(self) -> int:
         return (
-            0
-            if (self.answer_count_agg == 0)
-            else int((self.answer_success_count_agg / self.answer_count_agg) * 100)
+            0 if (self.answer_count_agg == 0) else int((self.answer_success_count_agg / self.answer_count_agg) * 100)
         )
 
     @property
@@ -341,10 +297,10 @@ class Question(models.Model):
         if self.validation_status == constants.QUESTION_VALIDATION_STATUS_OK:
             # > category rules
             if self.category is None:
-                error_message = f"Valeur : '{self.category}' n'est pas une catégorie valide. Question {self.id}"  # noqa
-                validation_errors = utilities.add_validation_error(
-                    validation_errors, "category", error_message
+                error_message = (
+                    f"Valeur : '{self.category}' n'est pas une catégorie valide. Question {self.id}"  # noqa
                 )
+                validation_errors = utilities.add_validation_error(validation_errors, "category", error_message)
             # > relation fields: "category" & "tags" ? no need
             # checks will be done automatically to validate the existence of the foreign key.
             # > fields with choices rules
@@ -356,9 +312,7 @@ class Question(models.Model):
                 # ("validation_status", "QUESTION_VALIDATION_STATUS_LIST"),
             ]
             for choice_field in question_choice_fields:
-                if getattr(self, choice_field[0]) not in getattr(
-                    constants, choice_field[1]
-                ):
+                if getattr(self, choice_field[0]) not in getattr(constants, choice_field[1]):
                     error_message = f"Valeur : '{getattr(self, choice_field[0])}' n'est pas bonne. Car pas dans les choix proposés. Question {self.id}"  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, choice_field[0], error_message
@@ -437,9 +391,7 @@ class QuizQuerySet(models.QuerySet):
 
 class Quiz(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du quiz")
-    slug = models.SlugField(
-        max_length=50, unique=True, help_text="Le bout d'url du quiz"
-    )
+    slug = models.SlugField(max_length=50, unique=True, help_text="Le bout d'url du quiz")
     introduction = RichTextField(blank=True, help_text="Une description du quiz")
     conclusion = RichTextField(
         blank=True,
@@ -457,9 +409,7 @@ class Quiz(models.Model):
         related_name="quizzes",
         help_text="Un ou plusieurs tags rattaché au quiz",
     )
-    difficulty_average = models.FloatField(
-        default=0, help_text="La difficulté moyenne des questions"  # readonly
-    )
+    difficulty_average = models.FloatField(default=0, help_text="La difficulté moyenne des questions")  # readonly
     language = models.CharField(
         max_length=50,
         choices=constants.LANGUAGE_CHOICES,
@@ -473,12 +423,8 @@ class Quiz(models.Model):
         blank=True,
         help_text="Un lien vers une image pour illustrer le quiz",
     )
-    has_audio = models.BooleanField(
-        default=False, help_text="Le quiz a du contenu audio"
-    )
-    publish = models.BooleanField(
-        default=False, help_text="Le quiz est prêt à être publié"
-    )
+    has_audio = models.BooleanField(default=False, help_text="Le quiz a du contenu audio")
+    publish = models.BooleanField(default=False, help_text="Le quiz est prêt à être publié")
     spotlight = models.BooleanField(default=False, help_text="Le quiz est mis en avant")
     relationships = models.ManyToManyField(
         "self",
@@ -488,9 +434,7 @@ class Quiz(models.Model):
         help_text="Les quizs similaires ou liés",
     )
     # timestamps
-    created = models.DateField(
-        auto_now_add=True, help_text="La date de création du quiz"
-    )
+    created = models.DateField(auto_now_add=True, help_text="La date de création du quiz")
     updated = models.DateField(auto_now=True)
 
     objects = QuizQuerySet.as_manager()
@@ -531,77 +475,44 @@ class Quiz(models.Model):
 
     @property
     def questions_categories_list(self) -> list:
-        return list(
-            self.questions.order_by()
-            .values_list("category__name", flat=True)
-            .distinct()
-        )  # .sort()
+        return list(self.questions.order_by().values_list("category__name", flat=True).distinct())  # .sort()
 
     @property
     def questions_categories_list_with_count(self) -> list:
-        return list(
-            self.questions.values("category__name")
-            .annotate(count=Count("category__name"))
-            .order_by("-count")
-        )
+        return list(self.questions.values("category__name").annotate(count=Count("category__name")).order_by("-count"))
 
     @property
     def questions_categories_list_with_count_string(self) -> str:
         # return ", ".join(self.questions_categories_list)
         return ", ".join(
-            [
-                f"{elem['category__name']} ({elem['count']})"
-                for elem in self.questions_categories_list_with_count
-            ]
+            [f"{elem['category__name']} ({elem['count']})" for elem in self.questions_categories_list_with_count]
         )
 
     @property
     def questions_tags_list(self) -> list:
-        return list(
-            self.questions.order_by().values_list("tags__name", flat=True).distinct()
-        )
+        return list(self.questions.order_by().values_list("tags__name", flat=True).distinct())
 
     @property
     def questions_tags_list_with_count(self) -> list:
-        return list(
-            self.questions.values("tags__name")
-            .annotate(count=Count("tags__name"))
-            .order_by("-count")
-        )
+        return list(self.questions.values("tags__name").annotate(count=Count("tags__name")).order_by("-count"))
 
     @property
     def questions_tags_list_with_count_string(self) -> str:
         # return ", ".join(self.questions_tags_list_with_count)
-        return ", ".join(
-            [
-                f"{elem['tags__name']} ({elem['count']})"
-                for elem in self.questions_tags_list_with_count
-            ]
-        )
+        return ", ".join([f"{elem['tags__name']} ({elem['count']})" for elem in self.questions_tags_list_with_count])
 
     @property
     def questions_authors_list(self) -> list:
-        return list(
-            self.questions.order_by().values_list("author", flat=True).distinct()
-        )
+        return list(self.questions.order_by().values_list("author", flat=True).distinct())
 
     @property
     def questions_authors_list_with_count(self) -> list:
-        return list(
-            self.questions.values("author")
-            .annotate(count=Count("author"))
-            .order_by("-count")
-        )
+        return list(self.questions.values("author").annotate(count=Count("author")).order_by("-count"))
 
     @property
     def questions_authors_list_with_count_string(self) -> str:
         # return ", ".join(self.questions_authors_list_with_count)
-        return ", ".join(
-            [
-                f"{elem['author']} ({elem['count']})"
-                for elem in self.questions_authors_list_with_count
-            ]
-        )
+        return ", ".join([f"{elem['author']} ({elem['count']})" for elem in self.questions_authors_list_with_count])
 
     @property
     def questions_not_validated_list(self) -> list:
@@ -632,9 +543,7 @@ class Quiz(models.Model):
     @property
     def duration_average_seconds(self) -> int:
         if self.answer_count_agg:
-            duration_seconds_avg_raw = self.stats.exclude(duration_seconds=0).aggregate(
-                Avg("duration_seconds")
-            )
+            duration_seconds_avg_raw = self.stats.exclude(duration_seconds=0).aggregate(Avg("duration_seconds"))
             duration_seconds_average_value = (
                 round(duration_seconds_avg_raw["duration_seconds__avg"], 1)
                 if duration_seconds_avg_raw["duration_seconds__avg"]
@@ -647,17 +556,11 @@ class Quiz(models.Model):
     def duration_average_minutes_string(self) -> str:
         if self.duration_average_seconds:
             duration_average_floor_minutes = self.duration_average_seconds // 60
-            duration_average_floor_minutes_string = str(
-                round(duration_average_floor_minutes)
-            )
+            duration_average_floor_minutes_string = str(round(duration_average_floor_minutes))
             duration_average_remainder_seconds = self.duration_average_seconds % 60
-            duration_average_remainder_seconds_string = str(
-                round(duration_average_remainder_seconds)
-            )  # noqa
+            duration_average_remainder_seconds_string = str(round(duration_average_remainder_seconds))  # noqa
             if len(duration_average_remainder_seconds_string) == 1:
-                duration_average_remainder_seconds_string = (
-                    f"0{duration_average_remainder_seconds_string}"  # noqa
-                )
+                duration_average_remainder_seconds_string = f"0{duration_average_remainder_seconds_string}"  # noqa
             return f"{duration_average_floor_minutes_string}min{duration_average_remainder_seconds_string}"  # noqa
         return ""
 
@@ -671,21 +574,13 @@ class Quiz(models.Model):
 
     # Admin
     tags_list_string.fget.short_description = "Tag(s)"
-    questions_not_validated_string.fget.short_description = (
-        "Questions pas encore validées"
-    )
-    questions_categories_list_with_count_string.fget.short_description = (
-        "Questions catégorie(s)"
-    )
+    questions_not_validated_string.fget.short_description = "Questions pas encore validées"
+    questions_categories_list_with_count_string.fget.short_description = "Questions catégorie(s)"
     questions_tags_list_with_count_string.fget.short_description = "Questions tag(s)"
-    questions_authors_list_with_count_string.fget.short_description = (
-        "Questions author(s)"
-    )
+    questions_authors_list_with_count_string.fget.short_description = "Questions author(s)"
     answer_count_agg.fget.short_description = "# Rép"
     duration_average_seconds.fget.short_description = "Durée moyenne (en secondes)"
-    duration_average_minutes_string.fget.short_description = (
-        "Durée moyenne (en minutes)"
-    )
+    duration_average_minutes_string.fget.short_description = "Durée moyenne (en minutes)"
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"
 
@@ -703,10 +598,7 @@ class Quiz(models.Model):
                 # - must have at least 1 question
                 if quiz_questions.count() < 1:
                     raise ValidationError(
-                        {
-                            "questions": f"Un quiz 'published' doit comporter au moins 1 question. "
-                            f"Quiz {self.id}"
-                        }
+                        {"questions": f"Un quiz 'published' doit comporter au moins 1 question. " f"Quiz {self.id}"}
                     )
             # > compute questions difficulty_average
             self.difficulty_average = self.questions_difficulty_average
@@ -732,9 +624,7 @@ class QuizQuestion(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     order = models.PositiveIntegerField(blank=True, default=0)
     # timestamps
-    created = models.DateField(
-        auto_now_add=True, help_text="La date de création du lien"
-    )
+    created = models.DateField(auto_now_add=True, help_text="La date de création du lien")
     updated = models.DateField(auto_now=True)
 
     class Meta:
@@ -759,9 +649,7 @@ class QuizQuestion(models.Model):
         """
         if not self.id:
             if self.order:
-                if QuizQuestion.objects.filter(
-                    quiz=self.quiz, order=self.order
-                ).exists():
+                if QuizQuestion.objects.filter(quiz=self.quiz, order=self.order).exists():
                     raise ValidationError({"order": "la valeur existe déjà"})
         if not self.order:  # 0 or None
             last_quiz_question = QuizQuestion.objects.filter(quiz=self.quiz).last()
@@ -769,9 +657,7 @@ class QuizQuestion(models.Model):
 
 
 class QuizRelationship(models.Model):
-    from_quiz = models.ForeignKey(
-        Quiz, on_delete=models.CASCADE, related_name="from_quizs"
-    )
+    from_quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name="from_quizs")
     to_quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name="to_quizs")
     status = models.CharField(
         max_length=50,
@@ -781,9 +667,7 @@ class QuizRelationship(models.Model):
         ),
         help_text="Le type de relation entre les deux quizs",
     )
-    created = models.DateField(
-        auto_now_add=True, help_text="La date & heure de la création de la relation"
-    )
+    created = models.DateField(auto_now_add=True, help_text="La date & heure de la création de la relation")
 
     def __str__(self):
         return f"{self.from_quiz} >>> {self.status} >>> {self.to_quiz}"
@@ -810,19 +694,13 @@ class QuizRelationship(models.Model):
                 from_quiz=self.from_quiz, to_quiz=self.to_quiz
             )
             if len(existing_identical_relationships):
-                raise ValidationError(
-                    {"to_quiz": "il y a déjà une relation avec ce quiz dans ce sens"}
-                )
+                raise ValidationError({"to_quiz": "il y a déjà une relation avec ce quiz dans ce sens"})
             # check there isn't any existing symmetrical relationships
             existing_symmetrical_relationships = QuizRelationship.objects.filter(
                 from_quiz=self.to_quiz, to_quiz=self.from_quiz
             )
             if len(existing_symmetrical_relationships):
-                raise ValidationError(
-                    {
-                        "to_quiz": "il y a déjà une relation avec ce quiz dans l'autre sens"
-                    }
-                )
+                raise ValidationError({"to_quiz": "il y a déjà une relation avec ce quiz dans l'autre sens"})
 
 
 class Contribution(models.Model):
@@ -830,9 +708,7 @@ class Contribution(models.Model):
         blank=False,
         help_text="La contribution de l'utilisateur (une question ou un commentaire)",
     )
-    description = models.TextField(
-        help_text="Informations supplémentaires sur la contribution (réponse, lien, ...)"
-    )
+    description = models.TextField(help_text="Informations supplémentaires sur la contribution (réponse, lien, ...)")
     type = models.CharField(
         max_length=150,
         choices=zip(
@@ -842,9 +718,7 @@ class Contribution(models.Model):
         blank=True,
         help_text="Le type de contribution",
     )
-    created = models.DateTimeField(
-        auto_now_add=True, help_text="La date & heure de la contribution"
-    )
+    created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de la contribution")
 
     def __str__(self):
         return f"{self.text}"
@@ -852,23 +726,13 @@ class Contribution(models.Model):
 
 class Glossary(models.Model):
     name = models.CharField(max_length=50, blank=False, help_text="Le mot ou sigle")
-    name_alternatives = models.TextField(
-        blank=True, help_text="Des noms alternatifs"
-    )  # ArrayField
-    definition_short = models.CharField(
-        max_length=150, blank=False, help_text="La definition succinte du mot"
-    )
-    description = models.TextField(
-        blank=True, help_text="Une description longue du mot"
-    )
-    description_accessible_url = models.URLField(
-        max_length=500, blank=True, help_text="Un lien pour aller plus loin"
-    )
+    name_alternatives = models.TextField(blank=True, help_text="Des noms alternatifs")  # ArrayField
+    definition_short = models.CharField(max_length=150, blank=False, help_text="La definition succinte du mot")
+    description = models.TextField(blank=True, help_text="Une description longue du mot")
+    description_accessible_url = models.URLField(max_length=500, blank=True, help_text="Un lien pour aller plus loin")
     # timestamps
     added = models.DateField(blank=True, null=True, help_text="La date d'ajout du mot")
-    created = models.DateField(
-        auto_now_add=True, help_text="La date de création du mot"
-    )
+    created = models.DateField(auto_now_add=True, help_text="La date de création du mot")
     updated = models.DateField(auto_now=True)
 
     class Meta:

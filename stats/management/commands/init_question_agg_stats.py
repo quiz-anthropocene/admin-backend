@@ -46,9 +46,7 @@ class Command(BaseCommand):
     help = """Initialize question agg stats"""
 
     def add_arguments(self, parser):
-        parser.add_argument(
-            "--id", action="append", type=int, help="Indicates the id of the question"
-        )
+        parser.add_argument("--id", action="append", type=int, help="Indicates the id of the question")
 
     def handle(self, *args, **options):
         if options.get("id"):

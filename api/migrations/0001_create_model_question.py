@@ -73,15 +73,11 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "answer_explanation",
-                    models.TextField(
-                        blank=True, help_text="Un petit texte d'explication"
-                    ),
+                    models.TextField(blank=True, help_text="Un petit texte d'explication"),
                 ),
                 (
                     "answer_additional_links",
-                    models.TextField(
-                        blank=True, help_text="Un ou des liens pour aller plus loin"
-                    ),
+                    models.TextField(blank=True, help_text="Un ou des liens pour aller plus loin"),
                 ),
                 ("created", models.DateField()),
                 ("updated", models.DateField()),

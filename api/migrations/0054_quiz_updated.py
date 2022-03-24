@@ -11,6 +11,8 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name="quiz", name="updated", field=models.DateField(auto_now=True),
+            model_name="quiz",
+            name="updated",
+            field=models.DateField(auto_now=True),
         ),
     ]

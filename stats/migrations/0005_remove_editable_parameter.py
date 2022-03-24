@@ -6,48 +6,90 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('stats', '0004_quizanswerevent_duration_seconds'),
+        ("stats", "0004_quizanswerevent_duration_seconds"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='questionanswerevent',
-            name='choice',
-            field=models.CharField(choices=[('a', 'a'), ('b', 'b'), ('c', 'c'), ('d', 'd'), ('ab', 'ab'), ('ac', 'ac'), ('ad', 'ad'), ('bc', 'bc'), ('bd', 'bd'), ('cd', 'cd'), ('abc', 'abc'), ('abd', 'abd'), ('acd', 'acd'), ('bcd', 'bcd'), ('abcd', 'abcd')], help_text="La réponse choisie par l'internaute", max_length=50),
+            model_name="questionanswerevent",
+            name="choice",
+            field=models.CharField(
+                choices=[
+                    ("a", "a"),
+                    ("b", "b"),
+                    ("c", "c"),
+                    ("d", "d"),
+                    ("ab", "ab"),
+                    ("ac", "ac"),
+                    ("ad", "ad"),
+                    ("bc", "bc"),
+                    ("bd", "bd"),
+                    ("cd", "cd"),
+                    ("abc", "abc"),
+                    ("abd", "abd"),
+                    ("acd", "acd"),
+                    ("bcd", "bcd"),
+                    ("abcd", "abcd"),
+                ],
+                help_text="La réponse choisie par l'internaute",
+                max_length=50,
+            ),
         ),
         migrations.AlterField(
-            model_name='questionanswerevent',
-            name='source',
-            field=models.CharField(choices=[('question', 'Question'), ('quiz', 'Quiz')], default='question', help_text='Le contexte dans lequel a été répondu la question', max_length=50),
+            model_name="questionanswerevent",
+            name="source",
+            field=models.CharField(
+                choices=[("question", "Question"), ("quiz", "Quiz")],
+                default="question",
+                help_text="Le contexte dans lequel a été répondu la question",
+                max_length=50,
+            ),
         ),
         migrations.AlterField(
-            model_name='questionfeedbackevent',
-            name='choice',
-            field=models.CharField(choices=[('like', 'Positif'), ('dislike', 'Négatif')], default='like', help_text="L'avis laissé sur la question", max_length=50),
+            model_name="questionfeedbackevent",
+            name="choice",
+            field=models.CharField(
+                choices=[("like", "Positif"), ("dislike", "Négatif")],
+                default="like",
+                help_text="L'avis laissé sur la question",
+                max_length=50,
+            ),
         ),
         migrations.AlterField(
-            model_name='questionfeedbackevent',
-            name='source',
-            field=models.CharField(choices=[('question', 'Question'), ('quiz', 'Quiz')], default='question', help_text="Le contexte dans lequel a été envoyé l'avis", max_length=50),
+            model_name="questionfeedbackevent",
+            name="source",
+            field=models.CharField(
+                choices=[("question", "Question"), ("quiz", "Quiz")],
+                default="question",
+                help_text="Le contexte dans lequel a été envoyé l'avis",
+                max_length=50,
+            ),
         ),
         migrations.AlterField(
-            model_name='quizanswerevent',
-            name='answer_success_count',
-            field=models.IntegerField(default=0, help_text="La nombre de réponses correctes trouvées par l'internaute"),
+            model_name="quizanswerevent",
+            name="answer_success_count",
+            field=models.IntegerField(
+                default=0, help_text="La nombre de réponses correctes trouvées par l'internaute"
+            ),
         ),
         migrations.AlterField(
-            model_name='quizanswerevent',
-            name='duration_seconds',
-            field=models.IntegerField(default=0, help_text='Le temps pris (en secondes) pour compléter le quiz'),
+            model_name="quizanswerevent",
+            name="duration_seconds",
+            field=models.IntegerField(default=0, help_text="Le temps pris (en secondes) pour compléter le quiz"),
         ),
         migrations.AlterField(
-            model_name='quizanswerevent',
-            name='question_count',
-            field=models.IntegerField(default=0, help_text='La nombre de questions du quiz'),
+            model_name="quizanswerevent",
+            name="question_count",
+            field=models.IntegerField(default=0, help_text="La nombre de questions du quiz"),
         ),
         migrations.AlterField(
-            model_name='quizfeedbackevent',
-            name='choice',
-            field=models.CharField(choices=[('like', 'Positif'), ('dislike', 'Négatif')], default='like', help_text="L'avis laissé sur le quiz", max_length=50),
+            model_name="quizfeedbackevent",
+            name="choice",
+            field=models.CharField(
+                choices=[("like", "Positif"), ("dislike", "Négatif")],
+                default="like",
+                help_text="L'avis laissé sur le quiz",
+                max_length=50,
+            ),
         ),
     ]

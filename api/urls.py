@@ -1,23 +1,19 @@
 from django.urls import path
+from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 from rest_framework import routers
-from drf_spectacular.views import (
-    SpectacularAPIView,
-    SpectacularRedocView,
-    SpectacularSwaggerView,
-)
 
 from api import views
 from api.views import (
-    QuestionViewSet,
-    QuizViewSet,
     CategoryViewSet,
-    TagViewSet,
+    ContributionViewSet,
     GlossaryViewSet,
-    QuestionTypeViewSet,
     QuestionDifficultyViewSet,
     QuestionLanguageViewSet,
+    QuestionTypeViewSet,
     QuestionValidationStatusViewSet,
-    ContributionViewSet,
+    QuestionViewSet,
+    QuizViewSet,
+    TagViewSet,
 )
 
 
@@ -27,7 +23,9 @@ router = routers.DefaultRouter()
 router.register(r"questions/types", QuestionTypeViewSet, basename="question-type")
 router.register(r"questions/difficulties", QuestionDifficultyViewSet, basename="question-difficulty")
 router.register(r"questions/languages", QuestionLanguageViewSet, basename="question-language")
-router.register(r"questions/validation-status", QuestionValidationStatusViewSet, basename="question-validation-status")  # noqa
+router.register(
+    r"questions/validation-status", QuestionValidationStatusViewSet, basename="question-validation-status"
+)  # noqa
 router.register(r"questions", QuestionViewSet, basename="question")
 router.register(r"quizs", QuizViewSet, basename="quiz")
 router.register(r"categories", CategoryViewSet, basename="category")

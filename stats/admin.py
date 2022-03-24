@@ -5,16 +5,16 @@ from django.contrib import admin
 from django.core import management
 from django.core.serializers.json import DjangoJSONEncoder
 
+from core.admin import ExportMixin, admin_site
 from core.models import Configuration
-from core.admin import admin_site, ExportMixin
 from stats import constants
 from stats.models import (
+    DailyStat,
     QuestionAggStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
     QuizAnswerEvent,
     QuizFeedbackEvent,
-    DailyStat,
 )
 
 
@@ -85,9 +85,7 @@ class QuestionAnswerEventAdmin(ExportMixin, admin.ModelAdmin):
         chart_data_list = list(chart_data_query)
 
         # get answers since today
-        if len(chart_data_list) and (
-            str(chart_data_list[-1]["day"]) != str(datetime.now().date())
-        ):
+        if len(chart_data_list) and (str(chart_data_list[-1]["day"]) != str(datetime.now().date())):
             chart_data_list += [{"day": str(datetime.now().date()), "y": 0}]
 
         # Serialize and attach the chart data to the template context
@@ -167,9 +165,7 @@ class QuizAnswerEventAdmin(ExportMixin, admin.ModelAdmin):
         chart_data_list = list(chart_data_query)
 
         # get answers since today
-        if len(chart_data_list) and (
-            str(chart_data_list[-1]["day"]) != str(datetime.now().date())
-        ):
+        if len(chart_data_list) and (str(chart_data_list[-1]["day"]) != str(datetime.now().date())):
             chart_data_list += [{"day": str(datetime.now().date()), "y": 0}]
 
         # Serialize and attach the chart data to the template context
@@ -246,15 +242,9 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
             management.call_command("generate_daily_stats")
 
         # custom form
-        current_field = str(
-            request.POST.get("field", constants.AGGREGATION_FIELD_CHOICE_LIST[0])
-        )
-        current_scale = str(
-            request.POST.get("scale", constants.AGGREGATION_SCALE_CHOICE_LIST[0])
-        )
-        current_since_date = str(
-            request.POST.get("since_date", constants.AGGREGATION_SINCE_DATE_DEFAULT)
-        )
+        current_field = str(request.POST.get("field", constants.AGGREGATION_FIELD_CHOICE_LIST[0]))
+        current_scale = str(request.POST.get("scale", constants.AGGREGATION_SCALE_CHOICE_LIST[0]))
+        current_since_date = str(request.POST.get("since_date", constants.AGGREGATION_SINCE_DATE_DEFAULT))
 
         # Aggregate answers per day
         # chart_data_query = DailyStat.objects.extra(select={"day": "date(date)"}) # sqlite

@@ -29,15 +29,11 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "definition_short",
-                    models.CharField(
-                        help_text="La definition succinte du mot", max_length=150
-                    ),
+                    models.CharField(help_text="La definition succinte du mot", max_length=150),
                 ),
                 (
                     "description",
-                    models.TextField(
-                        blank=True, help_text="Une description longue du mot"
-                    ),
+                    models.TextField(blank=True, help_text="Une description longue du mot"),
                 ),
                 (
                     "description_accessible_url",
@@ -49,23 +45,17 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "added",
-                    models.DateField(
-                        blank=True, help_text="La date d'ajout du mot", null=True
-                    ),
+                    models.DateField(blank=True, help_text="La date d'ajout du mot", null=True),
                 ),
                 (
                     "created",
-                    models.DateField(
-                        auto_now_add=True, help_text="La date de création du mot"
-                    ),
+                    models.DateField(auto_now_add=True, help_text="La date de création du mot"),
                 ),
                 ("updated", models.DateField(auto_now=True)),
             ],
         ),
         migrations.AddConstraint(
             model_name="glossary",
-            constraint=models.UniqueConstraint(
-                fields=("name",), name="unique glossary name"
-            ),
+            constraint=models.UniqueConstraint(fields=("name",), name="unique glossary name"),
         ),
     ]

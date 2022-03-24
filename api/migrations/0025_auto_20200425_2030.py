@@ -40,9 +40,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="contribution",
             name="created",
-            field=models.DateTimeField(
-                auto_now_add=True, help_text="La date & heure de la contribution"
-            ),
+            field=models.DateTimeField(auto_now_add=True, help_text="La date & heure de la contribution"),
         ),
         migrations.AlterField(
             model_name="question",
@@ -52,29 +50,21 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="questionstat",
             name="created",
-            field=models.DateTimeField(
-                auto_now_add=True, help_text="La date & heure de la réponse"
-            ),
+            field=models.DateTimeField(auto_now_add=True, help_text="La date & heure de la réponse"),
         ),
         migrations.AlterField(
             model_name="quiz",
             name="created",
-            field=models.DateField(
-                auto_now_add=True, help_text="La date & heure de la création du quiz"
-            ),
+            field=models.DateField(auto_now_add=True, help_text="La date & heure de la création du quiz"),
         ),
         migrations.AlterField(
             model_name="quizstat",
             name="created",
-            field=models.DateTimeField(
-                auto_now_add=True, help_text="La date & heure de la réponse"
-            ),
+            field=models.DateTimeField(auto_now_add=True, help_text="La date & heure de la réponse"),
         ),
         migrations.AlterField(
             model_name="tag",
             name="created",
-            field=models.DateField(
-                auto_now_add=True, help_text="La date & heure de la création du tag"
-            ),
+            field=models.DateField(auto_now_add=True, help_text="La date & heure de la création du tag"),
         ),
     ]

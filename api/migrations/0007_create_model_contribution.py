@@ -26,9 +26,7 @@ class Migration(migrations.Migration):
                 ("description", models.TextField()),
                 (
                     "created",
-                    models.DateTimeField(
-                        auto_now=True, help_text="La date & heure de la contribution"
-                    ),
+                    models.DateTimeField(auto_now=True, help_text="La date & heure de la contribution"),
                 ),
             ],
         ),

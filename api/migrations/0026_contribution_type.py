@@ -10,7 +10,10 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(model_name="contribution", name="is_question",),
+        migrations.RemoveField(
+            model_name="contribution",
+            name="is_question",
+        ),
         migrations.AddField(
             model_name="contribution",
             name="type",

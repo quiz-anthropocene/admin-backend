@@ -47,8 +47,6 @@ class UtilitiesTest(TestCase):
         old_file_content = "export default {\n  TEST: 123,\n  ANOTHER_TEST: 'coucou',\n  DATA_LAST_UPDATED_DATETIME: '2020-09-28 12:00:00',\n  THIRD: 'four',\n};\n"  # noqa
         new_file_content = "export default {\n  TEST: 123,\n  ANOTHER_TEST: 'coucou',\n  DATA_LAST_UPDATED_DATETIME: '2020-09-29 14:30:55',\n  THIRD: 'four',\n};\n"  # noqa
         self.assertEqual(
-            utilities.update_frontend_last_updated_datetime(
-                old_file_content, new_datetime
-            ),
+            utilities.update_frontend_last_updated_datetime(old_file_content, new_datetime),
             new_file_content,
         )

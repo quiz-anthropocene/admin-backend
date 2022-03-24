@@ -14,9 +14,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="category",
             name="description",
-            field=ckeditor.fields.RichTextField(
-                blank=True, help_text="Une description de la catégorie"
-            ),
+            field=ckeditor.fields.RichTextField(blank=True, help_text="Une description de la catégorie"),
         ),
         migrations.AlterField(
             model_name="quiz",
@@ -29,15 +27,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="quiz",
             name="introduction",
-            field=ckeditor.fields.RichTextField(
-                blank=True, help_text="Une description du quiz"
-            ),
+            field=ckeditor.fields.RichTextField(blank=True, help_text="Une description du quiz"),
         ),
         migrations.AlterField(
             model_name="tag",
             name="description",
-            field=ckeditor.fields.RichTextField(
-                blank=True, help_text="Une description du tag"
-            ),
+            field=ckeditor.fields.RichTextField(blank=True, help_text="Une description du tag"),
         ),
     ]
