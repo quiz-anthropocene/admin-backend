@@ -15,16 +15,14 @@ class Migration(migrations.Migration):
             name="answer_image_link",
             field=models.URLField(
                 blank=True,
-                help_text="Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée quelque part sur l'image)",
+                help_text="Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée quelque part sur l'image)",  # noqa
                 max_length=500,
             ),
         ),
         migrations.AlterField(
             model_name="question",
             name="answer_additional_links",
-            field=models.URLField(
-                blank=True, help_text="Un lien pour aller plus loin", max_length=500
-            ),
+            field=models.URLField(blank=True, help_text="Un lien pour aller plus loin", max_length=500),
         ),
         migrations.RenameField(
             model_name="question",

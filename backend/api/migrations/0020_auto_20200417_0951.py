@@ -12,14 +12,10 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddConstraint(
             model_name="questioncategory",
-            constraint=models.UniqueConstraint(
-                fields=("name",), name="unique category name"
-            ),
+            constraint=models.UniqueConstraint(fields=("name",), name="unique category name"),
         ),
         migrations.AddConstraint(
             model_name="questiontag",
-            constraint=models.UniqueConstraint(
-                fields=("name",), name="unique tag name"
-            ),
+            constraint=models.UniqueConstraint(fields=("name",), name="unique tag name"),
         ),
     ]

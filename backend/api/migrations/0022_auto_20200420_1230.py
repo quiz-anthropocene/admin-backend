@@ -10,6 +10,12 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RenameModel(old_name="QuestionCategory", new_name="Category",),
-        migrations.RenameModel(old_name="QuestionTag", new_name="Tag",),
+        migrations.RenameModel(
+            old_name="QuestionCategory",
+            new_name="Category",
+        ),
+        migrations.RenameModel(
+            old_name="QuestionTag",
+            new_name="Tag",
+        ),
     ]

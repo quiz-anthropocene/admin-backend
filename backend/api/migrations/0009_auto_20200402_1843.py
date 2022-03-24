@@ -13,30 +13,24 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="contribution",
             name="is_question",
-            field=models.BooleanField(
-                default=True, help_text="La contribution est une question"
-            ),
+            field=models.BooleanField(default=True, help_text="La contribution est une question"),
         ),
         migrations.AlterField(
             model_name="contribution",
             name="description",
-            field=models.TextField(
-                help_text="Informations supplémentaires sur la contribution (réponse, lien, ...)"
-            ),
+            field=models.TextField(help_text="Informations supplémentaires sur la contribution (réponse, lien, ...)"),
         ),
         migrations.AlterField(
             model_name="contribution",
             name="text",
-            field=models.TextField(
-                help_text="La contribution de l'utilisateur (une question ou un commentaire)"
-            ),
+            field=models.TextField(help_text="La contribution de l'utilisateur (une question ou un commentaire)"),
         ),
         migrations.AlterField(
             model_name="question",
             name="answer_image_link",
             field=models.URLField(
                 blank=True,
-                help_text="Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée en bas de l'image)",
+                help_text="Un lien vers une image pour illustrer la réponse (idéalement avec la source indiquée en bas de l'image)",  # noqa
                 max_length=500,
             ),
         ),

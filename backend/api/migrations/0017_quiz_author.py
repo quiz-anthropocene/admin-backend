@@ -13,8 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="quiz",
             name="author",
-            field=models.CharField(
-                blank=True, help_text="L'auteur du quiz", max_length=50
-            ),
+            field=models.CharField(blank=True, help_text="L'auteur du quiz", max_length=50),
         ),
     ]

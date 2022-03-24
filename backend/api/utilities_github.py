@@ -1,5 +1,4 @@
 import github
-
 from django.conf import settings
 
 
@@ -74,9 +73,7 @@ def create_file(file_path, commit_message, file_content, branch_name):
     print("in create_file", file_path)
     repo = get_repo()
     try:
-        res = repo.create_file(
-            file_path, commit_message, file_content, branch=branch_name
-        )
+        res = repo.create_file(file_path, commit_message, file_content, branch=branch_name)
     except github.GithubException as e:
         # trying to update an existing file
         if e.data["message"] == 'Invalid request.\n\n"sha" wasn\'t supplied.':
@@ -95,9 +92,7 @@ def create_file(file_path, commit_message, file_content, branch_name):
 def create_file_element(file_path, file_content):
     repo = get_repo()
     file_blob = repo.create_git_blob(file_content, "utf-8")
-    file_element = github.InputGitTreeElement(
-        path=file_path, mode="100644", type="blob", sha=file_blob.sha
-    )
+    file_element = github.InputGitTreeElement(path=file_path, mode="100644", type="blob", sha=file_blob.sha)
     return file_element
 
 

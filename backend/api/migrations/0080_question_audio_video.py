@@ -13,15 +13,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="question",
             name="answer_audio",
-            field=models.URLField(
-                blank=True, help_text="Une explication audio", max_length=500
-            ),
+            field=models.URLField(blank=True, help_text="Une explication audio", max_length=500),
         ),
         migrations.AddField(
             model_name="question",
             name="answer_video",
-            field=models.URLField(
-                blank=True, help_text="Une explication vidéo", max_length=500
-            ),
+            field=models.URLField(blank=True, help_text="Une explication vidéo", max_length=500),
         ),
     ]

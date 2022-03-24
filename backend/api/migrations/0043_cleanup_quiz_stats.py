@@ -10,6 +10,12 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(model_name="quiz", name="dislike_count",),
-        migrations.RemoveField(model_name="quiz", name="like_count",),
+        migrations.RemoveField(
+            model_name="quiz",
+            name="dislike_count",
+        ),
+        migrations.RemoveField(
+            model_name="quiz",
+            name="like_count",
+        ),
     ]

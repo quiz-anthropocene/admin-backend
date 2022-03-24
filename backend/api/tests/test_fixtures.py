@@ -1,15 +1,8 @@
-from django.test import TestCase
 from django.core import management
+from django.test import TestCase
 
+from api.models import Category, Glossary, Question, Quiz, QuizRelationship, Tag
 from core.models import Configuration
-from api.models import (
-    Category,
-    Tag,
-    Question,
-    Quiz,
-    QuizRelationship,
-    Glossary,
-)
 
 
 class FixturesTest(TestCase):

@@ -15,13 +15,13 @@ def slugify_name(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0082_delete_configuration'),
+        ("api", "0082_delete_configuration"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='quiz',
-            name='slug',
+            model_name="quiz",
+            name="slug",
             field=models.SlugField(help_text="Le bout d'url du quiz", null=True),
         ),
         migrations.RunPython(slugify_name),

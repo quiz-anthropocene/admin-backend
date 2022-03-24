@@ -33,9 +33,7 @@ class Command(BaseCommand):
         print("=== quiz don't have aggregated stats")
 
         # quiz answer events : QuizAnswerEvent & QuizFeedbackEvent
-        print(
-            "=== latest answer & feedbacks stats (QuizAnswerEvent & QuizFeedbackEvent)"
-        )
+        print("=== latest answer & feedbacks stats (QuizAnswerEvent & QuizFeedbackEvent)")
         quiz_event_stats = quiz.stats
         print("- quiz answer stats: found", quiz_event_stats.count())
         quiz_event_feedbacks = quiz.feedbacks

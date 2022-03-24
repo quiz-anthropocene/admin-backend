@@ -1,12 +1,12 @@
 from datetime import datetime
 
-from django.utils import timezone
 from django.conf import settings
 from django.core.management import BaseCommand
+from django.utils import timezone
 
-from core.models import Configuration
 from api import utilities_notion
 from api.models import Contribution
+from core.models import Configuration
 
 
 configuration = Configuration.get_solo()
@@ -31,21 +31,15 @@ class Command(BaseCommand):
         # init date to filter from
         custom_start_date = options["custom_start_date"]
         if custom_start_date:
-            custom_start_date_parsed = datetime.strptime(
-                custom_start_date, "%Y-%m-%d %H:%M"
-            )
+            custom_start_date_parsed = datetime.strptime(custom_start_date, "%Y-%m-%d %H:%M")
             contributions_last_exported = timezone.make_aware(custom_start_date_parsed)
         else:
-            contributions_last_exported = (
-                configuration.notion_contributions_last_exported
-            )
+            contributions_last_exported = configuration.notion_contributions_last_exported
         print("Contributions last exported:", contributions_last_exported)
 
         # find new contributions
         if contributions_last_exported:
-            new_contributions_to_export = Contribution.objects.filter(
-                created__gte=contributions_last_exported
-            )
+            new_contributions_to_export = Contribution.objects.filter(created__gte=contributions_last_exported)
         else:
             new_contributions_to_export = Contribution.objects.all()
         print("New contributions found:", new_contributions_to_export.count())
@@ -60,16 +54,16 @@ class Command(BaseCommand):
                         "description": {"rich_text": [{"text": {"content": new_contribution.description}}]},  # noqa
                         "created": {"date": {"start": new_contribution.created.isoformat()}},
                     }
-                    utilities_notion.create_page_in_database(settings.NOTION_CONTRIBUTION_TABLE_ID, new_contribution_properties)  # noqa
+                    utilities_notion.create_page_in_database(
+                        settings.NOTION_CONTRIBUTION_TABLE_ID, new_contribution_properties
+                    )  # noqa
 
                 # update configuration
                 configuration.notion_contributions_last_exported = timezone.now()
                 configuration.save()
 
                 print("Done!")
-                self.stdout.write(
-                    f"New contributions exported: {new_contributions_to_export.count()}"
-                )
+                self.stdout.write(f"New contributions exported: {new_contributions_to_export.count()}")
 
             except Exception as e:
                 print("Error !")

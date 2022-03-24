@@ -23,15 +23,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="question",
             name="answer_option_c",
-            field=models.CharField(
-                blank=True, help_text="La réponse c", max_length=500
-            ),
+            field=models.CharField(blank=True, help_text="La réponse c", max_length=500),
         ),
         migrations.AlterField(
             model_name="question",
             name="answer_option_d",
-            field=models.CharField(
-                blank=True, help_text="La réponse d", max_length=500
-            ),
+            field=models.CharField(blank=True, help_text="La réponse d", max_length=500),
         ),
     ]

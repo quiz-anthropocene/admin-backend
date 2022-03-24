@@ -172,16 +172,10 @@ CORS_ORIGIN_REGEX_WHITELIST = [
 # ------------------------------------------------------------------------------
 
 SESSION_COOKIE_HTTPONLY = True
-SESSION_COOKIE_SECURE = (
-    False if os.getenv("SESSION_COOKIE_SECURE") in ["False", False] else True
-)
-CSRF_COOKIE_SECURE = (
-    False if os.getenv("CSRF_COOKIE_SECURE") in ["False", False] else True
-)
+SESSION_COOKIE_SECURE = False if os.getenv("SESSION_COOKIE_SECURE") in ["False", False] else True
+CSRF_COOKIE_SECURE = False if os.getenv("CSRF_COOKIE_SECURE") in ["False", False] else True
 
-SECURE_SSL_REDIRECT = (
-    False if os.getenv("SECURE_SSL_REDIRECT") in ["False", False] else True
-)
+SECURE_SSL_REDIRECT = False if os.getenv("SECURE_SSL_REDIRECT") in ["False", False] else True
 SECURE_HSTS_SECONDS = os.getenv("SECURE_HSTS_SECONDS")
 
 
@@ -264,9 +258,7 @@ NOTION_GLOSSARY_TABLE_URL = os.getenv("NOTION_GLOSSARY_TABLE_URL")
 SIB_API_KEY = os.getenv("SIB_API_KEY")
 SIB_NEWSLETTER_LIST_ID = os.getenv("SIB_NEWSLETTER_LIST_ID")
 SIB_NEWSLETTER_DOI_TEMPLATE_ID = os.getenv("SIB_NEWSLETTER_DOI_TEMPLATE_ID")
-SIB_CONTACT_DOI_ENDPOINT = (
-    "https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation"
-)
+SIB_CONTACT_DOI_ENDPOINT = "https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation"
 
 
 # django-ckeditor

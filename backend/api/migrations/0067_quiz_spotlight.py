@@ -13,8 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="quiz",
             name="spotlight",
-            field=models.BooleanField(
-                default=False, help_text="Le quiz est mis en avant"
-            ),
+            field=models.BooleanField(default=False, help_text="Le quiz est mis en avant"),
         ),
     ]

@@ -6,13 +6,7 @@ from drf_spectacular.utils import extend_schema
 from rest_framework import mixins, viewsets
 from rest_framework.decorators import api_view
 
-from stats.models import (
-    DailyStat,
-    QuestionAnswerEvent,
-    QuestionFeedbackEvent,
-    QuizAnswerEvent,
-    QuizFeedbackEvent,
-)
+from stats.models import DailyStat, QuestionAnswerEvent, QuestionFeedbackEvent, QuizAnswerEvent, QuizFeedbackEvent
 from stats.serializers import (
     QuestionAnswerEventSerializer,
     QuestionFeedbackEventSerializer,
@@ -59,22 +53,14 @@ class QuizFeedbackEventViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet)
 
 @api_view(["GET"])
 def stats_dashboard(request):
-    question_answer_count_query = DailyStat.objects.agg_timeseries(
-        "question_answer_count", scale="day"
-    )
+    question_answer_count_query = DailyStat.objects.agg_timeseries("question_answer_count", scale="day")
     question_answer_event_count_query = QuestionAnswerEvent.objects.agg_timeseries()
-    question_answer_count_list = list(question_answer_count_query) + list(
-        question_answer_event_count_query
-    )
-    question_answer_count_json = json.dumps(
-        question_answer_count_list, cls=DjangoJSONEncoder
-    )
+    question_answer_count_list = list(question_answer_count_query) + list(question_answer_event_count_query)
+    question_answer_count_json = json.dumps(question_answer_count_list, cls=DjangoJSONEncoder)
 
     quiz_answer_count_query = DailyStat.objects.agg_timeseries("quiz_answer_count")
     quiz_answer_event_count_query = QuizAnswerEvent.objects.agg_timeseries()
-    quiz_answer_count_list = list(quiz_answer_count_query) + list(
-        quiz_answer_event_count_query
-    )
+    quiz_answer_count_list = list(quiz_answer_count_query) + list(quiz_answer_event_count_query)
     quiz_answer_count_json = json.dumps(quiz_answer_count_list, cls=DjangoJSONEncoder)
 
     return render(

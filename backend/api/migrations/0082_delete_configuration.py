@@ -11,10 +11,15 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.SeparateDatabaseAndState(
-            state_operations=[migrations.DeleteModel(name="Configuration",)],
+            state_operations=[
+                migrations.DeleteModel(
+                    name="Configuration",
+                )
+            ],
             database_operations=[
                 migrations.AlterModelTable(
-                    name="Configuration", table="core_configuration",
+                    name="Configuration",
+                    table="core_configuration",
                 )
             ],
         ),

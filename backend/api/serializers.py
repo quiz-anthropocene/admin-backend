@@ -1,14 +1,6 @@
 from rest_framework import serializers
 
-from api.models import (
-    Category,
-    Tag,
-    Question,
-    Quiz,
-    QuizQuestion,
-    Contribution,
-    Glossary,
-)
+from api.models import Category, Contribution, Glossary, Question, Quiz, QuizQuestion, Tag
 
 
 class SimpleChoiceSerializer(serializers.Serializer):

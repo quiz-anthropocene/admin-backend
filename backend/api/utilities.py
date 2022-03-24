@@ -1,15 +1,13 @@
 import re
-import yaml
 
+import yaml
 from django.apps import apps
 from django.core import serializers
 
 
 def serialize_queryset_to_yaml(queryset, flat=False, stream=None):
     if not flat:
-        return serializers.serialize(
-            "yaml", list(queryset), allow_unicode=True, stream=stream
-        )
+        return serializers.serialize("yaml", list(queryset), allow_unicode=True, stream=stream)
     serialized = serializers.serialize("yaml", list(queryset), allow_unicode=True)
     serialized = yaml.safe_load(serialized)
     serialized_flat = []
@@ -33,9 +31,7 @@ def serialize_model_to_yaml(app_label, model_label, flat=False, stream=None):
 
 
 def serialize_queryset_to_json(queryset, stream=None):
-    return serializers.serialize(
-        "json", list(queryset), ensure_ascii=False, stream=stream
-    )
+    return serializers.serialize("json", list(queryset), ensure_ascii=False, stream=stream)
 
 
 def serialize_model_to_json(app_label, model_label, stream=None):
@@ -108,6 +104,4 @@ def update_frontend_last_updated_datetime(file_content, new_datetime):
     """
     Update frontend file with regex
     """
-    return re.sub(
-        "(?<=DATA_LAST_UPDATED_DATETIME: ')(.+?)(?=',)", new_datetime, file_content
-    )
+    return re.sub("(?<=DATA_LAST_UPDATED_DATETIME: ')(.+?)(?=',)", new_datetime, file_content)

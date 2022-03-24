@@ -13,8 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="question",
             name="answer_image_explanation",
-            field=models.TextField(
-                blank=True, help_text="Une légende pour l'image qui illustre la réponse"
-            ),
+            field=models.TextField(blank=True, help_text="Une légende pour l'image qui illustre la réponse"),
         ),
     ]

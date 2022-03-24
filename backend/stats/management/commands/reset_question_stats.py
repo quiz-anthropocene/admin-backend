@@ -13,9 +13,7 @@ class Command(BaseCommand):
     help = """Clean a question's stats"""
 
     def add_arguments(self, parser):
-        parser.add_argument(
-            "question_id", type=int, help="Indicates the id of the question"
-        )
+        parser.add_argument("question_id", type=int, help="Indicates the id of the question")
         parser.add_argument(
             "--no-input",
             default=False,
@@ -39,9 +37,7 @@ class Command(BaseCommand):
         print("- dislike_count: was", question.agg_stats.dislike_count)
 
         # question answer events : QuestionAnswerEvent & QuestionFeedbackEvent
-        print(
-            "=== answer & feedbacks stats (QuestionAnswerEvent & QuestionFeedbackEvent)"
-        )
+        print("=== answer & feedbacks stats (QuestionAnswerEvent & QuestionFeedbackEvent)")
         question_event_stats = question.stats
         print("- question answer stats: found", question_event_stats.count())
         question_event_feedbacks = question.feedbacks

@@ -13,23 +13,17 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="dailystat",
             name="quiz_feedback_count",
-            field=models.PositiveIntegerField(
-                default=0, help_text="Le nombre de feedbacks aux quizs"
-            ),
+            field=models.PositiveIntegerField(default=0, help_text="Le nombre de feedbacks aux quizs"),
         ),
         migrations.AddField(
             model_name="quiz",
             name="dislike_count",
-            field=models.PositiveIntegerField(
-                default=0, help_text="Le nombre de dislikes"
-            ),
+            field=models.PositiveIntegerField(default=0, help_text="Le nombre de dislikes"),
         ),
         migrations.AddField(
             model_name="quiz",
             name="like_count",
-            field=models.PositiveIntegerField(
-                default=0, help_text="Le nombre de likes"
-            ),
+            field=models.PositiveIntegerField(default=0, help_text="Le nombre de likes"),
         ),
         migrations.AlterField(
             model_name="question",
@@ -53,9 +47,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="questionfeedbackevent",
             name="created",
-            field=models.DateTimeField(
-                auto_now_add=True, help_text="La date & heure de l'avis"
-            ),
+            field=models.DateTimeField(auto_now_add=True, help_text="La date & heure de l'avis"),
         ),
         migrations.AlterField(
             model_name="questionfeedbackevent",

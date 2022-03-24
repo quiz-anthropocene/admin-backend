@@ -1,7 +1,6 @@
 import bs4
 import requests
 import urllib3
-
 from django.core.management import BaseCommand
 
 from api import utilities_notion
@@ -27,6 +26,7 @@ class Command(BaseCommand):
     python manage.py populate_url_text_fields_in_notion
     python manage.py populate_url_text_fields_in_notion --field answer_scientific_url
     """
+
     def add_arguments(self, parser):
         parser.add_argument(
             "--field",
@@ -49,17 +49,21 @@ class Command(BaseCommand):
             "filter": {
                 "and": [
                     {"property": question_field, "text": {"is_not_empty": True}},
-                    {"property": f"{question_field}_text", "text": {"is_empty": True}}
+                    {"property": f"{question_field}_text", "text": {"is_empty": True}},
                 ]
             }
         }
         try:
-            notion_questions_response = utilities_notion.get_question_table_pages(sort_direction="ascending", extra_data=notion_query_filter)  # noqa
+            notion_questions_response = utilities_notion.get_question_table_pages(
+                sort_direction="ascending", extra_data=notion_query_filter
+            )  # noqa
         except:  # noqa
             self.stdout.write("Erreur accès à l'API Notion")
             return
 
-        self.stdout.write(f"Found {len(notion_questions_response.json()['results'])} questions with {question_field}_text missing")  # noqa
+        self.stdout.write(
+            f"Found {len(notion_questions_response.json()['results'])} questions with {question_field}_text missing"
+        )  # noqa
 
         #########################################################
         # Step 2: loop on each question
@@ -95,11 +99,7 @@ class Command(BaseCommand):
             if question_field_url_text:
                 data = {
                     "properties": {
-                        f"{question_field}_text": {
-                            "rich_text": [
-                                {"text": {"content": question_field_url_text}}
-                            ]
-                        }
+                        f"{question_field}_text": {"rich_text": [{"text": {"content": question_field_url_text}}]}
                     }
                 }
                 try:

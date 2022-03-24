@@ -1,13 +1,13 @@
 import time
-import yaml
 from datetime import datetime
 
-from django.utils import timezone
+import yaml
 from django.conf import settings
 from django.core.management import BaseCommand
+from django.utils import timezone
 
-from core.models import Configuration
 from api import utilities, utilities_github
+from core.models import Configuration
 from stats import utilities as utilities_stats
 
 
@@ -32,10 +32,7 @@ class Command(BaseCommand):
         configuration.github_stats_last_exported = timezone.now()
         configuration.save()
 
-        print(
-            "--- Step 1 done : init (%s seconds) ---"
-            % round(time.time() - start_time, 1)
-        )
+        print("--- Step 1 done : init (%s seconds) ---" % round(time.time() - start_time, 1))
 
         # update & commit stats files
         try:
@@ -51,79 +48,54 @@ class Command(BaseCommand):
                 **utilities_stats.contribution_stats(),
             }
             stats_yaml = yaml.safe_dump(stats_dict, allow_unicode=True, sort_keys=False)
-            stats_element = utilities_github.create_file_element(
-                file_path="data/stats.yaml", file_content=stats_yaml
-            )
+            stats_element = utilities_github.create_file_element(file_path="data/stats.yaml", file_content=stats_yaml)
 
-            print(
-                "--- Step 2.1 done : stats.yaml (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 2.1 done : stats.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/difficulty-levels.yaml
             start_time = time.time()
             difficulty_levels_list = utilities_stats.difficulty_aggregate()
-            difficulty_levels_yaml = yaml.safe_dump(
-                difficulty_levels_list, allow_unicode=True, sort_keys=False
-            )
+            difficulty_levels_yaml = yaml.safe_dump(difficulty_levels_list, allow_unicode=True, sort_keys=False)
             difficulty_levels_element = utilities_github.create_file_element(
                 file_path="data/difficulty-levels.yaml",
                 file_content=difficulty_levels_yaml,
             )
 
-            print(
-                "--- Step 2.2 done : difficulty-levels.yaml (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 2.2 done : difficulty-levels.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/authors.yaml
             start_time = time.time()
             authors_list = utilities_stats.author_aggregate()
-            authors_yaml = yaml.safe_dump(
-                authors_list, allow_unicode=True, sort_keys=False
-            )
+            authors_yaml = yaml.safe_dump(authors_list, allow_unicode=True, sort_keys=False)
             authors_element = utilities_github.create_file_element(
                 file_path="data/authors.yaml", file_content=authors_yaml
             )
 
-            print(
-                "--- Step 2.3 done : authors.yaml (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 2.3 done : authors.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/languages.yaml
             start_time = time.time()
             languages_list = utilities_stats.language_aggregate()
-            languages_yaml = yaml.safe_dump(
-                languages_list, allow_unicode=True, sort_keys=False
-            )
+            languages_yaml = yaml.safe_dump(languages_list, allow_unicode=True, sort_keys=False)
             languages_element = utilities_github.create_file_element(
                 file_path="data/languages.yaml", file_content=languages_yaml
             )
 
-            print(
-                "--- Step 2.4 done : languages.yaml (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 2.4 done : languages.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/quiz-stats.yaml
             start_time = time.time()
             quiz_detail_stats_list = utilities_stats.quiz_detail_stats()
-            quiz_detail_stats_yaml = yaml.safe_dump(
-                quiz_detail_stats_list, allow_unicode=True, sort_keys=False
-            )
+            quiz_detail_stats_yaml = yaml.safe_dump(quiz_detail_stats_list, allow_unicode=True, sort_keys=False)
             quiz_stats_element = utilities_github.create_file_element(
                 file_path="data/quiz-stats.yaml", file_content=quiz_detail_stats_yaml
             )
 
-            print(
-                "--- Step 2.5 done : quiz-stats.yaml (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 2.5 done : quiz-stats.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # update frontend file with timestamp
@@ -141,10 +113,7 @@ class Command(BaseCommand):
                 file_content=new_frontend_constants_file_content_string,
             )
 
-            print(
-                "--- Step 2.6 done : constants.js (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 2.6 done : constants.js (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # commit files
@@ -163,10 +132,7 @@ class Command(BaseCommand):
                 ],
             )
 
-            print(
-                "--- Step 3 done : committed to branch (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 3 done : committed to branch (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # create pull request
@@ -192,10 +158,7 @@ class Command(BaseCommand):
                     pull_request_labels="automerge",
                 )
 
-                print(
-                    "--- Step 4 done : created Pull Request (%s seconds) ---"
-                    % round(time.time() - start_time, 1)
-                )
+                print("--- Step 4 done : created Pull Request (%s seconds) ---" % round(time.time() - start_time, 1))
 
                 # return
                 self.stdout.write(pull_request.html_url)

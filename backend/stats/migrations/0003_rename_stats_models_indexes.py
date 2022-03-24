@@ -10,34 +10,22 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RunSQL("alter index api_dailystat_pkey rename to stats_dailystat_pkey;"),
+        migrations.RunSQL("alter index api_questionstat_pkey rename to stats_questionanswerevent_pkey;"),
         migrations.RunSQL(
-            "alter index api_dailystat_pkey rename to stats_dailystat_pkey;"
+            "alter index api_questionstat_question_id_f435301c rename to stats_questionanswerevent_question_id_f435301c;"  # noqa
         ),
+        migrations.RunSQL("alter index api_questionfeedback_pkey rename to stats_questionfeedbackevent_pkey;"),
         migrations.RunSQL(
-            "alter index api_questionstat_pkey rename to stats_questionanswerevent_pkey;"
+            "alter index api_questionfeedback_question_id_263ee116 rename to stats_questionfeedbackevent_question_id_263ee116;"  # noqa
         ),
-        migrations.RunSQL(
-            "alter index api_questionstat_question_id_f435301c rename to stats_questionanswerevent_question_id_f435301c;"
-        ),
-        migrations.RunSQL(
-            "alter index api_questionfeedback_pkey rename to stats_questionfeedbackevent_pkey;"
-        ),
-        migrations.RunSQL(
-            "alter index api_questionfeedback_question_id_263ee116 rename to stats_questionfeedbackevent_question_id_263ee116;"
-        ),
-        migrations.RunSQL(
-            "alter index api_quizstat_pkey rename to stats_quizanswerevent_pkey;"
-        ),
+        migrations.RunSQL("alter index api_quizstat_pkey rename to stats_quizanswerevent_pkey;"),
         migrations.RunSQL(
             "alter index api_quizstat_quiz_id_b6a35d40 rename to stats_quizanswerevent_quiz_id_b6a35d40;"
         ),
-        migrations.RunSQL(
-            "alter index api_quizfeedbackevent_pkey rename to stats_quizfeedbackevent_pkey;"
-        ),
+        migrations.RunSQL("alter index api_quizfeedbackevent_pkey rename to stats_quizfeedbackevent_pkey;"),
         migrations.RunSQL(
             "alter index api_quizfeedbackevent_quiz_id_d410c7b3 rename to stats_quizfeedbackevent_quiz_id_d410c7b3;"
         ),
-        migrations.RunSQL(
-            "alter index api_questionaggstat_pkey rename to stats_questionaggstat_pkey;"
-        ),
+        migrations.RunSQL("alter index api_questionaggstat_pkey rename to stats_questionaggstat_pkey;"),
     ]

@@ -1,19 +1,17 @@
-import time
-
-from django.db.models.fields import URLField
-import notion
 import collections
+import time
 from datetime import datetime, timedelta
 
+import notion
+from django.core.exceptions import ValidationError
+from django.core.management import BaseCommand
+from django.db import IntegrityError
+from django.db.models.fields import URLField
 from django.utils import timezone
 
-from django.db import IntegrityError
-from django.core.management import BaseCommand
-from django.core.exceptions import ValidationError
-
-from core.models import Configuration
 from api import constants, utilities, utilities_notion
-from api.models import Question, Category, Tag, Quiz, Contribution
+from api.models import Category, Contribution, Question, Quiz, Tag
+from core.models import Configuration
 
 
 SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS = 15
@@ -76,8 +74,7 @@ class Command(BaseCommand):
             return
 
         self.stdout.write(
-            "--- Step 1 done : fetch questions from Notion (%s seconds) ---"
-            % round(time.time() - start_time, 1)
+            "--- Step 1 done : fetch questions from Notion (%s seconds) ---" % round(time.time() - start_time, 1)
         )
 
         #########################################################
@@ -86,19 +83,13 @@ class Command(BaseCommand):
         start_time = time.time()
 
         # order by notion_questions_list by id
-        notion_questions_list = sorted(
-            notion_questions_list, key=lambda question: question.get_property("id") or 0
-        )
+        notion_questions_list = sorted(notion_questions_list, key=lambda question: question.get_property("id") or 0)
         # check if id duplicates
         notion_questions_id_list = [
-            question.get_property("id")
-            for question in notion_questions_list
-            if question.get_property("id")
+            question.get_property("id") for question in notion_questions_list if question.get_property("id")
         ]
         questions_ids_duplicate = [
-            item
-            for item, count in collections.Counter(notion_questions_id_list).items()
-            if count > 1
+            item for item, count in collections.Counter(notion_questions_id_list).items() if count > 1
         ]
         # check if id 'missing'
         for n in range(1, notion_questions_id_list[-1]):
@@ -119,46 +110,31 @@ class Command(BaseCommand):
         if scope:
             min_question_id = 200 * (scope - 1)
             max_question_id = 200 * scope
-            notion_questions_list_scope = notion_questions_list[
-                min_question_id:max_question_id
-            ]
+            notion_questions_list_scope = notion_questions_list[min_question_id:max_question_id]
         else:
             notion_questions_list_scope = notion_questions_list
 
         self.stdout.write(f"processing {len(notion_questions_list_scope)} questions")
-        self.stdout.write(
-            f"First question id : {notion_questions_list_scope[0].get_property('id')}"
-        )
-        self.stdout.write(
-            f"Last question id : {notion_questions_list_scope[-1].get_property('id')}"
-        )
+        self.stdout.write(f"First question id : {notion_questions_list_scope[0].get_property('id')}")
+        self.stdout.write(f"Last question id : {notion_questions_list_scope[-1].get_property('id')}")
 
         for notion_question_row in notion_questions_list_scope:
             question_validation_errors = []
             notion_question_tag_objects = []
-            notion_question_last_updated = notion_question_row.get_property(
-                "Last edited time"
-            ).date()  # noqa
+            notion_question_last_updated = notion_question_row.get_property("Last edited time").date()  # noqa
 
             # check question has id
             if notion_question_row.get_property("id") is None:
-                question_validation_errors.append(
-                    ValidationError({"id": "Question sans id. vide ?"})
-                )
+                question_validation_errors.append(ValidationError({"id": "Question sans id. vide ?"}))
             # ignore questions not updated recently
             elif options.get("skip-old") and (
                 notion_question_last_updated
-                < (
-                    datetime.now().date()
-                    - timedelta(days=SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS)
-                )
+                < (datetime.now().date() - timedelta(days=SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS))
             ):
                 pass
             else:
                 # build question_dict from notion_row
-                notion_question_dict = self.transform_notion_question_row_to_question_dict(
-                    notion_question_row
-                )
+                notion_question_dict = self.transform_notion_question_row_to_question_dict(notion_question_row)
 
                 # if notion_question_dict["id"] == 1014:
                 #     self.stdout.write(notion_question_dict)
@@ -168,17 +144,11 @@ class Command(BaseCommand):
                 # error if unknown category : api.models.DoesNotExist: Category matching query does not exist.  # noqa
                 if notion_question_dict["category"] is not None:
                     notion_question_category_id = next(
-                        (
-                            c.id
-                            for c in all_categories_list
-                            if c.name == notion_question_dict["category"]
-                        ),
+                        (c.id for c in all_categories_list if c.name == notion_question_dict["category"]),
                         None,
                     )
                     if notion_question_category_id:
-                        notion_question_dict[
-                            "category_id"
-                        ] = notion_question_category_id
+                        notion_question_dict["category_id"] = notion_question_category_id
                         del notion_question_dict["category"]
                     else:
                         question_validation_errors.append(
@@ -197,20 +167,14 @@ class Command(BaseCommand):
                 notion_question_tag_name_list = []
                 if notion_question_dict["tags"] != [""]:
                     notion_question_tag_name_list = [
-                        tag
-                        for tag in notion_question_dict["tags"]
-                        if not tag.startswith("Quiz")
+                        tag for tag in notion_question_dict["tags"] if not tag.startswith("Quiz")
                     ]
                     new_tags = [
-                        new_tag
-                        for new_tag in notion_question_tag_name_list
-                        if new_tag not in all_tags_name_list
+                        new_tag for new_tag in notion_question_tag_name_list if new_tag not in all_tags_name_list
                     ]
                     # create missing tags
                     if len(new_tags):
-                        Tag.objects.bulk_create(
-                            [Tag(name=new_tag) for new_tag in new_tags]
-                        )
+                        Tag.objects.bulk_create([Tag(name=new_tag) for new_tag in new_tags])
                         all_tags_name_list += new_tags
                         tags_created += new_tags
                 del notion_question_dict["tags"]
@@ -222,10 +186,7 @@ class Command(BaseCommand):
             # - if the question has been updated recently
             elif options.get("skip-old") and (
                 notion_question_last_updated
-                < (
-                    datetime.now().date()
-                    - timedelta(days=SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS)
-                )
+                < (datetime.now().date() - timedelta(days=SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS))
             ):
                 pass
             else:
@@ -236,28 +197,20 @@ class Command(BaseCommand):
                     )
                     # store info
                     if created:
-                        notion_question_tag_objects = Tag.objects.filter(
-                            name__in=notion_question_tag_name_list
-                        )
+                        notion_question_tag_objects = Tag.objects.filter(name__in=notion_question_tag_name_list)
                         db_question.tags.set(notion_question_tag_objects)
                         questions_created.append(db_question.id)
                     else:
                         questions_updates_key = f"Question {db_question.id}"
 
                         # update basic fields
-                        question_changes_list = self.update_question(
-                            db_question, notion_question_dict
-                        )
+                        question_changes_list = self.update_question(db_question, notion_question_dict)
 
                         if len(question_changes_list):
                             if questions_updates_key in questions_updates:
-                                questions_updates[
-                                    questions_updates_key
-                                ] += question_changes_list
+                                questions_updates[questions_updates_key] += question_changes_list
                             else:
-                                questions_updates[
-                                    questions_updates_key
-                                ] = question_changes_list
+                                questions_updates[questions_updates_key] = question_changes_list
                             questions_updated.add(db_question.id)
 
                         # update tags
@@ -267,28 +220,17 @@ class Command(BaseCommand):
 
                         if question_tag_changes_string:
                             if questions_updates_key in questions_updates:
-                                questions_updates[questions_updates_key].append(
-                                    question_tag_changes_string
-                                )
+                                questions_updates[questions_updates_key].append(question_tag_changes_string)
                             else:
-                                questions_updates[questions_updates_key] = [
-                                    question_tag_changes_string
-                                ]
+                                questions_updates[questions_updates_key] = [question_tag_changes_string]
                             questions_updated.add(db_question.id)
 
                 except ValidationError as e:
-                    validation_errors.append(
-                        f"Question {notion_question_dict['id']}: {e}"
-                    )
+                    validation_errors.append(f"Question {notion_question_dict['id']}: {e}")
                 except IntegrityError as e:
-                    validation_errors.append(
-                        f"Question {notion_question_dict['id']}: {e}"
-                    )
+                    validation_errors.append(f"Question {notion_question_dict['id']}: {e}")
 
-        self.stdout.write(
-            "--- Step 3 done : loop on questions : %s seconds ---"
-            % round(time.time() - start_time, 1)
-        )
+        self.stdout.write("--- Step 3 done : loop on questions : %s seconds ---" % round(time.time() - start_time, 1))
 
         #########################################################
         # Build and send stats
@@ -296,39 +238,32 @@ class Command(BaseCommand):
         start_time = time.time()
 
         # done
-        questions_notion_count = (
-            f"Nombre de questions dans Notion : {len(notion_questions_list)}"
+        questions_notion_count = f"Nombre de questions dans Notion : {len(notion_questions_list)}"
+        questions_scope_count = (
+            f"Nombre de questions prises en compte ici : {len(notion_questions_list_scope)}"  # noqa
         )
-        questions_scope_count = f"Nombre de questions prises en compte ici : {len(notion_questions_list_scope)}"  # noqa
         questions_scope_count += f" (de id {notion_questions_list_scope[0].get_property('id')} à id {notion_questions_list_scope[-1].get_property('id')})"  # noqa
-        questions_ids_duplicate_message = f"ids 'en double' : {', '.join([str(question_id) for question_id in questions_ids_duplicate])}"  # noqa
-        questions_ids_missing_message = f"ids 'manquants' : {', '.join([str(question_id) for question_id in questions_ids_missing])}"  # noqa
+        questions_ids_duplicate_message = (
+            f"ids 'en double' : {', '.join([str(question_id) for question_id in questions_ids_duplicate])}"  # noqa
+        )
+        questions_ids_missing_message = (
+            f"ids 'manquants' : {', '.join([str(question_id) for question_id in questions_ids_missing])}"  # noqa
+        )
 
         tags_created_message = f"Nombre de tags ajoutés : {len(tags_created)}"
         if len(tags_created):
-            tags_created_message += (
-                "\n"
-                + f"Détails : {', '.join([str(tag_name) for tag_name in tags_created])}"
-            )
+            tags_created_message += "\n" + f"Détails : {', '.join([str(tag_name) for tag_name in tags_created])}"
 
-        questions_created_message = (
-            f"Nombre de questions ajoutées : {len(questions_created)}"
-        )
+        questions_created_message = f"Nombre de questions ajoutées : {len(questions_created)}"
         if len(questions_created):
             questions_created_message += (
-                "\n"
-                + f"Détails : {', '.join([str(question_id) for question_id in questions_created])}"
+                "\n" + f"Détails : {', '.join([str(question_id) for question_id in questions_created])}"
             )
 
-        questions_updated_message = (
-            f"Nombre de questions modifiées : {len(questions_updated)}"
-        )
+        questions_updated_message = f"Nombre de questions modifiées : {len(questions_updated)}"
         if len(questions_updates):
             questions_updated_message += "\n" + "\n".join(
-                [
-                    key + "///" + "///".join(questions_updates[key])
-                    for key in questions_updates
-                ]
+                [key + "///" + "///".join(questions_updates[key]) for key in questions_updates]
             )
 
         # check if any published quiz have non-validated questions
@@ -343,9 +278,7 @@ class Command(BaseCommand):
         validation_errors_message = "Erreurs : "
         if len(validation_errors):
             validation_errors_message += (
-                f"Erreurs : {len(validation_errors)}"
-                + "\n"
-                + "\n".join([str(error) for error in validation_errors])
+                f"Erreurs : {len(validation_errors)}" + "\n" + "\n".join([str(error) for error in validation_errors])
             )
             Contribution.objects.create(
                 text="Erreur(s) lors de l'import",
@@ -361,8 +294,7 @@ class Command(BaseCommand):
         #     )
 
         self.stdout.write(
-            "--- Step 4 done : build and send stats : %s seconds ---"
-            % round(time.time() - start_time, 1)
+            "--- Step 4 done : build and send stats : %s seconds ---" % round(time.time() - start_time, 1)
         )
 
         #########################################################
@@ -417,15 +349,11 @@ class Command(BaseCommand):
         # fill dict with notion_question_row
         for question_model_field in Question._meta.get_fields():
             try:
-                notion_question_property = notion_question_row.get_property(
-                    question_model_field.name
-                )
+                notion_question_property = notion_question_row.get_property(question_model_field.name)
                 # cleanup dates
                 if type(notion_question_property) == notion.collection.NotionDate:
                     notion_question_property = notion_question_property.start
-                notion_question_dict[
-                    question_model_field.name
-                ] = notion_question_property
+                notion_question_dict[question_model_field.name] = notion_question_property
             except:  # noqa
                 pass
 
@@ -448,20 +376,14 @@ class Command(BaseCommand):
             notion_question_dict["language"] = ""
         if notion_question_dict["answer_correct"] is None:
             notion_question_dict["answer_correct"] = ""
-        if ("added" not in notion_question_dict) or (
-            notion_question_dict["added"] is None
-        ):
-            notion_question_dict["added"] = notion_question_row.get_property(
-                "Created time"
-            ).date()
+        if ("added" not in notion_question_dict) or (notion_question_dict["added"] is None):
+            notion_question_dict["added"] = notion_question_row.get_property("Created time").date()
         if notion_question_dict["validator"] is None:
             notion_question_dict["validator"] = ""
         # clean markdown [links](links)
         for field_name in ["answer_explanation", "answer_image_explanation", "answer_extra_info"]:
             if "http" in notion_question_dict[field_name]:
-                notion_question_dict[field_name] = utilities.clean_markdown_links(
-                    notion_question_dict[field_name]
-                )
+                notion_question_dict[field_name] = utilities.clean_markdown_links(notion_question_dict[field_name])
         # strip spaces in url fields
         for field_name in QUESTION_URL_FIELDS:
             if field_name in notion_question_dict:
@@ -485,8 +407,7 @@ class Command(BaseCommand):
                     != notion_question_dict[question_model_field.name]
                 ) or (
                     (notion_question_dict[question_model_field.name] in [None, ""])
-                    and getattr(db_question, question_model_field.name)
-                    != question_model_field.get_default()
+                    and getattr(db_question, question_model_field.name) != question_model_field.get_default()
                 ):
                     # track changes (before updating field to get previous value)
                     db_question_field_update_message = f"champ '{question_model_field.name}' : {getattr(db_question, question_model_field.name)} >>> {notion_question_dict[question_model_field.name]}"  # noqa
@@ -507,26 +428,20 @@ class Command(BaseCommand):
         return question_changes
 
     def update_question_tags(self, db_question, notion_question_tag_name_list):
-        """
-        """
+        """ """
         question_tag_changes = None
         # compare tags
         has_different_tags = [
             different_tag
             for different_tag in notion_question_tag_name_list
-            if different_tag
-            not in list(db_question.tags.values_list("name", flat=True))
+            if different_tag not in list(db_question.tags.values_list("name", flat=True))
         ]
-        if len(has_different_tags) or (
-            db_question.tags.count() != len(notion_question_tag_name_list)
-        ):
+        if len(has_different_tags) or (db_question.tags.count() != len(notion_question_tag_name_list)):
             # track changes
             db_question_tag_update_message = f"champ 'tags' : {list(db_question.tags.values_list('name', flat=True))} >>> {notion_question_tag_name_list}"  # noqa
             question_tag_changes = db_question_tag_update_message
             # update tags
-            notion_question_tag_objects = Tag.objects.filter(
-                name__in=notion_question_tag_name_list
-            )
+            notion_question_tag_objects = Tag.objects.filter(name__in=notion_question_tag_name_list)
             db_question.tags.set(notion_question_tag_objects)
 
         return question_tag_changes

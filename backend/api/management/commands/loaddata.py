@@ -1,5 +1,4 @@
 import yaml
-
 from django.apps import apps
 from django.core.management.base import CommandError
 from django.core.management.commands.loaddata import Command as Loaddata
@@ -33,9 +32,7 @@ class Command(Loaddata):
         if options.get("model") and options.get("format"):
             # init
             if (len(fixture_labels) == 0) or (len(fixture_labels) > 1):
-                raise CommandError(
-                    "Error with fixture_labels. Only 1 fixture possible."
-                )
+                raise CommandError("Error with fixture_labels. Only 1 fixture possible.")
             if not options.get("format") == "yaml-pretty-flat":
                 raise CommandError("Error with format. Should be 'yaml-pretty-flat'")
             # get input model

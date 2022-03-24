@@ -1,20 +1,12 @@
-import yaml
 from io import StringIO
 
+import yaml
 from django.core.management import BaseCommand, call_command
 from django.db import connection
 
-from core.models import Configuration
 from api import utilities
-from api.models import (
-    Category,
-    Tag,
-    Question,
-    Quiz,
-    QuizQuestion,
-    QuizRelationship,
-    Glossary,
-)
+from api.models import Category, Glossary, Question, Quiz, QuizQuestion, QuizRelationship, Tag
+from core.models import Configuration
 
 
 APP_NAME = "api"

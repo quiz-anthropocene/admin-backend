@@ -1,15 +1,8 @@
 import factory
-
 from django.utils.text import slugify
 
 from api import constants
-from api.models import (
-    Category,
-    Tag,
-    Question,
-    Quiz,
-    # QuestionAnswerEvent,
-)
+from api.models import Category, Question, Quiz, Tag  # QuestionAnswerEvent,
 
 
 class CategoryFactory(factory.django.DjangoModelFactory):

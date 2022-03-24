@@ -12,8 +12,6 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddConstraint(
             model_name="dailystat",
-            constraint=models.UniqueConstraint(
-                fields=("date",), name="unique stat date"
-            ),
+            constraint=models.UniqueConstraint(fields=("date",), name="unique stat date"),
         ),
     ]

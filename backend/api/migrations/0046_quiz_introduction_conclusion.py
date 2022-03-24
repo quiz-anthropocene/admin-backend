@@ -11,7 +11,9 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RenameField(
-            model_name="quiz", old_name="description", new_name="introduction",
+            model_name="quiz",
+            old_name="description",
+            new_name="introduction",
         ),
         migrations.AddField(
             model_name="quiz",

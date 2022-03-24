@@ -4,7 +4,7 @@ from stats.views import (
     QuestionAnswerEventViewSet,
     QuestionFeedbackEventViewSet,
     QuizAnswerEventViewSet,
-    QuizFeedbackEventViewSet
+    QuizFeedbackEventViewSet,
 )
 
 

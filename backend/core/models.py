@@ -1,7 +1,6 @@
-from django.db import models
-
-from solo.models import SingletonModel
 from ckeditor.fields import RichTextField
+from django.db import models
+from solo.models import SingletonModel
 
 
 class Configuration(SingletonModel):
@@ -13,7 +12,8 @@ class Configuration(SingletonModel):
         help_text="Le nom de l'application",
     )
     application_tagline = models.CharField(
-        max_length=255, help_text="La tagline de l'application",
+        max_length=255,
+        help_text="La tagline de l'application",
     )
     application_about = RichTextField(blank=True, help_text="A propos de l'application")
     # links
