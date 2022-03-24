@@ -2,15 +2,8 @@ import factory
 from django.utils.text import slugify
 
 from api import constants
-from api.models import Category, Question, Quiz, Tag  # QuestionAnswerEvent,
-
-
-class CategoryFactory(factory.django.DjangoModelFactory):
-    class Meta:
-        model = Category
-        django_get_or_create = ["name"]
-
-    name = "Energie"
+from api.models import Question, Quiz, Tag  # QuestionAnswerEvent,
+from categories.factories import CategoryFactory
 
 
 class TagFactory(factory.django.DjangoModelFactory):

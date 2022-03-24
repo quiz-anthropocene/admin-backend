@@ -5,7 +5,8 @@ from django.core.management import BaseCommand, call_command
 from django.db import connection
 
 from api import utilities
-from api.models import Category, Question, Quiz, QuizQuestion, QuizRelationship, Tag
+from api.models import Question, Quiz, QuizQuestion, QuizRelationship, Tag
+from categories.models import Category
 from core.models import Configuration
 from glossary.models import GlossaryItem
 

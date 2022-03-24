@@ -8,7 +8,8 @@ from django.http import HttpResponse
 from solo.admin import SingletonModelAdmin
 
 from api import utilities
-from api.models import Category, Question, Quiz, Tag
+from api.models import Question, Quiz, Tag
+from categories.models import Category
 from core.models import Configuration
 from stats.models import QuestionAnswerEvent, QuestionFeedbackEvent
 

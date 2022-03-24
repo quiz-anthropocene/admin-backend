@@ -13,9 +13,8 @@ from rest_framework.response import Response
 
 from api import constants, utilities_sendinblue
 from api.filters import QuestionFilter, QuizFilter
-from api.models import Category, Question, Quiz, Tag
+from api.models import Question, Quiz, Tag
 from api.serializers import (
-    CategorySerializer,
     QuestionDifficultyChoiceSerializer,
     QuestionFullStringSerializer,
     QuestionSerializer,
@@ -133,15 +132,6 @@ def question_random(request):
         serializer = QuestionSerializer(question_random)
 
     return Response(serializer.data)
-
-
-class CategoryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
-    queryset = Category.objects.all()
-    serializer_class = CategorySerializer
-
-    @extend_schema(summary="Lister toutes les catégories", tags=[Category._meta.verbose_name_plural])
-    def list(self, request, *args, **kwargs):
-        return super().list(request, args, kwargs)
 
 
 class TagViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):

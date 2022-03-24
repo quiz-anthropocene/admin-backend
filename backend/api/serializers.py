@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
-from api.models import Category, Question, Quiz, QuizQuestion, Tag
+from api.categories.serializers import CategorySerializer, CategoryStringSerializer
+from api.models import Question, Quiz, QuizQuestion, Tag
 
 
 class SimpleChoiceSerializer(serializers.Serializer):
@@ -16,26 +17,6 @@ QUESTION DIFFICULTY
 class QuestionDifficultyChoiceSerializer(serializers.Serializer):
     id = serializers.IntegerField()
     name = serializers.CharField()
-
-
-"""
-QUESTION CATEGORY
-"""
-
-
-class CategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Category
-        fields = ["id", "name", "description", "question_count"]
-
-
-class CategoryStringSerializer(serializers.ModelSerializer):
-    def to_representation(self, value):
-        return value.name
-
-    class Meta:
-        model = Category
-        fields = ["name"]
 
 
 """
