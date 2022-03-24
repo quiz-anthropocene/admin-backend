@@ -2,8 +2,9 @@ from django.test import TestCase
 from django.urls import reverse
 
 from api import constants
-from api.models import Glossary, QuizQuestion
+from api.models import QuizQuestion
 from api.tests.factories import CategoryFactory, QuestionFactory, QuizFactory, TagFactory
+from glossary.models import GlossaryItem
 
 
 class ApiTest(TestCase):
@@ -234,7 +235,7 @@ class ApiTest(TestCase):
     #     self.assertEqual(response.data["results"][0]["questions"][0]["id"], self.question_2.id)
 
     def test_glossary(self):
-        Glossary.objects.create(name="Anthropocène")
+        GlossaryItem.objects.create(name="Anthropocène")
         response = self.client.get(reverse("api:glossary-list"))
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data["results"], list)

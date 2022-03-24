@@ -13,10 +13,9 @@ from rest_framework.response import Response
 
 from api import constants, utilities_sendinblue
 from api.filters import QuestionFilter, QuizFilter
-from api.models import Category, Glossary, Question, Quiz, Tag
+from api.models import Category, Question, Quiz, Tag
 from api.serializers import (
     CategorySerializer,
-    GlossarySerializer,
     QuestionDifficultyChoiceSerializer,
     QuestionFullStringSerializer,
     QuestionSerializer,
@@ -181,15 +180,6 @@ class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.Gen
     @extend_schema(summary="Détail d'un quiz *publié*", tags=[Quiz._meta.verbose_name_plural])
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, args, kwargs)
-
-
-class GlossaryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
-    queryset = Glossary.objects.all()
-    serializer_class = GlossarySerializer
-
-    @extend_schema(summary="Glossaire", tags=[Glossary._meta.verbose_name])
-    def list(self, request, *args, **kwargs):
-        return super().list(request, args, kwargs)
 
 
 @api_view(["GET", "POST"])

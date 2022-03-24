@@ -4,9 +4,9 @@ from rest_framework import routers
 
 from api import views
 from api.contributions.views import ContributionViewSet
+from api.glossary.views import GlossaryViewSet
 from api.views import (
     CategoryViewSet,
-    GlossaryViewSet,
     QuestionDifficultyViewSet,
     QuestionLanguageViewSet,
     QuestionTypeViewSet,

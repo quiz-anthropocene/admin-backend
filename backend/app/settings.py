@@ -64,6 +64,7 @@ LOCAL_APPS = [
     "core",
     "api",
     "contributions",
+    "glossary",
     "stats",
 ]
 
