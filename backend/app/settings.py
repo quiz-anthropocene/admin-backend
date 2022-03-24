@@ -11,8 +11,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-from dotenv import load_dotenv
+
 import dj_database_url
+from dotenv import load_dotenv
+
 
 load_dotenv(verbose=True)
 
@@ -51,6 +53,7 @@ THIRD_PARTY_APPS = [
     "rest_framework",  # djangorestframework
     "drf_spectacular",  # drf-spectacular
     "django_extensions",  # django-extensions
+    "debug_toolbar",  # django-debug-toolbar
     "import_export",  # django-import-export
     "ckeditor",  # django-ckeditor
     "fieldsets_with_inlines",  # django-fieldsets-with-inlines
@@ -114,9 +117,15 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
+    {
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+    },
 ]
 
 
@@ -198,6 +207,14 @@ REST_FRAMEWORK = {
 # https://drf-spectacular.readthedocs.io/en/latest/settings.html
 # ------------------------------------------------------------------------------
 
+
+# Django Debug Toolbar
+# https://django-debug-toolbar.readthedocs.io/
+# ------------------------------------------------------------------------------
+
+if DEBUG:
+    MIDDLEWARE += ["debug_toolbar.middleware.DebugToolbarMiddleware"]
+    INTERNAL_IPS = ["127.0.0.1"]
 
 
 # Django Import Export

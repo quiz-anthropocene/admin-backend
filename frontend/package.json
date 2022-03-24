@@ -27,7 +27,7 @@
     "@vue/cli-service": "^4.5.14",
     "@vue/eslint-config-airbnb": "^5.3.0",
     "babel-eslint": "^10.1.0",
-    "chromedriver": "*",
+    "chromedriver": "98",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-vue": "^7.20.0",
