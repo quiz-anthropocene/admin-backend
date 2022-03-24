@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api.models import Category, Contribution, Glossary, Question, Quiz, QuizQuestion, Tag
+from api.models import Category, Glossary, Question, Quiz, QuizQuestion, Tag
 
 
 class SimpleChoiceSerializer(serializers.Serializer):
@@ -178,17 +178,6 @@ class QuizFullSerializer(serializers.ModelSerializer):
     class Meta:
         model = Quiz
         fields = QUIZ_FIELDS
-
-
-"""
-CONTRIBUTION
-"""
-
-
-class ContributionSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Contribution
-        fields = ["text", "description", "type", "created"]
 
 
 """

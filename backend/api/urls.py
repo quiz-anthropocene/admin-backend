@@ -3,9 +3,9 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, Spec
 from rest_framework import routers
 
 from api import views
+from api.contributions.views import ContributionViewSet
 from api.views import (
     CategoryViewSet,
-    ContributionViewSet,
     GlossaryViewSet,
     QuestionDifficultyViewSet,
     QuestionLanguageViewSet,
@@ -31,7 +31,7 @@ router.register(r"quizs", QuizViewSet, basename="quiz")
 router.register(r"categories", CategoryViewSet, basename="category")
 router.register(r"tags", TagViewSet, basename="tag")
 router.register(r"glossary", GlossaryViewSet, basename="glossary")
-router.register(r"contribution", ContributionViewSet, basename="contribution")
+router.register(r"contributions", ContributionViewSet, basename="contribution")
 
 urlpatterns = [
     path("", views.api_home, name="index"),

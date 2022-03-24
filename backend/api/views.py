@@ -13,10 +13,9 @@ from rest_framework.response import Response
 
 from api import constants, utilities_sendinblue
 from api.filters import QuestionFilter, QuizFilter
-from api.models import Category, Contribution, Glossary, Question, Quiz, Tag
+from api.models import Category, Glossary, Question, Quiz, Tag
 from api.serializers import (
     CategorySerializer,
-    ContributionSerializer,
     GlossarySerializer,
     QuestionDifficultyChoiceSerializer,
     QuestionFullStringSerializer,
@@ -182,17 +181,6 @@ class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.Gen
     @extend_schema(summary="Détail d'un quiz *publié*", tags=[Quiz._meta.verbose_name_plural])
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, args, kwargs)
-
-
-class ContributionViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
-    queryset = Contribution.objects.all()
-    serializer_class = ContributionSerializer
-
-    @extend_schema(summary="Nouvelle contribution", tags=[Contribution._meta.verbose_name], exclude=True)
-    def create(self, request, *args, **kwargs):
-        # send to Notion ?
-        # done with export_contributions_to_notion + cron_export_contributions_to_notion
-        return super().create(request, args, kwargs)
 
 
 class GlossaryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
