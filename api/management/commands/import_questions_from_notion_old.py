@@ -10,7 +10,8 @@ from django.db.models.fields import URLField
 from django.utils import timezone
 
 from api import constants, utilities, utilities_notion
-from api.models import Category, Contribution, Question, Quiz, Tag
+from api.models import Category, Question, Quiz, Tag
+from contributions.models import Contribution
 from core.models import Configuration
 
 

@@ -4,7 +4,7 @@ import yaml
 from django.core.management import BaseCommand
 
 from api import utilities_notion
-from api.models import Glossary
+from glossary.models import GlossaryItem
 
 
 class Command(BaseCommand):
@@ -28,7 +28,7 @@ class Command(BaseCommand):
         # --- init
         id_counter = 1
         glossary_model_fields = [
-            f.name for f in Glossary._meta.get_fields() if f.name not in ["id"]
+            f.name for f in GlossaryItem._meta.get_fields() if f.name not in ["id"]
         ]  # "created", "updated"
         notion_glossary_list = utilities_notion.get_glossary_rows()
         # print(list(map(lambda x: x['slug'], notion_glossary_table.collection.get_schema_properties()))) # noqa
