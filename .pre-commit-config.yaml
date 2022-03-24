@@ -12,7 +12,11 @@ repos:
     rev: stable
     hooks:
     - id: black
-      language_version: python3.8
+      language_version: python3
+  - repo: https://github.com/pycqa/isort
+    rev: 5.9.3
+    hooks:
+      - id: isort
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.4.0
     hooks:
@@ -26,15 +30,15 @@ repos:
     rev: v2.4.0
     hooks:
       - id: end-of-file-fixer
-  - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v7.3.1
-    hooks:
-      - id: eslint
-        files: frontend/.*$
-        additional_dependencies:
-          - eslint
-          - eslint-config-airbnb-base
-          - eslint-loader
-          - eslint-plugin-vue
-          - babel-eslint
-        verbose: true
+  # - repo: https://github.com/pre-commit/mirrors-eslint
+  #   rev: v8.11.0
+  #   hooks:
+  #     - id: eslint
+  #       files: frontend/.*$
+  #       additional_dependencies:
+  #         - eslint
+  #         - eslint-config-airbnb-base
+  #         - eslint-loader
+  #         - eslint-plugin-vue
+  #         - babel-eslint
+  #       verbose: true

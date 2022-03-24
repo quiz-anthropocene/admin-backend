@@ -33,9 +33,11 @@ whitenoise = "*"
 [dev-packages]
 black = "*"
 coverage = "*"
+django-debug-toolbar = "*"
 factory-boy = "*"
 flake8 = "*"
 isort = "*"
+pre-commit = "*"
 
 [requires]
 python_version = "3.9"
