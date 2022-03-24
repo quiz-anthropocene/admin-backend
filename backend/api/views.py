@@ -1,37 +1,29 @@
 import json
 import random
 from io import StringIO
-from drf_spectacular.utils import extend_schema
-from rest_framework import mixins, viewsets
 
 from django.core import management
 from django.db.models import Count, F
 from django.http import HttpResponse
 from django.shortcuts import render
-from rest_framework import status
+from drf_spectacular.utils import extend_schema
+from rest_framework import mixins, status, viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 from api import constants, utilities_sendinblue
-from api.models import (
-    Category,
-    Tag,
-    Question,
-    Quiz,
-    Contribution,
-    Glossary,
-)
 from api.filters import QuestionFilter, QuizFilter
+from api.models import Category, Contribution, Glossary, Question, Quiz, Tag
 from api.serializers import (
-    QuestionSerializer,
-    QuestionFullStringSerializer,
     CategorySerializer,
-    TagSerializer,
-    QuizSerializer,
-    QuestionDifficultyChoiceSerializer,
-    SimpleChoiceSerializer,
     ContributionSerializer,
     GlossarySerializer,
+    QuestionDifficultyChoiceSerializer,
+    QuestionFullStringSerializer,
+    QuestionSerializer,
+    QuizSerializer,
+    SimpleChoiceSerializer,
+    TagSerializer,
 )
 
 
@@ -63,9 +55,7 @@ class QuestionTypeViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Question.objects.none()
 
     def get_queryset(self):
-        question_types = [
-            {"id": id, "name": name} for (id, name) in constants.QUESTION_TYPE_CHOICES
-        ]
+        question_types = [{"id": id, "name": name} for (id, name) in constants.QUESTION_TYPE_CHOICES]
         return question_types
 
     @extend_schema(summary="Lister tous les types de question", tags=[Question._meta.verbose_name_plural])
@@ -78,10 +68,7 @@ class QuestionDifficultyViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Question.objects.none()
 
     def get_queryset(self):
-        question_difficulties = [
-            {"id": id, "name": name}
-            for (id, name) in constants.QUESTION_DIFFICULTY_CHOICES
-        ]
+        question_difficulties = [{"id": id, "name": name} for (id, name) in constants.QUESTION_DIFFICULTY_CHOICES]
         return question_difficulties
 
     @extend_schema(summary="Lister tous les niveaux de difficulté", tags=[Question._meta.verbose_name_plural])
@@ -94,9 +81,7 @@ class QuestionLanguageViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Question.objects.none()
 
     def get_queryset(self):
-        question_languages = [
-            {"id": id, "name": name} for (id, name) in constants.LANGUAGE_CHOICES
-        ]
+        question_languages = [{"id": id, "name": name} for (id, name) in constants.LANGUAGE_CHOICES]
         return question_languages
 
     @extend_schema(summary="Lister toutes les langues", tags=[Question._meta.verbose_name_plural])
@@ -110,8 +95,7 @@ class QuestionValidationStatusViewSet(mixins.ListModelMixin, viewsets.GenericVie
 
     def get_queryset(self):
         question_validation_status = [
-            {"id": id, "name": name}
-            for (id, name) in constants.QUESTION_VALIDATION_STATUS_CHOICES
+            {"id": id, "name": name} for (id, name) in constants.QUESTION_VALIDATION_STATUS_CHOICES
         ]
         return question_validation_status
 

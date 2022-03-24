@@ -13,8 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="quiz",
             name="difficulty_average",
-            field=models.FloatField(
-                default=0, help_text="La difficulté moyenne des questions"
-            ),
+            field=models.FloatField(default=0, help_text="La difficulté moyenne des questions"),
         ),
     ]

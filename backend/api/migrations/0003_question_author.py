@@ -13,9 +13,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="question",
             name="author",
-            field=models.CharField(
-                blank=True, help_text="L'auteur de la question", max_length=50
-            ),
+            field=models.CharField(blank=True, help_text="L'auteur de la question", max_length=50),
         ),
         migrations.AlterField(
             model_name="question",

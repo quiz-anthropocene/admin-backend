@@ -1,12 +1,12 @@
 import time
 from datetime import datetime
 
-from django.utils import timezone
 from django.conf import settings
 from django.core.management import BaseCommand
+from django.utils import timezone
 
-from core.models import Configuration
 from api import utilities, utilities_github
+from core.models import Configuration
 
 
 class Command(BaseCommand):
@@ -30,27 +30,19 @@ class Command(BaseCommand):
         configuration.github_data_last_exported = timezone.now()
         configuration.save()
 
-        print(
-            "--- Step 1 done : init (%s seconds) ---"
-            % round(time.time() - start_time, 1)
-        )
+        print("--- Step 1 done : init (%s seconds) ---" % round(time.time() - start_time, 1))
 
         # update & commit data files
         try:
             #####################################
             # data/configuration.yaml
             start_time = time.time()
-            configuration_yaml = utilities.serialize_model_to_yaml(
-                "core", model_label="configuration", flat=True
-            )
+            configuration_yaml = utilities.serialize_model_to_yaml("core", model_label="configuration", flat=True)
             configuration_element = utilities_github.create_file_element(
                 file_path="data/configuration.yaml", file_content=configuration_yaml
             )
 
-            print(
-                "--- Step 2.1 done : configuration.yaml (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 2.1 done : configuration.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # # data/categories.yaml
@@ -66,62 +58,40 @@ class Command(BaseCommand):
             #####################################
             # data/tags.yaml
             start_time = time.time()
-            tags_yaml = utilities.serialize_model_to_yaml(
-                "api", model_label="tag", flat=True
-            )
-            tags_element = utilities_github.create_file_element(
-                file_path="data/tags.yaml", file_content=tags_yaml
-            )
+            tags_yaml = utilities.serialize_model_to_yaml("api", model_label="tag", flat=True)
+            tags_element = utilities_github.create_file_element(file_path="data/tags.yaml", file_content=tags_yaml)
 
-            print(
-                "--- Step 2.3 done : tags.yaml (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 2.3 done : tags.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/questions.yaml
             start_time = time.time()
-            questions_yaml = utilities.serialize_model_to_yaml(
-                "api", model_label="question", flat=True
-            )
+            questions_yaml = utilities.serialize_model_to_yaml("api", model_label="question", flat=True)
             questions_element = utilities_github.create_file_element(
                 file_path="data/questions.yaml", file_content=questions_yaml
             )
 
-            print(
-                "--- Step 2.4 done : questions.yaml (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 2.4 done : questions.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/quizzes.yaml
             start_time = time.time()
-            quizzes_yaml = utilities.serialize_model_to_yaml(
-                "api", model_label="quiz", flat=True
-            )
+            quizzes_yaml = utilities.serialize_model_to_yaml("api", model_label="quiz", flat=True)
             quizzes_element = utilities_github.create_file_element(
                 file_path="data/quizzes.yaml", file_content=quizzes_yaml
             )
 
-            print(
-                "--- Step 2.5 done : quizzes.yaml (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 2.5 done : quizzes.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/quiz-questions.yaml
             start_time = time.time()
-            quiz_questions_yaml = utilities.serialize_model_to_yaml(
-                "api", model_label="quizquestion", flat=True
-            )
+            quiz_questions_yaml = utilities.serialize_model_to_yaml("api", model_label="quizquestion", flat=True)
             quiz_questions_element = utilities_github.create_file_element(
                 file_path="data/quiz-questions.yaml", file_content=quiz_questions_yaml
             )
 
-            print(
-                "--- Step 2.6 done : quiz-questions.yaml (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 2.6 done : quiz-questions.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/quiz-relationships.yaml
@@ -134,10 +104,7 @@ class Command(BaseCommand):
                 file_content=quiz_relationships_yaml,
             )
 
-            print(
-                "--- Step 2.7 done : quiz-relationships.yaml (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 2.7 done : quiz-relationships.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # update frontend file with timestamp
@@ -155,10 +122,7 @@ class Command(BaseCommand):
                 file_content=new_frontend_constants_file_content_string,
             )
 
-            print(
-                "--- Step 2.8 done : constants.js (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 2.8 done : constants.js (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # commit files
@@ -178,10 +142,7 @@ class Command(BaseCommand):
                 ],
             )
 
-            print(
-                "--- Step 3 done : committed to branch (%s seconds) ---"
-                % round(time.time() - start_time, 1)
-            )
+            print("--- Step 3 done : committed to branch (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # create pull request
@@ -207,10 +168,7 @@ class Command(BaseCommand):
                     pull_request_labels="automerge",
                 )
 
-                print(
-                    "--- Step 4 done : created Pull Request (%s seconds) ---"
-                    % round(time.time() - start_time, 1)
-                )
+                print("--- Step 4 done : created Pull Request (%s seconds) ---" % round(time.time() - start_time, 1))
 
                 # return
                 self.stdout.write(pull_request.html_url)

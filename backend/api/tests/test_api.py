@@ -2,13 +2,8 @@ from django.test import TestCase
 from django.urls import reverse
 
 from api import constants
-from api.models import QuizQuestion, Glossary
-from api.tests.factories import (
-    CategoryFactory,
-    TagFactory,
-    QuestionFactory,
-    QuizFactory,
-)
+from api.models import Glossary, QuizQuestion
+from api.tests.factories import CategoryFactory, QuestionFactory, QuizFactory, TagFactory
 
 
 class ApiTest(TestCase):
@@ -33,9 +28,7 @@ class ApiTest(TestCase):
             author="author 2",
         )
         cls.question_2.tags.set([cls.tag_2, cls.tag_1])
-        cls.question_3 = QuestionFactory(
-            text="question 3", category=cls.category_1, author="author 3"
-        )
+        cls.question_3 = QuestionFactory(text="question 3", category=cls.category_1, author="author 3")
         cls.question_3.tags.add(cls.tag_2)
         cls.question_3.save()
         cls.quiz_1 = QuizFactory(name="quiz 1", publish=False, author="author 1")
@@ -64,9 +57,7 @@ class ApiTest(TestCase):
         self.assertEqual(len(response.data["results"]), 2)  # 1 question not validated
 
     def test_question_list_filter_by_type(self):
-        response = self.client.get(
-            reverse("api:question-list"), {"type": constants.QUESTION_TYPE_VF}
-        )
+        response = self.client.get(reverse("api:question-list"), {"type": constants.QUESTION_TYPE_VF})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 1)
 
@@ -79,29 +70,21 @@ class ApiTest(TestCase):
         self.assertEqual(len(response.data["results"]), 1)
 
     def test_question_list_filter_by_language(self):
-        response = self.client.get(
-            reverse("api:question-list"), {"language": constants.LANGUAGE_ENGLISH}
-        )
+        response = self.client.get(reverse("api:question-list"), {"language": constants.LANGUAGE_ENGLISH})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 1)
 
     def test_question_list_filter_by_category(self):
-        response = self.client.get(
-            reverse("api:question-list"), {"category": self.category_1.id}
-        )
+        response = self.client.get(reverse("api:question-list"), {"category": self.category_1.id})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 2)  # 1 question not validated
 
     def test_question_list_filter_by_tag(self):
-        response = self.client.get(
-            reverse("api:question-list"), {"tags": self.tag_1.id}
-        )
+        response = self.client.get(reverse("api:question-list"), {"tags": self.tag_1.id})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 1)
 
-        response = self.client.get(
-            reverse("api:question-list"), {"tags": self.tag_2.id}
-        )
+        response = self.client.get(reverse("api:question-list"), {"tags": self.tag_2.id})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 2)
 
@@ -114,9 +97,7 @@ class ApiTest(TestCase):
         self.assertEqual(len(response.data["results"]), 1)
 
     def test_question_detail(self):
-        response = self.client.get(
-            reverse("api:question-detail", args=[self.question_2.id])
-        )
+        response = self.client.get(reverse("api:question-detail", args=[self.question_2.id]))
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data, dict)
         self.assertIsInstance(response.data["category"], int)
@@ -211,14 +192,10 @@ class ApiTest(TestCase):
         self.assertIsInstance(response.data["results"], list)
         self.assertEqual(len(response.data["results"]), 1)  # 1 quiz not published
         self.assertEqual(response.data["results"][0]["question_count"], 2)
-        self.assertEqual(
-            response.data["results"][0]["questions"][0], self.question_2.id
-        )
+        self.assertEqual(response.data["results"][0]["questions"][0], self.question_2.id)
 
     def test_quiz_list_filter_by_language(self):
-        response = self.client.get(
-            reverse("api:quiz-list"), {"language": constants.LANGUAGE_ENGLISH}
-        )
+        response = self.client.get(reverse("api:quiz-list"), {"language": constants.LANGUAGE_ENGLISH})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 1)
 

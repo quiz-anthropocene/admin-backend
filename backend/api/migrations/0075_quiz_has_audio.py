@@ -13,8 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="quiz",
             name="has_audio",
-            field=models.BooleanField(
-                default=False, help_text="Le quiz a du contenu audio"
-            ),
+            field=models.BooleanField(default=False, help_text="Le quiz a du contenu audio"),
         ),
     ]

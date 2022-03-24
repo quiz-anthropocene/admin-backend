@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('stats', '0003_rename_stats_models_indexes'),
+        ("stats", "0003_rename_stats_models_indexes"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='quizanswerevent',
-            name='duration_seconds',
-            field=models.IntegerField(default=0, editable=False, help_text='Le temps pris (en secondes) pour compléter le quiz'),
+            model_name="quizanswerevent",
+            name="duration_seconds",
+            field=models.IntegerField(
+                default=0, editable=False, help_text="Le temps pris (en secondes) pour compléter le quiz"
+            ),
         ),
     ]

@@ -95,6 +95,8 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={"verbose_name": "Configuration de l'application",},
+            options={
+                "verbose_name": "Configuration de l'application",
+            },
         ),
     ]

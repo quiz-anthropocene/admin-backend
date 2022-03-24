@@ -1,27 +1,19 @@
 from datetime import date, timedelta
 
 from django.db import models
-from django.db.models import Sum, Count
+from django.db.models import Count, Sum
 
-from stats import constants
 from api import constants as api_constants
 from api.models import Question, Quiz
+from stats import constants
 
 
 class QuestionAggStat(models.Model):
-    question = models.OneToOneField(
-        Question, on_delete=models.CASCADE, primary_key=True, related_name="agg_stats"
-    )
-    answer_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de réponses"
-    )
-    answer_success_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de réponses correctes"
-    )
+    question = models.OneToOneField(Question, on_delete=models.CASCADE, primary_key=True, related_name="agg_stats")
+    answer_count = models.PositiveIntegerField(default=0, help_text="Le nombre de réponses")
+    answer_success_count = models.PositiveIntegerField(default=0, help_text="Le nombre de réponses correctes")
     like_count = models.PositiveIntegerField(default=0, help_text="Le nombre de likes")
-    dislike_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de dislikes"
-    )
+    dislike_count = models.PositiveIntegerField(default=0, help_text="Le nombre de dislikes")
 
 
 class QuestionAnswerEventQuerySet(models.QuerySet):
@@ -43,9 +35,7 @@ class QuestionAnswerEventQuerySet(models.QuerySet):
 
 
 class QuestionAnswerEvent(models.Model):
-    question = models.ForeignKey(
-        Question, null=True, on_delete=models.CASCADE, related_name="stats"
-    )
+    question = models.ForeignKey(Question, null=True, on_delete=models.CASCADE, related_name="stats")
     choice = models.CharField(
         max_length=50,
         choices=api_constants.QUESTION_ANSWER_CHOICES,
@@ -57,9 +47,7 @@ class QuestionAnswerEvent(models.Model):
         default=constants.QUESTION_SOURCE_QUESTION,
         help_text="Le contexte dans lequel a été répondu la question",
     )
-    created = models.DateTimeField(
-        auto_now_add=True, help_text="La date & heure de la réponse"
-    )
+    created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de la réponse")
 
     objects = QuestionAnswerEventQuerySet.as_manager()
 
@@ -79,9 +67,7 @@ class QuestionFeedbackEventQuerySet(models.QuerySet):
 
 
 class QuestionFeedbackEvent(models.Model):
-    question = models.ForeignKey(
-        Question, null=True, on_delete=models.CASCADE, related_name="feedbacks"
-    )
+    question = models.ForeignKey(Question, null=True, on_delete=models.CASCADE, related_name="feedbacks")
     choice = models.CharField(
         max_length=50,
         choices=constants.FEEDBACK_CHOICES,
@@ -94,9 +80,7 @@ class QuestionFeedbackEvent(models.Model):
         default=constants.QUESTION_SOURCE_QUESTION,
         help_text="Le contexte dans lequel a été envoyé l'avis",
     )
-    created = models.DateTimeField(
-        auto_now_add=True, help_text="La date & heure de l'avis"
-    )
+    created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de l'avis")
 
     objects = QuestionFeedbackEventQuerySet.as_manager()
 
@@ -135,13 +119,12 @@ class QuizAnswerEventQuerySet(models.QuerySet):
 
 
 class QuizAnswerEvent(models.Model):
-    quiz = models.ForeignKey(
-        Quiz, null=True, on_delete=models.CASCADE, related_name="stats"
-    )
+    quiz = models.ForeignKey(Quiz, null=True, on_delete=models.CASCADE, related_name="stats")
     # Why do we store the value instead of retrieving quiz.question_count ?
     # Because the value can change (adding or removing questions from a quiz)
     question_count = models.IntegerField(
-        default=0, help_text="La nombre de questions du quiz",
+        default=0,
+        help_text="La nombre de questions du quiz",
     )
     answer_success_count = models.IntegerField(
         default=0,
@@ -151,9 +134,7 @@ class QuizAnswerEvent(models.Model):
         default=0,
         help_text="Le temps pris (en secondes) pour compléter le quiz",
     )
-    created = models.DateTimeField(
-        auto_now_add=True, help_text="La date & heure de la réponse"
-    )
+    created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de la réponse")
 
     objects = QuizAnswerEventQuerySet.as_manager()
 
@@ -195,18 +176,14 @@ class QuizFeedbackEventQuerySet(models.QuerySet):
 
 
 class QuizFeedbackEvent(models.Model):
-    quiz = models.ForeignKey(
-        Quiz, null=True, on_delete=models.CASCADE, related_name="feedbacks"
-    )
+    quiz = models.ForeignKey(Quiz, null=True, on_delete=models.CASCADE, related_name="feedbacks")
     choice = models.CharField(
         max_length=50,
         choices=constants.FEEDBACK_CHOICES,
         default=constants.FEEDBACK_LIKE,
         help_text="L'avis laissé sur le quiz",
     )
-    created = models.DateTimeField(
-        auto_now_add=True, help_text="La date & heure de l'avis"
-    )
+    created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de l'avis")
 
     objects = QuizFeedbackEventQuerySet.as_manager()
 
@@ -221,9 +198,7 @@ class DailyStatManager(models.Manager):
         queryset = self
         # since
         if since not in constants.AGGREGATION_SINCE_CHOICE_LIST:
-            raise ValueError(
-                f"DailyStat agg_count: must be one of {constants.AGGREGATION_SINCE_CHOICE_LIST}"
-            )
+            raise ValueError(f"DailyStat agg_count: must be one of {constants.AGGREGATION_SINCE_CHOICE_LIST}")
         if since == "last_30_days":
             queryset = queryset.filter(date__gte=(date.today() - timedelta(days=30)))
         if since == "month":
@@ -255,9 +230,7 @@ class DailyStatManager(models.Manager):
             )
         if scale in ["day", "week"]:
             queryset = (
-                queryset.extra(
-                    select={"day": "to_char(date, 'YYYY-MM-DD')", "y": field}
-                )
+                queryset.extra(select={"day": "to_char(date, 'YYYY-MM-DD')", "y": field})
                 .values("day", "y")
                 .order_by("day")
             )
@@ -268,9 +241,7 @@ class DailyStatManager(models.Manager):
 
         if scale == "month":
             queryset = (
-                queryset.extra(
-                    select={"day": "to_char(date, 'YYYY-MM-01')"}
-                )  # use Trunc ?
+                queryset.extra(select={"day": "to_char(date, 'YYYY-MM-01')"})  # use Trunc ?
                 .values("day")
                 .annotate(y=Sum(field))
                 .order_by("day")
@@ -281,38 +252,26 @@ class DailyStatManager(models.Manager):
 
 class DailyStat(models.Model):
     date = models.DateField(help_text="Le jour de la statistique")
-    question_answer_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de questions répondues"
-    )
+    question_answer_count = models.PositiveIntegerField(default=0, help_text="Le nombre de questions répondues")
     question_answer_from_quiz_count = models.PositiveIntegerField(
         default=0, help_text="Le nombre de questions répondues au sein de quizs"
     )
-    quiz_answer_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de quizs répondus"
-    )
-    question_feedback_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de feedbacks aux questions"
-    )
+    quiz_answer_count = models.PositiveIntegerField(default=0, help_text="Le nombre de quizs répondus")
+    question_feedback_count = models.PositiveIntegerField(default=0, help_text="Le nombre de feedbacks aux questions")
     question_feedback_from_quiz_count = models.PositiveIntegerField(
         default=0, help_text="Le nombre de feedbacks aux questions au sein de quizs"
     )
-    quiz_feedback_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de feedbacks aux quizs"
-    )
+    quiz_feedback_count = models.PositiveIntegerField(default=0, help_text="Le nombre de feedbacks aux quizs")
     hour_split = models.JSONField(
         default=constants.daily_stat_hour_split_jsonfield_default_value,
         help_text="Les statistiques par heure",
     )
-    created = models.DateTimeField(
-        auto_now_add=True, help_text="La date & heure de la stat journalière"
-    )
+    created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de la stat journalière")
 
     objects = DailyStatManager()
 
     class Meta:
-        constraints = [
-            models.UniqueConstraint(fields=["date"], name="unique stat date")
-        ]
+        constraints = [models.UniqueConstraint(fields=["date"], name="unique stat date")]
 
     def __str__(self):
         return f"{self.date}"

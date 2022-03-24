@@ -1,20 +1,10 @@
-from datetime import datetime, date, timedelta
+from datetime import date, datetime, timedelta
 
 from django.db.models import Count, F
 
 from api import constants
-from api.models import (
-    Category,
-    Tag,
-    Question,
-    Quiz,
-    Contribution,
-)
-from stats.models import (
-    QuizAnswerEvent,
-    QuizFeedbackEvent,
-    DailyStat,
-)
+from api.models import Category, Contribution, Question, Quiz, Tag
+from stats.models import DailyStat, QuizAnswerEvent, QuizFeedbackEvent
 
 
 def category_stats():
@@ -40,20 +30,13 @@ def question_stats():
 
     return {
         "question_count": question_count,
-        "question_per_validation_status_count": list(
-            question_per_validation_status_count
-        ),
+        "question_per_validation_status_count": list(question_per_validation_status_count),
     }
 
 
 def quiz_stats():
     quiz_count = Quiz.objects.count()
-    quiz_per_publish_count = (
-        Quiz.objects.all()
-        .values("publish")
-        .annotate(total=Count("publish"))
-        .order_by("-total")
-    )
+    quiz_per_publish_count = Quiz.objects.all().values("publish").annotate(total=Count("publish")).order_by("-total")
 
     return {
         "quiz_count": quiz_count,
@@ -83,28 +66,18 @@ def quiz_detail_stats():
             created__date__gte=(date.today() - timedelta(days=7))
         ).count()
 
-        quiz_detail_stat["like_count"] = (
-            QuizFeedbackEvent.objects.for_quiz(quiz.id).liked().count()
-        )
-        quiz_detail_stat["dislike_count"] = (
-            QuizFeedbackEvent.objects.for_quiz(quiz.id).disliked().count()
-        )
+        quiz_detail_stat["like_count"] = QuizFeedbackEvent.objects.for_quiz(quiz.id).liked().count()
+        quiz_detail_stat["dislike_count"] = QuizFeedbackEvent.objects.for_quiz(quiz.id).disliked().count()
 
         quiz_detail_stat["answer_success_count_split"] = []
         answer_success_count_agg = (
-            QuizAnswerEvent.objects.for_quiz(quiz.id)
-            .values("answer_success_count")
-            .annotate(count=Count("created"))
+            QuizAnswerEvent.objects.for_quiz(quiz.id).values("answer_success_count").annotate(count=Count("created"))
         )
         answer_success_count_agg_list = list(answer_success_count_agg)
         for n in range(0, quiz.question_count):
             quiz_detail_stat["answer_success_count_split"].append(
                 next(
-                    (
-                        item
-                        for item in answer_success_count_agg_list
-                        if item["answer_success_count"] == n
-                    ),
+                    (item for item in answer_success_count_agg_list if item["answer_success_count"] == n),
                     {"answer_success_count": n, "count": 0},
                 )
             )
@@ -119,9 +92,7 @@ def answer_stats():
     question_answer_count = DailyStat.objects.agg_count("question_answer_count")
     quiz_answer_count = QuizAnswerEvent.objects.count()
     # last 30 days
-    question_answer_count_last_30_days = DailyStat.objects.agg_count(
-        "question_answer_count", since="last_30_days"
-    )
+    question_answer_count_last_30_days = DailyStat.objects.agg_count("question_answer_count", since="last_30_days")
     quiz_answer_count_last_30_days = QuizAnswerEvent.objects.last_30_days().count()
     # # current month
     # current_month_iso_number = date.today().month
@@ -205,11 +176,7 @@ def difficulty_aggregate():
                 "value": value,
                 "emoji": emoji,
                 "question_count": next(
-                    (
-                        item["question_count"]
-                        for item in question_difficulty_levels
-                        if item["value"] == value
-                    ),
+                    (item["question_count"] for item in question_difficulty_levels if item["value"] == value),
                     0,
                 ),
             }
@@ -220,10 +187,7 @@ def difficulty_aggregate():
 
 def author_aggregate():
     question_authors = list(
-        Question.objects.validated()
-        .values(name=F("author"))
-        .annotate(question_count=Count("author"))
-        .order_by("name")
+        Question.objects.validated().values(name=F("author")).annotate(question_count=Count("author")).order_by("name")
     )
     quiz_authors = list(
         Quiz.objects.published()
@@ -244,13 +208,9 @@ def author_aggregate():
         )
         question_quiz_authors.append(question_author)
     # manage new quiz_authors
-    question_authors_flat = [
-        question_author["name"] for question_author in question_authors
-    ]
+    question_authors_flat = [question_author["name"] for question_author in question_authors]
     new_quiz_authors = [
-        quiz_author
-        for quiz_author in quiz_authors
-        if quiz_author["author"] not in question_authors_flat
+        quiz_author for quiz_author in quiz_authors if quiz_author["author"] not in question_authors_flat
     ]
     if len(new_quiz_authors):
         for new_quiz_author in new_quiz_authors:
@@ -262,25 +222,17 @@ def author_aggregate():
                 }
             )
         # sort
-        question_quiz_authors = sorted(
-            question_quiz_authors, key=lambda k: k["name"].casefold()
-        )
+        question_quiz_authors = sorted(question_quiz_authors, key=lambda k: k["name"].casefold())
 
     return question_quiz_authors
 
 
 def language_aggregate():
     question_languages = list(
-        Question.objects.validated()
-        .values("language")
-        .annotate(question_count=Count("language"))
-        .order_by("language")
+        Question.objects.validated().values("language").annotate(question_count=Count("language")).order_by("language")
     )
     quiz_languages = list(
-        Quiz.objects.published()
-        .values("language")
-        .annotate(quiz_count=Count("language"))
-        .order_by("language")
+        Quiz.objects.published().values("language").annotate(quiz_count=Count("language")).order_by("language")
     )
 
     languages = []
@@ -289,19 +241,11 @@ def language_aggregate():
             {
                 "name": language,
                 "question_count": next(
-                    (
-                        item["question_count"]
-                        for item in question_languages
-                        if item["language"] == language
-                    ),
+                    (item["question_count"] for item in question_languages if item["language"] == language),
                     0,
                 ),
                 "quiz_count": next(
-                    (
-                        item["quiz_count"]
-                        for item in quiz_languages
-                        if item["language"] == language
-                    ),
+                    (item["quiz_count"] for item in quiz_languages if item["language"] == language),
                     0,
                 ),
             }
@@ -326,18 +270,12 @@ def aggregate_timeseries_by_week(timeseries):
         elem_week_start_date_str = elem_week_start_date.strftime("%Y-%m-%d")
         # get index of start-of-week date
         elem_week_start_date_index = next(
-            (
-                index
-                for (index, d) in enumerate(timeseries_grouped_by_week)
-                if d["day"] == elem_week_start_date_str
-            ),
+            (index for (index, d) in enumerate(timeseries_grouped_by_week) if d["day"] == elem_week_start_date_str),
             None,
         )
         # add elem to grouped timeseries
         if elem_week_start_date_index is None:
-            timeseries_grouped_by_week.append(
-                {"day": elem_week_start_date_str, "y": elem["y"]}
-            )
+            timeseries_grouped_by_week.append({"day": elem_week_start_date_str, "y": elem["y"]})
         else:
             timeseries_grouped_by_week[elem_week_start_date_index]["y"] += elem["y"]
     # return

@@ -1,9 +1,10 @@
+# flake8: noqa W605
 import re
 
 from django.core.management import BaseCommand
 
-from core.models import Configuration
 from api import utilities_notion
+from core.models import Configuration
 
 
 configuration = Configuration.get_solo()
@@ -35,21 +36,27 @@ class Command(BaseCommand):
         #########################################################
         notion_query_filter = {
             "filter": {
-                "and": [{
-                    "property": "answer_image_url",
-                    "text": {
-                        "contains": f"{configuration.application_open_source_code_url}/blob/master/data/images/"  # noqa
+                "and": [
+                    {
+                        "property": "answer_image_url",
+                        "text": {
+                            "contains": f"{configuration.application_open_source_code_url}/blob/master/data/images/"  # noqa
+                        },
                     }
-                }],
+                ],
             }
         }
         try:
-            notion_questions_response = utilities_notion.get_question_table_pages(sort_direction="ascending", extra_data=notion_query_filter)  # noqa
+            notion_questions_response = utilities_notion.get_question_table_pages(
+                sort_direction="ascending", extra_data=notion_query_filter
+            )  # noqa
         except:  # noqa
             self.stdout.write("Erreur accès à l'API Notion")
             return
 
-        self.stdout.write(f"Found {len(notion_questions_response.json()['results'])} questions with answer_image_url to fix")  # noqa
+        self.stdout.write(
+            f"Found {len(notion_questions_response.json()['results'])} questions with answer_image_url to fix"
+        )  # noqa
 
         #########################################################
         # Step 2: loop on each question
@@ -60,22 +67,22 @@ class Command(BaseCommand):
             self.stdout.write("-" * 80)
             self.stdout.write(f"{question['properties']['id']['number']} / {question['id']}")
 
-            question_answer_image_url = question['properties']['answer_image_url']["url"]
+            question_answer_image_url = question["properties"]["answer_image_url"]["url"]
             self.stdout.write(f"{question_answer_image_url}")
 
             if question_answer_image_url:
-                image_path = re.findall("https:\/\/github.com\/raphodn\/know-your-planet\/blob\/master\/data\/images\/(.+)\?raw=true", question_answer_image_url)  # noqa
+                image_path = re.findall(
+                    "https:\/\/github.com\/raphodn\/know-your-planet\/blob\/master\/data\/images\/(.+)\?raw=true",
+                    question_answer_image_url,
+                )  # noqa
                 if not len(image_path):
-                    image_path = re.findall("https:\/\/github.com\/raphodn\/know-your-planet\/blob\/master\/data\/images\/(.+)", question_answer_image_url)  # noqa
+                    image_path = re.findall(
+                        "https:\/\/github.com\/raphodn\/know-your-planet\/blob\/master\/data\/images\/(.+)",
+                        question_answer_image_url,
+                    )  # noqa
                 if len(image_path):
                     new_question_answer_image_url = f"https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/{image_path[0]}"  # noqa
-                    data = {
-                        "properties": {
-                            "answer_image_url": {
-                                "url": new_question_answer_image_url
-                            }
-                        }
-                    }
+                    data = {"properties": {"answer_image_url": {"url": new_question_answer_image_url}}}
                     try:
                         utilities_notion.update_page_properties(page_id=question["id"], data=data)
                         self.stdout.write(f"{new_question_answer_image_url}")

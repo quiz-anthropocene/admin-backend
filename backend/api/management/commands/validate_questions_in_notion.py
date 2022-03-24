@@ -1,10 +1,9 @@
 import notion
-
-from django.core.management import BaseCommand
 from django.core.exceptions import ValidationError
+from django.core.management import BaseCommand
 
 from api import utilities_notion
-from api.models import Question, Category, Tag
+from api.models import Category, Question, Tag
 
 
 class Command(BaseCommand):
@@ -25,17 +24,13 @@ class Command(BaseCommand):
             # fill dict with notion_question_row
             for question_field in Question._meta.get_fields():
                 try:
-                    notion_question_property = notion_question_row.get_property(
-                        question_field.name
-                    )
+                    notion_question_property = notion_question_row.get_property(question_field.name)
                     # cleanup dates
                     if type(notion_question_property) == notion.collection.NotionDate:
                         notion_question_property = notion_question_property.start
                     # skip empty values (se baser sur les defaults plutot)
                     if notion_question_property not in ["", None, [], [""]]:
-                        notion_question_dict[
-                            question_field.name
-                        ] = notion_question_property
+                        notion_question_dict[question_field.name] = notion_question_property
                 except:  # noqa
                     pass
 
@@ -44,31 +39,19 @@ class Command(BaseCommand):
             # - check category exists
             # - check tags exist (then delete them)
             if "id" not in notion_question_dict:
-                validation_errors.append(
-                    ValidationError({"id": "Question sans id. vide ?"})
-                )
+                validation_errors.append(ValidationError({"id": "Question sans id. vide ?"}))
             else:
                 notion_question_dict["id"] += 10000
             if "category" in notion_question_dict:
                 # error if unknown category : api.models.DoesNotExist: Category matching query does not exist.  # noqa
-                notion_question_dict["category"] = Category.objects.get(
-                    name=notion_question_dict["category"]
-                )
+                notion_question_dict["category"] = Category.objects.get(name=notion_question_dict["category"])
             if "tags" in notion_question_dict:
                 notion_question_dict["tags"] = [
-                    tag
-                    for tag in notion_question_dict["tags"]
-                    if not tag.startswith("Quiz")
+                    tag for tag in notion_question_dict["tags"] if not tag.startswith("Quiz")
                 ]
-                tag_list = Tag.objects.filter(
-                    name__in=notion_question_dict["tags"]
-                ).values_list("name", flat=True)
+                tag_list = Tag.objects.filter(name__in=notion_question_dict["tags"]).values_list("name", flat=True)
                 if len(notion_question_dict["tags"]) != tag_list.count():
-                    tag_missing = [
-                        tag
-                        for tag in notion_question_dict["tags"]
-                        if tag not in list(tag_list)
-                    ]
+                    tag_missing = [tag for tag in notion_question_dict["tags"] if tag not in list(tag_list)]
                     validation_errors.append(
                         ValidationError(
                             {

@@ -3,8 +3,8 @@ import time
 from django.core import management
 from django.test import TestCase
 
-from stats.models import QuizAnswerEvent, QuizFeedbackEvent
 from api.tests.factories import QuizFactory
+from stats.models import QuizAnswerEvent, QuizFeedbackEvent
 
 
 class CleanupQuizStatsCommandTest(TestCase):
@@ -34,19 +34,11 @@ class CleanupQuizStatsCommandTest(TestCase):
         # quiz_1_updated = Quiz.objects.get(pk=self.quiz_1.id)
 
         # quiz answer stats
-        self.assertEqual(
-            QuizAnswerEvent.objects.for_quiz(quiz_id=self.quiz_1.id).count(), 0
-        )
+        self.assertEqual(QuizAnswerEvent.objects.for_quiz(quiz_id=self.quiz_1.id).count(), 0)
 
         # quiz feedback stats
-        self.assertEqual(
-            QuizFeedbackEvent.objects.for_quiz(quiz_id=self.quiz_1.id).count(), 0
-        )
+        self.assertEqual(QuizFeedbackEvent.objects.for_quiz(quiz_id=self.quiz_1.id).count(), 0)
 
         # check that there were no impact on quiz_2
-        self.assertEqual(
-            QuizAnswerEvent.objects.for_quiz(quiz_id=self.quiz_2.id).count(), 1
-        )
-        self.assertEqual(
-            QuizFeedbackEvent.objects.for_quiz(quiz_id=self.quiz_2.id).count(), 1
-        )
+        self.assertEqual(QuizAnswerEvent.objects.for_quiz(quiz_id=self.quiz_2.id).count(), 1)
+        self.assertEqual(QuizFeedbackEvent.objects.for_quiz(quiz_id=self.quiz_2.id).count(), 1)

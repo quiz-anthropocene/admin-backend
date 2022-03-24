@@ -1,6 +1,6 @@
 import json
-from io import StringIO
 from datetime import datetime
+from io import StringIO
 
 from django.conf import settings
 from django.contrib import admin
@@ -8,31 +8,17 @@ from django.contrib.auth.models import Group, Permission, User
 from django.core import management
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.html import mark_safe
-
-from import_export import fields, resources
-from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
-from import_export.admin import ImportMixin
 from fieldsets_with_inlines import FieldsetsInlineMixin
+from import_export import fields, resources
+from import_export.admin import ImportMixin
+from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
 
-from core.admin import admin_site, ExportMixin
+from api import constants as api_constants, utilities_notion
+from api.models import Category, Contribution, Glossary, Question, Quiz, QuizQuestion, QuizRelationship, Tag
+from core.admin import ExportMixin, admin_site
 from core.models import Configuration
-from api import constants as api_constants
-from api import utilities_notion
-from api.models import (
-    Question,
-    Category,
-    Tag,
-    Quiz,
-    QuizQuestion,
-    QuizRelationship,
-    Contribution,
-    Glossary,
-)
 from stats import constants
-from stats.models import (
-    QuizAnswerEvent,
-    QuizFeedbackEvent,
-)
+from stats.models import QuizAnswerEvent, QuizFeedbackEvent
 
 
 class QuestionResource(resources.ModelResource):
@@ -43,9 +29,7 @@ class QuestionResource(resources.ModelResource):
         attribute="category",
         widget=ForeignKeyWidget(Category, field="name"),
     )
-    tags = fields.Field(
-        column_name="tags", attribute="tags", widget=ManyToManyWidget(Tag, field="name")
-    )
+    tags = fields.Field(column_name="tags", attribute="tags", widget=ManyToManyWidget(Tag, field="name"))
     quizzes = fields.Field(
         column_name="quizzes",
         attribute="quizzes",
@@ -65,9 +49,7 @@ class QuestionResource(resources.ModelResource):
             row["id"] = row["\ufeffid"]
         # 'added' field
         if row["added"] == "":
-            row["added"] = datetime.strptime(
-                row["Created time"], "%b %d, %Y %I:%M %p"
-            ).date()
+            row["added"] = datetime.strptime(row["Created time"], "%b %d, %Y %I:%M %p").date()
         # boolean fields
         BOOLEAN_FIELDS = ["has_ordered_answers"]
         for boolean_field in BOOLEAN_FIELDS:
@@ -104,17 +86,9 @@ class QuestionResource(resources.ModelResource):
 
     def after_import(self, dataset, result, using_transactions, dry_run, **kwargs):
         # result.totals: OrderedDict, keys: 'new', 'update', 'delete', 'skip', 'error', 'invalid'
-        if (
-            not settings.DEBUG
-            and not dry_run
-            and not (result.totals["error"] or result.totals["invalid"])
-        ):  # noqa
-            utilities_notion.add_import_stats_row(
-                result.total_rows, result.totals["new"], result.totals["update"]
-            )
-        super(QuestionResource, self).after_import(
-            dataset, result, using_transactions, dry_run, **kwargs
-        )
+        if not settings.DEBUG and not dry_run and not (result.totals["error"] or result.totals["invalid"]):  # noqa
+            utilities_notion.add_import_stats_row(result.total_rows, result.totals["new"], result.totals["update"])
+        super(QuestionResource, self).after_import(dataset, result, using_transactions, dry_run, **kwargs)
 
     class Meta:
         model = Question
@@ -223,9 +197,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         else:
             return mark_safe("<div>champ 'Answer image url' vide</div>")
 
-    show_answer_image.short_description = (
-        "L'image du champ 'Answer image url' (cliquer pour agrandir)"
-    )
+    show_answer_image.short_description = "L'image du champ 'Answer image url' (cliquer pour agrandir)"
 
     def changelist_view(self, request, extra_context=None):
         """
@@ -250,12 +222,9 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
             # management.call_command("import_questions_from_notion", scope, stdout=out)
             management.call_command("import_questions_from_notion", stdout=out)
             notion_questions_import_response = out.getvalue()
-            notion_questions_import_response = notion_questions_import_response.split(
-                "\n"
-            )
+            notion_questions_import_response = notion_questions_import_response.split("\n")
             notion_questions_import_response = [
-                elem.split("///") if ("///" in elem) else elem
-                for elem in notion_questions_import_response
+                elem.split("///") if ("///" in elem) else elem for elem in notion_questions_import_response
             ]
 
         extra_context = extra_context or {
@@ -320,9 +289,7 @@ class QuizRelationshipFromInline(admin.StackedInline):  # TabularInline
         Hide the current quiz in the relationship form
         Doesn't work with autocomplete_fields
         """
-        field = super(QuizRelationshipFromInline, self).formfield_for_foreignkey(
-            db_field, request, **kwargs
-        )
+        field = super(QuizRelationshipFromInline, self).formfield_for_foreignkey(db_field, request, **kwargs)
         if db_field.name == "to_quiz":
             if "object_id" in request.resolver_match.kwargs:
                 current_quiz_id = int(request.resolver_match.kwargs["object_id"])
@@ -336,10 +303,7 @@ class QuizRelationshipFromInline(admin.StackedInline):  # TabularInline
                     to_quiz__id=current_quiz_id
                 ).values_list("from_quiz_id", flat=True)
                 field.queryset = field.queryset.exclude(
-                    id__in=(
-                        list(current_quiz_from_relationships)
-                        + list(current_quiz_to_relationships)
-                    )
+                    id__in=(list(current_quiz_from_relationships) + list(current_quiz_to_relationships))
                 )
                 # order queryset
                 field.queryset = field.queryset.order_by("-id")
@@ -495,16 +459,12 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         else:
             return mark_safe("<div>champ 'Quiz image background url' vide</div>")
 
-    show_image_background.short_description = (
-        "L'image du champ 'Quiz image background url' (cliquer pour agrandir)"
-    )
+    show_image_background.short_description = "L'image du champ 'Quiz image background url' (cliquer pour agrandir)"
 
     def questions_not_validated_string_html(self, instance):
         return mark_safe(instance.questions_not_validated_string)
 
-    questions_not_validated_string_html.short_description = (
-        "Questions pas encore validées"
-    )
+    questions_not_validated_string_html.short_description = "Questions pas encore validées"
 
     def get_readonly_fields(self, request, obj=None):
         """
@@ -535,30 +495,22 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         """
         # custom form
         current_quiz_id = int(request.POST.get("quiz_id", Quiz.objects.first().id))
-        current_field = str(
-            request.POST.get("field", constants.AGGREGATION_QUIZ_FIELD_CHOICE_LIST[0])
-        )
-        current_scale = str(
-            request.POST.get("scale", constants.AGGREGATION_SCALE_CHOICE_LIST[0])
-        )
+        current_field = str(request.POST.get("field", constants.AGGREGATION_QUIZ_FIELD_CHOICE_LIST[0]))
+        current_scale = str(request.POST.get("scale", constants.AGGREGATION_SCALE_CHOICE_LIST[0]))
 
         # Aggregate answers per day
         # chart_data_query = QuizAnswerEvent.objects.extra(select={"day": "date(created)"}) # sqlite
         chart_data_model = (
-            QuizAnswerEvent
-            if current_field == constants.AGGREGATION_QUIZ_FIELD_CHOICE_LIST[0]
-            else QuizFeedbackEvent
+            QuizAnswerEvent if current_field == constants.AGGREGATION_QUIZ_FIELD_CHOICE_LIST[0] else QuizFeedbackEvent
         )
-        chart_data_query = chart_data_model.objects.for_quiz(
-            quiz_id=current_quiz_id
-        ).agg_timeseries(scale=current_scale)
+        chart_data_query = chart_data_model.objects.for_quiz(quiz_id=current_quiz_id).agg_timeseries(
+            scale=current_scale
+        )
 
         chart_data_list = list(chart_data_query)
 
         # get answers since today
-        if len(chart_data_list) and (
-            str(chart_data_list[-1]["day"]) != str(datetime.now().date())
-        ):
+        if len(chart_data_list) and (str(chart_data_list[-1]["day"]) != str(datetime.now().date())):
             chart_data_list += [{"day": str(datetime.now().date()), "y": 0}]
 
         # Serialize and attach the chart data to the template context

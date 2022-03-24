@@ -6,18 +6,22 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0084_alter_quiz_slug'),
+        ("api", "0084_alter_quiz_slug"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='question',
-            name='answer_accessible_url_text',
+            model_name="question",
+            name="answer_accessible_url_text",
             field=models.CharField(blank=True, help_text="Le texte pour remplace l'affichage du lien", max_length=500),
         ),
         migrations.AddField(
-            model_name='question',
-            name='answer_scientific_url_text',
-            field=models.CharField(blank=True, help_text="Le texte pour remplace l'affichage du lien de la source scientifique", max_length=500),
+            model_name="question",
+            name="answer_scientific_url_text",
+            field=models.CharField(
+                blank=True,
+                help_text="Le texte pour remplace l'affichage du lien de la source scientifique",
+                max_length=500,
+            ),
         ),
     ]

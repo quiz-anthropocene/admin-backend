@@ -1,16 +1,15 @@
 import csv
-from io import StringIO
 from datetime import datetime
+from io import StringIO
 
 from django.contrib import admin
 from django.core import management
 from django.http import HttpResponse
-
 from solo.admin import SingletonModelAdmin
 
-from core.models import Configuration
 from api import utilities
-from api.models import Question, Quiz, Category, Tag
+from api.models import Category, Question, Quiz, Tag
+from core.models import Configuration
 from stats.models import QuestionAnswerEvent, QuestionFeedbackEvent
 
 
@@ -25,9 +24,7 @@ class ExportMixin:
         TODO: improve ManyToMany management (currently: hack to add tags to Question)
         """
         response = HttpResponse(content_type="text/csv")
-        response[
-            "Content-Disposition"
-        ] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.csv"
+        response["Content-Disposition"] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.csv"
 
         # field_names = [field.name for field in self.model._meta.get_fields()]
         field_names = [field.name for field in self.model._meta.fields]
@@ -42,8 +39,7 @@ class ExportMixin:
         for obj in queryset:
             if queryset.model.__name__ == "Question":
                 writer.writerow(
-                    [getattr(obj, field) for field in field_names]
-                    + [obj.tags_list_string, obj.quizs_list_string]
+                    [getattr(obj, field) for field in field_names] + [obj.tags_list_string, obj.quizs_list_string]
                 )
             else:
                 writer.writerow([getattr(obj, field) for field in field_names])
@@ -52,9 +48,7 @@ class ExportMixin:
 
     def export_as_json(self, request, queryset):
         response = HttpResponse(content_type="application/json")
-        response[
-            "Content-Disposition"
-        ] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.json"
+        response["Content-Disposition"] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.json"
 
         response.write(utilities.serialize_queryset_to_json(queryset))
 
@@ -65,9 +59,7 @@ class ExportMixin:
         TODO: escape characters " (\") and - (\\-)
         """
         response = HttpResponse(content_type="text/yaml")
-        response[
-            "Content-Disposition"
-        ] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.yaml"
+        response["Content-Disposition"] = f"attachment; filename={self.model._meta} - {datetime.now().date()}.yaml"
 
         response.write(utilities.serialize_queryset_to_yaml(queryset))
 
@@ -77,14 +69,10 @@ class ExportMixin:
         return self.export_as_yaml(request, Question.objects.all().order_by("pk"))
 
     def export_all_questionanswerevent_as_yaml(self, request, queryset):
-        return self.export_as_yaml(
-            request, QuestionAnswerEvent.objects.all().order_by("pk")
-        )
+        return self.export_as_yaml(request, QuestionAnswerEvent.objects.all().order_by("pk"))
 
     def export_all_questionfeedbackevent_as_yaml(self, request, queryset):
-        return self.export_as_yaml(
-            request, QuestionFeedbackEvent.objects.all().order_by("pk")
-        )
+        return self.export_as_yaml(request, QuestionFeedbackEvent.objects.all().order_by("pk"))
 
     def export_all_quiz_as_yaml(self, request, queryset):
         return self.export_as_yaml(request, Quiz.objects.all().order_by("pk"))

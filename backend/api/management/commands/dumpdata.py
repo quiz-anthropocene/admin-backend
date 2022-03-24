@@ -26,9 +26,7 @@ class Command(Dumpdata):
         if options.get("format").startswith("yaml-"):
             # init
             if (len(app_labels) == 0) or (len(app_labels) > 1):
-                raise CommandError(
-                    "Error with app_labels. Only 1 'app.model' possible."
-                )
+                raise CommandError("Error with app_labels. Only 1 'app.model' possible.")
             # get input model
             app_label, model_label = app_labels[0].split(".")
             # model = apps.get_app_config(app_label).get_model(model_label)
@@ -37,13 +35,9 @@ class Command(Dumpdata):
             stream = open(output, "w") if output else None
             # yaml + pretty : call django serializer
             if options.get("format") == "yaml-pretty":
-                utilities.serialize_model_to_yaml(
-                    app_label, model_label, stream=stream or self.stdout
-                )
+                utilities.serialize_model_to_yaml(app_label, model_label, stream=stream or self.stdout)
             # yaml + pretty + flat : call pyyaml
             elif options.get("format") == "yaml-pretty-flat":
-                utilities.serialize_model_to_yaml(
-                    app_label, model_label, flat=True, stream=stream or self.stdout
-                )
+                utilities.serialize_model_to_yaml(app_label, model_label, flat=True, stream=stream or self.stdout)
         else:
             super(Command, self).handle(*app_labels, **options)

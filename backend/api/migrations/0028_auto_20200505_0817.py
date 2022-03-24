@@ -13,36 +13,26 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="question",
             name="added",
-            field=models.DateField(
-                blank=True, help_text="La date d'ajout de la question", null=True
-            ),
+            field=models.DateField(blank=True, help_text="La date d'ajout de la question", null=True),
         ),
         migrations.AlterField(
             model_name="category",
             name="created",
-            field=models.DateField(
-                auto_now_add=True, help_text="La date de création de la catégorie"
-            ),
+            field=models.DateField(auto_now_add=True, help_text="La date de création de la catégorie"),
         ),
         migrations.AlterField(
             model_name="question",
             name="created",
-            field=models.DateField(
-                auto_now_add=True, help_text="La date de création de la question"
-            ),
+            field=models.DateField(auto_now_add=True, help_text="La date de création de la question"),
         ),
         migrations.AlterField(
             model_name="quiz",
             name="created",
-            field=models.DateField(
-                auto_now_add=True, help_text="La date de création du quiz"
-            ),
+            field=models.DateField(auto_now_add=True, help_text="La date de création du quiz"),
         ),
         migrations.AlterField(
             model_name="tag",
             name="created",
-            field=models.DateField(
-                auto_now_add=True, help_text="La date de création du tag"
-            ),
+            field=models.DateField(auto_now_add=True, help_text="La date de création du tag"),
         ),
     ]

@@ -6,28 +6,28 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0085_question_answer_url_text_fields'),
+        ("api", "0085_question_answer_url_text_fields"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='category',
-            options={'ordering': ['pk'], 'verbose_name': 'Category', 'verbose_name_plural': 'Categories'},
+            name="category",
+            options={"ordering": ["pk"], "verbose_name": "Category", "verbose_name_plural": "Categories"},
         ),
         migrations.AlterModelOptions(
-            name='question',
-            options={'ordering': ['pk'], 'verbose_name': 'Question', 'verbose_name_plural': 'Questions'},
+            name="question",
+            options={"ordering": ["pk"], "verbose_name": "Question", "verbose_name_plural": "Questions"},
         ),
         migrations.AlterModelOptions(
-            name='quiz',
-            options={'ordering': ['pk'], 'verbose_name': 'Quiz', 'verbose_name_plural': 'Quizs'},
+            name="quiz",
+            options={"ordering": ["pk"], "verbose_name": "Quiz", "verbose_name_plural": "Quizs"},
         ),
         migrations.AlterModelOptions(
-            name='tag',
-            options={'ordering': ['pk'], 'verbose_name': 'Tag', 'verbose_name_plural': 'Tags'},
+            name="tag",
+            options={"ordering": ["pk"], "verbose_name": "Tag", "verbose_name_plural": "Tags"},
         ),
         migrations.AlterModelOptions(
-            name='glossary',
-            options={'ordering': ['name']},
+            name="glossary",
+            options={"ordering": ["name"]},
         ),
     ]

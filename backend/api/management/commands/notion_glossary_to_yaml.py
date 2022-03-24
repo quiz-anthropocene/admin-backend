@@ -1,6 +1,6 @@
-import yaml
-from datetime import datetime, date
+from datetime import date, datetime
 
+import yaml
 from django.core.management import BaseCommand
 
 from api import utilities_notion

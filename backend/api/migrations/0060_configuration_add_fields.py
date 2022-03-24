@@ -14,16 +14,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="configuration",
             name="application_about",
-            field=ckeditor.fields.RichTextField(
-                blank=True, help_text="A propos de l'application"
-            ),
+            field=ckeditor.fields.RichTextField(blank=True, help_text="A propos de l'application"),
         ),
         migrations.AddField(
             model_name="configuration",
             name="application_tagline",
-            field=models.CharField(
-                default="", help_text="La tagline de l'application", max_length=255
-            ),
+            field=models.CharField(default="", help_text="La tagline de l'application", max_length=255),
             preserve_default=False,
         ),
     ]

@@ -26,9 +26,7 @@ class Migration(migrations.Migration):
                 ("description", models.TextField(help_text="Une description du tag")),
                 (
                     "created",
-                    models.DateField(
-                        auto_now=True, help_text="La date & heure de la création du tag"
-                    ),
+                    models.DateField(auto_now=True, help_text="La date & heure de la création du tag"),
                 ),
             ],
         ),

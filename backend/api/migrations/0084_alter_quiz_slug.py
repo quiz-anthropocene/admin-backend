@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0083_quiz_slug'),
+        ("api", "0083_quiz_slug"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='quiz',
-            name='slug',
+            model_name="quiz",
+            name="slug",
             field=models.SlugField(help_text="Le bout d'url du quiz", unique=True),
         ),
     ]

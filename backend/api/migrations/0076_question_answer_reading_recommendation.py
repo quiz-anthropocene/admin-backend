@@ -13,8 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="question",
             name="answer_reading_recommendation",
-            field=models.TextField(
-                blank=True, help_text="Un livre pour aller plus loin"
-            ),
+            field=models.TextField(blank=True, help_text="Un livre pour aller plus loin"),
         ),
     ]

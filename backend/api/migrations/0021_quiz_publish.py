@@ -13,8 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="quiz",
             name="publish",
-            field=models.BooleanField(
-                default=False, help_text="Le quiz est prêt à être publié"
-            ),
+            field=models.BooleanField(default=False, help_text="Le quiz est prêt à être publié"),
         ),
     ]

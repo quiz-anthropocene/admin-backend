@@ -1,50 +1,30 @@
 from datetime import datetime
 
-from freezegun import freeze_time
-
-from django.utils import timezone
 from django.core import management
 from django.test import TestCase
+from django.utils import timezone
+from freezegun import freeze_time
 
-from core.models import Configuration
 from api.models import Question, Quiz
 from api.tests.factories import QuestionFactory, QuizFactory
-from stats.models import (
-    QuestionAnswerEvent,
-    QuestionFeedbackEvent,
-    QuizAnswerEvent,
-    DailyStat,
-)
+from core.models import Configuration
 from stats import constants
+from stats.models import DailyStat, QuestionAnswerEvent, QuestionFeedbackEvent, QuizAnswerEvent
 
 
 class CleanupAppStatsCommandTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        Configuration.objects.create(
-            daily_stat_last_aggregated=timezone.make_aware(datetime(2020, 5, 1))
-        )
+        Configuration.objects.create(daily_stat_last_aggregated=timezone.make_aware(datetime(2020, 5, 1)))
         cls.question_1 = QuestionFactory(answer_correct="a")
         cls.question_1.agg_stats.answer_count = 2
         cls.question_1.agg_stats.save()
-        QuestionAnswerEvent.objects.create(
-            question_id=cls.question_1.id, choice="a", source="question"
-        )
-        QuestionAnswerEvent.objects.create(
-            question_id=cls.question_1.id, choice="b", source="question"
-        )
-        QuestionAnswerEvent.objects.create(
-            question_id=cls.question_1.id, choice="c", source="quiz"
-        )
-        QuestionFeedbackEvent.objects.create(
-            question_id=cls.question_1.id, choice="like", source="question"
-        )
-        QuestionFeedbackEvent.objects.create(
-            question_id=cls.question_1.id, choice="dislike", source="question"
-        )
-        QuestionFeedbackEvent.objects.create(
-            question_id=cls.question_1.id, choice="like", source="quiz"
-        )
+        QuestionAnswerEvent.objects.create(question_id=cls.question_1.id, choice="a", source="question")
+        QuestionAnswerEvent.objects.create(question_id=cls.question_1.id, choice="b", source="question")
+        QuestionAnswerEvent.objects.create(question_id=cls.question_1.id, choice="c", source="quiz")
+        QuestionFeedbackEvent.objects.create(question_id=cls.question_1.id, choice="like", source="question")
+        QuestionFeedbackEvent.objects.create(question_id=cls.question_1.id, choice="dislike", source="question")
+        QuestionFeedbackEvent.objects.create(question_id=cls.question_1.id, choice="like", source="quiz")
         cls.quiz_1 = QuizFactory(name="quiz 1")
         QuizAnswerEvent.objects.create(quiz_id=cls.quiz_1.id, answer_success_count=1)
         DailyStat.objects.create(
@@ -55,27 +35,13 @@ class CleanupAppStatsCommandTest(TestCase):
             hour_split=constants.DEFAULT_DAILY_STAT_HOUR_SPLIT,
         )
         with freeze_time("2020-04-30 12:30:00"):
-            QuestionAnswerEvent.objects.create(
-                question_id=cls.question_1.id, choice="a", source="question"
-            )
-            QuestionAnswerEvent.objects.create(
-                question_id=cls.question_1.id, choice="b", source="question"
-            )
-            QuestionAnswerEvent.objects.create(
-                question_id=cls.question_1.id, choice="c", source="quiz"
-            )
-            QuestionFeedbackEvent.objects.create(
-                question_id=cls.question_1.id, choice="like", source="question"
-            )
-            QuestionFeedbackEvent.objects.create(
-                question_id=cls.question_1.id, choice="dislike", source="question"
-            )
-            QuestionFeedbackEvent.objects.create(
-                question_id=cls.question_1.id, choice="like", source="quiz"
-            )
-            QuizAnswerEvent.objects.create(
-                quiz_id=cls.quiz_1.id, answer_success_count=1
-            )
+            QuestionAnswerEvent.objects.create(question_id=cls.question_1.id, choice="a", source="question")
+            QuestionAnswerEvent.objects.create(question_id=cls.question_1.id, choice="b", source="question")
+            QuestionAnswerEvent.objects.create(question_id=cls.question_1.id, choice="c", source="quiz")
+            QuestionFeedbackEvent.objects.create(question_id=cls.question_1.id, choice="like", source="question")
+            QuestionFeedbackEvent.objects.create(question_id=cls.question_1.id, choice="dislike", source="question")
+            QuestionFeedbackEvent.objects.create(question_id=cls.question_1.id, choice="like", source="quiz")
+            QuizAnswerEvent.objects.create(quiz_id=cls.quiz_1.id, answer_success_count=1)
 
     def test_question_updates(self):
         self.assertEqual(QuestionAnswerEvent.objects.count(), 6)
@@ -108,35 +74,25 @@ class CleanupAppStatsCommandTest(TestCase):
         self.assertEqual(daily_stat_today.question_answer_from_quiz_count, 1)
         self.assertEqual(daily_stat_today.quiz_answer_count, 1)
         self.assertEqual(
-            daily_stat_today.hour_split[str(datetime.utcnow().hour)][
-                "question_answer_count"
-            ],
+            daily_stat_today.hour_split[str(datetime.utcnow().hour)]["question_answer_count"],
             3,
         )
         self.assertEqual(
-            daily_stat_today.hour_split[str(datetime.utcnow().hour)][
-                "question_answer_from_quiz_count"
-            ],
+            daily_stat_today.hour_split[str(datetime.utcnow().hour)]["question_answer_from_quiz_count"],
             1,
         )
         self.assertEqual(daily_stat_today.question_feedback_count, 3)
         self.assertEqual(daily_stat_today.question_feedback_from_quiz_count, 1)
         self.assertEqual(
-            daily_stat_today.hour_split[str(datetime.utcnow().hour)][
-                "question_feedback_count"
-            ],
+            daily_stat_today.hour_split[str(datetime.utcnow().hour)]["question_feedback_count"],
             3,
         )
         self.assertEqual(
-            daily_stat_today.hour_split[str(datetime.utcnow().hour)][
-                "question_feedback_from_quiz_count"
-            ],
+            daily_stat_today.hour_split[str(datetime.utcnow().hour)]["question_feedback_from_quiz_count"],
             1,
         )
         self.assertEqual(
-            daily_stat_today.hour_split[str(datetime.utcnow().hour)][
-                "quiz_answer_count"
-            ],
+            daily_stat_today.hour_split[str(datetime.utcnow().hour)]["quiz_answer_count"],
             1,
         )
 
