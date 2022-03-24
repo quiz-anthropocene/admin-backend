@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "<4"
+django = "4.0.3"
 asgiref = "*"
 certifi = "*"
 dj-database-url = "*"
@@ -33,8 +33,11 @@ whitenoise = "*"
 [dev-packages]
 black = "*"
 coverage = "*"
+django-debug-toolbar = "*"
 factory-boy = "*"
 flake8 = "*"
+isort = "*"
+pre-commit = "*"
 
 [requires]
 python_version = "3.9"

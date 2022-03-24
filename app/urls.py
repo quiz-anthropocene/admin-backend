@@ -1,8 +1,8 @@
-from django.urls import path, include
-
-from app import views
+from django.conf import settings
+from django.urls import include, path
 
 from api.admin import admin_site
+from app import views
 
 
 urlpatterns = [
@@ -22,3 +22,6 @@ urlpatterns = [
         views.action_export_contributions_to_notion,
     ),
 ]
+
+if settings.DEBUG:  # and "debug_toolbar" in settings.INSTALLED_APPS:
+    urlpatterns += [path("__debug__/", include("debug_toolbar.urls"))]
