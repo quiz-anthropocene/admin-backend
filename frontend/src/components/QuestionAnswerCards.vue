@@ -248,7 +248,7 @@ export default {
         document.getElementById('scroll-to-answer').scrollIntoView({ behavior: 'smooth' });
       }, 25);
       // stats
-      fetch(`${process.env.VUE_APP_STATS_ENDPOINT}/question-answer-event`, {
+      fetch(`${process.env.VUE_APP_STATS_ENDPOINT}/question-answer-event/`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',

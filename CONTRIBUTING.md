@@ -157,6 +157,8 @@ pipenv run python manage.py runserver
 
 Le Backend sera accessible à l'url `http://localhost:8000`
 
+La doc de l'API est visible à l'url `http://localhost:8000/api/docs/`
+
 ##### Lancer le Frontend
 
 ```

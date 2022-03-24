@@ -34,3 +34,8 @@ Le code et les questions sont en open-source : venez nous aider !
 
 - Lire [CONTRIBUTING.md](CONTRIBUTING.md)
 - Voir les [Issues](https://github.com/raphodn/know-your-planet/issues) (ainsi que le [board](https://github.com/raphodn/know-your-planet/projects/1) Github (pas à jour))
+
+
+## Liens
+
+https://quizanthropocene.fr
