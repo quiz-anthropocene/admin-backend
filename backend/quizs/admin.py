@@ -232,7 +232,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         show chart of answers per day
         https://dev.to/danihodovic/integrating-chart-js-with-django-admin-1kjb
 
-        Corresponding template in templates/admin/api/quiz/change_list.html
+        Corresponding template in quizs/templates/admin/quizs/quiz/change_list.html
         """
         # custom form
         current_quiz_id = int(request.POST.get("quiz_id", Quiz.objects.first().id))

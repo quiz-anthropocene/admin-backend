@@ -157,7 +157,7 @@ class MyAdminSite(admin.AdminSite):
 
     def index(self, request, extra_context=None):
         """
-        Corresponding template in templates/admin/api/index_with_export.html
+        Corresponding template in core/templates/admin/index_with_export.html
         """
         configuration = Configuration.get_solo()
         export_message = ""
