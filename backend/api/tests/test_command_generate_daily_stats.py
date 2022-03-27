@@ -5,9 +5,10 @@ from django.test import TestCase
 from django.utils import timezone
 from freezegun import freeze_time
 
-from api.models import Question, Quiz
+from api.models import Question
 from api.tests.factories import QuestionFactory, QuizFactory
 from core.models import Configuration
+from quizs.models import Quiz
 from stats import constants
 from stats.models import DailyStat, QuestionAnswerEvent, QuestionFeedbackEvent, QuizAnswerEvent
 

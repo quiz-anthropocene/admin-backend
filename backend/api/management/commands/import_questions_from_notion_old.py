@@ -10,10 +10,12 @@ from django.db.models.fields import URLField
 from django.utils import timezone
 
 from api import constants, utilities, utilities_notion
-from api.models import Question, Quiz, Tag
+from api.models import Question
 from categories.models import Category
 from contributions.models import Contribution
 from core.models import Configuration
+from quizs.models import Quiz
+from tags.models import Tag
 
 
 SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS = 15
