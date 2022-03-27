@@ -3,17 +3,17 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, Spec
 from rest_framework import routers
 
 from api import views
+from api.categories.views import CategoryViewSet
 from api.contributions.views import ContributionViewSet
 from api.glossary.views import GlossaryViewSet
+from api.tags.views import TagViewSet
 from api.views import (
-    CategoryViewSet,
     QuestionDifficultyViewSet,
     QuestionLanguageViewSet,
     QuestionTypeViewSet,
     QuestionValidationStatusViewSet,
     QuestionViewSet,
     QuizViewSet,
-    TagViewSet,
 )
 
 

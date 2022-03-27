@@ -5,73 +5,7 @@ from django.db.models import Avg, Count
 from django.utils.text import slugify
 
 from api import constants, utilities
-
-
-class Category(models.Model):
-    name = models.CharField(max_length=50, blank=False, help_text="Le nom de la catégorie")
-    name_long = models.CharField(max_length=150, blank=False, help_text="Le nom allongé de la catégorie")
-    description = RichTextField(blank=True, help_text="Une description de la catégorie")
-    created = models.DateField(auto_now_add=True, help_text="La date de création de la catégorie")
-
-    class Meta:
-        verbose_name = "Category"
-        verbose_name_plural = "Categories"
-        ordering = ["pk"]
-        constraints = [models.UniqueConstraint(fields=["name"], name="unique category name")]
-
-    def __str__(self):
-        return f"{self.name}"
-
-    @property
-    def question_count(self) -> int:
-        return self.questions.validated().count()
-
-    # Admin
-    question_count.fget.short_description = "Questions (validées)"
-
-
-class TagManager(models.Manager):
-    def get_ids_from_name_list(self, tag_name_list: list):
-        tag_ids = []
-        # Tag.objects.filter(name__in=tags_split) # ignores new tags
-        for tag_name in tag_name_list:
-            # tag, created = Tag.objects.get_or_create(name=tag_string)
-            try:
-                tag = Tag.objects.get(name=tag_name.strip())
-            except Exception as e:
-                raise type(e)(f"{tag_name}")
-            tag_ids.append(tag.id)
-        tag_ids.sort()
-        return tag_ids
-
-
-class Tag(models.Model):
-    name = models.CharField(max_length=50, blank=False, help_text="Le nom du tag")
-    description = RichTextField(blank=True, help_text="Une description du tag")
-    created = models.DateField(auto_now_add=True, help_text="La date de création du tag")
-
-    objects = TagManager()
-
-    class Meta:
-        verbose_name = "Tag"
-        verbose_name_plural = "Tags"
-        ordering = ["pk"]
-        constraints = [models.UniqueConstraint(fields=["name"], name="unique tag name")]
-
-    def __str__(self):
-        return f"{self.name}"
-
-    @property
-    def question_count(self) -> int:
-        return self.questions.validated().count()
-
-    @property
-    def quiz_count(self) -> int:
-        return self.quizzes.published().count()
-
-    # Admin
-    question_count.fget.short_description = "Questions (validées)"
-    quiz_count.fget.short_description = "Quizs (publiés)"
+from tags.models import Tag
 
 
 class QuestionQuerySet(models.QuerySet):
@@ -108,7 +42,7 @@ class Question(models.Model):
         help_text="Le type de question (QCM, V/F, ...)",
     )
     category = models.ForeignKey(
-        Category,
+        "categories.Category",
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
@@ -406,7 +340,7 @@ class Quiz(models.Model):
     tags = models.ManyToManyField(
         Tag,
         blank=True,
-        related_name="quizzes",
+        related_name="quizs",
         help_text="Un ou plusieurs tags rattaché au quiz",
     )
     difficulty_average = models.FloatField(default=0, help_text="La difficulté moyenne des questions")  # readonly

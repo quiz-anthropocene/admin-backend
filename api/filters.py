@@ -1,7 +1,8 @@
 import django_filters
 
 from api import constants
-from api.models import Category, Tag
+from api.models import Tag
+from categories.models import Category
 
 
 class QuestionFilter(django_filters.FilterSet):

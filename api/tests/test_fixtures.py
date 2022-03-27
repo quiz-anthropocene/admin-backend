@@ -1,7 +1,8 @@
 from django.core import management
 from django.test import TestCase
 
-from api.models import Category, Question, Quiz, QuizRelationship, Tag
+from api.models import Question, Quiz, QuizRelationship, Tag
+from categories.models import Category
 from core.models import Configuration
 from glossary.models import GlossaryItem
 

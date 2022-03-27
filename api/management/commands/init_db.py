@@ -5,7 +5,8 @@ from django.core.management import BaseCommand, call_command
 from django.db import connection
 
 from api import utilities
-from api.models import Category, Question, Quiz, QuizQuestion, QuizRelationship, Tag
+from api.models import Question, Quiz, QuizQuestion, QuizRelationship, Tag
+from categories.models import Category
 from core.models import Configuration
 from glossary.models import GlossaryItem
 
@@ -31,6 +32,7 @@ class Command(BaseCommand):
     help = """Initialize database with the files in the /data folder"""
 
     MODELS_LIST = [
+        # (Configuration, CONFIGURATION_FILE_PATH),
         (Category, CATEGORIES_FILE_PATH),
         (Tag, TAGS_FILE_PATH),
         (Question, QUESTIONS_FILE_PATH),
