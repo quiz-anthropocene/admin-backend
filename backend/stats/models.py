@@ -86,6 +86,13 @@ class QuestionFeedbackEvent(models.Model):
     objects = QuestionFeedbackEventQuerySet.as_manager()
 
 
+class QuizAggStat(models.Model):
+    quiz = models.OneToOneField(Quiz, on_delete=models.CASCADE, primary_key=True, related_name="agg_stats")
+    answer_count = models.PositiveIntegerField(default=0, help_text="Le nombre de réponses")
+    like_count = models.PositiveIntegerField(default=0, help_text="Le nombre de likes")
+    dislike_count = models.PositiveIntegerField(default=0, help_text="Le nombre de dislikes")
+
+
 class QuizAnswerEventQuerySet(models.QuerySet):
     def for_quiz(self, quiz_id):
         return self.filter(quiz=quiz_id)

@@ -250,7 +250,16 @@ def quiz_validate_fields(sender, instance, **kwargs):
         raise ValidationError({"id": f"Valeur : 'empty'. " f"Quiz: {instance}"})
 
 
+def quiz_create_agg_stat_instance(sender, instance, created, **kwargs):
+    if created:
+        if not hasattr(instance, "agg_stats"):
+            from stats.models import QuizAggStat
+
+            QuizAggStat.objects.create(quiz=instance)
+
+
 models.signals.pre_save.connect(quiz_validate_fields, sender=Quiz)
+models.signals.post_save.connect(quiz_create_agg_stat_instance, sender=Quiz)
 
 
 class QuizQuestion(models.Model):

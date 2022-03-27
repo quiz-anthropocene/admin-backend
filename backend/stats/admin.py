@@ -13,6 +13,7 @@ from stats.models import (
     QuestionAggStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
+    QuizAggStat,
     QuizAnswerEvent,
     QuizFeedbackEvent,
 )
@@ -111,6 +112,30 @@ class QuestionFeedbackEventAdmin(ExportMixin, admin.ModelAdmin):
         "export_as_json",
         "export_as_yaml",
         "export_all_questionfeedbackevent_as_yaml",
+    ]
+
+    def get_readonly_fields(self, request, obj=None):
+        return [f.name for f in obj._meta.fields]
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
+class QuizAggStatAdmin(ExportMixin, admin.ModelAdmin):
+    list_display = (
+        "quiz_id",
+        "answer_count",
+        "like_count",
+        "dislike_count",
+    )
+    actions = [
+        "export_as_csv",
     ]
 
     def get_readonly_fields(self, request, obj=None):
@@ -274,6 +299,7 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
 admin_site.register(QuestionAggStat, QuestionAggStatAdmin)
 admin_site.register(QuestionAnswerEvent, QuestionAnswerEventAdmin)
 admin_site.register(QuestionFeedbackEvent, QuestionFeedbackEventAdmin)
+admin_site.register(QuizAggStat, QuizAggStatAdmin)
 admin_site.register(QuizAnswerEvent, QuizAnswerEventAdmin)
 admin_site.register(QuizFeedbackEvent, QuizFeedbackEventAdmin)
 admin_site.register(DailyStat, DailyStatAdmin)
