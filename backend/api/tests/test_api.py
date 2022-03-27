@@ -3,8 +3,8 @@ from django.urls import reverse
 
 from api import constants
 from api.models import QuizQuestion
-from api.tests.factories import CategoryFactory, QuestionFactory, QuizFactory, TagFactory
-from glossary.models import GlossaryItem
+from api.tests.factories import QuestionFactory, QuizFactory, TagFactory
+from categories.factories import CategoryFactory
 
 
 class ApiTest(TestCase):
@@ -233,18 +233,3 @@ class ApiTest(TestCase):
     #     self.assertEqual(len(response.data["results"]), 1)  # 1 quiz not published
     #     self.assertEqual(len(response.data["results"][0]["questions"]), 2)
     #     self.assertEqual(response.data["results"][0]["questions"][0]["id"], self.question_2.id)
-
-    def test_glossary(self):
-        GlossaryItem.objects.create(name="Anthropocène")
-        response = self.client.get(reverse("api:glossary-list"))
-        self.assertEqual(response.status_code, 200)
-        self.assertIsInstance(response.data["results"], list)
-        self.assertEqual(len(response.data["results"]), 1)
-
-    def test_contribution(self):
-        response = self.client.post(
-            reverse("api:contribution-list"),
-            data={"text": "du texte", "description": "une description", "type": constants.CONTRIBUTION_TYPE_LIST[0]},
-        )
-        self.assertEqual(response.status_code, 201)
-        self.assertIsInstance(response.data, dict)
