@@ -61,13 +61,13 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "core",
-    "api",
     "categories",
     "tags",
     "questions",
     "quizs",
     "contributions",
     "glossary",
+    "api",
     "stats",
 ]
 
