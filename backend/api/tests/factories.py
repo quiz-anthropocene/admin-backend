@@ -2,8 +2,10 @@ import factory
 from django.utils.text import slugify
 
 from api import constants
-from api.models import Question, Quiz, Tag  # QuestionAnswerEvent,
+from api.models import Question  # QuestionAnswerEvent,
 from categories.factories import CategoryFactory
+from quizs.models import Quiz
+from tags.models import Tag
 
 
 class TagFactory(factory.django.DjangoModelFactory):

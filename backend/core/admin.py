@@ -8,10 +8,12 @@ from django.http import HttpResponse
 from solo.admin import SingletonModelAdmin
 
 from api import utilities
-from api.models import Question, Quiz, Tag
+from api.models import Question
 from categories.models import Category
 from core.models import Configuration
+from quizs.models import Quiz
 from stats.models import QuestionAnswerEvent, QuestionFeedbackEvent
+from tags.models import Tag
 
 
 class ExportMixin:

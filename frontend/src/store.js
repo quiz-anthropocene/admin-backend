@@ -13,7 +13,7 @@ import difficultyLevelsYamlData from '../../data/difficulty-levels.yaml';
 import categoriesYamlData from '../../data/categories.yaml';
 import tagsYamlData from '../../data/tags.yaml';
 import questionsYamlData from '../../data/questions.yaml';
-import quizzesYamlData from '../../data/quizzes.yaml';
+import quizsYamlData from '../../data/quizs.yaml';
 import quizQuestionsYamlData from '../../data/quiz-questions.yaml';
 import quizRelationshipsYamlData from '../../data/quiz-relationships.yaml';
 import quizStatsYamlData from '../../data/quiz-stats.yaml';
@@ -43,11 +43,11 @@ const store = new Vuex.Store({
       sort: constants.QUIZ_SORT_DEFAULT,
     },
     questionsPendingValidation: [],
-    quizzes: [],
-    quizzesPublished: [],
-    quizzesDisplayed: [],
-    quizzesToSpotlight: 5,
-    quizzesSpotlighted: [],
+    quizs: [],
+    quizsPublished: [],
+    quizsDisplayed: [],
+    quizsToSpotlight: 5,
+    quizsSpotlighted: [],
     quizFilters: {
       tag: null,
       author: null,
@@ -118,15 +118,15 @@ const store = new Vuex.Store({
       commit('SET_QUESTION_PENDING_VALIDATION_LIST', { list: questionsPendingValidation });
     },
     /**
-     * Get quizzes
+     * Get quizs
      * Pre-processing ?
      * - keep only published quizs
      * - enrich with questions, tags
      */
     GET_QUIZ_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
-      const quizzes = quizzesYamlData;
+      const quizs = quizsYamlData;
       // quiz: get question and tag objects
-      quizzes.map((q) => {
+      quizs.map((q) => {
         // get quiz questions (in the right order)
         const quizQuestionsList = quizQuestionsYamlData.filter((qq) => qq.quiz === q.id);
         quizQuestionsList.sort((a, b) => a.order - b.order);
@@ -139,18 +139,18 @@ const store = new Vuex.Store({
         Object.assign(q, { questions: quizQuestions }, { tags: quizTags });
         return q;
       });
-      const quizzesPublished = quizzes.filter((q) => q.language === state.locale.value).filter((el) => el.publish === true);
-      commit('SET_QUIZ_LIST', { list: quizzes });
-      commit('SET_QUIZ_PUBLISHED_LIST', { list: quizzesPublished });
-      const quizzesSpotlighted = quizzesPublished
+      const quizsPublished = quizs.filter((q) => q.language === state.locale.value).filter((el) => el.publish === true);
+      commit('SET_QUIZ_LIST', { list: quizs });
+      commit('SET_QUIZ_PUBLISHED_LIST', { list: quizsPublished });
+      const quizsSpotlighted = quizsPublished
         .filter((q) => q.spotlight) // only display spotlighted quizs
         .sort((a, b) => b.id - a.id) // biggest/latest id first
-        .slice(0, state.quizzesToSpotlight);
-      commit('SET_QUIZ_SPOTLIGHTED_LIST', { list: quizzesSpotlighted });
+        .slice(0, state.quizsToSpotlight);
+      commit('SET_QUIZ_SPOTLIGHTED_LIST', { list: quizsSpotlighted });
 
       // update tags: add quiz_count
       state.tags.forEach((t) => {
-        t.quiz_count = quizzesPublished.filter((q) => q.tags.map((qt) => qt.id).includes(t.id)).length;
+        t.quiz_count = quizsPublished.filter((q) => q.tags.map((qt) => qt.id).includes(t.id)).length;
       });
     },
     /**
@@ -241,11 +241,11 @@ const store = new Vuex.Store({
     },
     UPDATE_QUIZ_FILTERS: ({ commit, state, getters }, filterObject) => {
       const currentQuizFilters = filterObject || state.quizFilters;
-      const quizzesDisplayed = getters.getQuizzesPublishedByFilter(currentQuizFilters);
+      const quizsDisplayed = getters.getQuizsPublishedByFilter(currentQuizFilters);
       commit('SET_QUESTION_FILTERS', { object: currentQuizFilters });
       // We are not using the quizFilterVairable anymore
       // commit('SET_QUIZ_FILTERS', { object: currentQuizFilters });
-      commit('SET_QUIZZES_DISPLAYED_LIST', { list: quizzesDisplayed });
+      commit('SET_QUIZS_DISPLAYED_LIST', { list: quizsDisplayed });
     },
   },
   mutations: {
@@ -272,13 +272,13 @@ const store = new Vuex.Store({
       state.questionsPendingValidation = list;
     },
     SET_QUIZ_LIST: (state, { list }) => {
-      state.quizzes = list;
+      state.quizs = list;
     },
     SET_QUIZ_PUBLISHED_LIST: (state, { list }) => {
-      state.quizzesPublished = list;
+      state.quizsPublished = list;
     },
     SET_QUIZ_SPOTLIGHTED_LIST: (state, { list }) => {
-      state.quizzesSpotlighted = list;
+      state.quizsSpotlighted = list;
     },
     SET_QUIZ_RELATIONSHIP_LIST: (state, { list }) => {
       state.quizRelationships = list;
@@ -319,8 +319,8 @@ const store = new Vuex.Store({
     SET_QUESTIONS_DISPLAYED_LIST: (state, { list }) => {
       state.questionsDisplayed = list;
     },
-    SET_QUIZZES_DISPLAYED_LIST: (state, { list }) => {
-      state.quizzesDisplayed = list;
+    SET_QUIZS_DISPLAYED_LIST: (state, { list }) => {
+      state.quizsDisplayed = list;
     },
     SET_STATS_DICT: (state, { dict }) => {
       state.stats = dict;
@@ -347,10 +347,10 @@ const store = new Vuex.Store({
       return state.questionsDisplayed[currentQuestionIndex + 1] ? state.questionsDisplayed[currentQuestionIndex + 1] : state.questionsDisplayed[0];
     },
     // quiz
-    getQuizById: (state) => (quizId) => state.quizzes.find((q) => (q.id === quizId)),
-    getQuizBySlug: (state) => (quizId) => state.quizzes.find((q) => (q.slug === quizId)),
-    getQuizzesByIdList: (state) => (quizIdList) => state.quizzes.filter((q) => quizIdList.includes(q.id)),
-    getQuizzesPublishedByFilter: (state) => (filter) => state.quizzesPublished.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
+    getQuizById: (state) => (quizId) => state.quizs.find((q) => (q.id === quizId)),
+    getQuizBySlug: (state) => (quizId) => state.quizs.find((q) => (q.slug === quizId)),
+    getQuizsByIdList: (state) => (quizIdList) => state.quizs.filter((q) => quizIdList.includes(q.id)),
+    getQuizsPublishedByFilter: (state) => (filter) => state.quizsPublished.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
       .filter((q) => (filter.author ? (q.author === filter.author) : true))
       .sort((a, b) => ((filter.sort === 'date_old') ? (a.created.localeCompare(b.created)) : (b.id - a.id))),
     getQuizRelationshipsById: (state) => (quizId) => state.quizRelationships.filter((qr) => (qr.from_quiz === quizId) || (qr.to_quiz === quizId)),

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from api.categories.serializers import CategorySerializer, CategoryStringSerializer
-from api.models import Question, Quiz, QuizQuestion
+from api.models import Question
 from api.tags.serializers import TagSerializer, TagStringSerializer
 
 
@@ -80,63 +80,3 @@ class QuestionFullObjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
         fields = QUESTION_FIELDS
-
-
-"""
-QUIZ QUESTION
-"""
-
-
-class QuizQuestionSerializer(serializers.ModelSerializer):
-    # override QuizQuestion id with question_id
-    id = serializers.ReadOnlyField(source="question.id")
-
-    class Meta:
-        model = QuizQuestion
-        fields = ["id", "order"]
-
-
-"""
-QUIZ
-"""
-
-QUIZ_FIELDS = [
-    "id",
-    "name",
-    "introduction",
-    "conclusion",
-    "language",
-    "author",
-    "image_background_url",
-    "questions",
-    "tags",
-    "question_count",
-    "questions_categories_list",
-    "questions_tags_list",
-    "questions_authors_list",
-    "difficulty_average",
-    "created",
-]
-
-
-class QuizSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Quiz
-        fields = QUIZ_FIELDS
-
-
-class QuizWithQuestionOrderSerializer(serializers.ModelSerializer):
-    questions = QuizQuestionSerializer(source="quizquestion_set", many=True)
-
-    class Meta:
-        model = Quiz
-        fields = QUIZ_FIELDS
-
-
-class QuizFullSerializer(serializers.ModelSerializer):
-    questions = QuestionSerializer(many=True)
-    tags = TagSerializer(many=True)
-
-    class Meta:
-        model = Quiz
-        fields = QUIZ_FIELDS

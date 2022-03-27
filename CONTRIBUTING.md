@@ -264,7 +264,7 @@ qz1.to_quizs.all()
 
 q = Question.objects.first()
 
-q.quizzes.all()
+q.quizs.all()
 q1.quizquestion_set.all()
 ```
 

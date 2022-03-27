@@ -155,8 +155,8 @@ export default {
     questionsDisplayedCount() {
       return this.$store.state.questionsDisplayed.length;
     },
-    quizzes() {
-      return this.$store.state.quizzes;
+    quizs() {
+      return this.$store.state.quizs;
     },
   },
 
@@ -165,8 +165,8 @@ export default {
     objectType (newType, oldType) {
       this.updateQuestionFilters();
     },
-    quizzes() {
-      // We need to updateFilter because sometimes the quizzes
+    quizs() {
+      // We need to updateFilter because sometimes the quizs
       // or questions doen't exist in mounted
       this.updateQuestionFilters();
     },

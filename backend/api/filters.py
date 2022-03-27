@@ -24,13 +24,3 @@ class QuestionFilter(django_filters.FilterSet):
     )
     author = django_filters.CharFilter(label="Auteur de la question")
     # TODO: QuestionFullStringSerializer, random
-
-
-class QuizFilter(django_filters.FilterSet):
-    language = django_filters.MultipleChoiceFilter(label="Langue(s) du quiz", choices=constants.LANGUAGE_CHOICES)
-    tags = django_filters.ModelMultipleChoiceFilter(
-        label="Tag(s)",
-        queryset=Tag.objects.all(),
-    )
-    author = django_filters.CharFilter(label="Auteur du quiz")
-    # TODO: QuizFullSerializer, QuizWithQuestionOrderSerializer

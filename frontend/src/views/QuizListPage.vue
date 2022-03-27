@@ -2,14 +2,14 @@
   <section>
     <h2 class="text-align-left">{{ $t('messages.allQuizs') }}</h2>
 
-    <QuestionFilter objectType="quiz" :counter="quizzesDisplayed.length" />
+    <QuestionFilter objectType="quiz" :counter="quizsDisplayed.length" />
 
-    <section v-if="quizzesDisplayed && quizzesDisplayed.length === 0" class="alert alert-warning" role="alert">
+    <section v-if="quizsDisplayed && quizsDisplayed.length === 0" class="alert alert-warning" role="alert">
       🙁{{ $t('messages.noQuizFound') }}
     </section>
 
-    <div v-if="quizzesDisplayed && quizzesDisplayed.length > 0" id="quiz-list" class="row">
-      <div class="col-sm-4" v-for="quiz in quizzesDisplayed" :key="quiz.id">
+    <div v-if="quizsDisplayed && quizsDisplayed.length > 0" id="quiz-list" class="row">
+      <div class="col-sm-4" v-for="quiz in quizsDisplayed" :key="quiz.id">
         <QuizCard :quiz="quiz" />
       </div>
         <!-- <div class="col-sm">
@@ -41,13 +41,13 @@ export default {
 
   data() {
     return {
-      // quizzesDisplayed: null,
+      // quizsDisplayed: null,
     };
   },
 
   computed: {
-    quizzesDisplayed() {
-      return this.$store.state.quizzesDisplayed;
+    quizsDisplayed() {
+      return this.$store.state.quizsDisplayed;
     },
   },
 
