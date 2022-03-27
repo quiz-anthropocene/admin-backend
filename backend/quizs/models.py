@@ -5,7 +5,7 @@ from django.db.models import Avg, Count
 from django.utils.text import slugify
 
 from api import constants
-from api.models import Question
+from questions.models import Question
 from tags.models import Tag
 
 

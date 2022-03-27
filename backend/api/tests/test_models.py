@@ -2,8 +2,9 @@ from django.core.exceptions import ValidationError
 from django.test import TestCase
 
 from api import constants
-from api.models import Question
-from api.tests.factories import QuestionFactory, QuizFactory
+from questions.factories import QuestionFactory
+from questions.models import Question
+from quizs.factories import QuizFactory
 from quizs.models import Quiz, QuizQuestion, QuizRelationship
 from stats.models import (
     DailyStat,

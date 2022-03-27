@@ -1,10 +1,10 @@
 from django.core import management
 from django.test import TestCase
 
-from api.models import Question
 from categories.models import Category
 from core.models import Configuration
 from glossary.models import GlossaryItem
+from questions.models import Question
 from quizs.models import Quiz, QuizRelationship
 from tags.models import Tag
 

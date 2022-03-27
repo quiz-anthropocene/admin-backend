@@ -3,8 +3,8 @@ import time
 from django.core import management
 from django.test import TestCase
 
-from api.models import Question
-from api.tests.factories import QuestionFactory
+from questions.factories import QuestionFactory
+from questions.models import Question
 from stats.models import QuestionAnswerEvent, QuestionFeedbackEvent  # QuestionAggStat,
 
 

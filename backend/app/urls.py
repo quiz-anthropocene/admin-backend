@@ -1,8 +1,8 @@
 from django.conf import settings
 from django.urls import include, path
 
-from api.admin import admin_site
 from app import views
+from core.admin import admin_site
 
 
 urlpatterns = [

@@ -7,7 +7,7 @@ from django.conf import settings
 from django.db.models.fields import URLField
 from notion.client import NotionClient
 
-from api.models import Question
+from questions.models import Question
 
 
 TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%S"  # "2021-05-05T13:02:00.000Z"  # milliseconds not managed

@@ -1,18 +1,8 @@
 import factory
-from django.utils.text import slugify
 
 from api import constants
-from api.models import Question  # QuestionAnswerEvent,
 from categories.factories import CategoryFactory
-from quizs.models import Quiz
-from tags.models import Tag
-
-
-class TagFactory(factory.django.DjangoModelFactory):
-    class Meta:
-        model = Tag
-
-    name = "France"
+from questions.models import Question
 
 
 class QuestionFactory(factory.django.DjangoModelFactory):
@@ -28,12 +18,3 @@ class QuestionFactory(factory.django.DjangoModelFactory):
     answer_option_b = "La réponse B"
     answer_correct = "a"  # constants.QUESTION_ANSWER_CHOICE_LIST[0]
     validation_status = constants.QUESTION_VALIDATION_STATUS_OK
-
-
-class QuizFactory(factory.django.DjangoModelFactory):
-    class Meta:
-        model = Quiz
-
-    name = "le quiz"
-    slug = factory.LazyAttribute(lambda o: slugify(o.name))
-    publish = False

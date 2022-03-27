@@ -3,7 +3,6 @@ from io import StringIO
 
 from django.conf import settings
 from django.contrib import admin
-from django.contrib.auth.models import Group, Permission, User
 from django.core import management
 from django.utils.html import mark_safe
 from import_export import fields, resources
@@ -11,10 +10,10 @@ from import_export.admin import ImportMixin
 from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
 
 from api import constants as api_constants, utilities_notion
-from api.models import Question
 from categories.models import Category
 from core.admin import ExportMixin, admin_site
 from core.models import Configuration
+from questions.models import Question
 from quizs.models import Quiz
 from tags.models import Tag
 
@@ -236,7 +235,3 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
 
 
 admin_site.register(Question, QuestionAdmin)
-
-admin_site.register(User)
-admin_site.register(Permission)
-admin_site.register(Group)

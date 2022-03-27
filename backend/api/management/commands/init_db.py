@@ -5,10 +5,10 @@ from django.core.management import BaseCommand, call_command
 from django.db import connection
 
 from api import utilities
-from api.models import Question
 from categories.models import Category
 from core.models import Configuration
 from glossary.models import GlossaryItem
+from questions.models import Question
 from quizs.models import Quiz, QuizQuestion, QuizRelationship
 from tags.models import Tag
 

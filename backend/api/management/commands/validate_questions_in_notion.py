@@ -3,8 +3,9 @@ from django.core.exceptions import ValidationError
 from django.core.management import BaseCommand
 
 from api import utilities_notion
-from api.models import Question, Tag
 from categories.models import Category
+from questions.models import Question
+from tags.models import Tag
 
 
 class Command(BaseCommand):

@@ -3,7 +3,7 @@ import time
 from django.core import management
 from django.test import TestCase
 
-from api.tests.factories import QuizFactory
+from quizs.factories import QuizFactory
 from stats.models import QuizAnswerEvent, QuizFeedbackEvent
 
 
