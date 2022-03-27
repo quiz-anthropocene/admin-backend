@@ -1,6 +1,6 @@
 from django.urls import reverse
 
-from api import constants
+from core import constants
 
 
 def test_contribution(self):

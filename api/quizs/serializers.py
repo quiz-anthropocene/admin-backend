@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api.serializers import QuestionSerializer
+from api.questions.serializers import QuestionSerializer
 from api.tags.serializers import TagSerializer
 from quizs.models import Quiz, QuizQuestion
 

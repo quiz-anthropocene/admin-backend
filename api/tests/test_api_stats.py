@@ -1,7 +1,8 @@
 from django.test import TestCase
 from django.urls import reverse
 
-from api.tests.factories import QuestionFactory, QuizFactory
+from questions.factories import QuestionFactory
+from quizs.factories import QuizFactory
 
 
 class ApiStatTest(TestCase):

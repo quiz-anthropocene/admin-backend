@@ -6,15 +6,15 @@ from api import views
 from api.categories.views import CategoryViewSet
 from api.contributions.views import ContributionViewSet
 from api.glossary.views import GlossaryViewSet
-from api.quizs.views import QuizViewSet
-from api.tags.views import TagViewSet
-from api.views import (
+from api.questions.views import (
     QuestionDifficultyViewSet,
     QuestionLanguageViewSet,
     QuestionTypeViewSet,
     QuestionValidationStatusViewSet,
     QuestionViewSet,
 )
+from api.quizs.views import QuizViewSet
+from api.tags.views import TagViewSet
 
 
 app_name = "api"

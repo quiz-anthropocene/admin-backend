@@ -1,0 +1,104 @@
+<!-- https://github.com/django/django/blob/master/django/contrib/admin/templates/admin/index.html -->
+{% extends "admin/index.html" %}
+
+{% load static %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin/extra.css' %}">
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // add click listener
+    document.getElementById("action-button").addEventListener("click", function() {
+      document.getElementById("spinner").style.display = "block";
+      document.getElementById("result-section").style.display = "none";
+    });
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+<!-- {{ block.super }} -->
+<div id="content-main">
+  {% include "admin/app_list.html" with app_list=app_list show_changelinks=True %}
+
+  <hr style="margin-top:20px;margin-bottom:20px" />
+
+  <h1>Stats d'usage ?</h1>
+  <p>Voir la page <a href="{% url 'admin:stats_dailystat_changelist' %}">Daily Stats</a>.</p>
+
+  <hr style="margin-top:20px;margin-bottom:20px" />
+
+  <h1>1. Importer la donnée depuis Notion</h1>
+  <p>Voir la page <a href="{% url 'admin:questions_question_changelist' %}">Questions</a>.</p>
+
+  <br />
+
+  <h1>2. Ajouter et modifier les Quizs ?</h1>
+  <p>Voir la page <a href="{% url 'admin:quizs_quiz_changelist' %}">Quizs</a>.</p>
+
+  <br />
+
+  <h1>3. Exporter la donnée vers Github</h1>
+  <section class="action-text">
+    <p>
+      Une fois les questions importées depuis Notion, et les quizs et/ou tags créés, il est temps de mettre à jour l'application.
+    </p>
+    <p>
+      Ce script va exporter vers Github toutes les questions, tous les quizs et tous les tags au format YAML.
+      Si tout va bien, l'application devrait être mise à jour dans quelques minutes.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Bouton d'export</th>
+          <th>Dernière date de lancement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <form method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="run_export_data_to_github_script" value="1" />
+            <td>
+              <input id="action-button" type="submit" value="🕹 Lancer l'export de la donnée">
+            </td>
+            <td>
+              <strong>{{ configuration.github_data_last_exported | date:"SHORT_DATETIME_FORMAT" }}</strong>
+              <br />
+              <span>({{ configuration.github_data_last_exported | timesince }} ago)</span>
+            </td>
+          </form>
+        </tr>
+        <tr>
+          <form method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="run_export_stats_to_github_script" value="1" />
+            <td>
+              <input id="action-button" type="submit" value="📈 Lancer l'export des stats">
+            </td>
+            <td>
+              <strong>{{ configuration.github_stats_last_exported | date:"SHORT_DATETIME_FORMAT" }}</strong>
+              <br />
+              <span>({{ configuration.github_stats_last_exported | timesince }} ago)</span>
+            </td>
+          </form>
+        </tr>
+      </tbody>
+    </table>
+
+    <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
+
+    <div id="spinner" class="loading" role="status" style="display:none"></div>
+  </section>
+
+  {% if export_message %}
+    <section id="result-section">
+      <h2>Résultats : </h2>
+      <div>{{ export_message | safe }}</div>
+    </section>
+  {% endif %}
+</div>
+
+{% endblock %}
