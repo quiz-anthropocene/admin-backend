@@ -12,8 +12,8 @@ out = StringIO()
 def app_home(request):
     return HttpResponse(
         """
-        <p>Welcome to the 'Know Your Planet' Backend.</p>
-        <p>Available endpoints: /api & /stats</p>
+        <p>Quiz de l'Anthropocène</p>
+        <p>La documentation de l'API se trouve à l'adresse <a href="/api/docs/">/api/docs/</a></p>
     """
     )
 

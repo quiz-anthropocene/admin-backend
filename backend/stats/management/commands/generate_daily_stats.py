@@ -2,8 +2,8 @@ import pandas as pd
 from django.core.management import BaseCommand
 from django.utils import timezone
 
-from api.models import Question
 from core.models import Configuration
+from questions.models import Question
 from stats.models import (  # QuestionAggStat,; QuizFeedbackEvent,
     DailyStat,
     QuestionAnswerEvent,
@@ -69,6 +69,7 @@ class Command(BaseCommand):
 
             # loop on unique question ids
             for question_id in question_id_list:
+                print(question_id)
                 question = Question.objects.get(pk=question_id)
                 question_id_df = question_stats_df[question_stats_df["question_id"] == question_id]
                 # # get number of stats

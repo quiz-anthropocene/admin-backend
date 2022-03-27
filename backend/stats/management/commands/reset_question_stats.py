@@ -1,6 +1,6 @@
 from django.core.management import BaseCommand
 
-from api.models import Question
+from questions.models import Question
 
 
 class Command(BaseCommand):
@@ -27,7 +27,6 @@ class Command(BaseCommand):
         question = Question.objects.get(pk=question_id)
 
         print("=== reset_question_stats on Question", question)
-        print(question.__dict__)
 
         # question aggregated stats
         print("=== aggregated stats (QuestionAggStat)")

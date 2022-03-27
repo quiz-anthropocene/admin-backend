@@ -3,14 +3,15 @@ from datetime import datetime
 from io import StringIO
 
 from django.contrib import admin
+from django.contrib.auth.models import Group, Permission, User
 from django.core import management
 from django.http import HttpResponse
 from solo.admin import SingletonModelAdmin
 
-from api import utilities
-from api.models import Question
 from categories.models import Category
 from core.models import Configuration
+from core.utils import utilities
+from questions.models import Question
 from quizs.models import Quiz
 from stats.models import QuestionAnswerEvent, QuestionFeedbackEvent
 from tags.models import Tag
@@ -150,7 +151,7 @@ class LogEntryAdmin(admin.ModelAdmin):
 
 
 class MyAdminSite(admin.AdminSite):
-    site_header = "Know Your Planet administration"
+    site_header = "Quiz de l'Anthropocène"
     enable_nav_sidebar = False
     index_template = "admin/index_with_export.html"
 
@@ -201,3 +202,7 @@ admin_site = MyAdminSite(name="myadmin")
 
 admin_site.register(Configuration, ConfigurationAdmin)
 admin_site.register(admin.models.LogEntry, LogEntryAdmin)
+
+admin_site.register(User)
+admin_site.register(Permission)
+admin_site.register(Group)

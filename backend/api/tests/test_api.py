@@ -1,10 +1,12 @@
 from django.test import TestCase
 from django.urls import reverse
 
-from api import constants
-from api.tests.factories import QuestionFactory, QuizFactory, TagFactory
 from categories.factories import CategoryFactory
+from core import constants
+from questions.factories import QuestionFactory
+from quizs.factories import QuizFactory
 from quizs.models import QuizQuestion
+from tags.factories import TagFactory
 
 
 class ApiTest(TestCase):

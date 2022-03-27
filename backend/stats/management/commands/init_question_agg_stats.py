@@ -1,6 +1,6 @@
 from django.core.management import BaseCommand
 
-from api.models import Question  # , QuestionAggStat
+from questions.models import Question  # , QuestionAggStat
 
 
 def print_question_stats(question):
