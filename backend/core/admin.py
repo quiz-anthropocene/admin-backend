@@ -8,9 +8,9 @@ from django.core import management
 from django.http import HttpResponse
 from solo.admin import SingletonModelAdmin
 
-from api import utilities
 from categories.models import Category
 from core.models import Configuration
+from core.utils import utilities
 from questions.models import Question
 from quizs.models import Quiz
 from stats.models import QuestionAnswerEvent, QuestionFeedbackEvent
@@ -151,7 +151,7 @@ class LogEntryAdmin(admin.ModelAdmin):
 
 
 class MyAdminSite(admin.AdminSite):
-    site_header = "Know Your Planet administration"
+    site_header = "Quiz de l'Anthropocène"
     enable_nav_sidebar = False
     index_template = "admin/index_with_export.html"
 

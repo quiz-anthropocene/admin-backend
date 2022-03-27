@@ -9,7 +9,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api import utilities_sendinblue
+from core.utils import sendinblue
 from questions.models import Question
 
 
@@ -58,7 +58,7 @@ def notion_questions(request):
 def newsletter(request):
     if request.method == "POST":
         try:
-            response = utilities_sendinblue.newsletter_registration(request.data["email"])
+            response = sendinblue.newsletter_registration(request.data["email"])
             if response.status_code != 201:
                 raise Exception(json.loads(response._content))
             success_message = (

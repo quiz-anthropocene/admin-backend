@@ -1,7 +1,7 @@
 import factory
 
-from api import constants
 from categories.factories import CategoryFactory
+from core import constants
 from questions.models import Question
 
 

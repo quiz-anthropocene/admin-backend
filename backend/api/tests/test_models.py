@@ -1,7 +1,7 @@
 from django.core.exceptions import ValidationError
 from django.test import TestCase
 
-from api import constants
+from core import constants
 from questions.factories import QuestionFactory
 from questions.models import Question
 from quizs.factories import QuizFactory

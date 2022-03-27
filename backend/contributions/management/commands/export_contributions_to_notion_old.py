@@ -4,9 +4,9 @@ from django.conf import settings
 from django.core.management import BaseCommand
 from django.utils import timezone
 
-from api import utilities_notion
 from contributions.models import Contribution
 from core.models import Configuration
+from core.utils import notion
 
 
 configuration = Configuration.get_solo()
@@ -48,7 +48,7 @@ class Command(BaseCommand):
         if not settings.DEBUG:
             try:
                 for new_contribution in new_contributions_to_export:
-                    utilities_notion.add_contribution_row(
+                    notion.add_contribution_row(
                         contribution_text=new_contribution.text,
                         contribution_description=new_contribution.description,
                         contribution_type=new_contribution.type,

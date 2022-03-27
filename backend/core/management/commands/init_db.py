@@ -4,9 +4,9 @@ import yaml
 from django.core.management import BaseCommand, call_command
 from django.db import connection
 
-from api import utilities
 from categories.models import Category
 from core.models import Configuration
+from core.utils import utilities
 from glossary.models import GlossaryItem
 from questions.models import Question
 from quizs.models import Quiz, QuizQuestion, QuizRelationship

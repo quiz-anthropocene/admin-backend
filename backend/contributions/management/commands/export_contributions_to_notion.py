@@ -4,9 +4,9 @@ from django.conf import settings
 from django.core.management import BaseCommand
 from django.utils import timezone
 
-from api import utilities_notion
 from contributions.models import Contribution
 from core.models import Configuration
+from core.utils import notion
 
 
 configuration = Configuration.get_solo()
@@ -54,7 +54,7 @@ class Command(BaseCommand):
                         "description": {"rich_text": [{"text": {"content": new_contribution.description}}]},  # noqa
                         "created": {"date": {"start": new_contribution.created.isoformat()}},
                     }
-                    utilities_notion.create_page_in_database(
+                    notion.create_page_in_database(
                         settings.NOTION_CONTRIBUTION_TABLE_ID, new_contribution_properties
                     )  # noqa
 

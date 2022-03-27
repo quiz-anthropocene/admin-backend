@@ -3,7 +3,7 @@ from datetime import date, datetime
 import yaml
 from django.core.management import BaseCommand
 
-from api import utilities_notion
+from core.utils import notion
 from glossary.models import GlossaryItem
 
 
@@ -30,7 +30,7 @@ class Command(BaseCommand):
         glossary_model_fields = [
             f.name for f in GlossaryItem._meta.get_fields() if f.name not in ["id"]
         ]  # "created", "updated"
-        notion_glossary_list = utilities_notion.get_glossary_rows()
+        notion_glossary_list = notion.get_glossary_rows()
         # print(list(map(lambda x: x['slug'], notion_glossary_table.collection.get_schema_properties()))) # noqa
 
         # --- glossary list

@@ -5,8 +5,8 @@ from django.conf import settings
 from django.core.management import BaseCommand
 from django.utils import timezone
 
-from api import utilities, utilities_github
 from core.models import Configuration
+from core.utils import github, utilities
 
 
 class Command(BaseCommand):
@@ -38,7 +38,7 @@ class Command(BaseCommand):
             # data/configuration.yaml
             start_time = time.time()
             configuration_yaml = utilities.serialize_model_to_yaml("core", model_label="configuration", flat=True)
-            configuration_element = utilities_github.create_file_element(
+            configuration_element = github.create_file_element(
                 file_path="data/configuration.yaml", file_content=configuration_yaml
             )
 
@@ -59,7 +59,7 @@ class Command(BaseCommand):
             # data/tags.yaml
             start_time = time.time()
             tags_yaml = utilities.serialize_model_to_yaml("api", model_label="tag", flat=True)
-            tags_element = utilities_github.create_file_element(file_path="data/tags.yaml", file_content=tags_yaml)
+            tags_element = github.create_file_element(file_path="data/tags.yaml", file_content=tags_yaml)
 
             print("--- Step 2.3 done : tags.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
@@ -67,7 +67,7 @@ class Command(BaseCommand):
             # data/questions.yaml
             start_time = time.time()
             questions_yaml = utilities.serialize_model_to_yaml("api", model_label="question", flat=True)
-            questions_element = utilities_github.create_file_element(
+            questions_element = github.create_file_element(
                 file_path="data/questions.yaml", file_content=questions_yaml
             )
 
@@ -77,7 +77,7 @@ class Command(BaseCommand):
             # data/quizs.yaml
             start_time = time.time()
             quizs_yaml = utilities.serialize_model_to_yaml("api", model_label="quiz", flat=True)
-            quizs_element = utilities_github.create_file_element(file_path="data/quizs.yaml", file_content=quizs_yaml)
+            quizs_element = github.create_file_element(file_path="data/quizs.yaml", file_content=quizs_yaml)
 
             print("--- Step 2.5 done : quizs.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
@@ -85,7 +85,7 @@ class Command(BaseCommand):
             # data/quiz-questions.yaml
             start_time = time.time()
             quiz_questions_yaml = utilities.serialize_model_to_yaml("api", model_label="quizquestion", flat=True)
-            quiz_questions_element = utilities_github.create_file_element(
+            quiz_questions_element = github.create_file_element(
                 file_path="data/quiz-questions.yaml", file_content=quiz_questions_yaml
             )
 
@@ -97,7 +97,7 @@ class Command(BaseCommand):
             quiz_relationships_yaml = utilities.serialize_model_to_yaml(
                 "api", model_label="quizrelationship", flat=True
             )
-            quiz_relationships_element = utilities_github.create_file_element(
+            quiz_relationships_element = github.create_file_element(
                 file_path="data/quiz-relationships.yaml",
                 file_content=quiz_relationships_yaml,
             )
@@ -108,14 +108,14 @@ class Command(BaseCommand):
             # update frontend file with timestamp
             # frontend/src/constants.js
             start_time = time.time()
-            old_frontend_constants_file_content = utilities_github.get_file(
+            old_frontend_constants_file_content = github.get_file(
                 file_path="frontend/src/constants.js",
             )
             new_frontend_constants_file_content_string = utilities.update_frontend_last_updated_datetime(  # noqa
                 old_frontend_constants_file_content.decoded_content.decode(),
                 current_datetime_string_pretty,
             )
-            new_frontend_constants_file_element = utilities_github.create_file_element(
+            new_frontend_constants_file_element = github.create_file_element(
                 file_path="frontend/src/constants.js",
                 file_content=new_frontend_constants_file_content_string,
             )
@@ -126,7 +126,7 @@ class Command(BaseCommand):
             # commit files
             start_time = time.time()
 
-            utilities_github.update_multiple_files(
+            github.update_multiple_files(
                 branch_name=branch_name,
                 commit_message="Data: data update",
                 file_element_list=[
@@ -159,7 +159,7 @@ class Command(BaseCommand):
                     "<li>data/quiz-relationships.yaml</li>"
                     "</ul>"
                 )
-                pull_request = utilities_github.create_pull_request(
+                pull_request = github.create_pull_request(
                     pull_request_title=pull_request_name,
                     pull_request_message=pull_request_message,
                     branch_name=branch_name,

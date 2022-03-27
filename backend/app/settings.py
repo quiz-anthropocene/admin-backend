@@ -230,7 +230,8 @@ SHELL_PLUS = "ipython"
 SHELL_PLUS_IMPORTS = [
     "import csv, json, yaml",
     "from datetime import datetime, date, timedelta",
-    "from api import constants, utilities, utilities_notion, utilities_github",
+    "from core import constants",
+    "from core.utils import utilities, notion, github, sendinblue",
     "from stats import utilities as utilities_stats",
 ]
 

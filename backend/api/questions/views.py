@@ -5,7 +5,6 @@ from rest_framework import mixins, viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api import constants
 from api.questions.filters import QuestionFilter
 from api.questions.serializers import (
     QuestionDifficultyChoiceSerializer,
@@ -13,6 +12,7 @@ from api.questions.serializers import (
     QuestionSerializer,
 )
 from api.serializers import SimpleChoiceSerializer
+from core import constants
 from questions.models import Question
 
 

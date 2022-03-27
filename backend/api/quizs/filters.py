@@ -1,6 +1,6 @@
 import django_filters
 
-from api import constants
+from core import constants
 from tags.models import Tag
 
 

@@ -3,7 +3,7 @@ from django.apps import apps
 from django.core.management.base import CommandError
 from django.core.management.commands.loaddata import Command as Loaddata
 
-from api import utilities
+from core.utils import utilities
 
 
 APP_LABEL = "api"

@@ -6,8 +6,8 @@ from django.conf import settings
 from django.core.management import BaseCommand
 from django.utils import timezone
 
-from api import utilities, utilities_github
 from core.models import Configuration
+from core.utils import github, utilities
 from stats import utilities as utilities_stats
 
 
@@ -48,7 +48,7 @@ class Command(BaseCommand):
                 **utilities_stats.contribution_stats(),
             }
             stats_yaml = yaml.safe_dump(stats_dict, allow_unicode=True, sort_keys=False)
-            stats_element = utilities_github.create_file_element(file_path="data/stats.yaml", file_content=stats_yaml)
+            stats_element = github.create_file_element(file_path="data/stats.yaml", file_content=stats_yaml)
 
             print("--- Step 2.1 done : stats.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
@@ -57,7 +57,7 @@ class Command(BaseCommand):
             start_time = time.time()
             difficulty_levels_list = utilities_stats.difficulty_aggregate()
             difficulty_levels_yaml = yaml.safe_dump(difficulty_levels_list, allow_unicode=True, sort_keys=False)
-            difficulty_levels_element = utilities_github.create_file_element(
+            difficulty_levels_element = github.create_file_element(
                 file_path="data/difficulty-levels.yaml",
                 file_content=difficulty_levels_yaml,
             )
@@ -69,9 +69,7 @@ class Command(BaseCommand):
             start_time = time.time()
             authors_list = utilities_stats.author_aggregate()
             authors_yaml = yaml.safe_dump(authors_list, allow_unicode=True, sort_keys=False)
-            authors_element = utilities_github.create_file_element(
-                file_path="data/authors.yaml", file_content=authors_yaml
-            )
+            authors_element = github.create_file_element(file_path="data/authors.yaml", file_content=authors_yaml)
 
             print("--- Step 2.3 done : authors.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
@@ -80,7 +78,7 @@ class Command(BaseCommand):
             start_time = time.time()
             languages_list = utilities_stats.language_aggregate()
             languages_yaml = yaml.safe_dump(languages_list, allow_unicode=True, sort_keys=False)
-            languages_element = utilities_github.create_file_element(
+            languages_element = github.create_file_element(
                 file_path="data/languages.yaml", file_content=languages_yaml
             )
 
@@ -101,14 +99,14 @@ class Command(BaseCommand):
             # update frontend file with timestamp
             # frontend/src/constants.js
             start_time = time.time()
-            old_frontend_constants_file_content = utilities_github.get_file(
+            old_frontend_constants_file_content = github.get_file(
                 file_path="frontend/src/constants.js",
             )
             new_frontend_constants_file_content_string = utilities.update_frontend_last_updated_datetime(  # noqa
                 old_frontend_constants_file_content.decoded_content.decode(),
                 current_datetime_string_pretty,
             )
-            new_frontend_constants_file_element = utilities_github.create_file_element(
+            new_frontend_constants_file_element = github.create_file_element(
                 file_path="frontend/src/constants.js",
                 file_content=new_frontend_constants_file_content_string,
             )
@@ -119,7 +117,7 @@ class Command(BaseCommand):
             # commit files
             start_time = time.time()
 
-            utilities_github.update_multiple_files(
+            github.update_multiple_files(
                 branch_name=branch_name,
                 commit_message="Data: stats update",
                 file_element_list=[
@@ -151,7 +149,7 @@ class Command(BaseCommand):
                     # "<li>data/quiz-stats.yaml</li>"
                     "</ul>"
                 )
-                pull_request = utilities_github.create_pull_request(
+                pull_request = github.create_pull_request(
                     pull_request_title=pull_request_name,
                     pull_request_message=pull_request_message,
                     branch_name=branch_name,

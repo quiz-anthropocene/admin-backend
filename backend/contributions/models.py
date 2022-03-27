@@ -1,6 +1,6 @@
 from django.db import models
 
-from api import constants
+from core import constants
 
 
 class Contribution(models.Model):

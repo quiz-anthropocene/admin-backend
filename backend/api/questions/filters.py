@@ -1,7 +1,7 @@
 import django_filters
 
-from api import constants
 from categories.models import Category
+from core import constants
 from tags.models import Tag
 
 

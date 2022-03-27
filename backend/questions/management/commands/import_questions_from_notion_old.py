@@ -1,39 +1,34 @@
+import collections
 import time
+from datetime import datetime, timedelta
 
+import notion
 from django.core.exceptions import ValidationError
 from django.core.management import BaseCommand
 from django.db import IntegrityError
+from django.db.models.fields import URLField
 from django.utils import timezone
 
-from api import constants, utilities_notion
 from categories.models import Category
 from contributions.models import Contribution
+from core import constants
 from core.models import Configuration
+from core.utils import notion as utilities_notion, utilities
 from questions.models import Question
 from quizs.models import Quiz
 from tags.models import Tag
 
 
-QUESTION_FIELDS_TO_IGNORE = [
-    "Text",
-    "tweet",
-    "intent",  # "text_short"
-    "answer_explanation_extended",
-    "answer_explanation_short",
-    "quiz",
-    "quiz_question_order",
-    "Created by",
-    "Created time",
-    "Last edited by",
-    "Last edited time",
-]
+SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS = 15
+QUESTION_URL_FIELDS = [field.name for field in Question._meta.fields if type(field) == URLField]
 
 
 class Command(BaseCommand):
     """
     Usage:
-    - python manage.py import_questions_from_notion  # last 100 questions updated
-    - python manage.py import_questions_from_notion --start_cursor 5f40d3d8-d17c-4754-9574-b924f4724e48  # noqa
+    - python manage.py import_questions_from_notion 0  # all
+    - python manage.py import_questions_from_notion 1
+    - python manage.py import_questions_from_notion 0 --skip-old
 
     Help:
     - '///' ? delimeter to show lists (string split) in the template
@@ -41,19 +36,28 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument(
-            "--start_cursor",
-            type=str,
-            default=None,
-            help="Fetch next page. Optional.",
+            "scope",
+            type=int,
+            choices=constants.NOTION_QUESTIONS_IMPORT_SCOPE_LIST,
+            help="0 = all, 1 = first X, 2 = second X",
+        )
+        parser.add_argument(
+            "--skip-old",
+            default=False,
+            action="store_true",
+            dest="skip-old",
+            help="Skip processing of old questions (last updated > 15 days)",
         )
 
     def handle(self, *args, **options):
         #########################################################
         # Init
         #########################################################
+        scope = options["scope"]
+
         notion_questions_list = []
-        # questions_ids_duplicate = []
-        # questions_ids_missing = []
+        questions_ids_duplicate = []
+        questions_ids_missing = []
         tags_created = []
         questions_created = []
         questions_updated = set()
@@ -69,11 +73,9 @@ class Command(BaseCommand):
         start_time = time.time()
 
         try:
-            notion_questions_response = utilities_notion.get_question_table_pages(
-                start_cursor=options["start_cursor"]
-            )  # noqa
+            notion_questions_list = utilities_notion.get_questions_table_rows()
         except:  # noqa
-            self.stdout.write("Erreur accès à l'API Notion")
+            self.stdout.write("Erreur accès Notion. token_v2 expiré ?")
             return
 
         self.stdout.write(
@@ -81,44 +83,28 @@ class Command(BaseCommand):
         )
 
         #########################################################
-        # Cleanup list of dict
-        #########################################################
-        notion_questions_list = list()
-        for question in notion_questions_response.json()["results"]:
-            notion_question_dict = utilities_notion.process_page_properties(question["properties"])
-            notion_questions_list.append(notion_question_dict)
-
-        self.stdout.write(f"received {len(notion_questions_list)} questions")
-        self.stdout.write(f"First question last_edited_time : {notion_questions_list[0]['Last edited time']}")
-        self.stdout.write(f"Last question last_edited_time : {notion_questions_list[-1]['Last edited time']}")
-
-        #########################################################
         # Check question ids (duplicates & missing)
         #########################################################
-        # start_time = time.time()
+        start_time = time.time()
 
         # order by notion_questions_list by id
-        notion_questions_list = sorted(notion_questions_list, key=lambda question: question["id"] or 0)
+        notion_questions_list = sorted(notion_questions_list, key=lambda question: question.get_property("id") or 0)
         # check if id duplicates
-        # notion_questions_id_list = [
-        #     question["id"]
-        #     for question in notion_questions_list
-        #     if question["id"]
-        # ]
-        # questions_ids_duplicate = [
-        #     item
-        #     for item, count in collections.Counter(notion_questions_id_list).items()
-        #     if count > 1
-        # ]
+        notion_questions_id_list = [
+            question.get_property("id") for question in notion_questions_list if question.get_property("id")
+        ]
+        questions_ids_duplicate = [
+            item for item, count in collections.Counter(notion_questions_id_list).items() if count > 1
+        ]
         # check if id 'missing'
-        # for n in range(1, notion_questions_id_list[-1]):
-        #     if n not in notion_questions_id_list:
-        #         questions_ids_missing.append(n)
+        for n in range(1, notion_questions_id_list[-1]):
+            if n not in notion_questions_id_list:
+                questions_ids_missing.append(n)
 
-        # self.stdout.write(
-        #     "--- Step 2 done : check question ids (duplicates & missing) : %s seconds ---"
-        #     % round(time.time() - start_time, 1)
-        # )
+        self.stdout.write(
+            "--- Step 2 done : check question ids (duplicates & missing) : %s seconds ---"
+            % round(time.time() - start_time, 1)
+        )
 
         #########################################################
         # Loop on questions and create, update, store validation_errors
@@ -126,23 +112,35 @@ class Command(BaseCommand):
         start_time = time.time()
 
         # reduce scope because of timeouts on Heroku (30 seconds)
-        notion_questions_list_scope = notion_questions_list
+        if scope:
+            min_question_id = 200 * (scope - 1)
+            max_question_id = 200 * scope
+            notion_questions_list_scope = notion_questions_list[min_question_id:max_question_id]
+        else:
+            notion_questions_list_scope = notion_questions_list
 
         self.stdout.write(f"processing {len(notion_questions_list_scope)} questions")
-        self.stdout.write(f"First question id : {notion_questions_list_scope[0]['id']}")
-        self.stdout.write(f"Last question id : {notion_questions_list_scope[-1]['id']}")
+        self.stdout.write(f"First question id : {notion_questions_list_scope[0].get_property('id')}")
+        self.stdout.write(f"Last question id : {notion_questions_list_scope[-1].get_property('id')}")
 
-        for notion_question_dict in notion_questions_list_scope:
+        for notion_question_row in notion_questions_list_scope:
             question_validation_errors = []
             notion_question_tag_objects = []
-
-            # cleanup question dict (remove useless keys)
-            [notion_question_dict.pop(key) for key in QUESTION_FIELDS_TO_IGNORE]
+            notion_question_last_updated = notion_question_row.get_property("Last edited time").date()  # noqa
 
             # check question has id
-            if notion_question_dict["id"] is None:
+            if notion_question_row.get_property("id") is None:
                 question_validation_errors.append(ValidationError({"id": "Question sans id. vide ?"}))
+            # ignore questions not updated recently
+            elif options.get("skip-old") and (
+                notion_question_last_updated
+                < (datetime.now().date() - timedelta(days=SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS))
+            ):
+                pass
             else:
+                # build question_dict from notion_row
+                notion_question_dict = self.transform_notion_question_row_to_question_dict(notion_question_row)
+
                 # if notion_question_dict["id"] == 1014:
                 #     self.stdout.write(notion_question_dict)
 
@@ -190,8 +188,14 @@ class Command(BaseCommand):
             # - if the question does not have validation_errors
             if len(question_validation_errors):
                 validation_errors += question_validation_errors
+            # - if the question has been updated recently
+            elif options.get("skip-old") and (
+                notion_question_last_updated
+                < (datetime.now().date() - timedelta(days=SKIP_QUESTIONS_LAST_UPDATED_SINCE_DAYS))
+            ):
+                pass
             else:
-                # the question doesn't have errors: ready to create/update
+                # the question doesn't have errors : ready to create/update
                 try:
                     db_question, created = Question.objects.get_or_create(
                         id=notion_question_dict["id"], defaults=notion_question_dict
@@ -239,13 +243,17 @@ class Command(BaseCommand):
         start_time = time.time()
 
         # done
-        questions_notion_count = "Nombre de questions dans Notion : ?"
+        questions_notion_count = f"Nombre de questions dans Notion : {len(notion_questions_list)}"
         questions_scope_count = (
             f"Nombre de questions prises en compte ici : {len(notion_questions_list_scope)}"  # noqa
         )
-        # questions_scope_count += f" (de id {notion_questions_list_scope[0]['id']} à id {notion_questions_list_scope[-1]['id']})"  # noqa
-        # questions_ids_duplicate_message = f"ids 'en double' : {', '.join([str(question_id) for question_id in questions_ids_duplicate])}"  # noqa
-        # questions_ids_missing_message = f"ids 'manquants' : {', '.join([str(question_id) for question_id in questions_ids_missing])}"  # noqa
+        questions_scope_count += f" (de id {notion_questions_list_scope[0].get_property('id')} à id {notion_questions_list_scope[-1].get_property('id')})"  # noqa
+        questions_ids_duplicate_message = (
+            f"ids 'en double' : {', '.join([str(question_id) for question_id in questions_ids_duplicate])}"  # noqa
+        )
+        questions_ids_missing_message = (
+            f"ids 'manquants' : {', '.join([str(question_id) for question_id in questions_ids_missing])}"  # noqa
+        )
 
         tags_created_message = f"Nombre de tags ajoutés : {len(tags_created)}"
         if len(tags_created):
@@ -298,12 +306,19 @@ class Command(BaseCommand):
         # Update configuration
         #########################################################
         configuration = Configuration.get_solo()
-        for scope in constants.NOTION_QUESTIONS_IMPORT_SCOPE_LIST:
+        if scope:
             setattr(
                 configuration,
                 f"notion_questions_scope_{scope}_last_imported",
                 timezone.now(),
             )
+        else:
+            for scope in constants.NOTION_QUESTIONS_IMPORT_SCOPE_LIST[1:]:
+                setattr(
+                    configuration,
+                    f"notion_questions_scope_{scope}_last_imported",
+                    timezone.now(),
+                )
         configuration.save()
 
         self.stdout.write(
@@ -312,8 +327,8 @@ class Command(BaseCommand):
                     ">>> Info sur les questions",
                     questions_notion_count,
                     questions_scope_count,
-                    # questions_ids_duplicate_message,
-                    # questions_ids_missing_message,
+                    questions_ids_duplicate_message,
+                    questions_ids_missing_message,
                     "",
                     ">>> Info sur les tags ajoutés",
                     tags_created_message,
@@ -329,6 +344,57 @@ class Command(BaseCommand):
                 ]
             )
         )
+
+    def transform_notion_question_row_to_question_dict(self, notion_question_row):
+        """
+        Transform the Notion question row ("dict") into a question dict
+        """
+        notion_question_dict = dict()
+
+        # fill dict with notion_question_row
+        for question_model_field in Question._meta.get_fields():
+            try:
+                notion_question_property = notion_question_row.get_property(question_model_field.name)
+                # cleanup dates
+                if type(notion_question_property) == notion.collection.NotionDate:
+                    notion_question_property = notion_question_property.start
+                notion_question_dict[question_model_field.name] = notion_question_property
+            except:  # noqa
+                pass
+
+        # cleanup fields
+        # - field type --> "" if None
+        # - field difficulty to int
+        # - field answer_correct --> "" if None
+        # - field added --> created time if None --> to date
+        # - field validator --> "" if None
+        # - fields answer_explanation, answer_image_explanation & answer_extra_info --> clean markdown [links](links)  # noqa
+        # - fields '_url' --> strip spaces at end (or else we get a ValidationError)
+        if notion_question_dict["type"] is None:
+            notion_question_dict["type"] = ""
+        if type(notion_question_dict["difficulty"]) == str:
+            if notion_question_dict["difficulty"] == "":
+                notion_question_dict["difficulty"] = None
+            else:
+                notion_question_dict["difficulty"] = int(notion_question_dict["difficulty"])
+        if notion_question_dict["language"] is None:
+            notion_question_dict["language"] = ""
+        if notion_question_dict["answer_correct"] is None:
+            notion_question_dict["answer_correct"] = ""
+        if ("added" not in notion_question_dict) or (notion_question_dict["added"] is None):
+            notion_question_dict["added"] = notion_question_row.get_property("Created time").date()
+        if notion_question_dict["validator"] is None:
+            notion_question_dict["validator"] = ""
+        # clean markdown [links](links)
+        for field_name in ["answer_explanation", "answer_image_explanation", "answer_extra_info"]:
+            if "http" in notion_question_dict[field_name]:
+                notion_question_dict[field_name] = utilities.clean_markdown_links(notion_question_dict[field_name])
+        # strip spaces in url fields
+        for field_name in QUESTION_URL_FIELDS:
+            if field_name in notion_question_dict:
+                notion_question_dict[field_name] = notion_question_dict[field_name].strip()
+
+        return notion_question_dict
 
     def update_question(self, db_question, notion_question_dict):
         """
@@ -350,7 +416,6 @@ class Command(BaseCommand):
                 ):
                     # track changes (before updating field to get previous value)
                     db_question_field_update_message = f"champ '{question_model_field.name}' : {getattr(db_question, question_model_field.name)} >>> {notion_question_dict[question_model_field.name]}"  # noqa
-                    print(db_question_field_update_message)
                     question_changes.append(db_question_field_update_message)
                     # update field
                     setattr(

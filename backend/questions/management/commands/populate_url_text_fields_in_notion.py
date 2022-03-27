@@ -3,7 +3,7 @@ import requests
 import urllib3
 from django.core.management import BaseCommand
 
-from api import utilities_notion
+from core.utils import notion
 
 
 # because we set verified=False in requests.get()
@@ -54,7 +54,7 @@ class Command(BaseCommand):
             }
         }
         try:
-            notion_questions_response = utilities_notion.get_question_table_pages(
+            notion_questions_response = notion.get_question_table_pages(
                 sort_direction="ascending", extra_data=notion_query_filter
             )  # noqa
         except:  # noqa
@@ -103,7 +103,7 @@ class Command(BaseCommand):
                     }
                 }
                 try:
-                    utilities_notion.update_page_properties(page_id=question["id"], data=data)
+                    notion.update_page_properties(page_id=question["id"], data=data)
                     self.stdout.write(f"{question_field_url_text}")
                     questions_updated += 1
                 except:  # noqa

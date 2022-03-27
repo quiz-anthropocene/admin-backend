@@ -2,7 +2,7 @@
 from django.core.management.base import CommandError
 from django.core.management.commands.dumpdata import Command as Dumpdata
 
-from api import utilities
+from core.utils import utilities
 
 
 class Command(Dumpdata):

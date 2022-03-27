@@ -1,7 +1,8 @@
 from django.core.exceptions import ValidationError
 from django.db import models
 
-from api import constants, utilities
+from core import constants
+from core.utils import utilities
 from tags.models import Tag
 
 

@@ -3,7 +3,7 @@ from datetime import date, timedelta
 from django.db import models
 from django.db.models import Count, Sum
 
-from api import constants as api_constants
+from core import constants as api_constants
 from questions.models import Question
 from quizs.models import Quiz
 from stats import constants

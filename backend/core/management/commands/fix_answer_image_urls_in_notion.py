@@ -3,8 +3,8 @@ import re
 
 from django.core.management import BaseCommand
 
-from api import utilities_notion
 from core.models import Configuration
+from core.utils import notion
 
 
 configuration = Configuration.get_solo()
@@ -47,7 +47,7 @@ class Command(BaseCommand):
             }
         }
         try:
-            notion_questions_response = utilities_notion.get_question_table_pages(
+            notion_questions_response = notion.get_question_table_pages(
                 sort_direction="ascending", extra_data=notion_query_filter
             )  # noqa
         except:  # noqa
@@ -84,7 +84,7 @@ class Command(BaseCommand):
                     new_question_answer_image_url = f"https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/{image_path[0]}"  # noqa
                     data = {"properties": {"answer_image_url": {"url": new_question_answer_image_url}}}
                     try:
-                        utilities_notion.update_page_properties(page_id=question["id"], data=data)
+                        notion.update_page_properties(page_id=question["id"], data=data)
                         self.stdout.write(f"{new_question_answer_image_url}")
                         questions_updated += 1
                     except:  # noqa

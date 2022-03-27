@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from api import utilities
+from core.utils import utilities
 
 
 class UtilitiesTest(TestCase):

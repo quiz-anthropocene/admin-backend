@@ -2,8 +2,8 @@ import notion
 from django.core.exceptions import ValidationError
 from django.core.management import BaseCommand
 
-from api import utilities_notion
 from categories.models import Category
+from core.utils import notion as utilities_notion
 from questions.models import Question
 from tags.models import Tag
 
