@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
-from api.models import Question, Quiz
+from api.models import Question
+from quizs.models import Quiz
 from stats.models import (
     QuestionAggStat,
     QuestionAnswerEvent,

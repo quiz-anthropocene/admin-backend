@@ -64,6 +64,7 @@ LOCAL_APPS = [
     "api",
     "categories",
     "tags",
+    "quizs",
     "contributions",
     "glossary",
     "stats",

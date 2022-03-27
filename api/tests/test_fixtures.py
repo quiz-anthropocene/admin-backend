@@ -1,10 +1,12 @@
 from django.core import management
 from django.test import TestCase
 
-from api.models import Question, Quiz, QuizRelationship, Tag
+from api.models import Question
 from categories.models import Category
 from core.models import Configuration
 from glossary.models import GlossaryItem
+from quizs.models import Quiz, QuizRelationship
+from tags.models import Tag
 
 
 class FixturesTest(TestCase):
@@ -12,7 +14,7 @@ class FixturesTest(TestCase):
     #     "data/categories.yaml",
     #     "data/tags.yaml",
     #     "data/questions.yaml",
-    #     "data/quizzes.yaml",
+    #     "data/quiz.yaml",
     #     "data/quiz-relationships.yaml",
     #     "data/ressources-glossaire.yaml",
     # ]

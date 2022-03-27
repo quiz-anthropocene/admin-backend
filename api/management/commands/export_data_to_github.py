@@ -74,14 +74,12 @@ class Command(BaseCommand):
             print("--- Step 2.4 done : questions.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
-            # data/quizzes.yaml
+            # data/quizs.yaml
             start_time = time.time()
-            quizzes_yaml = utilities.serialize_model_to_yaml("api", model_label="quiz", flat=True)
-            quizzes_element = utilities_github.create_file_element(
-                file_path="data/quizzes.yaml", file_content=quizzes_yaml
-            )
+            quizs_yaml = utilities.serialize_model_to_yaml("api", model_label="quiz", flat=True)
+            quizs_element = utilities_github.create_file_element(file_path="data/quizs.yaml", file_content=quizs_yaml)
 
-            print("--- Step 2.5 done : quizzes.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
+            print("--- Step 2.5 done : quizs.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/quiz-questions.yaml
@@ -135,7 +133,7 @@ class Command(BaseCommand):
                     configuration_element,
                     tags_element,
                     questions_element,
-                    quizzes_element,
+                    quizs_element,
                     quiz_questions_element,
                     quiz_relationships_element,
                     new_frontend_constants_file_element,
@@ -156,7 +154,7 @@ class Command(BaseCommand):
                     "<li>data/configuration.yaml</li>"
                     "<li>data/tags.yaml</li>"
                     "<li>data/questions.yaml</li>"
-                    "<li>data/quizzes.yaml</li>"
+                    "<li>data/quizs.yaml</li>"
                     "<li>data/quiz-questions.yaml</li>"
                     "<li>data/quiz-relationships.yaml</li>"
                     "</ul>"
