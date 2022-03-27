@@ -2,25 +2,19 @@ from rest_framework import serializers
 
 from questions.models import Question
 from quizs.models import Quiz
-from stats.models import (
-    QuestionAggStat,
-    QuestionAnswerEvent,
-    QuestionFeedbackEvent,
-    QuizAnswerEvent,
-    QuizFeedbackEvent,
-)
+from stats.models import QuestionAnswerEvent, QuestionFeedbackEvent, QuizAnswerEvent, QuizFeedbackEvent
 
 
-class QuestionAggStatSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = QuestionAggStat
-        fields = [
-            "question_id",
-            "answer_count",
-            "answer_success_count",
-            "like_count",
-            "dislike_count",
-        ]
+# class QuestionAggStatSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = QuestionAggStat
+#         fields = [
+#             "question_id",
+#             "answer_count",
+#             "answer_success_count",
+#             "like_count",
+#             "dislike_count",
+#         ]
 
 
 class QuestionAnswerEventSerializer(serializers.ModelSerializer):
