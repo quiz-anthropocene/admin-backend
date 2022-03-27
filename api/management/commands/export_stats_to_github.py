@@ -86,16 +86,16 @@ class Command(BaseCommand):
 
             print("--- Step 2.4 done : languages.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
-            #####################################
-            # data/quiz-stats.yaml
-            start_time = time.time()
-            quiz_detail_stats_list = utilities_stats.quiz_detail_stats()
-            quiz_detail_stats_yaml = yaml.safe_dump(quiz_detail_stats_list, allow_unicode=True, sort_keys=False)
-            quiz_stats_element = utilities_github.create_file_element(
-                file_path="data/quiz-stats.yaml", file_content=quiz_detail_stats_yaml
-            )
+            # #####################################
+            # # data/quiz-stats.yaml
+            # start_time = time.time()
+            # quiz_detail_stats_list = utilities_stats.quiz_detail_stats()
+            # quiz_detail_stats_yaml = yaml.safe_dump(quiz_detail_stats_list, allow_unicode=True, sort_keys=False)
+            # quiz_stats_element = utilities_github.create_file_element(
+            #     file_path="data/quiz-stats.yaml", file_content=quiz_detail_stats_yaml
+            # )
 
-            print("--- Step 2.5 done : quiz-stats.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
+            # print("--- Step 2.5 done : quiz-stats.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # update frontend file with timestamp
@@ -127,7 +127,7 @@ class Command(BaseCommand):
                     difficulty_levels_element,
                     authors_element,
                     languages_element,
-                    quiz_stats_element,
+                    # quiz_stats_element,
                     new_frontend_constants_file_element,
                 ],
             )
@@ -148,7 +148,7 @@ class Command(BaseCommand):
                     "<li>data/authors.yaml</li>"
                     "<li>data/languages.yaml</li>"
                     "<li>data/tags.yaml</li>"
-                    "<li>data/quiz-stats.yaml</li>"
+                    # "<li>data/quiz-stats.yaml</li>"
                     "</ul>"
                 )
                 pull_request = utilities_github.create_pull_request(
