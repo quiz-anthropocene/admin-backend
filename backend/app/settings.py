@@ -53,7 +53,6 @@ THIRD_PARTY_APPS = [
     "rest_framework",  # djangorestframework
     "drf_spectacular",  # drf-spectacular
     "django_extensions",  # django-extensions
-    "debug_toolbar",  # django-debug-toolbar
     "import_export",  # django-import-export
     "ckeditor",  # django-ckeditor
     "fieldsets_with_inlines",  # django-fieldsets-with-inlines
@@ -211,6 +210,7 @@ REST_FRAMEWORK = {
 # ------------------------------------------------------------------------------
 
 if DEBUG:
+    INSTALLED_APPS += ["debug_toolbar"]  # django-debug-toolbar
     MIDDLEWARE += ["debug_toolbar.middleware.DebugToolbarMiddleware"]
     INTERNAL_IPS = ["127.0.0.1"]
 
