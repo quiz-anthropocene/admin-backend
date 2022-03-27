@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
             name="questions",
             field=models.ManyToManyField(
                 help_text="Les questions du quiz",
-                related_name="quizzes",
+                related_name="quizs",
                 through="quizs.QuizQuestion",
                 to="api.question",
             ),

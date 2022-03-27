@@ -10,7 +10,7 @@
       Nous voilà entrés dans l’Anthropocène, l’ère de l’humain. L’homme est devenu la plus grande force qui façonne le monde.
     </p>
     <p class="text-align-left">
-      Ce site a vocation à vous en donner un premier aperçu. {{ questionsCount }} questions en ligne, regroupées en {{ quizzesPublishedCount }} quiz thématiques, avec des explications, des liens fiables pour aller plus loin et des illustrations.
+      Ce site a vocation à vous en donner un premier aperçu. {{ questionsCount }} questions en ligne, regroupées en {{ quizsPublishedCount }} quiz thématiques, avec des explications, des liens fiables pour aller plus loin et des illustrations.
       Déjà {{ question_answer_count_formatted }} questions jouées sur le site.
     <p class="text-align-left margin-bottom-0">
       A vous de tester, et faire tourner !
@@ -23,18 +23,18 @@
       <span class="no-wrap">➡️&nbsp;<router-link :to="{ name: 'atelier' }"><strong>Plus d'informations</strong></router-link>&nbsp;⬅️</span>
     </div> -->
 
-    <h2 v-if="quizzesSpotlighted && quizzesSpotlighted.length > 0" class="text-align-left">
+    <h2 v-if="quizsSpotlighted && quizsSpotlighted.length > 0" class="text-align-left">
       ✨&nbsp;{{ $t('messages.recentQuizs') }}
     </h2>
-    <div class="row" v-if="quizzesSpotlighted && quizzesSpotlighted.length > 0" id="quiz-list">
-      <div class="col-sm-4" v-for="quiz in quizzesSpotlighted" :key="quiz.id">
+    <div class="row" v-if="quizsSpotlighted && quizsSpotlighted.length > 0" id="quiz-list">
+      <div class="col-sm-4" v-for="quiz in quizsSpotlighted" :key="quiz.id">
         <QuizCard :quiz="quiz" />
       </div>
       <div class="col-sm-4 my-auto">
         <router-link class="no-decoration" :to="{ name: 'quiz-list' }">
             <button id="all-quizs-btn" class="btn btn-primary btn-lg">
             🕹&nbsp;<strong>{{ $t('messages.allQuizs') }}</strong>&nbsp;
-            <small>({{ quizzesPublishedCount }})</small>
+            <small>({{ quizsPublishedCount }})</small>
           </button>
         </router-link>
       </div>
@@ -79,7 +79,7 @@
 
     <div class="alert alert-primary" role="alert">
       <i>
-        {{ $t('home.thereIsCurrently') }} <strong>{{ questionsCount }} questions</strong> {{ $t('words.et') }} <strong>{{ quizzesPublishedCount }} quiz</strong>.
+        {{ $t('home.thereIsCurrently') }} <strong>{{ questionsCount }} questions</strong> {{ $t('words.et') }} <strong>{{ quizsPublishedCount }} quiz</strong>.
         <router-link :to="{ name: 'about' }">{{ $t('home.helpUs') }}</router-link> {{ $t('home.toAddMore') }}{{ $t('words.exclamationMark') }}
       </i>
     </div>
@@ -146,14 +146,14 @@ export default {
   },
 
   computed: {
-    quizzesPublishedCount() {
-      return this.$store.state.quizzesPublished.length;
+    quizsPublishedCount() {
+      return this.$store.state.quizsPublished.length;
     },
     questionsCount() {
       return this.$store.state.questionsValidated.length;
     },
-    quizzesSpotlighted() {
-      return this.$store.state.quizzesSpotlighted;
+    quizsSpotlighted() {
+      return this.$store.state.quizsSpotlighted;
     },
     question_answer_count_formatted() {
       return Intl.NumberFormat('fr-FR').format(this.$store.state.stats.question_answer_count || 250000);

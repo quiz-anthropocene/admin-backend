@@ -203,7 +203,7 @@ export default {
         .filter((qr) => (qr.status === constants.QUIZ_RELATIONSHIP_SIMILAR) || (qr.status === constants.QUIZ_RELATIONSHIP_TWIN));
       if (similarQuizRelationships.length) {
         const similarQuizRelationshipsIdList = similarQuizRelationships.map((qr) => ((qr.to_quiz === this.quiz.id) ? qr.from_quiz : qr.to_quiz));
-        return this.$store.getters.getQuizzesByIdList(similarQuizRelationshipsIdList);
+        return this.$store.getters.getQuizsByIdList(similarQuizRelationshipsIdList);
       }
       return null;
     },

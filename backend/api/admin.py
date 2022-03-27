@@ -28,9 +28,9 @@ class QuestionResource(resources.ModelResource):
         widget=ForeignKeyWidget(Category, field="name"),
     )
     tags = fields.Field(column_name="tags", attribute="tags", widget=ManyToManyWidget(Tag, field="name"))
-    quizzes = fields.Field(
-        column_name="quizzes",
-        attribute="quizzes",
+    quizs = fields.Field(
+        column_name="quizs",
+        attribute="quizs",
         widget=ManyToManyWidget(Quiz, field="name"),
     )
 
@@ -125,7 +125,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         "author",
         "validation_status",
         "language",
-        # "quizzes",
+        # "quizs",
         "tags",
     )
     ordering = ("-id",)  # "answer_count_agg", "answer_success_rate",

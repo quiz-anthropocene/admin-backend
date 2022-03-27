@@ -34,7 +34,7 @@ class Quiz(models.Model):
     questions = models.ManyToManyField(
         Question,
         through="QuizQuestion",
-        related_name="quizzes",
+        related_name="quizs",
         help_text="Les questions du quiz",
     )
     tags = models.ManyToManyField(
@@ -219,7 +219,7 @@ class Quiz(models.Model):
     dislike_count_agg.fget.short_description = "# Dislike"
 
     def clean(self):
-        # > only run on existing (Quiz query won't work on new quizzes)
+        # > only run on existing (Quiz query won't work on new quizs)
         if getattr(self, "id"):
             # get quiz
             try:

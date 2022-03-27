@@ -5,10 +5,12 @@ from django.core.management import BaseCommand, call_command
 from django.db import connection
 
 from api import utilities
-from api.models import Question, Quiz, QuizQuestion, QuizRelationship, Tag
+from api.models import Question
 from categories.models import Category
 from core.models import Configuration
 from glossary.models import GlossaryItem
+from quizs.models import Quiz, QuizQuestion, QuizRelationship
+from tags.models import Tag
 
 
 APP_NAME = "api"
@@ -16,7 +18,7 @@ CONFIGURATION_FILE_PATH = "../data/configuration.yaml"
 CATEGORIES_FILE_PATH = "../data/categories.yaml"
 TAGS_FILE_PATH = "../data/tags.yaml"
 QUESTIONS_FILE_PATH = "../data/questions.yaml"
-QUIZZES_FILE_PATH = "../data/quizzes.yaml"
+QUIZS_FILE_PATH = "../data/quizs.yaml"
 QUIZ_QUESTIONS_FILE_PATH = "../data/quiz-questions.yaml"
 QUIZ_RELATIONSHIPS_FILE_PATH = "../data/quiz-relationships.yaml"
 GLOSSARY_FILE_PATH = "../data/ressources-glossaire.yaml"
@@ -36,7 +38,7 @@ class Command(BaseCommand):
         (Category, CATEGORIES_FILE_PATH),
         (Tag, TAGS_FILE_PATH),
         (Question, QUESTIONS_FILE_PATH),
-        (Quiz, QUIZZES_FILE_PATH),
+        (Quiz, QUIZS_FILE_PATH),
         (QuizQuestion, QUIZ_QUESTIONS_FILE_PATH),
         (QuizRelationship, QUIZ_RELATIONSHIPS_FILE_PATH),
         (GlossaryItem, GLOSSARY_FILE_PATH),

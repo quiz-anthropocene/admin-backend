@@ -135,8 +135,8 @@ class QuizModelTest(TestCase):
 
     def test_quiz_questions_querying(self):
         # question --> quiz
-        self.assertEqual(self.question_1.quizzes.count(), 1)
-        self.assertEqual(type(self.question_1.quizzes.first()), Quiz)
+        self.assertEqual(self.question_1.quizs.count(), 1)
+        self.assertEqual(type(self.question_1.quizs.first()), Quiz)
         self.assertEqual(self.question_1.quizquestion_set.count(), 1)
         self.assertEqual(type(self.question_1.quizquestion_set.first()), QuizQuestion)
         self.assertRaises(AttributeError, getattr, self.question_1, "quiz_set")
