@@ -14,12 +14,13 @@ from import_export.admin import ImportMixin
 from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
 
 from api import constants as api_constants, utilities_notion
-from api.models import Question, Quiz, QuizQuestion, QuizRelationship, Tag
+from api.models import Question, Quiz, QuizQuestion, QuizRelationship
 from categories.models import Category
 from core.admin import ExportMixin, admin_site
 from core.models import Configuration
 from stats import constants
 from stats.models import QuizAnswerEvent, QuizFeedbackEvent
+from tags.models import Tag
 
 
 class QuestionResource(resources.ModelResource):
@@ -236,23 +237,6 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
 
         # Call the superclass changelist_view to render the page
         return super().changelist_view(request, extra_context=extra_context)
-
-
-class TagAdmin(ExportMixin, admin.ModelAdmin):
-    list_display = (
-        "id",
-        "name",
-        "question_count",
-        "quiz_count",
-    )
-    search_fields = ("name",)
-    ordering = ("name",)
-    actions = [
-        "export_as_csv",
-        "export_as_json",
-        "export_as_yaml",
-        "export_all_tag_as_yaml",
-    ]
 
 
 class QuizQuestionInline(admin.StackedInline):
@@ -537,7 +521,6 @@ class QuizRelationshipAdmin(ExportMixin, admin.ModelAdmin):
 
 
 admin_site.register(Question, QuestionAdmin)
-admin_site.register(Tag, TagAdmin)
 admin_site.register(Quiz, QuizAdmin)
 admin_site.register(QuizRelationship, QuizRelationshipAdmin)
 

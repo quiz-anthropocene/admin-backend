@@ -32,6 +32,7 @@ class Command(BaseCommand):
     help = """Initialize database with the files in the /data folder"""
 
     MODELS_LIST = [
+        # (Configuration, CONFIGURATION_FILE_PATH),
         (Category, CATEGORIES_FILE_PATH),
         (Tag, TAGS_FILE_PATH),
         (Question, QUESTIONS_FILE_PATH),

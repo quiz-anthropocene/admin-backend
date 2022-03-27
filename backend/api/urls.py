@@ -6,6 +6,7 @@ from api import views
 from api.categories.views import CategoryViewSet
 from api.contributions.views import ContributionViewSet
 from api.glossary.views import GlossaryViewSet
+from api.tags.views import TagViewSet
 from api.views import (
     QuestionDifficultyViewSet,
     QuestionLanguageViewSet,
@@ -13,7 +14,6 @@ from api.views import (
     QuestionValidationStatusViewSet,
     QuestionViewSet,
     QuizViewSet,
-    TagViewSet,
 )
 
 
