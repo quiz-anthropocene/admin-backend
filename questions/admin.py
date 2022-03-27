@@ -110,9 +110,9 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         # "has_answer_accessible_url",
         # "has_answer_scientific_url",
         # "has_answer_image_url",
-        "answer_count_agg",
-        "answer_success_count_agg",
-        "answer_success_rate",
+        # "answer_count_agg",
+        # "answer_success_count_agg",
+        # "answer_success_rate",
     )
     search_fields = (
         "id",
@@ -148,7 +148,11 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         # "updated_at",
     )
 
-    change_list_template = "admin/api/question/change_list_with_import.html"
+    change_list_template = "admin/questions/question/change_list_with_import.html"
+
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        return qs.select_related("category").prefetch_related("tags", "quizs")
 
     def has_add_permission(self, request, obj=None):
         return False
@@ -199,7 +203,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
 
     def changelist_view(self, request, extra_context=None):
         """
-        Corresponding template in templates/admin/api/question/change_list_with_import.html
+        Corresponding template in questions/templates/admin/questions/question/change_list_with_import.html
         """
         notion_questions_import_scope_choices = [
             (
