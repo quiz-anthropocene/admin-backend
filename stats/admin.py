@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.core import management
 from django.core.serializers.json import DjangoJSONEncoder
 
+from contributions.models import Contribution
 from core.admin import ExportMixin, admin_site
 from core.models import Configuration
 from stats import constants
@@ -288,6 +289,24 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
             "current_field": current_field,
             "scale_choice_list": constants.AGGREGATION_SCALE_CHOICE_LIST,
             "current_scale": current_scale,
+            "question_answer_count": DailyStat.objects.agg_count("question_answer_count"),
+            "question_answer_count_last_30_days": DailyStat.objects.agg_count(
+                "question_answer_count", since="last_30_days"
+            ),
+            "quiz_answer_count": DailyStat.objects.agg_count("quiz_answer_count"),
+            "quiz_answer_count_last_30_days": DailyStat.objects.agg_count("quiz_answer_count", since="last_30_days"),
+            "question_feedback_count": DailyStat.objects.agg_count("question_feedback_count"),
+            "question_feedback_count_last_30_days": DailyStat.objects.agg_count(
+                "question_feedback_count", since="last_30_days"
+            ),
+            "quiz_feedback_count": DailyStat.objects.agg_count("quiz_feedback_count"),
+            "quiz_feedback_count_last_30_days": DailyStat.objects.agg_count(
+                "quiz_feedback_count", since="last_30_days"
+            ),
+            "contribution_count": Contribution.objects.exclude(type="erreur application").count(),
+            "contribution_count_last_30_days": Contribution.objects.exclude(type="erreur application")
+            .last_30_days()
+            .count(),
             "since_date_min": constants.AGGREGATION_SINCE_DATE_DEFAULT,
             "current_since_date": current_since_date,
         }
