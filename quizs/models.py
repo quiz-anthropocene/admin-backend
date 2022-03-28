@@ -172,7 +172,7 @@ class Quiz(models.Model):
 
     @property
     def answer_count_agg(self) -> int:
-        return self.stats.count()
+        return self.agg_stats.answer_count + self.stats.count()
 
     @property
     def duration_average_seconds(self) -> int:
@@ -200,11 +200,11 @@ class Quiz(models.Model):
 
     @property
     def like_count_agg(self) -> int:
-        return self.feedbacks.liked().count()
+        return self.agg_stats.like_count + self.feedbacks.liked().count()
 
     @property
     def dislike_count_agg(self) -> int:
-        return self.feedbacks.disliked().count()
+        return self.agg_stats.dislike_count + self.feedbacks.disliked().count()
 
     # Admin
     tags_list_string.fget.short_description = "Tag(s)"
