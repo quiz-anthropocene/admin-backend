@@ -94,10 +94,10 @@ def quiz_detail_stats():
 def answer_stats():
     # total question/quiz answer/feedback count
     question_answer_count = DailyStat.objects.agg_count("question_answer_count")
-    quiz_answer_count = QuizAnswerEvent.objects.count()
+    quiz_answer_count = DailyStat.objects.agg_count("quiz_answer_count")
     # last 30 days
     question_answer_count_last_30_days = DailyStat.objects.agg_count("question_answer_count", since="last_30_days")
-    quiz_answer_count_last_30_days = QuizAnswerEvent.objects.last_30_days().count()
+    quiz_answer_count_last_30_days = DailyStat.objects.agg_count("quiz_answer_count", since="last_30_days")
     # # current month
     # current_month_iso_number = date.today().month
     # question_answer_count_current_month = QuestionAnswerEvent.objects.filter(
@@ -153,14 +153,22 @@ def answer_stats():
 
 
 def contribution_stats():
+    # total
     question_feedback_count = DailyStat.objects.agg_count("question_feedback_count")
-    quiz_feedback_count = QuizFeedbackEvent.objects.count()
-    contribution_count = Contribution.objects.count()
+    quiz_feedback_count = DailyStat.objects.agg_count("quiz_feedback_count")
+    contribution_count = Contribution.objects.exclude(type="erreur application").count()
+    # last 30 days
+    question_feedback_count_last_30_days = DailyStat.objects.agg_count("question_feedback_count", since="last_30_days")
+    quiz_feedback_count_last_30_days = DailyStat.objects.agg_count("quiz_feedback_count", since="last_30_days")
+    contribution_count_last_30_days = Contribution.objects.exclude(type="erreur application").last_30_days().count()
 
     return {
         "question_feedback_count": question_feedback_count,
         "quiz_feedback_count": quiz_feedback_count,
         "contribution_count": contribution_count,
+        "question_feedback_count_last_30_days": question_feedback_count_last_30_days,
+        "quiz_feedback_count_last_30_days": quiz_feedback_count_last_30_days,
+        "contribution_count_last_30_days": contribution_count_last_30_days,
     }
 
 

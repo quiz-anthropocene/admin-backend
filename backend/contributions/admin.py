@@ -12,6 +12,7 @@ class ContributionAdmin(ExportMixin, admin.ModelAdmin):
         "description",
         "created",
     )
+    list_filter = ("type",)
 
     def get_readonly_fields(self, request, obj=None):
         return [f.name for f in obj._meta.fields]
