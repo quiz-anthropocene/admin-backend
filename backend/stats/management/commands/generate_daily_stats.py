@@ -4,6 +4,7 @@ from django.utils import timezone
 
 from core.models import Configuration
 from questions.models import Question
+from quizs.models import Quiz
 from stats.models import (  # QuestionAggStat,; QuizFeedbackEvent,
     DailyStat,
     QuestionAnswerEvent,
@@ -69,7 +70,6 @@ class Command(BaseCommand):
 
             # loop on unique question ids
             for question_id in question_id_list:
-                print(question_id)
                 question = Question.objects.get(pk=question_id)
                 question_id_df = question_stats_df[question_stats_df["question_id"] == question_id]
                 # # get number of stats
@@ -201,6 +201,7 @@ class Command(BaseCommand):
     def sumup_quiz_answer_events(self):
         """
         loop on QuizAnswerEvent
+        - update QuizAggStat 'answer_count'
         - update DailyStat
             - global 'quiz_answer_count'
             - hour split 'quiz_answer_count'
@@ -215,6 +216,21 @@ class Command(BaseCommand):
         print(f"{quiz_stats_df.shape[0]} new answers")
 
         if quiz_stats_df.shape[0]:
+            # aggregate by question_id
+            quiz_id_list = quiz_stats_df["quiz_id"].unique()
+            print(f"{len(quiz_id_list)} unique quizs")
+
+            # loop on unique quiz ids
+            for quiz_id in quiz_id_list:
+                quiz = Quiz.objects.get(pk=quiz_id)
+                quiz_id_df = quiz_stats_df[quiz_stats_df["quiz_id"] == quiz_id]
+                # # get number of stats
+                quiz_id_answer_count = quiz_id_df.shape[0]
+                # update quiz agg_stats
+                quiz.agg_stats.answer_count += quiz_id_answer_count
+                # save question agg_stats
+                quiz.agg_stats.save()
+
             # aggregate by day / hour
             quiz_stats_df["created_date"] = [d.date() for d in quiz_stats_df["created"]]
             quiz_stats_df["created_hour"] = [d.time().hour for d in quiz_stats_df["created"]]
