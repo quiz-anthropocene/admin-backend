@@ -5,11 +5,12 @@ from django.utils import timezone
 from core.models import Configuration
 from questions.models import Question
 from quizs.models import Quiz
-from stats.models import (  # QuestionAggStat,; QuizFeedbackEvent,
+from stats.models import (  # QuestionAggStat,; QuizAggStat,
     DailyStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
     QuizAnswerEvent,
+    QuizFeedbackEvent,
 )
 
 
@@ -42,7 +43,7 @@ class Command(BaseCommand):
         self.cleanup_question_answer_events()
         self.cleanup_question_feedback_events()
         self.sumup_quiz_answer_events()
-        # self.cleanup_quiz_feedback_events()
+        self.sumup_quiz_feedback_events()
 
         # update configuration
         configuration.daily_stat_last_aggregated = timezone.now()
@@ -216,7 +217,7 @@ class Command(BaseCommand):
         print(f"{quiz_stats_df.shape[0]} new answers")
 
         if quiz_stats_df.shape[0]:
-            # aggregate by question_id
+            # aggregate by quiz_id
             quiz_id_list = quiz_stats_df["quiz_id"].unique()
             print(f"{len(quiz_id_list)} unique quizs")
 
@@ -228,7 +229,7 @@ class Command(BaseCommand):
                 quiz_id_answer_count = quiz_id_df.shape[0]
                 # update quiz agg_stats
                 quiz.agg_stats.answer_count += quiz_id_answer_count
-                # save question agg_stats
+                # save quiz agg_stats
                 quiz.agg_stats.save()
 
             # aggregate by day / hour
@@ -260,10 +261,66 @@ class Command(BaseCommand):
                 # save daily stat
                 daily_stat.save()
 
-    def cleanup_quiz_feedback_events(self):
+    def sumup_quiz_feedback_events(self):
         """
-        cleanup QuizFeedbackEvent
+        loop on QuizFeedbackEvent
+        - update QuizAggStat 'like_count' and 'dislike_count'
+        - update DailyStat
+            - global 'quiz_feedback_count'
+            - hour split 'quiz_feedback_count'
 
-        TODO: 'quiz_feedback_count' field was added, need to update past instances
+        WARNING: QuizFeedbackEvent aren't deleted, so run only once !
+        TODO: how to keep score ? how to delete QuizFeedbackEvent ?
         """
-        pass
+        print("=== starting QuizFeedbackEvent sumup")
+
+        quiz_feedbacks = QuizFeedbackEvent.objects.filter(created__gte=configuration.daily_stat_last_aggregated)
+        quiz_feedbacks_df = pd.DataFrame.from_records(quiz_feedbacks.values())
+        print(f"{quiz_feedbacks_df.shape[0]} new answers")
+
+        if quiz_feedbacks_df.shape[0]:
+            # aggregate by quiz_id
+            quiz_id_list = quiz_feedbacks_df["quiz_id"].unique()
+            print(f"{len(quiz_id_list)} unique quizs")
+
+            # loop on unique quiz ids
+            for quiz_id in quiz_id_list:
+                quiz = Quiz.objects.get(pk=quiz_id)
+                quiz_id_df = quiz_feedbacks_df[quiz_feedbacks_df["quiz_id"] == quiz_id]
+                # get number of feedbacks per type
+                quiz_id_like_count = quiz_id_df[quiz_id_df["choice"] == "like"].shape[0]
+                quiz_id_dislike_count = quiz_id_df[quiz_id_df["choice"] == "dislike"].shape[0]
+                # update quiz agg_stats
+                quiz.agg_stats.like_count += quiz_id_like_count
+                quiz.agg_stats.dislike_count += quiz_id_dislike_count
+                # save quiz agg_stats
+                quiz.agg_stats.save()
+
+            # aggregate by day / hour
+            quiz_feedbacks_df["created_date"] = [d.date() for d in quiz_feedbacks_df["created"]]
+            quiz_feedbacks_df["created_hour"] = [d.time().hour for d in quiz_feedbacks_df["created"]]
+            # get list of unique dates
+            date_list = quiz_feedbacks_df["created_date"].unique()
+            print(f"{len(date_list)} unique dates")
+
+            # loop on unique dates
+            for date_unique in date_list:
+                daily_stat, created = DailyStat.objects.get_or_create(date=date_unique)
+                date_df = quiz_feedbacks_df[quiz_feedbacks_df["created_date"] == date_unique]
+                # get number of feedbacks
+                date_stat_count = date_df.shape[0]
+                # update daily stat
+                daily_stat.quiz_feedback_count += date_stat_count
+
+                # get list of unique date hours
+                date_hour_list = date_df["created_hour"].unique()
+                # loop on unique hours
+                for date_hour_unique in date_hour_list:
+                    date_hour_df = date_df[date_df["created_hour"] == date_hour_unique]
+                    # get number of feedbacks
+                    date_hour_stat_count = date_hour_df.shape[0]
+                    # update daily stat hour count
+                    daily_stat.hour_split[str(date_hour_unique)]["quiz_feedback_count"] += date_hour_stat_count
+
+                # save daily stat
+                daily_stat.save()

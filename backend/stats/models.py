@@ -91,6 +91,7 @@ class QuizAggStat(models.Model):
     answer_count = models.PositiveIntegerField(default=0, help_text="Le nombre de réponses")
     like_count = models.PositiveIntegerField(default=0, help_text="Le nombre de likes")
     dislike_count = models.PositiveIntegerField(default=0, help_text="Le nombre de dislikes")
+    # answer_success_count_split = models.JSONField(help_text="Les statistiques par nombre de réponses correctes")
 
 
 class QuizAnswerEventQuerySet(models.QuerySet):
@@ -275,6 +276,7 @@ class DailyStat(models.Model):
         help_text="Les statistiques par heure",
     )
     created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de la stat journalière")
+    # updated = models.DateField(auto_now=True)
 
     objects = DailyStatManager()
 
