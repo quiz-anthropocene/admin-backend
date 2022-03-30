@@ -62,7 +62,7 @@ def quiz_detail_stats():
         quiz_detail_stat["quiz_id"] = quiz.id
 
         quiz_answer_events = QuizAnswerEvent.objects.for_quiz(quiz.id)
-        quiz_detail_stat["answer_count"] = quiz_answer_events.count()
+        quiz_detail_stat["answer_count"] = quiz.agg_stats.answer_count + quiz_answer_events.count()
         quiz_detail_stat["answer_count_last_30_days"] = quiz_answer_events.filter(
             created__date__gte=(date.today() - timedelta(days=30))
         ).count()
@@ -70,8 +70,12 @@ def quiz_detail_stats():
             created__date__gte=(date.today() - timedelta(days=7))
         ).count()
 
-        quiz_detail_stat["like_count"] = QuizFeedbackEvent.objects.for_quiz(quiz.id).liked().count()
-        quiz_detail_stat["dislike_count"] = QuizFeedbackEvent.objects.for_quiz(quiz.id).disliked().count()
+        quiz_detail_stat["like_count"] = (
+            quiz.agg_stats.like_count + QuizFeedbackEvent.objects.for_quiz(quiz.id).liked().count()
+        )
+        quiz_detail_stat["dislike_count"] = (
+            quiz.agg_stats.dislike_count + QuizFeedbackEvent.objects.for_quiz(quiz.id).disliked().count()
+        )
 
         quiz_detail_stat["answer_success_count_split"] = []
         answer_success_count_agg = (
