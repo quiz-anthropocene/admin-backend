@@ -16,7 +16,7 @@ class GlossaryItem(models.Model):
         ordering = ["name"]
 
     #     constraints = [
-    #         models.UniqueConstraint(fields=["name"], name="unique glossary name")
+    #         models.UniqueConstraint(fields=["name"], name="glossary_name_unique")
     #     ]
 
     def __str__(self):

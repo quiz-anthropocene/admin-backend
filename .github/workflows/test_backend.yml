@@ -18,7 +18,7 @@ jobs:
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: know_your_planet
+          POSTGRES_DB: quiz_anthropocene
         ports:
           - 5432:5432
         # Set health checks to wait until postgres has started
@@ -92,7 +92,7 @@ jobs:
           DEBUG: True
           SECRET_KEY: github_workflow
           HOST: localhost
-          DATABASE_URL: postgres://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/know_your_planet
+          DATABASE_URL: postgres://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/quiz_anthropocene
           SESSION_COOKIE_SECURE: "False"
           CSRF_COOKIE_SECURE: "False"
           SECURE_HSTS_SECONDS: 0

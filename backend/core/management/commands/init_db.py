@@ -13,7 +13,7 @@ from quizs.models import Quiz, QuizQuestion, QuizRelationship
 from tags.models import Tag
 
 
-APP_NAME = "api"
+APP_LIST = ["core", "categories", "tags", "questions", "quizs", "glossary"]
 CONFIGURATION_FILE_PATH = "../data/configuration.yaml"
 CATEGORIES_FILE_PATH = "../data/categories.yaml"
 TAGS_FILE_PATH = "../data/tags.yaml"
@@ -83,10 +83,11 @@ class Command(BaseCommand):
         https://stackoverflow.com/a/44113124
         """
         print("Resetting SQL sequences...")
-        out = StringIO()
-        call_command("sqlsequencereset", APP_NAME, stdout=out, no_color=True)
-        sql = out.getvalue()
-        with connection.cursor() as cursor:
-            cursor.execute(sql)
-        out.close()
+        for app_name in APP_LIST:
+            out = StringIO()
+            call_command("sqlsequencereset", app_name, stdout=out, no_color=True)
+            sql = out.getvalue()
+            with connection.cursor() as cursor:
+                cursor.execute(sql)
+            out.close()
         print("Done")

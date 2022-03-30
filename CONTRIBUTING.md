@@ -123,9 +123,9 @@ Voir dans le dossier `/data/architecture`
 - Installez [PostgreSQL](https://www.postgresql.org)
 - Créez la base de donnée
     ```
-    psql -c "CREATE USER know_your_planet_team WITH PASSWORD 'password'"
-    psql -c "CREATE DATABASE know_your_planet OWNER know_your_planet_team"
-    psql -c "ALTER USER know_your_planet_team CREATEDB"
+    psql -c "CREATE USER quiz_anthropocene_team WITH PASSWORD 'password'"
+    psql -c "CREATE DATABASE quiz_anthropocene OWNER quiz_anthropocene_team"
+    psql -c "ALTER USER quiz_anthropocene_team CREATEDB"
     ```
 - Lancez les migrations
     ```

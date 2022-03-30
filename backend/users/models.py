@@ -46,6 +46,8 @@ class User(AbstractUser):
     created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
     updated = models.DateTimeField(verbose_name="Date de mise à jour", auto_now=True)
 
+    objects = UserManager()
+
     class Meta:
         verbose_name = "Utilisateur"
         verbose_name_plural = "Utilisateurs"
