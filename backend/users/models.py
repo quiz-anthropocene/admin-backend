@@ -5,17 +5,23 @@ from django.utils import timezone
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, password, **extra_fields):
+    def _create_user(self, email, password, **extra_fields):
         """
         Create and save a User with the given email and password.
         """
         if not email:
             raise ValueError("Il manque l'adresse e-mail")
+
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
-        user.save()
+        user.save(using=self._db)
         return user
+
+    def create_user(self, email, password, **extra_fields):
+        extra_fields.setdefault("is_staff", False)
+        extra_fields.setdefault("is_superuser", False)
+        return self._create_user(email, password, **extra_fields)
 
     def create_superuser(self, email, password, **extra_fields):
         extra_fields.setdefault("is_staff", True)
@@ -27,7 +33,7 @@ class UserManager(BaseUserManager):
         if extra_fields.get("is_superuser") is not True:
             raise ValueError("Un superuser doit avoir is_superuser=True.")
 
-        return self.create_user(email, password, **extra_fields)
+        return self._create_user(email, password, **extra_fields)
 
 
 class User(AbstractUser):

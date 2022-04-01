@@ -9,15 +9,6 @@ from django.views.decorators.http import require_http_methods
 out = StringIO()
 
 
-def app_home(request):
-    return HttpResponse(
-        """
-        <p>Quiz de l'Anthropocène</p>
-        <p>La documentation de l'API se trouve à l'adresse <a href="/api/docs/">/api/docs/</a></p>
-    """
-    )
-
-
 @require_http_methods(["GET"])
 def action_aggregate_stats(request):
     """
