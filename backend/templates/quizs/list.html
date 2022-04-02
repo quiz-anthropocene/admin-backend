@@ -6,8 +6,12 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-12 col-lg-8">
+        <div class="col-12">
             <h1>Tous les quizs <span class="fs-3 text-muted">{{ quizs.count }}</span></h1>
+        </div>
+    </div>
+    <div class="row overflow-scroll">
+        <div class="col-12">
             {% render_table table %}
         </div>
     </div>

@@ -116,3 +116,11 @@ def update_frontend_last_updated_datetime(file_content, new_datetime):
     Update frontend file with regex
     """
     return re.sub("(?<=DATA_LAST_UPDATED_DATETIME: ')(.+?)(?=',)", new_datetime, file_content)
+
+
+def get_choice_key(choices, value):
+    choices = dict(choices)
+    for key in choices:
+        if choices[key] == value:
+            return key
+    return None
