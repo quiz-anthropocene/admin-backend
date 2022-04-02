@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 col-lg-8">
-            <h1><strong>Administration</strong></h1>
+            <h1>Administration</h1>
 
             {% if user.is_authenticated %}
                 <div class="row">
@@ -14,17 +14,8 @@
                         <p>Bonjour {{ user.first_name }} ! {{ user.email }}</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <a href="{% url 'auth:logout' %}" class="btn btn-primary btn-block">
-                            <span>Se déconnecter</span>
-                        </a>
-                    </div>
-                </div>
             {% else %}
-                <a href="{% url 'auth:login' %}" class="btn btn-primary btn-block">
-                    <span>Se connecter</span>
-                </a>
+                <p>Vous n'êtes pas connecté</p>
             {% endif %}
         </div>
     </div>
