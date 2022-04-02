@@ -99,6 +99,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                # custom
+                "core.utils.settings_context_processors.expose_settings",
             ],
         },
     },
