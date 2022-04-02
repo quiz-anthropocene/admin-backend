@@ -7,7 +7,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll">
                 {% if user.is_authenticated %}
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;"></ul>
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a href="{% url 'questions:list' %}" class="nav-link">Questions</a>
+                        </li>
+                    </ul>
                     <a href="{% url 'auth:logout' %}" class="btn btn-primary btn-block">
                         <span>Se déconnecter</span>
                     </a>
