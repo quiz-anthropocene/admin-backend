@@ -9,6 +9,7 @@ urlpatterns = [
     path("", include("www.pages.urls")),
     path("accounts/", include("www.auth.urls")),
     path("questions/", include("www.questions.urls")),
+    path("quizs/", include("www.quizs.urls")),
     path("admin/", admin_site.urls),
     path("api/", include("api.urls")),
     path("stats/", include("stats.urls")),
