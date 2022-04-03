@@ -28,7 +28,7 @@ class Tag(models.Model):
         verbose_name = "Tag"
         verbose_name_plural = "Tags"
         ordering = ["pk"]
-        constraints = [models.UniqueConstraint(fields=["name"], name="unique tag name")]
+        constraints = [models.UniqueConstraint(fields=["name"], name="tag_name_unique")]
 
     def __str__(self):
         return f"{self.name}"

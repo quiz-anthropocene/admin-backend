@@ -276,12 +276,12 @@ class DailyStat(models.Model):
         help_text="Les statistiques par heure",
     )
     created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de la stat journalière")
-    # updated = models.DateField(auto_now=True)
+    updated = models.DateField(auto_now=True)
 
     objects = DailyStatManager()
 
     class Meta:
-        constraints = [models.UniqueConstraint(fields=["date"], name="unique stat date")]
+        constraints = [models.UniqueConstraint(fields=["date"], name="stat_date_unique")]
 
     def __str__(self):
         return f"{self.date}"
