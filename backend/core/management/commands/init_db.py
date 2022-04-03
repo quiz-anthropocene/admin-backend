@@ -13,7 +13,6 @@ from quizs.models import Quiz, QuizQuestion, QuizRelationship
 from tags.models import Tag
 
 
-APP_LIST = ["core", "categories", "tags", "questions", "quizs", "glossary"]
 CONFIGURATION_FILE_PATH = "../data/configuration.yaml"
 CATEGORIES_FILE_PATH = "../data/categories.yaml"
 TAGS_FILE_PATH = "../data/tags.yaml"
@@ -34,14 +33,14 @@ class Command(BaseCommand):
     help = """Initialize database with the files in the /data folder"""
 
     MODELS_LIST = [
-        # (Configuration, CONFIGURATION_FILE_PATH),
-        (Category, CATEGORIES_FILE_PATH),
-        (Tag, TAGS_FILE_PATH),
-        (Question, QUESTIONS_FILE_PATH),
-        (Quiz, QUIZS_FILE_PATH),
-        (QuizQuestion, QUIZ_QUESTIONS_FILE_PATH),
-        (QuizRelationship, QUIZ_RELATIONSHIPS_FILE_PATH),
-        (GlossaryItem, GLOSSARY_FILE_PATH),
+        # ("core", Configuration, CONFIGURATION_FILE_PATH),
+        ("categories", Category, CATEGORIES_FILE_PATH),
+        ("tags", Tag, TAGS_FILE_PATH),
+        ("questions", Question, QUESTIONS_FILE_PATH),
+        ("quizs", Quiz, QUIZS_FILE_PATH),
+        ("quizs", QuizQuestion, QUIZ_QUESTIONS_FILE_PATH),
+        ("quizs", QuizRelationship, QUIZ_RELATIONSHIPS_FILE_PATH),
+        ("glossary", GlossaryItem, GLOSSARY_FILE_PATH),
     ]
 
     def add_arguments(self, parser):
@@ -57,10 +56,10 @@ class Command(BaseCommand):
         # delete + add data
         self.init_configuration_table()
         for model_item in self.MODELS_LIST:
-            self.init_model_table(model_item[0], model_item[1])
-        if options["with-sql-reset"]:
-            # reset table indexes
-            self.reset_sql_squences()
+            self.init_model_table(model_item[1], model_item[0])
+            if options["with-sql-reset"]:
+                # reset table indexes
+                self.reset_sql_squences(model_item[0])
 
     def init_configuration_table(self):
         Configuration.objects.all().delete()
@@ -77,17 +76,16 @@ class Command(BaseCommand):
         utilities.load_model_data_to_db(model, data)
         print(f"{model._meta.object_name}:", model.objects.count(), "objects")
 
-    def reset_sql_squences(self):
+    def reset_sql_squences(self, app_name):
         """
         https://docs.djangoproject.com/en/3.1/ref/django-admin/#sqlsequencereset
         https://stackoverflow.com/a/44113124
         """
         print("Resetting SQL sequences...")
-        for app_name in APP_LIST:
-            out = StringIO()
-            call_command("sqlsequencereset", app_name, stdout=out, no_color=True)
-            sql = out.getvalue()
-            with connection.cursor() as cursor:
-                cursor.execute(sql)
-            out.close()
+        out = StringIO()
+        call_command("sqlsequencereset", app_name, stdout=out, no_color=True)
+        sql = out.getvalue()
+        with connection.cursor() as cursor:
+            cursor.execute(sql)
+        out.close()
         print("Done")
