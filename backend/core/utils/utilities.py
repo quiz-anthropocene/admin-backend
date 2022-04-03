@@ -5,6 +5,10 @@ from django.apps import apps
 from django.core import serializers
 
 
+DATE_FORMAT = "%Y-%m-%d"
+TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%S"
+
+
 def serialize_queryset_to_yaml(queryset, flat=False, stream=None):
     if not flat:
         return serializers.serialize("yaml", list(queryset), allow_unicode=True, stream=stream)
@@ -73,7 +77,14 @@ def load_model_data_to_db(model, data):
         if "questions" in item:
             question_ids = item["questions"]
             del item["questions"]
+        # save !
         instance = model.objects.create(**item)
+        # timestamps aren't set correctly
+        if "created" in item:
+            model.objects.filter(id=instance.id).update(created=item["created"])
+        if "updated" in item:
+            model.objects.filter(id=instance.id).update(updated=item["updated"])
+        # set M2M
         if len(tag_ids):
             instance.tags.set(tag_ids)
         if len(question_ids):
