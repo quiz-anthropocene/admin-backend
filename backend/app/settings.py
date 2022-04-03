@@ -199,6 +199,13 @@ AUTH_USER_MODEL = "users.User"
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 
+# Django Tables2
+# https://django-tables2.readthedocs.io/
+# ------------------------------------------------------------------------------
+
+DJANGO_TABLES2_PAGE_RANGE = 5
+
+
 # Django REST Framework (DRF)
 # https://www.django-rest-framework.org/
 # ------------------------------------------------------------------------------

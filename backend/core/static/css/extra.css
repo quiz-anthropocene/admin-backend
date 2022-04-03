@@ -1,3 +1,22 @@
 .font-size-small {
     font-size: small;
 }
+
+div.table-container > table > thead > tr > th {
+    background-color: #0d6efd;
+}
+div.table-container > table > thead > tr > th,
+div.table-container > table > thead > tr > th > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+div.table-container > table.header-fixed > thead > tr > th {
+    background-color: #0d6efd;
+    position: sticky;
+    top: 0;
+}
+
+div.table-container > nav > ul {
+    margin-top: 1rem;
+}

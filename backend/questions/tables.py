@@ -6,6 +6,7 @@ from questions.models import Question
 
 
 class QuestionTable(tables.Table):
+    text = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
     type = ChoiceColumn()
     category = ChoiceColumn()
     tags = tables.ManyToManyColumn(
