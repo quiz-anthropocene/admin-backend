@@ -56,7 +56,7 @@ class Command(BaseCommand):
         # delete + add data
         self.init_configuration_table()
         for model_item in self.MODELS_LIST:
-            self.init_model_table(model_item[1], model_item[0])
+            self.init_model_table(model_item[1], model_item[2])
             if options["with-sql-reset"]:
                 # reset table indexes
                 self.reset_sql_squences(model_item[0])
