@@ -2,6 +2,23 @@
     font-size: small;
 }
 
+[aria-expanded="false"] #collapse-up-ico {
+    display: none;
+}
+[aria-expanded="false"] #collapse-down-ico {
+    display: inline;
+}
+[aria-expanded="true"] #collapse-up-ico {
+    display: inline;
+}
+[aria-expanded="true"] #collapse-down-ico {
+    display: none;
+}
+
+
+
+/* Table */
+
 div.table-container > table > thead > tr > th {
     background-color: #0d6efd;
 }
@@ -19,4 +36,12 @@ div.table-container > table.header-fixed > thead > tr > th {
 
 div.table-container > nav > ul {
     margin-top: 1rem;
+}
+
+
+/* Table filters */
+
+form.collapse {
+    background-color: #FBFBFB;
+    padding: 1rem;
 }
