@@ -1,6 +1,3 @@
-- name: ''
-  question_count: 1
-  quiz_count: 0
 - name: Alain Servigne
   question_count: 9
   quiz_count: 1
@@ -23,7 +20,7 @@
   question_count: 8
   quiz_count: 1
 - name: Christine Cavazza
-  question_count: 1
+  question_count: 2
   quiz_count: 0
 - name: Christine Cavazza et Matthieu Massart
   question_count: 0
