@@ -10,8 +10,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-04-17
-  updated: 2021-11-26
+  created: 2022-03-27
+  updated: 2022-03-27
   tags: []
 - id: 2
   name: L'énergie en France 🇫🇷
@@ -26,8 +26,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-05-25
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 1
 - id: 3
@@ -52,8 +52,8 @@
   has_audio: true
   publish: true
   spotlight: true
-  created: 2020-06-26
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 185
 - id: 4
@@ -70,8 +70,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-07-08
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags: []
 - id: 5
   name: Mon empreinte carbone
@@ -87,8 +87,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-07-08
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 72
 - id: 6
@@ -109,8 +109,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-07-08
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags: []
 - id: 7
   name: Le Pétrole - Partie 1
@@ -125,8 +125,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-09
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 11
 - id: 8
@@ -148,8 +148,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-14
-  updated: 2022-01-11
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 142
 - id: 9
@@ -165,8 +165,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-07-14
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags: []
 - id: 10
   name: Le Pétrole - Partie 2
@@ -181,8 +181,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 11
 - id: 11
@@ -204,8 +204,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 142
 - id: 12
@@ -226,8 +226,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 142
 - id: 13
@@ -248,8 +248,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 142
 - id: 14
@@ -270,8 +270,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 142
 - id: 15
@@ -293,8 +293,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 142
 - id: 16
@@ -314,8 +314,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags: []
 - id: 17
   name: Une biodiversité qui s'anéantit
@@ -330,8 +330,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-08-04
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 6
   - 49
@@ -367,8 +367,8 @@
   has_audio: true
   publish: true
   spotlight: true
-  created: 2020-09-23
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags: []
 - id: 52
   name: La finance "verte", par Bon Pote
@@ -392,8 +392,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-11-16
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 194
 - id: 53
@@ -413,8 +413,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-11-27
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags: []
 - id: 54
   name: Born in the USA
@@ -438,8 +438,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-11-28
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 11
   - 13
@@ -472,8 +472,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-12-08
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 62
 - id: 56
@@ -493,8 +493,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-12-13
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags: []
 - id: 57
   name: 2020 en chiffres
@@ -511,8 +511,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-12-24
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 213
 - id: 59
@@ -539,8 +539,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-01-21
-  updated: 2021-12-05
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 30
 - id: 60
@@ -559,8 +559,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-02-01
-  updated: 2021-12-05
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 30
 - id: 61
@@ -600,8 +600,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-02-14
-  updated: 2021-12-01
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 255
 - id: 62
@@ -629,8 +629,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-02-18
-  updated: 2021-12-05
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 5
   - 17
@@ -656,8 +656,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-02-20
-  updated: 2021-12-05
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 30
 - id: 64
@@ -672,8 +672,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2021-03-05
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags: []
 - id: 65
   name: Le Pétrole
@@ -692,8 +692,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2021-03-11
-  updated: 2021-12-09
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 11
 - id: 66
@@ -727,8 +727,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2021-03-12
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 7
   - 13
@@ -759,8 +759,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2021-03-23
-  updated: 2021-12-05
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 255
 - id: 68
@@ -791,8 +791,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-03-24
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 255
 - id: 69
@@ -814,8 +814,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2021-04-10
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 37
   - 69
@@ -847,8 +847,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-04-16
-  updated: 2021-12-05
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 255
 - id: 71
@@ -865,8 +865,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2021-04-26
-  updated: 2021-12-05
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 9
   - 21
@@ -892,8 +892,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-04-27
-  updated: 2021-12-05
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 255
 - id: 74
@@ -920,8 +920,8 @@
   has_audio: true
   publish: true
   spotlight: true
-  created: 2021-05-03
-  updated: 2021-10-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 33
   - 34
@@ -951,8 +951,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-10-03
-  updated: 2021-12-05
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 33
   - 218
@@ -984,8 +984,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-11-16
-  updated: 2022-01-24
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 72
 - id: 77
@@ -1013,8 +1013,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-12-05
-  updated: 2021-12-09
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 14
   - 17
@@ -1039,8 +1039,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2021-12-12
-  updated: 2021-12-30
+  created: 2022-03-27
+  updated: 2022-03-27
   tags: []
 - id: 79
   name: Introduction à la Fresque du Climat
@@ -1061,8 +1061,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2022-01-10
-  updated: 2022-01-14
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 9
   - 13
@@ -1092,8 +1092,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2022-01-26
-  updated: 2022-02-04
+  created: 2022-03-27
+  updated: 2022-03-27
   tags:
   - 13
   - 51
