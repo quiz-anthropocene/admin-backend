@@ -12,7 +12,7 @@ class Category(models.Model):
         verbose_name = "Category"
         verbose_name_plural = "Categories"
         ordering = ["pk"]
-        constraints = [models.UniqueConstraint(fields=["name"], name="unique category name")]
+        constraints = [models.UniqueConstraint(fields=["name"], name="category_name_unique")]
 
     def __str__(self):
         return f"{self.name}"

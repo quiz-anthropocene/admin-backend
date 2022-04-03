@@ -61,6 +61,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "core",
+    "users",
     "categories",
     "tags",
     "questions",
@@ -187,6 +188,7 @@ SECURE_HSTS_SECONDS = os.getenv("SECURE_HSTS_SECONDS")
 # Models
 # ------------------------------------------------------------------------------
 
+AUTH_USER_MODEL = "users.User"
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 
