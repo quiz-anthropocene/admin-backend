@@ -47,7 +47,7 @@ class Command(BaseCommand):
             #####################################
             # # data/categories.yaml
             start_time = time.time()
-            # categories_yaml = utilities.serialize_model_to_yaml("api", model_label="category", flat=True)  # noqa
+            # categories_yaml = utilities.serialize_model_to_yaml("categories", model_label="category", flat=True)  # noqa
             # categories_element = utilities_github.create_file_element(
             #     file_path="data/categories.yaml",
             #     file_content=categories_element
@@ -58,7 +58,7 @@ class Command(BaseCommand):
             #####################################
             # data/tags.yaml
             start_time = time.time()
-            tags_yaml = utilities.serialize_model_to_yaml("api", model_label="tag", flat=True)
+            tags_yaml = utilities.serialize_model_to_yaml("tags", model_label="tag", flat=True)
             tags_element = github.create_file_element(file_path="data/tags.yaml", file_content=tags_yaml)
 
             print("--- Step 2.3 done : tags.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
@@ -66,7 +66,7 @@ class Command(BaseCommand):
             #####################################
             # data/questions.yaml
             start_time = time.time()
-            questions_yaml = utilities.serialize_model_to_yaml("api", model_label="question", flat=True)
+            questions_yaml = utilities.serialize_model_to_yaml("questions", model_label="question", flat=True)
             questions_element = github.create_file_element(
                 file_path="data/questions.yaml", file_content=questions_yaml
             )
@@ -76,7 +76,7 @@ class Command(BaseCommand):
             #####################################
             # data/quizs.yaml
             start_time = time.time()
-            quizs_yaml = utilities.serialize_model_to_yaml("api", model_label="quiz", flat=True)
+            quizs_yaml = utilities.serialize_model_to_yaml("quizs", model_label="quiz", flat=True)
             quizs_element = github.create_file_element(file_path="data/quizs.yaml", file_content=quizs_yaml)
 
             print("--- Step 2.5 done : quizs.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
@@ -84,7 +84,7 @@ class Command(BaseCommand):
             #####################################
             # data/quiz-questions.yaml
             start_time = time.time()
-            quiz_questions_yaml = utilities.serialize_model_to_yaml("api", model_label="quizquestion", flat=True)
+            quiz_questions_yaml = utilities.serialize_model_to_yaml("quizs", model_label="quizquestion", flat=True)
             quiz_questions_element = github.create_file_element(
                 file_path="data/quiz-questions.yaml", file_content=quiz_questions_yaml
             )
@@ -95,7 +95,7 @@ class Command(BaseCommand):
             # data/quiz-relationships.yaml
             start_time = time.time()
             quiz_relationships_yaml = utilities.serialize_model_to_yaml(
-                "api", model_label="quizrelationship", flat=True
+                "quizs", model_label="quizrelationship", flat=True
             )
             quiz_relationships_element = github.create_file_element(
                 file_path="data/quiz-relationships.yaml",
