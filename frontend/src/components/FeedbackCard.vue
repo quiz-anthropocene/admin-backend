@@ -123,7 +123,7 @@ export default {
       this.contributionSubmitted = true;
       this.error = this.contributionResponse = null;
       this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/contributions`, {
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/contributions/`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -132,6 +132,8 @@ export default {
         body: JSON.stringify({
           text: this.contribution_text,
           description: (this.context.source === 'question') ? `Question #${this.context.item.id} - ${this.context.item.category.name} - ${this.context.item.text}` : `Quiz #${this.context.item.id} - ${this.context.item.name}`,
+          question: (this.context.source === 'question') ? this.context.item.id : null,
+          quiz: (this.context.source === 'quiz') ? this.context.item.id : null,
           type: `commentaire ${this.context.source}`,
         }),
       })

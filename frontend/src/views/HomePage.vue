@@ -181,7 +181,7 @@ export default {
   methods: {
     submitNewsletterRegistration() {
       this.newsletterRegistrationLoading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/newsletter`, {
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/newsletter/`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',

@@ -10,6 +10,8 @@ class ContributionAdmin(ExportMixin, admin.ModelAdmin):
         "type",
         "text",
         "description",
+        # "question",
+        # "quiz",
         "created",
     )
     list_filter = ("type",)

@@ -123,9 +123,11 @@ Voir dans le dossier `/data/architecture`
 - Installez [PostgreSQL](https://www.postgresql.org)
 - Créez la base de donnée
     ```
+    // optional: dropdb quiz_anthropocene
     psql -c "CREATE USER quiz_anthropocene_team WITH PASSWORD 'password'"
     psql -c "CREATE DATABASE quiz_anthropocene OWNER quiz_anthropocene_team"
-    psql -c "ALTER USER quiz_anthropocene_team CREATEDB"
+    psql -c "GRANT ALL PRIVILEGES ON DATABASE quiz_anthropocene to quiz_anthropocene_team"
+    psql -c "ALTER USER quiz_anthropocene_team CREATEROLE CREATEDB"
     ```
 - Lancez les migrations
     ```
@@ -249,6 +251,15 @@ Réinitialiser complètement la base de donnée
 python manage.py reset_db // django-extensions
 python manage.py migrate
 python manage.py init_db --with-sql-reset
+```
+
+Importer un dump PGSQL
+```
+pg_restore -d quiz_anthropocene --clean --no-owner --no-privileges <dump_name>.pgsql
+
+// si il y a ensuite des soucis de permissions
+for tbl in `psql -qAt -c "select tablename from pg_tables where schemaname = 'public';" quiz_anthropocene` ; do  psql -c "alter table \"$tbl\" owner to quiz_anthropocene_team" quiz_anthropocene ; done
+for tbl in `psql -qAt -c "select sequence_name from information_schema.sequences where sequence_schema = 'public';" quiz_anthropocene` ; do  psql -c "alter sequence \"$tbl\" owner to quiz_anthropocene_team" quiz_anthropocene ; done
 ```
 
 Queries M2M

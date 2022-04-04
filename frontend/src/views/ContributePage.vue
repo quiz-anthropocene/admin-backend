@@ -170,7 +170,7 @@ export default {
       this.contributionSubmitted = true;
       this.error = this.contributionResponse = null;
       this.loading = true;
-      fetch(`${process.env.VUE_APP_API_ENDPOINT}/contributions`, {
+      fetch(`${process.env.VUE_APP_API_ENDPOINT}/contributions/`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
