@@ -21,7 +21,6 @@ load_dotenv(verbose=True)
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -50,6 +49,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     "corsheaders",  # django-cors-headers
+    "django_bootstrap5",  # django-bootstrap5
     "rest_framework",  # djangorestframework
     "drf_spectacular",  # drf-spectacular
     "django_extensions",  # django-extensions
@@ -91,7 +91,7 @@ ROOT_URLCONF = "app.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -99,6 +99,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                # custom
+                "core.utils.settings_context_processors.expose_settings",
             ],
         },
     },
@@ -115,9 +117,13 @@ DATABASES = {}
 DATABASES["default"] = dj_database_url.config(conn_max_age=600)
 
 
-# Password validation
+# Authentication
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 # ------------------------------------------------------------------------------
+
+LOGIN_URL = "auth:login"
+LOGIN_REDIRECT_URL = "pages:home"
+LOGOUT_REDIRECT_URL = "pages:home"
 
 AUTH_PASSWORD_VALIDATORS = [
     {

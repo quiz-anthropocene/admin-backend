@@ -1,0 +1,51 @@
+{% load static django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %} - Quiz de l'Anthropocène{% endblock %}</title>
+        {% block meta_description %}
+        <meta name="description" content="Site d'administration du Quiz de l'Anthropocène">
+        {% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="theme-color" content="#ffffff">
+
+        {% bootstrap_css %}
+
+        {% block extra_css %}{% endblock %}
+
+        {% block extra_head %}{% endblock %}
+    </head>
+
+    <body id="top">
+        <noscript></noscript>
+
+        <nav role="navigation" aria-label="Accès rapide" tabindex="1" class="sr-only"></nav>
+
+        {% block header %}
+            {% include "layouts/_header.html" %}
+        {% endblock %}
+
+        <main id="main" role="main">
+            {% block breadcrumbs %}{% endblock %}
+
+            {% block messages %}{% endblock %}
+
+            {% block content %}{% endblock %}
+        </main>
+
+        {% block footer %}
+            {% include "layouts/_footer.html" %}
+        {% endblock %}
+
+        {% block modals %}{% endblock %}
+
+        {% block script %}
+        {% bootstrap_javascript %}
+        {% endblock %}
+
+        {% block extra_js %}{% endblock %}
+    </body>
+</html>

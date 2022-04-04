@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %}
+{% load django_bootstrap5 %}
+
+{% block title %}Connexion{{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <h1>Connexion</h1>
+
+            <form method="POST" action="">
+            
+                <div class="bg-white d-block rounded-lg shadow-lg p-3 p-lg-5">
+                    {% csrf_token %}
+
+                    <fieldset>
+                        {% bootstrap_field form.username %}
+                        {% bootstrap_field form.password %}
+                    </fieldset>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span>Valider</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

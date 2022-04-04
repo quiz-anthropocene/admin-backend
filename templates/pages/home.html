@@ -1,0 +1,23 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Accueil{{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <h1>Administration</h1>
+
+            {% if user.is_authenticated %}
+                <div class="row">
+                    <div class="col-12">
+                        <p>Bonjour {{ user.first_name }} ! {{ user.email }}</p>
+                    </div>
+                </div>
+            {% else %}
+                <p>Vous n'êtes pas connecté</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

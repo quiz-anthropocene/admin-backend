@@ -1,0 +1,24 @@
+<header>
+    <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="{% url 'pages:home' %}" class="navbar-brand">Quiz de l'Anthropocène</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                {% if user.is_authenticated %}
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;"></ul>
+                    <a href="{% url 'auth:logout' %}" class="btn btn-primary btn-block">
+                        <span>Se déconnecter</span>
+                    </a>
+                {% else %}
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;"></ul>
+                    <a href="{% url 'auth:login' %}" class="btn btn-primary btn-block">
+                        <span>Se connecter</span>
+                    </a>
+                {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
