@@ -92,3 +92,7 @@ NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES = [
     (5, "800 et plus"),
 ]
 NOTION_QUESTIONS_IMPORT_SCOPE_LIST = [value for (value, label) in NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES]
+
+BOOLEAN_CHOICES = [(True, "Vrai"), (False, "Faux")]
+
+EMPTY_CHOICE = (("", ""),)

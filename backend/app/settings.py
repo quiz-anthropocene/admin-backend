@@ -50,6 +50,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     "corsheaders",  # django-cors-headers
     "django_bootstrap5",  # django-bootstrap5
+    "django_tables2",  # django-tables2
     "rest_framework",  # djangorestframework
     "drf_spectacular",  # drf-spectacular
     "django_extensions",  # django-extensions
@@ -196,6 +197,25 @@ SECURE_HSTS_SECONDS = os.getenv("SECURE_HSTS_SECONDS")
 
 AUTH_USER_MODEL = "users.User"
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
+
+
+# Django Bootstrap5
+# https://django-bootstrap5.readthedocs.io/
+# ------------------------------------------------------------------------------
+
+BOOTSTRAP5 = {
+    # Label class to use in horizontal forms.
+    "horizontal_label_class": "col-4 col-sm-2",  # "col-sm-2"
+    # Field class to use in horizontal forms.
+    "horizontal_field_class": "col-8 col-sm-10",  # "col-sm-10"
+}
+
+
+# Django Tables2
+# https://django-tables2.readthedocs.io/
+# ------------------------------------------------------------------------------
+
+DJANGO_TABLES2_PAGE_RANGE = 5
 
 
 # Django REST Framework (DRF)
