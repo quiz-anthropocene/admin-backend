@@ -113,6 +113,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         # "answer_count_agg",
         # "answer_success_count_agg",
         # "answer_success_rate",
+        "created",
     )
     search_fields = (
         "id",

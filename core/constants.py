@@ -73,6 +73,7 @@ CONTRIBUTION_TYPE_LIST = [
     "nom application",
     "erreur application",
 ]
+CONTRIBUTION_TYPE_CHOICES = [(ct, ct) for ct in CONTRIBUTION_TYPE_LIST]
 
 LANGUAGE_FRENCH = "Français"
 LANGUAGE_ENGLISH = "English"

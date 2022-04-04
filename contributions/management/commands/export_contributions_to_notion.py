@@ -51,7 +51,7 @@ class Command(BaseCommand):
                     new_contribution_properties = {
                         "text": {"title": [{"text": {"content": new_contribution.text}}]},
                         "type": {"select": {"name": new_contribution.type}},
-                        "description": {"rich_text": [{"text": {"content": new_contribution.description}}]},  # noqa
+                        "description": {"rich_text": [{"text": {"content": new_contribution.description}}]},
                         "created": {"date": {"start": new_contribution.created.isoformat()}},
                     }
                     notion.create_page_in_database(
