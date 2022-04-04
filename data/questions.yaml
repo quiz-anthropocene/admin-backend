@@ -29305,9 +29305,10 @@
   - 16
   - 69
 - id: 768
-  text: Tagada tsoin toin?
+  text: Si l’on prend en compte tout le cycle de vie (construction, utilisation, démantellement),
+    quelle est la source d'énergie la moins carbonée, en France ?
   hint: ''
-  type: VF
+  type: QCM-RM
   category: 2
   difficulty: 2
   language: Français
@@ -29933,7 +29934,7 @@
   answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/Fdcj8.png
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: ''
+  author: Christine Cavazza
   validator: ''
   validation_status: Validée
   added: 2022-01-25
@@ -29984,7 +29985,9 @@
   updated: 2021-01-23
   tags: []
 - id: 785
-  text: Copy of à venir
+  text: Le solaire et l’éolien ne fournissent de l’énergie que de façon intermittente.
+    De combien faut-il augmenter la puissance installée pour avoir l’équivalent d’une
+    énergie pilotable ?
   hint: ''
   type: QCM
   category: 2
@@ -30018,7 +30021,8 @@
   - 217
   - 218
 - id: 786
-  text: Copy of à venir
+  text: Entre 2000 et 2018, les émissions de de GES sur le territoire national en
+    France ont baissé de 20% (540 à 425Mt CO2eq). Comment ?
   hint: ''
   type: QCM
   category: 2
@@ -30052,7 +30056,11 @@
   - 217
   - 218
 - id: 787
-  text: Copy of à venir
+  text: 'Pour maintenir le réchauffement sous les+2°C, il nous faut diviser les émissions
+    mondiales de GES par 3 d''ici 2050. Petit calcul : Supposons a) qu’on maintienne
+    une croissance mondiale de 2% par an, b) qu’on améliore notre efficacité énergétique
+    de 1% an, de combien devrait-on réduire l’intensité énergétique (GES émis / unité
+    d’énergie consommée) d’ici 2050 ?'
   hint: ''
   type: QCM
   category: 2
@@ -31544,7 +31552,7 @@
   answer_extra_info: ''
   author: Baptiste Leveque
   validator: ''
-  validation_status: Brouillon
+  validation_status: Écartée
   added: 2021-01-16
   created: 2021-01-18
   updated: 2021-01-18
