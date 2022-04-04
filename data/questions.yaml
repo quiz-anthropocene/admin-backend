@@ -15057,8 +15057,8 @@
   - 13
   - 72
 - id: 402
-  text: Combien de litres d'eau utilise-t-on en moyenne sur la durée de vie d'un jean
-    ?
+  text: Combien de litres d'eau sont requis sur l’ensemble de la durée de vie d'un
+    jean (sans compter les lavages) ?
   hint: ''
   type: QCM
   category: 2
@@ -30365,7 +30365,7 @@
     \ déchets dangereux qui durent très longtemps."
   answer_audio: ''
   answer_video: https://www.lumni.fr/video/c-est-quoi-les-energies-fossiles
-  answer_accessible_url: https://fr.vikidia.org/wiki/%C3%89nergie_fossile
+  answer_accessible_url: http://www.lacaseauxenfants.org/energies/energies-fossiles.htm
   answer_accessible_url_text: Wikidia - Les énergies fossiles
   answer_scientific_url: ''
   answer_scientific_url_text: ''
@@ -32972,7 +32972,7 @@
   answer_correct: b
   has_ordered_answers: true
   answer_explanation: 'La vitesse généralisée prend en compte l''ensemble des dépenses
-    de temps associées à un mode de déplacement. Par exemple pour un véhicule : entretien,
+    de temps associées à un mode de déplacement. Par exemple pour une voiture : entretien,
     stationnement, temps de travail nécessaire à payer l''achat initial, le carburant,
     l''entretien...Les estimations d''il y a quarante ans la trouvaient inférieure
     à celle du vélo. Les derniers développements la trouvent supérieure d''1/4 : entre
@@ -37403,8 +37403,8 @@
   - 33
   - 225
 - id: 1017
-  text: Fin septembre 2021, la part des véhicules électriques en France parmi les
-    voitures en circulation a passé le seuil de… ?
+  text: A date de septembre 2021, quelle est la proportion des véhicules électriques
+    parmi les véhicules en circulation ?
   hint: ''
   type: QCM
   category: 1
@@ -37416,11 +37416,11 @@
   answer_option_d: 8 %
   answer_correct: a
   has_ordered_answers: true
-  answer_explanation: 'La part des véhicules 100% électriques dans les ventes de voitures
-    a fortement augmenté en 2020, porté par les exigences des réglementations européennes
-    sur les émissions des véhicules neufs. Les véhicules électriques ont représenté
-    6,7 % des ventes de voiture (dans un marché en recul, en raison de la crise Covid)
-    en 2020, contre 1,9 % en 2019.
+  answer_explanation: 'La part des véhicules électriques (hors hybrides) dans les
+    ventes de voitures a fortement augmenté en 2020, porté par les exigences des réglementations
+    européennes sur les émissions des véhicules neufs. Les véhicules électriques ont
+    représenté 6,7 % des ventes de voiture (dans un marché en recul, en raison de
+    la crise Covid) en 2020, contre 1,9 % en 2019.
 
     Si la hausse se poursuit avec 8,5 % de véhicules électriques sur janvier à septembre
     2021, le renouvellement du parc est relativement lent, puisqu’environ 5 à 6 %

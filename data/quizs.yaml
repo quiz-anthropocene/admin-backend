@@ -566,22 +566,21 @@
 - id: 61
   name: Fresque des low techs - les constats
   slug: fresque-des-low-techs-les-constats
-  introduction: "<p>Les low techs, vous connaissez ? Allez on va vous donner la réponse\
-    \ : des objets, des systèmes, des techniques, des services, des savoir-faire,\
-    \ des pratiques, des modes de vie et même des courants de pensée, qui intègrent\
-    \ la technologie en étant <strong>utiles</strong>, <strong>accessibles </strong>et\
-    \ <strong>durables</strong>.</p>\r\n\r\n<p>La <a href=\"https://fresquedeslowtechs.org\"\
-    >Fresque des low techs</a> est un atelier-jeu collaboratif. Il traite de la (non)\
-    \ soutenabilité des technologies, aborde les limites et problèmes du système technique\
-    \ actuel, et familiarise les participants au concept de low tech. En reprenant\
-    \ le principe de la Fresque du Climat, les participants dessinent progressivement\
-    \ le tableau global des technologies, puis le résolvent pour aboutir à une esquisse\
-    \ des basses technologies, en apprenant de manière ludique des chiffres officiels\
-    \ de rapports tel que l'UNEP et des concepts clés. Ce quiz vous donne un aperçu\
-    \ de ce que vous apprendrez dans la première partie de cet atelier, ciblée sur\
-    \ les constats.<br />\r\n<br />\r\nUn quiz proposé par Max Pinsard, docteur en\
-    \ sciences de l’énergie et matériaux de INRS-EMT Montréal et créateur de la Fresque\
-    \ des Low-Techs.</p>"
+  introduction: "<p>Les low techs, vous connaissez ? Une démarche vers des objets,\
+    \ des systèmes, des techniques, des services, des savoir-faire, des pratiques,\
+    \ des modes de vie et même des courants de pensée, qui intègrent la technologie\
+    \ en étant <strong>utiles</strong>, <strong>accessibles </strong>et <strong>durables</strong>.</p>\r\
+    \n\r\n<p>La <a href=\"https://fresquedeslowtechs.org\">Fresque des low techs</a> est\
+    \ un atelier-jeu collaboratif. Il traite de la (non) soutenabilité des technologies,\
+    \ aborde les limites et problèmes du système technique actuel, et familiarise\
+    \ les participants au concept de low tech. En reprenant le principe de la Fresque\
+    \ du Climat, les participants dessinent progressivement le tableau global des\
+    \ technologies, puis le résolvent pour aboutir à une esquisse des basses technologies,\
+    \ en apprenant de manière ludique des chiffres officiels de rapports tel que l'UNEP\
+    \ et des concepts clés. Ce quiz vous donne un aperçu de ce que vous apprendrez\
+    \ dans la première partie de cet atelier, ciblée sur les constats.<br />\r\n<br\
+    \ />\r\nUn quiz proposé par Max Pinsard, docteur en sciences de l’énergie et matériaux\
+    \ de INRS-EMT Montréal et créateur de la Fresque des Low-Techs.</p>"
   conclusion: "<p>Ces quelques questions, c'est bien sûr un peu court pour tout aborder,\
     \ mais vous avez pu apercevoir l'ordre de grandeur des impacts de notre système\
     \ techologique, et quelques notions d'auto-défense contre les fausses promesses\
@@ -601,7 +600,7 @@
   publish: true
   spotlight: true
   created: 2021-02-14
-  updated: 2021-12-01
+  updated: 2022-04-04
   tags:
   - 255
 - id: 62
