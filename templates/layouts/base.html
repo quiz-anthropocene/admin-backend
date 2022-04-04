@@ -14,7 +14,9 @@
 
         {% bootstrap_css %}
 
-        {% block extra_css %}{% endblock %}
+        {% block extra_css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/extra.css' %}">
+        {% endblock %}
 
         {% block extra_head %}{% endblock %}
     </head>
