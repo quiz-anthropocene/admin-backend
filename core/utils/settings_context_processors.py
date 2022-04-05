@@ -1,3 +1,5 @@
+from django.conf import settings
+
 from core.models import Configuration
 
 
@@ -12,4 +14,5 @@ def expose_settings(request):
 
     return {
         "CONFIGURATION": configuration,
+        "METABASE_DASHBOARD_URL": settings.METABASE_DASHBOARD_URL,
     }

@@ -317,3 +317,9 @@ CKEDITOR_CONFIGS = {
         "entities": False,
     }
 }
+
+
+# Misc
+# ------------------------------------------------------------------------------
+
+METABASE_DASHBOARD_URL = os.getenv("METABASE_DASHBOARD_URL", "")
