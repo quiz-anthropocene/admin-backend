@@ -6,6 +6,7 @@ from questions.models import Question
 
 
 class QuestionTable(tables.Table):
+    id = tables.Column(linkify=lambda record: record.get_absolute_url())
     text = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
     type = ChoiceColumn()
     category = ChoiceColumn()

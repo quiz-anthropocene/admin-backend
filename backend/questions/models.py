@@ -1,5 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.urls import reverse
 
 from core import constants
 from core.utils import utilities
@@ -139,6 +140,9 @@ class Question(models.Model):
     def save(self, *args, **kwargs):
         self.full_clean()
         return super(Question, self).save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse("questions:detail", kwargs={"pk": self.id})
 
     @property
     def tags_list(self) -> list:
