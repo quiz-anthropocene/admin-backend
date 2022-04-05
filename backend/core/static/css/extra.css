@@ -16,6 +16,12 @@
 }
 
 
+/* Breadcrumb */
+
+ol.breadcrumb {
+    margin-top: 1rem;
+}
+
 
 /* Table */
 
