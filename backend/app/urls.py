@@ -6,13 +6,19 @@ from core.admin import admin_site
 
 
 urlpatterns = [
+    # www
     path("", include("www.pages.urls")),
     path("accounts/", include("www.auth.urls")),
     path("questions/", include("www.questions.urls")),
     path("quizs/", include("www.quizs.urls")),
+    path("contributions/", include("www.contributions.urls")),
+    # admin
     path("admin/", admin_site.urls),
+    # api
     path("api/", include("api.urls")),
+    # stats
     path("stats/", include("stats.urls")),
+    # actions
     path("actions/aggregate-stats", views.action_aggregate_stats),
     path(
         "actions/import-questions-from-notion",
