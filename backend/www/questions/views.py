@@ -31,7 +31,7 @@ class QuestionListView(LoginRequiredMixin, SingleTableMixin, FilterView):
 
 class QuestionDetailView(LoginRequiredMixin, DetailView):
     model = Question
-    template_name = "questions/detail.html"
+    template_name = "questions/detail_view.html"
     context_object_name = "question"
 
     def get_context_data(self, **kwargs):
