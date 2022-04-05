@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %}
+{% load custom_filters %}
+
+{% block title %}Questions{{ block.super }}{% endblock %}
+
+{% block breadcrumbs %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 my-auto">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
+                    <li class="breadcrumb-item"<a href="{% url 'questions:list' %}">Questions</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ question }}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% for field in question_dict %}
+        <div class="row">
+            <div class="col-4">
+                <strong>{{ field }}</strong>
+            </div>
+            <div class="col-8">
+                {{ question_dict|get_obj_attr:field }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
