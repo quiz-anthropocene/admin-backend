@@ -9,6 +9,7 @@ from contributions.tables import ContributionTable
 from questions.filters import QuestionFilter
 from questions.models import Question
 from questions.tables import QuestionTable
+from stats.models import QuestionAggStat
 
 
 class QuestionListView(LoginRequiredMixin, SingleTableMixin, FilterView):
@@ -56,5 +57,23 @@ class QuestionDetailContributionsView(LoginRequiredMixin, SingleTableView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context["question"] = Question.objects.get(id=self.kwargs.get("pk"))
+        return context
+
+
+class QuestionDetailStatsView(LoginRequiredMixin, DetailView):
+    model = QuestionAggStat
+    template_name = "questions/detail_stats.html"
+    context_object_name = "question_stats"
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = qs.filter(question__id=self.kwargs.get("pk"))
+        return qs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["question_agg_stat_dict"] = model_to_dict(self.get_object())
+        del context["question_agg_stat_dict"]["question"]
         context["question"] = Question.objects.get(id=self.kwargs.get("pk"))
         return context
