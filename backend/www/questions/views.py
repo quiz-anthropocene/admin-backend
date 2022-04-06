@@ -2,8 +2,10 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.forms.models import model_to_dict
 from django.views.generic import DetailView
 from django_filters.views import FilterView
-from django_tables2.views import SingleTableMixin
+from django_tables2.views import SingleTableMixin, SingleTableView
 
+from contributions.models import Contribution
+from contributions.tables import ContributionTable
 from questions.filters import QuestionFilter
 from questions.models import Question
 from questions.tables import QuestionTable
@@ -37,5 +39,22 @@ class QuestionDetailView(LoginRequiredMixin, DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["question_dict"] = model_to_dict(self.get_object())
-        # print(context["question_dict"])
+        return context
+
+
+class QuestionDetailContributionsView(LoginRequiredMixin, SingleTableView):
+    model = Contribution
+    template_name = "questions/detail_contributions.html"
+    context_object_name = "question_contributions"
+    table_class = ContributionTable
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = qs.filter(question__id=self.kwargs.get("pk"))
+        qs = qs.order_by("-created")
+        return qs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["question"] = Question.objects.get(id=self.kwargs.get("pk"))
         return context

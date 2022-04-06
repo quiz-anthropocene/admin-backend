@@ -21,20 +21,20 @@
 
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col-12 mb-3">
+    <div class="row mb-3">
+        <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Détail</a>
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_view' question.id %}">Détails</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Modifier</a>
+                    <a class="nav-link disabled" href="#">Modifier</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Commentaires</a>
+                    <a class="nav-link {% if 'comments' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_contributions' question.id %}">Commentaires</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Statistiques</a>
+                    <a class="nav-link disabled" href="#">Statistiques</a>
                 </li>
             </ul>
         </div>

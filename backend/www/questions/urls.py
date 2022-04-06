@@ -1,6 +1,7 @@
 from django.urls import include, path
+from django.views.generic.base import RedirectView
 
-from www.questions.views import QuestionDetailView, QuestionListView  # , QuestionDetailContributionsView
+from www.questions.views import QuestionDetailContributionsView, QuestionDetailView, QuestionListView
 
 
 app_name = "questions"
@@ -12,8 +13,14 @@ urlpatterns = [
         "<int:pk>/",
         include(
             [
-                path("", QuestionDetailView.as_view(), name="detail"),
-                # path("", QuestionDetailContributionsView.as_view(), name="detail_contributions")
+                # path("", QuestionDetailView.as_view(), name="detail"),
+                path(
+                    "",
+                    RedirectView.as_view(pattern_name="questions:detail_view", permanent=False),
+                    name="detail",
+                ),
+                path("view/", QuestionDetailView.as_view(), name="detail_view"),
+                path("comments/", QuestionDetailContributionsView.as_view(), name="detail_contributions"),
             ]
         ),
     ),

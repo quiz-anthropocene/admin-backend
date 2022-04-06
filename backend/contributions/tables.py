@@ -8,7 +8,10 @@ class ContributionTable(tables.Table):
     type = ChoiceColumn()
     # text = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
     question = tables.Column(
-        verbose_name="Question", accessor="question.id", attrs={"td": {"title": lambda record: record.question}}
+        verbose_name="Question",
+        accessor="question.id",
+        linkify=lambda record: record.question.get_absolute_url(),
+        attrs={"td": {"title": lambda record: record.question}},
     )
     quiz = tables.Column(verbose_name="Quiz", accessor="quiz.id", attrs={"td": {"title": lambda record: record.quiz}})
 
