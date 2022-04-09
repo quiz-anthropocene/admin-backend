@@ -19283,7 +19283,7 @@
   hint: ''
   type: QCM
   category: 1
-  difficulty: 1
+  difficulty: 4
   language: Français
   answer_option_a: ''
   answer_option_b: ''
@@ -19749,7 +19749,7 @@
   hint: ''
   type: QCM
   category: 7
-  difficulty: 1
+  difficulty: 4
   language: Français
   answer_option_a: ''
   answer_option_b: ''
@@ -29312,13 +29312,16 @@
   category: 2
   difficulty: 2
   language: Français
-  answer_option_a: Vrai
-  answer_option_b: Faux
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: a
-  has_ordered_answers: false
-  answer_explanation: Ben tagada tsoin tsoin quoi!
+  answer_option_a: Le nuclaire
+  answer_option_b: L’éolien
+  answer_option_c: Le solaire
+  answer_option_d: L’hydroélectricité
+  answer_correct: ad
+  has_ordered_answers: true
+  answer_explanation: Cela dépend des sources! L’éolien n'est pas loin non plus. Selon
+    l'ADEME, ce serait plutôt le nucléaire, avec 6 gCO2eq/kWh, l'hydroélectricité
+    entre 10 et 13gCO2eq/kWh, tandis que l'éolien terrestre se retrouve à 14 gCO2eq/kWh
+    et l'éolien offshore à 15,5, et le photovoltaïque entre 35 et 85 gCO2eq/kWh.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -29329,15 +29332,13 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Laetitia BATAILLIE
+  author: Florent Nobelen
   validator: ''
   validation_status: Brouillon
-  added: 2022-02-09
+  added: 2022-04-01
   created: 2021-01-17
   updated: 2021-01-17
-  tags:
-  - 53
-  - 266
+  tags: []
 - id: 769
   text: A propos de l’effet de serre, est-il vrai de dire que...
   hint: ''
@@ -29991,18 +29992,28 @@
   hint: ''
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 4
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: Par 1,5 (soit 50% de plus)
+  answer_option_b: Par 2
+  answer_option_c: Par 4
+  answer_option_d: Par 8
+  answer_correct: c
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: La solution actuelle la plus efficace et la plus répandue pour
+    stocker de l'électricité à grande échelle consiste à utiliser des STEP, des Stations
+    de Transferts d'Énergie par Pompage, qui pompent de l'eau jusqu'en haut d’un barrage
+    de manière à la turbiner plus tard pour produire de l'électricité quand on en
+    a besoin. Il faudrait multiplier le nombre de STEP par 20 à 30 pour stocker ce
+    qu'il faut avec une production 100% éolienne en France, et la puissance installée
+    devrait être multipliée par 4 à 5. Cependant, le potentiel hydroélectrique est
+    déjà épuisé en France. Une alternative déployable à grande échelle consisterait
+    à stocker l'énergie sous forme d'hydrogène produite par électrolyse, mais là encore,
+    le rendement global de la chaîne production-stockage-récupération étant de 28%,
+    il faut aussi multiplier la puissance installée par 4.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://jancovici.com/transition-energetique/renouvelables/pourrait-on-alimenter-la-france-en-electricite-uniquement-avec-de-leolien/
   answer_accessible_url_text: ''
   answer_scientific_url: ''
   answer_scientific_url_text: ''
@@ -30010,34 +30021,38 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Florent Nobelen
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-16
+  added: 2022-04-01
   created: 2021-01-17
   updated: 2021-01-17
   tags:
-  - 33
-  - 217
-  - 218
+  - 45
+  - 46
 - id: 786
   text: Entre 2000 et 2018, les émissions de de GES sur le territoire national en
     France ont baissé de 20% (540 à 425Mt CO2eq). Comment ?
   hint: ''
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 1
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
+  answer_option_a: Grâce à la délocalisation
+  answer_option_b: Grâce à la mise en oeuvre efficace d’une Stratégie Nationale Bas
+    Carbone
+  answer_option_c: Grâce au développement massif des énergies renouvelables
   answer_option_d: ''
-  answer_correct: d
+  answer_correct: a
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: La France a augmenté la part de ses importations sur cette période,
+    des produits manufacturés essentiellement, et notamment de Chine dont le système
+    électrique repose principalement sur le charbon qui est très émetteur. Comme on
+    parle ici d’émissions provenant du territoire national, ces émissions ne sont
+    plus sont plus comptabilisées.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
+  answer_accessible_url: https://www.statistiques.developpement-durable.gouv.fr/sites/default/files/2020-01/datalab-essentiel-204-l-empreinte-carbone-des-francais-reste-%20stable-janvier2020.pdf
   answer_accessible_url_text: ''
   answer_scientific_url: ''
   answer_scientific_url_text: ''
@@ -30045,16 +30060,14 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Florent Nobelen
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-16
+  added: 2022-04-02
   created: 2021-01-17
   updated: 2021-01-17
   tags:
-  - 33
-  - 217
-  - 218
+  - 198
 - id: 787
   text: 'Pour maintenir le réchauffement sous les+2°C, il nous faut diviser les émissions
     mondiales de GES par 3 d''ici 2050. Petit calcul : Supposons a) qu’on maintienne
@@ -30064,15 +30077,20 @@
   hint: ''
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 4
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
+  answer_option_a: Pas besoin
+  answer_option_b: Diviser par 3
+  answer_option_c: Diviser par 6
+  answer_option_d: Diviser par 9
   answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  has_ordered_answers: true
+  answer_explanation: 'L''équation dite de Kaya (en version simplifiée ici) décompose
+    nos émissions de GES en un produit de 4 termes : le contenu en GES de l’énergie,
+    l''intensité énergétique du PIB, et enfin le PIB. Si on veut diviser par 3 les
+    émissions de GES d''ici 2050, et qu''on veut augmenter le PIB de 2% par an avec
+    une efficacité énergétique qui augmente aussi de 2%/an, alors un petit calcul
+    nous dit que le contenu en GES de l''énergie doit être divisé par…3.'
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -30080,19 +30098,16 @@
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: ''
+  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/89c6e50829398cfde2e66bc6b742a244c853e515/data/images/questions/787.png
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Florent Nobelen
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-16
+  added: 2022-04-02
   created: 2021-01-17
   updated: 2021-01-17
-  tags:
-  - 33
-  - 217
-  - 218
+  tags: []
 - id: 788
   text: Quelle est la principale source d'oxygène sur Terre ?
   hint: ''
@@ -30381,18 +30396,19 @@
   updated: 2021-01-17
   tags: []
 - id: 794
-  text: Copy of à venir
+  text: Avec la quantité de réserves prouvées, et avec une hypothèse de consommation
+    constante, pour combien de temps avons-nous encore du nickel ?
   hint: ''
   type: QCM
   category: 2
-  difficulty: 2
+  difficulty: 3
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
+  answer_option_a: 12 ans
+  answer_option_b: 33 ans
+  answer_option_c: 56 an
+  answer_option_d: 136 ans
+  answer_correct: bd
+  has_ordered_answers: true
   answer_explanation: ''
   answer_audio: ''
   answer_video: ''
@@ -30404,16 +30420,13 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Florent Nobelen
   validator: ''
   validation_status: Brouillon
-  added: 2021-01-17
+  added: 2022-04-04
   created: 2021-01-17
   updated: 2021-01-17
-  tags:
-  - 33
-  - 217
-  - 218
+  tags: []
 - id: 795
   text: Copy of à venir
   hint: ''
@@ -32405,7 +32418,7 @@
   answer_reading_recommendation: ''
   answer_image_url: https://enseignantspourlaplanete.files.wordpress.com/2020/04/image-7.png?w=453
   answer_image_explanation: 'Source : GreenIT, Empreinte environnementale du numérique
-    mondial, _p 21_'
+    mondial, p 21'
   answer_extra_info: ''
   author: Alain Servigne
   validator: Matthieu Massart
@@ -33863,6 +33876,347 @@
   tags:
   - 45
   - 255
+- id: 884
+  text: De combien la population humaine a-t-elle augmenté depuis 1900 ?
+  hint: ''
+  type: QCM
+  category: 8
+  difficulty: 1
+  language: Français
+  answer_option_a: D’un facteur 2
+  answer_option_b: D’un facteur 3
+  answer_option_c: D’un facteur 4
+  answer_option_d: D’un facteur 5
+  answer_correct: d
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_accessible_url_text: ''
+  answer_scientific_url: https://ourworldindata.org/world-population-growth
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Emmanuel Pont
+  validator: ''
+  validation_status: Brouillon
+  added: 2022-04-01
+  created: 2022-04-09
+  updated: 2022-04-09
+  tags:
+  - 27
+- id: 885
+  text: Lesquelles de ces projections démographiques sont jugées réalistes à l’horizon
+    2100 ?
+  hint: ''
+  type: QCM-RM
+  category: 8
+  difficulty: 1
+  language: Français
+  answer_option_a: 9 milliards
+  answer_option_b: 10 milliards
+  answer_option_c: 11 milliards
+  answer_option_d: 12 milliards
+  answer_correct: abc
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_accessible_url_text: 'https://www.futura-sciences.com/planete/actualites/population-mondiale-jusquou-va-grimper-population-mondiale-39860/
+
+    '
+  answer_scientific_url: ''
+  answer_scientific_url_text: https://www.nature.com/articles/d41586-021-02522-6
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Emmanuel Pont
+  validator: ''
+  validation_status: Brouillon
+  added: 2022-04-01
+  created: 2022-04-06
+  updated: 2022-04-06
+  tags:
+  - 27
+- id: 886
+  text: Quel est le nombre moyen d’enfants par femmes en Inde ?
+  hint: ''
+  type: QCM
+  category: 8
+  difficulty: 2
+  language: Français
+  answer_option_a: 2,0
+  answer_option_b: 2,5
+  answer_option_c: 3,0
+  answer_option_d: 3,5
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.rts.ch/info/monde/medias/12671445-linde-passe-pour-la-premiere-fois-sous-le-seuil-de-21-enfants-par-femme.html
+  answer_accessible_url_text: ''
+  answer_scientific_url: ''
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Emmanuel Pont
+  validator: ''
+  validation_status: Brouillon
+  added: 2022-04-01
+  created: 2022-04-06
+  updated: 2022-04-06
+  tags:
+  - 27
+- id: 887
+  text: L’humanité utilise 50% de la surface terrestre pour ses besoins. Combien pour
+    la viande ? (à reformuler)
+  hint: ''
+  type: QCM
+  category: 8
+  difficulty: 3
+  language: Français
+  answer_option_a: 25%
+  answer_option_b: 50%
+  answer_option_c: 75%
+  answer_option_d: ''
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://ourworldindata.org/land-use-diets
+  answer_accessible_url_text: ''
+  answer_scientific_url: https://www.researchgate.net/publication/325532198_Reducing_food%27s_environmental_impacts_through_producers_and_consumers
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Emmanuel Pont
+  validator: ''
+  validation_status: Brouillon
+  added: 2022-04-01
+  created: 2022-04-06
+  updated: 2022-04-06
+  tags:
+  - 27
+- id: 888
+  text: Quel est le rapport entre les émissions de CO2 annuelles par d’un Français
+    et celles d’un Nigérien ?
+  hint: Les Nigériens sont les habitants du Niger (pas du Nigéria qui sont les Nigérians
+    !)
+  type: QCM
+  category: 1
+  difficulty: 3
+  language: Français
+  answer_option_a: 10 fois plus
+  answer_option_b: 30 fois plus
+  answer_option_c: 50 fois plus
+  answer_option_d: 100 fois plus
+  answer_correct: ''
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_accessible_url_text: ''
+  answer_scientific_url: https://www.globalcarbonproject.org/carbonbudget/index.htm
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Emmanuel Pont
+  validator: ''
+  validation_status: Brouillon
+  added: 2022-04-01
+  created: 2022-04-06
+  updated: 2022-04-06
+  tags:
+  - 27
+- id: 889
+  text: Depuis 1900, la population humaine a été multipliée par 5 et les émissions
+    de CO2 par 20. Dans cet essor des émissions, quelle est la contribution de l'augmentation
+    de la population ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 3
+  language: Français
+  answer_option_a: 25%
+  answer_option_b: 55%
+  answer_option_c: La réponse ne veut rien dire
+  answer_option_d: ''
+  answer_correct: c
+  has_ordered_answers: true
+  answer_explanation: On peut faire un calcul, mais ça ne dit en fait pas grand chose
+    car il y a de l'augmentation de population dans des pays aux faibles émissions
+    et inversement
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_accessible_url_text: ''
+  answer_scientific_url: ''
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Emmanuel Pont
+  validator: ''
+  validation_status: Brouillon
+  added: 2022-04-01
+  created: 2022-04-06
+  updated: 2022-04-06
+  tags:
+  - 27
+- id: 890
+  text: Peut-on estimer une population maximale soutenable sur terre ?
+  hint: ''
+  type: QCM
+  category: 8
+  difficulty: 2
+  language: Français
+  answer_option_a: Oui, 100 millions
+  answer_option_b: Oui, 2 milliards
+  answer_option_c: Oui, 10 milliards
+  answer_option_d: Non, la question est mal posée
+  answer_correct: ''
+  has_ordered_answers: false
+  answer_explanation: Tout dépend de ce qu'on souhaite comme mode de vie et vision
+    soutenable. Pour la nourriture on sait très bien comment nourrir 10Md en 2050
+    (liens 4 études)
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_accessible_url_text: ''
+  answer_scientific_url: ''
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Emmanuel Pont
+  validator: ''
+  validation_status: Brouillon
+  added: 2022-04-01
+  created: 2022-04-06
+  updated: 2022-04-06
+  tags:
+  - 27
+- id: 891
+  text: Imaginons qu’on parvienne (progressivement !) à réduire la population d’un
+    facteur 2. Quel serait l’effet sur les émissions de gaz à effet de serre ?
+  hint: ''
+  type: QCM
+  category: 1
+  difficulty: 3
+  language: Français
+  answer_option_a: Divisées par 2
+  answer_option_b: Divisées par 1,5
+  answer_option_c: Difficile à dire
+  answer_option_d: ''
+  answer_correct: ''
+  has_ordered_answers: true
+  answer_explanation: ''
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_accessible_url_text: ''
+  answer_scientific_url: ''
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Emmanuel Pont
+  validator: ''
+  validation_status: Brouillon
+  added: 2022-04-01
+  created: 2022-04-06
+  updated: 2022-04-06
+  tags:
+  - 13
+  - 27
+- id: 892
+  text: Imaginons qu’on institue demain une politique de l’enfant unique en Françe,
+    à la chinoise. De combien la population française se réduirait-elle à l’horizon
+    2100
+  hint: ''
+  type: QCM
+  category: 8
+  difficulty: 4
+  language: Français
+  answer_option_a: 25%
+  answer_option_b: 50%
+  answer_option_c: 75%
+  answer_option_d: ''
+  answer_correct: c
+  has_ordered_answers: false
+  answer_explanation: ''
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: https://www.ined.fr/fr/tout-savoir-population/jeux/population-demain/)
+  answer_accessible_url_text: ''
+  answer_scientific_url: ''
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Emmanuel Pont
+  validator: ''
+  validation_status: Brouillon
+  added: 2022-04-01
+  created: 2022-04-06
+  updated: 2022-04-06
+  tags:
+  - 1
+  - 27
+- id: 893
+  text: 'Dans son ouvrage, Emmanuel Pont pose une question un peu taboue : quel est
+    l’impact carbone d’avoir un enfant ? A quel résultat aboutit-il ?'
+  hint: ''
+  type: QCM
+  category: 7
+  difficulty: 4
+  language: Français
+  answer_option_a: 1t CO2e / an
+  answer_option_b: 10t  CO2e / an
+  answer_option_c: 60t CO2e / an
+  answer_option_d: Impossible à estimer
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: "le chiffre 60t largement médiatisé ( https://twitter.com/afpfr/status/1049282260707540992\n\
+    \ ) mais additione l'impact futur de toute sa descendance hypothétique. Plusieurs\
+    \ pb. Moyenne actuelle : 10t, mais différent selon âge et va baisser. Mon alternative\
+    \ : 1t / an"
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_accessible_url_text: ''
+  answer_scientific_url: ''
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Emmanuel Pont
+  validator: ''
+  validation_status: Brouillon
+  added: 2022-04-01
+  created: 2022-04-06
+  updated: 2022-04-06
+  tags:
+  - 27
 - id: 900
   text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
   hint: Bas carbone donc…
@@ -37404,7 +37758,7 @@
   - 225
 - id: 1017
   text: A date de septembre 2021, quelle est la proportion des véhicules électriques
-    parmi les véhicules en circulation ?
+    parmi les véhicules en circulation en France ?
   hint: ''
   type: QCM
   category: 1
