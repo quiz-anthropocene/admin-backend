@@ -4,6 +4,7 @@ from django.views.generic import DetailView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
+from api.questions.serializers import QuestionFullStringSerializer
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from questions.filters import QuestionFilter
@@ -39,7 +40,9 @@ class QuestionDetailView(LoginRequiredMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["question_dict"] = model_to_dict(self.get_object())
+        question = self.get_object()
+        # context["question_dict"] = model_to_dict(question, fields=[field.name for field in question._meta.fields])
+        context["question_dict"] = QuestionFullStringSerializer(question).data
         return context
 
 
