@@ -1,0 +1,45 @@
+{% extends "layouts/base.html" %}
+{% load custom_filters %}
+
+{% block title %}Questions{{ block.super }}{% endblock %}
+
+{% block breadcrumbs %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 my-auto">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'questions:list' %}">Questions</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" title="{{ question }}">{{ question|truncatechars:50 }}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-12">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_view' question.id %}">Détails</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Modifier</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if 'comments' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_contributions' question.id %}">Commentaires</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if 'stats' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_stats' question.id %}">Statistiques</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    {% block question_detail_content %}{% endblock %}
+</div>
+{% endblock %}

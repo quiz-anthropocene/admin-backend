@@ -1,0 +1,11 @@
+{% extends "questions/detail_base.html" %}
+{% load render_table from django_tables2 %}
+
+{% block question_detail_content %}
+<div class="row mb-3">
+    <div class="col-12">
+        {{ question_contributions.count }} commentaire{{ question_contributions.count|pluralize }}
+    </div>
+</div>
+{% render_table table %}
+{% endblock %}

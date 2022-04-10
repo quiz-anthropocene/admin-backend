@@ -1,0 +1,43 @@
+{% extends "questions/detail_base.html" %}
+{% load custom_filters %}
+
+{% block question_detail_content %}
+<div class="row">
+    <div class="col-12">
+        <div class="table-container">
+            <table class="table-responsive table-striped table-bordered border-primary font-size-small">
+                <thead>
+                    <tr>
+                        <th>Champ</th>
+                        <th>Valeur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for field in question_dict %}
+                        <tr>
+                            <td class="fw-bold">{{ field }}</td>
+                            {% if field in question.QUESTION_CHOICE_FIELDS or field in question.QUESTION_FK_FIELDS %}
+                                <td><span class="badge bg-primary">{{ question_dict|get_obj_attr:field }}</span></td>
+                            {% elif field in question.QUESTION_M2M_FIELDS %}
+                                <td>
+                                {% for value in question_dict|get_obj_attr:field %}
+                                    <span class="badge bg-primary">{{ value }}</span>
+                                {% endfor %}
+                                </td>
+                            {% elif field in question.QUESTION_BOOLEAN_FIELDS %}
+                                <td>{% if question_dict|get_obj_attr:field %}✅{% else %}❌{% endif %}</td>
+                            {% elif field in question.QUESTION_URL_FIELDS %}
+                                <td><a href="{{ question_dict|get_obj_attr:field }}" target="_blank" rel="noopener">{{ question_dict|get_obj_attr:field }}</a></td>
+                            {% elif field in question.QUESTION_IMAGE_URL_FIELDS %}
+                                <td><a href="{{ question_dict|get_obj_attr:field }}" target="_blank" rel="noopener"><img src="{{ question_dict|get_obj_attr:field }}" title="{{ question_dict|get_obj_attr:field }}" height="100" /></a></td>
+                            {% else %}
+                                <td>{{ question_dict|get_obj_attr:field }}</td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
