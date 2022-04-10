@@ -31,6 +31,21 @@ class QuestionQuerySet(models.QuerySet):
 
 
 class Question(models.Model):
+    QUESTION_CHOICE_FIELDS = [
+        "type",
+        "difficulty",
+        "language",
+        "answer_correct",
+        "validation_status",
+        "author",
+        "validator",
+    ]
+    QUESTION_FK_FIELDS = ["category"]
+    QUESTION_M2M_FIELDS = ["tags"]
+    QUESTION_BOOLEAN_FIELDS = ["has_ordered_answers"]
+    QUESTION_URL_FIELDS = ["answer_audio", "answer_video", "answer_accessible_url", "answer_scientific_url"]
+    QUESTION_IMAGE_URL_FIELDS = ["answer_image_url"]
+
     text = models.TextField(blank=False, help_text="La question en 1 ou 2 phrases")
     hint = models.TextField(blank=True, help_text="Un indice (optionnel)")
     type = models.CharField(
