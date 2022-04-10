@@ -1,0 +1,15 @@
+{% extends "questions/detail_base.html" %}
+{% load custom_filters %}
+
+{% block question_detail_content %}
+{% for field in question_agg_stat_dict %}
+    <div class="row">
+        <div class="col-4">
+            <strong>{{ field }}</strong>
+        </div>
+        <div class="col-8">
+            {{ question_agg_stat_dict|get_obj_attr:field }}
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}

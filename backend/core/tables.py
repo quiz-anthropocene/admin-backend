@@ -19,7 +19,7 @@ class ChoiceColumn(tables.Column):
 class ImageColumn(tables.Column):
     def render(self, value):
         return format_html(
-            f'<a href="{value}" target="_blank">' f'<img src="{value}" title="{value}" height="100" />' f"</a>"
+            f'<a href="{value}" target="_blank" rel="noopener"><img src="{value}" title="{value}" height="100" /></a>'
         )
 
 
