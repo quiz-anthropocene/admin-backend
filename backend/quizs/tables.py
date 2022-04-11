@@ -6,6 +6,7 @@ from quizs.models import Quiz
 
 
 class QuizTable(tables.Table):
+    id = tables.Column(linkify=lambda record: record.get_absolute_url())
     introduction = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.introduction}})
     conclusion = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.conclusion}})
     tags = tables.ManyToManyColumn(

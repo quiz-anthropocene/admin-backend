@@ -2,6 +2,7 @@ from ckeditor.fields import RichTextField
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models import Avg, Count
+from django.urls import reverse
 from django.utils.text import slugify
 
 from core import constants
@@ -94,6 +95,9 @@ class Quiz(models.Model):
         self.full_clean()
         self.set_slug()
         return super(Quiz, self).save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse("quizs:detail", kwargs={"pk": self.id})
 
     @property
     def question_count(self) -> int:
