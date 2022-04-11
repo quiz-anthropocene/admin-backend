@@ -25,6 +25,17 @@ class QuizQuerySet(models.QuerySet):
 
 
 class Quiz(models.Model):
+    QUIZ_CHOICE_FIELDS = ["language", "author"]
+    QUIZ_FK_FIELDS = []
+    QUIZ_M2M_FIELDS = ["questions", "tags", "relationships"] + [
+        "questions_categories_list",
+        "questions_tags_list",
+        "questions_authors_list",
+    ]
+    QUIZ_BOOLEAN_FIELDS = ["has_audio", "publish", "spotlight"]
+    QUIZ_URL_FIELDS = []
+    QUIZ_IMAGE_URL_FIELDS = ["image_background_url"]
+
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du quiz")
     slug = models.SlugField(max_length=50, unique=True, help_text="Le bout d'url du quiz")
     introduction = RichTextField(blank=True, help_text="Une description du quiz")

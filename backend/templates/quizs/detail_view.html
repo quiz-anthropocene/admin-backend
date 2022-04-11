@@ -16,19 +16,19 @@
                     {% for field in quiz_dict %}
                         <tr>
                             <td class="fw-bold">{{ field }}</td>
-                            {% if field in quiz.QUESTION_CHOICE_FIELDS or field in quiz.QUESTION_FK_FIELDS %}
+                            {% if field in quiz.QUIZ_CHOICE_FIELDS or field in quiz.QUIZ_FK_FIELDS %}
                                 <td><span class="badge bg-primary">{{ quiz_dict|get_obj_attr:field }}</span></td>
-                            {% elif field in quiz.QUESTION_M2M_FIELDS %}
+                            {% elif field in quiz.QUIZ_M2M_FIELDS %}
                                 <td>
                                 {% for value in quiz_dict|get_obj_attr:field %}
                                     <span class="badge bg-primary">{{ value }}</span>
                                 {% endfor %}
                                 </td>
-                            {% elif field in quiz.QUESTION_BOOLEAN_FIELDS %}
+                            {% elif field in quiz.QUIZ_BOOLEAN_FIELDS %}
                                 <td>{% if quiz_dict|get_obj_attr:field %}✅{% else %}❌{% endif %}</td>
-                            {% elif field in quiz.QUESTION_URL_FIELDS %}
+                            {% elif field in quiz.QUIZ_URL_FIELDS %}
                                 <td><a href="{{ quiz_dict|get_obj_attr:field }}" target="_blank" rel="noopener">{{ quiz_dict|get_obj_attr:field }}</a></td>
-                            {% elif field in quiz.QUESTION_IMAGE_URL_FIELDS %}
+                            {% elif field in quiz.QUIZ_IMAGE_URL_FIELDS %}
                                 <td><a href="{{ quiz_dict|get_obj_attr:field }}" target="_blank" rel="noopener"><img src="{{ quiz_dict|get_obj_attr:field }}" title="{{ quiz_dict|get_obj_attr:field }}" height="100" /></a></td>
                             {% else %}
                                 <td>{{ quiz_dict|get_obj_attr:field }}</td>
