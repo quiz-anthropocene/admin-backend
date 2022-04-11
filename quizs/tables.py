@@ -6,20 +6,23 @@ from quizs.models import Quiz
 
 
 class QuizTable(tables.Table):
+    id = tables.Column(linkify=lambda record: record.get_absolute_url())
     introduction = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.introduction}})
     conclusion = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.conclusion}})
     tags = tables.ManyToManyColumn(
         transform=lambda tag: format_html(f'<span class="badge bg-primary">{tag.name}</span>'), separator=" "
     )
-    language = ChoiceColumn()
-    author = ChoiceColumn()
     image_background_url = ImageColumn()
-    has_audio = tables.BooleanColumn(yesno="✅,❌")
-    publish = tables.BooleanColumn(yesno="✅,❌")
-    spotlight = tables.BooleanColumn(yesno="✅,❌")
 
     class Meta:
         model = Quiz
         template_name = "django_tables2/bootstrap4.html"
         # fields = ("id", "category", "tags")
         attrs = {"class": "table-responsive table-striped table-bordered border-primary font-size-small"}
+
+    def __init__(self, *args, **kwargs):
+        for field_name in Quiz.QUIZ_CHOICE_FIELDS + Quiz.QUIZ_FK_FIELDS + Quiz.QUIZ_M2M_FIELDS:
+            self.base_columns[field_name] = ChoiceColumn()
+        for field_name in Quiz.QUIZ_BOOLEAN_FIELDS:
+            self.base_columns[field_name] = tables.BooleanColumn(yesno="✅,❌")
+        super(QuizTable, self).__init__(*args, **kwargs)

@@ -17,19 +17,24 @@ class QuizQuestionSerializer(serializers.ModelSerializer):
 QUIZ_FIELDS = [
     "id",
     "name",
+    # "slug",
     "introduction",
     "conclusion",
+    "questions",
+    "tags",
+    "difficulty_average",
     "language",
     "author",
     "image_background_url",
-    "questions",
-    "tags",
+    "has_audio",
+    # "publish", "spotlight",
+    # "relationships",
     "question_count",
     "questions_categories_list",
     "questions_tags_list",
     "questions_authors_list",
-    "difficulty_average",
     "created",
+    "updated",
 ]
 
 
