@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 {% load custom_filters %}
 
-{% block title %}Question #{{ question.id }}{{ block.super }}{% endblock %}
+{% block title %}Quiz #{{ quiz.id }}{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -10,8 +10,8 @@
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'questions:list' %}">Questions</a></li>
-                    <li class="breadcrumb-item active" aria-current="page" title="{{ question }}">{{ question|truncatechars:50 }}</li>
+                    <li class="breadcrumb-item"><a href="{% url 'quizs:list' %}">Quizs</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" title="{{ quiz }}">{{ quiz|truncatechars:50 }}</li>
                 </ol>
             </nav>
         </div>
@@ -25,21 +25,21 @@
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_view' question.id %}">Détails</a>
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_view' quiz.id %}">Détails</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Modifier</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'comments' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_contributions' question.id %}">Commentaires</a>
+                    <a class="nav-link {% if 'comments' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_contributions' quiz.id %}">Commentaires</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'stats' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_stats' question.id %}">Statistiques</a>
+                    <a class="nav-link {% if 'stats' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_stats' quiz.id %}">Statistiques</a>
                 </li>
             </ul>
         </div>
     </div>
 
-    {% block question_detail_content %}{% endblock %}
+    {% block quiz_detail_content %}{% endblock %}
 </div>
 {% endblock %}
