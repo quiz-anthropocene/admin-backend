@@ -6,12 +6,12 @@
   difficulty_average: 1.9
   language: Français
   author: Raphael Odini
-  image_background_url: https://showyourstripes.info/stripes/GLOBE---1850-2020-MO.png
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/010-show-your-stripes.png
   has_audio: false
   publish: true
   spotlight: false
   created: 2020-04-17
-  updated: 2021-11-26
+  updated: 2022-04-11
   tags: []
 - id: 2
   name: L'énergie en France 🇫🇷
