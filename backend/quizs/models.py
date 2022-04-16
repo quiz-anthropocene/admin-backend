@@ -1,4 +1,5 @@
 from ckeditor.fields import RichTextField
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models import Avg, Count
@@ -26,8 +27,9 @@ class QuizQuerySet(models.QuerySet):
 
 class Quiz(models.Model):
     QUIZ_CHOICE_FIELDS = ["language", "author"]
-    QUIZ_FK_FIELDS = []
-    QUIZ_M2M_FIELDS = ["questions", "tags", "relationships"] + [
+    QUIZ_FK_FIELDS = ["author_link"]
+    QUIZ_M2M_FIELDS = ["questions", "tags", "relationships"]
+    QUIZ_LIST_FIELDS = [
         "questions_categories_list",
         "questions_tags_list",
         "questions_authors_list",
@@ -64,6 +66,14 @@ class Quiz(models.Model):
         help_text="La langue du quiz",
     )
     author = models.CharField(max_length=50, blank=True, help_text="L'auteur du quiz")
+    author_link = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL,
+        related_name="quizs",
+        help_text="L'auteur du quiz",
+    )
     image_background_url = models.URLField(
         max_length=500,
         blank=True,

@@ -9,6 +9,7 @@ urlpatterns = [
     # www
     path("", include("www.pages.urls")),
     path("accounts/", include("www.auth.urls")),
+    path("profile/", include("www.profile.urls")),
     path("questions/", include("www.questions.urls")),
     path("quizs/", include("www.quizs.urls")),
     path("contributions/", include("www.contributions.urls")),
