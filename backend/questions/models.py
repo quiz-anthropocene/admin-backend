@@ -41,7 +41,7 @@ class Question(models.Model):
         "author",
         "validator",
     ]
-    QUESTION_FK_FIELDS = ["category"]
+    QUESTION_FK_FIELDS = ["category", "author_link", "validator_link"]
     QUESTION_M2M_FIELDS = ["tags"]
     QUESTION_BOOLEAN_FIELDS = ["has_ordered_answers"]
     QUESTION_URL_FIELDS = ["answer_audio", "answer_video", "answer_accessible_url", "answer_scientific_url"]
