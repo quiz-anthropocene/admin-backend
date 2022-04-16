@@ -1,4 +1,5 @@
 from ckeditor.fields import RichTextField
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models import Avg, Count
@@ -64,6 +65,13 @@ class Quiz(models.Model):
         help_text="La langue du quiz",
     )
     author = models.CharField(max_length=50, blank=True, help_text="L'auteur du quiz")
+    author_link = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        null=True,
+        on_delete=models.SET_NULL,
+        related_name="quizs",
+        help_text="L'auteur du quiz",
+    )
     image_background_url = models.URLField(
         max_length=500,
         blank=True,

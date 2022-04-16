@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.urls import reverse
@@ -94,7 +95,7 @@ class Question(models.Model):
     )
     has_ordered_answers = models.BooleanField(
         default=True,
-        help_text="Les choix de réponse sont dans un ordre figé, " "et ne doivent pas être mélangés",
+        help_text="Les choix de réponse sont dans un ordre figé, et ne doivent pas être mélangés",
     )
     answer_explanation = models.TextField(blank=True, help_text="Un petit texte d'explication")
     answer_audio = models.URLField(max_length=500, blank=True, help_text="Une explication audio")
@@ -127,10 +128,25 @@ class Question(models.Model):
     )
     answer_extra_info = models.TextField(
         blank=True,
-        help_text="Texte et liens explicatifs additionels, qui n'apparaissent pas " "dans l'interface",
+        help_text="Texte et liens explicatifs additionels, qui n'apparaissent pas dans l'interface",
     )
     author = models.CharField(max_length=50, blank=True, help_text="L'auteur de la question")
+    author_link = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        null=True,
+        on_delete=models.SET_NULL,
+        related_name="questions",
+        help_text="L'auteur de la question",
+    )
     validator = models.CharField(max_length=50, blank=True, help_text="La personne qui a validée la question")
+    validator_link = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL,
+        related_name="questions_validated",
+        help_text="La personne qui a validée la question",
+    )
     validation_status = models.CharField(
         max_length=150,
         choices=constants.QUESTION_VALIDATION_STATUS_CHOICES,
