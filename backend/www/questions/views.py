@@ -22,7 +22,7 @@ class QuestionListView(LoginRequiredMixin, SingleTableMixin, FilterView):
 
     def get_queryset(self):
         qs = super().get_queryset()
-        qs = qs.select_related("category").prefetch_related("tags")
+        qs = qs.select_related("category", "author_link", "validator_link").prefetch_related("tags")
         return qs
 
     def get_context_data(self, **kwargs):
