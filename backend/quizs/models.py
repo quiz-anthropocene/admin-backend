@@ -68,6 +68,7 @@ class Quiz(models.Model):
     author = models.CharField(max_length=50, blank=True, help_text="L'auteur du quiz")
     author_link = models.ForeignKey(
         settings.AUTH_USER_MODEL,
+        blank=True,
         null=True,
         on_delete=models.SET_NULL,
         related_name="quizs",

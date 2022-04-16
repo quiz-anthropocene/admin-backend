@@ -18,6 +18,7 @@ class Migration(migrations.Migration):
             name="author_link",
             field=models.ForeignKey(
                 help_text="L'auteur du quiz",
+                blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.SET_NULL,
                 related_name="quizs",
