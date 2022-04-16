@@ -7,5 +7,9 @@
         {{ question_contributions.count }} commentaire{{ question_contributions.count|pluralize }}
     </div>
 </div>
-{% render_table table %}
+<div class="row overflow-scroll">
+    <div class="col-12">
+        {% render_table table %}
+    </div>
+</div>
 {% endblock %}

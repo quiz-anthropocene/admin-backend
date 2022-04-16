@@ -25,7 +25,7 @@ class QuestionTable(tables.Table):
         attrs = {"class": "table-responsive table-striped table-bordered border-primary font-size-small"}
 
     def __init__(self, *args, **kwargs):
-        for field_name in Question.QUESTION_CHOICE_FIELDS + Question.QUESTION_FK_FIELDS + Question.QUESTION_M2M_FIELDS:
+        for field_name in Question.QUESTION_CHOICE_FIELDS + Question.QUESTION_FK_FIELDS:
             self.base_columns[field_name] = ChoiceColumn()
         for field_name in Question.QUESTION_BOOLEAN_FIELDS:
             self.base_columns[field_name] = tables.BooleanColumn(yesno="✅,❌")
