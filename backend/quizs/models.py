@@ -231,6 +231,10 @@ class Quiz(models.Model):
     def dislike_count_agg(self) -> int:
         return self.agg_stats.dislike_count + self.feedbacks.disliked().count()
 
+    @property
+    def contribution_count(self) -> int:
+        return self.contributions.count()
+
     # Admin
     tags_list_string.fget.short_description = "Tag(s)"
     questions_not_validated_string.fget.short_description = "Questions pas encore validées"

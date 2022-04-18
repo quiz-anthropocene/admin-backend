@@ -23,7 +23,7 @@ class QuizTable(tables.Table):
         attrs = {"class": "table-responsive table-striped table-bordered border-primary font-size-small"}
 
     def __init__(self, *args, **kwargs):
-        for field_name in Quiz.QUIZ_CHOICE_FIELDS + Quiz.QUIZ_FK_FIELDS + Quiz.QUIZ_LIST_FIELDS:
+        for field_name in Quiz.QUIZ_CHOICE_FIELDS + Quiz.QUIZ_FK_FIELDS:  # + Quiz.QUIZ_LIST_FIELDS:
             self.base_columns[field_name] = ChoiceColumn()
         for field_name in Quiz.QUIZ_BOOLEAN_FIELDS:
             self.base_columns[field_name] = tables.BooleanColumn(yesno="✅,❌")

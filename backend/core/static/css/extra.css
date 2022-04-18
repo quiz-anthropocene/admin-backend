@@ -26,6 +26,7 @@ ol.breadcrumb {
 /* Table */
 
 div.table-container > table > thead > tr > th {
+    min-width: 30px;
     background-color: #0d6efd;
 }
 div.table-container > table > thead > tr > th,

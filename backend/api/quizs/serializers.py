@@ -51,6 +51,12 @@ class QuizSerializer(serializers.ModelSerializer):
         fields = QUIZ_FIELDS
 
 
+class QuizWithQuestionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Quiz
+        fields = QUIZ_FIELDS + ["questions"]
+
+
 class QuizWithQuestionOrderSerializer(serializers.ModelSerializer):
     questions = QuizQuestionInlineSerializer(source="quizquestion_set", many=True)
 
