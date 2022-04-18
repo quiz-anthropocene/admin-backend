@@ -1,3 +1,4 @@
+import json
 import re
 
 import yaml
@@ -28,7 +29,20 @@ def serialize_queryset_to_yaml(queryset, flat=False, stream=None):
     )
 
 
-def serialize_model_to_yaml(app_label, model_label, flat=False, stream=None):
+def serialize_model_to_yaml(model_queryset, model_serializer, stream=None):
+    serializer = model_serializer(model_queryset.order_by("pk"), many=True)
+    # serializer.data is a list of OrderedDicts
+    # use json to transform to list of dicts
+    serializer_json = json.loads(json.dumps(serializer.data))
+    return yaml.dump(
+        serializer_json,
+        allow_unicode=True,
+        sort_keys=False,
+        stream=stream,
+    )
+
+
+def serialize_model_to_yaml_old(app_label, model_label, flat=False, stream=None):
     model = apps.get_app_config(app_label).get_model(model_label)
     queryset = model.objects.all().order_by("pk")
     return serialize_queryset_to_yaml(queryset, flat=flat, stream=stream)
