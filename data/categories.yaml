@@ -2,41 +2,41 @@
   name: Climat
   name_long: Climat
   description: Dérèglement climatique
-  created: 2020-04-17
+  created: '2020-04-17'
 - id: 2
   name: Consommation
   name_long: Consommation, Leviers d'action
   description: Impact de nos modes de vie, notre consommation
-  created: 2020-04-17
+  created: '2020-04-17'
 - id: 3
   name: Pollution
   name_long: Pollution
   description: Emissions de gaz, mer, déchets...
-  created: 2020-04-17
+  created: '2020-04-17'
 - id: 4
   name: Biodiversité
   name_long: Biodiversité
   description: ''
-  created: 2020-04-17
+  created: '2020-04-17'
 - id: 5
   name: Énergie
   name_long: Énergie
   description: ''
-  created: 2020-04-17
+  created: '2020-04-17'
 - id: 6
   name: Histoire & Politique
   name_long: Histoire, Anthropologie, Politique, Démographie
   description: ''
-  created: 2020-04-24
+  created: '2020-04-24'
 - id: 7
   name: Ressources
   name_long: Ressources
   description: Sur la façon dont l'humanité puise dans les ressources de la terre,
     renouvelables et non-renouvelables.
-  created: 2020-04-17
+  created: '2020-04-17'
 - id: 8
   name: Autres
   name_long: Autres
   description: 'Tout ce qui ne rentre pas dans les catégories précédents. Notamment
     des questions de culture générale. Ex: « qu''est-ce que l''ADEME ? »'
-  created: 2020-04-17
+  created: '2020-04-17'
