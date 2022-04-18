@@ -5,8 +5,16 @@ from django.conf import settings
 from django.core.management import BaseCommand
 from django.utils import timezone
 
+from api.categories.serializers import CategorySerializer
+from api.questions.serializers import QuestionSerializer
+from api.quizs.serializers import QuizQuestionSerializer, QuizRelationshipSerializer, QuizSerializer
+from api.tags.serializers import TagSerializer
+from categories.models import Category
 from core.models import Configuration
 from core.utils import github, utilities
+from questions.models import Question
+from quizs.models import Quiz, QuizQuestion, QuizRelationship
+from tags.models import Tag
 
 
 class Command(BaseCommand):
@@ -37,7 +45,7 @@ class Command(BaseCommand):
             #####################################
             # data/configuration.yaml
             start_time = time.time()
-            configuration_yaml = utilities.serialize_model_to_yaml("core", model_label="configuration", flat=True)
+            configuration_yaml = utilities.serialize_model_to_yaml_old("core", model_label="configuration", flat=True)
             configuration_element = github.create_file_element(
                 file_path="data/configuration.yaml", file_content=configuration_yaml
             )
@@ -47,18 +55,21 @@ class Command(BaseCommand):
             #####################################
             # # data/categories.yaml
             start_time = time.time()
-            # categories_yaml = utilities.serialize_model_to_yaml("categories", model_label="category", flat=True)  # noqa
-            # categories_element = utilities_github.create_file_element(
-            #     file_path="data/categories.yaml",
-            #     file_content=categories_element
-            # )
+            category_queryset = Category.objects.all()
+            categories_yaml = utilities.serialize_model_to_yaml(
+                model_queryset=category_queryset, model_serializer=CategorySerializer
+            )  # noqa
+            categories_element = github.create_file_element(
+                file_path="data/categories.yaml", file_content=categories_yaml
+            )
 
             print("--- Step 2.2 done : categories.yaml (skipped) ---")
 
             #####################################
             # data/tags.yaml
             start_time = time.time()
-            tags_yaml = utilities.serialize_model_to_yaml("tags", model_label="tag", flat=True)
+            tag_queryset = Tag.objects.all()
+            tags_yaml = utilities.serialize_model_to_yaml(model_queryset=tag_queryset, model_serializer=TagSerializer)
             tags_element = github.create_file_element(file_path="data/tags.yaml", file_content=tags_yaml)
 
             print("--- Step 2.3 done : tags.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
@@ -66,7 +77,10 @@ class Command(BaseCommand):
             #####################################
             # data/questions.yaml
             start_time = time.time()
-            questions_yaml = utilities.serialize_model_to_yaml("questions", model_label="question", flat=True)
+            question_queryset = Question.objects.all()
+            questions_yaml = utilities.serialize_model_to_yaml(
+                model_queryset=question_queryset, model_serializer=QuestionSerializer
+            )
             questions_element = github.create_file_element(
                 file_path="data/questions.yaml", file_content=questions_yaml
             )
@@ -76,7 +90,10 @@ class Command(BaseCommand):
             #####################################
             # data/quizs.yaml
             start_time = time.time()
-            quizs_yaml = utilities.serialize_model_to_yaml("quizs", model_label="quiz", flat=True)
+            quiz_queryset = Quiz.objects.all()
+            quizs_yaml = utilities.serialize_model_to_yaml(
+                model_queryset=quiz_queryset, model_serializer=QuizSerializer
+            )
             quizs_element = github.create_file_element(file_path="data/quizs.yaml", file_content=quizs_yaml)
 
             print("--- Step 2.5 done : quizs.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
@@ -84,7 +101,10 @@ class Command(BaseCommand):
             #####################################
             # data/quiz-questions.yaml
             start_time = time.time()
-            quiz_questions_yaml = utilities.serialize_model_to_yaml("quizs", model_label="quizquestion", flat=True)
+            quiz_questions_queryset = QuizQuestion.objects.all()
+            quiz_questions_yaml = utilities.serialize_model_to_yaml(
+                model_queryset=quiz_questions_queryset, model_serializer=QuizQuestionSerializer
+            )
             quiz_questions_element = github.create_file_element(
                 file_path="data/quiz-questions.yaml", file_content=quiz_questions_yaml
             )
@@ -94,8 +114,9 @@ class Command(BaseCommand):
             #####################################
             # data/quiz-relationships.yaml
             start_time = time.time()
+            quiz_relationships_queryset = QuizRelationship.objects.all()
             quiz_relationships_yaml = utilities.serialize_model_to_yaml(
-                "quizs", model_label="quizrelationship", flat=True
+                model_queryset=quiz_relationships_queryset, model_serializer=QuizRelationshipSerializer
             )
             quiz_relationships_element = github.create_file_element(
                 file_path="data/quiz-relationships.yaml",
@@ -131,6 +152,7 @@ class Command(BaseCommand):
                 commit_message="Data: data update",
                 file_element_list=[
                     configuration_element,
+                    categories_element,
                     tags_element,
                     questions_element,
                     quizs_element,
