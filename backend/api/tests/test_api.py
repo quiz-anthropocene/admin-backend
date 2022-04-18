@@ -194,8 +194,8 @@ class ApiTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data["results"], list)
         self.assertEqual(len(response.data["results"]), 1)  # 1 quiz not published
-        self.assertEqual(response.data["results"][0]["question_count"], 2)
-        self.assertEqual(response.data["results"][0]["questions"][0], self.question_2.id)
+        # self.assertEqual(response.data["results"][0]["question_count"], 2)
+        # self.assertEqual(response.data["results"][0]["questions"][0], self.question_2.id)
 
     def test_quiz_list_filter_by_language(self):
         response = self.client.get(reverse("api:quiz-list"), {"language": constants.LANGUAGE_ENGLISH})
