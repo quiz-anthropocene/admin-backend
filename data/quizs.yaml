@@ -3,6 +3,7 @@
   slug: quelques-chiffres-cles
   introduction: <p>Quelques chiffres pour se mettre en jambes.</p>
   conclusion: ''
+  tags: []
   difficulty_average: 1.9
   language: Français
   author: Raphael Odini
@@ -10,15 +11,16 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-04-17
-  updated: 2022-04-11
-  tags: []
+  created: '2020-04-17'
+  updated: '2022-04-16'
 - id: 2
   name: L'énergie en France 🇫🇷
   slug: lenergie-en-france
   introduction: <p>Un aperçu rapide de la production et de la consommation d'énergie
     en France.</p>
   conclusion: ''
+  tags:
+  - 1
   difficulty_average: 2.3
   language: Français
   author: Raphael Odini
@@ -26,10 +28,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-05-25
-  updated: 2021-10-24
-  tags:
-  - 1
+  created: '2020-05-25'
+  updated: '2022-04-16'
 - id: 3
   name: Le quiz de Vincent Mignerot
   slug: le-quiz-de-vincent-mignerot
@@ -45,6 +45,8 @@
     \ pour aller plus loin. </p>"
   conclusion: <p>Si ce quiz vous a intéressé, vous le serez problablement par <a href="https://quizanthropocene.fr/quiz/18">celui-ci,</a>
     qui traite de questions similaires.</p>
+  tags:
+  - 185
   difficulty_average: 2.2
   language: Français
   author: Vincent Mignerot
@@ -52,10 +54,8 @@
   has_audio: true
   publish: true
   spotlight: true
-  created: 2020-06-26
-  updated: 2021-10-24
-  tags:
-  - 185
+  created: '2020-06-26'
+  updated: '2022-04-16'
 - id: 4
   name: Les pics de ressources
   slug: les-pics-de-ressources
@@ -63,6 +63,7 @@
     lequel elle ne peut que décroître pour finalement tomber à 0. C'est le thème qu'explore
     ce quiz sur les différentes ressources non-renouvelables dont nous faisons usage.
   conclusion: ''
+  tags: []
   difficulty_average: 2.7
   language: Français
   author: Matthieu Massart
@@ -70,9 +71,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-07-08
-  updated: 2021-10-24
-  tags: []
+  created: '2020-07-08'
+  updated: '2022-04-16'
 - id: 5
   name: Mon empreinte carbone
   slug: mon-empreinte-carbone
@@ -80,6 +80,8 @@
     de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent lui être
     imputées. Connaissez-vous votre empreinte ? Voyons voir ça.</p>
   conclusion: ''
+  tags:
+  - 72
   difficulty_average: 2.1
   language: Français
   author: Matthieu Massart
@@ -87,10 +89,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-07-08
-  updated: 2021-10-24
-  tags:
-  - 72
+  created: '2020-07-08'
+  updated: '2022-04-16'
 - id: 6
   name: Introduction à l'anthropocène - Partie 1
   slug: introduction-a-lanthropocene-partie-1
@@ -102,6 +102,7 @@
     \ quiz propose un premier tour d'horizon de l'emprise inédite de l'homme sur la\
     \ planète qu'il occupe.<br />\r\n<br />\r\nDurée à prévoir : 15 min</p>"
   conclusion: <p>Vous êtes prêts à enchaîner sur la partie 2 ?</p>
+  tags: []
   difficulty_average: 2.7
   language: Français
   author: Matthieu Massart
@@ -109,15 +110,16 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-07-08
-  updated: 2021-10-24
-  tags: []
+  created: '2020-07-08'
+  updated: '2022-04-16'
 - id: 7
   name: Le Pétrole - Partie 1
   slug: le-petrole-partie-1
   introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
     à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
   conclusion: ''
+  tags:
+  - 11
   difficulty_average: 2.3
   language: Français
   author: Matthieu Massart
@@ -125,10 +127,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-09
-  updated: 2021-10-24
-  tags:
-  - 11
+  created: '2020-07-09'
+  updated: '2022-04-16'
 - id: 8
   name: La Fresque du Climat - Lot 1
   slug: la-fresque-du-climat-lot-1
@@ -141,6 +141,8 @@
   conclusion: "<p>Vous voilà prêt à vous attaquer au lot 2 ! Ou, mieux encore, à vous\
     \ inscrire à un atelier. Plus d'information <a href=\"https://fresqueduclimat.org\"\
     >ici</a>.</p>\r\n\r\n<p> </p>"
+  tags:
+  - 142
   difficulty_average: 2.0
   language: Français
   author: Matthieu Massart
@@ -148,16 +150,15 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-14
-  updated: 2022-01-11
-  tags:
-  - 142
+  created: '2020-07-14'
+  updated: '2022-04-16'
 - id: 9
   name: Pollutions
   slug: pollutions
   introduction: Nos modes de vie génèrent des pollutions diverses. En connaissez-vous
     la variété et l'ampleur ? C'est ce que ce quiz se propose d'explorer.
   conclusion: ''
+  tags: []
   difficulty_average: 3.3
   language: Français
   author: Matthieu Massart
@@ -165,15 +166,16 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-07-14
-  updated: 2021-10-24
-  tags: []
+  created: '2020-07-14'
+  updated: '2022-04-16'
 - id: 10
   name: Le Pétrole - Partie 2
   slug: le-petrole-partie-2
   introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
     à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
   conclusion: ''
+  tags:
+  - 11
   difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
@@ -181,10 +183,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags:
-  - 11
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 11
   name: La fresque du Climat - Lot 2
   slug: la-fresque-du-climat-lot-2
@@ -197,6 +197,8 @@
     \ distribué lors d'un atelier de la Fresque.</p>"
   conclusion: <p>Vous voilà prêt à vous attaquer au lot 3 ! Ou, mieux encore, à vous
     inscrire à un atelier. Plus d'information <a href="https://fresqueduclimat.org">ici</a>.</p>
+  tags:
+  - 142
   difficulty_average: 1.9
   language: Français
   author: Matthieu Massart
@@ -204,10 +206,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags:
-  - 142
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 12
   name: La Fresque du Climat - Lot 3
   slug: la-fresque-du-climat-lot-3
@@ -219,6 +219,8 @@
     \ d’ici 2021.</p>\r\n\r\n<p>Ce quiz est centré sur les cartes du 3ème lot distribué\
     \ lors d'une Fresque.</p>"
   conclusion: <p>Vous pouvez vous inscire à un atelier. Plus d'information <a href="https://fresqueduclimat.org">ici</a>.</p>
+  tags:
+  - 142
   difficulty_average: 2.0
   language: Français
   author: Matthieu Massart
@@ -226,10 +228,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags:
-  - 142
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 13
   name: La Fresque du Climat - Lot 4
   slug: la-fresque-du-climat-lot-4
@@ -241,6 +241,8 @@
     \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur les cartes du 4ème lot distribué\
     \ lors d'une fresque.</p>"
   conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
+  tags:
+  - 142
   difficulty_average: 2.7
   language: Français
   author: Matthieu Massart
@@ -248,10 +250,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags:
-  - 142
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 14
   name: La Fresque du Climat - Lot 5
   slug: la-fresque-du-climat-lot-5
@@ -263,6 +263,8 @@
     \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur le cinquième et dernier lot\
     \ de cartes distribué lors d'une Fresque.</p>"
   conclusion: <p>Plus d'information sur la Fresque du Climat <a href="https://fresqueduclimat.org">ici</a>.</p>
+  tags:
+  - 142
   difficulty_average: 1.7
   language: Français
   author: Matthieu Massart
@@ -270,10 +272,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags:
-  - 142
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 15
   name: La Fresque du Climat - pour aller au-delà
   slug: la-fresque-du-climat-pour-aller-au-dela
@@ -286,6 +286,8 @@
     \ et parfois d'aller plus loin autour du dérèglement du climat - questions non\
     \ liées aux 42 cartes du jeu.</p>"
   conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
+  tags:
+  - 142
   difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
@@ -293,10 +295,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags:
-  - 142
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 16
   name: Introduction à l'anthropocène - Partie 2
   slug: introduction-a-lanthropocene-partie-2
@@ -307,6 +307,7 @@
     des courbes de type exponentiel. Ce 2ème quiz continue le tour d'horizon sur l'emprise
     inédite de l'homme sur la planète qu'il occupe.</p>
   conclusion: ''
+  tags: []
   difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
@@ -314,15 +315,18 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags: []
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 17
   name: Une biodiversité qui s'anéantit
   slug: une-biodiversite-qui-saneantit
   introduction: <p>Quel impact l'homme a-t-il sur les autres espèces ? Un premier
     aperçu via ces quelques questions.</p>
   conclusion: ''
+  tags:
+  - 6
+  - 49
+  - 76
   difficulty_average: 2.5
   language: Français
   author: Matthieu Massart
@@ -330,12 +334,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-08-04
-  updated: 2021-10-24
-  tags:
-  - 6
-  - 49
-  - 76
+  created: '2020-08-04'
+  updated: '2022-04-16'
 - id: 18
   name: Le quiz de Laurent Testot
   slug: le-quiz-de-laurent-testot
@@ -360,6 +360,7 @@
     l'interaction de l'homme avec son environnement. Pour aller plus loin, vous pouvez
     vous plonger dans les ouvrages de Laurent, ou continuer dans le même esprit avec
     le <a href="https://quizanthropocene.fr/quiz/3">quiz de Vincent Mignerot</a>.</p>
+  tags: []
   difficulty_average: 2.7
   language: Français
   author: Laurent Testot
@@ -367,9 +368,8 @@
   has_audio: true
   publish: true
   spotlight: true
-  created: 2020-09-23
-  updated: 2021-10-24
-  tags: []
+  created: '2020-09-23'
+  updated: '2022-04-16'
 - id: 52
   name: La finance "verte", par Bon Pote
   slug: la-finance-verte-par-bon-pote
@@ -385,6 +385,8 @@
     plonger dans l''enfer des réglementations et du greenwashing financier ? C''est
     parti.</p>'
   conclusion: ''
+  tags:
+  - 194
   difficulty_average: 3.0
   language: Français
   author: Bonpote
@@ -392,10 +394,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-11-16
-  updated: 2021-10-24
-  tags:
-  - 194
+  created: '2020-11-16'
+  updated: '2022-04-16'
 - id: 53
   name: Les 10 questions les plus difficiles
   slug: les-10-questions-les-plus-difficiles
@@ -406,6 +406,7 @@
   conclusion: "<p>Bravo d'être allé jusqu'au bout, ce n'était vraiment pas évident\
     \ !</p>\r\n\r\n<p>Pour vous remettre de ce remue-méninge, n'hésitez pas à allez\
     \ découvrir les autres quiz, ils sont nettement plus faciles !</p>"
+  tags: []
   difficulty_average: 4.0
   language: Français
   author: laydgeur
@@ -413,9 +414,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-11-27
-  updated: 2021-10-24
-  tags: []
+  created: '2020-11-27'
+  updated: '2022-04-16'
 - id: 54
   name: Born in the USA
   slug: born-in-the-usa
@@ -431,6 +431,11 @@
     \n\r\n<p>Oh, et tant qu'on parle de pétrole, je vous invite à aller faire un tour\
     \ sur notre page de quiz, vous trouverez d'autres quiz thématiques pour pour étancher\
     \ votre soif de compréhension de notre dépendance à l'or noir ;)</p>"
+  tags:
+  - 11
+  - 13
+  - 31
+  - 80
   difficulty_average: 2.6
   language: Français
   author: laydgeur
@@ -438,13 +443,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-11-28
-  updated: 2021-10-24
-  tags:
-  - 11
-  - 13
-  - 31
-  - 80
+  created: '2020-11-28'
+  updated: '2022-04-16'
 - id: 55
   name: Technologies de capture et stockage du CO2
   slug: technologies-de-capture-et-stockage-du-co2
@@ -465,6 +465,8 @@
     \ sur le carbone émis est imposée.<br />\r\nAprès ce petit quiz pour vous mettre\
     \ en appétit, il est temps pour vous d'aller visionner la vidéo <a href=\"https://youtu.be/AQlqQEhVi1M\"\
     >ici</a> ! Et ses autres vidéos aussi d'ailleurs.<br />\r\n </p>"
+  tags:
+  - 62
   difficulty_average: 2.9
   language: Français
   author: Le Réveilleur
@@ -472,10 +474,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-12-08
-  updated: 2021-10-24
-  tags:
-  - 62
+  created: '2020-12-08'
+  updated: '2022-04-16'
 - id: 56
   name: En état d'ébriété énergétique ?
   slug: en-etat-debriete-energetique
@@ -486,6 +486,7 @@
     vis à vis de l'énergie, vous pouvez tester nos quiz sur le pétrole <a href="https://quizanthropocene.fr/quiz/7">ici
     </a>et <a href="https://quizanthropocene.fr/quiz/10">là</a>. Et pour aller au
     coma éthylique énergétique, c'est <a href="https://quizanthropocene.fr/quiz/54">par-là</a>.</p>
+  tags: []
   difficulty_average: 2.5
   language: Français
   author: Matthieu Massart
@@ -493,9 +494,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-12-13
-  updated: 2021-10-24
-  tags: []
+  created: '2020-12-13'
+  updated: '2022-04-16'
 - id: 57
   name: 2020 en chiffres
   slug: 2020-en-chiffres
@@ -504,6 +504,8 @@
     a été riche en matière d'environment. Mais avez-vous bien tout suivi ?</p>
   conclusion: <p>En route vers 2021 ! La nouvelle année nous réservera-t-elle son
     lot de chiffres et faits inattendus ?</p>
+  tags:
+  - 213
   difficulty_average: 1.8
   language: Français
   author: Raphael Odini
@@ -511,10 +513,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2020-12-24
-  updated: 2021-10-24
-  tags:
-  - 213
+  created: '2020-12-24'
+  updated: '2022-04-16'
 - id: 59
   name: Fresque du Numérique
   slug: fresque-du-numerique
@@ -532,6 +532,8 @@
     réduire sont nombreuses. Pour aller plus loin,nous vous recommandons de participer
     à un atelier. Plus d'information sur <a href="https://fresquedunumerique.org">Fresque
     du Numérique</a>.</p>
+  tags:
+  - 30
   difficulty_average: 2.1
   language: Français
   author: Aurélien Déragne
@@ -539,10 +541,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-01-21
-  updated: 2021-12-05
-  tags:
-  - 30
+  created: '2021-01-21'
+  updated: '2022-04-16'
 - id: 60
   name: Le numérique est-il écologique ?
   slug: le-numerique-est-il-ecologique
@@ -552,6 +552,8 @@
   conclusion: <p>Bravo, vous avez quelques ordres de grandeur pour aborder le sujet
     de la sobriété numérique. Vous pouvez également compléter vos connaissances avec
     le quiz de la fresque du numérique.</p>
+  tags:
+  - 30
   difficulty_average: 2.2
   language: Français
   author: Alain Servigne
@@ -559,10 +561,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-02-01
-  updated: 2021-12-05
-  tags:
-  - 30
+  created: '2021-02-01'
+  updated: '2022-04-16'
 - id: 61
   name: Fresque des low techs - les constats
   slug: fresque-des-low-techs-les-constats
@@ -592,6 +592,8 @@
     \ et SE DISPERSENT ».<br />\r\nEnfin, si vous avez envie de faire découvrir ce\
     \ quiz au-delà de la France, sa version anglaise est <a href=\"http://quizanthropocene.fr/quiz/68\"\
     >ici</a>.</p>"
+  tags:
+  - 255
   difficulty_average: 2.7
   language: Français
   author: Max Pinsard
@@ -599,10 +601,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-02-14
-  updated: 2022-04-04
-  tags:
-  - 255
+  created: '2021-02-14'
+  updated: '2022-04-16'
 - id: 62
   name: Fresque de l'Alimentation
   slug: fresque-de-lalimentation
@@ -621,6 +621,11 @@
     et sociaux qu''elle engendre, donne les grandes lignes d''une alimentation durable,
     végétalisée, locale, bio et de saison, et détaille en quoi une alimentation durable
     améliore la résilience alimentaire.</p>'
+  tags:
+  - 5
+  - 17
+  - 223
+  - 244
   difficulty_average: 1.9
   language: Français
   author: Julien Briton et Thomas Moulin
@@ -628,13 +633,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-02-18
-  updated: 2021-12-05
-  tags:
-  - 5
-  - 17
-  - 223
-  - 244
+  created: '2021-02-18'
+  updated: '2022-04-16'
 - id: 63
   name: Digital Collage
   slug: digital-collage
@@ -648,6 +648,8 @@
   conclusion: <p>As you can see, the digital world is causing real impacts. A good
     news? There are plenty of measures that can easily be adopted to reduce them.
     They are exposed in the Digital Collage workshop (in French only so far).</p>
+  tags:
+  - 30
   difficulty_average: 2.1
   language: English
   author: 'Aurélien Deragne, translation: Benoît Barraque'
@@ -655,15 +657,14 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-02-20
-  updated: 2021-12-05
-  tags:
-  - 30
+  created: '2021-02-20'
+  updated: '2022-04-16'
 - id: 64
   name: Le quiz Choc
   slug: le-quiz-choc
   introduction: ''
   conclusion: ''
+  tags: []
   difficulty_average: 2.5
   language: Français
   author: Matthieu Massart et Jean-Philippe Pernin
@@ -671,9 +672,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2021-03-05
-  updated: 2021-10-24
-  tags: []
+  created: '2021-03-05'
+  updated: '2022-04-16'
 - id: 65
   name: Le Pétrole
   slug: le-petrole
@@ -684,6 +684,8 @@
     pas de mondialisation, pas de civilisation urbaine, pas de plastiques, d'huiles,
     de détergents, pas de vêtements synthétiques, pas de routes. Saurez-nous nous
     passer de lui ?</p>
+  tags:
+  - 11
   difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
@@ -691,10 +693,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2021-03-11
-  updated: 2021-12-09
-  tags:
-  - 11
+  created: '2021-03-11'
+  updated: '2022-04-16'
 - id: 66
   name: Un voyage sur des millions d'années
   slug: un-voyage-sur-des-millions-dannees
@@ -719,6 +719,12 @@
     \ nous faut d'abord commencer par regarder <a href=\"https://www.youtube.com/channel/UCtXgE_tacrZi1HS8Wbdq4zQ\"\
     >sous nos pieds</a> pour reconstituer les climats du passé. Si ce quiz vous a\
     \ donné le vertige, rendez-vous sur sa chaîne pour aller plus loin.</p>"
+  tags:
+  - 7
+  - 13
+  - 40
+  - 225
+  - 227
   difficulty_average: 3.2
   language: Français
   author: Sous Nos Pieds
@@ -726,14 +732,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2021-03-12
-  updated: 2021-10-24
-  tags:
-  - 7
-  - 13
-  - 40
-  - 225
-  - 227
+  created: '2021-03-12'
+  updated: '2021-10-24'
 - id: 67
   name: Des low techs tombées dans l'oubli
   slug: des-low-techs-tombees-dans-loubli
@@ -751,6 +751,8 @@
     qui nous a fait mettre de côté ces technologies qui ne manquaient pas d'intérêt.
     Cela vous a captivé ? Pour aller plus loin, rendez-vous sur le site du <a href="https://solar.lowtechmagazine.com/fr/">Low
     Tech Magasine</a> ou le site <a href="https://paleo-energetique.org/">Paléo Energétique</a>.</p>
+  tags:
+  - 255
   difficulty_average: 2.4
   language: Français
   author: Max Pinsard
@@ -758,10 +760,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2021-03-23
-  updated: 2021-12-05
-  tags:
-  - 255
+  created: '2021-03-23'
+  updated: '2022-04-16'
 - id: 68
   name: Low Tech Collage - Current Issues
   slug: low-tech-collage-current-issues
@@ -783,6 +783,8 @@
     full workshop! More info on <a href="https://fresquedeslowtechs.org">fresquedeslowtechs.org</a>
     (in french). "<em>Against infinite growth in a world with finite resources that
     ARE DEGRADING and DISPERSING".</em></p>
+  tags:
+  - 255
   difficulty_average: 2.6
   language: English
   author: Max Pinsard
@@ -790,10 +792,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-03-24
-  updated: 2021-10-24
-  tags:
-  - 255
+  created: '2021-03-24'
+  updated: '2022-04-16'
 - id: 69
   name: Le cycle de l'eau dans tous ses états
   slug: le-cycle-de-leau-dans-tous-ses-etats
@@ -806,6 +806,12 @@
     l'homme peut avoir sur le cycle de l'eau. De la neige tombant au sommet des montagnes
     aux eaux souterraines côtières, en passant pas toutes les sociétés, les géo-systèmes
     et les écosystèmes qui en dépendent.</p>
+  tags:
+  - 37
+  - 69
+  - 206
+  - 261
+  - 263
   difficulty_average: 2.2
   language: Français
   author: Alix Reverdy
@@ -813,14 +819,8 @@
   has_audio: false
   publish: true
   spotlight: false
-  created: 2021-04-10
-  updated: 2021-10-24
-  tags:
-  - 37
-  - 69
-  - 206
-  - 261
-  - 263
+  created: '2021-04-10'
+  updated: '2022-04-16'
 - id: 70
   name: Fresque des low techs - les leviers d'action
   slug: fresque-des-low-techs-les-leviers-daction
@@ -839,6 +839,8 @@
     tout ça ! Plus d'infos sur <a class="notion-link-token notion-enable-hover" href="http://fresquedeslowtechs.org/"
     rel="noopener noreferrer" style="cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit"
     target="_blank">fresquedeslowtechs.org</a></p>
+  tags:
+  - 255
   difficulty_average: 1.9
   language: Français
   author: Max Pinsard
@@ -846,10 +848,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-04-16
-  updated: 2021-12-05
-  tags:
-  - 255
+  created: '2021-04-16'
+  updated: '2022-04-16'
 - id: 71
   name: Fresque Océane
   slug: fresque-oceane
@@ -857,6 +857,10 @@
     est en tant que milieu, ce qu''il représente pour les sociétés humaines, les menaces
     auxquelles il est confronté.</p>'
   conclusion: ''
+  tags:
+  - 9
+  - 21
+  - 223
   difficulty_average: 2.6
   language: Français
   author: Cyril Retourné
@@ -864,12 +868,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2021-04-26
-  updated: 2021-12-05
-  tags:
-  - 9
-  - 21
-  - 223
+  created: '2021-04-26'
+  updated: '2022-04-16'
 - id: 73
   name: Forgotten Low Techs
   slug: forgotten-low-techs
@@ -884,6 +884,8 @@
     put aside these valuabe technologies. Did it captivate you? To find out more,
     visit the <a href="http://solar.lowtechmagazine.com/fr/">Low Tech Magasine</a>
     or <a href="http://Paléo Energétique">Paleo Energy</a> websites.</p>
+  tags:
+  - 255
   difficulty_average: 2.6
   language: English
   author: Max Pinsard
@@ -891,10 +893,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-04-27
-  updated: 2021-12-05
-  tags:
-  - 255
+  created: '2021-04-27'
+  updated: '2022-04-16'
 - id: 74
   name: Faut-il encore prendre l'avion ?
   slug: faut-il-encore-prendre-lavion
@@ -912,6 +912,10 @@
     \ plus loin, <a href=\"http://https://restonslespiedssurterre.fr\">Restons les\
     \ Pieds sur Terre</a>,  <a href=\"https://www.facebook.com/restonslespiedssurterre\
     \ @restonssurterre\">page facebook</a>.</p>"
+  tags:
+  - 33
+  - 34
+  - 100
   difficulty_average: 2.5
   language: Français
   author: Michel Bonnassieux
@@ -919,12 +923,8 @@
   has_audio: true
   publish: true
   spotlight: true
-  created: 2021-05-03
-  updated: 2021-10-24
-  tags:
-  - 33
-  - 34
-  - 100
+  created: '2021-05-03'
+  updated: '2022-04-16'
 - id: 75
   name: 'Transition énergétique des transports #1'
   slug: transition-energetique-des-transports-1
@@ -943,6 +943,10 @@
     et technologie. Pour compléter ce premier quiz et les connaissances sur le sujet,
     d’autres quiz suivront dans les mois à venir. En attendant, n’hésitez pas à consulter
     les autres quiz du site !</p>
+  tags:
+  - 33
+  - 218
+  - 225
   difficulty_average: 2.1
   language: Français
   author: Aurélien Bigo
@@ -950,12 +954,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-10-03
-  updated: 2021-12-05
-  tags:
-  - 33
-  - 218
-  - 225
+  created: '2021-10-03'
+  updated: '2022-04-16'
 - id: 76
   name: Inventons Nos Vies Bas Carbone
   slug: invbc
@@ -976,6 +976,8 @@
     Vous pouvez aussi consulter cet <a href="https://bonpote.com/vivre-a-2-tonnes-co2e-par-an-cest-possible/">article
     de synthèse</a> sur la page du blogeur Bon pote. Ou encorece <a href="https://www.resistanceclimatique.org/gildas_invbc">témoignage</a>
     de Gildas, "résistant climatique".</p>
+  tags:
+  - 72
   difficulty_average: 2.6
   language: Français
   author: Collectif INVBC
@@ -983,10 +985,8 @@
   has_audio: false
   publish: true
   spotlight: true
-  created: 2021-11-16
-  updated: 2022-01-24
-  tags:
-  - 72
+  created: '2021-11-16'
+  updated: '2022-04-16'
 - id: 77
   name: Archipel du Vivant
   slug: archipel-du-vivant
@@ -1005,15 +1005,6 @@
     https://archipelduvivant.org/nos-livres/ecrivons-ensemble-un-nouveau-recit-pour-sauver-la-vie/?fbclid=IwAR04Qs8pltv81NI_Qv55P2j6A8SIPa885lhXLjEyurvF85xWoZll3BmQAEQ\"\
     >Écrivons ensemble un nouveau récit pour sauver la vie</a>.</p>\r\n\r\n<p> </p>\r\
     \n\r\n<p> </p>"
-  difficulty_average: 2.6
-  language: Français
-  author: Jean-Christophe Anna
-  image_background_url: https://archipelduvivant.org/wp-content/uploads/2020/07/132-133-2.jpg
-  has_audio: false
-  publish: true
-  spotlight: true
-  created: 2021-12-05
-  updated: 2021-12-09
   tags:
   - 14
   - 17
@@ -1023,6 +1014,15 @@
   - 246
   - 247
   - 248
+  difficulty_average: 2.6
+  language: Français
+  author: Jean-Christophe Anna
+  image_background_url: https://archipelduvivant.org/wp-content/uploads/2020/07/132-133-2.jpg
+  has_audio: false
+  publish: true
+  spotlight: true
+  created: '2021-12-05'
+  updated: '2022-04-16'
 - id: 78
   name: Burger Quiz de l'Anthropocene
   slug: burger-quiz-de-lanthropocene
@@ -1031,6 +1031,7 @@
     \ énergie, climat, inégalités, vulnérabilités, risques à venir, et finalement\
     \ leviers d'action.</p>\r\n\r\n<p>Prêts ? A vous de jouer.</p>"
   conclusion: ''
+  tags: []
   difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
@@ -1038,9 +1039,8 @@
   has_audio: false
   publish: false
   spotlight: false
-  created: 2021-12-12
-  updated: 2021-12-30
-  tags: []
+  created: '2021-12-12'
+  updated: '2022-04-16'
 - id: 79
   name: Introduction à la Fresque du Climat
   slug: introduction-a-la-fresque-du-climat
@@ -1053,15 +1053,6 @@
   conclusion: <p>Ca vous a plu ? Des points qui vous étaient inconnus ? Alors n'hésitez
     plus, inscrivez-vous à un atelier de la <a href="http://fresqueduclimat.org">Fresque
     du Climat</a>. Vous pourrez même rapidement devenir animateur à votre tour.</p>
-  difficulty_average: 1.7
-  language: Français
-  author: Matthieu Massart
-  image_background_url: https://www.grenoble.fr/uploads/Image/81/IMF_100/GAB_GRENOBLE2019/21428_586_fresque-climat-adultes.jpg
-  has_audio: false
-  publish: true
-  spotlight: true
-  created: 2022-01-10
-  updated: 2022-01-14
   tags:
   - 9
   - 13
@@ -1072,6 +1063,15 @@
   - 98
   - 225
   - 256
+  difficulty_average: 1.7
+  language: Français
+  author: Matthieu Massart
+  image_background_url: https://www.grenoble.fr/uploads/Image/81/IMF_100/GAB_GRENOBLE2019/21428_586_fresque-climat-adultes.jpg
+  has_audio: false
+  publish: true
+  spotlight: true
+  created: '2022-01-10'
+  updated: '2022-04-16'
 - id: 80
   name: La Fresque du Climat Junior expliquée à ma famille
   slug: la-fresque-du-climat-junior-expliquee-a-ma-famille
@@ -1084,15 +1084,6 @@
     résumé dans cette <a href="https://www.youtube.com/watch?v=t9f39nukKBY">vidéo</a>.
     Ta prochaine mission : entamer une discussion sur ce que vous pourriez faire pour
     réduire ces émissions de gaz à effet de serre !</p>'
-  difficulty_average: 0.0
-  language: Français
-  author: Christine Cavazza et Matthieu Massart
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/FdcJ.png
-  has_audio: false
-  publish: true
-  spotlight: true
-  created: 2022-01-26
-  updated: 2022-02-04
   tags:
   - 13
   - 51
@@ -1100,3 +1091,12 @@
   - 142
   - 225
   - 256
+  difficulty_average: 0.0
+  language: Français
+  author: Christine Cavazza et Matthieu Massart
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/FdcJ.png
+  has_audio: false
+  publish: true
+  spotlight: true
+  created: '2022-01-26'
+  updated: '2022-04-16'

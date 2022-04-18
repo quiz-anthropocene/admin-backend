@@ -2,84 +2,84 @@
   from_quiz: 7
   to_quiz: 10
   status: suivant
-  created: 2020-12-17
+  created: '2020-12-17'
 - id: 2
   from_quiz: 6
   to_quiz: 16
   status: suivant
-  created: 2020-12-17
+  created: '2020-12-17'
 - id: 3
   from_quiz: 8
   to_quiz: 11
   status: suivant
-  created: 2020-12-17
+  created: '2020-12-17'
 - id: 4
   from_quiz: 11
   to_quiz: 12
   status: suivant
-  created: 2020-12-17
+  created: '2020-12-17'
 - id: 5
   from_quiz: 12
   to_quiz: 13
   status: suivant
-  created: 2020-12-17
+  created: '2020-12-17'
 - id: 6
   from_quiz: 13
   to_quiz: 14
   status: suivant
-  created: 2020-12-17
+  created: '2020-12-17'
 - id: 7
   from_quiz: 60
   to_quiz: 59
   status: jumeau
-  created: 2021-02-02
+  created: '2021-02-02'
 - id: 9
   from_quiz: 59
   to_quiz: 63
   status: traduction
-  created: 2021-02-22
+  created: '2021-02-22'
 - id: 10
   from_quiz: 68
   to_quiz: 61
   status: traduction
-  created: 2021-03-31
+  created: '2021-03-31'
 - id: 11
   from_quiz: 61
   to_quiz: 63
   status: traduction
-  created: 2021-03-31
+  created: '2021-03-31'
 - id: 12
   from_quiz: 61
   to_quiz: 67
   status: similaire
-  created: 2021-03-31
+  created: '2021-03-31'
 - id: 13
   from_quiz: 70
   to_quiz: 67
   status: similaire
-  created: 2021-04-17
+  created: '2021-04-17'
 - id: 14
   from_quiz: 70
   to_quiz: 61
   status: suivant
-  created: 2021-04-17
+  created: '2021-04-17'
 - id: 15
   from_quiz: 76
   to_quiz: 5
   status: suivant
-  created: 2021-11-29
+  created: '2021-11-29'
 - id: 16
   from_quiz: 77
   to_quiz: 17
   status: similaire
-  created: 2021-12-09
+  created: '2021-12-09'
 - id: 17
   from_quiz: 65
   to_quiz: 75
   status: similaire
-  created: 2021-12-09
+  created: '2021-12-09'
 - id: 18
   from_quiz: 80
   to_quiz: 79
   status: similaire
-  created: 2022-01-27
+  created: '2022-01-27'
