@@ -28,6 +28,9 @@
                     <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_view' quiz.id %}">Détails</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link {% if 'questions' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_questions' quiz.id %}">Questions</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link disabled" href="#">Modifier</a>
                 </li>
                 <li class="nav-item">

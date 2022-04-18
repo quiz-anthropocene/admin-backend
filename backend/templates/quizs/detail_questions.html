@@ -1,0 +1,28 @@
+{% extends "quizs/detail_base.html" %}
+
+{% block quiz_detail_content %}
+<div class="row">
+    <div class="col-12">
+        <div class="table-container">
+            <table class="table-responsive table-striped table-bordered border-primary font-size-small">
+                <thead>
+                    <tr>
+                        <th>Ordre</th>
+                        <th>Question</th>
+                        <th>ID (Question)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for quiz_question in quiz_questions %}
+                        <tr>
+                            <td>{{ quiz_question.order }}</td>
+                            <td>{{ quiz_question.question.text }}</td>
+                            <td><a href="{% url 'questions:detail_view' quiz_question.question.id %}">{{ quiz_question.question.id }}</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

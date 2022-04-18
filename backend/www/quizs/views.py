@@ -1,14 +1,14 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.forms.models import model_to_dict
-from django.views.generic import DetailView
+from django.views.generic import DetailView, ListView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
-from api.quizs.serializers import QuizSerializer
+from api.quizs.serializers import QuizWithQuestionSerializer
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from quizs.filters import QuizFilter
-from quizs.models import Quiz
+from quizs.models import Quiz, QuizQuestion
 from quizs.tables import QuizTable
 from stats.models import QuizAggStat
 
@@ -42,7 +42,24 @@ class QuizDetailView(LoginRequiredMixin, DetailView):
         context = super().get_context_data(**kwargs)
         quiz = self.get_object()
         # context["quiz_dict"] = model_to_dict(quiz, fields=[field.name for field in quiz._meta.fields])
-        context["quiz_dict"] = QuizSerializer(quiz).data
+        context["quiz_dict"] = QuizWithQuestionSerializer(quiz).data
+        return context
+
+
+class QuizQuestionsView(LoginRequiredMixin, ListView):
+    model = QuizQuestion
+    template_name = "quizs/detail_questions.html"
+    context_object_name = "quiz_questions"
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = qs.prefetch_related("question")
+        qs = qs.filter(quiz__id=self.kwargs.get("pk"))
+        return qs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["quiz"] = Quiz.objects.get(id=self.kwargs.get("pk"))
         return context
 
 

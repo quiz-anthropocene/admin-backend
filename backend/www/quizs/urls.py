@@ -1,7 +1,13 @@
 from django.urls import include, path
 from django.views.generic.base import RedirectView
 
-from www.quizs.views import QuizDetailContributionsView, QuizDetailStatsView, QuizDetailView, QuizListView
+from www.quizs.views import (
+    QuizDetailContributionsView,
+    QuizDetailStatsView,
+    QuizDetailView,
+    QuizListView,
+    QuizQuestionsView,
+)
 
 
 app_name = "quizs"
@@ -20,6 +26,7 @@ urlpatterns = [
                     name="detail",
                 ),
                 path("view/", QuizDetailView.as_view(), name="detail_view"),
+                path("questions/", QuizQuestionsView.as_view(), name="detail_questions"),
                 path("comments/", QuizDetailContributionsView.as_view(), name="detail_contributions"),
                 path("stats/", QuizDetailStatsView.as_view(), name="detail_stats"),
             ]
