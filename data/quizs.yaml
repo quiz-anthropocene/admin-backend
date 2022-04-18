@@ -1,38 +1,97 @@
 - id: 1
   name: Quelques chiffres clés
-  slug: quelques-chiffres-cles
   introduction: <p>Quelques chiffres pour se mettre en jambes.</p>
   conclusion: ''
+  questions:
+  - 3
+  - 16
+  - 21
+  - 48
+  - 59
+  - 70
+  - 71
+  - 75
+  - 83
+  tags: []
   difficulty_average: 1.9
   language: Français
   author: Raphael Odini
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/010-show-your-stripes.png
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-04-17
-  updated: 2022-04-11
-  tags: []
+  question_count: 9
+  questions_categories_list:
+  - Biodiversité
+  - Climat
+  - Consommation
+  - Énergie
+  - Histoire & Politique
+  questions_tags_list:
+  - Animaux sauvages
+  - CO2
+  - Fresque du Climat
+  - Pétrole
+  - Culture générale
+  - Atmosphère
+  - 'Fresque du Climat : carte n°11'
+  - Inventaire National
+  - 'Fresque du Climat : carte n°21'
+  - Question Choc
+  - Extinction
+  - France
+  - Charbon
+  - Température
+  - Inégalités
+  questions_authors_list:
+  - Avenir Climatique
+  - Matthieu Massart
+  created: '2020-04-17'
+  updated: '2022-04-16'
 - id: 2
   name: L'énergie en France 🇫🇷
-  slug: lenergie-en-france
   introduction: <p>Un aperçu rapide de la production et de la consommation d'énergie
     en France.</p>
   conclusion: ''
+  questions:
+  - 11
+  - 104
+  - 132
+  - 135
+  - 184
+  - 210
+  - 254
+  - 259
+  - 307
+  - 410
+  tags:
+  - 1
   difficulty_average: 2.3
   language: Français
   author: Raphael Odini
   image_background_url: https://i3.wp.com/fee.asso.fr/wp-content/uploads/2015/09/Carte-de-France-eolien-2015.jpg
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-05-25
-  updated: 2021-10-24
-  tags:
-  - 1
+  question_count: 10
+  questions_categories_list:
+  - Consommation
+  - Énergie
+  questions_tags_list:
+  - Chauffage
+  - Pétrole
+  - Économie
+  - Électricité
+  - France
+  - Renouvelable
+  - Charbon
+  - Bâtiment
+  - Nucléaire
+  - Éolien
+  questions_authors_list:
+  - Avenir Climatique
+  - laydgeur
+  - Raphael Odini
+  created: '2020-05-25'
+  updated: '2022-04-16'
 - id: 3
   name: Le quiz de Vincent Mignerot
-  slug: le-quiz-de-vincent-mignerot
   introduction: "<p>Vincent Mignerot est essayiste et conférencier. Il développe une\
     \ théorie écologique de l’esprit et se questionne sur la singularité de l'humanité\
     \ dans son contexte évolutif. Il est le fondateur d'<a href=\"https://adrastia.org\"\
@@ -45,55 +104,142 @@
     \ pour aller plus loin. </p>"
   conclusion: <p>Si ce quiz vous a intéressé, vous le serez problablement par <a href="https://quizanthropocene.fr/quiz/18">celui-ci,</a>
     qui traite de questions similaires.</p>
+  questions:
+  - 545
+  - 546
+  - 547
+  - 548
+  - 549
+  - 550
+  - 551
+  - 552
+  - 553
+  - 555
+  - 574
+  - 575
+  tags:
+  - 185
   difficulty_average: 2.2
   language: Français
   author: Vincent Mignerot
   image_background_url: https://www.slate.fr/sites/default/files/styles/1060x523/public/neandertal_1.jpg
   has_audio: true
-  publish: true
-  spotlight: true
-  created: 2020-06-26
-  updated: 2021-10-24
-  tags:
-  - 185
+  question_count: 12
+  questions_categories_list:
+  - Autres
+  - Consommation
+  - Énergie
+  - Histoire & Politique
+  questions_tags_list:
+  - Anthropologie
+  - Agriculture
+  - Chasseurs-cueilleurs
+  - Idées reçues
+  - Alimentation
+  - Religion
+  - Néandertal
+  - Culture
+  - Évolution
+  - Cerveau
+  - Démographie
+  - Commerce
+  - Anthropocène
+  - Feu
+  - Homo Sapiens
+  - Acier
+  questions_authors_list:
+  - Vincent Mignerot
+  created: '2020-06-26'
+  updated: '2022-04-16'
 - id: 4
   name: Les pics de ressources
-  slug: les-pics-de-ressources
   introduction: L'extraction de toute ressource finie passe par un maximum, après
     lequel elle ne peut que décroître pour finalement tomber à 0. C'est le thème qu'explore
     ce quiz sur les différentes ressources non-renouvelables dont nous faisons usage.
   conclusion: ''
+  questions:
+  - 65
+  - 68
+  - 69
+  - 171
+  - 212
+  - 245
+  tags: []
   difficulty_average: 2.7
   language: Français
   author: Matthieu Massart
   image_background_url: https://upload.wikimedia.org/wikipedia/commons/f/fe/GlobalPeakOil.png
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-07-08
-  updated: 2021-10-24
-  tags: []
+  question_count: 6
+  questions_categories_list:
+  - Énergie
+  - Ressources
+  questions_tags_list:
+  - Pétrole
+  - Agriculture
+  - Europe
+  - Question Choc
+  questions_authors_list:
+  - laydgeur
+  - Matthieu Massart
+  created: '2020-07-08'
+  updated: '2022-04-16'
 - id: 5
   name: Mon empreinte carbone
-  slug: mon-empreinte-carbone
   introduction: <p>L'empreinte carbone d’une activité humaine est une mesure des émissions
     de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent lui être
     imputées. Connaissez-vous votre empreinte ? Voyons voir ça.</p>
   conclusion: ''
+  questions:
+  - 78
+  - 102
+  - 150
+  - 236
+  - 243
+  - 251
+  - 335
+  - 358
+  - 402
+  - 417
+  - 440
+  tags:
+  - 72
   difficulty_average: 2.1
   language: Français
   author: Matthieu Massart
   image_background_url: https://leshorizons.net/wp-content/uploads/2019/04/d%C3%A9finition-de-lempreinte-carbone-1020x512.jpg
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-07-08
-  updated: 2021-10-24
-  tags:
-  - 72
+  question_count: 11
+  questions_categories_list:
+  - Climat
+  - Consommation
+  - Énergie
+  questions_tags_list:
+  - '2050'
+  - Alimentation
+  - Question Choc
+  - France
+  - Afrique
+  - Empreinte carbone
+  - Voiture
+  - États-Unis
+  - Habillement
+  - Eau
+  - Avion
+  - Transport
+  - Inégalités
+  - viande
+  - CO2
+  questions_authors_list:
+  - Citoyens Pour le Climat
+  - Contributeur anonyme
+  - laydgeur
+  - Matthieu Massart
+  - Raphael Odini
+  created: '2020-07-08'
+  updated: '2022-04-16'
 - id: 6
   name: Introduction à l'anthropocène - Partie 1
-  slug: introduction-a-lanthropocene-partie-1
   introduction: "<p>L'Anthropocène, c'est un terme proposé par des scientifiques pour\
     \ désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où\
     \ l'homme est devenu une force géologique majeure. La période la plus récente\
@@ -102,36 +248,95 @@
     \ quiz propose un premier tour d'horizon de l'emprise inédite de l'homme sur la\
     \ planète qu'il occupe.<br />\r\n<br />\r\nDurée à prévoir : 15 min</p>"
   conclusion: <p>Vous êtes prêts à enchaîner sur la partie 2 ?</p>
+  questions:
+  - 2
+  - 4
+  - 7
+  - 9
+  - 13
+  - 41
+  - 44
+  - 45
+  - 47
+  - 49
+  tags: []
   difficulty_average: 2.7
   language: Français
   author: Matthieu Massart
   image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-07-08
-  updated: 2021-10-24
-  tags: []
+  question_count: 10
+  questions_categories_list:
+  - Biodiversité
+  - Climat
+  - Consommation
+  - Énergie
+  - Histoire & Politique
+  - Pollution
+  - Ressources
+  questions_tags_list:
+  - Chine
+  - IPBES
+  - Fresque du Climat
+  - Pétrole
+  - '2050'
+  - 'Fresque du Climat : carte n°18'
+  - Ciment
+  - Pêche
+  - Insectes
+  - 'Fresque du Climat : carte n°39'
+  - Question Choc
+  - Extinction
+  - France
+  - Migration
+  - Température
+  - Glace
+  - Océans
+  - Puissance humaine
+  questions_authors_list:
+  - Matthieu Massart
+  created: '2020-07-08'
+  updated: '2022-04-16'
 - id: 7
   name: Le Pétrole - Partie 1
-  slug: le-petrole-partie-1
   introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
     à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
   conclusion: ''
+  questions:
+  - 13
+  - 106
+  - 107
+  - 111
+  - 112
+  - 114
+  - 115
+  tags:
+  - 11
   difficulty_average: 2.3
   language: Français
   author: Matthieu Massart
   image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
   has_audio: false
-  publish: false
-  spotlight: false
-  created: 2020-07-09
-  updated: 2021-10-24
-  tags:
-  - 11
+  question_count: 7
+  questions_categories_list:
+  - Consommation
+  - Énergie
+  - Ressources
+  questions_tags_list:
+  - null
+  - Pétrole
+  - Culture générale
+  - Question Choc
+  - France
+  - Plastique
+  - Transport
+  questions_authors_list:
+  - laydgeur
+  - Matthieu Massart
+  created: '2020-07-09'
+  updated: '2022-04-16'
 - id: 8
   name: La Fresque du Climat - Lot 1
-  slug: la-fresque-du-climat-lot-1
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
     \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
     \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -141,53 +346,159 @@
   conclusion: "<p>Vous voilà prêt à vous attaquer au lot 2 ! Ou, mieux encore, à vous\
     \ inscrire à un atelier. Plus d'information <a href=\"https://fresqueduclimat.org\"\
     >ici</a>.</p>\r\n\r\n<p> </p>"
+  questions:
+  - 6
+  - 8
+  - 13
+  - 14
+  - 22
+  - 30
+  - 32
+  - 33
+  - 79
+  - 80
+  - 129
+  - 137
+  - 176
+  - 194
+  - 361
+  - 369
+  - 415
+  - 436
+  tags:
+  - 142
   difficulty_average: 2.0
   language: Français
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
   has_audio: false
-  publish: false
-  spotlight: false
-  created: 2020-07-14
-  updated: 2022-01-11
-  tags:
-  - 142
+  question_count: 18
+  questions_categories_list:
+  - Climat
+  - Énergie
+  - Histoire & Politique
+  questions_tags_list:
+  - 'Fresque du Climat : carte n°13'
+  - 'Fresque du Climat : carte n°18'
+  - Atmosphère
+  - 'Fresque du Climat : carte n°5'
+  - GIEC
+  - Glace
+  - Océans
+  - Température
+  - 'Fresque du Climat : carte n°7'
+  - Jean-Marc Jancovici
+  - Effet de serre
+  - CO2
+  - Pétrole
+  - '2050'
+  - Montée des eaux
+  - 'Fresque du Climat : carte n°11'
+  - Question Choc
+  - 'Fresque du Climat : carte n°21'
+  - France
+  - 'Fresque du Climat : carte n°14'
+  - 'Fresque du Climat : carte n°22'
+  - Méthane
+  - '2100'
+  - Banquise
+  - Fresque du Climat
+  questions_authors_list:
+  - Citoyens Pour le Climat
+  - climat-en-questions.fr
+  - laydgeur
+  - Matthieu Massart
+  created: '2020-07-14'
+  updated: '2022-04-16'
 - id: 9
   name: Pollutions
-  slug: pollutions
   introduction: Nos modes de vie génèrent des pollutions diverses. En connaissez-vous
     la variété et l'ampleur ? C'est ce que ce quiz se propose d'explorer.
   conclusion: ''
+  questions:
+  - 24
+  - 45
+  - 53
+  - 54
+  - 55
+  - 56
+  - 57
+  - 58
+  - 98
+  - 157
+  tags: []
   difficulty_average: 3.3
   language: Français
   author: Matthieu Massart
   image_background_url: https://static.latribune.fr/full_width/1201312/plastique-a-jakarta.jpg
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-07-14
-  updated: 2021-10-24
-  tags: []
+  question_count: 10
+  questions_categories_list:
+  - Climat
+  - Pollution
+  questions_tags_list:
+  - Pétrole
+  - Atmosphère
+  - Maritime
+  - Question Choc
+  - France
+  - Plastique
+  - Particules
+  - Catastrophes
+  - Transport
+  - Océans
+  - IPBES
+  questions_authors_list:
+  - Guillaume Boudry
+  - laydgeur
+  - Matthieu Massart
+  created: '2020-07-14'
+  updated: '2022-04-16'
 - id: 10
   name: Le Pétrole - Partie 2
-  slug: le-petrole-partie-2
   introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
     à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
   conclusion: ''
+  questions:
+  - 12
+  - 20
+  - 155
+  - 156
+  - 179
+  - 230
+  - 246
+  - 494
+  tags:
+  - 11
   difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
   image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
   has_audio: false
-  publish: false
-  spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags:
-  - 11
+  question_count: 8
+  questions_categories_list:
+  - Consommation
+  - Énergie
+  questions_tags_list:
+  - Pétrole
+  - Culture générale
+  - Maritime
+  - Europe
+  - Électricité
+  - France
+  - Voiture
+  - États-Unis
+  - Moyen-Orient
+  - Transport
+  questions_authors_list:
+  - Avenir Climatique
+  - Contributeur anonyme
+  - Cyril Retourné
+  - laydgeur
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 11
   name: La fresque du Climat - Lot 2
-  slug: la-fresque-du-climat-lot-2
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
     \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
     \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -197,20 +508,74 @@
     \ distribué lors d'un atelier de la Fresque.</p>"
   conclusion: <p>Vous voilà prêt à vous attaquer au lot 3 ! Ou, mieux encore, à vous
     inscrire à un atelier. Plus d'information <a href="https://fresqueduclimat.org">ici</a>.</p>
+  questions:
+  - 6
+  - 8
+  - 14
+  - 15
+  - 16
+  - 21
+  - 23
+  - 26
+  - 27
+  - 28
+  - 32
+  - 34
+  - 37
+  - 42
+  - 47
+  - 48
+  - 66
+  - 143
+  - 282
+  - 343
+  - 405
+  tags:
+  - 142
   difficulty_average: 1.9
   language: Français
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/IMG_9753-215x215.jpg
   has_audio: false
-  publish: false
-  spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags:
-  - 142
+  question_count: 21
+  questions_categories_list:
+  - Climat
+  - Consommation
+  questions_tags_list:
+  - Fresque du Climat
+  - Agriculture
+  - 'Fresque du Climat : carte n°13'
+  - 'Fresque du Climat : carte n°18'
+  - 'Fresque du Climat : carte n°12'
+  - Atmosphère
+  - 'Fresque du Climat : carte n°24'
+  - Glace
+  - Température
+  - Océans
+  - 'Fresque du Climat : carte n°6'
+  - Déforestation
+  - 'Fresque du Climat : carte n°8'
+  - Jean-Marc Jancovici
+  - Effet de serre
+  - CO2
+  - '2050'
+  - Montée des eaux
+  - 'Fresque du Climat : carte n°11'
+  - Question Choc
+  - 'Fresque du Climat : carte n°21'
+  - Méthane
+  - Forêts
+  - 'Fresque du Climat : carte n°9'
+  - Puits de carbone
+  questions_authors_list:
+  - Avenir Climatique
+  - Matthieu Massart
+  - laydgeur
+  - Raphael Odini
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 12
   name: La Fresque du Climat - Lot 3
-  slug: la-fresque-du-climat-lot-3
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
     \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
     \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -219,20 +584,45 @@
     \ d’ici 2021.</p>\r\n\r\n<p>Ce quiz est centré sur les cartes du 3ème lot distribué\
     \ lors d'une Fresque.</p>"
   conclusion: <p>Vous pouvez vous inscire à un atelier. Plus d'information <a href="https://fresqueduclimat.org">ici</a>.</p>
+  questions:
+  - 29
+  - 131
+  - 305
+  - 306
+  - 459
+  - 524
+  tags:
+  - 142
   difficulty_average: 2.0
   language: Français
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/J1A3917120919-2-215x215.jpg
   has_audio: false
-  publish: false
-  spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags:
-  - 142
+  question_count: 6
+  questions_categories_list:
+  - Climat
+  questions_tags_list:
+  - Atmosphère
+  - Soleil
+  - 'Fresque du Climat : carte n°10'
+  - Glace
+  - Gaz à effet de serre
+  - Effet de serre
+  - 'Fresque du Climat : carte n°16'
+  - 'Fresque du Climat : carte n°19'
+  - France
+  - Fresque du Climat
+  - 'Fresque du Climat : carte n°14'
+  - Volcans
+  - Particules
+  questions_authors_list:
+  - Citoyens Pour le Climat
+  - laydgeur
+  - Matthieu Massart
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 13
   name: La Fresque du Climat - Lot 4
-  slug: la-fresque-du-climat-lot-4
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
     \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
     \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -241,20 +631,37 @@
     \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur les cartes du 4ème lot distribué\
     \ lors d'une fresque.</p>"
   conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
+  questions:
+  - 52
+  - 294
+  - 315
+  tags:
+  - 142
   difficulty_average: 2.7
   language: Français
   author: Matthieu Massart
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/07/PartieRestit-scaled.jpg?gid=1
   has_audio: false
-  publish: false
-  spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags:
-  - 142
+  question_count: 3
+  questions_categories_list:
+  - Climat
+  questions_tags_list:
+  - Désert
+  - Enfants
+  - Fresque du Climat
+  - 'Fresque du Climat : carte n°26'
+  - 'Fresque du Climat : carte n°30'
+  - 'Fresque du Climat : carte n°33'
+  - 'Fresque du Climat : carte n°5'
+  - Inondations
+  - Montée des eaux
+  questions_authors_list:
+  - laydgeur
+  - Matthieu Massart
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 14
   name: La Fresque du Climat - Lot 5
-  slug: la-fresque-du-climat-lot-5
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
     \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
     \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -263,20 +670,36 @@
     \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur le cinquième et dernier lot\
     \ de cartes distribué lors d'une Fresque.</p>"
   conclusion: <p>Plus d'information sur la Fresque du Climat <a href="https://fresqueduclimat.org">ici</a>.</p>
+  questions:
+  - 35
+  - 229
+  - 403
+  tags:
+  - 142
   difficulty_average: 1.7
   language: Français
   author: Matthieu Massart
   image_background_url: ''
   has_audio: false
-  publish: false
-  spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags:
-  - 142
+  question_count: 3
+  questions_categories_list:
+  - Climat
+  - Histoire & Politique
+  questions_tags_list:
+  - Fresque du Climat
+  - 'Fresque du Climat : carte n°39'
+  - 'Fresque du Climat : carte n°41'
+  - Migration
+  - Permafrost
+  - Question Choc
+  - Température
+  questions_authors_list:
+  - Matthieu Massart
+  - Raphael Odini
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 15
   name: La Fresque du Climat - pour aller au-delà
-  slug: la-fresque-du-climat-pour-aller-au-dela
   introduction: "<p>La Fresque du Climat, c’est un atelier ludique, participatif et\
     \ créatif sur le changement climatique. Il est basé sur l’intelligence collective\
     \ et est extrêmement pédagogique. C’est une initiation en 3 heures sur les mécanismes\
@@ -286,20 +709,59 @@
     \ et parfois d'aller plus loin autour du dérèglement du climat - questions non\
     \ liées aux 42 cartes du jeu.</p>"
   conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
+  questions:
+  - 33
+  - 139
+  - 180
+  - 222
+  - 264
+  - 348
+  - 362
+  - 425
+  - 428
+  - 453
+  - 460
+  tags:
+  - 142
   difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
   image_background_url: https://jive.univ-lille.fr/fileadmin/_processed_/c/d/csm_fresque-climat_ac9a138d0f.jpg
   has_audio: false
-  publish: false
-  spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags:
-  - 142
+  question_count: 11
+  questions_categories_list:
+  - Climat
+  - Consommation
+  - Histoire & Politique
+  questions_tags_list:
+  - Météo
+  - Fresque du Climat
+  - CO2
+  - 'Fresque du Climat : carte n°13'
+  - '2050'
+  - Atmosphère
+  - Europe
+  - Question Choc
+  - France
+  - Risques
+  - GIEC
+  - Charbon
+  - Adaptation
+  - Anthropocène
+  - Glace
+  - Catastrophes
+  - Température
+  - Avion
+  - Transport
+  questions_authors_list:
+  - Citoyens Pour le Climat
+  - Cyril Retourné
+  - laydgeur
+  - Matthieu Massart
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 16
   name: Introduction à l'anthropocène - Partie 2
-  slug: introduction-a-lanthropocene-partie-2
   introduction: <p>L'Anthropocène, c'est un terme proposé par des scientifiques pour
     désigner une nouvelle ère géologique dans laquelle nous serions rentrés, où l'homme
     est devenu une force géologique majeure. La période la plus récente de l'anthropocène
@@ -307,38 +769,99 @@
     des courbes de type exponentiel. Ce 2ème quiz continue le tour d'horizon sur l'emprise
     inédite de l'homme sur la planète qu'il occupe.</p>
   conclusion: ''
+  questions:
+  - 51
+  - 67
+  - 77
+  - 78
+  - 79
+  - 96
+  - 225
+  - 294
+  - 403
+  - 494
+  tags: []
   difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
   image_background_url: https://reporterre.net/local/cache-vignettes/L720xH481/arton11947-94df2.jpg?1597417424
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-07-29
-  updated: 2021-10-24
-  tags: []
+  question_count: 10
+  questions_categories_list:
+  - Climat
+  - Consommation
+  - Énergie
+  - Histoire & Politique
+  - Ressources
+  questions_tags_list:
+  - Fresque du Climat
+  - Agriculture
+  - Pétrole
+  - IDH
+  - '2050'
+  - Montée des eaux
+  - Alimentation
+  - Pêche
+  - 'Fresque du Climat : carte n°39'
+  - Question Choc
+  - France
+  - 'Fresque du Climat : carte n°5'
+  - 'Fresque du Climat : carte n°22'
+  - Gaspillage
+  - Migration
+  - Inondations
+  - Température
+  - Avion
+  - Transport
+  - Inégalités
+  - Océans
+  questions_authors_list:
+  - climat-en-questions.fr
+  - laydgeur
+  - Matthieu Massart
+  - Raphael Odini
+  created: '2020-07-29'
+  updated: '2022-04-16'
 - id: 17
   name: Une biodiversité qui s'anéantit
-  slug: une-biodiversite-qui-saneantit
   introduction: <p>Quel impact l'homme a-t-il sur les autres espèces ? Un premier
     aperçu via ces quelques questions.</p>
   conclusion: ''
+  questions:
+  - 4
+  - 7
+  - 41
+  - 44
+  - 59
+  - 60
+  - 61
+  - 67
+  tags:
+  - 6
+  - 49
+  - 76
   difficulty_average: 2.5
   language: Français
   author: Matthieu Massart
   image_background_url: https://images.sudouest.fr/2019/04/25/5cc1b08b66a4bd2c135ac1f5/widescreen/1000x500/l-extinction-des-dinosaures.jpg?v1
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-08-04
-  updated: 2021-10-24
-  tags:
-  - 6
-  - 49
-  - 76
+  question_count: 8
+  questions_categories_list:
+  - Biodiversité
+  - Ressources
+  questions_tags_list:
+  - Insectes
+  - Pêche
+  - Question Choc
+  - Extinction
+  - Température
+  - Océans
+  questions_authors_list:
+  - Matthieu Massart
+  created: '2020-08-04'
+  updated: '2022-04-16'
 - id: 18
   name: Le quiz de Laurent Testot
-  slug: le-quiz-de-laurent-testot
   introduction: "<p>Laurent Testot est journaliste, conférencier et formateur. Il\
     \ se consacre à la promotion en France de l’histoire globale, une méthode transdisciplinaire\
     \ d’analyse de l’histoire à grandes échelles. Son premier livre, <em>Cataclysmes.\
@@ -360,19 +883,46 @@
     l'interaction de l'homme avec son environnement. Pour aller plus loin, vous pouvez
     vous plonger dans les ouvrages de Laurent, ou continuer dans le même esprit avec
     le <a href="https://quizanthropocene.fr/quiz/3">quiz de Vincent Mignerot</a>.</p>
+  questions:
+  - 571
+  - 572
+  - 573
+  - 576
+  - 577
+  - 578
+  - 579
+  - 580
+  - 581
+  tags: []
   difficulty_average: 2.7
   language: Français
   author: Laurent Testot
   image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
   has_audio: true
-  publish: true
-  spotlight: true
-  created: 2020-09-23
-  updated: 2021-10-24
-  tags: []
+  question_count: 9
+  questions_categories_list:
+  - Histoire & Politique
+  - Pollution
+  questions_tags_list:
+  - Domestication
+  - Fresque du Climat
+  - Incendies
+  - Pétrole
+  - Volcans
+  - Chasseurs-cueilleurs
+  - Perturbateurs endocriniens
+  - Colonisation
+  - Engrais
+  - Question Choc
+  - Charbon
+  - Anthropocène
+  - Cygne noir
+  questions_authors_list:
+  - Laurent Testot
+  created: '2020-09-23'
+  updated: '2022-04-16'
 - id: 52
   name: La finance "verte", par Bon Pote
-  slug: la-finance-verte-par-bon-pote
   introduction: '<p>Je vous présente Thomas, alias Bon Pote. Thomas a commencé à bloguer
     fin 2018 avec un objectif en tête : rendre ses articles utiles. Le lecteur ne
     doit pas perdre son temps et doit soit avoir appris quelque chose, soit avoir
@@ -385,20 +935,39 @@
     plonger dans l''enfer des réglementations et du greenwashing financier ? C''est
     parti.</p>'
   conclusion: ''
+  questions:
+  - 596
+  - 597
+  - 598
+  - 599
+  - 600
+  - 601
+  - 602
+  - 603
+  tags:
+  - 194
   difficulty_average: 3.0
   language: Français
   author: Bonpote
   image_background_url: https://patch.com/img/cdn20/users/224111/20190401/020846/styles/raw/public/processed_images/tree_with_money-1554098721-8512.jpg
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-11-16
-  updated: 2021-10-24
-  tags:
-  - 194
+  question_count: 8
+  questions_categories_list:
+  - Autres
+  - Climat
+  - Histoire & Politique
+  questions_tags_list:
+  - Greenwashing
+  - Pétrole
+  - Europe
+  - France
+  - Finance
+  questions_authors_list:
+  - Bonpote
+  created: '2020-11-16'
+  updated: '2022-04-16'
 - id: 53
   name: Les 10 questions les plus difficiles
-  slug: les-10-questions-les-plus-difficiles
   introduction: "<p>Les questions présentées dans ce quiz ont été choisies spécifiquement,\
     \ et ont toutes le niveau de difficulté le plus élevé : ce n'est donc pas le quiz\
     \ par lequel commencer !</p>\r\n\r\n<p>Personne n'a eu la moyenne à ce quiz à\
@@ -406,19 +975,60 @@
   conclusion: "<p>Bravo d'être allé jusqu'au bout, ce n'était vraiment pas évident\
     \ !</p>\r\n\r\n<p>Pour vous remettre de ce remue-méninge, n'hésitez pas à allez\
     \ découvrir les autres quiz, ils sont nettement plus faciles !</p>"
+  questions:
+  - 45
+  - 80
+  - 233
+  - 258
+  - 348
+  - 378
+  - 534
+  - 538
+  - 597
+  tags: []
   difficulty_average: 4.0
   language: Français
   author: laydgeur
   image_background_url: https://cdn.pixabay.com/photo/2016/11/21/15/28/brain-1845962_1280.jpg
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-11-27
-  updated: 2021-10-24
-  tags: []
+  question_count: 9
+  questions_categories_list:
+  - Autres
+  - Climat
+  - Consommation
+  - Pollution
+  - Ressources
+  questions_tags_list:
+  - Acier
+  - IPBES
+  - CO2
+  - Fresque du Climat
+  - Greenwashing
+  - Agriculture
+  - Espèces invasives
+  - Engrais
+  - Europe
+  - 'Fresque du Climat : carte n°21'
+  - Question Choc
+  - France
+  - Finance
+  - Empreinte carbone
+  - Méthane
+  - Forêts
+  - Adaptation
+  - 'Fresque du Climat : carte n°9'
+  - Glace
+  - Océans
+  questions_authors_list:
+  - Bonpote
+  - climat-en-questions.fr
+  - laydgeur
+  - Matthieu Massart
+  - Raphael Odini
+  created: '2020-11-27'
+  updated: '2022-04-16'
 - id: 54
   name: Born in the USA
-  slug: born-in-the-usa
   introduction: '<p>Les États-Unis sont entrés dans notre imaginaire collectif : les
     cow-boys, New-York, Hollywood, la Silicon Valley, ... Le rêve américain ! Mais
     les États-Unis, ce sont aussi des consommateurs effrénés de pétrole, un des plus
@@ -431,23 +1041,56 @@
     \n\r\n<p>Oh, et tant qu'on parle de pétrole, je vous invite à aller faire un tour\
     \ sur notre page de quiz, vous trouverez d'autres quiz thématiques pour pour étancher\
     \ votre soif de compréhension de notre dépendance à l'or noir ;)</p>"
-  difficulty_average: 2.6
-  language: Français
-  author: laydgeur
-  image_background_url: https://cdn.pixabay.com/photo/2017/12/08/08/17/america-3005258_1280.jpg
-  has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-11-28
-  updated: 2021-10-24
+  questions:
+  - 246
+  - 278
+  - 325
+  - 353
+  - 358
+  - 360
+  - 439
+  - 503
+  - 539
+  - 626
+  - 666
+  - 668
   tags:
   - 11
   - 13
   - 31
   - 80
+  difficulty_average: 2.6
+  language: Français
+  author: laydgeur
+  image_background_url: https://cdn.pixabay.com/photo/2017/12/08/08/17/america-3005258_1280.jpg
+  has_audio: false
+  question_count: 12
+  questions_categories_list:
+  - Climat
+  - Consommation
+  - Énergie
+  questions_tags_list:
+  - CO2
+  - Pétrole
+  - Records
+  - Question Choc
+  - Électricité
+  - Afrique
+  - Charbon
+  - Empreinte carbone
+  - Voiture
+  - États-Unis
+  - Démographie
+  - Gaz
+  - Inégalités
+  - Transport
+  questions_authors_list:
+  - Citoyens Pour le Climat
+  - laydgeur
+  created: '2020-11-28'
+  updated: '2022-04-16'
 - id: 55
   name: Technologies de capture et stockage du CO2
-  slug: technologies-de-capture-et-stockage-du-co2
   introduction: "<p>Le Réveilleur, c'est une chaîne Youtube qui fait de la vulgarisation\
     \ sur les thématiques énergie et climat. Il explique de manière pédagogique ces\
     \ sujets complexes sur Youtube.<br />\r\nUne de ses dernières vidéos traite de\
@@ -465,20 +1108,39 @@
     \ sur le carbone émis est imposée.<br />\r\nAprès ce petit quiz pour vous mettre\
     \ en appétit, il est temps pour vous d'aller visionner la vidéo <a href=\"https://youtu.be/AQlqQEhVi1M\"\
     >ici</a> ! Et ses autres vidéos aussi d'ailleurs.<br />\r\n </p>"
+  questions:
+  - 615
+  - 616
+  - 617
+  - 618
+  - 619
+  - 620
+  - 621
+  - 622
+  - 623
+  tags:
+  - 62
   difficulty_average: 2.9
   language: Français
   author: Le Réveilleur
   image_background_url: https://www.lereveilleur.com/wp-content/uploads/2020/09/CSC_paint.jpg
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-12-08
-  updated: 2021-10-24
-  tags:
-  - 62
+  question_count: 9
+  questions_categories_list:
+  - Climat
+  - Énergie
+  questions_tags_list:
+  - Économie
+  - Ciment
+  - Électricité
+  - Charbon
+  - CO2
+  questions_authors_list:
+  - laydgeur
+  created: '2020-12-08'
+  updated: '2022-04-16'
 - id: 56
   name: En état d'ébriété énergétique ?
-  slug: en-etat-debriete-energetique
   introduction: '<p>L''énergie est partout autour de nous: nos voitures, notre électricité,
     nos usines...Mais avons-nous bien conscience du degré de dépendance que nous avons
     développé vis à vis d''elle ? Ce quiz pour apprendre à mieux nous en rendre compte.</p>'
@@ -486,38 +1148,111 @@
     vis à vis de l'énergie, vous pouvez tester nos quiz sur le pétrole <a href="https://quizanthropocene.fr/quiz/7">ici
     </a>et <a href="https://quizanthropocene.fr/quiz/10">là</a>. Et pour aller au
     coma éthylique énergétique, c'est <a href="https://quizanthropocene.fr/quiz/54">par-là</a>.</p>
+  questions:
+  - 64
+  - 103
+  - 107
+  - 125
+  - 134
+  - 284
+  - 392
+  - 520
+  - 531
+  - 582
+  tags: []
   difficulty_average: 2.5
   language: Français
   author: Matthieu Massart
   image_background_url: https://i.pinimg.com/originals/8c/9a/2f/8c9a2f17830a4bc928fc9ed7f9c1faad.jpg
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-12-13
-  updated: 2021-10-24
-  tags: []
+  question_count: 10
+  questions_categories_list:
+  - Consommation
+  - Énergie
+  questions_tags_list:
+  - ACV
+  - Chauffage
+  - Pétrole
+  - Spatial
+  - Culture générale
+  - France
+  - Électricité
+  - Empreinte carbone
+  - '2100'
+  - Numérique
+  - Démographie
+  - Inégalités
+  - Avion
+  - Transport
+  - Puissance humaine
+  questions_authors_list:
+  - Contributeur anonyme
+  - laydgeur
+  - Matthieu Massart
+  created: '2020-12-13'
+  updated: '2022-04-16'
 - id: 57
   name: 2020 en chiffres
-  slug: 2020-en-chiffres
   introduction: <p>Covid-19 et son lot de confinements et de coronapistes, 5 ans de
     la COP21, propositions de la Convention Citoyenne pour le Climat,... L'année 2020
     a été riche en matière d'environment. Mais avez-vous bien tout suivi ?</p>
   conclusion: <p>En route vers 2021 ! La nouvelle année nous réservera-t-elle son
     lot de chiffres et faits inattendus ?</p>
+  questions:
+  - 682
+  - 683
+  - 684
+  - 685
+  - 686
+  - 687
+  - 688
+  - 689
+  - 690
+  - 691
+  - 692
+  - 693
+  - 694
+  tags:
+  - 213
   difficulty_average: 1.8
   language: Français
   author: Raphael Odini
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/057.jpg
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2020-12-24
-  updated: 2021-10-24
-  tags:
-  - 213
+  question_count: 13
+  questions_categories_list:
+  - Biodiversité
+  - Climat
+  - Consommation
+  - Énergie
+  - Histoire & Politique
+  questions_tags_list:
+  - Vélo
+  - COP
+  - CO2
+  - Incendies
+  - '2050'
+  - Train
+  - Europe
+  - Électricité
+  - Brésil
+  - CCC
+  - France
+  - Charbon
+  - Covid-19
+  - Voiture
+  - Voiture électrique
+  - Température
+  - Avion
+  - Transport
+  - '2020'
+  - Déforestation
+  questions_authors_list:
+  - Raphael Odini
+  created: '2020-12-24'
+  updated: '2022-04-16'
 - id: 59
   name: Fresque du Numérique
-  slug: fresque-du-numerique
   introduction: '<p>La <a href="https://fresquedunumerique.org">Fresque du Numérique</a> est
     un atelier collectif et pédagogique qui permet de comprendre les impacts écologiques
     du numérique, et de réfléchir à des solutions pour les réduire, le tout en passant
@@ -532,40 +1267,77 @@
     réduire sont nombreuses. Pour aller plus loin,nous vous recommandons de participer
     à un atelier. Plus d'information sur <a href="https://fresquedunumerique.org">Fresque
     du Numérique</a>.</p>
+  questions:
+  - 74
+  - 91
+  - 392
+  - 829
+  - 830
+  - 831
+  - 832
+  tags:
+  - 30
   difficulty_average: 2.1
   language: Français
   author: Aurélien Déragne
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/059-logo-fresque-numerique.png
   has_audio: false
-  publish: true
-  spotlight: true
-  created: 2021-01-21
-  updated: 2021-12-05
-  tags:
-  - 30
+  question_count: 7
+  questions_categories_list:
+  - Consommation
+  questions_tags_list:
+  - Electronique
+  - Déchets
+  - Gaz à effet de serre
+  - Électricité
+  - Empreinte carbone
+  - Numérique
+  - ACV
+  questions_authors_list:
+  - Aurélien Déragne
+  - Guillaume Boudry
+  - laydgeur
+  - Matthieu Massart
+  created: '2021-01-21'
+  updated: '2022-04-16'
 - id: 60
   name: Le numérique est-il écologique ?
-  slug: le-numerique-est-il-ecologique
   introduction: <p>Loin des caractères immatériel et propre qui lui sont prêtés, le
     numérique a, comme toute activité humaine, des impacts environnementaux. Ce quiz
     est là pour vous éclairer sur quelques chiffres.</p>
   conclusion: <p>Bravo, vous avez quelques ordres de grandeur pour aborder le sujet
     de la sobriété numérique. Vous pouvez également compléter vos connaissances avec
     le quiz de la fresque du numérique.</p>
+  questions:
+  - 845
+  - 846
+  - 847
+  - 848
+  - 849
+  - 850
+  - 851
+  - 852
+  - 853
+  tags:
+  - 30
   difficulty_average: 2.2
   language: Français
   author: Alain Servigne
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/060.jpg
   has_audio: false
-  publish: true
-  spotlight: true
-  created: 2021-02-01
-  updated: 2021-12-05
-  tags:
-  - 30
+  question_count: 9
+  questions_categories_list:
+  - Consommation
+  - Ressources
+  questions_tags_list:
+  - Empreinte carbone
+  - Numérique
+  questions_authors_list:
+  - Alain Servigne
+  created: '2021-02-01'
+  updated: '2022-04-16'
 - id: 61
   name: Fresque des low techs - les constats
-  slug: fresque-des-low-techs-les-constats
   introduction: "<p>Les low techs, vous connaissez ? Une démarche vers des objets,\
     \ des systèmes, des techniques, des services, des savoir-faire, des pratiques,\
     \ des modes de vie et même des courants de pensée, qui intègrent la technologie\
@@ -592,20 +1364,58 @@
     \ et SE DISPERSENT ».<br />\r\nEnfin, si vous avez envie de faire découvrir ce\
     \ quiz au-delà de la France, sa version anglaise est <a href=\"http://quizanthropocene.fr/quiz/68\"\
     >ici</a>.</p>"
+  questions:
+  - 13
+  - 760
+  - 761
+  - 854
+  - 855
+  - 856
+  - 857
+  - 858
+  - 859
+  - 860
+  - 862
+  - 864
+  tags:
+  - 255
   difficulty_average: 2.7
   language: Français
   author: Max Pinsard
   image_background_url: https://fresquedeslowtechs.files.wordpress.com/2021/02/fr_techs_modern_dezo_flouetee_64c.png
   has_audio: false
-  publish: true
-  spotlight: true
-  created: 2021-02-14
-  updated: 2022-04-04
-  tags:
-  - 255
+  question_count: 12
+  questions_categories_list:
+  - Consommation
+  - Énergie
+  - Histoire & Politique
+  - Pollution
+  - Ressources
+  questions_tags_list:
+  - Pétrole
+  - Sable
+  - Aluminium
+  - Electronique
+  - Déchets
+  - Recyclage
+  - Ciment
+  - Low techs
+  - Question Choc
+  - Economie circulaire
+  - Voiture
+  - Numérique
+  - Plastique
+  - Eau
+  - Maladies
+  - Océans
+  - Métaux
+  questions_authors_list:
+  - Matthieu Massart
+  - Max Pinsard
+  created: '2021-02-14'
+  updated: '2022-04-16'
 - id: 62
   name: Fresque de l'Alimentation
-  slug: fresque-de-lalimentation
   introduction: "<p>Savez-vous réellement comment un steak ou une salade finit dans\
     \ votre assiette ? Et leurs conséquences environnementales ? Pour mieux vous éclairer,\
     \ un atelier collectif et pédagogique a été créé : la <a href=\"https://fresquealimentation.org/\"\
@@ -621,23 +1431,53 @@
     et sociaux qu''elle engendre, donne les grandes lignes d''une alimentation durable,
     végétalisée, locale, bio et de saison, et détaille en quoi une alimentation durable
     améliore la résilience alimentaire.</p>'
-  difficulty_average: 1.9
-  language: Français
-  author: Julien Briton et Thomas Moulin
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/062-logo-fresque-alimentation-square.png
-  has_audio: false
-  publish: true
-  spotlight: true
-  created: 2021-02-18
-  updated: 2021-12-05
+  questions:
+  - 95
+  - 922
+  - 923
+  - 924
+  - 925
+  - 926
+  - 927
+  - 928
+  - 929
+  - 930
   tags:
   - 5
   - 17
   - 223
   - 244
+  difficulty_average: 1.9
+  language: Français
+  author: Julien Briton et Thomas Moulin
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/062-logo-fresque-alimentation-square.png
+  has_audio: false
+  question_count: 10
+  questions_categories_list:
+  - Autres
+  - Climat
+  - Consommation
+  questions_tags_list:
+  - Agriculture
+  - céréales
+  - Grandes Surfaces
+  - Alimentation
+  - Déchets
+  - Santé
+  - Pêche
+  - Question Choc
+  - France
+  - Emballage
+  - Agroalimentaire
+  - Produits laitiers
+  - Elevage
+  questions_authors_list:
+  - Julien Briton
+  - Matthieu Massart
+  created: '2021-02-18'
+  updated: '2022-04-16'
 - id: 63
   name: Digital Collage
-  slug: digital-collage
   introduction: "<p>The Digital Collage is a collaborative and pedagogical workshop\
     \ that unveils the ecological impacts of the digital world, and presents potential\
     \ levers to alleviate them, in a friendly way! The principle is the same as the\
@@ -648,35 +1488,107 @@
   conclusion: <p>As you can see, the digital world is causing real impacts. A good
     news? There are plenty of measures that can easily be adopted to reduce them.
     They are exposed in the Digital Collage workshop (in French only so far).</p>
+  questions:
+  - 1000
+  - 1001
+  - 1002
+  - 1003
+  - 1004
+  - 1005
+  - 1006
+  tags:
+  - 30
   difficulty_average: 2.1
   language: English
   author: 'Aurélien Deragne, translation: Benoît Barraque'
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/063-logo-fresque-numerique-transparent.png
   has_audio: false
-  publish: true
-  spotlight: true
-  created: 2021-02-20
-  updated: 2021-12-05
-  tags:
-  - 30
+  question_count: 7
+  questions_categories_list:
+  - Consommation
+  questions_tags_list:
+  - Electronique
+  - Déchets
+  - Gaz à effet de serre
+  - Électricité
+  - Empreinte carbone
+  - Numérique
+  - ACV
+  questions_authors_list:
+  - Aurélien Déragne
+  - Guillaume Boudry
+  - laydgeur
+  - Matthieu Massart
+  created: '2021-02-20'
+  updated: '2022-04-16'
 - id: 64
   name: Le quiz Choc
-  slug: le-quiz-choc
   introduction: ''
   conclusion: ''
+  questions:
+  - 51
+  - 69
+  - 76
+  - 225
+  - 294
+  - 403
+  - 531
+  - 589
+  - 719
+  - 729
+  - 737
+  - 738
+  - 871
+  - 1007
+  tags: []
   difficulty_average: 2.5
   language: Français
   author: Matthieu Massart et Jean-Philippe Pernin
   image_background_url: ''
   has_audio: false
-  publish: false
-  spotlight: false
-  created: 2021-03-05
-  updated: 2021-10-24
-  tags: []
+  question_count: 14
+  questions_categories_list:
+  - Biodiversité
+  - Climat
+  - Consommation
+  - Énergie
+  - Histoire & Politique
+  - Ressources
+  questions_tags_list:
+  - Fresque du Climat
+  - IDH
+  - Agriculture
+  - 'Fresque du Climat : carte n°39'
+  - GIEC
+  - 'Fresque du Climat : carte n°5'
+  - Empreinte carbone
+  - Inondations
+  - Température
+  - Avion
+  - Puissance humaine
+  - Métaux
+  - Permafrost
+  - Pétrole
+  - '2050'
+  - Alimentation
+  - Montée des eaux
+  - Question Choc
+  - France
+  - Migration
+  - Eau
+  - Inégalités
+  - Transport
+  - Anthropocène
+  questions_authors_list:
+  - Jean-Philippe Pernin
+  - laydgeur
+  - Matthieu Massart
+  - Pascal Mostardi
+  - Raphael Odini
+  created: '2021-03-05'
+  updated: '2022-04-16'
 - id: 65
   name: Le Pétrole
-  slug: le-petrole
   introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
     à cela ! Mais savez-vous à quel point ? Ce quiz pour fixer quelques ordres de
     grandeur.</p>
@@ -684,20 +1596,54 @@
     pas de mondialisation, pas de civilisation urbaine, pas de plastiques, d'huiles,
     de détergents, pas de vêtements synthétiques, pas de routes. Saurez-nous nous
     passer de lui ?</p>
+  questions:
+  - 12
+  - 13
+  - 20
+  - 106
+  - 107
+  - 111
+  - 114
+  - 155
+  - 156
+  - 179
+  - 230
+  - 494
+  tags:
+  - 11
   difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
   image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2021-03-11
-  updated: 2021-12-09
-  tags:
-  - 11
+  question_count: 12
+  questions_categories_list:
+  - Consommation
+  - Énergie
+  - Ressources
+  questions_tags_list:
+  - null
+  - Pétrole
+  - Culture générale
+  - Maritime
+  - Europe
+  - Question Choc
+  - Électricité
+  - France
+  - Voiture
+  - Plastique
+  - Moyen-Orient
+  - Transport
+  questions_authors_list:
+  - Avenir Climatique
+  - Contributeur anonyme
+  - Cyril Retourné
+  - laydgeur
+  - Matthieu Massart
+  created: '2021-03-11'
+  updated: '2022-04-16'
 - id: 66
   name: Un voyage sur des millions d'années
-  slug: un-voyage-sur-des-millions-dannees
   introduction: "<p>Ceux qui ne peuvent se souvenir du passé sont condamnés à le répéter.\
     \ Si ce dicton s'applique facilement aux événements vécus par nos ancêtres durant\
     \ ces derniers siècles, il est plus difficile à appliquer à l'histoire de la Terre.\
@@ -719,24 +1665,44 @@
     \ nous faut d'abord commencer par regarder <a href=\"https://www.youtube.com/channel/UCtXgE_tacrZi1HS8Wbdq4zQ\"\
     >sous nos pieds</a> pour reconstituer les climats du passé. Si ce quiz vous a\
     \ donné le vertige, rendez-vous sur sa chaîne pour aller plus loin.</p>"
-  difficulty_average: 3.2
-  language: Français
-  author: Sous Nos Pieds
-  image_background_url: https://cdn.pixabay.com/photo/2015/11/19/21/43/desert-1052092_1280.jpg
-  has_audio: false
-  publish: true
-  spotlight: false
-  created: 2021-03-12
-  updated: 2021-10-24
+  questions:
+  - 815
+  - 816
+  - 817
+  - 818
+  - 819
+  - 820
+  - 821
+  - 822
+  - 823
+  - 824
   tags:
   - 7
   - 13
   - 40
   - 225
   - 227
+  difficulty_average: 3.2
+  language: Français
+  author: Sous Nos Pieds
+  image_background_url: https://cdn.pixabay.com/photo/2015/11/19/21/43/desert-1052092_1280.jpg
+  has_audio: false
+  question_count: 10
+  questions_categories_list:
+  - Biodiversité
+  - Climat
+  questions_tags_list:
+  - Phénomènes extrêmes
+  - Extinction
+  - Paléoclimat
+  - Anthropocène
+  - CO2
+  questions_authors_list:
+  - Sous nos pieds
+  created: '2021-03-12'
+  updated: '2021-10-24'
 - id: 67
   name: Des low techs tombées dans l'oubli
-  slug: des-low-techs-tombees-dans-loubli
   introduction: "<p>Et si on faisait un petit détour par le passé ? Les XIX et XXe\
     \ siècles ont en effet été l'ère des grands inventeurs. Ils ont été capables de\
     \ faire le tour du monde, de construire des bâtiments gigantesques ou de s'adapter\
@@ -751,20 +1717,44 @@
     qui nous a fait mettre de côté ces technologies qui ne manquaient pas d'intérêt.
     Cela vous a captivé ? Pour aller plus loin, rendez-vous sur le site du <a href="https://solar.lowtechmagazine.com/fr/">Low
     Tech Magasine</a> ou le site <a href="https://paleo-energetique.org/">Paléo Energétique</a>.</p>
+  questions:
+  - 874
+  - 875
+  - 876
+  - 877
+  - 878
+  - 879
+  - 880
+  - 881
+  - 882
+  tags:
+  - 255
   difficulty_average: 2.4
   language: Français
   author: Max Pinsard
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/067-low-tech-oubli.png
   has_audio: false
-  publish: true
-  spotlight: false
-  created: 2021-03-23
-  updated: 2021-12-05
-  tags:
-  - 255
+  question_count: 9
+  questions_categories_list:
+  - Consommation
+  - Énergie
+  - Histoire & Politique
+  questions_tags_list:
+  - Low techs
+  - Bois
+  - Gaz à effet de serre
+  - énergies fossiles
+  - construction
+  - Bateaux
+  - Voiture
+  - Bâtiment
+  - Voiture électrique
+  questions_authors_list:
+  - Max Pinsard
+  created: '2021-03-23'
+  updated: '2022-04-16'
 - id: 68
   name: Low Tech Collage - Current Issues
-  slug: low-tech-collage-current-issues
   introduction: "<p>Ever heard of low techs ? They are objects, systems, techniques,\
     \ services, know-how, practices, lifestyle and even a current of thought that\
     \ integrate technology while being useful, accessible and sustainable. The Low\
@@ -783,20 +1773,52 @@
     full workshop! More info on <a href="https://fresquedeslowtechs.org">fresquedeslowtechs.org</a>
     (in french). "<em>Against infinite growth in a world with finite resources that
     ARE DEGRADING and DISPERSING".</em></p>
+  questions:
+  - 937
+  - 938
+  - 939
+  - 940
+  - 941
+  - 942
+  - 943
+  - 944
+  - 945
+  - 946
+  - 947
+  tags:
+  - 255
   difficulty_average: 2.6
   language: English
   author: Max Pinsard
   image_background_url: https://fresquedeslowtechs.files.wordpress.com/2021/02/fr_techs_modern_dezo_flouetee_64c.png
   has_audio: false
-  publish: true
-  spotlight: true
-  created: 2021-03-24
-  updated: 2021-10-24
-  tags:
-  - 255
+  question_count: 11
+  questions_categories_list:
+  - Autres
+  - Consommation
+  - Pollution
+  - Ressources
+  questions_tags_list:
+  - CO2
+  - Agriculture
+  - Electronique
+  - Déchets
+  - Recyclage
+  - Low techs
+  - Mines
+  - Economie circulaire
+  - Numérique
+  - Plastique
+  - Maladies
+  - Océans
+  - Déforestation
+  - Métaux
+  questions_authors_list:
+  - Max Pinsard
+  created: '2021-03-24'
+  updated: '2022-04-16'
 - id: 69
   name: Le cycle de l'eau dans tous ses états
-  slug: le-cycle-de-leau-dans-tous-ses-etats
   introduction: "<p>Le cycle de l'eau joue un rôle central, tant dans nos vies quotidiennes\
     \ que dans le fonctionnement du système planétaire. Cependant l'être humain a\
     \ une influence croissante sur ce cycle, et donc sur les systèmes physiques et\
@@ -806,24 +1828,49 @@
     l'homme peut avoir sur le cycle de l'eau. De la neige tombant au sommet des montagnes
     aux eaux souterraines côtières, en passant pas toutes les sociétés, les géo-systèmes
     et les écosystèmes qui en dépendent.</p>
-  difficulty_average: 2.2
-  language: Français
-  author: Alix Reverdy
-  image_background_url: https://www.ge.ch/media/media_image/2020-11/grand-cycle.jpg
-  has_audio: false
-  publish: true
-  spotlight: false
-  created: 2021-04-10
-  updated: 2021-10-24
+  questions:
+  - 718
+  - 739
+  - 745
+  - 746
+  - 747
+  - 748
+  - 749
+  - 779
   tags:
   - 37
   - 69
   - 206
   - 261
   - 263
+  difficulty_average: 2.2
+  language: Français
+  author: Alix Reverdy
+  image_background_url: https://www.ge.ch/media/media_image/2020-11/grand-cycle.jpg
+  has_audio: false
+  question_count: 8
+  questions_categories_list:
+  - Consommation
+  - Énergie
+  questions_tags_list:
+  - '2050'
+  - Montagne
+  - Montée des eaux
+  - Poissons
+  - Dom-Tom
+  - France
+  - Erosion
+  - '2100'
+  - Eau
+  - Moyen-Orient
+  - Alpes
+  - Cryosphère
+  questions_authors_list:
+  - Alix Reverdy
+  created: '2021-04-10'
+  updated: '2022-04-16'
 - id: 70
   name: Fresque des low techs - les leviers d'action
-  slug: fresque-des-low-techs-les-leviers-daction
   introduction: "<p>La <a href=\"https://fresquedeslowtechs.org\">Fresque des low\
     \ techs</a>, c'est un atelier-jeu collaboratif sur la (non ?) soutenabilité des\
     \ technologies qui nous entourent. Il amène d'abord à s'interroger sur leurs limites,\
@@ -839,40 +1886,92 @@
     tout ça ! Plus d'infos sur <a class="notion-link-token notion-enable-hover" href="http://fresquedeslowtechs.org/"
     rel="noopener noreferrer" style="cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit"
     target="_blank">fresquedeslowtechs.org</a></p>
+  questions:
+  - 3
+  - 741
+  - 742
+  - 743
+  - 744
+  - 862
+  - 870
+  - 872
+  - 873
+  - 880
+  tags:
+  - 255
   difficulty_average: 1.9
   language: Français
   author: Max Pinsard
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/070-solLT_32c.png
   has_audio: false
-  publish: true
-  spotlight: true
-  created: 2021-04-16
-  updated: 2021-12-05
-  tags:
-  - 255
+  question_count: 10
+  questions_categories_list:
+  - Consommation
+  - Énergie
+  - Histoire & Politique
+  questions_tags_list:
+  - Chauffage
+  - Verre
+  - Déchets
+  - Culture générale
+  - Recyclage
+  - Standardisation
+  - Energie
+  - Gaz à effet de serre
+  - Empreinte carbone
+  - Voiture
+  - Numérique
+  - Bâtiment
+  - Jouets
+  - Vélo
+  questions_authors_list:
+  - Matthieu Massart
+  - Max Pinsard
+  created: '2021-04-16'
+  updated: '2022-04-16'
 - id: 71
   name: Fresque Océane
-  slug: fresque-oceane
   introduction: '<p>La Fresque Océane : 1 océan - 6 thématiques qui décrivent ce qu''il
     est en tant que milieu, ce qu''il représente pour les sociétés humaines, les menaces
     auxquelles il est confronté.</p>'
   conclusion: ''
+  questions:
+  - 28
+  - 45
+  - 472
+  - 789
+  - 856
+  tags:
+  - 9
+  - 21
+  - 223
   difficulty_average: 2.6
   language: Français
   author: Cyril Retourné
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/071-logo-fresque-oceane.jpg
   has_audio: false
-  publish: false
-  spotlight: false
-  created: 2021-04-26
-  updated: 2021-12-05
-  tags:
-  - 9
-  - 21
-  - 223
+  question_count: 5
+  questions_categories_list:
+  - Biodiversité
+  - Climat
+  - Pollution
+  questions_tags_list:
+  - Question Choc
+  - Plancton
+  - IPBES
+  - Fresque du Climat
+  - 'Fresque du Climat : carte n°24'
+  - Plastique
+  - Océans
+  questions_authors_list:
+  - Jean-Christophe Anna
+  - Le Monde
+  - Matthieu Massart
+  - Max Pinsard
+  created: '2021-04-26'
+  updated: '2022-04-16'
 - id: 73
   name: Forgotten Low Techs
-  slug: forgotten-low-techs
   introduction: "<p>How about a diversion into the past? The 19th and 20th centuries\
     \ were indeed an era of great inventors. They were able to circumnavigate the\
     \ globe, construct gigantic buildings or adapt to an energy shortage. However,\
@@ -884,20 +1983,45 @@
     put aside these valuabe technologies. Did it captivate you? To find out more,
     visit the <a href="http://solar.lowtechmagazine.com/fr/">Low Tech Magasine</a>
     or <a href="http://Paléo Energétique">Paleo Energy</a> websites.</p>
+  questions:
+  - 949
+  - 950
+  - 951
+  - 952
+  - 953
+  - 954
+  - 955
+  - 956
+  - 957
+  tags:
+  - 255
   difficulty_average: 2.6
   language: English
   author: Max Pinsard
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/067-low-tech-oubli.png
   has_audio: false
-  publish: true
-  spotlight: true
-  created: 2021-04-27
-  updated: 2021-12-05
-  tags:
-  - 255
+  question_count: 9
+  questions_categories_list:
+  - Consommation
+  - Énergie
+  - Histoire & Politique
+  - Ressources
+  questions_tags_list:
+  - null
+  - Low techs
+  - énergies fossiles
+  - Bateaux
+  - Voiture
+  - Bâtiment
+  - Voiture électrique
+  - Transport
+  - Acier
+  questions_authors_list:
+  - Max Pinsard
+  created: '2021-04-27'
+  updated: '2022-04-16'
 - id: 74
   name: Faut-il encore prendre l'avion ?
-  slug: faut-il-encore-prendre-lavion
   introduction: "<p>Depuis le Le rêve d'Icare, qui n'a pas rêvé de voler ? Mais ce\
     \ mode de déplacement est-il vraiment soutenable ? L'initiative <a href=\"https://restonslespiedssurterre.fr/\"\
     >Restons Les Pieds Sur Terre</a> a pour objectif de sensibiliser le public à l’impact\
@@ -912,22 +2036,49 @@
     \ plus loin, <a href=\"http://https://restonslespiedssurterre.fr\">Restons les\
     \ Pieds sur Terre</a>,  <a href=\"https://www.facebook.com/restonslespiedssurterre\
     \ @restonssurterre\">page facebook</a>.</p>"
+  questions:
+  - 700
+  - 710
+  - 712
+  - 714
+  - 731
+  - 735
+  - 750
+  - 752
+  - 756
+  - 757
+  - 792
+  - 910
+  tags:
+  - 33
+  - 34
+  - 100
   difficulty_average: 2.5
   language: Français
   author: Michel Bonnassieux
   image_background_url: https://restonslespiedssurterre.fr/wp-content/uploads/2019/06/OVH-En-tete-Avions-fum%C3%A9e.png
   has_audio: true
-  publish: true
-  spotlight: true
-  created: 2021-05-03
-  updated: 2021-10-24
-  tags:
-  - 33
-  - 34
-  - 100
+  question_count: 12
+  questions_categories_list:
+  - Consommation
+  - Énergie
+  - Pollution
+  questions_tags_list:
+  - '2050'
+  - Aérien
+  - Energie
+  - Gaz à effet de serre
+  - Croissance
+  - Avion
+  - Transport
+  - Taxes
+  - CO2
+  questions_authors_list:
+  - Restons les pieds sur terre
+  created: '2021-05-03'
+  updated: '2022-04-16'
 - id: 75
   name: 'Transition énergétique des transports #1'
-  slug: transition-energetique-des-transports-1
   introduction: "<p>Aurélien Bigo est un jeune chercheur spécialisé sur la transition\
     \ énergétique des transports. La thèse qu'il a soutenue en 2020, intitulée \"\
     Les transports face au défi de la transition énergétique. Explorations entre passé\
@@ -943,22 +2094,49 @@
     et technologie. Pour compléter ce premier quiz et les connaissances sur le sujet,
     d’autres quiz suivront dans les mois à venir. En attendant, n’hésitez pas à consulter
     les autres quiz du site !</p>
+  questions:
+  - 1013
+  - 1014
+  - 1015
+  - 1016
+  - 1017
+  - 1018
+  - 1019
+  - 1020
+  - 1021
+  - 1022
+  tags:
+  - 33
+  - 218
+  - 225
   difficulty_average: 2.1
   language: Français
   author: Aurélien Bigo
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/075.jpg
   has_audio: false
-  publish: true
-  spotlight: true
-  created: 2021-10-03
-  updated: 2021-12-05
-  tags:
-  - 33
-  - 218
-  - 225
+  question_count: 10
+  questions_categories_list:
+  - Autres
+  - Climat
+  - Énergie
+  questions_tags_list:
+  - Pétrole
+  - Train
+  - Maritime
+  - Climat
+  - Voiture
+  - Voiture électrique
+  - Biocarburant
+  - Gaz
+  - Avion
+  - Transport
+  - Biogaz
+  questions_authors_list:
+  - Aurélien Bigo
+  created: '2021-10-03'
+  updated: '2022-04-16'
 - id: 76
   name: Inventons Nos Vies Bas Carbone
-  slug: invbc
   introduction: <p>Connaissez-vous votre empreinte carbone ? Sauriez-vous citer une
     activité qui émet une tonne de CO2 ? Et avez-vous une petite idée des efforts
     à fournir pour éviter un emballement du réchauffement climatique ? Ces questions
@@ -976,20 +2154,45 @@
     Vous pouvez aussi consulter cet <a href="https://bonpote.com/vivre-a-2-tonnes-co2e-par-an-cest-possible/">article
     de synthèse</a> sur la page du blogeur Bon pote. Ou encorece <a href="https://www.resistanceclimatique.org/gildas_invbc">témoignage</a>
     de Gildas, "résistant climatique".</p>
+  questions:
+  - 931
+  - 932
+  - 933
+  - 935
+  - 965
+  - 966
+  - 967
+  - 968
+  - 969
+  - 971
+  tags:
+  - 72
   difficulty_average: 2.6
   language: Français
   author: Collectif INVBC
   image_background_url: https://d3n8a8pro7vhmx.cloudfront.net/resistanceclimatique/pages/115/attachments/original/1616150476/nouveau_kit.jpg?1616150476
   has_audio: false
-  publish: true
-  spotlight: true
-  created: 2021-11-16
-  updated: 2022-01-24
-  tags:
-  - 72
+  question_count: 10
+  questions_categories_list:
+  - Climat
+  - Consommation
+  questions_tags_list:
+  - Agriculture
+  - Alimentation
+  - Maritime
+  - Inventaire National
+  - Empreinte carbone
+  - Numérique
+  - Bâtiment
+  - Avion
+  - Transport
+  - Inégalités
+  questions_authors_list:
+  - FJG
+  created: '2021-11-16'
+  updated: '2022-04-16'
 - id: 77
   name: Archipel du Vivant
-  slug: archipel-du-vivant
   introduction: <p><a href="https://archipelduvivant.org/">L'Archipel du Vivant </a>,
     c'est un collectif qui vise à développer la résilience locale et faciliter la
     coopération entre les initiatives alternatives existantes afin de faire émerger
@@ -1005,15 +2208,16 @@
     https://archipelduvivant.org/nos-livres/ecrivons-ensemble-un-nouveau-recit-pour-sauver-la-vie/?fbclid=IwAR04Qs8pltv81NI_Qv55P2j6A8SIPa885lhXLjEyurvF85xWoZll3BmQAEQ\"\
     >Écrivons ensemble un nouveau récit pour sauver la vie</a>.</p>\r\n\r\n<p> </p>\r\
     \n\r\n<p> </p>"
-  difficulty_average: 2.6
-  language: Français
-  author: Jean-Christophe Anna
-  image_background_url: https://archipelduvivant.org/wp-content/uploads/2020/07/132-133-2.jpg
-  has_audio: false
-  publish: true
-  spotlight: true
-  created: 2021-12-05
-  updated: 2021-12-09
+  questions:
+  - 649
+  - 788
+  - 789
+  - 844
+  - 865
+  - 866
+  - 867
+  - 868
+  - 869
   tags:
   - 14
   - 17
@@ -1023,27 +2227,114 @@
   - 246
   - 247
   - 248
+  difficulty_average: 2.6
+  language: Français
+  author: Jean-Christophe Anna
+  image_background_url: https://archipelduvivant.org/wp-content/uploads/2020/07/132-133-2.jpg
+  has_audio: false
+  question_count: 9
+  questions_categories_list:
+  - Biodiversité
+  - Climat
+  - Énergie
+  - Ressources
+  questions_tags_list:
+  - null
+  - Vertébrés
+  - Renouvelable
+  - Eau
+  - Température
+  - Puits de carbone
+  - Oxygène
+  - Plancton
+  questions_authors_list:
+  - Jean-Christophe Anna
+  created: '2021-12-05'
+  updated: '2022-04-16'
 - id: 78
   name: Burger Quiz de l'Anthropocene
-  slug: burger-quiz-de-lanthropocene
   introduction: "<p>Bienvenue au Burger Quiz de l'Anthropocène !<br />\r\nLes questions\
     \ qui suivent vont aborder, dans l'ordre : une introduction à l'anthropocène,\
     \ énergie, climat, inégalités, vulnérabilités, risques à venir, et finalement\
     \ leviers d'action.</p>\r\n\r\n<p>Prêts ? A vous de jouer.</p>"
   conclusion: ''
+  questions:
+  - 1
+  - 2
+  - 25
+  - 41
+  - 49
+  - 76
+  - 77
+  - 95
+  - 225
+  - 294
+  - 403
+  - 440
+  - 577
+  - 649
+  - 719
+  - 744
+  - 867
+  - 927
+  - 1007
+  tags: []
   difficulty_average: 2.2
   language: Français
   author: Matthieu Massart
   image_background_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/LOGO%20quiz%20de%20lanthropocene-01.jpg?raw=true
   has_audio: false
-  publish: false
-  spotlight: false
-  created: 2021-12-12
-  updated: 2021-12-30
-  tags: []
+  question_count: 19
+  questions_categories_list:
+  - Biodiversité
+  - Climat
+  - Consommation
+  - Énergie
+  - Histoire & Politique
+  - Ressources
+  questions_tags_list:
+  - Fresque du Climat
+  - IDH
+  - null
+  - 'Fresque du Climat : carte n°39'
+  - 'Fresque du Climat : carte n°5'
+  - GIEC
+  - Empreinte carbone
+  - Gaspillage
+  - Inondations
+  - Avion
+  - Température
+  - Océans
+  - Puissance humaine
+  - Chauffage
+  - '2050'
+  - Montée des eaux
+  - Alimentation
+  - Pêche
+  - Vertébrés
+  - Question Choc
+  - France
+  - Charbon
+  - Migration
+  - Elevage
+  - Transport
+  - Inégalités
+  - Anthropocène
+  - Cygne noir
+  questions_authors_list:
+  - Citoyens Pour le Climat
+  - Jean-Christophe Anna
+  - Jean-Philippe Pernin
+  - Julien Briton
+  - Laurent Testot
+  - laydgeur
+  - Matthieu Massart
+  - Max Pinsard
+  - Raphael Odini
+  created: '2021-12-12'
+  updated: '2022-04-16'
 - id: 79
   name: Introduction à la Fresque du Climat
-  slug: introduction-a-la-fresque-du-climat
   introduction: <p>La Fresque du Climat, c’est un atelier ludique, participatif et
     créatif sur le changement climatique. Il est basé sur l’intelligence collective
     et est extrêmement pédagogique. En 3 heures, vous découvrez les mécanismes du
@@ -1053,15 +2344,17 @@
   conclusion: <p>Ca vous a plu ? Des points qui vous étaient inconnus ? Alors n'hésitez
     plus, inscrivez-vous à un atelier de la <a href="http://fresqueduclimat.org">Fresque
     du Climat</a>. Vous pourrez même rapidement devenir animateur à votre tour.</p>
-  difficulty_average: 1.7
-  language: Français
-  author: Matthieu Massart
-  image_background_url: https://www.grenoble.fr/uploads/Image/81/IMF_100/GAB_GRENOBLE2019/21428_586_fresque-climat-adultes.jpg
-  has_audio: false
-  publish: true
-  spotlight: true
-  created: 2022-01-10
-  updated: 2022-01-14
+  questions:
+  - 14
+  - 28
+  - 32
+  - 70
+  - 194
+  - 403
+  - 428
+  - 657
+  - 867
+  - 927
   tags:
   - 9
   - 13
@@ -1072,9 +2365,50 @@
   - 98
   - 225
   - 256
+  difficulty_average: 1.7
+  language: Français
+  author: Matthieu Massart
+  image_background_url: https://www.grenoble.fr/uploads/Image/81/IMF_100/GAB_GRENOBLE2019/21428_586_fresque-climat-adultes.jpg
+  has_audio: false
+  question_count: 10
+  questions_categories_list:
+  - Climat
+  - Énergie
+  - Histoire & Politique
+  questions_tags_list:
+  - Animaux sauvages
+  - Fresque du Climat
+  - CO2
+  - Pétrole
+  - null
+  - 'Fresque du Climat : carte n°13'
+  - 'Fresque du Climat : carte n°18'
+  - Montée des eaux
+  - Alimentation
+  - Atmosphère
+  - 'Fresque du Climat : carte n°39'
+  - Question Choc
+  - 'Fresque du Climat : carte n°24'
+  - Charbon
+  - GIEC
+  - 'Fresque du Climat : carte n°22'
+  - '2100'
+  - Migration
+  - Elevage
+  - Température
+  - Glace
+  - Océans
+  - Anthropocène
+  - Puits de carbone
+  questions_authors_list:
+  - Jean-Christophe Anna
+  - Julien Briton
+  - laydgeur
+  - Matthieu Massart
+  created: '2022-01-10'
+  updated: '2022-04-16'
 - id: 80
   name: La Fresque du Climat Junior expliquée à ma famille
-  slug: la-fresque-du-climat-junior-expliquee-a-ma-famille
   introduction: "<p>Ce quiz s'adresse avant tout à des enfants qui viennent de participer\
     \ à un atelier Fresque du Climat Junior.<br />\r\nTu viens de participer à une\
     \ fresque junior et tu aimerais partager cette expérience avec ta famille ? Voici\
@@ -1084,15 +2418,16 @@
     résumé dans cette <a href="https://www.youtube.com/watch?v=t9f39nukKBY">vidéo</a>.
     Ta prochaine mission : entamer une discussion sur ce que vous pourriez faire pour
     réduire ces émissions de gaz à effet de serre !</p>'
-  difficulty_average: 0.0
-  language: Français
-  author: Christine Cavazza et Matthieu Massart
-  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/FdcJ.png
-  has_audio: false
-  publish: true
-  spotlight: true
-  created: 2022-01-26
-  updated: 2022-02-04
+  questions:
+  - 457
+  - 764
+  - 765
+  - 766
+  - 767
+  - 769
+  - 783
+  - 784
+  - 793
   tags:
   - 13
   - 51
@@ -1100,3 +2435,29 @@
   - 142
   - 225
   - 256
+  difficulty_average: 0.0
+  language: Français
+  author: Christine Cavazza et Matthieu Massart
+  image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/FdcJ.png
+  has_audio: false
+  question_count: 9
+  questions_categories_list:
+  - Climat
+  - Consommation
+  questions_tags_list:
+  - Fresque du Climat
+  - null
+  - Montée des eaux
+  - Gaz à effet de serre
+  - GIEC
+  - Glace
+  - Océans
+  - Élevage
+  - Météo
+  questions_authors_list:
+  - Avenir Climatique
+  - Christine Cavazza
+  - Citoyens Pour le Climat
+  - Matthieu Massart
+  created: '2022-01-26'
+  updated: '2022-04-16'
