@@ -17,7 +17,7 @@ from stats.models import DailyStat, QuestionAnswerEvent, QuestionFeedbackEvent, 
 class CleanupAppStatsCommandTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        Configuration.objects.create(daily_stat_last_aggregated=timezone.make_aware(datetime(2020, 5, 1)))
+        Configuration.objects.create(daily_stat_last_aggregated=timezone.make_aware(datetime(2020, 4, 30)))
         cls.question_1 = QuestionFactory(answer_correct="a")
         cls.question_1.agg_stats.answer_count = 2
         cls.question_1.agg_stats.save()
@@ -60,12 +60,12 @@ class CleanupAppStatsCommandTest(TestCase):
         # question answer stats
         self.assertEqual(question_1_updated.agg_stats.answer_count, 2 + 6)
         self.assertEqual(question_1_updated.agg_stats.answer_success_count, 2)
-        self.assertEqual(QuestionAnswerEvent.objects.count(), 0)
+        self.assertEqual(QuestionAnswerEvent.objects.count(), 6)
 
         # question feedback stats
         self.assertEqual(question_1_updated.agg_stats.like_count, 4)
         self.assertEqual(question_1_updated.agg_stats.dislike_count, 2)
-        self.assertEqual(QuestionFeedbackEvent.objects.count(), 0)
+        self.assertEqual(QuestionFeedbackEvent.objects.count(), 6)
 
         # quiz answer stats
         self.assertEqual(quiz_1_updated.stats.count(), 2)
@@ -101,5 +101,4 @@ class CleanupAppStatsCommandTest(TestCase):
         # daily stats freeze time
         self.assertEqual(daily_stat_freeze_time.question_answer_count, 10 + 3)
         self.assertEqual(daily_stat_freeze_time.question_feedback_count, 5 + 3)
-        # why 0 ? because aggregation has already run, QuizAnswerEvent cannot be taken into account
-        self.assertEqual(daily_stat_freeze_time.quiz_answer_count, 2 + 0)
+        self.assertEqual(daily_stat_freeze_time.quiz_answer_count, 2 + 1)

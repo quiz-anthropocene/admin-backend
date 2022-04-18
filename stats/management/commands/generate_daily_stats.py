@@ -56,11 +56,12 @@ class Command(BaseCommand):
         - update DailyStat
             - global 'question_answer_count' and 'question_answer_from_quiz_count'
             - hour split 'question_answer_count' and 'question_answer_from_quiz_count'
-        delete QuestionAnswerEvent
+
+        Note: we don't delete QuestionAnswerEvent anymore
         """
         print("=== starting QuestionAnswerEvent cleanup")
 
-        question_stats = QuestionAnswerEvent.objects.all()
+        question_stats = QuestionAnswerEvent.objects.filter(created__gte=configuration.daily_stat_last_aggregated)
         question_stats_df = pd.DataFrame.from_records(question_stats.values())
         print(f"{question_stats_df.shape[0]} new answers")
 
@@ -121,10 +122,6 @@ class Command(BaseCommand):
                 # save daily stat
                 daily_stat.save()
 
-            # delete all processed question_stats
-            question_stats.delete()
-            print("QuestionAnswerEvent deleted")
-
     def cleanup_question_feedback_events(self):
         """
         loop on QuestionFeedbackEvent
@@ -132,11 +129,14 @@ class Command(BaseCommand):
         - update DailyStat
             - global 'question_feedback_count' and 'question_feedback_from_quiz_count'
             - hour split 'question_feedback_count' and 'question_feedback_from_quiz_count'
-        delete QuestionFeedbackEvent
+
+        Note: we don't delete QuestionFeedbackEvent anymore
         """
         print("=== starting QuestionFeedbackEvent cleanup")
 
-        question_feedbacks = QuestionFeedbackEvent.objects.all()
+        question_feedbacks = QuestionFeedbackEvent.objects.filter(
+            created__gte=configuration.daily_stat_last_aggregated
+        )
         question_feedbacks_df = pd.DataFrame.from_records(question_feedbacks.values())
         print(f"{question_feedbacks_df.shape[0]} new feedbacks")
 
@@ -195,10 +195,6 @@ class Command(BaseCommand):
                 # save daily stat
                 daily_stat.save()
 
-            # delete all processed question_feedbacks
-            question_feedbacks.delete()
-            print("QuestionFeedbackEvent deleted")
-
     def sumup_quiz_answer_events(self):
         """
         loop on QuizAnswerEvent
@@ -207,8 +203,7 @@ class Command(BaseCommand):
             - global 'quiz_answer_count'
             - hour split 'quiz_answer_count'
 
-        WARNING: QuizAnswerEvent aren't deleted, so run only once !
-        TODO: how to keep score ? how to delete QuizAnswerEvent ?
+        TODO: how to keep score ?
         """
         print("=== starting QuizAnswerEvent sumup")
 
@@ -269,8 +264,7 @@ class Command(BaseCommand):
             - global 'quiz_feedback_count'
             - hour split 'quiz_feedback_count'
 
-        WARNING: QuizFeedbackEvent aren't deleted, so run only once !
-        TODO: how to keep score ? how to delete QuizFeedbackEvent ?
+        TODO: how to keep score ?
         """
         print("=== starting QuizFeedbackEvent sumup")
 
