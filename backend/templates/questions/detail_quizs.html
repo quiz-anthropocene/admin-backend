@@ -1,6 +1,6 @@
-{% extends "quizs/detail_base.html" %}
+{% extends "questions/detail_base.html" %}
 
-{% block quiz_detail_content %}
+{% block question_detail_content %}
 <div class="row">
     <div class="col-12">
         <div class="table-container">
@@ -8,16 +8,14 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Question</th>
-                        <th>Ordre</th>
+                        <th>Quiz</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for quiz_question in quiz_questions %}
                         <tr>
-                            <td><a href="{% url 'questions:detail_view' quiz_question.question.id %}">{{ quiz_question.question.id }}</a></td>
-                            <td>{{ quiz_question.question.text }}</td>
-                            <td>{{ quiz_question.order }}</td>
+                            <td><a href="{% url 'quizs:detail_view' quiz_question.quiz.id %}">{{ quiz_question.quiz.id }}</a></td>
+                            <td>{{ quiz_question.quiz.name }}</td>
                         </tr>
                     {% endfor %}
                 </tbody>

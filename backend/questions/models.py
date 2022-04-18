@@ -242,6 +242,14 @@ class Question(models.Model):
     def dislike_count_agg(self) -> int:
         return self.agg_stats.dislike_count + self.feedbacks.disliked().count()
 
+    @property
+    def quiz_count(self) -> int:
+        return self.quizs.count()
+
+    @property
+    def contribution_count(self) -> int:
+        return self.contributions.count()
+
     # Admin
     tags_list_string.fget.short_description = "Tag(s)"
     quizs_list_string.fget.short_description = "Quiz(s)"

@@ -22,7 +22,7 @@ class QuizListView(LoginRequiredMixin, SingleTableMixin, FilterView):
 
     def get_queryset(self):
         qs = super().get_queryset()
-        qs = qs.select_related("author_link").prefetch_related("tags")
+        qs = qs.select_related("author_link").prefetch_related("tags", "questions")
         return qs
 
     def get_context_data(self, **kwargs):
@@ -46,7 +46,7 @@ class QuizDetailView(LoginRequiredMixin, DetailView):
         return context
 
 
-class QuizQuestionsView(LoginRequiredMixin, ListView):
+class QuizDetailQuestionsView(LoginRequiredMixin, ListView):
     model = QuizQuestion
     template_name = "quizs/detail_questions.html"
     context_object_name = "quiz_questions"

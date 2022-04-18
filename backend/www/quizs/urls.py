@@ -3,10 +3,10 @@ from django.views.generic.base import RedirectView
 
 from www.quizs.views import (
     QuizDetailContributionsView,
+    QuizDetailQuestionsView,
     QuizDetailStatsView,
     QuizDetailView,
     QuizListView,
-    QuizQuestionsView,
 )
 
 
@@ -26,7 +26,7 @@ urlpatterns = [
                     name="detail",
                 ),
                 path("view/", QuizDetailView.as_view(), name="detail_view"),
-                path("questions/", QuizQuestionsView.as_view(), name="detail_questions"),
+                path("questions/", QuizDetailQuestionsView.as_view(), name="detail_questions"),
                 path("comments/", QuizDetailContributionsView.as_view(), name="detail_contributions"),
                 path("stats/", QuizDetailStatsView.as_view(), name="detail_stats"),
             ]
