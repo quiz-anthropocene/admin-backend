@@ -1,0 +1,5 @@
+{% if category %}
+    <a href="{% url 'categories:detail_view' category.id %}"><span class="badge bg-primary">{{ category }}</span></a>
+{% else %}
+    <span>—</span>
+{% endif %}
