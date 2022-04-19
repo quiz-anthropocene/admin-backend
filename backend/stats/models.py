@@ -42,12 +42,15 @@ class QuestionAnswerEvent(models.Model):
         choices=api_constants.QUESTION_ANSWER_CHOICES,
         help_text="La réponse choisie par l'internaute",
     )
+
     source = models.CharField(
         max_length=50,
         choices=constants.QUESTION_SOURCE_CHOICES,
         default=constants.QUESTION_SOURCE_QUESTION,
         help_text="Le contexte dans lequel a été répondu la question",
     )
+    quiz = models.ForeignKey(Quiz, related_name="question_stats", on_delete=models.CASCADE, null=True, blank=True)
+
     created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de la réponse")
 
     objects = QuestionAnswerEventQuerySet.as_manager()
@@ -75,12 +78,15 @@ class QuestionFeedbackEvent(models.Model):
         default=constants.FEEDBACK_LIKE,
         help_text="L'avis laissé sur la question",
     )
+
     source = models.CharField(
         max_length=50,
         choices=constants.QUESTION_SOURCE_CHOICES,
         default=constants.QUESTION_SOURCE_QUESTION,
         help_text="Le contexte dans lequel a été envoyé l'avis",
     )
+    quiz = models.ForeignKey(Quiz, related_name="question_feedbacks", on_delete=models.CASCADE, null=True, blank=True)
+
     created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de l'avis")
 
     objects = QuestionFeedbackEventQuerySet.as_manager()
