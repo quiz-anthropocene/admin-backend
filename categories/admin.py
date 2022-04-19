@@ -9,7 +9,7 @@ class CategoryAdmin(ExportMixin, admin.ModelAdmin):
         "id",
         "name",
         "name_long",
-        "question_count",
+        "question_validated_count",
     )
     search_fields = ("name",)
     ordering = ("id",)

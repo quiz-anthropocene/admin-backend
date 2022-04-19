@@ -1,5 +1,6 @@
 from ckeditor.fields import RichTextField
 from django.db import models
+from django.urls import reverse
 
 
 class Category(models.Model):
@@ -17,9 +18,16 @@ class Category(models.Model):
     def __str__(self):
         return f"{self.name}"
 
+    def get_absolute_url(self):
+        return reverse("categories:detail", kwargs={"pk": self.id})
+
     @property
     def question_count(self) -> int:
+        return self.questions.count()
+
+    @property
+    def question_validated_count(self) -> int:
         return self.questions.validated().count()
 
     # Admin
-    question_count.fget.short_description = "Questions (validées)"
+    question_validated_count.fget.short_description = "Questions (validées)"
