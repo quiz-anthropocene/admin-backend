@@ -72,7 +72,7 @@
     <div id="scroll-to-question" class="scroll-to-fix" style="height:0px"></div>
 
     <section v-if="quiz && (quizStep > 0) && quiz.questions[quizStep-1]">
-      <QuestionAnswerCards v-bind:question="quiz.questions[quizStep-1]" v-bind:context="{ question_number: quizStep+' / '+quiz.questions.length, source: 'quiz' }" @answer-submitted="onAnswerSubmitted" />
+      <QuestionAnswerCards v-bind:question="quiz.questions[quizStep-1]" v-bind:context="{ question_number: quizStep+' / '+quiz.questions.length, source: 'quiz', quiz: quiz }" @answer-submitted="onAnswerSubmitted" />
       <button v-if="showNextButton && (quizStep < quiz.questions.length)" class="btn" :class="emphasisNextButton ? 'btn-primary' : 'btn-outline-primary'" @click="incrementStep()">⏩&nbsp;{{ $t('messages.nextQuestion') }}</button>
       <button v-if="showNextButton && (quizStep === quiz.questions.length)" class="btn btn-lg btn-primary" @click="incrementStep()">⏩&nbsp;{{ $t('messages.endQuiz') }}</button>
     </section>
@@ -280,6 +280,7 @@ export default {
     },
     onAnswerSubmitted(data) {
       this.quiz.questions[this.quizStep - 1].success = data.success;
+      this.quiz.questions[this.quizStep - 1].answerPicked = data.answer_picked;
       this.showNextButton = true;
       this.emphasisNextButton = true;
     },
@@ -287,6 +288,13 @@ export default {
       // stats
       const quizEndTime = window.performance.now();
       const quizDurationInSeconds = Math.round((quizEndTime - this.quizStartTime) / 1000);
+      const questionAnswerSplit = {};
+      this.quiz.questions.forEach((q) => {
+        questionAnswerSplit[q.id] = {
+          success: q.success,
+          answer_picked: q.answerPicked,
+        }
+      });
       fetch(`${process.env.VUE_APP_STATS_ENDPOINT}/quiz-answer-event/`, {
         method: 'POST',
         headers: {
@@ -297,6 +305,7 @@ export default {
           quiz: this.quiz.id,
           answer_success_count: this.quiz.questions.filter((q) => q.success).length,
           duration_seconds: quizDurationInSeconds,
+          question_answer_split: questionAnswerSplit,
         }),
       })
         .then((response) => response.json())

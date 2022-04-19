@@ -127,7 +127,7 @@
       {{ $t('messages.questionPendingValidation') }}
     </div>
 
-    <FeedbackCard v-if="question && questionSubmitted" v-bind:context="{ source: 'question', item: question }" />
+    <FeedbackCard v-if="question && questionSubmitted" v-bind:context="{ source: 'question', item: question, quiz: context.quiz }" />
   </section>
 </template>
 
@@ -241,7 +241,13 @@ export default {
       // this.question.answer_success_count_agg += (this.questionSuccess ? 1 : 0);
       // this.question.answer_success_rate = ((this.question.answer_success_count_agg / this.question.answer_count_agg) * 100).toFixed(0);
       // tell parent component
-      this.$emit('answer-submitted', { question_id: this.question.id, success: this.questionAnswer.success, message: this.questionAnswer.message });
+      this.$emit('answer-submitted', {
+        question_id: this.question.id,
+        success: this.questionAnswer.success,
+        answer_correct: this.question.answer_correct,
+        answer_picked: cleanedAnswerPicked,
+        message: this.questionAnswer.message
+        });
       // scroll to answer
       setTimeout(() => {
         // why scroll to this div and not to 'answer' directly ? To have a slight top margin
@@ -258,6 +264,7 @@ export default {
           question: this.question.id,
           choice: cleanedAnswerPicked,
           source: this.context.source,
+          quiz: this.context.quiz ? this.context.quiz.id : null
         }),
       })
         .then((response) => response.json())

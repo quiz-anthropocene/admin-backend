@@ -22,7 +22,7 @@ class QuestionAnswerEventSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = QuestionAnswerEvent
-        fields = ["question", "choice", "source", "created"]
+        fields = ["question", "choice", "source", "quiz", "created"]
 
 
 class QuestionFeedbackEventSerializer(serializers.ModelSerializer):
@@ -30,7 +30,7 @@ class QuestionFeedbackEventSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = QuestionFeedbackEvent
-        fields = ["question", "choice", "source", "created"]
+        fields = ["question", "choice", "source", "quiz", "created"]
 
 
 class QuizAnswerEventSerializer(serializers.ModelSerializer):
@@ -38,7 +38,14 @@ class QuizAnswerEventSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = QuizAnswerEvent
-        fields = ["quiz", "question_count", "answer_success_count", "duration_seconds", "created"]
+        fields = [
+            "quiz",
+            "question_count",
+            "answer_success_count",
+            "duration_seconds",
+            "question_answer_split",
+            "created",
+        ]
 
 
 class QuizFeedbackEventSerializer(serializers.ModelSerializer):
