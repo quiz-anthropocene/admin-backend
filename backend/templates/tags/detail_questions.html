@@ -20,7 +20,11 @@
                             <td><a href="{% url 'questions:detail_view' question.id %}">{{ question.id }}</a></td>
                             <td>{{ question.text }}</td>
                             <td>
-                                <a href="{% url 'categories:detail_view' question.category.id %}"><span class="badge bg-primary">{{ question.category }}</span></a>
+                                {% if question.category %}
+                                    <a href="{% url 'categories:detail_view' question.category.id %}"><span class="badge bg-primary">{{ question.category }}</span></a>
+                                {% else %}
+                                    <span>—</span>
+                                {% endif %}
                             </td>
                             <td>
                                 {% for tag in question.tags.all %}
