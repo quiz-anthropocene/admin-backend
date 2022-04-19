@@ -72,7 +72,7 @@
     <div id="scroll-to-question" class="scroll-to-fix" style="height:0px"></div>
 
     <section v-if="quiz && (quizStep > 0) && quiz.questions[quizStep-1]">
-      <QuestionAnswerCards v-bind:question="quiz.questions[quizStep-1]" v-bind:context="{ question_number: quizStep+' / '+quiz.questions.length, source: 'quiz' }" @answer-submitted="onAnswerSubmitted" />
+      <QuestionAnswerCards v-bind:question="quiz.questions[quizStep-1]" v-bind:context="{ question_number: quizStep+' / '+quiz.questions.length, source: 'quiz', quiz: quiz }" @answer-submitted="onAnswerSubmitted" />
       <button v-if="showNextButton && (quizStep < quiz.questions.length)" class="btn" :class="emphasisNextButton ? 'btn-primary' : 'btn-outline-primary'" @click="incrementStep()">⏩&nbsp;{{ $t('messages.nextQuestion') }}</button>
       <button v-if="showNextButton && (quizStep === quiz.questions.length)" class="btn btn-lg btn-primary" @click="incrementStep()">⏩&nbsp;{{ $t('messages.endQuiz') }}</button>
     </section>

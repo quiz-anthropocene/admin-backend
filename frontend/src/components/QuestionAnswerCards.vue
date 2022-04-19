@@ -258,6 +258,7 @@ export default {
           question: this.question.id,
           choice: cleanedAnswerPicked,
           source: this.context.source,
+          quiz: this.context.quiz ? this.context.quiz.id : null
         }),
       })
         .then((response) => response.json())
