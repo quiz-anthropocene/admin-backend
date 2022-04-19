@@ -127,7 +127,7 @@
       {{ $t('messages.questionPendingValidation') }}
     </div>
 
-    <FeedbackCard v-if="question && questionSubmitted" v-bind:context="{ source: 'question', item: question }" />
+    <FeedbackCard v-if="question && questionSubmitted" v-bind:context="{ source: 'question', item: question, quiz: context.quiz }" />
   </section>
 </template>
 

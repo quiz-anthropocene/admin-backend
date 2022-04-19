@@ -103,8 +103,8 @@ export default {
         },
         body: JSON.stringify({
           // hacky (TODO: build body before instead, in order to chose between question & quiz)
-          question: this.context.item.id,
-          quiz: this.context.item.id,
+          question: (this.context.source === 'question') ? this.context.item.id : null,
+          quiz: (this.context.source === 'quiz') ? this.context.item.id : (this.context.quiz ? this.context.quiz.id : null),
           choice: feedbackChoice, // 'like' or 'dislike'
           source: this.context.source, // only for 'api/questions/'
         }),
