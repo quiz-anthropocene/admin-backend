@@ -8,8 +8,8 @@ class TagAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "name",
-        "question_count",
-        "quiz_count",
+        "question_validated_count",
+        "quiz_published_count",
     )
     search_fields = ("name",)
     ordering = ("name",)
