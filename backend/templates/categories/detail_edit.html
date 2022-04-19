@@ -1,0 +1,36 @@
+{% extends "categories/detail_base.html" %}
+{% load django_bootstrap5 %}
+
+{% block extra_css %}
+{{ form.media.css }}
+{% endblock %}
+
+{% block category_detail_content %}
+
+<form method="POST" action="">
+    {% csrf_token %}
+
+    <div class="row">
+        <div class="col-md-8">
+            {% bootstrap_form form alert_error_type="all" %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            {% bootstrap_button button_type="submit" content="Sauvegarder" button_class="btn-primary" %}
+            {# {% bootstrap_button button_type="reset" content="Annuler" button_class="btn-secondary" %} #}
+            <a href="{% url 'categories:detail_view' category.id %}" class="btn btn-secondary">Annuler</a>
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-danger" disabled>Supprimer</button>
+        </div>
+    </div>
+</form>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{{ form.media.js }}
+{% endblock %}
