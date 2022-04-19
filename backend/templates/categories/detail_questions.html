@@ -1,7 +1,7 @@
-{% extends "tags/detail_base.html" %}
+{% extends "categories/detail_base.html" %}
 {% load custom_filters %}
 
-{% block tag_detail_content %}
+{% block category_detail_content %}
 <div class="row">
     <div class="col-12">
         <div class="table-container">
@@ -10,7 +10,6 @@
                     <tr>
                         <th>ID</th>
                         <th>Question</th>
-                        <th>Categorie</th>
                         <th>Tags</th>
                     </tr>
                 </thead>
@@ -19,9 +18,6 @@
                         <tr>
                             <td><a href="{% url 'questions:detail_view' question.id %}">{{ question.id }}</a></td>
                             <td>{{ question.text }}</td>
-                            <td>
-                                <a href="{% url 'categories:detail_view' question.category.id %}"><span class="badge bg-primary">{{ question.category }}</span></a>
-                            </td>
                             <td>
                                 {% for tag in question.tags.all %}
                                     <a href="{% url 'tags:detail_view' tag.id %}"><span class="badge bg-primary">{{ tag }}</span></a>

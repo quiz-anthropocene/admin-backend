@@ -35,7 +35,7 @@ class TagDetailQuestionsView(LoginRequiredMixin, SingleTableView):
 
     def get_queryset(self):
         qs = super().get_queryset()
-        qs = qs.prefetch_related("tags")
+        qs = qs.select_related("category").prefetch_related("tags")
         qs = qs.filter(tags__in=[self.kwargs.get("pk")])
         return qs
 

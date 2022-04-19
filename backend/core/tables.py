@@ -10,9 +10,18 @@ class ChoiceColumn(tables.Column):
     def render(self, value, record, bound_column):
         value_title = value
         if type(record) == Question:
+            # Question.type : display choice key
             if bound_column.name == "type":
                 value_title = value
                 value = get_choice_key(constants.QUESTION_TYPE_CHOICES, value)
+            # Question.category : add link
+            elif bound_column.name == "category":
+                category = getattr(record, bound_column.name)
+                return format_html(
+                    f'<a href="{category.get_absolute_url()}">'
+                    f'<span class="badge bg-primary" title="{value_title}">{value}</span>'
+                    "</a>"
+                )
         return format_html(f'<span class="badge bg-primary" title="{value_title}">{value}</span>')
 
 
