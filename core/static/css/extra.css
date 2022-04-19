@@ -25,6 +25,12 @@ ol.breadcrumb {
 
 /* Table */
 
+/* use width of the page */
+div.table-container > table {
+    min-width: 50% !important;
+}
+
+/* header style */
 div.table-container > table > thead > tr > th {
     min-width: 30px;
     background-color: #0d6efd;
@@ -35,6 +41,7 @@ div.table-container > table > thead > tr > th > a {
     text-decoration: none;
 }
 
+/* header fixed */
 div.table-container > table.header-fixed > thead > tr > th {
     background-color: #0d6efd;
     position: sticky;

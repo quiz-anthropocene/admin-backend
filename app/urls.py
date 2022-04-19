@@ -12,6 +12,7 @@ urlpatterns = [
     path("profile/", include("www.profile.urls")),
     path("questions/", include("www.questions.urls")),
     path("quizs/", include("www.quizs.urls")),
+    path("tags/", include("www.tags.urls")),
     path("contributions/", include("www.contributions.urls")),
     # admin
     path("admin/", admin_site.urls),
