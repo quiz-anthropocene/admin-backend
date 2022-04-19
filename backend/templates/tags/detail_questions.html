@@ -20,12 +20,10 @@
                             <td><a href="{% url 'questions:detail_view' question.id %}">{{ question.id }}</a></td>
                             <td>{{ question.text }}</td>
                             <td>
-                                <a href="{% url 'categories:detail_view' question.category.id %}"><span class="badge bg-primary">{{ question.category }}</span></a>
+                                {% include "categories/_badge_item.html" with category=question.category %}
                             </td>
                             <td>
-                                {% for tag in question.tags.all %}
-                                    <a href="{% url 'tags:detail_view' tag.id %}"><span class="badge bg-primary">{{ tag }}</span></a>
-                                {% endfor %}
+                                {% include "tags/_badge_list.html" with tag_list=question.tags.all %}
                             </td>
                         </tr>
                     {% endfor %}

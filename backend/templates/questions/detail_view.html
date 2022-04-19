@@ -17,13 +17,25 @@
                         <tr>
                             <td class="fw-bold">{{ field }}</td>
                             {% if field in question.QUESTION_CHOICE_FIELDS or field in question.QUESTION_FK_FIELDS %}
-                                <td><span class="badge bg-primary">{{ question_dict|get_obj_attr:field }}</span></td>
+                                {% if field == "category" %}
+                                    <td>
+                                        {% include "categories/_badge_item.html" with category=question.category %}
+                                    </td>
+                                {% else %}
+                                    <td><span class="badge bg-primary">{{ question_dict|get_obj_attr:field }}</span></td>
+                                {% endif %}
                             {% elif field in question.QUESTION_M2M_FIELDS %}
-                                <td>
-                                {% for value in question_dict|get_obj_attr:field %}
-                                    <span class="badge bg-primary">{{ value }}</span>
-                                {% endfor %}
-                                </td>
+                                {% if field == "tags" %}
+                                    <td>
+                                        {% include "tags/_badge_list.html" with tag_list=question.tags.all %}
+                                    </td>
+                                {% else %}
+                                    <td>
+                                        {% for value in question_dict|get_obj_attr:field %}
+                                            <span class="badge bg-primary">{{ value }}</span>
+                                        {% endfor %}
+                                    </td>
+                                {% endif %}
                             {% elif field in question.QUESTION_BOOLEAN_FIELDS %}
                                 <td>{% if question_dict|get_obj_attr:field %}✅{% else %}❌{% endif %}</td>
                             {% elif field in question.QUESTION_URL_FIELDS %}

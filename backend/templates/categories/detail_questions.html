@@ -19,9 +19,7 @@
                             <td><a href="{% url 'questions:detail_view' question.id %}">{{ question.id }}</a></td>
                             <td>{{ question.text }}</td>
                             <td>
-                                {% for tag in question.tags.all %}
-                                    <a href="{% url 'tags:detail_view' tag.id %}"><span class="badge bg-primary">{{ tag }}</span></a>
-                                {% endfor %}
+                                {% include "tags/_badge_list.html" with tag_list=question.tags.all %}
                             </td>
                         </tr>
                     {% endfor %}

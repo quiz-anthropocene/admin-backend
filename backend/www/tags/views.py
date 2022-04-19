@@ -1,10 +1,14 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import DetailView
+from django.contrib.messages.views import SuccessMessageMixin
+from django.shortcuts import get_object_or_404
+from django.urls import reverse_lazy
+from django.views.generic import DetailView, UpdateView
 from django_tables2.views import SingleTableView
 
 from api.tags.serializers import TagSerializer
 from questions.models import Question
 from quizs.models import Quiz
+from tags.forms import TagEditForm
 from tags.models import Tag
 from tags.tables import TagTable
 
@@ -26,6 +30,19 @@ class TagDetailView(LoginRequiredMixin, DetailView):
         tag = self.get_object()
         context["tag_dict"] = TagSerializer(tag).data
         return context
+
+
+class TagDetailEditView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    form_class = TagEditForm
+    template_name = "tags/detail_edit.html"
+    success_message = "Le tag a été mis à jour."
+    # success_url = reverse_lazy("tags:detail_view")
+
+    def get_object(self):
+        return get_object_or_404(Tag, id=self.kwargs.get("pk"))
+
+    def get_success_url(self):
+        return reverse_lazy("tags:detail_view", args=[self.kwargs.get("pk")])
 
 
 class TagDetailQuestionsView(LoginRequiredMixin, SingleTableView):
