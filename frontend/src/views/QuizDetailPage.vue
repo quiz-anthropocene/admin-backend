@@ -243,6 +243,7 @@ export default {
   },
 
   mounted() {
+    this.initQuiz();
   },
 
   methods: {
@@ -303,6 +304,7 @@ export default {
         },
         body: JSON.stringify({
           quiz: this.quiz.id,
+          question_count: this.quiz.questions.length,
           answer_success_count: this.quiz.questions.filter((q) => q.success).length,
           duration_seconds: quizDurationInSeconds,
           question_answer_split: questionAnswerSplit,
