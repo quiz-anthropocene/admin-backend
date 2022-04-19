@@ -38,7 +38,14 @@ class QuizAnswerEventSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = QuizAnswerEvent
-        fields = ["quiz", "question_count", "answer_success_count", "duration_seconds", "created"]
+        fields = [
+            "quiz",
+            "question_count",
+            "answer_success_count",
+            "duration_seconds",
+            "question_answer_split",
+            "created",
+        ]
 
 
 class QuizFeedbackEventSerializer(serializers.ModelSerializer):

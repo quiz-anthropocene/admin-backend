@@ -149,6 +149,10 @@ class QuizAnswerEvent(models.Model):
         default=0,
         help_text="Le temps pris (en secondes) pour compléter le quiz",
     )
+    question_answer_split = models.JSONField(
+        default=dict,
+        help_text="Les détails par question",
+    )
     created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de la réponse")
 
     objects = QuizAnswerEventQuerySet.as_manager()
