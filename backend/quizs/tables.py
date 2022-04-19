@@ -1,14 +1,14 @@
 import django_tables2 as tables
 from django.utils.html import format_html
 
-from core.tables import ChoiceColumn, ImageColumn, LongTextEllipsisColumn
+from core.tables import ChoiceColumn, ImageColumn, RichTextEllipsisColumn
 from quizs.models import Quiz
 
 
 class QuizTable(tables.Table):
     id = tables.Column(linkify=lambda record: record.get_absolute_url())
-    introduction = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.introduction}})
-    conclusion = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.conclusion}})
+    introduction = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.introduction}})
+    conclusion = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.conclusion}})
     # questions
     tags = tables.ManyToManyColumn(
         transform=lambda tag: format_html(

@@ -10,3 +10,7 @@ class CategoryEditForm(forms.ModelForm):
     class Meta:
         model = Category
         fields = ["name", "name_long", "description"]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["name"].disabled = True

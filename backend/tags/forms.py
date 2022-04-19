@@ -10,3 +10,7 @@ class TagEditForm(forms.ModelForm):
     class Meta:
         model = Tag
         fields = ["name", "description"]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["name"].disabled = True

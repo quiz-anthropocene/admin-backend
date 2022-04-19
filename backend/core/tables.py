@@ -32,7 +32,12 @@ class ImageColumn(tables.Column):
         )
 
 
-class LongTextEllipsisColumn(tables.Column):
+class RichTextColumn(tables.Column):
+    def render(self, value):
+        return format_html(value)
+
+
+class RichTextEllipsisColumn(tables.Column):
     def render(self, value):
         if len(value) > 60:
             value = value[:54] + " (...)"

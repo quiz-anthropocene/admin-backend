@@ -6,7 +6,7 @@ from core.tables import ChoiceColumn
 
 class ContributionTable(tables.Table):
     type = ChoiceColumn()
-    # text = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
+    # text = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
     question = tables.Column(
         verbose_name="Question",
         accessor="question.id",

@@ -1,24 +1,24 @@
 import django_tables2 as tables
 from django.utils.html import format_html
 
-from core.tables import ChoiceColumn, ImageColumn, LongTextEllipsisColumn
+from core.tables import ChoiceColumn, ImageColumn, RichTextEllipsisColumn
 from questions.models import Question
 
 
 class QuestionTable(tables.Table):
     id = tables.Column(linkify=lambda record: record.get_absolute_url())
-    text = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
+    text = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
     tags = tables.ManyToManyColumn(
         transform=lambda tag: format_html(
             f'<a href="{tag.get_absolute_url()}"><span class="badge bg-primary">{tag.name}</span></a>'
         ),
         separator=" ",
     )
-    answer_explanation = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.answer_explanation}})
-    answer_image_explanation = LongTextEllipsisColumn(
+    answer_explanation = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.answer_explanation}})
+    answer_image_explanation = RichTextEllipsisColumn(
         attrs={"td": {"title": lambda record: record.answer_image_explanation}}
     )
-    answer_extra_info = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.answer_extra_info}})
+    answer_extra_info = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.answer_extra_info}})
     answer_image_url = ImageColumn()
 
     class Meta:
