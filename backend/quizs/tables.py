@@ -11,7 +11,10 @@ class QuizTable(tables.Table):
     conclusion = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.conclusion}})
     # questions
     tags = tables.ManyToManyColumn(
-        transform=lambda tag: format_html(f'<span class="badge bg-primary">{tag.name}</span>'), separator=" "
+        transform=lambda tag: format_html(
+            f'<a href="{tag.get_absolute_url()}"><span class="badge bg-primary">{tag.name}</span></a>'
+        ),
+        separator=" ",
     )
     image_background_url = ImageColumn()
     # relationships
