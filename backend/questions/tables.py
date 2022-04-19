@@ -5,6 +5,11 @@ from core.tables import ChoiceColumn, ImageColumn, RichTextEllipsisColumn
 from questions.models import Question
 
 
+QUESTION_FIELD_SEQUENCE = [field.name for field in Question._meta.fields + Question._meta.model._meta.many_to_many]
+QUESTION_FIELD_SEQUENCE.remove("tags")  # change position
+QUESTION_FIELD_SEQUENCE.insert(QUESTION_FIELD_SEQUENCE.index("difficulty"), "tags")
+
+
 class QuestionTable(tables.Table):
     id = tables.Column(linkify=lambda record: record.get_absolute_url())
     text = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
@@ -23,8 +28,8 @@ class QuestionTable(tables.Table):
 
     class Meta:
         model = Question
+        sequence = QUESTION_FIELD_SEQUENCE
         template_name = "django_tables2/bootstrap4.html"
-        # fields = ("id", "category", "tags")
         attrs = {"class": "table-responsive table-striped table-bordered border-primary font-size-small"}
 
     def __init__(self, *args, **kwargs):
