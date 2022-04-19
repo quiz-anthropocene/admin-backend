@@ -1,0 +1,24 @@
+{% extends "tags/detail_base.html" %}
+{% load django_bootstrap5 %}
+
+{% block extra_css %}
+{{ form.media.css }}
+{% endblock %}
+
+{% block tag_detail_content %}
+<div class="row">
+    <div class="col-md-8">
+        <form method="POST" action="">
+            {% csrf_token %}
+            {% bootstrap_form form alert_error_type="all" %}
+            {% bootstrap_button button_type="submit" content="Sauvegarder" button_class="btn-primary" %}
+            {# {% bootstrap_button button_type="reset" content="Annuler" button_class="btn-secondary" %} #}
+            <a href="{% url 'tags:detail_view' tag.id %}" class="btn btn-secondary">Annuler</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{{ form.media.js }}
+{% endblock %}

@@ -1,7 +1,7 @@
 from django.urls import include, path
 from django.views.generic.base import RedirectView
 
-from www.tags.views import TagDetailQuestionsView, TagDetailQuizsView, TagDetailView, TagListView
+from www.tags.views import TagDetailEditView, TagDetailQuestionsView, TagDetailQuizsView, TagDetailView, TagListView
 
 
 app_name = "tags"
@@ -20,6 +20,7 @@ urlpatterns = [
                     name="detail",
                 ),
                 path("view/", TagDetailView.as_view(), name="detail_view"),
+                path("edit/", TagDetailEditView.as_view(), name="detail_edit"),
                 path("questions/", TagDetailQuestionsView.as_view(), name="detail_questions"),
                 path("quizs/", TagDetailQuizsView.as_view(), name="detail_quizs"),
             ]
