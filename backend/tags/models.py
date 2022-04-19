@@ -1,5 +1,6 @@
 from ckeditor.fields import RichTextField
 from django.db import models
+from django.urls import reverse
 
 
 class TagManager(models.Manager):
@@ -32,6 +33,9 @@ class Tag(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
+    def get_absolute_url(self):
+        return reverse("tags:detail", kwargs={"pk": self.id})
 
     @property
     def question_count(self) -> int:
