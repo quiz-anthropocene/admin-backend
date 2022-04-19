@@ -1,0 +1,33 @@
+{% extends "tags/detail_base.html" %}
+{% load custom_filters %}
+
+{% block tag_detail_content %}
+<div class="row">
+    <div class="col-12">
+        <div class="table-container">
+            <table class="table-responsive table-striped table-bordered border-primary font-size-small">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Quiz</th>
+                        <th>Tags</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for quiz in quizs %}
+                        <tr>
+                            <td><a href="{% url 'quizs:detail_view' quiz.id %}">{{ quiz.id }}</a></td>
+                            <td>{{ quiz.name }}</td>
+                            <td>
+                                {% for tag in quiz.tags.all %}
+                                    <a href="{% url 'tags:detail_view' tag.id %}"><span class="badge bg-primary">{{ tag }}</span></a>
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

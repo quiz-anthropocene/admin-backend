@@ -4,6 +4,7 @@ from django_tables2.views import SingleTableView
 
 from api.tags.serializers import TagSerializer
 from questions.models import Question
+from quizs.models import Quiz
 from tags.models import Tag
 from tags.tables import TagTable
 
@@ -31,6 +32,23 @@ class TagDetailQuestionsView(LoginRequiredMixin, SingleTableView):
     model = Question
     template_name = "tags/detail_questions.html"
     context_object_name = "questions"
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = qs.prefetch_related("tags")
+        qs = qs.filter(tags__in=[self.kwargs.get("pk")])
+        return qs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["tag"] = Tag.objects.get(id=self.kwargs.get("pk"))
+        return context
+
+
+class TagDetailQuizsView(LoginRequiredMixin, SingleTableView):
+    model = Quiz
+    template_name = "tags/detail_quizs.html"
+    context_object_name = "quizs"
 
     def get_queryset(self):
         qs = super().get_queryset()
