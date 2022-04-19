@@ -1,7 +1,12 @@
 from django.urls import include, path
 from django.views.generic.base import RedirectView
 
-from www.categories.views import CategoryDetailQuestionsView, CategoryDetailView, CategoryListView
+from www.categories.views import (
+    CategoryDetailEditView,
+    CategoryDetailQuestionsView,
+    CategoryDetailView,
+    CategoryListView,
+)
 
 
 app_name = "categories"
@@ -20,6 +25,7 @@ urlpatterns = [
                     name="detail",
                 ),
                 path("view/", CategoryDetailView.as_view(), name="detail_view"),
+                path("edit/", CategoryDetailEditView.as_view(), name="detail_edit"),
                 path("questions/", CategoryDetailQuestionsView.as_view(), name="detail_questions"),
             ]
         ),

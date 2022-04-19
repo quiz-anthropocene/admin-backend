@@ -43,6 +43,8 @@ QUIZ_FIELDS = [
     "created",
     "updated",
 ]
+QUIZ_FIELDS_WITH_QUESTIONS = QUIZ_FIELDS
+QUIZ_FIELDS_WITH_QUESTIONS.insert(QUIZ_FIELDS_WITH_QUESTIONS.index("tags"), "questions")
 
 
 class QuizSerializer(serializers.ModelSerializer):
@@ -54,7 +56,7 @@ class QuizSerializer(serializers.ModelSerializer):
 class QuizWithQuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Quiz
-        fields = QUIZ_FIELDS + ["questions"]
+        fields = QUIZ_FIELDS_WITH_QUESTIONS
 
 
 class QuizWithQuestionOrderSerializer(serializers.ModelSerializer):
@@ -62,7 +64,7 @@ class QuizWithQuestionOrderSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Quiz
-        fields = QUIZ_FIELDS + ["questions"]
+        fields = QUIZ_FIELDS_WITH_QUESTIONS
 
 
 class QuizFullSerializer(serializers.ModelSerializer):
@@ -71,7 +73,7 @@ class QuizFullSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Quiz
-        fields = QUIZ_FIELDS + ["questions"]
+        fields = QUIZ_FIELDS_WITH_QUESTIONS
 
 
 class QuizRelationshipSerializer(serializers.ModelSerializer):

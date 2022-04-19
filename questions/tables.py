@@ -1,30 +1,35 @@
 import django_tables2 as tables
 from django.utils.html import format_html
 
-from core.tables import ChoiceColumn, ImageColumn, LongTextEllipsisColumn
+from core.tables import ChoiceColumn, ImageColumn, RichTextEllipsisColumn
 from questions.models import Question
+
+
+QUESTION_FIELD_SEQUENCE = [field.name for field in Question._meta.fields + Question._meta.model._meta.many_to_many]
+QUESTION_FIELD_SEQUENCE.remove("tags")  # change position
+QUESTION_FIELD_SEQUENCE.insert(QUESTION_FIELD_SEQUENCE.index("difficulty"), "tags")
 
 
 class QuestionTable(tables.Table):
     id = tables.Column(linkify=lambda record: record.get_absolute_url())
-    text = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
+    text = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
     tags = tables.ManyToManyColumn(
         transform=lambda tag: format_html(
             f'<a href="{tag.get_absolute_url()}"><span class="badge bg-primary">{tag.name}</span></a>'
         ),
         separator=" ",
     )
-    answer_explanation = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.answer_explanation}})
-    answer_image_explanation = LongTextEllipsisColumn(
+    answer_explanation = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.answer_explanation}})
+    answer_image_explanation = RichTextEllipsisColumn(
         attrs={"td": {"title": lambda record: record.answer_image_explanation}}
     )
-    answer_extra_info = LongTextEllipsisColumn(attrs={"td": {"title": lambda record: record.answer_extra_info}})
+    answer_extra_info = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.answer_extra_info}})
     answer_image_url = ImageColumn()
 
     class Meta:
         model = Question
+        sequence = QUESTION_FIELD_SEQUENCE
         template_name = "django_tables2/bootstrap4.html"
-        # fields = ("id", "category", "tags")
         attrs = {"class": "table-responsive table-striped table-bordered border-primary font-size-small"}
 
     def __init__(self, *args, **kwargs):

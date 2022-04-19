@@ -1,10 +1,12 @@
 import django_tables2 as tables
 
+from core.tables import RichTextColumn
 from tags.models import Tag
 
 
 class TagTable(tables.Table):
     id = tables.Column(linkify=lambda record: record.get_absolute_url())
+    description = RichTextColumn(attrs={"td": {"title": lambda record: record.description}})
 
     class Meta:
         model = Tag
