@@ -6,7 +6,7 @@ from tags.models import Tag
 class TagSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tag
-        fields = ["id", "name", "description", "created"]  # "question_count"
+        fields = ["id", "name", "description", "created"]  # "question_count", "question_validated_count"
 
 
 class TagStringSerializer(serializers.ModelSerializer):
