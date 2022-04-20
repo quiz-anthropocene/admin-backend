@@ -3,6 +3,16 @@
   slug: quelques-chiffres-cles
   introduction: <p>Quelques chiffres pour se mettre en jambes.</p>
   conclusion: ''
+  questions:
+  - 3
+  - 16
+  - 21
+  - 48
+  - 59
+  - 70
+  - 71
+  - 75
+  - 83
   tags: []
   difficulty_average: 1.9
   language: Français
@@ -19,6 +29,17 @@
   introduction: <p>Un aperçu rapide de la production et de la consommation d'énergie
     en France.</p>
   conclusion: ''
+  questions:
+  - 11
+  - 104
+  - 132
+  - 135
+  - 184
+  - 210
+  - 254
+  - 259
+  - 307
+  - 410
   tags:
   - 1
   difficulty_average: 2.3
@@ -45,6 +66,19 @@
     \ pour aller plus loin. </p>"
   conclusion: <p>Si ce quiz vous a intéressé, vous le serez problablement par <a href="https://quizanthropocene.fr/quiz/18">celui-ci,</a>
     qui traite de questions similaires.</p>
+  questions:
+  - 545
+  - 546
+  - 547
+  - 548
+  - 549
+  - 550
+  - 551
+  - 552
+  - 553
+  - 555
+  - 574
+  - 575
   tags:
   - 185
   difficulty_average: 2.2
@@ -63,6 +97,13 @@
     lequel elle ne peut que décroître pour finalement tomber à 0. C'est le thème qu'explore
     ce quiz sur les différentes ressources non-renouvelables dont nous faisons usage.
   conclusion: ''
+  questions:
+  - 65
+  - 68
+  - 69
+  - 171
+  - 212
+  - 245
   tags: []
   difficulty_average: 2.7
   language: Français
@@ -80,6 +121,18 @@
     de gaz à effet de serre d’origine anthropique, c'est-à-dire qui peuvent lui être
     imputées. Connaissez-vous votre empreinte ? Voyons voir ça.</p>
   conclusion: ''
+  questions:
+  - 78
+  - 102
+  - 150
+  - 236
+  - 243
+  - 251
+  - 335
+  - 358
+  - 402
+  - 417
+  - 440
   tags:
   - 72
   difficulty_average: 2.1
@@ -102,6 +155,17 @@
     \ quiz propose un premier tour d'horizon de l'emprise inédite de l'homme sur la\
     \ planète qu'il occupe.<br />\r\n<br />\r\nDurée à prévoir : 15 min</p>"
   conclusion: <p>Vous êtes prêts à enchaîner sur la partie 2 ?</p>
+  questions:
+  - 2
+  - 4
+  - 7
+  - 9
+  - 13
+  - 41
+  - 44
+  - 45
+  - 47
+  - 49
   tags: []
   difficulty_average: 2.7
   language: Français
@@ -118,6 +182,14 @@
   introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
     à cela ! Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
   conclusion: ''
+  questions:
+  - 13
+  - 106
+  - 107
+  - 111
+  - 112
+  - 114
+  - 115
   tags:
   - 11
   difficulty_average: 2.3
@@ -141,6 +213,25 @@
   conclusion: "<p>Vous voilà prêt à vous attaquer au lot 2 ! Ou, mieux encore, à vous\
     \ inscrire à un atelier. Plus d'information <a href=\"https://fresqueduclimat.org\"\
     >ici</a>.</p>\r\n\r\n<p> </p>"
+  questions:
+  - 6
+  - 8
+  - 13
+  - 14
+  - 22
+  - 30
+  - 32
+  - 33
+  - 79
+  - 80
+  - 129
+  - 137
+  - 176
+  - 194
+  - 361
+  - 369
+  - 415
+  - 436
   tags:
   - 142
   difficulty_average: 2.0
@@ -158,6 +249,17 @@
   introduction: Nos modes de vie génèrent des pollutions diverses. En connaissez-vous
     la variété et l'ampleur ? C'est ce que ce quiz se propose d'explorer.
   conclusion: ''
+  questions:
+  - 24
+  - 45
+  - 53
+  - 54
+  - 55
+  - 56
+  - 57
+  - 58
+  - 98
+  - 157
   tags: []
   difficulty_average: 3.3
   language: Français
@@ -174,6 +276,15 @@
   introduction: <p>Le pétrole est partout dans nos vies. Et il y a de bonnes raisons
     à cela ? Si vous voulez savoir à quel point, essayez-vous donc à ce quiz thématique.</p>
   conclusion: ''
+  questions:
+  - 12
+  - 20
+  - 155
+  - 156
+  - 179
+  - 230
+  - 246
+  - 494
   tags:
   - 11
   difficulty_average: 2.2
@@ -197,6 +308,28 @@
     \ distribué lors d'un atelier de la Fresque.</p>"
   conclusion: <p>Vous voilà prêt à vous attaquer au lot 3 ! Ou, mieux encore, à vous
     inscrire à un atelier. Plus d'information <a href="https://fresqueduclimat.org">ici</a>.</p>
+  questions:
+  - 6
+  - 8
+  - 14
+  - 15
+  - 16
+  - 21
+  - 23
+  - 26
+  - 27
+  - 28
+  - 32
+  - 34
+  - 37
+  - 42
+  - 47
+  - 48
+  - 66
+  - 143
+  - 282
+  - 343
+  - 405
   tags:
   - 142
   difficulty_average: 1.9
@@ -219,6 +352,13 @@
     \ d’ici 2021.</p>\r\n\r\n<p>Ce quiz est centré sur les cartes du 3ème lot distribué\
     \ lors d'une Fresque.</p>"
   conclusion: <p>Vous pouvez vous inscire à un atelier. Plus d'information <a href="https://fresqueduclimat.org">ici</a>.</p>
+  questions:
+  - 29
+  - 131
+  - 305
+  - 306
+  - 459
+  - 524
   tags:
   - 142
   difficulty_average: 2.0
@@ -241,6 +381,10 @@
     \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur les cartes du 4ème lot distribué\
     \ lors d'une fresque.</p>"
   conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
+  questions:
+  - 52
+  - 294
+  - 315
   tags:
   - 142
   difficulty_average: 2.7
@@ -263,6 +407,10 @@
     \ d’ici 2025.</p>\r\n\r\n<p>Ce quiz est centré sur le cinquième et dernier lot\
     \ de cartes distribué lors d'une Fresque.</p>"
   conclusion: <p>Plus d'information sur la Fresque du Climat <a href="https://fresqueduclimat.org">ici</a>.</p>
+  questions:
+  - 35
+  - 229
+  - 403
   tags:
   - 142
   difficulty_average: 1.7
@@ -286,6 +434,18 @@
     \ et parfois d'aller plus loin autour du dérèglement du climat - questions non\
     \ liées aux 42 cartes du jeu.</p>"
   conclusion: <p><a href="https://fresqueduclimat.org">https://fresqueduclimat.org</a></p>
+  questions:
+  - 33
+  - 139
+  - 180
+  - 222
+  - 264
+  - 348
+  - 362
+  - 425
+  - 428
+  - 453
+  - 460
   tags:
   - 142
   difficulty_average: 2.2
@@ -307,6 +467,17 @@
     des courbes de type exponentiel. Ce 2ème quiz continue le tour d'horizon sur l'emprise
     inédite de l'homme sur la planète qu'il occupe.</p>
   conclusion: ''
+  questions:
+  - 51
+  - 67
+  - 77
+  - 78
+  - 79
+  - 96
+  - 225
+  - 294
+  - 403
+  - 494
   tags: []
   difficulty_average: 2.2
   language: Français
@@ -323,6 +494,15 @@
   introduction: <p>Quel impact l'homme a-t-il sur les autres espèces ? Un premier
     aperçu via ces quelques questions.</p>
   conclusion: ''
+  questions:
+  - 4
+  - 7
+  - 41
+  - 44
+  - 59
+  - 60
+  - 61
+  - 67
   tags:
   - 6
   - 49
@@ -360,6 +540,16 @@
     l'interaction de l'homme avec son environnement. Pour aller plus loin, vous pouvez
     vous plonger dans les ouvrages de Laurent, ou continuer dans le même esprit avec
     le <a href="https://quizanthropocene.fr/quiz/3">quiz de Vincent Mignerot</a>.</p>
+  questions:
+  - 571
+  - 572
+  - 573
+  - 576
+  - 577
+  - 578
+  - 579
+  - 580
+  - 581
   tags: []
   difficulty_average: 2.7
   language: Français
@@ -385,6 +575,15 @@
     plonger dans l''enfer des réglementations et du greenwashing financier ? C''est
     parti.</p>'
   conclusion: ''
+  questions:
+  - 596
+  - 597
+  - 598
+  - 599
+  - 600
+  - 601
+  - 602
+  - 603
   tags:
   - 194
   difficulty_average: 3.0
@@ -406,6 +605,16 @@
   conclusion: "<p>Bravo d'être allé jusqu'au bout, ce n'était vraiment pas évident\
     \ !</p>\r\n\r\n<p>Pour vous remettre de ce remue-méninge, n'hésitez pas à allez\
     \ découvrir les autres quiz, ils sont nettement plus faciles !</p>"
+  questions:
+  - 45
+  - 80
+  - 233
+  - 258
+  - 348
+  - 378
+  - 534
+  - 538
+  - 597
   tags: []
   difficulty_average: 4.0
   language: Français
@@ -431,6 +640,19 @@
     \n\r\n<p>Oh, et tant qu'on parle de pétrole, je vous invite à aller faire un tour\
     \ sur notre page de quiz, vous trouverez d'autres quiz thématiques pour pour étancher\
     \ votre soif de compréhension de notre dépendance à l'or noir ;)</p>"
+  questions:
+  - 246
+  - 278
+  - 325
+  - 353
+  - 358
+  - 360
+  - 439
+  - 503
+  - 539
+  - 626
+  - 666
+  - 668
   tags:
   - 11
   - 13
@@ -465,6 +687,16 @@
     \ sur le carbone émis est imposée.<br />\r\nAprès ce petit quiz pour vous mettre\
     \ en appétit, il est temps pour vous d'aller visionner la vidéo <a href=\"https://youtu.be/AQlqQEhVi1M\"\
     >ici</a> ! Et ses autres vidéos aussi d'ailleurs.<br />\r\n </p>"
+  questions:
+  - 615
+  - 616
+  - 617
+  - 618
+  - 619
+  - 620
+  - 621
+  - 622
+  - 623
   tags:
   - 62
   difficulty_average: 2.9
@@ -486,6 +718,17 @@
     vis à vis de l'énergie, vous pouvez tester nos quiz sur le pétrole <a href="https://quizanthropocene.fr/quiz/7">ici
     </a>et <a href="https://quizanthropocene.fr/quiz/10">là</a>. Et pour aller au
     coma éthylique énergétique, c'est <a href="https://quizanthropocene.fr/quiz/54">par-là</a>.</p>
+  questions:
+  - 64
+  - 103
+  - 107
+  - 125
+  - 134
+  - 284
+  - 392
+  - 520
+  - 531
+  - 582
   tags: []
   difficulty_average: 2.5
   language: Français
@@ -504,6 +747,20 @@
     a été riche en matière d'environment. Mais avez-vous bien tout suivi ?</p>
   conclusion: <p>En route vers 2021 ! La nouvelle année nous réservera-t-elle son
     lot de chiffres et faits inattendus ?</p>
+  questions:
+  - 682
+  - 683
+  - 684
+  - 685
+  - 686
+  - 687
+  - 688
+  - 689
+  - 690
+  - 691
+  - 692
+  - 693
+  - 694
   tags:
   - 213
   difficulty_average: 1.8
@@ -532,6 +789,14 @@
     réduire sont nombreuses. Pour aller plus loin,nous vous recommandons de participer
     à un atelier. Plus d'information sur <a href="https://fresquedunumerique.org">Fresque
     du Numérique</a>.</p>
+  questions:
+  - 74
+  - 91
+  - 392
+  - 829
+  - 830
+  - 831
+  - 832
   tags:
   - 30
   difficulty_average: 2.1
@@ -552,6 +817,16 @@
   conclusion: <p>Bravo, vous avez quelques ordres de grandeur pour aborder le sujet
     de la sobriété numérique. Vous pouvez également compléter vos connaissances avec
     le quiz de la fresque du numérique.</p>
+  questions:
+  - 845
+  - 846
+  - 847
+  - 848
+  - 849
+  - 850
+  - 851
+  - 852
+  - 853
   tags:
   - 30
   difficulty_average: 2.2
@@ -592,6 +867,19 @@
     \ et SE DISPERSENT ».<br />\r\nEnfin, si vous avez envie de faire découvrir ce\
     \ quiz au-delà de la France, sa version anglaise est <a href=\"http://quizanthropocene.fr/quiz/68\"\
     >ici</a>.</p>"
+  questions:
+  - 13
+  - 760
+  - 761
+  - 854
+  - 855
+  - 856
+  - 857
+  - 858
+  - 859
+  - 860
+  - 862
+  - 864
   tags:
   - 255
   difficulty_average: 2.7
@@ -621,6 +909,17 @@
     et sociaux qu''elle engendre, donne les grandes lignes d''une alimentation durable,
     végétalisée, locale, bio et de saison, et détaille en quoi une alimentation durable
     améliore la résilience alimentaire.</p>'
+  questions:
+  - 95
+  - 922
+  - 923
+  - 924
+  - 925
+  - 926
+  - 927
+  - 928
+  - 929
+  - 930
   tags:
   - 5
   - 17
@@ -648,6 +947,14 @@
   conclusion: <p>As you can see, the digital world is causing real impacts. A good
     news? There are plenty of measures that can easily be adopted to reduce them.
     They are exposed in the Digital Collage workshop (in French only so far).</p>
+  questions:
+  - 1000
+  - 1001
+  - 1002
+  - 1003
+  - 1004
+  - 1005
+  - 1006
   tags:
   - 30
   difficulty_average: 2.1
@@ -664,6 +971,21 @@
   slug: le-quiz-choc
   introduction: ''
   conclusion: ''
+  questions:
+  - 51
+  - 69
+  - 76
+  - 225
+  - 294
+  - 403
+  - 531
+  - 589
+  - 719
+  - 729
+  - 737
+  - 738
+  - 871
+  - 1007
   tags: []
   difficulty_average: 2.5
   language: Français
@@ -684,6 +1006,19 @@
     pas de mondialisation, pas de civilisation urbaine, pas de plastiques, d'huiles,
     de détergents, pas de vêtements synthétiques, pas de routes. Saurez-nous nous
     passer de lui ?</p>
+  questions:
+  - 12
+  - 13
+  - 20
+  - 106
+  - 107
+  - 111
+  - 114
+  - 155
+  - 156
+  - 179
+  - 230
+  - 494
   tags:
   - 11
   difficulty_average: 2.2
@@ -719,6 +1054,17 @@
     \ nous faut d'abord commencer par regarder <a href=\"https://www.youtube.com/channel/UCtXgE_tacrZi1HS8Wbdq4zQ\"\
     >sous nos pieds</a> pour reconstituer les climats du passé. Si ce quiz vous a\
     \ donné le vertige, rendez-vous sur sa chaîne pour aller plus loin.</p>"
+  questions:
+  - 815
+  - 816
+  - 817
+  - 818
+  - 819
+  - 820
+  - 821
+  - 822
+  - 823
+  - 824
   tags:
   - 7
   - 13
@@ -751,6 +1097,16 @@
     qui nous a fait mettre de côté ces technologies qui ne manquaient pas d'intérêt.
     Cela vous a captivé ? Pour aller plus loin, rendez-vous sur le site du <a href="https://solar.lowtechmagazine.com/fr/">Low
     Tech Magasine</a> ou le site <a href="https://paleo-energetique.org/">Paléo Energétique</a>.</p>
+  questions:
+  - 874
+  - 875
+  - 876
+  - 877
+  - 878
+  - 879
+  - 880
+  - 881
+  - 882
   tags:
   - 255
   difficulty_average: 2.4
@@ -783,6 +1139,18 @@
     full workshop! More info on <a href="https://fresquedeslowtechs.org">fresquedeslowtechs.org</a>
     (in french). "<em>Against infinite growth in a world with finite resources that
     ARE DEGRADING and DISPERSING".</em></p>
+  questions:
+  - 937
+  - 938
+  - 939
+  - 940
+  - 941
+  - 942
+  - 943
+  - 944
+  - 945
+  - 946
+  - 947
   tags:
   - 255
   difficulty_average: 2.6
@@ -806,6 +1174,15 @@
     l'homme peut avoir sur le cycle de l'eau. De la neige tombant au sommet des montagnes
     aux eaux souterraines côtières, en passant pas toutes les sociétés, les géo-systèmes
     et les écosystèmes qui en dépendent.</p>
+  questions:
+  - 718
+  - 739
+  - 745
+  - 746
+  - 747
+  - 748
+  - 749
+  - 779
   tags:
   - 37
   - 69
@@ -839,6 +1216,17 @@
     tout ça ! Plus d'infos sur <a class="notion-link-token notion-enable-hover" href="http://fresquedeslowtechs.org/"
     rel="noopener noreferrer" style="cursor:pointer;color:inherit;word-wrap:break-word;text-decoration:inherit"
     target="_blank">fresquedeslowtechs.org</a></p>
+  questions:
+  - 3
+  - 741
+  - 742
+  - 743
+  - 744
+  - 862
+  - 870
+  - 872
+  - 873
+  - 880
   tags:
   - 255
   difficulty_average: 1.9
@@ -857,6 +1245,12 @@
     est en tant que milieu, ce qu''il représente pour les sociétés humaines, les menaces
     auxquelles il est confronté.</p>'
   conclusion: ''
+  questions:
+  - 28
+  - 45
+  - 472
+  - 789
+  - 856
   tags:
   - 9
   - 21
@@ -884,6 +1278,16 @@
     put aside these valuabe technologies. Did it captivate you? To find out more,
     visit the <a href="http://solar.lowtechmagazine.com/fr/">Low Tech Magasine</a>
     or <a href="http://Paléo Energétique">Paleo Energy</a> websites.</p>
+  questions:
+  - 949
+  - 950
+  - 951
+  - 952
+  - 953
+  - 954
+  - 955
+  - 956
+  - 957
   tags:
   - 255
   difficulty_average: 2.6
@@ -912,6 +1316,19 @@
     \ plus loin, <a href=\"http://https://restonslespiedssurterre.fr\">Restons les\
     \ Pieds sur Terre</a>,  <a href=\"https://www.facebook.com/restonslespiedssurterre\
     \ @restonssurterre\">page facebook</a>.</p>"
+  questions:
+  - 700
+  - 710
+  - 712
+  - 714
+  - 731
+  - 735
+  - 750
+  - 752
+  - 756
+  - 757
+  - 792
+  - 910
   tags:
   - 33
   - 34
@@ -943,6 +1360,17 @@
     et technologie. Pour compléter ce premier quiz et les connaissances sur le sujet,
     d’autres quiz suivront dans les mois à venir. En attendant, n’hésitez pas à consulter
     les autres quiz du site !</p>
+  questions:
+  - 1013
+  - 1014
+  - 1015
+  - 1016
+  - 1017
+  - 1018
+  - 1019
+  - 1020
+  - 1021
+  - 1022
   tags:
   - 33
   - 218
@@ -976,6 +1404,17 @@
     Vous pouvez aussi consulter cet <a href="https://bonpote.com/vivre-a-2-tonnes-co2e-par-an-cest-possible/">article
     de synthèse</a> sur la page du blogeur Bon pote. Ou encorece <a href="https://www.resistanceclimatique.org/gildas_invbc">témoignage</a>
     de Gildas, "résistant climatique".</p>
+  questions:
+  - 931
+  - 932
+  - 933
+  - 935
+  - 965
+  - 966
+  - 967
+  - 968
+  - 969
+  - 971
   tags:
   - 72
   difficulty_average: 2.6
@@ -1005,6 +1444,16 @@
     https://archipelduvivant.org/nos-livres/ecrivons-ensemble-un-nouveau-recit-pour-sauver-la-vie/?fbclid=IwAR04Qs8pltv81NI_Qv55P2j6A8SIPa885lhXLjEyurvF85xWoZll3BmQAEQ\"\
     >Écrivons ensemble un nouveau récit pour sauver la vie</a>.</p>\r\n\r\n<p> </p>\r\
     \n\r\n<p> </p>"
+  questions:
+  - 649
+  - 788
+  - 789
+  - 844
+  - 865
+  - 866
+  - 867
+  - 868
+  - 869
   tags:
   - 14
   - 17
@@ -1031,6 +1480,26 @@
     \ énergie, climat, inégalités, vulnérabilités, risques à venir, et finalement\
     \ leviers d'action.</p>\r\n\r\n<p>Prêts ? A vous de jouer.</p>"
   conclusion: ''
+  questions:
+  - 1
+  - 2
+  - 25
+  - 41
+  - 49
+  - 76
+  - 77
+  - 95
+  - 225
+  - 294
+  - 403
+  - 440
+  - 577
+  - 649
+  - 719
+  - 744
+  - 867
+  - 927
+  - 1007
   tags: []
   difficulty_average: 2.2
   language: Français
@@ -1053,6 +1522,17 @@
   conclusion: <p>Ca vous a plu ? Des points qui vous étaient inconnus ? Alors n'hésitez
     plus, inscrivez-vous à un atelier de la <a href="http://fresqueduclimat.org">Fresque
     du Climat</a>. Vous pourrez même rapidement devenir animateur à votre tour.</p>
+  questions:
+  - 14
+  - 28
+  - 32
+  - 70
+  - 194
+  - 403
+  - 428
+  - 657
+  - 867
+  - 927
   tags:
   - 9
   - 13
@@ -1084,6 +1564,16 @@
     résumé dans cette <a href="https://www.youtube.com/watch?v=t9f39nukKBY">vidéo</a>.
     Ta prochaine mission : entamer une discussion sur ce que vous pourriez faire pour
     réduire ces émissions de gaz à effet de serre !</p>'
+  questions:
+  - 457
+  - 764
+  - 765
+  - 766
+  - 767
+  - 769
+  - 783
+  - 784
+  - 793
   tags:
   - 13
   - 51
