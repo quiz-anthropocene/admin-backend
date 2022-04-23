@@ -19045,7 +19045,8 @@
   hint: ''
   type: QCM
   category: null
-  tags: []
+  tags:
+  - 12
   difficulty: 1
   language: Français
   answer_option_a: 0,36 kWh
@@ -20263,7 +20264,7 @@
   type: QCM
   category: null
   tags: []
-  difficulty: 1
+  difficulty: 4
   language: Français
   answer_option_a: ''
   answer_option_b: ''
@@ -32673,8 +32674,8 @@
   created: '2021-02-14'
   updated: '2022-04-16'
 - id: 855
-  text: De toute la masse de plastique produite chaque année, quel pourcentage est
-    effectivement réinjecté en cycle fermé grâce au recyclage (plastique recyclable
+  text: De toute la masse de plastique produite chaque année dans le monde, quel pourcentage
+    est effectivement réinjecté en cycle fermé grâce au recyclage (plastique recyclable
     à nouveau) ?
   hint: ''
   type: QCM
