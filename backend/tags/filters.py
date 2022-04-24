@@ -4,11 +4,7 @@ from tags.models import Tag
 
 
 class TagFilter(django_filters.FilterSet):
-    q = django_filters.CharFilter(
-        label="Nom du tag",
-        method="name_search",
-        required=True,
-    )
+    q = django_filters.CharFilter(label="Nom du tag", method="name_search")
 
     class Meta:
         model = Tag

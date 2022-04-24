@@ -6,7 +6,6 @@
 {% endblock %}
 
 {% block tag_detail_content %}
-
 <form method="POST" action="">
     {% csrf_token %}
 
@@ -18,8 +17,8 @@
 
     <div class="row">
         <div class="col">
-            {% bootstrap_button button_type="submit" content="Sauvegarder" button_class="btn-primary" %}
-            {# {% bootstrap_button button_type="reset" content="Annuler" button_class="btn-secondary" %} #}
+            {% bootstrap_button button_type="submit" button_class="btn-primary" content="Sauvegarder" %}
+            {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
             <a href="{% url 'tags:detail_view' tag.id %}" class="btn btn-secondary">Annuler</a>
         </div>
         <div class="col-auto">
@@ -27,8 +26,6 @@
         </div>
     </div>
 </form>
-    </div>
-</div>
 {% endblock %}
 
 {% block extra_js %}

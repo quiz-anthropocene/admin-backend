@@ -2,7 +2,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import DetailView, UpdateView
+from django.utils.safestring import mark_safe
+from django.views.generic import CreateView, DetailView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
@@ -10,7 +11,7 @@ from api.tags.serializers import TagSerializer
 from questions.models import Question
 from quizs.models import Quiz
 from tags.filters import TagFilter
-from tags.forms import TagEditForm
+from tags.forms import TagCreateForm, TagEditForm
 from tags.models import Tag
 from tags.tables import TagTable
 
@@ -92,3 +93,12 @@ class TagDetailQuizsView(LoginRequiredMixin, SingleTableView):
         context = super().get_context_data(**kwargs)
         context["tag"] = Tag.objects.get(id=self.kwargs.get("pk"))
         return context
+
+
+class TagCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    form_class = TagCreateForm
+    template_name = "tags/create.html"
+    success_url = reverse_lazy("tags:list")
+
+    def get_success_message(self, cleaned_data):
+        return mark_safe(f"Le tag <strong>{cleaned_data['name']}</strong> a été crée avec succès.")
