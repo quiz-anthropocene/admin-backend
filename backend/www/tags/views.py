@@ -19,6 +19,11 @@ class TagListView(LoginRequiredMixin, SingleTableView):
     context_object_name = "tags"
     table_class = TagTable
 
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = qs.prefetch_related("questions", "quizs")
+        return qs
+
 
 class TagDetailView(LoginRequiredMixin, DetailView):
     model = Tag
