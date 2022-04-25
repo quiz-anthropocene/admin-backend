@@ -30,7 +30,7 @@
                     <a class="nav-link {% if 'questions' in request.path %}active fw-bold{% endif %}" href="{% url 'profile:questions' %}">Questions ({{ user.question_count }})</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'quizs' in request.path %}active fw-bold{% endif %}" href="{% url 'profile:quizs' %}">Quizs ({{ user.question_count }})</a>
+                    <a class="nav-link {% if 'quizs' in request.path %}active fw-bold{% endif %}" href="{% url 'profile:quizs' %}">Quizs ({{ user.quiz_count }})</a>
                 </li>
             </ul>
         </div>

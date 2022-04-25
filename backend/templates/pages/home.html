@@ -4,18 +4,19 @@
 
 {% block content %}
 <div class="container">
+    <br />
     <div class="row">
         <div class="col-12 col-lg-8">
-            <h1>Administration</h1>
-
-            {% if user.is_authenticated %}
+            {% if not user.is_authenticated %}
+                <p>Vous n'êtes pas connecté</p>
+            {% else %}
                 <div class="row">
                     <div class="col-12">
-                        <p>Bonjour {{ user.first_name }} ! {{ user.email }}</p>
+                        <p>Bonjour {{ user.first_name }} !</p>
+                        <p>Bienvenue sur l'interface d'administration du Quiz de l'Anthropocène.</p>
+                        <p>Ici tu pourras créer et modifier les questions, ainsi que les quizs.</p>
                     </div>
                 </div>
-            {% else %}
-                <p>Vous n'êtes pas connecté</p>
             {% endif %}
         </div>
     </div>
