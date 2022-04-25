@@ -2,11 +2,6 @@
 {% load render_table from django_tables2 %}
 
 {% block profile_content %}
-<div class="row mb-3">
-    <div class="col-12">
-        {{ user_questions.count }} question{{ user_questions.count|pluralize }}
-    </div>
-</div>
 <div class="row overflow-scroll">
     <div class="col-12">
         {% render_table table %}

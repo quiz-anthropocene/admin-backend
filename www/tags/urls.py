@@ -1,7 +1,14 @@
 from django.urls import include, path
 from django.views.generic.base import RedirectView
 
-from www.tags.views import TagDetailEditView, TagDetailQuestionsView, TagDetailQuizsView, TagDetailView, TagListView
+from www.tags.views import (
+    TagCreateView,
+    TagDetailEditView,
+    TagDetailQuestionsView,
+    TagDetailQuizsView,
+    TagDetailView,
+    TagListView,
+)
 
 
 app_name = "tags"
@@ -26,4 +33,5 @@ urlpatterns = [
             ]
         ),
     ),
+    path("create/", TagCreateView.as_view(), name="create"),
 ]
