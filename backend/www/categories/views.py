@@ -18,6 +18,11 @@ class CategoryListView(LoginRequiredMixin, SingleTableView):
     context_object_name = "categories"
     table_class = CategoryTable
 
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = qs.prefetch_related("questions")
+        return qs
+
 
 class CategoryDetailView(LoginRequiredMixin, DetailView):
     model = Category
