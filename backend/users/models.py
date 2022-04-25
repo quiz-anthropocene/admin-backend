@@ -60,3 +60,11 @@ class User(AbstractUser):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+
+    @property
+    def question_count(self) -> int:
+        return self.questions.count()
+
+    @property
+    def quiz_count(self) -> int:
+        return self.quizs.count()

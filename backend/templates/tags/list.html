@@ -22,10 +22,10 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-10">
+        <div class="col-9">
             <h1>Toutes les tags <span class="fs-3 text-muted">{{ tags.count }}</span></h1>
         </div>
-        <div class="col-2 text-end my-auto">
+        <div class="col-3 text-end my-auto">
             <button type="button" class="btn {% if active_filters %}btn-warning{% else %}btn-secondary{% endif %} btn-sm btn-ico" data-bs-toggle="collapse" data-bs-target="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters">
                 <span>Filtres&nbsp;</span>
                 <span id="collapse-down-ico">⏷</span>
@@ -42,7 +42,7 @@
         </div>
     </form>
     <!-- Table -->
-    <div class="row overflow-scroll">
+    <div class="row">
         <div class="col-12">
             {% render_table table %}
         </div>

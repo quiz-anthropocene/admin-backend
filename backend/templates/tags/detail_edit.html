@@ -1,31 +1,31 @@
 {% extends "tags/detail_base.html" %}
 {% load django_bootstrap5 %}
 
-{% block extra_css %}
-{{ form.media.css }}
-{% endblock %}
-
 {% block tag_detail_content %}
-<form method="POST" action="">
-    {% csrf_token %}
+<div class="row">
+    <div class="col-12">
+        <form method="POST" action="">
+            {% csrf_token %}
 
-    <div class="row">
-        <div class="col-md-8">
-            {% bootstrap_form form alert_error_type="all" %}
-        </div>
-    </div>
+            <div class="row">
+                <div class="col-md-8">
+                    {% bootstrap_form form alert_error_type="all" %}
+                </div>
+            </div>
 
-    <div class="row">
-        <div class="col">
-            {% bootstrap_button button_type="submit" button_class="btn-primary" content="Sauvegarder" %}
-            {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
-            <a href="{% url 'tags:detail_view' tag.id %}" class="btn btn-secondary">Annuler</a>
-        </div>
-        <div class="col-auto">
-            <button class="btn btn-danger" disabled>Supprimer</button>
-        </div>
+            <div class="row">
+                <div class="col">
+                    {% bootstrap_button button_type="submit" button_class="btn-primary" content="Sauvegarder" %}
+                    {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
+                    <a href="{% url 'tags:detail_view' tag.id %}" class="btn btn-secondary">Annuler</a>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-danger" disabled>Supprimer</button>
+                </div>
+            </div>
+        </form>
     </div>
-</form>
+</div>
 {% endblock %}
 
 {% block extra_js %}
