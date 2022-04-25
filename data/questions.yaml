@@ -31112,10 +31112,9 @@
   created: '2021-01-09'
   updated: '2022-04-16'
 - id: 815
-  text: '
-
-    Entre les périodes interglaciaires et les périodes glaciaires qui ont marqué le
-    dernier million d''années, de combien la concentration en CO2 a-t-elle varié ?'
+  text: Entre les périodes interglaciaires et les périodes glaciaires qui ont marqué
+    le dernier million d'années, de combien la concentration en CO2 a-t-elle varié
+    ?
   hint: ''
   type: QCM
   category: 1
