@@ -129,10 +129,12 @@ Voir dans le dossier `/data/architecture`
     psql -c "GRANT ALL PRIVILEGES ON DATABASE quiz_anthropocene to quiz_anthropocene_team"
     psql -c "ALTER USER quiz_anthropocene_team CREATEROLE CREATEDB"
     ```
+    \* Si vous n'avez pas créé de USER pour accéder à postgresql, faites le avant les commandes précédentes. Alternativement, lors de l'installation de postgresql, l'utilisateur doit choisir un mot de passe superuser (postgres) et il suffit de rajouter '-U postgres' aux commandes précédentes.
 - Lancez les migrations
     ```
     pipenv run python manage.py migrate
     ```
+    \* Voir section Windows à la fin si cette commande pose problème
 - Chargez la base de donnée
     ```
     pipenv run python manage.py init_db --with-sql-reset
@@ -147,6 +149,8 @@ Voir dans le dossier `/data/architecture`
     ```
     pre-commit install
     ```
+\* Voir section Windows à la fin si cette section pose problème
+
 
 #### Lancer l'application
 
@@ -184,10 +188,13 @@ Lancez le Backend, et connectez-vous sur `http://localhost:8000/admin`
 
 #### Lancer les tests du Backend
 
+Rappel : pour le backend, toutes les commandes doivent commencer par `pipenv run`
+
 Tests
 ```
 python manage.py test
 ```
+\* Voir section Windows à la fin si cette commande pose problème
 
 Coverage
 ```
@@ -314,3 +321,32 @@ Réduire la taille des images (PNG)
 - Installer [pngquant](https://pngquant.org/)
 - Lancer sur un fichier donné : `pngquant -f --ext .png <filename>`
 - Ou lancer sur tous les fichiers d'un dossier : `pngquant -f --ext .png **/*.png`
+
+#### Spécifique pour Windows
+
+Windows peut poser des soucis d'encodage, pour l'étape de charger la base de donnée, entrez la commande
+```
+pipenv run python -X utf8 manage.py init_db --with-sql-reset
+```
+
+Installer yarn et nodejs
+- Recommandé d'installer [chocolatey](https://chocolatey.org/install)
+
+Puis dans powershell
+```
+choco install yarn
+choco install nodejs-lts
+```
+
+- Installer pre-commit
+```
+pip install pre-commit
+```
+
+Erreur `UnicodeDecodeError: charmap codec can't decode byte`
+
+- Rajoutez `-X utf8`
+
+#### Misc
+
+- Si vous avez nodejs > v17, il y aura un problème avec openssl, faites un downgrade à la version 16 LTS
