@@ -14,7 +14,7 @@ QUESTION_EDIT_URLS = [
 ]
 
 
-class QuestionListView(TestCase):
+class QuestionListViewTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user = UserFactory()
@@ -35,7 +35,7 @@ class QuestionListView(TestCase):
         self.assertEqual(len(response.context["questions"]), 2)
 
 
-class QuestionDetailView(TestCase):
+class QuestionDetailViewTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user = UserFactory()

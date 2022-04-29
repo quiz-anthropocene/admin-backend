@@ -3,6 +3,7 @@ from django.views.generic import DetailView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
+from core.mixins import AdministratorUserRequiredMixin
 from questions.filters import QuestionFilter
 from questions.models import Question
 from questions.tables import QuestionTable
@@ -77,7 +78,7 @@ class ProfileQuizsView(LoginRequiredMixin, SingleTableView):
         return context
 
 
-class ProfileAdminContributorListView(LoginRequiredMixin, SingleTableView):
+class ProfileAdminContributorListView(AdministratorUserRequiredMixin, SingleTableView):
     model = User
     template_name = "profile/admin_contributors.html"
     context_object_name = "contributors"
