@@ -8,6 +8,7 @@ from users.models import User
 class ProfileViewTest(TestCase):
     @classmethod
     def setUpTestData(cls):
+        cls.user = UserFactory(roles=[])
         cls.user_contributor = UserFactory()
         cls.user_super_contributor = UserFactory(roles=[User.USER_ROLE_SUPER_CONTRIBUTOR])
         cls.user_admin = UserFactory(roles=[User.USER_ROLE_ADMINISTRATOR])
@@ -18,7 +19,12 @@ class ProfileViewTest(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, "/accounts/login/?next=/profile/")
 
-    def test_user_can_access_profile(self):
+    def test_only_contributor_can_access_profile(self):
+        self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
+        url = reverse("profile:home")
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 302)
+
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
         url = reverse("profile:home")
         response = self.client.get(url)
@@ -27,7 +33,6 @@ class ProfileViewTest(TestCase):
     def test_only_admin_user_has_admin_section(self):
         USERS_NOT_ALLOWED = [self.user_contributor, self.user_super_contributor]
         for user in USERS_NOT_ALLOWED:
-            print(user.roles)
             self.client.login(email=user.email, password=DEFAULT_PASSWORD)
             url = reverse("profile:home")
             response = self.client.get(url)

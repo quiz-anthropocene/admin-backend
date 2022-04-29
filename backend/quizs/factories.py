@@ -8,6 +8,6 @@ class QuizFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Quiz
 
-    name = "le quiz"
+    name = "Le quiz"
     slug = factory.LazyAttribute(lambda o: slugify(o.name))
     publish = False
