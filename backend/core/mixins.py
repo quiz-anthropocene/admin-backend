@@ -30,25 +30,29 @@ class LoginRequiredUserPassesTestMixin(UserPassesTestMixin):
 
 class ContributorUserRequiredMixin(LoginRequiredUserPassesTestMixin):
     """
-    Restrict access to users with Contributor role
+    Restrict access to users with (at least) Contributor role
     """
+
+    ROLES_ALLOWED = [User.USER_ROLE_ADMINISTRATOR, User.USER_ROLE_SUPER_CONTRIBUTOR, User.USER_ROLE_CONTRIBUTOR]
 
     def test_func(self):
         user = self.request.user
-        return user.is_authenticated and User.USER_ROLE_CONTRIBUTOR in user.roles
+        return user.is_authenticated and any([role in self.ROLES_ALLOWED for role in user.roles])
 
     def handle_no_permission(self):
-        return HttpResponseRedirect(reverse_lazy("profile:home"))
+        return HttpResponseRedirect(reverse_lazy("pages:home"))
 
 
 class SuperContributorUserRequiredMixin(LoginRequiredUserPassesTestMixin):
     """
-    Restrict access to users with Super-Contributor role
+    Restrict access to users with (at least) Super-Contributor role
     """
+
+    ROLES_ALLOWED = [User.USER_ROLE_ADMINISTRATOR, User.USER_ROLE_SUPER_CONTRIBUTOR]
 
     def test_func(self):
         user = self.request.user
-        return user.is_authenticated and User.USER_ROLE_SUPER_CONTRIBUTOR in user.roles
+        return user.is_authenticated and any([role in self.ROLES_ALLOWED for role in user.roles])
 
     def handle_no_permission(self):
         return HttpResponseRedirect(reverse_lazy("profile:home"))

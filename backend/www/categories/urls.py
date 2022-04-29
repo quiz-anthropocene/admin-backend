@@ -3,7 +3,7 @@ from django.views.generic.base import RedirectView
 
 from www.categories.views import (
     CategoryDetailEditView,
-    CategoryDetailQuestionsView,
+    CategoryDetailQuestionListView,
     CategoryDetailView,
     CategoryListView,
 )
@@ -26,7 +26,7 @@ urlpatterns = [
                 ),
                 path("view/", CategoryDetailView.as_view(), name="detail_view"),
                 path("edit/", CategoryDetailEditView.as_view(), name="detail_edit"),
-                path("questions/", CategoryDetailQuestionsView.as_view(), name="detail_questions"),
+                path("questions/", CategoryDetailQuestionListView.as_view(), name="detail_questions"),
             ]
         ),
     ),

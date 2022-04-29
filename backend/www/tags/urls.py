@@ -4,8 +4,8 @@ from django.views.generic.base import RedirectView
 from www.tags.views import (
     TagCreateView,
     TagDetailEditView,
-    TagDetailQuestionsView,
-    TagDetailQuizsView,
+    TagDetailQuestionListView,
+    TagDetailQuizListView,
     TagDetailView,
     TagListView,
 )
@@ -28,8 +28,8 @@ urlpatterns = [
                 ),
                 path("view/", TagDetailView.as_view(), name="detail_view"),
                 path("edit/", TagDetailEditView.as_view(), name="detail_edit"),
-                path("questions/", TagDetailQuestionsView.as_view(), name="detail_questions"),
-                path("quizs/", TagDetailQuizsView.as_view(), name="detail_quizs"),
+                path("questions/", TagDetailQuestionListView.as_view(), name="detail_questions"),
+                path("quizs/", TagDetailQuizListView.as_view(), name="detail_quizs"),
             ]
         ),
     ),

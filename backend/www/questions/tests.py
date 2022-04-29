@@ -5,7 +5,7 @@ from questions.factories import QuestionFactory
 from users.factories import DEFAULT_PASSWORD, UserFactory
 
 
-QUESTION_EDIT_URLS = [
+QUESTION_DETAIL_URLS = [
     "questions:detail_view",
     "questions:detail_edit",
     "questions:detail_quizs",
@@ -43,7 +43,7 @@ class QuestionDetailViewTest(TestCase):
         cls.question_2 = QuestionFactory()
 
     def test_anonymous_user_cannot_access_question_detail(self):
-        for edit_url in QUESTION_EDIT_URLS:
+        for edit_url in QUESTION_DETAIL_URLS:
             url = reverse(edit_url, args=[self.question_1.id])
             response = self.client.get(url)
             self.assertEqual(response.status_code, 302)

@@ -27,6 +27,7 @@ class ProfileViewTest(TestCase):
     def test_only_admin_user_has_admin_section(self):
         USERS_NOT_ALLOWED = [self.user_contributor, self.user_super_contributor]
         for user in USERS_NOT_ALLOWED:
+            print(user.roles)
             self.client.login(email=user.email, password=DEFAULT_PASSWORD)
             url = reverse("profile:home")
             response = self.client.get(url)

@@ -2,9 +2,9 @@ from django.urls import include, path
 from django.views.generic.base import RedirectView
 
 from www.questions.views import (
-    QuestionDetailContributionsView,
+    QuestionDetailContributionListView,
     QuestionDetailEditView,
-    QuestionDetailQuizsView,
+    QuestionDetailQuizListView,
     QuestionDetailStatsView,
     QuestionDetailView,
     QuestionListView,
@@ -28,8 +28,8 @@ urlpatterns = [
                 ),
                 path("view/", QuestionDetailView.as_view(), name="detail_view"),
                 path("edit/", QuestionDetailEditView.as_view(), name="detail_edit"),
-                path("quizs/", QuestionDetailQuizsView.as_view(), name="detail_quizs"),
-                path("comments/", QuestionDetailContributionsView.as_view(), name="detail_contributions"),
+                path("quizs/", QuestionDetailQuizListView.as_view(), name="detail_quizs"),
+                path("comments/", QuestionDetailContributionListView.as_view(), name="detail_contributions"),
                 path("stats/", QuestionDetailStatsView.as_view(), name="detail_stats"),
             ]
         ),

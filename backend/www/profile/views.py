@@ -1,9 +1,8 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import DetailView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
-from core.mixins import AdministratorUserRequiredMixin
+from core.mixins import AdministratorUserRequiredMixin, ContributorUserRequiredMixin
 from questions.filters import QuestionFilter
 from questions.models import Question
 from questions.tables import QuestionTable
@@ -13,7 +12,7 @@ from users.models import User
 from users.tables import ContributorTable
 
 
-class ProfileHomeView(LoginRequiredMixin, DetailView):
+class ProfileHomeView(ContributorUserRequiredMixin, DetailView):
     model = User
     template_name = "profile/home.html"
     context_object_name = "user"
@@ -27,7 +26,7 @@ class ProfileHomeView(LoginRequiredMixin, DetailView):
         return context
 
 
-class ProfileInfoView(LoginRequiredMixin, DetailView):
+class ProfileInfoView(ContributorUserRequiredMixin, DetailView):
     model = User
     template_name = "profile/info.html"
     context_object_name = "user"
@@ -36,7 +35,7 @@ class ProfileInfoView(LoginRequiredMixin, DetailView):
         return self.request.user
 
 
-class ProfileQuestionsView(LoginRequiredMixin, SingleTableMixin, FilterView):
+class ProfileQuestionListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
     model = Question
     template_name = "profile/questions.html"
     context_object_name = "user_questions"
@@ -59,7 +58,7 @@ class ProfileQuestionsView(LoginRequiredMixin, SingleTableMixin, FilterView):
         return context
 
 
-class ProfileQuizsView(LoginRequiredMixin, SingleTableView):
+class ProfileQuizListView(ContributorUserRequiredMixin, SingleTableView):
     model = Quiz
     template_name = "profile/quizs.html"
     context_object_name = "user_quizs"

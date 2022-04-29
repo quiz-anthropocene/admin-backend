@@ -5,8 +5,8 @@ from www.profile.views import (
     ProfileAdminContributorListView,
     ProfileHomeView,
     ProfileInfoView,
-    ProfileQuestionsView,
-    ProfileQuizsView,
+    ProfileQuestionListView,
+    ProfileQuizListView,
 )
 
 
@@ -15,8 +15,8 @@ app_name = "profile"
 urlpatterns = [
     path("", ProfileHomeView.as_view(), name="home"),
     path("info/", ProfileInfoView.as_view(), name="info"),
-    path("questions/", ProfileQuestionsView.as_view(), name="questions"),
-    path("quizs/", ProfileQuizsView.as_view(), name="quizs"),
+    path("questions/", ProfileQuestionListView.as_view(), name="questions"),
+    path("quizs/", ProfileQuizListView.as_view(), name="quizs"),
     path(
         "admin/",
         include(
