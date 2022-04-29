@@ -1,4 +1,5 @@
 {% extends "profile/base.html" %}
+{% load array_choices_item_display %}
 
 {% block profile_content %}
 <div class="row">
@@ -23,6 +24,18 @@
                     <tr>
                         <td>Adresse e-mail</td>
                         <td>{{ user.email }}</td>
+                    </tr>
+                    <tr>
+                        <td>Rôle(s)</td>
+                        <td>
+                            {% for role in user.roles %}
+                                <span class="badge bg-primary">{% array_choices_item_display user 'roles' role %}</span>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Date de création du compte</td>
+                        <td>{{ user.created }}</td>
                     </tr>
                 </tbody>
             </table>
