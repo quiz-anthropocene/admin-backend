@@ -9,6 +9,7 @@ from questions.tables import QuestionTable
 from quizs.models import Quiz
 from quizs.tables import QuizTable
 from users.models import User
+from users.tables import ContributorTable
 
 
 class ProfileHomeView(LoginRequiredMixin, DetailView):
@@ -18,6 +19,11 @@ class ProfileHomeView(LoginRequiredMixin, DetailView):
 
     def get_object(self):
         return self.request.user
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["contributor_count"] = User.objects.filter(roles__contains=[User.USER_ROLE_CONTRIBUTOR]).count()
+        return context
 
 
 class ProfileInfoView(LoginRequiredMixin, DetailView):
@@ -62,6 +68,25 @@ class ProfileQuizsView(LoginRequiredMixin, SingleTableView):
         qs = super().get_queryset()
         qs = qs.select_related("author_link").prefetch_related("tags")
         qs = qs.filter(author_link=self.request.user)
+        qs = qs.order_by("-created")
+        return qs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["user"] = self.request.user
+        return context
+
+
+class ProfileAdminContributorListView(LoginRequiredMixin, SingleTableView):
+    model = User
+    template_name = "profile/admin_contributors.html"
+    context_object_name = "contributors"
+    table_class = ContributorTable
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = qs.prefetch_related("questions", "quizs")
+        qs = qs.filter(roles__contains=[User.USER_ROLE_CONTRIBUTOR])
         qs = qs.order_by("-created")
         return qs
 

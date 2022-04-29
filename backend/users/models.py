@@ -86,3 +86,11 @@ class User(AbstractUser):
     @property
     def quiz_count(self) -> int:
         return self.quizs.count()
+
+    @property
+    def has_role_super_contributor(self) -> bool:
+        return self.USER_ROLE_SUPER_CONTRIBUTOR in self.roles
+
+    @property
+    def has_role_admin(self) -> bool:
+        return self.USER_ROLE_ADMINISTRATOR in self.roles
