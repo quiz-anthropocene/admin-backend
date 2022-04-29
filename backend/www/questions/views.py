@@ -1,6 +1,9 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.messages.views import SuccessMessageMixin
 from django.forms.models import model_to_dict
-from django.views.generic import DetailView, ListView
+from django.shortcuts import get_object_or_404
+from django.urls import reverse_lazy
+from django.views.generic import DetailView, ListView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
@@ -8,6 +11,7 @@ from api.questions.serializers import QuestionFullStringSerializer
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from questions.filters import QuestionFilter
+from questions.forms import QuestionEditForm
 from questions.models import Question
 from questions.tables import QuestionTable
 from quizs.models import QuizQuestion
@@ -45,6 +49,19 @@ class QuestionDetailView(LoginRequiredMixin, DetailView):
         # context["question_dict"] = model_to_dict(question, fields=[field.name for field in question._meta.fields])
         context["question_dict"] = QuestionFullStringSerializer(question).data
         return context
+
+
+class QuestionDetailEditView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    form_class = QuestionEditForm
+    template_name = "questions/detail_edit.html"
+    success_message = "La question a été mise à jour."
+    # success_url = reverse_lazy("questions:detail_view")
+
+    def get_object(self):
+        return get_object_or_404(Question, id=self.kwargs.get("pk"))
+
+    def get_success_url(self):
+        return reverse_lazy("questions:detail_view", args=[self.kwargs.get("pk")])
 
 
 class QuestionDetailQuizsView(LoginRequiredMixin, ListView):

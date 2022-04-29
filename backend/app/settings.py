@@ -204,6 +204,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 # ------------------------------------------------------------------------------
 
 BOOTSTRAP5 = {
+    "required_css_class": "form-group-required",
+    "set_placeholder": False,
     # Label class to use in horizontal forms.
     "horizontal_label_class": "col-4 col-sm-2",  # "col-sm-2"
     # Field class to use in horizontal forms.
