@@ -23,6 +23,7 @@ class UserAdmin(UserAdmin):
             {
                 "fields": (
                     "is_active",
+                    "roles",
                     "is_staff",
                     "is_superuser",
                 )
