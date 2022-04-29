@@ -14,6 +14,7 @@ class UserFactory(factory.django.DjangoModelFactory):
     last_name = factory.Sequence("last_name{0}".format)
     email = factory.Sequence("email{0}@example.com".format)
     password = factory.PostGenerationMethodCall("set_password", DEFAULT_PASSWORD)
+    roles = [User.USER_ROLE_CONTRIBUTOR]
 
     @factory.post_generation
     def questions(self, create, extracted, **kwargs):

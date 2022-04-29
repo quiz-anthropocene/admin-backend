@@ -1,13 +1,13 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin
 
 from contributions.filters import ContributionFilter
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
+from core.mixins import ContributorUserRequiredMixin
 
 
-class ContributionListView(LoginRequiredMixin, SingleTableMixin, FilterView):
+class ContributionListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
     model = Contribution
     template_name = "contributions/list.html"
     context_object_name = "contributions"

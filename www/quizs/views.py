@@ -1,4 +1,3 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.forms.models import model_to_dict
 from django.views.generic import DetailView, ListView
 from django_filters.views import FilterView
@@ -7,13 +6,14 @@ from django_tables2.views import SingleTableMixin, SingleTableView
 from api.quizs.serializers import QuizWithQuestionSerializer
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
+from core.mixins import ContributorUserRequiredMixin
 from quizs.filters import QuizFilter
 from quizs.models import Quiz, QuizQuestion
 from quizs.tables import QuizTable
 from stats.models import QuizAggStat
 
 
-class QuizListView(LoginRequiredMixin, SingleTableMixin, FilterView):
+class QuizListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
     model = Quiz
     template_name = "quizs/list.html"
     context_object_name = "quizs"
@@ -33,7 +33,7 @@ class QuizListView(LoginRequiredMixin, SingleTableMixin, FilterView):
         return context
 
 
-class QuizDetailView(LoginRequiredMixin, DetailView):
+class QuizDetailView(ContributorUserRequiredMixin, DetailView):
     model = Quiz
     template_name = "quizs/detail_view.html"
     context_object_name = "quiz"
@@ -46,7 +46,7 @@ class QuizDetailView(LoginRequiredMixin, DetailView):
         return context
 
 
-class QuizDetailQuestionsView(LoginRequiredMixin, ListView):
+class QuizDetailQuestionListView(ContributorUserRequiredMixin, ListView):
     model = QuizQuestion
     template_name = "quizs/detail_questions.html"
     context_object_name = "quiz_questions"
@@ -63,7 +63,7 @@ class QuizDetailQuestionsView(LoginRequiredMixin, ListView):
         return context
 
 
-class QuizDetailContributionsView(LoginRequiredMixin, SingleTableView):
+class QuizDetailContributionListView(ContributorUserRequiredMixin, SingleTableView):
     model = Contribution
     template_name = "quizs/detail_contributions.html"
     context_object_name = "quiz_contributions"
@@ -81,7 +81,7 @@ class QuizDetailContributionsView(LoginRequiredMixin, SingleTableView):
         return context
 
 
-class QuizDetailStatsView(LoginRequiredMixin, DetailView):
+class QuizDetailStatsView(ContributorUserRequiredMixin, DetailView):
     model = QuizAggStat
     template_name = "quizs/detail_stats.html"
     context_object_name = "quiz_stats"

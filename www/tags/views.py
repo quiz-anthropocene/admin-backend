@@ -1,4 +1,3 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
@@ -8,6 +7,7 @@ from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
 from api.tags.serializers import TagSerializer
+from core.mixins import ContributorUserRequiredMixin
 from questions.models import Question
 from quizs.models import Quiz
 from tags.filters import TagFilter
@@ -16,7 +16,7 @@ from tags.models import Tag
 from tags.tables import TagTable
 
 
-class TagListView(LoginRequiredMixin, SingleTableMixin, FilterView):
+class TagListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
     model = Tag
     template_name = "tags/list.html"
     context_object_name = "tags"
@@ -36,7 +36,7 @@ class TagListView(LoginRequiredMixin, SingleTableMixin, FilterView):
         return context
 
 
-class TagDetailView(LoginRequiredMixin, DetailView):
+class TagDetailView(ContributorUserRequiredMixin, DetailView):
     model = Tag
     template_name = "tags/detail_view.html"
     context_object_name = "tag"
@@ -48,7 +48,7 @@ class TagDetailView(LoginRequiredMixin, DetailView):
         return context
 
 
-class TagDetailEditView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+class TagDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = TagEditForm
     template_name = "tags/detail_edit.html"
     success_message = "Le tag a été mis à jour."
@@ -61,7 +61,7 @@ class TagDetailEditView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
         return reverse_lazy("tags:detail_view", args=[self.kwargs.get("pk")])
 
 
-class TagDetailQuestionsView(LoginRequiredMixin, SingleTableView):
+class TagDetailQuestionListView(ContributorUserRequiredMixin, SingleTableView):
     model = Question
     template_name = "tags/detail_questions.html"
     context_object_name = "questions"
@@ -78,7 +78,7 @@ class TagDetailQuestionsView(LoginRequiredMixin, SingleTableView):
         return context
 
 
-class TagDetailQuizsView(LoginRequiredMixin, SingleTableView):
+class TagDetailQuizListView(ContributorUserRequiredMixin, SingleTableView):
     model = Quiz
     template_name = "tags/detail_quizs.html"
     context_object_name = "quizs"
@@ -95,7 +95,7 @@ class TagDetailQuizsView(LoginRequiredMixin, SingleTableView):
         return context
 
 
-class TagCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+class TagCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = TagCreateForm
     template_name = "tags/create.html"
     success_url = reverse_lazy("tags:list")

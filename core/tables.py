@@ -1,9 +1,11 @@
 import django_tables2 as tables
+from django.utils.encoding import force_str
 from django.utils.html import format_html
 
 from core import constants
 from core.utils.utilities import get_choice_key
 from questions.models import Question
+from users.models import User
 
 
 class ChoiceColumn(tables.Column):
@@ -23,6 +25,22 @@ class ChoiceColumn(tables.Column):
                     "</a>"
                 )
         return format_html(f'<span class="badge bg-primary" title="{value_title}">{value}</span>')
+
+
+class ArrayColumn(tables.Column):
+    def render(self, value, record, bound_column):
+        output_array = list()
+        if type(record) == User:
+            if bound_column.name == "roles":
+                choices_dict = dict(User.USER_ROLE_CHOICES)
+                for item in value:
+                    output_array.append(
+                        f'<span class="badge bg-primary">{force_str(choices_dict.get(item, ""))}</span>'
+                    )
+        else:
+            for item in value:
+                output_array.append(f'<span class="badge bg-primary">{item}</span>')
+        return format_html(" ".join(output_array))
 
 
 class ImageColumn(tables.Column):
