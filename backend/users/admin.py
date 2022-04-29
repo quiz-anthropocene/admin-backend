@@ -13,6 +13,7 @@ class UserAdmin(UserAdmin):
         "created",
     )
     list_filter = ["is_staff"]
+    search_fields = ["id", "first_name", "last_name", "email"]
     ordering = ["-created"]
 
     readonly_fields = ["is_active", "is_staff", "is_superuser", "last_login", "created", "updated"]
@@ -23,6 +24,7 @@ class UserAdmin(UserAdmin):
             {
                 "fields": (
                     "is_active",
+                    "roles",
                     "is_staff",
                     "is_superuser",
                 )

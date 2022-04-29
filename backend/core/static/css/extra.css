@@ -74,3 +74,10 @@ label.required::after {
     font-weight: 900;
     font-size: 1rem;
 }
+
+
+/* bootstrap-multiselect */
+
+span.multiselect-selected-text {
+    float: left;
+}

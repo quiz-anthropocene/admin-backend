@@ -1,4 +1,3 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
@@ -9,10 +8,11 @@ from api.categories.serializers import CategorySerializer
 from categories.forms import CategoryEditForm
 from categories.models import Category
 from categories.tables import CategoryTable
+from core.mixins import ContributorUserRequiredMixin
 from questions.models import Question
 
 
-class CategoryListView(LoginRequiredMixin, SingleTableView):
+class CategoryListView(ContributorUserRequiredMixin, SingleTableView):
     model = Category
     template_name = "categories/list.html"
     context_object_name = "categories"
@@ -24,7 +24,7 @@ class CategoryListView(LoginRequiredMixin, SingleTableView):
         return qs
 
 
-class CategoryDetailView(LoginRequiredMixin, DetailView):
+class CategoryDetailView(ContributorUserRequiredMixin, DetailView):
     model = Category
     template_name = "categories/detail_view.html"
     context_object_name = "category"
@@ -36,7 +36,7 @@ class CategoryDetailView(LoginRequiredMixin, DetailView):
         return context
 
 
-class CategoryDetailEditView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+class CategoryDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = CategoryEditForm
     template_name = "categories/detail_edit.html"
     success_message = "La catégorie a été mise à jour."
@@ -49,7 +49,7 @@ class CategoryDetailEditView(LoginRequiredMixin, SuccessMessageMixin, UpdateView
         return reverse_lazy("categories:detail_view", args=[self.kwargs.get("pk")])
 
 
-class CategoryDetailQuestionsView(LoginRequiredMixin, SingleTableView):
+class CategoryDetailQuestionListView(ContributorUserRequiredMixin, SingleTableView):
     model = Question
     template_name = "categories/detail_questions.html"
     context_object_name = "questions"

@@ -3,6 +3,8 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils import timezone
 
+from core.fields import ChoiceArrayField
+
 
 class UserManager(BaseUserManager):
     def _create_user(self, email, password, **extra_fields):
@@ -41,10 +43,26 @@ class User(AbstractUser):
     EMAIL_FIELD = "email"
     REQUIRED_FIELDS = []
 
+    USER_ROLE_CONTRIBUTOR = "CONTRIBUTOR"
+    USER_ROLE_SUPER_CONTRIBUTOR = "SUPER-CONTRIBUTOR"
+    USER_ROLE_ADMINISTRATOR = "ADMINISTRATOR"
+    USER_ROLE_CHOICES = (
+        (USER_ROLE_CONTRIBUTOR, "Contributeur"),
+        (USER_ROLE_SUPER_CONTRIBUTOR, "Super Contributeur"),
+        (USER_ROLE_ADMINISTRATOR, "Administrateur"),
+    )
+
     username = None
     email = models.EmailField(verbose_name="Adresse e-mail", unique=True)
     first_name = models.CharField(verbose_name="Prénom", max_length=150)
     last_name = models.CharField(verbose_name="Nom", max_length=150)
+
+    roles = ChoiceArrayField(
+        verbose_name="Rôles",
+        base_field=models.CharField(max_length=20, choices=USER_ROLE_CHOICES),
+        blank=True,
+        default=list,
+    )
 
     # is_active, is_staff, is_superuser
     # date_joined, last_login
@@ -68,3 +86,11 @@ class User(AbstractUser):
     @property
     def quiz_count(self) -> int:
         return self.quizs.count()
+
+    @property
+    def has_role_super_contributor(self) -> bool:
+        return self.USER_ROLE_SUPER_CONTRIBUTOR in self.roles
+
+    @property
+    def has_role_admin(self) -> bool:
+        return self.USER_ROLE_ADMINISTRATOR in self.roles

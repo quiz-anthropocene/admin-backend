@@ -1,4 +1,3 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.forms.models import model_to_dict
 from django.shortcuts import get_object_or_404
@@ -10,6 +9,7 @@ from django_tables2.views import SingleTableMixin, SingleTableView
 from api.questions.serializers import QuestionFullStringSerializer
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
+from core.mixins import ContributorUserRequiredMixin
 from questions.filters import QuestionFilter
 from questions.forms import QuestionEditForm
 from questions.models import Question
@@ -18,7 +18,7 @@ from quizs.models import QuizQuestion
 from stats.models import QuestionAggStat
 
 
-class QuestionListView(LoginRequiredMixin, SingleTableMixin, FilterView):
+class QuestionListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
     model = Question
     template_name = "questions/list.html"
     context_object_name = "questions"
@@ -38,7 +38,7 @@ class QuestionListView(LoginRequiredMixin, SingleTableMixin, FilterView):
         return context
 
 
-class QuestionDetailView(LoginRequiredMixin, DetailView):
+class QuestionDetailView(ContributorUserRequiredMixin, DetailView):
     model = Question
     template_name = "questions/detail_view.html"
     context_object_name = "question"
@@ -51,7 +51,7 @@ class QuestionDetailView(LoginRequiredMixin, DetailView):
         return context
 
 
-class QuestionDetailEditView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = QuestionEditForm
     template_name = "questions/detail_edit.html"
     success_message = "La question a été mise à jour."
@@ -64,7 +64,7 @@ class QuestionDetailEditView(LoginRequiredMixin, SuccessMessageMixin, UpdateView
         return reverse_lazy("questions:detail_view", args=[self.kwargs.get("pk")])
 
 
-class QuestionDetailQuizsView(LoginRequiredMixin, ListView):
+class QuestionDetailQuizListView(ContributorUserRequiredMixin, ListView):
     model = QuizQuestion
     template_name = "questions/detail_quizs.html"
     context_object_name = "quiz_questions"
@@ -80,7 +80,7 @@ class QuestionDetailQuizsView(LoginRequiredMixin, ListView):
         return context
 
 
-class QuestionDetailContributionsView(LoginRequiredMixin, SingleTableView):
+class QuestionDetailContributionListView(ContributorUserRequiredMixin, SingleTableView):
     model = Contribution
     template_name = "questions/detail_contributions.html"
     context_object_name = "question_contributions"
@@ -98,7 +98,7 @@ class QuestionDetailContributionsView(LoginRequiredMixin, SingleTableView):
         return context
 
 
-class QuestionDetailStatsView(LoginRequiredMixin, DetailView):
+class QuestionDetailStatsView(ContributorUserRequiredMixin, DetailView):
     model = QuestionAggStat
     template_name = "questions/detail_stats.html"
     context_object_name = "question_stats"

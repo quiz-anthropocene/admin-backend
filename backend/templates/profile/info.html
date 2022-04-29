@@ -1,31 +1,64 @@
-{% extends "profile/base.html" %}
+{% extends "layouts/base.html" %}
+{% load array_choices_item_display %}
 
-{% block profile_content %}
-<div class="row">
-    <div class="col-12">
-        <div class="table-container">
-            <table class="table-responsive table-striped table-bordered border-primary font-size-small">
-                <thead>
-                    <tr>
-                        <th>Champ</th>
-                        <th>Valeur</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Prénom</td>
-                        <td>{{ user.first_name }}</td>
-                    </tr>
-                    <tr>
-                        <td>Nom</td>
-                        <td>{{ user.last_name }}</td>
-                    </tr>
-                    <tr>
-                        <td>Adresse e-mail</td>
-                        <td>{{ user.email }}</td>
-                    </tr>
-                </tbody>
-            </table>
+{% block title %}Mon profil{{ block.super }}{% endblock %}
+
+{% block breadcrumbs %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 my-auto">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'profile:home' %}">Mon espace</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Mon profil</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-container">
+                <table class="table-responsive table-striped table-bordered border-primary font-size-small">
+                    <thead>
+                        <tr>
+                            <th>Champ</th>
+                            <th>Valeur</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Prénom</td>
+                            <td>{{ user.first_name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Nom</td>
+                            <td>{{ user.last_name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Adresse e-mail</td>
+                            <td>{{ user.email }}</td>
+                        </tr>
+                        <tr>
+                            <td>Rôle(s)</td>
+                            <td>
+                                {% for role in user.roles %}
+                                    <span class="badge bg-primary">{% array_choices_item_display user 'roles' role %}</span>
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Date de création du compte</td>
+                            <td>{{ user.created }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
