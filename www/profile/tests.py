@@ -1,8 +1,8 @@
 from django.test import TestCase
 from django.urls import reverse
 
+from users import constants
 from users.factories import DEFAULT_PASSWORD, UserFactory
-from users.models import User
 
 
 class ProfileViewTest(TestCase):
@@ -10,8 +10,8 @@ class ProfileViewTest(TestCase):
     def setUpTestData(cls):
         cls.user = UserFactory(roles=[])
         cls.user_contributor = UserFactory()
-        cls.user_super_contributor = UserFactory(roles=[User.USER_ROLE_SUPER_CONTRIBUTOR])
-        cls.user_admin = UserFactory(roles=[User.USER_ROLE_ADMINISTRATOR])
+        cls.user_super_contributor = UserFactory(roles=[constants.USER_ROLE_SUPER_CONTRIBUTOR])
+        cls.user_admin = UserFactory(roles=[constants.USER_ROLE_ADMINISTRATOR])
 
     def test_anonymous_user_cannot_access_profile(self):
         url = reverse("profile:home")
@@ -50,9 +50,11 @@ class ProfileAdminTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user_contributor = UserFactory()
-        cls.user_super_contributor = UserFactory(roles=[User.USER_ROLE_SUPER_CONTRIBUTOR])
-        cls.user_admin = UserFactory(roles=[User.USER_ROLE_ADMINISTRATOR])
-        cls.user_contributor_admin = UserFactory(roles=[User.USER_ROLE_CONTRIBUTOR, User.USER_ROLE_ADMINISTRATOR])
+        cls.user_super_contributor = UserFactory(roles=[constants.USER_ROLE_SUPER_CONTRIBUTOR])
+        cls.user_admin = UserFactory(roles=[constants.USER_ROLE_ADMINISTRATOR])
+        cls.user_contributor_admin = UserFactory(
+            roles=[constants.USER_ROLE_CONTRIBUTOR, constants.USER_ROLE_ADMINISTRATOR]
+        )
 
     def test_only_admin_user_can_access_contributor_list(self):
         USERS_NOT_ALLOWED = [self.user_contributor, self.user_super_contributor]

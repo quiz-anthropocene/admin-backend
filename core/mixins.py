@@ -3,7 +3,7 @@ from django.contrib.auth.views import redirect_to_login
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 
-from users.models import User
+from users import constants
 
 
 """
@@ -33,7 +33,11 @@ class ContributorUserRequiredMixin(LoginRequiredUserPassesTestMixin):
     Restrict access to users with (at least) Contributor role
     """
 
-    ROLES_ALLOWED = [User.USER_ROLE_ADMINISTRATOR, User.USER_ROLE_SUPER_CONTRIBUTOR, User.USER_ROLE_CONTRIBUTOR]
+    ROLES_ALLOWED = [
+        constants.USER_ROLE_ADMINISTRATOR,
+        constants.USER_ROLE_SUPER_CONTRIBUTOR,
+        constants.USER_ROLE_CONTRIBUTOR,
+    ]
 
     def test_func(self):
         user = self.request.user
@@ -48,7 +52,7 @@ class SuperContributorUserRequiredMixin(LoginRequiredUserPassesTestMixin):
     Restrict access to users with (at least) Super-Contributor role
     """
 
-    ROLES_ALLOWED = [User.USER_ROLE_ADMINISTRATOR, User.USER_ROLE_SUPER_CONTRIBUTOR]
+    ROLES_ALLOWED = [constants.USER_ROLE_ADMINISTRATOR, constants.USER_ROLE_SUPER_CONTRIBUTOR]
 
     def test_func(self):
         user = self.request.user
@@ -65,7 +69,7 @@ class AdministratorUserRequiredMixin(LoginRequiredUserPassesTestMixin):
 
     def test_func(self):
         user = self.request.user
-        return user.is_authenticated and User.USER_ROLE_ADMINISTRATOR in user.roles
+        return user.is_authenticated and constants.USER_ROLE_ADMINISTRATOR in user.roles
 
     def handle_no_permission(self):
         return HttpResponseRedirect(reverse_lazy("profile:home"))

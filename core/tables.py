@@ -5,6 +5,7 @@ from django.utils.html import format_html
 from core import constants
 from core.utils.utilities import get_choice_key
 from questions.models import Question
+from users import constants as user_constants
 from users.models import User
 
 
@@ -32,7 +33,7 @@ class ArrayColumn(tables.Column):
         output_array = list()
         if type(record) == User:
             if bound_column.name == "roles":
-                choices_dict = dict(User.USER_ROLE_CHOICES)
+                choices_dict = dict(user_constants.USER_ROLE_CHOICES)
                 for item in value:
                     output_array.append(
                         f'<span class="badge bg-primary">{force_str(choices_dict.get(item, ""))}</span>'

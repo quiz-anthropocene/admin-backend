@@ -4,9 +4,24 @@ from django.db import models
 from django.utils import timezone
 
 from core.fields import ChoiceArrayField
+from users import constants
+
+
+class UserQueryset(models.QuerySet):
+    def all_contributors(self):
+        return self.filter(
+            roles__overlap=[
+                constants.USER_ROLE_CONTRIBUTOR,
+                constants.USER_ROLE_SUPER_CONTRIBUTOR,
+                constants.USER_ROLE_ADMINISTRATOR,
+            ]
+        )
 
 
 class UserManager(BaseUserManager):
+    def get_queryset(self):
+        return UserQueryset(self.model, using=self._db)
+
     def _create_user(self, email, password, **extra_fields):
         """
         Create and save a User with the given email and password.
@@ -37,20 +52,14 @@ class UserManager(BaseUserManager):
 
         return self._create_user(email, password, **extra_fields)
 
+    def all_contributors(self):
+        return self.get_queryset().all_contributors()
+
 
 class User(AbstractUser):
     USERNAME_FIELD = "email"
     EMAIL_FIELD = "email"
     REQUIRED_FIELDS = []
-
-    USER_ROLE_CONTRIBUTOR = "CONTRIBUTOR"
-    USER_ROLE_SUPER_CONTRIBUTOR = "SUPER-CONTRIBUTOR"
-    USER_ROLE_ADMINISTRATOR = "ADMINISTRATOR"
-    USER_ROLE_CHOICES = (
-        (USER_ROLE_CONTRIBUTOR, "Contributeur"),
-        (USER_ROLE_SUPER_CONTRIBUTOR, "Super Contributeur"),
-        (USER_ROLE_ADMINISTRATOR, "Administrateur"),
-    )
 
     username = None
     email = models.EmailField(verbose_name="Adresse e-mail", unique=True)
@@ -59,7 +68,7 @@ class User(AbstractUser):
 
     roles = ChoiceArrayField(
         verbose_name="Rôles",
-        base_field=models.CharField(max_length=20, choices=USER_ROLE_CHOICES),
+        base_field=models.CharField(max_length=20, choices=constants.USER_ROLE_CHOICES),
         blank=True,
         default=list,
     )
@@ -89,8 +98,8 @@ class User(AbstractUser):
 
     @property
     def has_role_super_contributor(self) -> bool:
-        return self.USER_ROLE_SUPER_CONTRIBUTOR in self.roles
+        return constants.USER_ROLE_SUPER_CONTRIBUTOR in self.roles
 
     @property
     def has_role_admin(self) -> bool:
-        return self.USER_ROLE_ADMINISTRATOR in self.roles
+        return constants.USER_ROLE_ADMINISTRATOR in self.roles
