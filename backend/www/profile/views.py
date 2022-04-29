@@ -22,7 +22,7 @@ class ProfileHomeView(ContributorUserRequiredMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["contributor_count"] = User.objects.filter(roles__contains=[User.USER_ROLE_CONTRIBUTOR]).count()
+        context["contributor_count"] = User.objects.all_contributors().count()
         return context
 
 
@@ -86,7 +86,7 @@ class ProfileAdminContributorListView(AdministratorUserRequiredMixin, SingleTabl
     def get_queryset(self):
         qs = super().get_queryset()
         qs = qs.prefetch_related("questions", "quizs")
-        qs = qs.filter(roles__contains=[User.USER_ROLE_CONTRIBUTOR])
+        qs = qs.all_contributors()
         qs = qs.order_by("-created")
         return qs
 

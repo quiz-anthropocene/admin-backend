@@ -1,7 +1,7 @@
 from django import template
 from django.utils.encoding import force_str
 
-from users.models import User
+from users import constants
 
 
 register = template.Library()
@@ -14,7 +14,7 @@ def array_choices_display(obj, field):
     choices_dict = dict()
 
     if field == "roles":
-        choices_dict = dict(User.USER_ROLE_CHOICES)
+        choices_dict = dict(constants.USER_ROLE_CHOICES)
 
     try:
         keys = obj.get(field, [])
