@@ -7,11 +7,11 @@
       <img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licence Creative Commons" style="border-width:0" />
     </a>
     <p>
-      Cette œuvre est mise à disposition selon les termes de la license <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons BY-NC-SA 4.0</a>.
+      Cette œuvre est mise à disposition selon les termes de la licence <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons BY-NC-SA 4.0</a>.
       <ul>
         <li>BY : Attribution</li>
-        <li>NC : Pas d’Utilisation Commerciale</li>
-        <li>SA : Partage dans les Mêmes Conditions</li>
+        <li>NC : Pas d'utilisation commerciale</li>
+        <li>SA : Partage dans les mêmes conditions</li>
       </ul>
     </p>
 
