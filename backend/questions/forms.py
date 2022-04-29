@@ -2,6 +2,7 @@ from django import forms
 
 from questions.models import Question
 from questions.tables import QUESTION_FIELD_SEQUENCE
+from tags.models import Tag
 
 
 QUESTION_FORM_FIELDS = [
@@ -21,3 +22,7 @@ class QuestionEditForm(forms.ModelForm):
             "answer_image_explanation": forms.Textarea(attrs={"rows": 2}),
             "answer_extra_info": forms.Textarea(attrs={"rows": 2}),
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["tags"].queryset = Tag.objects.all().order_by("name")
