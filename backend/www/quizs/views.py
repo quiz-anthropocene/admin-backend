@@ -11,7 +11,7 @@ from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from core.mixins import ContributorUserRequiredMixin
 from quizs.filters import QuizFilter
-from quizs.forms import QuizEditForm
+from quizs.forms import QuizEditForm, QuizQuestionFormSet
 from quizs.models import Quiz, QuizQuestion
 from quizs.tables import QuizTable
 from stats.models import QuizAggStat
@@ -77,7 +77,29 @@ class QuizDetailQuestionListView(ContributorUserRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["quiz"] = Quiz.objects.get(id=self.kwargs.get("pk"))
+        context["quiz_question_formset"] = QuizQuestionFormSet(instance=context["quiz"])
         return context
+
+
+class QuizDetailQuestionListEditView(ContributorUserRequiredMixin, UpdateView):
+    form_class = QuizQuestionFormSet
+    template_name = "quizs/detail_questions_edit_modal.html"
+    success_message = "Les questions du quiz ont été mises à jour."
+    # success_url = reverse_lazy("quizs:detail_questions")
+
+    def get_object(self):
+        return get_object_or_404(Quiz, id=self.kwargs.get("pk"))
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if self.request.POST:
+            context["quiz_question_formset"] = QuizQuestionFormSet(self.request.POST, instance=self.object)
+        else:
+            context["quiz_question_formset"] = QuizQuestionFormSet(instance=self.object)
+        return context
+
+    def get_success_url(self):
+        return reverse_lazy("quizs:detail_questions", args=[self.kwargs.get("pk")])
 
 
 class QuizDetailContributionListView(ContributorUserRequiredMixin, SingleTableView):
