@@ -57,117 +57,126 @@ class Question(models.Model):
         "updated",
     ]
 
-    text = models.TextField(blank=False, help_text="La question en 1 ou 2 phrases")
-    hint = models.TextField(blank=True, help_text="Un indice (optionnel)")
+    text = models.TextField(
+        verbose_name="Texte", blank=False, help_text="Rechercher la simplicité, faire des phrases courtes"
+    )
+    hint = models.TextField(
+        verbose_name="Indice", blank=True, help_text="L'utilisateur pourra décider de l'afficher pour l'aider"
+    )
     type = models.CharField(
+        verbose_name="Le type de question",
         max_length=50,
         choices=constants.QUESTION_TYPE_CHOICES,
         default=constants.QUESTION_TYPE_QCM,
         blank=False,
-        help_text="Le type de question (QCM, V/F, ...)",
     )
     category = models.ForeignKey(
-        "categories.Category",
+        verbose_name="Catégorie",
+        to="categories.Category",
+        related_name="questions",
+        on_delete=models.SET_NULL,
         blank=True,
         null=True,
-        on_delete=models.SET_NULL,
-        related_name="questions",
-        help_text="Une seule catégorie possible",
     )
     tags = models.ManyToManyField(
-        Tag,
-        blank=True,
+        verbose_name="Tag(s)",
+        to=Tag,
         related_name="questions",
-        help_text="Un ou plusieurs tags rattaché à la question",
+        blank=True,
     )
     difficulty = models.IntegerField(
+        verbose_name="Niveau de difficulté",
         choices=constants.QUESTION_DIFFICULTY_CHOICES,
         default=constants.QUESTION_DIFFICULTY_EASY,
         blank=False,
-        help_text="Le niveau de difficulté de la question",
     )
     language = models.CharField(
+        verbose_name="Langue",
         max_length=50,
         choices=constants.LANGUAGE_CHOICES,
         default=constants.LANGUAGE_FRENCH,
         blank=False,
-        help_text="La langue de la question",
     )
-    answer_option_a = models.CharField(max_length=500, blank=True, help_text="La réponse a")
-    answer_option_b = models.CharField(max_length=500, blank=True, help_text="La réponse b")
-    answer_option_c = models.CharField(max_length=500, blank=True, help_text="La réponse c")
-    answer_option_d = models.CharField(max_length=500, blank=True, help_text="La réponse d")
+    answer_option_a = models.CharField(verbose_name="La réponse a", max_length=500, blank=True)
+    answer_option_b = models.CharField(verbose_name="La réponse b", max_length=500, blank=True)
+    answer_option_c = models.CharField(verbose_name="La réponse c", max_length=500, blank=True)
+    answer_option_d = models.CharField(verbose_name="La réponse d", max_length=500, blank=True)
     answer_correct = models.CharField(
+        verbose_name="La bonne réponse",
         max_length=50,
         choices=constants.QUESTION_ANSWER_CHOICES,
         blank=True,
-        help_text="a, b, c ou d. ab, acd, abcd, etc si plusieurs réponses.",
+        help_text="a, b, c ou d. ab, acd, abcd… si plusieurs réponses.",
     )
     has_ordered_answers = models.BooleanField(
+        verbose_name="Réponses ordonnées ?",
         default=True,
-        help_text="Les choix de réponse sont dans un ordre figé, et ne doivent pas être mélangés",
+        help_text="Les choix de réponse sont affichés dans cet ordre, et ne doivent pas être mélangés",
     )
-    answer_explanation = models.TextField(blank=True, help_text="Un petit texte d'explication")
-    answer_audio = models.URLField(max_length=500, blank=True, help_text="Une explication audio")
-    answer_video = models.URLField(max_length=500, blank=True, help_text="Une explication vidéo")
-    answer_accessible_url = models.URLField(max_length=500, blank=True, help_text="Un lien pour aller plus loin")
+    answer_explanation = models.TextField(verbose_name="Explication de texte de la bonne réponse", blank=True)
+    answer_audio = models.URLField(verbose_name="Lien vers une explication audio", max_length=500, blank=True)
+    answer_video = models.URLField(verbose_name="Lien vers une explication vidéo", max_length=500, blank=True)
+    answer_accessible_url = models.URLField(
+        verbose_name="Lien vers une source 'grand public'", max_length=500, blank=True
+    )
     answer_accessible_url_text = models.CharField(
+        verbose_name="Texte pour remplacer l'affichage du lien 'grand public'",
         max_length=500,
         blank=True,
-        help_text="Le texte pour remplace l'affichage du lien",
     )
     answer_scientific_url = models.URLField(
+        verbose_name="Lien vers une source 'scientifique'",
         max_length=500,
         blank=True,
-        help_text="La source scientifique du chiffre (rapport)",
+        help_text="Rapport, article en anglais…",
     )
     answer_scientific_url_text = models.CharField(
+        verbose_name="Texte pour remplacer l'affichage du lien 'scientifique'",
         max_length=500,
         blank=True,
-        help_text="Le texte pour remplace l'affichage du lien de la source scientifique",  # noqa
     )
-    answer_reading_recommendation = models.TextField(blank=True, help_text="Un livre pour aller plus loin")
+    answer_reading_recommendation = models.TextField(verbose_name="Un livre pour aller plus loin", blank=True)
     answer_image_url = models.URLField(
+        verbose_name="Lien vers une image pour illustrer la réponse",
         max_length=500,
         blank=True,
-        help_text="Un lien vers une image pour illustrer la réponse "
-        "(idéalement avec la source indiquée en bas de l'image)",
     )
     answer_image_explanation = models.TextField(
-        blank=True, help_text="Une légende pour l'image qui illustre la réponse"
+        verbose_name="Texte explicatif pour l'image", blank=True, help_text="Légende, traduction, explication courte…"
     )
     answer_extra_info = models.TextField(
+        verbose_name="Notes, commentaires et liens explicatifs additionels",
         blank=True,
-        help_text="Texte et liens explicatifs additionels, qui n'apparaissent pas dans l'interface",
+        help_text="Ne s'affichera pas dans l'application",
     )
-    author = models.CharField(max_length=50, blank=True, help_text="L'auteur de la question")
+    author = models.CharField(verbose_name="Auteur", max_length=50, blank=True)
     author_link = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        blank=True,
-        null=True,
-        on_delete=models.SET_NULL,
+        verbose_name="Auteur",
+        to=settings.AUTH_USER_MODEL,
         related_name="questions",
-        help_text="L'auteur de la question",
-    )
-    validator = models.CharField(max_length=50, blank=True, help_text="La personne qui a validée la question")
-    validator_link = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
+    )
+    validator = models.CharField(verbose_name="Validateur", max_length=50, blank=True)
+    validator_link = models.ForeignKey(
+        verbose_name="Validateur",
+        to=settings.AUTH_USER_MODEL,
         related_name="questions_validated",
-        help_text="La personne qui a validée la question",
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL,
     )
     validation_status = models.CharField(
+        verbose_name="Statut",
         max_length=150,
         choices=constants.QUESTION_VALIDATION_STATUS_CHOICES,
         default=constants.QUESTION_VALIDATION_STATUS_NEW,
-        help_text="Le statut de la question dans le workflow de validation",
     )
     # timestamps
-    added = models.DateField(blank=True, null=True, help_text="La date d'ajout de la question")
-    created = models.DateField(auto_now_add=True, help_text="La date de création de la question")
-    updated = models.DateField(auto_now=True)
+    added = models.DateField(verbose_name="Date d'ajout", blank=True, null=True)
+    created = models.DateField(verbose_name="Date de création", auto_now_add=True)
+    updated = models.DateField(verbose_name="Date de dernière modification", auto_now=True)
 
     objects = QuestionQuerySet.as_manager()
 

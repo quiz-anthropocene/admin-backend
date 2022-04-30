@@ -39,60 +39,56 @@ class Quiz(models.Model):
     QUIZ_IMAGE_URL_FIELDS = ["image_background_url"]
     QUIZ_READONLY_FIELDS = ["slug", "difficulty_average", "author", "author_link", "created", "updated"]
 
-    name = models.CharField(max_length=50, blank=False, help_text="Le nom du quiz")
-    slug = models.SlugField(max_length=50, unique=True, help_text="Le bout d'url du quiz")
-    introduction = RichTextField(blank=True, help_text="Une description du quiz")
+    name = models.CharField(verbose_name="Nom", max_length=50, blank=False)
+    slug = models.SlugField(verbose_name="Fragment d'URL", max_length=50, unique=True)
+    introduction = RichTextField(verbose_name="Introduction", blank=True)
     conclusion = RichTextField(
+        verbose_name="Conclusion",
         blank=True,
-        help_text="Une conclusion du quiz et des pistes pour aller plus loin",
+        help_text="Inclure des pistes pour aller plus loin",
     )
     questions = models.ManyToManyField(
-        Question,
+        verbose_name="Les questions",
+        to=Question,
         through="QuizQuestion",
         related_name="quizs",
-        help_text="Les questions du quiz",
     )
-    tags = models.ManyToManyField(
-        Tag,
-        blank=True,
-        related_name="quizs",
-        help_text="Un ou plusieurs tags rattaché au quiz",
-    )
-    difficulty_average = models.FloatField(default=0, help_text="La difficulté moyenne des questions")  # readonly
+    tags = models.ManyToManyField(verbose_name="Tag(s)", to=Tag, related_name="quizs", blank=True)
+    difficulty_average = models.FloatField(verbose_name="Difficulté moyenne", default=0)  # readonly
     language = models.CharField(
+        verbose_name="Langue",
         max_length=50,
         choices=constants.LANGUAGE_CHOICES,
         default=constants.LANGUAGE_FRENCH,
         blank=False,
-        help_text="La langue du quiz",
     )
-    author = models.CharField(max_length=50, blank=True, help_text="L'auteur du quiz")
+    author = models.CharField(verbose_name="Auteur", max_length=50, blank=True)
     author_link = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+        verbose_name="Auteur",
+        to=settings.AUTH_USER_MODEL,
+        related_name="quizs",
+        on_delete=models.SET_NULL,
         blank=True,
         null=True,
-        on_delete=models.SET_NULL,
-        related_name="quizs",
-        help_text="L'auteur du quiz",
     )
     image_background_url = models.URLField(
+        verbose_name="Lien vers une image pour illustrer le quiz",
         max_length=500,
         blank=True,
-        help_text="Un lien vers une image pour illustrer le quiz",
     )
-    has_audio = models.BooleanField(default=False, help_text="Le quiz a du contenu audio")
-    publish = models.BooleanField(default=False, help_text="Le quiz est prêt à être publié")
-    spotlight = models.BooleanField(default=False, help_text="Le quiz est mis en avant")
+    has_audio = models.BooleanField(verbose_name="Contenu audio ?", default=False)
+    publish = models.BooleanField(verbose_name="Prêt à être publié ?", default=False)
+    spotlight = models.BooleanField(verbose_name="Mise en avant ?", default=False)
     relationships = models.ManyToManyField(
-        "self",
+        verbose_name="Les quizs similaires ou liés",
+        to="self",
         through="QuizRelationship",
         symmetrical=False,
         related_name="related_to",
-        help_text="Les quizs similaires ou liés",
     )
     # timestamps
-    created = models.DateField(auto_now_add=True, help_text="La date de création du quiz")
-    updated = models.DateField(auto_now=True)
+    created = models.DateField(verbose_name="Date de création", auto_now_add=True)
+    updated = models.DateField(verbose_name="Date de dernière modification", auto_now=True)
 
     objects = QuizQuerySet.as_manager()
 
@@ -293,12 +289,12 @@ models.signals.post_save.connect(quiz_create_agg_stat_instance, sender=Quiz)
 
 
 class QuizQuestion(models.Model):
-    quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    order = models.PositiveIntegerField(blank=True, default=0)
+    quiz = models.ForeignKey(verbose_name="Quiz", to=Quiz, on_delete=models.CASCADE)
+    question = models.ForeignKey(verbose_name="Question", to=Question, on_delete=models.CASCADE)
+    order = models.PositiveIntegerField(verbose_name="Ordre", blank=True, default=0)
     # timestamps
-    created = models.DateField(auto_now_add=True, help_text="La date de création du lien")
-    updated = models.DateField(auto_now=True)
+    created = models.DateField(verbose_name="Date de création", auto_now_add=True)
+    updated = models.DateField(verbose_name="Date de dernière modification", auto_now=True)
 
     class Meta:
         unique_together = [
@@ -330,17 +326,17 @@ class QuizQuestion(models.Model):
 
 
 class QuizRelationship(models.Model):
-    from_quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name="from_quizs")
-    to_quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name="to_quizs")
+    from_quiz = models.ForeignKey(to=Quiz, on_delete=models.CASCADE, related_name="from_quizs")
+    to_quiz = models.ForeignKey(to=Quiz, on_delete=models.CASCADE, related_name="to_quizs")
     status = models.CharField(
+        verbose_name="Type de relation",
         max_length=50,
         choices=zip(
             constants.QUIZ_RELATIONSHIP_CHOICE_LIST,
             constants.QUIZ_RELATIONSHIP_CHOICE_LIST,
         ),
-        help_text="Le type de relation entre les deux quizs",
     )
-    created = models.DateField(auto_now_add=True, help_text="La date & heure de la création de la relation")
+    created = models.DateField(verbose_name="Date de création", auto_now_add=True)
 
     def __str__(self):
         return f"{self.from_quiz} >>> {self.status} >>> {self.to_quiz}"

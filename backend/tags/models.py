@@ -19,9 +19,9 @@ class TagManager(models.Manager):
 
 
 class Tag(models.Model):
-    name = models.CharField(max_length=50, blank=False, help_text="Le nom du tag")
-    description = RichTextField(blank=True, help_text="Une description du tag")
-    created = models.DateField(auto_now_add=True, help_text="La date de création du tag")
+    name = models.CharField(verbose_name="Nom", max_length=50, blank=False)
+    description = RichTextField(verbose_name="Description", blank=True)
+    created = models.DateField(verbose_name="Date de création", auto_now_add=True)
 
     objects = TagManager()
 

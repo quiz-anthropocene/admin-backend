@@ -4,10 +4,10 @@ from django.urls import reverse
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=50, blank=False, help_text="Le nom de la catégorie")
-    name_long = models.CharField(max_length=150, blank=False, help_text="Le nom allongé de la catégorie")
-    description = RichTextField(blank=True, help_text="Une description de la catégorie")
-    created = models.DateField(auto_now_add=True, help_text="La date de création de la catégorie")
+    name = models.CharField(verbose_name="Nom", max_length=50, blank=False)
+    name_long = models.CharField(verbose_name="Nom (version longue)", max_length=150, blank=False)
+    description = RichTextField(verbose_name="Description", blank=True)
+    created = models.DateField(verbose_name="Date de création", auto_now_add=True)
 
     class Meta:
         verbose_name = "Category"
