@@ -37,6 +37,7 @@ class Quiz(models.Model):
     QUIZ_BOOLEAN_FIELDS = ["has_audio", "publish", "spotlight"]
     QUIZ_URL_FIELDS = []
     QUIZ_IMAGE_URL_FIELDS = ["image_background_url"]
+    QUIZ_READONLY_FIELDS = ["slug", "difficulty_average", "author", "author_link", "created", "updated"]
 
     name = models.CharField(max_length=50, blank=False, help_text="Le nom du quiz")
     slug = models.SlugField(max_length=50, unique=True, help_text="Le bout d'url du quiz")

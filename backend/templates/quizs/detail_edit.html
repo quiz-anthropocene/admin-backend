@@ -1,0 +1,32 @@
+{% extends "quizs/detail_base.html" %}
+{% load django_bootstrap5 %}
+
+{% block quiz_detail_content %}
+<div class="row">
+    <div class="col-12">
+        <form method="POST" action="">
+            {% csrf_token %}
+
+            <div class="row">
+                <div class="col-md-8">
+                    {% bootstrap_form form alert_error_type="all" %}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    {% bootstrap_button button_type="submit" button_class="btn-primary" content="Sauvegarder" %}
+                    <a href="{% url 'quizs:detail_view' quiz.id %}" class="btn btn-secondary">Annuler</a>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-danger" disabled>Supprimer</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{{ form.media.js }}
+{% endblock %}
