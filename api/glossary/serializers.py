@@ -14,4 +14,4 @@ class GlossaryItemSerializer(serializers.ModelSerializer):
             "description_accessible_url",
             "added",
             "created",
-        ]
+        ]  # "updated"

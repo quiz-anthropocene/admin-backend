@@ -2,15 +2,15 @@ from django.db import models
 
 
 class GlossaryItem(models.Model):
-    name = models.CharField(max_length=50, blank=False, help_text="Le mot ou sigle")
-    name_alternatives = models.TextField(blank=True, help_text="Des noms alternatifs")  # ArrayField
-    definition_short = models.CharField(max_length=150, blank=False, help_text="La definition succinte du mot")
-    description = models.TextField(blank=True, help_text="Une description longue du mot")
-    description_accessible_url = models.URLField(max_length=500, blank=True, help_text="Un lien pour aller plus loin")
+    name = models.CharField(verbose_name="Mot ou sigle", max_length=50, blank=False)
+    name_alternatives = models.TextField(verbose_name="Noms alternatifs", blank=True)  # ArrayField
+    definition_short = models.CharField(verbose_name="Définition (succinte)", max_length=150, blank=False)
+    description = models.TextField(verbose_name="Description", blank=True)
+    description_accessible_url = models.URLField(verbose_name="Lien pour aller plus loin", max_length=500, blank=True)
     # timestamps
     added = models.DateField(blank=True, null=True, help_text="La date d'ajout du mot")
-    created = models.DateField(auto_now_add=True, help_text="La date de création du mot")
-    updated = models.DateField(auto_now=True)
+    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     class Meta:
         ordering = ["name"]
