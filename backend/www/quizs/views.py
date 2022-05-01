@@ -2,7 +2,8 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.forms.models import model_to_dict
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import DetailView, ListView, UpdateView
+from django.utils.safestring import mark_safe
+from django.views.generic import CreateView, DetailView, ListView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
@@ -11,7 +12,7 @@ from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from core.mixins import ContributorUserRequiredMixin
 from quizs.filters import QuizFilter
-from quizs.forms import QuizEditForm, QuizQuestionFormSet
+from quizs.forms import QuizCreateForm, QuizEditForm, QuizQuestionFormSet
 from quizs.models import Quiz, QuizQuestion
 from quizs.tables import QuizTable
 from stats.models import QuizAggStat
@@ -136,3 +137,22 @@ class QuizDetailStatsView(ContributorUserRequiredMixin, DetailView):
         del context["quiz_agg_stat_dict"]["quiz"]
         context["quiz"] = Quiz.objects.get(id=self.kwargs.get("pk"))
         return context
+
+
+class QuizCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateView):
+    form_class = QuizCreateForm
+    template_name = "quizs/create.html"
+    success_url = reverse_lazy("quizs:list")
+
+    def get_success_message(self, cleaned_data):
+        name_short = self.object.name if (len(self.object.name) < 20) else (self.object.name[:18] + "…")
+        quiz_link = reverse_lazy("quizs:detail_view", args=[self.object.id])
+        return mark_safe(f"Le quiz <a href='{quiz_link}'><strong>{name_short}</strong></a> a été crée avec succès.")
+
+    def form_valid(self, form):
+        """Set the author."""
+        quiz = form.save(commit=False)
+        quiz.author = self.request.user.full_name
+        quiz.author_link = self.request.user
+        quiz.save()
+        return super().form_valid(form)

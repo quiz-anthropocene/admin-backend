@@ -110,7 +110,7 @@ class Quiz(models.Model):
                 self.slug = slugify(self.name)
 
     def save(self, *args, **kwargs):
-        self.full_clean()
+        # self.full_clean()
         self.set_slug()
         return super(Quiz, self).save(*args, **kwargs)
 

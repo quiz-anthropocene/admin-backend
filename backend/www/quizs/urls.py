@@ -2,6 +2,7 @@ from django.urls import include, path
 from django.views.generic.base import RedirectView
 
 from www.quizs.views import (
+    QuizCreateView,
     QuizDetailContributionListView,
     QuizDetailEditView,
     QuizDetailQuestionListEditView,
@@ -36,4 +37,5 @@ urlpatterns = [
             ]
         ),
     ),
+    path("create/", QuizCreateView.as_view(), name="create"),
 ]
