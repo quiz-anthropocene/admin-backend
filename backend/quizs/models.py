@@ -87,8 +87,8 @@ class Quiz(models.Model):
         related_name="related_to",
     )
     # timestamps
-    created = models.DateField(verbose_name="Date de création", auto_now_add=True)
-    updated = models.DateField(verbose_name="Date de dernière modification", auto_now=True)
+    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     objects = QuizQuerySet.as_manager()
 
@@ -293,8 +293,8 @@ class QuizQuestion(models.Model):
     question = models.ForeignKey(verbose_name="Question", to=Question, on_delete=models.CASCADE)
     order = models.PositiveIntegerField(verbose_name="Ordre", blank=True, default=0)
     # timestamps
-    created = models.DateField(verbose_name="Date de création", auto_now_add=True)
-    updated = models.DateField(verbose_name="Date de dernière modification", auto_now=True)
+    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     class Meta:
         unique_together = [
@@ -336,7 +336,7 @@ class QuizRelationship(models.Model):
             constants.QUIZ_RELATIONSHIP_CHOICE_LIST,
         ),
     )
-    created = models.DateField(verbose_name="Date de création", auto_now_add=True)
+    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
 
     def __str__(self):
         return f"{self.from_quiz} >>> {self.status} >>> {self.to_quiz}"
