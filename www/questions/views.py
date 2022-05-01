@@ -2,7 +2,8 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.forms.models import model_to_dict
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import DetailView, ListView, UpdateView
+from django.utils.safestring import mark_safe
+from django.views.generic import CreateView, DetailView, ListView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
@@ -11,7 +12,7 @@ from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from core.mixins import ContributorUserRequiredMixin
 from questions.filters import QuestionFilter
-from questions.forms import QuestionEditForm
+from questions.forms import QuestionCreateEditForm
 from questions.models import Question
 from questions.tables import QuestionTable
 from quizs.models import QuizQuestion
@@ -52,7 +53,7 @@ class QuestionDetailView(ContributorUserRequiredMixin, DetailView):
 
 
 class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
-    form_class = QuestionEditForm
+    form_class = QuestionCreateEditForm
     template_name = "questions/detail_edit.html"
     success_message = "La question a été mise à jour."
     # success_url = reverse_lazy("questions:detail_view")
@@ -114,3 +115,35 @@ class QuestionDetailStatsView(ContributorUserRequiredMixin, DetailView):
         del context["question_agg_stat_dict"]["question"]
         context["question"] = Question.objects.get(id=self.kwargs.get("pk"))
         return context
+
+
+class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateView):
+    form_class = QuestionCreateEditForm
+    template_name = "questions/create.html"
+    success_url = reverse_lazy("questions:list")
+
+    def get_success_url(self):
+        success_url = super().get_success_url()
+        next_url = self.request.GET.get("next", None)
+        # sanitize next_url
+        if next_url:
+            # safe_url = get_safe_url(self.request, param_name="next")
+            # if safe_url:
+            #     return safe_url
+            return next_url
+        return success_url
+
+    def get_success_message(self, cleaned_data):
+        text_short = self.object.text if (len(self.object.text) < 20) else (self.object.text[:18] + "…")
+        question_link = reverse_lazy("questions:detail_view", args=[self.object.id])
+        return mark_safe(
+            f"La question <a href='{question_link}'><strong>{text_short}</strong></a> a été crée avec succès."
+        )
+
+    def form_valid(self, form):
+        """Set the author."""
+        question = form.save(commit=False)
+        question.author = self.request.user.full_name
+        question.author_link = self.request.user
+        question.save()
+        return super().form_valid(form)

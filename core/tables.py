@@ -59,5 +59,5 @@ class RichTextColumn(tables.Column):
 class RichTextEllipsisColumn(tables.Column):
     def render(self, value):
         if len(value) > 60:
-            value = value[:54] + " (...)"
+            value = value[:54] + " (…)"
         return format_html(value)
