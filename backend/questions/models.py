@@ -64,7 +64,7 @@ class Question(models.Model):
         verbose_name="Indice", blank=True, help_text="L'utilisateur pourra décider de l'afficher pour l'aider"
     )
     type = models.CharField(
-        verbose_name="Le type de question",
+        verbose_name="Type",
         max_length=50,
         choices=constants.QUESTION_TYPE_CHOICES,
         default=constants.QUESTION_TYPE_QCM,

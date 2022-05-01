@@ -233,7 +233,7 @@ class Migration(migrations.Migration):
                 ],
                 default="QCM",
                 max_length=50,
-                verbose_name="Le type de question",
+                verbose_name="Type",
             ),
         ),
         migrations.AlterField(
