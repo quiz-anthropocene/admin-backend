@@ -1,5 +1,6 @@
 from datetime import date, timedelta
 
+from django.conf import settings
 from django.db import models
 
 from core import constants
@@ -39,6 +40,14 @@ class Contribution(models.Model):
     )
     quiz = models.ForeignKey(
         verbose_name="Quiz", to=Quiz, related_name="contributions", on_delete=models.CASCADE, null=True, blank=True
+    )
+    author = models.ForeignKey(
+        verbose_name="Auteur",
+        to=settings.AUTH_USER_MODEL,
+        related_name="contributions",
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL,
     )
 
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
