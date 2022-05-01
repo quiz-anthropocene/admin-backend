@@ -15,12 +15,12 @@ class QuestionEditForm(forms.ModelForm):
         model = Question
         fields = QUESTION_FORM_FIELDS
         widgets = {
-            "text": forms.Textarea(attrs={"rows": 2}),
-            "hint": forms.Textarea(attrs={"rows": 2}),
-            "answer_explanation": forms.Textarea(attrs={"rows": 4}),
-            "answer_reading_recommendation": forms.Textarea(attrs={"rows": 2}),
-            "answer_image_explanation": forms.Textarea(attrs={"rows": 2}),
-            "answer_extra_info": forms.Textarea(attrs={"rows": 2}),
+            "text": forms.Textarea(attrs={"rows": 1}),
+            "hint": forms.Textarea(attrs={"rows": 1}),
+            "answer_explanation": forms.Textarea(attrs={"rows": 3}),
+            "answer_reading_recommendation": forms.Textarea(attrs={"rows": 1}),
+            "answer_image_explanation": forms.Textarea(attrs={"rows": 1}),
+            "answer_extra_info": forms.Textarea(attrs={"rows": 3}),
         }
 
     def __init__(self, *args, **kwargs):
