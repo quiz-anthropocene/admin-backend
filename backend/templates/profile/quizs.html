@@ -21,6 +21,14 @@
 
 {% block content %}
 <div class="container">
+    <div class="row">
+        <div class="col-9">
+            <h1>Tous mes quizs <span class="fs-3 text-muted">{{ user_quizs.count }}</span></h1>
+        </div>
+        <div class="col-3 text-end my-auto">
+            <a href="{% url 'quizs:create' %}?next={% url 'profile:quizs' %}" class="btn btn-success btn-sm">Ajouter</a>
+        </div>
+    </div>
     <div class="row overflow-scroll">
         <div class="col-12">
             {% render_table table %}

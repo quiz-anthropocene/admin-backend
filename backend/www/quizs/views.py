@@ -144,6 +144,17 @@ class QuizCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVi
     template_name = "quizs/create.html"
     success_url = reverse_lazy("quizs:list")
 
+    def get_success_url(self):
+        success_url = super().get_success_url()
+        next_url = self.request.GET.get("next", None)
+        # sanitize next_url
+        if next_url:
+            # safe_url = get_safe_url(self.request, param_name="next")
+            # if safe_url:
+            #     return safe_url
+            return next_url
+        return success_url
+
     def get_success_message(self, cleaned_data):
         name_short = self.object.name if (len(self.object.name) < 20) else (self.object.name[:18] + "…")
         quiz_link = reverse_lazy("quizs:detail_view", args=[self.object.id])
