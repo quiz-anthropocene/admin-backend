@@ -61,3 +61,27 @@ class QuestionDetailViewTest(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.context["question"].id, self.question_1.id)
+
+
+class QuestionCreateViewTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user = UserFactory(roles=[])
+        cls.user_contributor = UserFactory()
+
+    def test_anonymous_user_cannot_access_question_create(self):
+        url = reverse("questions:create")
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(response.url.startswith("/accounts/login/"))
+
+    def test_only_contributor_can_access_question_list(self):
+        self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
+        url = reverse("questions:create")
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 302)
+
+        self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
+        url = reverse("questions:create")
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)

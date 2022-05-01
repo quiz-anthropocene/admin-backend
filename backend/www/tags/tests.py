@@ -60,3 +60,27 @@ class TagDetailViewTest(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.context["tag"].id, self.tag_1.id)
+
+
+class TagCreateViewTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user = UserFactory(roles=[])
+        cls.user_contributor = UserFactory()
+
+    def test_anonymous_user_cannot_access_tag_create(self):
+        url = reverse("tags:create")
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(response.url.startswith("/accounts/login/"))
+
+    def test_only_contributor_can_access_tag_list(self):
+        self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
+        url = reverse("tags:create")
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 302)
+
+        self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
+        url = reverse("tags:create")
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
