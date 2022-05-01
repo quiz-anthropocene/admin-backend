@@ -37,4 +37,6 @@ class QuizTable(tables.Table):
             self.base_columns[field_name] = ChoiceColumn()
         for field_name in Quiz.QUIZ_BOOLEAN_FIELDS:
             self.base_columns[field_name] = tables.BooleanColumn(yesno="✅,❌")
+        for field_name in Quiz.QUIZ_TIMESTAMP_FIELDS:
+            self.base_columns[field_name] = tables.DateTimeColumn(format="d F Y")
         super(QuizTable, self).__init__(*args, **kwargs)

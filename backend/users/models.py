@@ -1,7 +1,6 @@
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-from django.utils import timezone
 
 from core.fields import ChoiceArrayField
 from users import constants
@@ -76,8 +75,8 @@ class User(AbstractUser):
     # is_active, is_staff, is_superuser
     # date_joined, last_login
 
-    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
-    updated = models.DateTimeField(verbose_name="Date de mise à jour", auto_now=True)
+    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     objects = UserManager()
 

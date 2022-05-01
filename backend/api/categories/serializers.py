@@ -6,7 +6,13 @@ from categories.models import Category
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ["id", "name", "name_long", "description", "created"]  # "question_count", "question_validated_count"
+        fields = [
+            "id",
+            "name",
+            "name_long",
+            "description",
+            "created",
+        ]  # "question_count", "question_validated_count", "updated"
 
 
 class CategoryStringSerializer(serializers.ModelSerializer):
