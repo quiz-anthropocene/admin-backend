@@ -46,6 +46,7 @@ class Question(models.Model):
     QUESTION_BOOLEAN_FIELDS = ["has_ordered_answers"]
     QUESTION_URL_FIELDS = ["answer_audio", "answer_video", "answer_accessible_url", "answer_scientific_url"]
     QUESTION_IMAGE_URL_FIELDS = ["answer_image_url"]
+    QUESTION_TIMESTAMP_FIELDS = ["created", "updated"]
     QUESTION_READONLY_FIELDS = [
         "author",
         "author_link",

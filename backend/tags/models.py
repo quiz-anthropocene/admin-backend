@@ -19,6 +19,8 @@ class TagManager(models.Manager):
 
 
 class Tag(models.Model):
+    TAG_TIMESTAMP_FIELDS = ["created", "updated"]
+
     name = models.CharField(verbose_name="Nom", max_length=50, blank=False)
     description = RichTextField(verbose_name="Description", blank=True)
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)

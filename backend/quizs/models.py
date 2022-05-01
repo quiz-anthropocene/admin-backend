@@ -37,6 +37,7 @@ class Quiz(models.Model):
     QUIZ_BOOLEAN_FIELDS = ["has_audio", "publish", "spotlight"]
     QUIZ_URL_FIELDS = []
     QUIZ_IMAGE_URL_FIELDS = ["image_background_url"]
+    QUIZ_TIMESTAMP_FIELDS = ["created", "updated"]
     QUIZ_READONLY_FIELDS = ["slug", "difficulty_average", "author", "author_link", "created", "updated"]
 
     name = models.CharField(verbose_name="Nom", max_length=50, blank=False)

@@ -22,6 +22,11 @@ class TagTable(tables.Table):
         template_name = "django_tables2/bootstrap4.html"
         attrs = {"class": "table-responsive table-striped table-bordered border-primary font-size-small"}
 
+    def __init__(self, *args, **kwargs):
+        for field_name in Tag.TAG_TIMESTAMP_FIELDS:
+            self.base_columns[field_name] = tables.DateTimeColumn(format="d F Y")
+        super(TagTable, self).__init__(*args, **kwargs)
+
     def order_question_count(self, queryset, is_descending):
         queryset = queryset.annotate(question_agg=Count("questions")).order_by(
             ("-" if is_descending else "") + "question_agg"

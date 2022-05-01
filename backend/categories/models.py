@@ -4,6 +4,8 @@ from django.urls import reverse
 
 
 class Category(models.Model):
+    CATEGORY_TIMESTAMP_FIELDS = ["created", "updated"]
+
     name = models.CharField(verbose_name="Nom", max_length=50, blank=False)
     name_long = models.CharField(verbose_name="Nom (version longue)", max_length=150, blank=False)
     description = RichTextField(verbose_name="Description", blank=True)
@@ -11,8 +13,8 @@ class Category(models.Model):
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     class Meta:
-        verbose_name = "Category"
-        verbose_name_plural = "Categories"
+        verbose_name = "Catégorie"
+        verbose_name_plural = "Catégories"
         ordering = ["pk"]
         constraints = [models.UniqueConstraint(fields=["name"], name="category_name_unique")]
 

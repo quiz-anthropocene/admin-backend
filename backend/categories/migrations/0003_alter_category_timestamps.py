@@ -20,4 +20,8 @@ class Migration(migrations.Migration):
             name="created",
             field=models.DateTimeField(auto_now_add=True, verbose_name="Date de création"),
         ),
+        migrations.AlterModelOptions(
+            name="category",
+            options={"ordering": ["pk"], "verbose_name": "Catégorie", "verbose_name_plural": "Catégories"},
+        ),
     ]
