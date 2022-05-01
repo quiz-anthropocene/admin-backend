@@ -122,9 +122,28 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
     template_name = "questions/create.html"
     success_url = reverse_lazy("questions:list")
 
+    def get_success_url(self):
+        success_url = super().get_success_url()
+        next_url = self.request.GET.get("next", None)
+        # sanitize next_url
+        if next_url:
+            # safe_url = get_safe_url(self.request, param_name="next")
+            # if safe_url:
+            #     return safe_url
+            return next_url
+        return success_url
+
     def get_success_message(self, cleaned_data):
         text_short = self.object.text if (len(self.object.text) < 20) else (self.object.text[:18] + "…")
         question_link = reverse_lazy("questions:detail_view", args=[self.object.id])
         return mark_safe(
             f"La question <a href='{question_link}'><strong>{text_short}</strong></a> a été crée avec succès."
         )
+
+    def form_valid(self, form):
+        """Set the author."""
+        question = form.save(commit=False)
+        question.author = self.request.user.full_name
+        question.author_link = self.request.user
+        question.save()
+        return super().form_valid(form)
