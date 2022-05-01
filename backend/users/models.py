@@ -86,6 +86,10 @@ class User(AbstractUser):
         verbose_name_plural = "Utilisateurs"
 
     def __str__(self):
+        return self.full_name
+
+    @property
+    def full_name(self) -> str:
         return f"{self.first_name} {self.last_name}"
 
     @property

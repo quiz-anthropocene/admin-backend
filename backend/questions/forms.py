@@ -10,7 +10,7 @@ QUESTION_FORM_FIELDS = [
 ]
 
 
-class QuestionEditForm(forms.ModelForm):
+class QuestionCreateEditForm(forms.ModelForm):
     class Meta:
         model = Question
         fields = QUESTION_FORM_FIELDS
