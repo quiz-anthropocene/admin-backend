@@ -1,7 +1,9 @@
 from django.test import TestCase
 from django.urls import reverse
 
+from core import constants
 from quizs.factories import QuizFactory
+from quizs.models import Quiz
 from users.factories import DEFAULT_PASSWORD, UserFactory
 
 
@@ -61,3 +63,35 @@ class QuizDetailViewTest(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.context["quiz"].id, self.quiz_1.id)
+
+
+class QuizCreateViewTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user = UserFactory(roles=[])
+        cls.user_contributor = UserFactory()
+
+    def test_anonymous_user_cannot_access_quiz_create(self):
+        url = reverse("quizs:create")
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(response.url.startswith("/accounts/login/"))
+
+    def test_only_contributor_can_access_quiz_create(self):
+        self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
+        url = reverse("quizs:create")
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 302)
+
+        self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
+        url = reverse("quizs:create")
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
+    def test_contributor_can_create_quiz(self):
+        self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
+        url = reverse("quizs:create")
+        data = {"name": "Quiz 1", "language": constants.LANGUAGE_FRENCH}
+        response = self.client.post(url, data=data)
+        self.assertEqual(response.status_code, 302)  # 201
+        self.assertEqual(Quiz.objects.count(), 1)

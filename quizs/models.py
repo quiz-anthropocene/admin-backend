@@ -110,8 +110,8 @@ class Quiz(models.Model):
                 self.slug = slugify(self.name)
 
     def save(self, *args, **kwargs):
-        self.full_clean()
         self.set_slug()
+        self.full_clean()
         return super(Quiz, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
