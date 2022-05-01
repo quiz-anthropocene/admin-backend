@@ -1,5 +1,5 @@
 {% extends "tags/detail_base.html" %}
-{% load custom_filters %}
+{% load custom_filters get_verbose_name %}
 
 {% block tag_detail_content %}
 <div class="row">
@@ -15,7 +15,7 @@
                 <tbody>
                     {% for field in tag_dict %}
                         <tr>
-                            <td class="fw-bold">{{ field }}</td>
+                            <td class="fw-bold">{% get_verbose_name tag field %}</td>
                             <td>{{ tag_dict|get_obj_attr:field }}</td>
                         </tr>
                     {% endfor %}

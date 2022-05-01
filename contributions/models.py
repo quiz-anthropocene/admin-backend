@@ -1,5 +1,6 @@
 from datetime import date, timedelta
 
+from django.conf import settings
 from django.db import models
 
 from core import constants
@@ -17,23 +18,39 @@ class ContributionQuerySet(models.QuerySet):
 
 class Contribution(models.Model):
     text = models.TextField(
+        verbose_name="Texte",
         blank=False,
-        help_text="La contribution de l'utilisateur (une question ou un commentaire)",
+        help_text="Une question, un commentaire…",
     )
-    description = models.TextField(help_text="Informations supplémentaires sur la contribution (réponse, lien, ...)")
+    description = models.TextField(verbose_name="Information supplémentaire", blank=True)
     type = models.CharField(
+        verbose_name="Type",
         max_length=150,
         choices=constants.CONTRIBUTION_TYPE_CHOICES,
         blank=True,
-        help_text="Le type de contribution",
     )
 
     question = models.ForeignKey(
-        Question, related_name="contributions", on_delete=models.CASCADE, null=True, blank=True
+        verbose_name="Question",
+        to=Question,
+        related_name="contributions",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
     )
-    quiz = models.ForeignKey(Quiz, related_name="contributions", on_delete=models.CASCADE, null=True, blank=True)
+    quiz = models.ForeignKey(
+        verbose_name="Quiz", to=Quiz, related_name="contributions", on_delete=models.CASCADE, null=True, blank=True
+    )
+    author = models.ForeignKey(
+        verbose_name="Auteur",
+        to=settings.AUTH_USER_MODEL,
+        related_name="contributions",
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL,
+    )
 
-    created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de la contribution")
+    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
 
     objects = ContributionQuerySet.as_manager()
 
