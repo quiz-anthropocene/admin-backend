@@ -318,7 +318,7 @@ class Question(models.Model):
             # - QCM question must have len(answer_correct) equal to 1 ('a', 'b', 'c' or 'd')
             if self.type == constants.QUESTION_TYPE_QCM:
                 if self.answer_correct not in constants.QUESTION_TYPE_QCM_CHOICE_LIST:
-                    error_message = f"{get_verbose_name(self, 'anwer_correct')} : '{self.answer_correct}' doit être 'a', 'b', 'c' ou 'd' (car type 'QCM')."  # noqa
+                    error_message = f"{get_verbose_name(self, 'answer_correct')} : '{self.answer_correct}' doit être 'a', 'b', 'c' ou 'd' (car type 'QCM')."  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "answer_correct", error_message
                     )
