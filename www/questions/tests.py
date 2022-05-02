@@ -1,7 +1,9 @@
 from django.test import TestCase
 from django.urls import reverse
 
+from core import constants
 from questions.factories import QuestionFactory
+from questions.models import Question
 from users.factories import DEFAULT_PASSWORD, UserFactory
 
 
@@ -85,3 +87,18 @@ class QuestionCreateViewTest(TestCase):
         url = reverse("questions:create")
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
+
+    def test_contributor_can_create_quiz(self):
+        self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
+        url = reverse("questions:create")
+        data = {
+            "text": "Question 1",
+            "type": constants.QUESTION_TYPE_QCM,
+            "difficulty": constants.QUESTION_DIFFICULTY_EASY,
+            "language": constants.LANGUAGE_FRENCH,
+            "answer_option_a": "Réponse A",
+            "answer_option_b": "Réponse B",
+        }
+        response = self.client.post(url, data=data)
+        self.assertEqual(response.status_code, 302)  # 201
+        self.assertEqual(Question.objects.count(), 1)

@@ -110,8 +110,13 @@ class Quiz(models.Model):
             if not self.slug:
                 self.slug = slugify(self.name)
 
+    def set_difficulty_average(self):
+        if self.id:
+            self.difficulty_average = self.questions_difficulty_average
+
     def save(self, *args, **kwargs):
         self.set_slug()
+        self.set_difficulty_average()
         self.full_clean()
         return super(Quiz, self).save(*args, **kwargs)
 
@@ -258,11 +263,7 @@ class Quiz(models.Model):
                 quiz_questions = quiz.questions
                 # - must have at least 1 question
                 if quiz_questions.count() < 1:
-                    raise ValidationError(
-                        {"questions": f"Un quiz 'published' doit comporter au moins 1 question. " f"Quiz {self.id}"}
-                    )
-            # > compute questions difficulty_average
-            self.difficulty_average = self.questions_difficulty_average
+                    raise ValidationError({"questions": "Un quiz 'published' doit comporter au moins 1 question."})
 
 
 def quiz_validate_fields(sender, instance, **kwargs):
