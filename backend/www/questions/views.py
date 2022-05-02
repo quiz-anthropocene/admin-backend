@@ -12,7 +12,7 @@ from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from core.mixins import ContributorUserRequiredMixin
 from questions.filters import QuestionFilter
-from questions.forms import QuestionCreateEditForm
+from questions.forms import QuestionCreateForm, QuestionEditForm
 from questions.models import Question
 from questions.tables import QuestionTable
 from quizs.models import QuizQuestion
@@ -53,7 +53,7 @@ class QuestionDetailView(ContributorUserRequiredMixin, DetailView):
 
 
 class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
-    form_class = QuestionCreateEditForm
+    form_class = QuestionEditForm
     template_name = "questions/detail_edit.html"
     success_message = "La question a été mise à jour."
     # success_url = reverse_lazy("questions:detail_view")
@@ -118,9 +118,12 @@ class QuestionDetailStatsView(ContributorUserRequiredMixin, DetailView):
 
 
 class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateView):
-    form_class = QuestionCreateEditForm
+    form_class = QuestionCreateForm
     template_name = "questions/create.html"
     success_url = reverse_lazy("questions:list")
+
+    def get_initial(self):
+        return {"author": self.request.user.full_name, "author_link": self.request.user}
 
     def get_success_url(self):
         success_url = super().get_success_url()
@@ -139,11 +142,3 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
         return mark_safe(
             f"La question <a href='{question_link}'><strong>{text_short}</strong></a> a été crée avec succès."
         )
-
-    def form_valid(self, form):
-        """Set the author."""
-        question = form.save(commit=False)
-        question.author = self.request.user.full_name
-        question.author_link = self.request.user
-        question.save()
-        return super().form_valid(form)

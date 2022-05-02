@@ -5,12 +5,13 @@ from questions.tables import QUESTION_FIELD_SEQUENCE
 from tags.models import Tag
 
 
+QUESTION_READONLY_FORM_FIELDS = ["author_link", "validation_status"]
 QUESTION_FORM_FIELDS = [
     field_name for field_name in QUESTION_FIELD_SEQUENCE if field_name not in Question.QUESTION_READONLY_FIELDS
-]
+] + QUESTION_READONLY_FORM_FIELDS
 
 
-class QuestionCreateEditForm(forms.ModelForm):
+class QuestionCreateForm(forms.ModelForm):
     class Meta:
         model = Question
         fields = QUESTION_FORM_FIELDS
@@ -26,3 +27,11 @@ class QuestionCreateEditForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["tags"].queryset = Tag.objects.all().order_by("name")
+        for field_name in QUESTION_READONLY_FORM_FIELDS:
+            self.fields[field_name].disabled = True
+
+
+class QuestionEditForm(QuestionCreateForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["validation_status"].disabled = False
