@@ -6,6 +6,7 @@ from tags.models import Tag
 
 
 QUESTION_READONLY_FORM_FIELDS = ["author_link", "validation_status"]
+QUESTION_REQUIRED_FORM_FIELDS = ["answer_option_a", "answer_option_b"]
 QUESTION_FORM_FIELDS = [
     field_name for field_name in QUESTION_FIELD_SEQUENCE if field_name not in Question.QUESTION_READONLY_FIELDS
 ] + QUESTION_READONLY_FORM_FIELDS
@@ -29,6 +30,8 @@ class QuestionCreateForm(forms.ModelForm):
         self.fields["tags"].queryset = Tag.objects.all().order_by("name")
         for field_name in QUESTION_READONLY_FORM_FIELDS:
             self.fields[field_name].disabled = True
+        for field_name in QUESTION_REQUIRED_FORM_FIELDS:
+            self.fields[field_name].required = True
 
 
 class QuestionEditForm(QuestionCreateForm):
