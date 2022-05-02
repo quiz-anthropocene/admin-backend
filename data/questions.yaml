@@ -30429,41 +30429,49 @@
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 795
-  text: Copy of à venir
+  text: L'empreinte eau est la quantité d'eau nécessaire à la fabrication d'un bien
+    ou d'un service. Selon vous, de quoi est composée cette empreinte  ?
   hint: ''
   type: QCM
   category: 2
   tags:
-  - 33
-  - 217
-  - 218
+  - 37
   difficulty: 2
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
+  answer_option_a: L'eau de pluie utilisée, l'eau prélevée dans les milieux pour la
+    fabrication et l'eau nécessaire à la dilution des polluants émis
+  answer_option_b: L'eau non restituée aux milieux après prélèvement pour cet usage
+  answer_option_c: L'eau prélevée dans les milieux pour cet usage
   answer_option_d: ''
-  answer_correct: d
+  answer_correct: a
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: 'L''empreinte eau selon la définition Water Footprint Network
+    comprend trois types d''eau. L''eau bleue est l''eau prélevée pour les usages.
+    L''eau verte est l''eau de pluie stockée dans le sol ou les plantes. L''eau grise
+    est la quantité d''eau nécessaire pour diluer les polluants émis (qui, dans les
+    faits, n''est pas forcément utilisée). L''empreinte eau est la somme de ces trois
+    sous-empreintes. Cette empreinte eau a été mise au point en 2002 par le Professeur
+    A. Y. Hoekstra de l’UNESCO-IHE. D''autres définitions prenant seulement en compte
+    l''eau prélevée mais non restituée existent. '
   answer_audio: ''
-  answer_video: ''
+  answer_video: https://waterfootprint.org/en/water-footprint/what-is-water-footprint/
   answer_accessible_url: ''
-  answer_accessible_url_text: ''
-  answer_scientific_url: ''
+  answer_accessible_url_text: https://www.eaudyssee.org/empreinte-eau-explications/
+  answer_scientific_url: https://waterfootprint.org/en/water-footprint/what-is-water-footprint/
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Mylène Turban
   validator: ''
   validation_status: Brouillon
-  added: '2021-01-17'
+  added: '2022-05-01'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 796
-  text: Copy of à venir
+  text: Quelle est la consommation moyenne par jour d'eau du robinet d'un Français
+    ?
   hint: ''
   type: QCM
   category: 2
@@ -30471,19 +30479,22 @@
   - 33
   - 217
   - 218
-  difficulty: 2
+  difficulty: 3
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  answer_option_a: 50 litres par jour
+  answer_option_b: 150 litres par jour
+  answer_option_c: 250 litres par jour
+  answer_option_d: 500 litres par jour
+  answer_correct: b
+  has_ordered_answers: true
+  answer_explanation: Les principaux postes de consommation domestique sont les bains
+    et les douches (40%) et les WC (20%). Selon l'OMS, il faut 50 litres d'eau par
+    jour et par personne pour vivre décemment et 100 litres pour un réel confort.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_accessible_url_text: ''
+  answer_accessible_url_text: 'Source : Eaufrance, le service public d’information
+    sur l’eau'
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -30497,7 +30508,7 @@
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 797
-  text: Copy of à venir
+  text: Quelle est l'empreinte eau moyenne quotidienne d'un Français ?
   hint: ''
   type: QCM
   category: 2
@@ -30505,19 +30516,24 @@
   - 33
   - 217
   - 218
-  difficulty: 2
+  difficulty: 3
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: 900 litres
+  answer_option_b: 2900 litres
+  answer_option_c: 4900 litres
+  answer_option_d: 6900 litres
+  answer_correct: c
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: Entre son alimentation, les objets achetés et les vêtements,
+    un Français a une empreinte eau de 4900L par jour (source Ercin, A.E., et al.
+    (2012) The water footprint of France, Value of Water Research Report Series No.
+    56, UNESCO-IHE). Il faut savoir que la moitié de l'empreinte eau de la France
+    dépasse de plus de deux fois la ressource prélevée sur son sol (Ministère de la
+    Transition écologique).
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_accessible_url_text: ''
+  answer_accessible_url: https://www.eaudyssee.org/empreinte-eau-explications/
+  answer_accessible_url_text: Explications sur le site Eau’dyssée
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -30531,23 +30547,24 @@
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 798
-  text: Copy of à venir
+  text: 'Vrai ou faux : les produits d’originale ont en moyenne une empreinte eau
+    plus élevée que les produits d’origine végétale'
   hint: ''
-  type: QCM
+  type: VF
   category: 2
   tags:
-  - 33
-  - 217
-  - 218
-  difficulty: 2
+  - 37
+  - 97
+  difficulty: 1
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
+  answer_option_a: Vrai
+  answer_option_b: Faux
   answer_option_c: ''
   answer_option_d: ''
-  answer_correct: d
-  has_ordered_answers: false
-  answer_explanation: ''
+  answer_correct: a
+  has_ordered_answers: true
+  answer_explanation: Cela s’explique en particulier par la grande quantité de nourriture
+    nécessaire à l'élevage de certains animaux.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -30558,14 +30575,15 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Mylène Turban
   validator: ''
   validation_status: Brouillon
-  added: '2021-01-17'
+  added: '2022-05-01'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 799
-  text: ' à venir jusqu''à 799'
+  text: Sachant que l'empreinte eau du coton est de 10.000 litres par kg, à combien
+    s’élève l'empreinte eau d'un T-shirt ?
   hint: ''
   type: QCM
   category: 5
@@ -33010,43 +33028,40 @@
   created: '2021-02-14'
   updated: '2022-04-16'
 - id: 863
-  text: Entre 2005 et 2020, les données totales générées chaque année par l'ensemble
-    des appareils dans le monde ont été multipliées d'un facteur...
+  text: Quelle est l'empreinte eau d'un ordinateur ?
   hint: ''
   type: QCM
   category: 8
   tags:
   - 30
-  difficulty: 3
+  - 37
+  difficulty: 2
   language: Français
-  answer_option_a: de l'ordre de 50
-  answer_option_b: entre 50 et 500
-  answer_option_c: entre 500 et 8,000
-  answer_option_d: entre 50,000 et 800,000
+  answer_option_a: 1,600 litres
+  answer_option_b: 12,500 litres
+  answer_option_c: 28,000 litres
+  answer_option_d: 40,000 litres
   answer_correct: c
   has_ordered_answers: true
-  answer_explanation: 'Les données totales créées sont passées de 100 millions (2005)
-    à 800 milliards de téraoctets par an (2020) [3], c’est-à-dire ×8000. En corrigeant
-    par l’augmentation du nombre d’internautes, le ratio devient ×2000. Durant ces
-    15 ans, la quantité de données circulant dans le réseau internet a été multipliée
-    par "seulement" 100.  Attention, l''évaluation de cette masse de données est difficile
-    à réaliser : par exemple, le site Statista affirmait plutôt 50 milliards de téraoctets
-    en 2020 (donc rapport ×500). Ce chiffre pourrait être de nouveau multiplié par
-    50 sur les 15 prochaines années (d''ici 2035).'
+  answer_explanation: En réalité, il faut entre 1,500 et 2,500 litres d'eau pour fabriquer
+    un ordinateur. Le reste - soit environ 26,000 litres - est l'eau nécessaire pour
+    diluer les nombreux polluants qui ont été émis pour la fabrication et l'extraction
+    des minerais. Dans les faits, cette pollution n'est pas forcément diluée, et provoque
+    donc des pollutions locales.
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: https://fr.statista.com/infographie/17800/big-data-evolution-quantite-donnees-numeriques-creees-dans-le-monde/
+  answer_accessible_url: ''
   answer_accessible_url_text: ''
-  answer_scientific_url: https://blogs.cisco.com/sp/the-history-and-future-of-internet-traffic
+  answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
-  answer_image_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/864.png
-  answer_image_explanation: IDC, cité par [https://www.economist.com/special-report/2010/02/27/data-data-everywhere](https://www.economist.com/special-report/2010/02/27/data-data-everywhere)
+  answer_image_url: ''
+  answer_image_explanation: ''
   answer_extra_info: ''
-  author: Max Pinsard
-  validator: Matthieu Massart
-  validation_status: Validée
-  added: '2021-02-14'
+  author: Mylène Turban
+  validator: ''
+  validation_status: Brouillon
+  added: '2022-05-01'
   created: '2021-02-14'
   updated: '2022-04-16'
 - id: 864
@@ -34217,6 +34232,41 @@
   added: '2022-04-01'
   created: '2022-04-06'
   updated: '2022-04-16'
+- id: 895
+  text: Classez ces quatre pays dans l'ordre croissant de leur empreinte eau par habitant.
+  hint: ''
+  type: QCM
+  category: 7
+  tags:
+  - 37
+  difficulty: 4
+  language: Français
+  answer_option_a: 1. République démocratique du Congo / 2. Chine / 3. France / 4.
+    Etats-Unis
+  answer_option_b: 1. RD Congo / 2. France / 3. Etats-Unis / 4. Chine
+  answer_option_c: 1. France / 2. RD. Congo / 3. Chine / 4. Etats-Unis
+  answer_option_d: 1. RD. Congo / 2. France / 3. Chine / 4. Etats-Unis
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: "1. RD. Congo : 1,500 litres par jour et par habitant ; \n2.\
+    \ Chine : 2,900 l/j/hab ; \n3. France : 4,900 l/j/hab ; \n4. Etats-Unis : 7,800\
+    \ l/j/hab"
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_accessible_url_text: ''
+  answer_scientific_url: ''
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Mylène Turban
+  validator: ''
+  validation_status: Brouillon
+  added: '2022-05-01'
+  created: '2022-05-02'
+  updated: '2022-05-02'
 - id: 900
   text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
   hint: Bas carbone donc…
