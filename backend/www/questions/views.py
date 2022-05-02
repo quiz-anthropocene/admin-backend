@@ -1,3 +1,4 @@
+from dal import autocomplete
 from django.contrib.messages.views import SuccessMessageMixin
 from django.forms.models import model_to_dict
 from django.shortcuts import get_object_or_404
@@ -142,3 +143,13 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
         return mark_safe(
             f"La question <a href='{question_link}'><strong>{text_short}</strong></a> a été crée avec succès."
         )
+
+
+class QuestionAutocomplete(ContributorUserRequiredMixin, autocomplete.Select2QuerySetView):
+    def get_queryset(self):
+        qs = Question.objects.all()
+
+        if self.q:
+            qs = qs.filter(text__icontains=self.q)
+
+        return qs

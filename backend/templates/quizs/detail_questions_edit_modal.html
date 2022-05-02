@@ -1,5 +1,9 @@
 {% load django_bootstrap5 %}
 
+{% block extra_css %}
+{{ form.media.css }}
+{% endblock %}
+
 <div class="modal fade" id="quiz_detail_questions_edit_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog"  aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -29,3 +33,7 @@
         </div>
     </div>
 </div>
+
+{% block extra_js %}
+{{ form.media.js }}
+{% endblock %}

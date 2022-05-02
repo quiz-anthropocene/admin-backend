@@ -78,7 +78,7 @@ class QuizDetailQuestionListView(ContributorUserRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["quiz"] = Quiz.objects.get(id=self.kwargs.get("pk"))
-        context["quiz_question_formset"] = QuizQuestionFormSet(instance=context["quiz"])
+        context["quiz_question_formset"] = QuizQuestionFormSet()  # instance=context["quiz"]
         return context
 
 

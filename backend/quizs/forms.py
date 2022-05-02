@@ -1,3 +1,4 @@
+from dal import autocomplete
 from django import forms
 from django.forms.models import inlineformset_factory
 
@@ -35,8 +36,10 @@ class QuizEditForm(QuizCreateForm):
 class QuizQuestionEditForm(forms.ModelForm):
     class Meta:
         model = QuizQuestion
-        fields = ["order"]
-        # fields = ["question", "order"]
+        # fields = ["order"]
+        fields = ["question", "order"]
+
+    widgets = {"question": autocomplete.ModelSelect2(url="/questions/search/")}
 
 
 QuizQuestionFormSet = inlineformset_factory(Quiz, QuizQuestion, form=QuizQuestionEditForm, extra=1, can_delete=True)
