@@ -144,6 +144,9 @@ class QuizCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVi
     template_name = "quizs/create.html"
     success_url = reverse_lazy("quizs:list")
 
+    def get_initial(self):
+        return {"author": self.request.user.full_name, "author_link": self.request.user}
+
     def get_success_url(self):
         success_url = super().get_success_url()
         next_url = self.request.GET.get("next", None)
@@ -159,11 +162,3 @@ class QuizCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVi
         name_short = self.object.name if (len(self.object.name) < 20) else (self.object.name[:18] + "…")
         quiz_link = reverse_lazy("quizs:detail_view", args=[self.object.id])
         return mark_safe(f"Le quiz <a href='{quiz_link}'><strong>{name_short}</strong></a> a été crée avec succès.")
-
-    def form_valid(self, form):
-        """Set the author."""
-        quiz = form.save(commit=False)
-        quiz.author = self.request.user.full_name
-        quiz.author_link = self.request.user
-        quiz.save()
-        return super().form_valid(form)

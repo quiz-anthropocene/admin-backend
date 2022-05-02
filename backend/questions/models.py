@@ -4,6 +4,7 @@ from django.db import models
 from django.urls import reverse
 
 from core import constants
+from core.templatetags.get_verbose_name import get_verbose_name
 from core.utils import utilities
 from tags.models import Tag
 
@@ -294,7 +295,7 @@ class Question(models.Model):
             # > category rules
             if self.category is None:
                 error_message = (
-                    f"Valeur : '{self.category}' n'est pas une catégorie valide. Question {self.id}"  # noqa
+                    f"{get_verbose_name(self, 'category')} : '{self.category}' n'est pas une catégorie valide."
                 )
                 validation_errors = utilities.add_validation_error(validation_errors, "category", error_message)
             # > relation fields: "category" & "tags" ? no need
@@ -309,7 +310,7 @@ class Question(models.Model):
             ]
             for choice_field in question_choice_fields:
                 if getattr(self, choice_field[0]) not in getattr(constants, choice_field[1]):
-                    error_message = f"Valeur : '{getattr(self, choice_field[0])}' n'est pas bonne. Car pas dans les choix proposés. Question {self.id}"  # noqa
+                    error_message = f"{get_verbose_name(self, choice_field[0])} : '{getattr(self, choice_field[0])}' n'est pas bonne (car pas dans les choix proposés)."  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, choice_field[0], error_message
                     )
@@ -317,7 +318,7 @@ class Question(models.Model):
             # - QCM question must have len(answer_correct) equal to 1 ('a', 'b', 'c' or 'd')
             if self.type == constants.QUESTION_TYPE_QCM:
                 if self.answer_correct not in constants.QUESTION_TYPE_QCM_CHOICE_LIST:
-                    error_message = f"Valeur : '{self.answer_correct}' doit être 'a', 'b', 'c' ou 'd'. Car type 'QCM'. Question {self.id}"  # noqa
+                    error_message = f"{get_verbose_name(self, 'answer_correct')} : '{self.answer_correct}' doit être 'a', 'b', 'c' ou 'd' (car type 'QCM')."  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "answer_correct", error_message
                     )
@@ -325,7 +326,7 @@ class Question(models.Model):
             # - QCM-RM question must have len(answer_correct) larger than 1 and lower than 5
             if self.type == constants.QUESTION_TYPE_QCM_RM:
                 if (len(self.answer_correct) < 1) or (len(self.answer_correct) > 4):
-                    error_message = f"Valeur : '{self.answer_correct}' longueur doit être égale à 1, 2, 3 or 4 ('a', 'ab' ... 'abcd'). Car type 'QCM-RM'. Question {self.id}"  # noqa
+                    error_message = f"{get_verbose_name(self, 'answer_correct')} : '{self.answer_correct}' longueur doit être égale à 1, 2, 3 or 4 ('a', 'ab' ... 'abcd') (car type 'QCM-RM')."  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "answer_correct", error_message
                     )
@@ -334,12 +335,12 @@ class Question(models.Model):
             # - Vrai/Faux question must have has_ordered_answers checked
             if self.type == constants.QUESTION_TYPE_VF:
                 if self.answer_correct not in constants.QUESTION_TYPE_VF_CHOICE_LIST:
-                    error_message = f"Valeur : '{self.answer_correct}' doit être 'a' ou 'b'. Car type 'VF'. Question {self.id}"  # noqa
+                    error_message = f"{get_verbose_name(self, 'answer_correct')} : '{self.answer_correct}' doit être 'a' ou 'b' (car type 'VF')."  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "answer_correct", error_message
                     )
                 if not getattr(self, "has_ordered_answers"):
-                    error_message = f"Valeur : '{self.has_ordered_answers}' doit être True. Car type 'VF'. Question {self.id}"  # noqa
+                    error_message = f"{get_verbose_name(self, 'has_ordered_answers')} : '{self.has_ordered_answers}' doit être True (car type 'VF')."  # noqa
                     validation_errors = utilities.add_validation_error(
                         validation_errors, "has_ordered_answers", error_message
                     )
