@@ -30493,8 +30493,7 @@
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
-  answer_accessible_url_text: 'Source : Eaufrance, le service public d’information
-    sur l’eau'
+  answer_accessible_url_text: ''
   answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
@@ -32642,7 +32641,7 @@
   answer_extra_info: ''
   author: Alain Servigne
   validator: Matthieu Massart
-  validation_status: Validée
+  validation_status: Écartée
   added: '2021-01-29'
   created: '2021-01-30'
   updated: '2022-04-16'
@@ -37447,7 +37446,7 @@
   answer_option_c: De 1950 à 1980
   answer_option_d: de 1980 à 2010
   answer_correct: c
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: ''
   answer_audio: ''
   answer_video: ''
@@ -37481,7 +37480,7 @@
   answer_option_c: Environ 30%
   answer_option_d: Environ 70%
   answer_correct: c
-  has_ordered_answers: false
+  has_ordered_answers: true
   answer_explanation: ''
   answer_audio: ''
   answer_video: ''
