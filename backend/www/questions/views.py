@@ -14,7 +14,7 @@ from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from core.mixins import ContributorUserRequiredMixin
 from questions.filters import QuestionFilter
-from questions.forms import QuestionCreateForm, QuestionEditForm
+from questions.forms import QUESTION_FORM_FIELDS, QuestionCreateForm, QuestionEditForm
 from questions.models import Question
 from questions.tables import QuestionTable
 from quizs.models import QuizQuestion
@@ -137,6 +137,11 @@ class QuestionDetailHistoryView(ContributorUserRequiredMixin, DetailView):
             if old_record:
                 delta = new_record.diff_against(old_record, excluded_fields=["tags"])
                 context["question_history_delta"].append(delta.changes)
+            else:
+                delta_new = [
+                    {"field": k, "new": v} for k, v in record.__dict__.items() if k in QUESTION_FORM_FIELDS if v
+                ]
+                context["question_history_delta"].append(delta_new)
         return context
 
 

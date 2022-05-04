@@ -1,5 +1,5 @@
 {% extends "questions/detail_base.html" %}
-{% load custom_filters %}
+{% load custom_filters get_verbose_name %}
 
 {% block question_detail_content %}
 <div class="row">
@@ -8,26 +8,23 @@
             <table class="table-responsive table-striped table-bordered border-primary font-size-small">
                 <thead>
                     <tr>
-                        <th>Index</th>
                         <th>Date</th>
                         <th>Auteur</th>
-                        <th>Type</th>
-                        <th>Delta</th>
+                        <th>Action</th>
+                        <th>Modifications</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for record in question_history %}
                         <tr>
-                            <td>{{ forloop.counter0 }}</td>
                             <td>{{ record.history_date }}</td>
                             <td>{{ record.history_user }}</td>
-                            <td>{{ record.history_type }}</td>
-                            {# <td>{{ record.delta }}</td> #}
+                            <td>{{ record.get_history_type_display }}</td>
                             <td>
                                 <ul class="mb-0">
-                                {% for change in question_history_delta|get_list_item:forloop.counter0 %}
-                                    <li>{{ change.field }} : {{ change.old|default:"(vide)" }} -->  {{ change.new }}</li>
-                                {% endfor %}
+                                    {% for change in question_history_delta|get_list_item:forloop.counter0 %}
+                                        <li>{% get_verbose_name question change.field %} : {{ change.old|default:"(vide)" }} --> {{ change.new }}</li>
+                                    {% endfor %}
                                 </ul>
                             </td>
                         </tr>
