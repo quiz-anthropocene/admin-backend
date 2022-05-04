@@ -214,7 +214,8 @@ if not DEBUG:
 
 DEFAULT_FROM_EMAIL = "Quiz de l'Anthropocène <noreply@quizanthropocene.fr>"
 DEFAULT_FROM_NAME = "Quiz de l'Anthropocène"
-SERVER_EMAIL = DEFAULT_FROM_EMAIL
+SERVER_EMAIL = os.getenv("TECH_EMAIL")
+ADMINS = os.getenv("ADMINS")
 
 SIB_NEWSLETTER_LIST_ID = os.getenv("SIB_NEWSLETTER_LIST_ID")
 SIB_NEWSLETTER_DOI_TEMPLATE_ID = os.getenv("SIB_NEWSLETTER_DOI_TEMPLATE_ID")
