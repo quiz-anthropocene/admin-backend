@@ -6,6 +6,7 @@ from www.questions.views import (
     QuestionCreateView,
     QuestionDetailContributionListView,
     QuestionDetailEditView,
+    QuestionDetailHistoryView,
     QuestionDetailQuizListView,
     QuestionDetailStatsView,
     QuestionDetailView,
@@ -33,6 +34,7 @@ urlpatterns = [
                 path("quizs/", QuestionDetailQuizListView.as_view(), name="detail_quizs"),
                 path("comments/", QuestionDetailContributionListView.as_view(), name="detail_contributions"),
                 path("stats/", QuestionDetailStatsView.as_view(), name="detail_stats"),
+                path("history/", QuestionDetailHistoryView.as_view(), name="detail_history"),
             ]
         ),
     ),

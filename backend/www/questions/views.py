@@ -119,6 +119,27 @@ class QuestionDetailStatsView(ContributorUserRequiredMixin, DetailView):
         return context
 
 
+class QuestionDetailHistoryView(ContributorUserRequiredMixin, DetailView):
+    model = Question
+    template_name = "questions/detail_history.html"
+    context_object_name = "question"
+
+    def get_object(self):
+        return get_object_or_404(Question, id=self.kwargs.get("pk"))
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["question_history"] = self.get_object().history.all()
+        context["question_history_delta"] = list()
+        for record in context["question_history"]:
+            new_record = record
+            old_record = record.prev_record
+            if old_record:
+                delta = new_record.diff_against(old_record, excluded_fields=["tags"])
+                context["question_history_delta"].append(delta.changes)
+        return context
+
+
 class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = QuestionCreateForm
     template_name = "questions/create.html"
