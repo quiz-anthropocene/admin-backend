@@ -2,12 +2,12 @@ from datetime import datetime
 from io import StringIO
 
 from django.conf import settings
-from django.contrib import admin
 from django.core import management
 from django.utils.html import mark_safe
 from import_export import fields, resources
 from import_export.admin import ImportMixin
 from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
+from simple_history.admin import SimpleHistoryAdmin
 
 from categories.models import Category
 from core import constants as api_constants
@@ -20,8 +20,6 @@ from tags.models import Tag
 
 
 class QuestionResource(resources.ModelResource):
-    """"""
-
     category = fields.Field(
         column_name="category",
         attribute="category",
@@ -94,7 +92,7 @@ class QuestionResource(resources.ModelResource):
         report_skipped = False
 
 
-class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
+class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
     resource_class = QuestionResource
     list_display = [
         "id",

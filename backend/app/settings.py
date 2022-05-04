@@ -50,6 +50,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     "corsheaders",  # django-cors-headers
     "anymail",  # django-anymail[sendinblue]
+    "simple_history",  # django-simple-history
     "django_bootstrap5",  # django-bootstrap5
     "django_tables2",  # django-tables2
     "rest_framework",  # djangorestframework
@@ -80,9 +81,10 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # whitenoise
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",  # django-cors-headers
+    "simple_history.middleware.HistoryRequestMiddleware",  # django-simple-history
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -200,6 +202,13 @@ SECURE_HSTS_SECONDS = os.getenv("SECURE_HSTS_SECONDS")
 
 AUTH_USER_MODEL = "users.User"
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
+
+
+# Django Simple History
+# https://django-simple-history.readthedocs.io/
+# ------------------------------------------------------------------------------
+
+SIMPLE_HISTORY_HISTORY_ID_USE_UUID = True
 
 
 # Emails

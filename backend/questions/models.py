@@ -2,6 +2,7 @@ from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.urls import reverse
+from simple_history.models import HistoricalRecords
 
 from core import constants
 from core.templatetags.get_verbose_name import get_verbose_name
@@ -178,6 +179,8 @@ class Question(models.Model):
     added = models.DateField(verbose_name="Date d'ajout", blank=True, null=True)
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+
+    history = HistoricalRecords()
 
     objects = QuestionQuerySet.as_manager()
 
