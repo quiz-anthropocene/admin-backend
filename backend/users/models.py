@@ -16,6 +16,14 @@ class UserQueryset(models.QuerySet):
             ]
         )
 
+    def all_super_contributors(self):
+        return self.filter(
+            roles__overlap=[
+                constants.USER_ROLE_SUPER_CONTRIBUTOR,
+                constants.USER_ROLE_ADMINISTRATOR,
+            ]
+        )
+
     def all_administrators(self):
         return self.filter(
             roles__overlap=[
@@ -60,6 +68,9 @@ class UserManager(BaseUserManager):
 
     def all_contributors(self):
         return self.get_queryset().all_contributors()
+
+    def all_super_contributors(self):
+        return self.get_queryset().all_super_contributors()
 
     def all_administrators(self):
         return self.get_queryset().all_administrators()
@@ -110,9 +121,20 @@ class User(AbstractUser):
         return self.quizs.count()
 
     @property
+    def has_role_contributor(self) -> bool:
+        ROLES_ALLOWED = [
+            constants.USER_ROLE_ADMINISTRATOR,
+            constants.USER_ROLE_SUPER_CONTRIBUTOR,
+            constants.USER_ROLE_CONTRIBUTOR,
+        ]
+        return len(self.roles) and any([role in ROLES_ALLOWED for role in self.roles])
+
+    @property
     def has_role_super_contributor(self) -> bool:
-        return constants.USER_ROLE_SUPER_CONTRIBUTOR in self.roles
+        ROLES_ALLOWED = [constants.USER_ROLE_ADMINISTRATOR, constants.USER_ROLE_SUPER_CONTRIBUTOR]
+        return len(self.roles) and any([role in ROLES_ALLOWED for role in self.roles])
 
     @property
     def has_role_admin(self) -> bool:
-        return constants.USER_ROLE_ADMINISTRATOR in self.roles
+        ROLES_ALLOWED = [constants.USER_ROLE_ADMINISTRATOR]
+        return len(self.roles) and any([role in ROLES_ALLOWED for role in self.roles])
