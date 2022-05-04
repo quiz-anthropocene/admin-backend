@@ -30476,9 +30476,8 @@
   type: QCM
   category: 2
   tags:
-  - 33
-  - 217
-  - 218
+  - 1
+  - 37
   difficulty: 3
   language: Français
   answer_option_a: 50 litres par jour
@@ -30494,16 +30493,16 @@
   answer_video: ''
   answer_accessible_url: ''
   answer_accessible_url_text: ''
-  answer_scientific_url: ''
+  answer_scientific_url: https://www.eaufrance.fr/
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Mylène Turban
   validator: ''
   validation_status: Brouillon
-  added: '2021-01-17'
+  added: '2022-05-01'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 797
@@ -30512,9 +30511,8 @@
   type: QCM
   category: 2
   tags:
-  - 33
-  - 217
-  - 218
+  - 1
+  - 37
   difficulty: 3
   language: Français
   answer_option_a: 900 litres
@@ -30533,16 +30531,17 @@
   answer_video: ''
   answer_accessible_url: https://www.eaudyssee.org/empreinte-eau-explications/
   answer_accessible_url_text: Explications sur le site Eau’dyssée
-  answer_scientific_url: ''
-  answer_scientific_url_text: ''
+  answer_scientific_url: https://waterfootprint.org/en/resources/publications/value-water-research-report-series-unesco-ihe/
+  answer_scientific_url_text: Ercin, A.E., Mekonnen, M.M and Hoekstra, A.Y. (2012)
+    The water footprint of France, Value of Water Research Report Series No. 56, UNESCO-IHE
   answer_reading_recommendation: ''
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Mylène Turban
   validator: ''
   validation_status: Brouillon
-  added: '2021-01-17'
+  added: '2022-05-01'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 798
@@ -30587,18 +30586,20 @@
   type: QCM
   category: 5
   tags:
-  - 33
-  - 217
-  - 218
-  difficulty: 2
+  - 37
+  - 105
+  difficulty: 1
   language: Français
-  answer_option_a: ''
-  answer_option_b: ''
-  answer_option_c: ''
-  answer_option_d: ''
-  answer_correct: d
+  answer_option_a: 1,000 litres
+  answer_option_b: 2,500 litres
+  answer_option_c: 5,000 litres
+  answer_option_d: 7,500 litres
+  answer_correct: b
   has_ordered_answers: false
-  answer_explanation: ''
+  answer_explanation: Un T-Shirt est composé de 250gr de coton, son empreinte eau
+    est donc d'environ 2500L. Cela comprend l'eau qui a été utilisée pour le coton,
+    le transport, l'emballage, l'énergie utilisée par l'usine, etc. D'autres matières
+    telles que le lin ou le chanvre sont beaucoup moins consommatrices en eau.
   answer_audio: ''
   answer_video: ''
   answer_accessible_url: ''
@@ -30609,10 +30610,10 @@
   answer_image_url: ''
   answer_image_explanation: ''
   answer_extra_info: ''
-  author: Restons les pieds sur terre
+  author: Mylène Turban
   validator: ''
   validation_status: Brouillon
-  added: '2021-01-05'
+  added: '2022-05-01'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 800
@@ -32641,7 +32642,7 @@
   answer_extra_info: ''
   author: Alain Servigne
   validator: Matthieu Massart
-  validation_status: Écartée
+  validation_status: Validée
   added: '2021-01-29'
   created: '2021-01-30'
   updated: '2022-04-16'
@@ -34266,6 +34267,155 @@
   added: '2022-05-01'
   created: '2022-05-02'
   updated: '2022-05-02'
+- id: 896
+  text: Quel est le fleuve non américain sur lequel les Etats-Unis ont la plus grande
+    empreinte eau ?
+  hint: ''
+  type: QCM
+  category: 7
+  tags:
+  - 37
+  - 267
+  difficulty: 3
+  language: Français
+  answer_option_a: L'Amazone (Amérique du Sud)
+  answer_option_b: Le Yangtze (Chine)
+  answer_option_c: Le Mekong (Asie du Sud Est)
+  answer_option_d: Le Gange (Inde)
+  answer_correct: b
+  has_ordered_answers: false
+  answer_explanation: 80% de l'empreinte eau des Etats-Unis se concentre aux Etats-Unis,
+    et plus de la moitié de cette dernière sur le Mississippi, du fait essentiellement
+    de l'élevage et de la production agricole. Les 20% d'empreinte eau restante sont
+    à l'étranger, et notamment sur le fleuve Yangtze, dus à l’empreinte des produits
+    importés de Chine.
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_accessible_url_text: ''
+  answer_scientific_url: ''
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Mylène Turban
+  validator: ''
+  validation_status: Brouillon
+  added: '2022-05-01'
+  created: '2022-05-04'
+  updated: '2022-05-04'
+- id: 897
+  text: 'Classez ces réservoirs d’eau du plus grand au plus petit : A. Océans et mers
+    ; B. Cours d’eau et lacs ; C. Nappes souterraines ; D. Glaciers et calottes glaciaires'
+  hint: ''
+  type: QCM
+  category: 7
+  tags:
+  - 9
+  - 37
+  - 268
+  difficulty: 2
+  language: Français
+  answer_option_a: C, D, A, B
+  answer_option_b: A, B, D, C
+  answer_option_c: A, C, D, B
+  answer_option_d: A, D, C, B
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: 96,5% de l'eau sur Terre est dans les océans et les mers. 1%
+    sont des lacs salés. Il n'y a donc que 2,5 % d'eau douce sur Terre, répartis majoritairement
+    entre les glaciers (53% de l'eau douce) et les nappes (46% de l'eau douce). A
+    peine 0,23% de l'eau douce sur Terre est dans les rivières. Sur toute l'eau disponible
+    sur Terre, à peine 1% est utilisable par l'Homme.
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_accessible_url_text: ''
+  answer_scientific_url: ''
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Mylène Turban
+  validator: ''
+  validation_status: Brouillon
+  added: '2022-05-01'
+  created: '2022-05-04'
+  updated: '2022-05-04'
+- id: 898
+  text: A l'échelle mondiale, quel est l'usage prédominant pour les prélèvements d'eau
+    ?
+  hint: ''
+  type: QCM
+  category: 7
+  tags:
+  - 37
+  difficulty: 1
+  language: Français
+  answer_option_a: L'agriculture
+  answer_option_b: L'industrie
+  answer_option_c: Les usages domestiques
+  answer_option_d: ''
+  answer_correct: a
+  has_ordered_answers: false
+  answer_explanation: 70% de l'eau est prélevée pour l'agriculture, 20% pour les usages
+    industriels et 10% pour les usages domestiques. En France, l'eau est majoritairement
+    prélevée pour l'énergie, mais majoritairement consommée par l'agriculture.
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_accessible_url_text: ''
+  answer_scientific_url: ''
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Mylène Turban
+  validator: ''
+  validation_status: Brouillon
+  added: '2022-05-01'
+  created: '2022-05-04'
+  updated: '2022-05-04'
+- id: 899
+  text: Quelle proportion de la population mondiale connaît actuellement des problèmes
+    d'accès à l'eau au moins une partie de l'année ?
+  hint: ''
+  type: QCM
+  category: 7
+  tags:
+  - 37
+  - 269
+  difficulty: 3
+  language: Français
+  answer_option_a: 10%
+  answer_option_b: 25%
+  answer_option_c: 33%
+  answer_option_d: 50%
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: Ce chiffre est issu du groupe de travail II du GIEC, relatif
+    aux impacts, à l'adaptation et à la vulnérabilité du changement climatique. Le
+    rapport indique que cette proportion va augmenter avec l’aggravation dérèglement
+    climatique.
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_accessible_url_text: ''
+  answer_scientific_url: ''
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Mylène Turban
+  validator: ''
+  validation_status: Brouillon
+  added: '2022-05-01'
+  created: '2022-05-04'
+  updated: '2022-05-04'
 - id: 900
   text: Quel est le cout du MWh Nucléaire étendu à 20 ans en $ / MWh ?
   hint: Bas carbone donc…
