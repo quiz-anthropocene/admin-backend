@@ -127,14 +127,14 @@ class User(AbstractUser):
             constants.USER_ROLE_SUPER_CONTRIBUTOR,
             constants.USER_ROLE_CONTRIBUTOR,
         ]
-        return len(self.roles) and any([role in ROLES_ALLOWED for role in self.roles])
+        return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
 
     @property
     def has_role_super_contributor(self) -> bool:
         ROLES_ALLOWED = [constants.USER_ROLE_ADMINISTRATOR, constants.USER_ROLE_SUPER_CONTRIBUTOR]
-        return len(self.roles) and any([role in ROLES_ALLOWED for role in self.roles])
+        return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
 
     @property
     def has_role_admin(self) -> bool:
         ROLES_ALLOWED = [constants.USER_ROLE_ADMINISTRATOR]
-        return len(self.roles) and any([role in ROLES_ALLOWED for role in self.roles])
+        return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
