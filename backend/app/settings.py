@@ -49,6 +49,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     "corsheaders",  # django-cors-headers
+    "anymail",  # django-anymail[sendinblue]
     "django_bootstrap5",  # django-bootstrap5
     "django_tables2",  # django-tables2
     "rest_framework",  # djangorestframework
@@ -199,6 +200,28 @@ AUTH_USER_MODEL = "users.User"
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 
+# Emails
+# ------------------------------------------------------------------------------
+
+SIB_API_KEY = os.getenv("SIB_API_KEY")
+ANYMAIL = {
+    "SENDINBLUE_API_KEY": SIB_API_KEY,
+}
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+if not DEBUG:
+    EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
+
+DEFAULT_FROM_EMAIL = "Quiz de l'Anthropocène <noreply@quizanthropocene.fr>"
+DEFAULT_FROM_NAME = "Quiz de l'Anthropocène"
+SERVER_EMAIL = os.getenv("TECH_EMAIL")
+ADMINS = os.getenv("ADMINS")
+
+SIB_NEWSLETTER_LIST_ID = os.getenv("SIB_NEWSLETTER_LIST_ID")
+SIB_NEWSLETTER_DOI_TEMPLATE_ID = os.getenv("SIB_NEWSLETTER_DOI_TEMPLATE_ID")
+SIB_CONTACT_DOI_ENDPOINT = "https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation"
+
+
 # Django Bootstrap5
 # https://django-bootstrap5.readthedocs.io/
 # ------------------------------------------------------------------------------
@@ -288,15 +311,6 @@ NOTION_QUESTIONS_TABLE_URL = os.getenv("NOTION_QUESTIONS_TABLE_URL")
 NOTION_CONTRIBUTION_TABLE_URL = os.getenv("NOTION_CONTRIBUTION_TABLE_URL")
 NOTION_IMPORT_STATS_TABLE_URL = os.getenv("NOTION_IMPORT_STATS_TABLE_URL")
 NOTION_GLOSSARY_TABLE_URL = os.getenv("NOTION_GLOSSARY_TABLE_URL")
-
-
-# Sendinblue (Newsletter)
-# ------------------------------------------------------------------------------
-
-SIB_API_KEY = os.getenv("SIB_API_KEY")
-SIB_NEWSLETTER_LIST_ID = os.getenv("SIB_NEWSLETTER_LIST_ID")
-SIB_NEWSLETTER_DOI_TEMPLATE_ID = os.getenv("SIB_NEWSLETTER_DOI_TEMPLATE_ID")
-SIB_CONTACT_DOI_ENDPOINT = "https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation"
 
 
 # django-ckeditor

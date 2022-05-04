@@ -9,9 +9,11 @@
                     <li class="nav-item">
                         <a href="{{ CONFIGURATION.application_frontend_url }}" target="_blank" class="nav-link px-2 text-muted">Application</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="{{ METABASE_DASHBOARD_URL }}" target="_blank" class="nav-link px-2 text-muted">Statistiques</a>
-                    </li>
+                    {% if user.is_authenticated and user.has_role_contributor %}
+                        <li class="nav-item">
+                            <a href="{{ METABASE_DASHBOARD_URL }}" target="_blank" class="nav-link px-2 text-muted">Statistiques</a>
+                        </li>
+                    {% endif %}
                     <li class="nav-item">
                         <a href="{{ CONFIGURATION.application_open_source_code_url }}" target="_blank" class="nav-link px-2 text-muted">Github</a>
                     </li>

@@ -1,3 +1,11 @@
+{% if DEBUG %}
+    {% include "includes/_header_notice_env.html" %}
+{% endif %}
+
+{% if user.is_authenticated and user.has_role_contributor %}
+    {% include "includes/_header_notice_beta.html" %}
+{% endif %}
+
 <header>
     <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
@@ -8,18 +16,20 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 {% if user.is_authenticated %}
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item">
-                            <a href="{% url 'profile:home' %}" class="nav-link">Mon espace</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'questions:list' %}" class="nav-link">Questions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'quizs:list' %}" class="nav-link">Quizs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'contributions:list' %}" class="nav-link">Contributions</a>
-                        </li>
+                        {% if user.has_role_contributor %}
+                            <li class="nav-item">
+                                <a href="{% url 'profile:home' %}" class="nav-link">Mon espace</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'questions:list' %}" class="nav-link">Questions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'quizs:list' %}" class="nav-link">Quizs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'contributions:list' %}" class="nav-link">Contributions</a>
+                            </li>
+                        {% endif %}
                     </ul>
                     <a href="{% url 'auth:logout' %}">
                         <span>Se déconnecter</span>

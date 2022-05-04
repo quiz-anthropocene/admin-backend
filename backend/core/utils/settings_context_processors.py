@@ -14,5 +14,7 @@ def expose_settings(request):
 
     return {
         "CONFIGURATION": configuration,
+        "DEBUG": settings.DEBUG,
+        "TECH_EMAIL": settings.SERVER_EMAIL,
         "METABASE_DASHBOARD_URL": settings.METABASE_DASHBOARD_URL,
     }

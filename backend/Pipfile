@@ -31,6 +31,7 @@ pytz = "*"
 PyYAML = "*"
 sqlparse = "*"
 whitenoise = "*"
+django-anymail = {extras = ["sendinblue"], version = "*"}
 
 [dev-packages]
 black = "*"
