@@ -16,6 +16,13 @@ class UserQueryset(models.QuerySet):
             ]
         )
 
+    def all_administrators(self):
+        return self.filter(
+            roles__overlap=[
+                constants.USER_ROLE_ADMINISTRATOR,
+            ]
+        )
+
 
 class UserManager(BaseUserManager):
     def get_queryset(self):
@@ -53,6 +60,9 @@ class UserManager(BaseUserManager):
 
     def all_contributors(self):
         return self.get_queryset().all_contributors()
+
+    def all_administrators(self):
+        return self.get_queryset().all_administrators()
 
 
 class User(AbstractUser):

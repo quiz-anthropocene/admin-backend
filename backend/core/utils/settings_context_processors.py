@@ -14,5 +14,6 @@ def expose_settings(request):
 
     return {
         "CONFIGURATION": configuration,
+        "DEBUG": settings.DEBUG,
         "METABASE_DASHBOARD_URL": settings.METABASE_DASHBOARD_URL,
     }

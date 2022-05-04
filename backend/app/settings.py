@@ -208,7 +208,9 @@ ANYMAIL = {
     "SENDINBLUE_API_KEY": SIB_API_KEY,
 }
 
-EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+if not DEBUG:
+    EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
 
 DEFAULT_FROM_EMAIL = "Quiz de l'Anthropocène <noreply@quizanthropocene.fr>"
 DEFAULT_FROM_NAME = "Quiz de l'Anthropocène"
