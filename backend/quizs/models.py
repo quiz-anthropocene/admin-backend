@@ -5,6 +5,7 @@ from django.db import models
 from django.db.models import Avg, Count
 from django.urls import reverse
 from django.utils.text import slugify
+from simple_history.models import HistoricalRecords
 
 from core import constants
 from questions.models import Question
@@ -90,6 +91,8 @@ class Quiz(models.Model):
     # timestamps
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+
+    history = HistoricalRecords()
 
     objects = QuizQuerySet.as_manager()
 

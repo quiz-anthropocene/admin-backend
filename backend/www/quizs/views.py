@@ -13,8 +13,8 @@ from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from core.mixins import ContributorUserRequiredMixin
 from quizs.filters import QuizFilter
-from quizs.forms import QuizCreateForm, QuizEditForm, QuizQuestionFormSet
 from quizs.models import Quiz
+from quizs.forms import QUIZ_FORM_FIELDS, QuizCreateForm, QuizEditForm, QuizQuestionFormSet
 from quizs.tables import QuizTable
 from stats.models import QuizAggStat
 
@@ -133,6 +133,30 @@ class QuizDetailStatsView(ContributorUserRequiredMixin, DetailView):
         context["quiz_agg_stat_dict"] = model_to_dict(self.get_object())
         del context["quiz_agg_stat_dict"]["quiz"]
         context["quiz"] = Quiz.objects.get(id=self.kwargs.get("pk"))
+        return context
+
+
+class QuizDetailHistoryView(ContributorUserRequiredMixin, DetailView):
+    model = Quiz
+    template_name = "quizs/detail_history.html"
+    context_object_name = "quiz"
+
+    def get_object(self):
+        return get_object_or_404(Quiz, id=self.kwargs.get("pk"))
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["quiz_history"] = self.get_object().history.all()
+        context["quiz_history_delta"] = list()
+        for record in context["quiz_history"]:
+            new_record = record
+            old_record = record.prev_record
+            if old_record:
+                delta = new_record.diff_against(old_record, excluded_fields=["tags"])
+                context["quiz_history_delta"].append(delta.changes)
+            else:
+                delta_new = [{"field": k, "new": v} for k, v in record.__dict__.items() if k in QUIZ_FORM_FIELDS if v]
+                context["quiz_history_delta"].append(delta_new)
         return context
 
 
