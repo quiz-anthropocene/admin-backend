@@ -445,5 +445,7 @@ class QuizRelationship(models.Model):
 @receiver(post_save, sender=QuizRelationship)
 @receiver(post_delete, sender=QuizRelationship)
 def quiz_set_flatten_relationship_list(sender, instance, **kwargs):
-    instance.quiz.relationship_list = instance.quiz.relationships_list
-    instance.quiz.save()
+    instance.from_quiz.relationship_list = instance.from_quiz.relationships_list
+    instance.from_quiz.save()
+    instance.to_quiz.relationship_list = instance.to_quiz.relationships_list
+    instance.to_quiz.save()
