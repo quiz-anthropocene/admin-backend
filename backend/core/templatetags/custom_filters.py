@@ -45,5 +45,5 @@ def get_list_item_filter(obj, index):
 @register.filter(name="flatten_list")
 def flatten_list(obj):
     if type(obj) == list:
-        return ", ".join(obj)
+        return ", ".join([str(item) for item in obj])
     return obj

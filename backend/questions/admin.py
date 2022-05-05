@@ -150,7 +150,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)
-        return qs.select_related("category", "author", "validator").prefetch_related("tags", "quizs")
+        return qs.select_related("category", "author", "validator", "agg_stats").prefetch_related("tags", "quizs")
 
     def has_add_permission(self, request, obj=None):
         return False

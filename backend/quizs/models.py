@@ -4,6 +4,8 @@ from django.contrib.postgres.fields import ArrayField
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models import Avg, Count
+from django.db.models.signals import m2m_changed, post_delete, post_save, pre_save
+from django.dispatch import receiver
 from django.urls import reverse
 from django.utils.text import slugify
 from simple_history.models import HistoricalRecords
@@ -140,7 +142,7 @@ class Quiz(models.Model):
 
     def set_flatten_fields(self):
         # self.tag_list = self.tags_list  # see m2m_changed
-        # self.question_list = self.questions_list  # see m2m_changed
+        # self.question_list = self.questions_list_with_order  # see m2m_changed
         # self.relationship_list = self.relationships_list  # see m2m_changed
         self.author_string = str(self.author_link) if self.author_link else ""
 
@@ -157,6 +159,14 @@ class Quiz(models.Model):
     @property
     def question_count(self) -> int:
         return self.questions.count()
+
+    @property
+    def questions_list(self) -> list:
+        return list(self.questions.values_list("id", flat=True))
+
+    @property
+    def questions_list_with_order(self) -> list:
+        return list(self.quizquestion_set.values_list("question_id", flat=True))
 
     @property
     def tags_list(self) -> list:
@@ -297,6 +307,7 @@ class Quiz(models.Model):
                     raise ValidationError({"questions": "Un quiz 'published' doit comporter au moins 1 question."})
 
 
+@receiver(pre_save, sender=Quiz)
 def quiz_validate_fields(sender, instance, **kwargs):
     """
     Validation for fixtures
@@ -309,23 +320,20 @@ def quiz_validate_fields(sender, instance, **kwargs):
         raise ValidationError({"id": f"Valeur : 'empty'. " f"Quiz: {instance}"})
 
 
+@receiver(m2m_changed, sender=Quiz.tags.through)
 def quiz_set_flatten_tag_list(sender, instance, action, **kwargs):
     if action in ("post_add", "post_remove", "post_clear"):
         instance.tag_list = instance.tags_list
         instance.save()
 
 
+@receiver(post_save, sender=Quiz)
 def quiz_create_agg_stat_instance(sender, instance, created, **kwargs):
     if created:
         if not hasattr(instance, "agg_stats"):
             from stats.models import QuizAggStat
 
             QuizAggStat.objects.create(quiz=instance)
-
-
-models.signals.pre_save.connect(quiz_validate_fields, sender=Quiz)
-models.signals.m2m_changed.connect(quiz_set_flatten_tag_list, sender=Quiz.tags.through)
-models.signals.post_save.connect(quiz_create_agg_stat_instance, sender=Quiz)
 
 
 class QuizQuestion(models.Model):
@@ -363,6 +371,14 @@ class QuizQuestion(models.Model):
         if not self.order:  # 0 or None
             last_quiz_question = QuizQuestion.objects.filter(quiz=self.quiz).last()
             self.order = (last_quiz_question.order + 1) if last_quiz_question else 1
+
+
+# @receiver(m2m_changed, sender=Quiz.questions.through)
+@receiver(post_save, sender=QuizQuestion)
+@receiver(post_delete, sender=QuizQuestion)
+def quiz_set_flatten_question_list(sender, instance, **kwargs):
+    instance.quiz.question_list = instance.quiz.questions_list_with_order
+    instance.quiz.save()
 
 
 class QuizRelationship(models.Model):

@@ -2,6 +2,8 @@ from django.conf import settings
 from django.contrib.postgres.fields import ArrayField
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.db.models.signals import m2m_changed, post_save, pre_save
+from django.dispatch import receiver
 from django.urls import reverse
 from simple_history.models import HistoricalRecords
 
@@ -200,7 +202,7 @@ class Question(models.Model):
         ordering = ["pk"]
 
     def __str__(self):
-        return f"{self.id} - {self.category} - {self.text}"
+        return f"{self.id} - {self.text}"
 
     def set_flatten_fields(self):
         self.category_string = str(self.category) if self.category else ""
@@ -367,6 +369,7 @@ class Question(models.Model):
             raise ValidationError(validation_errors)
 
 
+@receiver(pre_save, sender=Question)
 def question_validate_fields(sender, instance, **kwargs):
     """
     Validation for fixtures
@@ -379,20 +382,17 @@ def question_validate_fields(sender, instance, **kwargs):
         raise ValidationError({"id": f"Valeur : 'empty'. " f"Question : {instance.id}"})
 
 
+@receiver(m2m_changed, sender=Question.tags.through)
 def question_set_flatten_tag_list(sender, instance, action, **kwargs):
     if action in ("post_add", "post_remove", "post_clear"):
         instance.tag_list = instance.tags_list
         instance.save()
 
 
+@receiver(post_save, sender=Question)
 def question_create_agg_stat_instance(sender, instance, created, **kwargs):
     if created:
         if not hasattr(instance, "agg_stats"):
             from stats.models import QuestionAggStat
 
             QuestionAggStat.objects.create(question=instance)
-
-
-models.signals.pre_save.connect(question_validate_fields, sender=Question)
-models.signals.m2m_changed.connect(question_set_flatten_tag_list, sender=Question.tags.through)
-models.signals.post_save.connect(question_create_agg_stat_instance, sender=Question)
