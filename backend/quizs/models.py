@@ -142,7 +142,7 @@ class Quiz(models.Model):
 
     def set_flatten_fields(self):
         # self.tag_list = self.tags_list  # see m2m_changed
-        # self.question_list = self.questions_list_with_order  # see m2m_changed
+        # self.question_list = self.questions_id_list_with_order  # see m2m_changed
         # self.relationship_list = self.relationships_list  # see m2m_changed
         self.author_string = str(self.author_link) if self.author_link else ""
 
@@ -161,11 +161,11 @@ class Quiz(models.Model):
         return self.questions.count()
 
     @property
-    def questions_list(self) -> list:
+    def questions_id_list(self) -> list:
         return list(self.questions.values_list("id", flat=True))
 
     @property
-    def questions_list_with_order(self) -> list:
+    def questions_id_list_with_order(self) -> list:
         return list(self.quizquestion_set.values_list("question_id", flat=True))
 
     @property
@@ -385,8 +385,10 @@ class QuizQuestion(models.Model):
 @receiver(post_save, sender=QuizQuestion)
 @receiver(post_delete, sender=QuizQuestion)
 def quiz_set_flatten_question_list(sender, instance, **kwargs):
-    instance.quiz.question_list = instance.quiz.questions_list_with_order
+    instance.quiz.question_list = instance.quiz.questions_id_list_with_order
     instance.quiz.save()
+    instance.question.quiz_list = instance.question.quizs_id_list
+    instance.question.save()
 
 
 class QuizRelationship(models.Model):

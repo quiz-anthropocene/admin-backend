@@ -30,6 +30,13 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name="historicalquestion",
+            name="quiz_list",
+            field=django.contrib.postgres.fields.ArrayField(
+                base_field=models.PositiveIntegerField(), blank=True, default=list, size=None, verbose_name="Quizs"
+            ),
+        ),
+        migrations.AddField(
+            model_name="historicalquestion",
             name="validator_string",
             field=models.CharField(blank=True, max_length=300, verbose_name="Validateur"),
         ),
@@ -59,5 +66,12 @@ class Migration(migrations.Migration):
             model_name="question",
             name="tags",
             field=models.ManyToManyField(blank=True, related_name="questions", to="tags.tag", verbose_name="Tags"),
+        ),
+        migrations.AddField(
+            model_name="question",
+            name="quiz_list",
+            field=django.contrib.postgres.fields.ArrayField(
+                base_field=models.PositiveIntegerField(), blank=True, default=list, size=None, verbose_name="Quizs"
+            ),
         ),
     ]

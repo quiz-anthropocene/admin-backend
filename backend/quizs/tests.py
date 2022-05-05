@@ -30,13 +30,13 @@ class QuizModelTest(TestCase):
     def test_question_count(self):
         self.assertEqual(self.quiz.question_count, 2)
 
-    def test_questions_list(self):
-        self.assertEqual(len(self.quiz.questions_list), 2)
-        self.assertEqual(self.quiz.questions_list[0], self.question_1.id)
+    def test_questions_id_list(self):
+        self.assertEqual(len(self.quiz.questions_id_list), 2)
+        self.assertEqual(self.quiz.questions_id_list[0], self.question_1.id)
 
-    def test_questions_list_with_order(self):
-        self.assertEqual(len(self.quiz.questions_list_with_order), 2)
-        self.assertEqual(self.quiz.questions_list_with_order[0], self.question_2.id)
+    def test_questions_id_list_with_order(self):
+        self.assertEqual(len(self.quiz.questions_id_list_with_order), 2)
+        self.assertEqual(self.quiz.questions_id_list_with_order[0], self.question_2.id)
 
     def test_tags_list(self):
         self.assertEqual(len(self.quiz.tags_list), 2)
@@ -70,16 +70,16 @@ class QuizModelSaveTest(TestCase):
         QuizQuestion.objects.create(quiz=self.quiz, question=question_1, order=2)
         # self.quiz.save()  # no need to run save(), m2m_changed signal was triggered above
         self.assertEqual(self.quiz.questions.count(), 1)
-        self.assertEqual(len(self.quiz.questions_list), 1)
-        self.assertEqual(len(self.quiz.questions_list_with_order), 1)
-        self.assertEqual(self.quiz.questions_list_with_order[0], question_1.id)
+        self.assertEqual(len(self.quiz.questions_id_list), 1)
+        self.assertEqual(len(self.quiz.questions_id_list_with_order), 1)
+        self.assertEqual(self.quiz.questions_id_list_with_order[0], question_1.id)
         question_2 = QuestionFactory()
         self.quiz.questions.add(question_2, through_defaults={"order": 1})
         # self.quiz.save()  # no need to run save(), m2m_changed signal was triggered above
         self.assertEqual(self.quiz.questions.count(), 2)
-        self.assertEqual(len(self.quiz.questions_list), 2)
-        self.assertEqual(len(self.quiz.questions_list_with_order), 2)
-        self.assertEqual(self.quiz.questions_list_with_order[0], question_2.id)
+        self.assertEqual(len(self.quiz.questions_id_list), 2)
+        self.assertEqual(len(self.quiz.questions_id_list_with_order), 2)
+        self.assertEqual(self.quiz.questions_id_list_with_order[0], question_2.id)
 
         quiz_2 = QuizFactory(name="Un autre quiz")
         QuizRelationship.objects.create(from_quiz=self.quiz, to_quiz=quiz_2, status="suivant")

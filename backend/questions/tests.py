@@ -3,6 +3,7 @@ from django.test import TestCase
 from categories.factories import CategoryFactory
 from questions.factories import QuestionFactory
 from quizs.factories import QuizFactory
+from quizs.models import QuizQuestion
 from tags.factories import TagFactory
 from users.factories import UserFactory
 
@@ -61,3 +62,17 @@ class QuestionModelSaveTest(TestCase):
         self.assertEqual(self.question.tags.count(), 2 + 1)
         self.assertEqual(len(self.question.tag_list), 3)
         self.assertEqual(self.question.tag_list[0], tag_3.name)
+
+    def test_update_m2m_through_flatten_fields_on_save(self):
+        quiz_1 = QuizFactory(name="Quiz 1")
+        QuizQuestion.objects.create(question=self.question, quiz=quiz_1, order=5)
+        # self.question.save()  # no need to run save(), m2m_changed signal was triggered above
+        self.assertEqual(self.question.quizs.count(), 1)
+        self.assertEqual(len(self.question.quizs_id_list), 1)
+        self.assertEqual(self.question.quizs_id_list[0], quiz_1.id)
+        quiz_2 = QuizFactory(name="Un autre quiz")
+        self.question.quizs.add(quiz_2, through_defaults={"order": 3})
+        # self.question.save()  # no need to run save(), m2m_changed signal was triggered above
+        self.assertEqual(self.question.quizs.count(), 2)
+        self.assertEqual(len(self.question.quizs_id_list), 2)
+        self.assertEqual(self.question.quizs_id_list[1], quiz_2.id)

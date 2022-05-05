@@ -52,7 +52,7 @@ class Question(models.Model):
     QUESTION_URL_FIELDS = ["answer_audio", "answer_video", "answer_accessible_url", "answer_scientific_url"]
     QUESTION_IMAGE_URL_FIELDS = ["answer_image_url"]
     QUESTION_TIMESTAMP_FIELDS = ["created", "updated"]
-    QUESTION_FLATTEN_FIELDS = ["category_string", "tag_list", "author_string", "validator_string"]
+    QUESTION_FLATTEN_FIELDS = ["category_string", "tag_list", "quiz_list", "author_string", "validator_string"]
     QUESTION_READONLY_FIELDS = [
         "author_old",
         "author",
@@ -189,6 +189,7 @@ class Question(models.Model):
     # flatten relations
     category_string = models.CharField(verbose_name="Catégorie", max_length=50, blank=True)
     tag_list = ArrayField(verbose_name="Tags", base_field=models.CharField(max_length=50), blank=True, default=list)
+    quiz_list = ArrayField(verbose_name="Quizs", base_field=models.PositiveIntegerField(), blank=True, default=list)
     author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
     validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
 
@@ -207,6 +208,7 @@ class Question(models.Model):
     def set_flatten_fields(self):
         self.category_string = str(self.category) if self.category else ""
         # self.tag_list = self.tags_list  # see m2m_changed
+        # self.quiz_list = self.quizs_id_list  # see m2m_changed (QuizQuestion)
         self.author_string = str(self.author_link) if self.author_link else ""
         self.validator_string = str(self.validator_link) if self.validator_link else ""
 
@@ -225,6 +227,10 @@ class Question(models.Model):
     @property
     def tags_list_string(self) -> str:
         return ", ".join(self.tags_list)
+
+    @property
+    def quizs_id_list(self) -> list:
+        return list(self.quizs.values_list("id", flat=True))
 
     @property
     def quizs_list(self) -> list:
