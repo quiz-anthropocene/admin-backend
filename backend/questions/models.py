@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.postgres.fields import ArrayField
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.urls import reverse
@@ -44,10 +45,12 @@ class Question(models.Model):
     ]
     QUESTION_FK_FIELDS = ["category", "author", "validator"]
     QUESTION_M2M_FIELDS = ["tags"]
+    QUESTION_RELATION_FIELDS = QUESTION_FK_FIELDS + QUESTION_M2M_FIELDS
     QUESTION_BOOLEAN_FIELDS = ["has_ordered_answers"]
     QUESTION_URL_FIELDS = ["answer_audio", "answer_video", "answer_accessible_url", "answer_scientific_url"]
     QUESTION_IMAGE_URL_FIELDS = ["answer_image_url"]
     QUESTION_TIMESTAMP_FIELDS = ["created", "updated"]
+    QUESTION_FLATTEN_FIELDS = ["category_string", "tag_list", "author_string", "validator_string"]
     QUESTION_READONLY_FIELDS = [
         "author_old",
         "author",
@@ -57,7 +60,7 @@ class Question(models.Model):
         "added",
         "created",
         "updated",
-    ]
+    ] + QUESTION_FLATTEN_FIELDS
 
     text = models.TextField(
         verbose_name="Texte", blank=False, help_text="Rechercher la simplicité, faire des phrases courtes"
@@ -175,10 +178,17 @@ class Question(models.Model):
         choices=constants.QUESTION_VALIDATION_STATUS_CHOICES,
         default=constants.QUESTION_VALIDATION_STATUS_NEW,
     )
+
     # timestamps
     added = models.DateField(verbose_name="Date d'ajout", blank=True, null=True)
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+
+    # flatten relations
+    category_string = models.CharField(verbose_name="Catégorie", max_length=50, blank=True)
+    tag_list = ArrayField(verbose_name="Tag(s)", base_field=models.CharField(max_length=50), blank=True, default=list)
+    author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
+    validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
 
     history = HistoricalRecords()
 
@@ -192,7 +202,14 @@ class Question(models.Model):
     def __str__(self):
         return f"{self.id} - {self.category} - {self.text}"
 
+    def set_flatten_fields(self):
+        self.category_string = str(self.category) if self.category else ""
+        # self.  = self.tags_list  # see m2m_changed
+        self.author_string = str(self.author_link) if self.author_link else ""
+        self.validator_string = str(self.validator_link) if self.validator_link else ""
+
     def save(self, *args, **kwargs):
+        self.set_flatten_fields()
         self.full_clean()
         return super(Question, self).save(*args, **kwargs)
 
@@ -201,7 +218,7 @@ class Question(models.Model):
 
     @property
     def tags_list(self) -> list:
-        return list(self.tags.values_list("name", flat=True))
+        return list(self.tags.order_by("name").values_list("name", flat=True))
 
     @property
     def tags_list_string(self) -> str:
@@ -362,6 +379,12 @@ def question_validate_fields(sender, instance, **kwargs):
         raise ValidationError({"id": f"Valeur : 'empty'. " f"Question : {instance.id}"})
 
 
+def question_set_flatten_m2m_fields(sender, instance, action, **kwargs):
+    if action in ("post_add", "post_remove", "post_clear"):
+        instance.tag_list = instance.tags_list
+        instance.save()
+
+
 def question_create_agg_stat_instance(sender, instance, created, **kwargs):
     if created:
         if not hasattr(instance, "agg_stats"):
@@ -371,4 +394,5 @@ def question_create_agg_stat_instance(sender, instance, created, **kwargs):
 
 
 models.signals.pre_save.connect(question_validate_fields, sender=Question)
+models.signals.m2m_changed.connect(question_set_flatten_m2m_fields, sender=Question.tags.through)
 models.signals.post_save.connect(question_create_agg_stat_instance, sender=Question)

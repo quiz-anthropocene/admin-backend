@@ -9,13 +9,13 @@ QUESTION_READONLY_FORM_FIELDS = ["author", "validation_status"]
 QUESTION_REQUIRED_FORM_FIELDS = ["answer_option_a", "answer_option_b", "answer_correct"]
 QUESTION_FORM_FIELDS = [
     field_name for field_name in QUESTION_FIELD_SEQUENCE if field_name not in Question.QUESTION_READONLY_FIELDS
-] + QUESTION_READONLY_FORM_FIELDS
+]
 
 
 class QuestionCreateForm(forms.ModelForm):
     class Meta:
         model = Question
-        fields = QUESTION_FORM_FIELDS
+        fields = QUESTION_FORM_FIELDS + QUESTION_READONLY_FORM_FIELDS
         widgets = {
             "text": forms.Textarea(attrs={"rows": 1}),
             "hint": forms.Textarea(attrs={"rows": 1}),

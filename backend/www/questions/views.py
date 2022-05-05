@@ -135,12 +135,13 @@ class QuestionDetailHistoryView(ContributorUserRequiredMixin, DetailView):
             new_record = record
             old_record = record.prev_record
             if old_record:
-                delta = new_record.diff_against(old_record, excluded_fields=["tags"])
+                delta = new_record.diff_against(old_record, excluded_fields=Question.QUESTION_RELATION_FIELDS)
                 context["question_history_delta"].append(delta.changes)
             else:
-                delta_new = [
-                    {"field": k, "new": v} for k, v in record.__dict__.items() if k in QUESTION_FORM_FIELDS if v
-                ]
+                # probably a create action
+                # we create the diff ourselves because there isn't any previous record
+                delta_fields = QUESTION_FORM_FIELDS + Question.QUESTION_FLATTEN_FIELDS
+                delta_new = [{"field": k, "new": v} for k, v in record.__dict__.items() if k in delta_fields if v]
                 context["question_history_delta"].append(delta_new)
         return context
 

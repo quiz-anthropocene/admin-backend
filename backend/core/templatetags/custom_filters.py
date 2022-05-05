@@ -40,3 +40,10 @@ def get_list_item_filter(obj, index):
         return obj[index]
     except:  # noqa
         return {}
+
+
+@register.filter(name="flatten_list")
+def flatten_list(obj):
+    if type(obj) == list:
+        return ", ".join(obj)
+    return obj

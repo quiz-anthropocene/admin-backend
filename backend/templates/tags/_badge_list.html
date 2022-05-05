@@ -1,3 +1,7 @@
 {% for tag in tag_list %}
-    <a href="{% url 'tags:detail_view' tag.id %}"><span class="badge bg-primary">{{ tag }}</span></a>
+    {% if tag.id %}
+        <a href="{% url 'tags:detail_view' tag.id %}"><span class="badge bg-primary">{{ tag }}</span></a>
+    {% else %}
+        <span class="badge bg-primary">{{ tag }}</span
+    {% endif %}
 {% endfor %}
