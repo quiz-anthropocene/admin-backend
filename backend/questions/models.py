@@ -84,7 +84,7 @@ class Question(models.Model):
         null=True,
     )
     tags = models.ManyToManyField(
-        verbose_name="Tag(s)",
+        verbose_name="Tags",
         to=Tag,
         related_name="questions",
         blank=True,
@@ -186,7 +186,7 @@ class Question(models.Model):
 
     # flatten relations
     category_string = models.CharField(verbose_name="Catégorie", max_length=50, blank=True)
-    tag_list = ArrayField(verbose_name="Tag(s)", base_field=models.CharField(max_length=50), blank=True, default=list)
+    tag_list = ArrayField(verbose_name="Tags", base_field=models.CharField(max_length=50), blank=True, default=list)
     author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
     validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
 
@@ -204,7 +204,7 @@ class Question(models.Model):
 
     def set_flatten_fields(self):
         self.category_string = str(self.category) if self.category else ""
-        # self.  = self.tags_list  # see m2m_changed
+        # self.tag_list = self.tags_list  # see m2m_changed
         self.author_string = str(self.author_link) if self.author_link else ""
         self.validator_string = str(self.validator_link) if self.validator_link else ""
 
@@ -291,8 +291,8 @@ class Question(models.Model):
         return self.contributions.count()
 
     # Admin
-    tags_list_string.fget.short_description = "Tag(s)"
-    quizs_list_string.fget.short_description = "Quiz(s)"
+    tags_list_string.fget.short_description = "Tags"
+    quizs_list_string.fget.short_description = "Quizs"
     answer_count_agg.fget.short_description = "# Rép"
     answer_success_count_agg.fget.short_description = "# Rép Corr"
     answer_success_rate.fget.short_description = "% Rép Corr"
@@ -379,7 +379,7 @@ def question_validate_fields(sender, instance, **kwargs):
         raise ValidationError({"id": f"Valeur : 'empty'. " f"Question : {instance.id}"})
 
 
-def question_set_flatten_m2m_fields(sender, instance, action, **kwargs):
+def question_set_flatten_tag_list(sender, instance, action, **kwargs):
     if action in ("post_add", "post_remove", "post_clear"):
         instance.tag_list = instance.tags_list
         instance.save()
@@ -394,5 +394,5 @@ def question_create_agg_stat_instance(sender, instance, created, **kwargs):
 
 
 models.signals.pre_save.connect(question_validate_fields, sender=Question)
-models.signals.m2m_changed.connect(question_set_flatten_m2m_fields, sender=Question.tags.through)
+models.signals.m2m_changed.connect(question_set_flatten_tag_list, sender=Question.tags.through)
 models.signals.post_save.connect(question_create_agg_stat_instance, sender=Question)

@@ -5,7 +5,11 @@ from core.tables import ChoiceColumn, ImageColumn, RichTextEllipsisColumn
 from questions.models import Question
 
 
-QUESTION_FIELD_SEQUENCE = [field.name for field in Question._meta.fields + Question._meta.model._meta.many_to_many]
+QUESTION_FIELD_SEQUENCE = [
+    field.name
+    for field in (Question._meta.fields + Question._meta.model._meta.many_to_many)
+    if field.name not in Question.QUESTION_FLATTEN_FIELDS
+]
 QUESTION_FIELD_SEQUENCE.remove("tags")  # change position
 QUESTION_FIELD_SEQUENCE.insert(QUESTION_FIELD_SEQUENCE.index("difficulty"), "tags")
 

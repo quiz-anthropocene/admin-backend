@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
             model_name="historicalquestion",
             name="tag_list",
             field=django.contrib.postgres.fields.ArrayField(
-                base_field=models.CharField(max_length=50), blank=True, default=list, size=None, verbose_name="Tag(s)"
+                base_field=models.CharField(max_length=50), blank=True, default=list, size=None, verbose_name="Tags"
             ),
         ),
         migrations.AddField(
@@ -47,12 +47,17 @@ class Migration(migrations.Migration):
             model_name="question",
             name="tag_list",
             field=django.contrib.postgres.fields.ArrayField(
-                base_field=models.CharField(max_length=50), blank=True, default=list, size=None, verbose_name="Tag(s)"
+                base_field=models.CharField(max_length=50), blank=True, default=list, size=None, verbose_name="Tags"
             ),
         ),
         migrations.AddField(
             model_name="question",
             name="validator_string",
             field=models.CharField(blank=True, max_length=300, verbose_name="Validateur"),
+        ),
+        migrations.AlterField(
+            model_name="question",
+            name="tags",
+            field=models.ManyToManyField(blank=True, related_name="questions", to="tags.tag", verbose_name="Tags"),
         ),
     ]
