@@ -111,7 +111,7 @@ class Quiz(models.Model):
         verbose_name="Questions", base_field=models.PositiveIntegerField(), blank=True, default=list
     )
     relationship_list = ArrayField(
-        verbose_name="Relations", base_field=models.PositiveIntegerField(), blank=True, default=list
+        verbose_name="Relations", base_field=models.CharField(max_length=50), blank=True, default=list
     )
     author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
 
@@ -238,6 +238,14 @@ class Quiz(models.Model):
     @property
     def relationships_all(self):
         return self.from_quizs.all() | self.to_quizs.all()
+
+    @property
+    def relationships_list(self) -> list:
+        relationships_list = list()
+        for rel in self.relationships_all:
+            to_or_from_quiz_id = rel.to_quiz_id if rel.from_quiz_id == self.id else rel.from_quiz_id
+            relationships_list.append(f"{to_or_from_quiz_id} ({rel.status_full(self.id)})")
+        return relationships_list
 
     @property
     def answer_count_agg(self) -> int:
@@ -401,6 +409,11 @@ class QuizRelationship(models.Model):
         self.full_clean()
         return super(QuizRelationship, self).save(*args, **kwargs)
 
+    def status_full(self, quiz_id=None) -> str:
+        if quiz_id and self.to_quiz_id == quiz_id:
+            return "précédent"
+        return self.status
+
     def clean(self):
         """
         Rules on QuizRelationship
@@ -426,3 +439,11 @@ class QuizRelationship(models.Model):
             )
             if len(existing_symmetrical_relationships):
                 raise ValidationError({"to_quiz": "il y a déjà une relation avec ce quiz dans l'autre sens"})
+
+
+# @receiver(m2m_changed, sender=Quiz.relationships.through)
+@receiver(post_save, sender=QuizRelationship)
+@receiver(post_delete, sender=QuizRelationship)
+def quiz_set_flatten_relationship_list(sender, instance, **kwargs):
+    instance.quiz.relationship_list = instance.quiz.relationships_list
+    instance.quiz.save()

@@ -28,7 +28,11 @@ class Migration(migrations.Migration):
             model_name="historicalquiz",
             name="relationship_list",
             field=django.contrib.postgres.fields.ArrayField(
-                base_field=models.PositiveIntegerField(), blank=True, default=list, size=None, verbose_name="Relations"
+                base_field=models.CharField(max_length=50),
+                blank=True,
+                default=list,
+                size=None,
+                verbose_name="Relations",
             ),
         ),
         migrations.AddField(
@@ -54,7 +58,11 @@ class Migration(migrations.Migration):
             model_name="quiz",
             name="relationship_list",
             field=django.contrib.postgres.fields.ArrayField(
-                base_field=models.PositiveIntegerField(), blank=True, default=list, size=None, verbose_name="Relations"
+                base_field=models.CharField(max_length=50),
+                blank=True,
+                default=list,
+                size=None,
+                verbose_name="Relations",
             ),
         ),
         migrations.AddField(
