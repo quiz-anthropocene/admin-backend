@@ -392,7 +392,7 @@ def question_validate_fields(sender, instance, **kwargs):
 def question_set_flatten_tag_list(sender, instance, action, **kwargs):
     if action in ("post_add", "post_remove", "post_clear"):
         instance.tag_list = instance.tags_list
-        instance.save()
+        instance.save(update_fields=["tag_list"])
 
 
 @receiver(post_save, sender=Question)
