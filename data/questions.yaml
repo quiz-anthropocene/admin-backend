@@ -34232,6 +34232,40 @@
   added: '2022-04-01'
   created: '2022-04-06'
   updated: '2022-04-16'
+- id: 894
+  text: Lequel de ces produits présente la plus grande empreinte eau par kg ?
+  hint: ''
+  type: QCM
+  category: 7
+  tags:
+  - 37
+  difficulty: 2
+  language: Français
+  answer_option_a: Coton
+  answer_option_b: Blé
+  answer_option_c: Viande de boeuf
+  answer_option_d: Chocolat
+  answer_correct: d
+  has_ordered_answers: false
+  answer_explanation: Eh oui, le chocolat, avec 17,000 l/kg dépasse la viande de bœuf
+    (15,400 l/kg) en termes d’empreinte eau, le bœuf étant le plus consommateur de
+    toutes les viandes. Suivent le coton (10.000 l/kg) et le blé (1,800 l/kg).
+  answer_audio: ''
+  answer_video: ''
+  answer_accessible_url: ''
+  answer_accessible_url_text: ''
+  answer_scientific_url: ''
+  answer_scientific_url_text: ''
+  answer_reading_recommendation: ''
+  answer_image_url: ''
+  answer_image_explanation: ''
+  answer_extra_info: ''
+  author: Mylène Turban
+  validator: ''
+  validation_status: Brouillon
+  added: '2022-05-01'
+  created: '2022-05-06'
+  updated: '2022-05-06'
 - id: 895
   text: Classez ces quatre pays dans l'ordre croissant de leur empreinte eau par habitant.
   hint: ''
