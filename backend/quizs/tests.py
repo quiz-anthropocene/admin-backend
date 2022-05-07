@@ -97,3 +97,45 @@ class QuizModelSaveTest(TestCase):
         self.assertEqual(self.quiz.relationships_list[1], f"{quiz_3.id} (précédent)")
         self.assertEqual(len(quiz_3.relationships_list), 1)
         self.assertEqual(quiz_3.relationships_list[0], f"{self.quiz.id} (suivant)")
+
+
+class QuizModelHistoryTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.tag_1 = TagFactory(name="Tag 1")
+        cls.tag_2 = TagFactory(name="Another tag")
+        cls.quiz = QuizFactory(name="Quiz 1")
+        cls.quiz.tags.set([cls.tag_1, cls.tag_2])
+
+    def test_history_object_on_create(self):
+        self.assertEqual(self.quiz.history.count(), 1 + 1)
+        create_history_item = self.quiz.history.last()
+        self.assertEqual(create_history_item.history_type, "+")
+        self.assertEqual(create_history_item.name, self.quiz.name)
+        self.assertEqual(len(create_history_item.tag_list), 0)
+        update_history_item = self.quiz.history.first()
+        self.assertEqual(update_history_item.history_type, "~")
+        self.assertEqual(update_history_item.name, self.quiz.name)
+        self.assertEqual(len(update_history_item.tag_list), 2)
+
+    def test_history_object_created_on_save(self):
+        self.quiz.publish = True
+        self.quiz.save()
+        self.assertEqual(self.quiz.history.count(), 2 + 1)
+        update_history_item = self.quiz.history.first()
+        self.assertEqual(update_history_item.history_type, "~")
+
+    def test_history_diff(self):
+        self.quiz.name = "Le vrai nom"
+        self.quiz.introduction = "Une introduction"
+        self.quiz.conclusion = "Une conclusion"
+        self.quiz.save()
+        self.assertEqual(self.quiz.history.count(), 2 + 1)
+        update_history_item = self.quiz.history.first()
+        previous_history_item = self.quiz.history.first().prev_record
+        delta = update_history_item.diff_against(previous_history_item)
+        self.assertEqual(len(delta.changes), 3)
+        CHANGE_FIELDS = ["name", "introduction", "conclusion"]
+        delta_change_fields = [change.field for change in delta.changes]
+        for field in CHANGE_FIELDS:
+            self.assertTrue(field in delta_change_fields)

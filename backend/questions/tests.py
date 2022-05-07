@@ -1,6 +1,7 @@
 from django.test import TestCase
 
 from categories.factories import CategoryFactory
+from core import constants
 from questions.factories import QuestionFactory
 from quizs.factories import QuizFactory
 from quizs.models import QuizQuestion
@@ -76,3 +77,49 @@ class QuestionModelSaveTest(TestCase):
         self.assertEqual(self.question.quizs.count(), 2)
         self.assertEqual(len(self.question.quizs_id_list), 2)
         self.assertEqual(self.question.quizs_id_list[1], quiz_2.id)
+
+
+class QuestionModelHistoryTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.category_1 = CategoryFactory(name="Cat 1")
+        cls.category_2 = CategoryFactory(name="Cat 2")
+        cls.tag_1 = TagFactory(name="Tag 1")
+        cls.tag_2 = TagFactory(name="Another tag")
+        cls.tag_3 = TagFactory(name="Tag 3")
+        cls.question = QuestionFactory(text="Test", validation_status=constants.QUESTION_VALIDATION_STATUS_NEW)
+        cls.question.tags.set([cls.tag_1, cls.tag_2])
+
+    def test_history_object_on_create(self):
+        self.assertEqual(self.question.history.count(), 1 + 1)
+        create_history_item = self.question.history.last()
+        self.assertEqual(create_history_item.history_type, "+")
+        self.assertEqual(create_history_item.text, self.question.text)
+        self.assertEqual(len(create_history_item.tag_list), 0)
+        update_history_item = self.question.history.first()
+        self.assertEqual(update_history_item.history_type, "~")
+        self.assertEqual(update_history_item.text, self.question.text)
+        self.assertEqual(len(update_history_item.tag_list), 2)
+
+    def test_history_object_created_on_save(self):
+        self.question.category = self.category_2
+        self.question.save()
+        self.assertEqual(self.question.history.count(), 2 + 1)
+        update_history_item = self.question.history.first()
+        self.assertEqual(update_history_item.history_type, "~")
+        self.assertEqual(update_history_item.category_string, self.category_2.name)
+
+    def test_history_diff(self):
+        self.question.text = "La vraie question"
+        self.question.validation_status = constants.QUESTION_VALIDATION_STATUS_OK
+        self.question.category = self.category_2
+        self.question.save()
+        self.assertEqual(self.question.history.count(), 2 + 1)
+        update_history_item = self.question.history.first()
+        previous_history_item = self.question.history.first().prev_record
+        delta = update_history_item.diff_against(previous_history_item)
+        self.assertEqual(len(delta.changes), 4)
+        CHANGE_FIELDS = ["text", "validation_status", "category", "category_string"]
+        delta_change_fields = [change.field for change in delta.changes]
+        for field in CHANGE_FIELDS:
+            self.assertTrue(field in delta_change_fields)
