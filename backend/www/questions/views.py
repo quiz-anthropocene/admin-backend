@@ -63,6 +63,24 @@ class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, 
     def get_object(self):
         return get_object_or_404(Question, id=self.kwargs.get("pk"))
 
+    def get_form(self, *args, **kwargs):
+        question = self.get_object()
+        form = super().get_form(self.form_class)
+        if not self.request.user.can_validate_question(question):
+            form.fields["validation_status"].disabled = True
+            form.fields[
+                "validation_status"
+            ].help_text = (
+                "Vous n'avez pas les droits nécessaires pour modifier le Statut (seul un administrateur peut le faire)"
+            )
+        return form
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        question = self.get_object()
+        context["user_can_edit_question"] = self.request.user.can_edit_question(question)
+        return context
+
     def get_success_url(self):
         return reverse_lazy("questions:detail_view", args=[self.kwargs.get("pk")])
 
