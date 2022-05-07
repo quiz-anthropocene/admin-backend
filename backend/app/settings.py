@@ -350,4 +350,5 @@ CKEDITOR_CONFIGS = {
 # Misc
 # ------------------------------------------------------------------------------
 
-METABASE_DASHBOARD_URL = os.getenv("METABASE_DASHBOARD_URL", "")
+METABASE_GENERAL_DASHBOARD_PUBLIC_URL = os.getenv("METABASE_GENERAL_DASHBOARD_PUBLIC_URL", "")
+METABASE_QUIZ_DASHBOARD_PUBLIC_URL = os.getenv("METABASE_QUIZ_DASHBOARD_PUBLIC_URL", "")
