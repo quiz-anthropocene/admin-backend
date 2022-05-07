@@ -14,7 +14,9 @@
                 <tbody>
                     {% for quiz_question in quiz_questions %}
                         <tr>
-                            <td><a href="{% url 'quizs:detail_view' quiz_question.quiz.id %}">{{ quiz_question.quiz.id }}</a></td>
+                            <td>
+                                <a href="{% url 'quizs:detail_view' quiz_question.quiz.id %}">{{ quiz_question.quiz.id }}</a>
+                            </td>
                             <td>{{ quiz_question.quiz.name }}</td>
                         </tr>
                     {% endfor %}

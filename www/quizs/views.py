@@ -1,9 +1,10 @@
+from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.forms.models import model_to_dict
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.utils.safestring import mark_safe
-from django.views.generic import CreateView, DetailView, ListView, UpdateView
+from django.views.generic import CreateView, DetailView, FormView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
@@ -13,7 +14,7 @@ from contributions.tables import ContributionTable
 from core.mixins import ContributorUserRequiredMixin
 from quizs.filters import QuizFilter
 from quizs.forms import QuizCreateForm, QuizEditForm, QuizQuestionFormSet
-from quizs.models import Quiz, QuizQuestion
+from quizs.models import Quiz
 from quizs.tables import QuizTable
 from stats.models import QuizAggStat
 
@@ -64,43 +65,39 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
         return reverse_lazy("quizs:detail_view", args=[self.kwargs.get("pk")])
 
 
-class QuizDetailQuestionListView(ContributorUserRequiredMixin, ListView):
-    model = QuizQuestion
+class QuizDetailQuestionListView(ContributorUserRequiredMixin, FormView):
+    form_class = QuizQuestionFormSet
     template_name = "quizs/detail_questions.html"
-    context_object_name = "quiz_questions"
-
-    def get_queryset(self):
-        qs = super().get_queryset()
-        qs = qs.prefetch_related("question")
-        qs = qs.filter(quiz__id=self.kwargs.get("pk"))
-        return qs
+    success_message = "Les questions du quiz ont été mises à jour."
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["quiz"] = Quiz.objects.get(id=self.kwargs.get("pk"))
-        context["quiz_question_formset"] = QuizQuestionFormSet(instance=context["quiz"])
-        return context
-
-
-class QuizDetailQuestionListEditView(ContributorUserRequiredMixin, UpdateView):
-    form_class = QuizQuestionFormSet
-    template_name = "quizs/detail_questions_edit_modal.html"
-    success_message = "Les questions du quiz ont été mises à jour."
-    # success_url = reverse_lazy("quizs:detail_questions")
-
-    def get_object(self):
-        return get_object_or_404(Quiz, id=self.kwargs.get("pk"))
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
+        context["quiz_questions"] = context["quiz"].quizquestion_set.all()
         if self.request.POST:
-            context["quiz_question_formset"] = QuizQuestionFormSet(self.request.POST, instance=self.object)
+            context["quiz_question_formset"] = QuizQuestionFormSet(self.request.POST, instance=context["quiz"])
         else:
-            context["quiz_question_formset"] = QuizQuestionFormSet(instance=self.object)
+            context["quiz_question_formset"] = QuizQuestionFormSet(instance=context["quiz"])
         return context
+
+    def post(self, request, *args, **kwargs):
+        quiz_question_formset = QuizQuestionFormSet(self.request.POST, instance=self.get_context_data()["quiz"])
+        if quiz_question_formset.is_valid():
+            return self.form_valid(quiz_question_formset)
+        else:
+            return self.form_invalid(quiz_question_formset)
+
+    def form_valid(self, quiz_question_formset):
+        quiz_question_formset.instance = self.get_context_data()["quiz"]
+        quiz_question_formset.save()
+        messages.add_message(self.request, messages.SUCCESS, self.success_message)
+        return super().form_valid(quiz_question_formset)
+
+    def form_invalid(self, quiz_question_formset):
+        return self.render_to_response(self.get_context_data())
 
     def get_success_url(self):
-        return reverse_lazy("quizs:detail_questions", args=[self.kwargs.get("pk")])
+        return reverse_lazy("quizs:detail_view", args=[self.kwargs.get("pk")])
 
 
 class QuizDetailContributionListView(ContributorUserRequiredMixin, SingleTableView):
