@@ -28,7 +28,7 @@ class QuizListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
 
     def get_queryset(self):
         qs = super().get_queryset()
-        qs = qs.select_related("author_link").prefetch_related("tags", "questions")
+        qs = qs.select_related("author").prefetch_related("tags", "questions")
         return qs
 
     def get_context_data(self, **kwargs):
@@ -142,7 +142,7 @@ class QuizCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVi
     success_url = reverse_lazy("quizs:list")
 
     def get_initial(self):
-        return {"author": self.request.user.full_name, "author_link": self.request.user}
+        return {"author": self.request.user}
 
     def get_success_url(self):
         success_url = super().get_success_url()

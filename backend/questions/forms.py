@@ -5,7 +5,7 @@ from questions.tables import QUESTION_FIELD_SEQUENCE
 from tags.models import Tag
 
 
-QUESTION_READONLY_FORM_FIELDS = ["author_link", "validation_status"]
+QUESTION_READONLY_FORM_FIELDS = ["author", "validation_status"]
 QUESTION_REQUIRED_FORM_FIELDS = ["answer_option_a", "answer_option_b"]
 QUESTION_FORM_FIELDS = [
     field_name for field_name in QUESTION_FIELD_SEQUENCE if field_name not in Question.QUESTION_READONLY_FIELDS

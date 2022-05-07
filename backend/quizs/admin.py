@@ -76,7 +76,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "id",
         "name",
         "question_count",
-        "author",
+        "author_old",
         "tags_list_string",
         "difficulty_average",
         "has_audio",
@@ -90,7 +90,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "publish",
         "spotlight",
         "has_audio",
-        "author",
+        "author_old",
         "language",
         "tags",
     )
@@ -132,7 +132,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
                     "name",
                     "slug",
                     "language",
-                    "author",
+                    "author_old",
                     "introduction",
                     "conclusion",
                 )

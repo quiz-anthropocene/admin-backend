@@ -8,7 +8,7 @@ from quizs.tables import QUIZ_FIELD_SEQUENCE
 from tags.models import Tag
 
 
-QUIZ_READONLY_FORM_FIELDS = ["author_link"]
+QUIZ_READONLY_FORM_FIELDS = ["author"]
 QUIZ_FORM_FIELDS = [
     field_name for field_name in QUIZ_FIELD_SEQUENCE if field_name not in Quiz.QUIZ_READONLY_FIELDS
 ] + QUIZ_READONLY_FORM_FIELDS

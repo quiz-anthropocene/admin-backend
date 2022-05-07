@@ -39,20 +39,20 @@ class Question(models.Model):
         "language",
         "answer_correct",
         "validation_status",
-        "author",
-        "validator",
+        "author_old",
+        "validator_old",
     ]
-    QUESTION_FK_FIELDS = ["category", "author_link", "validator_link"]
+    QUESTION_FK_FIELDS = ["category", "author", "validator"]
     QUESTION_M2M_FIELDS = ["tags"]
     QUESTION_BOOLEAN_FIELDS = ["has_ordered_answers"]
     QUESTION_URL_FIELDS = ["answer_audio", "answer_video", "answer_accessible_url", "answer_scientific_url"]
     QUESTION_IMAGE_URL_FIELDS = ["answer_image_url"]
     QUESTION_TIMESTAMP_FIELDS = ["created", "updated"]
     QUESTION_READONLY_FIELDS = [
+        "author_old",
         "author",
-        "author_link",
+        "validator_old",
         "validator",
-        "validator_link",
         "validation_status",
         "added",
         "created",
@@ -151,8 +151,8 @@ class Question(models.Model):
         blank=True,
         help_text="Ne s'affichera pas dans l'application",
     )
-    author = models.CharField(verbose_name="Auteur", max_length=50, blank=True)
-    author_link = models.ForeignKey(
+    author_old = models.CharField(verbose_name="Auteur", max_length=50, blank=True)
+    author = models.ForeignKey(
         verbose_name="Auteur",
         to=settings.AUTH_USER_MODEL,
         related_name="questions",
@@ -160,8 +160,8 @@ class Question(models.Model):
         null=True,
         on_delete=models.SET_NULL,
     )
-    validator = models.CharField(verbose_name="Validateur", max_length=50, blank=True)
-    validator_link = models.ForeignKey(
+    validator_old = models.CharField(verbose_name="Validateur", max_length=50, blank=True)
+    validator = models.ForeignKey(
         verbose_name="Validateur",
         to=settings.AUTH_USER_MODEL,
         related_name="questions_validated",
