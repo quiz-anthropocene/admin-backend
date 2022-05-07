@@ -1,7 +1,11 @@
 from django.conf import settings
+from django.contrib.postgres.fields import ArrayField
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.db.models.signals import m2m_changed, post_save, pre_save
+from django.dispatch import receiver
 from django.urls import reverse
+from simple_history.models import HistoricalRecords
 
 from core import constants
 from core.templatetags.get_verbose_name import get_verbose_name
@@ -39,24 +43,23 @@ class Question(models.Model):
         "language",
         "answer_correct",
         "validation_status",
-        "validator_old",
     ]
     QUESTION_FK_FIELDS = ["category", "author", "validator"]
     QUESTION_M2M_FIELDS = ["tags"]
+    QUESTION_RELATION_FIELDS = QUESTION_FK_FIELDS + QUESTION_M2M_FIELDS
     QUESTION_BOOLEAN_FIELDS = ["has_ordered_answers"]
     QUESTION_URL_FIELDS = ["answer_audio", "answer_video", "answer_accessible_url", "answer_scientific_url"]
     QUESTION_IMAGE_URL_FIELDS = ["answer_image_url"]
     QUESTION_TIMESTAMP_FIELDS = ["created", "updated"]
+    QUESTION_FLATTEN_FIELDS = ["category_string", "tag_list", "quiz_list", "author_string", "validator_string"]
     QUESTION_READONLY_FIELDS = [
-        "author_old",
         "author",
-        "validator_old",
         "validator",
         "validation_status",
         "added",
         "created",
         "updated",
-    ]
+    ] + QUESTION_FLATTEN_FIELDS
 
     text = models.TextField(
         verbose_name="Texte", blank=False, help_text="Rechercher la simplicité, faire des phrases courtes"
@@ -80,7 +83,7 @@ class Question(models.Model):
         null=True,
     )
     tags = models.ManyToManyField(
-        verbose_name="Tag(s)",
+        verbose_name="Tags",
         to=Tag,
         related_name="questions",
         blank=True,
@@ -150,7 +153,6 @@ class Question(models.Model):
         blank=True,
         help_text="Ne s'affichera pas dans l'application",
     )
-    author_old = models.CharField(verbose_name="Auteur", max_length=50, blank=True)
     author = models.ForeignKey(
         verbose_name="Auteur",
         to=settings.AUTH_USER_MODEL,
@@ -159,7 +161,6 @@ class Question(models.Model):
         null=True,
         on_delete=models.SET_NULL,
     )
-    validator_old = models.CharField(verbose_name="Validateur", max_length=50, blank=True)
     validator = models.ForeignKey(
         verbose_name="Validateur",
         to=settings.AUTH_USER_MODEL,
@@ -174,10 +175,20 @@ class Question(models.Model):
         choices=constants.QUESTION_VALIDATION_STATUS_CHOICES,
         default=constants.QUESTION_VALIDATION_STATUS_NEW,
     )
+
     # timestamps
     added = models.DateField(verbose_name="Date d'ajout", blank=True, null=True)
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+
+    # flatten relations
+    category_string = models.CharField(verbose_name="Catégorie", max_length=50, blank=True)
+    tag_list = ArrayField(verbose_name="Tags", base_field=models.CharField(max_length=50), blank=True, default=list)
+    quiz_list = ArrayField(verbose_name="Quizs", base_field=models.PositiveIntegerField(), blank=True, default=list)
+    author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
+    validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
+
+    history = HistoricalRecords()
 
     objects = QuestionQuerySet.as_manager()
 
@@ -187,9 +198,17 @@ class Question(models.Model):
         ordering = ["pk"]
 
     def __str__(self):
-        return f"{self.id} - {self.category} - {self.text}"
+        return f"{self.id} - {self.text}"
+
+    def set_flatten_fields(self):
+        self.category_string = str(self.category) if self.category else ""
+        # self.tag_list = self.tags_list  # see m2m_changed
+        # self.quiz_list = self.quizs_id_list  # see m2m_changed (QuizQuestion)
+        self.author_string = str(self.author) if self.author else ""
+        self.validator_string = str(self.validator) if self.validator else ""
 
     def save(self, *args, **kwargs):
+        self.set_flatten_fields()
         self.full_clean()
         return super(Question, self).save(*args, **kwargs)
 
@@ -198,11 +217,15 @@ class Question(models.Model):
 
     @property
     def tags_list(self) -> list:
-        return list(self.tags.values_list("name", flat=True))
+        return list(self.tags.order_by("name").values_list("name", flat=True))
 
     @property
     def tags_list_string(self) -> str:
         return ", ".join(self.tags_list)
+
+    @property
+    def quizs_id_list(self) -> list:
+        return list(self.quizs.values_list("id", flat=True))
 
     @property
     def quizs_list(self) -> list:
@@ -271,8 +294,8 @@ class Question(models.Model):
         return self.contributions.count()
 
     # Admin
-    tags_list_string.fget.short_description = "Tag(s)"
-    quizs_list_string.fget.short_description = "Quiz(s)"
+    tags_list_string.fget.short_description = "Tags"
+    quizs_list_string.fget.short_description = "Quizs"
     answer_count_agg.fget.short_description = "# Rép"
     answer_success_count_agg.fget.short_description = "# Rép Corr"
     answer_success_rate.fget.short_description = "% Rép Corr"
@@ -347,6 +370,7 @@ class Question(models.Model):
             raise ValidationError(validation_errors)
 
 
+@receiver(pre_save, sender=Question)
 def question_validate_fields(sender, instance, **kwargs):
     """
     Validation for fixtures
@@ -359,13 +383,17 @@ def question_validate_fields(sender, instance, **kwargs):
         raise ValidationError({"id": f"Valeur : 'empty'. " f"Question : {instance.id}"})
 
 
+@receiver(m2m_changed, sender=Question.tags.through)
+def question_set_flatten_tag_list(sender, instance, action, **kwargs):
+    if action in ("post_add", "post_remove", "post_clear"):
+        instance.tag_list = instance.tags_list
+        instance.save(update_fields=["tag_list"])
+
+
+@receiver(post_save, sender=Question)
 def question_create_agg_stat_instance(sender, instance, created, **kwargs):
     if created:
         if not hasattr(instance, "agg_stats"):
             from stats.models import QuestionAggStat
 
             QuestionAggStat.objects.create(question=instance)
-
-
-models.signals.pre_save.connect(question_validate_fields, sender=Question)
-models.signals.post_save.connect(question_create_agg_stat_instance, sender=Question)

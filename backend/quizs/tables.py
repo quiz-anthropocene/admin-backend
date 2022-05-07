@@ -5,7 +5,11 @@ from core.tables import ChoiceColumn, ImageColumn, RichTextEllipsisColumn
 from quizs.models import Quiz
 
 
-QUIZ_FIELD_SEQUENCE = [field.name for field in Quiz._meta.fields + Quiz._meta.model._meta.many_to_many]
+QUIZ_FIELD_SEQUENCE = [
+    field.name
+    for field in (Quiz._meta.fields + Quiz._meta.model._meta.many_to_many)
+    if field.name not in Quiz.QUIZ_FLATTEN_FIELDS
+]
 QUIZ_FIELD_SEQUENCE.remove("questions")  # not displayed
 QUIZ_FIELD_SEQUENCE.remove("relationships")  # not displayed
 QUIZ_FIELD_SEQUENCE.remove("tags")  # change position

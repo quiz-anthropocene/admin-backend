@@ -14,7 +14,7 @@ from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from core.mixins import ContributorUserRequiredMixin
 from questions.filters import QuestionFilter
-from questions.forms import QuestionCreateForm, QuestionEditForm
+from questions.forms import QUESTION_FORM_FIELDS, QuestionCreateForm, QuestionEditForm
 from questions.models import Question
 from questions.tables import QuestionTable
 from quizs.models import QuizQuestion
@@ -116,6 +116,33 @@ class QuestionDetailStatsView(ContributorUserRequiredMixin, DetailView):
         context["question_agg_stat_dict"] = model_to_dict(self.get_object())
         del context["question_agg_stat_dict"]["question"]
         context["question"] = Question.objects.get(id=self.kwargs.get("pk"))
+        return context
+
+
+class QuestionDetailHistoryView(ContributorUserRequiredMixin, DetailView):
+    model = Question
+    template_name = "questions/detail_history.html"
+    context_object_name = "question"
+
+    def get_object(self):
+        return get_object_or_404(Question, id=self.kwargs.get("pk"))
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["question_history"] = self.get_object().history.all()
+        context["question_history_delta"] = list()
+        for record in context["question_history"]:
+            new_record = record
+            old_record = record.prev_record
+            if old_record:
+                delta = new_record.diff_against(old_record, excluded_fields=Question.QUESTION_RELATION_FIELDS)
+                context["question_history_delta"].append(delta.changes)
+            else:
+                # probably a create action
+                # we create the diff ourselves because there isn't any previous record
+                delta_fields = QUESTION_FORM_FIELDS + Question.QUESTION_FLATTEN_FIELDS
+                delta_new = [{"field": k, "new": v} for k, v in record.__dict__.items() if k in delta_fields if v]
+                context["question_history_delta"].append(delta_new)
         return context
 
 

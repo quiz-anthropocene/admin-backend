@@ -9,16 +9,19 @@ from tags.models import Tag
 
 
 QUIZ_READONLY_FORM_FIELDS = ["author"]
+QUIZ_M2M_SEPERATE_FORM_FIELDS = ["questions", "relationships"]
 QUIZ_FORM_FIELDS = [
-    field_name for field_name in QUIZ_FIELD_SEQUENCE if field_name not in Quiz.QUIZ_READONLY_FIELDS
-] + QUIZ_READONLY_FORM_FIELDS
+    field_name
+    for field_name in QUIZ_FIELD_SEQUENCE
+    if field_name not in (Quiz.QUIZ_READONLY_FIELDS + QUIZ_M2M_SEPERATE_FORM_FIELDS)
+]
 QUIZ_CREATE_FORM_FIELDS = [field_name for field_name in QUIZ_FORM_FIELDS if field_name not in ["publish", "spotlight"]]
 
 
 class QuizCreateForm(forms.ModelForm):
     class Meta:
         model = Quiz
-        fields = QUIZ_CREATE_FORM_FIELDS
+        fields = QUIZ_CREATE_FORM_FIELDS + QUIZ_READONLY_FORM_FIELDS
         widgets = {}
 
     def __init__(self, *args, **kwargs):
@@ -31,7 +34,7 @@ class QuizCreateForm(forms.ModelForm):
 class QuizEditForm(QuizCreateForm):
     class Meta:
         model = Quiz
-        fields = QUIZ_FORM_FIELDS
+        fields = QUIZ_FORM_FIELDS + QUIZ_READONLY_FORM_FIELDS
 
 
 class QuizQuestionEditForm(forms.ModelForm):

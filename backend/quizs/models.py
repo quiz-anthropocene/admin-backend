@@ -1,10 +1,14 @@
 from ckeditor.fields import RichTextField
 from django.conf import settings
+from django.contrib.postgres.fields import ArrayField
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models import Avg, Count
+from django.db.models.signals import m2m_changed, post_delete, post_save, pre_save
+from django.dispatch import receiver
 from django.urls import reverse
 from django.utils.text import slugify
+from simple_history.models import HistoricalRecords
 
 from core import constants
 from questions.models import Question
@@ -29,6 +33,7 @@ class Quiz(models.Model):
     QUIZ_CHOICE_FIELDS = ["language"]
     QUIZ_FK_FIELDS = ["author"]
     QUIZ_M2M_FIELDS = ["questions", "tags", "relationships"]
+    QUIZ_RELATION_FIELDS = QUIZ_FK_FIELDS + QUIZ_M2M_FIELDS
     QUIZ_LIST_FIELDS = [
         "questions_categories_list",
         "questions_tags_list",
@@ -38,7 +43,14 @@ class Quiz(models.Model):
     QUIZ_URL_FIELDS = []
     QUIZ_IMAGE_URL_FIELDS = ["image_background_url"]
     QUIZ_TIMESTAMP_FIELDS = ["created", "updated"]
-    QUIZ_READONLY_FIELDS = ["slug", "difficulty_average", "author_old", "author", "created", "updated"]
+    QUIZ_FLATTEN_FIELDS = ["tag_list", "question_list", "relationship_list", "author_string"]
+    QUIZ_READONLY_FIELDS = [
+        "slug",
+        "difficulty_average",
+        "author",
+        "created",
+        "updated",
+    ] + QUIZ_FLATTEN_FIELDS
 
     name = models.CharField(verbose_name="Nom", max_length=50, blank=False)
     slug = models.SlugField(verbose_name="Fragment d'URL", max_length=50, unique=True)
@@ -49,12 +61,12 @@ class Quiz(models.Model):
         help_text="Inclure des pistes pour aller plus loin",
     )
     questions = models.ManyToManyField(
-        verbose_name="Les questions",
+        verbose_name="Questions",
         to=Question,
         through="QuizQuestion",
         related_name="quizs",
     )
-    tags = models.ManyToManyField(verbose_name="Tag(s)", to=Tag, related_name="quizs", blank=True)
+    tags = models.ManyToManyField(verbose_name="Tags", to=Tag, related_name="quizs", blank=True)
     difficulty_average = models.FloatField(verbose_name="Difficulté moyenne", default=0)  # readonly
     language = models.CharField(
         verbose_name="Langue",
@@ -63,7 +75,6 @@ class Quiz(models.Model):
         default=constants.LANGUAGE_FRENCH,
         blank=False,
     )
-    author_old = models.CharField(verbose_name="Auteur", max_length=50, blank=True)
     author = models.ForeignKey(
         verbose_name="Auteur",
         to=settings.AUTH_USER_MODEL,
@@ -87,9 +98,22 @@ class Quiz(models.Model):
         symmetrical=False,
         related_name="related_to",
     )
+
     # timestamps
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+
+    # flatten relations
+    tag_list = ArrayField(verbose_name="Tags", base_field=models.CharField(max_length=50), blank=True, default=list)
+    question_list = ArrayField(
+        verbose_name="Questions", base_field=models.PositiveIntegerField(), blank=True, default=list
+    )
+    relationship_list = ArrayField(
+        verbose_name="Relations", base_field=models.CharField(max_length=50), blank=True, default=list
+    )
+    author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
+
+    history = HistoricalRecords()
 
     objects = QuizQuerySet.as_manager()
 
@@ -114,9 +138,16 @@ class Quiz(models.Model):
         if self.id:
             self.difficulty_average = self.questions_difficulty_average
 
+    def set_flatten_fields(self):
+        # self.tag_list = self.tags_list  # see m2m_changed
+        # self.question_list = self.questions_id_list_with_order  # see m2m_changed
+        # self.relationship_list = self.relationships_list  # see m2m_changed
+        self.author_string = str(self.author) if self.author else ""
+
     def save(self, *args, **kwargs):
         self.set_slug()
         self.set_difficulty_average()
+        self.set_flatten_fields()
         self.full_clean()
         return super(Quiz, self).save(*args, **kwargs)
 
@@ -128,8 +159,16 @@ class Quiz(models.Model):
         return self.questions.count()
 
     @property
+    def questions_id_list(self) -> list:
+        return list(self.questions.values_list("id", flat=True))
+
+    @property
+    def questions_id_list_with_order(self) -> list:
+        return list(self.quizquestion_set.values_list("question_id", flat=True))
+
+    @property
     def tags_list(self) -> list:
-        return list(self.tags.values_list("name", flat=True))
+        return list(self.tags.order_by("name").values_list("name", flat=True))
 
     @property
     def tags_list_string(self) -> str:
@@ -199,6 +238,14 @@ class Quiz(models.Model):
         return self.from_quizs.all() | self.to_quizs.all()
 
     @property
+    def relationships_list(self) -> list:
+        relationships_list = list()
+        for rel in self.relationships_all:
+            to_or_from_quiz_id = rel.to_quiz_id if rel.from_quiz_id == self.id else rel.from_quiz_id
+            relationships_list.append(f"{to_or_from_quiz_id} ({rel.status_full(self.id)})")
+        return relationships_list
+
+    @property
     def answer_count_agg(self) -> int:
         return self.agg_stats.answer_count + self.stats.count()
 
@@ -239,33 +286,35 @@ class Quiz(models.Model):
         return self.contributions.count()
 
     # Admin
-    tags_list_string.fget.short_description = "Tag(s)"
+    tags_list_string.fget.short_description = "Tags"
     questions_not_validated_string.fget.short_description = "Questions pas encore validées"
-    questions_categories_list_with_count_string.fget.short_description = "Questions catégorie(s)"
-    questions_tags_list_with_count_string.fget.short_description = "Questions tag(s)"
-    questions_authors_list_with_count_string.fget.short_description = "Questions author(s)"
+    questions_categories_list_with_count_string.fget.short_description = "Questions catégories"
+    questions_tags_list_with_count_string.fget.short_description = "Questions tags"
+    questions_authors_list_with_count_string.fget.short_description = "Questions authors"
     answer_count_agg.fget.short_description = "# Rép"
     duration_average_seconds.fget.short_description = "Durée moyenne (en secondes)"
     duration_average_minutes_string.fget.short_description = "Durée moyenne (en minutes)"
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"
 
-    def clean(self):
-        # > only run on existing (Quiz query won't work on new quizs)
-        if getattr(self, "id"):
-            # get quiz
-            try:
-                quiz = Quiz.objects.get(pk=self.id)
-            except:  # noqa
-                return
-            # > basic question checks
-            if getattr(self, "publish"):
-                quiz_questions = quiz.questions
-                # - must have at least 1 question
-                if quiz_questions.count() < 1:
-                    raise ValidationError({"questions": "Un quiz 'published' doit comporter au moins 1 question."})
+    # TODO: commented because init_db raises ValidationError...
+    # def clean(self):
+    #     # > only run on existing (Quiz query won't work on new quizs)
+    #     if getattr(self, "id"):
+    #         # get quiz
+    #         try:
+    #             quiz = Quiz.objects.get(pk=self.id)
+    #         except:  # noqa
+    #             return
+    #         # > basic question checks
+    #         if getattr(self, "publish"):
+    #             quiz_questions = quiz.questions
+    #             # - must have at least 1 question
+    #             if quiz_questions.count() < 1:
+    #                 raise ValidationError({"questions": "Un quiz 'published' doit comporter au moins 1 question."})
 
 
+@receiver(pre_save, sender=Quiz)
 def quiz_validate_fields(sender, instance, **kwargs):
     """
     Validation for fixtures
@@ -278,16 +327,20 @@ def quiz_validate_fields(sender, instance, **kwargs):
         raise ValidationError({"id": f"Valeur : 'empty'. " f"Quiz: {instance}"})
 
 
+@receiver(m2m_changed, sender=Quiz.tags.through)
+def quiz_set_flatten_tag_list(sender, instance, action, **kwargs):
+    if action in ("post_add", "post_remove", "post_clear"):
+        instance.tag_list = instance.tags_list
+        instance.save(update_fields=["tag_list"])
+
+
+@receiver(post_save, sender=Quiz)
 def quiz_create_agg_stat_instance(sender, instance, created, **kwargs):
     if created:
         if not hasattr(instance, "agg_stats"):
             from stats.models import QuizAggStat
 
             QuizAggStat.objects.create(quiz=instance)
-
-
-models.signals.pre_save.connect(quiz_validate_fields, sender=Quiz)
-models.signals.post_save.connect(quiz_create_agg_stat_instance, sender=Quiz)
 
 
 class QuizQuestion(models.Model):
@@ -327,6 +380,16 @@ class QuizQuestion(models.Model):
             self.order = (last_quiz_question.order + 1) if last_quiz_question else 1
 
 
+# @receiver(m2m_changed, sender=Quiz.questions.through)
+@receiver(post_save, sender=QuizQuestion)
+@receiver(post_delete, sender=QuizQuestion)
+def quiz_set_flatten_question_list(sender, instance, **kwargs):
+    instance.quiz.question_list = instance.quiz.questions_id_list_with_order
+    instance.quiz.save()
+    instance.question.quiz_list = instance.question.quizs_id_list
+    instance.question.save()
+
+
 class QuizRelationship(models.Model):
     from_quiz = models.ForeignKey(to=Quiz, on_delete=models.CASCADE, related_name="from_quizs")
     to_quiz = models.ForeignKey(to=Quiz, on_delete=models.CASCADE, related_name="to_quizs")
@@ -346,6 +409,11 @@ class QuizRelationship(models.Model):
     def save(self, *args, **kwargs):
         self.full_clean()
         return super(QuizRelationship, self).save(*args, **kwargs)
+
+    def status_full(self, quiz_id=None) -> str:
+        if quiz_id and self.to_quiz_id == quiz_id:
+            return "précédent"
+        return self.status
 
     def clean(self):
         """
@@ -372,3 +440,13 @@ class QuizRelationship(models.Model):
             )
             if len(existing_symmetrical_relationships):
                 raise ValidationError({"to_quiz": "il y a déjà une relation avec ce quiz dans l'autre sens"})
+
+
+# @receiver(m2m_changed, sender=Quiz.relationships.through)
+@receiver(post_save, sender=QuizRelationship)
+@receiver(post_delete, sender=QuizRelationship)
+def quiz_set_flatten_relationship_list(sender, instance, **kwargs):
+    instance.from_quiz.relationship_list = instance.from_quiz.relationships_list
+    instance.from_quiz.save()
+    instance.to_quiz.relationship_list = instance.to_quiz.relationships_list
+    instance.to_quiz.save()

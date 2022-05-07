@@ -21,7 +21,29 @@ def get_obj_attr_filter(obj, key):
         {{ dict|get_obj_attr:key }}
     """
     try:
-        value = getattr(obj, key)
+        return getattr(obj, key)
     except:  # noqa
-        value = obj.get(key)
-    return value
+        return obj.get(key)
+
+
+@register.filter(name="get_list_item")
+def get_list_item_filter(obj, index):
+    """
+    Find a dictionary value with a key as a variable.
+    https://stackoverflow.com/a/8000091
+
+    Usage:
+        {% load custom_filters %}
+        {{ list|get_list_item:index }}
+    """
+    try:
+        return obj[index]
+    except:  # noqa
+        return {}
+
+
+@register.filter(name="flatten_list")
+def flatten_list(obj):
+    if type(obj) == list:
+        return ", ".join([str(item) for item in obj])
+    return obj

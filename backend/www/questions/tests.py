@@ -13,6 +13,7 @@ QUESTION_DETAIL_URLS = [
     "questions:detail_quizs",
     "questions:detail_contributions",
     "questions:detail_stats",
+    "questions:detail_history",
 ]
 
 
@@ -88,7 +89,7 @@ class QuestionCreateViewTest(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
-    def test_contributor_can_create_quiz(self):
+    def test_contributor_can_create_question(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
         url = reverse("questions:create")
         data = {
@@ -98,6 +99,7 @@ class QuestionCreateViewTest(TestCase):
             "language": constants.LANGUAGE_FRENCH,
             "answer_option_a": "Réponse A",
             "answer_option_b": "Réponse B",
+            "answer_correct": "a",
         }
         response = self.client.post(url, data=data)
         self.assertEqual(response.status_code, 302)  # 201
