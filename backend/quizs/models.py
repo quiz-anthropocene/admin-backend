@@ -26,7 +26,7 @@ class QuizQuerySet(models.QuerySet):
 
 
 class Quiz(models.Model):
-    QUIZ_CHOICE_FIELDS = ["language", "author_old"]
+    QUIZ_CHOICE_FIELDS = ["language"]
     QUIZ_FK_FIELDS = ["author"]
     QUIZ_M2M_FIELDS = ["questions", "tags", "relationships"]
     QUIZ_LIST_FIELDS = [

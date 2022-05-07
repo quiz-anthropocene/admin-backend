@@ -39,7 +39,6 @@ class Question(models.Model):
         "language",
         "answer_correct",
         "validation_status",
-        "author_old",
         "validator_old",
     ]
     QUESTION_FK_FIELDS = ["category", "author", "validator"]
