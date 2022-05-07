@@ -9,12 +9,14 @@ from api.categories.serializers import CategorySerializer
 from api.questions.serializers import QuestionSerializer
 from api.quizs.serializers import QuizQuestionSerializer, QuizRelationshipSerializer, QuizSerializer
 from api.tags.serializers import TagSerializer
+from api.users.serializers import UserWithCountSerializer
 from categories.models import Category
 from core.models import Configuration
 from core.utils import github, utilities
 from questions.models import Question
 from quizs.models import Quiz, QuizQuestion, QuizRelationship
 from tags.models import Tag
+from users.models import User
 
 
 class Command(BaseCommand):
@@ -75,6 +77,17 @@ class Command(BaseCommand):
             print("--- Step 2.3 done : tags.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
+            # data/contributors.yaml
+            start_time = time.time()
+            user_queryset = User.objects.all_contributors()
+            users_yaml = utilities.serialize_model_to_yaml(
+                model_queryset=user_queryset, model_serializer=UserWithCountSerializer
+            )
+            users_element = github.create_file_element(file_path="data/contributors.yaml", file_content=users_yaml)
+
+            print("--- Step 2.4 done : contributors.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
+
+            #####################################
             # data/questions.yaml
             start_time = time.time()
             question_queryset = Question.objects.all()
@@ -85,7 +98,7 @@ class Command(BaseCommand):
                 file_path="data/questions.yaml", file_content=questions_yaml
             )
 
-            print("--- Step 2.4 done : questions.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
+            print("--- Step 2.5 done : questions.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/quizs.yaml
@@ -96,7 +109,7 @@ class Command(BaseCommand):
             )
             quizs_element = github.create_file_element(file_path="data/quizs.yaml", file_content=quizs_yaml)
 
-            print("--- Step 2.5 done : quizs.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
+            print("--- Step 2.6 done : quizs.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/quiz-questions.yaml
@@ -109,7 +122,7 @@ class Command(BaseCommand):
                 file_path="data/quiz-questions.yaml", file_content=quiz_questions_yaml
             )
 
-            print("--- Step 2.6 done : quiz-questions.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
+            print("--- Step 2.7 done : quiz-questions.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/quiz-relationships.yaml
@@ -123,7 +136,7 @@ class Command(BaseCommand):
                 file_content=quiz_relationships_yaml,
             )
 
-            print("--- Step 2.7 done : quiz-relationships.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
+            print("--- Step 2.8 done : quiz-relationships.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # update frontend file with timestamp
@@ -141,7 +154,7 @@ class Command(BaseCommand):
                 file_content=new_frontend_constants_file_content_string,
             )
 
-            print("--- Step 2.8 done : constants.js (%s seconds) ---" % round(time.time() - start_time, 1))
+            print("--- Step 2.9 done : constants.js (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # commit files
@@ -154,6 +167,7 @@ class Command(BaseCommand):
                     configuration_element,
                     categories_element,
                     tags_element,
+                    users_element,
                     questions_element,
                     quizs_element,
                     quiz_questions_element,
@@ -175,6 +189,7 @@ class Command(BaseCommand):
                     "<ul>"
                     "<li>data/configuration.yaml</li>"
                     "<li>data/tags.yaml</li>"
+                    "<li>data/contributors.yaml</li>"
                     "<li>data/questions.yaml</li>"
                     "<li>data/quizs.yaml</li>"
                     "<li>data/quiz-questions.yaml</li>"

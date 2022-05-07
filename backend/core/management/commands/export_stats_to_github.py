@@ -64,14 +64,14 @@ class Command(BaseCommand):
 
             print("--- Step 2.2 done : difficulty-levels.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
-            #####################################
-            # data/authors.yaml
-            start_time = time.time()
-            authors_list = utilities_stats.author_aggregate()
-            authors_yaml = yaml.safe_dump(authors_list, allow_unicode=True, sort_keys=False)
-            authors_element = github.create_file_element(file_path="data/authors.yaml", file_content=authors_yaml)
+            # #####################################
+            # # data/authors.yaml
+            # start_time = time.time()
+            # authors_list = utilities_stats.author_aggregate()
+            # authors_yaml = yaml.safe_dump(authors_list, allow_unicode=True, sort_keys=False)
+            # authors_element = github.create_file_element(file_path="data/authors.yaml", file_content=authors_yaml)
 
-            print("--- Step 2.3 done : authors.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
+            # print("--- Step 2.3 done : authors.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/languages.yaml
@@ -123,7 +123,7 @@ class Command(BaseCommand):
                 file_element_list=[
                     stats_element,
                     difficulty_levels_element,
-                    authors_element,
+                    # authors_element,
                     languages_element,
                     # quiz_stats_element,
                     new_frontend_constants_file_element,
@@ -143,7 +143,7 @@ class Command(BaseCommand):
                     "<ul>"
                     "<li>data/stats.yaml</li>"
                     "<li>data/difficulty-levels.yaml</li>"
-                    "<li>data/authors.yaml</li>"
+                    # "<li>data/authors.yaml</li>"
                     "<li>data/languages.yaml</li>"
                     "<li>data/tags.yaml</li>"
                     # "<li>data/quiz-stats.yaml</li>"

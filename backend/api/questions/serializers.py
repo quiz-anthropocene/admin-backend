@@ -49,8 +49,8 @@ QUESTION_FIELDS = [
 
 
 class QuestionSerializer(serializers.ModelSerializer):
-    author = UserStringSerializer()
-    validator = UserStringSerializer()
+    # author = UserStringSerializer()
+    # validator = UserStringSerializer()
 
     class Meta:
         model = Question

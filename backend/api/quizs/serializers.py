@@ -49,7 +49,7 @@ QUIZ_FIELDS_WITH_QUESTIONS.insert(QUIZ_FIELDS_WITH_QUESTIONS.index("tags"), "que
 
 
 class QuizSerializer(serializers.ModelSerializer):
-    author = UserStringSerializer()
+    # author = UserStringSerializer()
 
     class Meta:
         model = Quiz
@@ -57,7 +57,7 @@ class QuizSerializer(serializers.ModelSerializer):
 
 
 class QuizWithQuestionSerializer(serializers.ModelSerializer):
-    author = UserStringSerializer()
+    # author = UserStringSerializer()
 
     class Meta:
         model = Quiz
@@ -75,6 +75,7 @@ class QuizWithQuestionOrderSerializer(serializers.ModelSerializer):
 class QuizFullSerializer(serializers.ModelSerializer):
     questions = QuestionSerializer(many=True)
     tags = TagSerializer(many=True)
+    author = UserStringSerializer()
 
     class Meta:
         model = Quiz
