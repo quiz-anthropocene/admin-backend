@@ -1,4 +1,3 @@
-from datetime import datetime
 from io import StringIO
 
 from django.conf import settings
@@ -37,15 +36,11 @@ class QuestionResource(resources.ModelResource):
         - Notion.so adds a BOM identifier before each line
         And setting from_encoding = 'utf-8-sig' in the QuestionAdmin does not work
         So we need to fix the 'id' column
-        - added timestamp
         - Issue with BooleanFields because Notion exports Yes/No
         """
         # 'id' field
         if "id" not in row:
             row["id"] = row["\ufeffid"]
-        # 'added' field
-        if row["added"] == "":
-            row["added"] = datetime.strptime(row["Created time"], "%b %d, %Y %I:%M %p").date()
         # boolean fields
         BOOLEAN_FIELDS = ["has_ordered_answers"]
         for boolean_field in BOOLEAN_FIELDS:
