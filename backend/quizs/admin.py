@@ -72,7 +72,7 @@ class QuizRelationshipToInline(admin.StackedInline):  # TabularInline
 
 
 class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
-    list_display = (
+    list_display = [
         "id",
         "name",
         "question_count",
@@ -84,22 +84,16 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "created",
         "publish",
         "spotlight",
-    )
-    search_fields = ("name",)
-    list_filter = (
-        "publish",
-        "spotlight",
-        "has_audio",
-        "author",
-        "language",
-        "tags",
-    )
-    ordering = ("-id",)
+    ]
+    search_fields = ["name"]
+    list_filter = ["publish", "spotlight", "has_audio", "author", "language", "tags"]
+    ordering = ["-id"]
+
     prepopulated_fields = {"slug": ("name",)}
-    filter_vertical = ("questions",)
-    filter_horizontal = ("tags",)
+    autocomplete_fields = ["author"]
+    filter_horizontal = ["tags"]
     # inlines = [QuizQuestionInline, QuizRelationshipFromInline, QuizRelationshipToInline]
-    readonly_fields = (
+    readonly_fields = [
         "id",
         # "slug",
         "question_count",
@@ -116,13 +110,14 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "duration_average_minutes_string",
         "created",
         "updated",
-    )
+    ]
     actions = [
         "export_as_csv",
         "export_as_json",
         "export_as_yaml",
         "export_all_quiz_as_yaml",
     ]
+
     fieldsets_with_inlines = [
         (
             "Infos de base",
@@ -189,6 +184,10 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
             },
         ),
     ]
+
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        return qs.select_related("author").prefetch_related("tags", "questions")
 
     def show_image_background(self, instance):
         if instance.image_background_url:

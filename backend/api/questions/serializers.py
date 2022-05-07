@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from api.categories.serializers import CategorySerializer, CategoryStringSerializer
 from api.tags.serializers import TagSerializer, TagStringSerializer
+from api.users.serializers import UserStringSerializer  # UserSerializer
 from questions.models import Question
 
 
@@ -37,9 +38,7 @@ QUESTION_FIELDS = [
     "answer_image_explanation",
     "answer_extra_info",
     "author",
-    # "author_link",
     "validator",
-    # "validator_link",
     "validation_status",
     "added",
     "created",
@@ -50,6 +49,9 @@ QUESTION_FIELDS = [
 
 
 class QuestionSerializer(serializers.ModelSerializer):
+    # author = UserStringSerializer()
+    # validator = UserStringSerializer()
+
     class Meta:
         model = Question
         fields = QUESTION_FIELDS
@@ -58,6 +60,8 @@ class QuestionSerializer(serializers.ModelSerializer):
 class QuestionFullStringSerializer(serializers.ModelSerializer):
     category = CategoryStringSerializer()
     tags = TagStringSerializer(many=True)
+    author = UserStringSerializer()
+    validator = UserStringSerializer()
 
     class Meta:
         model = Question

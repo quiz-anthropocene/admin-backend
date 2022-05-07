@@ -201,15 +201,18 @@ def difficulty_aggregate():
     return difficulty_levels
 
 
-def author_aggregate():
+def author_aggregate_old():
     question_authors = list(
-        Question.objects.validated().values(name=F("author")).annotate(question_count=Count("author")).order_by("name")
+        Question.objects.validated()
+        .values(name=F("author_old"))
+        .annotate(question_count=Count("author_old"))
+        .order_by("name")
     )
     quiz_authors = list(
         Quiz.objects.published()
-        .values("author")  # cannot use name= (already a field in Quiz model)
-        .annotate(quiz_count=Count("author"))
-        .order_by("author")
+        .values("author_old")  # cannot use name= (already a field in Quiz model)
+        .annotate(quiz_count=Count("author_old"))
+        .order_by("author_old")
     )
     # merge known quiz_authors into question_authors
     question_quiz_authors = []
@@ -218,7 +221,7 @@ def author_aggregate():
             (
                 quiz_author["quiz_count"]
                 for quiz_author in quiz_authors
-                if question_author["name"] == quiz_author["author"]
+                if question_author["name"] == quiz_author["author_old"]
             ),
             0,
         )
@@ -226,13 +229,13 @@ def author_aggregate():
     # manage new quiz_authors
     question_authors_flat = [question_author["name"] for question_author in question_authors]
     new_quiz_authors = [
-        quiz_author for quiz_author in quiz_authors if quiz_author["author"] not in question_authors_flat
+        quiz_author for quiz_author in quiz_authors if quiz_author["author_old"] not in question_authors_flat
     ]
     if len(new_quiz_authors):
         for new_quiz_author in new_quiz_authors:
             question_quiz_authors.append(
                 {
-                    "name": new_quiz_author["author"],
+                    "name": new_quiz_author["author_old"],
                     "question_count": 0,
                     "quiz_count": new_quiz_author["quiz_count"],
                 }

@@ -16,7 +16,7 @@
   tags: []
   difficulty_average: 1.9
   language: Français
-  author: Raphael Odini
+  author: 1
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/010-show-your-stripes.png
   has_audio: false
   publish: true
@@ -44,7 +44,7 @@
   - 1
   difficulty_average: 2.3
   language: Français
-  author: Raphael Odini
+  author: 1
   image_background_url: https://i3.wp.com/fee.asso.fr/wp-content/uploads/2015/09/Carte-de-France-eolien-2015.jpg
   has_audio: false
   publish: true
@@ -83,7 +83,7 @@
   - 185
   difficulty_average: 2.2
   language: Français
-  author: Vincent Mignerot
+  author: 8
   image_background_url: https://www.slate.fr/sites/default/files/styles/1060x523/public/neandertal_1.jpg
   has_audio: true
   publish: true
@@ -107,7 +107,7 @@
   tags: []
   difficulty_average: 2.7
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://upload.wikimedia.org/wikipedia/commons/f/fe/GlobalPeakOil.png
   has_audio: false
   publish: true
@@ -137,7 +137,7 @@
   - 72
   difficulty_average: 2.1
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://leshorizons.net/wp-content/uploads/2019/04/d%C3%A9finition-de-lempreinte-carbone-1020x512.jpg
   has_audio: false
   publish: true
@@ -169,7 +169,7 @@
   tags: []
   difficulty_average: 2.7
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://www.francetvinfo.fr/image/759r92wwm-0bca/1200/450/10617521.jpg
   has_audio: false
   publish: true
@@ -194,7 +194,7 @@
   - 11
   difficulty_average: 2.3
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
   has_audio: false
   publish: false
@@ -236,7 +236,7 @@
   - 142
   difficulty_average: 2.0
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2019/12/photo_2019-12-10-14.01.39-215x215.jpeg
   has_audio: false
   publish: false
@@ -263,7 +263,7 @@
   tags: []
   difficulty_average: 3.3
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://static.latribune.fr/full_width/1201312/plastique-a-jakarta.jpg
   has_audio: false
   publish: true
@@ -289,7 +289,7 @@
   - 11
   difficulty_average: 2.2
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
   has_audio: false
   publish: false
@@ -334,7 +334,7 @@
   - 142
   difficulty_average: 1.9
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/IMG_9753-215x215.jpg
   has_audio: false
   publish: false
@@ -363,7 +363,7 @@
   - 142
   difficulty_average: 2.0
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/01/J1A3917120919-2-215x215.jpg
   has_audio: false
   publish: false
@@ -389,7 +389,7 @@
   - 142
   difficulty_average: 2.7
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://fresqueduclimat.org/wp-content/uploads/2020/07/PartieRestit-scaled.jpg?gid=1
   has_audio: false
   publish: false
@@ -415,7 +415,7 @@
   - 142
   difficulty_average: 1.7
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: ''
   has_audio: false
   publish: false
@@ -450,7 +450,7 @@
   - 142
   difficulty_average: 2.2
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://jive.univ-lille.fr/fileadmin/_processed_/c/d/csm_fresque-climat_ac9a138d0f.jpg
   has_audio: false
   publish: false
@@ -481,7 +481,7 @@
   tags: []
   difficulty_average: 2.2
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://reporterre.net/local/cache-vignettes/L720xH481/arton11947-94df2.jpg?1597417424
   has_audio: false
   publish: true
@@ -509,7 +509,7 @@
   - 76
   difficulty_average: 2.5
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://images.sudouest.fr/2019/04/25/5cc1b08b66a4bd2c135ac1f5/widescreen/1000x500/l-extinction-des-dinosaures.jpg?v1
   has_audio: false
   publish: true
@@ -553,7 +553,7 @@
   tags: []
   difficulty_average: 2.7
   language: Français
-  author: Laurent Testot
+  author: 13
   image_background_url: https://testing-girl-avis.com/wp-content/uploads/2018/02/ob_34d04f_cataclysmes-laurent-testot-testing-gir-1.jpg
   has_audio: true
   publish: true
@@ -588,7 +588,7 @@
   - 194
   difficulty_average: 3.0
   language: Français
-  author: Bonpote
+  author: 19
   image_background_url: https://patch.com/img/cdn20/users/224111/20190401/020846/styles/raw/public/processed_images/tree_with_money-1554098721-8512.jpg
   has_audio: false
   publish: true
@@ -618,7 +618,7 @@
   tags: []
   difficulty_average: 4.0
   language: Français
-  author: laydgeur
+  author: 5
   image_background_url: https://cdn.pixabay.com/photo/2016/11/21/15/28/brain-1845962_1280.jpg
   has_audio: false
   publish: true
@@ -660,7 +660,7 @@
   - 80
   difficulty_average: 2.6
   language: Français
-  author: laydgeur
+  author: 5
   image_background_url: https://cdn.pixabay.com/photo/2017/12/08/08/17/america-3005258_1280.jpg
   has_audio: false
   publish: true
@@ -701,7 +701,7 @@
   - 62
   difficulty_average: 2.9
   language: Français
-  author: Le Réveilleur
+  author: 37
   image_background_url: https://www.lereveilleur.com/wp-content/uploads/2020/09/CSC_paint.jpg
   has_audio: false
   publish: true
@@ -732,7 +732,7 @@
   tags: []
   difficulty_average: 2.5
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://i.pinimg.com/originals/8c/9a/2f/8c9a2f17830a4bc928fc9ed7f9c1faad.jpg
   has_audio: false
   publish: true
@@ -765,7 +765,7 @@
   - 213
   difficulty_average: 1.8
   language: Français
-  author: Raphael Odini
+  author: 1
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/057.jpg
   has_audio: false
   publish: true
@@ -801,7 +801,7 @@
   - 30
   difficulty_average: 2.1
   language: Français
-  author: Aurélien Déragne
+  author: 18
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/059-logo-fresque-numerique.png
   has_audio: false
   publish: true
@@ -831,7 +831,7 @@
   - 30
   difficulty_average: 2.2
   language: Français
-  author: Alain Servigne
+  author: 14
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/060.jpg
   has_audio: false
   publish: true
@@ -884,7 +884,7 @@
   - 255
   difficulty_average: 2.7
   language: Français
-  author: Max Pinsard
+  author: 6
   image_background_url: https://fresquedeslowtechs.files.wordpress.com/2021/02/fr_techs_modern_dezo_flouetee_64c.png
   has_audio: false
   publish: true
@@ -927,7 +927,7 @@
   - 244
   difficulty_average: 1.9
   language: Français
-  author: Julien Briton et Thomas Moulin
+  author: 44
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/062-logo-fresque-alimentation-square.png
   has_audio: false
   publish: true
@@ -959,7 +959,7 @@
   - 30
   difficulty_average: 2.1
   language: English
-  author: 'Aurélien Deragne, translation: Benoît Barraque'
+  author: 42
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/063-logo-fresque-numerique-transparent.png
   has_audio: false
   publish: true
@@ -989,7 +989,7 @@
   tags: []
   difficulty_average: 2.5
   language: Français
-  author: Matthieu Massart et Jean-Philippe Pernin
+  author: 45
   image_background_url: ''
   has_audio: false
   publish: false
@@ -1023,7 +1023,7 @@
   - 11
   difficulty_average: 2.2
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://prixdubaril.com/images/puits-petrole.jpg
   has_audio: false
   publish: true
@@ -1073,7 +1073,7 @@
   - 227
   difficulty_average: 3.2
   language: Français
-  author: Sous Nos Pieds
+  author: 10
   image_background_url: https://cdn.pixabay.com/photo/2015/11/19/21/43/desert-1052092_1280.jpg
   has_audio: false
   publish: true
@@ -1111,7 +1111,7 @@
   - 255
   difficulty_average: 2.4
   language: Français
-  author: Max Pinsard
+  author: 6
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/067-low-tech-oubli.png
   has_audio: false
   publish: true
@@ -1155,7 +1155,7 @@
   - 255
   difficulty_average: 2.6
   language: English
-  author: Max Pinsard
+  author: 6
   image_background_url: https://fresquedeslowtechs.files.wordpress.com/2021/02/fr_techs_modern_dezo_flouetee_64c.png
   has_audio: false
   publish: true
@@ -1191,7 +1191,7 @@
   - 263
   difficulty_average: 2.2
   language: Français
-  author: Alix Reverdy
+  author: 20
   image_background_url: https://www.ge.ch/media/media_image/2020-11/grand-cycle.jpg
   has_audio: false
   publish: true
@@ -1231,7 +1231,7 @@
   - 255
   difficulty_average: 1.9
   language: Français
-  author: Max Pinsard
+  author: 6
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/070-solLT_32c.png
   has_audio: false
   publish: true
@@ -1257,7 +1257,7 @@
   - 223
   difficulty_average: 2.6
   language: Français
-  author: Cyril Retourné
+  author: 24
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/071-logo-fresque-oceane.jpg
   has_audio: false
   publish: false
@@ -1292,7 +1292,7 @@
   - 255
   difficulty_average: 2.6
   language: English
-  author: Max Pinsard
+  author: 6
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/067-low-tech-oubli.png
   has_audio: false
   publish: true
@@ -1335,7 +1335,7 @@
   - 100
   difficulty_average: 2.5
   language: Français
-  author: Michel Bonnassieux
+  author: 35
   image_background_url: https://restonslespiedssurterre.fr/wp-content/uploads/2019/06/OVH-En-tete-Avions-fum%C3%A9e.png
   has_audio: true
   publish: true
@@ -1377,7 +1377,7 @@
   - 225
   difficulty_average: 2.1
   language: Français
-  author: Aurélien Bigo
+  author: 11
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/075.jpg
   has_audio: false
   publish: true
@@ -1419,7 +1419,7 @@
   - 72
   difficulty_average: 2.6
   language: Français
-  author: Collectif INVBC
+  author: 36
   image_background_url: https://d3n8a8pro7vhmx.cloudfront.net/resistanceclimatique/pages/115/attachments/original/1616150476/nouveau_kit.jpg?1616150476
   has_audio: false
   publish: true
@@ -1465,7 +1465,7 @@
   - 248
   difficulty_average: 2.6
   language: Français
-  author: Jean-Christophe Anna
+  author: 17
   image_background_url: https://archipelduvivant.org/wp-content/uploads/2020/07/132-133-2.jpg
   has_audio: false
   publish: true
@@ -1503,7 +1503,7 @@
   tags: []
   difficulty_average: 2.2
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://github.com/raphodn/know-your-planet/blob/master/data/images/LOGO%20quiz%20de%20lanthropocene-01.jpg?raw=true
   has_audio: false
   publish: false
@@ -1545,7 +1545,7 @@
   - 256
   difficulty_average: 1.7
   language: Français
-  author: Matthieu Massart
+  author: 2
   image_background_url: https://www.grenoble.fr/uploads/Image/81/IMF_100/GAB_GRENOBLE2019/21428_586_fresque-climat-adultes.jpg
   has_audio: false
   publish: true
@@ -1583,7 +1583,7 @@
   - 256
   difficulty_average: 0.0
   language: Français
-  author: Christine Cavazza et Matthieu Massart
+  author: 43
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/FdcJ.png
   has_audio: false
   publish: true

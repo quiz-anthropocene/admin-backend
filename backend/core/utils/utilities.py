@@ -84,6 +84,11 @@ def load_model_data_to_db(model, data):
         if "to_quiz" in item:
             item["to_quiz_id"] = item["to_quiz"]
             del item["to_quiz"]
+        # TODO: manage Users seperately
+        if "author" in item:
+            del item["author"]
+        if "validator" in item:
+            del item["validator"]
         # M2M
         if "tags" in item:
             tag_ids = item["tags"]

@@ -117,8 +117,16 @@ class User(AbstractUser):
         return self.questions.count()
 
     @property
+    def question_validated_count(self) -> int:
+        return self.questions.validated().count()
+
+    @property
     def quiz_count(self) -> int:
         return self.quizs.count()
+
+    @property
+    def quiz_published_count(self) -> int:
+        return self.quizs.published().count()
 
     @property
     def has_role_contributor(self) -> bool:
