@@ -34,33 +34,35 @@
 </div>
 
 <br />
-<div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                Modifier
-            </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <form method="POST" action="">
-                    {% csrf_token %}
 
-                    {% bootstrap_formset quiz_question_formset layout="horizontal" %}
+{% if user_can_edit_quiz %}
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Modifier les questions
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form id="quiz_question_edit_form" method="POST" action="">
+                        {% csrf_token %}
 
-                    <div class="row">
-                        <div class="col">
-                            {% bootstrap_button button_type="submit" button_class="btn-primary" content="Sauvegarder" %}
-                            {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %}
+                        {% bootstrap_formset quiz_question_formset layout="horizontal" %}
+
+                        <div class="row">
+                            <div class="col">
+                                {% bootstrap_button button_type="submit" button_class="btn-primary" content="Sauvegarder" %}
+                                {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %}
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
+{% endif %}
 {% endblock %}
 
 {% block extra_js %}

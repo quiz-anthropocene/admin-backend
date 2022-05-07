@@ -146,3 +146,6 @@ class User(AbstractUser):
     def has_role_admin(self) -> bool:
         ROLES_ALLOWED = [constants.USER_ROLE_ADMINISTRATOR]
         return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
+
+    def can_edit_quiz(self, quiz) -> bool:
+        return (quiz.author == self) or (self.has_role_admin)

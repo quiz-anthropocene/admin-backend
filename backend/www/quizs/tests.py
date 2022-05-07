@@ -4,6 +4,7 @@ from django.urls import reverse
 from core import constants
 from quizs.factories import QuizFactory
 from quizs.models import Quiz
+from users import constants as user_constants
 from users.factories import DEFAULT_PASSWORD, UserFactory
 
 
@@ -64,6 +65,55 @@ class QuizDetailViewTest(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.context["quiz"].id, self.quiz_1.id)
+
+
+class QuizDetailEditViewTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user_contributor_1 = UserFactory()
+        cls.user_contributor_2 = UserFactory()
+        cls.user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
+        cls.quiz_1 = QuizFactory(name="Quiz 1", author=cls.user_contributor_1)
+
+    def test_author_or_admin_can_edit_quiz(self):
+        for user in [self.user_contributor_1, self.user_admin]:
+            self.client.login(email=user.email, password=DEFAULT_PASSWORD)
+            url = reverse("quizs:detail_edit", args=[self.quiz_1.id])
+            response = self.client.get(url)
+            self.assertEqual(response.status_code, 200)
+            self.assertContains(response, '<form id="quiz_edit_form" ')
+        # other contributors can't edit
+        self.client.login(email=self.user_contributor_2.email, password=DEFAULT_PASSWORD)
+        url = reverse("quizs:detail_edit", args=[self.quiz_1.id])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertNotContains(response, '<form id="quiz_edit_form" ')
+        self.assertContains(response, "Vous n'avez pas les droits nécessaires")
+
+
+class QuizDetailQuestionListViewTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user_contributor_1 = UserFactory()
+        cls.user_contributor_2 = UserFactory()
+        cls.user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
+        cls.quiz_1 = QuizFactory(name="Quiz 1", author=cls.user_contributor_1)
+
+    def test_author_or_admin_can_edit_quiz_question_list(self):
+        for user in [self.user_contributor_1, self.user_admin]:
+            self.client.login(email=user.email, password=DEFAULT_PASSWORD)
+            url = reverse("quizs:detail_questions", args=[self.quiz_1.id])
+            response = self.client.get(url)
+            self.assertEqual(response.status_code, 200)
+            self.assertContains(response, "Modifier les questions")
+            self.assertContains(response, '<form id="quiz_question_edit_form" ')
+        # other contributors can't edit
+        self.client.login(email=self.user_contributor_2.email, password=DEFAULT_PASSWORD)
+        url = reverse("quizs:detail_questions", args=[self.quiz_1.id])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertNotContains(response, "Modifier les questions")
+        self.assertNotContains(response, '<form id="quiz_question_edit_form" ')
 
 
 class QuizCreateViewTest(TestCase):
