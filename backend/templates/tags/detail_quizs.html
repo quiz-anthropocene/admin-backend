@@ -16,7 +16,9 @@
                 <tbody>
                     {% for quiz in quizs %}
                         <tr>
-                            <td><a href="{% url 'quizs:detail_view' quiz.id %}">{{ quiz.id }}</a></td>
+                            <td>
+                                <a href="{% url 'quizs:detail_view' quiz.id %}">{{ quiz.id }}</a>
+                            </td>
                             <td>{{ quiz.name }}</td>
                             <td>
                                 {% include "tags/_badge_list.html" with tag_list=quiz.tags.all %}

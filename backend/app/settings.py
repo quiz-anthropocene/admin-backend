@@ -59,6 +59,8 @@ THIRD_PARTY_APPS = [
     "ckeditor",  # django-ckeditor
     "fieldsets_with_inlines",  # django-fieldsets-with-inlines
     "solo",  # django-solo
+    "dal",
+    "dal_select2",
 ]
 
 LOCAL_APPS = [

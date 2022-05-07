@@ -17,7 +17,9 @@
                 <tbody>
                     {% for question in questions %}
                         <tr>
-                            <td><a href="{% url 'questions:detail_view' question.id %}">{{ question.id }}</a></td>
+                            <td>
+                                <a href="{% url 'questions:detail_view' question.id %}">{{ question.id }}</a>
+                            </td>
                             <td>{{ question.text }}</td>
                             <td>
                                 {% include "categories/_badge_item.html" with category=question.category %}
