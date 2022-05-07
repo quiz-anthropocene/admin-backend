@@ -1,5 +1,6 @@
 from dal import autocomplete
 from django.contrib.messages.views import SuccessMessageMixin
+from django.db.models import Q
 from django.forms.models import model_to_dict
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
@@ -150,6 +151,6 @@ class QuestionAutocomplete(ContributorUserRequiredMixin, autocomplete.Select2Que
         qs = Question.objects.all()
 
         if self.q:
-            qs = qs.filter(text__icontains=self.q)
+            qs = qs.filter(Q(id=self.q) | Q(text__icontains=self.q))
 
         return qs

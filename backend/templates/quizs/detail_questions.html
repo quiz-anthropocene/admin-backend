@@ -1,4 +1,9 @@
 {% extends "quizs/detail_base.html" %}
+{% load django_bootstrap5 %}
+
+{% block extra_css %}
+{{ quiz_question_formset.media.css }}
+{% endblock %}
 
 {% block quiz_detail_content %}
 <div class="row">
@@ -14,11 +19,13 @@
                 </thead>
                 <tbody>
                     {% for quiz_question in quiz_questions %}
-                        <tr>
-                            <td><a href="{% url 'questions:detail_view' quiz_question.question.id %}">{{ quiz_question.question.id }}</a></td>
-                            <td>{{ quiz_question.question.text }}</td>
-                            <td>{{ quiz_question.order }}</td>
-                        </tr>
+                    <tr>
+                        <td>
+                            <a href="{% url 'questions:detail_view' quiz_question.question.id %}">{{ quiz_question.question.id }}</a>
+                        </td>
+                        <td>{{ quiz_question.question.text }}</td>
+                        <td>{{ quiz_question.order }}</td>
+                    </tr>
                     {% endfor %}
                 </tbody>
             </table>
@@ -27,15 +34,35 @@
 </div>
 
 <br />
-<div class="row">
-    <div class="col-12">
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#quiz_detail_questions_edit_modal" title="Modifier les questions">
-            Modifier
-        </button>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Modifier
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <form method="POST" action="">
+                    {% csrf_token %}
+
+                    {% bootstrap_formset quiz_question_formset layout="horizontal" %}
+
+                    <div class="row">
+                        <div class="col">
+                            {% bootstrap_button button_type="submit" button_class="btn-primary" content="Sauvegarder" %}
+                            {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %}
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
+
 {% endblock %}
 
-{% block modals %}
-    {% include "quizs/detail_questions_edit_modal.html" %}
+{% block extra_js %}
+{{ quiz_question_formset.media.js }}
 {% endblock %}

@@ -2,6 +2,7 @@ from dal import autocomplete
 from django import forms
 from django.forms.models import inlineformset_factory
 
+from questions.models import Question
 from quizs.models import Quiz, QuizQuestion
 from quizs.tables import QUIZ_FIELD_SEQUENCE
 from tags.models import Tag
@@ -34,12 +35,13 @@ class QuizEditForm(QuizCreateForm):
 
 
 class QuizQuestionEditForm(forms.ModelForm):
+    question = forms.ModelChoiceField(
+        queryset=Question.objects.all(), widget=autocomplete.ModelSelect2(url="questions:search")
+    )
+
     class Meta:
         model = QuizQuestion
-        # fields = ["order"]
         fields = ["question", "order"]
-
-    widgets = {"question": autocomplete.ModelSelect2(url="/questions/search/")}
 
 
 QuizQuestionFormSet = inlineformset_factory(Quiz, QuizQuestion, form=QuizQuestionEditForm, extra=1, can_delete=True)
