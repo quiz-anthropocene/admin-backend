@@ -92,7 +92,7 @@ def question_random(request):
     - 'current' (question id)
     - 'category' (string)
     - 'tag' (string)
-    - 'author' (string)
+    - // 'author' (string)
     """
     questions = Question.objects.validated()
     if request.GET.get("current"):
@@ -101,8 +101,8 @@ def question_random(request):
         questions = questions.for_category(request.GET.get("category"))
     if request.GET.get("tag"):
         questions = questions.for_tag(request.GET.get("tag"))
-    if request.GET.get("author"):
-        questions = questions.for_author(request.GET.get("author"))
+    # if request.GET.get("author"):
+    #     questions = questions.for_author(request.GET.get("author"))
 
     questions_ids = questions.values_list("id", flat=True)
     questions_random_id = random.sample(list(questions_ids), 1)

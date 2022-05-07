@@ -7,18 +7,22 @@ from questions.factories import QuestionFactory
 from quizs.factories import QuizFactory
 from quizs.models import QuizQuestion
 from tags.factories import TagFactory
+from users.factories import UserFactory
 
 
 class ApiTest(TestCase):
     @classmethod
     def setUpTestData(cls):
+        cls.user_1 = UserFactory(first_name="First 1", last_name="Last 1")
+        cls.user_2 = UserFactory(first_name="First 2", last_name="Last 2")
+        cls.user_3 = UserFactory(first_name="First 3", last_name="Last 3")
         cls.category_1 = CategoryFactory(name="Cat 1")
         cls.tag_1 = TagFactory(name="Tag 1")
         cls.tag_2 = TagFactory(name="Tag 2")
         cls.question_1 = QuestionFactory(
             text="question 1",
             category=cls.category_1,
-            author="author 1",
+            author=cls.user_1,
             validation_status=constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS,
         )
         cls.question_2 = QuestionFactory(
@@ -28,19 +32,19 @@ class ApiTest(TestCase):
             language=constants.LANGUAGE_ENGLISH,
             category=cls.category_1,
             answer_correct="a",
-            author="author 2",
+            author=cls.user_2,
         )
         cls.question_2.tags.set([cls.tag_2, cls.tag_1])
-        cls.question_3 = QuestionFactory(text="question 3", category=cls.category_1, author="author 3")
+        cls.question_3 = QuestionFactory(text="question 3", category=cls.category_1, author=cls.user_3)
         cls.question_3.tags.add(cls.tag_2)
         cls.question_3.save()
-        cls.quiz_1 = QuizFactory(name="quiz 1", publish=False, author="author 1")
+        cls.quiz_1 = QuizFactory(name="quiz 1", publish=False, author=cls.user_1)
         QuizQuestion.objects.create(quiz=cls.quiz_1, question=cls.question_1)
         cls.quiz_2 = QuizFactory(
             name="quiz 2",
             publish=True,
             language=constants.LANGUAGE_ENGLISH,
-            author="author 2",
+            author=cls.user_2,
         )
         cls.quiz_2.tags.set([cls.tag_1])
         QuizQuestion.objects.create(quiz=cls.quiz_2, question=cls.question_2, order=2)
@@ -92,10 +96,10 @@ class ApiTest(TestCase):
         self.assertEqual(len(response.data["results"]), 2)
 
     def test_question_list_filter_by_author(self):
-        response = self.client.get(reverse("api:question-list"), {"author": "author 1"})
+        response = self.client.get(reverse("api:question-list"), {"author": self.user_1.id})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 0)  # question not validated
-        response = self.client.get(reverse("api:question-list"), {"author": "author 2"})
+        response = self.client.get(reverse("api:question-list"), {"author": self.user_2.id})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 1)
 
@@ -212,10 +216,10 @@ class ApiTest(TestCase):
         self.assertEqual(len(response.data["results"]), 0)
 
     def test_quiz_list_filter_by_author(self):
-        response = self.client.get(reverse("api:quiz-list"), {"author": "author 1"})
+        response = self.client.get(reverse("api:quiz-list"), {"author": self.user_1.id})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 0)  # quiz not published
-        response = self.client.get(reverse("api:quiz-list"), {"author": "author 2"})
+        response = self.client.get(reverse("api:quiz-list"), {"author": self.user_2.id})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 1)
 

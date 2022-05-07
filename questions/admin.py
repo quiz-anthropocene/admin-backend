@@ -96,7 +96,7 @@ class QuestionResource(resources.ModelResource):
 
 class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
     resource_class = QuestionResource
-    list_display = (
+    list_display = [
         "id",
         "text",
         "type",
@@ -114,12 +114,9 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         # "answer_success_count_agg",
         # "answer_success_rate",
         "created",
-    )
-    search_fields = (
-        "id",
-        "text",
-    )
-    list_filter = (
+    ]
+    search_fields = ["id", "text"]
+    list_filter = [
         "type",
         "category",
         "difficulty",
@@ -128,16 +125,18 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         "language",
         # "quizs",
         "tags",
-    )
-    ordering = ("-id",)  # "answer_count_agg", "answer_success_rate",
+    ]
+    ordering = ["-id"]  # "answer_count_agg", "answer_success_rate",
     actions = [
         "export_as_csv",
         "export_as_json",
         "export_as_yaml",
         "export_all_question_as_yaml",
     ]
-    filter_horizontal = ("tags",)
-    readonly_fields = (
+
+    autocomplete_fields = ["author", "validator"]
+    filter_horizontal = ["tags"]
+    readonly_fields = [
         "quizs_list_string",
         "show_answer_image",
         "answer_count_agg",
@@ -147,13 +146,13 @@ class QuestionAdmin(ImportMixin, ExportMixin, admin.ModelAdmin):
         "dislike_count_agg",
         # "created_at",
         # "updated_at",
-    )
+    ]
 
     change_list_template = "admin/questions/question/change_list_with_import.html"
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)
-        return qs.select_related("category").prefetch_related("tags", "quizs")
+        return qs.select_related("category", "author", "validator").prefetch_related("tags", "quizs")
 
     def has_add_permission(self, request, obj=None):
         return False

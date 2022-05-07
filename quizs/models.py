@@ -26,8 +26,8 @@ class QuizQuerySet(models.QuerySet):
 
 
 class Quiz(models.Model):
-    QUIZ_CHOICE_FIELDS = ["language", "author"]
-    QUIZ_FK_FIELDS = ["author_link"]
+    QUIZ_CHOICE_FIELDS = ["language"]
+    QUIZ_FK_FIELDS = ["author"]
     QUIZ_M2M_FIELDS = ["questions", "tags", "relationships"]
     QUIZ_LIST_FIELDS = [
         "questions_categories_list",
@@ -38,7 +38,7 @@ class Quiz(models.Model):
     QUIZ_URL_FIELDS = []
     QUIZ_IMAGE_URL_FIELDS = ["image_background_url"]
     QUIZ_TIMESTAMP_FIELDS = ["created", "updated"]
-    QUIZ_READONLY_FIELDS = ["slug", "difficulty_average", "author", "author_link", "created", "updated"]
+    QUIZ_READONLY_FIELDS = ["slug", "difficulty_average", "author_old", "author", "created", "updated"]
 
     name = models.CharField(verbose_name="Nom", max_length=50, blank=False)
     slug = models.SlugField(verbose_name="Fragment d'URL", max_length=50, unique=True)
@@ -63,8 +63,8 @@ class Quiz(models.Model):
         default=constants.LANGUAGE_FRENCH,
         blank=False,
     )
-    author = models.CharField(verbose_name="Auteur", max_length=50, blank=True)
-    author_link = models.ForeignKey(
+    author_old = models.CharField(verbose_name="Auteur", max_length=50, blank=True)
+    author = models.ForeignKey(
         verbose_name="Auteur",
         to=settings.AUTH_USER_MODEL,
         related_name="quizs",

@@ -44,8 +44,8 @@ class ProfileQuestionListView(ContributorUserRequiredMixin, SingleTableMixin, Fi
 
     def get_queryset(self):
         qs = super().get_queryset()
-        qs = qs.select_related("category", "author_link", "validator_link").prefetch_related("tags")
-        qs = qs.filter(author_link=self.request.user)
+        qs = qs.select_related("category", "author", "validator").prefetch_related("tags")
+        qs = qs.filter(author=self.request.user)
         qs = qs.order_by("-created")
         return qs
 
@@ -66,8 +66,8 @@ class ProfileQuizListView(ContributorUserRequiredMixin, SingleTableView):
 
     def get_queryset(self):
         qs = super().get_queryset()
-        qs = qs.select_related("author_link").prefetch_related("tags")
-        qs = qs.filter(author_link=self.request.user)
+        qs = qs.select_related("author").prefetch_related("tags")
+        qs = qs.filter(author=self.request.user)
         qs = qs.order_by("-created")
         return qs
 
