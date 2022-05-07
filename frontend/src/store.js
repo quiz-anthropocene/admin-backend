@@ -92,11 +92,12 @@ const store = new Vuex.Store({
      */
     GET_QUESTION_LIST_FROM_LOCAL_YAML: ({ commit, state, getters }) => {
       const questions = questionsYamlData;
-      // questions: get category & tags objects
+      // questions: get author, category & tags objects
       questions.map((q) => {
+        const questionAuthor = getters.getUserById(q.author);
         const questionCategory = getters.getCategoryById(q.category);
         const questionTags = getters.getTagsByIdList(q.tags);
-        Object.assign(q, { category: questionCategory }, { tags: questionTags });
+        Object.assign(q, { author: questionAuthor, category: questionCategory }, { tags: questionTags });
         return q;
       });
       const questionsValidated = questions.filter((q) => q.language === state.locale.value).filter((el) => el.validation_status === constants.QUESTION_VALIDATION_STATUS_OK);
@@ -133,10 +134,11 @@ const store = new Vuex.Store({
         const quizQuestionsIdList = quizQuestionsList.map((qq) => qq.question);
         const quizQuestions = getters.getQuestionsByIdList(quizQuestionsIdList);
         quizQuestions.sort((a, b) => quizQuestionsIdList.indexOf(a.id) - quizQuestionsIdList.indexOf(b.id));
-        // get quiz tags
+        // get quiz author & tags
+        const quizAuthor = getters.getUserById(q.author);
         const quizTags = getters.getTagsByIdList(q.tags);
         // assign
-        Object.assign(q, { questions: quizQuestions }, { tags: quizTags });
+        Object.assign(q, { questions: quizQuestions }, { author: quizAuthor }, { tags: quizTags });
         return q;
       });
       const quizsPublished = quizs.filter((q) => q.language === state.locale.value).filter((el) => el.publish === true);
@@ -327,6 +329,7 @@ const store = new Vuex.Store({
     },
   },
   getters: {
+    getUserById: (state) => (userId) => state.authors.find((c) => (c.id === ((userId && typeof userId === 'object') ? userId.id : userId))),
     getCategoryById: (state) => (categoryId) => state.categories.find((c) => (c.id === ((categoryId && typeof categoryId === 'object') ? categoryId.id : categoryId))),
     getTagById: (state) => (tagId) => state.tags.find((t) => (t.id === ((tagId && typeof tagId === 'object') ? tagId.id : tagId))),
     getTagsByIdList: (state) => (tagIdList) => state.tags.filter((t) => ((tagIdList && tagIdList.length && typeof tagIdList[0] === 'object') ? tagIdList.map((tag) => tag.id).includes(t.id) : tagIdList.includes(t.id))),

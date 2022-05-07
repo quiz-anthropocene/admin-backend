@@ -77,15 +77,15 @@ class Command(BaseCommand):
             print("--- Step 2.3 done : tags.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
-            # data/contributors.yaml
+            # data/authors.yaml
             start_time = time.time()
             user_queryset = User.objects.all_contributors()
             users_yaml = utilities.serialize_model_to_yaml(
                 model_queryset=user_queryset, model_serializer=UserWithCountSerializer
             )
-            users_element = github.create_file_element(file_path="data/contributors.yaml", file_content=users_yaml)
+            users_element = github.create_file_element(file_path="data/authors.yaml", file_content=users_yaml)
 
-            print("--- Step 2.4 done : contributors.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
+            print("--- Step 2.4 done : authors.yaml (%s seconds) ---" % round(time.time() - start_time, 1))
 
             #####################################
             # data/questions.yaml

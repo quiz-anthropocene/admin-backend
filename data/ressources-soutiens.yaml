@@ -32,10 +32,12 @@
   description_url: https://avenirclimatique.org/
   description_details: ''
   image_url: https://avenirclimatique.org/wp-content/themes/JointsWP-master/library/images/logo_AC_simple_100px.png
+  # question_author: Avenir Climatique
   added: 2020-06-01
 - name: Citoyens pour le Climat
   description: ''
   description_url: https://citoyenspourleclimat.org/
   description_details: Contenu réalisé avec l'aide de l’association.
   image_url: https://citoyenspourleclimat.org/wp-content/uploads/2019/01/cropped-CPLC_Logo_National_QUADRI-1-2.png
+  # question_author: Citoyens pour le Climat
   added: 2020-06-01
