@@ -8,7 +8,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ("tags", "0003_alter_tag_timestamps"),
-        ("quizs", "0006_historicalquiz"),
+        ("quizs", "0007_historicalquiz"),
     ]
 
     operations = [

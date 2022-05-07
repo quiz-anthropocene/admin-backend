@@ -43,7 +43,6 @@ class Question(models.Model):
         "language",
         "answer_correct",
         "validation_status",
-        "validator_old",
     ]
     QUESTION_FK_FIELDS = ["category", "author", "validator"]
     QUESTION_M2M_FIELDS = ["tags"]
@@ -54,9 +53,7 @@ class Question(models.Model):
     QUESTION_TIMESTAMP_FIELDS = ["created", "updated"]
     QUESTION_FLATTEN_FIELDS = ["category_string", "tag_list", "quiz_list", "author_string", "validator_string"]
     QUESTION_READONLY_FIELDS = [
-        "author_old",
         "author",
-        "validator_old",
         "validator",
         "validation_status",
         "added",
@@ -156,7 +153,6 @@ class Question(models.Model):
         blank=True,
         help_text="Ne s'affichera pas dans l'application",
     )
-    author_old = models.CharField(verbose_name="Auteur", max_length=50, blank=True)
     author = models.ForeignKey(
         verbose_name="Auteur",
         to=settings.AUTH_USER_MODEL,
@@ -165,7 +161,6 @@ class Question(models.Model):
         null=True,
         on_delete=models.SET_NULL,
     )
-    validator_old = models.CharField(verbose_name="Validateur", max_length=50, blank=True)
     validator = models.ForeignKey(
         verbose_name="Validateur",
         to=settings.AUTH_USER_MODEL,
@@ -209,8 +204,8 @@ class Question(models.Model):
         self.category_string = str(self.category) if self.category else ""
         # self.tag_list = self.tags_list  # see m2m_changed
         # self.quiz_list = self.quizs_id_list  # see m2m_changed (QuizQuestion)
-        self.author_string = str(self.author_link) if self.author_link else ""
-        self.validator_string = str(self.validator_link) if self.validator_link else ""
+        self.author_string = str(self.author) if self.author else ""
+        self.validator_string = str(self.validator) if self.validator else ""
 
     def save(self, *args, **kwargs):
         self.set_flatten_fields()

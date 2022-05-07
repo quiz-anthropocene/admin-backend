@@ -48,8 +48,8 @@ class QuestionModelSaveTest(TestCase):
         self.question.category = category
         user_1 = UserFactory(first_name="Paul", last_name="Dupont")
         user_2 = UserFactory(first_name="Marie", last_name="Dupond")
-        self.question.author_link = user_1
-        self.question.validator_link = user_2
+        self.question.author = user_1
+        self.question.validator = user_2
         self.question.save()
         self.assertEqual(self.question.category_string, category.name)
         self.assertEqual(self.question.author_string, user_1.full_name)

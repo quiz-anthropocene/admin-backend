@@ -47,7 +47,6 @@ class Quiz(models.Model):
     QUIZ_READONLY_FIELDS = [
         "slug",
         "difficulty_average",
-        "author_old",
         "author",
         "created",
         "updated",
@@ -76,7 +75,6 @@ class Quiz(models.Model):
         default=constants.LANGUAGE_FRENCH,
         blank=False,
     )
-    author_old = models.CharField(verbose_name="Auteur", max_length=50, blank=True)
     author = models.ForeignKey(
         verbose_name="Auteur",
         to=settings.AUTH_USER_MODEL,
@@ -144,7 +142,7 @@ class Quiz(models.Model):
         # self.tag_list = self.tags_list  # see m2m_changed
         # self.question_list = self.questions_id_list_with_order  # see m2m_changed
         # self.relationship_list = self.relationships_list  # see m2m_changed
-        self.author_string = str(self.author_link) if self.author_link else ""
+        self.author_string = str(self.author) if self.author else ""
 
     def save(self, *args, **kwargs):
         self.set_slug()

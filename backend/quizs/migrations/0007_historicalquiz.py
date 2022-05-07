@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ("quizs", "0005_alter_quiz_timestamps"),
+        ("quizs", "0006_rename_quiz_author"),
     ]
 
     operations = [
@@ -40,7 +40,6 @@ class Migration(migrations.Migration):
                         verbose_name="Langue",
                     ),
                 ),
-                ("author", models.CharField(blank=True, max_length=50, verbose_name="Auteur")),
                 (
                     "image_background_url",
                     models.URLField(
@@ -66,7 +65,7 @@ class Migration(migrations.Migration):
                     models.CharField(choices=[("+", "Created"), ("~", "Changed"), ("-", "Deleted")], max_length=1),
                 ),
                 (
-                    "author_link",
+                    "author",
                     models.ForeignKey(
                         blank=True,
                         db_constraint=False,

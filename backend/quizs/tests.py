@@ -53,7 +53,7 @@ class QuizModelSaveTest(TestCase):
 
     def test_update_related_flatten_fields_on_save(self):
         user = UserFactory(first_name="Paul", last_name="Dupont")
-        self.quiz.author_link = user
+        self.quiz.author = user
         self.quiz.save()
         self.assertEqual(self.quiz.author_string, user.full_name)
 

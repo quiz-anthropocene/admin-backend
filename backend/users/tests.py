@@ -11,9 +11,9 @@ class UserModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user = UserFactory(first_name="First", last_name="Last", email="test@example.com")
-        QuestionFactory(author_link=cls.user)
-        QuestionFactory(author_link=cls.user)
-        QuizFactory(author_link=cls.user)
+        QuestionFactory(author=cls.user)
+        QuestionFactory(author=cls.user)
+        QuizFactory(author=cls.user)
 
     def test_str(self):
         self.assertEqual(str(self.user), "First Last")

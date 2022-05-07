@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
     dependencies = [
         ("categories", "0003_alter_category_timestamps"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ("questions", "0005_alter_question_timestamps"),
+        ("questions", "0006_rename_question_author_validator"),
     ]
 
     operations = [
@@ -170,8 +170,6 @@ class Migration(migrations.Migration):
                         verbose_name="Notes, commentaires et liens explicatifs additionels",
                     ),
                 ),
-                ("author", models.CharField(blank=True, max_length=50, verbose_name="Auteur")),
-                ("validator", models.CharField(blank=True, max_length=50, verbose_name="Validateur")),
                 (
                     "validation_status",
                     models.CharField(
@@ -204,7 +202,7 @@ class Migration(migrations.Migration):
                     models.CharField(choices=[("+", "Created"), ("~", "Changed"), ("-", "Deleted")], max_length=1),
                 ),
                 (
-                    "author_link",
+                    "author",
                     models.ForeignKey(
                         blank=True,
                         db_constraint=False,
@@ -237,7 +235,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 (
-                    "validator_link",
+                    "validator",
                     models.ForeignKey(
                         blank=True,
                         db_constraint=False,
