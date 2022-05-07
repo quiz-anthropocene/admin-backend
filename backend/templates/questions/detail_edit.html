@@ -4,7 +4,7 @@
 {% block question_detail_content %}
 <div class="row">
     <div class="col-12">
-        {% if user_can_edit_quiz %}
+        {% if user_can_edit_question %}
             <form id="question_edit_form" method="POST" action="">
                 {% csrf_token %}
 
