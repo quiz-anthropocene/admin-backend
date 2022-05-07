@@ -1,21 +1,34 @@
 from django.test import TestCase
 
+from questions.factories import QuestionFactory
+from quizs.factories import QuizFactory
 from users import constants
 from users.factories import UserFactory
 from users.models import User
 
 
 class UserModelTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user = UserFactory(first_name="First", last_name="Last", email="test@example.com")
+        QuestionFactory(author=cls.user)
+        QuestionFactory(author=cls.user)
+        QuizFactory(author=cls.user)
+
     def test_str(self):
-        user = UserFactory(first_name="First", last_name="Last", email="test@example.com")
-        self.assertEqual(str(user), "First Last")
+        self.assertEqual(str(self.user), "First Last")
 
     def test_full_name(self):
-        user = UserFactory(first_name="First", last_name="Last", email="test@example.com")
-        self.assertEqual(user.full_name, "First Last")
+        self.assertEqual(self.user.full_name, "First Last")
+
+    def test_question_count(self):
+        self.assertEqual(self.user.question_count, 2)
+
+    def test_quiz_count(self):
+        self.assertEqual(self.user.quiz_count, 1)
 
 
-class UserRoleTest(TestCase):
+class UserModelRoleTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user = UserFactory(roles=[])

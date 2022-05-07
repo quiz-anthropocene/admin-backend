@@ -169,10 +169,10 @@ class QuizModelTest(TestCase):
             order=1,
         )
 
-    def test_published_quiz_must_have_at_least_one_question(self):
-        self.quiz_not_published = QuizFactory(name="quiz not published")
-        self.quiz_not_published.publish = True
-        self.assertRaises(ValidationError, self.quiz_not_published.save, update_fields=["publish"])
+    # def test_published_quiz_must_have_at_least_one_question(self):
+    #     self.quiz_not_published = QuizFactory(name="quiz not published")
+    #     self.quiz_not_published.publish = True
+    #     self.assertRaises(ValidationError, self.quiz_not_published.save, update_fields=["publish"])
 
     def test_published_quiz_can_have_not_validated_questions(self):
         self.question_validated = QuestionFactory(answer_correct="a")

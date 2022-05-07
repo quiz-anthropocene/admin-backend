@@ -45,7 +45,7 @@
                             <td>{{ user.email }}</td>
                         </tr>
                         <tr>
-                            <td>Rôle(s)</td>
+                            <td>Rôles</td>
                             <td>
                                 {% for role in user.roles %}
                                     <span class="badge bg-primary">{% array_choices_item_display user 'roles' role %}</span>

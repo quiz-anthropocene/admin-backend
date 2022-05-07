@@ -5,6 +5,7 @@ from www.quizs.views import (
     QuizCreateView,
     QuizDetailContributionListView,
     QuizDetailEditView,
+    QuizDetailHistoryView,
     QuizDetailQuestionListView,
     QuizDetailStatsView,
     QuizDetailView,
@@ -21,7 +22,6 @@ urlpatterns = [
         "<int:pk>/",
         include(
             [
-                # path("", QuizDetailView.as_view(), name="detail"),
                 path(
                     "",
                     RedirectView.as_view(pattern_name="quizs:detail_view", permanent=False),
@@ -32,6 +32,7 @@ urlpatterns = [
                 path("questions/", QuizDetailQuestionListView.as_view(), name="detail_questions"),
                 path("comments/", QuizDetailContributionListView.as_view(), name="detail_contributions"),
                 path("stats/", QuizDetailStatsView.as_view(), name="detail_stats"),
+                path("history/", QuizDetailHistoryView.as_view(), name="detail_history"),
             ]
         ),
     ),

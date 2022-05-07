@@ -39,6 +39,9 @@
                 <li class="nav-item">
                     <a class="nav-link {% if 'stats' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_stats' quiz.id %}">Statistiques</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if 'history' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_history' quiz.id %}">Historique</a>
+                </li>
             </ul>
         </div>
     </div>
