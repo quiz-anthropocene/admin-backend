@@ -19,6 +19,7 @@ from questions.models import Question
 from questions.tables import QuestionTable
 from quizs.models import QuizQuestion
 from stats.models import QuestionAggStat
+from users import constants as user_constants
 
 
 class QuestionListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
@@ -68,11 +69,7 @@ class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, 
         form = super().get_form(self.form_class)
         if not self.request.user.can_validate_question(question):
             form.fields["validation_status"].disabled = True
-            form.fields[
-                "validation_status"
-            ].help_text = (
-                "Vous n'avez pas les droits nécessaires pour modifier le Statut (seul un administrateur peut le faire)"
-            )
+            form.fields["validation_status"].help_text = user_constants.ADMIN_REQUIRED_MESSAGE
         return form
 
     def get_context_data(self, **kwargs):

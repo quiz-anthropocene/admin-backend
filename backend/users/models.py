@@ -155,3 +155,6 @@ class User(AbstractUser):
 
     def can_edit_quiz(self, quiz) -> bool:
         return (quiz.author == self) or (self.has_role_admin)
+
+    def can_publish_quiz(self, quiz) -> bool:
+        return (quiz.author != self) and (self.has_role_admin)

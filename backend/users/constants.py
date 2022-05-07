@@ -6,3 +6,7 @@ USER_ROLE_CHOICES = (
     (USER_ROLE_SUPER_CONTRIBUTOR, "Super Contributeur"),
     (USER_ROLE_ADMINISTRATOR, "Administrateur"),
 )
+
+ADMIN_REQUIRED_MESSAGE = (
+    "Vous n'avez pas les droits nécessaires pour modifier ce champ (seul un administrateur peut le faire)"
+)

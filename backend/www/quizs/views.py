@@ -17,6 +17,7 @@ from quizs.forms import QUIZ_FORM_FIELDS, QuizCreateForm, QuizEditForm, QuizQues
 from quizs.models import Quiz
 from quizs.tables import QuizTable
 from stats.models import QuizAggStat
+from users import constants as user_constants
 
 
 class QuizListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
@@ -60,6 +61,16 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
 
     def get_object(self):
         return get_object_or_404(Quiz, id=self.kwargs.get("pk"))
+
+    def get_form(self, *args, **kwargs):
+        quiz = self.get_object()
+        form = super().get_form(self.form_class)
+        if not self.request.user.can_publish_quiz(quiz):
+            form.fields["publish"].disabled = True
+            form.fields["publish"].help_text = user_constants.ADMIN_REQUIRED_MESSAGE
+            form.fields["spotlight"].disabled = True
+            form.fields["spotlight"].help_text = user_constants.ADMIN_REQUIRED_MESSAGE
+        return form
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
