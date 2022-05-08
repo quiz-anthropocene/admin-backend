@@ -1,7 +1,7 @@
 {
     "jobs": [
         {
-            "command": "30 6,18 * * * python manage.py generate_daily_stats"
+            "command": "15 */6 * * * python manage.py generate_daily_stats"
         },
         {
             "command": "30 3 * * * python manage.py export_data_to_github"
