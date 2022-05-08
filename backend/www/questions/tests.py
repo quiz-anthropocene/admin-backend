@@ -84,22 +84,43 @@ class QuizDetailEditViewTest(TestCase):
         cls.user_contributor_2 = UserFactory()
         cls.user_super_contributor = UserFactory(roles=[user_constants.USER_ROLE_SUPER_CONTRIBUTOR])
         cls.user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
-        cls.quiz_1 = QuestionFactory(text="Question 1", author=cls.user_contributor_1)
+        cls.question_1 = QuestionFactory(
+            text="Question 1", author=cls.user_contributor_1, visibility=constants.VISIBILITY_PUBLIC
+        )
+        cls.question_2 = QuestionFactory(
+            text="Question 2", author=cls.user_contributor_1, visibility=constants.VISIBILITY_PRIVATE
+        )
 
-    def test_author_or_super_contributor_can_edit_question(self):
+    def test_author_or_super_contributor_can_edit_public_question(self):
         for user in [self.user_contributor_1, self.user_super_contributor, self.user_admin]:
             self.client.login(email=user.email, password=DEFAULT_PASSWORD)
-            url = reverse("questions:detail_edit", args=[self.quiz_1.id])
+            url = reverse("questions:detail_edit", args=[self.question_1.id])
             response = self.client.get(url)
             self.assertEqual(response.status_code, 200)
             self.assertContains(response, '<form id="question_edit_form" ')
         # other contributors can't edit
         self.client.login(email=self.user_contributor_2.email, password=DEFAULT_PASSWORD)
-        url = reverse("questions:detail_edit", args=[self.quiz_1.id])
+        url = reverse("questions:detail_edit", args=[self.question_1.id])
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertNotContains(response, '<form id="question_edit_form" ')
         self.assertContains(response, "Vous n'avez pas les droits nécessaires")
+
+    def test_only_author_can_edit_private_question(self):
+        # author can edit
+        self.client.login(email=self.user_contributor_1.email, password=DEFAULT_PASSWORD)
+        url = reverse("questions:detail_edit", args=[self.question_2.id])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, '<form id="question_edit_form" ')
+        # other contributors can't edit
+        for user in [self.user_contributor_2, self.user_super_contributor, self.user_admin]:
+            self.client.login(email=user.email, password=DEFAULT_PASSWORD)
+            url = reverse("questions:detail_edit", args=[self.question_2.id])
+            response = self.client.get(url)
+            self.assertEqual(response.status_code, 200)
+            self.assertNotContains(response, '<form id="question_edit_form" ')
+            self.assertContains(response, "Vous n'avez pas les droits nécessaires")
 
 
 class QuestionCreateViewTest(TestCase):

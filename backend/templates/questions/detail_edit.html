@@ -27,7 +27,11 @@
             </form>
         {% else %}
             <div class="alert alert-warning" role="alert">
-                Vous n'avez pas les droits nécessaires <small>(seul l'auteur ou un super-contributeur peut modifier une question)</small>
+                {% if question.is_private %}
+                    Vous n'avez pas les droits nécessaires <small>(seul l'auteur peut modifier une question privée)</small>
+                {% else %}
+                    Vous n'avez pas les droits nécessaires <small>(seul l'auteur ou un super-contributeur peut modifier une question publique)</small>
+                {% endif %}
             </div>
         {% endif %}
     </div>

@@ -1,9 +1,9 @@
 from django.test import TestCase
 
-from backend.questions.models import Question
 from categories.factories import CategoryFactory
 from core import constants
 from questions.factories import QuestionFactory
+from questions.models import Question
 from quizs.factories import QuizFactory
 from quizs.models import QuizQuestion
 from tags.factories import TagFactory

@@ -272,6 +272,10 @@ class Question(models.Model):
         return len(self.answer_image_url) > 0
 
     @property
+    def is_private(self) -> bool:
+        return self.visibility == constants.VISIBILITY_PRIVATE
+
+    @property
     def answer_count_agg(self) -> int:
         return self.agg_stats.answer_count + self.stats.count()
 

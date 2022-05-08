@@ -185,6 +185,10 @@ class Quiz(models.Model):
         return ", ".join(self.tags_list)
 
     @property
+    def is_private(self) -> bool:
+        return self.visibility == constants.VISIBILITY_PRIVATE
+
+    @property
     def questions_categories_list(self) -> list:
         return list(self.questions.order_by().values_list("category__name", flat=True).distinct())  # .sort()
 

@@ -79,9 +79,10 @@ class QuizDetailEditViewTest(TestCase):
         cls.user_contributor_1 = UserFactory()
         cls.user_contributor_2 = UserFactory()
         cls.user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
-        cls.quiz_1 = QuizFactory(name="Quiz 1", author=cls.user_contributor_1)
+        cls.quiz_1 = QuizFactory(name="Quiz 1", author=cls.user_contributor_1, visibility=constants.VISIBILITY_PUBLIC)
+        cls.quiz_2 = QuizFactory(name="Quiz 2", author=cls.user_contributor_1, visibility=constants.VISIBILITY_PRIVATE)
 
-    def test_author_or_admin_can_edit_quiz(self):
+    def test_author_or_admin_can_edit_public_quiz(self):
         for user in [self.user_contributor_1, self.user_admin]:
             self.client.login(email=user.email, password=DEFAULT_PASSWORD)
             url = reverse("quizs:detail_edit", args=[self.quiz_1.id])
@@ -95,6 +96,22 @@ class QuizDetailEditViewTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertNotContains(response, '<form id="quiz_edit_form" ')
         self.assertContains(response, "Vous n'avez pas les droits nécessaires")
+
+    def test_only_author_can_edit_private_quiz(self):
+        # author can edit
+        self.client.login(email=self.user_contributor_1.email, password=DEFAULT_PASSWORD)
+        url = reverse("quizs:detail_edit", args=[self.quiz_2.id])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, '<form id="quiz_edit_form" ')
+        # other contributors can't edit
+        for user in [self.user_contributor_2, self.user_admin]:
+            self.client.login(email=user.email, password=DEFAULT_PASSWORD)
+            url = reverse("quizs:detail_edit", args=[self.quiz_2.id])
+            response = self.client.get(url)
+            self.assertEqual(response.status_code, 200)
+            self.assertNotContains(response, '<form id="quiz_edit_form" ')
+            self.assertContains(response, "Vous n'avez pas les droits nécessaires")
 
 
 class QuizDetailQuestionListViewTest(TestCase):

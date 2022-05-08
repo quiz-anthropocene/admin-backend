@@ -148,13 +148,21 @@ class User(AbstractUser):
         return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
 
     def can_edit_question(self, question) -> bool:
+        if question.is_private:
+            return question.author == self
         return (question.author == self) or (self.has_role_super_contributor)
 
     def can_validate_question(self, question) -> bool:
+        if question.is_private:
+            return question.author == self
         return (question.author != self) and (self.has_role_admin)
 
     def can_edit_quiz(self, quiz) -> bool:
+        if quiz.is_private:
+            return quiz.author == self
         return (quiz.author == self) or (self.has_role_admin)
 
     def can_publish_quiz(self, quiz) -> bool:
+        if quiz.is_private:
+            return quiz.author == self
         return (quiz.author != self) and (self.has_role_admin)
