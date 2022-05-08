@@ -35,7 +35,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-07'
   created: '2020-03-07'
   updated: '2022-04-16'
 - id: 2
@@ -76,7 +75,6 @@
   author: 2
   validator: 39
   validation_status: Validée
-  added: '2020-03-07'
   created: '2020-03-07'
   updated: '2022-04-16'
 - id: 3
@@ -119,7 +117,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-07'
   created: '2020-03-07'
   updated: '2022-04-16'
 - id: 4
@@ -161,7 +158,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-07'
   created: '2020-03-07'
   updated: '2022-04-16'
 - id: 5
@@ -201,7 +197,6 @@
   author: 2
   validator: null
   validation_status: Écartée
-  added: '2020-03-07'
   created: '2020-03-07'
   updated: '2022-04-16'
 - id: 6
@@ -237,7 +232,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-03-08'
   created: '2020-03-08'
   updated: '2022-04-16'
 - id: 7
@@ -276,7 +270,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-08'
   created: '2020-03-08'
   updated: '2022-04-16'
 - id: 8
@@ -318,7 +311,6 @@
   author: 2
   validator: 39
   validation_status: Validée
-  added: '2020-03-08'
   created: '2020-03-08'
   updated: '2022-04-16'
 - id: 9
@@ -358,7 +350,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-03-08'
   created: '2020-03-08'
   updated: '2022-04-16'
 - id: 10
@@ -392,7 +383,6 @@
   author: 16
   validator: null
   validation_status: Écartée
-  added: '2020-03-08'
   created: '2020-03-08'
   updated: '2022-04-16'
 - id: 11
@@ -429,7 +419,6 @@
   author: 16
   validator: 1
   validation_status: Validée
-  added: '2020-03-09'
   created: '2020-03-09'
   updated: '2022-04-16'
 - id: 12
@@ -464,7 +453,6 @@
   author: 16
   validator: 2
   validation_status: Validée
-  added: '2020-03-09'
   created: '2020-03-09'
   updated: '2022-04-16'
 - id: 13
@@ -518,7 +506,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-09'
   created: '2020-03-09'
   updated: '2022-04-16'
 - id: 14
@@ -555,7 +542,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-09'
   created: '2020-03-09'
   updated: '2022-04-16'
 - id: 15
@@ -596,7 +582,6 @@
   author: 16
   validator: 2
   validation_status: Validée
-  added: '2020-03-09'
   created: '2020-03-09'
   updated: '2022-04-16'
 - id: 16
@@ -633,7 +618,6 @@
   author: 16
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 17
@@ -671,7 +655,6 @@
   author: 16
   validator: 1
   validation_status: Écartée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 18
@@ -704,7 +687,6 @@
   author: 16
   validator: null
   validation_status: Écartée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 19
@@ -743,7 +725,6 @@
   author: 16
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 20
@@ -777,7 +758,6 @@
   author: 24
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 21
@@ -830,7 +810,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 22
@@ -874,7 +853,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 23
@@ -912,7 +890,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 24
@@ -946,7 +923,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 25
@@ -992,7 +968,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 26
@@ -1033,7 +1008,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 27
@@ -1071,7 +1045,6 @@
   author: 2
   validator: 39
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 28
@@ -1111,7 +1084,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 29
@@ -1153,7 +1125,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 30
@@ -1197,7 +1168,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 31
@@ -1235,7 +1205,6 @@
   author: 16
   validator: 2
   validation_status: Écartée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 32
@@ -1275,7 +1244,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 33
@@ -1312,7 +1280,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 34
@@ -1349,7 +1316,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 35
@@ -1389,7 +1355,6 @@
   author: 2
   validator: 27
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 36
@@ -1427,7 +1392,6 @@
   author: 2
   validator: 1
   validation_status: Écartée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 37
@@ -1469,7 +1433,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 38
@@ -1514,7 +1477,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-02'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 39
@@ -1552,7 +1514,6 @@
   author: 16
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 40
@@ -1592,7 +1553,6 @@
   author: 16
   validator: 2
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 41
@@ -1631,7 +1591,6 @@
   author: 2
   validator: null
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 42
@@ -1675,7 +1634,6 @@
   author: 2
   validator: 1
   validation_status: A valider
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 43
@@ -1712,7 +1670,6 @@
   author: 2
   validator: 39
   validation_status: Brouillon
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 44
@@ -1752,7 +1709,6 @@
   author: 2
   validator: null
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 45
@@ -1798,7 +1754,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 46
@@ -1834,7 +1789,6 @@
   author: 2
   validator: 1
   validation_status: Écartée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 47
@@ -1875,7 +1829,6 @@
   author: 2
   validator: 39
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 48
@@ -1912,7 +1865,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 49
@@ -1953,7 +1905,6 @@
   author: 2
   validator: null
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 50
@@ -1987,7 +1938,6 @@
   author: 2
   validator: null
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 51
@@ -2030,7 +1980,6 @@
   author: 2
   validator: 27
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 52
@@ -2065,7 +2014,6 @@
   author: 2
   validator: 1
   validation_status: Brouillon
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 53
@@ -2099,7 +2047,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 54
@@ -2134,7 +2081,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 55
@@ -2170,7 +2116,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 56
@@ -2211,7 +2156,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 57
@@ -2248,7 +2192,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 58
@@ -2280,7 +2223,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 59
@@ -2316,7 +2258,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 60
@@ -2351,7 +2292,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 61
@@ -2389,7 +2329,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 62
@@ -2425,7 +2364,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 63
@@ -2462,7 +2400,6 @@
   author: 2
   validator: null
   validation_status: Écartée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 64
@@ -2500,7 +2437,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 65
@@ -2537,7 +2473,6 @@
   author: 2
   validator: 27
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 66
@@ -2580,7 +2515,6 @@
   author: 2
   validator: null
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 67
@@ -2615,7 +2549,6 @@
   author: 2
   validator: null
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 68
@@ -2653,7 +2586,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 69
@@ -2704,7 +2636,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 70
@@ -2747,7 +2678,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 71
@@ -2787,7 +2717,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 72
@@ -2824,7 +2753,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 73
@@ -2860,7 +2788,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 74
@@ -2903,7 +2830,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 75
@@ -2940,7 +2866,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 76
@@ -2984,7 +2909,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 77
@@ -3022,7 +2946,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 78
@@ -3067,7 +2990,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2020-03-10'
   updated: '2022-04-16'
 - id: 79
@@ -3103,7 +3025,6 @@
   author: 26
   validator: 1
   validation_status: Validée
-  added: '2020-03-11'
   created: '2020-03-11'
   updated: '2022-04-16'
 - id: 80
@@ -3141,7 +3062,6 @@
   author: 26
   validator: 1
   validation_status: Validée
-  added: '2020-03-11'
   created: '2020-03-11'
   updated: '2022-04-16'
 - id: 81
@@ -3185,7 +3105,6 @@
   author: 17
   validator: null
   validation_status: Écartée
-  added: '2021-02-21'
   created: '2020-03-11'
   updated: '2022-04-16'
 - id: 82
@@ -3227,7 +3146,6 @@
   author: 16
   validator: 1
   validation_status: Écartée
-  added: '2020-03-11'
   created: '2020-03-11'
   updated: '2022-04-16'
 - id: 83
@@ -3269,7 +3187,6 @@
   author: 16
   validator: 1
   validation_status: Validée
-  added: '2020-03-11'
   created: '2020-03-11'
   updated: '2022-04-16'
 - id: 84
@@ -3309,7 +3226,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 85
@@ -3344,7 +3260,6 @@
   author: 1
   validator: null
   validation_status: Écartée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 86
@@ -3379,7 +3294,6 @@
   author: 1
   validator: null
   validation_status: Écartée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 87
@@ -3418,7 +3332,6 @@
   author: 1
   validator: 2
   validation_status: Écartée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 88
@@ -3463,7 +3376,6 @@
   author: 1
   validator: 5
   validation_status: Écartée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 89
@@ -3497,7 +3409,6 @@
   author: 1
   validator: null
   validation_status: Écartée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 90
@@ -3533,7 +3444,6 @@
   author: 1
   validator: 5
   validation_status: Écartée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 91
@@ -3568,7 +3478,6 @@
   author: 21
   validator: 2
   validation_status: Validée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 92
@@ -3612,7 +3521,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 93
@@ -3653,7 +3561,6 @@
   author: 21
   validator: 2
   validation_status: Écartée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 94
@@ -3689,7 +3596,6 @@
   author: 21
   validator: 2
   validation_status: Validée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 95
@@ -3731,7 +3637,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 96
@@ -3767,7 +3672,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 97
@@ -3803,7 +3707,6 @@
   author: 21
   validator: 2
   validation_status: Validée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 98
@@ -3858,7 +3761,6 @@
   author: 21
   validator: 2
   validation_status: Validée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 99
@@ -3898,7 +3800,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 100
@@ -3937,7 +3838,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 101
@@ -3975,7 +3875,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 102
@@ -4015,7 +3914,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-05-11'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 103
@@ -4052,7 +3950,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-07'
   created: '2019-01-07'
   updated: '2022-04-16'
 - id: 104
@@ -4090,7 +3987,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-08'
   created: '2019-01-08'
   updated: '2022-04-16'
 - id: 105
@@ -4130,7 +4026,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-09'
   created: '2019-01-09'
   updated: '2022-04-16'
 - id: 106
@@ -4163,7 +4058,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-10'
   created: '2019-01-10'
   updated: '2022-04-16'
 - id: 107
@@ -4203,7 +4097,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-11'
   created: '2019-01-11'
   updated: '2022-04-16'
 - id: 108
@@ -4237,7 +4130,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-01-14'
   created: '2019-01-14'
   updated: '2022-04-16'
 - id: 109
@@ -4273,7 +4165,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-01-15'
   created: '2019-01-15'
   updated: '2022-04-16'
 - id: 110
@@ -4307,7 +4198,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-16'
   created: '2019-01-16'
   updated: '2022-04-16'
 - id: 111
@@ -4343,7 +4233,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-17'
   created: '2019-01-17'
   updated: '2022-04-16'
 - id: 112
@@ -4381,7 +4270,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-18'
   created: '2019-01-18'
   updated: '2022-04-16'
 - id: 113
@@ -4415,7 +4303,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2019-01-21'
   created: '2019-01-21'
   updated: '2022-04-16'
 - id: 114
@@ -4457,7 +4344,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-22'
   created: '2019-01-22'
   updated: '2022-04-16'
 - id: 115
@@ -4492,7 +4378,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-23'
   created: '2019-01-23'
   updated: '2022-04-16'
 - id: 116
@@ -4526,7 +4411,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-24'
   created: '2019-01-24'
   updated: '2022-04-16'
 - id: 117
@@ -4561,7 +4445,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-25'
   created: '2019-01-25'
   updated: '2022-04-16'
 - id: 118
@@ -4600,7 +4483,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2019-01-28'
   created: '2019-01-28'
   updated: '2022-04-16'
 - id: 119
@@ -4634,7 +4516,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-30'
   created: '2019-01-30'
   updated: '2022-04-16'
 - id: 120
@@ -4671,7 +4552,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-01-30'
   created: '2019-01-30'
   updated: '2022-04-16'
 - id: 121
@@ -4705,7 +4585,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2019-01-31'
   created: '2019-01-31'
   updated: '2022-04-16'
 - id: 122
@@ -4739,7 +4618,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2019-02-01'
   created: '2019-02-01'
   updated: '2022-04-16'
 - id: 123
@@ -4773,7 +4651,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-02-04'
   created: '2019-02-04'
   updated: '2022-04-16'
 - id: 124
@@ -4806,7 +4683,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-02-06'
   created: '2019-02-06'
   updated: '2022-04-16'
 - id: 125
@@ -4845,7 +4721,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-02-06'
   created: '2019-02-06'
   updated: '2022-04-16'
 - id: 126
@@ -4880,7 +4755,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2019-02-07'
   created: '2019-02-07'
   updated: '2022-04-16'
 - id: 127
@@ -4921,7 +4795,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-02-08'
   created: '2019-02-08'
   updated: '2022-04-16'
 - id: 128
@@ -4955,7 +4828,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-02-11'
   created: '2019-02-11'
   updated: '2022-04-16'
 - id: 129
@@ -4993,7 +4865,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-02-12'
   created: '2019-02-12'
   updated: '2022-04-16'
 - id: 130
@@ -5031,7 +4902,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2019-02-13'
   created: '2019-02-13'
   updated: '2022-04-16'
 - id: 131
@@ -5073,7 +4943,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-02-14'
   created: '2019-02-14'
   updated: '2022-04-16'
 - id: 132
@@ -5108,7 +4977,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-02-15'
   created: '2019-02-15'
   updated: '2022-04-16'
 - id: 133
@@ -5143,7 +5011,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 134
@@ -5178,7 +5045,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-02-19'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 135
@@ -5218,7 +5084,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-02-21'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 136
@@ -5257,7 +5122,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-02-21'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 137
@@ -5296,7 +5160,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-02-22'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 138
@@ -5344,7 +5207,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-02-25'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 139
@@ -5381,7 +5243,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-02-26'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 140
@@ -5415,7 +5276,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-02-27'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 141
@@ -5449,7 +5309,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-03-01'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 142
@@ -5484,7 +5343,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-03-01'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 143
@@ -5529,7 +5387,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-03-04'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 144
@@ -5564,7 +5421,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-03-05'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 145
@@ -5606,7 +5462,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2019-03-06'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 146
@@ -5641,7 +5496,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-03-07'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 147
@@ -5675,7 +5529,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-03-08'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 148
@@ -5708,7 +5561,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-03-11'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 149
@@ -5743,7 +5595,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-03-13'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 150
@@ -5780,7 +5631,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-03-13'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 151
@@ -5818,7 +5668,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-03-15'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 152
@@ -5854,7 +5703,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-03-15'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 153
@@ -5891,7 +5739,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-03-18'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 154
@@ -5928,7 +5775,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-03-19'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 155
@@ -5971,7 +5817,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-03-20'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 156
@@ -6011,7 +5856,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-03-21'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 157
@@ -6056,7 +5900,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-03-22'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 158
@@ -6093,7 +5936,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2019-03-26'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 159
@@ -6129,7 +5971,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-03-26'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 160
@@ -6173,7 +6014,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-03-27'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 161
@@ -6211,7 +6051,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-03-28'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 162
@@ -6246,7 +6085,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-03-30'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 163
@@ -6281,7 +6119,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-04-01'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 164
@@ -6315,7 +6152,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-04-02'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 165
@@ -6348,7 +6184,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2019-04-03'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 166
@@ -6382,7 +6217,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-04-05'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 167
@@ -6417,7 +6251,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-04-05'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 168
@@ -6452,7 +6285,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-04-08'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 169
@@ -6491,7 +6323,6 @@
   author: 5
   validator: 2
   validation_status: Brouillon
-  added: '2019-04-09'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 170
@@ -6530,7 +6361,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-04-10'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 171
@@ -6564,7 +6394,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-04-11'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 172
@@ -6600,7 +6429,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2019-04-12'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 173
@@ -6634,7 +6462,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-04-17'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 174
@@ -6668,7 +6495,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-04-17'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 175
@@ -6704,7 +6530,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-04-18'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 176
@@ -6743,7 +6568,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-04-18'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 177
@@ -6778,7 +6602,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-04-22'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 178
@@ -6814,7 +6637,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-04-23'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 179
@@ -6850,7 +6672,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 180
@@ -6887,7 +6708,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-04-25'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 181
@@ -6922,7 +6742,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-04-26'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 182
@@ -6955,7 +6774,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-04-29'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 183
@@ -6989,7 +6807,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-04-30'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 184
@@ -7026,7 +6843,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-05-01'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 185
@@ -7063,7 +6879,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-05-02'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 186
@@ -7100,7 +6915,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-05-03'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 187
@@ -7133,7 +6947,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-05-13'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 188
@@ -7170,7 +6983,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-05-14'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 189
@@ -7206,7 +7018,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-05-15'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 190
@@ -7244,7 +7055,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-05-16'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 191
@@ -7278,7 +7088,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-05-17'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 192
@@ -7318,7 +7127,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-05-20'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 193
@@ -7354,7 +7162,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-05-21'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 194
@@ -7398,7 +7205,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-05-22'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 195
@@ -7435,7 +7241,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-05-23'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 196
@@ -7469,7 +7274,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-05-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 197
@@ -7510,7 +7314,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-05-27'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 198
@@ -7545,7 +7348,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-05-28'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 199
@@ -7578,7 +7380,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-05-29'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 200
@@ -7614,7 +7415,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-05-30'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 201
@@ -7647,7 +7447,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-05-31'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 202
@@ -7681,7 +7480,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-03'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 203
@@ -7717,7 +7515,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-04'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 204
@@ -7751,7 +7548,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-05'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 205
@@ -7786,7 +7582,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-06'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 206
@@ -7820,7 +7615,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-07'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 207
@@ -7853,7 +7647,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-10'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 208
@@ -7888,7 +7681,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-11'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 209
@@ -7919,7 +7711,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-12'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 210
@@ -7955,7 +7746,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-06-13'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 211
@@ -7990,7 +7780,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-15'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 212
@@ -8025,7 +7814,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-06-17'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 213
@@ -8061,7 +7849,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-18'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 214
@@ -8093,7 +7880,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-19'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 215
@@ -8126,7 +7912,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2019-06-20'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 216
@@ -8165,7 +7950,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-21'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 217
@@ -8199,7 +7983,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-06-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 218
@@ -8234,7 +8017,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-25'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 219
@@ -8269,7 +8051,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-06-26'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 220
@@ -8308,7 +8089,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-06-27'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 221
@@ -8343,7 +8123,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-06-29'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 222
@@ -8382,7 +8161,6 @@
   author: 24
   validator: 5
   validation_status: Validée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 223
@@ -8415,7 +8193,6 @@
   author: 24
   validator: null
   validation_status: Brouillon
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 224
@@ -8451,7 +8228,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-04-24'
   created: '2020-04-26'
   updated: '2022-04-16'
 - id: 225
@@ -8495,7 +8271,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-04-27'
   created: '2020-05-05'
   updated: '2022-04-16'
 - id: 226
@@ -8534,7 +8309,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-04-27'
   created: '2020-05-05'
   updated: '2022-04-16'
 - id: 227
@@ -8574,7 +8348,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-04-27'
   created: '2020-05-05'
   updated: '2022-04-16'
 - id: 228
@@ -8609,7 +8382,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-04-28'
   created: '2020-05-05'
   updated: '2022-04-16'
 - id: 229
@@ -8652,7 +8424,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-04-29'
   created: '2020-05-05'
   updated: '2022-04-16'
 - id: 230
@@ -8695,7 +8466,6 @@
   author: 23
   validator: 2
   validation_status: Validée
-  added: '2020-05-07'
   created: '2020-05-07'
   updated: '2022-04-16'
 - id: 231
@@ -8740,7 +8510,6 @@
   author: 1
   validator: 5
   validation_status: Validée
-  added: '2020-05-08'
   created: '2020-05-05'
   updated: '2022-04-16'
 - id: 232
@@ -8776,7 +8545,6 @@
   author: 1
   validator: 2
   validation_status: Écartée
-  added: '2020-05-08'
   created: '2020-05-05'
   updated: '2022-04-16'
 - id: 233
@@ -8818,7 +8586,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-05-10'
   created: '2020-05-10'
   updated: '2022-04-16'
 - id: 234
@@ -8851,7 +8618,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-05-10'
   created: '2020-05-10'
   updated: '2022-04-16'
 - id: 235
@@ -8887,7 +8653,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-05-10'
   created: '2020-05-10'
   updated: '2022-04-16'
 - id: 236
@@ -8926,7 +8691,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-05-10'
   created: '2020-05-10'
   updated: '2022-04-16'
 - id: 237
@@ -8960,7 +8724,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-07-01'
   created: '2020-05-07'
   updated: '2022-04-16'
 - id: 238
@@ -8994,7 +8757,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-07-02'
   created: '2020-05-07'
   updated: '2022-04-16'
 - id: 239
@@ -9029,7 +8791,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-07-03'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 240
@@ -9068,7 +8829,6 @@
   author: 5
   validator: 2
   validation_status: Écartée temporairement
-  added: '2019-07-05'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 241
@@ -9103,7 +8863,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-07-05'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 242
@@ -9138,7 +8897,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2019-07-08'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 243
@@ -9176,7 +8934,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-07-09'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 244
@@ -9212,7 +8969,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-07-10'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 245
@@ -9248,7 +9004,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-07-11'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 246
@@ -9290,7 +9045,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-07-12'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 247
@@ -9328,7 +9082,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-07-16'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 248
@@ -9363,7 +9116,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-07-16'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 249
@@ -9399,7 +9151,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-07-17'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 250
@@ -9433,7 +9184,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-07-18'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 251
@@ -9478,7 +9228,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-07-19'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 252
@@ -9514,7 +9263,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-07-22'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 253
@@ -9553,7 +9301,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-07-23'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 254
@@ -9589,7 +9336,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-07-24'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 255
@@ -9623,7 +9369,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-07-26'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 256
@@ -9660,7 +9405,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-07-27'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 257
@@ -9695,7 +9439,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-07-29'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 258
@@ -9732,7 +9475,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-07-30'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 259
@@ -9771,7 +9513,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-07-31'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 260
@@ -9808,7 +9549,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-08-01'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 261
@@ -9850,7 +9590,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-08-02'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 262
@@ -9887,7 +9626,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-08-12'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 263
@@ -9922,7 +9660,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-08-13'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 264
@@ -9958,7 +9695,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-08-15'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 265
@@ -9994,7 +9730,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-08-16'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 266
@@ -10028,7 +9763,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-08-17'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 267
@@ -10065,7 +9799,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-08-19'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 268
@@ -10100,7 +9833,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-08-20'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 269
@@ -10135,7 +9867,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-08-21'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 270
@@ -10170,7 +9901,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-08-23'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 271
@@ -10203,7 +9933,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-08-24'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 272
@@ -10240,7 +9969,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-08-26'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 273
@@ -10277,7 +10005,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-08-27'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 274
@@ -10313,7 +10040,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-08-28'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 275
@@ -10349,7 +10075,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-08-29'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 276
@@ -10386,7 +10111,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-08-31'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 277
@@ -10424,7 +10148,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-02'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 278
@@ -10464,7 +10187,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-09-03'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 279
@@ -10500,7 +10222,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-04'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 280
@@ -10536,7 +10257,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-05'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 281
@@ -10571,7 +10291,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-09-06'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 282
@@ -10608,7 +10327,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-09-09'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 283
@@ -10639,7 +10357,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-10'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 284
@@ -10679,7 +10396,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-09-12'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 285
@@ -10715,7 +10431,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-12'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 286
@@ -10749,7 +10464,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-13'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 287
@@ -10783,7 +10497,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-16'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 288
@@ -10817,7 +10530,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-17'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 289
@@ -10856,7 +10568,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-18'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 290
@@ -10893,7 +10604,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-19'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 291
@@ -10929,7 +10639,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-09-20'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 292
@@ -10965,7 +10674,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-23'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 293
@@ -11004,7 +10712,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-24'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 294
@@ -11047,7 +10754,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-09-25'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 295
@@ -11084,7 +10790,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-26'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 296
@@ -11119,7 +10824,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-27'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 297
@@ -11157,7 +10861,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-09-30'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 298
@@ -11195,7 +10898,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-10-01'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 299
@@ -11232,7 +10934,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-10-02'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 300
@@ -11267,7 +10968,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-10-03'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 301
@@ -11303,7 +11003,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-10-04'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 302
@@ -11338,7 +11037,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-10-07'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 303
@@ -11377,7 +11075,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-10-08'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 304
@@ -11413,7 +11110,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-10-09'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 305
@@ -11451,7 +11147,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-10-11'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 306
@@ -11492,7 +11187,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-10-12'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 307
@@ -11531,7 +11225,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-10-14'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 308
@@ -11568,7 +11261,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-10-15'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 309
@@ -11602,7 +11294,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-10-17'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 310
@@ -11639,7 +11330,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-10-18'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 311
@@ -11678,7 +11368,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-10-18'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 312
@@ -11714,7 +11403,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-10-21'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 313
@@ -11753,7 +11441,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-10-23'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 314
@@ -11788,7 +11475,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-10-23'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 315
@@ -11826,7 +11512,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-10-25'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 316
@@ -11865,7 +11550,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-10-26'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 317
@@ -11904,7 +11588,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-10-28'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 318
@@ -11945,7 +11628,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-10-29'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 319
@@ -11981,7 +11663,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-10-30'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 320
@@ -12020,7 +11701,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-10-31'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 321
@@ -12055,7 +11735,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-11-02'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 322
@@ -12090,7 +11769,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-11-11'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 323
@@ -12125,7 +11803,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-11-12'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 324
@@ -12161,7 +11838,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-11-13'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 325
@@ -12201,7 +11877,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-11-15'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 326
@@ -12237,7 +11912,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-11-15'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 327
@@ -12276,7 +11950,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-11-19'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 328
@@ -12311,7 +11984,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-11-19'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 329
@@ -12348,7 +12020,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-11-21'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 330
@@ -12383,7 +12054,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-11-22'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 331
@@ -12418,7 +12088,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-11-23'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 332
@@ -12455,7 +12124,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-11-25'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 333
@@ -12489,7 +12157,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-11-27'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 334
@@ -12530,7 +12197,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-11-28'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 335
@@ -12574,7 +12240,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-11-29'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 336
@@ -12609,7 +12274,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-11-30'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 337
@@ -12644,7 +12308,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-12-02'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 338
@@ -12679,7 +12342,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-12-03'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 339
@@ -12714,7 +12376,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-12-04'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 340
@@ -12749,7 +12410,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-12-06'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 341
@@ -12785,7 +12445,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-12-07'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 342
@@ -12820,7 +12479,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-12-09'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 343
@@ -12863,7 +12521,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-12-10'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 344
@@ -12900,7 +12557,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2019-12-11'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 345
@@ -12938,7 +12594,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-12-12'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 346
@@ -12976,7 +12631,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-12-13'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 347
@@ -13015,7 +12669,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-12-16'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 348
@@ -13052,7 +12705,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-12-17'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 349
@@ -13089,7 +12741,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2019-12-18'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 350
@@ -13126,7 +12777,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2019-12-20'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 351
@@ -13161,7 +12811,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2019-12-21'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 352
@@ -13196,7 +12845,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-01-06'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 353
@@ -13244,7 +12892,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-01-07'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 354
@@ -13278,7 +12925,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-01-08'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 355
@@ -13314,7 +12960,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-01-09'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 356
@@ -13351,7 +12996,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-01-11'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 357
@@ -13385,7 +13029,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-01-13'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 358
@@ -13430,7 +13073,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-01-14'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 359
@@ -13466,7 +13108,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-01-15'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 360
@@ -13508,7 +13149,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-01-17'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 361
@@ -13549,7 +13189,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-01-17'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 362
@@ -13586,7 +13225,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-01-20'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 363
@@ -13626,7 +13264,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-01-21'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 364
@@ -13660,7 +13297,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-01-22'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 365
@@ -13697,7 +13333,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-01-23'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 366
@@ -13734,7 +13369,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-01-25'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 367
@@ -13773,7 +13407,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-01-27'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 368
@@ -13810,7 +13443,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-01-28'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 369
@@ -13855,7 +13487,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-01-29'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 370
@@ -13893,7 +13524,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-01-31'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 371
@@ -13931,7 +13561,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-01-31'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 372
@@ -13970,7 +13599,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-02-03'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 373
@@ -14008,7 +13636,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-02-04'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 374
@@ -14048,7 +13675,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-02-05'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 375
@@ -14088,7 +13714,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-02-07'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 376
@@ -14128,7 +13753,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-02-08'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 377
@@ -14163,7 +13787,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-02-10'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 378
@@ -14199,7 +13822,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-02-11'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 379
@@ -14235,7 +13857,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-02-12'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 380
@@ -14271,7 +13892,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-02-13'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 381
@@ -14306,7 +13926,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-02-15'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 382
@@ -14346,7 +13965,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-02-17'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 383
@@ -14385,7 +14003,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-02-18'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 384
@@ -14426,7 +14043,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-02-20'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 385
@@ -14466,7 +14082,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-02-21'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 386
@@ -14504,7 +14119,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-02-22'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 387
@@ -14541,7 +14155,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2020-02-24'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 388
@@ -14576,7 +14189,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-02-26'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 389
@@ -14612,7 +14224,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-02-27'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 390
@@ -14647,7 +14258,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-02-28'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 391
@@ -14684,7 +14294,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-02-29'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 392
@@ -14727,7 +14336,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-03-02'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 393
@@ -14764,7 +14372,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-03-03'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 394
@@ -14799,7 +14406,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-03-06'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 395
@@ -14833,7 +14439,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-03-06'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 396
@@ -14869,7 +14474,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-03-08'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 397
@@ -14909,7 +14513,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-03-09'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 398
@@ -14943,7 +14546,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-03-10'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 399
@@ -14980,7 +14582,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-03-11'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 400
@@ -15016,7 +14617,6 @@
   author: 5
   validator: 1
   validation_status: Écartée
-  added: '2020-03-13'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 401
@@ -15053,7 +14653,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-03-14'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 402
@@ -15091,7 +14690,6 @@
   author: 23
   validator: 2
   validation_status: Validée
-  added: '2020-05-12'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 403
@@ -15134,7 +14732,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-05-18'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 404
@@ -15174,7 +14771,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-05-20'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 405
@@ -15217,7 +14813,6 @@
   author: 1
   validator: 5
   validation_status: Validée
-  added: '2020-05-20'
   created: '2020-05-20'
   updated: '2022-04-16'
 - id: 406
@@ -15258,7 +14853,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-05-20'
   created: '2020-05-23'
   updated: '2022-04-16'
 - id: 407
@@ -15294,7 +14888,6 @@
   author: 1
   validator: 2
   validation_status: Écartée
-  added: '2020-05-21'
   created: '2020-05-23'
   updated: '2022-04-16'
 - id: 408
@@ -15337,7 +14930,6 @@
   author: 1
   validator: 2
   validation_status: Écartée
-  added: '2020-05-25'
   created: '2020-05-28'
   updated: '2022-04-16'
 - id: 409
@@ -15375,7 +14967,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-05-25'
   created: '2020-05-28'
   updated: '2022-04-16'
 - id: 410
@@ -15414,7 +15005,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-05-25'
   created: '2020-05-28'
   updated: '2022-04-16'
 - id: 411
@@ -15464,7 +15054,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-05-25'
   created: '2020-05-28'
   updated: '2022-04-16'
 - id: 412
@@ -15516,7 +15105,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-05-25'
   created: '2020-05-28'
   updated: '2022-04-16'
 - id: 413
@@ -15552,7 +15140,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 414
@@ -15584,7 +15171,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 415
@@ -15628,7 +15214,6 @@
   author: 7
   validator: 5
   validation_status: Validée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 416
@@ -15661,7 +15246,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 417
@@ -15701,7 +15285,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 418
@@ -15738,7 +15321,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 419
@@ -15770,7 +15352,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 420
@@ -15803,7 +15384,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 421
@@ -15835,7 +15415,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 422
@@ -15868,7 +15447,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 423
@@ -15901,7 +15479,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 424
@@ -15934,7 +15511,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 425
@@ -15971,7 +15547,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 426
@@ -16010,7 +15585,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 427
@@ -16046,7 +15620,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 428
@@ -16088,7 +15661,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 429
@@ -16121,7 +15693,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 430
@@ -16155,7 +15726,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 431
@@ -16187,7 +15757,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 432
@@ -16219,7 +15788,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 433
@@ -16252,7 +15820,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 434
@@ -16286,7 +15853,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 435
@@ -16320,7 +15886,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 436
@@ -16361,7 +15926,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 437
@@ -16396,7 +15960,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 438
@@ -16431,7 +15994,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 439
@@ -16470,7 +16032,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 440
@@ -16507,7 +16068,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 441
@@ -16548,7 +16108,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 442
@@ -16580,7 +16139,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 443
@@ -16614,7 +16172,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 444
@@ -16649,7 +16206,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 445
@@ -16683,7 +16239,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 446
@@ -16719,7 +16274,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 447
@@ -16753,7 +16307,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 448
@@ -16785,7 +16338,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 449
@@ -16818,7 +16370,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 450
@@ -16852,7 +16403,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-04'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 451
@@ -16884,7 +16434,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 452
@@ -16921,7 +16470,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 453
@@ -16958,7 +16506,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 454
@@ -16991,7 +16538,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 455
@@ -17024,7 +16570,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 456
@@ -17055,7 +16600,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 457
@@ -17093,7 +16637,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 458
@@ -17127,7 +16670,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 459
@@ -17167,7 +16709,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 460
@@ -17204,7 +16745,6 @@
   author: 7
   validator: 40
   validation_status: Validée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 461
@@ -17243,7 +16783,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 462
@@ -17276,7 +16815,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 463
@@ -17310,7 +16848,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 464
@@ -17348,7 +16885,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 465
@@ -17383,7 +16919,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 466
@@ -17417,7 +16952,6 @@
   author: 7
   validator: null
   validation_status: Brouillon
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 467
@@ -17456,7 +16990,6 @@
   author: 7
   validator: 2
   validation_status: Écartée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 468
@@ -17500,7 +17033,6 @@
   author: 7
   validator: 2
   validation_status: Validée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 469
@@ -17540,7 +17072,6 @@
   author: 7
   validator: 2
   validation_status: Écartée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 470
@@ -17573,7 +17104,6 @@
   author: 7
   validator: null
   validation_status: Écartée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 471
@@ -17612,7 +17142,6 @@
   author: 32
   validator: null
   validation_status: Brouillon
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 472
@@ -17648,7 +17177,6 @@
   author: 32
   validator: null
   validation_status: Brouillon
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 473
@@ -17685,7 +17213,6 @@
   author: 32
   validator: null
   validation_status: Brouillon
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 474
@@ -17719,7 +17246,6 @@
   author: 32
   validator: null
   validation_status: Brouillon
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 475
@@ -17759,7 +17285,6 @@
   author: 32
   validator: 2
   validation_status: Écartée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 476
@@ -17802,7 +17327,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 477
@@ -17837,7 +17361,6 @@
   author: 32
   validator: null
   validation_status: Brouillon
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 478
@@ -17872,7 +17395,6 @@
   author: 29
   validator: 2
   validation_status: Écartée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 479
@@ -17911,7 +17433,6 @@
   author: 29
   validator: 2
   validation_status: Écartée
-  added: '2020-06-11'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 480
@@ -17944,7 +17465,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2020-06-14'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 481
@@ -17980,7 +17500,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2020-06-14'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 482
@@ -18015,7 +17534,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-06-14'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 483
@@ -18058,7 +17576,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-06-14'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 484
@@ -18095,7 +17612,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-06-14'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 485
@@ -18131,7 +17647,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2020-06-14'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 486
@@ -18167,7 +17682,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2020-06-14'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 487
@@ -18204,7 +17718,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2020-06-14'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 488
@@ -18238,7 +17751,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-06-14'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 489
@@ -18272,7 +17784,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-06-14'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 490
@@ -18310,7 +17821,6 @@
   author: 2
   validator: 5
   validation_status: Écartée
-  added: '2020-06-16'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 491
@@ -18350,7 +17860,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 492
@@ -18390,7 +17899,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 493
@@ -18429,7 +17937,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 494
@@ -18467,7 +17974,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 495
@@ -18505,7 +18011,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 496
@@ -18539,7 +18044,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 497
@@ -18573,7 +18077,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 498
@@ -18607,7 +18110,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 499
@@ -18639,7 +18141,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 500
@@ -18682,7 +18183,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 501
@@ -18721,7 +18221,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 502
@@ -18754,7 +18253,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 503
@@ -18795,7 +18293,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 504
@@ -18829,7 +18326,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 505
@@ -18863,7 +18359,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 506
@@ -18897,7 +18392,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 507
@@ -18931,7 +18425,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 508
@@ -18965,7 +18458,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 509
@@ -19000,7 +18492,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 510
@@ -19036,7 +18527,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 511
@@ -19069,7 +18559,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 512
@@ -19103,7 +18592,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 513
@@ -19137,7 +18625,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 514
@@ -19170,7 +18657,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 515
@@ -19203,7 +18689,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 516
@@ -19236,7 +18721,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 517
@@ -19275,7 +18759,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 518
@@ -19308,7 +18791,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-11-05'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 519
@@ -19363,7 +18845,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 520
@@ -19403,7 +18884,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 521
@@ -19438,7 +18918,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 522
@@ -19471,7 +18950,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 523
@@ -19504,7 +18982,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 524
@@ -19548,7 +19025,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 525
@@ -19581,7 +19057,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 526
@@ -19621,7 +19096,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 527
@@ -19673,7 +19147,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 528
@@ -19711,7 +19184,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 529
@@ -19742,7 +19214,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-17'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 530
@@ -19779,7 +19250,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-18'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 531
@@ -19823,7 +19293,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-06-18'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 532
@@ -19860,7 +19329,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-06-19'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 533
@@ -19899,7 +19367,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2020-06-19'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 534
@@ -19942,7 +19409,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-06-19'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 535
@@ -19978,7 +19444,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-06-20'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 536
@@ -20015,7 +19480,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-06-20'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 537
@@ -20055,7 +19519,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-06-20'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 538
@@ -20095,7 +19558,6 @@
   author: 5
   validator: 40
   validation_status: Validée
-  added: '2020-06-20'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 539
@@ -20137,7 +19599,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-06-20'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 540
@@ -20172,7 +19633,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-20'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 541
@@ -20210,7 +19670,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-06-20'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 542
@@ -20254,7 +19713,6 @@
   author: 5
   validator: 40
   validation_status: Validée
-  added: '2020-06-20'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 543
@@ -20286,7 +19744,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-20'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 544
@@ -20323,7 +19780,6 @@
   author: 5
   validator: 2
   validation_status: Écartée
-  added: '2020-06-20'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 545
@@ -20361,7 +19817,6 @@
   author: 8
   validator: 2
   validation_status: Validée
-  added: '2020-06-22'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 546
@@ -20395,7 +19850,6 @@
   author: 8
   validator: 2
   validation_status: Validée
-  added: '2020-06-22'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 547
@@ -20433,7 +19887,6 @@
   author: 8
   validator: 2
   validation_status: Validée
-  added: '2020-06-22'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 548
@@ -20468,7 +19921,6 @@
   author: 8
   validator: 2
   validation_status: Validée
-  added: '2020-06-22'
   created: '2020-06-24'
   updated: '2022-04-16'
 - id: 549
@@ -20505,7 +19957,6 @@
   author: 8
   validator: 2
   validation_status: Validée
-  added: '2020-06-25'
   created: '2020-06-25'
   updated: '2022-04-16'
 - id: 550
@@ -20543,7 +19994,6 @@
   author: 8
   validator: 2
   validation_status: Validée
-  added: '2020-06-25'
   created: '2020-06-25'
   updated: '2022-04-16'
 - id: 551
@@ -20581,7 +20031,6 @@
   author: 8
   validator: 2
   validation_status: Validée
-  added: '2020-06-25'
   created: '2020-06-25'
   updated: '2022-04-16'
 - id: 552
@@ -20617,7 +20066,6 @@
   author: 8
   validator: 2
   validation_status: Validée
-  added: '2020-06-25'
   created: '2020-06-25'
   updated: '2022-04-16'
 - id: 553
@@ -20655,7 +20103,6 @@
   author: 8
   validator: 2
   validation_status: Validée
-  added: '2020-06-25'
   created: '2020-06-25'
   updated: '2022-04-16'
 - id: 554
@@ -20692,7 +20139,6 @@
   author: 8
   validator: null
   validation_status: Écartée
-  added: '2020-06-22'
   created: '2020-06-25'
   updated: '2022-04-16'
 - id: 555
@@ -20730,7 +20176,6 @@
   author: 8
   validator: 2
   validation_status: Validée
-  added: '2020-06-22'
   created: '2020-06-25'
   updated: '2022-04-16'
 - id: 556
@@ -20775,7 +20220,6 @@
   author: 8
   validator: 2
   validation_status: Validée
-  added: '2020-06-26'
   created: '2020-06-29'
   updated: '2022-04-16'
 - id: 557
@@ -20807,7 +20251,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-30'
   created: '2020-07-04'
   updated: '2022-04-16'
 - id: 558
@@ -20840,7 +20283,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-30'
   created: '2020-07-04'
   updated: '2022-04-16'
 - id: 559
@@ -20873,7 +20315,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-30'
   created: '2020-07-04'
   updated: '2022-04-16'
 - id: 560
@@ -20906,7 +20347,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-30'
   created: '2020-07-04'
   updated: '2022-04-16'
 - id: 561
@@ -20938,7 +20378,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-30'
   created: '2020-07-04'
   updated: '2022-04-16'
 - id: 562
@@ -20971,7 +20410,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-06-30'
   created: '2020-07-04'
   updated: '2022-04-16'
 - id: 563
@@ -21004,7 +20442,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-30'
   created: '2020-07-04'
   updated: '2022-04-16'
 - id: 564
@@ -21039,7 +20476,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-30'
   created: '2020-07-04'
   updated: '2022-04-16'
 - id: 565
@@ -21072,7 +20508,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-06-30'
   created: '2020-07-04'
   updated: '2022-04-16'
 - id: 566
@@ -21111,7 +20546,6 @@
   author: 5
   validator: 40
   validation_status: Validée
-  added: '2020-07-04'
   created: '2020-07-04'
   updated: '2022-04-16'
 - id: 567
@@ -21152,7 +20586,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-07-20'
   created: '2020-07-23'
   updated: '2022-04-16'
 - id: 568
@@ -21186,7 +20619,6 @@
   author: 2
   validator: null
   validation_status: Écartée
-  added: '2020-08-05'
   created: '2020-08-10'
   updated: '2022-04-16'
 - id: 569
@@ -21220,7 +20652,6 @@
   author: 23
   validator: null
   validation_status: Brouillon
-  added: '2020-08-05'
   created: '2020-08-10'
   updated: '2022-04-16'
 - id: 570
@@ -21262,7 +20693,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-08-28'
   created: '2020-09-14'
   updated: '2022-04-16'
 - id: 571
@@ -21304,7 +20734,6 @@
   author: 13
   validator: 2
   validation_status: Validée
-  added: '2020-09-08'
   created: '2020-09-14'
   updated: '2022-04-16'
 - id: 572
@@ -21345,7 +20774,6 @@
   author: 13
   validator: 2
   validation_status: Validée
-  added: '2020-09-08'
   created: '2020-09-14'
   updated: '2022-04-16'
 - id: 573
@@ -21388,7 +20816,6 @@
   author: 13
   validator: 2
   validation_status: Validée
-  added: '2020-09-08'
   created: '2020-09-14'
   updated: '2022-04-16'
 - id: 574
@@ -21425,7 +20852,6 @@
   author: 8
   validator: 2
   validation_status: Validée
-  added: '2020-09-08'
   created: '2020-09-14'
   updated: '2022-04-16'
 - id: 575
@@ -21461,7 +20887,6 @@
   author: 8
   validator: 2
   validation_status: Validée
-  added: '2020-09-08'
   created: '2020-09-14'
   updated: '2022-04-16'
 - id: 576
@@ -21517,7 +20942,6 @@
   author: 13
   validator: 2
   validation_status: Validée
-  added: '2020-09-08'
   created: '2020-09-14'
   updated: '2022-04-16'
 - id: 577
@@ -21556,7 +20980,6 @@
   author: 13
   validator: 2
   validation_status: Validée
-  added: '2020-09-08'
   created: '2020-09-14'
   updated: '2022-04-16'
 - id: 578
@@ -21590,7 +21013,6 @@
   author: 13
   validator: 2
   validation_status: Validée
-  added: '2020-09-08'
   created: '2020-09-14'
   updated: '2022-04-16'
 - id: 579
@@ -21633,7 +21055,6 @@
   author: 13
   validator: 2
   validation_status: Validée
-  added: '2020-09-08'
   created: '2020-09-14'
   updated: '2022-04-16'
 - id: 580
@@ -21671,7 +21092,6 @@
   author: 13
   validator: 2
   validation_status: Validée
-  added: '2020-09-08'
   created: '2020-09-14'
   updated: '2022-04-16'
 - id: 581
@@ -21710,7 +21130,6 @@
   author: 13
   validator: 2
   validation_status: Validée
-  added: '2020-09-08'
   created: '2020-09-14'
   updated: '2022-04-16'
 - id: 582
@@ -21750,7 +21169,6 @@
   author: 23
   validator: 1
   validation_status: Validée
-  added: '2020-09-16'
   created: '2020-09-18'
   updated: '2022-04-16'
 - id: 583
@@ -21782,7 +21200,6 @@
   author: 28
   validator: null
   validation_status: Brouillon
-  added: '2020-09-22'
   created: '2020-09-22'
   updated: '2022-04-16'
 - id: 584
@@ -21816,7 +21233,6 @@
   author: 28
   validator: null
   validation_status: Brouillon
-  added: '2020-09-22'
   created: '2020-09-22'
   updated: '2022-04-16'
 - id: 585
@@ -21849,7 +21265,6 @@
   author: 28
   validator: null
   validation_status: Brouillon
-  added: '2020-09-22'
   created: '2020-09-22'
   updated: '2022-04-16'
 - id: 586
@@ -21882,7 +21297,6 @@
   author: 28
   validator: null
   validation_status: Brouillon
-  added: '2020-09-22'
   created: '2020-09-22'
   updated: '2022-04-16'
 - id: 587
@@ -21915,7 +21329,6 @@
   author: 28
   validator: null
   validation_status: Brouillon
-  added: '2020-09-22'
   created: '2020-09-22'
   updated: '2022-04-16'
 - id: 588
@@ -21949,7 +21362,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2020-09-22'
   created: '2020-09-22'
   updated: '2022-04-16'
 - id: 589
@@ -21990,7 +21402,6 @@
   author: 28
   validator: 2
   validation_status: Validée
-  added: '2020-09-22'
   created: '2020-09-22'
   updated: '2022-04-16'
 - id: 590
@@ -22023,7 +21434,6 @@
   author: 28
   validator: null
   validation_status: Brouillon
-  added: '2020-09-22'
   created: '2020-09-22'
   updated: '2022-04-16'
 - id: 591
@@ -22056,7 +21466,6 @@
   author: 28
   validator: null
   validation_status: Brouillon
-  added: '2020-09-22'
   created: '2020-09-22'
   updated: '2022-04-16'
 - id: 592
@@ -22090,7 +21499,6 @@
   author: 28
   validator: null
   validation_status: Brouillon
-  added: '2020-09-22'
   created: '2020-09-22'
   updated: '2022-04-16'
 - id: 593
@@ -22123,7 +21531,6 @@
   author: 28
   validator: null
   validation_status: Brouillon
-  added: '2020-09-22'
   created: '2020-09-22'
   updated: '2022-04-16'
 - id: 594
@@ -22168,7 +21575,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-11-17'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 595
@@ -22209,7 +21615,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-11-01'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 596
@@ -22253,7 +21658,6 @@
   author: 19
   validator: 2
   validation_status: Validée
-  added: '2020-11-01'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 597
@@ -22297,7 +21701,6 @@
   author: 19
   validator: 2
   validation_status: Validée
-  added: '2020-11-01'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 598
@@ -22337,7 +21740,6 @@
   author: 19
   validator: 2
   validation_status: Validée
-  added: '2020-11-01'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 599
@@ -22374,7 +21776,6 @@
   author: 19
   validator: 2
   validation_status: Validée
-  added: '2020-11-01'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 600
@@ -22413,7 +21814,6 @@
   author: 19
   validator: 2
   validation_status: Validée
-  added: '2020-11-01'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 601
@@ -22448,7 +21848,6 @@
   author: 19
   validator: 2
   validation_status: Validée
-  added: '2020-11-01'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 602
@@ -22484,7 +21883,6 @@
   author: 19
   validator: 2
   validation_status: Validée
-  added: '2020-11-01'
   created: '2020-11-18'
   updated: '2022-04-16'
 - id: 603
@@ -22527,7 +21925,6 @@
   author: 19
   validator: 2
   validation_status: Validée
-  added: '2020-11-01'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 604
@@ -22563,7 +21960,6 @@
   author: 41
   validator: null
   validation_status: Brouillon
-  added: '2020-11-01'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 605
@@ -22599,7 +21995,6 @@
   author: 41
   validator: null
   validation_status: Brouillon
-  added: '2020-11-01'
   created: '2020-12-05'
   updated: '2022-04-16'
 - id: 606
@@ -22632,7 +22027,6 @@
   author: 41
   validator: null
   validation_status: Brouillon
-  added: '2020-11-01'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 607
@@ -22665,7 +22059,6 @@
   author: 41
   validator: null
   validation_status: Brouillon
-  added: '2020-11-01'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 608
@@ -22706,7 +22099,6 @@
   author: 22
   validator: 2
   validation_status: Validée
-  added: '2020-11-08'
   created: '2020-12-05'
   updated: '2022-04-16'
 - id: 609
@@ -22742,7 +22134,6 @@
   author: 22
   validator: 2
   validation_status: Validée
-  added: '2020-11-11'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 610
@@ -22775,7 +22166,6 @@
   author: 22
   validator: null
   validation_status: Brouillon
-  added: '2020-11-11'
   created: '2020-11-18'
   updated: '2022-04-16'
 - id: 611
@@ -22820,7 +22210,6 @@
   author: 22
   validator: 2
   validation_status: Validée
-  added: '2020-11-11'
   created: '2020-11-18'
   updated: '2022-04-16'
 - id: 612
@@ -22855,7 +22244,6 @@
   author: 22
   validator: null
   validation_status: Brouillon
-  added: '2020-11-11'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 613
@@ -22890,7 +22278,6 @@
   author: 22
   validator: null
   validation_status: Brouillon
-  added: '2020-11-11'
   created: '2020-11-17'
   updated: '2022-04-16'
 - id: 614
@@ -22927,7 +22314,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-11-22'
   created: '2020-11-25'
   updated: '2022-04-16'
 - id: 615
@@ -22967,7 +22353,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-24'
   created: '2020-11-25'
   updated: '2022-04-16'
 - id: 616
@@ -23006,7 +22391,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-24'
   created: '2020-11-25'
   updated: '2022-04-16'
 - id: 617
@@ -23046,7 +22430,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-24'
   created: '2020-11-25'
   updated: '2022-04-16'
 - id: 618
@@ -23086,7 +22469,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-24'
   created: '2020-11-25'
   updated: '2022-04-16'
 - id: 619
@@ -23125,7 +22507,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-24'
   created: '2020-11-25'
   updated: '2022-04-16'
 - id: 620
@@ -23165,7 +22546,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-24'
   created: '2020-11-25'
   updated: '2022-04-16'
 - id: 621
@@ -23203,7 +22583,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-24'
   created: '2020-11-25'
   updated: '2022-04-16'
 - id: 622
@@ -23239,7 +22618,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-24'
   created: '2020-11-25'
   updated: '2022-04-16'
 - id: 623
@@ -23273,7 +22651,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-12-03'
   created: '2020-11-25'
   updated: '2022-04-16'
 - id: 624
@@ -23311,7 +22688,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-06-22'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 625
@@ -23354,7 +22730,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-06-23'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 626
@@ -23398,7 +22773,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-06-24'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 627
@@ -23435,7 +22809,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-06-25'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 628
@@ -23471,7 +22844,6 @@
   author: 5
   validator: 2
   validation_status: Écartée temporairement
-  added: '2020-06-27'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 629
@@ -23512,7 +22884,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-06-29'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 630
@@ -23549,7 +22920,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-06-30'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 631
@@ -23590,7 +22960,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-07-01'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 632
@@ -23626,7 +22995,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-07-02'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 633
@@ -23667,7 +23035,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-07-03'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 634
@@ -23725,7 +23092,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-07-06'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 635
@@ -23760,7 +23126,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-07-07'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 636
@@ -23809,7 +23174,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-07-08'
   created: '2020-12-05'
   updated: '2022-04-16'
 - id: 637
@@ -23844,7 +23208,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-07-09'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 638
@@ -23884,7 +23247,6 @@
   author: 5
   validator: 22
   validation_status: Validée
-  added: '2020-07-11'
   created: '2020-12-05'
   updated: '2022-04-16'
 - id: 639
@@ -23920,7 +23282,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-07-13'
   created: '2020-12-05'
   updated: '2022-04-16'
 - id: 640
@@ -23960,7 +23321,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-07-15'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 641
@@ -24001,7 +23361,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-07-16'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 642
@@ -24037,7 +23396,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-07-17'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 643
@@ -24072,7 +23430,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-07-18'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 644
@@ -24109,7 +23466,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-07-20'
   created: '2020-12-05'
   updated: '2022-04-16'
 - id: 645
@@ -24148,7 +23504,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-07-21'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 646
@@ -24185,7 +23540,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-07-22'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 647
@@ -24222,7 +23576,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-07-24'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 648
@@ -24261,7 +23614,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-07-25'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 649
@@ -24301,7 +23653,6 @@
   author: 17
   validator: 38
   validation_status: Validée
-  added: '2021-02-21'
   created: '2021-02-22'
   updated: '2022-04-16'
 - id: 650
@@ -24343,7 +23694,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-10-20'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 651
@@ -24380,7 +23730,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-10-21'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 652
@@ -24417,7 +23766,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-10-22'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 653
@@ -24453,7 +23801,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-10-23'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 654
@@ -24491,7 +23838,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-10-26'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 655
@@ -24528,7 +23874,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-10-27'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 656
@@ -24573,7 +23918,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-10-28'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 657
@@ -24617,7 +23961,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-10-30'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 658
@@ -24655,7 +23998,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-10-31'
   created: '2020-12-05'
   updated: '2022-04-16'
 - id: 659
@@ -24699,7 +24041,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-11-02'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 660
@@ -24736,7 +24077,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-04'
   created: '2020-12-05'
   updated: '2022-04-16'
 - id: 661
@@ -24778,7 +24118,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-05'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 662
@@ -24820,7 +24159,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-11-05'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 663
@@ -24858,7 +24196,6 @@
   author: 5
   validator: null
   validation_status: Écartée temporairement
-  added: '2020-11-06'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 664
@@ -24897,7 +24234,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-09'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 665
@@ -24936,7 +24272,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-11-10'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 666
@@ -24976,7 +24311,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-11-11'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 667
@@ -25019,7 +24353,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-12'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 668
@@ -25056,7 +24389,6 @@
   author: 5
   validator: 1
   validation_status: Validée
-  added: '2020-11-14'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 669
@@ -25099,7 +24431,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-16'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 670
@@ -25140,7 +24471,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-11-18'
   created: '2020-12-05'
   updated: '2022-04-16'
 - id: 671
@@ -25176,7 +24506,6 @@
   author: 5
   validator: null
   validation_status: Écartée
-  added: '2020-11-19'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 672
@@ -25213,7 +24542,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-20'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 673
@@ -25255,7 +24583,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-11-21'
   created: '2020-11-28'
   updated: '2022-04-16'
 - id: 674
@@ -25289,7 +24616,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2020-12-03'
   created: '2020-12-09'
   updated: '2022-04-16'
 - id: 675
@@ -25328,7 +24654,6 @@
   author: 2
   validator: 5
   validation_status: Validée
-  added: '2020-12-04'
   created: '2020-12-05'
   updated: '2022-04-16'
 - id: 676
@@ -25364,7 +24689,6 @@
   author: 22
   validator: null
   validation_status: Écartée
-  added: '2020-12-09'
   created: '2020-12-10'
   updated: '2022-04-16'
 - id: 677
@@ -25402,7 +24726,6 @@
   author: 22
   validator: 2
   validation_status: Validée
-  added: '2020-12-09'
   created: '2020-12-10'
   updated: '2022-04-16'
 - id: 678
@@ -25443,7 +24766,6 @@
   author: 22
   validator: 2
   validation_status: Validée
-  added: '2020-12-09'
   created: '2020-12-10'
   updated: '2022-04-16'
 - id: 679
@@ -25485,7 +24807,6 @@
   author: 22
   validator: null
   validation_status: Brouillon
-  added: '2020-12-10'
   created: '2020-12-11'
   updated: '2022-04-16'
 - id: 680
@@ -25525,7 +24846,6 @@
   author: 22
   validator: null
   validation_status: Brouillon
-  added: '2020-12-14'
   created: '2020-12-15'
   updated: '2022-04-16'
 - id: 681
@@ -25557,7 +24877,6 @@
   author: 5
   validator: null
   validation_status: Brouillon
-  added: '2020-12-18'
   created: '2020-12-19'
   updated: '2022-04-16'
 - id: 682
@@ -25607,7 +24926,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-22'
   created: '2020-12-24'
   updated: '2022-04-16'
 - id: 683
@@ -25652,7 +24970,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-22'
   created: '2020-12-24'
   updated: '2022-04-16'
 - id: 684
@@ -25695,7 +25012,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-22'
   created: '2020-12-24'
   updated: '2022-04-16'
 - id: 685
@@ -25738,7 +25054,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-22'
   created: '2020-12-24'
   updated: '2022-04-16'
 - id: 686
@@ -25788,7 +25103,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-22'
   created: '2020-12-24'
   updated: '2022-04-16'
 - id: 687
@@ -25835,7 +25149,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-22'
   created: '2020-12-24'
   updated: '2022-04-16'
 - id: 688
@@ -25887,7 +25200,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-23'
   created: '2020-12-24'
   updated: '2022-04-16'
 - id: 689
@@ -25931,7 +25243,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-23'
   created: '2020-12-24'
   updated: '2022-04-16'
 - id: 690
@@ -25982,7 +25293,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-23'
   created: '2020-12-24'
   updated: '2022-04-16'
 - id: 691
@@ -26033,7 +25343,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-23'
   created: '2020-12-24'
   updated: '2022-04-16'
 - id: 692
@@ -26084,7 +25393,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-23'
   created: '2020-12-24'
   updated: '2022-04-16'
 - id: 693
@@ -26129,7 +25437,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-23'
   created: '2020-12-24'
   updated: '2022-04-16'
 - id: 694
@@ -26169,7 +25476,6 @@
   author: 1
   validator: 2
   validation_status: Validée
-  added: '2020-12-26'
   created: '2020-12-27'
   updated: '2022-04-16'
 - id: 695
@@ -26208,7 +25514,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-04'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 696
@@ -26245,7 +25550,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-04'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 697
@@ -26286,7 +25590,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-04'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 698
@@ -26325,7 +25628,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-04'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 699
@@ -26366,7 +25668,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-04'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 700
@@ -26405,7 +25706,6 @@
   author: 9
   validator: 2
   validation_status: Validée
-  added: '2021-01-04'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 701
@@ -26472,7 +25772,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-04'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 702
@@ -26509,7 +25808,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 703
@@ -26548,7 +25846,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 704
@@ -26587,7 +25884,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 705
@@ -26622,7 +25918,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 706
@@ -26657,7 +25952,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 707
@@ -26692,7 +25986,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 708
@@ -26745,7 +26038,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 709
@@ -26791,7 +26083,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-06'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 710
@@ -26830,7 +26121,6 @@
   author: 9
   validator: 2
   validation_status: Validée
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 711
@@ -26877,7 +26167,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 712
@@ -26924,7 +26213,6 @@
   author: 9
   validator: 2
   validation_status: Validée
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 713
@@ -26968,7 +26256,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 714
@@ -27012,7 +26299,6 @@
   author: 9
   validator: 2
   validation_status: Validée
-  added: '2021-01-05'
   created: '2021-01-07'
   updated: '2022-04-16'
 - id: 715
@@ -27054,7 +26340,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 716
@@ -27092,7 +26377,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 717
@@ -27140,7 +26424,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 718
@@ -27189,7 +26472,6 @@
   author: 20
   validator: 2
   validation_status: Validée
-  added: '2021-04-06'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 719
@@ -27232,7 +26514,6 @@
   author: 2
   validator: 2
   validation_status: Validée
-  added: '2020-03-10'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 720
@@ -27272,7 +26553,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 721
@@ -27320,7 +26600,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 722
@@ -27359,7 +26638,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 723
@@ -27398,7 +26676,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-09'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 724
@@ -27443,7 +26720,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 725
@@ -27482,7 +26758,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 726
@@ -27532,7 +26807,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 727
@@ -27584,7 +26858,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 728
@@ -27632,7 +26905,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 729
@@ -27677,7 +26949,6 @@
   author: 27
   validator: 2
   validation_status: Validée
-  added: '2021-03-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 730
@@ -27725,7 +26996,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 731
@@ -27777,7 +27047,6 @@
   author: 9
   validator: 2
   validation_status: Validée
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 732
@@ -27834,7 +27103,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 733
@@ -27877,7 +27145,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 734
@@ -27914,7 +27181,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 735
@@ -27957,7 +27223,6 @@
   author: 9
   validator: 2
   validation_status: Validée
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 736
@@ -27991,7 +27256,6 @@
   author: 27
   validator: null
   validation_status: Brouillon
-  added: '2021-03-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 737
@@ -28033,7 +27297,6 @@
   author: 27
   validator: 2
   validation_status: Écartée
-  added: '2021-03-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 738
@@ -28080,7 +27343,6 @@
   author: 2
   validator: 2
   validation_status: Validée
-  added: '2021-03-08'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 739
@@ -28124,7 +27386,6 @@
   author: 20
   validator: 2
   validation_status: Validée
-  added: '2021-04-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 740
@@ -28161,7 +27422,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 741
@@ -28205,7 +27465,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-08'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 742
@@ -28251,7 +27510,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-08'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 743
@@ -28294,7 +27552,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-08'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 744
@@ -28334,7 +27591,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-08'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 745
@@ -28375,7 +27631,6 @@
   author: 20
   validator: 2
   validation_status: Validée
-  added: '2021-04-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 746
@@ -28417,7 +27672,6 @@
   author: 20
   validator: 2
   validation_status: Validée
-  added: '2021-04-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 747
@@ -28464,7 +27718,6 @@
   author: 20
   validator: 2
   validation_status: Validée
-  added: '2021-04-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 748
@@ -28508,7 +27761,6 @@
   author: 20
   validator: 2
   validation_status: Validée
-  added: '2021-04-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 749
@@ -28555,7 +27807,6 @@
   author: 20
   validator: 2
   validation_status: Validée
-  added: '2021-04-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 750
@@ -28599,7 +27850,6 @@
   author: 9
   validator: 2
   validation_status: Validée
-  added: '2021-01-04'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 751
@@ -28638,7 +27888,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 752
@@ -28689,7 +27938,6 @@
   author: 9
   validator: 2
   validation_status: Validée
-  added: '2021-01-11'
   created: '2021-01-11'
   updated: '2022-04-16'
 - id: 753
@@ -28723,7 +27971,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-11'
   created: '2021-01-11'
   updated: '2022-04-16'
 - id: 754
@@ -28765,7 +28012,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-11'
   created: '2021-01-11'
   updated: '2022-04-16'
 - id: 755
@@ -28801,7 +28047,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-11'
   created: '2021-01-07'
   updated: '2022-04-16'
 - id: 756
@@ -28862,7 +28107,6 @@
   author: 9
   validator: 2
   validation_status: Validée
-  added: '2021-01-11'
   created: '2021-01-11'
   updated: '2022-04-16'
 - id: 757
@@ -28904,7 +28148,6 @@
   author: 9
   validator: 2
   validation_status: Validée
-  added: '2021-04-05'
   created: '2021-01-11'
   updated: '2022-04-16'
 - id: 758
@@ -28947,7 +28190,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-03-19'
   created: '2021-01-11'
   updated: '2022-04-16'
 - id: 759
@@ -28981,7 +28223,6 @@
   author: 27
   validator: null
   validation_status: Brouillon
-  added: '2021-04-06'
   created: '2021-01-11'
   updated: '2022-04-16'
 - id: 760
@@ -29023,7 +28264,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-02-08'
   created: '2021-01-11'
   updated: '2022-04-16'
 - id: 761
@@ -29063,7 +28303,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-12-01'
   created: '2021-01-11'
   updated: '2022-04-16'
 - id: 762
@@ -29108,7 +28347,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 763
@@ -29155,7 +28393,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 764
@@ -29192,7 +28429,6 @@
   author: 2
   validator: 2
   validation_status: Validée
-  added: '2020-06-04'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 765
@@ -29228,7 +28464,6 @@
   author: 2
   validator: null
   validation_status: Validée
-  added: '2022-01-25'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 766
@@ -29265,7 +28500,6 @@
   author: 25
   validator: null
   validation_status: Validée
-  added: '2022-01-25'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 767
@@ -29302,7 +28536,6 @@
   author: 16
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 768
@@ -29337,7 +28570,6 @@
   author: 30
   validator: null
   validation_status: Brouillon
-  added: '2022-04-01'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 769
@@ -29376,7 +28608,6 @@
   author: 2
   validator: null
   validation_status: Validée
-  added: '2022-01-25'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 770
@@ -29412,7 +28643,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-13'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 771
@@ -29455,7 +28685,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-13'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 772
@@ -29498,7 +28727,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-13'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 773
@@ -29532,7 +28760,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-13'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 774
@@ -29566,7 +28793,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-13'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 775
@@ -29604,7 +28830,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-13'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 776
@@ -29648,7 +28873,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-13'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 777
@@ -29695,7 +28919,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-16'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 778
@@ -29742,7 +28965,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-16'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 779
@@ -29788,7 +29010,6 @@
   author: 20
   validator: 2
   validation_status: Validée
-  added: '2021-04-05'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 780
@@ -29835,7 +29056,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-13'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 781
@@ -29871,7 +29091,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-16'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 782
@@ -29905,7 +29124,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-16'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 783
@@ -29941,7 +29159,6 @@
   author: 25
   validator: null
   validation_status: Validée
-  added: '2022-01-25'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 784
@@ -29983,7 +29200,6 @@
   author: 2
   validator: null
   validation_status: Validée
-  added: '2022-01-25'
   created: '2021-01-23'
   updated: '2022-04-16'
 - id: 785
@@ -30028,7 +29244,6 @@
   author: 30
   validator: null
   validation_status: Brouillon
-  added: '2022-04-01'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 786
@@ -30066,7 +29281,6 @@
   author: 30
   validator: null
   validation_status: Brouillon
-  added: '2022-04-02'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 787
@@ -30106,7 +29320,6 @@
   author: 30
   validator: null
   validation_status: Brouillon
-  added: '2022-04-02'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 788
@@ -30158,7 +29371,6 @@
   author: 17
   validator: 38
   validation_status: Validée
-  added: '2021-02-21'
   created: '2021-02-26'
   updated: '2022-04-16'
 - id: 789
@@ -30197,7 +29409,6 @@
   author: 17
   validator: 38
   validation_status: Validée
-  added: '2021-02-21'
   created: '2021-02-26'
   updated: '2022-04-16'
 - id: 790
@@ -30248,7 +29459,6 @@
   author: 9
   validator: 2
   validation_status: Brouillon
-  added: '2021-01-17'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 791
@@ -30308,7 +29518,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-13'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 792
@@ -30352,7 +29561,6 @@
   author: 9
   validator: 2
   validation_status: Validée
-  added: '2021-01-17'
   created: '2021-01-23'
   updated: '2022-04-16'
 - id: 793
@@ -30393,7 +29601,6 @@
   author: 2
   validator: null
   validation_status: Validée
-  added: '2022-01-25'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 794
@@ -30425,7 +29632,6 @@
   author: 30
   validator: null
   validation_status: Brouillon
-  added: '2022-04-04'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 795
@@ -30466,7 +29672,6 @@
   author: 49
   validator: null
   validation_status: Brouillon
-  added: '2022-05-01'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 796
@@ -30502,7 +29707,6 @@
   author: 49
   validator: null
   validation_status: Brouillon
-  added: '2022-05-01'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 797
@@ -30541,7 +29745,6 @@
   author: 49
   validator: null
   validation_status: Brouillon
-  added: '2022-05-01'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 798
@@ -30576,7 +29779,6 @@
   author: 49
   validator: null
   validation_status: Brouillon
-  added: '2022-05-01'
   created: '2021-01-17'
   updated: '2022-04-16'
 - id: 799
@@ -30613,7 +29815,6 @@
   author: 49
   validator: null
   validation_status: Brouillon
-  added: '2022-05-01'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 800
@@ -30645,7 +29846,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 801
@@ -30679,7 +29879,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 802
@@ -30712,7 +29911,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 803
@@ -30748,7 +29946,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 804
@@ -30781,7 +29978,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 805
@@ -30813,7 +30009,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 806
@@ -30845,7 +30040,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 807
@@ -30878,7 +30072,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 808
@@ -30912,7 +30105,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 809
@@ -30945,7 +30137,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 810
@@ -30978,7 +30169,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 811
@@ -31016,7 +30206,6 @@
   author: 2
   validator: null
   validation_status: Brouillon
-  added: '2021-01-05'
   created: '2021-01-06'
   updated: '2022-04-16'
 - id: 812
@@ -31052,7 +30241,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-08'
   created: '2021-01-09'
   updated: '2022-04-16'
 - id: 813
@@ -31089,7 +30277,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-08'
   created: '2021-01-09'
   updated: '2022-04-16'
 - id: 814
@@ -31126,7 +30313,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-08'
   created: '2021-01-09'
   updated: '2022-04-16'
 - id: 815
@@ -31175,7 +30361,6 @@
   author: 10
   validator: 2
   validation_status: Validée
-  added: '2021-01-12'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 816
@@ -31215,7 +30400,6 @@
   author: 10
   validator: 2
   validation_status: Validée
-  added: '2021-01-12'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 817
@@ -31251,7 +30435,6 @@
   author: 10
   validator: 2
   validation_status: Validée
-  added: '2021-01-12'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 818
@@ -31287,7 +30470,6 @@
   author: 10
   validator: 2
   validation_status: Validée
-  added: '2021-01-12'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 819
@@ -31330,7 +30512,6 @@
   author: 10
   validator: 2
   validation_status: Validée
-  added: '2021-01-12'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 820
@@ -31370,7 +30551,6 @@
   author: 10
   validator: 2
   validation_status: Validée
-  added: '2021-01-12'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 821
@@ -31412,7 +30592,6 @@
   author: 10
   validator: 2
   validation_status: Validée
-  added: '2021-01-12'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 822
@@ -31449,7 +30628,6 @@
   author: 10
   validator: 2
   validation_status: Validée
-  added: '2021-01-12'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 823
@@ -31511,7 +30689,6 @@
   author: 10
   validator: 2
   validation_status: Validée
-  added: '2021-01-12'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 824
@@ -31549,7 +30726,6 @@
   author: 10
   validator: 2
   validation_status: Validée
-  added: '2021-01-12'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 825
@@ -31586,7 +30762,6 @@
   author: 33
   validator: null
   validation_status: Écartée
-  added: '2021-01-16'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 826
@@ -31622,7 +30797,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-16'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 827
@@ -31658,7 +30832,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-16'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 828
@@ -31697,7 +30870,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-17'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 829
@@ -31736,7 +30908,6 @@
   author: 18
   validator: 2
   validation_status: Validée
-  added: '2021-01-20'
   created: '2021-01-21'
   updated: '2022-04-16'
 - id: 830
@@ -31776,7 +30947,6 @@
   author: 18
   validator: 2
   validation_status: Validée
-  added: '2021-01-20'
   created: '2021-01-22'
   updated: '2022-04-16'
 - id: 831
@@ -31809,7 +30979,6 @@
   author: 18
   validator: 2
   validation_status: Validée
-  added: '2021-01-20'
   created: '2021-01-24'
   updated: '2022-04-16'
 - id: 832
@@ -31852,7 +31021,6 @@
   author: 18
   validator: 2
   validation_status: Validée
-  added: '2021-01-20'
   created: '2021-01-22'
   updated: '2022-04-16'
 - id: 833
@@ -31892,7 +31060,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-21'
   created: '2021-02-01'
   updated: '2022-04-16'
 - id: 834
@@ -31930,7 +31097,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-21'
   created: '2021-02-01'
   updated: '2022-04-16'
 - id: 835
@@ -31968,7 +31134,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-21'
   created: '2021-02-01'
   updated: '2022-04-16'
 - id: 836
@@ -32003,7 +31168,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-21'
   created: '2021-02-01'
   updated: '2022-04-16'
 - id: 837
@@ -32036,7 +31200,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-21'
   created: '2021-02-02'
   updated: '2022-04-16'
 - id: 838
@@ -32069,7 +31232,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-21'
   created: '2021-02-02'
   updated: '2022-04-16'
 - id: 839
@@ -32103,7 +31265,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-21'
   created: '2021-02-02'
   updated: '2022-04-16'
 - id: 840
@@ -32137,7 +31298,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-21'
   created: '2021-01-26'
   updated: '2022-04-16'
 - id: 841
@@ -32170,7 +31330,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-21'
   created: '2021-02-02'
   updated: '2022-04-16'
 - id: 842
@@ -32209,7 +31368,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-21'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 843
@@ -32244,7 +31402,6 @@
   author: 33
   validator: null
   validation_status: Brouillon
-  added: '2021-01-21'
   created: '2021-02-02'
   updated: '2022-04-16'
 - id: 844
@@ -32286,7 +31443,6 @@
   author: 17
   validator: 38
   validation_status: Validée
-  added: '2021-02-21'
   created: '2021-02-22'
   updated: '2022-04-16'
 - id: 845
@@ -32324,7 +31480,6 @@
   author: 14
   validator: 2
   validation_status: Validée
-  added: '2021-01-26'
   created: '2021-01-26'
   updated: '2022-04-16'
 - id: 846
@@ -32360,7 +31515,6 @@
   author: 14
   validator: 2
   validation_status: Validée
-  added: '2021-01-26'
   created: '2021-01-26'
   updated: '2022-04-16'
 - id: 847
@@ -32398,7 +31552,6 @@
   author: 14
   validator: 2
   validation_status: Validée
-  added: '2021-01-26'
   created: '2021-01-26'
   updated: '2022-04-16'
 - id: 848
@@ -32444,7 +31597,6 @@
   author: 14
   validator: 2
   validation_status: Validée
-  added: '2021-01-26'
   created: '2021-01-26'
   updated: '2022-04-16'
 - id: 849
@@ -32479,7 +31631,6 @@
   author: 14
   validator: 2
   validation_status: Validée
-  added: '2021-01-26'
   created: '2021-01-26'
   updated: '2022-04-16'
 - id: 850
@@ -32521,7 +31672,6 @@
   author: 14
   validator: 2
   validation_status: Validée
-  added: '2021-01-26'
   created: '2021-01-26'
   updated: '2022-04-16'
 - id: 851
@@ -32557,7 +31707,6 @@
   author: 14
   validator: 2
   validation_status: Validée
-  added: '2021-01-26'
   created: '2021-01-26'
   updated: '2022-04-16'
 - id: 852
@@ -32599,7 +31748,6 @@
   author: 14
   validator: 2
   validation_status: Validée
-  added: '2021-01-26'
   created: '2021-01-26'
   updated: '2022-04-16'
 - id: 853
@@ -32643,7 +31791,6 @@
   author: 14
   validator: 2
   validation_status: Validée
-  added: '2021-01-29'
   created: '2021-01-30'
   updated: '2022-04-16'
 - id: 854
@@ -32687,7 +31834,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-02-08'
   created: '2021-02-14'
   updated: '2022-04-16'
 - id: 855
@@ -32726,7 +31872,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-02-08'
   created: '2021-02-14'
   updated: '2022-04-16'
 - id: 856
@@ -32772,7 +31917,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-02-08'
   created: '2021-02-14'
   updated: '2022-04-16'
 - id: 857
@@ -32815,7 +31959,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-02-08'
   created: '2021-02-14'
   updated: '2022-04-16'
 - id: 858
@@ -32853,7 +31996,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-02-08'
   created: '2021-02-14'
   updated: '2022-04-16'
 - id: 859
@@ -32895,7 +32037,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-02-08'
   created: '2021-02-14'
   updated: '2022-04-16'
 - id: 860
@@ -32943,7 +32084,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-02-08'
   created: '2021-02-14'
   updated: '2022-04-16'
 - id: 861
@@ -32983,7 +32123,6 @@
   author: 6
   validator: 2
   validation_status: Écartée
-  added: '2021-02-14'
   created: '2022-01-24'
   updated: '2022-04-16'
 - id: 862
@@ -33024,7 +32163,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-02-08'
   created: '2021-02-14'
   updated: '2022-04-16'
 - id: 863
@@ -33061,7 +32199,6 @@
   author: 49
   validator: null
   validation_status: Brouillon
-  added: '2022-05-01'
   created: '2021-02-14'
   updated: '2022-04-16'
 - id: 864
@@ -33107,7 +32244,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-02-08'
   created: '2021-02-14'
   updated: '2022-04-16'
 - id: 865
@@ -33147,7 +32283,6 @@
   author: 17
   validator: 38
   validation_status: Validée
-  added: '2021-02-21'
   created: '2021-02-22'
   updated: '2022-04-16'
 - id: 866
@@ -33187,7 +32322,6 @@
   author: 17
   validator: 38
   validation_status: Validée
-  added: '2021-02-21'
   created: '2021-02-22'
   updated: '2022-04-16'
 - id: 867
@@ -33225,7 +32359,6 @@
   author: 17
   validator: 38
   validation_status: Validée
-  added: '2021-02-21'
   created: '2021-02-22'
   updated: '2022-04-16'
 - id: 868
@@ -33263,7 +32396,6 @@
   author: 17
   validator: 38
   validation_status: Validée
-  added: '2021-02-21'
   created: '2021-02-22'
   updated: '2022-04-16'
 - id: 869
@@ -33304,7 +32436,6 @@
   author: 17
   validator: 38
   validation_status: Validée
-  added: '2021-02-21'
   created: '2021-02-23'
   updated: '2022-04-16'
 - id: 870
@@ -33346,7 +32477,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-02-22'
   created: '2021-02-26'
   updated: '2022-04-16'
 - id: 871
@@ -33387,7 +32517,6 @@
   author: 2
   validator: 39
   validation_status: Validée
-  added: '2020-03-07'
   created: '2021-03-12'
   updated: '2022-04-16'
 - id: 872
@@ -33426,7 +32555,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-14'
   created: '2021-03-23'
   updated: '2022-04-16'
 - id: 873
@@ -33467,7 +32595,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-14'
   created: '2021-03-23'
   updated: '2022-04-16'
 - id: 874
@@ -33506,7 +32633,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-14'
   created: '2021-03-23'
   updated: '2022-04-16'
 - id: 875
@@ -33545,7 +32671,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-14'
   created: '2021-03-17'
   updated: '2022-04-16'
 - id: 876
@@ -33587,7 +32712,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-14'
   created: '2021-03-21'
   updated: '2022-04-16'
 - id: 877
@@ -33628,7 +32752,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-14'
   created: '2021-03-15'
   updated: '2022-04-16'
 - id: 878
@@ -33667,7 +32790,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-14'
   created: '2021-03-17'
   updated: '2022-04-16'
 - id: 879
@@ -33714,7 +32836,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-14'
   created: '2021-03-17'
   updated: '2022-04-16'
 - id: 880
@@ -33758,7 +32879,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-14'
   created: '2021-03-15'
   updated: '2022-04-16'
 - id: 881
@@ -33799,7 +32919,6 @@
   author: 6
   validator: 1
   validation_status: Validée
-  added: '2021-03-16'
   created: '2021-03-21'
   updated: '2022-04-16'
 - id: 882
@@ -33844,7 +32963,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-16'
   created: '2021-03-17'
   updated: '2022-04-16'
 - id: 883
@@ -33888,7 +33006,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-04-16'
   created: '2021-04-16'
   updated: '2022-04-16'
 - id: 884
@@ -33920,7 +33037,6 @@
   author: 46
   validator: null
   validation_status: Brouillon
-  added: '2022-04-01'
   created: '2022-04-09'
   updated: '2022-04-16'
 - id: 885
@@ -33955,7 +33071,6 @@
   author: 46
   validator: null
   validation_status: Brouillon
-  added: '2022-04-01'
   created: '2022-04-06'
   updated: '2022-04-16'
 - id: 886
@@ -33987,7 +33102,6 @@
   author: 46
   validator: null
   validation_status: Brouillon
-  added: '2022-04-01'
   created: '2022-04-06'
   updated: '2022-04-16'
 - id: 887
@@ -34020,7 +33134,6 @@
   author: 46
   validator: null
   validation_status: Brouillon
-  added: '2022-04-01'
   created: '2022-04-06'
   updated: '2022-04-16'
 - id: 888
@@ -34054,7 +33167,6 @@
   author: 46
   validator: null
   validation_status: Brouillon
-  added: '2022-04-01'
   created: '2022-04-06'
   updated: '2022-04-16'
 - id: 889
@@ -34090,7 +33202,6 @@
   author: 46
   validator: null
   validation_status: Brouillon
-  added: '2022-04-01'
   created: '2022-04-06'
   updated: '2022-04-16'
 - id: 890
@@ -34124,7 +33235,6 @@
   author: 46
   validator: null
   validation_status: Brouillon
-  added: '2022-04-01'
   created: '2022-04-06'
   updated: '2022-04-16'
 - id: 891
@@ -34158,7 +33268,6 @@
   author: 46
   validator: null
   validation_status: Brouillon
-  added: '2022-04-01'
   created: '2022-04-06'
   updated: '2022-04-16'
 - id: 892
@@ -34193,7 +33302,6 @@
   author: 46
   validator: null
   validation_status: Brouillon
-  added: '2022-04-01'
   created: '2022-04-06'
   updated: '2022-04-16'
 - id: 893
@@ -34229,7 +33337,6 @@
   author: 46
   validator: null
   validation_status: Brouillon
-  added: '2022-04-01'
   created: '2022-04-06'
   updated: '2022-04-16'
 - id: 894
@@ -34263,7 +33370,6 @@
   author: 49
   validator: null
   validation_status: Brouillon
-  added: '2022-05-01'
   created: '2022-05-06'
   updated: '2022-05-06'
 - id: 895
@@ -34298,7 +33404,6 @@
   author: 49
   validator: null
   validation_status: Brouillon
-  added: '2022-05-01'
   created: '2022-05-02'
   updated: '2022-05-02'
 - id: 896
@@ -34336,7 +33441,6 @@
   author: 49
   validator: null
   validation_status: Brouillon
-  added: '2022-05-01'
   created: '2022-05-04'
   updated: '2022-05-04'
 - id: 897
@@ -34375,7 +33479,6 @@
   author: 49
   validator: null
   validation_status: Brouillon
-  added: '2022-05-01'
   created: '2022-05-04'
   updated: '2022-05-04'
 - id: 898
@@ -34410,7 +33513,6 @@
   author: 49
   validator: null
   validation_status: Brouillon
-  added: '2022-05-01'
   created: '2022-05-04'
   updated: '2022-05-04'
 - id: 899
@@ -34447,7 +33549,6 @@
   author: 49
   validator: null
   validation_status: Brouillon
-  added: '2022-05-01'
   created: '2022-05-04'
   updated: '2022-05-04'
 - id: 900
@@ -34487,7 +33588,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-17'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 901
@@ -34522,7 +33622,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-17'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 902
@@ -34555,7 +33654,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-17'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 903
@@ -34588,7 +33686,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-17'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 904
@@ -34623,7 +33720,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-17'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 905
@@ -34660,7 +33756,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-17'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 906
@@ -34697,7 +33792,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-17'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 907
@@ -34731,7 +33825,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-31'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 908
@@ -34771,7 +33864,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-17'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 909
@@ -34809,7 +33901,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-17'
   created: '2021-01-19'
   updated: '2022-04-16'
 - id: 910
@@ -34849,7 +33940,6 @@
   author: 9
   validator: 2
   validation_status: Validée
-  added: '2021-01-31'
   created: '2021-02-01'
   updated: '2022-04-16'
 - id: 911
@@ -34915,7 +34005,6 @@
   author: 9
   validator: null
   validation_status: Écartée
-  added: '2021-01-17'
   created: '2021-02-01'
   updated: '2022-04-16'
 - id: 912
@@ -34958,7 +34047,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-31'
   created: '2021-02-01'
   updated: '2022-04-16'
 - id: 913
@@ -34990,7 +34078,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-31'
   created: '2021-02-01'
   updated: '2022-04-16'
 - id: 915
@@ -35022,7 +34109,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-31'
   created: '2021-02-01'
   updated: '2022-04-16'
 - id: 916
@@ -35054,7 +34140,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-31'
   created: '2021-02-01'
   updated: '2022-04-16'
 - id: 917
@@ -35086,7 +34171,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-31'
   created: '2021-02-01'
   updated: '2022-04-16'
 - id: 918
@@ -35118,7 +34202,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-31'
   created: '2021-02-01'
   updated: '2022-04-16'
 - id: 919
@@ -35150,7 +34233,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-17'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 920
@@ -35182,7 +34264,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-01-17'
   created: '2021-01-18'
   updated: '2022-04-16'
 - id: 921
@@ -35216,7 +34297,6 @@
   author: 34
   validator: 2
   validation_status: Brouillon
-  added: '2021-02-03'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 922
@@ -35259,7 +34339,6 @@
   author: 15
   validator: 2
   validation_status: Validée
-  added: '2021-02-17'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 923
@@ -35298,7 +34377,6 @@
   author: 15
   validator: 2
   validation_status: Validée
-  added: '2021-02-17'
   created: '2021-02-18'
   updated: '2022-04-16'
 - id: 924
@@ -35337,7 +34415,6 @@
   author: 15
   validator: 2
   validation_status: Validée
-  added: '2021-02-17'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 925
@@ -35383,7 +34460,6 @@
   author: 15
   validator: 2
   validation_status: Validée
-  added: '2021-02-17'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 926
@@ -35420,7 +34496,6 @@
   author: 15
   validator: 2
   validation_status: Validée
-  added: '2021-02-17'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 927
@@ -35459,7 +34534,6 @@
   author: 15
   validator: 2
   validation_status: Validée
-  added: '2021-02-17'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 928
@@ -35506,7 +34580,6 @@
   author: 15
   validator: 2
   validation_status: Validée
-  added: '2021-02-18'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 929
@@ -35553,7 +34626,6 @@
   author: 15
   validator: 2
   validation_status: Validée
-  added: '2021-02-18'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 930
@@ -35600,7 +34672,6 @@
   author: 15
   validator: 2
   validation_status: Validée
-  added: '2021-02-18'
   created: '2021-02-19'
   updated: '2022-04-16'
 - id: 931
@@ -35647,7 +34718,6 @@
   author: 12
   validator: 2
   validation_status: Validée
-  added: '2021-11-22'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 932
@@ -35688,7 +34758,6 @@
   author: 12
   validator: 2
   validation_status: Validée
-  added: '2021-11-22'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 933
@@ -35726,7 +34795,6 @@
   author: 12
   validator: 2
   validation_status: Validée
-  added: '2021-11-22'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 934
@@ -35760,7 +34828,6 @@
   author: 31
   validator: null
   validation_status: Écartée
-  added: '2021-02-19'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 935
@@ -35807,7 +34874,6 @@
   author: 12
   validator: 2
   validation_status: Validée
-  added: '2021-11-22'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 936
@@ -35842,7 +34908,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-15'
   created: '2021-03-17'
   updated: '2022-04-16'
 - id: 937
@@ -35884,7 +34949,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-15'
   created: '2021-03-17'
   updated: '2022-04-16'
 - id: 938
@@ -35922,7 +34986,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-15'
   created: '2021-03-17'
   updated: '2022-04-16'
 - id: 939
@@ -35967,7 +35030,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-15'
   created: '2021-03-22'
   updated: '2022-04-16'
 - id: 940
@@ -36012,7 +35074,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-15'
   created: '2021-03-17'
   updated: '2022-04-16'
 - id: 941
@@ -36050,7 +35111,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-15'
   created: '2021-03-23'
   updated: '2022-04-16'
 - id: 942
@@ -36093,7 +35153,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-15'
   created: '2021-03-17'
   updated: '2022-04-16'
 - id: 943
@@ -36138,7 +35197,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-15'
   created: '2021-03-17'
   updated: '2022-04-16'
 - id: 944
@@ -36174,7 +35232,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-15'
   created: '2021-03-23'
   updated: '2022-04-16'
 - id: 945
@@ -36216,7 +35273,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-15'
   created: '2021-03-17'
   updated: '2022-04-16'
 - id: 946
@@ -36258,7 +35314,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-15'
   created: '2021-03-16'
   updated: '2022-04-16'
 - id: 947
@@ -36302,7 +35357,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-15'
   created: '2021-03-16'
   updated: '2022-04-16'
 - id: 948
@@ -36344,7 +35398,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-03-16'
   created: '2021-03-17'
   updated: '2022-04-16'
 - id: 949
@@ -36381,7 +35434,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-04-16'
   created: '2021-04-16'
   updated: '2022-04-16'
 - id: 950
@@ -36420,7 +35472,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-04-16'
   created: '2021-04-19'
   updated: '2022-04-16'
 - id: 951
@@ -36459,7 +35510,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-04-16'
   created: '2021-04-25'
   updated: '2022-04-16'
 - id: 952
@@ -36499,7 +35549,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-04-16'
   created: '2021-04-24'
   updated: '2022-04-16'
 - id: 953
@@ -36539,7 +35588,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-04-16'
   created: '2021-04-23'
   updated: '2022-04-16'
 - id: 954
@@ -36583,7 +35631,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-04-16'
   created: '2021-04-22'
   updated: '2022-04-16'
 - id: 955
@@ -36624,7 +35671,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-04-16'
   created: '2021-04-21'
   updated: '2022-04-16'
 - id: 956
@@ -36664,7 +35710,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-04-16'
   created: '2021-04-20'
   updated: '2022-04-16'
 - id: 957
@@ -36708,7 +35753,6 @@
   author: 6
   validator: 2
   validation_status: Validée
-  added: '2021-04-16'
   created: '2021-04-16'
   updated: '2022-04-16'
 - id: 958
@@ -36741,7 +35785,6 @@
   author: 24
   validator: null
   validation_status: Brouillon
-  added: '2021-04-25'
   created: '2021-04-28'
   updated: '2022-04-16'
 - id: 959
@@ -36773,7 +35816,6 @@
   author: 24
   validator: null
   validation_status: Brouillon
-  added: '2021-04-25'
   created: '2021-04-28'
   updated: '2022-04-16'
 - id: 960
@@ -36806,7 +35848,6 @@
   author: 24
   validator: null
   validation_status: Brouillon
-  added: '2021-04-25'
   created: '2021-04-28'
   updated: '2022-04-16'
 - id: 961
@@ -36840,7 +35881,6 @@
   author: 24
   validator: null
   validation_status: Brouillon
-  added: '2021-04-26'
   created: '2021-04-28'
   updated: '2022-04-16'
 - id: 962
@@ -36872,7 +35912,6 @@
   author: 24
   validator: null
   validation_status: Brouillon
-  added: '2021-04-26'
   created: '2021-04-28'
   updated: '2022-04-16'
 - id: 963
@@ -36903,7 +35942,6 @@
   author: 24
   validator: null
   validation_status: Brouillon
-  added: '2021-04-26'
   created: '2021-05-03'
   updated: '2022-04-16'
 - id: 964
@@ -36937,7 +35975,6 @@
   author: 24
   validator: null
   validation_status: Brouillon
-  added: '2021-04-26'
   created: '2021-05-03'
   updated: '2022-04-16'
 - id: 965
@@ -36986,7 +36023,6 @@
   author: 12
   validator: 2
   validation_status: Validée
-  added: '2021-11-22'
   created: '2021-12-01'
   updated: '2022-04-16'
 - id: 966
@@ -37026,7 +36062,6 @@
   author: 12
   validator: 2
   validation_status: Validée
-  added: '2021-11-22'
   created: '2021-11-29'
   updated: '2022-04-16'
 - id: 967
@@ -37065,7 +36100,6 @@
   author: 12
   validator: 2
   validation_status: Validée
-  added: '2021-11-22'
   created: '2021-11-29'
   updated: '2022-04-16'
 - id: 968
@@ -37113,7 +36147,6 @@
   author: 12
   validator: 2
   validation_status: Validée
-  added: '2021-11-22'
   created: '2021-11-29'
   updated: '2022-04-16'
 - id: 969
@@ -37156,7 +36189,6 @@
   author: 12
   validator: 2
   validation_status: Validée
-  added: '2021-11-22'
   created: '2021-11-29'
   updated: '2022-04-16'
 - id: 970
@@ -37194,7 +36226,6 @@
   author: 12
   validator: 2
   validation_status: Écartée
-  added: '2021-11-22'
   created: '2021-11-29'
   updated: '2022-04-16'
 - id: 971
@@ -37240,7 +36271,6 @@
   author: 12
   validator: 2
   validation_status: Validée
-  added: '2021-11-29'
   created: '2021-11-29'
   updated: '2022-04-16'
 - id: 999
@@ -37291,7 +36321,6 @@
   author: 2
   validator: null
   validation_status: Validée
-  added: '2021-05-01'
   created: '2021-05-02'
   updated: '2022-04-16'
 - id: 1000
@@ -37335,7 +36364,6 @@
   author: 18
   validator: 2
   validation_status: Validée
-  added: '2021-02-19'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 1001
@@ -37371,7 +36399,6 @@
   author: 18
   validator: 2
   validation_status: Validée
-  added: '2021-02-19'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 1002
@@ -37412,7 +36439,6 @@
   author: 18
   validator: 2
   validation_status: Validée
-  added: '2021-02-19'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 1003
@@ -37451,7 +36477,6 @@
   author: 18
   validator: 2
   validation_status: Validée
-  added: '2021-02-19'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 1004
@@ -37495,7 +36520,6 @@
   author: 5
   validator: 2
   validation_status: Validée
-  added: '2020-03-02'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 1005
@@ -37535,7 +36559,6 @@
   author: 21
   validator: 2
   validation_status: Validée
-  added: '2021-02-19'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 1006
@@ -37574,7 +36597,6 @@
   author: 2
   validator: 1
   validation_status: Validée
-  added: '2020-03-10'
   created: '2021-02-21'
   updated: '2022-04-16'
 - id: 1007
@@ -37611,7 +36633,6 @@
   author: 27
   validator: 2
   validation_status: Validée
-  added: '2021-02-23'
   created: '2021-02-26'
   updated: '2022-04-16'
 - id: 1008
@@ -37645,7 +36666,6 @@
   author: 34
   validator: null
   validation_status: Brouillon
-  added: '2021-03-01'
   created: '2021-03-03'
   updated: '2022-04-16'
 - id: 1009
@@ -37679,7 +36699,6 @@
   author: 34
   validator: 2
   validation_status: Brouillon
-  added: '2021-03-02'
   created: '2021-03-12'
   updated: '2022-04-16'
 - id: 1010
@@ -37715,7 +36734,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-04-05'
   created: '2021-03-20'
   updated: '2022-04-16'
 - id: 1011
@@ -37749,7 +36767,6 @@
   author: 34
   validator: null
   validation_status: Brouillon
-  added: '2021-03-25'
   created: '2021-03-29'
   updated: '2022-04-16'
 - id: 1012
@@ -37793,7 +36810,6 @@
   author: 9
   validator: null
   validation_status: Brouillon
-  added: '2021-04-05'
   created: '2021-04-06'
   updated: '2022-04-16'
 - id: 1013
@@ -37838,7 +36854,6 @@
   author: 11
   validator: 2
   validation_status: Validée
-  added: '2021-09-10'
   created: '2021-10-08'
   updated: '2022-04-16'
 - id: 1014
@@ -37886,7 +36901,6 @@
   author: 11
   validator: 2
   validation_status: Validée
-  added: '2021-10-03'
   created: '2021-10-08'
   updated: '2022-04-16'
 - id: 1015
@@ -37940,7 +36954,6 @@
   author: 11
   validator: 2
   validation_status: Validée
-  added: '2021-10-03'
   created: '2021-10-08'
   updated: '2022-04-16'
 - id: 1016
@@ -37986,7 +36999,6 @@
   author: 11
   validator: 2
   validation_status: Validée
-  added: '2021-10-03'
   created: '2021-10-08'
   updated: '2022-04-16'
 - id: 1017
@@ -38036,7 +37048,6 @@
   author: 11
   validator: 2
   validation_status: Validée
-  added: '2021-10-03'
   created: '2021-10-08'
   updated: '2022-04-16'
 - id: 1018
@@ -38081,7 +37092,6 @@
   author: 11
   validator: 2
   validation_status: Validée
-  added: '2021-10-03'
   created: '2021-10-08'
   updated: '2022-04-16'
 - id: 1019
@@ -38128,7 +37138,6 @@
   author: 11
   validator: 2
   validation_status: Validée
-  added: '2021-10-03'
   created: '2021-10-08'
   updated: '2022-04-16'
 - id: 1020
@@ -38177,7 +37186,6 @@
   author: 11
   validator: 2
   validation_status: Validée
-  added: '2021-10-03'
   created: '2021-10-08'
   updated: '2022-04-16'
 - id: 1021
@@ -38226,7 +37234,6 @@
   author: 11
   validator: 2
   validation_status: Validée
-  added: '2021-10-03'
   created: '2021-10-08'
   updated: '2022-04-16'
 - id: 1022
@@ -38277,6 +37284,5 @@
   author: 11
   validator: 2
   validation_status: Validée
-  added: '2021-10-03'
   created: '2021-10-08'
   updated: '2022-04-16'

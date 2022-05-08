@@ -24,6 +24,5 @@
   author: "L'auteur de la question"
   validator: "La personne qui a validée la question"
   validation_status: "Le statut de la question : Brouillon, A valider, Validée, Ecartée"
-  added: La date d'ajout de la question
   created: Date au format YYYY-MM-DD
   updated: Date au format YYYY-MM-DD

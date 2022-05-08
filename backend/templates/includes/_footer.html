@@ -11,7 +11,7 @@
                     </li>
                     {% if user.is_authenticated and user.has_role_contributor %}
                         <li class="nav-item">
-                            <a href="{{ METABASE_DASHBOARD_URL }}" target="_blank" class="nav-link px-2 text-muted">Statistiques</a>
+                            <a href="{{ METABASE_GENERAL_DASHBOARD_PUBLIC_URL }}" target="_blank" class="nav-link px-2 text-muted">Statistiques</a>
                         </li>
                     {% endif %}
                     <li class="nav-item">

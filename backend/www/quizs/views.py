@@ -13,10 +13,11 @@ from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from core.mixins import ContributorUserRequiredMixin
 from quizs.filters import QuizFilter
-from quizs.models import Quiz
 from quizs.forms import QUIZ_FORM_FIELDS, QuizCreateForm, QuizEditForm, QuizQuestionFormSet
+from quizs.models import Quiz
 from quizs.tables import QuizTable
 from stats.models import QuizAggStat
+from users import constants as user_constants
 
 
 class QuizListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
@@ -61,6 +62,22 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
     def get_object(self):
         return get_object_or_404(Quiz, id=self.kwargs.get("pk"))
 
+    def get_form(self, *args, **kwargs):
+        quiz = self.get_object()
+        form = super().get_form(self.form_class)
+        if not self.request.user.can_publish_quiz(quiz):
+            form.fields["publish"].disabled = True
+            form.fields["publish"].help_text = user_constants.ADMIN_REQUIRED_MESSAGE
+            form.fields["spotlight"].disabled = True
+            form.fields["spotlight"].help_text = user_constants.ADMIN_REQUIRED_MESSAGE
+        return form
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        quiz = self.get_object()
+        context["user_can_edit_quiz"] = self.request.user.can_edit_quiz(quiz)
+        return context
+
     def get_success_url(self):
         return reverse_lazy("quizs:detail_view", args=[self.kwargs.get("pk")])
 
@@ -74,7 +91,8 @@ class QuizDetailQuestionListView(ContributorUserRequiredMixin, FormView):
         context = super().get_context_data(**kwargs)
         context["quiz"] = Quiz.objects.get(id=self.kwargs.get("pk"))
         context["quiz_questions"] = context["quiz"].quizquestion_set.all()
-        if self.request.POST:
+        context["user_can_edit_quiz"] = self.request.user.can_edit_quiz(context["quiz"])
+        if self.request.POST and context["user_can_edit_quiz"]:
             context["quiz_question_formset"] = QuizQuestionFormSet(self.request.POST, instance=context["quiz"])
         else:
             context["quiz_question_formset"] = QuizQuestionFormSet(instance=context["quiz"])

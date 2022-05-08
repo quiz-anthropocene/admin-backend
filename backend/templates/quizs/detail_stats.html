@@ -1,15 +1,23 @@
 {% extends "quizs/detail_base.html" %}
-{% load custom_filters %}
+{% load custom_filters get_verbose_name %}
 
 {% block quiz_detail_content %}
 {% for field in quiz_agg_stat_dict %}
     <div class="row">
         <div class="col-4">
-            <strong>{{ field }}</strong>
+            <strong>{% get_verbose_name quiz_stats field %}</strong>
         </div>
         <div class="col-8">
             {{ quiz_agg_stat_dict|get_obj_attr:field }}
         </div>
     </div>
 {% endfor %}
+
+<br />
+
+<p>
+    <a href="{{ METABASE_QUIZ_DASHBOARD_PUBLIC_URL }}?id={{ quiz.id }}" target="_blank">Statistiques avancées</a>
+    <small>(être patient…)</small>
+</p>
+
 {% endblock %}

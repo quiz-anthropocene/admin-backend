@@ -16,5 +16,6 @@ def expose_settings(request):
         "CONFIGURATION": configuration,
         "DEBUG": settings.DEBUG,
         "TECH_EMAIL": settings.SERVER_EMAIL,
-        "METABASE_DASHBOARD_URL": settings.METABASE_DASHBOARD_URL,
+        "METABASE_GENERAL_DASHBOARD_PUBLIC_URL": settings.METABASE_GENERAL_DASHBOARD_PUBLIC_URL,
+        "METABASE_QUIZ_DASHBOARD_PUBLIC_URL": settings.METABASE_QUIZ_DASHBOARD_PUBLIC_URL,
     }

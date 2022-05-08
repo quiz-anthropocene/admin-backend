@@ -1,11 +1,11 @@
 {% extends "questions/detail_base.html" %}
-{% load custom_filters %}
+{% load custom_filters get_verbose_name %}
 
 {% block question_detail_content %}
 {% for field in question_agg_stat_dict %}
     <div class="row">
         <div class="col-4">
-            <strong>{{ field }}</strong>
+            <strong>{% get_verbose_name question_stats field %}</strong>
         </div>
         <div class="col-8">
             {{ question_agg_stat_dict|get_obj_attr:field }}

@@ -4,6 +4,7 @@ from django.urls import reverse
 from core import constants
 from questions.factories import QuestionFactory
 from questions.models import Question
+from users import constants as user_constants
 from users.factories import DEFAULT_PASSWORD, UserFactory
 
 
@@ -64,6 +65,31 @@ class QuestionDetailViewTest(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.context["question"].id, self.question_1.id)
+
+
+class QuizDetailEditViewTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user_contributor_1 = UserFactory()
+        cls.user_contributor_2 = UserFactory()
+        cls.user_super_contributor = UserFactory(roles=[user_constants.USER_ROLE_SUPER_CONTRIBUTOR])
+        cls.user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
+        cls.quiz_1 = QuestionFactory(text="Question 1", author=cls.user_contributor_1)
+
+    def test_author_or_super_contributor_can_edit_question(self):
+        for user in [self.user_contributor_1, self.user_super_contributor, self.user_admin]:
+            self.client.login(email=user.email, password=DEFAULT_PASSWORD)
+            url = reverse("questions:detail_edit", args=[self.quiz_1.id])
+            response = self.client.get(url)
+            self.assertEqual(response.status_code, 200)
+            self.assertContains(response, '<form id="question_edit_form" ')
+        # other contributors can't edit
+        self.client.login(email=self.user_contributor_2.email, password=DEFAULT_PASSWORD)
+        url = reverse("questions:detail_edit", args=[self.quiz_1.id])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertNotContains(response, '<form id="question_edit_form" ')
+        self.assertContains(response, "Vous n'avez pas les droits nécessaires")
 
 
 class QuestionCreateViewTest(TestCase):
