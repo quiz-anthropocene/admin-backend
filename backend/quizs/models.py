@@ -391,14 +391,17 @@ class QuizQuestion(models.Model):
         Rules on QuizQuestion
         - cannot add a new question with an existing order
         - if the order is 0 or None, increment from the biggest existing value
+        - if the quiz is public, it cannot contain private questions
         """
         if not self.id:
             if self.order:
                 if QuizQuestion.objects.filter(quiz=self.quiz, order=self.order).exists():
-                    raise ValidationError({"order": "la valeur existe déjà"})
+                    raise ValidationError({"order": "La valeur existe déjà"})
         if not self.order:  # 0 or None
             last_quiz_question = QuizQuestion.objects.filter(quiz=self.quiz).last()
             self.order = (last_quiz_question.order + 1) if last_quiz_question else 1
+        if not self.quiz.is_private and self.question.is_private:
+            raise ValidationError({"question": "Un quiz publique ne peut pas contenir de question privée"})
 
 
 # @receiver(m2m_changed, sender=Quiz.questions.through)

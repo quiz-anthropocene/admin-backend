@@ -112,6 +112,9 @@ class QuizDetailQuestionListView(ContributorUserRequiredMixin, FormView):
         return super().form_valid(quiz_question_formset)
 
     def form_invalid(self, quiz_question_formset):
+        messages.add_message(
+            self.request, messages.ERROR, "Erreur(s) dans le formulaire de modifications des questions"
+        )
         return self.render_to_response(self.get_context_data())
 
     def get_success_url(self):
