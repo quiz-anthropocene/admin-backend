@@ -36,6 +36,7 @@ QUIZ_FIELDS = [
     "has_audio",
     "publish",
     "spotlight",
+    "visibility",
     # "relationships",
     # "question_count",
     # "questions_categories_list",
