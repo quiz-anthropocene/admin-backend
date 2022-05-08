@@ -75,6 +75,13 @@ label.required::after {
     font-size: 1rem;
 }
 
+div.django-ckeditor-widget {
+    width: 100%;
+}
+div.django-ckeditor-widget > div.cke {
+    max-width: 100%;
+}
+
 
 /* bootstrap-multiselect */
 

@@ -56,7 +56,6 @@ class Question(models.Model):
         "author",
         "validator",
         "validation_status",
-        "added",
         "created",
         "updated",
     ] + QUESTION_FLATTEN_FIELDS
@@ -177,7 +176,6 @@ class Question(models.Model):
     )
 
     # timestamps
-    added = models.DateField(verbose_name="Date d'ajout", blank=True, null=True)
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
