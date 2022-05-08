@@ -47,4 +47,4 @@ class QuizQuestionEditForm(forms.ModelForm):
         fields = ["question", "order"]
 
 
-QuizQuestionFormSet = inlineformset_factory(Quiz, QuizQuestion, form=QuizQuestionEditForm, extra=1, can_delete=True)
+QuizQuestionFormSet = inlineformset_factory(Quiz, QuizQuestion, form=QuizQuestionEditForm, extra=0, can_delete=True)
