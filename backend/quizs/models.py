@@ -353,6 +353,11 @@ def quiz_create_agg_stat_instance(sender, instance, created, **kwargs):
             QuizAggStat.objects.create(quiz=instance)
 
 
+class QuizQuestionQuerySet(models.QuerySet):
+    def public(self):
+        return self.exclude(quiz__visibility=constants.VISIBILITY_PRIVATE)
+
+
 class QuizQuestion(models.Model):
     quiz = models.ForeignKey(verbose_name="Quiz", to=Quiz, on_delete=models.CASCADE)
     question = models.ForeignKey(verbose_name="Question", to=Question, on_delete=models.CASCADE)
@@ -360,6 +365,8 @@ class QuizQuestion(models.Model):
     # timestamps
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+
+    objects = QuizQuestionQuerySet.as_manager()
 
     class Meta:
         unique_together = [
