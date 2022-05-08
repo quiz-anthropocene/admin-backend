@@ -927,7 +927,7 @@
   - 244
   difficulty_average: 1.9
   language: Français
-  author: 44
+  author: 15
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/quizs/062-logo-fresque-alimentation-square.png
   has_audio: false
   publish: true
@@ -989,7 +989,7 @@
   tags: []
   difficulty_average: 2.5
   language: Français
-  author: 45
+  author: 2
   image_background_url: ''
   has_audio: false
   publish: false
@@ -1073,7 +1073,7 @@
   - 227
   difficulty_average: 3.2
   language: Français
-  author: 10
+  author: null
   image_background_url: https://cdn.pixabay.com/photo/2015/11/19/21/43/desert-1052092_1280.jpg
   has_audio: false
   publish: true
@@ -1583,7 +1583,7 @@
   - 256
   difficulty_average: 0.0
   language: Français
-  author: 43
+  author: 25
   image_background_url: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/FdcJ.png
   has_audio: false
   publish: true
