@@ -110,11 +110,12 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
     ]
     search_fields = ["id", "text"]
     list_filter = [
+        "validation_status",
         "type",
         "category",
         "difficulty",
         "author",
-        "validation_status",
+        "visibility",
         "language",
         # "quizs",
         "tags",

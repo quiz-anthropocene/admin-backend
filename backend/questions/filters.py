@@ -18,4 +18,4 @@ class QuestionFilter(django_filters.FilterSet):
 
     class Meta:
         model = Question
-        fields = ["type", "category", "tags", "difficulty", "language", "author", "validation_status"]
+        fields = ["type", "category", "tags", "difficulty", "language", "author", "validation_status", "visibility"]

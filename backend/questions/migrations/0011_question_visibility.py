@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name="visibility",
             field=models.CharField(
                 choices=[
-                    ("PUBLIC", "Publique (dans l'export et dans l'application"),
+                    ("PUBLIC", "Publique (dans l'export et dans l'application)"),
                     ("HIDDEN", "Caché (dans l'export mais pas visible dans l'application)"),
                     ("PRIVATE", "Privé (pas dans l'export ni dans l'application)"),
                 ],
@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
             name="visibility",
             field=models.CharField(
                 choices=[
-                    ("PUBLIC", "Publique (dans l'export et dans l'application"),
+                    ("PUBLIC", "Publique (dans l'export et dans l'application)"),
                     ("HIDDEN", "Caché (dans l'export mais pas visible dans l'application)"),
                     ("PRIVATE", "Privé (pas dans l'export ni dans l'application)"),
                 ],

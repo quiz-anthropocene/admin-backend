@@ -13,4 +13,4 @@ class QuizFilter(django_filters.FilterSet):
 
     class Meta:
         model = Quiz
-        fields = ["tags", "language", "publish", "has_audio", "author"]
+        fields = ["tags", "language", "publish", "has_audio", "author", "visibility"]
