@@ -1,5 +1,6 @@
 from django.test import TestCase
 
+from backend.questions.models import Question
 from categories.factories import CategoryFactory
 from core import constants
 from questions.factories import QuestionFactory
@@ -123,3 +124,35 @@ class QuestionModelHistoryTest(TestCase):
         delta_change_fields = [change.field for change in delta.changes]
         for field in CHANGE_FIELDS:
             self.assertTrue(field in delta_change_fields)
+
+
+class QuestionModelQuerySetTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        QuestionFactory(
+            validation_status=constants.QUESTION_VALIDATION_STATUS_OK, visibility=constants.VISIBILITY_PUBLIC
+        )
+        QuestionFactory(
+            validation_status=constants.QUESTION_VALIDATION_STATUS_OK, visibility=constants.VISIBILITY_HIDDEN
+        )
+        QuestionFactory(
+            validation_status=constants.QUESTION_VALIDATION_STATUS_OK, visibility=constants.VISIBILITY_PRIVATE
+        )
+        QuestionFactory(
+            validation_status=constants.QUESTION_VALIDATION_STATUS_NEW, visibility=constants.VISIBILITY_PUBLIC
+        )
+        QuestionFactory(
+            validation_status=constants.QUESTION_VALIDATION_STATUS_NEW, visibility=constants.VISIBILITY_HIDDEN
+        )
+        QuestionFactory(
+            validation_status=constants.QUESTION_VALIDATION_STATUS_NEW, visibility=constants.VISIBILITY_PRIVATE
+        )
+
+    def test_question_validated(self):
+        self.assertEqual(Question.objects.validated().count(), 3)
+
+    def test_question_not_validated(self):
+        self.assertEqual(Question.objects.not_validated().count(), 3)
+
+    def test_question_public(self):
+        self.assertEqual(Question.objects.public().count(), 4)

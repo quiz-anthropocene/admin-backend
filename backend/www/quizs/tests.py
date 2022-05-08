@@ -17,6 +17,12 @@ QUIZ_DETAIL_URLS = [
     "quizs:detail_history",
 ]
 
+QUIZ_CREATE_FORM_DEFAULT = {
+    "name": "Quiz 1",
+    "language": constants.LANGUAGE_FRENCH,
+    "visibility": constants.VISIBILITY_PUBLIC,
+}
+
 
 class QuizListViewTest(TestCase):
     @classmethod
@@ -142,7 +148,6 @@ class QuizCreateViewTest(TestCase):
     def test_contributor_can_create_quiz(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
         url = reverse("quizs:create")
-        data = {"name": "Quiz 1", "language": constants.LANGUAGE_FRENCH}
-        response = self.client.post(url, data=data)
+        response = self.client.post(url, data=QUIZ_CREATE_FORM_DEFAULT)
         self.assertEqual(response.status_code, 302)  # 201
         self.assertEqual(Quiz.objects.count(), 1)

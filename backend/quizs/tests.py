@@ -1,8 +1,9 @@
 from django.test import TestCase
 
+from core import constants
 from questions.factories import QuestionFactory
 from quizs.factories import QuizFactory
-from quizs.models import QuizQuestion, QuizRelationship
+from quizs.models import Quiz, QuizQuestion, QuizRelationship
 from tags.factories import TagFactory
 from users.factories import UserFactory
 
@@ -139,3 +140,20 @@ class QuizModelHistoryTest(TestCase):
         delta_change_fields = [change.field for change in delta.changes]
         for field in CHANGE_FIELDS:
             self.assertTrue(field in delta_change_fields)
+
+
+class QuizModelQuerySetTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        QuizFactory(name="Quiz 1", publish=True, visibility=constants.VISIBILITY_PUBLIC)
+        QuizFactory(name="Quiz 2", publish=True, visibility=constants.VISIBILITY_HIDDEN)
+        QuizFactory(name="Quiz 3", publish=True, visibility=constants.VISIBILITY_PRIVATE)
+        QuizFactory(name="Quiz 4", publish=False, visibility=constants.VISIBILITY_PUBLIC)
+        QuizFactory(name="Quiz 5", publish=False, visibility=constants.VISIBILITY_HIDDEN)
+        QuizFactory(name="Quiz 6", publish=False, visibility=constants.VISIBILITY_PRIVATE)
+
+    def test_quiz_validated(self):
+        self.assertEqual(Quiz.objects.published().count(), 3)
+
+    def test_quiz_public(self):
+        self.assertEqual(Quiz.objects.public().count(), 4)

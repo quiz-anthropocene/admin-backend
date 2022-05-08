@@ -16,6 +16,16 @@ QUESTION_DETAIL_URLS = [
     "questions:detail_stats",
     "questions:detail_history",
 ]
+QUESTION_CREATE_FORM_DEFAULT = {
+    "text": "Question 1",
+    "type": constants.QUESTION_TYPE_QCM,
+    "difficulty": constants.QUESTION_DIFFICULTY_EASY,
+    "language": constants.LANGUAGE_FRENCH,
+    "answer_option_a": "Réponse A",
+    "answer_option_b": "Réponse B",
+    "answer_correct": "a",
+    "visibility": constants.VISIBILITY_PUBLIC,
+}
 
 
 class QuestionListViewTest(TestCase):
@@ -118,15 +128,6 @@ class QuestionCreateViewTest(TestCase):
     def test_contributor_can_create_question(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
         url = reverse("questions:create")
-        data = {
-            "text": "Question 1",
-            "type": constants.QUESTION_TYPE_QCM,
-            "difficulty": constants.QUESTION_DIFFICULTY_EASY,
-            "language": constants.LANGUAGE_FRENCH,
-            "answer_option_a": "Réponse A",
-            "answer_option_b": "Réponse B",
-            "answer_correct": "a",
-        }
-        response = self.client.post(url, data=data)
+        response = self.client.post(url, data=QUESTION_CREATE_FORM_DEFAULT)
         self.assertEqual(response.status_code, 302)  # 201
         self.assertEqual(Question.objects.count(), 1)
