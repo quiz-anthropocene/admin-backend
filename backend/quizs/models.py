@@ -22,6 +22,9 @@ class QuizQuerySet(models.QuerySet):
     def spotlighted(self):
         return self.filter(spotlight=True)
 
+    def public(self):
+        return self.exclude(visibility=constants.VISIBILITY_PRIVATE)
+
     def have_audio(self):
         return self.filter(has_audio=True)
 

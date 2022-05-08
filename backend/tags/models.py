@@ -45,17 +45,17 @@ class Tag(models.Model):
         return self.questions.count()
 
     @property
-    def question_validated_count(self) -> int:
-        return self.questions.validated().count()
+    def question_public_validated_count(self) -> int:
+        return self.questions.public().validated().count()
 
     @property
     def quiz_count(self) -> int:
         return self.quizs.count()
 
     @property
-    def quiz_published_count(self) -> int:
-        return self.quizs.published().count()
+    def quiz_public_published_count(self) -> int:
+        return self.quizs.public().published().count()
 
     # Admin
-    question_validated_count.fget.short_description = "Questions (validées)"
-    quiz_published_count.fget.short_description = "Quizs (publiés)"
+    question_public_validated_count.fget.short_description = "Questions (publiques & validées)"
+    quiz_public_published_count.fget.short_description = "Quizs (publiques & publiés)"

@@ -23,6 +23,9 @@ class QuestionQuerySet(models.QuerySet):
     def for_validation_status(self, validation_status):
         return self.filter(validation_status=validation_status)
 
+    def public(self):
+        return self.exclude(visibility=constants.VISIBILITY_PRIVATE)
+
     def for_category(self, category):
         return self.filter(category__name=category)
 
