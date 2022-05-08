@@ -342,7 +342,7 @@ const store = new Vuex.Store({
     getQuestionsByAuthorName: (state) => (authorName) => state.questions.filter((q) => q.author === authorName),
     getQuestionsValidatedByFilter: (state) => (filter) => state.questionsValidated.filter((q) => (filter.category ? (q.category.name === filter.category) : true))
       .filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
-      .filter((q) => (filter.author ? (q.author === filter.author) : true))
+      .filter((q) => (filter.author ? (q.author.id === filter.author) : true))
       .filter((q) => (filter.difficulty ? (q.difficulty === parseInt(filter.difficulty, 10)) : true)),
     getCurrentQuestionIndex: (state) => (currentQuestionId) => state.questionsDisplayed.findIndex((q) => q.id === currentQuestionId),
     getNextQuestionByFilter: (state) => (currentQuestionId) => {
@@ -354,7 +354,7 @@ const store = new Vuex.Store({
     getQuizBySlug: (state) => (quizId) => state.quizs.find((q) => (q.slug === quizId)),
     getQuizsByIdList: (state) => (quizIdList) => state.quizs.filter((q) => quizIdList.includes(q.id)),
     getQuizsPublishedByFilter: (state) => (filter) => state.quizsPublished.filter((q) => (filter.tag ? q.tags.map((qt) => qt.name).includes(filter.tag) : true))
-      .filter((q) => (filter.author ? (q.author === filter.author) : true))
+      .filter((q) => (filter.author ? (q.author.id === filter.author) : true))
       .sort((a, b) => ((filter.sort === 'date_old') ? (a.created.localeCompare(b.created)) : (b.id - a.id))),
     getQuizRelationshipsById: (state) => (quizId) => state.quizRelationships.filter((qr) => (qr.from_quiz === quizId) || (qr.to_quiz === quizId)),
     getQuizStatsById: (state) => (quizId) => state.quizStats.find((q) => (q.quiz_id === quizId)),

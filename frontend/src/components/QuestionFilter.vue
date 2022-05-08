@@ -55,8 +55,8 @@
           <p v-if="authors">
             <span>{{ $t('messages.author') }}{{ $t('words.semiColon') }}&nbsp;</span>
             <select v-model="tempQuestionFilters['author']">
-              <option v-for="(option, i) in authors" :key="i" :value="option.name">
-                {{ option.name }} ({{ option[objectType === 'question' ? 'question_count' : 'quiz_count'] }})
+              <option v-for="(option, i) in authors" :key="i" :value="option.id">
+                {{ option.first_name + ' ' + option.last_name }} ({{ option[objectType === 'question' ? 'question_count' : 'quiz_count'] }})
               </option>
             </select>
           </p>

@@ -41,7 +41,7 @@
               🏆&nbsp;{{ $t('messages.difficulty') }}<span class="label label-hidden"><strong>{{ quiz.difficulty_average | round(1) }} / 4</strong></span>
             </div> -->
             <div class="col" title="Auteur du quiz">
-              📝&nbsp;{{ $t('messages.author') }}<span class="label label-hidden"><strong>{{ quiz.author }}</strong></span>
+              📝&nbsp;{{ $t('messages.author') }}<span class="label label-hidden"><strong>{{ quiz.author.first_name }} {{ quiz.author.last_name }}</strong></span>
             </div>
             <!-- <span title="Date de création du quiz">📊&nbsp;Crée le:&nbsp;{{ new Date(quiz.created).toLocaleString() }}</span> -->
             <div v-if="quiz.tags && quiz.tags.length > 0" class="col small d-none d-sm-block" title="Mot(s) clé(s) du quiz">
@@ -294,7 +294,7 @@ export default {
         questionAnswerSplit[q.id] = {
           success: q.success,
           answer_picked: q.answerPicked,
-        }
+        };
       });
       fetch(`${process.env.VUE_APP_STATS_ENDPOINT}/quiz-answer-event/`, {
         method: 'POST',
