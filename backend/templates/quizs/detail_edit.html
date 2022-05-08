@@ -26,7 +26,11 @@
             </form>
         {% else %}
             <div class="alert alert-warning" role="alert">
-                Vous n'avez pas les droits nécessaires <small>(seul l'auteur ou un administrateur peut modifier un quiz)</small>
+                {% if quiz.is_private %}
+                    Vous n'avez pas les droits nécessaires <small>(seul l'auteur peut modifier un quiz privé)</small>
+                {% else %}
+                    Vous n'avez pas les droits nécessaires <small>(seul l'auteur ou un administrateur peut modifier un quiz publique)</small>
+                {% endif %}
             </div>
         {% endif %}
     </div>

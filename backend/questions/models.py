@@ -23,6 +23,9 @@ class QuestionQuerySet(models.QuerySet):
     def for_validation_status(self, validation_status):
         return self.filter(validation_status=validation_status)
 
+    def public(self):
+        return self.exclude(visibility=constants.VISIBILITY_PRIVATE)
+
     def for_category(self, category):
         return self.filter(category__name=category)
 
@@ -43,6 +46,7 @@ class Question(models.Model):
         "language",
         "answer_correct",
         "validation_status",
+        "visibility",
     ]
     QUESTION_FK_FIELDS = ["category", "author", "validator"]
     QUESTION_M2M_FIELDS = ["tags"]
@@ -174,6 +178,12 @@ class Question(models.Model):
         choices=constants.QUESTION_VALIDATION_STATUS_CHOICES,
         default=constants.QUESTION_VALIDATION_STATUS_NEW,
     )
+    visibility = models.CharField(
+        verbose_name="Visibilité",
+        max_length=50,
+        choices=constants.VISIBILITY_CHOICES,
+        default=constants.VISIBILITY_PUBLIC,
+    )
 
     # timestamps
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
@@ -260,6 +270,10 @@ class Question(models.Model):
     @property
     def has_answer_image_url(self) -> bool:
         return len(self.answer_image_url) > 0
+
+    @property
+    def is_private(self) -> bool:
+        return self.visibility == constants.VISIBILITY_PRIVATE
 
     @property
     def answer_count_agg(self) -> int:

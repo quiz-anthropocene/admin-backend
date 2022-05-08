@@ -9,7 +9,8 @@ class CategoryAdmin(ExportMixin, admin.ModelAdmin):
         "id",
         "name",
         "name_long",
-        "question_validated_count",
+        "question_count",
+        "question_public_validated_count",
     )
     search_fields = ("name",)
     ordering = ("id",)
@@ -19,6 +20,10 @@ class CategoryAdmin(ExportMixin, admin.ModelAdmin):
         "export_as_yaml",
         "export_all_category_as_yaml",
     ]
+
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        return qs.prefetch_related("questions")
 
 
 admin_site.register(Category, CategoryAdmin)

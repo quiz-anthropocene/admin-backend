@@ -117,16 +117,16 @@ class User(AbstractUser):
         return self.questions.count()
 
     @property
-    def question_validated_count(self) -> int:
-        return self.questions.validated().count()
+    def question_public_validated_count(self) -> int:
+        return self.questions.public().validated().count()
 
     @property
     def quiz_count(self) -> int:
         return self.quizs.count()
 
     @property
-    def quiz_published_count(self) -> int:
-        return self.quizs.published().count()
+    def quiz_public_published_count(self) -> int:
+        return self.quizs.public().published().count()
 
     @property
     def has_role_contributor(self) -> bool:
@@ -148,13 +148,21 @@ class User(AbstractUser):
         return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
 
     def can_edit_question(self, question) -> bool:
+        if question.is_private:
+            return question.author == self
         return (question.author == self) or (self.has_role_super_contributor)
 
     def can_validate_question(self, question) -> bool:
+        if question.is_private:
+            return question.author == self
         return (question.author != self) and (self.has_role_admin)
 
     def can_edit_quiz(self, quiz) -> bool:
+        if quiz.is_private:
+            return quiz.author == self
         return (quiz.author == self) or (self.has_role_admin)
 
     def can_publish_quiz(self, quiz) -> bool:
+        if quiz.is_private:
+            return quiz.author == self
         return (quiz.author != self) and (self.has_role_admin)

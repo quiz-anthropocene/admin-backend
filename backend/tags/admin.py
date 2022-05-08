@@ -8,8 +8,10 @@ class TagAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "name",
-        "question_validated_count",
-        "quiz_published_count",
+        "question_count",
+        "question_public_validated_count",
+        "quiz_count",
+        "quiz_public_published_count",
     )
     search_fields = ("name",)
     ordering = ("name",)
@@ -19,6 +21,10 @@ class TagAdmin(ExportMixin, admin.ModelAdmin):
         "export_as_yaml",
         "export_all_tag_as_yaml",
     ]
+
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        return qs.prefetch_related("questions", "quizs")
 
 
 admin_site.register(Tag, TagAdmin)

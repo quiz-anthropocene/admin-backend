@@ -29,8 +29,8 @@ class Category(models.Model):
         return self.questions.count()
 
     @property
-    def question_validated_count(self) -> int:
-        return self.questions.validated().count()
+    def question_public_validated_count(self) -> int:
+        return self.questions.public().validated().count()
 
     # Admin
-    question_validated_count.fget.short_description = "Questions (validées)"
+    question_public_validated_count.fget.short_description = "Questions (publiques & validées)"

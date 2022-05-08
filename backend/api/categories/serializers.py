@@ -12,7 +12,7 @@ class CategorySerializer(serializers.ModelSerializer):
             "name_long",
             "description",
             "created",
-        ]  # "question_count", "question_validated_count", "updated"
+        ]  # "question_count", "question_public_validated_count", "updated"
 
 
 class CategoryStringSerializer(serializers.ModelSerializer):
