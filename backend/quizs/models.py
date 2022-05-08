@@ -30,7 +30,7 @@ class QuizQuerySet(models.QuerySet):
 
 
 class Quiz(models.Model):
-    QUIZ_CHOICE_FIELDS = ["language"]
+    QUIZ_CHOICE_FIELDS = ["language", "visibility"]
     QUIZ_FK_FIELDS = ["author"]
     QUIZ_M2M_FIELDS = ["questions", "tags", "relationships"]
     QUIZ_RELATION_FIELDS = QUIZ_FK_FIELDS + QUIZ_M2M_FIELDS
@@ -91,6 +91,13 @@ class Quiz(models.Model):
     has_audio = models.BooleanField(verbose_name="Contenu audio ?", default=False)
     publish = models.BooleanField(verbose_name="Prêt à être publié ?", default=False)
     spotlight = models.BooleanField(verbose_name="Mise en avant ?", default=False)
+    visibility = models.CharField(
+        verbose_name="Visibilité",
+        max_length=50,
+        choices=constants.VISIBILITY_CHOICES,
+        default=constants.VISIBILITY_PUBLIC,
+    )
+
     relationships = models.ManyToManyField(
         verbose_name="Les quizs similaires ou liés",
         to="self",

@@ -94,6 +94,15 @@ NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES = [
 ]
 NOTION_QUESTIONS_IMPORT_SCOPE_LIST = [value for (value, label) in NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES]
 
+VISIBILITY_PUBLIC = "PUBLIC"
+VISIBILITY_HIDDEN = "HIDDEN"
+VISIBILITY_PRIVATE = "PRIVATE"
+VISIBILITY_CHOICES = (
+    (VISIBILITY_PUBLIC, "Publique (dans l'export et dans l'application"),
+    (VISIBILITY_HIDDEN, "Caché (dans l'export mais pas visible dans l'application)"),
+    (VISIBILITY_PRIVATE, "Privé (pas dans l'export ni dans l'application)"),
+)
+
 BOOLEAN_CHOICES = [(True, "Vrai"), (False, "Faux")]
 
 EMPTY_CHOICE = (("", ""),)

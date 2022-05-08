@@ -43,6 +43,7 @@ class Question(models.Model):
         "language",
         "answer_correct",
         "validation_status",
+        "visibility",
     ]
     QUESTION_FK_FIELDS = ["category", "author", "validator"]
     QUESTION_M2M_FIELDS = ["tags"]
@@ -173,6 +174,12 @@ class Question(models.Model):
         max_length=150,
         choices=constants.QUESTION_VALIDATION_STATUS_CHOICES,
         default=constants.QUESTION_VALIDATION_STATUS_NEW,
+    )
+    visibility = models.CharField(
+        verbose_name="Visibilité",
+        max_length=50,
+        choices=constants.VISIBILITY_CHOICES,
+        default=constants.VISIBILITY_PUBLIC,
     )
 
     # timestamps
