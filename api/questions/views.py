@@ -17,7 +17,7 @@ from questions.models import Question
 
 
 class QuestionViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
-    queryset = Question.objects.validated()
+    queryset = Question.objects.public().validated()
     serializer_class = QuestionSerializer
     filter_class = QuestionFilter
 
@@ -94,7 +94,7 @@ def question_random(request):
     - 'tag' (string)
     - // 'author' (string)
     """
-    questions = Question.objects.validated()
+    questions = Question.objects.public().validated()
     if request.GET.get("current"):
         questions = questions.exclude(pk=request.GET.get("current"))
     if request.GET.get("category"):

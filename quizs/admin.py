@@ -86,7 +86,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "spotlight",
     ]
     search_fields = ["name"]
-    list_filter = ["publish", "spotlight", "has_audio", "author", "language", "tags"]
+    list_filter = ["publish", "spotlight", "has_audio", "author", "visibility", "language", "tags"]
     ordering = ["-id"]
 
     prepopulated_fields = {"slug": ("name",)}

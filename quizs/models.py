@@ -22,6 +22,9 @@ class QuizQuerySet(models.QuerySet):
     def spotlighted(self):
         return self.filter(spotlight=True)
 
+    def public(self):
+        return self.exclude(visibility=constants.VISIBILITY_PRIVATE)
+
     def have_audio(self):
         return self.filter(has_audio=True)
 
@@ -30,7 +33,7 @@ class QuizQuerySet(models.QuerySet):
 
 
 class Quiz(models.Model):
-    QUIZ_CHOICE_FIELDS = ["language"]
+    QUIZ_CHOICE_FIELDS = ["language", "visibility"]
     QUIZ_FK_FIELDS = ["author"]
     QUIZ_M2M_FIELDS = ["questions", "tags", "relationships"]
     QUIZ_RELATION_FIELDS = QUIZ_FK_FIELDS + QUIZ_M2M_FIELDS
@@ -91,6 +94,13 @@ class Quiz(models.Model):
     has_audio = models.BooleanField(verbose_name="Contenu audio ?", default=False)
     publish = models.BooleanField(verbose_name="Prêt à être publié ?", default=False)
     spotlight = models.BooleanField(verbose_name="Mise en avant ?", default=False)
+    visibility = models.CharField(
+        verbose_name="Visibilité",
+        max_length=50,
+        choices=constants.VISIBILITY_CHOICES,
+        default=constants.VISIBILITY_PUBLIC,
+    )
+
     relationships = models.ManyToManyField(
         verbose_name="Les quizs similaires ou liés",
         to="self",
@@ -173,6 +183,10 @@ class Quiz(models.Model):
     @property
     def tags_list_string(self) -> str:
         return ", ".join(self.tags_list)
+
+    @property
+    def is_private(self) -> bool:
+        return self.visibility == constants.VISIBILITY_PRIVATE
 
     @property
     def questions_categories_list(self) -> list:
@@ -343,6 +357,11 @@ def quiz_create_agg_stat_instance(sender, instance, created, **kwargs):
             QuizAggStat.objects.create(quiz=instance)
 
 
+class QuizQuestionQuerySet(models.QuerySet):
+    def public(self):
+        return self.exclude(quiz__visibility=constants.VISIBILITY_PRIVATE)
+
+
 class QuizQuestion(models.Model):
     quiz = models.ForeignKey(verbose_name="Quiz", to=Quiz, on_delete=models.CASCADE)
     question = models.ForeignKey(verbose_name="Question", to=Question, on_delete=models.CASCADE)
@@ -350,6 +369,8 @@ class QuizQuestion(models.Model):
     # timestamps
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+
+    objects = QuizQuestionQuerySet.as_manager()
 
     class Meta:
         unique_together = [
@@ -370,14 +391,17 @@ class QuizQuestion(models.Model):
         Rules on QuizQuestion
         - cannot add a new question with an existing order
         - if the order is 0 or None, increment from the biggest existing value
+        - if the quiz is public, it cannot contain private questions
         """
         if not self.id:
             if self.order:
                 if QuizQuestion.objects.filter(quiz=self.quiz, order=self.order).exists():
-                    raise ValidationError({"order": "la valeur existe déjà"})
+                    raise ValidationError({"order": "La valeur existe déjà"})
         if not self.order:  # 0 or None
             last_quiz_question = QuizQuestion.objects.filter(quiz=self.quiz).last()
             self.order = (last_quiz_question.order + 1) if last_quiz_question else 1
+        if not self.quiz.is_private and self.question.is_private:
+            raise ValidationError({"question": "Un quiz publique ne peut pas contenir de question privée"})
 
 
 # @receiver(m2m_changed, sender=Quiz.questions.through)

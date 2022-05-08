@@ -90,7 +90,7 @@ class Command(BaseCommand):
             #####################################
             # data/questions.yaml
             start_time = time.time()
-            question_queryset = Question.objects.all()
+            question_queryset = Question.objects.public()
             questions_yaml = utilities.serialize_model_to_yaml(
                 model_queryset=question_queryset, model_serializer=QuestionSerializer
             )
@@ -103,7 +103,7 @@ class Command(BaseCommand):
             #####################################
             # data/quizs.yaml
             start_time = time.time()
-            quiz_queryset = Quiz.objects.all()
+            quiz_queryset = Quiz.objects.public()
             quizs_yaml = utilities.serialize_model_to_yaml(
                 model_queryset=quiz_queryset, model_serializer=QuizSerializer
             )
@@ -114,7 +114,7 @@ class Command(BaseCommand):
             #####################################
             # data/quiz-questions.yaml
             start_time = time.time()
-            quiz_questions_queryset = QuizQuestion.objects.all()
+            quiz_questions_queryset = QuizQuestion.objects.public()
             quiz_questions_yaml = utilities.serialize_model_to_yaml(
                 model_queryset=quiz_questions_queryset, model_serializer=QuizQuestionSerializer
             )

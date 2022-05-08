@@ -7,7 +7,7 @@ from quizs.models import Quiz
 
 
 class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
-    queryset = Quiz.objects.published()
+    queryset = Quiz.objects.public().published()
     serializer_class = QuizSerializer
     filter_class = QuizFilter
 

@@ -16,7 +16,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class UserWithCountSerializer(serializers.ModelSerializer):
-    question_count = serializers.IntegerField(source="question_validated_count")
+    question_count = serializers.IntegerField(source="question_public_validated_count")
     quiz_count = serializers.IntegerField(source="quiz_published_count")
 
     class Meta:

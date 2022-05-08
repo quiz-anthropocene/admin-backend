@@ -40,6 +40,7 @@ QUESTION_FIELDS = [
     "author",
     "validator",
     "validation_status",
+    "visibility",
     "created",
     "updated",
     # "answer_count_agg",
