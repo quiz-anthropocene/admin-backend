@@ -178,7 +178,8 @@ def contribution_stats():
 
 def difficulty_aggregate():
     question_difficulty_levels = list(
-        Question.objects.validated()
+        Question.objects.public()
+        .validated()
         .values(value=F("difficulty"))
         .annotate(question_count=Count("difficulty"))
         .order_by("value")
@@ -203,13 +204,15 @@ def difficulty_aggregate():
 
 def author_aggregate_old():
     question_authors = list(
-        Question.objects.validated()
+        Question.objects.public()
+        .validated()
         .values(name=F("author_old"))
         .annotate(question_count=Count("author_old"))
         .order_by("name")
     )
     quiz_authors = list(
-        Quiz.objects.published()
+        Quiz.objects.public()
+        .published()
         .values("author_old")  # cannot use name= (already a field in Quiz model)
         .annotate(quiz_count=Count("author_old"))
         .order_by("author_old")
@@ -248,10 +251,18 @@ def author_aggregate_old():
 
 def language_aggregate():
     question_languages = list(
-        Question.objects.validated().values("language").annotate(question_count=Count("language")).order_by("language")
+        Question.objects.public()
+        .validated()
+        .values("language")
+        .annotate(question_count=Count("language"))
+        .order_by("language")
     )
     quiz_languages = list(
-        Quiz.objects.published().values("language").annotate(quiz_count=Count("language")).order_by("language")
+        Quiz.objects.public()
+        .published()
+        .values("language")
+        .annotate(quiz_count=Count("language"))
+        .order_by("language")
     )
 
     languages = []
