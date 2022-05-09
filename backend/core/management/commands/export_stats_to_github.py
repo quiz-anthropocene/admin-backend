@@ -89,7 +89,7 @@ class Command(BaseCommand):
             # start_time = time.time()
             # quiz_detail_stats_list = utilities_stats.quiz_detail_stats()
             # quiz_detail_stats_yaml = yaml.safe_dump(quiz_detail_stats_list, allow_unicode=True, sort_keys=False)
-            # quiz_stats_element = utilities_github.create_file_element(
+            # quiz_stats_element = github.create_file_element(
             #     file_path="data/quiz-stats.yaml", file_content=quiz_detail_stats_yaml
             # )
 
