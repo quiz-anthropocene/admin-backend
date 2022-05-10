@@ -1,5 +1,6 @@
 import pandas as pd
 from django.core.management import BaseCommand
+from django.db.models import F
 from django.utils import timezone
 
 from core.models import Configuration
@@ -61,7 +62,11 @@ class Command(BaseCommand):
         """
         print("=== starting QuestionAnswerEvent cleanup")
 
-        question_stats = QuestionAnswerEvent.objects.filter(created__gte=configuration.daily_stat_last_aggregated)
+        question_stats = (
+            QuestionAnswerEvent.objects.select_related("question")
+            .annotate(question_visbility=F("question__visibility"))
+            .filter(created__gte=configuration.daily_stat_last_aggregated)
+        )
         question_stats_df = pd.DataFrame.from_records(question_stats.values())
         print(f"{question_stats_df.shape[0]} new answers")
 
@@ -134,8 +139,10 @@ class Command(BaseCommand):
         """
         print("=== starting QuestionFeedbackEvent cleanup")
 
-        question_feedbacks = QuestionFeedbackEvent.objects.filter(
-            created__gte=configuration.daily_stat_last_aggregated
+        question_feedbacks = (
+            QuestionFeedbackEvent.objects.select_related("question")
+            .annotate(question_visibility=F("question__visibility"))
+            .filter(created__gte=configuration.daily_stat_last_aggregated)
         )
         question_feedbacks_df = pd.DataFrame.from_records(question_feedbacks.values())
         print(f"{question_feedbacks_df.shape[0]} new feedbacks")
@@ -207,7 +214,11 @@ class Command(BaseCommand):
         """
         print("=== starting QuizAnswerEvent sumup")
 
-        quiz_stats = QuizAnswerEvent.objects.filter(created__gte=configuration.daily_stat_last_aggregated)
+        quiz_stats = (
+            QuizAnswerEvent.objects.select_related("quiz")
+            .annotate(quiz_visibility=F("quiz__visibility"))
+            .filter(created__gte=configuration.daily_stat_last_aggregated)
+        )
         quiz_stats_df = pd.DataFrame.from_records(quiz_stats.values())
         print(f"{quiz_stats_df.shape[0]} new answers")
 
@@ -268,7 +279,11 @@ class Command(BaseCommand):
         """
         print("=== starting QuizFeedbackEvent sumup")
 
-        quiz_feedbacks = QuizFeedbackEvent.objects.filter(created__gte=configuration.daily_stat_last_aggregated)
+        quiz_feedbacks = (
+            QuizFeedbackEvent.objects.select_related("quiz")
+            .annotate(quiz_visibility=F("quiz__visibility"))
+            .filter(created__gte=configuration.daily_stat_last_aggregated)
+        )
         quiz_feedbacks_df = pd.DataFrame.from_records(quiz_feedbacks.values())
         print(f"{quiz_feedbacks_df.shape[0]} new answers")
 
