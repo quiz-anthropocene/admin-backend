@@ -3,6 +3,7 @@ from django.core.management import BaseCommand
 from django.db.models import F
 from django.utils import timezone
 
+from core import constants
 from core.models import Configuration
 from questions.models import Question
 from quizs.models import Quiz
@@ -64,7 +65,7 @@ class Command(BaseCommand):
 
         question_stats = (
             QuestionAnswerEvent.objects.select_related("question")
-            .annotate(question_visbility=F("question__visibility"))
+            .annotate(question_visibility=F("question__visibility"))
             .filter(created__gte=configuration.daily_stat_last_aggregated)
         )
         question_stats_df = pd.DataFrame.from_records(question_stats.values())
@@ -105,9 +106,13 @@ class Command(BaseCommand):
                 date_df = question_stats_df[question_stats_df["created_date"] == date_unique]
                 # get number of stats
                 date_stat_count = date_df.shape[0]
+                date_stat_public_count = date_df[date_df["question_visibility"] != constants.VISIBILITY_PRIVATE].shape[
+                    0
+                ]
                 date_stat_from_quiz_count = date_df[date_df["source"] == "quiz"].shape[0]
                 # update daily stat
                 daily_stat.question_answer_count += date_stat_count
+                daily_stat.question_public_answer_count += date_stat_public_count
                 daily_stat.question_answer_from_quiz_count += date_stat_from_quiz_count
 
                 # get list of unique date hours
@@ -251,8 +256,10 @@ class Command(BaseCommand):
                 date_df = quiz_stats_df[quiz_stats_df["created_date"] == date_unique]
                 # get number of stats
                 date_stat_count = date_df.shape[0]
+                date_public_stat_count = date_df[date_df["quiz_visibility"] != constants.VISIBILITY_PRIVATE].shape[0]
                 # update daily stat
                 daily_stat.quiz_answer_count += date_stat_count
+                daily_stat.quiz_public_answer_count += date_public_stat_count
 
                 # get list of unique date hours
                 date_hour_list = date_df["created_hour"].unique()

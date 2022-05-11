@@ -100,11 +100,13 @@ def quiz_detail_stats():
 
 def answer_stats():
     # total question/quiz answer/feedback count
-    question_answer_count = DailyStat.objects.agg_count("question_answer_count")
-    quiz_answer_count = DailyStat.objects.agg_count("quiz_answer_count")
+    question_answer_count = DailyStat.objects.agg_count("question_public_answer_count")
+    quiz_answer_count = DailyStat.objects.agg_count("quiz_public_answer_count")
     # last 30 days
-    question_answer_count_last_30_days = DailyStat.objects.agg_count("question_answer_count", since="last_30_days")
-    quiz_answer_count_last_30_days = DailyStat.objects.agg_count("quiz_answer_count", since="last_30_days")
+    question_answer_count_last_30_days = DailyStat.objects.agg_count(
+        "question_public_answer_count", since="last_30_days"
+    )
+    quiz_answer_count_last_30_days = DailyStat.objects.agg_count("quiz_public_answer_count", since="last_30_days")
     # # current month
     # current_month_iso_number = date.today().month
     # question_answer_count_current_month = QuestionAnswerEvent.objects.filter(
