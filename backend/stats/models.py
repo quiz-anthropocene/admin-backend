@@ -271,11 +271,19 @@ class DailyStatManager(models.Manager):
 
 class DailyStat(models.Model):
     date = models.DateField(help_text="Le jour de la statistique")
+    # answers
     question_answer_count = models.PositiveIntegerField(default=0, help_text="Le nombre de questions répondues")
+    question_public_answer_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de questions publiques répondues"
+    )
     question_answer_from_quiz_count = models.PositiveIntegerField(
         default=0, help_text="Le nombre de questions répondues au sein de quizs"
     )
     quiz_answer_count = models.PositiveIntegerField(default=0, help_text="Le nombre de quizs répondus")
+    quiz_public_answer_count = models.PositiveIntegerField(
+        default=0, help_text="Le nombre de quizs publiques répondus"
+    )
+    # feedbacks
     question_feedback_count = models.PositiveIntegerField(default=0, help_text="Le nombre de feedbacks aux questions")
     question_feedback_from_quiz_count = models.PositiveIntegerField(
         default=0, help_text="Le nombre de feedbacks aux questions au sein de quizs"
@@ -285,6 +293,7 @@ class DailyStat(models.Model):
         default=constants.daily_stat_hour_split_jsonfield_default_value,
         help_text="Les statistiques par heure",
     )
+    # timestamps
     created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de la stat journalière")
     updated = models.DateField(auto_now=True)
 

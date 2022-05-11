@@ -152,8 +152,11 @@ class QuizModelQuerySetTest(TestCase):
         QuizFactory(name="Quiz 5", publish=False, visibility=constants.VISIBILITY_HIDDEN)
         QuizFactory(name="Quiz 6", publish=False, visibility=constants.VISIBILITY_PRIVATE)
 
-    def test_quiz_validated(self):
+    def test_quiz_published(self):
         self.assertEqual(Quiz.objects.published().count(), 3)
 
     def test_quiz_public(self):
         self.assertEqual(Quiz.objects.public().count(), 4)
+
+    def test_quiz_public_published(self):
+        self.assertEqual(Quiz.objects.public().published().count(), 2)
