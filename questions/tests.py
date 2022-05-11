@@ -156,3 +156,6 @@ class QuestionModelQuerySetTest(TestCase):
 
     def test_question_public(self):
         self.assertEqual(Question.objects.public().count(), 4)
+
+    def test_question_public_validated(self):
+        self.assertEqual(Question.objects.public().validated().count(), 2)

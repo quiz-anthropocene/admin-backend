@@ -290,11 +290,19 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
             "scale_choice_list": constants.AGGREGATION_SCALE_CHOICE_LIST,
             "current_scale": current_scale,
             "question_answer_count": DailyStat.objects.agg_count("question_answer_count"),
+            "question_public_answer_count": DailyStat.objects.agg_count("question_public_answer_count"),
             "question_answer_count_last_30_days": DailyStat.objects.agg_count(
                 "question_answer_count", since="last_30_days"
             ),
+            "question_public_answer_count_last_30_days": DailyStat.objects.agg_count(
+                "question_public_answer_count", since="last_30_days"
+            ),
             "quiz_answer_count": DailyStat.objects.agg_count("quiz_answer_count"),
+            "quiz_public_answer_count": DailyStat.objects.agg_count("quiz_public_answer_count"),
             "quiz_answer_count_last_30_days": DailyStat.objects.agg_count("quiz_answer_count", since="last_30_days"),
+            "quiz_public_answer_count_last_30_days": DailyStat.objects.agg_count(
+                "quiz_public_answer_count", since="last_30_days"
+            ),
             "question_feedback_count": DailyStat.objects.agg_count("question_feedback_count"),
             "question_feedback_count_last_30_days": DailyStat.objects.agg_count(
                 "question_feedback_count", since="last_30_days"

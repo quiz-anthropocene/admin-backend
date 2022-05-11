@@ -24,9 +24,9 @@ def tag_stats():
 
 
 def question_stats():
-    question_count = Question.objects.count()
+    question_count = Question.objects.public().count()
     question_per_validation_status_count = (
-        Question.objects.all()
+        Question.objects.public()
         .values("validation_status")
         .annotate(total=Count("validation_status"))
         .order_by("-total")
@@ -39,8 +39,10 @@ def question_stats():
 
 
 def quiz_stats():
-    quiz_count = Quiz.objects.count()
-    quiz_per_publish_count = Quiz.objects.all().values("publish").annotate(total=Count("publish")).order_by("-total")
+    quiz_count = Quiz.objects.public().count()
+    quiz_per_publish_count = (
+        Quiz.objects.public().values("publish").annotate(total=Count("publish")).order_by("-total")
+    )
 
     return {
         "quiz_count": quiz_count,
@@ -50,6 +52,7 @@ def quiz_stats():
 
 def quiz_detail_stats():
     """
+    TODO: look into if enough QuizAnswerEvent history ?
     for each quiz :
     - number of answers : total, last 30 days, last 7 days
     - number of feedbacks : positive & negative
@@ -57,7 +60,7 @@ def quiz_detail_stats():
     """
     quiz_detail_stats = []
 
-    for quiz in Quiz.objects.all():
+    for quiz in Quiz.objects.public():
         quiz_detail_stat = dict()
         quiz_detail_stat["quiz_id"] = quiz.id
 
@@ -97,11 +100,13 @@ def quiz_detail_stats():
 
 def answer_stats():
     # total question/quiz answer/feedback count
-    question_answer_count = DailyStat.objects.agg_count("question_answer_count")
-    quiz_answer_count = DailyStat.objects.agg_count("quiz_answer_count")
+    question_answer_count = DailyStat.objects.agg_count("question_public_answer_count")
+    quiz_answer_count = DailyStat.objects.agg_count("quiz_public_answer_count")
     # last 30 days
-    question_answer_count_last_30_days = DailyStat.objects.agg_count("question_answer_count", since="last_30_days")
-    quiz_answer_count_last_30_days = DailyStat.objects.agg_count("quiz_answer_count", since="last_30_days")
+    question_answer_count_last_30_days = DailyStat.objects.agg_count(
+        "question_public_answer_count", since="last_30_days"
+    )
+    quiz_answer_count_last_30_days = DailyStat.objects.agg_count("quiz_public_answer_count", since="last_30_days")
     # # current month
     # current_month_iso_number = date.today().month
     # question_answer_count_current_month = QuestionAnswerEvent.objects.filter(
@@ -178,7 +183,8 @@ def contribution_stats():
 
 def difficulty_aggregate():
     question_difficulty_levels = list(
-        Question.objects.validated()
+        Question.objects.public()
+        .validated()
         .values(value=F("difficulty"))
         .annotate(question_count=Count("difficulty"))
         .order_by("value")
@@ -203,13 +209,15 @@ def difficulty_aggregate():
 
 def author_aggregate_old():
     question_authors = list(
-        Question.objects.validated()
+        Question.objects.public()
+        .validated()
         .values(name=F("author_old"))
         .annotate(question_count=Count("author_old"))
         .order_by("name")
     )
     quiz_authors = list(
-        Quiz.objects.published()
+        Quiz.objects.public()
+        .published()
         .values("author_old")  # cannot use name= (already a field in Quiz model)
         .annotate(quiz_count=Count("author_old"))
         .order_by("author_old")
@@ -248,10 +256,18 @@ def author_aggregate_old():
 
 def language_aggregate():
     question_languages = list(
-        Question.objects.validated().values("language").annotate(question_count=Count("language")).order_by("language")
+        Question.objects.public()
+        .validated()
+        .values("language")
+        .annotate(question_count=Count("language"))
+        .order_by("language")
     )
     quiz_languages = list(
-        Quiz.objects.published().values("language").annotate(quiz_count=Count("language")).order_by("language")
+        Quiz.objects.public()
+        .published()
+        .values("language")
+        .annotate(quiz_count=Count("language"))
+        .order_by("language")
     )
 
     languages = []
