@@ -175,14 +175,14 @@ STATIC_URL = "/static/"
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:8080",
-    "https://know-your-planet.netlify.com",
-    "https://know-your-planet.netlify.app",
+    "https://quiz-anthropocene.netlify.com",
+    "https://quiz-anthropocene.netlify.app",
     "https://quiztaplanete.fr",
     "https://quizanthropocene.fr",
 ]
 
 CORS_ORIGIN_REGEX_WHITELIST = [
-    r"^https:\/\/deploy-preview-\w+--know-your-planet\.netlify\.app$",
+    r"^https:\/\/deploy-preview-\w+--quiz-anthropocene\.netlify\.app$",
 ]
 
 
