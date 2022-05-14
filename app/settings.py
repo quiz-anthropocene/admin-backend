@@ -304,7 +304,7 @@ SHELL_PLUS_IMPORTS = [
 # Github
 # ------------------------------------------------------------------------------
 
-GITHUB_REPO = "raphodn/know-your-planet"
+GITHUB_REPO = "quiz-anthropocene/know-your-planet"
 GITHUB_ACCESS_TOKEN = os.getenv("GITHUB_ACCESS_TOKEN")
 GITHUB_CRON_ACTION_TOKEN = os.getenv("GITHUB_CRON_ACTION_TOKEN")
 

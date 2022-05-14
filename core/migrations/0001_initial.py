@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
                 (
                     "application_open_source_code_url",
                     models.URLField(
-                        default="https://github.com/raphodn/know-your-planet",
+                        default="https://github.com/quiz-anthropocene/know-your-planet",
                         editable=False,
                         help_text="Le lien vers le code de l'application",
                         max_length=500,

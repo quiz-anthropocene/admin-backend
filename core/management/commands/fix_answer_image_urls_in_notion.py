@@ -8,15 +8,15 @@ from core.utils import notion
 
 
 configuration = Configuration.get_solo()
-IMAGE_RAW_PREFIX = "https://raw.githubusercontent.com/raphodn/know-your-planet/master"
+IMAGE_RAW_PREFIX = "https://raw.githubusercontent.com/quiz-anthropocene/know-your-planet/master"
 
 
 class Command(BaseCommand):
     """
     Goal:
     Fix URLs that are hosted on github.com but with the wrong answer_image_url
-    - before: https://github.com/raphodn/know-your-planet/blob/master/data/images/questions/13.png?raw=true  # noqa
-    - after: https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/questions/13.png  # noqa
+    - before: https://github.com/quiz-anthropocene/know-your-planet/blob/master/data/images/questions/13.png?raw=true  # noqa
+    - after: https://raw.githubusercontent.com/quiz-anthropocene/know-your-planet/master/data/images/questions/13.png  # noqa
 
     How-to:
     Run the script as many times as needed to update the questions that are concerned
@@ -81,7 +81,7 @@ class Command(BaseCommand):
                         question_answer_image_url,
                     )  # noqa
                 if len(image_path):
-                    new_question_answer_image_url = f"https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/{image_path[0]}"  # noqa
+                    new_question_answer_image_url = f"{IMAGE_RAW_PREFIX}/data/images/{image_path[0]}"  # noqa
                     data = {"properties": {"answer_image_url": {"url": new_question_answer_image_url}}}
                     try:
                         notion.update_page_properties(page_id=question["id"], data=data)
