@@ -10,10 +10,10 @@
   - 216
   difficulty: 1
   language: Français
-  answer_option_a: 1% de la nourriture produite
-  answer_option_b: 5% de la nourriture produite
-  answer_option_c: 10% de la nourriture produite
-  answer_option_d: 30% de la nourriture produite
+  answer_option_a: 1%
+  answer_option_b: 5%
+  answer_option_c: 10%
+  answer_option_d: 30%
   answer_correct: d
   has_ordered_answers: true
   answer_explanation: Plus de 41 tonnes de nourriture sont jetées chaque seconde dans
@@ -27,17 +27,17 @@
   answer_accessible_url_text: 'Planetoscope - Statistiques : Le gaspillage alimentaire
     dans le monde'
   answer_scientific_url: http://www.fao.org/food-loss-and-food-waste/fr/
-  answer_scientific_url_text: ''
+  answer_scientific_url_text: Food Loss and Food Waste, FAO
   answer_reading_recommendation: ''
   answer_image_url: https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/6/4/7/6472109f5f_129947_sources-du-gaspillage-alimentaire.jpg
-  answer_image_explanation: Répartition des pertes de nourriture dans le monde.
+  answer_image_explanation: Répartition des pertes de nourriture dans le monde
   answer_extra_info: ''
   author: 2
   validator: 1
   validation_status: Validée
   visibility: PUBLIC
   created: '2020-03-07'
-  updated: '2022-04-16'
+  updated: '2022-05-13'
 - id: 2
   text: Supposons que  demain, toute l'énergie consommée en France par des machines
     doive être alimentée par des hommes qui pédalent 8h par jour. Combien faudrait-il
@@ -33898,7 +33898,7 @@
   category: 8
   tags:
   - 27
-  difficulty: 1
+  difficulty: 2
   language: Français
   answer_option_a: D’un facteur 2
   answer_option_b: D’un facteur 3
@@ -33909,20 +33909,21 @@
   answer_explanation: ''
   answer_audio: ''
   answer_video: ''
-  answer_accessible_url: ''
-  answer_accessible_url_text: ''
-  answer_scientific_url: https://ourworldindata.org/world-population-growth
+  answer_accessible_url: https://fr.wikipedia.org/wiki/Population_mondiale
+  answer_accessible_url_text: La population mondiale sur Wikipédia
+  answer_scientific_url: ''
   answer_scientific_url_text: ''
   answer_reading_recommendation: ''
   answer_image_url: ''
-  answer_image_explanation: ''
-  answer_extra_info: ''
+  answer_image_explanation: C'est encore plus important quand on regarde depuis les
+    débuts de l'Histoire.
+  answer_extra_info: La population mondiale, par continent et par pays sur https://ourworldindata.org/grapher/population
   author: 46
   validator: null
   validation_status: Brouillon
   visibility: PUBLIC
   created: '2022-04-09'
-  updated: '2022-04-16'
+  updated: '2022-05-13'
 - id: 885
   text: Lesquelles de ces projections démographiques sont jugées réalistes à l’horizon
     2100 ?
