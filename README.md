@@ -23,7 +23,7 @@ Mieux appréhender les limites de notre planète, à travers des questions simpl
 ## Stack technique
 
 - Backend : Python Django
-- Frontend : Vue.js, [![Netlify Status](https://api.netlify.com/api/v1/badges/fda65ff6-86b3-4a33-81bd-708699135c63/deploy-status)](https://app.netlify.com/sites/know-your-planet/deploys)
+- Frontend : Vue.js, [![Netlify Status](https://api.netlify.com/api/v1/badges/fda65ff6-86b3-4a33-81bd-708699135c63/deploy-status)](https://app.netlify.com/sites/quiz-anthropocene/deploys)
 - DevOps: Scalingo, Netlify, Github Actions
 
 Plus de détails [ici](CONTRIBUTING.md#stack-technique)
@@ -34,7 +34,6 @@ Le code et les questions sont en open-source : venez nous aider !
 
 - Lire [CONTRIBUTING.md](CONTRIBUTING.md)
 - Voir les [Issues](https://github.com/quiz-anthropocene/know-your-planet/issues) (ainsi que le [board](https://github.com/quiz-anthropocene/know-your-planet/projects/1) Github (pas à jour))
-
 
 ## Liens
 
