@@ -262,12 +262,6 @@
   question_count: 0
   quiz_count: 0
   created: '2022-04-16'
-- id: 45
-  first_name: Matthieu Massart et Jean-Philippe Pernin
-  last_name: ''
-  question_count: 0
-  quiz_count: 0
-  created: '2022-04-16'
 - id: 46
   first_name: Emmanuel
   last_name: Pont
