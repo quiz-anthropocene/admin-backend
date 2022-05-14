@@ -59,7 +59,7 @@ Vous avez vu un bug ? Vous trouvez l'app contre-intuitive, ou simplement avez un
 
 Il y a deux options pour remonter ces informations :
 - via la page [Contribuer](https://quizanthropocene.fr/contribuer) de l'application
-- ou créer une Issue dans l'interface Github du projet ([ici](https://github.com/raphodn/know-your-planet/issues))
+- ou créer une Issue dans l'interface Github du projet ([ici](https://github.com/quiz-anthropocene/know-your-planet/issues))
 
 ### Aider au développement de l'application
 
@@ -112,7 +112,7 @@ Voir dans le dossier `/data/architecture`
 - Vous devez avoir Python 3.9 & Pipenv installés sur votre machine.
 - Clonez le code en local (vous pouvez aussi Fork le projet si vous prévoyez d'y apporter des modifications et effectuer une PR)
     ```
-    git clone git@github.com:raphodn/know-your-planet.git
+    git clone git@github.com:quiz-anthropocene/know-your-planet.git
     ```
 - Installez les dépendances du Backend
     ```

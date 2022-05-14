@@ -45,10 +45,10 @@
     </p>
 
     <p>
-      <strong><a href="https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/atelier/B21_affiche Quiz Anthropocène.pdf" target="_blank">Flyer (pdf, 1MB)</a></strong>
+      <strong><a href="https://raw.githubusercontent.com/quiz-anthropocene/know-your-planet/master/data/images/atelier/B21_affiche Quiz Anthropocène.pdf" target="_blank">Flyer (pdf, 1MB)</a></strong>
     </p>
 
-    <img class="img-fluid" src="https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/atelier/biennale_villes_transition_2021.jpg" alt="Logo Biennale des Villes en Transition" />
+    <img class="img-fluid" src="https://raw.githubusercontent.com/quiz-anthropocene/know-your-planet/master/data/images/atelier/biennale_villes_transition_2021.jpg" alt="Logo Biennale des Villes en Transition" />
   </section>
 </template>
 
@@ -60,7 +60,7 @@ export default {
   metaInfo() {
     const title = 'Atelier Biennale 2021';
     const description = 'Premier atelier intéractif, début avril 2021. Tous les détails ici.';
-    const imageUrl = 'https://raw.githubusercontent.com/raphodn/know-your-planet/master/data/images/atelier/biennale_villes_transition_2021.jpg';
+    const imageUrl = 'https://raw.githubusercontent.com/quiz-anthropocene/know-your-planet/master/data/images/atelier/biennale_villes_transition_2021.jpg';
     return {
       title,
       meta: metaTagsGenerator(title, description, imageUrl),
