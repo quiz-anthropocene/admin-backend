@@ -10,20 +10,20 @@
     \ individuel.</p>\r\n\r\n<p>Ces questions peuvent aussi servir à se former pour\
     \ mieux maitriser les chiffres et les ordres de grandeurs. Les usages peuvent\
     \ être multiples (conférences, formations, quiz, jeu, etc.).</p>"
-  application_open_source_code_url: https://github.com/raphodn/know-your-planet
+  application_open_source_code_url: https://github.com/quiz-anthropocene/know-your-planet
   application_backend_url: https://quiz-anthropocene.osc-fr1.scalingo.io/
   application_frontend_url: https://quizanthropocene.fr/
   application_frontend_ecoindex_url: http://www.ecoindex.fr/resultats/?id=115832
   application_facebook_url: https://www.facebook.com/quizanthropocene/
   application_twitter_url: https://twitter.com/AnthroQuiz
   application_linkedin_url: https://www.linkedin.com/company/quiz-de-l-anthropocene/
-  daily_stat_last_aggregated: 2022-05-14 00:15:06.857442+00:00
+  daily_stat_last_aggregated: 2022-05-15 00:15:04.329375+00:00
   notion_questions_scope_0_last_imported: 2022-05-07 03:27:15.755595+00:00
   notion_questions_scope_1_last_imported: 2022-05-07 03:27:15.755609+00:00
   notion_questions_scope_2_last_imported: 2022-05-07 03:27:15.755611+00:00
   notion_questions_scope_3_last_imported: 2022-05-07 03:27:15.755618+00:00
   notion_questions_scope_4_last_imported: 2022-05-07 03:27:15.755619+00:00
   notion_questions_scope_5_last_imported: 2022-05-07 03:27:15.755620+00:00
-  github_data_last_exported: 2022-05-14 03:30:51.543329+00:00
-  github_stats_last_exported: 2022-05-13 18:30:02.922898+00:00
+  github_data_last_exported: 2022-05-15 03:30:38.280639+00:00
+  github_stats_last_exported: 2022-05-14 18:30:35.552432+00:00
   notion_contributions_last_exported: 2022-05-07 13:07:38.120194+00:00
