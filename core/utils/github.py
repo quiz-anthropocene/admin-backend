@@ -7,15 +7,15 @@ def get_github_instance():
     return g
 
 
-def get_repo():
+def get_repo(repo_name=settings.GITHUB_FRONTEND_REPO):
     g = get_github_instance()
-    repo = g.get_repo(settings.GITHUB_REPO)
+    repo = g.get_repo(repo_name)
     return repo
 
 
-def create_branch(branch_name):
+def create_branch(branch_name, repo_name=settings.GITHUB_FRONTEND_REPO):
     print("creating branch :", branch_name)
-    repo = get_repo()
+    repo = get_repo(repo_name)
     source = repo.get_branch("master")
     branch_ref = f"heads/{branch_name}"
     try:
@@ -31,8 +31,8 @@ def create_branch(branch_name):
     return branch
 
 
-def get_file(file_path, branch_name="master"):
-    repo = get_repo()
+def get_file(file_path, branch_name="master", repo_name=settings.GITHUB_FRONTEND_REPO):
+    repo = get_repo(repo_name)
     try:
         contents = repo.get_contents(file_path, ref=branch_name)
     except github.GithubException as e:
@@ -42,9 +42,9 @@ def get_file(file_path, branch_name="master"):
     return contents
 
 
-def update_file(file_path, commit_message, file_content, branch_name):
+def update_file(file_path, commit_message, file_content, branch_name, repo_name=settings.GITHUB_FRONTEND_REPO):
     print("in update_file", file_path)
-    repo = get_repo()
+    repo = get_repo(repo_name)
     try:
         contents = repo.get_contents(file_path, ref=branch_name)
         res = repo.update_file(
@@ -69,9 +69,9 @@ def update_file(file_path, commit_message, file_content, branch_name):
     return res
 
 
-def create_file(file_path, commit_message, file_content, branch_name):
+def create_file(file_path, commit_message, file_content, branch_name, repo_name=settings.GITHUB_FRONTEND_REPO):
     print("in create_file", file_path)
-    repo = get_repo()
+    repo = get_repo(repo_name)
     try:
         res = repo.create_file(file_path, commit_message, file_content, branch=branch_name)
     except github.GithubException as e:
@@ -89,19 +89,21 @@ def create_file(file_path, commit_message, file_content, branch_name):
     return res
 
 
-def create_file_element(file_path, file_content):
-    repo = get_repo()
+def create_file_element(file_path, file_content, repo_name=settings.GITHUB_FRONTEND_REPO):
+    repo = get_repo(repo_name)
     file_blob = repo.create_git_blob(file_content, "utf-8")
     file_element = github.InputGitTreeElement(path=file_path, mode="100644", type="blob", sha=file_blob.sha)
     return file_element
 
 
-def update_multiple_files(branch_name, commit_message, file_element_list: list):
+def update_multiple_files(
+    branch_name, commit_message, file_element_list: list, repo_name=settings.GITHUB_FRONTEND_REPO
+):
     """
     Method to commit multiple files on a branch
     https://github.com/PyGithub/PyGithub/issues/1628
     """
-    repo = get_repo()
+    repo = get_repo(repo_name)
 
     # create new branch
     create_branch(branch_name)
@@ -122,9 +124,10 @@ def create_pull_request(
     branch_name,
     pull_request_labels="",
     review_request=True,
+    repo_name=settings.GITHUB_FRONTEND_REPO,
 ):
     print("creating PR :", pull_request_title)
-    repo = get_repo()
+    repo = get_repo(repo_name)
     try:
         pull_request = repo.create_pull(
             title=pull_request_title,

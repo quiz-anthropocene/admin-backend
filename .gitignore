@@ -1,3 +1,13 @@
+# Mac/OSX
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Local stuff
+local_scripts
+local_data
+
 # Python
 **/__pycache__/**
 
@@ -11,3 +21,12 @@ staticfiles
 # Tests
 .coverage
 htmlcov
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
