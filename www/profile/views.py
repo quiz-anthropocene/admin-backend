@@ -1,4 +1,7 @@
-from django.views.generic import DetailView
+from itertools import chain
+
+from django.db.models import Value
+from django.views.generic import DetailView, TemplateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
@@ -93,4 +96,20 @@ class ProfileAdminContributorListView(AdministratorUserRequiredMixin, SingleTabl
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["user"] = self.request.user
+        return context
+
+
+class ProfileAdminHistoryListView(AdministratorUserRequiredMixin, TemplateView):
+    template_name = "profile/admin_history.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        question_quiz_history = list(
+            chain(
+                Question.history.annotate(history_model=Value("Question")).all(),
+                Quiz.history.annotate(history_model=Value("Quiz")).all(),
+            )
+        )
+        question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)
+        context["question_quiz_history"] = question_quiz_history[:50]
         return context
