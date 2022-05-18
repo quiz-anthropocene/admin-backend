@@ -80,6 +80,22 @@ class ProfileQuizListView(ContributorUserRequiredMixin, SingleTableView):
         return context
 
 
+class ProfileHistoryListView(ContributorUserRequiredMixin, TemplateView):
+    template_name = "profile/history.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        question_quiz_history = list(
+            chain(
+                Question.history.annotate(history_model=Value("Question")).filter(history_user=self.request.user),
+                Quiz.history.annotate(history_model=Value("Quiz")).filter(history_user=self.request.user),
+            )
+        )
+        question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)
+        context["question_quiz_history"] = question_quiz_history[:50]
+        return context
+
+
 class ProfileAdminContributorListView(AdministratorUserRequiredMixin, SingleTableView):
     model = User
     template_name = "profile/admin_contributors.html"

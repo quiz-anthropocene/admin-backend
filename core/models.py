@@ -19,7 +19,7 @@ class Configuration(SingletonModel):
     # links
     application_open_source_code_url = models.URLField(
         max_length=500,
-        default="https://github.com/raphodn/know-your-planet",
+        default="https://github.com/quiz-anthropocene",
         editable=False,
         help_text="Le lien vers le code de l'application",
     )
