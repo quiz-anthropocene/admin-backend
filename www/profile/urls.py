@@ -3,6 +3,8 @@ from django.views.generic.base import RedirectView
 
 from www.profile.views import (
     ProfileAdminContributorListView,
+    ProfileAdminHistoryListView,
+    ProfileHistoryListView,
     ProfileHomeView,
     ProfileInfoView,
     ProfileQuestionListView,
@@ -17,6 +19,7 @@ urlpatterns = [
     path("info/", ProfileInfoView.as_view(), name="info"),
     path("questions/", ProfileQuestionListView.as_view(), name="questions"),
     path("quizs/", ProfileQuizListView.as_view(), name="quizs"),
+    path("history/", ProfileHistoryListView.as_view(), name="history"),
     path(
         "admin/",
         include(
@@ -27,6 +30,7 @@ urlpatterns = [
                     name="admin_home",
                 ),
                 path("contributors/", ProfileAdminContributorListView.as_view(), name="admin_contributors"),
+                path("history/", ProfileAdminHistoryListView.as_view(), name="admin_history"),
             ]
         ),
     ),
