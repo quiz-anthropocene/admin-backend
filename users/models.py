@@ -1,8 +1,11 @@
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.db.models import Exists, OuterRef, Q
 
 from core.fields import ChoiceArrayField
+from questions.models import Question
+from quizs.models import Quiz
 from users import constants
 
 
@@ -29,6 +32,16 @@ class UserQueryset(models.QuerySet):
             roles__overlap=[
                 constants.USER_ROLE_ADMINISTRATOR,
             ]
+        )
+
+    def has_public_content(self):
+        return (
+            self.prefetch_related("questions", "quizs")
+            .annotate(
+                has_public_questions=Exists(Question.objects.filter(author=OuterRef("pk")).public()),
+                has_public_quizs=Exists(Quiz.objects.filter(author=OuterRef("pk")).public()),
+            )
+            .filter(Q(has_public_questions=True) | Q(has_public_quizs=True))
         )
 
 
@@ -74,6 +87,9 @@ class UserManager(BaseUserManager):
 
     def all_administrators(self):
         return self.get_queryset().all_administrators()
+
+    def has_public_content(self):
+        return self.get_queryset().has_public_content()
 
 
 class User(AbstractUser):

@@ -79,7 +79,7 @@ class Command(BaseCommand):
             #####################################
             # data/authors.yaml
             start_time = time.time()
-            user_queryset = User.objects.all_contributors()
+            user_queryset = User.objects.all_contributors().has_public_content()
             users_yaml = utilities.serialize_model_to_yaml(
                 model_queryset=user_queryset, model_serializer=UserWithCountSerializer
             )

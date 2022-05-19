@@ -1,8 +1,9 @@
 from django.test import TestCase
 
+from core import constants
 from questions.factories import QuestionFactory
 from quizs.factories import QuizFactory
-from users import constants
+from users import constants as user_constants
 from users.factories import UserFactory
 from users.models import User
 
@@ -34,15 +35,17 @@ class UserModelRoleTest(TestCase):
         cls.user = UserFactory(roles=[])
         cls.user_contributor = UserFactory()
         cls.user_contributor_2 = UserFactory()
-        cls.user_super_contributor = UserFactory(roles=[constants.USER_ROLE_SUPER_CONTRIBUTOR])
+        cls.user_super_contributor = UserFactory(roles=[user_constants.USER_ROLE_SUPER_CONTRIBUTOR])
         cls.user_super_contributor_2 = UserFactory(
-            roles=[constants.USER_ROLE_CONTRIBUTOR, constants.USER_ROLE_SUPER_CONTRIBUTOR]
+            roles=[user_constants.USER_ROLE_CONTRIBUTOR, user_constants.USER_ROLE_SUPER_CONTRIBUTOR]
         )
-        cls.user_admin = UserFactory(roles=[constants.USER_ROLE_ADMINISTRATOR])
+        cls.user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
         cls.user_admin_2 = UserFactory(
-            roles=[constants.USER_ROLE_SUPER_CONTRIBUTOR, constants.USER_ROLE_ADMINISTRATOR]
+            roles=[user_constants.USER_ROLE_SUPER_CONTRIBUTOR, user_constants.USER_ROLE_ADMINISTRATOR]
         )
-        cls.user_admin_3 = UserFactory(roles=[constants.USER_ROLE_CONTRIBUTOR, constants.USER_ROLE_ADMINISTRATOR])
+        cls.user_admin_3 = UserFactory(
+            roles=[user_constants.USER_ROLE_CONTRIBUTOR, user_constants.USER_ROLE_ADMINISTRATOR]
+        )
 
     def test_has_role_contributor(self):
         self.assertFalse(self.user.has_role_contributor)
@@ -70,3 +73,18 @@ class UserModelRoleTest(TestCase):
 
     def test_all_administrators(self):
         self.assertEqual(User.objects.all_administrators().count(), 3)
+
+
+class UserModelQuerysetTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user_1 = UserFactory(roles=[])
+        cls.user_2 = UserFactory()
+        cls.user_3 = UserFactory()
+        QuestionFactory(author=cls.user_2)
+        QuestionFactory(author=cls.user_2)
+        QuizFactory(author=cls.user_2)
+        QuestionFactory(author=cls.user_3, visibility=constants.VISIBILITY_PRIVATE)
+
+    def test_has_public_content(self):
+        self.assertEqual(User.objects.has_public_content().count(), 1)
