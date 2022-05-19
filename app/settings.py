@@ -33,7 +33,11 @@ if os.getenv("DEBUG") == "True":
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = [os.environ["HOST"]]
+ALLOWED_HOSTS = [
+    "localhost",
+    "admin.quizanthropocene.fr",
+    "quiz-anthropocene.osc-fr1.scalingo.io",
+]
 
 
 # Application definition
