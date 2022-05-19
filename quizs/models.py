@@ -425,7 +425,9 @@ class QuizRelationship(models.Model):
             constants.QUIZ_RELATIONSHIP_CHOICE_LIST,
         ),
     )
+    # timestamps
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     def __str__(self):
         return f"{self.from_quiz} >>> {self.status} >>> {self.to_quiz}"
