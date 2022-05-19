@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from api.questions.serializers import QuestionSerializer
-from api.tags.serializers import TagSerializer
+from api.tags.serializers import TagSerializer, TagStringSerializer
 from api.users.serializers import UserStringSerializer  # UserSerializer
 from quizs.models import Quiz, QuizQuestion, QuizRelationship
 
@@ -58,7 +58,14 @@ class QuizSerializer(serializers.ModelSerializer):
 
 
 class QuizWithQuestionSerializer(serializers.ModelSerializer):
-    # author = UserStringSerializer()
+    class Meta:
+        model = Quiz
+        fields = QUIZ_FIELDS_WITH_QUESTIONS
+
+
+class QuizWithQuestionFullStringSerializer(serializers.ModelSerializer):
+    tags = TagStringSerializer(many=True)
+    author = UserStringSerializer()
 
     class Meta:
         model = Quiz

@@ -8,7 +8,7 @@ from django.views.generic import CreateView, DetailView, FormView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
-from api.quizs.serializers import QuizWithQuestionSerializer
+from api.quizs.serializers import QuizWithQuestionFullStringSerializer
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from core.mixins import ContributorUserRequiredMixin
@@ -49,7 +49,7 @@ class QuizDetailView(ContributorUserRequiredMixin, DetailView):
         context = super().get_context_data(**kwargs)
         quiz = self.get_object()
         # context["quiz_dict"] = model_to_dict(quiz, fields=[field.name for field in quiz._meta.fields])
-        context["quiz_dict"] = QuizWithQuestionSerializer(quiz).data
+        context["quiz_dict"] = QuizWithQuestionFullStringSerializer(quiz).data
         return context
 
 

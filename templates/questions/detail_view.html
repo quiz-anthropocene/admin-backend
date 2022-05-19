@@ -22,7 +22,9 @@
                                         {% include "categories/_badge_item.html" with category=question.category %}
                                     </td>
                                 {% else %}
-                                    <td><span class="badge bg-primary">{{ question_dict|get_obj_attr:field }}</span></td>
+                                    <td>
+                                        {% include "includes/_badge_item.html" with value=question_dict|get_obj_attr:field %}
+                                    </td>
                                 {% endif %}
                             {% elif field in question.QUESTION_M2M_FIELDS %}
                                 {% if field == "tags" %}
