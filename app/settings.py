@@ -13,7 +13,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 import dj_database_url
+import sentry_sdk
 from dotenv import load_dotenv
+from sentry_sdk.integrations.django import DjangoIntegration
 
 
 load_dotenv(verbose=True)
@@ -235,6 +237,19 @@ ADMINS = os.getenv("ADMINS")
 SIB_NEWSLETTER_LIST_ID = os.getenv("SIB_NEWSLETTER_LIST_ID")
 SIB_NEWSLETTER_DOI_TEMPLATE_ID = os.getenv("SIB_NEWSLETTER_DOI_TEMPLATE_ID")
 SIB_CONTACT_DOI_ENDPOINT = "https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation"
+
+
+# Errors
+# https://glitchtip.com/
+# ------------------------------------------------------------------------------
+
+if not DEBUG:
+    sentry_sdk.init(
+        dsn=os.getenv("SENTRY_GLITCHTIP_DSN"),
+        integrations=[DjangoIntegration()],
+        auto_session_tracking=False,
+        traces_sample_rate=0,
+    )
 
 
 # Django Bootstrap5
