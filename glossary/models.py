@@ -1,4 +1,5 @@
 from django.db import models
+from simple_history.models import HistoricalRecords
 
 
 class GlossaryItem(models.Model):
@@ -10,6 +11,8 @@ class GlossaryItem(models.Model):
     # timestamps
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+
+    history = HistoricalRecords()
 
     class Meta:
         ordering = ["name"]
