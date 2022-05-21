@@ -240,6 +240,7 @@ SIB_CONTACT_DOI_ENDPOINT = "https://api.sendinblue.com/v3/contacts/doubleOptinCo
 
 
 # Errors
+# https://glitchtip.com/
 # ------------------------------------------------------------------------------
 
 if not DEBUG:
