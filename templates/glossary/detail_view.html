@@ -1,0 +1,31 @@
+{% extends "glossary/detail_base.html" %}
+{% load custom_filters get_verbose_name %}
+
+{% block glossaryitem_detail_content %}
+<div class="row">
+    <div class="col-12">
+        <div class="table-container">
+            <table class="table-responsive table-striped table-bordered border-primary font-size-small">
+                <thead>
+                    <tr>
+                        <th>Champ</th>
+                        <th>Valeur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for field in glossaryitem_dict %}
+                        <tr>
+                            <td class="fw-bold">{% get_verbose_name glossaryitem field %}</td>
+                            {% if field in glossaryitem.GLOSSARY_URL_FIELDS %}
+                                <td><a href="{{ glossaryitem_dict|get_obj_attr:field }}" target="_blank" rel="noopener">{{ glossaryitem_dict|get_obj_attr:field }}</a></td>
+                            {% else %}
+                                <td>{{ glossaryitem_dict|get_obj_attr:field }}</td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

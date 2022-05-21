@@ -7,11 +7,12 @@ class GlossaryItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = GlossaryItem
         fields = [
+            # "id",
             "name",
             "name_alternatives",
             "definition_short",
             "description",
             "description_accessible_url",
-            "added",
             "created",
-        ]  # "updated"
+            "updated",
+        ]

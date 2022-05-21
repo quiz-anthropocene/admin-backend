@@ -1,8 +1,10 @@
 from django.db import models
+from django.urls import reverse
 from simple_history.models import HistoricalRecords
 
 
 class GlossaryItem(models.Model):
+    GLOSSARY_URL_FIELDS = ["description_accessible_url"]
     name = models.CharField(verbose_name="Mot ou sigle", max_length=50, blank=False)
     name_alternatives = models.TextField(verbose_name="Noms alternatifs", blank=True)  # ArrayField
     definition_short = models.CharField(verbose_name="Définition (succinte)", max_length=150, blank=False)
@@ -20,3 +22,6 @@ class GlossaryItem(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
+    def get_absolute_url(self):
+        return reverse("glossary:detail", kwargs={"pk": self.id})
