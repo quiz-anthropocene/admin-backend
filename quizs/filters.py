@@ -6,6 +6,7 @@ from tags.models import Tag
 
 
 class QuizFilter(django_filters.FilterSet):
+    id = django_filters.NumberFilter(label="Id")
     tags = django_filters.ModelChoiceFilter(label="Tag", queryset=Tag.objects.all())  # ModelMultipleChoiceFilter
     # language = django_filters.ChoiceFilter(label="Language", choices=constants.LANGUAGE_CHOICES)
     publish = django_filters.ChoiceFilter(label="Publish", choices=constants.BOOLEAN_CHOICES)
@@ -13,4 +14,4 @@ class QuizFilter(django_filters.FilterSet):
 
     class Meta:
         model = Quiz
-        fields = ["tags", "language", "publish", "has_audio", "author", "visibility"]
+        fields = ["tags", "language", "publish", "has_audio", "author", "visibility", "id"]
