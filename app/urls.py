@@ -14,6 +14,7 @@ urlpatterns = [
     path("categories/", include("www.categories.urls")),
     path("tags/", include("www.tags.urls")),
     path("contributions/", include("www.contributions.urls")),
+    path("glossary/", include("www.glossary.urls")),
     # admin
     path("admin/", admin_site.urls),
     # api
