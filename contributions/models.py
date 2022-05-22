@@ -47,9 +47,9 @@ class Contribution(models.Model):
         verbose_name="Auteur",
         to=settings.AUTH_USER_MODEL,
         related_name="contributions",
+        on_delete=models.SET_NULL,
         blank=True,
         null=True,
-        on_delete=models.SET_NULL,
     )
 
     status = models.CharField(
@@ -60,6 +60,10 @@ class Contribution(models.Model):
         blank=True,
     )
 
+    parent = models.ForeignKey(
+        verbose_name="En réponse à", to="self", related_name="replies", on_delete=models.CASCADE, null=True, blank=True
+    )
+
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
@@ -67,3 +71,7 @@ class Contribution(models.Model):
 
     def __str__(self):
         return f"{self.text}"
+
+    @property
+    def has_replies(self) -> bool:
+        return self.replies.exists()
