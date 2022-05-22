@@ -16,7 +16,7 @@ class ContributionListView(ContributorUserRequiredMixin, SingleTableMixin, Filte
 
     def get_queryset(self):
         qs = super().get_queryset()
-        qs = qs.exclude_errors().order_by("-created")
+        qs = qs.exclude_errors().exclude_answers().order_by("-created")
         return qs
 
     def get_context_data(self, **kwargs):
