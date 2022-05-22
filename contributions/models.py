@@ -9,14 +9,19 @@ from quizs.models import Quiz
 
 
 class ContributionQuerySet(models.QuerySet):
+    def exclude_answers(self):
+        return self.exclude(type=constants.CONTRIBUTION_TYPE_ANSWER)
+
     def exclude_errors(self):
-        return self.exclude(type="erreur application")
+        return self.exclude(type=constants.CONTRIBUTION_TYPE_ERROR_APP)
 
     def last_30_days(self):
         return self.filter(created__date__gte=(date.today() - timedelta(days=30)))
 
 
 class Contribution(models.Model):
+    CONTRIBUTION_CHOICE_FIELDS = ["type", "status"]
+    CONTRIBUTION_FK_FIELDS = ["question", "quiz", "author"]
     text = models.TextField(
         verbose_name="Texte",
         blank=False,
@@ -24,10 +29,7 @@ class Contribution(models.Model):
     )
     description = models.TextField(verbose_name="Information supplémentaire", blank=True)
     type = models.CharField(
-        verbose_name="Type",
-        max_length=150,
-        choices=constants.CONTRIBUTION_TYPE_CHOICES,
-        blank=True,
+        verbose_name="Type", max_length=150, choices=constants.CONTRIBUTION_TYPE_CHOICES, blank=True
     )
 
     question = models.ForeignKey(
@@ -50,7 +52,16 @@ class Contribution(models.Model):
         on_delete=models.SET_NULL,
     )
 
+    status = models.CharField(
+        verbose_name="Statut",
+        max_length=150,
+        choices=constants.CONTRIBUTION_STATUS_CHOICES,
+        # default=constants.CONTRIBUTION_STATUS_PENDING,
+        blank=True,
+    )
+
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     objects = ContributionQuerySet.as_manager()
 
