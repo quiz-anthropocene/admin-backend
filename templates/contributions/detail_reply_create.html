@@ -1,0 +1,58 @@
+{% extends "contributions/detail_base.html" %}
+{% load django_bootstrap5 %}
+
+{% block contribution_detail_content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <i>Message reçu le {{ contribution.created }}</i>
+            </div>
+            <div class="card-body">
+                {{ contribution.text|linebreaks }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-12">
+        {% if contribution.has_replies %}
+            {% for reply in contribution.replies.all %}
+                <div class="card">
+                    <div class="card-header">
+                        <i>Réponse de <strong>{{ reply.author }}</strong> le {{ reply.created }}</i>
+                    </div>
+                    <div class="card-body">
+                        {{ reply.text|linebreaks }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <form id="contribution_reply_create_form" method="POST" action="">
+                {% csrf_token %}
+
+                <div class="row">
+                    <div class="col-md-8">
+                        {% bootstrap_form form alert_error_type="all" %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        {% bootstrap_button button_type="submit" button_class="btn-primary" content="Ajouter" %}
+                        {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
+                        <a href="{% url 'contributions:detail_view' contribution.id %}" class="btn btn-secondary">Annuler</a>
+                    </div>
+                </div>
+            </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{{ form.media.js }}
+{% endblock %}

@@ -23,7 +23,7 @@
                                     </td>
                                 {% else %}
                                     <td>
-                                        {% include "includes/_badge_item.html" with value=question_dict|get_obj_attr:field %}
+                                        {% include "includes/_badge_item.html" with value=question_dict|get_obj_attr:field field_name=field %}
                                     </td>
                                 {% endif %}
                             {% elif field in question.QUESTION_M2M_FIELDS %}

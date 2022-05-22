@@ -1,5 +1,11 @@
 {% if value %}
-    <span class="badge bg-primary">{{ value }}</span>
+    {% if field_name == "question" %}
+        <a href="{% url 'questions:detail_view' value %}"><span class="badge bg-primary">{{ value }}</span></a>
+    {% elif field_name == "quiz" %}
+        <a href="{% url 'quizs:detail_view' value %}"><span class="badge bg-primary">{{ value }}</span></a>
+    {% else %}
+        <span class="badge bg-primary">{{ value }}</span>
+    {% endif %}
 {% else %}
     <span>—</span>
 {% endif %}

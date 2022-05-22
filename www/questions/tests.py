@@ -135,7 +135,7 @@ class QuestionCreateViewTest(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertTrue(response.url.startswith("/accounts/login/"))
 
-    def test_only_contributor_can_access_question_list(self):
+    def test_only_contributor_can_access_question_create(self):
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
         url = reverse("questions:create")
         response = self.client.get(url)
