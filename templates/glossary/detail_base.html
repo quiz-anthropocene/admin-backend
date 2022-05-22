@@ -30,6 +30,9 @@
                 <li class="nav-item">
                     <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_edit' glossary_item.id %}">Modifier</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if 'history' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_history' glossary_item.id %}">Historique</a>
+                </li>
             </ul>
         </div>
     </div>

@@ -7,6 +7,8 @@ from users.factories import DEFAULT_PASSWORD, UserFactory
 
 GLOSSARY_ITEM_DETAIL_URLS = [
     "glossary:detail_view",
+    "glossary:detail_edit",
+    "glossary:detail_history",
 ]
 
 
@@ -56,4 +58,4 @@ class GlossaryItemDetailViewTest(TestCase):
         url = reverse("glossary:detail_view", args=[self.glossary_item_1.id])
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["glossaryitem"].id, self.glossary_item_1.id)
+        self.assertEqual(response.context["glossary_item"].id, self.glossary_item_1.id)

@@ -5,6 +5,8 @@ from simple_history.models import HistoricalRecords
 
 class GlossaryItem(models.Model):
     GLOSSARY_URL_FIELDS = ["description_accessible_url"]
+    GLOSSARY_ITEM_READONLY_FIELDS = ["created", "updated"]
+
     name = models.CharField(verbose_name="Mot ou sigle", max_length=50, blank=False)
     name_alternatives = models.TextField(verbose_name="Noms alternatifs", blank=True)  # ArrayField
     definition_short = models.CharField(verbose_name="Définition (succinte)", max_length=150, blank=False)

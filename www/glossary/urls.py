@@ -4,6 +4,7 @@ from django.views.generic.base import RedirectView
 from www.glossary.views import (
     GlossaryItemCreateView,
     GlossaryItemDetailEditView,
+    GlossaryItemDetailHistoryView,
     GlossaryItemDetailView,
     GlossaryListView,
 )
@@ -25,6 +26,7 @@ urlpatterns = [
                 ),
                 path("view/", GlossaryItemDetailView.as_view(), name="detail_view"),
                 path("edit/", GlossaryItemDetailEditView.as_view(), name="detail_edit"),
+                path("history/", GlossaryItemDetailHistoryView.as_view(), name="detail_history"),
             ]
         ),
     ),

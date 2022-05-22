@@ -8,7 +8,7 @@ from django_tables2.views import SingleTableMixin
 
 from api.glossary.serializers import GlossaryItemSerializer
 from core.mixins import ContributorUserRequiredMixin
-from glossary.forms import GlossaryItemCreateForm, GlossaryItemEditForm
+from glossary.forms import GLOSSARY_ITEM_FORM_FIELDS, GlossaryItemCreateForm, GlossaryItemEditForm
 from glossary.models import GlossaryItem
 from glossary.tables import GlossaryTable
 
@@ -44,6 +44,33 @@ class GlossaryItemDetailEditView(ContributorUserRequiredMixin, SuccessMessageMix
 
     def get_success_url(self):
         return reverse_lazy("glossary:detail_view", args=[self.kwargs.get("pk")])
+
+
+class GlossaryItemDetailHistoryView(ContributorUserRequiredMixin, DetailView):
+    model = GlossaryItem
+    template_name = "glossary/detail_history.html"
+    context_object_name = "glossary_item"
+
+    def get_object(self):
+        return get_object_or_404(GlossaryItem, id=self.kwargs.get("pk"))
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["glossary_item_history"] = self.get_object().history.all()
+        context["glossary_item_history_delta"] = list()
+        for record in context["glossary_item_history"]:
+            new_record = record
+            old_record = record.prev_record
+            if old_record:
+                delta = new_record.diff_against(old_record, excluded_fields=[])
+                context["glossary_item_history_delta"].append(delta.changes)
+            else:
+                # probably a create action
+                # we create the diff ourselves because there isn't any previous record
+                delta_fields = GLOSSARY_ITEM_FORM_FIELDS
+                delta_new = [{"field": k, "new": v} for k, v in record.__dict__.items() if k in delta_fields if v]
+                context["glossary_item_history_delta"].append(delta_new)
+        return context
 
 
 class GlossaryItemCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateView):
