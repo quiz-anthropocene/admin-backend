@@ -1,7 +1,12 @@
 from django.urls import include, path
 from django.views.generic.base import RedirectView
 
-from www.glossary.views import GlossaryItemCreateView, GlossaryItemDetailView, GlossaryListView
+from www.glossary.views import (
+    GlossaryItemCreateView,
+    GlossaryItemDetailEditView,
+    GlossaryItemDetailView,
+    GlossaryListView,
+)
 
 
 app_name = "glossary"
@@ -19,6 +24,7 @@ urlpatterns = [
                     name="detail",
                 ),
                 path("view/", GlossaryItemDetailView.as_view(), name="detail_view"),
+                path("edit/", GlossaryItemDetailEditView.as_view(), name="detail_edit"),
             ]
         ),
     ),

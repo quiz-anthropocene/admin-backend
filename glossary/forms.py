@@ -11,3 +11,9 @@ class GlossaryItemCreateForm(forms.ModelForm):
             "name_alternatives": forms.Textarea(attrs={"rows": 1}),
             "description": forms.Textarea(attrs={"rows": 3}),
         }
+
+
+class GlossaryItemEditForm(GlossaryItemCreateForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["name"].disabled = True
