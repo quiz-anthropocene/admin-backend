@@ -1,0 +1,33 @@
+{% extends "contributions/detail_base.html" %}
+{% load custom_filters get_verbose_name %}
+
+{% block contribution_detail_content %}
+<div class="row">
+    <div class="col-12">
+        <div class="table-container">
+            <table class="table-responsive table-striped table-bordered border-primary font-size-small">
+                <thead>
+                    <tr>
+                        <th>Champ</th>
+                        <th>Valeur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for field in contribution_dict %}
+                        <tr>
+                            <td class="fw-bold">{% get_verbose_name contribution field %}</td>
+                            {% if field in contribution.CONTRIBUTION_CHOICE_FIELDS or field in contribution.CONTRIBUTION_FK_FIELDS %}
+                                <td>
+                                    {% include "includes/_badge_item.html" with value=contribution_dict|get_obj_attr:field field_name=field %}
+                                </td>
+                            {% else %}
+                                <td>{{ contribution_dict|get_obj_attr:field }}</td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

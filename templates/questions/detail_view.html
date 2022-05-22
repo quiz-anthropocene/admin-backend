@@ -19,11 +19,11 @@
                             {% if field in question.QUESTION_CHOICE_FIELDS or field in question.QUESTION_FK_FIELDS %}
                                 {% if field == "category" %}
                                     <td>
-                                        {% include "categories/_badge_item.html" with category=question.category %}
+                                        {% include "categories/_badge_item.html" with category=question.category field_name=field %}
                                     </td>
                                 {% else %}
                                     <td>
-                                        {% include "includes/_badge_item.html" with value=question_dict|get_obj_attr:field %}
+                                        {% include "includes/_badge_item.html" with value=question_dict|get_obj_attr:field field_name=field %}
                                     </td>
                                 {% endif %}
                             {% elif field in question.QUESTION_M2M_FIELDS %}
