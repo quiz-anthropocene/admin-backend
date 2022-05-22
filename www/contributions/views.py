@@ -1,9 +1,13 @@
-from django.views.generic import DetailView
+from django.contrib.messages.views import SuccessMessageMixin
+from django.shortcuts import get_object_or_404
+from django.urls import reverse_lazy
+from django.views.generic import DetailView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin
 
 from api.contributions.serializers import ContributionSerializer
 from contributions.filters import ContributionFilter
+from contributions.forms import ContributionStatusEditForm
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from core.mixins import ContributorUserRequiredMixin
@@ -39,3 +43,17 @@ class ContributionDetailView(ContributorUserRequiredMixin, DetailView):
         contribution = self.get_object()
         context["contribution_dict"] = ContributionSerializer(contribution).data
         return context
+
+
+class ContributionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
+    form_class = ContributionStatusEditForm
+    template_name = "contributions/detail_edit.html"
+    context_object_name = "contribution"
+    success_message = "La contribution a été mise à jour."
+    # success_url = reverse_lazy("contributions:detail_view")
+
+    def get_object(self):
+        return get_object_or_404(Contribution, id=self.kwargs.get("pk"))
+
+    def get_success_url(self):
+        return reverse_lazy("contributions:detail_view", args=[self.kwargs.get("pk")])

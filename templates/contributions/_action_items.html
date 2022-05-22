@@ -1,3 +1,7 @@
-<a href="{% url 'contributions:detail_view' record.id %}">⚙️ Modifier le statut</a>
+{% if record.status == "PENDING" %}
+    <a href="{% url 'contributions:detail_edit' record.id %}">Modifier le statut</a>
+    <br />
+{% endif %}
+<a href="{% url 'contributions:detail_view' record.id %}">Répondre</a>
 <br />
-<a href="{% url 'contributions:detail_view' record.id %}">✍️ Répondre</a>
+<a href="{% url 'contributions:detail_view' record.id %}">Voir</a>

@@ -1,7 +1,7 @@
 from django.urls import include, path
 from django.views.generic.base import RedirectView
 
-from www.contributions.views import ContributionDetailView, ContributionListView
+from www.contributions.views import ContributionDetailEditView, ContributionDetailView, ContributionListView
 
 
 app_name = "contributions"
@@ -19,6 +19,7 @@ urlpatterns = [
                     name="detail",
                 ),
                 path("view/", ContributionDetailView.as_view(), name="detail_view"),
+                path("edit/", ContributionDetailEditView.as_view(), name="detail_edit"),
             ]
         ),
     ),

@@ -22,6 +22,7 @@ class ContributionQuerySet(models.QuerySet):
 class Contribution(models.Model):
     CONTRIBUTION_CHOICE_FIELDS = ["type", "status"]
     CONTRIBUTION_FK_FIELDS = ["question", "quiz", "author"]
+    CONTRIBUTION_READONLY_FIELDS = ["parent", "created", "updated"]
     text = models.TextField(
         verbose_name="Texte",
         blank=False,

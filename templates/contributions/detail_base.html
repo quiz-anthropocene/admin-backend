@@ -27,6 +27,9 @@
                 <li class="nav-item">
                     <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_view' contribution.id %}">Détails</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_edit' contribution.id %}">Modifier</a>
+                </li>
             </ul>
         </div>
     </div>
