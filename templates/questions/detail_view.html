@@ -19,7 +19,7 @@
                             {% if field in question.QUESTION_CHOICE_FIELDS or field in question.QUESTION_FK_FIELDS %}
                                 {% if field == "category" %}
                                     <td>
-                                        {% include "categories/_badge_item.html" with category=question.category field_name=field %}
+                                        {% include "categories/_badge_item.html" with category=question.category %}
                                     </td>
                                 {% else %}
                                     <td>

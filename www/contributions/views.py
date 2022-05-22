@@ -1,5 +1,5 @@
 from django.contrib.messages.views import SuccessMessageMixin
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, DetailView, UpdateView
 from django_filters.views import FilterView
@@ -22,6 +22,7 @@ class ContributionListView(ContributorUserRequiredMixin, SingleTableMixin, Filte
 
     def get_queryset(self):
         qs = super().get_queryset()
+        qs = qs.prefetch_related("replies")
         qs = qs.exclude_errors().exclude_replies().order_by("-created")
         return qs
 
@@ -55,6 +56,12 @@ class ContributionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMix
     def get_object(self):
         return get_object_or_404(Contribution, id=self.kwargs.get("pk"))
 
+    def get(self, request, *args, **kwargs):
+        contribution = self.get_object()
+        if contribution and contribution.parent:
+            return redirect(reverse_lazy("contributions:detail_view", args=[contribution.parent.id]))
+        return super().get(request, *args, **kwargs)
+
     def get_success_url(self):
         return reverse_lazy("contributions:detail_view", args=[self.kwargs.get("pk")])
 
@@ -66,6 +73,12 @@ class ContributionDetailReplyCreateView(ContributorUserRequiredMixin, SuccessMes
 
     def get_object(self):
         return get_object_or_404(Contribution, id=self.kwargs.get("pk"))
+
+    def get(self, request, *args, **kwargs):
+        contribution = self.get_object()
+        if contribution and contribution.parent:
+            return redirect(reverse_lazy("contributions:detail_view", args=[contribution.parent.id]))
+        return super().get(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

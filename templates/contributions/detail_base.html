@@ -21,6 +21,11 @@
 
 {% block content %}
 <div class="container">
+    {% if contribution.parent %}
+        <div class="alert alert-warning" role="status">
+            Cette contribution est une <strong>réponse</strong>. <a href="{% url 'contributions:detail_view' contribution.parent.id %}">Voir le message initial</a>.
+        </div>
+    {% endif %}
     <div class="row mb-3">
         <div class="col-12">
             <ul class="nav nav-tabs">
@@ -28,10 +33,10 @@
                     <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_view' contribution.id %}">Détails</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_edit' contribution.id %}">Modifier</a>
+                    <a class="nav-link {% if contribution.parent %}disabled{% endif %} {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_edit' contribution.id %}">Modifier</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'reply' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_reply_create' contribution.id %}">
+                    <a class="nav-link {% if contribution.parent %}disabled{% endif %} {% if 'reply' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_reply_create' contribution.id %}">
                         Réponse
                         {% if contribution.has_replies %}<span>✅</span>{% endif %}
                     </a>
