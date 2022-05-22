@@ -15,8 +15,8 @@ class ContributionModelTest(TestCase):
         cls.contribution_with_reply = ContributionFactory(
             text="un commentaire", type=constants.CONTRIBUTION_TYPE_COMMENT_APP
         )
-        cls.contribution_answer = ContributionFactory(
-            type=constants.CONTRIBUTION_TYPE_ANSWER, parent=cls.contribution_with_reply
+        cls.contribution_reply = ContributionFactory(
+            type=constants.CONTRIBUTION_TYPE_REPLY, parent=cls.contribution_with_reply
         )
         ContributionFactory(type=constants.CONTRIBUTION_TYPE_COMMENT_QUESTION, question=cls.question)
         ContributionFactory(type=constants.CONTRIBUTION_TYPE_COMMENT_QUIZ, quiz=cls.quiz)
@@ -27,7 +27,7 @@ class ContributionModelTest(TestCase):
 
     def test_has_replies(self):
         self.assertTrue(self.contribution_with_reply.has_replies)
-        self.assertFalse(self.contribution_answer.has_replies)
+        self.assertFalse(self.contribution_reply.has_replies)
 
 
 class ContributionModelQuerySetTest(TestCase):
@@ -36,13 +36,15 @@ class ContributionModelQuerySetTest(TestCase):
         cls.question = QuestionFactory()
         cls.quiz = QuizFactory()
         cls.contribution_with_reply = ContributionFactory(type=constants.CONTRIBUTION_TYPE_COMMENT_APP)
-        ContributionFactory(type=constants.CONTRIBUTION_TYPE_ANSWER, parent=cls.contribution_with_reply)
+        cls.contribution_reply = ContributionFactory(
+            type=constants.CONTRIBUTION_TYPE_REPLY, parent=cls.contribution_with_reply
+        )
         ContributionFactory(type=constants.CONTRIBUTION_TYPE_COMMENT_QUESTION, question=cls.question)
         ContributionFactory(type=constants.CONTRIBUTION_TYPE_COMMENT_QUIZ, quiz=cls.quiz)
         ContributionFactory(type=constants.CONTRIBUTION_TYPE_ERROR_APP)
 
-    def test_contributions_exclude_answers(self):
-        self.assertEqual(Contribution.objects.exclude_answers().count(), 4)
+    def test_contributions_exclude_replies(self):
+        self.assertEqual(Contribution.objects.exclude_replies().count(), 4)
 
     def test_contributions_exclude_errors(self):
         self.assertEqual(Contribution.objects.exclude_errors().count(), 4)

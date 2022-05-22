@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 choices=[
                     ("PENDING", "À traiter"),
                     ("PROCESSED", "Traité"),
-                    ("ANSWERED", "Répondu"),
+                    ("REPLIED", "Répondu"),
                     ("IGNORED", "Ignoré"),
                 ],
                 max_length=150,
@@ -36,7 +36,7 @@ class Migration(migrations.Migration):
                     ("COMMENT_APP", "Commentaire application"),
                     ("COMMENT_QUESTION", "Commentaire question"),
                     ("COMMENT_QUIZ", "Commentaire quiz"),
-                    ("ANSWER", "Réponse"),
+                    ("REPLY", "Réponse"),
                     ("ERROR_APP", "Erreur application"),
                 ],
                 max_length=150,

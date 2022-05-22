@@ -9,8 +9,8 @@ from quizs.models import Quiz
 
 
 class ContributionQuerySet(models.QuerySet):
-    def exclude_answers(self):
-        return self.exclude(type=constants.CONTRIBUTION_TYPE_ANSWER)
+    def exclude_replies(self):
+        return self.exclude(type=constants.CONTRIBUTION_TYPE_REPLY)
 
     def exclude_errors(self):
         return self.exclude(type=constants.CONTRIBUTION_TYPE_ERROR_APP)
@@ -76,3 +76,7 @@ class Contribution(models.Model):
     @property
     def has_replies(self) -> bool:
         return self.replies.exists()
+
+    @property
+    def processed(self) -> bool:
+        return self.status is not constants.CONTRIBUTION_STATUS_PENDING

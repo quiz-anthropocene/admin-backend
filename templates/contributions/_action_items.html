@@ -2,6 +2,8 @@
     <a href="{% url 'contributions:detail_edit' record.id %}">Modifier le statut</a>
     <br />
 {% endif %}
-<a href="{% url 'contributions:detail_view' record.id %}">Répondre</a>
-<br />
+{% if not record.has_replies %}
+    <a href="{% url 'contributions:detail_reply_create' record.id %}">Répondre</a>
+    <br />
+{% endif %}
 <a href="{% url 'contributions:detail_view' record.id %}">Voir</a>

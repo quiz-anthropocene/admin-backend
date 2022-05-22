@@ -19,6 +19,8 @@ class ContributionTable(tables.Table):
         linkify=lambda record: record.quiz.get_absolute_url(),
         attrs={"td": {"title": lambda record: record.quiz}},
     )
+    processed = tables.BooleanColumn(verbose_name="Traité", yesno="✅,❌")
+    has_replies = tables.BooleanColumn(verbose_name="Répondu", yesno="✅,❌")
     action = tables.TemplateColumn(
         verbose_name="Actions",
         template_name="contributions/_action_items.html",
