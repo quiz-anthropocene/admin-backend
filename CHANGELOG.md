@@ -6,6 +6,45 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Des pistes dans [README.md#idées](README.md#idées)
 
+## [2.2.0] - 2022-05
+
+Interface d'administration v2
+- Historisation du contenu avec `django-simple-history` (Questions, Quizs, Glossaire), page avec les dernières modifications
+- Pouvoir créer du contenu privé (Questions & Quizs), qui n'est pas exporté (ni visible dans l'API et les stats), modifiable seulement par l'auteur
+- Glossaire : liste des termes, voir les détails d'un terme, créer, modifier
+- Contributions : pouvoir changer le statut, pouvoir répondre
+- Users : roles utilisateurs, règles métier en fonction du rôle
+- Remplacer les Github Actions par le CRON de Scalingo
+- Monitoring des erreurs
+
+Code Github
+- Transfert vers l'organisation `quiz-anthropocene`
+- Split de la codebase `admin-backend` & `public-frontend`
+- Exporter la donnée vers le Frontend seulement si il y a eu des changements sur le contenu publique
+
+## [2.1.0] - 2022-04
+
+Interface d'administration v1
+- Header, Footer, Home, Breadcrumbs, pages d'erreur
+- Page de connexion, réinitialisation du mot de passe
+- Configuration email
+- Questions : liste des questions (avec filtres), voir les détails d'une questions, créer, modifier, contributions, statistiques basiques
+- Quizs : liste des quizs (avec filtres), voir les détails d'une questions, créer, modifier, contributions, statistiques basiques, liste des questions
+- Tags : liste des tags, liste des questions concernées, liste des quizs concernés, créer un tag, modifier un tag
+- Catégories : liste des catégories, liste des questions concernées, modifier une catégorie
+- Contributions : liste des contributions. Lien entre le modèle et Question/Quiz.
+- Users : page profil avec la liste de ses questions, de ses quizs. lien entre le modèle et Question/Quiz.
+
+## [2.0.0] - 2022-03
+
+Refonte de l'app Django
+- Django v4
+- Configuration : `flake8`, `black`, `isort`, `pre-commit`, `django-debug-toolbar`, `pyproject.toml`
+- API : cleanup, utilisation de filtres (`django-filters`), documentation (`drf-spectacular`)
+- Bouger les modèles dans leur propres apps, réinitialisation des migrations
+- Nouveau modèle `User`
+- Stats : nouveau modèle `QuizAggStat`. Ne plus supprimer `QuestionAnswerEvent` & `QuestionFeedbackEvent`. Perte de données des `QuizAnswerEvents` antérieurs à Mars 2022
+
 ## [1.3.0] - 2021
 
 - [Data] Ajout du champ `slug` aux Quiz
