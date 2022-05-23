@@ -53,7 +53,10 @@ class UserAdmin(UserAdmin):
         ),
         ("Dates", {"fields": ("last_login", "created", "updated")}),
     )
-    add_fieldsets = ((None, {"fields": ("first_name", "last_name", "email", "password1", "password2")}),)
+    add_fieldsets = (
+        (None, {"fields": ("first_name", "last_name", "email", "password1", "password2")}),
+        ("Permissions", {"fields": ("roles",)}),
+    )
 
 
 admin_site.register(User, UserAdmin)
