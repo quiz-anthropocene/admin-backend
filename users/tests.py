@@ -60,10 +60,10 @@ class UserModelRoleTest(TestCase):
         self.assertTrue(self.user_admin.has_role_super_contributor)
 
     def test_has_role_super_admin(self):
-        self.assertFalse(self.user.has_role_admin)
-        self.assertFalse(self.user_contributor.has_role_admin)
-        self.assertFalse(self.user_super_contributor.has_role_admin)
-        self.assertTrue(self.user_admin.has_role_admin)
+        self.assertFalse(self.user.has_role_administrator)
+        self.assertFalse(self.user_contributor.has_role_administrator)
+        self.assertFalse(self.user_super_contributor.has_role_administrator)
+        self.assertTrue(self.user_admin.has_role_administrator)
 
     def test_all_contributors(self):
         self.assertEqual(User.objects.all_contributors().count(), 2 + 2 + 3)

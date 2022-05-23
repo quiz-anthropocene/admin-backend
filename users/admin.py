@@ -31,13 +31,27 @@ class UserAdmin(UserAdmin):
         "first_name",
         "last_name",
         "email",
+        "is_contributor",
+        "is_super_contributor",
+        "is_administrator",
+        "last_login",
         "created",
     )
     list_filter = [RoleFilter, "is_staff"]
     search_fields = ["id", "first_name", "last_name", "email"]
     ordering = ["-created"]
 
-    readonly_fields = ["is_active", "is_staff", "is_superuser", "last_login", "created", "updated"]
+    readonly_fields = [
+        "is_active",
+        "is_contributor",
+        "is_super_contributor",
+        "is_administrator",
+        "is_staff",
+        "is_superuser",
+        "last_login",
+        "created",
+        "updated",
+    ]
     fieldsets = (
         (None, {"fields": ("first_name", "last_name", "email", "password")}),
         (
@@ -57,6 +71,21 @@ class UserAdmin(UserAdmin):
         (None, {"fields": ("first_name", "last_name", "email", "password1", "password2")}),
         ("Permissions", {"fields": ("roles",)}),
     )
+
+    def is_contributor(self, user) -> bool:
+        return "✅" if user.has_role_contributor else "❌"
+
+    is_contributor.short_description = "Contributeur ?"
+
+    def is_super_contributor(self, user) -> bool:
+        return "✅" if user.has_role_super_contributor else "❌"
+
+    is_super_contributor.short_description = "Super-Contributeur ?"
+
+    def is_administrator(self, user) -> bool:
+        return "✅" if user.has_role_administrator else "❌"
+
+    is_administrator.short_description = "Administrateur ?"
 
 
 admin_site.register(User, UserAdmin)

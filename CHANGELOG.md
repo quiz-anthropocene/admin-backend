@@ -4,7 +4,7 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 ## A venir
 
-Des pistes dans [README.md#idées](README.md#idées)
+Voir les [Issues](https://github.com/quiz-anthropocene/know-your-planet/issues) et le Board.
 
 ## [2.2.0] - 2022-05
 

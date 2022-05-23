@@ -159,7 +159,7 @@ class User(AbstractUser):
         return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
 
     @property
-    def has_role_admin(self) -> bool:
+    def has_role_administrator(self) -> bool:
         ROLES_ALLOWED = [constants.USER_ROLE_ADMINISTRATOR]
         return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
 
@@ -171,14 +171,14 @@ class User(AbstractUser):
     def can_validate_question(self, question) -> bool:
         if question.is_private:
             return question.author == self
-        return (question.author != self) and (self.has_role_admin)
+        return (question.author != self) and (self.has_role_administrator)
 
     def can_edit_quiz(self, quiz) -> bool:
         if quiz.is_private:
             return quiz.author == self
-        return (quiz.author == self) or (self.has_role_admin)
+        return (quiz.author == self) or (self.has_role_administrator)
 
     def can_publish_quiz(self, quiz) -> bool:
         if quiz.is_private:
             return quiz.author == self
-        return (quiz.author != self) and (self.has_role_admin)
+        return (quiz.author != self) and (self.has_role_administrator)

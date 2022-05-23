@@ -59,7 +59,7 @@ class AdministratorUserRequiredMixin(LoginRequiredUserPassesTestMixin):
 
     def test_func(self):
         user = self.request.user
-        return user.is_authenticated and user.has_role_admin
+        return user.is_authenticated and user.has_role_administrator
 
     def handle_no_permission(self):
         return HttpResponseRedirect(reverse_lazy("profile:home"))
