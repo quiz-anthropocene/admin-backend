@@ -61,3 +61,10 @@ class RichTextEllipsisColumn(tables.Column):
         if len(value) > 60:
             value = value[:54] + " (…)"
         return format_html(value)
+
+
+class RichTextLongerEllipsisColumn(tables.Column):
+    def render(self, value):
+        if len(value) > 300:
+            value = value[:294] + " (…)"
+        return format_html(value)

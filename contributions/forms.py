@@ -7,7 +7,7 @@ from core import constants
 CONTRIBUTION_STATUS_EDIT_FORM_FIELDS = [
     field.name for field in Contribution._meta.fields if field.name not in Contribution.CONTRIBUTION_READONLY_FIELDS
 ]
-CONTRIBUTION_REPLY_CREATE_FORM_FIELDS = ["parent", "text", "type", "author", "status"]
+CONTRIBUTION_REPLY_CREATE_FORM_FIELDS = ["type", "text", "author", "parent", "status"]
 
 
 class ContributionStatusEditForm(forms.ModelForm):
@@ -27,21 +27,26 @@ class ContributionStatusEditForm(forms.ModelForm):
 
 
 class ContributionReplyCreateForm(forms.ModelForm):
+    type = forms.ChoiceField(choices=constants.CONTRIBUTION_TYPE_REPLY_CHOICES, widget=forms.RadioSelect)
+
     class Meta:
         model = Contribution
         fields = CONTRIBUTION_REPLY_CREATE_FORM_FIELDS
+        widgets = {
+            "text": forms.Textarea(attrs={"rows": 3}),
+        }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # disable all fields except "text"
         for field_name in self.fields:
-            if field_name not in ["text"]:
+            if field_name not in ["text", "type"]:
                 self.fields[field_name].disabled = True
         # hide some fields (defaults)
-        for field_name in ["parent", "type", "status"]:
+        for field_name in ["parent", "status"]:
             self.fields[field_name].widget = forms.HiddenInput()
         # initial values
-        self.fields["type"].initial = constants.CONTRIBUTION_TYPE_REPLY
+        self.fields["type"].initial = constants.CONTRIBUTION_TYPE_COMMENT_CONTRIBUTOR
         self.fields["status"].initial = constants.CONTRIBUTION_STATUS_PROCESSED  # ?
-        self.fields["text"].label = "Réponse"
+        self.fields["text"].label = "Message"
         self.fields["text"].help_text = None

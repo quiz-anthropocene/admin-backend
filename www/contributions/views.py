@@ -23,7 +23,7 @@ class ContributionListView(ContributorUserRequiredMixin, SingleTableMixin, Filte
     def get_queryset(self):
         qs = super().get_queryset()
         qs = qs.prefetch_related("replies")
-        qs = qs.exclude_errors().exclude_replies().order_by("-created")
+        qs = qs.exclude_errors().exclude_contributor_work().order_by("-created")
         return qs
 
     def get_context_data(self, **kwargs):
@@ -69,6 +69,7 @@ class ContributionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMix
 class ContributionDetailReplyCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = ContributionReplyCreateForm
     template_name = "contributions/detail_reply_create.html"
+    success_message = "Votre message a été ajouté."
     # success_url = reverse_lazy("contributions:detail_view")
 
     def get_object(self):

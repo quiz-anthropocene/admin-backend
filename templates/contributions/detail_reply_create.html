@@ -6,7 +6,14 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <i>Message reçu le {{ contribution.created }}</i>
+                <div class="row">
+                    <div class="col">
+                        Message de <strong>{{ contribution.get_author }}</strong>
+                    </div>
+                    <div class="col text-end">
+                        <i title="{{ contribution.created }}">{{ contribution.created|timesince }}</i>
+                    </div>
+                </div>
             </div>
             <div class="card-body">
                 {{ contribution.text|linebreaks }}
@@ -19,40 +26,64 @@
 
 <div class="row">
     <div class="col-12">
-        {% if contribution.has_replies %}
-            {% for reply in contribution.replies.all %}
-                <div class="card">
-                    <div class="card-header">
-                        <i>Réponse de <strong>{{ reply.author }}</strong> le {{ reply.created }}</i>
-                    </div>
-                    <div class="card-body">
-                        {{ reply.text|linebreaks }}
+        {% for reply in contribution.replies.all %}
+            <div class="card {% if reply.type == 'REPLY' %}border-success{% else %}border-warning{% endif %}">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col">
+                            {{ reply.get_reply_type }} de <strong>{{ reply.get_author }}</strong>
+                        </div>
+                        <div class="col text-end">
+                            <i title="{{ reply.created }}">{{ reply.created|timesince }}</i>
+                        </div>
                     </div>
                 </div>
-            {% endfor %}
-        {% else %}
-            <form id="contribution_reply_create_form" method="POST" action="">
-                {% csrf_token %}
+                <div class="card-body">
+                    {{ reply.text|linebreaks }}
+                </div>
+            </div>
+            <br />
+        {% endfor %}
 
-                <div class="row">
-                    <div class="col-md-8">
-                        {% bootstrap_form form alert_error_type="all" %}
-                    </div>
+        <div class="card">
+            <div class="card-header">
+                <strong>Répondre à la contribution initiale, ou ajouter un commentaire</strong>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-warning" role="status">
+                    <strong>Commentaire ?</strong> Ca permet de garder une trace sur la façon dont a été traité la contribution.<br />
+                    <strong>Réponse ?</strong> 1 seule réponse possible. Pour l'instant ce contenu est seulement visible par les contributeurs,
+                    mais on pourrait à terme publier les contributions avec leur réponse (pour afficher des informations supplémentaires sous une question).
                 </div>
+                <form id="contribution_reply_create_form" method="POST" action="">
+                    {% csrf_token %}
 
-                <div class="row">
-                    <div class="col">
-                        {% bootstrap_button button_type="submit" button_class="btn-primary" content="Ajouter" %}
-                        {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
-                        <a href="{% url 'contributions:detail_view' contribution.id %}" class="btn btn-secondary">Annuler</a>
+                    <div class="row">
+                        <div class="col-md-8">
+                            {% bootstrap_form form alert_error_type="all" %}
+                        </div>
                     </div>
-                </div>
-            </form>
-        {% endif %}
+
+                    <div class="row">
+                        <div class="col">
+                            {% bootstrap_button button_type="submit" button_class="btn-primary" content="Ajouter" %}
+                            {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
+                            <a href="{% url 'contributions:detail_view' contribution.id %}" class="btn btn-secondary">Annuler</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
 
 {% block extra_js %}
 {{ form.media.js }}
+{% if contribution.has_replies_reply %}
+<script type="text/javascript">
+    console.log(document.getElementById("id_type_1"))
+    document.getElementById("id_type_1").disabled = true;
+</script>
+{% endif %}
 {% endblock %}

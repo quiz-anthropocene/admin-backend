@@ -39,12 +39,24 @@ class ContributionModelQuerySetTest(TestCase):
         cls.contribution_reply = ContributionFactory(
             type=constants.CONTRIBUTION_TYPE_REPLY, parent=cls.contribution_with_reply
         )
+        cls.contribution_reply = ContributionFactory(
+            type=constants.CONTRIBUTION_TYPE_COMMENT_CONTRIBUTOR, parent=cls.contribution_with_reply
+        )
         ContributionFactory(type=constants.CONTRIBUTION_TYPE_COMMENT_QUESTION, question=cls.question)
         ContributionFactory(type=constants.CONTRIBUTION_TYPE_COMMENT_QUIZ, quiz=cls.quiz)
         ContributionFactory(type=constants.CONTRIBUTION_TYPE_ERROR_APP)
 
+    def test_contributions_count(self):
+        self.assertEqual(Contribution.objects.count(), 6)
+
     def test_contributions_exclude_replies(self):
-        self.assertEqual(Contribution.objects.exclude_replies().count(), 4)
+        self.assertEqual(Contribution.objects.exclude_replies().count(), 6 - 1)
+
+    def test_contributions_exclude_contributor_comments(self):
+        self.assertEqual(Contribution.objects.exclude_contributor_comments().count(), 6 - 1)
+
+    def test_contributions_exclude_contributor_work(self):
+        self.assertEqual(Contribution.objects.exclude_contributor_work().count(), 6 - 2)
 
     def test_contributions_exclude_errors(self):
-        self.assertEqual(Contribution.objects.exclude_errors().count(), 4)
+        self.assertEqual(Contribution.objects.exclude_errors().count(), 6 - 1)

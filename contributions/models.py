@@ -9,8 +9,17 @@ from quizs.models import Quiz
 
 
 class ContributionQuerySet(models.QuerySet):
+    def exclude_contributor_comments(self):
+        return self.exclude(type=constants.CONTRIBUTION_TYPE_COMMENT_CONTRIBUTOR)
+
     def exclude_replies(self):
         return self.exclude(type=constants.CONTRIBUTION_TYPE_REPLY)
+
+    def exclude_contributor_work(self):
+        return self.exclude_contributor_comments().exclude_replies()
+
+    def only_replies(self):
+        return self.filter(type=constants.CONTRIBUTION_TYPE_REPLY)
 
     def exclude_errors(self):
         return self.exclude(type=constants.CONTRIBUTION_TYPE_ERROR_APP)
@@ -74,9 +83,24 @@ class Contribution(models.Model):
         return f"{self.text}"
 
     @property
+    def get_author(self) -> str:
+        return self.author or "Utilisateur anonyme"
+
+    def get_reply_type(self) -> str:
+        return self.get_type_display().replace(" contributeur", "")
+
+    @property
     def has_replies(self) -> bool:
         return self.replies.exists()
 
     @property
-    def processed(self) -> bool:
-        return self.status is not constants.CONTRIBUTION_STATUS_PENDING
+    def has_replies_reply(self) -> bool:
+        return self.replies.only_replies().exists()
+
+    @property
+    def processed(self) -> str:
+        if self.status == constants.CONTRIBUTION_STATUS_NEW:
+            return "❌"
+        if self.status == constants.CONTRIBUTION_STATUS_PENDING:
+            return "📝"
+        return "✅"

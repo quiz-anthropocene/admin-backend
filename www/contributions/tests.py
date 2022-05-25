@@ -113,7 +113,7 @@ class ContributionReplyCreateViewTest(TestCase):
     def test_contributor_can_create_reply_to_contribution(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
         url = reverse("contributions:detail_reply_create", args=[self.contribution.id])
-        response = self.client.post(url, data={"text": "Une réponse"})
+        response = self.client.post(url, data={"text": "Une réponse", "type": constants.CONTRIBUTION_TYPE_REPLY})
         self.assertEqual(response.status_code, 302)  # 201
         self.assertEqual(Contribution.objects.count(), 3 + 1)
         self.assertTrue(Contribution.objects.get(id=self.contribution.id).has_replies)
