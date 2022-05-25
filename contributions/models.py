@@ -9,8 +9,14 @@ from quizs.models import Quiz
 
 
 class ContributionQuerySet(models.QuerySet):
+    def exclude_contributor_comments(self):
+        return self.exclude(type=constants.CONTRIBUTION_TYPE_COMMENT_CONTRIBUTOR)
+
     def exclude_replies(self):
         return self.exclude(type=constants.CONTRIBUTION_TYPE_REPLY)
+
+    def exclude_contributor_work(self):
+        return self.exclude_contributor_comments().exclude_replies()
 
     def exclude_errors(self):
         return self.exclude(type=constants.CONTRIBUTION_TYPE_ERROR_APP)
