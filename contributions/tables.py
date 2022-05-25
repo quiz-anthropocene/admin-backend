@@ -19,7 +19,7 @@ class ContributionTable(tables.Table):
         linkify=lambda record: record.quiz.get_absolute_url(),
         attrs={"td": {"title": lambda record: record.quiz}},
     )
-    processed = tables.BooleanColumn(verbose_name="Traité", yesno="✅,❌")
+    processed = tables.BooleanColumn(verbose_name="Traité", yesno="✅,❌")  # what about "pending"? 📝
     has_replies = tables.BooleanColumn(verbose_name="Répondu", yesno="✅,❌")
     action = tables.TemplateColumn(
         verbose_name="Actions",
