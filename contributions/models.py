@@ -79,4 +79,4 @@ class Contribution(models.Model):
 
     @property
     def processed(self) -> bool:
-        return self.status is not constants.CONTRIBUTION_STATUS_PENDING
+        return self.status != constants.CONTRIBUTION_STATUS_NEW
