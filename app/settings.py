@@ -255,6 +255,19 @@ if not DEBUG:
     )
 
 
+# Object storage : Scaleway (S3-like)
+# ------------------------------------------------------------------------------
+
+S3_ENDPOINT = os.getenv("S3_ENDPOINT")
+S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME")
+S3_BUCKET_REGION = os.getenv("S3_BUCKET_REGION")
+S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY")
+S3_SECRET_KEY = os.getenv("S3_SECRET_KEY")
+
+QUESTION_FOLDER_NAME = "questions"
+QUIZ_FOLDER_NAME = "quizs"
+
+
 # Django Bootstrap5
 # https://django-bootstrap5.readthedocs.io/
 # ------------------------------------------------------------------------------
@@ -318,7 +331,7 @@ SHELL_PLUS_IMPORTS = [
     "import csv, json, yaml",
     "from datetime import datetime, date, timedelta",
     "from core import constants",
-    "from core.utils import utilities, notion, github, sendinblue",
+    "from core.utils import utilities, notion, github, sendinblue, s3",
     "from stats import utilities as utilities_stats",
 ]
 
