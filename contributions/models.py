@@ -98,5 +98,9 @@ class Contribution(models.Model):
         return self.replies.only_replies().exists()
 
     @property
-    def processed(self) -> bool:
-        return self.status != constants.CONTRIBUTION_STATUS_NEW
+    def processed(self) -> str:
+        if self.status == constants.CONTRIBUTION_STATUS_NEW:
+            return "❌"
+        if self.status == constants.CONTRIBUTION_STATUS_PENDING:
+            return "📝"
+        return "✅"
