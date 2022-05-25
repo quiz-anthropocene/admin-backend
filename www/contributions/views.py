@@ -69,6 +69,7 @@ class ContributionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMix
 class ContributionDetailReplyCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = ContributionReplyCreateForm
     template_name = "contributions/detail_reply_create.html"
+    success_message = "Votre message a été ajouté."
     # success_url = reverse_lazy("contributions:detail_view")
 
     def get_object(self):

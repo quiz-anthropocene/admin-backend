@@ -20,7 +20,7 @@ class ContributionTable(tables.Table):
         attrs={"td": {"title": lambda record: record.quiz}},
     )
     processed = tables.BooleanColumn(verbose_name="Traité", yesno="✅,❌")  # what about "pending"? 📝
-    has_replies = tables.BooleanColumn(verbose_name="Répondu", yesno="✅,❌")
+    # has_replies = tables.BooleanColumn(verbose_name="Répondu", yesno="✅,❌")
     action = tables.TemplateColumn(
         verbose_name="Actions",
         template_name="contributions/_action_items.html",

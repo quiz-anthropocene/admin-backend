@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                     ("COMMENT_QUESTION", "Commentaire question"),
                     ("COMMENT_QUIZ", "Commentaire quiz"),
                     ("COMMENT_CONTRIBUTOR", "Commentaire contributeur"),
-                    ("REPLY", "Réponse"),
+                    ("REPLY", "Réponse contributeur"),
                     ("ERROR_APP", "Erreur application"),
                 ],
                 max_length=150,
