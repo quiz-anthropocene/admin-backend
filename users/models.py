@@ -1,9 +1,13 @@
+from django.conf import settings
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.db.models import Exists, OuterRef, Q
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 from core.fields import ChoiceArrayField
+from core.utils import sendinblue
 from questions.models import Question
 from quizs.models import Quiz
 from users import constants
@@ -182,3 +186,10 @@ class User(AbstractUser):
         if quiz.is_private:
             return quiz.author == self
         return (quiz.author != self) and (self.has_role_administrator)
+
+
+@receiver(post_save, sender=User)
+def user_post_save(sender, instance, created, **kwargs):
+    if created:
+        if instance.has_role_contributor:
+            sendinblue.add_to_contact_list(instance, list_id=settings.SIB_CONTRIBUTOR_LIST_ID)

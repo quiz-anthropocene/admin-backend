@@ -235,8 +235,10 @@ DEFAULT_FROM_NAME = "Quiz de l'Anthropocène"
 SERVER_EMAIL = os.getenv("TECH_EMAIL")
 ADMINS = os.getenv("ADMINS")
 
+SIB_CONTRIBUTOR_LIST_ID = os.getenv("SIB_CONTRIBUTOR_LIST_ID")
 SIB_NEWSLETTER_LIST_ID = os.getenv("SIB_NEWSLETTER_LIST_ID")
 SIB_NEWSLETTER_DOI_TEMPLATE_ID = os.getenv("SIB_NEWSLETTER_DOI_TEMPLATE_ID")
+SIB_CONTACT_ENDPOINT = "https://api.sendinblue.com/v3/contacts"
 SIB_CONTACT_DOI_ENDPOINT = "https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation"
 
 

@@ -6,17 +6,41 @@ from django.conf import settings
 from core.models import Configuration
 
 
-def newsletter_registration(email):
-    configuration = Configuration.get_solo()
+HEADERS = {
+    "accept": "application/json",
+    "content-type": "application/json",
+    "api-key": settings.SIB_API_KEY,
+}
 
-    headers = {
-        "accept": "application/json",
-        "content-type": "application/json",
-        "api-key": settings.SIB_API_KEY,
+
+def add_to_contact_list(user, list_id=settings.SIB_CONTRIBUTOR_LIST_ID, extra_attributes=dict()):
+    data = {
+        "email": user.email,
+        "listIds": [int(list_id)],
+        "updateEnabled": True,
     }
 
+    attributes = dict()
+    if user.first_name:
+        attributes["FIRSTNAME"] = user.first_name
+    if user.last_name:
+        attributes["LASTNAME"] = user.last_name
+    if extra_attributes:
+        attributes = {**attributes, **extra_attributes}
+    data["attributes"] = attributes
+
+    return requests.post(settings.SIB_CONTACT_ENDPOINT, headers=HEADERS, data=json.dumps(data))
+
+
+def newsletter_registration(user_email):
+    """
+    Use Double-Opt-In Flow
+    https://developers.sendinblue.com/reference/createdoicontact
+    """
+    configuration = Configuration.get_solo()
+
     data = {
-        "email": email,
+        "email": user_email,
         # "attributes": {
         #     "FIRSTNAME": "",
         #     "LASTNAME": ""
@@ -27,4 +51,4 @@ def newsletter_registration(email):
         "updateEnabled": True,
     }
 
-    return requests.post(settings.SIB_CONTACT_DOI_ENDPOINT, headers=headers, data=json.dumps(data))
+    return requests.post(settings.SIB_CONTACT_DOI_ENDPOINT, headers=HEADERS, data=json.dumps(data))
