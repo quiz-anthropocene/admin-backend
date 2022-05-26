@@ -1,7 +1,7 @@
 {% load get_verbose_name %}
 
 {% if record.history_type != "+" %}
-    <ul>
+    <ul class="mb-0">
         {% for field in record.history_changed_fields %}
             <li>{% get_verbose_name record.object_model field %}</li>
         {% endfor %}

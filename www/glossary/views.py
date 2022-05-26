@@ -11,6 +11,7 @@ from core.mixins import ContributorUserRequiredMixin
 from glossary.forms import GLOSSARY_ITEM_FORM_FIELDS, GlossaryItemCreateForm, GlossaryItemEditForm
 from glossary.models import GlossaryItem
 from glossary.tables import GlossaryTable
+from history.utilities import get_diff_between_two_history_records
 
 
 class GlossaryListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
@@ -60,10 +61,11 @@ class GlossaryItemDetailHistoryView(ContributorUserRequiredMixin, DetailView):
         context["glossary_item_history_delta"] = list()
         for record in context["glossary_item_history"]:
             new_record = record
-            old_record = record.prev_record
-            if old_record:
-                delta = new_record.diff_against(old_record, excluded_fields=[])
-                context["glossary_item_history_delta"].append(delta.changes)
+            if new_record.prev_record:
+                delta_changes = get_diff_between_two_history_records(
+                    new_record, old_record=new_record.prev_record, returns="changes"
+                )
+                context["glossary_item_history_delta"].append(delta_changes)
             else:
                 # probably a create action
                 # we create the diff ourselves because there isn't any previous record

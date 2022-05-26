@@ -1,8 +1,4 @@
 from django import template
-
-# from questions.models import Question
-# from quizs.models import Quiz
-# from glossary.models import GlossaryItem
 from django.apps import apps
 
 

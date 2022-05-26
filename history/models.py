@@ -3,6 +3,8 @@ from django.db import models
 from django.dispatch import receiver
 from simple_history.signals import post_create_historical_record
 
+from history.utilities import get_diff_between_two_history_records
+
 
 HISTORY_CHANGED_FIELDS_TO_IGNORE = [
     # model
@@ -13,6 +15,9 @@ HISTORY_CHANGED_FIELDS_TO_IGNORE = [
     "history_id",
     "history_date",
     "history_type",
+    "history_change_reason",
+    "history_user_id",
+    "history_changed_fields",
 ]
 
 
@@ -31,8 +36,9 @@ def post_create_historical_record_callback(sender, **kwargs):
     history_instance = kwargs["history_instance"]
     # update action
     if history_instance.prev_record:
-        delta = history_instance.diff_against(history_instance.prev_record)
-        changed_fields = delta.changed_fields
+        changed_fields = get_diff_between_two_history_records(
+            history_instance, old_record=history_instance.prev_record, returns="changed_fields"
+        )
     # create action (most likely) : create list manually
     else:
         model_fields = [
