@@ -13,6 +13,7 @@ from api.questions.serializers import QuestionFullStringSerializer
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from core.mixins import ContributorUserRequiredMixin
+from history.utilities import get_diff_between_two_history_records
 from questions.filters import QuestionFilter
 from questions.forms import QUESTION_FORM_FIELDS, QuestionCreateForm, QuestionEditForm
 from questions.models import Question
@@ -148,10 +149,14 @@ class QuestionDetailHistoryView(ContributorUserRequiredMixin, DetailView):
         context["question_history_delta"] = list()
         for record in context["question_history"]:
             new_record = record
-            old_record = record.prev_record
-            if old_record:
-                delta = new_record.diff_against(old_record, excluded_fields=Question.QUESTION_RELATION_FIELDS)
-                context["question_history_delta"].append(delta.changes)
+            if new_record.prev_record:
+                delta_changes = get_diff_between_two_history_records(
+                    new_record,
+                    old_record=new_record.prev_record,
+                    excluded_fields=Question.QUESTION_RELATION_FIELDS,
+                    returns="changes",
+                )
+                context["question_history_delta"].append(delta_changes)
             else:
                 # probably a create action
                 # we create the diff ourselves because there isn't any previous record

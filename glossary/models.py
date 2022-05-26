@@ -2,6 +2,8 @@ from django.db import models
 from django.urls import reverse
 from simple_history.models import HistoricalRecords
 
+from history.models import HistoryChangedFieldsAbstractModel
+
 
 class GlossaryItem(models.Model):
     GLOSSARY_URL_FIELDS = ["description_accessible_url"]
@@ -16,7 +18,7 @@ class GlossaryItem(models.Model):
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
-    history = HistoricalRecords()
+    history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
 
     class Meta:
         ordering = ["name"]

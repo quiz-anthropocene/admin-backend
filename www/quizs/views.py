@@ -12,6 +12,7 @@ from api.quizs.serializers import QuizWithQuestionFullStringSerializer
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from core.mixins import ContributorUserRequiredMixin
+from history.utilities import get_diff_between_two_history_records
 from quizs.filters import QuizFilter
 from quizs.forms import QUIZ_FORM_FIELDS, QuizCreateForm, QuizEditForm, QuizQuestionFormSet
 from quizs.models import Quiz
@@ -171,10 +172,14 @@ class QuizDetailHistoryView(ContributorUserRequiredMixin, DetailView):
         context["quiz_history_delta"] = list()
         for record in context["quiz_history"]:
             new_record = record
-            old_record = record.prev_record
-            if old_record:
-                delta = new_record.diff_against(old_record, excluded_fields=Quiz.QUIZ_RELATION_FIELDS)
-                context["quiz_history_delta"].append(delta.changes)
+            if new_record.prev_record:
+                delta_changes = get_diff_between_two_history_records(
+                    new_record,
+                    old_record=new_record.prev_record,
+                    excluded_fields=Quiz.QUIZ_RELATION_FIELDS,
+                    returns="changes",
+                )
+                context["question_history_delta"].append(delta_changes)
             else:
                 delta_fields = QUIZ_FORM_FIELDS + Quiz.QUIZ_FLATTEN_FIELDS
                 delta_new = [{"field": k, "new": v} for k, v in record.__dict__.items() if k in delta_fields if v]

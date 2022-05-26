@@ -9,6 +9,10 @@ from users import constants as user_constants
 from users.models import User
 
 
+DEFAULT_TEMPLATE = "django_tables2/bootstrap4.html"
+DEFAULT_ATTRS = {"class": "table-responsive table-striped table-bordered border-primary font-size-small"}
+
+
 class ChoiceColumn(tables.Column):
     def render(self, value, record, bound_column):
         value_title = value

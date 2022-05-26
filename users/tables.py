@@ -1,6 +1,6 @@
 import django_tables2 as tables
 
-from core.tables import ArrayColumn
+from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, ArrayColumn
 from users.models import User
 
 
@@ -12,5 +12,5 @@ class ContributorTable(tables.Table):
     class Meta:
         model = User
         fields = ["first_name", "last_name", "email", "question_count", "quiz_count", "roles", "last_login", "created"]
-        template_name = "django_tables2/bootstrap4.html"
-        attrs = {"class": "table-responsive table-striped table-bordered border-primary font-size-small"}
+        template_name = DEFAULT_TEMPLATE
+        attrs = DEFAULT_ATTRS

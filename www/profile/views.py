@@ -6,6 +6,8 @@ from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
 from core.mixins import AdministratorUserRequiredMixin, ContributorUserRequiredMixin
+from glossary.models import GlossaryItem
+from history.tables import HistoryTable
 from questions.filters import QuestionFilter
 from questions.models import Question
 from questions.tables import QuestionTable
@@ -87,12 +89,13 @@ class ProfileHistoryListView(ContributorUserRequiredMixin, TemplateView):
         context = super().get_context_data(**kwargs)
         question_quiz_history = list(
             chain(
-                Question.history.annotate(history_model=Value("Question")).filter(history_user=self.request.user),
-                Quiz.history.annotate(history_model=Value("Quiz")).filter(history_user=self.request.user),
+                Question.history.annotate(object_model=Value("Question")).filter(history_user=self.request.user),
+                Quiz.history.annotate(object_model=Value("Quiz")).filter(history_user=self.request.user),
+                GlossaryItem.history.annotate(object_model=Value("Glossaire")).filter(history_user=self.request.user),
             )
         )
         question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)
-        context["question_quiz_history"] = question_quiz_history[:50]
+        context["table"] = HistoryTable(question_quiz_history[:50])  # TODO: pagination ?
         return context
 
 
@@ -122,10 +125,11 @@ class ProfileAdminHistoryListView(AdministratorUserRequiredMixin, TemplateView):
         context = super().get_context_data(**kwargs)
         question_quiz_history = list(
             chain(
-                Question.history.annotate(history_model=Value("Question")).all(),
-                Quiz.history.annotate(history_model=Value("Quiz")).all(),
+                Question.history.annotate(object_model=Value("Question")).all(),
+                Quiz.history.annotate(object_model=Value("Quiz")).all(),
+                GlossaryItem.history.annotate(object_model=Value("Glossaire")).all(),
             )
         )
         question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)
-        context["question_quiz_history"] = question_quiz_history[:50]
+        context["table"] = HistoryTable(question_quiz_history[:50])  # TODO: pagination ?
         return context

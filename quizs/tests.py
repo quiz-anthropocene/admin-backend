@@ -118,6 +118,7 @@ class QuizModelHistoryTest(TestCase):
         self.assertEqual(update_history_item.history_type, "~")
         self.assertEqual(update_history_item.name, self.quiz.name)
         self.assertEqual(len(update_history_item.tag_list), 2)
+        self.assertEqual(update_history_item.history_changed_fields, ["tag_list"])
 
     def test_history_object_created_on_save(self):
         self.quiz.publish = True
@@ -125,6 +126,7 @@ class QuizModelHistoryTest(TestCase):
         self.assertEqual(self.quiz.history.count(), 2 + 1)
         update_history_item = self.quiz.history.first()
         self.assertEqual(update_history_item.history_type, "~")
+        self.assertEqual(update_history_item.history_changed_fields, ["publish"])
 
     def test_history_diff(self):
         self.quiz.name = "Le vrai nom"
@@ -140,6 +142,7 @@ class QuizModelHistoryTest(TestCase):
         delta_change_fields = [change.field for change in delta.changes]
         for field in CHANGE_FIELDS:
             self.assertTrue(field in delta_change_fields)
+            self.assertTrue(field in update_history_item.history_changed_fields)
 
 
 class QuizModelQuerySetTest(TestCase):

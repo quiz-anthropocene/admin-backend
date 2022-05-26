@@ -11,6 +11,7 @@ from django.utils.text import slugify
 from simple_history.models import HistoricalRecords
 
 from core import constants
+from history.models import HistoryChangedFieldsAbstractModel
 from questions.models import Question
 from tags.models import Tag
 
@@ -123,7 +124,7 @@ class Quiz(models.Model):
     )
     author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
 
-    history = HistoricalRecords()
+    history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
 
     objects = QuizQuerySet.as_manager()
 

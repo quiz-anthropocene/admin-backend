@@ -18,7 +18,7 @@
                     {% for record in quiz_history %}
                         <tr>
                             <td>{{ record.history_date }}</td>
-                            <td>{{ record.history_user }}</td>
+                            <td>{{ record.history_user|default:"—" }}</td>
                             <td>{{ record.get_history_type_display }}</td>
                             <td>
                                 <ul class="mb-0">
