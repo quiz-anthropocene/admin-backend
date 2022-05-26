@@ -13,13 +13,22 @@ HEADERS = {
 }
 
 
-def add_to_contact_list(user_email, list_id=settings.SIB_CONTRIBUTOR_LIST_ID, attributes=dict()):
+def add_to_contact_list(user, list_id=settings.SIB_CONTRIBUTOR_LIST_ID, extra_attributes=dict()):
     data = {
-        "email": user_email,
+        "email": user.email,
         "listIds": [int(list_id)],
-        "attributes": attributes,  # FIRSTNAME, LASTNAME
         "updateEnabled": True,
     }
+
+    attributes = dict()
+    if user.first_name:
+        attributes["FIRSTNAME"] = user.first_name
+    if user.last_name:
+        attributes["LASTNAME"] = user.last_name
+    if extra_attributes:
+        attributes = {**attributes, **extra_attributes}
+    data["attributes"] = attributes
+
     return requests.post(settings.SIB_CONTACT_ENDPOINT, headers=HEADERS, data=json.dumps(data))
 
 
