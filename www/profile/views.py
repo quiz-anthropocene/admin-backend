@@ -6,8 +6,8 @@ from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
 from core.mixins import AdministratorUserRequiredMixin, ContributorUserRequiredMixin
-from core.tables import HistoryTable
 from glossary.models import GlossaryItem
+from history.tables import HistoryTable
 from questions.filters import QuestionFilter
 from questions.models import Question
 from questions.tables import QuestionTable
