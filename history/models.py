@@ -38,6 +38,7 @@ class HistoryChangedFieldsAbstractModel(models.Model):
 @receiver(post_create_historical_record)
 def post_create_historical_record_callback(sender, **kwargs):
     history_instance = kwargs["history_instance"]
+    MODEL_FIELDS = [field.name for field in sender._meta.fields]
     # update action
     if history_instance.prev_record:
         changed_fields = get_diff_between_two_history_records(
@@ -45,12 +46,12 @@ def post_create_historical_record_callback(sender, **kwargs):
         )
     # create action (most likely) : create list manually
     else:
-        model_fields = [field.name for field in sender._meta.fields if field.name]
-        changed_fields = [k for k, v in history_instance.__dict__.items() if k in model_fields if v]
+        changed_fields = [k for k, v in history_instance.__dict__.items() if k in MODEL_FIELDS if v]
     # cleanup changed_fields
     changed_fields_cleaned = [
         field_name for field_name in changed_fields if field_name not in HISTORY_CHANGED_FIELDS_TO_IGNORE
     ]
+    changed_fields_ordered = [field_name for field_name in MODEL_FIELDS if field_name in changed_fields_cleaned]
     # assign & save
-    history_instance.history_changed_fields = changed_fields_cleaned
+    history_instance.history_changed_fields = changed_fields_ordered
     history_instance.save()

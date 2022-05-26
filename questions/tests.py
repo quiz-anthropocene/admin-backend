@@ -88,7 +88,9 @@ class QuestionModelHistoryTest(TestCase):
         cls.tag_1 = TagFactory(name="Tag 1")
         cls.tag_2 = TagFactory(name="Another tag")
         cls.tag_3 = TagFactory(name="Tag 3")
-        cls.question = QuestionFactory(text="Test", validation_status=constants.QUESTION_VALIDATION_STATUS_NEW)
+        cls.question = QuestionFactory(
+            text="Test", category=cls.category_1, validation_status=constants.QUESTION_VALIDATION_STATUS_NEW
+        )
         cls.question.tags.set([cls.tag_1, cls.tag_2])
 
     def test_history_object_on_create(self):
@@ -96,6 +98,20 @@ class QuestionModelHistoryTest(TestCase):
         create_history_item = self.question.history.last()
         self.assertEqual(create_history_item.history_type, "+")
         self.assertEqual(create_history_item.text, self.question.text)
+        CHANGE_FIELDS = [
+            "text",
+            "type",
+            "difficulty",
+            "language",
+            "answer_option_a",
+            "answer_option_b",
+            "answer_correct",
+            "has_ordered_answers",
+            "validation_status",
+            "visibility",
+        ]  # "category"
+        for field in CHANGE_FIELDS:
+            self.assertTrue(field in create_history_item.history_changed_fields)
         self.assertEqual(len(create_history_item.tag_list), 0)
         update_history_item = self.question.history.first()
         self.assertEqual(update_history_item.history_type, "~")
@@ -104,13 +120,17 @@ class QuestionModelHistoryTest(TestCase):
         self.assertEqual(update_history_item.history_changed_fields, ["tag_list"])
 
     def test_history_object_created_on_save(self):
+        self.question.answer_option_a = "réponse A"
+        self.question.answer_option_b = "réponse B"
         self.question.category = self.category_2
         self.question.save()
         self.assertEqual(self.question.history.count(), 2 + 1)
         update_history_item = self.question.history.first()
         self.assertEqual(update_history_item.history_type, "~")
         self.assertEqual(update_history_item.category_string, self.category_2.name)
-        self.assertEqual(update_history_item.history_changed_fields, ["category"])
+        self.assertEqual(
+            update_history_item.history_changed_fields, ["answer_option_a", "answer_option_b", "category"]
+        )
 
     def test_history_diff(self):
         self.question.text = "La vraie question"
