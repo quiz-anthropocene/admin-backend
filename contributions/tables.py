@@ -1,7 +1,7 @@
 import django_tables2 as tables
 
 from contributions.models import Contribution
-from core.tables import ChoiceColumn, RichTextLongerEllipsisColumn
+from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, ChoiceColumn, RichTextLongerEllipsisColumn
 
 
 class ContributionTable(tables.Table):
@@ -29,6 +29,6 @@ class ContributionTable(tables.Table):
 
     class Meta:
         model = Contribution
-        template_name = "django_tables2/bootstrap4.html"
+        template_name = DEFAULT_TEMPLATE
         fields = ["type", "text", "question", "quiz", "status", "created"]  # id, description
-        attrs = {"class": "table-responsive table-striped table-bordered border-primary font-size-small"}
+        attrs = DEFAULT_ATTRS

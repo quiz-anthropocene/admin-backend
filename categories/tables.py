@@ -2,7 +2,7 @@ import django_tables2 as tables
 from django.db.models import Count
 
 from categories.models import Category
-from core.tables import RichTextColumn
+from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, RichTextColumn
 
 
 CATEGORY_FIELD_SEQUENCE = [field.name for field in Category._meta.fields]
@@ -17,8 +17,8 @@ class CategoryTable(tables.Table):
     class Meta:
         model = Category
         sequence = CATEGORY_FIELD_SEQUENCE
-        template_name = "django_tables2/bootstrap4.html"
-        attrs = {"class": "table-responsive table-striped table-bordered border-primary font-size-small"}
+        template_name = DEFAULT_TEMPLATE
+        attrs = DEFAULT_ATTRS
 
     def __init__(self, *args, **kwargs):
         for field_name in Category.CATEGORY_TIMESTAMP_FIELDS:

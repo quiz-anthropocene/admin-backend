@@ -9,6 +9,28 @@ from users import constants as user_constants
 from users.models import User
 
 
+DEFAULT_TEMPLATE = "django_tables2/bootstrap4.html"
+DEFAULT_ATTRS = {"class": "table-responsive table-striped table-bordered border-primary font-size-small"}
+
+
+class HistoryTable(tables.Table):
+    history_date = tables.DateTimeColumn(verbose_name="Date")
+    history_user = tables.Column(verbose_name="Auteur")
+    model = tables.Column(verbose_name="Type")
+    # object_id = tables.Column(verbose_name="ID", accessor="id")
+    object_id = tables.TemplateColumn(
+        verbose_name="ID",
+        template_name="includes/_table_id_link.html",
+    )
+    history_type = tables.Column(verbose_name="Action")
+    # history_id = tables.Column()
+    # history_change_reason =
+
+    class Meta:
+        template_name = DEFAULT_TEMPLATE
+        attrs = DEFAULT_ATTRS
+
+
 class ChoiceColumn(tables.Column):
     def render(self, value, record, bound_column):
         value_title = value

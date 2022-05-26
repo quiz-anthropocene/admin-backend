@@ -1,7 +1,7 @@
 import django_tables2 as tables
 from django.utils.html import format_html
 
-from core.tables import ChoiceColumn, ImageColumn, RichTextEllipsisColumn
+from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, ChoiceColumn, ImageColumn, RichTextEllipsisColumn
 from questions.models import Question
 
 
@@ -33,8 +33,8 @@ class QuestionTable(tables.Table):
     class Meta:
         model = Question
         sequence = QUESTION_FIELD_SEQUENCE
-        template_name = "django_tables2/bootstrap4.html"
-        attrs = {"class": "table-responsive table-striped table-bordered border-primary font-size-small"}
+        template_name = DEFAULT_TEMPLATE
+        attrs = DEFAULT_ATTRS
 
     def __init__(self, *args, **kwargs):
         for field_name in Question.QUESTION_CHOICE_FIELDS + Question.QUESTION_FK_FIELDS:
