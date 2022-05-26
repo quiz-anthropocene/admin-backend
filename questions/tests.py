@@ -101,6 +101,7 @@ class QuestionModelHistoryTest(TestCase):
         self.assertEqual(update_history_item.history_type, "~")
         self.assertEqual(update_history_item.text, self.question.text)
         self.assertEqual(len(update_history_item.tag_list), 2)
+        self.assertEqual(update_history_item.history_changed_fields, ["tag_list"])
 
     def test_history_object_created_on_save(self):
         self.question.category = self.category_2
@@ -109,6 +110,7 @@ class QuestionModelHistoryTest(TestCase):
         update_history_item = self.question.history.first()
         self.assertEqual(update_history_item.history_type, "~")
         self.assertEqual(update_history_item.category_string, self.category_2.name)
+        self.assertEqual(update_history_item.history_changed_fields, ["category"])
 
     def test_history_diff(self):
         self.question.text = "La vraie question"
@@ -124,6 +126,8 @@ class QuestionModelHistoryTest(TestCase):
         delta_change_fields = [change.field for change in delta.changes]
         for field in CHANGE_FIELDS:
             self.assertTrue(field in delta_change_fields)
+        for field in ["text", "validation_status", "category"]:  # "category_string" ignored
+            self.assertTrue(field in update_history_item.history_changed_fields)
 
 
 class QuestionModelQuerySetTest(TestCase):

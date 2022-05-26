@@ -7,10 +7,14 @@ from history.utilities import get_diff_between_two_history_records
 
 
 HISTORY_CHANGED_FIELDS_TO_IGNORE = [
-    # model
+    # all models
     "id",
     "created",
     "updated",
+    # flatten FK
+    "category_string",  # Question model
+    "author_string",  # Question & Quiz model
+    "validator_string",  # Question model
     # django-simple-history
     "history_id",
     "history_date",
@@ -41,9 +45,12 @@ def post_create_historical_record_callback(sender, **kwargs):
         )
     # create action (most likely) : create list manually
     else:
-        model_fields = [
-            field.name for field in sender._meta.fields if field.name not in HISTORY_CHANGED_FIELDS_TO_IGNORE
-        ]
+        model_fields = [field.name for field in sender._meta.fields if field.name]
         changed_fields = [k for k, v in history_instance.__dict__.items() if k in model_fields if v]
-    history_instance.history_changed_fields = changed_fields
+    # cleanup changed_fields
+    changed_fields_cleaned = [
+        field_name for field_name in changed_fields if field_name not in HISTORY_CHANGED_FIELDS_TO_IGNORE
+    ]
+    # assign & save
+    history_instance.history_changed_fields = changed_fields_cleaned
     history_instance.save()
