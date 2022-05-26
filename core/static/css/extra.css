@@ -83,6 +83,13 @@ div.django-ckeditor-widget > div.cke {
 }
 
 
+/* Cards */
+
+.card {
+    box-shadow: 0 2px 10px 0 rgb(0 6 56 / 10%);
+}
+
+
 /* bootstrap-multiselect */
 
 span.multiselect-selected-text {

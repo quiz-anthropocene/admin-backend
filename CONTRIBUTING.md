@@ -222,6 +222,9 @@ python manage.py init_db --with-sql-reset
 
 Importer un dump PGSQL
 ```
+// if it's a .tar.gz, run first
+tar -xvzf <dump_name>.tar.gz
+
 pg_restore -d quiz_anthropocene --clean --no-owner --no-privileges <dump_name>.pgsql
 
 // si il y a ensuite des soucis de permissions
