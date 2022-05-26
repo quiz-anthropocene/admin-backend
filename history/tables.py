@@ -15,7 +15,9 @@ class HistoryTable(tables.Table):
     history_type = tables.Column(verbose_name="Action")
     # history_id = tables.Column()
     history_changed_fields = tables.TemplateColumn(
-        verbose_name="Champs modifiés", template_name="history/_table_changed_fields_list.html"
+        verbose_name="Champs modifiés",
+        template_name="history/_table_changed_fields_list.html",
+        attrs={"td": {"style": "max-width:500px"}},
     )
 
     class Meta:
