@@ -89,9 +89,9 @@ class ProfileHistoryListView(ContributorUserRequiredMixin, TemplateView):
         context = super().get_context_data(**kwargs)
         question_quiz_history = list(
             chain(
-                Question.history.annotate(model=Value("Question")).filter(history_user=self.request.user),
-                Quiz.history.annotate(model=Value("Quiz")).filter(history_user=self.request.user),
-                GlossaryItem.history.annotate(model=Value("Glossaire")).filter(history_user=self.request.user),
+                Question.history.annotate(object_model=Value("Question")).filter(history_user=self.request.user),
+                Quiz.history.annotate(object_model=Value("Quiz")).filter(history_user=self.request.user),
+                GlossaryItem.history.annotate(object_model=Value("Glossaire")).filter(history_user=self.request.user),
             )
         )
         question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)
@@ -125,9 +125,9 @@ class ProfileAdminHistoryListView(AdministratorUserRequiredMixin, TemplateView):
         context = super().get_context_data(**kwargs)
         question_quiz_history = list(
             chain(
-                Question.history.annotate(model=Value("Question")).all(),
-                Quiz.history.annotate(model=Value("Quiz")).all(),
-                GlossaryItem.history.annotate(model=Value("Glossaire")).all(),
+                Question.history.annotate(object_model=Value("Question")).all(),
+                Quiz.history.annotate(object_model=Value("Quiz")).all(),
+                GlossaryItem.history.annotate(object_model=Value("Glossaire")).all(),
             )
         )
         question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)
