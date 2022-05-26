@@ -10,6 +10,7 @@ from simple_history.models import HistoricalRecords
 from core import constants
 from core.templatetags.get_verbose_name import get_verbose_name
 from core.utils import utilities
+from history.models import HistoryChangedFieldsAbstractModel
 from tags.models import Tag
 
 
@@ -196,7 +197,7 @@ class Question(models.Model):
     author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
     validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
 
-    history = HistoricalRecords()
+    history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
 
     objects = QuestionQuerySet.as_manager()
 
