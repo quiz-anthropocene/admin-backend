@@ -1,7 +1,6 @@
 {% extends "layouts/base.html" %}
 {% load render_table from django_tables2 %}
 {% load django_bootstrap5 %}
-{% load get_verbose_name %}
 
 {% block title %}Quizs{{ block.super }}{% endblock %}
 
@@ -38,9 +37,7 @@
     <!-- Filters: list -->
     {% if search_filters %}
         <p>
-            {% for search_filter in search_filters %}
-                <span class="badge bg-warning text-dark">{% get_verbose_name 'Quiz' search_filter.key %} : {{ search_filter.value }}</span>
-            {% endfor %}
+            {% include "includes/_filter_badge_list.html" with search_filters=search_filters model_name="Quiz" %}
         </p>
     {% endif %}
     <!-- Filters: form -->
