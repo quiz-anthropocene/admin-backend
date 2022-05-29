@@ -1,5 +1,6 @@
 from django import template
 from django.apps import apps
+from django.utils.safestring import SafeString
 
 
 register = template.Library()
@@ -7,7 +8,7 @@ register = template.Library()
 
 @register.simple_tag
 def get_verbose_name(object, field_name=None):
-    if type(object) == str:
+    if type(object) in [str, SafeString]:
         if object == "Question":
             object = apps.get_model("questions", object)
         elif object == "Quiz":
