@@ -1,0 +1,8 @@
+{% load get_verbose_name %}
+
+{% for search_filter in search_filters %}
+    <span class="badge bg-warning text-dark">
+        {% get_verbose_name model_name search_filter.key %} : {{ search_filter.value }}
+        {% if search_filter.delete_url %}&nbsp;<a href="{{ search_filter.delete_url }}" class="no-style"><strong>⛌</strong></a>{% endif %}
+    </span>
+{% endfor %}
