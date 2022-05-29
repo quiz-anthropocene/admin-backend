@@ -26,7 +26,7 @@
             <h1>Toutes les tags <span class="fs-3 text-muted">{{ tags.count }}</span></h1>
         </div>
         <div class="col-3 text-end my-auto">
-            <button type="button" class="btn {% if active_filters %}btn-warning{% else %}btn-secondary{% endif %} btn-sm btn-ico" data-bs-toggle="collapse" data-bs-target="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters">
+            <button type="button" class="btn {% if search_filters %}btn-warning{% else %}btn-secondary{% endif %} btn-sm btn-ico" data-bs-toggle="collapse" data-bs-target="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters">
                 <span>Filtres&nbsp;</span>
                 <span id="collapse-down-ico">⏷</span>
                 <span id="collapse-up-ico">⏶</span>
@@ -34,7 +34,7 @@
             <a href="{% url 'tags:create' %}" class="btn btn-success btn-sm">Ajouter</a>
         </div>
     </div>
-    <!-- Filters -->
+    <!-- Filters: form -->
     <form action="" method="get" id="collapseFilters" class="mb-3 collapse">
         {% bootstrap_form filter.form layout="horizontal" %}
         <div class="col-12 text-end">

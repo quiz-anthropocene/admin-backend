@@ -5,6 +5,7 @@ from django.views.generic import DetailView, TemplateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
+from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import AdministratorUserRequiredMixin, ContributorUserRequiredMixin
 from glossary.models import GlossaryItem
 from history.tables import HistoryTable
@@ -57,9 +58,10 @@ class ProfileQuestionListView(ContributorUserRequiredMixin, SingleTableMixin, Fi
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["user"] = self.request.user
-        request_params = [value for (key, value) in self.request.GET.items() if ((key not in ["page"]) and value)]
-        if len(request_params):
-            context["active_filters"] = True
+        if context["filter"].form.is_valid():
+            search_dict = form_filters_cleaned_dict(context["filter"].form.cleaned_data)
+            if search_dict:
+                context["search_filters"] = form_filters_to_list(search_dict)
         return context
 
 
