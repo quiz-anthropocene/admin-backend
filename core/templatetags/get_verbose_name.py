@@ -13,6 +13,8 @@ def get_verbose_name(object, field_name=None):
             object = apps.get_model("questions", object)
         elif object == "Quiz":
             object = apps.get_model("quizs", object)
+        elif object == "Contribution":
+            object = apps.get_model("contributions", object)
         elif object == "Glossaire":
             object = apps.get_model("glossary", "GlossaryItem")
     if field_name:

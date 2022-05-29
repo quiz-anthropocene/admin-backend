@@ -1,6 +1,7 @@
 {% extends "layouts/base.html" %}
 {% load render_table from django_tables2 %}
 {% load django_bootstrap5 %}
+{% load get_verbose_name %}
 
 {% block title %}Mes questions ({{ user_questions.count }}){{ block.super }}{% endblock %}
 
@@ -27,7 +28,7 @@
             <h1>Toutes mes questions <span class="fs-3 text-muted">{{ user_questions.count }}</span></h1>
         </div>
         <div class="col-3 text-end my-auto">
-            <button type="button" class="btn {% if active_filters %}btn-warning{% else %}btn-secondary{% endif %} btn-sm btn-ico" data-bs-toggle="collapse" data-bs-target="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters">
+            <button type="button" class="btn {% if search_filters %}btn-warning{% else %}btn-secondary{% endif %} btn-sm btn-ico" data-bs-toggle="collapse" data-bs-target="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters">
                 <span>Filtres&nbsp;</span>
                 <span id="collapse-down-ico">⏷</span>
                 <span id="collapse-up-ico">⏶</span>
@@ -35,7 +36,15 @@
             <a href="{% url 'questions:create' %}?next={% url 'profile:questions' %}" class="btn btn-success btn-sm">Ajouter</a>
         </div>
     </div>
-    <!-- Filters -->
+    <!-- Filters: list -->
+    {% if search_filters %}
+        <p>
+            {% for search_filter in search_filters %}
+                <span class="badge bg-warning text-dark">{% get_verbose_name 'Question' search_filter.key %} : {{ search_filter.value }}</span>
+            {% endfor %}
+        </p>
+    {% endif %}
+    <!-- Filters: form -->
     <form action="" method="get" id="collapseFilters" class="mb-3 collapse">
         {% bootstrap_form filter.form layout="horizontal" %}
         <div class="col-12 text-end">

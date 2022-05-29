@@ -10,6 +10,7 @@ from contributions.filters import ContributionFilter
 from contributions.forms import ContributionReplyCreateForm, ContributionStatusEditForm
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
+from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import ContributorUserRequiredMixin
 
 
@@ -28,9 +29,10 @@ class ContributionListView(ContributorUserRequiredMixin, SingleTableMixin, Filte
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        request_params = [value for (key, value) in self.request.GET.items() if ((key not in ["page"]) and value)]
-        if len(request_params):
-            context["active_filters"] = True
+        if context["filter"].form.is_valid():
+            search_dict = form_filters_cleaned_dict(context["filter"].form.cleaned_data)
+            if search_dict:
+                context["search_filters"] = form_filters_to_list(search_dict)
         return context
 
 
