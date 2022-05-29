@@ -61,7 +61,7 @@ class ProfileQuestionListView(ContributorUserRequiredMixin, SingleTableMixin, Fi
         if context["filter"].form.is_valid():
             search_dict = form_filters_cleaned_dict(context["filter"].form.cleaned_data)
             if search_dict:
-                context["search_filters"] = form_filters_to_list(search_dict)
+                context["search_filters"] = form_filters_to_list(search_dict, with_delete_url=True)
         return context
 
 
