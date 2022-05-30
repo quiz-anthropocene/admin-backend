@@ -181,7 +181,7 @@ class QuizDetailHistoryView(ContributorUserRequiredMixin, DetailView):
                     excluded_fields=Quiz.QUIZ_RELATION_FIELDS,
                     returns="changes",
                 )
-                context["question_history_delta"].append(delta_changes)
+                context["quiz_history_delta"].append(delta_changes)
             else:
                 delta_fields = QUIZ_FORM_FIELDS + Quiz.QUIZ_FLATTEN_FIELDS
                 delta_new = [{"field": k, "new": v} for k, v in record.__dict__.items() if k in delta_fields if v]
