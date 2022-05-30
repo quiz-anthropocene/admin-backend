@@ -60,13 +60,18 @@ def newsletter(request):
     if request.method == "POST":
         try:
             response = sendinblue.newsletter_registration(request.data["email"])
-            if response.status_code != 201:
+            if response.status_code == 201:
+                success_message = (
+                    "Votre inscription a été reçu, merci ! "
+                    "Vous allez reçevoir un email pour confirmer votre inscription."
+                )
+                return Response(success_message, status=status.HTTP_201_CREATED)
+            elif response.status_code == 204:
+                success_message = "Vous êtes déjà inscrit.e :)"
+                return Response(success_message, status=status.HTTP_201_CREATED)
+            else:
                 raise Exception(json.loads(response._content))
-            success_message = (
-                "Votre inscription a été reçu, merci ! "
-                "Vous allez reçevoir un email pour confirmer votre inscription."
-            )
-            return Response(success_message, status=status.HTTP_201_CREATED)
         except Exception as e:
+            print(e)
             error_message = f"Erreur lors de votre inscription à la newsletter. {e}"
             return Response(error_message, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
