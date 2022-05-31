@@ -181,11 +181,14 @@ STATIC_URL = "/static/"
 # ------------------------------------------------------------------------------
 
 CORS_ORIGIN_WHITELIST = [
+    "http://localhost:8000",
     "http://localhost:8080",
     "https://quiz-anthropocene.netlify.com",
     "https://quiz-anthropocene.netlify.app",
     "https://quiztaplanete.fr",
     "https://quizanthropocene.fr",
+    "https://admin.quizanthropocene.fr",
+    "https://quiz-anthropocene.osc-fr1.scalingo.io",
 ]
 
 CORS_ORIGIN_REGEX_WHITELIST = [

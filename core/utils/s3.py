@@ -1,3 +1,5 @@
+import json
+
 import boto3
 from botocore.client import Config
 from django.conf import settings
@@ -13,6 +15,47 @@ API_CONNECTION_DICT = {
     "aws_secret_access_key": settings.S3_SECRET_KEY,
     "region_name": settings.S3_BUCKET_REGION,
     "config": Config(signature_version="s3v4"),
+}
+
+DEFAULT_CORS_CONFIGURATION = {
+    "CORSRules": [
+        {
+            "AllowedHeaders": [
+                "Cache-Control",
+                "x-requested-with",
+            ],
+            "AllowedMethods": ["GET", "PUT", "POST", "DELETE", "HEAD"],
+            "AllowedOrigins": settings.CORS_ORIGIN_WHITELIST,
+            "ExposeHeaders": ["ETag", "Location"],
+        }
+    ]
+}
+
+DEFAULT_POLICY_CONFIGURATION = {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowPublicRead",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": f"{settings.S3_BUCKET_NAME}/*",
+        },
+        {
+            "Sid": "DenyPublicUpdate",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:PutObject",
+            "Resource": f"{settings.S3_BUCKET_NAME}/*",
+        },
+        {
+            "Sid": "DenyPublicDelete",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:DeleteObject",
+            "Resource": f"{settings.S3_BUCKET_NAME}/*",
+        },
+    ],
 }
 
 CONTENT_TYPE_MAPPING = {
@@ -51,7 +94,7 @@ def get_object_url(bucket, object_key):
 
 def upload_object(bucket, object_file_path, s3_object_key):
     """
-    in read-mode instead of download-mode): https://stackoverflow.com/a/58641574/4293684
+    in read-mode instead of download-mode: https://stackoverflow.com/a/58641574/4293684
     # alternative
     resource.meta.client.upload_file(object_file_path, bucket_name, s3_file_key, ExtraArgs={"ACL": "public-read", "ContentType": "image/png"})  # noqa
     """
@@ -64,9 +107,6 @@ def upload_object(bucket, object_file_path, s3_object_key):
 
 
 def delete_object(bucket, object_key):
-    """
-    to_delete = [{'Key':'IMG_20160807_150118.jpg'}, {'Key':'IMG_20160807_150124.jpg'}]
-    """
     bucket.delete_objects(Delete={"Objects": [{"Key": object_key}]})
 
 
@@ -76,3 +116,21 @@ def delete_all_objects(bucket, prefix=None):
         bucket.objects.filter(Prefix="myprefix/").delete()
     else:
         bucket.objects.delete()
+
+
+def get_bucket_cors(bucket):
+    response = client.get_bucket_cors(Bucket=bucket.name)
+    print(response["CORSRules"])
+
+
+def update_bucket_cors(bucket, cors_configuration=DEFAULT_CORS_CONFIGURATION):
+    client.put_bucket_cors(Bucket=bucket.name, CORSConfiguration=cors_configuration)
+
+
+def get_bucket_policy(bucket):
+    response = client.get_bucket_policy(Bucket=bucket.name)
+    print(response["Policy"])
+
+
+def update_bucket_policy(bucket, policy_configuration=DEFAULT_POLICY_CONFIGURATION):
+    client.put_bucket_policy(Bucket=bucket.name, Policy=json.dumps(policy_configuration))
