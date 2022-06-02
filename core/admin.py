@@ -200,7 +200,7 @@ class MyAdminSite(admin.AdminSite):
         return super().index(request, extra_context=extra_context)
 
 
-admin_site = MyAdminSite(name="myadmin")
+admin_site = MyAdminSite(name="django")
 
 admin_site.register(Configuration, ConfigurationAdmin)
 admin_site.register(admin.models.LogEntry, LogEntryAdmin)
