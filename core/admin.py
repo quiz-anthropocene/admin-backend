@@ -151,7 +151,9 @@ class LogEntryAdmin(admin.ModelAdmin):
 
 
 class MyAdminSite(admin.AdminSite):
-    site_header = "Quiz de l'Anthropocène"
+    site_header = "Django Admin | Quiz de l'Anthropocène"
+    index_title = "Accueil"
+    site_title = site_header
     enable_nav_sidebar = False
     index_template = "admin/index_with_export.html"
 
@@ -198,7 +200,7 @@ class MyAdminSite(admin.AdminSite):
         return super().index(request, extra_context=extra_context)
 
 
-admin_site = MyAdminSite(name="myadmin")
+admin_site = MyAdminSite(name="django")
 
 admin_site.register(Configuration, ConfigurationAdmin)
 admin_site.register(admin.models.LogEntry, LogEntryAdmin)

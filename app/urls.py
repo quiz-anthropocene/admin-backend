@@ -15,8 +15,9 @@ urlpatterns = [
     path("tags/", include("www.tags.urls")),
     path("contributions/", include("www.contributions.urls")),
     path("glossary/", include("www.glossary.urls")),
+    path("admin/", include("www.admin.urls")),
     # admin
-    path("admin/", admin_site.urls),
+    path("django/", admin_site.urls),
     # api
     path("api/", include("api.urls")),
     # stats

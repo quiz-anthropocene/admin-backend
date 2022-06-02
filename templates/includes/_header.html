@@ -32,6 +32,12 @@
                             <li class="nav-item">
                                 <a href="{% url 'glossary:list' %}" class="nav-link">Glossaire</a>
                             </li>
+                            {% if user.has_role_administrator %}
+                                <span style="padding:0.5em">|</span>
+                                <li class="nav-item">
+                                    <a href="{% url 'admin:home' %}" class="nav-link">Administration</a>
+                                </li>
+                            {% endif %}
                         {% endif %}
                     </ul>
                     <a href="{% url 'auth:logout' %}">
