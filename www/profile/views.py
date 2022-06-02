@@ -6,7 +6,7 @@ from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
 from core.forms import form_filters_cleaned_dict, form_filters_to_list
-from core.mixins import AdministratorUserRequiredMixin, ContributorUserRequiredMixin
+from core.mixins import ContributorUserRequiredMixin
 from glossary.models import GlossaryItem
 from history.tables import HistoryTable
 from questions.filters import QuestionFilter
@@ -15,7 +15,6 @@ from questions.tables import QuestionTable
 from quizs.models import Quiz
 from quizs.tables import QuizTable
 from users.models import User
-from users.tables import ContributorTable
 
 
 class ProfileHomeView(ContributorUserRequiredMixin, DetailView):
@@ -25,11 +24,6 @@ class ProfileHomeView(ContributorUserRequiredMixin, DetailView):
 
     def get_object(self):
         return self.request.user
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["contributor_count"] = User.objects.all_contributors().count()
-        return context
 
 
 class ProfileInfoView(ContributorUserRequiredMixin, DetailView):
@@ -94,42 +88,6 @@ class ProfileHistoryListView(ContributorUserRequiredMixin, TemplateView):
                 Question.history.annotate(object_model=Value("Question")).filter(history_user=self.request.user),
                 Quiz.history.annotate(object_model=Value("Quiz")).filter(history_user=self.request.user),
                 GlossaryItem.history.annotate(object_model=Value("Glossaire")).filter(history_user=self.request.user),
-            )
-        )
-        question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)
-        context["table"] = HistoryTable(question_quiz_history[:50])  # TODO: pagination ?
-        return context
-
-
-class ProfileAdminContributorListView(AdministratorUserRequiredMixin, SingleTableView):
-    model = User
-    template_name = "profile/admin_contributors.html"
-    context_object_name = "contributors"
-    table_class = ContributorTable
-
-    def get_queryset(self):
-        qs = super().get_queryset()
-        qs = qs.prefetch_related("questions", "quizs")
-        qs = qs.all_contributors()
-        qs = qs.order_by("-created")
-        return qs
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["user"] = self.request.user
-        return context
-
-
-class ProfileAdminHistoryListView(AdministratorUserRequiredMixin, TemplateView):
-    template_name = "profile/admin_history.html"
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        question_quiz_history = list(
-            chain(
-                Question.history.annotate(object_model=Value("Question")).all(),
-                Quiz.history.annotate(object_model=Value("Quiz")).all(),
-                GlossaryItem.history.annotate(object_model=Value("Glossaire")).all(),
             )
         )
         question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)

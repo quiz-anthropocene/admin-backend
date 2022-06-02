@@ -1,9 +1,6 @@
-from django.urls import include, path
-from django.views.generic.base import RedirectView
+from django.urls import path
 
 from www.profile.views import (
-    ProfileAdminContributorListView,
-    ProfileAdminHistoryListView,
     ProfileHistoryListView,
     ProfileHomeView,
     ProfileInfoView,
@@ -20,18 +17,4 @@ urlpatterns = [
     path("questions/", ProfileQuestionListView.as_view(), name="questions"),
     path("quizs/", ProfileQuizListView.as_view(), name="quizs"),
     path("history/", ProfileHistoryListView.as_view(), name="history"),
-    path(
-        "admin/",
-        include(
-            [
-                path(
-                    "",
-                    RedirectView.as_view(pattern_name="profile:home", permanent=False),
-                    name="admin_home",
-                ),
-                path("contributors/", ProfileAdminContributorListView.as_view(), name="admin_contributors"),
-                path("history/", ProfileAdminHistoryListView.as_view(), name="admin_history"),
-            ]
-        ),
-    ),
 ]

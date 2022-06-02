@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 {% load render_table from django_tables2 %}
 
-{% block title %}Admin : contributeurs{{ block.super }}{% endblock %}
+{% block title %}Administration : historique{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -10,9 +10,8 @@
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'profile:home' %}">Mon espace</a></li>
-                    <li class="breadcrumb-item">Administration</li>
-                    <li class="breadcrumb-item active" aria-current="page">Contributeurs</li>
+                    <li class="breadcrumb-item"><a href="{% url 'admin:home' %}">Administration</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Historique</li>
                 </ol>
             </nav>
         </div>
@@ -22,9 +21,16 @@
 
 {% block content %}
 <div class="container">
+    <div class="row">
+        <div class="col-9">
+            <h1>50 dernières modifications</h1>
+        </div>
+    </div>
     <div class="row overflow-scroll">
-        <div class="col-12">
-            {% render_table table %}
+        <div class="row overflow-scroll">
+            <div class="col-12">
+                {% render_table table %}
+            </div>
         </div>
     </div>
 </div>
