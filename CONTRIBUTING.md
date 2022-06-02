@@ -157,7 +157,7 @@ Le Backend sera accessible à l'url `http://localhost:8000`
 
 La doc de l'API est visible à l'url `http://localhost:8000/api/docs/`
 
-#### Accéder à la console admin
+#### Accéder à la console admin Django
 
 Créez d'abord un utilisateur admin
 ```
@@ -165,7 +165,7 @@ cd backend
 pipenv run python manage.py createsuperuser --username admin@email.com --email admin@email.com
 ```
 
-Lancez le Backend, et connectez-vous sur `http://localhost:8000/admin`
+Lancez le Backend, et connectez-vous sur `http://localhost:8000/django`
 
 ### Lancer les tests
 
