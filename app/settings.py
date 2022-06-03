@@ -181,6 +181,7 @@ STATIC_URL = "/static/"
 # ------------------------------------------------------------------------------
 
 CORS_ORIGIN_WHITELIST = [
+    "http://127.0.0.1:8000",
     "http://localhost:8000",
     "http://localhost:8080",
     "https://quiz-anthropocene.netlify.com",
@@ -269,6 +270,23 @@ S3_SECRET_KEY = os.getenv("S3_SECRET_KEY")
 
 QUESTION_FOLDER_NAME = "questions"
 QUIZ_FOLDER_NAME = "quizs"
+
+STORAGE_UPLOAD_KINDS = {
+    "default": {
+        "allowed_mime_types": ["image/png", "image/svg+xml", "image/gif", "image/jpg", "image/jpeg"],  # ["image/*"] ?
+        "upload_expiration": 60 * 60,  # in seconds
+        "key_path": "default",  # appended before the file key. No backslash!
+        "max_files": 1,  # 3,
+        "max_file_size": 5,  # in mb
+        "timeout": 20000,  # in ms
+    },
+    "question_answer_image": {
+        "key_path": QUESTION_FOLDER_NAME,
+    },
+    "quiz_image_background": {
+        "key_path": QUIZ_FOLDER_NAME,
+    },
+}
 
 
 # Django Bootstrap5

@@ -74,6 +74,51 @@ resource = boto3.resource("s3", **API_CONNECTION_DICT)
 bucket = resource.Bucket(settings.S3_BUCKET_NAME)
 
 
+class S3Upload:
+    def __init__(self, kind="default"):
+        self.config = self.get_config(kind)
+
+    @property
+    def form_values(self):
+        """
+        Returns a dict like this:
+        {
+            "url": "",
+            "fields": {
+                'key': 'key_path',
+                'x-amz-algorithm': 'AWS4-HMAC-SHA256',
+                'x-amz-credential': '',
+                'x-amz-date': '',
+                'policy': '',
+                'x-amz-signature': '',
+            }
+        }
+        """
+        key_path = self.config["key_path"] + "/${filename}"
+        expiration = self.config["upload_expiration"]
+        values_dict = client.generate_presigned_post(
+            settings.S3_BUCKET_NAME,
+            key_path,
+            ExpiresIn=expiration,
+            Conditions=[["starts-with", "$Content-Type", "image/"]],
+        )
+        values_dict["fields"].pop("key")
+        return values_dict
+
+    @staticmethod
+    def get_config(kind):
+        default_options = settings.STORAGE_UPLOAD_KINDS["default"]
+        config = default_options | settings.STORAGE_UPLOAD_KINDS[kind]
+
+        key_path = config["key_path"]
+        if key_path.startswith("/") or key_path.endswith("/"):
+            raise ValueError("key_path should not begin or end with a slash")
+
+        config["allowed_mime_types"] = ",".join(config["allowed_mime_types"])
+
+        return config
+
+
 def get_bucket(bucket_name=settings.S3_BUCKET_NAME):
     bucket = resource.Bucket(bucket_name)
     return bucket

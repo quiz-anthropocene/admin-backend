@@ -21,6 +21,7 @@ class QuestionCreateForm(forms.ModelForm):
             "hint": forms.Textarea(attrs={"rows": 1}),
             "answer_explanation": forms.Textarea(attrs={"rows": 3}),
             "answer_reading_recommendation": forms.Textarea(attrs={"rows": 1}),
+            "answer_image_url": forms.HiddenInput(),
             "answer_image_explanation": forms.Textarea(attrs={"rows": 1}),
             "answer_extra_info": forms.Textarea(attrs={"rows": 3}),
         }

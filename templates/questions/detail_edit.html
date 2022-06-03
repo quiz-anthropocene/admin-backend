@@ -1,5 +1,10 @@
 {% extends "questions/detail_base.html" %}
+{% load static %}
 {% load django_bootstrap5 %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'vendor/dropzone-5.9.3/dropzone.min.css' %}" />
+{% endblock %}
 
 {% block question_detail_content %}
 <div class="row">
@@ -11,6 +16,28 @@
                 <div class="row">
                     <div class="col-md-8">
                         {% bootstrap_form form alert_error_type="all" %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            {# {{ form.answer_image_url.as_hidden }} #}
+                            <label for="answer_image_form" class="js-display-if-javascript-enabled">Importez une image</label>
+                            {% include "includes/_s3_upload_form.html" with dropzone_form_id="answer_image_form" %}
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label>Image actuelle</label>
+                            {% if form.answer_image_url.value %}
+                                <div>
+                                    <img class="img-fluid" src="{{ form.answer_image_url.value }}" />
+                                </div>
+                            {% else %}
+                                <span class="form-text text-muted">Aucun</span>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
 
@@ -40,4 +67,17 @@
 
 {% block extra_js %}
 {{ form.media.js }}
+<script type="text/javascript" src="{% static 'vendor/dropzone-5.9.3/dropzone.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/s3_upload.js' %}"></script>
+{{ s3_form_values_answer_image|json_script:"s3-form-values-question-image" }}
+{{ s3_upload_config_answer_image|json_script:"s3-upload-config-question-image" }}
+<script type="text/javascript">
+// init dropzone
+s3UploadInit({
+    dropzoneSelector: "#answer_image_form",
+    callbackLocationSelector: "#{{ form.answer_image_url.id_for_label }}",
+    s3FormValuesId: "s3-form-values-question-image",
+    s3UploadConfigId: "s3-upload-config-question-image",
+});
+</script>
 {% endblock %}

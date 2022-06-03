@@ -1,0 +1,18 @@
+<div class="js-display-if-javascript-enabled">
+    <div id="{{ dropzone_form_id }}" class="dropzone border-dashed text-center text-secondary mb-2">
+        <div class="dz-message my-1">
+            <div class="h5"><i class="ri-upload-2-line ri-2x"></i></div>
+            <!-- Issue with refresh on client-reference js-generated form -->
+            <!-- <div class="h6"><a href="" class="js-prevent-default">Choisissez une image</a> ou <b>glissez ici</b>.</div> -->
+            <div class="h6"><span class="fake-link">Choisissez une image</span> ou <b>glissez ici</b>.</div>
+            <div class="small">Taille maximale : {{ s3_upload_config.max_file_size }} Mo</div>
+            <div class="small">Type de fichier : PNG, JPEG, SVG, GIF</div>
+        </a>
+        </div>
+    </div>
+</div>
+<noscript>
+    <div class="alert alert-danger" role="status">
+        JavaScript n'est pas activé. Il est nécessaire de réactiver JavaScript pour activer la fonctionnalité d'ajout d'image.
+    </div>
+</noscript>
