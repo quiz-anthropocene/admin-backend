@@ -276,8 +276,8 @@ STORAGE_UPLOAD_KINDS = {
         "allowed_mime_types": ["image/png", "image/svg+xml", "image/gif", "image/jpg", "image/jpeg"],  # ["image/*"] ?
         "upload_expiration": 60 * 60,  # in seconds
         "key_path": "default",  # appended before the file key. No backslash!
-        "max_files": 1,  # 3,
-        "max_file_size": 5,  # in mb
+        "max_files": 1,
+        "max_file_size": 2,  # in mb
         "timeout": 20000,  # in ms
     },
     "question_answer_image": {

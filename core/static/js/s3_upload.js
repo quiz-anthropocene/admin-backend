@@ -67,7 +67,7 @@ window.s3UploadInit = function s3UploadInit({
     // the function will be used to rename the file.name before appending it to the formData
     renameFile: function (file) {
       const extension = file.name.split(".").pop();
-      const filename = Dropzone.uuidv4();
+      const filename = Dropzone.uuidv4().substring(0, 8);
       const fileKey = `${keyPath}/${filename}.${extension}`;
       // Add a file key to options params so that it's sent as an input field on POST.
       this.params["key"] = fileKey;

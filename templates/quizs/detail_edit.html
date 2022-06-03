@@ -31,10 +31,11 @@
                             <label class="form-label" for="image_form" class="js-display-if-javascript-enabled">{{ form.image_background_url.label }}</label>
                             {% include "includes/_s3_upload_form.html" with dropzone_form_id="image_form" %}
                         </div>
+                        <small>Image trop grosse ? outil pour réduire sa taille : <a href="https://tinypng.com" target="_blank">tinypng.com</a></small>
                     </div>
                     <div class="col-12 col-sm-6">
                         <div class="form-group">
-                            <label>Image actuelle</label>
+                            <label class="form-label">Image actuelle</label>
                             {% if form.image_background_url.value %}
                                 <div>
                                     <img class="img-fluid" src="{{ form.image_background_url.value }}" />
