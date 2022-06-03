@@ -181,11 +181,15 @@ STATIC_URL = "/static/"
 # ------------------------------------------------------------------------------
 
 CORS_ORIGIN_WHITELIST = [
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
     "http://localhost:8080",
     "https://quiz-anthropocene.netlify.com",
     "https://quiz-anthropocene.netlify.app",
     "https://quiztaplanete.fr",
     "https://quizanthropocene.fr",
+    "https://admin.quizanthropocene.fr",
+    "https://quiz-anthropocene.osc-fr1.scalingo.io",
 ]
 
 CORS_ORIGIN_REGEX_WHITELIST = [
@@ -255,6 +259,36 @@ if not DEBUG:
     )
 
 
+# Object storage : Scaleway (S3-like)
+# ------------------------------------------------------------------------------
+
+S3_ENDPOINT = os.getenv("S3_ENDPOINT")
+S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME")
+S3_BUCKET_REGION = os.getenv("S3_BUCKET_REGION")
+S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY")
+S3_SECRET_KEY = os.getenv("S3_SECRET_KEY")
+
+QUESTION_FOLDER_NAME = "questions"
+QUIZ_FOLDER_NAME = "quizs"
+
+STORAGE_UPLOAD_KINDS = {
+    "default": {
+        "allowed_mime_types": ["image/png", "image/svg+xml", "image/gif", "image/jpg", "image/jpeg"],  # ["image/*"] ?
+        "upload_expiration": 60 * 60,  # in seconds
+        "key_path": "default",  # appended before the file key. No backslash!
+        "max_files": 1,
+        "max_file_size": 2,  # in mb
+        "timeout": 20000,  # in ms
+    },
+    "question_answer_image": {
+        "key_path": QUESTION_FOLDER_NAME,
+    },
+    "quiz_image_background": {
+        "key_path": QUIZ_FOLDER_NAME,
+    },
+}
+
+
 # Django Bootstrap5
 # https://django-bootstrap5.readthedocs.io/
 # ------------------------------------------------------------------------------
@@ -318,7 +352,7 @@ SHELL_PLUS_IMPORTS = [
     "import csv, json, yaml",
     "from datetime import datetime, date, timedelta",
     "from core import constants",
-    "from core.utils import utilities, notion, github, sendinblue",
+    "from core.utils import utilities, notion, github, sendinblue, s3",
     "from stats import utilities as utilities_stats",
 ]
 

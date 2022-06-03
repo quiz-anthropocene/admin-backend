@@ -22,11 +22,14 @@ class QuizCreateForm(forms.ModelForm):
     class Meta:
         model = Quiz
         fields = QUIZ_CREATE_FORM_FIELDS + QUIZ_READONLY_FORM_FIELDS
-        widgets = {}
+        widgets = {
+            "image_background_url": forms.HiddenInput(),
+        }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["tags"].queryset = Tag.objects.all().order_by("name")
+        self.fields["image_background_url"].label = "Image pour illustrer le quiz"
         for field_name in QUIZ_READONLY_FORM_FIELDS:
             self.fields[field_name].disabled = True
 

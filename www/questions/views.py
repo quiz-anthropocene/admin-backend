@@ -14,6 +14,7 @@ from contributions.models import Contribution
 from contributions.tables import ContributionTable
 from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import ContributorUserRequiredMixin
+from core.utils.s3 import S3Upload
 from history.utilities import get_diff_between_two_history_records
 from questions.filters import QuestionFilter
 from questions.forms import QUESTION_FORM_FIELDS, QuestionCreateForm, QuestionEditForm
@@ -78,6 +79,11 @@ class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         question = self.get_object()
+        # S3 Upload form
+        s3_upload = S3Upload(kind="question_answer_image")
+        context["s3_form_values"] = s3_upload.form_values
+        context["s3_upload_config"] = s3_upload.config
+        # User authorizations
         context["user_can_edit_question"] = self.request.user.can_edit_question(question)
         return context
 

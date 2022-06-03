@@ -21,6 +21,7 @@ class QuestionCreateForm(forms.ModelForm):
             "hint": forms.Textarea(attrs={"rows": 1}),
             "answer_explanation": forms.Textarea(attrs={"rows": 3}),
             "answer_reading_recommendation": forms.Textarea(attrs={"rows": 1}),
+            "answer_image_url": forms.HiddenInput(),
             "answer_image_explanation": forms.Textarea(attrs={"rows": 1}),
             "answer_extra_info": forms.Textarea(attrs={"rows": 3}),
         }
@@ -28,6 +29,7 @@ class QuestionCreateForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["tags"].queryset = Tag.objects.all().order_by("name")
+        self.fields["answer_image_url"].label = "Image pour illustrer la réponse"
         for field_name in QUESTION_READONLY_FORM_FIELDS:
             self.fields[field_name].disabled = True
         for field_name in QUESTION_REQUIRED_FORM_FIELDS:
