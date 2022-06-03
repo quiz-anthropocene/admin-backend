@@ -17,7 +17,7 @@ const extensionToContentTypeMapping = {
 // - s3UploadConfigId: ID of DOM element that contains the JSON values of the S3 config (eg. max file size, timeout, etc).
 
 window.s3UploadInit = function s3UploadInit({
-  dropzoneSelector = "#answer_image_form",
+  dropzoneSelector = "#image_form",
   callbackLocationSelector = "",
   s3FormValuesId = "s3-form-values",
   s3UploadConfigId = "s3-upload-config",

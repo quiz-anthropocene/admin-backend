@@ -81,9 +81,9 @@ class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, 
         question = self.get_object()
         # S3 Upload form
         s3_upload = S3Upload(kind="question_answer_image")
-        context["s3_form_values_answer_image"] = s3_upload.form_values
-        context["s3_upload_config_answer_image"] = s3_upload.config
-        # User can edit?
+        context["s3_form_values"] = s3_upload.form_values
+        context["s3_upload_config"] = s3_upload.config
+        # User authorizations
         context["user_can_edit_question"] = self.request.user.can_edit_question(question)
         return context
 

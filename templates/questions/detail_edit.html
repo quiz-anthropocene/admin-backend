@@ -1,6 +1,5 @@
 {% extends "questions/detail_base.html" %}
-{% load static %}
-{% load django_bootstrap5 %}
+{% load static django_bootstrap5 %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'vendor/dropzone-5.9.3/dropzone.min.css' %}" />
@@ -17,14 +16,18 @@
                     <div class="col-md-8">
                         {% bootstrap_form form alert_error_type="all" %}
                     </div>
+                    <div class="col-md-4 d-none d-md-block">
+                        <div class="alert alert-primary">L'ajout de l'image d'explication se fait à la fin du formulaire 👇</div>
+                    </div>
                 </div>
 
+                <!-- answer_image_url upload form -->
                 <div class="row">
                     <div class="col-12 col-sm-6">
                         <div class="form-group">
                             {# {{ form.answer_image_url.as_hidden }} #}
-                            <label for="answer_image_form" class="js-display-if-javascript-enabled">Importez une image</label>
-                            {% include "includes/_s3_upload_form.html" with dropzone_form_id="answer_image_form" %}
+                            <label for="image_form" class="js-display-if-javascript-enabled">{{ form.answer_image_url.label }}</label>
+                            {% include "includes/_s3_upload_form.html" with dropzone_form_id="image_form" %}
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
@@ -69,12 +72,12 @@
 {{ form.media.js }}
 <script type="text/javascript" src="{% static 'vendor/dropzone-5.9.3/dropzone.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/s3_upload.js' %}"></script>
-{{ s3_form_values_answer_image|json_script:"s3-form-values-question-image" }}
-{{ s3_upload_config_answer_image|json_script:"s3-upload-config-question-image" }}
+{{ s3_form_values|json_script:"s3-form-values-question-image" }}
+{{ s3_upload_config|json_script:"s3-upload-config-question-image" }}
 <script type="text/javascript">
 // init dropzone
 s3UploadInit({
-    dropzoneSelector: "#answer_image_form",
+    dropzoneSelector: "#image_form",
     callbackLocationSelector: "#{{ form.answer_image_url.id_for_label }}",
     s3FormValuesId: "s3-form-values-question-image",
     s3UploadConfigId: "s3-upload-config-question-image",
