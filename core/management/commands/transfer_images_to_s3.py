@@ -35,7 +35,7 @@ class Command(BaseCommand):
                 open(image_filename, "wb").write(response.content)
                 # s3 upload
                 bucket = s3.get_bucket(settings.S3_BUCKET_NAME)
-                s3_image_filename = f"{str(question.id).zfill(6)}-{str(uuid.uuid4())[:4]}.{image_extension}"
+                s3_image_filename = f"{str(question.id).zfill(6)}-{str(uuid.uuid4())[:4]}.{image_extension.lower()}"
                 image_key = f"{settings.STORAGE_UPLOAD_KINDS['question_answer_image']['key_path']}/{s3_image_filename}"
                 print(image_key)
                 s3_presigned_post = s3.create_presigned_post(bucket, image_key)
@@ -55,7 +55,6 @@ class Command(BaseCommand):
     def transfer_quiz_images(self):
         for quiz in Quiz.objects.all():
             image_url = quiz.image_background_url
-            print(quiz.id, image_url)
             if image_url.startswith(IMAGE_RAW_PREFIX):
                 image_filename = image_url.split("/")[-1]
                 image_extension = image_filename.split(".")[1]
@@ -66,7 +65,7 @@ class Command(BaseCommand):
                 open(image_filename, "wb").write(response.content)
                 # s3 upload
                 bucket = s3.get_bucket(settings.S3_BUCKET_NAME)
-                s3_image_filename = f"{str(quiz.id).zfill(6)}-{str(uuid.uuid4())[:4]}.{image_extension}"
+                s3_image_filename = f"{str(quiz.id).zfill(6)}-{str(uuid.uuid4())[:4]}.{image_extension.lower()}"
                 image_key = f"{settings.STORAGE_UPLOAD_KINDS['quiz_image_background']['key_path']}/{s3_image_filename}"
                 print(image_key)
                 s3_presigned_post = s3.create_presigned_post(bucket, image_key)

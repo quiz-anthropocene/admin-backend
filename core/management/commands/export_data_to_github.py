@@ -32,13 +32,23 @@ class Command(BaseCommand):
     """
     Usage:
     python manage.py export_data_to_github
+    python manage.py export_data_to_github --force
     """
+
+    def add_arguments(self, parser):
+        parser.add_argument(
+            "--force",
+            default=False,
+            action="store_true",
+            dest="force",
+            help="Export data even if there are no (visible) changes",
+        )
 
     def handle(self, *args, **options):
         configuration = Configuration.get_solo()
 
         # check that there is data to update
-        if any(
+        if options["force"] or any(
             [
                 category_queryset.filter(updated__gte=configuration.github_data_last_exported).exists(),
                 tag_queryset.filter(updated__gte=configuration.github_data_last_exported).exists(),
