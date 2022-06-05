@@ -137,6 +137,10 @@ def get_object_url(bucket, object_key):
     return f"{API_CONNECTION_DICT['endpoint_url']}/{bucket.name}/{object_key}"
 
 
+def create_presigned_post(bucket, object_name):
+    return client.generate_presigned_post(bucket.name, object_name)
+
+
 def upload_object(bucket, object_file_path, s3_object_key):
     """
     in read-mode instead of download-mode: https://stackoverflow.com/a/58641574/4293684
@@ -144,7 +148,7 @@ def upload_object(bucket, object_file_path, s3_object_key):
     resource.meta.client.upload_file(object_file_path, bucket_name, s3_file_key, ExtraArgs={"ACL": "public-read", "ContentType": "image/png"})  # noqa
     """
     object_extension = object_file_path.split(".")[1]
-    bucket.upload_file(
+    return bucket.upload_file(
         object_file_path,
         s3_object_key,
         ExtraArgs={"ACL": "public-read", "ContentType": CONTENT_TYPE_MAPPING[object_extension]},

@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+boto3 = "*"
 django = "4.0.4"
 asgiref = "*"
 certifi = "*"
@@ -26,6 +27,7 @@ gunicorn = "*"
 ipython = "*"
 notion = {git = "https://github.com/raphodn/notion-py.git", ref = "511b93ed621625600795b7c4baa7e745d8ecfc2f"}
 pandas = "*"
+pillow = "*"
 psycopg2-binary = "*"
 PyGithub = "*"
 python-dotenv = "*"
@@ -34,7 +36,6 @@ PyYAML = "*"
 sentry-sdk = "*"
 sqlparse = "*"
 whitenoise = "*"
-boto3 = "*"
 
 [dev-packages]
 black = "*"
