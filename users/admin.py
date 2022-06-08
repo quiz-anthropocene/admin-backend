@@ -34,6 +34,8 @@ class UserAdmin(UserAdmin):
         "is_contributor",
         "is_super_contributor",
         "is_administrator",
+        "question_count",
+        "quiz_count",
         "last_login",
         "created",
     )
@@ -49,6 +51,8 @@ class UserAdmin(UserAdmin):
         "is_staff",
         "is_superuser",
         "last_login",
+        "question_count",
+        "quiz_count",
         "created",
         "updated",
     ]
@@ -65,12 +69,25 @@ class UserAdmin(UserAdmin):
                 )
             },
         ),
+        (
+            "Stats",
+            {
+                "fields": (
+                    "question_count",
+                    "quiz_count",
+                )
+            },
+        ),
         ("Dates", {"fields": ("last_login", "created", "updated")}),
     )
     add_fieldsets = (
         (None, {"fields": ("first_name", "last_name", "email", "password1", "password2")}),
         ("Permissions", {"fields": ("roles",)}),
     )
+
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        return qs.prefetch_related("questions", "quizs")
 
     def is_contributor(self, user) -> bool:
         return "✅" if user.has_role_contributor else "❌"
@@ -86,6 +103,18 @@ class UserAdmin(UserAdmin):
         return "✅" if user.has_role_administrator else "❌"
 
     is_administrator.short_description = "Administrateur ?"
+
+    def question_count(self, user):
+        return user.question_count
+
+    question_count.short_description = "Nbr de questions"
+    question_count.admin_order_field = "question_count"
+
+    def quiz_count(self, user):
+        return user.quiz_count
+
+    quiz_count.short_description = "Nbr de quizs"
+    quiz_count.admin_order_field = "quiz_count"
 
 
 admin_site.register(User, UserAdmin)
