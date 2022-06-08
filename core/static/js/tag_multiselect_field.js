@@ -3,12 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
      * Multiselect dropdown for the tag search form field
      */
 
-    const tagFormElement = document.querySelector('#id_tags');
-    const tagFormPlaceholder = 'Choisir 1 ou plusieurs tags';
+    const FORM_ELEMENT = document.querySelector('#id_tags');
+    const FORM_PLACEHOLDER = 'Choisir 1 ou plusieurs tags';
+    const FILTER_PLACEHOLDER = 'Chercher...';
 
     const buttonTextAndTitle = function(options, select) {
         if (options.length === 0) {
-            return tagFormPlaceholder;
+            return FORM_PLACEHOLDER;
         }
         else if (options.length > 4) {
             return `${options.length} tags sélectionnés`;
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // only on pages with id_tags
-    if (document.body.contains(tagFormElement)) {
+    if (document.body.contains(FORM_ELEMENT)) {
         $('#id_tags').multiselect({
             // height & width
             maxHeight: 400,
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // filter options
             enableFiltering: true,
             enableCaseInsensitiveFiltering: true,
-            filterPlaceholder: tagFormPlaceholder,
+            filterPlaceholder: FILTER_PLACEHOLDER,
             // reset button
             includeResetOption: true,
             includeResetDivider: true,
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             buttonContainer: '<div id="id_tag_multiselect" class="btn-group" />',
             widthSynchronizationMode: 'ifPopupIsSmaller',
             // enableHTML: true,
-            // nonSelectedText: `<span class="text-muted">${tagFormPlaceholder}</span>`,
+            // nonSelectedText: `<span class="text-muted">${FORM_PLACEHOLDER}</span>`,
             templates: {
                 // fix for Bootstrap5: https://github.com/davidstutz/bootstrap-multiselect/issues/1226
                 button: '<button type="button" class="form-select multiselect dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><span class="multiselect-selected-text"></span></button>'
@@ -63,11 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // hack to set the placeholder color to grey when there is no item selected
         const multiselectSelectedText = document.querySelector('#id_tag_multiselect .multiselect-selected-text');
-        if (multiselectSelectedText.innerText === tagFormPlaceholder) {
+        if (multiselectSelectedText.innerText === FORM_PLACEHOLDER) {
             multiselectSelectedText.classList.add('text-muted');
         }
         multiselectSelectedText.addEventListener('DOMSubtreeModified', function () {
-            if (this.innerText === tagFormPlaceholder) {
+            if (this.innerText === FORM_PLACEHOLDER) {
                 this.classList.add('text-muted');
             } else {
                 this.classList.remove('text-muted');
