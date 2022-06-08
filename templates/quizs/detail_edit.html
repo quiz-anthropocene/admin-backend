@@ -2,6 +2,7 @@
 {% load static django_bootstrap5 %}
 
 {% block extra_css %}
+{{ form.media.css }}
 <link rel="stylesheet" href="{% static 'vendor/dropzone-5.9.3/dropzone.min.css' %}" />
 {% endblock %}
 
@@ -28,7 +29,7 @@
                     <div class="col-12 col-sm-6">
                         <div class="form-group">
                             {# {{ form.image_background_url.as_hidden }} #}
-                            <label class="form-label" for="image_form" class="js-display-if-javascript-enabled">{{ form.image_background_url.label }}</label>
+                            <label for="image_form" class="form-label js-display-if-javascript-enabled">{{ form.image_background_url.label }}</label>
                             {% include "includes/_s3_upload_form.html" with dropzone_form_id="image_form" %}
                         </div>
                         <small>Image trop grosse ? outil pour réduire sa taille : <a href="https://tinypng.com" target="_blank">tinypng.com</a></small>
