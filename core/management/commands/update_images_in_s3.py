@@ -1,5 +1,4 @@
 import os
-import uuid
 
 import requests
 from django.conf import settings
@@ -16,15 +15,23 @@ S3_PREFIX = f"{settings.S3_ENDPOINT}/{settings.S3_BUCKET_NAME}"
 
 class Command(BaseCommand):
     """
-    One-shot command to migrate images to the new S3 destination
-    Example (Question id=15): image.png --> questions/000015-7gh5.png
+    Goal:
+    - Migrate images to the new S3 destination (initial usage)
+    - Update their naming (current usage)
 
-    Usage: python manage.py transfer_images_to_s3
+    Examples:
+    - transfer example (Question id=15): https://example.com/image.png --> questions/000015-7gh5.png
+    - naming example (Question id=15): questions/g5k78wx0.png --> questions/000015-7gh5.png
+
+    Usage: python manage.py update_images_in_s3
     """
 
     def handle(self, *args, **options):
-        self.transfer_question_images()
-        self.transfer_quiz_images()
+        if not settings.DEBUG:
+            self.transfer_question_images()
+            self.transfer_quiz_images()
+        else:
+            print("DEBUG mode. Exiting. This script can only be run in production")
 
     def transfer_question_images(self):
         for question in Question.objects.all():
@@ -36,17 +43,14 @@ class Command(BaseCommand):
                 print(image_url)
                 try:
                     image_filename = image_url.split("/")[-1].split("?")[0]
-                    image_extension = image_filename.split(".")[1]
                     print(image_filename)
                     # download image
-                    response = requests.get(image_url, allow_redirects=True)
+                    response = requests.get(image_url, allow_redirects=True, timeout=10)
                     # store image
                     open(image_filename, "wb").write(response.content)
                     # s3 upload
                     bucket = s3.get_bucket(settings.S3_BUCKET_NAME)
-                    s3_image_filename = (
-                        f"{str(question.id).zfill(6)}-{str(uuid.uuid4())[:4]}.{image_extension.lower()}"
-                    )
+                    s3_image_filename = s3.create_image_name(question.id, image_filename)
                     image_key = (
                         f"{settings.STORAGE_UPLOAD_KINDS['question_answer_image']['key_path']}/{s3_image_filename}"
                     )
@@ -79,15 +83,14 @@ class Command(BaseCommand):
                 print(image_url)
                 try:
                     image_filename = image_url.split("/")[-1].split("?")[0]
-                    image_extension = image_filename.split(".")[1]
                     print(image_filename)
                     # download image
-                    response = requests.get(image_url, allow_redirects=True)
+                    response = requests.get(image_url, allow_redirects=True, timeout=10)
                     # store image
                     open(image_filename, "wb").write(response.content)
                     # s3 upload
                     bucket = s3.get_bucket(settings.S3_BUCKET_NAME)
-                    s3_image_filename = f"{str(quiz.id).zfill(6)}-{str(uuid.uuid4())[:4]}.{image_extension.lower()}"
+                    s3_image_filename = s3.create_image_name(quiz.id, image_filename)
                     image_key = (
                         f"{settings.STORAGE_UPLOAD_KINDS['quiz_image_background']['key_path']}/{s3_image_filename}"
                     )
@@ -107,5 +110,6 @@ class Command(BaseCommand):
                     Quiz.objects.filter(id=quiz.id).update(image_background_url=s3_image_url)
                     # delete local image
                     os.remove(image_filename)
+                    # TODO: delete
                 except:  # noqa
                     print("Error")
