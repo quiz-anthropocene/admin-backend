@@ -8,7 +8,7 @@ from django.utils import timezone
 
 from core.models import Configuration
 from core.utils import github, utilities
-from stats import utilities as utilities_stats
+from stats import utilities as stats_utilities
 
 
 class Command(BaseCommand):
@@ -40,12 +40,12 @@ class Command(BaseCommand):
             # data/stats.yaml
             start_time = time.time()
             stats_dict = {
-                **utilities_stats.question_stats(),
-                **utilities_stats.quiz_stats(),
-                **utilities_stats.answer_stats(),
-                **utilities_stats.category_stats(),
-                **utilities_stats.tag_stats(),
-                **utilities_stats.contribution_stats(),
+                **stats_utilities.question_stats(),
+                **stats_utilities.quiz_stats(),
+                **stats_utilities.answer_stats(),
+                **stats_utilities.category_stats(),
+                **stats_utilities.tag_stats(),
+                **stats_utilities.contribution_stats(),
             }
             stats_yaml = yaml.safe_dump(stats_dict, allow_unicode=True, sort_keys=False)
             stats_element = github.create_file_element(file_path="data/stats.yaml", file_content=stats_yaml)
@@ -55,7 +55,7 @@ class Command(BaseCommand):
             #####################################
             # data/difficulty-levels.yaml
             start_time = time.time()
-            difficulty_levels_list = utilities_stats.difficulty_aggregate()
+            difficulty_levels_list = stats_utilities.difficulty_aggregate()
             difficulty_levels_yaml = yaml.safe_dump(difficulty_levels_list, allow_unicode=True, sort_keys=False)
             difficulty_levels_element = github.create_file_element(
                 file_path="data/difficulty-levels.yaml",
@@ -67,7 +67,7 @@ class Command(BaseCommand):
             # #####################################
             # # data/authors.yaml
             # start_time = time.time()
-            # authors_list = utilities_stats.author_aggregate()
+            # authors_list = stats_utilities.author_aggregate()
             # authors_yaml = yaml.safe_dump(authors_list, allow_unicode=True, sort_keys=False)
             # authors_element = github.create_file_element(file_path="data/authors.yaml", file_content=authors_yaml)
 
@@ -76,7 +76,7 @@ class Command(BaseCommand):
             #####################################
             # data/languages.yaml
             start_time = time.time()
-            languages_list = utilities_stats.language_aggregate()
+            languages_list = stats_utilities.language_aggregate()
             languages_yaml = yaml.safe_dump(languages_list, allow_unicode=True, sort_keys=False)
             languages_element = github.create_file_element(
                 file_path="data/languages.yaml", file_content=languages_yaml
@@ -87,7 +87,7 @@ class Command(BaseCommand):
             # #####################################
             # # data/quiz-stats.yaml
             # start_time = time.time()
-            # quiz_detail_stats_list = utilities_stats.quiz_detail_stats()
+            # quiz_detail_stats_list = stats_utilities.quiz_detail_stats()
             # quiz_detail_stats_yaml = yaml.safe_dump(quiz_detail_stats_list, allow_unicode=True, sort_keys=False)
             # quiz_stats_element = github.create_file_element(
             #     file_path="data/quiz-stats.yaml", file_content=quiz_detail_stats_yaml
