@@ -210,11 +210,11 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         """
         Slug field should only be editable:
         - when the quiz is just created
-        - if the quiz is not published yets
+        - if the quiz is not published yet
         """
         if obj:
             if obj.publish:
-                return self.readonly_fields + ("slug",)
+                return self.readonly_fields + ["slug"]
         return self.readonly_fields
 
     def get_prepopulated_fields(self, request, obj=None):
