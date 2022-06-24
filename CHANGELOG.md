@@ -6,9 +6,23 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Voir les [Issues](https://github.com/quiz-anthropocene/know-your-planet/issues) et le Board.
 
+## [2.3.0] - 2022-06
+
+Interface contributeur
+- Pages "liste" : afficher les filtres actifs sous forme de badge
+- Déplacé les actions administrateurs sous `/admin` (déplacé l'admin Django sous `/django`)
+- Upload d'image (Questions & Quizs) et stockage sur S3-like
+
+Automatisation
+- Ajouter les nouveaux contributeurs à une liste Sendinblue
+
+Autres
+- Favicon
+- Quelques résolutions de bugs
+
 ## [2.2.0] - 2022-05
 
-Interface d'administration v2
+Interface contributeur (v2)
 - Historisation du contenu avec `django-simple-history` (Questions, Quizs, Glossaire), page avec les dernières modifications
 - Pouvoir créer du contenu privé (Questions & Quizs), qui n'est pas exporté (ni visible dans l'API et les stats), modifiable seulement par l'auteur
 - Glossaire : liste des termes, voir les détails d'un terme, créer, modifier
@@ -24,7 +38,7 @@ Code Github
 
 ## [2.1.0] - 2022-04
 
-Interface d'administration v1
+Interface contributeur (v1)
 - Header, Footer, Home, Breadcrumbs, pages d'erreur
 - Page de connexion, réinitialisation du mot de passe
 - Configuration email

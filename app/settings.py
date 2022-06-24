@@ -239,9 +239,9 @@ DEFAULT_FROM_NAME = "Quiz de l'Anthropocène"
 SERVER_EMAIL = os.getenv("TECH_EMAIL")
 ADMINS = eval(os.getenv("ADMINS", "[]"))
 
-SIB_CONTRIBUTOR_LIST_ID = os.getenv("SIB_CONTRIBUTOR_LIST_ID")
-SIB_NEWSLETTER_LIST_ID = os.getenv("SIB_NEWSLETTER_LIST_ID")
-SIB_NEWSLETTER_DOI_TEMPLATE_ID = os.getenv("SIB_NEWSLETTER_DOI_TEMPLATE_ID")
+SIB_CONTRIBUTOR_LIST_ID = os.getenv("SIB_CONTRIBUTOR_LIST_ID", 0)
+SIB_NEWSLETTER_LIST_ID = os.getenv("SIB_NEWSLETTER_LIST_ID", 0)
+SIB_NEWSLETTER_DOI_TEMPLATE_ID = os.getenv("SIB_NEWSLETTER_DOI_TEMPLATE_ID", 0)
 SIB_CONTACT_ENDPOINT = "https://api.sendinblue.com/v3/contacts"
 SIB_CONTACT_DOI_ENDPOINT = "https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation"
 
@@ -252,7 +252,7 @@ SIB_CONTACT_DOI_ENDPOINT = "https://api.sendinblue.com/v3/contacts/doubleOptinCo
 
 if not DEBUG:
     sentry_sdk.init(
-        dsn=os.getenv("SENTRY_GLITCHTIP_DSN"),
+        dsn=os.getenv("SENTRY_GLITCHTIP_DSN", "https://set-glitchtip-key@app.glitchtip.com/0"),
         integrations=[DjangoIntegration()],
         auto_session_tracking=False,
         traces_sample_rate=0,
@@ -262,11 +262,11 @@ if not DEBUG:
 # Object storage : Scaleway (S3-like)
 # ------------------------------------------------------------------------------
 
-S3_ENDPOINT = os.getenv("S3_ENDPOINT")
-S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME")
-S3_BUCKET_REGION = os.getenv("S3_BUCKET_REGION")
-S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY")
-S3_SECRET_KEY = os.getenv("S3_SECRET_KEY")
+S3_ENDPOINT = os.getenv("S3_ENDPOINT", "https://set-s3-endpoint.com")
+S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME", "set-s3-bucket-name")
+S3_BUCKET_REGION = os.getenv("S3_BUCKET_REGION", "set-s3-bucket-region")
+S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY", "set-s3-access-key")
+S3_SECRET_KEY = os.getenv("S3_SECRET_KEY", "set-s3-secret-key")
 
 QUESTION_FOLDER_NAME = "questions"
 QUIZ_FOLDER_NAME = "quizs"
@@ -362,8 +362,7 @@ SHELL_PLUS_IMPORTS = [
 
 GITHUB_BACKEND_REPO = "quiz-anthropocene/admin-backend"
 GITHUB_FRONTEND_REPO = "quiz-anthropocene/public-frontend"
-GITHUB_ACCESS_TOKEN = os.getenv("GITHUB_ACCESS_TOKEN")
-GITHUB_CRON_ACTION_TOKEN = os.getenv("GITHUB_CRON_ACTION_TOKEN")
+GITHUB_ACCESS_TOKEN = os.getenv("GITHUB_ACCESS_TOKEN", "set-github-access-token")
 
 
 # Notion.so
