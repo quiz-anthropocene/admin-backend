@@ -83,8 +83,15 @@ class UserModelQuerysetTest(TestCase):
         cls.user_3 = UserFactory()
         QuestionFactory(author=cls.user_2)
         QuestionFactory(author=cls.user_2)
-        QuizFactory(author=cls.user_2)
+        QuizFactory(name="quiz 1", author=cls.user_2)
+        QuizFactory(name="quiz 2", author=cls.user_3, visibility=constants.VISIBILITY_PRIVATE)
         QuestionFactory(author=cls.user_3, visibility=constants.VISIBILITY_PRIVATE)
+
+    def test_has_question(self):
+        self.assertEqual(User.objects.has_question().count(), 2)
+
+    def test_has_quiz(self):
+        self.assertEqual(User.objects.has_quiz().count(), 2)
 
     def test_has_public_content(self):
         self.assertEqual(User.objects.has_public_content().count(), 1)

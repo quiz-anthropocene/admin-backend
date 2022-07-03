@@ -2,13 +2,16 @@ from itertools import chain
 
 from django.db.models import Value
 from django.views.generic import DetailView, TemplateView
-from django_tables2.views import SingleTableView
+from django_filters.views import FilterView
+from django_tables2.views import SingleTableMixin
 
+from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import AdministratorUserRequiredMixin
 from glossary.models import GlossaryItem
 from history.tables import HistoryTable
 from questions.models import Question
 from quizs.models import Quiz
+from users.filters import ContributorFilter
 from users.models import User
 from users.tables import ContributorTable
 
@@ -27,11 +30,12 @@ class AdminHomeView(AdministratorUserRequiredMixin, DetailView):
         return context
 
 
-class AdminContributorListView(AdministratorUserRequiredMixin, SingleTableView):
+class AdminContributorListView(AdministratorUserRequiredMixin, SingleTableMixin, FilterView):
     model = User
     template_name = "admin/contributors.html"
     context_object_name = "contributors"
     table_class = ContributorTable
+    filterset_class = ContributorFilter
 
     def get_queryset(self):
         qs = super().get_queryset()
@@ -43,6 +47,10 @@ class AdminContributorListView(AdministratorUserRequiredMixin, SingleTableView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["user"] = self.request.user
+        if context["filter"].form.is_valid():
+            search_dict = form_filters_cleaned_dict(context["filter"].form.cleaned_data)
+            if search_dict:
+                context["search_filters"] = form_filters_to_list(search_dict, with_delete_url=True)
         return context
 
 

@@ -38,6 +38,20 @@ class UserQueryset(models.QuerySet):
             ]
         )
 
+    def has_question(self):
+        return (
+            self.prefetch_related("questions")
+            .annotate(has_questions=Exists(Question.objects.filter(author=OuterRef("pk"))))
+            .filter(has_questions=True)
+        )
+
+    def has_quiz(self):
+        return (
+            self.prefetch_related("quizs")
+            .annotate(has_quizs=Exists(Quiz.objects.filter(author=OuterRef("pk"))))
+            .filter(has_quizs=True)
+        )
+
     def has_public_content(self):
         return (
             self.prefetch_related("questions", "quizs")
@@ -92,6 +106,12 @@ class UserManager(BaseUserManager):
     def all_administrators(self):
         return self.get_queryset().all_administrators()
 
+    def has_question(self):
+        return self.get_queryset().has_question()
+
+    def has_quiz(self):
+        return self.get_queryset().has_quiz()
+
     def has_public_content(self):
         return self.get_queryset().has_public_content()
 
@@ -141,12 +161,20 @@ class User(AbstractUser):
         return self.questions.public().validated().count()
 
     @property
+    def has_question(self) -> bool:
+        return self.question_count > 0
+
+    @property
     def quiz_count(self) -> int:
         return self.quizs.count()
 
     @property
     def quiz_public_published_count(self) -> int:
         return self.quizs.public().published().count()
+
+    @property
+    def has_quiz(self) -> bool:
+        return self.quiz_count > 0
 
     @property
     def has_role_contributor(self) -> bool:
