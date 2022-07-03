@@ -32,7 +32,7 @@ ol.breadcrumb {
 
 /* use width of the page */
 div.table-container > table {
-    min-width: 50% !important;
+    min-width: 100% !important;  /* 50% */
 }
 
 /* header style */

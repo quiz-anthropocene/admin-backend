@@ -28,6 +28,9 @@ class UserModelTest(TestCase):
     def test_quiz_count(self):
         self.assertEqual(self.user.quiz_count, 1)
 
+    def test_has_question(self):
+        self.assertTrue(self.user.has_question)
+
 
 class UserModelRoleTest(TestCase):
     @classmethod
@@ -78,13 +81,23 @@ class UserModelRoleTest(TestCase):
 class UserModelQuerysetTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.user_1 = UserFactory(roles=[])
+        cls.user_1 = UserFactory(email="xyz@email.com", roles=[])
         cls.user_2 = UserFactory()
         cls.user_3 = UserFactory()
         QuestionFactory(author=cls.user_2)
         QuestionFactory(author=cls.user_2)
-        QuizFactory(author=cls.user_2)
+        QuizFactory(name="quiz 1", author=cls.user_2)
+        QuizFactory(name="quiz 2", author=cls.user_3, visibility=constants.VISIBILITY_PRIVATE)
         QuestionFactory(author=cls.user_3, visibility=constants.VISIBILITY_PRIVATE)
+
+    def test_has_question(self):
+        self.assertEqual(User.objects.has_question().count(), 2)
+
+    def test_has_quiz(self):
+        self.assertEqual(User.objects.has_quiz().count(), 2)
 
     def test_has_public_content(self):
         self.assertEqual(User.objects.has_public_content().count(), 1)
+
+    def test_simple_search(self):
+        self.assertEqual(User.objects.simple_search(value="xy").count(), 1)

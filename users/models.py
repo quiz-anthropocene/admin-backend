@@ -10,32 +10,46 @@ from core.fields import ChoiceArrayField
 from core.utils import sendinblue
 from questions.models import Question
 from quizs.models import Quiz
-from users import constants
+from users import constants as user_constants
 
 
 class UserQueryset(models.QuerySet):
     def all_contributors(self):
         return self.filter(
             roles__overlap=[
-                constants.USER_ROLE_CONTRIBUTOR,
-                constants.USER_ROLE_SUPER_CONTRIBUTOR,
-                constants.USER_ROLE_ADMINISTRATOR,
+                user_constants.USER_ROLE_CONTRIBUTOR,
+                user_constants.USER_ROLE_SUPER_CONTRIBUTOR,
+                user_constants.USER_ROLE_ADMINISTRATOR,
             ]
         )
 
     def all_super_contributors(self):
         return self.filter(
             roles__overlap=[
-                constants.USER_ROLE_SUPER_CONTRIBUTOR,
-                constants.USER_ROLE_ADMINISTRATOR,
+                user_constants.USER_ROLE_SUPER_CONTRIBUTOR,
+                user_constants.USER_ROLE_ADMINISTRATOR,
             ]
         )
 
     def all_administrators(self):
         return self.filter(
             roles__overlap=[
-                constants.USER_ROLE_ADMINISTRATOR,
+                user_constants.USER_ROLE_ADMINISTRATOR,
             ]
+        )
+
+    def has_question(self):
+        return (
+            self.prefetch_related("questions")
+            .annotate(has_questions=Exists(Question.objects.filter(author=OuterRef("pk"))))
+            .filter(has_questions=True)
+        )
+
+    def has_quiz(self):
+        return (
+            self.prefetch_related("quizs")
+            .annotate(has_quizs=Exists(Quiz.objects.filter(author=OuterRef("pk"))))
+            .filter(has_quizs=True)
         )
 
     def has_public_content(self):
@@ -47,6 +61,9 @@ class UserQueryset(models.QuerySet):
             )
             .filter(Q(has_public_questions=True) | Q(has_public_quizs=True))
         )
+
+    def simple_search(self, value):
+        return self.filter(Q(first_name__icontains=value) | Q(last_name__icontains=value) | Q(email__icontains=value))
 
 
 class UserManager(BaseUserManager):
@@ -92,8 +109,17 @@ class UserManager(BaseUserManager):
     def all_administrators(self):
         return self.get_queryset().all_administrators()
 
+    def has_question(self):
+        return self.get_queryset().has_question()
+
+    def has_quiz(self):
+        return self.get_queryset().has_quiz()
+
     def has_public_content(self):
         return self.get_queryset().has_public_content()
+
+    def simple_search(self, value):
+        return self.get_queryset().simple_search(value)
 
 
 class User(AbstractUser):
@@ -108,7 +134,7 @@ class User(AbstractUser):
 
     roles = ChoiceArrayField(
         verbose_name="Rôles",
-        base_field=models.CharField(max_length=20, choices=constants.USER_ROLE_CHOICES),
+        base_field=models.CharField(max_length=20, choices=user_constants.USER_ROLE_CHOICES),
         blank=True,
         default=list,
     )
@@ -141,6 +167,10 @@ class User(AbstractUser):
         return self.questions.public().validated().count()
 
     @property
+    def has_question(self) -> bool:
+        return self.question_count > 0
+
+    @property
     def quiz_count(self) -> int:
         return self.quizs.count()
 
@@ -149,22 +179,26 @@ class User(AbstractUser):
         return self.quizs.public().published().count()
 
     @property
+    def has_quiz(self) -> bool:
+        return self.quiz_count > 0
+
+    @property
     def has_role_contributor(self) -> bool:
         ROLES_ALLOWED = [
-            constants.USER_ROLE_ADMINISTRATOR,
-            constants.USER_ROLE_SUPER_CONTRIBUTOR,
-            constants.USER_ROLE_CONTRIBUTOR,
+            user_constants.USER_ROLE_ADMINISTRATOR,
+            user_constants.USER_ROLE_SUPER_CONTRIBUTOR,
+            user_constants.USER_ROLE_CONTRIBUTOR,
         ]
         return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
 
     @property
     def has_role_super_contributor(self) -> bool:
-        ROLES_ALLOWED = [constants.USER_ROLE_ADMINISTRATOR, constants.USER_ROLE_SUPER_CONTRIBUTOR]
+        ROLES_ALLOWED = [user_constants.USER_ROLE_ADMINISTRATOR, user_constants.USER_ROLE_SUPER_CONTRIBUTOR]
         return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
 
     @property
     def has_role_administrator(self) -> bool:
-        ROLES_ALLOWED = [constants.USER_ROLE_ADMINISTRATOR]
+        ROLES_ALLOWED = [user_constants.USER_ROLE_ADMINISTRATOR]
         return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
 
     def can_edit_question(self, question) -> bool:
