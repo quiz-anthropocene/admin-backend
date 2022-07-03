@@ -19,7 +19,7 @@ class ContributorFilter(django_filters.FilterSet):
     q = django_filters.CharFilter(
         label="Recherche",
         method="text_search",
-        widget=forms.TextInput(attrs={"placeholder": "Dans les champs 'prénom', 'nom' ou 'e-mail'"}),
+        widget=forms.TextInput(attrs={"placeholder": "Dans les champs 'prénom', 'nom' et 'e-mail'"}),
     )
 
     class Meta:

@@ -3,7 +3,7 @@ from django.conf import settings
 from django.contrib.postgres.fields import ArrayField
 from django.core.exceptions import ValidationError
 from django.db import models
-from django.db.models import Avg, Count
+from django.db.models import Avg, Count, Q
 from django.db.models.signals import m2m_changed, post_delete, post_save, pre_save
 from django.dispatch import receiver
 from django.urls import reverse
@@ -31,6 +31,14 @@ class QuizQuerySet(models.QuerySet):
 
     def for_author(self, author):
         return self.filter(author=author)
+
+    def simple_search(self, value):
+        search_fields = ["name", "introduction", "conclusion"]
+        conditions = Q()
+        for field_name in search_fields:
+            field_search = {f"{field_name}__icontains": value}
+            conditions |= Q(**field_search)
+        return self.filter(conditions)
 
 
 class Quiz(models.Model):

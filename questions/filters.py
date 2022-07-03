@@ -12,7 +12,7 @@ class QuestionFilter(django_filters.FilterSet):
     q = django_filters.CharFilter(
         label="Recherche",
         method="text_search",
-        widget=forms.TextInput(attrs={"placeholder": "Dans les champs 'texte', 'réponses' ou 'explication'"}),
+        widget=forms.TextInput(attrs={"placeholder": "Dans les champs 'texte', 'réponses' et 'explication'"}),
     )
 
     class Meta:
