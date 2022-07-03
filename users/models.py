@@ -62,6 +62,9 @@ class UserQueryset(models.QuerySet):
             .filter(Q(has_public_questions=True) | Q(has_public_quizs=True))
         )
 
+    def simple_search(self, value):
+        return self.filter(Q(first_name__icontains=value) | Q(last_name__icontains=value) | Q(email__icontains=value))
+
 
 class UserManager(BaseUserManager):
     def get_queryset(self):
@@ -114,6 +117,9 @@ class UserManager(BaseUserManager):
 
     def has_public_content(self):
         return self.get_queryset().has_public_content()
+
+    def simple_search(self, value):
+        return self.get_queryset().simple_search(value)
 
 
 class User(AbstractUser):
