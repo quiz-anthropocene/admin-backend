@@ -169,7 +169,9 @@ class QuestionModelQuerySetTest(TestCase):
             validation_status=constants.QUESTION_VALIDATION_STATUS_NEW, visibility=constants.VISIBILITY_HIDDEN
         )
         QuestionFactory(
-            validation_status=constants.QUESTION_VALIDATION_STATUS_NEW, visibility=constants.VISIBILITY_PRIVATE
+            text="xyz",
+            validation_status=constants.QUESTION_VALIDATION_STATUS_NEW,
+            visibility=constants.VISIBILITY_PRIVATE,
         )
 
     def test_question_validated(self):
@@ -183,3 +185,6 @@ class QuestionModelQuerySetTest(TestCase):
 
     def test_question_public_validated(self):
         self.assertEqual(Question.objects.public().validated().count(), 2)
+
+    def test_simple_search(self):
+        self.assertEqual(Question.objects.simple_search(value="xy").count(), 1)
