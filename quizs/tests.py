@@ -153,7 +153,7 @@ class QuizModelQuerySetTest(TestCase):
         QuizFactory(name="Quiz 3", publish=True, visibility=constants.VISIBILITY_PRIVATE)
         QuizFactory(name="Quiz 4", publish=False, visibility=constants.VISIBILITY_PUBLIC)
         QuizFactory(name="Quiz 5", publish=False, visibility=constants.VISIBILITY_HIDDEN)
-        QuizFactory(name="Quiz 6", publish=False, visibility=constants.VISIBILITY_PRIVATE)
+        QuizFactory(name="Quiz 6", introduction="xyz", publish=False, visibility=constants.VISIBILITY_PRIVATE)
 
     def test_quiz_published(self):
         self.assertEqual(Quiz.objects.published().count(), 3)
@@ -163,3 +163,6 @@ class QuizModelQuerySetTest(TestCase):
 
     def test_quiz_public_published(self):
         self.assertEqual(Quiz.objects.public().published().count(), 2)
+
+    def test_simple_search(self):
+        self.assertEqual(Quiz.objects.simple_search(value="xy").count(), 1)

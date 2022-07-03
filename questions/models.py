@@ -2,6 +2,7 @@ from django.conf import settings
 from django.contrib.postgres.fields import ArrayField
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.db.models import Q
 from django.db.models.signals import m2m_changed, post_save, pre_save
 from django.dispatch import receiver
 from django.urls import reverse
@@ -38,6 +39,22 @@ class QuestionQuerySet(models.QuerySet):
 
     def for_difficulty(self, difficulty):
         return self.filter(difficulty=difficulty)
+
+    def simple_search(self, value):
+        search_fields = [
+            "text",
+            "answer_option_a",
+            "answer_option_b",
+            "answer_option_c",
+            "answer_option_d",
+            "answer_explanation",
+        ]
+        # "answer_reading_recommendation", "answer_image_explanation", "answer_extra_info"
+        conditions = Q()
+        for field_name in search_fields:
+            field_search = {f"{field_name}__icontains": value}
+            conditions |= Q(**field_search)
+        return self.filter(conditions)
 
 
 class Question(models.Model):

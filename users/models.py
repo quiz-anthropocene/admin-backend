@@ -63,7 +63,12 @@ class UserQueryset(models.QuerySet):
         )
 
     def simple_search(self, value):
-        return self.filter(Q(first_name__icontains=value) | Q(last_name__icontains=value) | Q(email__icontains=value))
+        search_fields = ["first_name", "last_name", "email"]
+        conditions = Q()
+        for field_name in search_fields:
+            field_search = {f"{field_name}__icontains": value}
+            conditions |= Q(**field_search)
+        return self.filter(conditions)
 
 
 class UserManager(BaseUserManager):
