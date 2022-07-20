@@ -44,7 +44,6 @@ class UserAdmin(UserAdmin):
     ordering = ["-created"]
 
     readonly_fields = [
-        "is_active",
         "is_contributor",
         "is_super_contributor",
         "is_administrator",
@@ -88,6 +87,9 @@ class UserAdmin(UserAdmin):
     def get_queryset(self, request):
         qs = super().get_queryset(request)
         return qs.prefetch_related("questions", "quizs")
+
+    def has_delete_permission(self, request, obj=None):
+        return False
 
     def is_contributor(self, user) -> bool:
         return "✅" if user.has_role_contributor else "❌"
