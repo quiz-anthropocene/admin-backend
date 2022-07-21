@@ -60,6 +60,7 @@ class Quiz(models.Model):
         "slug",
         "difficulty_average",
         "author",
+        "publish_date",
         "created",
         "updated",
     ] + QUIZ_FLATTEN_FIELDS
@@ -101,7 +102,10 @@ class Quiz(models.Model):
         blank=True,
     )
     has_audio = models.BooleanField(verbose_name="Contenu audio ?", default=False)
+
     publish = models.BooleanField(verbose_name="Prêt à être publié ?", default=False)
+    publish_date = models.DateTimeField(verbose_name="Date de publication", blank=True, null=True)
+
     spotlight = models.BooleanField(verbose_name="Mise en avant ?", default=False)
     visibility = models.CharField(
         verbose_name="Visibilité",

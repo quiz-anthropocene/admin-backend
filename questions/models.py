@@ -78,6 +78,7 @@ class Question(models.Model):
         "author",
         "validator",
         "validation_status",
+        "validation_date",
         "created",
         "updated",
     ] + QUESTION_FLATTEN_FIELDS
@@ -182,6 +183,7 @@ class Question(models.Model):
         null=True,
         on_delete=models.SET_NULL,
     )
+
     validator = models.ForeignKey(
         verbose_name="Validateur",
         to=settings.AUTH_USER_MODEL,
@@ -196,6 +198,8 @@ class Question(models.Model):
         choices=constants.QUESTION_VALIDATION_STATUS_CHOICES,
         default=constants.QUESTION_VALIDATION_STATUS_NEW,
     )
+    validation_date = models.DateTimeField(verbose_name="Date de validation", blank=True, null=True)
+
     visibility = models.CharField(
         verbose_name="Visibilité",
         max_length=50,
