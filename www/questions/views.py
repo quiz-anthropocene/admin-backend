@@ -15,7 +15,6 @@ from django_tables2.views import SingleTableMixin, SingleTableView
 from api.questions.serializers import QuestionFullStringSerializer
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
-from core import constants
 from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import ContributorUserRequiredMixin
 from core.utils.s3 import S3Upload
@@ -97,11 +96,11 @@ class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, 
         # Change detected on the validation_status field
         if question_before.validation_status != question.validation_status:
             # Question validated! set the validator data
-            if question.validation_status == constants.QUESTION_VALIDATION_STATUS_OK:
+            if question.is_validated:
                 question.validator = self.request.user
                 question.validation_date = timezone.now()
             # Question not validated anymore... reset the validator data
-            elif question_before.validation_status == constants.QUESTION_VALIDATION_STATUS_OK:
+            elif question_before.is_validated:
                 question.validator = None
                 question.validation_date = None
         question.save()

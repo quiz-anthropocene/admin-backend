@@ -8,7 +8,7 @@ from quizs.tables import QUIZ_FIELD_SEQUENCE
 from tags.models import Tag
 
 
-QUIZ_READONLY_FORM_FIELDS = ["author"]
+QUIZ_READONLY_FORM_FIELDS = ["author", "validation_status"]
 QUIZ_M2M_SEPERATE_FORM_FIELDS = ["questions", "relationships"]
 QUIZ_FORM_FIELDS = [
     field_name
@@ -38,6 +38,10 @@ class QuizEditForm(QuizCreateForm):
     class Meta:
         model = Quiz
         fields = QUIZ_FORM_FIELDS + QUIZ_READONLY_FORM_FIELDS
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["validation_status"].disabled = False
 
 
 class QuizQuestionEditForm(forms.ModelForm):

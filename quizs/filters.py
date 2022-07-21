@@ -20,7 +20,7 @@ class QuizFilter(django_filters.FilterSet):
 
     class Meta:
         model = Quiz
-        fields = ["id", "tags", "language", "publish", "has_audio", "author", "visibility", "q"]
+        fields = ["id", "tags", "language", "has_audio", "author", "validation_status", "publish", "visibility", "q"]
 
     def text_search(self, queryset, name, value):
         if not value:

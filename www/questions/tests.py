@@ -89,7 +89,7 @@ class QuestionDetailEditViewTest(TestCase):
             text="Question 1",
             author=cls.user_contributor_1,
             visibility=constants.VISIBILITY_PUBLIC,
-            validation_status=constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS,
+            validation_status=constants.VALIDATION_STATUS_IN_PROGRESS,
         )
         cls.question_2 = QuestionFactory(
             text="Question 2", author=cls.user_contributor_1, visibility=constants.VISIBILITY_PRIVATE
@@ -112,7 +112,7 @@ class QuestionDetailEditViewTest(TestCase):
 
     def test_administrator_can_validate_public_question(self):
         self.client.login(email=self.user_admin.email, password=DEFAULT_PASSWORD)
-        self.assertEqual(self.question_1.validation_status, constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS)
+        self.assertEqual(self.question_1.validation_status, constants.VALIDATION_STATUS_IN_PROGRESS)
         url = reverse("questions:detail_edit", args=[self.question_1.id])
         QUESTION_EDIT_FORM = {
             **QUESTION_CREATE_FORM_DEFAULT,
@@ -120,7 +120,7 @@ class QuestionDetailEditViewTest(TestCase):
             "category": self.question_1.category.id,
             "author": self.question_1.author,
             "visibility": self.question_1.visibility,
-            "validation_status": constants.QUESTION_VALIDATION_STATUS_OK,
+            "validation_status": constants.VALIDATION_STATUS_OK,
         }
         response = self.client.post(url, data=QUESTION_EDIT_FORM)
         self.assertEqual(response.status_code, 302)

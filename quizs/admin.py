@@ -81,9 +81,10 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "difficulty_average",
         "has_audio",
         "answer_count_agg",
-        "created",
+        "validation_status",
         "publish",
         "spotlight",
+        "created",
     ]
     search_fields = ["name"]
     list_filter = ["publish", "spotlight", "has_audio", "author", "visibility", "language", "tags"]
@@ -109,6 +110,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "duration_average_seconds",
         "duration_average_minutes_string",
         "publish_date",
+        "validation_date",
         "created",
         "updated",
     ]
@@ -143,6 +145,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
             "Recap des questions",
             {
                 "fields": (
+                    "has_audio",
                     "question_count",
                     "difficulty_average",
                     "questions_not_validated_string_html",
@@ -166,10 +169,13 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
             {"fields": ("visibility",)},
         ),
         (
+            "Validation",
+            {"fields": ("validation_status", "validator", "validation_date")},
+        ),
+        (
             "Prêt à être publié ? Toutes les questions doivent être au statut 'validé' !",
             {
                 "fields": (
-                    "has_audio",
                     "publish",
                     "publish_date",
                     "spotlight",

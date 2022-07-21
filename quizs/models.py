@@ -17,6 +17,12 @@ from tags.models import Tag
 
 
 class QuizQuerySet(models.QuerySet):
+    def validated(self):
+        return self.filter(validation_status=constants.VALIDATION_STATUS_OK)
+
+    def not_validated(self):
+        return self.exclude(validation_status=constants.VALIDATION_STATUS_OK)
+
     def published(self):
         return self.filter(publish=True)
 
@@ -55,7 +61,7 @@ class Quiz(models.Model):
     QUIZ_URL_FIELDS = []
     QUIZ_IMAGE_URL_FIELDS = ["image_background_url"]
     QUIZ_TIMESTAMP_FIELDS = ["created", "updated"]
-    QUIZ_FLATTEN_FIELDS = ["tag_list", "question_list", "relationship_list", "author_string"]
+    QUIZ_FLATTEN_FIELDS = ["tag_list", "question_list", "relationship_list", "author_string", "validator_string"]
     QUIZ_READONLY_FIELDS = [
         "slug",
         "difficulty_average",
@@ -103,6 +109,21 @@ class Quiz(models.Model):
     )
     has_audio = models.BooleanField(verbose_name="Contenu audio ?", default=False)
 
+    validator = models.ForeignKey(
+        verbose_name="Validateur",
+        to=settings.AUTH_USER_MODEL,
+        related_name="quizs_validated",
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL,
+    )
+    validation_status = models.CharField(
+        verbose_name="Statut",
+        max_length=150,
+        choices=constants.VALIDATION_STATUS_CHOICES,
+        default=constants.VALIDATION_STATUS_NEW,
+    )
+    validation_date = models.DateTimeField(verbose_name="Date de validation", blank=True, null=True)
     publish = models.BooleanField(verbose_name="Prêt à être publié ?", default=False)
     publish_date = models.DateTimeField(verbose_name="Date de publication", blank=True, null=True)
 
@@ -135,6 +156,7 @@ class Quiz(models.Model):
         verbose_name="Relations", base_field=models.CharField(max_length=50), blank=True, default=list
     )
     author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
+    validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
 
     history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
 
@@ -166,6 +188,7 @@ class Quiz(models.Model):
         # self.question_list = self.questions_id_list_with_order  # see m2m_changed
         # self.relationship_list = self.relationships_list  # see m2m_changed
         self.author_string = str(self.author) if self.author else ""
+        self.validator_string = str(self.validator) if self.validator else ""
 
     def save(self, *args, **kwargs):
         self.set_slug()
@@ -201,6 +224,10 @@ class Quiz(models.Model):
     @property
     def is_private(self) -> bool:
         return self.visibility == constants.VISIBILITY_PRIVATE
+
+    @property
+    def is_validated(self) -> bool:
+        return self.validation_status == constants.VALIDATION_STATUS_OK
 
     @property
     def questions_categories_list(self) -> list:

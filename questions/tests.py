@@ -89,7 +89,7 @@ class QuestionModelHistoryTest(TestCase):
         cls.tag_2 = TagFactory(name="Another tag")
         cls.tag_3 = TagFactory(name="Tag 3")
         cls.question = QuestionFactory(
-            text="Test", category=cls.category_1, validation_status=constants.QUESTION_VALIDATION_STATUS_NEW
+            text="Test", category=cls.category_1, validation_status=constants.VALIDATION_STATUS_NEW
         )
         cls.question.tags.set([cls.tag_1, cls.tag_2])
 
@@ -134,7 +134,7 @@ class QuestionModelHistoryTest(TestCase):
 
     def test_history_diff(self):
         self.question.text = "La vraie question"
-        self.question.validation_status = constants.QUESTION_VALIDATION_STATUS_OK
+        self.question.validation_status = constants.VALIDATION_STATUS_OK
         self.question.category = self.category_2
         self.question.save()
         self.assertEqual(self.question.history.count(), 2 + 1)
@@ -153,24 +153,14 @@ class QuestionModelHistoryTest(TestCase):
 class QuestionModelQuerySetTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        QuestionFactory(
-            validation_status=constants.QUESTION_VALIDATION_STATUS_OK, visibility=constants.VISIBILITY_PUBLIC
-        )
-        QuestionFactory(
-            validation_status=constants.QUESTION_VALIDATION_STATUS_OK, visibility=constants.VISIBILITY_HIDDEN
-        )
-        QuestionFactory(
-            validation_status=constants.QUESTION_VALIDATION_STATUS_OK, visibility=constants.VISIBILITY_PRIVATE
-        )
-        QuestionFactory(
-            validation_status=constants.QUESTION_VALIDATION_STATUS_NEW, visibility=constants.VISIBILITY_PUBLIC
-        )
-        QuestionFactory(
-            validation_status=constants.QUESTION_VALIDATION_STATUS_NEW, visibility=constants.VISIBILITY_HIDDEN
-        )
+        QuestionFactory(validation_status=constants.VALIDATION_STATUS_OK, visibility=constants.VISIBILITY_PUBLIC)
+        QuestionFactory(validation_status=constants.VALIDATION_STATUS_OK, visibility=constants.VISIBILITY_HIDDEN)
+        QuestionFactory(validation_status=constants.VALIDATION_STATUS_OK, visibility=constants.VISIBILITY_PRIVATE)
+        QuestionFactory(validation_status=constants.VALIDATION_STATUS_NEW, visibility=constants.VISIBILITY_PUBLIC)
+        QuestionFactory(validation_status=constants.VALIDATION_STATUS_NEW, visibility=constants.VISIBILITY_HIDDEN)
         QuestionFactory(
             text="xyz",
-            validation_status=constants.QUESTION_VALIDATION_STATUS_NEW,
+            validation_status=constants.VALIDATION_STATUS_NEW,
             visibility=constants.VISIBILITY_PRIVATE,
         )
 

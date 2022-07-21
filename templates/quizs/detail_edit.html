@@ -25,6 +25,16 @@
                             </div>
                         {% endif %}
                         {% if not quiz.is_private %}
+                            {% if not quiz.is_validated %}
+                                <div class="alert alert-warning" role="alert">
+                                    ✔️ Le quiz n'est pas encore <strong>validé</strong>. Seul un administrateur peut le faire.
+                                </div>
+                            {% endif %}
+                            {% if quiz.validator %}
+                                <div class="alert alert-success" role="alert">
+                                    ✅ Validé par <strong>{{ quiz.validator }}</strong> le {{ quiz.validation_date|date:"d F Y" }}
+                                </div>
+                            {% endif %}
                             {% if not quiz.publish %}
                                 <div class="alert alert-warning" role="alert">
                                     ✔️ Le quiz n'est pas encore <strong>publié</strong>. Seul un administrateur peut le faire.

@@ -17,13 +17,10 @@ from tags.models import Tag
 
 class QuestionQuerySet(models.QuerySet):
     def validated(self):
-        return self.filter(validation_status=constants.QUESTION_VALIDATION_STATUS_OK)
+        return self.filter(validation_status=constants.VALIDATION_STATUS_OK)
 
     def not_validated(self):
-        return self.exclude(validation_status=constants.QUESTION_VALIDATION_STATUS_OK)
-
-    def for_validation_status(self, validation_status):
-        return self.filter(validation_status=validation_status)
+        return self.exclude(validation_status=constants.VALIDATION_STATUS_OK)
 
     def public(self):
         return self.exclude(visibility=constants.VISIBILITY_PRIVATE)
@@ -195,8 +192,8 @@ class Question(models.Model):
     validation_status = models.CharField(
         verbose_name="Statut",
         max_length=150,
-        choices=constants.QUESTION_VALIDATION_STATUS_CHOICES,
-        default=constants.QUESTION_VALIDATION_STATUS_NEW,
+        choices=constants.VALIDATION_STATUS_CHOICES,
+        default=constants.VALIDATION_STATUS_NEW,
     )
     validation_date = models.DateTimeField(verbose_name="Date de validation", blank=True, null=True)
 
@@ -300,7 +297,7 @@ class Question(models.Model):
 
     @property
     def is_validated(self) -> bool:
-        return self.validation_status == constants.QUESTION_VALIDATION_STATUS_OK
+        return self.validation_status == constants.VALIDATION_STATUS_OK
 
     @property
     def answer_count_agg(self) -> int:
@@ -352,7 +349,7 @@ class Question(models.Model):
         - https://adamj.eu/tech/2020/01/22/djangos-field-choices-dont-constrain-your-data/
         """
         # > only run on validated questions
-        if self.validation_status == constants.QUESTION_VALIDATION_STATUS_OK:
+        if self.validation_status == constants.VALIDATION_STATUS_OK:
             # > category rules
             if self.category is None:
                 error_message = (
@@ -367,7 +364,7 @@ class Question(models.Model):
                 ("difficulty", "QUESTION_DIFFICULTY_CHOICE_LIST"),
                 ("language", "LANGUAGE_CHOICE_LIST"),
                 ("answer_correct", "QUESTION_ANSWER_CHOICE_LIST"),
-                # ("validation_status", "QUESTION_VALIDATION_STATUS_LIST"),
+                # ("validation_status", "VALIDATION_STATUS_LIST"),
             ]
             for choice_field in question_choice_fields:
                 if getattr(self, choice_field[0]) not in getattr(constants, choice_field[1]):
