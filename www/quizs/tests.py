@@ -1,5 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
+from django.utils import timezone
 
 from core import constants
 from quizs.factories import QuizFactory
@@ -96,6 +97,16 @@ class QuizDetailEditViewTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertNotContains(response, '<form id="quiz_edit_form" ')
         self.assertContains(response, "Vous n'avez pas les droits nécessaires")
+
+    def test_administrator_can_publish_public_quiz(self):
+        self.client.login(email=self.user_admin.email, password=DEFAULT_PASSWORD)
+        self.assertEqual(self.quiz_1.publish, False)
+        url = reverse("quizs:detail_edit", args=[self.quiz_1.id])
+        QUIZ_EDIT_FORM = {**QUIZ_CREATE_FORM_DEFAULT, "publish": True}
+        response = self.client.post(url, data=QUIZ_EDIT_FORM)
+        self.assertEqual(response.status_code, 302)
+        quiz = Quiz.objects.get(id=self.quiz_1.id)
+        self.assertEqual(quiz.publish_date.date(), timezone.now().date())
 
     def test_only_author_can_edit_private_quiz(self):
         # author can edit

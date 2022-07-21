@@ -170,6 +170,7 @@ class Quiz(models.Model):
     def save(self, *args, **kwargs):
         self.set_slug()
         self.set_difficulty_average()
+        # set_publication_date() in question/views.py
         self.set_flatten_fields()
         self.full_clean()
         return super(Quiz, self).save(*args, **kwargs)

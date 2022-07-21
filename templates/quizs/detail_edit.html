@@ -24,10 +24,17 @@
                                 ℹ️ Vous êtes <strong>l'auteur</strong> de ce quiz
                             </div>
                         {% endif %}
-                        {% if not quiz.is_private and quiz.publish %}
-                            <div class="alert alert-success" role="alert">
-                                ✅ Publié le {{ quiz.publish_date|date:"d F Y" }}
-                            </div>
+                        {% if not quiz.is_private %}
+                            {% if not quiz.publish %}
+                                <div class="alert alert-warning" role="alert">
+                                    ✔️ Le quiz n'est pas encore <strong>publié</strong>. Seul un administrateur peut le faire.
+                                </div>
+                            {% endif %}
+                            {% if quiz.publish %}
+                                <div class="alert alert-success" role="alert">
+                                    ✅ Publié le {{ quiz.publish_date|date:"d F Y" }}
+                                </div>
+                            {% endif %}
                         {% endif %}
                         {% if not quiz.image_background_url %}
                             <div class="alert alert-primary" role="alert">

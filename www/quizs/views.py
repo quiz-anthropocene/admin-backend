@@ -1,8 +1,10 @@
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.forms.models import model_to_dict
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
+from django.utils import timezone
 from django.utils.safestring import mark_safe
 from django.views.generic import CreateView, DetailView, FormView, UpdateView
 from django_filters.views import FilterView
@@ -86,6 +88,26 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
         # User authorizations
         context["user_can_edit"] = self.request.user.can_edit_quiz(quiz)
         return context
+
+    def form_valid(self, form):
+        quiz_before = self.get_object()
+        quiz = form.save(commit=False)
+        # Change detected on the publish field
+        if quiz_before.publish != quiz.publish:
+            # Quiz published! set the extra data
+            if quiz.publish:
+                quiz.publish_date = timezone.now()
+            # Quiz not published anymore... reset the extra data
+            elif quiz_before.publish:
+                quiz.publish_date = None
+        quiz.save()
+
+        messages.add_message(
+            self.request,
+            messages.SUCCESS,
+            self.get_success_message(form.cleaned_data),
+        )
+        return HttpResponseRedirect(self.get_success_url())
 
     def get_success_url(self):
         return reverse_lazy("quizs:detail_view", args=[self.kwargs.get("pk")])
