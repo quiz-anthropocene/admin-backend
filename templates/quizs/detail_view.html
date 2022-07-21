@@ -45,7 +45,7 @@
                             {% elif field in quiz.QUIZ_IMAGE_URL_FIELDS %}
                                 <td><a href="{{ quiz_dict|get_obj_attr:field }}" target="_blank" rel="noopener"><img src="{{ quiz_dict|get_obj_attr:field }}" title="{{ quiz_dict|get_obj_attr:field }}" height="100" /></a></td>
                             {% else %}
-                                <td>{{ quiz_dict|get_obj_attr:field }}</td>
+                                <td>{{ quiz_dict|get_obj_attr:field|default:"" }}</td>
                             {% endif %}
                         </tr>
                     {% endfor %}

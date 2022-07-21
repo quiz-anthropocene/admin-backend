@@ -9,7 +9,7 @@
 {% block question_detail_content %}
 <div class="row">
     <div class="col-12">
-        {% if user_can_edit_question %}
+        {% if user_can_edit %}
             <form id="question_edit_form" method="POST" action="">
                 {% csrf_token %}
 
@@ -17,8 +17,23 @@
                     <div class="col-md-8">
                         {% bootstrap_form form alert_error_type="all" %}
                     </div>
+                    <!-- Sidebar -->
                     <div class="col-md-4 d-none d-md-block">
-                        <div class="alert alert-primary">L'ajout de l'image d'explication se fait à la fin du formulaire 👇</div>
+                        {% if question.author == user %}
+                            <div class="alert alert-primary" role="alert">
+                                ℹ️ Vous êtes <strong>l'auteur</strong> de cette question
+                            </div>
+                        {% endif %}
+                        {% if not question.is_private and question.validator %}
+                            <div class="alert alert-success" role="alert">
+                                ✅ Validée par <strong>{{ question.validator }}</strong> le {{ question.validation_date|date:"d F Y" }}
+                            </div>
+                        {% endif %}
+                        {% if not question.answer_image_url %}
+                            <div class="alert alert-primary" role="alert">
+                                🖼️ L'ajout de <strong>l'image d'explication</strong> se fait à la fin du formulaire 👇
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
 

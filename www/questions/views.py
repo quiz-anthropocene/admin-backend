@@ -84,7 +84,7 @@ class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, 
         context["s3_form_values"] = s3_upload.form_values
         context["s3_upload_config"] = s3_upload.config
         # User authorizations
-        context["user_can_edit_question"] = self.request.user.can_edit_question(question)
+        context["user_can_edit"] = self.request.user.can_edit_question(question)
         return context
 
     def get_success_url(self):

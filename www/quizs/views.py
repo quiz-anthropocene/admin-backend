@@ -84,7 +84,7 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
         context["s3_form_values"] = s3_upload.form_values
         context["s3_upload_config"] = s3_upload.config
         # User authorizations
-        context["user_can_edit_quiz"] = self.request.user.can_edit_quiz(quiz)
+        context["user_can_edit"] = self.request.user.can_edit_quiz(quiz)
         return context
 
     def get_success_url(self):
@@ -100,8 +100,8 @@ class QuizDetailQuestionListView(ContributorUserRequiredMixin, FormView):
         context = super().get_context_data(**kwargs)
         context["quiz"] = Quiz.objects.get(id=self.kwargs.get("pk"))
         context["quiz_questions"] = context["quiz"].quizquestion_set.all()
-        context["user_can_edit_quiz"] = self.request.user.can_edit_quiz(context["quiz"])
-        if self.request.POST and context["user_can_edit_quiz"]:
+        context["user_can_edit"] = self.request.user.can_edit_quiz(context["quiz"])
+        if self.request.POST and context["user_can_edit"]:
             context["quiz_question_formset"] = QuizQuestionFormSet(self.request.POST, instance=context["quiz"])
         else:
             context["quiz_question_formset"] = QuizQuestionFormSet(instance=context["quiz"])

@@ -9,7 +9,7 @@
 {% block quiz_detail_content %}
 <div class="row">
     <div class="col-12">
-        {% if user_can_edit_quiz %}
+        {% if user_can_edit %}
             <form id="quiz_edit_form" method="POST" action="">
                 {% csrf_token %}
 
@@ -17,8 +17,23 @@
                     <div class="col-md-8">
                         {% bootstrap_form form alert_error_type="all" %}
                     </div>
+                    <!-- Sidebar -->
                     <div class="col-md-4 d-none d-md-block">
-                        <div class="alert alert-primary">L'ajout d'une image se fait à la fin du formulaire 👇</div>
+                        {% if quiz.author == user %}
+                            <div class="alert alert-primary" role="alert">
+                                ℹ️ Vous êtes <strong>l'auteur</strong> de ce quiz
+                            </div>
+                        {% endif %}
+                        {% if not quiz.is_private and quiz.publish %}
+                            <div class="alert alert-success" role="alert">
+                                ✅ Publié le {{ quiz.publish_date|date:"d F Y" }}
+                            </div>
+                        {% endif %}
+                        {% if not quiz.image_background_url %}
+                            <div class="alert alert-primary" role="alert">
+                                🖼️ L'ajout d'une <strong>image</strong> se fait à la fin du formulaire 👇
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
 

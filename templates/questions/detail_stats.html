@@ -8,7 +8,7 @@
             <strong>{% get_verbose_name question_stats field %}</strong>
         </div>
         <div class="col-8">
-            {{ question_agg_stat_dict|get_obj_attr:field }}
+            {{ question_agg_stat_dict|get_obj_attr:field|default:"" }}
         </div>
     </div>
 {% endfor %}
