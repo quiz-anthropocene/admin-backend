@@ -24,10 +24,17 @@
                                 ℹ️ Vous êtes <strong>l'auteur</strong> de cette question
                             </div>
                         {% endif %}
-                        {% if not question.is_private and question.validator %}
-                            <div class="alert alert-success" role="alert">
-                                ✅ Validée par <strong>{{ question.validator }}</strong> le {{ question.validation_date|date:"d F Y" }}
-                            </div>
+                        {% if not question.is_private %}
+                            {% if not question.is_validated %}
+                                <div class="alert alert-warning" role="alert">
+                                    ✔️ La question n'est pas encore <strong>validée</strong>. Seul un administrateur peut le faire.
+                                </div>
+                            {% endif %}
+                            {% if question.validator %}
+                                <div class="alert alert-success" role="alert">
+                                    ✅ Validée par <strong>{{ question.validator }}</strong> le {{ question.validation_date|date:"d F Y" }}
+                                </div>
+                            {% endif %}
                         {% endif %}
                         {% if not question.answer_image_url %}
                             <div class="alert alert-primary" role="alert">

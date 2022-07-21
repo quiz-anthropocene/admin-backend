@@ -169,7 +169,7 @@ class ApiTest(TestCase):
         response = self.client.get(reverse("api:question-language-list"))
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data["results"], list)
-        self.assertEqual(len(response.data["results"]), 2)
+        self.assertEqual(len(response.data["results"]), 3)
 
     def test_question_validation_status_list(self):
         response = self.client.get(reverse("api:question-validation-status-list"))

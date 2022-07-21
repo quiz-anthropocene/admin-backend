@@ -238,6 +238,7 @@ class Question(models.Model):
         self.validator_string = str(self.validator) if self.validator else ""
 
     def save(self, *args, **kwargs):
+        # set_validator() in question/views.py
         self.set_flatten_fields()
         self.full_clean()
         return super(Question, self).save(*args, **kwargs)
@@ -296,6 +297,10 @@ class Question(models.Model):
     @property
     def is_private(self) -> bool:
         return self.visibility == constants.VISIBILITY_PRIVATE
+
+    @property
+    def is_validated(self) -> bool:
+        return self.validation_status == constants.QUESTION_VALIDATION_STATUS_OK
 
     @property
     def answer_count_agg(self) -> int:
