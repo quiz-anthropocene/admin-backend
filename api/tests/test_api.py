@@ -23,7 +23,7 @@ class ApiTest(TestCase):
             text="question 1",
             category=cls.category_1,
             author=cls.user_1,
-            validation_status=constants.QUESTION_VALIDATION_STATUS_IN_PROGRESS,
+            validation_status=constants.VALIDATION_STATUS_IN_PROGRESS,
         )
         cls.question_2 = QuestionFactory(
             text="question 2",
@@ -169,7 +169,7 @@ class ApiTest(TestCase):
         response = self.client.get(reverse("api:question-language-list"))
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data["results"], list)
-        self.assertEqual(len(response.data["results"]), 2)
+        self.assertEqual(len(response.data["results"]), 3)
 
     def test_question_validation_status_list(self):
         response = self.client.get(reverse("api:question-validation-status-list"))

@@ -17,4 +17,4 @@ class QuestionFactory(factory.django.DjangoModelFactory):
     answer_option_a = "La réponse A"
     answer_option_b = "La réponse B"
     answer_correct = "a"  # constants.QUESTION_ANSWER_CHOICE_LIST[0]
-    validation_status = constants.QUESTION_VALIDATION_STATUS_OK
+    validation_status = constants.VALIDATION_STATUS_OK

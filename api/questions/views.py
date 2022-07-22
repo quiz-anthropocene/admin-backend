@@ -74,9 +74,7 @@ class QuestionValidationStatusViewSet(mixins.ListModelMixin, viewsets.GenericVie
     queryset = Question.objects.none()
 
     def get_queryset(self):
-        question_validation_status = [
-            {"id": id, "name": name} for (id, name) in constants.QUESTION_VALIDATION_STATUS_CHOICES
-        ]
+        question_validation_status = [{"id": id, "name": name} for (id, name) in constants.VALIDATION_STATUS_CHOICES]
         return question_validation_status
 
     @extend_schema(summary="Lister tous les statuts de validation", tags=[Question._meta.verbose_name_plural])

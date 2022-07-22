@@ -81,9 +81,10 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "difficulty_average",
         "has_audio",
         "answer_count_agg",
-        "created",
+        "validation_status",
         "publish",
         "spotlight",
+        "created",
     ]
     search_fields = ["name"]
     list_filter = ["publish", "spotlight", "has_audio", "author", "visibility", "language", "tags"]
@@ -108,6 +109,8 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "dislike_count_agg",
         "duration_average_seconds",
         "duration_average_minutes_string",
+        "publish_date",
+        "validation_date",
         "created",
         "updated",
     ]
@@ -133,11 +136,16 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
                 )
             },
         ),
+        (
+            "Tags",
+            {"fields": ("tags",)},
+        ),
         QuizQuestionInline,
         (
             "Recap des questions",
             {
                 "fields": (
+                    "has_audio",
                     "question_count",
                     "difficulty_average",
                     "questions_not_validated_string_html",
@@ -148,21 +156,28 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
             },
         ),
         (
-            "Tags & images",
+            "Image",
             {
                 "fields": (
-                    "tags",
                     "image_background_url",
                     "show_image_background",
                 )
             },
         ),
         (
+            "Publique ou Privé ?",
+            {"fields": ("visibility",)},
+        ),
+        (
+            "Validation",
+            {"fields": ("validation_status", "validator", "validation_date")},
+        ),
+        (
             "Prêt à être publié ? Toutes les questions doivent être au statut 'validé' !",
             {
                 "fields": (
-                    "has_audio",
                     "publish",
+                    "publish_date",
                     "spotlight",
                 )
             },
@@ -178,11 +193,10 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
                     "dislike_count_agg",
                     "duration_average_seconds",
                     "duration_average_minutes_string",
-                    "created",
-                    "updated",
                 )
             },
         ),
+        ("Dates", {"fields": ("created", "updated")}),
     ]
 
     def get_queryset(self, request):
@@ -199,7 +213,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         else:
             return mark_safe("<div>champ 'Quiz image background url' vide</div>")
 
-    show_image_background.short_description = "L'image du champ 'Quiz image background url' (cliquer pour agrandir)"
+    show_image_background.short_description = "L'image (cliquer pour agrandir)"
 
     def questions_not_validated_string_html(self, instance):
         return mark_safe(instance.questions_not_validated_string)

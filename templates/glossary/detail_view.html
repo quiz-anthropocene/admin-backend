@@ -19,7 +19,7 @@
                             {% if field in glossary_item.GLOSSARY_URL_FIELDS %}
                                 <td><a href="{{ glossary_item_dict|get_obj_attr:field }}" target="_blank" rel="noopener">{{ glossary_item_dict|get_obj_attr:field }}</a></td>
                             {% else %}
-                                <td>{{ glossary_item_dict|get_obj_attr:field }}</td>
+                                <td>{{ glossary_item_dict|get_obj_attr:field|default:"" }}</td>
                             {% endif %}
                         </tr>
                     {% endfor %}

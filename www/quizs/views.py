@@ -1,8 +1,10 @@
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.forms.models import model_to_dict
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
+from django.utils import timezone
 from django.utils.safestring import mark_safe
 from django.views.generic import CreateView, DetailView, FormView, UpdateView
 from django_filters.views import FilterView
@@ -70,6 +72,8 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
         quiz = self.get_object()
         form = super().get_form(self.form_class)
         if not self.request.user.can_publish_quiz(quiz):
+            form.fields["validation_status"].disabled = True
+            form.fields["validation_status"].help_text = user_constants.ADMIN_REQUIRED_MESSAGE
             form.fields["publish"].disabled = True
             form.fields["publish"].help_text = user_constants.ADMIN_REQUIRED_MESSAGE
             form.fields["spotlight"].disabled = True
@@ -84,8 +88,38 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
         context["s3_form_values"] = s3_upload.form_values
         context["s3_upload_config"] = s3_upload.config
         # User authorizations
-        context["user_can_edit_quiz"] = self.request.user.can_edit_quiz(quiz)
+        context["user_can_edit"] = self.request.user.can_edit_quiz(quiz)
         return context
+
+    def form_valid(self, form):
+        quiz_before = self.get_object()
+        quiz = form.save(commit=False)
+        # Change detected on the validation_status field
+        if quiz_before.validation_status != quiz.validation_status:
+            # Quiz validated! set the validator data
+            if quiz.is_validated:
+                quiz.validator = self.request.user
+                quiz.validation_date = timezone.now()
+            # Quiz not validated anymore... reset the validator data
+            elif quiz_before.is_validated:
+                quiz.validator = None
+                quiz.validation_date = None
+        # Change detected on the publish field
+        if quiz_before.publish != quiz.publish:
+            # Quiz validated! set the validator data
+            if quiz.publish:
+                quiz.publish_date = timezone.now()
+            # Quiz not published anymore... reset the extra data
+            elif quiz_before.publish:
+                quiz.publish_date = None
+        quiz.save()
+
+        messages.add_message(
+            self.request,
+            messages.SUCCESS,
+            self.get_success_message(form.cleaned_data),
+        )
+        return HttpResponseRedirect(self.get_success_url())
 
     def get_success_url(self):
         return reverse_lazy("quizs:detail_view", args=[self.kwargs.get("pk")])
@@ -100,8 +134,8 @@ class QuizDetailQuestionListView(ContributorUserRequiredMixin, FormView):
         context = super().get_context_data(**kwargs)
         context["quiz"] = Quiz.objects.get(id=self.kwargs.get("pk"))
         context["quiz_questions"] = context["quiz"].quizquestion_set.all()
-        context["user_can_edit_quiz"] = self.request.user.can_edit_quiz(context["quiz"])
-        if self.request.POST and context["user_can_edit_quiz"]:
+        context["user_can_edit"] = self.request.user.can_edit_quiz(context["quiz"])
+        if self.request.POST and context["user_can_edit"]:
             context["quiz_question_formset"] = QuizQuestionFormSet(self.request.POST, instance=context["quiz"])
         else:
             context["quiz_question_formset"] = QuizQuestionFormSet(instance=context["quiz"])

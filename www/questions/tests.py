@@ -1,5 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
+from django.utils import timezone
 
 from core import constants
 from questions.factories import QuestionFactory
@@ -77,7 +78,7 @@ class QuestionDetailViewTest(TestCase):
         self.assertEqual(response.context["question"].id, self.question_1.id)
 
 
-class QuizDetailEditViewTest(TestCase):
+class QuestionDetailEditViewTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user_contributor_1 = UserFactory()
@@ -85,7 +86,10 @@ class QuizDetailEditViewTest(TestCase):
         cls.user_super_contributor = UserFactory(roles=[user_constants.USER_ROLE_SUPER_CONTRIBUTOR])
         cls.user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
         cls.question_1 = QuestionFactory(
-            text="Question 1", author=cls.user_contributor_1, visibility=constants.VISIBILITY_PUBLIC
+            text="Question 1",
+            author=cls.user_contributor_1,
+            visibility=constants.VISIBILITY_PUBLIC,
+            validation_status=constants.VALIDATION_STATUS_IN_PROGRESS,
         )
         cls.question_2 = QuestionFactory(
             text="Question 2", author=cls.user_contributor_1, visibility=constants.VISIBILITY_PRIVATE
@@ -105,6 +109,24 @@ class QuizDetailEditViewTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertNotContains(response, '<form id="question_edit_form" ')
         self.assertContains(response, "Vous n'avez pas les droits nécessaires")
+
+    def test_administrator_can_validate_public_question(self):
+        self.client.login(email=self.user_admin.email, password=DEFAULT_PASSWORD)
+        self.assertEqual(self.question_1.validation_status, constants.VALIDATION_STATUS_IN_PROGRESS)
+        url = reverse("questions:detail_edit", args=[self.question_1.id])
+        QUESTION_EDIT_FORM = {
+            **QUESTION_CREATE_FORM_DEFAULT,
+            "text": self.question_1.text,
+            "category": self.question_1.category.id,
+            "author": self.question_1.author,
+            "visibility": self.question_1.visibility,
+            "validation_status": constants.VALIDATION_STATUS_OK,
+        }
+        response = self.client.post(url, data=QUESTION_EDIT_FORM)
+        self.assertEqual(response.status_code, 302)
+        question = Question.objects.get(id=self.question_1.id)
+        self.assertEqual(question.validator, self.user_admin)
+        self.assertEqual(question.validation_date.date(), timezone.now().date())
 
     def test_only_author_can_edit_private_question(self):
         # author can edit
@@ -140,7 +162,7 @@ class QuestionCreateViewTest(TestCase):
         url = reverse("questions:create")
         response = self.client.get(url)
         self.assertEqual(response.status_code, 302)
-
+        # contributor
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
         url = reverse("questions:create")
         response = self.client.get(url)

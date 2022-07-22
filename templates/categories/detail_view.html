@@ -16,7 +16,7 @@
                     {% for field in category_dict %}
                         <tr>
                             <td class="fw-bold">{% get_verbose_name category field %}</td>
-                            <td>{{ category_dict|get_obj_attr:field }}</td>
+                            <td>{{ category_dict|get_obj_attr:field|default:"" }}</td>
                         </tr>
                     {% endfor %}
                 </tbody>

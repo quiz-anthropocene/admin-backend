@@ -1,5 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
+from django.utils import timezone
 
 from core import constants
 from quizs.factories import QuizFactory
@@ -79,7 +80,13 @@ class QuizDetailEditViewTest(TestCase):
         cls.user_contributor_1 = UserFactory()
         cls.user_contributor_2 = UserFactory()
         cls.user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
-        cls.quiz_1 = QuizFactory(name="Quiz 1", author=cls.user_contributor_1, visibility=constants.VISIBILITY_PUBLIC)
+        cls.quiz_1 = QuizFactory(
+            name="Quiz 1",
+            author=cls.user_contributor_1,
+            visibility=constants.VISIBILITY_PUBLIC,
+            validation_status=constants.VALIDATION_STATUS_IN_PROGRESS,
+            publish=False,
+        )
         cls.quiz_2 = QuizFactory(name="Quiz 2", author=cls.user_contributor_1, visibility=constants.VISIBILITY_PRIVATE)
 
     def test_author_or_admin_can_edit_public_quiz(self):
@@ -96,6 +103,23 @@ class QuizDetailEditViewTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertNotContains(response, '<form id="quiz_edit_form" ')
         self.assertContains(response, "Vous n'avez pas les droits nécessaires")
+
+    def test_administrator_can_validate_and_publish_public_quiz(self):
+        self.client.login(email=self.user_admin.email, password=DEFAULT_PASSWORD)
+        self.assertEqual(self.quiz_1.validation_status, constants.VALIDATION_STATUS_IN_PROGRESS)
+        self.assertEqual(self.quiz_1.publish, False)
+        url = reverse("quizs:detail_edit", args=[self.quiz_1.id])
+        QUIZ_EDIT_FORM = {
+            **QUIZ_CREATE_FORM_DEFAULT,
+            "validation_status": constants.VALIDATION_STATUS_OK,
+            "publish": True,
+        }
+        response = self.client.post(url, data=QUIZ_EDIT_FORM)
+        self.assertEqual(response.status_code, 302)
+        quiz = Quiz.objects.get(id=self.quiz_1.id)
+        self.assertEqual(quiz.validator, self.user_admin)
+        self.assertEqual(quiz.validation_date.date(), timezone.now().date())
+        self.assertEqual(quiz.publish_date.date(), timezone.now().date())
 
     def test_only_author_can_edit_private_quiz(self):
         # author can edit

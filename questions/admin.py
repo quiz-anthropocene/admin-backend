@@ -138,9 +138,89 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
         "answer_success_rate",
         "like_count_agg",
         "dislike_count_agg",
-        # "created_at",
-        # "updated_at",
+        "validation_date",
+        "created",
+        "updated",
     ]
+
+    fieldsets = (
+        (
+            "Infos de base",
+            {
+                "fields": (
+                    # "id",
+                    "text",
+                    "hint",
+                    "type",
+                    "difficulty",
+                    "language",
+                    "author",
+                )
+            },
+        ),
+        (
+            "Catégorie & Tags",
+            {
+                "fields": (
+                    "category",
+                    "tags",
+                )
+            },
+        ),
+        (
+            "Détails des réponses",
+            {
+                "fields": (
+                    "answer_option_a",
+                    "answer_option_b",
+                    "answer_option_c",
+                    "answer_option_d",
+                    "answer_correct",
+                    "has_ordered_answers",
+                    "answer_explanation",
+                    "answer_audio",
+                    "answer_video",
+                    "answer_accessible_url",
+                    "answer_accessible_url_text",
+                    "answer_scientific_url",
+                    "answer_scientific_url_text",
+                    "answer_reading_recommendation",
+                    "answer_extra_info",
+                )
+            },
+        ),
+        (
+            "Image",
+            {
+                "fields": (
+                    "answer_image_url",
+                    "show_answer_image",
+                    "answer_image_explanation",
+                )
+            },
+        ),
+        (
+            "Publique ou Privé ?",
+            {"fields": ("visibility",)},
+        ),
+        (
+            "Validation",
+            {"fields": ("validation_status", "validator", "validation_date")},
+        ),
+        (
+            "Stats",
+            {
+                "fields": (
+                    "answer_count_agg",
+                    "answer_success_count_agg",
+                    "answer_success_rate",
+                    "like_count_agg",
+                    "dislike_count_agg",
+                )
+            },
+        ),
+        ("Dates", {"fields": ("created", "updated")}),
+    )
 
     change_list_template = "admin/questions/question/change_list_with_import.html"
 
@@ -193,7 +273,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
         else:
             return mark_safe("<div>champ 'Answer image url' vide</div>")
 
-    show_answer_image.short_description = "L'image du champ 'Answer image url' (cliquer pour agrandir)"
+    show_answer_image.short_description = "L'image (cliquer pour agrandir)"
 
     def changelist_view(self, request, extra_context=None):
         """

@@ -27,7 +27,7 @@
                                             <span>{% get_verbose_name question change.field %} :</span>
                                             <span>{{ change.old|flatten_list|default:"(vide)" }}</span>
                                             <span>→</span>
-                                            <span>{{ change.new|flatten_list }}</span>
+                                            <span>{{ change.new|flatten_list|default:"(vide)" }}</span>
                                         </li>
                                     {% endfor %}
                                 </ul>

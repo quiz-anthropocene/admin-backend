@@ -53,10 +53,13 @@ class QuizModelSaveTest(TestCase):
         cls.quiz.tags.set([cls.tag_1, cls.tag_2])
 
     def test_update_related_flatten_fields_on_save(self):
-        user = UserFactory(first_name="Paul", last_name="Dupont")
-        self.quiz.author = user
+        user_1 = UserFactory(first_name="Paul", last_name="Dupont")
+        user_2 = UserFactory(first_name="Marie", last_name="Dupond")
+        self.quiz.author = user_1
+        self.quiz.validator = user_2
         self.quiz.save()
-        self.assertEqual(self.quiz.author_string, user.full_name)
+        self.assertEqual(self.quiz.author_string, user_1.full_name)
+        self.assertEqual(self.quiz.validator_string, user_2.full_name)
 
     def test_update_m2m_flatten_fields_on_save(self):
         tag_3 = TagFactory(name="ABC")
@@ -148,12 +151,49 @@ class QuizModelHistoryTest(TestCase):
 class QuizModelQuerySetTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        QuizFactory(name="Quiz 1", publish=True, visibility=constants.VISIBILITY_PUBLIC)
-        QuizFactory(name="Quiz 2", publish=True, visibility=constants.VISIBILITY_HIDDEN)
-        QuizFactory(name="Quiz 3", publish=True, visibility=constants.VISIBILITY_PRIVATE)
-        QuizFactory(name="Quiz 4", publish=False, visibility=constants.VISIBILITY_PUBLIC)
-        QuizFactory(name="Quiz 5", publish=False, visibility=constants.VISIBILITY_HIDDEN)
-        QuizFactory(name="Quiz 6", introduction="xyz", publish=False, visibility=constants.VISIBILITY_PRIVATE)
+        QuizFactory(
+            name="Quiz 1",
+            validation_status=constants.VALIDATION_STATUS_OK,
+            publish=True,
+            visibility=constants.VISIBILITY_PUBLIC,
+        )
+        QuizFactory(
+            name="Quiz 2",
+            validation_status=constants.VALIDATION_STATUS_OK,
+            publish=True,
+            visibility=constants.VISIBILITY_HIDDEN,
+        )
+        QuizFactory(
+            name="Quiz 3",
+            validation_status=constants.VALIDATION_STATUS_OK,
+            publish=True,
+            visibility=constants.VISIBILITY_PRIVATE,
+        )
+        QuizFactory(
+            name="Quiz 4",
+            validation_status=constants.VALIDATION_STATUS_NEW,
+            publish=False,
+            visibility=constants.VISIBILITY_PUBLIC,
+        )
+        QuizFactory(
+            name="Quiz 5",
+            validation_status=constants.VALIDATION_STATUS_NEW,
+            publish=False,
+            visibility=constants.VISIBILITY_HIDDEN,
+        )
+        QuizFactory(
+            name="Quiz 6",
+            introduction="xyz",
+            validation_status=constants.VALIDATION_STATUS_NEW,
+            publish=False,
+            visibility=constants.VISIBILITY_PRIVATE,
+        )
+
+    def test_question_validated(self):
+        self.assertEqual(Quiz.objects.validated().count(), 3)
+
+    def test_question_not_validated(self):
+        self.assertEqual(Quiz.objects.not_validated().count(), 3)
 
     def test_quiz_published(self):
         self.assertEqual(Quiz.objects.published().count(), 3)
