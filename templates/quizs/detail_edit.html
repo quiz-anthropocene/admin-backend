@@ -45,6 +45,11 @@
                                     ✅ Publié le {{ quiz.publish_date|date:"d F Y" }}
                                 </div>
                             {% endif %}
+                            {% if not quiz.is_validated and quiz.publish %}
+                                <div class="alert alert-danger" role="alert">
+                                    ⚠️ Le quiz est publié alors qu'il n'est pas validé
+                                </div>
+                            {% endif %}
                         {% endif %}
                         {% if not quiz.image_background_url %}
                             <div class="alert alert-primary" role="alert">
