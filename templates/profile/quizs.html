@@ -26,7 +26,7 @@
             <h1>Tous mes quizs <span class="fs-3 text-muted">{{ user_quizs.count }}</span></h1>
         </div>
         <div class="col-3 text-end my-auto">
-            <a href="{% url 'quizs:create' %}?next={% url 'profile:quizs' %}" class="btn btn-success btn-sm">Ajouter</a>
+            <a class="btn btn-success btn-sm" href="{% url 'quizs:create' %}?next={% url 'profile:quizs' %}">Ajouter</a>
         </div>
     </div>
     <div class="row overflow-scroll">
