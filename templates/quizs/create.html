@@ -1,6 +1,8 @@
 {% extends "layouts/base.html" %}
 {% load static django_bootstrap5 %}
 
+{% block title %}Ajouter - Quizs{{ block.super }}{% endblock %}
+
 {% block extra_css %}
 {{ form.media.css }}
 <link rel="stylesheet" href="{% static 'vendor/dropzone-5.9.3/dropzone.min.css' %}" />
@@ -59,7 +61,7 @@
             <div class="col">
                 {% bootstrap_button button_type="submit" button_class="btn-primary" content="Ajouter" %}
                 {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
-                <a href="{% url 'quizs:list' %}" class="btn btn-secondary">Annuler</a>
+                <a class="btn btn-secondary" href="{% url 'quizs:list' %}">Annuler</a>
             </div>
         </div>
     </form>

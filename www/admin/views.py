@@ -1,7 +1,11 @@
 from itertools import chain
 
+from django.contrib import messages
 from django.db.models import Value
-from django.views.generic import DetailView, TemplateView
+from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
+from django.utils.safestring import mark_safe
+from django.views.generic import CreateView, DetailView, TemplateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin
 
@@ -12,6 +16,7 @@ from history.tables import HistoryTable
 from questions.models import Question
 from quizs.models import Quiz
 from users.filters import ContributorFilter
+from users.forms import ContributorCreateForm
 from users.models import User
 from users.tables import ContributorTable
 
@@ -52,6 +57,30 @@ class AdminContributorListView(AdministratorUserRequiredMixin, SingleTableMixin,
             if search_dict:
                 context["search_filters"] = form_filters_to_list(search_dict, with_delete_url=True)
         return context
+
+
+class AdminContributorCreateView(AdministratorUserRequiredMixin, CreateView):
+    form_class = ContributorCreateForm
+    template_name = "admin/contributors_create.html"
+    success_url = reverse_lazy("admin:contributors")
+
+    def form_valid(self, form):
+        contributor = form.save(commit=False)
+        password = User.objects.make_random_password()
+        contributor.set_password(password)
+        contributor.save()
+
+        messages.add_message(
+            self.request,
+            messages.SUCCESS,
+            self.get_success_message(form.cleaned_data),
+        )
+        return HttpResponseRedirect(self.success_url)
+
+    def get_success_message(self, cleaned_data):
+        return mark_safe(
+            f"Le contributeur <strong>{cleaned_data['first_name']} {cleaned_data['last_name']}</strong> a été crée avec succès."  # noqa
+        )
 
 
 class AdminHistoryListView(AdministratorUserRequiredMixin, TemplateView):

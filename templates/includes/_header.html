@@ -9,7 +9,7 @@
 <header>
     <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
-            <a href="{% url 'pages:home' %}" class="navbar-brand">Quiz de l'Anthropocène</a>
+            <a class="navbar-brand" href="{% url 'pages:home' %}">Quiz de l'Anthropocène</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -18,24 +18,24 @@
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                         {% if user.has_role_contributor %}
                             <li class="nav-item">
-                                <a href="{% url 'profile:home' %}" class="nav-link">Mon espace</a>
+                                <a class="nav-link" href="{% url 'profile:home' %}">Mon espace</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{% url 'questions:list' %}" class="nav-link">Questions</a>
+                                <a class="nav-link" href="{% url 'questions:list' %}">Questions</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{% url 'quizs:list' %}" class="nav-link">Quizs</a>
+                                <a class="nav-link" href="{% url 'quizs:list' %}">Quizs</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{% url 'contributions:list' %}" class="nav-link">Contributions</a>
+                                <a class="nav-link" href="{% url 'contributions:list' %}">Contributions</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{% url 'glossary:list' %}" class="nav-link">Glossaire</a>
+                                <a class="nav-link" href="{% url 'glossary:list' %}">Glossaire</a>
                             </li>
                             {% if user.has_role_administrator %}
                                 <span style="padding:0.5em">|</span>
                                 <li class="nav-item">
-                                    <a href="{% url 'admin:home' %}" class="nav-link">Administration</a>
+                                    <a class="nav-link" href="{% url 'admin:home' %}">Administration</a>
                                 </li>
                             {% endif %}
                         {% endif %}
@@ -45,7 +45,7 @@
                     </a>
                 {% else %}
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;"></ul>
-                    <a href="{% url 'auth:login' %}" class="btn btn-primary btn-block">
+                    <a class="btn btn-primary btn-block" href="{% url 'auth:login' %}">
                         <span>Se connecter</span>
                     </a>
                 {% endif %}

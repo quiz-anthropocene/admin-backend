@@ -1,6 +1,8 @@
 {% extends "layouts/base.html" %}
 {% load static django_bootstrap5 %}
 
+{% block title %}Ajouter - Questions{{ block.super }}{% endblock %}
+
 {% block extra_css %}
 {{ form.media.css }}
 <link rel="stylesheet" href="{% static 'vendor/dropzone-5.9.3/dropzone.min.css' %}" />
@@ -34,7 +36,7 @@
             <!-- Sidebar -->
             <div class="col-md-4 d-none d-md-block">
                 <div class="alert alert-primary" role="alert">
-                    L'ajout de <strong>l'image d'explication</strong> se fait à la fin du formulaire 👇
+                    🖼️ L'ajout de <strong>l'image d'explication</strong> se fait à la fin du formulaire 👇
                 </div>
             </div>
         </div>
@@ -59,7 +61,7 @@
             <div class="col">
                 {% bootstrap_button button_type="submit" button_class="btn-primary" content="Ajouter" %}
                 {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
-                <a href="{% url 'questions:list' %}" class="btn btn-secondary">Annuler</a>
+                <a class="btn btn-secondary" href="{% url 'questions:list' %}">Annuler</a>
             </div>
         </div>
     </form>
