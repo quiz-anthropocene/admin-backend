@@ -1,0 +1,52 @@
+{% extends "layouts/base.html" %}
+{% load static django_bootstrap5 %}
+
+
+{% block breadcrumbs %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 my-auto">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'admin:home' %}">Administration</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'admin:contributors' %}">Contributeurs</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Ajouter</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form id="contributor_create_form" method="POST" action="">
+        {% csrf_token %}
+
+        <div class="row">
+            <div class="col-md-8">
+                {% bootstrap_form form alert_error_type="all" %}
+            </div>
+            <!-- Sidebar -->
+            <div class="col-md-4 d-none d-md-block">
+                <div class="alert alert-primary" role="alert">
+                    📨 Un <strong>e-mail de bienvenue</strong> sera envoyé automatiquement à l'utilisateur, pour le guider dans ses premiers pas de contributeurs.
+                </div>
+                <div class="alert alert-primary" role="alert">
+                    🔓 Le <strong>mot de passe</strong> sera généré aléatoirement.<br />
+                    Le contributeur pourra ensuite le réinitialiser lors de sa première connexion.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                {% bootstrap_button button_type="submit" button_class="btn-primary" content="Ajouter" %}
+                {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
+                <a class="btn btn-secondary" href="{% url 'questions:list' %}">Annuler</a>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
