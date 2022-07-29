@@ -88,6 +88,9 @@ class UserAdmin(UserAdmin):
         qs = super().get_queryset(request)
         return qs.prefetch_related("questions", "quizs")
 
+    def has_add_permission(self, request, obj=None):
+        return False
+
     def has_delete_permission(self, request, obj=None):
         return False
 
