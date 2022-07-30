@@ -23,14 +23,6 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Mon profil</h5>
-                    <a class="btn btn-primary" href="{% url 'profile:info' %}">Voir</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
                     <h5 class="card-title">Mes questions <small class="text-muted">{{ user.question_count }}</small></h5>
                     <a class="btn btn-primary" href="{% url 'profile:questions' %}">Voir</a>
                 </div>
@@ -45,15 +37,29 @@
             </div>
         </div>
     </div>
+
     <div class="row mb-3">
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Mon historique</h5>
+                    <h5 class="card-title">Mon historique de modifications</h5>
                     <a class="btn btn-primary" href="{% url 'profile:history' %}">Voir</a>
                 </div>
             </div>
         </div>
+    </div>
+
+    <br />
+
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Mon profil</h5>
+                    <a class="btn btn-primary" href="{% url 'profile:info' %}">Voir</a>
+                </div>
+            </div>
+        </div>        
     </div>
 </div>
 {% endblock %}

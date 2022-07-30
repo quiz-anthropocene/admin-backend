@@ -65,10 +65,14 @@ class AdminContributorCreateView(AdministratorUserRequiredMixin, CreateView):
     success_url = reverse_lazy("admin:contributors")
 
     def form_valid(self, form):
+        # create user
         contributor = form.save(commit=False)
         password = User.objects.make_random_password()
         contributor.set_password(password)
         contributor.save()
+
+        # add user to mailing list
+        # done in users/models.py (post_save)
 
         messages.add_message(
             self.request,

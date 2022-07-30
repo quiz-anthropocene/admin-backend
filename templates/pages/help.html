@@ -1,0 +1,49 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Aide{{ block.super }}{% endblock %}
+
+{% block breadcrumbs %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 my-auto">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Aide</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Vous avez besoin d'aide ?</h1>
+
+            <br />
+
+            <h4>Prendre en main l'interface contributeur</h4>
+            <ul>
+                <li><a href="{{ NOTION_HELP_PUBLIC_URL }}" target="_blank">Tutoriel / FAQ</a></li>
+            </ul>
+
+            <br />
+
+            <h4>Contacter un administrateur</h4>
+            <ul>
+                <li>Liste des administrateurs (à venir)</li>
+                <li><a href="mailto:{{ CONTACT_EMAIL }}">{{ CONTACT_EMAIL }}</a></li>
+                <li>via Slack</li>
+            </ul>
+
+            <br />
+
+            <h4>Une autre question ? Un bug ? Une demande d'amélioration ?</h4>
+            <p>Faites-nous tous vos retours via le lien dans le bandeau :)</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

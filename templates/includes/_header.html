@@ -38,6 +38,10 @@
                                     <a class="nav-link" href="{% url 'admin:home' %}">Administration</a>
                                 </li>
                             {% endif %}
+                            <span style="padding:0.5em">|</span>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'pages:help' %}">🛟 Aide</a>
+                            </li>
                         {% endif %}
                     </ul>
                     <a href="{% url 'auth:logout' %}">

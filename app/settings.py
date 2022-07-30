@@ -234,6 +234,7 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 if not DEBUG:
     EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
 
+CONTACT_EMAIL = os.getenv("CONTACT_EMAIL")
 DEFAULT_FROM_EMAIL = "Quiz de l'Anthropocène <noreply@quizanthropocene.fr>"
 DEFAULT_FROM_NAME = "Quiz de l'Anthropocène"
 SERVER_EMAIL = os.getenv("TECH_EMAIL")
@@ -378,6 +379,8 @@ NOTION_QUESTIONS_TABLE_URL = os.getenv("NOTION_QUESTIONS_TABLE_URL")
 NOTION_CONTRIBUTION_TABLE_URL = os.getenv("NOTION_CONTRIBUTION_TABLE_URL")
 NOTION_IMPORT_STATS_TABLE_URL = os.getenv("NOTION_IMPORT_STATS_TABLE_URL")
 NOTION_GLOSSARY_TABLE_URL = os.getenv("NOTION_GLOSSARY_TABLE_URL")
+
+NOTION_HELP_PUBLIC_URL = os.getenv("NOTION_HELP_PUBLIC_URL")
 
 
 # django-ckeditor
