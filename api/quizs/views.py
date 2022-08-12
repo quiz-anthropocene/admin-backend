@@ -9,7 +9,7 @@ from quizs.models import Quiz
 class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     queryset = Quiz.objects.public().published()
     serializer_class = QuizSerializer
-    filter_class = QuizFilter
+    filterset_class = QuizFilter
 
     @extend_schema(summary="Lister tous les quiz *publiés*", tags=[Quiz._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):

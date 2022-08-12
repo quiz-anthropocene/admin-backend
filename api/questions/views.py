@@ -19,7 +19,7 @@ from questions.models import Question
 class QuestionViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     queryset = Question.objects.public().validated()
     serializer_class = QuestionSerializer
-    filter_class = QuestionFilter
+    filterset_class = QuestionFilter
 
     @extend_schema(summary="Lister toutes les questions *validées*", tags=[Question._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
