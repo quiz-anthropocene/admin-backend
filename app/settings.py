@@ -66,7 +66,7 @@ THIRD_PARTY_APPS = [
     "ckeditor",  # django-ckeditor
     "fieldsets_with_inlines",  # django-fieldsets-with-inlines
     "solo",  # django-solo
-    "dal",
+    "dal",  # django-autocomplete-light
     "dal_select2",
 ]
 
@@ -82,6 +82,7 @@ LOCAL_APPS = [
     "api",
     "stats",
     "history",
+    "activity",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -260,7 +261,7 @@ if not DEBUG:
     )
 
 
-# Object storage : Scaleway (S3-like)
+# Object storage: Scaleway (S3-like)
 # ------------------------------------------------------------------------------
 
 S3_ENDPOINT = os.getenv("S3_ENDPOINT", "https://set-s3-endpoint.com")
