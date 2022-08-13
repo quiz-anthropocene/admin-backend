@@ -50,5 +50,6 @@ class Migration(migrations.Migration):
                 ("extra_data", models.JSONField(default=dict, verbose_name="Données supplémentaires")),
                 ("created", models.DateTimeField(auto_now_add=True, verbose_name="Date de création")),
             ],
+            options={"verbose_name": "Événement", "verbose_name_plural": "Événements"},
         ),
     ]

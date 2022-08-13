@@ -12,6 +12,7 @@ from django.views.generic import CreateView, DetailView, ListView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
+from activity.utilities import create_event
 from api.questions.serializers import QuestionFullStringSerializer
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
@@ -206,6 +207,17 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
 
     def get_initial(self):
         return {"author": self.request.user}
+
+    def form_valid(self, form):
+        self.object = form.save()
+        create_event(user=self.request.user, event_verb="CREATED", event_object=self.object)
+
+        messages.add_message(
+            self.request,
+            messages.SUCCESS,
+            self.get_success_message(form.cleaned_data),
+        )
+        return HttpResponseRedirect(self.get_success_url())
 
     def get_success_url(self):
         success_url = super().get_success_url()

@@ -201,7 +201,9 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)
-        return qs.select_related("author", "agg_stats").prefetch_related("tags", "questions")
+        qs = qs.select_related("author", "agg_stats")
+        qs = qs.prefetch_related("tags", "questions")
+        return qs
 
     def show_image_background(self, instance):
         if instance.image_background_url:

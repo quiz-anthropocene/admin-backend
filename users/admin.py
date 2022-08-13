@@ -86,7 +86,8 @@ class UserAdmin(UserAdmin):
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)
-        return qs.prefetch_related("questions", "quizs")
+        qs = qs.prefetch_related("questions", "quizs")
+        return qs
 
     def has_add_permission(self, request, obj=None):
         return False

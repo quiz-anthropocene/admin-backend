@@ -20,7 +20,7 @@ class Event(models.Model):
     actor_id = models.IntegerField(verbose_name="ID de l'acteur", blank=True)
     actor_name = models.CharField(verbose_name="Nom de l'acteur", max_length=150, blank=True)
 
-    # event
+    # verb
     event_verb = models.CharField(
         verbose_name="Verbe",
         max_length=50,
@@ -44,3 +44,18 @@ class Event(models.Model):
     )
 
     created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Événement"
+        verbose_name_plural = "Événements"
+
+    @property
+    def display_full(self) -> str:
+        if self.event_object_type in ["QUESTION", "QUIZ"]:
+            return f"{self.actor_name} a {self.get_event_verb_display().lower()} {self.display_event_object_type_prefix} {self.get_event_object_type_display().lower()} '{self.event_object_name}'"  # noqa
+
+    @property
+    def display_event_object_type_prefix(self) -> str:
+        if self.event_object_type in ["QUESTION"]:
+            return "la"
+        return "le"

@@ -24,7 +24,8 @@ class TagAdmin(ExportMixin, admin.ModelAdmin):
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)
-        return qs.prefetch_related("questions", "quizs")
+        qs = qs.prefetch_related("questions", "quizs")
+        return qs
 
 
 admin_site.register(Tag, TagAdmin)
