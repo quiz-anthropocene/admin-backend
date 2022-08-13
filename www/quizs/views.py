@@ -10,6 +10,7 @@ from django.views.generic import CreateView, DetailView, FormView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
+from activity.utilities import create_event
 from api.quizs.serializers import QuizWithQuestionFullStringSerializer
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
@@ -96,19 +97,23 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
         quiz = form.save(commit=False)
         # Change detected on the validation_status field
         if quiz_before.validation_status != quiz.validation_status:
-            # Quiz validated! set the validator data
+            # Quiz validated! set the validator data + create event
             if quiz.is_validated:
                 quiz.validator = self.request.user
                 quiz.validation_date = timezone.now()
+                if not quiz.is_private:
+                    create_event(user=self.request.user, event_verb="VALIDATED", event_object=quiz)
             # Quiz not validated anymore... reset the validator data
             elif quiz_before.is_validated:
                 quiz.validator = None
                 quiz.validation_date = None
         # Change detected on the publish field
         if quiz_before.publish != quiz.publish:
-            # Quiz validated! set the validator data
+            # Quiz validated! set the validator data + create event
             if quiz.publish:
                 quiz.publish_date = timezone.now()
+                if not quiz.is_private:
+                    create_event(user=self.request.user, event_verb="PUBLISHED", event_object=quiz)
             # Quiz not published anymore... reset the extra data
             elif quiz_before.publish:
                 quiz.publish_date = None
@@ -236,6 +241,18 @@ class QuizCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVi
 
     def get_initial(self):
         return {"author": self.request.user}
+
+    def form_valid(self, form):
+        self.object = form.save()
+        if not self.object.is_private:
+            create_event(user=self.request.user, event_verb="CREATED", event_object=self.object)
+
+        messages.add_message(
+            self.request,
+            messages.SUCCESS,
+            self.get_success_message(form.cleaned_data),
+        )
+        return HttpResponseRedirect(self.get_success_url())
 
     def get_success_url(self):
         success_url = super().get_success_url()

@@ -96,10 +96,12 @@ class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, 
         question = form.save(commit=False)
         # Change detected on the validation_status field
         if question_before.validation_status != question.validation_status:
-            # Question validated! set the validator data
+            # Question validated! set the validator data + create event
             if question.is_validated:
                 question.validator = self.request.user
                 question.validation_date = timezone.now()
+                if not question.is_private:
+                    create_event(user=self.request.user, event_verb="VALIDATED", event_object=question)
             # Question not validated anymore... reset the validator data
             elif question_before.is_validated:
                 question.validator = None
@@ -210,7 +212,8 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
 
     def form_valid(self, form):
         self.object = form.save()
-        create_event(user=self.request.user, event_verb="CREATED", event_object=self.object)
+        if not self.object.is_private:
+            create_event(user=self.request.user, event_verb="CREATED", event_object=self.object)
 
         messages.add_message(
             self.request,
