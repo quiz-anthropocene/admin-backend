@@ -13,6 +13,7 @@ class Event(models.Model):
     EVENT_OBJECT_TYPE_CHOICES = (
         ("QUESTION", "Question"),
         ("QUIZ", "Quiz"),
+        ("USER", "Contributeur"),
         ("WEEKLY_AGG_STAT", "Statistiques de la semaine"),
     )
 
@@ -53,6 +54,8 @@ class Event(models.Model):
     def display_full(self) -> str:
         if self.event_object_type in ["QUESTION", "QUIZ"]:
             return f"{self.actor_name} a {self.get_event_verb_display().lower()} {self.display_event_object_type_prefix} {self.get_event_object_type_display().lower()} '{self.event_object_name}'"  # noqa
+        elif self.event_object_type in ["USER"]:
+            return f"Nouveau contributeur : {self.event_object_name}"
 
     @property
     def display_event_object_type_prefix(self) -> str:

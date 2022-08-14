@@ -212,6 +212,8 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
 
     def form_valid(self, form):
         self.object = form.save()
+
+        # create event
         if not self.object.is_private:
             create_event(user=self.request.user, event_verb="CREATED", event_object=self.object)
 
