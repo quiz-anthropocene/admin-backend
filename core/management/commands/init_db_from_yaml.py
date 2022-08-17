@@ -44,8 +44,8 @@ class Command(BaseCommand):
     For each model, delete the data, then re-create it from the YAML files
 
     Usage:
-    python manage.py init_db
-    python manage.py init_db --with-sql-reset
+    python manage.py init_db_from_yaml
+    python manage.py init_db_from_yaml --with-sql-reset
     """
 
     help = """Initialize database with the files in the /data folder"""
@@ -61,11 +61,11 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         print("==========")
-        print("Starting init_db...")
+        print("Starting init_db_from_yaml...")
         print(f"Checking that the folder {PREFIX} exists...")
         if not path.exists(PREFIX):
             raise CommandError(
-                "Path doesn't exist. You might need to adjust the PREFIX value in the init_db.py command"
+                "Path doesn't exist. You might need to adjust the PREFIX value in the init_db_from_yaml.py command"
             )
         self.init_configuration_table()
         for model_item in MODELS_LIST:

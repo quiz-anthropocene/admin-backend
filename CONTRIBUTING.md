@@ -135,7 +135,7 @@ Voir dans le dossier [quiz-anthropocene/public-frontend/data/architecture](https
     \* Voir section Windows à la fin si cette commande pose problème
 - Chargez la base de donnée
     ```
-    pipenv run python manage.py init_db --with-sql-reset
+    pipenv run python manage.py init_db_from_yaml --with-sql-reset
     ```
 - Installer le pre-commit git hook
     ```
@@ -187,7 +187,7 @@ Rappel : pour le backend, toutes les commandes doivent commencer par `pipenv run
 
 Importer toute la donnée dans la base de donnée
 ```
-python manage.py init_db --with-sql-reset
+python manage.py init_db_from_yaml --with-sql-reset
 ```
 
 Importer les questions dans la base de donnée
@@ -217,7 +217,7 @@ Réinitialiser complètement la base de donnée
 ```
 python manage.py reset_db // django-extensions
 python manage.py migrate
-python manage.py init_db --with-sql-reset
+python manage.py init_db_from_yaml --with-sql-reset
 ```
 
 Importer un dump PGSQL
@@ -269,7 +269,7 @@ Réduire la taille des images (PNG)
 
 Windows peut poser des soucis d'encodage, pour l'étape de charger la base de donnée, entrez la commande
 ```
-pipenv run python -X utf8 manage.py init_db --with-sql-reset
+pipenv run python -X utf8 manage.py init_db_from_yaml --with-sql-reset
 ```
 
 - Installer pre-commit
