@@ -46,7 +46,10 @@ class QuizEditForm(QuizCreateForm):
 
 class QuizQuestionEditForm(forms.ModelForm):
     question = forms.ModelChoiceField(
-        queryset=Question.objects.all(), widget=autocomplete.ModelSelect2(url="questions:search")
+        queryset=Question.objects.all(),
+        widget=autocomplete.ModelSelect2(
+            url="questions:search", attrs={"data-placeholder": "Recherche par ID ou Texte"}
+        ),
     )
 
     class Meta:

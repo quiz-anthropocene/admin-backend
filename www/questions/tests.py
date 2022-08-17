@@ -1,3 +1,5 @@
+import json
+
 from django.test import TestCase
 from django.urls import reverse
 from django.utils import timezone
@@ -177,3 +179,52 @@ class QuestionCreateViewTest(TestCase):
         self.assertEqual(response.status_code, 302)  # 201
         self.assertEqual(Question.objects.count(), 1)
         self.assertEqual(Event.objects.count(), 1)
+
+
+class QuestionAutocompleteViewTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.url = reverse("questions:search")
+        cls.user = UserFactory(roles=[])
+        cls.user_contributor_1 = UserFactory()
+        cls.user_contributor_2 = UserFactory()
+        cls.question_1 = QuestionFactory(text="Test", author=cls.user_contributor_1)
+
+    def test_only_contributor_can_access_question_autocomplete(self):
+        # anonymous
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(response.url.startswith("/accounts/login/"))
+        # simple user
+        self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.url, "/")  # redirected to home
+        # contributor
+        self.client.login(email=self.user_contributor_1.email, password=DEFAULT_PASSWORD)
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 200)
+
+    def test_contributor_can_search_question_by_id_or_text(self):
+        self.client.login(email=self.user_contributor_1.email, password=DEFAULT_PASSWORD)
+        # search by id
+        response = self.client.get(self.url, {"q": str(self.question_1.id)})
+        response_data = json.loads(response.content.decode("utf8"))
+        self.assertEqual(len(response_data["results"]), 1)
+        # search by text
+        response = self.client.get(self.url, {"q": "test"})
+        response_data = json.loads(response.content.decode("utf8"))
+        self.assertEqual(len(response_data["results"]), 1)
+
+    def test_should_not_return_private_questions_except_if_author(self):
+        QuestionFactory(text="Another test", author=self.user_contributor_2, visibility=constants.VISIBILITY_PRIVATE)
+        # other contributor
+        self.client.login(email=self.user_contributor_1.email, password=DEFAULT_PASSWORD)
+        response = self.client.get(self.url, {"q": "another"})
+        response_data = json.loads(response.content.decode("utf8"))
+        self.assertEqual(len(response_data["results"]), 0)
+        # author
+        self.client.login(email=self.user_contributor_2.email, password=DEFAULT_PASSWORD)
+        response = self.client.get(self.url, {"q": "another"})
+        response_data = json.loads(response.content.decode("utf8"))
+        self.assertEqual(len(response_data["results"]), 1)
