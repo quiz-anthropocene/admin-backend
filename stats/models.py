@@ -2,6 +2,7 @@ from datetime import date, timedelta
 
 from django.db import models
 from django.db.models import Count, Sum
+from django.utils import timezone
 
 from core import constants as api_constants
 from questions.models import Question
@@ -51,7 +52,7 @@ class QuestionAnswerEvent(models.Model):
     )
     quiz = models.ForeignKey(Quiz, related_name="question_stats", on_delete=models.CASCADE, null=True, blank=True)
 
-    created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de la réponse")
+    created = models.DateTimeField(default=timezone.now, help_text="La date & heure de la réponse")
 
     objects = QuestionAnswerEventQuerySet.as_manager()
 
@@ -87,7 +88,7 @@ class QuestionFeedbackEvent(models.Model):
     )
     quiz = models.ForeignKey(Quiz, related_name="question_feedbacks", on_delete=models.CASCADE, null=True, blank=True)
 
-    created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de l'avis")
+    created = models.DateTimeField(default=timezone.now, help_text="La date & heure de l'avis")
 
     objects = QuestionFeedbackEventQuerySet.as_manager()
 
@@ -153,7 +154,7 @@ class QuizAnswerEvent(models.Model):
         default=dict,
         help_text="Les détails par question",
     )
-    created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de la réponse")
+    created = models.DateTimeField(default=timezone.now, help_text="La date & heure de la réponse")
 
     objects = QuizAnswerEventQuerySet.as_manager()
 
@@ -202,7 +203,7 @@ class QuizFeedbackEvent(models.Model):
         default=constants.FEEDBACK_LIKE,
         help_text="L'avis laissé sur le quiz",
     )
-    created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de l'avis")
+    created = models.DateTimeField(default=timezone.now, help_text="La date & heure de l'avis")
 
     objects = QuizFeedbackEventQuerySet.as_manager()
 
@@ -293,8 +294,8 @@ class DailyStat(models.Model):
         default=constants.daily_stat_hour_split_jsonfield_default_value,
         help_text="Les statistiques par heure",
     )
-    # timestamps
-    created = models.DateTimeField(auto_now_add=True, help_text="La date & heure de la stat journalière")
+
+    created = models.DateTimeField(default=timezone.now, help_text="La date & heure de la stat journalière")
     updated = models.DateField(auto_now=True)
 
     objects = DailyStatManager()

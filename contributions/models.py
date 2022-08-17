@@ -2,6 +2,7 @@ from datetime import date, timedelta
 
 from django.conf import settings
 from django.db import models
+from django.utils import timezone
 
 from core import constants
 from questions.models import Question
@@ -74,7 +75,7 @@ class Contribution(models.Model):
         verbose_name="En réponse à", to="self", related_name="replies", on_delete=models.CASCADE, null=True, blank=True
     )
 
-    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     objects = ContributionQuerySet.as_manager()

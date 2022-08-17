@@ -16,6 +16,7 @@ class EventAdmin(admin.ModelAdmin):
     list_filter = (
         "event_object_type",
         "event_verb",
+        "actor_name",
     )
     search_fields = (
         "actor_name",

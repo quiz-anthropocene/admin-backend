@@ -6,6 +6,7 @@ from django.db.models import Q
 from django.db.models.signals import m2m_changed, post_save, pre_save
 from django.dispatch import receiver
 from django.urls import reverse
+from django.utils import timezone
 from simple_history.models import HistoricalRecords
 
 from core import constants
@@ -204,8 +205,7 @@ class Question(models.Model):
         default=constants.VISIBILITY_PUBLIC,
     )
 
-    # timestamps
-    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     # flatten relations
