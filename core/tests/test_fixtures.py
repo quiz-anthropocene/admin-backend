@@ -29,7 +29,7 @@
 #     #     self.assertTrue(GlossaryItem.objects.count())
 
 #     # def test_flat_fixtures_load_successfully(self):
-#     #     management.call_command("init_db")
+#     #     management.call_command("init_db_from_yaml")
 #     #     self.assertTrue(Configuration.objects.count())
 #     #     self.assertTrue(Category.objects.count())
 #     #     self.assertTrue(Tag.objects.count())

@@ -1,9 +1,11 @@
 import json
 import re
+from datetime import datetime
 
 import yaml
 from django.apps import apps
 from django.core import serializers
+from django.utils import timezone
 
 
 DATE_FORMAT = "%Y-%m-%d"
@@ -96,13 +98,21 @@ def load_model_data_to_db(model, data):
         if "questions" in item:
             question_ids = item["questions"]
             del item["questions"]
+        # timestamps
+        if "validation_date" in item:
+            validation_date_tz = datetime.strptime(item["validation_date"], "%Y-%m-%d")
+            item["validation_date"] = timezone.make_aware(validation_date_tz)
+        if "publish_date" in item:
+            publish_date_tz = datetime.strptime(item["publish_date"], "%Y-%m-%d")
+            item["publish_date"] = timezone.make_aware(publish_date_tz)
+        if "created" in item:
+            created_tz = datetime.strptime(item["created"], "%Y-%m-%d")
+            item["created"] = timezone.make_aware(created_tz)
+        if "updated" in item:
+            updated_tz = datetime.strptime(item["updated"], "%Y-%m-%d")
+            item["updated"] = timezone.make_aware(updated_tz)
         # save !
         instance = model.objects.create(**item)
-        # timestamps aren't set correctly
-        if "created" in item:
-            model.objects.filter(id=instance.id).update(created=item["created"])
-        if "updated" in item:
-            model.objects.filter(id=instance.id).update(updated=item["updated"])
         # set M2M
         if len(tag_ids):
             instance.tags.set(tag_ids)

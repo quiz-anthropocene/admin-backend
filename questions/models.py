@@ -410,6 +410,8 @@ class Question(models.Model):
                         validation_errors, "has_ordered_answers", error_message
                     )
         if bool(validation_errors):
+            if self.id:
+                print("Question", self.id)
             raise ValidationError(validation_errors)
 
 

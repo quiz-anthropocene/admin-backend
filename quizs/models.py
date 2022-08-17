@@ -352,7 +352,7 @@ class Quiz(models.Model):
     like_count_agg.fget.short_description = "# Like"
     dislike_count_agg.fget.short_description = "# Dislike"
 
-    # TODO: commented because init_db raises ValidationError...
+    # TODO: commented because init_db_from_yaml raises ValidationError...
     # def clean(self):
     #     # > only run on existing (Quiz query won't work on new quizs)
     #     if getattr(self, "id"):

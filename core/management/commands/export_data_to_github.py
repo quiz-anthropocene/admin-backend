@@ -6,6 +6,7 @@ from django.core.management import BaseCommand
 from django.utils import timezone
 
 from api.categories.serializers import CategorySerializer
+from api.glossary.serializers import GlossaryItemSerializer
 from api.questions.serializers import QuestionSerializer
 from api.quizs.serializers import QuizQuestionSerializer, QuizRelationshipSerializer, QuizSerializer
 from api.tags.serializers import TagSerializer
@@ -13,6 +14,7 @@ from api.users.serializers import UserWithCountSerializer
 from categories.models import Category
 from core.models import Configuration
 from core.utils import github, utilities
+from glossary.models import GlossaryItem
 from questions.models import Question
 from quizs.models import Quiz, QuizQuestion, QuizRelationship
 from tags.models import Tag
@@ -26,6 +28,7 @@ question_queryset = Question.objects.public()
 quiz_queryset = Quiz.objects.public()
 quiz_questions_queryset = QuizQuestion.objects.public()
 quiz_relationships_queryset = QuizRelationship.objects.all()
+glossary_item_queryset = GlossaryItem.objects.all()
 
 
 class Command(BaseCommand):
@@ -56,6 +59,7 @@ class Command(BaseCommand):
                 quiz_queryset.filter(updated__gte=configuration.github_data_last_exported).exists(),
                 quiz_questions_queryset.filter(updated__gte=configuration.github_data_last_exported).exists(),
                 quiz_relationships_queryset.filter(updated__gte=configuration.github_data_last_exported).exists(),
+                glossary_item_queryset.filter(updated__gte=configuration.github_data_last_exported).exists(),
             ]
         ):
             # init
@@ -169,6 +173,22 @@ class Command(BaseCommand):
                 )
 
                 #####################################
+                # data/ressources-glossaire.yaml
+                start_time = time.time()
+                glossary_items_yaml = utilities.serialize_model_to_yaml(
+                    model_queryset=glossary_item_queryset, model_serializer=GlossaryItemSerializer
+                )
+                glossary_items_element = github.create_file_element(
+                    file_path="data/ressources-glossaire.yaml",
+                    file_content=glossary_items_yaml,
+                )
+
+                print(
+                    "--- Step 2.9 done : ressources-glossaire.yaml (%s seconds) ---"
+                    % round(time.time() - start_time, 1)
+                )
+
+                #####################################
                 # update frontend file with timestamp
                 # frontend/src/constants.js
                 start_time = time.time()
@@ -184,7 +204,7 @@ class Command(BaseCommand):
                     file_content=new_frontend_constants_file_content_string,
                 )
 
-                print("--- Step 2.9 done : constants.js (%s seconds) ---" % round(time.time() - start_time, 1))
+                print("--- Step 2.10 done : constants.js (%s seconds) ---" % round(time.time() - start_time, 1))
 
                 #####################################
                 # commit files
@@ -202,6 +222,7 @@ class Command(BaseCommand):
                         quizs_element,
                         quiz_questions_element,
                         quiz_relationships_element,
+                        glossary_items_element,
                         new_frontend_constants_file_element,
                     ],
                 )
@@ -224,6 +245,7 @@ class Command(BaseCommand):
                         "<li>data/quizs.yaml</li>"
                         "<li>data/quiz-questions.yaml</li>"
                         "<li>data/quiz-relationships.yaml</li>"
+                        "<li>data/ressources-glossaire.yaml</li>"
                         "</ul>"
                     )
                     pull_request = github.create_pull_request(
