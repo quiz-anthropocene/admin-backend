@@ -5,14 +5,14 @@
 {% block content %}
 <div class="container">
     <br />
-    <div class="row">
-        <div class="col-12 col-lg-8">
-            {% if not user.is_authenticated %}
-                <p>Vous devez être connecté pour accéder à cet outil.</p>
-            {% else %}
+    {% if not user.is_authenticated %}
+        <p>Vous devez être connecté pour accéder à cet outil.</p>
+    {% else %}
+        <div class="row">
+            <div class="col-12 col-lg-8">
                 <div class="row">
                     <div class="col-12">
-                        <p>Bonjour {{ user.first_name }} !</p>
+                        <h4>Bonjour {{ user.first_name }} !</h4>
                         <p>Bienvenue sur <strong>l'interface contributeur</strong> du Quiz de l'Anthropocène.</p>
                         <p>Ici tu pourras :</p>
                         <ul>
@@ -24,8 +24,19 @@
                         </ul>
                     </div>
                 </div>
-            {% endif %}
+            </div>
+            <div class="col-lg-4">
+                <h4>Actions récentes</h4>
+                <ul style="list-style-type:none;padding-left:0">
+                    {% for event in last_10_events %}
+                        <li>
+                            {{ event.display_full|safe }}
+                            <small class="text-muted" title="{{ event.created }}">{{ event.created|date:"d F" }}</small>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
-    </div>
+    {% endif %}
 </div>
 {% endblock %}
