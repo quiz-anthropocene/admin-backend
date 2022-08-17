@@ -1,7 +1,6 @@
 from dal import autocomplete
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
-from django.db.models import Q
 from django.forms.models import model_to_dict
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
@@ -245,9 +244,12 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
 
 class QuestionAutocomplete(ContributorUserRequiredMixin, autocomplete.Select2QuerySetView):
     def get_queryset(self):
-        qs = Question.objects.all()
+        qs = Question.objects.public_or_by_author(author=self.request.user)
 
         if self.q:
-            qs = qs.filter(Q(id=self.q) | Q(text__icontains=self.q))
+            if self.q.replace(" ", "").isdigit():
+                qs = qs.filter(id=self.q)
+            else:
+                qs = qs.filter(text__icontains=self.q)
 
         return qs
