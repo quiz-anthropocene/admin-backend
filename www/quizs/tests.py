@@ -2,6 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 from django.utils import timezone
 
+from activity.models import Event
 from core import constants
 from quizs.factories import QuizFactory
 from quizs.models import Quiz
@@ -120,6 +121,7 @@ class QuizDetailEditViewTest(TestCase):
         self.assertEqual(quiz.validator, self.user_admin)
         self.assertEqual(quiz.validation_date.date(), timezone.now().date())
         self.assertEqual(quiz.publish_date.date(), timezone.now().date())
+        self.assertEqual(Event.objects.count(), 1 + 1)
 
     def test_only_author_can_edit_private_quiz(self):
         # author can edit
@@ -192,3 +194,4 @@ class QuizCreateViewTest(TestCase):
         response = self.client.post(url, data=QUIZ_CREATE_FORM_DEFAULT)
         self.assertEqual(response.status_code, 302)  # 201
         self.assertEqual(Quiz.objects.count(), 1)
+        self.assertEqual(Event.objects.count(), 1)

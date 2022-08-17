@@ -12,6 +12,7 @@ from django.views.generic import CreateView, DetailView, ListView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
+from activity.utilities import create_event
 from api.questions.serializers import QuestionFullStringSerializer
 from contributions.models import Contribution
 from contributions.tables import ContributionTable
@@ -95,10 +96,12 @@ class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, 
         question = form.save(commit=False)
         # Change detected on the validation_status field
         if question_before.validation_status != question.validation_status:
-            # Question validated! set the validator data
+            # Question validated! set the validator data + create event
             if question.is_validated:
                 question.validator = self.request.user
                 question.validation_date = timezone.now()
+                if not question.is_private:
+                    create_event(user=self.request.user, event_verb="VALIDATED", event_object=question)
             # Question not validated anymore... reset the validator data
             elif question_before.is_validated:
                 question.validator = None
@@ -206,6 +209,20 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
 
     def get_initial(self):
         return {"author": self.request.user}
+
+    def form_valid(self, form):
+        self.object = form.save()
+
+        # create event
+        if not self.object.is_private:
+            create_event(user=self.request.user, event_verb="CREATED", event_object=self.object)
+
+        messages.add_message(
+            self.request,
+            messages.SUCCESS,
+            self.get_success_message(form.cleaned_data),
+        )
+        return HttpResponseRedirect(self.get_success_url())
 
     def get_success_url(self):
         success_url = super().get_success_url()

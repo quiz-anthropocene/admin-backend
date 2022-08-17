@@ -9,6 +9,7 @@ from django.views.generic import CreateView, DetailView, TemplateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin
 
+from activity.utilities import create_event
 from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import AdministratorUserRequiredMixin
 from glossary.models import GlossaryItem
@@ -73,6 +74,9 @@ class AdminContributorCreateView(AdministratorUserRequiredMixin, CreateView):
 
         # add user to mailing list
         # done in users/models.py (post_save)
+
+        # create event
+        create_event(user=self.request.user, event_verb="CREATED", event_object=contributor)
 
         messages.add_message(
             self.request,

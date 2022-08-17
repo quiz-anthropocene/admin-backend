@@ -23,7 +23,8 @@ class CategoryAdmin(ExportMixin, admin.ModelAdmin):
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)
-        return qs.prefetch_related("questions")
+        qs = qs.prefetch_related("questions")
+        return qs
 
 
 admin_site.register(Category, CategoryAdmin)
