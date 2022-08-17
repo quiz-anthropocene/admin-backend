@@ -1,6 +1,7 @@
 from ckeditor.fields import RichTextField
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 
 
 class Category(models.Model):
@@ -9,7 +10,8 @@ class Category(models.Model):
     name = models.CharField(verbose_name="Nom", max_length=50, blank=False)
     name_long = models.CharField(verbose_name="Nom (version longue)", max_length=150, blank=False)
     description = RichTextField(verbose_name="Description", blank=True)
-    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+
+    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     class Meta:

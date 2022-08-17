@@ -5,6 +5,7 @@ from django.db import models
 from django.db.models import Exists, OuterRef, Q
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils import timezone
 
 from core.fields import ChoiceArrayField
 from core.utils import sendinblue
@@ -147,7 +148,7 @@ class User(AbstractUser):
     # is_active, is_staff, is_superuser
     # date_joined, last_login
 
-    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     objects = UserManager()

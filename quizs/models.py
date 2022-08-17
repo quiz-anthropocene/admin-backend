@@ -7,6 +7,7 @@ from django.db.models import Avg, Count, Q
 from django.db.models.signals import m2m_changed, post_delete, post_save, pre_save
 from django.dispatch import receiver
 from django.urls import reverse
+from django.utils import timezone
 from django.utils.text import slugify
 from simple_history.models import HistoricalRecords
 
@@ -143,8 +144,7 @@ class Quiz(models.Model):
         related_name="related_to",
     )
 
-    # timestamps
-    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     # flatten relations
@@ -407,8 +407,8 @@ class QuizQuestion(models.Model):
     quiz = models.ForeignKey(verbose_name="Quiz", to=Quiz, on_delete=models.CASCADE)
     question = models.ForeignKey(verbose_name="Question", to=Question, on_delete=models.CASCADE)
     order = models.PositiveIntegerField(verbose_name="Ordre", blank=True, default=0)
-    # timestamps
-    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+
+    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     objects = QuizQuestionQuerySet.as_manager()
@@ -466,8 +466,8 @@ class QuizRelationship(models.Model):
             constants.QUIZ_RELATIONSHIP_CHOICE_LIST,
         ),
     )
-    # timestamps
-    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+
+    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     def __str__(self):

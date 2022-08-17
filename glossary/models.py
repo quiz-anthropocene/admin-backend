@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 from simple_history.models import HistoricalRecords
 
 from history.models import HistoryChangedFieldsAbstractModel
@@ -14,8 +15,8 @@ class GlossaryItem(models.Model):
     definition_short = models.CharField(verbose_name="Définition (succinte)", max_length=150, blank=False)
     description = models.TextField(verbose_name="Description", blank=True)
     description_accessible_url = models.URLField(verbose_name="Lien pour aller plus loin", max_length=500, blank=True)
-    # timestamps
-    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+
+    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])

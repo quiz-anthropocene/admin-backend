@@ -3,6 +3,7 @@ from django.db import models
 from django.db.models import Q
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils import timezone
 
 from core.utils import slack
 
@@ -68,7 +69,7 @@ class Event(models.Model):
         default=dict,
     )
 
-    created = models.DateTimeField(verbose_name="Date de création", auto_now_add=True)
+    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
 
     objects = EventQuerySet.as_manager()
 
