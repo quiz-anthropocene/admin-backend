@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import sys
 
 import dj_database_url
 import sentry_sdk
@@ -34,6 +35,8 @@ if os.getenv("DEBUG") == "True":
     DEBUG = True
 else:
     DEBUG = False
+
+TESTING = "test" in sys.argv or "pytest" in sys.argv[0]
 
 ALLOWED_HOSTS = [
     "localhost",

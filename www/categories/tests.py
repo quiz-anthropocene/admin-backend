@@ -15,26 +15,24 @@ CATEGORY_DETAIL_URLS = [
 class CategoryListViewTest(TestCase):
     @classmethod
     def setUpTestData(cls):
+        cls.url = reverse("categories:list")
         cls.user = UserFactory(roles=[])
         cls.user_contributor = UserFactory()
         cls.category_1 = CategoryFactory(name="Cat 1")
         cls.category_2 = CategoryFactory(name="Cat 2")
 
-    def test_anonymous_user_cannot_access_category_list(self):
-        url = reverse("categories:list")
-        response = self.client.get(url)
+    def test_only_contributor_can_access_category_list(self):
+        # anonymous
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, "/accounts/login/?next=/categories/")
-
-    def test_only_contributor_can_access_category_list(self):
+        # simple user
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
-        url = reverse("categories:list")
-        response = self.client.get(url)
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
-
+        # contributor
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
-        url = reverse("categories:list")
-        response = self.client.get(url)
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context["categories"]), 2)
 

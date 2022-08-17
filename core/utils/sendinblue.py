@@ -29,9 +29,10 @@ def add_to_contact_list(user, list_id=settings.SIB_CONTRIBUTOR_LIST_ID, extra_at
         attributes = {**attributes, **extra_attributes}
     data["attributes"] = attributes
 
-    if settings.DEBUG:
+    if not settings.DEBUG and not settings.TESTING:
+        return requests.post(settings.SIB_CONTACT_ENDPOINT, headers=HEADERS, data=json.dumps(data))
+    else:
         return True
-    return requests.post(settings.SIB_CONTACT_ENDPOINT, headers=HEADERS, data=json.dumps(data))
 
 
 def newsletter_registration(user_email):
@@ -53,6 +54,7 @@ def newsletter_registration(user_email):
         "updateEnabled": True,
     }
 
-    if settings.DEBUG:
+    if not settings.DEBUG and not settings.TESTING:
+        return requests.post(settings.SIB_CONTACT_DOI_ENDPOINT, headers=HEADERS, data=json.dumps(data))
+    else:
         return True
-    return requests.post(settings.SIB_CONTACT_DOI_ENDPOINT, headers=HEADERS, data=json.dumps(data))

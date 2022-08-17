@@ -29,26 +29,24 @@ QUIZ_CREATE_FORM_DEFAULT = {
 class QuizListViewTest(TestCase):
     @classmethod
     def setUpTestData(cls):
+        cls.url = reverse("quizs:list")
         cls.user = UserFactory(roles=[])
         cls.user_contributor = UserFactory()
         cls.quiz_1 = QuizFactory(name="Quiz 1")
         cls.quiz_2 = QuizFactory(name="Quiz 2")
 
-    def test_anonymous_user_cannot_access_quiz_list(self):
-        url = reverse("quizs:list")
-        response = self.client.get(url)
+    def test_only_contributor_can_access_quiz_list(self):
+        # anonymous
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, "/accounts/login/?next=/quizs/")
-
-    def test_only_contributor_can_access_quiz_list(self):
+        # simple user
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
-        url = reverse("quizs:list")
-        response = self.client.get(url)
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
-
+        # contributor
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
-        url = reverse("quizs:list")
-        response = self.client.get(url)
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context["quizs"]), 2)
 
@@ -168,30 +166,27 @@ class QuizDetailQuestionListViewTest(TestCase):
 class QuizCreateViewTest(TestCase):
     @classmethod
     def setUpTestData(cls):
+        cls.url = reverse("quizs:create")
         cls.user = UserFactory(roles=[])
         cls.user_contributor = UserFactory()
 
-    def test_anonymous_user_cannot_access_quiz_create(self):
-        url = reverse("quizs:create")
-        response = self.client.get(url)
+    def test_only_contributor_can_access_quiz_create(self):
+        # anonymous
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
         self.assertTrue(response.url.startswith("/accounts/login/"))
-
-    def test_only_contributor_can_access_quiz_create(self):
+        # simple user
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
-        url = reverse("quizs:create")
-        response = self.client.get(url)
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
-
+        # contributor
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
-        url = reverse("quizs:create")
-        response = self.client.get(url)
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 200)
 
     def test_contributor_can_create_quiz(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
-        url = reverse("quizs:create")
-        response = self.client.post(url, data=QUIZ_CREATE_FORM_DEFAULT)
+        response = self.client.post(self.url, data=QUIZ_CREATE_FORM_DEFAULT)
         self.assertEqual(response.status_code, 302)  # 201
         self.assertEqual(Quiz.objects.count(), 1)
         self.assertEqual(Event.objects.count(), 1)

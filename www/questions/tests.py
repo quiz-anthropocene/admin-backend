@@ -35,26 +35,24 @@ QUESTION_CREATE_FORM_DEFAULT = {
 class QuestionListViewTest(TestCase):
     @classmethod
     def setUpTestData(cls):
+        cls.url = reverse("questions:list")
         cls.user = UserFactory(roles=[])
         cls.user_contributor = UserFactory()
         cls.question_1 = QuestionFactory()
         cls.question_2 = QuestionFactory()
 
-    def test_anonymous_user_cannot_access_question_list(self):
-        url = reverse("questions:list")
-        response = self.client.get(url)
+    def test_only_contributor_can_access_question_list(self):
+        # anonymous
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, "/accounts/login/?next=/questions/")
-
-    def test_only_contributor_can_access_question_list(self):
+        # simple user
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
-        url = reverse("questions:list")
-        response = self.client.get(url)
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
-
+        # contributor
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
-        url = reverse("questions:list")
-        response = self.client.get(url)
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context["questions"]), 2)
 
@@ -98,7 +96,7 @@ class QuestionDetailEditViewTest(TestCase):
             text="Question 2", author=cls.user_contributor_1, visibility=constants.VISIBILITY_PRIVATE
         )
 
-    def test_author_or_super_contributor_can_edit_public_question(self):
+    def test_only_author_or_super_contributor_can_edit_public_question(self):
         for user in [self.user_contributor_1, self.user_super_contributor, self.user_admin]:
             self.client.login(email=user.email, password=DEFAULT_PASSWORD)
             url = reverse("questions:detail_edit", args=[self.question_1.id])
@@ -152,30 +150,27 @@ class QuestionDetailEditViewTest(TestCase):
 class QuestionCreateViewTest(TestCase):
     @classmethod
     def setUpTestData(cls):
+        cls.url = reverse("questions:create")
         cls.user = UserFactory(roles=[])
         cls.user_contributor = UserFactory()
 
-    def test_anonymous_user_cannot_access_question_create(self):
-        url = reverse("questions:create")
-        response = self.client.get(url)
+    def test_only_contributor_can_access_question_create(self):
+        # anonymous
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
         self.assertTrue(response.url.startswith("/accounts/login/"))
-
-    def test_only_contributor_can_access_question_create(self):
+        # simple user
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
-        url = reverse("questions:create")
-        response = self.client.get(url)
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
         # contributor
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
-        url = reverse("questions:create")
-        response = self.client.get(url)
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 200)
 
     def test_contributor_can_create_question(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
-        url = reverse("questions:create")
-        response = self.client.post(url, data=QUESTION_CREATE_FORM_DEFAULT)
+        response = self.client.post(self.url, data=QUESTION_CREATE_FORM_DEFAULT)
         self.assertEqual(response.status_code, 302)  # 201
         self.assertEqual(Question.objects.count(), 1)
         self.assertEqual(Event.objects.count(), 1)

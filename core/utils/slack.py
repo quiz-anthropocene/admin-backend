@@ -18,7 +18,7 @@ def format_text(text):
 def send_message_to_channel(text: str, service_id: str):
     data = {"text": format_text(text)}
 
-    if not settings.DEBUG:
+    if not settings.DEBUG and not settings.TESTING:
         try:
             response = requests.post(f"{SLACK_BASE_URL}{service_id}", headers=HEADERS, data=json.dumps(data))
             response.raise_for_status()
@@ -26,3 +26,5 @@ def send_message_to_channel(text: str, service_id: str):
             return True
         except requests.exceptions.HTTPError as e:
             raise e
+    else:
+        return True

@@ -17,26 +17,24 @@ CONTRIBUTIONS_DETAIL_URLS = [
 class ContributionListViewTest(TestCase):
     @classmethod
     def setUpTestData(cls):
+        cls.url = reverse("contributions:list")
         cls.user = UserFactory(roles=[])
         cls.user_contributor = UserFactory()
         cls.contribution_1 = ContributionFactory()
         cls.contribution_2 = ContributionFactory()
 
-    def test_anonymous_user_cannot_access_contribution_list(self):
-        url = reverse("contributions:list")
-        response = self.client.get(url)
+    def test_only_contributor_can_access_contribution_list(self):
+        # anonmyous
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, "/accounts/login/?next=/contributions/")
-
-    def test_only_contributor_can_access_contribution_list(self):
+        # simple user
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
-        url = reverse("contributions:list")
-        response = self.client.get(url)
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
-
+        # contributor
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
-        url = reverse("contributions:list")
-        response = self.client.get(url)
+        response = self.client.get(self.url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context["contributions"]), 2)
 
