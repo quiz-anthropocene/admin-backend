@@ -18,13 +18,11 @@ def format_text(text):
 def send_message_to_channel(text: str, service_id: str):
     data = {"text": format_text(text)}
 
-    if settings.DEBUG:
-        return True
-
-    try:
-        response = requests.post(f"{SLACK_BASE_URL}{service_id}", headers=HEADERS, data=json.dumps(data))
-        response.raise_for_status()
-        # you'll receive a "HTTP 200" response with a plain text ok indicating that your message posted successfully
-        return True
-    except requests.exceptions.HTTPError as e:
-        raise e
+    if not settings.DEBUG:
+        try:
+            response = requests.post(f"{SLACK_BASE_URL}{service_id}", headers=HEADERS, data=json.dumps(data))
+            response.raise_for_status()
+            # you'll receive a "HTTP 200" response with a plain text ok indicating that your message posted successfully  # noqa
+            return True
+        except requests.exceptions.HTTPError as e:
+            raise e
