@@ -30,7 +30,7 @@
                 <ul style="list-style-type:none;padding-left:0">
                     {% for event in last_10_events %}
                         <li>
-                            {{ event.display_full|safe }}
+                            {{ event.display_html|safe }}
                             <small class="text-muted" title="{{ event.created }}">{{ event.created|date:"d F" }}</small>
                         </li>
                     {% endfor %}

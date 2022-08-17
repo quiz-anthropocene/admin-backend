@@ -1,5 +1,20 @@
+from django.conf import settings
 from django.db import models
 from django.db.models import Q
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
+from core.utils import slack
+
+
+"""
+App to log the contributors activity
+
+Current events logged:
+- QUESTION: CREATED, VALIDATED
+- QUIZ: CREATED, VALIDATED, PUBLISHED
+- USER: CREATED
+"""
 
 
 class EventQuerySet(models.QuerySet):
@@ -62,11 +77,16 @@ class Event(models.Model):
         verbose_name_plural = "Événements"
 
     @property
-    def display_full(self) -> str:
+    def display_html(self) -> str:
         if self.event_object_type in ["QUESTION", "QUIZ"]:
-            return f"{self.display_event_emoji} <i>{self.actor_name}</i> a {self.get_event_verb_display().lower()} {self.display_event_object_type_prefix} {self.get_event_object_type_display().lower()} <strong>{self.event_object_name}</strong>"  # noqa
+            # Prénom Nom a créé la question 'Question'
+            return self.display_full
         elif self.event_object_type in ["USER"]:
             return f"{self.display_event_emoji} Nouveau contributeur ! <strong>{self.event_object_name}</strong>"
+
+    @property
+    def display_full(self) -> str:
+        return f"{self.display_event_emoji} <i>{self.actor_name}</i> a {self.get_event_verb_display().lower()} {self.display_event_object_type_prefix} {self.get_event_object_type_display().lower()} <strong>{self.event_object_name}</strong>"  # noqa
 
     @property
     def display_event_object_type_prefix(self) -> str:
@@ -86,3 +106,9 @@ class Event(models.Model):
         elif self.event_object_type in ["USER"]:
             if self.event_verb == "CREATED":
                 return "🧑"
+
+
+@receiver(post_save, sender=Event)
+def send_event_to_slack(sender, instance, created, **kwargs):
+    if created:
+        slack.send_message_to_channel(instance.display_full, service_id=settings.SLACK_ACTIVITY_EVENT_SERVICE_ID)
