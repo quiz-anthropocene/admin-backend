@@ -38,7 +38,9 @@ class QuestionQuerySet(models.QuerySet):
     def for_difficulty(self, difficulty):
         return self.filter(difficulty=difficulty)
 
-    def public_or_by_author(self, author):
+    def public_or_by_author(self, author=None):
+        if not author:
+            return self.public()
         return self.filter(
             ~Q(visibility=constants.VISIBILITY_PRIVATE) | Q(author=author) & Q(visibility=constants.VISIBILITY_PRIVATE)
         )
