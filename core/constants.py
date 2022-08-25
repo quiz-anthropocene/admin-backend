@@ -134,3 +134,10 @@ VISIBILITY_CHOICES = (
 BOOLEAN_CHOICES = [(True, "Vrai"), (False, "Faux")]
 
 EMPTY_CHOICE = (("", ""),)
+
+# Placeholder for author roles in quizzes
+QUIZ_AUTHORS_ROLE_TYPE_LIST = [
+    "Createur",
+    "Contributeur",
+    "Rédacteur",
+]

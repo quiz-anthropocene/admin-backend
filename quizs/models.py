@@ -51,7 +51,7 @@ class QuizQuerySet(models.QuerySet):
 class Quiz(models.Model):
     QUIZ_CHOICE_FIELDS = ["language", "visibility"]
     QUIZ_FK_FIELDS = ["author"]
-    QUIZ_M2M_FIELDS = ["questions", "tags", "relationships"]
+    QUIZ_M2M_FIELDS = ["questions", "tags", "relationships", "authors"]
     QUIZ_RELATION_FIELDS = QUIZ_FK_FIELDS + QUIZ_M2M_FIELDS
     QUIZ_LIST_FIELDS = [
         "questions_categories_list",
@@ -62,7 +62,7 @@ class Quiz(models.Model):
     QUIZ_URL_FIELDS = []
     QUIZ_IMAGE_URL_FIELDS = ["image_background_url"]
     QUIZ_TIMESTAMP_FIELDS = ["created", "updated"]
-    QUIZ_FLATTEN_FIELDS = ["tag_list", "question_list", "relationship_list", "author_string", "validator_string"]
+    QUIZ_FLATTEN_FIELDS = ["tag_list", "question_list", "relationship_list", "authors_list", "validator_string"]
     QUIZ_READONLY_FIELDS = [
         "slug",
         "difficulty_average",
@@ -98,8 +98,16 @@ class Quiz(models.Model):
     author = models.ForeignKey(
         verbose_name="Auteur",
         to=settings.AUTH_USER_MODEL,
-        related_name="quizs",
+        related_name="old_quizs",
         on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+    )
+    authors = models.ManyToManyField(
+        verbose_name="Auteurs",
+        to=settings.AUTH_USER_MODEL,
+        through="QuizAuthors",
+        related_name="quizs",
         blank=True,
         null=True,
     )
@@ -156,6 +164,9 @@ class Quiz(models.Model):
         verbose_name="Relations", base_field=models.CharField(max_length=50), blank=True, default=list
     )
     author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
+    author_list = ArrayField(
+        verbose_name="Auteurs", base_field=models.CharField(max_length=300), blank=True, default=list
+    )
     validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
 
     history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
@@ -212,6 +223,15 @@ class Quiz(models.Model):
     @property
     def questions_id_list_with_order(self) -> list:
         return list(self.quizquestion_set.values_list("question_id", flat=True))
+
+    @property
+    def authors_list(self) -> list:
+        list(self.questions.order_by().values_list("author", flat=True).distinct())
+        return list(self.authors.order_by("name").values_list("name", flat=True))
+
+    @property
+    def authors_list_string(self) -> str:
+        return ", ".join(self.authors_list)
 
     @property
     def tags_list(self) -> list:
@@ -517,3 +537,45 @@ def quiz_set_flatten_relationship_list(sender, instance, **kwargs):
     instance.from_quiz.save()
     instance.to_quiz.relationship_list = instance.to_quiz.relationships_list
     instance.to_quiz.save()
+
+
+class QuizAuthors(models.Model):
+    quiz = models.ForeignKey(verbose_name="Quiz", to=Quiz, on_delete=models.CASCADE)
+    author = models.ForeignKey(
+        verbose_name="Auteur",
+        to=settings.AUTH_USER_MODEL,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+    )
+    role = models.CharField(
+        verbose_name="Type de role",
+        max_length=50,
+        choices=zip(
+            constants.QUIZ_AUTHORS_ROLE_TYPE_LIST,
+            constants.QUIZ_AUTHORS_ROLE_TYPE_LIST,
+        ),
+    )
+
+    def __str__(self):
+        return f"Quiz {self.quiz.id} >>> Authors {self.author.id} >>> Role {self.role}"
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super(QuizAuthors, self).save(*args, **kwargs)
+
+    def clean(self):
+        """
+        Rules on QuizAuthors
+        - role must be one of the choices
+        """
+        if self.role not in constants.QUIZ_AUTHORS_ROLE_TYPE_LIST:
+            raise ValidationError({"role": "doit être une valeur de la liste"})
+
+
+# TODO: I am not sure how the next lines should work/be written
+@receiver(post_save, sender=QuizAuthors)
+@receiver(post_delete, sender=QuizAuthors)
+def quiz_set_flatten_authors_list(sender, instance, **kwargs):
+    instance.quiz.authors_list = instance.quiz.authors_list
+    instance.quiz.save()
