@@ -99,17 +99,17 @@ def load_model_data_to_db(model, data):
             question_ids = item["questions"]
             del item["questions"]
         # timestamps
-        if "validation_date" in item:
+        if "validation_date" in item and item["validation_date"] is not None:
             validation_date_tz = datetime.strptime(item["validation_date"], "%Y-%m-%d")
             item["validation_date"] = timezone.make_aware(validation_date_tz)
-        if "publish_date" in item:
+        if "publish_date" in item and item["publish_date"] is not None:
             publish_date_tz = datetime.strptime(item["publish_date"], "%Y-%m-%d")
             item["publish_date"] = timezone.make_aware(publish_date_tz)
         if "created" in item:
-            created_tz = datetime.strptime(item["created"], "%Y-%m-%d")
+            created_tz = datetime.strptime(str(item["created"]), "%Y-%m-%d")
             item["created"] = timezone.make_aware(created_tz)
         if "updated" in item:
-            updated_tz = datetime.strptime(item["updated"], "%Y-%m-%d")
+            updated_tz = datetime.strptime(str(item["updated"]), "%Y-%m-%d")
             item["updated"] = timezone.make_aware(updated_tz)
         # save !
         instance = model.objects.create(**item)

@@ -13,13 +13,16 @@ QUIZ_FIELD_SEQUENCE = [
 QUIZ_FIELD_SEQUENCE.remove("questions")  # not displayed
 QUIZ_FIELD_SEQUENCE.remove("relationships")  # not displayed
 QUIZ_FIELD_SEQUENCE.remove("tags")  # change position
+QUIZ_FIELD_SEQUENCE.remove("authors")  # change position
 QUIZ_FIELD_SEQUENCE.insert(QUIZ_FIELD_SEQUENCE.index("difficulty_average"), "tags")
+QUIZ_FIELD_SEQUENCE.insert(QUIZ_FIELD_SEQUENCE.index("image_background_url"), "authors")
 
 
 class QuizTable(tables.Table):
     id = tables.Column(linkify=lambda record: record.get_absolute_url())
     introduction = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.introduction}})
     conclusion = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.conclusion}})
+
     # questions
     tags = tables.ManyToManyColumn(
         transform=lambda tag: format_html(

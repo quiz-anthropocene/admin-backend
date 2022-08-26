@@ -51,7 +51,7 @@ class QuizQuerySet(models.QuerySet):
 class Quiz(models.Model):
     QUIZ_CHOICE_FIELDS = ["language", "visibility"]
     QUIZ_FK_FIELDS = ["author"]
-    QUIZ_M2M_FIELDS = ["questions", "tags", "relationships", "authors"]
+    QUIZ_M2M_FIELDS = ["authors", "questions", "tags", "relationships"]
     QUIZ_RELATION_FIELDS = QUIZ_FK_FIELDS + QUIZ_M2M_FIELDS
     QUIZ_LIST_FIELDS = [
         "questions_categories_list",
@@ -109,7 +109,6 @@ class Quiz(models.Model):
         through="QuizAuthors",
         related_name="quizs",
         blank=True,
-        null=True,
     )
     image_background_url = models.URLField(
         verbose_name="Lien vers une image pour illustrer le quiz",
@@ -164,7 +163,7 @@ class Quiz(models.Model):
         verbose_name="Relations", base_field=models.CharField(max_length=50), blank=True, default=list
     )
     author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
-    author_list = ArrayField(
+    authors_list = ArrayField(
         verbose_name="Auteurs", base_field=models.CharField(max_length=300), blank=True, default=list
     )
     validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
@@ -225,9 +224,12 @@ class Quiz(models.Model):
         return list(self.quizquestion_set.values_list("question_id", flat=True))
 
     @property
+    def authors_id_list(self) -> list:
+        return list(self.authors.values_list("id", flat=True))
+
+    @property
     def authors_list(self) -> list:
-        list(self.questions.order_by().values_list("author", flat=True).distinct())
-        return list(self.authors.order_by("name").values_list("name", flat=True))
+        return list(self.authors.values_list("first_name", flat=True))
 
     @property
     def authors_list_string(self) -> str:
@@ -574,8 +576,9 @@ class QuizAuthors(models.Model):
 
 
 # TODO: I am not sure how the next lines should work/be written
+# @receiver(m2m_changed, sender=Quiz.authors.through)
 @receiver(post_save, sender=QuizAuthors)
 @receiver(post_delete, sender=QuizAuthors)
 def quiz_set_flatten_authors_list(sender, instance, **kwargs):
-    instance.quiz.authors_list = instance.quiz.authors_list
+    instance.quiz.authors_list = instance.quiz.authors_id_list
     instance.quiz.save()
