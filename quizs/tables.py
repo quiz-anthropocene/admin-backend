@@ -23,6 +23,11 @@ class QuizTable(tables.Table):
     introduction = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.introduction}})
     conclusion = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.conclusion}})
 
+    # authors
+    authors = tables.ManyToManyColumn(
+        transform=lambda author: str(author) if author else "",
+        separator=" ",
+    )
     # questions
     tags = tables.ManyToManyColumn(
         transform=lambda tag: format_html(

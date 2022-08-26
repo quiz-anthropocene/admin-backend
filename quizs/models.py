@@ -164,8 +164,11 @@ class Quiz(models.Model):
     )
     author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
     authors_list = ArrayField(
-        verbose_name="Auteurs", base_field=models.CharField(max_length=300), blank=True, default=list
+        verbose_name="Auteurs", base_field=models.PositiveIntegerField(), blank=True, default=list
     )
+    # authors_list = ArrayField(
+    #    verbose_name="Auteurs", base_field=models.CharField(max_length=300), blank=True, default=list
+    # )
     validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
 
     history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
