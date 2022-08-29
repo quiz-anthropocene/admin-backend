@@ -25,7 +25,9 @@ class QuizTable(tables.Table):
 
     # authors
     authors = tables.ManyToManyColumn(
-        transform=lambda author: str(author) if author else "",
+        transform=lambda author: format_html(f'<span class="badge bg-primary">{str(author)}</span></a>')
+        if author
+        else "",
         separator=" ",
     )
     # questions

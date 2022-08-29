@@ -4,6 +4,7 @@ from django.contrib.postgres.fields import ArrayField
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models import Avg, Count, Q
+from django.db.models.functions import Concat
 from django.db.models.signals import m2m_changed, post_delete, post_save, pre_save
 from django.dispatch import receiver
 from django.urls import reverse
@@ -62,7 +63,14 @@ class Quiz(models.Model):
     QUIZ_URL_FIELDS = []
     QUIZ_IMAGE_URL_FIELDS = ["image_background_url"]
     QUIZ_TIMESTAMP_FIELDS = ["created", "updated"]
-    QUIZ_FLATTEN_FIELDS = ["tag_list", "question_list", "relationship_list", "authors_list", "validator_string"]
+    QUIZ_FLATTEN_FIELDS = [
+        "tag_list",
+        "question_list",
+        "relationship_list",
+        "authors_id_list",
+        "authors_list",
+        "validator_string",
+    ]
     QUIZ_READONLY_FIELDS = [
         "slug",
         "difficulty_average",
@@ -163,12 +171,12 @@ class Quiz(models.Model):
         verbose_name="Relations", base_field=models.CharField(max_length=50), blank=True, default=list
     )
     author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
-    authors_list = ArrayField(
-        verbose_name="Auteurs", base_field=models.PositiveIntegerField(), blank=True, default=list
+    authors_id_list = ArrayField(
+        verbose_name="AuteursID", base_field=models.PositiveIntegerField(), blank=True, default=list
     )
-    # authors_list = ArrayField(
-    #    verbose_name="Auteurs", base_field=models.CharField(max_length=300), blank=True, default=list
-    # )
+    authors_list = ArrayField(
+        verbose_name="Auteurs", base_field=models.CharField(max_length=300), blank=True, default=list
+    )
     validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
 
     history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
@@ -228,11 +236,19 @@ class Quiz(models.Model):
 
     @property
     def authors_id_list(self) -> list:
-        return list(self.authors.values_list("id", flat=True))
+        return list(self.quizauthors_set.values_list("author_id", flat=True))
+
+    @property
+    def authors_id_list_string(self) -> str:
+        return ", ".join(str(self.authors_id_list))
 
     @property
     def authors_list(self) -> list:
-        return list(self.authors.values_list("first_name", flat=True))
+        return list(
+            self.authors.annotate(fullname=Concat("first_name", models.Value(" "), "last_name")).values_list(
+                "fullname", flat=True
+            )
+        )
 
     @property
     def authors_list_string(self) -> str:
@@ -367,6 +383,7 @@ class Quiz(models.Model):
 
     # Admin
     tags_list_string.fget.short_description = "Tags"
+    authors_list_string.fget.short_description = "Auteurs"
     questions_not_validated_string.fget.short_description = "Questions pas encore validées"
     questions_categories_list_with_count_string.fget.short_description = "Questions catégories"
     questions_tags_list_with_count_string.fget.short_description = "Questions tags"
