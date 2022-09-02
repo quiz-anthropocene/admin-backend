@@ -172,7 +172,7 @@ class Quiz(models.Model):
     )
     author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
     authors_id_list = ArrayField(
-        verbose_name="AuteursID", base_field=models.PositiveIntegerField(), blank=True, default=list
+        verbose_name="Auteurs_ID", base_field=models.PositiveIntegerField(), blank=True, default=list
     )
     authors_list = ArrayField(
         verbose_name="Auteurs", base_field=models.CharField(max_length=300), blank=True, default=list
@@ -590,15 +590,33 @@ class QuizAuthors(models.Model):
         """
         Rules on QuizAuthors
         - role must be one of the choices
+        - Cannot have same author twice
         """
         if self.role not in constants.QUIZ_AUTHORS_ROLE_TYPE_LIST:
             raise ValidationError({"role": "doit être une valeur de la liste"})
+        if not self.author.id:
+            self.author.id = 0
+        if QuizAuthors.objects.filter(author_id=self.author_id, quiz_id=self.quiz_id).exists():
+            raise ValidationError({"author": "L'auteur est déjà listé pour ce quiz"})
 
 
 # TODO: I am not sure how the next lines should work/be written
 # @receiver(m2m_changed, sender=Quiz.authors.through)
+"""
 @receiver(post_save, sender=QuizAuthors)
 @receiver(post_delete, sender=QuizAuthors)
 def quiz_set_flatten_authors_list(sender, instance, **kwargs):
-    instance.quiz.authors_list = instance.quiz.authors_id_list
+    instance.quiz.authors_list = instance.quiz.authors_list
     instance.quiz.save()
+    instance.quiz.authors_id_list = instance.quiz.authors_id_list
+    instance.quiz.save()
+"""
+
+
+@receiver(m2m_changed, sender=QuizAuthors)
+def quiz_set_flatten_author_list(sender, instance, action, **kwargs):
+    if action in ("post_add", "post_remove", "post_clear"):
+        instance.quiz.authors_list = instance.quiz.authors_list
+        instance.save(update_fields=["authors_id_list"])
+        instance.quiz.authors_id_list = instance.quiz.authors_id_list
+        instance.save(update_fields=["authors_list"])

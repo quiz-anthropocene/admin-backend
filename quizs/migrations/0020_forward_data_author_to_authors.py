@@ -12,7 +12,7 @@ def forward(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("quizs", "0018_quizauthors_quiz_authors_alter_quiz_author_and_more"),
+        ("quizs", "0019_add_flatten_authors"),
     ]
 
     operations = [migrations.RunPython(forward)]

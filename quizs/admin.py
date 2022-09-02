@@ -7,7 +7,7 @@ from django.utils.html import mark_safe
 from fieldsets_with_inlines import FieldsetsInlineMixin
 
 from core.admin import ExportMixin, admin_site
-from quizs.models import Quiz, QuizQuestion, QuizRelationship
+from quizs.models import Quiz, QuizAuthors, QuizQuestion, QuizRelationship
 from stats import constants
 from stats.models import QuizAnswerEvent, QuizFeedbackEvent
 
@@ -71,6 +71,12 @@ class QuizRelationshipToInline(admin.StackedInline):  # TabularInline
         return False
 
 
+class QuizAuthorsInline(admin.StackedInline):
+    verbose_name = "Author"
+    model = QuizAuthors
+    extra = 0
+
+
 class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
     list_display = [
         "id",
@@ -93,7 +99,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
 
     prepopulated_fields = {"slug": ("name",)}
     autocomplete_fields = ["author"]
-    filter_horizontal = ["tags"]
+    filter_horizontal = ["tags", "authors"]
     # inlines = [QuizQuestionInline, QuizRelationshipFromInline, QuizRelationshipToInline]
     readonly_fields = [
         "id",
@@ -137,6 +143,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
                 )
             },
         ),
+        QuizAuthorsInline,
         (
             "Tags",
             {"fields": ("tags",)},

@@ -6,6 +6,7 @@ from questions.models import Question
 from quizs.models import Quiz, QuizQuestion
 from quizs.tables import QUIZ_FIELD_SEQUENCE
 from tags.models import Tag
+from users.models import User
 
 
 QUIZ_READONLY_FORM_FIELDS = ["author", "validation_status"]
@@ -15,7 +16,9 @@ QUIZ_FORM_FIELDS = [
     for field_name in QUIZ_FIELD_SEQUENCE
     if field_name not in (Quiz.QUIZ_READONLY_FIELDS + QUIZ_M2M_SEPERATE_FORM_FIELDS)
 ]
-QUIZ_CREATE_FORM_FIELDS = [field_name for field_name in QUIZ_FORM_FIELDS if field_name not in ["publish", "spotlight"]]
+QUIZ_CREATE_FORM_FIELDS = [
+    field_name for field_name in QUIZ_FORM_FIELDS if field_name not in ["publish", "spotlight", "authors"]
+]
 
 
 class QuizCreateForm(forms.ModelForm):
@@ -29,6 +32,7 @@ class QuizCreateForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["tags"].queryset = Tag.objects.all().order_by("name")
+        self.fields["authors"].queryset = User.objects.all().order_by("last_name")
         self.fields["image_background_url"].label = "Image pour illustrer le quiz"
         for field_name in QUIZ_READONLY_FORM_FIELDS:
             self.fields[field_name].disabled = True
