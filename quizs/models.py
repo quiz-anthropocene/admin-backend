@@ -163,6 +163,12 @@ class Quiz(models.Model):
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     # flatten relations
+    authors_id_list = ArrayField(
+        verbose_name="Auteurs_ID", base_field=models.PositiveIntegerField(), blank=True, default=list
+    )
+    authors_list = ArrayField(
+        verbose_name="Auteurs", base_field=models.CharField(max_length=50), blank=True, default=list
+    )
     tag_list = ArrayField(verbose_name="Tags", base_field=models.CharField(max_length=50), blank=True, default=list)
     question_list = ArrayField(
         verbose_name="Questions", base_field=models.PositiveIntegerField(), blank=True, default=list
@@ -171,12 +177,7 @@ class Quiz(models.Model):
         verbose_name="Relations", base_field=models.CharField(max_length=50), blank=True, default=list
     )
     author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
-    authors_id_list = ArrayField(
-        verbose_name="Auteurs_ID", base_field=models.PositiveIntegerField(), blank=True, default=list
-    )
-    authors_list = ArrayField(
-        verbose_name="Auteurs", base_field=models.CharField(max_length=300), blank=True, default=list
-    )
+
     validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
 
     history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
@@ -234,16 +235,20 @@ class Quiz(models.Model):
     def questions_id_list_with_order(self) -> list:
         return list(self.quizquestion_set.values_list("question_id", flat=True))
 
+    # @property
+    # def authors_id_list_prop(self) -> list:
+    #    return list(self.quizauthors_set.values_list("author_id", flat=True))
+
     @property
-    def authors_id_list(self) -> list:
-        return list(self.quizauthors_set.values_list("author_id", flat=True))
+    def authors_id_list_prop(self) -> list:
+        return list(self.authors.values_list("id", flat=True))
 
     @property
     def authors_id_list_string(self) -> str:
-        return ", ".join(str(self.authors_id_list))
+        return ", ".join(str(self.authors_id_list_prop))
 
     @property
-    def authors_list(self) -> list:
+    def authors_list_prop(self) -> list:
         return list(
             self.authors.annotate(fullname=Concat("first_name", models.Value(" "), "last_name")).values_list(
                 "fullname", flat=True
@@ -252,7 +257,7 @@ class Quiz(models.Model):
 
     @property
     def authors_list_string(self) -> str:
-        return ", ".join(self.authors_list)
+        return ", ".join(self.authors_list_prop)
 
     @property
     def tags_list(self) -> list:
@@ -577,6 +582,8 @@ class QuizAuthors(models.Model):
             constants.QUIZ_AUTHORS_ROLE_TYPE_LIST,
             constants.QUIZ_AUTHORS_ROLE_TYPE_LIST,
         ),
+        blank=True,
+        null=True,
     )
 
     def __str__(self):
@@ -589,34 +596,38 @@ class QuizAuthors(models.Model):
     def clean(self):
         """
         Rules on QuizAuthors
-        - role must be one of the choices
+        - role must be one of the choices TO ADD LATER
         - Cannot have same author twice
         """
-        if self.role not in constants.QUIZ_AUTHORS_ROLE_TYPE_LIST:
-            raise ValidationError({"role": "doit être une valeur de la liste"})
+        # if self.role not in constants.QUIZ_AUTHORS_ROLE_TYPE_LIST:
+        #    raise ValidationError({"role": "doit être une valeur de la liste"})
         if not self.author.id:
             self.author.id = 0
-        if QuizAuthors.objects.filter(author_id=self.author_id, quiz_id=self.quiz_id).exists():
-            raise ValidationError({"author": "L'auteur est déjà listé pour ce quiz"})
+        existing_author = QuizAuthors.objects.filter(author_id=self.author_id, quiz_id=self.quiz_id)
+        if not self.id:
+            if len(existing_author):
+                raise ValidationError({"author": "L'auteur est déjà listé pour ce quiz"})
 
 
 # TODO: I am not sure how the next lines should work/be written
 # @receiver(m2m_changed, sender=Quiz.authors.through)
-"""
-@receiver(post_save, sender=QuizAuthors)
-@receiver(post_delete, sender=QuizAuthors)
-def quiz_set_flatten_authors_list(sender, instance, **kwargs):
-    instance.quiz.authors_list = instance.quiz.authors_list
-    instance.quiz.save()
-    instance.quiz.authors_id_list = instance.quiz.authors_id_list
-    instance.quiz.save()
-"""
 
 
 @receiver(m2m_changed, sender=QuizAuthors)
 def quiz_set_flatten_author_list(sender, instance, action, **kwargs):
+    print("that happened")
     if action in ("post_add", "post_remove", "post_clear"):
-        instance.quiz.authors_list = instance.quiz.authors_list
+        instance.quiz.authors_list = instance.quiz.authors_list_prop
         instance.save(update_fields=["authors_id_list"])
-        instance.quiz.authors_id_list = instance.quiz.authors_id_list
+        instance.quiz.authors_id_list = instance.quiz.authors_id_list_prop
         instance.save(update_fields=["authors_list"])
+
+
+@receiver(post_save, sender=QuizAuthors)
+@receiver(post_delete, sender=QuizAuthors)
+def quiz_set_flatten_authors_list(sender, instance, **kwargs):
+    instance.quiz.authors_list = instance.quiz.authors_list_prop
+    instance.quiz.save()
+    print(instance.quiz.authors_id_list_prop)
+    instance.quiz.authors_id_list = instance.quiz.authors_id_list_prop
+    instance.quiz.save()
