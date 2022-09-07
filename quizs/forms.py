@@ -9,16 +9,14 @@ from tags.models import Tag
 from users.models import User
 
 
-QUIZ_READONLY_FORM_FIELDS = ["author", "validation_status"]
+QUIZ_READONLY_FORM_FIELDS = ["author", "validation_status", "authors"]
 QUIZ_M2M_SEPERATE_FORM_FIELDS = ["questions", "relationships"]
 QUIZ_FORM_FIELDS = [
     field_name
     for field_name in QUIZ_FIELD_SEQUENCE
     if field_name not in (Quiz.QUIZ_READONLY_FIELDS + QUIZ_M2M_SEPERATE_FORM_FIELDS)
 ]
-QUIZ_CREATE_FORM_FIELDS = [
-    field_name for field_name in QUIZ_FORM_FIELDS if field_name not in ["publish", "spotlight", "authors"]
-]
+QUIZ_CREATE_FORM_FIELDS = [field_name for field_name in QUIZ_FORM_FIELDS if field_name not in ["publish", "spotlight"]]
 
 
 class QuizCreateForm(forms.ModelForm):
@@ -30,12 +28,13 @@ class QuizCreateForm(forms.ModelForm):
         }
 
     def __init__(self, *args, **kwargs):
+        current_user = kwargs.pop("user")
         super().__init__(*args, **kwargs)
         self.fields["tags"].queryset = Tag.objects.all().order_by("name")
-        self.fields["authors"].queryset = User.objects.all().order_by("last_name")
         self.fields["image_background_url"].label = "Image pour illustrer le quiz"
         for field_name in QUIZ_READONLY_FORM_FIELDS:
             self.fields[field_name].disabled = True
+        self.fields["authors"] = forms.ModelMultipleChoiceField(queryset=User.objects.filter(id=current_user.id))
 
 
 class QuizEditForm(QuizCreateForm):
@@ -44,7 +43,7 @@ class QuizEditForm(QuizCreateForm):
         fields = QUIZ_FORM_FIELDS + QUIZ_READONLY_FORM_FIELDS
 
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(QuizEditForm, self).__init__(*args, **kwargs)
         self.fields["validation_status"].disabled = False
 
 

@@ -67,6 +67,7 @@ class Quiz(models.Model):
         "tag_list",
         "question_list",
         "relationship_list",
+        "author_string",
         "authors_id_list",
         "authors_list",
         "validator_string",
@@ -613,14 +614,14 @@ class QuizAuthors(models.Model):
 # @receiver(m2m_changed, sender=Quiz.authors.through)
 
 
-@receiver(m2m_changed, sender=QuizAuthors)
-def quiz_set_flatten_author_list(sender, instance, action, **kwargs):
-    print("that happened")
-    if action in ("post_add", "post_remove", "post_clear"):
-        instance.quiz.authors_list = instance.quiz.authors_list_prop
-        instance.save(update_fields=["authors_id_list"])
-        instance.quiz.authors_id_list = instance.quiz.authors_id_list_prop
-        instance.save(update_fields=["authors_list"])
+# @receiver(m2m_changed, sender=QuizAuthors)
+# def quiz_set_flatten_author_list(sender, instance, action, **kwargs):
+#    print("that happened")
+#    if action in ("post_add", "post_remove", "post_clear"):
+#        instance.quiz.authors_list = instance.quiz.authors_list_prop
+#        instance.save(update_fields=["authors_id_list"])
+#        instance.quiz.authors_id_list = instance.quiz.authors_id_list_prop
+#        instance.save(update_fields=["authors_list"])
 
 
 @receiver(post_save, sender=QuizAuthors)
