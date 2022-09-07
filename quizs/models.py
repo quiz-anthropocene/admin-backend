@@ -572,9 +572,7 @@ class QuizAuthors(models.Model):
     author = models.ForeignKey(
         verbose_name="Auteur",
         to=settings.AUTH_USER_MODEL,
-        on_delete=models.SET_NULL,
-        blank=True,
-        null=True,
+        on_delete=models.CASCADE,
     )
     role = models.CharField(
         verbose_name="Type de role",

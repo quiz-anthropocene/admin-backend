@@ -28,13 +28,13 @@ class QuizCreateForm(forms.ModelForm):
         }
 
     def __init__(self, *args, **kwargs):
-        current_user = kwargs.pop("user")
         super().__init__(*args, **kwargs)
         self.fields["tags"].queryset = Tag.objects.all().order_by("name")
         self.fields["image_background_url"].label = "Image pour illustrer le quiz"
         for field_name in QUIZ_READONLY_FORM_FIELDS:
             self.fields[field_name].disabled = True
-        self.fields["authors"] = forms.ModelMultipleChoiceField(queryset=User.objects.filter(id=current_user.id))
+        self.fields["authors"] = forms.ModelMultipleChoiceField(queryset=User.objects.all())
+        self.fields["authors"].disabled = True
 
 
 class QuizEditForm(QuizCreateForm):
