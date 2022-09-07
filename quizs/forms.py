@@ -35,6 +35,7 @@ class QuizCreateForm(forms.ModelForm):
             self.fields[field_name].disabled = True
         self.fields["authors"] = forms.ModelMultipleChoiceField(queryset=User.objects.all())
         self.fields["authors"].disabled = True
+        self.fields["authors"].label = "Auteurs"
 
 
 class QuizEditForm(QuizCreateForm):
