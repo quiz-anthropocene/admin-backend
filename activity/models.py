@@ -112,4 +112,4 @@ class Event(models.Model):
 @receiver(post_save, sender=Event)
 def send_event_to_slack(sender, instance, created, **kwargs):
     if created:
-        slack.send_message_to_channel(instance.display_full, service_id=settings.SLACK_ACTIVITY_EVENT_SERVICE_ID)
+        slack.send_message_to_webhook(instance.display_full, webhook_url=settings.ACTIVITY_EVENT_WEBHOOK_URL)
