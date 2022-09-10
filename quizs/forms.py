@@ -9,7 +9,7 @@ from tags.models import Tag
 from users.models import User
 
 
-QUIZ_READONLY_FORM_FIELDS = ["author", "validation_status", "authors"]
+QUIZ_READONLY_FORM_FIELDS = ["author", "validation_status"]
 QUIZ_M2M_SEPERATE_FORM_FIELDS = ["questions", "relationships"]
 QUIZ_FORM_FIELDS = [
     field_name
@@ -31,11 +31,9 @@ class QuizCreateForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields["tags"].queryset = Tag.objects.all().order_by("name")
         self.fields["image_background_url"].label = "Image pour illustrer le quiz"
+        self.fields["authors"] = forms.ModelMultipleChoiceField(label="Auteurs", queryset=User.objects.all())
         for field_name in QUIZ_READONLY_FORM_FIELDS:
             self.fields[field_name].disabled = True
-        self.fields["authors"] = forms.ModelMultipleChoiceField(queryset=User.objects.all())
-        self.fields["authors"].disabled = True
-        self.fields["authors"].label = "Auteurs"
 
 
 class QuizEditForm(QuizCreateForm):

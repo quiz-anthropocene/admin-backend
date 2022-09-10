@@ -76,6 +76,7 @@ class Quiz(models.Model):
         "slug",
         "difficulty_average",
         "author",
+        "authors",
         "publish_date",
         "created",
         "updated",
