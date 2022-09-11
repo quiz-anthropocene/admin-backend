@@ -45,18 +45,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name="historicalquiz",
-            name="authors_id_list",
-            field=django.contrib.postgres.fields.ArrayField(
-                base_field=models.PositiveIntegerField(),
-                blank=True,
-                default=list,
-                size=None,
-                verbose_name="Auteurs_ID",
-            ),
-        ),
-        migrations.AddField(
-            model_name="historicalquiz",
-            name="authors_list",
+            name="author_list",
             field=django.contrib.postgres.fields.ArrayField(
                 base_field=models.CharField(max_length=50), blank=True, default=list, size=None, verbose_name="Auteurs"
             ),
@@ -74,18 +63,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name="quiz",
-            name="authors_id_list",
-            field=django.contrib.postgres.fields.ArrayField(
-                base_field=models.PositiveIntegerField(),
-                blank=True,
-                default=list,
-                size=None,
-                verbose_name="Auteurs_ID",
-            ),
-        ),
-        migrations.AddField(
-            model_name="quiz",
-            name="authors_list",
+            name="author_list",
             field=django.contrib.postgres.fields.ArrayField(
                 base_field=models.CharField(max_length=50), blank=True, default=list, size=None, verbose_name="Auteurs"
             ),
