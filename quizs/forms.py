@@ -9,7 +9,7 @@ from tags.models import Tag
 from users.models import User
 
 
-QUIZ_READONLY_FORM_FIELDS = ["author", "validation_status"]
+QUIZ_READONLY_FORM_FIELDS = ["author", "validation_status", "authors"]
 QUIZ_M2M_SEPERATE_FORM_FIELDS = ["questions", "relationships"]
 QUIZ_FORM_FIELDS = [
     field_name
@@ -34,6 +34,7 @@ class QuizCreateForm(forms.ModelForm):
         self.fields["authors"] = forms.ModelMultipleChoiceField(label="Auteurs", queryset=User.objects.all())
         for field_name in QUIZ_READONLY_FORM_FIELDS:
             self.fields[field_name].disabled = True
+        self.fields["authors"].disabled = False
 
 
 class QuizEditForm(QuizCreateForm):
