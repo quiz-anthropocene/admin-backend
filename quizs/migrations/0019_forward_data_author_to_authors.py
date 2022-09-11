@@ -7,7 +7,7 @@ from django.db.models.functions import Concat
 def forward(apps, schema_editor):
     Quiz = apps.get_model("quizs", "Quiz")
     for quiz in Quiz.objects.all():
-        quiz.authors.add(quiz.author)
+        quiz.authors.set([quiz.author])
         quiz.author_list = list(
             quiz.authors.annotate(fullname=Concat("first_name", models.Value(" "), "last_name")).values_list(
                 "fullname", flat=True

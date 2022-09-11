@@ -3,7 +3,7 @@ from django.test import TestCase
 from core import constants
 from questions.factories import QuestionFactory
 from quizs.factories import QuizFactory
-from quizs.models import Quiz, QuizQuestion, QuizRelationship
+from quizs.models import Quiz, QuizAuthor, QuizQuestion, QuizRelationship
 from tags.factories import TagFactory
 from users.factories import UserFactory
 
@@ -47,21 +47,21 @@ class QuizModelTest(TestCase):
 class QuizModelSaveTest(TestCase):
     @classmethod
     def setUpTestData(cls):
+        cls.user_1 = UserFactory(first_name="Paul", last_name="Dupont")
         cls.quiz = QuizFactory(name="Quiz 1")
+        cls.quiz.authors.set([cls.user_1])
         cls.tag_1 = TagFactory(name="Tag 1")
         cls.tag_2 = TagFactory(name="Another tag")
         cls.quiz.tags.set([cls.tag_1, cls.tag_2])
 
     def test_update_related_flatten_fields_on_save(self):
-        user_1 = UserFactory(first_name="Paul", last_name="Dupont")
         user_2 = UserFactory(first_name="Marie", last_name="Dupond")
-        self.quiz.author = user_1
         self.quiz.validator = user_2
         self.quiz.save()
-        self.assertEqual(self.quiz.author_string, user_1.full_name)
         self.assertEqual(self.quiz.validator_string, user_2.full_name)
 
     def test_update_m2m_flatten_fields_on_save(self):
+        # tags
         tag_3 = TagFactory(name="ABC")
         self.quiz.tags.add(tag_3)
         # self.quiz.save()  # no need to run save(), m2m_changed signal was triggered above
@@ -70,6 +70,16 @@ class QuizModelSaveTest(TestCase):
         self.assertEqual(self.quiz.tag_list[0], tag_3.name)
 
     def test_update_m2m_through_flatten_fields_on_save(self):
+        # authors
+        user_2 = UserFactory(first_name="Marie", last_name="Dupond")
+        QuizAuthor.objects.create(quiz=self.quiz, author=user_2)
+        # self.quiz.save()  # no need to run save(), m2m_changed signal was triggered above
+        self.assertEqual(self.quiz.authors.count(), 1 + 1)
+        self.assertEqual(len(self.quiz.author_list), 2)
+        self.assertEqual(len(self.quiz.authors_list), 2)
+        self.assertEqual(self.quiz.author_list[0], self.user_1.full_name)
+
+        # questions
         question_1 = QuestionFactory()
         QuizQuestion.objects.create(quiz=self.quiz, question=question_1, order=2)
         # self.quiz.save()  # no need to run save(), m2m_changed signal was triggered above
@@ -85,6 +95,7 @@ class QuizModelSaveTest(TestCase):
         self.assertEqual(len(self.quiz.questions_id_list_with_order), 2)
         self.assertEqual(self.quiz.questions_id_list_with_order[0], question_2.id)
 
+        # relationships
         quiz_2 = QuizFactory(name="Un autre quiz")
         QuizRelationship.objects.create(from_quiz=self.quiz, to_quiz=quiz_2, status="suivant")
         # self.quiz.save()  # no need to run save(), m2m_changed signal was triggered above
