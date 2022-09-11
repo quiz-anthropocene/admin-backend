@@ -42,7 +42,7 @@ class QuizEditForm(QuizCreateForm):
         fields = QUIZ_FORM_FIELDS + QUIZ_READONLY_FORM_FIELDS
 
     def __init__(self, *args, **kwargs):
-        super(QuizEditForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.fields["validation_status"].disabled = False
 
 

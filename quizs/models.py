@@ -559,16 +559,17 @@ class QuizAuthor(models.Model):
         to=settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
     )
-    role = models.CharField(
-        verbose_name="Type de role",
-        max_length=50,
-        choices=zip(
-            constants.QUIZ_AUTHORS_ROLE_TYPE_LIST,
-            constants.QUIZ_AUTHORS_ROLE_TYPE_LIST,
-        ),
-        blank=True,
-        null=True,
-    )
+    # TODO define roles for quiz authors
+    # role = models.CharField(
+    #    verbose_name="Type de role",
+    #    max_length=50,
+    #    choices=zip(
+    #        constants.QUIZ_AUTHORS_ROLE_TYPE_LIST,
+    #        constants.QUIZ_AUTHORS_ROLE_TYPE_LIST,
+    #    ),
+    #    blank=True,
+    #    null=True,
+    # )
 
     def __str__(self):
         return f"Quiz {self.quiz.id} >>> Authors {self.author.id} >>> Role {self.role}"
