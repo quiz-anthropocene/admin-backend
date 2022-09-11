@@ -572,7 +572,7 @@ class QuizAuthor(models.Model):
     # )
 
     def __str__(self):
-        return f"Quiz {self.quiz.id} >>> Authors {self.author.id} >>> Role {self.role}"
+        return f"Quiz {self.quiz.id} >>> Authors {self.author.id}"
 
     def save(self, *args, **kwargs):
         self.full_clean()
@@ -594,9 +594,15 @@ class QuizAuthor(models.Model):
                 raise ValidationError({"author": "L'auteur est déjà listé pour ce quiz"})
 
 
-# @receiver(m2m_changed, sender=Quiz.authors.through)
 @receiver(post_save, sender=QuizAuthor)
 @receiver(post_delete, sender=QuizAuthor)
-def quiz_set_flatten_author_list(sender, instance, **kwargs):
+def quiz_set_flatten_author_list_admin(sender, instance, **kwargs):
     instance.quiz.author_list = instance.quiz.authors_list
     instance.quiz.save()
+
+
+@receiver(m2m_changed, sender=QuizAuthor)
+def quiz_set_flatten_author_list(sender, instance, action, **kwargs):
+    if action in ("post_add", "post_remove", "post_clear"):
+        instance.author_list = instance.authors_list
+        instance.save(update_fields=["author_list"])
