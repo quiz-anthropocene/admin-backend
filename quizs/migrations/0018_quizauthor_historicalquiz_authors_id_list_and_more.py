@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="QuizAuthors",
+            name="QuizAuthor",
             fields=[
                 ("id", models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
                 (
@@ -67,7 +67,7 @@ class Migration(migrations.Migration):
             field=models.ManyToManyField(
                 blank=True,
                 related_name="quizs",
-                through="quizs.QuizAuthors",
+                through="quizs.QuizAuthor",
                 to=settings.AUTH_USER_MODEL,
                 verbose_name="Auteurs",
             ),
@@ -103,7 +103,7 @@ class Migration(migrations.Migration):
             ),
         ),
         migrations.AddField(
-            model_name="quizauthors",
+            model_name="quizauthor",
             name="quiz",
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="quizs.quiz", verbose_name="Quiz"),
         ),

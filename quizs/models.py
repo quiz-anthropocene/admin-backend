@@ -116,7 +116,7 @@ class Quiz(models.Model):
     authors = models.ManyToManyField(
         verbose_name="Auteurs",
         to=settings.AUTH_USER_MODEL,
-        through="QuizAuthors",
+        through="QuizAuthor",
         related_name="quizs",
         blank=True,
     )
@@ -239,7 +239,7 @@ class Quiz(models.Model):
 
     # @property
     # def authors_id_list_prop(self) -> list:
-    #    return list(self.quizauthors_set.values_list("author_id", flat=True))
+    #    return list(self.quizauthor_set.values_list("author_id", flat=True))
 
     @property
     def authors_id_list_prop(self) -> list:
@@ -568,7 +568,7 @@ def quiz_set_flatten_relationship_list(sender, instance, **kwargs):
     instance.to_quiz.save()
 
 
-class QuizAuthors(models.Model):
+class QuizAuthor(models.Model):
     quiz = models.ForeignKey(verbose_name="Quiz", to=Quiz, on_delete=models.CASCADE)
     author = models.ForeignKey(
         verbose_name="Auteur",
@@ -591,11 +591,11 @@ class QuizAuthors(models.Model):
 
     def save(self, *args, **kwargs):
         self.full_clean()
-        return super(QuizAuthors, self).save(*args, **kwargs)
+        return super(QuizAuthor, self).save(*args, **kwargs)
 
     def clean(self):
         """
-        Rules on QuizAuthors
+        Rules on QuizAuthor
         - role must be one of the choices TO ADD LATER
         - Cannot have same author twice
         """
@@ -603,7 +603,7 @@ class QuizAuthors(models.Model):
         #    raise ValidationError({"role": "doit être une valeur de la liste"})
         if not self.author.id:
             self.author.id = 0
-        existing_author = QuizAuthors.objects.filter(author_id=self.author_id, quiz_id=self.quiz_id)
+        existing_author = QuizAuthor.objects.filter(author_id=self.author_id, quiz_id=self.quiz_id)
         if not self.id:
             if len(existing_author):
                 raise ValidationError({"author": "L'auteur est déjà listé pour ce quiz"})
@@ -613,7 +613,7 @@ class QuizAuthors(models.Model):
 # @receiver(m2m_changed, sender=Quiz.authors.through)
 
 
-# @receiver(m2m_changed, sender=QuizAuthors)
+# @receiver(m2m_changed, sender=QuizAuthor)
 # def quiz_set_flatten_author_list(sender, instance, action, **kwargs):
 #    print("that happened")
 #    if action in ("post_add", "post_remove", "post_clear"):
@@ -623,8 +623,8 @@ class QuizAuthors(models.Model):
 #        instance.save(update_fields=["authors_list"])
 
 
-@receiver(post_save, sender=QuizAuthors)
-@receiver(post_delete, sender=QuizAuthors)
+@receiver(post_save, sender=QuizAuthor)
+@receiver(post_delete, sender=QuizAuthor)
 def quiz_set_flatten_authors_list(sender, instance, **kwargs):
     instance.quiz.authors_list = instance.quiz.authors_list_prop
     instance.quiz.save()

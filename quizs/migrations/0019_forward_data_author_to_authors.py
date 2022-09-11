@@ -5,8 +5,8 @@ from django.db.models.functions import Concat
 
 
 def forward(apps, schema_editor):
-    Quizs = apps.get_model("quizs", "Quiz")
-    for quiz in Quizs.objects.all():
+    Quiz = apps.get_model("quizs", "Quiz")
+    for quiz in Quiz.objects.all():
         quiz.authors.add(quiz.author)
         quiz.authors_list = list(
             quiz.authors.annotate(fullname=Concat("first_name", models.Value(" "), "last_name")).values_list(
@@ -20,7 +20,7 @@ def forward(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("quizs", "0018_quizauthors_historicalquiz_authors_id_list_and_more"),
+        ("quizs", "0018_quizauthor_historicalquiz_authors_id_list_and_more"),
     ]
 
     operations = [migrations.RunPython(forward)]

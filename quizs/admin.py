@@ -7,7 +7,7 @@ from django.utils.html import mark_safe
 from fieldsets_with_inlines import FieldsetsInlineMixin
 
 from core.admin import ExportMixin, admin_site
-from quizs.models import Quiz, QuizAuthors, QuizQuestion, QuizRelationship
+from quizs.models import Quiz, QuizAuthor, QuizQuestion, QuizRelationship
 from stats import constants
 from stats.models import QuizAnswerEvent, QuizFeedbackEvent
 
@@ -71,9 +71,9 @@ class QuizRelationshipToInline(admin.StackedInline):  # TabularInline
         return False
 
 
-class QuizAuthorsInline(admin.StackedInline):
+class QuizAuthorInline(admin.StackedInline):
     verbose_name = "Author"
-    model = QuizAuthors
+    model = QuizAuthor
     extra = 0
 
 
@@ -143,7 +143,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
                 )
             },
         ),
-        QuizAuthorsInline,
+        QuizAuthorInline,
         (
             "Tags",
             {"fields": ("tags",)},

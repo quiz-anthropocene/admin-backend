@@ -3,7 +3,7 @@ from rest_framework import serializers
 from api.questions.serializers import QuestionSerializer
 from api.tags.serializers import TagSerializer, TagStringSerializer
 from api.users.serializers import UserStringSerializer  # UserSerializer
-from quizs.models import Quiz, QuizAuthors, QuizQuestion, QuizRelationship
+from quizs.models import Quiz, QuizAuthor, QuizQuestion, QuizRelationship
 
 
 class QuizQuestionSerializer(serializers.ModelSerializer):
@@ -21,18 +21,18 @@ class QuizQuestionInlineSerializer(serializers.ModelSerializer):
         fields = ["id", "order"]
 
 
-class QuizAuthorsSerializer(serializers.ModelSerializer):
+class QuizAuthorSerializer(serializers.ModelSerializer):
     class Meta:
-        model = QuizAuthors
+        model = QuizAuthor
         fields = ["id", "quiz", "author"]
 
 
-class QuizAuthorsInlineSerializer(serializers.ModelSerializer):
-    # override QuizAuthors id with author_id
+class QuizAuthorInlineSerializer(serializers.ModelSerializer):
+    # override QuizAuthor id with author_id
     id = serializers.ReadOnlyField(source="author.id")
 
     class Meta:
-        model = QuizAuthors
+        model = QuizAuthor
         fields = ["id", "quiz", "author"]
 
 
