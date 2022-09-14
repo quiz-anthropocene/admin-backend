@@ -37,7 +37,6 @@ class ApiTest(TestCase):
         cls.question_2.tags.set([cls.tag_2, cls.tag_1])
         cls.question_3 = QuestionFactory(text="question 3", category=cls.category_1, author=cls.user_3)
         cls.question_3.tags.set([cls.tag_2])
-        cls.question_3.save()
         cls.quiz_1 = QuizFactory(name="quiz 1", publish=False, author=cls.user_1)
         QuizQuestion.objects.create(quiz=cls.quiz_1, question=cls.question_1)
         cls.quiz_2 = QuizFactory(
