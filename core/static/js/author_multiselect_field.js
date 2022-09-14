@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
      * Multiselect dropdown for the authors search form field
      */
 
-    const FORM_ELEMENT = document.querySelector('#id_authors');
+    const FORM_ELEMENT = document.querySelector('#id_authorsss');  // disable
     const FORM_PLACEHOLDER = 'Choisir 1 ou plusieurs auteurs';
     const FILTER_PLACEHOLDER = 'Chercher...';
 

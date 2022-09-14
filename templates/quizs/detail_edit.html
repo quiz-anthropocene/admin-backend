@@ -19,30 +19,41 @@
                     </div>
                     <!-- Sidebar -->
                     <div class="col-md-4 d-none d-md-block">
-                        {% if quiz.author == user %}
+                        {% if user in quiz.authors.all %}
                             <div class="alert alert-primary" role="alert">
-                                ℹ️ Vous êtes <strong>l'auteur</strong> de ce quiz
+                                ℹ️ Vous êtes <strong>l'auteur</strong> de ce quiz.
+                                {% if quiz.authors.count == 1 %}
+                                    <small>ajouter un collaborateur ? contacter un administrateur</small>
+                                {% else %}
+                                    <small>Tous les auteurs : {{ quiz.author_list | join:", " }}</small>
+                                {% endif %}
+                            </div>
+                        {% else %}
+                            <div class="alert alert-primary" role="alert">
+                                ℹ️ Auteur{% if quiz.authors.count > 1 %}<span>s</span>{% endif %} : {{ quiz.author_list | join:", " }}
                             </div>
                         {% endif %}
                         {% if not quiz.is_private %}
                             {% if not quiz.is_validated %}
                                 <div class="alert alert-warning" role="alert">
-                                    ✔️ Le quiz n'est pas encore <strong>validé</strong>. Seul un administrateur peut le faire.
+                                    ✔️ Le quiz n'est pas encore <strong>validé</strong>.
+                                    <small>Seul un administrateur peut le faire.</small>
                                 </div>
                             {% endif %}
                             {% if quiz.validator %}
                                 <div class="alert alert-success" role="alert">
-                                    ✅ Validé par <strong>{{ quiz.validator }}</strong> le {{ quiz.validation_date|date:"d F Y" }}
+                                    ✅ Validé par <strong>{{ quiz.validator }}</strong> le {{ quiz.validation_date | date:"d F Y" }}
                                 </div>
                             {% endif %}
                             {% if not quiz.publish %}
                                 <div class="alert alert-warning" role="alert">
-                                    ✔️ Le quiz n'est pas encore <strong>publié</strong>. Seul un administrateur peut le faire.
+                                    ✔️ Le quiz n'est pas encore <strong>publié</strong>.
+                                    <small>Seul un administrateur peut le faire.</small>
                                 </div>
                             {% endif %}
                             {% if quiz.publish %}
                                 <div class="alert alert-success" role="alert">
-                                    ✅ Publié le {{ quiz.publish_date|date:"d F Y" }}
+                                    ✅ Publié le {{ quiz.publish_date | date:"d F Y" }}
                                 </div>
                             {% endif %}
                             {% if not quiz.is_validated and quiz.publish %}

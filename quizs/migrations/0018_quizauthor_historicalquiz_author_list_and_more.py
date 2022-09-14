@@ -41,6 +41,14 @@ class Migration(migrations.Migration):
                         verbose_name="Auteur",
                     ),
                 ),
+                (
+                    "quiz",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="quizs.quiz",
+                        verbose_name="Quiz",
+                    ),
+                ),
             ],
         ),
         migrations.AddField(
@@ -79,10 +87,5 @@ class Migration(migrations.Migration):
                 to=settings.AUTH_USER_MODEL,
                 verbose_name="Auteur",
             ),
-        ),
-        migrations.AddField(
-            model_name="quizauthor",
-            name="quiz",
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="quizs.quiz", verbose_name="Quiz"),
         ),
     ]

@@ -72,8 +72,8 @@ class QuizRelationshipToInline(admin.StackedInline):  # TabularInline
 
 
 class QuizAuthorInline(admin.StackedInline):
-    verbose_name = "Author"
     model = QuizAuthor
+    autocomplete_fields = ["author"]
     extra = 0
 
 
@@ -99,7 +99,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
 
     prepopulated_fields = {"slug": ("name",)}
     autocomplete_fields = ["author"]
-    filter_horizontal = ["tags", "authors"]
+    filter_horizontal = ["tags"]
     # inlines = [QuizQuestionInline, QuizRelationshipFromInline, QuizRelationshipToInline]
     readonly_fields = [
         "id",
@@ -210,7 +210,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
     def get_queryset(self, request):
         qs = super().get_queryset(request)
         qs = qs.select_related("author", "agg_stats")
-        qs = qs.prefetch_related("tags", "questions")
+        qs = qs.prefetch_related("tags", "questions", "authors")
         return qs
 
     def show_image_background(self, instance):

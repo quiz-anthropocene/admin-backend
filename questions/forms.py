@@ -6,6 +6,7 @@ from tags.models import Tag
 
 
 QUESTION_READONLY_FORM_FIELDS = ["author", "validation_status"]
+QUESTION_HIDDEN_FORM_FIELDS = ["answer_image_url"]  # "author"
 QUESTION_REQUIRED_FORM_FIELDS = ["answer_option_a", "answer_option_b", "answer_correct"]
 QUESTION_FORM_FIELDS = [
     field_name for field_name in QUESTION_FIELD_SEQUENCE if field_name not in Question.QUESTION_READONLY_FIELDS
@@ -21,7 +22,6 @@ class QuestionCreateForm(forms.ModelForm):
             "hint": forms.Textarea(attrs={"rows": 1}),
             "answer_explanation": forms.Textarea(attrs={"rows": 3}),
             "answer_reading_recommendation": forms.Textarea(attrs={"rows": 1}),
-            "answer_image_url": forms.HiddenInput(),
             "answer_image_explanation": forms.Textarea(attrs={"rows": 1}),
             "answer_extra_info": forms.Textarea(attrs={"rows": 3}),
         }
@@ -30,8 +30,13 @@ class QuestionCreateForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields["tags"].queryset = Tag.objects.all().order_by("name")
         self.fields["answer_image_url"].label = "Image pour illustrer la réponse"
+        # disable some fields
         for field_name in QUESTION_READONLY_FORM_FIELDS:
             self.fields[field_name].disabled = True
+        # hide some fields (defaults)
+        for field_name in QUESTION_HIDDEN_FORM_FIELDS:
+            self.fields[field_name].widget = forms.HiddenInput()
+        # required fields
         for field_name in QUESTION_REQUIRED_FORM_FIELDS:
             self.fields[field_name].required = True
 

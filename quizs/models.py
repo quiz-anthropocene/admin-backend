@@ -76,6 +76,8 @@ class Quiz(models.Model):
         "difficulty_average",
         "author",
         "authors",
+        "validator",
+        "validation_date",
         "publish_date",
         "created",
         "updated",
@@ -126,6 +128,12 @@ class Quiz(models.Model):
     )
     has_audio = models.BooleanField(verbose_name="Contenu audio ?", default=False)
 
+    validation_status = models.CharField(
+        verbose_name="Statut",
+        max_length=150,
+        choices=constants.VALIDATION_STATUS_CHOICES,
+        default=constants.VALIDATION_STATUS_NEW,
+    )
     validator = models.ForeignKey(
         verbose_name="Validateur",
         to=settings.AUTH_USER_MODEL,
@@ -133,12 +141,6 @@ class Quiz(models.Model):
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
-    )
-    validation_status = models.CharField(
-        verbose_name="Statut",
-        max_length=150,
-        choices=constants.VALIDATION_STATUS_CHOICES,
-        default=constants.VALIDATION_STATUS_NEW,
     )
     validation_date = models.DateTimeField(verbose_name="Date de validation", blank=True, null=True)
     publish = models.BooleanField(verbose_name="Prêt à être publié ?", default=False)
