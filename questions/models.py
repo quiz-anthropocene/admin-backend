@@ -245,7 +245,7 @@ class Question(models.Model):
         # set_validator() in question/views.py
         self.set_flatten_fields()
         self.full_clean()
-        return super(Question, self).save(*args, **kwargs)
+        return super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse("questions:detail", kwargs={"pk": self.id})

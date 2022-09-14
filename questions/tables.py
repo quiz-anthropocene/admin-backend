@@ -44,4 +44,4 @@ class QuestionTable(tables.Table):
         for field_name in Question.QUESTION_TIMESTAMP_FIELDS:
             self.base_columns[field_name] = tables.DateTimeColumn(format="d F Y")
             # attrs={"td": {"title": lambda record: getattr(record, field_name)}})
-        super(QuestionTable, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)

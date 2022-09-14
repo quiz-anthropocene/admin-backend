@@ -22,15 +22,12 @@ class QuizTable(tables.Table):
     id = tables.Column(linkify=lambda record: record.get_absolute_url())
     introduction = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.introduction}})
     conclusion = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.conclusion}})
-
-    # authors
     authors = tables.ManyToManyColumn(
         transform=lambda author: format_html(f'<span class="badge bg-primary">{author.full_name}</span></a>')
         if author
         else "",
         separator=" ",
     )
-    # questions
     tags = tables.ManyToManyColumn(
         transform=lambda tag: format_html(
             f'<a href="{tag.get_absolute_url()}"><span class="badge bg-primary">{tag.name}</span></a>'
@@ -38,6 +35,7 @@ class QuizTable(tables.Table):
         separator=" ",
     )
     image_background_url = ImageColumn()
+    # questions
     # relationships
 
     class Meta:
@@ -53,4 +51,4 @@ class QuizTable(tables.Table):
             self.base_columns[field_name] = tables.BooleanColumn(yesno="✅,❌")
         for field_name in Quiz.QUIZ_TIMESTAMP_FIELDS:
             self.base_columns[field_name] = tables.DateTimeColumn(format="d F Y")
-        super(QuizTable, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)

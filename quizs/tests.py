@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.test import TestCase
 
 from core import constants
@@ -217,3 +218,26 @@ class QuizModelQuerySetTest(TestCase):
 
     def test_simple_search(self):
         self.assertEqual(Quiz.objects.simple_search(value="xy").count(), 1)
+
+
+class QuizQuestionModelTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user = UserFactory(first_name="Paul", last_name="Dupont")
+        cls.quiz = QuizFactory(name="Quiz 1")
+        cls.question = QuestionFactory(text="Une question")
+        cls.quiz.questions.set([cls.question])
+
+    def test_cannot_have_duplicate_quiz_question(self):
+        self.assertRaises(ValidationError, QuizQuestion.objects.create, quiz=self.quiz, question=self.question)
+
+
+class QuizAuthorModelTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user = UserFactory(first_name="Paul", last_name="Dupont")
+        cls.quiz = QuizFactory(name="Quiz 1")
+        cls.quiz.authors.set([cls.user])
+
+    def test_cannot_have_duplicate_quiz_author(self):
+        self.assertRaises(ValidationError, QuizAuthor.objects.create, quiz=self.quiz, author=self.user)

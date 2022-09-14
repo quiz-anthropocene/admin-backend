@@ -218,7 +218,7 @@ class Quiz(models.Model):
         # set_publication_date() in question/views.py
         self.set_flatten_fields()
         self.full_clean()
-        return super(Quiz, self).save(*args, **kwargs)
+        return super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse("quizs:detail", kwargs={"pk": self.id})
@@ -460,7 +460,7 @@ class QuizQuestion(models.Model):
 
     def save(self, *args, **kwargs):
         self.full_clean()
-        return super(QuizQuestion, self).save(*args, **kwargs)
+        return super().save(*args, **kwargs)
 
     def clean(self):
         """
@@ -510,7 +510,7 @@ class QuizRelationship(models.Model):
 
     def save(self, *args, **kwargs):
         self.full_clean()
-        return super(QuizRelationship, self).save(*args, **kwargs)
+        return super().save(*args, **kwargs)
 
     def status_full(self, quiz_id=None) -> str:
         if quiz_id and self.to_quiz_id == quiz_id:
@@ -561,50 +561,34 @@ class QuizAuthor(models.Model):
         to=settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
     )
-    # TODO define roles for quiz authors
-    # role = models.CharField(
-    #    verbose_name="Type de role",
-    #    max_length=50,
-    #    choices=zip(
-    #        constants.QUIZ_AUTHORS_ROLE_TYPE_LIST,
-    #        constants.QUIZ_AUTHORS_ROLE_TYPE_LIST,
-    #    ),
-    #    blank=True,
-    #    null=True,
-    # )
+
+    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
+    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+
+    class Meta:
+        unique_together = [
+            ["quiz", "author"],
+        ]
 
     def __str__(self):
-        return f"Quiz {self.quiz.id} >>> Authors {self.author.id}"
+        return f"Quiz {self.quiz.id} >>> Author {self.author.id}"
 
     def save(self, *args, **kwargs):
         self.full_clean()
-        return super(QuizAuthor, self).save(*args, **kwargs)
-
-    def clean(self):
-        """
-        Rules on QuizAuthor
-        - role must be one of the choices TO ADD LATER
-        - Cannot have same author twice
-        """
-        # if self.role not in constants.QUIZ_AUTHORS_ROLE_TYPE_LIST:
-        #    raise ValidationError({"role": "doit être une valeur de la liste"})
-        if not self.author.id:
-            self.author.id = 0
-        existing_author = QuizAuthor.objects.filter(author_id=self.author_id, quiz_id=self.quiz_id)
-        if not self.id:
-            if len(existing_author):
-                raise ValidationError({"author": "L'auteur est déjà listé pour ce quiz"})
+        return super().save(*args, **kwargs)
 
 
+# called on QuizAuthor.objects.create() ; when editing the quiz in the Django Admin form
 @receiver(post_save, sender=QuizAuthor)
 @receiver(post_delete, sender=QuizAuthor)
-def quiz_set_flatten_author_list_admin(sender, instance, **kwargs):
+def quiz_set_flatten_author_list(sender, instance, **kwargs):
     instance.quiz.author_list = instance.quiz.authors_list
     instance.quiz.save()
 
 
-@receiver(m2m_changed, sender=QuizAuthor)
-def quiz_set_flatten_author_list(sender, instance, action, **kwargs):
+# called on quiz.authors.add() ; quiz.authors.set()
+@receiver(m2m_changed, sender=Quiz.authors.through)
+def quiz_set_flatten_author_list_m2m(sender, instance, action, **kwargs):
     if action in ("post_add", "post_remove", "post_clear"):
         instance.author_list = instance.authors_list
         instance.save(update_fields=["author_list"])

@@ -20,20 +20,6 @@ class Migration(migrations.Migration):
             fields=[
                 ("id", models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
                 (
-                    "role",
-                    models.CharField(
-                        blank=True,
-                        choices=[
-                            ("Createur", "Createur"),
-                            ("Contributeur", "Contributeur"),
-                            ("Rédacteur", "Rédacteur"),
-                        ],
-                        max_length=50,
-                        null=True,
-                        verbose_name="Type de role",
-                    ),
-                ),
-                (
                     "author",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
@@ -49,7 +35,12 @@ class Migration(migrations.Migration):
                         verbose_name="Quiz",
                     ),
                 ),
+                ("created", models.DateTimeField(default=django.utils.timezone.now, verbose_name="Date de création")),
+                ("updated", models.DateTimeField(auto_now=True, verbose_name="Date de dernière modification")),
             ],
+            options={
+                "unique_together": {("quiz", "author")},
+            },
         ),
         migrations.AddField(
             model_name="historicalquiz",
