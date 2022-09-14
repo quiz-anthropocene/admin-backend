@@ -27,7 +27,8 @@
                         {% if not question.is_private %}
                             {% if not question.is_validated %}
                                 <div class="alert alert-warning" role="alert">
-                                    ✔️ La question n'est pas encore <strong>validée</strong>. Seul un administrateur peut le faire.
+                                    ✔️ La question n'est pas encore <strong>validée</strong>.
+                                    <small>Seul un administrateur peut le faire.</small>
                                 </div>
                             {% endif %}
                             {% if question.validator %}

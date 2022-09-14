@@ -244,6 +244,8 @@ class QuizCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVi
         self.object.author = self.request.user
         self.object.save()
         self.object.authors.set([self.request.user])
+
+        # create event
         if not self.object.is_private:
             create_event(user=self.request.user, event_verb="CREATED", event_object=self.object)
 

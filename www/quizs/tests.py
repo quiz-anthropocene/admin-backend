@@ -190,3 +190,6 @@ class QuizCreateViewTest(TestCase):
         self.assertEqual(response.status_code, 302)  # 201
         self.assertEqual(Quiz.objects.count(), 1)
         self.assertEqual(Event.objects.count(), 1)
+        quiz = Quiz.objects.last()
+        self.assertEqual(quiz.authors.count(), 1)
+        self.assertEqual(quiz.authors.first(), self.user_contributor)
