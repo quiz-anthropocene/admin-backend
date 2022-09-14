@@ -10,7 +10,7 @@ from django.utils import timezone
 from core.fields import ChoiceArrayField
 from core.utils import sendinblue
 from questions.models import Question
-from quizs.models import Quiz
+from quizs.models import Quiz, QuizAuthor
 from users import constants as user_constants
 
 
@@ -46,10 +46,17 @@ class UserQueryset(models.QuerySet):
             .filter(has_questions=True)
         )
 
-    def has_quiz(self):
+    def has_quiz_old(self):
         return (
             self.prefetch_related("quizs")
             .annotate(has_quizs=Exists(Quiz.objects.filter(author=OuterRef("pk"))))
+            .filter(has_quizs=True)
+        )
+
+    def has_quiz(self):
+        return (
+            self.prefetch_related("quizs")
+            .annotate(has_quizs=Exists(QuizAuthor.objects.filter(author_id=OuterRef("pk"))))
             .filter(has_quizs=True)
         )
 
@@ -117,6 +124,9 @@ class UserManager(BaseUserManager):
 
     def has_question(self):
         return self.get_queryset().has_question()
+
+    def has_quiz_old(self):
+        return self.get_queryset().has_quiz_old()
 
     def has_quiz(self):
         return self.get_queryset().has_quiz()

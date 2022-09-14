@@ -35,7 +35,7 @@ class QuizListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
 
     def get_queryset(self):
         qs = super().get_queryset()
-        qs = qs.select_related("author").prefetch_related("tags", "questions")
+        qs = qs.select_related("author").prefetch_related("tags", "questions", "authors")
         return qs
 
     def get_context_data(self, **kwargs):
@@ -239,11 +239,13 @@ class QuizCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVi
     template_name = "quizs/create.html"
     success_url = reverse_lazy("quizs:list")
 
-    def get_initial(self):
-        return {"author": self.request.user}
-
     def form_valid(self, form):
-        self.object = form.save()
+        self.object = form.save(commit=False)
+        self.object.author = self.request.user
+        self.object.save()
+        self.object.authors.set([self.request.user])
+
+        # create event
         if not self.object.is_private:
             create_event(user=self.request.user, event_verb="CREATED", event_object=self.object)
 

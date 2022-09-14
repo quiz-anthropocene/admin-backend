@@ -174,6 +174,8 @@ class QuestionCreateViewTest(TestCase):
         self.assertEqual(response.status_code, 302)  # 201
         self.assertEqual(Question.objects.count(), 1)
         self.assertEqual(Event.objects.count(), 1)
+        question = Question.objects.last()
+        self.assertEqual(question.author, self.user_contributor)
 
 
 class QuestionAutocompleteViewTest(TestCase):

@@ -8,7 +8,8 @@ from quizs.tables import QUIZ_FIELD_SEQUENCE
 from tags.models import Tag
 
 
-QUIZ_READONLY_FORM_FIELDS = ["author", "validation_status"]
+QUIZ_READONLY_FORM_FIELDS = ["validation_status"]
+QUIZ_HIDDEN_FORM_FIELDS = ["image_background_url"]
 QUIZ_M2M_SEPERATE_FORM_FIELDS = ["questions", "relationships"]
 QUIZ_FORM_FIELDS = [
     field_name
@@ -22,16 +23,17 @@ class QuizCreateForm(forms.ModelForm):
     class Meta:
         model = Quiz
         fields = QUIZ_CREATE_FORM_FIELDS + QUIZ_READONLY_FORM_FIELDS
-        widgets = {
-            "image_background_url": forms.HiddenInput(),
-        }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["tags"].queryset = Tag.objects.all().order_by("name")
         self.fields["image_background_url"].label = "Image pour illustrer le quiz"
+        # disable some fields
         for field_name in QUIZ_READONLY_FORM_FIELDS:
             self.fields[field_name].disabled = True
+        # hide some fields (defaults)
+        for field_name in QUIZ_HIDDEN_FORM_FIELDS:
+            self.fields[field_name].widget = forms.HiddenInput()
 
 
 class QuizEditForm(QuizCreateForm):

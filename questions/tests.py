@@ -18,7 +18,7 @@ class QuestionModelTest(TestCase):
         cls.tag_2 = TagFactory(name="Another tag")
         cls.question.tags.set([cls.tag_1, cls.tag_2])
         cls.quiz = QuizFactory(name="Le premier quiz")
-        cls.quiz.questions.add(cls.question)
+        cls.quiz.questions.set([cls.question])
 
     def test_str(self):
         self.assertTrue(str(self.question.id) in str(self.question))
@@ -46,6 +46,7 @@ class QuestionModelSaveTest(TestCase):
         cls.question.tags.set([cls.tag_1, cls.tag_2])
 
     def test_update_related_flatten_fields_on_save(self):
+        # category, author, validator
         category = CategoryFactory(name="Climat")
         self.question.category = category
         user_1 = UserFactory(first_name="Paul", last_name="Dupont")
@@ -58,6 +59,7 @@ class QuestionModelSaveTest(TestCase):
         self.assertEqual(self.question.validator_string, user_2.full_name)
 
     def test_update_m2m_flatten_fields_on_save(self):
+        # tags
         tag_3 = TagFactory(name="ABC")
         self.question.tags.add(tag_3)
         # self.question.save()  # no need to run save(), m2m_changed signal was triggered above
@@ -66,6 +68,7 @@ class QuestionModelSaveTest(TestCase):
         self.assertEqual(self.question.tag_list[0], tag_3.name)
 
     def test_update_m2m_through_flatten_fields_on_save(self):
+        # quizs
         quiz_1 = QuizFactory(name="Quiz 1")
         QuizQuestion.objects.create(question=self.question, quiz=quiz_1, order=5)
         # self.question.save()  # no need to run save(), m2m_changed signal was triggered above

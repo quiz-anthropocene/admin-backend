@@ -11,5 +11,9 @@ class QuizFilter(django_filters.FilterSet):
         label="Tag(s)",
         queryset=Tag.objects.all(),
     )
+    authors = django_filters.ModelMultipleChoiceFilter(
+        label="Auteur(s)",
+        queryset=User.objects.all_contributors(),
+    )
     author = django_filters.ModelChoiceFilter(label="Auteur(s)", queryset=User.objects.all_contributors())
     # TODO: QuizFullSerializer, QuizWithQuestionOrderSerializer

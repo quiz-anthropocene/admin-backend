@@ -8,6 +8,7 @@ CONTRIBUTION_STATUS_EDIT_FORM_FIELDS = [
     field.name for field in Contribution._meta.fields if field.name not in Contribution.CONTRIBUTION_READONLY_FIELDS
 ]
 CONTRIBUTION_REPLY_CREATE_FORM_FIELDS = ["type", "text", "author", "parent", "status"]
+CONTRIBUTION_REPLY_HIDDEN_FORM_FIELDS = ["parent", "status"]
 
 
 class ContributionStatusEditForm(forms.ModelForm):
@@ -43,7 +44,7 @@ class ContributionReplyCreateForm(forms.ModelForm):
             if field_name not in ["text", "type"]:
                 self.fields[field_name].disabled = True
         # hide some fields (defaults)
-        for field_name in ["parent", "status"]:
+        for field_name in CONTRIBUTION_REPLY_HIDDEN_FORM_FIELDS:
             self.fields[field_name].widget = forms.HiddenInput()
         # initial values
         self.fields["type"].initial = constants.CONTRIBUTION_TYPE_COMMENT_CONTRIBUTOR

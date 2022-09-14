@@ -206,11 +206,10 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
     template_name = "questions/create.html"
     success_url = reverse_lazy("questions:list")
 
-    def get_initial(self):
-        return {"author": self.request.user}
-
     def form_valid(self, form):
-        self.object = form.save()
+        self.object = form.save(commit=False)
+        self.object.author = self.request.user
+        self.object.save()
 
         # create event
         if not self.object.is_private:

@@ -4,6 +4,7 @@ from django.contrib.postgres.fields import ArrayField
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models import Avg, Count, Q
+from django.db.models.functions import Concat
 from django.db.models.signals import m2m_changed, post_delete, post_save, pre_save
 from django.dispatch import receiver
 from django.urls import reverse
@@ -51,7 +52,7 @@ class QuizQuerySet(models.QuerySet):
 class Quiz(models.Model):
     QUIZ_CHOICE_FIELDS = ["language", "visibility"]
     QUIZ_FK_FIELDS = ["author"]
-    QUIZ_M2M_FIELDS = ["questions", "tags", "relationships"]
+    QUIZ_M2M_FIELDS = ["authors", "questions", "tags", "relationships"]
     QUIZ_RELATION_FIELDS = QUIZ_FK_FIELDS + QUIZ_M2M_FIELDS
     QUIZ_LIST_FIELDS = [
         "questions_categories_list",
@@ -62,11 +63,21 @@ class Quiz(models.Model):
     QUIZ_URL_FIELDS = []
     QUIZ_IMAGE_URL_FIELDS = ["image_background_url"]
     QUIZ_TIMESTAMP_FIELDS = ["created", "updated"]
-    QUIZ_FLATTEN_FIELDS = ["tag_list", "question_list", "relationship_list", "author_string", "validator_string"]
+    QUIZ_FLATTEN_FIELDS = [
+        "tag_list",
+        "question_list",
+        "relationship_list",
+        "author_string",
+        "author_list",
+        "validator_string",
+    ]
     QUIZ_READONLY_FIELDS = [
         "slug",
         "difficulty_average",
         "author",
+        "authors",
+        "validator",
+        "validation_date",
         "publish_date",
         "created",
         "updated",
@@ -98,10 +109,17 @@ class Quiz(models.Model):
     author = models.ForeignKey(
         verbose_name="Auteur",
         to=settings.AUTH_USER_MODEL,
-        related_name="quizs",
+        related_name="old_quizs",
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
+    )
+    authors = models.ManyToManyField(
+        verbose_name="Auteurs",
+        to=settings.AUTH_USER_MODEL,
+        through="QuizAuthor",
+        related_name="quizs",
+        blank=True,
     )
     image_background_url = models.URLField(
         verbose_name="Lien vers une image pour illustrer le quiz",
@@ -110,6 +128,12 @@ class Quiz(models.Model):
     )
     has_audio = models.BooleanField(verbose_name="Contenu audio ?", default=False)
 
+    validation_status = models.CharField(
+        verbose_name="Statut",
+        max_length=150,
+        choices=constants.VALIDATION_STATUS_CHOICES,
+        default=constants.VALIDATION_STATUS_NEW,
+    )
     validator = models.ForeignKey(
         verbose_name="Validateur",
         to=settings.AUTH_USER_MODEL,
@@ -117,12 +141,6 @@ class Quiz(models.Model):
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
-    )
-    validation_status = models.CharField(
-        verbose_name="Statut",
-        max_length=150,
-        choices=constants.VALIDATION_STATUS_CHOICES,
-        default=constants.VALIDATION_STATUS_NEW,
     )
     validation_date = models.DateTimeField(verbose_name="Date de validation", blank=True, null=True)
     publish = models.BooleanField(verbose_name="Prêt à être publié ?", default=False)
@@ -148,6 +166,9 @@ class Quiz(models.Model):
     updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
 
     # flatten relations
+    author_list = ArrayField(
+        verbose_name="Auteurs", base_field=models.CharField(max_length=50), blank=True, default=list
+    )
     tag_list = ArrayField(verbose_name="Tags", base_field=models.CharField(max_length=50), blank=True, default=list)
     question_list = ArrayField(
         verbose_name="Questions", base_field=models.PositiveIntegerField(), blank=True, default=list
@@ -156,6 +177,7 @@ class Quiz(models.Model):
         verbose_name="Relations", base_field=models.CharField(max_length=50), blank=True, default=list
     )
     author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
+
     validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
 
     history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
@@ -196,7 +218,7 @@ class Quiz(models.Model):
         # set_publication_date() in question/views.py
         self.set_flatten_fields()
         self.full_clean()
-        return super(Quiz, self).save(*args, **kwargs)
+        return super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse("quizs:detail", kwargs={"pk": self.id})
@@ -212,6 +234,18 @@ class Quiz(models.Model):
     @property
     def questions_id_list_with_order(self) -> list:
         return list(self.quizquestion_set.values_list("question_id", flat=True))
+
+    @property
+    def authors_list(self) -> list:
+        return list(
+            self.authors.annotate(fullname=Concat("first_name", models.Value(" "), "last_name")).values_list(
+                "fullname", flat=True
+            )
+        )
+
+    @property
+    def authors_list_string(self) -> str:
+        return ", ".join(self.authors_list)
 
     @property
     def tags_list(self) -> list:
@@ -342,6 +376,7 @@ class Quiz(models.Model):
 
     # Admin
     tags_list_string.fget.short_description = "Tags"
+    authors_list_string.fget.short_description = "Auteurs"
     questions_not_validated_string.fget.short_description = "Questions pas encore validées"
     questions_categories_list_with_count_string.fget.short_description = "Questions catégories"
     questions_tags_list_with_count_string.fget.short_description = "Questions tags"
@@ -425,7 +460,7 @@ class QuizQuestion(models.Model):
 
     def save(self, *args, **kwargs):
         self.full_clean()
-        return super(QuizQuestion, self).save(*args, **kwargs)
+        return super().save(*args, **kwargs)
 
     def clean(self):
         """
@@ -475,7 +510,7 @@ class QuizRelationship(models.Model):
 
     def save(self, *args, **kwargs):
         self.full_clean()
-        return super(QuizRelationship, self).save(*args, **kwargs)
+        return super().save(*args, **kwargs)
 
     def status_full(self, quiz_id=None) -> str:
         if quiz_id and self.to_quiz_id == quiz_id:
@@ -517,3 +552,43 @@ def quiz_set_flatten_relationship_list(sender, instance, **kwargs):
     instance.from_quiz.save()
     instance.to_quiz.relationship_list = instance.to_quiz.relationships_list
     instance.to_quiz.save()
+
+
+class QuizAuthor(models.Model):
+    quiz = models.ForeignKey(verbose_name="Quiz", to=Quiz, on_delete=models.CASCADE)
+    author = models.ForeignKey(
+        verbose_name="Auteur",
+        to=settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+    )
+
+    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
+    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+
+    class Meta:
+        unique_together = [
+            ["quiz", "author"],
+        ]
+
+    def __str__(self):
+        return f"Quiz {self.quiz.id} >>> Author {self.author.id}"
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
+
+# called on QuizAuthor.objects.create() ; when editing the quiz in the Django Admin form
+@receiver(post_save, sender=QuizAuthor)
+@receiver(post_delete, sender=QuizAuthor)
+def quiz_set_flatten_author_list(sender, instance, **kwargs):
+    instance.quiz.author_list = instance.quiz.authors_list
+    instance.quiz.save()
+
+
+# called on quiz.authors.add() ; quiz.authors.set()
+@receiver(m2m_changed, sender=Quiz.authors.through)
+def quiz_set_flatten_author_list_m2m(sender, instance, action, **kwargs):
+    if action in ("post_add", "post_remove", "post_clear"):
+        instance.author_list = instance.authors_list
+        instance.save(update_fields=["author_list"])

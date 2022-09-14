@@ -7,7 +7,7 @@ from django.utils.html import mark_safe
 from fieldsets_with_inlines import FieldsetsInlineMixin
 
 from core.admin import ExportMixin, admin_site
-from quizs.models import Quiz, QuizQuestion, QuizRelationship
+from quizs.models import Quiz, QuizAuthor, QuizQuestion, QuizRelationship
 from stats import constants
 from stats.models import QuizAnswerEvent, QuizFeedbackEvent
 
@@ -71,12 +71,19 @@ class QuizRelationshipToInline(admin.StackedInline):  # TabularInline
         return False
 
 
+class QuizAuthorInline(admin.StackedInline):
+    model = QuizAuthor
+    autocomplete_fields = ["author"]
+    extra = 0
+
+
 class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
     list_display = [
         "id",
         "name",
         "question_count",
         "author",
+        "authors_list_string",
         "tags_list_string",
         "difficulty_average",
         "has_audio",
@@ -87,7 +94,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "created",
     ]
     search_fields = ["name"]
-    list_filter = ["publish", "spotlight", "has_audio", "author", "visibility", "language", "tags"]
+    list_filter = ["publish", "spotlight", "has_audio", "author", "authors", "visibility", "language", "tags"]
     ordering = ["-id"]
 
     prepopulated_fields = {"slug": ("name",)}
@@ -136,6 +143,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
                 )
             },
         ),
+        QuizAuthorInline,
         (
             "Tags",
             {"fields": ("tags",)},
@@ -202,7 +210,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
     def get_queryset(self, request):
         qs = super().get_queryset(request)
         qs = qs.select_related("author", "agg_stats")
-        qs = qs.prefetch_related("tags", "questions")
+        qs = qs.prefetch_related("tags", "questions", "authors")
         return qs
 
     def show_image_background(self, instance):
