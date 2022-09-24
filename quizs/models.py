@@ -51,7 +51,7 @@ class QuizQuerySet(models.QuerySet):
 
 class Quiz(models.Model):
     QUIZ_CHOICE_FIELDS = ["language", "visibility"]
-    QUIZ_FK_FIELDS = ["author"]
+    QUIZ_FK_FIELDS = []
     QUIZ_M2M_FIELDS = ["authors", "questions", "tags", "relationships"]
     QUIZ_RELATION_FIELDS = QUIZ_FK_FIELDS + QUIZ_M2M_FIELDS
     QUIZ_LIST_FIELDS = [
@@ -67,14 +67,12 @@ class Quiz(models.Model):
         "tag_list",
         "question_list",
         "relationship_list",
-        "author_string",
         "author_list",
         "validator_string",
     ]
     QUIZ_READONLY_FIELDS = [
         "slug",
         "difficulty_average",
-        "author",
         "authors",
         "validator",
         "validation_date",
@@ -105,14 +103,6 @@ class Quiz(models.Model):
         choices=constants.LANGUAGE_CHOICES,
         default=constants.LANGUAGE_FRENCH,
         blank=False,
-    )
-    author = models.ForeignKey(
-        verbose_name="Auteur",
-        to=settings.AUTH_USER_MODEL,
-        related_name="old_quizs",
-        on_delete=models.SET_NULL,
-        blank=True,
-        null=True,
     )
     authors = models.ManyToManyField(
         verbose_name="Auteurs",
@@ -176,8 +166,6 @@ class Quiz(models.Model):
     relationship_list = ArrayField(
         verbose_name="Relations", base_field=models.CharField(max_length=50), blank=True, default=list
     )
-    author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
-
     validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
 
     history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
@@ -209,7 +197,6 @@ class Quiz(models.Model):
         # self.tag_list = self.tags_list  # see m2m_changed
         # self.question_list = self.questions_id_list_with_order  # see m2m_changed
         # self.relationship_list = self.relationships_list  # see m2m_changed
-        self.author_string = str(self.author) if self.author else ""
         self.validator_string = str(self.validator) if self.validator else ""
 
     def save(self, *args, **kwargs):

@@ -35,7 +35,7 @@ class QuizListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
 
     def get_queryset(self):
         qs = super().get_queryset()
-        qs = qs.select_related("author").prefetch_related("tags", "questions", "authors")
+        qs = qs.prefetch_related("tags", "questions", "authors")
         return qs
 
     def get_context_data(self, **kwargs):

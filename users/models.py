@@ -46,13 +46,6 @@ class UserQueryset(models.QuerySet):
             .filter(has_questions=True)
         )
 
-    def has_quiz_old(self):
-        return (
-            self.prefetch_related("quizs")
-            .annotate(has_quizs=Exists(Quiz.objects.filter(author=OuterRef("pk"))))
-            .filter(has_quizs=True)
-        )
-
     def has_quiz(self):
         return (
             self.prefetch_related("quizs")
@@ -124,9 +117,6 @@ class UserManager(BaseUserManager):
 
     def has_question(self):
         return self.get_queryset().has_question()
-
-    def has_quiz_old(self):
-        return self.get_queryset().has_quiz_old()
 
     def has_quiz(self):
         return self.get_queryset().has_quiz()
@@ -229,13 +219,13 @@ class User(AbstractUser):
 
     def can_edit_quiz(self, quiz) -> bool:
         if quiz.is_private:
-            return quiz.author == self
-        return (quiz.author == self) or (self.has_role_administrator)
+            return self in quiz.authors.all()
+        return (self in quiz.authors.all()) or (self.has_role_administrator)
 
     def can_publish_quiz(self, quiz) -> bool:
         if quiz.is_private:
-            return quiz.author == self
-        return (quiz.author != self) and (self.has_role_administrator)
+            return self in quiz.authors.all()
+        return (self in quiz.authors.all()) and (self.has_role_administrator)
 
 
 @receiver(post_save, sender=User)
