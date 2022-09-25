@@ -8,7 +8,6 @@ app_name = "pages"
 
 urlpatterns = [
     path("", HomeView.as_view(), name="home"),
-    path("help/", HelpView.as_view(), name="help"),
     path(
         "help/",
         include(

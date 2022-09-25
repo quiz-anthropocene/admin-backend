@@ -62,8 +62,8 @@ class AdminContributorListView(AdministratorUserRequiredMixin, SingleTableMixin,
 
 class AdminContributorCreateView(AdministratorUserRequiredMixin, CreateView):
     form_class = ContributorCreateForm
-    template_name = "admin/contributors_create.html"
-    success_url = reverse_lazy("admin:contributors")
+    template_name = "admin/contributor_create.html"
+    success_url = reverse_lazy("admin:contributor_list")
 
     def form_valid(self, form):
         # create user
