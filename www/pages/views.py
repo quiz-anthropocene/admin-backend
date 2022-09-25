@@ -1,9 +1,12 @@
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView
+from django_tables2.views import SingleTableView
 
 from activity.models import Event
 from core.mixins import ContributorUserRequiredMixin
+from users.models import User
+from users.tables import AdministratorTable
 
 
 class HomeView(TemplateView):
@@ -24,3 +27,16 @@ class HomeView(TemplateView):
 
 class HelpView(ContributorUserRequiredMixin, TemplateView):
     template_name = "pages/help.html"
+
+
+class AdministratorListView(ContributorUserRequiredMixin, SingleTableView):
+    model = User
+    template_name = "pages/administrator_list.html"
+    context_object_name = "administrators"
+    table_class = AdministratorTable
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = qs.all_administrators()
+        qs = qs.order_by("created")
+        return qs

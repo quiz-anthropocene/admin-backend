@@ -14,3 +14,11 @@ class ContributorTable(tables.Table):
         fields = ["first_name", "last_name", "email", "roles", "question_count", "quiz_count", "last_login", "created"]
         template_name = DEFAULT_TEMPLATE
         attrs = DEFAULT_ATTRS
+
+
+class AdministratorTable(tables.Table):
+    class Meta:
+        model = User
+        fields = ["first_name", "last_name", "email", "last_login"]
+        template_name = DEFAULT_TEMPLATE
+        attrs = DEFAULT_ATTRS

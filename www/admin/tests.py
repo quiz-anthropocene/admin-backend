@@ -7,7 +7,7 @@ from users.factories import DEFAULT_PASSWORD, UserFactory
 from users.models import User
 
 
-ADMIN_URLS = ["admin:home", "admin:contributors", "admin:contributors_create", "admin:history"]
+ADMIN_URLS = ["admin:home", "admin:contributor_list", "admin:contributor_create", "admin:history"]
 CONTRIBUTOR_CREATE_FORM_DEFAULT = {
     "first_name": "First",
     "last_name": "Last",
@@ -51,7 +51,7 @@ class ProfileAdminContributorCreateViewTest(TestCase):
 
     def test_admin_can_create_quiz(self):
         self.client.login(email=self.user_admin.email, password=DEFAULT_PASSWORD)
-        url = reverse("admin:contributors_create")
+        url = reverse("admin:contributor_create")
         response = self.client.post(url, data=CONTRIBUTOR_CREATE_FORM_DEFAULT)
         self.assertEqual(response.status_code, 302)  # 201
         self.assertEqual(User.objects.count(), 1 + 1)
