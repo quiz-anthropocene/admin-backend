@@ -38,7 +38,7 @@ class AdminHomeView(AdministratorUserRequiredMixin, DetailView):
 
 class AdminContributorListView(AdministratorUserRequiredMixin, SingleTableMixin, FilterView):
     model = User
-    template_name = "admin/contributors.html"
+    template_name = "admin/contributor_list.html"
     context_object_name = "contributors"
     table_class = ContributorTable
     filterset_class = ContributorFilter
