@@ -35,7 +35,7 @@ class Command(BaseCommand):
     """
     Usage:
     python manage.py export_data_to_github
-    python manage.py export_data_to_github --force
+    python manage.py export_data_to_github --force  # export even if there is no data changes
     """
 
     def add_arguments(self, parser):
@@ -72,6 +72,8 @@ class Command(BaseCommand):
             pull_request_name = f"Data: update data ({current_datetime_string_pretty})"
 
             # update configuration first
+            # why? to have the new date in the configuration.yaml
+            # issue: if there is an error during the export, 'github_data_last_exported' is still updated
             configuration.github_data_last_exported = timezone.now()
             configuration.save()
 
