@@ -32,21 +32,29 @@ class ApiTest(TestCase):
             language=constants.LANGUAGE_ENGLISH,
             category=cls.category_1,
             answer_correct="a",
-            tags=[cls.tag_2, cls.tag_1],
+            # tags=[cls.tag_2, cls.tag_1],
             author=cls.user_2,
         )
+        cls.question_2.tags.set([cls.tag_2, cls.tag_1])
         cls.question_3 = QuestionFactory(
-            text="question 3", category=cls.category_1, tags=[cls.tag_2], author=cls.user_3
+            text="question 3",
+            category=cls.category_1,
+            # tags=[cls.tag_2],
+            author=cls.user_3,
         )
-        cls.quiz_1 = QuizFactory(name="quiz 1", publish=False, authors=[cls.user_1])
+        cls.question_3.tags.set([cls.tag_2])
+        cls.quiz_1 = QuizFactory(name="quiz 1", publish=False)  # authors=[cls.user_1]
+        cls.quiz_1.authors.set([cls.user_1])
         QuizQuestion.objects.create(quiz=cls.quiz_1, question=cls.question_1)
         cls.quiz_2 = QuizFactory(
             name="quiz 2",
             publish=False,
             language=constants.LANGUAGE_ENGLISH,
-            tags=[cls.tag_1],
-            authors=[cls.user_2],
+            # tags=[cls.tag_1],
+            # authors=[cls.user_2],
         )
+        cls.quiz_2.tags.set([cls.tag_1])
+        cls.quiz_2.authors.set([cls.user_2])
         QuizQuestion.objects.create(quiz=cls.quiz_2, question=cls.question_2, order=2)
         QuizQuestion.objects.create(quiz=cls.quiz_2, question=cls.question_3, order=1)
         cls.quiz_2.publish = True  # cannot have a published quiz without any questions

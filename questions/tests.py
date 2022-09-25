@@ -15,8 +15,10 @@ class QuestionModelTest(TestCase):
     def setUpTestData(cls):
         cls.tag_1 = TagFactory(name="Tag 1")
         cls.tag_2 = TagFactory(name="Another tag")
-        cls.question = QuestionFactory(tags=[cls.tag_1, cls.tag_2])
-        cls.quiz = QuizFactory(name="Le premier quiz", questions=[cls.question])
+        cls.question = QuestionFactory()  # tags=[cls.tag_1, cls.tag_2]
+        cls.question.tags.set([cls.tag_1, cls.tag_2])
+        cls.quiz = QuizFactory(name="Le premier quiz")  # questions=[cls.question]
+        cls.quiz.questions.set([cls.question])
 
     def test_str(self):
         self.assertTrue(str(self.question.id) in str(self.question))
@@ -40,7 +42,8 @@ class QuestionModelSaveTest(TestCase):
     def setUpTestData(cls):
         cls.tag_1 = TagFactory(name="Tag 1")
         cls.tag_2 = TagFactory(name="Another tag")
-        cls.question = QuestionFactory(tags=[cls.tag_1, cls.tag_2])
+        cls.question = QuestionFactory()  # tags=[cls.tag_1, cls.tag_2]
+        cls.question.tags.set([cls.tag_1, cls.tag_2])
 
     def test_update_related_flatten_fields_on_save(self):
         # category, author, validator
@@ -91,9 +94,10 @@ class QuestionModelHistoryTest(TestCase):
         cls.question = QuestionFactory(
             text="Test",
             category=cls.category_1,
-            tags=[cls.tag_1, cls.tag_2],
+            # tags=[cls.tag_1, cls.tag_2],
             validation_status=constants.VALIDATION_STATUS_NEW,
         )
+        cls.question.tags.set([cls.tag_1, cls.tag_2])
 
     def test_history_object_on_create(self):
         self.assertEqual(self.question.history.count(), 1 + 1)  # create + tags M2M

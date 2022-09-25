@@ -81,14 +81,16 @@ class QuizDetailEditViewTest(TestCase):
         cls.user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
         cls.quiz_1 = QuizFactory(
             name="Quiz 1",
-            authors=[cls.user_contributor_1],
+            # authors=[cls.user_contributor_1],
             visibility=constants.VISIBILITY_PUBLIC,
             validation_status=constants.VALIDATION_STATUS_IN_PROGRESS,
             publish=False,
         )
+        cls.quiz_1.authors.set([cls.user_contributor_1])
         cls.quiz_2 = QuizFactory(
-            name="Quiz 2", authors=[cls.user_contributor_1], visibility=constants.VISIBILITY_PRIVATE
-        )
+            name="Quiz 2", visibility=constants.VISIBILITY_PRIVATE
+        )  # authors=[cls.user_contributor_1]
+        cls.quiz_2.authors.set([cls.user_contributor_1])
 
     def test_author_or_admin_can_edit_public_quiz(self):
         for user in [self.user_contributor_1, self.user_admin]:
@@ -146,7 +148,8 @@ class QuizDetailQuestionListViewTest(TestCase):
         cls.user_contributor_1 = UserFactory()
         cls.user_contributor_2 = UserFactory()
         cls.user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
-        cls.quiz_1 = QuizFactory(name="Quiz 1", authors=[cls.user_contributor_1])
+        cls.quiz_1 = QuizFactory(name="Quiz 1")  # authors=[cls.user_contributor_1]
+        cls.quiz_1.authors.set([cls.user_contributor_1])
 
     def test_author_or_admin_can_edit_quiz_question_list(self):
         for user in [self.user_contributor_1, self.user_admin]:

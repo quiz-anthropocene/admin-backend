@@ -14,7 +14,8 @@ class UserModelTest(TestCase):
         cls.user = UserFactory(first_name="First", last_name="Last", email="test@example.com")
         QuestionFactory(author=cls.user)
         QuestionFactory(author=cls.user)
-        cls.quiz = QuizFactory(authors=[cls.user])
+        cls.quiz = QuizFactory()  # authors=[cls.user]
+        cls.quiz.authors.set([cls.user])
 
     def test_str(self):
         self.assertEqual(str(self.user), "First Last")
@@ -87,9 +88,12 @@ class UserModelQuerysetTest(TestCase):
         QuestionFactory(author=cls.user_2)
         QuestionFactory(author=cls.user_2)
         QuestionFactory(author=cls.user_3, visibility=constants.VISIBILITY_PRIVATE)
-        cls.quiz_1 = QuizFactory(name="quiz 1", authors=[cls.user_1])
-        cls.quiz_1 = QuizFactory(name="quiz 2", authors=[cls.user_2])
-        cls.quiz_2 = QuizFactory(name="quiz 3", authors=[cls.user_3], visibility=constants.VISIBILITY_PRIVATE)
+        cls.quiz_1 = QuizFactory(name="quiz 1")  # authors=[cls.user_1]
+        cls.quiz_1.authors.set([cls.user_1])
+        cls.quiz_2 = QuizFactory(name="quiz 2")  # authors=[cls.user_2]
+        cls.quiz_2.authors.set([cls.user_2])
+        cls.quiz_3 = QuizFactory(name="quiz 3", visibility=constants.VISIBILITY_PRIVATE)  # authors=[cls.user_3]
+        cls.quiz_3.authors.set([cls.user_3])
 
     def test_has_question(self):
         self.assertEqual(User.objects.has_question().count(), 2)

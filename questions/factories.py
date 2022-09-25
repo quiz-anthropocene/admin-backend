@@ -18,9 +18,3 @@ class QuestionFactory(factory.django.DjangoModelFactory):
     answer_option_b = "La réponse B"
     answer_correct = "a"  # constants.QUESTION_ANSWER_CHOICE_LIST[0]
     validation_status = constants.VALIDATION_STATUS_OK
-
-    @factory.post_generation
-    def tags(self, create, extracted, **kwargs):
-        if extracted:
-            # Add the iterable of groups using bulk addition
-            self.tags.add(*extracted)
