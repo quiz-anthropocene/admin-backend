@@ -13,12 +13,10 @@ from users.factories import UserFactory
 class QuestionModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.question = QuestionFactory()
         cls.tag_1 = TagFactory(name="Tag 1")
         cls.tag_2 = TagFactory(name="Another tag")
-        cls.question.tags.set([cls.tag_1, cls.tag_2])
-        cls.quiz = QuizFactory(name="Le premier quiz")
-        cls.quiz.questions.set([cls.question])
+        cls.question = QuestionFactory(tags=[cls.tag_1, cls.tag_2])
+        cls.quiz = QuizFactory(name="Le premier quiz", questions=[cls.question])
 
     def test_str(self):
         self.assertTrue(str(self.question.id) in str(self.question))
@@ -40,10 +38,9 @@ class QuestionModelTest(TestCase):
 class QuestionModelSaveTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.question = QuestionFactory()
         cls.tag_1 = TagFactory(name="Tag 1")
         cls.tag_2 = TagFactory(name="Another tag")
-        cls.question.tags.set([cls.tag_1, cls.tag_2])
+        cls.question = QuestionFactory(tags=[cls.tag_1, cls.tag_2])
 
     def test_update_related_flatten_fields_on_save(self):
         # category, author, validator
@@ -92,12 +89,14 @@ class QuestionModelHistoryTest(TestCase):
         cls.tag_2 = TagFactory(name="Another tag")
         cls.tag_3 = TagFactory(name="Tag 3")
         cls.question = QuestionFactory(
-            text="Test", category=cls.category_1, validation_status=constants.VALIDATION_STATUS_NEW
+            text="Test",
+            category=cls.category_1,
+            tags=[cls.tag_1, cls.tag_2],
+            validation_status=constants.VALIDATION_STATUS_NEW,
         )
-        cls.question.tags.set([cls.tag_1, cls.tag_2])
 
     def test_history_object_on_create(self):
-        self.assertEqual(self.question.history.count(), 1 + 1)
+        self.assertEqual(self.question.history.count(), 1 + 1)  # create + tags M2M
         create_history_item = self.question.history.last()
         self.assertEqual(create_history_item.history_type, "+")
         self.assertEqual(create_history_item.text, self.question.text)

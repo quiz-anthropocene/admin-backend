@@ -21,7 +21,7 @@
                     <div class="col-md-4 d-none d-md-block">
                         {% if user in quiz.authors.all %}
                             <div class="alert alert-primary" role="alert">
-                                ℹ️ Vous êtes <strong>l'auteur</strong> de ce quiz.
+                                ℹ️ Vous êtes <strong>l'auteur</strong> de ce quiz.<br />
                                 {% if quiz.authors.count == 1 %}
                                     <small>ajouter un collaborateur ? contacter un administrateur</small>
                                 {% else %}

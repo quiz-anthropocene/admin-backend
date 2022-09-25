@@ -121,8 +121,7 @@ class QuizModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.question_1 = QuestionFactory(answer_correct="a")
-        cls.quiz_1 = QuizFactory(name="quiz 1")
-        # cls.quiz_1.questions.set([cls.question_1.id])
+        cls.quiz_1 = QuizFactory(name="quiz 1")  # questions=[cls.question_1.id]
         QuizQuestion.objects.create(quiz=cls.quiz_1, question=cls.question_1)
         QuestionAnswerEvent.objects.create(question_id=cls.question_1.id, choice="a", source="question")
         QuizAnswerEvent.objects.create(quiz_id=cls.quiz_1.id, answer_success_count=1)
@@ -182,16 +181,8 @@ class QuizModelTest(TestCase):
         )
         self.quiz_published = QuizFactory(name="quiz published", publish=True)
         self.quiz_not_published = QuizFactory(name="quiz not published")
-        # pass
-        # self.quiz_not_published.questions.set(
-        #     [self.question_validated, self.question_not_validated]
-        # )
         QuizQuestion.objects.create(quiz=self.quiz_not_published, question=self.question_validated)
         QuizQuestion.objects.create(quiz=self.quiz_not_published, question=self.question_not_validated)
-        # pass # used to be fail
-        # self.quiz_published.questions.set(
-        #     [self.question_validated, self.question_not_validated]
-        # )
         QuizQuestion.objects.create(quiz=self.quiz_published, question=self.question_validated)
         QuizQuestion.objects.create(quiz=self.quiz_published, question=self.question_not_validated)
         self.assertEqual(len(self.quiz_published.questions_not_validated_list), 1)

@@ -12,13 +12,11 @@ from users.factories import UserFactory
 class QuizModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.quiz = QuizFactory(name="Mon premier quiz")
         cls.tag_1 = TagFactory(name="Tag 1")
         cls.tag_2 = TagFactory(name="Another tag")
-        cls.quiz.tags.set([cls.tag_1, cls.tag_2])
+        cls.quiz = QuizFactory(name="Mon premier quiz", tags=[cls.tag_1, cls.tag_2])
         cls.question_1 = QuestionFactory(text="Une question")
         cls.question_2 = QuestionFactory(text="Une autre question")
-        # cls.quiz.questions.set([cls.question_1, cls.question_2])
         QuizQuestion.objects.create(quiz=cls.quiz, question=cls.question_1, order=2)
         QuizQuestion.objects.create(quiz=cls.quiz, question=cls.question_2, order=1)
 
@@ -49,11 +47,9 @@ class QuizModelSaveTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user_1 = UserFactory(first_name="Paul", last_name="Dupont")
-        cls.quiz = QuizFactory(name="Quiz 1")
-        cls.quiz.authors.set([cls.user_1])
         cls.tag_1 = TagFactory(name="Tag 1")
         cls.tag_2 = TagFactory(name="Another tag")
-        cls.quiz.tags.set([cls.tag_1, cls.tag_2])
+        cls.quiz = QuizFactory(name="Quiz 1", tags=[cls.tag_1, cls.tag_2], authors=[cls.user_1])
 
     def test_update_related_flatten_fields_on_save(self):
         user_2 = UserFactory(first_name="Marie", last_name="Dupond")
@@ -224,9 +220,8 @@ class QuizQuestionModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user = UserFactory(first_name="Paul", last_name="Dupont")
-        cls.quiz = QuizFactory(name="Quiz 1")
         cls.question = QuestionFactory(text="Une question")
-        cls.quiz.questions.set([cls.question])
+        cls.quiz = QuizFactory(name="Quiz 1", questions=[cls.question])
 
     def test_cannot_have_duplicate_quiz_question(self):
         self.assertRaises(ValidationError, QuizQuestion.objects.create, quiz=self.quiz, question=self.question)
@@ -236,8 +231,7 @@ class QuizAuthorModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user = UserFactory(first_name="Paul", last_name="Dupont")
-        cls.quiz = QuizFactory(name="Quiz 1")
-        cls.quiz.authors.set([cls.user])
+        cls.quiz = QuizFactory(name="Quiz 1", authors=[cls.user])
 
     def test_cannot_have_duplicate_quiz_author(self):
         self.assertRaises(ValidationError, QuizAuthor.objects.create, quiz=self.quiz, author=self.user)

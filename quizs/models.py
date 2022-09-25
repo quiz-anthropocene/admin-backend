@@ -38,7 +38,7 @@ class QuizQuerySet(models.QuerySet):
         return self.filter(has_audio=True)
 
     def for_author(self, author):
-        return self.filter(author=author)
+        return self.filter(authors__in=[author])
 
     def simple_search(self, value):
         search_fields = ["name", "introduction", "conclusion"]

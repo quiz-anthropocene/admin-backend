@@ -13,3 +13,21 @@ class QuizFactory(factory.django.DjangoModelFactory):
     slug = factory.LazyAttribute(lambda o: slugify(o.name))
     validation_status = constants.VALIDATION_STATUS_OK
     publish = False
+
+    @factory.post_generation
+    def tags(self, create, extracted, **kwargs):
+        if extracted:
+            # Add the iterable of groups using bulk addition
+            self.tags.add(*extracted)
+
+    @factory.post_generation
+    def authors(self, create, extracted, **kwargs):
+        if extracted:
+            # Add the iterable of groups using bulk addition
+            self.authors.add(*extracted)
+
+    @factory.post_generation
+    def questions(self, create, extracted, **kwargs):
+        if extracted:
+            # Add the iterable of groups using bulk addition
+            self.questions.add(*extracted)
