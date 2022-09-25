@@ -27,8 +27,11 @@
                         {% if not question.is_private %}
                             {% if not question.is_validated %}
                                 <div class="alert alert-warning" role="alert">
-                                    ✔️ La question n'est pas encore <strong>validée</strong>.<br />
+                                    ✍️ La question n'est pas encore <strong>validée</strong>.<br />
                                     <small>Seul un administrateur peut le faire.</small>
+                                    {% if user.has_role_administrator %}
+                                        <br /><small><strong>Vous êtes administrateur&nbsp;😉</strong></small>
+                                    {% endif %}
                                 </div>
                             {% endif %}
                             {% if question.validator %}

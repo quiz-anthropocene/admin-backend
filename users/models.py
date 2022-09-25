@@ -255,15 +255,18 @@ class User(AbstractUser):
     def is_quiz_author(self, quiz) -> bool:
         return self in quiz.authors.all()
 
+    def is_not_quiz_author(self, quiz) -> bool:
+        return self not in quiz.authors.all()
+
     def can_edit_quiz(self, quiz) -> bool:
         if quiz.is_private:
             return self.is_quiz_author(quiz)
-        return (self in quiz.authors.all()) or (self.has_role_administrator)
+        return self.is_quiz_author(quiz) or (self.has_role_administrator)
 
     def can_publish_quiz(self, quiz) -> bool:
         if quiz.is_private:
             return self.is_quiz_author(quiz)
-        return (self in quiz.authors.all()) and (self.has_role_administrator)
+        return self.is_not_quiz_author(quiz) and (self.has_role_administrator)
 
 
 @receiver(post_save, sender=User)

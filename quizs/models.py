@@ -50,7 +50,7 @@ class QuizQuerySet(models.QuerySet):
 
 
 class Quiz(models.Model):
-    QUIZ_CHOICE_FIELDS = ["language", "visibility"]
+    QUIZ_CHOICE_FIELDS = ["language", "validation_status", "visibility"]
     QUIZ_FK_FIELDS = []
     QUIZ_M2M_FIELDS = ["authors", "questions", "tags", "relationships"]
     QUIZ_RELATION_FIELDS = QUIZ_FK_FIELDS + QUIZ_M2M_FIELDS
