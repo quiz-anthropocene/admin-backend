@@ -36,7 +36,7 @@
                         {% if not quiz.is_private %}
                             {% if not quiz.is_validated %}
                                 <div class="alert alert-warning" role="alert">
-                                    ✔️ Le quiz n'est pas encore <strong>validé</strong>.
+                                    ✔️ Le quiz n'est pas encore <strong>validé</strong>.<br />
                                     <small>Seul un administrateur peut le faire.</small>
                                 </div>
                             {% endif %}
@@ -47,7 +47,7 @@
                             {% endif %}
                             {% if not quiz.publish %}
                                 <div class="alert alert-warning" role="alert">
-                                    ✔️ Le quiz n'est pas encore <strong>publié</strong>.
+                                    ✔️ Le quiz n'est pas encore <strong>publié</strong>.<br />
                                     <small>Seul un administrateur peut le faire.</small>
                                 </div>
                             {% endif %}
@@ -64,7 +64,7 @@
                         {% endif %}
                         {% if not quiz.image_background_url %}
                             <div class="alert alert-primary" role="alert">
-                                🖼️ L'ajout d'une <strong>image</strong> se fait à la fin du formulaire 👇
+                                🖼️ L'ajout d'une <strong>image</strong> se fait à la fin du formulaire&nbsp;👇
                             </div>
                         {% endif %}
                     </div>

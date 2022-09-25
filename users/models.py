@@ -7,10 +7,11 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
 
+from core import constants
 from core.fields import ChoiceArrayField
 from core.utils import sendinblue
 from questions.models import Question
-from quizs.models import Quiz, QuizAuthor
+from quizs.models import QuizAuthor
 from users import constants as user_constants
 
 
@@ -42,23 +43,48 @@ class UserQueryset(models.QuerySet):
     def has_question(self):
         return (
             self.prefetch_related("questions")
-            .annotate(has_questions=Exists(Question.objects.filter(author=OuterRef("pk"))))
-            .filter(has_questions=True)
+            .annotate(has_question=Exists(Question.objects.filter(author=OuterRef("pk"))))
+            .filter(has_question=True)
+        )
+
+    def has_public_question(self):
+        return (
+            self.prefetch_related("questions")
+            .annotate(has_public_question=Exists(Question.objects.filter(author=OuterRef("pk")).public()))
+            .filter(has_public_question=True)
         )
 
     def has_quiz(self):
         return (
             self.prefetch_related("quizs")
-            .annotate(has_quizs=Exists(QuizAuthor.objects.filter(author_id=OuterRef("pk"))))
-            .filter(has_quizs=True)
+            .annotate(has_quiz=Exists(QuizAuthor.objects.filter(author_id=OuterRef("pk"))))
+            .filter(has_quiz=True)
+        )
+
+    def has_public_quiz(self):
+        return (
+            self.prefetch_related("quizs")
+            .annotate(
+                has_public_quiz=Exists(
+                    QuizAuthor.objects.filter(author_id=OuterRef("pk")).exclude(
+                        quiz__visibility=constants.VISIBILITY_PRIVATE
+                    )
+                )
+            )
+            .filter(has_public_quiz=True)
         )
 
     def has_public_content(self):
+        # return self.has_public_question() | self.has_public_quiz()
         return (
             self.prefetch_related("questions", "quizs")
             .annotate(
                 has_public_questions=Exists(Question.objects.filter(author=OuterRef("pk")).public()),
-                has_public_quizs=Exists(Quiz.objects.filter(author=OuterRef("pk")).public()),
+                has_public_quizs=Exists(
+                    QuizAuthor.objects.filter(author_id=OuterRef("pk")).exclude(
+                        quiz__visibility=constants.VISIBILITY_PRIVATE
+                    )
+                ),
             )
             .filter(Q(has_public_questions=True) | Q(has_public_quizs=True))
         )
@@ -118,8 +144,14 @@ class UserManager(BaseUserManager):
     def has_question(self):
         return self.get_queryset().has_question()
 
+    def has_public_question(self):
+        return self.get_queryset().has_public_question()
+
     def has_quiz(self):
         return self.get_queryset().has_quiz()
+
+    def has_public_quiz(self):
+        return self.get_queryset().has_public_quiz()
 
     def has_public_content(self):
         return self.get_queryset().has_public_content()

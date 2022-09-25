@@ -27,7 +27,7 @@
                         {% if not question.is_private %}
                             {% if not question.is_validated %}
                                 <div class="alert alert-warning" role="alert">
-                                    ✔️ La question n'est pas encore <strong>validée</strong>.
+                                    ✔️ La question n'est pas encore <strong>validée</strong>.<br />
                                     <small>Seul un administrateur peut le faire.</small>
                                 </div>
                             {% endif %}
@@ -39,7 +39,7 @@
                         {% endif %}
                         {% if not question.answer_image_url %}
                             <div class="alert alert-primary" role="alert">
-                                🖼️ L'ajout de <strong>l'image d'explication</strong> se fait à la fin du formulaire 👇
+                                🖼️ L'ajout de <strong>l'image d'explication</strong> se fait à la fin du formulaire&nbsp;👇
                             </div>
                         {% endif %}
                     </div>

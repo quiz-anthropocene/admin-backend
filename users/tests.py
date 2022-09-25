@@ -87,17 +87,24 @@ class UserModelQuerysetTest(TestCase):
         QuestionFactory(author=cls.user_2)
         QuestionFactory(author=cls.user_2)
         QuestionFactory(author=cls.user_3, visibility=constants.VISIBILITY_PRIVATE)
-        cls.quiz_1 = QuizFactory(name="quiz 1", authors=[cls.user_2])
-        cls.quiz_2 = QuizFactory(name="quiz 2", authors=[cls.user_3], visibility=constants.VISIBILITY_PRIVATE)
+        cls.quiz_1 = QuizFactory(name="quiz 1", authors=[cls.user_1])
+        cls.quiz_1 = QuizFactory(name="quiz 2", authors=[cls.user_2])
+        cls.quiz_2 = QuizFactory(name="quiz 3", authors=[cls.user_3], visibility=constants.VISIBILITY_PRIVATE)
 
     def test_has_question(self):
         self.assertEqual(User.objects.has_question().count(), 2)
 
+    def test_has_public_question(self):
+        self.assertEqual(User.objects.has_public_question().count(), 1)
+
     def test_has_quiz(self):
-        self.assertEqual(User.objects.has_quiz().count(), 2)
+        self.assertEqual(User.objects.has_quiz().count(), 3)
+
+    def test_has_public_quiz(self):
+        self.assertEqual(User.objects.has_public_quiz().count(), 2)
 
     def test_has_public_content(self):
-        self.assertEqual(User.objects.has_public_content().count(), 1)
+        self.assertEqual(User.objects.has_public_content().count(), 2)
 
     def test_simple_search(self):
         self.assertEqual(User.objects.simple_search(value="xy").count(), 1)
