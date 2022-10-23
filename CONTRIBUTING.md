@@ -115,7 +115,7 @@ Voir dans le dossier [quiz-anthropocene/public-frontend/data/architecture](https
 - Installez les dépendances du Backend
     ```
     cd backend
-    pipenv install --dev
+    pipenv sync
     ```
 - Dupliquer le fichier `backend/.env.example` et le renommer en `backend/.env`
 - Installez [PostgreSQL](https://www.postgresql.org)
@@ -171,13 +171,10 @@ Lancez le Backend, et connectez-vous sur `http://localhost:8000/django`
 
 Tests
 ```
-yarn test:e2e
+pipenv run python manage.py test
 ```
 
-Linting
-```
-yarn lint
-```
+Linting ? Avec le pre-commit
 
 ### Autres commandes utiles
 
@@ -253,6 +250,11 @@ Générer le graph des modèles
 ```
 pip install pygraphviz
 python manage.py graph_models -a -X ContentType,LogEntry,AbstractUser,User,AbstractBaseSession,Session,Group,Permission -o graph.png
+```
+
+Update packages
+```
+pipenv install --dev
 ```
 
 #### Commandes Autres
