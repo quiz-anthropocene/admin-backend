@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 boto3 = "*"
-django = "4.0.7"
+django = "4.1.2"
 asgiref = "*"
 certifi = "*"
 dj-database-url = "*"
