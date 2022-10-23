@@ -13,7 +13,7 @@ HISTORY_CHANGED_FIELDS_TO_IGNORE = [
     "updated",
     # flatten FK
     "category_string",  # Question model
-    "author_string",  # Question & Quiz model
+    "author_string",  # Question
     "validator_string",  # Question & Quiz model
     # django-simple-history
     "history_id",

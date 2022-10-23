@@ -32,20 +32,29 @@ class ApiTest(TestCase):
             language=constants.LANGUAGE_ENGLISH,
             category=cls.category_1,
             answer_correct="a",
+            # tags=[cls.tag_2, cls.tag_1],
             author=cls.user_2,
         )
         cls.question_2.tags.set([cls.tag_2, cls.tag_1])
-        cls.question_3 = QuestionFactory(text="question 3", category=cls.category_1, author=cls.user_3)
+        cls.question_3 = QuestionFactory(
+            text="question 3",
+            category=cls.category_1,
+            # tags=[cls.tag_2],
+            author=cls.user_3,
+        )
         cls.question_3.tags.set([cls.tag_2])
-        cls.quiz_1 = QuizFactory(name="quiz 1", publish=False, author=cls.user_1)
+        cls.quiz_1 = QuizFactory(name="quiz 1", publish=False)  # authors=[cls.user_1]
+        cls.quiz_1.authors.set([cls.user_1])
         QuizQuestion.objects.create(quiz=cls.quiz_1, question=cls.question_1)
         cls.quiz_2 = QuizFactory(
             name="quiz 2",
             publish=False,
             language=constants.LANGUAGE_ENGLISH,
-            author=cls.user_2,
+            # tags=[cls.tag_1],
+            # authors=[cls.user_2],
         )
         cls.quiz_2.tags.set([cls.tag_1])
+        cls.quiz_2.authors.set([cls.user_2])
         QuizQuestion.objects.create(quiz=cls.quiz_2, question=cls.question_2, order=2)
         QuizQuestion.objects.create(quiz=cls.quiz_2, question=cls.question_3, order=1)
         cls.quiz_2.publish = True  # cannot have a published quiz without any questions
@@ -211,16 +220,15 @@ class ApiTest(TestCase):
         response = self.client.get(reverse("api:quiz-list"), {"tags": self.tag_1.id})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 1)
-
         response = self.client.get(reverse("api:quiz-list"), {"tags": self.tag_2.id})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 0)
 
     def test_quiz_list_filter_by_author(self):
-        response = self.client.get(reverse("api:quiz-list"), {"author": self.user_1.id})
+        response = self.client.get(reverse("api:quiz-list"), {"authors": self.user_1.id})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 0)  # quiz not published
-        response = self.client.get(reverse("api:quiz-list"), {"author": self.user_2.id})
+        response = self.client.get(reverse("api:quiz-list"), {"authors": self.user_2.id})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 1)
 

@@ -33,7 +33,6 @@ QUIZ_FIELDS = [
     "language",
     "image_background_url",
     "has_audio",
-    "author",
     "authors",
     "visibility",
     "validation_status",
@@ -70,7 +69,6 @@ class QuizWithQuestionSerializer(serializers.ModelSerializer):
 
 class QuizWithQuestionFullStringSerializer(serializers.ModelSerializer):
     tags = TagStringSerializer(many=True)
-    author = UserStringSerializer()
     authors = UserStringSerializer(many=True)
 
     class Meta:
@@ -89,7 +87,6 @@ class QuizWithQuestionOrderSerializer(serializers.ModelSerializer):
 class QuizFullSerializer(serializers.ModelSerializer):
     questions = QuestionSerializer(many=True)
     tags = TagSerializer(many=True)
-    author = UserStringSerializer()
     authors = UserStringSerializer(many=True)
 
     class Meta:

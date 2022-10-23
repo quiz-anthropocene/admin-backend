@@ -7,10 +7,11 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
 
+from core import constants
 from core.fields import ChoiceArrayField
 from core.utils import sendinblue
 from questions.models import Question
-from quizs.models import Quiz, QuizAuthor
+from quizs.models import QuizAuthor
 from users import constants as user_constants
 
 
@@ -42,30 +43,48 @@ class UserQueryset(models.QuerySet):
     def has_question(self):
         return (
             self.prefetch_related("questions")
-            .annotate(has_questions=Exists(Question.objects.filter(author=OuterRef("pk"))))
-            .filter(has_questions=True)
+            .annotate(has_question=Exists(Question.objects.filter(author=OuterRef("pk"))))
+            .filter(has_question=True)
         )
 
-    def has_quiz_old(self):
+    def has_public_question(self):
         return (
-            self.prefetch_related("quizs")
-            .annotate(has_quizs=Exists(Quiz.objects.filter(author=OuterRef("pk"))))
-            .filter(has_quizs=True)
+            self.prefetch_related("questions")
+            .annotate(has_public_question=Exists(Question.objects.filter(author=OuterRef("pk")).public()))
+            .filter(has_public_question=True)
         )
 
     def has_quiz(self):
         return (
             self.prefetch_related("quizs")
-            .annotate(has_quizs=Exists(QuizAuthor.objects.filter(author_id=OuterRef("pk"))))
-            .filter(has_quizs=True)
+            .annotate(has_quiz=Exists(QuizAuthor.objects.filter(author_id=OuterRef("pk"))))
+            .filter(has_quiz=True)
+        )
+
+    def has_public_quiz(self):
+        return (
+            self.prefetch_related("quizs")
+            .annotate(
+                has_public_quiz=Exists(
+                    QuizAuthor.objects.filter(author_id=OuterRef("pk")).exclude(
+                        quiz__visibility=constants.VISIBILITY_PRIVATE
+                    )
+                )
+            )
+            .filter(has_public_quiz=True)
         )
 
     def has_public_content(self):
+        # return self.has_public_question() | self.has_public_quiz()
         return (
             self.prefetch_related("questions", "quizs")
             .annotate(
                 has_public_questions=Exists(Question.objects.filter(author=OuterRef("pk")).public()),
-                has_public_quizs=Exists(Quiz.objects.filter(author=OuterRef("pk")).public()),
+                has_public_quizs=Exists(
+                    QuizAuthor.objects.filter(author_id=OuterRef("pk")).exclude(
+                        quiz__visibility=constants.VISIBILITY_PRIVATE
+                    )
+                ),
             )
             .filter(Q(has_public_questions=True) | Q(has_public_quizs=True))
         )
@@ -125,11 +144,14 @@ class UserManager(BaseUserManager):
     def has_question(self):
         return self.get_queryset().has_question()
 
-    def has_quiz_old(self):
-        return self.get_queryset().has_quiz_old()
+    def has_public_question(self):
+        return self.get_queryset().has_public_question()
 
     def has_quiz(self):
         return self.get_queryset().has_quiz()
+
+    def has_public_quiz(self):
+        return self.get_queryset().has_public_quiz()
 
     def has_public_content(self):
         return self.get_queryset().has_public_content()
@@ -217,6 +239,9 @@ class User(AbstractUser):
         ROLES_ALLOWED = [user_constants.USER_ROLE_ADMINISTRATOR]
         return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
 
+    def is_question_author(self, question) -> bool:
+        return self == question.author
+
     def can_edit_question(self, question) -> bool:
         if question.is_private:
             return question.author == self
@@ -227,15 +252,21 @@ class User(AbstractUser):
             return question.author == self
         return (question.author != self) and (self.has_role_administrator)
 
+    def is_quiz_author(self, quiz) -> bool:
+        return self in quiz.authors.all()
+
+    def is_not_quiz_author(self, quiz) -> bool:
+        return self not in quiz.authors.all()
+
     def can_edit_quiz(self, quiz) -> bool:
         if quiz.is_private:
-            return quiz.author == self
-        return (quiz.author == self) or (self.has_role_administrator)
+            return self.is_quiz_author(quiz)
+        return self.is_quiz_author(quiz) or (self.has_role_administrator)
 
     def can_publish_quiz(self, quiz) -> bool:
         if quiz.is_private:
-            return quiz.author == self
-        return (quiz.author != self) and (self.has_role_administrator)
+            return self.is_quiz_author(quiz)
+        return self.is_not_quiz_author(quiz) and (self.has_role_administrator)
 
 
 @receiver(post_save, sender=User)

@@ -14,7 +14,7 @@ class UserModelTest(TestCase):
         cls.user = UserFactory(first_name="First", last_name="Last", email="test@example.com")
         QuestionFactory(author=cls.user)
         QuestionFactory(author=cls.user)
-        cls.quiz = QuizFactory(author=cls.user)
+        cls.quiz = QuizFactory()  # authors=[cls.user]
         cls.quiz.authors.set([cls.user])
 
     def test_str(self):
@@ -88,22 +88,27 @@ class UserModelQuerysetTest(TestCase):
         QuestionFactory(author=cls.user_2)
         QuestionFactory(author=cls.user_2)
         QuestionFactory(author=cls.user_3, visibility=constants.VISIBILITY_PRIVATE)
-        cls.quiz_1 = QuizFactory(name="quiz 1", author=cls.user_2)
-        cls.quiz_1.authors.set([cls.user_2])
-        cls.quiz_2 = QuizFactory(name="quiz 2", author=cls.user_3, visibility=constants.VISIBILITY_PRIVATE)
-        cls.quiz_2.authors.set([cls.user_3])
+        cls.quiz_1 = QuizFactory(name="quiz 1")  # authors=[cls.user_1]
+        cls.quiz_1.authors.set([cls.user_1])
+        cls.quiz_2 = QuizFactory(name="quiz 2")  # authors=[cls.user_2]
+        cls.quiz_2.authors.set([cls.user_2])
+        cls.quiz_3 = QuizFactory(name="quiz 3", visibility=constants.VISIBILITY_PRIVATE)  # authors=[cls.user_3]
+        cls.quiz_3.authors.set([cls.user_3])
 
     def test_has_question(self):
         self.assertEqual(User.objects.has_question().count(), 2)
 
-    def test_has_quiz_old(self):
-        self.assertEqual(User.objects.has_quiz_old().count(), 2)
+    def test_has_public_question(self):
+        self.assertEqual(User.objects.has_public_question().count(), 1)
 
     def test_has_quiz(self):
-        self.assertEqual(User.objects.has_quiz().count(), 2)
+        self.assertEqual(User.objects.has_quiz().count(), 3)
+
+    def test_has_public_quiz(self):
+        self.assertEqual(User.objects.has_public_quiz().count(), 2)
 
     def test_has_public_content(self):
-        self.assertEqual(User.objects.has_public_content().count(), 1)
+        self.assertEqual(User.objects.has_public_content().count(), 2)
 
     def test_simple_search(self):
         self.assertEqual(User.objects.simple_search(value="xy").count(), 1)

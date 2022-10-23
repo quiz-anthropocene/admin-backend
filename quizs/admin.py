@@ -73,6 +73,7 @@ class QuizRelationshipToInline(admin.StackedInline):  # TabularInline
 
 class QuizAuthorInline(admin.StackedInline):
     model = QuizAuthor
+    verbose_name = "Auteur"
     autocomplete_fields = ["author"]
     extra = 0
 
@@ -82,7 +83,6 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "id",
         "name",
         "question_count",
-        "author",
         "authors_list_string",
         "tags_list_string",
         "difficulty_average",
@@ -94,11 +94,10 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
         "created",
     ]
     search_fields = ["name"]
-    list_filter = ["publish", "spotlight", "has_audio", "author", "authors", "visibility", "language", "tags"]
+    list_filter = ["publish", "spotlight", "has_audio", "authors", "visibility", "language", "tags"]
     ordering = ["-id"]
 
     prepopulated_fields = {"slug": ("name",)}
-    autocomplete_fields = ["author"]
     filter_horizontal = ["tags"]
     # inlines = [QuizQuestionInline, QuizRelationshipFromInline, QuizRelationshipToInline]
     readonly_fields = [
@@ -137,7 +136,6 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
                     "name",
                     "slug",
                     "language",
-                    "author",
                     "introduction",
                     "conclusion",
                 )
@@ -209,7 +207,7 @@ class QuizAdmin(FieldsetsInlineMixin, ExportMixin, admin.ModelAdmin):
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)
-        qs = qs.select_related("author", "agg_stats")
+        qs = qs.select_related("agg_stats")
         qs = qs.prefetch_related("tags", "questions", "authors")
         return qs
 

@@ -16,15 +16,3 @@ class UserFactory(factory.django.DjangoModelFactory):
     email = factory.Sequence("email{0}@example.com".format)
     password = factory.PostGenerationMethodCall("set_password", DEFAULT_PASSWORD)
     roles = [constants.USER_ROLE_CONTRIBUTOR]
-
-    @factory.post_generation
-    def questions(self, create, extracted, **kwargs):
-        if extracted:
-            # Add the iterable of groups using bulk addition
-            self.questions.add(*extracted)
-
-    @factory.post_generation
-    def quizs(self, create, extracted, **kwargs):
-        if extracted:
-            # Add the iterable of groups using bulk addition
-            self.quizs.add(*extracted)
