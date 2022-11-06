@@ -24,81 +24,80 @@
 {% endblock %}
 
 {% block content %}
-<h1>Importer les questions depuis Notion</h1>
-<section class="action-text">
-  <p>
-    Les questions sont créés et validées dans Notion, avant d'être importés dans l'admin (ici !), pour y créer les quizs.
-  </p>
+{% if IMPORT_DATA_FROM_NOTION %}
+  <h1>Importer les questions depuis Notion {{ IMPORT_DATA_FROM_NOTION }}</h1>
+  <section class="action-text">
+    <p>
+      Les questions sont créés et validées dans Notion, avant d'être importés dans l'admin (ici !), pour y créer les quizs.
+    </p>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Boutons d'import</th>
-        <th>Dernière date de lancement</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for scope_value, scope_label, configuration_scope_field in notion_questions_import_scope_choices %}
-        <form method="POST">
-          {% csrf_token %}
-          <input type="hidden" name="run_import_questions_from_notion_script" value="{{ scope_value }}" />
-          <tr>
-            <td>
-              <input class="action-button" type="submit" value="Lancer l'import des questions depuis Notion : # {{ scope_label }}">
-            </td>
-            <td>
-              <strong>{{ configuration | get_obj_attr:configuration_scope_field | date:"SHORT_DATETIME_FORMAT" }}</strong>
-              <br />
-              <span>({{ configuration | get_obj_attr:configuration_scope_field | timesince }} ago)</span>
-            </td>
-          </tr>
-        </form>
-      {% endfor %}
-    </tbody>
-  </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Boutons d'import</th>
+          <th>Dernière date de lancement</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for scope_value, scope_label, configuration_scope_field in notion_questions_import_scope_choices %}
+          <form method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="run_import_questions_from_notion_script" value="{{ scope_value }}" />
+            <tr>
+              <td>
+                <input class="action-button" type="submit" value="Lancer l'import des questions depuis Notion : # {{ scope_label }}">
+              </td>
+              <td>
+                <strong>{{ configuration | get_obj_attr:configuration_scope_field | date:"SHORT_DATETIME_FORMAT" }}</strong>
+                <br />
+                <span>({{ configuration | get_obj_attr:configuration_scope_field | timesince }} ago)</span>
+              </td>
+            </tr>
+          </form>
+        {% endfor %}
+      </tbody>
+    </table>
 
-  <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
-  <div id="spinner" class="loading" role="status" style="display:none"></div>
-</section>
+    <i>⚠️ Veuillez patienter, cela peut prendre un peu de temps</i>
+    <div id="spinner" class="loading" role="status" style="display:none"></div>
+  </section>
 
-{% if notion_questions_import_response %}
-<section id="result-section">
-  <h2>Résultats : </h2>
-  <ul>
-  {% for result in notion_questions_import_response %}
-    {% if result|isinstance:"list" %}
-      <li>
-        <ul>
-          {% for elem in result %}
-            <li>{{ elem }}</li>
-          {% endfor %}
-        </ul>
-      </li>
-    {% else %}
-      {% if result|slice:":3" in ">>>" %}
-        <h3>{{ result }}</h3>
+  {% if notion_questions_import_response %}
+  <section id="result-section">
+    <h2>Résultats : </h2>
+    <ul>
+    {% for result in notion_questions_import_response %}
+      {% if result|isinstance:"list" %}
+        <li>
+          <ul>
+            {% for elem in result %}
+              <li>{{ elem }}</li>
+            {% endfor %}
+          </ul>
+        </li>
       {% else %}
-        <li>{{ result }}</li>
+        {% if result|slice:":3" in ">>>" %}
+          <h3>{{ result }}</h3>
+        {% else %}
+          <li>{{ result }}</li>
+        {% endif %}
       {% endif %}
-    {% endif %}
-  {% endfor %}
-  </ul>
+    {% endfor %}
+    </ul>
 
-  <h3>Aide sur les erreurs lors de l'import</h3>
-  <ul>
-    <li>si id manquant : il doit y avoir des questions sans id (voire vide ?) dans Notion</li>
-  </ul>
+    <h3>Aide sur les erreurs lors de l'import</h3>
+    <ul>
+      <li>si id manquant : il doit y avoir des questions sans id (voire vide ?) dans Notion</li>
+    </ul>
 
-</section>
+  </section>
+  {% endif %}
 {% endif %}
 
 <hr style="margin-top:20px;margin-bottom:20px" />
 
-<div style="padding:1rem;margin-bottom:1rem;background-color:#fff3cd">
-  ⚠️ Rappel : Actuellement les questions ne sont pas créés dans cet interface administrateur, mais dans l'application Notion (<a href="https://www.notion.so/quizplanete/d3a8e7d8c3bd41f89636302440b9629a?v=97c85b2c9c71456f919519478c6a57db" target=_blank>ici</a>).<br>
-  <strong>Une fois importées ici, elles n'apparaîtront pas pour autant tout de suite dans l'interface de l'application !</strong><br>
-  Il faut encore exporter la donnée vers Github, un bouton à <a href="{% url 'admin:index' %}">l'Accueil</a> permet de le faire en 1 clic.<br>
-  Plus de détails sur la procédure *actuelle* <a href="https://github.com/quiz-anthropocene/know-your-planet/wiki/Import-et-export-de-la-donn%C3%A9e">ici</a>.
+<div style="padding:1rem;margin-bottom:1rem;">
+  ⚠️ Rappel : pour créer/modifier/valider les questions, ca se passe maintenant dans <a href="{% url 'pages:home' %}">l'interface contributeur</a>.
 </div>
 
 <hr style="margin-top:20px;margin-bottom:20px" />
