@@ -25,7 +25,6 @@ django-solo = "*"
 drf-spectacular = "*"
 gunicorn = "*"
 ipython = "*"
-notion = {git = "https://github.com/raphodn/notion-py.git", ref = "511b93ed621625600795b7c4baa7e745d8ecfc2f"}
 pandas = "*"
 pillow = "*"
 psycopg2-binary = "*"
