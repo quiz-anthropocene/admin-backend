@@ -37,7 +37,6 @@ urlpatterns = [
     path("", views.api_home, name="index"),
     # path("questions/random", views.question_random, name="question_random"),
     # path("authors", views.author_list, name="author_list"),
-    # path("notion-questions", views.notion_questions, name="notion-questions"),
     path("newsletter/", views.newsletter, name="newsletter"),
     # Swagger / OpenAPI documentation
     path("schema/", SpectacularAPIView.as_view(), name="schema"),

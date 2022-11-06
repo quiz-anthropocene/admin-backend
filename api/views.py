@@ -1,10 +1,7 @@
 import json
-from io import StringIO
 
-from django.core import management
 from django.db.models import Count, F
 from django.http import HttpResponse
-from django.shortcuts import render
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -36,23 +33,6 @@ def author_list(request):
     )
 
     return Response(list(question_authors))
-
-
-@api_view(["GET", "POST"])
-def notion_questions(request):
-    notion_questions_validation = []
-
-    if request.POST.get("run_validate_questions_in_notion_script", False):
-        out = StringIO()
-        management.call_command("validate_questions_in_notion", stdout=out)
-        notion_questions_validation = out.getvalue()
-        notion_questions_validation = notion_questions_validation.split("\n")
-
-    return render(
-        request,
-        "notion_questions.html",
-        {"notion_questions_validation": notion_questions_validation},
-    )
 
 
 @api_view(["POST"])
