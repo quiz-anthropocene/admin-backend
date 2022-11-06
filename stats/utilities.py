@@ -25,28 +25,36 @@ def tag_stats():
 
 def question_stats():
     question_count = Question.objects.public().count()
+    question_published_count = Question.objects.public().validated().count()
     question_per_validation_status_count = (
         Question.objects.public()
         .values("validation_status")
         .annotate(total=Count("validation_status"))
         .order_by("-total")
     )
+    question_per_language_count = (
+        Question.objects.public().values("language").annotate(total=Count("language")).order_by("-total")
+    )
 
     return {
         "question_count": question_count,
+        "question_published_count": question_published_count,
         "question_per_validation_status_count": list(question_per_validation_status_count),
+        "question_per_language_count": list(question_per_language_count),
     }
 
 
 def quiz_stats():
     quiz_count = Quiz.objects.public().count()
-    quiz_per_publish_count = (
-        Quiz.objects.public().values("publish").annotate(total=Count("publish")).order_by("-total")
+    quiz_published_count = Quiz.objects.public().published().count()
+    quiz_per_language_count = (
+        Quiz.objects.public().values("language").annotate(total=Count("language")).order_by("-total")
     )
 
     return {
         "quiz_count": quiz_count,
-        "quiz_per_publish_count": list(quiz_per_publish_count),
+        "quiz_published_count": quiz_published_count,
+        "quiz_per_publish_count": list(quiz_per_language_count),
     }
 
 
