@@ -26,12 +26,6 @@ def tag_stats():
 def question_stats():
     question_count = Question.objects.public().count()
     question_published_count = Question.objects.public().validated().count()
-    question_per_validation_status_count = (
-        Question.objects.public()
-        .values("validation_status")
-        .annotate(total=Count("validation_status"))
-        .order_by("-total")
-    )
     question_per_language_count = (
         Question.objects.public().values("language").annotate(total=Count("language")).order_by("-total")
     )
@@ -39,7 +33,6 @@ def question_stats():
     return {
         "question_count": question_count,
         "question_published_count": question_published_count,
-        "question_per_validation_status_count": list(question_per_validation_status_count),
         "question_per_language_count": list(question_per_language_count),
     }
 
@@ -54,7 +47,7 @@ def quiz_stats():
     return {
         "quiz_count": quiz_count,
         "quiz_published_count": quiz_published_count,
-        "quiz_per_publish_count": list(quiz_per_language_count),
+        "quiz_per_language_count": list(quiz_per_language_count),
     }
 
 
