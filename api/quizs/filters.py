@@ -15,4 +15,5 @@ class QuizFilter(django_filters.FilterSet):
         label="Auteur(s)",
         queryset=User.objects.all_contributors(),
     )
+    spotlight = django_filters.BooleanFilter()
     # TODO: QuizFullSerializer, QuizWithQuestionOrderSerializer
