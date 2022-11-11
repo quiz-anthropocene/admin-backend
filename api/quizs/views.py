@@ -1,5 +1,6 @@
+from django_filters.rest_framework import DjangoFilterBackend
 from drf_spectacular.utils import extend_schema
-from rest_framework import mixins, viewsets
+from rest_framework import filters, mixins, viewsets
 
 from api.quizs.filters import QuizFilter
 from api.quizs.serializers import QuizSerializer
@@ -10,6 +11,8 @@ class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.Gen
     queryset = Quiz.objects.public().published()
     serializer_class = QuizSerializer
     filterset_class = QuizFilter
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
+    ordering_fields = ["id", "publish_date"]
 
     @extend_schema(summary="Lister tous les quiz *publiés*", tags=[Quiz._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
