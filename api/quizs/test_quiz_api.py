@@ -116,6 +116,16 @@ class QuizApiTest(TestCase):
         self.assertEqual(len(response.data["results"]), 1)  # paginates 1 result per page
         self.assertIsNotNone(response.data["next"])
 
+    def test_quiz_list_order(self):
+        response = self.client.get(reverse("api:quiz-list"), {"order": "id"})
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.data["results"]), 2)
+        self.assertEqual(response.data["results"][0]["id"], self.quiz_2.id)
+        response = self.client.get(reverse("api:quiz-list"), {"order": "-id"})
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.data["results"]), 2)
+        self.assertEqual(response.data["results"][0]["id"], self.quiz_3.id)
+
     # def test_quiz_list_with_question_order(self):
     #     response = self.client.get(reverse("api:quiz-list"), {"question_order": "true"})
     #     self.assertEqual(response.status_code, 200)
