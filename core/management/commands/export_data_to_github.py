@@ -8,7 +8,7 @@ from django.utils import timezone
 from api.categories.serializers import CategorySerializer
 from api.glossary.serializers import GlossaryItemSerializer
 from api.questions.serializers import QuestionSerializer
-from api.quizs.serializers import QuizQuestionSerializer, QuizRelationshipSerializer, QuizSerializer
+from api.quizs.serializers import QuizQuestionSerializer, QuizRelationshipSerializer, QuizWithQuestionSerializer
 from api.tags.serializers import TagSerializer
 from api.users.serializers import UserWithCountSerializer
 from categories.models import Category
@@ -141,7 +141,7 @@ class Command(BaseCommand):
                 # data/quizs.yaml
                 start_time = time.time()
                 quizs_yaml = utilities.serialize_model_to_yaml(
-                    model_queryset=quiz_queryset, model_serializer=QuizSerializer
+                    model_queryset=quiz_queryset, model_serializer=QuizWithQuestionSerializer
                 )
                 quizs_element = github.create_file_element(file_path="data/quizs.yaml", file_content=quizs_yaml)
 

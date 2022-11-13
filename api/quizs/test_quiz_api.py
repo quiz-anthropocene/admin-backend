@@ -81,8 +81,10 @@ class QuizApiTest(TestCase):
         self.assertIsInstance(response.data["results"], list)
         self.assertEqual(len(response.data["results"]), 2)  # 1 quiz not published
         self.assertIsNone(response.data["next"])  # pagination: 100
-        # self.assertEqual(response.data["results"][0]["question_count"], 2)
-        # self.assertEqual(response.data["results"][0]["questions"][0], self.question_2.id)
+        # quiz questions
+        self.assertEqual(response.data["results"][0]["id"], self.quiz_2.id)
+        self.assertEqual(response.data["results"][0]["question_count"], 2)
+        self.assertFalse("question" in response.data["results"][0])
 
     def test_quiz_list_filter_by_language(self):
         response = self.client.get(reverse("api:quiz-list"), {"language": constants.LANGUAGE_ENGLISH})
@@ -142,3 +144,11 @@ class QuizApiTest(TestCase):
     #     self.assertEqual(len(response.data["results"]), 1)  # 1 quiz not published
     #     self.assertEqual(len(response.data["results"][0]["questions"]), 2)
     #     self.assertEqual(response.data["results"][0]["questions"][0]["id"], self.question_2.id)
+
+    def test_quiz_detail(self):
+        response = self.client.get(reverse("api:quiz-detail", args=[self.quiz_2.id]))
+        self.assertEqual(response.status_code, 200)
+        self.assertIsInstance(response.data, dict)
+        # questions
+        self.assertEqual(response.data["question_count"], 2)
+        self.assertEqual(len(response.data["questions"]), 2)
