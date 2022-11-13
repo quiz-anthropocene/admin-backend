@@ -28,6 +28,7 @@ QUIZ_FIELDS = [
     "introduction",
     "conclusion",
     # "questions",
+    # "question_count",
     "tags",
     "difficulty_average",
     "language",
@@ -42,29 +43,40 @@ QUIZ_FIELDS = [
     "publish_date",
     "spotlight",
     # "relationships",
-    # "question_count",
     # "questions_categories_list",
     # "questions_tags_list",
     # "questions_authors_list",
     "created",
     "updated",
 ]
-QUIZ_FIELDS_WITH_QUESTIONS = QUIZ_FIELDS
+
+QUIZ_FIELDS_WITH_QUESTION_COUNT = QUIZ_FIELDS.copy()
+QUIZ_FIELDS_WITH_QUESTION_COUNT.insert(QUIZ_FIELDS_WITH_QUESTION_COUNT.index("tags"), "question_count")
+
+QUIZ_FIELDS_WITH_QUESTIONS = QUIZ_FIELDS.copy()
 QUIZ_FIELDS_WITH_QUESTIONS.insert(QUIZ_FIELDS_WITH_QUESTIONS.index("tags"), "questions")
+
+QUIZ_FIELDS_WITH_QUESTION_COUNT_AND_QUESTIONS = QUIZ_FIELDS_WITH_QUESTION_COUNT.copy()
+QUIZ_FIELDS_WITH_QUESTION_COUNT_AND_QUESTIONS.insert(
+    QUIZ_FIELDS_WITH_QUESTION_COUNT_AND_QUESTIONS.index("question_count"), "questions"
+)
 
 
 class QuizSerializer(serializers.ModelSerializer):
     # author = UserStringSerializer()
+    question_count = serializers.IntegerField(source="questions.count", read_only=True)
 
     class Meta:
         model = Quiz
-        fields = QUIZ_FIELDS
+        fields = QUIZ_FIELDS_WITH_QUESTION_COUNT
 
 
 class QuizWithQuestionSerializer(serializers.ModelSerializer):
+    question_count = serializers.IntegerField(source="questions.count", read_only=True)
+
     class Meta:
         model = Quiz
-        fields = QUIZ_FIELDS_WITH_QUESTIONS
+        fields = QUIZ_FIELDS_WITH_QUESTION_COUNT_AND_QUESTIONS
 
 
 class QuizWithQuestionFullStringSerializer(serializers.ModelSerializer):

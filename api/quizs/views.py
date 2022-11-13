@@ -3,12 +3,12 @@ from drf_spectacular.utils import extend_schema
 from rest_framework import filters, mixins, viewsets
 
 from api.quizs.filters import QuizFilter
-from api.quizs.serializers import QuizSerializer
+from api.quizs.serializers import QuizSerializer, QuizWithQuestionSerializer
 from quizs.models import Quiz
 
 
 class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
-    queryset = Quiz.objects.public().published()
+    queryset = Quiz.objects.prefetch_many_to_many().public().published()
     serializer_class = QuizSerializer
     filterset_class = QuizFilter
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
@@ -20,4 +20,5 @@ class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.Gen
 
     @extend_schema(summary="Détail d'un quiz *publié*", tags=[Quiz._meta.verbose_name_plural])
     def retrieve(self, request, *args, **kwargs):
+        self.serializer_class = QuizWithQuestionSerializer
         return super().retrieve(request, args, kwargs)

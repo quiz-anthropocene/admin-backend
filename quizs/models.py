@@ -19,6 +19,9 @@ from tags.models import Tag
 
 
 class QuizQuerySet(models.QuerySet):
+    def prefetch_many_to_many(self):
+        return self.prefetch_related("questions", "tags", "authors", "relationships")
+
     def validated(self):
         return self.filter(validation_status=constants.VALIDATION_STATUS_OK)
 
