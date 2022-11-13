@@ -8,7 +8,7 @@ from quizs.models import Quiz
 
 
 class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
-    queryset = Quiz.objects.public().published()
+    queryset = Quiz.objects.prefetch_many_to_many().public().published()
     serializer_class = QuizSerializer
     filterset_class = QuizFilter
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
