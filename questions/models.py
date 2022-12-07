@@ -75,7 +75,7 @@ class Question(models.Model):
     QUESTION_M2M_FIELDS = ["tags"]
     QUESTION_RELATION_FIELDS = QUESTION_FK_FIELDS + QUESTION_M2M_FIELDS
     QUESTION_BOOLEAN_FIELDS = ["has_ordered_answers"]
-    QUESTION_URL_FIELDS = ["answer_audio", "answer_video", "answer_accessible_url", "answer_scientific_url"]
+    QUESTION_URL_FIELDS = ["answer_audio_url", "answer_video_url", "answer_accessible_url", "answer_scientific_url"]
     QUESTION_IMAGE_URL_FIELDS = ["answer_image_url"]
     QUESTION_TIMESTAMP_FIELDS = ["created", "updated"]
     QUESTION_FLATTEN_FIELDS = ["category_string", "tag_list", "quiz_list", "author_string", "validator_string"]
@@ -145,8 +145,8 @@ class Question(models.Model):
         help_text="Les choix de réponse sont affichés dans cet ordre, et ne doivent pas être mélangés",
     )
     answer_explanation = models.TextField(verbose_name="Explication de texte de la bonne réponse", blank=True)
-    answer_audio = models.URLField(verbose_name="Lien vers une explication audio", max_length=500, blank=True)
-    answer_video = models.URLField(verbose_name="Lien vers une explication vidéo", max_length=500, blank=True)
+    answer_audio_url = models.URLField(verbose_name="Lien vers une explication audio", max_length=500, blank=True)
+    answer_video_url = models.URLField(verbose_name="Lien vers une explication vidéo", max_length=500, blank=True)
     answer_accessible_url = models.URLField(
         verbose_name="Lien vers une source 'grand public'", max_length=500, blank=True
     )
@@ -279,12 +279,12 @@ class Question(models.Model):
         return len(self.answer_explanation) > 0
 
     @property
-    def has_answer_audio(self) -> bool:
-        return len(self.answer_audio) > 0
+    def has_answer_audio_url(self) -> bool:
+        return len(self.answer_audio_url) > 0
 
     @property
-    def has_answer_video(self) -> bool:
-        return len(self.answer_video) > 0
+    def has_answer_video_url(self) -> bool:
+        return len(self.answer_video_url) > 0
 
     @property
     def has_answer_accessible_url(self) -> bool:
