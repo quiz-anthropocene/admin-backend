@@ -3,6 +3,7 @@ from django.db import models
 from django.db.models import Q
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.urls import reverse
 from django.utils import timezone
 
 from core.utils import slack
@@ -78,16 +79,48 @@ class Event(models.Model):
         verbose_name_plural = "Événements"
 
     @property
+    def get_event_object_admin_absolute_url(self):
+        if self.event_object_type == "QUESTION":
+            return reverse("questions:detail_view", kwargs={"pk": self.event_object_id})
+        elif self.event_object_type == "QUIZ":
+            return reverse("quizs:detail_view", kwargs={"pk": self.event_object_id})
+        return ""
+
+    @property
     def display_html(self) -> str:
         if self.event_object_type in ["QUESTION", "QUIZ"]:
             # Prénom Nom a créé la question 'Question'
-            return self.display_full
+            return self.display_question_quiz_with_admin_url_html
         elif self.event_object_type in ["USER"]:
-            return f"{self.display_event_emoji} Nouveau contributeur ! <strong>{self.event_object_name}</strong>"
+            return self.display_new_user_html
 
     @property
-    def display_full(self) -> str:
-        return f"{self.display_event_emoji} <i>{self.actor_name}</i> a {self.get_event_verb_display().lower()} {self.display_event_object_type_prefix} {self.get_event_object_type_display().lower()} <strong>{self.event_object_name}</strong>"  # noqa
+    def display_question_quiz_html(self) -> str:
+        """
+        💡 <i>Prénom Nom</i> a créé la question <strong>test</strong>
+        """
+        return (
+            f"{self.display_event_emoji} "
+            f"<i>{self.actor_name}</i> a {self.get_event_verb_display().lower()} "
+            f"{self.display_event_object_type_prefix} {self.get_event_object_type_display().lower()} "
+            f"<strong>{self.event_object_name}</strong>"
+        )
+
+    @property
+    def display_question_quiz_with_admin_url_html(self) -> str:
+        """
+        💡 <i>Prénom Nom</i> a créé la question <a href="/questions/<id>/view/">test</a>
+        """
+        return (
+            f"{self.display_event_emoji} "
+            f"<i>{self.actor_name}</i> a {self.get_event_verb_display().lower()} "
+            f"{self.display_event_object_type_prefix} {self.get_event_object_type_display().lower()} "
+            f'<a href="{self.get_event_object_admin_absolute_url}">{self.event_object_name}</a>'
+        )
+
+    @property
+    def display_new_user_html(self) -> str:
+        return f"{self.display_event_emoji} Nouveau contributeur ! <strong>{self.event_object_name}</strong>"
 
     @property
     def display_event_object_type_prefix(self) -> str:
@@ -112,4 +145,4 @@ class Event(models.Model):
 @receiver(post_save, sender=Event)
 def send_event_to_slack(sender, instance, created, **kwargs):
     if created:
-        slack.send_message_to_webhook(instance.display_full, webhook_url=settings.ACTIVITY_EVENT_WEBHOOK_URL)
+        slack.send_message_to_webhook(instance.display_html, webhook_url=settings.ACTIVITY_EVENT_WEBHOOK_URL)
