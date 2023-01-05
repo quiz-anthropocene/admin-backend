@@ -18,7 +18,7 @@ def create_event(user: User, event_verb: str, event_object, created=timezone.now
         event_object_name = event_object.text
     elif event_object_type in ["USER"]:
         event_object_name = event_object.full_name
-    else:
+    else:  # "QUIZ"
         event_object_name = event_object.name
     if len(event_object_name) > 150:
         event_object_name = event_object_name[:147] + "..."
