@@ -463,6 +463,10 @@ class QuizQuestion(models.Model):
             if self.order:
                 if QuizQuestion.objects.filter(quiz=self.quiz, order=self.order).exists():
                     raise ValidationError({"order": "La valeur existe déjà"})
+        # else:  # empêche de réordonner simplement les questions
+        #     if self.order:
+        #         if QuizQuestion.objects.filter(quiz=self.quiz, order=self.order).count() > 1:
+        #             raise ValidationError({"order": "La valeur existe déjà"})
         if not self.order:  # 0 or None
             last_quiz_question = QuizQuestion.objects.filter(quiz=self.quiz).last()
             self.order = (last_quiz_question.order + 1) if last_quiz_question else 1

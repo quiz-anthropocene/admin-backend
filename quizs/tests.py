@@ -225,10 +225,14 @@ class QuizQuestionModelTest(TestCase):
         cls.user = UserFactory(first_name="Paul", last_name="Dupont")
         cls.question = QuestionFactory(text="Une question")
         cls.quiz = QuizFactory(name="Quiz 1")  # questions=[cls.question]
-        cls.quiz.questions.set([cls.question])
+        QuizQuestion.objects.create(quiz=cls.quiz, question=cls.question, order=1)
 
     def test_cannot_have_duplicate_quiz_question(self):
         self.assertRaises(ValidationError, QuizQuestion.objects.create, quiz=self.quiz, question=self.question)
+
+    def test_cannot_add_question_with_same_order(self):
+        question_2 = QuestionFactory(text="Une autre question")
+        self.assertRaises(ValidationError, QuizQuestion.objects.create, quiz=self.quiz, question=question_2, order=1)
 
 
 class QuizAuthorModelTest(TestCase):
