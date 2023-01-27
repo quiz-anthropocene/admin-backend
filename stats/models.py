@@ -305,3 +305,11 @@ class DailyStat(models.Model):
 
     def __str__(self):
         return f"{self.date}"
+
+
+class LinkClickEvent(models.Model):
+    quiz = models.ForeignKey(Quiz, null=True, on_delete=models.CASCADE, related_name="link_clicks")
+    question = models.ForeignKey(Question, null=True, on_delete=models.CASCADE, related_name="link_clicks")
+    url = models.URLField(verbose_name="Lien cliqué", max_length=500, blank=True)
+
+    created = models.DateTimeField(default=timezone.now, help_text="La date & heure du clic")
