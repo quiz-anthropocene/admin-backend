@@ -11,6 +11,7 @@ from core.models import Configuration
 from stats import constants
 from stats.models import (
     DailyStat,
+    LinkClickEvent,
     QuestionAggStat,
     QuestionAnswerEvent,
     QuestionFeedbackEvent,
@@ -231,6 +232,30 @@ class QuizFeedbackEventAdmin(ExportMixin, admin.ModelAdmin):
         return False
 
 
+class LinkClickEventAdmin(admin.ModelAdmin):
+    list_display = (
+        "id",
+        "quiz",
+        "question",
+        "link_url",
+        "created",
+    )
+    # list_filter = ("quiz",)
+    ordering = ("-id",)
+
+    def get_readonly_fields(self, request, obj=None):
+        return [f.name for f in obj._meta.fields]
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
 class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
@@ -329,4 +354,5 @@ admin_site.register(QuestionFeedbackEvent, QuestionFeedbackEventAdmin)
 admin_site.register(QuizAggStat, QuizAggStatAdmin)
 admin_site.register(QuizAnswerEvent, QuizAnswerEventAdmin)
 admin_site.register(QuizFeedbackEvent, QuizFeedbackEventAdmin)
+admin_site.register(LinkClickEvent, LinkClickEventAdmin)
 admin_site.register(DailyStat, DailyStatAdmin)
