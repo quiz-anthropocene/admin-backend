@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
             name="LinkClickEvent",
             fields=[
                 ("id", models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
-                ("url", models.URLField(blank=True, max_length=500, verbose_name="Lien cliqué")),
+                ("link_url", models.URLField(blank=True, max_length=500, verbose_name="Lien cliqué")),
                 (
                     "created",
                     models.DateTimeField(default=django.utils.timezone.now, help_text="La date & heure du clic"),
