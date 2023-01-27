@@ -6,8 +6,16 @@ from drf_spectacular.utils import extend_schema
 from rest_framework import mixins, viewsets
 from rest_framework.decorators import api_view
 
-from stats.models import DailyStat, QuestionAnswerEvent, QuestionFeedbackEvent, QuizAnswerEvent, QuizFeedbackEvent
+from stats.models import (
+    DailyStat,
+    LinkClickEvent,
+    QuestionAnswerEvent,
+    QuestionFeedbackEvent,
+    QuizAnswerEvent,
+    QuizFeedbackEvent,
+)
 from stats.serializers import (
+    LinkClickEventSerializer,
     QuestionAnswerEventSerializer,
     QuestionFeedbackEventSerializer,
     QuizAnswerEventSerializer,
@@ -45,6 +53,15 @@ class QuizAnswerEventViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
 class QuizFeedbackEventViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
     queryset = QuizFeedbackEvent.objects.all()
     serializer_class = QuizFeedbackEventSerializer
+
+    @extend_schema(exclude=True)
+    def create(self, request, *args, **kwargs):
+        return super().create(request, args, kwargs)
+
+
+class LinkClickEventViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
+    queryset = LinkClickEvent.objects.all()
+    serializer_class = LinkClickEventSerializer
 
     @extend_schema(exclude=True)
     def create(self, request, *args, **kwargs):

@@ -1,6 +1,7 @@
 from rest_framework import routers
 
 from stats.views import (
+    LinkClickEventViewSet,
     QuestionAnswerEventViewSet,
     QuestionFeedbackEventViewSet,
     QuizAnswerEventViewSet,
@@ -15,6 +16,7 @@ router.register(r"question-answer-event", QuestionAnswerEventViewSet, basename="
 router.register(r"question-feedback-event", QuestionFeedbackEventViewSet, basename="question-feedback-event")
 router.register(r"quiz-answer-event", QuizAnswerEventViewSet, basename="quiz-answer-event")
 router.register(r"quiz-feedback-event", QuizFeedbackEventViewSet, basename="quiz-feedback-event")
+router.register(r"link-click-event", LinkClickEventViewSet, basename="link-click-event")
 
 urlpatterns = []
 
