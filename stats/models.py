@@ -211,6 +211,7 @@ class QuizFeedbackEvent(models.Model):
 class LinkClickEvent(models.Model):
     quiz = models.ForeignKey(Quiz, null=True, on_delete=models.CASCADE, related_name="link_clicks")
     question = models.ForeignKey(Question, null=True, on_delete=models.CASCADE, related_name="link_clicks")
+    field_name = models.CharField(verbose_name="Nom du champ", max_length=50, blank=True)
     link_url = models.URLField(verbose_name="Lien cliqué", max_length=500, blank=True)
 
     created = models.DateTimeField(default=timezone.now, help_text="La date & heure du clic")

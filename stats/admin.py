@@ -237,6 +237,7 @@ class LinkClickEventAdmin(admin.ModelAdmin):
         "id",
         "quiz",
         "question",
+        "field_name",
         "link_url",
         "created",
     )
