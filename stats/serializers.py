@@ -57,9 +57,9 @@ class QuizFeedbackEventSerializer(serializers.ModelSerializer):
 
 
 class LinkClickEventSerializer(serializers.ModelSerializer):
-    quiz = serializers.PrimaryKeyRelatedField(queryset=Quiz.objects.all(), required=False)
-    question = serializers.PrimaryKeyRelatedField(queryset=Question.objects.all(), required=False)
+    quiz = serializers.PrimaryKeyRelatedField(queryset=Quiz.objects.all(), allow_null=True, required=False)
+    question = serializers.PrimaryKeyRelatedField(queryset=Question.objects.all(), allow_null=True, required=False)
 
     class Meta:
         model = LinkClickEvent
-        fields = ["quiz", "question", "link_url", "created"]
+        fields = ["quiz", "question", "field_name", "link_url", "created"]
