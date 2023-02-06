@@ -12,6 +12,8 @@ class GlossaryAdmin(ExportMixin, admin.ModelAdmin):
         "created",
     )
 
+    readonly_fields = ["created", "updated"]
+
     def has_add_permission(self, request, obj=None):
         return False
 

@@ -12,6 +12,7 @@ class TagAdmin(ExportMixin, admin.ModelAdmin):
         "question_public_validated_count",
         "quiz_count",
         "quiz_public_published_count",
+        "created",
     )
     search_fields = ("name",)
     ordering = ("name",)
@@ -21,6 +22,8 @@ class TagAdmin(ExportMixin, admin.ModelAdmin):
         "export_as_yaml",
         "export_all_tag_as_yaml",
     ]
+
+    readonly_fields = ["created", "updated"]
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)

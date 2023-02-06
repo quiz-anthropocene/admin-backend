@@ -11,6 +11,7 @@ class CategoryAdmin(ExportMixin, admin.ModelAdmin):
         "name_long",
         "question_count",
         "question_public_validated_count",
+        "created",
     )
     search_fields = ("name",)
     ordering = ("id",)
@@ -20,6 +21,8 @@ class CategoryAdmin(ExportMixin, admin.ModelAdmin):
         "export_as_yaml",
         "export_all_category_as_yaml",
     ]
+
+    readonly_fields = ["created", "updated"]
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)
