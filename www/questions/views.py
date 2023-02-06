@@ -38,6 +38,7 @@ class QuestionListView(ContributorUserRequiredMixin, SingleTableMixin, FilterVie
     def get_queryset(self):
         qs = super().get_queryset()
         qs = qs.select_related("category", "author", "validator").prefetch_related("tags")
+        qs = qs.order_by("-created")
         return qs
 
     def get_context_data(self, **kwargs):
