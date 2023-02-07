@@ -27,6 +27,7 @@ class TagListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
     def get_queryset(self):
         qs = super().get_queryset()
         qs = qs.prefetch_related("questions", "quizs")
+        qs = qs.order_by("name")
         return qs
 
     def get_context_data(self, **kwargs):

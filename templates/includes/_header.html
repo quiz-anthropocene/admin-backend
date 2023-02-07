@@ -30,6 +30,9 @@
                                 <a class="nav-link" href="{% url 'contributions:list' %}">Contributions</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="{% url 'tags:list' %}">Tags</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{% url 'glossary:list' %}">Glossaire</a>
                             </li>
                             {% if user.has_role_administrator %}
