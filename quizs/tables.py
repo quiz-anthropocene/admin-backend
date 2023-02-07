@@ -40,6 +40,7 @@ class QuizTable(tables.Table):
 
     class Meta:
         model = Quiz
+        fields = QUIZ_FIELD_SEQUENCE
         sequence = QUIZ_FIELD_SEQUENCE
         template_name = DEFAULT_TEMPLATE
         attrs = DEFAULT_ATTRS

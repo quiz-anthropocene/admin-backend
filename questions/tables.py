@@ -32,6 +32,7 @@ class QuestionTable(tables.Table):
 
     class Meta:
         model = Question
+        fields = QUESTION_FIELD_SEQUENCE
         sequence = QUESTION_FIELD_SEQUENCE
         template_name = DEFAULT_TEMPLATE
         attrs = DEFAULT_ATTRS

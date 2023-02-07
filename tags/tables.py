@@ -18,6 +18,7 @@ class TagTable(tables.Table):
 
     class Meta:
         model = Tag
+        fields = TAG_FIELD_SEQUENCE
         sequence = TAG_FIELD_SEQUENCE
         template_name = DEFAULT_TEMPLATE
         attrs = DEFAULT_ATTRS

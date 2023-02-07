@@ -16,6 +16,7 @@ class CategoryTable(tables.Table):
 
     class Meta:
         model = Category
+        fields = CATEGORY_FIELD_SEQUENCE
         sequence = CATEGORY_FIELD_SEQUENCE
         template_name = DEFAULT_TEMPLATE
         attrs = DEFAULT_ATTRS
