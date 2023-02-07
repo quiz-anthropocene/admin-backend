@@ -238,7 +238,9 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
         text_short = self.object.text if (len(self.object.text) < 20) else (self.object.text[:18] + "…")
         question_link = reverse_lazy("questions:detail_view", args=[self.object.id])
         return mark_safe(
-            f"La question <a href='{question_link}'><strong>{text_short}</strong></a> a été crée avec succès."
+            "La question "
+            f"<a href='{question_link}' title='{self.object.text}'><strong>{text_short}</strong></a> "
+            "a été crée avec succès."
         )
 
 

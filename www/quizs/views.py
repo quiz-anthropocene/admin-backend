@@ -271,4 +271,8 @@ class QuizCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVi
     def get_success_message(self, cleaned_data):
         name_short = self.object.name if (len(self.object.name) < 20) else (self.object.name[:18] + "…")
         quiz_link = reverse_lazy("quizs:detail_view", args=[self.object.id])
-        return mark_safe(f"Le quiz <a href='{quiz_link}'><strong>{name_short}</strong></a> a été crée avec succès.")
+        return mark_safe(
+            "Le quiz "
+            f"<a href='{quiz_link}' title='{self.object.name}'><strong>{name_short}</strong></a> "
+            "a été crée avec succès."
+        )

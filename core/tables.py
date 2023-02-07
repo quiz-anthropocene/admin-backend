@@ -3,7 +3,7 @@ from django.utils.encoding import force_str
 from django.utils.html import format_html
 
 from core import constants
-from core.utils.utilities import get_choice_key
+from core.utils.utilities import get_choice_key, remove_html_tags, truncate_with_ellipsis
 from questions.models import Question
 from users import constants as user_constants
 from users.models import User
@@ -57,18 +57,17 @@ class ImageColumn(tables.Column):
 
 class RichTextColumn(tables.Column):
     def render(self, value):
-        return format_html(value)
+        # could have used format_html or strip_tags
+        return remove_html_tags(value)
 
 
 class RichTextEllipsisColumn(tables.Column):
     def render(self, value):
-        if len(value) > 60:
-            value = value[:54] + " (…)"
-        return format_html(value)
+        value_cleaned = remove_html_tags(value)
+        return truncate_with_ellipsis(value_cleaned, 60)
 
 
 class RichTextLongerEllipsisColumn(tables.Column):
     def render(self, value):
-        if len(value) > 300:
-            value = value[:294] + " (…)"
-        return format_html(value)
+        value_cleaned = remove_html_tags(value)
+        return truncate_with_ellipsis(value_cleaned, 300)

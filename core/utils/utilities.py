@@ -131,13 +131,28 @@ def add_validation_error(dict, key, value):
     return dict
 
 
-def clean_markdown_links(string_with_markdown):
+def remove_html_tags(text):
+    """
+    Remove html tags from a string
+    https://medium.com/@jorlugaqui/how-to-strip-html-tags-from-a-string-in-python-7cb81a2bbf44
+    """
+    clean = re.compile("<.*?>")
+    return re.sub(clean, "", text)
+
+
+def clean_markdown_links(text_with_markdown):
     """
     Clean strings with markdown links using regex
     "string with [http://link](http://link)" --> "string with http://link"
     https://stackoverflow.com/a/32382747
     """
-    return re.sub(r"\[(.*?)\]\((.+?)\)", r"\1", string_with_markdown)
+    return re.sub(r"\[(.*?)\]\((.+?)\)", r"\1", text_with_markdown)
+
+
+def truncate_with_ellipsis(text, ellipsis_threshold=None):
+    if ellipsis_threshold and len(text) > ellipsis_threshold:
+        text = text[: (ellipsis_threshold - 8)] + " (…)"
+    return text
 
 
 def update_frontend_last_updated_datetime(file_content, new_datetime):

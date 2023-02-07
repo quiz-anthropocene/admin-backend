@@ -104,4 +104,4 @@ class TagCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVie
     success_url = reverse_lazy("tags:list")
 
     def get_success_message(self, cleaned_data):
-        return mark_safe(f"Le tag <strong>{cleaned_data['name']}</strong> a été crée avec succès.")
+        return mark_safe(f"Le tag <strong>{self.object.name}</strong> a été crée avec succès.")
