@@ -1,10 +1,28 @@
 {% extends "quizs/detail_base.html" %}
 {% load render_table from django_tables2 %}
+{% load django_bootstrap5 %}
 
 {% block quiz_detail_content %}
 <div class="row">
     <div class="col-12">
         {% render_table table %}
+
+        <br />
+        <div class="card">
+            <div class="card-header">
+                <strong>Ajouter un commentaire</strong>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-warning" role="status">
+                    Formulaire pour <strong>ajouter</strong> un commentaire à ce quiz.
+                    {% if table.rows.count %}
+                        <br />
+                        Si vous souhaitez <strong>répondre</strong> à un commentaire au dessus, cliquez sur "Voir".
+                    {% endif %}
+                </div>
+                <p><i>à venir</i></p>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
