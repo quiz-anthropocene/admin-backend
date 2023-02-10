@@ -11,6 +11,14 @@
                 <div class="col-md-8">
                     {% bootstrap_form form alert_error_type="all" %}
                 </div>
+                <!-- Sidebar -->
+                <div class="col-md-4 d-none d-md-block">
+                    {% if not contribution.processed %}
+                        <div class="alert alert-warning" role="alert">
+                            ✍️ Cette contribution n'a pas encore été <strong>traitée</strong>.
+                        </div>
+                    {% endif %}
+                </div>
             </div>
 
             <div class="row">
