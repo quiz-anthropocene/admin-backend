@@ -146,7 +146,17 @@ class Question(models.Model):
     )
     answer_explanation = models.TextField(verbose_name="Explication de texte de la bonne réponse", blank=True)
     answer_audio_url = models.URLField(verbose_name="Lien vers une explication audio", max_length=500, blank=True)
+    answer_audio_url_text = models.CharField(
+        verbose_name="Texte pour remplacer l'affichage du lien 'explication audio'",
+        max_length=500,
+        blank=True,
+    )
     answer_video_url = models.URLField(verbose_name="Lien vers une explication vidéo", max_length=500, blank=True)
+    answer_video_url_text = models.CharField(
+        verbose_name="Texte pour remplacer l'affichage du lien 'explication vidéo'",
+        max_length=500,
+        blank=True,
+    )
     answer_accessible_url = models.URLField(
         verbose_name="Lien vers une source 'grand public'", max_length=500, blank=True
     )
