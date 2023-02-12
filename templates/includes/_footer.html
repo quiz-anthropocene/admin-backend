@@ -1,17 +1,36 @@
+{% load i18n %}
+
 <footer class="py-3 my-4 border-top">
     <div class="container">
         <div class="row">
             <div class="col-md-4 my-auto">
                 <p class="mb-0 text-muted">Quiz de l'Anthropocène</p>
             </div>
-            <div class="col-md-4 offset-md-4">
+            <div class="col-md-4">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+
+                <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}" />
+                <select name="language">
+                    {% for language in languages %}
+                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                        {{ language.name_local }} ({{ language.code }})
+                    </option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Go" />
+                </form>
+            </div>
+            <div class="col-md-4" offset-md-4>
                 <ul class="nav">
                     <li class="nav-item">
-                        <a href="{{ CONFIGURATION.application_frontend_url }}" target="_blank" class="nav-link px-2 text-muted">Application</a>
+                        <a href="{{ CONFIGURATION.application_frontend_url }}" target="_blank" class="nav-link px-2 text-muted">{% translate "Website" %}</a>
                     </li>
                     {% if user.is_authenticated and user.has_role_contributor %}
                         <li class="nav-item">
-                            <a href="{{ METABASE_GENERAL_DASHBOARD_PUBLIC_URL }}" target="_blank" class="nav-link px-2 text-muted">Statistiques</a>
+                            <a href="{{ METABASE_GENERAL_DASHBOARD_PUBLIC_URL }}" target="_blank" class="nav-link px-2 text-muted">{% translate "Statistics" %}</a>
                         </li>
                     {% endif %}
                     <li class="nav-item">

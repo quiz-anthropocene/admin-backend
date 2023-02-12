@@ -5,14 +5,16 @@
 {% block title %}Liste des administrateurs{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
+{% load i18n %}
+
 <div class="container">
     <div class="row">
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'pages:help_home' %}">Aide</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Liste des administrateurs</li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:help_home' %}">{% translate "Help" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "Admins list" %}</li>
                 </ol>
             </nav>
         </div>
@@ -24,7 +26,7 @@
 <div class="container">
     <div class="row">
         <div class="col-9">
-            <h1>Liste des administrateurs <span class="fs-3 text-muted">{{ administrators.count }}</span></h1>
+            <h1>{% translate "Admins list" %} <span class="fs-3 text-muted">{{ administrators.count }}</span></h1>
         </div>
     </div>
     <!-- Table -->

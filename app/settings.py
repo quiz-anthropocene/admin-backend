@@ -15,6 +15,7 @@ import sys
 
 import dj_database_url
 import sentry_sdk
+from django.utils.translation import gettext_lazy as gettext_lazy
 from dotenv import load_dotenv
 from sentry_sdk.integrations.django import DjangoIntegration
 
@@ -54,6 +55,7 @@ DJANGO_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.utils.translation",
 ]
 
 THIRD_PARTY_APPS = [
@@ -71,6 +73,7 @@ THIRD_PARTY_APPS = [
     "solo",  # django-solo
     "dal",  # django-autocomplete-light
     "dal_select2",
+    "rosetta",
 ]
 
 LOCAL_APPS = [
@@ -101,6 +104,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
 ]
 
 ROOT_URLCONF = "app.urls"
@@ -171,6 +175,15 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+LANGUAGES = (
+    ("en", gettext_lazy("English")),
+    ("fr", gettext_lazy("French")),
+)
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, "locale"),
+]
 
 
 # Static files (CSS, JavaScript, Images)
