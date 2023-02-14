@@ -18,7 +18,7 @@ class HomeViewTest(TestCase):
         # anonymous
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(response.url, "/accounts/login/?next=/profile/")
+        self.assertIn("/accounts/login/?next=", response.url)
         # simple user
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
         response = self.client.get(self.url)

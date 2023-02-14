@@ -1,5 +1,5 @@
 {% extends "layouts/base.html" %}
-
+{% load i18n %}
 {% block title %}Accueil{{ block.super }}{% endblock %}
 
 {% block content %}
@@ -12,21 +12,21 @@
             <div class="col-12 col-lg-8">
                 <div class="row">
                     <div class="col-12">
-                        <h4>Bonjour {{ user.first_name }} !</h4>
-                        <p>Bienvenue sur <strong>l'interface contributeur</strong> du Quiz de l'Anthropocène.</p>
-                        <p>Ici tu pourras :</p>
+                        <h4>{% blocktrans with user.first_name as first_name %}Hello {{ first_name }}!{% endblocktrans %}</h4>
+                        <p>{% blocktrans %}Welcome to the <strong>contributor interface</strong> of Quiz de l'Anthropocène.{% endblocktrans %}</p>
+                        <p>{% translate "Here you can:" %}</p>
                         <ul>
-                            <li>Créer des questions & des quizs (publiques ou privés)</li>
-                            <li>Améliorer les questions publiques (grâce aux retours utilisateurs par exemple)</li>
-                            <li>Voir les stats de réponse</li>
-                            <li>Mettre à jour le glossaire</li>
-                            <li><small>et plein de futurs fonctionnalités :)</small></li>
+                            <li>{% translate "Create questions & quizs (public or private)" %}</li>
+                            <li>{% translate "Improve public questions (with help from user feedback for example)" %}</li>
+                            <li>{% translate "View stats on answers" %}</li>
+                            <li>{% translate "Update the glossary" %}</li>
+                            <li><small>{% translate "and many more functionalities :)" %}</small></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
-                <h4>Actions récentes</h4>
+                <h4>{% translate "Recent actions" %}</h4>
                 <ul style="list-style-type:none;padding-left:0">
                     {% for event in last_10_events %}
                         <li>

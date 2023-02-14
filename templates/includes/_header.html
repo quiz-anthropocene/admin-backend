@@ -1,3 +1,5 @@
+{% load i18n %}
+
 {% if DEBUG %}
     {% include "includes/_header_notice_env.html" %}
 {% endif %}
@@ -18,7 +20,7 @@
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                         {% if user.has_role_contributor %}
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'profile:home' %}">Mon espace</a>
+                                <a class="nav-link" href="{% url 'profile:home' %}">{% translate "My space" %}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'questions:list' %}">Questions</a>
@@ -33,7 +35,7 @@
                                 <a class="nav-link" href="{% url 'tags:list' %}">Tags</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'glossary:list' %}">Glossaire</a>
+                                <a class="nav-link" href="{% url 'glossary:list' %}">{% translate "Glossary" %}</a>
                             </li>
                             {% if user.has_role_administrator %}
                                 <span style="padding:0.5em">|</span>
@@ -43,17 +45,17 @@
                             {% endif %}
                             <span style="padding:0.5em">|</span>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'pages:help_home' %}">🛟 Aide</a>
+                                <a class="nav-link" href="{% url 'pages:help_home' %}">🛟 {% translate "Help" %}</a>
                             </li>
                         {% endif %}
                     </ul>
                     <a href="{% url 'auth:logout' %}">
-                        <span>Se déconnecter</span>
+                        <span>{% translate "Log out" %}</span>
                     </a>
                 {% else %}
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;"></ul>
                     <a class="btn btn-primary btn-block" href="{% url 'auth:login' %}">
-                        <span>Se connecter</span>
+                        <span>{% translate "Log in" %}</span>
                     </a>
                 {% endif %}
                 </ul>
