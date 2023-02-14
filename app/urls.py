@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.conf.urls.i18n import i18n_patterns
-from django.urls import include, path, re_path
+from django.urls import include, path
 
 from core.admin import admin_site
 
@@ -25,9 +25,6 @@ urlpatterns = i18n_patterns(
     path("stats/", include("stats.urls")),
     path("i18n/", include("django.conf.urls.i18n")),
 )
-
-if "rosetta" in settings.INSTALLED_APPS:
-    urlpatterns += [re_path(r"^rosetta/", include("rosetta.urls"))]
 
 if settings.DEBUG:  # and "debug_toolbar" in settings.INSTALLED_APPS:
     urlpatterns += [path("__debug__/", include("debug_toolbar.urls"))]

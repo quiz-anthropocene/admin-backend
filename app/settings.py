@@ -73,7 +73,6 @@ THIRD_PARTY_APPS = [
     "solo",  # django-solo
     "dal",  # django-autocomplete-light
     "dal_select2",
-    "rosetta",
 ]
 
 LOCAL_APPS = [
