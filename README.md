@@ -8,13 +8,14 @@ Mieux appréhender les limites de notre planète, à travers des questions simpl
 - [But](#but)
 - [Stack technique](#stack-technique)
 - [Contribuer](#contribuer)
+- [Translation](#translation)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## But
 
 - Rassembler un ensemble de connaissances sous forme de questions (QCM uniquement pour l'instant)
-- Couvrir un large panel de sujets : climat, biodiversité, énergie, consommation, ...
+- Couvrir un large panel de sujets : climat, biodiversité, énergie, consommation…
 - Des questions avec différents niveaux de difficultés, pour sensibiliser ou se perfectionner
 - Une rigueur scientifique dans le choix des questions, et surtout dans les explications apportées autour de la réponse
 - Une base de donnée facilement accessible et editable
@@ -38,3 +39,7 @@ Le code et les questions sont en open-source : venez nous aider !
 ## Liens
 
 https://quizanthropocene.fr
+
+## Translation
+
+We are currently in the process of translating this application. English, German, Spanish… Come help us !

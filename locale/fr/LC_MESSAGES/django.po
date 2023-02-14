@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-12 22:25+0100\n"
+"POT-Creation-Date: 2023-02-14 15:47+0100\n"
 "PO-Revision-Date: 2023-02-12 21:23+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -19,75 +19,75 @@ msgstr ""
 "X-Generator: Poedit 3.2.2\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\app\settings.py:181
+#: app/settings.py:178
 msgid "English"
 msgstr "Anglais"
 
-#: .\app\settings.py:182
+#: app/settings.py:179
 msgid "French"
 msgstr "Français"
 
-#: .\templates\includes\_footer.html:29
+#: templates/includes/_footer.html:29
 msgid "Website"
 msgstr "Application"
 
-#: .\templates\includes\_footer.html:33
+#: templates/includes/_footer.html:33
 msgid "Statistics"
 msgstr "Statistiques"
 
-#: .\templates\includes\_header.html:22
+#: templates/includes/_header.html:23
 msgid "My space"
 msgstr "Mon espace"
 
-#: .\templates\includes\_header.html:34
+#: templates/includes/_header.html:38
 msgid "Glossary"
 msgstr "Glossaire"
 
-#: .\templates\includes\_header.html:44
-#: .\templates\pages\administrator_list.html:16
+#: templates/includes/_header.html:48
+#: templates/pages/administrator_list.html:14
 msgid "Help"
 msgstr "Aide"
 
-#: .\templates\includes\_header.html:49
+#: templates/includes/_header.html:53
 msgid "Log out"
 msgstr "Se déconnecter"
 
-#: .\templates\includes\_header.html:54
+#: templates/includes/_header.html:58
 msgid "Log in"
 msgstr "Se connecter"
 
-#: .\templates\includes\_header_notice_beta.html:5
+#: templates/includes/_header_notice_beta.html:5
 msgid ""
 "Website under construction. Feedback is gladly welcome (bugs, "
 "improvements...)"
 msgstr ""
 "Site en construction. Preneur de tous vos retours (bugs, améliorations…)"
 
-#: .\templates\includes\_header_notice_beta.html:5
+#: templates/includes/_header_notice_beta.html:5
 msgid "contact us"
 msgstr "nous contacter"
 
-#: .\templates\includes\_s3_upload_form.html:9
+#: templates/includes/_s3_upload_form.html:9
 msgid "Choose an image"
 msgstr "Choisissez une image"
 
-#: .\templates\includes\_s3_upload_form.html:9
+#: templates/includes/_s3_upload_form.html:9
 msgid "or"
 msgstr "ou"
 
-#: .\templates\includes\_s3_upload_form.html:9
+#: templates/includes/_s3_upload_form.html:9
 msgid "drag and drop here"
 msgstr "glissez ici"
 
-#: .\templates\includes\_s3_upload_form.html:10
+#: templates/includes/_s3_upload_form.html:10
 msgid "Maximum size"
 msgstr "Taille maximale"
 
-#: .\templates\includes\_s3_upload_form.html:11
+#: templates/includes/_s3_upload_form.html:11
 msgid "File type"
 msgstr "Type de fichier"
 
-#: .\templates\includes\_s3_upload_form.html:18
+#: templates/includes/_s3_upload_form.html:18
 msgid ""
 "JavaScript is not activated. Please restart Javascript to enable adding "
 "images."
@@ -95,53 +95,53 @@ msgstr ""
 "JavaScript n'est pas activé. Il est nécessaire de réactiver JavaScript pour "
 "activer la fonctionnalité d'ajout d'image."
 
-#: .\templates\pages\administrator_list.html:15
+#: templates/pages/administrator_list.html:13
 msgid "Home"
 msgstr "Accueil"
 
-#: .\templates\pages\administrator_list.html:17
-#: .\templates\pages\administrator_list.html:29
+#: templates/pages/administrator_list.html:15
+#: templates/pages/administrator_list.html:27
 msgid "Admins list"
 msgstr "Liste des administrateurs"
 
-#: .\templates\pages\help.html:25
+#: templates/pages/help.html:25
 msgid "Do you need help?"
 msgstr "Vous avez besoin d'aide ?"
 
-#: .\templates\pages\help.html:28
+#: templates/pages/help.html:28
 msgid "How to use the administrator interface"
 msgstr "Prendre en main l'interface contributeur"
 
-#: .\templates\pages\help.html:30
+#: templates/pages/help.html:30
 msgid "Tutorial"
 msgstr "Tutoriel"
 
-#: .\templates\pages\help.html:35
+#: templates/pages/help.html:35
 msgid "Contact an administrator"
 msgstr "Contacter un administrateur"
 
-#: .\templates\pages\help.html:37
+#: templates/pages/help.html:37
 msgid "Administrator list"
 msgstr "Liste des administrateurs"
 
-#: .\templates\pages\help.html:38
+#: templates/pages/help.html:38
 msgid "Invitation link"
 msgstr "lien d'invitation"
 
-#: .\templates\pages\help.html:44
+#: templates/pages/help.html:44
 msgid "Do you have another question? You want to report a bug, an improvement?"
 msgstr "Une autre question ? Un bug ? Une demande d'amélioration ?"
 
-#: .\templates\pages\help.html:45
+#: templates/pages/help.html:45
 msgid "Please post your feedback on Discord :)"
 msgstr "Faites-nous tous vos retours via Discord :)"
 
-#: .\templates\pages\home.html:15
+#: templates/pages/home.html:15
 #, python-format
 msgid "Hello %(first_name)s!"
 msgstr "Bonjour %(first_name)s !"
 
-#: .\templates\pages\home.html:16
+#: templates/pages/home.html:16
 msgid ""
 "Welcome to the <strong>contributor interface</strong> of Quiz de "
 "l'Anthropocène."
@@ -149,35 +149,35 @@ msgstr ""
 "Bienvenue sur <strong>l'interface contributeur</strong> du Quiz de "
 "l'Anthropocène."
 
-#: .\templates\pages\home.html:17
+#: templates/pages/home.html:17
 msgid "Here you can:"
 msgstr "Ici tu pourras :"
 
-#: .\templates\pages\home.html:19
+#: templates/pages/home.html:19
 #, fuzzy
 #| msgid "Create questions & quizs (publiq ou private)"
 msgid "Create questions & quizs (public or private)"
 msgstr "Créer des questions & des quizs (publiques ou privés)"
 
-#: .\templates\pages\home.html:20
+#: templates/pages/home.html:20
 msgid "Improve public questions (with help from user feedback for example)"
 msgstr ""
 "Améliorer les questions publiques (grâce aux retours utilisateurs par "
 "exemple)"
 
-#: .\templates\pages\home.html:21
+#: templates/pages/home.html:21
 msgid "View stats on answers"
 msgstr "Voir les stats de réponse"
 
-#: .\templates\pages\home.html:22
+#: templates/pages/home.html:22
 msgid "Update the glossary"
 msgstr "Mettre à jour le glossaire"
 
-#: .\templates\pages\home.html:23
+#: templates/pages/home.html:23
 msgid "and many more functionalities :)"
 msgstr "et plein de futurs fonctionnalités :)"
 
-#: .\templates\pages\home.html:29
+#: templates/pages/home.html:29
 msgid "Recent actions"
 msgstr "Actions récentes"
 

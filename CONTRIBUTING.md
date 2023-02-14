@@ -18,9 +18,9 @@ Merci d'être là et de vouloir contribuer :)
   - [Lancer le projet en local](#lancer-le-projet-en-local)
     - [Installer l'application](#installer-lapplication)
     - [Lancer l'application](#lancer-lapplication)
-      - [Lancer le Backend](#lancer-le-backend)
     - [Accéder à la console admin](#acc%C3%A9der-%C3%A0-la-console-admin)
   - [Lancer les tests](#lancer-les-tests)
+  - [Traduction](#traduction)
   - [Autres commandes utiles](#autres-commandes-utiles)
     - [Commandes Backend](#commandes-backend)
     - [Commandes Autres](#commandes-autres)
@@ -35,9 +35,10 @@ Il y a plusieurs aspects du projet qui ont besoin d'aide :
     - rajouter de nouvelles questions
     - proposer des modifications sur des questions existantes
 - L'application :
-    - Remonter les bugs
-    - Faire des propositions d'améliorations (grâce aux Issues Github)
-    - Aider à développer l'application (grâce aux Issues et Pull Requests Github)
+    - remonter les bugs
+    - faire des propositions d'améliorations (grâce aux Issues Github)
+    - aider à développer l'application (grâce aux Issues et Pull Requests Github)
+    - aider à traduire l'application
 
 ### Rajouter ou modifier des questions
 
@@ -143,10 +144,7 @@ Voir dans le dossier [quiz-anthropocene/public-frontend/data/architecture](https
     ```
 \* Voir section Windows à la fin si cette section pose problème
 
-
 #### Lancer l'application
-
-##### Lancer le Backend
 
 ```
 cd backend
@@ -175,6 +173,22 @@ pipenv run python manage.py test
 ```
 
 Linting ? Avec le pre-commit
+
+### Traduction
+
+Vous devez d'abord installer `gettext`
+
+Les fichiers de traductions se trouvent dans le dossier `/locale`
+
+Mettre à jour les fichiers `.po`
+```
+python manage.py makemessages --all
+```
+
+Compiler les fichiers `.po` en `.mo`
+```
+python manage.py compilemessages
+```
 
 ### Autres commandes utiles
 
