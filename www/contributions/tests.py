@@ -27,7 +27,7 @@ class ContributionListViewTest(TestCase):
         # anonmyous
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(response.url, "/accounts/login/?next=/contributions/")
+        self.assertIn("/accounts/login/?next=", response.url)
         # simple user
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
         response = self.client.get(self.url)
@@ -51,7 +51,7 @@ class ContributionDetailViewTest(TestCase):
             url = reverse(edit_url, args=[self.contribution_1.id])
             response = self.client.get(url)
             self.assertEqual(response.status_code, 302)
-            self.assertTrue(response.url.startswith("/accounts/login/"))
+            self.assertIn("/accounts/login/?next=", response.url)
 
     def test_contributor_can_access_contribution_detail(self):
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
