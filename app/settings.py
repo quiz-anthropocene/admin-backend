@@ -15,7 +15,7 @@ import sys
 
 import dj_database_url
 import sentry_sdk
-from django.utils.translation import gettext_lazy as gettext_lazy
+from django.utils.translation import gettext_lazy as _
 from dotenv import load_dotenv
 from sentry_sdk.integrations.django import DjangoIntegration
 
@@ -55,7 +55,6 @@ DJANGO_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django.utils.translation",
 ]
 
 THIRD_PARTY_APPS = [
@@ -176,8 +175,8 @@ USE_L10N = True
 USE_TZ = True
 
 LANGUAGES = (
-    ("en", gettext_lazy("English")),
-    ("fr", gettext_lazy("French")),
+    ("en", _("English")),
+    ("fr", _("French")),
 )
 
 LOCALE_PATHS = [

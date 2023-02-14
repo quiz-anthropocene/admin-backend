@@ -1,3 +1,5 @@
+{% load i18n %}
+
 {% if DEBUG %}
     {% include "includes/_header_notice_env.html" %}
 {% endif %}
@@ -5,7 +7,6 @@
 {% if user.is_authenticated and user.has_role_contributor %}
     {% include "includes/_header_notice_beta.html" %}
 {% endif %}
-{% load i18n %}
 
 <header>
     <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
