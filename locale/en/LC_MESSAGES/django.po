@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-16 00:12+0100\n"
+"POT-Creation-Date: 2023-02-16 00:23+0100\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -40,7 +40,7 @@ msgstr ""
 #: templates/contributions/list.html:13 templates/glossary/create.html:16
 #: templates/glossary/detail_base.html:12 templates/glossary/list.html:13
 #: templates/pages/administrator_list.html:13 templates/pages/help.html:12
-#: templates/pages/home.html:4 templates/profile/history.html:12
+#: templates/pages/home.html:4 templates/profile/history.html:13
 #: templates/profile/home.html:12 templates/profile/info.html:12
 #: templates/profile/questions.html:13 templates/profile/quizs.html:13
 #: templates/questions/create.html:17 templates/questions/detail_base.html:12
@@ -77,7 +77,7 @@ msgid "History"
 msgstr ""
 
 #: templates/admin/home.html:28 templates/admin/home.html:36
-#: templates/contributions/_table_action_items.html:11
+#: templates/contributions/_table_action_items.html:13
 #: templates/profile/home.html:28 templates/profile/home.html:36
 #: templates/profile/home.html:47 templates/profile/home.html:60
 msgid "View"
@@ -218,7 +218,7 @@ msgstr ""
 msgid "Stats"
 msgstr ""
 
-#: templates/includes/_header.html:23 templates/profile/history.html:13
+#: templates/includes/_header.html:23 templates/profile/history.html:14
 #: templates/profile/home.html:4 templates/profile/home.html:13
 #: templates/profile/info.html:13 templates/profile/questions.html:14
 #: templates/profile/quizs.html:14
@@ -233,7 +233,8 @@ msgid "Quizs"
 msgstr ""
 
 #: templates/includes/_header.html:48
-#: templates/pages/administrator_list.html:14
+#: templates/pages/administrator_list.html:14 templates/pages/help.html:4
+#: templates/pages/help.html:13
 msgid "Help"
 msgstr ""
 
@@ -290,31 +291,35 @@ msgstr ""
 msgid "Do you need help?"
 msgstr ""
 
-#: templates/pages/help.html:28
+#: templates/pages/help.html:29
 msgid "How to use the administrator interface"
 msgstr ""
 
-#: templates/pages/help.html:30
+#: templates/pages/help.html:31
 msgid "Tutorial"
 msgstr ""
 
-#: templates/pages/help.html:35
+#: templates/pages/help.html:31
+msgid "FAQ"
+msgstr ""
+
+#: templates/pages/help.html:36
 msgid "Contact an administrator"
 msgstr ""
 
-#: templates/pages/help.html:37
+#: templates/pages/help.html:38
 msgid "Administrator list"
 msgstr ""
 
-#: templates/pages/help.html:38
+#: templates/pages/help.html:39
 msgid "Invitation link"
 msgstr ""
 
-#: templates/pages/help.html:44
+#: templates/pages/help.html:45
 msgid "Do you have another question? You want to report a bug, an improvement?"
 msgstr ""
 
-#: templates/pages/help.html:45
+#: templates/pages/help.html:46
 msgid "Please post your feedback on Discord :)"
 msgstr ""
 
