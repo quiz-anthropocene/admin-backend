@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-14 15:47+0100\n"
-"PO-Revision-Date: 2023-02-12 21:23+0100\n"
+"POT-Creation-Date: 2023-02-16 00:23+0100\n"
+"PO-Revision-Date: 2023-02-16 00:23+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -27,24 +27,214 @@ msgstr "Anglais"
 msgid "French"
 msgstr "Français"
 
+#: templates/403.html:4 templates/404.html:4 templates/404.html:10
+#: templates/500.html:4 templates/500.html:10
+msgid "Error"
+msgstr "Erreur"
+
+#: templates/admin/contributor_create.html:10
+#: templates/admin/contributor_list.html:13 templates/admin/history.html:13
+#: templates/admin/home.html:12 templates/categories/detail_base.html:12
+#: templates/categories/list.html:13
+#: templates/contributions/detail_base.html:12
+#: templates/contributions/list.html:13 templates/glossary/create.html:16
+#: templates/glossary/detail_base.html:12 templates/glossary/list.html:13
+#: templates/pages/administrator_list.html:13 templates/pages/help.html:12
+#: templates/pages/home.html:4 templates/profile/history.html:13
+#: templates/profile/home.html:12 templates/profile/info.html:12
+#: templates/profile/questions.html:13 templates/profile/quizs.html:13
+#: templates/questions/create.html:17 templates/questions/detail_base.html:12
+#: templates/questions/list.html:13 templates/quizs/create.html:17
+#: templates/quizs/detail_base.html:12 templates/quizs/list.html:13
+#: templates/tags/create.html:16 templates/tags/detail_base.html:12
+#: templates/tags/list.html:13
+msgid "Home"
+msgstr "Accueil"
+
+#: templates/admin/contributor_create.html:11
+#: templates/admin/contributor_list.html:14 templates/admin/history.html:5
+#: templates/admin/history.html:14 templates/admin/home.html:4
+#: templates/admin/home.html:13 templates/includes/_header.html:43
+msgid "Administration"
+msgstr "Liste des administrateurs"
+
+#: templates/admin/contributor_create.html:13
+#: templates/admin/contributor_list.html:35 templates/glossary/create.html:4
+#: templates/glossary/create.html:18 templates/glossary/list.html:29
+#: templates/profile/questions.html:35 templates/profile/quizs.html:30
+#: templates/questions/create.html:4 templates/questions/create.html:19
+#: templates/questions/list.html:34 templates/quizs/create.html:4
+#: templates/quizs/create.html:19 templates/quizs/list.html:34
+#: templates/tags/create.html:4 templates/tags/create.html:18
+#: templates/tags/list.html:34
+msgid "Add"
+msgstr "Ajouter"
+
+#: templates/admin/history.html:15 templates/admin/home.html:35
+#: templates/glossary/detail_base.html:34
+#: templates/questions/detail_base.html:43 templates/quizs/detail_base.html:43
+msgid "History"
+msgstr "Historique"
+
+#: templates/admin/home.html:28 templates/admin/home.html:36
+#: templates/contributions/_table_action_items.html:13
+#: templates/profile/home.html:28 templates/profile/home.html:36
+#: templates/profile/home.html:47 templates/profile/home.html:60
+msgid "View"
+msgstr "Voir"
+
+#: templates/categories/detail_base.html:4
+#: templates/categories/detail_questions.html:13
+#: templates/tags/detail_questions.html:13
+msgid "Category"
+msgstr "Catégorie"
+
+#: templates/categories/detail_base.html:13 templates/categories/list.html:5
+#: templates/categories/list.html:14
+msgid "Categories"
+msgstr "Catégories"
+
+#: templates/categories/detail_base.html:28
+#: templates/contributions/detail_base.html:33
+#: templates/glossary/detail_base.html:28
+#: templates/questions/detail_base.html:28 templates/quizs/detail_base.html:28
+#: templates/tags/detail_base.html:28
+msgid "Details"
+msgstr "Détails"
+
+#: templates/categories/detail_base.html:31
+#: templates/contributions/detail_base.html:36
+#: templates/glossary/detail_base.html:31
+#: templates/questions/detail_base.html:31 templates/quizs/detail_base.html:31
+#: templates/tags/detail_base.html:31
+msgid "Edit"
+msgstr "Modifier"
+
+#: templates/categories/detail_base.html:34 templates/includes/_header.html:26
+#: templates/questions/create.html:4 templates/questions/create.html:18
+#: templates/questions/detail_base.html:13 templates/questions/list.html:14
+#: templates/quizs/detail_base.html:34 templates/tags/detail_base.html:34
+msgid "Questions"
+msgstr "Questions"
+
+#: templates/categories/detail_questions.html:12
+#: templates/questions/detail_base.html:4
+#: templates/tags/detail_questions.html:12
+msgid "Question"
+msgstr "Question"
+
+#: templates/categories/detail_questions.html:14
+#: templates/includes/_header.html:35 templates/tags/create.html:17
+#: templates/tags/detail_base.html:13 templates/tags/detail_questions.html:14
+#: templates/tags/detail_quizs.html:13 templates/tags/list.html:14
+msgid "Tags"
+msgstr "Tags"
+
+#: templates/categories/detail_view.html:11
+#: templates/contributions/detail_view.html:11
+#: templates/glossary/detail_view.html:11 templates/profile/info.html:30
+#: templates/questions/detail_view.html:11 templates/quizs/detail_view.html:11
+#: templates/tags/detail_view.html:11
+msgid "Field"
+msgstr "Champ"
+
+#: templates/categories/detail_view.html:12
+#: templates/contributions/detail_view.html:12
+#: templates/glossary/detail_view.html:12 templates/profile/info.html:31
+#: templates/questions/detail_view.html:12 templates/quizs/detail_view.html:12
+#: templates/tags/detail_view.html:12
+msgid "Value"
+msgstr "Valeur"
+
+#: templates/categories/list.html:26
+msgid "All the categories"
+msgstr "Toutes les catégories"
+
+#: templates/contributions/detail_base.html:4
+msgid "Contribution"
+msgstr "Contribution"
+
+#: templates/contributions/detail_base.html:13
+#: templates/contributions/list.html:5 templates/contributions/list.html:14
+#: templates/includes/_header.html:32
+msgid "Contributions"
+msgstr "Contributions"
+
+#: templates/contributions/detail_base.html:40
+#: templates/questions/detail_base.html:37 templates/quizs/detail_base.html:37
+msgid "Comments"
+msgstr "Commentaires"
+
+#: templates/contributions/list.html:26
+msgid "All the contributions"
+msgstr "Toutes les contributions"
+
+#: templates/glossary/create.html:4 templates/glossary/create.html:17
+#: templates/glossary/detail_base.html:4 templates/glossary/detail_base.html:13
+#: templates/glossary/list.html:5 templates/glossary/list.html:14
+#: templates/glossary/list.html:26 templates/includes/_header.html:38
+msgid "Glossary"
+msgstr "Glossaire"
+
+#: templates/glossary/create.html:41 templates/questions/create.html:64
+#: templates/questions/detail_edit.html:83 templates/quizs/create.html:64
+msgid "Cancel"
+msgstr "Annuler"
+
+#: templates/glossary/detail_history.html:11
+#: templates/questions/detail_history.html:11
+#: templates/quizs/detail_history.html:11
+msgid "Date"
+msgstr "Date"
+
+#: templates/glossary/detail_history.html:12
+#: templates/questions/detail_history.html:12
+#: templates/quizs/detail_history.html:12
+msgid "Author"
+msgstr "Auteur"
+
+#: templates/glossary/detail_history.html:13
+#: templates/questions/detail_history.html:13
+#: templates/quizs/detail_history.html:13
+msgid "Action"
+msgstr "Action"
+
+#: templates/glossary/detail_history.html:14
+#: templates/questions/detail_history.html:14
+#: templates/quizs/detail_history.html:14
+msgid "Changes"
+msgstr "Modifications"
+
+#: templates/includes/_footer.html:7 templates/includes/_header.html:14
+msgid "Anthropocene Quiz"
+msgstr "Quiz de l'Anthropocène"
+
 #: templates/includes/_footer.html:29
 msgid "Website"
 msgstr "Application"
 
-#: templates/includes/_footer.html:33
-msgid "Statistics"
+#: templates/includes/_footer.html:33 templates/questions/detail_base.html:40
+#: templates/quizs/detail_base.html:40
+msgid "Stats"
 msgstr "Statistiques"
 
-#: templates/includes/_header.html:23
+#: templates/includes/_header.html:23 templates/profile/history.html:14
+#: templates/profile/home.html:4 templates/profile/home.html:13
+#: templates/profile/info.html:13 templates/profile/questions.html:14
+#: templates/profile/quizs.html:14
 msgid "My space"
 msgstr "Mon espace"
 
-#: templates/includes/_header.html:38
-msgid "Glossary"
-msgstr "Glossaire"
+#: templates/includes/_header.html:29 templates/questions/detail_base.html:34
+#: templates/quizs/create.html:4 templates/quizs/create.html:18
+#: templates/quizs/detail_base.html:13 templates/quizs/list.html:14
+#: templates/tags/detail_base.html:37
+msgid "Quizs"
+msgstr "Quizs"
 
 #: templates/includes/_header.html:48
-#: templates/pages/administrator_list.html:14
+#: templates/pages/administrator_list.html:14 templates/pages/help.html:4
+#: templates/pages/help.html:13
 msgid "Help"
 msgstr "Aide"
 
@@ -95,10 +285,6 @@ msgstr ""
 "JavaScript n'est pas activé. Il est nécessaire de réactiver JavaScript pour "
 "activer la fonctionnalité d'ajout d'image."
 
-#: templates/pages/administrator_list.html:13
-msgid "Home"
-msgstr "Accueil"
-
 #: templates/pages/administrator_list.html:15
 #: templates/pages/administrator_list.html:27
 msgid "Admins list"
@@ -108,40 +294,44 @@ msgstr "Liste des administrateurs"
 msgid "Do you need help?"
 msgstr "Vous avez besoin d'aide ?"
 
-#: templates/pages/help.html:28
+#: templates/pages/help.html:29
 msgid "How to use the administrator interface"
 msgstr "Prendre en main l'interface contributeur"
 
-#: templates/pages/help.html:30
+#: templates/pages/help.html:31
 msgid "Tutorial"
 msgstr "Tutoriel"
 
-#: templates/pages/help.html:35
+#: templates/pages/help.html:31
+msgid "FAQ"
+msgstr "FAQ"
+
+#: templates/pages/help.html:36
 msgid "Contact an administrator"
 msgstr "Contacter un administrateur"
 
-#: templates/pages/help.html:37
+#: templates/pages/help.html:38
 msgid "Administrator list"
 msgstr "Liste des administrateurs"
 
-#: templates/pages/help.html:38
+#: templates/pages/help.html:39
 msgid "Invitation link"
 msgstr "lien d'invitation"
 
-#: templates/pages/help.html:44
+#: templates/pages/help.html:45
 msgid "Do you have another question? You want to report a bug, an improvement?"
 msgstr "Une autre question ? Un bug ? Une demande d'amélioration ?"
 
-#: templates/pages/help.html:45
+#: templates/pages/help.html:46
 msgid "Please post your feedback on Discord :)"
 msgstr "Faites-nous tous vos retours via Discord :)"
 
-#: templates/pages/home.html:15
+#: templates/pages/home.html:16
 #, python-format
 msgid "Hello %(first_name)s!"
 msgstr "Bonjour %(first_name)s !"
 
-#: templates/pages/home.html:16
+#: templates/pages/home.html:17
 msgid ""
 "Welcome to the <strong>contributor interface</strong> of Quiz de "
 "l'Anthropocène."
@@ -149,37 +339,83 @@ msgstr ""
 "Bienvenue sur <strong>l'interface contributeur</strong> du Quiz de "
 "l'Anthropocène."
 
-#: templates/pages/home.html:17
+#: templates/pages/home.html:18
 msgid "Here you can:"
 msgstr "Ici tu pourras :"
 
-#: templates/pages/home.html:19
-#, fuzzy
-#| msgid "Create questions & quizs (publiq ou private)"
-msgid "Create questions & quizs (public or private)"
-msgstr "Créer des questions & des quizs (publiques ou privés)"
-
 #: templates/pages/home.html:20
+msgid "Create questions & quizs (public or private)"
+msgstr "Créer des questions & des quizs (publics ou privés)"
+
+#: templates/pages/home.html:21
 msgid "Improve public questions (with help from user feedback for example)"
 msgstr ""
 "Améliorer les questions publiques (grâce aux retours utilisateurs par "
 "exemple)"
 
-#: templates/pages/home.html:21
+#: templates/pages/home.html:22
 msgid "View stats on answers"
 msgstr "Voir les stats de réponse"
 
-#: templates/pages/home.html:22
+#: templates/pages/home.html:23
 msgid "Update the glossary"
 msgstr "Mettre à jour le glossaire"
 
-#: templates/pages/home.html:23
+#: templates/pages/home.html:24
 msgid "and many more functionalities :)"
 msgstr "et plein de futurs fonctionnalités :)"
 
-#: templates/pages/home.html:29
+#: templates/pages/home.html:30
 msgid "Recent actions"
 msgstr "Actions récentes"
 
-#~ msgid "wtf"
-#~ msgstr "keke"
+#: templates/profile/home.html:27 templates/profile/questions.html:5
+#: templates/profile/questions.html:15
+msgid "My questions"
+msgstr "Mes questions"
+
+#: templates/profile/home.html:35 templates/profile/quizs.html:5
+#: templates/profile/quizs.html:15
+msgid "My quizs"
+msgstr "Mes quizs"
+
+#: templates/profile/home.html:59 templates/profile/info.html:4
+#: templates/profile/info.html:14
+msgid "My profile"
+msgstr "Mon profil"
+
+#: templates/profile/info.html:36
+msgid "First name"
+msgstr "Prénom"
+
+#: templates/profile/info.html:40
+msgid "Last name"
+msgstr "Nom"
+
+#: templates/profile/info.html:44
+msgid "Email address"
+msgstr "Adresse e-mail"
+
+#: templates/profile/info.html:48
+msgid "Roles"
+msgstr "Rôles"
+
+#: templates/profile/info.html:56
+msgid "Account creation date"
+msgstr "Date de création du compte"
+
+#: templates/profile/quizs.html:27
+msgid "All my quizs"
+msgstr "Tous mes quizs"
+
+#: templates/questions/detail_edit.html:86
+msgid "Delete"
+msgstr "Supprimer"
+
+#: templates/quizs/detail_base.html:4
+msgid "Quiz"
+msgstr "Quiz"
+
+#: templates/tags/detail_base.html:4
+msgid "Tag"
+msgstr "Tag"

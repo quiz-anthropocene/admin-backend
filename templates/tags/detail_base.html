@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
-{% load custom_filters %}
+{% load i18n custom_filters %}
 
-{% block title %}Tag : {{ tag.name }}{{ block.super }}{% endblock %}
+{% block title %}{% translate "Tag" %} : {{ tag.name }}{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -9,8 +9,8 @@
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'tags:list' %}">Tags</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'tags:list' %}">{% translate "Tags" %}</a></li>
                     <li class="breadcrumb-item active" aria-current="page" title="{{ tag }}">{{ tag|truncatechars:50 }}</li>
                 </ol>
             </nav>
@@ -25,16 +25,16 @@
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_view' tag.id %}">Détails</a>
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_view' tag.id %}">{% translate "Details" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_edit' tag.id %}">Modifier</a>
+                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_edit' tag.id %}">{% translate "Edit" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'questions' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_questions' tag.id %}">Questions ({{ tag.question_count }})</a>
+                    <a class="nav-link {% if 'questions' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_questions' tag.id %}">{% translate "Questions" %} ({{ tag.question_count }})</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'quizs' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_quizs' tag.id %}">Quizs ({{ tag.quiz_count }})</a>
+                    <a class="nav-link {% if 'quizs' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_quizs' tag.id %}">{% translate "Quizs" %} ({{ tag.quiz_count }})</a>
                 </li>
             </ul>
         </div>

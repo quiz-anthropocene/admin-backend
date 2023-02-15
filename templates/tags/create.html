@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
-{% load django_bootstrap5 %}
+{% load i18n django_bootstrap5 %}
 
-{% block title %}Ajouter - Tags{{ block.super }}{% endblock %}
+{% block title %}{% translate "Add" %} - Tags{{ block.super }}{% endblock %}
 
 {% block extra_css %}
 {{ form.media.css }}
@@ -13,9 +13,9 @@
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'tags:list' %}">Tags</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Ajouter</li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'tags:list' %}">{% translate "Tags" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "Add" %}</li>
                 </ol>
             </nav>
         </div>

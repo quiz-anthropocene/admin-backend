@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 {% load render_table from django_tables2 %}
-{% load django_bootstrap5 %}
+{% load i18n django_bootstrap5 %}
 
 {% block title %}Questions{{ block.super }}{% endblock %}
 
@@ -10,8 +10,8 @@
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Questions</li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "Questions" %}</li>
                 </ol>
             </nav>
         </div>
@@ -31,7 +31,7 @@
                 <span id="collapse-down-ico">⏷</span>
                 <span id="collapse-up-ico">⏶</span>
             </button>
-            <a class="btn btn-success btn-sm" href="{% url 'questions:create' %}">Ajouter</a>
+            <a class="btn btn-success btn-sm" href="{% url 'questions:create' %}">{% translate "Add" %}</a>
         </div>
     </div>
     <!-- Filters: list -->

@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
-{% load custom_filters %}
+{% load i18n custom_filters %}
 
-{% block title %}Contribution #{{ contribution.id }}{{ block.super }}{% endblock %}
+{% block title %}{% translate "Contribution" %} #{{ contribution.id }}{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -9,8 +9,8 @@
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'contributions:list' %}">Contributions</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'contributions:list' %}">{% translate "Contributions" %}</a></li>
                     <li class="breadcrumb-item active" aria-current="page" title="{{ contribution.text }}">{{ contribution.text|truncatechars:50 }}</li>
                 </ol>
             </nav>
@@ -30,14 +30,14 @@
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_view' contribution.id %}">Détails</a>
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_view' contribution.id %}">{% translate "Details" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if contribution.parent %}disabled{% endif %} {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_edit' contribution.id %}">Modifier</a>
+                    <a class="nav-link {% if contribution.parent %}disabled{% endif %} {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_edit' contribution.id %}">{% translate "Edit" %}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if contribution.parent %}disabled{% endif %} {% if 'reply' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_reply_create' contribution.id %}">
-                        Commentaires <span>({{ contribution.replies.count }})</span>
+                        {% translate "Comments" %} <span>({{ contribution.replies.count }})</span>
                     </a>
                 </li>
             </ul>

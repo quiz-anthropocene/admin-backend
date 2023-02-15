@@ -11,7 +11,7 @@
 <header>
     <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'pages:home' %}">Quiz de l'Anthropocène</a>
+            <a class="navbar-brand" href="{% url 'pages:home' %}">{% translate "Anthropocene Quiz" %}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -23,16 +23,16 @@
                                 <a class="nav-link" href="{% url 'profile:home' %}">{% translate "My space" %}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'questions:list' %}">Questions</a>
+                                <a class="nav-link" href="{% url 'questions:list' %}">{% translate "Questions" %}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'quizs:list' %}">Quizs</a>
+                                <a class="nav-link" href="{% url 'quizs:list' %}">{% translate "Quizs" %}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'contributions:list' %}">Contributions</a>
+                                <a class="nav-link" href="{% url 'contributions:list' %}">{% translate "Contributions" %}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'tags:list' %}">Tags</a>
+                                <a class="nav-link" href="{% url 'tags:list' %}">{% translate "Tags" %}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'glossary:list' %}">{% translate "Glossary" %}</a>
@@ -40,7 +40,7 @@
                             {% if user.has_role_administrator %}
                                 <span style="padding:0.5em">|</span>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'admin:home' %}">Administration</a>
+                                    <a class="nav-link" href="{% url 'admin:home' %}">{% translate "Administration" %}</a>
                                 </li>
                             {% endif %}
                             <span style="padding:0.5em">|</span>

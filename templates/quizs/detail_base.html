@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
-{% load custom_filters %}
+{% load i18n custom_filters %}
 
-{% block title %}Quiz #{{ quiz.id }}{{ block.super }}{% endblock %}
+{% block title %}{% translate "Quiz" %} #{{ quiz.id }}{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -9,8 +9,8 @@
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'quizs:list' %}">Quizs</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'quizs:list' %}">{% translate "Quizs" %}</a></li>
                     <li class="breadcrumb-item active" aria-current="page" title="{{ quiz }}">{{ quiz|truncatechars:50 }}</li>
                 </ol>
             </nav>
@@ -25,22 +25,22 @@
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_view' quiz.id %}">Détails</a>
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_view' quiz.id %}">{% translate "Details" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_edit' quiz.id %}">Modifier</a>
+                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_edit' quiz.id %}">{% translate "Edit" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'questions' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_questions' quiz.id %}">Questions ({{ quiz.question_count }})</a>
+                    <a class="nav-link {% if 'questions' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_questions' quiz.id %}">{% translate "Questions" %} ({{ quiz.question_count }})</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'comments' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_contributions' quiz.id %}">Commentaires ({{ quiz.contribution_count }})</a>
+                    <a class="nav-link {% if 'comments' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_contributions' quiz.id %}">{% translate "Comments" %} ({{ quiz.contribution_count }})</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'stats' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_stats' quiz.id %}">Statistiques</a>
+                    <a class="nav-link {% if 'stats' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_stats' quiz.id %}">{% translate "Stats" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'history' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_history' quiz.id %}">Historique</a>
+                    <a class="nav-link {% if 'history' in request.path %}active fw-bold{% endif %}" href="{% url 'quizs:detail_history' quiz.id %}">{% translate "History" %}</a>
                 </li>
             </ul>
         </div>

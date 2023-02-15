@@ -1,5 +1,5 @@
 {% extends "tags/detail_base.html" %}
-{% load custom_filters get_verbose_name %}
+{% load i18n custom_filters get_verbose_name %}
 
 {% block tag_detail_content %}
 <div class="row">
@@ -8,8 +8,8 @@
             <table class="table-responsive table-striped table-bordered border-primary font-size-small">
                 <thead>
                     <tr>
-                        <th>Champ</th>
-                        <th>Valeur</th>
+                        <th>{% translate "Field" %}</th>
+                        <th>{% translate "Value" %}</th>
                     </tr>
                 </thead>
                 <tbody>

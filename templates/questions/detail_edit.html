@@ -1,5 +1,5 @@
 {% extends "questions/detail_base.html" %}
-{% load static django_bootstrap5 %}
+{% load i18n static django_bootstrap5 %}
 
 {% block extra_css %}
 {{ form.media.css }}
@@ -80,10 +80,10 @@
                     <div class="col">
                         {% bootstrap_button button_type="submit" button_class="btn-primary" content="Sauvegarder" %}
                         {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
-                        <a class="btn btn-secondary" href="{% url 'questions:detail_view' question.id %}">Annuler</a>
+                        <a class="btn btn-secondary" href="{% url 'questions:detail_view' question.id %}">{% translate "Cancel" %}</a>
                     </div>
                     <div class="col-auto">
-                        <button class="btn btn-danger" disabled>Supprimer</button>
+                        <button class="btn btn-danger" disabled>{% translate "Delete" %}</button>
                     </div>
                 </div>
             </form>

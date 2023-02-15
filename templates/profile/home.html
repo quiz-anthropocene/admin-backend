@@ -1,6 +1,7 @@
 {% extends "layouts/base.html" %}
+{% load i18n %}
 
-{% block title %}Mon espace{{ block.super }}{% endblock %}
+{% block title %}{% translate "My space" %}{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -8,8 +9,8 @@
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Mon espace</li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "My space" %}</li>
                 </ol>
             </nav>
         </div>
@@ -23,16 +24,16 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Mes questions <small class="text-muted">{{ user.question_count }}</small></h5>
-                    <a class="btn btn-primary" href="{% url 'profile:questions' %}">Voir</a>
+                    <h5 class="card-title">{% translate "My questions" %} <small class="text-muted">{{ user.question_count }}</small></h5>
+                    <a class="btn btn-primary" href="{% url 'profile:questions' %}">{% translate "View" %}</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Mes quizs <small class="text-muted">{{ user.quiz_count }}</small></h5>
-                    <a class="btn btn-primary" href="{% url 'profile:quizs' %}">Voir</a>
+                    <h5 class="card-title">{% translate "My quizs" %} <small class="text-muted">{{ user.quiz_count }}</small></h5>
+                    <a class="btn btn-primary" href="{% url 'profile:quizs' %}">{% translate "View" %}</a>
                 </div>
             </div>
         </div>
@@ -43,7 +44,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Mon historique de modifications</h5>
-                    <a class="btn btn-primary" href="{% url 'profile:history' %}">Voir</a>
+                    <a class="btn btn-primary" href="{% url 'profile:history' %}">{% translate "View" %}</a>
                 </div>
             </div>
         </div>
@@ -55,8 +56,8 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Mon profil</h5>
-                    <a class="btn btn-primary" href="{% url 'profile:info' %}">Voir</a>
+                    <h5 class="card-title">{% translate "My profile" %}</h5>
+                    <a class="btn btn-primary" href="{% url 'profile:info' %}">{% translate "View" %}</a>
                 </div>
             </div>
         </div>        

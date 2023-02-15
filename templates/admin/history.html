@@ -1,7 +1,8 @@
 {% extends "layouts/base.html" %}
 {% load render_table from django_tables2 %}
+{% load i18n %}
 
-{% block title %}Administration : historique{{ block.super }}{% endblock %}
+{% block title %}{% translate "Administration" %} : historique{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -9,9 +10,9 @@
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'admin:home' %}">Administration</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Historique</li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'admin:home' %}">{% translate "Administration" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "History" %}</li>
                 </ol>
             </nav>
         </div>

@@ -1,6 +1,7 @@
 {% extends "layouts/base.html" %}
+{% load i18n %}
 
-{% block title %}Administration{{ block.super }}{% endblock %}
+{% block title %}{% translate "Administration" %}{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -8,8 +9,8 @@
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Administration</li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "Administration" %}</li>
                 </ol>
             </nav>
         </div>
@@ -24,15 +25,15 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Contributeurs <small class="text-muted">{{ contributor_count }}</small></h5>
-                    <a class="btn btn-primary" href="{% url 'admin:contributor_list' %}">Voir</a>
+                    <a class="btn btn-primary" href="{% url 'admin:contributor_list' %}">{% translate "View" %}</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Historique</h5>
-                    <a class="btn btn-primary" href="{% url 'admin:history' %}">Voir</a>
+                    <h5 class="card-title">{% translate "History" %}</h5>
+                    <a class="btn btn-primary" href="{% url 'admin:history' %}">{% translate "View" %}</a>
                 </div>
             </div>
         </div>

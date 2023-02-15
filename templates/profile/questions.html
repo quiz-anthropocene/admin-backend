@@ -1,8 +1,8 @@
 {% extends "layouts/base.html" %}
 {% load render_table from django_tables2 %}
-{% load django_bootstrap5 %}
+{% load i18n django_bootstrap5 %}
 
-{% block title %}Mes questions ({{ user_questions.count }}){{ block.super }}{% endblock %}
+{% block title %}{% translate "My questions" %} ({{ user_questions.count }}){{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -10,9 +10,9 @@
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'profile:home' %}">Mon espace</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Mes questions</li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'profile:home' %}">{% translate "My space" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "My questions" %}</li>
                 </ol>
             </nav>
         </div>
@@ -32,7 +32,7 @@
                 <span id="collapse-down-ico">⏷</span>
                 <span id="collapse-up-ico">⏶</span>
             </button>
-            <a class="btn btn-success btn-sm" href="{% url 'questions:create' %}?next={% url 'profile:questions' %}">Ajouter</a>
+            <a class="btn btn-success btn-sm" href="{% url 'questions:create' %}?next={% url 'profile:questions' %}">{% translate "Add" %}</a>
         </div>
     </div>
     <!-- Filters: list -->
