@@ -17,7 +17,7 @@
                 <div class="col">
                     {% bootstrap_button button_type="submit" button_class="btn-primary" content="Sauvegarder" %}
                     {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
-                    <a class="btn btn-secondary" href="{% url 'categories:detail_view' category.id %}">Annuler</a>
+                    <a class="btn btn-secondary" href="{% url 'categories:detail_view' category.id %}">{% translate "Cancel" %}</a>
                 </div>
                 <div class="col-auto">
                     <button class="btn btn-danger" disabled>Supprimer</button>

@@ -2,7 +2,7 @@
 {% load render_table from django_tables2 %}
 {% load i18n django_bootstrap5 %}
 
-{% block title %}Liste des administrateurs{{ block.super }}{% endblock %}
+{% block title %}{% translate "All the administrators" %}{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -12,7 +12,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
                     <li class="breadcrumb-item"><a href="{% url 'pages:help_home' %}">{% translate "Help" %}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{% translate "Admins list" %}</li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "All the administrators" %}</li>
                 </ol>
             </nav>
         </div>
@@ -24,7 +24,7 @@
 <div class="container">
     <div class="row">
         <div class="col-9">
-            <h1>{% translate "Admins list" %} <span class="fs-3 text-muted">{{ administrators.count }}</span></h1>
+            <h1>{% translate "All the administrators" %} <span class="fs-3 text-muted">{{ administrators.count }}</span></h1>
         </div>
     </div>
     <!-- Table -->

@@ -107,7 +107,7 @@
                 <div class="row">
                     <div class="col">
                         {% bootstrap_button button_type="submit" button_class="btn-primary" content="Sauvegarder" %}
-                        <a class="btn btn-secondary" href="{% url 'quizs:detail_view' quiz.id %}">Annuler</a>
+                        <a class="btn btn-secondary" href="{% url 'quizs:detail_view' quiz.id %}">{% translate "Cancel" %}</a>
                     </div>
                     <div class="col-auto">
                         <button class="btn btn-danger" disabled>Supprimer</button>

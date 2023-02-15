@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-16 00:23+0100\n"
-"PO-Revision-Date: 2023-02-16 00:23+0100\n"
+"POT-Creation-Date: 2023-02-16 00:36+0100\n"
+"PO-Revision-Date: 2023-02-16 00:38+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -52,11 +52,17 @@ msgid "Home"
 msgstr "Accueil"
 
 #: templates/admin/contributor_create.html:11
+#: templates/admin/contributor_list.html:5
 #: templates/admin/contributor_list.html:14 templates/admin/history.html:5
 #: templates/admin/history.html:14 templates/admin/home.html:4
 #: templates/admin/home.html:13 templates/includes/_header.html:43
 msgid "Administration"
 msgstr "Liste des administrateurs"
+
+#: templates/admin/contributor_create.html:12
+#: templates/admin/contributor_list.html:15 templates/admin/home.html:27
+msgid "Contributors"
+msgstr "Contributeurs"
 
 #: templates/admin/contributor_create.html:13
 #: templates/admin/contributor_list.html:35 templates/glossary/create.html:4
@@ -69,6 +75,32 @@ msgstr "Liste des administrateurs"
 #: templates/tags/list.html:34
 msgid "Add"
 msgstr "Ajouter"
+
+#: templates/admin/contributor_create.html:46
+#: templates/categories/detail_edit.html:20
+#: templates/contributions/detail_edit.html:28
+#: templates/contributions/detail_reply_create.html:71
+#: templates/glossary/create.html:41 templates/glossary/detail_edit.html:20
+#: templates/questions/create.html:64 templates/questions/detail_edit.html:83
+#: templates/quizs/create.html:64 templates/quizs/detail_edit.html:110
+#: templates/tags/create.html:41 templates/tags/detail_edit.html:20
+msgid "Cancel"
+msgstr "Annuler"
+
+#: templates/admin/contributor_list.html:5
+msgid "contributors"
+msgstr "contributeurs"
+
+#: templates/admin/contributor_list.html:27
+msgid "All the contributors"
+msgstr "Tous les contributeurs"
+
+#: templates/admin/contributor_list.html:31
+#: templates/contributions/list.html:30 templates/profile/questions.html:31
+#: templates/questions/list.html:30 templates/quizs/list.html:30
+#: templates/tags/list.html:30
+msgid "Filters"
+msgstr "Filtres"
 
 #: templates/admin/history.html:15 templates/admin/home.html:35
 #: templates/glossary/detail_base.html:34
@@ -112,8 +144,9 @@ msgstr "Modifier"
 
 #: templates/categories/detail_base.html:34 templates/includes/_header.html:26
 #: templates/questions/create.html:4 templates/questions/create.html:18
-#: templates/questions/detail_base.html:13 templates/questions/list.html:14
-#: templates/quizs/detail_base.html:34 templates/tags/detail_base.html:34
+#: templates/questions/detail_base.html:13 templates/questions/list.html:5
+#: templates/questions/list.html:14 templates/quizs/detail_base.html:34
+#: templates/tags/detail_base.html:34
 msgid "Questions"
 msgstr "Questions"
 
@@ -126,7 +159,8 @@ msgstr "Question"
 #: templates/categories/detail_questions.html:14
 #: templates/includes/_header.html:35 templates/tags/create.html:17
 #: templates/tags/detail_base.html:13 templates/tags/detail_questions.html:14
-#: templates/tags/detail_quizs.html:13 templates/tags/list.html:14
+#: templates/tags/detail_quizs.html:13 templates/tags/list.html:5
+#: templates/tags/list.html:14
 msgid "Tags"
 msgstr "Tags"
 
@@ -176,11 +210,6 @@ msgstr "Toutes les contributions"
 msgid "Glossary"
 msgstr "Glossaire"
 
-#: templates/glossary/create.html:41 templates/questions/create.html:64
-#: templates/questions/detail_edit.html:83 templates/quizs/create.html:64
-msgid "Cancel"
-msgstr "Annuler"
-
 #: templates/glossary/detail_history.html:11
 #: templates/questions/detail_history.html:11
 #: templates/quizs/detail_history.html:11
@@ -227,8 +256,8 @@ msgstr "Mon espace"
 
 #: templates/includes/_header.html:29 templates/questions/detail_base.html:34
 #: templates/quizs/create.html:4 templates/quizs/create.html:18
-#: templates/quizs/detail_base.html:13 templates/quizs/list.html:14
-#: templates/tags/detail_base.html:37
+#: templates/quizs/detail_base.html:13 templates/quizs/list.html:5
+#: templates/quizs/list.html:14 templates/tags/detail_base.html:37
 msgid "Quizs"
 msgstr "Quizs"
 
@@ -285,10 +314,11 @@ msgstr ""
 "JavaScript n'est pas activé. Il est nécessaire de réactiver JavaScript pour "
 "activer la fonctionnalité d'ajout d'image."
 
+#: templates/pages/administrator_list.html:5
 #: templates/pages/administrator_list.html:15
 #: templates/pages/administrator_list.html:27
-msgid "Admins list"
-msgstr "Liste des administrateurs"
+msgid "All the administrators"
+msgstr "Tous les administrateurs"
 
 #: templates/pages/help.html:25
 msgid "Do you need help?"
@@ -404,6 +434,10 @@ msgstr "Rôles"
 msgid "Account creation date"
 msgstr "Date de création du compte"
 
+#: templates/profile/questions.html:27
+msgid "All my questions"
+msgstr "Toutes mes questions"
+
 #: templates/profile/quizs.html:27
 msgid "All my quizs"
 msgstr "Tous mes quizs"
@@ -412,10 +446,22 @@ msgstr "Tous mes quizs"
 msgid "Delete"
 msgstr "Supprimer"
 
+#: templates/questions/list.html:26
+msgid "All the questions"
+msgstr "Toutes les questions"
+
 #: templates/quizs/detail_base.html:4
 msgid "Quiz"
 msgstr "Quiz"
 
+#: templates/quizs/list.html:26
+msgid "All the quizs"
+msgstr "Tous les quizs"
+
 #: templates/tags/detail_base.html:4
 msgid "Tag"
 msgstr "Tag"
+
+#: templates/tags/list.html:26
+msgid "All the tags"
+msgstr "Tous les tags"
