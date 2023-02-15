@@ -1,5 +1,5 @@
 {% extends "categories/detail_base.html" %}
-{% load custom_filters %}
+{% load i18n custom_filters %}
 
 {% block category_detail_content %}
 <div class="row">
@@ -9,9 +9,9 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Question</th>
-                        <th>Catégorie</th>
-                        <th>Tags</th>
+                        <th>{% translate "Question" %}</th>
+                        <th>{% translate "Category" %}</th>
+                        <th>{% translate "Tags" %}</th>
                     </tr>
                 </thead>
                 <tbody>

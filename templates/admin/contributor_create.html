@@ -1,6 +1,5 @@
 {% extends "layouts/base.html" %}
-{% load static django_bootstrap5 %}
-
+{% load i18n static django_bootstrap5 %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -8,10 +7,10 @@
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'admin:home' %}">Administration</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'admin:home' %}">{% translate "Administration" %}</a></li>
                     <li class="breadcrumb-item"><a href="{% url 'admin:contributor_list' %}">Contributeurs</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Ajouter</li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "Add" %}</li>
                 </ol>
             </nav>
         </div>

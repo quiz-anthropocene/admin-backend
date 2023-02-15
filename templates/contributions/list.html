@@ -1,8 +1,8 @@
 {% extends "layouts/base.html" %}
 {% load render_table from django_tables2 %}
-{% load django_bootstrap5 %}
+{% load i18n django_bootstrap5 %}
 
-{% block title %}Contributions{{ block.super }}{% endblock %}
+{% block title %}{% translate "Contributions" %}{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -10,8 +10,8 @@
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Contributions</li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "Contributions" %}</li>
                 </ol>
             </nav>
         </div>
@@ -23,7 +23,7 @@
 <div class="container">
     <div class="row">
         <div class="col-9">
-            <h1>Toutes les contributions <span class="fs-3 text-muted">{{ contributions.count }}</span></h1>
+            <h1>{% translate "All the contributions" %} <span class="fs-3 text-muted">{{ contributions.count }}</span></h1>
         </div>
         <div class="col-3 text-end my-auto">
             <button type="button" class="btn {% if search_filters %}btn-warning{% else %}btn-secondary{% endif %} btn-sm btn-ico" data-bs-toggle="collapse" data-bs-target="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters">

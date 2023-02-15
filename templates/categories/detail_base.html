@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
-{% load custom_filters %}
+{% load i18n custom_filters %}
 
-{% block title %}Catégorie : {{ category.name }}{{ block.super }}{% endblock %}
+{% block title %}{% translate "Category" %} : {{ category.name }}{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -9,8 +9,8 @@
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'categories:list' %}">Categories</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'categories:list' %}">{% translate "Categories" %}</a></li>
                     <li class="breadcrumb-item active" aria-current="page" title="{{ category }}">{{ category|truncatechars:50 }}</li>
                 </ol>
             </nav>
@@ -25,13 +25,13 @@
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'categories:detail_view' category.id %}">Détails</a>
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'categories:detail_view' category.id %}">{% translate "Details" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'categories:detail_edit' category.id %}">Modifier</a>
+                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'categories:detail_edit' category.id %}">{% translate "Edit" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'questions' in request.path %}active fw-bold{% endif %}" href="{% url 'categories:detail_questions' category.id %}">Questions ({{ category.question_count }})</a>
+                    <a class="nav-link {% if 'questions' in request.path %}active fw-bold{% endif %}" href="{% url 'categories:detail_questions' category.id %}">{% translate "Questions" %} ({{ category.question_count }})</a>
                 </li>
             </ul>
         </div>

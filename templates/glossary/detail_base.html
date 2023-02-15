@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
-{% load custom_filters %}
+{% load i18n custom_filters %}
 
-{% block title %}{{ glossary_item.name }} - Glossaire{{ block.super }}{% endblock %}
+{% block title %}{{ glossary_item.name }} - {% translate "Glossary" %}{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -9,8 +9,8 @@
         <div class="col-12 my-auto">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Accueil</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'glossary:list' %}">Glossaire</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'glossary:list' %}">{% translate "Glossary" %}</a></li>
                     <li class="breadcrumb-item active" aria-current="page" title="{{ glossary_item.name }}">{{ glossary_item.name|truncatechars:50 }}</li>
                 </ol>
             </nav>
@@ -25,13 +25,13 @@
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_view' glossary_item.id %}">Détails</a>
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_view' glossary_item.id %}">{% translate "Details" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_edit' glossary_item.id %}">Modifier</a>
+                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_edit' glossary_item.id %}">{% translate "Edit" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'history' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_history' glossary_item.id %}">Historique</a>
+                    <a class="nav-link {% if 'history' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_history' glossary_item.id %}">{% translate "History" %}</a>
                 </li>
             </ul>
         </div>
