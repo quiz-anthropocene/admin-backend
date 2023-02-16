@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-16 00:23+0100\n"
+"POT-Creation-Date: 2023-02-16 21:07+0100\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -25,6 +25,216 @@ msgstr ""
 
 #: app/settings.py:179
 msgid "French"
+msgstr ""
+
+#: questions/models.py:98
+msgid "Text"
+msgstr ""
+
+#: questions/models.py:98
+msgid "Keep it simple"
+msgstr ""
+
+#: questions/models.py:101
+msgid "Hint"
+msgstr ""
+
+#: questions/models.py:101
+msgid "Text that the user can decide to display to help him"
+msgstr ""
+
+#: questions/models.py:104
+msgid "Type"
+msgstr ""
+
+#: questions/models.py:111 questions/models.py:237
+#: templates/categories/detail_base.html:4
+#: templates/categories/detail_questions.html:13
+#: templates/tags/detail_questions.html:13
+msgid "Category"
+msgstr ""
+
+#: questions/models.py:119 questions/models.py:238 questions/models.py:358
+#: templates/categories/detail_questions.html:14
+#: templates/includes/_header.html:35 templates/tags/create.html:17
+#: templates/tags/detail_base.html:13 templates/tags/detail_questions.html:14
+#: templates/tags/detail_quizs.html:13 templates/tags/list.html:14
+msgid "Tags"
+msgstr ""
+
+#: questions/models.py:125
+msgid "Difficulty level"
+msgstr ""
+
+#: questions/models.py:131
+msgid "Language"
+msgstr ""
+
+#: questions/models.py:137
+msgid "Answer a"
+msgstr ""
+
+#: questions/models.py:138
+msgid "Answer b"
+msgstr ""
+
+#: questions/models.py:139
+msgid "Answer c"
+msgstr ""
+
+#: questions/models.py:140
+msgid "Answer d"
+msgstr ""
+
+#: questions/models.py:142
+msgid "The correct answer"
+msgstr ""
+
+#: questions/models.py:149
+msgid "Ordered answers?"
+msgstr ""
+
+#: questions/models.py:151
+msgid ""
+"True if the answer choices should be displayed in this particular order "
+"(instead of being mixed up)"
+msgstr ""
+
+#: questions/models.py:153
+msgid "Answer explanation"
+msgstr ""
+
+#: questions/models.py:154
+msgid "Answer audio explanation (link)"
+msgstr ""
+
+#: questions/models.py:156
+msgid "Answer audio explanation (text to display)"
+msgstr ""
+
+#: questions/models.py:160
+msgid "Answer video explanation (link)"
+msgstr ""
+
+#: questions/models.py:162
+msgid "Answer video explanation (text to display)"
+msgstr ""
+
+#: questions/models.py:167
+msgid "Answer accessible source (link)"
+msgstr ""
+
+#: questions/models.py:170
+msgid "Answer accessible source (text to display)"
+msgstr ""
+
+#: questions/models.py:175
+msgid "Answer scientific source (link)"
+msgstr ""
+
+#: questions/models.py:178
+msgid "Report, scientific article…"
+msgstr ""
+
+#: questions/models.py:181
+msgid "Answer scientific source (text to display)"
+msgstr ""
+
+#: questions/models.py:185
+msgid "Answer reading recommandation"
+msgstr ""
+
+#: questions/models.py:187
+msgid "Answer image (link)"
+msgstr ""
+
+#: questions/models.py:192
+msgid "Answer image (text to display)"
+msgstr ""
+
+#: questions/models.py:194
+msgid "Caption, translation, short explanation…"
+msgstr ""
+
+#: questions/models.py:197
+msgid "Answer extra info"
+msgstr ""
+
+#: questions/models.py:199
+msgid "Won't be displayed in the application"
+msgstr ""
+
+#: questions/models.py:202 questions/models.py:240
+#: templates/glossary/detail_history.html:12
+#: templates/questions/detail_history.html:12
+#: templates/quizs/detail_history.html:12
+msgid "Author"
+msgstr ""
+
+#: questions/models.py:211 questions/models.py:241
+msgid "Validator"
+msgstr ""
+
+#: questions/models.py:219
+msgid "Status"
+msgstr ""
+
+#: questions/models.py:224
+msgid "Validation date"
+msgstr ""
+
+#: questions/models.py:227
+msgid "Visibility"
+msgstr ""
+
+#: questions/models.py:233
+msgid "Creation date"
+msgstr ""
+
+#: questions/models.py:234
+msgid "Last update date"
+msgstr ""
+
+#: questions/models.py:239 questions/models.py:359
+#: templates/includes/_header.html:29 templates/questions/detail_base.html:34
+#: templates/quizs/create.html:4 templates/quizs/create.html:18
+#: templates/quizs/detail_base.html:13 templates/quizs/list.html:14
+#: templates/tags/detail_base.html:37
+msgid "Quizs"
+msgstr ""
+
+#: questions/models.py:248 templates/categories/detail_questions.html:12
+#: templates/questions/detail_base.html:4
+#: templates/tags/detail_questions.html:12
+msgid "Question"
+msgstr ""
+
+#: questions/models.py:249 templates/categories/detail_base.html:34
+#: templates/includes/_header.html:26 templates/questions/create.html:4
+#: templates/questions/create.html:18 templates/questions/detail_base.html:13
+#: templates/questions/list.html:14 templates/quizs/detail_base.html:34
+#: templates/tags/detail_base.html:34
+msgid "Questions"
+msgstr ""
+
+#: questions/models.py:360
+msgid "# Ans"
+msgstr ""
+
+#: questions/models.py:361
+msgid "# Corr Ans"
+msgstr ""
+
+#: questions/models.py:362
+msgid "% Corr Ans"
+msgstr ""
+
+#: questions/models.py:363
+msgid "# Like"
+msgstr ""
+
+#: questions/models.py:364
+msgid "# Dislike"
 msgstr ""
 
 #: templates/403.html:4 templates/404.html:4 templates/404.html:10
@@ -83,12 +293,6 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: templates/categories/detail_base.html:4
-#: templates/categories/detail_questions.html:13
-#: templates/tags/detail_questions.html:13
-msgid "Category"
-msgstr ""
-
 #: templates/categories/detail_base.html:13 templates/categories/list.html:5
 #: templates/categories/list.html:14
 msgid "Categories"
@@ -108,26 +312,6 @@ msgstr ""
 #: templates/questions/detail_base.html:31 templates/quizs/detail_base.html:31
 #: templates/tags/detail_base.html:31
 msgid "Edit"
-msgstr ""
-
-#: templates/categories/detail_base.html:34 templates/includes/_header.html:26
-#: templates/questions/create.html:4 templates/questions/create.html:18
-#: templates/questions/detail_base.html:13 templates/questions/list.html:14
-#: templates/quizs/detail_base.html:34 templates/tags/detail_base.html:34
-msgid "Questions"
-msgstr ""
-
-#: templates/categories/detail_questions.html:12
-#: templates/questions/detail_base.html:4
-#: templates/tags/detail_questions.html:12
-msgid "Question"
-msgstr ""
-
-#: templates/categories/detail_questions.html:14
-#: templates/includes/_header.html:35 templates/tags/create.html:17
-#: templates/tags/detail_base.html:13 templates/tags/detail_questions.html:14
-#: templates/tags/detail_quizs.html:13 templates/tags/list.html:14
-msgid "Tags"
 msgstr ""
 
 #: templates/categories/detail_view.html:11
@@ -187,12 +371,6 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: templates/glossary/detail_history.html:12
-#: templates/questions/detail_history.html:12
-#: templates/quizs/detail_history.html:12
-msgid "Author"
-msgstr ""
-
 #: templates/glossary/detail_history.html:13
 #: templates/questions/detail_history.html:13
 #: templates/quizs/detail_history.html:13
@@ -223,13 +401,6 @@ msgstr ""
 #: templates/profile/info.html:13 templates/profile/questions.html:14
 #: templates/profile/quizs.html:14
 msgid "My space"
-msgstr ""
-
-#: templates/includes/_header.html:29 templates/questions/detail_base.html:34
-#: templates/quizs/create.html:4 templates/quizs/create.html:18
-#: templates/quizs/detail_base.html:13 templates/quizs/list.html:14
-#: templates/tags/detail_base.html:37
-msgid "Quizs"
 msgstr ""
 
 #: templates/includes/_header.html:48
