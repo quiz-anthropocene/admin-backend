@@ -21,8 +21,8 @@ class QuestionCreateForm(forms.ModelForm):
             "text": forms.Textarea(attrs={"rows": 1}),
             "hint": forms.Textarea(attrs={"rows": 1}),
             "answer_explanation": forms.Textarea(attrs={"rows": 3}),
-            "answer_reading_recommendation": forms.Textarea(attrs={"rows": 1}),
-            "answer_image_explanation": forms.Textarea(attrs={"rows": 1}),
+            "answer_book_recommendation": forms.Textarea(attrs={"rows": 1}),
+            "answer_image_url_text": forms.Textarea(attrs={"rows": 1}),
             "answer_extra_info": forms.Textarea(attrs={"rows": 3}),
         }
 

@@ -24,8 +24,8 @@ class QuestionTable(tables.Table):
         separator=" ",
     )
     answer_explanation = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.answer_explanation}})
-    answer_image_explanation = RichTextEllipsisColumn(
-        attrs={"td": {"title": lambda record: record.answer_image_explanation}}
+    answer_image_url_text = RichTextEllipsisColumn(
+        attrs={"td": {"title": lambda record: record.answer_image_url_text}}
     )
     answer_extra_info = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.answer_extra_info}})
     answer_image_url = ImageColumn()

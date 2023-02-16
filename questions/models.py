@@ -54,7 +54,7 @@ class QuestionQuerySet(models.QuerySet):
             "answer_option_d",
             "answer_explanation",
         ]
-        # "answer_reading_recommendation", "answer_image_explanation", "answer_extra_info"
+        # "answer_book_recommendation", "answer_image_url_text", "answer_extra_info"
         conditions = Q()
         for field_name in search_fields:
             field_search = {f"{field_name}__icontains": value}
@@ -75,7 +75,12 @@ class Question(models.Model):
     QUESTION_M2M_FIELDS = ["tags"]
     QUESTION_RELATION_FIELDS = QUESTION_FK_FIELDS + QUESTION_M2M_FIELDS
     QUESTION_BOOLEAN_FIELDS = ["has_ordered_answers"]
-    QUESTION_URL_FIELDS = ["answer_audio_url", "answer_video_url", "answer_accessible_url", "answer_scientific_url"]
+    QUESTION_URL_FIELDS = [
+        "answer_audio_url",
+        "answer_video_url",
+        "answer_source_accessible_url",
+        "answer_source_scientific_url",
+    ]
     QUESTION_IMAGE_URL_FIELDS = ["answer_image_url"]
     QUESTION_TIMESTAMP_FIELDS = ["created", "updated"]
     QUESTION_FLATTEN_FIELDS = ["category_string", "tag_list", "quiz_list", "author_string", "validator_string"]
@@ -157,32 +162,32 @@ class Question(models.Model):
         max_length=500,
         blank=True,
     )
-    answer_accessible_url = models.URLField(
+    answer_source_accessible_url = models.URLField(
         verbose_name="Lien vers une source 'grand public'", max_length=500, blank=True
     )
-    answer_accessible_url_text = models.CharField(
+    answer_source_accessible_url_text = models.CharField(
         verbose_name="Texte pour remplacer l'affichage du lien 'grand public'",
         max_length=500,
         blank=True,
     )
-    answer_scientific_url = models.URLField(
+    answer_source_scientific_url = models.URLField(
         verbose_name="Lien vers une source 'scientifique'",
         max_length=500,
         blank=True,
         help_text="Rapport, article en anglais…",
     )
-    answer_scientific_url_text = models.CharField(
+    answer_source_scientific_url_text = models.CharField(
         verbose_name="Texte pour remplacer l'affichage du lien 'scientifique'",
         max_length=500,
         blank=True,
     )
-    answer_reading_recommendation = models.TextField(verbose_name="Un livre pour aller plus loin", blank=True)
+    answer_book_recommendation = models.TextField(verbose_name="Un livre pour aller plus loin", blank=True)
     answer_image_url = models.URLField(
         verbose_name="Lien vers une image pour illustrer la réponse",
         max_length=500,
         blank=True,
     )
-    answer_image_explanation = models.TextField(
+    answer_image_url_text = models.TextField(
         verbose_name="Texte explicatif pour l'image", blank=True, help_text="Légende, traduction, explication courte…"
     )
     answer_extra_info = models.TextField(
@@ -297,12 +302,12 @@ class Question(models.Model):
         return len(self.answer_video_url) > 0
 
     @property
-    def has_answer_accessible_url(self) -> bool:
-        return len(self.answer_accessible_url) > 0
+    def has_answer_source_accessible_url(self) -> bool:
+        return len(self.answer_source_accessible_url) > 0
 
     @property
-    def has_answer_scientific_url(self) -> bool:
-        return len(self.answer_scientific_url) > 0
+    def has_answer_source_scientific_url(self) -> bool:
+        return len(self.answer_source_scientific_url) > 0
 
     @property
     def has_answer_image_url(self) -> bool:

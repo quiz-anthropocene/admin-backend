@@ -100,8 +100,8 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
         "author",
         "validation_status",
         # "has_answer_explanation",
-        # "has_answer_accessible_url",
-        # "has_answer_scientific_url",
+        # "has_answer_source_accessible_url",
+        # "has_answer_source_scientific_url",
         # "has_answer_image_url",
         # "answer_count_agg",
         # "answer_success_count_agg",
@@ -182,11 +182,11 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
                     "answer_audio_url_text",
                     "answer_video_url",
                     "answer_video_url_text",
-                    "answer_accessible_url",
-                    "answer_accessible_url_text",
-                    "answer_scientific_url",
-                    "answer_scientific_url_text",
-                    "answer_reading_recommendation",
+                    "answer_source_accessible_url",
+                    "answer_source_accessible_url_text",
+                    "answer_source_scientific_url",
+                    "answer_source_scientific_url_text",
+                    "answer_book_recommendation",
                     "answer_extra_info",
                 )
             },
@@ -197,7 +197,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
                 "fields": (
                     "answer_image_url",
                     "show_answer_image",
-                    "answer_image_explanation",
+                    "answer_image_url_text",
                 )
             },
         ),
@@ -255,11 +255,11 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
     has_answer_explanation.short_description = "Explication"
     has_answer_explanation.boolean = True
 
-    def has_answer_accessible_url(self, instance):
-        return instance.has_answer_accessible_url
+    def has_answer_source_accessible_url(self, instance):
+        return instance.has_answer_source_accessible_url
 
-    has_answer_accessible_url.short_description = "Lien"
-    has_answer_accessible_url.boolean = True
+    has_answer_source_accessible_url.short_description = "Lien"
+    has_answer_source_accessible_url.boolean = True
 
     def has_answer_image_url(self, instance):
         return instance.has_answer_image_url
@@ -271,7 +271,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
         if instance.answer_image_url:
             return mark_safe(
                 f'<a href="{instance.answer_image_url}" target="_blank">'
-                f'<img src="{instance.answer_image_url}" title="{instance.answer_image_explanation}" height=300 />'  # noqa
+                f'<img src="{instance.answer_image_url}" title="{instance.answer_image_url_text}" height=300 />'  # noqa
                 f"</a>"
             )
         else:
