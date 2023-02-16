@@ -48,10 +48,10 @@ class QuestionQuerySet(models.QuerySet):
     def simple_search(self, value):
         search_fields = [
             "text",
-            "answer_option_a",
-            "answer_option_b",
-            "answer_option_c",
-            "answer_option_d",
+            "answer_choice_a",
+            "answer_choice_b",
+            "answer_choice_c",
+            "answer_choice_d",
             "answer_explanation",
         ]
         # "answer_book_recommendation", "answer_image_url_text", "answer_extra_info"
@@ -133,10 +133,10 @@ class Question(models.Model):
         default=constants.LANGUAGE_FRENCH,
         blank=False,
     )
-    answer_option_a = models.CharField(verbose_name="La réponse a", max_length=500, blank=True)
-    answer_option_b = models.CharField(verbose_name="La réponse b", max_length=500, blank=True)
-    answer_option_c = models.CharField(verbose_name="La réponse c", max_length=500, blank=True)
-    answer_option_d = models.CharField(verbose_name="La réponse d", max_length=500, blank=True)
+    answer_choice_a = models.CharField(verbose_name="La réponse a", max_length=500, blank=True)
+    answer_choice_b = models.CharField(verbose_name="La réponse b", max_length=500, blank=True)
+    answer_choice_c = models.CharField(verbose_name="La réponse c", max_length=500, blank=True)
+    answer_choice_d = models.CharField(verbose_name="La réponse d", max_length=500, blank=True)
     answer_correct = models.CharField(
         verbose_name="La bonne réponse",
         max_length=50,

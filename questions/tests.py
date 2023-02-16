@@ -109,8 +109,8 @@ class QuestionModelHistoryTest(TestCase):
             "type",
             "difficulty",
             "language",
-            "answer_option_a",
-            "answer_option_b",
+            "answer_choice_a",
+            "answer_choice_b",
             "answer_correct",
             "has_ordered_answers",
             "validation_status",
@@ -126,8 +126,8 @@ class QuestionModelHistoryTest(TestCase):
         self.assertEqual(update_history_item.history_changed_fields, ["tag_list"])
 
     def test_history_object_created_on_save(self):
-        self.question.answer_option_a = "réponse A"
-        self.question.answer_option_b = "réponse B"
+        self.question.answer_choice_a = "réponse A"
+        self.question.answer_choice_b = "réponse B"
         self.question.category = self.category_2
         self.question.save()
         self.assertEqual(self.question.history.count(), 2 + 1)
@@ -135,7 +135,7 @@ class QuestionModelHistoryTest(TestCase):
         self.assertEqual(update_history_item.history_type, "~")
         self.assertEqual(update_history_item.category_string, self.category_2.name)
         self.assertEqual(
-            update_history_item.history_changed_fields, ["answer_option_a", "answer_option_b", "category"]
+            update_history_item.history_changed_fields, ["answer_choice_a", "answer_choice_b", "category"]
         )
 
     def test_history_diff(self):
