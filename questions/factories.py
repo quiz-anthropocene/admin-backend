@@ -14,7 +14,7 @@ class QuestionFactory(factory.django.DjangoModelFactory):
     difficulty = constants.QUESTION_DIFFICULTY_EASY
     language = constants.LANGUAGE_FRENCH
     category = factory.SubFactory(CategoryFactory, name="Energie")
-    answer_option_a = "La réponse A"
-    answer_option_b = "La réponse B"
+    answer_choice_a = "La réponse A"
+    answer_choice_b = "La réponse B"
     answer_correct = "a"  # constants.QUESTION_ANSWER_CHOICE_LIST[0]
     validation_status = constants.VALIDATION_STATUS_OK

@@ -171,10 +171,10 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
             "Détails des réponses",
             {
                 "fields": (
-                    "answer_option_a",
-                    "answer_option_b",
-                    "answer_option_c",
-                    "answer_option_d",
+                    "answer_choice_a",
+                    "answer_choice_b",
+                    "answer_choice_c",
+                    "answer_choice_d",
                     "answer_correct",
                     "has_ordered_answers",
                     "answer_explanation",

@@ -25,8 +25,8 @@ QUESTION_CREATE_FORM_DEFAULT = {
     "type": constants.QUESTION_TYPE_QCM,
     "difficulty": constants.QUESTION_DIFFICULTY_EASY,
     "language": constants.LANGUAGE_FRENCH,
-    "answer_option_a": "Réponse A",
-    "answer_option_b": "Réponse B",
+    "answer_choice_a": "Réponse A",
+    "answer_choice_b": "Réponse B",
     "answer_correct": "a",
     "visibility": constants.VISIBILITY_PUBLIC,
 }
