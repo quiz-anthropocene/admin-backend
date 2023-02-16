@@ -37,7 +37,7 @@
                     <a class="nav-link {% if 'comments' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_contributions' question.id %}">{% translate "Comments" %} ({{ question.contribution_count }})</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'stats' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_stats' question.id %}">{% translate "Stats" %}</a>
+                    <a class="nav-link {% if 'stats' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_stats' question.id %}">{% translate "Statistics" %}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if 'history' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_history' question.id %}">{% translate "History" %}</a>

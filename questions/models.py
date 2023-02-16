@@ -7,6 +7,7 @@ from django.db.models.signals import m2m_changed, post_save, pre_save
 from django.dispatch import receiver
 from django.urls import reverse
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 from simple_history.models import HistoricalRecords
 
 from core import constants
@@ -93,21 +94,19 @@ class Question(models.Model):
         "updated",
     ] + QUESTION_FLATTEN_FIELDS
 
-    text = models.TextField(
-        verbose_name="Texte", blank=False, help_text="Rechercher la simplicité, faire des phrases courtes"
-    )
+    text = models.TextField(verbose_name=_("Text"), blank=False, help_text=_("Keep it simple"))
     hint = models.TextField(
-        verbose_name="Indice", blank=True, help_text="L'utilisateur pourra décider de l'afficher pour l'aider"
+        verbose_name=_("Hint"), blank=True, help_text=_("Text that the user can decide to display to help him")
     )
     type = models.CharField(
-        verbose_name="Type",
+        verbose_name=_("Type"),
         max_length=50,
         choices=constants.QUESTION_TYPE_CHOICES,
         default=constants.QUESTION_TYPE_QCM,
         blank=False,
     )
     category = models.ForeignKey(
-        verbose_name="Catégorie",
+        verbose_name=_("Category"),
         to="categories.Category",
         related_name="questions",
         on_delete=models.SET_NULL,
@@ -115,88 +114,92 @@ class Question(models.Model):
         null=True,
     )
     tags = models.ManyToManyField(
-        verbose_name="Tags",
+        verbose_name=_("Tags"),
         to=Tag,
         related_name="questions",
         blank=True,
     )
     difficulty = models.IntegerField(
-        verbose_name="Niveau de difficulté",
+        verbose_name=_("Difficulty level"),
         choices=constants.QUESTION_DIFFICULTY_CHOICES,
         default=constants.QUESTION_DIFFICULTY_EASY,
         blank=False,
     )
     language = models.CharField(
-        verbose_name="Langue",
+        verbose_name=_("Language"),
         max_length=50,
         choices=constants.LANGUAGE_CHOICES,
         default=constants.LANGUAGE_FRENCH,
         blank=False,
     )
-    answer_choice_a = models.CharField(verbose_name="La réponse a", max_length=500, blank=True)
-    answer_choice_b = models.CharField(verbose_name="La réponse b", max_length=500, blank=True)
-    answer_choice_c = models.CharField(verbose_name="La réponse c", max_length=500, blank=True)
-    answer_choice_d = models.CharField(verbose_name="La réponse d", max_length=500, blank=True)
+    answer_choice_a = models.CharField(verbose_name=_("Answer a"), max_length=500, blank=True)
+    answer_choice_b = models.CharField(verbose_name=_("Answer b"), max_length=500, blank=True)
+    answer_choice_c = models.CharField(verbose_name=_("Answer c"), max_length=500, blank=True)
+    answer_choice_d = models.CharField(verbose_name=_("Answer d"), max_length=500, blank=True)
     answer_correct = models.CharField(
-        verbose_name="La bonne réponse",
+        verbose_name=_("The correct answer"),
         max_length=50,
         choices=constants.QUESTION_ANSWER_CHOICES,
         blank=True,
-        help_text="a, b, c ou d. ab, acd, abcd… si plusieurs réponses.",
+        help_text=f"a, b, c {_('or')} d (ab, acd, abcd… {_('if multiple answers')})",
     )
     has_ordered_answers = models.BooleanField(
-        verbose_name="Réponses ordonnées ?",
+        verbose_name=_("Ordered answers?"),
         default=True,
-        help_text="Les choix de réponse sont affichés dans cet ordre, et ne doivent pas être mélangés",
+        help_text=_(
+            "True if the answer choices should be displayed in this particular order (instead of being mixed up)"
+        ),
     )
-    answer_explanation = models.TextField(verbose_name="Explication de texte de la bonne réponse", blank=True)
-    answer_audio_url = models.URLField(verbose_name="Lien vers une explication audio", max_length=500, blank=True)
+    answer_explanation = models.TextField(verbose_name=_("Answer explanation"), blank=True)
+    answer_audio_url = models.URLField(verbose_name=_("Answer audio explanation (link)"), max_length=500, blank=True)
     answer_audio_url_text = models.CharField(
-        verbose_name="Texte pour remplacer l'affichage du lien 'explication audio'",
+        verbose_name=_("Answer audio explanation (text to display)"),
         max_length=500,
         blank=True,
     )
-    answer_video_url = models.URLField(verbose_name="Lien vers une explication vidéo", max_length=500, blank=True)
+    answer_video_url = models.URLField(verbose_name=_("Answer video explanation (link)"), max_length=500, blank=True)
     answer_video_url_text = models.CharField(
-        verbose_name="Texte pour remplacer l'affichage du lien 'explication vidéo'",
+        verbose_name=_("Answer video explanation (text to display)"),
         max_length=500,
         blank=True,
     )
     answer_source_accessible_url = models.URLField(
-        verbose_name="Lien vers une source 'grand public'", max_length=500, blank=True
+        verbose_name=_("Answer accessible source (link)"), max_length=500, blank=True
     )
     answer_source_accessible_url_text = models.CharField(
-        verbose_name="Texte pour remplacer l'affichage du lien 'grand public'",
+        verbose_name=_("Answer accessible source (text to display)"),
         max_length=500,
         blank=True,
     )
     answer_source_scientific_url = models.URLField(
-        verbose_name="Lien vers une source 'scientifique'",
+        verbose_name=_("Answer scientific source (link)"),
         max_length=500,
         blank=True,
-        help_text="Rapport, article en anglais…",
+        help_text=_("Report, scientific article…"),
     )
     answer_source_scientific_url_text = models.CharField(
-        verbose_name="Texte pour remplacer l'affichage du lien 'scientifique'",
+        verbose_name=_("Answer scientific source (text to display)"),
         max_length=500,
         blank=True,
     )
-    answer_book_recommendation = models.TextField(verbose_name="Un livre pour aller plus loin", blank=True)
+    answer_book_recommendation = models.TextField(verbose_name=_("Answer reading recommandation"), blank=True)
     answer_image_url = models.URLField(
-        verbose_name="Lien vers une image pour illustrer la réponse",
+        verbose_name=_("Answer image (link)"),
         max_length=500,
         blank=True,
     )
     answer_image_url_text = models.TextField(
-        verbose_name="Texte explicatif pour l'image", blank=True, help_text="Légende, traduction, explication courte…"
+        verbose_name=_("Answer image (text to display)"),
+        blank=True,
+        help_text=_("Caption, translation, short explanation…"),
     )
     answer_extra_info = models.TextField(
-        verbose_name="Notes, commentaires et liens explicatifs additionels",
+        verbose_name=_("Answer extra info"),
         blank=True,
-        help_text="Ne s'affichera pas dans l'application",
+        help_text=_("Won't be displayed in the application"),
     )
     author = models.ForeignKey(
-        verbose_name="Auteur",
+        verbose_name=_("Author"),
         to=settings.AUTH_USER_MODEL,
         related_name="questions",
         blank=True,
@@ -205,7 +208,7 @@ class Question(models.Model):
     )
 
     validator = models.ForeignKey(
-        verbose_name="Validateur",
+        verbose_name=_("Validator"),
         to=settings.AUTH_USER_MODEL,
         related_name="questions_validated",
         blank=True,
@@ -213,37 +216,37 @@ class Question(models.Model):
         on_delete=models.SET_NULL,
     )
     validation_status = models.CharField(
-        verbose_name="Statut",
+        verbose_name=_("Status"),
         max_length=150,
         choices=constants.VALIDATION_STATUS_CHOICES,
         default=constants.VALIDATION_STATUS_NEW,
     )
-    validation_date = models.DateTimeField(verbose_name="Date de validation", blank=True, null=True)
+    validation_date = models.DateTimeField(verbose_name=_("Validation date"), blank=True, null=True)
 
     visibility = models.CharField(
-        verbose_name="Visibilité",
+        verbose_name=_("Visibility"),
         max_length=50,
         choices=constants.VISIBILITY_CHOICES,
         default=constants.VISIBILITY_PUBLIC,
     )
 
-    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
-    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
+    updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
 
     # flatten relations
-    category_string = models.CharField(verbose_name="Catégorie", max_length=50, blank=True)
-    tag_list = ArrayField(verbose_name="Tags", base_field=models.CharField(max_length=50), blank=True, default=list)
-    quiz_list = ArrayField(verbose_name="Quizs", base_field=models.PositiveIntegerField(), blank=True, default=list)
-    author_string = models.CharField(verbose_name="Auteur", max_length=300, blank=True)
-    validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
+    category_string = models.CharField(verbose_name=_("Category"), max_length=50, blank=True)
+    tag_list = ArrayField(verbose_name=_("Tags"), base_field=models.CharField(max_length=50), blank=True, default=list)
+    quiz_list = ArrayField(verbose_name=_("Quizs"), base_field=models.PositiveIntegerField(), blank=True, default=list)
+    author_string = models.CharField(verbose_name=_("Author"), max_length=300, blank=True)
+    validator_string = models.CharField(verbose_name=_("Validator"), max_length=300, blank=True)
 
     history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
 
     objects = QuestionQuerySet.as_manager()
 
     class Meta:
-        verbose_name = "Question"
-        verbose_name_plural = "Questions"
+        verbose_name = _("Question")
+        verbose_name_plural = _("Questions")
         ordering = ["pk"]
 
     def __str__(self):
@@ -352,13 +355,13 @@ class Question(models.Model):
         return self.contributions.count()
 
     # Admin
-    tags_list_string.fget.short_description = "Tags"
-    quizs_list_string.fget.short_description = "Quizs"
-    answer_count_agg.fget.short_description = "# Rép"
-    answer_success_count_agg.fget.short_description = "# Rép Corr"
-    answer_success_rate.fget.short_description = "% Rép Corr"
-    like_count_agg.fget.short_description = "# Like"
-    dislike_count_agg.fget.short_description = "# Dislike"
+    tags_list_string.fget.short_description = _("Tags")
+    quizs_list_string.fget.short_description = _("Quizs")
+    answer_count_agg.fget.short_description = _("# Ans")
+    answer_success_count_agg.fget.short_description = _("# Corr Ans")
+    answer_success_rate.fget.short_description = _("% Corr Ans")
+    like_count_agg.fget.short_description = _("# Like")
+    dislike_count_agg.fget.short_description = _("# Dislike")
 
     # def question_validate_fields(sender, instance, **kwargs):
     def clean(self):

@@ -38,7 +38,7 @@
             <div class="col">
                 {% bootstrap_button button_type="submit" button_class="btn-primary" content="Ajouter" %}
                 {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
-                <a class="btn btn-secondary" href="{% url 'tags:list' %}">Annuler</a>
+                <a class="btn btn-secondary" href="{% url 'tags:list' %}">{% translate "Cancel" %}</a>
             </div>
         </div>
     </form>
