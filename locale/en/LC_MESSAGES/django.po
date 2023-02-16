@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-16 21:07+0100\n"
+"POT-Creation-Date: 2023-02-16 22:38+0100\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -27,34 +27,86 @@ msgstr ""
 msgid "French"
 msgstr ""
 
-#: questions/models.py:98
+#: core/constants.py:8
+msgid "Multiple choice questionnaire"
+msgstr ""
+
+#: core/constants.py:9
+msgid "Multiple choice questionnaire with multiple answers"
+msgstr ""
+
+#: core/constants.py:10
+msgid "True or False"
+msgstr ""
+
+#: core/constants.py:20
+msgid "Junior"
+msgstr ""
+
+#: core/constants.py:21
+msgid "Easy"
+msgstr ""
+
+#: core/constants.py:22
+msgid "Medium"
+msgstr ""
+
+#: core/constants.py:23
+msgid "Hard"
+msgstr ""
+
+#: core/constants.py:24
+msgid "Expert"
+msgstr ""
+
+#: core/constants.py:132
+msgid "Public (exported and the application)"
+msgstr ""
+
+#: core/constants.py:133
+msgid "Hidden (exported but not visible in the application)"
+msgstr ""
+
+#: core/constants.py:134
+msgid "Private (not exported and not in the application)"
+msgstr ""
+
+#: core/constants.py:137
+msgid "True"
+msgstr ""
+
+#: core/constants.py:137
+msgid "False"
+msgstr ""
+
+#: questions/models.py:97
 msgid "Text"
 msgstr ""
 
-#: questions/models.py:98
+#: questions/models.py:97
 msgid "Keep it simple"
 msgstr ""
 
-#: questions/models.py:101
+#: questions/models.py:99
 msgid "Hint"
 msgstr ""
 
-#: questions/models.py:101
+#: questions/models.py:99
 msgid "Text that the user can decide to display to help him"
 msgstr ""
 
-#: questions/models.py:104
+#: questions/models.py:102
 msgid "Type"
 msgstr ""
 
-#: questions/models.py:111 questions/models.py:237
+#: questions/models.py:109 questions/models.py:237
 #: templates/categories/detail_base.html:4
 #: templates/categories/detail_questions.html:13
 #: templates/tags/detail_questions.html:13
 msgid "Category"
 msgstr ""
 
-#: questions/models.py:119 questions/models.py:238 questions/models.py:358
+#: questions/models.py:117 questions/models.py:238 questions/models.py:358
 #: templates/categories/detail_questions.html:14
 #: templates/includes/_header.html:35 templates/tags/create.html:17
 #: templates/tags/detail_base.html:13 templates/tags/detail_questions.html:14
@@ -62,39 +114,39 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: questions/models.py:125
+#: questions/models.py:123
 msgid "Difficulty level"
 msgstr ""
 
-#: questions/models.py:131
+#: questions/models.py:129
 msgid "Language"
 msgstr ""
 
-#: questions/models.py:137
+#: questions/models.py:135
 msgid "Answer a"
 msgstr ""
 
-#: questions/models.py:138
+#: questions/models.py:136
 msgid "Answer b"
 msgstr ""
 
-#: questions/models.py:139
+#: questions/models.py:137
 msgid "Answer c"
 msgstr ""
 
-#: questions/models.py:140
+#: questions/models.py:138
 msgid "Answer d"
 msgstr ""
 
-#: questions/models.py:142
+#: questions/models.py:140
 msgid "The correct answer"
 msgstr ""
 
-#: questions/models.py:149
+#: questions/models.py:147
 msgid "Ordered answers?"
 msgstr ""
 
-#: questions/models.py:151
+#: questions/models.py:150
 msgid ""
 "True if the answer choices should be displayed in this particular order "
 "(instead of being mixed up)"
@@ -268,6 +320,11 @@ msgstr ""
 msgid "Administration"
 msgstr ""
 
+#: templates/admin/contributor_create.html:12
+#: templates/admin/contributor_list.html:15
+msgid "Contributors"
+msgstr ""
+
 #: templates/admin/contributor_create.html:13
 #: templates/admin/contributor_list.html:35 templates/glossary/create.html:4
 #: templates/glossary/create.html:18 templates/glossary/list.html:29
@@ -278,6 +335,28 @@ msgstr ""
 #: templates/tags/create.html:4 templates/tags/create.html:18
 #: templates/tags/list.html:34
 msgid "Add"
+msgstr ""
+
+#: templates/admin/contributor_create.html:46
+#: templates/categories/detail_edit.html:20
+#: templates/contributions/detail_edit.html:28
+#: templates/contributions/detail_reply_create.html:71
+#: templates/glossary/create.html:41 templates/glossary/detail_edit.html:20
+#: templates/questions/create.html:64 templates/questions/detail_edit.html:83
+#: templates/quizs/create.html:64 templates/quizs/detail_edit.html:110
+#: templates/tags/create.html:41 templates/tags/detail_edit.html:20
+msgid "Cancel"
+msgstr ""
+
+#: templates/admin/contributor_list.html:27
+msgid "All the contributors"
+msgstr ""
+
+#: templates/admin/contributor_list.html:31
+#: templates/contributions/list.html:30 templates/profile/questions.html:31
+#: templates/questions/list.html:30 templates/quizs/list.html:30
+#: templates/tags/list.html:30
+msgid "Filters"
 msgstr ""
 
 #: templates/admin/history.html:15 templates/admin/home.html:35
@@ -360,11 +439,6 @@ msgstr ""
 msgid "Glossary"
 msgstr ""
 
-#: templates/glossary/create.html:41 templates/questions/create.html:64
-#: templates/questions/detail_edit.html:83 templates/quizs/create.html:64
-msgid "Cancel"
-msgstr ""
-
 #: templates/glossary/detail_history.html:11
 #: templates/questions/detail_history.html:11
 #: templates/quizs/detail_history.html:11
@@ -393,7 +467,7 @@ msgstr ""
 
 #: templates/includes/_footer.html:33 templates/questions/detail_base.html:40
 #: templates/quizs/detail_base.html:40
-msgid "Stats"
+msgid "Statistics"
 msgstr ""
 
 #: templates/includes/_header.html:23 templates/profile/history.html:14
@@ -453,9 +527,10 @@ msgid ""
 "images."
 msgstr ""
 
+#: templates/pages/administrator_list.html:5
 #: templates/pages/administrator_list.html:15
-#: templates/pages/administrator_list.html:27
-msgid "Admins list"
+#: templates/pages/administrator_list.html:27 templates/pages/help.html:38
+msgid "Administrator list"
 msgstr ""
 
 #: templates/pages/help.html:25
@@ -478,16 +553,12 @@ msgstr ""
 msgid "Contact an administrator"
 msgstr ""
 
-#: templates/pages/help.html:38
-msgid "Administrator list"
-msgstr ""
-
 #: templates/pages/help.html:39
-msgid "Invitation link"
+msgid "invitation link"
 msgstr ""
 
 #: templates/pages/help.html:45
-msgid "Do you have another question? You want to report a bug, an improvement?"
+msgid "You have another question? You want to report a bug, an improvement?"
 msgstr ""
 
 #: templates/pages/help.html:46
@@ -500,9 +571,13 @@ msgid "Hello %(first_name)s!"
 msgstr "Hello %(first_name)s !"
 
 #: templates/pages/home.html:17
+#, fuzzy
+#| msgid ""
+#| "Welcome to the <strong>contributor interface</strong> of Quiz de "
+#| "l'Anthropocène."
 msgid ""
-"Welcome to the <strong>contributor interface</strong> of Quiz de "
-"l'Anthropocène."
+"Welcome to the <strong>contributor interface</strong> of the Anthropocene "
+"Quiz."
 msgstr ""
 "Welcome to the <strong>contributor interface</strong> of Quiz de "
 "l'Anthropocène."
@@ -520,7 +595,7 @@ msgid "Improve public questions (with help from user feedback for example)"
 msgstr ""
 
 #: templates/pages/home.html:22
-msgid "View stats on answers"
+msgid "View answer stats"
 msgstr ""
 
 #: templates/pages/home.html:23

@@ -9,7 +9,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
                     <li class="breadcrumb-item"><a href="{% url 'admin:home' %}">{% translate "Administration" %}</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'admin:contributor_list' %}">Contributeurs</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'admin:contributor_list' %}">{% translate "Contributors" %}</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{% translate "Add" %}</li>
                 </ol>
             </nav>
@@ -43,7 +43,7 @@
             <div class="col">
                 {% bootstrap_button button_type="submit" button_class="btn-primary" content="Ajouter" %}
                 {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
-                <a class="btn btn-secondary" href="{% url 'questions:list' %}">Annuler</a>
+                <a class="btn btn-secondary" href="{% url 'questions:list' %}">{% translate "Cancel" %}</a>
             </div>
         </div>
     </form>

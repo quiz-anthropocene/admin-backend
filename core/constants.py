@@ -1,10 +1,13 @@
+from django.utils.translation import gettext_lazy as _
+
+
 QUESTION_TYPE_QCM = "QCM"
 QUESTION_TYPE_QCM_RM = "QCM-RM"
 QUESTION_TYPE_VF = "VF"
 QUESTION_TYPE_CHOICES = [
-    (QUESTION_TYPE_QCM, "Questionnaire à choix multiples"),
-    (QUESTION_TYPE_QCM_RM, "Questionnaire à choix multiples avec réponses multiples"),
-    (QUESTION_TYPE_VF, "Vrai ou Faux"),
+    (QUESTION_TYPE_QCM, _("Multiple choice questionnaire")),
+    (QUESTION_TYPE_QCM_RM, _("Multiple choice questionnaire with multiple answers")),
+    (QUESTION_TYPE_VF, _("True or False")),
 ]
 QUESTION_TYPE_CHOICE_LIST = [c[0] for c in QUESTION_TYPE_CHOICES]
 
@@ -14,11 +17,11 @@ QUESTION_TYPE_QCM_CHOICE_LIST = ["a", "b", "c", "d"]
 QUESTION_DIFFICULTY_EASY = 1
 QUESTION_DIFFICULTY_HARD = 3
 QUESTION_DIFFICULTY_OPTIONS = [
-    (0, "Junior", "🧸"),
-    (QUESTION_DIFFICULTY_EASY, "Facile", "🏆"),
-    (2, "Moyen", "🏆🏆"),
-    (QUESTION_DIFFICULTY_HARD, "Difficile", "🏆🏆🏆"),
-    (4, "Expert", "🏆🏆🏆🏆"),
+    (0, _("Junior"), "🧸"),
+    (QUESTION_DIFFICULTY_EASY, _("Easy"), "🏆"),
+    (2, _("Medium"), "🏆🏆"),
+    (QUESTION_DIFFICULTY_HARD, _("Hard"), "🏆🏆🏆"),
+    (4, _("Expert"), "🏆🏆🏆🏆"),
 ]
 QUESTION_DIFFICULTY_CHOICES = [(c[0], c[1]) for c in QUESTION_DIFFICULTY_OPTIONS]
 QUESTION_DIFFICULTY_CHOICE_LIST = [c[0] for c in QUESTION_DIFFICULTY_OPTIONS]
@@ -126,11 +129,11 @@ VISIBILITY_PUBLIC = "PUBLIC"
 VISIBILITY_HIDDEN = "HIDDEN"
 VISIBILITY_PRIVATE = "PRIVATE"
 VISIBILITY_CHOICES = (
-    (VISIBILITY_PUBLIC, "Publique (dans l'export et dans l'application)"),
-    (VISIBILITY_HIDDEN, "Caché (dans l'export mais pas visible dans l'application)"),
-    (VISIBILITY_PRIVATE, "Privé (pas dans l'export ni dans l'application)"),
+    (VISIBILITY_PUBLIC, _("Public (exported and the application)")),
+    (VISIBILITY_HIDDEN, _("Hidden (exported but not visible in the application)")),
+    (VISIBILITY_PRIVATE, _("Private (not exported and not in the application)")),
 )
 
-BOOLEAN_CHOICES = [(True, "Vrai"), (False, "Faux")]
+BOOLEAN_CHOICES = [(True, _("True")), (False, _("False"))]
 
 EMPTY_CHOICE = (("", ""),)

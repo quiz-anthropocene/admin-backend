@@ -12,7 +12,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
                     <li class="breadcrumb-item"><a href="{% url 'admin:home' %}">{% translate "Administration" %}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Contributeurs</li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "Contributors" %}</li>
                 </ol>
             </nav>
         </div>
@@ -24,11 +24,11 @@
 <div class="container">
     <div class="row">
         <div class="col-9">
-            <h1>Tous les contributeurs <span class="fs-3 text-muted">{{ contributors.count }}</span></h1>
+            <h1>{% translate "All the contributors" %} <span class="fs-3 text-muted">{{ contributors.count }}</span></h1>
         </div>
         <div class="col-3 text-end my-auto">
             <button type="button" class="btn {% if search_filters %}btn-warning{% else %}btn-secondary{% endif %} btn-sm btn-ico" data-bs-toggle="collapse" data-bs-target="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters">
-                <span>Filtres&nbsp;</span>
+                <span>{% translate "Filters" %}&nbsp;</span>
                 <span id="collapse-down-ico">⏷</span>
                 <span id="collapse-up-ico">⏶</span>
             </button>
