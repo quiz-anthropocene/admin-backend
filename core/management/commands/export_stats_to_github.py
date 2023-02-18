@@ -4,7 +4,7 @@ from datetime import datetime
 import yaml
 from django.conf import settings
 from django.core.management import BaseCommand
-from django.utils import timezone
+from django.utils import timezone, translation
 
 from core.models import Configuration
 from core.utils import github, utilities
@@ -18,6 +18,8 @@ class Command(BaseCommand):
     """
 
     def handle(self, *args, **options):
+        translation.activate("en")
+
         # init
         start_time = time.time()
 

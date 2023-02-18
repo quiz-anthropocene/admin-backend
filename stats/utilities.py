@@ -195,7 +195,7 @@ def difficulty_aggregate():
     for value, name, emoji in constants.QUESTION_DIFFICULTY_OPTIONS:
         difficulty_levels.append(
             {
-                "name": name,
+                "name": str(name),  # force gettext_lazy evaluation
                 "value": value,
                 "emoji": emoji,
                 "question_count": next(
