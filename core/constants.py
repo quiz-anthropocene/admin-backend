@@ -107,15 +107,16 @@ CONTRIBUTION_STATUS_CHOICES = [
     (CONTRIBUTION_STATUS_IGNORED, "Ignoré"),
 ]
 
-LANGUAGE_FRENCH = "Français"
-LANGUAGE_ENGLISH = "English"
-LANGUAGE_GERMAN = "Deutsch"
-LANGUAGE_CHOICE_LIST = [
-    LANGUAGE_FRENCH,
-    LANGUAGE_ENGLISH,
-    LANGUAGE_GERMAN,
+LANGUAGE_FRENCH = "FRENCH"
+LANGUAGE_ENGLISH = "ENGLISH"
+LANGUAGE_GERMAN = "GERMAN"
+LANGUAGE_OPTIONS = [
+    (LANGUAGE_FRENCH, _("French"), "fr", "🇫🇷"),
+    (LANGUAGE_ENGLISH, _("English"), "en", "🇬🇧"),
+    (LANGUAGE_GERMAN, _("German"), "de", "🇩🇪"),
 ]
-LANGUAGE_CHOICES = [(lang, lang) for lang in LANGUAGE_CHOICE_LIST]
+LANGUAGE_CHOICES = [(language[0], language[1]) for language in LANGUAGE_OPTIONS]
+LANGUAGE_CHOICE_LIST = [language[0] for language in LANGUAGE_CHOICES]
 
 NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES = [
     (0, "100 dernières questions modifiées"),
