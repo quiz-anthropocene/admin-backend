@@ -10,6 +10,7 @@ from django.dispatch import receiver
 from django.urls import reverse
 from django.utils import timezone
 from django.utils.text import slugify
+from django.utils.translation import gettext_lazy as _
 from simple_history.models import HistoricalRecords
 
 from core import constants
@@ -84,100 +85,100 @@ class Quiz(models.Model):
         "updated",
     ] + QUIZ_FLATTEN_FIELDS
 
-    name = models.CharField(verbose_name="Nom", max_length=50, blank=False)
-    slug = models.SlugField(verbose_name="Fragment d'URL", max_length=50, unique=True)
-    introduction = RichTextField(verbose_name="Introduction", blank=True)
+    name = models.CharField(verbose_name=_("Name"), max_length=50, blank=False)
+    slug = models.SlugField(verbose_name=_("Slug"), max_length=50, unique=True)
+    introduction = RichTextField(verbose_name=_("Introduction"), blank=True)
     conclusion = RichTextField(
-        verbose_name="Conclusion",
+        verbose_name=_("Conclusion"),
         blank=True,
         help_text="Inclure des pistes pour aller plus loin",
     )
     questions = models.ManyToManyField(
-        verbose_name="Questions",
+        verbose_name=_("Questions"),
         to=Question,
         through="QuizQuestion",
         related_name="quizs",
     )
-    tags = models.ManyToManyField(verbose_name="Tags", to=Tag, related_name="quizs", blank=True)
-    difficulty_average = models.FloatField(verbose_name="Difficulté moyenne", default=0)  # readonly
+    tags = models.ManyToManyField(verbose_name=_("Tags"), to=Tag, related_name="quizs", blank=True)
+    difficulty_average = models.FloatField(verbose_name=_("Average difficulty level"), default=0)  # readonly
     language = models.CharField(
-        verbose_name="Langue",
+        verbose_name=_("Language"),
         max_length=50,
         choices=constants.LANGUAGE_CHOICES,
         default=constants.LANGUAGE_FRENCH,
         blank=False,
     )
     authors = models.ManyToManyField(
-        verbose_name="Auteurs",
+        verbose_name=_("Authors"),
         to=settings.AUTH_USER_MODEL,
         through="QuizAuthor",
         related_name="quizs",
         blank=True,
     )
     image_background_url = models.URLField(
-        verbose_name="Lien vers une image pour illustrer le quiz",
+        verbose_name=_("Background image (link)"),
         max_length=500,
         blank=True,
     )
-    has_audio = models.BooleanField(verbose_name="Contenu audio ?", default=False)
+    has_audio = models.BooleanField(verbose_name=_("Audio answers?"), default=False)
 
     validation_status = models.CharField(
-        verbose_name="Statut",
+        verbose_name=_("Status"),
         max_length=150,
         choices=constants.VALIDATION_STATUS_CHOICES,
         default=constants.VALIDATION_STATUS_DRAFT,
     )
     validator = models.ForeignKey(
-        verbose_name="Validateur",
+        verbose_name=_("Validator"),
         to=settings.AUTH_USER_MODEL,
         related_name="quizs_validated",
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
     )
-    validation_date = models.DateTimeField(verbose_name="Date de validation", blank=True, null=True)
-    publish = models.BooleanField(verbose_name="Prêt à être publié ?", default=False)
-    publish_date = models.DateTimeField(verbose_name="Date de publication", blank=True, null=True)
+    validation_date = models.DateTimeField(verbose_name=_("Validation date"), blank=True, null=True)
+    publish = models.BooleanField(verbose_name=_("Published?"), default=False)
+    publish_date = models.DateTimeField(verbose_name=_("Publication date"), blank=True, null=True)
 
-    spotlight = models.BooleanField(verbose_name="Mise en avant ?", default=False)
+    spotlight = models.BooleanField(verbose_name=_("Spotlighted?"), default=False)
     visibility = models.CharField(
-        verbose_name="Visibilité",
+        verbose_name=_("Visibility"),
         max_length=50,
         choices=constants.VISIBILITY_CHOICES,
         default=constants.VISIBILITY_PUBLIC,
     )
 
     relationships = models.ManyToManyField(
-        verbose_name="Les quizs similaires ou liés",
+        verbose_name=_("Similar or related quizs"),
         to="self",
         through="QuizRelationship",
         symmetrical=False,
         related_name="related_to",
     )
 
-    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
-    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
+    updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
 
     # flatten relations
     author_list = ArrayField(
-        verbose_name="Auteurs", base_field=models.CharField(max_length=50), blank=True, default=list
+        verbose_name=_("Authors"), base_field=models.CharField(max_length=50), blank=True, default=list
     )
-    tag_list = ArrayField(verbose_name="Tags", base_field=models.CharField(max_length=50), blank=True, default=list)
+    tag_list = ArrayField(verbose_name=_("Tags"), base_field=models.CharField(max_length=50), blank=True, default=list)
     question_list = ArrayField(
-        verbose_name="Questions", base_field=models.PositiveIntegerField(), blank=True, default=list
+        verbose_name=_("Questions"), base_field=models.PositiveIntegerField(), blank=True, default=list
     )
     relationship_list = ArrayField(
-        verbose_name="Relations", base_field=models.CharField(max_length=50), blank=True, default=list
+        verbose_name=_("Relationships"), base_field=models.CharField(max_length=50), blank=True, default=list
     )
-    validator_string = models.CharField(verbose_name="Validateur", max_length=300, blank=True)
+    validator_string = models.CharField(verbose_name=_("Validator"), max_length=300, blank=True)
 
     history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
 
     objects = QuizQuerySet.as_manager()
 
     class Meta:
-        verbose_name = "Quiz"
-        verbose_name_plural = "Quizs"
+        verbose_name = _("Quiz")
+        verbose_name_plural = _("Quizs")
         ordering = ["pk"]
 
     def __str__(self):
@@ -365,17 +366,17 @@ class Quiz(models.Model):
         return self.contributions.count()
 
     # Admin
-    tags_list_string.fget.short_description = "Tags"
-    authors_list_string.fget.short_description = "Auteurs"
-    questions_not_validated_string.fget.short_description = "Questions pas encore validées"
-    questions_categories_list_with_count_string.fget.short_description = "Questions catégories"
-    questions_tags_list_with_count_string.fget.short_description = "Questions tags"
-    questions_authors_list_with_count_string.fget.short_description = "Questions authors"
-    answer_count_agg.fget.short_description = "# Rép"
-    duration_average_seconds.fget.short_description = "Durée moyenne (en secondes)"
-    duration_average_minutes_string.fget.short_description = "Durée moyenne (en minutes)"
-    like_count_agg.fget.short_description = "# Like"
-    dislike_count_agg.fget.short_description = "# Dislike"
+    tags_list_string.fget.short_description = _("Tags")
+    authors_list_string.fget.short_description = _("Authors")
+    questions_not_validated_string.fget.short_description = _("Questions not yet validated")
+    questions_categories_list_with_count_string.fget.short_description = _("Questions categories")
+    questions_tags_list_with_count_string.fget.short_description = _("Questions tags")
+    questions_authors_list_with_count_string.fget.short_description = _("Questions authors")
+    answer_count_agg.fget.short_description = _("# Ans")
+    duration_average_seconds.fget.short_description = _("Average time (secondes)")
+    duration_average_minutes_string.fget.short_description = _("Average time (minutes)")
+    like_count_agg.fget.short_description = _("# Like")
+    dislike_count_agg.fget.short_description = _("# Dislike")
 
     # TODO: commented because init_db_from_yaml raises ValidationError...
     # def clean(self):
@@ -429,12 +430,12 @@ class QuizQuestionQuerySet(models.QuerySet):
 
 
 class QuizQuestion(models.Model):
-    quiz = models.ForeignKey(verbose_name="Quiz", to=Quiz, on_delete=models.CASCADE)
-    question = models.ForeignKey(verbose_name="Question", to=Question, on_delete=models.CASCADE)
-    order = models.PositiveIntegerField(verbose_name="Ordre", blank=True, default=0)
+    quiz = models.ForeignKey(verbose_name=_("Quiz"), to=Quiz, on_delete=models.CASCADE)
+    question = models.ForeignKey(verbose_name=_("Question"), to=Question, on_delete=models.CASCADE)
+    order = models.PositiveIntegerField(verbose_name=_("Order"), blank=True, default=0)
 
-    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
-    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
+    updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
 
     objects = QuizQuestionQuerySet.as_manager()
 
@@ -488,7 +489,7 @@ class QuizRelationship(models.Model):
     from_quiz = models.ForeignKey(to=Quiz, on_delete=models.CASCADE, related_name="from_quizs")
     to_quiz = models.ForeignKey(to=Quiz, on_delete=models.CASCADE, related_name="to_quizs")
     status = models.CharField(
-        verbose_name="Type de relation",
+        verbose_name=_("Relationship type"),
         max_length=50,
         choices=zip(
             constants.QUIZ_RELATIONSHIP_CHOICE_LIST,
@@ -496,8 +497,8 @@ class QuizRelationship(models.Model):
         ),
     )
 
-    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
-    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
+    updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
 
     def __str__(self):
         return f"{self.from_quiz} >>> {self.status} >>> {self.to_quiz}"
@@ -549,15 +550,15 @@ def quiz_set_flatten_relationship_list(sender, instance, **kwargs):
 
 
 class QuizAuthor(models.Model):
-    quiz = models.ForeignKey(verbose_name="Quiz", to=Quiz, on_delete=models.CASCADE)
+    quiz = models.ForeignKey(verbose_name=_("Quiz"), to=Quiz, on_delete=models.CASCADE)
     author = models.ForeignKey(
-        verbose_name="Auteur",
+        verbose_name=_("Author"),
         to=settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
     )
 
-    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
-    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
+    updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
 
     class Meta:
         unique_together = [
