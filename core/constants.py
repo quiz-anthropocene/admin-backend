@@ -110,11 +110,12 @@ CONTRIBUTION_STATUS_CHOICES = [
 LANGUAGE_FRENCH = "FRENCH"
 LANGUAGE_ENGLISH = "ENGLISH"
 LANGUAGE_GERMAN = "GERMAN"
-LANGUAGE_CHOICES = [
-    (LANGUAGE_FRENCH, _("French")),
-    (LANGUAGE_ENGLISH, _("English")),
-    (LANGUAGE_GERMAN, _("German")),
+LANGUAGE_OPTIONS = [
+    (LANGUAGE_FRENCH, _("French"), "🇫🇷"),
+    (LANGUAGE_ENGLISH, _("English"), "🇬🇧"),
+    (LANGUAGE_GERMAN, _("German"), "🇩🇪"),
 ]
+LANGUAGE_CHOICES = [(language[0], language[1]) for language in LANGUAGE_OPTIONS]
 LANGUAGE_CHOICE_LIST = [language[0] for language in LANGUAGE_CHOICES]
 
 NOTION_QUESTIONS_IMPORT_SCOPE_CHOICES = [
