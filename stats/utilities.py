@@ -272,11 +272,12 @@ def language_aggregate():
     )
 
     languages = []
-    for value, name, emoji in constants.LANGUAGE_OPTIONS:
+    for value, name, code, emoji in constants.LANGUAGE_OPTIONS:
         languages.append(
             {
                 "name": str(name),  # force gettext_lazy evaluation
                 "value": value,
+                "code": code,
                 "emoji": emoji,
                 "question_count": next(
                     (item["question_count"] for item in question_languages if item["language"] == value),

@@ -111,9 +111,9 @@ LANGUAGE_FRENCH = "FRENCH"
 LANGUAGE_ENGLISH = "ENGLISH"
 LANGUAGE_GERMAN = "GERMAN"
 LANGUAGE_OPTIONS = [
-    (LANGUAGE_FRENCH, _("French"), "🇫🇷"),
-    (LANGUAGE_ENGLISH, _("English"), "🇬🇧"),
-    (LANGUAGE_GERMAN, _("German"), "🇩🇪"),
+    (LANGUAGE_FRENCH, _("French"), "fr", "🇫🇷"),
+    (LANGUAGE_ENGLISH, _("English"), "en", "🇬🇧"),
+    (LANGUAGE_GERMAN, _("German"), "de", "🇩🇪"),
 ]
 LANGUAGE_CHOICES = [(language[0], language[1]) for language in LANGUAGE_OPTIONS]
 LANGUAGE_CHOICE_LIST = [language[0] for language in LANGUAGE_CHOICES]
