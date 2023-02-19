@@ -23,7 +23,7 @@ class ApiTest(TestCase):
             text="question 1",
             category=cls.category_1,
             author=cls.user_1,
-            validation_status=constants.VALIDATION_STATUS_IN_PROGRESS,
+            validation_status=constants.VALIDATION_STATUS_TO_VALIDATE,
         )
         cls.question_2 = QuestionFactory(
             text="question 2",

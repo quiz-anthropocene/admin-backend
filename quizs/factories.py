@@ -11,5 +11,5 @@ class QuizFactory(factory.django.DjangoModelFactory):
 
     name = "Le quiz"
     slug = factory.LazyAttribute(lambda o: slugify(o.name))
-    validation_status = constants.VALIDATION_STATUS_OK
+    validation_status = constants.VALIDATION_STATUS_VALIDATED
     publish = False

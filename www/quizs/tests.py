@@ -83,7 +83,7 @@ class QuizDetailEditViewTest(TestCase):
             name="Quiz 1",
             # authors=[cls.user_contributor_1],
             visibility=constants.VISIBILITY_PUBLIC,
-            validation_status=constants.VALIDATION_STATUS_IN_PROGRESS,
+            validation_status=constants.VALIDATION_STATUS_TO_VALIDATE,
             publish=False,
         )
         cls.quiz_1.authors.set([cls.user_contributor_1])
@@ -109,12 +109,12 @@ class QuizDetailEditViewTest(TestCase):
 
     def test_administrator_can_validate_and_publish_public_quiz(self):
         self.client.login(email=self.user_admin.email, password=DEFAULT_PASSWORD)
-        self.assertEqual(self.quiz_1.validation_status, constants.VALIDATION_STATUS_IN_PROGRESS)
+        self.assertEqual(self.quiz_1.validation_status, constants.VALIDATION_STATUS_TO_VALIDATE)
         self.assertEqual(self.quiz_1.publish, False)
         url = reverse("quizs:detail_edit", args=[self.quiz_1.id])
         QUIZ_EDIT_FORM = {
             **QUIZ_CREATE_FORM_DEFAULT,
-            "validation_status": constants.VALIDATION_STATUS_OK,
+            "validation_status": constants.VALIDATION_STATUS_VALIDATED,
             "publish": True,
         }
         response = self.client.post(url, data=QUIZ_EDIT_FORM)

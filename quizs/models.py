@@ -23,10 +23,10 @@ class QuizQuerySet(models.QuerySet):
         return self.prefetch_related("questions", "tags", "authors", "relationships")
 
     def validated(self):
-        return self.filter(validation_status=constants.VALIDATION_STATUS_OK)
+        return self.filter(validation_status=constants.VALIDATION_STATUS_VALIDATED)
 
     def not_validated(self):
-        return self.exclude(validation_status=constants.VALIDATION_STATUS_OK)
+        return self.exclude(validation_status=constants.VALIDATION_STATUS_VALIDATED)
 
     def published(self):
         return self.filter(publish=True)
@@ -125,7 +125,7 @@ class Quiz(models.Model):
         verbose_name="Statut",
         max_length=150,
         choices=constants.VALIDATION_STATUS_CHOICES,
-        default=constants.VALIDATION_STATUS_NEW,
+        default=constants.VALIDATION_STATUS_DRAFT,
     )
     validator = models.ForeignKey(
         verbose_name="Validateur",
@@ -251,7 +251,7 @@ class Quiz(models.Model):
 
     @property
     def is_validated(self) -> bool:
-        return self.validation_status == constants.VALIDATION_STATUS_OK
+        return self.validation_status == constants.VALIDATION_STATUS_VALIDATED
 
     @property
     def questions_categories_list(self) -> list:

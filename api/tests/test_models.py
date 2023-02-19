@@ -177,7 +177,7 @@ class QuizModelTest(TestCase):
         self.question_validated = QuestionFactory(answer_correct="a")
         self.question_not_validated = QuestionFactory(
             answer_correct="a",
-            validation_status=constants.VALIDATION_STATUS_IN_PROGRESS,
+            validation_status=constants.VALIDATION_STATUS_TO_VALIDATE,
         )
         self.quiz_published = QuizFactory(name="quiz published", publish=True)
         self.quiz_not_published = QuizFactory(name="quiz not published")
