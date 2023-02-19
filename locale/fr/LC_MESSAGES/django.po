@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-19 10:29+0100\n"
-"PO-Revision-Date: 2023-02-19 11:00+0100\n"
+"POT-Creation-Date: 2023-02-19 11:44+0100\n"
+"PO-Revision-Date: 2023-02-19 11:50+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -131,6 +131,7 @@ msgid "Category"
 msgstr "Catégorie"
 
 #: questions/models.py:117 questions/models.py:238 questions/models.py:358
+#: quizs/models.py:102 quizs/models.py:166 quizs/models.py:369
 #: templates/categories/detail_questions.html:14
 #: templates/includes/_header.html:35 templates/tags/create.html:17
 #: templates/tags/detail_base.html:13 templates/tags/detail_questions.html:14
@@ -142,7 +143,7 @@ msgstr "Tags"
 msgid "Difficulty level"
 msgstr "Niveau de difficulté"
 
-#: questions/models.py:129
+#: questions/models.py:129 quizs/models.py:105
 msgid "Language"
 msgstr "Langue"
 
@@ -242,38 +243,41 @@ msgstr "Notes, commentaires et liens explicatifs additionels"
 msgid "Won't be displayed in the application"
 msgstr "Ne s'affichera pas dans l'application"
 
-#: questions/models.py:202 questions/models.py:240
+#: questions/models.py:202 questions/models.py:240 quizs/models.py:555
 #: templates/glossary/detail_history.html:12
 #: templates/questions/detail_history.html:12
 #: templates/quizs/detail_history.html:12
 msgid "Author"
 msgstr "Auteur"
 
-#: questions/models.py:211 questions/models.py:241
-msgid "Validator"
-msgstr "Validateur"
-
-#: questions/models.py:219
+#: questions/models.py:211 quizs/models.py:126
 msgid "Status"
 msgstr "Statut"
 
-#: questions/models.py:224
+#: questions/models.py:217 questions/models.py:241 quizs/models.py:132
+#: quizs/models.py:173
+msgid "Validator"
+msgstr "Validateur"
+
+#: questions/models.py:224 quizs/models.py:139
 msgid "Validation date"
 msgstr "Date de validation"
 
-#: questions/models.py:227
+#: questions/models.py:227 quizs/models.py:145
 msgid "Visibility"
 msgstr "Visibilité"
 
-#: questions/models.py:233
+#: questions/models.py:233 quizs/models.py:159 quizs/models.py:437
+#: quizs/models.py:500 quizs/models.py:560
 msgid "Creation date"
 msgstr "Date de création"
 
-#: questions/models.py:234
+#: questions/models.py:234 quizs/models.py:160 quizs/models.py:438
+#: quizs/models.py:501 quizs/models.py:561
 msgid "Last update date"
 msgstr "Date de dernière modification"
 
-#: questions/models.py:239 questions/models.py:359
+#: questions/models.py:239 questions/models.py:359 quizs/models.py:181
 #: templates/includes/_header.html:29 templates/questions/detail_base.html:34
 #: templates/quizs/create.html:4 templates/quizs/create.html:18
 #: templates/quizs/detail_base.html:13 templates/quizs/list.html:14
@@ -281,21 +285,22 @@ msgstr "Date de dernière modification"
 msgid "Quizs"
 msgstr "Quizs"
 
-#: questions/models.py:248 templates/categories/detail_questions.html:12
+#: questions/models.py:248 quizs/models.py:434
+#: templates/categories/detail_questions.html:12
 #: templates/questions/detail_base.html:4
 #: templates/tags/detail_questions.html:12
 msgid "Question"
 msgstr "Question"
 
-#: questions/models.py:249 templates/categories/detail_base.html:34
-#: templates/includes/_header.html:26 templates/questions/create.html:4
-#: templates/questions/create.html:18 templates/questions/detail_base.html:13
-#: templates/questions/list.html:14 templates/quizs/detail_base.html:34
-#: templates/tags/detail_base.html:34
+#: questions/models.py:249 quizs/models.py:97 quizs/models.py:168
+#: templates/categories/detail_base.html:34 templates/includes/_header.html:26
+#: templates/questions/create.html:4 templates/questions/create.html:18
+#: templates/questions/detail_base.html:13 templates/questions/list.html:14
+#: templates/quizs/detail_base.html:34 templates/tags/detail_base.html:34
 msgid "Questions"
 msgstr "Questions"
 
-#: questions/models.py:360
+#: questions/models.py:360 quizs/models.py:375
 msgid "# Ans"
 msgstr "# Rép"
 
@@ -307,13 +312,106 @@ msgstr "# Rép Corr"
 msgid "% Corr Ans"
 msgstr "% Rép Corr"
 
-#: questions/models.py:363
+#: questions/models.py:363 quizs/models.py:378
 msgid "# Like"
 msgstr "# Like"
 
-#: questions/models.py:364
+#: questions/models.py:364 quizs/models.py:379
 msgid "# Dislike"
 msgstr "# Dislike"
+
+#: quizs/models.py:88
+msgid "Name"
+msgstr "Nom"
+
+#: quizs/models.py:89
+msgid "Slug"
+msgstr "Fragment d'URL"
+
+#: quizs/models.py:90
+msgid "Introduction"
+msgstr "Introduction"
+
+#: quizs/models.py:92
+msgid "Conclusion"
+msgstr "Conclusion"
+
+#: quizs/models.py:94
+msgid "Include leads for further action"
+msgstr "Inclure des pistes pour aller plus loin"
+
+#: quizs/models.py:103
+msgid "Average difficulty level"
+msgstr "Niveau moyen de difficulté"
+
+#: quizs/models.py:112 quizs/models.py:164 quizs/models.py:370
+msgid "Authors"
+msgstr "Auteurs"
+
+#: quizs/models.py:119
+msgid "Background image (link)"
+msgstr "Lien vers une image pour illustrer le quiz"
+
+#: quizs/models.py:123
+msgid "Audio answers?"
+msgstr "Contenu audio ?"
+
+#: quizs/models.py:140
+msgid "Published?"
+msgstr "Publié ?"
+
+#: quizs/models.py:141
+msgid "Publication date"
+msgstr "Date de publication"
+
+#: quizs/models.py:143
+msgid "Spotlighted?"
+msgstr "Mis en avant ?"
+
+#: quizs/models.py:152
+msgid "Similar or related quizs"
+msgstr "Quizs similaires ou liés"
+
+#: quizs/models.py:171
+msgid "Relationships"
+msgstr "Relations"
+
+#: quizs/models.py:180 quizs/models.py:433 quizs/models.py:553
+#: templates/quizs/detail_base.html:4
+msgid "Quiz"
+msgstr "Quiz"
+
+#: quizs/models.py:371
+msgid "Questions not yet validated"
+msgstr "Questions pas encore validées"
+
+#: quizs/models.py:372
+msgid "Questions categories"
+msgstr "Questions catégories"
+
+#: quizs/models.py:373
+msgid "Questions tags"
+msgstr "Questions tags"
+
+#: quizs/models.py:374
+msgid "Questions authors"
+msgstr "Questions auteurs"
+
+#: quizs/models.py:376
+msgid "Average time (secondes)"
+msgstr "Durée moyenne (en secondes)"
+
+#: quizs/models.py:377
+msgid "Average time (minutes)"
+msgstr "Durée moyenne (en minutes)"
+
+#: quizs/models.py:435
+msgid "Order"
+msgstr "Ordre"
+
+#: quizs/models.py:492
+msgid "Relationship type"
+msgstr "Type de relation"
 
 #: templates/403.html:4 templates/404.html:4 templates/404.html:10
 #: templates/500.html:4 templates/500.html:10
@@ -679,10 +777,6 @@ msgstr "Tous mes quizs"
 #: templates/questions/detail_edit.html:86
 msgid "Delete"
 msgstr "Supprimer"
-
-#: templates/quizs/detail_base.html:4
-msgid "Quiz"
-msgstr "Quiz"
 
 #: templates/tags/detail_base.html:4
 msgid "Tag"

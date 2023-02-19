@@ -207,6 +207,12 @@ class Question(models.Model):
         on_delete=models.SET_NULL,
     )
 
+    validation_status = models.CharField(
+        verbose_name=_("Status"),
+        max_length=150,
+        choices=constants.VALIDATION_STATUS_CHOICES,
+        default=constants.VALIDATION_STATUS_DRAFT,
+    )
     validator = models.ForeignKey(
         verbose_name=_("Validator"),
         to=settings.AUTH_USER_MODEL,
@@ -214,12 +220,6 @@ class Question(models.Model):
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
-    )
-    validation_status = models.CharField(
-        verbose_name=_("Status"),
-        max_length=150,
-        choices=constants.VALIDATION_STATUS_CHOICES,
-        default=constants.VALIDATION_STATUS_DRAFT,
     )
     validation_date = models.DateTimeField(verbose_name=_("Validation date"), blank=True, null=True)
 
