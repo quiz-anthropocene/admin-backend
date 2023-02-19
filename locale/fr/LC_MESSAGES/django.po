@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-18 22:24+0100\n"
-"PO-Revision-Date: 2023-02-18 22:24+0100\n"
+"POT-Creation-Date: 2023-02-19 10:29+0100\n"
+"PO-Revision-Date: 2023-02-19 11:00+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -58,6 +58,26 @@ msgstr "Difficule"
 #: core/constants.py:27
 msgid "Expert"
 msgstr "Expert"
+
+#: core/constants.py:65
+msgid "Draft"
+msgstr "Brouillon"
+
+#: core/constants.py:66
+msgid "To validate"
+msgstr "A valider"
+
+#: core/constants.py:67
+msgid "Validated"
+msgstr "Validé"
+
+#: core/constants.py:68
+msgid "Set aside"
+msgstr "Écarté temporairement"
+
+#: core/constants.py:69
+msgid "Removed"
+msgstr "Écarté"
 
 #: core/constants.py:116
 msgid "German"

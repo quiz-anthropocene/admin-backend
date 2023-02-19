@@ -95,7 +95,7 @@ class QuestionModelHistoryTest(TestCase):
             text="Test",
             category=cls.category_1,
             # tags=[cls.tag_1, cls.tag_2],
-            validation_status=constants.VALIDATION_STATUS_NEW,
+            validation_status=constants.VALIDATION_STATUS_DRAFT,
         )
         cls.question.tags.set([cls.tag_1, cls.tag_2])
 
@@ -140,7 +140,7 @@ class QuestionModelHistoryTest(TestCase):
 
     def test_history_diff(self):
         self.question.text = "La vraie question"
-        self.question.validation_status = constants.VALIDATION_STATUS_OK
+        self.question.validation_status = constants.VALIDATION_STATUS_VALIDATED
         self.question.category = self.category_2
         self.question.save()
         self.assertEqual(self.question.history.count(), 2 + 1)
@@ -160,14 +160,20 @@ class QuestionModelQuerySetTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user_contributor = UserFactory()
-        QuestionFactory(validation_status=constants.VALIDATION_STATUS_OK, visibility=constants.VISIBILITY_PUBLIC)
-        QuestionFactory(validation_status=constants.VALIDATION_STATUS_OK, visibility=constants.VISIBILITY_HIDDEN)
-        QuestionFactory(validation_status=constants.VALIDATION_STATUS_OK, visibility=constants.VISIBILITY_PRIVATE)
-        QuestionFactory(validation_status=constants.VALIDATION_STATUS_NEW, visibility=constants.VISIBILITY_PUBLIC)
-        QuestionFactory(validation_status=constants.VALIDATION_STATUS_NEW, visibility=constants.VISIBILITY_HIDDEN)
+        QuestionFactory(
+            validation_status=constants.VALIDATION_STATUS_VALIDATED, visibility=constants.VISIBILITY_PUBLIC
+        )
+        QuestionFactory(
+            validation_status=constants.VALIDATION_STATUS_VALIDATED, visibility=constants.VISIBILITY_HIDDEN
+        )
+        QuestionFactory(
+            validation_status=constants.VALIDATION_STATUS_VALIDATED, visibility=constants.VISIBILITY_PRIVATE
+        )
+        QuestionFactory(validation_status=constants.VALIDATION_STATUS_DRAFT, visibility=constants.VISIBILITY_PUBLIC)
+        QuestionFactory(validation_status=constants.VALIDATION_STATUS_DRAFT, visibility=constants.VISIBILITY_HIDDEN)
         QuestionFactory(
             text="xyz",
-            validation_status=constants.VALIDATION_STATUS_NEW,
+            validation_status=constants.VALIDATION_STATUS_DRAFT,
             visibility=constants.VISIBILITY_PRIVATE,
             author=cls.user_contributor,
         )

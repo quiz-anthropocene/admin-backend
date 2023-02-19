@@ -164,38 +164,38 @@ class QuizModelQuerySetTest(TestCase):
     def setUpTestData(cls):
         QuizFactory(
             name="Quiz 1",
-            validation_status=constants.VALIDATION_STATUS_OK,
+            validation_status=constants.VALIDATION_STATUS_VALIDATED,
             publish=True,
             visibility=constants.VISIBILITY_PUBLIC,
         )
         QuizFactory(
             name="Quiz 2",
-            validation_status=constants.VALIDATION_STATUS_OK,
+            validation_status=constants.VALIDATION_STATUS_VALIDATED,
             publish=True,
             visibility=constants.VISIBILITY_HIDDEN,
         )
         QuizFactory(
             name="Quiz 3",
-            validation_status=constants.VALIDATION_STATUS_OK,
+            validation_status=constants.VALIDATION_STATUS_VALIDATED,
             publish=True,
             visibility=constants.VISIBILITY_PRIVATE,
         )
         QuizFactory(
             name="Quiz 4",
-            validation_status=constants.VALIDATION_STATUS_NEW,
+            validation_status=constants.VALIDATION_STATUS_DRAFT,
             publish=False,
             visibility=constants.VISIBILITY_PUBLIC,
         )
         QuizFactory(
             name="Quiz 5",
-            validation_status=constants.VALIDATION_STATUS_NEW,
+            validation_status=constants.VALIDATION_STATUS_DRAFT,
             publish=False,
             visibility=constants.VISIBILITY_HIDDEN,
         )
         QuizFactory(
             name="Quiz 6",
             introduction="xyz",
-            validation_status=constants.VALIDATION_STATUS_NEW,
+            validation_status=constants.VALIDATION_STATUS_DRAFT,
             publish=False,
             visibility=constants.VISIBILITY_PRIVATE,
         )

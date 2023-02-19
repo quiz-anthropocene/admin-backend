@@ -19,10 +19,10 @@ from tags.models import Tag
 
 class QuestionQuerySet(models.QuerySet):
     def validated(self):
-        return self.filter(validation_status=constants.VALIDATION_STATUS_OK)
+        return self.filter(validation_status=constants.VALIDATION_STATUS_VALIDATED)
 
     def not_validated(self):
-        return self.exclude(validation_status=constants.VALIDATION_STATUS_OK)
+        return self.exclude(validation_status=constants.VALIDATION_STATUS_VALIDATED)
 
     def public(self):
         return self.exclude(visibility=constants.VISIBILITY_PRIVATE)
@@ -219,7 +219,7 @@ class Question(models.Model):
         verbose_name=_("Status"),
         max_length=150,
         choices=constants.VALIDATION_STATUS_CHOICES,
-        default=constants.VALIDATION_STATUS_NEW,
+        default=constants.VALIDATION_STATUS_DRAFT,
     )
     validation_date = models.DateTimeField(verbose_name=_("Validation date"), blank=True, null=True)
 
@@ -322,7 +322,7 @@ class Question(models.Model):
 
     @property
     def is_validated(self) -> bool:
-        return self.validation_status == constants.VALIDATION_STATUS_OK
+        return self.validation_status == constants.VALIDATION_STATUS_VALIDATED
 
     @property
     def answer_count_agg(self) -> int:
@@ -374,7 +374,7 @@ class Question(models.Model):
         - https://adamj.eu/tech/2020/01/22/djangos-field-choices-dont-constrain-your-data/
         """
         # > only run on validated questions
-        if self.validation_status == constants.VALIDATION_STATUS_OK:
+        if self.validation_status == constants.VALIDATION_STATUS_VALIDATED:
             # > category rules
             if self.category is None:
                 error_message = (
