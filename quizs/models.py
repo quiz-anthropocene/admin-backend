@@ -91,7 +91,7 @@ class Quiz(models.Model):
     conclusion = RichTextField(
         verbose_name=_("Conclusion"),
         blank=True,
-        help_text="Inclure des pistes pour aller plus loin",
+        help_text=_("Include leads for further action"),
     )
     questions = models.ManyToManyField(
         verbose_name=_("Questions"),

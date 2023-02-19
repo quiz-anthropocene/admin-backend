@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-19 11:32+0100\n"
+"POT-Creation-Date: 2023-02-19 11:44+0100\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -332,6 +332,10 @@ msgstr ""
 
 #: quizs/models.py:92
 msgid "Conclusion"
+msgstr ""
+
+#: quizs/models.py:94
+msgid "Include leads for further action"
 msgstr ""
 
 #: quizs/models.py:103
