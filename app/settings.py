@@ -174,9 +174,13 @@ USE_L10N = True
 
 USE_TZ = True
 
+# languages are also listed in core/constants.py
 LANGUAGES = (
     ("en", _("English")),
     ("fr", _("French")),
+    ("es", _("Spanish")),
+    ("it", _("Italian")),
+    ("de", _("German")),
 )
 
 LOCALE_PATHS = [

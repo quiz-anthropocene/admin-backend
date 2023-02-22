@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-19 11:44+0100\n"
+"POT-Creation-Date: 2023-02-22 10:29+0100\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -19,12 +19,24 @@ msgstr ""
 "X-Generator: Poedit 3.2.2\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: app/settings.py:178 core/constants.py:115
+#: app/settings.py:179 core/constants.py:117
 msgid "English"
 msgstr ""
 
-#: app/settings.py:179 core/constants.py:114
+#: app/settings.py:180 core/constants.py:116
 msgid "French"
+msgstr ""
+
+#: app/settings.py:181 core/constants.py:118
+msgid "Spanish"
+msgstr ""
+
+#: app/settings.py:182 core/constants.py:119
+msgid "Italian"
+msgstr ""
+
+#: app/settings.py:183 core/constants.py:120
+msgid "German"
 msgstr ""
 
 #: core/constants.py:8
@@ -79,27 +91,23 @@ msgstr ""
 msgid "Removed"
 msgstr ""
 
-#: core/constants.py:116
-msgid "German"
-msgstr ""
-
-#: core/constants.py:136
+#: core/constants.py:140
 msgid "Public (exported and the application)"
 msgstr ""
 
-#: core/constants.py:137
+#: core/constants.py:141
 msgid "Hidden (exported but not visible in the application)"
 msgstr ""
 
-#: core/constants.py:138
+#: core/constants.py:142
 msgid "Private (not exported and not in the application)"
 msgstr ""
 
-#: core/constants.py:141
+#: core/constants.py:145
 msgid "True"
 msgstr ""
 
-#: core/constants.py:141
+#: core/constants.py:145
 msgid "False"
 msgstr ""
 

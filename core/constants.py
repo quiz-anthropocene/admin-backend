@@ -109,10 +109,14 @@ CONTRIBUTION_STATUS_CHOICES = [
 
 LANGUAGE_FRENCH = "FRENCH"
 LANGUAGE_ENGLISH = "ENGLISH"
+LANGUAGE_SPANISH = "SPANISH"
+LANGUAGE_ITALIAN = "ITALIAN"
 LANGUAGE_GERMAN = "GERMAN"
 LANGUAGE_OPTIONS = [
     (LANGUAGE_FRENCH, _("French"), "fr", "🇫🇷"),
     (LANGUAGE_ENGLISH, _("English"), "en", "🇬🇧"),
+    (LANGUAGE_SPANISH, _("Spanish"), "es", "🇪🇸"),
+    (LANGUAGE_ITALIAN, _("Italian"), "it", "🇮🇹"),
     (LANGUAGE_GERMAN, _("German"), "de", "🇩🇪"),
 ]
 LANGUAGE_CHOICES = [(language[0], language[1]) for language in LANGUAGE_OPTIONS]
