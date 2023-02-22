@@ -2,21 +2,22 @@ from ckeditor.fields import RichTextField
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 
 
 class Category(models.Model):
     CATEGORY_TIMESTAMP_FIELDS = ["created", "updated"]
 
-    name = models.CharField(verbose_name="Nom", max_length=50, blank=False)
-    name_long = models.CharField(verbose_name="Nom (version longue)", max_length=150, blank=False)
-    description = RichTextField(verbose_name="Description", blank=True)
+    name = models.CharField(verbose_name=_("Name"), max_length=50, blank=False)
+    name_long = models.CharField(verbose_name=_("Name (long version)"), max_length=150, blank=False)
+    description = RichTextField(verbose_name=_("Description"), blank=True)
 
-    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
-    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
+    updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
 
     class Meta:
-        verbose_name = "Catégorie"
-        verbose_name_plural = "Catégories"
+        verbose_name = _("Category")
+        verbose_name_plural = _("Categories")
         ordering = ["pk"]
         constraints = [models.UniqueConstraint(fields=["name"], name="category_name_unique")]
 
@@ -35,4 +36,4 @@ class Category(models.Model):
         return self.questions.public().validated().count()
 
     # Admin
-    question_public_validated_count.fget.short_description = "Questions (publiques & validées)"
+    question_public_validated_count.fget.short_description = _("Questions (public & validated)")
