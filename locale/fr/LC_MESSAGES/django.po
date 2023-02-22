@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-22 19:14+0100\n"
-"PO-Revision-Date: 2023-02-22 19:14+0100\n"
+"POT-Creation-Date: 2023-02-22 20:16+0100\n"
+"PO-Revision-Date: 2023-02-22 20:18+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -18,6 +18,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 3.2.2\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: api/questions/filters.py:11
+msgid "Type(s)"
+msgstr "Type(s)"
+
+#: api/questions/filters.py:13
+msgid "Difficulty level(s)"
+msgstr "Niveau(x) de difficulté"
+
+#: api/questions/filters.py:16 api/quizs/filters.py:10
+msgid "Language(s)"
+msgstr "Langue(s)"
+
+#: api/questions/filters.py:18
+msgid "Category(s)"
+msgstr "Catégorie(s)"
+
+#: api/questions/filters.py:22 api/quizs/filters.py:12
+msgid "Tag(s)"
+msgstr "Tag(s)"
+
+#: api/questions/filters.py:26 api/quizs/filters.py:16
+msgid "Author(s)"
+msgstr "Auteur(s)"
 
 #: app/settings.py:179 core/constants.py:117
 msgid "English"
@@ -38,6 +62,46 @@ msgstr "Italien"
 #: app/settings.py:183 core/constants.py:120
 msgid "German"
 msgstr "Allemand"
+
+#: categories/models.py:11 quizs/models.py:88 tags/models.py:26
+msgid "Name"
+msgstr "Nom"
+
+#: categories/models.py:12
+msgid "Name (long version)"
+msgstr "Nom (version longue)"
+
+#: categories/models.py:13 tags/models.py:27
+msgid "Description"
+msgstr "Description"
+
+#: categories/models.py:15 questions/models.py:233 quizs/models.py:159
+#: quizs/models.py:437 quizs/models.py:500 quizs/models.py:560
+#: tags/models.py:29
+msgid "Creation date"
+msgstr "Date de création"
+
+#: categories/models.py:16 questions/models.py:234 quizs/models.py:160
+#: quizs/models.py:438 quizs/models.py:501 quizs/models.py:561
+#: tags/models.py:30
+msgid "Last update date"
+msgstr "Date de dernière modification"
+
+#: categories/models.py:19 questions/models.py:109 questions/models.py:237
+#: templates/categories/detail_base.html:4
+#: templates/categories/detail_questions.html:13
+#: templates/tags/detail_questions.html:13
+msgid "Category"
+msgstr "Catégorie"
+
+#: categories/models.py:20 templates/categories/detail_base.html:13
+#: templates/categories/list.html:5 templates/categories/list.html:14
+msgid "Categories"
+msgstr "Catégories"
+
+#: categories/models.py:39 tags/models.py:63
+msgid "Questions (public & validated)"
+msgstr "Questions (publiques & validées)"
 
 #: contributions/forms.py:53
 msgid "Message"
@@ -115,6 +179,10 @@ msgstr "Vrai"
 msgid "False"
 msgstr "Faux"
 
+#: questions/filters.py:14 quizs/filters.py:17 tags/filters.py:10
+msgid "Text search"
+msgstr "Recherche texte"
+
 #: questions/forms.py:33
 msgid "Answer image"
 msgstr "Image pour illustrer la réponse"
@@ -139,16 +207,9 @@ msgstr "Texte que l'utilisateur peut décider d'afficher pour l'aider"
 msgid "Type"
 msgstr "Type"
 
-#: questions/models.py:109 questions/models.py:237
-#: templates/categories/detail_base.html:4
-#: templates/categories/detail_questions.html:13
-#: templates/tags/detail_questions.html:13
-msgid "Category"
-msgstr "Catégorie"
-
 #: questions/models.py:117 questions/models.py:238 questions/models.py:358
 #: quizs/models.py:102 quizs/models.py:166 quizs/models.py:369
-#: templates/categories/detail_questions.html:14
+#: tags/models.py:36 templates/categories/detail_questions.html:14
 #: templates/includes/_header.html:35 templates/tags/create.html:17
 #: templates/tags/detail_base.html:13 templates/tags/detail_questions.html:14
 #: templates/tags/detail_quizs.html:13 templates/tags/list.html:14
@@ -283,16 +344,6 @@ msgstr "Date de validation"
 msgid "Visibility"
 msgstr "Visibilité"
 
-#: questions/models.py:233 quizs/models.py:159 quizs/models.py:437
-#: quizs/models.py:500 quizs/models.py:560
-msgid "Creation date"
-msgstr "Date de création"
-
-#: questions/models.py:234 quizs/models.py:160 quizs/models.py:438
-#: quizs/models.py:501 quizs/models.py:561
-msgid "Last update date"
-msgstr "Date de dernière modification"
-
 #: questions/models.py:239 questions/models.py:359 quizs/models.py:181
 #: templates/includes/_header.html:29 templates/questions/detail_base.html:34
 #: templates/quizs/create.html:4 templates/quizs/create.html:18
@@ -339,10 +390,6 @@ msgstr "# Dislike"
 #: quizs/forms.py:31
 msgid "Quiz background image"
 msgstr "Image pour illustrer le quiz"
-
-#: quizs/models.py:88
-msgid "Name"
-msgstr "Nom"
 
 #: quizs/models.py:89
 msgid "Slug"
@@ -433,6 +480,14 @@ msgstr "Ordre"
 #: quizs/models.py:492
 msgid "Relationship type"
 msgstr "Type de relation"
+
+#: tags/models.py:35 templates/tags/detail_base.html:4
+msgid "Tag"
+msgstr "Tag"
+
+#: tags/models.py:64
+msgid "Quizs (public & published)"
+msgstr "Quizs (publiques & publiés)"
 
 #: templates/403.html:4 templates/404.html:4 templates/404.html:10
 #: templates/500.html:4 templates/500.html:10
@@ -528,11 +583,6 @@ msgstr "Historique"
 #: templates/profile/home.html:47 templates/profile/home.html:60
 msgid "View"
 msgstr "Voir"
-
-#: templates/categories/detail_base.html:13 templates/categories/list.html:5
-#: templates/categories/list.html:14
-msgid "Categories"
-msgstr "Catégories"
 
 #: templates/categories/detail_base.html:28
 #: templates/contributions/detail_base.html:33
@@ -843,7 +893,7 @@ msgstr "Vous êtes <strong>l'auteur</strong> de cette question"
 
 #: templates/questions/detail_edit.html:30
 msgid "The question is <strong>not validated</strong> yet"
-msgstr "La question n'est pas encore <strong>validée</strong>."
+msgstr "La question n'est pas encore <strong>validée</strong>"
 
 #: templates/questions/detail_edit.html:32 templates/quizs/detail_edit.html:42
 #: templates/quizs/detail_edit.html:58
@@ -909,7 +959,3 @@ msgstr "Publié"
 #: templates/quizs/detail_edit.html:72
 msgid "The quiz is published even though it is not validated"
 msgstr "Le quiz est publié alors qu'il n'est pas validé"
-
-#: templates/tags/detail_base.html:4
-msgid "Tag"
-msgstr "Tag"
