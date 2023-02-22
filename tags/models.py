@@ -2,6 +2,7 @@ from ckeditor.fields import RichTextField
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 
 
 class TagManager(models.Manager):
@@ -22,17 +23,17 @@ class TagManager(models.Manager):
 class Tag(models.Model):
     TAG_TIMESTAMP_FIELDS = ["created", "updated"]
 
-    name = models.CharField(verbose_name="Nom", max_length=50, blank=False)
-    description = RichTextField(verbose_name="Description", blank=True)
+    name = models.CharField(verbose_name=_("Name"), max_length=50, blank=False)
+    description = RichTextField(verbose_name=_("Description"), blank=True)
 
-    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
-    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
+    updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
 
     objects = TagManager()
 
     class Meta:
-        verbose_name = "Tag"
-        verbose_name_plural = "Tags"
+        verbose_name = _("Tag")
+        verbose_name_plural = _("Tags")
         ordering = ["pk"]
         constraints = [models.UniqueConstraint(fields=["name"], name="tag_name_unique")]
 
@@ -59,5 +60,5 @@ class Tag(models.Model):
         return self.quizs.public().published().count()
 
     # Admin
-    question_public_validated_count.fget.short_description = "Questions (publiques & validées)"
-    quiz_public_published_count.fget.short_description = "Quizs (publiques & publiés)"
+    question_public_validated_count.fget.short_description = _("Questions (public & validated)")
+    quiz_public_published_count.fget.short_description = _("Quizs (public & published)")
