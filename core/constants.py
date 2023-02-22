@@ -137,7 +137,7 @@ VISIBILITY_PUBLIC = "PUBLIC"
 VISIBILITY_HIDDEN = "HIDDEN"
 VISIBILITY_PRIVATE = "PRIVATE"
 VISIBILITY_CHOICES = (
-    (VISIBILITY_PUBLIC, _("Public (exported and the application)")),
+    (VISIBILITY_PUBLIC, _("Public (exported and in the application)")),
     (VISIBILITY_HIDDEN, _("Hidden (exported but not visible in the application)")),
     (VISIBILITY_PRIVATE, _("Private (not exported and not in the application)")),
 )

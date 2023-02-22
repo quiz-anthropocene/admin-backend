@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-22 11:09+0100\n"
-"PO-Revision-Date: 2023-02-22 11:19+0100\n"
+"POT-Creation-Date: 2023-02-22 19:14+0100\n"
+"PO-Revision-Date: 2023-02-22 19:14+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -38,6 +38,10 @@ msgstr "Italien"
 #: app/settings.py:183 core/constants.py:120
 msgid "German"
 msgstr "Allemand"
+
+#: contributions/forms.py:53
+msgid "Message"
+msgstr "Message"
 
 #: core/constants.py:8
 msgid "Multiple choice questionnaire"
@@ -92,7 +96,7 @@ msgid "Removed"
 msgstr "Écarté"
 
 #: core/constants.py:140
-msgid "Public (exported and the application)"
+msgid "Public (exported and in the application)"
 msgstr "Publique (dans l'export et dans l'application)"
 
 #: core/constants.py:141
@@ -110,6 +114,10 @@ msgstr "Vrai"
 #: core/constants.py:145
 msgid "False"
 msgstr "Faux"
+
+#: questions/forms.py:33
+msgid "Answer image"
+msgstr "Image pour illustrer la réponse"
 
 #: questions/models.py:97
 msgid "Text"
@@ -328,6 +336,10 @@ msgstr "# Like"
 msgid "# Dislike"
 msgstr "# Dislike"
 
+#: quizs/forms.py:31
+msgid "Quiz background image"
+msgstr "Image pour illustrer le quiz"
+
 #: quizs/models.py:88
 msgid "Name"
 msgstr "Nom"
@@ -385,7 +397,7 @@ msgid "Relationships"
 msgstr "Relations"
 
 #: quizs/models.py:180 quizs/models.py:433 quizs/models.py:553
-#: templates/questions/detail_quizs.html:11 templates/quizs/detail_base.html:4
+#: templates/questions/detail_quizs.html:12 templates/quizs/detail_base.html:4
 #: templates/tags/detail_quizs.html:12
 msgid "Quiz"
 msgstr "Quiz"
@@ -479,8 +491,8 @@ msgstr "Ajouter"
 #: templates/contributions/detail_edit.html:28
 #: templates/contributions/detail_reply_create.html:71
 #: templates/glossary/create.html:41 templates/glossary/detail_edit.html:20
-#: templates/questions/create.html:64 templates/questions/detail_edit.html:83
-#: templates/quizs/create.html:64 templates/quizs/detail_edit.html:110
+#: templates/questions/create.html:64 templates/questions/detail_edit.html:85
+#: templates/quizs/create.html:64 templates/quizs/detail_edit.html:115
 #: templates/quizs/detail_questions.html:69 templates/tags/create.html:41
 #: templates/tags/detail_edit.html:20
 msgid "Cancel"
@@ -541,7 +553,7 @@ msgstr "Modifier"
 #: templates/categories/detail_edit.html:18
 #: templates/contributions/detail_edit.html:26
 #: templates/glossary/detail_edit.html:18
-#: templates/questions/detail_edit.html:81 templates/quizs/detail_edit.html:109
+#: templates/questions/detail_edit.html:83 templates/quizs/detail_edit.html:114
 #: templates/quizs/detail_questions.html:68 templates/tags/detail_edit.html:18
 msgid "Save"
 msgstr "Sauvegarder"
@@ -549,7 +561,7 @@ msgstr "Sauvegarder"
 #: templates/categories/detail_edit.html:23
 #: templates/contributions/detail_edit.html:31
 #: templates/glossary/detail_edit.html:23
-#: templates/questions/detail_edit.html:86 templates/quizs/detail_edit.html:113
+#: templates/questions/detail_edit.html:88 templates/quizs/detail_edit.html:118
 #: templates/tags/detail_edit.html:23
 msgid "Delete"
 msgstr "Supprimer"
@@ -815,23 +827,88 @@ msgstr "Date de création du compte"
 msgid "All my quizs"
 msgstr "Tous mes quizs"
 
-#: templates/questions/create.html:39 templates/questions/detail_edit.html:45
-#: templates/quizs/create.html:39 templates/quizs/detail_edit.html:73
+#: templates/questions/create.html:39 templates/questions/detail_edit.html:47
+#: templates/quizs/create.html:39 templates/quizs/detail_edit.html:78
 msgid "You can add an <strong>image</strong> at the end of the form"
 msgstr "Vous pouvez ajouter une <strong>image</strong> à la fin du formulaire"
 
-#: templates/questions/create.html:54 templates/questions/detail_edit.html:61
-#: templates/quizs/create.html:54 templates/quizs/detail_edit.html:89
+#: templates/questions/create.html:54 templates/questions/detail_edit.html:63
+#: templates/quizs/create.html:54 templates/quizs/detail_edit.html:94
 msgid "Quick tool to compress images:"
 msgstr "Petit outil pour compresser les images :"
 
-#: templates/questions/detail_edit.html:65 templates/quizs/detail_edit.html:93
+#: templates/questions/detail_edit.html:24
+msgid "You are the <strong>author</strong> of this question"
+msgstr "Vous êtes <strong>l'auteur</strong> de cette question"
+
+#: templates/questions/detail_edit.html:30
+msgid "The question is <strong>not validated</strong> yet"
+msgstr "La question n'est pas encore <strong>validée</strong>."
+
+#: templates/questions/detail_edit.html:32 templates/quizs/detail_edit.html:42
+#: templates/quizs/detail_edit.html:58
+msgid "Only an administrator can do it"
+msgstr "Seul un administrateur peut le faire"
+
+#: templates/questions/detail_edit.html:35 templates/quizs/detail_edit.html:45
+#: templates/quizs/detail_edit.html:61
+msgid "You are an administrator"
+msgstr "Vous êtes administrateur"
+
+#: templates/questions/detail_edit.html:41 templates/quizs/detail_edit.html:51
+msgid "Validated by"
+msgstr "Validé par"
+
+#: templates/questions/detail_edit.html:67 templates/quizs/detail_edit.html:98
 msgid "Current image"
 msgstr "Image actuelle"
 
-#: templates/questions/detail_edit.html:71 templates/quizs/detail_edit.html:99
+#: templates/questions/detail_edit.html:73 templates/quizs/detail_edit.html:104
 msgid "None"
 msgstr "Aucun"
+
+#: templates/questions/detail_edit.html:95
+#: templates/questions/detail_edit.html:97 templates/quizs/detail_edit.html:125
+#: templates/quizs/detail_edit.html:127
+msgid "You don't have the necessary rights"
+msgstr "Vous n'avez pas les droits nécessaires"
+
+#: templates/questions/detail_history.html:28
+#: templates/questions/detail_history.html:30
+msgid "(empty)"
+msgstr "(vide)"
+
+#: templates/quizs/detail_edit.html:24
+msgid "You are the <strong>author</strong> of this quiz"
+msgstr "Vous êtes <strong>l'auteur</strong> de ce quiz"
+
+#: templates/quizs/detail_edit.html:27
+msgid "You want to add a collaborator? Contact an administrator"
+msgstr "Vous souhaitez ajouter un collaborateur ? Contactez un administrateur"
+
+#: templates/quizs/detail_edit.html:29
+msgid "All the authors:"
+msgstr "Tous les auteurs :"
+
+#: templates/quizs/detail_edit.html:34
+msgid "Author(s):"
+msgstr "Auteur(s) :"
+
+#: templates/quizs/detail_edit.html:40
+msgid "The quiz is <strong>not validated</strong> yet"
+msgstr "Le quiz n'est pas encore <strong>validé</strong>"
+
+#: templates/quizs/detail_edit.html:56
+msgid "The quiz is <strong>not published</strong> yet"
+msgstr "Le quiz n'est pas encore <strong>publié</strong>"
+
+#: templates/quizs/detail_edit.html:67
+msgid "Published"
+msgstr "Publié"
+
+#: templates/quizs/detail_edit.html:72
+msgid "The quiz is published even though it is not validated"
+msgstr "Le quiz est publié alors qu'il n'est pas validé"
 
 #: templates/tags/detail_base.html:4
 msgid "Tag"

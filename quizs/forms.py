@@ -1,6 +1,7 @@
 from dal import autocomplete
 from django import forms
 from django.forms.models import inlineformset_factory
+from django.utils.translation import gettext_lazy as _
 
 from questions.models import Question
 from quizs.models import Quiz, QuizQuestion
@@ -27,7 +28,7 @@ class QuizCreateForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["tags"].queryset = Tag.objects.all().order_by("name")
-        self.fields["image_background_url"].label = "Image pour illustrer le quiz"
+        self.fields["image_background_url"].label = _("Quiz background image")
         # disable some fields
         for field_name in QUIZ_READONLY_FORM_FIELDS:
             self.fields[field_name].disabled = True

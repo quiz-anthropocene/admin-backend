@@ -1,4 +1,5 @@
 from django import forms
+from django.utils.translation import gettext_lazy as _
 
 from contributions.models import Contribution
 from core import constants
@@ -49,5 +50,5 @@ class ContributionReplyCreateForm(forms.ModelForm):
         # initial values
         self.fields["type"].initial = constants.CONTRIBUTION_TYPE_COMMENT_CONTRIBUTOR
         self.fields["status"].initial = constants.CONTRIBUTION_STATUS_PROCESSED  # ?
-        self.fields["text"].label = "Message"
+        self.fields["text"].label = _("Message")
         self.fields["text"].help_text = None

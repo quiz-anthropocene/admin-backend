@@ -21,50 +21,55 @@
                     <div class="col-md-4 d-none d-md-block">
                         {% if user in quiz.authors.all %}
                             <div class="alert alert-primary" role="alert">
-                                ℹ️ Vous êtes <strong>l'auteur</strong> de ce quiz.<br />
+                                ℹ️ {% blocktrans %}You are the <strong>author</strong> of this quiz{% endblocktrans %}.
+                                <br />
                                 {% if quiz.authors.count == 1 %}
-                                    <small>ajouter un collaborateur ? contacter un administrateur</small>
+                                    <small>{% translate "You want to add a collaborator? Contact an administrator" %}</small>
                                 {% else %}
-                                    <small>Tous les auteurs : {{ quiz.author_list | join:", " }}</small>
+                                    <small>{% translate "All the authors:" %} {{ quiz.author_list | join:", " }}</small>
                                 {% endif %}
                             </div>
                         {% else %}
                             <div class="alert alert-primary" role="alert">
-                                ℹ️ Auteur{% if quiz.authors.count > 1 %}<span>s</span>{% endif %} : {{ quiz.author_list | join:", " }}
+                                ℹ️ {% translate "Author(s):" %} {{ quiz.author_list | join:", " }}
                             </div>
                         {% endif %}
                         {% if not quiz.is_private %}
                             {% if not quiz.is_validated %}
                                 <div class="alert alert-warning" role="alert">
-                                    ✍️ Le quiz n'est pas encore <strong>validé</strong>.<br />
-                                    <small>Seul un administrateur peut le faire.</small>
+                                    ✍️ {% blocktrans %}The quiz is <strong>not validated</strong> yet{% endblocktrans %}.
+                                    <br />
+                                    <small>{% translate "Only an administrator can do it" %}.</small>
                                     {% if user.has_role_administrator %}
-                                        <br /><small><strong>Vous êtes administrateur&nbsp;😉</strong></small>
+                                        <br />
+                                        <small><strong>{% translate "You are an administrator" %}&nbsp;😉</strong></small>
                                     {% endif %}
                                 </div>
                             {% endif %}
                             {% if quiz.validator %}
                                 <div class="alert alert-success" role="alert">
-                                    ✅ Validé par <strong>{{ quiz.validator }}</strong> le {{ quiz.validation_date | date:"d F Y" }}
+                                    ✅ {% translate "Validated by" %} <strong>{{ quiz.validator }}</strong> <small>{{ quiz.validation_date | date:"d F Y" }}</small>
                                 </div>
                             {% endif %}
                             {% if not quiz.publish %}
                                 <div class="alert alert-warning" role="alert">
-                                    ✍️ Le quiz n'est pas encore <strong>publié</strong>.<br />
-                                    <small>Seul un administrateur peut le faire.</small>
+                                    ✍️ {% blocktrans %}The quiz is <strong>not published</strong> yet{% endblocktrans %}.
+                                    <br />
+                                    <small>{% translate "Only an administrator can do it" %}.</small>
                                     {% if user.has_role_administrator %}
-                                        <br /><small><strong>Vous êtes administrateur&nbsp;😉</strong></small>
+                                        <br />
+                                        <small><strong>{% translate "You are an administrator" %}&nbsp;😉</strong></small>
                                     {% endif %}
                                 </div>
                             {% endif %}
                             {% if quiz.publish %}
                                 <div class="alert alert-success" role="alert">
-                                    ✅ Publié le {{ quiz.publish_date | date:"d F Y" }}
+                                    ✅ {% translate "Published" %} <small>{{ quiz.publish_date | date:"d F Y" }}</small>
                                 </div>
                             {% endif %}
                             {% if not quiz.is_validated and quiz.publish %}
                                 <div class="alert alert-danger" role="alert">
-                                    ⚠️ Le quiz est publié alors qu'il n'est pas validé
+                                    ⚠️ {% translate "The quiz is published even though it is not validated" %}
                                 </div>
                             {% endif %}
                         {% endif %}
@@ -117,9 +122,9 @@
         {% else %}
             <div class="alert alert-warning" role="alert">
                 {% if quiz.is_private %}
-                    Vous n'avez pas les droits nécessaires <small>(seul l'auteur peut modifier un quiz privé)</small>
+                    {% translate "You don't have the necessary rights" %} <small>(seul l'auteur peut modifier un quiz privé)</small>
                 {% else %}
-                    Vous n'avez pas les droits nécessaires <small>(seul l'auteur ou un administrateur peut modifier un quiz publique)</small>
+                    {% translate "You don't have the necessary rights" %} <small>(seul l'auteur ou un administrateur peut modifier un quiz publique)</small>
                 {% endif %}
             </div>
         {% endif %}
