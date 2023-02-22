@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-22 10:29+0100\n"
-"PO-Revision-Date: 2023-02-22 10:30+0100\n"
+"POT-Creation-Date: 2023-02-22 11:09+0100\n"
+"PO-Revision-Date: 2023-02-22 11:19+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -385,7 +385,8 @@ msgid "Relationships"
 msgstr "Relations"
 
 #: quizs/models.py:180 quizs/models.py:433 quizs/models.py:553
-#: templates/quizs/detail_base.html:4
+#: templates/questions/detail_quizs.html:11 templates/quizs/detail_base.html:4
+#: templates/tags/detail_quizs.html:12
 msgid "Quiz"
 msgstr "Quiz"
 
@@ -453,19 +454,23 @@ msgid "Administration"
 msgstr "Administration"
 
 #: templates/admin/contributor_create.html:12
-#: templates/admin/contributor_list.html:15
+#: templates/admin/contributor_list.html:15 templates/admin/home.html:27
 msgid "Contributors"
 msgstr "Contributeurs"
 
 #: templates/admin/contributor_create.html:13
-#: templates/admin/contributor_list.html:35 templates/glossary/create.html:4
-#: templates/glossary/create.html:18 templates/glossary/list.html:29
+#: templates/admin/contributor_create.html:44
+#: templates/admin/contributor_list.html:35
+#: templates/contributions/detail_reply_create.html:69
+#: templates/glossary/create.html:4 templates/glossary/create.html:18
+#: templates/glossary/create.html:39 templates/glossary/list.html:29
 #: templates/profile/questions.html:35 templates/profile/quizs.html:30
 #: templates/questions/create.html:4 templates/questions/create.html:19
-#: templates/questions/list.html:34 templates/quizs/create.html:4
-#: templates/quizs/create.html:19 templates/quizs/list.html:34
+#: templates/questions/create.html:62 templates/questions/list.html:34
+#: templates/quizs/create.html:4 templates/quizs/create.html:19
+#: templates/quizs/create.html:62 templates/quizs/list.html:34
 #: templates/tags/create.html:4 templates/tags/create.html:18
-#: templates/tags/list.html:34
+#: templates/tags/create.html:39 templates/tags/list.html:34
 msgid "Add"
 msgstr "Ajouter"
 
@@ -476,7 +481,8 @@ msgstr "Ajouter"
 #: templates/glossary/create.html:41 templates/glossary/detail_edit.html:20
 #: templates/questions/create.html:64 templates/questions/detail_edit.html:83
 #: templates/quizs/create.html:64 templates/quizs/detail_edit.html:110
-#: templates/tags/create.html:41 templates/tags/detail_edit.html:20
+#: templates/quizs/detail_questions.html:69 templates/tags/create.html:41
+#: templates/tags/detail_edit.html:20
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -490,6 +496,13 @@ msgstr "Tous les contributeurs"
 #: templates/tags/list.html:30
 msgid "Filters"
 msgstr "Filtres"
+
+#: templates/admin/contributor_list.html:48
+#: templates/contributions/list.html:46 templates/profile/questions.html:48
+#: templates/questions/list.html:47 templates/quizs/list.html:47
+#: templates/tags/list.html:42
+msgid "Filter"
+msgstr "Filtrer"
 
 #: templates/admin/history.html:15 templates/admin/home.html:35
 #: templates/glossary/detail_base.html:34
@@ -524,6 +537,22 @@ msgstr "Détails"
 #: templates/tags/detail_base.html:31
 msgid "Edit"
 msgstr "Modifier"
+
+#: templates/categories/detail_edit.html:18
+#: templates/contributions/detail_edit.html:26
+#: templates/glossary/detail_edit.html:18
+#: templates/questions/detail_edit.html:81 templates/quizs/detail_edit.html:109
+#: templates/quizs/detail_questions.html:68 templates/tags/detail_edit.html:18
+msgid "Save"
+msgstr "Sauvegarder"
+
+#: templates/categories/detail_edit.html:23
+#: templates/contributions/detail_edit.html:31
+#: templates/glossary/detail_edit.html:23
+#: templates/questions/detail_edit.html:86 templates/quizs/detail_edit.html:113
+#: templates/tags/detail_edit.html:23
+msgid "Delete"
+msgstr "Supprimer"
 
 #: templates/categories/detail_view.html:11
 #: templates/contributions/detail_view.html:11
@@ -649,6 +678,10 @@ msgstr "glissez ici"
 #: templates/includes/_s3_upload_form.html:10
 msgid "Maximum size"
 msgstr "Taille maximale"
+
+#: templates/includes/_s3_upload_form.html:10
+msgid "MB"
+msgstr "Mo"
 
 #: templates/includes/_s3_upload_form.html:11
 msgid "File type"
@@ -782,9 +815,23 @@ msgstr "Date de création du compte"
 msgid "All my quizs"
 msgstr "Tous mes quizs"
 
-#: templates/questions/detail_edit.html:86
-msgid "Delete"
-msgstr "Supprimer"
+#: templates/questions/create.html:39 templates/questions/detail_edit.html:45
+#: templates/quizs/create.html:39 templates/quizs/detail_edit.html:73
+msgid "You can add an <strong>image</strong> at the end of the form"
+msgstr "Vous pouvez ajouter une <strong>image</strong> à la fin du formulaire"
+
+#: templates/questions/create.html:54 templates/questions/detail_edit.html:61
+#: templates/quizs/create.html:54 templates/quizs/detail_edit.html:89
+msgid "Quick tool to compress images:"
+msgstr "Petit outil pour compresser les images :"
+
+#: templates/questions/detail_edit.html:65 templates/quizs/detail_edit.html:93
+msgid "Current image"
+msgstr "Image actuelle"
+
+#: templates/questions/detail_edit.html:71 templates/quizs/detail_edit.html:99
+msgid "None"
+msgstr "Aucun"
 
 #: templates/tags/detail_base.html:4
 msgid "Tag"

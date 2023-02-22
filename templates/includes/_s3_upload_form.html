@@ -6,8 +6,8 @@
             <div class="h5"><i class="ri-upload-2-line ri-2x"></i></div>
             <!-- Issue with refresh on client-reference js-generated form -->
             <!-- <div class="h6"><a href="" class="js-prevent-default">Choisissez une image</a> ou <b>glissez ici</b>.</div> -->
-            <div class="h6"><span class="fake-link">{% translate "Choose an image" %}</span> {% translate "or" %}<b>{% translate "drag and drop here" %}</b>.</div>
-            <div class="small">{% translate "Maximum size" %} : {{ s3_upload_config.max_file_size }} Mo</div>
+            <div class="h6"><span class="fake-link">{% translate "Choose an image" %}</span> {% translate "or" %} <b>{% translate "drag and drop here" %}</b>.</div>
+            <div class="small">{% translate "Maximum size" %} : {{ s3_upload_config.max_file_size }} {% translate "MB" %}</div>
             <div class="small">{% translate "File type" %} : PNG, JPEG, SVG, GIF</div>
         </a>
         </div>

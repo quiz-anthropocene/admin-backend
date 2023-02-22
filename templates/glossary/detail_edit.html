@@ -15,12 +15,12 @@
 
             <div class="row">
                 <div class="col">
-                    {% bootstrap_button button_type="submit" button_class="btn-primary" content="Sauvegarder" %}
-                    {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
+                    {% bootstrap_button button_type="submit" button_class="btn-primary" content=_("Save") %}
+                    {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content=_("Cancel") %} #}
                     <a class="btn btn-secondary" href="{% url 'glossary:detail_view' glossary_item.id %}">{% translate "Cancel" %}</a>
                 </div>
                 <div class="col-auto">
-                    <button class="btn btn-danger" disabled>Supprimer</button>
+                    <button class="btn btn-danger" disabled>{% translate "Delete" %}</button>
                 </div>
             </div>
         </form>

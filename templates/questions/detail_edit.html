@@ -42,7 +42,7 @@
                         {% endif %}
                         {% if not question.answer_image_url %}
                             <div class="alert alert-primary" role="alert">
-                                🖼️ L'ajout de <strong>l'image d'explication</strong> se fait à la fin du formulaire&nbsp;👇
+                                🖼️ {% blocktrans %}You can add an <strong>image</strong> at the end of the form{% endblocktrans %}&nbsp;👇
                             </div>
                         {% endif %}
                     </div>
@@ -58,17 +58,17 @@
                             <label for="image_form" class="form-label js-display-if-javascript-enabled">{{ form.answer_image_url.label }}</label>
                             {% include "includes/_s3_upload_form.html" with dropzone_form_id="image_form" %}
                         </div>
-                        <small>Image trop grosse ? outil pour réduire sa taille : <a href="https://tinypng.com" target="_blank">tinypng.com</a></small>
+                        <small>{% translate "Quick tool to compress images:" %} <a href="https://tinypng.com" target="_blank">tinypng.com</a></small>
                     </div>
                     <div class="col-12 col-sm-6">
                         <div class="form-group">
-                            <label class="form-label">Image actuelle</label>
+                            <label class="form-label">{% translate "Current image" %}</label>
                             {% if form.answer_image_url.value %}
                                 <div>
                                     <img class="img-fluid" src="{{ form.answer_image_url.value }}" />
                                 </div>
                             {% else %}
-                                <span class="form-text text-muted">Aucun</span>
+                                <span class="form-text text-muted">{% translate "None" %}</span>
                             {% endif %}
                         </div>
                     </div>
@@ -78,8 +78,8 @@
 
                 <div class="row">
                     <div class="col">
-                        {% bootstrap_button button_type="submit" button_class="btn-primary" content="Sauvegarder" %}
-                        {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
+                        {% bootstrap_button button_type="submit" button_class="btn-primary" content=_("Save") %}
+                        {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content=_("Cancel") %} #}
                         <a class="btn btn-secondary" href="{% url 'questions:detail_view' question.id %}">{% translate "Cancel" %}</a>
                     </div>
                     <div class="col-auto">
