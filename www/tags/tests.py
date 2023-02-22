@@ -51,18 +51,19 @@ class TagDetailViewTest(TestCase):
         cls.tag_2 = TagFactory(name="Tag 2")
 
     def test_anonymous_user_cannot_access_tag_detail(self):
-        for edit_url in TAG_DETAIL_URLS:
-            url = reverse(edit_url, args=[self.tag_1.id])
+        for detail_url in TAG_DETAIL_URLS:
+            url = reverse(detail_url, args=[self.tag_1.id])
             response = self.client.get(url)
             self.assertEqual(response.status_code, 302)
             self.assertIn("/accounts/login/?next=", response.url)
 
     def test_contributor_can_access_tag_detail(self):
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
-        url = reverse("tags:detail_view", args=[self.tag_1.id])
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["tag"].id, self.tag_1.id)
+        for detail_url in TAG_DETAIL_URLS:
+            url = reverse(detail_url, args=[self.tag_1.id])
+            response = self.client.get(url)
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.context["tag"].id, self.tag_1.id)
 
 
 class TagCreateViewTest(TestCase):

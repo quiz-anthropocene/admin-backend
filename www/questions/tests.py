@@ -65,18 +65,19 @@ class QuestionDetailViewTest(TestCase):
         cls.question_2 = QuestionFactory()
 
     def test_anonymous_user_cannot_access_question_detail(self):
-        for edit_url in QUESTION_DETAIL_URLS:
-            url = reverse(edit_url, args=[self.question_1.id])
+        for detail_url in QUESTION_DETAIL_URLS:
+            url = reverse(detail_url, args=[self.question_1.id])
             response = self.client.get(url)
             self.assertEqual(response.status_code, 302)
             self.assertIn("/accounts/login/?next=", response.url)
 
     def test_contributor_can_access_question_detail(self):
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
-        url = reverse("questions:detail_view", args=[self.question_1.id])
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["question"].id, self.question_1.id)
+        for detail_url in QUESTION_DETAIL_URLS:
+            url = reverse(detail_url, args=[self.question_1.id])
+            response = self.client.get(url)
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.context["question"].id, self.question_1.id)
 
 
 class QuestionDetailEditViewTest(TestCase):
