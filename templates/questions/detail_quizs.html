@@ -1,4 +1,5 @@
 {% extends "questions/detail_base.html" %}
+{% load i18n %}
 
 {% block question_detail_content %}
 <div class="row">
@@ -8,7 +9,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Quiz</th>
+                        <th>{% translate "Quiz" %}</th>
                     </tr>
                 </thead>
                 <tbody>

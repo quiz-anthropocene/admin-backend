@@ -36,7 +36,7 @@
             <!-- Sidebar -->
             <div class="col-md-4 d-none d-md-block">
                 <div class="alert alert-primary" role="alert">
-                    🖼️ L'ajout d'une <strong>image</strong> se fait à la fin du formulaire&nbsp;👇
+                    🖼️ {% blocktrans %}You can add an <strong>image</strong> at the end of the form{% endblocktrans %}&nbsp;👇
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
                     <label for="image_form" class="form-label js-display-if-javascript-enabled">{{ form.image_background_url.label }}</label>
                     {% include "includes/_s3_upload_form.html" with dropzone_form_id="image_form" %}
                 </div>
-                <small>Image trop grosse ? outil pour réduire sa taille : <a href="https://tinypng.com" target="_blank">tinypng.com</a></small>
+                <small>{% translate "Quick tool to compress images:" %} <a href="https://tinypng.com" target="_blank">tinypng.com</a></small>
             </div>
         </div>
 
@@ -59,8 +59,8 @@
 
         <div class="row">
             <div class="col">
-                {% bootstrap_button button_type="submit" button_class="btn-primary" content="Ajouter" %}
-                {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
+                {% bootstrap_button button_type="submit" button_class="btn-primary" content=_("Add") %}
+                {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content=_("Cancel") %} #}
                 <a class="btn btn-secondary" href="{% url 'quizs:list' %}">{% translate "Cancel" %}</a>
             </div>
         </div>

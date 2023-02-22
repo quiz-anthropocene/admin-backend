@@ -1,4 +1,5 @@
 from django import forms
+from django.utils.translation import gettext_lazy as _
 
 from questions.models import Question
 from questions.tables import QUESTION_FIELD_SEQUENCE
@@ -29,7 +30,7 @@ class QuestionCreateForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["tags"].queryset = Tag.objects.all().order_by("name")
-        self.fields["answer_image_url"].label = "Image pour illustrer la réponse"
+        self.fields["answer_image_url"].label = _("Answer image")
         # disable some fields
         for field_name in QUESTION_READONLY_FORM_FIELDS:
             self.fields[field_name].disabled = True

@@ -21,28 +21,30 @@
                     <div class="col-md-4 d-none d-md-block">
                         {% if question.author == user %}
                             <div class="alert alert-primary" role="alert">
-                                ℹ️ Vous êtes <strong>l'auteur</strong> de cette question
+                                ℹ️ {% blocktrans %}You are the <strong>author</strong> of this question{% endblocktrans %}.
                             </div>
                         {% endif %}
                         {% if not question.is_private %}
                             {% if not question.is_validated %}
                                 <div class="alert alert-warning" role="alert">
-                                    ✍️ La question n'est pas encore <strong>validée</strong>.<br />
-                                    <small>Seul un administrateur peut le faire.</small>
+                                    ✍️ {% blocktrans %}The question is <strong>not validated</strong> yet{% endblocktrans %}.
+                                    <br />
+                                    <small>{% translate "Only an administrator can do it" %}.</small>
                                     {% if user.has_role_administrator %}
-                                        <br /><small><strong>Vous êtes administrateur&nbsp;😉</strong></small>
+                                        <br />
+                                        <small><strong>{% translate "You are an administrator" %}&nbsp;😉</strong></small>
                                     {% endif %}
                                 </div>
                             {% endif %}
                             {% if question.validator %}
                                 <div class="alert alert-success" role="alert">
-                                    ✅ Validée par <strong>{{ question.validator }}</strong> le {{ question.validation_date|date:"d F Y" }}
+                                    ✅ {% translate "Validated by" %} <strong>{{ question.validator }}</strong> <small>{{ question.validation_date|date:"d F Y" }}</small>
                                 </div>
                             {% endif %}
                         {% endif %}
                         {% if not question.answer_image_url %}
                             <div class="alert alert-primary" role="alert">
-                                🖼️ L'ajout de <strong>l'image d'explication</strong> se fait à la fin du formulaire&nbsp;👇
+                                🖼️ {% blocktrans %}You can add an <strong>image</strong> at the end of the form{% endblocktrans %}&nbsp;👇
                             </div>
                         {% endif %}
                     </div>
@@ -58,17 +60,17 @@
                             <label for="image_form" class="form-label js-display-if-javascript-enabled">{{ form.answer_image_url.label }}</label>
                             {% include "includes/_s3_upload_form.html" with dropzone_form_id="image_form" %}
                         </div>
-                        <small>Image trop grosse ? outil pour réduire sa taille : <a href="https://tinypng.com" target="_blank">tinypng.com</a></small>
+                        <small>{% translate "Quick tool to compress images:" %} <a href="https://tinypng.com" target="_blank">tinypng.com</a></small>
                     </div>
                     <div class="col-12 col-sm-6">
                         <div class="form-group">
-                            <label class="form-label">Image actuelle</label>
+                            <label class="form-label">{% translate "Current image" %}</label>
                             {% if form.answer_image_url.value %}
                                 <div>
                                     <img class="img-fluid" src="{{ form.answer_image_url.value }}" />
                                 </div>
                             {% else %}
-                                <span class="form-text text-muted">Aucun</span>
+                                <span class="form-text text-muted">{% translate "None" %}</span>
                             {% endif %}
                         </div>
                     </div>
@@ -78,8 +80,8 @@
 
                 <div class="row">
                     <div class="col">
-                        {% bootstrap_button button_type="submit" button_class="btn-primary" content="Sauvegarder" %}
-                        {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content="Annuler" %} #}
+                        {% bootstrap_button button_type="submit" button_class="btn-primary" content=_("Save") %}
+                        {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content=_("Cancel") %} #}
                         <a class="btn btn-secondary" href="{% url 'questions:detail_view' question.id %}">{% translate "Cancel" %}</a>
                     </div>
                     <div class="col-auto">
@@ -90,9 +92,9 @@
         {% else %}
             <div class="alert alert-warning" role="alert">
                 {% if question.is_private %}
-                    Vous n'avez pas les droits nécessaires <small>(seul l'auteur peut modifier une question privée)</small>
+                    {% translate "You don't have the necessary rights" %} <small>(seul l'auteur peut modifier une question privée)</small>
                 {% else %}
-                    Vous n'avez pas les droits nécessaires <small>(seul l'auteur ou un super-contributeur peut modifier une question publique)</small>
+                    {% translate "You don't have the necessary rights" %} <small>(seul l'auteur ou un super-contributeur peut modifier une question publique)</small>
                 {% endif %}
             </div>
         {% endif %}

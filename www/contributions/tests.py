@@ -47,18 +47,19 @@ class ContributionDetailViewTest(TestCase):
         cls.contribution_2 = ContributionFactory()
 
     def test_anonymous_user_cannot_access_contribution_detail(self):
-        for edit_url in CONTRIBUTIONS_DETAIL_URLS:
-            url = reverse(edit_url, args=[self.contribution_1.id])
+        for detail_url in CONTRIBUTIONS_DETAIL_URLS:
+            url = reverse(detail_url, args=[self.contribution_1.id])
             response = self.client.get(url)
             self.assertEqual(response.status_code, 302)
             self.assertIn("/accounts/login/?next=", response.url)
 
     def test_contributor_can_access_contribution_detail(self):
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
-        url = reverse("contributions:detail_view", args=[self.contribution_1.id])
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["contribution"].id, self.contribution_1.id)
+        for detail_url in CONTRIBUTIONS_DETAIL_URLS:
+            url = reverse(detail_url, args=[self.contribution_1.id])
+            response = self.client.get(url)
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.context["contribution"].id, self.contribution_1.id)
 
 
 class ContributionEditViewTest(TestCase):

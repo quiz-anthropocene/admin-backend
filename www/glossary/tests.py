@@ -51,18 +51,19 @@ class GlossaryItemDetailViewTest(TestCase):
         cls.glossary_item_2 = GlossaryItemFactory(name="GES")
 
     def test_anonymous_user_cannot_access_glossary_item_detail(self):
-        for edit_url in GLOSSARY_ITEM_DETAIL_URLS:
-            url = reverse(edit_url, args=[self.glossary_item_1.id])
+        for detail_url in GLOSSARY_ITEM_DETAIL_URLS:
+            url = reverse(detail_url, args=[self.glossary_item_1.id])
             response = self.client.get(url)
             self.assertEqual(response.status_code, 302)
             self.assertIn("/accounts/login/?next=", response.url)
 
     def test_contributor_can_access_glossary_item_detail(self):
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
-        url = reverse("glossary:detail_view", args=[self.glossary_item_1.id])
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["glossary_item"].id, self.glossary_item_1.id)
+        for detail_url in GLOSSARY_ITEM_DETAIL_URLS:
+            url = reverse(detail_url, args=[self.glossary_item_1.id])
+            response = self.client.get(url)
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.context["glossary_item"].id, self.glossary_item_1.id)
 
 
 class GlossaryItemCreateViewTest(TestCase):

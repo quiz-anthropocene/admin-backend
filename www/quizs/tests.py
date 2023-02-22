@@ -59,18 +59,19 @@ class QuizDetailViewTest(TestCase):
         cls.quiz_2 = QuizFactory(name="Quiz 2")
 
     def test_anonymous_user_cannot_access_quiz_detail(self):
-        for edit_url in QUIZ_DETAIL_URLS:
-            url = reverse(edit_url, args=[self.quiz_1.id])
+        for detail_url in QUIZ_DETAIL_URLS:
+            url = reverse(detail_url, args=[self.quiz_1.id])
             response = self.client.get(url)
             self.assertEqual(response.status_code, 302)
             self.assertIn("/accounts/login/?next=", response.url)
 
     def test_contributor_can_access_quiz_detail(self):
         self.client.login(email=self.user.email, password=DEFAULT_PASSWORD)
-        url = reverse("quizs:detail_view", args=[self.quiz_1.id])
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["quiz"].id, self.quiz_1.id)
+        for detail_url in QUIZ_DETAIL_URLS:
+            url = reverse(detail_url, args=[self.quiz_1.id])
+            response = self.client.get(url)
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.context["quiz"].id, self.quiz_1.id)
 
 
 class QuizDetailEditViewTest(TestCase):

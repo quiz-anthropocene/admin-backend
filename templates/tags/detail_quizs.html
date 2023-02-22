@@ -1,5 +1,5 @@
 {% extends "tags/detail_base.html" %}
-{% load custom_filters %}
+{% load i18n custom_filters %}
 
 {% block tag_detail_content %}
 <div class="row">
@@ -9,7 +9,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Quiz</th>
+                        <th>{% translate "Quiz" %}</th>
                         <th>{% translate "Tags" %}</th>
                     </tr>
                 </thead>
