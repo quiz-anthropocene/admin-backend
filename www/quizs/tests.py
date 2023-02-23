@@ -106,7 +106,7 @@ class QuizDetailEditViewTest(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertNotContains(response, '<form id="quiz_edit_form" ')
-        self.assertContains(response, "Vous n'avez pas les droits nécessaires")
+        self.assertContains(response, " pas les droits ")
 
     def test_administrator_can_validate_and_publish_public_quiz(self):
         self.client.login(email=self.user_admin.email, password=DEFAULT_PASSWORD)
@@ -140,7 +140,7 @@ class QuizDetailEditViewTest(TestCase):
             response = self.client.get(url)
             self.assertEqual(response.status_code, 200)
             self.assertNotContains(response, '<form id="quiz_edit_form" ')
-            self.assertContains(response, "Vous n'avez pas les droits nécessaires")
+            self.assertContains(response, " pas les droits ")
 
 
 class QuizDetailQuestionListViewTest(TestCase):

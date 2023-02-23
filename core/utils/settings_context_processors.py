@@ -1,7 +1,7 @@
 from django.conf import settings
 
 from core.models import Configuration
-from users.constants import constants as user_constants
+from users import constants as user_constants
 
 
 configuration = Configuration.get_solo()

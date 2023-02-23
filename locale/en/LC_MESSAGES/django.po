@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-23 11:08+0100\n"
+"POT-Creation-Date: 2023-02-23 11:26+0100\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -227,9 +227,10 @@ msgstr ""
 #: questions/models.py:117 questions/models.py:238 questions/models.py:358
 #: quizs/models.py:102 quizs/models.py:166 quizs/models.py:369
 #: tags/models.py:36 templates/categories/detail_questions.html:14
-#: templates/includes/_header.html:35 templates/tags/create.html:17
-#: templates/tags/detail_base.html:13 templates/tags/detail_questions.html:14
-#: templates/tags/detail_quizs.html:13 templates/tags/list.html:14
+#: templates/includes/_header.html:35 templates/tags/create.html:4
+#: templates/tags/create.html:17 templates/tags/detail_base.html:13
+#: templates/tags/detail_questions.html:14 templates/tags/detail_quizs.html:13
+#: templates/tags/list.html:5 templates/tags/list.html:14
 msgid "Tags"
 msgstr ""
 
@@ -355,8 +356,8 @@ msgstr ""
 #: questions/models.py:239 questions/models.py:359 quizs/models.py:181
 #: templates/includes/_header.html:29 templates/questions/detail_base.html:34
 #: templates/quizs/create.html:4 templates/quizs/create.html:18
-#: templates/quizs/detail_base.html:13 templates/quizs/list.html:14
-#: templates/tags/detail_base.html:37
+#: templates/quizs/detail_base.html:13 templates/quizs/list.html:5
+#: templates/quizs/list.html:14 templates/tags/detail_base.html:37
 msgid "Quizs"
 msgstr ""
 
@@ -683,6 +684,7 @@ msgid "Changes"
 msgstr ""
 
 #: templates/includes/_footer.html:7 templates/includes/_header.html:14
+#: templates/layouts/base.html:7
 msgid "Anthropocene Quiz"
 msgstr ""
 
@@ -945,6 +947,14 @@ msgstr ""
 msgid "The quiz is published even though it is not validated"
 msgstr ""
 
+#: templates/quizs/list.html:26
+msgid "All the quizs"
+msgstr ""
+
+#: templates/tags/list.html:26
+msgid "All the tags"
+msgstr ""
+
 #: users/constants.py:8
 msgid "Contributor"
 msgstr ""
@@ -981,12 +991,12 @@ msgstr ""
 msgid "Only the quiz author can edit a private quiz"
 msgstr ""
 
-#: users/constants.py:19
+#: users/constants.py:20
 msgid ""
 "Only the question author or a super-contributor can edit a public question"
 msgstr ""
 
-#: users/constants.py:20
+#: users/constants.py:23
 msgid "Only the quiz author or a super-contributor can edit a public quiz"
 msgstr ""
 

@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 {% load i18n django_bootstrap5 %}
 
-{% block title %}{% translate "Add" %} - Tags{{ block.super }}{% endblock %}
+{% block title %}{% translate "Add" %} - {% translate "Tags" %}{{ block.super }}{% endblock %}
 
 {% block extra_css %}
 {{ form.media.css }}
