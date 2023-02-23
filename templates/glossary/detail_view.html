@@ -16,7 +16,11 @@
                     {% for field in glossary_item_dict %}
                         <tr>
                             <td class="fw-bold">{% get_verbose_name glossary_item field %}</td>
-                            {% if field in glossary_item.GLOSSARY_ITEM_URL_FIELDS %}
+                            {% if field in glossary_item.GLOSSARY_ITEM_CHOICE_FIELDS %}
+                                <td>
+                                    {% include "includes/_badge_item.html" with value=glossary_item|get_obj_attr:field %}
+                                </td>
+                            {% elif field in glossary_item.GLOSSARY_ITEM_URL_FIELDS %}
                                 <td><a href="{{ glossary_item_dict|get_obj_attr:field }}" target="_blank" rel="noopener">{{ glossary_item_dict|get_obj_attr:field }}</a></td>
                             {% else %}
                                 <td>{{ glossary_item_dict|get_obj_attr:field|default:"" }}</td>

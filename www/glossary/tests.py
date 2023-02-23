@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
+from core import constants
 from glossary.factories import GlossaryItemFactory
 from glossary.models import GlossaryItem
 from users.factories import DEFAULT_PASSWORD, UserFactory
@@ -15,6 +16,7 @@ GLOSSARY_ITEM_DETAIL_URLS = [
 GLOSSARY_ITEM_FORM_DEFAULT = {
     "name": "Mot 1",
     "definition_short": "Une définition",
+    "language": constants.LANGUAGE_FRENCH,
 }
 
 
