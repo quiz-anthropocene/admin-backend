@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-22 20:16+0100\n"
+"POT-Creation-Date: 2023-02-23 11:26+0100\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -77,13 +77,13 @@ msgstr ""
 
 #: categories/models.py:15 questions/models.py:233 quizs/models.py:159
 #: quizs/models.py:437 quizs/models.py:500 quizs/models.py:560
-#: tags/models.py:29
+#: tags/models.py:29 users/models.py:184
 msgid "Creation date"
 msgstr ""
 
 #: categories/models.py:16 questions/models.py:234 quizs/models.py:160
 #: quizs/models.py:438 quizs/models.py:501 quizs/models.py:561
-#: tags/models.py:30
+#: tags/models.py:30 users/models.py:185
 msgid "Last update date"
 msgstr ""
 
@@ -179,7 +179,28 @@ msgstr ""
 msgid "False"
 msgstr ""
 
-#: questions/filters.py:14 quizs/filters.py:17 tags/filters.py:10
+#: history/models.py:31 history/tables.py:19
+msgid "Changed fields"
+msgstr ""
+
+#: history/tables.py:8 templates/glossary/detail_history.html:11
+#: templates/questions/detail_history.html:11
+#: templates/quizs/detail_history.html:11
+msgid "Date"
+msgstr ""
+
+#: history/tables.py:9 questions/models.py:202 questions/models.py:240
+#: quizs/models.py:555 templates/glossary/detail_history.html:12
+#: templates/questions/detail_history.html:12
+#: templates/quizs/detail_history.html:12
+msgid "Author"
+msgstr ""
+
+#: history/tables.py:10 questions/models.py:102
+msgid "Type"
+msgstr ""
+
+#: questions/filters.py:22 quizs/filters.py:25 tags/filters.py:13
 msgid "Text search"
 msgstr ""
 
@@ -203,16 +224,13 @@ msgstr ""
 msgid "Text that the user can decide to display to help him"
 msgstr ""
 
-#: questions/models.py:102
-msgid "Type"
-msgstr ""
-
 #: questions/models.py:117 questions/models.py:238 questions/models.py:358
 #: quizs/models.py:102 quizs/models.py:166 quizs/models.py:369
 #: tags/models.py:36 templates/categories/detail_questions.html:14
-#: templates/includes/_header.html:35 templates/tags/create.html:17
-#: templates/tags/detail_base.html:13 templates/tags/detail_questions.html:14
-#: templates/tags/detail_quizs.html:13 templates/tags/list.html:14
+#: templates/includes/_header.html:35 templates/tags/create.html:4
+#: templates/tags/create.html:17 templates/tags/detail_base.html:13
+#: templates/tags/detail_questions.html:14 templates/tags/detail_quizs.html:13
+#: templates/tags/list.html:5 templates/tags/list.html:14
 msgid "Tags"
 msgstr ""
 
@@ -318,13 +336,6 @@ msgstr ""
 msgid "Won't be displayed in the application"
 msgstr ""
 
-#: questions/models.py:202 questions/models.py:240 quizs/models.py:555
-#: templates/glossary/detail_history.html:12
-#: templates/questions/detail_history.html:12
-#: templates/quizs/detail_history.html:12
-msgid "Author"
-msgstr ""
-
 #: questions/models.py:211 quizs/models.py:126
 msgid "Status"
 msgstr ""
@@ -345,8 +356,8 @@ msgstr ""
 #: questions/models.py:239 questions/models.py:359 quizs/models.py:181
 #: templates/includes/_header.html:29 templates/questions/detail_base.html:34
 #: templates/quizs/create.html:4 templates/quizs/create.html:18
-#: templates/quizs/detail_base.html:13 templates/quizs/list.html:14
-#: templates/tags/detail_base.html:37
+#: templates/quizs/detail_base.html:13 templates/quizs/list.html:5
+#: templates/quizs/list.html:14 templates/tags/detail_base.html:37
 msgid "Quizs"
 msgstr ""
 
@@ -660,12 +671,6 @@ msgstr ""
 msgid "Glossary"
 msgstr ""
 
-#: templates/glossary/detail_history.html:11
-#: templates/questions/detail_history.html:11
-#: templates/quizs/detail_history.html:11
-msgid "Date"
-msgstr ""
-
 #: templates/glossary/detail_history.html:13
 #: templates/questions/detail_history.html:13
 #: templates/quizs/detail_history.html:13
@@ -679,6 +684,7 @@ msgid "Changes"
 msgstr ""
 
 #: templates/includes/_footer.html:7 templates/includes/_header.html:14
+#: templates/layouts/base.html:7
 msgid "Anthropocene Quiz"
 msgstr ""
 
@@ -850,11 +856,11 @@ msgstr ""
 msgid "My profile"
 msgstr ""
 
-#: templates/profile/info.html:36
+#: templates/profile/info.html:36 users/models.py:171
 msgid "First name"
 msgstr ""
 
-#: templates/profile/info.html:40
+#: templates/profile/info.html:40 users/models.py:172
 msgid "Last name"
 msgstr ""
 
@@ -862,7 +868,7 @@ msgstr ""
 msgid "Email address"
 msgstr ""
 
-#: templates/profile/info.html:48
+#: templates/profile/info.html:48 users/models.py:175
 msgid "Roles"
 msgstr ""
 
@@ -892,16 +898,6 @@ msgstr ""
 msgid "The question is <strong>not validated</strong> yet"
 msgstr ""
 
-#: templates/questions/detail_edit.html:32 templates/quizs/detail_edit.html:42
-#: templates/quizs/detail_edit.html:58
-msgid "Only an administrator can do it"
-msgstr ""
-
-#: templates/questions/detail_edit.html:35 templates/quizs/detail_edit.html:45
-#: templates/quizs/detail_edit.html:61
-msgid "You are an administrator"
-msgstr ""
-
 #: templates/questions/detail_edit.html:41 templates/quizs/detail_edit.html:51
 msgid "Validated by"
 msgstr ""
@@ -912,12 +908,6 @@ msgstr ""
 
 #: templates/questions/detail_edit.html:73 templates/quizs/detail_edit.html:104
 msgid "None"
-msgstr ""
-
-#: templates/questions/detail_edit.html:95
-#: templates/questions/detail_edit.html:97 templates/quizs/detail_edit.html:125
-#: templates/quizs/detail_edit.html:127
-msgid "You don't have the necessary rights"
 msgstr ""
 
 #: templates/questions/detail_history.html:28
@@ -955,4 +945,69 @@ msgstr ""
 
 #: templates/quizs/detail_edit.html:72
 msgid "The quiz is published even though it is not validated"
+msgstr ""
+
+#: templates/quizs/list.html:26
+msgid "All the quizs"
+msgstr ""
+
+#: templates/tags/list.html:26
+msgid "All the tags"
+msgstr ""
+
+#: users/constants.py:8
+msgid "Contributor"
+msgstr ""
+
+#: users/constants.py:9
+msgid "Super Contributor"
+msgstr ""
+
+#: users/constants.py:10
+msgid "Administrator"
+msgstr ""
+
+#: users/constants.py:13
+msgid "You are an administrator"
+msgstr ""
+
+#: users/constants.py:14
+msgid "You don't have the necessary rights"
+msgstr ""
+
+#: users/constants.py:15
+msgid "You don't have the necessary rights to edit this field"
+msgstr ""
+
+#: users/constants.py:16
+msgid "Only an administrator can do it"
+msgstr ""
+
+#: users/constants.py:17
+msgid "Only the question author can edit a private question"
+msgstr ""
+
+#: users/constants.py:18
+msgid "Only the quiz author can edit a private quiz"
+msgstr ""
+
+#: users/constants.py:20
+msgid ""
+"Only the question author or a super-contributor can edit a public question"
+msgstr ""
+
+#: users/constants.py:23
+msgid "Only the quiz author or a super-contributor can edit a public quiz"
+msgstr ""
+
+#: users/models.py:170
+msgid "Email"
+msgstr ""
+
+#: users/models.py:190
+msgid "User"
+msgstr ""
+
+#: users/models.py:191
+msgid "Users"
 msgstr ""

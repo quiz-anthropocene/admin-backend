@@ -6,6 +6,7 @@ from django.db.models import Exists, OuterRef, Q
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 
 from core import constants
 from core.fields import ChoiceArrayField
@@ -166,12 +167,12 @@ class User(AbstractUser):
     REQUIRED_FIELDS = []
 
     username = None
-    email = models.EmailField(verbose_name="Adresse e-mail", unique=True)
-    first_name = models.CharField(verbose_name="Prénom", max_length=150)
-    last_name = models.CharField(verbose_name="Nom", max_length=150)
+    email = models.EmailField(verbose_name=_("Email"), unique=True)
+    first_name = models.CharField(verbose_name=_("First name"), max_length=150)
+    last_name = models.CharField(verbose_name=_("Last name"), max_length=150)
 
     roles = ChoiceArrayField(
-        verbose_name="Rôles",
+        verbose_name=_("Roles"),
         base_field=models.CharField(max_length=20, choices=user_constants.USER_ROLE_CHOICES),
         blank=True,
         default=list,
@@ -180,14 +181,14 @@ class User(AbstractUser):
     # is_active, is_staff, is_superuser
     # date_joined, last_login
 
-    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
-    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
+    updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
 
     objects = UserManager()
 
     class Meta:
-        verbose_name = "Utilisateur"
-        verbose_name_plural = "Utilisateurs"
+        verbose_name = _("User")
+        verbose_name_plural = _("Users")
 
     def __str__(self):
         return self.full_name

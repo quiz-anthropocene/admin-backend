@@ -1,6 +1,7 @@
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from django.dispatch import receiver
+from django.utils.translation import gettext_lazy as _
 from simple_history.signals import post_create_historical_record
 
 from history.utilities import get_diff_between_two_history_records
@@ -27,7 +28,7 @@ HISTORY_CHANGED_FIELDS_TO_IGNORE = [
 
 class HistoryChangedFieldsAbstractModel(models.Model):
     history_changed_fields = ArrayField(
-        verbose_name="Champs modifiés", base_field=models.CharField(max_length=50), blank=True, default=list
+        verbose_name=_("Changed fields"), base_field=models.CharField(max_length=50), blank=True, default=list
     )
 
     class Meta:
