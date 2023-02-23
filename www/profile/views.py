@@ -87,7 +87,9 @@ class ProfileHistoryListView(ContributorUserRequiredMixin, TemplateView):
             chain(
                 Question.history.annotate(object_model=Value("Question")).filter(history_user=self.request.user),
                 Quiz.history.annotate(object_model=Value("Quiz")).filter(history_user=self.request.user),
-                GlossaryItem.history.annotate(object_model=Value("Glossaire")).filter(history_user=self.request.user),
+                GlossaryItem.history.annotate(object_model=Value("GlossaryItem")).filter(
+                    history_user=self.request.user
+                ),
             )
         )
         question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)

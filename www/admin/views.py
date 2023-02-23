@@ -100,7 +100,7 @@ class AdminHistoryListView(AdministratorUserRequiredMixin, TemplateView):
             chain(
                 Question.history.annotate(object_model=Value("Question")).all(),
                 Quiz.history.annotate(object_model=Value("Quiz")).all(),
-                GlossaryItem.history.annotate(object_model=Value("Glossaire")).all(),
+                GlossaryItem.history.annotate(object_model=Value("GlossaryItem")).all(),
             )
         )
         question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)

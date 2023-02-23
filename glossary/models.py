@@ -9,6 +9,7 @@ from history.models import HistoryChangedFieldsAbstractModel
 
 
 class GlossaryItem(models.Model):
+    GLOSSARY_ITEM_CHOICE_FIELDS = ["language"]
     GLOSSARY_ITEM_URL_FIELDS = ["description_accessible_url"]
     GLOSSARY_ITEM_READONLY_FIELDS = ["created", "updated"]
 
