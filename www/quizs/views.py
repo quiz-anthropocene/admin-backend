@@ -75,11 +75,11 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
         form = super().get_form(self.form_class)
         if not self.request.user.can_publish_quiz(quiz):
             form.fields["validation_status"].disabled = True
-            form.fields["validation_status"].help_text = user_constants.ADMIN_REQUIRED_MESSAGE
+            form.fields["validation_status"].help_text = user_constants.ADMIN_REQUIRED_EDIT_FIELD_MESSAGE_FULL
             form.fields["publish"].disabled = True
-            form.fields["publish"].help_text = user_constants.ADMIN_REQUIRED_MESSAGE
+            form.fields["publish"].help_text = user_constants.ADMIN_REQUIRED_EDIT_FIELD_MESSAGE_FULL
             form.fields["spotlight"].disabled = True
-            form.fields["spotlight"].help_text = user_constants.ADMIN_REQUIRED_MESSAGE
+            form.fields["spotlight"].help_text = user_constants.ADMIN_REQUIRED_EDIT_FIELD_MESSAGE_FULL
         return form
 
     def get_context_data(self, **kwargs):

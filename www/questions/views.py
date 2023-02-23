@@ -77,7 +77,7 @@ class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, 
         form = super().get_form(self.form_class)
         if not self.request.user.can_validate_question(question):
             form.fields["validation_status"].disabled = True
-            form.fields["validation_status"].help_text = user_constants.ADMIN_REQUIRED_MESSAGE
+            form.fields["validation_status"].help_text = user_constants.ADMIN_REQUIRED_EDIT_FIELD_MESSAGE_FULL
         return form
 
     def get_context_data(self, **kwargs):

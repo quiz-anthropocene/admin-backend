@@ -29,10 +29,10 @@
                                 <div class="alert alert-warning" role="alert">
                                     ✍️ {% blocktrans %}The question is <strong>not validated</strong> yet{% endblocktrans %}.
                                     <br />
-                                    <small>{% translate "Only an administrator can do it" %}.</small>
+                                    <small>{{ ONLY_ADMIN_ALLOWED_MESSAGE }}.</small>
                                     {% if user.has_role_administrator %}
                                         <br />
-                                        <small><strong>{% translate "You are an administrator" %}&nbsp;😉</strong></small>
+                                        <small><strong>{{ IS_ADMIN_MESSAGE }}&nbsp;😉</strong></small>
                                     {% endif %}
                                 </div>
                             {% endif %}
@@ -92,9 +92,9 @@
         {% else %}
             <div class="alert alert-warning" role="alert">
                 {% if question.is_private %}
-                    {% translate "You don't have the necessary rights" %} <small>(seul l'auteur peut modifier une question privée)</small>
+                    {{ ADMIN_REQUIRED_MESSAGE }}. {{ ONLY_PRIVATE_QUESTION_AUTHOR_ALLOWED_MESSAGE }}.
                 {% else %}
-                    {% translate "You don't have the necessary rights" %} <small>(seul l'auteur ou un super-contributeur peut modifier une question publique)</small>
+                    {{ ADMIN_REQUIRED_MESSAGE }}. {{ ONLY_QUESTION_AUTHOR_OR_SUPER_CONTRIBUTOR_ALLOWED_MESSAGE }}.
                 {% endif %}
             </div>
         {% endif %}
