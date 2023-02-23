@@ -13,6 +13,7 @@ class GlossaryItemSerializer(serializers.ModelSerializer):
             "definition_short",
             "description",
             "description_accessible_url",
+            "language",
             "created",
             "updated",
         ]
