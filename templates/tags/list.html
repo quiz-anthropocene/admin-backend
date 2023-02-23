@@ -34,7 +34,12 @@
             <a class="btn btn-success btn-sm" href="{% url 'tags:create' %}">{% translate "Add" %}</a>
         </div>
     </div>
-    <!-- Filters: list (hidden) -->
+    <!-- Filters: list -->
+    {% if search_filters %}
+        <p>
+            {% include "includes/_filter_badge_list.html" with search_filters=search_filters model_name="Tag" %}
+        </p>
+    {% endif %}
     <!-- Filters: form -->
     <form action="" method="get" id="collapseFilters" class="mb-3 collapse">
         {% bootstrap_form filter.form layout="horizontal" %}

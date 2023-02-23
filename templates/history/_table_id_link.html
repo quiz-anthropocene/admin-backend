@@ -2,7 +2,7 @@
     <a href="{% url 'questions:detail_view' record.id %}">{{ record.id }}</a>
 {% elif record.object_model == "Quiz" %}
     <a href="{% url 'quizs:detail_view' record.id %}">{{ record.id }}</a>
-{% elif record.object_model == "Glossaire" %}
+{% elif record.object_model == "GlossaryItem" %}
     <a href="{% url 'glossary:detail_view' record.id %}">{{ record.id }}</a>
 {% else %}
     <span>{{ record.id }}</span>

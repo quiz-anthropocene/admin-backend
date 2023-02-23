@@ -2,13 +2,13 @@ import django_filters
 from django import forms
 from django.utils.translation import gettext_lazy as _
 
-from tags.models import Tag
+from glossary.models import GlossaryItem
 
 
-TEXT_SEARCH_PLACEHOLDER = f"{_('In the following fields:')} " f"{Tag._meta.get_field('name').verbose_name}"
+TEXT_SEARCH_PLACEHOLDER = f"{_('In the following fields:')} " f"{GlossaryItem._meta.get_field('name').verbose_name}"
 
 
-class TagFilter(django_filters.FilterSet):
+class GlossaryItemFilter(django_filters.FilterSet):
     q = django_filters.CharFilter(
         label=_("Text search"),
         method="text_search",
@@ -16,8 +16,8 @@ class TagFilter(django_filters.FilterSet):
     )
 
     class Meta:
-        model = Tag
-        fields = ["q"]
+        model = GlossaryItem
+        fields = ["language", "q"]
 
     def text_search(self, queryset, name, value):
         if not value:

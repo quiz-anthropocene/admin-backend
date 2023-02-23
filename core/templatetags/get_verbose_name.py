@@ -13,10 +13,12 @@ def get_verbose_name(object, field_name=None):
             object = apps.get_model("questions", object)
         elif object == "Quiz":
             object = apps.get_model("quizs", object)
+        elif object == "Tag":
+            object = apps.get_model("tags", object)
         elif object == "Contribution":
             object = apps.get_model("contributions", object)
-        elif object == "Glossaire":
-            object = apps.get_model("glossary", "GlossaryItem")
+        elif object == "GlossaryItem":
+            object = apps.get_model("glossary", object)
     try:
         if field_name:
             # if 'verbose_name' is not defined, it will return the 'field_name'

@@ -1,6 +1,6 @@
 import django_tables2 as tables
 
-from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, RichTextEllipsisColumn
+from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, ChoiceColumn, RichTextEllipsisColumn
 from glossary.models import GlossaryItem
 
 
@@ -12,3 +12,8 @@ class GlossaryTable(tables.Table):
         model = GlossaryItem
         template_name = DEFAULT_TEMPLATE
         attrs = DEFAULT_ATTRS
+
+    def __init__(self, *args, **kwargs):
+        for field_name in GlossaryItem.GLOSSARY_ITEM_CHOICE_FIELDS:
+            self.base_columns[field_name] = ChoiceColumn()
+        super().__init__(*args, **kwargs)

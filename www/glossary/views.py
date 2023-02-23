@@ -7,7 +7,9 @@ from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin
 
 from api.glossary.serializers import GlossaryItemSerializer
+from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import ContributorUserRequiredMixin
+from glossary.filters import GlossaryItemFilter
 from glossary.forms import GLOSSARY_ITEM_FORM_FIELDS, GlossaryItemCreateForm, GlossaryItemEditForm
 from glossary.models import GlossaryItem
 from glossary.tables import GlossaryTable
@@ -19,6 +21,15 @@ class GlossaryListView(ContributorUserRequiredMixin, SingleTableMixin, FilterVie
     template_name = "glossary/list.html"
     context_object_name = "glossary"
     table_class = GlossaryTable
+    filterset_class = GlossaryItemFilter
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if context["filter"].form.is_valid():
+            search_dict = form_filters_cleaned_dict(context["filter"].form.cleaned_data)
+            if search_dict:
+                context["search_filters"] = form_filters_to_list(search_dict, with_delete_url=True)
+        return context
 
 
 class GlossaryItemDetailView(ContributorUserRequiredMixin, DetailView):
