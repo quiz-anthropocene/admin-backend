@@ -9,6 +9,7 @@ class GlossaryAdmin(ExportMixin, admin.ModelAdmin):
         "id",
         "name",
         "definition_short",
+        "language",
         "created",
     )
 

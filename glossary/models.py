@@ -4,11 +4,12 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from simple_history.models import HistoricalRecords
 
+from core import constants
 from history.models import HistoryChangedFieldsAbstractModel
 
 
 class GlossaryItem(models.Model):
-    GLOSSARY_URL_FIELDS = ["description_accessible_url"]
+    GLOSSARY_ITEM_URL_FIELDS = ["description_accessible_url"]
     GLOSSARY_ITEM_READONLY_FIELDS = ["created", "updated"]
 
     name = models.CharField(verbose_name=_("Word or acronym"), max_length=50, blank=False)
@@ -17,6 +18,14 @@ class GlossaryItem(models.Model):
     description = models.TextField(verbose_name=_("Description"), blank=True)
     description_accessible_url = models.URLField(
         verbose_name=_("Accessible source (link)"), max_length=500, blank=True
+    )
+
+    language = models.CharField(
+        verbose_name=_("Language"),
+        max_length=50,
+        choices=constants.LANGUAGE_CHOICES,
+        default=constants.LANGUAGE_FRENCH,
+        blank=False,
     )
 
     created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
