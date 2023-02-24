@@ -180,12 +180,34 @@ Vous devez d'abord installer `gettext`
 
 Les fichiers de traductions se trouvent dans le dossier `/locale`
 
-Mettre à jour les fichiers `.po`
+L'Anglais est la langue pivot.
+
+### Dans le code
+
+Utiliser les balises `{% translate "Word" %}`
+
+Puis mettre à jour les fichiers `.po`
 ```
 python manage.py makemessages --all
 ```
 
-Compiler les fichiers `.po` en `.mo`
+### Ajouter une langue
+
+https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+
+```
+python manage.py makemessages -l <LANGUAGE_CODE>
+```
+
+Il faudra aussi la rajouter dans `settings.py` (une fois traduite ?)
+
+### Traduire une langue existante
+
+Utiliser un outil comme [Poedit](https://poedit.net/) pour simplifier la traduction.
+
+Il faut remplir les fichiers `.po` contenus dans le dossier `/locale`.
+
+Puis compiler les fichiers `.po` en `.mo`
 ```
 python manage.py compilemessages
 ```
