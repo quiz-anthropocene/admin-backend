@@ -5,6 +5,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.urls import reverse
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 
 from core.utils import slack
 
@@ -29,54 +30,54 @@ class EventQuerySet(models.QuerySet):
 
 class Event(models.Model):
     ACTIVITY_VERB_CHOICES = (
-        ("CREATED", "Créé"),
-        ("UPDATED", "Mis à jour"),
-        ("VALIDATED", "Validé"),
-        ("PUBLISHED", "Publié"),
-        ("DELETED", "Supprimé"),
-        ("COMPUTED", "Calculé"),
+        ("CREATED", _("Created")),
+        ("UPDATED", _("Updated")),
+        ("VALIDATED", _("Validated")),
+        ("PUBLISHED", _("Published")),
+        ("DELETED", _("Deleted")),
+        ("COMPUTED", _("Computed")),
     )
     EVENT_OBJECT_TYPE_CHOICES = (
-        ("QUESTION", "Question"),
-        ("QUIZ", "Quiz"),
-        ("USER", "Contributeur"),
-        ("WEEKLY_AGG_STAT", "Statistiques de la semaine"),
+        ("QUESTION", _("Question")),
+        ("QUIZ", _("Quiz")),
+        ("USER", _("Contributor")),
+        ("WEEKLY_AGG_STAT", ("Weekly statistics")),
     )
 
     # user
-    actor_id = models.IntegerField(verbose_name="ID de l'acteur", blank=True)
-    actor_name = models.CharField(verbose_name="Nom de l'acteur", max_length=150, blank=True)
+    actor_id = models.IntegerField(verbose_name=_("Actor ID"), blank=True)
+    actor_name = models.CharField(verbose_name=_("Actor name"), max_length=150, blank=True)
 
     # verb
     event_verb = models.CharField(
-        verbose_name="Verbe",
+        verbose_name=_("Verb"),
         max_length=50,
         choices=ACTIVITY_VERB_CHOICES,
         blank=True,
     )
 
     # object
-    event_object_id = models.IntegerField(verbose_name="ID de l'objet", blank=True)
+    event_object_id = models.IntegerField(verbose_name=_("Object ID"), blank=True)
     event_object_type = models.CharField(
-        verbose_name="Type d'objet",
+        verbose_name=_("Object type"),
         max_length=50,
         choices=EVENT_OBJECT_TYPE_CHOICES,
         blank=True,
     )
-    event_object_name = models.CharField(verbose_name="Nom de l'objet", max_length=150, blank=True)
+    event_object_name = models.CharField(verbose_name=_("Object name"), max_length=150, blank=True)
 
     extra_data = models.JSONField(
-        verbose_name="Données supplémentaires",
+        verbose_name=_("Additional data"),
         default=dict,
     )
 
-    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
 
     objects = EventQuerySet.as_manager()
 
     class Meta:
-        verbose_name = "Événement"
-        verbose_name_plural = "Événements"
+        verbose_name = _("Event")
+        verbose_name_plural = _("Events")
 
     @property
     def get_event_object_admin_absolute_url(self):

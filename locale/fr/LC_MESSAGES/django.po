@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-23 14:35+0100\n"
-"PO-Revision-Date: 2023-02-23 14:36+0100\n"
+"POT-Creation-Date: 2023-02-24 20:46+0100\n"
+"PO-Revision-Date: 2023-02-24 20:49+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -19,6 +19,95 @@ msgstr ""
 "X-Generator: Poedit 3.2.2\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
+#: activity/models.py:33
+msgid "Created"
+msgstr "Créé"
+
+#: activity/models.py:34
+msgid "Updated"
+msgstr "Mis à jour"
+
+#: activity/models.py:35 core/constants.py:67
+msgid "Validated"
+msgstr "Validé"
+
+#: activity/models.py:36 templates/quizs/detail_edit.html:67
+msgid "Published"
+msgstr "Publié"
+
+#: activity/models.py:37
+msgid "Deleted"
+msgstr "Supprimé"
+
+#: activity/models.py:38
+msgid "Computed"
+msgstr "Calculé"
+
+#: activity/models.py:41 questions/models.py:248 quizs/models.py:434
+#: templates/categories/detail_questions.html:12
+#: templates/questions/detail_base.html:4
+#: templates/tags/detail_questions.html:12
+msgid "Question"
+msgstr "Question"
+
+#: activity/models.py:42 quizs/models.py:180 quizs/models.py:433
+#: quizs/models.py:553 templates/questions/detail_quizs.html:12
+#: templates/quizs/detail_base.html:4 templates/tags/detail_quizs.html:12
+msgid "Quiz"
+msgstr "Quiz"
+
+#: activity/models.py:43 users/constants.py:8
+msgid "Contributor"
+msgstr "Contributeur"
+
+#: activity/models.py:48
+msgid "Actor ID"
+msgstr "ID de l'acteur"
+
+#: activity/models.py:49
+msgid "Actor name"
+msgstr "Nom de l'acteur"
+
+#: activity/models.py:53
+msgid "Verb"
+msgstr "Verbe"
+
+#: activity/models.py:60
+msgid "Object ID"
+msgstr "ID de l'objet"
+
+#: activity/models.py:62
+msgid "Object type"
+msgstr "Type de l'objet"
+
+#: activity/models.py:67
+msgid "Object name"
+msgstr "Nom de l'objet"
+
+#: activity/models.py:70
+msgid "Additional data"
+msgstr "Données supplémentaires"
+
+#: activity/models.py:74 categories/models.py:15 glossary/models.py:32
+#: questions/models.py:233 quizs/models.py:159 quizs/models.py:437
+#: quizs/models.py:500 quizs/models.py:560 tags/models.py:29
+#: users/models.py:184
+msgid "Creation date"
+msgstr "Date de création"
+
+#: activity/models.py:79
+msgid "Event"
+msgstr "Événement"
+
+#: activity/models.py:80
+msgid "Events"
+msgstr "Événements"
+
+#: api/glossary/filters.py:8 api/questions/filters.py:16
+#: api/quizs/filters.py:10
+msgid "Language(s)"
+msgstr "Langue(s)"
+
 #: api/questions/filters.py:11
 msgid "Type(s)"
 msgstr "Type(s)"
@@ -26,10 +115,6 @@ msgstr "Type(s)"
 #: api/questions/filters.py:13
 msgid "Difficulty level(s)"
 msgstr "Niveau(x) de difficulté"
-
-#: api/questions/filters.py:16 api/quizs/filters.py:10
-msgid "Language(s)"
-msgstr "Langue(s)"
 
 #: api/questions/filters.py:18
 msgid "Category(s)"
@@ -51,18 +136,6 @@ msgstr "Anglais"
 msgid "French"
 msgstr "Français"
 
-#: app/settings.py:181 core/constants.py:118
-msgid "Spanish"
-msgstr "Espagnol"
-
-#: app/settings.py:182 core/constants.py:119
-msgid "Italian"
-msgstr "Italien"
-
-#: app/settings.py:183 core/constants.py:120
-msgid "German"
-msgstr "Allemand"
-
 #: categories/models.py:11 quizs/models.py:88 tags/models.py:26
 msgid "Name"
 msgstr "Nom"
@@ -71,17 +144,11 @@ msgstr "Nom"
 msgid "Name (long version)"
 msgstr "Nom (version longue)"
 
-#: categories/models.py:13 glossary/models.py:17 tags/models.py:27
+#: categories/models.py:13 glossary/models.py:19 tags/models.py:27
 msgid "Description"
 msgstr "Description"
 
-#: categories/models.py:15 glossary/models.py:22 questions/models.py:233
-#: quizs/models.py:159 quizs/models.py:437 quizs/models.py:500
-#: quizs/models.py:560 tags/models.py:29 users/models.py:184
-msgid "Creation date"
-msgstr "Date de création"
-
-#: categories/models.py:16 glossary/models.py:23 questions/models.py:234
+#: categories/models.py:16 glossary/models.py:33 questions/models.py:234
 #: quizs/models.py:160 quizs/models.py:438 quizs/models.py:501
 #: quizs/models.py:561 tags/models.py:30 users/models.py:185
 msgid "Last update date"
@@ -147,10 +214,6 @@ msgstr "Brouillon"
 msgid "To validate"
 msgstr "A valider"
 
-#: core/constants.py:67
-msgid "Validated"
-msgstr "Validé"
-
 #: core/constants.py:68
 msgid "Set aside"
 msgstr "Écarté temporairement"
@@ -158,6 +221,18 @@ msgstr "Écarté temporairement"
 #: core/constants.py:69
 msgid "Removed"
 msgstr "Écarté"
+
+#: core/constants.py:118
+msgid "Spanish"
+msgstr "Espagnol"
+
+#: core/constants.py:119
+msgid "Italian"
+msgstr "Italien"
+
+#: core/constants.py:120
+msgid "German"
+msgstr "Allemand"
 
 #: core/constants.py:140
 msgid "Public (exported and in the application)"
@@ -179,21 +254,30 @@ msgstr "Vrai"
 msgid "False"
 msgstr "Faux"
 
-#: glossary/models.py:14
+#: glossary/filters.py:13 questions/filters.py:22 quizs/filters.py:25
+#: tags/filters.py:13
+msgid "Text search"
+msgstr "Recherche texte"
+
+#: glossary/models.py:16
 msgid "Word or acronym"
 msgstr "Mot ou sigle"
 
-#: glossary/models.py:15
+#: glossary/models.py:17
 msgid "Alternative names"
 msgstr "Noms alternatifs"
 
-#: glossary/models.py:16
+#: glossary/models.py:18
 msgid "Définition (short)"
 msgstr "Définition (succinte)"
 
-#: glossary/models.py:19
+#: glossary/models.py:21
 msgid "Accessible source (link)"
 msgstr "Lien pour aller plus loin"
+
+#: glossary/models.py:25 questions/models.py:129 quizs/models.py:105
+msgid "Language"
+msgstr "Langue"
 
 #: history/models.py:31 history/tables.py:19
 msgid "Changed fields"
@@ -215,10 +299,6 @@ msgstr "Auteur"
 #: history/tables.py:10 questions/models.py:102
 msgid "Type"
 msgstr "Type"
-
-#: questions/filters.py:22 quizs/filters.py:25 tags/filters.py:13
-msgid "Text search"
-msgstr "Recherche texte"
 
 #: questions/forms.py:33
 msgid "Answer image"
@@ -253,10 +333,6 @@ msgstr "Tags"
 #: questions/models.py:123
 msgid "Difficulty level"
 msgstr "Niveau de difficulté"
-
-#: questions/models.py:129 quizs/models.py:105
-msgid "Language"
-msgstr "Langue"
 
 #: questions/models.py:135
 msgid "Answer a"
@@ -379,13 +455,6 @@ msgstr "Visibilité"
 msgid "Quizs"
 msgstr "Quizs"
 
-#: questions/models.py:248 quizs/models.py:434
-#: templates/categories/detail_questions.html:12
-#: templates/questions/detail_base.html:4
-#: templates/tags/detail_questions.html:12
-msgid "Question"
-msgstr "Question"
-
 #: questions/models.py:249 quizs/models.py:97 quizs/models.py:168
 #: templates/categories/detail_base.html:34 templates/includes/_header.html:26
 #: templates/questions/create.html:4 templates/questions/create.html:18
@@ -470,12 +539,6 @@ msgstr "Quizs similaires ou liés"
 msgid "Relationships"
 msgstr "Relations"
 
-#: quizs/models.py:180 quizs/models.py:433 quizs/models.py:553
-#: templates/questions/detail_quizs.html:12 templates/quizs/detail_base.html:4
-#: templates/tags/detail_quizs.html:12
-msgid "Quiz"
-msgstr "Quiz"
-
 #: quizs/models.py:371
 msgid "Questions not yet validated"
 msgstr "Questions pas encore validées"
@@ -557,7 +620,7 @@ msgstr "Contributeurs"
 #: templates/admin/contributor_list.html:35
 #: templates/contributions/detail_reply_create.html:69
 #: templates/glossary/create.html:4 templates/glossary/create.html:18
-#: templates/glossary/create.html:39 templates/glossary/list.html:29
+#: templates/glossary/create.html:39 templates/glossary/list.html:34
 #: templates/profile/questions.html:35 templates/profile/quizs.html:30
 #: templates/questions/create.html:4 templates/questions/create.html:19
 #: templates/questions/create.html:62 templates/questions/list.html:34
@@ -585,16 +648,16 @@ msgid "All the contributors"
 msgstr "Tous les contributeurs"
 
 #: templates/admin/contributor_list.html:31
-#: templates/contributions/list.html:30 templates/profile/questions.html:31
-#: templates/questions/list.html:30 templates/quizs/list.html:30
-#: templates/tags/list.html:30
+#: templates/contributions/list.html:30 templates/glossary/list.html:30
+#: templates/profile/questions.html:31 templates/questions/list.html:30
+#: templates/quizs/list.html:30 templates/tags/list.html:30
 msgid "Filters"
 msgstr "Filtres"
 
 #: templates/admin/contributor_list.html:48
-#: templates/contributions/list.html:46 templates/profile/questions.html:48
-#: templates/questions/list.html:47 templates/quizs/list.html:47
-#: templates/tags/list.html:42
+#: templates/contributions/list.html:46 templates/glossary/list.html:47
+#: templates/profile/questions.html:48 templates/questions/list.html:47
+#: templates/quizs/list.html:47 templates/tags/list.html:47
 msgid "Filter"
 msgstr "Filtrer"
 
@@ -715,11 +778,11 @@ msgstr "(vide)"
 msgid "Anthropocene Quiz"
 msgstr "Quiz de l'Anthropocène"
 
-#: templates/includes/_footer.html:29
+#: templates/includes/_footer.html:15
 msgid "Website"
 msgstr "Application"
 
-#: templates/includes/_footer.html:33 templates/questions/detail_base.html:40
+#: templates/includes/_footer.html:19 templates/questions/detail_base.html:40
 #: templates/quizs/detail_base.html:40
 msgid "Statistics"
 msgstr "Statistiques"
@@ -962,10 +1025,6 @@ msgstr "Le quiz n'est pas encore <strong>validé</strong>"
 msgid "The quiz is <strong>not published</strong> yet"
 msgstr "Le quiz n'est pas encore <strong>publié</strong>"
 
-#: templates/quizs/detail_edit.html:67
-msgid "Published"
-msgstr "Publié"
-
 #: templates/quizs/detail_edit.html:72
 msgid "The quiz is published even though it is not validated"
 msgstr "Le quiz est publié alors qu'il n'est pas validé"
@@ -977,10 +1036,6 @@ msgstr "Tous les quizs"
 #: templates/tags/list.html:26
 msgid "All the tags"
 msgstr "Tous les tags"
-
-#: users/constants.py:8
-msgid "Contributor"
-msgstr "Contributeur"
 
 #: users/constants.py:9
 msgid "Super Contributor"
