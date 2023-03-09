@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-09 12:12+0100\n"
+"POT-Creation-Date: 2023-03-09 16:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -612,7 +612,17 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-#: templates/admin/contributor_create.html:10
+#: templates/activity/_recent_actions_home_card.html:5
+#: templates/activity/list.html:5 templates/activity/list.html:14
+#: templates/activity/list.html:26
+msgid "Recent actions"
+msgstr ""
+
+#: templates/activity/_recent_actions_home_card.html:8
+msgid "View more"
+msgstr ""
+
+#: templates/activity/list.html:13 templates/admin/contributor_create.html:10
 #: templates/admin/contributor_list.html:13 templates/admin/history.html:13
 #: templates/admin/home.html:12 templates/categories/detail_base.html:12
 #: templates/categories/list.html:13
@@ -846,6 +856,11 @@ msgstr ""
 msgid "contact us"
 msgstr ""
 
+#: templates/includes/_paginator.html:12
+#, python-format
+msgid "%(page_obj_number)s of %(page_obj_paginator_num_pages)s"
+msgstr ""
+
 #: templates/includes/_s3_upload_form.html:9
 msgid "Choose an image"
 msgstr ""
@@ -947,10 +962,6 @@ msgstr ""
 
 #: templates/pages/home.html:24
 msgid "and many more functionalities :)"
-msgstr ""
-
-#: templates/pages/home.html:30
-msgid "Recent actions"
 msgstr ""
 
 #: templates/profile/home.html:27 templates/profile/questions.html:5

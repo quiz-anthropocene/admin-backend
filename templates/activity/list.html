@@ -30,6 +30,7 @@
     <div class="row">
         <div class="col-12">
             {% include "activity/_event_list.html" with events=events %}
+            {% include "includes/_paginator.html" with page_obj=page_obj %}
         </div>
     </div>
 </div>

@@ -1,0 +1,25 @@
+{% load i18n %}
+
+<div class="pagination">
+    {% if page_obj.has_previous %}
+        <a href="?page=1" class="btn btn-sm">
+            ⏮️
+        </a>
+        <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-sm">
+            ◀️
+        </a>
+    {% endif %}
+
+    <a class="btn btn-sm">
+        {% blocktrans with page_obj_number=page_obj.number page_obj_paginator_num_pages=page_obj.paginator.num_pages %}{{ page_obj_number }} of {{ page_obj_paginator_num_pages }}{% endblocktrans %}
+    </a>
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}" class="btn btn-sm">
+            ▶️
+        </a>
+        <a href="?page={{ page_obj.paginator.num_pages }}" class="btn btn-sm">
+            ⏭️
+        </a>
+    {% endif %}
+</div>

@@ -8,3 +8,4 @@ class EventListView(ContributorUserRequiredMixin, ListView):
     queryset = Event.objects.display().order_by("-created")
     template_name = "activity/list.html"
     context_object_name = "events"
+    paginate_by = 50
