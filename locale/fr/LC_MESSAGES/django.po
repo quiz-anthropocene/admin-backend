@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-09 12:13+0100\n"
-"PO-Revision-Date: 2023-03-09 12:15+0100\n"
+"POT-Creation-Date: 2023-03-09 16:10+0100\n"
+"PO-Revision-Date: 2023-03-09 16:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -622,7 +622,17 @@ msgstr "Quizs (publiques & publiés)"
 msgid "Error"
 msgstr "Erreur"
 
-#: templates/admin/contributor_create.html:10
+#: templates/activity/_recent_actions_home_card.html:5
+#: templates/activity/list.html:5 templates/activity/list.html:14
+#: templates/activity/list.html:26
+msgid "Recent actions"
+msgstr "Actions récentes"
+
+#: templates/activity/_recent_actions_home_card.html:8
+msgid "View more"
+msgstr "Voir plus"
+
+#: templates/activity/list.html:13 templates/admin/contributor_create.html:10
 #: templates/admin/contributor_list.html:13 templates/admin/history.html:13
 #: templates/admin/home.html:12 templates/categories/detail_base.html:12
 #: templates/categories/list.html:13
@@ -857,6 +867,11 @@ msgstr ""
 msgid "contact us"
 msgstr "nous contacter"
 
+#: templates/includes/_paginator.html:12
+#, python-format
+msgid "%(page_obj_number)s of %(page_obj_paginator_num_pages)s"
+msgstr "%(page_obj_number)s sur %(page_obj_paginator_num_pages)s"
+
 #: templates/includes/_s3_upload_form.html:9
 msgid "Choose an image"
 msgstr "Choisissez une image"
@@ -965,10 +980,6 @@ msgstr "Mettre à jour le glossaire"
 #: templates/pages/home.html:24
 msgid "and many more functionalities :)"
 msgstr "et plein d'autres fonctionnalités :)"
-
-#: templates/pages/home.html:30
-msgid "Recent actions"
-msgstr "Actions récentes"
 
 #: templates/profile/home.html:27 templates/profile/questions.html:5
 #: templates/profile/questions.html:15
