@@ -10,6 +10,7 @@ HEADERS = {}
 
 def format_text(text):
     # https://api.slack.com/reference/surfaces/formatting
+    text = text or ""  # avoid cases where text=None
     text_formatted = text.replace("<i>", "_").replace("</i>", "_")
     text_formatted = text_formatted.replace("<strong>", "*").replace("</strong>", "*")
     return text_formatted

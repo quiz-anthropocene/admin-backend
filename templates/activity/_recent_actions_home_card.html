@@ -3,13 +3,9 @@
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">{% translate "Recent actions" %}</h5>
-        <ul style="list-style-type:none;padding-left:0">
-            {% for event in events %}
-                <li>
-                    {{ event.display_html|safe }}
-                    <small class="text-muted" title="{{ event.created }}">{{ event.created|date:"d F" }}</small>
-                </li>
-            {% endfor %}
-        </ul>
+        {% include "activity/_event_list.html" with events=events %}
+        {% if show_more_button %}
+            <a class="btn btn-sm btn-primary" href="{% url 'activity:list' %}">{% translate "View more" %}</a>
+        {% endif %}
     </div>
 </div>
