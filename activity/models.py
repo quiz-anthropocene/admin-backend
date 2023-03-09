@@ -89,45 +89,72 @@ class Event(models.Model):
 
     @property
     def display_html(self) -> str:
-        if self.event_object_type in ["QUESTION", "QUIZ"]:
+        if self.event_object_type == "QUESTION":
             # Prénom Nom a créé la question 'Question'
-            return self.display_question_quiz_with_admin_url_html
-        elif self.event_object_type in ["USER"]:
+            return self.display_question_with_admin_url_html
+        elif self.event_object_type == "QUIZ":
+            return self.display_quiz_with_admin_url_html
+        elif self.event_object_type == "USER":
             return self.display_new_user_html
 
     @property
-    def display_question_quiz_html(self) -> str:
+    def display_question_html(self) -> str:
         """
-        💡 <i>Prénom Nom</i> a créé la question <strong>test</strong>
+        💡 <i>Prénom Nom</i> created the question <strong>test</strong>
         """
-        return (
-            f"{self.display_event_emoji} "
-            f"<i>{self.actor_name}</i> a {self.get_event_verb_display().lower()} "
-            f"{self.display_event_object_type_prefix} {self.get_event_object_type_display().lower()} "
-            f"<strong>{self.event_object_name}</strong>"
+        html_message = _("<i>{actor_name}</i> {event_verb} the question <strong>{question_name}</strong>").format(
+            actor_name=self.actor_name,
+            event_verb=self.get_event_verb_display().lower(),
+            question_name=self.event_object_name,
         )
+        return f"{self.display_event_emoji} {html_message}"
 
     @property
-    def display_question_quiz_with_admin_url_html(self) -> str:
+    def display_quiz_html(self) -> str:
         """
-        💡 <i>Prénom Nom</i> a créé la question <a href="/questions/<id>/view/">test</a>
+        💡 <i>Prénom Nom</i> created the quiz <strong>test</strong>
         """
-        return (
-            f"{self.display_event_emoji} "
-            f"<i>{self.actor_name}</i> a {self.get_event_verb_display().lower()} "
-            f"{self.display_event_object_type_prefix} {self.get_event_object_type_display().lower()} "
-            f'<a href="{self.get_event_object_admin_absolute_url}">{self.event_object_name}</a>'
+        html_message = _("<i>{actor_name}</i> {event_verb} the quiz <strong>{quiz_name}</strong>").format(
+            actor_name=self.actor_name,
+            event_verb=self.get_event_verb_display().lower(),
+            quiz_name=self.event_object_name,
         )
+        return f"{self.display_event_emoji} {html_message}"
+
+    @property
+    def display_question_with_admin_url_html(self) -> str:
+        """
+        💡 <i>Prénom Nom</i> created the question <a href="/questions/<id>/view/">test</a>
+        """
+        html_message = _(
+            '<i>{actor_name}</i> {event_verb} the question <a href="{question_admin_absolute_url}">{question_name}</a>'
+        ).format(
+            actor_name=self.actor_name,
+            event_verb=self.get_event_verb_display().lower(),
+            question_name=self.event_object_name,
+            question_admin_absolute_url=self.get_event_object_admin_absolute_url,
+        )
+        return f"{self.display_event_emoji} {html_message}"
+
+    @property
+    def display_quiz_with_admin_url_html(self) -> str:
+        """
+        💡 <i>Prénom Nom</i> created the quiz <a href="/quizs/<id>/view/">test</a>
+        """
+        html_message = _(
+            '<i>{actor_name}</i> {event_verb} the quiz <a href="{quiz_admin_absolute_url}">{quiz_name}</a>'
+        ).format(
+            actor_name=self.actor_name,
+            event_verb=self.get_event_verb_display().lower(),
+            quiz_name=self.event_object_name,
+            quiz_admin_absolute_url=self.get_event_object_admin_absolute_url,
+        )
+        return f"{self.display_event_emoji} {html_message}"
 
     @property
     def display_new_user_html(self) -> str:
-        return f"{self.display_event_emoji} Nouveau contributeur ! <strong>{self.event_object_name}</strong>"
-
-    @property
-    def display_event_object_type_prefix(self) -> str:
-        if self.event_object_type in ["QUESTION"]:
-            return "la"
-        return "le"
+        html_message = _("New contributor! <i>{user_name}</i>").format(user_name=self.event_object_name)
+        return f"{self.display_event_emoji} {html_message}"
 
     @property
     def display_event_emoji(self):
