@@ -1,0 +1,11 @@
+{% load i18n %}
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{% translate "Recent actions" %}</h5>
+        {% include "activity/_event_list.html" with events=events %}
+        {% if show_more_button %}
+            <a class="btn btn-sm btn-primary" href="{% url 'activity:list' %}">{% translate "View more" %}</a>
+        {% endif %}
+    </div>
+</div>

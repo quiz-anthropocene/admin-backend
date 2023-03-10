@@ -27,15 +27,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <h4>{% translate "Recent actions" %}</h4>
-                <ul style="list-style-type:none;padding-left:0">
-                    {% for event in last_10_events %}
-                        <li>
-                            {{ event.display_html|safe }}
-                            <small class="text-muted" title="{{ event.created }}">{{ event.created|date:"d F" }}</small>
-                        </li>
-                    {% endfor %}
-                </ul>
+                {% include "activity/_recent_actions_home_card.html" with events=last_10_events show_more_button=True %}
             </div>
         </div>
     {% endif %}
