@@ -1,3 +1,41 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Changelog](#changelog)
+  - [A venir](#a-venir)
+  - [[2.3.0] - 2022-06](#230---2022-06)
+  - [[2.2.0] - 2022-05](#220---2022-05)
+  - [[2.1.0] - 2022-04](#210---2022-04)
+  - [[2.0.0] - 2022-03](#200---2022-03)
+  - [[1.3.0] - 2021](#130---2021)
+  - [[1.2.0] - 2020-12-13](#120---2020-12-13)
+  - [[1.1.0] - 2020-12-06](#110---2020-12-06)
+  - [[1.0.0] - 2020-11-29](#100---2020-11-29)
+  - [TODO](#todo)
+  - [[0.7.0] - en cours](#070---en-cours)
+    - [Ajouté](#ajout%C3%A9)
+    - [Modifié](#modifi%C3%A9)
+  - [[0.6.0] - 2020-04-17](#060---2020-04-17)
+    - [Ajouté](#ajout%C3%A9-1)
+    - [Modifié](#modifi%C3%A9-1)
+  - [[0.5.0] - 2020-04-05](#050---2020-04-05)
+    - [Ajouté](#ajout%C3%A9-2)
+    - [Modifié](#modifi%C3%A9-2)
+  - [[0.4.0] - 2020-03-27](#040---2020-03-27)
+    - [Ajouté](#ajout%C3%A9-3)
+    - [Modifié](#modifi%C3%A9-3)
+  - [[0.3.0] - 2020-03-22](#030---2020-03-22)
+    - [Ajouté](#ajout%C3%A9-4)
+    - [Modifié](#modifi%C3%A9-4)
+  - [[0.2.0] - 2020-03-11](#020---2020-03-11)
+    - [Ajouté](#ajout%C3%A9-5)
+    - [Modifié](#modifi%C3%A9-5)
+  - [[0.1.0] - 2020-03-08](#010---2020-03-08)
+    - [Ajouté](#ajout%C3%A9-6)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Changelog
 
 Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog](https://keepachangelog.com/en/1.0.0/))
