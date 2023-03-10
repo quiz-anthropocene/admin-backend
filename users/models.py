@@ -1,3 +1,4 @@
+from ckeditor.fields import RichTextField
 from django.conf import settings
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
@@ -275,3 +276,22 @@ def user_post_save(sender, instance, created, **kwargs):
     if created:
         if instance.has_role_contributor:
             sendinblue.add_to_contact_list(instance, list_id=settings.SIB_CONTRIBUTOR_LIST_ID)
+
+
+class AuthorDetail(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    image_url = models.URLField(
+        verbose_name=_("Author image (link)"),
+        max_length=500,
+        blank=True,
+    )
+    short_biography = RichTextField(verbose_name=_("Short biography"), blank=True)
+    quiz_relationship = RichTextField(verbose_name=_("Relationship with the Anthropocene Quiz"), blank=True)
+    website_url = models.URLField(verbose_name=_("Website (link)"), max_length=500, blank=True)
+
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
+    updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
+
+    class Meta:
+        verbose_name = _("Author detail")
+        verbose_name_plural = _("Author details")
