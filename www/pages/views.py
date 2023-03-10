@@ -9,7 +9,7 @@ from users.models import User
 from users.tables import AdministratorTable
 
 
-class HomeView(TemplateView):
+class HomeView(TemplateView):  # ContributorUserRequiredMixin ?
     template_name = "pages/home.html"
 
     def get(self, request, *args, **kwargs):

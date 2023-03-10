@@ -5,16 +5,16 @@ from users import constants
 from users.factories import DEFAULT_PASSWORD, UserFactory
 
 
-class ProfileViewTest(TestCase):
+class UserViewTest(TestCase):
     @classmethod
     def setUpTestData(cls):
-        cls.url = reverse("profile:home")
+        cls.url = reverse("users:home")
         cls.user = UserFactory(roles=[])
         cls.user_contributor = UserFactory()
         cls.user_super_contributor = UserFactory(roles=[constants.USER_ROLE_SUPER_CONTRIBUTOR])
         cls.user_admin = UserFactory(roles=[constants.USER_ROLE_ADMINISTRATOR])
 
-    def test_only_contributor_can_access_profile_home(self):
+    def test_only_contributor_can_access_users_home(self):
         # anonymous
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)

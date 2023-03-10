@@ -1,0 +1,47 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Users" %}{{ block.super }}{% endblock %}
+
+{% block breadcrumbs %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 my-auto">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "Users" %}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "Contributors" %} <small class="text-muted">{{ contributor_count }}</small></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "Quiz authors" %} <small class="text-muted">{{ quiz_author_count }}</small></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "Administrators" %} <small class="text-muted">{{ administrator_count }}</small></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

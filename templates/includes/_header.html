@@ -37,6 +37,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'glossary:list' %}">{% translate "Glossary" %}</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'users:home' %}">{% translate "Users" %}</a>
+                            </li>
                             {% if user.has_role_administrator %}
                                 <span style="padding:0.5em">|</span>
                                 <li class="nav-item">
