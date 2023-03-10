@@ -8,10 +8,12 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
+from simple_history.models import HistoricalRecords
 
 from core import constants
 from core.fields import ChoiceArrayField
 from core.utils import sendinblue
+from history.models import HistoryChangedFieldsAbstractModel
 from questions.models import Question
 from quizs.models import QuizAuthor
 from users import constants as user_constants
@@ -301,6 +303,8 @@ class AuthorDetail(models.Model):
 
     created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
     updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
+
+    history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
 
     class Meta:
         verbose_name = _("Author detail")

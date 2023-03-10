@@ -158,13 +158,25 @@ class AuthorDetailAdmin(admin.ModelAdmin):
         "created",
     ]
 
-    readonly_fields = ["created", "updated"]
     autocomplete_fields = ["user"]
+    readonly_fields = ["created", "updated"]
+    fieldsets = (
+        (None, {"fields": ("user", "image_url", "short_biography", "quiz_relationship", "website_url")}),
+        ("Dates", {"fields": ("created", "updated")}),
+    )
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)
         qs = qs.select_related("user")
         return qs
+
+    def get_readonly_fields(self, request, obj=None):
+        """
+        User field should only be editable on creation
+        """
+        if not obj:
+            return self.readonly_fields
+        return self.readonly_fields + ["user"]
 
     def has_image_url(self, instance):
         return instance.has_image_url
