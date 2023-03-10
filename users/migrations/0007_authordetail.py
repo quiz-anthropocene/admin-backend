@@ -22,6 +22,7 @@ class Migration(migrations.Migration):
                     models.OneToOneField(
                         on_delete=django.db.models.deletion.CASCADE,
                         primary_key=True,
+                        related_name="author_detail",
                         serialize=False,
                         to=settings.AUTH_USER_MODEL,
                     ),

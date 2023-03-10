@@ -3,7 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 
 from core.admin import admin_site
 from users import constants
-from users.models import User
+from users.models import AuthorDetail, User
 
 
 class RoleFilter(admin.SimpleListFilter):
@@ -25,8 +25,24 @@ class RoleFilter(admin.SimpleListFilter):
         return queryset
 
 
+class HasAuthorDetailFilter(admin.SimpleListFilter):
+    title = "Author detail ?"
+    parameter_name = "has_author_detail"
+
+    def lookups(self, request, model_admin):
+        return (("Yes", "Yes"), ("No", "No"))
+
+    def queryset(self, request, queryset):
+        value = self.value()
+        if value == "Yes":
+            return queryset.has_author_detail()
+        elif value == "No":
+            return queryset.filter(author_detail__isnull=True)
+        return queryset
+
+
 class UserAdmin(UserAdmin):
-    list_display = (
+    list_display = [
         "id",
         "first_name",
         "last_name",
@@ -36,10 +52,11 @@ class UserAdmin(UserAdmin):
         "is_administrator",
         "question_count",
         "quiz_count",
+        # "has_author_detail",
         "last_login",
         "created",
-    )
-    list_filter = [RoleFilter, "is_staff"]
+    ]
+    list_filter = [RoleFilter, HasAuthorDetailFilter, "is_staff"]
     search_fields = ["id", "first_name", "last_name", "email"]
     ordering = ["-created"]
 
@@ -52,6 +69,7 @@ class UserAdmin(UserAdmin):
         "last_login",
         "question_count",
         "quiz_count",
+        "has_author_detail",
         "created",
         "updated",
     ]
@@ -74,6 +92,7 @@ class UserAdmin(UserAdmin):
                 "fields": (
                     "question_count",
                     "quiz_count",
+                    "has_author_detail",
                 )
             },
         ),
@@ -122,5 +141,55 @@ class UserAdmin(UserAdmin):
     quiz_count.short_description = "Nbr de quizs"
     quiz_count.admin_order_field = "quiz_count"
 
+    def has_author_detail(self, user):
+        return user.has_author_detail
+
+    has_author_detail.short_description = "Author detail"
+    has_author_detail.boolean = True
+
+
+class AuthorDetailAdmin(admin.ModelAdmin):
+    list_display = [
+        "user",
+        "has_image_url",
+        "has_short_biography",
+        "has_quiz_relationship",
+        "has_website_url",
+        "created",
+    ]
+
+    readonly_fields = ["created", "updated"]
+    autocomplete_fields = ["user"]
+
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        qs = qs.select_related("user")
+        return qs
+
+    def has_image_url(self, instance):
+        return instance.has_image_url
+
+    has_image_url.short_description = "Author image"
+    has_image_url.boolean = True
+
+    def has_short_biography(self, instance):
+        return instance.has_short_biography
+
+    has_short_biography.short_description = "Short biography"
+    has_short_biography.boolean = True
+
+    def has_quiz_relationship(self, instance):
+        return instance.has_quiz_relationship
+
+    has_quiz_relationship.short_description = "Quiz relationship"
+    has_quiz_relationship.boolean = True
+
+    def has_website_url(self, instance):
+        return instance.has_website_url
+
+    has_website_url.short_description = "Website"
+    has_website_url.boolean = True
+
 
 admin_site.register(User, UserAdmin)
+admin_site.register(AuthorDetail, AuthorDetailAdmin)

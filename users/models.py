@@ -91,6 +91,9 @@ class UserQueryset(models.QuerySet):
             .filter(Q(has_public_questions=True) | Q(has_public_quizs=True))
         )
 
+    def has_author_detail(self):
+        return self.select_related("author_detail").filter(author_detail__isnull=False)
+
     def simple_search(self, value):
         search_fields = ["first_name", "last_name", "email"]
         conditions = Q()
@@ -158,6 +161,9 @@ class UserManager(BaseUserManager):
     def has_public_content(self):
         return self.get_queryset().has_public_content()
 
+    def has_author_detail(self):
+        return self.get_queryset().has_author_detail()
+
     def simple_search(self, value):
         return self.get_queryset().simple_search(value)
 
@@ -223,6 +229,10 @@ class User(AbstractUser):
         return self.quiz_count > 0
 
     @property
+    def has_author_detail(self) -> bool:
+        return hasattr(self, "author_detail")
+
+    @property
     def has_role_contributor(self) -> bool:
         ROLES_ALLOWED = [
             user_constants.USER_ROLE_ADMINISTRATOR,
@@ -279,7 +289,7 @@ def user_post_save(sender, instance, created, **kwargs):
 
 
 class AuthorDetail(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True, related_name="author_detail")
     image_url = models.URLField(
         verbose_name=_("Author image (link)"),
         max_length=500,
@@ -295,3 +305,22 @@ class AuthorDetail(models.Model):
     class Meta:
         verbose_name = _("Author detail")
         verbose_name_plural = _("Author details")
+
+    def __str__(self):
+        return f"{self.user} >>> Author detail"
+
+    @property
+    def has_image_url(self) -> bool:
+        return len(self.image_url) > 0
+
+    @property
+    def has_short_biography(self) -> bool:
+        return len(self.short_biography) > 0
+
+    @property
+    def has_quiz_relationship(self) -> bool:
+        return len(self.quiz_relationship) > 0
+
+    @property
+    def has_website_url(self) -> bool:
+        return len(self.website_url) > 0
