@@ -15,19 +15,19 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="AuthorDetail",
+            name="UserDetail",
             fields=[
                 (
                     "user",
                     models.OneToOneField(
                         on_delete=django.db.models.deletion.CASCADE,
                         primary_key=True,
-                        related_name="author_detail",
+                        related_name="user_detail",
                         serialize=False,
                         to=settings.AUTH_USER_MODEL,
                     ),
                 ),
-                ("image_url", models.URLField(blank=True, max_length=500, verbose_name="Author image (link)")),
+                ("image_url", models.URLField(blank=True, max_length=500, verbose_name="User image (link)")),
                 ("short_biography", ckeditor.fields.RichTextField(blank=True, verbose_name="Short biography")),
                 (
                     "quiz_relationship",
@@ -38,8 +38,8 @@ class Migration(migrations.Migration):
                 ("updated", models.DateTimeField(auto_now=True, verbose_name="Last update date")),
             ],
             options={
-                "verbose_name": "Author detail",
-                "verbose_name_plural": "Author details",
+                "verbose_name": "User detail",
+                "verbose_name_plural": "User details",
             },
         ),
     ]

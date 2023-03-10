@@ -14,12 +14,12 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("users", "0007_authordetail"),
+        ("users", "0007_userdetail"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name="HistoricalAuthorDetail",
+            name="HistoricalUserDetail",
             fields=[
                 (
                     "history_changed_fields",
@@ -31,7 +31,7 @@ class Migration(migrations.Migration):
                         verbose_name="Changed fields",
                     ),
                 ),
-                ("image_url", models.URLField(blank=True, max_length=500, verbose_name="Author image (link)")),
+                ("image_url", models.URLField(blank=True, max_length=500, verbose_name="User image (link)")),
                 ("short_biography", ckeditor.fields.RichTextField(blank=True, verbose_name="Short biography")),
                 (
                     "quiz_relationship",
@@ -72,8 +72,8 @@ class Migration(migrations.Migration):
                 ),
             ],
             options={
-                "verbose_name": "historical Author detail",
-                "verbose_name_plural": "historical Author details",
+                "verbose_name": "historical User detail",
+                "verbose_name_plural": "historical User details",
                 "ordering": ("-history_date", "-history_id"),
                 "get_latest_by": ("history_date", "history_id"),
             },

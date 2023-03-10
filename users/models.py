@@ -93,8 +93,8 @@ class UserQueryset(models.QuerySet):
             .filter(Q(has_public_questions=True) | Q(has_public_quizs=True))
         )
 
-    def has_author_detail(self):
-        return self.select_related("author_detail").filter(author_detail__isnull=False)
+    def has_user_detail(self):
+        return self.select_related("user_detail").filter(user_detail__isnull=False)
 
     def simple_search(self, value):
         search_fields = ["first_name", "last_name", "email"]
@@ -163,8 +163,8 @@ class UserManager(BaseUserManager):
     def has_public_content(self):
         return self.get_queryset().has_public_content()
 
-    def has_author_detail(self):
-        return self.get_queryset().has_author_detail()
+    def has_user_detail(self):
+        return self.get_queryset().has_user_detail()
 
     def simple_search(self, value):
         return self.get_queryset().simple_search(value)
@@ -231,8 +231,8 @@ class User(AbstractUser):
         return self.quiz_count > 0
 
     @property
-    def has_author_detail(self) -> bool:
-        return hasattr(self, "author_detail")
+    def has_user_detail(self) -> bool:
+        return hasattr(self, "user_detail")
 
     @property
     def has_role_contributor(self) -> bool:
@@ -290,10 +290,10 @@ def user_post_save(sender, instance, created, **kwargs):
             sendinblue.add_to_contact_list(instance, list_id=settings.SIB_CONTRIBUTOR_LIST_ID)
 
 
-class AuthorDetail(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True, related_name="author_detail")
+class UserDetail(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True, related_name="user_detail")
     image_url = models.URLField(
-        verbose_name=_("Author image (link)"),
+        verbose_name=_("User image (link)"),
         max_length=500,
         blank=True,
     )
@@ -307,11 +307,11 @@ class AuthorDetail(models.Model):
     history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
 
     class Meta:
-        verbose_name = _("Author detail")
-        verbose_name_plural = _("Author details")
+        verbose_name = _("User detail")
+        verbose_name_plural = _("User details")
 
     def __str__(self):
-        return f"{self.user} >>> Author detail"
+        return f"{self.user} >>> User detail"
 
     @property
     def has_image_url(self) -> bool:

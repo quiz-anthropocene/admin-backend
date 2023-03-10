@@ -3,7 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 
 from core.admin import admin_site
 from users import constants
-from users.models import AuthorDetail, User
+from users.models import User, UserDetail
 
 
 class RoleFilter(admin.SimpleListFilter):
@@ -25,9 +25,9 @@ class RoleFilter(admin.SimpleListFilter):
         return queryset
 
 
-class HasAuthorDetailFilter(admin.SimpleListFilter):
-    title = "Author detail ?"
-    parameter_name = "has_author_detail"
+class HasUserDetailFilter(admin.SimpleListFilter):
+    title = "User detail ?"
+    parameter_name = "has_user_detail"
 
     def lookups(self, request, model_admin):
         return (("Yes", "Yes"), ("No", "No"))
@@ -35,9 +35,9 @@ class HasAuthorDetailFilter(admin.SimpleListFilter):
     def queryset(self, request, queryset):
         value = self.value()
         if value == "Yes":
-            return queryset.has_author_detail()
+            return queryset.has_user_detail()
         elif value == "No":
-            return queryset.filter(author_detail__isnull=True)
+            return queryset.filter(user_detail__isnull=True)
         return queryset
 
 
@@ -52,11 +52,11 @@ class UserAdmin(UserAdmin):
         "is_administrator",
         "question_count",
         "quiz_count",
-        # "has_author_detail",
+        # "has_user_detail",
         "last_login",
         "created",
     ]
-    list_filter = [RoleFilter, HasAuthorDetailFilter, "is_staff"]
+    list_filter = [RoleFilter, HasUserDetailFilter, "is_staff"]
     search_fields = ["id", "first_name", "last_name", "email"]
     ordering = ["-created"]
 
@@ -69,7 +69,7 @@ class UserAdmin(UserAdmin):
         "last_login",
         "question_count",
         "quiz_count",
-        "has_author_detail",
+        "has_user_detail",
         "created",
         "updated",
     ]
@@ -92,7 +92,7 @@ class UserAdmin(UserAdmin):
                 "fields": (
                     "question_count",
                     "quiz_count",
-                    "has_author_detail",
+                    "has_user_detail",
                 )
             },
         ),
@@ -141,14 +141,14 @@ class UserAdmin(UserAdmin):
     quiz_count.short_description = "Nbr de quizs"
     quiz_count.admin_order_field = "quiz_count"
 
-    def has_author_detail(self, user):
-        return user.has_author_detail
+    def has_user_detail(self, user):
+        return user.has_user_detail
 
-    has_author_detail.short_description = "Author detail"
-    has_author_detail.boolean = True
+    has_user_detail.short_description = "User detail"
+    has_user_detail.boolean = True
 
 
-class AuthorDetailAdmin(admin.ModelAdmin):
+class UserDetailAdmin(admin.ModelAdmin):
     list_display = [
         "user",
         "has_image_url",
@@ -181,7 +181,7 @@ class AuthorDetailAdmin(admin.ModelAdmin):
     def has_image_url(self, instance):
         return instance.has_image_url
 
-    has_image_url.short_description = "Author image"
+    has_image_url.short_description = "User image"
     has_image_url.boolean = True
 
     def has_short_biography(self, instance):
@@ -204,4 +204,4 @@ class AuthorDetailAdmin(admin.ModelAdmin):
 
 
 admin_site.register(User, UserAdmin)
-admin_site.register(AuthorDetail, AuthorDetailAdmin)
+admin_site.register(UserDetail, UserDetailAdmin)
