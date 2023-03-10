@@ -35,7 +35,7 @@
 
             <h4 id="contact">{% translate "Contact an administrator" %}</h4>
             <ul>
-                <li><a href="{% url 'pages:help_administrator_list' %}">{% translate "Administrator list" %}</a></li>
+                <li><a href="{% url 'users:administrator_list' %}">{% translate "Administrator list" %}</a></li>
                 <li>via <s>Slack</s> Discord : <a href="{{ DISCORD_INVITATION_LINK }}">{% translate "invitation link" %}</a></li>
                 <li><a href="mailto:{{ CONTACT_EMAIL }}">{{ CONTACT_EMAIL }}</a></li>
             </ul>

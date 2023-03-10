@@ -14,7 +14,7 @@ class ProfileViewTest(TestCase):
         cls.user_super_contributor = UserFactory(roles=[constants.USER_ROLE_SUPER_CONTRIBUTOR])
         cls.user_admin = UserFactory(roles=[constants.USER_ROLE_ADMINISTRATOR])
 
-    def test_only_contributor_can_access_profile(self):
+    def test_only_contributor_can_access_profile_home(self):
         # anonymous
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, 302)
