@@ -3,6 +3,7 @@ from datetime import date, timedelta
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 
 from core import constants
 from questions.models import Question
@@ -34,11 +35,11 @@ class Contribution(models.Model):
     CONTRIBUTION_FK_FIELDS = ["question", "quiz", "author"]
     CONTRIBUTION_READONLY_FIELDS = ["parent", "created", "updated"]
     text = models.TextField(
-        verbose_name="Texte",
+        verbose_name=_("Text"),
         blank=False,
-        help_text="Une question, un commentaire…",
+        help_text=_("A question, a comment…"),
     )
-    description = models.TextField(verbose_name="Information supplémentaire", blank=True)
+    description = models.TextField(verbose_name="Addtional nformation", blank=True)
     type = models.CharField(
         verbose_name="Type", max_length=150, choices=constants.CONTRIBUTION_TYPE_CHOICES, blank=True
     )
@@ -55,7 +56,7 @@ class Contribution(models.Model):
         verbose_name="Quiz", to=Quiz, related_name="contributions", on_delete=models.CASCADE, null=True, blank=True
     )
     author = models.ForeignKey(
-        verbose_name="Auteur",
+        verbose_name=_("Author"),
         to=settings.AUTH_USER_MODEL,
         related_name="contributions",
         on_delete=models.SET_NULL,
@@ -64,7 +65,7 @@ class Contribution(models.Model):
     )
 
     status = models.CharField(
-        verbose_name="Statut",
+        verbose_name=_("Status"),
         max_length=150,
         choices=constants.CONTRIBUTION_STATUS_CHOICES,
         # default=constants.CONTRIBUTION_STATUS_PENDING,
@@ -72,11 +73,16 @@ class Contribution(models.Model):
     )
 
     parent = models.ForeignKey(
-        verbose_name="En réponse à", to="self", related_name="replies", on_delete=models.CASCADE, null=True, blank=True
+        verbose_name=_("In answer to"),
+        to="self",
+        related_name="replies",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
     )
 
-    created = models.DateTimeField(verbose_name="Date de création", default=timezone.now)
-    updated = models.DateTimeField(verbose_name="Date de dernière modification", auto_now=True)
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
+    updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
 
     objects = ContributionQuerySet.as_manager()
 
@@ -85,10 +91,10 @@ class Contribution(models.Model):
 
     @property
     def get_author(self) -> str:
-        return self.author or "Utilisateur anonyme"
+        return self.author or _("Anonymous user")
 
     def get_reply_type(self) -> str:
-        return self.get_type_display().replace(" contributeur", "")
+        return self.get_type_display().replace(_(" contributor"), "")
 
     @property
     def has_replies(self) -> bool:

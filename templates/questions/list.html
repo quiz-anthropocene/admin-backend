@@ -23,7 +23,7 @@
 <div class="container">
     <div class="row">
         <div class="col-9">
-            <h1>Toutes les questions <span class="fs-3 text-muted">{{ questions.count }}</span></h1>
+            <h1>{% translate "All the questions " %}<span class="fs-3 text-muted">{{ questions.count }}</span></h1>
         </div>
         <div class="col-3 text-end my-auto">
             <button type="button" class="btn {% if search_filters %}btn-warning{% else %}btn-secondary{% endif %} btn-sm btn-ico" data-bs-toggle="collapse" data-bs-target="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters">

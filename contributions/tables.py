@@ -1,4 +1,5 @@
 import django_tables2 as tables
+from django.utils.translation import gettext_lazy as _
 
 from contributions.models import Contribution
 from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, ChoiceColumn, RichTextLongerEllipsisColumn
@@ -22,7 +23,7 @@ class ContributionTable(tables.Table):
         linkify=lambda record: record.quiz.get_absolute_url(),
         attrs={"td": {"title": lambda record: record.quiz}},
     )
-    processed_icon = tables.Column(verbose_name="Traitée", accessor="processed_icon")
+    processed_icon = tables.Column(verbose_name=_("Processed"), accessor="processed_icon")
     # has_replies = tables.BooleanColumn(verbose_name="Répondu", yesno="✅,❌")
     action = tables.TemplateColumn(
         verbose_name="Actions",
