@@ -1,22 +1,18 @@
 <p align="center">
   <a href="https://quizanthropocene.fr/en">
-    <img alt="QuizAnthropocene" height="125" src="https://avatars.githubusercontent.com/u/105566092?s=200&v=4">
+    <img src="https://avatars.githubusercontent.com/u/105566092" height="125" alt="QuizAnthropocene" />
   </a>
-  <br>
+</p>
+<p align="center">
   <!-- base64 flags are available at https://www.phoca.cz/cssflags/ -->
-    <a href="https://github.com/quiz-anthropocene/admin-backend/blob/master/README.md">
-<img height="20px" src="https://img.shields.io/badge/EN-flag.svg?color=555555&style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNjAgMzAiIGhlaWdodD0iNjAwIj4NCjxkZWZzPg0KPGNsaXBQYXRoIGlkPSJ0Ij4NCjxwYXRoIGQ9Im0zMCwxNWgzMHYxNXp2MTVoLTMwemgtMzB2LTE1enYtMTVoMzB6Ii8+DQo8L2NsaXBQYXRoPg0KPC9kZWZzPg0KPHBhdGggZmlsbD0iIzAwMjQ3ZCIgZD0ibTAsMHYzMGg2MHYtMzB6Ii8+DQo8cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNiIgZD0ibTAsMGw2MCwzMG0wLTMwbC02MCwzMCIvPg0KPHBhdGggc3Ryb2tlPSIjY2YxNDJiIiBzdHJva2Utd2lkdGg9IjQiIGQ9Im0wLDBsNjAsMzBtMC0zMGwtNjAsMzAiIGNsaXAtcGF0aD0idXJsKCN0KSIvPg0KPHBhdGggc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEwIiBkPSJtMzAsMHYzMG0tMzAtMTVoNjAiLz4NCjxwYXRoIHN0cm9rZT0iI2NmMTQyYiIgc3Ryb2tlLXdpZHRoPSI2IiBkPSJtMzAsMHYzMG0tMzAtMTVoNjAiLz4NCjwvc3ZnPg0K">
-  </a>
   <a href="https://github.com/quiz-anthropocene/admin-backend/tree/master/locale/fr/README_fr.md">
-    <img height="20px" src="https://img.shields.io/badge/FR-flag.svg?color=555555&style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgNjAwIj4NCjxwYXRoIGZpbGw9IiNlZDI5MzkiIGQ9Im0wLDBoOTAwdjYwMGgtOTAweiIvPg0KPHBhdGggZmlsbD0iI2ZmZiIgZD0ibTAsMGg2MDB2NjAwaC02MDB6Ii8+DQo8cGF0aCBmaWxsPSIjMDAyMzk1IiBkPSJtMCwwaDMwMHY2MDBoLTMwMHoiLz4NCjwvc3ZnPg0K">
+    <img src="https://img.shields.io/badge/FR-flag.svg?color=555555&style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgNjAwIj4NCjxwYXRoIGZpbGw9IiNlZDI5MzkiIGQ9Im0wLDBoOTAwdjYwMGgtOTAweiIvPg0KPHBhdGggZmlsbD0iI2ZmZiIgZD0ibTAsMGg2MDB2NjAwaC02MDB6Ii8+DQo8cGF0aCBmaWxsPSIjMDAyMzk1IiBkPSJtMCwwaDMwMHY2MDBoLTMwMHoiLz4NCjwvc3ZnPg0K" height="20" />
   </a>
-  </br>
 </p>
 
+# Contribute to the Anthropocene Quiz
 
-# Contribute
-
-Thank you for helping us!
+Thank you for wanting to help us!
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -28,23 +24,14 @@ Thank you for helping us!
   - [Contribute to the development of the application](#contribute-to-the-development-of-the-application)
 - [Additional informations](#additional-informations)
   - [Technical stack](#technical-stack)
-    - [Backend](#backend)
-    - [Frontend](#frontend)
-    - [DevOps](#devops)
   - [Architecture diagram](#architecture-diagram)
   - [Start the project locally](#start-the-project-locally)
-    - [Install the application](#install-the-application)
-    - [Start the application](#start-the-application)
-    - [Access the admin console](#access-the-admin-console)
   - [Start tests](#start-tests)
   - [Translation](#translation)
   - [In the code](#in-the-code)
   - [Add a new language](#add-a-new-language)
   - [Translatation improvement or addition in an existing language](#translatation-improvement-or-addition-in-an-existing-language)
   - [Other useful commands](#other-useful-commands)
-    - [Backend commands](#backend-commands)
-    - [Other commands](#other-commands)
-    - [Windows specific](#windows-specific)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -53,14 +40,14 @@ Thank you for helping us!
 You can contribute to the project in many ways:
 
 - Contribute to the questions database:
-    - Add new questions
-    - Propose modifications on existing questions
+  - Add new questions
+  - Propose modifications on existing questions
 
 - Contribute to the application:
-    - Notify us about bugs
-    - Propose improvements (through Github Issues)
-    - Help the development of the application (through Github Issues and Pull Requests)
-    - Help with translation
+  - Notify us about bugs
+  - Propose improvements (through Github Issues)
+  - Help the development of the application (through Github Issues and Pull Requests)
+  - Help with translation
 
 ### Add or modify questions
 
