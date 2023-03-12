@@ -1,45 +1,77 @@
-# Quiz de l'Anthropocène 🌍
+<p align="center">
+  <a href="https://quizanthropocene.fr/en">
+    <img src="https://avatars.githubusercontent.com/u/105566092" height="125" alt="Anthropocene Quiz" />
+  </a>
+</p>
+<p align="center">
+  <!-- base64 flags are available at https://www.phoca.cz/cssflags/ -->
+  <a href="https://github.com/quiz-anthropocene/admin-backend/tree/master/locale/fr/README_fr.md">
+    <img src="https://img.shields.io/badge/FR-flag.svg?color=555555&style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgNjAwIj4NCjxwYXRoIGZpbGw9IiNlZDI5MzkiIGQ9Im0wLDBoOTAwdjYwMGgtOTAweiIvPg0KPHBhdGggZmlsbD0iI2ZmZiIgZD0ibTAsMGg2MDB2NjAwaC02MDB6Ii8+DQo8cGF0aCBmaWxsPSIjMDAyMzk1IiBkPSJtMCwwaDMwMHY2MDBoLTMwMHoiLz4NCjwvc3ZnPg0K" height="20" />
+  </a>
+</p>
+<p align="center">
+  <a href="https://github.com/quiz-anthropocene/admin-backend/blob/master/CONTRIBUTING.md">
+    <img src="https://img.shields.io/badge/Contribute-00ACD7?style=flat-square" />
+  </a>
+  <a href="https://discord.gg/6qQ8ZYnmKr">
+    <img src="https://img.shields.io/discord/1015184051650433105?color=00ACD7&label=%F0%9F%92%AC%20Discord&style=flat-square" />
+  </a>
+</p>
+<p align="center">
+  <a href="https://twitter.com/AnthroQuiz">
+    <img src="https://img.shields.io/twitter/url?label=Twitter&style=social&url=https%3A%2F%2Ftwitter.com%2FAnthroQuiz" />
+  </a>
+  <a href="https://www.linkedin.com/company/quiz-de-l-anthropocene/">
+    <img src="https://img.shields.io/twitter/url?label=LinkedIn&style=social&url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fquiz-de-l-anthropocene%2F&logo=linkedin" />
+  </a>
+  <a href="https://www.facebook.com/quizanthropocene/">
+    <img src="https://img.shields.io/twitter/url?label=Facebook&style=social&url=https%3A%2F%2Fwww.facebook.com%2Fquizanthropocene%2F&logo=facebook">
+  </a>
+</p>
 
-Mieux appréhender les limites de notre planète, à travers des questions simples et sourcées.
+# Anthropocene Quiz
 
+Better understand the limits of our planet, through simple, sourced and verified quizs.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [But](#but)
-- [Stack technique](#stack-technique)
-- [Contribuer](#contribuer)
+
+- [Goals](#goals)
+- [Technical stack](#technical-stack)
+- [Contribute](#contribute)
+- [Links](#links)
 - [Translation](#translation)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## But
+## Goals
 
-- Rassembler un ensemble de connaissances sous forme de questions (QCM uniquement pour l'instant)
-- Couvrir un large panel de sujets : climat, biodiversité, énergie, consommation…
-- Des questions avec différents niveaux de difficultés, pour sensibiliser ou se perfectionner
-- Une rigueur scientifique dans le choix des questions, et surtout dans les explications apportées autour de la réponse
-- Une base de donnée facilement accessible et editable
-- Une application simple pour une prise en main rapide
+- Gather knowledge in a question / quiz format (MCQ format only for the moment)
+- Cover a wide range of subjects: climate, biodiversity, energy, consumption...
+- Propose questions with different level of difficulty, to help raise awareness or to improve one's knowledge
+- Abide by a scientific rigor in the choice of questions, and especially in the explanations related to the answer
+- Propose an easily accessible open-source database
+- Offer an easy-to-use interface for a quick start
 
-## Stack technique
+## Technical stack
 
 - Backend : Python Django
-- Frontend : Vue.js (voir [quiz-anthropocene/public-frontend](https://github.com/quiz-anthropocene/public-frontend))
+- Frontend : Vue.js (see [quiz-anthropocene/public-frontend](https://github.com/quiz-anthropocene/public-frontend))
 - DevOps: Scalingo, Netlify, Github Actions
 
-Plus de détails [ici](CONTRIBUTING.md#stack-technique)
+More details [here](CONTRIBUTING.md#technical-stack).
 
-## Contribuer
+## Contribute
 
-Le code et les questions sont en open-source : venez nous aider !
+Code and questions are open-source: come give us a hand!
 
-- Lire [CONTRIBUTING.md](CONTRIBUTING.md)
-- Voir les [Issues](https://github.com/quiz-anthropocene/know-your-planet/issues) (ainsi que le [board](https://github.com/quiz-anthropocene/know-your-planet/projects/1) Github (pas à jour))
+- Read [CONTRIBUTING.md](CONTRIBUTING.md)
+- View the Github [Issues](https://github.com/quiz-anthropocene/know-your-planet/issues) & [Board](https://github.com/quiz-anthropocene/know-your-planet/projects/1) (not up-to-date)
 
-## Liens
+## Links
 
-https://quizanthropocene.fr
+https://quizanthropocene.fr/en
 
 ## Translation
 
-We are currently in the process of translating this application. English, German, Spanish… Come help us !
+We are currently in the process of translating the application. English, German, Spanish… Come help us!

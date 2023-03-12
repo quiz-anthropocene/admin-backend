@@ -1,126 +1,135 @@
-# Contribuer
+<p align="center">
+  <a href="https://quizanthropocene.fr/en">
+    <img src="https://avatars.githubusercontent.com/u/105566092" height="125" alt="QuizAnthropocene" />
+  </a>
+</p>
+<p align="center">
+  <!-- base64 flags are available at https://www.phoca.cz/cssflags/ -->
+  <a href="https://github.com/quiz-anthropocene/admin-backend/tree/master/locale/fr/README_fr.md">
+    <img src="https://img.shields.io/badge/FR-flag.svg?color=555555&style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgNjAwIj4NCjxwYXRoIGZpbGw9IiNlZDI5MzkiIGQ9Im0wLDBoOTAwdjYwMGgtOTAweiIvPg0KPHBhdGggZmlsbD0iI2ZmZiIgZD0ibTAsMGg2MDB2NjAwaC02MDB6Ii8+DQo8cGF0aCBmaWxsPSIjMDAyMzk1IiBkPSJtMCwwaDMwMHY2MDBoLTMwMHoiLz4NCjwvc3ZnPg0K" height="20" />
+  </a>
+</p>
 
-Merci d'être là et de vouloir contribuer :)
+# Contribute to the Anthropocene Quiz
+
+Thank you for wanting to help us!
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Comment aider ?](#comment-aider-)
-  - [Rajouter ou modifier des questions](#rajouter-ou-modifier-des-questions)
-  - [Proposer des améliorations de l'application](#proposer-des-am%C3%A9liorations-de-lapplication)
-  - [Aider au développement de l'application](#aider-au-d%C3%A9veloppement-de-lapplication)
-- [Informations supplémentaires](#informations-suppl%C3%A9mentaires)
-  - [Stack technique](#stack-technique)
-    - [Backend](#backend)
-    - [Frontend](#frontend)
-    - [DevOps](#devops)
-  - [Schéma d'architecture](#sch%C3%A9ma-darchitecture)
-  - [Lancer le projet en local](#lancer-le-projet-en-local)
-    - [Installer l'application](#installer-lapplication)
-    - [Lancer l'application](#lancer-lapplication)
-    - [Accéder à la console admin](#acc%C3%A9der-%C3%A0-la-console-admin)
-  - [Lancer les tests](#lancer-les-tests)
-  - [Traduction](#traduction)
-  - [Autres commandes utiles](#autres-commandes-utiles)
-    - [Commandes Backend](#commandes-backend)
-    - [Commandes Autres](#commandes-autres)
+
+- [How can I help?](#how-can-i-help)
+  - [Add or modify questions](#add-or-modify-questions)
+  - [Suggest improvements to the application](#suggest-improvements-to-the-application)
+  - [Contribute to the development of the application](#contribute-to-the-development-of-the-application)
+- [Additional informations](#additional-informations)
+  - [Technical stack](#technical-stack)
+  - [Architecture diagram](#architecture-diagram)
+  - [Start the project locally](#start-the-project-locally)
+  - [Start tests](#start-tests)
+  - [Translation](#translation)
+  - [In the code](#in-the-code)
+  - [Add a new language](#add-a-new-language)
+  - [Translatation improvement or addition in an existing language](#translatation-improvement-or-addition-in-an-existing-language)
+  - [Other useful commands](#other-useful-commands)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Comment aider ?
+## How can I help?
 
-Il y a plusieurs aspects du projet qui ont besoin d'aide :
+You can contribute to the project in many ways:
 
-- La base de donnée de questions :
-    - rajouter de nouvelles questions
-    - proposer des modifications sur des questions existantes
-- L'application :
-    - remonter les bugs
-    - faire des propositions d'améliorations (grâce aux Issues Github)
-    - aider à développer l'application (grâce aux Issues et Pull Requests Github)
-    - aider à traduire l'application
+- Contribute to the questions database:
+  - Add new questions
+  - Propose modifications on existing questions
 
-### Rajouter ou modifier des questions
+- Contribute to the application:
+  - Notify us about bugs
+  - Propose improvements (through Github Issues)
+  - Help the development of the application (through Github Issues and Pull Requests)
+  - Help with translation
 
-Toutes les questions (finalisées ou en cours de création) sont actuellement dans un espace partagé (Notion.so), que l'on synchronise régulièrement avec la base de donnée.
+### Add or modify questions
 
-Un export de toute la base de donnée de l'application peut être vu dans le dossier `/data` (Rappel : ce n'est pas la source de la base de donnée, seulement un export).
+Every question (finalised or in draft) is currently in a shared plateform (Notion.so), which is regularly synchronised with the database.
 
-Vous pouvez proposer de nouvelles questions via la page [Contribuer](https://quizanthropocene.fr/contribuer) de l'application.
+You can see an export of the whole databse of the application in folder `/data` (Note : this is not the database, just an export).
 
-La validation des questions se fait ensuite dans l'espace partagé.
+You can propose new questions directly in [Contribuer](https://quizanthropocene.fr/contribuer) (TODO translate page and update link).
 
-### Proposer des améliorations de l'application
+Questions are then validated in the shared plateform.
 
-Vous avez vu un bug ? Vous trouvez l'app contre-intuitive, ou simplement avez une idée pour rendre le design plus beau/propre ?
+### Suggest improvements to the application
 
-Il y a deux options pour remonter ces informations :
-- via la page [Contribuer](https://quizanthropocene.fr/contribuer) de l'application
-- ou créer une Issue dans l'interface Github du projet ([ici](https://github.com/quiz-anthropocene/know-your-planet/issues))
+Did you find a bug? Do you find the interface counter-intuitive, or you have an idea to improve the design?
 
-### Aider au développement de l'application
+There are 2 options to share your feedback:
+- via [Contribuer](https://quizanthropocene.fr/contribuer) (TODO translate page and update link).
+- on Github Issues by creating a new issue ([here](https://github.com/quiz-anthropocene/know-your-planet/issues)).
 
-_La stack technique est détaillée un peu plus bas._
+### Contribute to the development of the application
 
-Relecture de code, documentation, rajouter des tests, design, ajouter une fonctionnalité, etc
+_The technical stack is detailed further down._
 
-Si vous souhaitez ajouter une fonctionnalité :
-- commentez l'Issue en question pour donner votre point de vue (ou créez l'Issue si elle n'existe pas encore), et on discutera ensemble de la meilleur façon de procéder
-- créez ensuite une PR et demandez une review (relecture)
+You can help with code review, documentation, add tests, improve design, add new features...
 
-## Informations supplémentaires
+If you want to add a new feature:
+- comment an Issue to give your rationale or create a new one if it does not exist, we will then discuss in the Issue thread on how to proceed.
+- Start coding! and create a new PR with a review request
 
-### Stack technique
+## Additional informations
+
+### Technical stack
 
 #### Backend
 
-- Un Backend en Python Django :
-  - API avec Django Rest Framework
-  - console Admin
-- Une base de donnée PostgreSQL
+- Our Backend uses Python Django :
+  - API with Django Rest Framework
+  - Admin console
+- PostgreSQL database
 
-Le Backend sert à :
-- valider la donnée provenant de l'espace partagé
-- de créer les quiz
-- d'endpoint pour les stats
+We use the backend to:
+- validate data coming from the share plateform
+- Create new quizzes
+- have an endpoint for stats
 
 #### Frontend
 
 repo : [quiz-anthropocene/public-frontend](https://github.com/quiz-anthropocene/public-frontend)
 
-- Un Frontend en Vue.js
+- Our Frontend uses Vue.js
 - Bootstrap 4
 
-La donnée est lue directement depuis les fichiers yaml dans le dossier `/data`.
+Currently, the data is directly read from yaml files in folder `/data`. An API is under construction
 
 #### DevOps
 
-- Le Backend est hébergé sur Scalingo
-- Le Frontend est hébergé sur Netlify (free tier)
-- CI/CD avec Github Actions
-- Cron pour automatiser certaines tâches avec Github Actions
+- Our Backend is hosted on Scalingo
+- Our Frontend is hosted on Netlify (free tier)
+- CI/CD with Github Actions
+- Cron jobs with Github Actions
 
-### Schéma d'architecture
+### Architecture diagram
 
-Voir dans le dossier [quiz-anthropocene/public-frontend/data/architecture](https://github.com/quiz-anthropocene/public-frontend/tree/master/data/architecture)
+View folder [quiz-anthropocene/public-frontend/data/architecture](https://github.com/quiz-anthropocene/public-frontend/tree/master/data/architecture)
 
-### Lancer le projet en local
+### Start the project locally
 
-#### Installer l'application
+#### Install the application
 
-- Vous devez avoir Python 3.9 & Pipenv installés sur votre machine.
-- Clonez le code en local (vous pouvez aussi Fork le projet si vous prévoyez d'y apporter des modifications et effectuer une PR)
+- You need Python 3.9 & Pipenv already installed.
+- Clone the code locally (you can also Fork the project if you plan to add modifications and do PR)
     ```
     git clone git@github.com:quiz-anthropocene/know-your-planet.git
     ```
-- Installez les dépendances du Backend
+- Install Backend dependencies
     ```
     cd backend
     pipenv sync
     ```
-- Dupliquer le fichier `backend/.env.example` et le renommer en `backend/.env`
-- Installez [PostgreSQL](https://www.postgresql.org)
-- Créez la base de donnée
+- Duplicate file `backend/.env.example` and rename into `backend/.env`
+- Install [PostgreSQL](https://www.postgresql.org)
+- Build the database
     ```
     // optional: dropdb quiz_anthropocene
     psql -c "CREATE USER quiz_anthropocene_team WITH PASSWORD 'password'"
@@ -128,70 +137,68 @@ Voir dans le dossier [quiz-anthropocene/public-frontend/data/architecture](https
     psql -c "GRANT ALL PRIVILEGES ON DATABASE quiz_anthropocene to quiz_anthropocene_team"
     psql -c "ALTER USER quiz_anthropocene_team CREATEROLE CREATEDB"
     ```
-    \* Si vous n'avez pas créé de USER pour accéder à postgresql, faites le avant les commandes précédentes. Alternativement, lors de l'installation de postgresql, l'utilisateur doit choisir un mot de passe superuser (postgres) et il suffit de rajouter '-U postgres' aux commandes précédentes.
-- Lancez les migrations
+    \* If you haven't created a USER to login to postgresql, please do before the previous commands. Alternatively, during postgresql installation, you need to choose a superuser (postgres) password and you just need to add '-U postgres' to the previous commands.
+- Start migrations
     ```
     pipenv run python manage.py migrate
     ```
-    \* Voir section Windows à la fin si cette commande pose problème
-- Chargez la base de donnée
+    \* Go to the Windows section if you have an issue with a Windows environment
+- Load the database
     ```
     pipenv run python manage.py init_db_from_yaml --with-sql-reset
     ```
-- Installer le pre-commit git hook
+- Install pre-commit git hook
     ```
     pre-commit install
     ```
-\* Voir section Windows à la fin si cette section pose problème
+\* Go to the Windows section if you have an issue with a Windows environment
 
-#### Lancer l'application
+#### Start the application
 
 ```
 cd backend
 pipenv run python manage.py runserver
 ```
 
-Le Backend sera accessible à l'url `http://localhost:8000`
+You can reach the backen at url `http://localhost:8000`
 
-La doc de l'API est visible à l'url `http://localhost:8000/api/docs/`
+You can reach the API documentation at url `http://localhost:8000/api/docs/`
 
-#### Accéder à la console admin Django
+#### Access the admin console
 
-Créez d'abord un utilisateur admin
+First start by creating an admin user
 ```
 cd backend
 pipenv run python manage.py createsuperuser --username admin@email.com --email admin@email.com
 ```
 
-Lancez le Backend, et connectez-vous sur `http://localhost:8000/django`
+Start the backend and go to url `http://localhost:8000/django`
 
-### Lancer les tests
+### Start tests
 
 Tests
 ```
 pipenv run python manage.py test
 ```
 
-Linting ? Avec le pre-commit
+Linting ? with pre-commit
 
-### Traduction
+### Translation
 
-Vous devez d'abord installer `gettext`
+First install `gettext`
 
-Les fichiers de traductions se trouvent dans le dossier `/locale`
+The tranlation files can be found under `/locale`
 
-L'Anglais est la langue pivot.
+### In the code
 
-### Dans le code
+Use tags `{% translate "Word" %}`
 
-Utiliser les balises `{% translate "Word" %}`
-
-Puis mettre à jour les fichiers `.po`
+Then update `.po` files
 ```
 python manage.py makemessages --all
 ```
 
-### Ajouter une langue
+### Add a new language
 
 https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
@@ -199,68 +206,68 @@ https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 python manage.py makemessages -l <LANGUAGE_CODE>
 ```
 
-Il faudra aussi la rajouter dans `settings.py` (une fois traduite ?)
+Add the language code in `settings.py`
 
-### Traduire une langue existante
+### Translatation improvement or addition in an existing language
 
-Utiliser un outil comme [Poedit](https://poedit.net/) pour simplifier la traduction.
+Use [Poedit](https://poedit.net/) to simplify your job.
 
-Il faut remplir les fichiers `.po` contenus dans le dossier `/locale`.
+It will update the `.po` files in `/locale`.
 
-Puis compiler les fichiers `.po` en `.mo`
+Then compile the `.po` files into `.mo`
 ```
 python manage.py compilemessages
 ```
 
-### Autres commandes utiles
+### Other useful commands
 
-Rappel : pour le backend, toutes les commandes doivent commencer par `pipenv run`
+Note : for the backend, every command should start with `pipenv run`
 
-#### Commandes Backend
+#### Backend commands
 
-Importer toute la donnée dans la base de donnée
+Import the whole database
 ```
 python manage.py init_db_from_yaml --with-sql-reset
 ```
 
-Importer les questions dans la base de donnée
+Import questions into the database
 ```
-// ne marche pas car les fichiers dans le dossier /data sont "applatis" (flat)
+// doesn't work since files in /data are "flat"
 python manage.py loaddata ../data/questions.yaml
 
-// marche seulement si les questions ont été supprimées en amont
+// works only if questions have been deleted previously in database
 python manage.py loaddata ../data/questions.yaml --model=question --format=yaml-pretty-flat
 ```
 
-Exporter les questions de la base de donnée au format YAML
+Export questions from database to YAML files
 ```
-// on utilise un format légerement modifier pour simplifier le fichier
+// We use a slightly different format to simplify the files
 python manage.py dumpdata api.question --output=../data/questions.yaml  --format=yaml-pretty-flat
 
-// mais il est toujours possible de faire un dumpdata normal
+// but it's still possible to do a normal data dump
 python manage.py dumpdata api.question --output=../data/questions.yaml
 ```
 
-Réinitialiser les stats d'une question
+Reinitialise statistics of a question
 ```
 python manage.py reset_question_stats <question_id>
 ```
 
-Réinitialiser complètement la base de donnée
+Reinitialise the whole database
 ```
 python manage.py reset_db // django-extensions
 python manage.py migrate
 python manage.py init_db_from_yaml --with-sql-reset
 ```
 
-Importer un dump PGSQL
+Import a PGSQL dump
 ```
 // if it's a .tar.gz, run first
 tar -xvzf <dump_name>.tar.gz
 
 pg_restore -d quiz_anthropocene --clean --no-owner --no-privileges <dump_name>.pgsql
 
-// si il y a ensuite des soucis de permissions
+// if there are permission issues
 for tbl in `psql -qAt -c "select tablename from pg_tables where schemaname = 'public';" quiz_anthropocene` ; do  psql -c "alter table \"$tbl\" owner to quiz_anthropocene_team" quiz_anthropocene ; done
 for tbl in `psql -qAt -c "select sequence_name from information_schema.sequences where sequence_schema = 'public';" quiz_anthropocene` ; do  psql -c "alter sequence \"$tbl\" owner to quiz_anthropocene_team" quiz_anthropocene ; done
 ```
@@ -282,7 +289,7 @@ q.quizs.all()
 q1.quizquestion_set.all()
 ```
 
-Générer le graph des modèles
+Generate the model graph
 ```
 pip install pygraphviz
 python manage.py graph_models -a -X ContentType,LogEntry,AbstractUser,User,AbstractBaseSession,Session,Group,Permission -o graph.png
@@ -293,28 +300,28 @@ Update packages
 pipenv install --dev
 ```
 
-#### Commandes Autres
+#### Other commands
 
-Mettre à jour l'instance Metabase sur Heroku
+Update the Metabase instance on Heroku
 - https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-heroku.html
 
-Réduire la taille des images (PNG)
-- Installer [pngquant](https://pngquant.org/)
-- Lancer sur un fichier donné : `pngquant -f --ext .png <filename>`
-- Ou lancer sur tous les fichiers d'un dossier : `pngquant -f --ext .png **/*.png`
+Resize images (PNG)
+- Install [pngquant](https://pngquant.org/)
+- Run the software on a specific file: `pngquant -f --ext .png <filename>`
+- Run the software fol all files in a folder: `pngquant -f --ext .png **/*.png`
 
-#### Spécifique pour Windows
+#### Windows specific
 
-Windows peut poser des soucis d'encodage, pour l'étape de charger la base de donnée, entrez la commande
+You might have encoding issues with Windows during database import for example
 ```
 pipenv run python -X utf8 manage.py init_db_from_yaml --with-sql-reset
 ```
 
-- Installer pre-commit
+- Install pre-commit
 ```
 pip install pre-commit
 ```
 
-Erreur `UnicodeDecodeError: charmap codec can't decode byte`
+Error `UnicodeDecodeError: charmap codec can't decode byte`
 
-- Rajoutez `-X utf8`
+- Add `-X utf8`
