@@ -23,7 +23,7 @@
 <div class="container">
     {% if contribution.parent %}
         <div class="alert alert-warning" role="status">
-            Cette contribution est une <strong>réponse</strong>. <a href="{% url 'contributions:detail_view' contribution.parent.id %}">Voir le message initial</a>.
+            {% blocktrans %}This contribution is a <strong>reply</strong>{% endblocktrans %}. <a href="{% url 'contributions:detail_view' contribution.parent.id %}">{% translate "View the initial contribution" %}</a>.
         </div>
     {% endif %}
     <div class="row mb-3">

@@ -8,7 +8,7 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col">
-                        Message de <strong>{{ contribution.get_author }}</strong>
+                        {% blocktrans with contribution_author=contribution.get_author %}Message by <strong>{{ contribution_author }}</strong>{% endblocktrans %}
                     </div>
                     <div class="col text-end">
                         <i title="{{ contribution.created }}">{{ contribution.created|timesince }}</i>
@@ -47,13 +47,13 @@
 
         <div class="card">
             <div class="card-header">
-                <strong>Répondre à la contribution initiale, ou ajouter un commentaire</strong>
+                <strong>{% translate "Reply to the initial contribution, or add a comment" %}</strong>
             </div>
             <div class="card-body">
                 <div class="alert alert-warning" role="status">
-                    <strong>Commentaire ?</strong> Ca permet de garder une trace sur la façon dont a été traité la contribution.<br />
-                    <strong>Réponse ?</strong> 1 seule réponse possible. Pour l'instant ce contenu est seulement visible par les contributeurs,
-                    mais on pourrait à terme publier les contributions avec leur réponse (pour afficher des informations supplémentaires sous une question).
+                    {% blocktrans %}<strong>A comment?</strong> It would help keeping track of how the contribution is processed{% endblocktrans %}.
+                    <br />
+                    {% blocktrans %}<strong>A reply?</strong> Only one reply possible. For now this content is only visible to contributors, but we will eventually publish contributions with their respective replies (to display more information under a question){% endblocktrans %}.
                 </div>
                 <form id="contribution_reply_create_form" method="POST" action="">
                     {% csrf_token %}

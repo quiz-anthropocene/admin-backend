@@ -1,8 +1,11 @@
+from django.utils.translation import gettext_lazy as _
+
+
 FEEDBACK_LIKE = "like"
 FEEDBACK_DISLIKE = "dislike"
 FEEDBACK_CHOICES = [
-    (FEEDBACK_LIKE, "Positif"),
-    (FEEDBACK_DISLIKE, "Négatif"),
+    (FEEDBACK_LIKE, _("Positive")),
+    (FEEDBACK_DISLIKE, _("Negative")),
 ]
 
 QUESTION_SOURCE_QUESTION = "question"

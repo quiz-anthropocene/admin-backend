@@ -3,6 +3,7 @@ from datetime import date, timedelta
 from django.db import models
 from django.db.models import Count, Sum
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 
 from core import constants as api_constants
 from questions.models import Question
@@ -12,10 +13,10 @@ from stats import constants
 
 class QuestionAggStat(models.Model):
     question = models.OneToOneField(Question, on_delete=models.CASCADE, primary_key=True, related_name="agg_stats")
-    answer_count = models.PositiveIntegerField(default=0, help_text="Le nombre de réponses")
-    answer_success_count = models.PositiveIntegerField(default=0, help_text="Le nombre de réponses correctes")
-    like_count = models.PositiveIntegerField(default=0, help_text="Le nombre de likes")
-    dislike_count = models.PositiveIntegerField(default=0, help_text="Le nombre de dislikes")
+    answer_count = models.PositiveIntegerField(default=0, help_text=_("Answer count"))
+    answer_success_count = models.PositiveIntegerField(default=0, help_text=_("Right answer count"))
+    like_count = models.PositiveIntegerField(default=0, help_text=_("Like count"))
+    dislike_count = models.PositiveIntegerField(default=0, help_text=_("Dislike count"))
 
 
 class QuestionAnswerEventQuerySet(models.QuerySet):
@@ -41,18 +42,18 @@ class QuestionAnswerEvent(models.Model):
     choice = models.CharField(
         max_length=50,
         choices=api_constants.QUESTION_ANSWER_CHOICES,
-        help_text="La réponse choisie par l'internaute",
+        help_text=_("Answer chosen by the user"),
     )
 
     source = models.CharField(
         max_length=50,
         choices=constants.QUESTION_SOURCE_CHOICES,
         default=constants.QUESTION_SOURCE_QUESTION,
-        help_text="Le contexte dans lequel a été répondu la question",
+        help_text=_("Context in which the question was answered"),
     )
     quiz = models.ForeignKey(Quiz, related_name="question_stats", on_delete=models.CASCADE, null=True, blank=True)
 
-    created = models.DateTimeField(default=timezone.now, help_text="La date & heure de la réponse")
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
 
     objects = QuestionAnswerEventQuerySet.as_manager()
 
@@ -77,27 +78,27 @@ class QuestionFeedbackEvent(models.Model):
         max_length=50,
         choices=constants.FEEDBACK_CHOICES,
         default=constants.FEEDBACK_LIKE,
-        help_text="L'avis laissé sur la question",
+        help_text=_("Feedback left on the question"),
     )
 
     source = models.CharField(
         max_length=50,
         choices=constants.QUESTION_SOURCE_CHOICES,
         default=constants.QUESTION_SOURCE_QUESTION,
-        help_text="Le contexte dans lequel a été envoyé l'avis",
+        help_text=_("Context in which the feedback was left"),
     )
     quiz = models.ForeignKey(Quiz, related_name="question_feedbacks", on_delete=models.CASCADE, null=True, blank=True)
 
-    created = models.DateTimeField(default=timezone.now, help_text="La date & heure de l'avis")
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
 
     objects = QuestionFeedbackEventQuerySet.as_manager()
 
 
 class QuizAggStat(models.Model):
     quiz = models.OneToOneField(Quiz, on_delete=models.CASCADE, primary_key=True, related_name="agg_stats")
-    answer_count = models.PositiveIntegerField(default=0, help_text="Le nombre de réponses")
-    like_count = models.PositiveIntegerField(default=0, help_text="Le nombre de likes")
-    dislike_count = models.PositiveIntegerField(default=0, help_text="Le nombre de dislikes")
+    answer_count = models.PositiveIntegerField(default=0, help_text=_("Answer count"))
+    like_count = models.PositiveIntegerField(default=0, help_text=_("Like count"))
+    dislike_count = models.PositiveIntegerField(default=0, help_text=_("Dislike count"))
     # answer_success_count_split = models.JSONField(help_text="Les statistiques par nombre de réponses correctes")
 
 
@@ -140,21 +141,21 @@ class QuizAnswerEvent(models.Model):
     # Because the value can change (adding or removing questions from a quiz)
     question_count = models.IntegerField(
         default=0,
-        help_text="La nombre de questions du quiz",
+        help_text=_("Quiz question count"),
     )
     answer_success_count = models.IntegerField(
         default=0,
-        help_text="La nombre de réponses correctes trouvées par l'internaute",
+        help_text=_("Right answer count"),
     )
     duration_seconds = models.IntegerField(
         default=0,
-        help_text="Le temps pris (en secondes) pour compléter le quiz",
+        help_text=_("Duration (in seconds) to complete the quiz"),
     )
     question_answer_split = models.JSONField(
         default=dict,
-        help_text="Les détails par question",
+        help_text=_("Details per question"),
     )
-    created = models.DateTimeField(default=timezone.now, help_text="La date & heure de la réponse")
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
 
     objects = QuizAnswerEventQuerySet.as_manager()
 
@@ -201,9 +202,9 @@ class QuizFeedbackEvent(models.Model):
         max_length=50,
         choices=constants.FEEDBACK_CHOICES,
         default=constants.FEEDBACK_LIKE,
-        help_text="L'avis laissé sur le quiz",
+        help_text=_("Feedback left on the quiz"),
     )
-    created = models.DateTimeField(default=timezone.now, help_text="La date & heure de l'avis")
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
 
     objects = QuizFeedbackEventQuerySet.as_manager()
 
@@ -211,10 +212,10 @@ class QuizFeedbackEvent(models.Model):
 class LinkClickEvent(models.Model):
     quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name="link_clicks", blank=True, null=True)
     question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name="link_clicks", blank=True, null=True)
-    field_name = models.CharField(verbose_name="Nom du champ", max_length=50, blank=True)
-    link_url = models.URLField(verbose_name="Lien cliqué", max_length=500, blank=True)
+    field_name = models.CharField(verbose_name=_("Field name"), max_length=50, blank=True)
+    link_url = models.URLField(verbose_name=_("Clicked link"), max_length=500, blank=True)
 
-    created = models.DateTimeField(default=timezone.now, help_text="La date & heure du clic")
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
 
 
 class DailyStatManager(models.Manager):
@@ -280,32 +281,28 @@ class DailyStatManager(models.Manager):
 
 
 class DailyStat(models.Model):
-    date = models.DateField(help_text="Le jour de la statistique")
+    date = models.DateField(help_text=_("Date of statistics"))
     # answers
-    question_answer_count = models.PositiveIntegerField(default=0, help_text="Le nombre de questions répondues")
-    question_public_answer_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de questions publiques répondues"
-    )
+    question_answer_count = models.PositiveIntegerField(default=0, help_text=_("Question answer count"))
+    question_public_answer_count = models.PositiveIntegerField(default=0, help_text=_("Public question answer count"))
     question_answer_from_quiz_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de questions répondues au sein de quizs"
+        default=0, help_text=_("Question within quiz answer count")
     )
-    quiz_answer_count = models.PositiveIntegerField(default=0, help_text="Le nombre de quizs répondus")
-    quiz_public_answer_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de quizs publiques répondus"
-    )
+    quiz_answer_count = models.PositiveIntegerField(default=0, help_text=_("Quiz answer count"))
+    quiz_public_answer_count = models.PositiveIntegerField(default=0, help_text=_("Public quiz answer count"))
     # feedbacks
-    question_feedback_count = models.PositiveIntegerField(default=0, help_text="Le nombre de feedbacks aux questions")
+    question_feedback_count = models.PositiveIntegerField(default=0, help_text=_("Question feedback count"))
     question_feedback_from_quiz_count = models.PositiveIntegerField(
-        default=0, help_text="Le nombre de feedbacks aux questions au sein de quizs"
+        default=0, help_text=_("Question within quiz feedback count")
     )
-    quiz_feedback_count = models.PositiveIntegerField(default=0, help_text="Le nombre de feedbacks aux quizs")
+    quiz_feedback_count = models.PositiveIntegerField(default=0, help_text=_("Quiz feedback count"))
     hour_split = models.JSONField(
         default=constants.daily_stat_hour_split_jsonfield_default_value,
-        help_text="Les statistiques par heure",
+        help_text=_("Hourly statistics"),
     )
 
-    created = models.DateTimeField(default=timezone.now, help_text="La date & heure de la stat journalière")
-    updated = models.DateField(auto_now=True)
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
+    updated = models.DateField(verbose_name=_("Last update date"), auto_now=True)
 
     objects = DailyStatManager()
 
