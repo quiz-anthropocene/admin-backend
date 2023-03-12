@@ -39,13 +39,13 @@ class Contribution(models.Model):
         blank=False,
         help_text=_("A question, a comment…"),
     )
-    description = models.TextField(verbose_name="Addtional nformation", blank=True)
+    description = models.TextField(verbose_name=_("Additional information"), blank=True)
     type = models.CharField(
-        verbose_name="Type", max_length=150, choices=constants.CONTRIBUTION_TYPE_CHOICES, blank=True
+        verbose_name=_("Type"), max_length=150, choices=constants.CONTRIBUTION_TYPE_CHOICES, blank=True
     )
 
     question = models.ForeignKey(
-        verbose_name="Question",
+        verbose_name=_("Question"),
         to=Question,
         related_name="contributions",
         on_delete=models.CASCADE,
@@ -53,7 +53,7 @@ class Contribution(models.Model):
         blank=True,
     )
     quiz = models.ForeignKey(
-        verbose_name="Quiz", to=Quiz, related_name="contributions", on_delete=models.CASCADE, null=True, blank=True
+        verbose_name=_("Quiz"), to=Quiz, related_name="contributions", on_delete=models.CASCADE, null=True, blank=True
     )
     author = models.ForeignKey(
         verbose_name=_("Author"),
@@ -73,7 +73,7 @@ class Contribution(models.Model):
     )
 
     parent = models.ForeignKey(
-        verbose_name=_("In answer to"),
+        verbose_name=_("In reply to"),
         to="self",
         related_name="replies",
         on_delete=models.CASCADE,

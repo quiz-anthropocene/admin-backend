@@ -81,11 +81,11 @@ CONTRIBUTION_TYPE_ERROR_APP = "ERROR_APP"
 CONTRIBUTION_TYPE_CHOICES = [
     (CONTRIBUTION_TYPE_NEW_QUESTION, _("New question")),
     (CONTRIBUTION_TYPE_NEW_QUIZ, _("New quiz")),
-    (CONTRIBUTION_TYPE_COMMENT_APP, _("Comment about app")),
-    (CONTRIBUTION_TYPE_COMMENT_QUESTION, _("Comment about question")),
-    (CONTRIBUTION_TYPE_COMMENT_QUIZ, _("Comment about quiz")),
+    (CONTRIBUTION_TYPE_COMMENT_APP, _("Comment about the app")),
+    (CONTRIBUTION_TYPE_COMMENT_QUESTION, _("Comment about a question")),
+    (CONTRIBUTION_TYPE_COMMENT_QUIZ, _("Comment about a quiz")),
     (CONTRIBUTION_TYPE_COMMENT_CONTRIBUTOR, _("Contributor comment")),
-    (CONTRIBUTION_TYPE_REPLY, _("Contributor answer")),
+    (CONTRIBUTION_TYPE_REPLY, _("Reply")),
     (CONTRIBUTION_TYPE_ERROR_APP, _("Application error")),
 ]
 
@@ -103,7 +103,7 @@ CONTRIBUTION_STATUS_CHOICES = [
     (CONTRIBUTION_STATUS_NEW, _("To process")),
     (CONTRIBUTION_STATUS_PENDING, _("In progress")),
     (CONTRIBUTION_STATUS_PROCESSED, _("Processed")),
-    (CONTRIBUTION_STATUS_REPLIED, _("Answered")),
+    (CONTRIBUTION_STATUS_REPLIED, _("Replied")),
     (CONTRIBUTION_STATUS_IGNORED, _("Ignored")),
 ]
 

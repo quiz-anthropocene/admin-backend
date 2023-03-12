@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="contribution",
             name="description",
-            field=models.TextField(blank=True, verbose_name="Addtional nformation"),
+            field=models.TextField(blank=True, verbose_name="Additional information"),
         ),
         migrations.AlterField(
             model_name="contribution",
@@ -45,7 +45,7 @@ class Migration(migrations.Migration):
                 on_delete=django.db.models.deletion.CASCADE,
                 related_name="replies",
                 to="contributions.contribution",
-                verbose_name="In answer to",
+                verbose_name="In reply to",
             ),
         ),
         migrations.AlterField(
@@ -54,11 +54,11 @@ class Migration(migrations.Migration):
             field=models.CharField(
                 blank=True,
                 choices=[
-                    ("NEW", "À traiter"),
-                    ("PENDING", "En cours"),
-                    ("PROCESSED", "Traité"),
-                    ("REPLIED", "Répondu"),
-                    ("IGNORED", "Ignoré"),
+                    ("NEW", "To process"),
+                    ("PENDING", "In progress"),
+                    ("PROCESSED", "Processed"),
+                    ("REPLIED", "Replied"),
+                    ("IGNORED", "Ignored"),
                 ],
                 max_length=150,
                 verbose_name="Status",
@@ -68,6 +68,25 @@ class Migration(migrations.Migration):
             model_name="contribution",
             name="text",
             field=models.TextField(help_text="A question, a comment…", verbose_name="Text"),
+        ),
+        migrations.AlterField(
+            model_name="contribution",
+            name="type",
+            field=models.CharField(
+                blank=True,
+                choices=[
+                    ("NEW_QUESTION", "New question"),
+                    ("NEW_QUIZ", "New quiz"),
+                    ("COMMENT_APP", "Comment about the app"),
+                    ("COMMENT_QUESTION", "Comment about a question"),
+                    ("COMMENT_QUIZ", "Comment about a quiz"),
+                    ("COMMENT_CONTRIBUTOR", "Contributor comment"),
+                    ("REPLY", "Reply"),
+                    ("ERROR_APP", "Application error"),
+                ],
+                max_length=150,
+                verbose_name="Type",
+            ),
         ),
         migrations.AlterField(
             model_name="contribution",
