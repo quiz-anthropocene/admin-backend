@@ -8,7 +8,7 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col">
-                        Message de <strong>{{ contribution.get_author }}</strong>
+                        {% blocktrans with contribution_author=contribution.get_author %}Message by <strong>{{ contribution_author }}</strong>{% endblocktrans %}
                     </div>
                     <div class="col text-end">
                         <i title="{{ contribution.created }}">{{ contribution.created|timesince }}</i>
@@ -51,9 +51,9 @@
             </div>
             <div class="card-body">
                 <div class="alert alert-warning" role="status">
-                    {% blocktrans %}<strong>A comment ?</strong> It would help keeping track of how the contribution is processed {% endblocktrans %}.<br />
-                    {% blocktrans %}<strong>An answer ?</strong> Only one answer possible. For now this content is only visible to contributors,
-                    but we can eventually publish contributions with their respective answers (to display more information under a question){% endblocktrans %}.
+                    {% blocktrans %}<strong>A comment?</strong> It would help keeping track of how the contribution is processed{% endblocktrans %}.
+                    <br />
+                    {% blocktrans %}<strong>A reply?</strong> Only one reply possible. For now this content is only visible to contributors, but we will eventually publish contributions with their respective replies (to display more information under a question){% endblocktrans %}.
                 </div>
                 <form id="contribution_reply_create_form" method="POST" action="">
                     {% csrf_token %}
