@@ -1,3 +1,4 @@
+from ckeditor.fields import RichTextField
 from django.conf import settings
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
@@ -7,10 +8,12 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
+from simple_history.models import HistoricalRecords
 
 from core import constants
 from core.fields import ChoiceArrayField
 from core.utils import sendinblue
+from history.models import HistoryChangedFieldsAbstractModel
 from questions.models import Question
 from quizs.models import QuizAuthor
 from users import constants as user_constants
@@ -90,6 +93,9 @@ class UserQueryset(models.QuerySet):
             .filter(Q(has_public_questions=True) | Q(has_public_quizs=True))
         )
 
+    def has_user_card(self):
+        return self.select_related("user_card").filter(user_card__isnull=False)
+
     def simple_search(self, value):
         search_fields = ["first_name", "last_name", "email"]
         conditions = Q()
@@ -157,6 +163,9 @@ class UserManager(BaseUserManager):
     def has_public_content(self):
         return self.get_queryset().has_public_content()
 
+    def has_user_card(self):
+        return self.get_queryset().has_user_card()
+
     def simple_search(self, value):
         return self.get_queryset().simple_search(value)
 
@@ -222,6 +231,10 @@ class User(AbstractUser):
         return self.quiz_count > 0
 
     @property
+    def has_user_card(self) -> bool:
+        return hasattr(self, "user_card")
+
+    @property
     def has_role_contributor(self) -> bool:
         ROLES_ALLOWED = [
             user_constants.USER_ROLE_ADMINISTRATOR,
@@ -275,3 +288,43 @@ def user_post_save(sender, instance, created, **kwargs):
     if created:
         if instance.has_role_contributor:
             sendinblue.add_to_contact_list(instance, list_id=settings.SIB_CONTRIBUTOR_LIST_ID)
+
+
+class UserCard(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True, related_name="user_card")
+    image_url = models.URLField(
+        verbose_name=_("User image (link)"),
+        max_length=500,
+        blank=True,
+    )
+    short_biography = RichTextField(verbose_name=_("Short biography"), blank=True)
+    quiz_relationship = RichTextField(verbose_name=_("Relationship with the Anthropocene Quiz"), blank=True)
+    website_url = models.URLField(verbose_name=_("Website (link)"), max_length=500, blank=True)
+
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
+    updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
+
+    history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
+
+    class Meta:
+        verbose_name = _("User card")
+        verbose_name_plural = _("User cards")
+
+    def __str__(self):
+        return f"{self.user} >>> User card"
+
+    @property
+    def has_image_url(self) -> bool:
+        return len(self.image_url) > 0
+
+    @property
+    def has_short_biography(self) -> bool:
+        return len(self.short_biography) > 0
+
+    @property
+    def has_quiz_relationship(self) -> bool:
+        return len(self.quiz_relationship) > 0
+
+    @property
+    def has_website_url(self) -> bool:
+        return len(self.website_url) > 0
