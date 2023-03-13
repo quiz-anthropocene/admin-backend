@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-12 19:32+0100\n"
+"POT-Creation-Date: 2023-03-13 18:08+0100\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -94,7 +94,7 @@ msgstr ""
 #: quizs/models.py:437 quizs/models.py:500 quizs/models.py:560
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
 #: stats/models.py:207 stats/models.py:218 stats/models.py:304
-#: tags/models.py:29 users/models.py:184
+#: tags/models.py:29 users/models.py:193 users/models.py:304
 msgid "Creation date"
 msgstr ""
 
@@ -185,7 +185,7 @@ msgstr ""
 #: categories/models.py:16 contributions/models.py:85 glossary/models.py:33
 #: questions/models.py:234 quizs/models.py:160 quizs/models.py:438
 #: quizs/models.py:501 quizs/models.py:561 stats/models.py:305
-#: tags/models.py:30 users/models.py:185
+#: tags/models.py:30 users/models.py:194 users/models.py:305
 msgid "Last update date"
 msgstr ""
 
@@ -1060,7 +1060,7 @@ msgstr ""
 
 #: templates/includes/_header.html:41
 #: templates/users/administrator_list.html:14 templates/users/home.html:4
-#: templates/users/home.html:13 users/models.py:191
+#: templates/users/home.html:13 users/models.py:200
 msgid "Users"
 msgstr ""
 
@@ -1225,11 +1225,11 @@ msgstr ""
 msgid "My profile"
 msgstr ""
 
-#: templates/profile/info.html:36 users/models.py:171
+#: templates/profile/info.html:36 users/models.py:180
 msgid "First name"
 msgstr ""
 
-#: templates/profile/info.html:40 users/models.py:172
+#: templates/profile/info.html:40 users/models.py:181
 msgid "Last name"
 msgstr ""
 
@@ -1237,7 +1237,7 @@ msgstr ""
 msgid "Email address"
 msgstr ""
 
-#: templates/profile/info.html:48 users/models.py:175
+#: templates/profile/info.html:48 users/models.py:184
 msgid "Roles"
 msgstr ""
 
@@ -1368,10 +1368,34 @@ msgstr ""
 msgid "Only the quiz author or a super-contributor can edit a public quiz"
 msgstr ""
 
-#: users/models.py:170
+#: users/models.py:179
 msgid "Email"
 msgstr ""
 
-#: users/models.py:190
+#: users/models.py:199
 msgid "User"
+msgstr ""
+
+#: users/models.py:296
+msgid "User image (link)"
+msgstr ""
+
+#: users/models.py:300
+msgid "Short biography"
+msgstr ""
+
+#: users/models.py:301
+msgid "Relationship with the Anthropocene Quiz"
+msgstr ""
+
+#: users/models.py:302
+msgid "Website (link)"
+msgstr ""
+
+#: users/models.py:310
+msgid "User card"
+msgstr ""
+
+#: users/models.py:311
+msgid "User cards"
 msgstr ""
