@@ -14,12 +14,12 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("users", "0007_userdetail"),
+        ("users", "0007_usercard"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name="HistoricalUserDetail",
+            name="HistoricalUserCard",
             fields=[
                 (
                     "history_changed_fields",
@@ -72,8 +72,8 @@ class Migration(migrations.Migration):
                 ),
             ],
             options={
-                "verbose_name": "historical User detail",
-                "verbose_name_plural": "historical User details",
+                "verbose_name": "historical User card",
+                "verbose_name_plural": "historical User cards",
                 "ordering": ("-history_date", "-history_id"),
                 "get_latest_by": ("history_date", "history_id"),
             },

@@ -3,7 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 
 from core.admin import admin_site
 from users import constants
-from users.models import User, UserDetail
+from users.models import User, UserCard
 
 
 class RoleFilter(admin.SimpleListFilter):
@@ -25,9 +25,9 @@ class RoleFilter(admin.SimpleListFilter):
         return queryset
 
 
-class HasUserDetailFilter(admin.SimpleListFilter):
-    title = "User detail ?"
-    parameter_name = "has_user_detail"
+class HasUserCardFilter(admin.SimpleListFilter):
+    title = "User card?"
+    parameter_name = "has_user_card"
 
     def lookups(self, request, model_admin):
         return (("Yes", "Yes"), ("No", "No"))
@@ -35,7 +35,7 @@ class HasUserDetailFilter(admin.SimpleListFilter):
     def queryset(self, request, queryset):
         value = self.value()
         if value == "Yes":
-            return queryset.has_user_detail()
+            return queryset.has_user_card()
         elif value == "No":
             return queryset.filter(user_detail__isnull=True)
         return queryset
@@ -52,11 +52,11 @@ class UserAdmin(UserAdmin):
         "is_administrator",
         "question_count",
         "quiz_count",
-        # "has_user_detail",
+        # "has_user_card",
         "last_login",
         "created",
     ]
-    list_filter = [RoleFilter, HasUserDetailFilter, "is_staff"]
+    list_filter = [RoleFilter, HasUserCardFilter, "is_staff"]
     search_fields = ["id", "first_name", "last_name", "email"]
     ordering = ["-created"]
 
@@ -69,7 +69,7 @@ class UserAdmin(UserAdmin):
         "last_login",
         "question_count",
         "quiz_count",
-        "has_user_detail",
+        "has_user_card",
         "created",
         "updated",
     ]
@@ -92,7 +92,7 @@ class UserAdmin(UserAdmin):
                 "fields": (
                     "question_count",
                     "quiz_count",
-                    "has_user_detail",
+                    "has_user_card",
                 )
             },
         ),
@@ -141,14 +141,14 @@ class UserAdmin(UserAdmin):
     quiz_count.short_description = "Nbr de quizs"
     quiz_count.admin_order_field = "quiz_count"
 
-    def has_user_detail(self, user):
-        return user.has_user_detail
+    def has_user_card(self, user):
+        return user.has_user_card
 
-    has_user_detail.short_description = "User detail"
-    has_user_detail.boolean = True
+    has_user_card.short_description = "User card"
+    has_user_card.boolean = True
 
 
-class UserDetailAdmin(admin.ModelAdmin):
+class UserCardAdmin(admin.ModelAdmin):
     list_display = [
         "user",
         "has_image_url",
@@ -204,4 +204,4 @@ class UserDetailAdmin(admin.ModelAdmin):
 
 
 admin_site.register(User, UserAdmin)
-admin_site.register(UserDetail, UserDetailAdmin)
+admin_site.register(UserCard, UserCardAdmin)

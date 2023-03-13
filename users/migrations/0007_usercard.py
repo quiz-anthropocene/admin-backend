@@ -15,14 +15,14 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="UserDetail",
+            name="UserCard",
             fields=[
                 (
                     "user",
                     models.OneToOneField(
                         on_delete=django.db.models.deletion.CASCADE,
                         primary_key=True,
-                        related_name="user_detail",
+                        related_name="user_card",
                         serialize=False,
                         to=settings.AUTH_USER_MODEL,
                     ),
@@ -38,8 +38,8 @@ class Migration(migrations.Migration):
                 ("updated", models.DateTimeField(auto_now=True, verbose_name="Last update date")),
             ],
             options={
-                "verbose_name": "User detail",
-                "verbose_name_plural": "User details",
+                "verbose_name": "User card",
+                "verbose_name_plural": "User cards",
             },
         ),
     ]
