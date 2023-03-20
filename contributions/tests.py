@@ -12,18 +12,18 @@ class CommentModelTest(TestCase):
     def setUpTestData(cls):
         cls.question = QuestionFactory()
         cls.quiz = QuizFactory()
-        cls.contribution_with_reply = CommentFactory(text="un commentaire", type=constants.COMMENT_TYPE_COMMENT_APP)
-        cls.contribution_reply = CommentFactory(type=constants.COMMENT_TYPE_REPLY, parent=cls.contribution_with_reply)
+        cls.comment_with_reply = CommentFactory(text="un commentaire", type=constants.COMMENT_TYPE_COMMENT_APP)
+        cls.comment_reply = CommentFactory(type=constants.COMMENT_TYPE_REPLY, parent=cls.comment_with_reply)
         CommentFactory(type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question)
         CommentFactory(type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz)
         CommentFactory(type=constants.COMMENT_TYPE_ERROR_APP)
 
     def test_str(self):
-        self.assertEqual(str(self.contribution_with_reply), "un commentaire")
+        self.assertEqual(str(self.comment_with_reply), "un commentaire")
 
     def test_has_replies(self):
-        self.assertTrue(self.contribution_with_reply.has_replies)
-        self.assertFalse(self.contribution_reply.has_replies)
+        self.assertTrue(self.comment_with_reply.has_replies)
+        self.assertFalse(self.comment_reply.has_replies)
 
 
 class CommentModelQuerySetTest(TestCase):
@@ -31,10 +31,10 @@ class CommentModelQuerySetTest(TestCase):
     def setUpTestData(cls):
         cls.question = QuestionFactory()
         cls.quiz = QuizFactory()
-        cls.contribution_with_reply = CommentFactory(type=constants.COMMENT_TYPE_COMMENT_APP)
-        cls.contribution_reply = CommentFactory(type=constants.COMMENT_TYPE_REPLY, parent=cls.contribution_with_reply)
-        cls.contribution_reply = CommentFactory(
-            type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR, parent=cls.contribution_with_reply
+        cls.comment_with_reply = CommentFactory(type=constants.COMMENT_TYPE_COMMENT_APP)
+        cls.comment_reply = CommentFactory(type=constants.COMMENT_TYPE_REPLY, parent=cls.comment_with_reply)
+        cls.comment_reply = CommentFactory(
+            type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR, parent=cls.comment_with_reply
         )
         CommentFactory(type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question)
         CommentFactory(type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz)

@@ -1,22 +1,22 @@
 {% extends "contributions/detail_base.html" %}
 {% load i18n django_bootstrap5 %}
 
-{% block contribution_detail_content %}
+{% block comment_detail_content %}
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
                 <div class="row">
                     <div class="col">
-                        {% blocktrans with contribution_author=contribution.get_author %}Message by <strong>{{ contribution_author }}</strong>{% endblocktrans %}
+                        {% blocktrans with comment_author=comment.get_author %}Message by <strong>{{ comment_author }}</strong>{% endblocktrans %}
                     </div>
                     <div class="col text-end">
-                        <i title="{{ contribution.created }}">{{ contribution.created|timesince }}</i>
+                        <i title="{{ comment.created }}">{{ comment.created|timesince }}</i>
                     </div>
                 </div>
             </div>
             <div class="card-body">
-                {{ contribution.text|linebreaks }}
+                {{ comment.text|linebreaks }}
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
 
 <div class="row">
     <div class="col-12">
-        {% for reply in contribution.replies.all %}
+        {% for reply in comment.replies.all %}
             <div class="card {% if reply.type == 'REPLY' %}border-success{% else %}border-warning{% endif %}">
                 <div class="card-header">
                     <div class="row">
@@ -47,15 +47,15 @@
 
         <div class="card">
             <div class="card-header">
-                <strong>{% translate "Reply to the initial contribution, or add a comment" %}</strong>
+                <strong>{% translate "Reply to the initial message, or add a comment" %}</strong>
             </div>
             <div class="card-body">
                 <div class="alert alert-warning" role="status">
-                    {% blocktrans %}<strong>A comment?</strong> It would help keeping track of how the contribution is processed{% endblocktrans %}.
+                    {% blocktrans %}<strong>A comment?</strong> It would help keeping track of how the comment is processed{% endblocktrans %}.
                     <br />
-                    {% blocktrans %}<strong>A reply?</strong> Only one reply possible. For now this content is only visible to contributors, but we will eventually publish contributions with their respective replies (to display more information under a question){% endblocktrans %}.
+                    {% blocktrans %}<strong>A reply?</strong> Only one reply possible. For now this content is only visible to contributors, but we will eventually publish comments with their respective replies (to display more information under a question){% endblocktrans %}.
                 </div>
-                <form id="contribution_reply_create_form" method="POST" action="">
+                <form id="comment_reply_create_form" method="POST" action="">
                     {% csrf_token %}
 
                     <div class="row">
@@ -68,7 +68,7 @@
                         <div class="col">
                             {% bootstrap_button button_type="submit" button_class="btn-primary" content=_("Add") %}
                             {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content=_("Cancel") %} #}
-                            <a class="btn btn-secondary" href="{% url 'contributions:detail_view' contribution.id %}">{% translate "Cancel" %}</a>
+                            <a class="btn btn-secondary" href="{% url 'contributions:detail_view' comment.id %}">{% translate "Cancel" %}</a>
                         </div>
                     </div>
                 </form>
@@ -80,7 +80,7 @@
 
 {% block extra_js %}
 {{ form.media.js }}
-{% if contribution.has_replies_reply %}
+{% if comment.has_replies_reply %}
 <script type="text/javascript">
     console.log(document.getElementById("id_type_1"))
     document.getElementById("id_type_1").disabled = true;

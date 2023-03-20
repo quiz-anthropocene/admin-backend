@@ -15,6 +15,10 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.AlterModelOptions(
+            name="comment",
+            options={"ordering": ["-created"], "verbose_name": "Comment", "verbose_name_plural": "Comments"},
+        ),
         migrations.AlterField(
             model_name="comment",
             name="author",

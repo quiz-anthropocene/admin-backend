@@ -85,6 +85,11 @@ class Comment(models.Model):
 
     objects = CommentQuerySet.as_manager()
 
+    class Meta:
+        verbose_name = _("Comment")
+        verbose_name_plural = _("Comments")
+        ordering = ["-created"]
+
     def __str__(self):
         return f"{self.text}"
 

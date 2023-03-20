@@ -31,7 +31,7 @@ router.register(r"quizs", QuizViewSet, basename="quiz")
 router.register(r"categories", CategoryViewSet, basename="category")
 router.register(r"tags", TagViewSet, basename="tag")
 router.register(r"glossary", GlossaryViewSet, basename="glossary")
-router.register(r"contributions", CommentViewSet, basename="contribution")
+router.register(r"comments", CommentViewSet, basename="contribution")
 
 urlpatterns = [
     path("", views.api_home, name="index"),
