@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-13 18:08+0100\n"
-"PO-Revision-Date: 2023-03-13 18:10+0100\n"
+"POT-Creation-Date: 2023-03-20 15:07+0100\n"
+"PO-Revision-Date: 2023-03-20 15:08+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -94,7 +94,7 @@ msgstr "Données supplémentaires"
 #: quizs/models.py:437 quizs/models.py:500 quizs/models.py:560
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
 #: stats/models.py:207 stats/models.py:218 stats/models.py:304
-#: tags/models.py:29 users/models.py:193 users/models.py:304
+#: tags/models.py:29 users/models.py:193 users/models.py:312
 msgid "Creation date"
 msgstr "Date de création"
 
@@ -192,7 +192,7 @@ msgstr "Description"
 #: categories/models.py:16 contributions/models.py:85 glossary/models.py:33
 #: questions/models.py:234 quizs/models.py:160 quizs/models.py:438
 #: quizs/models.py:501 quizs/models.py:561 stats/models.py:305
-#: tags/models.py:30 users/models.py:194 users/models.py:305
+#: tags/models.py:30 users/models.py:194 users/models.py:313
 msgid "Last update date"
 msgstr "Date de dernière modification"
 
@@ -836,7 +836,8 @@ msgstr "Voir plus"
 #: templates/quizs/create.html:17 templates/quizs/detail_base.html:12
 #: templates/quizs/list.html:13 templates/tags/create.html:16
 #: templates/tags/detail_base.html:12 templates/tags/list.html:13
-#: templates/users/administrator_list.html:13 templates/users/home.html:12
+#: templates/users/administrator_list.html:13
+#: templates/users/author_card_list.html:12 templates/users/home.html:12
 msgid "Home"
 msgstr "Accueil"
 
@@ -909,7 +910,7 @@ msgstr "Historique"
 #: templates/contributions/_table_action_items.html:13
 #: templates/profile/home.html:28 templates/profile/home.html:36
 #: templates/profile/home.html:47 templates/profile/home.html:60
-#: templates/users/home.html:42
+#: templates/users/home.html:43
 msgid "View"
 msgstr "Voir"
 
@@ -1057,7 +1058,7 @@ msgstr "(vide)"
 msgid "Anthropocene Quiz"
 msgstr "Quiz de l'Anthropocène"
 
-#: templates/includes/_footer.html:15
+#: templates/includes/_footer.html:15 templates/users/author_card_list.html:46
 msgid "Website"
 msgstr "Application"
 
@@ -1074,7 +1075,8 @@ msgid "My space"
 msgstr "Mon espace"
 
 #: templates/includes/_header.html:41
-#: templates/users/administrator_list.html:14 templates/users/home.html:4
+#: templates/users/administrator_list.html:14
+#: templates/users/author_card_list.html:13 templates/users/home.html:4
 #: templates/users/home.html:13 users/models.py:200
 msgid "Users"
 msgstr "Utilisateurs"
@@ -1335,11 +1337,45 @@ msgstr "Tous les quizs"
 msgid "All the tags"
 msgstr "Tous les tags"
 
+#: templates/users/author_card_list.html:4
+#: templates/users/author_card_list.html:14
+#: templates/users/author_card_list.html:26
+msgid "Author cards"
+msgstr "Fiches auteurs"
+
+#: templates/users/author_card_list.html:35
+msgid "quiz"
+msgid_plural "quizs"
+msgstr[0] "quiz"
+msgstr[1] "quizs"
+
+#: templates/users/author_card_list.html:36
+msgid "question"
+msgid_plural "questions"
+msgstr[0] "question"
+msgstr[1] "questions"
+
+#: templates/users/author_card_list.html:38 users/models.py:308
+msgid "Short biography"
+msgstr "Courte biographie"
+
+#: templates/users/author_card_list.html:41 users/models.py:309
+msgid "Relationship with the Anthropocene Quiz"
+msgstr "Lien avec le Quiz de l'Anthropocène"
+
+#: templates/users/author_card_list.html:48
+msgid "no website provided"
+msgstr "aucun site internet indiqué"
+
 #: templates/users/home.html:34
 msgid "Quiz authors"
 msgstr "Quiz auteurs"
 
-#: templates/users/home.html:41
+#: templates/users/home.html:35
+msgid "View author cards"
+msgstr "Voir les fiches auteurs"
+
+#: templates/users/home.html:42
 msgid "Administrators"
 msgstr "Administrateurs"
 
@@ -1393,27 +1429,19 @@ msgstr "Adresse e-mail"
 msgid "User"
 msgstr "Utilisateur"
 
-#: users/models.py:296
+#: users/models.py:304
 msgid "User image (link)"
 msgstr "Lien vers une image de l'utilisateur"
 
-#: users/models.py:300
-msgid "Short biography"
-msgstr "Courte biographie"
-
-#: users/models.py:301
-msgid "Relationship with the Anthropocene Quiz"
-msgstr "Lien avec le Quiz de l'Anthropocène"
-
-#: users/models.py:302
+#: users/models.py:310
 msgid "Website (link)"
 msgstr "Site internet"
 
-#: users/models.py:310
+#: users/models.py:318
 msgid "User card"
 msgstr "Fiche utilisateur"
 
-#: users/models.py:311
+#: users/models.py:319
 msgid "User cards"
 msgstr "Fiches utilisateurs"
 

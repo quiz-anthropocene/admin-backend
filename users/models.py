@@ -211,6 +211,10 @@ class User(AbstractUser):
         return self.questions.count()
 
     @property
+    def question_public_count(self) -> int:
+        return self.questions.public().count()
+
+    @property
     def question_public_validated_count(self) -> int:
         return self.questions.public().validated().count()
 
@@ -221,6 +225,10 @@ class User(AbstractUser):
     @property
     def quiz_count(self) -> int:
         return self.quizs.count()
+
+    @property
+    def quiz_public_count(self) -> int:
+        return self.quizs.public().count()
 
     @property
     def quiz_public_published_count(self) -> int:

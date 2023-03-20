@@ -1,0 +1,62 @@
+{% extends "layouts/base.html" %}
+{% load i18n django_bootstrap5 strip_html %}
+
+{% block title %}{% translate "Author cards" %}{{ block.super }}{% endblock %}
+
+{% block breadcrumbs %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 my-auto">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'users:home' %}">{% translate "Users" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "Author cards" %}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-9">
+            <h1>{% translate "Author cards" %} <span class="fs-3 text-muted">{{ users_with_card.count }}</span></h1>
+        </div>
+    </div>
+    {% if user.has_role_administrator %}
+        <div class="alert alert-warning" role="alert">
+            Pour l'instant, les fiches auteurs peuvent seulement être crées et modifiées dans <a href="{% url 'django:users_usercard_changelist' %}" target="_blank">Django</a>.
+        </div>
+    {% endif %}
+    <div class="row">
+        {% for user in users_with_card %}
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ user.full_name }}</h5>
+                        <span class="badge bg-primary">{{ user.quiz_public_count }} {% blocktrans count counter=user.quiz_public_count %}quiz{% plural %}quizs{% endblocktrans %}</span>
+                        <span class="badge bg-primary">{{ user.question_public_count }} {% blocktrans count counter=user.question_public_count %}question{% plural %}questions{% endblocktrans %}</span>
+                        <hr />
+                        <p title="{% translate "Short biography" %}">
+                            💬&nbsp;{{ user.user_card.short_biography | strip_html }}
+                        </p>
+                        <p title="{% translate "Relationship with the Anthropocene Quiz" %}">
+                            🚀&nbsp;{{ user.user_card.quiz_relationship | strip_html }}
+                        </p>
+                        <p class="mb-0">
+                            {% if user.user_card.website_url %}
+                                💻&nbsp;<a href="{{ user.user_card.website_url }}" target="_blank">{% translate "Website" %}</a>
+                            {% else %}
+                                💻&nbsp;<i>{% translate "no website provided" %}</i>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

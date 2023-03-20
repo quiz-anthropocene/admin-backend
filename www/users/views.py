@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView
+from django.views.generic import ListView, TemplateView
 from django_tables2.views import SingleTableView
 
 from core.mixins import ContributorUserRequiredMixin
@@ -15,6 +15,12 @@ class UserHomeView(ContributorUserRequiredMixin, TemplateView):
         context["quiz_author_count"] = User.objects.has_public_quiz().count()
         context["administrator_count"] = User.objects.all_administrators().count()
         return context
+
+
+class AuthorCardList(ContributorUserRequiredMixin, ListView):
+    queryset = User.objects.has_user_card().order_by("-created")
+    template_name = "users/author_card_list.html"
+    context_object_name = "users_with_card"
 
 
 class AdministratorListView(ContributorUserRequiredMixin, SingleTableView):
