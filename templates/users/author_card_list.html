@@ -26,6 +26,11 @@
             <h1>{% translate "Author cards" %} <span class="fs-3 text-muted">{{ users_with_card.count }}</span></h1>
         </div>
     </div>
+    {% if user.has_role_administrator %}
+        <div class="alert alert-warning" role="alert">
+            Pour l'instant, les fiches auteurs peuvent seulement être crées et modifiées dans <a href="{% url 'django:users_usercard_changelist' %}" target="_blank">Django</a>.
+        </div>
+    {% endif %}
     <div class="row">
         {% for user in users_with_card %}
             <div class="col-4">
