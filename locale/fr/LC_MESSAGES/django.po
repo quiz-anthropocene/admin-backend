@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-20 13:03+0100\n"
-"PO-Revision-Date: 2023-03-20 13:03+0100\n"
+"POT-Creation-Date: 2023-03-20 15:07+0100\n"
+"PO-Revision-Date: 2023-03-20 15:08+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -1058,7 +1058,7 @@ msgstr "(vide)"
 msgid "Anthropocene Quiz"
 msgstr "Quiz de l'Anthropocène"
 
-#: templates/includes/_footer.html:15
+#: templates/includes/_footer.html:15 templates/users/author_card_list.html:46
 msgid "Website"
 msgstr "Application"
 
@@ -1355,6 +1355,18 @@ msgid_plural "questions"
 msgstr[0] "question"
 msgstr[1] "questions"
 
+#: templates/users/author_card_list.html:38 users/models.py:308
+msgid "Short biography"
+msgstr "Courte biographie"
+
+#: templates/users/author_card_list.html:41 users/models.py:309
+msgid "Relationship with the Anthropocene Quiz"
+msgstr "Lien avec le Quiz de l'Anthropocène"
+
+#: templates/users/author_card_list.html:48
+msgid "no website provided"
+msgstr "aucun site internet indiqué"
+
 #: templates/users/home.html:34
 msgid "Quiz authors"
 msgstr "Quiz auteurs"
@@ -1420,14 +1432,6 @@ msgstr "Utilisateur"
 #: users/models.py:304
 msgid "User image (link)"
 msgstr "Lien vers une image de l'utilisateur"
-
-#: users/models.py:308
-msgid "Short biography"
-msgstr "Courte biographie"
-
-#: users/models.py:309
-msgid "Relationship with the Anthropocene Quiz"
-msgstr "Lien avec le Quiz de l'Anthropocène"
 
 #: users/models.py:310
 msgid "Website (link)"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-20 13:03+0100\n"
+"POT-Creation-Date: 2023-03-20 15:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1042,7 +1042,7 @@ msgstr ""
 msgid "Anthropocene Quiz"
 msgstr ""
 
-#: templates/includes/_footer.html:15
+#: templates/includes/_footer.html:15 templates/users/author_card_list.html:46
 msgid "Website"
 msgstr ""
 
@@ -1332,6 +1332,18 @@ msgid_plural "questions"
 msgstr[0] ""
 msgstr[1] ""
 
+#: templates/users/author_card_list.html:38 users/models.py:308
+msgid "Short biography"
+msgstr ""
+
+#: templates/users/author_card_list.html:41 users/models.py:309
+msgid "Relationship with the Anthropocene Quiz"
+msgstr ""
+
+#: templates/users/author_card_list.html:48
+msgid "no website provided"
+msgstr ""
+
 #: templates/users/home.html:34
 msgid "Quiz authors"
 msgstr ""
@@ -1395,14 +1407,6 @@ msgstr ""
 
 #: users/models.py:304
 msgid "User image (link)"
-msgstr ""
-
-#: users/models.py:308
-msgid "Short biography"
-msgstr ""
-
-#: users/models.py:309
-msgid "Relationship with the Anthropocene Quiz"
 msgstr ""
 
 #: users/models.py:310
