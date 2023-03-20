@@ -67,7 +67,7 @@ class CommentEditViewTest(TestCase):
     def setUpTestData(cls):
         cls.user = UserFactory(roles=[])
         cls.user_contributor = UserFactory()
-        cls.contribution = CommentFactory(status=constants.CONTRIBUTION_STATUS_PENDING)
+        cls.contribution = CommentFactory(status=constants.COMMENT_STATUS_PENDING)
         cls.contribution_with_reply = CommentFactory()
         cls.contribution_reply = CommentFactory(parent=cls.contribution_with_reply)
 
@@ -80,9 +80,9 @@ class CommentEditViewTest(TestCase):
     def test_contributor_can_edit_contribution(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
         url = reverse("contributions:detail_edit", args=[self.contribution.id])
-        response = self.client.post(url, data={"status": constants.CONTRIBUTION_STATUS_PROCESSED})
+        response = self.client.post(url, data={"status": constants.COMMENT_STATUS_PROCESSED})
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(Comment.objects.get(id=self.contribution.id).status, constants.CONTRIBUTION_STATUS_PROCESSED)
+        self.assertEqual(Comment.objects.get(id=self.contribution.id).status, constants.COMMENT_STATUS_PROCESSED)
 
     def test_contributor_cannot_access_contribution_with_reply_edit(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
@@ -110,7 +110,7 @@ class CommentReplyCreateViewTest(TestCase):
     def test_contributor_can_create_reply_to_contribution(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
         url = reverse("contributions:detail_reply_create", args=[self.contribution.id])
-        response = self.client.post(url, data={"text": "Une réponse", "type": constants.CONTRIBUTION_TYPE_REPLY})
+        response = self.client.post(url, data={"text": "Une réponse", "type": constants.COMMENT_TYPE_REPLY})
         self.assertEqual(response.status_code, 302)  # 201
         self.assertEqual(Comment.objects.count(), 3 + 1)
         self.assertTrue(Comment.objects.get(id=self.contribution.id).has_replies)

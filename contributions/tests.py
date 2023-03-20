@@ -12,15 +12,11 @@ class CommentModelTest(TestCase):
     def setUpTestData(cls):
         cls.question = QuestionFactory()
         cls.quiz = QuizFactory()
-        cls.contribution_with_reply = CommentFactory(
-            text="un commentaire", type=constants.CONTRIBUTION_TYPE_COMMENT_APP
-        )
-        cls.contribution_reply = CommentFactory(
-            type=constants.CONTRIBUTION_TYPE_REPLY, parent=cls.contribution_with_reply
-        )
-        CommentFactory(type=constants.CONTRIBUTION_TYPE_COMMENT_QUESTION, question=cls.question)
-        CommentFactory(type=constants.CONTRIBUTION_TYPE_COMMENT_QUIZ, quiz=cls.quiz)
-        CommentFactory(type=constants.CONTRIBUTION_TYPE_ERROR_APP)
+        cls.contribution_with_reply = CommentFactory(text="un commentaire", type=constants.COMMENT_TYPE_COMMENT_APP)
+        cls.contribution_reply = CommentFactory(type=constants.COMMENT_TYPE_REPLY, parent=cls.contribution_with_reply)
+        CommentFactory(type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question)
+        CommentFactory(type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz)
+        CommentFactory(type=constants.COMMENT_TYPE_ERROR_APP)
 
     def test_str(self):
         self.assertEqual(str(self.contribution_with_reply), "un commentaire")
@@ -35,16 +31,14 @@ class CommentModelQuerySetTest(TestCase):
     def setUpTestData(cls):
         cls.question = QuestionFactory()
         cls.quiz = QuizFactory()
-        cls.contribution_with_reply = CommentFactory(type=constants.CONTRIBUTION_TYPE_COMMENT_APP)
+        cls.contribution_with_reply = CommentFactory(type=constants.COMMENT_TYPE_COMMENT_APP)
+        cls.contribution_reply = CommentFactory(type=constants.COMMENT_TYPE_REPLY, parent=cls.contribution_with_reply)
         cls.contribution_reply = CommentFactory(
-            type=constants.CONTRIBUTION_TYPE_REPLY, parent=cls.contribution_with_reply
+            type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR, parent=cls.contribution_with_reply
         )
-        cls.contribution_reply = CommentFactory(
-            type=constants.CONTRIBUTION_TYPE_COMMENT_CONTRIBUTOR, parent=cls.contribution_with_reply
-        )
-        CommentFactory(type=constants.CONTRIBUTION_TYPE_COMMENT_QUESTION, question=cls.question)
-        CommentFactory(type=constants.CONTRIBUTION_TYPE_COMMENT_QUIZ, quiz=cls.quiz)
-        CommentFactory(type=constants.CONTRIBUTION_TYPE_ERROR_APP)
+        CommentFactory(type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question)
+        CommentFactory(type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz)
+        CommentFactory(type=constants.COMMENT_TYPE_ERROR_APP)
 
     def test_contributions_count(self):
         self.assertEqual(Comment.objects.count(), 6)

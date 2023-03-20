@@ -30,7 +30,7 @@ urlpatterns = [
                 path("view/", QuizDetailView.as_view(), name="detail_view"),
                 path("edit/", QuizDetailEditView.as_view(), name="detail_edit"),
                 path("questions/", QuizDetailQuestionListView.as_view(), name="detail_questions"),
-                path("comments/", QuizDetailCommentListView.as_view(), name="detail_contributions"),
+                path("comments/", QuizDetailCommentListView.as_view(), name="detail_comments"),
                 path("stats/", QuizDetailStatsView.as_view(), name="detail_stats"),
                 path("history/", QuizDetailHistoryView.as_view(), name="detail_history"),
             ]

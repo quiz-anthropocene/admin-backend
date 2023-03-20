@@ -337,10 +337,8 @@ class DailyStatAdmin(ExportMixin, admin.ModelAdmin):
             "quiz_feedback_count_last_30_days": DailyStat.objects.agg_count(
                 "quiz_feedback_count", since="last_30_days"
             ),
-            "contribution_count": Comment.objects.exclude(type="erreur application").count(),
-            "contribution_count_last_30_days": Comment.objects.exclude(type="erreur application")
-            .last_30_days()
-            .count(),
+            "comment_count": Comment.objects.exclude(type="erreur application").count(),
+            "comment_count_last_30_days": Comment.objects.exclude(type="erreur application").last_30_days().count(),
             "since_date_min": constants.AGGREGATION_SINCE_DATE_DEFAULT,
             "current_since_date": current_since_date,
         }

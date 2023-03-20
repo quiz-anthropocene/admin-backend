@@ -166,19 +166,19 @@ def contribution_stats():
     # total
     question_feedback_count = DailyStat.objects.agg_count("question_feedback_count")
     quiz_feedback_count = DailyStat.objects.agg_count("quiz_feedback_count")
-    contribution_count = Comment.objects.exclude(type="erreur application").count()
+    comment_count = Comment.objects.exclude(type="erreur application").count()
     # last 30 days
     question_feedback_count_last_30_days = DailyStat.objects.agg_count("question_feedback_count", since="last_30_days")
     quiz_feedback_count_last_30_days = DailyStat.objects.agg_count("quiz_feedback_count", since="last_30_days")
-    contribution_count_last_30_days = Comment.objects.exclude(type="erreur application").last_30_days().count()
+    comment_count_last_30_days = Comment.objects.exclude(type="erreur application").last_30_days().count()
 
     return {
         "question_feedback_count": question_feedback_count,
         "quiz_feedback_count": quiz_feedback_count,
-        "contribution_count": contribution_count,
+        "comment_count": comment_count,
         "question_feedback_count_last_30_days": question_feedback_count_last_30_days,
         "quiz_feedback_count_last_30_days": quiz_feedback_count_last_30_days,
-        "contribution_count_last_30_days": contribution_count_last_30_days,
+        "comment_count_last_30_days": comment_count_last_30_days,
     }
 
 

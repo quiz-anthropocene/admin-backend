@@ -5,7 +5,7 @@ from core import constants
 
 
 class CommentSerializer(serializers.ModelSerializer):
-    status = serializers.CharField(default=constants.CONTRIBUTION_STATUS_NEW)
+    status = serializers.CharField(default=constants.COMMENT_STATUS_NEW)
 
     class Meta:
         model = Comment

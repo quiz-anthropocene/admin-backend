@@ -137,7 +137,7 @@ class QuestionDetailQuizListView(ContributorUserRequiredMixin, ListView):
 
 class QuestionDetailCommentListView(ContributorUserRequiredMixin, SingleTableView):
     model = Comment
-    template_name = "questions/detail_contributions.html"
+    template_name = "questions/detail_comments.html"
     context_object_name = "question_contributions"
     table_class = CommentTable
 

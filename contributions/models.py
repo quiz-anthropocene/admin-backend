@@ -12,53 +12,52 @@ from quizs.models import Quiz
 
 class CommentQuerySet(models.QuerySet):
     def exclude_contributor_comments(self):
-        return self.exclude(type=constants.CONTRIBUTION_TYPE_COMMENT_CONTRIBUTOR)
+        return self.exclude(type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR)
 
     def exclude_replies(self):
-        return self.exclude(type=constants.CONTRIBUTION_TYPE_REPLY)
+        return self.exclude(type=constants.COMMENT_TYPE_REPLY)
 
     def exclude_contributor_work(self):
         return self.exclude_contributor_comments().exclude_replies()
 
     def only_replies(self):
-        return self.filter(type=constants.CONTRIBUTION_TYPE_REPLY)
+        return self.filter(type=constants.COMMENT_TYPE_REPLY)
 
     def exclude_errors(self):
-        return self.exclude(type=constants.CONTRIBUTION_TYPE_ERROR_APP)
+        return self.exclude(type=constants.COMMENT_TYPE_ERROR_APP)
 
     def last_30_days(self):
         return self.filter(created__date__gte=(date.today() - timedelta(days=30)))
 
 
 class Comment(models.Model):
-    CONTRIBUTION_CHOICE_FIELDS = ["type", "status"]
-    CONTRIBUTION_FK_FIELDS = ["question", "quiz", "author"]
-    CONTRIBUTION_READONLY_FIELDS = ["parent", "created", "updated"]
+    COMMENT_CHOICE_FIELDS = ["type", "status"]
+    COMMENT_FK_FIELDS = ["question", "quiz", "author"]
+    COMMENT_READONLY_FIELDS = ["parent", "created", "updated"]
+
     text = models.TextField(
         verbose_name=_("Text"),
         blank=False,
         help_text=_("A question, a comment…"),
     )
     description = models.TextField(verbose_name=_("Additional information"), blank=True)
-    type = models.CharField(
-        verbose_name=_("Type"), max_length=150, choices=constants.CONTRIBUTION_TYPE_CHOICES, blank=True
-    )
+    type = models.CharField(verbose_name=_("Type"), max_length=150, choices=constants.COMMENT_TYPE_CHOICES, blank=True)
 
     question = models.ForeignKey(
         verbose_name=_("Question"),
         to=Question,
-        related_name="contributions",
+        related_name="comments",
         on_delete=models.CASCADE,
         null=True,
         blank=True,
     )
     quiz = models.ForeignKey(
-        verbose_name=_("Quiz"), to=Quiz, related_name="contributions", on_delete=models.CASCADE, null=True, blank=True
+        verbose_name=_("Quiz"), to=Quiz, related_name="comments", on_delete=models.CASCADE, null=True, blank=True
     )
     author = models.ForeignKey(
         verbose_name=_("Author"),
         to=settings.AUTH_USER_MODEL,
-        related_name="contributions",
+        related_name="comments",
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
@@ -67,8 +66,8 @@ class Comment(models.Model):
     status = models.CharField(
         verbose_name=_("Status"),
         max_length=150,
-        choices=constants.CONTRIBUTION_STATUS_CHOICES,
-        # default=constants.CONTRIBUTION_STATUS_PENDING,
+        choices=constants.COMMENT_STATUS_CHOICES,
+        # default=constants.COMMENT_STATUS_PENDING,
         blank=True,
     )
 
@@ -106,14 +105,14 @@ class Comment(models.Model):
 
     @property
     def processed(self) -> bool:
-        if self.status in [constants.CONTRIBUTION_STATUS_NEW, constants.CONTRIBUTION_STATUS_PENDING]:
+        if self.status in [constants.COMMENT_STATUS_NEW, constants.COMMENT_STATUS_PENDING]:
             return False
         return True
 
     @property
     def processed_icon(self) -> str:
-        if self.status == constants.CONTRIBUTION_STATUS_NEW:
+        if self.status == constants.COMMENT_STATUS_NEW:
             return "❌"
-        if self.status == constants.CONTRIBUTION_STATUS_PENDING:
+        if self.status == constants.COMMENT_STATUS_PENDING:
             return "📝"
         return "✅"

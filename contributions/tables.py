@@ -5,7 +5,7 @@ from contributions.models import Comment
 from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, ChoiceColumn, RichTextLongerEllipsisColumn
 
 
-CONTRIBUTION_FIELDS = ["type", "text", "author", "question", "quiz", "status", "created"]  # id, description
+COMMENT_FIELDS = ["type", "text", "author", "question", "quiz", "status", "created"]  # id, description
 
 
 class CommentTable(tables.Table):
@@ -34,5 +34,5 @@ class CommentTable(tables.Table):
     class Meta:
         model = Comment
         template_name = DEFAULT_TEMPLATE
-        fields = CONTRIBUTION_FIELDS
+        fields = COMMENT_FIELDS
         attrs = DEFAULT_ATTRS

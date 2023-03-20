@@ -16,7 +16,7 @@ QUESTION_DETAIL_URLS = [
     "questions:detail_view",
     "questions:detail_edit",
     "questions:detail_quizs",
-    "questions:detail_contributions",
+    "questions:detail_comments",
     "questions:detail_stats",
     "questions:detail_history",
 ]

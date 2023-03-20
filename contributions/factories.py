@@ -9,5 +9,5 @@ class CommentFactory(factory.django.DjangoModelFactory):
         model = Comment
 
     text = "Une contribution"
-    type = constants.CONTRIBUTION_TYPE_COMMENT_APP
-    status = constants.CONTRIBUTION_STATUS_PENDING
+    type = constants.COMMENT_TYPE_COMMENT_APP
+    status = constants.COMMENT_STATUS_PENDING
