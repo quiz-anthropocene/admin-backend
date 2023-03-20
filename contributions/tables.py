@@ -1,14 +1,14 @@
 import django_tables2 as tables
 from django.utils.translation import gettext_lazy as _
 
-from contributions.models import Contribution
+from contributions.models import Comment
 from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, ChoiceColumn, RichTextLongerEllipsisColumn
 
 
 CONTRIBUTION_FIELDS = ["type", "text", "author", "question", "quiz", "status", "created"]  # id, description
 
 
-class ContributionTable(tables.Table):
+class CommentTable(tables.Table):
     type = ChoiceColumn()
     text = RichTextLongerEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
     question = tables.Column(
@@ -32,7 +32,7 @@ class ContributionTable(tables.Table):
     )
 
     class Meta:
-        model = Contribution
+        model = Comment
         template_name = DEFAULT_TEMPLATE
         fields = CONTRIBUTION_FIELDS
         attrs = DEFAULT_ATTRS

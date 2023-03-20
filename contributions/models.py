@@ -10,7 +10,7 @@ from questions.models import Question
 from quizs.models import Quiz
 
 
-class ContributionQuerySet(models.QuerySet):
+class CommentQuerySet(models.QuerySet):
     def exclude_contributor_comments(self):
         return self.exclude(type=constants.CONTRIBUTION_TYPE_COMMENT_CONTRIBUTOR)
 
@@ -30,7 +30,7 @@ class ContributionQuerySet(models.QuerySet):
         return self.filter(created__date__gte=(date.today() - timedelta(days=30)))
 
 
-class Contribution(models.Model):
+class Comment(models.Model):
     CONTRIBUTION_CHOICE_FIELDS = ["type", "status"]
     CONTRIBUTION_FK_FIELDS = ["question", "quiz", "author"]
     CONTRIBUTION_READONLY_FIELDS = ["parent", "created", "updated"]
@@ -84,7 +84,7 @@ class Contribution(models.Model):
     created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
     updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
 
-    objects = ContributionQuerySet.as_manager()
+    objects = CommentQuerySet.as_manager()
 
     def __str__(self):
         return f"{self.text}"

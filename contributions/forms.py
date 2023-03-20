@@ -1,20 +1,20 @@
 from django import forms
 from django.utils.translation import gettext_lazy as _
 
-from contributions.models import Contribution
+from contributions.models import Comment
 from core import constants
 
 
 CONTRIBUTION_STATUS_EDIT_FORM_FIELDS = [
-    field.name for field in Contribution._meta.fields if field.name not in Contribution.CONTRIBUTION_READONLY_FIELDS
+    field.name for field in Comment._meta.fields if field.name not in Comment.CONTRIBUTION_READONLY_FIELDS
 ]
 CONTRIBUTION_REPLY_CREATE_FORM_FIELDS = ["type", "text", "author", "parent", "status"]
 CONTRIBUTION_REPLY_HIDDEN_FORM_FIELDS = ["parent", "status"]
 
 
-class ContributionStatusEditForm(forms.ModelForm):
+class CommentStatusEditForm(forms.ModelForm):
     class Meta:
-        model = Contribution
+        model = Comment
         fields = CONTRIBUTION_STATUS_EDIT_FORM_FIELDS
         widgets = {
             "text": forms.Textarea(attrs={"rows": 3}),
@@ -28,11 +28,11 @@ class ContributionStatusEditForm(forms.ModelForm):
                 self.fields[field_name].disabled = True
 
 
-class ContributionReplyCreateForm(forms.ModelForm):
+class CommentReplyCreateForm(forms.ModelForm):
     type = forms.ChoiceField(choices=constants.CONTRIBUTION_TYPE_REPLY_CHOICES, widget=forms.RadioSelect)
 
     class Meta:
-        model = Contribution
+        model = Comment
         fields = CONTRIBUTION_REPLY_CREATE_FORM_FIELDS
         widgets = {
             "text": forms.Textarea(attrs={"rows": 3}),
