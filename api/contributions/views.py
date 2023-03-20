@@ -1,14 +1,14 @@
 from drf_spectacular.utils import extend_schema
 from rest_framework import mixins, viewsets
 
-from api.contributions.serializers import ContributionSerializer
-from contributions.models import Contribution
+from api.contributions.serializers import CommentSerializer
+from contributions.models import Comment
 
 
 class ContributionViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
-    queryset = Contribution.objects.all()
-    serializer_class = ContributionSerializer
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
 
-    @extend_schema(summary="Nouvelle contribution", tags=[Contribution._meta.verbose_name], exclude=True)
+    @extend_schema(summary="Nouvelle contribution", tags=[Comment._meta.verbose_name], exclude=True)
     def create(self, request, *args, **kwargs):
         return super().create(request, args, kwargs)

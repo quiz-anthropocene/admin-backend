@@ -14,7 +14,7 @@ QUIZ_DETAIL_URLS = [
     "quizs:detail_view",
     "quizs:detail_edit",
     "quizs:detail_questions",
-    "quizs:detail_contributions",
+    "quizs:detail_comments",
     "quizs:detail_stats",
     "quizs:detail_history",
 ]

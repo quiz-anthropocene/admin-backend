@@ -1,10 +1,10 @@
 from django.contrib import admin
 
-from contributions.models import Contribution
+from contributions.models import Comment
 from core.admin import ExportMixin, admin_site
 
 
-class ContributionAdmin(ExportMixin, admin.ModelAdmin):
+class CommentAdmin(ExportMixin, admin.ModelAdmin):
     list_display = (
         "id",
         "type",
@@ -29,4 +29,4 @@ class ContributionAdmin(ExportMixin, admin.ModelAdmin):
         return False
 
 
-admin_site.register(Contribution, ContributionAdmin)
+admin_site.register(Comment, CommentAdmin)

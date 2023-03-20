@@ -1,10 +1,10 @@
 {% extends "contributions/detail_base.html" %}
 {% load i18n django_bootstrap5 %}
 
-{% block contribution_detail_content %}
+{% block comment_detail_content %}
 <div class="row">
     <div class="col-12">
-        <form id="contribution_edit_form" method="POST" action="">
+        <form id="comment_edit_form" method="POST" action="">
             {% csrf_token %}
 
             <div class="row">
@@ -13,9 +13,9 @@
                 </div>
                 <!-- Sidebar -->
                 <div class="col-md-4 d-none d-md-block">
-                    {% if not contribution.processed %}
+                    {% if not comment.processed %}
                         <div class="alert alert-warning" role="alert">
-                            ✍️ {% blocktrans %}This contribution has not yet been <strong>processed</strong>{% endblocktrans %}.
+                            ✍️ {% blocktrans %}This comment has not yet been <strong>processed</strong>{% endblocktrans %}.
                         </div>
                     {% endif %}
                 </div>
@@ -25,7 +25,7 @@
                 <div class="col">
                     {% bootstrap_button button_type="submit" button_class="btn-primary" content=_("Save") %}
                     {# {% bootstrap_button button_type="reset" button_class="btn-secondary" content=_("Cancel") %} #}
-                    <a class="btn btn-secondary" href="{% url 'glossary:detail_view' contribution.id %}">{% translate "Cancel" %}</a>
+                    <a class="btn btn-secondary" href="{% url 'glossary:detail_view' comment.id %}">{% translate "Cancel" %}</a>
                 </div>
                 <div class="col-auto">
                     <button class="btn btn-danger" disabled>{% translate "Delete" %}</button>

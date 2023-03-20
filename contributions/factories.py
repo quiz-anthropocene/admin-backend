@@ -1,13 +1,13 @@
 import factory
 
-from contributions.models import Contribution
+from contributions.models import Comment
 from core import constants
 
 
-class ContributionFactory(factory.django.DjangoModelFactory):
+class CommentFactory(factory.django.DjangoModelFactory):
     class Meta:
-        model = Contribution
+        model = Comment
 
     text = "Une contribution"
-    type = constants.CONTRIBUTION_TYPE_COMMENT_APP
-    status = constants.CONTRIBUTION_STATUS_PENDING
+    type = constants.COMMENT_TYPE_COMMENT_APP
+    status = constants.COMMENT_STATUS_PENDING

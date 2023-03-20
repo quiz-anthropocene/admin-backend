@@ -5,21 +5,21 @@ from django.views.generic import CreateView, DetailView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin
 
-from api.contributions.serializers import ContributionSerializer
-from contributions.filters import ContributionFilter
-from contributions.forms import ContributionReplyCreateForm, ContributionStatusEditForm
-from contributions.models import Contribution
-from contributions.tables import ContributionTable
+from api.contributions.serializers import CommentSerializer
+from contributions.filters import CommentFilter
+from contributions.forms import CommentReplyCreateForm, CommentStatusEditForm
+from contributions.models import Comment
+from contributions.tables import CommentTable
 from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import ContributorUserRequiredMixin
 
 
-class ContributionListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
-    model = Contribution
+class CommentListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
+    model = Comment
     template_name = "contributions/list.html"
-    context_object_name = "contributions"
-    table_class = ContributionTable
-    filterset_class = ContributionFilter
+    context_object_name = "comments"
+    table_class = CommentTable
+    filterset_class = CommentFilter
 
     def get_queryset(self):
         qs = super().get_queryset()
@@ -37,58 +37,58 @@ class ContributionListView(ContributorUserRequiredMixin, SingleTableMixin, Filte
         return context
 
 
-class ContributionDetailView(ContributorUserRequiredMixin, DetailView):
-    model = Contribution
+class CommentDetailView(ContributorUserRequiredMixin, DetailView):
+    model = Comment
     template_name = "contributions/detail_view.html"
-    context_object_name = "contribution"
+    context_object_name = "comment"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        contribution = self.get_object()
-        context["contribution_dict"] = ContributionSerializer(contribution).data
+        comment = self.get_object()
+        context["comment_dict"] = CommentSerializer(comment).data
         return context
 
 
-class ContributionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
-    form_class = ContributionStatusEditForm
+class CommentDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
+    form_class = CommentStatusEditForm
     template_name = "contributions/detail_edit.html"
-    context_object_name = "contribution"
-    success_message = "La contribution a été mise à jour."
+    context_object_name = "comment"
+    success_message = "Le commentaire a été mise à jour."
     # success_url = reverse_lazy("contributions:detail_view")
 
     def get_object(self):
-        return get_object_or_404(Contribution, id=self.kwargs.get("pk"))
+        return get_object_or_404(Comment, id=self.kwargs.get("pk"))
 
     def get(self, request, *args, **kwargs):
-        contribution = self.get_object()
-        if contribution and contribution.parent:
-            return redirect(reverse_lazy("contributions:detail_view", args=[contribution.parent.id]))
+        comment = self.get_object()
+        if comment and comment.parent:
+            return redirect(reverse_lazy("contributions:detail_view", args=[comment.parent.id]))
         return super().get(request, *args, **kwargs)
 
     def get_success_url(self):
         return reverse_lazy("contributions:detail_view", args=[self.kwargs.get("pk")])
 
 
-class ContributionDetailReplyCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateView):
-    form_class = ContributionReplyCreateForm
+class CommentDetailReplyCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateView):
+    form_class = CommentReplyCreateForm
     template_name = "contributions/detail_reply_create.html"
-    success_message = "Votre message a été ajouté."
+    success_message = "Votre réponse a été ajoutée."
     # success_url = reverse_lazy("contributions:detail_view")
 
     def get_object(self):
-        return get_object_or_404(Contribution, id=self.kwargs.get("pk"))
+        return get_object_or_404(Comment, id=self.kwargs.get("pk"))
 
     def get(self, request, *args, **kwargs):
-        contribution = self.get_object()
-        if contribution and contribution.parent:
-            return redirect(reverse_lazy("contributions:detail_view", args=[contribution.parent.id]))
+        comment = self.get_object()
+        if comment and comment.parent:
+            return redirect(reverse_lazy("contributions:detail_view", args=[comment.parent.id]))
         return super().get(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        contribution = self.get_object()
-        context["contribution"] = contribution
-        context["contribution_replies"] = contribution.replies.all()
+        comment = self.get_object()
+        context["comment"] = comment
+        context["comment_replies"] = comment.replies.all()
         return context
 
     def get_initial(self):

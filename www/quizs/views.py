@@ -12,8 +12,8 @@ from django_tables2.views import SingleTableMixin, SingleTableView
 
 from activity.utilities import create_event
 from api.quizs.serializers import QuizWithQuestionFullStringSerializer
-from contributions.models import Contribution
-from contributions.tables import ContributionTable
+from contributions.models import Comment
+from contributions.tables import CommentTable
 from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import ContributorUserRequiredMixin
 from core.utils.s3 import S3Upload
@@ -170,11 +170,11 @@ class QuizDetailQuestionListView(ContributorUserRequiredMixin, FormView):
         return reverse_lazy("quizs:detail_view", args=[self.kwargs.get("pk")])
 
 
-class QuizDetailContributionListView(ContributorUserRequiredMixin, SingleTableView):
-    model = Contribution
-    template_name = "quizs/detail_contributions.html"
+class QuizDetailCommentListView(ContributorUserRequiredMixin, SingleTableView):
+    model = Comment
+    template_name = "quizs/detail_comments.html"
     context_object_name = "quiz_contributions"
-    table_class = ContributionTable
+    table_class = CommentTable
 
     def get_queryset(self):
         qs = super().get_queryset()

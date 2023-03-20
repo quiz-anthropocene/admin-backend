@@ -3,7 +3,7 @@ from datetime import date, datetime, timedelta
 from django.db.models import Count, F
 
 from categories.models import Category
-from contributions.models import Contribution
+from contributions.models import Comment
 from core import constants
 from questions.models import Question
 from quizs.models import Quiz
@@ -166,11 +166,13 @@ def contribution_stats():
     # total
     question_feedback_count = DailyStat.objects.agg_count("question_feedback_count")
     quiz_feedback_count = DailyStat.objects.agg_count("quiz_feedback_count")
-    contribution_count = Contribution.objects.exclude(type="erreur application").count()
+    contribution_count = Comment.objects.exclude_contributor_work().exclude(type="erreur application").count()
     # last 30 days
     question_feedback_count_last_30_days = DailyStat.objects.agg_count("question_feedback_count", since="last_30_days")
     quiz_feedback_count_last_30_days = DailyStat.objects.agg_count("quiz_feedback_count", since="last_30_days")
-    contribution_count_last_30_days = Contribution.objects.exclude(type="erreur application").last_30_days().count()
+    contribution_count_last_30_days = (
+        Comment.objects.exclude_contributor_work().exclude(type="erreur application").last_30_days().count()
+    )
 
     return {
         "question_feedback_count": question_feedback_count,

@@ -351,8 +351,8 @@ class Question(models.Model):
         return self.quizs.count()
 
     @property
-    def contribution_count(self) -> int:
-        return self.contributions.count()
+    def comment_count(self) -> int:
+        return self.comments.count()
 
     # Admin
     tags_list_string.fget.short_description = _("Tags")

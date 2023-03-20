@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 {% load i18n custom_filters %}
 
-{% block title %}{% translate "Contribution" %} #{{ contribution.id }}{{ block.super }}{% endblock %}
+{% block title %}{% translate "Comment" %} #{{ comment.id }}{{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -10,8 +10,8 @@
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'contributions:list' %}">{% translate "Contributions" %}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page" title="{{ contribution.text }}">{{ contribution.text|truncatechars:50 }}</li>
+                    <li class="breadcrumb-item"><a href="{% url 'contributions:list' %}">{% translate "Comments" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" title="{{ comment.text }}">{{ comment.text|truncatechars:50 }}</li>
                 </ol>
             </nav>
         </div>
@@ -21,29 +21,33 @@
 
 {% block content %}
 <div class="container">
-    {% if contribution.parent %}
+    {% if comment.parent %}
         <div class="alert alert-warning" role="status">
-            {% blocktrans %}This contribution is a <strong>reply</strong>{% endblocktrans %}. <a href="{% url 'contributions:detail_view' contribution.parent.id %}">{% translate "View the initial contribution" %}</a>.
+            {% blocktrans %}This comment is a <strong>reply</strong>{% endblocktrans %}. <a href="{% url 'contributions:detail_view' comment.parent.id %}">{% translate "View the initial comment" %}</a>.
         </div>
     {% endif %}
     <div class="row mb-3">
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_view' contribution.id %}">{% translate "Details" %}</a>
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_view' comment.id %}">
+                        {% translate "Details" %}
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if contribution.parent %}disabled{% endif %} {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_edit' contribution.id %}">{% translate "Edit" %}</a>
+                    <a class="nav-link {% if comment.parent %}disabled{% endif %} {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_edit' comment.id %}">
+                        {% translate "Edit" %}
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if contribution.parent %}disabled{% endif %} {% if 'reply' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_reply_create' contribution.id %}">
-                        {% translate "Comments" %} <span>({{ contribution.replies.count }})</span>
+                    <a class="nav-link {% if comment.parent %}disabled{% endif %} {% if 'reply' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_reply_create' comment.id %}">
+                        {% translate "Comments" %} <span>({{ comment.replies.count }})</span>
                     </a>
                 </li>
             </ul>
         </div>
     </div>
 
-    {% block contribution_detail_content %}{% endblock %}
+    {% block comment_detail_content %}{% endblock %}
 </div>
 {% endblock %}

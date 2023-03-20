@@ -1,21 +1,21 @@
 from django import forms
 from django.utils.translation import gettext_lazy as _
 
-from contributions.models import Contribution
+from contributions.models import Comment
 from core import constants
 
 
-CONTRIBUTION_STATUS_EDIT_FORM_FIELDS = [
-    field.name for field in Contribution._meta.fields if field.name not in Contribution.CONTRIBUTION_READONLY_FIELDS
+COMMENT_STATUS_EDIT_FORM_FIELDS = [
+    field.name for field in Comment._meta.fields if field.name not in Comment.COMMENT_READONLY_FIELDS
 ]
-CONTRIBUTION_REPLY_CREATE_FORM_FIELDS = ["type", "text", "author", "parent", "status"]
-CONTRIBUTION_REPLY_HIDDEN_FORM_FIELDS = ["parent", "status"]
+COMMENT_REPLY_CREATE_FORM_FIELDS = ["type", "text", "author", "parent", "status"]
+COMMENT_REPLY_HIDDEN_FORM_FIELDS = ["parent", "status"]
 
 
-class ContributionStatusEditForm(forms.ModelForm):
+class CommentStatusEditForm(forms.ModelForm):
     class Meta:
-        model = Contribution
-        fields = CONTRIBUTION_STATUS_EDIT_FORM_FIELDS
+        model = Comment
+        fields = COMMENT_STATUS_EDIT_FORM_FIELDS
         widgets = {
             "text": forms.Textarea(attrs={"rows": 3}),
             "description": forms.Textarea(attrs={"rows": 3}),
@@ -28,12 +28,12 @@ class ContributionStatusEditForm(forms.ModelForm):
                 self.fields[field_name].disabled = True
 
 
-class ContributionReplyCreateForm(forms.ModelForm):
-    type = forms.ChoiceField(choices=constants.CONTRIBUTION_TYPE_REPLY_CHOICES, widget=forms.RadioSelect)
+class CommentReplyCreateForm(forms.ModelForm):
+    type = forms.ChoiceField(choices=constants.COMMENT_TYPE_REPLY_CHOICES, widget=forms.RadioSelect)
 
     class Meta:
-        model = Contribution
-        fields = CONTRIBUTION_REPLY_CREATE_FORM_FIELDS
+        model = Comment
+        fields = COMMENT_REPLY_CREATE_FORM_FIELDS
         widgets = {
             "text": forms.Textarea(attrs={"rows": 3}),
         }
@@ -45,10 +45,10 @@ class ContributionReplyCreateForm(forms.ModelForm):
             if field_name not in ["text", "type"]:
                 self.fields[field_name].disabled = True
         # hide some fields (defaults)
-        for field_name in CONTRIBUTION_REPLY_HIDDEN_FORM_FIELDS:
+        for field_name in COMMENT_REPLY_HIDDEN_FORM_FIELDS:
             self.fields[field_name].widget = forms.HiddenInput()
         # initial values
-        self.fields["type"].initial = constants.CONTRIBUTION_TYPE_COMMENT_CONTRIBUTOR
-        self.fields["status"].initial = constants.CONTRIBUTION_STATUS_PROCESSED  # ?
+        self.fields["type"].initial = constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR
+        self.fields["status"].initial = constants.COMMENT_STATUS_PROCESSED  # ?
         self.fields["text"].label = _("Message")
         self.fields["text"].help_text = None

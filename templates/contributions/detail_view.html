@@ -1,7 +1,7 @@
 {% extends "contributions/detail_base.html" %}
 {% load i18n custom_filters get_verbose_name %}
 
-{% block contribution_detail_content %}
+{% block comment_detail_content %}
 <div class="row">
     <div class="col-12">
         <div class="table-container">
@@ -13,15 +13,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for field in contribution_dict %}
+                    {% for field in comment_dict %}
                         <tr>
-                            <td class="fw-bold">{% get_verbose_name contribution field %}</td>
-                            {% if field in contribution.CONTRIBUTION_CHOICE_FIELDS or field in contribution.CONTRIBUTION_FK_FIELDS %}
+                            <td class="fw-bold">{% get_verbose_name comment field %}</td>
+                            {% if field in comment.COMMENT_CHOICE_FIELDS or field in comment.COMMENT_FK_FIELDS %}
                                 <td>
-                                    {% include "includes/_badge_item.html" with value=contribution_dict|get_obj_attr:field field_name=field %}
+                                    {% include "includes/_badge_item.html" with value=comment_dict|get_obj_attr:field field_name=field %}
                                 </td>
                             {% else %}
-                                <td>{{ contribution_dict|get_obj_attr:field|default:"" }}</td>
+                                <td>{{ comment_dict|get_obj_attr:field|default:"" }}</td>
                             {% endif %}
                         </tr>
                     {% endfor %}

@@ -6,7 +6,7 @@ from django.db import IntegrityError
 from django.utils import timezone
 
 from categories.models import Category
-from contributions.models import Contribution
+from contributions.models import Comment
 from core import constants
 from core.models import Configuration
 from core.utils import notion
@@ -276,7 +276,7 @@ class Command(BaseCommand):
             validation_errors_message += (
                 f"Erreurs : {len(validation_errors)}" + "\n" + "\n".join([str(error) for error in validation_errors])
             )
-            Contribution.objects.create(
+            Comment.objects.create(
                 text="Erreur(s) lors de l'import",
                 description=validation_errors_message,
                 type="erreur application",

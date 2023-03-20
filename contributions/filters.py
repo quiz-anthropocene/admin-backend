@@ -1,9 +1,9 @@
 import django_filters
 
-from contributions.models import Contribution
+from contributions.models import Comment
 
 
-class ContributionFilter(django_filters.FilterSet):
+class CommentFilter(django_filters.FilterSet):
     class Meta:
-        model = Contribution
+        model = Comment
         fields = ["type", "status"]
