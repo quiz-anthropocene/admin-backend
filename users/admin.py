@@ -37,7 +37,7 @@ class HasUserCardFilter(admin.SimpleListFilter):
         if value == "Yes":
             return queryset.has_user_card()
         elif value == "No":
-            return queryset.filter(user_detail__isnull=True)
+            return queryset.filter(user_card__isnull=True)
         return queryset
 
 

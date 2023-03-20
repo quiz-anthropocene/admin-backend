@@ -1,0 +1,43 @@
+{% extends "layouts/base.html" %}
+{% load i18n django_bootstrap5 %}
+
+{% block title %}{% translate "Author cards" %}{{ block.super }}{% endblock %}
+
+{% block breadcrumbs %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 my-auto">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'users:home' %}">{% translate "Users" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "Author cards" %}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-9">
+            <h1>{% translate "Author cards" %} <span class="fs-3 text-muted">{{ users_with_card.count }}</span></h1>
+        </div>
+    </div>
+    <div class="row">
+        {% for user in users_with_card %}
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ user.full_name }}</h5>
+                        <span class="badge bg-primary">{{ user.quiz_public_count }} {% blocktrans count counter=user.quiz_public_count %}quiz{% plural %}quizs{% endblocktrans %}</span>
+                        <span class="badge bg-primary">{{ user.question_public_count }} {% blocktrans count counter=user.question_public_count %}question{% plural %}questions{% endblocktrans %}</span>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

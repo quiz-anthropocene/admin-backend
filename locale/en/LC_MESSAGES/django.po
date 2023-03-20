@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-13 18:08+0100\n"
+"POT-Creation-Date: 2023-03-20 13:03+0100\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -94,7 +94,7 @@ msgstr ""
 #: quizs/models.py:437 quizs/models.py:500 quizs/models.py:560
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
 #: stats/models.py:207 stats/models.py:218 stats/models.py:304
-#: tags/models.py:29 users/models.py:193 users/models.py:304
+#: tags/models.py:29 users/models.py:193 users/models.py:312
 msgid "Creation date"
 msgstr ""
 
@@ -185,7 +185,7 @@ msgstr ""
 #: categories/models.py:16 contributions/models.py:85 glossary/models.py:33
 #: questions/models.py:234 quizs/models.py:160 quizs/models.py:438
 #: quizs/models.py:501 quizs/models.py:561 stats/models.py:305
-#: tags/models.py:30 users/models.py:194 users/models.py:305
+#: tags/models.py:30 users/models.py:194 users/models.py:313
 msgid "Last update date"
 msgstr ""
 
@@ -827,7 +827,8 @@ msgstr ""
 #: templates/quizs/create.html:17 templates/quizs/detail_base.html:12
 #: templates/quizs/list.html:13 templates/tags/create.html:16
 #: templates/tags/detail_base.html:12 templates/tags/list.html:13
-#: templates/users/administrator_list.html:13 templates/users/home.html:12
+#: templates/users/administrator_list.html:13
+#: templates/users/author_card_list.html:12 templates/users/home.html:12
 msgid "Home"
 msgstr ""
 
@@ -900,7 +901,7 @@ msgstr ""
 #: templates/contributions/_table_action_items.html:13
 #: templates/profile/home.html:28 templates/profile/home.html:36
 #: templates/profile/home.html:47 templates/profile/home.html:60
-#: templates/users/home.html:42
+#: templates/users/home.html:43
 msgid "View"
 msgstr ""
 
@@ -1059,7 +1060,8 @@ msgid "My space"
 msgstr ""
 
 #: templates/includes/_header.html:41
-#: templates/users/administrator_list.html:14 templates/users/home.html:4
+#: templates/users/administrator_list.html:14
+#: templates/users/author_card_list.html:13 templates/users/home.html:4
 #: templates/users/home.html:13 users/models.py:200
 msgid "Users"
 msgstr ""
@@ -1319,11 +1321,33 @@ msgstr ""
 msgid "All the tags"
 msgstr ""
 
+#: templates/users/author_card_list.html:4
+#: templates/users/author_card_list.html:14
+#: templates/users/author_card_list.html:26
+msgid "Author cards"
+msgstr ""
+
+#: templates/users/author_card_list.html:35
+msgid "quiz"
+msgid_plural "quizs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/users/author_card_list.html:36
+msgid "question"
+msgid_plural "questions"
+msgstr[0] ""
+msgstr[1] ""
+
 #: templates/users/home.html:34
 msgid "Quiz authors"
 msgstr ""
 
-#: templates/users/home.html:41
+#: templates/users/home.html:35
+msgid "View author cards"
+msgstr ""
+
+#: templates/users/home.html:42
 msgid "Administrators"
 msgstr ""
 
@@ -1376,26 +1400,26 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-#: users/models.py:296
+#: users/models.py:304
 msgid "User image (link)"
 msgstr ""
 
-#: users/models.py:300
+#: users/models.py:308
 msgid "Short biography"
 msgstr ""
 
-#: users/models.py:301
+#: users/models.py:309
 msgid "Relationship with the Anthropocene Quiz"
 msgstr ""
 
-#: users/models.py:302
+#: users/models.py:310
 msgid "Website (link)"
 msgstr ""
 
-#: users/models.py:310
+#: users/models.py:318
 msgid "User card"
 msgstr ""
 
-#: users/models.py:311
+#: users/models.py:319
 msgid "User cards"
 msgstr ""
