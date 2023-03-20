@@ -13,7 +13,7 @@ contribution_patterns = i18n_patterns(
     path("quizs/", include("www.quizs.urls")),
     path("categories/", include("www.categories.urls")),
     path("tags/", include("www.tags.urls")),
-    path("contributions/", include("www.contributions.urls")),
+    path("comments/", include("www.contributions.urls")),
     path("glossary/", include("www.glossary.urls")),
     path("activity/", include("www.activity.urls")),
     path("users/", include("www.users.urls")),

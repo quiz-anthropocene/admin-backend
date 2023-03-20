@@ -9,6 +9,7 @@
                 <div class="row">
                     <div class="col">
                         {% blocktrans with comment_author=comment.get_author %}Message by <strong>{{ comment_author }}</strong>{% endblocktrans %}
+                        <span class="badge bg-primary">{{ comment.get_type_display }}</span>
                     </div>
                     <div class="col text-end">
                         <i title="{{ comment.created }}">{{ comment.created|timesince }}</i>
@@ -23,6 +24,7 @@
 </div>
 
 <br />
+<br />
 
 <div class="row">
     <div class="col-12">
@@ -31,7 +33,8 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col">
-                            {{ reply.get_reply_type }} de <strong>{{ reply.get_author }}</strong>
+                            {% blocktrans with comment_author=reply.get_author %}Message by <strong>{{ comment_author }}</strong>{% endblocktrans %}
+                            <span class="badge bg-primary">{{ reply.get_type_display }}</span>
                         </div>
                         <div class="col text-end">
                             <i title="{{ reply.created }}">{{ reply.created|timesince }}</i>
@@ -47,11 +50,11 @@
 
         <div class="card">
             <div class="card-header">
-                <strong>{% translate "Reply to the initial message, or add a comment" %}</strong>
+                <strong>{% translate "Reply to the initial comment, or add a note" %}</strong>
             </div>
             <div class="card-body">
                 <div class="alert alert-warning" role="status">
-                    {% blocktrans %}<strong>A comment?</strong> It would help keeping track of how the comment is processed{% endblocktrans %}.
+                    {% blocktrans %}<strong>A note?</strong> It would help keep track of how the initial comment is processed{% endblocktrans %}.
                     <br />
                     {% blocktrans %}<strong>A reply?</strong> Only one reply possible. For now this content is only visible to contributors, but we will eventually publish comments with their respective replies (to display more information under a question){% endblocktrans %}.
                 </div>

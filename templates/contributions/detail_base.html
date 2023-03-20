@@ -30,10 +30,14 @@
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_view' comment.id %}">{% translate "Details" %}</a>
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_view' comment.id %}">
+                        {% translate "Details" %}
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if comment.parent %}disabled{% endif %} {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_edit' comment.id %}">{% translate "Edit" %}</a>
+                    <a class="nav-link {% if comment.parent %}disabled{% endif %} {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_edit' comment.id %}">
+                        {% translate "Edit" %}
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if comment.parent %}disabled{% endif %} {% if 'reply' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_reply_create' comment.id %}">

@@ -88,7 +88,6 @@ class Comment(models.Model):
     class Meta:
         verbose_name = _("Comment")
         verbose_name_plural = _("Comments")
-        ordering = ["-created"]
 
     def __str__(self):
         return f"{self.text}"
@@ -96,9 +95,6 @@ class Comment(models.Model):
     @property
     def get_author(self) -> str:
         return self.author or _("Anonymous user")
-
-    def get_reply_type(self) -> str:
-        return self.get_type_display().replace(_(" contributor"), "")
 
     @property
     def has_replies(self) -> bool:

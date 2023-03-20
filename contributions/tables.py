@@ -9,7 +9,6 @@ COMMENT_FIELDS = ["type", "text", "author", "question", "quiz", "status", "creat
 
 
 class CommentTable(tables.Table):
-    type = ChoiceColumn()
     text = RichTextLongerEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
     question = tables.Column(
         verbose_name="Question",
@@ -36,3 +35,8 @@ class CommentTable(tables.Table):
         template_name = DEFAULT_TEMPLATE
         fields = COMMENT_FIELDS
         attrs = DEFAULT_ATTRS
+
+    def __init__(self, *args, **kwargs):
+        for field_name in Comment.COMMENT_CHOICE_FIELDS:
+            self.base_columns[field_name] = ChoiceColumn()
+        super().__init__(*args, **kwargs)

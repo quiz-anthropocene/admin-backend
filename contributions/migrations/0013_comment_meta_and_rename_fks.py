@@ -17,7 +17,26 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name="comment",
-            options={"ordering": ["-created"], "verbose_name": "Comment", "verbose_name_plural": "Comments"},
+            options={"verbose_name": "Comment", "verbose_name_plural": "Comments"},
+        ),
+        migrations.AlterField(
+            model_name="comment",
+            name="type",
+            field=models.CharField(
+                blank=True,
+                choices=[
+                    ("NEW_QUESTION", "New question"),
+                    ("NEW_QUIZ", "New quiz"),
+                    ("COMMENT_APP", "Comment about the app"),
+                    ("COMMENT_QUESTION", "Comment about a question"),
+                    ("COMMENT_QUIZ", "Comment about a quiz"),
+                    ("COMMENT_CONTRIBUTOR", "Contributor note"),
+                    ("REPLY", "Reply"),
+                    ("ERROR_APP", "Application error"),
+                ],
+                max_length=150,
+                verbose_name="Type",
+            ),
         ),
         migrations.AlterField(
             model_name="comment",

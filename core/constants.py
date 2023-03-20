@@ -84,13 +84,13 @@ COMMENT_TYPE_CHOICES = [
     (COMMENT_TYPE_COMMENT_APP, _("Comment about the app")),
     (COMMENT_TYPE_COMMENT_QUESTION, _("Comment about a question")),
     (COMMENT_TYPE_COMMENT_QUIZ, _("Comment about a quiz")),
-    (COMMENT_TYPE_COMMENT_CONTRIBUTOR, _("Contributor comment")),
+    (COMMENT_TYPE_COMMENT_CONTRIBUTOR, _("Contributor note")),
     (COMMENT_TYPE_REPLY, _("Reply")),
     (COMMENT_TYPE_ERROR_APP, _("Application error")),
 ]
 
 COMMENT_TYPE_REPLY_CHOICES = [
-    (COMMENT_TYPE_COMMENT_CONTRIBUTOR, _("Comment")),
+    (COMMENT_TYPE_COMMENT_CONTRIBUTOR, _("Note")),
     (COMMENT_TYPE_REPLY, _("Answer")),
 ]
 
