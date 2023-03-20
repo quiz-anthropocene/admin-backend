@@ -5,7 +5,7 @@ from api.contributions.serializers import CommentSerializer
 from contributions.models import Comment
 
 
-class CommentViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
+class ContributionViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 

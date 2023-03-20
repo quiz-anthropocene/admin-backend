@@ -4,7 +4,7 @@ from rest_framework import routers
 
 from api import views
 from api.categories.views import CategoryViewSet
-from api.contributions.views import CommentViewSet
+from api.contributions.views import ContributionViewSet
 from api.glossary.views import GlossaryViewSet
 from api.questions.views import (
     QuestionDifficultyViewSet,
@@ -31,7 +31,7 @@ router.register(r"quizs", QuizViewSet, basename="quiz")
 router.register(r"categories", CategoryViewSet, basename="category")
 router.register(r"tags", TagViewSet, basename="tag")
 router.register(r"glossary", GlossaryViewSet, basename="glossary")
-router.register(r"comments", CommentViewSet, basename="contribution")
+router.register(r"contributions", ContributionViewSet, basename="contribution")
 
 urlpatterns = [
     path("", views.api_home, name="index"),
