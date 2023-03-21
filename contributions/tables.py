@@ -5,7 +5,7 @@ from contributions.models import Comment
 from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, ChoiceColumn, RichTextLongerEllipsisColumn
 
 
-COMMENT_FIELDS = ["type", "text", "author", "question", "quiz", "status", "created"]  # id, description
+COMMENT_FIELDS = ["type", "text", "author", "question", "quiz", "status", "created"]  # id, description, updated
 
 
 class CommentTable(tables.Table):
