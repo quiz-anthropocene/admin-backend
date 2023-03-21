@@ -7,9 +7,10 @@ from django_tables2.views import SingleTableMixin
 
 from api.contributions.serializers import CommentSerializer
 from contributions.filters import CommentFilter
-from contributions.forms import COMMENT_STATUS_EDIT_FORM_FIELDS, CommentReplyCreateForm, CommentStatusEditForm
+from contributions.forms import COMMENT_EDIT_FORM_FIELDS, CommentEditForm, CommentReplyCreateForm
 from contributions.models import Comment
 from contributions.tables import CommentTable
+from core import constants
 from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import ContributorUserRequiredMixin
 from history.utilities import get_diff_between_two_history_records
@@ -51,7 +52,7 @@ class CommentDetailView(ContributorUserRequiredMixin, DetailView):
 
 
 class CommentDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
-    form_class = CommentStatusEditForm
+    form_class = CommentEditForm
     template_name = "contributions/detail_edit.html"
     context_object_name = "comment"
     success_message = "Le commentaire a été mise à jour."
@@ -59,6 +60,13 @@ class CommentDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, U
 
     def get_object(self):
         return get_object_or_404(Comment, id=self.kwargs.get("pk"))
+
+    def get_form(self, *args, **kwargs):
+        comment = self.get_object()
+        form = super().get_form(self.form_class)
+        if comment.type in constants.COMMENT_TYPE_EDITABLE_LIST:
+            form.fields["text"].disabled = False
+        return form
 
     def get(self, request, *args, **kwargs):
         comment = self.get_object()
@@ -121,7 +129,7 @@ class CommentDetailHistoryView(ContributorUserRequiredMixin, DetailView):
             else:
                 # probably a create action
                 # we create the diff ourselves because there isn't any previous record
-                delta_fields = COMMENT_STATUS_EDIT_FORM_FIELDS
+                delta_fields = COMMENT_EDIT_FORM_FIELDS
                 delta_new = [{"field": k, "new": v} for k, v in record.__dict__.items() if k in delta_fields if v]
                 context["comment_history_delta"].append(delta_new)
         return context
