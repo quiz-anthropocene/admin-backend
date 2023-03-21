@@ -61,6 +61,12 @@ class CommentModelQuerySetTest(TestCase):
     def test_comment_exclude_errors(self):
         self.assertEqual(Comment.objects.exclude_errors().count(), 10 - 1)
 
+    def test_comment_only_replies(self):
+        self.assertEqual(Comment.objects.only_replies().count(), 2)
+
+    def test_comment_only_notes(self):
+        self.assertEqual(Comment.objects.only_notes().count(), 2)
+
     def test_comment_has_replies_contributor_comments(self):
         self.assertEqual(Comment.objects.has_replies_contributor_comments().count(), 2)
 

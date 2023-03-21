@@ -13,9 +13,26 @@
                 </div>
                 <!-- Sidebar -->
                 <div class="col-md-4 d-none d-md-block">
+                    {% if comment.question %}
+                        <div class="alert alert-primary" role="alert">
+                            {% url 'questions:detail_view' comment.question.id as comment_question_url %}
+                            {% blocktrans with comment_question_url=comment_question_url comment_question=comment.question %}Comment linked to the question <a href="{{ comment_question_url }}" target="_blank">{{ comment_question }}</a>{% endblocktrans %}
+                        </div>
+                    {% endif %}
+                    {% if comment.quiz %}
+                        <div class="alert alert-primary" role="alert">
+                            {% url 'quizs:detail_view' comment.quiz.id as comment_quiz_url %}
+                            {% blocktrans with comment_quiz_url=comment_quiz_url comment_quiz=comment.quiz %}Comment linked to the quiz <a href="{{ comment_quiz_url }}" target="_blank">{{ comment_quiz }}</a>{% endblocktrans %}
+                        </div>
+                    {% endif %}
                     {% if not comment.processed %}
                         <div class="alert alert-warning" role="alert">
                             ✍️ {% blocktrans %}This comment has not yet been <strong>processed</strong>{% endblocktrans %}.
+                        </div>
+                    {% endif %}
+                    {% if comment.processed %}
+                        <div class="alert alert-success" role="alert">
+                            ✅ {% translate "Processed" %}
                         </div>
                     {% endif %}
                 </div>

@@ -33,8 +33,11 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col">
-                            {% blocktrans with comment_author=reply.get_author %}Message by <strong>{{ comment_author }}</strong>{% endblocktrans %}
-                            <span class="badge bg-primary">{{ reply.get_type_display }}</span>
+                            {% if reply.type == "COMMENT_CONTRIBUTOR" %}
+                                {% blocktrans with comment_author=reply.get_author %}Note by <strong>{{ comment_author }}</strong>{% endblocktrans %}
+                            {% elif reply.type == "REPLY" %}
+                                {% blocktrans with comment_author=reply.get_author %}Reply by <strong>{{ comment_author }}</strong>{% endblocktrans %}
+                            {% endif %}
                         </div>
                         <div class="col text-end">
                             <i title="{{ reply.created }}">{{ reply.created|timesince }}</i>
