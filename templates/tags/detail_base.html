@@ -25,16 +25,24 @@
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_view' tag.id %}">{% translate "Details" %}</a>
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_view' tag.id %}">
+                        {% translate "Details" %}
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_edit' tag.id %}">{% translate "Edit" %}</a>
+                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_edit' tag.id %}">
+                        {% translate "Edit" %}
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'questions' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_questions' tag.id %}">{% translate "Questions" %} ({{ tag.question_count }})</a>
+                    <a class="nav-link {% if 'questions' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_questions' tag.id %}">
+                        {% translate "Questions" %} ({{ tag.question_count }})
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'quizs' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_quizs' tag.id %}">{% translate "Quizs" %} ({{ tag.quiz_count }})</a>
+                    <a class="nav-link {% if 'quizs' in request.path %}active fw-bold{% endif %}" href="{% url 'tags:detail_quizs' tag.id %}">
+                        {% translate "Quizs" %} ({{ tag.quiz_count }})
+                    </a>
                 </li>
             </ul>
         </div>

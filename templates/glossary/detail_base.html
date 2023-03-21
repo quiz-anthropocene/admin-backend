@@ -25,13 +25,19 @@
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_view' glossary_item.id %}">{% translate "Details" %}</a>
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_view' glossary_item.id %}">
+                        {% translate "Details" %}
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_edit' glossary_item.id %}">{% translate "Edit" %}</a>
+                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_edit' glossary_item.id %}">
+                        {% translate "Edit" %}
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'history' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_history' glossary_item.id %}">{% translate "History" %}</a>
+                    <a class="nav-link {% if 'history' in request.path %}active fw-bold{% endif %}" href="{% url 'glossary:detail_history' glossary_item.id %}">
+                        {% translate "History" %}
+                    </a>
                 </li>
             </ul>
         </div>

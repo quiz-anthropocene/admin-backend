@@ -25,13 +25,19 @@
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'categories:detail_view' category.id %}">{% translate "Details" %}</a>
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'categories:detail_view' category.id %}">
+                        {% translate "Details" %}
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'categories:detail_edit' category.id %}">{% translate "Edit" %}</a>
+                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'categories:detail_edit' category.id %}">
+                        {% translate "Edit" %}
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'questions' in request.path %}active fw-bold{% endif %}" href="{% url 'categories:detail_questions' category.id %}">{% translate "Questions" %} ({{ category.question_count }})</a>
+                    <a class="nav-link {% if 'questions' in request.path %}active fw-bold{% endif %}" href="{% url 'categories:detail_questions' category.id %}">
+                        {% translate "Questions" %} ({{ category.question_count }})
+                    </a>
                 </li>
             </ul>
         </div>

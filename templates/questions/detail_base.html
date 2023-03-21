@@ -25,22 +25,34 @@
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_view' question.id %}">{% translate "Details" %}</a>
+                    <a class="nav-link {% if 'view' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_view' question.id %}">
+                        {% translate "Details" %}
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_edit' question.id %}">{% translate "Edit" %}</a>
+                    <a class="nav-link {% if 'edit' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_edit' question.id %}">
+                        {% translate "Edit" %}
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'quizs' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_quizs' question.id %}">{% translate "Quizs" %} ({{ question.quiz_count }})</a>
+                    <a class="nav-link {% if 'quizs' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_quizs' question.id %}">
+                        {% translate "Quizs" %} ({{ question.quiz_count }})
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'comments' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_comments' question.id %}">{% translate "Comments" %} ({{ question.comment_count }})</a>
+                    <a class="nav-link {% if 'comments' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_comments' question.id %}">
+                        {% translate "Comments" %} ({{ question.comment_count }})
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'stats' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_stats' question.id %}">{% translate "Statistics" %}</a>
+                    <a class="nav-link {% if 'stats' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_stats' question.id %}">
+                        {% translate "Statistics" %}
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'history' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_history' question.id %}">{% translate "History" %}</a>
+                    <a class="nav-link {% if 'history' in request.path %}active fw-bold{% endif %}" href="{% url 'questions:detail_history' question.id %}">
+                        {% translate "History" %}
+                    </a>
                 </li>
             </ul>
         </div>

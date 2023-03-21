@@ -15,7 +15,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for record in glos_item_history %}
+                    {% for record in comment_history %}
                         <tr>
                             <td>{{ record.history_date }}</td>
                             <td>{{ record.history_user|default:"—" }}</td>
