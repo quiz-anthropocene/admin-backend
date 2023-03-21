@@ -7,11 +7,12 @@ from django_tables2.views import SingleTableMixin
 
 from api.contributions.serializers import CommentSerializer
 from contributions.filters import CommentFilter
-from contributions.forms import CommentReplyCreateForm, CommentStatusEditForm
+from contributions.forms import COMMENT_STATUS_EDIT_FORM_FIELDS, CommentReplyCreateForm, CommentStatusEditForm
 from contributions.models import Comment
 from contributions.tables import CommentTable
 from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import ContributorUserRequiredMixin
+from history.utilities import get_diff_between_two_history_records
 
 
 class CommentListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
@@ -96,3 +97,31 @@ class CommentDetailReplyCreateView(ContributorUserRequiredMixin, SuccessMessageM
 
     def get_success_url(self):
         return reverse_lazy("contributions:detail_view", args=[self.kwargs.get("pk")])
+
+
+class CommentDetailHistoryView(ContributorUserRequiredMixin, DetailView):
+    model = Comment
+    template_name = "contributions/detail_history.html"
+    context_object_name = "comment"
+
+    def get_object(self):
+        return get_object_or_404(Comment, id=self.kwargs.get("pk"))
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["comment_history"] = self.get_object().history.all()
+        context["comment_history_delta"] = list()
+        for record in context["comment_history"]:
+            new_record = record
+            if new_record.prev_record:
+                delta_changes = get_diff_between_two_history_records(
+                    new_record, old_record=new_record.prev_record, returns="changes"
+                )
+                context["comment_history_delta"].append(delta_changes)
+            else:
+                # probably a create action
+                # we create the diff ourselves because there isn't any previous record
+                delta_fields = COMMENT_STATUS_EDIT_FORM_FIELDS
+                delta_new = [{"field": k, "new": v} for k, v in record.__dict__.items() if k in delta_fields if v]
+                context["comment_history_delta"].append(delta_new)
+        return context

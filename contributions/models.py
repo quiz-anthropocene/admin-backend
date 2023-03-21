@@ -4,9 +4,11 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
+from simple_history.models import HistoricalRecords
 
 from core import constants
 from core.utils.utilities import truncate_with_ellipsis
+from history.models import HistoryChangedFieldsAbstractModel
 from questions.models import Question
 from quizs.models import Quiz
 
@@ -103,6 +105,8 @@ class Comment(models.Model):
 
     created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
     updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
+
+    history = HistoricalRecords(bases=[HistoryChangedFieldsAbstractModel])
 
     objects = CommentQuerySet.as_manager()
 
