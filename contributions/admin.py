@@ -12,9 +12,11 @@ class CommentAdmin(ExportMixin, admin.ModelAdmin):
         "description",
         # "question",
         # "quiz",
+        "author",
+        "status",
         "created",
     )
-    list_filter = ("type",)
+    list_filter = ["type", "status"]
 
     def get_readonly_fields(self, request, obj=None):
         return [f.name for f in obj._meta.fields]
