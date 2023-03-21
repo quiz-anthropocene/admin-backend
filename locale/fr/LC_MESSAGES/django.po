@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-20 18:20+0100\n"
-"PO-Revision-Date: 2023-03-20 18:01+0100\n"
+"POT-Creation-Date: 2023-03-21 15:00+0100\n"
+"PO-Revision-Date: 2023-03-21 15:00+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -43,14 +43,14 @@ msgstr "Supprimé"
 msgid "Computed"
 msgstr "Calculé"
 
-#: activity/models.py:41 contributions/models.py:47 questions/models.py:248
+#: activity/models.py:41 contributions/models.py:68 questions/models.py:248
 #: quizs/models.py:434 templates/categories/detail_questions.html:12
 #: templates/questions/detail_base.html:4
 #: templates/tags/detail_questions.html:12
 msgid "Question"
 msgstr "Question"
 
-#: activity/models.py:42 contributions/models.py:55 quizs/models.py:180
+#: activity/models.py:42 contributions/models.py:76 quizs/models.py:180
 #: quizs/models.py:433 quizs/models.py:553
 #: templates/questions/detail_quizs.html:12 templates/quizs/detail_base.html:4
 #: templates/tags/detail_quizs.html:12
@@ -89,7 +89,7 @@ msgstr "Nom de l'objet"
 msgid "Additional data"
 msgstr "Données supplémentaires"
 
-#: activity/models.py:74 categories/models.py:15 contributions/models.py:83
+#: activity/models.py:74 categories/models.py:15 contributions/models.py:104
 #: glossary/models.py:32 questions/models.py:233 quizs/models.py:159
 #: quizs/models.py:437 quizs/models.py:500 quizs/models.py:560
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
@@ -124,20 +124,20 @@ msgstr ""
 #: activity/models.py:130
 #, python-brace-format
 msgid ""
-"<i>{actor_name}</i> {event_verb} the question <a "
-"href=\"{question_admin_absolute_url}\">{question_name}</a>"
+"<i>{actor_name}</i> {event_verb} the question <a href="
+"\"{question_admin_absolute_url}\">{question_name}</a>"
 msgstr ""
-"<i>{actor_name}</i> a {event_verb} la question <a "
-"href=\"{question_admin_absolute_url}\">{question_name}</a>"
+"<i>{actor_name}</i> a {event_verb} la question <a href="
+"\"{question_admin_absolute_url}\">{question_name}</a>"
 
 #: activity/models.py:145
 #, python-brace-format
 msgid ""
-"<i>{actor_name}</i> {event_verb} the quiz <a "
-"href=\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
+"<i>{actor_name}</i> {event_verb} the quiz <a href="
+"\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
 msgstr ""
-"<i>{actor_name}</i> a {event_verb} le quiz <a "
-"href=\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
+"<i>{actor_name}</i> a {event_verb} le quiz <a href="
+"\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
 
 #: activity/models.py:156
 #, python-brace-format
@@ -189,7 +189,7 @@ msgstr "Nom (version longue)"
 msgid "Description"
 msgstr "Description"
 
-#: categories/models.py:16 contributions/models.py:84 glossary/models.py:33
+#: categories/models.py:16 contributions/models.py:105 glossary/models.py:33
 #: questions/models.py:234 quizs/models.py:160 quizs/models.py:438
 #: quizs/models.py:501 quizs/models.py:561 stats/models.py:305
 #: tags/models.py:30 users/models.py:194 users/models.py:313
@@ -212,27 +212,43 @@ msgstr "Catégories"
 msgid "Questions (public & validated)"
 msgstr "Questions (publiques & validées)"
 
+#: contributions/admin.py:10
+msgid "Parent?"
+msgstr "Parent ?"
+
+#: contributions/admin.py:14 contributions/admin.py:30 users/admin.py:34
+msgid "Yes"
+msgstr "Oui"
+
+#: contributions/admin.py:14 contributions/admin.py:30 users/admin.py:34
+msgid "No"
+msgstr "Non"
+
+#: contributions/admin.py:26
+msgid "Answered?"
+msgstr "Répondu ?"
+
 #: contributions/forms.py:53
 msgid "Message"
 msgstr "Message"
 
-#: contributions/models.py:39 questions/models.py:97
+#: contributions/models.py:60 questions/models.py:97
 msgid "Text"
 msgstr "Texte"
 
-#: contributions/models.py:41
+#: contributions/models.py:62
 msgid "A question, a comment…"
 msgstr "Une question, un commentaire…"
 
-#: contributions/models.py:43
+#: contributions/models.py:64
 msgid "Additional information"
 msgstr "Informations supplémentaires"
 
-#: contributions/models.py:44 history/tables.py:10 questions/models.py:102
+#: contributions/models.py:65 history/tables.py:10 questions/models.py:102
 msgid "Type"
 msgstr "Type"
 
-#: contributions/models.py:58 history/tables.py:9 questions/models.py:202
+#: contributions/models.py:79 history/tables.py:9 questions/models.py:202
 #: questions/models.py:240 quizs/models.py:555
 #: templates/glossary/detail_history.html:12
 #: templates/questions/detail_history.html:12
@@ -240,19 +256,19 @@ msgstr "Type"
 msgid "Author"
 msgstr "Auteur"
 
-#: contributions/models.py:67 questions/models.py:211 quizs/models.py:126
+#: contributions/models.py:88 questions/models.py:211 quizs/models.py:126
 msgid "Status"
 msgstr "Statut"
 
-#: contributions/models.py:75
+#: contributions/models.py:96
 msgid "In reply to"
 msgstr "En réponse à"
 
-#: contributions/models.py:89 templates/contributions/detail_base.html:4
+#: contributions/models.py:110 templates/contributions/detail_base.html:4
 msgid "Comment"
 msgstr "Commentaire"
 
-#: contributions/models.py:90 templates/contributions/detail_base.html:13
+#: contributions/models.py:111 templates/contributions/detail_base.html:13
 #: templates/contributions/detail_base.html:44
 #: templates/contributions/list.html:5 templates/contributions/list.html:14
 #: templates/includes/_header.html:32 templates/questions/detail_base.html:37
@@ -260,11 +276,20 @@ msgstr "Commentaire"
 msgid "Comments"
 msgstr "Commentaires"
 
-#: contributions/models.py:97
+#: contributions/models.py:118
 msgid "Anonymous user"
 msgstr "Utilisateur anonyme"
 
-#: contributions/tables.py:25 core/constants.py:105
+#: contributions/models.py:159 contributions/models.py:160
+msgid "Parent"
+msgstr "Parent"
+
+#: contributions/models.py:161 contributions/models.py:162
+#: contributions/tables.py:25
+msgid "Answered"
+msgstr "Répondu"
+
+#: contributions/tables.py:26 core/constants.py:105
 msgid "Processed"
 msgstr "Traité"
 
@@ -915,7 +940,7 @@ msgid "History"
 msgstr "Historique"
 
 #: templates/admin/home.html:28 templates/admin/home.html:36
-#: templates/contributions/_table_action_items.html:13
+#: templates/contributions/_table_action_items.html:3
 #: templates/profile/home.html:28 templates/profile/home.html:36
 #: templates/profile/home.html:47 templates/profile/home.html:60
 #: templates/users/home.html:43
@@ -1373,6 +1398,10 @@ msgstr "Voir les fiches auteurs"
 msgid "Administrators"
 msgstr "Administrateurs"
 
+#: users/admin.py:30
+msgid "User card?"
+msgstr "Fiche utilisateur ?"
+
 #: users/constants.py:9
 msgid "Super Contributor"
 msgstr "Super contributeur"
@@ -1462,9 +1491,6 @@ msgstr "Fiches utilisateurs"
 
 #~ msgid "In answer to"
 #~ msgstr "En réponse à"
-
-#~ msgid "Answered"
-#~ msgstr "Répondu"
 
 #~ msgid "Date & time of answer"
 #~ msgstr "La date & heure de la réponse"

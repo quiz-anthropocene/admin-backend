@@ -31,26 +31,44 @@ class CommentModelQuerySetTest(TestCase):
     def setUpTestData(cls):
         cls.question = QuestionFactory()
         cls.quiz = QuizFactory()
-        cls.comment_with_reply = CommentFactory(type=constants.COMMENT_TYPE_COMMENT_APP)
-        cls.comment_reply = CommentFactory(type=constants.COMMENT_TYPE_REPLY, parent=cls.comment_with_reply)
-        cls.comment_reply = CommentFactory(
-            type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR, parent=cls.comment_with_reply
+        cls.comment_with_reply_1 = CommentFactory(type=constants.COMMENT_TYPE_COMMENT_APP)
+        cls.comment_reply_reply_1 = CommentFactory(type=constants.COMMENT_TYPE_REPLY, parent=cls.comment_with_reply_1)
+        cls.comment_reply_note_1 = CommentFactory(
+            type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR, parent=cls.comment_with_reply_1
+        )
+        cls.comment_with_reply_2 = CommentFactory(type=constants.COMMENT_TYPE_COMMENT_APP)
+        cls.comment_reply_reply_2 = CommentFactory(type=constants.COMMENT_TYPE_REPLY, parent=cls.comment_with_reply_2)
+        cls.comment_with_reply_3 = CommentFactory(type=constants.COMMENT_TYPE_COMMENT_APP)
+        cls.comment_reply_note_3 = CommentFactory(
+            type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR, parent=cls.comment_with_reply_3
         )
         CommentFactory(type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question)
         CommentFactory(type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz)
         CommentFactory(type=constants.COMMENT_TYPE_ERROR_APP)
 
-    def test_contributions_count(self):
-        self.assertEqual(Comment.objects.count(), 6)
+    def test_comment_count(self):
+        self.assertEqual(Comment.objects.count(), 10)
 
-    def test_contributions_exclude_replies(self):
-        self.assertEqual(Comment.objects.exclude_replies().count(), 6 - 1)
+    def test_comment_exclude_replies(self):
+        self.assertEqual(Comment.objects.exclude_replies().count(), 10 - 2)
 
-    def test_contributions_exclude_contributor_comments(self):
-        self.assertEqual(Comment.objects.exclude_contributor_comments().count(), 6 - 1)
+    def test_comment_exclude_contributor_comments(self):
+        self.assertEqual(Comment.objects.exclude_contributor_comments().count(), 10 - 2)
 
-    def test_contributions_exclude_contributor_work(self):
-        self.assertEqual(Comment.objects.exclude_contributor_work().count(), 6 - 2)
+    def test_comment_exclude_contributor_work(self):
+        self.assertEqual(Comment.objects.exclude_contributor_work().count(), 10 - 4)
 
-    def test_contributions_exclude_errors(self):
-        self.assertEqual(Comment.objects.exclude_errors().count(), 6 - 1)
+    def test_comment_exclude_errors(self):
+        self.assertEqual(Comment.objects.exclude_errors().count(), 10 - 1)
+
+    def test_comment_has_replies_contributor_comments(self):
+        self.assertEqual(Comment.objects.has_replies_contributor_comments().count(), 2)
+
+    def test_comment_has_replies_reply(self):
+        self.assertEqual(Comment.objects.has_replies_reply().count(), 2)
+
+    def test_comment_has_replies_contributor_work(self):
+        self.assertEqual(Comment.objects.has_replies_contributor_work().count(), 3)
+
+    def test_comment_has_parent(self):
+        self.assertEqual(Comment.objects.has_parent().count(), 4)

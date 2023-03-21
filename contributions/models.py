@@ -6,6 +6,7 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
 from core import constants
+from core.utils.utilities import truncate_with_ellipsis
 from questions.models import Question
 from quizs.models import Quiz
 
@@ -28,6 +29,26 @@ class CommentQuerySet(models.QuerySet):
 
     def last_30_days(self):
         return self.filter(created__date__gte=(date.today() - timedelta(days=30)))
+
+    def has_replies_contributor_comments(self):
+        return (
+            self.prefetch_related("replies")
+            .filter(replies__type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR)
+            .distinct()
+        )
+
+    def has_replies_reply(self):
+        return self.prefetch_related("replies").filter(replies__type=constants.COMMENT_TYPE_REPLY).distinct()
+
+    def has_replies_contributor_work(self):
+        return (
+            self.prefetch_related("replies")
+            .filter(replies__type__in=[constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR, constants.COMMENT_TYPE_REPLY])
+            .distinct()
+        )
+
+    def has_parent(self):
+        return self.select_related("parent").filter(parent__isnull=False)
 
 
 class Comment(models.Model):
@@ -90,11 +111,21 @@ class Comment(models.Model):
         verbose_name_plural = _("Comments")
 
     def __str__(self):
-        return f"{self.text}"
+        return f"{truncate_with_ellipsis(self.text, 60)}"
 
     @property
     def get_author(self) -> str:
         return self.author or _("Anonymous user")
+
+    @property
+    def has_parent(self) -> bool:
+        return self.parent is not None
+
+    @property
+    def has_parent_icon(self) -> str:
+        if self.has_parent:
+            return "✅"
+        return ""
 
     @property
     def has_replies(self) -> bool:
@@ -103,6 +134,12 @@ class Comment(models.Model):
     @property
     def has_replies_reply(self) -> bool:
         return self.replies.only_replies().exists()
+
+    @property
+    def has_replies_reply_icon(self) -> str:
+        if self.has_replies_reply:
+            return "✅"
+        return ""
 
     @property
     def processed(self) -> bool:
@@ -117,3 +154,9 @@ class Comment(models.Model):
         if self.status == constants.COMMENT_STATUS_PENDING:
             return "📝"
         return "✅"
+
+    # Admin
+    has_parent.fget.short_description = _("Parent")
+    has_parent_icon.fget.short_description = _("Parent")
+    has_replies_reply.fget.short_description = _("Answered")
+    has_replies_reply_icon.fget.short_description = _("Answered")
