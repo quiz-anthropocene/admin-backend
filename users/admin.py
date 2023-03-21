@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
+from django.utils.translation import gettext_lazy as _
 
 from core.admin import admin_site
 from users import constants
@@ -26,11 +27,11 @@ class RoleFilter(admin.SimpleListFilter):
 
 
 class HasUserCardFilter(admin.SimpleListFilter):
-    title = "User card?"
+    title = _("User card?")
     parameter_name = "has_user_card"
 
     def lookups(self, request, model_admin):
-        return (("Yes", "Yes"), ("No", "No"))
+        return ("Yes", _("Yes")), ("No", _("No"))
 
     def queryset(self, request, queryset):
         value = self.value()
