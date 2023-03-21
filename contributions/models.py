@@ -26,6 +26,9 @@ class CommentQuerySet(models.QuerySet):
     def only_replies(self):
         return self.filter(type=constants.COMMENT_TYPE_REPLY)
 
+    def only_notes(self):
+        return self.filter(type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR)
+
     def exclude_errors(self):
         return self.exclude(type=constants.COMMENT_TYPE_ERROR_APP)
 
@@ -144,6 +147,14 @@ class Comment(models.Model):
         if self.has_replies_reply:
             return "✅"
         return ""
+
+    @property
+    def replies_reply(self):
+        return self.replies.only_replies()
+
+    @property
+    def replies_notes(self):
+        return self.replies.only_notes()
 
     @property
     def processed(self) -> bool:

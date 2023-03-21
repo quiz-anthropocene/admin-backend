@@ -41,7 +41,14 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if comment.parent %}disabled{% endif %} {% if 'reply' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_reply_create' comment.id %}">
-                        {% translate "Comments" %} <span>({{ comment.replies.count }})</span>
+                        {% if not comment.replies_notes.count and not comment.replies_reply.count %}
+                            {% translate "Respond" %}
+                        {% else %}
+                            {% translate "Notes" %} ({{ comment.replies_notes.count }})
+                            {% if comment.replies_reply.count %}
+                                / {% translate "Reply" %} ✅
+                            {% endif %}
+                        {% endif %}
                     </a>
                 </li>
                 <li class="nav-item">
