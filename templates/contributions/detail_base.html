@@ -44,6 +44,11 @@
                         {% translate "Comments" %} <span>({{ comment.replies.count }})</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if 'history' in request.path %}active fw-bold{% endif %}" href="{% url 'contributions:detail_history' comment.id %}">
+                        {% translate "History" %}
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

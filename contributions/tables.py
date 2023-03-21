@@ -22,7 +22,7 @@ class CommentTable(tables.Table):
         linkify=lambda record: record.quiz.get_absolute_url(),
         attrs={"td": {"title": lambda record: record.quiz}},
     )
-    has_replies = tables.BooleanColumn(verbose_name=_("Answered"), accessor="has_replies_reply_icon")
+    has_replies_reply = tables.Column(verbose_name=_("Answered"), accessor="has_replies_reply_icon")
     processed_icon = tables.Column(verbose_name=_("Processed"), accessor="processed_icon")
     action = tables.TemplateColumn(
         verbose_name="Actions",

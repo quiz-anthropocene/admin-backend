@@ -3,6 +3,7 @@ from django.views.generic.base import RedirectView
 
 from www.contributions.views import (
     CommentDetailEditView,
+    CommentDetailHistoryView,
     CommentDetailReplyCreateView,
     CommentDetailView,
     CommentListView,
@@ -26,6 +27,7 @@ urlpatterns = [
                 path("view/", CommentDetailView.as_view(), name="detail_view"),
                 path("edit/", CommentDetailEditView.as_view(), name="detail_edit"),
                 path("reply/", CommentDetailReplyCreateView.as_view(), name="detail_reply_create"),
+                path("history/", CommentDetailHistoryView.as_view(), name="detail_history"),
             ]
         ),
     ),

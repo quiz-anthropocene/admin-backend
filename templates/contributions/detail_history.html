@@ -1,0 +1,42 @@
+{% extends "contributions/detail_base.html" %}
+{% load i18n custom_filters get_verbose_name %}
+
+{% block comment_detail_content %}
+<div class="row">
+    <div class="col-12">
+        <div class="table-container">
+            <table class="table-responsive table-striped table-bordered border-primary font-size-small">
+                <thead>
+                    <tr>
+                        <th>{% translate "Date" %}</th>
+                        <th>{% translate "Author" %}</th>
+                        <th>{% translate "Action" %}</th>
+                        <th>{% translate "Changes" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in comment_history %}
+                        <tr>
+                            <td>{{ record.history_date }}</td>
+                            <td>{{ record.history_user|default:"—" }}</td>
+                            <td>{{ record.get_history_type_display }}</td>
+                            <td>
+                                <ul class="mb-0">
+                                    {% for change in comment_history_delta|get_list_item:forloop.counter0 %}
+                                        <li>
+                                            <span>{% get_verbose_name comment change.field %} :</span>
+                                            <span>{{ change.old|flatten_list|default:_("(empty)") }}</span>
+                                            <span>→</span>
+                                            <span>{{ change.new|flatten_list|default:_("(empty)") }}</span>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
