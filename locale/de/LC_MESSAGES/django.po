@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-21 23:24+0100\n"
+"POT-Creation-Date: 2023-03-21 23:50+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -282,7 +282,7 @@ msgid "Answered"
 msgstr ""
 
 #: contributions/tables.py:26 core/constants.py:111
-#: templates/contributions/detail_edit.html:35
+#: templates/contributions/detail_edit.html:38
 msgid "Processed"
 msgstr ""
 
@@ -893,7 +893,7 @@ msgstr ""
 
 #: templates/admin/contributor_create.html:46
 #: templates/categories/detail_edit.html:20
-#: templates/contributions/detail_edit.html:45
+#: templates/contributions/detail_edit.html:48
 #: templates/contributions/detail_reply_create.html:77
 #: templates/glossary/create.html:41 templates/glossary/detail_edit.html:20
 #: templates/questions/create.html:64 templates/questions/detail_edit.html:85
@@ -953,7 +953,7 @@ msgid "Edit"
 msgstr ""
 
 #: templates/categories/detail_edit.html:18
-#: templates/contributions/detail_edit.html:43
+#: templates/contributions/detail_edit.html:46
 #: templates/glossary/detail_edit.html:18
 #: templates/questions/detail_edit.html:83 templates/quizs/detail_edit.html:114
 #: templates/quizs/detail_questions.html:68 templates/tags/detail_edit.html:18
@@ -961,7 +961,7 @@ msgid "Save"
 msgstr ""
 
 #: templates/categories/detail_edit.html:23
-#: templates/contributions/detail_edit.html:48
+#: templates/contributions/detail_edit.html:51
 #: templates/glossary/detail_edit.html:23
 #: templates/questions/detail_edit.html:88 templates/quizs/detail_edit.html:118
 #: templates/tags/detail_edit.html:23
@@ -1004,21 +1004,19 @@ msgstr ""
 msgid "Notes"
 msgstr ""
 
-#: templates/contributions/detail_edit.html:19
-#, python-format
-msgid ""
-"Comment linked to the question <a href=\"%(comment_question_url)s\" "
-"target=\"_blank\">%(comment_question)s</a>"
+#: templates/contributions/detail_edit.html:18
+msgid "Comment linked to the question:"
 msgstr ""
 
-#: templates/contributions/detail_edit.html:25
-#, python-format
-msgid ""
-"Comment linked to the quiz <a href=\"%(comment_quiz_url)s\" "
-"target=\"_blank\">%(comment_quiz)s</a>"
+#: templates/contributions/detail_edit.html:23
+msgid "Comment linked to the quiz:"
 msgstr ""
 
-#: templates/contributions/detail_edit.html:30
+#: templates/contributions/detail_edit.html:28
+msgid "This comment is a reply to:"
+msgstr ""
+
+#: templates/contributions/detail_edit.html:33
 msgid "This comment has not yet been <strong>processed</strong>"
 msgstr ""
 
@@ -1476,4 +1474,12 @@ msgstr ""
 
 #: users/models.py:319
 msgid "User cards"
+msgstr ""
+
+#: www/contributions/views.py:59
+msgid "The comment was updated."
+msgstr ""
+
+#: www/contributions/views.py:81
+msgid "Your message was created."
 msgstr ""

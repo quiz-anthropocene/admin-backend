@@ -15,14 +15,17 @@
                 <div class="col-md-4 d-none d-md-block">
                     {% if comment.question %}
                         <div class="alert alert-primary" role="alert">
-                            {% url 'questions:detail_view' comment.question.id as comment_question_url %}
-                            {% blocktrans with comment_question_url=comment_question_url comment_question=comment.question %}Comment linked to the question <a href="{{ comment_question_url }}" target="_blank">{{ comment_question }}</a>{% endblocktrans %}
+                            {% blocktrans %}Comment linked to the question:{% endblocktrans %} <a href="{% url 'questions:detail_view' comment.question.id %}" target="_blank">{{ comment.question }}</a>
                         </div>
                     {% endif %}
                     {% if comment.quiz %}
                         <div class="alert alert-primary" role="alert">
-                            {% url 'quizs:detail_view' comment.quiz.id as comment_quiz_url %}
-                            {% blocktrans with comment_quiz_url=comment_quiz_url comment_quiz=comment.quiz %}Comment linked to the quiz <a href="{{ comment_quiz_url }}" target="_blank">{{ comment_quiz }}</a>{% endblocktrans %}
+                            {% blocktrans %}Comment linked to the quiz:{% endblocktrans %} <a href="{% url 'quizs:detail_view' comment.quiz.id %}" target="_blank">{{ comment.quiz }}</a>
+                        </div>
+                    {% endif %}
+                    {% if comment.parent %}
+                        <div class="alert alert-warning" role="alert">
+                            {% blocktrans %}This comment is a reply to:{% endblocktrans %} <a href="{% url 'quizs:detail_view' comment.parent.id %}" target="_blank" title="{{ comment.parent.text }}">{{ comment.parent }}</a>
                         </div>
                     {% endif %}
                     {% if not comment.processed %}

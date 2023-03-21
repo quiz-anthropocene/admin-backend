@@ -1,6 +1,7 @@
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, DetailView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin
@@ -55,7 +56,7 @@ class CommentDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, U
     form_class = CommentEditForm
     template_name = "contributions/detail_edit.html"
     context_object_name = "comment"
-    success_message = "Le commentaire a été mise à jour."
+    success_message = _("The comment was updated.")
     # success_url = reverse_lazy("contributions:detail_view")
 
     def get_object(self):
@@ -64,15 +65,13 @@ class CommentDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, U
     def get_form(self, *args, **kwargs):
         comment = self.get_object()
         form = super().get_form(self.form_class)
-        if comment.type in constants.COMMENT_TYPE_EDITABLE_LIST:
-            form.fields["text"].disabled = False
+        form.fields["status"].disabled = False
+        if self.request.user.can_edit_comment(comment):
+            if comment.type in constants.COMMENT_TYPE_EDITABLE_LIST:
+                form.fields["text"].disabled = False
+        if comment.parent:
+            form.fields["status"].disabled = True
         return form
-
-    def get(self, request, *args, **kwargs):
-        comment = self.get_object()
-        if comment and comment.parent:
-            return redirect(reverse_lazy("contributions:detail_view", args=[comment.parent.id]))
-        return super().get(request, *args, **kwargs)
 
     def get_success_url(self):
         return reverse_lazy("contributions:detail_view", args=[self.kwargs.get("pk")])
@@ -81,7 +80,7 @@ class CommentDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, U
 class CommentDetailReplyCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = CommentReplyCreateForm
     template_name = "contributions/detail_reply_create.html"
-    success_message = "Votre réponse a été ajoutée."
+    success_message = _("Your message was created.")
     # success_url = reverse_lazy("contributions:detail_view")
 
     def get_object(self):

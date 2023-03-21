@@ -4,6 +4,7 @@ from django.urls import reverse
 from contributions.factories import CommentFactory
 from contributions.models import Comment
 from core import constants
+from users import constants as user_constants
 from users.factories import DEFAULT_PASSWORD, UserFactory
 
 
@@ -20,8 +21,8 @@ class CommentListViewTest(TestCase):
         cls.url = reverse("contributions:list")
         cls.user = UserFactory(roles=[])
         cls.user_contributor = UserFactory()
-        cls.contribution_1 = CommentFactory()
-        cls.contribution_2 = CommentFactory()
+        cls.comment_1 = CommentFactory()
+        cls.comment_2 = CommentFactory()
 
     def test_only_contributor_can_access_comment_list(self):
         # anonmyous
@@ -67,9 +68,14 @@ class CommentEditViewTest(TestCase):
     def setUpTestData(cls):
         cls.user = UserFactory(roles=[])
         cls.user_contributor = UserFactory()
-        cls.comment = CommentFactory(status=constants.COMMENT_STATUS_PENDING)
+        cls.user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
+        cls.comment = CommentFactory(
+            text="comment", type=constants.COMMENT_TYPE_COMMENT_QUESTION, status=constants.COMMENT_STATUS_PENDING
+        )
         cls.comment_with_reply = CommentFactory()
-        cls.comment_reply = CommentFactory(parent=cls.comment_with_reply)
+        cls.comment_reply = CommentFactory(
+            text="reply", author=cls.user_contributor, type=constants.COMMENT_TYPE_REPLY, parent=cls.comment_with_reply
+        )
 
     def test_contributor_can_access_comment_edit(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
@@ -77,19 +83,40 @@ class CommentEditViewTest(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
-    def test_contributor_can_edit_contribution(self):
+    def test_contributor_can_edit_comment(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
         url = reverse("contributions:detail_edit", args=[self.comment.id])
         response = self.client.post(url, data={"status": constants.COMMENT_STATUS_PROCESSED})
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Comment.objects.get(id=self.comment.id).status, constants.COMMENT_STATUS_PROCESSED)
 
-    def test_contributor_cannot_access_comment_with_reply_edit(self):
+    def test_contributor_cannot_edit_comment_text(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
-        url = reverse("contributions:detail_edit", args=[self.comment_reply.id])
-        response = self.client.get(url)
+        url = reverse("contributions:detail_edit", args=[self.comment.id])
+        response = self.client.post(url, data={"text": "comment edit as contributor"})
         self.assertEqual(response.status_code, 302)
-        self.assertIn(f"/{self.comment_with_reply.id}/", response.url)
+        self.assertEqual(Comment.objects.get(id=self.comment.id).text, "comment")
+
+    def test_contributor_can_edit_comment_text_if_author(self):
+        self.client.login(email=self.user_admin.email, password=DEFAULT_PASSWORD)
+        url = reverse("contributions:detail_edit", args=[self.comment_reply.id])
+        response = self.client.post(url, data={"text": "reply edited as author"})
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(Comment.objects.get(id=self.comment_reply.id).text, "reply edited as author")
+
+    def test_administrator_can_edit_comment_text(self):
+        self.client.login(email=self.user_admin.email, password=DEFAULT_PASSWORD)
+        url = reverse("contributions:detail_edit", args=[self.comment.id])
+        response = self.client.post(
+            url, data={"text": "comment edited as admin", "status": constants.COMMENT_STATUS_PROCESSED}
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(Comment.objects.get(id=self.comment.id).text, "comment edited as admin")
+        # can also edit replies
+        url = reverse("contributions:detail_edit", args=[self.comment_reply.id])
+        response = self.client.post(url, data={"text": "reply edited as admin"})
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(Comment.objects.get(id=self.comment_reply.id).text, "reply edited as admin")
 
 
 class CommentReplyCreateViewTest(TestCase):
@@ -107,7 +134,7 @@ class CommentReplyCreateViewTest(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
-    def test_contributor_can_create_reply_to_contribution(self):
+    def test_contributor_can_create_reply_to_comment(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
         url = reverse("contributions:detail_reply_create", args=[self.comment.id])
         response = self.client.post(url, data={"text": "Une réponse", "type": constants.COMMENT_TYPE_REPLY})
