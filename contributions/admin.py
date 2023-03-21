@@ -18,6 +18,11 @@ class CommentAdmin(ExportMixin, admin.ModelAdmin):
     )
     list_filter = ["type", "status"]
 
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        qs = qs.select_related("author")
+        return qs
+
     def get_readonly_fields(self, request, obj=None):
         return [f.name for f in obj._meta.fields]
 
