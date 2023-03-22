@@ -5,6 +5,7 @@ from django.db.models import Value
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.utils.safestring import mark_safe
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, DetailView, TemplateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin
@@ -64,6 +65,7 @@ class AdminContributorCreateView(AdministratorUserRequiredMixin, CreateView):
     form_class = ContributorCreateForm
     template_name = "admin/contributor_create.html"
     success_url = reverse_lazy("admin:contributor_list")
+    # success_message = ""
 
     def form_valid(self, form):
         # create user
@@ -87,7 +89,9 @@ class AdminContributorCreateView(AdministratorUserRequiredMixin, CreateView):
 
     def get_success_message(self, cleaned_data):
         return mark_safe(
-            f"Le contributeur <strong>{cleaned_data['first_name']} {cleaned_data['last_name']}</strong> a été crée avec succès."  # noqa
+            _("The contributor <strong>{first_name} {last_name}</strong> was created.").format(
+                first_name=cleaned_data["first_name"], last_name=cleaned_data["last_name"]
+            )
         )
 
 

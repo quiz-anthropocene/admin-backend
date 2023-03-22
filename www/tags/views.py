@@ -103,6 +103,7 @@ class TagCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVie
     form_class = TagCreateForm
     template_name = "tags/create.html"
     success_url = reverse_lazy("tags:list")
+    # success_message = ""
 
     def get_success_message(self, cleaned_data):
-        return mark_safe(f"Le tag <strong>{self.object.name}</strong> a été crée avec succès.")
+        return mark_safe(_("The tag <strong>{tag_name}</strong> was created.").format(tag_name=self.object.name))

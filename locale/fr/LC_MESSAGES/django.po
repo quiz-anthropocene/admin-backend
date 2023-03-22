@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-22 01:24+0100\n"
-"PO-Revision-Date: 2023-03-22 01:26+0100\n"
+"POT-Creation-Date: 2023-03-22 10:51+0100\n"
+"PO-Revision-Date: 2023-03-22 10:52+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -1501,6 +1501,11 @@ msgstr "Fiche utilisateur"
 msgid "User cards"
 msgstr "Fiches utilisateurs"
 
+#: www/admin/views.py:92
+#, python-brace-format
+msgid "The contributor <strong>{first_name} {last_name}</strong> was created."
+msgstr "Le contributeur <strong>{first_name} {last_name}</strong> a été créé."
+
 #: www/categories/views.py:43
 msgid "The category was updated."
 msgstr "La catégorie a été mise à jour."
@@ -1517,9 +1522,20 @@ msgstr "Votre message a été créé."
 msgid "The glossary item was updated."
 msgstr "L'article de glossaire a été mis à jour."
 
+#: www/glossary/views.py:98
+#, python-brace-format
+msgid "The glossary item <strong>{glossary_item_name}</strong> was created."
+msgstr ""
+"L'article de glossaire <strong>{glossary_item_name}</strong> a été créé."
+
 #: www/questions/views.py:70
 msgid "The question was updated."
 msgstr "La question a été mise à jour."
+
+#: www/questions/views.py:241
+#, python-brace-format
+msgid "The question {question_link} was created."
+msgstr "La question {question_link} a été créée."
 
 #: www/quizs/views.py:68
 msgid "The quiz was updated."
@@ -1529,9 +1545,35 @@ msgstr "Le quiz a été mis à jour."
 msgid "The quiz questions were updated."
 msgstr "Les questions du quiz ont été mis à jour."
 
+#: www/quizs/views.py:275
+#, python-brace-format
+msgid "The quiz {quiz_link} was created."
+msgstr "Le quiz {quiz_link} a été créé."
+
 #: www/tags/views.py:58
 msgid "The tag was updated."
 msgstr "Le tag a été mis à jour."
+
+#: www/tags/views.py:109
+#, python-brace-format
+msgid "The tag <strong>{tag_name}</strong> was created."
+msgstr "Le tag <strong>{tag_name}</strong> a été créé."
+
+#~ msgid ""
+#~ "The question <a href='{question_url}' "
+#~ "title='{question_text}'><strong>{question_text_short}</strong></a> was "
+#~ "created."
+#~ msgstr ""
+#~ "La question <a href='{question_url}' "
+#~ "title='{question_text}'><strong>{question_text_short}</strong></a> a été "
+#~ "créée."
+
+#~ msgid ""
+#~ "The quiz <a href='{quiz_url}' "
+#~ "title='{quiz_name}'><strong>{quiz_name_short}</strong></a> was created."
+#~ msgstr ""
+#~ "Le quiz <a href='{quiz_url}' title='{quiz_name}'><strong>{quiz_name_short}"
+#~ "</strong></a> a été créé."
 
 #~ msgid ""
 #~ "Comment linked to the question <a href=\"%(comment_question_url)s\" "

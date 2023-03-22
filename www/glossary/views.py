@@ -94,4 +94,8 @@ class GlossaryItemCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, 
     # success_message = ""
 
     def get_success_message(self, cleaned_data):
-        return mark_safe(f"Le terme <strong>{self.object.name}</strong> a été crée avec succès.")
+        return mark_safe(
+            _("The glossary item <strong>{glossary_item_name}</strong> was created.").format(
+                glossary_item_name=self.object.name
+            )
+        )

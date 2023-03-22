@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-22 01:24+0100\n"
+"POT-Creation-Date: 2023-03-22 10:51+0100\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -1484,6 +1484,11 @@ msgstr ""
 msgid "User cards"
 msgstr ""
 
+#: www/admin/views.py:92
+#, python-brace-format
+msgid "The contributor <strong>{first_name} {last_name}</strong> was created."
+msgstr ""
+
 #: www/categories/views.py:43
 msgid "The category was updated."
 msgstr ""
@@ -1500,8 +1505,18 @@ msgstr ""
 msgid "The glossary item was updated."
 msgstr ""
 
+#: www/glossary/views.py:98
+#, python-brace-format
+msgid "The glossary item <strong>{glossary_item_name}</strong> was created."
+msgstr ""
+
 #: www/questions/views.py:70
 msgid "The question was updated."
+msgstr ""
+
+#: www/questions/views.py:241
+#, python-brace-format
+msgid "The question {question_link} was created."
 msgstr ""
 
 #: www/quizs/views.py:68
@@ -1512,6 +1527,16 @@ msgstr ""
 msgid "The quiz questions were updated."
 msgstr ""
 
+#: www/quizs/views.py:275
+#, python-brace-format
+msgid "The quiz {quiz_link} was created."
+msgstr ""
+
 #: www/tags/views.py:58
 msgid "The tag was updated."
+msgstr ""
+
+#: www/tags/views.py:109
+#, python-brace-format
+msgid "The tag <strong>{tag_name}</strong> was created."
 msgstr ""

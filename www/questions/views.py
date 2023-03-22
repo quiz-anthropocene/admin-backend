@@ -204,6 +204,7 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
     form_class = QuestionCreateForm
     template_name = "questions/create.html"
     success_url = reverse_lazy("questions:list")
+    # success_message = ""
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
@@ -233,13 +234,12 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
         return success_url
 
     def get_success_message(self, cleaned_data):
-        text_short = self.object.text if (len(self.object.text) < 20) else (self.object.text[:18] + "…")
-        question_link = reverse_lazy("questions:detail_view", args=[self.object.id])
-        return mark_safe(
-            "La question "
-            f"<a href='{question_link}' title='{self.object.text}'><strong>{text_short}</strong></a> "
-            "a été crée avec succès."
+        question_text_short = self.object.text if (len(self.object.text) < 20) else (self.object.text[:18] + "…")
+        question_url = reverse_lazy("questions:detail_view", args=[self.object.id])
+        question_link = (
+            f"<a href='{question_url}' title='{self.object.text}'><strong>{question_text_short}</strong></a>"
         )
+        return mark_safe(_("The question {question_link} was created.").format(question_link=question_link))
 
 
 class QuestionAutocomplete(ContributorUserRequiredMixin, autocomplete.Select2QuerySetView):

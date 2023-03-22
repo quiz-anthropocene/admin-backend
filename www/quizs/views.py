@@ -237,6 +237,7 @@ class QuizCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVi
     form_class = QuizCreateForm
     template_name = "quizs/create.html"
     success_url = reverse_lazy("quizs:list")
+    # success_message = ""
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
@@ -267,10 +268,7 @@ class QuizCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVi
         return success_url
 
     def get_success_message(self, cleaned_data):
-        name_short = self.object.name if (len(self.object.name) < 20) else (self.object.name[:18] + "…")
-        quiz_link = reverse_lazy("quizs:detail_view", args=[self.object.id])
-        return mark_safe(
-            "Le quiz "
-            f"<a href='{quiz_link}' title='{self.object.name}'><strong>{name_short}</strong></a> "
-            "a été crée avec succès."
-        )
+        quiz_name_short = self.object.name if (len(self.object.name) < 20) else (self.object.name[:18] + "…")
+        quiz_url = reverse_lazy("quizs:detail_view", args=[self.object.id])
+        quiz_link = f"<a href='{quiz_url}' title='{self.object.name}'><strong>{quiz_name_short}</strong></a>"
+        return mark_safe(_("The quiz {quiz_link} was created.").format(quiz_link=quiz_link))
