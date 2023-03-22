@@ -24,8 +24,8 @@ class CommentEditForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field_name in self.fields:
-            if field_name not in ["status"]:  # "text" depending on "type"
-                self.fields[field_name].disabled = True
+            self.fields[field_name].disabled = True
+            # see views.py for exceptions
 
 
 class CommentReplyCreateForm(forms.ModelForm):

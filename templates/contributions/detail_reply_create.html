@@ -1,5 +1,5 @@
 {% extends "contributions/detail_base.html" %}
-{% load i18n django_bootstrap5 %}
+{% load i18n django_bootstrap5 user_can_edit %}
 
 {% block comment_detail_content %}
 <div class="row">
@@ -46,6 +46,15 @@
                 </div>
                 <div class="card-body">
                     {{ reply.text|linebreaks }}
+
+                    {% user_can_edit_comment user reply as user_can_edit_comment %}
+                    {% if user_can_edit_comment %}
+                        <p class="mb-0 text-end">
+                            <a href="{% url 'contributions:detail_edit' reply.id %}" target="_blank">
+                                {% translate "Edit" %}
+                            </a>
+                        </p>
+                    {% endif %}
                 </div>
             </div>
             <br />

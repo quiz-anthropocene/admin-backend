@@ -84,13 +84,10 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        quiz = self.get_object()
         # S3 Upload form
         s3_upload = S3Upload(kind="quiz_image_background")
         context["s3_form_values"] = s3_upload.form_values
         context["s3_upload_config"] = s3_upload.config
-        # User authorizations
-        context["user_can_edit"] = self.request.user.can_edit_quiz(quiz)
         return context
 
     def form_valid(self, form):

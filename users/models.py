@@ -290,6 +290,9 @@ class User(AbstractUser):
             return self.is_quiz_author(quiz)
         return self.is_not_quiz_author(quiz) and (self.has_role_administrator)
 
+    def can_edit_comment(self, comment) -> bool:
+        return (comment.author == self) or (self.has_role_administrator)
+
 
 @receiver(post_save, sender=User)
 def user_post_save(sender, instance, created, **kwargs):
