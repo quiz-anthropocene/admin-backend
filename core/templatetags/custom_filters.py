@@ -21,7 +21,7 @@ def get_obj_attr_filter(obj, key):
         {{ dict|get_obj_attr:key }}
     """
     try:
-        return getattr(obj, key)
+        return getattr(obj, f"get_{key}_display")
     except:  # noqa
         return obj.get(key)
 
