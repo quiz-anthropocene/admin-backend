@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-22 10:51+0100\n"
-"PO-Revision-Date: 2023-03-22 10:52+0100\n"
+"POT-Creation-Date: 2023-03-22 15:51+0100\n"
+"PO-Revision-Date: 2023-03-22 15:51+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -31,7 +31,9 @@ msgstr "Mis à jour"
 msgid "Validated"
 msgstr "Validé"
 
-#: activity/models.py:36 templates/quizs/detail_edit.html:68
+#: activity/models.py:36 contributions/models.py:191 contributions/tables.py:34
+#: templates/contributions/detail_edit.html:43
+#: templates/quizs/detail_edit.html:68
 msgid "Published"
 msgstr "Publié"
 
@@ -43,14 +45,14 @@ msgstr "Supprimé"
 msgid "Computed"
 msgstr "Calculé"
 
-#: activity/models.py:41 contributions/models.py:73 questions/models.py:248
+#: activity/models.py:41 contributions/models.py:74 questions/models.py:248
 #: quizs/models.py:434 templates/categories/detail_questions.html:12
 #: templates/questions/detail_base.html:4
 #: templates/tags/detail_questions.html:12
 msgid "Question"
 msgstr "Question"
 
-#: activity/models.py:42 contributions/models.py:81 quizs/models.py:180
+#: activity/models.py:42 contributions/models.py:82 quizs/models.py:180
 #: quizs/models.py:433 quizs/models.py:553
 #: templates/questions/detail_quizs.html:12 templates/quizs/detail_base.html:4
 #: templates/tags/detail_quizs.html:12
@@ -89,7 +91,7 @@ msgstr "Nom de l'objet"
 msgid "Additional data"
 msgstr "Données supplémentaires"
 
-#: activity/models.py:74 categories/models.py:15 contributions/models.py:109
+#: activity/models.py:74 categories/models.py:15 contributions/models.py:116
 #: glossary/models.py:32 questions/models.py:233 quizs/models.py:159
 #: quizs/models.py:437 quizs/models.py:500 quizs/models.py:560
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
@@ -189,7 +191,7 @@ msgstr "Nom (version longue)"
 msgid "Description"
 msgstr "Description"
 
-#: categories/models.py:16 contributions/models.py:110 glossary/models.py:33
+#: categories/models.py:16 contributions/models.py:117 glossary/models.py:33
 #: questions/models.py:234 quizs/models.py:160 quizs/models.py:438
 #: quizs/models.py:501 quizs/models.py:561 stats/models.py:305
 #: tags/models.py:30 users/models.py:194 users/models.py:316
@@ -228,27 +230,27 @@ msgstr "Non"
 msgid "Answered?"
 msgstr "Répondu ?"
 
-#: contributions/forms.py:53
+#: contributions/forms.py:55
 msgid "Message"
 msgstr "Message"
 
-#: contributions/models.py:65 questions/models.py:97
+#: contributions/models.py:66 questions/models.py:97
 msgid "Text"
 msgstr "Texte"
 
-#: contributions/models.py:67
+#: contributions/models.py:68
 msgid "A question, a comment…"
 msgstr "Une question, un commentaire…"
 
-#: contributions/models.py:69
+#: contributions/models.py:70
 msgid "Additional information"
 msgstr "Informations supplémentaires"
 
-#: contributions/models.py:70 history/tables.py:10 questions/models.py:102
+#: contributions/models.py:71 history/tables.py:10 questions/models.py:102
 msgid "Type"
 msgstr "Type"
 
-#: contributions/models.py:84 history/tables.py:9 questions/models.py:202
+#: contributions/models.py:85 history/tables.py:9 questions/models.py:202
 #: questions/models.py:240 quizs/models.py:555
 #: templates/contributions/detail_history.html:12
 #: templates/glossary/detail_history.html:12
@@ -257,39 +259,47 @@ msgstr "Type"
 msgid "Author"
 msgstr "Auteur"
 
-#: contributions/models.py:93 questions/models.py:211 quizs/models.py:126
+#: contributions/models.py:94 questions/models.py:211 quizs/models.py:126
 msgid "Status"
 msgstr "Statut"
 
-#: contributions/models.py:101
+#: contributions/models.py:102
 msgid "In reply to"
 msgstr "En réponse à"
 
-#: contributions/models.py:117 templates/contributions/detail_base.html:4
+#: contributions/models.py:111 quizs/models.py:140
+msgid "Published?"
+msgstr "Publié ?"
+
+#: contributions/models.py:112
+msgid "Display the comment publicly (and its reply if it exists)"
+msgstr "Afficher publiquement le commentaire (et sa réponse si elle existe)"
+
+#: contributions/models.py:124 templates/contributions/detail_base.html:4
 msgid "Comment"
 msgstr "Commentaire"
 
-#: contributions/models.py:118 templates/contributions/detail_base.html:13
+#: contributions/models.py:125 templates/contributions/detail_base.html:13
 #: templates/contributions/list.html:5 templates/contributions/list.html:14
 #: templates/includes/_header.html:32 templates/questions/detail_base.html:44
 #: templates/quizs/detail_base.html:44
 msgid "Comments"
 msgstr "Commentaires"
 
-#: contributions/models.py:125
+#: contributions/models.py:132
 msgid "Anonymous user"
 msgstr "Utilisateur anonyme"
 
-#: contributions/models.py:174 contributions/models.py:175
+#: contributions/models.py:187 contributions/models.py:188
 msgid "Parent"
 msgstr "Parent"
 
-#: contributions/models.py:176 contributions/models.py:177
-#: contributions/tables.py:25
+#: contributions/models.py:189 contributions/models.py:190
+#: contributions/tables.py:32
 msgid "Answered"
 msgstr "Répondu"
 
-#: contributions/tables.py:26 core/constants.py:111
+#: contributions/tables.py:33 core/constants.py:111
 #: templates/contributions/detail_edit.html:38
 msgid "Processed"
 msgstr "Traité"
@@ -673,10 +683,6 @@ msgstr "Lien vers une image pour illustrer le quiz"
 msgid "Audio answers?"
 msgstr "Contenu audio ?"
 
-#: quizs/models.py:140
-msgid "Published?"
-msgstr "Publié ?"
-
 #: quizs/models.py:141
 msgid "Publication date"
 msgstr "Date de publication"
@@ -903,7 +909,7 @@ msgstr "Ajouter"
 
 #: templates/admin/contributor_create.html:46
 #: templates/categories/detail_edit.html:20
-#: templates/contributions/detail_edit.html:48
+#: templates/contributions/detail_edit.html:53
 #: templates/contributions/detail_reply_create.html:86
 #: templates/glossary/create.html:41 templates/glossary/detail_edit.html:20
 #: templates/questions/create.html:64 templates/questions/detail_edit.html:86
@@ -964,7 +970,7 @@ msgid "Edit"
 msgstr "Modifier"
 
 #: templates/categories/detail_edit.html:18
-#: templates/contributions/detail_edit.html:46
+#: templates/contributions/detail_edit.html:51
 #: templates/glossary/detail_edit.html:18
 #: templates/questions/detail_edit.html:84 templates/quizs/detail_edit.html:115
 #: templates/quizs/detail_questions.html:68 templates/tags/detail_edit.html:18
@@ -972,7 +978,7 @@ msgid "Save"
 msgstr "Sauvegarder"
 
 #: templates/categories/detail_edit.html:23
-#: templates/contributions/detail_edit.html:51
+#: templates/contributions/detail_edit.html:56
 #: templates/glossary/detail_edit.html:23
 #: templates/questions/detail_edit.html:89 templates/quizs/detail_edit.html:119
 #: templates/tags/detail_edit.html:23
@@ -1514,7 +1520,7 @@ msgstr "La catégorie a été mise à jour."
 msgid "The comment was updated."
 msgstr "Le commentaire a été mis à jour."
 
-#: www/contributions/views.py:83
+#: www/contributions/views.py:90
 msgid "Your message was created."
 msgstr "Votre message a été créé."
 
@@ -1532,7 +1538,7 @@ msgstr ""
 msgid "The question was updated."
 msgstr "La question a été mise à jour."
 
-#: www/questions/views.py:241
+#: www/questions/views.py:242
 #, python-brace-format
 msgid "The question {question_link} was created."
 msgstr "La question {question_link} a été créée."
@@ -1545,7 +1551,7 @@ msgstr "Le quiz a été mis à jour."
 msgid "The quiz questions were updated."
 msgstr "Les questions du quiz ont été mis à jour."
 
-#: www/quizs/views.py:275
+#: www/quizs/views.py:274
 #, python-brace-format
 msgid "The quiz {quiz_link} was created."
 msgstr "Le quiz {quiz_link} a été créé."

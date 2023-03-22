@@ -13,6 +13,8 @@ COMMENT_REPLY_HIDDEN_FORM_FIELDS = ["parent", "status"]
 
 
 class CommentEditForm(forms.ModelForm):
+    # publish = forms.BooleanField(required=False)
+
     class Meta:
         model = Comment
         fields = COMMENT_EDIT_FORM_FIELDS

@@ -90,12 +90,16 @@ class CommentEditViewTest(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Comment.objects.get(id=self.comment.id).status, constants.COMMENT_STATUS_PROCESSED)
 
-    def test_contributor_cannot_edit_comment_text(self):
+    def test_contributor_cannot_edit_comment(self):
         self.client.login(email=self.user_contributor.email, password=DEFAULT_PASSWORD)
         url = reverse("contributions:detail_edit", args=[self.comment.id])
-        response = self.client.post(url, data={"text": "comment edit as contributor"})
+        response = self.client.post(url, data={"text": "comment edited as contributor"})
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Comment.objects.get(id=self.comment.id).text, "comment")
+        # cannot edit 'publish' either
+        response = self.client.post(url, data={"text": "comment edited again as contributor", "publish": True})
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(Comment.objects.get(id=self.comment.id).publish, False)
 
     def test_contributor_can_edit_comment_text_if_author(self):
         self.client.login(email=self.user_admin.email, password=DEFAULT_PASSWORD)
@@ -104,7 +108,7 @@ class CommentEditViewTest(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Comment.objects.get(id=self.comment_reply.id).text, "reply edited as author")
 
-    def test_administrator_can_edit_comment_text(self):
+    def test_administrator_can_edit_comment(self):
         self.client.login(email=self.user_admin.email, password=DEFAULT_PASSWORD)
         url = reverse("contributions:detail_edit", args=[self.comment.id])
         response = self.client.post(
@@ -112,6 +116,18 @@ class CommentEditViewTest(TestCase):
         )
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Comment.objects.get(id=self.comment.id).text, "comment edited as admin")
+        # can also edit 'publish'
+        url = reverse("contributions:detail_edit", args=[self.comment.id])
+        response = self.client.post(
+            url,
+            data={
+                "text": "comment edited again as admin",
+                "status": constants.COMMENT_STATUS_PROCESSED,
+                "publish": True,
+            },
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(Comment.objects.get(id=self.comment.id).publish, True)
         # can also edit replies
         url = reverse("contributions:detail_edit", args=[self.comment_reply.id])
         response = self.client.post(url, data={"text": "reply edited as admin"})
