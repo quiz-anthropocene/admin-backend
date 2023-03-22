@@ -24,6 +24,8 @@
                                 <td>
                                     {% include "includes/_badge_item.html" with value=comment_dict|get_obj_attr:field %}
                                 </td>
+                            {% elif field in comment.COMMENT_BOOLEAN_FIELDS %}
+                                <td>{% if comment_dict|get_obj_attr:field %}✅{% else %}❌{% endif %}</td>
                             {% else %}
                                 <td>{{ comment_dict|get_obj_attr:field|default:"" }}</td>
                             {% endif %}

@@ -65,7 +65,7 @@
                             {% endif %}
                             {% if quiz.publish %}
                                 <div class="alert alert-success" role="alert">
-                                    ✅ {% translate "Published" %} <small>{{ quiz.publish_date | date:"d F Y" }}</small>
+                                    🌐 {% translate "Published" %} <small>{{ quiz.publish_date | date:"d F Y" }}</small>
                                 </div>
                             {% endif %}
                             {% if not quiz.is_validated and quiz.publish %}

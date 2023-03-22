@@ -38,6 +38,11 @@
                             ✅ {% translate "Processed" %}
                         </div>
                     {% endif %}
+                    {% if comment.publish %}
+                        <div class="alert alert-success" role="alert">
+                            🌐 {% translate "Published" %}
+                        </div>
+                    {% endif %}
                 </div>
             </div>
 

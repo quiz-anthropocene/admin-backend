@@ -50,9 +50,10 @@ class CommentAdmin(ExportMixin, admin.ModelAdmin):
         # "quiz",
         "has_replies_reply_icon",
         "status",
+        "published_icon",
         "created",
     )
-    list_filter = ["type", HasParentFilter, HasReplyFilter, "status"]
+    list_filter = ["type", HasParentFilter, HasReplyFilter, "status", "publish"]
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)

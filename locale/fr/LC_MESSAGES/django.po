@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-22 12:13+0100\n"
-"PO-Revision-Date: 2023-03-22 12:14+0100\n"
+"POT-Creation-Date: 2023-03-22 15:51+0100\n"
+"PO-Revision-Date: 2023-03-22 15:51+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -31,7 +31,9 @@ msgstr "Mis à jour"
 msgid "Validated"
 msgstr "Validé"
 
-#: activity/models.py:36 templates/quizs/detail_edit.html:68
+#: activity/models.py:36 contributions/models.py:191 contributions/tables.py:34
+#: templates/contributions/detail_edit.html:43
+#: templates/quizs/detail_edit.html:68
 msgid "Published"
 msgstr "Publié"
 
@@ -228,7 +230,7 @@ msgstr "Non"
 msgid "Answered?"
 msgstr "Répondu ?"
 
-#: contributions/forms.py:53
+#: contributions/forms.py:55
 msgid "Message"
 msgstr "Message"
 
@@ -288,16 +290,16 @@ msgstr "Commentaires"
 msgid "Anonymous user"
 msgstr "Utilisateur anonyme"
 
-#: contributions/models.py:181 contributions/models.py:182
+#: contributions/models.py:187 contributions/models.py:188
 msgid "Parent"
 msgstr "Parent"
 
-#: contributions/models.py:183 contributions/models.py:184
-#: contributions/tables.py:25
+#: contributions/models.py:189 contributions/models.py:190
+#: contributions/tables.py:32
 msgid "Answered"
 msgstr "Répondu"
 
-#: contributions/tables.py:26 core/constants.py:111
+#: contributions/tables.py:33 core/constants.py:111
 #: templates/contributions/detail_edit.html:38
 msgid "Processed"
 msgstr "Traité"
@@ -907,7 +909,7 @@ msgstr "Ajouter"
 
 #: templates/admin/contributor_create.html:46
 #: templates/categories/detail_edit.html:20
-#: templates/contributions/detail_edit.html:48
+#: templates/contributions/detail_edit.html:53
 #: templates/contributions/detail_reply_create.html:86
 #: templates/glossary/create.html:41 templates/glossary/detail_edit.html:20
 #: templates/questions/create.html:64 templates/questions/detail_edit.html:86
@@ -968,7 +970,7 @@ msgid "Edit"
 msgstr "Modifier"
 
 #: templates/categories/detail_edit.html:18
-#: templates/contributions/detail_edit.html:46
+#: templates/contributions/detail_edit.html:51
 #: templates/glossary/detail_edit.html:18
 #: templates/questions/detail_edit.html:84 templates/quizs/detail_edit.html:115
 #: templates/quizs/detail_questions.html:68 templates/tags/detail_edit.html:18
@@ -976,7 +978,7 @@ msgid "Save"
 msgstr "Sauvegarder"
 
 #: templates/categories/detail_edit.html:23
-#: templates/contributions/detail_edit.html:51
+#: templates/contributions/detail_edit.html:56
 #: templates/glossary/detail_edit.html:23
 #: templates/questions/detail_edit.html:89 templates/quizs/detail_edit.html:119
 #: templates/tags/detail_edit.html:23
@@ -1518,7 +1520,7 @@ msgstr "La catégorie a été mise à jour."
 msgid "The comment was updated."
 msgstr "Le commentaire a été mis à jour."
 
-#: www/contributions/views.py:83
+#: www/contributions/views.py:90
 msgid "Your message was created."
 msgstr "Votre message a été créé."
 

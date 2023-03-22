@@ -188,3 +188,4 @@ class Comment(models.Model):
     has_parent_icon.fget.short_description = _("Parent")
     has_replies_reply.fget.short_description = _("Answered")
     has_replies_reply_icon.fget.short_description = _("Answered")
+    published_icon.fget.short_description = _("Published")

@@ -9,4 +9,4 @@ class CommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
-        fields = ["text", "description", "type", "question", "quiz", "status", "created"]
+        fields = ["text", "description", "type", "question", "quiz", "status", "publish", "created"]

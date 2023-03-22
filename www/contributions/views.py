@@ -63,12 +63,19 @@ class CommentDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, U
         return get_object_or_404(Comment, id=self.kwargs.get("pk"))
 
     def get_form(self, *args, **kwargs):
+        """
+        - 'status' is editable by all contributors (but disabled if the comment is a reply or note)
+        - 'text' is editable by comment author and administrators (depending on the comment type)
+        - 'publish' is editable by administrators
+        """
         comment = self.get_object()
         form = super().get_form(self.form_class)
         form.fields["status"].disabled = False
         if self.request.user.can_edit_comment(comment):
             if comment.type in constants.COMMENT_TYPE_EDITABLE_LIST:
                 form.fields["text"].disabled = False
+        if self.request.user.has_role_administrator:
+            form.fields["publish"].disabled = False
         if comment.parent:
             form.fields["status"].disabled = True
         return form
