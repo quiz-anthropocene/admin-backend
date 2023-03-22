@@ -23,7 +23,7 @@ class CommentTable(tables.Table):
         attrs={"td": {"title": lambda record: record.quiz}},
     )
     has_replies_reply = tables.Column(verbose_name=_("Answered"), accessor="has_replies_reply_icon")
-    processed_icon = tables.Column(verbose_name=_("Processed"), accessor="processed_icon")
+    processed = tables.Column(verbose_name=_("Processed"), accessor="processed_icon")
     action = tables.TemplateColumn(
         verbose_name="Actions",
         template_name="contributions/_table_action_items.html",

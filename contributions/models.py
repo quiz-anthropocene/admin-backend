@@ -59,6 +59,7 @@ class CommentQuerySet(models.QuerySet):
 class Comment(models.Model):
     COMMENT_CHOICE_FIELDS = ["type", "status"]
     COMMENT_FK_FIELDS = ["question", "quiz", "author"]
+    COMMENT_BOOLEAN_FIELDS = ["publish"]
     COMMENT_READONLY_FIELDS = ["parent", "created", "updated"]
 
     text = models.TextField(
@@ -104,6 +105,12 @@ class Comment(models.Model):
         on_delete=models.CASCADE,
         null=True,
         blank=True,
+    )
+
+    publish = models.BooleanField(
+        verbose_name=_("Published?"),
+        help_text=_("Display the comment publicly (and its reply if it exists)"),
+        default=False,
     )
 
     created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
