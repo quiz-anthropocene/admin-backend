@@ -1,5 +1,5 @@
 {% extends "quizs/detail_base.html" %}
-{% load i18n static django_bootstrap5 %}
+{% load i18n static django_bootstrap5 user_can_edit %}
 
 {% block extra_css %}
 {{ form.media.css }}
@@ -9,7 +9,8 @@
 {% block quiz_detail_content %}
 <div class="row">
     <div class="col-12">
-        {% if user_can_edit %}
+        {% user_can_edit_quiz user quiz as user_can_edit_quiz %}
+        {% if user_can_edit_quiz %}
             <form id="quiz_edit_form" method="POST" action="">
                 {% csrf_token %}
 

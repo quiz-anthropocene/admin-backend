@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-21 23:50+0100\n"
+"POT-Creation-Date: 2023-03-22 00:54+0100\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -94,7 +94,7 @@ msgstr ""
 #: quizs/models.py:437 quizs/models.py:500 quizs/models.py:560
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
 #: stats/models.py:207 stats/models.py:218 stats/models.py:304
-#: tags/models.py:29 users/models.py:193 users/models.py:312
+#: tags/models.py:29 users/models.py:193 users/models.py:315
 msgid "Creation date"
 msgstr ""
 
@@ -185,7 +185,7 @@ msgstr ""
 #: categories/models.py:16 contributions/models.py:110 glossary/models.py:33
 #: questions/models.py:234 quizs/models.py:160 quizs/models.py:438
 #: quizs/models.py:501 quizs/models.py:561 stats/models.py:305
-#: tags/models.py:30 users/models.py:194 users/models.py:313
+#: tags/models.py:30 users/models.py:194 users/models.py:316
 msgid "Last update date"
 msgstr ""
 
@@ -879,7 +879,7 @@ msgstr ""
 #: templates/admin/contributor_create.html:13
 #: templates/admin/contributor_create.html:44
 #: templates/admin/contributor_list.html:35
-#: templates/contributions/detail_reply_create.html:75
+#: templates/contributions/detail_reply_create.html:84
 #: templates/glossary/create.html:4 templates/glossary/create.html:18
 #: templates/glossary/create.html:39 templates/glossary/list.html:34
 #: templates/profile/questions.html:35 templates/profile/quizs.html:30
@@ -895,7 +895,7 @@ msgstr ""
 #: templates/admin/contributor_create.html:46
 #: templates/categories/detail_edit.html:20
 #: templates/contributions/detail_edit.html:48
-#: templates/contributions/detail_reply_create.html:77
+#: templates/contributions/detail_reply_create.html:86
 #: templates/glossary/create.html:41 templates/glossary/detail_edit.html:20
 #: templates/questions/create.html:64 templates/questions/detail_edit.html:85
 #: templates/quizs/create.html:64 templates/quizs/detail_edit.html:115
@@ -947,6 +947,7 @@ msgstr ""
 
 #: templates/categories/detail_base.html:34
 #: templates/contributions/detail_base.html:39
+#: templates/contributions/detail_reply_create.html:54
 #: templates/glossary/detail_base.html:34
 #: templates/questions/detail_base.html:34 templates/quizs/detail_base.html:34
 #: templates/tags/detail_base.html:34
@@ -1061,17 +1062,17 @@ msgstr ""
 msgid "Reply by <strong>%(comment_author)s</strong>"
 msgstr ""
 
-#: templates/contributions/detail_reply_create.html:56
+#: templates/contributions/detail_reply_create.html:65
 msgid "Reply to the initial comment, or add a note"
 msgstr ""
 
-#: templates/contributions/detail_reply_create.html:60
+#: templates/contributions/detail_reply_create.html:69
 msgid ""
 "<strong>A note?</strong> It would help keep track of how the initial comment "
 "is processed"
 msgstr ""
 
-#: templates/contributions/detail_reply_create.html:62
+#: templates/contributions/detail_reply_create.html:71
 msgid ""
 "<strong>A reply?</strong> Only one reply possible. For now this content is "
 "only visible to contributors, but we will eventually publish comments with "
@@ -1390,11 +1391,11 @@ msgid_plural "questions"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/users/author_card_list.html:43 users/models.py:308
+#: templates/users/author_card_list.html:43 users/models.py:311
 msgid "Short biography"
 msgstr ""
 
-#: templates/users/author_card_list.html:46 users/models.py:309
+#: templates/users/author_card_list.html:46 users/models.py:312
 msgid "Relationship with the Anthropocene Quiz"
 msgstr ""
 
@@ -1467,19 +1468,19 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-#: users/models.py:304
+#: users/models.py:307
 msgid "User image (link)"
 msgstr ""
 
-#: users/models.py:310
+#: users/models.py:313
 msgid "Website (link)"
 msgstr ""
 
-#: users/models.py:318
+#: users/models.py:321
 msgid "User card"
 msgstr ""
 
-#: users/models.py:319
+#: users/models.py:322
 msgid "User cards"
 msgstr ""
 
@@ -1487,6 +1488,6 @@ msgstr ""
 msgid "The comment was updated."
 msgstr ""
 
-#: www/contributions/views.py:81
+#: www/contributions/views.py:83
 msgid "Your message was created."
 msgstr ""
