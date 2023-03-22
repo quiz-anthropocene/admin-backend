@@ -2,6 +2,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.utils.safestring import mark_safe
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, DetailView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
@@ -54,7 +55,7 @@ class TagDetailView(ContributorUserRequiredMixin, DetailView):
 class TagDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = TagEditForm
     template_name = "tags/detail_edit.html"
-    success_message = "Le tag a été mis à jour."
+    success_message = _("The tag was updated.")
     # success_url = reverse_lazy("tags:detail_view")
 
     def get_object(self):
@@ -102,6 +103,7 @@ class TagCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVie
     form_class = TagCreateForm
     template_name = "tags/create.html"
     success_url = reverse_lazy("tags:list")
+    # success_message = ""
 
     def get_success_message(self, cleaned_data):
-        return mark_safe(f"Le tag <strong>{self.object.name}</strong> a été crée avec succès.")
+        return mark_safe(_("The tag <strong>{tag_name}</strong> was created.").format(tag_name=self.object.name))

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-22 00:54+0100\n"
-"PO-Revision-Date: 2023-03-21 23:51+0100\n"
+"POT-Creation-Date: 2023-03-22 10:51+0100\n"
+"PO-Revision-Date: 2023-03-22 10:52+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -31,7 +31,7 @@ msgstr "Mis à jour"
 msgid "Validated"
 msgstr "Validé"
 
-#: activity/models.py:36 templates/quizs/detail_edit.html:67
+#: activity/models.py:36 templates/quizs/detail_edit.html:68
 msgid "Published"
 msgstr "Publié"
 
@@ -124,20 +124,20 @@ msgstr ""
 #: activity/models.py:130
 #, python-brace-format
 msgid ""
-"<i>{actor_name}</i> {event_verb} the question <a "
-"href=\"{question_admin_absolute_url}\">{question_name}</a>"
+"<i>{actor_name}</i> {event_verb} the question <a href="
+"\"{question_admin_absolute_url}\">{question_name}</a>"
 msgstr ""
-"<i>{actor_name}</i> a {event_verb} la question <a "
-"href=\"{question_admin_absolute_url}\">{question_name}</a>"
+"<i>{actor_name}</i> a {event_verb} la question <a href="
+"\"{question_admin_absolute_url}\">{question_name}</a>"
 
 #: activity/models.py:145
 #, python-brace-format
 msgid ""
-"<i>{actor_name}</i> {event_verb} the quiz <a "
-"href=\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
+"<i>{actor_name}</i> {event_verb} the quiz <a href="
+"\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
 msgstr ""
-"<i>{actor_name}</i> a {event_verb} le quiz <a "
-"href=\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
+"<i>{actor_name}</i> a {event_verb} le quiz <a href="
+"\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
 
 #: activity/models.py:156
 #, python-brace-format
@@ -906,8 +906,8 @@ msgstr "Ajouter"
 #: templates/contributions/detail_edit.html:48
 #: templates/contributions/detail_reply_create.html:86
 #: templates/glossary/create.html:41 templates/glossary/detail_edit.html:20
-#: templates/questions/create.html:64 templates/questions/detail_edit.html:85
-#: templates/quizs/create.html:64 templates/quizs/detail_edit.html:115
+#: templates/questions/create.html:64 templates/questions/detail_edit.html:86
+#: templates/quizs/create.html:64 templates/quizs/detail_edit.html:116
 #: templates/quizs/detail_questions.html:69 templates/tags/create.html:41
 #: templates/tags/detail_edit.html:20
 msgid "Cancel"
@@ -940,9 +940,9 @@ msgstr "Historique"
 
 #: templates/admin/home.html:28 templates/admin/home.html:36
 #: templates/contributions/_table_action_items.html:3
-#: templates/profile/home.html:28 templates/profile/home.html:36
-#: templates/profile/home.html:47 templates/profile/home.html:60
-#: templates/users/home.html:43
+#: templates/glossary/_table_action_items.html:3 templates/profile/home.html:28
+#: templates/profile/home.html:36 templates/profile/home.html:47
+#: templates/profile/home.html:60 templates/users/home.html:43
 msgid "View"
 msgstr "Voir"
 
@@ -966,7 +966,7 @@ msgstr "Modifier"
 #: templates/categories/detail_edit.html:18
 #: templates/contributions/detail_edit.html:46
 #: templates/glossary/detail_edit.html:18
-#: templates/questions/detail_edit.html:83 templates/quizs/detail_edit.html:114
+#: templates/questions/detail_edit.html:84 templates/quizs/detail_edit.html:115
 #: templates/quizs/detail_questions.html:68 templates/tags/detail_edit.html:18
 msgid "Save"
 msgstr "Sauvegarder"
@@ -974,7 +974,7 @@ msgstr "Sauvegarder"
 #: templates/categories/detail_edit.html:23
 #: templates/contributions/detail_edit.html:51
 #: templates/glossary/detail_edit.html:23
-#: templates/questions/detail_edit.html:88 templates/quizs/detail_edit.html:118
+#: templates/questions/detail_edit.html:89 templates/quizs/detail_edit.html:119
 #: templates/tags/detail_edit.html:23
 msgid "Delete"
 msgstr "Supprimer"
@@ -1319,33 +1319,33 @@ msgstr "Date de création du compte"
 msgid "All my quizs"
 msgstr "Tous mes quizs"
 
-#: templates/questions/create.html:39 templates/questions/detail_edit.html:47
-#: templates/quizs/create.html:39 templates/quizs/detail_edit.html:78
+#: templates/questions/create.html:39 templates/questions/detail_edit.html:48
+#: templates/quizs/create.html:39 templates/quizs/detail_edit.html:79
 msgid "You can add an <strong>image</strong> at the end of the form"
 msgstr "Vous pouvez ajouter une <strong>image</strong> à la fin du formulaire"
 
-#: templates/questions/create.html:54 templates/questions/detail_edit.html:63
-#: templates/quizs/create.html:54 templates/quizs/detail_edit.html:94
+#: templates/questions/create.html:54 templates/questions/detail_edit.html:64
+#: templates/quizs/create.html:54 templates/quizs/detail_edit.html:95
 msgid "Quick tool to compress images:"
 msgstr "Petit outil pour compresser les images :"
 
-#: templates/questions/detail_edit.html:24
+#: templates/questions/detail_edit.html:25
 msgid "You are the <strong>author</strong> of this question"
 msgstr "Vous êtes <strong>l'auteur</strong> de cette question"
 
-#: templates/questions/detail_edit.html:30
+#: templates/questions/detail_edit.html:31
 msgid "The question is <strong>not validated</strong> yet"
 msgstr "La question n'est pas encore <strong>validée</strong>"
 
-#: templates/questions/detail_edit.html:41 templates/quizs/detail_edit.html:51
+#: templates/questions/detail_edit.html:42 templates/quizs/detail_edit.html:52
 msgid "Validated by"
 msgstr "Validé par"
 
-#: templates/questions/detail_edit.html:67 templates/quizs/detail_edit.html:98
+#: templates/questions/detail_edit.html:68 templates/quizs/detail_edit.html:99
 msgid "Current image"
 msgstr "Image actuelle"
 
-#: templates/questions/detail_edit.html:73 templates/quizs/detail_edit.html:104
+#: templates/questions/detail_edit.html:74 templates/quizs/detail_edit.html:105
 msgid "None"
 msgstr "Aucun"
 
@@ -1353,31 +1353,31 @@ msgstr "Aucun"
 msgid "All the questions "
 msgstr "Toutes les questions "
 
-#: templates/quizs/detail_edit.html:24
+#: templates/quizs/detail_edit.html:25
 msgid "You are the <strong>author</strong> of this quiz"
 msgstr "Vous êtes <strong>l'auteur</strong> de ce quiz"
 
-#: templates/quizs/detail_edit.html:27
+#: templates/quizs/detail_edit.html:28
 msgid "You want to add a collaborator? Contact an administrator"
 msgstr "Vous souhaitez ajouter un collaborateur ? Contactez un administrateur"
 
-#: templates/quizs/detail_edit.html:29
+#: templates/quizs/detail_edit.html:30
 msgid "All the authors:"
 msgstr "Tous les auteurs :"
 
-#: templates/quizs/detail_edit.html:34
+#: templates/quizs/detail_edit.html:35
 msgid "Author(s):"
 msgstr "Auteur(s) :"
 
-#: templates/quizs/detail_edit.html:40
+#: templates/quizs/detail_edit.html:41
 msgid "The quiz is <strong>not validated</strong> yet"
 msgstr "Le quiz n'est pas encore <strong>validé</strong>"
 
-#: templates/quizs/detail_edit.html:56
+#: templates/quizs/detail_edit.html:57
 msgid "The quiz is <strong>not published</strong> yet"
 msgstr "Le quiz n'est pas encore <strong>publié</strong>"
 
-#: templates/quizs/detail_edit.html:72
+#: templates/quizs/detail_edit.html:73
 msgid "The quiz is published even though it is not validated"
 msgstr "Le quiz est publié alors qu'il n'est pas validé"
 
@@ -1501,6 +1501,15 @@ msgstr "Fiche utilisateur"
 msgid "User cards"
 msgstr "Fiches utilisateurs"
 
+#: www/admin/views.py:92
+#, python-brace-format
+msgid "The contributor <strong>{first_name} {last_name}</strong> was created."
+msgstr "Le contributeur <strong>{first_name} {last_name}</strong> a été créé."
+
+#: www/categories/views.py:43
+msgid "The category was updated."
+msgstr "La catégorie a été mise à jour."
+
 #: www/contributions/views.py:59
 msgid "The comment was updated."
 msgstr "Le commentaire a été mis à jour."
@@ -1509,19 +1518,76 @@ msgstr "Le commentaire a été mis à jour."
 msgid "Your message was created."
 msgstr "Votre message a été créé."
 
+#: www/glossary/views.py:52
+msgid "The glossary item was updated."
+msgstr "L'article de glossaire a été mis à jour."
+
+#: www/glossary/views.py:98
+#, python-brace-format
+msgid "The glossary item <strong>{glossary_item_name}</strong> was created."
+msgstr ""
+"L'article de glossaire <strong>{glossary_item_name}</strong> a été créé."
+
+#: www/questions/views.py:70
+msgid "The question was updated."
+msgstr "La question a été mise à jour."
+
+#: www/questions/views.py:241
+#, python-brace-format
+msgid "The question {question_link} was created."
+msgstr "La question {question_link} a été créée."
+
+#: www/quizs/views.py:68
+msgid "The quiz was updated."
+msgstr "Le quiz a été mis à jour."
+
+#: www/quizs/views.py:135
+msgid "The quiz questions were updated."
+msgstr "Les questions du quiz ont été mis à jour."
+
+#: www/quizs/views.py:275
+#, python-brace-format
+msgid "The quiz {quiz_link} was created."
+msgstr "Le quiz {quiz_link} a été créé."
+
+#: www/tags/views.py:58
+msgid "The tag was updated."
+msgstr "Le tag a été mis à jour."
+
+#: www/tags/views.py:109
+#, python-brace-format
+msgid "The tag <strong>{tag_name}</strong> was created."
+msgstr "Le tag <strong>{tag_name}</strong> a été créé."
+
+#~ msgid ""
+#~ "The question <a href='{question_url}' "
+#~ "title='{question_text}'><strong>{question_text_short}</strong></a> was "
+#~ "created."
+#~ msgstr ""
+#~ "La question <a href='{question_url}' "
+#~ "title='{question_text}'><strong>{question_text_short}</strong></a> a été "
+#~ "créée."
+
+#~ msgid ""
+#~ "The quiz <a href='{quiz_url}' "
+#~ "title='{quiz_name}'><strong>{quiz_name_short}</strong></a> was created."
+#~ msgstr ""
+#~ "Le quiz <a href='{quiz_url}' title='{quiz_name}'><strong>{quiz_name_short}"
+#~ "</strong></a> a été créé."
+
 #~ msgid ""
 #~ "Comment linked to the question <a href=\"%(comment_question_url)s\" "
 #~ "target=\"_blank\">%(comment_question)s</a>"
 #~ msgstr ""
-#~ "Commentaire lié à la question <a href=\"%(comment_question_url)s\" "
-#~ "target=\"_blank\">%(comment_question)s</a>"
+#~ "Commentaire lié à la question <a href=\"%(comment_question_url)s\" target="
+#~ "\"_blank\">%(comment_question)s</a>"
 
 #~ msgid ""
-#~ "Comment linked to the quiz <a href=\"%(comment_quiz_url)s\" "
-#~ "target=\"_blank\">%(comment_quiz)s</a>"
+#~ "Comment linked to the quiz <a href=\"%(comment_quiz_url)s\" target="
+#~ "\"_blank\">%(comment_quiz)s</a>"
 #~ msgstr ""
-#~ "Commentaire lié au quiz <a href=\"%(comment_quiz_url)s\" "
-#~ "target=\"_blank\">%(comment_quiz)s</a>"
+#~ "Commentaire lié au quiz <a href=\"%(comment_quiz_url)s\" target=\"_blank"
+#~ "\">%(comment_quiz)s</a>"
 
 #~ msgid "Replies"
 #~ msgstr "Réponses"

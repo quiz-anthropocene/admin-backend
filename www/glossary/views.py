@@ -2,6 +2,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.utils.safestring import mark_safe
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, DetailView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin
@@ -48,7 +49,7 @@ class GlossaryItemDetailEditView(ContributorUserRequiredMixin, SuccessMessageMix
     form_class = GlossaryItemEditForm
     template_name = "glossary/detail_edit.html"
     context_object_name = "glossary_item"
-    success_message = "Le terme a été mis à jour."
+    success_message = _("The glossary item was updated.")
     # success_url = reverse_lazy("glossary:detail_view")
 
     def get_object(self):
@@ -93,4 +94,8 @@ class GlossaryItemCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, 
     # success_message = ""
 
     def get_success_message(self, cleaned_data):
-        return mark_safe(f"Le terme <strong>{self.object.name}</strong> a été crée avec succès.")
+        return mark_safe(
+            _("The glossary item <strong>{glossary_item_name}</strong> was created.").format(
+                glossary_item_name=self.object.name
+            )
+        )

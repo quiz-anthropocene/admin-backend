@@ -7,6 +7,7 @@ from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.utils import timezone
 from django.utils.safestring import mark_safe
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, DetailView, ListView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
@@ -66,7 +67,7 @@ class QuestionDetailView(ContributorUserRequiredMixin, DetailView):
 class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = QuestionEditForm
     template_name = "questions/detail_edit.html"
-    success_message = "La question a été mise à jour."
+    success_message = _("The question was updated.")
     # success_url = reverse_lazy("questions:detail_view")
 
     def get_object(self):
@@ -203,6 +204,7 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
     form_class = QuestionCreateForm
     template_name = "questions/create.html"
     success_url = reverse_lazy("questions:list")
+    # success_message = ""
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
@@ -232,13 +234,12 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
         return success_url
 
     def get_success_message(self, cleaned_data):
-        text_short = self.object.text if (len(self.object.text) < 20) else (self.object.text[:18] + "…")
-        question_link = reverse_lazy("questions:detail_view", args=[self.object.id])
-        return mark_safe(
-            "La question "
-            f"<a href='{question_link}' title='{self.object.text}'><strong>{text_short}</strong></a> "
-            "a été crée avec succès."
+        question_text_short = self.object.text if (len(self.object.text) < 20) else (self.object.text[:18] + "…")
+        question_url = reverse_lazy("questions:detail_view", args=[self.object.id])
+        question_link = (
+            f"<a href='{question_url}' title='{self.object.text}'><strong>{question_text_short}</strong></a>"
         )
+        return mark_safe(_("The question {question_link} was created.").format(question_link=question_link))
 
 
 class QuestionAutocomplete(ContributorUserRequiredMixin, autocomplete.Select2QuerySetView):

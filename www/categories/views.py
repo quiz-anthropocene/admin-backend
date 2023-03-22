@@ -1,6 +1,7 @@
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import DetailView, UpdateView
 from django_tables2.views import SingleTableView
 
@@ -39,7 +40,7 @@ class CategoryDetailView(ContributorUserRequiredMixin, DetailView):
 class CategoryDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = CategoryEditForm
     template_name = "categories/detail_edit.html"
-    success_message = "La catégorie a été mise à jour."
+    success_message = _("The category was updated.")
     # success_url = reverse_lazy("categories:detail_view")
 
     def get_object(self):

@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.utils import timezone
 from django.utils.safestring import mark_safe
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, DetailView, FormView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
@@ -64,7 +65,7 @@ class QuizDetailView(ContributorUserRequiredMixin, DetailView):
 class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = QuizEditForm
     template_name = "quizs/detail_edit.html"
-    success_message = "Le quiz a été mis à jour."
+    success_message = _("The quiz was updated.")
     # success_url = reverse_lazy("quizs:detail_view")
 
     def get_object(self):
@@ -131,7 +132,7 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
 class QuizDetailQuestionListView(ContributorUserRequiredMixin, FormView):
     form_class = QuizQuestionFormSet
     template_name = "quizs/detail_questions.html"
-    success_message = "Les questions du quiz ont été mises à jour."
+    success_message = _("The quiz questions were updated.")
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -236,6 +237,7 @@ class QuizCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVi
     form_class = QuizCreateForm
     template_name = "quizs/create.html"
     success_url = reverse_lazy("quizs:list")
+    # success_message = ""
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
@@ -266,10 +268,7 @@ class QuizCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateVi
         return success_url
 
     def get_success_message(self, cleaned_data):
-        name_short = self.object.name if (len(self.object.name) < 20) else (self.object.name[:18] + "…")
-        quiz_link = reverse_lazy("quizs:detail_view", args=[self.object.id])
-        return mark_safe(
-            "Le quiz "
-            f"<a href='{quiz_link}' title='{self.object.name}'><strong>{name_short}</strong></a> "
-            "a été crée avec succès."
-        )
+        quiz_name_short = self.object.name if (len(self.object.name) < 20) else (self.object.name[:18] + "…")
+        quiz_url = reverse_lazy("quizs:detail_view", args=[self.object.id])
+        quiz_link = f"<a href='{quiz_url}' title='{self.object.name}'><strong>{quiz_name_short}</strong></a>"
+        return mark_safe(_("The quiz {quiz_link} was created.").format(quiz_link=quiz_link))

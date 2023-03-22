@@ -16,14 +16,18 @@
                     {% for field in question_dict %}
                         <tr>
                             <td class="fw-bold">{% get_verbose_name question field %}</td>
-                            {% if field in question.QUESTION_CHOICE_FIELDS or field in question.QUESTION_FK_FIELDS %}
+                            {% if field in question.QUESTION_CHOICE_FIELDS %}
+                                <td>
+                                    {% include "includes/_badge_item.html" with value=question|get_obj_attr:field %}
+                                </td>
+                            {% elif field in question.QUESTION_FK_FIELDS %}
                                 {% if field == "category" %}
                                     <td>
                                         {% include "categories/_badge_item.html" with category=question.category %}
                                     </td>
                                 {% else %}
                                     <td>
-                                        {% include "includes/_badge_item.html" with value=question_dict|get_obj_attr:field field_name=field %}
+                                        {% include "includes/_badge_item.html" with value=question_dict|get_obj_attr:field %}
                                     </td>
                                 {% endif %}
                             {% elif field in question.QUESTION_M2M_FIELDS %}

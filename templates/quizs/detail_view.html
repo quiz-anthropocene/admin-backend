@@ -16,7 +16,11 @@
                     {% for field in quiz_dict %}
                         <tr>
                             <td class="fw-bold">{% get_verbose_name quiz field %}</td>
-                            {% if field in quiz.QUIZ_CHOICE_FIELDS or field in quiz.QUIZ_FK_FIELDS %}
+                            {% if field in quiz.QUIZ_CHOICE_FIELDS %}
+                                <td>
+                                    {% include "includes/_badge_item.html" with value=quiz|get_obj_attr:field %}
+                                </td>
+                            {% elif field in quiz.QUIZ_FK_FIELDS %}
                                 {% if field == "category" %}
                                     <td>
                                         {% include "categories/_badge_item.html" with category=quiz.category %}

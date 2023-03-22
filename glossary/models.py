@@ -43,3 +43,8 @@ class GlossaryItem(models.Model):
 
     def get_absolute_url(self):
         return reverse("glossary:detail", kwargs={"pk": self.id})
+
+    def has_description_accessible_url_icon(self):
+        if self.description_accessible_url:
+            return "✅"
+        return ""
