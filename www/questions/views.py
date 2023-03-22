@@ -7,6 +7,7 @@ from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.utils import timezone
 from django.utils.safestring import mark_safe
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, DetailView, ListView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
@@ -66,7 +67,7 @@ class QuestionDetailView(ContributorUserRequiredMixin, DetailView):
 class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = QuestionEditForm
     template_name = "questions/detail_edit.html"
-    success_message = "La question a été mise à jour."
+    success_message = _("The question was updated.")
     # success_url = reverse_lazy("questions:detail_view")
 
     def get_object(self):

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-22 00:54+0100\n"
+"POT-Creation-Date: 2023-03-22 01:24+0100\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -31,7 +31,7 @@ msgstr ""
 msgid "Validated"
 msgstr ""
 
-#: activity/models.py:36 templates/quizs/detail_edit.html:67
+#: activity/models.py:36 templates/quizs/detail_edit.html:68
 msgid "Published"
 msgstr ""
 
@@ -897,8 +897,8 @@ msgstr ""
 #: templates/contributions/detail_edit.html:48
 #: templates/contributions/detail_reply_create.html:86
 #: templates/glossary/create.html:41 templates/glossary/detail_edit.html:20
-#: templates/questions/create.html:64 templates/questions/detail_edit.html:85
-#: templates/quizs/create.html:64 templates/quizs/detail_edit.html:115
+#: templates/questions/create.html:64 templates/questions/detail_edit.html:86
+#: templates/quizs/create.html:64 templates/quizs/detail_edit.html:116
 #: templates/quizs/detail_questions.html:69 templates/tags/create.html:41
 #: templates/tags/detail_edit.html:20
 msgid "Cancel"
@@ -931,9 +931,9 @@ msgstr ""
 
 #: templates/admin/home.html:28 templates/admin/home.html:36
 #: templates/contributions/_table_action_items.html:3
-#: templates/profile/home.html:28 templates/profile/home.html:36
-#: templates/profile/home.html:47 templates/profile/home.html:60
-#: templates/users/home.html:43
+#: templates/glossary/_table_action_items.html:3 templates/profile/home.html:28
+#: templates/profile/home.html:36 templates/profile/home.html:47
+#: templates/profile/home.html:60 templates/users/home.html:43
 msgid "View"
 msgstr ""
 
@@ -957,7 +957,7 @@ msgstr ""
 #: templates/categories/detail_edit.html:18
 #: templates/contributions/detail_edit.html:46
 #: templates/glossary/detail_edit.html:18
-#: templates/questions/detail_edit.html:83 templates/quizs/detail_edit.html:114
+#: templates/questions/detail_edit.html:84 templates/quizs/detail_edit.html:115
 #: templates/quizs/detail_questions.html:68 templates/tags/detail_edit.html:18
 msgid "Save"
 msgstr ""
@@ -965,7 +965,7 @@ msgstr ""
 #: templates/categories/detail_edit.html:23
 #: templates/contributions/detail_edit.html:51
 #: templates/glossary/detail_edit.html:23
-#: templates/questions/detail_edit.html:88 templates/quizs/detail_edit.html:118
+#: templates/questions/detail_edit.html:89 templates/quizs/detail_edit.html:119
 #: templates/tags/detail_edit.html:23
 msgid "Delete"
 msgstr ""
@@ -1303,33 +1303,33 @@ msgstr ""
 msgid "All my quizs"
 msgstr ""
 
-#: templates/questions/create.html:39 templates/questions/detail_edit.html:47
-#: templates/quizs/create.html:39 templates/quizs/detail_edit.html:78
+#: templates/questions/create.html:39 templates/questions/detail_edit.html:48
+#: templates/quizs/create.html:39 templates/quizs/detail_edit.html:79
 msgid "You can add an <strong>image</strong> at the end of the form"
 msgstr ""
 
-#: templates/questions/create.html:54 templates/questions/detail_edit.html:63
-#: templates/quizs/create.html:54 templates/quizs/detail_edit.html:94
+#: templates/questions/create.html:54 templates/questions/detail_edit.html:64
+#: templates/quizs/create.html:54 templates/quizs/detail_edit.html:95
 msgid "Quick tool to compress images:"
 msgstr ""
 
-#: templates/questions/detail_edit.html:24
+#: templates/questions/detail_edit.html:25
 msgid "You are the <strong>author</strong> of this question"
 msgstr ""
 
-#: templates/questions/detail_edit.html:30
+#: templates/questions/detail_edit.html:31
 msgid "The question is <strong>not validated</strong> yet"
 msgstr ""
 
-#: templates/questions/detail_edit.html:41 templates/quizs/detail_edit.html:51
+#: templates/questions/detail_edit.html:42 templates/quizs/detail_edit.html:52
 msgid "Validated by"
 msgstr ""
 
-#: templates/questions/detail_edit.html:67 templates/quizs/detail_edit.html:98
+#: templates/questions/detail_edit.html:68 templates/quizs/detail_edit.html:99
 msgid "Current image"
 msgstr ""
 
-#: templates/questions/detail_edit.html:73 templates/quizs/detail_edit.html:104
+#: templates/questions/detail_edit.html:74 templates/quizs/detail_edit.html:105
 msgid "None"
 msgstr ""
 
@@ -1337,31 +1337,31 @@ msgstr ""
 msgid "All the questions "
 msgstr ""
 
-#: templates/quizs/detail_edit.html:24
+#: templates/quizs/detail_edit.html:25
 msgid "You are the <strong>author</strong> of this quiz"
 msgstr ""
 
-#: templates/quizs/detail_edit.html:27
+#: templates/quizs/detail_edit.html:28
 msgid "You want to add a collaborator? Contact an administrator"
 msgstr ""
 
-#: templates/quizs/detail_edit.html:29
+#: templates/quizs/detail_edit.html:30
 msgid "All the authors:"
 msgstr ""
 
-#: templates/quizs/detail_edit.html:34
+#: templates/quizs/detail_edit.html:35
 msgid "Author(s):"
 msgstr ""
 
-#: templates/quizs/detail_edit.html:40
+#: templates/quizs/detail_edit.html:41
 msgid "The quiz is <strong>not validated</strong> yet"
 msgstr ""
 
-#: templates/quizs/detail_edit.html:56
+#: templates/quizs/detail_edit.html:57
 msgid "The quiz is <strong>not published</strong> yet"
 msgstr ""
 
-#: templates/quizs/detail_edit.html:72
+#: templates/quizs/detail_edit.html:73
 msgid "The quiz is published even though it is not validated"
 msgstr ""
 
@@ -1484,10 +1484,34 @@ msgstr ""
 msgid "User cards"
 msgstr ""
 
+#: www/categories/views.py:43
+msgid "The category was updated."
+msgstr ""
+
 #: www/contributions/views.py:59
 msgid "The comment was updated."
 msgstr ""
 
 #: www/contributions/views.py:83
 msgid "Your message was created."
+msgstr ""
+
+#: www/glossary/views.py:52
+msgid "The glossary item was updated."
+msgstr ""
+
+#: www/questions/views.py:70
+msgid "The question was updated."
+msgstr ""
+
+#: www/quizs/views.py:68
+msgid "The quiz was updated."
+msgstr ""
+
+#: www/quizs/views.py:135
+msgid "The quiz questions were updated."
+msgstr ""
+
+#: www/tags/views.py:58
+msgid "The tag was updated."
 msgstr ""

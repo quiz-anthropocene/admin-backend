@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.utils import timezone
 from django.utils.safestring import mark_safe
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, DetailView, FormView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
@@ -64,7 +65,7 @@ class QuizDetailView(ContributorUserRequiredMixin, DetailView):
 class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = QuizEditForm
     template_name = "quizs/detail_edit.html"
-    success_message = "Le quiz a été mis à jour."
+    success_message = _("The quiz was updated.")
     # success_url = reverse_lazy("quizs:detail_view")
 
     def get_object(self):
@@ -131,7 +132,7 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
 class QuizDetailQuestionListView(ContributorUserRequiredMixin, FormView):
     form_class = QuizQuestionFormSet
     template_name = "quizs/detail_questions.html"
-    success_message = "Les questions du quiz ont été mises à jour."
+    success_message = _("The quiz questions were updated.")
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
