@@ -5,7 +5,14 @@ from contributions.models import Comment
 from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, ChoiceColumn, RichTextLongerEllipsisColumn
 
 
-COMMENT_FIELDS = ["type", "text", "author", "question", "quiz", "status", "created"]  # id, description, updated
+COMMENT_FIELD_SEQUENCE = [field.name for field in Comment._meta.fields]
+COMMENT_FIELD_SEQUENCE.remove("id")
+COMMENT_FIELD_SEQUENCE.remove("description")
+COMMENT_FIELD_SEQUENCE.remove("parent")
+COMMENT_FIELD_SEQUENCE.remove("publish")
+COMMENT_FIELD_SEQUENCE.insert(COMMENT_FIELD_SEQUENCE.index("created"), "has_replies_reply")
+COMMENT_FIELD_SEQUENCE.insert(COMMENT_FIELD_SEQUENCE.index("created"), "processed")
+COMMENT_FIELD_SEQUENCE.insert(COMMENT_FIELD_SEQUENCE.index("created"), "published")
 
 
 class CommentTable(tables.Table):
@@ -24,6 +31,7 @@ class CommentTable(tables.Table):
     )
     has_replies_reply = tables.Column(verbose_name=_("Answered"), accessor="has_replies_reply_icon")
     processed = tables.Column(verbose_name=_("Processed"), accessor="processed_icon")
+    published = tables.Column(verbose_name=_("Published"), accessor="published_icon")
     action = tables.TemplateColumn(
         verbose_name="Actions",
         template_name="contributions/_table_action_items.html",
@@ -33,7 +41,8 @@ class CommentTable(tables.Table):
     class Meta:
         model = Comment
         template_name = DEFAULT_TEMPLATE
-        fields = COMMENT_FIELDS
+        fields = COMMENT_FIELD_SEQUENCE
+        sequence = COMMENT_FIELD_SEQUENCE
         attrs = DEFAULT_ATTRS
 
     def __init__(self, *args, **kwargs):

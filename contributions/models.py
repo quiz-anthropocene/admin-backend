@@ -177,6 +177,12 @@ class Comment(models.Model):
             return "📝"
         return "✅"
 
+    @property
+    def published_icon(self) -> str:
+        if self.publish:
+            return "✅"
+        return ""
+
     # Admin
     has_parent.fget.short_description = _("Parent")
     has_parent_icon.fget.short_description = _("Parent")
