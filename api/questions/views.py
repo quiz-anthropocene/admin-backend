@@ -42,7 +42,7 @@ class QuestionViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets
 
         page = self.paginate_queryset(queryset)
         if page is not None:
-            serializer = self.get_serializer(page, many=True)
+            serializer = CommentSerializer(page, many=True)
             return self.get_paginated_response(serializer.data)
 
         serializer = CommentSerializer(queryset, many=True)
