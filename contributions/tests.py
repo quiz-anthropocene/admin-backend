@@ -31,7 +31,7 @@ class CommentModelQuerySetTest(TestCase):
     def setUpTestData(cls):
         cls.question = QuestionFactory()
         cls.quiz = QuizFactory()
-        cls.comment_with_reply_1 = CommentFactory(type=constants.COMMENT_TYPE_COMMENT_APP)
+        cls.comment_with_reply_1 = CommentFactory(type=constants.COMMENT_TYPE_COMMENT_APP, publish=True)
         cls.comment_reply_reply_1 = CommentFactory(type=constants.COMMENT_TYPE_REPLY, parent=cls.comment_with_reply_1)
         cls.comment_reply_note_1 = CommentFactory(
             type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR, parent=cls.comment_with_reply_1
@@ -78,3 +78,6 @@ class CommentModelQuerySetTest(TestCase):
 
     def test_comment_has_parent(self):
         self.assertEqual(Comment.objects.has_parent().count(), 4)
+
+    def test_comment_published(self):
+        self.assertEqual(Comment.objects.published().count(), 1)

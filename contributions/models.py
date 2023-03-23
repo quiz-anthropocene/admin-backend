@@ -55,6 +55,9 @@ class CommentQuerySet(models.QuerySet):
     def has_parent(self):
         return self.select_related("parent").filter(parent__isnull=False)
 
+    def published(self):
+        return self.filter(publish=True)
+
 
 class Comment(models.Model):
     COMMENT_CHOICE_FIELDS = ["type", "status"]
