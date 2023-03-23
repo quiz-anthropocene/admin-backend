@@ -2,9 +2,10 @@ import random
 
 from drf_spectacular.utils import extend_schema
 from rest_framework import mixins, viewsets
-from rest_framework.decorators import api_view
+from rest_framework.decorators import action, api_view
 from rest_framework.response import Response
 
+from api.contributions.serializers import CommentSerializer
 from api.questions.filters import QuestionFilter
 from api.questions.serializers import (
     QuestionDifficultyChoiceSerializer,
@@ -12,6 +13,7 @@ from api.questions.serializers import (
     QuestionSerializer,
 )
 from api.serializers import SimpleChoiceSerializer
+from contributions.models import Comment
 from core import constants
 from questions.models import Question
 
@@ -28,6 +30,23 @@ class QuestionViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets
     @extend_schema(summary="Détail d'une question *validée*", tags=[Question._meta.verbose_name_plural])
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, args, kwargs)
+
+    @extend_schema(
+        summary="Lister tous les commentaires *publiés* d'une question *validée*",
+        tags=[Comment._meta.verbose_name_plural],
+    )
+    @action(detail=True, methods=["get"])
+    def contributions(self, request, pk=None):
+        question = self.get_object()
+        queryset = question.comments_published
+
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+
+        serializer = CommentSerializer(queryset, many=True)
+        return Response(serializer.data)
 
 
 class QuestionTypeViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):

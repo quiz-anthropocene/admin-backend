@@ -12,7 +12,7 @@ class CommentApiTest(TestCase):
         cls.question = QuestionFactory()
         cls.comment_app = Comment.objects.create(type=constants.COMMENT_TYPE_COMMENT_APP)
         cls.comment_question_published = Comment.objects.create(
-            type=constants.COMMENT_TYPE_COMMENT_APP, question=cls.question, publish=True
+            type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question, publish=True
         )
 
     def test_comment_list(self):
