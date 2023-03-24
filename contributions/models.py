@@ -55,6 +55,9 @@ class CommentQuerySet(models.QuerySet):
     def has_parent(self):
         return self.select_related("parent").filter(parent__isnull=False)
 
+    def published(self):
+        return self.filter(publish=True)
+
 
 class Comment(models.Model):
     COMMENT_CHOICE_FIELDS = ["type", "status"]
@@ -94,8 +97,7 @@ class Comment(models.Model):
         verbose_name=_("Status"),
         max_length=150,
         choices=constants.COMMENT_STATUS_CHOICES,
-        # default=constants.COMMENT_STATUS_PENDING,
-        blank=True,
+        default=constants.COMMENT_STATUS_NEW,
     )
 
     parent = models.ForeignKey(
@@ -162,6 +164,10 @@ class Comment(models.Model):
     @property
     def replies_notes(self):
         return self.replies.only_notes()
+
+    @property
+    def replies_published(self):
+        return self.replies.published()
 
     @property
     def processed(self) -> bool:

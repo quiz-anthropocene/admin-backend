@@ -354,6 +354,10 @@ class Question(models.Model):
     def comment_count(self) -> int:
         return self.comments.count()
 
+    @property
+    def comments_published(self):
+        return self.comments.published()
+
     # Admin
     tags_list_string.fget.short_description = _("Tags")
     quizs_list_string.fget.short_description = _("Quizs")

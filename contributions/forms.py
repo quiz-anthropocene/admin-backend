@@ -51,6 +51,6 @@ class CommentReplyCreateForm(forms.ModelForm):
             self.fields[field_name].widget = forms.HiddenInput()
         # initial values
         self.fields["type"].initial = constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR
-        self.fields["status"].initial = constants.COMMENT_STATUS_PROCESSED  # ?
+        self.fields["status"].initial = constants.COMMENT_STATUS_PROCESSED
         self.fields["text"].label = _("Message")
         self.fields["text"].help_text = None
