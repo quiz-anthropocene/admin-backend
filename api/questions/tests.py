@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
-from contributions.models import Comment
+from contributions.factories import CommentFactory
 from core import constants
 from questions.factories import QuestionFactory
 
@@ -57,19 +57,19 @@ class QuestionCommentApiTest(TestCase):
         cls.question_private_validated = QuestionFactory(
             visibility=constants.VISIBILITY_PRIVATE, validation_status=constants.VALIDATION_STATUS_VALIDATED
         )
-        cls.comment_question_public = Comment.objects.create(
+        cls.comment_question_public = CommentFactory(
             type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question_public, publish=False
         )
-        cls.comment_question_public_validated = Comment.objects.create(
+        cls.comment_question_public_validated = CommentFactory(
             type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question_public_validated, publish=False
         )
-        cls.comment_question_public_validated_published = Comment.objects.create(
+        cls.comment_question_public_validated_published = CommentFactory(
             type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question_public_validated, publish=True
         )
-        cls.comment_question_private_published = Comment.objects.create(
+        cls.comment_question_private_published = CommentFactory(
             type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question_private, publish=True
         )
-        cls.comment_question_private_validated_published = Comment.objects.create(
+        cls.comment_question_private_validated_published = CommentFactory(
             type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question_private_validated, publish=True
         )
 
@@ -90,10 +90,10 @@ class QuestionCommentApiTest(TestCase):
             self.assertEqual(response.status_code, 404)
 
     def test_question_comment_list_with_replies(self):
-        Comment.objects.create(
+        CommentFactory(
             parent=self.comment_question_public_validated_published, type=constants.COMMENT_TYPE_REPLY, publish=True
         )
-        Comment.objects.create(
+        CommentFactory(
             parent=self.comment_question_public_validated_published,
             type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR,
             publish=False,

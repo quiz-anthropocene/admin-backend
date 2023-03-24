@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 
 from categories.factories import CategoryFactory
-from contributions.models import Comment
+from contributions.factories import CommentFactory
 from core import constants
 from questions.factories import QuestionFactory
 from quizs.factories import QuizFactory
@@ -166,19 +166,19 @@ class QuizCommentApiTest(TestCase):
         cls.quiz_private_published = QuizFactory(
             name="quiz private published", visibility=constants.VISIBILITY_PRIVATE, publish=True
         )
-        cls.comment_quiz_public = Comment.objects.create(
+        cls.comment_quiz_public = CommentFactory(
             type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz_public, publish=False
         )
-        cls.comment_quiz_public_published = Comment.objects.create(
+        cls.comment_quiz_public_published = CommentFactory(
             type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz_public_published, publish=False
         )
-        cls.comment_quiz_public_published_published = Comment.objects.create(
+        cls.comment_quiz_public_published_published = CommentFactory(
             type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz_public_published, publish=True
         )
-        cls.comment_quiz_private_published = Comment.objects.create(
+        cls.comment_quiz_private_published = CommentFactory(
             type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz_private, publish=True
         )
-        cls.comment_quiz_private_published_published = Comment.objects.create(
+        cls.comment_quiz_private_published_published = CommentFactory(
             type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz_private_published, publish=True
         )
 
@@ -199,10 +199,10 @@ class QuizCommentApiTest(TestCase):
             self.assertEqual(response.status_code, 404)
 
     def test_quiz_comment_list_with_replies(self):
-        Comment.objects.create(
+        CommentFactory(
             parent=self.comment_quiz_public_published_published, type=constants.COMMENT_TYPE_REPLY, publish=True
         )
-        Comment.objects.create(
+        CommentFactory(
             parent=self.comment_quiz_public_published_published,
             type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR,
             publish=False,
