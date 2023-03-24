@@ -29,6 +29,7 @@ QUESTION_CREATE_FORM_DEFAULT = {
     "answer_choice_b": "Réponse B",
     "answer_correct": "a",
     "visibility": constants.VISIBILITY_PUBLIC,
+    "author_certify_necessary_rights": True,
 }
 
 
