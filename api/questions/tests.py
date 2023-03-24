@@ -58,7 +58,7 @@ class QuestionCommentApiTest(TestCase):
             visibility=constants.VISIBILITY_PRIVATE, validation_status=constants.VALIDATION_STATUS_VALIDATED
         )
         cls.comment_question_public = Comment.objects.create(
-            type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question_public, publish=True
+            type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question_public, publish=False
         )
         cls.comment_question_public_validated = Comment.objects.create(
             type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question_public_validated, publish=False

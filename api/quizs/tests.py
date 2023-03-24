@@ -2,6 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 
 from categories.factories import CategoryFactory
+from contributions.models import Comment
 from core import constants
 from questions.factories import QuestionFactory
 from quizs.factories import QuizFactory
@@ -152,3 +153,62 @@ class QuizApiTest(TestCase):
         # questions
         self.assertEqual(response.data["question_count"], 2)
         self.assertEqual(len(response.data["questions"]), 2)
+
+
+class QuizCommentApiTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.quiz_public = QuizFactory(name="quiz public", visibility=constants.VISIBILITY_PUBLIC, publish=False)
+        cls.quiz_public_published = QuizFactory(
+            name="quiz public published", visibility=constants.VISIBILITY_PUBLIC, publish=True
+        )
+        cls.quiz_private = QuizFactory(name="quiz private", visibility=constants.VISIBILITY_PRIVATE, publish=False)
+        cls.quiz_private_published = QuizFactory(
+            name="quiz private published", visibility=constants.VISIBILITY_PRIVATE, publish=True
+        )
+        cls.comment_quiz_public = Comment.objects.create(
+            type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz_public, publish=False
+        )
+        cls.comment_quiz_public_published = Comment.objects.create(
+            type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz_public_published, publish=False
+        )
+        cls.comment_quiz_public_published_published = Comment.objects.create(
+            type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz_public_published, publish=True
+        )
+        cls.comment_quiz_private_published = Comment.objects.create(
+            type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz_private, publish=True
+        )
+        cls.comment_quiz_private_published_published = Comment.objects.create(
+            type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz_private_published, publish=True
+        )
+
+    def test_quiz_comment_list(self):
+        # works if the quiz is public & published + the comment is published
+        url = reverse("api:quiz-contributions", args=[self.quiz_public_published.id])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertIsInstance(response.data["results"], list)
+        self.assertEqual(len(response.data["results"]), 1)
+        self.assertFalse("question" in response.data["results"][0])
+        self.assertTrue("replies" in response.data["results"][0])
+        self.assertEqual(len(response.data["results"][0]["replies"]), 0)
+        # doesn't work if the quiz is not published or not public
+        for quiz in [self.quiz_public, self.quiz_private, self.quiz_private_published]:
+            url = reverse("api:quiz-contributions", args=[quiz.id])
+            response = self.client.get(url)
+            self.assertEqual(response.status_code, 404)
+
+    def test_quiz_comment_list_with_replies(self):
+        Comment.objects.create(
+            parent=self.comment_quiz_public_published_published, type=constants.COMMENT_TYPE_REPLY, publish=True
+        )
+        Comment.objects.create(
+            parent=self.comment_quiz_public_published_published,
+            type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR,
+            publish=False,
+        )
+        url = reverse("api:quiz-contributions", args=[self.quiz_public_published.id])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.data["results"]), 1)
+        self.assertEqual(len(response.data["results"][0]["replies"]), 1)
