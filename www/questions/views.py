@@ -76,6 +76,9 @@ class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, 
     def get_form(self, *args, **kwargs):
         question = self.get_object()
         form = super().get_form(self.form_class)
+        if not self.request.user.is_question_author(question):
+            form.fields["author_certify_necessary_rights"].disabled = True
+            form.fields["author_agree_commercial_use"].disabled = True
         if not self.request.user.can_validate_question(question):
             form.fields["validation_status"].disabled = True
             form.fields["validation_status"].help_text = user_constants.ADMIN_REQUIRED_EDIT_FIELD_MESSAGE_FULL
