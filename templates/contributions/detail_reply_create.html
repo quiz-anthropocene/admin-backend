@@ -10,6 +10,9 @@
                     <div class="col">
                         {% blocktrans with comment_author=comment.get_author %}Message by <strong>{{ comment_author }}</strong>{% endblocktrans %}
                         <span class="badge bg-primary">{{ comment.get_type_display }}</span>
+                        {% if comment.publish %}
+                            <span class="badge bg-success">{% translate "Published" %}</span>
+                        {% endif %}
                     </div>
                     <div class="col text-end">
                         <i title="{{ comment.created }}">{{ comment.created|timesince }}</i>
@@ -37,6 +40,9 @@
                                 {% blocktrans with comment_author=reply.get_author %}Note by <strong>{{ comment_author }}</strong>{% endblocktrans %}
                             {% elif reply.type == "REPLY" %}
                                 {% blocktrans with comment_author=reply.get_author %}Reply by <strong>{{ comment_author }}</strong>{% endblocktrans %}
+                            {% endif %}
+                            {% if reply.publish %}
+                                <span class="badge bg-success">{% translate "Published" %}</span>
                             {% endif %}
                         </div>
                         <div class="col text-end">
