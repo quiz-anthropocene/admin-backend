@@ -5,7 +5,7 @@ from rest_framework import mixins, viewsets
 from rest_framework.decorators import action, api_view
 from rest_framework.response import Response
 
-from api.contributions.serializers import CommentSerializer
+from api.contributions.serializers import CommentReadSerializer
 from api.questions.filters import QuestionFilter
 from api.questions.serializers import (
     QuestionDifficultyChoiceSerializer,
@@ -42,10 +42,10 @@ class QuestionViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets
 
         page = self.paginate_queryset(queryset)
         if page is not None:
-            serializer = CommentSerializer(page, many=True)
+            serializer = CommentReadSerializer(page, many=True)
             return self.get_paginated_response(serializer.data)
 
-        serializer = CommentSerializer(queryset, many=True)
+        serializer = CommentReadSerializer(queryset, many=True)
         return Response(serializer.data)
 
 

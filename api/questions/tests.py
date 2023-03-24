@@ -60,16 +60,16 @@ class QuestionCommentApiTest(TestCase):
         cls.comment_question_public = Comment.objects.create(
             type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question_public, publish=True
         )
-        cls.comment_question_public_validated_1 = Comment.objects.create(
+        cls.comment_question_public_validated = Comment.objects.create(
             type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question_public_validated, publish=False
         )
-        cls.comment_question_public_validated_2 = Comment.objects.create(
+        cls.comment_question_public_validated_published = Comment.objects.create(
             type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question_public_validated, publish=True
         )
-        cls.comment_question_private = Comment.objects.create(
+        cls.comment_question_private_published = Comment.objects.create(
             type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question_private, publish=True
         )
-        cls.comment_question_private_validated = Comment.objects.create(
+        cls.comment_question_private_validated_published = Comment.objects.create(
             type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question_private_validated, publish=True
         )
 
@@ -80,8 +80,26 @@ class QuestionCommentApiTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.data["results"], list)
         self.assertEqual(len(response.data["results"]), 1)
+        self.assertFalse("question" in response.data["results"][0])
+        self.assertTrue("replies" in response.data["results"][0])
+        self.assertEqual(len(response.data["results"][0]["replies"]), 0)
         # doesn't work if the question is not validated or not public
         for question in [self.question_public, self.question_private, self.question_private_validated]:
             url = reverse("api:question-contributions", args=[question.id])
             response = self.client.get(url)
             self.assertEqual(response.status_code, 404)
+
+    def test_question_comment_list_with_replies(self):
+        Comment.objects.create(
+            parent=self.comment_question_public_validated_published, type=constants.COMMENT_TYPE_REPLY, publish=True
+        )
+        Comment.objects.create(
+            parent=self.comment_question_public_validated_published,
+            type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR,
+            publish=False,
+        )
+        url = reverse("api:question-contributions", args=[self.question_public_validated.id])
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.data["results"]), 1)
+        self.assertEqual(len(response.data["results"][0]["replies"]), 1)

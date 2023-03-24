@@ -6,7 +6,7 @@ from django.views.generic import CreateView, DetailView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin
 
-from api.contributions.serializers import CommentSerializer
+from api.contributions.serializers import CommentFullSerializer
 from contributions.filters import CommentFilter
 from contributions.forms import COMMENT_EDIT_FORM_FIELDS, CommentEditForm, CommentReplyCreateForm
 from contributions.models import Comment
@@ -48,7 +48,7 @@ class CommentDetailView(ContributorUserRequiredMixin, DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         comment = self.get_object()
-        context["comment_dict"] = CommentSerializer(comment).data
+        context["comment_dict"] = CommentFullSerializer(comment).data
         return context
 
 
