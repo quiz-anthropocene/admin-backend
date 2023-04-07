@@ -57,10 +57,15 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{% translate "My profile" %}</h5>
+                    {% if not user.user_card %}
+                        <div class="alert alert-info" role="alert">
+                            🪪 {% translate "You don't have an author card yet!" %}
+                        </div>
+                    {% endif %}
                     <a class="btn btn-primary" href="{% url 'profile:info' %}">{% translate "View" %}</a>
                 </div>
             </div>
-        </div>        
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -1,5 +1,5 @@
 {% extends "layouts/base.html" %}
-{% load i18n django_bootstrap5 strip_html %}
+{% load i18n django_bootstrap5 %}
 
 {% block title %}{% translate "Author cards" %}{{ block.super }}{% endblock %}
 
@@ -34,27 +34,7 @@
     <div class="row">
         {% for user in users_with_card %}
             <div class="col-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ user.full_name }}</h5>
-                        <span class="badge bg-primary">{{ user.quiz_public_count }} {% blocktrans count counter=user.quiz_public_count %}quiz{% plural %}quizs{% endblocktrans %}</span>
-                        <span class="badge bg-primary">{{ user.question_public_count }} {% blocktrans count counter=user.question_public_count %}question{% plural %}questions{% endblocktrans %}</span>
-                        <hr />
-                        <p title="{% translate "Short biography" %}">
-                            💬&nbsp;{{ user.user_card.short_biography | strip_html }}
-                        </p>
-                        <p title="{% translate "Relationship with the Anthropocene Quiz" %}">
-                            🚀&nbsp;{{ user.user_card.quiz_relationship | strip_html }}
-                        </p>
-                        <p class="mb-0">
-                            {% if user.user_card.website_url %}
-                                💻&nbsp;<a href="{{ user.user_card.website_url }}" target="_blank">{% translate "Website" %}</a>
-                            {% else %}
-                                💻&nbsp;<i>{% translate "no website provided" %}</i>
-                            {% endif %}
-                        </p>
-                    </div>
-                </div>
+                {% include "users/_author_card.html" with user=user %}
             </div>
         {% endfor %}
     </div>

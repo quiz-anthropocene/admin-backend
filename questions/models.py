@@ -75,7 +75,7 @@ class Question(models.Model):
     QUESTION_FK_FIELDS = ["category", "author", "validator"]
     QUESTION_M2M_FIELDS = ["tags"]
     QUESTION_RELATION_FIELDS = QUESTION_FK_FIELDS + QUESTION_M2M_FIELDS
-    QUESTION_BOOLEAN_FIELDS = ["has_ordered_answers"]
+    QUESTION_BOOLEAN_FIELDS = ["has_ordered_answers", "author_certify_necessary_rights", "author_agree_commercial_use"]
     QUESTION_URL_FIELDS = [
         "answer_audio_url",
         "answer_video_url",
@@ -228,6 +228,13 @@ class Question(models.Model):
         max_length=50,
         choices=constants.VISIBILITY_CHOICES,
         default=constants.VISIBILITY_PUBLIC,
+    )
+
+    author_certify_necessary_rights = models.BooleanField(
+        verbose_name=_("I certify that I have the necessary rights to publish and share this content"), default=True
+    )
+    author_agree_commercial_use = models.BooleanField(
+        verbose_name=_("I agree to a possible commercial use by the association of this content"), default=True
     )
 
     created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)

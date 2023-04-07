@@ -86,7 +86,7 @@
 
                 <!-- image_background_url upload form -->
                 <div class="row">
-                    <div class="col-12 col-sm-6">
+                    <div class="col-md-8">
                         <div class="form-group">
                             {# {{ form.image_background_url.as_hidden }} #}
                             <label for="image_form" class="form-label js-display-if-javascript-enabled">{{ form.image_background_url.label }}</label>
@@ -94,7 +94,7 @@
                         </div>
                         <small>{% translate "Quick tool to compress images:" %} <a href="https://tinypng.com" target="_blank">tinypng.com</a></small>
                     </div>
-                    <div class="col-12 col-sm-6">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-label">{% translate "Current image" %}</label>
                             {% if form.image_background_url.value %}

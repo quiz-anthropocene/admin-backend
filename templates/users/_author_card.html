@@ -1,0 +1,25 @@
+{% load i18n strip_html %}
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ user.full_name }}</h5>
+        <span class="badge bg-primary">{{ user.quiz_public_count }} {% blocktrans count counter=user.quiz_public_count %}quiz{% plural %}quizs{% endblocktrans %}</span>
+        <span class="badge bg-primary">{{ user.question_public_count }} {% blocktrans count counter=user.question_public_count %}question{% plural %}questions{% endblocktrans %}</span>
+
+        <hr />
+
+        <p title="{% translate "Short biography" %}">
+            💬&nbsp;{{ user.user_card.short_biography | strip_html }}
+        </p>
+        <p title="{% translate "Relationship with the Anthropocene Quiz" %}">
+            🚀&nbsp;{{ user.user_card.quiz_relationship | strip_html }}
+        </p>
+        <p class="mb-0">
+            {% if user.user_card.website_url %}
+                💻&nbsp;<a href="{{ user.user_card.website_url }}" target="_blank">{% translate "Website" %}</a>
+            {% else %}
+                💻&nbsp;<i>{% translate "No website provided" %}</i>
+            {% endif %}
+        </p>
+    </div>
+</div>
