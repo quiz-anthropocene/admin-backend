@@ -949,7 +949,7 @@ msgstr ""
 #: templates/contributions/_table_action_items.html:3
 #: templates/glossary/_table_action_items.html:3 templates/profile/home.html:28
 #: templates/profile/home.html:36 templates/profile/home.html:47
-#: templates/profile/home.html:60 templates/users/home.html:43
+#: templates/profile/home.html:65 templates/users/home.html:43
 msgid "View"
 msgstr ""
 
@@ -988,7 +988,7 @@ msgstr ""
 
 #: templates/categories/detail_view.html:11
 #: templates/contributions/detail_view.html:11
-#: templates/glossary/detail_view.html:11 templates/profile/info.html:30
+#: templates/glossary/detail_view.html:11 templates/profile/info.html:35
 #: templates/questions/detail_view.html:11 templates/quizs/detail_view.html:11
 #: templates/tags/detail_view.html:11
 msgid "Field"
@@ -996,7 +996,7 @@ msgstr ""
 
 #: templates/categories/detail_view.html:12
 #: templates/contributions/detail_view.html:12
-#: templates/glossary/detail_view.html:12 templates/profile/info.html:31
+#: templates/glossary/detail_view.html:12 templates/profile/info.html:36
 #: templates/questions/detail_view.html:12 templates/quizs/detail_view.html:12
 #: templates/tags/detail_view.html:12
 msgid "Value"
@@ -1111,7 +1111,7 @@ msgstr ""
 msgid "Anthropocene Quiz"
 msgstr ""
 
-#: templates/includes/_footer.html:15 templates/users/author_card_list.html:51
+#: templates/includes/_footer.html:15 templates/users/_author_card.html:19
 msgid "Website"
 msgstr ""
 
@@ -1285,28 +1285,42 @@ msgid "My quizs"
 msgstr ""
 
 #: templates/profile/home.html:59 templates/profile/info.html:4
-#: templates/profile/info.html:14
+#: templates/profile/info.html:14 templates/profile/info.html:26
 msgid "My profile"
 msgstr ""
 
-#: templates/profile/info.html:36 users/models.py:180
+#: templates/profile/home.html:62 templates/profile/info.html:81
+msgid "You don't have an author card yet!"
+msgstr ""
+
+#: templates/profile/info.html:41 users/models.py:180
 msgid "First name"
 msgstr ""
 
-#: templates/profile/info.html:40 users/models.py:181
+#: templates/profile/info.html:45 users/models.py:181
 msgid "Last name"
 msgstr ""
 
-#: templates/profile/info.html:44
+#: templates/profile/info.html:49
 msgid "Email address"
 msgstr ""
 
-#: templates/profile/info.html:48 users/models.py:184
+#: templates/profile/info.html:53 users/models.py:184
 msgid "Roles"
 msgstr ""
 
-#: templates/profile/info.html:56
+#: templates/profile/info.html:61
 msgid "Account creation date"
+msgstr ""
+
+#: templates/profile/info.html:74
+msgid "My author card"
+msgstr ""
+
+#: templates/profile/info.html:90
+msgid ""
+"Some information from your author card will be displayed alongside your quiz "
+"introduction"
 msgstr ""
 
 #: templates/profile/quizs.html:27
@@ -1383,34 +1397,34 @@ msgstr ""
 msgid "All the tags"
 msgstr ""
 
-#: templates/users/author_card_list.html:4
-#: templates/users/author_card_list.html:14
-#: templates/users/author_card_list.html:26
-msgid "Author cards"
-msgstr ""
-
-#: templates/users/author_card_list.html:40
+#: templates/users/_author_card.html:6
 msgid "quiz"
 msgid_plural "quizs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/users/author_card_list.html:41
+#: templates/users/_author_card.html:7
 msgid "question"
 msgid_plural "questions"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/users/author_card_list.html:43 users/models.py:311
+#: templates/users/_author_card.html:11 users/models.py:311
 msgid "Short biography"
 msgstr ""
 
-#: templates/users/author_card_list.html:46 users/models.py:312
+#: templates/users/_author_card.html:14 users/models.py:312
 msgid "Relationship with the Anthropocene Quiz"
 msgstr ""
 
-#: templates/users/author_card_list.html:53
-msgid "no website provided"
+#: templates/users/_author_card.html:21
+msgid "No website provided"
+msgstr ""
+
+#: templates/users/author_card_list.html:4
+#: templates/users/author_card_list.html:14
+#: templates/users/author_card_list.html:26
+msgid "Author cards"
 msgstr ""
 
 #: templates/users/home.html:34

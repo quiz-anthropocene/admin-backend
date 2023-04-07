@@ -128,20 +128,20 @@ msgstr ""
 #: activity/models.py:130
 #, python-brace-format
 msgid ""
-"<i>{actor_name}</i> {event_verb} the question <a href="
-"\"{question_admin_absolute_url}\">{question_name}</a>"
+"<i>{actor_name}</i> {event_verb} the question <a "
+"href=\"{question_admin_absolute_url}\">{question_name}</a>"
 msgstr ""
-"<i>{actor_name}</i> a {event_verb} la question <a href="
-"\"{question_admin_absolute_url}\">{question_name}</a>"
+"<i>{actor_name}</i> a {event_verb} la question <a "
+"href=\"{question_admin_absolute_url}\">{question_name}</a>"
 
 #: activity/models.py:145
 #, python-brace-format
 msgid ""
-"<i>{actor_name}</i> {event_verb} the quiz <a href="
-"\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
+"<i>{actor_name}</i> {event_verb} the quiz <a "
+"href=\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
 msgstr ""
-"<i>{actor_name}</i> a {event_verb} le quiz <a href="
-"\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
+"<i>{actor_name}</i> a {event_verb} le quiz <a "
+"href=\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
 
 #: activity/models.py:156
 #, python-brace-format
@@ -963,7 +963,7 @@ msgstr "Historique"
 #: templates/contributions/_table_action_items.html:3
 #: templates/glossary/_table_action_items.html:3 templates/profile/home.html:28
 #: templates/profile/home.html:36 templates/profile/home.html:47
-#: templates/profile/home.html:60 templates/users/home.html:43
+#: templates/profile/home.html:65 templates/users/home.html:43
 msgid "View"
 msgstr "Voir"
 
@@ -1002,7 +1002,7 @@ msgstr "Supprimer"
 
 #: templates/categories/detail_view.html:11
 #: templates/contributions/detail_view.html:11
-#: templates/glossary/detail_view.html:11 templates/profile/info.html:30
+#: templates/glossary/detail_view.html:11 templates/profile/info.html:35
 #: templates/questions/detail_view.html:11 templates/quizs/detail_view.html:11
 #: templates/tags/detail_view.html:11
 msgid "Field"
@@ -1010,7 +1010,7 @@ msgstr "Champ"
 
 #: templates/categories/detail_view.html:12
 #: templates/contributions/detail_view.html:12
-#: templates/glossary/detail_view.html:12 templates/profile/info.html:31
+#: templates/glossary/detail_view.html:12 templates/profile/info.html:36
 #: templates/questions/detail_view.html:12 templates/quizs/detail_view.html:12
 #: templates/tags/detail_view.html:12
 msgid "Value"
@@ -1131,7 +1131,7 @@ msgstr "Glossaire"
 msgid "Anthropocene Quiz"
 msgstr "Quiz de l'Anthropocène"
 
-#: templates/includes/_footer.html:15 templates/users/author_card_list.html:51
+#: templates/includes/_footer.html:15 templates/users/_author_card.html:19
 msgid "Website"
 msgstr "Application"
 
@@ -1312,29 +1312,45 @@ msgid "My quizs"
 msgstr "Mes quizs"
 
 #: templates/profile/home.html:59 templates/profile/info.html:4
-#: templates/profile/info.html:14
+#: templates/profile/info.html:14 templates/profile/info.html:26
 msgid "My profile"
 msgstr "Mon profil"
 
-#: templates/profile/info.html:36 users/models.py:180
+#: templates/profile/home.html:62 templates/profile/info.html:81
+msgid "You don't have an author card yet!"
+msgstr "Vous n'avez pas encore de fiche auteur !"
+
+#: templates/profile/info.html:41 users/models.py:180
 msgid "First name"
 msgstr "Prénom"
 
-#: templates/profile/info.html:40 users/models.py:181
+#: templates/profile/info.html:45 users/models.py:181
 msgid "Last name"
 msgstr "Nom"
 
-#: templates/profile/info.html:44
+#: templates/profile/info.html:49
 msgid "Email address"
 msgstr "Adresse e-mail"
 
-#: templates/profile/info.html:48 users/models.py:184
+#: templates/profile/info.html:53 users/models.py:184
 msgid "Roles"
 msgstr "Rôles"
 
-#: templates/profile/info.html:56
+#: templates/profile/info.html:61
 msgid "Account creation date"
 msgstr "Date de création du compte"
+
+#: templates/profile/info.html:74
+msgid "My author card"
+msgstr "Ma fiche auteur"
+
+#: templates/profile/info.html:90
+msgid ""
+"Some information from your author card will be displayed alongside your quiz "
+"introduction"
+msgstr ""
+"Certaines informations de votre fiche auteur seront affichées à coté de "
+"l'introduction de votre quiz"
 
 #: templates/profile/quizs.html:27
 msgid "All my quizs"
@@ -1410,39 +1426,39 @@ msgstr "Tous les quizs"
 msgid "All the tags"
 msgstr "Tous les tags"
 
+#: templates/users/_author_card.html:6
+msgid "quiz"
+msgid_plural "quizs"
+msgstr[0] "quiz"
+msgstr[1] "quizs"
+
+#: templates/users/_author_card.html:7
+msgid "question"
+msgid_plural "questions"
+msgstr[0] "question"
+msgstr[1] "questions"
+
+#: templates/users/_author_card.html:11 users/models.py:311
+msgid "Short biography"
+msgstr "Courte biographie"
+
+#: templates/users/_author_card.html:14 users/models.py:312
+msgid "Relationship with the Anthropocene Quiz"
+msgstr "Lien avec le Quiz de l'Anthropocène"
+
+#: templates/users/_author_card.html:21
+msgid "No website provided"
+msgstr "Aucun site internet indiqué"
+
 #: templates/users/author_card_list.html:4
 #: templates/users/author_card_list.html:14
 #: templates/users/author_card_list.html:26
 msgid "Author cards"
 msgstr "Fiches auteurs"
 
-#: templates/users/author_card_list.html:40
-msgid "quiz"
-msgid_plural "quizs"
-msgstr[0] "quiz"
-msgstr[1] "quizs"
-
-#: templates/users/author_card_list.html:41
-msgid "question"
-msgid_plural "questions"
-msgstr[0] "question"
-msgstr[1] "questions"
-
-#: templates/users/author_card_list.html:43 users/models.py:311
-msgid "Short biography"
-msgstr "Courte biographie"
-
-#: templates/users/author_card_list.html:46 users/models.py:312
-msgid "Relationship with the Anthropocene Quiz"
-msgstr "Lien avec le Quiz de l'Anthropocène"
-
-#: templates/users/author_card_list.html:53
-msgid "no website provided"
-msgstr "aucun site internet indiqué"
-
 #: templates/users/home.html:34
 msgid "Quiz authors"
-msgstr "Quiz auteurs"
+msgstr "Auteurs de quizs"
 
 #: templates/users/home.html:35
 msgid "View author cards"
@@ -1600,15 +1616,15 @@ msgstr "Le tag <strong>{tag_name}</strong> a été créé."
 #~ "Comment linked to the question <a href=\"%(comment_question_url)s\" "
 #~ "target=\"_blank\">%(comment_question)s</a>"
 #~ msgstr ""
-#~ "Commentaire lié à la question <a href=\"%(comment_question_url)s\" target="
-#~ "\"_blank\">%(comment_question)s</a>"
+#~ "Commentaire lié à la question <a href=\"%(comment_question_url)s\" "
+#~ "target=\"_blank\">%(comment_question)s</a>"
 
 #~ msgid ""
-#~ "Comment linked to the quiz <a href=\"%(comment_quiz_url)s\" target="
-#~ "\"_blank\">%(comment_quiz)s</a>"
+#~ "Comment linked to the quiz <a href=\"%(comment_quiz_url)s\" "
+#~ "target=\"_blank\">%(comment_quiz)s</a>"
 #~ msgstr ""
-#~ "Commentaire lié au quiz <a href=\"%(comment_quiz_url)s\" target=\"_blank"
-#~ "\">%(comment_quiz)s</a>"
+#~ "Commentaire lié au quiz <a href=\"%(comment_quiz_url)s\" "
+#~ "target=\"_blank\">%(comment_quiz)s</a>"
 
 #~ msgid "Replies"
 #~ msgstr "Réponses"
