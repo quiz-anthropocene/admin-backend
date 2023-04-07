@@ -13,7 +13,9 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="historicalquestion",
             name="author_agree_commercial_use",
-            field=models.BooleanField(default=True, verbose_name="I agree to the commercial use of this content"),
+            field=models.BooleanField(
+                default=True, verbose_name="I agree to a possible commercial use by the association of this content"
+            ),
         ),
         migrations.AddField(
             model_name="historicalquestion",
@@ -26,7 +28,9 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="question",
             name="author_agree_commercial_use",
-            field=models.BooleanField(default=True, verbose_name="I agree to the commercial use of this content"),
+            field=models.BooleanField(
+                default=True, verbose_name="I agree to a possible commercial use by the association of this content"
+            ),
         ),
         migrations.AddField(
             model_name="question",

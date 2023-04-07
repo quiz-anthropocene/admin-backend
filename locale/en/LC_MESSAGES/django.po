@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-24 10:04+0100\n"
+"POT-Creation-Date: 2023-04-07 12:31+0200\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Computed"
 msgstr ""
 
-#: activity/models.py:41 contributions/models.py:77 questions/models.py:251
+#: activity/models.py:41 contributions/models.py:77 questions/models.py:255
 #: quizs/models.py:438 templates/categories/detail_questions.html:12
 #: templates/questions/detail_base.html:4
 #: templates/tags/detail_questions.html:12
@@ -94,7 +94,7 @@ msgid "Additional data"
 msgstr ""
 
 #: activity/models.py:74 categories/models.py:15 contributions/models.py:118
-#: glossary/models.py:32 questions/models.py:236 quizs/models.py:159
+#: glossary/models.py:32 questions/models.py:240 quizs/models.py:159
 #: quizs/models.py:441 quizs/models.py:504 quizs/models.py:564
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
 #: stats/models.py:207 stats/models.py:218 stats/models.py:304
@@ -187,13 +187,13 @@ msgid "Description"
 msgstr ""
 
 #: categories/models.py:16 contributions/models.py:119 glossary/models.py:33
-#: questions/models.py:237 quizs/models.py:160 quizs/models.py:442
+#: questions/models.py:241 quizs/models.py:160 quizs/models.py:442
 #: quizs/models.py:505 quizs/models.py:565 stats/models.py:305
 #: tags/models.py:30 users/models.py:194 users/models.py:316
 msgid "Last update date"
 msgstr ""
 
-#: categories/models.py:19 questions/models.py:109 questions/models.py:240
+#: categories/models.py:19 questions/models.py:109 questions/models.py:244
 #: templates/categories/detail_base.html:4
 #: templates/categories/detail_questions.html:13
 #: templates/tags/detail_questions.html:13
@@ -246,7 +246,7 @@ msgid "Type"
 msgstr ""
 
 #: contributions/models.py:88 history/tables.py:9 questions/models.py:202
-#: questions/models.py:243 quizs/models.py:559
+#: questions/models.py:247 quizs/models.py:559
 #: templates/contributions/detail_history.html:12
 #: templates/glossary/detail_history.html:12
 #: templates/questions/detail_history.html:12
@@ -467,7 +467,7 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: questions/forms.py:33
+#: questions/forms.py:38
 msgid "Answer image"
 msgstr ""
 
@@ -483,7 +483,7 @@ msgstr ""
 msgid "Text that the user can decide to display to help him"
 msgstr ""
 
-#: questions/models.py:117 questions/models.py:241 questions/models.py:365
+#: questions/models.py:117 questions/models.py:245 questions/models.py:369
 #: quizs/models.py:102 quizs/models.py:166 quizs/models.py:373
 #: tags/models.py:36 templates/categories/detail_questions.html:14
 #: templates/includes/_header.html:35 templates/tags/create.html:4
@@ -591,7 +591,7 @@ msgstr ""
 msgid "Won't be displayed in the application"
 msgstr ""
 
-#: questions/models.py:217 questions/models.py:244 quizs/models.py:132
+#: questions/models.py:217 questions/models.py:248 quizs/models.py:132
 #: quizs/models.py:173
 msgid "Validator"
 msgstr ""
@@ -604,16 +604,16 @@ msgstr ""
 msgid "Visibility"
 msgstr ""
 
-#: questions/models.py:233
+#: questions/models.py:234
 msgid ""
 "I certify that I have the necessary rights to publish and share this content"
 msgstr ""
 
-#: questions/models.py:234
-msgid "I agree to the commercial use of this content"
+#: questions/models.py:237
+msgid "I agree to a possible commercial use by the association of this content"
 msgstr ""
 
-#: questions/models.py:242 questions/models.py:366 quizs/models.py:181
+#: questions/models.py:246 questions/models.py:370 quizs/models.py:181
 #: templates/includes/_header.html:29 templates/questions/detail_base.html:39
 #: templates/quizs/create.html:4 templates/quizs/create.html:18
 #: templates/quizs/detail_base.html:13 templates/quizs/list.html:5
@@ -621,7 +621,7 @@ msgstr ""
 msgid "Quizs"
 msgstr ""
 
-#: questions/models.py:252 quizs/models.py:97 quizs/models.py:168
+#: questions/models.py:256 quizs/models.py:97 quizs/models.py:168
 #: templates/categories/detail_base.html:39 templates/includes/_header.html:26
 #: templates/questions/create.html:4 templates/questions/create.html:18
 #: templates/questions/detail_base.html:13 templates/questions/list.html:14
@@ -629,23 +629,23 @@ msgstr ""
 msgid "Questions"
 msgstr ""
 
-#: questions/models.py:367 quizs/models.py:379
+#: questions/models.py:371 quizs/models.py:379
 msgid "# Ans"
 msgstr ""
 
-#: questions/models.py:368
+#: questions/models.py:372
 msgid "# Corr Ans"
 msgstr ""
 
-#: questions/models.py:369
+#: questions/models.py:373
 msgid "% Corr Ans"
 msgstr ""
 
-#: questions/models.py:370 quizs/models.py:382
+#: questions/models.py:374 quizs/models.py:382
 msgid "# Like"
 msgstr ""
 
-#: questions/models.py:371 quizs/models.py:383
+#: questions/models.py:375 quizs/models.py:383
 msgid "# Dislike"
 msgstr ""
 
@@ -1531,7 +1531,7 @@ msgstr ""
 msgid "The question was updated."
 msgstr ""
 
-#: www/questions/views.py:242
+#: www/questions/views.py:245
 #, python-brace-format
 msgid "The question {question_link} was created."
 msgstr ""

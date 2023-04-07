@@ -234,7 +234,7 @@ class Question(models.Model):
         verbose_name=_("I certify that I have the necessary rights to publish and share this content"), default=True
     )
     author_agree_commercial_use = models.BooleanField(
-        verbose_name=_("I agree to the commercial use of this content"), default=True
+        verbose_name=_("I agree to a possible commercial use by the association of this content"), default=True
     )
 
     created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
