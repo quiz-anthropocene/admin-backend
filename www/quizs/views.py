@@ -72,6 +72,9 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
         return get_object_or_404(Quiz, id=self.kwargs.get("pk"))
 
     def get_form(self, *args, **kwargs):
+        """
+        - some fields are only editable by administrators (or quiz author if private)
+        """
         quiz = self.get_object()
         form = super().get_form(self.form_class)
         if not self.request.user.can_publish_quiz(quiz):

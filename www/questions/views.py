@@ -74,6 +74,10 @@ class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, 
         return get_object_or_404(Question, id=self.kwargs.get("pk"))
 
     def get_form(self, *args, **kwargs):
+        """
+        - some fields are only editable by the author
+        - some fields are only editable by administrators (or question author if private)
+        """
         question = self.get_object()
         form = super().get_form(self.form_class)
         if not self.request.user.is_question_author(question):
