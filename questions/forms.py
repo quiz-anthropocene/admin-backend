@@ -8,7 +8,12 @@ from tags.models import Tag
 
 QUESTION_READONLY_FORM_FIELDS = ["validation_status"]
 QUESTION_HIDDEN_FORM_FIELDS = ["answer_image_url"]
-QUESTION_REQUIRED_FORM_FIELDS = ["answer_choice_a", "answer_choice_b", "answer_correct"]
+QUESTION_REQUIRED_FORM_FIELDS = [
+    "answer_choice_a",
+    "answer_choice_b",
+    "answer_correct",
+    "author_certify_necessary_rights",
+]
 QUESTION_FORM_FIELDS = [
     field_name for field_name in QUESTION_FIELD_SEQUENCE if field_name not in Question.QUESTION_READONLY_FIELDS
 ]

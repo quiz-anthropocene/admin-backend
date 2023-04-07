@@ -29,6 +29,7 @@ QUESTION_CREATE_FORM_DEFAULT = {
     "answer_choice_b": "Réponse B",
     "answer_correct": "a",
     "visibility": constants.VISIBILITY_PUBLIC,
+    "author_certify_necessary_rights": True,
 }
 
 
@@ -87,26 +88,26 @@ class QuestionDetailEditViewTest(TestCase):
         cls.user_contributor_2 = UserFactory()
         cls.user_super_contributor = UserFactory(roles=[user_constants.USER_ROLE_SUPER_CONTRIBUTOR])
         cls.user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
-        cls.question_1 = QuestionFactory(
-            text="Question 1",
+        cls.question_public = QuestionFactory(
+            text="Question publique",
             author=cls.user_contributor_1,
             visibility=constants.VISIBILITY_PUBLIC,
             validation_status=constants.VALIDATION_STATUS_TO_VALIDATE,
         )
-        cls.question_2 = QuestionFactory(
-            text="Question 2", author=cls.user_contributor_1, visibility=constants.VISIBILITY_PRIVATE
+        cls.question_private = QuestionFactory(
+            text="Question privée", author=cls.user_contributor_1, visibility=constants.VISIBILITY_PRIVATE
         )
 
     def test_only_author_or_super_contributor_can_edit_public_question(self):
         for user in [self.user_contributor_1, self.user_super_contributor, self.user_admin]:
             self.client.login(email=user.email, password=DEFAULT_PASSWORD)
-            url = reverse("questions:detail_edit", args=[self.question_1.id])
+            url = reverse("questions:detail_edit", args=[self.question_public.id])
             response = self.client.get(url)
             self.assertEqual(response.status_code, 200)
             self.assertContains(response, '<form id="question_edit_form" ')
         # other contributors can't edit
         self.client.login(email=self.user_contributor_2.email, password=DEFAULT_PASSWORD)
-        url = reverse("questions:detail_edit", args=[self.question_1.id])
+        url = reverse("questions:detail_edit", args=[self.question_public.id])
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertNotContains(response, '<form id="question_edit_form" ')
@@ -114,19 +115,19 @@ class QuestionDetailEditViewTest(TestCase):
 
     def test_administrator_can_validate_public_question(self):
         self.client.login(email=self.user_admin.email, password=DEFAULT_PASSWORD)
-        self.assertEqual(self.question_1.validation_status, constants.VALIDATION_STATUS_TO_VALIDATE)
-        url = reverse("questions:detail_edit", args=[self.question_1.id])
+        self.assertEqual(self.question_public.validation_status, constants.VALIDATION_STATUS_TO_VALIDATE)
+        url = reverse("questions:detail_edit", args=[self.question_public.id])
         QUESTION_EDIT_FORM = {
             **QUESTION_CREATE_FORM_DEFAULT,
-            "text": self.question_1.text,
-            "category": self.question_1.category.id,
-            "author": self.question_1.author,
-            "visibility": self.question_1.visibility,
+            "text": self.question_public.text,
+            "category": self.question_public.category.id,
+            "author": self.question_public.author,
+            "visibility": self.question_public.visibility,
             "validation_status": constants.VALIDATION_STATUS_VALIDATED,
         }
         response = self.client.post(url, data=QUESTION_EDIT_FORM)
         self.assertEqual(response.status_code, 302)
-        question = Question.objects.get(id=self.question_1.id)
+        question = Question.objects.get(id=self.question_public.id)
         self.assertEqual(question.validator, self.user_admin)
         self.assertEqual(question.validation_date.date(), timezone.now().date())
         self.assertEqual(Event.objects.count(), 1)
@@ -134,14 +135,14 @@ class QuestionDetailEditViewTest(TestCase):
     def test_only_author_can_edit_private_question(self):
         # author can edit
         self.client.login(email=self.user_contributor_1.email, password=DEFAULT_PASSWORD)
-        url = reverse("questions:detail_edit", args=[self.question_2.id])
+        url = reverse("questions:detail_edit", args=[self.question_private.id])
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, '<form id="question_edit_form" ')
         # other contributors can't edit
         for user in [self.user_contributor_2, self.user_super_contributor, self.user_admin]:
             self.client.login(email=user.email, password=DEFAULT_PASSWORD)
-            url = reverse("questions:detail_edit", args=[self.question_2.id])
+            url = reverse("questions:detail_edit", args=[self.question_private.id])
             response = self.client.get(url)
             self.assertEqual(response.status_code, 200)
             self.assertNotContains(response, '<form id="question_edit_form" ')

@@ -221,6 +221,15 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
                 )
             },
         ),
+        (
+            "Legal",
+            {
+                "fields": (
+                    "author_certify_necessary_rights",
+                    "author_agree_commercial_use",
+                )
+            },
+        ),
         ("Dates", {"fields": ("created", "updated")}),
     )
 
