@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-07 12:31+0200\n"
+"POT-Creation-Date: 2023-04-07 12:47+0200\n"
 "PO-Revision-Date: 2023-04-07 12:31+0200\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -1569,7 +1569,7 @@ msgstr ""
 msgid "The question was updated."
 msgstr "La question a été mise à jour."
 
-#: www/questions/views.py:245
+#: www/questions/views.py:249
 #, python-brace-format
 msgid "The question {question_link} was created."
 msgstr "La question {question_link} a été créée."
@@ -1578,11 +1578,11 @@ msgstr "La question {question_link} a été créée."
 msgid "The quiz was updated."
 msgstr "Le quiz a été mis à jour."
 
-#: www/quizs/views.py:135
+#: www/quizs/views.py:138
 msgid "The quiz questions were updated."
 msgstr "Les questions du quiz ont été mis à jour."
 
-#: www/quizs/views.py:274
+#: www/quizs/views.py:277
 #, python-brace-format
 msgid "The quiz {quiz_link} was created."
 msgstr "Le quiz {quiz_link} a été créé."
