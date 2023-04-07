@@ -94,8 +94,6 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",  # whitenoise
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    "know-your-planet.middlewares.LanguageMiddleware",
     "corsheaders.middleware.CorsMiddleware",  # django-cors-headers
     "simple_history.middleware.HistoryRequestMiddleware",  # django-simple-history
     "django.contrib.sessions.middleware.SessionMiddleware",
