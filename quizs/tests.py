@@ -3,6 +3,7 @@ from django.test import TestCase
 
 from core import constants
 from questions.factories import QuestionFactory
+from questions.models import Question
 from quizs.factories import QuizFactory
 from quizs.models import Quiz, QuizAuthor, QuizQuestion, QuizRelationship
 from tags.factories import TagFactory
@@ -112,6 +113,20 @@ class QuizModelSaveTest(TestCase):
         self.assertEqual(self.quiz.relationships_list[1], f"{quiz_3.id} (précédent)")
         self.assertEqual(len(quiz_3.relationships_list), 1)
         self.assertEqual(quiz_3.relationships_list[0], f"{self.quiz.id} (suivant)")
+
+    def test_published_quiz_can_have_not_validated_questions(self):
+        self.question_validated = QuestionFactory(answer_correct="a")
+        self.question_not_validated = QuestionFactory(
+            answer_correct="a",
+            validation_status=constants.VALIDATION_STATUS_TO_VALIDATE,
+        )
+        self.quiz_published = QuizFactory(name="quiz published", publish=True)
+        self.quiz_not_published = QuizFactory(name="quiz not published")
+        QuizQuestion.objects.create(quiz=self.quiz_not_published, question=self.question_validated)
+        QuizQuestion.objects.create(quiz=self.quiz_not_published, question=self.question_not_validated)
+        QuizQuestion.objects.create(quiz=self.quiz_published, question=self.question_validated)
+        QuizQuestion.objects.create(quiz=self.quiz_published, question=self.question_not_validated)
+        self.assertEqual(len(self.quiz_published.questions_not_validated_list), 1)
 
 
 class QuizModelHistoryTest(TestCase):
@@ -227,6 +242,20 @@ class QuizQuestionModelTest(TestCase):
         cls.quiz = QuizFactory(name="Quiz 1")  # questions=[cls.question]
         QuizQuestion.objects.create(quiz=cls.quiz, question=cls.question, order=1)
 
+    def test_quiz_questions_querying(self):
+        # question --> quiz
+        self.assertEqual(self.question.quizs.count(), 1)
+        self.assertEqual(type(self.question.quizs.first()), Quiz)
+        self.assertEqual(self.question.quizquestion_set.count(), 1)
+        self.assertEqual(type(self.question.quizquestion_set.first()), QuizQuestion)
+        self.assertRaises(AttributeError, getattr, self.question, "quiz_set")
+        # quiz --> question
+        self.assertEqual(self.quiz.questions.count(), 1)
+        self.assertEqual(type(self.quiz.questions.first()), Question)
+        self.assertEqual(self.quiz.quizquestion_set.count(), 1)
+        self.assertEqual(type(self.quiz.quizquestion_set.first()), QuizQuestion)
+        self.assertRaises(AttributeError, getattr, self.quiz, "question_set")
+
     def test_cannot_have_duplicate_quiz_question(self):
         self.assertRaises(ValidationError, QuizQuestion.objects.create, quiz=self.quiz, question=self.question)
 
@@ -244,3 +273,42 @@ class QuizAuthorModelTest(TestCase):
 
     def test_cannot_have_duplicate_quiz_author(self):
         self.assertRaises(ValidationError, QuizAuthor.objects.create, quiz=self.quiz, author=self.user)
+
+
+class QuizRelationshipModelTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.question_1 = QuestionFactory(answer_correct="a")
+        cls.quiz_1 = QuizFactory(name="quiz 1")
+        cls.quiz_2 = QuizFactory(name="quiz 2")
+        cls.quiz_3 = QuizFactory(name="quiz 3")
+        cls.quiz_relationship = QuizRelationship.objects.create(
+            from_quiz=cls.quiz_1, to_quiz=cls.quiz_2, status="suivant"
+        )
+
+    def test_quiz_relationship_must_have_correct_status(self):
+        self.assertRaises(
+            ValidationError,
+            QuizRelationship.objects.create,
+            from_quiz=self.quiz_1,
+            to_quiz=self.quiz_3,
+            status="coucou",
+        )
+
+    def test_quiz_relationship_must_not_have_same_from_to(self):
+        self.assertRaises(
+            ValidationError,
+            QuizRelationship.objects.create,
+            from_quiz=self.quiz_1,
+            to_quiz=self.quiz_2,
+            status="similaire",
+        )
+
+    def test_quiz_relationship_cannot_have_symmetrical_from_to(self):
+        self.assertRaises(
+            ValidationError,
+            QuizRelationship.objects.create,
+            from_quiz=self.quiz_2,
+            to_quiz=self.quiz_1,
+            status="similaire",
+        )

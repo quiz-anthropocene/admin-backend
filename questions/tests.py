@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.test import TestCase
 
 from categories.factories import CategoryFactory
@@ -81,6 +82,75 @@ class QuestionModelSaveTest(TestCase):
         self.assertEqual(self.question.quizs.count(), 2)
         self.assertEqual(len(self.question.quizs_id_list), 2)
         self.assertEqual(self.question.quizs_id_list[1], quiz_2.id)
+
+    def test_validated_question_must_have_category(self):
+        self.assertRaises(ValidationError, QuestionFactory, category=None)
+
+    def test_validated_question_must_have_correct_choice_fields(self):
+        self.assertRaises(ValidationError, QuestionFactory, type="Coucou")
+        self.assertRaises(ValidationError, QuestionFactory, difficulty=42)
+        self.assertRaises(ValidationError, QuestionFactory, answer_correct="La réponse D")
+        self.assertRaises(ValidationError, QuestionFactory, validation_status="TBD")
+
+    def test_validated_question_qcm_must_have_one_answer(self):
+        self.assertRaises(ValidationError, QuestionFactory, answer_correct="")
+        self.assertRaises(ValidationError, QuestionFactory, answer_correct="ab")
+        self.assertRaises(ValidationError, QuestionFactory, answer_correct="aa")
+        self.assertRaises(ValidationError, QuestionFactory, answer_correct="e")
+
+    def test_validated_question_qcm_rm_must_have_at_least_one_answer(self):
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_QCM_RM,
+            answer_correct="",
+        )
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_QCM_RM,
+            answer_correct="ba",
+        )
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_QCM_RM,
+            answer_correct="aab",
+        )
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_QCM_RM,
+            answer_correct="abcde",
+        )
+
+    def test_validated_question_vf_must_have_specific_answer(self):
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_VF,
+            answer_correct="",
+        )
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_VF,
+            answer_correct="c",
+        )
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_VF,
+            answer_correct="ab",
+        )
+
+    def test_validated_question_vf_must_have_ordered_answers(self):
+        self.assertRaises(
+            ValidationError,
+            QuestionFactory,
+            type=constants.QUESTION_TYPE_VF,
+            has_ordered_answers=False,
+        )
 
 
 class QuestionModelHistoryTest(TestCase):
