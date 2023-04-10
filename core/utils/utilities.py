@@ -1,5 +1,7 @@
 import json
+import random
 import re
+import string
 from datetime import datetime
 
 import yaml
@@ -10,6 +12,12 @@ from django.utils import timezone
 
 DATE_FORMAT = "%Y-%m-%d"
 TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%S"
+
+
+def generate_random_string(length=20):
+    return "".join(
+        [random.choice(string.digits + string.ascii_letters + string.punctuation) for i in range(0, length)]
+    )
 
 
 def serialize_queryset_to_yaml(queryset, flat=False, stream=None):

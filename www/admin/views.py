@@ -13,6 +13,7 @@ from django_tables2.views import SingleTableMixin
 from activity.utilities import create_event
 from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import AdministratorUserRequiredMixin
+from core.utils import utilities
 from glossary.models import GlossaryItem
 from history.tables import HistoryTable
 from questions.models import Question
@@ -70,7 +71,7 @@ class AdminContributorCreateView(AdministratorUserRequiredMixin, CreateView):
     def form_valid(self, form):
         # create user
         contributor = form.save(commit=False)
-        password = User.objects.make_random_password()
+        password = utilities.generate_random_string()
         contributor.set_password(password)
         contributor.save()
 
