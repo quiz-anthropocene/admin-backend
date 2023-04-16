@@ -14,6 +14,8 @@ from questions.models import Question
 from questions.tables import QuestionTable
 from quizs.models import Quiz
 from quizs.tables import QuizTable
+
+# from stats.models import QuestionAggStat, QuizAggStat
 from users.models import User
 
 
@@ -95,3 +97,26 @@ class ProfileHistoryListView(ContributorUserRequiredMixin, TemplateView):
         question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)
         context["table"] = HistoryTable(question_quiz_history[:50])  # TODO: pagination ?
         return context
+
+
+class ProfileStatsListView(ContributorUserRequiredMixin, TemplateView):
+    pass
+    # use a table for author's quizs and their stats and another table for author's questions with their stats
+    """
+    template_name = "profile/stats.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        question_quiz_history = list(
+            chain(
+                Question.history.annotate(object_model=Value("Question")).filter(history_user=self.request.user),
+                Quiz.history.annotate(object_model=Value("Quiz")).filter(history_user=self.request.user),
+                GlossaryItem.history.annotate(object_model=Value("GlossaryItem")).filter(
+                    history_user=self.request.user
+                ),
+            )
+        )
+        question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)
+        context["table"] = HistoryTable(question_quiz_history[:50])  # TODO: pagination ?
+        return context
+    """

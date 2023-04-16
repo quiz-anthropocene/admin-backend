@@ -6,6 +6,7 @@ from www.profile.views import (
     ProfileInfoView,
     ProfileQuestionListView,
     ProfileQuizListView,
+    ProfileStatsListView,
 )
 
 
@@ -17,4 +18,5 @@ urlpatterns = [
     path("questions/", ProfileQuestionListView.as_view(), name="questions"),
     path("quizs/", ProfileQuizListView.as_view(), name="quizs"),
     path("history/", ProfileHistoryListView.as_view(), name="history"),
+    path("stats/", ProfileStatsListView.as_view(), name="stats"),
 ]

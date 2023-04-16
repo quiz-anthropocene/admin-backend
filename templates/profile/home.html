@@ -48,8 +48,27 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-4">
+                    <h5 class="card-title">{% translate "My stats" %}</h5>
+                    <a class="btn btn-primary" href="{% url 'profile:stats' %}">{% translate "View" %}</a>
+                  </div>
+                <div class="col-8">
+                        <ul class="list-group">
+                            <small class="text-muted font-weight-normal">{% translate "Questions played: " %} <span class="font-weight-bold">{{ user.questions_answer_count }}</span></small>
+                            <small class="text-muted font-weight-normal">{% translate "Questions success: " %} <span class="font-weight-bold">{{ user.questions_answer_success_count }}</span></small>
+                            <small class="text-muted font-weight-normal">{% translate "Questions likes count: " %} <span class="font-weight-bold">{{ user.questions_like_count }}</span></small>
+                            <small class="text-muted font-weight-normal">{% translate "Questions dislikes count: " %} <span class="font-weight-bold">{{ user.questions_dislike_count }}</span></small>            
+                        </ul>
+                </div>
+            </div>
+              </div>
+            </div>
+          </div>     
     </div>
-
     <br />
 
     <div class="row mb-3">

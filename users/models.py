@@ -243,6 +243,34 @@ class User(AbstractUser):
         return hasattr(self, "user_card")
 
     @property
+    def questions_answer_count(self) -> int:
+        answer_count = 0
+        for question in self.questions.all():
+            answer_count += question.agg_stats.answer_count
+        return answer_count
+
+    @property
+    def questions_answer_success_count(self) -> int:
+        answer_success_count = 0
+        for question in self.questions.all():
+            answer_success_count += question.agg_stats.answer_success_count
+        return answer_success_count
+
+    @property
+    def questions_like_count(self) -> int:
+        like_count = 0
+        for question in self.questions.all():
+            like_count += question.agg_stats.like_count
+        return like_count
+
+    @property
+    def questions_dislike_count(self) -> int:
+        dislike_count = 0
+        for question in self.questions.all():
+            dislike_count += question.agg_stats.dislike_count
+        return dislike_count
+
+    @property
     def has_role_contributor(self) -> bool:
         ROLES_ALLOWED = [
             user_constants.USER_ROLE_ADMINISTRATOR,
