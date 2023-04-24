@@ -3,7 +3,7 @@ from django.conf import settings
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-from django.db.models import Exists, OuterRef, Q
+from django.db.models import Avg, Exists, OuterRef, Q
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
@@ -243,6 +243,49 @@ class User(AbstractUser):
         return hasattr(self, "user_card")
 
     @property
+    def quizs_answer_count(self) -> int:
+        answer_count = 0
+        for quiz in self.quizs.all():
+            answer_count += quiz.agg_stats.answer_count
+        return answer_count
+
+    @property
+    def quizs_answer_success_count(self) -> int:
+        answer_success_count = 0
+        for quiz in self.quizs.all():
+            answer_success_count += quiz.stats.answer
+            answer_success_count
+        return answer_success_count
+
+    @property
+    def quizs_answer_success_count_ratio(self) -> float:
+        answer_success_count_ratio = 0
+        quizs_played_count = 0
+        for quiz in self.quizs.all():
+            if quiz.stats.count():
+                quizs_played_count += 1
+                answer_success_count_ratio += (
+                    quiz.stats.aggregate(Avg("answer_success_count"))["answer_success_count__avg"]
+                    / quiz.stats.aggregate(Avg("question_count"))["question_count__avg"]
+                )
+        total_success_count_ratio = answer_success_count_ratio / quizs_played_count * 100
+        return total_success_count_ratio
+
+    @property
+    def quizs_like_count(self) -> int:
+        like_count = 0
+        for quiz in self.quizs.all():
+            like_count += quiz.agg_stats.like_count
+        return like_count
+
+    @property
+    def quizs_dislike_count(self) -> int:
+        dislike_count = 0
+        for quiz in self.quizs.all():
+            dislike_count += quiz.agg_stats.dislike_count
+        return dislike_count
+
+    @property
     def questions_answer_count(self) -> int:
         answer_count = 0
         for question in self.questions.all():
@@ -250,11 +293,22 @@ class User(AbstractUser):
         return answer_count
 
     @property
-    def questions_answer_success_count(self) -> int:
+    def questions_answer_success_count(self) -> float:
         answer_success_count = 0
         for question in self.questions.all():
             answer_success_count += question.agg_stats.answer_success_count
         return answer_success_count
+
+    @property
+    def questions_answer_success_count_ratio(self) -> int:
+        answer_success_count_ratio = 0
+        if self.questions_answer_count == 0:
+            answer_success_count_ratio = 0
+        else:
+            answer_success_count_ratio = round(
+                self.questions_answer_success_count / self.questions_answer_count * 100, 2
+            )
+        return answer_success_count_ratio
 
     @property
     def questions_like_count(self) -> int:
