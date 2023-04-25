@@ -70,7 +70,6 @@
                 <div class="row">
                   <div class="col-2">
                     <h5 class="card-title">{% translate "My stats" %}</h5>
-                    <a class="btn btn-primary" href="{% url 'profile:stats' %}">{% translate "View details" %}</a>
                   </div>
                   {% if user.quiz_count > 0 %}
                   <div class="col-5">
@@ -81,6 +80,7 @@
                         <small class="text-muted font-weight-normal">{% translate "Total likes count: " %} <span class="fw-bold">{{ user.quizs_like_count }}</span></small>
                         <small class="text-muted font-weight-normal">{% translate "Total dislikes count: " %} <span class="fw-bold">{{ user.quizs_dislike_count }}</span></small>            
                     </ul>
+                    <a class="btn btn-primary" href="{% url 'profile:stats_quizs' %}">{% translate "View details" %}</a>
                   </div>
                   {% endif %}
                   {% if user.question_count > 0 %}                  
@@ -92,6 +92,7 @@
                             <small class="text-muted font-weight-normal">{% translate "Total likes count: " %} <span class="fw-bold">{{ user.questions_like_count }}</span></small>
                             <small class="text-muted font-weight-normal">{% translate "Total dislikes count: " %} <span class="fw-bold">{{ user.questions_dislike_count }}</span></small>            
                         </ul>
+                        <a class="btn btn-primary" href="{% url 'profile:stats_questions' %}">{% translate "View details" %}</a>
                   </div>
                 {% endif %}
 
