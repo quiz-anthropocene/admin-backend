@@ -157,9 +157,9 @@ def clean_markdown_links(text_with_markdown):
     return re.sub(r"\[(.*?)\]\((.+?)\)", r"\1", text_with_markdown)
 
 
-def truncate_with_ellipsis(text, ellipsis_threshold=None):
+def truncate_with_ellipsis(text, ellipsis_threshold=None, ellipsis_string="…"):  # "(…)"
     if ellipsis_threshold and len(text) > ellipsis_threshold:
-        text = text[: (ellipsis_threshold - 8)] + " (…)"
+        text = text[: (ellipsis_threshold - len(ellipsis_string))] + f" {ellipsis_string}"
     return text
 
 
