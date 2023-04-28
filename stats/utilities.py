@@ -125,7 +125,7 @@ def answer_stats():
     #     week_or_month_iso_number=current_month_iso_number,
     # )
     # # current week
-    # current_week_iso_number = date.today().isocalendar()[1]
+    # current_week_iso_number = date.today().isocalendar().week
     # question_answer_count_current_week = QuestionAnswerEvent.objects.filter(
     #     created__date__week=current_week_iso_number
     # ).count() + DailyStat.objects.agg_count(
