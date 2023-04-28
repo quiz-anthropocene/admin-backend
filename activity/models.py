@@ -45,7 +45,7 @@ class Event(models.Model):
     )
 
     # user
-    actor_id = models.IntegerField(verbose_name=_("Actor ID"), blank=True)
+    actor_id = models.IntegerField(verbose_name=_("Actor ID"), blank=True, null=True)
     actor_name = models.CharField(verbose_name=_("Actor name"), max_length=150, blank=True)
 
     # verb
@@ -57,7 +57,7 @@ class Event(models.Model):
     )
 
     # object
-    event_object_id = models.IntegerField(verbose_name=_("Object ID"), blank=True)
+    event_object_id = models.IntegerField(verbose_name=_("Object ID"), blank=True, null=True)
     event_object_type = models.CharField(
         verbose_name=_("Object type"),
         max_length=50,
