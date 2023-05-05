@@ -1,5 +1,6 @@
 import django_tables2 as tables
 from django.db.models import Avg
+from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from django_tables2.utils import Accessor
 
@@ -22,7 +23,7 @@ class QuestionsStatsTable(tables.Table):
     question_id = tables.Column(
         accessor=Accessor("question.id"),
         verbose_name="Question id",
-        linkify=lambda record: record.question.get_absolute_url(),
+        linkify=lambda record: reverse("questions:detail_stats", kwargs={"pk": record.question.id}),
     )
     question_text = RichTextEllipsisColumn(accessor=Accessor("question.text"), verbose_name=_("Question text"))
     success_rate = tables.Column(
@@ -44,7 +45,9 @@ class QuestionsStatsTable(tables.Table):
 
 class QuizsStatsTable(tables.Table):
     quiz_id = tables.Column(
-        accessor=Accessor("quiz.id"), verbose_name="Quiz id", linkify=lambda record: record.quiz.get_absolute_url()
+        accessor=Accessor("quiz.id"),
+        verbose_name="Quiz id",
+        linkify=lambda record: reverse("questions:detail_stats", kwargs={"pk": record.quiz.id}),
     )
     # quiz = RichTextEllipsisColumn(verbose_name="Quiz name")
     success_rate = tables.Column(
