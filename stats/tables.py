@@ -1,5 +1,4 @@
 import django_tables2 as tables
-from django.db.models import Avg
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from django_tables2.utils import Accessor
@@ -38,9 +37,7 @@ class QuestionsStatsTable(tables.Table):
         attrs = DEFAULT_ATTRS
 
     def render_success_rate(self, value, record):
-        if record.answer_count == 0:
-            return "-"
-        return f"{(record.answer_success_count / record.answer_count) * 100:.2f}%"
+        return record.question.success_rate
 
 
 class QuizsStatsTable(tables.Table):
@@ -63,11 +60,5 @@ class QuizsStatsTable(tables.Table):
         template_name = DEFAULT_TEMPLATE
         attrs = DEFAULT_ATTRS
 
-    def render_success_rate(self, value, record):
-        if record.answer_count == 0:
-            return "-"
-        success_count_ratio = (
-            record.quiz.stats.aggregate(Avg("answer_success_count"))["answer_success_count__avg"]
-            / record.quiz.stats.aggregate(Avg("question_count"))["question_count__avg"]
-        )
-        return f"{success_count_ratio * 100:.2f}%"
+    def render_success_rate(self, record):
+        return record.quiz.success_rate

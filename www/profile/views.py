@@ -136,8 +136,7 @@ class ProfileStatsQuizsListView(ContributorUserRequiredMixin, SingleTableView):
 
     def get_queryset(self):
         qs = super().get_queryset()
-        quizs = Quiz.objects.for_author(self.request.user)
-        qs = QuizAggStat.objects.filter(quiz__in=quizs)
+        qs = QuizAggStat.objects.filter(quiz__in=self.request.user.quizs.all())
         qs = qs.order_by("-quiz__created")
         return qs
 
