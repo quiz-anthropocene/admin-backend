@@ -369,6 +369,16 @@ class Quiz(models.Model):
     def comments_published(self):
         return self.comments.published()
 
+    @property
+    def success_rate(self):
+        if self.answer_count_agg == 0:
+            return "-"
+        success_count_ratio = (
+            self.stats.aggregate(Avg("answer_success_count"))["answer_success_count__avg"]
+            / self.stats.aggregate(Avg("question_count"))["question_count__avg"]
+        )
+        return f"{success_count_ratio * 100:.2f}%"
+
     # Admin
     tags_list_string.fget.short_description = _("Tags")
     authors_list_string.fget.short_description = _("Authors")

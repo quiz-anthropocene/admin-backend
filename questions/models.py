@@ -365,6 +365,12 @@ class Question(models.Model):
     def comments_published(self):
         return self.comments.published()
 
+    @property
+    def success_rate(self):
+        if self.answer_count_agg == 0:
+            return "-"
+        return f"{(self.answer_success_count_agg / self.answer_count_agg) * 100:.2f}%"
+
     # Admin
     tags_list_string.fget.short_description = _("Tags")
     quizs_list_string.fget.short_description = _("Quizs")
