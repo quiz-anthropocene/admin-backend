@@ -20,14 +20,9 @@
 
 {% block content %}
 <div class="container">
-    <div class="row mb-3">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{% translate "My questions" %} <small class="text-muted">{{ user.question_count }}</small></h5>
-                    <a class="btn btn-primary" href="{% url 'profile:questions' %}">{% translate "View" %}</a>
-                </div>
-            </div>
+    <div class="row">
+        <div class="col-9">
+            <h1>{% translate "My content" %}</h1>
         </div>
         <div class="col-md-4">
             <div class="card">
@@ -37,16 +32,21 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="row mb-3">
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">{% translate "My modification history" %}</h5>
-                    <a class="btn btn-primary" href="{% url 'profile:history' %}">{% translate "View" %}</a>
+                    <h5 class="card-title">{% translate "My questions" %} <small class="text-muted">{{ user.question_count }}</small></h5>
+                    <a class="btn btn-primary" href="{% url 'profile:questions' %}">{% translate "View" %}</a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-9">
+            <h1>{% translate "My info" %}</h1>
         </div>
         <div class="col-md-4">
             <div class="card">
@@ -60,47 +60,79 @@
                     <a class="btn btn-primary" href="{% url 'profile:info' %}">{% translate "View" %}</a>
                 </div>
             </div>
-        </div>   
-    </div>
-    {% if user.question_count > 0 or user.quiz_count > 0 %}
-    <div class="row mb-3">
-        <div class="col-md-8">
+        </div>  
+        <div class="col-md-4">
             <div class="card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-2">
-                    <h5 class="card-title">{% translate "My stats" %}</h5>
-                  </div>
-                  {% if user.quiz_count > 0 %}
-                  <div class="col-5">
-                    <ul class="list-group">
-                        <small class="fw-bold">{% translate "My quizs: " %}</small>
-                        <small class="text-muted font-weight-normal">{% translate "Number of time played: " %} <span class="fw-bold">{{ user.quizs_answer_count }}</span></small>
-                        <small class="text-muted font-weight-normal">{% translate "Successfully answered: " %} <span class="fw-bold">{{ user.quizs_answer_success_count_ratio }} %</span></small>
-                        <small class="text-muted font-weight-normal">{% translate "Total likes count: " %} <span class="fw-bold">{{ user.quizs_like_count }}</span></small>
-                        <small class="text-muted font-weight-normal">{% translate "Total dislikes count: " %} <span class="fw-bold">{{ user.quizs_dislike_count }}</span></small>            
-                    </ul>
-                    <a class="btn btn-primary" href="{% url 'profile:stats_quizs' %}">{% translate "View details" %}</a>
-                  </div>
-                  {% endif %}
-                  {% if user.question_count > 0 %}                  
-                  <div class="col-5">
-                        <ul class="list-group">
-                            <small class="fw-bold">{% translate "My questions: " %}</small>
-                            <small class="text-muted font-weight-normal">{% translate "Number of time played: " %} <span class="fw-bold">{{ user.questions_answer_count }}</span></small>
-                            <small class="text-muted font-weight-normal">{% translate "Successfully answered: " %} <span class="fw-bold">{{ user.questions_answer_success_count_ratio }} %</span></small>
-                            <small class="text-muted font-weight-normal">{% translate "Total likes count: " %} <span class="fw-bold">{{ user.questions_like_count }}</span></small>
-                            <small class="text-muted font-weight-normal">{% translate "Total dislikes count: " %} <span class="fw-bold">{{ user.questions_dislike_count }}</span></small>            
-                        </ul>
-                        <a class="btn btn-primary" href="{% url 'profile:stats_questions' %}">{% translate "View details" %}</a>
-                  </div>
-                {% endif %}
-
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "My modification history" %}</h5>
+                    <a class="btn btn-primary" href="{% url 'profile:history' %}">{% translate "View" %}</a>
+                </div>
             </div>
-              </div>
-            </div>
-          </div>  
+        </div> 
     </div>
+
+    <br />
+
+    {% if user.question_count > 0 or user.quiz_count > 0 %}
+        <div class="row">
+            <div class="col-9">
+                <h1>{% translate "Some statistics" %}</h1>
+            </div>
+            {% if user.quiz_count > 0 %}
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{% translate "My quizs" %}</h5>
+                            <ul style="list-style-type:none;padding-left:0">
+                                <li>
+                                    <small class="text-muted">{% translate "Number of published quizs:" %} <span class="fw-bold">{{ user.quiz_published_count }}</span></small>
+                                </li>
+                                <li>
+                                    <small class="text-muted">{% translate "Number of answers:" %} <span class="fw-bold">{{ user.quiz_answer_count }}</span></small>
+                                </li>
+                                <li>
+                                    <small class="text-muted">{% translate "Successfully answered:" %} <span class="fw-bold">{{ user.quiz_answer_success_count_ratio }} %</span></small>
+                                </li>
+                                <li>
+                                    <small class="text-muted">{% translate "Total likes count:" %} <span class="fw-bold">{{ user.quiz_like_count }}</span></small>
+                                </li>
+                                <li>
+                                    <small class="text-muted">{% translate "Total dislikes count:" %} <span class="fw-bold">{{ user.quiz_dislike_count }}</span></small>
+                                </li>
+                            </ul>
+                            <a class="btn btn-primary" href="{% url 'profile:stats_quizs' %}">{% translate "View details" %}</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            {% if user.question_count > 0 %}
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{% translate "My questions" %}</h5>
+                            <ul style="list-style-type:none;padding-left:0">
+                                <li>
+                                    <small class="text-muted">{% translate "Number of validated questions:" %} <span class="fw-bold">{{ user.question_validated_count }}</span></small>
+                                </li>
+                                <li>
+                                    <small class="text-muted">{% translate "Number of answers:" %} <span class="fw-bold">{{ user.question_answer_count }}</span></small>
+                                </li>
+                                <li>
+                                    <small class="text-muted">{% translate "Successfully answered:" %} <span class="fw-bold">{{ user.question_answer_success_count_ratio }} %</span></small>
+                                </li>
+                                <li>
+                                    <small class="text-muted">{% translate "Total likes count:" %} <span class="fw-bold">{{ user.question_like_count }}</span></small>
+                                </li>
+                                <li>
+                                    <small class="text-muted">{% translate "Total dislikes count:" %} <span class="fw-bold">{{ user.question_dislike_count }}</span></small>
+                                </li>
+                            </ul>
+                            <a class="btn btn-primary" href="{% url 'profile:stats_questions' %}">{% translate "View details" %}</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
     {% endif %}
 </div>
 {% endblock %}

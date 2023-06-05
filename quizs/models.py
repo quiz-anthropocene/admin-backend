@@ -3,7 +3,7 @@ from django.conf import settings
 from django.contrib.postgres.fields import ArrayField
 from django.core.exceptions import ValidationError
 from django.db import models
-from django.db.models import Avg, Count, Q
+from django.db.models import Avg, Count, Q, Sum
 from django.db.models.functions import Concat
 from django.db.models.signals import m2m_changed, post_delete, post_save, pre_save
 from django.dispatch import receiver
@@ -51,6 +51,15 @@ class QuizQuerySet(models.QuerySet):
             field_search = {f"{field_name}__icontains": value}
             conditions |= Q(**field_search)
         return self.filter(conditions)
+
+    def answer_count(self) -> int:
+        return self.aggregate(answer_count=Sum("agg_stats__answer_count"))["answer_count"] or 0
+
+    def like_count(self) -> int:
+        return self.aggregate(like_count=Sum("agg_stats__like_count"))["like_count"] or 0
+
+    def dislike_count(self) -> int:
+        return self.aggregate(dislike_count=Sum("agg_stats__dislike_count"))["dislike_count"] or 0
 
 
 class Quiz(models.Model):
