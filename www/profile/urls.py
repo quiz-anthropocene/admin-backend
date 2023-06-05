@@ -6,8 +6,8 @@ from www.profile.views import (
     ProfileInfoView,
     ProfileQuestionListStatsView,
     ProfileQuestionListView,
+    ProfileQuizListStatsView,
     ProfileQuizListView,
-    ProfileStatsQuizsListView,
 )
 
 
@@ -20,12 +20,19 @@ urlpatterns = [
         "questions/",
         include(
             [
-                path("", ProfileQuestionListView.as_view(), name="questions"),
+                path("", ProfileQuestionListView.as_view(), name="questions_view"),
                 path("stats/", ProfileQuestionListStatsView.as_view(), name="questions_stats"),
             ]
         ),
     ),
-    path("quizs/", ProfileQuizListView.as_view(), name="quizs"),
+    path(
+        "quizs/",
+        include(
+            [
+                path("", ProfileQuizListView.as_view(), name="quizs_view"),
+                path("stats/", ProfileQuizListStatsView.as_view(), name="quizs_stats"),
+            ]
+        ),
+    ),
     path("history/", ProfileHistoryListView.as_view(), name="history"),
-    path("stats_quizs/", ProfileStatsQuizsListView.as_view(), name="stats_quizs"),
 ]

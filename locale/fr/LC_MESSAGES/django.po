@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-06 01:12+0200\n"
+"POT-Creation-Date: 2023-06-06 01:19+0200\n"
 "PO-Revision-Date: 2023-06-06 01:11+0200\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -889,12 +889,12 @@ msgstr "Voir plus"
 #: templates/pages/help.html:12 templates/pages/home.html:4
 #: templates/profile/history.html:13 templates/profile/home.html:12
 #: templates/profile/info.html:12 templates/profile/questions_base.html:13
-#: templates/profile/quizs.html:13 templates/profile/stats_quizs.html:13
-#: templates/questions/create.html:17 templates/questions/detail_base.html:12
-#: templates/questions/list.html:13 templates/quizs/create.html:17
-#: templates/quizs/detail_base.html:12 templates/quizs/list.html:13
-#: templates/tags/create.html:16 templates/tags/detail_base.html:12
-#: templates/tags/list.html:13 templates/users/administrator_list.html:13
+#: templates/profile/quizs_base.html:13 templates/questions/create.html:17
+#: templates/questions/detail_base.html:12 templates/questions/list.html:13
+#: templates/quizs/create.html:17 templates/quizs/detail_base.html:12
+#: templates/quizs/list.html:13 templates/tags/create.html:16
+#: templates/tags/detail_base.html:12 templates/tags/list.html:13
+#: templates/users/administrator_list.html:13
 #: templates/users/author_card_list.html:12 templates/users/home.html:12
 msgid "Home"
 msgstr "Accueil"
@@ -918,13 +918,14 @@ msgstr "Contributeurs"
 #: templates/contributions/detail_reply_create.html:90
 #: templates/glossary/create.html:4 templates/glossary/create.html:18
 #: templates/glossary/create.html:39 templates/glossary/list.html:34
-#: templates/profile/questions_view.html:16 templates/profile/quizs.html:30
-#: templates/questions/create.html:4 templates/questions/create.html:19
-#: templates/questions/create.html:62 templates/questions/list.html:34
-#: templates/quizs/create.html:4 templates/quizs/create.html:19
-#: templates/quizs/create.html:62 templates/quizs/list.html:34
-#: templates/tags/create.html:4 templates/tags/create.html:18
-#: templates/tags/create.html:39 templates/tags/list.html:34
+#: templates/profile/questions_view.html:16
+#: templates/profile/quizs_view.html:11 templates/questions/create.html:4
+#: templates/questions/create.html:19 templates/questions/create.html:62
+#: templates/questions/list.html:34 templates/quizs/create.html:4
+#: templates/quizs/create.html:19 templates/quizs/create.html:62
+#: templates/quizs/list.html:34 templates/tags/create.html:4
+#: templates/tags/create.html:18 templates/tags/create.html:39
+#: templates/tags/list.html:34
 msgid "Add"
 msgstr "Ajouter"
 
@@ -1142,14 +1143,15 @@ msgid "Website"
 msgstr "Application"
 
 #: templates/includes/_footer.html:19 templates/profile/questions_base.html:35
-#: templates/questions/detail_base.html:49 templates/quizs/detail_base.html:49
+#: templates/profile/quizs_base.html:35 templates/questions/detail_base.html:49
+#: templates/quizs/detail_base.html:49
 msgid "Statistics"
 msgstr "Statistiques"
 
 #: templates/includes/_header.html:23 templates/profile/history.html:14
 #: templates/profile/home.html:4 templates/profile/home.html:13
 #: templates/profile/info.html:13 templates/profile/questions_base.html:14
-#: templates/profile/quizs.html:14 templates/profile/stats_quizs.html:14
+#: templates/profile/quizs_base.html:14
 msgid "My space"
 msgstr "Mon espace"
 
@@ -1312,7 +1314,7 @@ msgid "My content"
 msgstr "Mon contenu"
 
 #: templates/profile/home.html:30 templates/profile/home.html:85
-#: templates/profile/quizs.html:5 templates/profile/quizs.html:15
+#: templates/profile/quizs_base.html:5 templates/profile/quizs_base.html:15
 msgid "My quizs"
 msgstr "Mes quizs"
 
@@ -1404,21 +1406,9 @@ msgstr ""
 msgid "All my questions"
 msgstr "Toutes mes questions"
 
-#: templates/profile/quizs.html:27
+#: templates/profile/quizs_base.html:30 templates/profile/quizs_view.html:8
 msgid "All my quizs"
 msgstr "Tous mes quizs"
-
-#: templates/profile/stats_quizs.html:5 templates/profile/stats_quizs.html:15
-#, fuzzy
-#| msgid "My quizs: "
-msgid "My quizs stats"
-msgstr "Mes quizs : "
-
-#: templates/profile/stats_quizs.html:27
-#, fuzzy
-#| msgid "My stats overview"
-msgid "My quizs stats overview"
-msgstr "Aperçu de mes stats"
 
 #: templates/questions/create.html:39 templates/questions/detail_edit.html:48
 #: templates/quizs/create.html:39 templates/quizs/detail_edit.html:79
@@ -1659,6 +1649,16 @@ msgstr "Le tag a été mis à jour."
 #, python-brace-format
 msgid "The tag <strong>{tag_name}</strong> was created."
 msgstr "Le tag <strong>{tag_name}</strong> a été créé."
+
+#, fuzzy
+#~| msgid "My quizs: "
+#~ msgid "My quizs stats"
+#~ msgstr "Mes quizs : "
+
+#, fuzzy
+#~| msgid "My stats overview"
+#~ msgid "My quizs stats overview"
+#~ msgstr "Aperçu de mes stats"
 
 #, fuzzy
 #~| msgid "My questions: "

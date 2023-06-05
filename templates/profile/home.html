@@ -28,7 +28,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{% translate "My quizs" %} <small class="text-muted">{{ user.quiz_count }}</small></h5>
-                    <a class="btn btn-primary" href="{% url 'profile:quizs' %}">{% translate "View" %}</a>
+                    <a class="btn btn-primary" href="{% url 'profile:quizs_view' %}">{% translate "View" %}</a>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{% translate "My questions" %} <small class="text-muted">{{ user.question_count }}</small></h5>
-                    <a class="btn btn-primary" href="{% url 'profile:questions' %}">{% translate "View" %}</a>
+                    <a class="btn btn-primary" href="{% url 'profile:questions_view' %}">{% translate "View" %}</a>
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@
                                     <small class="text-muted">{% translate "Total dislikes count:" %} <span class="fw-bold">{{ user.quiz_dislike_count }}</span></small>
                                 </li>
                             </ul>
-                            <a class="btn btn-primary" href="{% url 'profile:stats_quizs' %}">{% translate "View details" %}</a>
+                            <a class="btn btn-primary" href="{% url 'profile:quizs_stats' %}">{% translate "View details" %}</a>
                         </div>
                     </div>
                 </div>

@@ -26,7 +26,7 @@
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'stats' not in request.path %}active fw-bold{% endif %}" href="{% url 'profile:questions' %}">
+                    <a class="nav-link {% if 'stats' not in request.path %}active fw-bold{% endif %}" href="{% url 'profile:questions_view' %}">
                         {% translate "All my questions" %} ({{ user.question_count }})
                     </a>
                 </li>
