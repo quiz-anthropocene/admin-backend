@@ -1,0 +1,38 @@
+{% extends "profile/questions_base.html" %}
+{% load render_table from django_tables2 %}
+{% load i18n django_bootstrap5 %}
+
+{% block profile_questions_content %}
+<div class="row">
+    <div class="col-9">
+        <h1>{% translate "All my questions" %}</h1>
+    </div>
+    <div class="col-3 text-end my-auto">
+        <button type="button" class="btn {% if search_filters %}btn-warning{% else %}btn-secondary{% endif %} btn-sm btn-ico" data-bs-toggle="collapse" data-bs-target="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters">
+            <span>{% translate "Filters" %}&nbsp;</span>
+            <span id="collapse-down-ico">⏷</span>
+            <span id="collapse-up-ico">⏶</span>
+        </button>
+        <a class="btn btn-success btn-sm" href="{% url 'questions:create' %}?next={% url 'profile:questions' %}">{% translate "Add" %}</a>
+    </div>
+</div>
+<!-- Filters: list -->
+{% if search_filters %}
+    <p>
+        {% include "includes/_filter_badge_list.html" with search_filters=search_filters model_name="Question" %}
+    </p>
+{% endif %}
+<!-- Filters: form -->
+<form action="" method="get" id="collapseFilters" class="mb-3 collapse">
+    {% bootstrap_form filter.form layout="horizontal" %}
+    <div class="col-12 text-end">
+        {% bootstrap_button button_type="submit" content=_("Filter") %}
+    </div>
+</form>
+<!-- Table -->
+<div class="row overflow-scroll">
+    <div class="col-12">
+        {% render_table table %}
+    </div>
+</div>
+{% endblock %}

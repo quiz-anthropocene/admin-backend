@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-05 23:40+0200\n"
+"POT-Creation-Date: 2023-06-06 01:12+0200\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Computed"
 msgstr ""
 
-#: activity/models.py:41 contributions/models.py:77 questions/models.py:255
+#: activity/models.py:41 contributions/models.py:77 questions/models.py:273
 #: quizs/models.py:457 templates/categories/detail_questions.html:12
 #: templates/questions/detail_base.html:4
 #: templates/tags/detail_questions.html:12
@@ -94,11 +94,11 @@ msgid "Additional data"
 msgstr ""
 
 #: activity/models.py:74 categories/models.py:15 contributions/models.py:118
-#: glossary/models.py:32 questions/models.py:240 quizs/models.py:168
+#: glossary/models.py:32 questions/models.py:258 quizs/models.py:168
 #: quizs/models.py:460 quizs/models.py:523 quizs/models.py:583
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
 #: stats/models.py:207 stats/models.py:218 stats/models.py:304
-#: tags/models.py:29 users/models.py:193 users/models.py:396
+#: tags/models.py:29 users/models.py:193 users/models.py:369
 msgid "Creation date"
 msgstr ""
 
@@ -187,13 +187,13 @@ msgid "Description"
 msgstr ""
 
 #: categories/models.py:16 contributions/models.py:119 glossary/models.py:33
-#: questions/models.py:241 quizs/models.py:169 quizs/models.py:461
+#: questions/models.py:259 quizs/models.py:169 quizs/models.py:461
 #: quizs/models.py:524 quizs/models.py:584 stats/models.py:305
-#: tags/models.py:30 users/models.py:194 users/models.py:397
+#: tags/models.py:30 users/models.py:194 users/models.py:370
 msgid "Last update date"
 msgstr ""
 
-#: categories/models.py:19 questions/models.py:109 questions/models.py:244
+#: categories/models.py:19 questions/models.py:127 questions/models.py:262
 #: templates/categories/detail_base.html:4
 #: templates/categories/detail_questions.html:13
 #: templates/tags/detail_questions.html:13
@@ -229,7 +229,7 @@ msgstr ""
 msgid "Message"
 msgstr ""
 
-#: contributions/models.py:69 questions/models.py:97
+#: contributions/models.py:69 questions/models.py:115
 msgid "Text"
 msgstr ""
 
@@ -241,12 +241,12 @@ msgstr ""
 msgid "Additional information"
 msgstr ""
 
-#: contributions/models.py:74 history/tables.py:10 questions/models.py:102
+#: contributions/models.py:74 history/tables.py:10 questions/models.py:120
 msgid "Type"
 msgstr ""
 
-#: contributions/models.py:88 history/tables.py:9 questions/models.py:202
-#: questions/models.py:247 quizs/models.py:578
+#: contributions/models.py:88 history/tables.py:9 questions/models.py:220
+#: questions/models.py:265 quizs/models.py:578
 #: templates/contributions/detail_history.html:12
 #: templates/glossary/detail_history.html:12
 #: templates/questions/detail_history.html:12
@@ -254,7 +254,7 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
-#: contributions/models.py:97 questions/models.py:211 quizs/models.py:135
+#: contributions/models.py:97 questions/models.py:229 quizs/models.py:135
 msgid "Status"
 msgstr ""
 
@@ -452,7 +452,7 @@ msgstr ""
 msgid "Accessible source (link)"
 msgstr ""
 
-#: glossary/models.py:25 questions/models.py:129 quizs/models.py:114
+#: glossary/models.py:25 questions/models.py:147 quizs/models.py:114
 msgid "Language"
 msgstr ""
 
@@ -471,19 +471,19 @@ msgstr ""
 msgid "Answer image"
 msgstr ""
 
-#: questions/models.py:97
+#: questions/models.py:115
 msgid "Keep it simple"
 msgstr ""
 
-#: questions/models.py:99
+#: questions/models.py:117
 msgid "Hint"
 msgstr ""
 
-#: questions/models.py:99
+#: questions/models.py:117
 msgid "Text that the user can decide to display to help him"
 msgstr ""
 
-#: questions/models.py:117 questions/models.py:245 questions/models.py:375
+#: questions/models.py:135 questions/models.py:263 questions/models.py:393
 #: quizs/models.py:111 quizs/models.py:175 quizs/models.py:392
 #: tags/models.py:36 templates/categories/detail_questions.html:14
 #: templates/includes/_header.html:35 templates/tags/create.html:4
@@ -493,127 +493,127 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: questions/models.py:123
+#: questions/models.py:141
 msgid "Difficulty level"
 msgstr ""
 
-#: questions/models.py:135
+#: questions/models.py:153
 msgid "Answer a"
 msgstr ""
 
-#: questions/models.py:136
+#: questions/models.py:154
 msgid "Answer b"
 msgstr ""
 
-#: questions/models.py:137
+#: questions/models.py:155
 msgid "Answer c"
 msgstr ""
 
-#: questions/models.py:138
+#: questions/models.py:156
 msgid "Answer d"
 msgstr ""
 
-#: questions/models.py:140
+#: questions/models.py:158
 msgid "The correct answer"
 msgstr ""
 
-#: questions/models.py:147
+#: questions/models.py:165
 msgid "Ordered answers?"
 msgstr ""
 
-#: questions/models.py:150
+#: questions/models.py:168
 msgid ""
 "True if the answer choices should be displayed in this particular order "
 "(instead of being mixed up)"
 msgstr ""
 
-#: questions/models.py:153
+#: questions/models.py:171
 msgid "Answer explanation"
 msgstr ""
 
-#: questions/models.py:154
+#: questions/models.py:172
 msgid "Answer audio explanation (link)"
 msgstr ""
 
-#: questions/models.py:156
+#: questions/models.py:174
 msgid "Answer audio explanation (text to display)"
 msgstr ""
 
-#: questions/models.py:160
+#: questions/models.py:178
 msgid "Answer video explanation (link)"
 msgstr ""
 
-#: questions/models.py:162
+#: questions/models.py:180
 msgid "Answer video explanation (text to display)"
 msgstr ""
 
-#: questions/models.py:167
+#: questions/models.py:185
 msgid "Answer accessible source (link)"
 msgstr ""
 
-#: questions/models.py:170
+#: questions/models.py:188
 msgid "Answer accessible source (text to display)"
 msgstr ""
 
-#: questions/models.py:175
+#: questions/models.py:193
 msgid "Answer scientific source (link)"
 msgstr ""
 
-#: questions/models.py:178
+#: questions/models.py:196
 msgid "Report, scientific article…"
 msgstr ""
 
-#: questions/models.py:181
+#: questions/models.py:199
 msgid "Answer scientific source (text to display)"
 msgstr ""
 
-#: questions/models.py:185
+#: questions/models.py:203
 msgid "Answer reading recommandation"
 msgstr ""
 
-#: questions/models.py:187
+#: questions/models.py:205
 msgid "Answer image (link)"
 msgstr ""
 
-#: questions/models.py:192
+#: questions/models.py:210
 msgid "Answer image (text to display)"
 msgstr ""
 
-#: questions/models.py:194
+#: questions/models.py:212
 msgid "Caption, translation, short explanation…"
 msgstr ""
 
-#: questions/models.py:197
+#: questions/models.py:215
 msgid "Answer extra info"
 msgstr ""
 
-#: questions/models.py:199
+#: questions/models.py:217
 msgid "Won't be displayed in the application"
 msgstr ""
 
-#: questions/models.py:217 questions/models.py:248 quizs/models.py:141
+#: questions/models.py:235 questions/models.py:266 quizs/models.py:141
 #: quizs/models.py:182
 msgid "Validator"
 msgstr ""
 
-#: questions/models.py:224 quizs/models.py:148
+#: questions/models.py:242 quizs/models.py:148
 msgid "Validation date"
 msgstr ""
 
-#: questions/models.py:227 quizs/models.py:154
+#: questions/models.py:245 quizs/models.py:154
 msgid "Visibility"
 msgstr ""
 
-#: questions/models.py:234
+#: questions/models.py:252
 msgid ""
 "I certify that I have the necessary rights to publish and share this content"
 msgstr ""
 
-#: questions/models.py:237
+#: questions/models.py:255
 msgid "I agree to a possible commercial use by the association of this content"
 msgstr ""
 
-#: questions/models.py:246 questions/models.py:376 quizs/models.py:190
+#: questions/models.py:264 questions/models.py:394 quizs/models.py:190
 #: templates/includes/_header.html:29 templates/questions/detail_base.html:39
 #: templates/quizs/create.html:4 templates/quizs/create.html:18
 #: templates/quizs/detail_base.html:13 templates/quizs/list.html:5
@@ -621,7 +621,7 @@ msgstr ""
 msgid "Quizs"
 msgstr ""
 
-#: questions/models.py:256 quizs/models.py:106 quizs/models.py:177
+#: questions/models.py:274 quizs/models.py:106 quizs/models.py:177
 #: templates/categories/detail_base.html:39 templates/includes/_header.html:26
 #: templates/questions/create.html:4 templates/questions/create.html:18
 #: templates/questions/detail_base.html:13 templates/questions/list.html:14
@@ -629,23 +629,23 @@ msgstr ""
 msgid "Questions"
 msgstr ""
 
-#: questions/models.py:377 quizs/models.py:398
+#: questions/models.py:395 quizs/models.py:398
 msgid "# Ans"
 msgstr ""
 
-#: questions/models.py:378
+#: questions/models.py:396
 msgid "# Corr Ans"
 msgstr ""
 
-#: questions/models.py:379
+#: questions/models.py:397
 msgid "% Corr Ans"
 msgstr ""
 
-#: questions/models.py:380 quizs/models.py:401
+#: questions/models.py:398 quizs/models.py:401
 msgid "# Like"
 msgstr ""
 
-#: questions/models.py:381 quizs/models.py:402
+#: questions/models.py:399 quizs/models.py:402
 msgid "# Dislike"
 msgstr ""
 
@@ -873,14 +873,13 @@ msgstr ""
 #: templates/glossary/detail_base.html:12 templates/glossary/list.html:13
 #: templates/pages/help.html:12 templates/pages/home.html:4
 #: templates/profile/history.html:13 templates/profile/home.html:12
-#: templates/profile/info.html:12 templates/profile/questions.html:13
-#: templates/profile/quizs.html:13 templates/profile/stats_questions.html:13
-#: templates/profile/stats_quizs.html:13 templates/questions/create.html:17
-#: templates/questions/detail_base.html:12 templates/questions/list.html:13
-#: templates/quizs/create.html:17 templates/quizs/detail_base.html:12
-#: templates/quizs/list.html:13 templates/tags/create.html:16
-#: templates/tags/detail_base.html:12 templates/tags/list.html:13
-#: templates/users/administrator_list.html:13
+#: templates/profile/info.html:12 templates/profile/questions_base.html:13
+#: templates/profile/quizs.html:13 templates/profile/stats_quizs.html:13
+#: templates/questions/create.html:17 templates/questions/detail_base.html:12
+#: templates/questions/list.html:13 templates/quizs/create.html:17
+#: templates/quizs/detail_base.html:12 templates/quizs/list.html:13
+#: templates/tags/create.html:16 templates/tags/detail_base.html:12
+#: templates/tags/list.html:13 templates/users/administrator_list.html:13
 #: templates/users/author_card_list.html:12 templates/users/home.html:12
 msgid "Home"
 msgstr ""
@@ -904,7 +903,7 @@ msgstr ""
 #: templates/contributions/detail_reply_create.html:90
 #: templates/glossary/create.html:4 templates/glossary/create.html:18
 #: templates/glossary/create.html:39 templates/glossary/list.html:34
-#: templates/profile/questions.html:35 templates/profile/quizs.html:30
+#: templates/profile/questions_view.html:16 templates/profile/quizs.html:30
 #: templates/questions/create.html:4 templates/questions/create.html:19
 #: templates/questions/create.html:62 templates/questions/list.html:34
 #: templates/quizs/create.html:4 templates/quizs/create.html:19
@@ -932,14 +931,14 @@ msgstr ""
 
 #: templates/admin/contributor_list.html:31
 #: templates/contributions/list.html:30 templates/glossary/list.html:30
-#: templates/profile/questions.html:31 templates/questions/list.html:30
+#: templates/profile/questions_view.html:12 templates/questions/list.html:30
 #: templates/quizs/list.html:30 templates/tags/list.html:30
 msgid "Filters"
 msgstr ""
 
 #: templates/admin/contributor_list.html:48
 #: templates/contributions/list.html:46 templates/glossary/list.html:47
-#: templates/profile/questions.html:48 templates/questions/list.html:47
+#: templates/profile/questions_view.html:29 templates/questions/list.html:47
 #: templates/quizs/list.html:47 templates/tags/list.html:47
 msgid "Filter"
 msgstr ""
@@ -1121,16 +1120,15 @@ msgstr ""
 msgid "Website"
 msgstr ""
 
-#: templates/includes/_footer.html:19 templates/questions/detail_base.html:49
-#: templates/quizs/detail_base.html:49
+#: templates/includes/_footer.html:19 templates/profile/questions_base.html:35
+#: templates/questions/detail_base.html:49 templates/quizs/detail_base.html:49
 msgid "Statistics"
 msgstr ""
 
 #: templates/includes/_header.html:23 templates/profile/history.html:14
 #: templates/profile/home.html:4 templates/profile/home.html:13
-#: templates/profile/info.html:13 templates/profile/questions.html:14
-#: templates/profile/quizs.html:14 templates/profile/stats_questions.html:14
-#: templates/profile/stats_quizs.html:14
+#: templates/profile/info.html:13 templates/profile/questions_base.html:14
+#: templates/profile/quizs.html:14 templates/profile/stats_quizs.html:14
 msgid "My space"
 msgstr ""
 
@@ -1297,7 +1295,8 @@ msgid "My quizs"
 msgstr ""
 
 #: templates/profile/home.html:38 templates/profile/home.html:112
-#: templates/profile/questions.html:5 templates/profile/questions.html:15
+#: templates/profile/questions_base.html:5
+#: templates/profile/questions_base.html:15
 msgid "My questions"
 msgstr ""
 
@@ -1376,17 +1375,13 @@ msgid ""
 "introduction"
 msgstr ""
 
+#: templates/profile/questions_base.html:30
+#: templates/profile/questions_view.html:8
+msgid "All my questions"
+msgstr ""
+
 #: templates/profile/quizs.html:27
 msgid "All my quizs"
-msgstr ""
-
-#: templates/profile/stats_questions.html:5
-#: templates/profile/stats_questions.html:15
-msgid "My questions stats"
-msgstr ""
-
-#: templates/profile/stats_questions.html:27
-msgid "My questions stats overview"
 msgstr ""
 
 #: templates/profile/stats_quizs.html:5 templates/profile/stats_quizs.html:15
@@ -1479,11 +1474,11 @@ msgid_plural "questions"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/users/_author_card.html:11 users/models.py:392
+#: templates/users/_author_card.html:11 users/models.py:365
 msgid "Short biography"
 msgstr ""
 
-#: templates/users/_author_card.html:14 users/models.py:393
+#: templates/users/_author_card.html:14 users/models.py:366
 msgid "Relationship with the Anthropocene Quiz"
 msgstr ""
 
@@ -1562,19 +1557,19 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-#: users/models.py:388
+#: users/models.py:361
 msgid "User image (link)"
 msgstr ""
 
-#: users/models.py:394
+#: users/models.py:367
 msgid "Website (link)"
 msgstr ""
 
-#: users/models.py:402
+#: users/models.py:375
 msgid "User card"
 msgstr ""
 
-#: users/models.py:403
+#: users/models.py:376
 msgid "User cards"
 msgstr ""
 
