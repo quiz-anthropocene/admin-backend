@@ -18,7 +18,7 @@ def get_event_object_name(event_object, event_object_type):
     return truncate_with_ellipsis(event_object_name, 150)
 
 
-def create_event(user: User, event_verb: str, event_object, extra_data=None, created=timezone.now()):
+def create_event(user: User, event_verb: str, event_object=None, extra_data=None, created=timezone.now()):
     # init
     event_dict = {"created": created}
 
@@ -38,6 +38,10 @@ def create_event(user: User, event_verb: str, event_object, extra_data=None, cre
         event_dict["event_object_name"] = get_event_object_name(event_object, event_dict["event_object_type"])
 
     if extra_data:
+        # special case for WEEKLY_AGG_STAT
+        if not event_object and extra_data["event_object_type"]:
+            event_dict["event_object_type"] = extra_data["event_object_type"]
+            del extra_data["event_object_type"]
         event_dict["extra_data"] = extra_data
 
     # create event
