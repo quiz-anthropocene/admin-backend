@@ -224,6 +224,7 @@ class DailyStatManager(models.Manager):
         field="question_answer_count",
         since="total",
         week_or_month_iso_number=None,
+        year=None,
     ):
         queryset = self
         # since
@@ -235,6 +236,8 @@ class DailyStatManager(models.Manager):
             queryset = queryset.filter(date__month=week_or_month_iso_number)
         elif since == "week":
             queryset = queryset.filter(date__week=week_or_month_iso_number)
+        if year:
+            queryset = queryset.filter(date__year=year)
         # field
         queryset = queryset.aggregate(Sum(field))[field + "__sum"]
         # returns None if aggregation is done on an empty queryset

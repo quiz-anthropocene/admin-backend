@@ -95,6 +95,12 @@ class DailyStatModelTest(TestCase):
             DailyStat.objects.agg_count("question_feedback_count", since="month", week_or_month_iso_number=5),
             4 + 3,
         )
+        self.assertEqual(
+            DailyStat.objects.agg_count(
+                "question_feedback_count", since="month", week_or_month_iso_number=5, year=2020
+            ),
+            4,
+        )
         agg_timeseries_per_day_1 = DailyStat.objects.agg_timeseries(field="question_answer_count", scale="day")
         self.assertEqual(len(agg_timeseries_per_day_1), 5)
         self.assertEqual(agg_timeseries_per_day_1[0]["day"], "2020-04-30")
