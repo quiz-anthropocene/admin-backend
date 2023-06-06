@@ -47,8 +47,8 @@ class Event(models.Model):
         ("QUESTION", _("Question")),
         ("QUIZ", _("Quiz")),
         ("USER", _("Contributor")),
-        ("WEEKLY_AGG_STAT", ("Weekly statistics")),
-        ("MONTHLY_AGG_STAT", ("Monthly statistics")),
+        ("WEEKLY_AGG_STAT", _("Weekly statistics")),
+        ("MONTHLY_AGG_STAT", _("Monthly statistics")),
     )
 
     # user

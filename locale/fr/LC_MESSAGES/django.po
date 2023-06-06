@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-06 19:07+0200\n"
-"PO-Revision-Date: 2023-06-06 19:08+0200\n"
+"POT-Creation-Date: 2023-06-06 19:47+0200\n"
+"PO-Revision-Date: 2023-06-06 19:48+0200\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -19,19 +19,19 @@ msgstr ""
 "X-Generator: Poedit 3.3.1\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: activity/models.py:33
+#: activity/models.py:39
 msgid "Created"
 msgstr "Créé"
 
-#: activity/models.py:34
+#: activity/models.py:40
 msgid "Updated"
 msgstr "Mis à jour"
 
-#: activity/models.py:35 core/constants.py:67
+#: activity/models.py:41 core/constants.py:67
 msgid "Validated"
 msgstr "Validé"
 
-#: activity/models.py:36 contributions/models.py:197 contributions/tables.py:34
+#: activity/models.py:42 contributions/models.py:197 contributions/tables.py:34
 #: templates/contributions/detail_edit.html:43
 #: templates/contributions/detail_reply_create.html:14
 #: templates/contributions/detail_reply_create.html:45
@@ -39,15 +39,15 @@ msgstr "Validé"
 msgid "Published"
 msgstr "Publié"
 
-#: activity/models.py:37
+#: activity/models.py:43
 msgid "Deleted"
 msgstr "Supprimé"
 
-#: activity/models.py:38
+#: activity/models.py:44
 msgid "Computed"
 msgstr "Calculé"
 
-#: activity/models.py:41 contributions/models.py:77 contributions/tables.py:21
+#: activity/models.py:47 contributions/models.py:77 contributions/tables.py:21
 #: questions/models.py:273 quizs/models.py:457
 #: templates/categories/detail_questions.html:12
 #: templates/questions/detail_base.html:4
@@ -55,46 +55,54 @@ msgstr "Calculé"
 msgid "Question"
 msgstr "Question"
 
-#: activity/models.py:42 contributions/models.py:85 contributions/tables.py:27
+#: activity/models.py:48 contributions/models.py:85 contributions/tables.py:27
 #: quizs/models.py:189 quizs/models.py:456 quizs/models.py:576
 #: templates/questions/detail_quizs.html:12 templates/quizs/detail_base.html:4
 #: templates/tags/detail_quizs.html:12
 msgid "Quiz"
 msgstr "Quiz"
 
-#: activity/models.py:43 users/constants.py:8
+#: activity/models.py:49 users/constants.py:8
 msgid "Contributor"
 msgstr "Contributeur"
 
-#: activity/models.py:48
+#: activity/models.py:50
+msgid "Weekly statistics"
+msgstr "Statistiques hebdomadaires"
+
+#: activity/models.py:51
+msgid "Monthly statistics"
+msgstr "Statistiques mensuelles"
+
+#: activity/models.py:55
 msgid "Actor ID"
 msgstr "ID de l'acteur"
 
-#: activity/models.py:49
+#: activity/models.py:56
 msgid "Actor name"
 msgstr "Nom de l'acteur"
 
-#: activity/models.py:53
+#: activity/models.py:60
 msgid "Verb"
 msgstr "Verbe"
 
-#: activity/models.py:60
+#: activity/models.py:67
 msgid "Object ID"
 msgstr "ID de l'objet"
 
-#: activity/models.py:62
+#: activity/models.py:69
 msgid "Object type"
 msgstr "Type de l'objet"
 
-#: activity/models.py:67
+#: activity/models.py:74
 msgid "Object name"
 msgstr "Nom de l'objet"
 
-#: activity/models.py:70
+#: activity/models.py:77
 msgid "Additional data"
 msgstr "Données supplémentaires"
 
-#: activity/models.py:74 categories/models.py:15 contributions/models.py:118
+#: activity/models.py:81 categories/models.py:15 contributions/models.py:118
 #: glossary/models.py:32 questions/models.py:258 quizs/models.py:168
 #: quizs/models.py:460 quizs/models.py:523 quizs/models.py:583
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
@@ -103,15 +111,15 @@ msgstr "Données supplémentaires"
 msgid "Creation date"
 msgstr "Date de création"
 
-#: activity/models.py:79
+#: activity/models.py:86
 msgid "Event"
 msgstr "Événement"
 
-#: activity/models.py:80
+#: activity/models.py:87
 msgid "Events"
 msgstr "Événements"
 
-#: activity/models.py:107
+#: activity/models.py:116
 #, python-brace-format
 msgid ""
 "<i>{actor_name}</i> {event_verb} the question <strong>{question_name}</"
@@ -120,13 +128,13 @@ msgstr ""
 "<i>{actor_name}</i> a {event_verb} la question <strong>{question_name}</"
 "strong>"
 
-#: activity/models.py:119
+#: activity/models.py:128
 #, python-brace-format
 msgid "<i>{actor_name}</i> {event_verb} the quiz <strong>{quiz_name}</strong>"
 msgstr ""
 "<i>{actor_name}</i> a {event_verb} le quiz <strong>{quiz_name}</strong>"
 
-#: activity/models.py:132
+#: activity/models.py:141
 #, python-brace-format
 msgid ""
 "<i>{actor_name}</i> {event_verb} the question <a href="
@@ -135,7 +143,7 @@ msgstr ""
 "<i>{actor_name}</i> a {event_verb} la question <a href="
 "\"{question_admin_absolute_url}\">{question_name}</a>"
 
-#: activity/models.py:147
+#: activity/models.py:156
 #, python-brace-format
 msgid ""
 "<i>{actor_name}</i> {event_verb} the quiz <a href="
@@ -144,20 +152,29 @@ msgstr ""
 "<i>{actor_name}</i> a {event_verb} le quiz <a href="
 "\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
 
-#: activity/models.py:158
+#: activity/models.py:167
 #, python-brace-format
 msgid "New contributor! <i>{user_name}</i>"
 msgstr "Nouveau contributeur ! <i>{user_name}</i>"
 
-#: activity/models.py:164
+#: activity/models.py:173
 #, python-brace-format
 msgid ""
-"Last week stats: {question_answer_count_week} questions answered, "
-"{quiz_answer_count_week} quizs completed, {comment_count_week} new comments"
+"Last week stats: {question_answer_count} questions answered, "
+"{quiz_answer_count} quizs completed, {comment_count} new comments"
 msgstr ""
-"Statistiques de la semaine dernière : {question_answer_count_week} questions "
-"répondues, {quiz_answer_count_week} quizs complétés, {comment_count_week} "
-"nouveaux commentaires"
+"Statistiques de la semaine dernière : {question_answer_count} questions "
+"répondues, {quiz_answer_count} quizs complétés, {comment_count} nouveaux "
+"commentaires"
+
+#: activity/models.py:184
+#, python-brace-format
+msgid ""
+"Last month stats: {question_answer_count} questions answered, "
+"{quiz_answer_count} quizs completed, {comment_count} new comments"
+msgstr ""
+"Statistiques du mois dernier : {question_answer_count} questions répondues, "
+"{quiz_answer_count} quizs complétés, {comment_count} nouveaux commentaires"
 
 #: api/glossary/filters.py:8 api/questions/filters.py:16
 #: api/quizs/filters.py:10
