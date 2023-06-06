@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-06 01:19+0200\n"
-"PO-Revision-Date: 2023-06-06 01:11+0200\n"
+"POT-Creation-Date: 2023-06-06 02:03+0200\n"
+"PO-Revision-Date: 2023-06-06 02:01+0200\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -47,15 +47,16 @@ msgstr "Supprimé"
 msgid "Computed"
 msgstr "Calculé"
 
-#: activity/models.py:41 contributions/models.py:77 questions/models.py:273
-#: quizs/models.py:457 templates/categories/detail_questions.html:12
+#: activity/models.py:41 contributions/models.py:77 contributions/tables.py:21
+#: questions/models.py:273 quizs/models.py:457
+#: templates/categories/detail_questions.html:12
 #: templates/questions/detail_base.html:4
 #: templates/tags/detail_questions.html:12
 msgid "Question"
 msgstr "Question"
 
-#: activity/models.py:42 contributions/models.py:85 quizs/models.py:189
-#: quizs/models.py:456 quizs/models.py:576
+#: activity/models.py:42 contributions/models.py:85 contributions/tables.py:27
+#: quizs/models.py:189 quizs/models.py:456 quizs/models.py:576
 #: templates/questions/detail_quizs.html:12 templates/quizs/detail_base.html:4
 #: templates/tags/detail_quizs.html:12
 msgid "Quiz"
@@ -216,6 +217,16 @@ msgstr "Catégories"
 msgid "Questions (public & validated)"
 msgstr "Questions (publiques & validées)"
 
+#: categories/tables.py:16 questions/models.py:274 quizs/models.py:106
+#: quizs/models.py:177 tags/tables.py:17
+#: templates/categories/detail_base.html:39 templates/includes/_header.html:26
+#: templates/questions/create.html:4 templates/questions/create.html:18
+#: templates/questions/detail_base.html:13 templates/questions/list.html:14
+#: templates/quizs/detail_base.html:39 templates/tags/detail_base.html:39
+#: users/tables.py:9
+msgid "Questions"
+msgstr "Questions"
+
 #: contributions/admin.py:10
 msgid "Parent?"
 msgstr "Parent ?"
@@ -305,6 +316,10 @@ msgstr "Répondu"
 #: templates/contributions/detail_edit.html:38
 msgid "Processed"
 msgstr "Traité"
+
+#: contributions/tables.py:36 glossary/tables.py:28
+msgid "Actions"
+msgstr "Actions"
 
 #: core/constants.py:8
 msgid "Multiple choice questionnaire"
@@ -474,6 +489,17 @@ msgstr "Champs modifiés"
 msgid "Date"
 msgstr "Date"
 
+#: history/tables.py:13 stats/tables.py:26 stats/tables.py:48
+msgid "ID"
+msgstr "ID"
+
+#: history/tables.py:16 templates/contributions/detail_history.html:13
+#: templates/glossary/detail_history.html:13
+#: templates/questions/detail_history.html:13
+#: templates/quizs/detail_history.html:13
+msgid "Action"
+msgstr "Action"
+
 #: questions/forms.py:38
 msgid "Answer image"
 msgstr "Image pour illustrer la réponse"
@@ -627,20 +653,13 @@ msgstr ""
 "contenu"
 
 #: questions/models.py:264 questions/models.py:394 quizs/models.py:190
-#: templates/includes/_header.html:29 templates/questions/detail_base.html:39
-#: templates/quizs/create.html:4 templates/quizs/create.html:18
-#: templates/quizs/detail_base.html:13 templates/quizs/list.html:5
-#: templates/quizs/list.html:14 templates/tags/detail_base.html:44
+#: tags/tables.py:18 templates/includes/_header.html:29
+#: templates/questions/detail_base.html:39 templates/quizs/create.html:4
+#: templates/quizs/create.html:18 templates/quizs/detail_base.html:13
+#: templates/quizs/list.html:5 templates/quizs/list.html:14
+#: templates/tags/detail_base.html:44 users/tables.py:10
 msgid "Quizs"
 msgstr "Quizs"
-
-#: questions/models.py:274 quizs/models.py:106 quizs/models.py:177
-#: templates/categories/detail_base.html:39 templates/includes/_header.html:26
-#: templates/questions/create.html:4 templates/questions/create.html:18
-#: templates/questions/detail_base.html:13 templates/questions/list.html:14
-#: templates/quizs/detail_base.html:39 templates/tags/detail_base.html:39
-msgid "Questions"
-msgstr "Questions"
 
 #: questions/models.py:395 quizs/models.py:398
 msgid "# Ans"
@@ -850,11 +869,9 @@ msgstr "Nombre d'avis laissés sur des quizs"
 msgid "Hourly statistics"
 msgstr "Les statistiques par heure"
 
-#: stats/tables.py:27
-#, fuzzy
-#| msgid "Question"
-msgid "Question text"
-msgstr "Question"
+#: stats/tables.py:31 stats/tables.py:53
+msgid "Successfully answered"
+msgstr "Taux de réussite"
 
 #: tags/models.py:35 templates/tags/detail_base.html:4
 msgid "Tag"
@@ -1058,13 +1075,6 @@ msgstr "Ce commentaire est une réponse à :"
 #: templates/contributions/detail_edit.html:33
 msgid "This comment has not yet been <strong>processed</strong>"
 msgstr "Ce commentaire n'a pas encore été <strong>traité</strong>"
-
-#: templates/contributions/detail_history.html:13
-#: templates/glossary/detail_history.html:13
-#: templates/questions/detail_history.html:13
-#: templates/quizs/detail_history.html:13
-msgid "Action"
-msgstr "Action"
 
 #: templates/contributions/detail_history.html:14
 #: templates/glossary/detail_history.html:14

@@ -18,13 +18,13 @@ COMMENT_FIELD_SEQUENCE.insert(COMMENT_FIELD_SEQUENCE.index("created"), "publishe
 class CommentTable(tables.Table):
     text = RichTextLongerEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
     question = tables.Column(
-        verbose_name="Question",
+        verbose_name=_("Question"),
         accessor="question.id",
         linkify=lambda record: record.question.get_absolute_url(),
         attrs={"td": {"title": lambda record: record.question}},
     )
     quiz = tables.Column(
-        verbose_name="Quiz",
+        verbose_name=_("Quiz"),
         accessor="quiz.id",
         linkify=lambda record: record.quiz.get_absolute_url(),
         attrs={"td": {"title": lambda record: record.quiz}},
@@ -33,7 +33,7 @@ class CommentTable(tables.Table):
     processed = tables.Column(verbose_name=_("Processed"), accessor="processed_icon")
     published = tables.Column(verbose_name=_("Published"), accessor="published_icon")
     action = tables.TemplateColumn(
-        verbose_name="Actions",
+        verbose_name=_("Actions"),
         template_name="contributions/_table_action_items.html",
         attrs={"th": {"style": "min-width:130px"}},
     )

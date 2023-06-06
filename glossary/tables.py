@@ -1,4 +1,5 @@
 import django_tables2 as tables
+from django.utils.translation import gettext_lazy as _
 
 from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, ChoiceColumn, RichTextEllipsisColumn
 from glossary.models import GlossaryItem
@@ -23,7 +24,7 @@ class GlossaryTable(tables.Table):
         accessor="has_description_accessible_url_icon",
     )
     action = tables.TemplateColumn(
-        verbose_name="Actions",
+        verbose_name=_("Actions"),
         template_name="glossary/_table_action_items.html",
         attrs={"th": {"style": "min-width:130px"}},
     )

@@ -4,13 +4,15 @@ from django.utils.translation import gettext_lazy as _
 from django_tables2.utils import Accessor
 
 from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, RichTextEllipsisColumn
+from questions.models import Question
+from quizs.models import Quiz
 from stats.models import QuestionAggStat, QuizAggStat
 
 
 QUESTION_FIELD_SEQUENCE = [field.name for field in QuestionAggStat._meta.fields]
-QUESTION_FIELD_SEQUENCE.remove("question")  # split into id and text
-QUESTION_FIELD_SEQUENCE.insert(QUESTION_FIELD_SEQUENCE.index("answer_count"), "question_id")
-QUESTION_FIELD_SEQUENCE.insert(QUESTION_FIELD_SEQUENCE.index("answer_count"), "question_text")
+QUESTION_FIELD_SEQUENCE.insert(QUESTION_FIELD_SEQUENCE.index("question"), "question_id")
+# QUESTION_FIELD_SEQUENCE.insert(QUESTION_FIELD_SEQUENCE.index("answer_count"), "question_id")
+# QUESTION_FIELD_SEQUENCE.insert(QUESTION_FIELD_SEQUENCE.index("answer_count"), "question_text")
 QUESTION_FIELD_SEQUENCE.insert(QUESTION_FIELD_SEQUENCE.index("like_count"), "success_rate")
 
 QUIZ_FIELD_SEQUENCE = [field.name for field in QuizAggStat._meta.fields]
@@ -18,15 +20,17 @@ QUIZ_FIELD_SEQUENCE.insert(QUIZ_FIELD_SEQUENCE.index("quiz"), "quiz_id")
 QUIZ_FIELD_SEQUENCE.insert(QUIZ_FIELD_SEQUENCE.index("like_count"), "success_rate")
 
 
-class QuestionsStatsTable(tables.Table):
+class QuestionStatsTable(tables.Table):
     question_id = tables.Column(
         accessor=Accessor("question.id"),
-        verbose_name="Question id",
+        verbose_name=_("ID"),
         linkify=lambda record: reverse("questions:detail_stats", kwargs={"pk": record.question.id}),
     )
-    question_text = RichTextEllipsisColumn(accessor=Accessor("question.text"), verbose_name=_("Question text"))
+    question = RichTextEllipsisColumn(
+        accessor=Accessor("question.text"), verbose_name=Question._meta.get_field("text").verbose_name
+    )
     success_rate = tables.Column(
-        verbose_name="Success rate", empty_values=(), order_by=("answer_success_count", "answer_count")
+        verbose_name=_("Successfully answered"), empty_values=(), order_by=("answer_success_count", "answer_count")
     )
 
     class Meta:
@@ -40,15 +44,17 @@ class QuestionsStatsTable(tables.Table):
         return record.question.success_rate
 
 
-class QuizsStatsTable(tables.Table):
+class QuizStatsTable(tables.Table):
     quiz_id = tables.Column(
         accessor=Accessor("quiz.id"),
-        verbose_name="Quiz id",
-        linkify=lambda record: reverse("questions:detail_stats", kwargs={"pk": record.quiz.id}),
+        verbose_name=_("ID"),
+        linkify=lambda record: reverse("quizs:detail_stats", kwargs={"pk": record.quiz.id}),
     )
-    # quiz = RichTextEllipsisColumn(verbose_name="Quiz name")
+    quiz = RichTextEllipsisColumn(
+        accessor=Accessor("quiz.name"), verbose_name=Quiz._meta.get_field("name").verbose_name
+    )
     success_rate = tables.Column(
-        verbose_name="Success rate",
+        verbose_name=_("Successfully answered"),
         empty_values=(),
         order_by=("-quiz__stats__answer_success_count", "quiz__stats__question_count"),
     )

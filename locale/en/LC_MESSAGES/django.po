@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-06 01:19+0200\n"
+"POT-Creation-Date: 2023-06-06 02:03+0200\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -47,15 +47,16 @@ msgstr ""
 msgid "Computed"
 msgstr ""
 
-#: activity/models.py:41 contributions/models.py:77 questions/models.py:273
-#: quizs/models.py:457 templates/categories/detail_questions.html:12
+#: activity/models.py:41 contributions/models.py:77 contributions/tables.py:21
+#: questions/models.py:273 quizs/models.py:457
+#: templates/categories/detail_questions.html:12
 #: templates/questions/detail_base.html:4
 #: templates/tags/detail_questions.html:12
 msgid "Question"
 msgstr ""
 
-#: activity/models.py:42 contributions/models.py:85 quizs/models.py:189
-#: quizs/models.py:456 quizs/models.py:576
+#: activity/models.py:42 contributions/models.py:85 contributions/tables.py:27
+#: quizs/models.py:189 quizs/models.py:456 quizs/models.py:576
 #: templates/questions/detail_quizs.html:12 templates/quizs/detail_base.html:4
 #: templates/tags/detail_quizs.html:12
 msgid "Quiz"
@@ -209,6 +210,16 @@ msgstr ""
 msgid "Questions (public & validated)"
 msgstr ""
 
+#: categories/tables.py:16 questions/models.py:274 quizs/models.py:106
+#: quizs/models.py:177 tags/tables.py:17
+#: templates/categories/detail_base.html:39 templates/includes/_header.html:26
+#: templates/questions/create.html:4 templates/questions/create.html:18
+#: templates/questions/detail_base.html:13 templates/questions/list.html:14
+#: templates/quizs/detail_base.html:39 templates/tags/detail_base.html:39
+#: users/tables.py:9
+msgid "Questions"
+msgstr ""
+
 #: contributions/admin.py:10
 msgid "Parent?"
 msgstr ""
@@ -297,6 +308,10 @@ msgstr ""
 #: contributions/tables.py:33 core/constants.py:111
 #: templates/contributions/detail_edit.html:38
 msgid "Processed"
+msgstr ""
+
+#: contributions/tables.py:36 glossary/tables.py:28
+msgid "Actions"
 msgstr ""
 
 #: core/constants.py:8
@@ -467,6 +482,17 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
+#: history/tables.py:13 stats/tables.py:26 stats/tables.py:48
+msgid "ID"
+msgstr ""
+
+#: history/tables.py:16 templates/contributions/detail_history.html:13
+#: templates/glossary/detail_history.html:13
+#: templates/questions/detail_history.html:13
+#: templates/quizs/detail_history.html:13
+msgid "Action"
+msgstr ""
+
 #: questions/forms.py:38
 msgid "Answer image"
 msgstr ""
@@ -614,19 +640,12 @@ msgid "I agree to a possible commercial use by the association of this content"
 msgstr ""
 
 #: questions/models.py:264 questions/models.py:394 quizs/models.py:190
-#: templates/includes/_header.html:29 templates/questions/detail_base.html:39
-#: templates/quizs/create.html:4 templates/quizs/create.html:18
-#: templates/quizs/detail_base.html:13 templates/quizs/list.html:5
-#: templates/quizs/list.html:14 templates/tags/detail_base.html:44
+#: tags/tables.py:18 templates/includes/_header.html:29
+#: templates/questions/detail_base.html:39 templates/quizs/create.html:4
+#: templates/quizs/create.html:18 templates/quizs/detail_base.html:13
+#: templates/quizs/list.html:5 templates/quizs/list.html:14
+#: templates/tags/detail_base.html:44 users/tables.py:10
 msgid "Quizs"
-msgstr ""
-
-#: questions/models.py:274 quizs/models.py:106 quizs/models.py:177
-#: templates/categories/detail_base.html:39 templates/includes/_header.html:26
-#: templates/questions/create.html:4 templates/questions/create.html:18
-#: templates/questions/detail_base.html:13 templates/questions/list.html:14
-#: templates/quizs/detail_base.html:39 templates/tags/detail_base.html:39
-msgid "Questions"
 msgstr ""
 
 #: questions/models.py:395 quizs/models.py:398
@@ -837,8 +856,8 @@ msgstr ""
 msgid "Hourly statistics"
 msgstr ""
 
-#: stats/tables.py:27
-msgid "Question text"
+#: stats/tables.py:31 stats/tables.py:53
+msgid "Successfully answered"
 msgstr ""
 
 #: tags/models.py:35 templates/tags/detail_base.html:4
@@ -1042,13 +1061,6 @@ msgstr ""
 
 #: templates/contributions/detail_edit.html:33
 msgid "This comment has not yet been <strong>processed</strong>"
-msgstr ""
-
-#: templates/contributions/detail_history.html:13
-#: templates/glossary/detail_history.html:13
-#: templates/questions/detail_history.html:13
-#: templates/quizs/detail_history.html:13
-msgid "Action"
 msgstr ""
 
 #: templates/contributions/detail_history.html:14

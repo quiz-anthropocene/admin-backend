@@ -15,9 +15,7 @@ from questions.tables import QuestionTable
 from quizs.models import Quiz
 from quizs.tables import QuizTable
 from stats.models import QuestionAggStat, QuizAggStat
-from stats.tables import QuestionsStatsTable, QuizsStatsTable
-
-# from stats.models import QuestionAggStat, QuizAggStat
+from stats.tables import QuestionStatsTable, QuizStatsTable
 from users.models import User
 
 
@@ -67,7 +65,7 @@ class ProfileQuestionListStatsView(ContributorUserRequiredMixin, SingleTableView
     model = QuestionAggStat
     template_name = "profile/questions_stats.html"
     context_object_name = "user_questions_stats"
-    table_class = QuestionsStatsTable
+    table_class = QuestionStatsTable
 
     def get_queryset(self):
         qs = super().get_queryset()
@@ -105,7 +103,7 @@ class ProfileQuizListStatsView(ContributorUserRequiredMixin, SingleTableView):
     model = QuizAggStat
     template_name = "profile/quizs_stats.html"
     context_object_name = "user_quizs_stats"
-    table_class = QuizsStatsTable
+    table_class = QuizStatsTable
 
     def get_queryset(self):
         qs = super().get_queryset()
