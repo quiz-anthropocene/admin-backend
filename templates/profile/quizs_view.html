@@ -1,0 +1,19 @@
+{% extends "profile/quizs_base.html" %}
+{% load render_table from django_tables2 %}
+{% load i18n %}
+
+{% block profile_quizs_content %}
+<div class="row">
+    <div class="col-9">
+        <h1>{% translate "All my quizs" %} <span class="fs-3 text-muted">{{ user_quizs.count }}</span></h1>
+    </div>
+    <div class="col-3 text-end my-auto">
+        <a class="btn btn-success btn-sm" href="{% url 'quizs:create' %}?next={% url 'profile:quizs_view' %}">{% translate "Add" %}</a>
+    </div>
+</div>
+<div class="row overflow-scroll">
+    <div class="col-12">
+        {% render_table table %}
+    </div>
+</div>
+{% endblock %}

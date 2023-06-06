@@ -15,9 +15,7 @@ from questions.tables import QuestionTable
 from quizs.models import Quiz
 from quizs.tables import QuizTable
 from stats.models import QuestionAggStat, QuizAggStat
-from stats.tables import QuestionsStatsTable, QuizsStatsTable
-
-# from stats.models import QuestionAggStat, QuizAggStat
+from stats.tables import QuestionStatsTable, QuizStatsTable
 from users.models import User
 
 
@@ -41,7 +39,7 @@ class ProfileInfoView(ContributorUserRequiredMixin, DetailView):
 
 class ProfileQuestionListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
     model = Question
-    template_name = "profile/questions.html"
+    template_name = "profile/questions_view.html"
     context_object_name = "user_questions"
     table_class = QuestionTable
     filterset_class = QuestionFilter
@@ -63,9 +61,28 @@ class ProfileQuestionListView(ContributorUserRequiredMixin, SingleTableMixin, Fi
         return context
 
 
+class ProfileQuestionListStatsView(ContributorUserRequiredMixin, SingleTableView):
+    model = QuestionAggStat
+    template_name = "profile/questions_stats.html"
+    context_object_name = "user_questions_stats"
+    table_class = QuestionStatsTable
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        questions = Question.objects.for_author(self.request.user)
+        qs = QuestionAggStat.objects.filter(question__in=questions)
+        qs = qs.order_by("-question__created")
+        return qs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["user"] = self.request.user
+        return context
+
+
 class ProfileQuizListView(ContributorUserRequiredMixin, SingleTableView):
     model = Quiz
-    template_name = "profile/quizs.html"
+    template_name = "profile/quizs_view.html"
     context_object_name = "user_quizs"
     table_class = QuizTable
 
@@ -74,6 +91,24 @@ class ProfileQuizListView(ContributorUserRequiredMixin, SingleTableView):
         qs = qs.prefetch_related("tags", "authors")
         qs = qs.for_author(self.request.user)
         qs = qs.order_by("-created")
+        return qs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["user"] = self.request.user
+        return context
+
+
+class ProfileQuizListStatsView(ContributorUserRequiredMixin, SingleTableView):
+    model = QuizAggStat
+    template_name = "profile/quizs_stats.html"
+    context_object_name = "user_quizs_stats"
+    table_class = QuizStatsTable
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = QuizAggStat.objects.filter(quiz__in=self.request.user.quizs.all())
+        qs = qs.order_by("-quiz__created")
         return qs
 
     def get_context_data(self, **kwargs):
@@ -98,55 +133,4 @@ class ProfileHistoryListView(ContributorUserRequiredMixin, TemplateView):
         )
         question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)
         context["table"] = HistoryTable(question_quiz_history[:50])  # TODO: pagination ?
-        return context
-
-
-class ProfileStatsQuestionsListView(ContributorUserRequiredMixin, SingleTableView):
-    model = QuestionAggStat
-    template_name = "profile/stats_questions.html"
-    context_object_name = "user_questions_stats"
-    table_class = QuestionsStatsTable
-    # filterset_class = QuestionFilter
-
-    def get_queryset(self):
-        qs = super().get_queryset()
-        questions = Question.objects.for_author(self.request.user)
-        qs = QuestionAggStat.objects.filter(question__in=questions)
-        qs = qs.order_by("-question__created")
-        return qs
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["user"] = self.request.user
-        """
-        if context["filter"].form.is_valid():
-            search_dict = form_filters_cleaned_dict(context["filter"].form.cleaned_data)
-            if search_dict:
-                context["search_filters"] = form_filters_to_list(search_dict, with_delete_url=True)
-                """
-        return context
-
-
-class ProfileStatsQuizsListView(ContributorUserRequiredMixin, SingleTableView):
-    model = QuizAggStat
-    template_name = "profile/stats_quizs.html"
-    context_object_name = "user_quizs_stats"
-    table_class = QuizsStatsTable
-    # filterset_class = QuizFilter
-
-    def get_queryset(self):
-        qs = super().get_queryset()
-        qs = QuizAggStat.objects.filter(quiz__in=self.request.user.quizs.all())
-        qs = qs.order_by("-quiz__created")
-        return qs
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["user"] = self.request.user
-        """
-        if context["filter"].form.is_valid():
-            search_dict = form_filters_cleaned_dict(context["filter"].form.cleaned_data)
-            if search_dict:
-                context["search_filters"] = form_filters_to_list(search_dict, with_delete_url=True)
-                """
         return context

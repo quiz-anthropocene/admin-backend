@@ -1,5 +1,6 @@
 import django_tables2 as tables
 from django.db.models import Count
+from django.utils.translation import gettext_lazy as _
 
 from categories.models import Category
 from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, RichTextColumn
@@ -12,7 +13,7 @@ CATEGORY_FIELD_SEQUENCE.insert(CATEGORY_FIELD_SEQUENCE.index("created"), "questi
 class CategoryTable(tables.Table):
     id = tables.Column(linkify=lambda record: record.get_absolute_url())
     description = RichTextColumn(attrs={"td": {"title": lambda record: record.description}})
-    question_count = tables.Column(verbose_name="Questions")
+    question_count = tables.Column(verbose_name=_("Questions"))
 
     class Meta:
         model = Category

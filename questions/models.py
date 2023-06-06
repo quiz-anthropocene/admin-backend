@@ -2,7 +2,7 @@ from django.conf import settings
 from django.contrib.postgres.fields import ArrayField
 from django.core.exceptions import ValidationError
 from django.db import models
-from django.db.models import Q
+from django.db.models import Q, Sum
 from django.db.models.signals import m2m_changed, post_save, pre_save
 from django.dispatch import receiver
 from django.urls import reverse
@@ -61,6 +61,24 @@ class QuestionQuerySet(models.QuerySet):
             field_search = {f"{field_name}__icontains": value}
             conditions |= Q(**field_search)
         return self.filter(conditions)
+
+    def answer_count(self) -> int:
+        return self.aggregate(answer_count=Sum("agg_stats__answer_count"))["answer_count"] or 0
+
+    def answer_success_count(self) -> int:
+        return self.aggregate(answer_success_count=Sum("agg_stats__answer_success_count"))["answer_success_count"] or 0
+
+    def answer_success_count_ratio(self, decimal=0) -> int:
+        answer_count = self.answer_count()
+        if answer_count == 0:
+            return 0
+        return round(self.answer_success_count() / self.answer_count() * 100, decimal)
+
+    def like_count(self) -> int:
+        return self.aggregate(like_count=Sum("agg_stats__like_count"))["like_count"] or 0
+
+    def dislike_count(self) -> int:
+        return self.aggregate(dislike_count=Sum("agg_stats__dislike_count"))["dislike_count"] or 0
 
 
 class Question(models.Model):

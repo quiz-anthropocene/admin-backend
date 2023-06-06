@@ -1,12 +1,13 @@
 import django_tables2 as tables
+from django.utils.translation import gettext_lazy as _
 
 from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, ArrayColumn
 from users.models import User
 
 
 class ContributorTable(tables.Table):
-    question_count = tables.Column(verbose_name="Questions")
-    quiz_count = tables.Column(verbose_name="Quizs")
+    question_count = tables.Column(verbose_name=_("Questions"))
+    quiz_count = tables.Column(verbose_name=_("Quizs"))
     roles = ArrayColumn()
 
     class Meta:

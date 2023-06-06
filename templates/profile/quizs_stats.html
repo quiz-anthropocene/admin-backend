@@ -1,0 +1,11 @@
+{% extends "profile/quizs_base.html" %}
+{% load render_table from django_tables2 %}
+{% load i18n %}
+
+{% block profile_quizs_content %}
+<div class="row overflow-scroll">
+    <div class="col-12">
+        {% render_table table %}
+    </div>
+</div>
+{% endblock %}

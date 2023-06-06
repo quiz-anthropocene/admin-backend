@@ -3,7 +3,7 @@ from django.conf import settings
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-from django.db.models import Avg, Exists, OuterRef, Q, Sum
+from django.db.models import Avg, Exists, OuterRef, Q
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
@@ -231,6 +231,10 @@ class User(AbstractUser):
         return self.quizs.public().count()
 
     @property
+    def quiz_published_count(self) -> int:
+        return self.quizs.published().count()
+
+    @property
     def quiz_public_published_count(self) -> int:
         return self.quizs.public().published().count()
 
@@ -244,16 +248,9 @@ class User(AbstractUser):
 
     @property
     def quiz_answer_count(self) -> int:
-        return self.quizs.aggregate(answer_count=Sum("agg_stats__answer_count"))["answer_count"] or 0
+        return self.quizs.answer_count()
 
-    @property
-    def quiz_answer_success_count(self) -> int:
-        answer_success_count = 0
-        for quiz in self.quizs.all():
-            answer_success_count += quiz.stats.answer
-            answer_success_count
-        return answer_success_count
-
+    # TODO: improve
     @property
     def quiz_answer_success_count_ratio(self) -> float:
         answer_success_count_ratio = 0
@@ -265,61 +262,39 @@ class User(AbstractUser):
                     quiz.stats.aggregate(Avg("answer_success_count"))["answer_success_count__avg"]
                     / quiz.stats.aggregate(Avg("question_count"))["question_count__avg"]
                 )
-        total_success_count_ratio = answer_success_count_ratio / quiz_played_count * 100
-        return total_success_count_ratio
+        return round(answer_success_count_ratio / quiz_played_count * 100, 2)
 
     @property
     def quiz_like_count(self) -> int:
-        like_count = 0
-        for quiz in self.quizs.all():
-            like_count += quiz.agg_stats.like_count
-        return like_count
+        return self.quizs.like_count()
 
     @property
     def quiz_dislike_count(self) -> int:
-        dislike_count = 0
-        for quiz in self.quizs.all():
-            dislike_count += quiz.agg_stats.dislike_count
-        return dislike_count
+        return self.quizs.dislike_count()
 
     @property
-    def questions_answer_count(self) -> int:
-        answer_count = 0
-        for question in self.questions.all():
-            answer_count += question.agg_stats.answer_count
-        return answer_count
+    def question_validated_count(self) -> int:
+        return self.questions.validated().count()
 
     @property
-    def questions_answer_success_count(self) -> float:
-        answer_success_count = 0
-        for question in self.questions.all():
-            answer_success_count += question.agg_stats.answer_success_count
-        return answer_success_count
+    def question_answer_count(self) -> int:
+        return self.questions.answer_count()
 
     @property
-    def questions_answer_success_count_ratio(self) -> int:
-        answer_success_count_ratio = 0
-        if self.questions_answer_count == 0:
-            answer_success_count_ratio = 0
-        else:
-            answer_success_count_ratio = round(
-                self.questions_answer_success_count / self.questions_answer_count * 100, 2
-            )
-        return answer_success_count_ratio
+    def question_answer_success_count(self) -> float:
+        return self.questions.answer_success_count()
 
     @property
-    def questions_like_count(self) -> int:
-        like_count = 0
-        for question in self.questions.all():
-            like_count += question.agg_stats.like_count
-        return like_count
+    def question_answer_success_count_ratio(self) -> int:
+        return self.questions.answer_success_count_ratio(decimal=2)
 
     @property
-    def questions_dislike_count(self) -> int:
-        dislike_count = 0
-        for question in self.questions.all():
-            dislike_count += question.agg_stats.dislike_count
-        return dislike_count
+    def question_like_count(self) -> int:
+        return self.questions.like_count()
+
+    @property
+    def question_dislike_count(self) -> int:
+        return self.questions.dislike_count()
 
     @property
     def has_role_contributor(self) -> bool:

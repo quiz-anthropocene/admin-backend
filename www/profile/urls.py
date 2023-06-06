@@ -1,13 +1,13 @@
-from django.urls import path
+from django.urls import include, path
 
 from www.profile.views import (
     ProfileHistoryListView,
     ProfileHomeView,
     ProfileInfoView,
+    ProfileQuestionListStatsView,
     ProfileQuestionListView,
+    ProfileQuizListStatsView,
     ProfileQuizListView,
-    ProfileStatsQuestionsListView,
-    ProfileStatsQuizsListView,
 )
 
 
@@ -16,9 +16,23 @@ app_name = "profile"
 urlpatterns = [
     path("", ProfileHomeView.as_view(), name="home"),
     path("info/", ProfileInfoView.as_view(), name="info"),
-    path("questions/", ProfileQuestionListView.as_view(), name="questions"),
-    path("quizs/", ProfileQuizListView.as_view(), name="quizs"),
+    path(
+        "questions/",
+        include(
+            [
+                path("", ProfileQuestionListView.as_view(), name="questions_view"),
+                path("stats/", ProfileQuestionListStatsView.as_view(), name="questions_stats"),
+            ]
+        ),
+    ),
+    path(
+        "quizs/",
+        include(
+            [
+                path("", ProfileQuizListView.as_view(), name="quizs_view"),
+                path("stats/", ProfileQuizListStatsView.as_view(), name="quizs_stats"),
+            ]
+        ),
+    ),
     path("history/", ProfileHistoryListView.as_view(), name="history"),
-    path("stats_questions/", ProfileStatsQuestionsListView.as_view(), name="stats_questions"),
-    path("stats_quizs/", ProfileStatsQuizsListView.as_view(), name="stats_quizs"),
 ]
