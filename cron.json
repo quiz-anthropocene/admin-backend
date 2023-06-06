@@ -8,6 +8,12 @@
         },
         {
             "command": "30 6,18 * * * python manage.py export_stats_to_github"
+        },
+        {
+            "command": "0 9 * * 1 python manage.py generate_weekly_stat_event"
+        },
+        {
+            "command": "0 9 1 * * python manage.py generate_monthly_stat_event"
         }
     ]
 }
