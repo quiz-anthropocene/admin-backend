@@ -19,10 +19,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         print("=== generate_weekly_stat_event running")
-        # now = timezone.now()
         weekday = timezone.now() - timedelta(days=7)  # last week
         weekday_year = weekday.year
-        # weekday_year_month = weekday.month
         weekday_week = weekday.isocalendar().week
 
         question_answer_count_week = DailyStat.objects.agg_count(
@@ -44,11 +42,11 @@ class Command(BaseCommand):
             "type": "last_week",
             "week": weekday_week,
             "year": weekday_year,
-            "question_answer_count_week": question_answer_count_week,
-            "quiz_answer_count_week": quiz_answer_count_week,
-            "question_feedback_count_week": question_feedback_count_week,
-            "quiz_feedback_count_week": quiz_feedback_count_week,
-            "comment_count_week": comment_count_week,
+            "question_answer_count": question_answer_count_week,
+            "quiz_answer_count": quiz_answer_count_week,
+            "question_feedback_count": question_feedback_count_week,
+            "quiz_feedback_count": quiz_feedback_count_week,
+            "comment_count": comment_count_week,
         }
 
         create_event(user=None, event_verb="COMPUTED", extra_data=extra_data)
