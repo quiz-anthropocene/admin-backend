@@ -40,13 +40,29 @@ class EventUtilitiesTest(TestCase):
     def test_create_event_weekly_agg_stat(self):
         extra_data = {
             "event_object_type": "WEEKLY_AGG_STAT",
-            "question_answer_count_week": 2,
-            "quiz_answer_count_week": 1,
-            "question_feedback_count_week": 0,
-            "quiz_feedback_count_week": 0,
+            "question_answer_count": 20,
+            "quiz_answer_count": 10,
+            "question_feedback_count": 5,
+            "quiz_feedback_count": 2,
+            "comment_count": 1,
         }
         create_event(user=None, event_verb="COMPUTED", extra_data=extra_data)
         self.assertEqual(Event.objects.count(), 1)
         self.assertEqual(Event.objects.first().event_object_type, "WEEKLY_AGG_STAT")
         self.assertTrue("event_object_type" not in Event.objects.first().extra_data.keys())
-        self.assertTrue("question_answer_count_week" in Event.objects.first().extra_data.keys())
+        self.assertTrue("question_answer_count" in Event.objects.first().extra_data.keys())
+
+    def test_create_event_monthly_agg_stat(self):
+        extra_data = {
+            "event_object_type": "MONTHLY_AGG_STAT",
+            "question_answer_count": 200,
+            "quiz_answer_count": 100,
+            "question_feedback_count": 50,
+            "quiz_feedback_count": 20,
+            "comment_count": 10,
+        }
+        create_event(user=None, event_verb="COMPUTED", extra_data=extra_data)
+        self.assertEqual(Event.objects.count(), 1)
+        self.assertEqual(Event.objects.first().event_object_type, "MONTHLY_AGG_STAT")
+        self.assertTrue("event_object_type" not in Event.objects.first().extra_data.keys())
+        self.assertTrue("question_answer_count" in Event.objects.first().extra_data.keys())
