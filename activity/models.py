@@ -96,6 +96,8 @@ class Event(models.Model):
             return self.display_quiz_with_admin_url_html
         elif self.event_object_type == "USER":
             return self.display_new_user_html
+        elif self.event_object_type == "WEEKLY_AGG_STAT":
+            return self.display_weekly_agg_stat_html
 
     @property
     def display_question_html(self) -> str:
@@ -157,6 +159,18 @@ class Event(models.Model):
         return f"{self.display_event_emoji} {html_message}"
 
     @property
+    def display_weekly_agg_stat_html(self) -> str:
+        html_message = _(
+            "Last week stats: {question_answer_count_week} questions answered, {quiz_answer_count_week} quizs completed, {feedback_count_week} new feedbacks"  # noqa
+        ).format(
+            question_answer_count_week=self.extra_data["question_answer_count_week"],
+            quiz_answer_count_week=self.extra_data["quiz_answer_count_week"],
+            feedback_count_week=self.extra_data["question_feedback_count_week"]
+            + self.extra_data["quiz_feedback_count_week"],
+        )
+        return f"{self.display_event_emoji} {html_message}"
+
+    @property
     def display_event_emoji(self):
         if self.event_object_type in ["QUESTION", "QUIZ"]:
             if self.event_verb == "CREATED":
@@ -168,6 +182,8 @@ class Event(models.Model):
         elif self.event_object_type in ["USER"]:
             if self.event_verb == "CREATED":
                 return "🧑"
+        elif self.event_object_type in ["WEEKLY_AGG_STAT"]:
+            return "📊"
 
 
 @receiver(post_save, sender=Event)

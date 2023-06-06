@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-06 02:03+0200\n"
-"PO-Revision-Date: 2023-06-06 02:01+0200\n"
+"POT-Creation-Date: 2023-06-06 17:10+0200\n"
+"PO-Revision-Date: 2023-06-06 17:11+0200\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -98,7 +98,7 @@ msgstr "Données supplémentaires"
 #: glossary/models.py:32 questions/models.py:258 quizs/models.py:168
 #: quizs/models.py:460 quizs/models.py:523 quizs/models.py:583
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
-#: stats/models.py:207 stats/models.py:218 stats/models.py:304
+#: stats/models.py:207 stats/models.py:218 stats/models.py:307
 #: tags/models.py:29 users/models.py:193 users/models.py:369
 msgid "Creation date"
 msgstr "Date de création"
@@ -111,7 +111,7 @@ msgstr "Événement"
 msgid "Events"
 msgstr "Événements"
 
-#: activity/models.py:105
+#: activity/models.py:107
 #, python-brace-format
 msgid ""
 "<i>{actor_name}</i> {event_verb} the question <strong>{question_name}</"
@@ -120,34 +120,44 @@ msgstr ""
 "<i>{actor_name}</i> a {event_verb} la question <strong>{question_name}</"
 "strong>"
 
-#: activity/models.py:117
+#: activity/models.py:119
 #, python-brace-format
 msgid "<i>{actor_name}</i> {event_verb} the quiz <strong>{quiz_name}</strong>"
 msgstr ""
 "<i>{actor_name}</i> a {event_verb} le quiz <strong>{quiz_name}</strong>"
 
-#: activity/models.py:130
+#: activity/models.py:132
 #, python-brace-format
 msgid ""
-"<i>{actor_name}</i> {event_verb} the question <a "
-"href=\"{question_admin_absolute_url}\">{question_name}</a>"
+"<i>{actor_name}</i> {event_verb} the question <a href="
+"\"{question_admin_absolute_url}\">{question_name}</a>"
 msgstr ""
-"<i>{actor_name}</i> a {event_verb} la question <a "
-"href=\"{question_admin_absolute_url}\">{question_name}</a>"
+"<i>{actor_name}</i> a {event_verb} la question <a href="
+"\"{question_admin_absolute_url}\">{question_name}</a>"
 
-#: activity/models.py:145
+#: activity/models.py:147
 #, python-brace-format
 msgid ""
-"<i>{actor_name}</i> {event_verb} the quiz <a "
-"href=\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
+"<i>{actor_name}</i> {event_verb} the quiz <a href="
+"\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
 msgstr ""
-"<i>{actor_name}</i> a {event_verb} le quiz <a "
-"href=\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
+"<i>{actor_name}</i> a {event_verb} le quiz <a href="
+"\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
 
-#: activity/models.py:156
+#: activity/models.py:158
 #, python-brace-format
 msgid "New contributor! <i>{user_name}</i>"
 msgstr "Nouveau contributeur ! <i>{user_name}</i>"
+
+#: activity/models.py:163
+#, python-brace-format
+msgid ""
+"Last week stats: {question_answer_count_week} questions answered, "
+"{quiz_answer_count_week} quizs completed, {feedback_count_week} new feedbacks"
+msgstr ""
+"Statistiques de la semaine dernière : {question_answer_count_week} questions "
+"répondues, {quiz_answer_count_week} quizs complétés, {feedback_count_week} "
+"nouveaux commentaires"
 
 #: api/glossary/filters.py:8 api/questions/filters.py:16
 #: api/quizs/filters.py:10
@@ -196,7 +206,7 @@ msgstr "Description"
 
 #: categories/models.py:16 contributions/models.py:119 glossary/models.py:33
 #: questions/models.py:259 quizs/models.py:169 quizs/models.py:461
-#: quizs/models.py:524 quizs/models.py:584 stats/models.py:305
+#: quizs/models.py:524 quizs/models.py:584 stats/models.py:308
 #: tags/models.py:30 users/models.py:194 users/models.py:370
 msgid "Last update date"
 msgstr "Date de dernière modification"
@@ -317,7 +327,7 @@ msgstr "Répondu"
 msgid "Processed"
 msgstr "Traité"
 
-#: contributions/tables.py:36 glossary/tables.py:28
+#: contributions/tables.py:36 glossary/tables.py:27
 msgid "Actions"
 msgstr "Actions"
 
@@ -489,7 +499,7 @@ msgstr "Champs modifiés"
 msgid "Date"
 msgstr "Date"
 
-#: history/tables.py:13 stats/tables.py:26 stats/tables.py:48
+#: history/tables.py:13 stats/tables.py:26 stats/tables.py:50
 msgid "ID"
 msgstr "ID"
 
@@ -829,47 +839,47 @@ msgstr "Nom du champ"
 msgid "Clicked link"
 msgstr "Lien cliqué"
 
-#: stats/models.py:284
+#: stats/models.py:287
 msgid "Date of statistics"
 msgstr "Le jour de la statistique"
 
-#: stats/models.py:286
+#: stats/models.py:289
 msgid "Question answer count"
 msgstr "Nombre de questions répondues"
 
-#: stats/models.py:287
+#: stats/models.py:290
 msgid "Public question answer count"
 msgstr "Nombre de questions publiques répondues"
 
-#: stats/models.py:289
+#: stats/models.py:292
 msgid "Question within quiz answer count"
 msgstr "Nombre de questions répondues au sein de quizs"
 
-#: stats/models.py:291
+#: stats/models.py:294
 msgid "Quiz answer count"
 msgstr "Nombre de quizs répondus"
 
-#: stats/models.py:292
+#: stats/models.py:295
 msgid "Public quiz answer count"
 msgstr "Nombre de quizs publiques répondus"
 
-#: stats/models.py:294
+#: stats/models.py:297
 msgid "Question feedback count"
 msgstr "Nombre d'avis laissés sur des questions"
 
-#: stats/models.py:296
+#: stats/models.py:299
 msgid "Question within quiz feedback count"
 msgstr "Nombre d'avis laissés sur des questions au sein de quizs"
 
-#: stats/models.py:298
+#: stats/models.py:301
 msgid "Quiz feedback count"
 msgstr "Nombre d'avis laissés sur des quizs"
 
-#: stats/models.py:301
+#: stats/models.py:304
 msgid "Hourly statistics"
 msgstr "Les statistiques par heure"
 
-#: stats/tables.py:31 stats/tables.py:53
+#: stats/tables.py:33 stats/tables.py:57
 msgid "Successfully answered"
 msgstr "Taux de réussite"
 
@@ -1709,15 +1719,15 @@ msgstr "Le tag <strong>{tag_name}</strong> a été créé."
 #~ "Comment linked to the question <a href=\"%(comment_question_url)s\" "
 #~ "target=\"_blank\">%(comment_question)s</a>"
 #~ msgstr ""
-#~ "Commentaire lié à la question <a href=\"%(comment_question_url)s\" "
-#~ "target=\"_blank\">%(comment_question)s</a>"
+#~ "Commentaire lié à la question <a href=\"%(comment_question_url)s\" target="
+#~ "\"_blank\">%(comment_question)s</a>"
 
 #~ msgid ""
-#~ "Comment linked to the quiz <a href=\"%(comment_quiz_url)s\" "
-#~ "target=\"_blank\">%(comment_quiz)s</a>"
+#~ "Comment linked to the quiz <a href=\"%(comment_quiz_url)s\" target="
+#~ "\"_blank\">%(comment_quiz)s</a>"
 #~ msgstr ""
-#~ "Commentaire lié au quiz <a href=\"%(comment_quiz_url)s\" "
-#~ "target=\"_blank\">%(comment_quiz)s</a>"
+#~ "Commentaire lié au quiz <a href=\"%(comment_quiz_url)s\" target=\"_blank"
+#~ "\">%(comment_quiz)s</a>"
 
 #~ msgid "Replies"
 #~ msgstr "Réponses"
