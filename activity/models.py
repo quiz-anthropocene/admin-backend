@@ -25,6 +25,7 @@ class EventQuerySet(models.QuerySet):
         # filters = Q(event_object_type="QUESTION") & Q(event_verb="CREATED")
         filters = Q(event_object_type="QUIZ") & Q(event_verb="PUBLISHED")
         filters |= Q(event_object_type="USER") & Q(event_verb="CREATED")
+        filters |= Q(event_object_type="MONTHLY_AGG_STAT")
         if source not in ["HOME"]:
             filters |= Q(event_object_type="WEEKLY_AGG_STAT")
         return self.filter(filters)
@@ -46,7 +47,8 @@ class Event(models.Model):
         ("QUESTION", _("Question")),
         ("QUIZ", _("Quiz")),
         ("USER", _("Contributor")),
-        ("WEEKLY_AGG_STAT", ("Weekly statistics")),
+        ("WEEKLY_AGG_STAT", _("Weekly statistics")),
+        ("MONTHLY_AGG_STAT", _("Monthly statistics")),
     )
 
     # user
@@ -103,6 +105,8 @@ class Event(models.Model):
             return self.display_new_user_html
         elif self.event_object_type == "WEEKLY_AGG_STAT":
             return self.display_weekly_agg_stat_html
+        elif self.event_object_type == "MONTHLY_AGG_STAT":
+            return self.display_monthly_agg_stat_html
 
     @property
     def display_question_html(self) -> str:
@@ -166,11 +170,22 @@ class Event(models.Model):
     @property
     def display_weekly_agg_stat_html(self) -> str:
         html_message = _(
-            "Last week stats: {question_answer_count_week} questions answered, {quiz_answer_count_week} quizs completed, {comment_count_week} new comments"  # noqa
+            "Last week stats: {question_answer_count} questions answered, {quiz_answer_count} quizs completed, {comment_count} new comments"  # noqa
         ).format(
-            question_answer_count_week=self.extra_data["question_answer_count_week"],
-            quiz_answer_count_week=self.extra_data["quiz_answer_count_week"],
-            comment_count_week=self.extra_data["comment_count_week"],
+            question_answer_count=self.extra_data["question_answer_count"],
+            quiz_answer_count=self.extra_data["quiz_answer_count"],
+            comment_count=self.extra_data["comment_count"],
+        )
+        return f"{self.display_event_emoji} {html_message}"
+
+    @property
+    def display_monthly_agg_stat_html(self) -> str:
+        html_message = _(
+            "Last month stats: {question_answer_count} questions answered, {quiz_answer_count} quizs completed, {comment_count} new comments"  # noqa
+        ).format(
+            question_answer_count=self.extra_data["question_answer_count"],
+            quiz_answer_count=self.extra_data["quiz_answer_count"],
+            comment_count=self.extra_data["comment_count"],
         )
         return f"{self.display_event_emoji} {html_message}"
 
@@ -186,7 +201,7 @@ class Event(models.Model):
         elif self.event_object_type in ["USER"]:
             if self.event_verb == "CREATED":
                 return "🧑"
-        elif self.event_object_type in ["WEEKLY_AGG_STAT"]:
+        elif self.event_object_type in ["WEEKLY_AGG_STAT", "MONTHLY_AGG_STAT"]:
             return "📊"
 
 

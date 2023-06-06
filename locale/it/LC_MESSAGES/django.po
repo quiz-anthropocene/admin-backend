@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-06 19:07+0200\n"
+"POT-Creation-Date: 2023-06-06 19:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: activity/models.py:33
+#: activity/models.py:39
 msgid "Created"
 msgstr ""
 
-#: activity/models.py:34
+#: activity/models.py:40
 msgid "Updated"
 msgstr ""
 
-#: activity/models.py:35 core/constants.py:67
+#: activity/models.py:41 core/constants.py:67
 msgid "Validated"
 msgstr ""
 
-#: activity/models.py:36 contributions/models.py:197 contributions/tables.py:34
+#: activity/models.py:42 contributions/models.py:197 contributions/tables.py:34
 #: templates/contributions/detail_edit.html:43
 #: templates/contributions/detail_reply_create.html:14
 #: templates/contributions/detail_reply_create.html:45
@@ -38,15 +38,15 @@ msgstr ""
 msgid "Published"
 msgstr ""
 
-#: activity/models.py:37
+#: activity/models.py:43
 msgid "Deleted"
 msgstr ""
 
-#: activity/models.py:38
+#: activity/models.py:44
 msgid "Computed"
 msgstr ""
 
-#: activity/models.py:41 contributions/models.py:77 contributions/tables.py:21
+#: activity/models.py:47 contributions/models.py:77 contributions/tables.py:21
 #: questions/models.py:273 quizs/models.py:457
 #: templates/categories/detail_questions.html:12
 #: templates/questions/detail_base.html:4
@@ -54,46 +54,54 @@ msgstr ""
 msgid "Question"
 msgstr ""
 
-#: activity/models.py:42 contributions/models.py:85 contributions/tables.py:27
+#: activity/models.py:48 contributions/models.py:85 contributions/tables.py:27
 #: quizs/models.py:189 quizs/models.py:456 quizs/models.py:576
 #: templates/questions/detail_quizs.html:12 templates/quizs/detail_base.html:4
 #: templates/tags/detail_quizs.html:12
 msgid "Quiz"
 msgstr ""
 
-#: activity/models.py:43 users/constants.py:8
+#: activity/models.py:49 users/constants.py:8
 msgid "Contributor"
 msgstr ""
 
-#: activity/models.py:48
+#: activity/models.py:50
+msgid "Weekly statistics"
+msgstr ""
+
+#: activity/models.py:51
+msgid "Monthly statistics"
+msgstr ""
+
+#: activity/models.py:55
 msgid "Actor ID"
 msgstr ""
 
-#: activity/models.py:49
+#: activity/models.py:56
 msgid "Actor name"
 msgstr ""
 
-#: activity/models.py:53
+#: activity/models.py:60
 msgid "Verb"
 msgstr ""
 
-#: activity/models.py:60
+#: activity/models.py:67
 msgid "Object ID"
 msgstr ""
 
-#: activity/models.py:62
+#: activity/models.py:69
 msgid "Object type"
 msgstr ""
 
-#: activity/models.py:67
+#: activity/models.py:74
 msgid "Object name"
 msgstr ""
 
-#: activity/models.py:70
+#: activity/models.py:77
 msgid "Additional data"
 msgstr ""
 
-#: activity/models.py:74 categories/models.py:15 contributions/models.py:118
+#: activity/models.py:81 categories/models.py:15 contributions/models.py:118
 #: glossary/models.py:32 questions/models.py:258 quizs/models.py:168
 #: quizs/models.py:460 quizs/models.py:523 quizs/models.py:583
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
@@ -102,50 +110,57 @@ msgstr ""
 msgid "Creation date"
 msgstr ""
 
-#: activity/models.py:79
+#: activity/models.py:86
 msgid "Event"
 msgstr ""
 
-#: activity/models.py:80
+#: activity/models.py:87
 msgid "Events"
 msgstr ""
 
-#: activity/models.py:107
+#: activity/models.py:116
 #, python-brace-format
 msgid ""
 "<i>{actor_name}</i> {event_verb} the question <strong>{question_name}</"
 "strong>"
 msgstr ""
 
-#: activity/models.py:119
+#: activity/models.py:128
 #, python-brace-format
 msgid "<i>{actor_name}</i> {event_verb} the quiz <strong>{quiz_name}</strong>"
 msgstr ""
 
-#: activity/models.py:132
+#: activity/models.py:141
 #, python-brace-format
 msgid ""
 "<i>{actor_name}</i> {event_verb} the question <a "
 "href=\"{question_admin_absolute_url}\">{question_name}</a>"
 msgstr ""
 
-#: activity/models.py:147
+#: activity/models.py:156
 #, python-brace-format
 msgid ""
 "<i>{actor_name}</i> {event_verb} the quiz <a "
 "href=\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
 msgstr ""
 
-#: activity/models.py:158
+#: activity/models.py:167
 #, python-brace-format
 msgid "New contributor! <i>{user_name}</i>"
 msgstr ""
 
-#: activity/models.py:164
+#: activity/models.py:173
 #, python-brace-format
 msgid ""
-"Last week stats: {question_answer_count_week} questions answered, "
-"{quiz_answer_count_week} quizs completed, {comment_count_week} new comments"
+"Last week stats: {question_answer_count} questions answered, "
+"{quiz_answer_count} quizs completed, {comment_count} new comments"
+msgstr ""
+
+#: activity/models.py:184
+#, python-brace-format
+msgid ""
+"Last month stats: {question_answer_count} questions answered, "
+"{quiz_answer_count} quizs completed, {comment_count} new comments"
 msgstr ""
 
 #: api/glossary/filters.py:8 api/questions/filters.py:16
