@@ -40,13 +40,13 @@ class EventUtilitiesTest(TestCase):
     def test_create_event_weekly_agg_stat(self):
         extra_data = {
             "event_object_type": "WEEKLY_AGG_STAT",
-            "question_answer_count": 2,
-            "quiz_answer_count": 1,
-            "question_feedback_count": 0,
-            "quiz_feedback_count": 0,
+            "question_answer_count_week": 2,
+            "quiz_answer_count_week": 1,
+            "question_feedback_count_week": 0,
+            "quiz_feedback_count_week": 0,
         }
         create_event(user=None, event_verb="COMPUTED", extra_data=extra_data)
         self.assertEqual(Event.objects.count(), 1)
         self.assertEqual(Event.objects.first().event_object_type, "WEEKLY_AGG_STAT")
         self.assertTrue("event_object_type" not in Event.objects.first().extra_data.keys())
-        self.assertTrue("question_answer_count" in Event.objects.first().extra_data.keys())
+        self.assertTrue("question_answer_count_week" in Event.objects.first().extra_data.keys())
