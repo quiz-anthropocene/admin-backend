@@ -35,7 +35,12 @@ class Command(BaseCommand):
         quiz_feedback_count_month = DailyStat.objects.agg_count(
             "quiz_feedback_count", since="month", week_or_month_iso_number=weekday_month, year=weekday_year
         )
-        comment_count_month = Comment.objects.exclude_contributor_work().count()
+        comment_count_month = (
+            Comment.objects.exclude_contributor_work()
+            .filter(created__month=weekday_month)
+            .filter(created__year=weekday_year)
+            .count()
+        )
 
         extra_data = {
             "event_object_type": "MONTHLY_AGG_STAT",
