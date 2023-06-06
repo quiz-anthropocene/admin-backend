@@ -4,6 +4,7 @@ from django.core.management import BaseCommand
 from django.utils import timezone
 
 from activity.utilities import create_event
+from contributions.models import Comment
 from stats.models import DailyStat
 
 
@@ -36,6 +37,7 @@ class Command(BaseCommand):
         quiz_feedback_count_week = DailyStat.objects.agg_count(
             "quiz_feedback_count", since="week", week_or_month_iso_number=weekday_week, year=weekday_year
         )
+        comment_count_week = Comment.objects.exclude_contributor_work().count()
 
         extra_data = {
             "event_object_type": "WEEKLY_AGG_STAT",
@@ -46,6 +48,7 @@ class Command(BaseCommand):
             "quiz_answer_count_week": quiz_answer_count_week,
             "question_feedback_count_week": question_feedback_count_week,
             "quiz_feedback_count_week": quiz_feedback_count_week,
+            "comment_count_week": comment_count_week,
         }
 
         create_event(user=None, event_verb="COMPUTED", extra_data=extra_data)

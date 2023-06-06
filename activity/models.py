@@ -21,11 +21,16 @@ Current events logged:
 
 
 class EventQuerySet(models.QuerySet):
-    def display(self):
+    def display(self, source=None):
         # filters = Q(event_object_type="QUESTION") & Q(event_verb="CREATED")
         filters = Q(event_object_type="QUIZ") & Q(event_verb="PUBLISHED")
         filters |= Q(event_object_type="USER") & Q(event_verb="CREATED")
+        if source not in ["HOME"]:
+            filters |= Q(event_object_type="WEEKLY_AGG_STAT")
         return self.filter(filters)
+
+    def display_home(self):
+        return self.display(source="HOME")
 
 
 class Event(models.Model):
@@ -161,12 +166,11 @@ class Event(models.Model):
     @property
     def display_weekly_agg_stat_html(self) -> str:
         html_message = _(
-            "Last week stats: {question_answer_count_week} questions answered, {quiz_answer_count_week} quizs completed, {feedback_count_week} new feedbacks"  # noqa
+            "Last week stats: {question_answer_count_week} questions answered, {quiz_answer_count_week} quizs completed, {comment_count_week} new comments"  # noqa
         ).format(
             question_answer_count_week=self.extra_data["question_answer_count_week"],
             quiz_answer_count_week=self.extra_data["quiz_answer_count_week"],
-            feedback_count_week=self.extra_data["question_feedback_count_week"]
-            + self.extra_data["quiz_feedback_count_week"],
+            comment_count_week=self.extra_data["comment_count_week"],
         )
         return f"{self.display_event_emoji} {html_message}"
 

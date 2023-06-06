@@ -18,7 +18,7 @@ class HomeView(TemplateView):  # ContributorUserRequiredMixin ?
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["last_10_events"] = Event.objects.display().order_by("-created")[:10]
+        context["last_10_events"] = Event.objects.display(source="HOME").order_by("-created")[:10]
         return context
 
 

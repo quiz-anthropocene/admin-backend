@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-06 17:10+0200\n"
+"POT-Creation-Date: 2023-06-06 19:07+0200\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -142,11 +142,11 @@ msgstr ""
 msgid "New contributor! <i>{user_name}</i>"
 msgstr ""
 
-#: activity/models.py:163
+#: activity/models.py:164
 #, python-brace-format
 msgid ""
 "Last week stats: {question_answer_count_week} questions answered, "
-"{quiz_answer_count_week} quizs completed, {feedback_count_week} new feedbacks"
+"{quiz_answer_count_week} quizs completed, {comment_count_week} new comments"
 msgstr ""
 
 #: api/glossary/filters.py:8 api/questions/filters.py:16
