@@ -1,4 +1,7 @@
+from datetime import timedelta
+
 from django.test import TestCase
+from django.utils import timezone
 
 from core import constants
 from questions.factories import QuestionFactory
@@ -15,6 +18,9 @@ from stats.models import (
 )
 
 
+datetime_50_days_ago = timezone.now() - timedelta(days=50)
+
+
 class QuestionStatTest(TestCase):
     @classmethod
     def setUpTestData(cls):
@@ -28,8 +34,15 @@ class QuestionStatTest(TestCase):
         cls.question_rm_1 = QuestionFactory(type=constants.QUESTION_TYPE_QCM_RM, answer_correct="ab")
         cls.question_rm_2 = QuestionFactory(type=constants.QUESTION_TYPE_QCM_RM, answer_correct="abc")
         cls.question_rm_3 = QuestionFactory(type=constants.QUESTION_TYPE_QCM_RM, answer_correct="abcd")
-        QuestionAnswerEvent.objects.create(question_id=cls.question_rm_1.id, choice="cd", source="question")
+        QuestionAnswerEvent.objects.create(
+            question_id=cls.question_rm_1.id, choice="cd", source="question", created=datetime_50_days_ago
+        )
         cls.question_vf = QuestionFactory(type=constants.QUESTION_TYPE_VF, answer_correct="b")
+
+    def test_question_answer_event_agg_count(self):
+        self.assertEqual(QuestionAnswerEvent.objects.count(), 2)
+        self.assertEqual(QuestionAnswerEvent.objects.agg_count(), 2)
+        self.assertEqual(QuestionAnswerEvent.objects.agg_count("last_30_days"), 1)
 
     def test_question_agg_stat_created(self):
         self.assertEqual(Question.objects.count(), 1 + 3 + 1)
@@ -54,8 +67,13 @@ class QuizStatTest(TestCase):
         cls.quiz_1 = QuizFactory(name="quiz 1")  # questions=[cls.question_1.id]
         QuizQuestion.objects.create(quiz=cls.quiz_1, question=cls.question_1)
         QuestionAnswerEvent.objects.create(question_id=cls.question_1.id, choice="a", source="question")
-        QuizAnswerEvent.objects.create(quiz_id=cls.quiz_1.id, answer_success_count=1)
+        QuizAnswerEvent.objects.create(quiz_id=cls.quiz_1.id, answer_success_count=1, created=datetime_50_days_ago)
         QuizFeedbackEvent.objects.create(quiz_id=cls.quiz_1.id, choice="dislike")
+
+    def test_quiz_answer_event_agg_count(self):
+        self.assertEqual(QuizAnswerEvent.objects.count(), 1)
+        self.assertEqual(QuizAnswerEvent.objects.agg_count(), 1)
+        self.assertEqual(QuizAnswerEvent.objects.agg_count("last_30_days"), 0)
 
     def test_answer_count(self):
         self.assertEqual(self.quiz_1.answer_count_agg, 1)
