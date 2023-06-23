@@ -32,6 +32,7 @@ def add_to_contact_list(user, list_id=settings.SIB_CONTRIBUTOR_LIST_ID, extra_at
     if not settings.DEBUG and not settings.TESTING:
         return requests.post(settings.SIB_CONTACT_ENDPOINT, headers=HEADERS, data=json.dumps(data))
     else:
+        print("Sendinblue: user not added to contact list (DEBUT or TESTING environment detected)")
         return True
 
 
@@ -57,4 +58,28 @@ def newsletter_registration(user_email):
     if not settings.DEBUG and not settings.TESTING:
         return requests.post(settings.SIB_CONTACT_DOI_ENDPOINT, headers=HEADERS, data=json.dumps(data))
     else:
+        print("Sendinblue: user not registered to the newsletter (DEBUT or TESTING environment detected)")
+        return True
+
+
+def send_transactional_email_with_template_id(
+    template_id,
+    to_email,
+    to_name,
+    parameters=None,
+    from_email=settings.DEFAULT_FROM_EMAIL,
+    from_name=settings.DEFAULT_FROM_NAME,
+):
+    data = {
+        "sender": {"email": from_email, "name": from_name},  # must be a sender registered and verified in Brevo
+        "to": [{"email": to_email, "name": to_name}],
+        "templateId": template_id,
+    }
+    if parameters:
+        data["params"] = parameters
+
+    if not settings.DEBUG and not settings.TESTING:
+        return requests.post(settings.SIB_SMTP_ENDPOINT, headers=HEADERS, data=json.dumps(data))
+    else:
+        print("Sendinblue: email not sent (DEBUT or TESTING environment detected)")
         return True
