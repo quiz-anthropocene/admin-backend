@@ -8,8 +8,7 @@ import yaml
 from django.apps import apps
 from django.core import serializers
 from django.utils import timezone
-from django.utils.html import escape
-from django.utils.safestring import mark_safe
+from django.utils.html import format_html
 
 
 DATE_FORMAT = "%Y-%m-%d"
@@ -189,6 +188,7 @@ def pretty_print_readonly_jsonfield(jsonfield_data):
 
     if jsonfield_data:
         result = json.dumps(jsonfield_data, indent=4, ensure_ascii=False)
-        result = mark_safe(f"<pre>{escape(result)}</pre>")
+        # result = mark_safe(f"<pre>{escape(result)}</pre>")
+        result = format_html("<pre>{}</pre>", result)
 
     return result
