@@ -8,6 +8,7 @@ import yaml
 from django.apps import apps
 from django.core import serializers
 from django.utils import timezone
+from django.utils.html import format_html
 
 
 DATE_FORMAT = "%Y-%m-%d"
@@ -176,3 +177,18 @@ def get_choice_key(choices, value):
         if choices[key] == value:
             return key
     return None
+
+
+def pretty_print_readonly_jsonfield(jsonfield_data):
+    """
+    Display a pretty readonly version of a JSONField
+    https://stackoverflow.com/a/60219265
+    """
+    result = ""
+
+    if jsonfield_data:
+        result = json.dumps(jsonfield_data, indent=4, ensure_ascii=False)
+        # result = mark_safe(f"<pre>{escape(result)}</pre>")
+        result = format_html("<pre>{}</pre>", result)
+
+    return result

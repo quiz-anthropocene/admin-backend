@@ -3,6 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
 
 from core.admin import admin_site
+from core.utils.utilities import pretty_print_readonly_jsonfield
 from users import constants
 from users.models import User, UserCard
 
@@ -71,6 +72,7 @@ class UserAdmin(UserAdmin):
         "question_count",
         "quiz_count",
         "has_user_card",
+        "logs_display",
         "created",
         "updated",
     ]
@@ -97,6 +99,7 @@ class UserAdmin(UserAdmin):
                 )
             },
         ),
+        ("Autres", {"fields": ("logs_display",)}),
         ("Dates", {"fields": ("last_login", "created", "updated")}),
     )
     add_fieldsets = (
@@ -147,6 +150,13 @@ class UserAdmin(UserAdmin):
 
     has_user_card.short_description = "User card"
     has_user_card.boolean = True
+
+    def logs_display(self, tender=None):
+        if tender:
+            return pretty_print_readonly_jsonfield(tender.logs)
+        return "-"
+
+    logs_display.short_description = User._meta.get_field("logs").verbose_name
 
 
 class UserCardAdmin(admin.ModelAdmin):

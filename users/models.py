@@ -187,6 +187,8 @@ class User(AbstractUser):
         default=list,
     )
 
+    logs = models.JSONField(verbose_name="Logs historiques", editable=False, default=list)
+
     # is_active, is_staff, is_superuser
     # date_joined, last_login
 
