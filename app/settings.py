@@ -254,16 +254,18 @@ if not DEBUG:
     EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
 
 CONTACT_EMAIL = os.getenv("CONTACT_EMAIL")
-DEFAULT_FROM_EMAIL = "Quiz de l'Anthropocène <noreply@quizanthropocene.fr>"
+DEFAULT_FROM_EMAIL = "noreply@quizanthropocene.fr"
 DEFAULT_FROM_NAME = "Quiz de l'Anthropocène"
 SERVER_EMAIL = os.getenv("TECH_EMAIL")
 ADMINS = eval(os.getenv("ADMINS", "[]"))
 
+SIB_CONTACT_ENDPOINT = "https://api.sendinblue.com/v3/contacts"
+SIB_CONTACT_DOI_ENDPOINT = "https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation"
 SIB_CONTRIBUTOR_LIST_ID = os.getenv("SIB_CONTRIBUTOR_LIST_ID", 0)
 SIB_NEWSLETTER_LIST_ID = os.getenv("SIB_NEWSLETTER_LIST_ID", 0)
 SIB_NEWSLETTER_DOI_TEMPLATE_ID = os.getenv("SIB_NEWSLETTER_DOI_TEMPLATE_ID", 0)
-SIB_CONTACT_ENDPOINT = "https://api.sendinblue.com/v3/contacts"
-SIB_CONTACT_DOI_ENDPOINT = "https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation"
+
+SIB_SMTP_ENDPOINT = "https://api.brevo.com/v3/smtp/email"
 
 
 # Errors
