@@ -17,6 +17,11 @@ QUIZ_URL_FIELDS = Quiz.QUIZ_URL_FIELDS + Quiz.QUIZ_IMAGE_URL_FIELDS
 
 
 class Command(BaseCommand):
+    """
+    Usage:
+    python manage.py detect_broken_links
+    """
+
     def handle(self, *args, **options):
         print("=== detect_broken_links running")
 
@@ -27,7 +32,9 @@ class Command(BaseCommand):
         quiz_error_list = self.detect_quiz_broken_links()
         error_list.extend(quiz_error_list)
 
-        self.send_recap_email(error_list)
+        # only send recap email if there are errors
+        if len(error_list):
+            self.send_recap_email(error_list)
 
     def detect_question_broken_links(self):
         error_list = list()
