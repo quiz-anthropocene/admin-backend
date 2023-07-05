@@ -1,8 +1,13 @@
 import requests
+from django.conf import settings
+from django.core.mail import send_mail
 from django.core.management import BaseCommand
 
 from questions.models import Question
 from quizs.models import Quiz
+
+
+COMMAND_TITLE = "Commande de détection des liens cassés"
 
 
 QUESTION_URL_FIELDS = Question.QUESTION_URL_FIELDS + Question.QUESTION_IMAGE_URL_FIELDS
@@ -21,6 +26,8 @@ class Command(BaseCommand):
         error_list.extend(question_error_list)
         quiz_error_list = self.detect_quiz_broken_links()
         error_list.extend(quiz_error_list)
+
+        self.send_recap_email(error_list)
 
     def detect_question_broken_links(self):
         error_list = list()
@@ -77,3 +84,25 @@ class Command(BaseCommand):
 
         print(f"Quizs done. Found {len(error_list)} errors")
         return error_list
+
+    def send_recap_email(self, error_list):
+        email_subject = f"[Admin] {COMMAND_TITLE}"
+
+        email_template_html = f"<!DOCTYPE html><html><h1>{COMMAND_TITLE}</h1>"
+        email_template_html += f"<p>{len(error_list)} liens cassés</p>"
+        email_template_html += (
+            "<table><thead><tr><th>Type</th><th>ID</th><th>Nom du champ</th><th>Lien cassé</th></tr></thead><tbody>"
+        )
+        for error in error_list:
+            email_template_html += f"<tr><td>{error['object_type']}</td><td>{error['object_id']}</td><td>{error['object_field_name']}</td><td>{error['object_field_url']}</td></tr>"  # noqa
+        email_template_html += "</tbody></table></html>"
+
+        send_mail(
+            subject=email_subject,
+            message=email_template_html,
+            html_message=email_template_html,
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[settings.CONTACT_EMAIL],
+            fail_silently=False,
+        )
+        print("E-mail recap envoyé")
