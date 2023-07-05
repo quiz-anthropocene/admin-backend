@@ -5,7 +5,7 @@ from django.conf import settings
 
 
 SLACK_BASE_URL = "https://hooks.slack.com/services/"
-HEADERS = {}
+HEADERS = {"Content-Type": "application/json"}
 
 
 def format_text(text):
