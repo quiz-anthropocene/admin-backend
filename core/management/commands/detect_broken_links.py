@@ -46,6 +46,7 @@ class Command(BaseCommand):
                             {
                                 "object_type": "Question",
                                 "object_id": object.id,
+                                "object_validation_status": object.validation_status,
                                 "object_field_name": object_url_field,
                                 "object_field_url": url,
                             }
@@ -74,6 +75,7 @@ class Command(BaseCommand):
                             {
                                 "object_type": "Quiz",
                                 "object_id": object.id,
+                                "object_validation_status": object.validation_status,
                                 "object_field_name": object_url_field,
                                 "object_field_url": url,
                             }
@@ -90,11 +92,9 @@ class Command(BaseCommand):
 
         email_template_html = f"<!DOCTYPE html><html><h1>{COMMAND_TITLE}</h1>"
         email_template_html += f"<p>{len(error_list)} liens cassés</p>"
-        email_template_html += (
-            "<table><thead><tr><th>Type</th><th>ID</th><th>Nom du champ</th><th>Lien cassé</th></tr></thead><tbody>"
-        )
+        email_template_html += "<table><thead><tr><th>Type</th><th>ID</th><th>Statut</th><th>Nom du champ</th><th>Lien cassé</th></tr></thead><tbody>"  # noqa
         for error in error_list:
-            email_template_html += f"<tr><td>{error['object_type']}</td><td>{error['object_id']}</td><td>{error['object_field_name']}</td><td>{error['object_field_url']}</td></tr>"  # noqa
+            email_template_html += f"<tr><td>{error['object_type']}</td><td>{error['object_id']}</td><td>{error['object_validation_status']}</td><td>{error['object_field_name']}</td><td>{error['object_field_url']}</td></tr>"  # noqa
         email_template_html += "</tbody></table></html>"
 
         send_mail(
