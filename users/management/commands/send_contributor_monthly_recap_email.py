@@ -1,9 +1,11 @@
 from datetime import timedelta
 
+from django.conf import settings
 from django.core.management import BaseCommand
 from django.utils import timezone
 
-from stats.models import QuestionAnswerEvent, QuizAnswerEvent
+from core.utils.sendinblue import send_transactional_email_with_template_id
+from stats.models import QuizAnswerEvent
 from users.models import User
 
 
@@ -30,27 +32,48 @@ class Command(BaseCommand):
 
         contributors = User.objects.all_contributors()
         print(f"{contributors.count()} contributors")
-        contributors_with_public_content = contributors.has_public_content()
-        print(f"{contributors_with_public_content.count()} contributors with public content")
+        # for now we contact only contributors with a public_quiz
+        contributors_with_public_quiz = contributors.has_public_quiz()  # has_public_content()
+        print(f"{contributors_with_public_quiz.count()} contributors with public quiz")
 
-        for user in contributors_with_public_content:
-            question_answer_count_month = QuestionAnswerEvent.objects.filter(
-                question__in=user.questions.public().validated()
-            ).agg_count(since="month", week_or_month_iso_number=weekday_month, year=weekday_year)
-            quiz_answer_count_month = QuizAnswerEvent.objects.filter(
-                quiz__in=user.quizs.public().published()
-            ).agg_count(since="month", week_or_month_iso_number=weekday_month, year=weekday_year)
+        for user in contributors_with_public_quiz:
+            quiz_published = user.quizs.public().published()
+            quiz_published_count = quiz_published.count()
+            quiz_answer_count_month = QuizAnswerEvent.objects.filter(quiz__in=quiz_published).agg_count(
+                since="month", week_or_month_iso_number=weekday_month, year=weekday_year
+            )
+            # question_answer_count_month = QuestionAnswerEvent.objects.filter(
+            #     question__in=user.questions.public().validated()
+            # ).agg_count(since="month", week_or_month_iso_number=weekday_month, year=weekday_year)
+            # quiz_comment_count_month =
 
             parameters = {
-                "QUESTION_PUBLIC_VALIDATED_COUNT": user.question_public_validated_count,
-                "QUIZ_PUBLIC_PUBLISHED_COUNT": user.quiz_public_published_count,
-                "QUESTION_ANSWER_COUNT_MONTH": question_answer_count_month,
-                "QUIZ_ANSWER_COUNT_MONTH": quiz_answer_count_month,
-                # "COMMENT_COUNT_MONTH": 0
+                "firstName": user.first_name,
+                "lastMonth": weekday.strftime("%B %Y"),
+                "quizAnswerCountLastMonth": quiz_answer_count_month,
+                "quizCountString": f"ton quiz {quiz_published.first().name}"
+                if (quiz_published_count == 1)
+                else f"tes {quiz_published_count} quizs",
+                # "commentCountLastMonth": 5,
             }
 
             if not options["dry_run"]:
-                print("user")
-                print(parameters)
                 # send email
-                # log metadata
+                send_transactional_email_with_template_id(
+                    to_email=user.email,
+                    to_name=user.full_name,
+                    template_id=int(settings.SIB_CONTRIBUTOR_MONTHLY_RECAP_TEMPLATE_ID),
+                    parameters=parameters,
+                )
+
+                # log email
+                log_item = {
+                    "action": f"email_contributor_monthly_recap_{weekday_year}_{weekday_month}",
+                    "email_to": user.email,
+                    # "email_subject": email_subject,
+                    # "email_body": email_body,
+                    "email_timestamp": timezone.now().isoformat(),
+                    "metadata": {"parameters": parameters},
+                }
+                user.logs.append(log_item)
+                user.save()
