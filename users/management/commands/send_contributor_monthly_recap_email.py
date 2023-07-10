@@ -4,6 +4,7 @@ from django.conf import settings
 from django.core.management import BaseCommand
 from django.utils import timezone
 
+from contributions.models import Comment
 from core.utils.sendinblue import send_transactional_email_with_template_id
 from stats.models import QuizAnswerEvent
 from users.models import User
@@ -37,24 +38,41 @@ class Command(BaseCommand):
         print(f"{contributors_with_public_quiz.count()} contributors with public quiz")
 
         for user in contributors_with_public_quiz:
-            quiz_published = user.quizs.public().published()
-            quiz_published_count = quiz_published.count()
-            quiz_answer_count_month = QuizAnswerEvent.objects.filter(quiz__in=quiz_published).agg_count(
+            # quiz stats
+            quiz_public_published = user.quizs.public().published()
+            quiz_public_published_count = quiz_public_published.count()
+            quiz_answer_count_month = QuizAnswerEvent.objects.filter(quiz__in=quiz_public_published).agg_count(
                 since="month", week_or_month_iso_number=weekday_month, year=weekday_year
             )
-            # question_answer_count_month = QuestionAnswerEvent.objects.filter(
+            quiz_public_published_string = (
+                f"ton quiz {quiz_public_published.first().name}"
+                if (quiz_public_published_count == 1)
+                else f"tes {quiz_public_published_count} quizs"
+            )
+            # question stats
+            question_public_validated = user.questions.public().validated()
+            # question_public_validated_count = question_public_validated.count()
+            # quiz_answer_count_month = QuestionAnswerEvent.objects.filter(
             #     question__in=user.questions.public().validated()
             # ).agg_count(since="month", week_or_month_iso_number=weekday_month, year=weekday_year)
-            # quiz_comment_count_month =
+            # comment stats
+            quiz_comment_count_month = (
+                Comment.objects.exclude_contributor_work()
+                .filter(quiz__in=quiz_public_published)
+                .agg_count(since="month", week_or_month_iso_number=weekday_month, year=weekday_year)
+            )
+            question_comment_count_month = (
+                Comment.objects.exclude_contributor_work()
+                .filter(question__in=question_public_validated)
+                .agg_count(since="month", week_or_month_iso_number=weekday_month, year=weekday_year)
+            )
 
             parameters = {
                 "firstName": user.first_name,
                 "lastMonth": weekday.strftime("%B %Y"),
                 "quizAnswerCountLastMonth": quiz_answer_count_month,
-                "quizCountString": f"ton quiz {quiz_published.first().name}"
-                if (quiz_published_count == 1)
-                else f"tes {quiz_published_count} quizs",
-                # "commentCountLastMonth": 5,
+                "quizCountString": quiz_public_published_string,
+                "commentCountLastMonth": quiz_comment_count_month + question_comment_count_month,
             }
 
             if not options["dry_run"]:
