@@ -26,6 +26,27 @@ class QuestionAnswerEventQuerySet(models.QuerySet):
     def from_quiz(self):
         return self.filter(source=constants.QUESTION_SOURCE_QUIZ)
 
+    def agg_count(
+        self,
+        since="total",
+        week_or_month_iso_number=None,
+        year=None,
+    ):
+        queryset = self
+        # since
+        if since not in constants.AGGREGATION_SINCE_CHOICE_LIST:
+            raise ValueError(f"DailyStat agg_count: must be one of {constants.AGGREGATION_SINCE_CHOICE_LIST}")
+        if since == "last_30_days":
+            queryset = queryset.filter(created__date__gte=(date.today() - timedelta(days=30)))
+        if since == "month":
+            queryset = queryset.filter(created__month=week_or_month_iso_number)
+        elif since == "week":
+            queryset = queryset.filter(created__week=week_or_month_iso_number)
+        if year:
+            queryset = queryset.filter(created__year=year)
+        # field
+        return queryset.count()
+
     def agg_timeseries(self):
         queryset = self
         queryset = (
@@ -108,6 +129,27 @@ class QuizAnswerEventQuerySet(models.QuerySet):
 
     def last_30_days(self):
         return self.filter(created__date__gte=(date.today() - timedelta(days=30)))
+
+    def agg_count(
+        self,
+        since="total",
+        week_or_month_iso_number=None,
+        year=None,
+    ):
+        queryset = self
+        # since
+        if since not in constants.AGGREGATION_SINCE_CHOICE_LIST:
+            raise ValueError(f"DailyStat agg_count: must be one of {constants.AGGREGATION_SINCE_CHOICE_LIST}")
+        if since == "last_30_days":
+            queryset = queryset.filter(created__date__gte=(date.today() - timedelta(days=30)))
+        if since == "month":
+            queryset = queryset.filter(created__month=week_or_month_iso_number)
+        elif since == "week":
+            queryset = queryset.filter(created__week=week_or_month_iso_number)
+        if year:
+            queryset = queryset.filter(created__year=year)
+        # field
+        return queryset.count()
 
     def agg_timeseries(self, scale="day"):
         queryset = self

@@ -11,6 +11,7 @@ from core.utils.utilities import truncate_with_ellipsis
 from history.models import HistoryChangedFieldsAbstractModel
 from questions.models import Question
 from quizs.models import Quiz
+from stats import constants as stat_constants
 
 
 class CommentQuerySet(models.QuerySet):
@@ -57,6 +58,27 @@ class CommentQuerySet(models.QuerySet):
 
     def published(self):
         return self.filter(publish=True)
+
+    def agg_count(
+        self,
+        since="total",
+        week_or_month_iso_number=None,
+        year=None,
+    ):
+        queryset = self
+        # since
+        if since not in stat_constants.AGGREGATION_SINCE_CHOICE_LIST:
+            raise ValueError(f"DailyStat agg_count: must be one of {stat_constants.AGGREGATION_SINCE_CHOICE_LIST}")
+        if since == "last_30_days":
+            queryset = queryset.filter(created__date__gte=(date.today() - timedelta(days=30)))
+        if since == "month":
+            queryset = queryset.filter(created__month=week_or_month_iso_number)
+        elif since == "week":
+            queryset = queryset.filter(created__week=week_or_month_iso_number)
+        if year:
+            queryset = queryset.filter(created__year=year)
+        # field
+        return queryset.count()
 
 
 class Comment(models.Model):
