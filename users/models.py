@@ -10,6 +10,7 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from simple_history.models import HistoricalRecords
 
+from contributions.models import Comment
 from core import constants
 from core.fields import ChoiceArrayField
 from core.utils import sendinblue
@@ -316,6 +317,10 @@ class User(AbstractUser):
     def has_role_administrator(self) -> bool:
         ROLES_ALLOWED = [user_constants.USER_ROLE_ADMINISTRATOR]
         return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
+
+    @property
+    def new_comment_count(self):
+        return Comment.objects.exclude_errors().exclude_contributor_work().for_author(self).new_comments().count()
 
     def is_question_author(self, question) -> bool:
         return self == question.author

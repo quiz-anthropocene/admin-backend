@@ -5,6 +5,9 @@ from django.views.generic import DetailView, TemplateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
+from contributions.filters import CommentFilter
+from contributions.models import Comment
+from contributions.tables import CommentTable
 from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import ContributorUserRequiredMixin
 from glossary.models import GlossaryItem
@@ -133,4 +136,30 @@ class ProfileHistoryListView(ContributorUserRequiredMixin, TemplateView):
         )
         question_quiz_history.sort(key=lambda x: x.history_date, reverse=True)
         context["table"] = HistoryTable(question_quiz_history[:50])  # TODO: pagination ?
+        return context
+
+
+class ProfileCommentListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
+    model = Comment
+    template_name = "profile/comments_view.html"
+    context_object_name = "user_comments"
+    table_class = CommentTable
+    filterset_class = CommentFilter
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = qs.prefetch_related("replies")
+        qs = qs.exclude_errors().exclude_contributor_work()
+        qs = qs.for_author(self.request.user)
+        qs = qs.order_by("-created")
+        return qs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["user"] = self.request.user
+        context["new_comment_count"] = self.get_queryset().new_comments().count()
+        if context["filter"].form.is_valid():
+            search_dict = form_filters_cleaned_dict(context["filter"].form.cleaned_data)
+            if search_dict:
+                context["search_filters"] = form_filters_to_list(search_dict, with_delete_url=True)
         return context

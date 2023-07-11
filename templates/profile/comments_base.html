@@ -1,0 +1,39 @@
+{% extends "layouts/base.html" %}
+{% load render_table from django_tables2 %}
+{% load i18n django_bootstrap5 %}
+
+{% block title %}{% translate "Comments on my content" %} ({{ user.new_comments_count }}){{ block.super }}{% endblock %}
+
+{% block breadcrumbs %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 my-auto">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'profile:home' %}">{% translate "My space" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "Comments" %}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-12">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link {% if 'stats' not in request.path %}active fw-bold{% endif %}" href="{% url 'profile:comments_view' %}">
+                        {% translate "New comments" %} ({{ new_comment_count }})
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    {% block profile_comments_content %}{% endblock %}
+</div>
+{% endblock %}
