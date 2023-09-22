@@ -43,7 +43,8 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">{% translate "Comments on my content" %} <small class="text-muted">{{ user.new_comment_count }}</small></h5>
+                    <h5 class="card-title">{% translate "Comments on my content" %} <small class="text-muted">{{ user.comment_count }}</small></h5>
+                    <h5 class="card-title"><small class="text-muted">{% translate "New comments" %} <span class="fw-bold">{{ user.new_comment_count }}</span></small></h5>
                     <a class="btn btn-primary" href="{% url 'profile:comments_view' %}?sort=status">{% translate "View" %}</a>
                 </div>
             </div>

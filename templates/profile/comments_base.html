@@ -26,8 +26,13 @@
         <div class="col-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link {% if 'stats' not in request.path %}active fw-bold{% endif %}" href="{% url 'profile:comments_view' %}">
-                        {% translate "New comments" %} ({{ new_comment_count }})
+                    <a class="nav-link {% if 'new' not in request.path %}active fw-bold{% endif %}" href="{% url 'profile:comments_view' %}">
+                        {% translate "All comments" %} ({{ user.comment_count }})
+                    </a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link {% if 'new' in request.path %}active fw-bold{% endif %}" href="{% url 'profile:comments_new' %}">
+                        {% translate "New comments" %} ({{ user.new_comment_count }})
                     </a>
                 </li>
             </ul>

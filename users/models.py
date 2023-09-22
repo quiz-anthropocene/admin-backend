@@ -319,8 +319,12 @@ class User(AbstractUser):
         return (len(self.roles) > 0) and any([role in ROLES_ALLOWED for role in self.roles])
 
     @property
+    def comment_count(self):
+        return Comment.objects.exclude_errors().exclude_contributor_work().for_author(self).count()
+
+    @property
     def new_comment_count(self):
-        return Comment.objects.exclude_errors().exclude_contributor_work().for_author(self).new_comments().count()
+        return Comment.objects.exclude_errors().exclude_contributor_work().for_author(self).only_new_comments().count()
 
     def is_question_author(self, question) -> bool:
         return self == question.author

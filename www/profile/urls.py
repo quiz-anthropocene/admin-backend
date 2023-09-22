@@ -5,6 +5,7 @@ from www.profile.views import (
     ProfileHistoryListView,
     ProfileHomeView,
     ProfileInfoView,
+    ProfileNewCommentListView,
     ProfileQuestionListStatsView,
     ProfileQuestionListView,
     ProfileQuizListStatsView,
@@ -40,6 +41,7 @@ urlpatterns = [
         include(
             [
                 path("", ProfileCommentListView.as_view(), name="comments_view"),
+                path("new/", ProfileNewCommentListView.as_view(), name="comments_new"),
             ]
         ),
     ),

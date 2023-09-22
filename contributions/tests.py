@@ -5,6 +5,7 @@ from contributions.models import Comment
 from core import constants
 from questions.factories import QuestionFactory
 from quizs.factories import QuizFactory
+from users.factories import UserFactory
 
 
 class CommentModelTest(TestCase):
@@ -31,6 +32,7 @@ class CommentModelQuerySetTest(TestCase):
     def setUpTestData(cls):
         cls.question = QuestionFactory()
         cls.quiz = QuizFactory()
+        cls.author = UserFactory()
         cls.comment_with_reply_1 = CommentFactory(type=constants.COMMENT_TYPE_COMMENT_APP, publish=True)
         cls.comment_reply_reply_1 = CommentFactory(type=constants.COMMENT_TYPE_REPLY, parent=cls.comment_with_reply_1)
         cls.comment_reply_note_1 = CommentFactory(
@@ -42,8 +44,18 @@ class CommentModelQuerySetTest(TestCase):
         cls.comment_reply_note_3 = CommentFactory(
             type=constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR, parent=cls.comment_with_reply_3
         )
-        CommentFactory(type=constants.COMMENT_TYPE_COMMENT_QUESTION, question=cls.question)
-        CommentFactory(type=constants.COMMENT_TYPE_COMMENT_QUIZ, quiz=cls.quiz)
+        cls.comment_question = CommentFactory(
+            type=constants.COMMENT_TYPE_COMMENT_QUESTION,
+            question=cls.question,
+            status=constants.COMMENT_STATUS_NEW,
+            question__authors=[cls.author],
+        )
+        cls.comment_quiz = CommentFactory(
+            type=constants.COMMENT_TYPE_COMMENT_QUIZ,
+            quiz=cls.quiz,
+            status=constants.COMMENT_STATUS_NEW,
+            quiz__authors=[cls.author],
+        )
         CommentFactory(type=constants.COMMENT_TYPE_ERROR_APP)
 
     def test_comment_count(self):
@@ -67,6 +79,9 @@ class CommentModelQuerySetTest(TestCase):
     def test_comment_only_notes(self):
         self.assertEqual(Comment.objects.only_notes().count(), 2)
 
+    def test_comment_only_new_comments(self):
+        self.assertEqual(Comment.objects.only_new_comments().count(), 2)
+
     def test_comment_has_replies_contributor_comments(self):
         self.assertEqual(Comment.objects.has_replies_contributor_comments().count(), 2)
 
@@ -81,3 +96,10 @@ class CommentModelQuerySetTest(TestCase):
 
     def test_comment_published(self):
         self.assertEqual(Comment.objects.published().count(), 1)
+
+    def test_comment_for_author(self):
+        comments_for_author = Comment.objects.for_author(self.author)
+        self.assertEqual(comments_for_author.count(), 2)
+        self.assertIn(self.comment_question, comments_for_author)
+        self.assertIn(self.comment_quiz, comments_for_author)
+        self.assertNotIn(self.comment_with_reply_1, comments_for_author)

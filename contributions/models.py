@@ -60,9 +60,9 @@ class CommentQuerySet(models.QuerySet):
         return self.filter(publish=True)
 
     def for_author(self, author):
-        return self.filter(Q(quiz__authors__in=[author]) | Q(question__author_string=author))
+        return self.filter(Q(quiz__authors__in=[author]) | Q(question__author=author))
 
-    def new_comments(self):
+    def only_new_comments(self):
         return self.filter(status=constants.COMMENT_STATUS_NEW)
 
 
