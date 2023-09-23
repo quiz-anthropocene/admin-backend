@@ -324,7 +324,7 @@ class User(AbstractUser):
 
     @property
     def new_comment_count(self):
-        return Comment.objects.exclude_errors().exclude_contributor_work().for_author(self).only_new_comments().count()
+        return Comment.objects.exclude_errors().exclude_contributor_work().for_author(self).only_new().count()
 
     def is_question_author(self, question) -> bool:
         return self == question.author

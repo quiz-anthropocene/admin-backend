@@ -24,6 +24,9 @@ class CommentQuerySet(models.QuerySet):
     def exclude_contributor_work(self):
         return self.exclude_contributor_comments().exclude_replies()
 
+    def only_new(self):
+        return self.filter(status=constants.COMMENT_STATUS_NEW)
+
     def only_replies(self):
         return self.filter(type=constants.COMMENT_TYPE_REPLY)
 
@@ -60,10 +63,7 @@ class CommentQuerySet(models.QuerySet):
         return self.filter(publish=True)
 
     def for_author(self, author):
-        return self.filter(Q(quiz__authors__in=[author]) | Q(question__author=author))
-
-    def only_new_comments(self):
-        return self.filter(status=constants.COMMENT_STATUS_NEW)
+        return self.filter(Q(question__author=author) | Q(quiz__authors__in=[author]))
 
 
 class Comment(models.Model):

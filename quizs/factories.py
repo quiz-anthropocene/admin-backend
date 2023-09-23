@@ -3,7 +3,6 @@ from django.utils.text import slugify
 
 from core import constants
 from quizs.models import Quiz
-from users.factories import UserFactory
 
 
 class QuizFactory(factory.django.DjangoModelFactory):
@@ -14,4 +13,3 @@ class QuizFactory(factory.django.DjangoModelFactory):
     slug = factory.LazyAttribute(lambda o: slugify(o.name))
     validation_status = constants.VALIDATION_STATUS_VALIDATED
     publish = False
-    author = factory.SubFactory(UserFactory)

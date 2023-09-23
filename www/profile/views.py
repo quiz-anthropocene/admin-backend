@@ -5,7 +5,7 @@ from django.views.generic import DetailView, TemplateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
-from contributions.filters import CommentFilter
+from contributions.filters import CommentFilter, CommentNewFilter
 from contributions.models import Comment
 from contributions.tables import CommentTable
 from core.forms import form_filters_cleaned_dict, form_filters_to_list
@@ -164,18 +164,18 @@ class ProfileCommentListView(ContributorUserRequiredMixin, SingleTableMixin, Fil
         return context
 
 
-class ProfileNewCommentListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
+class ProfileCommentNewListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
     model = Comment
     template_name = "profile/comments_new.html"
     context_object_name = "user_comments_new"
     table_class = CommentTable
-    filterset_class = CommentFilter
+    filterset_class = CommentNewFilter
 
     def get_queryset(self):
         qs = super().get_queryset()
         qs = qs.prefetch_related("replies")
         qs = qs.exclude_errors().exclude_contributor_work()
-        qs = qs.for_author(self.request.user).only_new_comments()
+        qs = qs.for_author(self.request.user).only_new()
         qs = qs.order_by("-created")
         return qs
 

@@ -3,7 +3,6 @@ import factory
 from categories.factories import CategoryFactory
 from core import constants
 from questions.models import Question
-from users.factories import UserFactory
 
 
 class QuestionFactory(factory.django.DjangoModelFactory):
@@ -19,4 +18,3 @@ class QuestionFactory(factory.django.DjangoModelFactory):
     answer_choice_b = "La réponse B"
     answer_correct = "a"  # constants.QUESTION_ANSWER_CHOICE_LIST[0]
     validation_status = constants.VALIDATION_STATUS_VALIDATED
-    author = factory.SubFactory(UserFactory)

@@ -2,10 +2,10 @@ from django.urls import include, path
 
 from www.profile.views import (
     ProfileCommentListView,
+    ProfileCommentNewListView,
     ProfileHistoryListView,
     ProfileHomeView,
     ProfileInfoView,
-    ProfileNewCommentListView,
     ProfileQuestionListStatsView,
     ProfileQuestionListView,
     ProfileQuizListStatsView,
@@ -41,7 +41,7 @@ urlpatterns = [
         include(
             [
                 path("", ProfileCommentListView.as_view(), name="comments_view"),
-                path("new/", ProfileNewCommentListView.as_view(), name="comments_new"),
+                path("new/", ProfileCommentNewListView.as_view(), name="comments_new"),
             ]
         ),
     ),

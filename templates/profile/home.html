@@ -20,7 +20,7 @@
 
 {% block content %}
 <div class="container">
-    <div class="row">
+    <div class="row mb-3">
         <div class="col-9">
             <h1>{% translate "My content" %}</h1>
         </div>
@@ -40,12 +40,22 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+    </div>
+    <div class="row">
+        <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">{% translate "Comments on my content" %} <small class="text-muted">{{ user.comment_count }}</small></h5>
-                    <h5 class="card-title"><small class="text-muted">{% translate "New comments" %} <span class="fw-bold">{{ user.new_comment_count }}</span></small></h5>
-                    <a class="btn btn-primary" href="{% url 'profile:comments_view' %}?sort=status">{% translate "View" %}</a>
+                    <h5 class="card-title">
+                        {% translate "Comments on my content" %} <small class="text-muted">{{ user.comment_count }}</small>
+                        {% if user.new_comment_count %}
+                            <span class="badge bg-warning">{{ user.new_comment_count }} {% translate "new" %}</span>
+                        {% endif %}
+                    </h5>
+                    {% if user.new_comment_count %}
+                        <a class="btn btn-primary" href="{% url 'profile:comments_new' %}">{% translate "View" %}</a>
+                    {% else %}
+                        <a class="btn btn-primary" href="{% url 'profile:comments_view' %}">{% translate "View" %}</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
