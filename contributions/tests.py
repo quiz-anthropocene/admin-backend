@@ -48,13 +48,13 @@ class CommentModelQuerySetTest(TestCase):
             type=constants.COMMENT_TYPE_COMMENT_QUESTION,
             question=cls.question,
             status=constants.COMMENT_STATUS_NEW,
-            question__authors=[cls.author],
+            question__author=cls.author,
         )
         cls.comment_quiz = CommentFactory(
             type=constants.COMMENT_TYPE_COMMENT_QUIZ,
             quiz=cls.quiz,
             status=constants.COMMENT_STATUS_NEW,
-            quiz__authors=[cls.author],
+            quiz__author=cls.author,
         )
         CommentFactory(type=constants.COMMENT_TYPE_ERROR_APP)
 
