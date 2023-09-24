@@ -156,7 +156,7 @@ class Comment(models.Model):
 
     @property
     def has_replies_reply(self) -> bool:
-        return self.replies.only_replies().exists()
+        return self.replies.only_replies().exists()  # TODO: optimise?
 
     @property
     def has_replies_reply_icon(self) -> str:

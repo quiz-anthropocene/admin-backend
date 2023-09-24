@@ -156,6 +156,7 @@ class ProfileCommentListView(ContributorUserRequiredMixin, SingleTableMixin, Fil
 
     def get_queryset(self):
         qs = super().get_queryset()
+        qs = qs.select_related("parent", "question", "quiz")
         qs = qs.prefetch_related("replies")
         qs = qs.exclude_errors().exclude_contributor_work()
         qs = qs.for_author(self.request.user)
@@ -181,6 +182,7 @@ class ProfileCommentNewListView(ContributorUserRequiredMixin, SingleTableMixin, 
 
     def get_queryset(self):
         qs = super().get_queryset()
+        qs = qs.select_related("parent", "question", "quiz")
         qs = qs.prefetch_related("replies")
         qs = qs.exclude_errors().exclude_contributor_work()
         qs = qs.for_author(self.request.user).only_new()
