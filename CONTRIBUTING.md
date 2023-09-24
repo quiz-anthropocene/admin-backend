@@ -295,9 +295,17 @@ pip install pygraphviz
 python manage.py graph_models -a -X ContentType,LogEntry,AbstractUser,User,AbstractBaseSession,Session,Group,Permission -o graph.png
 ```
 
-Update packages
+#### Pipfile
+
+Install dependencies
 ```
-pipenv install --dev
+pipenv sync
+```
+
+Update dependencies
+```
+pipenv update
+// Runs $ pipenv lock then $ pipenv sync
 ```
 
 #### Other commands
