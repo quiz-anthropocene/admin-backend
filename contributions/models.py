@@ -27,6 +27,11 @@ class CommentQuerySet(models.QuerySet):
     def only_new(self):
         return self.filter(status=constants.COMMENT_STATUS_NEW)
 
+    def only_new_new(self, user):
+        if user.profile_comments_last_seen_date:
+            return self.only_new().filter(created__gt=user.profile_comments_last_seen_date)
+        return self.only_new()
+
     def only_replies(self):
         return self.filter(type=constants.COMMENT_TYPE_REPLY)
 

@@ -29,10 +29,13 @@
                     <a class="nav-link {% if 'new' not in request.path %}active fw-bold{% endif %}" href="{% url 'profile:comments_view' %}">
                         {% translate "All comments" %} ({{ user.comment_count }})
                     </a>
-                </li>                
+                </li>
                 <li class="nav-item">
                     <a class="nav-link {% if 'new' in request.path %}active fw-bold{% endif %}" href="{% url 'profile:comments_new' %}">
                         {% translate "Comments to process" %} ({{ user.comment_new_count }})
+                        {% if user.comment_new_new_count %}
+                            <span class="badge bg-warning" title="{% translate "New comments" %}">{{ user.comment_new_new_count }}</span>
+                        {% endif %}
                     </a>
                 </li>
             </ul>

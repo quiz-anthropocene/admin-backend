@@ -1,4 +1,5 @@
 from django.test import TestCase
+from django.utils import timezone
 
 from contributions.factories import CommentFactory
 from contributions.models import Comment
@@ -102,3 +103,18 @@ class CommentModelQuerySetTest(TestCase):
         for comment in [self.comment_question, self.comment_quiz]:
             self.assertIn(comment, comments_for_author)
         self.assertNotIn(self.comment_with_reply_1, comments_for_author)
+
+    def test_only_new_new(self):
+        user_comments_new_new = Comment.objects.only_new_new(self.author)
+        self.assertEqual(user_comments_new_new.count(), 2)  # only_new()
+        self.author.profile_comments_last_seen_date = timezone.now()
+        self.author.save()
+        user_comments_new_new = Comment.objects.only_new_new(self.author)
+        self.assertEqual(user_comments_new_new.count(), 0)
+        CommentFactory(
+            type=constants.COMMENT_TYPE_COMMENT_QUESTION,
+            question=self.question,
+            status=constants.COMMENT_STATUS_NEW,
+        )
+        user_comments_new_new = Comment.objects.only_new_new(self.author)
+        self.assertEqual(user_comments_new_new.count(), 1)
