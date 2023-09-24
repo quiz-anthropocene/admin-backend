@@ -9,7 +9,7 @@ from questions.models import Question
 
 
 TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%S"  # "2021-05-05T13:02:00.000Z"  # milliseconds not managed
-QUESTION_URL_FIELDS = [field.name for field in Question._meta.fields if type(field) == URLField]
+QUESTION_URL_FIELDS = [field.name for field in Question._meta.fields if type(field) is URLField]
 
 
 # Official API
