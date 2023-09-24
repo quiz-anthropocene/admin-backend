@@ -308,6 +308,12 @@ pipenv update
 // Runs $ pipenv lock then $ pipenv sync
 ```
 
+Update a specific package
+```
+// First edit the Pipfile
+pipenv install
+```
+
 #### Other commands
 
 Update the Metabase instance on Heroku
