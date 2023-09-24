@@ -188,7 +188,15 @@ class User(AbstractUser):
         default=list,
     )
 
-    logs = models.JSONField(verbose_name="Logs historiques", editable=False, default=list)
+    # stats
+    profile_home_last_seen_date = models.DateTimeField(
+        verbose_name=_("Last seen date on page 'My space'"), blank=True, null=True
+    )
+    profile_comments_last_seen_date = models.DateTimeField(
+        verbose_name=_("Last seen date on page 'Comments on my content'"), blank=True, null=True
+    )
+
+    logs = models.JSONField(verbose_name=_("Historical logs"), editable=False, default=list)
 
     # is_active, is_staff, is_superuser
     # date_joined, last_login
@@ -323,8 +331,12 @@ class User(AbstractUser):
         return Comment.objects.exclude_errors().exclude_contributor_work().for_author(self).count()
 
     @property
-    def new_comment_count(self):
+    def comment_new_count(self):
         return Comment.objects.exclude_errors().exclude_contributor_work().for_author(self).only_new().count()
+
+    @property
+    def comment_new_new_count(self):
+        return Comment.objects.exclude_errors().exclude_contributor_work().for_author(self).only_new_new(self).count()
 
     def is_question_author(self, question) -> bool:
         return self == question.author

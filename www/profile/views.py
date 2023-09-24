@@ -1,6 +1,7 @@
 from itertools import chain
 
 from django.db.models import Value
+from django.utils import timezone
 from django.views.generic import DetailView, TemplateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
@@ -29,6 +30,13 @@ class ProfileHomeView(ContributorUserRequiredMixin, DetailView):
 
     def get_object(self):
         return self.request.user
+
+    def get(self, request, *args, **kwargs):
+        """
+        Update 'profile_home_last_seen_date'
+        """
+        User.objects.filter(id=self.request.user.id).update(profile_home_last_seen_date=timezone.now())
+        return super().get(request, *args, **kwargs)
 
 
 class ProfileInfoView(ContributorUserRequiredMixin, DetailView):
@@ -146,8 +154,16 @@ class ProfileCommentListView(ContributorUserRequiredMixin, SingleTableMixin, Fil
     table_class = CommentTable
     filterset_class = CommentFilter
 
+    def get(self, request, *args, **kwargs):
+        """
+        Update 'profile_comments_last_seen_date'
+        """
+        User.objects.filter(id=self.request.user.id).update(profile_comments_last_seen_date=timezone.now())
+        return super().get(request, *args, **kwargs)
+
     def get_queryset(self):
         qs = super().get_queryset()
+        qs = qs.select_related("parent", "question", "quiz")
         qs = qs.prefetch_related("replies")
         qs = qs.exclude_errors().exclude_contributor_work()
         qs = qs.for_author(self.request.user)
@@ -171,8 +187,16 @@ class ProfileCommentNewListView(ContributorUserRequiredMixin, SingleTableMixin, 
     table_class = CommentTable
     filterset_class = CommentNewFilter
 
+    def get(self, request, *args, **kwargs):
+        """
+        Update 'profile_comments_last_seen_date'
+        """
+        User.objects.filter(id=self.request.user.id).update(profile_comments_last_seen_date=timezone.now())
+        return super().get(request, *args, **kwargs)
+
     def get_queryset(self):
         qs = super().get_queryset()
+        qs = qs.select_related("parent", "question", "quiz")
         qs = qs.prefetch_related("replies")
         qs = qs.exclude_errors().exclude_contributor_work()
         qs = qs.for_author(self.request.user).only_new()
