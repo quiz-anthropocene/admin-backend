@@ -14,7 +14,7 @@ def form_filters_to_list(form_cleaned_data, with_delete_url=False):
     form_filters_list = list()
 
     for (key, value) in form_cleaned_data.items():
-        if type(value) == list:
+        if type(value) is list:
             for item in value:
                 form_filters_list.append({"key": key, "value": str(item), "value_id": getattr(item, "id", None)})
         else:

@@ -16,7 +16,7 @@ DEFAULT_ATTRS = {"class": "table-responsive table-striped table-bordered border-
 class ChoiceColumn(tables.Column):
     def render(self, value, record, bound_column):
         value_title = value
-        if type(record) == Question:
+        if type(record) is Question:
             # Question.type : display choice key
             if bound_column.name == "type":
                 value_title = value
@@ -35,7 +35,7 @@ class ChoiceColumn(tables.Column):
 class ArrayColumn(tables.Column):
     def render(self, value, record, bound_column):
         output_array = list()
-        if type(record) == User:
+        if type(record) is User:
             if bound_column.name == "roles":
                 choices_dict = dict(user_constants.USER_ROLE_CHOICES)
                 for item in value:

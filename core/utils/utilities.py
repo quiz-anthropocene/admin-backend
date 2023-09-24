@@ -133,9 +133,9 @@ def add_validation_error(dict, key, value):
     if key not in dict:
         dict[key] = value
     else:
-        if type(dict[key]) == list:
+        if type(dict[key]) is list:
             dict[key] += [value]
-        if type(dict[key]) == str:
+        if type(dict[key]) is str:
             dict[key] = [dict[key], value]
     return dict
 
