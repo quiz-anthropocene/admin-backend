@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-06 19:47+0200\n"
-"PO-Revision-Date: 2023-06-06 19:48+0200\n"
+"POT-Creation-Date: 2023-09-24 09:56+0200\n"
+"PO-Revision-Date: 2023-09-24 09:58+0200\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
 #: activity/models.py:39
@@ -31,7 +31,7 @@ msgstr "Mis à jour"
 msgid "Validated"
 msgstr "Validé"
 
-#: activity/models.py:42 contributions/models.py:197 contributions/tables.py:34
+#: activity/models.py:42 contributions/models.py:200 contributions/tables.py:48
 #: templates/contributions/detail_edit.html:43
 #: templates/contributions/detail_reply_create.html:14
 #: templates/contributions/detail_reply_create.html:45
@@ -47,7 +47,7 @@ msgstr "Supprimé"
 msgid "Computed"
 msgstr "Calculé"
 
-#: activity/models.py:47 contributions/models.py:77 contributions/tables.py:21
+#: activity/models.py:47 contributions/models.py:84 contributions/tables.py:23
 #: questions/models.py:273 quizs/models.py:457
 #: templates/categories/detail_questions.html:12
 #: templates/questions/detail_base.html:4
@@ -55,7 +55,7 @@ msgstr "Calculé"
 msgid "Question"
 msgstr "Question"
 
-#: activity/models.py:48 contributions/models.py:85 contributions/tables.py:27
+#: activity/models.py:48 contributions/models.py:92 contributions/tables.py:29
 #: quizs/models.py:189 quizs/models.py:456 quizs/models.py:576
 #: templates/questions/detail_quizs.html:12 templates/quizs/detail_base.html:4
 #: templates/tags/detail_quizs.html:12
@@ -102,12 +102,12 @@ msgstr "Nom de l'objet"
 msgid "Additional data"
 msgstr "Données supplémentaires"
 
-#: activity/models.py:81 categories/models.py:15 contributions/models.py:118
+#: activity/models.py:81 categories/models.py:15 contributions/models.py:125
 #: glossary/models.py:32 questions/models.py:258 quizs/models.py:168
 #: quizs/models.py:460 quizs/models.py:523 quizs/models.py:583
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
 #: stats/models.py:207 stats/models.py:218 stats/models.py:307
-#: tags/models.py:29 users/models.py:193 users/models.py:369
+#: tags/models.py:29 users/models.py:196 users/models.py:380
 msgid "Creation date"
 msgstr "Date de création"
 
@@ -201,11 +201,11 @@ msgstr "Tag(s)"
 msgid "Author(s)"
 msgstr "Auteur(s)"
 
-#: app/settings.py:179 core/constants.py:122
+#: app/settings.py:179 core/constants.py:128
 msgid "English"
 msgstr "Anglais"
 
-#: app/settings.py:180 core/constants.py:121
+#: app/settings.py:180 core/constants.py:127
 msgid "French"
 msgstr "Français"
 
@@ -221,10 +221,10 @@ msgstr "Nom (version longue)"
 msgid "Description"
 msgstr "Description"
 
-#: categories/models.py:16 contributions/models.py:119 glossary/models.py:33
+#: categories/models.py:16 contributions/models.py:126 glossary/models.py:33
 #: questions/models.py:259 quizs/models.py:169 quizs/models.py:461
 #: quizs/models.py:524 quizs/models.py:584 stats/models.py:308
-#: tags/models.py:30 users/models.py:194 users/models.py:370
+#: tags/models.py:30 users/models.py:197 users/models.py:381
 msgid "Last update date"
 msgstr "Date de dernière modification"
 
@@ -258,11 +258,11 @@ msgstr "Questions"
 msgid "Parent?"
 msgstr "Parent ?"
 
-#: contributions/admin.py:14 contributions/admin.py:30 users/admin.py:34
+#: contributions/admin.py:14 contributions/admin.py:30 users/admin.py:35
 msgid "Yes"
 msgstr "Oui"
 
-#: contributions/admin.py:14 contributions/admin.py:30 users/admin.py:34
+#: contributions/admin.py:14 contributions/admin.py:30 users/admin.py:35
 msgid "No"
 msgstr "Non"
 
@@ -274,23 +274,23 @@ msgstr "Répondu ?"
 msgid "Message"
 msgstr "Message"
 
-#: contributions/models.py:69 questions/models.py:115
+#: contributions/models.py:76 questions/models.py:115
 msgid "Text"
 msgstr "Texte"
 
-#: contributions/models.py:71
+#: contributions/models.py:78
 msgid "A question, a comment…"
 msgstr "Une question, un commentaire…"
 
-#: contributions/models.py:73
+#: contributions/models.py:80
 msgid "Additional information"
 msgstr "Informations supplémentaires"
 
-#: contributions/models.py:74 history/tables.py:10 questions/models.py:120
+#: contributions/models.py:81 history/tables.py:10 questions/models.py:120
 msgid "Type"
 msgstr "Type"
 
-#: contributions/models.py:88 history/tables.py:9 questions/models.py:220
+#: contributions/models.py:95 history/tables.py:9 questions/models.py:220
 #: questions/models.py:265 quizs/models.py:578
 #: templates/contributions/detail_history.html:12
 #: templates/glossary/detail_history.html:12
@@ -299,52 +299,53 @@ msgstr "Type"
 msgid "Author"
 msgstr "Auteur"
 
-#: contributions/models.py:97 questions/models.py:229 quizs/models.py:135
+#: contributions/models.py:104 contributions/tables.py:40
+#: questions/models.py:229 quizs/models.py:135
 msgid "Status"
 msgstr "Statut"
 
-#: contributions/models.py:104
+#: contributions/models.py:111
 msgid "In reply to"
 msgstr "En réponse à"
 
-#: contributions/models.py:113 quizs/models.py:149
+#: contributions/models.py:120 quizs/models.py:149
 msgid "Published?"
 msgstr "Publié ?"
 
-#: contributions/models.py:114
+#: contributions/models.py:121
 msgid "Display the comment publicly (and its reply if it exists)"
 msgstr "Afficher publiquement le commentaire (et sa réponse si elle existe)"
 
-#: contributions/models.py:126 templates/contributions/detail_base.html:4
+#: contributions/models.py:133 templates/contributions/detail_base.html:4
 msgid "Comment"
 msgstr "Commentaire"
 
-#: contributions/models.py:127 templates/contributions/detail_base.html:13
+#: contributions/models.py:134 templates/contributions/detail_base.html:13
 #: templates/contributions/list.html:5 templates/contributions/list.html:14
-#: templates/includes/_header.html:32 templates/questions/detail_base.html:44
-#: templates/quizs/detail_base.html:44
+#: templates/includes/_header.html:32 templates/profile/comments_base.html:15
+#: templates/questions/detail_base.html:44 templates/quizs/detail_base.html:44
 msgid "Comments"
 msgstr "Commentaires"
 
-#: contributions/models.py:134
+#: contributions/models.py:141
 msgid "Anonymous user"
 msgstr "Utilisateur anonyme"
 
-#: contributions/models.py:193 contributions/models.py:194
+#: contributions/models.py:196 contributions/models.py:197
 msgid "Parent"
 msgstr "Parent"
 
-#: contributions/models.py:195 contributions/models.py:196
-#: contributions/tables.py:32
+#: contributions/models.py:198 contributions/models.py:199
+#: contributions/tables.py:36
 msgid "Answered"
 msgstr "Répondu"
 
-#: contributions/tables.py:33 core/constants.py:111
+#: contributions/tables.py:42 core/constants.py:111
 #: templates/contributions/detail_edit.html:38
 msgid "Processed"
 msgstr "Traité"
 
-#: contributions/tables.py:36 glossary/tables.py:27
+#: contributions/tables.py:53 glossary/tables.py:27
 msgid "Actions"
 msgstr "Actions"
 
@@ -448,35 +449,35 @@ msgstr "En cours"
 msgid "Ignored"
 msgstr "Ignoré"
 
-#: core/constants.py:123
+#: core/constants.py:129
 msgid "Spanish"
 msgstr "Espagnol"
 
-#: core/constants.py:124
+#: core/constants.py:130
 msgid "Italian"
 msgstr "Italien"
 
-#: core/constants.py:125
+#: core/constants.py:131
 msgid "German"
 msgstr "Allemand"
 
-#: core/constants.py:145
+#: core/constants.py:151
 msgid "Public (exported and in the application)"
 msgstr "Publique (dans l'export et dans l'application)"
 
-#: core/constants.py:146
+#: core/constants.py:152
 msgid "Hidden (exported but not visible in the application)"
 msgstr "Caché (dans l'export mais pas visible dans l'application)"
 
-#: core/constants.py:147
+#: core/constants.py:153
 msgid "Private (not exported and not in the application)"
 msgstr "Privé (pas dans l'export ni dans l'application)"
 
-#: core/constants.py:150
+#: core/constants.py:156
 msgid "True"
 msgstr "Vrai"
 
-#: core/constants.py:150
+#: core/constants.py:156
 msgid "False"
 msgstr "Faux"
 
@@ -931,8 +932,9 @@ msgstr "Voir plus"
 #: templates/contributions/list.html:13 templates/glossary/create.html:16
 #: templates/glossary/detail_base.html:12 templates/glossary/list.html:13
 #: templates/pages/help.html:12 templates/pages/home.html:4
-#: templates/profile/history.html:13 templates/profile/home.html:12
-#: templates/profile/info.html:12 templates/profile/questions_base.html:13
+#: templates/profile/comments_base.html:13 templates/profile/history.html:13
+#: templates/profile/home.html:12 templates/profile/info.html:12
+#: templates/profile/questions_base.html:13
 #: templates/profile/quizs_base.html:13 templates/questions/create.html:17
 #: templates/questions/detail_base.html:12 templates/questions/list.html:13
 #: templates/quizs/create.html:17 templates/quizs/detail_base.html:12
@@ -991,6 +993,8 @@ msgstr "Tous les contributeurs"
 
 #: templates/admin/contributor_list.html:31
 #: templates/contributions/list.html:30 templates/glossary/list.html:30
+#: templates/profile/comments_new.html:12
+#: templates/profile/comments_view.html:12
 #: templates/profile/questions_view.html:12 templates/questions/list.html:30
 #: templates/quizs/list.html:30 templates/tags/list.html:30
 msgid "Filters"
@@ -998,6 +1002,8 @@ msgstr "Filtres"
 
 #: templates/admin/contributor_list.html:48
 #: templates/contributions/list.html:46 templates/glossary/list.html:47
+#: templates/profile/comments_new.html:28
+#: templates/profile/comments_view.html:28
 #: templates/profile/questions_view.html:29 templates/questions/list.html:47
 #: templates/quizs/list.html:47 templates/tags/list.html:47
 msgid "Filter"
@@ -1013,8 +1019,9 @@ msgstr "Historique"
 #: templates/admin/home.html:28 templates/admin/home.html:36
 #: templates/contributions/_table_action_items.html:3
 #: templates/glossary/_table_action_items.html:3 templates/profile/home.html:31
-#: templates/profile/home.html:39 templates/profile/home.html:60
-#: templates/profile/home.html:68 templates/users/home.html:43
+#: templates/profile/home.html:39 templates/profile/home.html:55
+#: templates/profile/home.html:57 templates/profile/home.html:79
+#: templates/profile/home.html:87 templates/users/home.html:43
 msgid "View"
 msgstr "Voir"
 
@@ -1185,9 +1192,10 @@ msgstr "Application"
 msgid "Statistics"
 msgstr "Statistiques"
 
-#: templates/includes/_header.html:23 templates/profile/history.html:14
-#: templates/profile/home.html:4 templates/profile/home.html:13
-#: templates/profile/info.html:13 templates/profile/questions_base.html:14
+#: templates/includes/_header.html:23 templates/profile/comments_base.html:14
+#: templates/profile/history.html:14 templates/profile/home.html:4
+#: templates/profile/home.html:13 templates/profile/info.html:13
+#: templates/profile/questions_base.html:14
 #: templates/profile/quizs_base.html:14
 msgid "My space"
 msgstr "Mon espace"
@@ -1195,7 +1203,7 @@ msgstr "Mon espace"
 #: templates/includes/_header.html:41
 #: templates/users/administrator_list.html:14
 #: templates/users/author_card_list.html:13 templates/users/home.html:4
-#: templates/users/home.html:13 users/models.py:200
+#: templates/users/home.html:13 users/models.py:203
 msgid "Users"
 msgstr "Utilisateurs"
 
@@ -1337,8 +1345,22 @@ msgstr "Mettre à jour le glossaire"
 msgid "and many more functionalities :)"
 msgstr "et plein d'autres fonctionnalités :)"
 
+#: templates/profile/comments_base.html:5 templates/profile/home.html:49
+msgid "Comments on my content"
+msgstr "Commentaires sur mon contenu"
+
+#: templates/profile/comments_base.html:30
+#: templates/profile/comments_view.html:8
+msgid "All comments"
+msgstr "Tous les commentaires"
+
+#: templates/profile/comments_base.html:35
+#: templates/profile/comments_new.html:8
+msgid "New comments"
+msgstr "Nouveaux commentaires"
+
 #: templates/profile/history.html:5 templates/profile/history.html:15
-#: templates/profile/home.html:67
+#: templates/profile/home.html:86
 msgid "My modification history"
 msgstr "Mon historique de modifications"
 
@@ -1350,67 +1372,71 @@ msgstr "50 dernières modifications"
 msgid "My content"
 msgstr "Mon contenu"
 
-#: templates/profile/home.html:30 templates/profile/home.html:85
+#: templates/profile/home.html:30 templates/profile/home.html:104
 #: templates/profile/quizs_base.html:5 templates/profile/quizs_base.html:15
 msgid "My quizs"
 msgstr "Mes quizs"
 
-#: templates/profile/home.html:38 templates/profile/home.html:112
+#: templates/profile/home.html:38 templates/profile/home.html:131
 #: templates/profile/questions_base.html:5
 #: templates/profile/questions_base.html:15
 msgid "My questions"
 msgstr "Mes questions"
 
-#: templates/profile/home.html:49
+#: templates/profile/home.html:51
+msgid "new"
+msgstr "nouveau"
+
+#: templates/profile/home.html:68
 msgid "My info"
 msgstr "Mes infos"
 
-#: templates/profile/home.html:54 templates/profile/info.html:4
+#: templates/profile/home.html:73 templates/profile/info.html:4
 #: templates/profile/info.html:14 templates/profile/info.html:26
 msgid "My profile"
 msgstr "Mon profil"
 
-#: templates/profile/home.html:57 templates/profile/info.html:81
+#: templates/profile/home.html:76 templates/profile/info.html:81
 msgid "You don't have an author card yet!"
 msgstr "Vous n'avez pas encore de fiche auteur !"
 
-#: templates/profile/home.html:79
+#: templates/profile/home.html:98
 msgid "Some statistics"
 msgstr "Quelques statistiques"
 
-#: templates/profile/home.html:88
+#: templates/profile/home.html:107
 msgid "Number of published quizs:"
 msgstr "Nombre de quizs publiés :"
 
-#: templates/profile/home.html:91 templates/profile/home.html:118
+#: templates/profile/home.html:110 templates/profile/home.html:137
 msgid "Number of answers:"
 msgstr "Nombre de réponses :"
 
-#: templates/profile/home.html:94 templates/profile/home.html:121
+#: templates/profile/home.html:113 templates/profile/home.html:140
 msgid "Successfully answered:"
 msgstr "Taux de réussite :"
 
-#: templates/profile/home.html:97 templates/profile/home.html:124
+#: templates/profile/home.html:116 templates/profile/home.html:143
 msgid "Total likes count:"
 msgstr "Nombre de likes :"
 
-#: templates/profile/home.html:100 templates/profile/home.html:127
+#: templates/profile/home.html:119 templates/profile/home.html:146
 msgid "Total dislikes count:"
 msgstr "Nombre de dislikes :"
 
-#: templates/profile/home.html:103 templates/profile/home.html:130
+#: templates/profile/home.html:122 templates/profile/home.html:149
 msgid "View details"
 msgstr "Voir les détails"
 
-#: templates/profile/home.html:115
+#: templates/profile/home.html:134
 msgid "Number of validated questions:"
 msgstr "Nombre de questions validées :"
 
-#: templates/profile/info.html:41 users/models.py:180
+#: templates/profile/info.html:41 users/models.py:181
 msgid "First name"
 msgstr "Prénom"
 
-#: templates/profile/info.html:45 users/models.py:181
+#: templates/profile/info.html:45 users/models.py:182
 msgid "Last name"
 msgstr "Nom"
 
@@ -1418,7 +1444,7 @@ msgstr "Nom"
 msgid "Email address"
 msgstr "Adresse e-mail"
 
-#: templates/profile/info.html:53 users/models.py:184
+#: templates/profile/info.html:53 users/models.py:185
 msgid "Roles"
 msgstr "Rôles"
 
@@ -1529,11 +1555,11 @@ msgid_plural "questions"
 msgstr[0] "question"
 msgstr[1] "questions"
 
-#: templates/users/_author_card.html:11 users/models.py:365
+#: templates/users/_author_card.html:11 users/models.py:376
 msgid "Short biography"
 msgstr "Courte biographie"
 
-#: templates/users/_author_card.html:14 users/models.py:366
+#: templates/users/_author_card.html:14 users/models.py:377
 msgid "Relationship with the Anthropocene Quiz"
 msgstr "Lien avec le Quiz de l'Anthropocène"
 
@@ -1559,7 +1585,7 @@ msgstr "Voir les fiches auteurs"
 msgid "Administrators"
 msgstr "Administrateurs"
 
-#: users/admin.py:30
+#: users/admin.py:31
 msgid "User card?"
 msgstr "Fiche utilisateur ?"
 
@@ -1605,27 +1631,27 @@ msgstr ""
 msgid "Only the quiz author or a super-contributor can edit a public quiz"
 msgstr "Seul l'auteur ou un administrateur peut modifier un quiz publique"
 
-#: users/models.py:179
+#: users/models.py:180
 msgid "Email"
 msgstr "Adresse e-mail"
 
-#: users/models.py:199
+#: users/models.py:202
 msgid "User"
 msgstr "Utilisateur"
 
-#: users/models.py:361
+#: users/models.py:372
 msgid "User image (link)"
 msgstr "Lien vers une image de l'utilisateur"
 
-#: users/models.py:367
+#: users/models.py:378
 msgid "Website (link)"
 msgstr "Site internet"
 
-#: users/models.py:375
+#: users/models.py:386
 msgid "User card"
 msgstr "Fiche utilisateur"
 
-#: users/models.py:376
+#: users/models.py:387
 msgid "User cards"
 msgstr "Fiches utilisateurs"
 

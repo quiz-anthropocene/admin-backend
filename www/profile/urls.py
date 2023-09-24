@@ -1,6 +1,8 @@
 from django.urls import include, path
 
 from www.profile.views import (
+    ProfileCommentListView,
+    ProfileCommentNewListView,
     ProfileHistoryListView,
     ProfileHomeView,
     ProfileInfoView,
@@ -31,6 +33,15 @@ urlpatterns = [
             [
                 path("", ProfileQuizListView.as_view(), name="quizs_view"),
                 path("stats/", ProfileQuizListStatsView.as_view(), name="quizs_stats"),
+            ]
+        ),
+    ),
+    path(
+        "comments/",
+        include(
+            [
+                path("", ProfileCommentListView.as_view(), name="comments_view"),
+                path("new/", ProfileCommentNewListView.as_view(), name="comments_new"),
             ]
         ),
     ),

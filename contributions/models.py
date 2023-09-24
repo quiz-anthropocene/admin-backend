@@ -2,6 +2,7 @@ from datetime import date, timedelta
 
 from django.conf import settings
 from django.db import models
+from django.db.models import Q
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from simple_history.models import HistoricalRecords
@@ -22,6 +23,9 @@ class CommentQuerySet(models.QuerySet):
 
     def exclude_contributor_work(self):
         return self.exclude_contributor_comments().exclude_replies()
+
+    def only_new(self):
+        return self.filter(status=constants.COMMENT_STATUS_NEW)
 
     def only_replies(self):
         return self.filter(type=constants.COMMENT_TYPE_REPLY)
@@ -57,6 +61,9 @@ class CommentQuerySet(models.QuerySet):
 
     def published(self):
         return self.filter(publish=True)
+
+    def for_author(self, author):
+        return self.filter(Q(question__author=author) | Q(quiz__authors__in=[author]))
 
 
 class Comment(models.Model):
@@ -177,11 +184,7 @@ class Comment(models.Model):
 
     @property
     def processed_icon(self) -> str:
-        if self.status == constants.COMMENT_STATUS_NEW:
-            return "❌"
-        if self.status == constants.COMMENT_STATUS_PENDING:
-            return "📝"
-        return "✅"
+        return dict(constants.COMMENT_STATUS_ICONS).get(self.status, "❌")
 
     @property
     def published_icon(self) -> str:

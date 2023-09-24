@@ -10,3 +10,9 @@ class CommentFilter(django_filters.FilterSet):
     class Meta:
         model = Comment
         fields = ["type", "status", "publish"]
+
+
+class CommentNewFilter(django_filters.FilterSet):
+    class Meta:
+        model = Comment
+        fields = ["type"]
