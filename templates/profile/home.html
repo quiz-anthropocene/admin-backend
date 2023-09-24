@@ -47,11 +47,15 @@
                 <div class="card-body">
                     <h5 class="card-title">
                         {% translate "Comments on my content" %} <small class="text-muted">{{ user.comment_count }}</small>
-                        {% if user.new_comment_count %}
-                            <span class="badge bg-warning">{{ user.new_comment_count }} {% translate "new" %}</span>
+                        {% if user.comment_new_count %}
+                            <div>
+                                <span class="badge bg-primary">
+                                    {% blocktrans with user_comment_new_count=user.comment_new_count count count=user.comment_new_count %}{{ user_comment_new_count }} comment to process{% plural %}{{ user_comment_new_count }} comments to process{% endblocktrans %}
+                                </span>
+                            </div>
                         {% endif %}
                     </h5>
-                    {% if user.new_comment_count %}
+                    {% if user.comment_new_count %}
                         <a class="btn btn-primary" href="{% url 'profile:comments_new' %}">{% translate "View" %}</a>
                     {% else %}
                         <a class="btn btn-primary" href="{% url 'profile:comments_view' %}">{% translate "View" %}</a>

@@ -2,7 +2,7 @@
 {% load render_table from django_tables2 %}
 {% load i18n django_bootstrap5 %}
 
-{% block title %}{% translate "Comments on my content" %} ({{ user.new_comments_count }}){{ block.super }}{% endblock %}
+{% block title %}{% translate "Comments on my content" %} ({{ user.comment_count }}){{ block.super }}{% endblock %}
 
 {% block breadcrumbs %}
 <div class="container">
@@ -32,7 +32,7 @@
                 </li>                
                 <li class="nav-item">
                     <a class="nav-link {% if 'new' in request.path %}active fw-bold{% endif %}" href="{% url 'profile:comments_new' %}">
-                        {% translate "New comments" %} ({{ user.new_comment_count }})
+                        {% translate "Comments to process" %} ({{ user.comment_new_count }})
                     </a>
                 </li>
             </ul>

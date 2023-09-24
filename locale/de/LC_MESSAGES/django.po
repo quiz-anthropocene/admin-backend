@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 14:19+0200\n"
+"POT-Creation-Date: 2023-09-24 14:39+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1000,9 +1000,9 @@ msgstr ""
 #: templates/admin/home.html:28 templates/admin/home.html:36
 #: templates/contributions/_table_action_items.html:3
 #: templates/glossary/_table_action_items.html:3 templates/profile/home.html:31
-#: templates/profile/home.html:39 templates/profile/home.html:55
-#: templates/profile/home.html:57 templates/profile/home.html:79
-#: templates/profile/home.html:87 templates/users/home.html:43
+#: templates/profile/home.html:39 templates/profile/home.html:59
+#: templates/profile/home.html:61 templates/profile/home.html:83
+#: templates/profile/home.html:91 templates/users/home.html:43
 msgid "View"
 msgstr ""
 
@@ -1324,11 +1324,11 @@ msgstr ""
 
 #: templates/profile/comments_base.html:35
 #: templates/profile/comments_new.html:8
-msgid "New comments"
+msgid "Comments to process"
 msgstr ""
 
 #: templates/profile/history.html:5 templates/profile/history.html:15
-#: templates/profile/home.html:86
+#: templates/profile/home.html:90
 msgid "My modification history"
 msgstr ""
 
@@ -1340,63 +1340,66 @@ msgstr ""
 msgid "My content"
 msgstr ""
 
-#: templates/profile/home.html:30 templates/profile/home.html:104
+#: templates/profile/home.html:30 templates/profile/home.html:108
 #: templates/profile/quizs_base.html:5 templates/profile/quizs_base.html:15
 msgid "My quizs"
 msgstr ""
 
-#: templates/profile/home.html:38 templates/profile/home.html:131
+#: templates/profile/home.html:38 templates/profile/home.html:135
 #: templates/profile/questions_base.html:5
 #: templates/profile/questions_base.html:15
 msgid "My questions"
 msgstr ""
 
-#: templates/profile/home.html:51
-msgid "new"
-msgstr ""
+#: templates/profile/home.html:53
+#, python-format
+msgid "%(user_comment_new_count)s comment to process"
+msgid_plural "%(user_comment_new_count)s comments to process"
+msgstr[0] ""
+msgstr[1] ""
 
-#: templates/profile/home.html:68
+#: templates/profile/home.html:72
 msgid "My info"
 msgstr ""
 
-#: templates/profile/home.html:73 templates/profile/info.html:4
+#: templates/profile/home.html:77 templates/profile/info.html:4
 #: templates/profile/info.html:14 templates/profile/info.html:26
 msgid "My profile"
 msgstr ""
 
-#: templates/profile/home.html:76 templates/profile/info.html:81
+#: templates/profile/home.html:80 templates/profile/info.html:81
 msgid "You don't have an author card yet!"
 msgstr ""
 
-#: templates/profile/home.html:98
+#: templates/profile/home.html:102
 msgid "Some statistics"
 msgstr ""
 
-#: templates/profile/home.html:107
+#: templates/profile/home.html:111
 msgid "Number of published quizs:"
 msgstr ""
 
-#: templates/profile/home.html:110 templates/profile/home.html:137
+#: templates/profile/home.html:114 templates/profile/home.html:141
 msgid "Number of answers:"
 msgstr ""
 
-#: templates/profile/home.html:113 templates/profile/home.html:140
+#: templates/profile/home.html:117 templates/profile/home.html:144
 msgid "Successfully answered:"
 msgstr ""
 
-#: templates/profile/home.html:116 templates/profile/home.html:143
+#: templates/profile/home.html:120 templates/profile/home.html:147
 msgid "Total likes count:"
 msgstr ""
 
-#: templates/profile/home.html:119 templates/profile/home.html:146
+#: templates/profile/home.html:123 templates/profile/home.html:150
 msgid "Total dislikes count:"
 msgstr ""
 
-#: templates/profile/home.html:122 templates/profile/home.html:149
+#: templates/profile/home.html:126 templates/profile/home.html:153
 msgid "View details"
 msgstr ""
 
-#: templates/profile/home.html:134
+#: templates/profile/home.html:138
 msgid "Number of validated questions:"
 msgstr ""
 
