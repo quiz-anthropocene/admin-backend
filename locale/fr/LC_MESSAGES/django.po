@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 14:39+0200\n"
-"PO-Revision-Date: 2023-09-24 14:40+0200\n"
+"POT-Creation-Date: 2023-09-24 15:19+0200\n"
+"PO-Revision-Date: 2023-09-24 15:20+0200\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -107,7 +107,7 @@ msgstr "Données supplémentaires"
 #: quizs/models.py:460 quizs/models.py:523 quizs/models.py:583
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
 #: stats/models.py:207 stats/models.py:218 stats/models.py:307
-#: tags/models.py:29 users/models.py:201 users/models.py:385
+#: tags/models.py:29 users/models.py:204 users/models.py:388
 msgid "Creation date"
 msgstr "Date de création"
 
@@ -224,7 +224,7 @@ msgstr "Description"
 #: categories/models.py:16 contributions/models.py:126 glossary/models.py:33
 #: questions/models.py:259 quizs/models.py:169 quizs/models.py:461
 #: quizs/models.py:524 quizs/models.py:584 stats/models.py:308
-#: tags/models.py:30 users/models.py:202 users/models.py:386
+#: tags/models.py:30 users/models.py:205 users/models.py:389
 msgid "Last update date"
 msgstr "Date de dernière modification"
 
@@ -322,8 +322,8 @@ msgstr "Commentaire"
 
 #: contributions/models.py:134 templates/contributions/detail_base.html:13
 #: templates/contributions/list.html:5 templates/contributions/list.html:14
-#: templates/includes/_header.html:32 templates/profile/comments_base.html:15
-#: templates/questions/detail_base.html:44 templates/quizs/detail_base.html:44
+#: templates/includes/_header.html:32 templates/questions/detail_base.html:44
+#: templates/quizs/detail_base.html:44
 msgid "Comments"
 msgstr "Commentaires"
 
@@ -1203,7 +1203,7 @@ msgstr "Mon espace"
 #: templates/includes/_header.html:41
 #: templates/users/administrator_list.html:14
 #: templates/users/author_card_list.html:13 templates/users/home.html:4
-#: templates/users/home.html:13 users/models.py:208
+#: templates/users/home.html:13 users/models.py:211
 msgid "Users"
 msgstr "Utilisateurs"
 
@@ -1345,7 +1345,8 @@ msgstr "Mettre à jour le glossaire"
 msgid "and many more functionalities :)"
 msgstr "et plein d'autres fonctionnalités :)"
 
-#: templates/profile/comments_base.html:5 templates/profile/home.html:49
+#: templates/profile/comments_base.html:5
+#: templates/profile/comments_base.html:15 templates/profile/home.html:49
 msgid "Comments on my content"
 msgstr "Commentaires sur mon contenu"
 
@@ -1558,11 +1559,11 @@ msgid_plural "questions"
 msgstr[0] "question"
 msgstr[1] "questions"
 
-#: templates/users/_author_card.html:11 users/models.py:381
+#: templates/users/_author_card.html:11 users/models.py:384
 msgid "Short biography"
 msgstr "Courte biographie"
 
-#: templates/users/_author_card.html:14 users/models.py:382
+#: templates/users/_author_card.html:14 users/models.py:385
 msgid "Relationship with the Anthropocene Quiz"
 msgstr "Lien avec le Quiz de l'Anthropocène"
 
@@ -1643,26 +1644,30 @@ msgid "Last seen date on page 'My space'"
 msgstr "Date de dernière visite sur la page 'Mon espace'"
 
 #: users/models.py:196
+msgid "Last seen date on page 'Comments on my content'"
+msgstr "Date de dernière visite sur la page 'Commentaires sur mon contenu'"
+
+#: users/models.py:199
 msgid "Historical logs"
 msgstr "Logs historiques"
 
-#: users/models.py:207
+#: users/models.py:210
 msgid "User"
 msgstr "Utilisateur"
 
-#: users/models.py:377
+#: users/models.py:380
 msgid "User image (link)"
 msgstr "Lien vers une image de l'utilisateur"
 
-#: users/models.py:383
+#: users/models.py:386
 msgid "Website (link)"
 msgstr "Site internet"
 
-#: users/models.py:391
+#: users/models.py:394
 msgid "User card"
 msgstr "Fiche utilisateur"
 
-#: users/models.py:392
+#: users/models.py:395
 msgid "User cards"
 msgstr "Fiches utilisateurs"
 

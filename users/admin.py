@@ -73,6 +73,7 @@ class UserAdmin(UserAdmin):
         "quiz_count",
         "has_user_card",
         "profile_home_last_seen_date",
+        "profile_comments_last_seen_date",
         "logs_display",
         "created",
         "updated",
@@ -98,6 +99,7 @@ class UserAdmin(UserAdmin):
                     "quiz_count",
                     "has_user_card",
                     "profile_home_last_seen_date",
+                    "profile_comments_last_seen_date",
                 )
             },
         ),

@@ -154,6 +154,13 @@ class ProfileCommentListView(ContributorUserRequiredMixin, SingleTableMixin, Fil
     table_class = CommentTable
     filterset_class = CommentFilter
 
+    def get(self, request, *args, **kwargs):
+        """
+        Update 'profile_comments_last_seen_date'
+        """
+        User.objects.filter(id=self.request.user.id).update(profile_comments_last_seen_date=timezone.now())
+        return super().get(request, *args, **kwargs)
+
     def get_queryset(self):
         qs = super().get_queryset()
         qs = qs.select_related("parent", "question", "quiz")
@@ -179,6 +186,13 @@ class ProfileCommentNewListView(ContributorUserRequiredMixin, SingleTableMixin, 
     context_object_name = "user_comments_new"
     table_class = CommentTable
     filterset_class = CommentNewFilter
+
+    def get(self, request, *args, **kwargs):
+        """
+        Update 'profile_comments_last_seen_date'
+        """
+        User.objects.filter(id=self.request.user.id).update(profile_comments_last_seen_date=timezone.now())
+        return super().get(request, *args, **kwargs)
 
     def get_queryset(self):
         qs = super().get_queryset()

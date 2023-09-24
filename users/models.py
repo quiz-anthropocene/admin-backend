@@ -192,6 +192,9 @@ class User(AbstractUser):
     profile_home_last_seen_date = models.DateTimeField(
         verbose_name=_("Last seen date on page 'My space'"), blank=True, null=True
     )
+    profile_comments_last_seen_date = models.DateTimeField(
+        verbose_name=_("Last seen date on page 'Comments on my content'"), blank=True, null=True
+    )
 
     logs = models.JSONField(verbose_name=_("Historical logs"), editable=False, default=list)
 
