@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 09:56+0200\n"
+"POT-Creation-Date: 2023-09-24 14:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,7 +106,7 @@ msgstr ""
 #: quizs/models.py:460 quizs/models.py:523 quizs/models.py:583
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
 #: stats/models.py:207 stats/models.py:218 stats/models.py:307
-#: tags/models.py:29 users/models.py:196 users/models.py:380
+#: tags/models.py:29 users/models.py:201 users/models.py:385
 msgid "Creation date"
 msgstr ""
 
@@ -211,7 +211,7 @@ msgstr ""
 #: categories/models.py:16 contributions/models.py:126 glossary/models.py:33
 #: questions/models.py:259 quizs/models.py:169 quizs/models.py:461
 #: quizs/models.py:524 quizs/models.py:584 stats/models.py:308
-#: tags/models.py:30 users/models.py:197 users/models.py:381
+#: tags/models.py:30 users/models.py:202 users/models.py:386
 msgid "Last update date"
 msgstr ""
 
@@ -1178,7 +1178,7 @@ msgstr ""
 #: templates/includes/_header.html:41
 #: templates/users/administrator_list.html:14
 #: templates/users/author_card_list.html:13 templates/users/home.html:4
-#: templates/users/home.html:13 users/models.py:203
+#: templates/users/home.html:13 users/models.py:208
 msgid "Users"
 msgstr ""
 
@@ -1521,11 +1521,11 @@ msgid_plural "questions"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/users/_author_card.html:11 users/models.py:376
+#: templates/users/_author_card.html:11 users/models.py:381
 msgid "Short biography"
 msgstr ""
 
-#: templates/users/_author_card.html:14 users/models.py:377
+#: templates/users/_author_card.html:14 users/models.py:382
 msgid "Relationship with the Anthropocene Quiz"
 msgstr ""
 
@@ -1600,23 +1600,31 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: users/models.py:202
+#: users/models.py:193
+msgid "Last seen date on page 'My space'"
+msgstr ""
+
+#: users/models.py:196
+msgid "Historical logs"
+msgstr ""
+
+#: users/models.py:207
 msgid "User"
 msgstr ""
 
-#: users/models.py:372
+#: users/models.py:377
 msgid "User image (link)"
 msgstr ""
 
-#: users/models.py:378
+#: users/models.py:383
 msgid "Website (link)"
 msgstr ""
 
-#: users/models.py:386
+#: users/models.py:391
 msgid "User card"
 msgstr ""
 
-#: users/models.py:387
+#: users/models.py:392
 msgid "User cards"
 msgstr ""
 

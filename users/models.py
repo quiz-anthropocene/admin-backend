@@ -188,7 +188,12 @@ class User(AbstractUser):
         default=list,
     )
 
-    logs = models.JSONField(verbose_name="Logs historiques", editable=False, default=list)
+    # stats
+    profile_home_last_seen_date = models.DateTimeField(
+        verbose_name=_("Last seen date on page 'My space'"), blank=True, null=True
+    )
+
+    logs = models.JSONField(verbose_name=_("Historical logs"), editable=False, default=list)
 
     # is_active, is_staff, is_superuser
     # date_joined, last_login

@@ -1,6 +1,7 @@
 from itertools import chain
 
 from django.db.models import Value
+from django.utils import timezone
 from django.views.generic import DetailView, TemplateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
@@ -29,6 +30,13 @@ class ProfileHomeView(ContributorUserRequiredMixin, DetailView):
 
     def get_object(self):
         return self.request.user
+
+    def get(self, request, *args, **kwargs):
+        """
+        Update 'profile_home_last_seen_date'
+        """
+        User.objects.filter(id=self.request.user.id).update(profile_home_last_seen_date=timezone.now())
+        return super().get(request, *args, **kwargs)
 
 
 class ProfileInfoView(ContributorUserRequiredMixin, DetailView):
