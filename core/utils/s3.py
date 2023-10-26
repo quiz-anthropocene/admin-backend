@@ -1,4 +1,5 @@
 import json
+import uuid
 
 import boto3
 from botocore.client import Config
@@ -183,3 +184,19 @@ def get_bucket_policy(bucket):
 
 def update_bucket_policy(bucket, policy_configuration=DEFAULT_POLICY_CONFIGURATION):
     client.put_bucket_policy(Bucket=bucket.name, Policy=json.dumps(policy_configuration))
+
+
+def create_image_name(instance_id, image_filename):
+    """
+    Image naming convention
+
+    Examples:
+    - (Question id=15): test.jpeg --> 000015-7gh5.png
+    - (Question id=15): questions/g5k78wx0.png --> 000015-7gh5.png
+    - (Question id=15): https://example.com/image.png --> 000015-7gh5.png
+    """
+    if "/" in image_filename:
+        # an image_url was given...
+        image_filename = image_filename.split("/")[-1].split("?")[0]
+    image_extension = image_filename.split(".")[1]
+    return f"{str(instance_id).zfill(6)}-{str(uuid.uuid4())[:4]}.{image_extension.lower()}"

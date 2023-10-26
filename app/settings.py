@@ -290,8 +290,9 @@ S3_BUCKET_REGION = os.getenv("S3_BUCKET_REGION", "set-s3-bucket-region")
 S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY", "set-s3-access-key")
 S3_SECRET_KEY = os.getenv("S3_SECRET_KEY", "set-s3-secret-key")
 
-QUESTION_FOLDER_NAME = "questions"
-QUIZ_FOLDER_NAME = "quizs"
+PREFIX_FOLDER_NAME = "test/" if DEBUG else ""
+QUESTION_FOLDER_NAME = f"{PREFIX_FOLDER_NAME}questions"
+QUIZ_FOLDER_NAME = f"{PREFIX_FOLDER_NAME}quizs"
 
 STORAGE_UPLOAD_KINDS = {
     "default": {
@@ -372,11 +373,14 @@ IMPORT_EXPORT_SKIP_ADMIN_LOG = True
 
 SHELL_PLUS = "ipython"
 SHELL_PLUS_IMPORTS = [
+    "import requests",
     "import csv, json, yaml",
     "from datetime import datetime, date, timedelta",
     "from core import constants",
     "from core.utils import utilities, notion, github, sendinblue, s3",
-    "from stats import utilities as utilities_stats",
+    "from users import constants as user_constants",
+    "from stats import constants as stats_constants",
+    "from stats import utilities as stats_utilities",
 ]
 
 
