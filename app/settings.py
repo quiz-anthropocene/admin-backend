@@ -372,7 +372,7 @@ IMPORT_EXPORT_SKIP_ADMIN_LOG = True
 
 SHELL_PLUS = "ipython"
 SHELL_PLUS_IMPORTS = [
-    "import csv, json, yaml",
+    "import csv, json, yaml, time",
     "from datetime import datetime, date, timedelta",
     "from core import constants",
     "from core.utils import utilities, notion, github, sendinblue, s3",

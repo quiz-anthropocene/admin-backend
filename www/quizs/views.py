@@ -22,7 +22,7 @@ from history.utilities import get_diff_between_two_history_records
 from quizs.filters import QuizFilter
 from quizs.forms import QUIZ_FORM_FIELDS, QuizCreateForm, QuizEditForm, QuizQuestionFormSet
 from quizs.models import Quiz
-from quizs.tables import QuizTable
+from quizs.tables import QuizQuestionTable, QuizTable
 from stats.models import QuizAggStat
 from users import constants as user_constants
 
@@ -132,31 +132,41 @@ class QuizDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, Upda
         return reverse_lazy("quizs:detail_view", args=[self.kwargs.get("pk")])
 
 
-class QuizDetailQuestionListView(ContributorUserRequiredMixin, FormView):
-    form_class = QuizQuestionFormSet
+class QuizDetailQuestionListView(ContributorUserRequiredMixin, SingleTableMixin, FormView):
     template_name = "quizs/detail_questions.html"
     success_message = _("The quiz questions were updated.")
+    table_class = QuizQuestionTable
+    form_class = QuizQuestionFormSet
+
+    def get(self, request, *args, **kwargs):
+        self.quiz = Quiz.objects.get(id=self.kwargs.get("pk"))
+        return super().get(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["quiz"] = Quiz.objects.get(id=self.kwargs.get("pk"))
-        context["quiz_questions"] = context["quiz"].quizquestion_set.all()
-        context["user_can_edit"] = self.request.user.can_edit_quiz(context["quiz"])
+        context["quiz"] = self.quiz
+        context["quiz_questions"] = self.quiz.quizquestion_set.all()
+        context["user_can_edit"] = self.request.user.can_edit_quiz(self.quiz)
         if self.request.POST and context["user_can_edit"]:
-            context["quiz_question_formset"] = QuizQuestionFormSet(self.request.POST, instance=context["quiz"])
+            context["quiz_question_formset"] = QuizQuestionFormSet(self.request.POST, instance=self.quiz)
         else:
-            context["quiz_question_formset"] = QuizQuestionFormSet(instance=context["quiz"])
+            context["quiz_question_formset"] = QuizQuestionFormSet(instance=self.quiz)
         return context
 
+    def get_table_data(self):
+        return self.quiz.quizquestion_set.all()
+        # return self.get_context_data()["quiz"].quizquestion_set.all()
+
     def post(self, request, *args, **kwargs):
-        quiz_question_formset = QuizQuestionFormSet(self.request.POST, instance=self.get_context_data()["quiz"])
+        self.quiz = Quiz.objects.get(id=self.kwargs.get("pk"))
+        quiz_question_formset = QuizQuestionFormSet(self.request.POST, instance=self.quiz)
         if quiz_question_formset.is_valid():
             return self.form_valid(quiz_question_formset)
         else:
             return self.form_invalid(quiz_question_formset)
 
     def form_valid(self, quiz_question_formset):
-        quiz_question_formset.instance = self.get_context_data()["quiz"]
+        quiz_question_formset.instance = self.quiz
         quiz_question_formset.save()
         messages.add_message(self.request, messages.SUCCESS, self.success_message)
         return super().form_valid(quiz_question_formset)
