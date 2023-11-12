@@ -1,8 +1,9 @@
 import django_tables2 as tables
 from django.db.models import Count
-from django.utils.translation import gettext_lazy as _
 
 from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, RichTextColumn
+from questions.models import Question
+from quizs.models import Quiz
 from tags.models import Tag
 
 
@@ -14,8 +15,8 @@ TAG_FIELD_SEQUENCE.insert(TAG_FIELD_SEQUENCE.index("created"), "quiz_count")
 class TagTable(tables.Table):
     id = tables.Column(linkify=lambda record: record.get_absolute_url())
     description = RichTextColumn(attrs={"td": {"title": lambda record: record.description}})
-    question_count = tables.Column(verbose_name=_("Questions"))
-    quiz_count = tables.Column(verbose_name=_("Quizs"))
+    question_count = tables.Column(verbose_name=Question._meta.verbose_name_plural)
+    quiz_count = tables.Column(verbose_name=Quiz._meta.verbose_name_plural)
 
     class Meta:
         model = Tag

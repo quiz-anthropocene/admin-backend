@@ -5,6 +5,7 @@ from django.utils.html import format_html
 from core import constants
 from core.utils.utilities import get_choice_key, remove_html_tags, truncate_with_ellipsis
 from questions.models import Question
+from quizs.models import QuizQuestion
 from users import constants as user_constants
 from users.models import User
 
@@ -16,9 +17,9 @@ DEFAULT_ATTRS = {"class": "table-responsive table-striped table-bordered border-
 class ChoiceColumn(tables.Column):
     def render(self, value, record, bound_column):
         value_title = value
-        if type(record) is Question:
-            # Question.type : display choice key
-            if bound_column.name == "type":
+        if type(record) in [Question, QuizQuestion]:
+            # Question.type : display choice key instead of value
+            if bound_column.name in ["type", "question_type"]:
                 value_title = value
                 value = get_choice_key(constants.QUESTION_TYPE_CHOICES, value)
             # Question.category : add link

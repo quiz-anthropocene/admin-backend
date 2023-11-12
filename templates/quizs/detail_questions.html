@@ -1,4 +1,5 @@
 {% extends "quizs/detail_base.html" %}
+{% load render_table from django_tables2 %}
 {% load i18n django_bootstrap5 %}
 
 {% block extra_css %}
@@ -8,30 +9,7 @@
 {% block quiz_detail_content %}
 <div class="row">
     <div class="col-12">
-        <div class="table-container">
-            <table class="table-responsive table-striped table-bordered border-primary font-size-small">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Question</th>
-                        <th>Ordre</th>
-                        <th>Visibilité</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for quiz_question in quiz_questions %}
-                    <tr>
-                        <td>
-                            <a href="{% url 'questions:detail_view' quiz_question.question.id %}">{{ quiz_question.question.id }}</a>
-                        </td>
-                        <td>{{ quiz_question.question.text }}</td>
-                        <td>{{ quiz_question.order }}</td>
-                        <td>{{ quiz_question.question.visibility }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+        {% render_table table %}
     </div>
 </div>
 

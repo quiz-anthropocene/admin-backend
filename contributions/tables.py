@@ -20,13 +20,13 @@ COMMENT_FIELD_SEQUENCE.insert(COMMENT_FIELD_SEQUENCE.index("created"), "publishe
 class CommentTable(tables.Table):
     text = RichTextLongerEllipsisColumn(attrs={"td": {"title": lambda record: record.text}})
     question = tables.Column(
-        verbose_name=_("Question"),
+        verbose_name=Comment._meta.get_field("question").verbose_name,
         accessor="question.id",
         linkify=lambda record: record.question.get_absolute_url(),
         attrs={"td": {"title": lambda record: record.question}},
     )
     quiz = tables.Column(
-        verbose_name=_("Quiz"),
+        verbose_name=Comment._meta.get_field("quiz").verbose_name,
         accessor="quiz.id",
         linkify=lambda record: record.quiz.get_absolute_url(),
         attrs={"td": {"title": lambda record: record.quiz}},
@@ -37,7 +37,9 @@ class CommentTable(tables.Table):
         accessor="has_replies_reply_icon",
         orderable=False,
     )
-    status = tables.Column(verbose_name=_("Status"), order_by=("status_order",), accessor="status")
+    status = tables.Column(
+        verbose_name=Comment._meta.get_field("status").verbose_name, order_by=("status_order",), accessor="status"
+    )
     processed = tables.Column(
         verbose_name=_("Processed"),
         accessor="processed_icon",

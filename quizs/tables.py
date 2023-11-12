@@ -2,7 +2,8 @@ import django_tables2 as tables
 from django.utils.html import format_html
 
 from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, ChoiceColumn, ImageColumn, RichTextEllipsisColumn
-from quizs.models import Quiz
+from questions.models import Question
+from quizs.models import Quiz, QuizQuestion
 
 
 QUIZ_FIELD_SEQUENCE = [
@@ -53,3 +54,42 @@ class QuizTable(tables.Table):
         for field_name in Quiz.QUIZ_TIMESTAMP_FIELDS:
             self.base_columns[field_name] = tables.DateTimeColumn(format="d F Y")
         super().__init__(*args, **kwargs)
+
+
+QUIZ_QUESTION_FIELD_SEQUENCE = [
+    "question_id",
+    "question_text",
+    "question_type",
+    "question_author",
+    "question_validation_status",
+    "question_visibility",
+    "order",
+]
+
+
+class QuizQuestionTable(tables.Table):
+    question_id = tables.Column(
+        verbose_name=Question._meta.verbose_name,
+        accessor="question.id",
+        linkify=lambda record: record.question.get_absolute_url(),
+    )
+    question_text = RichTextEllipsisColumn(
+        accessor="question.text", attrs={"td": {"title": lambda record: record.question.text}}
+    )
+    question_type = ChoiceColumn(verbose_name=Question._meta.get_field("type").verbose_name, accessor="question.type")
+    question_author = ChoiceColumn(
+        verbose_name=Question._meta.get_field("author").verbose_name, accessor="question.author"
+    )
+    question_validation_status = ChoiceColumn(
+        verbose_name=Question._meta.get_field("validation_status").verbose_name, accessor="question.validation_status"
+    )
+    question_visibility = ChoiceColumn(
+        verbose_name=Question._meta.get_field("visibility").verbose_name, accessor="question.visibility"
+    )
+
+    class Meta:
+        model = QuizQuestion
+        fields = QUIZ_QUESTION_FIELD_SEQUENCE
+        sequence = QUIZ_QUESTION_FIELD_SEQUENCE
+        template_name = DEFAULT_TEMPLATE
+        attrs = DEFAULT_ATTRS

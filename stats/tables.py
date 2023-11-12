@@ -22,12 +22,12 @@ QUIZ_FIELD_SEQUENCE.insert(QUIZ_FIELD_SEQUENCE.index("like_count"), "success_rat
 
 class QuestionStatsTable(tables.Table):
     question_id = tables.Column(
-        accessor=Accessor("question.id"),
         verbose_name=_("ID"),
+        accessor=Accessor("question.id"),
         linkify=lambda record: reverse("questions:detail_stats", kwargs={"pk": record.question.id}),
     )
     question = RichTextEllipsisColumn(
-        accessor=Accessor("question.text"), verbose_name=Question._meta.get_field("text").verbose_name
+        verbose_name=Question._meta.get_field("text").verbose_name, accessor=Accessor("question.text")
     )
     success_rate = tables.Column(
         verbose_name=_("Successfully answered"), empty_values=(), order_by=("answer_success_count", "answer_count")
@@ -46,12 +46,12 @@ class QuestionStatsTable(tables.Table):
 
 class QuizStatsTable(tables.Table):
     quiz_id = tables.Column(
-        accessor=Accessor("quiz.id"),
         verbose_name=_("ID"),
+        accessor=Accessor("quiz.id"),
         linkify=lambda record: reverse("quizs:detail_stats", kwargs={"pk": record.quiz.id}),
     )
     quiz = RichTextEllipsisColumn(
-        accessor=Accessor("quiz.name"), verbose_name=Quiz._meta.get_field("name").verbose_name
+        verbose_name=Quiz._meta.get_field("name").verbose_name, accessor=Accessor("quiz.name")
     )
     success_rate = tables.Column(
         verbose_name=_("Successfully answered"),
