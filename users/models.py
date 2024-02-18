@@ -273,7 +273,9 @@ class User(AbstractUser):
                     quiz.stats.aggregate(Avg("answer_success_count"))["answer_success_count__avg"]
                     / quiz.stats.aggregate(Avg("question_count"))["question_count__avg"]
                 )
-        return round(answer_success_count_ratio / quiz_played_count * 100, 2)
+        if quiz_played_count:
+            return round((answer_success_count_ratio / quiz_played_count) * 100, 2)
+        return 0
 
     @property
     def quiz_like_count(self) -> int:
