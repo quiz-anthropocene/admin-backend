@@ -4,6 +4,7 @@ on: [push]
 
 jobs:
   test_backend:
+    if: ${{ ! contains(github.event.issue.labels.*.name, 'autorelease') }}
     runs-on: ubuntu-latest
 
     services:
