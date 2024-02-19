@@ -6,7 +6,13 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Voir les [Issues](https://github.com/quiz-anthropocene/know-your-planet/issues) et le Board.
 
-## [2.3.0] - 2022-06
+## 2.4.0 (2023)
+
+Interface contributeur
+- Traductions
+
+
+## 2.3.0 (2022-06)
 
 Interface contributeur
 - Pages "liste" : afficher les filtres actifs sous forme de badge
@@ -20,7 +26,7 @@ Autres
 - Favicon
 - Quelques résolutions de bugs
 
-## [2.2.0] - 2022-05
+## 2.2.0 (2022-05)
 
 Interface contributeur (v2)
 - Historisation du contenu avec `django-simple-history` (Questions, Quizs, Glossaire), page avec les dernières modifications
@@ -36,7 +42,7 @@ Code Github
 - Split de la codebase `admin-backend` & `public-frontend`
 - Exporter la donnée vers le Frontend seulement si il y a eu des changements sur le contenu publique
 
-## [2.1.0] - 2022-04
+## 2.1.0 (2022-04)
 
 Interface contributeur (v1)
 - Header, Footer, Home, Breadcrumbs, pages d'erreur
@@ -49,7 +55,7 @@ Interface contributeur (v1)
 - Contributions : liste des contributions. Lien entre le modèle et Question/Quiz.
 - Users : page profil avec la liste de ses questions, de ses quizs. lien entre le modèle et Question/Quiz.
 
-## [2.0.0] - 2022-03
+## 2.0.0 (2022-03)
 
 Refonte de l'app Django
 - Django v4
@@ -59,7 +65,7 @@ Refonte de l'app Django
 - Nouveau modèle `User`
 - Stats : nouveau modèle `QuizAggStat`. Ne plus supprimer `QuestionAnswerEvent` & `QuestionFeedbackEvent`. Perte de données des `QuizAnswerEvents` antérieurs à Mars 2022
 
-## [1.3.0] - 2021
+## 1.3.0 (2021)
 
 - [Data] Ajout du champ `slug` aux Quiz
 - [Data] Compression des images PNG avec `pngquant`
@@ -77,7 +83,7 @@ Refonte de l'app Django
 - [Frontend] Améliorer l'expérience utilisateur (scroll, d'avantage de contenu sur la page...)
 - [Frontend] Ajouter la license `by-nc-sa` dans le footer
 
-## [1.2.0] - 2020-12-13
+## 1.2.0 (2020-12-13)
 
 - [Data] Générer un fichier `data/stats.yaml` lors de l'export
 - [Data] Générer un fichier `data/authors.yaml` lors de l'export (avec les `question_count` et `quiz_count`)
@@ -89,7 +95,7 @@ Refonte de l'app Django
 - [Frontend] Pouvoir accéder dans l'interface (via l'url) aux quizs non publiés
 - [Frontend] Contribution: rajouter du texte pour proposer aux utilisateurs de laisser leur email
 
-## [1.1.0] - 2020-12-06
+## 1.1.0 (2020-12-06)
 
 - [Data] Nouveau dashboard Metabase connecté à la base de donnée de Scalingo
 - [Backend] Nouveau modèle `Configuration` pour stocker des variables globales de l'application. Certains champs sont modifiables.
@@ -101,7 +107,7 @@ Refonte de l'app Django
 - [Backend] Exporter certains stats à chaque export de la donnée (pour éviter d'avoir un endpoint API et d'y faire des appels)
 - [Frontend] Boutons de partage sur les réseaux sociaux à la fin d'un quiz
 
-## [1.0.0] - 2020-11-29
+## 1.0.0 (2020-11-29)
 
 - [Data] Ajout d'images de laydgeur
 - [Data] Ajout de Bon Pote dans les soutiens
@@ -113,7 +119,7 @@ Refonte de l'app Django
 
 ## TODO
 
-## [0.7.0] - en cours
+## 0.7.0
 
 ### Ajouté
 
@@ -126,7 +132,7 @@ Refonte de l'app Django
 - [Backend] Renommé le modèle `QuestionCategory` en `Category`
 - [Backend] Renommé le modèle `QuestionTag` en `Tag`
 
-## [0.6.0] - 2020-04-17
+## 0.6.0 (2020-04-17)
 
 ### Ajouté
 
@@ -147,7 +153,7 @@ Refonte de l'app Django
 - [Frontend] Cacher le sous-titre de l'application sur petits écrans
 - [DevOps] l'url netlify a changé de `know-your-planet.netlify.com` à `know-your-planet.netlify.app`
 
-## [0.5.0] - 2020-04-05
+## 0.5.0 (2020-04-05)
 
 ### Ajouté
 
@@ -162,7 +168,7 @@ Refonte de l'app Django
 - [Backend] Utilisation de URLField pour les champ url de `Question`
 - [Frontend] Rajout d'une action 'commentaire' sur la page de contribution
 
-## [0.4.0] - 2020-03-27
+## 0.4.0 (2020-03-27)
 
 ### Ajouté
 
@@ -182,7 +188,7 @@ Refonte de l'app Django
 - [Data] Ajout d'un maximum d'images aux questions existantes
 - [Frontend] Refonte de la page principale
 
-## [0.3.0] - 2020-03-22
+## 0.3.0 (2020-03-22)
 
 ### Ajouté
 
@@ -196,7 +202,7 @@ Refonte de l'app Django
 - [DevOps] Ajout de la commande loaddata au Procfile
 - [Frontend] Typo dans la description de l'application
 
-## [0.2.0] - 2020-03-11
+## 0.2.0 (2020-03-11)
 
 ### Ajouté
 
@@ -216,7 +222,7 @@ Refonte de l'app Django
 - [Frontend] Meilleur affichage de la catégorie et de la difficulté des questions
 - [Frontend] Ajout d'informations dans la page `/a-propos`
 
-## [0.1.0] - 2020-03-08
+## 0.1.0 (2020-03-08)
 
 ### Ajouté
 
