@@ -3,6 +3,7 @@ from django.test import TestCase
 from core import constants
 from questions.factories import QuestionFactory
 from quizs.factories import QuizFactory
+from stats.models import QuizAnswerEvent
 from users import constants as user_constants
 from users.factories import UserFactory
 from users.models import User
@@ -31,6 +32,18 @@ class UserModelTest(TestCase):
 
     def test_has_question(self):
         self.assertTrue(self.user.has_question)
+
+    def test_quiz_answer_success_count_ratio(self):
+        self.assertEqual(self.user.quiz_answer_success_count_ratio, 0)
+        # add stats
+        QuizAnswerEvent.objects.create(quiz=self.quiz, answer_success_count=0, question_count=2)
+        self.assertEqual(self.user.quiz_answer_success_count_ratio, 0)
+        QuizAnswerEvent.objects.create(quiz=self.quiz, answer_success_count=1, question_count=2)
+        self.assertEqual(self.user.quiz_answer_success_count_ratio, 25.0)
+        QuizAnswerEvent.objects.create(quiz=self.quiz, answer_success_count=2, question_count=2)
+        self.assertEqual(self.user.quiz_answer_success_count_ratio, 50.0)
+        QuizAnswerEvent.objects.create(quiz=self.quiz, answer_success_count=2, question_count=2)
+        self.assertEqual(self.user.quiz_answer_success_count_ratio, 62.5)
 
 
 class UserModelRoleTest(TestCase):
