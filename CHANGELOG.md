@@ -2,22 +2,16 @@
 
 Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog](https://keepachangelog.com/en/1.0.0/))
 
-## A venir
-
 Voir les [Issues](https://github.com/quiz-anthropocene/know-your-planet/issues) et le Board.
 
 ## [2.5.0](https://github.com/quiz-anthropocene/admin-backend/compare/v2.4.0...v2.5.0) (2024-02-20)
 
-
-### Miscellaneous Chores
-
-* release 2.5.0 ([9e27374](https://github.com/quiz-anthropocene/admin-backend/commit/9e27374eafc8785ac9ea8cbda5a0b1fd5b2c95fb))
+Setup release-please
 
 ## 2.4.0 (2023)
 
 Interface contributeur
 - Traductions
-
 
 ## 2.3.0 (2022-06)
 
