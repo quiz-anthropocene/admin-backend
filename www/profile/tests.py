@@ -7,7 +7,9 @@ from users.factories import DEFAULT_PASSWORD, UserFactory
 
 PROFILE_DETAIL_URLS = [
     # "profile:home",
-    "profile:info",
+    "profile:info_view",
+    "profile:info_card_view",
+    "profile:info_card_create",
     "profile:questions_view",
     "profile:questions_stats",
     "profile:quizs_view",

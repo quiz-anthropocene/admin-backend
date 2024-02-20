@@ -5,6 +5,7 @@ from www.profile.views import (
     ProfileCommentNewListView,
     ProfileHistoryListView,
     ProfileHomeView,
+    ProfileInfoCardCreateView,
     ProfileInfoCardView,
     ProfileInfoView,
     ProfileQuestionListStatsView,
@@ -27,6 +28,7 @@ urlpatterns = [
             ]
         ),
     ),
+    path("info/card/create", ProfileInfoCardCreateView.as_view(), name="info_card_create"),
     path(
         "questions/",
         include(

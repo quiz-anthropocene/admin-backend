@@ -33,6 +33,9 @@
                 <li class="nav-item">
                     <a class="nav-link {% if 'card' in request.path %}active fw-bold{% endif %}" href="{% url 'profile:info_card_view' %}">
                         {% translate "My author card" %}
+                        {% if not user.user_card %}
+                            ({% translate "missing" %})
+                        {% endif %}
                     </a>
                 </li>
             </ul>

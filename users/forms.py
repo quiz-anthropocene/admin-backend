@@ -1,6 +1,12 @@
 from django import forms
 
-from users.models import User
+from users.models import User, UserCard
+
+
+class ProfileInfoCardCreateForm(forms.ModelForm):
+    class Meta:
+        model = UserCard
+        fields = ["short_biography", "quiz_relationship", "website_url"]
 
 
 class ContributorCreateForm(forms.ModelForm):
