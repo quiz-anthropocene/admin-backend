@@ -1,8 +1,13 @@
 from itertools import chain
 
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from django.db.models import Value
+from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from django.utils import timezone
-from django.views.generic import DetailView, TemplateView
+from django.utils.translation import gettext_lazy as _
+from django.views.generic import CreateView, DetailView, TemplateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
@@ -20,6 +25,7 @@ from quizs.models import Quiz
 from quizs.tables import QuizTable
 from stats.models import QuestionAggStat, QuizAggStat
 from stats.tables import QuestionStatsTable, QuizStatsTable
+from users.forms import ProfileInfoCardCreateForm
 from users.models import User
 
 
@@ -41,11 +47,39 @@ class ProfileHomeView(ContributorUserRequiredMixin, DetailView):
 
 class ProfileInfoView(ContributorUserRequiredMixin, DetailView):
     model = User
-    template_name = "profile/info.html"
+    template_name = "profile/info_view.html"
     context_object_name = "user"
 
     def get_object(self):
         return self.request.user
+
+
+class ProfileInfoCardView(ContributorUserRequiredMixin, DetailView):
+    model = User
+    template_name = "profile/info_card_view.html"
+    context_object_name = "user"
+
+    def get_object(self):
+        return self.request.user
+
+
+class ProfileInfoCardCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, CreateView):
+    form_class = ProfileInfoCardCreateForm
+    template_name = "profile/info_card_create.html"
+    success_url = reverse_lazy("profile:info_card_view")
+    success_message = _("Author card created!")
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.user = self.request.user
+        self.object.save()
+
+        messages.add_message(
+            self.request,
+            messages.SUCCESS,
+            self.get_success_message(form.cleaned_data),
+        )
+        return HttpResponseRedirect(self.get_success_url())
 
 
 class ProfileQuestionListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):

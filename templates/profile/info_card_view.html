@@ -1,0 +1,34 @@
+{% extends "profile/info_base.html" %}
+{% load i18n django_bootstrap5 array_choices_item_display %}
+
+{% block title %}{% translate "My author card" %}{{ block.super }}{% endblock %}
+
+{% block profile_info_content %}
+<div class="row">
+    <div class="col-9">
+        <h1>
+            {% translate "My author card" %}
+            {% if not user.user_card %}
+                <a class="btn btn-success btn-sm" href="{% url 'profile:info_card_create' %}">{% translate "Add" %}</a>
+            {% endif %}
+        </h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        {% if not user.user_card %}
+            <div class="alert alert-info" role="alert">
+                🪪 {% translate "You don't have an author card yet!" %}
+            </div>
+        {% else %}
+            {% include "users/_author_card.html" with user=user %}
+        {% endif %}
+    </div>
+    <!-- Sidebar -->
+    <div class="col-md-4 d-none d-md-block">
+        <div class="alert alert-primary" role="alert">
+            ℹ️ {% blocktrans %}Some information from your author card will be displayed alongside your quiz introduction{% endblocktrans %}
+        </div>
+    </div>
+</div>
+{% endblock %}

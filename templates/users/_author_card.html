@@ -9,16 +9,30 @@
         <hr />
 
         <p title="{% translate "Short biography" %}">
-            💬&nbsp;{{ user.user_card.short_biography | strip_html }}
+            💬&nbsp;<strong>{% translate "Short biography" %}</strong>
+            <br />
+            {% if user.user_card.short_biography %}
+                {{ user.user_card.short_biography | strip_html }}
+            {% else %}
+                <i>{% translate "missing" %}</i>
+            {% endif %}
         </p>
         <p title="{% translate "Relationship with the Anthropocene Quiz" %}">
-            🚀&nbsp;{{ user.user_card.quiz_relationship | strip_html }}
-        </p>
-        <p class="mb-0">
-            {% if user.user_card.website_url %}
-                💻&nbsp;<a href="{{ user.user_card.website_url }}" target="_blank">{% translate "Website" %}</a>
+            🚀&nbsp;<strong>{% translate "Relationship with the Anthropocene Quiz" %}</strong>
+            <br />
+            {% if user.user_card.quiz_relationship %}
+                {{ user.user_card.quiz_relationship | strip_html }}
             {% else %}
-                💻&nbsp;<i>{% translate "No website provided" %}</i>
+                <i>{% translate "missing" %}</i>
+            {% endif %}
+        </p>
+        <p class="mb-0" title="{% translate "Website" %}">
+            💻&nbsp;<strong>{% translate "Website" %}</strong>
+            <br />
+            {% if user.user_card.website_url %}
+                <a href="{{ user.user_card.website_url }}" target="_blank">{% translate "Website" %}</a>
+            {% else %}
+                <i>{% translate "No website provided" %}</i>
             {% endif %}
         </p>
     </div>
