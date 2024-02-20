@@ -15,19 +15,19 @@
         </button>
     </div>
 </div>
-    <!-- Filters: list -->
-    {% if search_filters %}
-    <p>
-        {% include "includes/_filter_badge_list.html" with search_filters=search_filters model_name="Comment" %}
-    </p>
-    {% endif %}
-    <!-- Filters: form -->
-    <form action="" method="get" id="collapseFilters" class="mb-3 collapse">
-        {% bootstrap_form filter.form layout="horizontal" %}
-        <div class="col-12 text-end">
-            {% bootstrap_button button_type="submit" content=_("Filter") %}
-        </div>
-    </form>
+<!-- Filters: list -->
+{% if search_filters %}
+<p>
+    {% include "includes/_filter_badge_list.html" with search_filters=search_filters model_name="Comment" %}
+</p>
+{% endif %}
+<!-- Filters: form -->
+<form action="" method="get" id="collapseFilters" class="mb-3 collapse">
+    {% bootstrap_form filter.form layout="horizontal" %}
+    <div class="col-12 text-end">
+        {% bootstrap_button button_type="submit" content=_("Filter") %}
+    </div>
+</form>
 <!-- Table -->
 <div class="row overflow-scroll">
     <div class="col-12">

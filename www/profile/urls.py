@@ -17,7 +17,15 @@ app_name = "profile"
 
 urlpatterns = [
     path("", ProfileHomeView.as_view(), name="home"),
-    path("info/", ProfileInfoView.as_view(), name="info"),
+    path(
+        "info/",
+        include(
+            [
+                path("", ProfileInfoView.as_view(), name="info_view"),
+                # path("card/", ProfileInfoCardView.as_view(), name="info_card_new"),
+            ]
+        ),
+    ),
     path(
         "questions/",
         include(

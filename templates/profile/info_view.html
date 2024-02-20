@@ -1,0 +1,52 @@
+{% extends "profile/info_base.html" %}
+{% load i18n django_bootstrap5 array_choices_item_display %}
+
+{% block title %}{% translate "My info" %}{{ block.super }}{% endblock %}
+
+{% block profile_info_content %}
+<div class="row">
+    <div class="col-9">
+        <h1>{% translate "My profile" %}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="table-container">
+            <table class="table-responsive table-striped table-bordered border-primary font-size-small">
+                <thead>
+                    <tr>
+                        <th>{% translate "Field" %}</th>
+                        <th>{% translate "Value" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{% translate "First name" %}</td>
+                        <td>{{ user.first_name }}</td>
+                    </tr>
+                    <tr>
+                        <td>{% translate "Last name" %}</td>
+                        <td>{{ user.last_name }}</td>
+                    </tr>
+                    <tr>
+                        <td>{% translate "Email address" %}</td>
+                        <td>{{ user.email }}</td>
+                    </tr>
+                    <tr>
+                        <td>{% translate "Roles" %}</td>
+                        <td>
+                            {% for role in user.roles %}
+                                <span class="badge bg-primary">{% array_choices_item_display user 'roles' role %}</span>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{% translate "Account creation date" %}</td>
+                        <td>{{ user.created }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

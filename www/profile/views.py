@@ -41,7 +41,7 @@ class ProfileHomeView(ContributorUserRequiredMixin, DetailView):
 
 class ProfileInfoView(ContributorUserRequiredMixin, DetailView):
     model = User
-    template_name = "profile/info.html"
+    template_name = "profile/info_view.html"
     context_object_name = "user"
 
     def get_object(self):
