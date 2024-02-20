@@ -48,6 +48,15 @@ class ProfileInfoView(ContributorUserRequiredMixin, DetailView):
         return self.request.user
 
 
+class ProfileInfoCardView(ContributorUserRequiredMixin, DetailView):
+    model = User
+    template_name = "profile/info_card_view.html"
+    context_object_name = "user"
+
+    def get_object(self):
+        return self.request.user
+
+
 class ProfileQuestionListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):
     model = Question
     template_name = "profile/questions_view.html"

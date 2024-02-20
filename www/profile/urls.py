@@ -5,6 +5,7 @@ from www.profile.views import (
     ProfileCommentNewListView,
     ProfileHistoryListView,
     ProfileHomeView,
+    ProfileInfoCardView,
     ProfileInfoView,
     ProfileQuestionListStatsView,
     ProfileQuestionListView,
@@ -22,7 +23,7 @@ urlpatterns = [
         include(
             [
                 path("", ProfileInfoView.as_view(), name="info_view"),
-                # path("card/", ProfileInfoCardView.as_view(), name="info_card_new"),
+                path("card/", ProfileInfoCardView.as_view(), name="info_card_view"),
             ]
         ),
     ),
