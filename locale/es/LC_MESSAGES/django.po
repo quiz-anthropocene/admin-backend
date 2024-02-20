@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 15:39+0200\n"
+"POT-Creation-Date: 2024-02-20 15:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr ""
 msgid "Validated"
 msgstr ""
 
-#: activity/models.py:42 contributions/models.py:205 contributions/tables.py:48
+#: activity/models.py:42 contributions/models.py:205 contributions/tables.py:50
 #: templates/contributions/detail_edit.html:43
 #: templates/contributions/detail_reply_create.html:14
 #: templates/contributions/detail_reply_create.html:45
@@ -46,16 +46,15 @@ msgstr ""
 msgid "Computed"
 msgstr ""
 
-#: activity/models.py:47 contributions/models.py:89 contributions/tables.py:23
-#: questions/models.py:273 quizs/models.py:457
-#: templates/categories/detail_questions.html:12
+#: activity/models.py:47 contributions/models.py:89 questions/models.py:273
+#: quizs/models.py:457 templates/categories/detail_questions.html:12
 #: templates/questions/detail_base.html:4
 #: templates/tags/detail_questions.html:12
 msgid "Question"
 msgstr ""
 
-#: activity/models.py:48 contributions/models.py:97 contributions/tables.py:29
-#: quizs/models.py:189 quizs/models.py:456 quizs/models.py:576
+#: activity/models.py:48 contributions/models.py:97 quizs/models.py:189
+#: quizs/models.py:456 quizs/models.py:576
 #: templates/questions/detail_quizs.html:12 templates/quizs/detail_base.html:4
 #: templates/tags/detail_quizs.html:12
 msgid "Quiz"
@@ -106,7 +105,7 @@ msgstr ""
 #: quizs/models.py:460 quizs/models.py:523 quizs/models.py:583
 #: stats/models.py:56 stats/models.py:92 stats/models.py:158
 #: stats/models.py:207 stats/models.py:218 stats/models.py:307
-#: tags/models.py:29 users/models.py:204 users/models.py:392
+#: tags/models.py:29 users/models.py:204 users/models.py:394
 msgid "Creation date"
 msgstr ""
 
@@ -211,7 +210,7 @@ msgstr ""
 #: categories/models.py:16 contributions/models.py:131 glossary/models.py:33
 #: questions/models.py:259 quizs/models.py:169 quizs/models.py:461
 #: quizs/models.py:524 quizs/models.py:584 stats/models.py:308
-#: tags/models.py:30 users/models.py:205 users/models.py:393
+#: tags/models.py:30 users/models.py:205 users/models.py:395
 msgid "Last update date"
 msgstr ""
 
@@ -229,16 +228,6 @@ msgstr ""
 
 #: categories/models.py:39 tags/models.py:63
 msgid "Questions (public & validated)"
-msgstr ""
-
-#: categories/tables.py:16 questions/models.py:274 quizs/models.py:106
-#: quizs/models.py:177 tags/tables.py:17
-#: templates/categories/detail_base.html:39 templates/includes/_header.html:26
-#: templates/questions/create.html:4 templates/questions/create.html:18
-#: templates/questions/detail_base.html:13 templates/questions/list.html:14
-#: templates/quizs/detail_base.html:39 templates/tags/detail_base.html:39
-#: users/tables.py:9
-msgid "Questions"
 msgstr ""
 
 #: contributions/admin.py:10
@@ -286,8 +275,7 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
-#: contributions/models.py:109 contributions/tables.py:40
-#: questions/models.py:229 quizs/models.py:135
+#: contributions/models.py:109 questions/models.py:229 quizs/models.py:135
 msgid "Status"
 msgstr ""
 
@@ -327,12 +315,12 @@ msgstr ""
 msgid "Answered"
 msgstr ""
 
-#: contributions/tables.py:42 core/constants.py:111
+#: contributions/tables.py:44 core/constants.py:111
 #: templates/contributions/detail_edit.html:38
 msgid "Processed"
 msgstr ""
 
-#: contributions/tables.py:53 glossary/tables.py:27
+#: contributions/tables.py:55 glossary/tables.py:27
 msgid "Actions"
 msgstr ""
 
@@ -504,7 +492,7 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: history/tables.py:13 stats/tables.py:26 stats/tables.py:50
+#: history/tables.py:13 stats/tables.py:25 stats/tables.py:49
 msgid "ID"
 msgstr ""
 
@@ -662,12 +650,19 @@ msgid "I agree to a possible commercial use by the association of this content"
 msgstr ""
 
 #: questions/models.py:264 questions/models.py:394 quizs/models.py:190
-#: tags/tables.py:18 templates/includes/_header.html:29
-#: templates/questions/detail_base.html:39 templates/quizs/create.html:4
-#: templates/quizs/create.html:18 templates/quizs/detail_base.html:13
-#: templates/quizs/list.html:5 templates/quizs/list.html:14
-#: templates/tags/detail_base.html:44 users/tables.py:10
+#: templates/includes/_header.html:29 templates/questions/detail_base.html:39
+#: templates/quizs/create.html:4 templates/quizs/create.html:18
+#: templates/quizs/detail_base.html:13 templates/quizs/list.html:5
+#: templates/quizs/list.html:14 templates/tags/detail_base.html:44
 msgid "Quizs"
+msgstr ""
+
+#: questions/models.py:274 quizs/models.py:106 quizs/models.py:177
+#: templates/categories/detail_base.html:39 templates/includes/_header.html:26
+#: templates/questions/create.html:4 templates/questions/create.html:18
+#: templates/questions/detail_base.html:13 templates/questions/list.html:14
+#: templates/quizs/detail_base.html:39 templates/tags/detail_base.html:39
+msgid "Questions"
 msgstr ""
 
 #: questions/models.py:395 quizs/models.py:398
@@ -914,7 +909,8 @@ msgstr ""
 #: templates/glossary/detail_base.html:12 templates/glossary/list.html:13
 #: templates/pages/help.html:12 templates/pages/home.html:4
 #: templates/profile/comments_base.html:13 templates/profile/history.html:13
-#: templates/profile/home.html:12 templates/profile/info.html:12
+#: templates/profile/home.html:12 templates/profile/info_base.html:13
+#: templates/profile/info_card_create.html:13
 #: templates/profile/questions_base.html:13
 #: templates/profile/quizs_base.html:13 templates/questions/create.html:17
 #: templates/questions/detail_base.html:12 templates/questions/list.html:13
@@ -945,6 +941,10 @@ msgstr ""
 #: templates/contributions/detail_reply_create.html:90
 #: templates/glossary/create.html:4 templates/glossary/create.html:18
 #: templates/glossary/create.html:39 templates/glossary/list.html:34
+#: templates/profile/info_card_create.html:5
+#: templates/profile/info_card_create.html:16
+#: templates/profile/info_card_create.html:43
+#: templates/profile/info_card_view.html:12
 #: templates/profile/questions_view.html:16
 #: templates/profile/quizs_view.html:11 templates/questions/create.html:4
 #: templates/questions/create.html:19 templates/questions/create.html:62
@@ -961,9 +961,10 @@ msgstr ""
 #: templates/contributions/detail_edit.html:53
 #: templates/contributions/detail_reply_create.html:92
 #: templates/glossary/create.html:41 templates/glossary/detail_edit.html:20
+#: templates/profile/info_card_create.html:45
 #: templates/questions/create.html:64 templates/questions/detail_edit.html:86
 #: templates/quizs/create.html:64 templates/quizs/detail_edit.html:116
-#: templates/quizs/detail_questions.html:69 templates/tags/create.html:41
+#: templates/quizs/detail_questions.html:47 templates/tags/create.html:41
 #: templates/tags/detail_edit.html:20
 msgid "Cancel"
 msgstr ""
@@ -1027,7 +1028,7 @@ msgstr ""
 #: templates/contributions/detail_edit.html:51
 #: templates/glossary/detail_edit.html:18
 #: templates/questions/detail_edit.html:84 templates/quizs/detail_edit.html:115
-#: templates/quizs/detail_questions.html:68 templates/tags/detail_edit.html:18
+#: templates/quizs/detail_questions.html:46 templates/tags/detail_edit.html:18
 msgid "Save"
 msgstr ""
 
@@ -1041,7 +1042,7 @@ msgstr ""
 
 #: templates/categories/detail_view.html:11
 #: templates/contributions/detail_view.html:11
-#: templates/glossary/detail_view.html:11 templates/profile/info.html:35
+#: templates/glossary/detail_view.html:11 templates/profile/info_view.html:18
 #: templates/questions/detail_view.html:11 templates/quizs/detail_view.html:11
 #: templates/tags/detail_view.html:11
 msgid "Field"
@@ -1049,7 +1050,7 @@ msgstr ""
 
 #: templates/categories/detail_view.html:12
 #: templates/contributions/detail_view.html:12
-#: templates/glossary/detail_view.html:12 templates/profile/info.html:36
+#: templates/glossary/detail_view.html:12 templates/profile/info_view.html:19
 #: templates/questions/detail_view.html:12 templates/quizs/detail_view.html:12
 #: templates/tags/detail_view.html:12
 msgid "Value"
@@ -1157,7 +1158,8 @@ msgstr ""
 msgid "Anthropocene Quiz"
 msgstr ""
 
-#: templates/includes/_footer.html:15 templates/users/_author_card.html:19
+#: templates/includes/_footer.html:15 templates/users/_author_card.html:29
+#: templates/users/_author_card.html:30 templates/users/_author_card.html:33
 msgid "Website"
 msgstr ""
 
@@ -1169,7 +1171,8 @@ msgstr ""
 
 #: templates/includes/_header.html:23 templates/profile/comments_base.html:14
 #: templates/profile/history.html:14 templates/profile/home.html:4
-#: templates/profile/home.html:13 templates/profile/info.html:13
+#: templates/profile/home.html:13 templates/profile/info_base.html:14
+#: templates/profile/info_card_create.html:14
 #: templates/profile/questions_base.html:14
 #: templates/profile/quizs_base.html:14
 msgid "My space"
@@ -1370,16 +1373,17 @@ msgid_plural "%(user_comment_new_new_count)s new comments to process"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/profile/home.html:77
+#: templates/profile/home.html:77 templates/profile/info_base.html:15
 msgid "My info"
 msgstr ""
 
-#: templates/profile/home.html:82 templates/profile/info.html:4
-#: templates/profile/info.html:14 templates/profile/info.html:26
+#: templates/profile/home.html:82 templates/profile/info_base.html:5
+#: templates/profile/info_base.html:30 templates/profile/info_view.html:4
+#: templates/profile/info_view.html:9
 msgid "My profile"
 msgstr ""
 
-#: templates/profile/home.html:85 templates/profile/info.html:81
+#: templates/profile/home.html:85 templates/profile/info_card_view.html:21
 msgid "You don't have an author card yet!"
 msgstr ""
 
@@ -1415,34 +1419,43 @@ msgstr ""
 msgid "Number of validated questions:"
 msgstr ""
 
-#: templates/profile/info.html:41 users/models.py:181
-msgid "First name"
-msgstr ""
-
-#: templates/profile/info.html:45 users/models.py:182
-msgid "Last name"
-msgstr ""
-
-#: templates/profile/info.html:49
-msgid "Email address"
-msgstr ""
-
-#: templates/profile/info.html:53 users/models.py:185
-msgid "Roles"
-msgstr ""
-
-#: templates/profile/info.html:61
-msgid "Account creation date"
-msgstr ""
-
-#: templates/profile/info.html:74
+#: templates/profile/info_base.html:35
+#: templates/profile/info_card_create.html:5
+#: templates/profile/info_card_create.html:15
+#: templates/profile/info_card_view.html:4
+#: templates/profile/info_card_view.html:10
 msgid "My author card"
 msgstr ""
 
-#: templates/profile/info.html:90
+#: templates/profile/info_base.html:37 templates/users/_author_card.html:17
+#: templates/users/_author_card.html:26
+msgid "missing"
+msgstr ""
+
+#: templates/profile/info_card_view.html:30
 msgid ""
 "Some information from your author card will be displayed alongside your quiz "
 "introduction"
+msgstr ""
+
+#: templates/profile/info_view.html:24 users/models.py:181
+msgid "First name"
+msgstr ""
+
+#: templates/profile/info_view.html:28 users/models.py:182
+msgid "Last name"
+msgstr ""
+
+#: templates/profile/info_view.html:32
+msgid "Email address"
+msgstr ""
+
+#: templates/profile/info_view.html:36 users/models.py:185
+msgid "Roles"
+msgstr ""
+
+#: templates/profile/info_view.html:44
+msgid "Account creation date"
 msgstr ""
 
 #: templates/profile/questions_base.html:30
@@ -1536,15 +1549,17 @@ msgid_plural "questions"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/users/_author_card.html:11 users/models.py:388
+#: templates/users/_author_card.html:11 templates/users/_author_card.html:12
+#: users/models.py:390
 msgid "Short biography"
 msgstr ""
 
-#: templates/users/_author_card.html:14 users/models.py:389
+#: templates/users/_author_card.html:20 templates/users/_author_card.html:21
+#: users/models.py:391
 msgid "Relationship with the Anthropocene Quiz"
 msgstr ""
 
-#: templates/users/_author_card.html:21
+#: templates/users/_author_card.html:35
 msgid "No website provided"
 msgstr ""
 
@@ -1631,19 +1646,19 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-#: users/models.py:384
+#: users/models.py:386
 msgid "User image (link)"
 msgstr ""
 
-#: users/models.py:390
+#: users/models.py:392
 msgid "Website (link)"
 msgstr ""
 
-#: users/models.py:398
+#: users/models.py:400
 msgid "User card"
 msgstr ""
 
-#: users/models.py:399
+#: users/models.py:401
 msgid "User cards"
 msgstr ""
 
@@ -1673,6 +1688,10 @@ msgstr ""
 msgid "The glossary item <strong>{glossary_item_name}</strong> was created."
 msgstr ""
 
+#: www/profile/views.py:70
+msgid "Author card created!"
+msgstr ""
+
 #: www/questions/views.py:70
 msgid "The question was updated."
 msgstr ""
@@ -1686,11 +1705,11 @@ msgstr ""
 msgid "The quiz was updated."
 msgstr ""
 
-#: www/quizs/views.py:138
+#: www/quizs/views.py:137
 msgid "The quiz questions were updated."
 msgstr ""
 
-#: www/quizs/views.py:277
+#: www/quizs/views.py:287
 #, python-brace-format
 msgid "The quiz {quiz_link} was created."
 msgstr ""
