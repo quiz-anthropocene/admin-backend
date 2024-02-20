@@ -192,7 +192,7 @@ Utiliser les balises `{% translate "Word" %}`
 
 Puis mettre à jour les fichiers `.po`
 ```
-python manage.py makemessages --all
+python manage.py makemessages --all --no-wrap --no-location
 ```
 
 ### Ajouter une langue

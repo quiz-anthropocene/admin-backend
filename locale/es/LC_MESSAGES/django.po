@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-20 15:53+0100\n"
+"POT-Creation-Date: 2024-02-21 00:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,1707 +18,1118 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: activity/models.py:39
 msgid "Created"
 msgstr ""
 
-#: activity/models.py:40
 msgid "Updated"
 msgstr ""
 
-#: activity/models.py:41 core/constants.py:67
 msgid "Validated"
 msgstr ""
 
-#: activity/models.py:42 contributions/models.py:205 contributions/tables.py:50
-#: templates/contributions/detail_edit.html:43
-#: templates/contributions/detail_reply_create.html:14
-#: templates/contributions/detail_reply_create.html:45
-#: templates/quizs/detail_edit.html:68
 msgid "Published"
 msgstr ""
 
-#: activity/models.py:43
 msgid "Deleted"
 msgstr ""
 
-#: activity/models.py:44
 msgid "Computed"
 msgstr ""
 
-#: activity/models.py:47 contributions/models.py:89 questions/models.py:273
-#: quizs/models.py:457 templates/categories/detail_questions.html:12
-#: templates/questions/detail_base.html:4
-#: templates/tags/detail_questions.html:12
 msgid "Question"
 msgstr ""
 
-#: activity/models.py:48 contributions/models.py:97 quizs/models.py:189
-#: quizs/models.py:456 quizs/models.py:576
-#: templates/questions/detail_quizs.html:12 templates/quizs/detail_base.html:4
-#: templates/tags/detail_quizs.html:12
 msgid "Quiz"
 msgstr ""
 
-#: activity/models.py:49 users/constants.py:8
 msgid "Contributor"
 msgstr ""
 
-#: activity/models.py:50
 msgid "Weekly statistics"
 msgstr ""
 
-#: activity/models.py:51
 msgid "Monthly statistics"
 msgstr ""
 
-#: activity/models.py:55
 msgid "Actor ID"
 msgstr ""
 
-#: activity/models.py:56
 msgid "Actor name"
 msgstr ""
 
-#: activity/models.py:60
 msgid "Verb"
 msgstr ""
 
-#: activity/models.py:67
 msgid "Object ID"
 msgstr ""
 
-#: activity/models.py:69
 msgid "Object type"
 msgstr ""
 
-#: activity/models.py:74
 msgid "Object name"
 msgstr ""
 
-#: activity/models.py:77
 msgid "Additional data"
 msgstr ""
 
-#: activity/models.py:81 categories/models.py:15 contributions/models.py:130
-#: glossary/models.py:32 questions/models.py:258 quizs/models.py:168
-#: quizs/models.py:460 quizs/models.py:523 quizs/models.py:583
-#: stats/models.py:56 stats/models.py:92 stats/models.py:158
-#: stats/models.py:207 stats/models.py:218 stats/models.py:307
-#: tags/models.py:29 users/models.py:204 users/models.py:394
 msgid "Creation date"
 msgstr ""
 
-#: activity/models.py:86
 msgid "Event"
 msgstr ""
 
-#: activity/models.py:87
 msgid "Events"
 msgstr ""
 
-#: activity/models.py:116
 #, python-brace-format
-msgid ""
-"<i>{actor_name}</i> {event_verb} the question <strong>{question_name}</"
-"strong>"
+msgid "<i>{actor_name}</i> {event_verb} the question <strong>{question_name}</strong>"
 msgstr ""
 
-#: activity/models.py:128
 #, python-brace-format
 msgid "<i>{actor_name}</i> {event_verb} the quiz <strong>{quiz_name}</strong>"
 msgstr ""
 
-#: activity/models.py:141
 #, python-brace-format
-msgid ""
-"<i>{actor_name}</i> {event_verb} the question <a "
-"href=\"{question_admin_absolute_url}\">{question_name}</a>"
+msgid "<i>{actor_name}</i> {event_verb} the question <a href=\"{question_admin_absolute_url}\">{question_name}</a>"
 msgstr ""
 
-#: activity/models.py:156
 #, python-brace-format
-msgid ""
-"<i>{actor_name}</i> {event_verb} the quiz <a "
-"href=\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
+msgid "<i>{actor_name}</i> {event_verb} the quiz <a href=\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
 msgstr ""
 
-#: activity/models.py:167
 #, python-brace-format
 msgid "New contributor! <i>{user_name}</i>"
 msgstr ""
 
-#: activity/models.py:173
 #, python-brace-format
-msgid ""
-"Last week stats: {question_answer_count} questions answered, "
-"{quiz_answer_count} quizs completed, {comment_count} new comments"
+msgid "Last week stats: {question_answer_count} questions answered, {quiz_answer_count} quizs completed, {comment_count} new comments"
 msgstr ""
 
-#: activity/models.py:184
 #, python-brace-format
-msgid ""
-"Last month stats: {question_answer_count} questions answered, "
-"{quiz_answer_count} quizs completed, {comment_count} new comments"
+msgid "Last month stats: {question_answer_count} questions answered, {quiz_answer_count} quizs completed, {comment_count} new comments"
 msgstr ""
 
-#: api/glossary/filters.py:8 api/questions/filters.py:16
-#: api/quizs/filters.py:10
 msgid "Language(s)"
 msgstr ""
 
-#: api/questions/filters.py:11
 msgid "Type(s)"
 msgstr ""
 
-#: api/questions/filters.py:13
 msgid "Difficulty level(s)"
 msgstr ""
 
-#: api/questions/filters.py:18
 msgid "Category(s)"
 msgstr ""
 
-#: api/questions/filters.py:22 api/quizs/filters.py:12
 msgid "Tag(s)"
 msgstr ""
 
-#: api/questions/filters.py:26 api/quizs/filters.py:16
 msgid "Author(s)"
 msgstr ""
 
-#: app/settings.py:179 core/constants.py:128
 msgid "English"
 msgstr ""
 
-#: app/settings.py:180 core/constants.py:127
 msgid "French"
 msgstr ""
 
-#: categories/models.py:11 quizs/models.py:97 tags/models.py:26
 msgid "Name"
 msgstr ""
 
-#: categories/models.py:12
 msgid "Name (long version)"
 msgstr ""
 
-#: categories/models.py:13 glossary/models.py:19 tags/models.py:27
 msgid "Description"
 msgstr ""
 
-#: categories/models.py:16 contributions/models.py:131 glossary/models.py:33
-#: questions/models.py:259 quizs/models.py:169 quizs/models.py:461
-#: quizs/models.py:524 quizs/models.py:584 stats/models.py:308
-#: tags/models.py:30 users/models.py:205 users/models.py:395
 msgid "Last update date"
 msgstr ""
 
-#: categories/models.py:19 questions/models.py:127 questions/models.py:262
-#: templates/categories/detail_base.html:4
-#: templates/categories/detail_questions.html:13
-#: templates/tags/detail_questions.html:13
 msgid "Category"
 msgstr ""
 
-#: categories/models.py:20 templates/categories/detail_base.html:13
-#: templates/categories/list.html:5 templates/categories/list.html:14
 msgid "Categories"
 msgstr ""
 
-#: categories/models.py:39 tags/models.py:63
 msgid "Questions (public & validated)"
 msgstr ""
 
-#: contributions/admin.py:10
 msgid "Parent?"
 msgstr ""
 
-#: contributions/admin.py:14 contributions/admin.py:30 users/admin.py:35
 msgid "Yes"
 msgstr ""
 
-#: contributions/admin.py:14 contributions/admin.py:30 users/admin.py:35
 msgid "No"
 msgstr ""
 
-#: contributions/admin.py:26
 msgid "Answered?"
 msgstr ""
 
-#: contributions/forms.py:55
 msgid "Message"
 msgstr ""
 
-#: contributions/models.py:81 questions/models.py:115
 msgid "Text"
 msgstr ""
 
-#: contributions/models.py:83
 msgid "A question, a comment…"
 msgstr ""
 
-#: contributions/models.py:85
 msgid "Additional information"
 msgstr ""
 
-#: contributions/models.py:86 history/tables.py:10 questions/models.py:120
 msgid "Type"
 msgstr ""
 
-#: contributions/models.py:100 history/tables.py:9 questions/models.py:220
-#: questions/models.py:265 quizs/models.py:578
-#: templates/contributions/detail_history.html:12
-#: templates/glossary/detail_history.html:12
-#: templates/questions/detail_history.html:12
-#: templates/quizs/detail_history.html:12
 msgid "Author"
 msgstr ""
 
-#: contributions/models.py:109 questions/models.py:229 quizs/models.py:135
 msgid "Status"
 msgstr ""
 
-#: contributions/models.py:116
 msgid "In reply to"
 msgstr ""
 
-#: contributions/models.py:125 quizs/models.py:149
 msgid "Published?"
 msgstr ""
 
-#: contributions/models.py:126
 msgid "Display the comment publicly (and its reply if it exists)"
 msgstr ""
 
-#: contributions/models.py:138 templates/contributions/detail_base.html:4
 msgid "Comment"
 msgstr ""
 
-#: contributions/models.py:139 templates/contributions/detail_base.html:13
-#: templates/contributions/list.html:5 templates/contributions/list.html:14
-#: templates/includes/_header.html:32 templates/questions/detail_base.html:44
-#: templates/quizs/detail_base.html:44
 msgid "Comments"
 msgstr ""
 
-#: contributions/models.py:146
 msgid "Anonymous user"
 msgstr ""
 
-#: contributions/models.py:201 contributions/models.py:202
 msgid "Parent"
 msgstr ""
 
-#: contributions/models.py:203 contributions/models.py:204
-#: contributions/tables.py:36
 msgid "Answered"
 msgstr ""
 
-#: contributions/tables.py:44 core/constants.py:111
-#: templates/contributions/detail_edit.html:38
 msgid "Processed"
 msgstr ""
 
-#: contributions/tables.py:55 glossary/tables.py:27
 msgid "Actions"
 msgstr ""
 
-#: core/constants.py:8
 msgid "Multiple choice questionnaire"
 msgstr ""
 
-#: core/constants.py:9
 msgid "Multiple choice questionnaire with multiple answers"
 msgstr ""
 
-#: core/constants.py:10
 msgid "True or False"
 msgstr ""
 
-#: core/constants.py:23
 msgid "Junior"
 msgstr ""
 
-#: core/constants.py:24
 msgid "Easy"
 msgstr ""
 
-#: core/constants.py:25
 msgid "Medium"
 msgstr ""
 
-#: core/constants.py:26
 msgid "Hard"
 msgstr ""
 
-#: core/constants.py:27
 msgid "Expert"
 msgstr ""
 
-#: core/constants.py:65
 msgid "Draft"
 msgstr ""
 
-#: core/constants.py:66
 msgid "To validate"
 msgstr ""
 
-#: core/constants.py:68
 msgid "Set aside"
 msgstr ""
 
-#: core/constants.py:69
 msgid "Removed"
 msgstr ""
 
-#: core/constants.py:82
 msgid "New question"
 msgstr ""
 
-#: core/constants.py:83
 msgid "New quiz"
 msgstr ""
 
-#: core/constants.py:84
 msgid "Comment about the app"
 msgstr ""
 
-#: core/constants.py:85
 msgid "Comment about a question"
 msgstr ""
 
-#: core/constants.py:86
 msgid "Comment about a quiz"
 msgstr ""
 
-#: core/constants.py:87
 msgid "Contributor note"
 msgstr ""
 
-#: core/constants.py:88 templates/contributions/detail_base.html:49
 msgid "Reply"
 msgstr ""
 
-#: core/constants.py:89
 msgid "Application error"
 msgstr ""
 
-#: core/constants.py:100
 msgid "Note"
 msgstr ""
 
-#: core/constants.py:101
 msgid "Answer"
 msgstr ""
 
-#: core/constants.py:109
 msgid "To process"
 msgstr ""
 
-#: core/constants.py:110
 msgid "In progress"
 msgstr ""
 
-#: core/constants.py:112
 msgid "Ignored"
 msgstr ""
 
-#: core/constants.py:129
 msgid "Spanish"
 msgstr ""
 
-#: core/constants.py:130
 msgid "Italian"
 msgstr ""
 
-#: core/constants.py:131
 msgid "German"
 msgstr ""
 
-#: core/constants.py:151
 msgid "Public (exported and in the application)"
 msgstr ""
 
-#: core/constants.py:152
 msgid "Hidden (exported but not visible in the application)"
 msgstr ""
 
-#: core/constants.py:153
 msgid "Private (not exported and not in the application)"
 msgstr ""
 
-#: core/constants.py:156
 msgid "True"
 msgstr ""
 
-#: core/constants.py:156
 msgid "False"
 msgstr ""
 
-#: glossary/filters.py:13 questions/filters.py:22 quizs/filters.py:25
-#: tags/filters.py:13
 msgid "Text search"
 msgstr ""
 
-#: glossary/models.py:16
 msgid "Word or acronym"
 msgstr ""
 
-#: glossary/models.py:17
 msgid "Alternative names"
 msgstr ""
 
-#: glossary/models.py:18
 msgid "Définition (short)"
 msgstr ""
 
-#: glossary/models.py:21
 msgid "Accessible source (link)"
 msgstr ""
 
-#: glossary/models.py:25 questions/models.py:147 quizs/models.py:114
 msgid "Language"
 msgstr ""
 
-#: history/models.py:31 history/tables.py:19
 msgid "Changed fields"
 msgstr ""
 
-#: history/tables.py:8 templates/contributions/detail_history.html:11
-#: templates/glossary/detail_history.html:11
-#: templates/questions/detail_history.html:11
-#: templates/quizs/detail_history.html:11
 msgid "Date"
 msgstr ""
 
-#: history/tables.py:13 stats/tables.py:25 stats/tables.py:49
 msgid "ID"
 msgstr ""
 
-#: history/tables.py:16 templates/contributions/detail_history.html:13
-#: templates/glossary/detail_history.html:13
-#: templates/questions/detail_history.html:13
-#: templates/quizs/detail_history.html:13
 msgid "Action"
 msgstr ""
 
-#: questions/forms.py:38
 msgid "Answer image"
 msgstr ""
 
-#: questions/models.py:115
 msgid "Keep it simple"
 msgstr ""
 
-#: questions/models.py:117
 msgid "Hint"
 msgstr ""
 
-#: questions/models.py:117
 msgid "Text that the user can decide to display to help him"
 msgstr ""
 
-#: questions/models.py:135 questions/models.py:263 questions/models.py:393
-#: quizs/models.py:111 quizs/models.py:175 quizs/models.py:392
-#: tags/models.py:36 templates/categories/detail_questions.html:14
-#: templates/includes/_header.html:35 templates/tags/create.html:4
-#: templates/tags/create.html:17 templates/tags/detail_base.html:13
-#: templates/tags/detail_questions.html:14 templates/tags/detail_quizs.html:13
-#: templates/tags/list.html:5 templates/tags/list.html:14
 msgid "Tags"
 msgstr ""
 
-#: questions/models.py:141
 msgid "Difficulty level"
 msgstr ""
 
-#: questions/models.py:153
 msgid "Answer a"
 msgstr ""
 
-#: questions/models.py:154
 msgid "Answer b"
 msgstr ""
 
-#: questions/models.py:155
 msgid "Answer c"
 msgstr ""
 
-#: questions/models.py:156
 msgid "Answer d"
 msgstr ""
 
-#: questions/models.py:158
 msgid "The correct answer"
 msgstr ""
 
-#: questions/models.py:165
 msgid "Ordered answers?"
 msgstr ""
 
-#: questions/models.py:168
-msgid ""
-"True if the answer choices should be displayed in this particular order "
-"(instead of being mixed up)"
+msgid "True if the answer choices should be displayed in this particular order (instead of being mixed up)"
 msgstr ""
 
-#: questions/models.py:171
 msgid "Answer explanation"
 msgstr ""
 
-#: questions/models.py:172
 msgid "Answer audio explanation (link)"
 msgstr ""
 
-#: questions/models.py:174
 msgid "Answer audio explanation (text to display)"
 msgstr ""
 
-#: questions/models.py:178
 msgid "Answer video explanation (link)"
 msgstr ""
 
-#: questions/models.py:180
 msgid "Answer video explanation (text to display)"
 msgstr ""
 
-#: questions/models.py:185
 msgid "Answer accessible source (link)"
 msgstr ""
 
-#: questions/models.py:188
 msgid "Answer accessible source (text to display)"
 msgstr ""
 
-#: questions/models.py:193
 msgid "Answer scientific source (link)"
 msgstr ""
 
-#: questions/models.py:196
 msgid "Report, scientific article…"
 msgstr ""
 
-#: questions/models.py:199
 msgid "Answer scientific source (text to display)"
 msgstr ""
 
-#: questions/models.py:203
 msgid "Answer reading recommandation"
 msgstr ""
 
-#: questions/models.py:205
 msgid "Answer image (link)"
 msgstr ""
 
-#: questions/models.py:210
 msgid "Answer image (text to display)"
 msgstr ""
 
-#: questions/models.py:212
 msgid "Caption, translation, short explanation…"
 msgstr ""
 
-#: questions/models.py:215
 msgid "Answer extra info"
 msgstr ""
 
-#: questions/models.py:217
 msgid "Won't be displayed in the application"
 msgstr ""
 
-#: questions/models.py:235 questions/models.py:266 quizs/models.py:141
-#: quizs/models.py:182
 msgid "Validator"
 msgstr ""
 
-#: questions/models.py:242 quizs/models.py:148
 msgid "Validation date"
 msgstr ""
 
-#: questions/models.py:245 quizs/models.py:154
 msgid "Visibility"
 msgstr ""
 
-#: questions/models.py:252
-msgid ""
-"I certify that I have the necessary rights to publish and share this content"
+msgid "I certify that I have the necessary rights to publish and share this content"
 msgstr ""
 
-#: questions/models.py:255
 msgid "I agree to a possible commercial use by the association of this content"
 msgstr ""
 
-#: questions/models.py:264 questions/models.py:394 quizs/models.py:190
-#: templates/includes/_header.html:29 templates/questions/detail_base.html:39
-#: templates/quizs/create.html:4 templates/quizs/create.html:18
-#: templates/quizs/detail_base.html:13 templates/quizs/list.html:5
-#: templates/quizs/list.html:14 templates/tags/detail_base.html:44
 msgid "Quizs"
 msgstr ""
 
-#: questions/models.py:274 quizs/models.py:106 quizs/models.py:177
-#: templates/categories/detail_base.html:39 templates/includes/_header.html:26
-#: templates/questions/create.html:4 templates/questions/create.html:18
-#: templates/questions/detail_base.html:13 templates/questions/list.html:14
-#: templates/quizs/detail_base.html:39 templates/tags/detail_base.html:39
 msgid "Questions"
 msgstr ""
 
-#: questions/models.py:395 quizs/models.py:398
 msgid "# Ans"
 msgstr ""
 
-#: questions/models.py:396
 msgid "# Corr Ans"
 msgstr ""
 
-#: questions/models.py:397
 msgid "% Corr Ans"
 msgstr ""
 
-#: questions/models.py:398 quizs/models.py:401
 msgid "# Like"
 msgstr ""
 
-#: questions/models.py:399 quizs/models.py:402
 msgid "# Dislike"
 msgstr ""
 
-#: quizs/forms.py:31
 msgid "Quiz background image"
 msgstr ""
 
-#: quizs/models.py:98
 msgid "Slug"
 msgstr ""
 
-#: quizs/models.py:99
 msgid "Introduction"
 msgstr ""
 
-#: quizs/models.py:101
 msgid "Conclusion"
 msgstr ""
 
-#: quizs/models.py:103
 msgid "Include leads for further action"
 msgstr ""
 
-#: quizs/models.py:112
 msgid "Average difficulty level"
 msgstr ""
 
-#: quizs/models.py:121 quizs/models.py:173 quizs/models.py:393
 msgid "Authors"
 msgstr ""
 
-#: quizs/models.py:128
 msgid "Background image (link)"
 msgstr ""
 
-#: quizs/models.py:132
 msgid "Audio answers?"
 msgstr ""
 
-#: quizs/models.py:150
 msgid "Publication date"
 msgstr ""
 
-#: quizs/models.py:152
 msgid "Spotlighted?"
 msgstr ""
 
-#: quizs/models.py:161
 msgid "Similar or related quizs"
 msgstr ""
 
-#: quizs/models.py:180
 msgid "Relationships"
 msgstr ""
 
-#: quizs/models.py:394
 msgid "Questions not yet validated"
 msgstr ""
 
-#: quizs/models.py:395
 msgid "Questions categories"
 msgstr ""
 
-#: quizs/models.py:396
 msgid "Questions tags"
 msgstr ""
 
-#: quizs/models.py:397
 msgid "Questions authors"
 msgstr ""
 
-#: quizs/models.py:399
 msgid "Average time (secondes)"
 msgstr ""
 
-#: quizs/models.py:400
 msgid "Average time (minutes)"
 msgstr ""
 
-#: quizs/models.py:458
 msgid "Order"
 msgstr ""
 
-#: quizs/models.py:515
 msgid "Relationship type"
 msgstr ""
 
-#: stats/constants.py:7
 msgid "Positive"
 msgstr ""
 
-#: stats/constants.py:8
 msgid "Negative"
 msgstr ""
 
-#: stats/models.py:16 stats/models.py:99
 msgid "Answer count"
 msgstr ""
 
-#: stats/models.py:17 stats/models.py:148
 msgid "Right answer count"
 msgstr ""
 
-#: stats/models.py:18 stats/models.py:100
 msgid "Like count"
 msgstr ""
 
-#: stats/models.py:19 stats/models.py:101
 msgid "Dislike count"
 msgstr ""
 
-#: stats/models.py:45
 msgid "Answer chosen by the user"
 msgstr ""
 
-#: stats/models.py:52
 msgid "Context in which the question was answered"
 msgstr ""
 
-#: stats/models.py:81
 msgid "Feedback left on the question"
 msgstr ""
 
-#: stats/models.py:88
 msgid "Context in which the feedback was left"
 msgstr ""
 
-#: stats/models.py:144
 msgid "Quiz question count"
 msgstr ""
 
-#: stats/models.py:152
 msgid "Duration (in seconds) to complete the quiz"
 msgstr ""
 
-#: stats/models.py:156
 msgid "Details per question"
 msgstr ""
 
-#: stats/models.py:205
 msgid "Feedback left on the quiz"
 msgstr ""
 
-#: stats/models.py:215
 msgid "Field name"
 msgstr ""
 
-#: stats/models.py:216
 msgid "Clicked link"
 msgstr ""
 
-#: stats/models.py:287
 msgid "Date of statistics"
 msgstr ""
 
-#: stats/models.py:289
 msgid "Question answer count"
 msgstr ""
 
-#: stats/models.py:290
 msgid "Public question answer count"
 msgstr ""
 
-#: stats/models.py:292
 msgid "Question within quiz answer count"
 msgstr ""
 
-#: stats/models.py:294
 msgid "Quiz answer count"
 msgstr ""
 
-#: stats/models.py:295
 msgid "Public quiz answer count"
 msgstr ""
 
-#: stats/models.py:297
 msgid "Question feedback count"
 msgstr ""
 
-#: stats/models.py:299
 msgid "Question within quiz feedback count"
 msgstr ""
 
-#: stats/models.py:301
 msgid "Quiz feedback count"
 msgstr ""
 
-#: stats/models.py:304
 msgid "Hourly statistics"
 msgstr ""
 
-#: stats/tables.py:33 stats/tables.py:57
 msgid "Successfully answered"
 msgstr ""
 
-#: tags/models.py:35 templates/tags/detail_base.html:4
 msgid "Tag"
 msgstr ""
 
-#: tags/models.py:64
 msgid "Quizs (public & published)"
 msgstr ""
 
-#: templates/403.html:4 templates/404.html:4 templates/404.html:10
-#: templates/500.html:4 templates/500.html:10
 msgid "Error"
 msgstr ""
 
-#: templates/activity/_recent_actions_home_card.html:5
-#: templates/activity/list.html:5 templates/activity/list.html:14
-#: templates/activity/list.html:26
 msgid "Recent actions"
 msgstr ""
 
-#: templates/activity/_recent_actions_home_card.html:8
 msgid "View more"
 msgstr ""
 
-#: templates/activity/list.html:13 templates/admin/contributor_create.html:10
-#: templates/admin/contributor_list.html:13 templates/admin/history.html:13
-#: templates/admin/home.html:12 templates/categories/detail_base.html:12
-#: templates/categories/list.html:13
-#: templates/contributions/detail_base.html:12
-#: templates/contributions/list.html:13 templates/glossary/create.html:16
-#: templates/glossary/detail_base.html:12 templates/glossary/list.html:13
-#: templates/pages/help.html:12 templates/pages/home.html:4
-#: templates/profile/comments_base.html:13 templates/profile/history.html:13
-#: templates/profile/home.html:12 templates/profile/info_base.html:13
-#: templates/profile/info_card_create.html:13
-#: templates/profile/questions_base.html:13
-#: templates/profile/quizs_base.html:13 templates/questions/create.html:17
-#: templates/questions/detail_base.html:12 templates/questions/list.html:13
-#: templates/quizs/create.html:17 templates/quizs/detail_base.html:12
-#: templates/quizs/list.html:13 templates/tags/create.html:16
-#: templates/tags/detail_base.html:12 templates/tags/list.html:13
-#: templates/users/administrator_list.html:13
-#: templates/users/author_card_list.html:12 templates/users/home.html:12
 msgid "Home"
 msgstr ""
 
-#: templates/admin/contributor_create.html:11
-#: templates/admin/contributor_list.html:14 templates/admin/history.html:5
-#: templates/admin/history.html:14 templates/admin/home.html:4
-#: templates/admin/home.html:13 templates/includes/_header.html:46
 msgid "Administration"
 msgstr ""
 
-#: templates/admin/contributor_create.html:12
-#: templates/admin/contributor_list.html:15 templates/admin/home.html:27
-#: templates/users/home.html:27
 msgid "Contributors"
 msgstr ""
 
-#: templates/admin/contributor_create.html:13
-#: templates/admin/contributor_create.html:44
-#: templates/admin/contributor_list.html:35
-#: templates/contributions/detail_reply_create.html:90
-#: templates/glossary/create.html:4 templates/glossary/create.html:18
-#: templates/glossary/create.html:39 templates/glossary/list.html:34
-#: templates/profile/info_card_create.html:5
-#: templates/profile/info_card_create.html:16
-#: templates/profile/info_card_create.html:43
-#: templates/profile/info_card_view.html:12
-#: templates/profile/questions_view.html:16
-#: templates/profile/quizs_view.html:11 templates/questions/create.html:4
-#: templates/questions/create.html:19 templates/questions/create.html:62
-#: templates/questions/list.html:34 templates/quizs/create.html:4
-#: templates/quizs/create.html:19 templates/quizs/create.html:62
-#: templates/quizs/list.html:34 templates/tags/create.html:4
-#: templates/tags/create.html:18 templates/tags/create.html:39
-#: templates/tags/list.html:34
 msgid "Add"
 msgstr ""
 
-#: templates/admin/contributor_create.html:46
-#: templates/categories/detail_edit.html:20
-#: templates/contributions/detail_edit.html:53
-#: templates/contributions/detail_reply_create.html:92
-#: templates/glossary/create.html:41 templates/glossary/detail_edit.html:20
-#: templates/profile/info_card_create.html:45
-#: templates/questions/create.html:64 templates/questions/detail_edit.html:86
-#: templates/quizs/create.html:64 templates/quizs/detail_edit.html:116
-#: templates/quizs/detail_questions.html:47 templates/tags/create.html:41
-#: templates/tags/detail_edit.html:20
 msgid "Cancel"
 msgstr ""
 
-#: templates/admin/contributor_list.html:27
 msgid "All the contributors"
 msgstr ""
 
-#: templates/admin/contributor_list.html:31
-#: templates/contributions/list.html:30 templates/glossary/list.html:30
-#: templates/profile/comments_new.html:12
-#: templates/profile/comments_view.html:12
-#: templates/profile/questions_view.html:12 templates/questions/list.html:30
-#: templates/quizs/list.html:30 templates/tags/list.html:30
 msgid "Filters"
 msgstr ""
 
-#: templates/admin/contributor_list.html:48
-#: templates/contributions/list.html:46 templates/glossary/list.html:47
-#: templates/profile/comments_new.html:28
-#: templates/profile/comments_view.html:28
-#: templates/profile/questions_view.html:29 templates/questions/list.html:47
-#: templates/quizs/list.html:47 templates/tags/list.html:47
 msgid "Filter"
 msgstr ""
 
-#: templates/admin/history.html:15 templates/admin/home.html:35
-#: templates/contributions/detail_base.html:56
-#: templates/glossary/detail_base.html:39
-#: templates/questions/detail_base.html:54 templates/quizs/detail_base.html:54
 msgid "History"
 msgstr ""
 
-#: templates/admin/home.html:28 templates/admin/home.html:36
-#: templates/contributions/_table_action_items.html:3
-#: templates/glossary/_table_action_items.html:3 templates/profile/home.html:31
-#: templates/profile/home.html:39 templates/profile/home.html:64
-#: templates/profile/home.html:66 templates/profile/home.html:88
-#: templates/profile/home.html:96 templates/users/home.html:43
 msgid "View"
 msgstr ""
 
-#: templates/categories/detail_base.html:29
-#: templates/contributions/detail_base.html:34
-#: templates/glossary/detail_base.html:29
-#: templates/questions/detail_base.html:29 templates/quizs/detail_base.html:29
-#: templates/tags/detail_base.html:29
 msgid "Details"
 msgstr ""
 
-#: templates/categories/detail_base.html:34
-#: templates/contributions/detail_base.html:39
-#: templates/contributions/detail_reply_create.html:60
-#: templates/glossary/detail_base.html:34
-#: templates/questions/detail_base.html:34 templates/quizs/detail_base.html:34
-#: templates/tags/detail_base.html:34
 msgid "Edit"
 msgstr ""
 
-#: templates/categories/detail_edit.html:18
-#: templates/contributions/detail_edit.html:51
-#: templates/glossary/detail_edit.html:18
-#: templates/questions/detail_edit.html:84 templates/quizs/detail_edit.html:115
-#: templates/quizs/detail_questions.html:46 templates/tags/detail_edit.html:18
 msgid "Save"
 msgstr ""
 
-#: templates/categories/detail_edit.html:23
-#: templates/contributions/detail_edit.html:56
-#: templates/glossary/detail_edit.html:23
-#: templates/questions/detail_edit.html:89 templates/quizs/detail_edit.html:119
-#: templates/tags/detail_edit.html:23
 msgid "Delete"
 msgstr ""
 
-#: templates/categories/detail_view.html:11
-#: templates/contributions/detail_view.html:11
-#: templates/glossary/detail_view.html:11 templates/profile/info_view.html:18
-#: templates/questions/detail_view.html:11 templates/quizs/detail_view.html:11
-#: templates/tags/detail_view.html:11
 msgid "Field"
 msgstr ""
 
-#: templates/categories/detail_view.html:12
-#: templates/contributions/detail_view.html:12
-#: templates/glossary/detail_view.html:12 templates/profile/info_view.html:19
-#: templates/questions/detail_view.html:12 templates/quizs/detail_view.html:12
-#: templates/tags/detail_view.html:12
 msgid "Value"
 msgstr ""
 
-#: templates/categories/list.html:26
 msgid "All the categories"
 msgstr ""
 
-#: templates/contributions/detail_base.html:26
 msgid "This comment is a <strong>reply</strong>"
 msgstr ""
 
-#: templates/contributions/detail_base.html:26
 msgid "View the initial comment"
 msgstr ""
 
-#: templates/contributions/detail_base.html:45
 msgid "Respond"
 msgstr ""
 
-#: templates/contributions/detail_base.html:47
 msgid "Notes"
 msgstr ""
 
-#: templates/contributions/detail_edit.html:18
 msgid "Comment linked to the question:"
 msgstr ""
 
-#: templates/contributions/detail_edit.html:23
 msgid "Comment linked to the quiz:"
 msgstr ""
 
-#: templates/contributions/detail_edit.html:28
 msgid "This comment is a reply to:"
 msgstr ""
 
-#: templates/contributions/detail_edit.html:33
 msgid "This comment has not yet been <strong>processed</strong>"
 msgstr ""
 
-#: templates/contributions/detail_history.html:14
-#: templates/glossary/detail_history.html:14
-#: templates/questions/detail_history.html:14
-#: templates/quizs/detail_history.html:14
 msgid "Changes"
 msgstr ""
 
-#: templates/contributions/detail_history.html:28
-#: templates/contributions/detail_history.html:30
-#: templates/glossary/detail_history.html:28
-#: templates/glossary/detail_history.html:30
-#: templates/questions/detail_history.html:28
-#: templates/questions/detail_history.html:30
-#: templates/quizs/detail_history.html:28
-#: templates/quizs/detail_history.html:30
 msgid "(empty)"
 msgstr ""
 
-#: templates/contributions/detail_reply_create.html:11
 #, python-format
 msgid "Message by <strong>%(comment_author)s</strong>"
 msgstr ""
 
-#: templates/contributions/detail_reply_create.html:40
 #, python-format
 msgid "Note by <strong>%(comment_author)s</strong>"
 msgstr ""
 
-#: templates/contributions/detail_reply_create.html:42
 #, python-format
 msgid "Reply by <strong>%(comment_author)s</strong>"
 msgstr ""
 
-#: templates/contributions/detail_reply_create.html:71
 msgid "Reply to the initial comment, or add a note"
 msgstr ""
 
-#: templates/contributions/detail_reply_create.html:75
-msgid ""
-"<strong>A note?</strong> It would help keep track of how the initial comment "
-"is processed"
+msgid "<strong>A note?</strong> It would help keep track of how the initial comment is processed"
 msgstr ""
 
-#: templates/contributions/detail_reply_create.html:77
-msgid ""
-"<strong>A reply?</strong> Only one reply possible. For now this content is "
-"only visible to contributors, but we will eventually publish comments with "
-"their respective replies (to display more information under a question)"
+msgid "<strong>A reply?</strong> Only one reply possible. For now this content is only visible to contributors, but we will eventually publish comments with their respective replies (to display more information under a question)"
 msgstr ""
 
-#: templates/contributions/list.html:26
 msgid "All the comments"
 msgstr ""
 
-#: templates/glossary/create.html:4 templates/glossary/create.html:17
-#: templates/glossary/detail_base.html:4 templates/glossary/detail_base.html:13
-#: templates/glossary/list.html:5 templates/glossary/list.html:14
-#: templates/glossary/list.html:26 templates/includes/_header.html:38
 msgid "Glossary"
 msgstr ""
 
-#: templates/includes/_footer.html:7 templates/includes/_header.html:14
-#: templates/layouts/base.html:7
 msgid "Anthropocene Quiz"
 msgstr ""
 
-#: templates/includes/_footer.html:15 templates/users/_author_card.html:29
-#: templates/users/_author_card.html:30 templates/users/_author_card.html:33
 msgid "Website"
 msgstr ""
 
-#: templates/includes/_footer.html:19 templates/profile/questions_base.html:35
-#: templates/profile/quizs_base.html:35 templates/questions/detail_base.html:49
-#: templates/quizs/detail_base.html:49
 msgid "Statistics"
 msgstr ""
 
-#: templates/includes/_header.html:23 templates/profile/comments_base.html:14
-#: templates/profile/history.html:14 templates/profile/home.html:4
-#: templates/profile/home.html:13 templates/profile/info_base.html:14
-#: templates/profile/info_card_create.html:14
-#: templates/profile/questions_base.html:14
-#: templates/profile/quizs_base.html:14
 msgid "My space"
 msgstr ""
 
-#: templates/includes/_header.html:41
-#: templates/users/administrator_list.html:14
-#: templates/users/author_card_list.html:13 templates/users/home.html:4
-#: templates/users/home.html:13 users/models.py:211
 msgid "Users"
 msgstr ""
 
-#: templates/includes/_header.html:51 templates/pages/help.html:4
-#: templates/pages/help.html:13
 msgid "Help"
 msgstr ""
 
-#: templates/includes/_header.html:56
 msgid "Log out"
 msgstr ""
 
-#: templates/includes/_header.html:61
 msgid "Log in"
 msgstr ""
 
-#: templates/includes/_header_notice_beta.html:5
-msgid ""
-"Website under construction. Feedback is gladly welcome (bugs, "
-"improvements...)"
+msgid "Website under construction. Feedback is gladly welcome (bugs, improvements...)"
 msgstr ""
 
-#: templates/includes/_header_notice_beta.html:5
 msgid "contact us"
 msgstr ""
 
-#: templates/includes/_paginator.html:14
 #, python-format
 msgid "%(page_obj_number)s of %(page_obj_paginator_num_pages)s"
 msgstr ""
 
-#: templates/includes/_s3_upload_form.html:9
 msgid "Choose an image"
 msgstr ""
 
-#: templates/includes/_s3_upload_form.html:9
 msgid "or"
 msgstr ""
 
-#: templates/includes/_s3_upload_form.html:9
 msgid "drag and drop here"
 msgstr ""
 
-#: templates/includes/_s3_upload_form.html:10
 msgid "Maximum size"
 msgstr ""
 
-#: templates/includes/_s3_upload_form.html:10
 msgid "MB"
 msgstr ""
 
-#: templates/includes/_s3_upload_form.html:11
 msgid "File type"
 msgstr ""
 
-#: templates/includes/_s3_upload_form.html:18
-msgid ""
-"JavaScript is not activated. Please restart Javascript to enable adding "
-"images."
+msgid "JavaScript is not activated. Please restart Javascript to enable adding images."
 msgstr ""
 
-#: templates/pages/help.html:25
 msgid "Do you need help?"
 msgstr ""
 
-#: templates/pages/help.html:29
 msgid "How to use the administrator interface"
 msgstr ""
 
-#: templates/pages/help.html:31
 msgid "Tutorial"
 msgstr ""
 
-#: templates/pages/help.html:31
 msgid "FAQ"
 msgstr ""
 
-#: templates/pages/help.html:36
 msgid "Contact an administrator"
 msgstr ""
 
-#: templates/pages/help.html:38 templates/users/administrator_list.html:5
-#: templates/users/administrator_list.html:15
-#: templates/users/administrator_list.html:27
 msgid "Administrator list"
 msgstr ""
 
-#: templates/pages/help.html:39
 msgid "invitation link"
 msgstr ""
 
-#: templates/pages/help.html:45
 msgid "You have another question? You want to report a bug, an improvement?"
 msgstr ""
 
-#: templates/pages/help.html:46
 msgid "Please post your feedback on Discord :)"
 msgstr ""
 
-#: templates/pages/home.html:16
 #, python-format
 msgid "Hello %(first_name)s!"
 msgstr ""
 
-#: templates/pages/home.html:17
-msgid ""
-"Welcome to the <strong>contributor interface</strong> of the Anthropocene "
-"Quiz."
+msgid "Welcome to the <strong>contributor interface</strong> of the Anthropocene Quiz."
 msgstr ""
 
-#: templates/pages/home.html:18
 msgid "Here you can:"
 msgstr ""
 
-#: templates/pages/home.html:20
 msgid "Create questions & quizs (public or private)"
 msgstr ""
 
-#: templates/pages/home.html:21
 msgid "Improve public questions (with help from user feedback for example)"
 msgstr ""
 
-#: templates/pages/home.html:22
 msgid "View answer stats"
 msgstr ""
 
-#: templates/pages/home.html:23
 msgid "Update the glossary"
 msgstr ""
 
-#: templates/pages/home.html:24
 msgid "and many more functionalities :)"
 msgstr ""
 
-#: templates/profile/comments_base.html:5
-#: templates/profile/comments_base.html:15 templates/profile/home.html:49
 msgid "Comments on my content"
 msgstr ""
 
-#: templates/profile/comments_base.html:30
-#: templates/profile/comments_view.html:8
 msgid "All comments"
 msgstr ""
 
-#: templates/profile/comments_base.html:35
-#: templates/profile/comments_new.html:8
 msgid "Comments to process"
 msgstr ""
 
-#: templates/profile/comments_base.html:37
 msgid "New comments"
 msgstr ""
 
-#: templates/profile/history.html:5 templates/profile/history.html:15
-#: templates/profile/home.html:95
 msgid "My modification history"
 msgstr ""
 
-#: templates/profile/history.html:27
 msgid "Last 50 modifications"
 msgstr ""
 
-#: templates/profile/home.html:25
 msgid "My content"
 msgstr ""
 
-#: templates/profile/home.html:30 templates/profile/home.html:113
-#: templates/profile/quizs_base.html:5 templates/profile/quizs_base.html:15
 msgid "My quizs"
 msgstr ""
 
-#: templates/profile/home.html:38 templates/profile/home.html:140
-#: templates/profile/questions_base.html:5
-#: templates/profile/questions_base.html:15
 msgid "My questions"
 msgstr ""
 
-#: templates/profile/home.html:53
 #, python-format
 msgid "%(user_comment_new_count)s comment to process"
 msgid_plural "%(user_comment_new_count)s comments to process"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/profile/home.html:57
 #, python-format
 msgid "%(user_comment_new_new_count)s new comment to process"
 msgid_plural "%(user_comment_new_new_count)s new comments to process"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/profile/home.html:77 templates/profile/info_base.html:15
 msgid "My info"
 msgstr ""
 
-#: templates/profile/home.html:82 templates/profile/info_base.html:5
-#: templates/profile/info_base.html:30 templates/profile/info_view.html:4
-#: templates/profile/info_view.html:9
 msgid "My profile"
 msgstr ""
 
-#: templates/profile/home.html:85 templates/profile/info_card_view.html:21
 msgid "You don't have an author card yet!"
 msgstr ""
 
-#: templates/profile/home.html:107
 msgid "Some statistics"
 msgstr ""
 
-#: templates/profile/home.html:116
 msgid "Number of published quizs:"
 msgstr ""
 
-#: templates/profile/home.html:119 templates/profile/home.html:146
 msgid "Number of answers:"
 msgstr ""
 
-#: templates/profile/home.html:122 templates/profile/home.html:149
 msgid "Successfully answered:"
 msgstr ""
 
-#: templates/profile/home.html:125 templates/profile/home.html:152
 msgid "Total likes count:"
 msgstr ""
 
-#: templates/profile/home.html:128 templates/profile/home.html:155
 msgid "Total dislikes count:"
 msgstr ""
 
-#: templates/profile/home.html:131 templates/profile/home.html:158
 msgid "View details"
 msgstr ""
 
-#: templates/profile/home.html:143
 msgid "Number of validated questions:"
 msgstr ""
 
-#: templates/profile/info_base.html:35
-#: templates/profile/info_card_create.html:5
-#: templates/profile/info_card_create.html:15
-#: templates/profile/info_card_view.html:4
-#: templates/profile/info_card_view.html:10
 msgid "My author card"
 msgstr ""
 
-#: templates/profile/info_base.html:37 templates/users/_author_card.html:17
-#: templates/users/_author_card.html:26
 msgid "missing"
 msgstr ""
 
-#: templates/profile/info_card_view.html:30
-msgid ""
-"Some information from your author card will be displayed alongside your quiz "
-"introduction"
+msgid "Some information from your author card will be displayed alongside your quiz introduction"
 msgstr ""
 
-#: templates/profile/info_view.html:24 users/models.py:181
 msgid "First name"
 msgstr ""
 
-#: templates/profile/info_view.html:28 users/models.py:182
 msgid "Last name"
 msgstr ""
 
-#: templates/profile/info_view.html:32
 msgid "Email address"
 msgstr ""
 
-#: templates/profile/info_view.html:36 users/models.py:185
 msgid "Roles"
 msgstr ""
 
-#: templates/profile/info_view.html:44
 msgid "Account creation date"
 msgstr ""
 
-#: templates/profile/questions_base.html:30
-#: templates/profile/questions_view.html:8
 msgid "All my questions"
 msgstr ""
 
-#: templates/profile/quizs_base.html:30 templates/profile/quizs_view.html:8
 msgid "All my quizs"
 msgstr ""
 
-#: templates/questions/create.html:39 templates/questions/detail_edit.html:48
-#: templates/quizs/create.html:39 templates/quizs/detail_edit.html:79
 msgid "You can add an <strong>image</strong> at the end of the form"
 msgstr ""
 
-#: templates/questions/create.html:54 templates/questions/detail_edit.html:64
-#: templates/quizs/create.html:54 templates/quizs/detail_edit.html:95
 msgid "Quick tool to compress images:"
 msgstr ""
 
-#: templates/questions/detail_edit.html:25
 msgid "You are the <strong>author</strong> of this question"
 msgstr ""
 
-#: templates/questions/detail_edit.html:31
 msgid "The question is <strong>not validated</strong> yet"
 msgstr ""
 
-#: templates/questions/detail_edit.html:42 templates/quizs/detail_edit.html:52
 msgid "Validated by"
 msgstr ""
 
-#: templates/questions/detail_edit.html:68 templates/quizs/detail_edit.html:99
 msgid "Current image"
 msgstr ""
 
-#: templates/questions/detail_edit.html:74 templates/quizs/detail_edit.html:105
 msgid "None"
 msgstr ""
 
-#: templates/questions/list.html:26
 msgid "All the questions "
 msgstr ""
 
-#: templates/quizs/detail_edit.html:25
 msgid "You are the <strong>author</strong> of this quiz"
 msgstr ""
 
-#: templates/quizs/detail_edit.html:28
 msgid "You want to add a collaborator? Contact an administrator"
 msgstr ""
 
-#: templates/quizs/detail_edit.html:30
 msgid "All the authors:"
 msgstr ""
 
-#: templates/quizs/detail_edit.html:35
 msgid "Author(s):"
 msgstr ""
 
-#: templates/quizs/detail_edit.html:41
 msgid "The quiz is <strong>not validated</strong> yet"
 msgstr ""
 
-#: templates/quizs/detail_edit.html:57
 msgid "The quiz is <strong>not published</strong> yet"
 msgstr ""
 
-#: templates/quizs/detail_edit.html:73
 msgid "The quiz is published even though it is not validated"
 msgstr ""
 
-#: templates/quizs/list.html:26
 msgid "All the quizs"
 msgstr ""
 
-#: templates/tags/list.html:26
 msgid "All the tags"
 msgstr ""
 
-#: templates/users/_author_card.html:6
 msgid "quiz"
 msgid_plural "quizs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/users/_author_card.html:7
 msgid "question"
 msgid_plural "questions"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/users/_author_card.html:11 templates/users/_author_card.html:12
-#: users/models.py:390
 msgid "Short biography"
 msgstr ""
 
-#: templates/users/_author_card.html:20 templates/users/_author_card.html:21
-#: users/models.py:391
 msgid "Relationship with the Anthropocene Quiz"
 msgstr ""
 
-#: templates/users/_author_card.html:35
 msgid "No website provided"
 msgstr ""
 
-#: templates/users/author_card_list.html:4
-#: templates/users/author_card_list.html:14
-#: templates/users/author_card_list.html:26
 msgid "Author cards"
 msgstr ""
 
-#: templates/users/home.html:34
 msgid "Quiz authors"
 msgstr ""
 
-#: templates/users/home.html:35
 msgid "View author cards"
 msgstr ""
 
-#: templates/users/home.html:42
 msgid "Administrators"
 msgstr ""
 
-#: users/admin.py:31
 msgid "User card?"
 msgstr ""
 
-#: users/constants.py:9
 msgid "Super Contributor"
 msgstr ""
 
-#: users/constants.py:10
 msgid "Administrator"
 msgstr ""
 
-#: users/constants.py:13
 msgid "You are an administrator"
 msgstr ""
 
-#: users/constants.py:14
 msgid "You don't have the necessary rights"
 msgstr ""
 
-#: users/constants.py:15
 msgid "You don't have the necessary rights to edit this field"
 msgstr ""
 
-#: users/constants.py:16
 msgid "Only an administrator can do it"
 msgstr ""
 
-#: users/constants.py:17
 msgid "Only the question author can edit a private question"
 msgstr ""
 
-#: users/constants.py:18
 msgid "Only the quiz author can edit a private quiz"
 msgstr ""
 
-#: users/constants.py:20
-msgid ""
-"Only the question author or a super-contributor can edit a public question"
+msgid "Only the question author or a super-contributor can edit a public question"
 msgstr ""
 
-#: users/constants.py:23
 msgid "Only the quiz author or a super-contributor can edit a public quiz"
 msgstr ""
 
-#: users/models.py:180
 msgid "Email"
 msgstr ""
 
-#: users/models.py:193
 msgid "Last seen date on page 'My space'"
 msgstr ""
 
-#: users/models.py:196
 msgid "Last seen date on page 'Comments on my content'"
 msgstr ""
 
-#: users/models.py:199
 msgid "Historical logs"
 msgstr ""
 
-#: users/models.py:210
 msgid "User"
 msgstr ""
 
-#: users/models.py:386
 msgid "User image (link)"
 msgstr ""
 
-#: users/models.py:392
 msgid "Website (link)"
 msgstr ""
 
-#: users/models.py:400
 msgid "User card"
 msgstr ""
 
-#: users/models.py:401
 msgid "User cards"
 msgstr ""
 
-#: www/admin/views.py:93
 #, python-brace-format
 msgid "The contributor <strong>{first_name} {last_name}</strong> was created."
 msgstr ""
 
-#: www/categories/views.py:43
 msgid "The category was updated."
 msgstr ""
 
-#: www/contributions/views.py:59
 msgid "The comment was updated."
 msgstr ""
 
-#: www/contributions/views.py:90
 msgid "Your message was created."
 msgstr ""
 
-#: www/glossary/views.py:52
 msgid "The glossary item was updated."
 msgstr ""
 
-#: www/glossary/views.py:98
 #, python-brace-format
 msgid "The glossary item <strong>{glossary_item_name}</strong> was created."
 msgstr ""
 
-#: www/profile/views.py:70
 msgid "Author card created!"
 msgstr ""
 
-#: www/questions/views.py:70
 msgid "The question was updated."
 msgstr ""
 
-#: www/questions/views.py:249
 #, python-brace-format
 msgid "The question {question_link} was created."
 msgstr ""
 
-#: www/quizs/views.py:68
 msgid "The quiz was updated."
 msgstr ""
 
-#: www/quizs/views.py:137
 msgid "The quiz questions were updated."
 msgstr ""
 
-#: www/quizs/views.py:287
 #, python-brace-format
 msgid "The quiz {quiz_link} was created."
 msgstr ""
 
-#: www/tags/views.py:58
 msgid "The tag was updated."
 msgstr ""
 
-#: www/tags/views.py:109
 #, python-brace-format
 msgid "The tag <strong>{tag_name}</strong> was created."
 msgstr ""

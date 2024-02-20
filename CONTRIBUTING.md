@@ -195,7 +195,7 @@ Use tags `{% translate "Word" %}`
 
 Then update `.po` files
 ```
-python manage.py makemessages --all
+python manage.py makemessages --all --no-wrap --no-location
 ```
 
 ### Add a new language
