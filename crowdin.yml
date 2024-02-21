@@ -1,4 +1,4 @@
-pull_request_title: "refactor(l10n): New Crowdin translations to review and merge"
+pull_request_title: 'refactor(l10n): New Crowdin translations to review and merge'
 files:
   - source: /locale/en/LC_MESSAGES/django.po
     translation: /locale/%two_letters_code%/LC_MESSAGES/django.po
