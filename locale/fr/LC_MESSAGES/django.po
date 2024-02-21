@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: quiz-anthropocene\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-21 00:44+0100\n"
-"PO-Revision-Date: 2023-09-24 15:40+0200\n"
+"PO-Revision-Date: 2024-02-21 00:10\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: French\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
+"X-Crowdin-Project: quiz-anthropocene\n"
+"X-Crowdin-Project-ID: 649936\n"
+"X-Crowdin-Language: fr\n"
+"X-Crowdin-File: /master/locale/en/LC_MESSAGES/django.po\n"
+"X-Crowdin-File-ID: 30\n"
 
 msgid "Created"
 msgstr "Créé"
@@ -38,10 +38,10 @@ msgid "Computed"
 msgstr "Calculé"
 
 msgid "Question"
-msgstr "Question"
+msgstr ""
 
 msgid "Quiz"
-msgstr "Quiz"
+msgstr ""
 
 msgid "Contributor"
 msgstr "Contributeur"
@@ -114,7 +114,7 @@ msgid "Language(s)"
 msgstr "Langue(s)"
 
 msgid "Type(s)"
-msgstr "Type(s)"
+msgstr ""
 
 msgid "Difficulty level(s)"
 msgstr "Niveau(x) de difficulté"
@@ -123,7 +123,7 @@ msgid "Category(s)"
 msgstr "Catégorie(s)"
 
 msgid "Tag(s)"
-msgstr "Tag(s)"
+msgstr ""
 
 msgid "Author(s)"
 msgstr "Auteur(s)"
@@ -141,7 +141,7 @@ msgid "Name (long version)"
 msgstr "Nom (version longue)"
 
 msgid "Description"
-msgstr "Description"
+msgstr ""
 
 msgid "Last update date"
 msgstr "Date de dernière modification"
@@ -168,7 +168,7 @@ msgid "Answered?"
 msgstr "Répondu ?"
 
 msgid "Message"
-msgstr "Message"
+msgstr ""
 
 msgid "Text"
 msgstr "Texte"
@@ -180,7 +180,7 @@ msgid "Additional information"
 msgstr "Informations supplémentaires"
 
 msgid "Type"
-msgstr "Type"
+msgstr ""
 
 msgid "Author"
 msgstr "Auteur"
@@ -207,7 +207,7 @@ msgid "Anonymous user"
 msgstr "Utilisateur anonyme"
 
 msgid "Parent"
-msgstr "Parent"
+msgstr ""
 
 msgid "Answered"
 msgstr "Répondu"
@@ -216,7 +216,7 @@ msgid "Processed"
 msgstr "Traité"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr ""
 
 msgid "Multiple choice questionnaire"
 msgstr "Questionnaire à choix multiples"
@@ -228,7 +228,7 @@ msgid "True or False"
 msgstr "Vrai ou Faux"
 
 msgid "Junior"
-msgstr "Junior"
+msgstr ""
 
 msgid "Easy"
 msgstr "Facile"
@@ -240,7 +240,7 @@ msgid "Hard"
 msgstr "Difficule"
 
 msgid "Expert"
-msgstr "Expert"
+msgstr ""
 
 msgid "Draft"
 msgstr "Brouillon"
@@ -279,7 +279,7 @@ msgid "Application error"
 msgstr "Erreur application"
 
 msgid "Note"
-msgstr "Note"
+msgstr ""
 
 msgid "Answer"
 msgstr "Réponse"
@@ -339,13 +339,13 @@ msgid "Changed fields"
 msgstr "Champs modifiés"
 
 msgid "Date"
-msgstr "Date"
+msgstr ""
 
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 msgid "Action"
-msgstr "Action"
+msgstr ""
 
 msgid "Answer image"
 msgstr "Image pour illustrer la réponse"
@@ -360,7 +360,7 @@ msgid "Text that the user can decide to display to help him"
 msgstr "Texte que l'utilisateur peut décider d'afficher pour l'aider"
 
 msgid "Tags"
-msgstr "Tags"
+msgstr ""
 
 msgid "Difficulty level"
 msgstr "Niveau de difficulté"
@@ -450,10 +450,10 @@ msgid "I agree to a possible commercial use by the association of this content"
 msgstr "J'autorise une éventuelle exploitation commerciale par l'association de ce contenu"
 
 msgid "Quizs"
-msgstr "Quizs"
+msgstr ""
 
 msgid "Questions"
-msgstr "Questions"
+msgstr ""
 
 msgid "# Ans"
 msgstr "# Rép"
@@ -465,10 +465,10 @@ msgid "% Corr Ans"
 msgstr "% Rép Corr"
 
 msgid "# Like"
-msgstr "# Like"
+msgstr ""
 
 msgid "# Dislike"
-msgstr "# Dislike"
+msgstr ""
 
 msgid "Quiz background image"
 msgstr "Image pour illustrer le quiz"
@@ -477,10 +477,10 @@ msgid "Slug"
 msgstr "Fragment d'URL"
 
 msgid "Introduction"
-msgstr "Introduction"
+msgstr ""
 
 msgid "Conclusion"
-msgstr "Conclusion"
+msgstr ""
 
 msgid "Include leads for further action"
 msgstr "Inclure des pistes pour aller plus loin"
@@ -516,7 +516,7 @@ msgid "Questions categories"
 msgstr "Questions catégories"
 
 msgid "Questions tags"
-msgstr "Questions tags"
+msgstr ""
 
 msgid "Questions authors"
 msgstr "Questions auteurs"
@@ -615,7 +615,7 @@ msgid "Successfully answered"
 msgstr "Taux de réussite"
 
 msgid "Tag"
-msgstr "Tag"
+msgstr ""
 
 msgid "Quizs (public & published)"
 msgstr "Quizs (publiques & publiés)"
@@ -633,7 +633,7 @@ msgid "Home"
 msgstr "Accueil"
 
 msgid "Administration"
-msgstr "Administration"
+msgstr ""
 
 msgid "Contributors"
 msgstr "Contributeurs"
@@ -690,7 +690,7 @@ msgid "Respond"
 msgstr "Répondre"
 
 msgid "Notes"
-msgstr "Notes"
+msgstr ""
 
 msgid "Comment linked to the question:"
 msgstr "Commentaire lié à la question :"
@@ -802,7 +802,7 @@ msgid "Tutorial"
 msgstr "Tutoriel"
 
 msgid "FAQ"
-msgstr "FAQ"
+msgstr ""
 
 msgid "Contact an administrator"
 msgstr "Contacter un administrateur"
@@ -823,6 +823,7 @@ msgstr "Faites-nous tous vos retours via Discord :)"
 msgid "Hello %(first_name)s!"
 msgstr "Bonjour %(first_name)s !"
 
+#| msgid "Welcome to the <strong>contributor interface</strong> of Quiz de l'Anthropocène."
 msgid "Welcome to the <strong>contributor interface</strong> of the Anthropocene Quiz."
 msgstr "Bienvenue sur <strong>l'interface contributeur</strong> du Quiz de l'Anthropocène."
 
@@ -999,13 +1000,13 @@ msgstr "Tous les tags"
 
 msgid "quiz"
 msgid_plural "quizs"
-msgstr[0] "quiz"
-msgstr[1] "quizs"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "question"
 msgid_plural "questions"
-msgstr[0] "question"
-msgstr[1] "questions"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "Short biography"
 msgstr "Courte biographie"
@@ -1108,10 +1109,8 @@ msgstr "L'article de glossaire a été mis à jour."
 msgid "The glossary item <strong>{glossary_item_name}</strong> was created."
 msgstr "L'article de glossaire <strong>{glossary_item_name}</strong> a été créé."
 
-#, fuzzy
-#| msgid "Author cards"
 msgid "Author card created!"
-msgstr "Fiches auteurs"
+msgstr ""
 
 msgid "The question was updated."
 msgstr "La question a été mise à jour."
@@ -1137,109 +1136,3 @@ msgstr "Le tag a été mis à jour."
 msgid "The tag <strong>{tag_name}</strong> was created."
 msgstr "Le tag <strong>{tag_name}</strong> a été créé."
 
-#~ msgid "new"
-#~ msgstr "nouveau"
-
-#, fuzzy
-#~| msgid "My quizs: "
-#~ msgid "My quizs stats"
-#~ msgstr "Mes quizs : "
-
-#, fuzzy
-#~| msgid "My stats overview"
-#~ msgid "My quizs stats overview"
-#~ msgstr "Aperçu de mes stats"
-
-#, fuzzy
-#~| msgid "My questions: "
-#~ msgid "My questions stats"
-#~ msgstr "Mes questions: "
-
-#, fuzzy
-#~| msgid "My stats overview"
-#~ msgid "My questions stats overview"
-#~ msgstr "Aperçu de mes stats"
-
-#~ msgid "My stats"
-#~ msgstr "Mes stats"
-
-#~ msgid "Quizs played"
-#~ msgstr "Quizs joués"
-
-#~ msgid "Players feedback"
-#~ msgstr "Feedback des joueurs"
-
-#~ msgid "The question <a href='{question_url}' title='{question_text}'><strong>{question_text_short}</strong></a> was created."
-#~ msgstr "La question <a href='{question_url}' title='{question_text}'><strong>{question_text_short}</strong></a> a été créée."
-
-#~ msgid "The quiz <a href='{quiz_url}' title='{quiz_name}'><strong>{quiz_name_short}</strong></a> was created."
-#~ msgstr "Le quiz <a href='{quiz_url}' title='{quiz_name}'><strong>{quiz_name_short}</strong></a> a été créé."
-
-#~ msgid "Comment linked to the question <a href=\"%(comment_question_url)s\" target=\"_blank\">%(comment_question)s</a>"
-#~ msgstr "Commentaire lié à la question <a href=\"%(comment_question_url)s\" target=\"_blank\">%(comment_question)s</a>"
-
-#~ msgid "Comment linked to the quiz <a href=\"%(comment_quiz_url)s\" target=\"_blank\">%(comment_quiz)s</a>"
-#~ msgstr "Commentaire lié au quiz <a href=\"%(comment_quiz_url)s\" target=\"_blank\">%(comment_quiz)s</a>"
-
-#~ msgid "Replies"
-#~ msgstr "Réponses"
-
-#~ msgid " contributor"
-#~ msgstr " contributeur"
-
-#~ msgid "All the contributions"
-#~ msgstr "Toutes les contributions"
-
-#~ msgid "Contributions"
-#~ msgstr "Contributions"
-
-#~ msgid "Contributor comment"
-#~ msgstr "Commentaire contributeur"
-
-#~ msgid "Contribution"
-#~ msgstr "Contribution"
-
-#~ msgid "View original message"
-#~ msgstr "Voir le message initial"
-
-#~ msgid "History of my modifications"
-#~ msgstr "Mon historique de modifications"
-
-#~ msgid "In answer to"
-#~ msgstr "En réponse à"
-
-#~ msgid "Date & time of answer"
-#~ msgstr "La date & heure de la réponse"
-
-#~ msgid "the context in which the opinion was sent"
-#~ msgstr "le contexte dans lequel a été envoyé l'avis"
-
-#~ msgid "Date & time of the opinion"
-#~ msgstr "La date & heure de l'avis"
-
-#~ msgid "Date and time of answer"
-#~ msgstr "La date & heure de la réponse"
-
-#~ msgid "Date & time of opinion"
-#~ msgstr "La date & heure de l'avis"
-
-#~ msgid "Date & time of click"
-#~ msgstr "La date & heure du clic"
-
-#~ msgid "Answered questions count"
-#~ msgstr "Le nombre de questions répondues"
-
-#~ msgid "Answered public questions count"
-#~ msgstr "Le nombre de questions publiques répondues"
-
-#~ msgid "Answered questions within quiz count"
-#~ msgstr "Le nombre de questions répondues au sein de quizs"
-
-#~ msgid "Answered quizzes count"
-#~ msgstr "Le nombre de quizs répondus"
-
-#~ msgid "Answered public quizzes count"
-#~ msgstr "Le nombre de quizs publiques répondus"
-
-#~ msgid "Date & time of daily statistics"
-#~ msgstr "La date & heure de la stat journalière"
