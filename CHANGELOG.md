@@ -4,6 +4,20 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Voir les [Issues](https://github.com/quiz-anthropocene/know-your-planet/issues) et le Board.
 
+## [2.6.0](https://github.com/quiz-anthropocene/admin-backend/compare/v2.5.0...v2.6.0) (2024-02-21)
+
+
+### Features
+
+* **author card:** allow a contributor to create its author card ([#1999](https://github.com/quiz-anthropocene/admin-backend/issues/1999)) ([8822d55](https://github.com/quiz-anthropocene/admin-backend/commit/8822d55aaef570e41c4dd83aa08e76f8423ebc14))
+
+
+### Bug Fixes
+
+* **l10n:** improve crowdin.yml. ref [#2000](https://github.com/quiz-anthropocene/admin-backend/issues/2000) ([335aaac](https://github.com/quiz-anthropocene/admin-backend/commit/335aaaca1a258f9d0897a909af31cfeaeac5caf8))
+* **l10n:** run makmessages with extra parameters to avoid conflicts with crowdin ([8f5579d](https://github.com/quiz-anthropocene/admin-backend/commit/8f5579d48b3dfec457863ceedb8c9d3d8a984505))
+* tentative fix of dependencies update. ref [#1996](https://github.com/quiz-anthropocene/admin-backend/issues/1996) ([e496943](https://github.com/quiz-anthropocene/admin-backend/commit/e496943e363a0d67724193cea7154ab1cf53dd72))
+
 ## [2.5.0](https://github.com/quiz-anthropocene/admin-backend/compare/v2.4.0...v2.5.0) (2024-02-20)
 
 Setup release-please
