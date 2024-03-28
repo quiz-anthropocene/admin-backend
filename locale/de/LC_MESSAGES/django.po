@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: quiz-anthropocene\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-21 00:44+0100\n"
-"PO-Revision-Date: 2024-02-21 00:47\n"
+"PO-Revision-Date: 2024-03-28 17:14\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -20,1119 +20,1119 @@ msgstr ""
 "X-Crowdin-File-ID: 30\n"
 
 msgid "Created"
-msgstr ""
+msgstr "Erstellt"
 
 msgid "Updated"
-msgstr ""
+msgstr "Aktualisiert"
 
 msgid "Validated"
-msgstr ""
+msgstr "Bestätigt"
 
 msgid "Published"
-msgstr ""
+msgstr "Veröffentlicht"
 
 msgid "Deleted"
-msgstr ""
+msgstr "Gelöscht"
 
 msgid "Computed"
-msgstr ""
+msgstr "Berechnet"
 
 msgid "Question"
-msgstr ""
+msgstr "Frage"
 
 msgid "Quiz"
-msgstr ""
+msgstr "Quiz"
 
 msgid "Contributor"
-msgstr ""
+msgstr "Mitwirkender"
 
 msgid "Weekly statistics"
-msgstr ""
+msgstr "Wöchentliche Statistiken"
 
 msgid "Monthly statistics"
-msgstr ""
+msgstr "Monatliche Statistiken"
 
 msgid "Actor ID"
-msgstr ""
+msgstr "Akteur-ID"
 
 msgid "Actor name"
-msgstr ""
+msgstr "Akteurname"
 
 msgid "Verb"
-msgstr ""
+msgstr "Verb"
 
 msgid "Object ID"
-msgstr ""
+msgstr "Objekt-ID"
 
 msgid "Object type"
-msgstr ""
+msgstr "Objekttyp"
 
 msgid "Object name"
-msgstr ""
+msgstr "Objektname"
 
 msgid "Additional data"
-msgstr ""
+msgstr "Zusätzliche Daten"
 
 msgid "Creation date"
-msgstr ""
+msgstr "Erstellungsdatum"
 
 msgid "Event"
-msgstr ""
+msgstr "Ereignis"
 
 msgid "Events"
-msgstr ""
+msgstr "Ereignisse"
 
 #, python-brace-format
 msgid "<i>{actor_name}</i> {event_verb} the question <strong>{question_name}</strong>"
-msgstr ""
+msgstr "<i>{actor_name}</i> {event_verb} die Frage <strong>{question_name}</strong>"
 
 #, python-brace-format
 msgid "<i>{actor_name}</i> {event_verb} the quiz <strong>{quiz_name}</strong>"
-msgstr ""
+msgstr "<i>{actor_name}</i> {event_verb} den Test <strong>{quiz_name}</strong>"
 
 #, python-brace-format
 msgid "<i>{actor_name}</i> {event_verb} the question <a href=\"{question_admin_absolute_url}\">{question_name}</a>"
-msgstr ""
+msgstr "<i>{actor_name}</i> {event_verb} die Frage <a href=\"{question_admin_absolute_url}\">{question_name}</a>"
 
 #, python-brace-format
 msgid "<i>{actor_name}</i> {event_verb} the quiz <a href=\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
-msgstr ""
+msgstr "<i>{actor_name}</i> {event_verb} den Test <a href=\"{quiz_admin_absolute_url}\">{quiz_name}</a>"
 
 #, python-brace-format
 msgid "New contributor! <i>{user_name}</i>"
-msgstr ""
+msgstr "Neuer Mitwirkender! <i>{user_name}</i>"
 
 #, python-brace-format
 msgid "Last week stats: {question_answer_count} questions answered, {quiz_answer_count} quizs completed, {comment_count} new comments"
-msgstr ""
+msgstr "Letzte Woche Statistik: {question_answer_count} Fragen beantwortet, {quiz_answer_count} Quizs abgeschlossen, {comment_count} neue Kommentare"
 
 #, python-brace-format
 msgid "Last month stats: {question_answer_count} questions answered, {quiz_answer_count} quizs completed, {comment_count} new comments"
-msgstr ""
+msgstr "Statistiken im letzten Monat: {question_answer_count} Fragen beantwortet, {quiz_answer_count} Quizs, {comment_count} neue Kommentare"
 
 msgid "Language(s)"
-msgstr ""
+msgstr "Sprache(n)"
 
 msgid "Type(s)"
-msgstr ""
+msgstr "Typ(e)"
 
 msgid "Difficulty level(s)"
-msgstr ""
+msgstr "Schwierigkeitsgrad(e)"
 
 msgid "Category(s)"
-msgstr ""
+msgstr "Kategorie(n)"
 
 msgid "Tag(s)"
-msgstr ""
+msgstr "Tag(s)"
 
 msgid "Author(s)"
-msgstr ""
+msgstr "Autor(en)"
 
 msgid "English"
-msgstr ""
+msgstr "Englisch"
 
 msgid "French"
-msgstr ""
+msgstr "Französisch"
 
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 msgid "Name (long version)"
-msgstr ""
+msgstr "Name (lange Version)"
 
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 msgid "Last update date"
-msgstr ""
+msgstr "Letztes Update Datum"
 
 msgid "Category"
-msgstr ""
+msgstr "Kategorie"
 
 msgid "Categories"
-msgstr ""
+msgstr "Kategorien"
 
 msgid "Questions (public & validated)"
-msgstr ""
+msgstr "Fragen (öffentlich & bestätigt)"
 
 msgid "Parent?"
-msgstr ""
+msgstr "Eltern?"
 
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 msgid "No"
-msgstr ""
+msgstr "Nein"
 
 msgid "Answered?"
-msgstr ""
+msgstr "Beantwortet?"
 
 msgid "Message"
-msgstr ""
+msgstr "Nachricht"
 
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 msgid "A question, a comment…"
-msgstr ""
+msgstr "Eine Frage, ein Kommentar…"
 
 msgid "Additional information"
-msgstr ""
+msgstr "Zusätzliche Informationen"
 
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "In reply to"
-msgstr ""
+msgstr "In Antwort auf"
 
 msgid "Published?"
-msgstr ""
+msgstr "Veröffentlicht?"
 
 msgid "Display the comment publicly (and its reply if it exists)"
-msgstr ""
+msgstr "Zeige den Kommentar öffentlich (und seine Antwort, falls er existiert)"
 
 msgid "Comment"
-msgstr ""
+msgstr "Kommentar"
 
 msgid "Comments"
-msgstr ""
+msgstr "Kommentare"
 
 msgid "Anonymous user"
-msgstr ""
+msgstr "Anonymer Benutzer"
 
 msgid "Parent"
-msgstr ""
+msgstr "Elternteil"
 
 msgid "Answered"
-msgstr ""
+msgstr "Beantwortet"
 
 msgid "Processed"
-msgstr ""
+msgstr "Verarbeitet"
 
 msgid "Actions"
-msgstr ""
+msgstr "Aktionen"
 
 msgid "Multiple choice questionnaire"
-msgstr ""
+msgstr "Multiple-Choice Fragebogen"
 
 msgid "Multiple choice questionnaire with multiple answers"
-msgstr ""
+msgstr "Multiple-Choice-Fragebogen mit mehreren Antworten"
 
 msgid "True or False"
-msgstr ""
+msgstr "Richtig oder falsch"
 
 msgid "Junior"
-msgstr ""
+msgstr "Jünger"
 
 msgid "Easy"
-msgstr ""
+msgstr "Einfach"
 
 msgid "Medium"
-msgstr ""
+msgstr "Mittel"
 
 msgid "Hard"
-msgstr ""
+msgstr "Schwer"
 
 msgid "Expert"
-msgstr ""
+msgstr "Experte"
 
 msgid "Draft"
-msgstr ""
+msgstr "Entwurf"
 
 msgid "To validate"
-msgstr ""
+msgstr "Zur Validierung"
 
 msgid "Set aside"
-msgstr ""
+msgstr "Beiseite setzen"
 
 msgid "Removed"
-msgstr ""
+msgstr "Entfernt"
 
 msgid "New question"
-msgstr ""
+msgstr "Neue Frage"
 
 msgid "New quiz"
-msgstr ""
+msgstr "Neuer Test"
 
 msgid "Comment about the app"
-msgstr ""
+msgstr "Kommentar zur App"
 
 msgid "Comment about a question"
-msgstr ""
+msgstr "Kommentar zu einer Frage"
 
 msgid "Comment about a quiz"
-msgstr ""
+msgstr "Kommentar zu einem Quiz"
 
 msgid "Contributor note"
-msgstr ""
+msgstr "Mitwirkende Notiz"
 
 msgid "Reply"
-msgstr ""
+msgstr "Antwort"
 
 msgid "Application error"
-msgstr ""
+msgstr "Anwendungsfehler"
 
 msgid "Note"
-msgstr ""
+msgstr "Notiz"
 
 msgid "Answer"
-msgstr ""
+msgstr "Antwort"
 
 msgid "To process"
-msgstr ""
+msgstr "Zu verarbeiten"
 
 msgid "In progress"
-msgstr ""
+msgstr "In Bearbeitung"
 
 msgid "Ignored"
-msgstr ""
+msgstr "Ignoriert"
 
 msgid "Spanish"
-msgstr ""
+msgstr "Spanisch"
 
 msgid "Italian"
-msgstr ""
+msgstr "Italienisch"
 
 msgid "German"
-msgstr ""
+msgstr "Deutsch"
 
 msgid "Public (exported and in the application)"
-msgstr ""
+msgstr "Öffentlich (exportiert und in der Anwendung)"
 
 msgid "Hidden (exported but not visible in the application)"
-msgstr ""
+msgstr "Versteckt (exportiert, aber nicht sichtbar in der Anwendung)"
 
 msgid "Private (not exported and not in the application)"
-msgstr ""
+msgstr "Privat (nicht exportiert und nicht in der Anwendung)"
 
 msgid "True"
-msgstr ""
+msgstr "Richtig"
 
 msgid "False"
-msgstr ""
+msgstr "Falsch"
 
 msgid "Text search"
-msgstr ""
+msgstr "Textsuche"
 
 msgid "Word or acronym"
-msgstr ""
+msgstr "Wort oder Akronym"
 
 msgid "Alternative names"
-msgstr ""
+msgstr "Alternative Namen"
 
 msgid "Définition (short)"
-msgstr ""
+msgstr "De<unk> Finition (kurz)"
 
 msgid "Accessible source (link)"
-msgstr ""
+msgstr "Barrierefreie Quelle (Link)"
 
 msgid "Language"
-msgstr ""
+msgstr "Sprache"
 
 msgid "Changed fields"
-msgstr ""
+msgstr "Geänderte Felder"
 
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "Action"
-msgstr ""
+msgstr "Aktion"
 
 msgid "Answer image"
-msgstr ""
+msgstr "Bild beantworten"
 
 msgid "Keep it simple"
-msgstr ""
+msgstr "Einfach halten"
 
 msgid "Hint"
-msgstr ""
+msgstr "Hinweis"
 
 msgid "Text that the user can decide to display to help him"
-msgstr ""
+msgstr "Text, den der Benutzer anzeigen kann, um ihm zu helfen"
 
 msgid "Tags"
-msgstr ""
+msgstr "Tags"
 
 msgid "Difficulty level"
-msgstr ""
+msgstr "Schwierigkeitsgrad"
 
 msgid "Answer a"
-msgstr ""
+msgstr "Antwort ein"
 
 msgid "Answer b"
-msgstr ""
+msgstr "Antwort b"
 
 msgid "Answer c"
-msgstr ""
+msgstr "Antwort c"
 
 msgid "Answer d"
-msgstr ""
+msgstr "Antwort d"
 
 msgid "The correct answer"
-msgstr ""
+msgstr "Die richtige Antwort"
 
 msgid "Ordered answers?"
-msgstr ""
+msgstr "Bestellte Antworten?"
 
 msgid "True if the answer choices should be displayed in this particular order (instead of being mixed up)"
-msgstr ""
+msgstr "Richtig, wenn die Antwortauswahl in dieser bestimmten Reihenfolge angezeigt werden soll (anstatt gemischt zu sein)"
 
 msgid "Answer explanation"
-msgstr ""
+msgstr "Antwort Erklärung"
 
 msgid "Answer audio explanation (link)"
-msgstr ""
+msgstr "Audio-Erklärung beantworten (Link)"
 
 msgid "Answer audio explanation (text to display)"
-msgstr ""
+msgstr "Audioerklärung beantworten (Text zum Anzeigen)"
 
 msgid "Answer video explanation (link)"
-msgstr ""
+msgstr "Video-Erklärung beantworten (Link)"
 
 msgid "Answer video explanation (text to display)"
-msgstr ""
+msgstr "Video-Erklärung beantworten (Text zum Anzeigen)"
 
 msgid "Answer accessible source (link)"
-msgstr ""
+msgstr "Antwort auf zugängliche Quelle (Link)"
 
 msgid "Answer accessible source (text to display)"
-msgstr ""
+msgstr "Antwort auf zugängliche Quelle (Text zum Anzeigen)"
 
 msgid "Answer scientific source (link)"
-msgstr ""
+msgstr "Wissenschaftliche Quelle beantworten (Link)"
 
 msgid "Report, scientific article…"
-msgstr ""
+msgstr "Bericht, wissenschaftlicher Artikel…"
 
 msgid "Answer scientific source (text to display)"
-msgstr ""
+msgstr "Wissenschaftliche Quelle beantworten (Text zum Anzeigen)"
 
 msgid "Answer reading recommandation"
-msgstr ""
+msgstr "Leseempfehlung beantworten"
 
 msgid "Answer image (link)"
-msgstr ""
+msgstr "Antwortbild (Link)"
 
 msgid "Answer image (text to display)"
-msgstr ""
+msgstr "Antwortbild (Text zum Anzeigen)"
 
 msgid "Caption, translation, short explanation…"
-msgstr ""
+msgstr "Beschriftung, Übersetzung, kurze Erklärung…"
 
 msgid "Answer extra info"
-msgstr ""
+msgstr "Zusätzliche Informationen beantworten"
 
 msgid "Won't be displayed in the application"
-msgstr ""
+msgstr "Wird in der Anwendung nicht angezeigt"
 
 msgid "Validator"
-msgstr ""
+msgstr "Validator"
 
 msgid "Validation date"
-msgstr ""
+msgstr "Validierungsdatum"
 
 msgid "Visibility"
-msgstr ""
+msgstr "Sichtbarkeit"
 
 msgid "I certify that I have the necessary rights to publish and share this content"
-msgstr ""
+msgstr "Ich bestätige, dass ich die notwendigen Rechte habe, um diese Inhalte zu veröffentlichen und zu teilen"
 
 msgid "I agree to a possible commercial use by the association of this content"
-msgstr ""
+msgstr "Ich stimme einer möglichen kommerziellen Nutzung durch die Verknüpfung dieser Inhalte zu"
 
 msgid "Quizs"
-msgstr ""
+msgstr "Quizs"
 
 msgid "Questions"
-msgstr ""
+msgstr "Fragen"
 
 msgid "# Ans"
-msgstr ""
+msgstr "# Ans"
 
 msgid "# Corr Ans"
-msgstr ""
+msgstr "# Corr Ans"
 
 msgid "% Corr Ans"
-msgstr ""
+msgstr "% Corr Ans"
 
 msgid "# Like"
-msgstr ""
+msgstr "# Like"
 
 msgid "# Dislike"
-msgstr ""
+msgstr "# Dislike"
 
 msgid "Quiz background image"
-msgstr ""
+msgstr "Quiz Hintergrundbild"
 
 msgid "Slug"
-msgstr ""
+msgstr "Slug"
 
 msgid "Introduction"
-msgstr ""
+msgstr "Einführung"
 
 msgid "Conclusion"
-msgstr ""
+msgstr "Schlussfolgerung"
 
 msgid "Include leads for further action"
-msgstr ""
+msgstr "Leads für weitere Aktion einbeziehen"
 
 msgid "Average difficulty level"
-msgstr ""
+msgstr "Durchschnittliche Schwierigkeitsstufe"
 
 msgid "Authors"
-msgstr ""
+msgstr "Autoren"
 
 msgid "Background image (link)"
-msgstr ""
+msgstr "Hintergrundbild (Link)"
 
 msgid "Audio answers?"
-msgstr ""
+msgstr "Audio-Antworten?"
 
 msgid "Publication date"
-msgstr ""
+msgstr "Veröffentlichungsdatum"
 
 msgid "Spotlighted?"
-msgstr ""
+msgstr "Spotlight?"
 
 msgid "Similar or related quizs"
-msgstr ""
+msgstr "Ähnliche oder ähnliche Quizs"
 
 msgid "Relationships"
-msgstr ""
+msgstr "Beziehungen"
 
 msgid "Questions not yet validated"
-msgstr ""
+msgstr "Fragen noch nicht validiert"
 
 msgid "Questions categories"
-msgstr ""
+msgstr "Fragenkategorien"
 
 msgid "Questions tags"
-msgstr ""
+msgstr "Frage-Tags"
 
 msgid "Questions authors"
-msgstr ""
+msgstr "Autoren der Fragen"
 
 msgid "Average time (secondes)"
-msgstr ""
+msgstr "Durchschnittliche Zeit (Sekunden)"
 
 msgid "Average time (minutes)"
-msgstr ""
+msgstr "Durchschnittliche Zeit (Minuten)"
 
 msgid "Order"
-msgstr ""
+msgstr "Sortierung"
 
 msgid "Relationship type"
-msgstr ""
+msgstr "Beziehungstyp"
 
 msgid "Positive"
-msgstr ""
+msgstr "Positiv"
 
 msgid "Negative"
-msgstr ""
+msgstr "Negativ"
 
 msgid "Answer count"
-msgstr ""
+msgstr "Antwortanzahl"
 
 msgid "Right answer count"
-msgstr ""
+msgstr "Anzahl der richtigen Antworten"
 
 msgid "Like count"
-msgstr ""
+msgstr "Ähnliche Anzahl"
 
 msgid "Dislike count"
-msgstr ""
+msgstr "Zähler nicht mögen"
 
 msgid "Answer chosen by the user"
-msgstr ""
+msgstr "Antwort vom Benutzer ausgewählt"
 
 msgid "Context in which the question was answered"
-msgstr ""
+msgstr "Kontext, in dem die Frage beantwortet wurde"
 
 msgid "Feedback left on the question"
-msgstr ""
+msgstr "Feedback zu der Frage übrig"
 
 msgid "Context in which the feedback was left"
-msgstr ""
+msgstr "Kontext, in dem das Feedback übrig wurde"
 
 msgid "Quiz question count"
-msgstr ""
+msgstr "Anzahl der Quiz Fragen"
 
 msgid "Duration (in seconds) to complete the quiz"
-msgstr ""
+msgstr "Dauer (in Sekunden), um das Quiz abzuschließen"
 
 msgid "Details per question"
-msgstr ""
+msgstr "Details pro Frage"
 
 msgid "Feedback left on the quiz"
-msgstr ""
+msgstr "Feedback zum Test übrig"
 
 msgid "Field name"
-msgstr ""
+msgstr "Feldname"
 
 msgid "Clicked link"
-msgstr ""
+msgstr "Link geklickt"
 
 msgid "Date of statistics"
-msgstr ""
+msgstr "Datum der Statistik"
 
 msgid "Question answer count"
-msgstr ""
+msgstr "Fragenantwortanzahl"
 
 msgid "Public question answer count"
-msgstr ""
+msgstr "Anzahl der öffentlichen Fragen"
 
 msgid "Question within quiz answer count"
-msgstr ""
+msgstr "Frage innerhalb der Quiz Antwortzahl"
 
 msgid "Quiz answer count"
-msgstr ""
+msgstr "Anzahl Quiz Antworten"
 
 msgid "Public quiz answer count"
-msgstr ""
+msgstr "Anzahl öffentlicher Quiz Antworten"
 
 msgid "Question feedback count"
-msgstr ""
+msgstr "Feedback-Anzahl der Fragen"
 
 msgid "Question within quiz feedback count"
-msgstr ""
+msgstr "Frage innerhalb der Quiz Feedbackanzahl"
 
 msgid "Quiz feedback count"
-msgstr ""
+msgstr "Quiz Feedback Zähler"
 
 msgid "Hourly statistics"
-msgstr ""
+msgstr "Stündliche Statistiken"
 
 msgid "Successfully answered"
-msgstr ""
+msgstr "Erfolgreich beantwortet"
 
 msgid "Tag"
-msgstr ""
+msgstr "Markierung"
 
 msgid "Quizs (public & published)"
-msgstr ""
+msgstr "Quiz (öffentlich & veröffentlicht)"
 
 msgid "Error"
-msgstr ""
+msgstr "Fehler"
 
 msgid "Recent actions"
-msgstr ""
+msgstr "Letzte Aktionen"
 
 msgid "View more"
-msgstr ""
+msgstr "Mehr anzeigen"
 
 msgid "Home"
-msgstr ""
+msgstr "Zuhause"
 
 msgid "Administration"
-msgstr ""
+msgstr "Verwaltung"
 
 msgid "Contributors"
-msgstr ""
+msgstr "Mitwirkende"
 
 msgid "Add"
-msgstr ""
+msgstr "Neu"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 msgid "All the contributors"
-msgstr ""
+msgstr "Alle Beitragenden"
 
 msgid "Filters"
-msgstr ""
+msgstr "Filter"
 
 msgid "Filter"
-msgstr ""
+msgstr "Filtern"
 
 msgid "History"
-msgstr ""
+msgstr "Verlauf"
 
 msgid "View"
-msgstr ""
+msgstr "Ansicht"
 
 msgid "Details"
-msgstr ""
+msgstr "Details"
 
 msgid "Edit"
-msgstr ""
+msgstr "Bearbeiten"
 
 msgid "Save"
-msgstr ""
+msgstr "Speichern"
 
 msgid "Delete"
-msgstr ""
+msgstr "Löschen"
 
 msgid "Field"
-msgstr ""
+msgstr "Feld"
 
 msgid "Value"
-msgstr ""
+msgstr "Wert"
 
 msgid "All the categories"
-msgstr ""
+msgstr "Alle Kategorien"
 
 msgid "This comment is a <strong>reply</strong>"
-msgstr ""
+msgstr "Dieser Kommentar ist eine <strong>Antwort</strong>"
 
 msgid "View the initial comment"
-msgstr ""
+msgstr "Erstkommentar anzeigen"
 
 msgid "Respond"
-msgstr ""
+msgstr "Antwort"
 
 msgid "Notes"
-msgstr ""
+msgstr "Notizen"
 
 msgid "Comment linked to the question:"
-msgstr ""
+msgstr "Kommentar im Zusammenhang mit der Frage:"
 
 msgid "Comment linked to the quiz:"
-msgstr ""
+msgstr "Kommentar mit dem Quiz verknüpft:"
 
 msgid "This comment is a reply to:"
-msgstr ""
+msgstr "Dieser Kommentar ist eine Antwort auf:"
 
 msgid "This comment has not yet been <strong>processed</strong>"
-msgstr ""
+msgstr "Dieser Kommentar wurde noch nicht <strong>verarbeitet</strong>"
 
 msgid "Changes"
-msgstr ""
+msgstr "Änderungen"
 
 msgid "(empty)"
-msgstr ""
+msgstr "(leer)"
 
 #, python-format
 msgid "Message by <strong>%(comment_author)s</strong>"
-msgstr ""
+msgstr "Nachricht von <strong>%(comment_author)s</strong>"
 
 #, python-format
 msgid "Note by <strong>%(comment_author)s</strong>"
-msgstr ""
+msgstr "Hinweis von <strong>%(comment_author)s</strong>"
 
 #, python-format
 msgid "Reply by <strong>%(comment_author)s</strong>"
-msgstr ""
+msgstr "Antwort von <strong>%(comment_author)s</strong>"
 
 msgid "Reply to the initial comment, or add a note"
-msgstr ""
+msgstr "Auf den ersten Kommentar antworten oder eine Notiz hinzufügen"
 
 msgid "<strong>A note?</strong> It would help keep track of how the initial comment is processed"
-msgstr ""
+msgstr "<strong>Eine Notiz?</strong> Dies würde helfen, den Überblick zu behalten, wie der erste Kommentar bearbeitet wird"
 
 msgid "<strong>A reply?</strong> Only one reply possible. For now this content is only visible to contributors, but we will eventually publish comments with their respective replies (to display more information under a question)"
-msgstr ""
+msgstr "<strong>Eine Antwort?</strong> Nur eine Antwort möglich. Bisher ist dieser Inhalt nur für Mitwirkende sichtbar aber wir werden irgendwann Kommentare mit ihren jeweiligen Antworten veröffentlichen (um weitere Informationen unter einer Frage anzuzeigen)"
 
 msgid "All the comments"
-msgstr ""
+msgstr "Alle Kommentare"
 
 msgid "Glossary"
-msgstr ""
+msgstr "Glossary"
 
 msgid "Anthropocene Quiz"
-msgstr ""
+msgstr "Anthropozen-Quiz"
 
 msgid "Website"
-msgstr ""
+msgstr "Webseite"
 
 msgid "Statistics"
-msgstr ""
+msgstr "Statistiken"
 
 msgid "My space"
-msgstr ""
+msgstr "Mein Bereich"
 
 msgid "Users"
-msgstr ""
+msgstr "Benutzer"
 
 msgid "Help"
-msgstr ""
+msgstr "Hilfe"
 
 msgid "Log out"
-msgstr ""
+msgstr "Abmelden"
 
 msgid "Log in"
-msgstr ""
+msgstr "Anmelden"
 
 msgid "Website under construction. Feedback is gladly welcome (bugs, improvements...)"
-msgstr ""
+msgstr "Webseite im Aufbau. Feedback ist gerne willkommen (Fehler, Verbesserungen...)"
 
 msgid "contact us"
-msgstr ""
+msgstr "kontaktiere uns"
 
 #, python-format
 msgid "%(page_obj_number)s of %(page_obj_paginator_num_pages)s"
-msgstr ""
+msgstr "%(page_obj_number)s von %(page_obj_paginator_num_pages)s"
 
 msgid "Choose an image"
-msgstr ""
+msgstr "Bild auswählen"
 
 msgid "or"
-msgstr ""
+msgstr "oder"
 
 msgid "drag and drop here"
-msgstr ""
+msgstr "hierher ziehen und ablegen"
 
 msgid "Maximum size"
-msgstr ""
+msgstr "Maximale Größe"
 
 msgid "MB"
-msgstr ""
+msgstr "MN"
 
 msgid "File type"
-msgstr ""
+msgstr "Dateityp"
 
 msgid "JavaScript is not activated. Please restart Javascript to enable adding images."
-msgstr ""
+msgstr "JavaScript ist nicht aktiviert. Bitte Javascript neu starten, um das Hinzufügen von Bildern zu aktivieren."
 
 msgid "Do you need help?"
-msgstr ""
+msgstr "Brauchen Sie Hilfe?"
 
 msgid "How to use the administrator interface"
-msgstr ""
+msgstr "Wie man die Administratorschnittstelle benutzt"
 
 msgid "Tutorial"
-msgstr ""
+msgstr "Tutorial"
 
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 msgid "Contact an administrator"
-msgstr ""
+msgstr "Einen Administrator kontaktieren"
 
 msgid "Administrator list"
-msgstr ""
+msgstr "Administratorliste"
 
 msgid "invitation link"
-msgstr ""
+msgstr "Einladungslink"
 
 msgid "You have another question? You want to report a bug, an improvement?"
-msgstr ""
+msgstr "Sie haben eine andere Frage? Sie möchten einen Fehler melden, eine Verbesserung?"
 
 msgid "Please post your feedback on Discord :)"
-msgstr ""
+msgstr "Bitte schreibe dein Feedback bei Discord :)"
 
 #, python-format
 msgid "Hello %(first_name)s!"
-msgstr ""
+msgstr "Hallo %(first_name)s!"
 
 #| msgid "Welcome to the <strong>contributor interface</strong> of Quiz de l'Anthropocène."
 msgid "Welcome to the <strong>contributor interface</strong> of the Anthropocene Quiz."
-msgstr ""
+msgstr "Willkommen im <strong>Contributor Interface</strong> des Anthropozene Quiz."
 
 msgid "Here you can:"
-msgstr ""
+msgstr "Hier können Sie:"
 
 msgid "Create questions & quizs (public or private)"
-msgstr ""
+msgstr "Fragen & Quizs erstellen (öffentlich oder privat)"
 
 msgid "Improve public questions (with help from user feedback for example)"
-msgstr ""
+msgstr "Verbessern Sie öffentliche Fragen (mit Hilfe von Benutzerfeedback zum Beispiel)"
 
 msgid "View answer stats"
-msgstr ""
+msgstr "Antwort-Statistiken anzeigen"
 
 msgid "Update the glossary"
-msgstr ""
+msgstr "Glossar aktualisieren"
 
 msgid "and many more functionalities :)"
-msgstr ""
+msgstr "und viele weitere Funktionalitäten :)"
 
 msgid "Comments on my content"
-msgstr ""
+msgstr "Kommentare zu meinem Inhalt"
 
 msgid "All comments"
-msgstr ""
+msgstr "Alle Kommentare"
 
 msgid "Comments to process"
-msgstr ""
+msgstr "Zu bearbeitende Kommentare"
 
 msgid "New comments"
-msgstr ""
+msgstr "Neue Kommentare"
 
 msgid "My modification history"
-msgstr ""
+msgstr "Mein Änderungsverlauf"
 
 msgid "Last 50 modifications"
-msgstr ""
+msgstr "Letzte 50 Änderungen"
 
 msgid "My content"
-msgstr ""
+msgstr "Mein Inhalt"
 
 msgid "My quizs"
-msgstr ""
+msgstr "Meine Quiz"
 
 msgid "My questions"
-msgstr ""
+msgstr "Meine Fragen"
 
 #, python-format
 msgid "%(user_comment_new_count)s comment to process"
 msgid_plural "%(user_comment_new_count)s comments to process"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(user_comment_new_count)s Kommentar zum Verarbeiten"
+msgstr[1] "%(user_comment_new_count)s Kommentare zum Verarbeiten"
 
 #, python-format
 msgid "%(user_comment_new_new_count)s new comment to process"
 msgid_plural "%(user_comment_new_new_count)s new comments to process"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(user_comment_new_new_count)s neuer Kommentar zum Bearbeiten"
+msgstr[1] "%(user_comment_new_new_count)s neue Kommentare zum Verarbeiten"
 
 msgid "My info"
-msgstr ""
+msgstr "Meine Info"
 
 msgid "My profile"
-msgstr ""
+msgstr "Mein Profil"
 
 msgid "You don't have an author card yet!"
-msgstr ""
+msgstr "Sie haben noch keine Autorenkarte!"
 
 msgid "Some statistics"
-msgstr ""
+msgstr "Einige Statistiken"
 
 msgid "Number of published quizs:"
-msgstr ""
+msgstr "Anzahl der veröffentlichten Quizs:"
 
 msgid "Number of answers:"
-msgstr ""
+msgstr "Anzahl der Antworten:"
 
 msgid "Successfully answered:"
-msgstr ""
+msgstr "Erfolgreich beantwortet:"
 
 msgid "Total likes count:"
-msgstr ""
+msgstr "Anzahl der Gefällt mir:"
 
 msgid "Total dislikes count:"
-msgstr ""
+msgstr "Gesamtzahl der Ablehnungen:"
 
 msgid "View details"
-msgstr ""
+msgstr "Details anzeigen"
 
 msgid "Number of validated questions:"
-msgstr ""
+msgstr "Anzahl der validierten Fragen:"
 
 msgid "My author card"
-msgstr ""
+msgstr "Meine Autorenkarte"
 
 msgid "missing"
-msgstr ""
+msgstr "fehlt"
 
 msgid "Some information from your author card will be displayed alongside your quiz introduction"
-msgstr ""
+msgstr "Einige Informationen von Ihrer Autorenkarte werden neben Ihrer Quizeinführung angezeigt"
 
 msgid "First name"
-msgstr ""
+msgstr "Vorname"
 
 msgid "Last name"
-msgstr ""
+msgstr "Nachname"
 
 msgid "Email address"
-msgstr ""
+msgstr "E-Mail-Adresse"
 
 msgid "Roles"
-msgstr ""
+msgstr "Rollen"
 
 msgid "Account creation date"
-msgstr ""
+msgstr "Erstellungsdatum des Kontos"
 
 msgid "All my questions"
-msgstr ""
+msgstr "Alle meine Fragen"
 
 msgid "All my quizs"
-msgstr ""
+msgstr "Alle meine Quizs"
 
 msgid "You can add an <strong>image</strong> at the end of the form"
-msgstr ""
+msgstr "Sie können ein <strong>-Bild</strong> am Ende des Formulars hinzufügen"
 
 msgid "Quick tool to compress images:"
-msgstr ""
+msgstr "Schnelles Werkzeug, um Bilder zu komprimieren:"
 
 msgid "You are the <strong>author</strong> of this question"
-msgstr ""
+msgstr "Sie sind der <strong>Autor</strong> dieser Frage"
 
 msgid "The question is <strong>not validated</strong> yet"
-msgstr ""
+msgstr "Die Frage ist <strong>noch nicht validiert</strong>"
 
 msgid "Validated by"
-msgstr ""
+msgstr "Bestätigt von"
 
 msgid "Current image"
-msgstr ""
+msgstr "Aktuelles Bild"
 
 msgid "None"
-msgstr ""
+msgstr "Keine"
 
 msgid "All the questions "
-msgstr ""
+msgstr "Alle Fragen "
 
 msgid "You are the <strong>author</strong> of this quiz"
-msgstr ""
+msgstr "Sie sind der <strong>Autor</strong> dieses Quiz"
 
 msgid "You want to add a collaborator? Contact an administrator"
-msgstr ""
+msgstr "Sie möchten einen Mitarbeiter hinzufügen? Kontaktieren Sie einen Administrator"
 
 msgid "All the authors:"
-msgstr ""
+msgstr "Alle Autoren:"
 
 msgid "Author(s):"
-msgstr ""
+msgstr "Autor(en):"
 
 msgid "The quiz is <strong>not validated</strong> yet"
-msgstr ""
+msgstr "Der Test ist <strong>noch nicht validiert</strong>"
 
 msgid "The quiz is <strong>not published</strong> yet"
-msgstr ""
+msgstr "Der Test ist <strong>noch nicht veröffentlicht</strong>"
 
 msgid "The quiz is published even though it is not validated"
-msgstr ""
+msgstr "Der Test wird veröffentlicht, obwohl er nicht validiert wurde"
 
 msgid "All the quizs"
-msgstr ""
+msgstr "Alle Quizs"
 
 msgid "All the tags"
-msgstr ""
+msgstr "Alle Tags"
 
 msgid "quiz"
 msgid_plural "quizs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "quiz"
+msgstr[1] "quizs"
 
 msgid "question"
 msgid_plural "questions"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "frage"
+msgstr[1] "fragen"
 
 msgid "Short biography"
-msgstr ""
+msgstr "Kurze Biographie"
 
 msgid "Relationship with the Anthropocene Quiz"
-msgstr ""
+msgstr "Beziehung zum Anthropozen-Quiz"
 
 msgid "No website provided"
-msgstr ""
+msgstr "Keine Webseite verfügbar"
 
 msgid "Author cards"
-msgstr ""
+msgstr "Autorenkarten"
 
 msgid "Quiz authors"
-msgstr ""
+msgstr "Quiz Autoren"
 
 msgid "View author cards"
-msgstr ""
+msgstr "Autorenkarten anzeigen"
 
 msgid "Administrators"
-msgstr ""
+msgstr "Administratoren"
 
 msgid "User card?"
-msgstr ""
+msgstr "Benutzerkarte?"
 
 msgid "Super Contributor"
-msgstr ""
+msgstr "Super-Mitwirkender"
 
 msgid "Administrator"
-msgstr ""
+msgstr "Administrator"
 
 msgid "You are an administrator"
-msgstr ""
+msgstr "Sie sind ein Administrator"
 
 msgid "You don't have the necessary rights"
-msgstr ""
+msgstr "Sie haben nicht die notwendigen Rechte"
 
 msgid "You don't have the necessary rights to edit this field"
-msgstr ""
+msgstr "Sie haben nicht die notwendigen Rechte, um dieses Feld zu bearbeiten"
 
 msgid "Only an administrator can do it"
-msgstr ""
+msgstr "Nur ein Administrator kann es tun"
 
 msgid "Only the question author can edit a private question"
-msgstr ""
+msgstr "Nur der Fragen-Autor kann eine private Frage bearbeiten"
 
 msgid "Only the quiz author can edit a private quiz"
-msgstr ""
+msgstr "Nur der Testautor kann einen privaten Test bearbeiten"
 
 msgid "Only the question author or a super-contributor can edit a public question"
-msgstr ""
+msgstr "Nur der Fragen-Autor oder ein Super-Mitwirkender kann eine öffentliche Frage bearbeiten"
 
 msgid "Only the quiz author or a super-contributor can edit a public quiz"
-msgstr ""
+msgstr "Nur der Quiz-Autor oder ein Super-Mitwirkender kann ein öffentliches Quiz bearbeiten"
 
 msgid "Email"
-msgstr ""
+msgstr "E-Mail"
 
 msgid "Last seen date on page 'My space'"
-msgstr ""
+msgstr "Zuletzt gesehenes Datum auf Seite 'Mein Raum'"
 
 msgid "Last seen date on page 'Comments on my content'"
-msgstr ""
+msgstr "Zuletzt gesehenes Datum auf Seite 'Kommentare zu meinem Inhalt'"
 
 msgid "Historical logs"
-msgstr ""
+msgstr "Historische Logs"
 
 msgid "User"
-msgstr ""
+msgstr "Benutzer"
 
 msgid "User image (link)"
-msgstr ""
+msgstr "Benutzerbild (Link)"
 
 msgid "Website (link)"
-msgstr ""
+msgstr "Webseite (Link)"
 
 msgid "User card"
-msgstr ""
+msgstr "Benutzerkarte"
 
 msgid "User cards"
-msgstr ""
+msgstr "Benutzerkarten"
 
 #, python-brace-format
 msgid "The contributor <strong>{first_name} {last_name}</strong> was created."
-msgstr ""
+msgstr "Der Mitwirkende <strong>{first_name} {last_name}</strong> wurde erstellt."
 
 msgid "The category was updated."
-msgstr ""
+msgstr "Die Kategorie wurde aktualisiert."
 
 msgid "The comment was updated."
-msgstr ""
+msgstr "Der Kommentar wurde aktualisiert."
 
 msgid "Your message was created."
-msgstr ""
+msgstr "Ihre Nachricht wurde erstellt."
 
 msgid "The glossary item was updated."
-msgstr ""
+msgstr "Das Glossar wurde aktualisiert."
 
 #, python-brace-format
 msgid "The glossary item <strong>{glossary_item_name}</strong> was created."
-msgstr ""
+msgstr "Das Glossarelement <strong>{glossary_item_name}</strong> wurde erstellt."
 
 msgid "Author card created!"
-msgstr ""
+msgstr "Autorenkarte erstellt!"
 
 msgid "The question was updated."
-msgstr ""
+msgstr "Die Frage wurde aktualisiert."
 
 #, python-brace-format
 msgid "The question {question_link} was created."
-msgstr ""
+msgstr "Die Frage {question_link} wurde erstellt."
 
 msgid "The quiz was updated."
-msgstr ""
+msgstr "Das Quiz wurde aktualisiert."
 
 msgid "The quiz questions were updated."
-msgstr ""
+msgstr "Die Quizfragen wurden aktualisiert."
 
 #, python-brace-format
 msgid "The quiz {quiz_link} was created."
-msgstr ""
+msgstr "Der Quiz {quiz_link} wurde erstellt."
 
 msgid "The tag was updated."
-msgstr ""
+msgstr "Der Tag wurde aktualisiert."
 
 #, python-brace-format
 msgid "The tag <strong>{tag_name}</strong> was created."
-msgstr ""
+msgstr "Der Tag <strong>{tag_name}</strong> wurde erstellt."
 
