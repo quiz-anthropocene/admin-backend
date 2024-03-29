@@ -4,10 +4,11 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.db.models import Value
 from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
-from django.views.generic import CreateView, DetailView, TemplateView
+from django.views.generic import CreateView, DetailView, TemplateView, UpdateView
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin, SingleTableView
 
@@ -26,7 +27,7 @@ from quizs.tables import QuizTable
 from stats.models import QuestionAggStat, QuizAggStat
 from stats.tables import QuestionStatsTable, QuizStatsTable
 from users.forms import ProfileInfoCardCreateForm
-from users.models import User
+from users.models import User, UserCard
 
 
 class ProfileHomeView(ContributorUserRequiredMixin, DetailView):
@@ -80,6 +81,16 @@ class ProfileInfoCardCreateView(ContributorUserRequiredMixin, SuccessMessageMixi
             self.get_success_message(form.cleaned_data),
         )
         return HttpResponseRedirect(self.get_success_url())
+
+
+class ProfileInfoCardEditView(ContributorUserRequiredMixin, SuccessMessageMixin, UpdateView):
+    form_class = ProfileInfoCardCreateForm
+    template_name = "profile/info_card_edit.html"
+    success_url = reverse_lazy("profile:info_card_view")
+    success_message = _("Author card updated!")
+
+    def get_object(self):
+        return get_object_or_404(UserCard, user=self.request.user)
 
 
 class ProfileQuestionListView(ContributorUserRequiredMixin, SingleTableMixin, FilterView):

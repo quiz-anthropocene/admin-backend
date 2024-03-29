@@ -8,7 +8,9 @@
     <div class="col-9">
         <h1>
             {% translate "My author card" %}
-            {% if not user.user_card %}
+            {% if user.user_card %}
+                <a class="btn btn-primary btn-sm" href="{% url 'profile:info_card_edit' %}">{% translate "Edit" %}</a>
+            {% else %}
                 <a class="btn btn-success btn-sm" href="{% url 'profile:info_card_create' %}">{% translate "Add" %}</a>
             {% endif %}
         </h1>

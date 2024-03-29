@@ -10,6 +10,7 @@ PROFILE_DETAIL_URLS = [
     "profile:info_view",
     "profile:info_card_view",
     "profile:info_card_create",
+    # "profile:info_card_edit",
     "profile:questions_view",
     "profile:questions_stats",
     "profile:quizs_view",
