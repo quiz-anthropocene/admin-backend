@@ -495,3 +495,54 @@ def question_create_agg_stat_instance(sender, instance, created, **kwargs):
             from stats.models import QuestionAggStat
 
             QuestionAggStat.objects.create(question=instance)
+
+
+class QuestionRelationship(models.Model):
+    from_question = models.ForeignKey(to=Question, on_delete=models.CASCADE, related_name="from_questions")
+    to_question = models.ForeignKey(to=Question, on_delete=models.CASCADE, related_name="to_questions")
+    status = models.CharField(
+        verbose_name=_("Relationship type"),
+        max_length=50,
+        choices=zip(
+            constants.QUESTION_RELATIONSHIP_CHOICE_LIST,
+            constants.QUESTION_RELATIONSHIP_CHOICE_LIST,
+        ),
+    )
+
+    created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
+    updated = models.DateTimeField(verbose_name=_("Last update date"), auto_now=True)
+
+    def __str__(self):
+        return f"{self.from_question} >>> {self.status} >>> {self.to_question}"
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
+    def clean(self):
+        """
+        Rules on QuestionRelationship
+        - cannot have the same from & to
+        - status must be one of the choices
+        - cannot have 2 relationships between 2 quizs
+        - cannot have reverse ?
+        """
+        if self.status not in constants.QUESTION_RELATIONSHIP_CHOICE_LIST:
+            raise ValidationError({"status": "doit être une valeur de la liste"})
+        if self.from_question_id and self.to_question_id:
+            if self.from_question_id == self.to_question_id:
+                raise ValidationError({"to_question": "ne peut pas être la même question"})
+            # check there isn't any existing relationships # status ?
+            existing_identical_relationships = QuestionRelationship.objects.filter(
+                from_question=self.from_question, to_question=self.to_question
+            )
+            if len(existing_identical_relationships):
+                raise ValidationError({"to_question": "il y a déjà une relation avec cette question dans ce sens"})
+            # check there isn't any existing symmetrical relationships
+            existing_symmetrical_relationships = QuestionRelationship.objects.filter(
+                from_question=self.to_question, to_question=self.from_question
+            )
+            if len(existing_symmetrical_relationships):
+                raise ValidationError(
+                    {"to_question": "il y a déjà une relation avec cette question dans l'autre sens"}
+                )

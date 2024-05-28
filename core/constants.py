@@ -48,6 +48,11 @@ QUESTION_ANSWER_CHOICE_LIST = [
 ]
 QUESTION_ANSWER_CHOICES = [(a, a) for a in QUESTION_ANSWER_CHOICE_LIST]
 
+QUESTION_RELATIONSHIP_CHOICE_LIST = [
+    "remplacement",
+    "traduction",
+]
+
 QUIZ_RELATIONSHIP_CHOICE_LIST = [
     "suivant",
     # "précédent",
