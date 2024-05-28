@@ -538,7 +538,7 @@ class QuizRelationship(models.Model):
     def clean(self):
         """
         Rules on QuizRelationship
-        - cannot have the same from_quiz & to_quiz
+        - cannot have the same from & to
         - status must be one of the choices
         - cannot have 2 relationships between 2 quizs
         - cannot have reverse ?
