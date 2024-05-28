@@ -1,8 +1,10 @@
 from io import StringIO
 
 from django.conf import settings
+from django.contrib import admin
 from django.core import management
 from django.utils.html import mark_safe
+from fieldsets_with_inlines import FieldsetsInlineMixin
 from import_export import fields, resources
 from import_export.admin import ImportMixin
 from import_export.widgets import ForeignKeyWidget, ManyToManyWidget
@@ -13,7 +15,7 @@ from core import constants as api_constants
 from core.admin import ExportMixin, admin_site
 from core.models import Configuration
 from core.utils import notion
-from questions.models import Question
+from questions.models import Question, QuestionRelationship
 from quizs.models import Quiz
 from tags.models import Tag
 
@@ -87,7 +89,60 @@ class QuestionResource(resources.ModelResource):
         report_skipped = False
 
 
-class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
+class QuestionRelationshipFromInline(admin.StackedInline):  # TabularInline
+    model = QuestionRelationship
+    verbose_name = "Question Relationship (sortant)"
+    fk_name = "from_question"
+    # autocomplete_fields = ["to_question"]
+    extra = 0
+
+    def formfield_for_foreignkey(self, db_field, request=None, **kwargs):
+        """
+        Hide the current question in the relationship form
+        Doesn't work with autocomplete_fields
+        """
+        field = super(QuestionRelationshipFromInline, self).formfield_for_foreignkey(db_field, request, **kwargs)
+        if db_field.name == "to_question":
+            if "object_id" in request.resolver_match.kwargs:
+                current_question_id = int(request.resolver_match.kwargs["object_id"])
+                # remove the current question from the list
+                field.queryset = Question.objects.exclude(id=current_question_id)
+                # remove the current question's relationship questions
+                current_question_from_relationships = QuestionRelationship.objects.filter(
+                    from_question__id=current_question_id
+                ).values_list("to_question_id", flat=True)
+                current_question_to_relationships = QuestionRelationship.objects.filter(
+                    to_question__id=current_question_id
+                ).values_list("from_question_id", flat=True)
+                field.queryset = field.queryset.exclude(
+                    id__in=(list(current_question_from_relationships) + list(current_question_to_relationships))
+                )
+                # order queryset
+                field.queryset = field.queryset.order_by("-id")
+        return field
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+
+class QuestionRelationshipToInline(admin.StackedInline):  # TabularInline
+    model = QuestionRelationship
+    verbose_name = "Question Relationship (entrant)"
+    fk_name = "to_question"
+    extra = 0
+    max_num = 0
+
+    # def has_add_permission(self, request, obj=None):
+    #     return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
+class QuestionAdmin(ImportMixin, ExportMixin, FieldsetsInlineMixin, SimpleHistoryAdmin):
     resource_class = QuestionResource
     list_display = [
         "id",
@@ -143,7 +198,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
         "updated",
     ]
 
-    fieldsets = (
+    fieldsets_with_inlines = [
         (
             "Infos de base",
             {
@@ -209,6 +264,8 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
             "Validation",
             {"fields": ("validation_status", "validator", "validation_date")},
         ),
+        QuestionRelationshipFromInline,
+        QuestionRelationshipToInline,
         (
             "Stats",
             {
@@ -231,7 +288,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, SimpleHistoryAdmin):
             },
         ),
         ("Dates", {"fields": ("created", "updated")}),
-    )
+    ]
 
     change_list_template = "admin/questions/question/change_list_with_import.html"
 
