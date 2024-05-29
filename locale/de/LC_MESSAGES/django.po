@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: quiz-anthropocene\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-21 00:44+0100\n"
+"POT-Creation-Date: 2024-05-29 12:59+0200\n"
 "PO-Revision-Date: 2024-03-28 17:14\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: German\n"
@@ -133,6 +133,15 @@ msgstr "Englisch"
 
 msgid "French"
 msgstr "Französisch"
+
+msgid "Spanish"
+msgstr "Spanisch"
+
+msgid "Italian"
+msgstr "Italienisch"
+
+msgid "German"
+msgstr "Deutsch"
 
 msgid "Name"
 msgstr "Name"
@@ -292,15 +301,6 @@ msgstr "In Bearbeitung"
 
 msgid "Ignored"
 msgstr "Ignoriert"
-
-msgid "Spanish"
-msgstr "Spanisch"
-
-msgid "Italian"
-msgstr "Italienisch"
-
-msgid "German"
-msgstr "Deutsch"
 
 msgid "Public (exported and in the application)"
 msgstr "Öffentlich (exportiert und in der Anwendung)"
@@ -470,6 +470,9 @@ msgstr "# Like"
 msgid "# Dislike"
 msgstr "# Dislike"
 
+msgid "Relationship type"
+msgstr "Beziehungstyp"
+
 msgid "Quiz background image"
 msgstr "Quiz Hintergrundbild"
 
@@ -529,9 +532,6 @@ msgstr "Durchschnittliche Zeit (Minuten)"
 
 msgid "Order"
 msgstr "Sortierung"
-
-msgid "Relationship type"
-msgstr "Beziehungstyp"
 
 msgid "Positive"
 msgstr "Positiv"
@@ -823,7 +823,6 @@ msgstr "Bitte schreibe dein Feedback bei Discord :)"
 msgid "Hello %(first_name)s!"
 msgstr "Hallo %(first_name)s!"
 
-#| msgid "Welcome to the <strong>contributor interface</strong> of Quiz de l'Anthropocène."
 msgid "Welcome to the <strong>contributor interface</strong> of the Anthropocene Quiz."
 msgstr "Willkommen im <strong>Contributor Interface</strong> des Anthropozene Quiz."
 
@@ -952,6 +951,11 @@ msgstr "Sie können ein <strong>-Bild</strong> am Ende des Formulars hinzufügen
 
 msgid "Quick tool to compress images:"
 msgstr "Schnelles Werkzeug, um Bilder zu komprimieren:"
+
+#, fuzzy
+#| msgid "All comments"
+msgid "Add a comment"
+msgstr "Alle Kommentare"
 
 msgid "You are the <strong>author</strong> of this question"
 msgstr "Sie sind der <strong>Autor</strong> dieser Frage"
@@ -1112,6 +1116,11 @@ msgstr "Das Glossarelement <strong>{glossary_item_name}</strong> wurde erstellt.
 msgid "Author card created!"
 msgstr "Autorenkarte erstellt!"
 
+#, fuzzy
+#| msgid "Author card created!"
+msgid "Author card updated!"
+msgstr "Autorenkarte erstellt!"
+
 msgid "The question was updated."
 msgstr "Die Frage wurde aktualisiert."
 
@@ -1135,4 +1144,3 @@ msgstr "Der Tag wurde aktualisiert."
 #, python-brace-format
 msgid "The tag <strong>{tag_name}</strong> was created."
 msgstr "Der Tag <strong>{tag_name}</strong> wurde erstellt."
-

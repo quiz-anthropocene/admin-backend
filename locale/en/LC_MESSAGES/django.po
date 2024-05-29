@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-21 00:44+0100\n"
+"POT-Creation-Date: 2024-05-29 12:59+0200\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -132,6 +132,15 @@ msgid "English"
 msgstr ""
 
 msgid "French"
+msgstr ""
+
+msgid "Spanish"
+msgstr ""
+
+msgid "Italian"
+msgstr ""
+
+msgid "German"
 msgstr ""
 
 msgid "Name"
@@ -291,15 +300,6 @@ msgid "In progress"
 msgstr ""
 
 msgid "Ignored"
-msgstr ""
-
-msgid "Spanish"
-msgstr ""
-
-msgid "Italian"
-msgstr ""
-
-msgid "German"
 msgstr ""
 
 msgid "Public (exported and in the application)"
@@ -470,6 +470,9 @@ msgstr ""
 msgid "# Dislike"
 msgstr ""
 
+msgid "Relationship type"
+msgstr ""
+
 msgid "Quiz background image"
 msgstr ""
 
@@ -528,9 +531,6 @@ msgid "Average time (minutes)"
 msgstr ""
 
 msgid "Order"
-msgstr ""
-
-msgid "Relationship type"
 msgstr ""
 
 msgid "Positive"
@@ -954,6 +954,9 @@ msgstr ""
 msgid "Quick tool to compress images:"
 msgstr ""
 
+msgid "Add a comment"
+msgstr ""
+
 msgid "You are the <strong>author</strong> of this question"
 msgstr ""
 
@@ -1111,6 +1114,9 @@ msgid "The glossary item <strong>{glossary_item_name}</strong> was created."
 msgstr ""
 
 msgid "Author card created!"
+msgstr ""
+
+msgid "Author card updated!"
 msgstr ""
 
 msgid "The question was updated."
