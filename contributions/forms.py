@@ -5,11 +5,27 @@ from contributions.models import Comment
 from core import constants
 
 
-COMMENT_EDIT_FORM_FIELDS = [
+COMMENT_CREATE_FORM_FIELDS = [
     field.name for field in Comment._meta.fields if field.name not in Comment.COMMENT_READONLY_FIELDS
 ]
 COMMENT_REPLY_CREATE_FORM_FIELDS = ["type", "text", "author", "parent", "status"]
 COMMENT_REPLY_HIDDEN_FORM_FIELDS = ["parent", "status"]
+
+
+class CommentCreateForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = COMMENT_CREATE_FORM_FIELDS
+        widgets = {
+            "text": forms.Textarea(attrs={"rows": 3}),
+            "description": forms.Textarea(attrs={"rows": 3}),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name in ["type", "question", "quiz", "author"]:
+            self.fields[field_name].disabled = True
+            # see views.py for exceptions
 
 
 class CommentEditForm(forms.ModelForm):
@@ -17,7 +33,7 @@ class CommentEditForm(forms.ModelForm):
 
     class Meta:
         model = Comment
-        fields = COMMENT_EDIT_FORM_FIELDS
+        fields = COMMENT_CREATE_FORM_FIELDS
         widgets = {
             "text": forms.Textarea(attrs={"rows": 3}),
             "description": forms.Textarea(attrs={"rows": 3}),
