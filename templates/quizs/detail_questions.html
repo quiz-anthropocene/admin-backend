@@ -9,7 +9,7 @@
 {% block quiz_detail_content %}
 <div class="row">
     <div class="col-12">
-        {% if not quiz_questions.count %}
+        {% if not table.rows|length %}
             <div class="alert alert-warning" role="status">0 {% translate "Questions" %}</div>
         {% else %}
             {% render_table table %}

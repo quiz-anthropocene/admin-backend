@@ -143,7 +143,6 @@ class QuestionDetailQuizListView(ContributorUserRequiredMixin, SingleTableMixin,
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["question"] = self.question
-        context["question_quizs"] = self.question.quizquestion_set.all()
         return context
 
 
