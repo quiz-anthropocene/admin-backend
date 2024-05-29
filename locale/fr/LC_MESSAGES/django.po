@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: quiz-anthropocene\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-29 13:26+0200\n"
-"PO-Revision-Date: 2024-03-28 17:14\n"
+"PO-Revision-Date: 2024-05-29 12:11\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: French\n"
 "Language: fr\n"
@@ -823,6 +823,7 @@ msgstr "Faites-nous tous vos retours via Discord :)"
 msgid "Hello %(first_name)s!"
 msgstr "Bonjour %(first_name)s !"
 
+#| msgid "Welcome to the <strong>contributor interface</strong> of Quiz de l'Anthropocène."
 msgid "Welcome to the <strong>contributor interface</strong> of the Anthropocene Quiz."
 msgstr "Bienvenue sur <strong>l'interface contributeur</strong> du Quiz de l'Anthropocène."
 
@@ -952,10 +953,8 @@ msgstr "Vous pouvez ajouter une <strong>image</strong> à la fin du formulaire"
 msgid "Quick tool to compress images:"
 msgstr "Petit outil pour compresser les images :"
 
-#, fuzzy
-#| msgid "All comments"
 msgid "Add a note"
-msgstr "Tous les commentaires"
+msgstr ""
 
 msgid "You are the <strong>author</strong> of this question"
 msgstr "Vous êtes <strong>l'auteur</strong> de cette question"
@@ -1116,10 +1115,8 @@ msgstr "L'article de glossaire <strong>{glossary_item_name}</strong> a été cr�
 msgid "Author card created!"
 msgstr "Fiche auteur crée !"
 
-#, fuzzy
-#| msgid "Author card created!"
 msgid "Author card updated!"
-msgstr "Fiche auteur crée !"
+msgstr ""
 
 msgid "The question was updated."
 msgstr "La question a été mise à jour."
@@ -1144,3 +1141,4 @@ msgstr "Le tag a été mis à jour."
 #, python-brace-format
 msgid "The tag <strong>{tag_name}</strong> was created."
 msgstr "Le tag <strong>{tag_name}</strong> a été créé."
+
