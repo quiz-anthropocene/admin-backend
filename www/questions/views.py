@@ -9,13 +9,16 @@ from django.utils import timezone
 from django.utils.safestring import mark_safe
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, DetailView, ListView, UpdateView
+from django.views.generic.edit import FormMixin
 from django_filters.views import FilterView
-from django_tables2.views import SingleTableMixin, SingleTableView
+from django_tables2.views import SingleTableMixin
 
 from activity.utilities import create_event
 from api.questions.serializers import QuestionFullStringSerializer
+from contributions.forms import CommentCreateForm
 from contributions.models import Comment
 from contributions.tables import CommentTable
+from core import constants
 from core.forms import form_filters_cleaned_dict, form_filters_to_list
 from core.mixins import ContributorUserRequiredMixin
 from core.utils.s3 import S3Upload
@@ -144,11 +147,12 @@ class QuestionDetailQuizListView(ContributorUserRequiredMixin, SingleTableMixin,
         return context
 
 
-class QuestionDetailCommentListView(ContributorUserRequiredMixin, SingleTableView):
+class QuestionDetailCommentListView(ContributorUserRequiredMixin, SingleTableMixin, FormMixin, ListView):
     model = Comment
     template_name = "questions/detail_comments.html"
     context_object_name = "question_contributions"
     table_class = CommentTable
+    form_class = CommentCreateForm
 
     def get_queryset(self):
         qs = super().get_queryset()
@@ -160,6 +164,38 @@ class QuestionDetailCommentListView(ContributorUserRequiredMixin, SingleTableVie
         context = super().get_context_data(**kwargs)
         context["question"] = Question.objects.get(id=self.kwargs.get("pk"))
         return context
+
+    def get_initial(self):
+        return {
+            "type": constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR,
+            "question": self.kwargs.get("pk"),
+            "status": constants.COMMENT_STATUS_PROCESSED,
+            "author": self.request.user,
+            "parent": None,
+        }
+
+    def post(self, request, *args, **kwargs):
+        form_class = self.get_form_class()
+        form = self.get_form(form_class)
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+
+    def form_valid(self, form):
+        form.save()
+        # response
+        messages.add_message(self.request, messages.SUCCESS, self.get_success_message(form.cleaned_data))
+        return HttpResponseRedirect(self.get_success_url())
+
+    def form_invalid(self, form):
+        return self.render_to_response(self.get_context_data())
+
+    def get_success_message(self, cleaned_data):
+        return _("Your message was created.")
+
+    def get_success_url(self):
+        return reverse_lazy("questions:detail_comments", args=[self.kwargs.get("pk")])
 
 
 class QuestionDetailStatsView(ContributorUserRequiredMixin, DetailView):

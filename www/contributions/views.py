@@ -8,7 +8,7 @@ from django_tables2.views import SingleTableMixin
 
 from api.contributions.serializers import CommentFullSerializer
 from contributions.filters import CommentFilter
-from contributions.forms import COMMENT_EDIT_FORM_FIELDS, CommentEditForm, CommentReplyCreateForm
+from contributions.forms import COMMENT_CREATE_FORM_FIELDS, CommentEditForm, CommentReplyCreateForm
 from contributions.models import Comment
 from contributions.tables import CommentTable
 from core import constants
@@ -135,7 +135,7 @@ class CommentDetailHistoryView(ContributorUserRequiredMixin, DetailView):
             else:
                 # probably a create action
                 # we create the diff ourselves because there isn't any previous record
-                delta_fields = COMMENT_EDIT_FORM_FIELDS
+                delta_fields = COMMENT_CREATE_FORM_FIELDS
                 delta_new = [{"field": k, "new": v} for k, v in record.__dict__.items() if k in delta_fields if v]
                 context["comment_history_delta"].append(delta_new)
         return context

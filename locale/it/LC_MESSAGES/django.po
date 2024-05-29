@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: quiz-anthropocene\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-21 00:44+0100\n"
+"POT-Creation-Date: 2024-05-29 13:26+0200\n"
 "PO-Revision-Date: 2024-03-28 17:14\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: Italian\n"
@@ -133,6 +133,15 @@ msgstr "Inglese"
 
 msgid "French"
 msgstr "Francese"
+
+msgid "Spanish"
+msgstr "Spagnolo"
+
+msgid "Italian"
+msgstr "Italiano"
+
+msgid "German"
+msgstr "Tedesco"
 
 msgid "Name"
 msgstr "Nome"
@@ -292,15 +301,6 @@ msgstr "In corso"
 
 msgid "Ignored"
 msgstr "Ignorato"
-
-msgid "Spanish"
-msgstr "Spagnolo"
-
-msgid "Italian"
-msgstr "Italiano"
-
-msgid "German"
-msgstr "Tedesco"
 
 msgid "Public (exported and in the application)"
 msgstr "Pubblico (esportato e nella domanda)"
@@ -470,6 +470,9 @@ msgstr "# Mi piace"
 msgid "# Dislike"
 msgstr "# Dislike"
 
+msgid "Relationship type"
+msgstr "Tipo di relazione"
+
 msgid "Quiz background image"
 msgstr "Immagine di sfondo Quiz"
 
@@ -529,9 +532,6 @@ msgstr "Tempo medio (minuti)"
 
 msgid "Order"
 msgstr "Ordine"
-
-msgid "Relationship type"
-msgstr "Tipo di relazione"
 
 msgid "Positive"
 msgstr "Positivo"
@@ -823,7 +823,6 @@ msgstr "Invia il tuo feedback su Discord :)"
 msgid "Hello %(first_name)s!"
 msgstr "Ciao %(first_name)s!"
 
-#| msgid "Welcome to the <strong>contributor interface</strong> of Quiz de l'Anthropocène."
 msgid "Welcome to the <strong>contributor interface</strong> of the Anthropocene Quiz."
 msgstr "Benvenuto nell'interfaccia <strong>contributor</strong> del Quiz."
 
@@ -952,6 +951,11 @@ msgstr "È possibile aggiungere un'immagine <strong></strong> alla fine del modu
 
 msgid "Quick tool to compress images:"
 msgstr "Strumento rapido per comprimere le immagini:"
+
+#, fuzzy
+#| msgid "All comments"
+msgid "Add a note"
+msgstr "Tutti i commenti"
 
 msgid "You are the <strong>author</strong> of this question"
 msgstr "Sei l'autore <strong></strong> di questa domanda"
@@ -1112,6 +1116,11 @@ msgstr "L'elemento glossario <strong>{glossary_item_name}</strong> è stato crea
 msgid "Author card created!"
 msgstr "Autore della carta creato!"
 
+#, fuzzy
+#| msgid "Author card created!"
+msgid "Author card updated!"
+msgstr "Autore della carta creato!"
+
 msgid "The question was updated."
 msgstr "La domanda è stata aggiornata."
 
@@ -1135,4 +1144,3 @@ msgstr "L'etichetta è stata aggiornata."
 #, python-brace-format
 msgid "The tag <strong>{tag_name}</strong> was created."
 msgstr "Il tag <strong>{tag_name}</strong> è stato creato."
-
