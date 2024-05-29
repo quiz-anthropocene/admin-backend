@@ -3,6 +3,7 @@ from django.utils.html import format_html
 
 from core.tables import DEFAULT_ATTRS, DEFAULT_TEMPLATE, ChoiceColumn, ImageColumn, RichTextEllipsisColumn
 from questions.models import Question
+from quizs.models import Quiz, QuizQuestion
 
 
 QUESTION_FIELD_SEQUENCE = [
@@ -46,3 +47,22 @@ class QuestionTable(tables.Table):
             self.base_columns[field_name] = tables.DateTimeColumn(format="d F Y")
             # attrs={"td": {"title": lambda record: getattr(record, field_name)}})
         super().__init__(*args, **kwargs)
+
+
+QUIZ_QUESTION_FIELD_SEQUENCE = ["quiz_id", "quiz_name"]
+
+
+class QuestionQuizTable(tables.Table):
+    quiz_id = tables.Column(
+        verbose_name=Quiz._meta.verbose_name,
+        accessor="quiz.id",
+        linkify=lambda record: record.quiz.get_absolute_url(),
+    )
+    quiz_name = RichTextEllipsisColumn(accessor="quiz.name", attrs={"td": {"title": lambda record: record.quiz.name}})
+
+    class Meta:
+        model = QuizQuestion
+        fields = QUIZ_QUESTION_FIELD_SEQUENCE
+        sequence = QUIZ_QUESTION_FIELD_SEQUENCE
+        template_name = DEFAULT_TEMPLATE
+        attrs = DEFAULT_ATTRS

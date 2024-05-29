@@ -23,7 +23,7 @@ from history.utilities import get_diff_between_two_history_records
 from questions.filters import QuestionFilter
 from questions.forms import QUESTION_FORM_FIELDS, QuestionCreateForm, QuestionEditForm
 from questions.models import Question
-from questions.tables import QuestionTable
+from questions.tables import QuestionQuizTable, QuestionTable
 from quizs.models import QuizQuestion
 from stats.models import QuestionAggStat
 from users import constants as user_constants
@@ -124,19 +124,23 @@ class QuestionDetailEditView(ContributorUserRequiredMixin, SuccessMessageMixin, 
         return reverse_lazy("questions:detail_view", args=[self.kwargs.get("pk")])
 
 
-class QuestionDetailQuizListView(ContributorUserRequiredMixin, ListView):
+class QuestionDetailQuizListView(ContributorUserRequiredMixin, SingleTableMixin, ListView):
     model = QuizQuestion
     template_name = "questions/detail_quizs.html"
-    context_object_name = "quiz_questions"
+    context_object_name = "question_quizs"
+    table_class = QuestionQuizTable
 
-    def get_queryset(self):
-        qs = super().get_queryset()
-        qs = qs.filter(question__id=self.kwargs.get("pk"))
-        return qs
+    def get(self, request, *args, **kwargs):
+        self.question = Question.objects.get(id=self.kwargs.get("pk"))
+        return super().get(request, *args, **kwargs)
+
+    def get_table_data(self):
+        return self.question.quizquestion_set.all()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["question"] = Question.objects.get(id=self.kwargs.get("pk"))
+        context["question"] = self.question
+        context["question_quizs"] = self.question.quizquestion_set.all()
         return context
 
 

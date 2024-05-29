@@ -142,6 +142,9 @@ class QuizDetailQuestionListView(ContributorUserRequiredMixin, SingleTableMixin,
         self.quiz = Quiz.objects.get(id=self.kwargs.get("pk"))
         return super().get(request, *args, **kwargs)
 
+    def get_table_data(self):
+        return self.quiz.quizquestion_set.all()
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["quiz"] = self.quiz
@@ -152,10 +155,6 @@ class QuizDetailQuestionListView(ContributorUserRequiredMixin, SingleTableMixin,
         else:
             context["quiz_question_formset"] = QuizQuestionFormSet(instance=self.quiz)
         return context
-
-    def get_table_data(self):
-        return self.quiz.quizquestion_set.all()
-        # return self.get_context_data()["quiz"].quizquestion_set.all()
 
     def post(self, request, *args, **kwargs):
         self.quiz = Quiz.objects.get(id=self.kwargs.get("pk"))
