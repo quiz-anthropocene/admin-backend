@@ -5,10 +5,10 @@
 {% block question_detail_content %}
 <div class="row">
     <div class="col-12">
-        {% if question_contributions.count %}
-            {% render_table table %}
-        {% else %}
+        {% if not question_contributions.count %}
             <div class="alert alert-warning" role="status">0 {% translate "Comments" %}</div>
+        {% else %}
+            {% render_table table %}
         {% endif %}
     </div>
 </div>
