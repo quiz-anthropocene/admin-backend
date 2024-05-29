@@ -1,29 +1,15 @@
 {% extends "questions/detail_base.html" %}
+{% load render_table from django_tables2 %}
 {% load i18n %}
 
 {% block question_detail_content %}
 <div class="row">
     <div class="col-12">
-        <div class="table-container">
-            <table class="table-responsive table-striped table-bordered border-primary font-size-small">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>{% translate "Quiz" %}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for quiz_question in quiz_questions %}
-                        <tr>
-                            <td>
-                                <a href="{% url 'quizs:detail_view' quiz_question.quiz.id %}">{{ quiz_question.quiz.id }}</a>
-                            </td>
-                            <td>{{ quiz_question.quiz.name }}</td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+        {% if question_quizs.count %}
+            {% render_table table %}
+        {% else %}
+            <div class="alert alert-warning" role="status">0 {% translate "Quizs" %}</div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

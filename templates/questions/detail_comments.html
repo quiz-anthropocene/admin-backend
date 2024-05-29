@@ -1,10 +1,15 @@
 {% extends "questions/detail_base.html" %}
 {% load render_table from django_tables2 %}
+{% load i18n %}
 
 {% block question_detail_content %}
 <div class="row">
     <div class="col-12">
-        {% render_table table %}
+        {% if question_contributions.count %}
+            {% render_table table %}
+        {% else %}
+            <div class="alert alert-warning" role="status">0 {% translate "Comments" %}</div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

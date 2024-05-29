@@ -19,7 +19,7 @@
                         {% bootstrap_form form alert_error_type="all" %}
                     </div>
                     <!-- Sidebar -->
-                    <div class="col-md-4 d-none d-md-block">
+                    <div class="col-md-4 order-first order-md-last">
                         {% if question.author == user %}
                             <div class="alert alert-primary" role="alert">
                                 ℹ️ {% blocktrans %}You are the <strong>author</strong> of this question{% endblocktrans %}.

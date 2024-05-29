@@ -2,6 +2,7 @@
 {% load i18n django_bootstrap5 user_can_edit %}
 
 {% block comment_detail_content %}
+<!-- Initial comment -->
 <div class="row">
     <div class="col-12">
         <div class="card">
@@ -29,9 +30,10 @@
 <br />
 <br />
 
-<div class="row">
-    <div class="col-12">
-        {% for reply in comment.replies.all %}
+<!-- Existing notes & replies -->
+{% for reply in comment.replies.all %}
+    <div class="row">
+        <div class="col-12">
             <div class="card {% if reply.type == 'REPLY' %}border-success{% else %}border-warning{% endif %}">
                 <div class="card-header">
                     <div class="row">
@@ -63,25 +65,34 @@
                     {% endif %}
                 </div>
             </div>
-            <br />
-        {% endfor %}
+        </div>
+    </div>
 
+    <br />
+{% endfor %}
+
+<!-- Reply form -->
+<div class="row">
+    <div class="col-12">
         <div class="card">
             <div class="card-header">
                 <strong>{% translate "Reply to the initial comment, or add a note" %}</strong>
             </div>
             <div class="card-body">
-                <div class="alert alert-warning" role="status">
-                    {% blocktrans %}<strong>A note?</strong> It would help keep track of how the initial comment is processed{% endblocktrans %}.
-                    <br />
-                    {% blocktrans %}<strong>A reply?</strong> Only one reply possible. For now this content is only visible to contributors, but we will eventually publish comments with their respective replies (to display more information under a question){% endblocktrans %}.
-                </div>
                 <form id="comment_reply_create_form" method="POST" action="">
                     {% csrf_token %}
 
                     <div class="row">
                         <div class="col-md-8">
                             {% bootstrap_form form alert_error_type="all" %}
+                        </div>
+                        <!-- Sidebar -->
+                        <div class="col-md-4 order-first order-md-last">
+                            <div class="alert alert-warning" role="status">
+                                {% blocktrans %}<strong>A note?</strong> It would help keep track of how the initial comment is processed{% endblocktrans %}.
+                                <br />
+                                {% blocktrans %}<strong>A reply?</strong> Only one reply possible. For now this content is only visible to contributors, but we will eventually publish comments with their respective replies (to display more information under a question){% endblocktrans %}.
+                            </div>
                         </div>
                     </div>
 
