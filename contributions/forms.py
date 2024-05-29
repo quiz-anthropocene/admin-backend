@@ -23,7 +23,7 @@ class CommentCreateForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        for field_name in ["type", "question", "quiz", "author"]:
+        for field_name in ["type", "question", "quiz", "author", "publish"]:
             self.fields[field_name].disabled = True
             # see views.py for exceptions
 

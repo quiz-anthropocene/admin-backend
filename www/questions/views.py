@@ -167,8 +167,9 @@ class QuestionDetailCommentListView(ContributorUserRequiredMixin, SingleTableMix
 
     def get_initial(self):
         return {
-            "type": constants.COMMENT_TYPE_COMMENT_QUESTION,
+            "type": constants.COMMENT_TYPE_COMMENT_CONTRIBUTOR,
             "question": self.kwargs.get("pk"),
+            "status": constants.COMMENT_STATUS_PROCESSED,
             "author": self.request.user,
             "parent": None,
         }
@@ -177,13 +178,9 @@ class QuestionDetailCommentListView(ContributorUserRequiredMixin, SingleTableMix
         form_class = self.get_form_class()
         form = self.get_form(form_class)
         if form.is_valid():
-            return self.form_valid(
-                form,
-            )
+            return self.form_valid(form)
         else:
-            return self.form_invalid(
-                form,
-            )
+            return self.form_invalid(form)
 
     def form_valid(self, form):
         form.save()
