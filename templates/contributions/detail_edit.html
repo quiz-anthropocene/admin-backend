@@ -12,7 +12,7 @@
                     {% bootstrap_form form alert_error_type="all" %}
                 </div>
                 <!-- Sidebar -->
-                <div class="col-md-4 d-none d-md-block">
+                <div class="col-md-4 order-first order-md-last">
                     {% if comment.question %}
                         <div class="alert alert-primary" role="alert">
                             {% blocktrans %}Comment linked to the question:{% endblocktrans %} <a href="{% url 'questions:detail_view' comment.question.id %}" target="_blank">{{ comment.question }}</a>
