@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-29 13:26+0200\n"
+"POT-Creation-Date: 2024-05-29 15:34+0200\n"
 "PO-Revision-Date: 2023-02-12 20:12+0100\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: \n"
@@ -973,6 +973,9 @@ msgid "None"
 msgstr ""
 
 msgid "All the questions "
+msgstr ""
+
+msgid "If you want to <strong>reply</strong> to one of the comments above, click on <strong>View</strong>."
 msgstr ""
 
 msgid "You are the <strong>author</strong> of this quiz"

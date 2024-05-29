@@ -5,23 +5,44 @@
 {% block quiz_detail_content %}
 <div class="row">
     <div class="col-12">
-        {% render_table table %}
+        {% if not table.rows|length %}
+            <div class="alert alert-warning" role="status">0 {% translate "Comments" %}</div>
+        {% else %}
+            {% render_table table %}
+        {% endif %}
+    </div>
+</div>
 
-        <br />
+<br />
 
+<div class="row">
+    <div class="col-12">
+        <!-- Comment form -->
         <div class="card">
             <div class="card-header">
-                <strong>Ajouter un commentaire</strong>
+                <strong>{% translate "Add a note" %}</strong>
             </div>
             <div class="card-body">
-                <div class="alert alert-warning" role="status">
-                    Formulaire pour <strong>ajouter</strong> un commentaire à ce quiz.
-                    {% if table.rows.count %}
-                        <br />
-                        Si vous souhaitez <strong>répondre</strong> à un commentaire au dessus, cliquez sur "Voir".
-                    {% endif %}
-                </div>
-                <p><i>à venir</i></p>
+                {% if table.rows|length %}
+                    <div class="alert alert-warning" role="status">
+                        {% blocktrans %}If you want to <strong>reply</strong> to one of the comments above, click on <strong>View</strong>.{% endblocktrans %}
+                    </div>
+                {% endif %}
+                <form id="comment_create_form" method="POST" action="">
+                    {% csrf_token %}
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            {% bootstrap_form form alert_error_type="all" %}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            {% bootstrap_button button_type="submit" button_class="btn-primary" content=_("Add") %}
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
