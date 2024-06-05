@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: quiz-anthropocene\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-29 15:34+0200\n"
-"PO-Revision-Date: 2024-05-29 16:00\n"
+"PO-Revision-Date: 2024-06-05 19:32\n"
 "Last-Translator: Didier Quirin <didierquirin@gmail.com>\n"
 "Language-Team: Italian\n"
 "Language: it\n"
@@ -104,11 +104,11 @@ msgstr "Nuovo collaboratore! <i>{user_name}</i>"
 
 #, python-brace-format
 msgid "Last week stats: {question_answer_count} questions answered, {quiz_answer_count} quizs completed, {comment_count} new comments"
-msgstr ""
+msgstr "Statistiche dell'ultima settimana: {question_answer_count} domande completate, {quiz_answer_count} quiz completati, {comment_count} nuovi commenti"
 
 #, python-brace-format
 msgid "Last month stats: {question_answer_count} questions answered, {quiz_answer_count} quizs completed, {comment_count} new comments"
-msgstr ""
+msgstr "Statistiche dell'ultimo mese: {question_answer_count} domande completate, {quiz_answer_count} quiz completati, {comment_count} nuovi commenti"
 
 msgid "Language(s)"
 msgstr "Lingua(e)"
@@ -123,7 +123,7 @@ msgid "Category(s)"
 msgstr "Categoria(e)"
 
 msgid "Tag(s)"
-msgstr "Etichetta(i)"
+msgstr "Tag(s)"
 
 msgid "Author(s)"
 msgstr "Autore/i"
