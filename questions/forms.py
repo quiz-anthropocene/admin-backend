@@ -6,7 +6,7 @@ from questions.tables import QUESTION_FIELD_SEQUENCE
 from tags.models import Tag
 
 
-QUESTION_READONLY_FORM_FIELDS = ["validation_status"]
+QUESTION_READONLY_FORM_FIELDS = []  # "validation_status"
 QUESTION_HIDDEN_FORM_FIELDS = ["answer_image_url"]
 QUESTION_REQUIRED_FORM_FIELDS = [
     "answer_choice_a",
@@ -22,7 +22,7 @@ QUESTION_FORM_FIELDS = [
 class QuestionCreateForm(forms.ModelForm):
     class Meta:
         model = Question
-        fields = QUESTION_FORM_FIELDS + QUESTION_READONLY_FORM_FIELDS
+        fields = QUESTION_FORM_FIELDS + QUESTION_READONLY_FORM_FIELDS + ["validation_status"]
         widgets = {
             "text": forms.Textarea(attrs={"rows": 1}),
             "hint": forms.Textarea(attrs={"rows": 1}),
@@ -50,4 +50,3 @@ class QuestionCreateForm(forms.ModelForm):
 class QuestionEditForm(QuestionCreateForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields["validation_status"].disabled = False

@@ -252,6 +252,14 @@ class QuestionCreateView(ContributorUserRequiredMixin, SuccessMessageMixin, Crea
     success_url = reverse_lazy("questions:list")
     # success_message = ""
 
+    def get_form(self, *args, **kwargs):
+        """
+        Override some default form field behavior
+        """
+        form = super().get_form(self.form_class)
+        form.fields["validation_status"].choices = constants.QUESTION_CREATE_VALIDATION_STATUS_CHOICES
+        return form
+
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.author = self.request.user
