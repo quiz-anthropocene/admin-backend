@@ -4,6 +4,7 @@ from django.forms import NumberInput
 from django.utils.translation import gettext_lazy as _
 
 from questions.models import Question
+from quizs.models import Quiz
 from tags.models import Tag
 
 
@@ -18,6 +19,7 @@ TEXT_SEARCH_PLACEHOLDER = (
 class QuestionFilter(django_filters.FilterSet):
     id = django_filters.NumberFilter(widget=NumberInput(attrs={"min": 0}))
     tags = django_filters.ModelMultipleChoiceFilter(queryset=Tag.objects.all())
+    quizs = django_filters.ModelMultipleChoiceFilter(queryset=Quiz.objects.all())
     q = django_filters.CharFilter(
         label=_("Text search"),
         method="text_search",
@@ -36,6 +38,7 @@ class QuestionFilter(django_filters.FilterSet):
             "author",
             "validation_status",
             "visibility",
+            "quizs",
             "q",
         ]
 
