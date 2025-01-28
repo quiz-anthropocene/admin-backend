@@ -4,6 +4,28 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Voir les [Issues](https://github.com/quiz-anthropocene/know-your-planet/issues) et le Board.
 
+## [2.6.0](https://github.com/quiz-anthropocene/admin-backend/compare/v2.5.0...v2.6.0) (2025-01-28)
+
+
+### Features
+
+* **author card:** allow a contributor to create its author card ([#1999](https://github.com/quiz-anthropocene/admin-backend/issues/1999)) ([8822d55](https://github.com/quiz-anthropocene/admin-backend/commit/8822d55aaef570e41c4dd83aa08e76f8423ebc14))
+* **author card:** allow a contributor to edit its author card ([#2007](https://github.com/quiz-anthropocene/admin-backend/issues/2007)) ([eb51690](https://github.com/quiz-anthropocene/admin-backend/commit/eb51690985ae646ca7197441355d81b765edb79e))
+* **Questions:** Admin: new filter on quizs field (M2M multiple choice) ([#2017](https://github.com/quiz-anthropocene/admin-backend/issues/2017)) ([ae9606e](https://github.com/quiz-anthropocene/admin-backend/commit/ae9606ef37cf5b64ecbf9e76643ec6b91ef833bb))
+* **questions:** allow an admin to add a comment ([#2012](https://github.com/quiz-anthropocene/admin-backend/issues/2012)) ([50a1964](https://github.com/quiz-anthropocene/admin-backend/commit/50a19640c8b7083337083298d5b99aef079b5e3b))
+* **questions:** new QuestionRelationship model to make links between questions ([#2009](https://github.com/quiz-anthropocene/admin-backend/issues/2009)) ([f38fe8c](https://github.com/quiz-anthropocene/admin-backend/commit/f38fe8cc48b7e768b8e380faf2bfdd23dbf5ea8d))
+* **quizs:** allow an admin to add a comment ([#2014](https://github.com/quiz-anthropocene/admin-backend/issues/2014)) ([8f37adf](https://github.com/quiz-anthropocene/admin-backend/commit/8f37adf434313aa7c129d755013197f15d2b1d75))
+* scripts to import questions & quizs ([#2010](https://github.com/quiz-anthropocene/admin-backend/issues/2010)) ([7e4e44e](https://github.com/quiz-anthropocene/admin-backend/commit/7e4e44e2f01cd842cc883d38b727986af0e23f81))
+
+
+### Bug Fixes
+
+* fix truncate with ellipsis method ([8470174](https://github.com/quiz-anthropocene/admin-backend/commit/8470174003f05a77d952deaf67e43f93c3d60438))
+* **l10n:** improve crowdin.yml. ref [#2000](https://github.com/quiz-anthropocene/admin-backend/issues/2000) ([335aaac](https://github.com/quiz-anthropocene/admin-backend/commit/335aaaca1a258f9d0897a909af31cfeaeac5caf8))
+* **l10n:** run makmessages with extra parameters to avoid conflicts with crowdin ([8f5579d](https://github.com/quiz-anthropocene/admin-backend/commit/8f5579d48b3dfec457863ceedb8c9d3d8a984505))
+* small adjustement after refactor. ref [#2011](https://github.com/quiz-anthropocene/admin-backend/issues/2011) ([323abd3](https://github.com/quiz-anthropocene/admin-backend/commit/323abd37a712dc086f982e1a652e78c73f54e9e3))
+* tentative fix of dependencies update. ref [#1996](https://github.com/quiz-anthropocene/admin-backend/issues/1996) ([e496943](https://github.com/quiz-anthropocene/admin-backend/commit/e496943e363a0d67724193cea7154ab1cf53dd72))
+
 ## [2.5.0](https://github.com/quiz-anthropocene/admin-backend/compare/v2.4.0...v2.5.0) (2024-02-20)
 
 Setup release-please
