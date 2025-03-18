@@ -61,6 +61,16 @@ class Configuration(SingletonModel):
         blank=True,
         help_text="Le lien vers la page HelloAsso de l'association",
     )
+    office_address = models.CharField(
+        max_length=255,
+        blank=True,
+        help_text="L'adresse du bureau de l'association",
+    )
+    office_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="Le lien vers la page du bureau de l'association",
+    )
 
     # timestamps
     daily_stat_last_aggregated = models.DateTimeField(
