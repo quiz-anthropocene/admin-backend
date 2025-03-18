@@ -43,7 +43,7 @@ jobs:
           pip install --upgrade pipenv
 
       - name: Cache pip
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           # This path is specific to Ubuntu
           path: ~/.cache/pip
@@ -53,7 +53,7 @@ jobs:
             ${{ runner.os }}-pip-
 
       - name: Cache pipenv
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pipenv
           key: ${{ runner.os }}-pipenv-${{ hashFiles('Pipfile.lock') }}
@@ -61,7 +61,7 @@ jobs:
             ${{ runner.os }}-pipenv-
 
       - name: Cache pip-tools
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pip-tools
           key: ${{ runner.os }}-piptools-${{ hashFiles('**/Pipfile.lock') }}
@@ -70,7 +70,7 @@ jobs:
 
       - name: Cache virtualenv
         id: cache-venv
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ~/.local/share/virtualenvs
           key: ${{ runner.os }}-venv-${{ hashFiles('**/Pipfile.lock') }}
