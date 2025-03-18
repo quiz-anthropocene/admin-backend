@@ -16,6 +16,7 @@ class Configuration(SingletonModel):
         help_text="La tagline de l'application",
     )
     application_about = RichTextField(blank=True, help_text="A propos de l'application")
+
     # links
     application_open_source_code_url = models.URLField(
         max_length=500,
@@ -36,6 +37,7 @@ class Configuration(SingletonModel):
         blank=True,
         help_text="Le lien vers le test EcoIndex.fr du frontend",
     )
+
     # social links
     application_facebook_url = models.URLField(
         max_length=500,
@@ -52,6 +54,14 @@ class Configuration(SingletonModel):
         blank=True,
         help_text="Le lien vers la page Linkedin de l'application",
     )
+
+    # ngo
+    helloasso_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="Le lien vers la page HelloAsso de l'association",
+    )
+
     # timestamps
     daily_stat_last_aggregated = models.DateTimeField(
         null=True,
