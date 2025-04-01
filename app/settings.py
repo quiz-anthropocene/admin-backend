@@ -209,6 +209,8 @@ CORS_ORIGIN_WHITELIST = [
     "https://quizanthropocene.fr",
     "https://admin.quizanthropocene.fr",
     "https://quiz-anthropocene.osc-fr1.scalingo.io",
+    # for S3
+    "https://quiz-anthropocene.s3.fr-par.scw.cloud",
 ]
 
 CORS_ORIGIN_REGEX_WHITELIST = [
