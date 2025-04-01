@@ -1,12 +1,17 @@
+"""
+boto3 doc
+https://boto3.amazonaws.com/v1/documentation/api/latest/guide/collections.html
+
+bucket = s3.get_bucket()
+s3.get_bucket_cors(bucket)
+s3.get_bucket_policy(bucket)
+"""
+
 import json
 
 import boto3
 from botocore.client import Config
 from django.conf import settings
-
-
-# boto3 doc
-# https://boto3.amazonaws.com/v1/documentation/api/latest/guide/collections.html
 
 
 API_CONNECTION_DICT = {
@@ -32,7 +37,7 @@ DEFAULT_CORS_CONFIGURATION = {
 }
 
 DEFAULT_POLICY_CONFIGURATION = {
-    "Version": "2012-10-17",
+    "Version": "2023-04-17",
     "Statement": [
         {
             "Sid": "AllowPublicRead",
@@ -42,18 +47,11 @@ DEFAULT_POLICY_CONFIGURATION = {
             "Resource": f"{settings.S3_BUCKET_NAME}/*",
         },
         {
-            "Sid": "DenyPublicUpdate",
-            "Effect": "Deny",
-            "Principal": "*",
-            "Action": "s3:PutObject",
-            "Resource": f"{settings.S3_BUCKET_NAME}/*",
-        },
-        {
-            "Sid": "DenyPublicDelete",
-            "Effect": "Deny",
-            "Principal": "*",
-            "Action": "s3:DeleteObject",
-            "Resource": f"{settings.S3_BUCKET_NAME}/*",
+            "Sid": "AllowPrivateReadAndUpdate",
+            "Effect": "Allow",
+            "Principal": {"SCW": f"user_id:{settings.S3_USER_ID}"},
+            "Action": ["s3:ListBucket", "s3:PutObject", "s3:GetBucketCORS", "s3:PutBucketCORS"],
+            "Resource": [f"{settings.S3_BUCKET_NAME}", f"{settings.S3_BUCKET_NAME}/*"],
         },
     ],
 }
