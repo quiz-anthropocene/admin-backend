@@ -50,7 +50,7 @@ DEFAULT_POLICY_CONFIGURATION = {
             "Sid": "AllowPrivateReadAndUpdate",
             "Effect": "Allow",
             "Principal": {"SCW": f"user_id:{settings.S3_USER_ID}"},
-            "Action": ["s3:ListBucket", "s3:PutObject", "s3:GetBucketCORS", "s3:PutBucketCORS"],
+            "Action": "*",
             "Resource": [f"{settings.S3_BUCKET_NAME}", f"{settings.S3_BUCKET_NAME}/*"],
         },
     ],
