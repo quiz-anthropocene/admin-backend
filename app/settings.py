@@ -291,6 +291,7 @@ S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME", "set-s3-bucket-name")
 S3_BUCKET_REGION = os.getenv("S3_BUCKET_REGION", "set-s3-bucket-region")
 S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY", "set-s3-access-key")
 S3_SECRET_KEY = os.getenv("S3_SECRET_KEY", "set-s3-secret-key")
+S3_USER_ID = os.getenv("S3_USER_ID", "set-s3-user-id")
 
 QUESTION_FOLDER_NAME = "questions"
 QUIZ_FOLDER_NAME = "quizs"
