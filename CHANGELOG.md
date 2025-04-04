@@ -4,6 +4,14 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Voir les [Issues](https://github.com/quiz-anthropocene/know-your-planet/issues) et le Board.
 
+## [2.7.0](https://github.com/quiz-anthropocene/admin-backend/compare/v2.6.0...v2.7.0) (2025-04-04)
+
+
+### Features
+
+* **Configuration:** new helloasso_url field ([#2018](https://github.com/quiz-anthropocene/admin-backend/issues/2018)) ([ffb4baf](https://github.com/quiz-anthropocene/admin-backend/commit/ffb4bafd7a375bdccd0cf79882da69b206895d03))
+* **Configuration:** new office_address & office_url fields ([#2021](https://github.com/quiz-anthropocene/admin-backend/issues/2021)) ([3d5f330](https://github.com/quiz-anthropocene/admin-backend/commit/3d5f330a294b45901de72f5d5b36c94e31b2f97b))
+
 ## [2.6.0](https://github.com/quiz-anthropocene/admin-backend/compare/v2.5.0...v2.6.0) (2025-01-28)
 
 
