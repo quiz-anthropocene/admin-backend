@@ -15,7 +15,7 @@ django-bootstrap5 = "~=23.3"
 django-ckeditor = "~=6.7.0"
 django-cors-headers = "~=4.2.0"
 django-extensions = "~=3.2.3"
-django-fieldsets-with-inlines = "~=0.6"
+django-fieldsets-with-inlines = { git = "https://github.com/raphodn/django-fieldsets-with-inlines.git", branch = "master" }
 django-filter = "~=23.3"
 django-import-export = "~=3.3.1"
 django-simple-history = "~=3.4.0"
