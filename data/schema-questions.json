@@ -1,0 +1,185 @@
+{
+    "$schema": "https://frictionlessdata.io/schemas/table-schema.json",
+    "encoding": "utf-8",
+    "fields": [
+        {
+            "name": "text",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "hint",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "type",
+            "type": "string",
+            "required": true,
+            "choices": [
+                "QCM",
+                "QCM-RM",
+                "VF"
+            ]
+        },
+        {
+            "name": "difficulty",
+            "type": "integer",
+            "required": true,
+            "choices": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        {
+            "name": "language",
+            "type": "string",
+            "required": true,
+            "choices": [
+                "FRENCH",
+                "ENGLISH",
+                "SPANISH",
+                "ITALIAN",
+                "GERMAN"
+            ]
+        },
+        {
+            "name": "answer_choice_a",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_choice_b",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_choice_c",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_choice_d",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_correct",
+            "type": "string",
+            "required": false,
+            "choices": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "ab",
+                "ac",
+                "ad",
+                "bc",
+                "bd",
+                "cd",
+                "abc",
+                "abd",
+                "acd",
+                "bcd",
+                "abcd"
+            ]
+        },
+        {
+            "name": "has_ordered_answers",
+            "type": "boolean",
+            "required": true
+        },
+        {
+            "name": "answer_explanation",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_audio_url",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_audio_url_text",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_video_url",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_video_url_text",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_source_accessible_url",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_source_accessible_url_text",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_source_scientific_url",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_source_scientific_url_text",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_book_recommendation",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_image_url",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_image_url_text",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "answer_extra_info",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "visibility",
+            "type": "string",
+            "required": true,
+            "choices": [
+                "PUBLIC",
+                "HIDDEN",
+                "PRIVATE"
+            ]
+        },
+        {
+            "name": "author_certify_necessary_rights",
+            "type": "boolean",
+            "required": true
+        },
+        {
+            "name": "author_agree_commercial_use",
+            "type": "boolean",
+            "required": true
+        }
+    ],
+    "homepage": "https://github.com/quizanthropocene",
+    "name": "schema-questions",
+    "path": "https://raw.githubusercontent.com/quizanthropocene/admin-backend/refs/heads/master/data/schema-questions.json"
+}
