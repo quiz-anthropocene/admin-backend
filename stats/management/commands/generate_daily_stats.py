@@ -125,9 +125,9 @@ class Command(BaseCommand):
                     date_hour_stat_from_quiz_count = date_hour_df[date_hour_df["source"] == "quiz"].shape[0]
                     # update daily stat hour count
                     daily_stat.hour_split[str(date_hour_unique)]["question_answer_count"] += date_hour_stat_count
-                    daily_stat.hour_split[str(date_hour_unique)][
-                        "question_answer_from_quiz_count"
-                    ] += date_hour_stat_from_quiz_count
+                    daily_stat.hour_split[str(date_hour_unique)]["question_answer_from_quiz_count"] += (
+                        date_hour_stat_from_quiz_count
+                    )
 
                 # save daily stat
                 daily_stat.save()
@@ -200,9 +200,9 @@ class Command(BaseCommand):
                     date_hour_feedback_from_quiz_count = date_hour_df[date_hour_df["source"] == "quiz"].shape[0]
                     # update daily stat hour count
                     daily_stat.hour_split[str(date_hour_unique)]["question_feedback_count"] += date_hour_feedback_count
-                    daily_stat.hour_split[str(date_hour_unique)][
-                        "question_feedback_from_quiz_count"
-                    ] += date_hour_feedback_from_quiz_count
+                    daily_stat.hour_split[str(date_hour_unique)]["question_feedback_from_quiz_count"] += (
+                        date_hour_feedback_from_quiz_count
+                    )
 
                 # save daily stat
                 daily_stat.save()

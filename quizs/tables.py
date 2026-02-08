@@ -24,9 +24,9 @@ class QuizTable(tables.Table):
     introduction = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.introduction}})
     conclusion = RichTextEllipsisColumn(attrs={"td": {"title": lambda record: record.conclusion}})
     authors = tables.ManyToManyColumn(
-        transform=lambda author: format_html(f'<span class="badge bg-primary">{author.full_name}</span></a>')
-        if author
-        else "",
+        transform=lambda author: (
+            format_html(f'<span class="badge bg-primary">{author.full_name}</span></a>') if author else ""
+        ),
         separator=" ",
     )
     tags = tables.ManyToManyColumn(
@@ -74,17 +74,24 @@ class QuizQuestionTable(tables.Table):
         linkify=lambda record: record.question.get_absolute_url(),
     )
     question_text = RichTextEllipsisColumn(
-        accessor="question.text", attrs={"td": {"title": lambda record: record.question.text}}
+        accessor="question.text",
+        attrs={"td": {"title": lambda record: record.question.text}},
     )
-    question_type = ChoiceColumn(verbose_name=Question._meta.get_field("type").verbose_name, accessor="question.type")
+    question_type = ChoiceColumn(
+        verbose_name=Question._meta.get_field("type").verbose_name,
+        accessor="question.type",
+    )
     question_author = ChoiceColumn(
-        verbose_name=Question._meta.get_field("author").verbose_name, accessor="question.author"
+        verbose_name=Question._meta.get_field("author").verbose_name,
+        accessor="question.author",
     )
     question_validation_status = ChoiceColumn(
-        verbose_name=Question._meta.get_field("validation_status").verbose_name, accessor="question.validation_status"
+        verbose_name=Question._meta.get_field("validation_status").verbose_name,
+        accessor="question.validation_status",
     )
     question_visibility = ChoiceColumn(
-        verbose_name=Question._meta.get_field("visibility").verbose_name, accessor="question.visibility"
+        verbose_name=Question._meta.get_field("visibility").verbose_name,
+        accessor="question.visibility",
     )
 
     class Meta:

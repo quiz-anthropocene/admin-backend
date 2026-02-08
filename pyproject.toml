@@ -40,29 +40,27 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "black",
     "coverage",
     "factory-boy",
-    "flake8",
     "freezegun",
-    "isort",
     "pre-commit",
+    "ruff",
 ]
 
-[tool.black]
+[tool.ruff]
 line-length = 119
+target-version = "py39"
+exclude = [".git", "*migrations*", ".venv", "venv"]
 
-[tool.flake8]
-exclude = ".git,*migrations*,.venv,venv,app/settings.py"
-max-line-length = 119
-ignore = "E203, W503"
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = []
 
-[tool.isort]
-combine_as_imports = true
-ensure_newline_before_comments = true
-force_grid_wrap = 0
-include_trailing_comma = true
-lines_after_imports = 2
-line_length = 119
-multi_line_output = 3
-use_parentheses = true
+[tool.ruff.lint.per-file-ignores]
+"**/migrations/**" = ["E501", "F401"]
+"app/settings.py" = ["E501"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+lines-after-imports = 2
+force-wrap-aliases = true

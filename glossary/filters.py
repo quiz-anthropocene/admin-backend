@@ -5,7 +5,7 @@ from django.utils.translation import gettext_lazy as _
 from glossary.models import GlossaryItem
 
 
-TEXT_SEARCH_PLACEHOLDER = f"{_('In the following fields:')} " f"{GlossaryItem._meta.get_field('name').verbose_name}"
+TEXT_SEARCH_PLACEHOLDER = f"{_('In the following fields:')} {GlossaryItem._meta.get_field('name').verbose_name}"
 
 
 class GlossaryItemFilter(django_filters.FilterSet):

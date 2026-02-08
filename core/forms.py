@@ -13,12 +13,24 @@ def form_filters_to_list(form_cleaned_data, with_delete_url=False):
     """
     form_filters_list = list()
 
-    for (key, value) in form_cleaned_data.items():
+    for key, value in form_cleaned_data.items():
         if type(value) is list:
             for item in value:
-                form_filters_list.append({"key": key, "value": str(item), "value_id": getattr(item, "id", None)})
+                form_filters_list.append(
+                    {
+                        "key": key,
+                        "value": str(item),
+                        "value_id": getattr(item, "id", None),
+                    }
+                )
         else:
-            form_filters_list.append({"key": key, "value": str(value), "value_id": getattr(value, "id", None)})
+            form_filters_list.append(
+                {
+                    "key": key,
+                    "value": str(value),
+                    "value_id": getattr(value, "id", None),
+                }
+            )
 
     if with_delete_url:
         # first loop to replace the FK/M2M values with their value_ids

@@ -24,7 +24,9 @@ router.register(r"questions/types", QuestionTypeViewSet, basename="question-type
 router.register(r"questions/difficulties", QuestionDifficultyViewSet, basename="question-difficulty")
 router.register(r"questions/languages", QuestionLanguageViewSet, basename="question-language")
 router.register(
-    r"questions/validation-status", QuestionValidationStatusViewSet, basename="question-validation-status"
+    r"questions/validation-status",
+    QuestionValidationStatusViewSet,
+    basename="question-validation-status",
 )  # noqa
 router.register(r"questions", QuestionViewSet, basename="question")
 router.register(r"quizs", QuizViewSet, basename="quiz")
@@ -40,7 +42,11 @@ urlpatterns = [
     path("newsletter/", views.newsletter, name="newsletter"),
     # Swagger / OpenAPI documentation
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
-    path("docs/", SpectacularSwaggerView.as_view(url_name="api:schema"), name="swagger-ui"),
+    path(
+        "docs/",
+        SpectacularSwaggerView.as_view(url_name="api:schema"),
+        name="swagger-ui",
+    ),
     path("redoc/", SpectacularRedocView.as_view(url_name="api:schema"), name="redoc"),
 ]
 

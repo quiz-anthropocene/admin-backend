@@ -239,9 +239,7 @@ class Command(BaseCommand):
 
         # done
         questions_notion_count = "Nombre de questions dans Notion : ?"
-        questions_scope_count = (
-            f"Nombre de questions prises en compte ici : {len(notion_questions_list_scope)}"  # noqa
-        )
+        questions_scope_count = f"Nombre de questions prises en compte ici : {len(notion_questions_list_scope)}"  # noqa
         # questions_scope_count += f" (de id {notion_questions_list_scope[0]['id']} à id {notion_questions_list_scope[-1]['id']})"  # noqa
         # questions_ids_duplicate_message = f"ids 'en double' : {', '.join([str(question_id) for question_id in questions_ids_duplicate])}"  # noqa
         # questions_ids_missing_message = f"ids 'manquants' : {', '.join([str(question_id) for question_id in questions_ids_missing])}"  # noqa

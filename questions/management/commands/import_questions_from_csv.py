@@ -10,7 +10,14 @@ from quizs.models import Quiz, QuizQuestion
 
 
 MODEL_FIELDS = [field.name for field in Question._meta.fields]
-FIELDS_TO_IGNORE = ["id", "validation_status", "answer_image_url", "answer_video_url", "created_at", "updated_at"]
+FIELDS_TO_IGNORE = [
+    "id",
+    "validation_status",
+    "answer_image_url",
+    "answer_video_url",
+    "created_at",
+    "updated_at",
+]
 
 # we set the default language to English (for the name of the CSV columns)
 translation.activate("en")
@@ -30,14 +37,24 @@ def read_csv(file_path):
 class Command(BaseCommand):
     """
     Usage:
-    uv run python manage.py import_questions_from_csv --file <file_path> --language <language> (--type <type>) [--dry-run]  # noqa
-    """
+    uv run python manage.py import_questions_from_csv --file <file_path> --language <language> (--type <type>) [--dry-run]
+    """  # noqa: E501
 
     def add_arguments(self, parser):
         parser.add_argument("--file", type=str, required=True)
-        parser.add_argument("--language", type=str, choices=constants.LANGUAGE_CHOICE_LIST, required=True)
+        parser.add_argument(
+            "--language",
+            type=str,
+            choices=constants.LANGUAGE_CHOICE_LIST,
+            required=True,
+        )
         parser.add_argument("--type", type=str, choices=["traduction"])
-        parser.add_argument("--dry-run", dest="dry_run", action="store_true", help="Dry run (no changes to the DB)")
+        parser.add_argument(
+            "--dry-run",
+            dest="dry_run",
+            action="store_true",
+            help="Dry run (no changes to the DB)",
+        )
 
     def handle(self, *args, **options):
         item_list = read_csv(options["file"])
@@ -68,13 +85,19 @@ class Command(BaseCommand):
                         if "id" in item:
                             from_question = Question.objects.get(id=item["id"])
                             question_relationship = QuestionRelationship.objects.create(
-                                from_question=from_question, to_question=question, status="traduction"
+                                from_question=from_question,
+                                to_question=question,
+                                status="traduction",
                             )
                             self.stdout.write(f"QuestionRelationship created: {question_relationship}")
 
                     if item["quiz_slug"]:
                         quiz = Quiz.objects.get(slug=item["quiz_slug"])
-                        QuizQuestion.objects.create(quiz=quiz, question=question, order=item["quiz_question_order"])
+                        QuizQuestion.objects.create(
+                            quiz=quiz,
+                            question=question,
+                            order=item["quiz_question_order"],
+                        )
 
                 except ValidationError as e:
                     self.stdout.write(f"Error: {e}")

@@ -93,7 +93,11 @@ class Question(models.Model):
     QUESTION_FK_FIELDS = ["category", "author", "validator"]
     QUESTION_M2M_FIELDS = ["tags"]
     QUESTION_RELATION_FIELDS = QUESTION_FK_FIELDS + QUESTION_M2M_FIELDS
-    QUESTION_BOOLEAN_FIELDS = ["has_ordered_answers", "author_certify_necessary_rights", "author_agree_commercial_use"]
+    QUESTION_BOOLEAN_FIELDS = [
+        "has_ordered_answers",
+        "author_certify_necessary_rights",
+        "author_agree_commercial_use",
+    ]
     QUESTION_URL_FIELDS = [
         "answer_audio_url",
         "answer_video_url",
@@ -102,7 +106,13 @@ class Question(models.Model):
     ]
     QUESTION_IMAGE_URL_FIELDS = ["answer_image_url"]
     QUESTION_TIMESTAMP_FIELDS = ["created", "updated"]
-    QUESTION_FLATTEN_FIELDS = ["category_string", "tag_list", "quiz_list", "author_string", "validator_string"]
+    QUESTION_FLATTEN_FIELDS = [
+        "category_string",
+        "tag_list",
+        "quiz_list",
+        "author_string",
+        "validator_string",
+    ]
     QUESTION_READONLY_FIELDS = [
         "author",
         "validator",
@@ -114,7 +124,9 @@ class Question(models.Model):
 
     text = models.TextField(verbose_name=_("Text"), blank=False, help_text=_("Keep it simple"))
     hint = models.TextField(
-        verbose_name=_("Hint"), blank=True, help_text=_("Text that the user can decide to display to help him")
+        verbose_name=_("Hint"),
+        blank=True,
+        help_text=_("Text that the user can decide to display to help him"),
     )
     type = models.CharField(
         verbose_name=_("Type"),
@@ -249,10 +261,12 @@ class Question(models.Model):
     )
 
     author_certify_necessary_rights = models.BooleanField(
-        verbose_name=_("I certify that I have the necessary rights to publish and share this content"), default=True
+        verbose_name=_("I certify that I have the necessary rights to publish and share this content"),
+        default=True,
     )
     author_agree_commercial_use = models.BooleanField(
-        verbose_name=_("I agree to a possible commercial use by the association of this content"), default=True
+        verbose_name=_("I agree to a possible commercial use by the association of this content"),
+        default=True,
     )
 
     created = models.DateTimeField(verbose_name=_("Creation date"), default=timezone.now)
@@ -260,8 +274,18 @@ class Question(models.Model):
 
     # flatten relations
     category_string = models.CharField(verbose_name=_("Category"), max_length=50, blank=True)
-    tag_list = ArrayField(verbose_name=_("Tags"), base_field=models.CharField(max_length=50), blank=True, default=list)
-    quiz_list = ArrayField(verbose_name=_("Quizs"), base_field=models.PositiveIntegerField(), blank=True, default=list)
+    tag_list = ArrayField(
+        verbose_name=_("Tags"),
+        base_field=models.CharField(max_length=50),
+        blank=True,
+        default=list,
+    )
+    quiz_list = ArrayField(
+        verbose_name=_("Quizs"),
+        base_field=models.PositiveIntegerField(),
+        blank=True,
+        default=list,
+    )
     author_string = models.CharField(verbose_name=_("Author"), max_length=300, blank=True)
     validator_string = models.CharField(verbose_name=_("Validator"), max_length=300, blank=True)
 
@@ -413,7 +437,7 @@ class Question(models.Model):
             # > category rules
             if self.category is None:
                 error_message = (
-                    f"{get_verbose_name(self, 'category')} : '{self.category}' n'est pas une catégorie valide."
+                    f"{get_verbose_name(self, 'category')} : '{self.category}' n'est pas une catégorie valide."  # noqa
                 )
                 validation_errors = utilities.add_validation_error(validation_errors, "category", error_message)
             # > relation fields: "category" & "tags" ? no need
@@ -478,7 +502,7 @@ def question_validate_fields(sender, instance, **kwargs):
     if kwargs.get("raw"):
         Question.clean(instance)
     if kwargs.get("raw") and not getattr(instance, "id"):
-        raise ValidationError({"id": f"Valeur : 'empty'. " f"Question : {instance.id}"})
+        raise ValidationError({"id": f"Valeur : 'empty'. Question : {instance.id}"})
 
 
 @receiver(m2m_changed, sender=Question.tags.through)
