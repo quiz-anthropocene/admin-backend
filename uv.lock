@@ -675,16 +675,16 @@ wheels = [
 
 [[package]]
 name = "django"
-version = "4.2.9"
+version = "4.2.28"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "asgiref" },
     { name = "sqlparse" },
     { name = "tzdata", marker = "sys_platform == 'win32'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ef/16/d1f016f8e65d300e23a9745ca849e657999dc1a5e491e5347579308593d2/Django-4.2.9.tar.gz", hash = "sha256:12498cc3cb8bc8038539fef9e90e95f507502436c1f0c3a673411324fa675d14", size = 10428500, upload-time = "2024-01-02T09:16:24.448Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fa/a9/25b75b11a4c7a6efe1661c181afe504992e0659ca6eedb72a065cdd91a25/django-4.2.28.tar.gz", hash = "sha256:a4b9cd881991add394cafa8bb3b11ad1742d1e1470ba99c3ef53dc540316ccfe", size = 10464933, upload-time = "2026-02-03T13:55:27.686Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/59/7c/e11e300ed554f8626b75eae9bb8f450f830daefb8b40681873ab54d9eaa8/Django-4.2.9-py3-none-any.whl", hash = "sha256:2cc2fc7d1708ada170ddd6c99f35cc25db664f165d3794bc7723f46b2f8c8984", size = 7991172, upload-time = "2024-01-02T09:16:15.344Z" },
+    { url = "https://files.pythonhosted.org/packages/68/20/6d0808bc7500a6c654eae17b53f791a50af2c3f3ac4f328cbec324948c31/django-4.2.28-py3-none-any.whl", hash = "sha256:49a23c1b83ef31525f8d71a57b040f91d34660edb3f086280a8519855655ed3c", size = 7995543, upload-time = "2026-02-03T13:55:09.798Z" },
 ]
 
 [[package]]
@@ -2409,7 +2409,7 @@ requires-dist = [
     { name = "certifi", specifier = ">=2022.12.7" },
     { name = "coverage", marker = "extra == 'dev'" },
     { name = "dj-database-url", specifier = ">=1.2.0" },
-    { name = "django", specifier = "==4.2.9" },
+    { name = "django", specifier = "==4.2.28" },
     { name = "django-anymail", extras = ["sendinblue"], specifier = "~=10.1" },
     { name = "django-autocomplete-light", specifier = "~=3.9.7" },
     { name = "django-bootstrap5", specifier = "~=23.3" },
