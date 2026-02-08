@@ -117,7 +117,7 @@ View folder [quiz-anthropocene/public-frontend/data/architecture](https://github
 
 #### Install the application
 
-- You need Python 3.9 & Pipenv already installed.
+- You need Python 3.9 & `uv` already installed
 - Clone the code locally (you can also Fork the project if you plan to add modifications and do PR)
     ```
     git clone git@github.com:quiz-anthropocene/know-your-planet.git
@@ -125,7 +125,7 @@ View folder [quiz-anthropocene/public-frontend/data/architecture](https://github
 - Install Backend dependencies
     ```
     cd backend
-    pipenv sync
+    uv sync
     ```
 - Duplicate file `backend/.env.example` and rename into `backend/.env`
 - Install [PostgreSQL](https://www.postgresql.org)
@@ -140,16 +140,16 @@ View folder [quiz-anthropocene/public-frontend/data/architecture](https://github
     \* If you haven't created a USER to login to postgresql, please do before the previous commands. Alternatively, during postgresql installation, you need to choose a superuser (postgres) password and you just need to add '-U postgres' to the previous commands.
 - Start migrations
     ```
-    pipenv run python manage.py migrate
+    uv run python manage.py migrate
     ```
     \* Go to the Windows section if you have an issue with a Windows environment
 - Load the database
     ```
-    pipenv run python manage.py init_db_from_yaml --with-sql-reset
+    uv run python manage.py init_db_from_yaml --with-sql-reset
     ```
 - Install pre-commit git hook
     ```
-    pre-commit install
+    uv run pre-commit install
     ```
 \* Go to the Windows section if you have an issue with a Windows environment
 
@@ -157,7 +157,7 @@ View folder [quiz-anthropocene/public-frontend/data/architecture](https://github
 
 ```
 cd backend
-pipenv run python manage.py runserver
+uv run python manage.py runserver
 ```
 
 You can reach the backen at url `http://localhost:8000`
@@ -169,7 +169,7 @@ You can reach the API documentation at url `http://localhost:8000/api/docs/`
 First start by creating an admin user
 ```
 cd backend
-pipenv run python manage.py createsuperuser --username admin@email.com --email admin@email.com
+uv run python manage.py createsuperuser --username admin@email.com --email admin@email.com
 ```
 
 Start the backend and go to url `http://localhost:8000/django`
@@ -178,7 +178,7 @@ Start the backend and go to url `http://localhost:8000/django`
 
 Tests
 ```
-pipenv run python manage.py test
+uv run python manage.py test
 ```
 
 Linting ? with pre-commit
@@ -221,7 +221,7 @@ python manage.py compilemessages
 
 ### Other useful commands
 
-Note : for the backend, every command should start with `pipenv run`
+Note : for the backend, every command should start with `uv run`
 
 #### Backend commands
 
@@ -295,23 +295,33 @@ pip install pygraphviz
 python manage.py graph_models -a -X ContentType,LogEntry,AbstractUser,User,AbstractBaseSession,Session,Group,Permission -o graph.png
 ```
 
-#### Pipfile
+#### uv
 
 Install dependencies
 ```
-pipenv sync
+uv sync
 ```
 
 Update dependencies
 ```
-pipenv update
-// Runs $ pipenv lock then $ pipenv sync
+uv lock --upgrade
+uv sync
 ```
 
 Update a specific package
 ```
-// First edit the Pipfile
-pipenv install
+// First edit the pyproject.toml
+uv sync
+```
+
+Add a new package
+```
+uv add <package-name>
+```
+
+Add a development package
+```
+uv add --dev <package-name>
 ```
 
 #### Other commands
@@ -328,12 +338,12 @@ Resize images (PNG)
 
 You might have encoding issues with Windows during database import for example
 ```
-pipenv run python -X utf8 manage.py init_db_from_yaml --with-sql-reset
+uv run python -X utf8 manage.py init_db_from_yaml --with-sql-reset
 ```
 
 - Install pre-commit
 ```
-pip install pre-commit
+uv add --dev pre-commit
 ```
 
 Error `UnicodeDecodeError: charmap codec can't decode byte`

@@ -41,6 +41,7 @@ TESTING = "test" in sys.argv or "pytest" in sys.argv[0]
 
 ALLOWED_HOSTS = [
     "localhost",
+    "127.0.0.1",
     "admin.quizanthropocene.fr",
     "quiz-anthropocene.osc-fr1.scalingo.io",
 ]
