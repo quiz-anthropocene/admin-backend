@@ -112,7 +112,8 @@ Voir dans le dossier [quiz-anthropocene/public-frontend/data/architecture](https
 
 #### Installer l'application
 
-- Vous devez avoir Python 3.9 & Pipenv installés sur votre machine.
+- Vous devez avoir Python 3.9 & uv installés sur votre machine.
+  - Installer uv : `curl -LsSf https://astral.sh/uv/install.sh | sh` (ou voir la [documentation d'installation uv](https://docs.astral.sh/uv/getting-started/installation/))
 - Clonez le code en local (vous pouvez aussi Fork le projet si vous prévoyez d'y apporter des modifications et effectuer une PR)
     ```
     git clone git@github.com:quiz-anthropocene/know-your-planet.git
@@ -120,7 +121,7 @@ Voir dans le dossier [quiz-anthropocene/public-frontend/data/architecture](https
 - Installez les dépendances du Backend
     ```
     cd backend
-    pipenv sync
+    uv sync
     ```
 - Dupliquer le fichier `backend/.env.example` et le renommer en `backend/.env`
 - Installez [PostgreSQL](https://www.postgresql.org)
@@ -135,16 +136,16 @@ Voir dans le dossier [quiz-anthropocene/public-frontend/data/architecture](https
     \* Si vous n'avez pas créé de USER pour accéder à postgresql, faites le avant les commandes précédentes. Alternativement, lors de l'installation de postgresql, l'utilisateur doit choisir un mot de passe superuser (postgres) et il suffit de rajouter '-U postgres' aux commandes précédentes.
 - Lancez les migrations
     ```
-    pipenv run python manage.py migrate
+    uv run python manage.py migrate
     ```
     \* Voir section Windows à la fin si cette commande pose problème
 - Chargez la base de donnée
     ```
-    pipenv run python manage.py init_db_from_yaml --with-sql-reset
+    uv run python manage.py init_db_from_yaml --with-sql-reset
     ```
 - Installer le pre-commit git hook
     ```
-    pre-commit install
+    uv run pre-commit install
     ```
 \* Voir section Windows à la fin si cette section pose problème
 
@@ -152,7 +153,7 @@ Voir dans le dossier [quiz-anthropocene/public-frontend/data/architecture](https
 
 ```
 cd backend
-pipenv run python manage.py runserver
+uv run python manage.py runserver
 ```
 
 Le Backend sera accessible à l'url `http://localhost:8000`
@@ -164,7 +165,7 @@ La doc de l'API est visible à l'url `http://localhost:8000/api/docs/`
 Créez d'abord un utilisateur admin
 ```
 cd backend
-pipenv run python manage.py createsuperuser --username admin@email.com --email admin@email.com
+uv run python manage.py createsuperuser --username admin@email.com --email admin@email.com
 ```
 
 Lancez le Backend, et connectez-vous sur `http://localhost:8000/django`
@@ -173,7 +174,7 @@ Lancez le Backend, et connectez-vous sur `http://localhost:8000/django`
 
 Tests
 ```
-pipenv run python manage.py test
+uv run python manage.py test
 ```
 
 Linting ? Avec le pre-commit
@@ -218,7 +219,7 @@ python manage.py compilemessages
 
 ### Autres commandes utiles
 
-Rappel : pour le backend, toutes les commandes doivent commencer par `pipenv run`
+Rappel : pour le backend, toutes les commandes doivent commencer par `uv run`
 
 #### Commandes Backend
 
@@ -292,9 +293,33 @@ pip install pygraphviz
 python manage.py graph_models -a -X ContentType,LogEntry,AbstractUser,User,AbstractBaseSession,Session,Group,Permission -o graph.png
 ```
 
-Update packages
+#### Commandes uv
+
+Installer les dépendances
 ```
-pipenv install --dev
+uv sync
+```
+
+Mettre à jour les dépendances
+```
+uv lock --upgrade
+uv sync
+```
+
+Mettre à jour un package spécifique
+```
+// Modifiez d'abord le pyproject.toml
+uv sync
+```
+
+Ajouter un nouveau package
+```
+uv add <nom-du-package>
+```
+
+Ajouter un package de développement
+```
+uv add --dev <nom-du-package>
 ```
 
 #### Commandes Autres
@@ -311,12 +336,12 @@ Réduire la taille des images (PNG)
 
 Windows peut poser des soucis d'encodage, pour l'étape de charger la base de donnée, entrez la commande
 ```
-pipenv run python -X utf8 manage.py init_db_from_yaml --with-sql-reset
+uv run python -X utf8 manage.py init_db_from_yaml --with-sql-reset
 ```
 
 - Installer pre-commit
 ```
-pip install pre-commit
+uv add --dev pre-commit
 ```
 
 Erreur `UnicodeDecodeError: charmap codec can't decode byte`

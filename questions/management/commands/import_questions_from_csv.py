@@ -30,7 +30,7 @@ def read_csv(file_path):
 class Command(BaseCommand):
     """
     Usage:
-    pipenv run python manage.py import_questions_from_csv --file <file_path> --language <language> (--type <type>) [--dry-run]  # noqa
+    uv run python manage.py import_questions_from_csv --file <file_path> --language <language> (--type <type>) [--dry-run]  # noqa
     """
 
     def add_arguments(self, parser):
