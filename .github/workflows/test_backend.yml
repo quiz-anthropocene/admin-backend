@@ -50,7 +50,7 @@ jobs:
 
       - name: Install python dependencies
         run: |
-          uv sync --frozen
+          uv sync --frozen --extra dev
 
       - name: Run flake8 linting
         run: uv run python -m flake8
