@@ -1,6 +1,6 @@
 from django.core.management import BaseCommand
 
-from api.models import Quiz
+from quizs.models import Quiz
 
 
 class Command(BaseCommand):

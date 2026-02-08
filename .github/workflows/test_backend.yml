@@ -52,8 +52,11 @@ jobs:
         run: |
           uv sync --frozen --extra dev
 
-      - name: Run flake8 linting
-        run: uv run python -m flake8
+      - name: Run ruff linting
+        run: uv run ruff check .
+
+      - name: Run ruff formatting check
+        run: uv run ruff format --check .
 
       - name: Run tests
         run: uv run python manage.py test

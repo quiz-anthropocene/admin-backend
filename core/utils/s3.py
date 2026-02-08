@@ -143,13 +143,19 @@ def upload_object(bucket, object_file_path, s3_object_key):
     """
     in read-mode instead of download-mode: https://stackoverflow.com/a/58641574/4293684
     # alternative
-    resource.meta.client.upload_file(object_file_path, bucket_name, s3_file_key, ExtraArgs={"ACL": "public-read", "ContentType": "image/png"})  # noqa
+    resource.meta.client.upload_file(
+        object_file_path, bucket_name, s3_file_key,
+        ExtraArgs={"ACL": "public-read", "ContentType": "image/png"}
+    )
     """
     object_extension = object_file_path.split(".")[1]
     return bucket.upload_file(
         object_file_path,
         s3_object_key,
-        ExtraArgs={"ACL": "public-read", "ContentType": CONTENT_TYPE_MAPPING[object_extension]},
+        ExtraArgs={
+            "ACL": "public-read",
+            "ContentType": CONTENT_TYPE_MAPPING[object_extension],
+        },
     )
 
 

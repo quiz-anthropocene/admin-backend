@@ -5,7 +5,7 @@ from django.utils.translation import gettext_lazy as _
 from tags.models import Tag
 
 
-TEXT_SEARCH_PLACEHOLDER = f"{_('In the following fields:')} " f"{Tag._meta.get_field('name').verbose_name}"
+TEXT_SEARCH_PLACEHOLDER = f"{_('In the following fields:')} {Tag._meta.get_field('name').verbose_name}"
 
 
 class TagFilter(django_filters.FilterSet):

@@ -170,14 +170,28 @@ class Quiz(models.Model):
 
     # flatten relations
     author_list = ArrayField(
-        verbose_name=_("Authors"), base_field=models.CharField(max_length=50), blank=True, default=list
+        verbose_name=_("Authors"),
+        base_field=models.CharField(max_length=50),
+        blank=True,
+        default=list,
     )
-    tag_list = ArrayField(verbose_name=_("Tags"), base_field=models.CharField(max_length=50), blank=True, default=list)
+    tag_list = ArrayField(
+        verbose_name=_("Tags"),
+        base_field=models.CharField(max_length=50),
+        blank=True,
+        default=list,
+    )
     question_list = ArrayField(
-        verbose_name=_("Questions"), base_field=models.PositiveIntegerField(), blank=True, default=list
+        verbose_name=_("Questions"),
+        base_field=models.PositiveIntegerField(),
+        blank=True,
+        default=list,
     )
     relationship_list = ArrayField(
-        verbose_name=_("Relationships"), base_field=models.CharField(max_length=50), blank=True, default=list
+        verbose_name=_("Relationships"),
+        base_field=models.CharField(max_length=50),
+        blank=True,
+        default=list,
     )
     validator_string = models.CharField(verbose_name=_("Validator"), max_length=300, blank=True)
 
@@ -428,7 +442,7 @@ def quiz_validate_fields(sender, instance, **kwargs):
     # if kwargs.get("raw"):
     #     Quiz.clean(instance) # won't work because Quiz doesn't exist yet, our custom clean() will fail  # noqa
     if kwargs.get("raw") and not getattr(instance, "id"):
-        raise ValidationError({"id": f"Valeur : 'empty'. " f"Quiz: {instance}"})
+        raise ValidationError({"id": f"Valeur : 'empty'. Quiz: {instance}"})
 
 
 @receiver(m2m_changed, sender=Quiz.tags.through)
