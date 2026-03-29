@@ -116,14 +116,13 @@ Voir dans le dossier [quiz-anthropocene/public-frontend/data/architecture](https
   - Installer uv : `curl -LsSf https://astral.sh/uv/install.sh | sh` (ou voir la [documentation d'installation uv](https://docs.astral.sh/uv/getting-started/installation/))
 - Clonez le code en local (vous pouvez aussi Fork le projet si vous prévoyez d'y apporter des modifications et effectuer une PR)
     ```
-    git clone git@github.com:quiz-anthropocene/know-your-planet.git
+    git clone git@github.com:quiz-anthropocene/admin-backend.git
     ```
 - Installez les dépendances du Backend
     ```
-    cd backend
     uv sync
     ```
-- Dupliquer le fichier `backend/.env.example` et le renommer en `backend/.env`
+- Dupliquer le fichier `.env.example` et le renommer en `.env`
 - Installez [PostgreSQL](https://www.postgresql.org)
 - Créez la base de donnée
     ```
@@ -152,7 +151,6 @@ Voir dans le dossier [quiz-anthropocene/public-frontend/data/architecture](https
 #### Lancer l'application
 
 ```
-cd backend
 uv run python manage.py runserver
 ```
 
@@ -164,7 +162,6 @@ La doc de l'API est visible à l'url `http://localhost:8000/api/docs/`
 
 Créez d'abord un utilisateur admin
 ```
-cd backend
 uv run python manage.py createsuperuser --username admin@email.com --email admin@email.com
 ```
 

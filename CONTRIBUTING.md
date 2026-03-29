@@ -117,7 +117,7 @@ View folder [quiz-anthropocene/public-frontend/data/architecture](https://github
 
 #### Install the application
 
-- You need Python 3.10 & `uv` already installed
+- You need Python 3.11 & `uv` already installed
 - Clone the code locally (you can also Fork the project if you plan to add modifications and do PR)
     ```
     git clone git@github.com:quiz-anthropocene/admin-backend.git
