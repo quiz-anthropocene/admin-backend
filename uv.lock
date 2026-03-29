@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.9"
 resolution-markers = [
     "python_full_version >= '3.14' and sys_platform == 'win32'",
@@ -2418,7 +2418,7 @@ dependencies = [
     { name = "whitenoise" },
 ]
 
-[package.optional-dependencies]
+[package.dev-dependencies]
 dev = [
     { name = "coverage", version = "7.10.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "coverage", version = "7.13.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
@@ -2434,7 +2434,6 @@ requires-dist = [
     { name = "asgiref", specifier = ">=3.6.0" },
     { name = "boto3", specifier = ">=1.26.43" },
     { name = "certifi", specifier = ">=2022.12.7" },
-    { name = "coverage", marker = "extra == 'dev'" },
     { name = "dj-database-url", specifier = ">=1.2.0" },
     { name = "django", specifier = "==4.2.28" },
     { name = "django-anymail", extras = ["sendinblue"], specifier = "~=10.1" },
@@ -2452,24 +2451,28 @@ requires-dist = [
     { name = "django-tables2", specifier = "~=2.8.0" },
     { name = "djangorestframework", specifier = "~=3.16.1" },
     { name = "drf-spectacular", specifier = "~=0.29.0" },
-    { name = "factory-boy", marker = "extra == 'dev'" },
-    { name = "freezegun", marker = "extra == 'dev'" },
     { name = "gunicorn", specifier = ">=20.0.1" },
     { name = "ipython", specifier = ">=8.8.0" },
     { name = "pandas", specifier = ">=1.5.2" },
     { name = "pillow", specifier = ">=9.4.0" },
-    { name = "pre-commit", marker = "extra == 'dev'" },
     { name = "psycopg2-binary", specifier = "~=2.9.7" },
     { name = "pygithub", specifier = ">=1.57" },
     { name = "python-dotenv", specifier = "~=1.2.1" },
     { name = "pytz", specifier = ">=2022.7" },
     { name = "pyyaml", specifier = ">=6.0" },
-    { name = "ruff", marker = "extra == 'dev'" },
     { name = "sentry-sdk", specifier = "~=1.31.0" },
     { name = "sqlparse", specifier = ">=0.4.3" },
     { name = "whitenoise", specifier = ">=6.3.0" },
 ]
-provides-extras = ["dev"]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "coverage" },
+    { name = "factory-boy" },
+    { name = "freezegun" },
+    { name = "pre-commit" },
+    { name = "ruff" },
+]
 
 [[package]]
 name = "referencing"

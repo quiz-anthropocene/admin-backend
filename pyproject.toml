@@ -38,7 +38,7 @@ dependencies = [
     "whitenoise>=6.3.0",
 ]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
     "coverage",
     "factory-boy",
