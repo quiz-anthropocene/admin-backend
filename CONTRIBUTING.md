@@ -53,7 +53,7 @@ You can contribute to the project in many ways:
 
 Every question (finalised or in draft) is currently in a shared plateform (Notion.so), which is regularly synchronised with the database.
 
-You can see an export of the whole databse of the application in folder `/data` (Note : this is not the database, just an export).
+You can see an export of the whole databse of the application in folder `/data` (Note: this is not the database, just an export).
 
 You can propose new questions directly in [Contribuer](https://quizanthropocene.fr/contribuer) (TODO translate page and update link).
 
@@ -83,19 +83,19 @@ If you want to add a new feature:
 
 #### Backend
 
-- Our Backend uses Python Django :
+- Our Backend uses Python Django:
   - API with Django Rest Framework
   - Admin console
 - PostgreSQL database
 
 We use the backend to:
-- validate data coming from the share plateform
+- validate data coming from the shared plateform
 - Create new quizzes
 - have an endpoint for stats
 
 #### Frontend
 
-repo : [quiz-anthropocene/public-frontend](https://github.com/quiz-anthropocene/public-frontend)
+repo: [quiz-anthropocene/public-frontend](https://github.com/quiz-anthropocene/public-frontend)
 
 - Our Frontend uses Vue.js
 - Bootstrap 4
@@ -117,7 +117,7 @@ View folder [quiz-anthropocene/public-frontend/data/architecture](https://github
 
 #### Install the application
 
-- You need Python 3.10 & `uv` already installed
+- You need Python 3.11 & `uv` already installed
 - Clone the code locally (you can also Fork the project if you plan to add modifications and do PR)
     ```
     git clone git@github.com:quiz-anthropocene/admin-backend.git
@@ -218,7 +218,7 @@ python manage.py compilemessages
 
 ### Other useful commands
 
-Note : for the backend, every command should start with `uv run`
+Note: for the backend, every command should start with `uv run`
 
 #### Backend commands
 
