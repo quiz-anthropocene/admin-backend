@@ -117,14 +117,13 @@ View folder [quiz-anthropocene/public-frontend/data/architecture](https://github
 
 #### Install the application
 
-- You need Python 3.9 & `uv` already installed
+- You need Python 3.10 & `uv` already installed
 - Clone the code locally (you can also Fork the project if you plan to add modifications and do PR)
     ```
-    git clone git@github.com:quiz-anthropocene/know-your-planet.git
+    git clone git@github.com:quiz-anthropocene/admin-backend.git
     ```
-- Install Backend dependencies
+- Install dependencies
     ```
-    cd backend
     uv sync
     ```
 - Duplicate file `backend/.env.example` and rename into `backend/.env`
@@ -156,11 +155,10 @@ View folder [quiz-anthropocene/public-frontend/data/architecture](https://github
 #### Start the application
 
 ```
-cd backend
 uv run python manage.py runserver
 ```
 
-You can reach the backen at url `http://localhost:8000`
+You can reach the backend at url `http://localhost:8000`
 
 You can reach the API documentation at url `http://localhost:8000/api/docs/`
 
@@ -168,7 +166,6 @@ You can reach the API documentation at url `http://localhost:8000/api/docs/`
 
 First start by creating an admin user
 ```
-cd backend
 uv run python manage.py createsuperuser --username admin@email.com --email admin@email.com
 ```
 

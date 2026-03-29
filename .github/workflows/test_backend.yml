@@ -50,7 +50,7 @@ jobs:
 
       - name: Install python dependencies
         run: |
-          uv sync --frozen --extra dev
+          uv sync --frozen
 
       - name: Run ruff linting
         run: uv run ruff check .
