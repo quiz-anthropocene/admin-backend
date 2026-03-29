@@ -112,7 +112,7 @@ Voir dans le dossier [quiz-anthropocene/public-frontend/data/architecture](https
 
 #### Installer l'application
 
-- Vous devez avoir Python 3.9 & uv installés sur votre machine.
+- Vous devez avoir Python 3.11 & uv installés sur votre machine.
   - Installer uv : `curl -LsSf https://astral.sh/uv/install.sh | sh` (ou voir la [documentation d'installation uv](https://docs.astral.sh/uv/getting-started/installation/))
 - Clonez le code en local (vous pouvez aussi Fork le projet si vous prévoyez d'y apporter des modifications et effectuer une PR)
     ```
