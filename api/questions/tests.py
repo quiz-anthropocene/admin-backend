@@ -59,6 +59,16 @@ class QuestionCreateApiTest(TestCase):
 
         self.assertEqual(response.status_code, 401)
 
+    def test_cannot_create_question_with_invalid_token(self):
+        response = self.client.post(
+            self.url,
+            data={"text": "Question avec token invalide"},
+            format="json",
+            HTTP_AUTHORIZATION="Token invalidtoken",
+        )
+
+        self.assertEqual(response.status_code, 401)
+
     def test_question_create_with_token(self):
         response = self.client.post(
             self.url,
