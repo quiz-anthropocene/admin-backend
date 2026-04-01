@@ -1,14 +1,19 @@
 from django.test import TestCase
 from django.urls import reverse
+from rest_framework.authtoken.models import Token
 
 from contributions.factories import CommentFactory
 from core import constants
 from questions.factories import QuestionFactory
+from questions.models import Question
+from users.factories import UserFactory
 
 
-class QuestionApiTest(TestCase):
+class QuestionListDetailApiTest(TestCase):
     @classmethod
     def setUpTestData(cls):
+        cls.user = UserFactory()
+        cls.token = Token.objects.create(user=cls.user)
         cls.question_public = QuestionFactory(
             visibility=constants.VISIBILITY_PUBLIC, validation_status=constants.VALIDATION_STATUS_TO_VALIDATE
         )
@@ -40,6 +45,43 @@ class QuestionApiTest(TestCase):
             url = reverse("api:question-detail", args=[question.id])
             response = self.client.get(url)
             self.assertEqual(response.status_code, 404)
+
+
+class QuestionCreateApiTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user = UserFactory()
+        cls.token = Token.objects.create(user=cls.user)
+        cls.url = reverse("api:question-list")
+
+    def test_cannot_create_question_without_token(self):
+        response = self.client.post(self.url, data={"text": "Question sans token"}, format="json")
+
+        self.assertEqual(response.status_code, 401)
+
+    def test_cannot_create_question_with_invalid_token(self):
+        response = self.client.post(
+            self.url,
+            data={"text": "Question avec token invalide"},
+            format="json",
+            HTTP_AUTHORIZATION="Token invalidtoken",
+        )
+
+        self.assertEqual(response.status_code, 401)
+
+    def test_question_create_with_token(self):
+        response = self.client.post(
+            self.url,
+            data={"text": "Question avec token"},
+            format="json",
+            HTTP_AUTHORIZATION=f"Token {self.token.key}",
+        )
+
+        self.assertEqual(response.status_code, 201)
+        self.assertEqual(response.data["text"], "Question avec token")
+        question = Question.objects.get(pk=response.data["id"])
+        self.assertEqual(question.author, self.user)
+        self.assertEqual(question.validation_status, constants.VALIDATION_STATUS_DRAFT)
 
 
 class QuestionCommentApiTest(TestCase):

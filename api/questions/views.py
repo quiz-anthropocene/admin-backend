@@ -2,7 +2,9 @@ import random
 
 from drf_spectacular.utils import extend_schema
 from rest_framework import mixins, viewsets
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action, api_view
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 
 from api.contributions.serializers import CommentReadSerializer
@@ -18,10 +20,24 @@ from core import constants
 from questions.models import Question
 
 
-class QuestionViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+class QuestionViewSet(
+    mixins.CreateModelMixin,
+    mixins.ListModelMixin,
+    mixins.RetrieveModelMixin,
+    viewsets.GenericViewSet,
+):
     queryset = Question.objects.public().validated()
     serializer_class = QuestionSerializer
     filterset_class = QuestionFilter
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+    @extend_schema(summary="Créer une nouvelle question", tags=[Question._meta.verbose_name_plural])
+    def create(self, request, *args, **kwargs):
+        return super().create(request, *args, **kwargs)
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
 
     @extend_schema(summary="Lister toutes les questions *validées*", tags=[Question._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
