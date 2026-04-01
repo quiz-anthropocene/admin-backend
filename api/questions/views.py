@@ -2,15 +2,19 @@ import random
 
 from drf_spectacular.utils import extend_schema
 from rest_framework import mixins, viewsets
+from rest_framework.authentication import SessionAuthentication, TokenAuthentication
 from rest_framework.decorators import action, api_view
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from api.contributions.serializers import CommentReadSerializer
+from api.permissions import IsAdministrator
 from api.questions.filters import QuestionFilter
 from api.questions.serializers import (
     QuestionDifficultyChoiceSerializer,
     QuestionFullStringSerializer,
     QuestionSerializer,
+    QuestionUpdateSerializer,
 )
 from api.serializers import SimpleChoiceSerializer
 from contributions.models import Comment
@@ -18,10 +22,37 @@ from core import constants
 from questions.models import Question
 
 
-class QuestionViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
-    queryset = Question.objects.public().validated()
+class QuestionViewSet(
+    mixins.ListModelMixin,
+    mixins.RetrieveModelMixin,
+    mixins.UpdateModelMixin,
+    viewsets.GenericViewSet,
+):
     serializer_class = QuestionSerializer
     filterset_class = QuestionFilter
+
+    def _is_update_action(self):
+        return getattr(self, "action", None) in ("update", "partial_update")
+
+    def get_queryset(self):
+        if self._is_update_action():
+            return Question.objects.all()
+        return Question.objects.public().validated()
+
+    def get_authenticators(self):
+        if self._is_update_action():
+            return [TokenAuthentication(), SessionAuthentication()]
+        return super().get_authenticators()
+
+    def get_permissions(self):
+        if self._is_update_action():
+            return [IsAuthenticated(), IsAdministrator()]
+        return super().get_permissions()
+
+    def get_serializer_class(self):
+        if self._is_update_action():
+            return QuestionUpdateSerializer
+        return QuestionSerializer
 
     @extend_schema(summary="Lister toutes les questions *validées*", tags=[Question._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
@@ -30,6 +61,20 @@ class QuestionViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets
     @extend_schema(summary="Détail d'une question *validée*", tags=[Question._meta.verbose_name_plural])
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, args, kwargs)
+
+    @extend_schema(
+        summary="Modifier une question (administrateur uniquement)",
+        tags=[Question._meta.verbose_name_plural],
+    )
+    def update(self, request, *args, **kwargs):
+        return super().update(request, *args, **kwargs)
+
+    @extend_schema(
+        summary="Modifier partiellement une question (administrateur uniquement)",
+        tags=[Question._meta.verbose_name_plural],
+    )
+    def partial_update(self, request, *args, **kwargs):
+        return super().partial_update(request, *args, **kwargs)
 
     @extend_schema(
         summary="Lister tous les commentaires *publiés* d'une question *validée*",
