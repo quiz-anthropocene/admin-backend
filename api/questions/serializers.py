@@ -3,7 +3,9 @@ from rest_framework import serializers
 from api.categories.serializers import CategorySerializer, CategoryStringSerializer
 from api.tags.serializers import TagSerializer, TagStringSerializer
 from api.users.serializers import UserStringSerializer  # UserSerializer
+from categories.models import Category
 from questions.models import Question
+from tags.models import Tag
 
 
 class QuestionDifficultyChoiceSerializer(serializers.Serializer):
@@ -78,3 +80,51 @@ class QuestionFullObjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
         fields = QUESTION_FIELDS
+
+
+QUESTION_UPDATE_FIELDS = [
+    "id",
+    "text",
+    "hint",
+    "type",
+    "category",
+    "tags",
+    "difficulty",
+    "language",
+    "answer_choice_a",
+    "answer_choice_b",
+    "answer_choice_c",
+    "answer_choice_d",
+    "answer_correct",
+    "has_ordered_answers",
+    "answer_explanation",
+    "answer_audio_url",
+    "answer_audio_url_text",
+    "answer_video_url",
+    "answer_video_url_text",
+    "answer_source_accessible_url",
+    "answer_source_accessible_url_text",
+    "answer_source_scientific_url",
+    "answer_source_scientific_url_text",
+    "answer_book_recommendation",
+    "answer_image_url",
+    "answer_image_url_text",
+    "answer_extra_info",
+    "visibility",
+    "validation_status",
+    "author",
+    "validator",
+    "validation_date",
+    "created",
+    "updated",
+]
+
+
+class QuestionUpdateSerializer(serializers.ModelSerializer):
+    category = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all(), allow_null=True, required=False)
+    tags = serializers.PrimaryKeyRelatedField(queryset=Tag.objects.all(), many=True, required=False)
+
+    class Meta:
+        model = Question
+        fields = QUESTION_UPDATE_FIELDS
+        read_only_fields = ["id", "author", "validator", "validation_date", "created", "updated"]

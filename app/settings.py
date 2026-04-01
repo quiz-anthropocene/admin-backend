@@ -65,6 +65,7 @@ THIRD_PARTY_APPS = [
     "django_bootstrap5",  # django-bootstrap5
     "django_tables2",  # django-tables2
     "rest_framework",  # djangorestframework
+    "rest_framework.authtoken",  # djangorestframework token authentication
     "drf_spectacular",  # drf-spectacular
     "django_extensions",  # django-extensions
     "import_export",  # django-import-export
@@ -342,6 +343,10 @@ DJANGO_TABLES2_PAGE_RANGE = 5
 
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ],
     "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
     "ORDERING_PARAM": "order",
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",

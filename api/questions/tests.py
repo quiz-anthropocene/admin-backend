@@ -1,9 +1,12 @@
 from django.test import TestCase
 from django.urls import reverse
+from rest_framework.authtoken.models import Token
 
 from contributions.factories import CommentFactory
 from core import constants
 from questions.factories import QuestionFactory
+from users.constants import USER_ROLE_ADMINISTRATOR, USER_ROLE_CONTRIBUTOR
+from users.factories import UserFactory
 
 
 class QuestionApiTest(TestCase):
@@ -103,3 +106,66 @@ class QuestionCommentApiTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data["results"]), 1)
         self.assertEqual(len(response.data["results"][0]["replies"]), 1)
+
+
+class QuestionUpdateApiTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user_admin = UserFactory(roles=[USER_ROLE_ADMINISTRATOR])
+        cls.user_contributor = UserFactory(roles=[USER_ROLE_CONTRIBUTOR])
+        cls.token_admin = Token.objects.create(user=cls.user_admin)
+        cls.token_contributor = Token.objects.create(user=cls.user_contributor)
+        cls.question = QuestionFactory(
+            text="Question originale",
+            visibility=constants.VISIBILITY_PUBLIC,
+            validation_status=constants.VALIDATION_STATUS_VALIDATED,
+        )
+
+    def _auth_header(self, token):
+        return {"HTTP_AUTHORIZATION": f"Token {token.key}"}
+
+    def test_update_question_as_admin_with_token(self):
+        url = reverse("api:question-detail", args=[self.question.id])
+        data = {"text": "Texte modifié", "answer_correct": self.question.answer_correct}
+        response = self.client.patch(
+            url, data=data, content_type="application/json", **self._auth_header(self.token_admin)
+        )
+        self.assertEqual(response.status_code, 200)
+        self.question.refresh_from_db()
+        self.assertEqual(self.question.text, "Texte modifié")
+
+    def test_update_question_unauthenticated(self):
+        url = reverse("api:question-detail", args=[self.question.id])
+        data = {"text": "Texte non autorisé"}
+        response = self.client.patch(url, data=data, content_type="application/json")
+        self.assertEqual(response.status_code, 401)
+
+    def test_update_question_as_non_admin(self):
+        url = reverse("api:question-detail", args=[self.question.id])
+        data = {"text": "Texte non autorisé"}
+        response = self.client.patch(
+            url, data=data, content_type="application/json", **self._auth_header(self.token_contributor)
+        )
+        self.assertEqual(response.status_code, 403)
+
+    def test_update_question_not_found(self):
+        url = reverse("api:question-detail", args=[99999])
+        data = {"text": "Texte introuvable"}
+        response = self.client.patch(
+            url, data=data, content_type="application/json", **self._auth_header(self.token_admin)
+        )
+        self.assertEqual(response.status_code, 404)
+
+    def test_update_question_private_as_admin(self):
+        question_private = QuestionFactory(
+            visibility=constants.VISIBILITY_PRIVATE,
+            validation_status=constants.VALIDATION_STATUS_TO_VALIDATE,
+        )
+        url = reverse("api:question-detail", args=[question_private.id])
+        data = {"text": "Question privée modifiée"}
+        response = self.client.patch(
+            url, data=data, content_type="application/json", **self._auth_header(self.token_admin)
+        )
+        self.assertEqual(response.status_code, 200)
+        question_private.refresh_from_db()
+        self.assertEqual(question_private.text, "Question privée modifiée")
