@@ -65,6 +65,7 @@ THIRD_PARTY_APPS = [
     "django_bootstrap5",  # django-bootstrap5
     "django_tables2",  # django-tables2
     "rest_framework",  # djangorestframework
+    "rest_framework.authtoken",  # DRF token authentication — run `python manage.py migrate` after adding
     "drf_spectacular",  # drf-spectacular
     "django_extensions",  # django-extensions
     "import_export",  # django-import-export
@@ -343,6 +344,20 @@ DJANGO_TABLES2_PAGE_RANGE = 5
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        # Token authentication for administrators via the Authorization header:
+        #   Authorization: Token <token>
+        # Generate a token for an admin user with:
+        #   python manage.py drf_create_token <email>
+        # Or from the Django shell:
+        #   from rest_framework.authtoken.models import Token
+        #   from django.contrib.auth import get_user_model
+        #   user = get_user_model().objects.get(email='admin@example.com')
+        #   token, created = Token.objects.get_or_create(user=user)
+        #   print(token.key)
+        "rest_framework.authentication.TokenAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ],
     "ORDERING_PARAM": "order",
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 100,
