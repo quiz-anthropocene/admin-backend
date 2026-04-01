@@ -69,6 +69,7 @@ class UserAdmin(UserAdmin):
         "is_administrator",
         "is_staff",
         "is_superuser",
+        "has_auth_token",
         "last_login",
         "question_count",
         "quiz_count",
@@ -89,6 +90,7 @@ class UserAdmin(UserAdmin):
                     "roles",
                     "is_staff",
                     "is_superuser",
+                    "has_auth_token",
                 )
             },
         ),
@@ -155,6 +157,12 @@ class UserAdmin(UserAdmin):
 
     has_user_card.short_description = "User card"
     has_user_card.boolean = True
+
+    def has_auth_token(self, user):
+        return user.auth_token is not None
+
+    has_auth_token.short_description = "Token ?"
+    has_auth_token.boolean = True
 
     def logs_display(self, tender=None):
         if tender:

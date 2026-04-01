@@ -1,4 +1,5 @@
 from django.test import TestCase
+from rest_framework.authtoken.models import Token
 
 from core import constants
 from questions.factories import QuestionFactory
@@ -125,3 +126,16 @@ class UserModelQuerysetTest(TestCase):
 
     def test_simple_search(self):
         self.assertEqual(User.objects.simple_search(value="xy").count(), 1)
+
+
+class TokenModelTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user = UserFactory()
+
+    def test_token_generation(self):
+        token = Token.objects.create(user=self.user)
+
+        self.assertIsNotNone(token.key)
+        self.assertEqual(token.user, self.user)
+        self.assertEqual(self.user.auth_token, token)
