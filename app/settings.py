@@ -65,6 +65,7 @@ THIRD_PARTY_APPS = [
     "django_bootstrap5",  # django-bootstrap5
     "django_tables2",  # django-tables2
     "rest_framework",  # djangorestframework
+    "rest_framework.authtoken",
     "drf_spectacular",  # drf-spectacular
     "django_extensions",  # django-extensions
     "import_export",  # django-import-export

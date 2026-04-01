@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
+from rest_framework.authtoken.models import Token
 
 from core.admin import admin_site
 from core.utils.utilities import pretty_print_readonly_jsonfield
@@ -68,6 +69,7 @@ class UserAdmin(UserAdmin):
         "is_administrator",
         "is_staff",
         "is_superuser",
+        "has_auth_token",
         "last_login",
         "question_count",
         "quiz_count",
@@ -88,6 +90,7 @@ class UserAdmin(UserAdmin):
                     "roles",
                     "is_staff",
                     "is_superuser",
+                    "has_auth_token",
                 )
             },
         ),
@@ -155,6 +158,12 @@ class UserAdmin(UserAdmin):
     has_user_card.short_description = "User card"
     has_user_card.boolean = True
 
+    def has_auth_token(self, user):
+        return user.auth_token is not None
+
+    has_auth_token.short_description = "Token ?"
+    has_auth_token.boolean = True
+
     def logs_display(self, tender=None):
         if tender:
             return pretty_print_readonly_jsonfield(tender.logs)
@@ -218,5 +227,30 @@ class UserCardAdmin(admin.ModelAdmin):
     has_website_url.boolean = True
 
 
+class TokenAdmin(admin.ModelAdmin):
+    list_display = ["user", "masked_key", "created"]
+    search_fields = ["user__id", "user__email", "key"]
+    ordering = ["-created"]
+    readonly_fields = ["user", "masked_key", "created"]
+    fields = ["user", "masked_key", "created"]
+
+    def masked_key(self, obj):
+        if not obj.key:
+            return "-"
+        return f"{obj.key[:4]}...{obj.key[-4:]}"
+
+    masked_key.short_description = "Token"
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
 admin_site.register(User, UserAdmin)
 admin_site.register(UserCard, UserCardAdmin)
+admin_site.register(Token, TokenAdmin)
