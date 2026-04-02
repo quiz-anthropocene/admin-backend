@@ -4,6 +4,26 @@ Un suivi à jour des modifications apportées à ce projet (cf [Keep a Changelog
 
 Voir les [Issues](https://github.com/quiz-anthropocene/know-your-planet/issues) et le Board.
 
+## [2.7.0](https://github.com/quiz-anthropocene/admin-backend/compare/v2.6.0...v2.7.0) (2026-04-02)
+
+
+### Features
+
+* **Configuration:** new helloasso_url field ([#2018](https://github.com/quiz-anthropocene/admin-backend/issues/2018)) ([ffb4baf](https://github.com/quiz-anthropocene/admin-backend/commit/ffb4bafd7a375bdccd0cf79882da69b206895d03))
+* **Configuration:** new office_address & office_url fields ([#2021](https://github.com/quiz-anthropocene/admin-backend/issues/2021)) ([3d5f330](https://github.com/quiz-anthropocene/admin-backend/commit/3d5f330a294b45901de72f5d5b36c94e31b2f97b))
+* **deps:** replace pipenv with uv ([#2025](https://github.com/quiz-anthropocene/admin-backend/issues/2025)) ([d6f1ad1](https://github.com/quiz-anthropocene/admin-backend/commit/d6f1ad1c55864bc51dbcb2ca66027671de6d3307))
+* **deps:** use ruff instead of flake8/black/isort ([#2027](https://github.com/quiz-anthropocene/admin-backend/issues/2027)) ([eedb1f5](https://github.com/quiz-anthropocene/admin-backend/commit/eedb1f51dfa3a6e1b34c79c25f6498776be67f5a))
+* **Questions:** API: allow creating questions with a valid token ([#2034](https://github.com/quiz-anthropocene/admin-backend/issues/2034)) ([8266564](https://github.com/quiz-anthropocene/admin-backend/commit/826656434188fab9ff4b53b34af355127c62823d))
+* **Questions:** API: allow updating questions with a valid token ([#2036](https://github.com/quiz-anthropocene/admin-backend/issues/2036)) ([fe2b4dc](https://github.com/quiz-anthropocene/admin-backend/commit/fe2b4dc85523df98f2caff476ef7d01cc3b4e978))
+* **Quizs:** API: allow creating quizs with a valid token ([#2037](https://github.com/quiz-anthropocene/admin-backend/issues/2037)) ([f7f2a72](https://github.com/quiz-anthropocene/admin-backend/commit/f7f2a729c96e42e4cf758b273fb453832cd3eff5))
+* **Quizs:** API: allow updating quizs with a valid token ([#2038](https://github.com/quiz-anthropocene/admin-backend/issues/2038)) ([6405151](https://github.com/quiz-anthropocene/admin-backend/commit/6405151bd85811c830c461a60ba0ef20d7d66efb))
+* **Users:** Auth: Add simple DRF token mgmt ([#2033](https://github.com/quiz-anthropocene/admin-backend/issues/2033)) ([6322e42](https://github.com/quiz-anthropocene/admin-backend/commit/6322e42a453e536ae1858379017915f49c21ba35))
+
+
+### Bug Fixes
+
+* **deps:** bump python-version to 3.10 (Scalingo) ([2bd861c](https://github.com/quiz-anthropocene/admin-backend/commit/2bd861ca9c158f41629b8fb87ab7caa6ad22bf81))
+
 ## [2.6.0](https://github.com/quiz-anthropocene/admin-backend/compare/v2.5.0...v2.6.0) (2025-01-28)
 
 
