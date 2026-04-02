@@ -1,5 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
+from rest_framework.authtoken.models import Token
 
 from categories.factories import CategoryFactory
 from contributions.factories import CommentFactory
@@ -11,7 +12,7 @@ from tags.factories import TagFactory
 from users.factories import UserFactory
 
 
-class QuizApiTest(TestCase):
+class QuizListDetailApiTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user_1 = UserFactory(first_name="First 1", last_name="Last 1")
@@ -153,6 +154,53 @@ class QuizApiTest(TestCase):
         # questions
         self.assertEqual(response.data["question_count"], 2)
         self.assertEqual(len(response.data["questions"]), 2)
+
+
+class QuizCreateApiTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user = UserFactory()
+        cls.token = Token.objects.create(user=cls.user)
+        cls.tag = TagFactory()
+        cls.url = reverse("api:quiz-list")
+
+    def test_cannot_create_quiz_without_token(self):
+        response = self.client.post(self.url, data={"name": "Quiz sans token"}, format="json")
+
+        self.assertEqual(response.status_code, 401)
+
+    def test_cannot_create_quiz_with_invalid_token(self):
+        response = self.client.post(
+            self.url,
+            data={"name": "Quiz avec token invalide"},
+            format="json",
+            HTTP_AUTHORIZATION="Token invalidtoken",
+        )
+
+        self.assertEqual(response.status_code, 401)
+
+    def test_can_create_quiz_with_token(self):
+        response = self.client.post(
+            self.url,
+            data={
+                "name": "Quiz avec token valide",
+                "slug": "quiz-avec-token-valide",
+                "language": constants.LANGUAGE_FRENCH,
+                "visibility": constants.VISIBILITY_PUBLIC,
+                "tags": [self.tag.id],
+            },
+            format="json",
+            HTTP_AUTHORIZATION=f"Token {self.token.key}",
+        )
+
+        self.assertEqual(response.status_code, 201)
+        self.assertIsInstance(response.data, dict)
+        self.assertEqual(response.data["name"], "Quiz avec token valide")
+        self.assertEqual(response.data["language"], constants.LANGUAGE_FRENCH)
+        self.assertEqual(response.data["visibility"], constants.VISIBILITY_PUBLIC)
+        self.assertEqual(len(response.data["tags"]), 1)
+        self.assertEqual(response.data["tags"][0], self.tag.id)
+        self.assertEqual(response.data["authors"][0], self.user.id)
 
 
 class QuizCommentApiTest(TestCase):

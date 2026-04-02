@@ -1,7 +1,9 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from drf_spectacular.utils import extend_schema
 from rest_framework import filters, mixins, viewsets
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 
 from api.contributions.serializers import CommentReadSerializer
@@ -11,12 +13,33 @@ from contributions.models import Comment
 from quizs.models import Quiz
 
 
-class QuizViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+class QuizViewSet(
+    mixins.CreateModelMixin,
+    mixins.ListModelMixin,
+    mixins.RetrieveModelMixin,
+    viewsets.GenericViewSet,
+):
     queryset = Quiz.objects.prefetch_many_to_many().public().published()
     serializer_class = QuizSerializer
     filterset_class = QuizFilter
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
     ordering_fields = ["id", "publish_date"]
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticatedOrReadOnly]
+    http_method_names = ["get", "post"]
+
+    def get_queryset(self):
+        if self.action == "create":
+            return Quiz.objects.all()
+        return super().get_queryset()
+
+    @extend_schema(summary="Créer un nouveau quiz", tags=[Quiz._meta.verbose_name_plural])
+    def create(self, request, *args, **kwargs):
+        return super().create(request, *args, **kwargs)
+
+    def perform_create(self, serializer):
+        serializer.save()
+        serializer.instance.authors.add(self.request.user)
 
     @extend_schema(summary="Lister tous les quiz *publiés*", tags=[Quiz._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
