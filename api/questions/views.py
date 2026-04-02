@@ -1,7 +1,7 @@
 import random
 
 from drf_spectacular.utils import extend_schema
-from rest_framework import mixins, viewsets
+from rest_framework import mixins, status, viewsets
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action, api_view
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
@@ -22,6 +22,7 @@ from questions.models import Question
 
 class QuestionViewSet(
     mixins.CreateModelMixin,
+    mixins.UpdateModelMixin,
     mixins.ListModelMixin,
     mixins.RetrieveModelMixin,
     viewsets.GenericViewSet,
@@ -31,6 +32,12 @@ class QuestionViewSet(
     filterset_class = QuestionFilter
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticatedOrReadOnly]
+    http_method_names = ["get", "post", "patch"]  # disable "put"
+
+    def get_queryset(self):
+        if self.action in ["post", "partial_update"]:
+            return Question.objects.all()
+        return super().get_queryset()
 
     @extend_schema(summary="Créer une nouvelle question", tags=[Question._meta.verbose_name_plural])
     def create(self, request, *args, **kwargs):
@@ -39,13 +46,24 @@ class QuestionViewSet(
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
 
+    @extend_schema(summary="Modifier une question", tags=[Question._meta.verbose_name_plural])
+    def partial_update(self, request, *args, **kwargs):
+        user = self.request.user
+        question = self.get_object()
+        if not user.can_edit_question(question):
+            return Response(
+                {"detail": "Cannot edit this question"},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+        return super().partial_update(request, *args, **kwargs)
+
     @extend_schema(summary="Lister toutes les questions *validées*", tags=[Question._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
-        return super().list(request, args, kwargs)
+        return super().list(request, *args, **kwargs)
 
     @extend_schema(summary="Détail d'une question *validée*", tags=[Question._meta.verbose_name_plural])
     def retrieve(self, request, *args, **kwargs):
-        return super().retrieve(request, args, kwargs)
+        return super().retrieve(request, *args, **kwargs)
 
     @extend_schema(
         summary="Lister tous les commentaires *publiés* d'une question *validée*",

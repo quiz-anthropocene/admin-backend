@@ -6,6 +6,7 @@ from contributions.factories import CommentFactory
 from core import constants
 from questions.factories import QuestionFactory
 from questions.models import Question
+from users import constants as user_constants
 from users.factories import UserFactory
 
 
@@ -51,7 +52,7 @@ class QuestionCreateApiTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user = UserFactory()
-        cls.token = Token.objects.create(user=cls.user)
+        Token.objects.create(user=cls.user)
         cls.url = reverse("api:question-list")
 
     def test_cannot_create_question_without_token(self):
@@ -69,12 +70,12 @@ class QuestionCreateApiTest(TestCase):
 
         self.assertEqual(response.status_code, 401)
 
-    def test_question_create_with_token(self):
+    def test_can_create_question_with_token(self):
         response = self.client.post(
             self.url,
             data={"text": "Question avec token"},
             format="json",
-            HTTP_AUTHORIZATION=f"Token {self.token.key}",
+            HTTP_AUTHORIZATION=f"Token {self.user.auth_token.key}",
         )
 
         self.assertEqual(response.status_code, 201)
@@ -82,6 +83,65 @@ class QuestionCreateApiTest(TestCase):
         question = Question.objects.get(pk=response.data["id"])
         self.assertEqual(question.author, self.user)
         self.assertEqual(question.validation_status, constants.VALIDATION_STATUS_DRAFT)
+
+
+class QuestionUpdateApiTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user = UserFactory()
+        cls.other_user = UserFactory()
+        Token.objects.create(user=cls.user)
+        Token.objects.create(user=cls.other_user)
+        cls.question = QuestionFactory(author=cls.user, validation_status=constants.VALIDATION_STATUS_DRAFT)
+        cls.url = reverse("api:question-detail", args=[cls.question.id])
+
+    def test_cannot_update_with_put_method(self):
+        response = self.client.put(
+            self.url,
+            data={"text": "Nouvelle question"},
+            content_type="application/json",
+            HTTP_AUTHORIZATION=f"Token {self.user.auth_token.key}",
+        )
+
+        self.assertEqual(response.status_code, 405)
+
+    def test_cannot_update_own_question_without_token(self):
+        response = self.client.patch(self.url, data={"text": "Modifiée"}, content_type="application/json")
+
+        self.assertEqual(response.status_code, 401)
+
+    def test_can_update_own_question_with_token(self):
+        response = self.client.patch(
+            self.url,
+            data={"text": "Texte modifié"},
+            content_type="application/json",
+            HTTP_AUTHORIZATION=f"Token {self.user.auth_token.key}",
+        )
+        self.assertEqual(response.status_code, 200)
+        self.question.refresh_from_db()
+        self.assertEqual(self.question.text, "Texte modifié")
+
+    def test_cannot_update_question_of_another_user(self):
+        response = self.client.patch(
+            self.url,
+            data={"text": "Texte modifié"},
+            content_type="application/json",
+            HTTP_AUTHORIZATION=f"Token {self.other_user.auth_token.key}",
+        )
+        self.assertEqual(response.status_code, 403)
+
+    def test_can_update_question_of_another_user_if_administrator(self):
+        user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
+        Token.objects.create(user=user_admin)
+        response = self.client.patch(
+            self.url,
+            data={"text": "Texte modifié"},
+            content_type="application/json",
+            HTTP_AUTHORIZATION=f"Token {user_admin.auth_token.key}",
+        )
+        self.assertEqual(response.status_code, 200)
+        self.question.refresh_from_db()
+        self.assertEqual(self.question.text, "Texte modifié")
 
 
 class QuestionCommentApiTest(TestCase):
