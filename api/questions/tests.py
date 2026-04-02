@@ -56,7 +56,7 @@ class QuestionCreateApiTest(TestCase):
         cls.url = reverse("api:question-list")
 
     def test_cannot_create_question_without_token(self):
-        response = self.client.post(self.url, data={"text": "Question sans token"}, format="json")
+        response = self.client.post(self.url, data={"text": "Question sans token"}, content_type="application/json")
 
         self.assertEqual(response.status_code, 401)
 
@@ -64,7 +64,7 @@ class QuestionCreateApiTest(TestCase):
         response = self.client.post(
             self.url,
             data={"text": "Question avec token invalide"},
-            format="json",
+            content_type="application/json",
             HTTP_AUTHORIZATION="Token invalidtoken",
         )
 
@@ -74,7 +74,7 @@ class QuestionCreateApiTest(TestCase):
         response = self.client.post(
             self.url,
             data={"text": "Question avec token"},
-            format="json",
+            content_type="application/json",
             HTTP_AUTHORIZATION=f"Token {self.user.auth_token.key}",
         )
 
@@ -89,16 +89,16 @@ class QuestionUpdateApiTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user = UserFactory()
-        cls.other_user = UserFactory()
+        cls.user_2 = UserFactory()
         Token.objects.create(user=cls.user)
-        Token.objects.create(user=cls.other_user)
+        Token.objects.create(user=cls.user_2)
         cls.question = QuestionFactory(author=cls.user, validation_status=constants.VALIDATION_STATUS_DRAFT)
         cls.url = reverse("api:question-detail", args=[cls.question.id])
 
-    def test_cannot_update_with_put_method(self):
+    def test_cannot_update_question_with_put_method(self):
         response = self.client.put(
             self.url,
-            data={"text": "Nouvelle question"},
+            data={"text": "Texte modifié"},
             content_type="application/json",
             HTTP_AUTHORIZATION=f"Token {self.user.auth_token.key}",
         )
@@ -107,6 +107,16 @@ class QuestionUpdateApiTest(TestCase):
 
     def test_cannot_update_own_question_without_token(self):
         response = self.client.patch(self.url, data={"text": "Modifiée"}, content_type="application/json")
+
+        self.assertEqual(response.status_code, 401)
+
+    def test_cannot_update_own_question_with_invalid_token(self):
+        response = self.client.patch(
+            self.url,
+            data={"text": "Texte modifié"},
+            content_type="application/json",
+            HTTP_AUTHORIZATION="Token invalidtoken",
+        )
 
         self.assertEqual(response.status_code, 401)
 
@@ -126,7 +136,7 @@ class QuestionUpdateApiTest(TestCase):
             self.url,
             data={"text": "Texte modifié"},
             content_type="application/json",
-            HTTP_AUTHORIZATION=f"Token {self.other_user.auth_token.key}",
+            HTTP_AUTHORIZATION=f"Token {self.user_2.auth_token.key}",
         )
         self.assertEqual(response.status_code, 403)
 

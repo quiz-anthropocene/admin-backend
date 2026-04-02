@@ -9,6 +9,7 @@ from questions.factories import QuestionFactory
 from quizs.factories import QuizFactory
 from quizs.models import QuizQuestion
 from tags.factories import TagFactory
+from users import constants as user_constants
 from users.factories import UserFactory
 
 
@@ -165,7 +166,7 @@ class QuizCreateApiTest(TestCase):
         cls.url = reverse("api:quiz-list")
 
     def test_cannot_create_quiz_without_token(self):
-        response = self.client.post(self.url, data={"name": "Quiz sans token"}, format="json")
+        response = self.client.post(self.url, data={"name": "Quiz sans token"}, content_type="application/json")
 
         self.assertEqual(response.status_code, 401)
 
@@ -173,7 +174,7 @@ class QuizCreateApiTest(TestCase):
         response = self.client.post(
             self.url,
             data={"name": "Quiz avec token invalide"},
-            format="json",
+            content_type="application/json",
             HTTP_AUTHORIZATION="Token invalidtoken",
         )
 
@@ -189,7 +190,7 @@ class QuizCreateApiTest(TestCase):
                 "visibility": constants.VISIBILITY_PUBLIC,
                 "tags": [self.tag.id],
             },
-            format="json",
+            content_type="application/json",
             HTTP_AUTHORIZATION=f"Token {self.token.key}",
         )
 
@@ -201,6 +202,79 @@ class QuizCreateApiTest(TestCase):
         self.assertEqual(len(response.data["tags"]), 1)
         self.assertEqual(response.data["tags"][0], self.tag.id)
         self.assertEqual(response.data["authors"][0], self.user.id)
+
+
+class QuizUpdateApiTest(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.user = UserFactory()
+        cls.user_2 = UserFactory()
+        cls.token = Token.objects.create(user=cls.user)
+        Token.objects.create(user=cls.user_2)
+        cls.quiz = QuizFactory(name="Quiz à mettre à jour")  # authors=[cls.user]
+        cls.quiz.authors.set([cls.user])
+        cls.url = reverse("api:quiz-detail", args=[cls.quiz.id])
+
+    def test_cannot_update_quiz_with_put_method(self):
+        response = self.client.put(
+            self.url,
+            data={"text": "Nom modifié"},
+            content_type="application/json",
+            HTTP_AUTHORIZATION=f"Token {self.user.auth_token.key}",
+        )
+
+        self.assertEqual(response.status_code, 405)
+
+    def test_cannot_update_quiz_without_token(self):
+        response = self.client.patch(self.url, data={"name": "Nom modifié"}, content_type="application/json")
+
+        self.assertEqual(response.status_code, 401)
+
+    def test_cannot_update_quiz_with_invalid_token(self):
+        response = self.client.patch(
+            self.url,
+            data={"name": "Nom modifié"},
+            content_type="application/json",
+            HTTP_AUTHORIZATION="Token invalidtoken",
+        )
+
+        self.assertEqual(response.status_code, 401)
+
+    def test_can_update_quiz_with_token(self):
+        response = self.client.patch(
+            self.url,
+            data={"name": "Nom modifié"},
+            content_type="application/json",
+            HTTP_AUTHORIZATION=f"Token {self.token.key}",
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertIsInstance(response.data, dict)
+        self.assertEqual(response.data["name"], "Nom modifié")
+
+    def test_cannot_update_quiz_of_another_user(self):
+        response = self.client.patch(
+            self.url,
+            data={"name": "Nom modifié"},
+            content_type="application/json",
+            HTTP_AUTHORIZATION=f"Token {self.user_2.auth_token.key}",
+        )
+
+        self.assertEqual(response.status_code, 403)
+
+    def test_can_update_quiz_of_another_user_if_administrator(self):
+        user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
+        Token.objects.create(user=user_admin)
+        response = self.client.patch(
+            self.url,
+            data={"name": "Nom modifié"},
+            content_type="application/json",
+            HTTP_AUTHORIZATION=f"Token {user_admin.auth_token.key}",
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertIsInstance(response.data, dict)
+        self.assertEqual(response.data["name"], "Nom modifié")
 
 
 class QuizCommentApiTest(TestCase):

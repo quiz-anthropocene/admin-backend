@@ -1,6 +1,6 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from drf_spectacular.utils import extend_schema
-from rest_framework import filters, mixins, viewsets
+from rest_framework import filters, mixins, status, viewsets
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
@@ -15,6 +15,7 @@ from quizs.models import Quiz
 
 class QuizViewSet(
     mixins.CreateModelMixin,
+    mixins.UpdateModelMixin,
     mixins.ListModelMixin,
     mixins.RetrieveModelMixin,
     viewsets.GenericViewSet,
@@ -26,10 +27,10 @@ class QuizViewSet(
     ordering_fields = ["id", "publish_date"]
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticatedOrReadOnly]
-    http_method_names = ["get", "post"]
+    http_method_names = ["get", "post", "patch"]  # disable "put"; "delete" not available
 
     def get_queryset(self):
-        if self.action == "create":
+        if self.action in ["create", "partial_update"]:
             return Quiz.objects.all()
         return super().get_queryset()
 
@@ -40,6 +41,17 @@ class QuizViewSet(
     def perform_create(self, serializer):
         serializer.save()
         serializer.instance.authors.add(self.request.user)
+
+    @extend_schema(summary="Modifier un quiz", tags=[Quiz._meta.verbose_name_plural])
+    def partial_update(self, request, *args, **kwargs):
+        user = self.request.user
+        quiz = self.get_object()
+        if not user.can_edit_quiz(quiz):
+            return Response(
+                {"detail": "Cannot edit this quiz"},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+        return super().partial_update(request, *args, **kwargs)
 
     @extend_schema(summary="Lister tous les quiz *publiés*", tags=[Quiz._meta.verbose_name_plural])
     def list(self, request, *args, **kwargs):
