@@ -344,33 +344,58 @@ class User(AbstractUser):
         return self == question.author
 
     def can_edit_question(self, question) -> bool:
+        """
+        A user can edit a question if:
+        - the question is private and the user is the author of the question
+        - the question is public and the user is the author of the question or has role "super contributor"
+        """
         if question.is_private:
-            return question.author == self
-        return (question.author == self) or (self.has_role_super_contributor)
+            return self.is_question_author(question)
+        return self.is_question_author(question) or self.has_role_super_contributor
 
     def can_validate_question(self, question) -> bool:
+        """
+        A user can validate a question if:
+        - the question is private and the user is the author of the question
+        - the question is public and the user is not the author of the question and has role "administrator"
+        """
         if question.is_private:
-            return question.author == self
+            return self.is_question_author(question)
         return (question.author != self) and (self.has_role_administrator)
 
     def is_quiz_author(self, quiz) -> bool:
         return self in quiz.authors.all()
 
-    def is_not_quiz_author(self, quiz) -> bool:
-        return self not in quiz.authors.all()
-
     def can_edit_quiz(self, quiz) -> bool:
+        """
+        A user can edit a quiz if:
+        - the quiz is private and the user is the author of the quiz
+        - the quiz is public and the user is the author of the quiz or has role "administrator"
+        """
         if quiz.is_private:
             return self.is_quiz_author(quiz)
         return self.is_quiz_author(quiz) or (self.has_role_administrator)
 
     def can_publish_quiz(self, quiz) -> bool:
+        """
+        A user can publish a quiz if:
+        - the quiz is private and the user is the author of the quiz
+        - the quiz is public and the user is not the author of the quiz and has role "administrator"
+        """
         if quiz.is_private:
             return self.is_quiz_author(quiz)
-        return self.is_not_quiz_author(quiz) and (self.has_role_administrator)
+        return not self.is_quiz_author(quiz) and (self.has_role_administrator)
+
+    def is_comment_author(self, comment) -> bool:
+        return self == comment.author
 
     def can_edit_comment(self, comment) -> bool:
-        return (comment.author == self) or (self.has_role_administrator)
+        """
+        A user can edit a comment if:
+        - the user is the author of the comment
+        - the user has role "administrator"
+        """
+        return self.is_comment_author(comment) or self.has_role_administrator
 
 
 @receiver(post_save, sender=User)
