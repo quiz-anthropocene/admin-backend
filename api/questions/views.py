@@ -1,7 +1,7 @@
 import random
 
 from drf_spectacular.utils import extend_schema
-from rest_framework import mixins, viewsets
+from rest_framework import mixins, status, viewsets
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action, api_view
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
@@ -36,7 +36,7 @@ class QuestionViewSet(
 
     def get_queryset(self):
         if self.action in ["post", "partial_update"]:
-            return Question.objects.filter(author=self.request.user)
+            return Question.objects.all()
         return super().get_queryset()
 
     @extend_schema(summary="Créer une nouvelle question", tags=[Question._meta.verbose_name_plural])
@@ -48,6 +48,13 @@ class QuestionViewSet(
 
     @extend_schema(summary="Modifier une question", tags=[Question._meta.verbose_name_plural])
     def partial_update(self, request, *args, **kwargs):
+        user = self.request.user
+        question = self.get_object()
+        if not user.can_edit_question(question):
+            return Response(
+                {"detail": "Cannot edit this question"},
+                status=status.HTTP_403_FORBIDDEN,
+            )
         return super().partial_update(request, *args, **kwargs)
 
     @extend_schema(summary="Lister toutes les questions *validées*", tags=[Question._meta.verbose_name_plural])
