@@ -32,7 +32,7 @@ class QuestionViewSet(
     filterset_class = QuestionFilter
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticatedOrReadOnly]
-    http_method_names = ["get", "post", "patch"]  # disable "put"
+    http_method_names = ["get", "post", "patch"]  # disable "put"; "delete" not available
 
     def get_queryset(self):
         if self.action in ["create", "partial_update"]:
