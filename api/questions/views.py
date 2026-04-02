@@ -35,7 +35,7 @@ class QuestionViewSet(
     http_method_names = ["get", "post", "patch"]  # disable "put"
 
     def get_queryset(self):
-        if self.action in ["post", "partial_update"]:
+        if self.action in ["create", "partial_update"]:
             return Question.objects.all()
         return super().get_queryset()
 
