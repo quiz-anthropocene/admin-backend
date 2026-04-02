@@ -128,7 +128,7 @@ class QuestionUpdateApiTest(TestCase):
             content_type="application/json",
             HTTP_AUTHORIZATION=f"Token {self.other_user.auth_token.key}",
         )
-        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.status_code, 403)
 
     def test_can_update_question_of_another_user_if_administrator(self):
         user_admin = UserFactory(roles=[user_constants.USER_ROLE_ADMINISTRATOR])
