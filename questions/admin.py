@@ -386,8 +386,8 @@ class QuestionAdmin(ImportMixin, ExportMixin, FieldsetsInlineMixin, SimpleHistor
 
 class HistoricalQuestionAdmin(admin.ModelAdmin):
     list_display = [
+        "id",  # question id
         # "history_id",
-        "id",
         "history_date",
         "history_type",
         "history_change_reason",
