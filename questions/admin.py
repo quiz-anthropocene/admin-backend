@@ -3,7 +3,8 @@ from io import StringIO
 from django.conf import settings
 from django.contrib import admin
 from django.core import management
-from django.utils.html import mark_safe
+from django.urls import reverse
+from django.utils.html import format_html, mark_safe
 from fieldsets_with_inlines import FieldsetsInlineMixin
 from import_export import fields, resources
 from import_export.admin import ImportMixin
@@ -383,4 +384,57 @@ class QuestionAdmin(ImportMixin, ExportMixin, FieldsetsInlineMixin, SimpleHistor
         return super().changelist_view(request, extra_context=extra_context)
 
 
+class HistoricalQuestionAdmin(admin.ModelAdmin):
+    list_display = [
+        # "history_id",
+        "id",
+        "history_date",
+        "history_type",
+        "history_change_reason",
+        "history_user",
+        # "history_changed_fields",
+    ]
+    search_fields = ["id"]
+    list_filter = ["history_type", "history_date", "history_user"]
+    ordering = ["-history_date"]
+    fieldsets = (
+        (
+            None,
+            {
+                "fields": (
+                    "history_id",
+                    "history_date",
+                    "history_type",
+                    "history_change_reason",
+                    "history_user",
+                    "history_changed_fields",
+                )
+            },
+        ),
+        ("Question", {"fields": ("question_with_link",)}),
+    )
+
+    def has_add_permission(self, request):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+    def question_with_link(self, obj):
+        if obj.id:
+            url = reverse(
+                f"{self.admin_site.name}:{Question._meta.app_label}_{Question._meta.model_name}_change",
+                args=[obj.id],
+            )
+            return format_html(f'<a href="{url}">{obj}</a>')
+
+    question_with_link.short_description = Question._meta.verbose_name
+
+
+HistoricalQuestion = Question.history.model
+
 admin_site.register(Question, QuestionAdmin)
+admin_site.register(HistoricalQuestion, HistoricalQuestionAdmin)
