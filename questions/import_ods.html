@@ -1,0 +1,360 @@
+{% extends "layouts/base.html" %}
+{% load i18n static django_bootstrap5 %}
+
+{% block title %}{% translate "Import ODS" %} - {% translate "Questions" %}{{ block.super }}{% endblock %}
+
+{% block extra_css %}
+<style>
+/* ---- Drop zone ---- */
+.ods-dropzone {
+    border: 2.5px dashed #adb5bd;
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color .2s, background-color .2s;
+    background: #f8f9fa;
+    position: relative;
+}
+.ods-dropzone:hover,
+.ods-dropzone.dragover {
+    border-color: #0d6efd;
+    background: #e8f0fe;
+}
+.ods-dropzone .dz-icon {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: .5rem;
+    display: block;
+    transition: transform .2s;
+}
+.ods-dropzone:hover .dz-icon,
+.ods-dropzone.dragover .dz-icon { transform: scale(1.15); }
+.ods-dropzone input[type=file] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+.ods-dropzone .dz-label { font-size: 1.1rem; font-weight: 500; }
+.ods-dropzone .dz-hint  { font-size: .85rem; color: #6c757d; margin-top: .25rem; }
+
+/* selected state */
+.ods-dropzone.file-selected {
+    border-color: #198754;
+    background: #eaf6ee;
+}
+.ods-dropzone.file-selected .dz-icon::after { content: "📄"; }
+.ods-dropzone.file-selected .dz-icon-default { display: none; }
+#ods-filename {
+    display: none;
+    font-weight: 600;
+    color: #198754;
+    margin-top: .5rem;
+    word-break: break-all;
+}
+
+/* ---- Submit btn loading ---- */
+#btn-import .spinner-border { display: none; }
+#btn-import.loading .spinner-border { display: inline-block; }
+#btn-import.loading .btn-label { display: none; }
+
+/* ---- Results ---- */
+.result-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+}
+</style>
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="container">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="pt-2">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">{% translate "Home" %}</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'questions:list' %}">{% translate "Questions" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Import ODS" %}</li>
+        </ol>
+    </nav>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container py-3">
+
+    <div class="row mb-4">
+        <div class="col">
+            <h1 class="mb-1">{% translate "Import de questions (.ods)" %}</h1>
+            <p class="text-muted mb-0">
+                {% blocktrans %}
+                Si l'<strong>ID</strong> existe déjà en base, la question est <strong>mise à jour</strong> ;
+                sinon elle est <strong>créée</strong> avec cet ID.
+                {% endblocktrans %}
+            </p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- ===== Upload card ===== -->
+        <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title mb-3">📤 {% translate "Sélectionner un fichier" %}</h5>
+
+                    <form id="ods-import-form" method="POST" enctype="multipart/form-data" novalidate class="d-flex flex-column flex-grow-1">
+                        {% csrf_token %}
+
+                        <!-- Drop zone -->
+                        <label for="{{ form.ods_file.id_for_label }}" class="ods-dropzone" id="ods-dropzone">
+                            <span class="dz-icon">
+                                <span class="dz-icon-default">📊</span>
+                            </span>
+                            <span class="dz-label">{% translate "Glissez votre fichier ici" %}</span>
+                            <span class="dz-hint">{% translate "ou cliquez pour parcourir — .ods uniquement" %}</span>
+                            <div id="ods-filename"></div>
+                            <input type="file"
+                                   name="{{ form.ods_file.html_name }}"
+                                   id="{{ form.ods_file.id_for_label }}"
+                                   accept=".ods"
+                                   required>
+                        </label>
+
+                        <!-- Field errors -->
+                        {% if form.ods_file.errors %}
+                        <div class="mt-2">
+                            {% for error in form.ods_file.errors %}
+                            <div class="alert alert-danger py-2 mb-1">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <div class="mt-auto pt-3 d-flex gap-2">
+                            <button type="submit" class="btn btn-primary" id="btn-import" disabled>
+                                <span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
+                                <span class="btn-label">{% translate "Importer" %}</span>
+                                <span class="loading-label" style="display:none">{% translate "Importation…" %}</span>
+                            </button>
+                            <a class="btn btn-outline-secondary" href="{% url 'questions:list' %}">{% translate "Annuler" %}</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Format link ===== -->
+        <div class="col-lg-6 d-flex align-items-center">
+            <a href="{% url 'questions:import_ods_doc' %}"
+               class="card border-primary text-decoration-none w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-4"
+               style="min-height: 160px;">
+                <span style="font-size: 2.5rem; line-height:1">📋</span>
+                <span class="fw-semibold mt-2 text-primary fs-5">{% translate "Voir le format attendu" %}</span>
+                <span class="text-muted small mt-1">{% translate "40 colonnes · 5 blocs · règles de formatage" %}</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- ===== Results ===== -->
+    {% if results is not None %}
+    <hr class="my-4">
+
+    {% if results.global_error %}
+
+        <div class="alert alert-danger d-flex align-items-start gap-2" role="alert">
+            <span style="font-size:1.4rem">❌</span>
+            <div>
+                <strong>{% translate "Erreur de format" %}</strong><br>
+                {{ results.global_error }}
+            </div>
+        </div>
+
+    {% else %}
+
+        <!-- Summary row -->
+        <div class="d-flex flex-wrap gap-3 mb-4">
+            <div class="result-badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded">
+                ✅ {{ results.created|length }}&nbsp;{% translate "créée(s)" %}
+            </div>
+            <div class="result-badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded">
+                🔄 {{ results.updated|length }}&nbsp;{% translate "mise(s) à jour" %}
+            </div>
+            {% if results.errors %}
+            <div class="result-badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 rounded">
+                ⚠️ {{ results.errors|length }}&nbsp;{% translate "erreur(s)" %}
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Alert banners -->
+        {% if not results.errors and results.created or results.updated %}
+            {% if results.created and results.updated %}
+            <div class="alert alert-success d-flex align-items-center gap-2">
+                ✅ <span>{% blocktrans with c=results.created|length u=results.updated|length %}Import terminé : <strong>{{ c }} question(s) créée(s)</strong> et <strong>{{ u }} question(s) mise(s) à jour</strong>.{% endblocktrans %}</span>
+            </div>
+            {% elif results.created %}
+            <div class="alert alert-success d-flex align-items-center gap-2">
+                ✅ <span>{% blocktrans with c=results.created|length %}Import terminé : <strong>{{ c }} question(s) créée(s)</strong>.{% endblocktrans %}</span>
+            </div>
+            {% elif results.updated %}
+            <div class="alert alert-success d-flex align-items-center gap-2">
+                ✅ <span>{% blocktrans with u=results.updated|length %}Import terminé : <strong>{{ u }} question(s) mise(s) à jour</strong>.{% endblocktrans %}</span>
+            </div>
+            {% endif %}
+        {% endif %}
+
+        {% if results.errors and not results.created and not results.updated %}
+        <div class="alert alert-danger d-flex align-items-center gap-2">
+            ❌ <span>{% translate "Aucune question importée — toutes les lignes contiennent des erreurs." %}</span>
+        </div>
+        {% elif results.errors %}
+        <div class="alert alert-warning d-flex align-items-center gap-2">
+            ⚠️ <span>{% translate "Import partiel — certaines lignes ont été ignorées (voir ci-dessous)." %}</span>
+        </div>
+        {% endif %}
+
+        <!-- Error table -->
+        {% if results.errors %}
+        <div class="card border-danger mb-4">
+            <div class="card-header bg-danger text-white fw-semibold">
+                ⚠️ {% translate "Lignes en erreur" %}
+            </div>
+            <div class="table-responsive">
+                <table class="table table-sm table-striped mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th style="width:80px">{% translate "Ligne" %}</th>
+                            <th>{% translate "Message d'erreur" %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for err in results.errors %}
+                        <tr>
+                            <td><span class="badge bg-danger">{{ err.row }}</span></td>
+                            <td class="text-danger">{{ err.error }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Created / Updated tables side by side -->
+        <div class="row g-3">
+            {% if results.created %}
+            <div class="col-lg-6">
+                <div class="card border-success">
+                    <div class="card-header bg-success text-white fw-semibold">
+                        ✅ {% translate "Questions créées" %} ({{ results.created|length }})
+                    </div>
+                    <div class="table-responsive" style="max-height:320px;overflow-y:auto">
+                        <table class="table table-sm table-hover mb-0">
+                            <thead class="table-light sticky-top">
+                                <tr><th>ID</th><th>{% translate "Texte" %}</th></tr>
+                            </thead>
+                            <tbody>
+                                {% for q in results.created %}
+                                <tr>
+                                    <td><a href="{% url 'questions:detail_view' q.id %}" class="fw-semibold">#{{ q.id }}</a></td>
+                                    <td class="text-truncate" style="max-width:260px" title="{{ q.text }}">{{ q.text }}…</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if results.updated %}
+            <div class="col-lg-6">
+                <div class="card border-primary">
+                    <div class="card-header bg-primary text-white fw-semibold">
+                        🔄 {% translate "Questions mises à jour" %} ({{ results.updated|length }})
+                    </div>
+                    <div class="table-responsive" style="max-height:320px;overflow-y:auto">
+                        <table class="table table-sm table-hover mb-0">
+                            <thead class="table-light sticky-top">
+                                <tr><th>ID</th><th>{% translate "Texte" %}</th></tr>
+                            </thead>
+                            <tbody>
+                                {% for q in results.updated %}
+                                <tr>
+                                    <td><a href="{% url 'questions:detail_view' q.id %}" class="fw-semibold">#{{ q.id }}</a></td>
+                                    <td class="text-truncate" style="max-width:260px" title="{{ q.text }}">{{ q.text }}…</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+    {% endif %}{# global_error #}
+    {% endif %}{# results #}
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function () {
+    const dropzone  = document.getElementById('ods-dropzone');
+    const fileInput = dropzone.querySelector('input[type=file]');
+    const filename  = document.getElementById('ods-filename');
+    const btnImport = document.getElementById('btn-import');
+    const form      = document.getElementById('ods-import-form');
+
+    // --- File selected ---
+    function onFileChosen(file) {
+        if (!file) return;
+        dropzone.classList.add('file-selected');
+        filename.style.display = 'block';
+        filename.textContent   = file.name;
+        btnImport.disabled     = false;
+    }
+
+    fileInput.addEventListener('change', () => onFileChosen(fileInput.files[0]));
+
+    // --- Drag & drop ---
+    dropzone.addEventListener('dragover', (e) => { e.preventDefault(); dropzone.classList.add('dragover'); });
+    dropzone.addEventListener('dragleave', ()  => dropzone.classList.remove('dragover'));
+    dropzone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropzone.classList.remove('dragover');
+        const file = e.dataTransfer.files[0];
+        if (file) {
+            // Push into the real input
+            const dt = new DataTransfer();
+            dt.items.add(file);
+            fileInput.files = dt.files;
+            onFileChosen(file);
+        }
+    });
+
+    // --- Loading state on submit ---
+    form.addEventListener('submit', () => {
+        btnImport.classList.add('loading');
+        btnImport.disabled = true;
+        btnImport.querySelector('.btn-label').style.display    = 'none';
+        btnImport.querySelector('.loading-label').style.display = 'inline';
+        btnImport.querySelector('.spinner-border').style.display = 'inline-block';
+    });
+
+    // --- Scroll to results if present ---
+    {% if results is not None %}
+    const hr = document.querySelector('hr.my-4');
+    if (hr) setTimeout(() => hr.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
+    {% endif %}
+})();
+</script>
+{% endblock %}

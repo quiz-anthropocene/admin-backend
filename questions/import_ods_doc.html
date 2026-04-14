@@ -1,0 +1,181 @@
+{% extends "layouts/base.html" %}
+{% load i18n static %}
+
+{% block title %}Format ODS — Import questions{{ block.super }}{% endblock %}
+
+{% block extra_css %}
+<style>
+.spec-table th { white-space: nowrap; }
+code { background: #f1f3f5; padding: .1em .35em; border-radius: .25rem; font-size: .9em; }
+</style>
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="container">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="pt-2">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'questions:list' %}">Questions</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'questions:import_ods' %}">Import ODS</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Format</li>
+        </ol>
+    </nav>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container py-3" style="max-width: 960px;">
+
+    <div class="d-flex align-items-center gap-3 mb-4">
+        <h1 class="mb-0">Format du fichier d'import (.ods)</h1>
+        <a class="btn btn-primary btn-sm ms-auto" href="{% url 'questions:import_ods' %}">← Retour à l'import</a>
+    </div>
+
+    <div class="alert alert-secondary">
+        <strong>Format :</strong> tableur <code>.ods</code> &nbsp;·&nbsp;
+        <strong>Onglet :</strong> <code>Résultats de la requête</code> &nbsp;·&nbsp;
+        <strong>1 ligne = 1 question</strong> &nbsp;·&nbsp;
+        <strong>40 colonnes</strong> organisées en 5 blocs
+    </div>
+
+    <!-- ===== Bloc 1 ===== -->
+    <h2 class="h4 mt-4 mb-3">Bloc 1 — Identité de la question</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-sm spec-table">
+            <thead class="table-light">
+                <tr><th>Colonne</th><th>Type</th><th>Obligatoire</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>ID</code></td><td>entier</td><td>✅ oui</td><td>Identifiant unique de la question. Si l'ID existe en base → mise à jour ; sinon → création.</td></tr>
+                <tr><td><code>Text</code></td><td>texte long</td><td>✅ oui</td><td>Énoncé complet de la question.</td></tr>
+                <tr><td><code>Hint</code></td><td>texte</td><td>non</td><td>Indice optionnel affiché avant la réponse.</td></tr>
+                <tr><td><code>Type</code></td><td>enum</td><td>✅ oui</td><td><code>QCM</code> · <code>QCM-RM</code> · <code>VF</code></td></tr>
+                <tr><td><code>Difficulty</code></td><td>entier 0–4</td><td>✅ oui</td><td>0 = très facile · 4 = expert</td></tr>
+                <tr><td><code>Language</code></td><td>enum</td><td>✅ oui</td><td><code>FRENCH</code> · <code>ENGLISH</code> · <code>ITALIAN</code> · <code>GERMAN</code></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ===== Bloc 2 ===== -->
+    <h2 class="h4 mt-4 mb-3">Bloc 2 — Réponses</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-sm spec-table">
+            <thead class="table-light">
+                <tr><th>Colonne</th><th>Type</th><th>Obligatoire</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>Answer Choice A</code></td><td>texte</td><td>✅ oui</td><td>Proposition A</td></tr>
+                <tr><td><code>Answer Choice B</code></td><td>texte</td><td>✅ oui</td><td>Proposition B</td></tr>
+                <tr><td><code>Answer Choice C</code></td><td>texte</td><td>sauf VF</td><td>Proposition C</td></tr>
+                <tr><td><code>Answer Choice D</code></td><td>texte</td><td>non</td><td>Proposition D (absente pour les VF)</td></tr>
+                <tr><td><code>Answer Correct</code></td><td>enum</td><td>✅ oui</td><td>Lettre(s) de la/des bonne(s) réponse(s) : <code>a</code> <code>b</code> <code>c</code> <code>d</code> — ou combinaison : <code>ab</code>, <code>acd</code>…</td></tr>
+                <tr><td><code>Has Ordered Answers</code></td><td>booléen</td><td>✅ oui</td><td><code>True</code> si l'ordre des propositions est figé, <code>False</code> si aléatoire. Toujours <code>True</code> pour les <code>VF</code>.</td></tr>
+                <tr><td><code>Answer Explanation</code></td><td>texte long</td><td>✅ oui</td><td>Explication pédagogique affichée après la réponse.</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="text-muted small">Pour un <code>VF</code>, ne remplir que <code>Answer Choice A</code> et <code>Answer Choice B</code>. <code>Answer Correct</code> vaut <code>a</code> ou <code>b</code>.</p>
+
+    <!-- ===== Bloc 3 ===== -->
+    <h2 class="h4 mt-4 mb-3">Bloc 3 — Ressources pédagogiques <span class="badge bg-secondary fw-normal fs-6">optionnelles</span></h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-sm spec-table">
+            <thead class="table-light">
+                <tr><th>Colonne</th><th>Type</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>Answer Audio URL</code></td><td>URL</td><td>Lien vers un fichier audio</td></tr>
+                <tr><td><code>Answer Audio URL Text</code></td><td>texte</td><td>Texte descriptif du lien audio</td></tr>
+                <tr><td><code>Answer Video URL</code></td><td>URL</td><td>Lien vers une vidéo (YouTube…)</td></tr>
+                <tr><td><code>Answer Video URL Text</code></td><td>texte</td><td>Texte descriptif du lien vidéo</td></tr>
+                <tr><td><code>Answer Source Accessible URL</code></td><td>URL</td><td>Source grand public (presse, blog, site institutionnel)</td></tr>
+                <tr><td><code>Answer Source Accessible URL Text</code></td><td>texte</td><td>Ex : <em>Titre de l'article, Nom du média, Année</em></td></tr>
+                <tr><td><code>Answer Source Scientific URL</code></td><td>URL</td><td>Source académique ou scientifique</td></tr>
+                <tr><td><code>Answer Source Scientific URL Text</code></td><td>texte</td><td>Ex : <em>Titre, Auteurs, Année</em></td></tr>
+                <tr><td><code>Answer Book Recommendation</code></td><td>texte</td><td>Recommandation bibliographique libre</td></tr>
+                <tr><td><code>Answer Image URL</code></td><td>URL</td><td>Lien vers une image illustrant la question ou la réponse</td></tr>
+                <tr><td><code>Answer Image URL Text</code></td><td>texte</td><td>Légende ou description de l'image</td></tr>
+                <tr><td><code>Answer Extra Info</code></td><td>texte long</td><td>Notes complémentaires libres (liens bonus, nuances…)</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ===== Bloc 4 ===== -->
+    <h2 class="h4 mt-4 mb-3">Bloc 4 — Métadonnées éditoriales</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-sm spec-table">
+            <thead class="table-light">
+                <tr><th>Colonne</th><th>Type</th><th>Valeurs attendues</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>Validation Status</code></td><td>enum</td><td><code>VALIDATED</code></td><td>Statut de validation</td></tr>
+                <tr><td><code>Visibility</code></td><td>enum</td><td><code>PUBLIC</code></td><td>Visibilité de la question</td></tr>
+                <tr><td><code>Created</code></td><td>date</td><td><code>YYYY-MM-DD</code></td><td>Date de création</td></tr>
+                <tr><td><code>Updated</code></td><td>datetime</td><td><code>YYYY-MM-DD HH:MM:SS</code></td><td>Ignoré à l'import (géré automatiquement)</td></tr>
+                <tr><td><code>Validation Date</code></td><td>date</td><td><code>YYYY-MM-DD</code></td><td>Date de validation</td></tr>
+                <tr><td><code>Category ID</code></td><td>entier</td><td>voir liste ci-dessous</td><td>ID de la catégorie thématique</td></tr>
+                <tr><td><code>Category String</code></td><td>texte</td><td>voir liste ci-dessous</td><td>Libellé de la catégorie (dénormalisé)</td></tr>
+                <tr><td><code>Tag List</code></td><td>texte</td><td><code>{Tag1,Tag2,"Tag espace"}</code></td><td>Tags thématiques entre accolades</td></tr>
+                <tr><td><code>Quiz List</code></td><td>texte</td><td><code>{1,2,78}</code></td><td>IDs des quiz associés</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row g-3 mb-3">
+        <div class="col-md-6">
+            <div class="card border-0 bg-light">
+                <div class="card-body">
+                    <h6 class="card-title">Catégories disponibles</h6>
+                    <table class="table table-sm mb-0">
+                        <thead><tr><th>ID</th><th>Libellé</th></tr></thead>
+                        <tbody>
+                            <tr><td>1</td><td>Climat</td></tr>
+                            <tr><td>2</td><td>Consommation</td></tr>
+                            <tr><td>4</td><td>Biodiversité</td></tr>
+                            <tr><td>5</td><td>Énergie</td></tr>
+                            <tr><td>6</td><td>Histoire &amp; Politique</td></tr>
+                            <tr><td>7</td><td>Ressources</td></tr>
+                            <tr><td>8</td><td>Pollution</td></tr>
+                            <tr><td>9</td><td>Autres</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Bloc 5 ===== -->
+    <h2 class="h4 mt-4 mb-3">Bloc 5 — Auteurs et droits</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-sm spec-table">
+            <thead class="table-light">
+                <tr><th>Colonne</th><th>Type</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>Author ID</code></td><td>entier</td><td>ID de l'auteur en base</td></tr>
+                <tr><td><code>Author String</code></td><td>texte</td><td>Nom de l'auteur (dénormalisé)</td></tr>
+                <tr><td><code>Validator ID</code></td><td>entier</td><td>ID du validateur</td></tr>
+                <tr><td><code>Validator String</code></td><td>texte</td><td>Nom du validateur (dénormalisé)</td></tr>
+                <tr><td><code>Author Agree Commercial Use</code></td><td>booléen</td><td><code>True</code> / <code>False</code> — usage commercial autorisé</td></tr>
+                <tr><td><code>Author Certify Necessary Rights</code></td><td>booléen</td><td><code>True</code> / <code>False</code> — droits nécessaires certifiés</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ===== Règles de formatage ===== -->
+    <h2 class="h4 mt-4 mb-3">Règles de formatage importantes</h2>
+    <ol>
+        <li class="mb-2"><strong><code>Tag List</code></strong> : toujours encadrés d'accolades <code>{}</code>. Les tags contenant des espaces doivent être entre guillemets doubles : <code>{"Question Choc","Culture générale",Biodiversité}</code></li>
+        <li class="mb-2"><strong><code>Quiz List</code></strong> : même format : <code>{1,78,116}</code></li>
+        <li class="mb-2"><strong><code>Answer Correct</code></strong> : toujours en minuscule (<code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>)</li>
+        <li class="mb-2"><strong><code>Has Ordered Answers</code></strong> : écrire <code>True</code> ou <code>False</code> (majuscule initiale)</li>
+        <li class="mb-2"><strong>Colonnes vides</strong> : laisser vides — ne pas mettre <code>NaN</code>, <code>null</code> ou <code>–</code></li>
+        <li class="mb-2"><strong>Dates</strong> : format ISO <code>YYYY-MM-DD</code> pour <code>Created</code> et <code>Validation Date</code>, <code>YYYY-MM-DD HH:MM:SS</code> pour <code>Updated</code></li>
+    </ol>
+
+    <div class="mt-4">
+        <a class="btn btn-primary" href="{% url 'questions:import_ods' %}">← Retour à l'import</a>
+    </div>
+
+</div>
+{% endblock %}
