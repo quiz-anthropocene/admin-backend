@@ -22,6 +22,10 @@ from tags.models import Tag
 
 
 class QuestionResource(resources.ModelResource):
+    def __init__(self, *args, **kwargs):
+        self.current_user = kwargs.pop("user", None)
+        super().__init__(*args, **kwargs)
+
     category = fields.Field(
         column_name="category",
         attribute="category",
@@ -44,6 +48,10 @@ class QuestionResource(resources.ModelResource):
         # 'id' field
         if "id" not in row and "\ufeffid" in row:
             row["id"] = row["\ufeffid"]
+
+        # For new rows without an author, default to the current logged-in user.
+        if not row.get("id") and not row.get("author") and self.current_user:
+            row["author"] = self.current_user.pk
 
         # boolean fields
         BOOLEAN_FIELDS = ["has_ordered_answers"]
@@ -312,6 +320,11 @@ class QuestionAdmin(ImportMixin, ExportMixin, FieldsetsInlineMixin, SimpleHistor
         return False
 
     # from_encoding = 'utf-8-sig'
+    def get_import_resource_kwargs(self, request, **kwargs):
+        kwargs = super().get_import_resource_kwargs(request, **kwargs)
+        kwargs["user"] = request.user
+        return kwargs
+
     def get_import_formats(self):
         """
         Restrict import formats to csv only
