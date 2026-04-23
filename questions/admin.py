@@ -1,6 +1,5 @@
 from io import StringIO
 
-from django.conf import settings
 from django.contrib import admin
 from django.core import management
 from django.urls import reverse
@@ -15,7 +14,6 @@ from categories.models import Category
 from core import constants as api_constants
 from core.admin import ExportMixin, admin_site
 from core.models import Configuration
-from core.utils import notion
 from questions.models import Question, QuestionRelationship
 from quizs.models import Quiz
 from tags.models import Tag
@@ -96,12 +94,6 @@ class QuestionResource(resources.ModelResource):
         if self._m2m_updated:
             return False
         return super(QuestionResource, self).skip_row(instance, original, *args, **kwargs)
-
-    def after_import(self, dataset, result, using_transactions, dry_run, **kwargs):
-        # result.totals: OrderedDict, keys: 'new', 'update', 'delete', 'skip', 'error', 'invalid'
-        if not settings.DEBUG and not dry_run and not (result.totals["error"] or result.totals["invalid"]):  # noqa
-            notion.add_import_stats_row(result.total_rows, result.totals["new"], result.totals["update"])
-        super(QuestionResource, self).after_import(dataset, result, using_transactions, dry_run, **kwargs)
 
     class Meta:
         model = Question
