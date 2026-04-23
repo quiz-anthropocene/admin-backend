@@ -63,9 +63,10 @@ class QuestionResource(resources.ModelResource):
 
         # boolean fields
         BOOLEAN_FIELDS = ["has_ordered_answers"]
+        BOOLEAN_TRUE_VALUES = {"yes", "true", "1", "oui", "vrai"}
         for boolean_field in BOOLEAN_FIELDS:
             if boolean_field in row:
-                row[boolean_field] = True if (row[boolean_field] == "Yes") else False
+                row[boolean_field] = str(row[boolean_field]).strip().lower() in BOOLEAN_TRUE_VALUES
 
     def import_obj(self, instance, row, dry_run, **kwargs):
         """
