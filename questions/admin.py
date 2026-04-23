@@ -107,7 +107,7 @@ class QuestionResource(resources.ModelResource):
         model = Question
         import_id_fields = ("id",)
         skip_unchanged = True
-        report_skipped = False
+        report_skipped = True
 
 
 class QuestionRelationshipFromInline(admin.StackedInline):  # TabularInline
@@ -183,6 +183,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, FieldsetsInlineMixin, SimpleHistor
         # "answer_success_count_agg",
         # "answer_success_rate",
         "created",
+        "updated",
     ]
     search_fields = ["id", "text"]
     list_filter = [
