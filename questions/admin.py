@@ -22,6 +22,10 @@ from tags.models import Tag
 
 
 class QuestionResource(resources.ModelResource):
+    def __init__(self, *args, **kwargs):
+        self.current_user = kwargs.pop("user", None)
+        super().__init__(*args, **kwargs)
+
     category = fields.Field(
         column_name="category",
         attribute="category",
@@ -45,11 +49,24 @@ class QuestionResource(resources.ModelResource):
         if "id" not in row and "\ufeffid" in row:
             row["id"] = row["\ufeffid"]
 
+        # Normalize id to avoid mismatch on lookups (e.g. "1374.0" from spreadsheets).
+        row_id = row.get("id")
+        if row_id is not None:
+            row_id = str(row_id).strip()
+            if row_id.endswith(".0"):
+                row_id = row_id[:-2]
+            row["id"] = row_id
+
+        # For new rows without an author, default to the current logged-in user.
+        if not row.get("id") and not row.get("author") and self.current_user:
+            row["author"] = self.current_user.pk
+
         # boolean fields
         BOOLEAN_FIELDS = ["has_ordered_answers"]
+        BOOLEAN_TRUE_VALUES = {"yes", "true", "1", "oui", "vrai"}
         for boolean_field in BOOLEAN_FIELDS:
             if boolean_field in row:
-                row[boolean_field] = True if (row[boolean_field] == "Yes") else False
+                row[boolean_field] = str(row[boolean_field]).strip().lower() in BOOLEAN_TRUE_VALUES
 
     def import_obj(self, instance, row, dry_run, **kwargs):
         """
@@ -312,12 +329,18 @@ class QuestionAdmin(ImportMixin, ExportMixin, FieldsetsInlineMixin, SimpleHistor
         return False
 
     # from_encoding = 'utf-8-sig'
+    def get_import_resource_kwargs(self, request, **kwargs):
+        kwargs = super().get_import_resource_kwargs(request, **kwargs)
+        kwargs["user"] = request.user
+        return kwargs
+
     def get_import_formats(self):
         """
-        Restrict import formats to csv only
+        Restrict import formats to csv and xlsx only
         """
-        formats = self.formats[:1]
-        return [f for f in formats if f().can_import()]
+        from import_export.formats.base_formats import CSV, ODS, XLS, XLSX
+
+        return [f for f in [CSV, XLS, XLSX, ODS] if f().can_import()]
 
     def has_answer_explanation(self, instance):
         return instance.has_answer_explanation
