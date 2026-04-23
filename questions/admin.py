@@ -42,14 +42,16 @@ class QuestionResource(resources.ModelResource):
         - Issue with BooleanFields because Notion exports Yes/No
         """
         # 'id' field
-        if "id" not in row:
+        if "id" not in row and "\ufeffid" in row:
             row["id"] = row["\ufeffid"]
+
         # boolean fields
         BOOLEAN_FIELDS = ["has_ordered_answers"]
         for boolean_field in BOOLEAN_FIELDS:
-            row[boolean_field] = True if (row[boolean_field] == "Yes") else False
+            if boolean_field in row:
+                row[boolean_field] = True if (row[boolean_field] == "Yes") else False
 
-    def import_obj(self, instance, row, dry_run):
+    def import_obj(self, instance, row, dry_run, **kwargs):
         """
         Manually manage M2M column
         - tags in an existing instance: get the row's comma-seperated tags, get their ids,
@@ -68,15 +70,15 @@ class QuestionResource(resources.ModelResource):
             if list(instance.tags.values_list("id", flat=True)) != tag_ids:
                 instance.tags.set(tag_ids)
                 self._m2m_updated = True
-        super(QuestionResource, self).import_obj(instance, row, dry_run)
+        super(QuestionResource, self).import_obj(instance, row, dry_run, **kwargs)
 
-    def skip_row(self, instance, original):
+    def skip_row(self, instance, original, *args, **kwargs):
         """
         Highlight row if M2M column was updated
         """
         if self._m2m_updated:
             return False
-        return super(QuestionResource, self).skip_row(instance, original)
+        return super(QuestionResource, self).skip_row(instance, original, *args, **kwargs)
 
     def after_import(self, dataset, result, using_transactions, dry_run, **kwargs):
         # result.totals: OrderedDict, keys: 'new', 'update', 'delete', 'skip', 'error', 'invalid'
@@ -86,6 +88,7 @@ class QuestionResource(resources.ModelResource):
 
     class Meta:
         model = Question
+        import_id_fields = ("id",)
         skip_unchanged = True
         report_skipped = False
 
@@ -313,7 +316,7 @@ class QuestionAdmin(ImportMixin, ExportMixin, FieldsetsInlineMixin, SimpleHistor
         """
         Restrict import formats to csv only
         """
-        formats = ImportMixin.formats[:1]
+        formats = self.formats[:1]
         return [f for f in formats if f().can_import()]
 
     def has_answer_explanation(self, instance):
