@@ -1,4 +1,10 @@
+import datetime
+import io
+import re
+
+import pandas as pd
 from dal import autocomplete
+from django import forms
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.forms.models import model_to_dict
@@ -8,13 +14,14 @@ from django.urls import reverse_lazy
 from django.utils import timezone
 from django.utils.safestring import mark_safe
 from django.utils.translation import gettext_lazy as _
-from django.views.generic import CreateView, DetailView, ListView, UpdateView
+from django.views.generic import CreateView, DetailView, FormView, ListView, UpdateView
 from django.views.generic.edit import FormMixin
 from django_filters.views import FilterView
 from django_tables2.views import SingleTableMixin
 
 from activity.utilities import create_event
 from api.questions.serializers import QuestionFullStringSerializer
+from categories.models import Category
 from contributions.forms import CommentCreateForm
 from contributions.models import Comment
 from contributions.tables import CommentTable
@@ -29,6 +36,7 @@ from questions.models import Question
 from questions.tables import QuestionQuizTable, QuestionTable
 from quizs.models import QuizQuestion
 from stats.models import QuestionAggStat
+from tags.models import Tag
 from users import constants as user_constants
 
 
@@ -299,3 +307,314 @@ class QuestionAutocomplete(ContributorUserRequiredMixin, autocomplete.Select2Que
                 qs = qs.filter(text__icontains=self.q)
 
         return qs
+
+
+# ---------------------------------------------------------------------------
+# ODS import
+# ---------------------------------------------------------------------------
+
+ODS_SHEET_NAME = "Résultats de la requête"
+
+ODS_REQUIRED_COLUMNS = [
+    "ID",
+    "Text",
+    "Type",
+    "Difficulty",
+    "Language",
+    "Answer Choice A",
+    "Answer Choice B",
+    "Answer Correct",
+    "Has Ordered Answers",
+]
+
+ODS_VALID_TYPES = ["QCM", "QCM-RM", "VF"]
+ODS_VALID_LANGUAGES = ["FRENCH", "ENGLISH", "ITALIAN", "GERMAN", "SPANISH"]
+
+
+class ODSUploadForm(forms.Form):
+    ods_file = forms.FileField(
+        label=_("Fichier ODS"),
+        help_text=_("Fichier .ods avec l'onglet « Résultats de la requête »"),
+    )
+
+    def clean_ods_file(self):
+        f = self.cleaned_data["ods_file"]
+        if not f.name.lower().endswith(".ods"):
+            raise forms.ValidationError(_("Le fichier doit être au format .ods"))
+        return f
+
+
+class QuestionImportODSView(ContributorUserRequiredMixin, FormView):
+    template_name = "questions/import_ods.html"
+    form_class = ODSUploadForm
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context.setdefault("results", None)
+        return context
+
+    def form_valid(self, form):
+        ods_file = form.cleaned_data["ods_file"]
+        results = self._process_ods(ods_file)
+        context = self.get_context_data(form=form, results=results)
+        return self.render_to_response(context)
+
+    # ------------------------------------------------------------------
+    # Core parsing
+    # ------------------------------------------------------------------
+
+    def _process_ods(self, ods_file):
+        results = {"created": [], "updated": [], "errors": [], "global_error": None}
+
+        try:
+            df = pd.read_excel(
+                io.BytesIO(ods_file.read()),
+                sheet_name=ODS_SHEET_NAME,
+                engine="odf",
+                dtype=str,
+                keep_default_na=False,
+            )
+        except Exception as e:
+            msg = str(e)
+            if "sheet" in msg.lower() or "worksheet" in msg.lower():
+                results["global_error"] = (
+                    f"L'onglet « {ODS_SHEET_NAME} » est introuvable dans le fichier."
+                )
+            else:
+                results["global_error"] = f"Erreur lors de la lecture du fichier : {msg}"
+            return results
+
+        missing = [c for c in ODS_REQUIRED_COLUMNS if c not in df.columns]
+        if missing:
+            results["global_error"] = f"Colonnes manquantes : {', '.join(missing)}"
+            return results
+
+        for idx, row in df.iterrows():
+            row_num = idx + 2  # 1-indexed + header row
+            try:
+                self._process_row(row, results)
+            except Exception as e:
+                results["errors"].append({"row": row_num, "error": str(e)})
+
+        return results
+
+    def _process_row(self, row, results):
+        def val(col, default=""):
+            v = row.get(col, default)
+            if v is None or (isinstance(v, float) and pd.isna(v)):
+                return default
+            return str(v).strip()
+
+        def parse_bool(col):
+            v = val(col)
+            if v == "True":
+                return True
+            if v == "False":
+                return False
+            if v == "":
+                return None
+            raise ValueError(f"Valeur invalide pour « {col} » : « {v} » (attendu : True ou False)")
+
+        # --- ID ---
+        id_str = val("ID")
+        if not id_str:
+            raise ValueError("Le champ « ID » est vide")
+        try:
+            question_id = int(float(id_str))
+        except ValueError:
+            raise ValueError(f"L'ID « {id_str} » n'est pas un entier valide")
+
+        # --- Required text fields ---
+        text = val("Text")
+        if not text:
+            raise ValueError("Le champ « Text » est vide")
+
+        q_type = val("Type")
+        if q_type not in ODS_VALID_TYPES:
+            raise ValueError(f"Type invalide : « {q_type} » (attendu : {', '.join(ODS_VALID_TYPES)})")
+
+        difficulty_str = val("Difficulty")
+        try:
+            difficulty = int(float(difficulty_str))
+            if difficulty not in range(5):
+                raise ValueError()
+        except (ValueError, TypeError):
+            raise ValueError(f"Difficulté invalide : « {difficulty_str} » (attendu : 0–4)")
+
+        language = val("Language")
+        if language not in ODS_VALID_LANGUAGES:
+            raise ValueError(f"Langue invalide : « {language} » (attendu : {', '.join(ODS_VALID_LANGUAGES)})")
+
+        answer_choice_a = val("Answer Choice A")
+        answer_choice_b = val("Answer Choice B")
+        if not answer_choice_a or not answer_choice_b:
+            raise ValueError("Les choix de réponse A et B sont obligatoires")
+
+        answer_correct = val("Answer Correct")
+        if not answer_correct:
+            raise ValueError("La réponse correcte (Answer Correct) est obligatoire")
+
+        has_ordered = parse_bool("Has Ordered Answers")
+        if has_ordered is None:
+            raise ValueError("Le champ « Has Ordered Answers » est vide (attendu : True ou False)")
+        # Model rule: VF questions must always have ordered answers
+        if q_type == constants.QUESTION_TYPE_VF:
+            has_ordered = True
+
+        # --- Category ---
+        category = None
+        category_id_str = val("Category ID")
+        if category_id_str:
+            try:
+                cat_id = int(float(category_id_str))
+                category = Category.objects.get(id=cat_id)
+            except Category.DoesNotExist:
+                raise ValueError(f"Catégorie ID {category_id_str} introuvable")
+            except (ValueError, TypeError):
+                raise ValueError(f"Category ID invalide : « {category_id_str} »")
+
+        # --- Tags ---
+        tag_names = self._parse_curly_list(val("Tag List"))
+        tags_qs = Tag.objects.filter(name__in=tag_names) if tag_names else Tag.objects.none()
+
+        # --- Quiz list ---
+        quiz_ids = self._parse_curly_list_int(val("Quiz List"))
+
+        # --- Author / Validator ---
+        from django.contrib.auth import get_user_model
+        User = get_user_model()
+
+        author = None
+        author_id_str = val("Author ID")
+        if author_id_str:
+            try:
+                author = User.objects.filter(id=int(float(author_id_str))).first()
+            except (ValueError, TypeError):
+                pass
+
+        validator = None
+        validator_id_str = val("Validator ID")
+        if validator_id_str:
+            try:
+                validator = User.objects.filter(id=int(float(validator_id_str))).first()
+            except (ValueError, TypeError):
+                pass
+
+        # --- Dates ---
+        def parse_date_field(col):
+            s = val(col)
+            if not s:
+                return None
+            from django.utils.dateparse import parse_date, parse_datetime
+            dt = parse_datetime(s)
+            if dt:
+                return timezone.make_aware(dt) if timezone.is_naive(dt) else dt
+            d = parse_date(s)
+            if d:
+                return timezone.make_aware(datetime.datetime.combine(d, datetime.time.min))
+            return None
+
+        created = parse_date_field("Created")
+        validation_date = parse_date_field("Validation Date")
+
+        # --- Boolean author fields ---
+        author_agree = parse_bool("Author Agree Commercial Use")
+        author_certify = parse_bool("Author Certify Necessary Rights")
+
+        # --- Build field dict ---
+        fields = {
+            "text": text,
+            "hint": val("Hint"),
+            "type": q_type,
+            "difficulty": difficulty,
+            "language": language,
+            "answer_choice_a": answer_choice_a,
+            "answer_choice_b": answer_choice_b,
+            "answer_choice_c": val("Answer Choice C"),
+            "answer_choice_d": val("Answer Choice D"),
+            "answer_correct": answer_correct,
+            "has_ordered_answers": has_ordered,
+            "answer_explanation": val("Answer Explanation"),
+            "answer_audio_url": val("Answer Audio URL"),
+            "answer_audio_url_text": val("Answer Audio URL Text"),
+            "answer_video_url": val("Answer Video URL"),
+            "answer_video_url_text": val("Answer Video URL Text"),
+            "answer_source_accessible_url": val("Answer Source Accessible URL"),
+            "answer_source_accessible_url_text": val("Answer Source Accessible URL Text"),
+            "answer_source_scientific_url": val("Answer Source Scientific URL"),
+            "answer_source_scientific_url_text": val("Answer Source Scientific URL Text"),
+            "answer_book_recommendation": val("Answer Book Recommendation"),
+            "answer_image_url": val("Answer Image URL"),
+            "answer_image_url_text": val("Answer Image URL Text"),
+            "answer_extra_info": val("Answer Extra Info"),
+            "validation_status": val("Validation Status") or constants.VALIDATION_STATUS_DRAFT,
+            "visibility": val("Visibility") or constants.VISIBILITY_PUBLIC,
+            "category": category,
+            "category_string": val("Category String"),
+            "author": author,
+            "author_string": val("Author String"),
+            "validator": validator,
+            "validator_string": val("Validator String"),
+            "quiz_list": quiz_ids,
+        }
+
+        if author_agree is not None:
+            fields["author_agree_commercial_use"] = author_agree
+        if author_certify is not None:
+            fields["author_certify_necessary_rights"] = author_certify
+        if created:
+            fields["created"] = created
+        if validation_date:
+            fields["validation_date"] = validation_date
+
+        # --- Create or update ---
+        try:
+            question = Question.objects.get(id=question_id)
+            for k, v in fields.items():
+                setattr(question, k, v)
+            question.save()
+            question.tags.set(tags_qs)
+            question.tag_list = list(tags_qs.values_list("name", flat=True))
+            question.save()
+            results["updated"].append({"id": question_id, "text": text[:60]})
+        except Question.DoesNotExist:
+            question = Question(id=question_id, **fields)
+            question.save()
+            question.tags.set(tags_qs)
+            question.tag_list = list(tags_qs.values_list("name", flat=True))
+            question.save()
+            results["created"].append({"id": question_id, "text": text[:60]})
+
+    # ------------------------------------------------------------------
+    # Helpers
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def _parse_curly_list(s):
+        """Parse {Tag1,"Tag with space",Tag2} into a list of strings."""
+        if not s:
+            return []
+        s = s.strip()
+        if not (s.startswith("{") and s.endswith("}")):
+            raise ValueError(f"Format de liste invalide : « {s} » (attendu : {{item1,item2}})")
+        inner = s[1:-1].strip()
+        if not inner:
+            return []
+        items = []
+        for m in re.finditer(r'"([^"]*)"|((?:[^,{}"\\])+)', inner):
+            if m.group(1) is not None:
+                items.append(m.group(1).strip())
+            elif m.group(2) is not None:
+                v = m.group(2).strip()
+                if v:
+                    items.append(v)
+        return items
+
+    @staticmethod
+    def _parse_curly_list_int(s):
+        """Parse {1,2,78} into a list of ints."""
+        items = QuestionImportODSView._parse_curly_list(s)
+        try:
+            return [int(x) for x in items if x]
+        except ValueError as e:
+            raise ValueError(f"Valeur non-entière dans la liste : {e}")

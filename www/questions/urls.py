@@ -1,6 +1,8 @@
 from django.urls import include, path
 from django.views.generic.base import RedirectView
 
+from django.views.generic import TemplateView
+
 from www.questions.views import (
     QuestionAutocomplete,
     QuestionCreateView,
@@ -10,6 +12,7 @@ from www.questions.views import (
     QuestionDetailQuizListView,
     QuestionDetailStatsView,
     QuestionDetailView,
+    QuestionImportODSView,
     QuestionListView,
 )
 
@@ -39,5 +42,7 @@ urlpatterns = [
         ),
     ),
     path("create/", QuestionCreateView.as_view(), name="create"),
+    path("import-ods/", QuestionImportODSView.as_view(), name="import_ods"),
+    path("import-ods/format/", TemplateView.as_view(template_name="questions/import_ods_doc.html"), name="import_ods_doc"),
     path("search/", QuestionAutocomplete.as_view(), name="search"),
 ]
